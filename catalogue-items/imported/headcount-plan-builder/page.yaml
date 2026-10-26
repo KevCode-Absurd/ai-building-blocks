@@ -2,15 +2,10 @@ thinking: high
 thinking_why: It models demand against hiring capacity.
 new_slug: headcount-plan-builder
 name: Headcount plan builder
-summary: Share your growth goals and budget. Get a role by role hiring plan with
-  a priority order.
+summary: Turn your growth goals and budget into a headcount plan, with hires ranked by priority and three growth versions you can afford.
 job: hire-people
 headline: Headcount plan builder
-subhead: Share your business goals, current headcount by team, hiring requests
-  from managers and your budget. It turns growth targets into headcount the
-  business can afford and your recruiters can handle. You get a role by role
-  hiring plan, a priority order, conservative, base and fast-growth versions,
-  and a monthly report outline.
+subhead: Share your business goals, current headcount by team, hiring requests from managers and your budget. It turns growth targets into headcount the business can afford and your recruiters can handle. You get a role by role hiring plan, a priority order, conservative, base and fast-growth versions, and a monthly report outline.
 explain: |
   A hiring plan for next year that starts from your business goals and ends with a role-by-role list. Instead of collecting wish lists from every manager, you get a plan checked against what the business can afford and what your recruiters can handle.
 
@@ -20,6 +15,10 @@ when:
   - Managers send long wish lists and you cannot hire for all of them.
   - Recruiters are overloaded and you need to rank roles.
   - Leaders want a monthly update on hiring gaps.
+not_for:
+  - "You need to fill one backfill: use a simple requisition form and a short job brief."
+  - "Your team has no revenue or product plan yet: set the goals first, then build the headcount plan."
+  - "You want to write job ads or screen candidates: ask your recruiter or your AI for a job post instead."
 you_give:
   - Your business goals and growth targets
   - Current headcount by team
@@ -32,7 +31,29 @@ you_get:
   - Conservative, base and fast-growth versions
   - A monthly demand and supply report outline
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste your business goals, current headcount by team and manager hiring requests.
+  - Add your budget and how many hires your recruiters can handle. Add expected exits if you know them.
+  - Ask for the role by role plan, the priority order and the three versions.
+  - Check the priority order with your finance lead and recruiters before you share it.
+  - Ask for the monthly report outline and send it to your leaders.
+output_sample:
+  input:
+    - Your business goals and growth targets
+    - Your current headcount by team
+    - Hiring requests from managers
+    - Your budget and recruiter capacity
+    - Expected exits (optional)
+  output:
+    - name: Demand intake template
+      contains: Questions and fields to collect hiring requests and catch padded asks.
+    - name: Role by role headcount plan
+      contains: Headcount by role, level, location and start date, allowing for exits, transfers and backfills.
+    - name: Priority order
+      contains: Critical roles ranked against what your recruiters can handle.
+    - name: Conservative, base and fast-growth versions
+      contains: Three plans showing how headcount and budget change under each growth case.
+    - name: Span of control check
+      contains: A check that manager numbers fit the team sizes in the plan.
+    - name: Monthly demand and supply report
+      contains: An outline showing hiring demand, approved roles and recruiter capacity for leaders.

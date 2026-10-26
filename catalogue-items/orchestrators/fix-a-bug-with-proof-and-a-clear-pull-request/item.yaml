@@ -13,10 +13,10 @@ outputs:
   - {type: document}
 uses: [bug-root-cause-finder, test-gap-finder, code-change-reviewer, pull-request-writer]
 steps:
-  - {uses: bug-root-cause-finder, note: "Finds and proves the cause, then makes a minimal fix once you agree."}
-  - {uses: test-gap-finder, note: "Reads the fix and says which behaviour no test would catch if it broke again."}
-  - {uses: code-change-reviewer, note: "Reviews the fix and its tests against your standards and the bug report."}
-  - {uses: pull-request-writer, note: "Describes the fix with the cause and the before and after proof."}
+  - {uses: bug-root-cause-finder, note: "Makes the code change: finds and proves the cause, then makes a minimal fix once you agree. Steps 2, 3 and 4 all work from this change."}
+  - {uses: test-gap-finder, note: "Uses the fix from step 1 and your tests. Says which behaviour no test would catch if it broke again, and hands you the tests to add before step 3."}
+  - {uses: code-change-reviewer, note: "Reviews the fix from step 1 together with the tests you added after step 2, not step 2's report itself. Checks them against your standards and the bug report, and hands back review points to settle before step 4."}
+  - {uses: pull-request-writer, note: "Uses the fix from step 1 with the tests you added, and the cause and review points from steps 1 to 3. Describes the fix with the cause and the before and after proof."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/bug-fix-with-proof/skeleton.yaml

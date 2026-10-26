@@ -1,52 +1,99 @@
 new_slug: adapt-a-lesson-for-different-access-needs
 name: Adapt a lesson for different access needs
 headline: Adapt a lesson for different access needs
-summary: Share the source files. Get a barrier review, adapted activities and a check of the unchanged learning goal.
+summary: Find what blocks learners in your lesson. Get options that keep the same learning goal, and checks that test the goal, not the barrier.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A barrier review, adapted activities and a check of the unchanged learning goal. Share the lesson objective, activities, materials and access needs shared by the teacher. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Paste your lesson plan, your materials and the access needs you already know about. Your AI finds the barriers in each task, offers other ways to learn and show learning, and plans checks that stay on the learning goal.
 explain: |-
-  A barrier review, adapted activities and a check of the unchanged learning goal.
+  A lesson that works for most of the class can still shut some learners out, for example a dense reading, a timed written task or an audio-only clip. This workflow helps you adapt a lesson for different access needs without lowering the goal: it looks at the lesson as written, finds where the barriers are and offers other routes to the same learning.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Adaptations preserve the target learning and do not infer diagnoses or lower expectations without evidence. Missing tools or evidence stay visible in the final summary.
+  It starts with your lesson and the needs you stated, not with guesses. It does not infer a diagnosis or decide what a learner can do. Each barrier is tied to a step in your lesson. Then it offers options for engagement, for how the content is shown and for how learners show what they know. Last, it plans checks that measure the learning goal and nothing else, so a learner is not marked down for the barrier.
+
+  You choose which changes to make. The workflow suggests, and says what to keep.
 when:
-  - You need a barrier review, adapted activities and a check of the unchanged learning goal.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are about to teach a lesson and know one or more learners will struggle with how it is set up
+  - A teaching assistant or parent has told you what a learner needs, and you want to plan for it
+  - A reading, a worksheet or a video is the only way into the topic and you want other routes
+  - You want to be sure an adapted task still tests the same learning goal
+not_for:
+  - You need a formal assessment of a learner's needs or a support plan. Use your school's support process or a specialist.
+  - You want to redesign a whole course. Start with one lesson here, or use the Accessible lesson auditor on a unit plan.
+  - You want a lesson built from scratch. Use Build a lesson from explanation to practice and a quiz.
+  - You want a check of the lesson's quality before teaching it. Use Check a lesson before teaching it.
 you_give:
-  - The lesson objective, activities, materials and access needs shared by the teacher.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The lesson plan, with its goal, activities and how learning is checked
+  - The materials, such as readings, slides, worksheets or videos
+  - The access needs you know about, in your own words
+  - Things you cannot change, such as a set text or a time limit (optional)
+  - The age or year of the class (optional)
 you_get:
-  - A barrier review, adapted activities and a check of the unchanged learning goal.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A barrier review: each barrier tied to the lesson step it affects and the need stated"
+  - The three to five changes that matter most, and the parts of the lesson to keep
+  - Options for engagement, for showing the content and for how learners respond
+  - Checks for each lesson stage that test the goal without the barrier, with a hinge question and an exit ticket
+  - A note on what stays the same, so the goal is as hard as before
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the lesson plan and materials. Then list the access needs in your own words. Do not guess at causes.
+  - Read the barrier review first. Remove any barrier that does not fit your learners. You know them, the AI does not.
+  - Pick the options you will use, then teach the lesson and note which checks showed the goal was met.
 how_it_works:
   - title: Accessible lesson auditor
-    text: Identify barriers in the supplied materials and tasks using the stated access needs.
+    text: Reads the lesson and materials against the needs you stated and lists the barriers, each tied to a lesson step. It also lists what already helps, and hands the priority changes on.
   - title: Learning options designer
-    text: Offer different ways to access, practice and demonstrate the same learning.
+    text: For each priority barrier, offers other ways to engage, to present the content and to show learning. It keeps the goal as hard as before and hands the options on.
   - title: Lesson understanding check planner
-    text: Create checks that measure the learning goal without the identified access barrier.
+    text: Plans checks for each lesson stage that measure the goal without the barrier, such as a hinge question and an exit ticket. It says what to do with the answers.
 output_shape: |-
-  Scope and source coverage
-  A barrier review, adapted activities and a check of the unchanged learning goal.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  BARRIER REVIEW
+    Lesson step | Barrier | Need it affects | Change suggested | Priority
+    What to keep
+
+  OPTIONS
+    For <barrier>: engagement option | way to show the content | way to show learning
+    Same goal check: <learning goal> is unchanged
+
+  CHECKS
+    Lesson stage | Check | What it tests | What to do with the answers
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - Your lesson plan, with its goal, activities and checks
+    - The materials you use, such as readings or slides
+    - The access needs you know about, in your own words
+    - Things you cannot change (optional)
+  prerequisites:
+    - An AI that can read your lesson files or pasted text
+  output:
+    - name: Barrier review
+      contains: Each barrier tied to a lesson step and a stated need, with the changes that matter most.
+    - name: What to keep
+      contains: The parts of your lesson that already help access and should stay as they are.
+    - name: Learning options
+      contains: Other ways to engage, to present the content and to show learning, for each priority barrier.
+    - name: Checks for each stage
+      contains: A hinge question, cold-call order and exit ticket that test the goal without the barrier.
+    - name: Hand-back summary
+      contains: Files saved, facts that were missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read the pasted text or files and keep each step's result as a file. None of them can run a lesson, a class or a check for you.
+  inputs:
+    - The readings or slides themselves, not a description of them.
+    - A teaching assistant or colleague who knows the learners.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Adapt one lesson at a time. A unit's worth of barriers is hard to act on.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Describe what you saw, such as "stops at long reading tasks". Do not name a cause you have not been told.
   - what: Acceptance
-    how: Adaptations preserve the target learning and do not infer diagnoses or lower expectations without evidence.
+    how: Say how many changes you can make this week. The AI will rank the changes to fit.
 judge:
   - Adaptations preserve the target learning and do not infer diagnoses or lower expectations without evidence.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +106,16 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+  - After teaching, note which checks showed the goal was met and ask for the options to be adjusted.
+  - Add the next lesson in the unit and reuse the options that worked.
+  - Ask for any option rewritten for a younger or older class.
+next:
+  - check-a-lesson-before-teaching-it
+  - build-a-lesson-from-explanation-to-practice-and-a-quiz
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Barrier
+    meaning: Something in how a lesson is set up that stops a learner taking part or showing what they know.
+  - term: Universal design for learning
+    meaning: A way of planning lessons with several routes in, so fewer learners need a separate fix.
+  - term: Hinge question
+    meaning: One question whose answers show who has understood and who has not.

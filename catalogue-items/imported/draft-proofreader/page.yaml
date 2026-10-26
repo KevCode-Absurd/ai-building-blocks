@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It fixes errors line by line without changing meaning.
 new_slug: draft-proofreader
 name: Draft proofreader
-summary: Give it a text or document. Get it back corrected in your own voice,
-  with a log of every change.
+summary: Proofread your draft and fix grammar, spelling and punctuation in your own voice. Get a log of every change so you can accept or reject each one.
 job: write-and-tell-stories
 headline: Draft proofreader
-subhead: Your text back with the mistakes fixed and your own voice left alone,
-  plus a log of every change so you can accept or reject each one.
+subhead: Your text back with the mistakes fixed and your own voice left alone, plus a log of every change so you can accept or reject each one.
 explain: |
   Your text back with the mistakes fixed and your own voice left alone, plus a log of every change so you can accept or reject each one.
 
@@ -17,6 +15,10 @@ when:
   - You want a document corrected without losing how you sound.
   - You need to see exactly what was changed and why.
   - A file must be returned as a corrected copy, not a pile of notes.
+not_for:
+  - "You want code or technical docs rewritten: ask a developer or a technical editor, since this only fixes plain prose."
+  - "You want a full rewrite or new content added: ask your AI to redraft it, because this never expands your text or changes your meaning."
+  - "You need a legal, medical or academic sign-off: ask a qualified person to review it after this pass."
 you_give:
   - Pasted text or a document file
   - The audience or tone (optional)
@@ -26,7 +28,25 @@ you_get:
   - A log of every change with reasons
   - A saved copy named UPDATED_ plus your file name (for files)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool and paste in the skill instructions, or load the skill folder if your tool supports it.
+  - Paste your text, or attach your file (.docx, .pdf or .txt).
+  - Say who the text is for and name any words or style choices to keep (optional).
+  - For a file, say "Save updated version". Your AI needs to be able to read and save files for this.
+  - Read the modifications list. Reject any change that is not right.
+  - Open the UPDATED_ copy and check it against your original before you send it.
+output_sample:
+  input:
+    - Your pasted text, or a .docx, .pdf or .txt file
+    - Who the text is for, or the tone you want (optional)
+    - Words or style choices to keep as they are (optional)
+  prerequisites:
+    - An AI that can read and save files, only if you want an UPDATED_ copy of a document
+  output:
+    - name: Corrected version
+      contains: Your text with grammar, spelling, punctuation and clarity fixed, in your own voice and with your meaning unchanged.
+    - name: Modifications list
+      contains: Each change with a short reason, so you can accept or reject it one by one.
+    - name: UPDATED_ file
+      contains: A new copy of your document with the UPDATED_ prefix on its name, leaving your original untouched.
+    - name: Closing message
+      contains: A short, friendly note at the end to confirm what was done.

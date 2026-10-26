@@ -34,3 +34,22 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - "You want to write the message to one candidate: use Candidate message drafter."
+  - "You want to design the interview itself: use Hiring interview designer."
+  - "You want to compare finalists fairly: use Fair candidate comparer."
+output_sample:
+  input:
+    - Your hiring steps, from application to offer
+    - The roles you hire for
+    - Drop-off numbers or candidate feedback (optional)
+    - Your company tone (optional)
+  output:
+    - name: Candidate path map
+      contains: Each stage from application to offer or rejection, with its wait time and how the candidate feels.
+    - name: Top friction points
+      contains: The few places candidates wait, get confused or leave, with a fix for each.
+    - name: Stage messages
+      contains: Drafts for acknowledgment, interview prep, updates, offers and rejections.
+    - name: Candidate survey
+      contains: A short survey to measure how the process feels at each stage.

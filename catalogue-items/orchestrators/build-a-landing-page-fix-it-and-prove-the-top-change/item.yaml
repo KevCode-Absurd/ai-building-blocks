@@ -16,9 +16,9 @@ outputs:
 uses: [conversion-landing-page-designer, landing-page-auditor, experiment-designer, a-b-test-verdict-maker]
 steps:
   - {uses: conversion-landing-page-designer, note: "Starts from your offer and buyer and returns a page plan with copy and design rules."}
-  - {uses: landing-page-auditor, note: "Reads the page from the step before and ranks what to fix first."}
-  - {uses: experiment-designer, note: "Designs a test for the top change from the review, sized to your traffic."}
-  - {uses: a-b-test-verdict-maker, note: "Reads the exported counts against the test design."}
+  - {uses: landing-page-auditor, note: "Reads the page from the step before and ranks what to fix first. Hands the ranked fixes to the test step."}
+  - {uses: experiment-designer, note: "Designs a test for the top change from the review, sized to your traffic. Hands the test design to the verdict step."}
+  - {uses: a-b-test-verdict-maker, note: "Reads the control and variant counts you export after the test, against step 3's test design."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/build-a-landing-page-fix-it-and-prove-the-top-change/skeleton.yaml

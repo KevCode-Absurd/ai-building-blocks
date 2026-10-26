@@ -1,46 +1,79 @@
 new_slug: review-leverage-headroom-and-cure
 name: Review leverage headroom and cure
 headline: Review leverage headroom and cure
-summary: Connect supported EBITDA addbacks to exact net leverage and a permitted cure scenario.
+summary: Check net debt to EBITDA after EBITDA addbacks, and test if an equity cure can fix a shortfall. Get signed headroom and a cure result.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A contractual EBITDA bridge, leverage headroom and conditional EBITDA-only cure scenario. Share signed pre-addback cap, supported adjustments, same-date debt and eligible cash, cash cap, covenant ceiling, cure rights and actual remaining cure eligibility.
+subhead: Give your AI the credit agreement's addback cap and definitions, EBITDA, debt, eligible cash and any cure rights left. It caps your addbacks, tests net debt to EBITDA on the same date, and runs a cure test only if the test is missed and a cure right remains.
 explain: |-
-  A contractual EBITDA bridge, leverage headroom and conditional EBITDA-only cure scenario.
+  A net debt to EBITDA covenant compares debt, less some cash, with EBITDA. The contract decides what counts as EBITDA. Lenders usually let you add back some one-off costs, up to a cap. The cap is often a share of EBITDA before addbacks. Cash netted against debt can have its own cap.
 
-  Private credit covenants. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 caps the addbacks you ask for. Step 2 takes that EBITDA, the same-date debt and the eligible cash, and shows net debt to EBITDA and signed headroom. Positive headroom is room. Negative means the limit is exceeded. Step 3 runs only if headroom is negative and the agreement still allows an equity cure. It finds how much EBITDA-only cure is needed and allowed.
+
+  The cure raises EBITDA only. It does not also cut debt, so the cash is never counted twice. If your agreement caps addbacks on EBITDA after addbacks, step 1 stops. Nothing counts as accepted, timely or legally effective without proof.
 when:
-  - You need a contractual EBITDA bridge, leverage headroom and conditional EBITDA-only cure scenario.
-  - You work on private credit covenants and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A covenant test date is close and you want to know if you pass.
+  - Management wants to add back costs, and you must check the cap.
+  - Headroom is thin and you want to know what an equity cure would need.
+  - A lender questions your compliance certificate.
+not_for:
+  - "Your agreement caps addbacks on EBITDA after addbacks: stop and ask a lawyer or the lender's agent. The cap method here does not fit."
+  - "You test debt service cash cover, not net debt to EBITDA: use the Review contractual debt service cash tests workflow."
+  - "You want to know if a cure is valid or on time, or need a waiver: ask your lawyer and lender. This does the arithmetic only."
+  - "You want net debt to EBITDA after cash interest and PIK interest: use the Review sponsor debt cash demands workflow."
 you_give:
-  - Signed pre-addback cap, supported adjustments, same-date debt and eligible cash, cash cap, covenant ceiling, cure rights and actual remaining cure eligibility.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed addback cap and its wording, which must be set on EBITDA before addbacks
+  - EBITDA before addbacks, the permitted uncapped adjustments and the capped addbacks you want, with support for each
+  - Debt on the test date, as the agreement defines it
+  - Eligible unrestricted cash on the same date, and the cap on cash netting
+  - The maximum net debt to EBITDA, such as 4.0 times
+  - "The cure rights: how often, by when, the cap, and how much you have already used"
 you_get:
-  - A contractual EBITDA bridge, leverage headroom and conditional EBITDA-only cure scenario.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A bridge from EBITDA before addbacks to adjusted EBITDA, with any excess addback shown
+  - The ratio, the debt the covenant allows and signed headroom
+  - "If a cure applies: the cure needed, the cure allowed, the new ratio and any gap left"
+  - "A check of cure rules: receipt, deadline and how often"
+  - A list of what is MISSING and which checks were missed
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the compliance certificate, the credit agreement pages with the definitions and cure clause, and your addback support.
+  - Ask your AI to follow the pack, save a file for each step and stop a step when an input is missing.
+  - After step 1, check that the cap in the agreement is on EBITDA before addbacks. If not, stop here.
+  - After step 3, send the result to your lender contact or lawyer before anyone relies on it. A spreadsheet tool is needed for the workbook. Without one, your AI gives the tables in chat.
 how_it_works:
   - title: Deal EBITDA addback checker
-    text: Use only the supported pre-addback cap structure and distinct permitted uncapped adjustments. Stop this path if the agreement instead caps on post-addback EBITDA.
+    text: Applies the signed cap to EBITDA before addbacks and keeps permitted uncapped adjustments apart. Shows the allowed addback and any excess. Stops if the cap is set after addbacks. Hands step 2 the contractual EBITDA.
   - title: Net leverage covenant checker
-    text: Pass the resulting contractual EBITDA into the same-date leverage test after confirming all definitions match. Apply actual eligible cash and netting cap, then show signed headroom.
+    text: Takes that EBITDA after checking all definitions match. Uses same-date debt, eligible cash and the cash netting cap to show net debt to EBITDA, allowed debt and signed headroom. Hands step 3 the verified net debt.
   - title: Equity cure scenario checker
-    text: Run only if headroom is negative and an actual EBITDA-only cure right remains eligible. Use the verified net debt unchanged; otherwise skip with a reason and never count cure cash twice.
+    text: Runs only when headroom is negative and an EBITDA-only cure right is still open. Uses the net debt unchanged, applies the cap left and checks receipt, deadline and frequency. Otherwise it is skipped with a reason.
 output_shape: |-
-  A contractual EBITDA bridge, leverage headroom and conditional EBITDA-only cure scenario.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES   <test date, agreement clauses, currency, scale>
+  EBITDA BRIDGE             <EBITDA before addbacks | uncapped | capped allowed | excess | contractual EBITDA>
+  NET DEBT TO EBITDA       <debt | eligible cash netted | net debt | ratio | maximum | allowed debt | headroom>
+  CURE SCENARIO             <ran or skipped, and why | cure needed | cure allowed | ratio after | gap left>
+  CURE RULES                <receipt | deadline | frequency, each with its evidence or not evidenced>
+  MISSING                   <inputs not given>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - The signed addback cap and the covenant definitions
+    - EBITDA, debt and eligible cash on the test date
+    - The maximum net debt to EBITDA ratio
+    - The cure rights and how much you have used
+  prerequisites:
+    - An AI that can read files
+    - The compliance certificate and the credit agreement pages that set the definitions
+  output:
+    - name: outputs/step-1-deal-ebitda-addback-checker.md
+      contains: Adjusted EBITDA, the capped addback allowed and any excess disallowed.
+    - name: Step 2 file (net debt to EBITDA check)
+      contains: The ratio, the debt the covenant allows and signed headroom.
+    - name: outputs/step-3-equity-cure-scenario-checker.md
+      contains: The cure needed and allowed, the new ratio and any gap. Marked skipped if headroom is positive.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,13 +95,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads long documents
+      why: The definitions and cure clause decide the result. In plain chat, paste the exact wording.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The latest compliance certificate.
+    - Your log of earlier cures.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: EBITDA addback
+    meaning: A cost the agreement lets you add back to profit, usually capped.
+  - term: Net debt to EBITDA
+    meaning: Debt, less allowed cash, divided by EBITDA.
+  - term: Headroom
+    meaning: How far the result sits inside the limit. A negative number means the limit is broken.
+  - term: Equity cure
+    meaning: New equity that the agreement lets you treat as EBITDA to fix a missed test.
+before: []
+next:
+  - review-contractual-debt-service-cash-tests
+  - review-sponsor-debt-cash-demands
+  - check-acquisition-refinancing-funds
+  - debt-restructuring-plan-drafter

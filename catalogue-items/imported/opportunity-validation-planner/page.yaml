@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs which doubts matter most.
 new_slug: opportunity-validation-planner
 name: Opportunity validation planner
-summary: Give it a product bet. Get your riskiest assumptions mapped and a short
-  plan to test them before you build.
+summary: Test a product idea before you build it. Give it your bet and get your riskiest guesses ranked, with a one to two week plan to check them.
 job: test-an-idea
 headline: Opportunity validation planner
-subhead: Before you spend months building, you get a short plan that tests the
-  parts most likely to be wrong. The riskiest guesses come first, with a cheap
-  way to check each.
+subhead: Before you spend months building, you get a short plan that tests the parts most likely to be wrong. The riskiest guesses come first, with a cheap way to check each.
 explain: |
   Before you spend months building, you get a short plan that tests the parts most likely to be wrong. The riskiest guesses come first, with a cheap way to check each.
 
@@ -18,6 +15,10 @@ when:
   - Your team is about to commit budget to a big build.
   - You need a one or two week plan to test a bet.
   - You want to drop weak ideas early and say why.
+not_for:
+  - Your idea already has proven demand and you only need to build it. Go straight to planning the build with your team.
+  - You are making a small feature tweak. Read your support tickets or check your analytics instead.
+  - You want a final answer from a plan alone. It only plans tests, so you must talk to real customers and run them.
 you_give:
   - The product bet or idea
   - The outcome you want to move
@@ -29,7 +30,32 @@ you_get:
   - Prototype and value tests
   - A discovery sprint plan with a go, change or stop rule
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Describe your product bet. Add the outcome you want to move and a target date.
+  - Add what you know about customers and your team size, if you have them.
+  - Check the ranked guesses first. Fix any that look wrong.
+  - Run the interviews and tests from the plan with real customers.
+  - Bring the results back and ask for the go, change or stop call. Running the scoring script needs an AI that can run code.
+output_sample:
+  input:
+    - Your product bet or idea
+    - The outcome you want to move, with a starting number and a target date
+    - What you already know about customers (optional)
+    - Team size and time available (optional)
+  prerequisites:
+    - An AI that can run code, only if you want the assumption scoring script to run on a CSV file. Otherwise a normal chat works.
+  output:
+    - name: Outcome
+      contains: One measurable outcome to improve, with a baseline and a target date.
+    - name: Opportunity Solution Tree
+      contains: Your outcome, at least three customer needs, solution ideas and experiments, each tied to an evidence source.
+    - name: Assumption map
+      contains: "Your guesses in four groups: desirability, viability, feasibility and usability, each scored by risk and certainty."
+    - name: Problem validation plan
+      contains: Interview questions and checks that test how often and how badly the problem hurts.
+    - name: Solution tests
+      contains: Concept tests, prototype tests and demand tests that watch what people do.
+    - name: Discovery sprint plan
+      contains: A 10-day plan with daily evidence reviews, ending in a decision.
+    - name: Decision
+      contains: A clear call to proceed, pivot or stop, based on the evidence.

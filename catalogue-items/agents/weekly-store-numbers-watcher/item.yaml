@@ -15,12 +15,12 @@ outputs:
   - {type: plan}
 uses: [shopify-dashboard-reader, store-page-conversion-reader, metric-mismatch-tracer, metric-drop-investigator, store-funnel-benchmark-checker, conversion-reconciliation]
 steps:
-  - {uses: shopify-dashboard-reader, note: "Every week: which Shopify tiles to trust, cash collected and the Shopify to GA4 gap."}
-  - {uses: store-page-conversion-reader, note: "Every week: conversion by channel and landing page, and the worst funnel drop."}
-  - {uses: metric-mismatch-tracer, note: "Only when two reports disagree by more than a tenth: where the numbers split, before any drop is read."}
-  - {uses: metric-drop-investigator, note: "Only when sales, orders or conversion fell by a fifth or more against the recent average, and the numbers agree."}
-  - {uses: store-funnel-benchmark-checker, note: "Only when the drop or the worst funnel step points at the funnel, and on the first run: the step that leaks most against ranges."}
-  - {uses: conversion-reconciliation, note: "Only when the owner pastes ad platform conversion reports and they differ from store orders by more than a fifth."}
+  - {uses: shopify-dashboard-reader, note: "Every week: which Shopify tiles to trust, cash collected and the Shopify to GA4 gap. Hands step 2 the trusted tiles and the Shopify to GA4 gap."}
+  - {uses: store-page-conversion-reader, note: "Every week: conversion by channel and landing page, and the worst funnel drop. Uses your GA4 exports, not step 1's report; hands the channel and landing page numbers to the checks below."}
+  - {uses: metric-mismatch-tracer, note: "Only when two reports disagree by more than a tenth: where the numbers split, before any drop is read. Takes the gap from steps 1 and 2 plus your two reports; hands back where the numbers split, so the drop check can start."}
+  - {uses: metric-drop-investigator, note: "Only when sales, orders or conversion fell by a fifth or more against the recent average, and the numbers agree. Takes the channel and page numbers from step 2 and the tracer's verdict from step 3; hands back the main driver of the drop."}
+  - {uses: store-funnel-benchmark-checker, note: "Only when the drop or the worst funnel step points at the funnel, and on the first run: the step that leaks most against ranges. Uses your GA4 purchase journey figures, not step 4's report; hands back the leak to fix."}
+  - {uses: conversion-reconciliation, note: "Only when the owner pastes ad platform conversion reports and they differ from store orders by more than a fifth. Uses the ad reports you paste and your store orders, not step 5's report; hands back why the counts differ."}
 schedule: "Every Monday morning, after last week's data is in"
 asks_before: [changing any tracking tag, pixel or GA4 setting, changing ad budgets or targets, sending the numbers to anyone]
 origin: own

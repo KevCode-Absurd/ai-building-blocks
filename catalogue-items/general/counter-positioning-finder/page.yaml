@@ -1,6 +1,6 @@
 new_slug: counter-positioning-finder
 name: "Counter-positioning finder"
-summary: "Paste your market leader and your idea. Get a new business model the leader would lose money by copying, with the sum."
+summary: "Find a business model your market leader would lose money by copying. Give it the leader and your idea. You get the sum and a call."
 job: plan-strategy
 thinking: high
 thinking_why: "It builds a loss-and-gain sum for a rival from limited facts and has to avoid calling any cheaper offer a strategy. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - A larger rival dominates your market and you cannot beat it by being a little better.
   - You are choosing a price model, sales route or product design and want one the leader would find costly to match.
   - You have a new model and want to know if the leader will copy it the moment it works.
+not_for:
+  - You only want to cut prices. A leader can match a price cut, so this will not find an edge. Work on your cost per sale first.
+  - You have not found a gap in your market yet. Use the Competitor white space mapper first, then bring the gap here.
+  - The leader is simply slow or has not noticed you. That is not counter-positioning. Watch how fast it moves and plan for a short window.
 
 you_give:
   - Who the market leader is and how it earns its money
@@ -35,6 +39,29 @@ how_to_use:
   - Describe your model in a few lines, covering what you charge, how you sell and what you leave out.
   - Check the sum with real figures if you can find them, like the leader's price list or channel mix.
   - Bring the result to "Ten-year durability checker" and "Power build-order planner".
+output_sample:
+  input:
+    - Who the market leader is and how it earns its money
+    - Your idea for doing the job differently
+    - The leader's revenue split, prices and channels (optional)
+    - Your own cost per sale (optional)
+  output:
+    - name: How the leader earns
+      contains: The leader's income split into lines, each with a share of revenue and what it depends on.
+    - name: Your model
+      contains: What is different, which buyers it is better for, and why.
+    - name: The copy sum
+      contains: What the leader loses and gains by copying, with the arithmetic and estimates marked.
+    - name: Why it holds back
+      contains: The real cost to the leader's existing business that makes copying hard.
+    - name: Other moves
+      contains: A separate unit, a price cut, buying you and a late copy, each with a likely result.
+    - name: Call
+      contains: Strong, weak or not counter-positioning, with a first-year path and the limit on other newcomers.
+    - name: Missing
+      contains: The facts that would firm up the sum, with the most important first.
+    - name: Checks missed
+      contains: One line for each check the skill still missed, or none.
 
 how_it_works:
   - title: Writes how the leader earns

@@ -2,10 +2,14 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: book-writing-project-coach
 name: Book writing project coach
-summary: Share your book idea or draft and stage. Get the outline, writing plan, revision, or submission draft.
+summary: "Get a book writing plan for your stage: an outline, session plan, revision plan, query letter or proposal that keeps your voice and your research gaps visible."
 job: write-and-tell-stories
 headline: Book writing project coach
 subhead: Share your writing project, current stage, audience, and goal. It chooses the right help for planning, drafting, revision, or approaching publishers. You get a focused outline, session plan, edit, or submission draft that protects your voice and keeps research gaps visible.
+not_for:
+  - "You need your book put into a Word, PDF or EPUB file: use a file tool such as Word, Google Docs or an EPUB maker."
+  - "You are writing release notes, help pages or other business documents: ask your AI for plain documentation help, not a book coach."
+  - "You only have a quick grammar or spelling question: check a style guide or a spell checker."
 you_give:
   - Project type, current stage, audience, goal, constraints, and your draft or idea.
 you_get:
@@ -24,5 +28,34 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open a chat in Claude, ChatGPT or Gemini and add the skill files, or paste in the skill text.
+  - Tell your AI your project type, stage, audience, goal and any limits.
+  - Paste your draft or idea if you have one.
+  - Ask for the one thing you need now, such as an outline, a session plan, a revision plan or a query letter.
+  - Read the result and change anything that does not sound like you. Your voice comes first.
+  - Run the optional scripts only if your AI can run code. The page works without them.
+output_sample:
+  input:
+    - Your project type, such as novel or nonfiction book
+    - "Where you are now: idea, planning, drafting, revising or submitting"
+    - Who the book is for and what you want to finish
+    - Your draft or idea (optional)
+    - Limits like a word cap or deadline (optional)
+  prerequisites:
+    - A chat AI that can read the skill's reference files
+    - Python 3 only if you want the optional word count, habit and tracking scripts
+  output:
+    - name: Premise check
+      contains: Tests your idea and gives a one-line pitch when you are at the idea stage.
+    - name: Story outline
+      contains: Three parts with key turning points and scene stakes, built from your premise.
+    - name: Writing session plan
+      contains: Timed blocks, breaks and word targets to turn your goal into a daily plan.
+    - name: Revision plan
+      contains: Passes in order from structure to prose to proofreading, with questions for readers.
+    - name: Query letter or synopsis
+      contains: A one-page submission draft in the standard structure for fiction or nonfiction.
+    - name: Book proposal
+      contains: A nonfiction proposal built section by section from your project details.
+    - name: Gaps list and next step
+      contains: Facts still to check and the one thing to do next.

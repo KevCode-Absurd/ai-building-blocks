@@ -18,6 +18,8 @@ Identifies SKUs that have positive inventory on hand but have not sold any units
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products,read_orders,read_inventory`
 - API scopes: `read_products`, `read_orders`, `read_inventory`
+- Shopify returns only the last 60 days of orders unless your access also has `read_all_orders`. If `days_back` is more than 60 and you do not have it, say so before you start, or the list will wrongly include products that did sell.
+- **No Shopify access?** Ask once for two exports instead: the Inventory export (SKU, product, vendor, on-hand quantity, unit cost if you have it) and an Orders export covering the whole window (SKU and quantity per line). Run steps 2 and 5 on those. Never guess a number you were not given.
 
 ## Parameters
 
@@ -43,13 +45,13 @@ Identifies SKUs that have positive inventory on hand but have not sold any units
 
 3. **OPERATION:** `orders` — query
    **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `lineItems { variant { id }, quantity }`, pagination cursor
-   **Expected output:** All line items sold in the window to build a "sold variant IDs" set
+   **Expected output:** All line items sold in the window to build a "sold variant IDs" set. If an order's `lineItems.pageInfo.hasNextPage` is true, page through its remaining line items too, so no sold variant is missed. If you cannot, say how many orders were cut short and mark the report "may overstate dead stock".
 
 4. **OPERATION:** `inventoryItems` — query
    **Inputs:** Batch of `inventoryItemIds` for stocked variants
    **Expected output:** Inventory item cost data for dead stock value calculation
 
-5. Cross-reference: variants in step 2 that are NOT in the sold set from step 3 → dead stock
+5. Cross-reference: variants in step 2 that are NOT in the sold set from step 3 → dead stock. Multiply `quantity_on_hand` by `unit_cost` for the value. If a variant has no unit cost, leave the cost blank and exclude it from the value total, and say how many were left out.
 
 ## GraphQL Operations
 
@@ -87,6 +89,7 @@ query OrderLineItemsInPeriod($query: String!, $after: String) {
   orders(first: 250, after: $after, query: $query) {
     edges {
       node {
+        id
         lineItems(first: 50) {
           edges {
             node {
@@ -95,6 +98,10 @@ query OrderLineItemsInPeriod($query: String!, $after: String) {
                 id
               }
             }
+          }
+          pageInfo {
+            hasNextPage
+            endCursor
           }
         }
       }
@@ -176,7 +183,9 @@ For `format: json`, emit:
 
 ## Output Format
 CSV file `dead_stock_<YYYY-MM-DD>.csv` with columns:
-`variant_id`, `sku`, `product_title`, `vendor`, `quantity_on_hand`, `days_since_last_sale`, `unit_cost`, `total_cost_value`
+`variant_id`, `sku`, `product_title`, `vendor`, `quantity_on_hand`, `no_sales_in_days` (the window you checked, for example 90), `unit_cost`, `total_cost_value`
+
+This skill does not look up the date of the last sale before the window, so it does not give "days since last sale". Always list the settings used (window, minimum quantity, vendor) at the top of the report.
 
 ## Error Handling
 | Error | Cause | Recovery |
@@ -188,5 +197,5 @@ CSV file `dead_stock_<YYYY-MM-DD>.csv` with columns:
 ## Best Practices
 - Use `days_back: 90` for seasonal products; `days_back: 180` or `days_back: 365` for evergreen catalog.
 - Sort by `total_cost_value` descending to prioritize markdown decisions by capital impact.
-- Cross-reference with `stock-velocity-report` to distinguish truly dead stock from slow movers that still sell occasionally.
-- Use results as input for a discount campaign: apply a markdown tag using `product-tag-bulk-update` and then create a clearance collection.
+- Do not use this for products launched inside the window or for seasonal lines that are out of season. A new product has had no time to sell. Use the Days of stock calculator for slow movers that still sell now and then.
+- This skill only reads. Tagging products or building a clearance collection is a separate write step. Offer it after the report, name exactly which products it would change, and wait for a clear yes. The Product tag bulk editor can do the tagging with a preview first.

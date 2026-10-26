@@ -1,6 +1,6 @@
 new_slug: honest-urgency-planner
 name: Honest scarcity and urgency planner
-summary: Paste your offer and what you can handle. Get real limits and dates, plus the lines to say them.
+summary: Plan real limits for your offer. Give it your capacity and get a true cap, a real deadline and lines to say them, with no fake timers.
 job: make-offer
 thinking: medium
 thinking_why: It chooses limits from your real capacity and writes them out. The rules are fixed and every number must be true.
@@ -14,6 +14,10 @@ when:
   - Buyers say they will think about it and never return.
   - You have no cap and no dates, so there is no reason to buy this week.
   - You want urgency but refuse to use fake timers.
+not_for:
+  - "You only need the closing ask for one ad: use the Call-to-action writer."
+  - "Buyers doubt the offer itself, not the timing: use the Bonus stack builder."
+  - "You can serve any number of buyers at any time: skip limits and fix the offer first."
 you_give:
   - Your offer and price
   - How many new buyers you can serve well per week or per cohort
@@ -29,6 +33,31 @@ how_to_use:
   - Paste the offer and say how many buyers you can serve well at once.
   - Pick the scarcity and urgency types that fit how you deliver.
   - Put the lines in place, and update the counts as they change.
+output_sample:
+  input:
+    - Your offer and price
+    - How many buyers you can serve well per week or round
+    - Your past sales by week or month (optional)
+    - "The places you sell: page, ads, email, calls"
+  output:
+    - name: Capacity
+      contains: How many buyers you can serve well, with the sum and the reason behind it.
+    - name: Scarcity rule
+      contains: The type of limit, the number, and why it is real.
+    - name: Urgency rule
+      contains: The type of deadline, the date, and why you can keep it.
+    - name: Supply and demand sum
+      contains: Seats, expected interest, and what happens when the offer sells out.
+    - name: Lines
+      contains: One line each for your page, ad, email and call, plus a sold-out and a waiting-list message.
+    - name: If someone is late
+      contains: What to offer a buyer who wants in after the start.
+    - name: Honesty check
+      contains: A pass or fail for each line, so every claim is true on the day.
+    - name: Missing
+      contains: Any facts you still need to give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the plan failed, or none.
 how_it_works:
   - title: Finds real capacity
     text: Sets the cap from what you can serve well, not from a wish.

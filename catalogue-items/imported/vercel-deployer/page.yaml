@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It follows a fixed deploy path.
 new_slug: vercel-deployer
 name: Vercel deployer
-summary: Check the configured Vercel target, then deploy with a clear preview or production status and link.
+summary: Deploy your app to Vercel and get a preview link. Your AI checks the project, team and branch first, and only goes live when you say yes.
 job: ship-and-host
 headline: Vercel deployer
-subhead: Check the project, branch, and environment before deploying, then get the deployment status and link.
+subhead: Give your AI your project folder. It checks your project, team and branch, then deploys. You get the status and a link.
 explain: |
   Check the project target and environment before deploying. A preview or production deployment depends on the configured target and explicit authorization.
 
@@ -15,6 +15,10 @@ when:
   - You want a preview of changes before they go to the live site.
   - You are not sure if your project is linked to Vercel yet.
   - You want to move from manual deploys to deploys on every push.
+not_for:
+  - "You want to host on Netlify, Cloudflare or AWS: use that host's own deploy guide, because this only works with Vercel."
+  - "Your project is backend-only or not a website, such as a script or a mobile app: use a deploy guide for where it runs."
+  - "You want to check that the live site works: open the link yourself, because this only returns the link and the build status."
 you_give:
   - The project folder
   - A Vercel account
@@ -26,8 +30,29 @@ you_get:
   - A check of git, login and team setup
   - Next steps for automatic deploys
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and sign in to Vercel.
+  - Open your project folder in an AI that can run commands, such as Claude Code or Codex. A plain chat window cannot deploy.
+  - "Paste this skill and say: deploy my app to Vercel."
+  - Pick your team when your AI asks. It only asks if you have more than one.
+  - Say yes when it asks to push. It will name the branch and say preview or production first.
+  - Say production only if you want the live site. Otherwise you get a preview.
+  - Open the link your AI gives you and check the site yourself. If you have no Vercel account, the no-account route makes a public preview link. Your project files are uploaded to Vercel, and the link stays public until you claim it.
+output_sample:
+  input:
+    - Your project folder
+    - A Vercel account (not needed for the no-account route)
+    - The team to deploy under, if you have several
+    - A clear yes if you want a live production deploy (optional)
+  prerequisites:
+    - An AI that can run commands in your project folder, such as Claude Code or Codex
+    - The Vercel tool installed and signed in, or the no-account route
+  output:
+    - name: Project state check
+      contains: Whether you have a git remote, a linked Vercel project, a signed-in Vercel tool and which teams you belong to.
+    - name: Team choice
+      contains: A list of your team names so you pick where the project is deployed.
+    - name: Deployment link
+      contains: The preview link, or the production link if you clearly asked for production.
+    - name: Deployment status
+      contains: Whether the build is still running, finished or failed, and whether it is a preview or production.
+    - name: Claim link
+      contains: "Only on the no-account route: a link to move the deployment to your own Vercel account."

@@ -2,17 +2,99 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-react18-string-refs
 name: React string ref migrator
-summary: Share components that use string refs. Get modern refs with their call
-  sites updated.
+summary: Replace React string refs (ref="name" and this.refs) with createRef in class components, including refs in lists and child components.
 job: test-and-fix-code
 headline: React string ref migrator
-subhead: Share components that use string refs. Get modern refs with their call
-  sites updated. Share your goal and the files you already have. The skill file
-  sets out the steps and the tools needed for this job.
+subhead: Paste class components that use ref="name" and this.refs.name. Your AI swaps each one for React.createRef, updates every place that reads it, and handles refs in lists and refs passed to child components.
+explain: |
+  A string ref is a ref written as text, such as ref="myInput", and read with this.refs.myInput. It was deprecated in React 16.3. React 18.3.1 warns about it, and React 19 removes it. When it goes, any code that reads this.refs breaks.
+
+  The fix is mechanical, but it has two halves. The JSX must change from ref="myInput" to ref={this.myInput}. Every place that reads this.refs.myInput must change to this.myInput.current. Miss one half and the ref reads as empty. The skill finds both halves for each component and changes them as a pair.
+
+  The tricky cases get their own patterns: several refs in one component, refs created in a list, callback refs as an option, and a ref passed to a child component.
+when:
+  - Your console says string refs are deprecated on React 18.3.1.
+  - A search for this.refs in your code returns many hits.
+  - You are preparing a React 19 upgrade and still have ref="..." in JSX.
+  - A component has refs inside a map over a list, and you are not sure how to convert them.
+not_for:
+  - "You want to move off componentWillMount or similar methods: use the React unsafe lifecycle migrator."
+  - "Your code uses useRef in function components already: there is nothing to migrate, so leave it as it is."
+  - "You want every React 19 change in one pass, not only refs: use the React 19 source migration helper."
+you_give:
+  - The class component files that use ref="name" or this.refs
+  - Your React version
+  - Child components that receive a ref from a parent (optional)
+  - Search results for ref=" and this.refs in your src folder (optional)
+you_get:
+  - Each string ref replaced with createRef
+  - Every this.refs call updated to use .current
+  - Special handling for refs in lists and child components
+  - A final search to confirm no string refs remain
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page. If your AI takes file uploads, upload the whole skill folder so it can read the patterns file.
+  - Paste one component at a time. If a ref goes to a child component, paste the child too.
+  - Ask your AI to list each ref name, the JSX that sets it, and the code that reads it, before it changes anything.
+  - Check that every ref has both a setter and a reader on that list. Then ask for the rewrite.
+  - Run your tests and try the screen on your own machine, for example by clicking the button that focuses an input.
+how_it_works:
+  - title: Find the pairs
+    text: For each component it matches every ref="name" in JSX with the this.refs.name code that reads it.
+  - title: Pick the pattern
+    text: It sorts each case as single ref, multiple refs, list refs, callback refs or a ref passed to a child.
+  - title: Add the ref field
+    text: It adds a refName = React.createRef() field to the class.
+  - title: Change the JSX
+    text: It changes ref="refName" to ref={this.refName}.
+  - title: Change the readers
+    text: It changes this.refs.refName to this.refName.current everywhere.
+  - title: Verify
+    text: It gives the searches to run again. Both should return nothing.
+output_shape: |
+  Refs found
+  - <component>: ref "<name>" set in <line or element>, read in <method>
+  Pattern used
+  - <name>: <single, multiple, list, callback or child>
+  Rewritten code
+  <component code>
+  Check by hand
+  - <anything unclear>
+  Verify
+  - <searches that should return nothing>
+output_sample:
+  input:
+    - Your class component files that use string refs
+    - Child components that get a ref from a parent (optional)
+    - Search results for this.refs (optional)
+    - Your React version
+  prerequisites:
+    - Your code kept in version control, so you can undo the change
+    - An AI that can read your pasted code or uploaded files
+  output:
+    - name: Refs found
+      contains: Each ref name with the JSX that sets it and the code that reads it.
+    - name: Pattern used
+      contains: Which pattern each ref follows, such as list refs or callback refs.
+    - name: Rewritten code
+      contains: Each component with createRef fields, ref={this.name} and .current reads.
+    - name: Check by hand
+      contains: Refs to a child component or list that needs your decision.
+    - name: Verify searches
+      contains: Two searches to run again, which should return no results.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can read a component and convert refs. Upload the skill folder if it accepts files.
+    - name: An AI coding tool in your project
+      why: It can run the two searches and change several files at once.
+  inputs:
+    - Output of the two search commands in the skill
+    - The parent and child files when a ref is passed down
+    - Your tests for the component
+terms:
+  - term: String ref
+    meaning: An old way to name a ref as text, such as ref="myInput".
+  - term: createRef
+    meaning: A React call that makes a ref object you read through .current.
+  - term: Callback ref
+    meaning: A ref set by a function that React calls with the element.

@@ -1,0 +1,1482 @@
+{
+ "version": 1,
+ "created": "2026-10-26",
+ "notes": "Locked test half of recommendation-holdout.json (even positions). Do not read or tune against it; score only. Hold-out set, labelled by hand from the catalogue itself (blocks.json names and summaries, plus a read of each candidate's summary) before any search or ranking code was looked at. No query was chosen, tuned or re-labelled by running site search or the evaluation script. Queries are new: none is copied or paraphrased from recommendation-eval.json. Mix: 40 vague outcome goals (area vague), 30 beginner phrasings, 20 typos or bad grammar, 30 outside marketing (finance and accounting, HR, teaching and study, software and data, legal paperwork, personal habits, design), 20 that name a tool (Shopify, QuickBooks, Excel, Notion, Google Ads, Slack, WordPress, GA4, Zapier, Stripe, Meta, Zendesk), 20 about AI itself. search.expect: any of these in the top 5 is a hit; the first listed is the best single answer; every listed item is one a careful person would be happy to land on. Tool-named queries whose tool is not named in the catalogue (for example QuickBooks) are labelled with the generic job item that does the work. goals.steps: each inner list is one needed step, satisfied by any slug in it. next.good: links a careful person would follow next; next.goodTasks: jobs where a next link is acceptable even if not listed. gaps: queries a visitor could plausibly type where the catalogue has no good item (checked by searching names and summaries for the topic); use them to test that weak matches are shown honestly, not to score hits. Use this file only to check that ranking changes generalise, not to tune against.",
+ "financeTasks": [
+  "money-and-investing",
+  "plan-budgets-and-cash",
+  "manage-accounting",
+  "manage-tax",
+  "track-numbers",
+  "raise-funding",
+  "manage-personal-finances",
+  "check-contracts",
+  "work-with-files"
+ ],
+ "search": [
+  {
+   "id": "h002",
+   "q": "stop wasting time on admin",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "repeat-chore-automation-planner",
+    "weekly-time-audit-planner",
+    "hand-tasks-to-ai-without-losing-what-the-job-quietly-does",
+    "role-task-breakdown-for-ai-help",
+    "process-bottleneck-finder"
+   ]
+  },
+  {
+   "id": "h004",
+   "q": "my website isnt getting enough visitors",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "seo-auditor",
+    "content-strategy-planner",
+    "keyword-research-planner",
+    "traction-channel-ranker",
+    "seo-site-auditor"
+   ]
+  },
+  {
+   "id": "h006",
+   "q": "how do i stand out from everyone else selling the same thing",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "product-differentiation-checker",
+    "positioning-idea-generator",
+    "uncontested-market-finder",
+    "positioning-statement-writer",
+    "onliness-statement-writer"
+   ]
+  },
+  {
+   "id": "h008",
+   "q": "cut what my business spends every month",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "spend-savings-finder",
+    "software-spend-auditor",
+    "find-duplicate-and-unused-business-subscriptions",
+    "code-vendor-bills-flag-odd-ones-and-find-supplier-savings"
+   ]
+  },
+  {
+   "id": "h010",
+   "q": "my to do list never ends",
+   "audience": "anyone",
+   "area": "vague",
+   "expect": [
+    "week-plan-from-task-list-maker",
+    "urgent-versus-important-sorter",
+    "weekly-big-task-sorter",
+    "brain-dump-sorter",
+    "stop-doing-list-writer"
+   ]
+  },
+  {
+   "id": "h012",
+   "q": "grow without paying for ads",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "traction-channel-ranker",
+    "word-of-mouth-planner",
+    "referral-program-designer",
+    "growth-engine-finder",
+    "first-customers-by-hand-planner"
+   ]
+  },
+  {
+   "id": "h014",
+   "q": "i have no idea where my money goes each month",
+   "audience": "anyone",
+   "area": "vague",
+   "expect": [
+    "personal-budget-builder",
+    "get-your-personal-money-in-order-with-room-for-error",
+    "expense-sorter"
+   ]
+  },
+  {
+   "id": "h016",
+   "q": "hiring is chaos at my company",
+   "audience": "manager",
+   "area": "vague",
+   "expect": [
+    "interview-process-planner",
+    "hiring-packet-builder",
+    "run-fair-interviews-and-choose-on-evidence",
+    "structured-interview-guide",
+    "interview-scorecard-builder"
+   ]
+  },
+  {
+   "id": "h018",
+   "q": "i want to make a good first impression on a new client",
+   "audience": "freelancer",
+   "area": "vague",
+   "expect": [
+    "first-impression-plan",
+    "before-you-meet-brief-writer",
+    "client-project-communication-plan"
+   ]
+  },
+  {
+   "id": "h020",
+   "q": "get more good reviews",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "review-request-and-reply-planner",
+    "reply-to-your-reviews-safely-and-plan-how-to-get-more"
+   ]
+  },
+  {
+   "id": "h022",
+   "q": "turn what i know into something i can sell",
+   "audience": "freelancer",
+   "area": "vague",
+   "expect": [
+    "hours-to-assets-planner",
+    "mini-course-builder",
+    "price-a-course-or-ebook-and-write-its-launch-emails",
+    "free-giveaway-designer"
+   ]
+  },
+  {
+   "id": "h024",
+   "q": "what could go wrong with my plan",
+   "audience": "anyone",
+   "area": "vague",
+   "expect": [
+    "plan-pre-mortem-runner",
+    "failure-first-plan-check",
+    "plan-stress-tester",
+    "ruin-risk-stress-tester",
+    "bold-bet-downside-checker"
+   ]
+  },
+  {
+   "id": "h026",
+   "q": "leads go cold before i get back to them",
+   "audience": "sales",
+   "area": "vague",
+   "expect": [
+    "new-inquiry-reply-drafter",
+    "lead-prioritizer",
+    "who-to-call-first-ranker",
+    "lead-handoff-designer"
+   ]
+  },
+  {
+   "id": "h028",
+   "q": "cash is tight this month",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "cash-lever-ranker",
+    "cash-tied-up-finder",
+    "cash-forecast-builder",
+    "weekly-invoice-and-cash-chaser"
+   ]
+  },
+  {
+   "id": "h030",
+   "q": "i keep running out of things to post",
+   "audience": "marketer",
+   "area": "vague",
+   "expect": [
+    "content-pillar-finder",
+    "content-topic-planner",
+    "content-strategy-planner",
+    "social-post-planner"
+   ]
+  },
+  {
+   "id": "h032",
+   "q": "find my best customers",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "best-customer-finder",
+    "ideal-customer-profiler",
+    "best-and-worst-customer-profiler",
+    "vip-customer-finder"
+   ]
+  },
+  {
+   "id": "h034",
+   "q": "my inbox is out of control",
+   "audience": "anyone",
+   "area": "vague",
+   "expect": [
+    "email-backlog-clearer",
+    "clear-an-email-backlog-and-set-triage-rules-that-stick",
+    "inbox-triager",
+    "inbox-rules-interviewer"
+   ]
+  },
+  {
+   "id": "h036",
+   "q": "make something people want to share",
+   "audience": "marketer",
+   "area": "vague",
+   "expect": [
+    "shareable-content-checker",
+    "word-of-mouth-planner",
+    "memorable-message-writer",
+    "message-stickiness-rewriter",
+    "growth-loop-designer"
+   ]
+  },
+  {
+   "id": "h038",
+   "q": "make my brand feel more premium",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "premium-positioning-mapper",
+    "marketing-vector-writer"
+   ]
+  },
+  {
+   "id": "h040",
+   "q": "get a local business found",
+   "audience": "owner",
+   "area": "vague",
+   "expect": [
+    "local-search-listing-manager",
+    "review-request-and-reply-planner"
+   ]
+  },
+  {
+   "id": "h042",
+   "q": "how do i start selling stuff online with no experience",
+   "audience": "owner",
+   "area": "store",
+   "expect": [
+    "open-a-shopify-store-and-take-your-first-order",
+    "shopify-store-setup-planner",
+    "launch-channel-picker",
+    "product-and-variant-setup-planner"
+   ]
+  },
+  {
+   "id": "h044",
+   "q": "how to start a podcast",
+   "audience": "anyone",
+   "area": "video",
+   "expect": [
+    "podcast-pilot-brief-builder",
+    "agency-marketing-global-podcast-strategist"
+   ]
+  },
+  {
+   "id": "h046",
+   "q": "how do i get people to sign up for my email list",
+   "audience": "owner",
+   "area": "email",
+   "expect": [
+    "lead-magnet-planner",
+    "signup-popup-builder",
+    "free-giveaway-designer",
+    "lead-offer-planner"
+   ]
+  },
+  {
+   "id": "h048",
+   "q": "what should i charge as a freelancer",
+   "audience": "freelancer",
+   "area": "pricing",
+   "expect": [
+    "client-fee-and-cap-setter",
+    "prepare-your-first-freelance-project-quote",
+    "paid-work-case-writer",
+    "income-floor-calculator"
+   ]
+  },
+  {
+   "id": "h050",
+   "q": "do i need an nda before i tell someone my idea",
+   "audience": "anyone",
+   "area": "legal",
+   "expect": [
+    "nda-drafter",
+    "nda-quick-checker",
+    "share-or-protect-brief",
+    "new-idea-protection-planner"
+   ]
+  },
+  {
+   "id": "h052",
+   "q": "i want a website for my small business where do i begin",
+   "audience": "owner",
+   "area": "design",
+   "expect": [
+    "site-map-planner",
+    "page-tree-url-sketcher",
+    "standout-website-designer",
+    "borrow-a-look-you-like-and-plan-a-readable-page"
+   ]
+  },
+  {
+   "id": "h054",
+   "q": "how do i read a balance sheet",
+   "audience": "anyone",
+   "area": "finance",
+   "expect": [
+    "company-financial-health",
+    "financial-statement-analyst",
+    "p-l-and-balance-sheet-writer"
+   ]
+  },
+  {
+   "id": "h056",
+   "q": "what should go on a product page",
+   "audience": "owner",
+   "area": "store",
+   "expect": [
+    "product-page-section-planner",
+    "product-page-doubt-mapper",
+    "eight-picture-product-page-planner"
+   ]
+  },
+  {
+   "id": "h058",
+   "q": "how do i set up my first google ads campaign",
+   "audience": "owner",
+   "area": "ads",
+   "expect": [
+    "google-ads-launch-planner",
+    "google-ads-campaign-structure-planner",
+    "non-brand-search-campaign-builder",
+    "google-bid-strategy-chooser"
+   ]
+  },
+  {
+   "id": "h060",
+   "q": "how do i import goods from overseas for the first time",
+   "audience": "owner",
+   "area": "supply",
+   "expect": [
+    "landed-cost-calculator",
+    "import-export-paperwork",
+    "sourcing-plan-builder",
+    "get-a-product-made-right-from-tech-pack-to-inspected-shipment"
+   ]
+  },
+  {
+   "id": "h062",
+   "q": "how do i write a press release",
+   "audience": "owner",
+   "area": "writing",
+   "expect": [
+    "agency-marketing-pr-communications-manager",
+    "marketing-content-drafter"
+   ]
+  },
+  {
+   "id": "h064",
+   "q": "how do i onboard a new customer so they dont leave",
+   "audience": "owner",
+   "area": "customers",
+   "expect": [
+    "customer-onboarding-planner",
+    "new-customer-onboarding-sequence-writer",
+    "onboarding-improver",
+    "first-use-gap-checker"
+   ]
+  },
+  {
+   "id": "h066",
+   "q": "i just started freelancing how do i find clients",
+   "audience": "freelancer",
+   "area": "sales",
+   "expect": [
+    "first-customers-by-hand-planner",
+    "niche-first-message",
+    "build-a-prospect-list-rank-it-and-send-first-messages",
+    "stranger-first-message-writer"
+   ]
+  },
+  {
+   "id": "h068",
+   "q": "how do i give a good presentation",
+   "audience": "anyone",
+   "area": "writing",
+   "expect": [
+    "pitch-arc-planner",
+    "idea-buy-in-pitch-planner",
+    "launch-talk-writer"
+   ]
+  },
+  {
+   "id": "h070",
+   "q": "how do i get a white background on my product photos",
+   "audience": "owner",
+   "area": "images",
+   "expect": [
+    "product-background-swapper",
+    "marketplace-photo-rule-checker",
+    "product-photo-retoucher"
+   ]
+  },
+  {
+   "id": "h072",
+   "q": "privicy policy for my website",
+   "audience": "owner",
+   "area": "legal",
+   "expect": [
+    "privacy-policy-drafter",
+    "policy-page-drafter"
+   ]
+  },
+  {
+   "id": "h074",
+   "q": "youtub thumbnail ideas",
+   "audience": "marketer",
+   "area": "social",
+   "expect": [
+    "thumbnail-and-title-planner",
+    "youtube-title-thumbnail-check",
+    "pick-a-title-and-thumbnail-then-fix-where-viewers-leave"
+   ]
+  },
+  {
+   "id": "h076",
+   "q": "gogle shopping feed errors",
+   "audience": "marketer",
+   "area": "ads",
+   "expect": [
+    "merchant-center-feed-health-checker",
+    "shopping-feed-title-writer",
+    "merchant-center-suspension-checker"
+   ]
+  },
+  {
+   "id": "h078",
+   "q": "buisness name ideas",
+   "audience": "owner",
+   "area": "brand",
+   "expect": [
+    "brand-name-finder",
+    "store-name-generator",
+    "product-name-brainstormer",
+    "store-name-tester"
+   ]
+  },
+  {
+   "id": "h080",
+   "q": "shiping rates for my store",
+   "audience": "owner",
+   "area": "store",
+   "expect": [
+    "shipping-rate-planner",
+    "shipping-zone-and-rate-drafter",
+    "shipping-cost-analyzer",
+    "shipping-rate-gap-finder"
+   ]
+  },
+  {
+   "id": "h082",
+   "q": "excell pivot tabel help",
+   "audience": "anyone",
+   "area": "data",
+   "expect": [
+    "excel-pivot-refresh-planner",
+    "spreadsheet-checker"
+   ]
+  },
+  {
+   "id": "h084",
+   "q": "meeting agenda tempate",
+   "audience": "manager",
+   "area": "ops",
+   "expect": [
+    "meeting-agenda-and-cost-planner",
+    "meeting-pre-read-writer",
+    "run-a-meeting-worth-holding-from-agenda-to-action-items"
+   ]
+  },
+  {
+   "id": "h086",
+   "q": "restraunt food cost per dish",
+   "audience": "owner",
+   "area": "finance",
+   "expect": [
+    "restaurant-portion-cost-builder"
+   ]
+  },
+  {
+   "id": "h088",
+   "q": "welcom popup discout for new subscribers",
+   "audience": "marketer",
+   "area": "email",
+   "expect": [
+    "welcome-popup-offer-tester",
+    "signup-popup-builder"
+   ]
+  },
+  {
+   "id": "h090",
+   "q": "influncer outreach templete",
+   "audience": "marketer",
+   "area": "social",
+   "expect": [
+    "influencer-shortlist-builder",
+    "tiktok-creator-outreach-planner",
+    "influencer-gifting-planner",
+    "creator-partnership-planner"
+   ]
+  },
+  {
+   "id": "h092",
+   "q": "get my books ready for an audit",
+   "audience": "finance",
+   "area": "finance",
+   "expect": [
+    "audit-readiness-checker",
+    "control-testing-workpaper",
+    "internal-controls-testing"
+   ]
+  },
+  {
+   "id": "h094",
+   "q": "build a budget for my department",
+   "audience": "manager",
+   "area": "finance",
+   "expect": [
+    "department-budget-planner",
+    "budget-and-forecast-builder"
+   ]
+  },
+  {
+   "id": "h096",
+   "q": "how do we set salary ranges for each role",
+   "audience": "hr",
+   "area": "hr",
+   "expect": [
+    "pay-band-builder",
+    "set-fair-pay-bands-and-a-pay-and-benefits-plan",
+    "pay-and-benefits-plan-builder"
+   ]
+  },
+  {
+   "id": "h098",
+   "q": "run a staff engagement survey",
+   "audience": "hr",
+   "area": "hr",
+   "expect": [
+    "employee-survey-designer",
+    "turn-employee-feedback-into-owned-actions"
+   ]
+  },
+  {
+   "id": "h100",
+   "q": "make a marking rubric for student essays",
+   "audience": "teacher",
+   "area": "study",
+   "expect": [
+    "marking-rubric-writer",
+    "task-rubric-drafter",
+    "single-point-rubric-builder"
+   ]
+  },
+  {
+   "id": "h102",
+   "q": "write quiz questions for my class",
+   "audience": "teacher",
+   "area": "study",
+   "expect": [
+    "retrieval-quiz-writer",
+    "recall-quiz-writer",
+    "understanding-check-questions"
+   ]
+  },
+  {
+   "id": "h104",
+   "q": "spaced repetition schedule for revising",
+   "audience": "student",
+   "area": "study",
+   "expect": [
+    "revision-schedule-planner",
+    "study-review-scheduler",
+    "study-revision-coach"
+   ]
+  },
+  {
+   "id": "h106",
+   "q": "what does this sql query actually do",
+   "audience": "anyone",
+   "area": "data",
+   "expect": [
+    "plain-words-sql-explainer"
+   ]
+  },
+  {
+   "id": "h108",
+   "q": "did my a/b test win",
+   "audience": "marketer",
+   "area": "data",
+   "expect": [
+    "a-b-test-verdict-maker",
+    "experiment-result-analyst",
+    "statistical-test-picker"
+   ]
+  },
+  {
+   "id": "h110",
+   "q": "terms and conditions for my app",
+   "audience": "owner",
+   "area": "legal",
+   "expect": [
+    "terms-of-service-drafter",
+    "policy-page-drafter"
+   ]
+  },
+  {
+   "id": "h112",
+   "q": "can i trademark my business name",
+   "audience": "owner",
+   "area": "legal",
+   "expect": [
+    "trademark-name-first-check"
+   ]
+  },
+  {
+   "id": "h114",
+   "q": "build a daily routine i can stick to",
+   "audience": "anyone",
+   "area": "personal",
+   "expect": [
+    "habit-plan-builder",
+    "weekly-time-audit-planner",
+    "not-to-do-list-builder"
+   ]
+  },
+  {
+   "id": "h116",
+   "q": "can i afford to buy a car",
+   "audience": "anyone",
+   "area": "personal",
+   "expect": [
+    "plan-a-purchase-around-your-real-budget",
+    "big-purchase-pause-check"
+   ]
+  },
+  {
+   "id": "h118",
+   "q": "make a poster for a charity bake sale",
+   "audience": "anyone",
+   "area": "design",
+   "expect": [
+    "poster-designer",
+    "make-a-readable-event-poster",
+    "type-led-poster-planner"
+   ]
+  },
+  {
+   "id": "h120",
+   "q": "track depreciation on company equipment",
+   "audience": "finance",
+   "area": "finance",
+   "expect": [
+    "fixed-asset-register-keeper"
+   ]
+  },
+  {
+   "id": "h122",
+   "q": "shopify abandoned checkout report",
+   "audience": "owner",
+   "area": "store",
+   "expect": [
+    "abandoned-checkout-reader",
+    "checkout-page-auditor"
+   ]
+  },
+  {
+   "id": "h124",
+   "q": "categorise transactions in quickbooks",
+   "audience": "owner",
+   "area": "finance",
+   "expect": [
+    "expense-sorter",
+    "bank-and-ledger-matcher"
+   ]
+  },
+  {
+   "id": "h126",
+   "q": "numbers in my powerpoint dont match the excel",
+   "audience": "ops",
+   "area": "data",
+   "expect": [
+    "excel-powerpoint-number-checker",
+    "review-revised-excel-and-powerpoint-files",
+    "deck-number-refresher"
+   ]
+  },
+  {
+   "id": "h128",
+   "q": "turn a notion spec into tasks",
+   "audience": "developer",
+   "area": "dev",
+   "expect": [
+    "spec-to-task-planner"
+   ]
+  },
+  {
+   "id": "h130",
+   "q": "set up performance max for my store",
+   "audience": "marketer",
+   "area": "ads",
+   "expect": [
+    "performance-max-launch-planner",
+    "launch-performance-max-keep-it-clean-and-know-when-to-scale",
+    "feed-only-performance-max-builder"
+   ]
+  },
+  {
+   "id": "h132",
+   "q": "write a slack announcement about a change",
+   "audience": "manager",
+   "area": "ops",
+   "expect": [
+    "change-announcement",
+    "slack-message-writer",
+    "internal-update-writer"
+   ]
+  },
+  {
+   "id": "h134",
+   "q": "wordpress plugin broke my site",
+   "audience": "owner",
+   "area": "dev",
+   "expect": [
+    "wordpress-health-fixer",
+    "wordpress-code-checker"
+   ]
+  },
+  {
+   "id": "h136",
+   "q": "ga4 purchases not showing up",
+   "audience": "marketer",
+   "area": "data",
+   "expect": [
+    "ga4-store-setup-checker",
+    "shopify-google-conversion-tracking-builder",
+    "google-ads-purchase-tracking-checker"
+   ]
+  },
+  {
+   "id": "h138",
+   "q": "stripe subscriptions in my app",
+   "audience": "developer",
+   "area": "dev",
+   "expect": [
+    "stripe-payments-builder",
+    "saas-starter-builder",
+    "agency-engineering-payments-billing-engineer"
+   ]
+  },
+  {
+   "id": "h140",
+   "q": "zendesk ticket backlog",
+   "audience": "support",
+   "area": "support",
+   "expect": [
+    "zendesk-ticket-priority-planner",
+    "support-inbox-priority-sorter",
+    "support-ticket-sorter"
+   ]
+  },
+  {
+   "id": "h142",
+   "q": "set up claude for my business",
+   "audience": "owner",
+   "area": "ai",
+   "expect": [
+    "website-brand-brain-builder",
+    "claude-power-user-coach",
+    "role-task-breakdown-for-ai-help",
+    "daily-ai-help-discovery-guide",
+    "workplace-shorthand-memory"
+   ]
+  },
+  {
+   "id": "h144",
+   "q": "my prompt gives different answers every time",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "prompt-fixer",
+    "prompt-tester-and-tuner",
+    "tune-a-prompt-with-real-tests-then-ship-it-with-versions"
+   ]
+  },
+  {
+   "id": "h146",
+   "q": "ai gives me really long answers",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "short-reply-mode",
+    "focus-friendly-answers"
+   ]
+  },
+  {
+   "id": "h148",
+   "q": "which parts of my job can ai take over",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "role-task-breakdown-for-ai-help",
+    "hand-tasks-to-ai-without-losing-what-the-job-quietly-does",
+    "daily-ai-help-discovery-guide"
+   ]
+  },
+  {
+   "id": "h150",
+   "q": "run an ai model on my own laptop",
+   "audience": "developer",
+   "area": "ai",
+   "expect": [
+    "local-ai-model-setup"
+   ]
+  },
+  {
+   "id": "h152",
+   "q": "stop claude burning through my usage limit",
+   "audience": "developer",
+   "area": "ai",
+   "expect": [
+    "token-saver-for-coding-agents",
+    "project-memory-organizer",
+    "short-reply-mode"
+   ]
+  },
+  {
+   "id": "h154",
+   "q": "turn a book into something ai can use",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "book-to-skill-converter",
+    "long-source-to-workflow"
+   ]
+  },
+  {
+   "id": "h156",
+   "q": "my support chatbot gives wrong answers",
+   "audience": "support",
+   "area": "ai",
+   "expect": [
+    "support-chatbot-conversation-review",
+    "review-support-bot-errors-with-retest-cases"
+   ]
+  },
+  {
+   "id": "h158",
+   "q": "write instructions for my ai assistant",
+   "audience": "anyone",
+   "area": "ai",
+   "expect": [
+    "ai-instruction-writer",
+    "agent-prompt-writer",
+    "agent-goal-writer",
+    "job-to-agent-goal-writer"
+   ]
+  },
+  {
+   "id": "h160",
+   "q": "ready to paste prompt for writing ad copy",
+   "audience": "marketer",
+   "area": "ai",
+   "expect": [
+    "creative-ai-chat-starter-prompts",
+    "fact-based-ad-copy-writer",
+    "meta-ad-copywriter"
+   ]
+  }
+ ],
+ "goals": [
+  {
+   "id": "hg02",
+   "goal": "raise my prices and tell my customers",
+   "steps": [
+    [
+     "price-rise-readiness-checker"
+    ],
+    [
+     "price-test-planner",
+     "price-sensitivity-analyst"
+    ],
+    [
+     "price-rise-letter-writer"
+    ]
+   ]
+  },
+  {
+   "id": "hg04",
+   "goal": "write a blog post that can rank on google",
+   "steps": [
+    [
+     "keyword-researcher",
+     "keyword-research-planner",
+     "search-intent-keyword-mapper"
+    ],
+    [
+     "content-brief-writer",
+     "search-page-brief-writer",
+     "keyword-to-post-outline-writer"
+    ],
+    [
+     "search-blog-post-writer",
+     "blog-post-producer"
+    ],
+    [
+     "pre-publish-content-checker"
+    ],
+    [
+     "title-and-meta-tag-writer",
+     "search-title-and-snippet-writer"
+    ]
+   ]
+  },
+  {
+   "id": "hg06",
+   "goal": "get ready for my first board meeting",
+   "steps": [
+    [
+     "prepare-a-board-decision-brief",
+     "board-deck-builder"
+    ],
+    [
+     "hard-questions-board-prep-coach"
+    ],
+    [
+     "board-minutes-drafter"
+    ]
+   ]
+  },
+  {
+   "id": "hg08",
+   "goal": "bring ai into my team safely",
+   "steps": [
+    [
+     "role-task-breakdown-for-ai-help",
+     "hand-tasks-to-ai-without-losing-what-the-job-quietly-does"
+    ],
+    [
+     "team-ai-use-policy-drafter"
+    ],
+    [
+     "prepare-an-ai-pilot-go-decision"
+    ],
+    [
+     "assess-ai-workflow-value"
+    ]
+   ]
+  },
+  {
+   "id": "hg10",
+   "goal": "launch a new product in 30 days",
+   "steps": [
+    [
+     "thirty-day-launch-planner",
+     "go-or-no-go-launch-checker"
+    ],
+    [
+     "launch-channel-picker"
+    ],
+    [
+     "brand-launch-planner",
+     "publicity-first-launch-planner"
+    ],
+    [
+     "launch-email-sequence-planner"
+    ]
+   ]
+  },
+  {
+   "id": "hg12",
+   "goal": "set up google ads for my store with tracking i can trust",
+   "steps": [
+    [
+     "google-ads-purchase-tracking-checker",
+     "shopify-google-conversion-tracking-builder"
+    ],
+    [
+     "merchant-center-feed-health-checker"
+    ],
+    [
+     "google-ads-campaign-structure-planner",
+     "google-ads-launch-planner"
+    ],
+    [
+     "break-even-roas-and-cpa-calculator"
+    ],
+    [
+     "google-bid-strategy-chooser"
+    ]
+   ]
+  },
+  {
+   "id": "hg14",
+   "goal": "put my team's processes in one place",
+   "steps": [
+    [
+     "company-wiki-planner"
+    ],
+    [
+     "process-and-sop-writer",
+     "repeat-task-how-to-writer",
+     "repeat-task-step-guide-writer"
+    ],
+    [
+     "sop-and-runbook-checker",
+     "process-doc-freshness-keeper"
+    ]
+   ]
+  },
+  {
+   "id": "hg16",
+   "goal": "get my app ready to launch legally",
+   "steps": [
+    [
+     "privacy-policy-drafter"
+    ],
+    [
+     "terms-of-service-drafter"
+    ],
+    [
+     "new-data-use-screener",
+     "privacy-impact-assessment-writer"
+    ],
+    [
+     "launch-legal-reviewer"
+    ]
+   ]
+  },
+  {
+   "id": "hg18",
+   "goal": "report on my marketing to the boss each month",
+   "steps": [
+    [
+     "marketing-results-reporter"
+    ],
+    [
+     "conversion-reconciliation",
+     "metric-mismatch-tracer"
+    ],
+    [
+     "marketing-performance-report"
+    ],
+    [
+     "executive-summary-writer",
+     "insight-brief-writer"
+    ]
+   ]
+  },
+  {
+   "id": "hg20",
+   "goal": "make a risky decision safer",
+   "steps": [
+    [
+     "bold-bet-downside-checker",
+     "fear-setting-planner"
+    ],
+    [
+     "plan-pre-mortem-runner",
+     "failure-first-plan-check"
+    ],
+    [
+     "decision-tripwire-planner"
+    ]
+   ]
+  },
+  {
+   "id": "hg22",
+   "goal": "plan a website for my small business",
+   "steps": [
+    [
+     "site-map-planner",
+     "page-tree-url-sketcher"
+    ],
+    [
+     "website-brand-brain-builder"
+    ],
+    [
+     "standout-website-designer",
+     "website-art-director"
+    ],
+    [
+     "usability-heuristic-reviewer"
+    ],
+    [
+     "wcag-accessibility-fixer"
+    ]
+   ]
+  },
+  {
+   "id": "hg24",
+   "goal": "send a customer newsletter people actually read",
+   "steps": [
+    [
+     "email-topic-bank-builder"
+    ],
+    [
+     "prepare-a-useful-customer-newsletter-issue",
+     "campaign-email-writer",
+     "story-email-writer"
+    ],
+    [
+     "email-draft-reviewer",
+     "email-send-readiness-scorer"
+    ],
+    [
+     "email-and-sms-performance-reader"
+    ]
+   ]
+  }
+ ],
+ "next": [
+  {
+   "slug": "welcome-flow-builder",
+   "good": [
+    "email-sequence-writer",
+    "cart-recovery-flow-builder",
+    "post-purchase-flow-builder",
+    "email-draft-reviewer",
+    "signup-popup-builder",
+    "email-flow-gap-checker",
+    "email-segment-builder"
+   ],
+   "goodTasks": [
+    "write-emails",
+    "keep-customers"
+   ]
+  },
+  {
+   "slug": "referral-program-designer",
+   "good": [
+    "discount-impact-checker",
+    "split-run-test-planner",
+    "campaign-email-writer",
+    "word-of-mouth-planner",
+    "growth-loop-designer",
+    "loyalty-and-vip-program-designer"
+   ],
+   "goodTasks": [
+    "keep-customers",
+    "make-offer"
+   ]
+  },
+  {
+   "slug": "expense-sorter",
+   "good": [
+    "prepare-expenses-for-your-bookkeeper",
+    "bank-and-ledger-matcher",
+    "financial-statement-preparer",
+    "month-end-close-planner",
+    "journal-entry-drafter",
+    "account-reconciler"
+   ],
+   "goodTasks": [
+    "manage-accounting"
+   ]
+  },
+  {
+   "slug": "habit-plan-builder",
+   "good": [
+    "weekly-time-audit-planner",
+    "not-to-do-list-builder",
+    "digital-tool-audit-planner",
+    "week-priority-picker"
+   ],
+   "goodTasks": [
+    "think-and-decide",
+    "organise-work"
+   ]
+  },
+  {
+   "slug": "pay-band-builder",
+   "good": [
+    "pay-and-benefits-plan-builder",
+    "job-offer-planner",
+    "pay-benchmark-and-equity-modeler",
+    "offer-letter-drafter",
+    "people-cost-budget-builder",
+    "set-fair-pay-bands-and-a-pay-and-benefits-plan"
+   ],
+   "goodTasks": [
+    "hire-people"
+   ]
+  },
+  {
+   "slug": "retrieval-quiz-writer",
+   "good": [
+    "recall-quiz-writer",
+    "understanding-check-questions",
+    "revision-schedule-planner",
+    "mixed-practice-unit-planner",
+    "lesson-understanding-check"
+   ],
+   "goodTasks": [
+    "teach-and-train",
+    "study-and-practice"
+   ]
+  },
+  {
+   "slug": "a-b-test-verdict-maker",
+   "good": [
+    "experiment-result-analyst",
+    "sample-size-planner",
+    "statistical-test-picker",
+    "one-change-experiment-planner",
+    "split-run-test-planner",
+    "test-idea-ranker"
+   ],
+   "goodTasks": [
+    "analyse-data",
+    "track-numbers",
+    "test-store-changes"
+   ]
+  },
+  {
+   "slug": "customer-onboarding-planner",
+   "good": [
+    "new-customer-onboarding-sequence-writer",
+    "first-use-gap-checker",
+    "in-app-tour-designer",
+    "onboarding-improver",
+    "customer-success-plan-writer",
+    "first-use-onboarding-designer"
+   ],
+   "goodTasks": [
+    "keep-customers",
+    "build-product"
+   ]
+  },
+  {
+   "slug": "google-ads-launch-planner",
+   "good": [
+    "google-ads-purchase-tracking-checker",
+    "merchant-center-feed-health-checker",
+    "google-ads-campaign-structure-planner",
+    "break-even-roas-and-cpa-calculator",
+    "google-bid-strategy-chooser",
+    "non-brand-search-campaign-builder"
+   ],
+   "goodTasks": [
+    "run-google-ads"
+   ]
+  },
+  {
+   "slug": "claude-power-user-coach",
+   "good": [
+    "project-memory-builder",
+    "repeat-job-skill-drafter",
+    "prompt-improver",
+    "daily-ai-help-discovery-guide",
+    "ai-memory-habit-setter",
+    "short-reply-mode"
+   ],
+   "goodTasks": [
+    "set-up-ai",
+    "make-skills"
+   ]
+  },
+  {
+   "slug": "website-brand-brain-builder",
+   "good": [
+    "brand-voice-guide-builder",
+    "brand-style-guide-writer",
+    "brand-messaging-builder",
+    "product-context-builder",
+    "brand-voice-rewriter"
+   ],
+   "goodTasks": [
+    "brand-file",
+    "set-up-ai"
+   ]
+  },
+  {
+   "slug": "usability-heuristic-reviewer",
+   "good": [
+    "small-usability-test-planner",
+    "visual-hierarchy-fixer",
+    "wcag-accessibility-fixer",
+    "interface-polish-reviewer",
+    "page-speed-fixer"
+   ],
+   "goodTasks": [
+    "design-work",
+    "build-websites"
+   ]
+  },
+  {
+   "slug": "incoming-demand-letter-reviewer",
+   "good": [
+    "legal-inquiry-reply-drafter",
+    "dispute-timeline-builder",
+    "quick-legal-sanity-checker",
+    "demand-letter-fact-gatherer",
+    "agency-legal-document-review"
+   ],
+   "goodTasks": [
+    "check-contracts"
+   ]
+  },
+  {
+   "slug": "sales-proposal-writer",
+   "good": [
+    "quote-and-proposal-builder",
+    "objection-answer-sheet-writer",
+    "negotiation-prep-coach",
+    "call-follow-up-drafter",
+    "mutual-action-plan-builder",
+    "deal-health-reviewer"
+   ],
+   "goodTasks": [
+    "sell-and-negotiate"
+   ]
+  },
+  {
+   "slug": "content-pillar-finder",
+   "good": [
+    "content-topic-planner",
+    "social-post-planner",
+    "content-calendar-builder",
+    "standing-social-calendar-maker",
+    "content-repurposer",
+    "linkedin-content-strategy"
+   ],
+   "goodTasks": [
+    "grow-social"
+   ]
+  }
+ ],
+ "gaps": [
+  {
+   "q": "file my self assessment tax return",
+   "why": "manage-tax holds only cash-tax and deferred-tax reconcilers and one tax planning brief; nothing helps prepare or file a return."
+  },
+  {
+   "q": "mortgage affordability calculator",
+   "why": "No mortgage or home-loan item; personal-finance items cover budgets, debt payoff and retirement only."
+  },
+  {
+   "q": "set up payroll for my first employee",
+   "why": "Payroll appears only as a line inside the cash forecast builder; no payroll setup item."
+  },
+  {
+   "q": "how to register an llc",
+   "why": "No company formation item; only a company filing deadline tracker for companies that already exist."
+  },
+  {
+   "q": "help me write my will",
+   "why": "No estate planning or personal legal documents."
+  },
+  {
+   "q": "visa application checklist for working abroad",
+   "why": "Only a study-abroad advisor; no work visa or immigration item."
+  },
+  {
+   "q": "design an instagram post in canva",
+   "why": "Canva is not covered; image items are AI image prompt and generator skills, not template design."
+  },
+  {
+   "q": "pinterest strategy for my shop",
+   "why": "No Pinterest item; social planning covers other platforms."
+  },
+  {
+   "q": "open an etsy shop",
+   "why": "Only an Etsy search results collector; no Etsy shop setup or listing item."
+  },
+  {
+   "q": "start a dropshipping business",
+   "why": "No dropshipping item; supplier and store setup items assume you hold or make the product."
+  },
+  {
+   "q": "excel vba macro to automate my report",
+   "why": "The only VBA mention is a MATLAB bridge; no Excel macro writer."
+  },
+  {
+   "q": "google sheets formulas and apps script",
+   "why": "No Google Sheets or Apps Script item."
+  },
+  {
+   "q": "build a tableau dashboard",
+   "why": "Dashboard items cover Power BI, Plotly and offline HTML; Tableau and Looker are not covered."
+  },
+  {
+   "q": "what business insurance do i need",
+   "why": "No business insurance item; the only insurance items are claims reserves and a patient service writer."
+  },
+  {
+   "q": "plan a wedding",
+   "why": "No wedding or private event planning item."
+  },
+  {
+   "q": "weekly meal plan and grocery list",
+   "why": "Cooking minds teach technique and plan single meals; no meal planning or shopping list item."
+  },
+  {
+   "q": "workout plan for beginners",
+   "why": "No fitness or exercise item."
+  },
+  {
+   "q": "tips to sleep better",
+   "why": "No sleep or health advice item; habit planners exist but do not cover sleep."
+  },
+  {
+   "q": "guitar lessons for beginners",
+   "why": "No music practice or instrument learning item; the audio items make music and voiceovers."
+  },
+  {
+   "q": "which ai tool should i use for my task",
+   "why": "No AI tools directory or tool chooser yet; items cover setting up and using one assistant."
+  },
+  {
+   "q": "chatgpt vs claude vs gemini",
+   "why": "No comparison of AI assistants; the catalogue is about using them, not ranking them."
+  },
+  {
+   "q": "invoice template for my small business",
+   "why": "Invoice items check and chase invoices; none generate an invoice or template."
+  },
+  {
+   "q": "make a gantt chart for my project",
+   "why": "No Gantt or schedule chart item; project items cover plans, status and risks."
+  },
+  {
+   "q": "design a flyer for my shop",
+   "why": "Poster items exist but no flyer, brochure or print layout item."
+  },
+  {
+   "q": "design a business card",
+   "why": "No business card or stationery item."
+  },
+  {
+   "q": "set up asana for my team",
+   "why": "No Asana, Trello, Monday or ClickUp item; only Jira, Linear and Notion project helpers."
+  },
+  {
+   "q": "choose a web host for my site",
+   "why": "Deploy items cover Vercel, Netlify, Render and Cloudflare for developers; no web host chooser for non-developers."
+  },
+  {
+   "q": "set up xero for my small business",
+   "why": "No Xero, FreshBooks or accounting software setup item; accounting items are generic."
+  },
+  {
+   "q": "meditation routine for stress",
+   "why": "No meditation or stress management item; wellbeing items are for staff programmes and lessons."
+  }
+ ]
+}

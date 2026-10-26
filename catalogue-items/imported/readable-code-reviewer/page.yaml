@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads code and applies known rules, and you approve the edits.
 new_slug: readable-code-reviewer
 name: Readable code reviewer
-summary: Give it code. Get clearer names, smaller functions and tidier error
-  handling, each with a reason. Uses Clean Code.
+summary: Check your code for readability. Get a score out of 10, clearer names, smaller functions and tidier error handling, each with a reason.
 job: test-and-fix-code
 headline: Readable code reviewer
-subhead: Your code reviewed for how easily a stranger can read it, with a score
-  out of 10 and clear fixes. Each suggestion comes with the reason behind it,
-  based on the Clean Code approach.
+subhead: Your code reviewed for how easily a stranger can read it, with a score out of 10 and clear fixes. Each suggestion comes with the reason behind it, based on the Clean Code approach.
 explain: |
   Your code reviewed for how easily a stranger can read it, with a score out of 10 and clear fixes. Each suggestion comes with the reason behind it, based on the Clean Code approach.
 
@@ -18,6 +15,10 @@ when:
   - A pull request needs a readability pass before merge.
   - Your functions have grown to fifty lines or more.
   - You want to teach a junior developer why naming matters.
+not_for:
+  - "You want to change how code is structured without changing what it does: use a refactoring guide instead."
+  - "Your code is generated or you cannot change it: skip the review."
+  - "You only need spacing and style fixed: run a linter or formatter such as Prettier, Black or gofmt."
 you_give:
   - Code to review
   - Language and style rules (optional)
@@ -28,7 +29,28 @@ you_get:
   - Suggested function splits
   - Error handling fixes with reasons
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
+  - Paste the skill text into the chat.
+  - Paste the code you want reviewed. Add your language and style rules if you have them.
+  - Read the score first, then the fixes for each area.
+  - Ask your AI to rewrite the code with the fixes you agree with, then check it still works.
+output_sample:
+  input:
+    - The code you want reviewed
+    - Language and team style rules (optional)
+    - Your existing tests (optional)
+  output:
+    - name: Score
+      contains: A rating from 0 to 10 for how readable the code is, with a short reason.
+    - name: Meaningful names
+      contains: Names that hide their purpose or mislead, with clearer names and why they are better.
+    - name: Functions
+      contains: Long or multi-purpose functions, with a suggested way to split each one.
+    - name: Comments and formatting
+      contains: Comments that explain what the code does, plus layout problems and what to change.
+    - name: Error handling
+      contains: Mixed or unclear ways of handling errors, with a consistent approach and reasons.
+    - name: Unit testing
+      contains: Gaps or messy spots in your tests, if you shared them.
+    - name: Fixes to reach 10
+      contains: The changes needed to reach the top score.

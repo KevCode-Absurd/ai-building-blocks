@@ -1,32 +1,44 @@
 new_slug: smallest-test-picker
 name: Smallest test picker
-summary: Paste your ranked guesses. Get the cheapest test for the top one, who to try it on and what to cut.
+summary: "Pick the cheapest test for your riskiest business guess. Get the test form, who to try it on, what to cut and a fail line."
 job: test-an-idea
 thinking: medium
 thinking_why: It matches a guess to a test form and a cut list, using fixed rules.
 headline: Smallest test picker
-subhead: Paste your ranked guesses, or your plan and your biggest worry. It names the behaviour that counts as yes, picks the cheapest test form, chooses early adopters and lists what to leave out. You get a one-page test choice with a fail line.
-explain: |-
-  A first test goes wrong in two ways. It is too big, so you build for months before anyone reacts. Or it is too small, so nobody has to act and you learn nothing. Either way you spend effort that taught you nothing.
+subhead: "Paste your ranked guesses, or your plan and the guess that worries you most. The skill names the thing people must do for you to say yes. It picks the cheapest test that can show it and lists what to leave out. You get a one-page test choice with a fail line."
+explain: |
+  A first test goes wrong in one of two ways. It is too big, so you build for months before anyone reacts. Or it is too small, so nobody has to act and you learn nothing. Either way, you spend effort that taught you nothing.
 
-  This skill starts from one guess and the behaviour that would prove it, such as a pre-order or a second visit. It then picks the cheapest form that can produce that behaviour, from a plain sign-up page to doing the work by hand for one customer. It names who to try it on, cuts every extra, and sets the fail line before you start.
+  This skill starts from your riskiest guess and the behaviour that would prove it, such as a pre-order or a second visit. It picks the cheapest test that can produce that behaviour, from a plain sign-up page to doing the work by hand for one customer. It names who to try it on and cuts every extra.
+
+  It also sets the fail line before you start, so a weak result can't be explained away. It picks the form of the test. For the pass numbers and the run plan, take its result to the MVP experiment planner.
 when:
-  - You know your riskiest guess and need the cheapest way to test it.
-  - You are about to build a first version and suspect it is too much.
-  - Your last test was a survey or a chat and left you with praise but no facts.
+  - "You know your riskiest guess and need the cheapest way to test it."
+  - "You are about to build a first version and suspect it is too much."
+  - "Your last test was a survey or a chat and left you with praise but no facts."
+  - "You have a list of ranked guesses from the Startup assumption checker and need to pick a test for the top one."
+not_for:
+  - "You have no list of guesses yet: run the Startup assumption checker first."
+  - "You have paying customers and want to improve one page or price: use the One-change experiment planner."
+  - "You need pass and fail numbers and a run plan for a test you have chosen: use the MVP experiment planner."
+
 you_give:
-  - Your ranked guesses, or your plan and worry
-  - What you can spend and who you can reach (optional)
+  - "Your ranked guesses, riskiest first, or your plan and the guess that worries you most"
+  - "How many days and how much money you can spend (optional)"
+  - "Who you can reach this week (optional)"
+  - "Notes from talks with early customers (optional)"
 you_get:
-  - The behaviour that would count as yes
-  - A test form, a runner-up and their costs
-  - The early adopters to try it on
-  - A cut list and a fail line
+  - "The behaviour that would count as yes, and how many people must do it"
+  - "A test form and a runner-up, each with its cost and what it cannot tell you"
+  - "The early adopters to try it on and how to reach them this week"
+  - "A keep list, a cut list and the ask for a real commitment"
+  - "A fail line, and who to call afterwards to learn why"
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the ranked guesses from the Leap-of-faith assumption finder.
-  - Say how many days and how much money you can spend.
-  - Take the chosen form to the MVP experiment planner to set the pass numbers.
+  - "Open the skill in your AI, or copy it and paste it into Claude, ChatGPT or Gemini. It needs no files or tools."
+  - "Paste your ranked guesses. If you only have a plan, say which belief it can't survive without."
+  - "Say how many days and how much money you can spend, and who you can reach this week."
+  - "Read YES MEANS and FAIL LINE first. Each must be something people do, with a number, not praise."
+  - "Take the chosen test form to the MVP experiment planner to set the pass numbers and run it."
 how_it_works:
   - title: Takes the top guess
     text: Writes it as one sentence with a number.
@@ -42,7 +54,7 @@ how_it_works:
     text: Money or a real commitment.
   - title: Sets the fail line
     text: And plans calls to learn why.
-output_shape: |-
+output_shape: |
   GUESS
   <sentence with number>
 
@@ -58,6 +70,7 @@ output_shape: |-
 
   BUILD
   <keep list>
+
   LEAVE OUT
   <cut list>
 
@@ -75,6 +88,33 @@ output_shape: |-
 
   CHECKS MISSED
   <lines or none>
+output_sample:
+  input:
+    - "Your ranked guesses, riskiest first, or your plan and the guess that worries you most"
+    - "How many days and how much money you can spend (optional)"
+    - "Who you can reach this week (optional)"
+  prerequisites:
+    - "A ranked guess list. The Startup assumption checker makes one from your plan."
+  output:
+    - name: "GUESS"
+      contains: "Your riskiest guess as one sentence with a number."
+    - name: "YES MEANS"
+      contains: "The behaviour that counts as yes, such as a pre-order, and how many people must do it."
+    - name: "TEST FORM"
+      contains: "The cheapest test that can show that behaviour, a runner-up, and the cost and blind spot of each."
+    - name: "TRY IT ON"
+      contains: "Five to twenty early adopters and how you will reach them this week."
+    - name: "BUILD and LEAVE OUT"
+      contains: "What you keep for the test, and everything else you cut for now."
+    - name: "THE ASK"
+      contains: "The real commitment you ask for, such as a deposit, a booked time or an introduction."
+    - name: "FAIL LINE"
+      contains: "The result that means no, and what you do next if you reach it."
+    - name: "FOLLOW-UP CALLS"
+      contains: "Five short calls with people who joined and who did not, to learn why."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check the answer failed, or none."
+
 tweaks:
   - what: Your budget in days and money
     how: A smaller limit pushes the pick toward a plain page or a hand-delivered version.
@@ -96,10 +136,10 @@ test:
   - Show the cut list to a teammate. Ask what they would hate to lose.
   - After the test, check whether the fail line was fair.
 improve:
-  - Add the forms of test you can build in a day to the ladder in step 3.
-  - Add your channel costs so the days and money figures are tighter.
-  - Save each test's result next to its form to learn which forms mislead you.
-  - Pair it with the Leap-of-faith assumption finder before it and the MVP experiment planner after it.
+  - "Add the forms of test you can build in a day to the ladder in step 3."
+  - "Add your channel costs so the days and money figures are tighter."
+  - "Save each test's result next to its form to learn which forms mislead you."
+  - "Run the Startup assumption checker before it and the MVP experiment planner after it."
 works_best_with:
   tools:
     - name: Any good chat AI

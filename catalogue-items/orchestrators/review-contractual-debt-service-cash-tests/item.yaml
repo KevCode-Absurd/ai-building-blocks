@@ -1,15 +1,13 @@
 slug: review-contractual-debt-service-cash-tests
 name: Review contractual debt service cash tests
-summary: A defined cash coverage pack with period headroom and source exceptions
+summary: Test your cash against two loan covenants over three periods. Get a headroom table for each test and a note on where the two tests differ.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -40,3 +38,4 @@ credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+needs_mode: manual

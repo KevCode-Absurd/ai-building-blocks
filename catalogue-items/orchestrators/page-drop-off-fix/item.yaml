@@ -15,9 +15,9 @@ outputs:
   - {type: audit_report}
 uses: [sales-funnel-drop-off-finder, customer-question-finder, ab-test-traffic-checker]
 steps:
-  - {uses: sales-funnel-drop-off-finder, note: "Shows which step loses the most buyers and which page owns the leak."}
-  - {uses: customer-question-finder, note: "Checks the fixed page against real customer questions and says where each answer goes."}
-  - {uses: ab-test-traffic-checker, note: "Says whether your traffic can prove the new page works and how many weeks that takes."}
+  - {uses: sales-funnel-drop-off-finder, note: "Shows which step loses the most buyers and which page owns the leak. Step 2 checks that page."}
+  - {uses: customer-question-finder, note: "Uses your customer words and your page (the one step 1 found leaking), not step 1's report. Hands step 3 the unanswered doubts and where each answer goes."}
+  - {uses: ab-test-traffic-checker, note: "Uses your own visits and orders, and takes the page change from step 2 as the thing to test. Says whether your traffic can prove it and how many weeks that takes."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-find-where-your-page-loses-buyers-and-size-the-test-of-the-fix/skeleton.yaml

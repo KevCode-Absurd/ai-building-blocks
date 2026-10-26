@@ -2,24 +2,23 @@ thinking: high
 thinking_why: Good design here decides whether an AI picks the right tool.
 new_slug: mcp-tool-set-designer
 name: MCP tool set designer
-summary: Say what your AI should do through MCP. Get a small set of clearly
-  named tools with plain descriptions.
+summary: Plan your MCP tool set before you code. Give it the jobs your AI must do and get a short list of clear tools with plain descriptions.
 job: connect-tools
 headline: MCP tool set designer
-subhead: A short list of MCP tools your AI can pick from without guessing. Too
-  many tools, or tools that copy every API endpoint one by one, make an AI
-  choose badly and waste its memory.
+subhead: A short list of MCP tools your AI can pick from without guessing. Too many tools, or tools that copy every API endpoint one by one, make an AI choose badly and waste its memory.
 explain: |
   A short list of MCP tools your AI can pick from without guessing. Too many tools, or tools that copy every API endpoint one by one, make an AI choose badly and waste its memory. This skill fixes that before you write any code.
 
   First it asks whether you need a server at all. Then it starts from the jobs people want done, not from the API, and folds chained calls into one tool that finishes a whole task. It keeps the set to roughly 5 to 15 tools, gives each a clear name, writes each description like a prompt, and keeps inputs flat and typed. Error messages are written so an AI can recover from them.
 when:
-  - You are about to build an MCP server and want the tool list right before
-    coding.
+  - You are about to build an MCP server and want the tool list right before coding.
   - Your AI keeps picking the wrong tool from a long list.
-  - You have an API and want to turn it into tools without copying every
-    endpoint.
+  - You have an API and want to turn it into tools without copying every endpoint.
   - An existing server uses too much of your AI's context with tool descriptions.
+not_for:
+  - "You want the server code written: use an MCP SDK or ask a developer, because this plan stops before any code."
+  - "You need sign-in, token or security setup: ask a developer or a security expert, as this skill does not cover it."
+  - "You are designing a normal web API for human developers: plain endpoint lists are fine there, so use your usual API design steps."
 you_give:
   - The jobs your AI should do through MCP
   - The API or system behind it (optional)
@@ -30,7 +29,30 @@ you_get:
   - Typed input fields for each tool
   - Error messages an AI can act on
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down the jobs you want your AI to do, one line each. Add your API docs or link if you have them (optional).
+  - Paste your current tool list too, if you have one (optional).
+  - Open your AI chat and paste this skill. Then paste your jobs and any extra details.
+  - Ask your AI to follow the skill and give you the design document.
+  - Check that the tool count is small and each name and description is clear. Ask for fixes where it is not.
+  - Treat the company examples and token figures in the skill as rough guides. Check them before you quote them.
+output_sample:
+  input:
+    - The jobs you want your AI to do through MCP
+    - The API or system behind it (optional)
+    - Your current tool list, if you have one (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - A way to run Python, only if you want the optional tool list check
+  output:
+    - name: Build or no-build decision
+      contains: A short answer on whether you need an MCP server at all, with the reasons.
+    - name: Tool table
+      contains: Each tool with its name, a one-line outcome and its safety notes.
+    - name: Primitive assignments
+      contains: Whether each item is a tool, a resource or a prompt, and why.
+    - name: Tool details
+      contains: For each tool, a plain description, flat typed inputs, and paging or short-answer options for lists.
+    - name: Error message examples
+      contains: Sample failure messages that tell your AI what went wrong and what to do next.
+    - name: Open questions
+      contains: Things to check or test before you build.

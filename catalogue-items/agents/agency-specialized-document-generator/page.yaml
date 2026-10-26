@@ -1,0 +1,148 @@
+name: Document generator agent for PDF, Word, slides and Excel
+summary: Get a script that builds a PDF, Word, slide or Excel file from your data, with the right library for the format and a template you can reuse.
+headline: Document generator agent for PDF, Word, slides and Excel
+subhead: Tell it the document, who reads it and what data goes in. It picks the best format, chooses the code tool for it, and writes a script and layout plan that fills a template. Run the script to get the file.
+job: work-with-files
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Making a document by hand every month is slow. Making it by code is faster,
+  but each format needs a different tool. A PDF, a Word file, a slide deck and
+  an Excel sheet each have their own libraries and their own traps. This
+  document generator agent knows which tool fits which format, and it writes
+  the script around your data.
+
+  It asks who will read the file and why before it writes anything. Then it
+  picks the format that suits that reader, or confirms the one you chose. It
+  builds a reusable template, not a one-off script. Fonts, sizes and colours go
+  into document styles instead of being typed into every line, and brand
+  colours and logo match your guidelines. It adds alt text and heading order
+  for screen readers.
+
+  It writes code. It can only give you the file if your AI can run code and
+  save files, such as Claude Code or a chat with a code tool. Otherwise you run
+  the script yourself. Nothing it says about a finished file counts until you
+  have opened that file.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide.
+when:
+  - You rebuild the same monthly report, invoice or deck by hand and want it generated from data.
+  - You are not sure whether the reader needs a PDF, a Word file, slides or a sheet.
+  - You need an Excel file with formulas and charts made from a list of records.
+  - You want a Word template with real styles, a table of contents and headers.
+not_for:
+  - You want a plain file built from a JSON spec with PaperJSX and no tool choice. Use the Document file generator.
+  - You have a web page that must become a perfect PDF. Use the HTML to PDF layout architect agent.
+  - You have a YAML or JSON file with unknown fields and need layout rules. Use the YAML and JSON to PDF document agent.
+  - You need to read or fill PDFs you already have. Use the PDF toolkit.
+  - The file is a contract, medical or financial filing. A qualified person must review it before it goes out.
+you_give:
+  - What the document is for and who reads it
+  - The data or text that goes in, such as a CSV, a list or pasted notes
+  - The format you want, or "you choose" if you are unsure
+  - Brand colours, fonts and logo, if you have them (optional)
+  - The language you can run, such as Python or Node (optional)
+you_get:
+  - A format pick with the reason it suits your reader
+  - A layout plan with sections, tables, charts and styles
+  - A script that fills a template from your data, to run on your own machine or in a code tool
+  - Notes on how to change the template, and checks to run on the finished file
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Say what the document is, who reads it and paste your data. Name the format, or ask it to choose.
+  - Type "Pick the format and write the script" or "Make a reusable template for this monthly report".
+  - Run the script. If your AI can run code, ask it to save the file and show where. If it cannot, run the script on your own machine.
+  - Open the file. Check numbers, names and styling against the checks list before you send it.
+how_it_works:
+  - title: Ask about the reader
+    text: It confirms who the document is for, what it must do and which format fits.
+  - title: Pick the tool
+    text: It chooses a code library for the format, such as ReportLab or WeasyPrint for PDF, python-pptx for slides, openpyxl for Excel and python-docx for Word.
+  - title: Plan the template
+    text: It sets sections, styles, brand colours and the fields filled from your data.
+  - title: Write the script
+    text: It writes code that takes your data and fills the template, with alt text and heading order for accessibility.
+  - title: Check the file
+    text: It lists checks to run, such as totals that match, fonts that load and headings in order.
+output_shape: |-
+  FORMAT CHOICE
+    Reader: <who> | Format: <PDF, DOCX, PPTX or XLSX> | Why: <reason>
+
+  LAYOUT PLAN
+    <section or sheet> | <content from your data> | <style>
+
+  TEMPLATE AND STYLES
+    <style name> | <font, size, colour> | <where it is used>
+
+  SCRIPT
+    Language: <Python or Node> | Library: <name>
+    <code that fills the template from your data>
+
+  HOW TO CHANGE IT
+    <what to edit> | <where>
+
+  CHECKS
+    <check> | <how to run it> | <pass, fail or NOT RUN>
+
+  OPEN QUESTIONS
+    <question> | <what changes the answer>
+output_sample:
+  input:
+    - What the document is for and who reads it
+    - Your data or text, such as a CSV or pasted notes
+    - The format, or "you choose"
+    - Brand colours, fonts and logo (optional)
+  prerequisites:
+    - Python or Node on your machine, or an AI that can run code and save files
+    - Claude, ChatGPT or Gemini
+  output:
+    - name: Format choice
+      contains: The format that suits your reader, with the reason.
+    - name: Layout plan
+      contains: Sections, tables, charts or sheets, each tied to a field in your data.
+    - name: Template and styles
+      contains: Fonts, sizes and colours set once as styles, not typed into each line.
+    - name: Script
+      contains: Code in Python or Node that fills the template from your data and writes the file.
+    - name: How to change it
+      contains: Where to edit text, colours and layout the next time you run it.
+    - name: Checks
+      contains: Tests for totals, fonts and heading order, each marked NOT RUN until you run it.
+    - name: Open questions
+      contains: Decisions only you can make, such as the exact logo file.
+works_best_with:
+  tools:
+    - name: Claude Code or a chat with a code tool
+      why: It can run the script, save the file and fix an error in the same session.
+    - name: Claude, ChatGPT or Gemini without code
+      why: It gives you the plan and script. You run the script and test the file yourself.
+  inputs:
+    - A past version of the document, so it can match the layout.
+    - Your brand guide or a short list of fonts and colours.
+terms:
+  - term: Template
+    meaning: A fixed layout that gets filled with new data each time you run it.
+  - term: Library
+    meaning: A ready-made code package that does a job, such as writing Excel files.
+  - term: Style
+    meaning: A saved set of font, size and colour, used by name across a document.
+  - term: Alt text
+    meaning: A short written description of a picture, read aloud by screen readers.
+  - term: Tagged PDF
+    meaning: A PDF with a hidden structure of headings that screen readers use.
+tweaks:
+  - what: Format
+    how: Name one format, such as XLSX only, to skip the format choice.
+  - what: Language
+    how: Say Python or Node so every script and library fits what you already use.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

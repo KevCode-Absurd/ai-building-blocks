@@ -2,17 +2,101 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-ai-prompt-engineering-safety-review
 name: Prompt safety and bias reviewer
-summary: Paste your prompt. Get risks in its wording, likely failure cases and a
-  safer draft.
+summary: Check an AI prompt for safety, bias and security risks before you use it. Get a risk report, test ideas and a safer rewritten prompt.
 job: set-up-ai
 headline: Prompt safety and bias reviewer
-subhead: Paste your prompt. Get risks in its wording, likely failure cases and a
-  safer draft. Share your goal and the files you already have. The skill file
-  sets out the steps and the tools needed for this job.
+subhead: "Paste a prompt and say what it is for. It checks the wording for harm, bias, privacy leaks and prompt injection, and for clarity. You get a risk table, scores, a safer rewrite and a list of tests to run."
+explain: |
+  A prompt safety review reads your prompt the way a careful editor would. Prompts that go to customers or run inside an app can produce harmful answers, repeat stereotypes, leak private details or be tricked by hidden instructions. This reviewer finds those weak spots in the wording.
+
+  It checks four risk areas: harm, bias, privacy and security. Then it checks how well the prompt works: is the task clear, is the context enough, is the format set, and will it give the same kind of answer each time. Where the text gives no evidence, it says "not assessable" instead of guessing a score.
+
+  You get the problems ranked worst first, a rewritten prompt that keeps your goal, and tests to prove the new version is better. It is a careful read of the text. It does not prove a prompt is safe.
+when:
+  - You are about to put a prompt in a customer chatbot, form or app.
+  - A prompt gives uneven or risky answers and you cannot see why.
+  - You write prompts for a team and want a check before they are shared.
+  - You need to show someone that you checked a prompt for bias and privacy.
+not_for:
+  - "You want to attack a live app or agent to find holes: use the AI agent attack tester."
+  - "You want rules for what an agent's tools may do: use the AI agent control designer."
+  - "You only want a vague prompt made clearer: use the Prompt improver or the Prompt fixer."
+  - "Your prompt holds real passwords, keys or customer data: remove them before you paste."
+you_give:
+  - The prompt to review, pasted in full
+  - What the prompt is for, in one sentence
+  - The AI tool or model it runs on (optional)
+  - Who reads the answers and what data the prompt can touch (optional)
+you_get:
+  - A risk table for harm, bias, privacy and security
+  - Scores from 1 to 5 for clarity, context, format and consistency
+  - The top issues ranked worst first
+  - A rewritten prompt, ready to paste
+  - A list of tests, including bias and safety tests
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat, or open the skill if you added it to your AI.
+  - Paste your prompt after it, and add one sentence on what the prompt is for. Remove any real secrets or customer data first.
+  - If it asks for the goal or audience, answer. If you do not know, say so and it will mark the gap.
+  - Read the risk table and top issues first. Then compare the rewritten prompt with your original.
+  - Run the tests on both versions, and have a person read the answers before the prompt goes live.
+how_it_works:
+  - title: Read the prompt
+    text: It names the task, how complex it is, and the pattern used, such as role-based or step by step.
+  - title: Check the risks
+    text: It rates harm, bias, privacy and security, including how easily the prompt could be tricked.
+  - title: Score how well it works
+    text: It scores clarity, context, constraints, format and consistency, and says when the text gives no evidence.
+  - title: Rank the issues
+    text: It lists the worst problems first with their impact, and notes what the prompt does well.
+  - title: Rewrite the prompt
+    text: It writes a safer version that keeps your goal, and lists what it changed and why.
+  - title: Write the tests
+    text: It gives test inputs, edge cases, and safety and bias tests, each with the result to expect.
+output_shape: |
+  What it is: <task>, <complexity>, <pattern>
+  Risk summary: <harm>, <bias>, <privacy>, <security> each rated, with <concern>
+  Scores: <clarity>, <context>, <format>, <consistency> from 1 to 5
+  Critical issues: <issue and impact>, worst first
+  Improved prompt: <full prompt ready to paste>
+  What changed: <list of changes and why>
+  Tests: <test inputs, edge cases, safety tests, bias tests>
+  Gaps: <missing inputs> and <next steps>
+output_sample:
+  input:
+    - Your prompt, pasted in full
+    - What the prompt is for
+    - The AI tool it runs on (optional)
+    - Who reads the answers and what data it touches (optional)
+  output:
+    - name: Risk summary
+      contains: A table rating harm, bias, privacy and security, with the specific concern for each.
+    - name: Effectiveness scores
+      contains: Scores from 1 to 5 for clarity, context, format and consistency, with one line of evidence each.
+    - name: Critical issues
+      contains: The biggest problems in the prompt, worst first, with their impact.
+    - name: Improved prompt
+      contains: A rewritten prompt that keeps your goal and fixes the issues, ready to paste.
+    - name: What changed and why
+      contains: A short list of the safety, bias, security and clarity changes.
+    - name: Testing recommendations
+      contains: Test inputs, edge cases, safety tests and bias tests, each with the result to expect.
+    - name: Gaps and next steps
+      contains: Missing inputs, and a reminder to run the tests and have a person review.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Claude, ChatGPT or Gemini can read a pasted prompt and run the tests on both versions.
+  inputs:
+    - A bad answer the prompt gave before
+    - Your company rules on personal data
+    - A sample of real questions your users ask
+terms:
+  - term: Prompt injection
+    meaning: Hidden text that tricks an AI into ignoring its instructions.
+  - term: Bias
+    meaning: Wording or answers that favour or stereotype a group of people.
+  - term: Role-based prompt
+    meaning: A prompt that tells the AI who to act as, such as a support agent.
+  - term: Edge case
+    meaning: An odd or unusual input that can break a prompt.

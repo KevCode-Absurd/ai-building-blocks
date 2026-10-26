@@ -7,9 +7,7 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -29,6 +27,7 @@ steps:
   - uses: pension-service-financing-bridge
     note: Decompose the same non-contribution movement into service, financing, remeasurement and other disclosed items. Reconcile net liability and cash funding without equating contributions with expense.
 execution: coordinator
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

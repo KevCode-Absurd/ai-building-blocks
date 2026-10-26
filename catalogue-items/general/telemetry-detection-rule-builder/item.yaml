@@ -1,0 +1,50 @@
+slug: telemetry-detection-rule-builder
+name: Detection rule and fixture builder
+summary: Share one threat behavior and redacted logs. Draft a detection rule,
+  test cases and an honest validation report.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: true
+outputs:
+  - type: code_change
+  - type: test_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: security/security-threat-detection-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-threat-detection-engineer.md
+  licence: MIT
+  original_name: Threat Detection Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: b15c0d8be90232a64471d0947dd30cfcd9efeeb2dab2579bb415ca8beb7db7f1
+  adapter: AI Blocks selective task adaptation
+  derived_from: &a1
+    - agency-security-threat-detection-engineer
+credits:
+  - title: Threat Detection Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-threat-detection-engineer.md
+    used: Selected task methods, rewritten and narrowed by AI Blocks. Original role
+      profile retained only as provenance/background.
+package_files: all
+version: 1.0.0
+example_pending: true
+agency_curated:
+  candidate: technical-detection-rule-fixtures
+  review: reports/2026-10-25-agency-curation-technical.json
+  formatReason: A repeatable specialist method with non-obvious field, translation
+    and exception checks. A skill can load the rule-language and fixture
+    contract when needed; a generic security persona or one-line prompt would
+    omit essential obligations.
+  sourceProfiles: *a1

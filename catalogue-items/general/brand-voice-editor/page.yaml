@@ -1,6 +1,6 @@
 new_slug: brand-voice-editor
 name: "Brand voice editor"
-summary: "Paste your ad and customer quotes. Get off-brand words fixed, claims untouched, and a score out of 100."
+summary: "Paste your ad and customer quotes. This brand voice editor flags off-brand words, fixes them, keeps claims unchanged, and scores your voice out of 100."
 job: check-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - An ad or script is written and checked for facts, and you want one last read for how it sounds.
   - A freelancer or AI wrote the copy and it sounds like a generic brand in your category.
   - You run an existing ad and want a list of off-voice words without changing anything yet.
+not_for:
+  - "You have no voice notes or customer quotes yet: build your brand brain first with the Brand profile builder."
+  - "You want to check facts, claims or numbers in the ad: use the Fact-based ad copy writer, or ask a person to check them."
+  - "You want the ad to persuade better or have a stronger structure: use the Sales copy editor first."
 
 you_give:
   - The finished ad copy or script, with numbered lines
@@ -35,6 +39,26 @@ how_to_use:
   - Add three to ten real customer quotes, copied as written, so it knows how your buyers talk.
   - Paste the ad with numbered lines and write "Mode, fix" or "Mode, report".
   - Check each fix against your original line. If it changed a number, a claim or the offer, reject it.
+output_sample:
+  input:
+    - Your finished ad copy or script, with numbered lines
+    - Your voice notes and never-say list
+    - Three to ten real customer quotes
+    - Who the ad is for
+    - Fix or report mode (optional)
+  prerequisites:
+    - Your brand brain from the Brand profile builder, or the same voice notes pasted in
+  output:
+    - name: VERDICT
+      contains: Says on_voice or needs_fixes for the whole piece.
+    - name: SUMMARY
+      contains: One sentence on how the piece sounds against your voice notes.
+    - name: ISSUES
+      contains: Each off-voice phrase quoted exactly, why it breaks a rule or quote, and the full corrected line.
+    - name: NOT FLAGGED
+      contains: Lines left alone, such as facts, numbers, prices and offer terms, with the reason.
+    - name: VOICE SCORE
+      contains: The share of lines on voice, now and after the fixes, with each sum shown.
 
 how_it_works:
   - title: Reads your voice rules

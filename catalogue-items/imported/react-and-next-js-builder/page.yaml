@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows known patterns and checks the result.
 new_slug: react-and-next-js-builder
 name: React and Next.js builder
-summary: Describe the screen. Get React and Next.js components with fast
-  loading, Tailwind styling and bundle checks.
+summary: Build React and Next.js components from a plain description. Get TypeScript code with Tailwind styling, plus a bundle size check for slow pages.
 job: build-websites
 headline: React and Next.js builder
-subhead: React and Next.js components for the screen you describe, written in
-  TypeScript with Tailwind styling, and checked for load speed and bundle size.
-  You get code you can drop into a project.
+subhead: React and Next.js components for the screen you describe, written in TypeScript with Tailwind styling, and checked for load speed and bundle size. You get code you can drop into a project.
 explain: |
   React and Next.js components for the screen you describe, written in TypeScript with Tailwind styling, and checked for load speed and bundle size. You get code you can drop into a project.
 
@@ -18,19 +15,44 @@ when:
   - Your Next.js page loads slowly and you want to know why.
   - You are starting a fresh project and want a clean base.
   - You want accessibility checks built into your components.
+not_for:
+  - "You only need a simple site with pages and text: use a website builder such as Shopify or WordPress."
+  - "You need backend-only work like databases or servers: ask a backend developer or your AI for server code."
+  - "Your site does not use React: use a developer who knows your current setup."
 you_give:
-  - Description of the screen
-  - Project folder or a new one
-  - Features such as auth or forms (optional)
-  - Node and Python installed
+  - A plain description of the screen you want
+  - Your project folder, or a name for a new project
+  - Features such as sign-in or forms (optional)
 you_get:
   - React and Next.js components
   - Project scaffold
   - Bundle size report
   - Accessibility and testing notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run code and read files, such as Claude with code tools. Make sure Node and Python are installed.
+  - Add the skill folder to your AI, or paste the skill text into the chat.
+  - Describe the screen you want. Say if you have a project folder or need a new one.
+  - Let your AI build the project and the component. Run it on your computer with npm run dev.
+  - Ask for the bundle check. Fix the heavy packages it lists, then run the check again.
+  - Open your site in the Chrome browser and run Lighthouse to measure real load speed. The bundle check alone does not show it.
+output_sample:
+  input:
+    - A plain description of the screen you want
+    - Your project folder, or a new project name
+    - Extra features such as sign-in, forms or testing (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Node and Python installed on your computer
+  output:
+    - name: Project scaffold
+      contains: A new Next.js or React project with TypeScript, Tailwind, a folder layout and starter components.
+    - name: Generated component
+      contains: A React component for your screen, with its types, styles and an optional test file.
+    - name: Bundle analysis
+      contains: A score for your app size and a list of heavy packages that slow it down.
+    - name: React patterns
+      contains: Guidance on shared components, custom hooks and when to use each pattern.
+    - name: Next.js optimization
+      contains: Advice on server and client components, image loading and how to fetch data.
+    - name: Accessibility and testing
+      contains: A checklist for keyboard use and screen readers, plus a plan for testing.

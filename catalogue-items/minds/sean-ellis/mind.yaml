@@ -16,6 +16,29 @@ use_cases:
   - "Decide what to fix first: onboarding, engagement, referrals, pricing or new traffic"
   - "Write the brief for a first growth hire, and decide if you need one yet"
   - "Set up a weekly test rhythm for a small team with no data scientist"
+not_for:
+  - "You need a clear market position and pitch for your product: use the April Dunford mind."
+  - "You want to see how a network or app builds its first users from nothing: use the Andrew Chen mind."
+  - "You have too few users to measure, or no product yet: talk to customers one to one first, with no survey or tool."
+output_sample:
+  input:
+    - Your product and what stage it is at
+    - What users or customers say about it, if you have it (optional)
+    - Your sign-up, drop-off or retention numbers (optional)
+    - A list of growth ideas you want ranked (optional)
+  output:
+    - name: Your stage
+      contains: Whether you are before or after product/market fit, and what that means for spending on growth.
+    - name: Survey or metric to run
+      contains: The how-would-you-feel survey question, or a North Star metric that tracks the moment customers get value.
+    - name: Must-have experience
+      contains: What your keenest users say they cannot do without, and who they are.
+    - name: Order of work
+      contains: What to fix first, from onboarding to engagement, referrals, pricing and traffic.
+    - name: First three tests
+      contains: Ideas scored on impact, confidence and ease, each with what you expect and how you will know.
+    - name: Cautions
+      contains: Where his methods may not fit, such as too few users, and which examples are his own accounts.
 seats:
   - {seat: "Growth experiments", asks: "What's the test, what do we expect to happen, and how fast can we know?"}
   - {seat: "Product/market fit check", asks: "How many of these customers would be very disappointed if this went away?"}

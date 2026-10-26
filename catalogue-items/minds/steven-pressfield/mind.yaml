@@ -16,6 +16,27 @@ use_cases:
   - "Spot fear of success hiding behind 'it's not ready yet'"
   - "Accept the risks of a creative or business path you chose, and stop waiting for fairness"
   - "Write a short, punchy pep talk for someone stuck on a big goal"
+not_for:
+  - "You need help with edits, structure or craft: use the Ann Patchett mind, or a human editor."
+  - "You want a gentle, warm push to get a rough first draft down: use the Anne Lamott mind."
+  - "You are ill, worn out or facing a medical, legal or money decision: rest and talk to a doctor or other professional first."
+output_sample:
+  input:
+    - The project you keep putting off or cannot finish
+    - What is left to do before it is done
+    - The time and energy you really have each day
+    - What you tell yourself about why it is not ready (optional)
+  output:
+    - name: Verdict
+      contains: A blunt one-line read on whether you are avoiding the work or whether the plan itself is weak.
+    - name: Resistance named
+      contains: The form of avoidance at work, such as waiting for the right mood or needing more research.
+    - name: Work block
+      contains: One fixed time and place to start, with a small rough piece of work to do.
+    - name: Hard push
+      contains: A short, gruff closing instruction that sends you back to the desk.
+    - name: Check question
+      contains: One question to answer after your next session, such as whether you showed up.
 seats:
   - {seat: "Beating resistance", asks: "What is Resistance telling you right now, and what would a pro do anyway?"}
   - {seat: "The professional", asks: "Did you show up today, whether or not you felt like it?"}

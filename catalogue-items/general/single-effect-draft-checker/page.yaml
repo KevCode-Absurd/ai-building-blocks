@@ -1,6 +1,6 @@
 new_slug: single-effect-draft-checker
 name: "Single-effect draft checker"
-summary: "Paste your draft and the feeling you meant. Get each line checked against it, where attention slips and what to cut."
+summary: "Check your draft against one intended feeling. See which paragraphs help, where attention slips and what to cut, with a score out of 100."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It judges each paragraph against one stated effect, which needs care but follows set rules."
@@ -17,6 +17,10 @@ when:
   - "You finished a draft and it feels flat, but you cannot say why."
   - "You have a speech, ad or story that tries to do two things and you want to know which to keep."
   - "You need to cut a piece to length and want each cut to have a reason."
+not_for:
+  - "You want to plan a piece from scratch: use the Ending-first story planner."
+  - "You want clearer, simpler wording line by line: use the Plain English editor."
+  - "You want a full rewrite of your draft: ask a writer or editor, because this gives directions and cuts, not new text."
 
 you_give:
   - "Your draft, in full"
@@ -34,6 +38,28 @@ how_to_use:
   - "Say how long it needs to be."
   - "Go through the list of cuts and fixes one by one and accept or reject each."
   - "Run it again on the fixed draft to see the score change."
+output_sample:
+  input:
+    - Your draft, in full
+    - The feeling you meant, in one sentence
+    - Where it will be read or heard and how long it can run (optional)
+  output:
+    - name: Effect
+      contains: The one feeling the piece should leave, named before any judgment, plus the verdict on the first sentence.
+    - name: Paragraphs
+      contains: Each paragraph marked serving, neutral or competing, with one short reason.
+    - name: Attention slips
+      contains: The first line where a reader would drift, and what to change.
+    - name: Length
+      contains: Word count or time, and whether it fits one sitting.
+    - name: Stolen climax
+      contains: Any passage stronger than the intended peak, and whether to tone it down or move it.
+    - name: Cuts and fixes
+      contains: Each failing line, the cut or single fix, and how it ties to the effect.
+    - name: Score
+      contains: A score out of 100 with the sum shown so you can check it.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: "States the effect"

@@ -16,6 +16,29 @@ use_cases:
   - "Score a list of marketing ideas by impact and ease, and pick the top three"
   - "Build a small daily habit of asking, to get past the fear of rejection"
   - "Decide when to stop a marketing channel that isn't working"
+not_for:
+  - "You need legal, tax or medical advice: ask a lawyer, an accountant or a doctor."
+  - "You already have paying customers and want to value or fix a mature business: use the Aswath Damodaran mind for the numbers."
+  - "You want a long-term plan for hard choices in running a company: use the Ben Horowitz mind instead."
+output_sample:
+  input:
+    - Your idea or stalled project, in a few lines
+    - Who you can reach and ask this weekend
+    - Your price and your costs, if you know them
+    - Your profit goal or the one number you are chasing (optional)
+  output:
+    - name: One-minute math
+      contains: Your price, profit per sale and how many customers you need to reach your goal.
+    - name: 48-hour schedule
+      contains: What to do on Friday, Saturday and Sunday, from picking the price to counting the money.
+    - name: Ten-person list
+      contains: People you can already reach and ask for payment, not opinions.
+    - name: Message draft
+      contains: A short, direct ask that says what it is, the cost and when they get it.
+    - name: Read-out rule
+      contains: "How to read the result: three paying customers means go, zero means change the offer, price or buyer."
+    - name: Marketing score sheet
+      contains: Your marketing ideas scored 1 to 5 for impact and ease, with the top three picked.
 seats:
   - {seat: "Validate before you build", asks: "Who has paid you for this yet? If nobody, who can you ask this weekend?"}
   - {seat: "The growth spreadsheet", asks: "What's the one number we're chasing, and which task moves it most this week?"}

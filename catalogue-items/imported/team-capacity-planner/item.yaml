@@ -8,8 +8,14 @@ role: check
 job: ops
 level: intermediate
 inputs:
-  - type: question
+  - type: brief
     required: true
+  - type: spreadsheet
+    required: false
+  - type: audit_report
+    required: false
+  - type: document
+    required: false
 outputs:
   - type: plan
 uses: []

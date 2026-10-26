@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Migrations fail in subtle ways, so it plans for rollback.
 new_slug: zero-downtime-migration-planner
 name: Zero-downtime migration planner
-summary: Name what you are moving. Get a zero-downtime plan with checks and a
-  rollback for each step.
+summary: Plan a zero-downtime migration for a database, service or API. Get phases, a compatibility check and a rollback runbook for each step.
 job: ship-and-host
 headline: Zero-downtime migration planner
-subhead: Name what you are moving. Get a zero-downtime plan with checks and a
-  rollback for each step. Bring a description of what you are migrating. Use the
-  result to plan your next step.
+subhead: Name what you are moving. Get a zero-downtime plan with checks and a rollback for each step. Bring a description of what you are migrating. Use the result to plan your next step.
 explain: |
   A migration plan for moving a database, service or API with no downtime, where every step has a check and a way back.
 
@@ -18,6 +15,10 @@ when:
   - You are replacing an old service and users cannot see an outage.
   - You want to know what an API change will break for callers.
   - You need a rollback plan before a release window.
+not_for:
+  - You change a table that has no live traffic, or only add a simple column. A short maintenance window is simpler.
+  - You only ship new code. Use your normal release process.
+  - You want a plan with no code running. This item needs Python, so ask a senior engineer to review the plan instead.
 you_give:
   - A description of what you are migrating
   - The before and after schema or API (optional)
@@ -29,8 +30,26 @@ you_get:
   - A rollback runbook per phase
   - Validation checkpoints with go and stop rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Write a short description of what you are moving, where to, and your time window.
+  - Gather the schema or API before and after the change, if you have them.
+  - Open an AI that can run code and read files. Upload the skill folder and your spec.
+  - Ask it to make the plan, run the compatibility check, then write the rollback runbook.
+  - Read the compatibility report first. Fix or accept every breaking change before you use the plan.
+  - Have an engineer review the plan before your release window.
+output_sample:
+  input:
+    - A migration spec file that describes what you are moving and where to
+    - The schema or API before and after the change (optional)
+    - Your limits, such as time window and traffic
+  prerequisites:
+    - An AI that can run code and read your files
+    - Python 3 on your computer
+  output:
+    - name: Migration plan
+      contains: Phases with validation gates, a risk list and a time estimate for each step of the move.
+    - name: Compatibility report
+      contains: A list of breaking and possibly breaking changes between the old and new schema or API.
+    - name: Rollback runbook
+      contains: Data recovery steps, service rollbacks and the trigger for pulling back, for each phase.
+    - name: Validation checkpoints
+      contains: Success checks and stop rules to review before each phase moves on.

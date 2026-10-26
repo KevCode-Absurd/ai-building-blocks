@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It organises large facts into a long document.
 new_slug: sale-memorandum-drafter
 name: Sale memorandum drafter
-summary: Give it company facts. Get a draft sale memorandum with a clear
-  structure and story.
+summary: Give it your company facts. You get a draft sale memorandum (CIM) with a clear order and story, set up for Indian deals and April to March years.
 job: money-and-investing
 headline: Sale memorandum drafter
-subhead: The long document buyers read first when a company is for sale, drafted
-  from your facts. It has to tell a clear story, and this gives it a set order
-  and flow.
+subhead: The long document buyers read first when a company is for sale, drafted from your facts. It has to tell a clear story, and this gives it a set order and flow.
 explain: |
   The long document buyers read first when a company is for sale, drafted from your facts. It has to tell a clear story, and this gives it a set order and flow.
 
@@ -18,6 +15,10 @@ when:
   - You have scattered slides and spreadsheets and need one story.
   - An advisor asked for a memorandum outline to review.
   - You want investment highlights written clearly for buyers.
+not_for:
+  - You are selling only some assets, or raising early funds. Use a short teaser or a pitch deck instead.
+  - You need a valuation or a financial model. Ask your advisor or a finance person to build it.
+  - You need the legal confidentiality page or deal terms. Ask your lawyer to write them.
 you_give:
   - Management presentations
   - Three to five years of financials
@@ -29,7 +30,36 @@ you_get:
   - A financial summary with correct units
   - A list of missing facts to collect
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Add your slides, accounts, forecast and any customer or org chart details. Paste the text or upload the files.
+  - Ask your AI to draft the memorandum. It will ask for anything missing.
+  - Check each number and each year label. Indian years run April to March.
+  - Ask your AI to list the facts you still need to collect. Fill them in.
+  - Have management check the facts, and your lawyer check the confidentiality page, before you share it.
+output_sample:
+  input:
+    - Management presentations or board decks
+    - Three to five years of accounts
+    - Your budget or forecast
+    - Customer data and an org chart (optional)
+    - Quality of earnings report (optional)
+  prerequisites:
+    - An AI that can write a Word file and an Excel file, if you want files instead of chat text
+    - The India market conventions and India market data skills, if your AI tool asks for them
+  output:
+    - name: Executive Summary
+      contains: Company overview, five to seven investment highlights, headline financials and a short view of the deal.
+    - name: Company Overview
+      contains: History, what the company sells, how it earns money and what sets it apart.
+    - name: Industry Overview
+      contains: Market size, trends, rivals, rules and what keeps new players out.
+    - name: Growth Opportunities
+      contains: Ways to grow, add-on deals, better operations, technology spend and open market space.
+    - name: Customers & Sales
+      contains: Customer mix, top customers, how well you keep them, how you sell and your pipeline.
+    - name: Operations
+      contains: Team structure, key people, sites, systems and suppliers.
+    - name: Financial Overview
+      contains: Past results, revenue splits, profit bridge, balance sheet, cash flow and forecast, in lakh and crore.
+    - name: Appendix
+      contains: Detailed accounts, an anonymized customer list, product catalog and management bios.

@@ -1,6 +1,6 @@
 new_slug: second-order-effects-tracer
 name: Second-order effects tracer
-summary: Paste a change you plan to make. Get what it causes, what that causes, and how much of the gain you keep.
+summary: Trace the second-order effects of a price, pay or rule change. Get the reactions, the gaming risks and how much of the gain you keep.
 job: think-and-decide
 thinking: high
 thinking_why: It must follow chains of cause and effect and judge how people will react to new rewards.
@@ -14,6 +14,10 @@ when:
   - You are about to change a price, pay plan, rule or process.
   - A forecast is built by extending last year's numbers.
   - A saving or improvement looks too good, and you want to know who really keeps it.
+not_for:
+  - "You only want to check how a pay plan or bonus could be gamed: use the Incentive checker."
+  - "You are making a one-off purchase that touches no other people: a simple cost and benefit list is enough."
+  - "You need a firm forecast with real data: use your own sales figures or ask an analyst, as this skill gives ranges and guesses."
 you_give:
   - The change you plan, and what you expect it to do
   - "Who is affected: customers, staff, rivals, suppliers"
@@ -28,6 +32,32 @@ how_to_use:
   - Describe the change and who it touches. Paste your forecast if you have one.
   - For each reaction it lists, say whether you have seen it happen before.
   - Use the revised plan, and set a date to check the reactions it predicted.
+output_sample:
+  input:
+    - The change you plan, and the result you expect
+    - Who is affected, and how each group is paid
+    - Your forecast and how you built it (optional)
+  output:
+    - name: The change
+      contains: The change in one line, with the result you expect from it.
+    - name: First effects
+      contains: The direct effects that follow at once, with a rough size and the costs.
+    - name: Who reacts
+      contains: Each group that will respond, what it is rewarded for, and its likely move.
+    - name: Second and third effects
+      contains: What each reaction causes, marked likely, possible or guess.
+    - name: Flow-through
+      contains: The share of any gain you keep, as a range, with the sum shown.
+    - name: How it could be gamed
+      contains: Three easy ways to get the reward without the result, how to spot each, and a fix.
+    - name: Forecasts
+      contains: Your first forecast beside the traced one, and the main cause of the gap.
+    - name: Revised plan
+      contains: The plan changed to allow for the reactions, with what is still a guess.
+    - name: Missing
+      contains: Facts it needed but did not have.
+    - name: Checks missed
+      contains: One line for each check it could not pass, or none.
 how_it_works:
   - title: State the change
     text: Writes the change and the result expected from it.

@@ -2,8 +2,7 @@ thinking: medium
 thinking_why: It ranks orders against limited stock.
 new_slug: supply-and-demand-balancer
 name: Supply and demand balancer
-summary: Allocate dated available supply against demand using the chosen priority rule. Show timing, constraints and unfilled demand.
-  first when you cannot fill them all.
+summary: Balance supply and demand when you can't fill every order. Get stock allocated by your priority rule, with dates and a shortage report.
 job: plan-supply-chain
 headline: Supply and demand balancer
 subhead: A traceable allocation plan that respects inventory dates and customer rules.
@@ -16,6 +15,10 @@ when:
   - Two big customers want the same units.
   - Sales keeps promising dates you cannot meet.
   - You need a shortage report for management.
+not_for:
+  - "You only need to check stock for one order: use your ERP's available-to-promise screen or ask your warehouse lead."
+  - "You need a sales forecast for next season: use a forecasting tool or a spreadsheet trend, because this plan only splits stock you already have or expect."
+  - "You need a full monthly planning meeting pack: plan that with your sales and operations team, since this covers stock allocation only."
 you_give:
   - Stock on hand
   - Incoming supply and dates
@@ -27,7 +30,31 @@ you_get:
   - A shortage report
   - Optimised allocation (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Collect three lists: stock on hand, incoming supply, and open orders. Use columns for product, location, quantity, date, customer and priority."
+  - Save them as CSV files or spreadsheet tabs. Check that each row has a date and a quantity.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, then add your lists. For the code to run, use an AI that can run Python and read files.
+  - "Tell your AI which rule to use: first come first served, share evenly, or priority first. Say if in-transit stock should count."
+  - Read the shortage report first. Check that the unfilled orders match your own sense of the stock.
+  - Share the allocation with sales, and tell affected customers early.
+output_sample:
+  input:
+    - Your stock on hand by product and location
+    - Your incoming supply with dates
+    - Your open orders with customer, quantity, date and priority
+    - Your priority rule, such as contract first or share evenly (optional)
+  prerequisites:
+    - An AI that can run Python code, if you want the calculations run for you
+    - A spreadsheet or CSV file of your stock, supply and orders
+  output:
+    - name: Executive Summary
+      contains: The overall balance of supply and demand, the allocation choices made, the shortfalls and the actions needed.
+    - name: Supply-Demand Balance
+      contains: A table per product showing total demand, total supply, the balance and whether it is a surplus or shortage.
+    - name: Allocation Results
+      contains: A table per customer showing quantity requested, quantity allocated, percent filled, priority and status.
+    - name: Shortage Impact
+      contains: Each short product with the missing quantity, affected customers, revenue at risk and ways to reduce the gap.
+    - name: ATP Horizon
+      contains: Available-to-promise quantities by product and location for today and the coming weeks.
+    - name: Action Items
+      contains: A list of next steps with priority, owner, due date and status.

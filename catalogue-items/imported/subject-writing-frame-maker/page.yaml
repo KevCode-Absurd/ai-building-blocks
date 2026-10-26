@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies known genre rules to your subject.
 new_slug: subject-writing-frame-maker
 name: Subject writing frame maker
-summary: Name a text type, like a lab report. Get a frame that teaches the
-  writing rules of that subject.
+summary: Make a subject writing frame for a lab report or history essay. Get sentence starters, a word toolkit and a model text for your class.
 job: teach-and-train
 headline: Subject writing frame maker
-subhead: A writing frame that teaches students how a subject writes, such as a
-  lab report conclusion or a history essay. Each subject has its own rules, and
-  this makes them visible.
+subhead: A writing frame that teaches students how a subject writes, such as a lab report conclusion or a history essay. Each subject has its own rules, and this makes them visible.
 explain: |
   A writing frame that teaches students how a subject writes, such as a lab report conclusion or a history essay. Each subject has its own rules, and this makes them visible.
 
@@ -18,6 +15,10 @@ when:
   - You teach a new text type, like a historical argument, and need a model.
   - Some students need more support than others on the same writing task.
   - You want sentence starters that match the subject, not generic ones.
+not_for:
+  - "You want general essay structure for any subject: use the Argument structure scaffold generator, or a plain paragraph frame."
+  - "You are planning a lesson on content only, with no writing task: use a simple lesson plan instead."
+  - "You need to check how hard a text is to read: use the Text complexity analyser."
 you_give:
   - The writing task
   - Subject
@@ -30,7 +31,24 @@ you_get:
   - An annotated model text
   - Easier and harder versions of the frame
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat with your AI, such as Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text into the chat.
+  - Add your writing task, the subject and your students' year level. Add the text type and marking criteria if you have them.
+  - Read the frame and the model text. Check that the sentence starters fit your task.
+  - Use the easier or harder version of the frame for students who need it.
+output_sample:
+  input:
+    - The writing task students must complete
+    - The subject, such as Science or History
+    - Your students' year level and how well they write in this subject
+    - The text type, such as a lab report (optional)
+    - Your marking criteria (optional)
+  output:
+    - name: The Scaffold
+      contains: Each section of the text, what it is for, and sentence starters students can use.
+    - name: Language Toolkit
+      contains: Words, connectives and cautious phrases that this subject uses in this type of writing.
+    - name: Annotated Model
+      contains: A short model text with notes showing each writing move at work.
+    - name: Differentiation
+      contains: Versions of the frame with more or less support, so students can drop the help over time.

@@ -1,26 +1,28 @@
 slug: preferred-return-accrual-checker
 name: Preferred return accrual checker
-summary: Accrue a simple preferred-return period on a constant unreturned capital balance.
+summary: Work out a fund's preferred return at a simple yearly rate. Get the new amount, the unpaid total and the first payment due to investors.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - no-catchup-waterfall-checker
+  - gp-clawback-exposure-checker
+  - capital-call-allocation-checker
 origin: own
 version: 1.0.0
 added: 2026-10-22

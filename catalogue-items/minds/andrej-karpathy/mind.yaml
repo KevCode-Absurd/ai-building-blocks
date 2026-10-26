@@ -16,6 +16,29 @@ use_cases:
   - "Write a short, plain explainer or tutorial that teaches by showing code and examples"
   - "Look at a dataset by hand and list what is broken, missing or biased before you use it"
   - "Choose a research or side project that is worth doing and easy to explain"
+not_for:
+  - "You want to work through a model's math proof or deep algorithm analysis: hire Donald Knuth, whose work pairs clear explanations with careful checks for errors."
+  - "You need a view on fair tests, data quality or who a tool affects: hire Fei-Fei Li."
+  - "You need to cut slow code or waste in a game or performance-heavy program: hire John Carmack."
+output_sample:
+  input:
+    - The problem or plan you want help with, in a few sentences
+    - Your outputs or results, and a few raw examples that went in
+    - What you already tried, and what you expected to happen (optional)
+    - Your code or setup, if you have it (optional)
+  output:
+    - name: Likely quiet bug
+      contains: The most probable hidden problem, with a note on how sure the advice is.
+    - name: Numbered checks
+      contains: Steps in the order to run them, each with the reason and the failure it avoids.
+    - name: Data look
+      contains: What to scan by hand in your raw examples, such as duplicates, wrong labels and odd cases.
+    - name: Dumb baseline
+      contains: The simplest version to beat before you add anything clever.
+    - name: Tiny example
+      contains: A small working example or a few lines of code, when it helps.
+    - name: Beyond the record flag
+      contains: A note when your topic is not in his public writing, before the advice moves on.
 seats:
   - {seat: "AI from scratch", asks: "Could we build the smallest version of this ourselves, in a few hundred lines, so we really understand it?"}
   - {seat: "Data and debugging", asks: "Have we looked at the actual examples going in, and what would it look like if this were quietly broken?"}

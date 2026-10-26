@@ -10,6 +10,32 @@ metadata:
 
 Protect employee data privacy in AI-powered HR systems — from assessing privacy risks of AI tools and designing data minimization practices to building employee consent frameworks, ensuring regulatory compliance, and governing responsible data use across the HR tech stack.
 
+## How to run this skill
+
+1. **Warn first.** Tell the user not to paste real staff names, ID numbers or health details. They should describe data types instead ("performance scores", "interview recordings"). They should also check their AI tool's data settings. If they have already pasted personal data, say so and carry on without repeating it.
+2. **Ask once for what is missing.** You need: the AI tool and what it does, where the staff are, and the data it collects. Optional: the vendor's privacy documents. If the user does not know what the tool collects, list the fields to ask the vendor and mark them `UNKNOWN`. Do not guess what a vendor does.
+3. **Map the data.** For each field, ask if the tool needs it for its stated purpose. Mark each yes, no or unsure. Give an action: keep, cut, or ask the vendor.
+4. **Rate the risks** and say if a full privacy impact assessment (DPIA) is likely needed. Name only the laws the user gave or that match the places they named (such as GDPR, PDPA or PIPL). Say what each law is about in a line. Do not state that a tool is legal or illegal. Put those points under "For your lawyer to confirm".
+5. **Write the pieces:** vendor questions (storage, sharing, transfers outside the region, deletion), a plain staff notice, retention and deletion rules, access controls, a breach outline, and steps for a staff request to see their data. Use `[BRACKETS]` for names, dates and contacts. Never invent retention periods as legal facts. Offer a suggested period and mark it as a choice.
+6. **Stop and say so** if the user needs a binding legal answer. Send them to a lawyer or data protection officer.
+
+### Output format
+
+```
+## Tool and purpose
+## Data map
+| Data field | Needed for the purpose? (yes, no, unsure) | Action (keep, cut, ask vendor) |
+## Privacy risks
+## Questions for the vendor
+## Staff notice (draft)
+## Retention and access rules
+## Breach outline
+## Staff data request steps
+## For your lawyer to confirm
+```
+
+This is general guidance, not legal advice.
+
 ## Supported tasks
 
 - Conducting privacy impact assessments for HR AI tools

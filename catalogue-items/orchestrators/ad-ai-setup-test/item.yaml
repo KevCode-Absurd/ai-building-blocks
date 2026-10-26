@@ -17,9 +17,9 @@ outputs:
   - {type: audit_report}
 uses: [story-ad-test-planner, ai-workflow-handoff-planner, old-vs-new-ad-prompt-scorer]
 steps:
-  - {uses: story-ad-test-planner, note: "Writes the plan for the chain of AI steps that will make your story ads."}
-  - {uses: ai-workflow-handoff-planner, note: "Takes the test plan and writes what each AI step is sent and must never lose."}
-  - {uses: old-vs-new-ad-prompt-scorer, note: "Compares the two sets of image ads and says whether the new setup is better, worse or just cheaper."}
+  - {uses: story-ad-test-planner, note: "Writes the plan for the chain of AI steps that will make your story ads. Hands step 2 the plan and its four story tests."}
+  - {uses: ai-workflow-handoff-planner, note: "Takes the test plan and writes what each AI step is sent and must never lose. Hands you the run rules to use at the pause, when you make the new set of ads."}
+  - {uses: old-vs-new-ad-prompt-scorer, note: "Compares the two sets of image ads and says whether the new setup is better, worse or just cheaper. Uses the old and new ads you saved at the pause and the brief both were made from, not step 2's plan."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-prove-your-new-ad-ai-setup-beats-the-old-one/skeleton.yaml

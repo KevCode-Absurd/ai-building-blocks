@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It maps the app, then compares it to your tests.
 new_slug: test-coverage-gap-finder
 name: Test coverage gap finder
-summary: Point it at your app. Get every page, part and endpoint listed with
-  what is tested and what is not.
+summary: Find which pages, forms and API endpoints in your app have no tests. Get a test coverage gap list ranked by risk, with what to test first.
 job: test-and-fix-code
 headline: Test coverage gap finder
-subhead: A full inventory of what your app can do and which parts have tests, so
-  you see the untested pages, components and endpoints at a glance.
+subhead: A full inventory of what your app can do and which parts have tests, so you see the untested pages, components and endpoints at a glance.
 explain: |
   A full inventory of what your app can do and which parts have tests, so you see the untested pages, components and endpoints at a glance. You decide where to add tests from evidence, not hunches.
 
@@ -18,6 +16,10 @@ when:
   - You want to know if checkout and login have real tests.
   - You are planning a testing sprint and need priorities.
   - Coverage percentage looks fine but you do not trust it.
+not_for:
+  - "Your app has no test files yet: start with a plain list of your key pages and write a first test for login by hand."
+  - "You want a line-by-line coverage percentage from your code: use a coverage tool such as Istanbul or c8."
+  - "Your tests are not Playwright spec files: this skill reads *.spec.ts and *.spec.js files, so ask a developer to match the pages to your tests by hand."
 you_give:
   - Access to your app code
   - Your test folder
@@ -28,8 +30,33 @@ you_get:
   - Gaps ranked by risk
   - A list of what to test first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI in a place where it can read your project files, such as Claude Code. A plain chat works only if you paste in your routes and test files.
+  - Add this skill to your AI, or paste its instructions into the chat.
+  - "Say: find my test coverage gaps. Name your most important flows, such as login and checkout, if you have them."
+  - Read the coverage matrix first. Check that the pages marked missing really have no tests.
+  - Use the ranked plan to pick what to test first.
+  - When asked, say yes, no or pick specific to have tests written for the top gaps. This needs the templates folder and /pw:generate.
+output_sample:
+  input:
+    - Your app code, so your AI can list pages, forms and endpoints
+    - Your test folder with Playwright *.spec.ts or *.spec.js files
+    - Your most important user flows (optional)
+  prerequisites:
+    - An AI that can read your project files and run subagents
+    - Playwright spec files already in your project
+    - The templates folder and the /pw:generate command, only if you want tests written for you. The plan in step 5 works without them.
+  output:
+    - name: Application surface
+      contains: A list of your pages, interactive components, API endpoints with their methods, and key user flows.
+    - name: Existing tests map
+      contains: Which pages, components and endpoints your spec files visit or mock, with a test count for each area.
+    - name: Coverage matrix
+      contains: A table with area, route, test count and a status of covered, partial or missing.
+    - name: Prioritized gaps
+      contains: Untested areas ranked critical, high, medium or low by business impact.
+    - name: Recommended test plan
+      contains: For each gap, how many tests to write, which template to use, and a quick, medium or complex effort.
+    - name: Coverage percentage estimate
+      contains: A rough share of your app surface that has tests.
+    - name: Generate offer
+      contains: A question asking if you want tests written for the top gaps.

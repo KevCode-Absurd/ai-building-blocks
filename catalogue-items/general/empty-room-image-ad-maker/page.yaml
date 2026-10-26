@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: empty-room-image-ad-maker
 name: "Empty room image ad maker"
-summary: "Paste your story ad. Get an empty-room photo prompt and its caption line."
+summary: "Turn your story ad into an empty-room image ad: a photo prompt with three set objects and a short line to run under the picture."
 job: make-image-ads
 
 headline: "Empty room image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your buyer's problem changes their routine, sleep or home life more than their looks.
   - You want a picture with feeling and no staged sad face.
   - Your story already mentions what the room looked like.
+not_for:
+  - "Your problem shows in how people look, or the ad leads with price: use a plain photo of the product or a face-led picture from your own designer instead."
+  - "You want a picture of a person in the moment: ask for a Problem moment image ad maker if you have one, since this skill never shows anyone in frame."
+  - "You need the story ad itself first: use the Fact-based ad copy writer, then bring its text here."
 
 you_give:
   - Your approved story ad, with the changed-day detail in its opening
@@ -35,6 +39,33 @@ how_to_use:
   - Add what customers say changed in their days, if you have reviews or notes.
   - Paste the image prompt into your image tool. If the room looks like a catalogue, ask again with more clutter.
   - Read the flags. Check anything taken only from the story against what buyers say.
+output_sample:
+  input:
+    - Your approved story ad, with the changed-day detail in its opening
+    - What changed in how buyers live, in their words (optional)
+    - Your brand's places, light and anything you never show (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - An image tool if you want the picture made (ChatGPT and Gemini can; Claude needs one connected)
+  output:
+    - name: Scene
+      contains: One line on what someone scrolling would say they saw.
+    - name: Room and hour
+      contains: The room, the time of day and the light.
+    - name: The trace, the clock and the gap
+      contains: "One object each: what the problem left, what tells the hour, and where the person should be."
+    - name: Camera
+      contains: Where the camera stands and why, at the eye level of the person coming back in.
+    - name: Ordinary clutter
+      contains: Everyday items unrelated to the story, so the room looks lived in.
+    - name: Line under the image
+      contains: A short caption of about 27 characters, with its character count.
+    - name: Flags
+      contains: Any object taken from the story alone, and where it came from.
+    - name: Image prompt
+      contains: A 60 to 120 word prompt, ready to paste into your image tool.
+    - name: Checks missed
+      contains: Any of the five checks the result still fails, one line each, or none.
 
 how_it_works:
   - title: Sets the house rules

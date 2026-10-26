@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It follows a short set of formatting and tone rules.
 new_slug: slack-message-writer
 name: Slack message writer
-summary: Give it your point. Get a short, well-formatted Slack message, thread
-  reply or canvas that leads with the news. Needs Slack.
+summary: Write a Slack message people read to the end. Give it your point and get a short post, thread reply or canvas with correct Slack formatting.
 job: write-emails
 headline: Slack message writer
-subhead: A Slack message that people read to the end. The first line carries the
-  news, because many people only see that line in a notification.
+subhead: A Slack message that people read to the end. The first line carries the news, because many people only see that line in a notification.
 explain: |
   A Slack message that people read to the end. The first line carries the news, because many people only see that line in a notification. You give your point, and the skill drafts a short message, a thread reply or a longer canvas.
 
@@ -17,6 +15,10 @@ when:
   - Your Slack posts show stray asterisks and broken links.
   - A long update should become a canvas instead of a wall of text.
   - You want a thread reply that is short and clear.
+not_for:
+  - "You are sharing sensitive HR or legal news: talk to the person, or ask the right team to word it."
+  - "You have a long report of more than a few screens: write a full document and link to it in Slack."
+  - "You need a formal email to someone outside your team: write a normal email instead of a Slack post."
 you_give:
   - The point you want to make
   - Who it is for and which channel
@@ -28,8 +30,26 @@ you_get:
   - A thread reply or canvas when it fits better
   - A draft ready to send after you approve it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to your Slack account.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
+  - Type your point in a line or two. Add the channel and who it is for.
+  - Add any links or people to mention. Slack needs the user ID for a mention, so write the name and fix it before you send.
+  - If your AI is connected to Slack, ask it to save the result as a draft. If not, ask for text you can paste.
+  - Check the first line. It should carry the news. Check that bold, links and mentions look right in Slack, then send it.
+output_sample:
+  input:
+    - The point you want to make, in a line or two
+    - Who it is for and which channel
+    - Links or people to mention (optional)
+  prerequisites:
+    - Slack connected to your AI, only if you want the draft saved in Slack
+  output:
+    - name: Slack message
+      contains: One to three short paragraphs that lead with the news, with bold names, dates and action items.
+    - name: Thread reply
+      contains: A short reply for an existing message, with a note on whether to also post it to the channel.
+    - name: Canvas
+      contains: A longer update kept out of the channel, used when the message would be too long.
+    - name: Slack formatting
+      contains: Single-asterisk bold, links in angle brackets and mentions, with no headers or double asterisks.
+    - name: Draft for approval
+      contains: The message saved as a draft in Slack, or ready to paste, for you to check before sending.

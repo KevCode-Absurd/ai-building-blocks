@@ -16,6 +16,29 @@ use_cases:
   - "Write dialogue that sounds the way people talk"
   - "Write a short talk about something that scared you and what you learned"
   - "Get unstuck on a draft by asking what the characters would really do next"
+not_for:
+  - "You want tight, plain sentences and honest cuts in any kind of writing: use the Ernest Hemingway mind, or the George Orwell mind for plain prose."
+  - "You want a puzzle plot with clues and a fair twist: use the Agatha Christie mind."
+  - "You want a warm, funny push to get a messy first draft down: use the Anne Lamott mind. Do not use this mind for legal, medical or news writing, or for King's current views."
+output_sample:
+  input:
+    - Your story idea, scene or draft, even a rough one
+    - Who the story is for, such as a reader you have in mind
+    - How many minutes a day you can write
+    - What feels stuck or flat (optional)
+  output:
+    - name: The situation and the people
+      contains: A what-if question drawn from your idea, and a short list of the ordinary people caught in it.
+    - name: Questions for you
+      contains: A few questions in this mind's style, such as what the characters would really do next.
+    - name: Cuts and fixes
+      contains: A numbered list of adverbs, passive verbs and timid phrases to change, each with a before and after line.
+    - name: Pressure and suspense notes
+      contains: Where a scene could stop on the worst moment, and which escapes are too easy.
+    - name: Writing routine
+      contains: A daily word count sized to your worst day, a rule for missed days and a simple log.
+    - name: Next task
+      contains: One thing to read, write or revise before you come back.
 seats:
   - {seat: "Writing habit and horror", asks: "Did you put the hours in, and what's the thing in this story you're afraid to look at?"}
   - {seat: "The plain-speaking reader", asks: "Would a normal person keep turning the page, or is this showing off?"}

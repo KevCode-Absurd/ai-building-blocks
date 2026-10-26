@@ -1,6 +1,6 @@
 new_slug: annual-letter-writer
 name: Annual letter writer
-summary: Paste your principles, metrics and results. Get a plain letter to your team or owners with the year's honest numbers.
+summary: Write an annual letter to your team or owners from your results. It puts the bad news first, owns mistakes, and says what you will do and stop.
 job: speak-and-persuade
 thinking: high
 thinking_why: It joins several inputs into one honest narrative and has to choose what to lead with.
@@ -14,6 +14,10 @@ when:
   - You write a year-end or half-year letter to your team, partners or owners.
   - You have principles, metrics and results but no story that joins them.
   - You want to tell the bad news in a way people trust.
+not_for:
+  - "You need a short quarterly update with no story: send a simple table of your numbers and one line on each change."
+  - "You have no results or metrics yet: gather them first, because the letter never invents figures."
+  - "You need a pitch to win over a skeptical room: write a short talk or memo aimed at that one decision."
 you_give:
   - Your long-term principles
   - The year's results, metrics and mistakes
@@ -31,6 +35,30 @@ how_to_use:
   - Say who the letter is for and how formal it should be.
   - Read the first paragraph. If the main point is not clear, fix the input and run it again.
   - Send the draft to two readers before it goes out.
+output_sample:
+  input:
+    - Your long-term principles
+    - The year's results, metrics and mistakes
+    - Your cash view and value tally (optional)
+    - Who the letter is for
+    - Last year's letter or its key line (optional)
+  output:
+    - name: Opening
+      contains: The result that matters most, with a number, and the worst thing that happened, in two short paragraphs.
+    - name: What has not changed
+      contains: Four to six promises in plain words, each with a case from the year that cost you something.
+    - name: What moved
+      contains: Each input metric, how it changed, what the team did, and whether the one output check agrees.
+    - name: The cash and the value
+      contains: How cash compares with profit, what the value tally says for each group, and the weakest number.
+    - name: What went wrong
+      contains: Each mistake with what happened, what it cost, what you learned and what changed.
+    - name: Next year
+      contains: What you will do, each with a number or date, and one or two things you will stop.
+    - name: Closing
+      contains: Thanks, a line back to your first letter, and three direct questions for the reader.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in your inputs, and one line for each check the letter still fails, or none.
 how_it_works:
   - title: Opens with result and bad news
     text: The thing that matters most and the thing that went worst.

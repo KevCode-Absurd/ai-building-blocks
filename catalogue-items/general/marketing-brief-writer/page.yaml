@@ -1,41 +1,51 @@
 new_slug: marketing-brief-writer
 name: "Marketing brief writer"
-summary: "Paste product and buyer notes. Get a one-page brief on what to say, to whom and what next."
+summary: "Turn your product and buyer notes into a one-page marketing brief: the one thing to say, why people really buy and how results are counted."
 job: plan-strategy
 thinking: medium
 thinking_why: "It must separate real buying reasons from the maker's claims and decide the one thing to say."
 
 headline: "Marketing brief writer"
-subhead: Give it what you know about your product, your buyers and what you have tried. It asks the questions a good brief answers, finds the one thing to say, checks whether the offer itself could be better, and hands back a one-page brief with how results will be counted.
+subhead: Give it what you know about your product, your buyers and what you have tried. It finds the one thing to say, checks whether the offer should change first, and ends with the action you want and how results will be counted. You get a one-page brief for a writer, designer or agency.
 
 explain: |
-  Most weak marketing starts with a weak brief, or none. People ask for a clever campaign before they have said who it is for, what they want them to do or how they will tell if it worked. Then they judge the result by taste.
+  Most weak marketing starts with a weak brief, or none. People ask for a clever campaign before they say who it is for, what they want those people to do, or how they will tell if it worked. Then they judge the result by taste.
 
-  This skill writes the brief first. It records what has been tried and whether it worked, who buys and who does not, and the real reasons people buy, apart from the reasons the maker gives. It states the one thing to say in a single sentence before anyone writes a word. It also asks whether a small change to the product or offer would add more than new words, and ends with the action the reader should take and how you will count it.
+  This skill writes the brief first. It records what you tried and whether it worked. It lists who buys and who does not, and the real reasons people buy, kept apart from the reasons you give. It states the one thing to say in a single sentence before anyone writes a word. It also asks whether a small change to the product or offer would add more than new words.
+
+  It sits before the other briefs. To go deep on how one buyer thinks and doubts, use the Buyer brief writer. To get designer briefs for ad images, use the Ad test brief writer. This one settles what to say, what to ask the reader to do and what to count.
 
 when:
-  - You are about to hire a writer, designer or agency and need to tell them what you want.
-  - You have written something and cannot say in one sentence what it is meant to get across.
+  - You are about to hire a writer, designer or agency and need to say what you want.
+  - You wrote something and cannot say in one sentence what it should get across.
   - Your last campaign did not work and you do not know why.
+  - Someone asks 'what is the goal of this campaign?' and you have no one-line answer.
+not_for:
+  - "You cannot say how your product differs from rivals: run the Product differentiation checker first, then come back."
+  - "You want a brief on one buyer's situation and doubts for writing copy: use the Buyer brief writer."
+  - "You want briefs for designers to make ad images: use the Ad test brief writer."
+  - "You already have a brief and want a plan to run it: use the One-goal marketing plan builder."
 
 you_give:
-  - What you sell and any facts you have on it (required, as text)
-  - Your brand file or notes on voice and claims (optional)
-  - Customer words from reviews or calls (optional)
+  - What you sell, in a few lines, with facts such as price and who it is for
+  - What you tried before and what it brought in (optional)
+  - Customer words from reviews, emails or calls (optional)
   - Your offer, price and terms (optional)
-  - What you have tried before and the results (optional)
+  - Notes on your brand voice and claims you may not make (optional)
 you_get:
-  - A one-page brief with goal, audience, the one thing to say, offer and action
-  - A list of why people really buy, in their words where you have them
-  - A check on whether the offer needs a small change before new words
-  - How the result will be counted
+  - A goal in one line, with a number if you have one
+  - A list of what you tried and how each attempt did
+  - Who buys, who does not, and why buyers say they buy
+  - The one thing to say, in one sentence
+  - A check on whether a small change to the offer would help more than new words
+  - The one action you want, and how results will be counted
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste what you know about the product, the buyers and past attempts. Rough notes are fine.
-  - Answer the questions it asks, or say you do not know.
-  - Read the one-sentence message first. If you cannot agree with it, say why and ask for a new one.
-  - Give the brief to whoever writes or makes the work.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it into a new chat. It needs no files or paid tools.
+  - Paste what you sell, what you tried before and any customer words. Rough notes are fine.
+  - If it asks questions, answer them or say you do not know. It marks unknowns and does not guess.
+  - Read the one-sentence message first. Say it to a stranger and ask what they think you sell.
+  - Give the brief and the offer check to your writer, designer or agency.
 
 how_it_works:
   - title: What was tried
@@ -73,13 +83,39 @@ output_shape: |
   <small change worth trying first, or none found>
 
   THE ACTION AND THE COUNT
-  Action: <what the reader does> | Counted by: <measure and date>
+  Action: <what the reader does> | Counted by: <measure, source and date>
+
+  PRACTICAL NOTES
+  Audience: <who> | Tone: <one line> | Claims allowed and not allowed: <list> | Sign-off: <who>
 
   MISSING
   <what would sharpen the brief>
 
   CHECKS MISSED
   <one line per check still missed, or none>
+output_sample:
+  input:
+    - What you sell, with its facts
+    - What you tried before and the results (optional)
+    - Customer words from reviews or calls (optional)
+    - Your offer, price and terms (optional)
+  output:
+    - name: GOAL
+      contains: What the work must achieve, in one line, with a number if you have one.
+    - name: WHAT HAS BEEN TRIED
+      contains: Each past attempt with its result, or 'unknown'.
+    - name: WHO BUYS AND WHO DOES NOT
+      contains: Who buys, when and why, and who looked and left, and why.
+    - name: WHY THEY REALLY BUY
+      contains: Reasons in buyers' own words with the source, kept apart from your own claims.
+    - name: THE ONE THING TO SAY
+      contains: One sentence a stranger could repeat.
+    - name: THE OFFER CHECK
+      contains: Up to three small changes to the offer worth trying first, or 'none found'.
+    - name: THE ACTION AND THE COUNT
+      contains: The one action you want, what is counted, where the number comes from and the date to read it.
+    - name: PRACTICAL NOTES
+      contains: Audience, tone in one line, claims allowed and not allowed, and who signs off the work.
 
 tweaks:
   - what: Past results
@@ -112,8 +148,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Turning notes into a one-page brief is text work any strong chat AI handles well."}
-    - {name: "Your email or order export", why: "Real numbers on past results make the first section solid instead of a guess."}
+    - { name: "Any good chat AI", why: "Turning notes into a one-page brief is text work any strong chat AI handles well." }
+    - { name: "Your email or order export", why: "Real numbers on past results make the first section solid instead of a guess." }
   inputs:
     - "Reviews or support tickets from the last six months"
     - "Results of any past emails, ads or mailings"

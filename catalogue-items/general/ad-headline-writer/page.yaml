@@ -1,6 +1,6 @@
 new_slug: ad-headline-writer
 name: "Ad headline writer"
-summary: "Paste your buyer and facts. Get plain headlines with character counts and the line to test first."
+summary: "Write ad headlines from your buyer and facts. Get plain lines with character counts, a glance test and the one line to test first."
 job: write-ad-copy
 thinking: low
 thinking_why: "It reshapes what you give it, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - You need several headlines for an ad test, each trying a different argument.
   - You're writing the words on an ad image and want them to add to the picture, not describe it.
   - Your headlines keep coming out clever or clipped, and you want plain ones that still sell.
+not_for:
+  - "You need the opening line of a video or post: use the Ad first line writer and scorer."
+  - "You need a landing page or long copy: use the Ad-matched landing page writer."
+  - "You need to check ad copy against Meta's rules: use the Meta ads compliance checker."
 
 you_give:
   - A note on the buyer, how aware they are, the one thing they want and their main doubt
@@ -37,6 +41,26 @@ how_to_use:
   - Paste the facts and proof it may use, and any real customer quotes.
   - Say how many lines and the limits, for example "4 lines for the image, under 40 characters each".
   - Show the lines to someone who doesn't know your brand. Drop any they can't explain back to you.
+output_sample:
+  input:
+    - A note on your buyer, how aware they are and their main doubt
+    - Your offer, facts, proof and any dated news
+    - How many lines, their character limits and where they show
+    - A stage brief from the Market stage reader (optional)
+    - Real customer quotes, word for word (optional)
+  output:
+    - name: Level
+      contains: How aware the buyer is and what that lets the lines say.
+    - name: Lines
+      contains: Numbered headlines, each with its way in, who it targets, character count and glance test result.
+    - name: Test first
+      contains: The line to test first, and a second line to test against it.
+    - name: Skipped
+      contains: Ways in left out because your material could not back them.
+    - name: Missing
+      contains: Proof or buyer detail a line would need.
+    - name: Checks missed
+      contains: Any of its own checks the set still fails, or none.
 
 how_it_works:
   - title: Sets the level

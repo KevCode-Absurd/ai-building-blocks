@@ -1,46 +1,86 @@
 new_slug: reconcile-buybacks-with-owner-cash
 name: Reconcile buybacks with owner cash
 headline: Reconcile buybacks with owner cash
-summary: Connect executed repurchases to EPS, shareholder cash distributions and closing book value.
+summary: Check what a share buyback does to EPS, whether cash covers the payout, and how book value per share moves. Get three linked schedules.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked repurchase, distribution-funding and common-equity workbook. Share executed buyback records, opening/closing shares, ordinary earnings, cash yields, FCFE and equity movements.
+subhead: Give it the buyback records, share counts, profit, dividends and a free cash flow to equity figure. It shows the EPS effect after the income the cash would have earned, whether cash covered all payouts, and how book value per share changed. You get three linked schedules and a gap list.
 explain: |-
-  A linked repurchase, distribution-funding and common-equity workbook.
+  A buyback lowers the share count, so EPS usually rises. That tells you little about whether it was a good use of cash. The cash could have earned a return, and the same cash may be needed for dividends. This workflow looks at one buyback three ways, using the same executed cash each time.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 retires shares at the price paid and takes off the after-tax income the cash would have earned, then shows the EPS change. Step 2 adds dividends, subtracts share issue proceeds and compares the total payout with free cash flow to equity (FCFE), the cash left for owners after debt payments. Step 3 rolls common equity forward with the same payouts and divides by the closing shares to get book value per share.
+
+  Higher EPS is not proof of value, and a funding shortfall is shown as a shortfall, not quietly paid for with debt. Only executed buybacks count. An announced program is a scenario and is labelled as one.
 when:
-  - You need a linked repurchase, distribution-funding and common-equity workbook.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A company is buying back shares and you want to know what that really did to EPS.
+  - Buybacks plus dividends look bigger than the cash the business makes and you want to see the gap.
+  - Book value per share fell after a buyback and you need to know why.
+  - A board paper claims a buyback is accretive and you want to check it.
+not_for:
+  - "You only need EPS from a share ledger, with no payout or equity data: use the Basic and diluted earnings per share checker."
+  - "The buyback exists to offset shares given to employees: use the Employee share dilution cash checker."
+  - "You are comparing property net asset value with book value: use the Property net asset value and book-value checker."
 you_give:
-  - Executed buyback records, opening/closing shares, ordinary earnings, cash yields, FCFE and equity movements.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "Executed buyback records: date, shares bought, price and cash paid"
+  - Opening and closing share counts, and profit for the ordinary shareholders
+  - The after-tax return the cash would have earned, such as interest on cash held
+  - Dividends paid and money raised from issuing shares
+  - A free cash flow to equity (FCFE) figure for the same period, with its definition
+  - Opening common equity, other comprehensive income, currency and scale
 you_get:
-  - A linked repurchase, distribution-funding and common-equity workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - EPS before and after the buyback, with the lost income shown
+  - Total payout against FCFE, and the cash retained or the funding needed
+  - A common equity roll-forward and book value per share
+  - A list of gaps and anything that needs a separate schedule
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add the workflow pack to Claude, ChatGPT or Gemini. Use an AI that can read files, and make spreadsheets if you want a workbook.
+  - Attach the cash flow statement, the equity note and the buyback records. Paste the share counts and the return on cash. Say the period, currency and scale once.
+  - After step 1, check that the shares retired match cash paid divided by price, and that lost income was taken off.
+  - After step 2, check that gross buybacks and issue proceeds are both visible behind the net figure, and that FCFE is not EBITDA or free cash flow to the firm.
+  - After step 3, check that opening equity plus every movement ties to closing equity with no plug.
+  - Read every MISSING line. Do not call a higher EPS a gain in value.
 how_it_works:
   - title: Cash-funded buyback EPS bridge
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Use actual execution or a clearly labeled cash-funded scenario. Carry repurchase cash, retired shares and foregone cash income as separate sourced drivers.
+    text: Retires shares from executed cash and price, takes off the after-tax income the cash would have earned, and shows EPS before and after. Hands step 2 the executed buyback cash.
   - title: Shareholder distribution coverage
-    text: Use executed buyback cash from the first schedule, sourced dividends and issuance proceeds, and an independently reconciled FCFE schedule. Reconcile the funding shortfall without counting cash or debt twice.
+    text: Nets share issue proceeds against executed buybacks, adds dividends, and compares the total with FCFE. Shows cash retained or the funding needed, with debt and cash changes reconciled first. Hands step 3 the distributions.
   - title: Book value per share roll-forward
-    text: Carry the same actual distributions into common-equity movements and the actual closing share ledger; reconcile book value separately from EPS accretion and value creation.
+    text: Rolls parent common equity forward using the same dividends, buybacks and issue proceeds, ties it to the balance sheet, and divides by closing shares. Keeps this apart from EPS accretion.
 output_shape: |-
-  A linked repurchase, distribution-funding and common-equity workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  BUYBACKS AND OWNER CASH  <company>, <period>, <currency>, <scale>
+
+  1 EPS EFFECT     cash spent <n> at price <n> = shares retired <n>
+                   income lost after tax <n>
+                   EPS before <n>, after <n>
+  2 PAYOUT COVER   dividends <n> + buybacks <n> - issue proceeds <n> = payout <n>
+                   FCFE <n>, retained <n> or funding needed <n>
+  3 BOOK VALUE     opening equity <n> + profit + OCI + issues - dividends - buybacks
+                   = closing equity <n>, closing shares <n>, book value per share <n>
+
+  SOURCES         <each input, its source, date and unit>
+  MISSING         <each gap and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Executed buyback records and share counts
+    - Profit, dividends and share issue proceeds
+    - A free cash flow to equity figure and the return on cash
+    - Opening common equity and other movements
+  prerequisites:
+    - An AI that can read files. For a workbook, one that can make spreadsheets.
+  output:
+    - name: EPS effect
+      contains: Shares retired, income lost on the cash, and EPS before and after.
+    - name: Payout coverage
+      contains: Dividends and buybacks less issue proceeds, against FCFE, with retained cash or the gap.
+    - name: Book value roll-forward
+      contains: Common equity from opening to closing, and book value per share on closing shares.
+    - name: Linked workbook
+      contains: Inputs, calculations and checks on separate tabs, when your AI can make files.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in your inputs and any check that could not run.
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,15 +100,24 @@ test:
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds linked schedules, recalculates them and reopens the saved file. In plain chat you get the same tables as text.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The cash flow statement and the statement of changes in equity
+    - The company's own definition of free cash flow to equity
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Buyback
+    meaning: The company buys its own shares from the market, which cuts the number of shares.
+  - term: FCFE
+    meaning: "Free cash flow to equity: cash left for owners after operating needs, investment and debt payments."
+  - term: Accretion
+    meaning: A rise in EPS. It does not by itself mean the buyback created value.
+  - term: Book value per share
+    meaning: Common equity divided by shares outstanding at the end of the period.
+  - term: Income forgone
+    meaning: What the cash would have earned if it had not been spent on shares.
+next:
+  - reconcile-basic-and-diluted-issuer-eps

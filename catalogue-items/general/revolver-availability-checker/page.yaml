@@ -1,55 +1,111 @@
 new_slug: revolver-availability-checker
 name: Revolver availability checker
 headline: Revolver availability checker
-summary: A revolver capacity bridge and overadvance exception
+summary: Find how much you can still borrow on a revolving credit line. Get availability after drawn loans, letters of credit and blocks, or an overadvance.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A revolver capacity bridge and overadvance exception. Share same-date receivables and inventory borrowing-base advances, commitment, drawn debt, outstanding letters of credit and nonduplicated blocks.
+subhead: Give it the borrowing base amounts for receivables and inventory, the facility limit, what you have drawn, letters of credit and other blocks. It takes the lower of the base and the limit, then takes off usage. You get availability or an overadvance.
 explain: |-
-  A revolver capacity bridge and overadvance exception.
+  A revolving credit line often lets you borrow against your receivables and inventory, up to a facility limit. How much you can borrow today is the lower of the two, less what you have already used. This revolver availability checker works that out and shows it plainly.
 
-  Asset based liquidity. Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision.
+  It adds the receivables and inventory amounts from the borrowing base certificate. It caps that total at the facility limit. It then takes off drawn loans, letters of credit and any other blocks. What is left is signed availability. If it is below zero, the skill shows an overadvance instead of hiding it as zero.
+
+  One rule matters most. Each reserve is applied once. If the certificate already took a reserve off, do not take it off again at the facility level. The skill asks you where each reserve sits. It shows arithmetic capacity only. Only the lender can say what you may actually draw.
 when:
-  - You need a revolver capacity bridge and overadvance exception.
-  - You work on asset based liquidity and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You have a new borrowing base certificate and want to know how much room is left on the line.
+  - You plan a large payment and want to check it fits inside availability.
+  - Sales or stock drop and you want to see if you are heading for an overadvance.
+  - A lender or board asks for a bridge from borrowing base to availability.
+not_for:
+  - You want to build the base itself from raw receivables. Use the Receivables borrowing base builder.
+  - You want to build the base from stock. Use the Inventory borrowing base builder.
+  - You want to review the evidence behind a borrowing base. Use the Borrowing base evidence reviewer.
+  - You want approval to draw. Only your lender can give it. This shows arithmetic capacity.
 you_give:
-  - Same-date receivables and inventory borrowing-base advances, commitment, drawn debt, outstanding letters of credit and nonduplicated blocks.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The receivables advance amount at one certificate date (from the borrowing base certificate)
+  - The inventory advance amount at the same date (from the same certificate)
+  - The facility commitment, the legal limit of the line (from the credit agreement)
+  - Loans drawn today (from the lender's statement)
+  - Letters of credit outstanding (from the lender's statement)
+  - Other blocks or reserves not already in the certificate (from the credit agreement or lender notice)
+  - The date, currency and units
 you_get:
-  - A revolver capacity bridge and overadvance exception.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The borrowing base: receivables advance plus inventory advance"
+  - "Capacity: the lower of the borrowing base and the commitment"
+  - "Usage: drawn loans plus letters of credit plus other blocks"
+  - Availability, or an overadvance if usage is above capacity
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the certificate amounts, the commitment and the usage. Say where each came from, and give the certificate date, currency and units.
+  - Say which reserves the certificate already took off, so none is taken off twice.
+  - "Check one line yourself: capacity is the lower of base and commitment. For 1,050 and 1,000, that is 1,000."
+  - Read availability or overadvance, then MISSING and CHECKS MISSED. Ask your lender before you draw.
 how_it_works:
-  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
-    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
-  - title: 2. Reconcile component collateral advances to one certificate date, avoiding reserves already applied in the source tiers
-    text: Reconcile component collateral advances to one certificate date, avoiding reserves already applied in the source tiers.
-  - title: 3. Limit capacity to the lower of total borrowing base and legal commitment; deduct funded and contingent usage plus additional documented blocks
-    text: Limit capacity to the lower of total borrowing base and legal commitment; deduct funded and contingent usage plus additional documented blocks.
-  - title: 4. Keep signed availability and an overadvance amount visible; identify authorization or certificate conditions before describing capacity as drawable
-    text: Keep signed availability and an overadvance amount visible; identify authorization or certificate conditions before describing capacity as drawable.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units. Amounts must come from one certificate date.
+  - title: Adds the base
+    text: Adds the receivables and inventory advance amounts. Reserves already applied in the certificate are not applied again.
+  - title: Caps at the commitment
+    text: Takes the lower of the borrowing base and the facility commitment as capacity.
+  - title: Takes off usage
+    text: Subtracts drawn loans, letters of credit and other documented blocks from capacity.
+  - title: Shows the sign
+    text: Reports signed availability, plus an overadvance amount if usage is above capacity.
 output_shape: |-
-  A revolver capacity bridge and overadvance exception.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Borrowing base <amount> | Capacity <amount> | Usage <amount> | Availability <amount> | Overadvance <amount or zero>
+
+  SCOPE AND SOURCES
+  <currency, units, certificate date; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <receivables advance, inventory advance, commitment, drawn loans, letters of credit, other blocks; where each reserve sits>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <borrowing base; capacity; usage; signed availability; overadvance; the check that no reserve is applied twice>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The receivables and inventory advance amounts from your certificate
+    - Your facility commitment
+    - Your drawn loans and letters of credit
+    - Any other blocks on the line
+  prerequisites:
+    - Your latest borrowing base certificate and credit agreement
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The borrowing base, capacity, usage, availability and any overadvance.
+    - name: SCOPE AND SOURCES
+      contains: The certificate date, currency and units, with a source for each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Your advance amounts, commitment, usage, and where each reserve sits.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Each sum in order, and the check that no reserve is applied twice.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Actual records, contractual terms and scenarios remain distinguishable.
+  - what: Reserves
+    how: Say which reserves the certificate already includes, so the skill does not take them off a second time.
+  - what: Drawing plan
+    how: Raise the drawn amount and ask for a second run to see where availability runs out.
+  - what: Certificate date
+    how: Use amounts from one certificate date. Ask for a new run when a new certificate arrives.
 judge:
   - Actual records, contractual terms and scenarios remain distinguishable.
   - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
@@ -64,15 +120,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The latest borrowing base certificate
+    - The credit agreement
+    - The lender's statement of loans and letters of credit
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Revolver
+    meaning: A credit line you can borrow from, repay and borrow from again, up to a limit.
+  - term: Borrowing base
+    meaning: The most you can borrow against your receivables and inventory, as set by the lender's rules.
+  - term: Letter of credit
+    meaning: A promise from the lender to pay a third party for you. It uses up part of the line.
+  - term: Overadvance
+    meaning: Borrowing that is above what the line allows.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+next:
+  - debt-service-covenant-headroom-checker
+  - debt-maturity-funding-ladder

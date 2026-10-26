@@ -1,6 +1,6 @@
 new_slug: heavy-feature-trimmer
 name: "Heavy feature trimmer"
-summary: "Give it your homepage and collection page. Get each slider, popup and video judged, and a score."
+summary: "Find which sliders, popups and videos slow your store. Give it your pages. You get a keep, change or remove call on each, and a lightness score."
 job: speed-up-store
 thinking: medium
 thinking_why: "It judges features against click data and speed cost. A mid-size model does this well when it can see the pages."
@@ -17,6 +17,10 @@ when:
   - "Your homepage has a slider, an autoplay video or many animations."
   - "Collection pages feel slow with 20 or more products."
   - "You're picking or changing a theme."
+not_for:
+  - "Your store has no speed problem, or your theme is already light: leave it as it is and check a page with Google PageSpeed Insights first."
+  - "You want to move to a new theme only for speed: ask a Shopify developer to compare the cost of fixing against rebuilding."
+  - "You need fixes to the code inside your theme files: ask a Shopify developer, and use a duplicate theme for any test."
 
 you_give:
   - "The addresses of your homepage, a collection page and a product page"
@@ -35,6 +39,27 @@ how_to_use:
   - "List your theme and every popup, video and effect app you know about."
   - "Add click or heatmap data if you have it, such as whether anyone uses quick view."
   - "Make one change at a time on a duplicate theme and run PageSpeed three times after each."
+output_sample:
+  input:
+    - The addresses of your homepage, a collection page and a product page
+    - Screenshots of those pages
+    - Your theme name and the popup and video apps you use
+    - Heatmap or click data (optional)
+  prerequisites:
+    - An AI that can read images, so it can look at your screenshots
+  output:
+    - name: Lightness score
+      contains: A score out of 100 now and after the changes, with the deductions shown as a sum.
+    - name: Feature table
+      contains: Each feature with its page, what it costs, whether shoppers use it, a keep, change or remove verdict and a lighter option.
+    - name: Redirects and broken links
+      contains: Each redirect chain or missing file request, with the fix.
+    - name: Theme advice
+      contains: A call to keep, fix or consider a newer theme, with the reason.
+    - name: Order of changes
+      contains: The changes in order, each one made on a duplicate theme.
+    - name: Not run
+      contains: What could not be judged, and anything marked MISSING.
 
 how_it_works:
   - title: Checks quick view

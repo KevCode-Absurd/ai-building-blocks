@@ -13,6 +13,31 @@ use_cases:
   - Turn a long note into a short handmade gift
   - Make a creative routine that fits a busy week
   - Learn a topic with a simple notebook drawing
+not_for:
+  - "You need legal advice on copying or rights: ask a lawyer, since this mind gives no legal clearance."
+  - "You want facts about his life or books: read his own site, because this mind is an AI view of his public work."
+  - "You want to learn drawing from the ground up: use Betty Edwards or Andrew Loomis for step-by-step drawing teaching."
+output_sample:
+  input:
+    - The interest or project that has stalled
+    - A few saved examples or references (optional)
+    - Who the piece is for
+    - The time and materials you really have this week
+  output:
+    - name: Project brief
+      contains: One small thing to make, for one reader, in a format you can draft now.
+    - name: First-page outline
+      contains: A short plan for the first page or piece, using your own words and situation.
+    - name: Source note
+      contains: Each reference listed with its maker, source and the one feature worth studying.
+    - name: Original exercise
+      contains: A small attempt that answers your own brief instead of copying an example.
+    - name: Weekly practice card
+      contains: A few modest making sessions with a starting cue, a task and a stopping note.
+    - name: Sharing note
+      contains: Who could see the work, what should stay private and which permissions are still open.
+    - name: Next question
+      contains: One closing question that helps you pick what to make or look at next.
 seats:
   - seat: Everyday creative practice
     asks: What could you make with the materials and attention you already have?

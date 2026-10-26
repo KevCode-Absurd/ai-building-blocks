@@ -1,6 +1,6 @@
 new_slug: product-review-mining
 name: Mine your product's own words and find the shared want
-summary: Paste a product page or manual. Get its own phrases sorted for headlines, plus the one want buyers share.
+summary: Find the phrases in your product page or manual that make strong hooks. Get them sorted for headlines, plus the one want your buyers share.
 job: write-ad-copy
 thinking: high
 thinking_why: It has to keep your product's real words and not slide into made-up claims. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You need fresh hooks and angles and want them built from what your product already says.
   - You have a thick manual, book or transcript and need to find the lines worth using in ads and pages.
   - Your ads all lean on one benefit and you suspect your buyers share a want you have not named.
+not_for:
+  - "Your product has no written material yet: build the Website brand brain builder result first, then come back."
+  - "You only need a headline for one ad: use the Ad headline writer."
+  - "You want to plan ad angles from your market, not from your own product text: use the Ad angle planner."
 you_give:
   - Your product material, such as a product page, manual, spec sheet, book or transcript
   - Customer reviews or buyer words (optional)
@@ -28,6 +32,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste or attach your product material. It builds the phrase sheet first.
   - Add reviews or buyer words if you have them. It uses them to name the shared want.
+output_sample:
+  input:
+    - Your product page, manual, spec sheet, book or transcript
+    - Customer reviews or buyer words (optional)
+    - A short description of your buyers (optional)
+  prerequisites:
+    - An AI that can read pasted text or attached files
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Phrase sheet
+      contains: Strong phrases from your own material, each with its source, sorted into piles for headlines, long copy, side notes, proof and demonstrations.
+    - name: Most dramatic points
+      contains: The strongest points in your material, marked, with a ten-word headline for each long idea.
+    - name: Shared want
+      contains: The one want your buyers already have, written in their words.
+    - name: Smaller wants and hooks
+      contains: Each smaller want, with a hook, how it works, the proof and the feeling behind it.
+    - name: Running order and test plan
+      contains: The order to use the hooks in, and a plan to test hooks that differ in appeal, not wording.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Mine the phrases
     text: Reads your material, marks every strong phrase in your own words, and sorts them into piles for headlines, copy, proof and demos.

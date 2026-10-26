@@ -1,0 +1,42 @@
+slug: agency-finance-financial-analyst
+name: Financial Analyst agent
+summary: "Get your financial model checked: recalculated figures, errors, base, best and worst cases, and which assumption could change your decision."
+category: agent
+boards: []
+type: agent
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: audit_report
+  - type: brief
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: finance/finance-financial-analyst.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-financial-analyst.md
+  licence: MIT
+  original_name: Financial Analyst
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 3547907cd52e6108a4c666fd576d5e42715ac337586a3958a722deee4c1f77bb
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Financial Analyst
+  - Agency Agents
+  - Finance
+credits:
+  - title: Financial Analyst
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-financial-analyst.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

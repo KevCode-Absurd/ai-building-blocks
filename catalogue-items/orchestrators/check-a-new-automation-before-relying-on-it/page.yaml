@@ -1,50 +1,84 @@
 new_slug: check-a-new-automation-before-relying-on-it
 name: Check a new automation before relying on it
 headline: Check a new automation before relying on it
-summary: Share the source files. Get a process map, failure checks and a reviewable operating procedure.
+summary: Find where a new automation can fail, such as double runs or no approval step. Get a written procedure with a test checklist and recovery steps.
 job: set-up-ai
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A process map, failure checks and a reviewable operating procedure. Share the proposed automation, triggers, data fields, destination systems and an approved test case. Your AI prepares the work and marks any facts it cannot verify.
+subhead: "Paste the description of your automation: what starts it, what data it reads and where the results go. Your AI checks it for the ways it can fail, then writes the procedure, test checklist and recovery steps your team can follow."
 explain: |-
-  A process map, failure checks and a reviewable operating procedure.
+  Most new automations work on the first test and fail on the tenth run. The same trigger fires twice. A step fails halfway and leaves half the job done. Nobody knows who approves, or how to stop it.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Duplicate triggers, partial failures, permissions and recovery are covered; test results are recorded separately from plans. Missing tools or evidence stay visible in the final summary.
+  This workflow checks the automation before you trust it. Step 1 looks at nine things: the trigger, the scope, the inputs, the exceptions, saved state, duplicate protection, retries, approval points and stopping rules. It reports each as sound or weak and fixes only the weak ones. Step 2 turns the repaired design into a plain procedure: who does what, a checklist to test it, and what to do when it breaks.
+
+  It reads your description. It does not run the automation, and it does not search for other tools. A pass on paper is not a test, so the checklist says what to try on a small real case before you rely on it.
 when:
-  - You need a process map, failure checks and a reviewable operating procedure.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You built a Zapier, Make or n8n automation, or an AI loop, and want to check it before it touches real customers or money.
+  - An automation ran twice, skipped a record or stopped halfway, and you want to know why.
+  - You are handing an automation to a teammate and they need a procedure, not just your memory.
+  - You want a test checklist and recovery steps written down before the first live run.
+not_for:
+  - You have no automation yet and want one built. Use the Build an n8n automation that reports failures and is reusable workflow.
+  - You want to find which chores are worth automating. Use the Repeat chore automation planner.
+  - You want a plan for an AI agent with tools and permissions. Use the Review an agent before launch workflow.
+  - You want the automation tested for you. This workflow checks the design and writes the test list. You still run the test.
 you_give:
-  - The proposed automation, triggers, data fields, destination systems and an approved test case.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - A description of the automation, or its prompt or settings pasted in
+  - What starts it, such as a form, a new row or a schedule
+  - The data fields it reads, and where the results go
+  - One small real case to test with, such as a sample order (optional)
+  - Who approves, and who to call when it fails (optional)
 you_get:
-  - A process map, failure checks and a reviewable operating procedure.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A check of nine parts of the design, each marked sound or weak, with a fix for each weak one
+  - A repaired description of the automation
+  - A written operating procedure for people who run it
+  - A test checklist to try on a small real case first
+  - Recovery steps for a failed or doubled run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste the automation as it stands now: the prompt, the steps or the settings. Add what starts it, what it reads and where results go.
+  - Read the weak parts in step 1. Decide which fixes you accept. Say so before the AI writes the procedure.
+  - Run the test checklist yourself on one small real case. Mark each line pass or fail.
+  - Give the procedure to the people who will run it. Keep the failed checks with it.
 how_it_works:
   - title: Repeatable AI loop designer
-    text: Use Audit or LoopDoctor mode on the supplied automation. Check trigger, scope, inputs, exceptions, state, duplicate protection, retries, approval points and stopping rules without live catalogue search.
+    text: "Audits the automation you pasted. Checks the trigger, scope, inputs, exceptions, saved state, duplicate protection, retries, approval points and stopping rules. Repairs only what is weak. Hands step 2 the repaired design. Check before moving on: every weak part has a fix or a reason it was left."
   - title: Process and SOP writer
-    text: Write the operating procedure, test checklist and recovery steps for the agreed design.
+    text: "Writes the procedure from the repaired design. It has a purpose, who does what, the steps, the exceptions, a test checklist and recovery steps. Marks anything you did not tell it as MISSING."
 output_shape: |-
-  Scope and source coverage
-  A process map, failure checks and a reviewable operating procedure.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  DESIGN CHECK    <part | sound or weak | what is wrong | fix>, for nine parts
+  REPAIRED DESIGN <the automation after the accepted fixes>
+  PROCEDURE       <purpose | who does what | steps | exceptions>
+  TEST CHECKLIST  <case | what to try | expected result | pass or fail, left blank>
+  RECOVERY        <failure | what to do | who>
+  MISSING         <each gap and the part it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - The automation described or pasted in, as it stands now
+    - What starts it, what data it reads and where results go
+    - One small real case to test with (optional)
+  prerequisites:
+    - An AI that can read what you paste or attach
+    - The pack with its two component skills
+  output:
+    - name: Design check
+      contains: Nine parts of the automation, each marked sound or weak, with a fix for each weak one.
+    - name: Repaired design
+      contains: The automation as it reads after you accept the fixes, with the intended outcome unchanged.
+    - name: Operating procedure
+      contains: Purpose, who does what, the steps and the exceptions, written for the person who runs it.
+    - name: Test checklist
+      contains: Cases to try on one small real case before you rely on it, with the expected result for each.
+    - name: Recovery steps
+      contains: What to do when a run fails, runs twice or stops halfway, and who does it.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Duplicate triggers, partial failures, permissions and recovery are covered; test results are recorded separately from plans.
+  - what: Audience
+    how: Say who will run it, such as a new hire or you alone. The procedure uses their level of detail.
+  - what: Risk
+    how: Say what a bad run costs, such as a wrong email to customers. The design check weighs approvals and stopping rules by it.
+  - what: Test case
+    how: Give a real sample record. The test checklist then uses it instead of a made-up one.
 judge:
   - Duplicate triggers, partial failures, permissions and recovery are covered; test results are recorded separately from plans.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,11 +96,19 @@ improve:
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can audit a pasted description. Use one that opens files if your automation is saved as a file.
+    - name: The tool the automation runs in (optional)
+      why: You run the test checklist there. This workflow does not connect to it or run anything.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A log or screenshot of a run that went wrong, so the check can match a real failure.
+    - A named person who approves changes.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Trigger
+    meaning: The event that starts the automation, such as a new form entry.
+  - term: Duplicate protection
+    meaning: A way to make sure the same job does not run twice.
+  - term: Retry
+    meaning: Trying a failed step again, usually a set number of times.
+  - term: Stopping rule
+    meaning: A rule that ends the automation when something looks wrong or the job is done.

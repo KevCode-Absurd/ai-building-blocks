@@ -1,6 +1,6 @@
 slug: prepare-a-contract-renewal-negotiation
 name: Prepare a contract renewal negotiation
-summary: Share the source files. Get a renewal deadline plan, risk summary and negotiation brief.
+summary: "Prepare a contract renewal negotiation: get a notice-deadline plan, a plain risk summary and keep, renegotiate or replace options with costs."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,14 +8,15 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
-  - type: question
-    required: false
   - type: document
+    required: true
+  - type: spreadsheet
+    required: false
+  - type: brief
     required: false
 outputs:
   - type: audit_report
+  - type: plan
   - type: document
 uses:
   - vendor-agreement-status-checker
@@ -23,11 +24,11 @@ uses:
   - vendor-comparison-writer
 steps:
   - uses: vendor-agreement-status-checker
-    note: Confirm renewal and notice dates and list what must be decided before each deadline.
+    note: "Confirm renewal and notice dates and list what must be decided before each deadline. Hands step 2 the dates, each with its clause."
   - uses: contract-risk-reviewer
-    note: Review the commercial and operational effect of renewal, termination and proposed changes.
+    note: "Review the commercial and operational effect of renewal, termination and proposed changes. Uses your signed agreement, not step 1's file, and ties the risks to step 1's dates. Hands step 3 the risks by path, each with its clause."
   - uses: vendor-comparison-writer
-    note: Prepare keep, renegotiate and replace options with explicit costs and open questions.
+    note: "Prepare keep, renegotiate and replace options with explicit costs and open questions. Uses step 2's risks and step 1's dates with your usage and quote. Hands back the negotiation brief."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

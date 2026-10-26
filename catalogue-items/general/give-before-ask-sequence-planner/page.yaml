@@ -1,35 +1,46 @@
 new_slug: give-before-ask-sequence-planner
-name: Give before ask sequence planner
-summary: Paste your audience and your offer. Get a run of useful posts or messages, then one clear ask.
+name: "Give before ask sequence planner"
+summary: "Turn your offer and audience into a run of useful posts or messages that earn attention, then one short ask people are ready to answer."
 job: grow-social
 thinking: medium
 thinking_why: It judges what is useful to an audience and how long to give before asking.
-headline: Give before ask sequence planner
-subhead: Give it your audience and your offer. It writes the one ask first, lists what your audience would value with no strings, and plans several gives for each ask. You get a run of posts or messages, a reply plan, the ask in plain words and a review rule.
+headline: "Give before ask sequence planner"
+subhead: "Give it your offer, your audience and where the sequence will run. It writes the one ask first, then lists useful gives your audience would want with no strings. You get a run of posts or messages, a reply plan, the ask in plain words and a rule for reviewing it."
 explain: |
-  Most sequences either sell too early or give so long that the ask never comes. People ignore a stranger who asks for something before giving anything. They also drift away from a giver who never says what they want.
+  Most sequences sell too early, or give for so long that the ask never comes. People ignore a stranger who asks before giving anything. They also drift away from a giver who never says what they want.
 
-  This skill starts with the ask, written in one plain line. It then lists useful things your audience would want with no strings, and plans several gives for each ask. It plans how you will reply to people who react, one by one, sets how long to give before the first ask, and tells you how to review what the gives earned. The ask is short, and no promise goes beyond what the offer can keep.
+  This give before ask sequence planner starts with the ask, in one plain line. It then lists 8 to 15 useful things your audience would value with no strings. It spreads them across a run of posts, emails or messages, with at least three gives before a first ask.
+
+  It plans how you reply to each person who reacts, one by one. It sets how long to give before the first ask and what to count afterward, so the next round is better. The method follows Gary Vaynerchuk's public teaching. The give period is a starting guess, and your past launch results make it better.
 when:
-  - You post a lot, but nobody buys or replies when you finally ask.
-  - You are about to launch an offer and want your audience warm first.
-  - You run an email or message list and want a sequence that earns attention.
+  - "You post a lot, but nobody buys or replies when you finally ask."
+  - "You are about to launch a product, course or service and want your audience warm first."
+  - "You run an email list or a social account and want a sequence that earns attention."
+  - "You do not know how long to wait before you ask."
+not_for:
+  - "You have no audience yet. Use the First customers by hand planner to win your first buyers one by one."
+  - "You want a month of content built for one platform. Use the Platform-native content planner."
+  - "You want to borrow someone else's audience. Use the Network launch distribution planner."
+  - "You need the ask or sales copy sharpened line by line. Use the Sales copy editor."
 you_give:
   - "Your offer: what it is, the price and the terms"
-  - Your audience, in a few lines (or a buyer description)
+  - "Your audience, in a few lines, or a buyer description"
   - "Where the sequence will run: posts, email or messages"
-  - Your brand file (optional)
+  - "Questions your audience has sent you (optional)"
+  - "Results of your last launch (optional)"
+  - "Your brand file (optional)"
 you_get:
-  - The one ask, written in plain words
-  - A list of gives, each useful on its own
-  - "A run of posts or messages: several gives per ask"
-  - A reply plan, a give period and a review rule
+  - "The one ask, written in plain words"
+  - "A list of 8 to 15 gives, each useful on its own"
+  - "A run of posts or messages, with several gives before each ask"
+  - "A reply plan, a give period and a rule for the next round"
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the offer and describe the audience.
-  - Say where it will run and how many pieces a week you can write.
-  - Send the first gives, and reply to everyone who answers.
-  - After the give period, send the ask, then bring the results back for the review.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no tools."
+  - "Paste the offer and describe the audience. Say where it will run. If any of the three is missing, it asks and stops."
+  - "Paste real questions your audience has sent you, if you have them. The best gives answer them."
+  - "Check the ask line. If it holds two asks, keep the one that matters most."
+  - "Send the first gives, and reply to everyone who answers."
+  - "After the give period, send the ask, then bring the counts back for the review."
 how_it_works:
   - title: Writes the ask first
     text: States the one thing you will ask for, in one plain line.
@@ -41,10 +52,8 @@ how_it_works:
     text: Sets how you will answer people who react, one by one.
   - title: Shapes the ask
     text: Writes the ask short and plain, in a form that fits the place.
-  - title: Sets the give period
-    text: Decides how long to give before the first ask.
-  - title: Sets the review
-    text: Looks at what the gives earned, and tightens the next round.
+  - title: Sets the give period and the review
+    text: Decides how long to give before the first ask, from your past results if you have them. Then sets what to count and how to tighten the next round.
   - title: Checks the set
     text: Runs its own checks and names any it missed.
 output_shape: |
@@ -57,7 +66,7 @@ output_shape: |
 
   THE RUN
   Piece 1: Give G<n> | Piece 2: Give G<n> | ... | Piece <n>: ASK
-  Gives per ask: <n> | Give period: <days or weeks>
+  Gives per ask: <n> | Give period: <days or weeks, and why>
 
   REPLY PLAN
   <who you answer, how fast, what you say>
@@ -69,7 +78,33 @@ output_shape: |
   Count: <numbers to record> | Tighten if: <...>
 
   MISSING
+  <what would sharpen the plan>
+
   CHECKS MISSED
+  <one line per check still missed, or none>
+output_sample:
+  input:
+    - "Your offer: what it is, the price and the terms"
+    - "Your audience, in a few lines"
+    - "Where it runs: posts, email or messages"
+    - "Questions your audience has sent you (optional)"
+  prerequisites:
+    - "Your offer written down, even in a few lines"
+  output:
+    - name: "THE ASK"
+      contains: "One plain line saying what you want a person to do."
+    - name: "GIVES"
+      contains: "8 to 15 useful things for your audience, each with why it helps and its format."
+    - name: "THE RUN"
+      contains: "Each piece in order, which give it carries, where the ask lands and the give period."
+    - name: "REPLY PLAN"
+      contains: "Who you answer, how fast and what you say, so replies answer and do not pitch."
+    - name: "THE ASK, WRITTEN"
+      contains: "The ask in one or two sentences, in the form that fits where it runs."
+    - name: "REVIEW"
+      contains: "What to count, and the rule for repeating, dropping or lengthening gives next round."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "What you did not give, and any of its own checks it missed."
 tweaks:
   - what: The size of the ask
     how: A small ask, like replying with a word or joining a list, can come sooner than a purchase.

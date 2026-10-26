@@ -1,6 +1,6 @@
 new_slug: animated-video-ad-prompts
 name: "Animated film video clip prompt writer"
-summary: "Paste your animated-movie script and attach product photos. Get steady clip prompts and an edit list."
+summary: "Turn your animated-movie ad script into clip prompts for AI video tools. Get a character card, sheets, a storyboard and an edit list."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You have a script written for the animated-feature look and want to make it with AI tools.
   - Your animated clips keep drifting into a cartoon or changing the character.
   - Your product's label keeps coming out wrong in generated shots.
+not_for:
+  - "You want a live-action ad or a non-animated look: write a plain brief for your video tool or a film crew, as this skill only builds the 3D animated-feature style."
+  - "You have no script yet: write one first with the Animated film video ad script writer, or paste your own script in plain words."
+  - "You want finished video made for you: this skill writes prompts only, so you need a video tool such as Veo, Kling or Higgsfield to make the clips."
 
 you_give:
   - The approved script and its scenes, and its cast note if it has one
@@ -37,6 +41,33 @@ how_to_use:
   - Approve or change the avatar card, then make the reference images and say which one you picked.
   - Make and approve the sheets and lock lines, then make and approve the storyboard frames.
   - Make each clip from its approved frame. If a take misses, rerun it once before you change any words.
+output_sample:
+  input:
+    - Your approved animated ad script and its scenes
+    - "Real product photos: front, side and top"
+    - Every line of text on your product label
+    - How the product is used (optional)
+    - Your brand file and your video tool's clip limits (optional)
+  prerequisites:
+    - An AI chat that can read your photos
+    - A video tool to make the clips from the prompts (paid credits may apply)
+  output:
+    - name: Light plan and look line
+      contains: One light key for each story part, and one look line that ends every prompt.
+    - name: Avatar card
+      contains: A fixed casting description of the character, from face and clothes to voice. You approve it first.
+    - name: Reference image prompts
+      contains: Three or four prompts for the character in the look, so you can pick one.
+    - name: Sheets and lock lines
+      contains: Character, product and room sheet prompts, plus short lines pasted word for word into every prompt.
+    - name: Storyboard
+      contains: One frame prompt and one shot card per shot, with a continuity check for sides, eyelines and hands.
+    - name: Clip prompts
+      contains: Motion-only prompts that start from each approved frame, with dialogue and how each clip cuts out.
+    - name: Edit list
+      contains: Clip order, captions, music, the end card, safe zones and retake notes.
+    - name: Checks missed
+      contains: One line for each of its own checks the prompts still miss, or none.
 
 how_it_works:
   - title: Reads the script

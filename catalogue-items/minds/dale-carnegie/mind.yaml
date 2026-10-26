@@ -16,6 +16,30 @@ use_cases:
   - "Ask for a favour by starting from what the other person wants"
   - "Write a thank-you note that gives sincere, specific praise"
   - "Calm a worry by naming the worst case, accepting it and working to improve on it"
+not_for:
+  - "You need a firm refusal, a formal notice, or advice on law, health or personal money: use a lawyer, a doctor or a written policy, not this advisor."
+  - "You want to keep calm and listen for what sits behind their words in a tense talk: use the Chris Voss mind."
+  - "You want to know why people say yes to a request, such as social proof or real scarcity: use the Robert Cialdini mind."
+output_sample:
+  input:
+    - "The real scene: who said what, to whom, and what happened"
+    - What you want from the other person
+    - What you have already said to them, word for word
+    - Your draft message (optional)
+    - What you know about them and what you only guess (optional)
+  output:
+    - name: The rules that fit
+      contains: One to three of Carnegie's recorded ideas that match your problem, with a short reason for each.
+    - name: The other person's view
+      contains: What they likely want, where they may be right, and what you know versus guess.
+    - name: Rewritten opening or email
+      contains: Your message reworded around the reader, with true, specific praise and an easy next step.
+    - name: What to do and say
+      contains: The exact words and actions for the talk, including how to let them save face.
+    - name: Challenge for this week
+      contains: One small action to try with real people, then report back.
+    - name: Beyond the record note
+      contains: A line marking anything he never wrote about, such as modern tools or events after 1955.
 seats:
   - {seat: "People and rapport", asks: "What does the other person want here, and how do we make them feel important, sincerely?"}
   - {seat: "Speaking with confidence", asks: "Have you said this out loud, to real people, enough times to mean every word?"}

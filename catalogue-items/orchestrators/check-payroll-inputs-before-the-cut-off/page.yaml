@@ -1,53 +1,97 @@
 new_slug: check-payroll-inputs-before-the-cut-off
 name: Check payroll inputs before the cut off
 headline: Check payroll inputs before the cut off
-summary: Share the source files. Get an exception list, source reconciliation and payroll questions for review.
+summary: Catch missing approvals, double-counted hours and rate changes before payroll closes. You get an exception list and questions for HR to answer.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An exception list, source reconciliation and payroll questions for review. Share timesheets, approved leave, confirmed roster and pay rates, prior-period totals, pay period and payroll rules supplied by HR. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the timesheets for one pay period, plus leave, the roster, pay rates and last period's totals. It flags what looks wrong and checks that the hours add up. You get an exception list, a reconciliation and a list of questions with a name and a date on each. It changes no pay.
 explain: |-
-  An exception list, source reconciliation and payroll questions for review.
+  Payroll mistakes cost real people real money. Most start in the inputs: hours nobody approved, time entered twice, a rate that changed or a person who started halfway through the period. This workflow checks payroll inputs before the cut-off, while there is still time to fix them.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Hours reconcile to the source period; no pay rule, employee status or tax treatment is invented. Missing tools or evidence stay visible in the final summary.
+  It looks only. Every odd item goes on an exception list with the row it came from. It never corrects a number, picks a pay rule or works out tax. It uses only the pay rules HR gives it. A second step re-adds the totals, so a bad formula in the working file does not slip through.
+
+  Last, each open question gets a reviewer and a due date before the cut-off. A person at HR or your payroll provider answers the questions and makes any change.
 when:
-  - You need an exception list, source reconciliation and payroll questions for review.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Payroll closes tomorrow and the timesheets are still coming in.
+  - A manager says some hours were never approved.
+  - Total pay looks far higher than last period and you do not know why.
+  - Someone started or left partway through the pay period.
+not_for:
+  - You want payroll run or pay changed. This only flags. HR or your payroll provider makes changes.
+  - You need tax or employee status advice. Ask your payroll provider or accountant.
+  - You want one quick look at a single timesheet. Use the Payroll timesheet checker.
+  - You are sorting business expenses. Use the Prepare expenses for your bookkeeper workflow.
 you_give:
-  - Timesheets, approved leave, confirmed roster and pay rates, prior-period totals, pay period and payroll rules supplied by HR.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - The timesheet export for the pay period
+  - Approved leave for the same period
+  - The confirmed roster and pay rates
+  - Pay period start and end dates, and the pay date
+  - Pay rules from HR, such as overtime and rounding
+  - Last period's totals (optional, but needed to spot big jumps)
+  - The cut-off date and the names of your reviewers (optional)
 you_get:
-  - An exception list, source reconciliation and payroll questions for review.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "An exception list: each odd item, the row it came from and a question for HR"
+  - A reconciliation of hours per person to the pay period
+  - A list of payroll questions with a reviewer and a due date
+  - An action register file you can open in a spreadsheet
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach the timesheet export, leave, roster and HR rules. Use employee IDs instead of names where you can.
+  - Read the exception list first. Check each flagged row against your own records.
+  - Send the open questions to HR or your payroll provider before the cut-off. They decide any change.
 how_it_works:
   - title: Payroll timesheet checker
-    text: Use the supplied export path and read-only review steps to find missing approvals, duplicated time and inconsistencies. Use only HR supplied pay rules; stop before resolving flags, staging payroll or posting journals.
+    text: Reads your export and flags missing approvals, duplicated time, missed punches and rate changes. Uses only the pay rules HR gave you. Hands the exception working file to the next step.
   - title: Spreadsheet checker
-    text: Recheck period totals, identifiers and formulas in the exception working file.
+    text: Re-adds the period totals, checks employee IDs and formulas in the working file. Hands back the checked file and a list of any errors it found.
   - title: Executive action register keeper
-    text: Assign the unresolved payroll questions to approved reviewers before the stated cutoff.
+    text: Turns each open question into a row with a reviewer and a due date before the cut-off. Leaves a name blank if you did not give one.
 output_shape: |-
-  Scope and source coverage
-  An exception list, source reconciliation and payroll questions for review.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  EXCEPTION LIST
+    Person (ID) | <Issue type> | <Hours or amount affected> | <Source row> | <Question for HR>
+
+  RECONCILIATION
+    Person (ID) | <Hours in source> | <Hours in working file> | <Difference> | <Last period>
+
+  PAYROLL QUESTIONS
+    Question | <Reviewer> | <Due before cut-off> | <Source>
+
+  ACTION REGISTER   action-register.csv, clarifications.md
+
+  MISSING
+  CHECKS MISSED
+  HAND-BACK SUMMARY
+output_sample:
+  input:
+    - The timesheet export for one pay period
+    - Approved leave, the roster and pay rates
+    - Pay period dates and the pay rules from HR
+    - Last period's totals (optional)
+  prerequisites:
+    - An AI that can open spreadsheet and CSV files
+  output:
+    - name: Exception list
+      contains: Each flagged item, such as a missing approval or duplicate time, with its source row and a question.
+    - name: Reconciliation
+      contains: Hours per person in your source and in the working file, with any difference.
+    - name: Payroll questions
+      contains: Each open question with a reviewer and a due date before the cut-off.
+    - name: Action register
+      contains: A file with one row per task, with owner and date left blank if not named.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks missed and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Hours reconcile to the source period; no pay rule, employee status or tax treatment is invented.
+  - what: Pay period
+    how: Give exact start and end dates and the pay date. Check these first, because a wrong period skips or doubles a week.
+  - what: Privacy
+    how: Use employee IDs instead of names, and leave out bank details and addresses. The checks do not need them.
+  - what: Pay rules
+    how: Paste only the rules HR gave you. The AI will not guess an overtime or rounding rule.
+  - what: Cut-off
+    how: Give the date and time payroll closes. Each question gets a due date before it.
 judge:
   - Hours reconcile to the source period; no pay rule, employee status or tax treatment is invented.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -60,16 +104,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the answers HR gives, then attach them next time so repeat flags are explained at once.
+  - Add last period's exception list so the AI can tell a new problem from a repeat one.
+  - Finish any check that needs a person or a spreadsheet tool before you rely on the result.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A spreadsheet tool such as Excel or Google Sheets
+      why: Lets you open the working file and re-check totals. The AI cannot recalculate a workbook without one.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Last period's exception list.
+    - A named reviewer at HR or your payroll provider.
 terms:
+  - term: Exception
+    meaning: A row that looks wrong or needs a person to confirm it before pay goes out.
+  - term: Cut-off
+    meaning: The last moment you can change payroll inputs for this pay period.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

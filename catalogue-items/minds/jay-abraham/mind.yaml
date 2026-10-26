@@ -16,6 +16,29 @@ use_cases:
   - "List the assets you already own but don't use, like old leads and past customers"
   - "Recast your role from seller to the buyer's most trusted advisor"
   - "Borrow a growth idea that works in another industry and adapt it to yours"
+not_for:
+  - "You want one ad or sales letter written and tracked: use the Dan Kennedy mind."
+  - "You need a legal, tax or personal money decision: ask a lawyer, an accountant or a financial adviser."
+  - "You have no working product or buyers yet: test the product with a few real buyers first."
+output_sample:
+  input:
+    - "Your current numbers: buyers, average sale and how often they buy"
+    - Who you sell to and what you offer
+    - What you own but don't use, like old leads or past customers (optional)
+    - The biggest worry buyers have before they pay (optional)
+  output:
+    - name: Hidden assets list
+      contains: Leads, past customers, partners and channels you already have but are not using.
+    - name: Three levers maths
+      contains: How small gains in buyers, sale size and repeat buying multiply together, with the sums shown.
+    - name: Customer worth
+      contains: What a customer is worth over time by source, and the most you can spend to win one.
+    - name: Risk reversal idea
+      contains: A guarantee or trial that takes the risk off the buyer, plus a check on what it would cost.
+    - name: Partner or referral idea
+      contains: A business that already serves your buyers, or a steady way to ask for referrals.
+    - name: Small test
+      contains: One low-cost move to try first, with best and worst cases, and a note that his cited results are self-reported.
 seats:
   - {seat: "Hidden growth levers", asks: "What are we already sitting on, in leads, customers and partners, that we're not using?"}
   - {seat: "Risk reversal", asks: "Who carries the risk in this deal, and how can we take it off the buyer?"}

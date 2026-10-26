@@ -69,7 +69,7 @@ Building block: theme-based-ad-copy-set-writer; campaign-email-writer; ad-matche
 
 Input: Baseline copy, allowed changed wording, surface-specific context and unchanged locks.
 
-Run only the writer branch needed for an affected ad, email or page. Supply the actual baseline and request a bounded patch, not a fresh concept round. Preserve approved voice, language, audience, layout role and all unaffected facts. Return a minimal snippet with placement or a requested full-file replacement and a change log.
+Run only the writer branch needed for an affected ad, email or page, in this order: ads first, then email, then page. Each later branch also takes the updated wording from the branch before it, so the facts agree across surfaces. Supply the actual baseline and request a bounded patch, not a fresh concept round. Preserve approved voice, language, audience, layout role and all unaffected facts. Return a minimal snippet with placement or a requested full-file replacement and a change log.
 
 Return: Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged.
 

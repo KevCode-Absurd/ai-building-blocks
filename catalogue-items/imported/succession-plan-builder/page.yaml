@@ -2,35 +2,93 @@ thinking: high
 thinking_why: It deals with people's careers, so judgment is needed.
 new_slug: succession-plan-builder
 name: Succession plan builder
-summary: Give it your key roles. Get a coverage map, a possible successors list
-  and development plans. The final calls stay yours.
+summary: "Map your key roles, see who could step in and what each needs to be ready, and get a short board summary. The final calls stay yours."
 job: hire-people
 headline: Succession plan builder
-subhead: A succession plan that shows which key roles have no cover, who might
-  step in, and what each person needs to be ready. People decisions stay with
-  you.
+subhead: "List your key roles, who holds them and who could step in. You get a coverage table, talent review prep with a 9-box grid, a development plan per successor and a short board summary."
 explain: |
-  A succession plan that shows which key roles have no cover, who might step in, and what each person needs to be ready. People decisions stay with you.
+  Many companies keep a list of names for key roles and call it a succession plan. A name in a box is not a ready successor. This succession plan builder shows which key roles have no cover, who might step in, and what each person still needs.
 
-  You give your critical roles and some detail on current talent. The skill maps each role by how much damage a vacancy would do, assesses the pipeline behind it, and prepares material for a talent review with a 9-box grid. It drafts development plans to move successors along and a short board report. It warns that a name in a box is not a ready successor, and that succession is not the same as replacement planning. Readiness calls are yours.
+  It rates each role by the damage a vacancy would do. It builds a table per role: risk, who is ready now, who is ready in one to two years, the gap and the next development step. It prepares the talent review meeting with a 9-box grid, using only ratings you supply.
+
+  It never picks successors for you or invents ratings. Where you gave no name, it says so. Because this is about real people, use role titles and initials unless your company policy allows more.
 when:
-  - A senior person is leaving and no one knows who covers the role.
-  - You prepare for a talent review meeting.
+  - A senior person is leaving and nobody knows who covers the role.
+  - You are preparing for a talent review meeting with your leaders.
   - The board asks how ready your leadership bench is.
-  - You want development plans for high-potential staff.
+  - You want development plans for people you see as future leaders.
+not_for:
+  - "You only need a quick backup for one role in an emergency: name a stand-in with the role's manager, no full plan needed."
+  - "You want to hire an outside person for the role: use the Hiring search brief writer."
+  - "You need to decide pay or promotions: those are for the manager and HR, using their own policy."
 you_give:
-  - A list of key roles
-  - Current holders and possible successors
-  - Performance and potential notes (optional)
+  - Your key roles, such as Finance Director or Head of Sales
+  - Who holds each role now
+  - Possible successors for each role, as titles or initials
   - Company size and industry
+  - Notes on performance and potential (optional)
 you_get:
-  - A map of critical roles and risk
-  - A pipeline view per role
-  - Talent review prep with a 9-box
-  - Development plans for successors
-  - A short board summary
+  - A coverage table with the risk of each role being empty
+  - A view of who is ready now and who is ready in 1 to 2 years
+  - Talent review prep with a 9-box grid
+  - A 12-month development plan for each successor
+  - A board summary of 200 words or fewer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. Paste the skill text into the chat.
+  - Check your company's rules on sharing staff data with an AI tool. If unsure, use role titles and initials.
+  - Paste your key roles, current holders, possible successors, company size and any ratings.
+  - Read the coverage table. Fix any row that is wrong. Rows with no named successor are the gaps to act on.
+  - Use the 9-box and the questions in your talent review meeting. Make the readiness calls yourself.
+  - Send the board summary only after your leaders agree with the table.
+output_sample:
+  input:
+    - Your key roles and who holds each one
+    - Possible successors for each role, as titles or initials
+    - Company size and industry
+    - Notes on performance and potential (optional)
+  prerequisites:
+    - Permission to share staff data with an AI tool, or use titles and initials only
+  output:
+    - name: Coverage table
+      contains: One row per role with risk if empty, who is ready now, who is ready in 1 to 2 years, gap and action.
+    - name: Role risk ratings
+      contains: High, medium or low for each role, with one reason from your input.
+    - name: Talent review prep
+      contains: A 9-box grid from your ratings, or a blank grid with five questions for the meeting.
+    - name: Development plans
+      contains: For each successor, 3 to 5 actions, one stretch assignment and a check-in date.
+    - name: Board summary
+      contains: Roles covered, roles with no cover, top 3 gaps, planned actions and the decision needed.
+how_it_works:
+  - title: Collect the roles
+    text: It asks once for roles, holders, possible successors and company details. Gaps are marked.
+  - title: Rate each role
+    text: It scores the damage of a vacancy and gives one reason from your input.
+  - title: Build the table
+    text: It shows who is ready now, who is ready later and what is missing.
+  - title: Prepare the review
+    text: It sets up a 9-box grid from your ratings and adds questions for the meeting.
+  - title: Plan development
+    text: It drafts a 12-month plan for each successor.
+  - title: Write the summary
+    text: It gives a short board summary and reminds you the calls are yours.
+output_shape: |
+  Role: <title> | Holder: <initials> | Risk if empty: <high, medium or low> | Ready now: <initials or none> | Ready in 1 to 2 years: <initials or none> | Gap: <gap> | Action: <action>
+  9-box: <performance> x <potential> grid with <initials>
+  Development plan: <successor> - <3 to 5 actions> - <stretch assignment> - <check-in date>
+  Board summary: <roles covered>, <roles with no cover>, <top 3 gaps>, <actions>, <decision needed>
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is a structuring and writing job. Claude, ChatGPT and Gemini all do it well.
+  inputs:
+    - Your latest review ratings for each person
+    - A list of who plans to retire or move in the next two years
+    - Your org chart
+terms:
+  - term: 9-box grid
+    meaning: A three by three chart that places each person by current performance and future potential.
+  - term: Talent review
+    meaning: A meeting where leaders discuss their people and who could grow into bigger roles.
+  - term: Successor
+    meaning: A person who could take over a role in the future.

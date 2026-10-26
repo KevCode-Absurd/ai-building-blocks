@@ -1,53 +1,66 @@
 new_slug: second-location-check
 name: "Second location readiness checker"
-summary: "Paste your manual and trial notes. Get the gaps a newcomer found, a profit-without-you check and what to fix before opening."
+summary: "See if your business runs without you before opening a second location. Get trial gaps, a fix list and a ready or not yet call."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sorts trial notes into gaps and runs a short list of checks with your numbers. The checks are fixed, so a mid-range model does it well."
 
-headline: "Find out if your business runs without you before you open the next one"
-subhead: Paste your manual and what you saw when a newcomer ran a shift. It turns every stop and question into a gap in the manual, checks the first location makes money without you on site, and checks the next site, supplies and person. You get a ready or not yet call and a fix list.
+headline: "Second location readiness checker"
+subhead: "Paste your manual and what you saw when a newcomer ran a shift. It turns every stop, question and guess into a gap in the manual. It checks that your first location earns without you, and checks the new site, its supplies and who will run it. You get a ready or not yet call and a fix list."
 
 explain: |
-  A second location that copies only what you do from memory will copy your good days. It will miss the dozens of small things you do without noticing. A trial with a real newcomer is the cheapest way to find them.
+  A second location that copies only what you do from memory will copy your good days. It will miss the dozens of small things you do without noticing. A trial shift run by a real newcomer is the cheapest way to find them before you open a second location.
 
-  This skill takes the trial notes and sorts each stop, question and guess into a gap: a missing step, an unclear number, a missing tool, or a judgment only you can make. It then checks the three things that decide whether a copy can work: whether the first location makes money when you are not there, whether a second site and its supplies can be arranged on the same terms, and whether there is one named person who can run it. It ends with ready or not yet, and the fixes in order.
+  This skill takes your trial notes and sorts each stop, question and guess into a gap: a missing step, an unclear number, a missing tool, or a judgment only you can make. It then checks three things that decide whether a copy can work. Does the first location make money when you are not there? Can a second site and its supplies be arranged on the same terms? Is there one named person who can run it?
+
+  It ends with ready, ready with fixes or not yet, and the fixes in order. With no trial notes it says the manual is untested, and makes the trial the first fix. It never guesses takings, costs or a person.
 
 when:
   - You are about to open a second location, sign a partner or hire a manager to run your business.
   - A newcomer just ran a shift from your manual and you have notes on where they struggled.
   - Your first location is busy but you are not sure it earns money when you are not there.
 
+not_for:
+  - "You are still deciding whether to open, or choosing a site: use the Go or no-go launch checker."
+  - "You have no manual yet: write one with the Operations manual writer, then run a trial shift."
+  - "You want to know which market to enter next, and in what order: use the Market expansion sequencer."
+  - "You want to know if one bad year would sink the business: use the Bad-year break-even tester."
+
 you_give:
-  - Your manual, standards sheet or job cards
-  - Notes from a newcomer's trial shift, showing where they stopped, asked or guessed
-  - How the first location performs when you are away (optional)
+  - "Your manual, standards sheet or job cards (from the Operations manual writer, or your own)"
+  - "Notes from a newcomer's trial shift: where they stopped, asked or guessed"
+  - "Takings and costs for a week you were away (optional)"
+  - "The second site and who would run it, even if it is only an idea (optional)"
+
 you_get:
-  - Each trial note sorted into a gap, with the fix
-  - A check that the first location earns without you on site
-  - A check on the second site, supplies and who runs it
-  - A call of ready or not yet, and a fix list in order
+  - "Each trial note sorted into a gap, with a one-line fix"
+  - "A check that the first location earns without you on site"
+  - "A check on the second site, its supplies and who runs it"
+  - "A call of ready, ready with fixes or not yet"
+  - "A fix list in order, with an owner and a date for each"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the manual and your trial notes exactly as you wrote them.
-  - Add figures for takings and costs in a week you were away, if you have them.
-  - Name the second site and who would run it, even if it is only an idea.
-  - Fix the gaps in order, then run the trial again with a different person.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools."
+  - "Paste the manual and your trial notes exactly as you wrote them. With no trial notes it will tell you to run a trial first."
+  - "Add takings and costs for a week you were away, if you have them. Without them the first check says unknown."
+  - "Name the second site and who would run it. A real person, not only a job title."
+  - "Fix the gaps in the order it gives, then run the trial again with a different person."
 
 how_it_works:
   - title: Sorts the trial notes
     text: Each stop is a missing step, an unclear number, a missing tool or a judgment call only you can make.
+  - title: Groups the gaps
+    text: Counts gaps by role and type. A role with over a third of them needs a new card, not a patch.
   - title: Checks it runs without you
     text: Looks at takings, costs and complaints in a week you were away.
   - title: Checks the site and supplies
     text: Asks if the same inputs can be bought on the same terms and the site fits the layout.
   - title: Checks the person
     text: Asks who runs it, how they were trained, and who checks their work.
+  - title: Checks the money
+    text: If you gave costs, tests whether the new site can lose a fifth of sales and still cover them.
   - title: Calls it
     text: Ready, ready with fixes or not yet, with the fixes in order.
-  - title: Checks itself
-    text: Runs its own checks and names any it missed.
 
 output_shape: |
   TRIAL GAPS
@@ -70,6 +83,29 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Your manual, standards sheet or job cards"
+    - "Notes from a newcomer's trial shift"
+    - "Takings and costs for a week you were away (optional)"
+    - "The second site and who would run it (optional)"
+  prerequisites:
+    - "A manual, such as one from the Operations manual writer"
+    - "A trial shift run by someone who has not worked in your business"
+  output:
+    - name: "Trial gaps"
+      contains: "Each stop, question or guess typed as a missing step, unclear number, missing tool or judgment call, with a fix."
+    - name: "Runs without you?"
+      contains: "Takings, costs and complaints in a week you were away, ending in yes, partly, no or unknown."
+    - name: "Second site, supplies, person"
+      contains: "Whether the site fits, supplies come on the same terms, and who runs it, trains them and signs them off."
+    - name: "Call"
+      contains: "Ready, ready with fixes or not yet, and why."
+    - name: "Fix list in order"
+      contains: "Fixes ordered by what blocks opening, each with an owner and a date."
+    - name: "Missing and Checks missed"
+      contains: "Facts that would change the call, and any check the skill could not pass."
 
 tweaks:
   - what: Your trial notes
@@ -100,7 +136,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Sorting notes into gaps and running a fixed list of checks is reasoning work any strong chat AI does well."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Sorting notes into gaps and running a fixed list of checks is reasoning work. No files, web access or paid tools needed."}
     - {name: "Your till or sales report", why: "Takings for a week you were away turn the first check into a number."}
   inputs:
     - "A manual from Operations manual writer"

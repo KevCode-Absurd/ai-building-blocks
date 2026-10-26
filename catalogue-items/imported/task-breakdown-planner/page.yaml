@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It orders work and sets checks from a clear spec.
 new_slug: task-breakdown-planner
 name: Task breakdown planner
-summary: Give it a spec. Get small, ordered tasks, each with a clear way to
-  check it is done.
+summary: "Turn a spec into a task breakdown plan: small, ordered tasks, each with a clear check for when it is done, plus checkpoints and risks."
 job: build-software
 headline: Task breakdown planner
-subhead: Give it the spec, and the codebase if there is one. It reads both,
-  writes no code, and maps what depends on what before cutting the work into
-  small ordered tasks. You get the dependency map, the task list, a done check
-  for each task, checkpoints and risks.
+subhead: Give it the spec, and the codebase if there is one. It reads both, writes no code, and maps what depends on what before cutting the work into small ordered tasks. You get the dependency map, the task list, a done check for each task, checkpoints and risks.
 explain: |
   A spec turned into small ordered tasks, each with a plain test for when it is done. Big vague work becomes a plan that you or an AI agent can follow one step at a time without a tangle.
 
@@ -20,6 +16,10 @@ when:
   - You want to split work across several people or AI sessions.
   - You need to show a manager the scope in clear pieces.
   - The order of the work is not obvious.
+not_for:
+  - "You change one file and the scope is clear: just make the change, no plan needed."
+  - "Your spec already lists well-defined tasks: start building and skip the planning step."
+  - "You want working code, not a plan: ask your AI to build one task from the plan, or hire a developer."
 you_give:
   - The spec or requirements
   - Access to the codebase (optional)
@@ -30,7 +30,30 @@ you_get:
   - Done checks for each task
   - Checkpoints and a list of risks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI in a tool that can read and save files. Chat-only works too, but you copy the plan out yourself.
+  - Paste the skill text, then paste your spec. Add the codebase and any deadlines if you have them.
+  - Ask your AI to plan the work and write no code.
+  - Read the plan. Check that each task is small and has clear done checks, then answer any open questions.
+  - Review the plan with a person before you start. Then run the tasks one at a time, in tasks/todo.md or your tracker.
+  - If a plan file already has unchecked tasks for other work, your AI should stop and ask before it writes.
+output_sample:
+  input:
+    - Your spec or requirements
+    - Access to your codebase (optional)
+    - Known deadlines or limits (optional)
+  prerequisites:
+    - An AI that can read your files and save files, to write the plan files
+    - The name of your task tracker, if you use one (optional)
+  output:
+    - name: Dependency map
+      contains: A tree showing what must be built first, such as data before endpoints before screens.
+    - name: tasks/plan.md
+      contains: "The plan: overview, key decisions, phased task list, checkpoints, risks and open questions."
+    - name: tasks/todo.md
+      contains: A checklist of tasks, or items in your tracker if you named one.
+    - name: Task entries
+      contains: "For each task: description, done checks, how to verify, dependencies, files likely touched and size."
+    - name: Checkpoints
+      contains: A review point after every 2 or 3 tasks, with checks to pass before moving on.
+    - name: Risks and open questions
+      contains: A table of risks with impact and a fix, plus questions that need a human answer.

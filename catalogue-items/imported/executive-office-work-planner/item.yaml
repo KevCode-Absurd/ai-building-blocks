@@ -32,4 +32,4 @@ credits:
   - title: chief-of-staff-methodology skill
     by: Magnus Hedemark
     url: https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/chief-of-staff-methodology
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and added a short run guide at the top of the skill.

@@ -1,38 +1,68 @@
 new_slug: student-work-marking-desk
 name: Student work marking desk
-summary: Give it each batch of student work. Get every piece marked against one rubric, feedback that names the problem, and class patterns.
+summary: Mark a batch of student work against one rubric. Get feedback that names the problem, edge cases for you to decide, and class patterns.
 job: teach-and-train
 thinking: high
 thinking_why: It must apply one rubric evenly across thirty pieces, write notes that teach without dictating and know when to leave a call to the teacher. Give it your strongest model.
 headline: Student work marking desk
-subhead: Give it the task, its goal and each batch of student work. It builds one rubric and marks every piece against it, writes feedback that names the problem and leaves the fix to the student, flags the pieces on the edge of a level for you, and shows what a third of the class got wrong. You send the grades.
+subhead: Give it the task, its goal and a batch of student work. It builds one rubric for you to approve, then marks every piece against it. You get feedback, edge cases and class patterns. You send the grades.
 explain: |
   Marking a batch is where good teaching goes to die. The first essay gets twenty minutes and a thoughtful note. The thirtieth gets a tick and "good effort". The same mistake appears in half the pile and gets written out fifteen times instead of becoming Monday's lesson. And the notes drift from naming the problem to writing the fix, so the student learns to wait for it.
 
   This agent marks every piece the same way. It builds one rubric per task in words a student can read, and you approve it before marking starts. It marks each piece against it, names the weak lines in written work, and sharpens every note so it names a problem and offers a fix only as an example. It leaves the pieces between two levels to you. Then it reads across the batch and tells you which criterion a third of the class missed, with two quotes, and whose level fell since last time. It never sends a grade or a note.
 when:
-  - You teach a class or run a course and a batch of thirty pieces is waiting.
-  - Your feedback has drifted into writing the fix for the student.
-  - You want to know what half the class got wrong before you plan the next lesson.
+  - You teach a class or run a course and thirty pieces are waiting to be marked.
+  - Your feedback has started writing the fix for the student.
+  - You want to know what a third of the class got wrong before you plan the next lesson.
+  - You mark the same task again and want to see who has grown.
+not_for:
+  - "You need a grade sent or saved in your school system: do that yourself, because this agent never sends or records a grade."
+  - "You mark code, maths problem sets or multiple-choice exams with one right answer: use an answer key or your platform's auto-marking."
+  - "You only have one or two pieces and no rubric: read them yourself and write the notes by hand."
 you_give:
   - The task and what a good piece shows the student learned
-  - Each piece of work as text or a file, with a student id
-  - The saved rubric, after the first batch
-  - Your grade scale and anything the school requires in a comment (advised)
-  - Past batches, so growth shows
+  - Each piece of student work, as text or a file, with a student id
+  - Your grade scale and any comment wording your school needs (optional)
+  - Your saved rubric from an earlier batch (optional)
+  - Past batches of the same class (optional)
 you_get:
-  - A rubric per task with clear wording at each level, for you to approve
-  - A level per criterion and sharpened feedback for every piece
+  - A rubric in plain words for each level, for you to approve before marking
+  - A level for each criterion and feedback for every piece
   - The two or three edge cases, with the case for each level
-  - Class patterns with two quoted examples each, pointing at the next lesson
-  - Students whose level rose or fell since their last piece
-  - Anything that looks copied, as a question for you, never a finding
+  - Class patterns with two quoted examples each, pointing to the next lesson
+  - Students whose level rose or fell since last time
+  - Questions about work that looks copied, never a verdict
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then describe the task and attach the batch.
-  - On the first batch, read the rubric hard and approve it. It is saved for every later batch of this task.
-  - Read the edge cases and settle them. Read the patterns before you read the pieces.
-  - Approve the feedback. Send grades and notes yourself through your school's system.
-  - Run it on the next batch. Growth per student shows from the second one.
+  - Open a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents. In ChatGPT or Gemini, paste it in.
+  - Describe the task and what a good piece shows. Use student ids, not names, and follow your school's data rules.
+  - On the first batch, read the rubric closely and approve it. It is kept for later batches of this task.
+  - Attach the batch. In a chat AI, paste a few pieces at a time. Claude Code can read a folder of files.
+  - Settle the edge cases, then read the class patterns before the pieces.
+  - Approve the feedback and send grades and notes yourself through your school's system.
+output_sample:
+  input:
+    - The task and what a good piece shows the student learned
+    - Each piece of student work, as text or a file, with a student id
+    - Your grade scale and any comment wording your school needs (optional)
+    - Your saved rubric and past batches (optional, they build up after the first batch)
+  prerequisites:
+    - An AI chat. Claude Code is better if you want files kept between batches.
+    - Student ids instead of names, and your school's data rules followed
+  output:
+    - name: The batch
+      contains: One line with pieces marked, levels reached, edge cases and patterns found.
+    - name: Per piece
+      contains: A level for each criterion, the gaps, and feedback that names the problem.
+    - name: Edge cases
+      contains: Pieces between two levels, with the case for each level, left for you to decide.
+    - name: Class patterns
+      contains: Each criterion a third or more of the class missed, with two quotes and the next lesson.
+    - name: Growth
+      contains: Students whose level rose or fell since their last piece.
+    - name: Questions for the teacher
+      contains: Work that looks copied or out of character, written as a question, never a verdict.
+    - name: Files and missing
+      contains: Each saved file and every MISSING line.
 how_it_works:
   - title: Build the rubric once per task
     text: Clear wording at each level, written for a student to read, approved by you before any marking.

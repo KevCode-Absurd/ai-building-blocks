@@ -1,15 +1,13 @@
 slug: closing-equity-proceeds-checker
 name: Closing equity proceeds checker
-summary: Reconcile enterprise value to seller equity proceeds under the signed closing definitions.
+summary: "Work out what sellers receive at closing: start from the deal price, add included cash, then take off debt, debt-like items and seller costs once."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - working-capital-true-up-checker
+  - escrow-release-checker
+  - reconcile-seller-closing-cash
 origin: own
 version: 1.0.0
 added: 2026-10-22

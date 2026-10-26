@@ -1,6 +1,6 @@
 new_slug: build-a-buyer-profile-from-interviews-and-reviews
 name: Build a buyer profile from interviews and reviews
-summary: Give it your orders and reviews. Get interview sheets, a buyer profile in their words and a brief writers use.
+summary: Build a buyer profile from interviews and reviews. Give it your orders and reviews. Get call sheets, a profile in buyers' words and a writer brief.
 job: understand-customers
 thinking: high
 thinking_why: It runs five skills in a row and sorts real quotes into buyer groups. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You sell to a mix of people and want to know which one buys most, and why, before you write ads or pages.
   - Your ads get views but not sales, and you suspect they speak to the wrong person.
   - You have reviews or support emails sitting unused and want them turned into something your writers can use.
+not_for:
+  - "You have no buyers or order records yet: use the Website brand brain builder first, then come back."
+  - "You only want to find where your buyers hang out online: use the Customer community finder."
+  - "You only need a script for one buyer call: use the Customer purchase interview script writer."
 you_give:
   - Your order list with dates, times, devices, items bought together and order value
   - Buyers who agreed to a call (use codes, not names)
@@ -33,6 +37,30 @@ how_to_use:
   - Ask each buyer before you list them for a call. It only builds sheets for people who agreed.
   - When it pauses, call five to eight recent buyers, write notes right after each call, and collect reviews and forum posts from the same group.
   - Bring the notes back and let the later steps run. Remove names and contact details first.
+output_sample:
+  input:
+    - Your order list with dates, devices, items bought together and order value
+    - Buyers who agreed to a call, shown as codes not names
+    - Your product, price and what it replaced for buyers
+    - Reviews, survey answers or support emails (optional)
+    - Your current ad or landing page, to check against the profile (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Five to eight recent buyers who agree to a call
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+  output:
+    - name: Interview sheets
+      contains: One sheet per buyer code with order facts, timeline questions, gap questions and a consent line.
+    - name: Buyer sketch
+      contains: Search phrases, marked-up quotes and a one-page sketch of who buys, in their own words.
+    - name: Buyer profiles
+      contains: Each profile has the job, trigger, what they stopped using, quotes, a not-for line and confidence.
+    - name: Buyer brief
+      contains: A half-page for writers with how much the buyer knows, the force to work on, quotes and a job line.
+    - name: Fit check
+      contains: A fit score out of 100 for your ad or page, with mismatches and rewrites.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the interview sheets
     text: Picks recent buyers from your orders. Writes a call that builds a timeline of the day they bought, with questions only where the order leaves a gap.

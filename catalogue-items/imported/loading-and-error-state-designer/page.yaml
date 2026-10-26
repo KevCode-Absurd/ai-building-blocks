@@ -2,35 +2,97 @@ thinking: medium
 thinking_why: It adds a standard set of states and fits them to the page.
 new_slug: loading-and-error-state-designer
 name: Loading and error state designer
-summary: Give it a component or page. Get loading, success, error and empty
-  states added, so users always know what is happening.
+summary: Add loading, empty, error and success states to a component or page, so nobody stares at a blank box. Your code is changed for you.
 job: design-work
 headline: Loading and error state designer
-subhead: A screen that always tells people what is going on. Give it a component
-  or page and it adds loading, empty, error and success states, so nobody stares
-  at a blank box.
+subhead: Give it the code for a component or page. Your AI adds a loading skeleton, an empty state, an error state with retry and a success message, in your own style. You get the changed code and a table of what was added.
 explain: |
-  A screen that always tells people what is going on. Give it a component or page and it adds loading, empty, error and success states, so nobody stares at a blank box.
+  A screen that only works when the data arrives fast and nothing breaks leaves people guessing. A list stays blank while it loads, a failed request shows nothing, and a new account sees an empty box. This loading and error state designer adds the four states every data screen needs.
 
-  Loading uses a skeleton that matches the final layout. The empty state explains why nothing is there and what to do next. The error state says what failed in plain words and offers a way to retry. The success state confirms the action worked. It reads your existing code and keeps your style. It leaves out cases that do not need these states, such as static content.
+  Your AI reads your code and finds each area that loads or saves data. For each one it writes a skeleton that matches the final layout, an empty state that says why it is empty and what to do, an error state in plain words with a retry button, and a short success message. It leaves out areas that load nothing, such as static text.
+
+  The rules come from the original author. A skeleton waits 300ms before it shows, so fast loads skip it. A failed card shows its own error while the rest of the page loads. The examples use React and Tailwind, and your AI swaps in your own components.
 when:
-  - A list shows nothing while data loads and users think it broke.
-  - A failed request shows a blank page with no message.
-  - A new account sees an empty screen with no guidance.
-  - A form submits and gives no sign it worked.
+  - A list shows nothing while data loads, and users think it broke.
+  - A failed request leaves a blank page with no message.
+  - A new account sees an empty screen with no hint on what to do.
+  - A form submits and gives no sign that it worked.
+not_for:
+  - "You want to find every state a screen could be missing, including offline and no results: use the Screen states designer."
+  - "You only need the words inside the states: write the wording first, then add it here."
+  - "You need to fix accessibility in states that already exist: use the Accessibility Auditor agent."
+  - "You are building a new component from scratch: use the Interface builder first, then come back here."
 you_give:
-  - The component or page code
+  - The component or page code, or its file path
   - What data it loads or what action it runs
-  - Your design style (optional)
+  - Your design style or component library (optional)
 you_get:
-  - A skeleton loading state
-  - An empty state with next steps
-  - An error state with retry
-  - A success confirmation
-  - Updated component code
+  - A loading skeleton that matches the final layout
+  - An empty state that says why it is empty and what to do next
+  - An error state in plain words with a retry button
+  - A success message, with undo for deletes
+  - Updated code and a table of what changed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and edit your project files.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give your AI the component or page. If it can read your project files, give it the path. If not, paste the code.
+  - Say what the screen loads or saves. Add your design style if the code does not show it.
+  - Check the table of states it returns, then the changed code. Look for guessed wording and a retry button that calls the real reload.
+  - Test in your own app with a slow request and a failed request. This works best when your AI can read and edit your project files.
+how_it_works:
+  - title: Find the data areas
+    text: It reads your code and lists each place that loads or saves data. It skips static content.
+  - title: Match your style
+    text: It follows your design rules file if there is one, or the look already in your code.
+  - title: Build four states
+    text: Each area gets loading, empty, error and success states, written in your framework.
+  - title: Keep failures local
+    text: A card that fails shows its own error with retry, while the rest of the page loads.
+  - title: Respect reduced motion
+    text: It turns off the skeleton pulse for people who ask for less motion.
+  - title: Check its work
+    text: It confirms each area has all four states and that retry calls the real reload.
+output_shape: |-
+  Changed: <file paths>
+  States added
+  | Area | Loading | Empty | Error | Success |
+  | <component or section> | <skeleton> | <message and action> | <message and retry> | <toast text> |
+  Skipped: <areas with no data, and why>
+  Open questions: <wording it guessed, no reload function, no toast component>
+  How to test: <how to force a slow, empty and failed load>
+output_sample:
+  input:
+    - The code or file path of your component or page
+    - What data it loads or what action it runs
+    - Your design style or component library (optional)
+  prerequisites:
+    - An AI that can read and edit your project files, or code you can paste in
+  output:
+    - name: Changed code
+      contains: Your component or page with loading, empty, error and success states added.
+    - name: States table
+      contains: For each area, what shows while loading, when empty, on error and after success.
+    - name: Skipped areas
+      contains: Parts that load nothing and so need no states, with the reason.
+    - name: Open questions
+      contains: Wording it guessed and any missing reload function or toast component.
+    - name: How to test
+      contains: Ways to force a slow load, an empty list and a failed request.
+works_best_with:
+  tools:
+    - name: Claude Code, Cursor or Codex
+      why: They can read and edit your project files, so the states land in your real code.
+    - name: Any good chat AI
+      why: You can paste one component and copy back the new code.
+  inputs:
+    - Your design rules or tokens file
+    - An existing component that already has good states, to copy the style from
+    - The exact error messages your server returns
+terms:
+  - term: Skeleton
+    meaning: A grey placeholder shaped like the content that is about to load.
+  - term: Empty state
+    meaning: What a screen shows when there is no data yet.
+  - term: Toast
+    meaning: A small message that pops up briefly, such as "Changes saved".
+  - term: Retry
+    meaning: A button that tries a failed request again.

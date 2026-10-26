@@ -1,6 +1,7 @@
 slug: prepare-an-engagement-closeout-evidence-pack
 name: Prepare an engagement closeout evidence pack
-summary: Share the source files. Get a delivery acceptance register, closeout handover and unresolved obligations.
+summary: "Close out a client engagement with proof of what was delivered and
+  accepted. Get a register, a handover and a list of open commitments."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,9 +21,13 @@ uses:
   - handover-note-writer
 steps:
   - uses: executive-action-register
-    note: Extract the remaining explicit commitments and accepted follow-ups, linking each deliverable to its actual delivery and acceptance evidence.
+    note: Extracts the remaining explicit commitments and accepted follow-ups,
+      linking each deliverable to its delivery and acceptance evidence. Hands
+      step 2 the register and the open items as a plan.
   - uses: handover-note-writer
-    note: Prepare the client or support team handover with file locations, open issues, agreed support window and required signoffs. Do not infer engagement completion.
+    note: "Uses your brief and step 1's register to prepare the client or support
+      handover: file locations, open issues, agreed support window and required
+      signoffs. Does not infer engagement completion."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -32,9 +37,13 @@ credits:
   - title: Executive action register keeper
     by: AI Blocks
     url: https://useaiblocks.com/skills/executive-action-register
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Handover note writer
     by: AI Blocks
     url: https://useaiblocks.com/skills/handover-note-writer
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

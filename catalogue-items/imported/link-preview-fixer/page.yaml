@@ -2,13 +2,10 @@ thinking: low
 thinking_why: The fixes follow known tag rules.
 new_slug: link-preview-fixer
 name: Link preview fixer
-summary: Share a link that looks wrong. Get the tags and image fixes so it shows
-  a rich card everywhere.
+summary: Fix a link preview that shows a bare URL or the wrong picture. Get the sharing tags and image fixes so your link preview shows a rich card.
 job: build-websites
 headline: Link preview fixer
-subhead: When you share a link and it shows a bare URL or the wrong picture,
-  this finds why and gives you the fix. Your pages then show a proper card on
-  Facebook, LinkedIn, X, WhatsApp, Telegram, Slack and Discord.
+subhead: When you share a link and it shows a bare URL or the wrong picture, this finds why and gives you the fix. Your pages then show a proper card on Facebook, LinkedIn, X, WhatsApp, Telegram, Slack and Discord.
 explain: |
   When you share a link and it shows a bare URL or the wrong picture, this finds why and gives you the fix. Your pages then show a proper card on Facebook, LinkedIn, X, WhatsApp, Telegram, Slack and Discord.
 
@@ -18,6 +15,10 @@ when:
   - You launched a new page and want sharing to look right.
   - Your blog posts all show the same preview.
   - A platform shows an old card even after you changed the page.
+not_for:
+  - "Your page has no public web address yet: put it online first, then run this. Platform checkers cannot read a page they cannot reach."
+  - "Your tags are added by JavaScript in the browser: ask your developer to move them into the page's HTML first, then use this to check them."
+  - "You want a new share image designed: use a design tool or a designer, then come back to check the size and link."
 you_give:
   - The page link or its code
   - The platform that looks wrong
@@ -30,8 +31,31 @@ you_get:
   - Platform-specific notes
   - Steps to test and refresh the preview
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Add your page link and say which platform shows the wrong preview. Paste your page code too if you can.
+  - Say which framework your site uses and where your share image is kept (optional).
+  - Read the cause first. Then copy the tag block into your page and fix any image problems on the checklist.
+  - Publish the change. Paste your link into each platform's checker to refresh the preview. Check each platform's current docs, as image rules can change.
+  - Your AI cannot open links itself unless it has web access. If it cannot, paste your page code in.
+output_sample:
+  input:
+    - Your page link or its code
+    - The platform that looks wrong
+    - Your site framework (optional)
+    - The path to the image you want shown (optional)
+  prerequisites:
+    - A page that is live on the public web, so the platform checkers can read it
+    - An AI that can read your page code, or code you can paste in
+  output:
+    - name: Why previews break
+      contains: The likely cause of your broken preview, matched against common problems like missing tags or relative image links.
+    - name: Sharing tag block
+      contains: A full set of Open Graph and Twitter tags with absolute image links, written for your framework.
+    - name: OG image checklist
+      contains: Size, file weight, secure link, file name and public access checks for your share image.
+    - name: Platform-specific notes
+      contains: One short note each for Facebook, X, LinkedIn, WhatsApp, Telegram, Slack and Discord.
+    - name: Debugging steps
+      contains: How to check your raw page code for the tags and test them in each platform's own checker.
+    - name: Social metadata checklist
+      contains: A tick list to confirm tags, image and cache refresh are done on every platform.

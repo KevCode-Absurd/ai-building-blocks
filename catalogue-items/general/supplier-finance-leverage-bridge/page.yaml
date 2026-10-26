@@ -1,32 +1,41 @@
 new_slug: supplier-finance-leverage-bridge
 name: Supplier finance leverage bridge
 headline: Supplier finance leverage bridge
-summary: Show how an evidenced supplier-finance debt treatment changes net debt and operating payables.
+summary: See how treating supplier finance as debt changes your net debt and trade payables, with the reported figures kept beside the adjusted ones.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A reported-to-analytical leverage bridge with supplier balances shown separately. Share reported financing debt, cash, trade payables and identified supplier-finance balances with classification evidence.
+subhead: Give it reported debt, cash, trade payables and the supplier finance balances you can prove. It moves only the proven balance from payables to debt, takes off cash once and shows reported and adjusted figures side by side.
 explain: |-
-  A reported-to-analytical leverage bridge with supplier balances shown separately.
+  Some companies pay suppliers through a finance provider, and the balance can sit in trade payables instead of debt. An analyst may want to see that balance as debt-like. This bridge builds that view without overwriting the reported one.
 
-  Issuer revenue and cash-flow reconciliation. Illustrative figures.200 debt+80 supplier financing=280 debt; less50 cash gives230 net debt. Operating payables300-80=220. Total liabilities remain500. A100 balance gives300 debt,250 net debt and200 payables.
+  It moves only the balance you can evidence from payables to debt. Total liabilities stay the same. It takes off the same eligible cash once to reach net debt, and it keeps the reported measures next to the adjusted ones.
+
+  The result is a what-if view. It is not a ruling on how a company must classify these balances.
 when:
-  - You need a reported-to-analytical leverage bridge with supplier balances shown separately.
-  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You read a company's accounts and see a supplier finance note.
+  - A debt ratio looks low and you want to see it with supplier balances included.
+  - You compare two companies and only one reports supplier finance.
+  - A reviewer asks how payables and debt were moved.
 you_give:
-  - Reported financing debt, cash, trade payables and identified supplier-finance balances with classification evidence.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Reported debt from the financing section
+  - Cash that counts toward net debt
+  - Trade payables
+  - The supplier finance balances you can prove, with the note or page that shows them
+  - The reporting date, currency and scale
 you_get:
-  - A reported-to-analytical leverage bridge with supplier balances shown separately.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A bridge from reported net debt to adjusted net debt
+  - Trade payables before and after the move
+  - A check that total liabilities did not change
+  - An editable workbook and a list of missing inputs
+  - The checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in.
+  - Attach the accounts or paste the balance sheet and the supplier finance note.
+  - Ask it to quote the line that shows each supplier finance balance.
+  - Check that the balance is not already inside reported debt, and that cash is taken off only once.
+  - Read MISSING and CHECKS MISSED before you use the adjusted figures.
+  - The bundled check script needs Node.js 20 or later. Without it, the AI does the sums in the chat.
 how_it_works:
   - title: 1. Read payment terms, provider payments and balance disclosures; distinguish arrangement identification from a conclusion that every balance must be classified as borrowing
     text: Read payment terms, provider payments and balance disclosures; distinguish arrangement identification from a conclusion that every balance must be classified as borrowing.
@@ -74,3 +83,28 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+not_for:
+  - "You need to recheck a loan net debt limit after earnings or cash change: use Loan net debt covenant reviewer."
+  - "You want to see how much cash really went into working capital: use Noncash working-capital bridge."
+  - "You want a ruling on how the accounts must classify these balances. Ask the auditor; this is a what-if view."
+output_sample:
+  input:
+    - Reported financing debt and cash
+    - Trade payables
+    - Supplier finance balances with the page that shows them
+    - The reporting date, currency and scale
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: Reported view
+      contains: Debt, cash, net debt and trade payables as the company reports them.
+    - name: Adjusted view
+      contains: The proven supplier balance moved from payables to debt, with cash taken off once.
+    - name: Bridge
+      contains: Each step from reported net debt to adjusted net debt, with total liabilities unchanged.
+    - name: Workbook
+      contains: An editable file with your inputs, formulas and test cases.
+    - name: MISSING lines
+      contains: Each input you did not supply, left open and never replaced with zero.
+    - name: CHECKS MISSED
+      contains: The checks that could not run, or the word none.

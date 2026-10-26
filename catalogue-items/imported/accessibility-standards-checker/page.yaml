@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It tests against a fixed list of success criteria.
 new_slug: accessibility-standards-checker
 name: Accessibility standards checker
-summary: Describe your site or app. Get WCAG gaps by level, fixes ranked first,
-  and accessibility statement notes.
+summary: Check your site against WCAG accessibility rules. Give it your page code or screenshots. You get gaps by level, fixes ranked first, and statement notes.
 job: check-contracts
 headline: Accessibility standards checker
-subhead: "Describe your site or app, or share a link, code or screenshots, and
-  say which level you aim for: A, AA or AAA. It checks each criterion and sorts
-  the gaps by level. You get a gap table, fixes ranked by priority, corrected
-  code, draft accessibility statement notes and a map from rules to laws."
+subhead: "Describe your site or app, or share a link, code or screenshots, and say which level you aim for: A, AA or AAA. It checks each criterion and sorts the gaps by level. You get a gap table, fixes ranked by priority, corrected code, draft accessibility statement notes and a map from rules to laws."
 explain: |
   Where your site or app falls short of the web accessibility standard shows up in a list sorted by level, with the most important fixes first, plus notes for an accessibility statement.
 
@@ -19,10 +15,14 @@ when:
   - You need to know which fixes to do first with limited time.
   - You must write an accessibility statement for your site.
   - You want to see which laws apply to your product.
+not_for:
+  - "You need a legal opinion or a formal audit: ask an accredited accessibility assessor, since this gives general guidance only."
+  - "You want a fast automatic scan of live pages: run a scanner such as axe or WAVE, and use this to explain and rank what it finds."
+  - "You only need a plain-language summary of one rule: ask your AI the question directly, no full check needed."
 you_give:
-  - A description of your site or app, or a link
-  - Code or screenshots to review (optional)
-  - The level you aim for, A, AA or AAA
+  - A description of your site or app
+  - Page HTML, code or screenshots to review (optional)
+  - "The level you aim for: A, AA or AAA"
   - Your country or market (optional)
 you_get:
   - A gap table with status for each criterion
@@ -31,7 +31,30 @@ you_get:
   - Draft notes for an accessibility statement
   - A map from rules to laws
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - "Describe your site and say which level you aim for: A, AA or AAA."
+  - Paste your page HTML or add screenshots. The skill cannot open a link, so do not rely on a URL.
+  - Read the gap table first. Check that each criterion number matches what you see on the page.
+  - Pass the ranked fixes to your developer. Run the check again after the fixes.
+  - For a legal or formal claim, ask an accredited assessor to confirm.
+output_sample:
+  input:
+    - A description of your site or app
+    - Your page HTML or screenshots (optional)
+    - "The level you aim for: A, AA or AAA"
+    - Your country or market (optional)
+  prerequisites:
+    - An AI chat that can read pasted text or images. It cannot open a link by itself.
+  output:
+    - name: Gap table
+      contains: Each criterion with a red, amber or green status, short gap notes and a priority.
+    - name: Audit table
+      contains: Each issue, where it is, how serious it is and how to fix it.
+    - name: Ranked fixes
+      contains: The changes to make first, ordered by level and priority.
+    - name: Annotated code
+      contains: Your code with the rule breaks marked, plus a corrected version.
+    - name: Accessibility statement notes
+      contains: Draft conformance claim, known issues and a contact line for your statement.
+    - name: Legal mapping
+      contains: Each criterion matched to laws such as the European Accessibility Act, Section 508 and ADA cases.

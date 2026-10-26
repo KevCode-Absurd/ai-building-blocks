@@ -1,6 +1,6 @@
 new_slug: monthly-renewal-watcher
 name: Monthly renewal watcher
-summary: Give it your contracts each month. Get renewals due in 90 days, the risk on each and a plan for every call.
+summary: Check your contract renewals each month. Get every renewal due in 90 days, the risk on each, and a call plan, so none arrives as a surprise.
 job: keep-customers
 thinking: high
 thinking_why: It rates risk from notes and usage, decides between a success plan, a health review and a thank-you, and sets a price stance. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your customers are on yearly plans or contracts and renewals keep arriving unprepared.
   - You lost a renewal last quarter and only found out why afterwards.
   - You want to raise prices at renewal without losing the accounts that matter.
+not_for:
+  - "You sell one-off deals or chase new prospects: use your sales pipeline tool, since this agent needs a renewal date."
+  - "Your accounts have no contract end date, like pay-as-you-go: use a churn report in your billing tool instead."
+  - "You want a weekly view of which customers are slipping: use the Weekly customer health watcher."
 you_give:
   - Your contract register with start date, renewal date, value, plan, notice period and contact
   - Recent emails, call notes and tickets for accounts renewing soon (advised)
@@ -33,6 +37,29 @@ how_to_use:
   - Tell it your price rules once. It saves them.
   - Read the briefs and the stances. Make the calls you agree with, then tell the agent the outcome of each.
   - Run it again on the first of next month. It records the results and tracks the risk over time.
+output_sample:
+  input:
+    - Your contract register with renewal dates, value, plan, notice period and contact
+    - Recent emails, call notes and tickets for accounts renewing soon (advised)
+    - Your price rules at renewal (optional)
+    - Survey answers or complaints from the last quarter (optional)
+  prerequisites:
+    - An AI that can keep files between months, such as Claude Code, for the register and outcomes files (optional but helpful)
+  output:
+    - name: This month in one line
+      contains: How many renewals fall in 90 days, their value, how many are at risk, and notice windows closing soon.
+    - name: Last month's results
+      contains: How each due renewal ended, with reasons and any reason that repeated.
+    - name: Notice windows closing
+      contains: Contracts whose notice period ends within 30 days, with the first action for each.
+    - name: Renewals inside 60 days
+      contains: A brief per account with risk, price stance and the first line for the call.
+    - name: Success plans
+      contains: Steps to help at-risk accounts reach the result they bought for before the date.
+    - name: 60 to 90 days out
+      contains: One line per renewal with the date to start preparing.
+    - name: Files and missing
+      contains: Each step's file and every gap marked MISSING.
 how_it_works:
   - title: Read last month
     text: Records how each renewal ended and flags a reason that repeated three times in a quarter.

@@ -16,6 +16,30 @@ use_cases:
   - "Write a short fairy tale or fable with a moral sting at the end"
   - "Write a heartfelt letter after a hard time, owning your part with dignity"
   - "Make a dull report or newsletter sound like a person wrote it"
+not_for:
+  - "You want plain, direct writing with no ornament: use the George Orwell mind."
+  - "You want a spare, concrete style with feeling left unsaid: use the Ernest Hemingway mind."
+  - "You need legal, medical or money advice, or an exact Wilde quote: ask a qualified professional, or check the source text."
+output_sample:
+  input:
+    - The plain version of your message, in one or two sentences
+    - Who will read or hear it
+    - How long it should be
+    - Tone limits, such as what you will not joke about
+    - Your draft or any facts it must keep (optional)
+  output:
+    - name: The obvious line
+      contains: The saying everyone would write, named first so it can be turned over.
+    - name: The reversal
+      contains: The accepted view flipped, with a check on which half is true.
+    - name: Three strong lines
+      contains: A short set of polished lines or epigrams, not thirty, ready to use.
+    - name: The point underneath
+      contains: The serious idea the light surface carries, so the wit does not lose the argument.
+    - name: Revised draft
+      contains: Your own text reworked in this style, if you brought one.
+    - name: Labels on new wording
+      contains: A note marking each new line as new, not a Wilde quote.
 seats:
   - {seat: "Wit", asks: "What's the obvious thing everyone says here, and what happens if we turn it upside down?"}
   - {seat: "Style and beauty", asks: "Is this beautiful, or merely useful, and why can't it be both?"}

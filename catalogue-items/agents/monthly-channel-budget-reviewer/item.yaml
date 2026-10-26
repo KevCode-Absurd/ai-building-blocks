@@ -16,12 +16,12 @@ outputs:
   - { type: plan }
 uses: [ product-margin-checker, platform-roas-reality-check, cost-per-customer-calculator, channel-decay-checker, next-dollar-budget-allocator, marketing-scorecard-builder ]
 steps:
-  - { uses: product-margin-checker, note: "Once, then reused: break-even return and cost per customer for your products." }
-  - { uses: platform-roas-reality-check, note: "Every month: each platform's reported return set against your store totals, with a trust level." }
-  - { uses: cost-per-customer-calculator, note: "Every month: what a new customer really costs on each channel, and how soon it pays back." }
-  - { uses: channel-decay-checker, note: "Only once three months of results are saved, and only for a channel whose true return fell two months running." }
-  - { uses: next-dollar-budget-allocator, note: "Only when trust in the numbers is medium or high: where the next budget goes and the test to run." }
-  - { uses: marketing-scorecard-builder, note: "First run only: the short-term and long-term measures to track each month." }
+  - { uses: product-margin-checker, note: "Once, then reused: break-even return and cost per customer for your products. Hands every later step the break-even return and cost per customer." }
+  - { uses: platform-roas-reality-check, note: "Every month: each platform's reported return set against your store totals, with a trust level. Uses your store totals and step 1's break-even. Hands step 3 the trust level." }
+  - { uses: cost-per-customer-calculator, note: "Every month: what a new customer really costs on each channel, and how soon it pays back. Uses your channel figures and step 1's margin. Hands step 4 the cost per new customer for the month." }
+  - { uses: channel-decay-checker, note: "Only once three months of results are saved, and only for a channel whose true return fell two months running. Uses the monthly results saved from steps 2 and 3. Hands step 5 which channels are fading." }
+  - { uses: next-dollar-budget-allocator, note: "Only when trust in the numbers is medium or high: where the next budget goes and the test to run. Uses step 2's trust level and step 4's fading channels. Hands step 6 the split and the test to run." }
+  - { uses: marketing-scorecard-builder, note: "First run only: the short-term and long-term measures to track each month. Uses the numbers you already track, not step 5's output." }
 schedule: "On the fifth of each month, once every channel's month is closed"
 asks_before: [ moving budget between channels, changing any live campaign, starting or stopping a channel, running a holdout or lift test that pauses ads ]
 origin: own

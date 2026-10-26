@@ -1,6 +1,6 @@
 new_slug: article-style-image-ad-writer
 name: "Article-style image ad writer"
-summary: "Paste your idea and its landing page. Get an article-style ad, an image brief and a page check."
+summary: "Write an article-style image ad that reads like an editor wrote it, plus an image brief and a check that your landing page backs up the headline."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your buyers know their problem and respond to being told why it happens.
   - You want to compare your kind of product with another kind, honestly, without naming anyone.
   - You have a longer page (an article, a list or a product page) that the ad can send people to.
+not_for:
+  - "You want an ad led by a deal or a feeling: write a plain product ad instead, since this format needs an explanation to carry."
+  - "Your buyer does not yet know the problem exists: start with a plain product ad that names the problem first."
+  - "You need the landing page itself: use the Ad-matched landing page writer once the ad is done."
 
 you_give:
   - Your selling idea, or an existing ad to reshape (attach its image; your AI can see pictures)
@@ -36,6 +40,28 @@ how_to_use:
   - Paste the text of the page the ad will link to, top to bottom.
   - Write your selling idea in a sentence or two, and say whether the buyer knows the problem or is comparing fixes.
   - Read the page check in the notes. If your page doesn't open on the same claim, fix the page before you run the ad.
+output_sample:
+  input:
+    - Your selling idea, or an existing ad to reshape
+    - Your brand facts, with approved claims and proof
+    - The text of the page the ad links to (strongly recommended)
+    - "How aware the buyer is: problem aware or solution aware (optional)"
+  prerequisites:
+    - Your brand brain from the Brand profile builder (optional)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: On the image
+      contains: The editor-style headline and one supporting line, or none.
+    - name: Main text
+      contains: Three to six short third-person paragraphs that name the brand plainly.
+    - name: Headline under the image
+      contains: The same claim as the image headline, kept within the platform limit.
+    - name: Image brief
+      contains: The layout, what is shown, and the exact words on the image, 20 words or fewer.
+    - name: Notes
+      contains: What the page must cover, the page check, the label check, claims left out, and MISSING lines.
+    - name: Checks missed
+      contains: One line for each check the ad still misses, or none.
 
 how_it_works:
   - title: Checks the fit

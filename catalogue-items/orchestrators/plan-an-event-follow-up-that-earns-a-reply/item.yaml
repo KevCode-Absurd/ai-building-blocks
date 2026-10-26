@@ -1,6 +1,6 @@
 slug: plan-an-event-follow-up-that-earns-a-reply
 name: Plan an event follow up that earns a reply
-summary: Share the source files. Get segmented follow-up drafts with sources and pending commitments.
+summary: Turn event notes and your attendee list into follow-up drafts grouped by what each person asked for, with every promise you made tracked.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -22,11 +22,11 @@ uses:
   - executive-due-task-drafts
 steps:
   - uses: event-marketing-planner
-    note: Group follow-up needs around the actual event goal and what attendees requested.
+    note: Group the people you met by what they asked for and by the event goal. Write the reason to contact each group. Hand step 2 the groups and your event notes.
   - uses: executive-action-register
-    note: Extract promised resources, introductions and follow-up actions with source evidence.
+    note: Pull every promise out of your notes, such as a file, an introduction or a call, with its owner, due date and the note it came from. Hand step 3 the promise register.
   - uses: executive-due-task-drafts
-    note: Prepare relevant drafts for each supported commitment without sending them.
+    note: Draft one email per group or promise from the register, with its source. Draft only. Do not send. Hand back the drafts, a draft ledger and a list of people to hold.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

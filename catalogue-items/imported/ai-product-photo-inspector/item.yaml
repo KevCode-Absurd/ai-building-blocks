@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: product_photos
     required: true
+  - type: photo_set
+    required: false
 outputs:
   - type: audit_report
     required: true

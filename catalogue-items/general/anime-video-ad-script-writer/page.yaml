@@ -1,6 +1,6 @@
 new_slug: anime-video-ad-script-writer
 name: "Anime video ad script writer"
-summary: "Paste your idea and brand file. Get anime-style video shot cards and a cast note."
+summary: "Write an anime-style video ad script from your idea and brand file. You get shot cards, one original hero and a cast note for your clips."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your buyer has an old way of doing things you can draw as huge and silly (a shoebox of receipts, a drawer of tangled chargers).
   - You want an ad that looks nothing like the others in your category.
   - You want a script your video tool can follow shot by shot, without the hero changing.
+not_for:
+  - "Your sale rests on a real face, real proof or how the product feels: use a live-action ad or a plain product demo video instead."
+  - "You only want a spoken script with no drawn look: ask your AI for a short voice-over script, or have a copywriter write one."
+  - "You already have the script and need clip prompts: use the Anime video clip prompt writer."
 
 you_give:
   - Your selling idea or an existing script
@@ -35,6 +39,31 @@ how_to_use:
   - Say the length, such as "20 seconds", and your tool's clip length if you know it.
   - Picture it with the sound off. If you can't name the old way, the change and the product's part, ask for a clearer turn pose.
   - Take the shot cards and cast note to "Anime video clip prompt writer". It takes it from there, with the avatar, sheets, storyboard and clips.
+output_sample:
+  input:
+    - Your selling idea or an existing script
+    - Your brand file with the product look, label words and approved claims
+    - The old way your product replaces, in your buyer's words
+    - Video length and your tool's clip length (optional)
+  prerequisites:
+    - A brand file or brand notes (optional, but it improves the result)
+  output:
+    - name: Look line
+      contains: "One proposed look set on four dials: line, shading, palette and backgrounds."
+    - name: Hero sentence
+      contains: One original adult hero in a single sentence, reused unchanged in every shot.
+    - name: Exaggeration
+      contains: The one thing the drawing pushes past real life, with its limit for this ad.
+    - name: Three poses
+      contains: The problem pose, the turn pose with the product, and the payoff pose the ad ends on.
+    - name: Shot cards
+      contains: Each shot with start and end key poses, a hold, what moves, words and sound.
+    - name: Notes
+      contains: The sound-off read, metaphors flagged as metaphors, and anything marked MISSING.
+    - name: Cast note
+      contains: Who carries the ad, why, their voice and what must never change.
+    - name: Checks missed
+      contains: One line for each check the script still fails, or none.
 
 how_it_works:
   - title: Checks the fit

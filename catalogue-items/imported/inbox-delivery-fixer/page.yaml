@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set steps but needs your setup details.
 new_slug: inbox-delivery-fixer
 name: Inbox delivery fixer
-summary: Name your sending domain. Get SPF, DKIM and DMARC set up and a plan to
-  stop emails landing in spam.
+summary: Fix emails landing in spam. Give it your sending domain and get SPF, DKIM and DMARC records plus a plan to improve email deliverability.
 job: write-emails
 headline: Inbox delivery fixer
-subhead: A setup and repair plan so your emails reach the inbox, not the spam
-  folder. You get the exact records to add for SPF, DKIM and DMARC, plus a way
-  to watch your sender reputation.
+subhead: A setup and repair plan so your emails reach the inbox, not the spam folder. You get the exact records to add for SPF, DKIM and DMARC, plus a way to watch your sender reputation.
 explain: |
   A setup and repair plan so your emails reach the inbox, not the spam folder. You get the exact records to add for SPF, DKIM and DMARC, plus a way to watch your sender reputation.
 
@@ -19,6 +16,10 @@ when:
   - You want to stop people faking your domain in scam emails.
   - You are switching email providers and want no gap in delivery.
   - Your spam complaints or bounces have started to climb.
+not_for:
+  - "You need the email text written: use an email writing tool or write it yourself, since this fixes delivery, not content."
+  - "You send spam from your account without meaning to: reset your passwords and ask your email provider to check for a break-in."
+  - "You only need help with DNS settings in general: ask your domain host's support team."
 you_give:
   - Your sending domain or domains
   - Your email provider
@@ -31,7 +32,36 @@ you_get:
   - A reputation monitoring routine
   - A list of likely causes of spam placement
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Add your sending domain, your email provider and your daily volume.
+  - Paste your current DNS records if you have them. If not, say so and your AI will list what to look up.
+  - Add the records your AI gives you at your domain host. Start DMARC in watch mode, not blocking.
+  - Check your DMARC reports for 2 to 4 weeks, then move to stricter settings in the order your AI gives.
+  - The logo step (BIMI) is optional. It needs a trademarked logo and a paid certificate with a yearly cost.
+output_sample:
+  input:
+    - Your sending domain or domains
+    - Your email provider or sending tool
+    - Your current DNS records (optional)
+    - Your daily email volume, marketing and transactional
+    - Your bounce and spam complaint rates (optional)
+  prerequisites:
+    - Access to your domain's DNS settings, to add the records
+    - A way to check DNS records, such as a command line or a free web checker (optional)
+  output:
+    - name: Domain inventory
+      contains: Every domain that sends your email.
+    - name: Authentication status
+      contains: Whether SPF, DKIM and DMARC are set up and correct for each domain.
+    - name: Sender inventory
+      contains: Each service that sends mail for you and how it is set up.
+    - name: Reputation status
+      contains: How major mailbox providers see you, where this can be measured.
+    - name: List hygiene
+      contains: Your bounce rate, complaint rate and how people sign up.
+    - name: Findings
+      contains: The problems found, in order of what to fix first.
+    - name: Roadmap
+      contains: The SPF, DKIM and DMARC records to add, the DMARC rollout steps and the optional logo step.
+    - name: Monitoring setup
+      contains: What to watch, where to watch it and who gets alerts.

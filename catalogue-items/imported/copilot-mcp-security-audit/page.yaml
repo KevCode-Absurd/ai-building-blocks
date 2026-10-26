@@ -2,17 +2,50 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-mcp-security-audit
 name: MCP settings risk checker
-summary: Share your MCP settings. Get risks in permissions, trust and server
-  access, with fixes.
+summary: Check your MCP settings file for leaked keys, risky commands and loose package versions. You get a risk list with a fix for each.
 job: set-up-ai
 headline: MCP settings risk checker
-subhead: Share your MCP settings. Get risks in permissions, trust and server
-  access, with fixes. Share your goal and the files you already have. The skill
-  file sets out the steps and the tools needed for this job.
+subhead: Paste your .mcp.json file. Your AI reads it as text and checks each server for leaked secrets, risky commands and loose package versions. You get a list of risks with a fix for each.
+not_for:
+  - "You want to test a live MCP server while it runs: use a dedicated runtime scanner, because this check only reads the file as text."
+  - "Your file is not an MCP settings file, such as a general app config: use a plain secrets scanner or ask a developer to review it."
+  - "You want proof a package is safe: ask your security person to review the code, because this only flags loose version rules."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your .mcp.json file, or upload it if your AI takes files. Remove real keys first if you can.
+  - Ask your AI to audit the file and list findings from critical to low.
+  - Fix the critical and high items first. Move secrets into environment variables.
+  - Pin each package to a version your team has reviewed, then paste the file again to confirm it is clean.
+  - Your AI only reads the file. It does not need to run code, and it should never run the commands inside.
+output_sample:
+  input:
+    - Your .mcp.json file, pasted in or uploaded
+    - A list of approved MCP servers (optional)
+  prerequisites:
+    - An AI that can read your file or take pasted text. It never runs your commands.
+  output:
+    - name: Header
+      contains: The file name, how many servers were scanned and how many findings there are by severity.
+    - name: Hardcoded secrets findings
+      contains: Passwords, tokens or keys typed into the file, marked critical, with a fix to use environment variables.
+    - name: Shell injection findings
+      contains: Risky command patterns in server arguments, marked high, with a fix to run commands directly.
+    - name: Mutable package findings
+      contains: Packages with no version, a latest tag or a version range, with a fix to pin a reviewed version.
+    - name: Manual review notes
+      contains: Launch commands the check could not read with certainty, flagged for a person to look at.
+when:
+  - You are about to add a new MCP server to a project.
+  - You are about to commit a change to your .mcp.json file.
+  - A teammate asks, "Is our MCP setup safe?"
+  - You want to check every MCP server a project uses.
+you_give:
+  - Your .mcp.json file, pasted in or uploaded
+  - A list of approved MCP servers (optional)
+you_get:
+  - A count of servers scanned and findings by severity
+  - Any secrets typed straight into the file, with a safer way to store them
+  - Risky command patterns in server arguments
+  - Packages without an exact reviewed version
+  - A fix for every finding
+  - "Next steps: fix the flagged lines, pin reviewed versions, then run the check again before you commit"

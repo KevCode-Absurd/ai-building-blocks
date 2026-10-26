@@ -13,9 +13,9 @@ outputs:
   - {type: copy_draft}
 uses: [advisory-council, failure-first-plan-check, disagree-and-commit-note-writer]
 steps:
-  - {uses: advisory-council, note: "Gives the decision, the strongest dissent, what would change the call and the first steps."}
-  - {uses: failure-first-plan-check, note: "Tests the plan you wrote from the council's brief and fixes the gaps."}
-  - {uses: disagree-and-commit-note-writer, note: "Takes the checked plan and the council's dissent and writes the note that closes the debate."}
+  - {uses: advisory-council, note: "Gives the decision, the strongest dissent, what would change the call and the first steps. Hands the council brief to steps 2 and 3."}
+  - {uses: failure-first-plan-check, note: "Tests the plan you wrote from the council's brief, starting with the council's strongest dissent, and fixes the gaps. Hands the checked plan to step 3."}
+  - {uses: disagree-and-commit-note-writer, note: "Takes the checked plan from step 2 and the council's dissent from step 1 and writes the note that closes the debate."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/settle-a-hard-decision-with-a-council-then-commit-the-team/skeleton.yaml

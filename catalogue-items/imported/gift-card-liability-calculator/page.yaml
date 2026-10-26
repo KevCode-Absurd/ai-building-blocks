@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It adds balances into groups.
 new_slug: gift-card-liability-calculator
 name: Gift card liability calculator
-summary: Run it on your gift cards. Get the total balance you still owe, split
-  by issue date and balance size.
+summary: "Find your gift card liability: the total balance you still owe, split by issue month and balance size, from your Shopify store."
 job: run-your-store
 headline: Gift card liability calculator
-subhead: The amount you still owe customers in unspent gift cards, as one clear
-  number. It reads your Shopify gift cards and adds up the open balances, which
-  count as a future obligation to deliver goods.
+subhead: The amount you still owe customers in unspent gift cards, as one clear number. It reads your Shopify gift cards and adds up the open balances, which count as a future obligation to deliver goods.
 explain: |
   The amount you still owe customers in unspent gift cards, as one clear number. It reads your Shopify gift cards and adds up the open balances, which count as a future obligation to deliver goods.
 
@@ -18,6 +15,10 @@ when:
   - Your accountant asks how much unredeemed credit sits on the books.
   - You want to know how many old cards have never been touched.
   - You want to see whether balances are large or mostly small.
+not_for:
+  - "You sell in more than one currency and want one grand total: the tool groups totals by currency, so ask your accountant to convert them."
+  - "You want to book unspent cards as revenue: the stale flag is only a hint, so get your accountant to sign off first."
+  - "You want to change, disable or issue cards: this only reads data, so use your Shopify admin."
 you_give:
   - Store domain
   - Card status to include (optional)
@@ -29,8 +30,27 @@ you_get:
   - Breakdown by balance band
   - A list of stale cards
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Use an AI that can run Shopify admin commands. A plain chat with no store access cannot read your cards.
+  - Sign in to your store with permission to read gift cards.
+  - Paste the skill into your AI and give your store domain. Add band edges or stale days if you want your own.
+  - Check the totals, the month and band tables, and the stale list.
+  - Send the figure to your accountant before you book anything. Note that stale cards are judged by last update date, which is only a hint of last use.
+output_sample:
+  input:
+    - Your store domain
+    - "Which cards to include: on, off or all (optional)"
+    - Your balance band edges (optional)
+    - Days before a card counts as stale (optional)
+    - Report date (optional)
+  prerequisites:
+    - An AI that can run Shopify admin commands in a signed-in session
+    - Permission to read gift cards (the read_gift_cards scope)
+  output:
+    - name: Summary
+      contains: Number of cards with a balance, total owed, value issued, amount redeemed so far, and stale card count and value.
+    - name: By issue cohort
+      contains: Card count and balance owed for each month the cards were issued.
+    - name: By balance band
+      contains: Card count and balance owed for each balance size band, with one band for cards above the largest edge.
+    - name: gift_card_liability_<date>.csv
+      contains: One row per card with balance, redeemed amount, issue month, band, dates, stale flag and customer email.

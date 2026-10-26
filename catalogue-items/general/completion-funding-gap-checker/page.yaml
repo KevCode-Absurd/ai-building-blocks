@@ -1,55 +1,112 @@
 new_slug: completion-funding-gap-checker
 name: Completion funding gap checker
 headline: Completion funding gap checker
-summary: A completion cost and committed funding gap bridge
+summary: "Find out if a half-built project has enough money to finish: remaining cost plus contingency against committed debt, equity and cash."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A completion cost and committed funding gap bridge. Share actual spent costs, owner-approved remaining cost estimate, approved contingency rate on remaining work, available debt/equity commitments and usable project cash.
+subhead: Give it the cost spent so far, what is left to build, a contingency rate and the debt, equity and cash you can count on. It works out the revised cost to finish and the money still short. You get the funding gap, the budget headroom and a list of missing facts.
 explain: |-
-  A completion cost and committed funding gap bridge.
+  A project is part built and the budget is under strain. The question is simple: is there enough committed money to finish? This completion funding gap checker answers it. It adds a contingency to the cost left to build, then sets that need against the debt, equity and cash you can really draw on.
 
-  Project completion funding. Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.
+  The skill keeps two numbers apart. The funding gap compares what you still need with what you can still draw. Money already spent is not counted again. The budget headroom compares the new total cost with the original budget. A project can be over budget and still be fully funded, or on budget and short of cash. You see both.
+
+  Contingency applies to the remaining cost only, not to money already spent. Support that is only proposed, such as a sponsor loan nobody has signed, stays out of the sources. Practice numbers, not a real project: 600 spent, 350 left, 10% contingency. The need is 385. Undrawn debt of 200, equity of 150 and cash of 20 give 370. The funding gap is 15.
 when:
-  - You need a completion cost and committed funding gap bridge.
-  - You work on project completion funding and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A lender or investor asks if the project can finish with the money already committed.
+  - A cost report shows the remaining cost has gone up, and you want to know the new shortfall.
+  - You are preparing a note to a board or lender about the cash needed to complete a build.
+  - A reviewer asks you to separate the funding gap from the budget overrun.
+not_for:
+  - You want to plan how each month's draws are paid, equity first then the loan. Use the Construction funding draw planner.
+  - You need the interest cost while the loan is drawn. Use the Construction interest schedule builder.
+  - You need the funding gap at deal closing for an acquisition. Use the Deal funding gap checker.
 you_give:
-  - Actual spent costs, owner-approved remaining cost estimate, approved contingency rate on remaining work, available debt/equity commitments and usable project cash.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The cost spent so far (from your cost ledger or the latest cost report)
+  - The original approved budget (from the budget or loan model)
+  - The owner-approved estimate of the cost still to build
+  - The contingency rate on the remaining cost, such as 10%
+  - The undrawn debt and undrawn equity you can still call on (from the loan and equity agreements)
+  - The cash you can use for the project
+  - The currency and units, such as USD thousands, and the reporting date
 you_get:
-  - A completion cost and committed funding gap bridge.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The contingency added to the remaining cost
+  - The money still needed to finish
+  - The revised total project cost
+  - The budget headroom, or the overrun against the original budget
+  - The funding gap, if committed sources fall short
+  - A list of missing facts and checks it could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the seven figures above. Say the currency and units. Say whether the debt and equity are signed commitments or only proposed.
+  - Ask in plain words, such as can we finish this project with the money we have committed?
+  - Check one line yourself. The funding gap is the money still needed, less undrawn debt, undrawn equity and usable cash. It cannot go below zero.
+  - Read MISSING and CHECKS MISSED before you use any figure.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
-    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
-  - title: 2. Freeze remaining work scope and source the revised cost to complete separately from sunk expenditure
-    text: Freeze remaining work scope and source the revised cost to complete separately from sunk expenditure.
-  - title: 3. Apply explicit contingency only to remaining eligible costs and reconcile revised total project cost to spent plus remaining plus contingency
-    text: Apply explicit contingency only to remaining eligible costs and reconcile revised total project cost to spent plus remaining plus contingency.
-  - title: 4. Compare future funding need with usable cash and genuinely available debt/equity; keep proposed support outside committed sources
-    text: Compare future funding need with usable cash and genuinely available debt/equity; keep proposed support outside committed sources.
+  - title: Sorts the facts
+    text: Lists each figure with its source and date. Keeps money already spent apart from the cost still to build.
+  - title: Adds contingency
+    text: Applies your contingency rate to the remaining cost only. Spent cost is left alone.
+  - title: Finds the revised cost
+    text: Adds spent cost, remaining cost and contingency. Compares the total with the original budget.
+  - title: Counts the sources
+    text: Adds undrawn debt, undrawn equity and usable cash. Leaves out any support that is only proposed.
+  - title: Finds the gap
+    text: Compares the money still needed with the sources. A shortfall is the funding gap. Missing figures are marked, never set to zero.
 output_shape: |-
-  A completion cost and committed funding gap bridge.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Contingency <amount> | Need to finish <amount> | Revised total cost <amount> | Budget headroom <amount> | Funding gap <amount>
+
+  SCOPE AND SOURCES
+  <reporting date, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <spent, original budget, remaining cost, contingency rate, undrawn debt, undrawn equity, usable cash>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, then the tie of revised total cost to spent plus remaining plus contingency>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The cost spent so far and the original budget
+    - The estimate of the cost still to build
+    - The contingency rate on the remaining cost
+    - Undrawn debt, undrawn equity and usable cash
+    - Your own cost spreadsheet (optional)
+  prerequisites:
+    - The latest cost report and the loan and equity agreements
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The contingency, the need to finish, the revised total cost, the budget headroom and the funding gap.
+    - name: SCOPE AND SOURCES
+      contains: The reporting date, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that revised total cost equals spent plus remaining plus contingency.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Each material input is sourced with currency, scale, sign and period.
+  - what: A higher remaining cost
+    how: Raise the remaining cost and run it again. The contingency, the need and the gap all grow.
+  - what: A different contingency
+    how: Change the contingency rate. It applies to the remaining cost only.
+  - what: A committed source
+    how: Add an undrawn amount only once it is signed. Proposed support stays out of the sources.
 judge:
   - Each material input is sourced with currency, scale, sign and period.
   - Actual records and scenarios remain separate; missing evidence is not zero.
@@ -64,15 +121,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The latest cost-to-complete report from the project team
+    - The loan agreement and equity commitment that show what is still undrawn
+    - A named reviewer and the question you want answered
 terms:
+  - term: Funding gap
+    meaning: The money still needed to finish, less the debt, equity and cash you can still use.
+  - term: Contingency
+    meaning: An extra amount added to the remaining cost in case it runs over.
+  - term: Undrawn
+    meaning: Money that is committed but not yet taken from the lender or investor.
+  - term: Budget headroom
+    meaning: The original budget less the revised total cost. A negative figure is an overrun.
+  - term: Committed source
+    meaning: Money that is signed and available. Proposed support is not committed.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real project.

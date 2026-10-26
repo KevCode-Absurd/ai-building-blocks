@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Steps must be exact to be safe.
 new_slug: repeat-task-step-guide-writer
 name: Repeat task step guide writer
-summary: Name a repeat task. Get exact steps, fixes if it fails, how to roll
-  back and who to call.
+summary: Turn a task you repeat into a step-by-step guide anyone can follow, with fixes, rollback and who to call. Built for on-call staff.
 job: document-work
 headline: Repeat task step guide writer
-subhead: A step-by-step guide for a task someone has to run again and again,
-  written so a person on call can follow it at 2am. What lives in one person's
-  head ends up on the page.
+subhead: A step-by-step guide for a task someone has to run again and again, written so a person on call can follow it at 2am. What lives in one person's head ends up on the page.
 explain: |
   A step-by-step guide for a task someone has to run again and again, written so a person on call can follow it at 2am. What lives in one person's head ends up on the page.
 
@@ -18,6 +15,10 @@ when:
   - A new hire must run a monthly process alone.
   - On-call staff keep asking the same questions during incidents.
   - An old process document is out of date.
+not_for:
+  - "You do a task once and never again: use a plain checklist in your notes."
+  - "You need a record of a past incident, not steps to repeat: ask a teammate to write it up."
+  - "The task has no fixed steps and needs judgment each time: write a short guide of tips instead."
 you_give:
   - Name of the task
   - How you do it today, notes or commands
@@ -29,7 +30,35 @@ you_get:
   - Rollback and check steps
   - Escalation contacts section
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Type the name of the task, for example: weekly sales export."
+  - Paste your notes or commands for how you do it today. Add the owner, how often it runs and known failures if you have them.
+  - Read the steps. Check that each command is exact and each step has an expected result and a fix.
+  - Fill any gaps your AI marks, such as contact names. Then ask a person new to the task to follow the guide and fix where they get stuck.
+  - Save the guide where your team can find it, such as your shared drive or wiki. Add a line to History after each run.
+output_sample:
+  input:
+    - The name of the task
+    - How you do it today, as notes or commands
+    - Who owns it and how often it runs (optional)
+    - Known ways it fails (optional)
+    - An old guide to update (optional)
+  output:
+    - name: Header
+      contains: The task name, owner, how often it runs, the date last updated and the date it was last run.
+    - name: Purpose
+      contains: What the guide gets done and when to use it.
+    - name: Prerequisites
+      contains: A checklist of access, tools and inputs you need before you start.
+    - name: Procedure
+      contains: Numbered steps, each with the exact command or action, the result to expect and what to do if it fails.
+    - name: Verification
+      contains: A checklist to confirm the task worked.
+    - name: Troubleshooting
+      contains: A table of what you see, the likely cause and the fix.
+    - name: Rollback
+      contains: How to undo the task if something goes wrong.
+    - name: Escalation
+      contains: A table of when to ask for help, who to call and how to reach them.
+    - name: History
+      contains: A log of each run with the date, who ran it and any notes.

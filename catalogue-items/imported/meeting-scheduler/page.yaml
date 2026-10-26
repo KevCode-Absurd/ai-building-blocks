@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It resolves times by clear rules.
 new_slug: meeting-scheduler
 name: Meeting scheduler
-summary: Say who to meet and when. Get time zones sorted, calendars checked and
-  the best slots offered.
+summary: Find a meeting time that works across time zones. Give it who, how long and when. You get ranked slots, then an invite once you confirm.
 job: organise-work
 headline: Meeting scheduler
-subhead: A meeting on everyone's calendar at a time that works, without the
-  back-and-forth emails. Tell it who to meet, how long and when, in plain words.
+subhead: Tell your AI who to meet, for how long and when, in plain words. It checks calendars and time zones, then offers the best times. You pick one and it sends the invite.
 explain: |
   A meeting on everyone's calendar at a time that works, without the back-and-forth emails. Tell it who to meet, how long and when, in plain words.
 
@@ -17,6 +15,10 @@ when:
   - You want a weekly team standup set at the same local time.
   - A meeting must move and you want the next best slot found.
   - You are tired of asking five people for their free times.
+not_for:
+  - "You cannot give your AI calendar access: ask each person for free times, or use a simple poll tool such as Calendly."
+  - "You need a person to approve every recurring meeting: set those up by hand in your calendar."
+  - "You only want to convert one time between zones: use a plain time zone converter."
 you_give:
   - Names or emails of the people to invite
   - Topic and length
@@ -28,8 +30,29 @@ you_get:
   - A calendar invite with agenda and video link
   - Updates on who accepted or declined
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can check your calendar.
+  - Use an AI that can connect to your Google Calendar or Outlook. Without that link, it cannot see free times. You may need to set up access in your AI's settings first.
+  - Paste the skill into your chat.
+  - "Write your request, for example: who to meet, how long, and which days work."
+  - Check the times it shows. Real calendar data must back every slot. If a slot looks wrong, tell it.
+  - Confirm one slot. It then creates the invite with the agenda and video link.
+  - Ask it to track replies and find new slots if someone declines.
+output_sample:
+  input:
+    - Names or emails of the people to invite
+    - Topic and length of the meeting
+    - Preferred days or time of day (optional)
+    - Time zone for anyone your AI cannot look up (optional)
+  prerequisites:
+    - An AI that can read your calendar, such as Google Calendar or Outlook
+    - Permission to create events on that calendar
+  output:
+    - name: Availability matrix
+      contains: Each option shown in every person's local time, with time zone labels and a flag on awkward hours.
+    - name: Ranked slots
+      contains: The top three times, scored on working hours and few early or late times, with the best one marked.
+    - name: Recommendation
+      contains: The slot it suggests and the reason, followed by a question asking you to confirm.
+    - name: Calendar invite
+      contains: An event with the agenda and a video link, sent only after you confirm.
+    - name: RSVP updates
+      contains: Who accepted, replied maybe or declined, and new slots if a key person declines.

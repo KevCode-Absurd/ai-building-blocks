@@ -1,38 +1,49 @@
 new_slug: refund-request-reply-writer
 name: "Refund request reply writer"
-summary: "Paste a refund request and your policy. Get a clear yes, no or partial reply that keeps the customer."
+summary: "Paste a refund request, your policy and the order facts. Get a clear yes, partial or no reply that leads with the decision and keeps the customer."
 job: help-customers
 thinking: low
 thinking_why: "It applies written rules to given facts and writes one short reply."
 
 headline: "Refund request reply writer"
-subhead: "Paste the customer's refund request, your published policy and the order facts. The prompt checks each rule against the facts, reaches a yes, partial or no, and writes a reply that leads with the decision, gives the timing and keeps the customer's goodwill."
+subhead: "Paste the refund request, your policy and the order facts. The prompt checks each rule against the facts and reaches a yes, partial or no. You get a reply that leads with the decision, gives the timing and keeps the customer."
 
 explain: |
-  Refund replies go wrong in two ways. The agent argues, and a $30 refund turns into a public review. Or the agent avoids the decision, writes three paragraphs about the policy, and the customer still does not know whether they are getting their money back.
+  Refund replies go wrong in two ways. The agent argues, and a $30 refund turns into a public review. Or the agent avoids the decision, writes three paragraphs about the policy, and the customer still does not know if they are getting their money back.
 
-  This prompt lays your policy against the order facts, one rule per line, and reaches a decision. It writes the decision in the first line of the reply, then what happens next with the timing from your input. For a no, it quotes the rule once and offers only what you said you can offer instead. It never invents a rule, a discount or a timeline. Where the request raises a legal right, a fault or a chargeback, it adds a note that a person should look, because consumer rules differ by place.
+  This refund request reply writer lays your policy against the order facts, one rule per line, and reaches a decision. The first line of the reply is the decision. Then come the next steps and the timing, taken from your input. For a no, it quotes the rule once and offers only what you said you can offer instead.
+
+  It never invents a rule, a discount, a return step or a timeline. If your policy does not say whether the customer must send the item back, it marks that MISSING and does not promise either way. If the request raises a legal right, a fault, a health issue or a chargeback, it adds a note that a person should look, because consumer rules differ by place.
 
 when:
   - "Refund requests pile up and each one takes ten minutes of careful wording."
   - "You are saying no and want to say it once, kindly, without an argument."
+  - "A refund request arrives after your window closed and you need a firm, kind reply."
   - "A new support hire needs a model reply for the common cases."
 
+not_for:
+  - "The customer is angry about more than the refund. Use the Angry customer reply writer."
+  - "You already have a draft reply and want its promises checked. Use the Complaint reply promise checker."
+  - "The request is a chargeback, a legal threat or a claim that someone was harmed. A person should handle it."
+  - "The reply is public, under a review. Use the Review reply batch writer."
+
 you_give:
-  - "The customer's request as written"
-  - "Your refund and return policy as published"
-  - "The order facts: dates, amount, what was bought, condition"
-  - "Any goodwill credit you can offer (optional)"
+  - "The customer's refund request, as written"
+  - "Your refund and return policy, pasted word for word"
+  - "The order facts: order and delivery dates, amount, what was bought, whether it was opened or used, and past refunds"
+  - "What you can offer instead of a refund, and who can approve exceptions (optional)"
 you_get:
-  - "Each rule checked against the facts"
-  - "A clear decision and the reply that leads with it"
-  - "A note for the owner when a person should step in"
+  - "Each policy rule checked against the order facts"
+  - "A clear decision: yes, partial or no"
+  - "A reply that leads with the decision, then the timing"
+  - "A note for you when a person should step in"
 
 how_to_use:
-  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the request under it."
-  - "Paste your policy exactly as it appears on your site, and the order facts."
-  - "Read FACTS v POLICY. If a fact is wrong, correct it and run again."
-  - "Check the OWNER NOTE, then send the reply."
+  - "Copy the prompt and paste it into Claude, ChatGPT or Gemini. It needs no tools or files."
+  - "Under it, paste the customer's request, your policy word for word and the order facts. If the request or the policy is missing, it asks for them and stops."
+  - "Read FACTS v POLICY first. If a fact is wrong, fix it and run it again."
+  - "Check that the timing and any return steps in the reply come from your own policy, not from the AI."
+  - "Read the OWNER NOTE, then send the reply."
 
 how_it_works:
   - title: "Lays facts against policy"
@@ -40,9 +51,11 @@ how_it_works:
   - title: "Reaches the decision"
     text: "Yes, partial or no. A clear yes gets no added conditions. A no names the rule."
   - title: "Writes the reply"
-    text: "Decision first, then timing, then the reason if no, then what you can do instead."
+    text: "Decision first, then next steps with timing, then the reason if no, then what you can do instead."
   - title: "Keeps the door open"
     text: "One true line that treats them as a customer you want back."
+  - title: "Marks what the policy does not say"
+    text: "A return step or deadline that is not in your input is marked MISSING, not promised."
   - title: "Flags edge cases"
     text: "Legal rights, faults, chargebacks and health issues get a note for a person."
 
@@ -53,6 +66,26 @@ output_shape: |
   OWNER NOTE       <edge cases or none>
   MISSING          <...>
   CHECKS MISSED    <one line each, or none>
+
+output_sample:
+  input:
+    - "The customer's refund request, as written"
+    - "Your refund and return policy, word for word"
+    - "The order facts: dates, amount, what was bought, condition, past refunds"
+    - "What you can offer instead of a refund (optional)"
+  output:
+    - name: "FACTS v POLICY"
+      contains: "One line per rule: the rule, the fact from the order, and pass or fail."
+    - name: "DECISION"
+      contains: "Yes, partial or no, with the rule it rests on."
+    - name: "REPLY"
+      contains: "The decision first, then next steps with timing, the reason if no and one line that keeps the door open."
+    - name: "OWNER NOTE"
+      contains: "Any legal, fault, health or chargeback issue that needs a person, or none."
+    - name: "MISSING"
+      contains: "Facts or policy steps you did not give, such as return requirements."
+    - name: "CHECKS MISSED"
+      contains: "One line for each of its own checks it missed, or none."
 
 example:
   business: sprout

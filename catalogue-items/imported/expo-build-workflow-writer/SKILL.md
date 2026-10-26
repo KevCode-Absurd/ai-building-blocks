@@ -18,6 +18,28 @@ Use this skill when you need helps understand and write EAS workflow YAML files 
 
 Help developers write and edit EAS CI/CD workflow YAML files.
 
+## What you need
+
+Ask once for anything not given:
+
+- What should happen and when: builds, tests, preview builds, store submission.
+- The platforms: iOS, Android or both.
+- The trigger: a push to a branch, a pull request, a tag or a manual run.
+- An existing workflow file to edit (optional).
+
+Needs Node, internet access and an Expo account. EAS builds can be limited or cost money on the person's Expo plan, so say so before they run it. If you cannot run code or reach the internet, still write the file, mark it `NOT VALIDATED`, and tell the person to run the validator themselves.
+
+## What you hand back
+
+1. The workflow file, with its path under `.eas/workflows/`.
+2. The validation result: passed, errors fixed, or `NOT VALIDATED` with the reason.
+3. One line per job: what it does and what it needs (credentials, secrets, accounts).
+4. Before you run it: accounts, credentials and plan limits to check.
+
+## If something is missing
+
+Write `MISSING: <what>` and ask once. Never guess job types, runner names or option values. Take them from the fetched schema only. If the request is not about Expo or EAS, say so and stop.
+
 ## Reference Documentation
 
 Fetch these resources before generating or validating workflow files. First resolve this skill's directory, then use the fetch script in its `scripts/` directory. It is implemented using Node.js and caches responses using ETags for efficiency:

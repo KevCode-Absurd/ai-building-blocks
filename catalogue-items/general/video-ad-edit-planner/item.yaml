@@ -13,6 +13,8 @@ inputs:
   - {type: script, required: true}
   - {type: offer, required: false}
   - {type: product_data, required: false}
+  - {type: brief, required: false}
+  - {type: shot_list, required: false}
 outputs:
   - {type: edit_plan}
 uses: [video-ad-text-overlays]

@@ -94,3 +94,27 @@ terms:
     meaning: A group narrow enough that your offer reads as made for them.
   - term: Take rate
     meaning: The share of people you reach who buy.
+not_for:
+  - "You already know who you sell to and need the price itself: use Pricing decision planner."
+  - "You have not chosen a market yet: use Starving crowd market scorer first."
+  - "You want three price tiers for one buyer group: use Three-tier price ladder drafter."
+output_sample:
+  input:
+    - Your offer in broad form, with its going price
+    - The market you chose
+    - The sales you need each month (optional)
+  prerequisites:
+    - A market picked with the Starving crowd market scorer (or a group you can name yourself)
+  output:
+    - name: Broad version
+      contains: Your offer in one line, with its promise and going price.
+    - name: The ladder
+      contains: Four or five narrower buyers, each with a promise in their words, worth and price band.
+    - name: Reach check
+      contains: Buyers you need against buyers you can reach at each level.
+    - name: The pick
+      contains: The narrowest level that passes, and who it is not for.
+    - name: Grow later
+      contains: The step above this one and the sign that it is time to move.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in your input and any check that failed, or none.

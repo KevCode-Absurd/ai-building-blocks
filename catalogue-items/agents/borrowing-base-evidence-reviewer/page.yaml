@@ -1,51 +1,117 @@
 new_slug: borrowing-base-evidence-reviewer
 name: Borrowing base evidence reviewer
 headline: Borrowing base evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: Recheck your borrowing base from your aging, inventory and loan terms. See how much you can still borrow, and any overadvance.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A collateral certificate reconciliation and signed revolver availability. Share same-date receivables aging, eligible inventory cost/appraisal, credit agreement, advance rates, caps, reserves, commitment, debt drawings and letters of credit. Include the previous dated review and source versions when available.
+thinking_why: It rebuilds a lender certificate from sources, so dates, definitions, signs and totals must all tie.
+subhead: Give it your receivables aging, your inventory list and appraisal, and your credit agreement for one date. It checks each source against its total and rebuilds the borrowing base. You see how much you can still borrow. A negative result stays an overadvance.
 explain: |-
-  A collateral certificate reconciliation and signed revolver availability.
+  An asset-based credit line lets you borrow against your receivables and inventory. How much you can borrow is the borrowing base. It changes with every new aging, appraisal or reserve notice. A borrowing base certificate is easy to get wrong. An invoice is left out twice. Inventory is counted at cost where the agreement says appraisal. A reserve is taken off in two places. This agent rechecks the certificate from the sources, so you find the gap before your lender does.
 
-  Asset based credit controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  When a new aging, appraisal, reserve notice, drawings record or certificate date arrives, it runs the Reconcile an asset based revolver certificate workflow. That ties the aging to its control total, builds the receivables and inventory advances, and finds availability. If you give it a draw amount and a connected-party limit, it also runs the Credit exposure limit checker on that draw.
+
+  Availability keeps its sign. A negative number is an overadvance, never zero. This is an arithmetic and tracing check. It is not a lender-certified certificate, and it submits nothing.
 when:
-  - You need a collateral certificate reconciliation and signed revolver availability.
-  - You work on asset based credit controls and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A new month-end receivables aging arrives and you want to recheck availability before you draw.
+  - An inventory appraisal or a lender reserve notice changed since the last certificate.
+  - A certificate is due to your lender and you want an independent tie-out first.
+  - You are about to request a draw and need to know whether it fits, or whether you are already in overadvance.
+not_for:
+  - You have no signed credit agreement. Eligibility, advance rates and reserves come from it, so the review stops without it.
+  - You want only the receivables part, or only the inventory part. Use the Receivables borrowing base builder or the Inventory borrowing base builder.
+  - You want covenant tests. Use the Loan covenant cash cover reviewer.
+  - You want the interest and fees on the line checked. Use the Revolver interest and fee checker.
+  - You need a certificate signed or sent to your lender. A person who knows the credit agreement does that.
 you_give:
-  - Same-date receivables aging, eligible inventory cost/appraisal, credit agreement, advance rates, caps, reserves, commitment, debt drawings and letters of credit. Include the previous dated review and source versions when available.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The receivables aging for the certificate date, with its control total (from your accounting system)
+  - Inventory at cost and its appraisal value for the same date (from your records and the appraiser)
+  - The credit agreement pages on eligibility, advance rates, concentration caps, reserves and the commitment, with any amendment
+  - Current drawings and letters of credit outstanding (from the lender's statement)
+  - Any lender reserve notice, with its date
+  - The reporting date, the currency and the scale, such as USD thousands
+  - The last review's record (optional, needed to see what changed)
+  - A proposed draw and your connected-party exposure limit (optional)
 you_get:
-  - A collateral certificate reconciliation and signed revolver availability.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - What changed since the last review, line by line
+  - The receivables advance, tied to the aging control total, after ineligibles and concentration excess
+  - The inventory advance, with the limit that applied and any item with no appraisal listed
+  - Signed availability, with the limit that applied and every deduction counted once
+  - Any overadvance shown as a negative number and listed as an exception
+  - A check of a requested draw against your connected-party limit, if you gave one
+  - A short record to start the next review from
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add the agent with the pieces it uses, the Reconcile an asset based revolver certificate workflow and the Credit exposure limit checker. If your AI cannot open them, paste both in with the agent.
+  - Say if this is the first run. If not, paste last time's record. Then attach the aging, the inventory and appraisal, the credit agreement pages, the lender's statement and any reserve notice. State the currency and scale once.
+  - Read "what changed" first. Check one line by hand. Availability is the lower of your commitment and your borrowing base, less drawings, letters of credit and any other block, each counted once, as your agreement defines them.
+  - Check that the aging total matches your accounting system and that receivables and inventory use the same date. Fix every MISSING line.
+  - Give the result to the person who signs your certificate. Nothing is submitted. In plain chat it cannot save files, so keep the record. For a workbook, use an AI that can build and reopen a spreadsheet.
 how_it_works:
-  - title: Reconcile an asset based revolver certificate
-    text: Run the governing workflow when A new aging, inventory appraisal, reserve notice, utilization record or certificate date is supplied.
-  - title: Credit exposure limit checker
-    text: If the new certificate accompanies a specific proposed funding request and a supplied connected-party limit, review the requested exposure against that limit. Headroom remains a monitoring result, not draw permission.
+  - title: Reads the last record
+    text: Uses the saved record or sets a first baseline. The record holds the certificate date, aging and appraisal versions, eligibility definitions, reserves applied, drawn and contingent usage and any unresolved overadvance.
+  - title: Checks the trigger
+    text: A new aging, appraisal, reserve notice, usage record or certificate date was supplied. If none, it says so and stops.
+  - title: Builds the receivables advance
+    text: Ties the aging to its control total. Takes off ineligibles and concentration excess before it applies the advance rate. Then takes the lender reserve off once.
+  - title: Builds the inventory advance
+    text: Uses the same certificate date and matching cost and appraisal lists. Applies the advance rate and names the limit that applied, which is cost, appraisal or sublimit. Lists items with no appraisal.
+  - title: Finds availability
+    text: Adds the net advances, caps them at the commitment, and takes off drawings, letters of credit and other blocks. A negative result stays an overadvance.
+  - title: Checks a requested draw
+    text: Only if you gave a draw and a limit. The Credit exposure limit checker compares the exposure with your limit. Headroom is a monitoring result, not permission to draw.
+  - title: Saves the record
+    text: Writes the record and any workbook, keeps the old record, and lists MISSING lines and CHECKS MISSED.
 output_shape: |-
-  A collateral certificate reconciliation and signed revolver availability.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  CERTIFICATE DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <line, source, old value, new value>
+  RECEIVABLES  aging total <n> = control total <n>: <ties | gap n>
+    less ineligibles <n>, concentration excess <n> -> eligible <n> x rate <n> = advance <n>, less reserve <n>
+  INVENTORY  cost <n>, appraisal <n>, limit applied <cost | appraisal | sublimit>, no appraisal: <items>
+    -> advance <n>, less reserve <n>
+  AVAILABILITY  borrowing base <n>, commitment <n>, limit applied <which>
+    less drawings <n>, letters of credit <n>, other blocks <n> -> availability <n> (negative = overadvance)
+  REQUESTED DRAW  <amount> vs connected-party limit <n>: headroom <n> (monitoring only)
+
+  RECORD FOR NEXT REVIEW  <certificate date, aging and appraisal versions, definitions, reserves, usage, overadvance>
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The receivables aging for the certificate date, with its control total
+    - Inventory at cost and its appraisal value for the same date
+    - The credit agreement pages on eligibility, advance rates, caps, reserves and the commitment
+    - Current drawings, letters of credit and any lender reserve notice
+    - The reporting date, currency and scale
+    - The last review's record (optional)
+  prerequisites:
+    - An AI that can read pasted text or uploaded files, such as Claude, ChatGPT or Gemini
+    - The two pieces it uses, the Reconcile an asset based revolver certificate workflow and the Credit exposure limit checker
+    - For a workbook, an AI that can build, recalculate and reopen a spreadsheet
+  output:
+    - name: What changed
+      contains: Each line that moved since the last review, with its source, old value and new value. A first run says first run.
+    - name: Receivables advance
+      contains: The aging tied to its control total, the ineligibles and concentration excess taken off, the advance rate applied and the reserve taken off once.
+    - name: Inventory advance
+      contains: Cost and appraisal side by side, which limit applied, the advance, and any item with no appraisal listed.
+    - name: Signed availability
+      contains: The lower of commitment and borrowing base, less drawings, letters of credit and blocks. A negative result is shown as an overadvance.
+    - name: Requested draw check
+      contains: Only if you gave a draw and a limit. The exposure against your connected-party limit, with the headroom as a monitoring result only.
+    - name: Record for next review
+      contains: A small block with the certificate date, source versions, eligibility definitions, reserves, usage and any overadvance.
+    - name: Workbook and files
+      contains: When your AI can build one, a workbook with inputs, formulas and a checks tab, saved with the run log under reviews/borrowing-base-evidence-reviewer/.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Source populations and certificate date match; every reserve and usage deduction appears once; negative availability stays an overadvance exception. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - what: Same date
+    how: Use one certificate date for the aging, the inventory, the appraisal and the lender statement. If the dates differ, it stops and asks which governs.
+  - what: One definition
+    how: Paste the agreement's own wording for eligible, advance rate and reserve. A rule from memory is marked missing.
+  - what: A changed reserve
+    how: Change one reserve and run it again. Only the lines that depend on it move, and availability changes by that amount.
+  - what: A workbook
+    how: Say you want a spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
 judge:
   - Source populations and certificate date match; every reserve and usage deduction appears once; negative availability stays an overadvance exception. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +122,26 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the borrowing base definitions from your agreement in one file, with clause numbers, so every run reads the same rule.
+  - Save each review's record in a folder named by date, so the next run starts from the true earlier state.
+  - Keep the aging in the same layout each month, so a changed line is easy to see.
+  - Pair it with the Revolver interest and fee checker once availability is settled.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, recalculates it, reopens it and saves the record file. In plain chat it returns the same tables as text.
+    - name: Your lender's statement
+      why: Gives drawings and letters of credit as the lender counts them.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The credit agreement pages on the borrowing base, with every amendment.
+    - The appraiser's report for the inventory.
+    - A named person who signs the certificate and will check the definitions.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Borrowing base
+    meaning: The most the lender will lend against your receivables and inventory, after exclusions and advance rates.
+  - term: Overadvance
+    meaning: A loan balance above the borrowing base or the commitment. It shows as a negative availability.
+  - term: Advance rate
+    meaning: The share of an eligible asset the lender will lend against, set in your credit agreement.
+  - term: Concentration excess
+    meaning: The part of a single customer's receivables above the cap in your agreement.

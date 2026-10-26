@@ -1,26 +1,28 @@
 slug: one-period-residual-income-bridge
 name: One-period residual income bridge
-summary: Measure one period’s earnings above the required return on opening common equity.
+summary: Find how much a company earned above the return its owners require in one year. Get the equity charge, residual income and closing book value.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - justified-price-book-scenario
+  - book-value-per-share-rollforward
+  - economic-profit-fade-schedule
 origin: own
 version: 1.0.0
 added: 2026-10-22

@@ -1,0 +1,122 @@
+name: Secrets & Credential Hygiene Engineer agent
+summary: List where your secrets live. Get each one's risk, a rotation date
+  and the storage fix, plus a leak-response runbook for when one gets out.
+headline: Secrets & Credential Hygiene Engineer agent
+subhead: List where your passwords, API keys and tokens live today, in code,
+  config files or CI. It scores how exposed each one is, proposes a rotation
+  schedule and a safer storage fix, and gives you the steps to run the moment
+  one leaks.
+job: secure-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Most secrets don't leak because someone broke in. They leak because a key sat in a committed file, an environment variable, or a CI log for months before anyone noticed it shouldn't be there. This agent treats a leaked secret as already burned the moment it's exposed, deleting it from a file is necessary but never enough; the fix is rotating it at the provider.
+
+  Give it a list of where your credentials live today and it scores each one: is it hardcoded, is it long-lived when it could be short-lived, does one key cover more systems than it should. It proposes a rotation schedule and a safer storage path (a vault, a secrets manager, short-lived tokens) for each, and gives you the order of operations for a leak: rotate first, then audit usage, then close the gap that let it through.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work; they are not measured results from AI Blocks.
+when:
+  - You want to know which of your API keys, passwords and tokens are hardcoded, shared or never rotated.
+  - You're moving secrets out of code and .env files and into a vault or secrets manager, and want a migration order.
+  - A key just leaked (committed, logged or pasted somewhere it shouldn't be) and you need the response steps now.
+  - You're setting up secret scanning in CI and want to know what counts as a real finding versus noise.
+not_for:
+  - A secret is leaking right now as part of an active, wider breach. Use the Incident Responder agent; this agent's leak-response steps are one part of that larger response, not a replacement for it.
+  - You want a one-time scan of a repo for exposed secrets, not a full inventory and rotation plan. Use the Exposed secrets finder.
+  - You want a lighter day-to-day habit check, not a structured engineering review. Use the Secrets hygiene checker.
+you_give:
+  - Where your secrets live today: which repos, config files, environment variables and CI systems hold them.
+  - The cloud or CI provider you use (AWS, Azure, GCP, GitHub Actions, and so on).
+  - How each credential is currently created and who or what uses it, as far as you know.
+  - Any secret scanner output you already have, such as from Gitleaks or GitHub secret scanning (optional).
+you_get:
+  - A credential table: each secret's location, type, how it's stored, and its exposure risk.
+  - A rotation plan: which to rotate first, on what schedule, and the cutover steps that avoid an outage.
+  - A storage fix per credential: move to a vault, switch to a short-lived token, or scope it down.
+  - A leak-response runbook: the exact order to follow the moment a secret is exposed.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill, or paste SKILL.md then references/source-agent.md into a new chat.
+  - List where your secrets live: repos, .env files, CI variables, config, images, and which provider each one is for.
+  - Say how each credential is used today and by what, as far as you know.
+  - Say "Build the inventory and rotation plan. Tell me which one to fix first."
+  - If a key already leaked, say so immediately and ask for the leak-response runbook first, before anything else.
+  - Work through the rotation plan oldest or most exposed first, and set an owner and date for each one.
+how_it_works:
+  - title: Build the inventory
+    text: It lists every secret location you gave it, with its type, how it's stored, and who or what uses it.
+  - title: Score exposure
+    text: Each credential is checked for hardcoding, excessive scope, missing rotation, and how long-lived it is when it could be short.
+  - title: Propose storage fixes
+    text: For each risky credential it proposes a destination (a vault, a secrets manager, a short-lived token) suited to the provider you named.
+  - title: Build the rotation plan
+    text: It orders rotation by risk, with an overlap period for each so cutover doesn't cause an outage.
+  - title: Write the leak-response runbook
+    text: It lays out the order for a real leak, rotate at the provider first, then audit usage, then close the gap that let it through.
+output_shape: |-
+  CREDENTIAL TABLE
+    <credential> | <location> | <type> | <stored as> | <exposure risk: high/medium/low>
+
+  ROTATION PLAN (in order)
+    <credential> | <rotate by> | <cutover steps> | <owner>
+
+  STORAGE FIXES
+    <credential> | <current storage> | <proposed storage> | <effort: small/medium/large>
+
+  LEAK-RESPONSE RUNBOOK
+    1. Rotate at the provider
+    2. Audit usage since exposure
+    3. Close the gap that let it through
+    4. Confirm no other secret shares the same root cause
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <assumption or gap> | <what to verify>
+output_sample:
+  input:
+    - "Where your secrets live: repos, config files, environment variables, CI"
+    - Your cloud or CI provider
+    - How each credential is used today, as far as you know
+    - Existing secret scanner output (optional)
+  prerequisites:
+    - An AI that can read files, if you attach scanner output or config
+  output:
+    - name: Credential table
+      contains: Each secret's location, type, how it's stored and its exposure risk.
+    - name: Rotation plan
+      contains: Rotation order, target dates, cutover steps and an owner for each credential.
+    - name: Storage fixes
+      contains: A safer storage destination for each risky credential, sized small, medium or large.
+    - name: Leak-response runbook
+      contains: The fixed order to follow the moment a secret is exposed, rotate first, then audit, then close the gap.
+    - name: Assumptions and checks
+      contains: What the agent assumed and which facts you still need to confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a secret scanner's output or your CI config next to your own description.
+  inputs:
+    - Output from Gitleaks, TruffleHog or GitHub secret scanning.
+    - A list of who on your team has access to which credentials.
+    - Your vault or secrets manager, if you already use one.
+terms:
+  - term: Short-lived credential
+    meaning: A key or token that expires quickly, so a leaked one is only useful for a short window.
+  - term: Vault or secrets manager
+    meaning: A dedicated system (such as HashiCorp Vault or AWS Secrets Manager) that stores secrets and controls who can read them.
+  - term: Rotation
+    meaning: Replacing a credential with a new value and retiring the old one, on a schedule or after a leak.
+tweaks:
+  - what: Scope
+    how: List one system or repo at a time if you have many. A full company inventory in one pass is harder to act on.
+  - what: Provider details
+    how: Name your actual cloud or CI provider. The storage fix is different for AWS, Azure, GCP and GitHub Actions.
+improve:
+  - Keep the credential table and rotation plan on file, and update it each time you add or retire a key.
+  - Pair it with the Exposed secrets finder for regular scans, and this agent for the inventory and fix plan.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

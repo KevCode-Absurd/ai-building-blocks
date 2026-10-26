@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The steps are standard but order and risk calls depend on your setup.
 new_slug: site-go-live-runbook-writer
 name: Site go-live runbook writer
-summary: Tell it what you are launching. Get a go-live runbook with checks, DNS
-  cutover steps, post-launch watching and a rollback plan.
+summary: Write a site go-live runbook with launch checks, DNS cutover steps, post-launch watching and a rollback plan. Give it your scope, window and team.
 job: ship-and-host
 headline: Site go-live runbook writer
-subhead: A launch day runbook the whole team can follow, with checks before
-  launch, DNS cutover steps, watching after launch and a rollback plan. It stops
-  launch day from running on memory and chat messages.
+subhead: A launch day runbook the whole team can follow, with checks before launch, DNS cutover steps, watching after launch and a rollback plan. It stops launch day from running on memory and chat messages.
 explain: |
   A launch day runbook the whole team can follow, with checks before launch, DNS cutover steps, watching after launch and a rollback plan. It stops launch day from running on memory and chat messages.
 
@@ -18,6 +15,10 @@ when:
   - You are launching a redesign and the team needs clear roles.
   - A big release is planned and you need a rollback rule.
   - You deploy often and want a repeatable checklist.
+not_for:
+  - "You need to test the site before launch: use a QA checklist or a person who tests, then come back for the runbook."
+  - "Something has already broken after launch: use an incident response plan, since this page only plans the launch."
+  - "You want a write-up after launch: hold an after-action review with your team instead."
 you_give:
   - What is being launched
   - Launch date, time and window
@@ -31,7 +32,33 @@ you_get:
   - A post-launch watch plan
   - A rollback plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. No code, files or paid tools are needed.
+  - Paste what you are launching, the date and window, your team and roles, and when you would roll back.
+  - Add who needs updates and when. If you are changing DNS, say so, so the runbook includes those steps.
+  - Check the result. Every cutover step should have an owner and a way to confirm it worked.
+  - Replace any rollback numbers with limits you choose, such as an error rate or a drop in sales.
+  - Walk through the runbook with your whole team before launch day.
+output_sample:
+  input:
+    - What is being launched
+    - Launch date, time and how long the window is
+    - Your team, their roles and who is on call
+    - When to roll back
+    - Who needs updates, and when
+  output:
+    - name: Launch metadata
+      contains: What is launching, when, and who is involved.
+    - name: Roles and responsibilities
+      contains: Who leads, deploys, tests, sends updates and is on call, with what each person owns.
+    - name: Pre-launch checklist
+      contains: Checks at 30 days, 7 days, 1 day and 1 hour before launch.
+    - name: Cutover sequence
+      contains: Numbered steps, each with an owner, pre-condition, action, check, time estimate and rollback.
+    - name: Rollback procedure and criteria
+      contains: The steps to pull back, and the automatic and discretionary triggers for doing it.
+    - name: Communication plan
+      contains: Which channels to use, how often to update, and what customers and support are told.
+    - name: Verification checklist
+      contains: What to check in the first hour and the first day.
+    - name: Stabilization plan and contacts
+      contains: What to watch for the first week, plus escalation paths and on-call names.

@@ -6,6 +6,37 @@ metadata:
   author: typeui.sh
 ---
 
+## How to run this skill
+
+AI Blocks added these notes. The original skill below is unchanged. Where a note here disagrees with it, follow the note.
+
+### What you need
+- A short version of the story the page tells.
+- The mood or feeling wanted, and who the page is for.
+- Optional: brand colours and fonts to keep.
+
+### If something is missing
+- Ask once for the story and the audience. If you still do not have them, write `MISSING: <what>` at the top and go on with clearly marked assumptions.
+- Never invent facts about the product, its customers or its claims.
+
+### Read the original's Brand line like this
+- The Brand line below is garbled. It means: use storytelling techniques to make a page that feels engaging, clear and emotional, and that guides the visitor through one journey using visuals, copy and interaction. Write the design idea for this user's story instead of repeating that line.
+- Add a short story flow to the guide: the parts of the page in order, and the job each part does for the visitor.
+
+### Make the defaults fit the story
+- The fonts and colours under Style Foundations (Inter, Abril Fatface, `#3B82F6`, `#8B5CF6`) are the original author's starting point. Replace them with the person's brand values when given. If none are given, say they are placeholders.
+- The original sets the visual style to "playful". Change it to match the mood the user asked for.
+
+### Check contrast before you hand it back
+- For every text and background pair, work out the contrast ratio and write it next to the pair. Normal text needs 4.5 to 1. Large text and parts of the interface need 3 to 1.
+- With the original colours, white text on the blue `#3B82F6` is about 3.7 to 1 and on the purple `#8B5CF6` about 4.2 to 1. Both fail for normal text. Darken them for any button with white text, or use large text only.
+- If you change a colour, work the ratio out again. Do not guess.
+
+### What you hand back
+- Open with the one-line design idea, then follow the Required Output Structure below.
+- Finish with `CHECKS MISSED:` and list any check you could not do, or write "none".
+- Say that the guide is rules only. A designer or developer builds the page from it.
+
 <!-- TYPEUI_SH_MANAGED_START -->
 # Storytelling Design System Skill (Universal)
 

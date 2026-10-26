@@ -2,16 +2,32 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-grant-funder-researcher
 name: Nonprofit grant funder researcher
-summary: Share your program, location, and funding need. Get a funder shortlist, fit checks, and grant dates.
+summary: Find grant funders for your nonprofit program. Give your program, place and ask. You get a ranked funder shortlist, fit scores and a grant calendar.
 job: research-topics
 headline: Nonprofit grant funder researcher
-subhead: Share your program, service area, funding need, and eligibility details. It checks funder rules and past giving before ranking possible matches. You get a shortlist with fit reasons, funder briefs, and a grant calendar. Funding rules draw mainly on US sources.
+subhead: Give it your program, place, ask and who can apply. It checks each funder's rules and real past grants, then scores the fit. You get a ranked shortlist, funder briefs and a grant calendar. Rules and sources are mostly US.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - You need funders for a program and have no list yet.
+  - You want to know if one funder is a good fit before you spend time on it.
+  - You need one calendar of grant deadlines and renewals for the year.
+  - Several proposals are due close together and you need to see it early.
+not_for:
+  - "You need to write the letter of inquiry or the proposal: use the nonprofit-grant-writing skill, then bring back the funder brief from here."
+  - "You want company sponsorships or cause marketing deals: use the nonprofit-corporate-sponsorships skill, not a foundation grant search."
+  - "Your program is outside the US: funder sources here are mostly US, so ask a local grants adviser or a regional funder list."
 you_give:
-  - Program description, service area, funding range, charity status, and any current funders.
+  - Your program area and what the money would pay for.
+  - Your requested amount range.
+  - Your service area, such as county, city or state.
+  - Your yearly budget size and how many years you have operated.
+  - Your 501(c)(3) status.
+  - Your current funders and renewal dates (optional).
 you_get:
-  - A funder shortlist, fit ratings with reasons, funder briefs, and grant calendar.
+  - A ranked funder shortlist with a fit score and reasons for each.
+  - A short brief on each funder that passes, built from its real past grants.
+  - A grant calendar of letter, proposal, decision and report dates.
+  - A renewal tracker for funders you already have.
+  - A warning when deadlines pile up in the same weeks.
 how_it_works:
   - title: Define the search
     text: Confirm the program, place, funding range, and which rules limit who can apply.
@@ -26,6 +42,30 @@ works_best_with:
   inputs:
     - Prospect research and calendars; a wrong entry costs a look.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read current funder rules, public grant records, and any funder databases you choose to use.
+  - Gather the details listed under what you give. Write them as a short brief.
+  - Open your AI. Use one that can search the web, or paste in funder pages and 990-PF grant lists yourself.
+  - Paste the skill, then your brief. Ask it to find funders and score the fit.
+  - Check each funder's rules and dates on its own website before you act. Free starting points are ProPublica Nonprofit Explorer and grants.gov.
+  - Ask for the grant calendar and funder briefs for the funders that pass.
+  - Pass the best matches and their briefs to the nonprofit-grant-writing skill.
+output_sample:
+  input:
+    - Your program area and what the money would pay for
+    - Your requested amount range
+    - Your service area (county, city or state)
+    - Your budget size, years incorporated and 501(c)(3) status
+    - Your current funders and renewal dates (optional)
+  prerequisites:
+    - An AI that can read current web pages, or your own funder lists and 990-PF pages pasted in
+    - Candid Foundation Directory is a paid subscription (optional); ProPublica Nonprofit Explorer and grants.gov are free starting points
+  output:
+    - name: Funder prospect list
+      contains: Each funder with type, typical grant range, priorities, location limits, how to apply, fit score and next deadline.
+    - name: Fit scores
+      contains: A score for each funder on mission, location, grant size, who can apply, timing and relationships.
+    - name: Funder profile brief
+      contains: Three years of real grants, current priorities, contacts, application rules and why the funder fits.
+    - name: Grant calendar
+      contains: A 12 to 18 month view of letter, proposal, decision and report dates, with clashes flagged.
+    - name: Renewal tracker
+      contains: Current funders with renewal dates, whether a report is due first, and grant size over time.

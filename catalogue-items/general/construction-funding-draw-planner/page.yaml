@@ -1,55 +1,119 @@
 new_slug: construction-funding-draw-planner
 name: Construction funding draw planner
 headline: Construction funding draw planner
-summary: A construction draw schedule and uncovered cost register
+summary: "Plan how three periods of building costs get paid: equity first, then the loan up to what is left, with any cost nobody covers shown."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A construction draw schedule and uncovered cost register. Share three-period certified eligible construction costs, usable equity commitment, usable debt commitment and explicit equity-first funding order.
+subhead: Give it the certified building costs for three periods, the equity and loan you can use, and the funding order. It pays each period from equity first, then from the loan, and lists what is left uncovered. It does not approve any draw.
 explain: |-
-  A construction draw schedule and uncovered cost register.
+  A building project pays its costs in stages. The money comes from two places: the owners' equity and a construction loan. Many deals put equity in first. This construction funding draw planner shows, period by period, how much comes from equity, how much from the loan, and what no source covers.
 
-  Project construction funding. Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.
+  It uses only costs a certifier has approved. Change requests nobody has approved yet go in a separate list, so they do not slip into the plan. Unused equity and loan carry forward to the next period. If costs run past what you can draw, the uncovered amount shows as a shortfall. It is never hidden, and it is never paid by a source that does not exist.
+
+  It is a planning schedule. It does not approve draws, and it does not prove the project can be finished. Practice numbers: costs of 100, 150 and 200, with equity of 200 and a loan of 300. Equity pays the first 200 and the loan pays 250, so 50 of the loan is left. If the last cost were 300, the loan would run out and 50 would stay uncovered.
 when:
-  - You need a construction draw schedule and uncovered cost register.
-  - You work on project construction funding and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Certified cost reports for the next three periods are in, and you want to see when equity runs out and the loan starts.
+  - A cost went up, and you want to know whether your loan still covers it.
+  - A lender asks for a draw schedule that shows equity going in first.
+  - You suspect part of the cost has no funding behind it and want it listed.
+not_for:
+  - You need the lender to approve a draw. Only the lender or its monitor can do that.
+  - You want interest during construction added. Use the Construction interest schedule builder.
+  - You want to know whether the money left covers the cost to finish. Use the Completion funding gap checker, or run the Reconcile construction draws and completion funding workflow.
+  - Your contract funds debt first or splits each cost by percent. This skill covers equity first only.
 you_give:
-  - Three-period certified eligible construction costs, usable equity commitment, usable debt commitment and explicit equity-first funding order.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Certified eligible construction costs for three periods, with the currency and units (from the cost reports your certifier signed)
+  - The equity you can use (from the equity commitment or investment agreement)
+  - The loan you can use (from the loan agreement or the lender's commitment letter)
+  - The funding order, which must be equity first for this skill (from the agreements)
+  - The draw conditions the lender sets (optional)
+  - Change requests not yet approved, kept apart (optional)
 you_get:
-  - A construction draw schedule and uncovered cost register.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "A draw schedule: for each period, the cost, equity used, loan used and cost left uncovered"
+  - The equity and loan left after each period
+  - An uncovered cost list, by period and in total
+  - A check that cost equals equity plus loan plus uncovered cost
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same schedule, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the three periods of certified costs, the equity and loan you can use, and the funding order. Say the currency and units. Keep unapproved change requests in their own list.
+  - "Ask: build the draw schedule, equity first, and list any uncovered cost."
+  - Check one period. Cost minus equity used minus loan used should equal the uncovered amount. Equity used plus equity left should equal the equity you can use.
+  - Read the uncovered cost list. It should show a shortfall, not a hidden source of money.
+  - Read MISSING and CHECKS MISSED, then take the schedule to your lender. It does not approve a draw.
 how_it_works:
-  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
-    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
-  - title: 2. Separate certified costs from unapproved change requests and record actual draw conditions, available commitments and funding order
-    text: Separate certified costs from unapproved change requests and record actual draw conditions, available commitments and funding order.
-  - title: 3. Apply equity-first funding period by period, then debt limited to remaining commitment; carry undrawn balances forward
-    text: Apply equity-first funding period by period, then debt limited to remaining commitment; carry undrawn balances forward.
-  - title: 4. Show unfunded cost per period and total, reconcile funded and unfunded costs, and preserve any proposed funding as uncommitted
-    text: Show unfunded cost per period and total, reconcile funded and unfunded costs, and preserve any proposed funding as uncommitted.
+  - title: Builds a source list
+    text: Lists each balance, period start and end, contract term and unresolved gap, with dates.
+  - title: Separates the costs
+    text: Keeps certified costs apart from unapproved change requests. Notes the draw conditions, the commitments and the funding order.
+  - title: Funds each period
+    text: Uses equity first, then the loan up to what is left of its commitment. Unused amounts carry forward.
+  - title: Shows the shortfall
+    text: Shows the uncovered cost for each period and in total.
+  - title: Checks the totals
+    text: Ties cost to equity plus loan plus uncovered cost. Funding that nobody has committed stays marked as uncommitted.
+  - title: Marks the gaps
+    text: Writes MISSING for any figure it was not given. It never fills a gap with zero.
 output_shape: |-
-  A construction draw schedule and uncovered cost register.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Total cost <amount> | Equity used <amount> | Loan used <amount> | Uncovered <amount> | Equity left <amount> | Loan left <amount>
+
+  DRAW SCHEDULE
+  <period | certified cost | equity used | loan used | uncovered | equity left | loan left>
+
+  UNCOVERED COST LIST
+  <period | amount | why it is uncovered | any proposed funding, marked uncommitted>
+
+  NOT IN THE SCHEDULE
+  <unapproved change requests, listed apart>
+
+  TIES AND CHECKS
+  <cost = equity + loan + uncovered; used + left = commitment, for equity and for the loan>
+
+  SOURCES AND ASSUMPTIONS
+  <currency and units, period boundaries, source and date for each input, workbook check if any>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Certified construction costs for three periods
+    - The equity you can use
+    - The loan you can use
+    - The funding order (equity first)
+    - Change requests not yet approved (optional)
+  prerequisites:
+    - Cost reports signed by your certifier
+    - The equity commitment and the loan agreement or commitment letter
+  output:
+    - name: RESULT
+      contains: Total cost, equity used, loan used, the amount left uncovered, and what equity and loan remain.
+    - name: DRAW SCHEDULE
+      contains: "One row per period: certified cost, equity used, loan used, uncovered cost and what is left of each source."
+    - name: UNCOVERED COST LIST
+      contains: Each period with a shortfall, the amount, the reason, and any proposed funding marked uncommitted.
+    - name: NOT IN THE SCHEDULE
+      contains: Change requests nobody has approved, listed apart so they do not slip in.
+    - name: TIES AND CHECKS
+      contains: Cost equals equity plus loan plus uncovered cost, and used plus left equals each commitment.
+    - name: SOURCES AND ASSUMPTIONS
+      contains: Currency, units, period dates and the source and date of every input.
+    - name: MISSING
+      contains: Each figure it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Each material input is sourced with currency, scale, sign and period.
+  - what: More than three periods
+    how: Say how many. The same steps repeat for each one. The workbook that comes with the skill covers three.
+  - what: A change request is approved
+    how: Move it into the certified costs with its approval date, then run the schedule again.
+  - what: The equity or loan amount changes
+    how: Give the new amount you can use and say what changed and when. Then run the schedule again.
 judge:
   - Each material input is sourced with currency, scale, sign and period.
   - Actual records and scenarios remain separate; missing evidence is not zero.
@@ -64,15 +128,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can build the schedule in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed cost reports for each period
+    - The equity commitment and the loan agreement or lender commitment letter
+    - A named reviewer and the question you want answered
 terms:
+  - term: Draw
+    meaning: A request to take money from the loan or from the equity commitment.
+  - term: Certified cost
+    meaning: A building cost that an engineer or certifier has signed off as eligible.
+  - term: Equity first
+    meaning: The owners' money pays the cost until it is used up. Then the loan pays.
+  - term: Commitment
+    meaning: The most a lender or investor has agreed to put in.
+  - term: Uncovered cost
+    meaning: Cost that neither the equity nor the loan can pay. Also called a shortfall.
+  - term: Change request
+    meaning: A request to change the work and its cost. It does not count until it is approved.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real project.

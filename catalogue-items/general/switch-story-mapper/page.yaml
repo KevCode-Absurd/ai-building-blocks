@@ -1,6 +1,6 @@
 new_slug: switch-story-mapper
 name: Switch story mapper
-summary: Paste interview notes from recent buyers. Get each buying story mapped, the four forces marked and the patterns across them.
+summary: Turn interview notes from recent buyers into switch stories. See what pushed and held each person back, and the patterns across them.
 job: understand-customers
 thinking: high
 thinking_why: It reads long, messy notes, keeps each person's words apart from your guesses and finds patterns without forcing them. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have interview notes and no clear pattern.
   - Customers say they love it but many still do not switch.
   - You suspect the real reasons are not the ones on your website.
+not_for:
+  - "You have hundreds of reviews or survey answers to count: use the Customer buying reasons finder."
+  - "You have not run any interviews yet: use the Buying story interview guide first to get the right notes."
+  - "You need a fix for what holds buyers back: map the stories here first, then use the Switch friction remover."
 you_give:
   - Interview notes for each person, with an ID and a date
   - Your interview guide (optional)
@@ -29,6 +33,27 @@ how_to_use:
   - Paste the notes, one person at a time, with an ID and a date.
   - Read the stories first. Fix anything that does not sound like the person.
   - Take the forces table to "Switch friction remover".
+output_sample:
+  input:
+    - Interview notes for each buyer, with an ID and a date
+    - Your interview guide (optional)
+  output:
+    - name: Stories
+      contains: One six-line story per person, each line tied to a numbered note or marked MISSING.
+    - name: Forces
+      contains: A table of push, pull, habit and anxiety for each person, plus what they fired and what tipped it.
+    - name: Later hire check
+      contains: Whether each buyer used the thing again, or bought and did not use it.
+    - name: Clusters
+      contains: Patterns that fit two or more separate people, with counts and the best quote.
+    - name: One-offs
+      contains: Stories that stand alone, with why they do not fit a group.
+    - name: Surprises
+      contains: Cases that do not fit, what they may mean and what to ask.
+    - name: Next
+      contains: Gaps, three questions for the next interviews and the cluster to learn about next.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 how_it_works:
   - title: Cites every line
     text: Each step of a story points to a numbered note, or says MISSING.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It chooses steps to clean and answer from the data.
 new_slug: data-analysis-coder
 name: Data analysis coder
-summary: Ask a question about your table or sensor data. Get it cleaned,
-  summarised and answered with MATLAB code.
+summary: Ask a question about your table or sensor data in MATLAB. Get clean, commented code that fixes messy data and answers your question.
 job: build-software
 headline: Data analysis coder
-subhead: Ask a question about a table, time series or sensor data and get clean
-  MATLAB code that answers it. The code handles the messy parts first so the
-  answer is trustworthy.
+subhead: Ask a question about a table, time series or sensor data and get clean MATLAB code that answers it. The code handles the messy parts first so the answer is trustworthy.
 explain: |
   Ask a question about a table, time series or sensor data and get clean MATLAB code that answers it. The code handles the messy parts first so the answer is trustworthy.
 
@@ -18,6 +15,10 @@ when:
   - A table has gaps and odd values and you need it cleaned before analysis.
   - You want to compare groups in a dataset and need the code.
   - You need to resample a time series to a steady interval.
+not_for:
+  - "You want charts or plots: use the MATLAB chart skill, matlab-build-chart, instead."
+  - "You need to read or save CSV, Excel or MAT files: use matlab-import-export-data, which handles file reading and writing."
+  - "You want to train a model on your table: use matlab-classify-tabular-data, or ask a data scientist to help."
 you_give:
   - Your table or data description
   - The question you want answered
@@ -28,8 +29,27 @@ you_get:
   - Answer to your question
   - Notes on what each step does
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. If your AI supports skill files, add the skill folder instead.
+  - Paste a few rows of your table, or list its columns and what each one holds.
+  - Write the question you want answered, in plain words. Add your MATLAB release if you know it.
+  - Ask your AI to list the reference files it read, then give you the code, the cleaning steps and the answer.
+  - Run the code in MATLAB. Check the answer against a few rows of your data. This skill needs MATLAB to run the code.
+output_sample:
+  input:
+    - Your table, timetable or sensor data, or a description of its columns
+    - The question you want answered
+    - Your MATLAB release (optional)
+  prerequisites:
+    - MATLAB, or an AI that can run MATLAB code
+    - Your data already loaded into MATLAB as a variable
+  output:
+    - name: Reference files read
+      contains: A list of the reference notes your AI read before it wrote any code.
+    - name: MATLAB code
+      contains: Code that cleans the data, then answers your question using built-in MATLAB functions.
+    - name: Cleaning steps
+      contains: Notes on how missing values, odd values and wrong types were handled, and why.
+    - name: Answer
+      contains: A short reply to your question, based on the raw values in your data.
+    - name: Step notes
+      contains: A plain line on what each block of code does.

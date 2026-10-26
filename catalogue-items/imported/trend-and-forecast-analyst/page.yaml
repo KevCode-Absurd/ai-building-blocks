@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Picking a sound model and reading it fairly needs care.
 new_slug: trend-and-forecast-analyst
 name: Trend and forecast analyst
-summary: Give it numbers over time. Get trend, seasons and odd spikes found,
-  plus a forecast table and plain insights.
+summary: Find the trend, seasons and odd spikes in your numbers over time. Get a forecast table with ranges and a plain summary you can act on.
 job: track-numbers
 headline: Trend and forecast analyst
-subhead: "Turn a column of numbers over time into a clear story: where it is
-  heading, what repeats, what looks odd and what comes next. You get a forecast
-  with a stated range of error, not a single guess."
+subhead: "Turn a column of numbers over time into a clear story: where it is heading, what repeats, what looks odd and what comes next. You get a forecast with a stated range of error, not a single guess."
 explain: |
   Turn a column of numbers over time into a clear story: where it is heading, what repeats, what looks odd and what comes next. You get a forecast with a stated range of error, not a single guess.
 
@@ -18,6 +15,10 @@ when:
   - You want to know if a rise is real or just the season.
   - A metric spiked and you want to find out what caused it.
   - You need a baseline for what would have happened without a campaign.
+not_for:
+  - "You have less than two full seasonal cycles of data: use a simple spreadsheet trend line for a quick estimate."
+  - "Your dates are irregular or have big gaps: tidy the dates first, or ask a person who knows the data."
+  - "You need a quick one-off guess for next month: use a spreadsheet forecast, it is faster."
 you_give:
   - Dates and one number per date
   - How often the data is recorded
@@ -29,8 +30,24 @@ you_get:
   - A forecast table with ranges
   - A plain-language summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files.
+  - Paste the skill instructions, then upload your data as a CSV with a date column and one number column.
+  - Tell your AI how often the data is recorded and how far ahead to forecast. Add your event log if you have one.
+  - Check the odd points against what really happened. Then read the forecast range, not just the single number.
+  - Feed the forecast table into your staffing or stock plan. Run it again each month with the new data.
+output_sample:
+  input:
+    - Your dates and one number per date, such as monthly sales
+    - How often the data is recorded (daily, weekly or monthly)
+    - How far ahead you want to forecast
+    - A log of launches, campaigns or incidents (optional)
+  prerequisites:
+    - An AI that can run code, so it can run the analysis script
+    - At least two full seasonal cycles of data
+  output:
+    - name: scripts/ts_analyzer.py
+      contains: The script that splits your data, flags odd points, fits the forecast, and writes charts and a CSV.
+    - name: references/ts_patterns_guide.md
+      contains: A guide to steady data, season types, picking a model, and common mistakes.
+    - name: assets/ts_report_template.md
+      contains: "The report: data traits, trend and season summary, odd points, forecast table and insights."

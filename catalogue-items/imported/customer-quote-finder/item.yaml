@@ -32,7 +32,7 @@ credits:
   - title: customer-voice skill
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/customer-voice
-    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+    used: Copied under the Apache 2.0 licence. We gave it a plain name and added a files-only route, an output layout and exact-quote rules.
   - title: Original author
     by: Anthropic
     url: https://github.com/anthropics

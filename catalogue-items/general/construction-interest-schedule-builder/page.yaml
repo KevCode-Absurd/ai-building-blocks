@@ -1,55 +1,111 @@
 new_slug: construction-interest-schedule-builder
 name: Construction interest schedule builder
 headline: Construction interest schedule builder
-summary: A timed capitalized interest schedule and debt rollforward
+summary: "Build a three-year construction loan interest schedule. See the interest added to the loan each year and the closing debt. Gaps are flagged."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A timed capitalized interest schedule and debt rollforward. Share opening construction debt, three annual eligible draws, fixed annual rate and weighted fraction of each draw outstanding during its year.
+subhead: Give it the loan balance at the start, the amount drawn each year, the yearly rate and how long each draw is outstanding. It works out the interest added to the loan each year. You get a three-year schedule, the closing debt and a check that the balance ties.
 explain: |-
-  A timed capitalized interest schedule and debt rollforward.
+  During construction, a loan often does not pay interest in cash. The interest is added to the loan, so the debt grows. This is called capitalized interest. This construction interest schedule builder shows how much is added each year and where the loan ends up.
 
-  Project construction interest. Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.
+  Each year has two parts. The loan you already owe carries interest for the full year. A new draw carries interest only for the part of the year it is outstanding. A draw taken halfway through the year counts for half a year. The skill asks for that timing and does not assume it. Interest for the year is added at year end, so it does not earn interest in its own year. It does from the next year on.
+
+  The skill then rolls the balance forward. Opening debt plus draws plus capitalized interest must equal the closing debt. If it does not, the check shows the gap. Practice numbers, not a real loan: 100 opening debt, draws of 100, 100 and 0, a 10% rate and each draw outstanding for half a year. Interest is 15, 26.5 and 34.15. Closing debt after year three is 375.65.
 when:
-  - You need a timed capitalized interest schedule and debt rollforward.
-  - You work on project construction interest and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A lender says interest is added to the loan during construction, and you want the debt at each year end.
+  - You are building a project cost budget and need the financing cost to include capitalized interest.
+  - A draw is delayed or brought forward, and you want to see the effect on interest.
+  - A reviewer asks you to tie the closing loan balance back to draws and interest.
+not_for:
+  - You want to know if there is enough money to finish the build. Use the Completion funding gap checker.
+  - You want to plan which source pays each draw, equity first then loan. Use the Construction funding draw planner.
+  - Interest is paid in cash, or the rate changes. This covers a fixed rate with interest added to the loan, so ask your lender for a full model.
 you_give:
-  - Opening construction debt, three annual eligible draws, fixed annual rate and weighted fraction of each draw outstanding during its year.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The loan balance at the start (from the lender statement or loan agreement)
+  - The amount drawn in each of the three years (from the draw schedule)
+  - The fixed yearly interest rate (from the loan agreement)
+  - The share of each year every draw is outstanding, such as 0.5 for mid-year (from the draw dates)
+  - The currency and units, such as USD thousands, and the reporting date
+  - Your own loan spreadsheet (optional)
 you_get:
-  - A timed capitalized interest schedule and debt rollforward.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Interest added to the loan in each of the three years
+  - Closing debt at the end of each year
+  - Total capitalized interest over the three years
+  - A rollforward check that opening debt plus draws plus interest equals closing debt
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the opening balance, the three draws, the rate and the timing of each draw. Say the currency and units. Attach the page of the loan agreement that says interest is added to the loan if you can.
+  - Ask in plain words, such as how much interest gets added each year, and what do we owe at the end of year three?
+  - Check one year yourself. Interest is the opening debt plus the weighted draws, times the rate. Closing debt is opening debt plus draws plus that interest.
+  - Read MISSING and CHECKS MISSED before you use any figure.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
-    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
-  - title: 2. Read the capitalization agreement and distinguish cash-paid interest from interest legally added to debt
-    text: Read the capitalization agreement and distinguish cash-paid interest from interest legally added to debt.
-  - title: 3. Calculate interest on opening debt plus explicitly time-weighted current draws; add it to closing debt only at year end
-    text: Calculate interest on opening debt plus explicitly time-weighted current draws; add it to closing debt only at year end.
-  - title: 4. Carry closing debt into the next period, compare to commitments and reconcile opening debt plus draws plus capitalized interest to final debt
-    text: Carry closing debt into the next period, compare to commitments and reconcile opening debt plus draws plus capitalized interest to final debt.
+  - title: Reads the terms
+    text: Confirms the loan adds interest to the debt at year end, and does not pay it in cash. Notes the rate and each draw's timing.
+  - title: Weights the draws
+    text: Counts each new draw for the share of the year it is outstanding. The timing comes from your draw dates, not a guess.
+  - title: Works out the year's interest
+    text: Adds the opening debt and the weighted draws, then multiplies by the yearly rate.
+  - title: Rolls the debt forward
+    text: Adds the draws and the interest to the opening debt to get the closing debt. That becomes next year's opening debt.
+  - title: Ties the total
+    text: Checks that opening debt plus all draws plus all interest equals the final debt. Missing figures are marked, never set to zero.
 output_shape: |-
-  A timed capitalized interest schedule and debt rollforward.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Interest year 1 <amount> | Interest year 2 <amount> | Interest year 3 <amount> | Total interest <amount> | Closing debt <amount>
+
+  SCOPE AND SOURCES
+  <reporting date, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <opening debt, draws by year, rate, share of year outstanding, when interest is added>
+
+  CALCULATIONS AND TIES
+  <one row per year: opening, weighted draws, interest, closing; then the rollforward tie>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The loan balance at the start
+    - The amount drawn in each of the three years
+    - The fixed yearly rate and the share of each year every draw is outstanding
+    - Your own loan spreadsheet (optional)
+  prerequisites:
+    - The loan agreement page that says interest is added to the loan
+    - The draw schedule with dates
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The interest added in each year, the total interest and the closing debt.
+    - name: SCOPE AND SOURCES
+      contains: The reporting date, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: One row per year with opening debt, draws, interest and closing debt, plus the rollforward check.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Each material input is sourced with currency, scale, sign and period.
+  - what: A later draw
+    how: Lower the share of the year the draw is outstanding. Less interest is added that year.
+  - what: A different rate
+    how: Change the yearly rate. Interest and every later closing balance move with it.
+  - what: A bigger or smaller draw
+    how: Change that year's draw. Interest in later years changes, because the loan is larger.
 judge:
   - Each material input is sourced with currency, scale, sign and period.
   - Actual records and scenarios remain separate; missing evidence is not zero.
@@ -64,15 +120,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The loan agreement page on capitalized interest and the rate
+    - The lender's draw schedule with dates
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Capitalized interest
+    meaning: Interest that is added to the loan balance instead of being paid in cash.
+  - term: Draw
+    meaning: A payment of loan money to the project.
+  - term: Rollforward
+    meaning: A table that starts with the opening balance, adds and subtracts changes and ends with the closing balance.
+  - term: Weighted draw
+    meaning: A draw counted for only the share of the year it is outstanding.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+  - term: Illustrative figures
+    meaning: Practice numbers that show how the sums work. They are not a real loan.

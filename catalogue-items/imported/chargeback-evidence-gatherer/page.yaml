@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It matches the dispute reason to a fixed evidence list.
 new_slug: chargeback-evidence-gatherer
 name: Chargeback evidence gatherer
-summary: Tell it the dispute reason. Get what proof to collect, where to find it
-  in Shopify, and whether to accept instead.
+summary: "Get a Shopify chargeback evidence checklist for your dispute reason: what proof to collect, where to find it, and whether to accept instead."
 job: help-customers
 headline: Chargeback evidence gatherer
-subhead: Before you spend hours digging up files, you get a short checklist of
-  exactly what proof your dispute needs. Tell it the reason on the dispute, and
-  it sorts each item into have, get, check or not available, with the spot in
-  Shopify where you can find it.
+subhead: Before you spend hours digging up files, you get a short checklist of exactly what proof your dispute needs. Tell it the reason on the dispute, and it sorts each item into have, get, check or not available, with the spot in Shopify where you can find it.
 explain: |
   Before you spend hours digging up files, you get a short checklist of exactly what proof your dispute needs. Tell it the reason on the dispute, and it sorts each item into have, get, check or not available, with the spot in Shopify where you can find it.
 
@@ -19,6 +15,10 @@ when:
   - You have a deadline and need to know which files matter and which do not.
   - You wonder whether fighting is worth the fee on a small order.
   - You want to know where in the Shopify admin each record lives.
+not_for:
+  - "Your dispute is on Stripe or PayPal: use that service's own dispute guide, because this checklist follows Shopify Payments rules and admin paths."
+  - "You want the written reply to the bank: use the Chargeback Response Writer, a paid tool that drafts it from the evidence you mark as Have."
+  - "You need legal advice or a chance of winning: ask a lawyer or your payment provider, because this checklist gives neither."
 you_give:
   - The reason shown on the dispute
   - The amount and due date
@@ -32,7 +32,36 @@ you_get:
   - Items to leave out
   - What Shopify adds on its own
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in this skill's instructions, or upload the skill folder if your AI accepts files.
+  - Open the dispute in your Shopify admin. Note the reason, the amount and the due date.
+  - Paste those details and a few lines on what happened with the order. Add what proof you already hold.
+  - Read the First checks and Fight or accept parts first. Decide whether to fight.
+  - Work through the checklist. Collect every Get and Check item before the due date.
+  - "Optional: give your store link so your AI can read your policy pages. If it can't, paste the policy text instead."
+output_sample:
+  input:
+    - The reason shown on the dispute
+    - The amount and due date
+    - A rough story of the order
+    - What proof you already hold (optional)
+    - Your store URL, if you want your policies checked (optional)
+  prerequisites:
+    - A Shopify Payments dispute you can see in your Shopify admin
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+  output:
+    - name: First checks
+      contains: "Five rows: inquiry or chargeback, due date, already refunded, Shopify Protect, and whether your customer may be right."
+    - name: Fight or accept
+      contains: One line of money with the amount and fee, plus any reasons that point to accepting.
+    - name: Checklist
+      contains: Evidence grouped in Shopify's order, each marked Have, Get, Check or Not available, with where to find it and how to upload.
+    - name: Also relevant from your story
+      contains: Helpful items from your own account that are not on Shopify's list, and which listed item each supports.
+    - name: Shopify adds these automatically
+      contains: The records Shopify attaches for you that matter for this dispute reason.
+    - name: Leave out
+      contains: Evidence that answers the wrong question and could weaken your case.
+    - name: File rules
+      contains: File types, size limits and formatting Shopify accepts, and what happens when you submit.
+    - name: Next step
+      contains: The one missing item to chase first, and why it matters.

@@ -2,14 +2,10 @@ thinking: high
 thinking_why: Several linked cases need careful thought.
 new_slug: headcount-scenario-planner
 name: Headcount scenario planner
-summary: Give it your hiring plan. Get base, best and worst cases with costs,
-  and signals that say switch plans.
+summary: Plan your headcount for three futures. Give it your hiring plan and costs. You get base, best and worst cases, plus signs that say when to switch.
 job: hire-people
 headline: Headcount scenario planner
-subhead: Give it your hiring plan, cost per role and the risks you worry about.
-  It builds base, upside and downside cases with headcount and cost for each.
-  You get the three plans, trigger signals that say when to switch, and the
-  actions to take under each one.
+subhead: Give it your hiring plan, cost per role and the risks you worry about. It builds base, upside and downside cases with headcount and cost for each. You get the three plans, trigger signals that say when to switch, and the actions to take under each one.
 explain: |
   Three versions of next year's workforce, so one wrong guess does not wreck your plan. Most plans assume a single future. This one tests what happens if sales drop 20 percent, a market closes, or growth runs faster than expected.
 
@@ -19,6 +15,10 @@ when:
   - You are planning for a hiring freeze or a burst of growth.
   - You want to know in advance what signals mean it is time to change course.
   - You need to stress-test a restructure before announcing it.
+not_for:
+  - "You are budgeting for one hire: use a simple headcount budget in a spreadsheet."
+  - "You have no revenue forecast or hiring plan yet: write a basic forecast with your finance lead first."
+  - "You need a legal or consultation plan for layoffs: ask an HR lawyer or your HR lead."
 you_give:
   - Your current hiring plan and headcount
   - Cost per role or team
@@ -31,7 +31,29 @@ you_get:
   - Trigger signals to switch plans
   - Actions to take under each scenario
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your hiring plan, your cost per role and your planning timeframe.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - "Ask: Build three workforce scenarios (base, upside, downside) for your team over your timeframe, with headcount and cost for each."
+  - Name the shock you fear, such as a 20 percent revenue drop, and ask your AI to stress-test the plan.
+  - Ask for the trigger signals and the actions for each scenario. Write them down before your next review.
+  - Check the three scenarios use different assumptions, not just different growth rates.
+output_sample:
+  input:
+    - Your current hiring plan and headcount
+    - Cost per role or team
+    - The risks you worry about
+    - Your planning timeframe
+    - Your revenue targets (optional)
+  output:
+    - name: Workforce scenarios
+      contains: Base, upside and downside plans, each with headcount and cost for your timeframe.
+    - name: Key variables
+      contains: The assumptions that matter most to vary, based on your business.
+    - name: Stress test
+      contains: How your current plan holds up against a shock such as a revenue drop or hiring freeze.
+    - name: Trigger signals
+      contains: Early warning signs that tell you to move from one scenario to another.
+    - name: Scenario actions
+      contains: Steps to take under each scenario, such as pausing hiring, redeploying people or speeding up.
+    - name: Decision brief
+      contains: A one-page note on which scenario you are tracking and what it means for hiring.

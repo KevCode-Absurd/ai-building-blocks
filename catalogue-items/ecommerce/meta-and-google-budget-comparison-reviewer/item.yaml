@@ -1,17 +1,19 @@
 slug: meta-and-google-budget-comparison-reviewer
 name: Meta and Google budget comparison reviewer
-summary: Compare Meta and Google results on matched dates. Separate channel claims from store sales and propose a budget plan.
+summary: Compare Meta and Google ad results on matched dates next to your store sales, then get budget scenarios with the sums shown.
 category: ecommerce
 type: skill
 role: make
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: performance_sheet
     required: true
 outputs:
   - type: audit_report
     required: true
+  - type: plan
+    required: false
 uses: []
 package_files: all
 origin: own

@@ -1,6 +1,6 @@
 new_slug: clear-before-clever-copy-checker
 name: "Clear-before-clever copy checker"
-summary: "Paste this card above a request or draft. Get clear lines and a score out of 100."
+summary: "Check your ad copy line by line. Get each unclear line fixed, plus a score out of 100 for how many lines follow five plain-speech rules."
 job: write-ad-copy
 thinking: low
 thinking_why: "It reshapes what you give it, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - Your brand voice is playful or punchy, and your ads have started to make less sense.
   - You want a short rule card to paste above every copy request to an AI tool.
   - You're checking a draft and want a simple test for which clever lines to cut.
+not_for:
+  - You need legal, medical or pricing copy. Get a person to check those claims against an approved source first.
+  - You want a scan for AI-sounding words. Use the AI-style wording editor.
+  - You want to tighten a sales draft for persuasion. Use the Sales copy editor.
 
 you_give:
   - What to write, or the draft to check
@@ -33,6 +37,21 @@ how_to_use:
   - To check, paste your draft and write "check this".
   - Paste your voice notes and a few of your brand's own lines, if you have them.
   - Keep the card at the top of any long chat, so later requests follow it too.
+output_sample:
+  input:
+    - The request to write, or the draft to check
+    - Your voice notes and lines your brand already uses (optional)
+  output:
+    - name: Copy
+      contains: When writing, the new copy with every line passing the five rules in order.
+    - name: Failing lines
+      contains: Each line that breaks a rule, the first rule it breaks, and a corrected full line.
+    - name: LEFT ALONE
+      contains: The lines that already pass every rule, so you can see what stayed.
+    - name: MISSING
+      contains: A note that brand language was not given, so only rules 1 to 3 were applied.
+    - name: SCORE
+      contains: Passing lines over all lines, shown as a sum, as written and with the fixes.
 
 how_it_works:
   - title: Natural first

@@ -2,17 +2,27 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-duplicate-ticket-finder
 name: Gorgias duplicate ticket finder
-summary: Connect Gorgias. Get tickets about the same issue, with match reasons to check before merging.
+summary: Find duplicate tickets in Gorgias. Give it your open tickets and get groups of likely matches, with reasons, before you merge by hand.
 job: help-customers
 headline: Gorgias duplicate ticket finder
 subhead: Connect Gorgias and ask for duplicate tickets. It compares recent open tickets by customer, subject, message, date, and shared details. You get groups of likely duplicates and related issues, with reasons and suggested primary tickets for human review.
 when:
-  - You use this tool for customer support and need help with this task.
+  - Open or pending tickets pile up and you think the same customers wrote in twice.
+  - A customer sends a second message about the same problem, and you want to catch it before two agents reply.
+  - You clean the queue at the start of a shift and want to spot repeat issues fast.
+  - Many customers hit the same error, and you want to see which tickets are linked.
+not_for:
+  - "You want to merge tickets for you: do the merge by hand in Gorgias after you review the groups, because this tool never merges."
+  - "You have one ticket to review: read it in Gorgias, or ask a teammate, since this tool compares many tickets at once."
+  - "You use a help desk other than Gorgias: export the tickets to a sheet and sort by customer email and subject."
 you_give:
-  - Recent open or pending Gorgias tickets.
-  - Customer, subject, message, tags, order details, and dates.
+  - Recent open or pending Gorgias tickets (the last 50 to 100 are checked).
+  - Your Gorgias account connected through Composio CLI.
 you_get:
-  - Separate likely duplicates from related issues and explain each match. It does not merge tickets.
+  - Groups of likely duplicate tickets, each with the reason it matched.
+  - A suggested primary ticket for each group, the older one.
+  - A separate list of tickets that are only related.
+  - A count of tickets scanned and duplicate groups found.
 how_it_works:
   - title: Read recent tickets
     text: Fetch recent open and pending tickets and collect customer, subject, message, tags, and dates.
@@ -25,8 +35,22 @@ works_best_with:
     - name: Gorgias
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias duplicate ticket finder by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Recent open or pending Gorgias tickets.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Add the downloaded folder to an AI that can read skill files and run commands.
+  - Install Composio CLI. If Gorgias is not connected, run composio link gorgias when your AI asks.
+  - Ask your AI to find duplicate tickets in Gorgias, or to read SKILL.md and follow it.
+  - Read each group and its reason. Check the tickets in Gorgias before you act.
+  - Merge the tickets by hand in Gorgias. The tool never merges or sends anything.
+output_sample:
+  input:
+    - Your last 50 to 100 open or pending Gorgias tickets
+    - Customer email, subject, first message, tags and creation date for each ticket
+  prerequisites:
+    - An AI that can read skill files and run commands
+    - Composio CLI installed, with your Gorgias account connected (this may need a paid plan)
+  output:
+    - name: Strong Matches
+      contains: Groups of likely duplicates in a table, with customer, subject, age and status, plus a reason and a suggested primary ticket.
+    - name: Weak Matches
+      contains: A table of tickets that may be related, with the reason and a recommendation for each.
+    - name: Stats
+      contains: Counts of tickets scanned, duplicate groups found and estimated duplicates, plus a rough time saved by merging.

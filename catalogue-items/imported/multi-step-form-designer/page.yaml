@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It balances how much to ask at once against finishing rates.
 new_slug: multi-step-form-designer
 name: Multi-step form designer
-summary: Describe the data you must collect. Get a staged form plan with
-  progress cues, conditional questions and save-and-resume.
+summary: Plan a multi-step form that more people finish. Give it the data you need to collect. You get steps, progress labels, skip rules and save-and-resume.
 job: build-websites
 headline: Multi-step form designer
-subhead: A staged form plan that asks for less at a time, so more people finish.
-  You get the steps, the progress cues and the questions that appear only when
-  they apply.
+subhead: A staged form plan that asks for less at a time, so more people finish. You get the steps, the progress cues and the questions that appear only when they apply.
 explain: |
   A staged form plan that asks for less at a time, so more people finish. You get the steps, the progress cues and the questions that appear only when they apply.
 
@@ -18,6 +15,10 @@ when:
   - You are building an application or intake form for the first time.
   - You need to show different questions based on earlier answers.
   - People ask to come back later and finish.
+not_for:
+  - "You have a short form with 3 or 4 fields: keep it on one page and skip the steps."
+  - "You need the form built in code or a form tool: use this plan as the brief for a developer or your form builder."
+  - "You want to write the page that sits around the form: ask a copywriter or your AI for page copy instead."
 you_give:
   - The data you must collect
   - Who fills it in and why
@@ -30,7 +31,30 @@ you_get:
   - A save and resume design
   - An audit of what to cut
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - List every field you must collect. Say who fills in the form and why.
+  - Add your current form and completion rate if you have them (optional).
+  - Mark any field that law or your process requires, so your AI does not cut it.
+  - Read the plan. Check that each step feels like one clear task.
+  - Build the form in your form tool, then track where people drop off and adjust.
+output_sample:
+  input:
+    - The data you must collect
+    - Who fills in the form and why
+    - Your current form and completion rate (optional)
+    - Fields that law or your process requires
+  output:
+    - name: Steps or single page
+      contains: A decision on whether your form needs steps at all, with the reasons.
+    - name: Step architecture
+      contains: Which fields go on each step, in an order that puts easy questions first.
+    - name: Progress indicator
+      contains: The kind of progress cue to use and a label for each step.
+    - name: Conditional logic
+      contains: Rules that show, hide or skip questions based on earlier answers.
+    - name: Save-and-resume
+      contains: How people leave and come back, and how to tell them their answers are safe.
+    - name: Validation strategy
+      contains: When to check answers and how to word error messages.
+    - name: Drop-off tracking
+      contains: What to measure at each step and how to fix common drop-off points.

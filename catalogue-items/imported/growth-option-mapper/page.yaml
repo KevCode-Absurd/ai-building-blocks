@@ -2,28 +2,23 @@ thinking: medium
 thinking_why: It must judge fit and risk for each path.
 new_slug: growth-option-mapper
 name: Growth option mapper
-summary: Describe your business. Get four growth paths mapped, from selling more
-  to new markets, with risks.
+summary: Map four ways to grow your business, from selling more to new markets, with risk and timing for each. A simple growth strategy options tool.
 job: plan-strategy
 headline: Growth option mapper
-subhead: "Describe what you sell, who buys it, your growth target and what
-  limits you. It lays out four growth paths on a two by two grid: sell more to
-  current buyers, reach new buyers, add products, or do both. You get specific
-  moves for each path, a risk level and timeline, and a ranked pick with a first
-  step."
+subhead: "Describe what you sell, who buys it, your growth target and what limits you. It lays out four growth paths on a two by two grid: sell more to current buyers, reach new buyers, add products, or do both. You get specific moves for each path, a risk level and timeline, and a ranked pick with a first step."
 explain: |
   Four growth paths for your business, each with ideas, a risk level and a rough timeline, laid out side by side so you can pick where to put your effort. This uses the Ansoff Matrix, a two by two grid that crosses your products with your markets.
 
   The four boxes are: sell more of what you have to the people you already serve, sell the same thing to new people or places, build something new for current customers, and build something new for new customers. For each one you get specific moves, the risks, how long it usually takes, and what you would need to be good at. It ends with a ranking and a first step.
 when:
-  - You have grown as far as your current offer allows and need to choose the
-    next direction.
-  - You are weighing a new country, a new customer group or a new product and
-    want the risks side by side.
-  - You need a simple growth framework to explain your plan to a partner or a
-    board.
-  - Your sales are flat and you want to see which growth path is least risky
-    first.
+  - You have grown as far as your current offer allows and need to choose the next direction.
+  - You are weighing a new country, a new customer group or a new product and want the risks side by side.
+  - You need a simple growth framework to explain your plan to a partner or a board.
+  - Your sales are flat and you want to see which growth path is least risky first.
+not_for:
+  - "Your sales are falling because of a product or delivery fault: fix that first, then come back to this."
+  - "You want to understand why customers leave or how to price: use a pricing review or a customer retention review instead."
+  - "You need a detailed financial forecast or budget: ask your accountant or build a simple spreadsheet."
 you_give:
   - What you sell now and who buys it
   - Current sales and market share, if you know them
@@ -36,7 +31,29 @@ you_get:
   - A risk level and timeline for each path
   - A ranked recommendation with a first step
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Add what you sell, who buys it, your growth target and what limits you. Add sales and competitor notes if you have them.
+  - Read the four boxes and check each move fits your real business.
+  - Look at the ranked list and start with the first step it suggests.
+  - Run it again once a year, or when your market changes.
+output_sample:
+  input:
+    - What you sell now and who buys it
+    - Your current sales and market share, if you know them
+    - Your growth target and timeframe
+    - What you are good at and what limits you
+    - Notes on your competitors (optional)
+  output:
+    - name: Current market and product
+      contains: A short statement of what you sell now and who buys it.
+    - name: Ansoff Matrix grid
+      contains: "Four boxes: selling more to current buyers, reaching new buyers, adding products, or doing both."
+    - name: Opportunities per box
+      contains: Two or three specific moves for each path, with market size, resources needed and success measures.
+    - name: Risk and timeline
+      contains: A risk level and a rough timeline for each of the four paths.
+    - name: Ranked priorities
+      contains: Your options ordered by fit, revenue potential, effort, advantage and time to profit.
+    - name: Go-to-market plan and roadmap
+      contains: A plan for the top two or three moves, with phases, milestones, risks and fixes.

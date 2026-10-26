@@ -16,12 +16,12 @@ outputs:
   - {type: objection_map}
 uses: [lead-grader, root-cause-finder, pitch-revision-log, objection-answer-sheet-writer, product-differentiation-checker, mistake-to-principle-writer]
 steps:
-  - {uses: lead-grader, note: "Every month, first: each lost deal graded A, B or C by how soon the buyer needed to act, so a C that was never going to close is not read as a lesson."}
-  - {uses: root-cause-finder, note: "Every month, for the A and B losses: a chain of whys checked against the notes, ending in the fixable cause, not the reason the buyer gave."}
-  - {uses: pitch-revision-log, note: "Every month: the doubts behind the losses ranked, the pitch revised, and the next advice question to ask the next buyer."}
-  - {uses: objection-answer-sheet-writer, note: "Only when a doubt appeared in three or more losses: an answer with proof, added to the sheet."}
-  - {uses: product-differentiation-checker, note: "Once a quarter: from the quarter's won and lost deals, whether the edge is real and which claims buyers chose you for."}
-  - {uses: mistake-to-principle-writer, note: "Only when a loss came from the seller's own mistake, such as a late proposal or a wrong price: the root cause and a rule."}
+  - {uses: lead-grader, note: "Every month, first: each lost deal graded A, B or C by how soon the buyer needed to act, so a C that was never going to close is not read as a lesson. Passes on the A and B losses for a root cause."}
+  - {uses: root-cause-finder, note: "Every month, for the A and B losses: a chain of whys checked against the notes, ending in the fixable cause, not the reason the buyer gave. Uses the A and B losses from step 1 with your notes and the buyer's words. Passes on the cause for each loss."}
+  - {uses: pitch-revision-log, note: "Every month: the doubts behind the losses ranked, the pitch revised, and the next advice question to ask the next buyer. Uses your current pitch and each no in the buyer's words, with the causes from step 2. Passes on the ranked doubts."}
+  - {uses: objection-answer-sheet-writer, note: "Only when a doubt appeared in three or more losses: an answer with proof, added to the sheet. Uses the ranked doubts from step 3 and your own proof. Passes on each answer with its proof."}
+  - {uses: product-differentiation-checker, note: "Once a quarter: from the quarter's won and lost deals, whether the edge is real and which claims buyers chose you for. Uses your product facts and the quarter's won and lost deals, not the answer sheet. Passes on the verdict on your edge."}
+  - {uses: mistake-to-principle-writer, note: "Only when a loss came from the seller's own mistake, such as a late proposal or a wrong price: the root cause and a rule. Uses your account of the mistake and what happened, not step 5's verdict. Passes on a rule to check next time."}
 schedule: "On the first Monday of each month, after last month's deals are closed out"
 asks_before: [contacting any lost buyer, changing the live pitch, pricing or offer, sending the revised pitch to the team, sharing deal notes outside the sales team, marking a reason as the official one in the CRM]
 minds: [melanie-perkins]

@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It picks a filter type and checks its response.
 new_slug: digital-filter-designer
 name: Digital filter designer
-summary: Say what to clean from a signal. Get a filter designed, checked and applied.
+summary: Design a digital filter in MATLAB to remove hum or noise from your signal. You get the design, a check against your spec, and the filtered data.
 job: build-software
 headline: Digital filter designer
-subhead: A digital filter that removes the noise or interference you named,
-  designed, checked and applied to your signal in MATLAB. You also get the
-  reasoning behind each choice.
+subhead: A digital filter that removes the noise or interference you named, designed, checked and applied to your signal in MATLAB. You also get the reasoning behind each choice.
 explain: |
   A digital filter that removes the noise or interference you named, designed, checked and applied to your signal in MATLAB. You also get the reasoning behind each choice.
 
   It covers lowpass, highpass, bandpass, bandstop and notch filters. The skill decides between FIR and IIR designs, and between streaming and offline use. If those or the phase needs are not stated, it asks and does not guess. It writes all code to .m files, and reads its reference notes before every design call. For narrow transition bands it can switch to multirate or IFIR methods. You can compare candidates in Filter Analyzer. It needs MATLAB with Signal Processing Toolbox and DSP System Toolbox.
 when:
   - Your sensor data has a 50 or 60 Hz hum you need to remove.
-  - You must choose between an FIR and an IIR filter and want the trade-offs
-    explained.
+  - You must choose between an FIR and an IIR filter and want the trade-offs explained.
   - A real-time pipeline needs a filter that works on streaming data.
   - You need a sharp cutoff between two close frequencies.
+not_for:
+  - "You need an adaptive filter that changes as the signal changes: use the Signal Processing Toolbox docs for LMS or RLS filters."
+  - "You want audio tuning such as equalization or room correction: use Audio Toolbox."
+  - "You want to filter an image or find the main frequencies in a signal: use Image Processing Toolbox, or a plain FFT or spectrum plot."
 you_give:
   - Your signal or its sample rate
   - The frequencies to keep and to remove
@@ -31,8 +32,34 @@ you_get:
   - Plots that show the response
   - The filter applied to your data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Signal Processing Toolbox.
+  - Open an AI that can run MATLAB code. The skill needs MATLAB with Signal Processing Toolbox and DSP System Toolbox.
+  - Paste the skill text, or upload the skill folder if your AI accepts files.
+  - Give your sample rate in Hz, the filter type, and the frequencies to keep and to remove. Add your signal data if you have it.
+  - Answer its questions about streaming or offline use and phase. It will not guess these.
+  - Check the verification numbers and plots against your targets before you use the filter.
+  - To use the filter on live data, ask your AI to move the chosen design into a streaming pipeline.
+output_sample:
+  input:
+    - Your signal data, or its sample rate in Hz
+    - "The type of filter: lowpass, highpass, bandpass, bandstop or notch"
+    - The edge frequencies in Hz, for what to keep and what to remove
+    - Streaming or offline use, and your phase needs
+    - Passband ripple and stopband attenuation targets (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with Signal Processing Toolbox and DSP System Toolbox
+  output:
+    - name: Specs recap
+      contains: Your sample rate, filter type, edge frequencies and ripple and attenuation targets, as the AI understood them.
+    - name: Derived metrics
+      contains: The transition width as a share of the sample rate, which guides the choice of design.
+    - name: Chosen architecture and why
+      contains: The filter type picked, such as FIR or IIR, with the reason and the families it ruled out.
+    - name: MATLAB code (.m files)
+      contains: The design code written to files, using your sample rate, ready to run and edit.
+    - name: Verification results
+      contains: Worst-case passband ripple and stopband attenuation measured against your targets.
+    - name: Filter Analyzer comparison
+      contains: Magnitude and group delay plots that compare two or more candidate designs.
+    - name: Implementation form
+      contains: How to run the filter, such as stable second-order sections or a streaming object.

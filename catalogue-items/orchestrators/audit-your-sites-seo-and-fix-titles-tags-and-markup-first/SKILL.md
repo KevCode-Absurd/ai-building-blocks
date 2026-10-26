@@ -39,11 +39,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Audit the site.** Use the skill `seo-site-auditor`. The site as a whole: structure, what is indexed, duplicate pages, what ranks today and the problems ranked by how much they block ranking.
-2. **Audit the technical side.** Use the skill `technical-seo-auditor`. Give it the site audit. Speed, crawl errors, mobile, redirects, sitemaps and robots rules, with each fix in the order that pays.
-3. **Tune each key page.** Use the skill `on-page-seo-tuner`. Give it the audits and your key pages. Each key page's headings, content, images and links reviewed against its target search, with the fixes written out.
-4. **Write titles and descriptions.** Use the skill `title-and-meta-tag-writer`. Give it the tuned pages and your voice. A title and meta description for each key page, in your voice, within the length limits, each saying what the page gives the searcher.
-5. **Write the schema markup.** Use the skill `schema-markup-writer`. Give it the key pages. Schema markup for your main page types (product, article, organisation, FAQ) as code ready to paste, with what each piece tells search engines. You approve before it goes live.
+1. **Audit the site.** Use the skill `seo-site-auditor`. The site as a whole: structure, what is indexed, duplicate pages, what ranks today and the problems ranked by how much they block ranking. Hands steps 2 and 3 the ranked problems.
+2. **Audit the technical side.** Use the skill `technical-seo-auditor`. Give it the site audit. Speed, crawl errors, mobile, redirects, sitemaps and robots rules, with each fix in the order that pays. Uses your site and step 1's ranked problems as the starting list. Hands step 3 the technical fixes.
+3. **Tune each key page.** Use the skill `on-page-seo-tuner`. Give it the audits and your key pages. Each key page's headings, content, images and links reviewed against its target search, with the fixes written out. Uses both audits and your key pages. Hands step 4 the target search and the page fixes for each page.
+4. **Write titles and descriptions.** Use the skill `title-and-meta-tag-writer`. Give it the tuned pages and your voice. A title and meta description for each key page, in your voice, within the length limits, each saying what the page gives the searcher. Uses step 3's page fixes and target searches. Hands step 5 the final title for each page.
+5. **Write the schema markup.** Use the skill `schema-markup-writer`. Give it the key pages. Schema markup for your main page types (product, article, organisation, FAQ) as code ready to paste, with what each piece tells search engines. Uses your key pages and the markup gaps found in steps 1 to 3. You approve before it goes live.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

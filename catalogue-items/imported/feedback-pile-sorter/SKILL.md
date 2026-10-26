@@ -22,6 +22,56 @@ When to use this skill: building a feedback aggregation system, auditing a feedb
 
 ---
 
+## Run it on your feedback
+
+Use this section when the user pastes or uploads feedback and wants a ranked read. The sections below are the method and the reasons. Read the reference files only when you need detail on one idea.
+
+**What you need.** Ask once for anything missing. Never invent it.
+
+- Feedback from one or more channels, as pasted text or files: support tickets, NPS or survey comments, in-app feedback, sales call notes, social mentions, council notes. Note the channel of each file.
+- The decision the user is making, such as "what to build next quarter". If there is none, say "no decision given: general ranking" at the top and rank by frequency and intensity only.
+- The customer segment or plan for each item (optional). If it is missing, mark segment as MISSING. Do not guess it.
+
+**Steps.**
+
+1. List each channel, how many items it gave, and its main bias (see the channel section).
+2. Tag each item with feature area, issue type and channel. Let the tags come from the feedback.
+3. Group items into themes. Count items per theme, and per channel and segment where known.
+4. Weight each theme for the decision: which channels matter most for it, how often it appears, and how strong the feeling is. Say why in one line. Use High, Medium or Low. Do not invent a numeric score.
+5. Mark themes that appear in more than one channel. Those are stronger than a theme from one channel.
+6. Pick the top actions. Tie each action to a theme and say which decision it feeds.
+
+**Output.** Use this layout.
+
+```
+# Feedback ranked for: <decision or "general ranking">
+
+## Sources
+| Channel | Items | Main bias |
+
+## Ranked themes
+| Rank | Theme | Weight (H/M/L) and why | Items | Channels | Segments | Example quote |
+
+## What to act on
+1. <action> (theme <n>, decision <name>)
+
+## Weak or noisy channels
+<channel>: <why its signal is weak>
+
+## Missing
+<anything you lacked, marked MISSING>
+```
+
+**Guard rails.**
+
+- Counts come only from the items given. Say "n items" and never claim a share of all customers.
+- Copy quotes exactly from the source. If an item has no usable quote, write "none".
+- With fewer than about 20 items in total, say the sample is small and call the result a first read, not a pattern.
+- A loud customer is one item, however long the message. Say when one account is behind a theme.
+- Do not turn a theme into a promise to customers. Closing the loop is for things that shipped.
+
+---
+
 ## What this skill is for
 
 This skill spans continuous user-feedback aggregation. The PM-skill distinction:

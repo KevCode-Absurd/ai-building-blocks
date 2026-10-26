@@ -1,53 +1,113 @@
 new_slug: debt-cash-sweep-checker
 name: Debt cash sweep checker
 headline: Debt cash sweep checker
-summary: Bound a contractual excess-cash sweep by available cash and remaining eligible debt.
+summary: Check a loan cash sweep. Get the repayment owed, what your cash allows, ending cash, ending debt and any amount left unpaid.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Bounded sweep, ending cash, ending debt and unswept contractual amount. Share approved excess-cash-flow amount, sweep percentage, actual prepayment cash, minimum cash reserve and eligible debt balance.
+subhead: Give it the excess cash flow your lender has confirmed, the sweep percentage in the loan, your cash on hand, your minimum cash and the debt that can be repaid. It works out the repayment the loan asks for, the repayment your cash allows, and what is left over on each side.
 explain: |-
-  Bounded sweep, ending cash, ending debt and unswept contractual amount.
+  Many loans have a cash sweep. After each year, the borrower must use a set share of its excess cash flow to repay debt early. The share is a percentage in the loan agreement. But the borrower may also have to keep a minimum amount of cash. So the amount that must be repaid and the amount that can be repaid can differ.
 
-  Private equity debt paydown. Illustrative figures only. ECF15 at50% implies7.5 sweep. Cash30 with floor10 permits it; cash12 limits payment to2 and leaves5.5 unpaid.
+  This debt cash sweep checker puts those two numbers side by side. The sweep the loan asks for is the excess cash flow times the sweep percentage. The cash available is what you hold above your minimum. The repayment is the smallest of three amounts: the sweep owed, the cash available and the debt that can still be repaid. Anything the cash cannot cover is shown as unpaid, so a shortfall is never hidden.
+
+  It never adds excess cash flow to cash that already includes it, because that would count the same money twice. It does not give a payment instruction or say whether you meet any loan test.
 when:
-  - You need bounded sweep, ending cash, ending debt and unswept contractual amount.
-  - You work on private equity debt paydown and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your lender has confirmed the year's excess cash flow and you need the sweep payment worked out.
+  - Cash is tight and you want to see how much of the sweep you can pay and how much stays unpaid.
+  - You are building the next year of a loan model and need ending cash and ending debt.
+  - A reviewer wants the sweep traced back to the loan terms.
+not_for:
+  - You want to work out excess cash flow itself. This takes a confirmed figure and does not build one.
+  - The loan has several debt tranches that are repaid in an order, or required repayments on a schedule. Use the Project payment waterfall builder for order of payment.
+  - You want to test a loan limit after the sweep, such as debt service cover. Use the Debt service covenant headroom checker.
+  - You want a full cash forecast. This is one year and one tier only.
 you_give:
-  - Approved excess-cash-flow amount, sweep percentage, actual prepayment cash, minimum cash reserve and eligible debt balance.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The excess cash flow your lender has confirmed (from the compliance certificate or the loan agreement's definition)
+  - The sweep percentage (from the loan agreement)
+  - Your cash on hand before the sweep, already including this year's cash (from your accounts)
+  - Your minimum cash, if the loan requires one (from the loan agreement)
+  - The debt balance that can be repaid early (from the lender's statement)
+  - The currency and the units, such as USD in millions
+  - Your own loan spreadsheet (optional)
 you_get:
-  - Bounded sweep, ending cash, ending debt and unswept contractual amount.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The sweep the loan asks for
+  - The repayment your cash allows, which is the smallest of the three limits
+  - Ending cash and ending debt after that repayment
+  - Any sweep left unpaid, shown on its own line
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the five figures and say where each came from. Give the currency and units. Write the sweep percentage as a number, such as 50%.
+  - Say whether your cash figure already includes this year's cash flow. It should, and the skill will ask if it is unclear.
+  - "Check one line yourself: the sweep owed is the excess cash flow times the percentage. For 15 at 50% that is 7.5."
+  - Read the unpaid line, MISSING and CHECKS MISSED before you use any figure. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Read excess-cash-flow definition, sweep applicability and any permitted deductions before taking a certified ECF number
-    text: Read excess-cash-flow definition, sweep applicability and any permitted deductions before taking a certified ECF number.
-  - title: 2. Multiply eligible ECF by the sweep fraction; separately calculate available cash above the approved minimum
-    text: Multiply eligible ECF by the sweep fraction; separately calculate available cash above the approved minimum.
-  - title: 3. Pay down only the smallest of contractual sweep, available cash and eligible debt; reconcile remaining cash, debt and unpaid required sweep
-    text: Pay down only the smallest of contractual sweep, available cash and eligible debt; reconcile remaining cash, debt and unpaid required sweep.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units, and keeps loan terms apart from your assumptions.
+  - title: Reads the sweep terms
+    text: Takes the confirmed excess cash flow and the sweep percentage. It does not build the excess cash flow figure.
+  - title: Works out the sweep owed
+    text: Multiplies the confirmed excess cash flow by the sweep percentage.
+  - title: Finds the cash available
+    text: Takes your minimum cash off your cash on hand. A negative result counts as zero available, and is shown.
+  - title: Sets the repayment
+    text: Pays the smallest of the sweep owed, the cash available and the debt that can be repaid.
+  - title: Ties the balances
+    text: Ending cash is cash less the repayment. Ending debt is debt less the repayment. Unpaid sweep is the sweep owed less the repayment.
 output_shape: |-
-  Bounded sweep, ending cash, ending debt and unswept contractual amount.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Sweep owed <amount> | Repayment made <amount> | Ending cash <amount> | Ending debt <amount> | Unpaid sweep <amount>
+
+  SCOPE AND SOURCES
+  <currency, units; source and date for each input; the loan clause that sets the sweep>
+
+  INPUTS AND ASSUMPTIONS
+  <excess cash flow, sweep percentage, cash before sweep, minimum cash, eligible debt>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <each sum with its figures; repayment is the smallest of the three limits; balances tie>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The excess cash flow your lender has confirmed
+    - The sweep percentage and your minimum cash
+    - Your cash on hand before the sweep
+    - The debt balance that can be repaid early
+  prerequisites:
+    - The loan agreement page that sets the sweep and the minimum cash
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Sweep owed, repayment made, ending cash, ending debt and any unpaid sweep.
+    - name: SCOPE AND SOURCES
+      contains: The currency and units, with the source and date of each input and the loan clause behind the sweep.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each figure you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Each sum shown, which of the three limits set the repayment, and the balance ties.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
   - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Do not add ECF again to cash that already includes the period generation.
+    how: Use the same currency and units for every figure. Say them once at the start.
+  - what: Cash definition
+    how: Say which cash counts toward your minimum, such as only unrestricted cash, so the cash figure is the right one.
+  - what: Waivers
+    how: If the lender has waived or reduced the sweep, give the waiver and its date. The skill will not assume one.
 judge:
   - Do not add ECF again to cash that already includes the period generation.
   - Insufficient cash or debt allocation authority remains a visible gap, not assumed waiver.
@@ -62,15 +122,25 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The compliance certificate with the excess cash flow
+    - The page of the loan agreement that sets the sweep percentage and minimum cash
+    - The lender's statement of the debt balance
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Cash sweep
+    meaning: A loan rule that sends a share of the year's spare cash to repay debt early.
+  - term: Excess cash flow
+    meaning: The spare cash left after the costs the loan agreement allows. The agreement defines it, and the lender confirms it.
+  - term: Minimum cash
+    meaning: The least cash the borrower must keep, so it cannot be used for the sweep.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+  - term: Illustrative figures
+    meaning: Practice numbers that show how the sums work. They are not a real loan.

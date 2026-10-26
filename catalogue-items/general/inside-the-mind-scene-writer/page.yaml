@@ -1,6 +1,6 @@
 new_slug: inside-the-mind-scene-writer
 name: "Inside-the-mind scene writer"
-summary: "Paste a character and a small errand. Get a scene told from inside their head, with time marked."
+summary: "Write a scene from inside a character's head. Give it a person and a small errand. You get a draft with time marked and a note on what was cut."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It makes many small choices about order and detail, but the shape of the scene is fixed."
@@ -17,6 +17,10 @@ when:
   - Your scene is accurate but flat, and you want the reader inside the character.
   - You are writing a customer story or portrait and want to show a day, not list events.
   - You have a lot of plot and want one quiet scene that makes a character real.
+not_for:
+  - "You need a plot-driven scene where events push the story forward: write the plot beats first, then come back to add inner life."
+  - "You need a report, a case study with exact facts or a product description: write it plainly yourself or ask your AI for a straight summary."
+  - "You already have a scene and only want it trimmed: ask your AI for a line edit instead."
 
 you_give:
   - A character, with age, work and one thing that is on their mind
@@ -33,6 +37,26 @@ how_to_use:
   - Say one thing the character is quietly worried about or remembering (optional).
   - Read the scene aloud. Mark any line that sounds like the writer talking, not the character.
   - Ask for a second version with a different time marker, such as a bell instead of a clock.
+output_sample:
+  input:
+    - A character, with age, work and one thing on their mind
+    - One small errand on one day
+    - Your brand file with voice notes (optional)
+  output:
+    - name: Who and what
+      contains: The character, the one errand, and the day and place.
+    - name: What is noticed, in order
+      contains: A list of 10 to 15 small and sharp details, in the order they reach the mind.
+    - name: Scene
+      contains: The scene told from inside the character's head, with a memory that comes and goes.
+    - name: Time markers
+      contains: Where each clock, bell or change of light appears and what it is.
+    - name: Cut and why
+      contains: The plot links removed because they only pushed a story along.
+    - name: Missing
+      contains: Details you did not give that would make the scene truer.
+    - name: Checks missed
+      contains: One line for each check the scene failed, or none.
 
 how_it_works:
   - title: Picks one errand

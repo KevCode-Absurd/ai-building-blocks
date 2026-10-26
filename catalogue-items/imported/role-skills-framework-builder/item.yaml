@@ -1,6 +1,6 @@
 slug: role-skills-framework-builder
 name: Role skills framework builder
-summary: Name your roles. Get the key skills for each, what good looks like at each level, and matching interview questions.
+summary: "Build a skills framework for your roles: key skills, what good looks like at each level, and interview questions with scoring guides."
 category: general
 boards: []
 type: skill
@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: document
 uses: []

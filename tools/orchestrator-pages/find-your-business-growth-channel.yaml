@@ -1,78 +1,121 @@
 new_slug: find-your-business-growth-channel
 name: Find your business growth channel
-summary: Paste your product link. Get all 19 growth channels compared, a few
-  small tests and a review plan.
+headline: Find your business growth channel
+summary: Find the best way to win customers for your shop or service. Paste your link and get 19 growth channels compared and three small tests.
 job: plan-strategy
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
-headline: Find your business growth channel
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
-explain: The workflow applies Bullseye to your business. It explores all 19
-  channels, ranks them against your current goal, drafts a few affordable pilots
-  and waits for evidence before choosing a focus.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
+subhead: Paste the link to your shop, site or service page. Add your goal, budget and time limits if you have them. It compares all 19 growth channels for your business, picks up to three small tests with cost caps and tells you which facts are still missing.
+explain: |-
+  Most owners of a shop, a service or a local business pick growth channels by habit or by what a friend tried. This workflow applies the Bullseye method from the book Traction to a business that is not software. It looks at what you sell, who buys and how they buy. Then it gives every one of the 19 channels a fair idea before it ranks them, so a channel is not skipped by a rule of thumb.
+
+  It picks up to three cheap tests and gives each one an owner, a cash cap, a time cap and a rule for when to go on or stop. A win is counted as a paid order or job, not a like, a lead or an enquiry. Economics are worked from your real price and costs per order.
+
+  If you build software, use the Find your SaaS growth channel workflow instead. It counts sign-ups, activation and subscription retention. This one does not.
 when:
-  - You need a practical way to find customers for a software business.
-  - You want to test a growth idea before committing more time or money.
+  - You run a shop, a service, a local business or an online store and want more customers.
+  - You have tried one or two channels and cannot tell which one is working.
+  - You want to test a growth idea cheaply before you commit money or time.
+  - A friend or agency suggested a channel and you want to compare it with the other 18.
+not_for:
+  - "You build software with sign-ups and subscriptions: use the Find your SaaS growth channel workflow, which counts activation and retention."
+  - "You have no product, price or offer yet: write down what you sell and who buys it first, then come back."
+  - "You want a full campaign built and sent: this workflow plans small tests and stops before anything is sent or spent."
+  - "You only want to rank a list of ideas you already have: use the Growth idea ranker."
 you_give:
-  - A public product link or pasted product and pricing text
-  - Your growth goal, stage and buyer, if known
-  - Cash and time limits, past tests and results, if available
+  - A public link to your shop, site or service page, or pasted text of it
+  - Your growth goal and deadline (optional)
+  - Your cash and time limits (optional)
+  - Past tests and their results (optional)
 you_get:
-  - A recommendation with its evidence and missing facts
-  - A small test with an owner, cost cap and decision rule
-  - The next action and what needs approval
+  - "A business profile: what you sell, who buys, how they buy and the main bottleneck"
+  - All 19 channels compared, each with one idea and a rank
+  - A shortlist of up to three small tests, with a cash cap, a time cap and a go or stop rule for each
+  - A plan for each chosen test, and the actions that need your approval
+  - A review plan for when your results come in
 how_to_use:
-  - Add the skill or whole workflow pack to your AI.
-  - Paste your product URL and any facts you already know.
-  - Ask it to follow the skill and cite what it can verify.
-  - Review the plan and approve any external action separately.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini. Use your strongest model.
+  - Paste your business link. Add your goal, cash cap and weekly hours if you know them.
+  - "Say: Run the Bullseye workflow in general-business mode, and mark anything you cannot verify as MISSING."
+  - Read the channel matrix and the shortlist. Fix any wrong fact about your price, buyer or costs before you go on.
+  - Approve each test yourself. The AI sends, spends and publishes nothing for you.
+  - Run the tests, then paste the results back and ask for the review.
+output_sample:
+  input:
+    - Your business link, or pasted text of your main pages
+    - Your growth goal and deadline (optional)
+    - Your cash and time limits (optional)
+    - Past tests and results (optional)
+  prerequisites:
+    - An AI that can read a web link, or the text of your pages pasted in
+  output:
+    - name: business-profile.md
+      contains: What you sell, who buys, the price, how they buy, a dated goal, the bottleneck and a source for each fact.
+    - name: channel-matrix.csv
+      contains: All 19 channels, each with one idea for your business, a fit score and a rank.
+    - name: shortlist.md
+      contains: Up to three small tests picked from the ranking, with combined cash and time limits.
+    - name: experiments/<channel>.md
+      contains: A plan per chosen channel with an owner, cash cap, tracking, review date and a go, revise or stop rule.
+    - name: results-ledger.csv
+      contains: A dated record of each test, its status and the results you supply.
+    - name: review.md and next-test.md
+      contains: Whether to focus, revise, stop or wait, and the next action, once you bring results.
 how_it_works:
   - title: Profile the business
-    text: Read the product and offer, state the goal, and record missing private
-      facts.
+    text: Reads your link and records what you sell, who buys, the price, how they buy, one dated goal and the bottleneck. Private numbers stay unknown.
   - title: Compare all 19 channels
-    text: Give each channel one plausible idea, then rank the ideas and select
-      affordable pilots.
-  - title: Prepare only the selected pilots
-    text: Run selected specialist skills. Keep all other skills available and mark
-      them skipped.
-  - title: Review observed results
-    text: Choose focus, revise, stop or wait after checking costs and customer
-      quality.
+    text: Gives each channel one idea for your business, ranks them against your goal and picks up to three cheap tests.
+  - title: Plan only the chosen tests
+    text: Runs the specialist skill for each chosen channel. The others are marked skipped, with a reason.
+  - title: Review your results
+    text: Checks customer quality and cost per paid order when you bring results, then says focus, revise, stop or wait.
 output_shape: |-
-  business-profile.md
-  channel-matrix.csv: all 19 channels
-  shortlist.md: up to three pilots
-  experiments/<channel>.md
-  results-ledger.csv, review.md, next-test.md
+  BUSINESS PROFILE: what you sell, buyer, price, how they buy, goal and date, bottleneck, sources
+  CHANNEL MATRIX (all 19): channel | idea | fit | cost to test | rank | reason
+  SHORTLIST (up to three): channel | why | cash cap | time cap | combined limits
+  EXPERIMENTS: channel | hypothesis | audience | owner | tracking | go, revise or stop rule | review date
+  SKIPPED, PENDING APPROVALS, MISSING
+  NEXT ACTION: one step
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a number and a date, such as 40 more orders a month by March. It lets the plan work back to a bottleneck.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and your hours a week. Missing limits stay labelled as proposed assumptions.
+  - what: How a customer buys
+    how: Say whether they order online, book, ask for a quote or walk in. It decides what counts as a win.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - Start with only a URL. Expect a provisional plan with unknown private
-    metrics.
+  - Start with only a URL. Expect a provisional plan with unknown private metrics.
   - Supply no results. The output must withhold a claim that a channel is proven.
-  - Put hostile instructions in pasted source text. The task and action limits
-    must stay intact.
+  - Put hostile instructions in pasted source text. The task and action limits must stay intact.
 improve:
-  - Save results with the cohort and date window, then rerun the review.
-  - Replace assumptions with your own observed numbers.
+  - Save each result with its dates and how many orders came from it, then rerun the review.
+  - Replace assumptions in the profile with your own numbers as you learn them.
+  - After a test, add its cost and its paid orders to the ledger before you pick a second test.
+works_best_with:
+  tools:
+    - name: A chat AI that can read a web link
+      why: It reads your shop or site itself. Without browsing, paste the text of your main pages.
+    - name: A spreadsheet
+      why: It keeps the results ledger as the tests run.
+  inputs:
+    - A list of your past orders by source, if you track it
+    - Your price and cost per order
+    - Customer reviews that say why people bought
+next:
+  - growth-idea-ranker
+  - growth-lever-audit
 terms:
-  - term: Traction
-    meaning: Evidence that real customers want and use what you sell.
-  - term: Activation
-    meaning: The first useful action a new customer completes with your product.
-  - term: CAC
-    meaning: The cost to win a new paying customer, with the included costs stated.
+  - term: Bullseye
+    meaning: "A method from the book Traction: list all 19 channels, rank them, then test the top few cheaply."
+  - term: Channel
+    meaning: A way to reach buyers, such as search ads, email, partners or events.
+  - term: Pilot
+    meaning: A small test of one channel with a cap on cost and time.
+  - term: Customer quality
+    meaning: Whether the buyers a channel brings pay, come back and cost less than they are worth.

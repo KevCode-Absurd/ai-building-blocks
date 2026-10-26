@@ -1,28 +1,68 @@
 new_slug: seventeen-section-advertising-report-writer
 name: Seventeen-section advertising report writer
-summary: Build a seventeen-section ad report from dated results. Explain changes, supported wins, open issues and who owns the next steps.
+summary: Turn your Meta, Google Ads and Shopify results into a 17-section monthly ad performance report with wins, fixes and next steps.
 job: read-ad-results
 headline: Seventeen-section advertising report writer
-subhead: Share current and prior period ad exports, store results, targets and client context. Get a seventeen-section client report with owned next actions.
+subhead: Paste your ad and store results for this month and last month. Your AI works out the key numbers and writes a 17-section report. It ends with a short summary and next steps.
 explain: |-
   Build a seventeen-section ad report from dated results. Explain changes, supported wins, open issues and who owns the next steps.
 
   Share current and prior period ad exports, store results, targets and client context. Get a seventeen-section client report with owned next actions.
 when:
-  - You need a seventeen-section client report with owned next actions.
-  - You need seventeen-section advertising report writer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - It is the end of the month and a client or boss wants a report.
+  - You run Meta and Google ads for a Shopify store and need one view.
+  - You want to explain why results moved, with numbers.
+  - You need clear next steps with this week, month and quarter actions.
+not_for:
+  - "You want a quick check on one campaign: ask your AI for a simple pacing check on that campaign instead."
+  - "You have no export from the month before: get last month's numbers first, or the report cannot show changes."
+  - "You need to change ads or budgets inside the ad platform: do that in Meta Ads Manager or Google Ads yourself."
 you_give:
-  - Current and prior period ad exports
-  - Store results
-  - Targets and client context
+  - "Meta Ads export: spend, revenue, impressions, clicks and purchases, plus top campaigns and creatives"
+  - "Google Ads export: spend, revenue, impressions, clicks and conversions, plus campaign types"
+  - "Shopify results: total revenue, orders, new customers, returning customers and average order value"
+  - The same exports for last month
+  - The same month last year (optional)
+  - Client name and next month's targets (optional)
 you_get:
-  - A seventeen-section client report with owned next actions
-  - The sources used, missing inputs and assumptions
+  - A 17-section monthly report written for a marketing director
+  - Key numbers with change versus last month and last year
+  - Four wins and four areas to fix, each with proof
+  - A nine-bullet executive summary
+  - Next steps for this week, month and quarter
+  - A list of missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Export last month's and this month's results from Meta, Google Ads and Shopify.
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your tables. No code or paid tool is needed.
+  - Say which client and month the report covers, and add targets if you have them.
+  - Check each number and the math against your exports. Fix anything marked as missing.
+  - Share the report once the wins and fixes match what you know about the account.
+output_sample:
+  input:
+    - Meta Ads export for this month and last month
+    - Google Ads export for this month and last month
+    - Shopify revenue, orders and customer counts
+    - Same month last year (optional)
+    - Your client name and next month's targets (optional)
+  prerequisites:
+    - An AI that can read pasted tables or uploaded spreadsheets
+  output:
+    - name: Cover Page and KPI Snapshot
+      contains: Client, period and a table of key numbers with change versus last month and last year.
+    - name: Comparisons and pacing
+      contains: Year over year and month over month changes, the blended return trend, and pace against your goal.
+    - name: Key Wins
+      contains: Four wins, each backed by a specific number from your data.
+    - name: Areas to Optimize
+      contains: Four problems, each tagged with how serious it is.
+    - name: Strategy and Targets
+      contains: Three to five ranked priorities and goals for revenue, spend and return next month.
+    - name: Executive Summary
+      contains: Nine bullets split into The Good, The Watch and The Path.
+    - name: Next Steps
+      contains: Actions for this week, this month and this quarter.
+    - name: Detail sections
+      contains: Per-platform tables, trend descriptions, top five campaigns per platform and top and bottom three creatives.
 how_it_works:
   - title: Check the inputs
     text: Confirm current and prior period ad exports, store results, targets and client context. Mark facts that are missing.

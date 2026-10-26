@@ -1,6 +1,6 @@
 new_slug: honest-project-review
 name: Run a project review where people tell the truth
-summary: Name a finished project. Get prep, an agenda that keeps blame out, and the lessons turned into rules for next time.
+summary: Run a project review after a project ends. Get prep, a blame-free agenda, and lessons turned into rules your next team can check.
 job: lead-people
 thinking: medium
 thinking_why: It follows a fixed process but must choose formats, themes and rules that fit your team.
@@ -14,6 +14,10 @@ when:
   - A project has just ended, well or badly, and you want the team to learn without blame.
   - Your last review turned into polite thanks or an argument.
   - You want the lessons to reach people who were not on the project.
+not_for:
+  - "Your project is still running: wait until it ends, or hold a short check-in with your team instead."
+  - "You are reviewing your own work alone: write a few notes yourself on what to repeat and what to stop."
+  - "Your project was small and had two or three people: have a short chat, and use only steps 1 and 3."
 you_give:
   - The project, its dates and the people by role
   - The format of your last review and any records you keep (optional)
@@ -29,6 +33,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Send the form from step 1 and collect the lists and numbers. Bring them to step 2.
   - Hold the review using the agenda, then bring what was said and decided to the last step.
+output_sample:
+  input:
+    - The finished project, its dates and the people by role
+    - The format of your last review (optional)
+    - Any records or numbers you keep (optional)
+    - "After the prep: each person's two lists"
+    - "After the meeting: what was said and decided"
+  prerequisites:
+    - An AI that can read the files in the handoff pack
+    - A way to send the form and collect each person's answers
+  output:
+    - name: "Step 1: The prep"
+      contains: The reasons to review, a new format, the two-list form, numbers to pull and who hears the lessons.
+    - name: "Step 2: The themes"
+      contains: Themes from the lists with counts, contested items, numbers beside each theme and what no one can see.
+    - name: "Step 3: The agenda"
+      contains: A timed agenda with wording rules, facilitator lines, a slot for old hurts and questions for next time.
+    - name: "Step 4: The rules"
+      contains: Each lesson with its root cause, a rule and how to check it next time.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and every MISSING line in one list.
 how_it_works:
   - title: Plans the prep
     text: Picks why you are reviewing, a format that differs from the last one, the two-list form, the numbers to pull and the people who will hear the lessons.

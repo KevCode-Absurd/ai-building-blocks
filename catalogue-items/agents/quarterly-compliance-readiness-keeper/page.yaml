@@ -1,6 +1,6 @@
 new_slug: quarterly-compliance-readiness-keeper
 name: Quarterly compliance readiness keeper
-summary: Name your framework each quarter. Get gaps found, last quarter's fixes checked and what to close first.
+summary: Check your SOC 2, ISO 27001 or GDPR readiness each quarter. See which gaps closed, which are overdue and what to close first.
 job: secure-code
 thinking: high
 thinking_why: It judges evidence, tracks gaps over time and has to avoid claiming more than it can show. Use your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are working toward SOC 2, ISO 27001 or GDPR readiness and need to show steady progress.
   - An audit or review is booked and you need to know what blocks it.
   - You have a gap list that nobody has updated in months.
+not_for:
+  - "You need a legal opinion or proof that you are compliant: ask an auditor, a lawyer or a data protection lead."
+  - "You want a one-off first look at your gaps with no quarterly tracking: run a single readiness check for your framework, or ask an auditor for a scoping call."
+  - "You need someone to send evidence or contact an auditor for you: do that step yourself, because this agent never sends or changes anything."
 you_give:
   - The frameworks in scope and which systems and teams they cover
   - The date of any audit or review (optional)
@@ -32,6 +36,31 @@ how_to_use:
   - Give it the evidence you have. Answer its questions from what you can show.
   - Confirm the owners it suggests, and take the ranked list to your team.
   - Run it next quarter. It compares with the register and marks what closed or went overdue.
+output_sample:
+  input:
+    - The frameworks you work toward, such as SOC 2, ISO 27001 or GDPR
+    - The systems and teams in scope
+    - The evidence you have for each control
+    - Last quarter's gap register (after the first run)
+    - The date of any audit or review (optional)
+  prerequisites:
+    - An AI chat where you can paste or attach your evidence
+    - An AI that can keep files in a folder, such as Claude Code, if you want the register saved between quarters
+  output:
+    - name: This quarter
+      contains: Counts of gaps closed, new, still open and overdue, set against last quarter.
+    - name: Close first
+      contains: Up to ten ranked gaps, each with its framework, reason, proposed owner and the evidence an auditor will ask for.
+    - name: Claimed closed, no evidence
+      contains: Gaps marked fixed that have no proof yet, and the proof each one needs.
+    - name: Overdue
+      contains: Gaps open for more than a quarter, with the owner and the date each was found.
+    - name: Ask a qualified person
+      contains: Points that an auditor, lawyer or data protection lead should confirm.
+    - name: Files and missing
+      contains: Each step's saved file, the updated gap register and every MISSING line in one list.
+    - name: Checks missed
+      contains: Any check that failed or could not run, or the word none.
 how_it_works:
   - title: Confirm the scope
     text: Checks what is in scope and notes any change since last quarter.

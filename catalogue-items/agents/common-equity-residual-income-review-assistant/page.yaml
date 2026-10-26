@@ -1,51 +1,110 @@
 new_slug: common-equity-residual-income-review-assistant
 name: Common equity residual-income review assistant
 headline: Common equity residual-income review assistant
-summary: Review common-equity changes that affect residual income and stable price-to-book assumptions.
+summary: See how a new filing changes book equity, residual income and your price-to-book case. Get a change log and a workbook tied to sources.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A common-equity change log and source-linked residual-income workbook. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
+thinking_why: It rebuilds a valuation from filings, so every equity movement, sign and period must tie, and the scenario must stay apart from history.
+subhead: Give it your accepted residual income model and a new filing. It logs each change to common equity, rolls book equity forward, and rebuilds the residual income that moved. Gains booked outside profit are shown apart. You get a change log and a workbook tied to the filings.
 explain: |-
-  A common-equity change log and source-linked residual-income workbook.
+  A residual income model values a company from its book equity plus the profit above what that equity should earn. It breaks when book equity moves for a reason the model does not know. A buyback. A share issue. A dividend. A gain booked in other comprehensive income (OCI) instead of profit. This agent keeps your residual income model current when a new filing arrives, and shows which equity changes moved the number.
 
-  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  When you supply new evidence on common equity, comprehensive income or capital returns, it runs the Build a clean-surplus residual income model workflow. That rolls book equity forward, charges each period on its beginning book, and builds a separate stable price-to-book scenario. If profit and OCI recycling changed, it first reconciles the after-tax reclassification with the OCI reclassification bridge. Gains that bypass profit stay separate. They are never pushed through earnings to make book value tie.
+
+  Historical residuals and the stable scenario stay apart, and every forecast needs a source. It gives no buy or sell view and uses no live market data. It trades, publishes and sends nothing.
 when:
-  - You need a common-equity change log and source-linked residual-income workbook.
-  - You work on public-market evidence review and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A company filed a new quarterly or annual report and you want to update your residual income model.
+  - The company bought back or issued shares, or changed its dividend, and book equity moved.
+  - Other comprehensive income changed, such as a hedge or a pension item, and you need to know if it was recycled to profit.
+  - You want to know whether a change is big enough to matter, using your own threshold.
+not_for:
+  - You have no accepted model yet. Build one first with the Build a clean-surplus residual income model workflow.
+  - You want growth, margin or discount rate assumptions challenged. Use the Share valuation assumption reviewer.
+  - You are checking revenue disclosures across periods. Use the Revenue comparison reviewer.
+  - You want a buy or sell view, a price target or investment advice. It gives none. Speak to a licensed adviser.
+  - You need live prices or market data. It uses only the filings and notes you give it.
 you_give:
-  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your prior accepted model and its last review record
+  - The new dated filings, with the pages on equity, comprehensive income, dividends and buybacks
+  - Notes on what changed in the sources since the last review
+  - Your materiality threshold, which is the size of change that counts for you
+  - The reporting currency, the scale, the fiscal calendar and the accounting basis
+  - The cost of equity and the forward return and growth assumptions, each with its source (from your accepted model)
 you_get:
-  - A common-equity change log and source-linked residual-income workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A change log of each movement in common equity, with its source and effect on beginning book
+  - A book equity roll-forward that ties from opening to closing
+  - A residual income bridge that charges each period on its beginning book
+  - OCI items shown apart, with any reclassification reconciled
+  - A stable price-to-book scenario, labelled as a scenario
+  - A workbook that links back to the filings, and a short record for the next review
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add the agent with the pieces it uses, the Build a clean-surplus residual income model workflow and the OCI reclassification bridge. If your AI cannot open them, paste both in with the agent.
+  - Say if this is the first run. If not, paste last time's record. Attach your accepted model and the new filings. State your threshold, currency and scale once.
+  - Read the change log first. Check the roll-forward by hand. Opening book, plus profit, plus OCI, less dividends and buybacks, plus issues and any other listed movement, should equal closing book in the filing.
+  - Check any OCI item marked reclassified against the filing's note. Fix every MISSING line.
+  - Treat the stable price-to-book result as a scenario, not a forecast. For a workbook, use an AI that can build, recalculate and reopen a spreadsheet. In plain chat you get tables and keep the record.
 how_it_works:
-  - title: Build a clean-surplus residual income model
-    text: Run the governing workflow when On new common-equity, comprehensive-income or capital-return evidence supplied by the user, compare beginning-book balances and clean-surplus assumptions with the accepted model.
-  - title: OCI reclassification bridge
-    text: If profit/OCI recycling changed, reconcile the permitted after-tax reclassification before updating residual income. Dirty-surplus changes stay separately identified; they are never forced through ordinary earnings to make book value tie.
+  - title: Reads the last record
+    text: Uses the saved record or sets a first baseline. The record holds common-owner attribution, beginning book, equity charges, owner transactions, OCI exceptions, stable return and growth assumptions, and source versions.
+  - title: Checks the trigger
+    text: New evidence on common equity, comprehensive income or capital returns was supplied. Changes below your threshold are logged and left alone. If nothing changed, it says so and stops.
+  - title: Rolls book equity forward
+    text: The Book value per share roll-forward proves opening and closing common equity. OCI and capital movements are identified, so book change is not assumed to equal retained earnings.
+  - title: Reconciles OCI if recycling changed
+    text: The OCI reclassification bridge reconciles the permitted after-tax amount before residual income is updated. Dirty-surplus changes are never forced through earnings.
+  - title: Bridges residual income
+    text: The One-period residual income bridge charges each period on its beginning book and matching ordinary income. Dirty-surplus items are reconciled apart.
+  - title: Builds the stable scenario
+    text: The Justified price-to-book scenario is built only after clean surplus and feasible retention are documented. It is labelled a scenario, apart from the historical residuals.
+  - title: Saves the record
+    text: Writes the workbook and the new record, keeps the old record, and lists MISSING lines and CHECKS MISSED.
 output_shape: |-
-  A common-equity change log and source-linked residual-income workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  REVIEW DATE <date>, <currency>, <scale>, <accounting basis>   LAST REVIEW <date or first run>   THRESHOLD <n>
+
+  CHANGED SINCE LAST REVIEW  <item, source, old value, new value, above or below threshold>
+  BOOK EQUITY ROLL-FORWARD  opening <n> + profit <n> + OCI <n> - dividends <n> - buybacks <n> + issues <n> = closing <n> (filing: <n>)
+  OCI  <item> | <reclassified to profit | stays in OCI> | after-tax <n> | source <...>
+  RESIDUAL INCOME  <period> | beginning book <n> x cost of equity <n> = charge <n> | profit <n> | residual <n>
+  STABLE SCENARIO (not a forecast)  return <n>, growth <n>, required return <n> -> price-to-book <n>
+
+  RECORD FOR NEXT REVIEW  <attribution, beginning book, charges, owner transactions, OCI exceptions, stable assumptions, source versions>
+  MISSING  <each gap and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - Your prior accepted model and its last review record
+    - The new dated filings, with the pages on equity, comprehensive income, dividends and buybacks
+    - Notes on what changed in the sources
+    - Your materiality threshold
+    - The reporting currency, scale, fiscal calendar and accounting basis
+  prerequisites:
+    - An AI that can read uploaded files, such as Claude, ChatGPT or Gemini
+    - The two pieces it uses, the Build a clean-surplus residual income model workflow and the OCI reclassification bridge
+    - For a workbook, an AI that can build, recalculate and reopen a spreadsheet
+  output:
+    - name: Change log
+      contains: Each movement in common equity since the last review, with its source, effect on beginning book and whether it is above your threshold.
+    - name: Book equity roll-forward
+      contains: Opening book to closing book, with profit, OCI, dividends, buybacks and issues each shown, checked against the filing.
+    - name: OCI bridge
+      contains: Only if recycling changed. The after-tax amount moved between OCI and profit, with total comprehensive income unchanged.
+    - name: Residual income bridge
+      contains: Each period charged on its beginning book at the cost of equity, set against matching ordinary profit. Dirty-surplus items are shown apart.
+    - name: Stable price-to-book scenario
+      contains: A scenario from stated return, growth and required return, labelled as a scenario and kept apart from the historical residuals.
+    - name: Record for next review
+      contains: A small block with attribution, beginning book, equity charges, owner transactions, OCI exceptions, stable assumptions and source versions.
+    - name: Workbook and files
+      contains: When your AI can build one, a workbook with inputs, formulas and a checks tab, saved with the run log under reviews/common-equity-residual-income-review-assistant/.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
+  - what: Threshold
+    how: Set the size of change that matters to you. A lower number logs more changes and reruns more of the model.
+  - what: One company, one basis
+    how: Use one currency, scale and accounting basis throughout. A mix is flagged, not converted.
   - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Equity rolls forward, charges use beginning book and cost of equity, OCI changes are not counted twice and the stable P/B scenario stays separate from historical residuals.
+    how: Change a supported input, such as the cost of equity, and run it again. Reported actuals stay as supplied.
+  - what: Scenario separate
+    how: Ask for the stable price-to-book case only when you have documented clean surplus and a feasible retention rate. Otherwise it is skipped and says why.
 judge:
   - Equity rolls forward, charges use beginning book and cost of equity, OCI changes are not counted twice and the stable P/B scenario stays separate from historical residuals.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +115,28 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the equity pages of each filing in one folder, with page numbers, so every figure traces to a page.
+  - Save each review's record in a folder named by date, so the next run starts from the true earlier state.
+  - Write your own materiality threshold and your rule for when OCI items count as recycled, and paste them in each run.
+  - Pair it with the Share valuation assumption reviewer once the equity changes are settled.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, recalculates it, reopens it and saves the record. In plain chat it returns the same tables as text.
+    - name: The company's own filings
+      why: The equity statement and notes give opening and closing book and every owner transaction.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The statement of changes in equity and the notes on OCI.
+    - The company's capital return policy, if it states one.
+    - A named reviewer who checks the accounting basis.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Residual income
+    meaning: Profit above the charge for using shareholders' money, which is beginning book equity times the cost of equity.
+  - term: Clean surplus
+    meaning: Book equity changes only through profit and owner transactions, such as dividends and share issues.
+  - term: OCI
+    meaning: Other comprehensive income, which is gains and losses booked in equity instead of profit.
+  - term: Dirty surplus
+    meaning: A gain or loss that goes to equity without passing through profit.
+  - term: Price-to-book
+    meaning: The share price divided by book equity per share.

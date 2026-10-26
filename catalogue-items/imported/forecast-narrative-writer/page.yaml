@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It summarizes deal data into a clear story.
 new_slug: forecast-narrative-writer
 name: Forecast narrative writer
-summary: "Ask for your forecast. Get a commit, best case and pipeline story:
-  what is closing, at risk and changed."
+summary: "Turn your CRM pipeline into a forecast narrative for your review or 1:1: commit, best case, pipeline, what changed and where the risk is."
 job: sell-and-negotiate
 headline: Forecast narrative writer
-subhead: "A forecast story you can say out loud in a review or 1:1: the number,
-  the deals behind it, what changed since last week and where the risk sits."
+subhead: "A forecast story you can say out loud in a review or 1:1: the number, the deals behind it, what changed since last week and where the risk sits."
 explain: |
   A forecast story you can say out loud in a review or 1:1: the number, the deals behind it, what changed since last week and where the risk sits. It is split into commit, best case and pipeline.
 
@@ -17,20 +15,47 @@ when:
   - Your manager asks what moved since last week.
   - You need a quick view of which deals are at risk.
   - You want to pitch commit and best case with deal names behind each.
+not_for:
+  - "You need to lock the number into your company's forecasting tool: submit it there, this only writes the story and keeps categories honest."
+  - "You want to know what happens to the number if one deal slips: use the deal-slip-scenario skill, or ask a teammate who owns the forecast."
+  - "You have no CRM access and no pipeline export: pull a deal list from your CRM first, then come back."
 you_give:
   - CRM access or a pipeline export
   - Period, such as this quarter
   - Last week's narrative (optional)
   - Rep or team scope (optional)
 you_get:
-  - Commit, best case and pipeline totals
-  - Deal list per bucket with links
-  - What changed since last time
-  - Deals at risk with reasons
-  - Short script to say in the meeting
+  - Closed won, commit, best case and pipeline totals with deal counts
+  - A one-line note for each commit and best case deal, linked to its record
+  - What changed since last time, if you share last week's notes
+  - Risk to commit, with the deal, the risk and a way to reduce it
+  - The asks to bring to your manager or leader
+  - Suggested forecast category changes you can accept or skip
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Connect your CRM if your AI allows it. If not, upload your pipeline export as a file.
+  - Say the period and who it covers, such as "my forecast for this quarter".
+  - Paste last week's narrative if you have it, so the changes section can show what moved.
+  - Check the deal lines and risks against your own view before the call.
+  - Say yes to any category changes you want. Without CRM write access, you get a checklist to apply yourself.
+output_sample:
+  input:
+    - Your CRM connection or a pipeline export file
+    - The period, such as this quarter
+    - Last week's narrative (optional)
+    - The rep or team to cover (optional)
+  prerequisites:
+    - An AI that can read your CRM, or a pipeline export you can upload or paste
+  output:
+    - name: Number table
+      contains: Closed won, commit, best case and pipeline, each with amount and deal count, with the commit total in bold.
+    - name: Changes since last time
+      contains: Deals that moved up, slipped, were won or lost, or a note that there was no earlier snapshot.
+    - name: Commit and best case deals
+      contains: One line per deal on where it stands, what is needed to close and any risk, each linked to its record.
+    - name: Risk to commit
+      contains: Each deal at risk, the specific risk and a way to reduce it.
+    - name: Asks
+      contains: Help you need from leaders, such as exec support, resourcing or unblocking a deal.
+    - name: Category changes (optional)
+      contains: Before and after forecast categories for deals that should move, with the evidence for each.

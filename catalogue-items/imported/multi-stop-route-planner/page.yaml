@@ -2,37 +2,100 @@ thinking: high
 thinking_why: It solves a hard route puzzle and checks the result.
 new_slug: multi-stop-route-planner
 name: Multi-stop route planner
-summary: Give it your stops and vehicles. Get the shortest routes for each
-  driver with total miles and time.
+summary: Get a low-mileage route for each driver, with miles and time per route, from your stops and vehicles. It also compares them with your current plan.
 job: plan-supply-chain
 headline: Multi-stop route planner
-subhead: Give it your stops and vehicles. Get the shortest routes for each
-  driver with total miles and time. Bring your stop addresses or locations. Use
-  the result to plan your next step.
+subhead: Give it your stops, depot, vehicles and shift limits. It picks a routing method that fits your problem, plans a route for each driver, and shows miles and time per route. If you share your current routes, it shows what changes.
 explain: |
-  The shortest set of routes for your drivers, with total miles and time for each, so deliveries cost less and arrive on time.
+  Planning routes by hand gets hard fast. Once you have about 20 stops and a few drivers, the best order is no longer obvious, and one bad route can push a driver into overtime. This multi-stop route planner builds the routes for you and shows the numbers.
 
-  The skill starts by asking about your operation: fleet size, vehicle capacity, time windows, shift lengths, time at each stop and how many stops a day. It then names the type of problem. One vehicle visiting all stops is a traveling salesman problem. Several vehicles with limits make a vehicle routing problem. Time windows make a third kind. It picks a method sized to your stops, builds the routes and compares them to your current ones.
+  It starts with questions about your operation: vehicles, capacity, time windows, shift lengths, time at each stop and stops per day. Then it names your problem. One vehicle visiting every stop is a traveling salesman problem. Several vehicles with limits make a vehicle routing problem. Delivery windows make a third kind. It picks a method sized to your stops and compares the result with your current routes.
+
+  The methods are heuristics. They give low-mileage routes fast, but they do not prove the shortest set. The skill says so in its report, and it labels distances as straight-line unless you give road distances.
 when:
-  - Drivers cross each other's paths and run overtime.
-  - You have forty stops a day and plan them by hand.
-  - Customers have delivery windows you must hit.
-  - You need to know whether another van pays for itself.
+  - Your drivers cross each other's paths and run into overtime.
+  - You plan 40 stops a day by hand and it takes an hour.
+  - Customers give delivery windows and you keep missing some.
+  - You want to know if one more van would pay for itself.
+not_for:
+  - You have fewer than about 5 stops. A map app with a multi-stop route is faster.
+  - You need to re-route drivers live during the day. Use a dispatch tool for that.
+  - You only need load limits handled. Use the delivery route planner (vehicle routing) instead.
 you_give:
-  - Your stop addresses or locations
-  - Number of vehicles and capacity
-  - Time windows and shift lengths
-  - Time spent at each stop
+  - Your stop addresses or coordinates, from your order sheet
+  - Your depot location
+  - Number of vehicles and what each can carry
+  - Shift lengths and delivery windows, if you have them
+  - Minutes spent at each stop
   - Your current routes (optional)
 you_get:
-  - A route for each driver
-  - Total miles and time per route
-  - A comparison with your current plan
-  - The method used and why
-  - Notes on stops that cause problems
+  - A route for each driver, with stop order
+  - Total miles and time for each route
+  - A comparison with your current plan, if you gave one
+  - The method used and why it fits
+  - A list of stops that cause problems
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - Paste your stops, depot, vehicle count and capacity, shift length and time at each stop. Add delivery windows if you have them.
+  - Answer any question it asks. If you do not know something, say so and it will mark it missing.
+  - For more than about 15 stops, use an AI that can run Python. Small lists work in a plain chat.
+  - Check that every stop appears once, and that no route is longer than a shift. Ask it to fix any that break these.
+  - Try the new plan on one or two drivers first. Road distance can differ from the straight-line estimate.
+how_it_works:
+  - title: Ask about your operation
+    text: It asks for fleet size, capacity, time windows, shift lengths, time at each stop and stops per day. Missing items are marked, not guessed.
+  - title: Name the problem
+    text: It sorts your case as one vehicle, several vehicles with limits, or delivery windows. Each needs a different method.
+  - title: Pick a method for your size
+    text: Small lists can use an exact method. Bigger ones use savings, sweep or nearest-neighbor builds, then local swaps to shorten the routes.
+  - title: Build the routes
+    text: It assigns stops to drivers, orders them, and checks capacity, shift length and windows.
+  - title: Compare and report
+    text: It lays out miles and time per route, sets them against your current routes, and lists stops that cause trouble.
+output_shape: |
+  Route Optimization Report
+  Summary: <routes>, <total miles>, <total time>, <average vehicle use>
+  Route details table: <route>, <driver>, <stops>, <miles>, <hours>, <load>, <start time>
+  Stop sequence per route: <stop>, <arrival time>, <window>
+  Current vs new plan: <miles>, <labor hours>, <vehicles>, <late stops>
+  Recommendations: <3 to 5 changes tied to the numbers>
+output_sample:
+  input:
+    - Your stop addresses or coordinates
+    - Your depot location
+    - Vehicle count and capacity, shift length, minutes per stop
+    - Delivery windows (optional)
+    - Your current routes (optional)
+  prerequisites:
+    - An AI that can run Python, for more than about 15 stops
+    - A distance table or maps export if you want road miles (optional)
+  output:
+    - name: Executive summary
+      contains: Routes, total miles and time, vehicle use, and change against your current plan.
+    - name: Route details table
+      contains: For each route, the driver, stop count, miles, hours, load and start time.
+    - name: Stop sequence
+      contains: The order of stops on each route, with arrival times and windows.
+    - name: Performance metrics
+      contains: Current plan against new plan for miles, labor hours, vehicles and late stops.
+    - name: Recommendations
+      contains: Three to five changes tied to the numbers, and the stops that cause trouble.
+works_best_with:
+  tools:
+    - name: ChatGPT with data analysis, or Claude with code execution
+      why: They can run the Python in this skill, so the routes are built and checked in code.
+    - name: Any good chat AI
+      why: Works for short stop lists, but it estimates by hand.
+  inputs:
+    - A distance table or maps export, for road miles instead of straight-line
+    - Your current routes, so the plan shows what changes
+    - Service time at each stop
+terms:
+  - term: Traveling salesman problem
+    meaning: One vehicle visits every stop once and returns, using the least distance.
+  - term: Vehicle routing problem
+    meaning: Several vehicles share a set of stops, each with limits such as load and shift length.
+  - term: Heuristic
+    meaning: A fast method that gives a good answer but does not prove it is the best.
+  - term: Time window
+    meaning: The hours when a customer can receive a delivery.

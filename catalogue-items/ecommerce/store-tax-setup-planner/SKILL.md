@@ -37,7 +37,7 @@ How to start:
 ## What you need
 - **Platform** (required): WooCommerce, Shopify or other.
 - **Where the business is** (required): the country and state of the business, its stock and its staff.
-- **Where it ships** (required): countries and US states.
+- **Where it ships** (required): countries and US states. A shipping plan with its zones can stand in for this list.
 - **What it sells** (required): physical goods, books, digital goods or services, and whether to consumers, companies or both.
 - **Current rates** (advised): from an official or tax-service table for each place that needs a row.
 

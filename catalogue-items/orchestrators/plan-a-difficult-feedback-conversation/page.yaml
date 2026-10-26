@@ -1,52 +1,118 @@
 new_slug: plan-a-difficult-feedback-conversation
-name: Plan a difficult feedback conversation
-headline: Plan a difficult feedback conversation
-summary: Share the source files. Get a feedback conversation plan, opening lines and listening prompts.
 job: think-and-decide
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A feedback conversation plan, opening lines and listening prompts. Share one observed behavior, its effects, supporting facts, relationship, desired change and boundaries. Your AI prepares the work and marks any facts it cannot verify.
+name: Plan a difficult feedback conversation
+headline: Plan a difficult feedback conversation
+summary: Plan a hard feedback talk. Get what to say, an opening built on facts, listening questions and one clear request for the change.
+subhead: Describe one behavior you saw, what it caused, the facts you can point to and the change you want. Your AI plans the talk, drafts your opening, edits it into plain words and adds questions that leave room for the other person to answer.
 explain: |-
-  A feedback conversation plan, opening lines and listening prompts.
+  Hard talks go wrong when feedback is vague, too soft or a list of everything. This workflow plans a difficult feedback conversation around one behavior, facts you can point to and one clear request.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The plan separates facts from interpretations and leaves room for the other person to disagree. Missing tools or evidence stay visible in the final summary.
+  The first step places the talk by how much you care about the person and how direct you need to be, then sets out what to praise, what to say and what to ask. The second drafts your opening, joins the praise to the change with "and" instead of "but", and leaves the other person a way to save face. The third edits for plain words and keeps room for them to disagree.
+
+  It writes what you might say. You choose the words, the time and the place. It does not decide who is at fault, and it sends nothing.
 when:
-  - You need a feedback conversation plan, opening lines and listening prompts.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A teammate keeps missing deadlines and you have put the talk off.
+  - A student, volunteer or colleague did something that cost others and you need to raise it.
+  - You said it once, softly, and nothing changed.
+  - You are about to write a long message and suspect a calm talk would work better.
+not_for:
+  - The issue is harassment, safety or a legal case. Follow your HR process and take advice first.
+  - You are the go-between for two students in conflict. Use the Restorative conversation planner.
+  - You want feedback on a piece of writing. Use the Honest draft feedback giver.
+  - You only need the message written, with no talk planned. Use the Hard feedback message writer.
 you_give:
-  - One observed behavior, its effects, supporting facts, relationship, desired change and boundaries.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - One behavior you saw, as what happened, not what you think of the person
+  - What it caused, for you, for others or for the work
+  - The facts you can point to, such as dates, messages or examples
+  - How you know the person, and what change you want
+  - What you cannot promise or will not discuss
+  - What the person has said about it before (optional)
+  - Notes or an earlier draft of what you plan to say (optional)
 you_get:
-  - A feedback conversation plan, opening lines and listening prompts.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A conversation plan: where you stand, what to praise, what to say and how to say it
+  - An opening you can say aloud, built on facts, with one clear request
+  - Listening questions, and what to do if they push back
+  - A plain-words edit of the opening, with each change explained
+  - A follow-up date and what to check
+  - A list of what was missing and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste what happened, what it caused, your facts and the change you want. Leave out your guesses about why they did it.
+  - Read the opening aloud. If it does not sound like you, change it before the talk.
+  - Hold the talk in person or on a call, then use the follow-up date from the plan.
 how_it_works:
   - title: Feedback conversation planner
-    text: Clarify the specific behavior or issue and the outcome you want from the conversation.
+    text: Names the one behavior and its effect, places the talk and sets out the praise, the statement and the questions. It hands the facts and the request to the opening step.
   - title: Hard feedback message writer
-    text: Draft a direct opening grounded in evidence and a clear, fair request.
+    text: Drafts the opening from the facts, with praise joined to the change, one plain statement and a way for the other person to save face. It hands the draft to the editor.
   - title: Plain English editor
-    text: Edit the opening and listening prompts for clarity, preserving supported observations and room for the other person to disagree.
+    text: Edits the opening and the questions into plain words and explains each change. It keeps what the facts support and leaves room to disagree.
 output_shape: |-
-  Scope and source coverage
-  A feedback conversation plan, opening lines and listening prompts.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  CONVERSATION PLAN
+    Where you stand | open with | say: behavior and effect | how to say it
+
+  OPENING
+    <the lines you might say aloud, with one clear request>
+
+  LISTENING QUESTIONS
+    <question> | if they push back: <what to do>
+
+  EDITED OPENING
+    <plain-words version> | changes and reasons
+
+  FOLLOW-UP
+    Date | what you will check
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - One behavior you saw, as what happened
+    - What it caused and the facts you can point to
+    - How you know the person, and the change you want
+    - What you cannot promise or will not discuss
+  prerequisites:
+    - A time and place to talk in person or on a call, which you choose
+  output:
+    - name: Conversation plan
+      contains: Where you stand, what to praise, what to say and how to say it.
+    - name: Opening
+      contains: Lines to say aloud, built on facts, with one clear request.
+    - name: Listening questions
+      contains: Questions that invite the other person to speak, and what to do if they push back.
+    - name: Edited opening
+      contains: A plain-words version of the opening, with each change and its reason.
+    - name: Hand-back summary
+      contains: Files saved, facts missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can plan the talk from what you type. A person you trust can play the other side so you can practise.
+  inputs:
+    - A quote or message that shows the behavior, with the date.
+    - What you already tried to say before.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: One behavior per talk. A list of problems gets a defensive answer.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Give dates and examples you can point to. Leave out what you suspect about their reasons.
   - what: Acceptance
-    how: The plan separates facts from interpretations and leaves room for the other person to disagree.
+    how: Say what a good outcome is, such as one agreed change by a set date.
+improve:
+  - After the talk, note what you said and how they answered, and bring it to the follow-up.
+  - Practise the opening out loud with someone and change what feels stiff.
+  - Keep the facts file so the next talk starts from what happened, not memory.
+next:
+  - executive-action-register
+  - hard-feedback-message-writer
+terms:
+  - term: Behavior
+    meaning: What a person did or said, which you could see or hear, as opposed to what you think of them.
+  - term: Save face
+    meaning: Leave the other person a way to respond without feeling shamed.
 judge:
   - The plan separates facts from interpretations and leaves room for the other person to disagree.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,17 +124,3 @@ test:
   - Remove one necessary input. The AI should identify the gap without inventing a replacement.
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
-terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.

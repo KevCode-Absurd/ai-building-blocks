@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Training choices need careful reasoning about limits.
 new_slug: llm-fine-tuning-guide
 name: LLM fine-tuning guide
-summary: Say your model and GPU. Get a fine-tuning plan and code with Unsloth,
-  sized to your memory, ready to export.
+summary: Plan a fine-tuning run for your GPU. Give your model and goal. You get Unsloth code sized to your memory, with a fixed chat template and export.
 job: build-software
 headline: LLM fine-tuning guide
-subhead: Say your model and GPU. Get a fine-tuning plan and code with Unsloth,
-  sized to your memory, ready to export. Bring base model. Use the result to
-  plan your next step.
+subhead: Say your model and GPU. Get a fine-tuning plan and code with Unsloth, sized to your memory, ready to export. Bring base model. Use the result to plan your next step.
 explain: |
   A fine-tuning plan and working code for your model and your graphics card, sized to the memory you have so it does not run out halfway through. Tell it the model, the GPU and the goal.
 
@@ -18,6 +15,10 @@ when:
   - Training crashes with out of memory part way through.
   - Your tuned model repeats the prompt or never stops.
   - You need a file you can run locally after training.
+not_for:
+  - "You train across many machines or many GPUs: use plain TRL with Accelerate or DeepSpeed."
+  - "You want training run in the cloud for you: use Hugging Face Jobs instead of this local plan."
+  - "You want the Unsloth Desktop or Studio app with buttons: use the Unsloth installer instead."
 you_give:
   - Base model
   - GPU and memory
@@ -31,8 +32,32 @@ you_get:
   - A tuning run setup
   - Export steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI chat that can run Python code. Paste in the skill text.
+  - Tell it your base model, your GPU and its memory, and what the tuned model should do.
+  - Add your training data, or say what format it is in.
+  - Check the memory estimate first. Resize the plan if it is too tight.
+  - Before you train, check that the chat template step shows the right part of one batch masked.
+  - Run the training, then ask for the export format your runtime needs.
+output_sample:
+  input:
+    - Your base model
+    - Your GPU and how much memory it has
+    - Your training data
+    - What you want the tuned model to do
+    - Where you will run it, like GGUF (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - A GPU that can run your chosen model
+  output:
+    - name: Size the run
+      contains: A memory estimate for your model and load mode, so the job fits your GPU before any code runs.
+    - name: Load the model
+      contains: Code that loads your base model in the right mode for your memory.
+    - name: Fix the chat template
+      contains: Code that sets the right chat template and trains only on the replies, plus a check on one batch.
+    - name: Attach LoRA adapters
+      contains: Code that adds small trainable layers so you tune a model without changing all of it.
+    - name: Train
+      contains: Training code for your goal, with a supervised example and a GRPO example.
+    - name: Export
+      contains: Steps to save the result as GGUF, for vLLM, or as merged 16-bit weights.

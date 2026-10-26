@@ -1,6 +1,6 @@
 slug: multi-stop-route-planner
 name: Multi-stop route planner
-summary: Give it your stops and vehicles. Get the shortest routes for each driver with total miles and time.
+summary: Get a low-mileage route for each driver, with miles and time per route, from your stops and vehicles. It also compares them with your current plan.
 category: general
 boards: []
 type: skill

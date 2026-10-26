@@ -2,36 +2,61 @@ thinking: medium
 thinking_why: It builds the plan from a set pattern fitted to the role.
 new_slug: 30-60-90-day-onboarding-planner
 name: 30-60-90 day onboarding planner
-summary: Tell it the role and team. Get a 30, 60 and 90 day plan for a new hire.
+summary: Build a 30-60-90 day onboarding plan for a new hire. Give it the role and team. You get day 30, 60 and 90 goals and a first-week checklist.
 job: hire-people
 headline: 30-60-90 day onboarding planner
-subhead: "Tell it the role, who will mentor, and what good looks like at 90
-  days. It builds the first three months in four layers: belonging, context,
-  contribution, mastery. You get the day 30, 60 and 90 plan, a first-week
-  checklist, a mentor schedule and check-in questions."
+subhead: "Tell it the role, who will mentor, and what good looks like at 90 days. It builds the plan in four stages: belonging, context, contribution and mastery. You get goals for day 30, 60 and 90, plus a first-week plan and check-ins."
 explain: |
   A written plan for a new hire's first three months, with clear goals for day 30, day 60 and day 90, is ready to hand over.
 
   The plan is built in four layers. Week one covers belonging: introductions, accounts, and a first small win. Then comes context, where the person learns how the work flows. Next is contribution, with real tasks and a mentor. The last layer is mastery, where they own something. The skill fits each layer to the role, flags the usual traps, and can also capture knowledge held in one person's head.
 when:
-  - A new hire starts next month and you have nothing written down.
+  - A new hire starts soon and you have no written plan.
   - A contractor or agency partner needs to get up to speed fast.
-  - People keep leaving in their first 90 days and you want to know why.
-  - One person holds all the know-how and you need it captured.
+  - People keep leaving in their first 90 days.
+  - One person holds all the know-how and you need it written down.
+not_for:
+  - "You need to manage a person's ongoing performance: use a regular one-to-one meeting and your own review process."
+  - "You want to teach one tool or skill: use that tool's own docs and tutorials."
+  - "You still need to write the job or find the person: sort out the role and hiring first, then come back."
 you_give:
   - The role and what success looks like at 90 days
-  - The team members who will mentor or answer questions
-  - Existing docs, runbooks or files the person will need
-  - Tools and accounts they need access to
+  - The people who will mentor or answer questions
+  - Your existing docs, runbooks or files (optional)
+  - The tools and accounts the person needs
   - How many hours your team can give to training (optional)
 you_get:
-  - A 30, 60 and 90 day plan
-  - A first-week checklist
-  - A mentor and buddy schedule
-  - Check-in questions for each stage
-  - A list of knowledge gaps to document
+  - A pre-day-1 checklist
+  - A day-1 schedule and a first-week reading list
+  - Goals for day 30, day 60 and day 90, fitted to the role
+  - A buddy guide and a manager check-in plan
+  - A retrospective template for day 90
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - "Paste your details: the role, what good looks like at 90 days, who will mentor, and the tools they need."
+  - If you have no written docs yet, say so. The plan can still be built from your details, and the gaps are flagged.
+  - Read the day 30, 60 and 90 goals first. Change anything that does not fit your team.
+  - Send the pre-day-1 checklist to whoever sets up accounts before the start date.
+output_sample:
+  input:
+    - The role and what success looks like at 90 days
+    - Who will mentor and who answers which questions
+    - Your existing docs, runbooks or files (optional)
+    - The tools and accounts the person needs
+    - How much time your team can give to training (optional)
+  output:
+    - name: Pre-day-1 checklist
+      contains: Accounts, hardware, access, buddy assignment and the welcome message to sort out before the person starts.
+    - name: Day-1 schedule
+      contains: The meetings, introductions and first small task for the first day.
+    - name: First-week reading list
+      contains: Five to ten short, annotated docs that give the new person context.
+    - name: 30/60/90 milestones
+      contains: Clear checkpoints for day 30, day 60 and day 90, fitted to the role.
+    - name: Buddy guide
+      contains: What the onboarding partner is expected to do and how much time it takes.
+    - name: Manager check-in cadence
+      contains: Scheduled one-to-ones and milestone reviews across the first three months.
+    - name: Retrospective template
+      contains: Questions to answer at day 90 so the plan gets better for the next hire.

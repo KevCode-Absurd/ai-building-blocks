@@ -1,6 +1,6 @@
 new_slug: client-fee-and-cap-setter
 name: "Client fee and cap setter"
-summary: "Paste your floor and what others charge. Get a fee, billing terms and a client cap that covers your costs."
+summary: "Set your client fee and cap from your income floor and real market prices. Get a fee, a client limit and billing terms that cover your costs."
 job: think-and-decide
 thinking: medium
 thinking_why: "The sums are fixed, but choosing a position against others' prices takes judgement."
@@ -17,6 +17,10 @@ when:
   - "You are about to start taking clients and need a fee and a limit."
   - "You take every client who asks and have no time for your own work."
   - "Clients pause, skip or pay late, and you bill by the session."
+not_for:
+  - "You have not worked out the monthly income you need yet: use the Independent income floor calculator first."
+  - "You want a one-off project quote or an hourly rate for a single job: work it out with a simple hours-times-rate sum and a spreadsheet."
+  - "You need legal, tax or contract advice: ask an accountant or a lawyer, as this is a planning aid only."
 
 you_give:
   - "Your income floor and the gap, from the Independent income floor calculator or your own figures"
@@ -35,6 +39,31 @@ how_to_use:
   - "Paste the floor report and the prices you found. Give your hours."
   - "Read the fee reason aloud. If you cannot say it with a straight face, change the position."
   - "Take the plan to First customers by hand planner, and use the fee card when you quote."
+output_sample:
+  input:
+    - Your income floor and the gap to cover
+    - Three to five real prices from people doing similar work
+    - Your working hours in a month, and hours one client takes
+    - What makes your work worth more than the middle (optional)
+  prerequisites:
+    - Your income floor, from the Independent income floor calculator or your own figures
+  output:
+    - name: Prices found
+      contains: The real prices you gave, the middle price and where the top third starts.
+    - name: Fees compared
+      contains: Three candidate fees, with the clients each needs, hours per client and fee per hour.
+    - name: Chosen fee
+      contains: One fee in the top third, with a reason you can say aloud.
+    - name: Cap
+      contains: Clients needed plus one spare, with the hours sum checked against 60% of your working hours.
+    - name: Billing terms
+      contains: Up to five lines on monthly billing, pay day, due whether used or not, pauses and cancellation.
+    - name: Discount rule
+      contains: What you may trade for a discount and what you never cut, plus an end date for any launch rate.
+    - name: Why you cost more
+      contains: A two-sentence reply for clients who ask why your fee is higher.
+    - name: Missing and checks missed
+      contains: Figures still needed and one line per check the result did not pass, or none.
 
 how_it_works:
   - title: "Reads the floor and the market"

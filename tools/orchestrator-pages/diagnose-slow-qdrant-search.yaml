@@ -55,3 +55,21 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+
+not_for:
+  - "Search is fast but returns the wrong results: use the Qdrant search relevance investigator."
+  - "You are choosing where to host Qdrant: use the Qdrant hosting option adviser."
+  - "You are moving to a new embedding model or a new Qdrant version: use the Qdrant embedding migration planner or the Qdrant version upgrade planner."
+output_sample:
+  input:
+    - Your goal, such as faster single searches or more searches per second
+    - Your Qdrant version, point count and vector size
+    - Your machines, such as RAM, CPU cores and disk type (optional)
+    - Current collection settings and baseline timings (optional)
+  output:
+    - name: Performance baseline and candidate fixes
+      contains: Likely causes, most likely first, with the setting to change, a before and after test and the risk.
+    - name: Capacity plan
+      contains: The bottleneck, a labelled memory estimate and when more nodes are needed.
+    - name: Monitoring checks
+      contains: Metrics to collect, health checks and alerts that show slow or unhealthy search.

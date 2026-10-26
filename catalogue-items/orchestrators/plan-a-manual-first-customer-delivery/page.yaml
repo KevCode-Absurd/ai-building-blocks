@@ -1,50 +1,89 @@
 new_slug: plan-a-manual-first-customer-delivery
 name: Plan a manual first customer delivery
 headline: Plan a manual first customer delivery
-summary: Share the source files. Get a delivery procedure, capacity options and unresolved handoff checks.
+summary: Write down how you will deliver to your first customer by hand, check your team has the hours, and see what is still unsettled.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A delivery procedure, capacity options and unresolved handoff checks. Share the accepted first-customer scope, actual delivery steps, available people and hours, tools, service limits and customer commitments. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it what your first customer was promised, the steps you will do by hand, who is free and for how long, and your tools. It writes the delivery procedure, tests it against your real hours and lists what is still open.
 explain: |-
-  A delivery procedure, capacity options and unresolved handoff checks.
+  Before there is software or a system, the first customer is delivered by hand. The risk is that the promise runs ahead of what your people can do. This workflow writes a first customer delivery plan from what you actually have today.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Only accepted scope is promised; manual work, dependencies and unsupported automation remain explicit. Missing tools or evidence stay visible in the final summary.
+  Step 1 turns the real manual path into a short procedure: who does each step, what the customer must send, what done looks like and what to do when it goes wrong. It leaves out anything you have not built yet. Step 2 checks that procedure against the people and hours you really have, and returns options if it does not fit.
+
+  Only the scope the customer accepted is promised. Dependencies, manual work and tools that do not exist yet stay visible, so nobody sells the automation you plan to build later.
 when:
-  - You need a delivery procedure, capacity options and unresolved handoff checks.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A first customer has said yes and you now have to deliver, with no process yet.
+  - You are about to hand delivery to a teammate and nothing is written down.
+  - A pilot customer expects a service level your small team has never tested.
+  - You are launching and doing each step by hand until the system is ready.
+not_for:
+  - No customer has accepted anything yet, so there is no scope to promise. Write the scope first with the Project kickoff brief writer.
+  - You deliver this work every week and only want it written down. Use the Process and SOP writer.
+  - You need to set a date for a new request. Use the Check capacity before promising a delivery date workflow.
+  - You want to design the automated version. This plans the manual one and will not describe a tool you have not built.
 you_give:
-  - The accepted first-customer scope, actual delivery steps, available people and hours, tools, service limits and customer commitments.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - What the first customer accepted, in writing (from the order, contract or an agreed email)
+  - The real steps you will do by hand, even if rough
+  - The people who will deliver, with the hours each can give per week
+  - The tools you have today, such as email, a spreadsheet or a shared folder
+  - Service limits and promises to the customer, such as response times and dates (optional)
 you_get:
-  - A delivery procedure, capacity options and unresolved handoff checks.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A delivery procedure with an owner, customer inputs and a done check for each step
+  - A who-does-what table
+  - "A capacity check: hours needed against hours you have, with options if there is a gap"
+  - A list of open handoff checks, each with a person who must confirm it
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Open Claude, ChatGPT or Gemini. Pick one that can read files if you will attach the order or contract.
+  - Add the workflow pack. Paste what the customer accepted, your manual steps, your team's weekly hours and your tools.
+  - After step 1, read the procedure step by step. Does each step match what you will really do? Delete any step that relies on a tool you do not have.
+  - After step 2, check the hours against your team's real week. If there is a gap, pick an option or change the promise.
+  - Send the procedure to whoever leads delivery for sign-off. Fill every MISSING line before you book the customer's start.
 how_it_works:
   - title: Process and SOP writer
-    text: Document the real manual delivery path, customer inputs, owners, exceptions, acceptance evidence and escalation. Do not describe unbuilt automation as available.
+    text: "Writes the manual delivery path: each step with its owner, what the customer must send, the done check, exceptions and who to tell when something goes wrong. Hands step 2 the list of steps with effort per step. Check before moving on: every step is something your team can do today."
   - title: Team capacity planner
-    text: Check the initial delivery workload against actual available roles, effort and fixed commitments; return feasible options and missing estimates for review.
+    text: "Compares the effort in the procedure with the hours of the people you named and what else they already do. Returns options and the estimates still missing. Check before moving on: nobody is given hours they do not have."
 output_shape: |-
-  Scope and source coverage
-  A delivery procedure, capacity options and unresolved handoff checks.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE PROMISED     <what the customer accepted> | source <document and date>
+  PROCEDURE          <step> | owner <person or role> | customer sends <input> | done when <check> | if it goes wrong <action>
+  WHO DOES WHAT      <step> | responsible | approves | told
+  CAPACITY CHECK     <role> | hours needed per week | hours available | gap or spare
+  OPTIONS            <option> | what it fixes | trade-off
+  HANDOFF CHECKS     <open item> | who must confirm | by when
+  MISSING            <each gap, and what it stops>
+  CHECKS MISSED      <one line each, or none>
+output_sample:
+  input:
+    - What the first customer accepted, in writing
+    - The steps you will do by hand
+    - Your people and their weekly hours
+    - The tools you have today
+  prerequisites:
+    - An agreed scope, such as an order or contract, to quote the promise from
+  output:
+    - name: Scope promised
+      contains: What the customer accepted and the document it comes from, so nothing extra is promised.
+    - name: Delivery procedure
+      contains: Each manual step with an owner, the customer's input, a done check and what to do when it fails.
+    - name: Who does what
+      contains: A table of who does each step, who approves it and who is told.
+    - name: Capacity check
+      contains: Hours the procedure needs against the hours your people have, with gaps shown.
+    - name: Options
+      contains: Ways to close a gap, each with its trade-off.
+    - name: Handoff checks
+      contains: Open items, who must confirm each and by when.
+    - name: MISSING and CHECKS MISSED
+      contains: Estimates you lack and any check that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Only accepted scope is promised; manual work, dependencies and unsupported automation remain explicit.
+  - what: A tighter promise
+    how: Change a service limit, such as a faster reply time, and run step 2 again. The capacity check shows what it costs.
+  - what: A second customer
+    how: Add the next customer's scope to the same team hours. The gap shows if you can take two.
+  - what: A smaller team
+    how: Remove one person from the list. The options show what you would drop.
 judge:
   - Only accepted scope is promised; manual work, dependencies and unsupported automation remain explicit.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +96,25 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - After the first delivery, note the real time each step took. Use those figures next run instead of guesses.
+  - Keep the signed scope next to the procedure, so the next person sees what was promised.
+  - Name the person who signs off the procedure before the customer starts.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It can read the order or contract and quote the promise from it, instead of from memory.
+    - name: A shared folder or doc
+      why: Keep the procedure where the delivery team can open it, so it is used and not just written.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The customer's own words about what they expect and by when.
+    - A time log from any earlier similar job.
 terms:
+  - term: Manual delivery
+    meaning: Doing the work by hand, with people and simple tools, before any system does it for you.
+  - term: Done check
+    meaning: The proof that a step is finished, such as a file sent or a customer reply.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.
+next:
+  - check-capacity-before-promising-a-delivery-date
+  - prepare-a-clear-client-project-kickoff

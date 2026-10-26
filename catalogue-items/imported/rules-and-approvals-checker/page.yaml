@@ -2,23 +2,23 @@ thinking: high
 thinking_why: Rules vary by place and the stakes are real.
 new_slug: rules-and-approvals-checker
 name: Rules and approvals checker
-summary: Describe a new feature or plan. Get the rules that may apply, approvals
-  needed and risk areas. Not legal advice.
+summary: Check a new feature or plan for rules that may apply, approvals needed and risk areas before launch. A first-pass compliance check, not legal advice.
 job: check-contracts
 headline: Rules and approvals checker
-subhead: Describe a feature, campaign or plan before launch and get the rules
-  that may apply, who must sign off and where the risk sits. It is a first-pass
-  view, not legal advice.
+subhead: Describe a feature, campaign or plan before launch and get the rules that may apply, who must sign off and where the risk sits. It is a first-pass view, not legal advice.
 explain: |
   Describe a feature, campaign or plan before launch and get the rules that may apply, who must sign off and where the risk sits. It is a first-pass view, not legal advice.
 
   The answer opens with a verdict: proceed, proceed with conditions, or needs more review. Below is a table of laws and policies that could apply, such as GDPR or CCPA, with what each asks of you. Each requirement is marked met, not met or unknown, with an action. A risk table rates issues high, medium or low with a fix. You also get ranked actions, a list of approvers and the points where a specialist should look.
 when:
-  - You plan a referral program with cash rewards and want to know what rules
-    apply.
+  - You plan a referral program with cash rewards and want to know what rules apply.
   - Marketing wants to use customer quotes in ads and you need a quick check.
   - You are adding a feature that handles personal data.
   - You need to know who has to approve a plan before it goes ahead.
+not_for:
+  - "You need a legal opinion or a filing check: ask a qualified lawyer, because this gives a first-pass view only."
+  - "You plan a cross-border or tightly regulated launch: take the result to a lawyer who knows those countries."
+  - "You want to review a signed contract line by line: ask a lawyer or read it with a person who knows the terms."
 you_give:
   - A short description of the plan or feature
   - Where you operate and where your customers live
@@ -30,7 +30,30 @@ you_get:
   - Risks rated with fixes
   - A list of approvals needed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full text of the skill's SKILL.md into the chat.
+  - Describe your plan in a few lines. Add the countries where your customers live and the types of data involved.
+  - Ask for the answer in the template from the skill, and ask for an 'as of' date on each rule table.
+  - Check every unknown item and every high risk first. Then check the rules against an official source.
+  - Take the result to the approvers and to a lawyer before you launch.
+output_sample:
+  input:
+    - A short description of your plan or feature
+    - Where you operate and where your customers live
+    - The kinds of data you collect or use (optional)
+    - Your existing policies that may matter (optional)
+  output:
+    - name: Summary
+      contains: "A verdict: proceed, proceed with conditions, or needs further review."
+    - name: Applicable Regulations and Policies
+      contains: A table of laws and policies that may apply, how each applies and what each asks of you.
+    - name: Requirements
+      contains: A numbered table marking each requirement as met, not met or unknown, with the action needed.
+    - name: Risk Areas
+      contains: A table rating each risk high, medium or low, with a way to reduce it.
+    - name: Recommended Actions
+      contains: A ranked list of what to do first, second and third.
+    - name: Approvals Needed
+      contains: A table of who must sign off, why, and the status of each approval.
+    - name: Further Review Recommended
+      contains: The areas where outside counsel or a specialist should look.

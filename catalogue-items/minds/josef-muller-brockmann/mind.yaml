@@ -16,6 +16,29 @@ use_cases:
   - "Turn a piece of music, a rhythm or a data set into a visual pattern"
   - "Review your own work with cold, honest eyes and list what is weak"
   - "Plan a training path that teaches the rules first, then the freedom"
+not_for:
+  - "You want loose, expressive type that breaks the rules: hire David Carson instead."
+  - "You need a chart checked for truth and clarity: hire Alberto Cairo or Cole Nussbaumer Knaflic instead."
+  - "You need brand strategy, copywriting or final wording: use a writer or strategist, since this mind plans layout and does not write your message."
+output_sample:
+  input:
+    - The content you want to lay out, such as a report, poster, slides or web page
+    - Who will read it and what the message is, in plain words
+    - The format and size, such as print, screen or slides
+    - Your current layout, if you have one (optional)
+  output:
+    - name: Message check
+      contains: The message restated in plain words, and what in the design gets in its way.
+    - name: Grid plan
+      contains: Columns, margins and spacing, with a reason for where each element sits.
+    - name: Type choices
+      contains: A proven typeface, a few sizes and flush left text, picked for fast reading.
+    - name: Photo or illustration advice
+      contains: Whether a photograph would show the facts better than an illustration.
+    - name: Hard critique
+      contains: A cool, exact verdict on your current layout, with the reason and what to remove.
+    - name: Next steps
+      contains: What to test on a real page first, and which pairing mind could give a second opinion.
 seats:
   - {seat: "Grids and order", asks: "What is the grid here, and does every element sit on it for a reason?"}
   - {seat: "Clear, honest information", asks: "Are we informing people, or trying to manipulate them?"}

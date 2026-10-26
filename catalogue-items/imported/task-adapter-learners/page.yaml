@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It changes the support but keeps the learning goal the same.
 new_slug: task-adapter-learners
 name: Task adapter for different learners
-summary: Give it a task and a learner need. Get the same task adapted, with the
-  learning goal unchanged.
+summary: Adapt a classroom task for EAL, dyslexia, ADHD or anxiety. Give it the task and learner need. You get a version with the same learning goal.
 job: teach-and-train
 headline: Task adapter for different learners
-subhead: Give it the task, the learning objective and the learner need, such as
-  EAL or dyslexia. It keeps the objective fixed and changes only how the student
-  gets there. You get the adapted task, what changed and why, and extra
-  scaffolds or stretch prompts. It does not diagnose anyone.
+subhead: Give it the task, the learning objective and the learner need, such as EAL or dyslexia. It keeps the objective fixed and changes only how the student gets there. You get the adapted task, what changed and why, and extra scaffolds or stretch prompts. It does not diagnose anyone.
 explain: |
   The same classroom task, reshaped for a learner who needs more support, more stretch or a different way in, with the learning goal left untouched. You avoid giving a student an easier task that teaches less.
 
@@ -20,6 +16,10 @@ when:
   - A student with anxiety needs a lower pressure way to show the same learning.
   - You need a version of a worksheet for a pupil still learning English.
   - You are planning for mixed needs and want options ready.
+not_for:
+  - "You want to find out what a student needs: ask your SENCO or a specialist, because this tool does not diagnose anyone."
+  - "A student already has a support plan: start with the school's plan, then use this to shape one task."
+  - "You need a task made from scratch: write the task first, or ask your AI to draft one, then bring it here."
 you_give:
   - The original task
   - The learning objective
@@ -31,7 +31,25 @@ you_get:
   - Scaffolds or extension prompts
   - A quick check that the objective still holds
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
+  - Paste your original task and the learning objective.
+  - Say what the learner needs, such as EAL, dyslexia, ADHD or anxiety. Add year group and subject if you can.
+  - Read the adapted task and the list of what changed. Check the objective is still the same.
+  - Edit anything that does not fit the child you know, then use the task in class.
+  - For more support steps or ways to check learning, pair it with the Scaffolded task modifier and the Formative assessment technique selector. This skill is adapted from Gareth Manning's differentiation-adapter, shared under CC BY-SA 4.0.
+output_sample:
+  input:
+    - Your original task, as you planned it for the class
+    - The learning objective, which stays the same
+    - The learner need, such as EAL, dyslexia, ADHD, anxiety or gifted
+    - Year group and subject (optional)
+    - Support you have, such as a teaching assistant or technology (optional)
+  output:
+    - name: The Adapted Task
+      contains: The new version of the task, changed to fit the learner need.
+    - name: What Changed and What Stayed the Same
+      contains: A plain list of what was changed and what was kept.
+    - name: Objective Check
+      contains: A check that the learning objective still holds in the adapted task.
+    - name: Implementation Notes
+      contains: Practical tips for you on how to run the adapted task in class.

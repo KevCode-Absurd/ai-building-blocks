@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set review method for each vendor.
 new_slug: vendor-risk-reviewer
 name: Vendor risk reviewer
-summary: Give it a vendor and what they handle. Get a risk tier, tailored
-  questions and a review of their SOC 2 report.
+summary: "Run a vendor risk assessment: get a risk tier, tailored security questions and a plain review of the vendor's SOC 2 report."
 job: check-contracts
 headline: Vendor risk reviewer
-subhead: Give it a vendor and what they handle. Get a risk tier, tailored
-  questions and a review of their SOC 2 report. Bring the vendor and what they
-  do for you. Use the result to plan your next step.
+subhead: Give it a vendor and what they handle. Get a risk tier, tailored questions and a review of their SOC 2 report. Bring the vendor and what they do for you. Use the result to plan your next step.
 explain: |
   A decision on how closely to watch a vendor, the questions to ask them, and a read of their security report that spots what the cover page hides. 
   First, the skill sorts the vendor into a risk tier based on what data and systems they touch. It then writes a questionnaire to match, aligned to the rules that apply to you, such as ISO 27001, SOC 2, DORA, NIS2 or HIPAA. When the vendor sends a SOC 2 Type II report, it reads it for exceptions, carved-out services, controls you must run yourself and gaps in dates that need a bridge letter. It also reviews data processing terms and the vendor's own suppliers.
@@ -17,6 +14,10 @@ when:
   - A vendor sent a SOC 2 report and nobody has time to read 80 pages.
   - An auditor asks how you rank and monitor your suppliers.
   - You must prove you checked a vendor under EU rules.
+not_for:
+  - "You only need a quick check of a free tool that holds no customer data: ask the vendor a short list of basic questions yourself."
+  - "You need legal advice on a contract: ask a lawyer, since this gives general guidance only."
+  - "You want to test the vendor's systems for weak spots: hire a security tester, since this only reviews documents."
 you_give:
   - The vendor and what they do for you
   - The kind of data they will handle
@@ -28,7 +29,32 @@ you_get:
   - A SOC 2 review with issues and next steps
   - A review schedule
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Tell your AI who the vendor is, what they do for you and what data they will handle.
+  - Say which rules you must follow, such as ISO 27001, SOC 2, DORA or HIPAA.
+  - If you have the vendor's SOC 2 report, upload it or paste the text. Long reports may need to go in parts.
+  - Read the tier first. Check it fits how much you rely on the vendor.
+  - Send the questions to the vendor. Then bring their answers back for a second review.
+output_sample:
+  input:
+    - The vendor and what they do for you
+    - The kind of data they will handle
+    - Their SOC 2 report or questionnaire answers (optional)
+    - The rules you must follow, such as ISO 27001, DORA or HIPAA (optional)
+  prerequisites:
+    - An AI that can read pasted text or uploaded files, if you want the SOC 2 report reviewed
+  output:
+    - name: Vendor tier
+      contains: A risk tier based on data access, how critical the vendor is and how hard they are to replace.
+    - name: Due-diligence questionnaire
+      contains: Questions grouped by topic, matched to the rules you follow, each asking for yes or no and proof.
+    - name: SOC 2 findings memo
+      contains: The auditor's opinion, the period and scope, an exceptions table, and notes on carved-out services.
+    - name: Customer controls checklist
+      contains: The controls you must run yourself for the vendor's controls to work, each with an owner.
+    - name: Data processing and sub-supplier review
+      contains: A clause-by-clause check of the data terms and the vendor's own suppliers, marked present, missing or weak.
+    - name: Contract security clauses
+      contains: Numbered clauses scaled to the tier, such as breach notice, audit rights, and data return and deletion.
+    - name: Monitoring and exit checklist
+      contains: How often to recheck the vendor, what to watch, and how to end the relationship safely.

@@ -1,0 +1,175 @@
+name: Email Marketing Strategist agent
+summary: "Turn a messy contact list into an email plan: who gets what, when, with exit rules, a deliverability checklist and clicks-first measurement."
+headline: Email Marketing Strategist agent
+subhead: Tell it your business, your contact list and the email tool you use. It designs your segments, the automated email sequences with timing and exit rules, a map of how contact data moves into your email tool, a deliverability checklist and the numbers to track.
+job: write-emails
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Most small email programs send one message to everyone. Open rates look
+  fine, but few people click, and some mark the email as spam. This email
+  marketing strategist agent plans the system behind the emails: who receives
+  each message, when, and when they stop receiving it.
+
+
+  It starts with your contact data, not with copy. It defines segments using at
+  least two facts about each contact, such as language and where they are in
+  your sales cycle. Then it designs the email sequences that fit each stage,
+  with timing, a clear exit rule for each and a test plan. It treats clicks as
+  the number that matters, because open counts are unreliable since Apple Mail
+  started loading emails for its users.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It plans and
+  checks. It does not write the final email copy, send anything or connect to
+  your email tool. The benchmarks and targets in the original are the author's
+  goals, not results from AI Blocks. Check them against your own past numbers.
+when:
+  - Your contacts sit in a spreadsheet or CRM and you send the same email to all of them.
+  - You use Mailchimp, Brevo, MailerLite or ActiveCampaign and want automated sequences, but don't know which ones to build first.
+  - Your emails land in spam, or complaints are rising, and you want a checklist to work through.
+  - Someone says open rates are great, but nobody replies or buys, and you need a better way to measure.
+not_for:
+  - You want the email text written. Use the Email sequence writer or the Campaign email writer.
+  - You run a Shopify store and want flows such as welcome or cart recovery. Use the Welcome flow builder or the Cart recovery flow builder.
+  - You only need your sending domain set up with SPF, DKIM and DMARC. Use the Inbox delivery fixer.
+  - You send receipts and order updates. Plan those separately from marketing email, and use your shop or app tool.
+  - You need a legal opinion on consent or privacy law. Ask a qualified lawyer.
+you_give:
+  - What you sell and who your contacts are, in a few lines
+  - The email tool you use, such as Mailchimp, Brevo, MailerLite or ActiveCampaign
+  - Where your contact data lives, and the fields you have, such as language, status or last purchase
+  - Your goal, such as more booked calls, more reviews or more repeat sales
+  - Your recent numbers, such as list size, clicks, unsubscribes and spam complaints (optional)
+  - Any flows you already run (optional)
+you_get:
+  - A segment plan where each group is defined by two or more facts
+  - A design sheet for each email sequence, with timing, goal and exit rules
+  - A map of how fields in your contact list line up with your email tool
+  - A deliverability checklist with the items to fix first
+  - A table of the numbers to track, with targets marked as starting guesses
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Say what you sell, which email tool you use, which fields your contact list has and what you want email to do.
+  - Paste a few anonymised rows from your contact list, or the column names only. Do not paste real names or addresses you do not need to share.
+  - Your AI asks once for anything missing. Anything still unknown is marked as an assumption you can change.
+  - Read the segment plan first. Check that no group could get a message that does not fit, such as a sales email to a customer who already bought.
+  - Build the first sequence in your email tool, send it to a small group and bring the numbers back for the next round.
+how_it_works:
+  - title: Check where you are now
+    text: It reviews your lists, fields, running sequences, spam and bounce numbers, and how your sending domain is set up, and marks anything it cannot see as missing.
+  - title: Design the segments
+    text: It builds groups from at least two facts per contact, and sets rules so a contact never gets a message that does not fit where they are now.
+  - title: Plan the sequences
+    text: For each stage it sets the trigger, the delay, the number of emails and the goal of each one, then adds exit rules and test ideas.
+  - title: Map the data
+    text: It lists each field in your contact list, the matching field in your email tool, its type, its values and how often it syncs.
+  - title: Check deliverability and consent
+    text: It builds a checklist for sender setup, list hygiene, one-click unsubscribe and proof of consent, and says which items to check against official sender guidance.
+  - title: Set the numbers to track
+    text: It names the numbers to watch, led by clicks and conversions rather than opens, with targets marked as guesses until you have your own history.
+  - title: Plan a safe launch
+    text: It suggests a small first send, what to watch in the first day and when to review test results.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <business, list, tool, goal> | ASSUMED: <list> | MISSING: <list>
+
+  CURRENT STATE
+    lists <x> | fields <x> | sequences running <x> | complaint and bounce numbers <x or MISSING>
+
+  SEGMENTS
+    <name> | defined by <2+ facts> | excluded <who> | gets <sequence>
+
+  SEQUENCE DESIGN (one per sequence)
+    <name> | trigger <event> | delay <time> | goal <result>
+    <#> | timing <day> | focus <topic> | call to action <x> | exit if <rule>
+    exit rules: <converts, unsubscribes, hard bounce, complaint, inactive too long>
+
+  DATA MAP
+    <list field> | <email tool field> | type <x> | values <x> | syncs <how often>
+
+  DELIVERABILITY AND CONSENT CHECKLIST
+    [ ] <item> | status <pass, fail, MISSING> | fix <step>
+
+  METRICS TO TRACK
+    <metric> | starting target <x, a guess> | alert level <x>
+
+  LAUNCH AND TEST PLAN
+    first send to <share of list> | watch <numbers> | review on <day>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - What you sell, who your contacts are and what you want email to do
+    - Your email tool and where your contact list lives
+    - The fields your contact list has, such as language, status or last purchase
+    - Recent list size, clicks, unsubscribes and spam complaints (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - Access to your email tool, to carry out the plan (this agent only plans)
+  output:
+    - name: Segment plan
+      contains: Each group, the two or more facts that define it, who is left out and which sequence it gets.
+    - name: Sequence design sheets
+      contains: For each sequence, the trigger, timing, email list, goals, test ideas and exit rules.
+    - name: Data map
+      contains: How each field in your contact list matches a field in your email tool, with type and values.
+    - name: Deliverability and consent checklist
+      contains: Sender setup, list cleaning, unsubscribe and consent items, each marked pass, fail or missing.
+    - name: Metrics table
+      contains: The numbers to track, led by clicks, with starting targets marked as guesses.
+    - name: Launch and test plan
+      contains: A small first send, what to watch and when to review.
+    - name: Open questions
+      contains: Gaps, assumptions and what to check before you build.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach an export of your contact list columns or your current flow notes.
+    - name: Mailchimp, Brevo, MailerLite or ActiveCampaign
+      why: The plan is tool-neutral, so you can build it in any of these, or in the tool you already use.
+    - name: Google Postmaster Tools
+      why: It is free and shows how Gmail sees your domain, so you can fill in the spam and reputation items with real numbers.
+  inputs:
+    - The names of your list fields and a few anonymised rows.
+    - Your last three months of clicks, unsubscribes and spam complaints.
+    - A list of the emails you send now and who gets each one.
+terms:
+  - term: Segment
+    meaning: A group of contacts picked by shared facts, such as language and last purchase.
+  - term: Lifecycle stage
+    meaning: Where a contact is in your sales cycle, such as new lead, customer or lapsed.
+  - term: Exit rule
+    meaning: The event that stops a contact receiving a sequence, such as buying or unsubscribing.
+  - term: Click-through rate
+    meaning: The share of delivered emails where someone clicked a link.
+  - term: Deliverability
+    meaning: Whether your email reaches the inbox, rather than spam or nowhere.
+  - term: SPF, DKIM, DMARC
+    meaning: Three records on your domain that prove an email really came from you.
+  - term: CRM
+    meaning: The tool or sheet where you keep contact details and sales notes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Scope of the first request
+    how: Ask for the segment plan alone, or one sequence, or the deliverability checklist. A narrow request gives sharper work.
+  - what: Your email tool
+    how: Name it. The agent will use that tool's words for lists, attributes and automations.
+  - what: Business type
+    how: Say if you sell to businesses, run a service or sell a long-cycle product such as property. The original profile leans to long-cycle services, so tell it if your sales cycle is short.
+  - what: Countries you send to
+    how: Name them. Consent and privacy rules differ, and the agent will flag where you need official guidance or a lawyer.
+improve:
+  - Keep your corrected segment definitions and data map in one file and paste it in at the start of every new session.
+  - After each send, bring back clicks, unsubscribes and complaints by segment, and ask for the weakest sequence to be redesigned.
+  - Edit SKILL.md to add your own house rules, such as the number of emails a contact can get per week.
+  - Pair it with the Email sequence writer, which writes the text for each email in the plan.

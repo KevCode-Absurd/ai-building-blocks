@@ -1,26 +1,28 @@
 slug: minority-interest-multiple-reconciliation
 name: Minority-interest multiple reconciliation
-summary: Match consolidated earnings with an enterprise-value numerator that includes outside subsidiary ownership.
+summary: Fix an EV to EBITDA multiple that leaves out minority interests. Get the matched enterprise value, the new multiple and the gap.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - deal-ebitda-addback-checker
+  - eps-multiple-return-bridge
+  - listed-holding-lookthrough-nav
 origin: own
 version: 1.0.0
 added: 2026-10-22

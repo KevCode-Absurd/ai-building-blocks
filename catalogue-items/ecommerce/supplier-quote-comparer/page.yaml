@@ -1,6 +1,6 @@
 new_slug: supplier-quote-comparer
 name: "Supplier quote comparer"
-summary: "Paste supplier quotes. Get price, minimum order, lead time and risk side by side, a deposit-safety score and terms."
+summary: "Compare supplier quotes side by side on price, minimum order, lead time and cash needed, then score how safe a deposit is before you pay."
 job: plan-supply-chain
 thinking: high
 thinking_why: "It weighs several quotes against your cash, price and risk, so a stronger model makes fewer slips."
@@ -17,6 +17,10 @@ when:
   - You have quotes from two or three factories and need to choose.
   - You are about to send a large first deposit.
   - A higher quote offers a lower minimum order and you want to know if it frees enough cash.
+not_for:
+  - "You have only one quote: ask the supplier for a second quote first, or ask a trusted buyer which terms to request."
+  - "You need a legal contract written or checked: use a lawyer, because this only lists the terms to ask for."
+  - "You want to judge factory quality from a quote: book an independent inspector, because a quote cannot show quality."
 
 you_give:
   - Two or more quotes with unit price, minimum order and manufacturing lead time
@@ -35,6 +39,28 @@ how_to_use:
   - Add freight and duty per unit if you have them, so landed cost is complete.
   - Settle the listed terms with each supplier before you pay a deposit.
   - Ask a lawyer to check any contract before you sign.
+output_sample:
+  input:
+    - Two or more supplier quotes with unit price, minimum order and lead time
+    - Your planned retail price
+    - The cash you can tie up in stock
+    - Freight and duty per unit (optional)
+    - Your tech pack and whether the product is unique (optional)
+  output:
+    - name: Quote table
+      contains: "Each supplier side by side: price, minimum order, lead time, cash up front, weeks to stock, landed cost and margin."
+    - name: Safety score
+      contains: A score out of 100 for each supplier on ten deposit checks, with the sum shown.
+    - name: Terms to settle in writing
+      contains: Refund rules, quantity variance, short-shipment rule and design ownership to agree before any deposit.
+    - name: Paper trail
+      contains: One channel with buyer protection, so messages, spec and order make one record.
+    - name: Contract
+      contains: Whether you need a signed contract now or later, with a note to check with a lawyer.
+    - name: Quality check plan
+      contains: An independent inspection for the first run, and a plan for runs two and three.
+    - name: Verdict
+      contains: Go, renegotiate or walk away for each supplier, with one line of reasoning and anything missing.
 
 how_it_works:
   - title: Compares three numbers

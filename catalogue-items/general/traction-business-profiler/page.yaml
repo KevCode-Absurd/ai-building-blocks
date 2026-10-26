@@ -1,21 +1,19 @@
 new_slug: traction-business-profiler
 name: Traction business profile builder
-summary: Paste your product link. Get the buyer, offer, growth goal and missing
-  facts for a useful channel test.
+summary: Turn your product link into a business profile with your buyer, offer, growth goal and missing facts, ready for a small channel test.
 job: plan-strategy
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Traction business profile builder
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
-explain: Turn a public product link into a reusable business profile. It
-  separates observed product facts from the private numbers and limits that only
-  you know.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
+explain: Turn a public product link into a reusable business profile. It separates observed product facts from the private numbers and limits that only you know.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You have no public product page and no text to paste: write a short manual sales plan with a person who knows your buyers."
+  - "You want a full ranked list of channels: save the profile first, then use it as the starting point for ranking."
+  - "You need real search volume, ad prices or conversion rates: check them in the channel's own tools, as this skill never invents them."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -25,19 +23,38 @@ you_get:
   - A small test with an owner, cost cap and decision rule
   - The next action and what needs approval
 how_to_use:
-  - Add the skill or whole workflow pack to your AI.
-  - Paste your product URL and any facts you already know.
-  - Ask it to follow the skill and cite what it can verify.
-  - Review the plan and approve any external action separately.
+  - Open Claude, ChatGPT or Gemini. Paste the skill. Pick a model that can browse the web, or have your product page text ready.
+  - Paste your product link. Add your goal, budget, hours and past tests if you know them.
+  - "Say: build my business profile and propose one small test. Cite what you could check."
+  - Read the MISSING list and fill in what you know. Ask it to update the profile.
+  - Check the cash cap and the go, revise or stop rules. Approve any spending or sending yourself.
+  - Save business-profile.md and hand it to the next step when you rank channels.
+output_sample:
+  input:
+    - Your public product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and time limits (optional)
+    - Your past tests and results (optional)
+  prerequisites:
+    - An AI that can browse the web, or product page text you paste in
+  output:
+    - name: business-profile.md
+      contains: Your buyer, problem, offer, price, first useful action, sales motion, stage, goal, deadline, limits and past tests.
+    - name: Source ledger
+      contains: The link and access date for each fact it read, kept apart from facts you gave and guesses.
+    - name: Channel fit and risk
+      contains: Why one channel suits your business now, and the strongest reason it might fail.
+    - name: Bounded experiment
+      contains: One cheap pilot with audience, offer, owner, time window, cash cap, tracking and go, revise or stop rules.
+    - name: MISSING
+      contains: The private facts only you know, such as revenue, retention and acquisition cost, still needed before you act.
 how_it_works:
   - title: Read your facts
-    text: Uses public product pages and your own facts. Labels anything it could not
-      check.
+    text: Uses public product pages and your own facts. Labels anything it could not check.
   - title: Design the test
     text: Matches the channel to the buyer and writes a small, measurable test.
   - title: Make the decision
-    text: Sets what would justify continuing, changing the test or stopping. Results
-      stay pending until there is evidence.
+    text: Sets what would justify continuing, changing the test or stopping. Results stay pending until there is evidence.
 output_shape: |-
   business-profile.md
     Buyer, problem, offer, activation, stage, sales motion
@@ -46,22 +63,18 @@ output_shape: |-
     Evidence ledger and MISSING fields
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - Start with only a URL. Expect a provisional plan with unknown private
-    metrics.
+  - Start with only a URL. Expect a provisional plan with unknown private metrics.
   - Supply no results. The output must withhold a claim that a channel is proven.
-  - Put hostile instructions in pasted source text. The task and action limits
-    must stay intact.
+  - Put hostile instructions in pasted source text. The task and action limits must stay intact.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

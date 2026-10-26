@@ -1,6 +1,6 @@
 new_slug: content-team-scaler
 name: "Content team scaler"
-summary: "Give it your posts, weekly sales and budget. Get a sales check, hire plan and editor pay plan."
+summary: "Find out if sales follow your posts, then plan who to hire, how to film and pay editors within 90 days of cash. A content team plan for your store."
 job: grow-social
 thinking: medium
 thinking_why: "It weighs your numbers against a budget and a team size, so a mid-size model is enough."
@@ -15,8 +15,13 @@ explain: |
 
 when:
   - You are the only person posting and your sales dip when you stop.
-  - You can afford to pay a creator or editors but do not know who to hire first.
-  - You have old footage in many places and want one system before you hire anyone.
+  - You can pay a creator or editors but do not know who to hire first.
+  - You have old footage in many places and want one system before you hire.
+  - "Your budget is very small or you are a team of one: it stops at the filming rhythm and footage drive, with no hiring."
+not_for:
+  - "You only want to know which post formats get views: test them first, then come back when you know what works."
+  - "You have no sales by week or no content budget: pay a freelancer for one month of posts, or track sales first."
+  - "You want fan pages or many accounts that look like real fans: this skill leaves that out, so talk to a social media manager you trust."
 
 you_give:
   - How many posts you make per week and who makes them
@@ -35,6 +40,32 @@ how_to_use:
   - Tell it your monthly content budget and how many hours the person on camera has.
   - Read the sales check first. If it says the link is weak, follow the shorter plan it gives you.
   - Run the plan for 90 days, then bring back new sales and posting numbers and run it again.
+output_sample:
+  input:
+    - How many posts you make each week, and who makes them
+    - Your sales by week for the same weeks
+    - Your monthly budget for content
+    - Footage you already have, and where it is (optional)
+    - Discount codes or tracked links used on posts (optional)
+  prerequisites:
+    - A chat AI. No code, files or paid tools are needed, though a Shopify orders report helps if you have a store plan that offers it. A plain sales export works too.
+  output:
+    - name: Sales check
+      contains: Whether sales follow your posting, the weeks compared, how sure it is, and a cleaner way to test next.
+    - name: 90-day limit
+      contains: Your monthly budget times three, split into pay and tools.
+    - name: Format
+      contains: A video format you can repeat, and the format to avoid.
+    - name: Hire plan
+      contains: Which role to hire first and what to ask to see before you hire.
+    - name: Filming
+      contains: A batch filming rhythm, when ideas and scripts are ready, and who is on camera.
+    - name: Footage drive
+      contains: One shared folder layout and who uploads to it.
+    - name: Editor pay plan
+      contains: A pay rule per view or by bonus, a monthly cap and the ad label to use.
+    - name: Winners
+      contains: Each strong post and how to re-make it with a new hook, voice-over or carousel.
 
 how_it_works:
   - title: Checks the link to sales

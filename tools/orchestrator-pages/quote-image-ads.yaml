@@ -1,6 +1,6 @@
 new_slug: quote-image-ads
 name: "Turn customer quotes into image ads that quote them"
-summary: "Give it your reviews. Get quote image ads, a review card ad, an ad rules check and the ad types still missing."
+summary: "Turn your customer reviews into quote image ads that use their exact words. Get a review card ad, an ad rules check and a list of missing ad types."
 job: make-image-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - You have good reviews and want the ads to use the customers' own words.
   - Your image ads sound like brand copy, and you want them to sound like people.
   - You want to know which kinds of ad your set is missing.
+not_for:
+  - "You have no real reviews yet: write ads from your product facts with the Fact-based ad copy writer, or collect reviews first."
+  - "You only want one quote ad: use the Image ad maker from customer quotes."
+  - "You only want to know why people buy: run the buying reasons step alone, or use the Buyer research image ad maker."
 
 you_give:
   - Your customer reviews, copied as written, with where each came from
@@ -35,6 +39,28 @@ how_to_use:
   - Have your inputs ready. Paste your reviews as written and say where each one came from.
   - Check the ranked reasons and the quotes it picked before you make any pictures.
   - Make the images with your image tool, using the prompts and your real photos.
+output_sample:
+  input:
+    - Your customer reviews, copied as written, with where each came from
+    - Your product facts and photos (optional)
+    - Your target countries, for the ad rules check (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - An image tool, if you want to turn the briefs into pictures
+  output:
+    - name: "Step 1 file: buying reasons"
+      contains: Ranked reasons people buy, with the exact phrases, review numbers and whether each counts as a pattern.
+    - name: "Step 2 file: quote image ads"
+      contains: Quote ads sorted by job, with layout, feed text and a flag on any quote to check first.
+    - name: "Step 3 file: review card ad"
+      contains: One plain review card built from a real review, with its real stars and word for word lines.
+    - name: "Step 4 file: ad rules check"
+      contains: A verdict on each ad against Facebook and Instagram ad rules, with the exact line flagged.
+    - name: "Step 5 file: missing ad types"
+      contains: The ad types your set leaves out, with a short brief for the next three.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Finds why people buy
@@ -44,7 +70,7 @@ how_it_works:
   - title: Adds a review card
     text: Uses the review card skill to find a real review whose grumble only exists because the product works, and copies it with its real stars.
   - title: Checks the ads against Meta rules
-    text: Uses the ad rules checker to flag review claims and rate each finding.
+    text: Uses the ad rules checker on the quote ads and the review card to flag review claims and rate each finding.
   - title: Finds the types still missing
     text: Uses the gap finder to code every ad by type and brief the next three.
 

@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It follows reporting frameworks but needs judgment on what counts.
 new_slug: esg-report-preparer
 name: ESG report preparer
-summary: Give it your environmental, social and governance data. Get a draft
-  sustainability report or a check of an existing one.
+summary: Turn your energy, HR and board data into an ESG report draft, or check an existing sustainability report for gaps against SASB, GRI or TCFD.
 job: money-and-investing
 headline: ESG report preparer
-subhead: A draft sustainability report built from your own data, or a gap check
-  of one you already have. It shows what to disclose and where you fall short.
+subhead: A draft sustainability report built from your own data, or a gap check of one you already have. It shows what to disclose and where you fall short.
 explain: |
   A draft sustainability report built from your own data, or a gap check of one you already have. It shows what to disclose and where you fall short.
 
   The skill begins with the standard you report against, such as SASB, GRI or TCFD, then decides which topics matter most for your industry. It turns your numbers into the core measures: scope 1, 2 and 3 emissions, pay gaps, management diversity and staff turnover. It reviews board independence, pay links to sustainability goals and anti-corruption policy. You get a scorecard against targets, short findings for each area, and a list of goals to act on next.
 when:
-  - You have to publish a sustainability report and have raw data but no
-    structure.
+  - You have to publish a sustainability report and have raw data but no structure.
   - A customer or investor has asked for your ESG figures.
   - You want to know which topics matter most for your industry.
   - You have an existing report and want to find its gaps.
+not_for:
+  - "You need a statutory report with signed-off figures: have a qualified assurance provider check the numbers before you publish."
+  - "You only want to check that your ESG data is accurate: use an audit checklist or ask your accountant."
+  - "You want to know if ESG risks hurt your profit: use a financial analysis step or ask your finance lead."
 you_give:
   - Energy, travel and waste data
   - HR figures on staff, pay and turnover
@@ -31,7 +32,26 @@ you_get:
   - Gap list versus the standard
   - Goals for next year
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - "Say which standard you report against: SASB, GRI or TCFD. If you are not sure, say so."
+  - Paste your energy, travel, waste, HR and board details. Add your targets and last report if you have them.
+  - Read the scorecard first. Check that every target comes from you, and mark any gap you cannot fill.
+  - Have a qualified assurance provider check the figures before you publish.
+output_sample:
+  input:
+    - Your energy, travel and waste data
+    - Your HR figures on staff, pay and turnover
+    - Your board and policy details
+    - The standard you report against, such as SASB, GRI or TCFD (optional)
+    - Your targets and your previous report (optional)
+  output:
+    - name: Scorecard
+      contains: Your key measures set against your targets, plus a rating of how closely you match SASB or GRI.
+    - name: "The Findings: Environmental"
+      contains: A summary of carbon, waste and water, with emissions split into scope 1, 2 and 3.
+    - name: "The Findings: Social"
+      contains: A summary of pay gaps, diversity in management, staff turnover and community impact.
+    - name: "The Findings: Governance"
+      contains: A summary of board independence, pay links to sustainability goals and anti-corruption policy.
+    - name: Actionable Goals
+      contains: A plan for cutting emissions or improving diversity, based on the gaps found.

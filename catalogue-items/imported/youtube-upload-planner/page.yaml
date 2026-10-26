@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It fits ideas to the time you really have.
 new_slug: youtube-upload-planner
 name: YouTube upload planner
-summary: Tell it your free hours. Get a week of uploads with titles, formats and
-  what to drop first.
+summary: Plan your YouTube upload schedule for the week. Give it your free hours and half-made videos. You get a table of what to post and what to drop.
 job: grow-social
 headline: YouTube upload planner
-subhead: A week of YouTube uploads that fits the hours you really have, with a
-  clear line on what to drop first if the week goes wrong.
+subhead: A week of YouTube uploads that fits the hours you really have, with a clear line on what to drop first if the week goes wrong.
 explain: |
   A week of YouTube uploads that fits the hours you really have, with a clear line on what to drop first if the week goes wrong.
 
@@ -17,6 +15,10 @@ when:
   - You have a few half-finished videos and no schedule.
   - You need to turn one video into Shorts.
   - You want to know which day to publish.
+not_for:
+  - "You want a full month of ideas from scratch: use a content calendar tool, since this plan builds on what you already have."
+  - "You have no footage or half-made videos yet: start by recording one video, then come back to plan the week."
+  - "You want the video script or the Shorts cut for you: ask your AI to write the script, or cut the clips by hand."
 you_give:
   - Your free hours this week
   - What is already half made
@@ -28,7 +30,33 @@ you_get:
   - An hours cost estimate
   - What to drop first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI how many hours you can give this week and what videos are already half made.
+  - Add your best upload day from your channel analytics, if you know it.
+  - If your AI has no record of your voice, paste the text of three of your own videos so it can match how you talk.
+  - Read the week table and check the hours fit your real week.
+  - "Answer the last question: ship it, or change it. Then post the videos yourself, as the AI does not publish."
+output_sample:
+  input:
+    - How many hours you can give this week
+    - What is already half made
+    - Your best upload day from your channel analytics (optional)
+    - Three of your own videos, if the skill has no record of your voice (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - A saved voice file, or three of your own videos so the AI can learn how you talk
+  output:
+    - name: Week table
+      contains: One row per upload with the day, format, working title, the one sentence it promises, and what already exists.
+    - name: Main video
+      contains: The one video the week is built around, set for your best upload day.
+    - name: Cheap video
+      contains: A second upload made from something that exists, like a clip or a reply to a popular comment.
+    - name: Three Shorts
+      contains: Short clips to cut from the main video, not written from scratch.
+    - name: Hours cost
+      contains: An honest line on how many hours the week will take.
+    - name: What to drop first
+      contains: The upload to cut if the week goes wrong.
+    - name: Ship it or change it
+      contains: A closing question asking whether you want to go ahead or edit the plan.

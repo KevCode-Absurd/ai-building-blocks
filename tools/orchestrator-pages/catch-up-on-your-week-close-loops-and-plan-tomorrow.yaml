@@ -1,6 +1,6 @@
 new_slug: catch-up-on-your-week-close-loops-and-plan-tomorrow
 name: Catch up on your week, close loops and plan tomorrow
-summary: Connect your chat, email and files. Get what you missed, open loops closed and a protected day planned.
+summary: "Catch up on your week: get a digest of what you missed, close open loops, and plan one protected day for deep work from your chat, email and files."
 job: organise-work
 thinking: medium
 thinking_why: The steps are light, but the digest depends on what your tools return. A mid-size model works.
@@ -14,6 +14,10 @@ when:
   - You were away or heads-down and need to see what you missed.
   - It is Friday or Monday and your task list is a mess.
   - You want tomorrow planned around your most important work.
+not_for:
+  - "You have one urgent task and no backlog: just do the task, or plan the day on its own with the Deep work day planner."
+  - "None of your tools can be connected: skip the digest and run the Weekly review guide alone on a list you paste in."
+  - "You are starting fresh with nothing open: there is nothing to close, so write a simple to-do list for tomorrow."
 you_give:
   - At least one connected tool, such as chat, email, tasks or files
   - The time window to cover, such as a day, a week or a start date
@@ -30,6 +34,23 @@ how_to_use:
   - Connect the tools you use, then say how far back to look.
   - Answer its questions during the weekly review. Say what you will drop.
   - Give it tomorrow's tasks and meetings for the day plan.
+output_sample:
+  input:
+    - At least one connected tool, such as chat, email, tasks or files
+    - How far back to look, such as a day, a week or a start date
+    - Tomorrow's tasks and meetings
+    - Your goals for the week (optional)
+  prerequisites:
+    - An AI connected to an outside tool, such as chat or email, so it can read your messages
+  output:
+    - name: "Step 1: Digest"
+      contains: Mentions, decisions and action items from your connected tools, grouped by topic.
+    - name: "Step 2: Weekly review"
+      contains: Open loops sorted into next action, waiting for, someday or dropped, plus stalled projects and a plan for next week.
+    - name: "Step 3: Protected day"
+      contains: Deep work blocks, batched shallow work windows, buffers and a note of what was cut.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Get a digest of what you missed
     text: Scans mentions, messages, tasks and recent documents in each connected tool, groups them by topic and pulls out decisions and action items.

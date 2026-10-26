@@ -10,7 +10,11 @@ Two-axis review of the diff between `HEAD` and a fixed point the user supplies:
 
 Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings.
 
-The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
+The issue tracker should have been provided to you. If it was not, and you cannot fetch issues, do not stop: ask the user to paste the ticket text or give a file path. If they have neither, treat the spec as missing. (Users of Matt Pocock's skills can also run `/setup-matt-pocock-skills` to set up the tracker.) Never invent a spec.
+
+If you cannot run git, ask the user to paste the diff and the commit list, and use those.
+
+If you cannot run sub-agents in parallel, run the two reviews one after the other, standards first, as separate sections. Do not let one review read the other's findings.
 
 ## Process
 
@@ -71,11 +75,23 @@ Issue both sub-agent calls together, in the foreground, and aggregate the report
 - The path or fetched contents of the spec.
 - The brief: "Report: (a) requirements the spec asked for that are missing or partial; (b) behaviour in the diff that wasn't asked for (scope creep); (c) requirements that look implemented but where the implementation looks wrong. Quote the spec line for each finding. Under 400 words."
 
-If the spec is missing, skip the Spec sub-agent and note this in the final report.
+If the spec is missing, skip the Spec sub-agent and note this in the final report. If no standards file exists, say so and run the Standards review on the smell baseline alone.
 
 ### 5. Aggregate
 
 Present the two reports under `## Standards` and `## Spec` headings, verbatim or lightly cleaned. Do **not** merge or rerank findings, because the two axes are deliberately separate (see _Why two axes_).
+
+The result looks like this. The text in angle brackets is a placeholder.
+
+```
+## Standards
+<findings, each citing the file and rule it breaks, or marked "possible <smell>">
+
+## Spec
+<findings, each quoting the spec line, or "no spec available">
+
+Summary: Standards <n> findings, worst: <issue>. Spec <n> findings, worst: <issue>.
+```
 
 End with a one-line summary: total findings per axis, and the worst issue _within each axis_ (if any). Don't pick a single winner across axes: that's the reranking the separation exists to prevent.
 
@@ -87,3 +103,7 @@ A change can pass one axis and fail the other:
 - Code that does exactly what the issue asked but breaks the project's conventions → **Spec pass, Standards fail.**
 
 Reporting them separately stops one axis from masking the other.
+
+## Next step
+
+Tell the user to fix the worst finding in each review, then re-run the review on the same fixed point, then open the pull request.

@@ -1,26 +1,25 @@
 slug: gp-clawback-exposure-checker
 name: GP clawback exposure checker
-summary: Compare paid carry with verified final entitlement and the collateral available for a potential clawback.
+summary: "Check a GP clawback. See the carry a manager may owe back, how much escrow covers and what stays unsecured, from carry paid and entitlement."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next: [investor-statement-nav-checker]
 origin: own
 version: 1.0.0
 added: 2026-10-22

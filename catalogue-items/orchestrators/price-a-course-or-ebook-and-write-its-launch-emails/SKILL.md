@@ -46,9 +46,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Set the price.** Use the skill `digital-product-pricer`. The price for a course, ebook or template, its labels, and the launch discount, from what it does for the buyer and the market around it.
-2. **Pick the digits.** Use the skill `price-ending-picker`. Give it the price. Round, just-below or exact digits for that price, with the reason, so the number fits the product and the buyer.
-3. **Write the discount honestly.** Use the skill `discount-wording-planner`. Give it the price and the launch discount. The discount shown the clearest honest way: percent or amount, how the sale price is displayed, the banner line and a real end date.
+1. **Set the price.** Use the skill `digital-product-pricer`. The price for a course, ebook or template, its labels, and the launch discount, from what it does for the buyer and the market around it. Hands the price and launch discount to the digits step.
+2. **Pick the digits.** Use the skill `price-ending-picker`. Give it the price. Round, just-below or exact digits for that price, with the reason, so the number fits the product and the buyer. Hands that price and its digits to the discount step.
+3. **Write the discount honestly.** Use the skill `discount-wording-planner`. Give it the price and the launch discount. The discount shown the clearest honest way: percent or amount, how the sale price is displayed, the banner line and a real end date. Hands the finished discount wording to the email step.
 4. **Plan the launch emails.** Use the skill `launch-email-sequence-planner`. Give it the price, the discount wording and your customer words. The launch sequence: trigger, timing and each email, built the way Claude Hopkins sold by mail: one offer, a reason why, proof, and a measured response. Nothing is sent until you say so.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

@@ -1,6 +1,6 @@
 new_slug: social-video-edit-planner
 name: "Social video edit planner"
-summary: "Attach clips and the post's idea. Get a timed cut list, captions, a cover and export checks."
+summary: "Plan a social video edit from your own clips. Get a timed cut list, captions, cover and export checks for one clear post."
 job: grow-social
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You filmed a founder chat, a how-to, a care step or a behind-the-scenes moment and want a post from it.
   - You have one long recording and want several short posts out of it.
   - You need a clear edit brief for an editor or for your editing app.
+not_for:
+  - "You are making a paid ad: use the video ad edit plan, which is built for ads."
+  - "You have one clip and no idea for the post to land: pick the one thing to teach or show first, then come back."
+  - "You need to decide what to film before you shoot: plan the shoot with a founder video planner first."
 
 you_give:
   - Your clips, or screenshots of key frames from each (attach them; your AI can see pictures), with each clip's length and any speech or music
@@ -38,6 +42,32 @@ how_to_use:
   - Say the one thing the post should teach or show, for example "how to open the pack".
   - Listen to each flagged word in the recording and fix the plan before captions go on.
   - Hand the cut list to your editor or follow it in your editing app. Watch the export on a phone, with sound and then muted.
+output_sample:
+  input:
+    - Your clips, or screenshots of key frames from each, with each clip's length
+    - A transcript, if you have one
+    - The one idea the post should land
+    - Your brand file with fonts, colours and product names (optional)
+    - Where it will be posted, its shape and length (optional)
+  prerequisites:
+    - An AI that can see attached pictures or video, such as Gemini or Claude
+  output:
+    - name: Purpose and opening line
+      contains: One sentence on what the post does, and the first line that makes sense on its own.
+    - name: Cut list
+      contains: Each piece in order with source, in and out times, what is on screen, caption timing and sound.
+    - name: Extra shots
+      contains: Each extra shot with the line it covers and where it comes from, or the shot still to film.
+    - name: Check before captioning
+      contains: Names, numbers and steps to confirm against the recording, with their times.
+    - name: Cover and post caption
+      contains: A real frame with a few words for the cover, and a caption that makes the same promise.
+    - name: Ending and disclosure
+      contains: How the post ends, and any paid or gifted note that must stay.
+    - name: Export
+      contains: Shape, size, length and files, with checks for watermarks, black bars and sound.
+    - name: Checks missed
+      contains: One line for each check the plan still misses, or none.
 
 how_it_works:
   - title: Logs the footage

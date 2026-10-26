@@ -16,6 +16,29 @@ use_cases:
   - "Explain a household spending limit without frightening a child"
   - "Prepare money questions for a first job or independent living"
   - "Teach a beginner with a visible choice instead of a lecture"
+not_for:
+  - "You need a loan, aid or school fee decision: ask a qualified adviser, because this mind gives no current advice on rates or terms."
+  - "You want to teach saving, diversification or how markets work to an adult: use the Burton Malkiel mind."
+  - "You want help with a child's tantrum or big feelings, not a money choice: use the Becky Kennedy mind."
+output_sample:
+  input:
+    - The money moment you want to handle, such as a shopping trip, allowance or college talk
+    - Your child's age and what they understand now
+    - What you can really promise or afford
+    - What you want them to understand afterward
+  output:
+    - name: Learner's current understanding
+      contains: A short read on what your child now believes about how money and payment work.
+    - name: One concept and visible choice
+      contains: One idea to teach, shown with a balance, tokens or envelopes the child can see.
+    - name: Adult promise
+      contains: What the money covers and limits you can keep, with unknown costs marked as unknown.
+    - name: Short script
+      contains: A few plain sentences with the limit and room for the child's disappointment.
+    - name: Checking question
+      contains: A question to see what the child understood, and a later check on the agreement.
+    - name: Comparison sheet (older learners)
+      contains: A list of costs, support, conditions and unknowns to check from current sources.
 seats:
   - {seat: "Everyday family money lessons", asks: "What real choice can your child understand and practise?"}
   - {seat: "Consistency, saving and college conversations", asks: "What have you promised, and what can you actually support?"}

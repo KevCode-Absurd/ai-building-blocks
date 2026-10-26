@@ -1,14 +1,12 @@
 slug: reconcile-hotel-room-and-food-contribution
-name: Reconcile hotel room and food contribution
-summary: A property room and food contribution reconciliation
+name: Hotel room and food contribution checker
+summary: Share room receipts, channel fees, food batches and separate costs. Get matched room and food subtotals with open cost gaps.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
   - type: source_text
     required: true
   - type: spreadsheet
@@ -18,8 +16,9 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+next:
+  - reconcile-service-capacity-and-shared-cost
+  - reconcile-working-capital-and-tax-cash
 uses:
   - hotel-channel-revenue-reconciler
   - restaurant-portion-cost-builder

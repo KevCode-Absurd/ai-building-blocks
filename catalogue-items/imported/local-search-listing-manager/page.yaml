@@ -2,36 +2,61 @@ thinking: medium
 thinking_why: It checks many set items, then ranks the fixes.
 new_slug: local-search-listing-manager
 name: Local search listing manager
-summary: Describe your service business and area. Get a local search audit,
-  listing fixes and a plan for more reviews.
+summary: Get a local search audit for your service business. Fix your Google Business Profile, listings and reviews so you show up in map results.
 job: get-found-in-search
 headline: Local search listing manager
-subhead: A local search plan for a business that serves customers at their
-  location, like repair, heating, plumbing or cleaning. Describe your business
-  and area and get an audit, fixes and a review plan.
+subhead: Describe your service business and the areas you cover. Your AI checks your Google Business Profile and listings, then gives you fixes. You also get neighbourhood page drafts and review replies.
 explain: |
   A local search plan for a business that serves customers at their location, like repair, heating, plumbing or cleaning. Describe your business and area and get an audit, fixes and a review plan.
 
   It works in four modes. The Google Business Profile audit checks relevance, closeness and prominence, with a checklist and review reply templates. The area content mode writes neighbourhood service pages. The consistency check compares your name, address and phone number across directories. The technical mode adds schema markup. It begins by gathering your services, areas, current listings and the competitors in the map results.
 when:
   - You do not show up in the map results for your service.
-  - Your phone number differs across directories.
-  - You serve twenty towns and need pages for each.
-  - You want a plan to get more good reviews.
+  - Your phone number or address differs across directories.
+  - You serve many towns and need a page for each one.
+  - You have reviews with no reply and want drafts.
+not_for:
+  - "You want to rank across the whole country, not in your local area: use a general SEO audit instead."
+  - "You only need schema markup for pages that are not local business pages: use a general schema markup tool."
+  - "You want your business to show up in AI answers: use an AI answer visibility check instead."
 you_give:
-  - Business name, address and phone
-  - Services you offer
-  - Areas you serve
-  - Current listings and website
-  - Local competitors (optional)
+  - Your business name, address and phone number
+  - The services you offer
+  - The towns or neighbourhoods you serve
+  - Your website and current listings (optional)
+  - The local competitors in the map results (optional)
 you_get:
-  - A Business Profile audit
-  - Service area page drafts
-  - A directory consistency report
-  - Schema markup
-  - Review reply templates
+  - A Google Business Profile audit with a ranked fix list
+  - Neighbourhood service page drafts
+  - A report on where your name, address and phone differ
+  - Markup code for your site
+  - Reply drafts for your reviews
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the contents of SKILL.md.
+  - Type your business name, address, phone, services and the areas you serve.
+  - "Say which job you want: a profile audit, a page for one area, a listing check, markup code or review replies."
+  - Paste your current profile text or reviews if you have them.
+  - Check every local detail in the result, such as landmarks, streets and zip codes, before you publish.
+  - Running the listing check and page scripts needs an AI that can run code. Without it, the AI works from what you paste.
+output_sample:
+  input:
+    - Your business name, address and phone number
+    - The services you offer
+    - The towns or neighbourhoods you serve
+    - Your website and current listings (optional)
+    - The local competitors in the map results (optional)
+  prerequisites:
+    - An AI that can run code, only if you want it to run the listing check and page scripts. A normal chat works for the audit and drafts.
+  output:
+    - name: GBP audit
+      contains: A pass or fail checklist for your Google Business Profile, with a ranked list of fixes.
+    - name: Service area page
+      contains: A draft page for one neighbourhood with headings, questions and answers, and a meta description.
+    - name: NAP report
+      contains: A table of directories showing where your name, address or phone differ, with fix steps.
+    - name: LocalBusiness schema
+      contains: A block of markup code you paste into your site so Google can read your business details.
+    - name: Review responses
+      contains: Reply drafts for the reviews you share, for both good and bad ones.
+    - name: Full local SEO audit
+      contains: All of the above in one report, when you ask for the full audit.

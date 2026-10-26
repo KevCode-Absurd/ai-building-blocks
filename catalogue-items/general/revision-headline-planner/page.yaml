@@ -1,6 +1,6 @@
 new_slug: revision-headline-planner
 name: "Revision headline planner"
-summary: "Paste the causes behind your notes. Get three to five headlines, what to blow up and keep, and a next-version plan."
+summary: "Turn a long list of review notes into three to five headlines, a choice sheet and a next-version plan with a review date."
 job: lead-people
 thinking: medium
 thinking_why: "It ranks and condenses a list by clear rules, but it has to judge what to blow up and what to keep."
@@ -17,9 +17,13 @@ when:
   - You have a pile of notes and do not know where to start.
   - You fixed the easy notes last time and the main problem is still there.
   - You lead a project and need a clear next step and review date.
+not_for:
+  - "You have no review yet and only a first draft: get notes first, then come back."
+  - "You only have raw notes and no ranked causes: use the Problem root cause tracer first, then paste its result here."
+  - "You want to plan the review session itself: use the Peer feedback session planner."
 
 you_give:
-  - The ranked causes or problems, ideally from "Problem root cause tracer"
+  - The ranked causes or problems from your review, ideally from the Problem root cause tracer
   - A line on what the work is meant to be (optional)
   - The session plan, if you have one (optional)
 you_get:
@@ -33,6 +37,30 @@ how_to_use:
   - Paste the causes and say what the work is meant to be.
   - Fill in the choice sheet yourself. Decline anything that does not fit.
   - Do the first moves, then bring the new version to the next review.
+output_sample:
+  input:
+    - Your ranked causes or problems from a review
+    - A line on what the work is meant to be (optional)
+    - Your session plan (optional)
+  prerequisites:
+    - A review that has already produced a list of notes or causes
+  output:
+    - name: Goal
+      contains: One line on what the work is meant to be, or a MISSING note if you did not say.
+    - name: Headlines
+      contains: Three to five one-sentence headlines, ranked, each with the notes that sit under it.
+    - name: The three questions
+      contains: What to blow up, what to go back on and what you love, with a reason for each.
+    - name: Your choice sheet
+      contains: One line per headline for you to mark Act, Test first or Decline, with your reason.
+    - name: First moves this week
+      contains: One small step for each headline you mark Act or Test first.
+    - name: Next look
+      contains: A review date that fits the size of the work, and what reviewers will be asked.
+    - name: Stuck test
+      contains: What to ask if the work comes back unchanged, and the options that follow.
+    - name: Missing and checks missed
+      contains: Gaps that would sharpen the plan, and any checks the skill did not pass.
 
 how_it_works:
   - title: Writes the headlines

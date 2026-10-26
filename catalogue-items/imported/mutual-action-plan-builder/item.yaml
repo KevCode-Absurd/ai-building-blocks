@@ -10,6 +10,14 @@ level: advanced
 inputs:
   - type: tool_connection
     required: false
+  - type: document
+    required: false
+  - type: audit_report
+    required: false
+  - type: transcript
+    required: false
+  - type: copy_draft
+    required: false
 outputs:
   - type: plan
 uses: []

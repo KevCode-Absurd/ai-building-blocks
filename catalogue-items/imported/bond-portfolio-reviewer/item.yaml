@@ -1,6 +1,6 @@
 slug: bond-portfolio-reviewer
 name: Bond portfolio reviewer
-summary: Give it your bond holdings. Get yield, duration and mix by rating, plus a rate shock test. It collects data from websites.
+summary: "Review your bond holdings for portfolio yield, duration, mix by rating and sector, cash flows and a rate shock test, with every gap marked."
 category: general
 boards: []
 type: skill

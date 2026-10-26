@@ -11,18 +11,19 @@ inputs:
   - {type: meeting_notes, required: false}
   - {type: persona, required: false}
   - {type: offer, required: false}
+  - {type: transcript, required: false}
 outputs:
   - {type: plan}
   - {type: copy_draft}
 uses: [stalled-deal-indecision-checker, sales-call-question-planner, negotiation-call-prep-planner, weak-position-negotiation, can-they-pay-deal-checker, live-objection-responder, call-follow-up-drafter]
 steps:
-  - {uses: stalled-deal-indecision-checker, note: "Only when the deal has gone quiet or the last call ended with no next step: does the buyer doubt you or fear a mistake, and what to propose."}
-  - {uses: sales-call-question-planner, note: "Only when the buyer's problem, its cost or who decides is not yet confirmed in the notes: the questions in order."}
-  - {uses: negotiation-call-prep-planner, note: "Only when price or terms are on the table: opening lines, questions to ask and a fallback."}
-  - {uses: weak-position-negotiation, note: "Only when the other side holds more power, for example they have other options and you need the deal: your terms and the order to move in."}
-  - {uses: can-they-pay-deal-checker, note: "Only when price is the sticking point and you know something about their means: a range they can pay and a sum they can meet."}
-  - {uses: live-objection-responder, note: "For each objection from the last call that was not settled: what it means, a reply and proof to use."}
-  - {uses: call-follow-up-drafter, note: "After the call, from the notes or transcript: a follow-up email draft and the notes saved for the next prep."}
+  - {uses: stalled-deal-indecision-checker, note: "Only when the deal has gone quiet or the last call ended with no next step: does the buyer doubt you or fear a mistake, and what to propose. Hands the deal check to the steps that follow."}
+  - {uses: sales-call-question-planner, note: "Only when the buyer's problem, its cost or who decides is not yet confirmed in the notes: the questions in order. Starts from the deal check if step 1 ran, and adds the questions to the one-page plan."}
+  - {uses: negotiation-call-prep-planner, note: "Only when price or terms are on the table: opening lines, questions to ask and a fallback. Builds on the plan so far and hands the terms to the next two steps."}
+  - {uses: weak-position-negotiation, note: "Only when the other side holds more power, for example they have other options and you need the deal: your terms and the order to move in. Keeps to the plan from step 3."}
+  - {uses: can-they-pay-deal-checker, note: "Only when price is the sticking point and you know something about their means: a range they can pay and a sum they can meet. Takes your terms from the plan so far and hands the sum to the one-page plan."}
+  - {uses: live-objection-responder, note: "For each objection from the last call that was not settled: what it means, a reply and proof to use. Uses the buyer's own words from your call notes, not the plan, and hands the replies to the one-page plan."}
+  - {uses: call-follow-up-drafter, note: "After the call, from your new notes or transcript, not the earlier steps: a follow-up email draft and the notes saved for the next prep."}
 schedule: "Before each sales call, and again after it"
 asks_before: [sending any email or message to the prospect, booking or moving a call, changing a price, discount or terms, updating a CRM record]
 origin: own

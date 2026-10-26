@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It weighs severity against likelihood.
 new_slug: legal-risk-rater
 name: Legal risk rater
-summary: Describe a deal or issue. Get each risk rated by how bad and how
-  likely. Not legal advice.
+summary: Rate each legal risk in a deal by how bad and how likely it is. Get a legal risk rating, a score and a ranked list. Not legal advice.
 job: check-contracts
 headline: Legal risk rater
-subhead: A rating for each legal risk in a deal or issue, scored on two scales
-  so you can tell which ones need attention now. Describe the situation.
+subhead: A rating for each legal risk in a deal or issue, scored on two scales so you can tell which ones need attention now. Describe the situation.
 explain: |
   A rating for each legal risk in a deal or issue, scored on two scales so you can tell which ones need attention now. Describe the situation. The skill scores severity from 1 (negligible) to 5 (critical) and likelihood from 1 (remote) to 5 (almost certain), then multiplies them for a risk score.
 
@@ -17,6 +15,10 @@ when:
   - Leadership asks how worried they should be about an issue.
   - You want one consistent scale across several deals.
   - You need a written record of why you accepted a risk.
+not_for:
+  - "You are already in a lawsuit or a government inquiry: hire outside counsel from the start, as the skill itself says to."
+  - "You need advice you can rely on: ask a qualified lawyer, because this rating only supports your team."
+  - "You need a contract read line by line: ask a lawyer or a person on your team to review the full text."
 you_give:
   - A description of the deal or issue
   - The value at stake
@@ -28,7 +30,28 @@ you_get:
   - Risks ordered by priority
   - A written record of the reasoning
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather the facts of the deal or issue, and the money at stake.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat.
+  - Describe the deal or issue. Add past similar cases and who will read the rating (optional).
+  - Check each severity and likelihood score. Ask your AI to explain any that look wrong.
+  - Ask for the memo and the risk register entry.
+  - Have a qualified lawyer review the ratings before you act on them.
+output_sample:
+  input:
+    - A description of the deal or issue
+    - The value at stake
+    - Known facts and past similar cases (optional)
+    - Who will use the rating
+  output:
+    - name: Severity rating
+      contains: A score from 1 to 5 with a label, and the reasons, based on money, disruption and public attention.
+    - name: Likelihood rating
+      contains: A score from 1 to 5 with a label, and the reasons, based on past cases and likely triggers.
+    - name: Risk score and level
+      contains: Severity times likelihood, shown as green, yellow, orange or red.
+    - name: Recommended actions
+      contains: What to do at that level, from accepting and monitoring to calling senior counsel or outside counsel.
+    - name: Risk assessment memo
+      contains: A written record with background, contributing and reducing factors, options, recommended approach, leftover risk, monitoring plan and next steps.
+    - name: Risk register entry
+      contains: A row you can track, with category, owner, status and next review date.

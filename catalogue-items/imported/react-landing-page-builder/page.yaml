@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds from set parts with choices about layout.
 new_slug: react-landing-page-builder
 name: React landing page builder
-summary: Describe your product. Get a landing page as React code with hero,
-  pricing, FAQ and proof sections.
+summary: "Describe your product and get a React landing page builder result: a Next.js page with hero, pricing, FAQ and proof sections, plus SEO tags."
 job: write-landing-page
 headline: React landing page builder
-subhead: A full landing page as React code, built from your product description.
-  It has a hero, features, pricing, FAQ and proof sections, each with copy
-  written to a proven pattern.
+subhead: Give your product details. Your AI writes a landing page as React code, with copy for each section. You get a hero, features, pricing, FAQ and proof, plus SEO tags.
 explain: |
   A full landing page as React code, built from your product description. It has a hero, features, pricing, FAQ and proof sections, each with copy written to a proven pattern.
 
@@ -16,21 +13,47 @@ explain: |
 when:
   - You are launching a product and need a page this week.
   - You want pricing and FAQ sections without hand coding them.
-  - You want to compare two hero layouts before choosing.
-  - Your current page loads slowly and ranks poorly.
+  - You want to compare two hero layouts before you choose.
+  - Your current page loads slowly and you want a fast rebuild.
+not_for:
+  - "You need a site with many pages or a CMS: use a site builder or an existing template instead."
+  - "You want a page with no code: use a site builder, or ask a web designer."
+  - "You want to check ad copy or a live page for problems: ask a person who runs your site, as this skill only writes new pages."
 you_give:
-  - Product name and tagline
-  - Audience and main pain point
-  - Pricing tiers
-  - Brand content for tone (optional)
+  - Your product name and tagline
+  - Your audience and the main problem you solve
+  - Your pricing tiers
+  - Your website copy or blog posts, to match your tone (optional)
 you_get:
-  - Landing page in React and Tailwind
-  - Copy for each section
-  - FAQ with search markup
-  - SEO meta tags
+  - A landing page as a React component styled with Tailwind
+  - Copy for each section, written to a set pattern
+  - An FAQ with search markup
+  - SEO title, description and structured data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Send your product name, tagline, audience, main problem, key benefit and pricing tiers. You can also name a style and a copy pattern.
+  - Paste your website copy if you have it, so the tone fits. The brand voice script in the skill is optional. Skip it if you do not have the file.
+  - Read the code and copy. Replace every example number and claim, such as [X hours] or [your trial terms], with true facts.
+  - Paste the files into your Next.js project and check the page on a phone before you publish.
+output_sample:
+  input:
+    - Your product name and tagline
+    - Who it is for and the main problem you solve
+    - Your pricing tiers
+    - Your website copy or blog posts, to match your tone (optional)
+  prerequisites:
+    - An AI that can write code, and a Next.js project with Tailwind CSS to paste it into
+    - You must replace example numbers and claims with true facts before you publish
+  output:
+    - name: Hero section
+      contains: A headline, short text and two buttons, in one of five layouts, written with a copy pattern.
+    - name: Feature section
+      contains: Your main benefits as a grid, alternating rows or cards.
+    - name: Pricing table
+      contains: Two to four tiers with feature lists, and one tier highlighted.
+    - name: FAQ with schema markup
+      contains: Questions and answers in an accordion, with search markup added.
+    - name: Testimonials, call to action and footer
+      contains: Quote blocks, a closing banner with buttons, and a footer with links.
+    - name: SEO meta tags and structured data
+      contains: Title, description, social image details and search markup for the page.

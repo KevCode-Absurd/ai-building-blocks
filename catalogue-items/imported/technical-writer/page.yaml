@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must understand the topic and the reader.
 new_slug: technical-writer
 name: Technical writer
-summary: Give it a feature or API. Get clear docs, guides, tutorials or
-  changelogs for your readers.
+summary: Write technical documentation your readers can follow. Give it a feature or API. You get an API reference, guide, tutorial or changelog.
 job: write-and-tell-stories
 headline: Technical writer
-subhead: Give it a feature or API. Get clear docs, guides, tutorials or
-  changelogs for your readers. Bring the feature, API or tool to document. Use
-  the result to plan your next step.
+subhead: Give it a feature or API. Get clear docs, guides, tutorials or changelogs for your readers. Bring the feature, API or tool to document. Use the result to plan your next step.
 explain: |
   Clear documentation your readers can follow: API references, user guides, tutorials, changelogs or decision records, written for the right audience. People get the answer and run the example without writing to you.
 
@@ -19,6 +16,10 @@ when:
   - You need release notes people will actually read.
   - New users keep asking the same setup questions.
   - You must record why a technical decision was made.
+not_for:
+  - "You need marketing copy or a sales page: write it with a copywriter or a marketing prompt, since this skill works from a spec or code."
+  - "You need a help article for end users and have no spec or source material: ask your support lead for the facts first."
+  - "You need the examples tested: run them yourself or ask an engineer, because your AI cannot run code unless you give it a way to."
 you_give:
   - The feature, API or tool to document
   - Document type wanted
@@ -30,7 +31,30 @@ you_get:
   - Links and next steps
   - A list of facts to confirm
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Say which document you want and who will read it, for example an API reference for outside developers.
+  - Paste your source material, such as code, a schema or design notes. Attach files if your AI accepts them.
+  - Read the result and the list of facts to confirm. Ask your team to answer them.
+  - Run every code example yourself. Your AI can compare docs with the code you gave it, but it cannot run them unless you give it a way to.
+  - Publish the document. Link the reference from your getting-started tutorial, or use the changelog as the base for release notes.
+output_sample:
+  input:
+    - The feature, API or tool to document
+    - The document type, such as API reference, tutorial, user guide, changelog, decision record or README
+    - Who will read it, and their skill level
+    - Your source material, such as code, an API schema or design notes (optional)
+    - The format you want, such as Markdown (optional)
+  prerequisites:
+    - Source material you can paste or attach, so the AI does not guess
+    - An engineer or tester to run the code examples
+  output:
+    - name: Document outline
+      contains: A structure that fits the document type, such as one template per endpoint or a step-by-step tutorial.
+    - name: Main document
+      contains: The full text in short, active sentences, with the key point first and complete code examples.
+    - name: Navigation and links
+      contains: A contents list for long pages, links between related sections, and a Next steps section for tutorials.
+    - name: Accuracy check
+      contains: A comparison of paths, parameters and responses against the code or schema you gave.
+    - name: Gaps and facts to confirm
+      contains: Missing information and unclear behavior that someone on your team needs to confirm.

@@ -2,31 +2,31 @@ slug: replit
 name: Replit
 maker: Replit
 url: https://replit.com
-promise: "Build, edit and publish an app with code, hosting and data in one workspace."
+promise: "Describe an application in everyday language, then build and publish it with hosting included."
 use_cases: [build-apps, code]
 categories: [coding]
 what_it_does:
-  - Builds an app or site from a description in plain words.
-  - Hosts and publishes the project on its own servers.
-  - Adds a database to each project without separate setup.
-  - Includes sign-in and monitoring, so you do not add them yourself.
-  - Connects your app to more than 100 services, such as Stripe and Google Workspace.
+  - "Writes the app code from your description. Its home page says no coding is needed (checked 26 Oct 2026)."
+  - "Hosts and publishes your project, so you get a live link (checked 26 Oct 2026)."
+  - "Includes a database, sign-in, hosting and monitoring with no setup (checked 26 Oct 2026)."
+  - "Connects to more than 100 services, such as OpenAI, Stripe and Google Workspace (checked 26 Oct 2026)."
+  - "Charges extra for published apps and production databases once they pass the included use (docs.replit.com, checked 26 Oct 2026)."
 benefits:
-  - Go from an idea to a live link without setting up servers.
-  - Test a small business app before you hire a developer.
-  - Keep building, editing and hosting in one account.
-  - Add teammates on a paid plan so others can work on the same project.
+  - "Go from an idea to a live link without setting up servers."
+  - "Test a small business app before you hire a developer."
+  - "Build, edit and host in one account."
+  - "Start free with no credit card (checked 26 Oct 2026)."
 best_for:
   - Founders and operators building an internal app or a first product.
   - Beginners who want the code, hosting and database handled for them.
   - Anyone prototyping a web app over a weekend.
 not_for:
-  - "Work that needs a security check and has no coder to help."
-  - Anyone who wants a fixed bill, since extra AI use is charged on top.
+  - "Apps that take payments or hold customer data and have no one to check security. Use a coder to review it, or start in Lovable or Bolt for a mock-up."
+  - "Anyone who wants a fixed bill, since publishing and extra AI use are charged on top of the plan."
 pricing:
   model: freemium
-  from: US$20 per month
-  note: Free Starter plan with one live project. Core is US$20 per month, or US$18 per month billed yearly, and includes US$20 towards stronger models. Pro is US$100 per month.
+  from: US$20 per month (Core, or US$18 billed yearly; checked 26 Oct 2026)
+  note: "Starter is free with free daily usage and one published project. Core is US$20 a month, or US$18 a month billed yearly, and includes US$20 of credits for the stronger AI models. Pro is US$100 a month, or US$90 billed yearly, and includes US$100 of credits. Enterprise: contact sales. Publishing is charged by use after the plan allowance: data going out, compute for autoscale apps, and requests. Production databases are charged on active time and storage. Development databases are free. Core includes 100 GiB of outbound data a month. Starter caps production database storage at 1 GiB. Checked 26 Oct 2026 on replit.com and docs.replit.com. We could not read the pricing page's list of Starter limits, so check it before you plan."
 works_with:
   - Stripe
   - OpenAI
@@ -35,7 +35,30 @@ works_with:
 runs_in: [web, mobile]
 blocks: []
 alternatives: [lovable, bolt, v0, cursor]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Go to replit.com and choose Start for free. No credit card is needed (checked 26 Oct 2026)."
+  - "Describe the app in one prompt: who uses it, what it does and the pages or forms it needs."
+  - "Let it build the first version. Open the project and click through every page yourself."
+  - "Ask for changes in plain words, one at a time, and test after each change."
+  - "Publish it to get a live link. Check your usage page before you share the link widely."
+needs:
+  - "A Replit account. Starter is free."
+  - "A short written description of the app: the user, the job, the screens."
+  - "Accounts for anything you connect, such as Stripe or Google Workspace (optional)."
+  - "A budget for extra use beyond your plan's credits."
+  - "Someone who can review security, if the app takes payments or holds customer details."
+example:
+  task: "Build a booking form for a small business that stores each request in a database."
+  cost: "Starter is free and allows one published project, with free daily usage. A published app and a production database are charged by use after the plan allowance. Development databases are free. The pages we read do not give a price for one app, so read your Usage page after the first week."
+  reply: "A working project with the form and a database behind it, and a live link once you publish. Test every field and the saved data before you share it."
+not_verified:
+  - "What the free Starter plan includes beyond free daily usage and one published project. The pricing page we read did not list it."
+  - "How well the app holds up with many users. We did not test it."
+  - "The security of apps it builds. The page lists SOC 2 and SSO for the company, not for your app."
+  - "How effort-based pay-as-you-go pricing works. The FAQ answer was not shown."
 sources:
   - https://replit.com/pricing
   - https://replit.com
+  - https://docs.replit.com/billing/about-usage-based-billing

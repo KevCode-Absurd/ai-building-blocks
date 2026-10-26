@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks the page against a set list and ranks the fixes.
 new_slug: product-page-auditor
 name: Product page auditor
-summary: Give it a product page. Get ranked changes to variants, social proof,
-  buttons and price, each with the research behind it.
+summary: Check your product page for changes that lift sales. Give it a link or screenshot and get a ranked list of fixes, each with the research behind it.
 job: audit-landing-page
 headline: Product page auditor
-subhead: A ranked list of changes for a product page, each with the research
-  behind it and the effect to expect. Layout, counts and choice design shape how
-  much a product feels wanted and worth its price before anyone reads the copy.
+subhead: A ranked list of changes for a product page, each with the research behind it and the effect to expect. Layout, counts and choice design shape how much a product feels wanted and worth its price before anyone reads the copy.
 explain: |
   A ranked list of changes for a product page, each with the research behind it and the effect to expect. Layout, counts and choice design shape how much a product feels wanted and worth its price before anyone reads the copy.
 
@@ -18,6 +15,10 @@ when:
   - You are unsure how to show variants or sold-out options.
   - You wonder whether to show how many people viewed an item.
   - You are designing a new page template.
+not_for:
+  - "You want to fix the cart or payment form: use a checkout review, since this skill leaves cart and payment steps out."
+  - "You want the product description written: ask your AI to rewrite the copy, since this skill only flags copy issues."
+  - "You want to set the price or plan a discount: work that out first, since this skill only checks where the price sits on the page."
 you_give:
   - A page link, screenshot or description
   - Product, price and number of options
@@ -29,7 +30,25 @@ you_get:
   - Expected effect of each change
   - Guidance on variants, price and proof
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Paste your page link, or attach a screenshot. If your AI cannot open links, describe the page one element at a time.
+  - Add the product, the price, how many options you sell and how many are sold out.
+  - Add your view and purchase counts if you track them. If you do not, say so and the social proof check is skipped.
+  - Read the ranked table and start with the top three changes.
+  - Make those changes, then run the page through again to check it.
+output_sample:
+  input:
+    - Your page link, a screenshot or a short description of it
+    - Your product, its price and how many options it has
+    - How many options are sold out
+    - Your view and purchase counts (optional)
+    - Your company size (optional)
+  prerequisites:
+    - An AI that can open a web link, if you want to give a URL. Otherwise use a screenshot or a description.
+  output:
+    - name: Product type
+      contains: Whether the product is bought for pleasure or to do a job, which sets which rules apply.
+    - name: Ranked audit table
+      contains: Each issue with the change to make, the measured effect from the study, and the source.
+    - name: What the page already does right
+      contains: A short close naming the parts of the page that already follow the research.

@@ -2,17 +2,58 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-enterprise-account-planning
 name: Enterprise account deal planner
-summary: Share an account and deal context. Get buyer roles, deal risks and next
-  steps for a complex sale.
+summary: Plan an enterprise deal with buyer roles, MEDDICC checks and a mutual action plan. Spot a dying deal early and know your next step.
 job: plan-strategy
 headline: Enterprise account deal planner
-subhead: Share an account and deal context. Get buyer roles, deal risks and next
-  steps for a complex sale. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: "Describe one enterprise deal: the account, what you sell, the deal size and who is involved. It checks whether the deal is moving, maps what each buyer gains, and tells you whether it is the right time to send a proposal."
+explain: |
+  Big deals die quietly. This enterprise account deal planner uses one test: if the mutual action plan has not been updated in about three weeks, treat the deal as in trouble. It looks at how recent the plan is and who is doing the work.
+
+  It first decides whether this deal needs a full account plan or a lighter one. Then it builds the plan from the facts you give, adds a personal win map of what each buyer gains and checks the deal against MEDDICC.
+
+  It works on one deal at a time. It uses only what you tell it, so a missing fact stays missing.
+when:
+  - "A deal has run for months and is not closing."
+  - "You have many people to win over and need to know who matters most."
+  - "You want to build a mutual action plan with the buyer."
+  - "You are not sure whether to send the proposal yet."
+not_for:
+  - "You have a small deal with one buyer and a short sales cycle: use a simple call note and a follow-up email instead."
+  - "You need a first pitch or cold email: write that with your sales lead, since this skill plans deals already in motion."
+  - "You want a forecast or pipeline report: use your CRM reports, because this skill checks one deal at a time."
+you_give:
+  - "Your account name and what you sell them"
+  - "Deal size and how long the sales cycle has run"
+  - "The people involved, with their titles"
+  - "Your current mutual action plan (optional)"
+  - "LinkedIn keywords to check for the account (optional)"
+you_get:
+  - "A check of whether this deal needs a full plan or a simpler one"
+  - "A deal health read based on how recent the action plan is and who does the work"
+  - "An account plan built from the facts you gave"
+  - "A personal win map of what each buyer gains"
+  - "A yes or no on sending the proposal now, with reasons"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - It works best when your AI can read the files you provide and use the named tools when the job requires them.
+output_sample:
+  input:
+    - Your account name and what you sell them
+    - Deal size and how long the sales cycle has run
+    - The people involved, with their titles
+    - Your current mutual action plan, if you have one (optional)
+    - LinkedIn keywords to check for the account (optional)
+  output:
+    - name: Do I need a full plan
+      contains: A quick check of whether this deal needs a full account plan or a simpler one.
+    - name: Deal health check
+      contains: A read on whether the deal is moving, based on how recently the action plan was updated and who is doing the work.
+    - name: Account plan
+      contains: The four parts of an enterprise account plan, built from the facts you gave.
+    - name: Personal win map
+      contains: What each buyer personally gains from the deal, so you can speak to what they care about.
+    - name: LinkedIn keyword analysis
+      contains: Themes from the account's LinkedIn language that hint at their priorities.
+    - name: Proposal check
+      contains: A yes or no on whether it is the right time to send the proposal, with reasons.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It combines facts from several places.
 new_slug: vendor-agreement-status-checker
 name: Vendor agreement status checker
-summary: Name a vendor. Get what you signed, what is missing and what expires
-  soon. Verify against the originals.
+summary: "Check a vendor agreement status in one page: what you signed, what is missing and what expires soon. Name the vendor and your AI searches for it."
 job: check-contracts
 headline: Vendor agreement status checker
-subhead: Name a vendor and get one page of what you have signed with them, what
-  is missing and what ends soon. The skill takes the vendor's name and handles
-  variations such as a trade name versus a legal name or a parent company.
+subhead: Name a vendor and get one page of what you have signed with them, what is missing and what ends soon. The skill takes the vendor's name and handles variations such as a trade name versus a legal name or a parent company.
 explain: |
   Name a vendor and get one page of what you have signed with them, what is missing and what ends soon. 
   The skill takes the vendor's name and handles variations such as a trade name versus a legal name or a parent company. It searches your connected contract system, CRM, email and document storage, in that order. It collects active, expired and pending agreements plus amendments, and notes the account owner and recent contract emails. Then it compares what it found against what a vendor like this should have, such as a master agreement, a data processing agreement and work orders, and lists the gaps with upcoming expiry dates. Check the original documents, since it is not legal advice.
@@ -17,6 +14,10 @@ when:
   - A renewal is coming and nobody knows what was signed last time.
   - Privacy review wants to see the data processing agreement.
   - You want to check if anything with a vendor expires this quarter.
+not_for:
+  - "You bought once and there is no contract: check the invoice or order email, or the vendor's own account portal."
+  - "You need advice on what a clause means or whether to sign: ask a lawyer, since this report is not legal advice."
+  - "Your AI cannot reach your contract, CRM, email or document tools: look in your files by hand, or paste the agreements into the chat."
 you_give:
   - The vendor name
   - Access to your contract, CRM, email or document tools
@@ -28,8 +29,29 @@ you_get:
   - Upcoming expiry and renewal dates
   - The sources each item came from
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your contract files, email and CRM.
+  - Open your AI tool and paste in this skill. It works best when your AI can read your contract system, CRM, email or document storage.
+  - Type the vendor name. Use the legal name if you know it. Say if the vendor has a parent company or other entities.
+  - Answer any question about which vendor or entity you mean.
+  - Read the list of sources checked. Anything not connected was not searched, so search it yourself.
+  - Send the expiry dates to the person who owns the renewal. Ask the vendor for any missing agreement, such as a DPA or MSA.
+  - Ask your legal team to check the report against the original documents before you rely on it.
+output_sample:
+  input:
+    - The vendor name
+    - The reason you are checking (optional)
+    - Which agreement types you expect (optional)
+  prerequisites:
+    - An AI connected to your contract system, CRM, email or document storage
+  output:
+    - name: Search details
+      contains: The date of the search, the sources checked and the sources that were not connected.
+    - name: Relationship overview
+      contains: The vendor's full legal name, the type of relationship and the CRM status if available.
+    - name: Agreement summary
+      contains: Each agreement with its type, status, dates, renewal terms, key terms and where the signed copy is stored.
+    - name: Gap analysis
+      contains: A checklist of NDA, MSA, DPA, SOW, SLA and insurance certificate, marked found or missing.
+    - name: Upcoming actions
+      contains: Expiry and renewal dates, with anything ending within 90 days flagged, and agreements still needed.
+    - name: Notes
+      contains: Useful context from email and chat, and expired agreements that may still carry duties such as confidentiality.

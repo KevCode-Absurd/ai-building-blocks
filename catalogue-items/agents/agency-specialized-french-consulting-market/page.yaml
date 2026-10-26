@@ -1,0 +1,151 @@
+name: French Consulting Market Navigator agent
+summary: "Plan your daily rate (TJM) in the French IT consulting market: ESN margins, take-home by billing set-up, platforms and a negotiation plan."
+headline: French Consulting Market Navigator agent
+subhead: "For IT freelancers who sell to French consulting firms (ESN) or their clients. Give your specialty, billing set-up and the daily rate you are weighing. You get a take-home comparison, a channel plan, negotiation prep and contract points to check with a French accountant."
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  In France, many IT freelancers reach clients through an ESN, a consulting and staffing firm that adds its own margin to your daily rate. The same freelancer can be quoted at very different rates through different channels, and the rate you quote is not the money you keep. This agent explains how that chain works and helps you plan a daily rate (TJM) you can defend.
+
+  It lays your numbers side by side: what the client pays, what the firm keeps, your gross daily rate and what is left after charges in portage salarial, micro-entreprise or your own company. It then picks channels, from large consulting firms to platforms such as Malt, with the trade-off of each. Then it prepares your negotiation: your floor rate, what to ask for besides rate, and replies to the usual pushback. If you paste a contract, it flags clauses such as non-compete, payment terms, renewal and reliance on one client.
+
+  The profile's margins, fees, charge rates and day-rate ranges are its authors' examples, and they change. The agent uses your figures and marks every other number as an estimate to check on the platform's own page or with a French accountant (expert-comptable). It is not legal, tax or social-security advice.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are quoting a daily rate for a French mission and do not know how much the firm keeps.
+  - You are choosing between portage salarial, micro-entreprise and your own company and want the take-home side by side.
+  - An ESN offered you a rate and you want to counter with reasons.
+  - You live outside France and want to sell IT consulting into the French market.
+not_for:
+  - You need tax, social-charge or employment-status advice. Take the questions to a French accountant (expert-comptable) or lawyer.
+  - You are not selling IT or consulting work in France. Use the Negotiation prep coach for a general deal, or the Pricing Analyst agent to price a product.
+  - You want a contract written or checked clause by clause. Use the Contract and proposal drafter, then have a lawyer review it.
+  - You want to prepare for one named negotiation call. Use the Negotiation call prep planner.
+you_give:
+  - Your specialty and years of experience, such as "Salesforce architect, 10 years".
+  - Where you work from: Paris, another French city or abroad.
+  - Your billing set-up, or the ones you are weighing, such as portage salarial, micro-entreprise, SASU or EURL.
+  - The daily rate (TJM) you charge now or want, and any offer you have been given.
+  - Your monthly costs and how many days you can bill in a month.
+  - A mission offer or contract, pasted as text (optional)
+  - Your charge rates from your accountant (optional)
+you_get:
+  - A take-home table: client price, firm margin, your gross rate and what you keep in each billing set-up
+  - Where your rate sits for your specialty, and how a narrow niche can change it
+  - A channel plan: which firms and platforms to try first, with the trade-off of each
+  - Negotiation prep with your floor rate, what to ask for besides rate and replies to common pushback
+  - Contract points to check, if you pasted a contract
+  - A list of points to confirm with your French accountant
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste your specialty, location, billing set-up, current or target daily rate, monthly costs and billable days. Add the offer or contract text if you have one. No code or web access is needed.
+  - Type "Compare my take-home and plan my negotiation. Use only my figures. Label every other number as an estimate to check."
+  - Read the take-home table first. Confirm each charge rate with your accountant, then ask for the table again with the right rates.
+  - Use the negotiation section before your next call. Ask for the counter-offer email in French if you need it.
+  - Take every contract flag and every charge question to your accountant or lawyer before you sign.
+how_it_works:
+  - title: Pin your situation
+    text: It restates your specialty, location, billing set-up and rate. It asks once for anything missing, then marks it MISSING.
+  - title: Compare take-home
+    text: It works from the client price down to what you keep in each billing set-up, using your charge rates or labelled estimates.
+  - title: Position your rate
+    text: It places your rate for your specialty and seniority, and shows how a narrow niche differs from a general title.
+  - title: Choose channels
+    text: It compares large consulting firms, smaller specialists, brokers and platforms, and suggests an order to try them.
+  - title: Prepare the negotiation
+    text: It works out your floor, lists what to trade besides rate, and drafts replies to common pushback.
+  - title: Review the contract
+    text: If you pasted one, it flags non-compete, payment terms, renewal and reliance on one client.
+  - title: Hand over the checks
+    text: It lists the figures and clauses to confirm with an accountant or lawyer.
+output_shape: |-
+  YOUR SITUATION
+    <specialty> | <location> | <billing set-up> | <rate> | MISSING <what was not given>
+
+  TAKE-HOME COMPARISON
+    <billing set-up> | Gross daily rate <amount> | Charges <rate and source> | Net per day <amount> | Net per month <amount>
+
+  RATE POSITION
+    <specialty and seniority> | <where your rate sits> | <what a narrower niche could change>
+
+  CHANNEL PLAN
+    <channel> | <what it suits> | <fee or margin and source> | <trade-off> | <order to try>
+
+  NEGOTIATION PREP
+    Floor <amount and how it was worked out> | Ask for besides rate <list> | Pushback <what they say> -> <your reply>
+
+  CONTRACT FLAGS
+    <clause> | <what it says> | <why it matters> | <question to ask>
+
+  TIMING NOTE
+    <time of year> | <what usually happens> (a rule of thumb, not a promise)
+
+  QUESTIONS FOR YOUR ACCOUNTANT OR LAWYER
+    <point> | <what to confirm>
+output_sample:
+  input:
+    - Your specialty, experience and where you work from
+    - Your billing set-up and the daily rate (TJM) you charge or want
+    - Your monthly costs and the days you can bill in a month
+    - A mission offer or contract, pasted as text (optional)
+  prerequisites:
+    - An AI that can read pasted text, and French if your contract is in French
+  output:
+    - name: Your situation
+      contains: Your profile and rate as the AI understood them, and what is missing.
+    - name: Take-home comparison
+      contains: What you keep per day and per month in each billing set-up, with the charge rates used.
+    - name: Rate position
+      contains: Where your rate sits for your specialty and what a narrower niche could change.
+    - name: Channel plan
+      contains: Firms and platforms to try, with the fee or margin, the trade-off and the order.
+    - name: Negotiation prep
+      contains: Your floor rate, what to ask for besides rate and replies to pushback.
+    - name: Contract flags
+      contains: Clauses to question, such as non-compete, payment terms and renewal.
+    - name: Timing note
+      contains: When in the year French clients tend to hire, as a rule of thumb.
+    - name: Questions for your accountant or lawyer
+      contains: Points the AI cannot settle, with what to confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read a French contract and write the counter-offer in French. Use one with web search to check current platform fees.
+  inputs:
+    - Your accountant's current charge rates for each billing set-up, so the take-home table is exact.
+    - Your last two invoices and the payment dates, so it can plan for late payment.
+    - Two or three live mission ads for your specialty, pasted in, to compare against your rate.
+terms:
+  - term: ESN
+    meaning: A French IT consulting and staffing firm that places consultants with clients and keeps a margin.
+  - term: TJM
+    meaning: Taux journalier moyen. Your daily rate. Gross means before charges, net means after.
+  - term: Portage salarial
+    meaning: You work through a portage company that employs you, invoices the client and pays you a salary after fees and charges.
+  - term: Micro-entreprise
+    meaning: A simple French self-employed status where charges are a share of what you invoice.
+  - term: SASU or EURL
+    meaning: A company with one owner. You pay yourself and carry the costs of running it.
+tweaks:
+  - what: Charge rates
+    how: Give your accountant's real rates. The comparison is then exact, not an estimate.
+  - what: Scope
+    how: Ask for the take-home table only, or the negotiation only, if you want a shorter answer.
+  - what: Language
+    how: Ask for any email or counter-offer in French, and read it before you send it.
+improve:
+  - Update the take-home table with each new offer and keep the versions.
+  - After each negotiation, paste what the firm said and ask for better replies next time.
+  - Check each platform fee on the platform's own pricing page before you rely on it.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

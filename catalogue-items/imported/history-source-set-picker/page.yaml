@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Picking sources that create useful tension takes judgment.
 new_slug: history-source-set-picker
 name: History source set picker
-summary: Give it a history question. Get a chosen, ordered set of sources that
-  pull in different directions.
+summary: Pick history sources that disagree in useful ways. Give it your question and class level. You get an ordered source set for a document-based lesson.
 job: teach-and-train
 headline: History source set picker
-subhead: A short, ordered set of sources for a history lesson, chosen so they
-  disagree in useful ways. A flat set where every document says the same thing
-  produces flat answers.
+subhead: A short, ordered set of sources for a history lesson, chosen so they disagree in useful ways. A flat set where every document says the same thing produces flat answers.
 explain: |
   A short, ordered set of sources for a history lesson, chosen so they disagree in useful ways. A flat set where every document says the same thing produces flat answers. A set that pulls in different directions makes students weigh evidence.
 
@@ -18,6 +15,10 @@ when:
   - Your current sources all agree and students have little to argue about.
   - You want a set that works on sourcing and comparing skills.
   - You need to check that voices from different groups are included.
+not_for:
+  - "You need a single source for a quick recall quiz: pick one text yourself and ask a short question."
+  - "Your sources are too hard for your class: simplify them by hand or ask your AI to rewrite them before you use this."
+  - "You want the full lesson plan, not only the sources: use this set as the base and plan the activities yourself."
 you_give:
   - Your central question
   - Topic and learners' age
@@ -29,7 +30,26 @@ you_get:
   - The skill each source builds
   - A reasoned order and a voice check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Type your central history question, your students' age and reading level, and the skills you want to teach.
+  - Add any sources you already have, a set size, or voices you want included (optional).
+  - Read the tensions first. Check that the sources really pull against each other.
+  - Check the voice audit, then swap or add a source if a key voice is missing.
+output_sample:
+  input:
+    - Your central history question
+    - Your students' age, reading level and experience with source work
+    - The thinking skills you want to teach
+    - Sources you already have (optional)
+    - Set size, limits on sources, or voices you want included (optional)
+  output:
+    - name: Document 1, Document 2 and so on
+      contains: Each chosen source with a short title, its author and date, and why it was picked.
+    - name: Analytical Tensions
+      contains: Where the sources disagree or pull against each other, and why that gives students something to argue about.
+    - name: Skill Affordances
+      contains: The thinking skill each source helps students practise, such as checking who wrote it or comparing accounts.
+    - name: Sequencing Rationale
+      contains: Why the sources come in this order, with an easier one first and harder ones later.
+    - name: Representation Audit
+      contains: Whose voices are in the set, whose are missing, and what that means for the lesson.

@@ -2,35 +2,97 @@ thinking: low
 thinking_why: It searches and quotes; it does not interpret.
 new_slug: customer-quote-finder
 name: Customer quote finder
-summary: Name a topic. Get real customer quotes on it from your calls and
-  emails, each tied to who said it.
+summary: Find what customers said about a topic in your calls and emails. Get word-for-word quotes, each with who said it, their account and the date.
 job: understand-customers
 headline: Customer quote finder
-subhead: Real words from customers carry more weight than your summary of them.
-  Name a topic, like an objection, a feature or a competitor, and you get direct
-  quotes from your calls and emails, each tied to the person who said it.
+subhead: Name a topic, like a price objection, a feature or a competitor, and give it your call transcripts or email threads. It pulls out only what customers said, copied word for word. Each quote shows the speaker, account and date.
 explain: |
-  Real words from customers carry more weight than your summary of them. Name a topic, like an objection, a feature or a competitor, and you get direct quotes from your calls and emails, each tied to the person who said it.
+  A customer quote finder gives you voice of customer in the customer's own words. Real quotes carry more weight than your summary of them, and they are what you want for a case study, a pricing debate or ad copy.
 
-  It works out which accounts and domains are in scope, then splits what your team said from what customers said. It gathers from call transcripts, email threads and notes, and works with whatever source you have, including uploaded files. Only direct quotes are returned, never paraphrases, with the account, speaker and date. The default period is the last 30 days, and you can widen it.
+  You name a topic and hand over what you have: call transcripts, email threads or meeting notes. The skill works out which accounts are in scope and separates what your team said from what customers said. It keeps only customer lines on the topic, and never rewords them. The default period is the last 30 days.
+
+  When your topic is open, such as "what comes up most", it groups the quotes into three to five themes. It also lists the gaps: accounts with nothing to read. A gap means no data, not that the topic never came up.
 when:
-  - You are writing a case study and need real customer language.
-  - A product meeting asks what customers say about pricing.
-  - You want proof for or against a feature idea.
-  - You need exact words for ad or landing page copy.
+  - You are writing a case study and need the customer's own words.
+  - A product meeting asks what customers say about pricing, and you want proof.
+  - You want evidence for or against a feature idea.
+  - You need exact wording for an ad or landing page.
+not_for:
+  - "You need totals across every customer: use a survey or a CRM report, because this finds quotes, not full counts."
+  - "You have product reviews or survey comments, not calls: use the Review reason spotter or the Feedback theme finder."
+  - "You want one interview turned into needs and next steps: use the Customer interview synthesizer."
 you_give:
-  - The topic or theme
+  - The topic, such as an objection, a feature or a competitor
+  - Call transcripts, email threads or notes, pasted or uploaded
   - Which accounts or team to include (optional)
-  - Time period (optional)
-  - Call transcripts, emails or uploaded files
+  - The time period, which is the last 30 days if you skip it (optional)
+  - Gong, your CRM, Google Drive or email connected to your AI (optional)
 you_get:
-  - Direct quotes on the topic
-  - Speaker, account and date for each
-  - A count of how often it comes up
-  - Themes across the quotes
+  - Word-for-word customer quotes on your topic
+  - The speaker, their account and the date for each quote
+  - Three to five themes, when your topic is open
+  - A count of quotes and accounts for each theme
+  - A list of gaps, where there was nothing to read
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your call notes and email.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text, or add it to your AI.
+  - Upload your transcripts, notes or email threads. This path needs no connected tools.
+  - Say your topic, the accounts you care about and the period.
+  - Check three quotes against the source. Each must match word for word, with the right speaker.
+  - Read the gaps list before you tell anyone "customers never mention this".
+  - If your AI is connected to Gong, a CRM, Drive or email, it can search them too. Each may need admin access or a paid plan from that vendor.
+how_it_works:
+  - title: Set the scope
+    text: It works out which accounts and company domains count, so your own team's lines are kept apart from customer lines.
+  - title: Gather the sources
+    text: It reads the files you gave it and any connected tool, and drops calls that appear twice.
+  - title: Extract the quotes
+    text: It keeps only on-topic lines said by customers, copied exactly, with speaker, account, date and a line of context.
+  - title: Group the themes
+    text: For an open topic, it clusters the quotes into three to five themes by how often they come up.
+  - title: Show the gaps
+    text: It names the accounts and sources with nothing to read, and which sources it used.
+output_shape: |
+  # What customers say about <topic>
+  Period, sources used, sources not reached
+  ## <Theme> (<n> quotes from <n> accounts)
+  "<exact quote>"
+  <speaker, title>, <account>, <date>, <source>. Context: <one line>
+  ## Accounts represented
+  <account>: <n> quotes
+  ## Gaps
+  Accounts or sources with nothing to read
+output_sample:
+  input:
+    - Your topic, such as an objection, feature or competitor
+    - Call transcripts, email threads or meeting notes
+    - The accounts or team to include (optional)
+    - The time period (optional)
+  prerequisites:
+    - Transcripts or notes in files or pasted text
+    - Optional connections to Gong, your CRM, Google Drive or email
+  output:
+    - name: Quotes by theme
+      contains: Exact customer quotes on your topic, grouped into themes, each with speaker, title, account, date and source.
+    - name: Counts
+      contains: How many quotes and accounts sit behind each theme, from the sources you gave.
+    - name: Accounts represented
+      contains: Which accounts the quotes came from and how many each gave.
+    - name: Gaps
+      contains: Accounts or sources with nothing to read in the period, shown as missing data.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Claude, ChatGPT or Gemini can read uploaded transcripts and copy quotes exactly.
+    - name: Gong
+      why: If your calls are recorded there, a connected AI can ask for customer quotes account by account.
+  inputs:
+    - Call transcripts exported from your recording tool
+    - A list of the accounts you want covered
+    - Your company email domain, so your team's lines are kept out
+terms:
+  - term: Voice of customer
+    meaning: What customers say, in their own words.
+  - term: Transcript
+    meaning: A written copy of what was said on a call.
+  - term: Gong
+    meaning: A tool that records and transcribes sales calls.

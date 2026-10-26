@@ -10,6 +10,8 @@ level: expert
 inputs:
   - type: codebase
     required: true
+  - type: tool_connection
+    required: false
 outputs:
   - type: code_change
 uses: []

@@ -1,26 +1,32 @@
 ---
 name: dcf-model
-description: Real DCF (Discounted Cash Flow) model creation for equity valuation. Retrieves financial data from SEC filings and analyst reports, builds comprehensive cash flow projections with proper WACC calculations, performs sensitivity analysis, and outputs professional Excel models with executive summaries. Use when users need to value a company using DCF methodology, request intrinsic value analysis, or ask for detailed financial modeling with growth projections and terminal value calculations.
+description: Real DCF (Discounted Cash Flow) model creation for equity valuation. Retrieves financial data from company filings (for Indian companies, annual reports and BSE or NSE filings) and analyst reports, builds comprehensive cash flow projections with proper WACC calculations, performs sensitivity analysis, and outputs professional Excel models with executive summaries. Use when users need to value a company using DCF methodology, request intrinsic value analysis, or ask for detailed financial modeling with growth projections and terminal value calculations.
 ---
 
 # DCF Model Builder
 
-## India
+## Before you start
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
+**You need:**
 
-- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
-  Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
-  Never annualise a quarter without stating the fiscal offset.
-- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
-  formula and label the column `Total Revenue (₹ Cr)`.
+1. The company name or NSE or BSE ticker. This skill is set up for **listed Indian companies**. For a foreign or unlisted company, say the Indian rules and sources below do not fit, and stop unless the user wants a general DCF.
+2. Financials. Use the company's annual reports and results filings (BSE and NSE websites, or the company's investor page), or figures the user pastes. A data connection (MCP) is used only if the user already has one. Some of these are paid and need a key. Do not assume one exists.
+3. Growth and margin assumptions, or the user's say-so to build them from history and consensus (optional).
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+Ask once for anything missing. Never invent a financial figure. Mark an unsourced input `ASSUMED` in its cell comment and list it in the summary.
+
+**Tools.** The workbook is built with the `officecli` command line tool, so the AI must be able to run commands and save files. Opening the result needs Excel or a compatible app. If you cannot run commands, give the model as a table of cell, label and formula for the user to type in, and say no file was built.
+
+**Web sources.** The risk-free rate comes from a government bond yield page (CCIL, below). Reading that page is web scraping. It can change or fail. If it does, ask the user for the 10-year G-sec yield and its date. Do not hardcode a remembered number.
+
+**Not investment advice.** The result is a research model. The implied price depends on judgement inputs such as the equity risk premium, growth and margins. It is not a recommendation to buy or sell. Say so in the summary.
+
+**Two Indian rules.**
+
+- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` = Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year. Never annualise a quarter without stating the fiscal offset.
+- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format `#,##0,," Cr"`: each trailing comma divides by 1,000, so it shows lakh under a crore label (a 100× error). Divide by `10000000` in a live formula and label the column `Total Revenue (₹ Cr)`.
+
+The companion files this skill once pointed to (`india-market-conventions`, `india-market-data`, `NOT-ADAPTABLE.md`, `references/sec-filings.md`, and the helper skills `xlsx-author` and `officecli-xlsx`) are not in this folder. If something has no Indian equivalent or you cannot source it, say so. Never put in a stand-in and present it as the real thing.
 
 ## Overview
 
@@ -28,9 +34,8 @@ This skill creates institutional-quality DCF models for equity valuation followi
 
 ## Tools
 
-- Load **`xlsx-author`** to build the workbook, and **`officecli-xlsx`** for the element vocabulary.
-- Source data from the user, SEC EDGAR, and any data MCP the user has connected. See
-  `references/sec-filings.md` for the filing walkthrough.
+- Build the workbook with the `officecli` command line tool. If helper skills named `xlsx-author` and `officecli-xlsx` are installed, use them for the build loop and element names.
+- Source data from the user, from Indian company filings (annual reports, BSE and NSE results filings), and from any data MCP the user has connected.
 
 ## Critical Constraints - Read These First
 
@@ -125,7 +130,7 @@ Fetch data from MCP servers, user provided data, and the web.
 - Confirm diluted shares outstanding (check for recent buybacks/issuances)
 - Validate historical margins are consistent with business model
 - Cross-check revenue growth rates with industry benchmarks
-- Verify tax rate is reasonable (typically 21-28%)
+- Verify the tax rate against the company's effective rate in its filings and the current statutory rate. State both in the cell comment.
 
 ### Step 2: Historical Analysis (3-5 years)
 
@@ -485,8 +490,8 @@ Before writing formulas, confirm scenario block row locations and set up consoli
 ```csv
 Item,Source Comment
 Stock price,Source: Market data script 2025-10-12 Close price
-Shares outstanding,Source: 10-K FY2024 Page 45 Note 12
-Historical revenue,Source: 10-K FY2024 Page 32 Consolidated Statements
+Shares outstanding,Source: Annual report FY2025 Page 45 Note 12
+Historical revenue,Source: Annual report FY2025 Page 32 Consolidated Statements
 Beta,Source: Market data script 2025-10-12 5-year monthly beta
 Consensus estimates,Source: Management guidance Q3 2024 earnings call
 ```
@@ -1243,7 +1248,7 @@ This approach centralizes scenario logic, making the model easier to audit and m
 2. **Gather historical financials**:
    - Check for available MCP servers (Daloopa, etc.)
    - Request from user if not available via MCP
-   - Manual extraction from 10-Ks if necessary
+   - Manual extraction from the annual report if necessary
 
 3. **Begin model construction** using the DCF methodology detailed in this skill
 
@@ -1283,7 +1288,7 @@ This approach centralizes scenario logic, making the model easier to audit and m
 - **MCP servers**: If configured (Daloopa for historical financials)
 - **Web search/fetch**: For current stock prices, beta, and market data
 - **User-provided data**: Historical financials, consensus estimates
-- **Manual extraction**: SEC EDGAR filings as fallback
+- **Manual extraction**: annual reports and BSE or NSE filings as fallback
 
 ## Final Output Checklist
 
@@ -1301,7 +1306,11 @@ Before delivering DCF model:
 - OpEx based on revenue (not gross profit)
 - Terminal value 50-70% of EV
 - Terminal growth < WACC
-- Tax rate 21-28%
+- Tax rate matches the company's filings and the statutory rate, both stated
 - File naming: `[Ticker]_DCF_Model_[Date].xlsx`
 
 - **Runbook:** [`references/runbook-dcf.md`](references/runbook-dcf.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+
+## Hand back
+
+Tell the user: the file name and where it is saved; the implied value per share against the market price, framed as the result of the stated assumptions; every `ASSUMED` input; and which sources were scraped or paid. Suggest a next step: open the sensitivity tables and see which assumptions move the answer most (usually discount rate and terminal growth) before comparing the implied price with the market price. State that this is not investment advice.

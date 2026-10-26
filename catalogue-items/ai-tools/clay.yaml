@@ -2,15 +2,15 @@ slug: clay
 name: Clay
 maker: Clay
 url: https://www.clay.com
-promise: "Research contact lists and fill in emails, phone numbers and company details."
+promise: "Build a lead list and add emails, phones and company details from many sources."
 use_cases: [find-leads]
 categories: [sales-and-support, data]
 what_it_does:
-  - Builds a table of leads from your list or a search.
-  - "Checks several data sources in turn to fill in emails, phones and company details."
-  - Runs an AI research agent called Claygent that reads a company's website.
-  - "Sends researched contact details to your customer records on the Growth plan."
-  - Sends emails from the Launch plan.
+  - "Builds a table of leads from your list or a search (checked 26 Oct 2026)."
+  - "Checks several data sources in turn to fill in emails, phones and company details. This is called waterfall enrichment (checked 26 Oct 2026)."
+  - "Runs an AI research agent called Claygent that researches companies for you (checked 26 Oct 2026)."
+  - "Syncs researched contact details to your customer records on the Growth plan (checked 26 Oct 2026)."
+  - "Sends email from the Launch plan, through Clay or your own tools (checked 26 Oct 2026)."
 benefits:
   - Get a lead list ready to contact, with details already filled in.
   - Find an email through several providers instead of one.
@@ -20,12 +20,13 @@ best_for:
   - Agencies that research many accounts for clients.
   - "Teams that want lead research matched to their own customer-record fields."
 not_for:
-  - First-time users who want a ready list without building a table.
-  - Teams that need phone numbers on the free plan, which does not include them.
+  - "First-time users who want a ready list without building a table. Apollo is simpler for that."
+  - "Phone numbers on the free plan. It does not include phone number enrichment (checked 26 Oct 2026)."
+  - "Emailing the people you find without checking consent. Confirm the email rules where your contacts live, such as CAN-SPAM or GDPR, and each data source's terms first."
 pricing:
   model: freemium
-  from: US$167 per month
-  note: The free plan has 500 actions and 100 data credits a month. Launch is shown from US$167 per month on the pricing page, though its FAQ says US$185, so confirm the billing term.
+  from: "Free; the Launch price is unclear (see note)"
+  note: "Free plan: 100 data credits and 500 actions a month, tables up to 200 rows, no phone enrichment. The pricing page conflicts on paid plans. Launch shows US$167 a month as the headline and US$185 in the FAQ. Another table on the page shows from US$54 a month billed yearly and US$60 monthly. Growth shows US$446 a month as the headline and US$495 in the FAQ, with other figures lower down. We could not tell which billing term each number is for, so confirm the price and term on clay.com before you buy. Checked 26 Oct 2026."
 works_with:
   - Salesforce
   - HubSpot
@@ -36,6 +37,29 @@ blocks:
   - prospect-list-builder
   - who-to-call-first-ranker
 alternatives: [apollo, hubspot-breeze]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  web:
+    - "Create a Clay account on clay.com. The free plan has no phone enrichment and caps tables at 200 rows. Sign-up steps were not checked here."
+    - "Start a table. Import a list of companies, or search for companies and people."
+    - "Add one enrichment column for work email. Run it on 5 rows first and look at what comes back."
+    - "Add a Claygent column with a plain question, such as 'What does this company sell, and who is it for?'. Run it on the same 5 rows and check the answers against the company website."
+    - "Export the rows, or sync them to your customer records if you are on Growth."
+needs:
+  - "A list of target companies, or a clear description of them: place, size and industry."
+  - "The job titles you want to reach."
+  - "A Clay plan. Free has 100 data credits and 500 actions a month."
+  - "Your customer-record tool, such as Salesforce or HubSpot, if you want to sync (Growth plan)."
+example:
+  task: "Fill in work emails and a one-line note about each company for 50 target accounts."
+  cost: "Uses data credits and actions from your monthly pool. The free plan has 100 credits and 500 actions. We did not check how many credits one email lookup or one Claygent run uses, so run 5 rows and watch the counter."
+  reply: "A table with one row per person or company. It has columns for email, job title, company details and your Claygent answer. The exact columns depend on what you add. Check a sample of rows by hand before you email anyone."
+not_verified:
+  - "The real price of Launch and Growth, and the billing term behind each figure."
+  - "How many credits one lookup or one Claygent run costs."
+  - "Whether the free plan can send email. The FAQ and the plan table disagree."
+  - "How many data providers Clay uses. Its pages say 150+ in one place and 200+ in another."
 sources:
   - https://www.clay.com/pricing
+  - https://www.clay.com

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps messy files to a strict format.
 new_slug: lab-instrument-data-converter
 name: Lab instrument data converter
-summary: Give it instrument output files. Get them converted to Allotrope JSON
-  or flat CSV for your lab systems.
+summary: Convert lab instrument data files to Allotrope JSON or flat CSV for your LIMS. Give it plate reader or cell counter output. You get files ready to load.
 job: work-with-files
 headline: Lab instrument data converter
-subhead: Give it instrument output files. Get them converted to Allotrope JSON
-  or flat CSV for your lab systems. Bring instrument output files. Use the
-  result to plan your next step.
+subhead: Give it instrument output files. Get them converted to Allotrope JSON or flat CSV for your lab systems. Bring instrument output files. Use the result to plan your next step.
 explain: |
   Instrument output files turned into a format your lab systems accept. Give it files from a plate reader, cell counter or similar device. The skill detects the instrument type, reads the file with the allotropy library, and writes Allotrope Simple Model JSON, a flat CSV with one row per measurement, or both.
 
@@ -18,6 +15,10 @@ when:
   - You want a flat table of instrument results to open in Excel.
   - A data engineer needs parser code to repeat the conversion on every run.
   - You need calculated values to stay traceable to the raw data.
+not_for:
+  - "Your instrument is not on the supported list: use the maker's own export or software instead."
+  - "You only need to tidy or chart a spreadsheet: use Excel or Google Sheets."
+  - "You cannot run Python and have no one who can: ask your data engineer or LIMS vendor to run the conversion."
 you_give:
   - Instrument output files
   - The instrument or vendor name (optional)
@@ -29,8 +30,29 @@ you_get:
   - Parser code for handoff
   - A short summary of what was converted
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Check your instrument is on the supported list in the skill folder. If it is not, stop and use the maker's own export.
+  - "Set up Python in a virtual environment, then run: pip install allotropy pandas openpyxl pdfplumber."
+  - Open an AI that can run code and add the skill instructions.
+  - Upload your files (CSV, Excel, TXT or PDF). Say which instrument and whether you want JSON, CSV or both.
+  - Answer any questions about unclear fields. Your AI asks instead of guessing.
+  - Check the summary and validation result before you load the files into your LIMS.
+output_sample:
+  input:
+    - Your instrument output files (CSV, Excel, TXT or PDF)
+    - The instrument or vendor name (optional)
+    - "The format you want: Allotrope JSON, flat CSV or both"
+    - Your company's schema notes (optional)
+  prerequisites:
+    - An AI that can run Python code and read your files
+    - Python with the allotropy, pandas, openpyxl and pdfplumber packages installed
+  output:
+    - name: ASM JSON file
+      contains: The full Allotrope Simple Model result, with raw readings kept apart from calculated values and linked to their sources.
+    - name: Flattened CSV
+      contains: One row per measurement, with sample, well, value, unit and instrument details repeated on each row.
+    - name: Parser script
+      contains: A standalone Python script a data engineer can run to repeat the conversion.
+    - name: Validation result
+      contains: Checks on the JSON, with warnings for unknown units, techniques or missing traceability.
+    - name: Summary
+      contains: What was converted, which instrument was detected, and any gaps in the details found.

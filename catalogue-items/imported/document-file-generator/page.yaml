@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds a structured spec, then runs a set tool to render it.
 new_slug: document-file-generator
 name: Document file generator
-summary: Describe the slides, report, sheet or PDF. Get a new PPTX, DOCX, XLSX
-  or PDF file built from a JSON spec.
+summary: Describe your slides, report, sheet or invoice. Get a new PowerPoint, Word, Excel or PDF file made by a document file generator.
 job: work-with-files
 headline: Document file generator
-subhead: A new PowerPoint, Word, Excel or PDF file built from a plain
-  description, with no template work by hand. It only creates files and does not
-  edit existing ones.
+subhead: A new PowerPoint, Word, Excel or PDF file built from a plain description, with no template work by hand. It only creates files and does not edit existing ones.
 explain: |
   A new PowerPoint, Word, Excel or PDF file built from a plain description, with no template work by hand. It only creates files and does not edit existing ones.
 
@@ -18,6 +15,10 @@ when:
   - A monthly report must come out as a Word file each time.
   - You want an Excel sheet with charts generated from a list.
   - You need a PDF invoice built the same way every time.
+not_for:
+  - "You want to edit a file you already have: open it in PowerPoint, Word or Excel, or ask a person who works in that app."
+  - "Your AI cannot run code or save files: ask it to write the text, then paste it into your own template."
+  - "You want a design made from scratch with custom art: use a design tool like Canva or hire a designer."
 you_give:
   - A description of the document and its content
   - "The format: PPTX, DOCX, XLSX or PDF"
@@ -29,8 +30,29 @@ you_get:
   - Install commands for the package
   - A file you can open and share
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open Claude, ChatGPT or Gemini in a mode that can run code and save files. Paste the skill text into the chat.
+  - "Say which format you want: PPTX, DOCX, XLSX or PDF. Then describe the document."
+  - Paste the data or text to include, such as rows, figures or section text.
+  - Let your AI install the matching package, then write and run the script.
+  - Open the file and check it. If it is wrong, ask your AI to change the spec and run it again.
+  - Keep the saved spec. Next time, swap in new data and run it again.
+output_sample:
+  input:
+    - A plain description of the document and what goes in it
+    - "The format you want: PPTX, DOCX, XLSX or PDF"
+    - Your data or text to include, such as figures, rows or section text
+  prerequisites:
+    - An AI that can run code and save files
+    - Node installed on your computer
+    - The matching PaperJSX package, installed with npm
+  output:
+    - name: Install command
+      contains: The npm command for the package that matches your format.
+    - name: JSON layout spec
+      contains: Your content laid out as JSON that the PaperJSX engine reads.
+    - name: Node.js script
+      contains: A short script that passes the spec to the engine and saves the file.
+    - name: Generated file
+      contains: A new PPTX, DOCX, XLSX or PDF file you can open and share.
+    - name: Size check
+      contains: A check that the file exists and is not empty, plus the full error message if the engine fails.

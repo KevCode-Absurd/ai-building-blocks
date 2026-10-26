@@ -1,0 +1,14 @@
+{
+  "repo": "msitarzewski/agency-agents",
+  "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+  "adaptation": "selected task methods; original profiles are background/provenance only",
+  "sources": [
+    {
+      "slug": "agency-healthcare-aging-parent-care-companion",
+      "path": "specialized/healthcare-aging-parent-care-companion.md",
+      "sha256": "fca0725bc30a447d6666df5060333eac2a4f81083cc02670118045678c79a035",
+      "licence": "MIT"
+    }
+  ],
+  "review": "reports/2026-10-25-agency-curation-specialist.json"
+}

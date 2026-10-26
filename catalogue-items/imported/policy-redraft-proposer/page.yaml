@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must change policy text without breaking its other parts.
 new_slug: policy-redraft-proposer
 name: Policy redraft proposer
-summary: Give it a policy gap and the current policy. Get a marked-up draft with
-  small edits. Not legal advice.
+summary: Turn a policy gap into a marked-up policy redraft with the smallest edits, plus notes on why. A proposal for your policy owner, not legal advice.
 job: check-contracts
 headline: Policy redraft proposer
-subhead: Give it a policy gap and the current policy. Get a marked-up draft with
-  small edits. Not legal advice. Bring description of the gap. Use the result to
-  plan your next step.
+subhead: Give it a policy gap and the current policy. Get a marked-up draft with small edits. Not legal advice. Bring description of the gap. Use the result to plan your next step.
 explain: |
   When a review finds your policy no longer meets a rule, this writes the fix as a marked-up draft with the smallest edits that close the gap. Nothing in your original policy is touched.
 
@@ -18,6 +15,10 @@ when:
   - A new rule takes effect and you need amended wording quickly.
   - You want edits your policy owner can approve line by line.
   - You need a record of why each change was proposed.
+not_for:
+  - "You want the change applied to your live policy: your policy owner does that after review and approval."
+  - "You need final legal advice or a legal sign-off: ask outside counsel or your legal team."
+  - "You are not sure the rule is still in force: confirm its status with outside counsel before you use the draft."
 you_give:
   - Description of the gap
   - Current approved policy text
@@ -29,12 +30,35 @@ you_get:
   - Redraft memo in a new dated file
   - List of facts still to verify
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved setup notes and your policy
-    files.
-  - Where the skill points to /regulatory-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - "Collect the three things the skill needs: the gap, your current approved policy text, and the rule text."
+  - Open Claude, ChatGPT or Gemini and paste in the skill. A chat works if you paste your policy and rule text.
+  - Tell your AI which gap to fix and paste your inputs. If you have a gap tracker, a gap review or policy comparison result, and setup notes, add them too. Saving the draft as a new file needs an AI that can write files.
+  - Answer its question about whether your policy text is the latest approved version.
+  - Read the marked-up draft and the change summary. Check every item tagged [verify] against the primary source.
+  - Send the draft to your policy owner. Update your gap tracker only after the change is applied and approved.
+output_sample:
+  input:
+    - A description of the gap, or a gap ID from your tracker
+    - The current approved policy text
+    - The text of the rule or regulation
+    - Name of the policy owner (optional)
+  prerequisites:
+    - A gap found by a gap review or a policy comparison, or one you can describe in your own words
+    - Your saved setup notes and gap tracker, if your AI can read files (optional)
+  output:
+    - name: Rule status banner
+      contains: A warning at the top if the rule could not be confirmed as in force.
+    - name: Reviewer note
+      contains: Sources used, what was read, items flagged for judgment, rule currency, and what to confirm before relying.
+    - name: Bottom line
+      contains: "Three sentences: what the gap is, what the redraft does, and what needs review."
+    - name: Marked-up policy section(s)
+      contains: Only the affected text, with struck and inserted words and a comment on why each change was made.
+    - name: Change summary
+      contains: A table of each provision with current wording, proposed wording, the reason, and what to verify.
+    - name: Before applying checklist
+      contains: Steps to confirm the policy version, rule status, owner review, approval, and tracker update.
+    - name: Next steps
+      contains: Choices for what to do next, such as sign-off, more research, escalation, or waiting.
+    - name: Saved draft file
+      contains: A new file named with the policy, the words proposed-redraft, and the date. Your source policy is never changed.

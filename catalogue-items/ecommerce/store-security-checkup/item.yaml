@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: question, required: true}
   - {type: store_capture, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}

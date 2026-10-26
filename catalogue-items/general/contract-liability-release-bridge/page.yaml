@@ -1,7 +1,7 @@
 new_slug: contract-liability-release-bridge
 name: Contract-liability release bridge
 headline: Contract-liability release bridge
-summary: Reconcile customer advances and liability balances to revenue released from deferred obligations.
+summary: Check your contract liability roll-forward. Give it opening and closing balances, new advances and signed changes. You get inferred revenue release.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a historical contract-liability roll-forward with inferred release and reconciliation residual.
   - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need to split a contract into performance obligations: ask your accountant or auditor, as this only checks the total roll-forward."
+  - "You want to forecast future bookings or revenue: build that in your own spreadsheet, as this only looks back."
+  - "You only have a receivables balance with no deferred revenue: check it with a simple aging report in your accounting tool."
 you_give:
   - Opening/closing contract liabilities, new advances or deferred billings, signed non-revenue changes and disclosed releases.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,27 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Opening and closing contract liability balances
+    - New advances or deferred billings for the period
+    - Signed changes that are not revenue, such as FX or acquisitions (optional)
+    - Release amounts the company disclosed, with dates and currency
+    - Reporting date, currency, scale and accounting basis
+  prerequisites:
+    - An AI that can create and read spreadsheet files
+    - Node.js 20 or later, to run the bundled calculation (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The sources you supplied, their dates, and the period, currency and scale used.
+    - name: Inputs and assumptions
+      contains: Each balance and flow with its source, sign and period, plus any assumption made.
+    - name: Model calculations and reconciliations
+      contains: The roll-forward from opening to closing, the inferred release, and how it compares with the disclosed release.
+    - name: Actual file verification
+      contains: Results of recalculating, inspecting and reopening the workbook, and which checks could not run.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs still needed and checks that failed or did not run, or the word none.
 how_it_works:
   - title: 1. Separate contract liabilities from receivables, refundable deposits and other payables; verify whether new additions are billings or cash advances under the source definition
     text: Separate contract liabilities from receivables, refundable deposits and other payables; verify whether new additions are billings or cash advances under the source definition.

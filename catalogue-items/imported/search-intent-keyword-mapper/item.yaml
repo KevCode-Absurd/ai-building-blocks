@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: brief
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: spreadsheet
   - type: plan

@@ -1,6 +1,8 @@
 slug: prepare-a-vendor-security-questionnaire-response
 name: Prepare a vendor security questionnaire response
-summary: Share the source files. Get a sourced response draft, evidence index and unanswered questions.
+summary: "Answer a vendor security questionnaire with evidence: get a sourced
+  draft, an evidence index and a list of questions your team still has to
+  answer."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,31 +10,35 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-  - type: copy_draft
-    required: false
-  - type: brand_brain
+  - type: brief
     required: false
 outputs:
-  - type: audit_report
   - type: spreadsheet
-  - type: copy_draft
-  - type: feedback_notes
   - type: document
+  - type: audit_report
 uses:
   - compliance-checklist
   - spreadsheet-checker
   - plain-english-editor
 steps:
   - uses: compliance-checklist
-    note: Map the questionnaire to the evidence needed for each claim and define the response scope.
+    note: Maps each questionnaire question to the evidence needed for the answer and
+      defines the response scope. Hands step 2 the checklist of questions with
+      the proof each needs.
   - uses: spreadsheet-checker
-    note: Build a question-to-evidence table and check that each proposed yes has a dated source, correct scope and a visible gap when evidence is absent.
+    note: Uses your own evidence sheet, not step 1's output, and takes step 1's
+      checklist as the audit report to check against. Builds a
+      question-to-evidence table where each proposed yes has a dated source, the
+      right scope and a visible gap when proof is absent. Hands step 3 the
+      checked table.
   - uses: plain-english-editor
-    note: Draft clear responses from verified facts, preserving gaps and review restrictions.
+    note: Uses your questionnaire draft and step 2's checked table. Writes clear
+      answers from verified rows only and keeps the gaps and review limits
+      visible.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -42,13 +48,19 @@ credits:
   - title: Compliance readiness checklist builder
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/legal-and-compliance/compliance-checklist-generation
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Spreadsheet checker
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Plain English editor
     by: AI Blocks
     url: https://useaiblocks.com/skills/plain-english-editor
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

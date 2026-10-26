@@ -1,0 +1,148 @@
+name: BIM/GIS Specialist agent
+summary: Plan how to bring a Revit or IFC model into GIS. Get a coordinate plan, attribute map, checks and an indoor or twin plan.
+headline: BIM/GIS Specialist agent
+subhead: Tell it what you need to do with a building model, such as a room finder or a space report, and what files you have. It plans how to place the model on the map and which data to keep. You get a coordinate plan, an attribute map and a check list.
+job: connect-tools
+thinking: high
+thinking_why: It must reason about coordinates, levels of detail and what data survives a conversion, and say when it cannot tell. Use a model that handles technical detail carefully.
+explain: |-
+  BIM (building information modeling) files, such as Revit or IFC models, describe a building room by room. GIS (geographic information systems) are maps that sit in the real world. Moving a model from one to the other fails in two common ways. The building lands in the wrong place or at the wrong height, because the model's own starting point does not match a real map position. Or you import every bolt and parameter, and the map is slow and cluttered. A BIM to GIS plan avoids both.
+
+  This agent starts with your purpose, such as "track room use across 50 buildings". It sets the level of detail from that purpose and keeps only the data the purpose needs, such as room number, floor, department, area and use. Then it plans the placement first: which points in the model tie to which real coordinates, and how to check the result. After that it plans the conversion, maps each building parameter to a map field and lists the checks.
+
+  If you want indoor maps or a digital twin, it adds that plan too. It starts small: building shapes and room names first, then sensors, then work orders. It names who must keep the data current. It writes plans for your BIM and GIS team to carry out. It does not open your files or run the software.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your facilities team has Revit models and wants room and floor data on your GIS map.
+  - A campus or hospital wants a room finder or a step-free route map inside its buildings.
+  - You were asked for a digital twin and need to turn it into one clear first project.
+  - A building lands in the wrong place or at the wrong height after import, and you need the usual causes.
+not_for:
+  - You need final coordinate sign-off. A licensed surveyor or your BIM manager must confirm it.
+  - You need a standard 2D building footprint map. Use the GIS Analyst agent.
+  - You need a 3D scene of terrain and buildings. Use the 3D & Scene Developer agent.
+  - You have a LiDAR point cloud to sort. Use the Drone/Reality Mapping Specialist agent.
+you_give:
+  - What you want to do with the model, in one line, such as "show rooms by department on a campus map"
+  - The model files you have, such as Revit or IFC, and what you know about the export
+  - The GIS platform you use, such as ArcGIS or an open-source map stack
+  - The map coordinate system of your site, and the survey point and base point of the model, if you know them (optional)
+  - The data fields you need on the map, such as room number, floor and area (optional)
+  - Sensor or work order systems you may connect later (optional)
+you_get:
+  - A purpose and scope note with the level of detail chosen
+  - A source check that lists what the model has and what is missing
+  - A coordinate plan for placing the model correctly, with a way to check it
+  - Conversion steps from model to map
+  - An attribute map that shows what each building parameter becomes on the map
+  - A check list for shape, data and position
+  - An indoor map or digital twin plan, if you asked for one
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write one line on what you want to do with the model. A clear purpose sets how much detail to keep.
+  - List your files and tools, such as the Revit version or IFC version, and your GIS platform. Paste or attach a list of room parameters if you have one.
+  - Give the coordinate system of your site map, and the model's survey point and base point if you know them. Say if you do not.
+  - Type "Plan this BIM to GIS job. Do the coordinate plan first. Mark anything you cannot tell."
+  - Give the plan to your BIM and GIS team. The AI only plans. They run Revit, ArcGIS or other tools, and a surveyor confirms the coordinates.
+how_it_works:
+  - title: Set the purpose
+    text: It turns your one line into a scope, picks the level of detail and lists the building parts to carry over, such as building, floor, room, door and corridor.
+  - title: Check the source
+    text: It notes the model version, the export quality and which parameters exist. It lists what is missing.
+  - title: Plan the placement
+    text: It matches the model's own survey point and base point to real map coordinates, sets units and plans how to check the result.
+  - title: Plan the conversion
+    text: It sets the path from model file to map layer and notes where shape or data can be lost.
+  - title: Map the attributes
+    text: It maps each building parameter you need to a map field and drops the rest.
+  - title: Set the checks
+    text: It lists visual, data and position checks to run after the conversion.
+  - title: Add indoor or twin plans (if asked)
+    text: It adds floor-aware data, a routing network and a floor selector, or a twin that starts small with an owner for updates.
+output_shape: |-
+  PURPOSE AND SCOPE
+    Purpose <one line> | Level of detail <chosen, with reason> | Parts carried over <building, floor, room, door, corridor, other> | Left out <list>
+
+  SOURCE CHECK
+    Model <Revit or IFC, version> | Parameters present <list> | Missing <list> | Risks <list>
+
+  COORDINATE PLAN
+    Model survey point and base point <known or MISSING> | Target coordinate system <name> | Units <list> | Steps <list> | How to check <list>
+
+  CONVERSION STEPS
+    <step> | <tool or format> | <where data or shape may be lost>
+
+  ATTRIBUTE MAP
+    <building parameter> | <map field> | <keep or drop> | <note>
+
+  CHECKS
+    <check> | <how to run it> | <pass looks like>
+
+  INDOOR MAP OR TWIN PLAN (only if asked)
+    Data model <list> | Routing <list> | Live data <sources> | Updates <who and how often> | First phase <list>
+
+  OPEN QUESTIONS
+    <question> | <who can answer>
+output_sample:
+  input:
+    - What you want to do with the model, in one line
+    - The model files you have and what you know about the export
+    - Your GIS platform
+    - Your site coordinate system and the model's survey and base points (optional)
+  prerequisites:
+    - A Revit or IFC model and someone on your team who can run BIM and GIS tools
+  output:
+    - name: Purpose and scope
+      contains: Your goal, the level of detail chosen with a reason, the building parts to carry over and what is left out.
+    - name: Source check
+      contains: The model type and version, the parameters it has, what is missing and the risks.
+    - name: Coordinate plan
+      contains: How to tie the model to real map coordinates, the units and how to check the placement.
+    - name: Conversion steps
+      contains: The path from model file to map layer, with where shape or data may be lost.
+    - name: Attribute map
+      contains: Each building parameter, the map field it becomes and whether to keep or drop it.
+    - name: Checks
+      contains: Shape, data and position checks to run after conversion, with what a pass looks like.
+    - name: Indoor map or twin plan
+      contains: Floor-aware data, routes, live data sources and who keeps it current. Only if you asked for it.
+    - name: Open questions
+      contains: What to settle before work starts and who can answer.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a parameter list or an IFC export summary and match each field to a map field.
+  inputs:
+    - A list of the room parameters in the model, with sample values.
+    - The coordinates of two known points on site, such as building corners, with the system they use.
+    - A floor plan or screenshot of one floor, to compare against after conversion.
+terms:
+  - term: BIM
+    meaning: Building information modeling. A detailed digital model of a building, such as a Revit file.
+  - term: GIS
+    meaning: Geographic information systems. Maps tied to real places, where you can store and query data.
+  - term: IFC
+    meaning: An open file format for sharing building models between different software.
+  - term: Coordinate system
+    meaning: The rule that ties map positions to real places on the Earth. Using the wrong one shifts the building.
+  - term: Digital twin
+    meaning: A live digital copy of a building or site that joins its model, sensors and work records.
+tweaks:
+  - what: Purpose
+    how: Name the exact question the map must answer. "Show room use" needs less detail than "run maintenance".
+  - what: Coordinates
+    how: Give the model's survey point and base point. Placement errors are the most common cause of failure.
+  - what: Fields to keep
+    how: List the few data fields you need. Keeping every parameter slows the map and adds clutter.
+improve:
+  - Save the attribute map. Reuse it for every building so the map stays consistent.
+  - Add your site's coordinate system and units to the pack so each new plan starts with them.
+  - After the first building works, ask for the second phase of the twin plan, such as sensors.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

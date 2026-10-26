@@ -1,0 +1,44 @@
+slug: agency-marketing-linkedin-content-creator
+name: LinkedIn Content Creator agent
+summary: Get LinkedIn post drafts with audience and topic choices. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: brand_brain
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-linkedin-content-creator.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-linkedin-content-creator.md
+  licence: MIT
+  original_name: LinkedIn Content Creator
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 344896bff33acf0b5107bbba3c84ee1fb310f3652b44c7e53553c934c735ed4f
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - LinkedIn Content Creator
+  - Agency Agents
+  - Marketing
+credits:
+  - title: LinkedIn Content Creator
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-linkedin-content-creator.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

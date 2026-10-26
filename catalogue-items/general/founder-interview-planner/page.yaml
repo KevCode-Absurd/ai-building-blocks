@@ -1,6 +1,6 @@
 name: "Founder interview planner"
 new_slug: founder-interview-planner
-summary: "Attach your brand file. Get a ranked founder call plan, a written form, and every answer filed."
+summary: "Plan your founder interview call. Give it your brand file and get ranked questions, a written form and every answer filed."
 job: brand-file
 thinking: high
 thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
@@ -17,6 +17,10 @@ when:
   - You've built a brand file from your website and it's full of unknowns and guesses.
   - A writer or agency keeps asking the founder the same questions one at a time.
   - You're about to make ads with people, claims or footage and need to know what's allowed.
+not_for:
+  - "You have no brand file yet: build one first with the Brand profile builder, then come back."
+  - "You can't reach the founder for a call or written answers: ask a teammate who knows the business, or wait."
+  - "You only want facts from your website and reviews: read those directly, since no founder call is needed."
 
 you_give:
   - Your brand file, read first
@@ -35,6 +39,29 @@ how_to_use:
   - On the call, work down the ranked list. Leave anything not reached for the written form.
   - After the call, paste the notes or transcript back in and ask it to file the answers.
   - Send the readback to the founder and chase the documents it lists.
+output_sample:
+  input:
+    - Your brand file (the eight files built from your website)
+    - The founder's answers after the call, as notes, a transcript or written replies
+    - Gaps you have already spotted (optional)
+  prerequisites:
+    - A brand file, ideally from the Brand profile builder
+    - A call or written replies with the founder
+  output:
+    - name: Quick checks
+      contains: Yes or no checks for facts already confirmed that are worth a recheck.
+    - name: Call plan
+      contains: About 10 ranked questions, each tagged with the gap it fills and the file it goes in.
+    - name: Written form
+      contains: Questions for facts, lists and files, sent ahead, each tagged with its gap and target file.
+    - name: Please bring
+      contains: The documents, samples and photos the founder should have ready.
+    - name: Filed answers
+      contains: Each answer placed in the right brand file, tagged with founder, date and question number.
+    - name: Readback
+      contains: One page on what we heard, what is still needed, what was decided and what was not answered.
+    - name: Gaps closed
+      contains: A count of gaps with a filed answer out of gaps collected, plus any checks missed.
 
 how_it_works:
   - title: Collects the gaps

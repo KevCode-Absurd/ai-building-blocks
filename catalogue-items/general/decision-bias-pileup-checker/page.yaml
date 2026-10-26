@@ -1,6 +1,6 @@
 new_slug: decision-bias-pileup-checker
 name: "Decision bias pile-up checker"
-summary: "Describe a decision you are about to make. Get the pressures bending your judgment, and a calmer version of the choice."
+summary: "Check a decision for pressure before you commit. Describe it and get the pressures bending your judgment, plus a calmer version of the choice."
 job: think-and-decide
 thinking: high
 thinking_why: "It has to separate real reasons from pressure and judge how they combine, which takes careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You are about to sign, buy, hire or commit, and the room is pushing you.
   - You feel certain and cannot say exactly why.
   - A deadline, a discount or a pitch is rushing a big choice.
+not_for:
+  - "You face a small choice you can undo easily: just decide, or use the Reversible decision sorter to see how much review it needs."
+  - "You need medical, legal or financial advice: talk to a doctor, a lawyer or a licensed adviser."
+  - "You want someone to make the call for you: this tool clears your view and does not tell you what to pick."
 
 you_give:
   - The decision, and the date you must make it
@@ -34,6 +38,28 @@ how_to_use:
   - Read the rational case first. Fix anything it got wrong.
   - Read the pressures it found. Mark any that you disagree with, and say why.
   - Use the calmer version, or the pause it suggests, before you commit.
+output_sample:
+  input:
+    - The decision you are close to making, and who decides by when
+    - Your reasons for it, in your own words
+    - Who gains from a yes, and what you have already said or paid (optional)
+  output:
+    - name: The decision
+      contains: One line on what you are deciding, who decides and by when.
+    - name: The clear case
+      contains: Your sound reasons for the decision, written before any pressure is named.
+    - name: Pressures present
+      contains: A table of reward, favour owed, consistency, social proof and fear of loss, each tied to a fact.
+    - name: Pile-up
+      contains: How many pressures agree, with a flag at three or more, and the strongest one or two.
+    - name: Cooling-off step
+      contains: A pause or a step away that fits the strongest pressure and your real deadline.
+    - name: How much to trust your gut
+      contains: A rating based on practice and quick feedback in this field, and whether confidence rests on a record or a story.
+    - name: The calmer version
+      contains: The decision restated as you would make it with the pressure removed.
+    - name: Missing
+      contains: What is unknown and would change the check.
 
 how_it_works:
   - title: Writes the clear case

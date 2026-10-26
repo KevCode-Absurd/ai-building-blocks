@@ -1,6 +1,6 @@
 new_slug: research-topic-watcher
 name: Research topic watcher
-summary: Name a topic once. Each month get the new papers, which ones are strong, and whether they change what you believe.
+summary: Follow a research topic with less effort. Each month get the new papers, how strong they are, and whether they change what you believe.
 job: research-topics
 thinking: high
 thinking_why: It weighs the strength of studies against what you currently believe and decides whether a line is at risk. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You follow one research topic for work, study or a decision, and want to stay current with little effort.
   - You want to know if new papers change what you believe, not just a list of titles.
   - You want one weak study to stop moving your view.
+not_for:
+  - "You need a one-time overview of a topic: ask your AI for a literature review and read the main papers yourself."
+  - "Your topic has few papers each year: check by hand every three months, since most months will say nothing new."
+  - "Your sources sit behind paywalls: use your library's own search, because this agent searches open databases and will miss those papers."
 you_give:
   - The topic, in one or two sentences, and what makes a paper relevant
   - Notes or papers you already trust (optional)
@@ -29,6 +33,30 @@ how_to_use:
   - On the first run, read the draft standing summary. Fix it and say yes before it is saved.
   - Each month, ask it to run. It reads the same folder and searches only what is new.
   - Read the papers at risk and the three to read. Say yes or no to each proposed change.
+output_sample:
+  input:
+    - Your topic, in one or two sentences, and what makes a paper relevant
+    - Notes or papers you already trust (optional)
+    - Key terms, authors or journals (optional)
+    - How far back to look on the first run (optional)
+  prerequisites:
+    - An AI that can search the web and keep files, such as Claude Code
+    - Your yes to the first standing summary before it is saved
+  output:
+    - name: This month
+      contains: How many papers were found, how many were new and relevant, and the dates searched.
+    - name: Lines at risk
+      contains: Lines of your summary that a strong new paper goes against, with the paper, its grade and a proposed rewrite.
+    - name: Support
+      contains: Strong new papers that back a line of your summary, with their grade.
+    - name: Weak or conflicting
+      contains: Papers logged but not acted on, with the reason and what explains any conflict.
+    - name: Read these
+      contains: Up to three papers worth reading in full, each with a plain summary and why it matters.
+    - name: The search
+      contains: The terms and databases used, so you can repeat the search.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Build the base
     text: On the first run, it finds the key papers sorted by theme and drafts a standing summary of five lines or fewer for you to approve.

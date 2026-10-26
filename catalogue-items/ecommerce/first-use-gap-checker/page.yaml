@@ -1,6 +1,6 @@
 new_slug: first-use-gap-checker
 name: "First-use gap checker"
-summary: "Paste returns, tickets and reviews. Get where buyers stall before first real use, a fix each and a score."
+summary: "Find where buyers stall before first use. Paste your returns, tickets and reviews to get ranked gaps, a fix for each and a score out of 100."
 job: keep-customers
 thinking: medium
 thinking_why: "It sorts many messages onto a timeline and ranks gaps by a fixed rule. A mid-range model does this well."
@@ -17,6 +17,10 @@ when:
   - Returns or "how do I" tickets are rising and you do not know which step is failing.
   - Reviews say "never used" or "still in the box", and you want to know why.
   - You are about to add an insert, a how-to video or a follow-up message, and want to put it on the right step.
+not_for:
+  - "You have fewer than about 100 orders with feedback text: read every message by hand instead."
+  - "You want to know if your ad promised the wrong thing to the wrong buyer: use the Wrong-buyer review checker."
+  - "You want to fix doubts buyers have before they order: use the Switch friction remover."
 
 you_give:
   - Return reasons and counts for the last 90 days
@@ -35,6 +39,26 @@ how_to_use:
   - Say how many orders were in the same window, and how long one unit should take to use up.
   - Fix the top gap first. Cheap fixes (an insert, a video link, a day-2 message) come before costly ones.
   - Run it again in 30 days on the new window and compare the score.
+output_sample:
+  input:
+    - Your return reasons and counts for the last 90 days
+    - Your low and mid star reviews and support tickets, pasted with dates
+    - Your order count for the same period
+    - What the product is for and how long one unit should last
+    - Click data and reorder dates (optional)
+  output:
+    - name: First-use timeline
+      contains: Steps from delivery to reorder, with the number of returns, tickets and reviews on each step and the drop-offs marked.
+    - name: Gaps, ranked
+      contains: Each gap has its step, barrier type, orders touched, cost per order, quotes, one fix and what the fix costs you.
+    - name: Old-product push
+      contains: Review lines about how bad the old product was, with where to use each in an ad or page.
+    - name: Score
+      contains: A first-use score out of 100 with the sum shown, what it does not measure, and a ceiling after the top fix.
+    - name: Track instead of shipped and sold
+      contains: "Three measures for your own store: arrived as promised, first use in your window, repeat use on time."
+    - name: Missing and checks missed
+      contains: Any inputs you did not give, and any checks the AI could not pass.
 
 how_it_works:
   - title: Splits two moments

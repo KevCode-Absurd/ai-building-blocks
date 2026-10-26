@@ -1,6 +1,6 @@
 new_slug: harden-an-ai-app-against-hijacked-instructions-and-runaway-bills
 name: Harden an AI app against hijacked prompts and runaway bills
-summary: Give it your AI app. Get layered defences, tests, spending caps and a fresh attack test.
+summary: Harden your AI app against prompt injection and runaway bills. Get layered defences, tests, spending caps and an attack report on what held.
 job: secure-code
 thinking: high
 thinking_why: It reads code, adds defences and then attacks its own work. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your app reads web pages, emails, files or user messages and passes them to a model.
   - Your app calls paid AI services in a loop, a queue or a background job.
   - You are about to launch an AI feature and want proof it resists simple attacks.
+not_for:
+  - "Your app reads no outside text and makes no paid AI calls: use a standard code review instead."
+  - "You only want to know what your AI app might cost: ask your AI provider for its usage and billing page, or a developer, for a quick check."
+  - "You have no code to share, only a chat tool or a hosted product: ask the vendor for its security details."
 you_give:
   - Your AI app's code (a folder or repo the AI can open)
   - Which paid services it calls, and the limit you are willing to spend per day
@@ -25,10 +29,32 @@ you_get:
   - A per-run and per-day spending cap, with limits on loops, retries and parallel calls
   - An attack report, ranked, showing which defences held and what is still open
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md". It needs to open and edit your code.
   - Work on a test copy with test keys, never live keys or customer data.
-  - Do both of your steps. Merge the defences with tests, then merge the caps and run the app.
+  - Only your code is required. Paid services, a daily limit, tools and tests are optional, but they make the caps and defences fit better.
+  - Pause after step 2. Add the tests, run them and merge the defences.
+  - Pause after step 3. Merge the spending caps and run the app once. Then the final attack test runs on the finished app.
+output_sample:
+  input:
+    - Your AI app's code, in a folder or repo your AI can open
+    - Which paid services it calls, and the most you will spend per day (optional)
+    - What tools or actions the model can use (optional)
+    - Your test folder (optional)
+  prerequisites:
+    - An AI that can open and edit a folder of files, such as Claude Code
+    - A test copy of your app with test keys, never live keys or customer data
+  output:
+    - name: "Step 1: AI app injection defender"
+      contains: Where outside text reaches the model, the layers of defence added, and test inputs to try.
+    - name: "Step 2: Test gap finder"
+      contains: Which defences your tests cover, which they miss, which are unknown, and new test cases for the gaps.
+    - name: Spending caps
+      contains: Every paid call found, a cap per run and per day, limits on loops and retries, and a dashboard match.
+    - name: "Step 4: AI system attack tester"
+      contains: Ranked findings, the known attack type for each, which defences held and what is still open.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Add defences against hidden instructions
     text: Maps every route for outside text into the model, then adds layers that clean the input, fence the instructions, check the output and plant a marker that shows leaks.

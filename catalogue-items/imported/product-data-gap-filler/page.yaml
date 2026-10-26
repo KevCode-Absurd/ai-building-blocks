@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It finds gaps and fills fields by set rules.
 new_slug: product-data-gap-filler
 name: Product data gap filler
-summary: Find products missing barcode, SKU, vendor or weight. Get the gaps
-  filled so AI can quote exact items. Updates live products.
+summary: Find Shopify products missing a barcode, SKU, vendor or product type, then fill the blanks from your own data. Preview every change before it goes live.
 job: build-websites
 headline: Product data gap filler
-subhead: Missing barcodes, SKUs, vendors, product types and weights found and
-  filled, so AI tools can quote an exact in-stock item. When this data is blank,
-  a shopping agent cannot confirm the product is the one asked for and picks a
-  rival with full data.
+subhead: Missing barcodes, SKUs, vendors, product types and weights found and filled, so AI tools can quote an exact in-stock item. When this data is blank, a shopping agent cannot confirm the product is the one asked for and picks a rival with full data.
 explain: |
   Missing barcodes, SKUs, vendors, product types and weights found and filled, so AI tools can quote an exact in-stock item. When this data is blank, a shopping agent cannot confirm the product is the one asked for and picks a rival with full data.
 
@@ -19,6 +15,10 @@ when:
   - AI shopping tools skip your items in favour of competitors.
   - Vendor or product type is blank on many products.
   - You are cleaning up a catalog after a bulk import.
+not_for:
+  - "You only want a read-only check of how ready your store is: run an audit first and do not use this tool to write changes."
+  - "You need to fix values that are already filled in but wrong: make a targeted edit in your Shopify admin or a bulk edit instead."
+  - "You do not have real barcodes from your supplier: ask your supplier first, because a wrong barcode is worse than a blank one."
 you_give:
   - Your store domain
   - Barcode, SKU and vendor data you already have
@@ -30,8 +30,33 @@ you_get:
   - Variant-level barcode and SKU updates
   - A list of gaps only you can fill
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Open your AI in a tool that can run Shopify CLI commands, and sign in to your store first.
+  - Paste the skill and give your store domain. Add your SKU and barcode file and any vendor or product type to apply.
+  - Ask for a dry run first. Nothing is written in a dry run.
+  - Read the change preview CSV. Check that each barcode matches the right product.
+  - When the preview looks right, ask your AI to run it for real. It only fills blanks and never overwrites a value.
+  - Check the outcome summary and the still-missing list, then get the missing data from your supplier.
+output_sample:
+  input:
+    - Your store domain
+    - A file with SKU and barcode pairs, from your supplier (optional)
+    - The vendor name to use where it is blank (optional)
+    - The product type to use where it is blank (optional)
+    - A collection or tag to limit the check (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands
+    - A signed-in Shopify CLI session for your store
+    - Access to read and change products in your store
+  output:
+    - name: Gap report
+      contains: Products and variants with a blank vendor, product type, barcode or SKU, found by scanning your catalog.
+    - name: Change preview CSV
+      contains: One row per planned change, with the product, variant, field, old value and new value, before anything is written.
+    - name: Product updates
+      contains: Vendor and product type filled in on products where they were blank and you gave a value.
+    - name: Variant updates
+      contains: Barcode and SKU filled in on variants where they were blank and your file has a match.
+    - name: Outcome summary
+      contains: Counts of products and variants updated for each field, plus any errors.
+    - name: Still-missing list
+      contains: Variants with no match in your file, left blank so you can find the data.

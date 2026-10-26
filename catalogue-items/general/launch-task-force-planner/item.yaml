@@ -1,13 +1,13 @@
 slug: launch-task-force-planner
 name: "Launch task force planner"
-summary: "Paste your new product idea and your team. Get a kickoff plan that puts design, sales, marketing and engineering first."
+summary: "Plan a product launch kickoff that puts design, sales, marketing and engineering in the room first. Get roles, an agenda and two sell tests."
 category: general
 type: skill
 role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
   - {type: plan, required: false}
 outputs:
   - {type: plan}
@@ -16,3 +16,6 @@ version: 1.0.0
 minds: [raymond-loewy]
 credits:
   - {title: "Speech at Essen, typed draft, Paris, 21 September 1955", by: "Raymond Loewy", used: "Bringing design, engineering, sales and advertising in at the start, one kickoff, short data, a second free team for options and a product that is easy to advertise and sell"}
+next: [go-or-no-go-launch-checker, launch-teaser-to-preview-planner, publicity-first-launch-planner]
+before: []
+needs_mode: manual

@@ -6,11 +6,11 @@ promise: "Edit, caption and translate video in a browser, with no install."
 use_cases: [edit-video]
 categories: [video]
 what_it_does:
-  - Edits video in your browser with a timeline and templates.
-  - Makes subtitles from speech, with unlimited use on paid plans.
-  - Translates and dubs videos into other languages.
-  - Makes AI presenters and AI clips with its credits.
-  - Records your screen and camera.
+  - "Edits video in your browser. The site lists a video editor, an AI video editor, an AI clip generator and an AI reel generator (checked 26 Oct 2026)."
+  - "Makes subtitles from speech. Paid plans include unlimited subtitles, with a fair use limit of 50 hours a month (checked 26 Oct 2026)."
+  - "Translates and dubs videos into other languages. Translation is counted in minutes, and unused minutes do not roll over (checked 26 Oct 2026)."
+  - "Makes AI presenters from a gallery of more than 100 characters, with a Clone yourself option (checked 26 Oct 2026)."
+  - "Records your screen, and cleans up sound with noise removal and eye contact correction (checked 26 Oct 2026)."
 benefits:
   - "Create a caption draft, then check names, wording and timing."
   - Put one video in several languages.
@@ -20,18 +20,42 @@ best_for:
   - Teams that share one workspace, since plans are per seat.
   - Quick caption and translation jobs.
 not_for:
-  - Long films or complex effects work.
-  - Large teams on a tight budget, since the price grows with each editor.
+  - "Long films or complex effects work."
+  - "Large teams on a tight budget. Plans are charged per seat, so the price grows with each person you invite."
 pricing:
   model: freemium
-  from: Check the maker's site
-  note: There is a free plan. The pricing page text did not show plan prices, and sources found in 2026 disagree. Plans are per seat and AI credits do not carry over.
+  from: "Prices not shown (checked 26 Oct 2026)"
+  note: "VEED has a free plan and paid plans, charged per seat. The pricing page we could read on 26 Oct 2026 showed no plan prices, export limits or watermark rules, so check them on veed.io before you pay. It does say AI credits reset on renewal and do not carry over. Enterprise has a free trial that needs at least 3 users and a call with sales."
 works_with:
   - elevenlabs
 runs_in: [web]
 blocks:
   - marketing-video-producer
 alternatives: [capcut, descript, opus-clip, heygen]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Open veed.io and click Start for free. The sign-up steps were not on the page we read, so follow what the site shows you."
+  - "Add your video in the editor. We could not confirm where the upload button sits, so look for the upload option first."
+  - "Open the subtitles tool. The site calls it an automatic subtitle generator. Pick the language you speak in the video."
+  - "Read every subtitle line against the audio. Fix names, product words and numbers, and check the timing."
+  - "To translate, open the video translator or dubbing tool and choose a language. Watch the result with someone who speaks it."
+  - "Export and play the file from start to finish before you post it. Export formats and any watermark on the free plan are not stated on the pages we read."
+needs:
+  - "A video file, with clear speech for good subtitles."
+  - "A free VEED account."
+  - "A paid plan if you want unlimited subtitles. Check whether the free plan lets you export subtitles."
+  - "Your logo, colours and fonts for the Brand Kit (optional)."
+  - "A speaker of the other language to check a translation (optional)."
+example:
+  task: "Add English subtitles to a one-minute product clip, then make a Spanish version."
+  cost: "Subtitles are unlimited on paid plans, with a fair use limit of 50 hours a month (checked 26 Oct 2026). Translation counts against a monthly minute allowance that VEED does not state on its pricing page. Check your plan for the count."
+  reply: "A video with subtitle lines you can edit, and a second version in the other language. Our example shows the shape only, not a measured result. Export formats are not stated, so check what you get before you plan a workflow around a subtitle file."
+not_verified:
+  - "Plan prices, and what the free plan allows for export and subtitles. The pricing page we could read did not show them."
+  - "Whether free exports carry a watermark."
+  - "Export formats, supported file types and file size limits."
+  - "How many languages VEED translates into. The pages we read gave no number."
 sources:
+  - https://www.veed.io
   - https://www.veed.io/pricing

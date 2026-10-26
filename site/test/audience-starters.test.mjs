@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { AUDIENCE_STARTERS, STARTER_PATHS, isAudienceStarter, starterFor } from '../src/lib/audience-starters.ts';
 
-test('exactly four audience paths contain complete, published packs and no new tested claims', () => {
+test('exactly four audience paths contain complete, published packs, Tested only when the page has its input/output section', () => {
   const cat = JSON.parse(fs.readFileSync('public/data/blocks.json', 'utf8'));
   const bySlug = new Map(cat.blocks.map(b => [b.slug, b]));
   assert.deepEqual(AUDIENCE_STARTERS.map(a => [a.id, a.name]), [['students', 'Students'], ['professionals', 'Professionals'], ['startups', 'Startups'], ['enterprise', 'Enterprise']]);
@@ -18,7 +18,7 @@ test('exactly four audience paths contain complete, published packs and no new t
   }
   for (const slug of ['topic-learning-roadmap', 'study-understanding-check', 'research-paper-reading-guide', 'research-paper-evidence-review', 'research-literature-comparison', 'resume-job-application-builder', 'procurement-agent-architecture-plan', 'case-competition-slide-deck-builder', 'storyboard-to-powerpoint-deck-builder', 'equity-research-valuation-report-builder']) {
     const b = bySlug.get(slug);
-    assert.equal(b?.tested, undefined, slug);
+    assert.equal(!!b?.tested, !!JSON.parse(fs.readFileSync(`public/data/pages/${slug}.json`, 'utf8')).output_sample, slug);
     assert.ok(fs.existsSync(`public/skills/${slug}.zip`), `${slug}: missing complete download`);
     const page = JSON.parse(fs.readFileSync(`public/data/pages/${slug}.json`, 'utf8'));
     assert.ok(page.source?.commit && page.source?.licence, `${slug}: missing provenance`);

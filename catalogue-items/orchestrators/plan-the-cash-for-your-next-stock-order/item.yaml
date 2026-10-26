@@ -16,11 +16,11 @@ outputs:
   - {type: audit_report}
 uses: [landed-cost-allocator, inventory-cash-planner, supplier-payment-terms-planner, growth-cash-limit-checker, cash-lever-ranker]
 steps:
-  - {uses: landed-cost-allocator, note: "Starts with what each unit really costs once it is on your shelf."}
-  - {uses: inventory-cash-planner, note: "Uses the landed costs to time each order and show the cash it needs."}
-  - {uses: supplier-payment-terms-planner, note: "Takes the cash gap from the stock plan and shows which supplier terms would close it."}
-  - {uses: growth-cash-limit-checker, note: "Reads the stock plan and terms to tell you if cash or ads limit your growth."}
-  - {uses: cash-lever-ranker, note: "If cash is still the limit, ranks the levers by cash freed, starting from the same cost sheet."}
+  - {uses: landed-cost-allocator, note: "Starts with what each unit really costs once it is on your shelf. Hands the landed-cost sheet to every step after it."}
+  - {uses: inventory-cash-planner, note: "Uses the landed costs from step 1 to time each order and show the cash it needs. Hands step 3 the cash gap, the lowest cash point and the order timing."}
+  - {uses: supplier-payment-terms-planner, note: "Uses step 2's cash gap and order timing, plus your landed-cost sheet, to show which supplier terms would close the gap. Hands step 4 the terms and float days."}
+  - {uses: growth-cash-limit-checker, note: "Reads the stock plan and terms to tell you if cash or ads limit your growth. Hands step 5 the verdict and the cash gap."}
+  - {uses: cash-lever-ranker, note: "If cash is still the limit, ranks the levers by cash freed, starting from the same cost sheet and step 4's verdict and cash gap. This is the final report."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/plan-the-cash-for-your-next-stock-order/skeleton.yaml

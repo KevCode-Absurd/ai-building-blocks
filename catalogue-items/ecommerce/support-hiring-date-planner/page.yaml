@@ -1,6 +1,6 @@
 new_slug: support-hiring-date-planner
 name: "Support hiring date planner"
-summary: "Paste 12 months of tickets, costs and a sales forecast. Get agents needed and when to hire."
+summary: "Plan your support hiring dates: paste 12 months of tickets, costs and a sales forecast, and get agents needed each month and when to start hiring."
 job: run-your-store
 thinking: low
 thinking_why: "It applies a ratio to a forecast month by month."
@@ -17,6 +17,10 @@ when:
   - "A big sale or holiday peak is coming."
   - "Your inbox is growing faster than sales."
   - "You need to tell someone when hiring must start."
+not_for:
+  - "You get under about 200 tickets a month: a simple monthly log is enough."
+  - "You have no sales forecast yet: build one first, or use the Support capacity planner, which has the full set of checks."
+  - "You need pay, hours or contract rules for new agents: ask a qualified person in your country."
 
 you_give:
   - "Tickets per month for the last 12 months (required)."
@@ -35,6 +39,26 @@ how_to_use:
   - "Under it, paste your details: tickets per month for the last 12 months; support cost per month; orders per month for the same months, and forecast orders for the next months; tickets one agent handles in a month; weeks to hire and train an agent."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Tickets per month for the last 12 months
+    - Support cost per month, agents plus software
+    - Orders per month for the same months, and forecast orders for the next months
+    - Tickets one agent handles in a month, from your own data
+    - Weeks to hire and train an agent
+  prerequisites:
+    - A sales forecast by month
+  output:
+    - name: TABLE
+      contains: One row per month with forecast orders, forecast tickets, agents needed and cost per ticket.
+    - name: HIRE BY
+      contains: The date to start hiring, how many agents, and which month is the peak.
+    - name: WATCH
+      contains: The month where cost per ticket jumps.
+    - name: REVIEW
+      contains: A reminder to run it again when your sales forecast changes.
+    - name: MISSING
+      contains: Any detail you did not give, so you can add it and run again.
 
 how_it_works:
   - title: "Find cost per ticket"

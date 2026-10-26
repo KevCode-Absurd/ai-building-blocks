@@ -1,6 +1,6 @@
 new_slug: programmatic-direct-mail-planner
 name: "Programmatic direct mail planner"
-summary: "Give it your flows and customer value. Get triggers to mail, a test cell and a payback check."
+summary: "Plan programmatic direct mail for your online store. Pick the customers worth mailing, set a test group and check payback per piece."
 job: keep-customers
 thinking: medium
 thinking_why: "It sets triggers and does payback sums for several segments, so a mid-size model is enough if you give it real costs and margins."
@@ -17,6 +17,10 @@ when:
   - Your email flows work and you want a second channel for your best segments.
   - You have lapsed or one-time buyers who ignore emails.
   - You want a way to test mail without betting your whole budget.
+not_for:
+  - Your store has little repeat buying, or one order's profit is below the cost of a printed piece. Use your email or SMS flows instead.
+  - You want to review one finished mailer before print. Use the Direct mail package reviewer.
+  - You have no clean address list or cannot confirm consent where you mail. Ask your adviser first, then plan.
 
 you_give:
   - Your customer list with first order date, last order date and order value
@@ -35,6 +39,28 @@ how_to_use:
   - Pick one or two triggers to start with, such as second purchase and win-back.
   - Check you have a clean address list and the right consent for your region before anything is printed.
   - Run the test with a control group for a full cycle before you add more triggers.
+output_sample:
+  input:
+    - Your customer list with first order date, last order date and order value
+    - Your average order value and margin
+    - Print and postage cost per piece
+    - Your email flow triggers (optional)
+    - Where your customers live (optional)
+  output:
+    - name: Fit check
+      contains: Order value times margin against cost per piece, the segments that cover it, and a minimum segment size.
+    - name: Segment and trigger map
+      contains: Each segment with its trigger event, timing and a reported result to beat, not a forecast.
+    - name: Mailer briefs
+      contains: "For each trigger: a personal line, an offer, a QR code or link, and an offer code."
+    - name: Test design
+      contains: How many customers get mail, how many form the email-only control group, and the metric to judge.
+    - name: Frequency cap and send timing
+      contains: How often one customer can be mailed, and when each piece goes out.
+    - name: Payback
+      contains: Extra orders needed per 1,000 pieces, worked out from cost per piece and profit per order.
+    - name: Checks missed and missing
+      contains: Any check that failed and any input you did not give.
 
 how_it_works:
   - title: Picks the segments

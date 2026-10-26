@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Reading plans and finding the real bottleneck is careful work.
 new_slug: slow-query-fixer
 name: Slow query fixer
-summary: Give it a slow SQL query. Get the cause found and a faster version with
-  indexes where needed.
+summary: Find why your slow SQL query is slow. Get a faster version and index fixes, checked against the plan, for PostgreSQL or MySQL.
 job: test-and-fix-code
 headline: Slow query fixer
-subhead: A slow SQL query turned into a fast one, with the reason it was slow
-  explained. You paste the query, or a slow log line, and the skill reads the
-  database's execution plan to find the cause.
+subhead: A slow SQL query turned into a fast one, with the reason it was slow explained. You paste the query, or a slow log line, and the skill reads the database's execution plan to find the cause.
 explain: |
   A slow SQL query turned into a fast one, with the reason it was slow explained. You paste the query, or a slow log line, and the skill reads the database's execution plan to find the cause.
 
@@ -18,6 +15,10 @@ when:
   - Your database CPU spikes on one page load.
   - Your ORM builds a query you cannot read.
   - You have an EXPLAIN plan and cannot tell what is wrong.
+not_for:
+  - "You need a new query written from a plain description: use sql-query-generation, or ask your AI to write one from scratch."
+  - "Your database is not PostgreSQL or MySQL: ask a database admin or check that database's own tuning guide."
+  - "The slowness comes from the app or the network, not the query: use your app's profiler to find where the time goes."
 you_give:
   - The slow query
   - The execution plan (optional)
@@ -29,8 +30,31 @@ you_get:
   - Index statements to add
   - A before and after plan comparison
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach your database.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your slow query, your database type and, if you have it, the EXPLAIN ANALYZE result.
+  - Add table sizes and how often the query runs, if you know them.
+  - Read the cause first, then try each change on a copy of your database, one at a time.
+  - Run EXPLAIN ANALYZE again and paste the new plan back so your AI can compare the two.
+  - Only add indexes to your live database once the copy test looks good. On PostgreSQL, use CREATE INDEX CONCURRENTLY so writes are not blocked.
+output_sample:
+  input:
+    - Your slow SQL query, or the ORM code that builds it
+    - Your database type, PostgreSQL or MySQL
+    - Your EXPLAIN plan (optional)
+    - Table sizes and how often the query runs (optional)
+  prerequisites:
+    - An AI that can run code and reach your database, if you want it to measure the new plan itself
+    - Otherwise you run the EXPLAIN commands and paste the results back
+  output:
+    - name: Diagnosis
+      contains: What the plan shows, such as full table scans, costly joins or sorts, and why the query is slow.
+    - name: Rewritten query
+      contains: A faster version of your query, with narrower columns and joins in place of subqueries where they help.
+    - name: Index statements
+      contains: CREATE INDEX lines for the columns used in your WHERE, JOIN and ORDER BY clauses.
+    - name: ORM fix
+      contains: Eager loading changes for code that sends one query per row, if your ORM is the cause.
+    - name: Before and after comparison
+      contains: Plan and run time before and after each change, plus a check that results match.
+    - name: Monitoring setup
+      contains: Slow query log and tracking tips so you can catch slow queries early.

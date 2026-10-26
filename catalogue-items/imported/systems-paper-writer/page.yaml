@@ -2,14 +2,10 @@ thinking: high
 thinking_why: Systems papers follow strict structures and reviewer habits.
 new_slug: systems-paper-writer
 name: Systems paper writer
-summary: Give it your systems work. Get a paper draft built to the structure
-  that systems conferences expect.
+summary: Plan and draft a systems paper for OSDI, SOSP, NSDI, ASPLOS or EuroSys, with a page budget per section and a venue checklist.
 job: research-topics
 headline: Systems paper writer
-subhead: Describe your system, what is new, your main results and the target
-  venue. It gives each section a page budget for a 10 to 12 page paper and plans
-  it paragraph by paragraph. You get the outline, a draft in that structure and
-  a venue checklist with weak spots flagged.
+subhead: Describe your system, what is new, your main results and the target venue. It gives each section a page budget for a 10 to 12 page paper and plans it paragraph by paragraph. You get the outline, a draft in that structure and a venue checklist with weak spots flagged.
 explain: |
   A draft of your systems paper laid out the way OSDI, SOSP, NSDI, ASPLOS and EuroSys reviewers expect, so the strong parts of your work show up on the first read. It saves you from a paper that buries the idea or the evidence.
 
@@ -18,9 +14,12 @@ when:
   - You built a system and must write it up for a top conference.
   - Your draft is over the page limit and you need to know what to cut.
   - Your evaluation section feels scattered and does not match your claims.
-  - You want to check the paper against what reviewers look for before
-    submitting.
+  - You want to check the paper against what reviewers look for before submitting.
   - You are a first-time author and want a clear section plan.
+not_for:
+  - "You are writing a NeurIPS, ICML or ICLR paper: use ml-paper-writing, which covers general machine learning papers."
+  - "You need to check your citations: use ml-paper-writing, which has the citation check. This skill does not bundle it."
+  - "You only need LaTeX formatting help: use the official template for your venue. This skill does not set up formatting."
 you_give:
   - A description of your system and what is new
   - Your main results
@@ -32,8 +31,34 @@ you_get:
   - A draft in that structure
   - A venue checklist with weak spots flagged
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your files and run LaTeX.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - Describe your system and say what is new about it.
+  - Add your main results and name the target venue, such as OSDI or NSDI.
+  - Paste your current draft if you have one (optional).
+  - Ask for the page budget and outline first. Check that each claim has a result, then ask for the draft.
+  - Use the venue checklist to fix the weak spots before you submit. Running LaTeX needs an AI that can run code and read files.
+output_sample:
+  input:
+    - A description of your system and what is new
+    - Your main results
+    - The target venue
+    - Your existing draft (optional)
+  prerequisites:
+    - An AI that can read your files and run LaTeX, if you want a compiled paper (optional)
+  output:
+    - name: Page budget
+      contains: How many pages each section gets in a 10 to 12 page paper.
+    - name: Abstract
+      contains: A 150 to 250 word abstract written in five sentences.
+    - name: Introduction
+      contains: "A plan for 1.5 to 2 pages: the problem, the gap, the idea and the contributions."
+    - name: Background and motivation
+      contains: A plan for 1 to 1.5 pages that shows why the problem matters.
+    - name: Design and implementation
+      contains: A paragraph plan for the design (3 to 4 pages) and implementation (0.5 to 1 page).
+    - name: Evaluation
+      contains: A plan for 3 to 4 pages where each result answers one claim.
+    - name: Related work and conclusion
+      contains: A one page related work plan and a half page conclusion.
+    - name: Venue checklist
+      contains: Checks for your target venue and reviewer concerns, with weak spots in your paper flagged.

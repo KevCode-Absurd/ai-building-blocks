@@ -1,6 +1,6 @@
 name: "Video ad script type picker"
 new_slug: video-ad-script-type-picker
-summary: "Paste your buyer and proof. Get four different video script types, each with its opening and tone."
+summary: "Pick different video ad script types from one round of buyer research, so each test ad sells a new way. Get each type's opening, tone and proof."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -19,6 +19,10 @@ when:
   - Your last batch of ads all looked like versions of one ad.
   - You have good customer research and want several ads to test against each other.
   - You're not sure which way into the problem will work, and want to test the options properly.
+not_for:
+  - "You want one hero ad and no test batch: use a single script writer, or write it yourself from your best customer quote."
+  - "You have no customer research yet: talk to a few buyers first, then come back with what they said."
+  - "You want the finished scripts written for you: this picks the types, so pair it with a script-writing skill."
 
 you_give:
   - The buyer, the reason they buy and the offer
@@ -38,6 +42,23 @@ how_to_use:
   - List what you can prove. Be honest about what you don't have; missing facts just skip types.
   - Read the skipped list. It shows which facts would open up more types.
   - Take each chosen type to a script-writing skill, such as the one that writes from customer quotes.
+output_sample:
+  input:
+    - Your buyer, why they buy and your offer
+    - How much the buyer already knows, and the ad length
+    - What you can prove, such as what buyers tried, a real customer story or a real shortcoming
+    - How many scripts you want (optional, 4 by default)
+  prerequisites:
+    - The reference file types.md, which holds the recipe for each script type
+  output:
+    - name: Batch
+      contains: One row per script with its type, group, selling beat, opening, tone and the fact that backs it.
+    - name: Spread
+      contains: The groups and selling beats used, and a check that no two scripts open on the same fact.
+    - name: Skipped types and why
+      contains: Each type left out, with the reason or the missing fact it needs.
+    - name: CHECKS MISSED
+      contains: One line for each of its own checks the batch failed, or none.
 
 how_it_works:
   - title: Shortlists types

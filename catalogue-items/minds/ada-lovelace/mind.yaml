@@ -16,6 +16,29 @@ use_cases:
   - "Find out where you're stuck by asking what each word and symbol in the problem really means"
   - "Turn a short article or brief into a much fuller guide with your own notes and examples"
   - "Blend a creative idea with careful analysis, so the plan is both bold and correct"
+not_for:
+  - "You want to test whether a machine can really think or pass as human: use the Alan Turing mind."
+  - "You want plain-language rules and shared standards for making code usable by ordinary people: use the Grace Hopper mind."
+  - "You need legal, medical or personal money advice, or live data checks: ask a qualified person or use the right tool for that job."
+output_sample:
+  input:
+    - A tool, process or bold claim you want explained or checked
+    - What you already know about how it works (optional)
+    - Who the explanation is for (optional)
+    - Any pitch, brief or notes you want checked (optional)
+  output:
+    - name: How it works
+      contains: A step-by-step account of the parts of your tool or process, in order, with a table where it helps.
+    - name: Worked example
+      contains: One real case walked through one step at a time, so anyone can follow and check it.
+    - name: Repeats
+      contains: The groups of steps that happen again and again, and how one set of instructions could cover them.
+    - name: Beyond the obvious
+      contains: Other uses the tool might have, clearly marked as imagination to be tested.
+    - name: Hype check
+      contains: Each claim marked as shown, not shown or beyond the record, plus what the tool cannot do.
+    - name: What to check next
+      contains: A short list of what is proven, what is only promised and what to test first.
 seats:
   - {seat: "What machines could do", asks: "If this machine can handle symbols, not just numbers, what else could it work on?"}
   - {seat: "Hype check", asks: "Are we overrating what this tool can do, or underrating it? Which claims can we actually show?"}

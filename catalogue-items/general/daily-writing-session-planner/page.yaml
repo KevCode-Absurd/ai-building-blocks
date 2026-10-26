@@ -1,6 +1,6 @@
 new_slug: daily-writing-session-planner
 name: "Daily writing session planner"
-summary: "Say what you write and when you can sit down. Get a lasting habit: fixed session, draft day, rewrite day, hours log."
+summary: "Build a daily writing routine you can keep. Give it what you write and your free hours. Get a fixed session, draft day, rewrite day and hours log."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It builds a schedule from simple rules and your own hours. No deep judging is needed."
@@ -14,27 +14,56 @@ explain: |
   This skill fixes those three things. It picks one place and one start time, with nothing else allowed during the session. It sets an end time, so stopping on time is the reward. It splits each piece into two passes: a loose first draft of about half a page, then a rewrite on a later day, line by line, tuned for how it sounds when read aloud. It also sets up an idea file, a small notebook and a log of hours, so you can see your progress.
 
 when:
-- "You want to write every day and keep missing days."
-- "You have a pile of ideas and no routine that turns them into pages."
-- "You write in bursts, burn out, and want a steadier pace."
+  - "You want to write every day and keep missing days."
+  - "You have a pile of ideas and no routine that turns them into pages."
+  - "You write in bursts, burn out, and want a steadier pace."
+not_for:
+  - "You need to finish a long first draft by a set date: use the Daily word quota planner."
+  - "You want to map the shape of a draft you already have: use the Story shape mapper."
+  - "You have no hours to give yet: it will ask for your days and minutes first, so work those out on your own."
 
 you_give:
-- "What you write (essays, scripts, a book, posts) and who it is for"
-- "The days you can sit down and how long each session can be"
-- "Where you usually write and what distracts you (optional)"
-- "Pieces you have already started (optional)"
+  - "What you write (essays, scripts, a book, posts) and who it is for"
+  - "The days you can sit down and how long each session can be"
+  - "Where you usually write and what distracts you (optional)"
+  - "Pieces you have already started (optional)"
 you_get:
-- "A session plan: place, start time, end time and the one rule for the hour"
-- "A two-pass routine: draft day and rewrite day"
-- "An idea file layout and a pocket notebook habit"
-- "A way to test pieces on real people and a simple hours log"
+  - "A session plan: place, start time, end time and the one rule for the hour"
+  - "A two-pass routine: draft day and rewrite day"
+  - "An idea file layout and a pocket notebook habit"
+  - "A way to test pieces on real people and a simple hours log"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "Say what you write and who it is for."
-- "List the days and hours you can really protect, even if it is only 30 minutes."
-- "Run the plan for two weeks without changing it."
-- "Bring back your hours log and the pieces you tested, and ask it to adjust the plan."
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say what you write and who it is for."
+  - "List the days and hours you can really protect, even if it is only 30 minutes."
+  - "Run the plan for two weeks without changing it."
+  - "Bring back your hours log and the pieces you tested, and ask it to adjust the plan."
+output_sample:
+  input:
+    - What you write and who it is for
+    - The days you can sit down and how long each session lasts
+    - Where you write and what gets in the way (optional)
+    - Pieces you have already started (optional)
+  output:
+    - name: SESSION
+      contains: One place, one start time, a fixed end time and the one rule for the hour.
+    - name: DRAFT DAY
+      contains: What to write, for how long, and what counts as done for a loose first draft.
+    - name: REWRITE DAY
+      contains: When to rewrite, how to go line by line, and one reason for each line kept.
+    - name: IDEA FILE AND NOTEBOOK
+      contains: How each one works and the one rule for each.
+    - name: LONG PIECES
+      contains: A small page count per night and what it adds up to in a year, if your piece is long.
+    - name: TEST AND READING
+      contains: One way to test your work on real people and up to three sources to read.
+    - name: HOURS LOG
+      contains: Columns for date, minutes sat, pages drafted and lines rewritten, plus a weekly total.
+    - name: MISSING
+      contains: Any gaps in what you gave it.
+    - name: CHECKS MISSED
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: "Fix the place and start"
@@ -95,23 +124,23 @@ tweaks:
     how: "Name real people. The test step then uses them instead of a vague audience."
 
 judge:
-- "The end time is written down, not just the start."
-- "Draft day and rewrite day are not the same day."
-- "Every day and hour in the plan is one you gave it."
-- "The rewrite step says what to do with each line and why."
-- "The log fits on a card and takes a minute to fill in."
+  - "The end time is written down, not just the start."
+  - "Draft day and rewrite day are not the same day."
+  - "Every day and hour in the plan is one you gave it."
+  - "The rewrite step says what to do with each line and why."
+  - "The log fits on a card and takes a minute to fill in."
 
 test:
-- "Follow the plan for one week. Note which day you skipped and why, then ask the skill to fix that day."
-- "Run it twice with the same inputs. The session rules should stay the same even if the wording changes."
-- "Rewrite one old piece using the rewrite day steps. Compare it with your first version."
-- "Read the rewrite aloud to one person and note where they lose the thread."
+  - "Follow the plan for one week. Note which day you skipped and why, then ask the skill to fix that day."
+  - "Run it twice with the same inputs. The session rules should stay the same even if the wording changes."
+  - "Rewrite one old piece using the rewrite day steps. Compare it with your first version."
+  - "Read the rewrite aloud to one person and note where they lose the thread."
 
 improve:
-- "Add your own start ritual (a drink, a playlist) to step 1 so the plan fits you."
-- "Add the words you overuse to the rewrite step, so they get cut every time."
-- "Save your hours log in your files and paste it in every month for a review."
-- "Pair it with \"Story shape mapper\" once a draft is long enough to map."
+  - "Add your own start ritual (a drink, a playlist) to step 1 so the plan fits you."
+  - "Add the words you overuse to the rewrite step, so they get cut every time."
+  - "Save your hours log in your files and paste it in every month for a review."
+  - "Pair it with \"Story shape mapper\" once a draft is long enough to map."
 
 works_best_with:
   tools:

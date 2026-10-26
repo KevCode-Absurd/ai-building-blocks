@@ -21,6 +21,28 @@ license_source: "https://github.com/davidondrej/skills/blob/main/LICENSE"
 - Use when creating, editing, reviewing, or debugging an agent SKILL.md file.
 - Use when you need quality guidance for triggers, examples, limitations, and safety notes.
 
+## How to run this guide
+
+Source and credit: the guide is by David Ondrej (davidondrej/skills, MIT), shared in the sickn33/agentic-awesome-skills collection (content under CC BY 4.0). Keep the credit with any copy you share.
+
+**Two modes.** Pick the one that matches the request:
+
+- **Write**: the person describes a job. You draft a skill for it.
+- **Review**: the person pastes a skill. You check it against this guide and return a better version.
+
+**What to ask for first.** The job the skill should do (write mode) or the full skill file (review mode). Optional: who will use it, and which AI tool runs it. If the job or file is missing, ask once. If it is still missing, write `MISSING: <what>`. Never invent steps, tools, files or results the person did not describe.
+
+**What to hand back.** Return these sections, in this order:
+
+1. **Trigger check**: does the description say what the skill does, when to use it, and how it differs from related skills? Quote the current description (review mode), then give a better one. Do not put the workflow steps in the description.
+2. **Structure notes**: length, order, and what to move into separate reference files. Say what you changed and why.
+3. **Safety notes**: anything in the skill that runs code, reaches the web, changes files or needs approval, and what to tell the user before they run it.
+4. **Rewritten SKILL.md**: the full file, with front matter, a defined output format, and a "If something is missing" rule.
+5. **Test prompts**: three requests that should trigger the skill and two that should not.
+
+In a chat window you cannot test whether a skill triggers on its own. Say so, and give the test prompts for the person to try in their own tool. Keep the guide's method. Do not claim outcomes, adoption numbers or percentages that the person's own material does not show.
+
+
 A consolidated reference on what agent skills are, why they exist, how they work, and how to write effective ones.
 
 ---
@@ -37,7 +59,7 @@ my-skill/
 └── assets/           # Optional: templates, fonts, static files
 ```
 
-Skills are an open standard (agentskills.io), originally created by Anthropic and adopted by OpenAI Codex, Cursor, Gemini CLI, Microsoft Agent Framework, Google ADK, and 40+ other agent products. A skill written once works across all compatible agents.
+Skills are an open standard (agentskills.io), first created by Anthropic and, according to the guide's author, used by several other agent products. Check the standard's own site for the current list of supported tools. A skill written once often works across compatible agents, but test it in each tool you use.
 
 ---
 
@@ -65,7 +87,7 @@ Mental model: skills are to LLMs what man pages, runbooks, and team handbooks ar
 
 ## 3. How they work — progressive disclosure
 
-The architectural core. Three-stage loading:
+The architectural core. Three-stage loading (token sizes below are the author's rough figures and vary by tool):
 
 **Level 1 — Discovery (~100 tokens per skill, always in context):**
 Only `name` + `description` from frontmatter are injected into the system prompt at startup. Agent knows the skill exists and when it applies. You can install dozens of skills with negligible overhead.
@@ -139,7 +161,7 @@ A mature setup uses both. Pattern A gives the agent better tools. Pattern B give
 ## 6. How to write effective skills — do this
 
 ### Description as routing contract
-The description is the only thing the agent sees before deciding to load the skill. If your skill doesn't trigger, the description is wrong 95% of the time, not the body.
+The description is the only thing the agent sees before deciding to load the skill. If your skill doesn't trigger, the description is usually the problem, not the body.
 
 Include three elements:
 1. **What** the skill does (one phrase)

@@ -1,31 +1,65 @@
 new_slug: engineering-evidence-keeper
 name: Engineering change evidence agent
-summary: Share a change and prior review state. Get fresh test and docs gaps, resolved findings and the next verification step.
+summary: Check a code change against your last review. Find test and docs gaps, see which findings are closed and get one next step to verify.
 job: test-and-fix-code
 headline: Engineering change evidence agent
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share a change and prior review state. Get fresh test and docs gaps, resolved findings and the next verification step. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: "Give it a code change and your last review state. It picks the one check that fits: test gaps, docs gaps or a bug receipt. You get a saved record and one next step."
 explain: |-
   Share a change and prior review state. Get fresh test and docs gaps, resolved findings and the next verification step.
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - You changed code and already have an earlier review to compare with.
+  - A finding was fixed and you need proof it is closed.
+  - You want to know if the docs still match the code after a change.
+  - You are picking up work again and need to know what changed since the last run.
+not_for:
+  - "You are auditing a repo for the first time: run the test gap audit or the docs sync audit on its own, since there is no earlier review to compare against."
+  - "Your work is not code, such as copy, ads or finance: use a tool that fits that job, because this agent only checks repository changes."
+  - "You want a fix written for you: ask your AI to patch the bug directly, then bring the change back here to check the proof."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - Your repository revision or commit ID
+  - The list of files the change touches
+  - Your earlier finding IDs (optional)
+  - Your last agent-state.json file (optional)
+  - Test commands and their results (optional)
 you_get:
-  - Dated decision log
-  - Updated state and result files
-  - Missing facts and next action
+  - A dated decision log of what was checked and why
+  - An updated state file you can use on the next run
+  - Test gaps, docs gaps or a bug receipt marked VERIFIED, PARTIAL or BLOCKED
+  - A list of missing facts and one next action
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Open Claude, ChatGPT or Gemini and add the full skill pack, including the skills folder. Use an AI that can read and save files.
+  - Paste your commit ID and the list of files in the change.
+  - Add your last agent-state.json and finding IDs if you have them.
+  - Ask it to follow the agent and mark any missing facts.
+  - Read the hand-back. Check that each VERIFIED mark rests on a test that really ran.
+  - Approve any outside action yourself. It only drafts messages and never sends them.
+output_sample:
+  input:
+    - Your repository revision or commit ID
+    - The list of files the change touches
+    - Your earlier finding IDs (optional)
+    - Your last agent-state.json file (optional)
+    - Test results or commands you have run (optional)
+  prerequisites:
+    - An AI that can read your files
+    - A folder where it can save the state and log files
+  output:
+    - name: agent-state.json
+      contains: The revision, scoped files, finding IDs, test results, doc paths, verified status and blockers, saved for the next run.
+    - name: decision-log.md
+      contains: A dated record of the branch chosen, the evidence checked and why.
+    - name: Dated state
+      contains: Whether the work is new, changed, unchanged, pending or blocked.
+    - name: Branch selected and reason
+      contains: Which check ran (test gaps, docs sync or bug receipt) and what made it the right one.
+    - name: Sources checked and changed findings
+      contains: The files and results it looked at, and which findings changed.
+    - name: Missing facts, pending approvals and next action
+      contains: What is still unknown, what needs your approval and the one step to take next.
 how_it_works:
   - title: Compare saved state
     text: Check which sources, dates or results changed since the last run.

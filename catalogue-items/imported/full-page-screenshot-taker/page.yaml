@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs a fixed capture routine.
 new_slug: full-page-screenshot-taker
 name: Full-page screenshot taker
-summary: Give it a page address. Get one long image of the whole page, even with
-  scroll areas and lazy images.
+summary: Take a full page screenshot of any web page as one long PNG, even with inner scroll areas and late-loading images. Give it a page address.
 job: build-websites
 headline: Full-page screenshot taker
-subhead: One long image of an entire web page, including areas that scroll
-  inside the page and images that load late. It works on pages where normal
-  screenshots cut off.
+subhead: One long image of an entire web page, including areas that scroll inside the page and images that load late. It works on pages where normal screenshots cut off.
 explain: |
   One long image of an entire web page, including areas that scroll inside the page and images that load late. It works on pages where normal screenshots cut off.
 
@@ -18,6 +15,10 @@ when:
   - A normal screenshot cuts off at the visible screen.
   - The page loads images only as you scroll.
   - You want a capture of a logged-in dashboard.
+not_for:
+  - "You only need the visible part of a screen: use your computer's built-in screenshot key."
+  - "You cannot run code or turn on Chrome remote debugging: ask a teammate to capture the page, or use Chrome's own screenshot tool."
+  - "The page shows private or sensitive data you do not want saved as an image: do not capture it. Remote debugging gives local access to your logged-in sessions."
 you_give:
   - Page address or an open Chrome tab
   - Width in pixels (optional)
@@ -29,8 +30,31 @@ you_get:
   - Late-loading images included
   - Environment check result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Chrome and turn on remote debugging. Go to chrome://inspect/#remote-debugging and allow it for this browser.
+  - Use an AI that can run code on your computer, and make sure Node.js 22 or newer is installed.
+  - Paste this skill into your AI. Ask it to run the environment check first.
+  - For a page behind a login, open it in Chrome and ask your AI to list your tabs. Pick the right one.
+  - "For a public page, give your AI the page address. Add a width: 1200 for articles, 1440 or more for dashboards."
+  - Ask your AI to check the saved image size. Open the PNG and look at the bottom of the page to confirm nothing is cut off.
+output_sample:
+  input:
+    - A page address, or the ID of a tab already open in Chrome
+    - Width in pixels (optional)
+    - Wait time for loading (optional)
+    - Pixel density, 1 or 2 (optional)
+    - Custom style rules to hide parts of the page (optional)
+  prerequisites:
+    - An AI that can run code on your computer
+    - Node.js 22 or newer
+    - Chrome with remote debugging turned on
+  output:
+    - name: Environment check
+      contains: A result showing whether Node.js and Chrome remote debugging are ready to use.
+    - name: Tab list
+      contains: The open Chrome tabs with their titles, addresses and IDs, so you can pick the one to capture.
+    - name: screenshot.png
+      contains: One long PNG of the whole page, including inner scroll areas and images that load late.
+    - name: Size check
+      contains: The width and height of the saved image, so you can confirm the capture is complete.
+    - name: Separate tile files (only if stitching fails)
+      contains: For very tall pages, the image saved in parts when the stitching tool is missing.

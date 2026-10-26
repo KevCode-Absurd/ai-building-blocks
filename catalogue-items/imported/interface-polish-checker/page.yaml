@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It checks code against a short list of rules.
 new_slug: interface-polish-checker
 name: Interface polish checker
-summary: Give it your page or component code. Get a list of spacing, type and
-  layout slips with a fix for each.
+summary: Find spacing, type and layout slips in your page or component code. Get each one quoted with a short reason and a code fix.
 job: build-websites
 headline: Interface polish checker
-subhead: A list of spacing, type and layout slips in your page or component
-  code, each with a reason and a fix. It cleans up the rough edges that make an
-  interface look unfinished.
+subhead: A list of spacing, type and layout slips in your page or component code, each with a reason and a fix. It cleans up the rough edges that make an interface look unfinished.
 explain: |
   A list of spacing, type and layout slips in your page or component code, each with a reason and a fix. It cleans up the rough edges that make an interface look unfinished.
 
@@ -19,6 +16,10 @@ when:
   - Heading sizes and spacing are inconsistent across components.
   - AI-generated UI code needs tidying.
   - You want specific line-level fixes, not general advice.
+not_for:
+  - "You want a full redesign or a new design system: work with a designer instead, this only does a quick clean-up pass."
+  - "Your code is not a web interface using Tailwind CSS: ask a developer who knows your stack, as the rules assume Tailwind."
+  - "You need a check for bugs, speed or security: use a code review by a developer, as this only covers how the interface looks and feels."
 you_give:
   - The page or component file
   - Your framework and styling setup
@@ -29,7 +30,20 @@ you_get:
   - A concrete code fix
   - Cleaner spacing and type
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code running, web access or paid tool is needed.
+  - "Paste the skill text into the chat, then write: /baseline-ui followed by your file name."
+  - Paste your page or component code below it. Add your framework and any design rules to keep.
+  - Read each quoted line, the reason and the fix. Skip any fix that clashes with your existing design.
+  - Apply the fixes you agree with, then paste the updated code and run the check again.
+output_sample:
+  input:
+    - Your page or component file
+    - Your framework and styling setup (optional)
+    - Any design rules you want kept (optional)
+  output:
+    - name: Violations
+      contains: Each rule break, with the exact line or snippet quoted from your file.
+    - name: Why it matters
+      contains: One short sentence for each violation on why it hurts the interface.
+    - name: Fix
+      contains: A code-level change you can paste in to correct that line.

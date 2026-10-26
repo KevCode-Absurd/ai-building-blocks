@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: resume-version-organizer
 name: Resume version organizer
-summary: Share your resume files and applications. Get a master-copy plan, clear file names and a version tracker.
+summary: Sort your resume files with a master resume, clear file names and a tracker of which resume version went to which job. Paste your files to start.
 job: find-a-job
 headline: Resume version organizer
 subhead: Share your resume versions, recent changes and application list. It separates the master record from copies tailored for each role. You get a folder and naming plan, a tracker showing which copy went where and a queue of updates.
+not_for:
+  - "You have one resume and no plans to tailor it: just save it with a clear file name and a date."
+  - "You want to rewrite a resume for one job posting: ask your AI to tailor it by hand, then come back to log the copy."
+  - "You want a plan to switch careers: talk to a career coach or mentor first, then use this to organize the copies."
 explain: Share your resume versions, recent changes and application list. It separates the master record from copies tailored for each role. You get a folder and naming plan, a tracker showing which copy went where and a queue of updates.
 you_give:
   - Your resume files and the roles each one targets.
@@ -22,6 +26,27 @@ how_it_works:
   - title: Step 3
     text: Track applications by version and list updates or copies to archive.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied notes and ask follow-up questions.
+  - Gather every resume file you have and note the role each one was made for.
+  - Open Claude, ChatGPT or Gemini and paste the skill. Then paste the text of your resumes.
+  - Add your application list with dates and results. Add new achievements if you have them (optional).
+  - Check the master plan first. Make sure no job or bullet is missing.
+  - Save the tracker in a spreadsheet and follow the update queue. Archive old copies, do not delete them.
+  - Review your master resume every three months.
+output_sample:
+  input:
+    - Your resume files, each with the role it targets
+    - Your list of applications with dates and results
+    - Your new achievements to add (optional)
+  output:
+    - name: Master Resume Status
+      contains: When the master was last updated, where it is saved, and how many jobs and bullet points it holds.
+    - name: Active Versions
+      contains: Each role type with its base resume and a table of tailored copies by company, date and status.
+    - name: Folder and naming plan
+      contains: A folder layout and a file name pattern using last name, role, company and date.
+    - name: Application tracker
+      contains: A table of company, role, resume version used, date applied, status and notes.
+    - name: Update Queue
+      contains: A checklist of achievements to add to the master and old copies to archive.
+    - name: Recommended Actions
+      contains: The next steps to tidy your files and keep every version tied to one master.

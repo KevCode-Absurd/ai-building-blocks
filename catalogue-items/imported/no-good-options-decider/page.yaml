@@ -2,34 +2,101 @@ thinking: high
 thinking_why: It weighs painful trade-offs across time.
 new_slug: no-good-options-decider
 name: No-good-options decider
-summary: Describe a choice where every option hurts. Get a 10/10/10 and regret
-  check, and a clear pick.
+summary: Pick the less wrong option when every choice hurts. Get a reversibility rating, a 10/10/10 and regret check, and your first steps.
 job: think-and-decide
 headline: No-good-options decider
-subhead: "A clear pick when every choice hurts. This is for the calls that keep
-  you awake: letting a co-founder go, cutting staff, killing a loved product or
-  shutting down."
+subhead: Describe a hard decision where every option hurts, such as a layoff, a co-founder exit or closing a product. Your AI rates how reversible it is, tests each option over 10 minutes, 10 months and 10 years, and names the less wrong choice.
 explain: |
-  A clear pick when every choice hurts. This is for the calls that keep you awake: letting a co-founder go, cutting staff, killing a loved product or shutting down.
+  Some decisions have no good answer, only a less wrong one. This skill helps you make a hard business decision, like letting someone go or ending a product, without waiting any longer.
 
-  The skill begins with reversibility: can you undo this, partly undo it, or not at all? The less reversible the choice, the more checking it asks for. It then runs a 10/10/10 test, asking how you will feel in ten minutes, ten months and ten years, and a regret check for each path. It points out that many hard calls are really late calls, and that waiting often makes the problem larger. You end with the less wrong option and the first steps to take.
+  It starts with one question: can you undo this? The harder it is to undo, the more checking it asks for. Then it asks how you will feel about each option in 10 minutes, 10 months and 10 years, and which one you would regret more at 80. It also asks what a new leader with no history here would do.
+
+  The skill points out a pattern. Many hard calls are late calls, and waiting makes them bigger. It ends with one named option and the first three steps, including who hears the news first.
 when:
-  - You need to decide on a layoff and keep putting it off.
+  - You know you need to lay someone off and keep putting it off.
   - A co-founder is not working out and the talk is overdue.
-  - You are thinking about ending a product customers still like.
-  - Both choices look bad and you need a way to break the tie.
+  - You are thinking about ending a product that customers still like.
+  - You are weighing a pivot or a shutdown and both paths look bad.
+not_for:
+  - Your choice is easy to undo. Use the Reversible decision sorter and just try it.
+  - You are weighing a bold bet and want to check the downside. Use the Bold bet downside checker.
+  - You are scared of a choice and want to plan around the fear. Use the Fear-setting planner.
+  - You need legal advice on a layoff or a share split. Ask a lawyer. This skill does not give it.
 you_give:
-  - The decision in plain words
-  - Your options
+  - The decision, in plain words
+  - Your options, including doing nothing
   - Who is affected
-  - How long you have been delaying (optional)
+  - How long you have been putting it off (optional)
 you_get:
-  - A reversibility rating
-  - A 10/10/10 view of each option
-  - A regret check
-  - A clear pick with first steps
+  - A reversibility rating with a reason
+  - A 10/10/10 table for each option
+  - A regret check for each option
+  - One named pick and why
+  - Your first three steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text as your first message.
+  - Write the decision in a few sentences. List every option, including doing nothing. Say who is affected.
+  - Read the reversibility rating first. If it says irreversible, slow down and read each option's 10-year row.
+  - Check the pick against the avoiding-it check. If you have been putting this off for months, the pick is probably right and the timing is the problem.
+  - Write the announcement it suggests before you act. If you cannot write it, you are not ready.
+  - For layoffs, co-founder exits or shares, ask a lawyer to check the legal points before you act.
+how_it_works:
+  - title: Rates reversibility
+    text: Calls the choice reversible, partly reversible or not reversible, and says why.
+  - title: Runs 10/10/10
+    text: Writes how you will feel about each option at 10 minutes, 10 months and 10 years.
+  - title: Checks regret
+    text: Asks which option you would regret more at 80, one line per option.
+  - title: Takes the outside view
+    text: Asks what a new leader with no history here would do, then why you have not done it.
+  - title: Maps who is affected
+    text: Lists each group, such as staff, customers and investors, and how each option hits them.
+  - title: Names the pick and the steps
+    text: Picks the less wrong option and gives three first steps, including the message to write.
+output_shape: |
+  REVERSIBILITY: <reversible / partly / irreversible> | Why: <reason>
+  10/10/10
+  Option A: 10 minutes <feeling> | 10 months <impact> | 10 years <view>
+  Option B: 10 minutes <feeling> | 10 months <impact> | 10 years <view>
+  REGRET CHECK: <one line per option>
+  OUTSIDE VIEW: <what a new leader would do>
+  WHO IS AFFECTED: <table>
+  AVOIDING IT?: <which signs show up>
+  THE LESS WRONG OPTION: <option> | Why: <three sentences>
+  FIRST THREE STEPS: <step 1, step 2, step 3>
+output_sample:
+  input:
+    - The decision in plain words
+    - Your options, including doing nothing
+    - Who is affected
+    - How long you have been putting it off (optional)
+  output:
+    - name: Reversibility rating
+      contains: Whether you can undo the choice, partly undo it or not at all, with a reason.
+    - name: 10/10/10 table
+      contains: How each option looks in 10 minutes, 10 months and 10 years.
+    - name: Regret check
+      contains: One line per option on which you would regret more, looking back.
+    - name: Outside view
+      contains: What a new leader with no history here would do.
+    - name: Who is affected
+      contains: Each group hit by the choice and how each option lands on them.
+    - name: The less wrong option
+      contains: One named choice with a three-sentence reason.
+    - name: First three steps
+      contains: What to do next, including the message to write and who hears it first.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is thinking and writing work. Claude, ChatGPT and Gemini all handle it with this skill.
+  inputs:
+    - Key numbers, such as runway, payroll or contract terms
+    - A note on what you have already tried
+    - A trusted person's view, written down
+terms:
+  - term: 10/10/10
+    meaning: A check of how a choice feels after 10 minutes, 10 months and 10 years.
+  - term: Reversibility
+    meaning: How easily you can undo a choice after you make it.
+  - term: Andy Grove test
+    meaning: Asking what a new leader with no history here would do, then why you have not done it.

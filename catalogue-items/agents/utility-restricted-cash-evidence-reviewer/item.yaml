@@ -1,33 +1,26 @@
 slug: utility-restricted-cash-evidence-reviewer
 name: Utility restricted cash evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: Split utility bill money from grant money and find the cash you can spend. Get a cash bridge, grant payments awaiting proof and any signed loan test.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
+needs_mode: manual
 uses:
   - reconcile-restricted-utility-program-cash
   - debt-service-covenant-headroom-checker
 steps:
   - uses: reconcile-restricted-utility-program-cash
-    note: Run the governing workflow when A utility collection, approved restricted payment, grant condition or bank cash source changes.
+    note: Run this when a utility collection, an approved restricted payment, a grant condition or a bank cash source changes. Split customer receipts from grant receipts, roll each cash balance on its own and find the cash that is free to spend. Hands step 2 the cash bridge and the cash free to spend.
   - uses: debt-service-covenant-headroom-checker
-    note: If the utility has an actual signed debt-service cash test due, compare only contract-qualifying cash after restriction mapping with the supplied service schedule. If no applicable loan test exists, mark this branch inapplicable rather than inventing a covenant.
+    note: Run this only when the utility has a signed loan cash test due. Compare cash that counts under the loan with the debt service schedule. With no such loan, mark this step not applicable instead of inventing a test. Uses step 1's cash and your signed loan agreement with its debt service schedule (the agreement is your own document, not step 1's output).
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It releases no grant money, pays no one and contacts no bank. The grant manager and the finance lead must check the sources.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

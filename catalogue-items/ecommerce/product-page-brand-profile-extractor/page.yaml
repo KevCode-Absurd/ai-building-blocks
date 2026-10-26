@@ -1,6 +1,6 @@
 new_slug: product-page-brand-profile-extractor
 name: Product page brand profile extractor
-summary: Read a product page and build a sourced brand profile with product facts, claim limits, colors and visual rules.
+summary: "Turn one product page into a brand profile: product facts, claims, six colors and visual style, with gaps flagged. Works from a link or pasted text."
 job: brand-file
 headline: Product page brand profile extractor
 subhead: Share product page or pasted page text, brand assets and approved facts. Get a source-linked product and brand profile with six color roles.
@@ -12,6 +12,10 @@ when:
   - You need a source-linked product and brand profile with six color roles.
   - You need product page brand profile extractor for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - "Your page has no product text, or you have no approved facts: write a plain product-copy brief by hand first."
+  - "You need a full brand voice and customer guide from your whole site: use a brand brain builder, not one product page."
+  - "You need exact brand colors from a style guide: ask your designer for the real hex codes."
 you_give:
   - Product page or pasted page text
   - Brand assets and approved facts
@@ -19,9 +23,32 @@ you_get:
   - A source-linked product and brand profile with six color roles
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste this skill.
+  - Add your product page link. If your AI can't open links, paste the page text instead.
+  - Add your brand name and category if the page doesn't make them clear.
+  - Read the profile. Check that every testimonial and claim appears on the page.
+  - Check the hex codes against your real brand colors. They come from the page and image.
+  - Use the profile as the base for ad briefs, copy and images.
+output_sample:
+  input:
+    - Your product page link, or the page text pasted in
+    - Your brand name (optional)
+    - Your product category (optional)
+  prerequisites:
+    - Your AI needs web access to read a link. If not, paste the page text.
+  output:
+    - name: Product
+      contains: Product name, price, category and link, pulled from the page.
+    - name: Description and key features
+      contains: A cleaned product description and a short list of features.
+    - name: Marketing intelligence
+      contains: Core mechanism, claims, testimonials, objections, audience, authority markers, positioning, selling points and emotional triggers.
+    - name: Color palette
+      contains: "Six colors with hex codes: primary, secondary, accent, background, text and product color."
+    - name: Visual vocabulary
+      contains: Backgrounds, lighting, props, mood, photo style, textures, color temperature and negative space.
+    - name: Recommended themes
+      contains: Three creative themes, each with a short reason based on the brand and audience.
 how_it_works:
   - title: Check the inputs
     text: Confirm product page or pasted page text, brand assets and approved facts. Mark facts that are missing.

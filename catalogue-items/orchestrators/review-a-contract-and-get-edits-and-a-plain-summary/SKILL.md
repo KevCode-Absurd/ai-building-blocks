@@ -21,9 +21,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Review the contract clause by clause.** Use the skill `contract-reviewer`. Starts from the contract and your rules. Makes the flagged clauses and suggested edits the next steps work from.
-2. **Check the IP clauses.** Use the skill `ip-clause-checker`. Give it the document from the steps before. Reads the reviewed contract and its edits, and looks hardest at the clauses that are slowest to fix later: who owns the work and what each side may use.
-3. **Write a plain summary.** Use the skill `contract-plain-summary`. Give it the document from the steps before. Turns the reviewed contract into two minutes of reading for the person who has to sign or approve it.
+1. **Review the contract clause by clause.** Use the skill `contract-reviewer`. Starts from the contract and your rules. It hands over the flagged clauses and suggested edits, and the reviewed contract.
+2. **Check the IP clauses.** Use the skill `ip-clause-checker`. Give it the document from the steps before. Reads the reviewed contract and its edits, and looks hardest at the clauses that are slowest to fix later: who owns the work and what each side may use. It hands over the IP findings.
+3. **Write a plain summary.** Use the skill `contract-plain-summary`. Give it the document from the steps before. Uses the reviewed contract from step 1 and the IP findings from step 2 to give the person who has to sign or approve it two minutes of reading.
 
 Pause here: Take the summary, the suggested edits and the flagged clauses to a qualified lawyer before you sign. This workflow gives you a first check and the right questions, not legal advice.
 

@@ -1,52 +1,89 @@
 new_slug: prepare-a-team-absence-handover
 name: Prepare a team absence handover
 headline: Prepare a team absence handover
-summary: Share the source files. Get a coverage map, handover notes and an escalation list.
+summary: Cover a team member's leave without dropped work. Get a coverage map, task-by-task handover notes and an escalation list for the cover person.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A coverage map, handover notes and an escalation list. Share confirmed absence dates, active work, deadlines, approved cover and access limits. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the confirmed absence dates, the person's active work and deadlines, who will cover and what they may open. It compares the work with the cover available, writes a handover for each task and lists every action with an owner. No passwords go in the notes.
 explain: |-
-  A coverage map, handover notes and an escalation list.
+  When someone goes on leave, work falls through the cracks that nobody saw. A deadline has no owner, or the cover person cannot open the right file. This team absence handover finds those gaps before the leave starts.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every critical commitment has an accepted cover owner or an explicit gap; credentials never appear in the notes. Missing tools or evidence stay visible in the final summary.
+  First, the Team capacity planner compares the person's commitments with the hours the cover really has. Then the Handover note writer gives each task a current state, a next action and a link. Last, the Executive action register keeper lists the coverage actions with owners, dates and whether each one was accepted.
+
+  Every critical task gets a cover owner who said yes, or it shows as a gap. A name in a plan does not count as a yes. Logins never appear. Say where access is granted instead.
 when:
-  - You need a coverage map, handover notes and an escalation list.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A team member is going on leave and you must plan who covers what.
+  - You are the cover person and want a clear list of what you now own.
+  - Two people are away at once and you need to see where work will go unowned.
+  - A manager asks "who has this while she is out?" and you have no clear answer.
+not_for:
+  - "A critical role needs a named backup before anyone is away: use Plan coverage for a critical role."
+  - "A sudden event has left many people unavailable: use Plan staff coverage during a disruption."
+  - "Someone is leaving for good and you hand over their whole role: use the Handover note writer."
+  - You want to decide leave entitlements or pay. Take that to HR. This pack plans the work only.
 you_give:
-  - Confirmed absence dates, active work, deadlines, approved cover and access limits.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The confirmed absence dates
+  - The person's active work and its deadlines (from their tracker or notes)
+  - Who is approved to cover, and how many hours each has free
+  - What the cover may and may not open or change
+  - The rest of the team's commitments in those weeks (optional)
 you_get:
-  - A coverage map, handover notes and an escalation list.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A coverage map: each task, its deadline and its cover owner, or a named gap"
+  - "A capacity check: where the cover is over or under"
+  - A handover note for each task, with current state, next action and links
+  - An action list with owners, dates and whether each was accepted
+  - "An escalation list: who to call for what while the person is away"
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste or attach the absence dates, the work list and the cover details. Say what the cover may open.
+  - Read the coverage map first. Every critical task should show a cover owner or a gap.
+  - Ask each cover person to say yes to their tasks. Change a line to accepted only when they have.
+  - Check the notes for any login or key. Share the handover with the team yourself.
 how_it_works:
   - title: Team capacity planner
-    text: Compare the commitments with the actual capacity and cover available during the absence.
+    text: Compares the person's commitments with the hours the cover has in those weeks. Shows who is over capacity and which weeks are tight. Hands step 2 the task list with owners and gaps. Check before moving on, hours come only from your figures.
   - title: Handover note writer
-    text: Write task-level handovers with source links, current state and the next action.
+    text: "Writes a handover for each task: current state, next action, links, people and what to leave alone. Time-critical items come first. Check before moving on, no password or key appears."
   - title: Executive action register keeper
-    text: Create a coverage action list with owners, dates, dependencies and unresolved acceptance.
+    text: Creates the coverage action list with owner, date, dependency and acceptance status, plus an escalation list for the absence.
+  - title: Check and hand back
+    text: Joins the files, checks every critical task has an accepted owner or a gap, and lists every check that did not run.
 output_shape: |-
-  Scope and source coverage
-  A coverage map, handover notes and an escalation list.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  COVERAGE MAP <task | deadline | cover owner | accepted: yes, no or asked | GAP if none>
+  CAPACITY <person | hours free in the window | hours asked | over or under>
+  HANDOVER NOTES <task: current state, next action, files, people, leave alone>
+  ACTIONS <action | owner | date | depends on | accepted or proposed>
+  ESCALATION <situation | who to call | how to reach them>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - The confirmed absence dates
+    - The person's active work and deadlines
+    - Who covers, and how many hours each has free
+    - What the cover may open or change
+  prerequisites:
+    - An AI that can read files or long pasted text
+    - The three component skills, which come in the pack
+  output:
+    - name: Coverage map
+      contains: Each task with its deadline and cover owner, or a named gap where no one has said yes.
+    - name: Capacity check
+      contains: Hours free against hours asked for each cover person, with weeks that are tight.
+    - name: Handover notes
+      contains: For each task, the current state, next action, links, people and what to leave alone.
+    - name: Action list
+      contains: Coverage actions with an owner, a date, a dependency and whether each was accepted.
+    - name: Escalation list
+      contains: Who to call for what while the person is away.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Every critical commitment has an accepted cover owner or an explicit gap; credentials never appear in the notes.
+  - what: One person
+    how: Plan one absence at a time. For two people away together, run it twice and compare the gaps.
+  - what: Access limits
+    how: Say what the cover may open. Notes then point to where access is granted and never hold a login.
+  - what: Deadlines
+    how: Add every date inside the leave. Tasks with no date show as undated so you can fix them.
 judge:
   - Every critical commitment has an accepted cover owner or an explicit gap; credentials never appear in the notes.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +96,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep a short list of who can cover which kind of work, so the next plan starts from names, not blanks.
+  - Record each cover person's yes in writing, so acceptance is easy to show.
+  - Run the pack again the day the person returns, to hand work back and note what slipped.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads a task export and the person's notes together. It sends nothing and changes no tracker.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - An export from your task tracker.
+    - The person's own notes on where files and tools live.
 terms:
+  - term: Cover
+    meaning: The person who takes a task while the owner is away.
+  - term: Capacity
+    meaning: The hours a person really has free for extra work.
+  - term: Escalation
+    meaning: Who to call when something goes wrong and the owner is away.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

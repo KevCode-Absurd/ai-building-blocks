@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It swaps values in a set pattern.
 new_slug: tracking-number-fixer
 name: Tracking number fixer
-summary: Give it new tracking numbers. Get them updated on shipments already
-  sent. Changes live orders; customers may get emails.
+summary: Fix wrong tracking numbers on shipped Shopify orders in one pass. Preview every change first. Customer emails stay off unless you turn them on.
 job: run-your-store
 headline: Tracking number fixer
-subhead: Give it new tracking numbers. Get them updated on shipments already
-  sent. Changes live orders; customers may get emails. Bring your store domain.
-  Use the result to plan your next step.
+subhead: Give it new tracking numbers. Get them updated on shipments already sent. Changes live orders; customers may get emails. Bring your store domain. Use the result to plan your next step.
 explain: |
   When a carrier reissues tracking IDs after a label reprint, you can fix many shipped orders in one pass instead of editing each by hand. This skill updates tracking numbers, carriers and links on fulfillments that already exist in your Shopify store.
 
   It looks up each order first and checks that the fulfillment ID you gave really belongs to it. Then it writes the new tracking details. By default it runs as a dry run, showing what would change without touching anything. Customer emails are off unless you switch them on, because each update can send a new shipping email. It needs a signed-in Shopify command line session with order and fulfillment write access.
 when:
   - A carrier gave you new tracking IDs after reprinting labels.
-  - Your warehouse partner uploaded corrected tracking numbers for a batch of
-    shipments.
+  - Your warehouse partner uploaded corrected tracking numbers for a batch of shipments.
   - Dozens of orders show the wrong tracking link and you want one clean fix.
   - You want to preview a bulk tracking change before it goes live.
+not_for:
+  - "Your order is cancelled or not shipped yet: there is no shipment to fix, so edit the order by hand in Shopify admin."
+  - "The carrier itself has the wrong data: fix it in the carrier's own portal first, then run this."
+  - "You have only a few orders to fix: edit each one by hand in your Shopify admin."
 you_give:
   - Your store domain
   - A list of orders with fulfillment IDs and new tracking numbers
@@ -30,9 +30,27 @@ you_get:
   - A per-order result with any errors
   - A short summary of what changed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Check that your AI can run code and use the Shopify command line. This skill changes live store data.
+  - Sign in to your store with the Shopify command line. Give it permission to read orders and write fulfillments.
+  - Paste the skill into your AI. Add your store domain and your list of orders with fulfillment IDs, new tracking numbers, links and carriers.
+  - Run it as a dry run first, which is the default. Read the CSV and check each row.
+  - Run it again with dry run off. Keep customer emails off unless you want every customer to get a new shipping email.
+  - Open a few orders in Shopify admin to confirm the new tracking shows.
+output_sample:
+  input:
+    - Your store domain
+    - A list of orders, each with its fulfillment ID, new tracking number, tracking link and carrier
+    - Whether customers should get an email (optional)
+    - Dry run on or off (optional, on by default)
+  prerequisites:
+    - An AI that can run code and use the Shopify command line
+    - A signed-in Shopify session with permission to read orders and write fulfillments
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step showing what ran and the result, marked as dry run when nothing was changed.
+    - name: Outcome summary
+      contains: Counts of shipments targeted, tracking numbers updated, emails sent and errors.
+    - name: tracking_update_<date>.csv
+      contains: One row per shipment with order name, fulfillment ID, old and new tracking number, carrier, email choice and status.

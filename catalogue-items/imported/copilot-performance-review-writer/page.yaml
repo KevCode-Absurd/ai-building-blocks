@@ -2,17 +2,57 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-performance-review-writer
 name: Personal performance review drafter
-summary: Share your work history and writing samples. Get a self review or
-  feedback draft grounded in evidence.
+summary: Draft a self review, peer review or feedback for your manager from your real work. Give it your period and a few notes. Get a draft built on evidence.
 job: organise-work
 headline: Personal performance review drafter
-subhead: Share your work history and writing samples. Get a self review or
-  feedback draft grounded in evidence. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Tell your AI the review type, the person and the period. Add a few notes on your work, or let it read your Microsoft 365 history. You get an honest draft that names real projects and results.
+not_for:
+  - "You need a disciplinary, legal or HR case write-up: use your HR team's own form and process."
+  - "You have no notes or records of the work and cannot recall any: write down 3 to 5 things you remember first, or ask a colleague."
+  - "You want your AI to submit the review for you: this only writes drafts, so paste the final text into your company's system yourself."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI tool and paste in the skill instructions. To save files, use an AI that can work with files.
+  - Say which review type you need, who it is about and the review period.
+  - If you have WorkIQ and a Microsoft 365 account, let your AI use it. If not, type 3 to 5 bullet points of your work.
+  - Read the draft and fill in every section marked NEEDS DETAIL with real facts.
+  - Ask for edits to fit your tone or your form's word limits.
+  - Copy the final text into your company's review system and submit it yourself.
+output_sample:
+  input:
+    - "Which type of review you need: self review, peer review or feedback for your manager"
+    - Who the review is about, with their role (for peer or manager reviews)
+    - The review period, such as the last 6 months
+    - 3 to 5 bullet points of work you remember, or access to your Microsoft 365 work history
+    - The review form questions or word limits (optional)
+  prerequisites:
+    - WorkIQ, a Microsoft 365 tool, can pull your emails and meetings. It needs a Microsoft 365 account and may need a paid licence.
+    - Without WorkIQ, you can type 3 to 5 bullet points of your work instead.
+  output:
+    - name: Evidence note
+      contains: A short summary of what work and messages the draft is based on, with sensitive details left out.
+    - name: Self-assessment draft
+      contains: A summary, 3 to 5 key achievements, teamwork, growth, areas to develop and goals for next period.
+    - name: Peer review draft
+      contains: An overall view, 2 or 3 strengths with examples, areas for growth and how it was to work together.
+    - name: Upward feedback draft
+      contains: What works well, what could be better, support for your growth and one clear ask.
+    - name: NEEDS DETAIL flags
+      contains: Marks on any section where the evidence is thin and more facts would help.
+    - name: Saved markdown file
+      contains: The final draft saved in an outputs folder by year and month, ready to copy into your review system.
+when:
+  - Your annual or mid-year self review is due and you don't know where to start.
+  - A colleague asks you for a peer review and you want specific examples.
+  - You want to give your manager honest, fair feedback.
+  - Your review form has word limits and you need to fit your best work in.
+you_give:
+  - "The review type: self review, peer review or feedback for your manager."
+  - The name and role of the person being reviewed, for peer and manager reviews.
+  - The review period, such as Jan to Dec or the last 6 months.
+  - 3 to 5 bullet points of work you remember, or access to WorkIQ.
+  - Your review form questions or word limits (optional).
+you_get:
+  - A draft review in the right layout for the type you chose.
+  - Achievements written as situation, task, action and result.
+  - Flags on the parts that need more detail from you.
+  - A markdown file saved by year and month to copy into your review system.

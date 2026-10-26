@@ -1,6 +1,6 @@
 new_slug: decide-whether-to-drop-a-rule-and-trial-it-safely
 name: Decide whether to drop a rule and trial it safely
-summary: Give it a rule nobody can explain. Get where it came from, what it quietly does and a small trial.
+summary: Check a rule nobody can explain before you drop it. Find its origin, what it quietly does, then plan a small trial with a loss cap.
 job: think-and-decide
 thinking: medium
 thinking_why: Each step is short text work. A mid-range model is enough.
@@ -14,6 +14,10 @@ when:
   - A team follows a rule and the only answer to why is "we always have".
   - You want to cut a process or approval step to save time.
   - You are about to automate something and have not checked what it also does.
+not_for:
+  - "The rule has a legal or safety basis: ask a compliance reviewer or a lawyer before you change it."
+  - "You are weighing a long list of ideas: use the Smallest test picker to choose one test."
+  - "You want the case against a plan you already chose: use the Case-against writer."
 you_give:
   - The rule, step or habit, worded the way people state it
   - Who follows it and who it affects
@@ -30,13 +34,32 @@ how_to_use:
   - Quote the rule exactly. If people word it differently, give each version.
   - Ask the longest-serving person why it exists, and paste what they say.
   - Choose a small area or team for the trial, not the whole company.
+output_sample:
+  input:
+    - The rule, step or habit, worded the way people state it
+    - Who follows it and who it affects
+    - What you hope to gain by dropping it
+    - How much you can afford to lose in a trial
+  prerequisites:
+    - Files are easiest in Claude Code or a Claude Project. In a plain chat, paste each skill one at a time.
+  output:
+    - name: "STEP 1: RULE ORIGIN"
+      contains: The rule quoted, its first reason, who gains and pays today, and a keep, change or drop call.
+    - name: "STEP 2: HIDDEN VALUE"
+      contains: The rule's job in one sentence, its unseen effects, what would break, and the value priced as a range.
+    - name: "STEP 3: WHAT IT SETS OFF"
+      contains: The first reactions to dropping it, later effects, ways people might game the change, and a revised plan.
+    - name: "STEP 4: THE TRIAL"
+      contains: A loss cap, a small owner, cheap tests, a measure, a date and a rule for dropping or going bigger.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Trace where the rule came from
     text: Quotes the rule, finds who first needed it and why, takes a newcomer's view, lists who gains and who pays now and makes a keep, change or drop call.
   - title: Find what it quietly does
     text: Names the job in one sentence, lists unseen effects and who gains from each, asks what would break and prices the hidden value before deciding to cut, keep or replace.
   - title: Trace what dropping it would cause
-    text: States the change and the result you expect, follows the reactions of customers, staff and rivals, looks for ways to game the new setup and revises the plan.
+    text: States the change and the result you expect, starts from the hidden jobs found in step 2, follows the reactions of customers, staff and rivals, looks for ways to game the new setup and revises the plan.
   - title: Plan a small trial with a drop rule
     text: Sets a loss cap you can survive, names one small owner, lists cheap tests and fixes the measure, the date and the rule for dropping or going bigger.
 output_shape: |-

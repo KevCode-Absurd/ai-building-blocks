@@ -1,6 +1,6 @@
 new_slug: give-up-list-planner
 name: "Give-up list planner"
-summary: "Paste your chosen word and what you sell. Get what to cut against that word, one target and a rule against drift."
+summary: "Plan what to give up so one word gets heard. Give it your word and what you sell. You get a cut list, one target and a rule against drift."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sorts every product and customer group against one word and sets rules, which needs judgment but follows fixed steps."
@@ -18,6 +18,10 @@ when:
   - You sell to several groups and your message tries to please all.
   - A new product, boss or target pulls you off your position.
   - Your position changes every budget cycle.
+not_for:
+  - "You have not chosen a word yet: use the Ownable word picker first."
+  - "You want to judge the name of one new product: use the Brand name stretch checker."
+  - "You want to choose a position and what you will not do before you have a word: use the Strategy trade-off planner."
 
 you_give:
   - The word you chose, such as the pick from "Ownable word picker"
@@ -36,6 +40,29 @@ how_to_use:
   - Paste your word and a plain list of what you sell and to whom, with revenue if you have it.
   - Read the cut list with whoever owns each product. Agree dates.
   - Pin the rule and the three questions where your team makes budget decisions.
+output_sample:
+  input:
+    - The word you chose to own
+    - A list of your products, offers, customer groups and channels
+    - Revenue or sales by item (optional)
+    - Your current plan (optional)
+  output:
+    - name: Everything you sell or say
+      contains: Each product, group, message and channel marked feeding, neutral or diluting the word, with a reason and revenue share.
+    - name: Cut list
+      contains: What to cut, park or move to its own name, with dates and the money or time freed.
+    - name: Target and market
+      contains: One type of person to aim at, and who else will buy without being aimed at.
+    - name: The no-change rule
+      contains: How long to hold the word, what may change, and who may reopen it.
+    - name: Pressures and answers
+      contains: Short replies for pressures like a new boss, a growth target or a hot channel.
+    - name: Three questions for any new idea
+      contains: A quick test to run on any future product or move.
+    - name: MISSING
+      contains: Figures that would change a cut, such as revenue by item.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: Lists everything

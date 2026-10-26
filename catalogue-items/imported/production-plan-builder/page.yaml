@@ -2,36 +2,58 @@ thinking: medium
 thinking_why: It balances demand against what you can make.
 new_slug: production-plan-builder
 name: Production plan builder
-summary: Give it your sales forecast and capacity. Get a week-by-week plan of
-  what to make and when.
+summary: Build a production plan from your sales forecast and capacity. Get a week-by-week schedule of what to make, how many and when.
 job: plan-supply-chain
 headline: Production plan builder
-subhead: A week-by-week plan that says what to make, how many and when. You can
-  promise delivery dates with confidence. It balances your sales forecast and
-  customer orders against what your capacity can really build.
+subhead: A week-by-week plan that says what to make, how many and when. You can promise delivery dates with confidence. It balances your sales forecast and customer orders against what your capacity can really build.
 explain: |
   A week-by-week plan that says what to make, how many and when. You can promise delivery dates with confidence. It balances your sales forecast and customer orders against what your capacity can really build.
 
   First the skill asks how you make things (to stock, to order or assembled to order), your planning horizon and your bottlenecks. Then it builds a schedule by week. It shows forecast against orders, projected stock, planned production lots and the quantity you can still promise. A rough check tests the plan against critical resources. The plan is adjusted until it fits, and it can feed your materials planning.
 when:
   - You have a sales forecast and need to turn it into a build schedule.
-  - A customer asks for a delivery date and you need to know what you can
-    promise.
+  - A customer asks for a delivery date and you need to know what you can promise.
   - Your plan keeps changing and you want a stable weekly one.
   - You need a master schedule to feed into material requirements.
+not_for:
+  - "You need to sequence jobs on the shop floor by machine or shift: use a shop floor scheduling tool or your floor supervisor."
+  - "You want a 12 to 18 month plan by product family: use a sales and operations planning process with your team."
+  - "You have no forecast or orders yet: first write a simple demand estimate in a spreadsheet."
 you_give:
-  - Sales forecast and open customer orders
-  - Current stock of finished goods
-  - Capacity of key resources and changeover times
-  - How you make products (to stock or to order)
-  - Planning horizon in weeks
+  - Your sales forecast by product (SKU) and week
+  - Your open customer orders by SKU and week
+  - Your current stock of finished goods by SKU
+  - Capacity hours for each work centre, and changeover times
+  - "How you make products: to stock, to order or assembled to order"
+  - How many weeks you want to plan
 you_get:
-  - Weekly production plan by product
-  - Projected stock levels
-  - Available-to-promise quantities
-  - Capacity check against bottlenecks
+  - A weekly production plan by product
+  - Projected stock for each week
+  - Available-to-promise quantities for new orders
+  - A capacity check that lists overloaded work centres
+  - A list of changes from last week's plan (if you gave it)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather your data in a spreadsheet with these columns: SKU, week, forecast, orders, stock and capacity hours per work centre."
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat. No code or paid tool is needed.
+  - Paste or attach your spreadsheet. Say how you make products and how many weeks to plan.
+  - Answer any questions your AI asks about bottlenecks and changeover times.
+  - Check the weekly table and the overload list against your own numbers. Treat the result as a planning draft.
+  - Ask your AI to fix any overloaded week, then use the final plan to give delivery dates.
+output_sample:
+  input:
+    - Your sales forecast by product and week
+    - Your open customer orders by week
+    - Your current stock of finished goods
+    - Capacity hours for each key work centre
+    - How you make products, and how many weeks to plan
+  output:
+    - name: MPS planning table
+      contains: Each week shows forecast, customer orders, total demand, projected stock, planned production, available-to-promise and zone.
+    - name: Capacity load summary
+      contains: Hours needed on each work centre by week against hours available, with an OK or overload status.
+    - name: MPS changes from last week
+      contains: Each change in quantity by item and week, with the zone it falls in and the reason.
+    - name: ATP summary
+      contains: The quantity you can still promise to new orders, by item and week.
+    - name: Exception reports
+      contains: Overdue orders, overloaded resources, material shortages and changes made inside the frozen zone.

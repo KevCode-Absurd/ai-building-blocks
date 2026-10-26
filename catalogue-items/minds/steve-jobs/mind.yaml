@@ -18,6 +18,30 @@ use_cases:
   - "Set a hiring bar for the first few people on a small team"
   - "Decide whether to open your own shop or channel when resellers can't tell your story"
   - "Ask your sharpest critic on the team to keep challenging you"
+not_for:
+  - "You need legal, pricing or tax advice: ask a lawyer or an accountant, since this mind covers focus, design and story only."
+  - "You want a numbers-first view of what a business is worth: use the Aswath Damodaran mind."
+  - "You want to review a business plan with a focus on hard choices and team trouble: use the Ben Horowitz mind."
+output_sample:
+  input:
+    - The product, offer or plan you want reviewed
+    - Who it is for
+    - Two or three options you are weighing
+    - Your real limits, such as time, money or team size
+    - Any numbers you have (optional)
+  output:
+    - name: Blunt verdict
+      contains: A short, plain statement of what is wrong with the product or plan, with no padding or praise.
+    - name: Cut list
+      contains: What to remove or say no to, so the few things left can be great.
+    - name: One-frame plan
+      contains: Your plan in one simple frame, such as a grid of four or a list of three.
+    - name: Simpler version
+      contains: A cleaner version of the product, page or design, with what to take away.
+    - name: Message check
+      contains: Whether a stranger could repeat your belief in one line, and a sharper line to try.
+    - name: First questions
+      contains: Hard questions to answer, such as what the one thing is that this must do brilliantly.
 seats:
   - {seat: "Product and taste", asks: "If we could only ship one thing, which would it be, and is it good enough to be proud of?"}
   - {seat: "Focus", asks: "What are we going to say no to, so the few things left can be great?"}

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies one status change to many products.
 new_slug: product-launch-retire
 name: Product launch and retire manager
-summary: Pick products and a status. Get them moved between draft, live and
-  archived. Changes what shoppers can see and buy.
+summary: Move many Shopify products between draft, live and archived in one run. Preview the matches first, then confirm the change.
 job: run-your-store
 headline: Product launch and retire manager
-subhead: Pick products and a status. Get them moved between draft, live and
-  archived. Changes what shoppers can see and buy. Bring your store domain. Use
-  the result to plan your next step.
+subhead: Pick products and a status. Get them moved between draft, live and archived. Changes what shoppers can see and buy. Bring your store domain. Use the result to plan your next step.
 explain: |
   Products moved in bulk between draft, live and archived, so a seasonal launch or sell-off takes one run instead of a long afternoon of clicking. It changes what shoppers can see and buy.
 
@@ -18,6 +15,10 @@ when:
   - Last season's products should leave the storefront.
   - You are staging new items as drafts before launch.
   - You need to archive a vendor's whole range.
+not_for:
+  - "You want to edit one product's title, price or photos: change it by hand in your Shopify admin."
+  - "You need to archive a big range and cannot undo it easily: check the preview list first, because archived products vanish from every sales channel."
+  - "You do not use Shopify: do the status change in your own store tool, or ask your developer."
 you_give:
   - Your store domain
   - A filter such as a tag, vendor or collection
@@ -29,9 +30,29 @@ you_get:
   - A count of what changed
   - A list of any failures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Tag your products first, for example with a launch tag, so your filter picks the right ones.
+  - Open an AI that can run commands, such as Claude Code, and sign in to your store with the Shopify CLI. You need permission to read and change products.
+  - Give your AI the skill, your store domain, your filter and the status you want. Dry run is on by default, so nothing changes yet.
+  - Read the preview list. Check that every product should change. Take extra care with archived, because it hides products from all sales channels.
+  - Tell your AI to run again with dry run set to false. It changes the status only after you confirm.
+  - Check the outcome summary and the CSV file. Look at any products that failed.
+output_sample:
+  input:
+    - Your store domain
+    - A filter, such as a tag, vendor, collection or current status
+    - "The status you want: live, draft or archived"
+    - Your OK after you read the preview list
+  prerequisites:
+    - An AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - A Shopify CLI session signed in to your store, with permission to read and change products
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Dry run preview
+      contains: The list of matching products, with each one's current status, before anything changes.
+    - name: Step lines
+      contains: One line per step with the key inputs and the result, such as how many products matched.
+    - name: Outcome summary
+      contains: Counts of products matched, skipped as already correct, updated and failed.
+    - name: lifecycle_update_<date>.csv
+      contains: One row per product with its ID, title, old status, new status, vendor and tags.

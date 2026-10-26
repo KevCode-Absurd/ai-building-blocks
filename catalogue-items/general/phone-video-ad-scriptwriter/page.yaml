@@ -1,6 +1,6 @@
 new_slug: phone-video-ad-scriptwriter
 name: Phone video ad scriptwriter
-summary: Paste your buyer, facts and offer. Get a 30-second phone-video script in five beats with a shot plan.
+summary: "Write a phone video ad script in 30 seconds: five beats, a shot plan and an honest result, built from your buyer's doubt and approved claims."
 job: make-video-ads
 thinking: medium
 thinking_why: It has to keep the speaker honest and fit the words to the seconds.
@@ -14,6 +14,10 @@ when:
   - You are briefing a creator or planning your own phone video.
   - You want a script that does not sound like an ad.
   - You need to check that a presenter claims nothing untrue.
+not_for:
+  - "You need a script for a business buyer or a product no one has used yet: write a plain pitch yourself or ask a person who knows the buyer."
+  - "You want the full set of checks on a selfie-style script: use the Selfie style ad script."
+  - "You want to check an ad against Meta rules before it goes live: use the Meta ad policy checker."
 you_give:
   - Who is on camera
   - Your buyer's doubt in their own words
@@ -29,6 +33,30 @@ how_to_use:
   - Under the prompt, write who is on camera, the buyer, how the product is used, and your approved claims.
   - Read the script aloud before you film it.
   - Give a real creator the blanks to fill in with their own words.
+output_sample:
+  input:
+    - "Who is on camera: a real creator, a founder or customer, or an AI presenter"
+    - Your buyer's doubt, with a few of their own words
+    - How the product is used, step by step
+    - Your approved claims, your offer and the video length (30 seconds if you skip it)
+  prerequisites:
+    - A buyer brief from the Buyer brief writer (optional but helps)
+    - Your brand brain from the Brand profile builder (optional)
+  output:
+    - name: SPINE
+      contains: One line with the situation, the snag and what the person did about it.
+    - name: ANCHOR
+      contains: The one detail to say once and show on screen, and where it comes from.
+    - name: Five-beat table
+      contains: Hook, Doubt, Show, Honest result and Hand-off, each with seconds, spoken words and on-screen notes.
+    - name: WORDS
+      contains: The word count, checked against the video length.
+    - name: DISCLOSURE
+      contains: A label to add if an AI presenter is used.
+    - name: BLANKS
+      contains: Every line only the real speaker can fill in with their own words.
+    - name: TWO OTHER OPENINGS
+      contains: Two other ways to start the video, each built on a different doubt.
 how_it_works:
   - title: Settles the speaker
     text: Real creators speak of their own use. AI presenters never claim experience.

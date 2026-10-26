@@ -6,31 +6,54 @@ promise: "Explore song ideas with vocals from a description and your own or gene
 use_cases: [voice-and-audio]
 categories: [voice]
 what_it_does:
-  - Makes a song with vocals from a text description.
-  - Writes lyrics, or uses the lyrics you paste in.
-  - Makes several versions so you can pick the best.
-  - Lets you extend a track to make it longer.
+  - "Makes a song with vocals from a text description."
+  - "Writes lyrics, or uses the lyrics you paste in."
+  - "Makes several versions so you can pick the best."
+  - "Lets you extend a track to make it longer."
 benefits:
   - Get a draft song for an idea without hiring a composer.
-  - "Explore several styles for the same song idea."
-  - Hear a jingle idea before you spend on a final version.
+  - "Hear several styles for the same song idea."
+  - Test a jingle idea before you spend on a final version.
 best_for:
   - Song ideas and drafts.
   - Creators who want to try music styles for a video.
-  - "People testing song ideas with different music tools, such as Suno."
+  - "People comparing song ideas across music tools, such as Suno."
 not_for:
-  - Commercial use until you confirm the current licence terms for your plan.
-  - Downloading songs, which sources found in 2026 say may be limited.
+  - "Songs for ads, client work or anything you sell. We could not confirm that Udio gives you commercial rights. Read its terms first."
+  - "Saving songs as files. We could not confirm what Udio allows for downloads, and third-party reviews disagree."
 pricing:
   model: freemium
-  from: Check the maker's site
-  note: There is a free plan with daily credits, and paid Standard and Pro plans. The pricing page text did not show prices, and sources disagree on downloads and commercial rights, so check before you pay.
+  from: "Not confirmed (checked 26 Oct 2026)"
+  note: "Udio has a free plan and paid plans. Udio's own pricing and terms pages showed only their titles to our check on 26 Oct 2026, so we could not read plan prices, credit amounts, download rules or commercial rights from the vendor. A third-party review dated 18 Oct 2026 lists Standard at US$8 a month and Pro at US$24 a month, both billed yearly, and says neither allows commercial use. Treat that as unconfirmed. Read Udio's terms before you pay or publish a song."
 works_with:
   - capcut
 runs_in: [web]
 blocks: []
 alternatives: [suno, elevenlabs]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Open udio.com and sign in. We could not read the sign-in steps on 26 Oct 2026, so follow what the site shows you."
+  - "Before you make anything, find Udio's terms of service and read what they say about commercial use and downloads."
+  - "Write a style description in a sentence or two, such as the genre, mood and tempo. Leave the lyrics blank to have Udio write them, or paste your own."
+  - "Generate, then listen to every version. Pick the one closest to your idea."
+  - "Extend that version if you want a longer track. Treat the result as a draft, not a finished song."
+needs:
+  - "A free Udio account. We could not confirm sign-in options."
+  - "A one or two line description of the style and mood."
+  - "Your own lyrics, if you do not want Udio to write them (optional)."
+  - "A read of Udio's current terms, if the song will be shared or sold."
+example:
+  task: "Try three styles of a 20-second jingle idea for a product video, using one style line and two lines of lyrics."
+  cost: "Udio has a free plan with credits, per earlier notes. We could not read credit amounts on Udio's own pages on 26 Oct 2026, so check the count in your account before you plan a batch."
+  reply: "Several versions of the song, each with sung vocals, for you to listen to and choose from. Our example shows the shape only, not a measured result. Quality varies, so expect to try a few styles."
+not_verified:
+  - "What Udio does on its own pages. Its site showed only a page title to our check, so the feature list comes from earlier notes."
+  - "Plan prices, daily or monthly credits, and what each plan allows."
+  - "Whether you can download songs, and in which formats."
+  - "Whether you may use songs commercially. A third-party review says the terms limit songs to personal use. We could not confirm this."
 sources:
+  - https://www.udio.com
   - https://www.udio.com/pricing
+  - https://www.udio.com/terms-of-service
   - https://dupple.com/learn/suno-vs-udio

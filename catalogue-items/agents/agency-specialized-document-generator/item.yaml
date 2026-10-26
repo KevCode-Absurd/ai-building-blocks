@@ -1,0 +1,42 @@
+slug: agency-specialized-document-generator
+name: "Document generator agent for PDF, Word, slides and Excel"
+summary: "Get a script that builds a PDF, Word, slide or Excel file from your data, with the right library for the format and a template you can reuse."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: code_change
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-document-generator.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-document-generator.md
+  licence: MIT
+  original_name: Document Generator
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: cd2ca961e0f7baa18942aaaa315e333ea4315604bbb6a182d7daa31b76dfc3a3
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Document Generator
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Document Generator
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-document-generator.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

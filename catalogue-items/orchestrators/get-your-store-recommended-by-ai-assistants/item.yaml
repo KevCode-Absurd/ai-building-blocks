@@ -20,7 +20,7 @@ steps:
   - {uses: shopper-question-and-fan-out-mapper, note: "Builds the 30 to 60 questions shoppers ask about your category."}
   - {uses: ai-recommendation-panel-runner, note: "Runs those questions on the main assistants and logs who is named and cited. Reads the question list from the step before."}
   - {uses: ai-recommendation-gap-finder, note: "Turns the panel results into the gaps that keep you out of answers, with fix, build or influence actions."}
-  - {uses: ai-ready-product-page-editor, note: "Rewrites your key product pages with facts, spec tables and FAQs for the gaps found. Reads the question plan and the gap findings."}
+  - {uses: ai-ready-product-page-editor, note: "Rewrites your key product pages with facts, spec tables and FAQs for the gaps found. Reads the question plan from step 1 and the gap findings from step 3."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/get-your-store-recommended-by-ai-assistants/skeleton.yaml

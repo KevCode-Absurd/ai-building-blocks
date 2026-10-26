@@ -1,6 +1,6 @@
 slug: base-agent-implementation-planner
 name: Scoped base agent builder
-summary: Build a scoped base agent with explicit tools, one bounded task, a response format and a smoke test.
+summary: "Plan the smallest working AI agent for your codebase: job format, base class, an echo test handler and a smoke test, with every file named."
 category: general
 type: skill
 role: make

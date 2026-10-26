@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It counts returns by outcome.
 new_slug: exchange-or-refund-split-reader
 name: Exchange or refund split reader
-summary: Get how many returns become exchanges, refunds or store credit, and how
-  much revenue you keep.
+summary: Find what share of your Shopify returns end as exchanges, store credit or refunds, and how many you keep as sales, over any period you pick.
 job: run-your-store
 headline: Exchange or refund split reader
-subhead: "A percentage split of how your returns end: exchange, store credit or
-  refund. It also shows how much revenue each route keeps, so you see what
-  returns really cost you."
+subhead: "A percentage split of how your returns end: exchange, store credit or refund. It also shows how much revenue each route keeps, so you see what returns really cost you."
 explain: |
   A percentage split of how your returns end: exchange, store credit or refund. It also shows how much revenue each route keeps, so you see what returns really cost you.
 
@@ -18,6 +15,10 @@ when:
   - You changed your returns policy and want to see if it worked.
   - You are deciding whether to push store credit over refunds.
   - You need numbers for a monthly returns report.
+not_for:
+  - "You want the reasons customers send items back: use a return reason analysis step, or read the return notes in Shopify yourself."
+  - "You have only a handful of returns a month: count them by hand in Shopify, as a percentage split will swing too much."
+  - "You can't give your AI read access to your Shopify store: it cannot pull your returns, so a person on your team should export them first."
 you_give:
   - Shopify store address
   - Shopify sign-in with read access to orders and returns
@@ -29,8 +30,31 @@ you_get:
   - Comparison with an earlier period
   - Readable or data-file output
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI that can run code and files, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Sign in to your store with the Shopify command line tool and allow read access to orders and returns.
+  - Give your AI the skill and your store address, for example mystore.myshopify.com.
+  - Say how many days to look back. Add an earlier period if you want a comparison.
+  - Check the split and the CSV file. Returns still in progress are left out of the split.
+  - The skill only reads data. It changes nothing in your store.
+output_sample:
+  input:
+    - Your Shopify store address
+    - A Shopify sign-in with read access to orders and returns
+    - How many days to look back (30 if you skip it)
+    - An earlier period to compare against (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify command line tool
+    - A Shopify sign-in with the read_orders and read_returns permissions
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store address and the start time.
+    - name: Step log
+      contains: One line per step with what was asked and how many results came back.
+    - name: Resolution breakdown
+      contains: Count and percentage of returns that ended as exchange, store credit or refund.
+    - name: Revenue recovery rate
+      contains: Exchanges plus store credit as a share of all returns in the period.
+    - name: Period comparison
+      contains: The same split for an earlier period, when you ask for one.
+    - name: exchange_refund_ratio CSV file
+      contains: One row per return with order name, how it ended, exchange item, refund amount, currency and date.

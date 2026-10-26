@@ -1,6 +1,6 @@
 new_slug: cut-a-raw-recording-and-get-chapters-and-short-clips
 name: Cut a raw recording and get chapters and short clips
-summary: Give it a raw recording. Get clean speech, a timed cut list, video chapters and five short clips.
+summary: Cut a raw recording into clean speech, a timed cut list, YouTube chapters and five short clips, all from one long file.
 job: work-with-audio
 thinking: medium
 thinking_why: Each step transforms one file with set rules. A mid-level model is enough.
@@ -14,6 +14,10 @@ when:
   - You recorded a talk, podcast, lesson or interview and it needs tightening.
   - The room was noisy and you need clear speech first.
   - You want chapters and short clips out of one long recording.
+not_for:
+  - "You only need subtitles for a clean recording: use the Subtitle and transcript maker on its own."
+  - "You want to make video ads: use the Video ad shot list maker."
+  - "You want the cuts applied for you: this gives a cut list, so a video editor or a person must make the cuts."
 you_give:
   - The raw recording, as an audio or video file
   - An ElevenLabs account and key, for cleaning and transcribing
@@ -31,6 +35,28 @@ how_to_use:
   - Point it at your recording and set up your ElevenLabs key when asked.
   - Listen to the cleaned file before the rest runs.
   - Apply the cut list in your editor and publish the chapters and clips yourself.
+output_sample:
+  input:
+    - Your raw recording, as an audio or video file
+    - Your ElevenLabs account and key
+    - The length of pause you want cut (optional)
+    - The recording type, such as talk, interview or lesson (optional)
+  prerequisites:
+    - An ElevenLabs account and key, used to clean and transcribe the sound
+    - A video or audio editor to apply the cut list
+  output:
+    - name: Clean audio
+      contains: Your speech with background noise and music removed, plus notes on any damage to the voice.
+    - name: Timed transcript
+      contains: Every word with timing and who spoke, ready to use as subtitles.
+    - name: Cut list
+      contains: Each pause, filler and retake with a timecode, and the total time saved.
+    - name: Chapters
+      contains: A chapter list starting at 00:00 that follows YouTube's rules, with short promise-style titles.
+    - name: Short clips
+      contains: Five ranked clips with timecodes, a new first line, on-screen text and a loop point.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Clean the sound
     text: Sends the recording to a voice isolation tool that removes background noise and music, then checks the voice is not damaged.

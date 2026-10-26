@@ -1,55 +1,120 @@
 new_slug: availability-payment-deduction-checker
 name: Availability payment deduction checker
 headline: Availability payment deduction checker
-summary: An availability payment bridge and deduction exceptions
+summary: Check an availability payment against its contract deduction cap. Get the applied deduction, any excess, net payment and operating cash.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An availability payment bridge and deduction exceptions. Share certified gross payment, approved performance deduction, actual contract deduction cap, other approved charges and operating cash costs for the period.
+subhead: Give it the payment, the approved deduction, the contract cap, other charges and operating costs for one period. It applies the cap and shows any deduction above it. You get the net payment and the cash left. A missing figure is marked, never set to zero.
 explain: |-
-  An availability payment bridge and deduction exceptions.
+  An availability payment is what a payer, often a public body, pays a project company for keeping an asset ready to use. The asset might be a road, a hospital or a water plant. If the asset falls short, the payer can take money off. Most contracts cap those deductions. So the amount taken off can be smaller than the amount claimed.
 
-  Infrastructure contracted revenue. Illustrative figures only in USD unless labelled otherwise. The model is the focused stated schedule, not a complete company forecast. Annual end-period cash is used unless the inputs state another convention.
+  This availability payment deduction checker applies the cap to the approved deduction. Anything above the cap is shown as an exception, so you can query it. It then takes off other approved charges and operating costs. You see the net payment and the cash left for the project in the period.
+
+  It works only from the figures and contract terms you give it. It never assumes a cap. Disputed amounts stay apart from approved ones. Practice numbers: a payment of 500, an approved deduction of 50, a cap of 100, other charges of 20 and operating costs of 100 give a net payment of 430 and operating cash of 330. If the deduction is 150, only 100 is applied and 50 is shown as an exception.
 when:
-  - You need an availability payment bridge and deduction exceptions.
-  - You work on infrastructure contracted revenue and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A payer sends a deduction notice and you need to know if it is within the contract cap.
+  - You are reviewing a monthly or yearly availability payment statement.
+  - You need the cash left for the project after deductions, charges and operating costs.
+  - A lender or reviewer asks you to trace the net payment back to the contract.
+not_for:
+  - Your contract states no deduction cap. This skill will not guess one. Read the contract first, or ask the payer.
+  - You need the order in which the money goes to lenders and others. Use the Project payment waterfall builder.
+  - You need cash available for debt service built from revenue and costs. Use the Project cash available bridge.
+  - You want a legal view on whether a deduction is valid or a penalty can be enforced. It does not give one.
 you_give:
-  - Certified gross payment, approved performance deduction, actual contract deduction cap, other approved charges and operating cash costs for the period.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The certified gross payment for the period (from the payment certificate or invoice)
+  - The approved performance deduction (from the payer's deduction notice)
+  - The deduction cap for the period (from the payment clause of the contract)
+  - Other approved charges (from the contract schedule or the payer's statement)
+  - Operating cash costs for the period (from your accounts)
+  - The period, the currency and the units, such as USD thousands
+  - Your own payment spreadsheet (optional)
 you_get:
-  - An availability payment bridge and deduction exceptions.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The deduction actually applied, after the cap
+  - Any deduction above the cap, shown as an exception
+  - The net payment after deductions and other approved charges
+  - The operating cash left after operating costs
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - "Paste the five figures and say where each one came from. Give the period, the currency and the units. Attach the payment certificate and the page of the contract that sets the cap, if you can."
+  - "Ask your question in plain words, such as: is this deduction within the cap, and how much cash is left?"
+  - Check one line yourself. The applied deduction is the smaller of the approved deduction and the cap. Net payment is the gross payment less the applied deduction and other charges.
+  - Read the exceptions, MISSING and CHECKS MISSED before you use or query any figure.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps
-    text: Build a dated source ledger of balances, operating units, period boundaries, contractual terms and unresolved evidence gaps.
-  - title: 2. Read the certified payment and actual contract deduction cap; preserve disputes separately from approved deductions
-    text: Read the certified payment and actual contract deduction cap; preserve disputes separately from approved deductions.
-  - title: 3. Apply the supplied cap to the approved deduction amount and show any deduction claimed above that cap as an exception
-    text: Apply the supplied cap to the approved deduction amount and show any deduction claimed above that cap as an exception.
-  - title: 4. Subtract other approved charges and operating payments to form the cash amount handed into the project cash bridge; retain invoice-versus-cash timing differences
-    text: Subtract other approved charges and operating payments to form the cash amount handed into the project cash bridge; retain invoice-versus-cash timing differences.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, period and currency. Keeps disputed amounts apart from approved ones.
+  - title: Reads the cap
+    text: Takes the cap from the contract figure you gave. It never assumes one.
+  - title: Applies the cap
+    text: The applied deduction is the smaller of the approved deduction and the cap. Anything above the cap is shown as an exception.
+  - title: Works out the net payment
+    text: Takes the applied deduction and other approved charges off the gross payment. Keeps invoice and cash timing differences apart.
+  - title: Finds the operating cash
+    text: Takes operating costs off the net payment. This is the cash passed on to the project cash bridge.
+  - title: Marks the gaps
+    text: Writes MISSING for any figure it was not given and lists checks it could not run. It never fills a gap with zero.
 output_shape: |-
-  An availability payment bridge and deduction exceptions.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Applied deduction <amount> | Excess above cap <amount> | Net payment <amount> | Operating cash <amount>
+
+  SCOPE AND SOURCES
+  <period, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <gross payment, approved deduction, cap, other charges, operating costs>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <each sum with its figures; gross less applied deduction less other charges ties to net payment>
+
+  EXCEPTIONS
+  <each deduction above the cap, with the amount, or none>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The certified gross payment for the period
+    - The approved deduction and the contract's deduction cap
+    - Other approved charges and operating costs
+    - The period, currency and units
+    - Your own payment spreadsheet (optional)
+  prerequisites:
+    - The payment certificate and the contract page that sets the deduction cap
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Applied deduction, any excess above the cap, net payment and operating cash.
+    - name: SCOPE AND SOURCES
+      contains: The period, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each figure you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Each sum shown with its figures, and the check that net payment ties back to gross.
+    - name: EXCEPTIONS
+      contains: Each deduction above the cap with its amount, or the word none.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every figure it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
   - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Each material input is sourced with currency, scale, sign and period.
+    how: Use the same calendar, currency and units for every figure. Say them once at the start.
+  - what: Disputed deductions
+    how: Tell it which deductions are disputed. They stay apart from approved ones and are not applied.
+  - what: Cap by period
+    how: If the cap differs by month or year, give the cap for the period you are checking.
 judge:
   - Each material input is sourced with currency, scale, sign and period.
   - Actual records and scenarios remain separate; missing evidence is not zero.
@@ -64,15 +129,27 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The payment certificate for the period
+    - The page of the contract that sets the deduction cap
+    - The payer's deduction notice
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Availability payment
+    meaning: A payment for keeping an asset ready to use, such as a road or a hospital, whether or not it is busy.
+  - term: Deduction cap
+    meaning: The most the contract lets the payer take off the payment in a period.
+  - term: Exception
+    meaning: A deduction claimed above the cap. It is shown on its own so you can query it.
+  - term: Net payment
+    meaning: The gross payment less the applied deduction and other approved charges.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+  - term: Illustrative figures
+    meaning: Practice numbers that show how the sums work. They are not a real contract.

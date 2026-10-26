@@ -2,35 +2,81 @@ thinking: low
 thinking_why: It follows fixed versioning rules.
 new_slug: version-and-changelog-automator
 name: Version and changelog automator
-summary: Point it at your repo. Get release numbers and a changelog worked out
-  from your commits.
+summary: Set up automatic version numbers and a CHANGELOG.md from your commit messages, with a release config for your repo. Works for Node projects on GitHub.
 job: ship-and-host
 headline: Version and changelog automator
-subhead: Point it at your repo. Get release numbers and a changelog worked out
-  from your commits. Bring a git repository with commit history. Use the result
-  to plan your next step.
+subhead: Tell your AI your repo, your release branch and how your team writes commit messages. It sets up semantic-release or standard-version, so each release gets a version number and a changelog without manual edits.
 explain: |
-  Your next version number and a readable changelog, worked out from the commit messages you already wrote. 0.
+  This version and changelog automator sets up releases that number themselves. Your commit messages decide the next version, and a CHANGELOG.md is written from them. You stop editing version numbers by hand and stop writing release notes at the last minute.
 
-  The skill follows semantic versioning: a major number for breaking changes, minor for new features, patch for fixes, with optional alpha or beta tags. It reads commits written in the conventional style, where feat means a minor bump, fix means a patch, and an exclamation mark or a breaking change note means a major one. It sets up the semantic-release tool and its changelog and git plugins, with a config file and a branch rule. It needs a git repo with history and Node.
+  It uses semantic versioning. A fix bumps the last number, a new feature bumps the middle number and a breaking change bumps the first. Commits follow the conventional style, such as feat: add search or fix: stop crash on empty cart.
+
+  You choose how much runs on its own. Semantic-release runs from GitHub Actions on every push to your release branch. Standard-version is a command you run yourself, then review before you push. There are also notes for git-cliff and for repos with many packages.
 when:
-  - You release often and keep forgetting to update the version.
-  - Your changelog is empty or written by hand at the last minute.
-  - You want releases to run from the main branch with no manual steps.
-  - Your team needs one clear rule for what counts as a breaking change.
+  - You release often and forget to bump the version.
+  - Your changelog is empty, or you write it by hand the night before a release.
+  - You want a push to main to create the release, with no manual steps.
+  - Your team keeps arguing about what counts as a breaking change.
+not_for:
+  - You only need release notes for one release today. Use the Release notes writer or the Changelog writer.
+  - You want to bump the version, write the changelog and tag one release right now. Use the Release preparer.
+  - Your commit messages are free text with no style. Start with the Commit message writer, then come back.
 you_give:
-  - A git repository with commit history
-  - Your release branch name
-  - Whether your commits use the conventional format
-  - Node installed
+  - Your git repo, or its package.json and recent commit messages
+  - Your release branch name, such as main
+  - Whether your commits use the conventional style (feat:, fix:)
+  - Whether you publish to npm (optional)
 you_get:
-  - The next version number
-  - A generated changelog
-  - A release tool configuration
-  - A commit message guide for the team
+  - The rule for your next version number, with the bump it gives
+  - A release config file for semantic-release or standard-version
+  - A GitHub Actions release workflow, if you pick semantic-release
+  - A CHANGELOG.md entry format
+  - A one-page commit message guide for your team
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. If your AI can read your repo, share the folder too.
+  - Say your release branch, your tool choice if you have one, and whether you publish to npm. Paste your last 10 to 20 commit messages.
+  - Your AI first tells you the version your recent commits would produce. Check that it matches what you expected.
+  - Read the config before you save it. The semantic-release example is set to not publish to npm. Turn that on only if you want packages published.
+  - Run the dry run first, such as npx standard-version --dry-run. Nothing is released until you run it for real or push to your release branch.
+  - Node must be installed. The release workflow needs a GitHub token, and an NPM_TOKEN secret if you publish.
+output_sample:
+  input:
+    - Your repo or package.json
+    - Your release branch name
+    - Your last 10 to 20 commit messages
+    - Whether you publish to npm (optional)
+  prerequisites:
+    - Git repository with commit history
+    - Node.js installed
+    - A GitHub token, and an NPM_TOKEN secret only if you publish to npm (optional)
+  output:
+    - name: Next version
+      contains: The version your recent commits produce, and which commits caused the bump.
+    - name: Release config
+      contains: A .releaserc.json or .versionrc.json file with your branch rule and changelog sections.
+    - name: Release workflow
+      contains: A GitHub Actions file that runs the release when you push to your release branch.
+    - name: CHANGELOG.md format
+      contains: How changes are grouped, such as Features and Bug Fixes, with commit links.
+    - name: Commit guide
+      contains: A short list of commit types and which ones bump the version, for your team.
+works_best_with:
+  tools:
+    - name: Claude Code or Claude with file access
+      why: It can read your commit history and package.json and write the config files in place.
+    - name: Claude, ChatGPT or Gemini in a plain chat
+      why: Works if you paste your commit messages and copy the files across yourself.
+  inputs:
+    - Output of git log --oneline for your last 20 commits.
+    - Your package.json, so the tool can see your current version.
+terms:
+  - term: Semantic versioning
+    meaning: A number in three parts, such as 2.1.3. Breaking changes raise the first, features the second, fixes the third.
+  - term: Conventional commit
+    meaning: A commit message that starts with a type, such as feat or fix, so a tool can read it.
+  - term: Changelog
+    meaning: A file that lists what changed in each release.
+  - term: semantic-release
+    meaning: A tool that releases for you whenever you push to your release branch.
+  - term: standard-version
+    meaning: A tool you run yourself to bump the version and write the changelog.

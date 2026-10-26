@@ -23,6 +23,49 @@ Use this skill when you need to design pricing models that developers understand
 
 Design pricing models that developers understand, accept, and can predict—without surprise bills or confusing metrics.
 
+If your AI cannot open the detailed guide file (for example you pasted this file into a chat), work from this file and the steps below. They are enough.
+
+## When Not to Use
+
+- Seat-based or per-user plans only: use the SaaS pricing designer.
+- Enterprise contracts with custom terms: this skill covers listed, public prices.
+- Choosing between whole pricing models (flat, tiered, usage): start with the Pricing model designer, then come back here.
+- You need legal, tax or accounting advice on billing.
+
+## Inputs to Gather First
+
+Ask once for any that are missing. If one is still missing, write MISSING in the answer and say what it changes. Never invent a figure.
+
+1. What the product does and what one unit costs you to run (cost per call, per GB, per minute).
+2. Who the customers are and how they use it (a few typical and heavy users, if known).
+3. Your current plans and prices, if you have any (optional).
+4. Competitor prices the person has checked on the competitor's own site (optional). Do not quote a competitor's price from memory.
+5. Real usage data, if any (optional). Without it, every example bill is illustrative.
+
+## Steps
+
+1. **Pick the metric.** Use the metric selection framework below. Choose one metric a customer can count and predict. Reject made-up units, compound metrics and hidden multipliers. Name one backup metric and say why it ranked second.
+2. **Set the free allowance and tiers.** Propose a free allowance, then volume steps. Make sure the price per unit never rises as a customer grows. Every price you suggest is a draft: state the cost per unit it must cover, and mark any price you cannot ground in the person's own costs as a placeholder.
+3. **Add bill protection.** Choose a spend cap type (hard, soft or burst allowance), the alert levels (for example 75, 90 and 100 percent) and what the customer sees on a usage dashboard.
+4. **Write the pricing page.** Price per unit, a calculator outline, a tier table and an FAQ answering "what if I go over", "how do I watch my usage" and "are there hidden fees".
+5. **Work three example months.** A small, a typical and a heavy customer. Show the arithmetic line by line. Label them illustrative unless the person gave real usage.
+6. **Compare with competitors.** Use only the prices the person supplied. If none, say the comparison is MISSING and list what to look up.
+7. **Check before you hand over.** Can a customer predict their bill from the page? Does the cost grow in line with the value they get? Does success get punished? Fix any no.
+
+## Output
+
+Return these sections in order. Keep it under about 700 words plus the tables.
+
+1. **Recommended metric**: the metric, why it fits, the backup, and the metrics rejected.
+2. **Allowance and tiers**: a table of `<tier>`, `<units included>`, `<price per unit>`, `<monthly price if any>`.
+3. **Bill protection**: cap type, alert levels, dashboard contents.
+4. **Pricing page copy**: headline, price per unit, calculator fields, FAQ answers.
+5. **Three example months**: usage, line items and total for a small, a typical and a heavy customer.
+6. **Competitor comparison**: one row per competitor the person supplied, or MISSING.
+7. **Gaps and next steps**: every MISSING input, every placeholder, and what to test with real usage data before launch.
+
+Designing a price here does not change anyone's live billing. The person decides and makes any change in their own billing tool.
+
 ## Usage Metrics Developers Accept
 
 ### Good Metrics: Direct Value Correlation

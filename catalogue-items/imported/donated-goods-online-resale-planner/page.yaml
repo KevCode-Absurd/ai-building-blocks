@@ -2,16 +2,32 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: donated-goods-online-resale-planner
 name: Donated goods online resale planner
-summary: Share item details and condition. Get listing fields, photo needs, pricing research, and shipping steps.
+summary: Plan your donated goods online resale. Give it an item and its condition. You get a listing template, photo checklist, shipping standard and review plan.
 job: run-your-store
 headline: Donated goods online resale planner
-subhead: Share the donated item, condition, measurements, and the marketplace you use. It checks whether online sale is suitable and uses sold-item evidence for pricing. You get listing fields, a photo checklist, shipping steps, and a review plan for returns and costs.
+subhead: Share the donated item, its condition, its measurements and the marketplace you use. Your AI checks whether it is worth selling online and how to price it from sold items. You get listing fields, a photo checklist, shipping steps and a monthly review plan.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - Staff find a valuable donated item and ask if it should be listed online.
+  - You are setting up a ShopGoodwill or eBay-style selling routine.
+  - Buyers complain about shipping or item condition on online orders.
+  - You want a clear rule for which donations go online and which go on the floor.
+not_for:
+  - "You only need shelf prices for the shop floor: use a pricing and merchandising guide or your store lead, not this planner."
+  - "You need a tax value or appraisal for the donor: ask an appraiser or your tax adviser. Do this alongside the listing, not instead of it."
+  - "You want a one-off sale to a local buyer: a simple note on your own page or a call to the buyer is enough."
 you_give:
-  - Item details, condition and flaws, measurements, photos, target marketplace, sold-price evidence, and shipping limits.
+  - The item name, brand and type
+  - Its condition, flaws and measurements
+  - Photos of the item (optional)
+  - The marketplace you plan to use
+  - Sold prices for similar items (optional)
+  - Your shipping limits and packing supplies (optional)
 you_get:
-  - Online selection rules, a truthful listing template, photo needs, packing standards, and review measures.
+  - Rules for which items to send online
+  - A listing template with condition fields
+  - A photo checklist
+  - A shipping and packing standard
+  - A monthly review plan for sale price, shipping cost and returns
 how_it_works:
   - title: Research suitable items
     text: Check what the item is. Look at prices from past sales before choosing online sale or the shop floor.
@@ -26,5 +42,30 @@ works_best_with:
   inputs:
     - Marketplace listings and photos; mistakes are relisted.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or files are needed.
+  - Paste in the item details, flaws, measurements and your marketplace.
+  - Add sold prices for similar items. If your AI has web access, ask it to find them and show its sources.
+  - Make sure you have a seller account on the marketplace. Check its fees and shipping charges before you list.
+  - Read the listing fields and check every flaw is stated honestly. Then take the photos on the checklist.
+  - Use the monthly review plan to adjust which items you send online.
+output_sample:
+  input:
+    - The donated item and what it is (brand, type, any marks)
+    - Its condition, flaws and measurements
+    - The marketplace you plan to use, such as ShopGoodwill or eBay
+    - Sold prices for similar items (optional)
+    - Your shipping limits and packing supplies (optional)
+  prerequisites:
+    - A seller account on the marketplace you plan to use
+    - A chat AI. It cannot look up sold prices unless it has web access, so paste them in if it does not.
+  output:
+    - name: Online-eligibility criteria
+      contains: A price ceiling and list of item types that should get a second look for online sale.
+    - name: Listing template
+      contains: Fields for title, condition grade, flaws, measurements and format, with full condition disclosure.
+    - name: Photography setup guide
+      contains: The angles, background and close-ups of marks and damage each item needs.
+    - name: Shipping and packing standard
+      contains: Packing rules by item type, and how shipping cost is built into the price.
+    - name: Monthly online-channel report
+      contains: Average sale price against floor estimate, time to sell, shipping cost share, and dispute and return rate.

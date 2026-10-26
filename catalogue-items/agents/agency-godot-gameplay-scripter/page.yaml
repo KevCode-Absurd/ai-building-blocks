@@ -1,0 +1,149 @@
+name: Godot Gameplay Scripter agent
+summary: Plan a Godot 4 gameplay feature with a clean scene layout, typed signals and GDScript or C# code, plus a checklist to test it in the editor.
+headline: Godot Gameplay Scripter agent
+subhead: Describe the gameplay feature and share your scene tree or scripts. It plans the nodes, signals and typed code, and finds global state that should not be global. You get a plan and draft code to test in Godot.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Godot projects go wrong in a familiar way. One big player script grows until
+  nobody dares touch it. Scenes reach into each other with fixed paths. Global
+  Autoload scripts fill up with game logic. Signals pass untyped values and
+  break at run time. A good Godot 4 gameplay plan prevents that before you
+  write the feature.
+
+
+  This agent builds the plan around small parts. Each ability, such as health
+  or movement, becomes a component node that works alone. Parts talk upward
+  with typed signals. Only true global state, such as settings or an event bus,
+  goes into an Autoload. It also decides where GDScript is enough and where C#
+  is worth using.
+
+
+  It drafts code but cannot open Godot or run your game. You run each scene on
+  its own and check the result. It is a role profile from Agency Agents, shared
+  under MIT. Godot 4 changes between versions, so confirm any API against your
+  version's docs.
+when:
+  - You are adding a gameplay feature, such as health, an inventory or an enemy, and want the node and signal plan first.
+  - Your player script has grown past what you can follow and you want it split into parts.
+  - Signals break at run time or scenes only work when placed under a certain parent.
+  - You want to move from untyped GDScript to typed code without breaking the game.
+not_for:
+  - You need players to share a game over a network. Use the Godot Multiplayer Engineer agent.
+  - You want visual effects, such as outlines, dissolve or water. Use the Godot Shader Developer agent.
+  - You want ideas for the loop, goals or balance of the game. Use the Game Designer agent.
+  - Your project is in Unity. Use the Unity Architect agent.
+you_give:
+  - The gameplay feature you want, and how it should behave
+  - Your Godot version and language, GDScript, C# or both
+  - The scene tree and the scripts it touches, pasted as text (optional)
+  - Your Autoload list and what each one does (optional)
+  - Anything the feature must not break
+you_get:
+  - A node and scene plan with each part as its own scene
+  - A signal list with names, typed values, who sends and who listens
+  - A review of your Autoloads and what to move out of them
+  - A typing plan for GDScript, and the GDScript and C# split if both are used
+  - Draft code for the parts you ask for, marked as not run
+  - A test checklist to run in the Godot editor
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Paste your feature description, your Godot version and the scene tree. Paste the scripts it touches if you have them.
+  - Type "Plan this feature as components with typed signals, then draft the code." Your AI asks once for anything missing.
+  - Read the signal list first. Each signal is a promise between parts, so fix names or types before any code.
+  - Copy the draft code into a test scene. Run that scene alone in Godot, then in the full game.
+  - Fix anything the editor warns about before you add the next feature. Your AI cannot run Godot for you.
+how_it_works:
+  - title: Fix the scope
+    text: It states the feature, your Godot version and language, and what must not break. Missing facts are asked for once, then marked.
+  - title: Plan scenes and components
+    text: It splits behaviour into small component scenes. Each scene must run on its own with no parent assumed.
+  - title: Plan the signals
+    text: It lists every signal with a typed value, an owner and its listeners. GDScript uses snake_case names. C# follows the Godot C# pattern.
+  - title: Audit Autoloads and typing
+    text: It keeps Autoloads for true global state such as settings and an event bus. It plans typed variables, typed arrays and typed node references.
+  - title: Draft code and tests
+    text: It drafts the code you asked for and lists scene-by-scene tests, including running each scene alone.
+output_shape: |-
+  FEATURE AND ASSUMPTIONS
+    <feature> | <Godot version and language> | <must not break> | <assumptions>
+
+  SCENES AND COMPONENTS
+    <scene> | <what it does> | <children and exported settings> | <runs alone: yes or no>
+
+  SIGNALS
+    <signal name> | <typed values> | <sent by> | <heard by> | <when it fires>
+
+  AUTOLOAD REVIEW
+    <autoload> | <keep, change or remove> | <why>
+
+  TYPING PLAN
+    <area> | <change> | <risk>
+
+  DRAFT CODE (NOT RUN)
+    <file name> | <what it does>
+
+  TEST CHECKLIST
+    <test> | <how to run it> | <what a pass looks like>
+
+  OPEN QUESTIONS AND NEXT STEP
+    <question> | <who can answer it> | <next action>
+output_sample:
+  input:
+    - The gameplay feature you want and how it should behave
+    - Your Godot version and whether you use GDScript, C# or both
+    - Your scene tree and the scripts it touches (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The Godot editor, to run the draft code and the tests
+  output:
+    - name: Scenes and components
+      contains: Each part as its own scene, with its settings and a note on whether it runs alone.
+    - name: Signals
+      contains: Every signal with typed values, the sender and the listeners.
+    - name: Autoload review
+      contains: Which Autoloads to keep, change or remove, and why.
+    - name: Typing plan
+      contains: Where to add types in GDScript and where C# is worth using.
+    - name: Draft code
+      contains: Code for the parts you asked for, marked as not run.
+    - name: Test checklist
+      contains: Tests to run in the editor, including each scene on its own.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your scripts and scene files together and spot a node path or signal that will break.
+  inputs:
+    - A screenshot or text copy of your scene tree.
+    - The errors or warnings the editor shows today.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name one feature at a time. A plan for one feature is easier to test than a plan for a whole game.
+  - what: Language
+    how: Say GDScript only, or name the part where you want C#, so the plan does not mix them without a reason.
+improve:
+  - Keep a note of every editor warning and bug you hit, and paste it in on the next run so the plan avoids it.
+terms:
+  - term: Signal
+    meaning: A message one node sends when something happens, such as health changing. Other nodes listen for it.
+  - term: Autoload
+    meaning: A script or scene Godot loads once and keeps in every scene. Use it only for true global state.
+  - term: Component
+    meaning: A small node scene that does one job, such as health, and can be added to many things.
+  - term: Static typing
+    meaning: Stating the type of each variable, so the editor catches mistakes before the game runs.
+  - term: Event bus
+    meaning: One Autoload that holds signals for events that cross scenes, such as the player dying.
+  - term: Resource
+    meaning: A Godot data file for settings or stats that you can edit in the inspector.

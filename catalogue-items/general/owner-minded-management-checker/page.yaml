@@ -1,6 +1,6 @@
 new_slug: owner-minded-management-checker
 name: "Owner-minded management checker"
-summary: "Describe the people running a business. Get how able, honest and owner-minded they look, from what they did with cash and pay."
+summary: "Check whether the managers of a business can be trusted with owners' money. Rates ability, honesty and owner-mindedness from cash use and pay."
 job: money-and-investing
 thinking: medium
 thinking_why: "It reads a record of choices and rates each quality on evidence. The ratings need care, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - You are about to back a business and want to know if the people running it will treat your money well.
   - A business looks strong but the managers keep doing large deals.
   - You hire or promote a leader who will run money that is not their own.
+not_for:
+  - "You want to know if the business itself is strong: first run the Business power tester, then bring its report here."
+  - "You have no records on how managers used cash or what they were paid: gather the letters to owners and the pay table first, or ask a person who knows the firm."
+  - "You want a buy or sell view on a named security: ask a licensed financial adviser, as this gives no such advice."
 
 you_give:
   - Findings on the business, such as a report on its edge
@@ -35,6 +39,31 @@ how_to_use:
   - Add the last few letters or reports they wrote to owners.
   - Read the three ratings and check each evidence line yourself.
   - Take the call back to your main decision, with the business findings first.
+output_sample:
+  input:
+    - Findings on the business, such as a report on its edge
+    - What managers did with spare cash over several years (optional)
+    - Pay tables and letters to owners (optional)
+    - The stake or decision you are weighing (optional)
+  prerequisites:
+    - A report on the business, for example from the Business power tester
+  output:
+    - name: Weight
+      contains: How much management matters here, with the business placed first.
+    - name: Cash log
+      contains: Each use of spare cash with year and amount, marked good, poor or unknown.
+    - name: Pay against results
+      contains: A comparison of manager pay with owner results and how pay ties to owner return.
+    - name: Growth for its own sake
+      contains: Deals that raised the manager's standing but not the owners' return, or none.
+    - name: Mistake talk
+      contains: A count of failures named in plain words and what changed after.
+    - name: Ratings
+      contains: Able, honest and owner-minded, each rated with one evidence line.
+    - name: The call
+      contains: A view on management only, and the one fact that would change it.
+    - name: Missing and checks missed
+      contains: What would firm up the ratings, and any checks the skill failed.
 
 how_it_works:
   - title: Puts the business first

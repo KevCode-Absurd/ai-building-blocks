@@ -1,6 +1,6 @@
 new_slug: store-sales-drop-splitter
 name: "Store sales drop splitter"
-summary: "Tell it sales fell. Get the drop split into sessions, conversion and AOV, the likely cause and a score out of 100."
+summary: "Find why your store sales dropped. Get the drop split into sessions, conversion and order value, the likely cause and a score out of 100."
 job: track-numbers
 thinking: high
 thinking_why: "It has to trace a cause through several levels and decide what is noise, so a stronger model gives a sounder chain. Redo the percentage changes yourself once."
@@ -17,6 +17,10 @@ when:
   - Your daily or weekly sales dropped and you do not know why.
   - Ad partners say the ads are fine but revenue is down.
   - You are about to change ads, pages or prices and want to know which lever actually moved first.
+not_for:
+  - "You only want to know about a one-day dip: wait for a longer window, because one day against one day is mostly noise."
+  - "You only have an ad question, such as why Google or Meta sales fell: use the ad sales drop analyst or the sales drop diagnosis skill."
+  - "You have no ad numbers or returns for both periods: pull the Shopify and ad reports first, or the result will show many gaps."
 
 you_give:
   - Net sales plus shipping for both periods
@@ -36,6 +40,30 @@ how_to_use:
   - "Add what changed: ads, page edits, prices, stock-outs, promotions."
   - Read which lever moved, then do the one check it names before changing anything.
   - Run it again after a week to see whether the lever recovered.
+output_sample:
+  input:
+    - Net sales plus shipping for two periods
+    - Sessions, conversion rate and average order value for both periods
+    - Ad spend, CPM and CPC for both periods
+    - Returns processed in each period
+    - Change history, spend by channel and last year's numbers (optional)
+  output:
+    - name: Returns
+      contains: Refunds processed in each period and how they change the comparison.
+    - name: Three levers
+      contains: Sessions, conversion rate, average order value and sales for both periods, with the percent change in each.
+    - name: Which lever
+      contains: The lever that drove the drop and about how much of it.
+    - name: Cause chain
+      contains: One sentence that names the metric, the sub-metric and the trigger, or says the trigger is unknown.
+    - name: Next check
+      contains: One check to run, and where to look for it.
+    - name: Noise call
+      contains: Whether to ignore or investigate the move, with the reason.
+    - name: Decision
+      contains: Act now and on what, or wait and until when.
+    - name: Score
+      contains: A score out of 100 for how well data backs the cause, with the sum, checks not run and anything missing.
 
 how_it_works:
   - title: Separates returns

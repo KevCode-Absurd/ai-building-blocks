@@ -1,6 +1,6 @@
 name: "Overhead portrait image maker"
 new_slug: overhead-portrait-image-maker
-summary: "Paste a brief and attach photos. Get one overhead portrait image prompt with the camera and light set."
+summary: "Make an overhead portrait image prompt with the camera distance and light set, so the face looks big but human. Works for beauty and fashion ads."
 job: make-image-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You want a bold, close portrait for a beauty, fashion or creator-style ad or social post.
   - Your image tool keeps giving you a plain headshot or a fisheye bubble when you ask for this look.
   - You want to show a small product beside the face, such as a lipstick or a pouch.
+not_for:
+  - "You want a plain product shot with no person: use a simple product photo brief, or shoot it on a table with soft window light."
+  - "You want a normal eye-level headshot: ask your image tool for a standard portrait, or book a photographer."
+  - "You need a portrait that shows a skin result or a before and after: this skill will not make one, so use real, approved customer photos."
 
 you_give:
   - A short brief (who, setting, mood, frame shape, whether words or a product appear)
@@ -36,6 +40,27 @@ how_to_use:
   - Attach the photos you have and say what each one is (the person, the product, the camera angle).
   - Say gentle, strong or extreme if you know; strong is the default.
   - Paste the prompt into your image tool, then attach the result to the same chat to check the face, eyes, light and label.
+output_sample:
+  input:
+    - "Your short brief: who, setting, mood, frame shape, and whether words or a product appear"
+    - A photo of the approved person (optional)
+    - A photo of your product (optional)
+    - A photo of the camera angle to copy (optional)
+    - The exact words for the image (optional)
+  prerequisites:
+    - An AI that can read attached photos, if you add any
+    - An AI that can make images, only if you want the picture and not just the prompt
+  output:
+    - name: PROMPT
+      contains: One paragraph for your image tool, with the camera distance, lens feel, light, skin, setting, product and words.
+    - name: IMAGE ROLES
+      contains: What each attached photo is used for, such as the person, the product or the camera position.
+    - name: NOT RUN
+      contains: Any step that could not be done, such as no image being made.
+    - name: CHECKS
+      contains: A pass or fail line for angle, perspective, light, identity, product and words, only if an image was made.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: Gives each photo one role

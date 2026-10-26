@@ -1,6 +1,6 @@
 new_slug: creative-brief-writer
 name: "Creative brief writer"
-summary: "Give it reviews and product facts. Get one problem, a one-line angle, a proof list and a brief."
+summary: "Turn your customer reviews and product facts into an ad brief. It picks one problem, writes a one-line angle, and backs every claim with a shot."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It reads many customer quotes and must pick one problem, so a mid-size model with room to think does well."
@@ -17,6 +17,10 @@ when:
   - You have a pile of reviews and no clear idea what the next ad should say.
   - Your ads list every feature and you suspect one clear reason to buy would work better.
   - A test just finished and you need the next brief to build on what it showed.
+not_for:
+  - "You have no customer words yet: paste competitor reviews instead, or talk to five buyers first and use their words."
+  - "You want to plan which ads to test and in what order: use the Ad test brief writer."
+  - "You already have the angle and just need the ad text: use the Fact-based ad copy writer."
 
 you_give:
   - Customer words, such as reviews, support tickets, post-purchase survey answers, sales call notes, ad comments, competitor reviews or Reddit threads
@@ -36,6 +40,30 @@ how_to_use:
   - Paste your product facts, and only the proof you can show, such as a real number or a real photo.
   - Read the one problem and angle it picks. If it picked the wrong one, tell it which reason to buy to use instead.
   - Hand the brief to whoever makes the ad, and run the two versions side by side.
+output_sample:
+  input:
+    - Your reviews, support tickets or survey answers, with source and date
+    - Your product facts and the proof you really have
+    - Your last test results (optional)
+    - Who the product is for (optional)
+    - What it costs to make an image ad and a video ad (optional)
+  output:
+    - name: Research summary
+      contains: What buyers want, what stops them and what they already tried, with real quotes and their source.
+    - name: Reasons to buy
+      contains: Up to ten reasons to buy, each with a count of how many quotes mention it.
+    - name: One problem and angle
+      contains: One problem in the buyer's words, a one-sentence angle, and the features left out on purpose.
+    - name: Format choice
+      contains: Answers to five questions about teaching, one frame, demo and buyer knowledge, then the format picked.
+    - name: Proof list
+      contains: Each claim paired with the shot that proves it and the source of any number.
+    - name: Brief
+      contains: Concept, ad type, angle, who it is for, headline, call to action and visual direction.
+    - name: Two versions
+      contains: Two versions that change one thing, with what stays the same stated.
+    - name: Next brief rule
+      contains: What result means keep the angle, change it or move to another reason to buy.
 
 how_it_works:
   - title: Reads the customer

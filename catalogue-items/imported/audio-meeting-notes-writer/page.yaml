@@ -2,35 +2,93 @@ thinking: low
 thinking_why: A speech tool does the hard part and the AI tidies the text.
 new_slug: audio-meeting-notes-writer
 name: Audio meeting notes writer
-summary: Give it a recording. Get a written transcript, a short summary and
-  clear meeting notes.
+summary: Turn a meeting recording into a written transcript and meeting notes. Get a timestamped transcript plus topics, decisions and action items.
 job: work-with-audio
 headline: Audio meeting notes writer
-subhead: A meeting recording turned into a written transcript, a short summary
-  and tidy notes in a Markdown file. Hand it an audio or video file and it
-  transcribes the speech, and can label who spoke when.
+subhead: Give it an audio or video file of a meeting or interview. A speech tool on your computer turns the speech into text, with times. Your AI then writes meeting notes from the text. You get a transcript file and a notes file.
 explain: |
-  A meeting recording turned into a written transcript, a short summary and tidy notes in a Markdown file. Hand it an audio or video file and it transcribes the speech, and can label who spoke when.
+  Meeting recording to notes is two jobs. First the speech has to become text. Then the text has to become something you can read in a minute.
 
-  From the transcript, the AI writes an executive summary, key points and action items. It can also produce subtitle files such as SRT and VTT, and process several recordings in one go. It handles common formats like MP3, WAV, M4A, OGG, FLAC and WEBM. It warns you before working on a very large file. Transcription runs through tools on your computer, so expect to install a few things, and read its guide first.
+  This skill splits them. A free speech tool, Faster-Whisper or Whisper, runs on your own computer and writes the transcript, so the audio file never leaves it. Then your Claude or GitHub Copilot command-line tool reads the transcript and writes the notes: topics, decisions and action items. Only the transcript text goes to that service.
+
+  Know the limits. The included script does not tell speakers apart and does not write subtitle files. Names in the notes are a guess from the text, so check them. You need to install a few tools, so it suits people who can run commands.
 when:
   - You recorded a call and nobody took notes.
-  - You need subtitles for a training video.
-  - A two-hour interview has to be boiled down to a page.
-  - You have a folder of recordings to turn into text.
+  - A two-hour interview has to become a one-page summary.
+  - You have a folder of recordings that need a written copy.
+  - You want a searchable text version of a talk you gave.
+not_for:
+  - "You already have a transcript or typed notes: use the Internal meeting minutes writer, which needs no tools installed."
+  - "Not everyone on the recording agreed to it: do not use it. Ask first, then record again."
+  - "You want live captions during a call: use the captions built into your meeting app."
+  - "You want a follow-up email after a customer call: use the Call follow-up drafter."
 you_give:
-  - An audio or video file
-  - Whether you want speaker labels (optional)
-  - Output type, such as notes or subtitles
-  - Language of the recording (optional)
+  - An audio or video file saved on your computer
+  - Python and the speech tool, installed with the included script
+  - Claude or GitHub Copilot command line, signed in, for the notes step (optional)
+  - Your own notes prompt, if you want English notes or a different layout (optional)
 you_get:
-  - A written transcript
-  - An executive summary
-  - Action items and key points
-  - Subtitle files (optional)
+  - A written transcript with start and end times
+  - Meeting notes with topics, decisions and action items
+  - The language of the recording, found for you
+  - A transcript only, if no notes tool is signed in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Check that everyone on the recording agreed to be recorded and to have it written up.
+  - "Install the tools. Run the install script in the scripts folder. It needs Python and an internet connection the first time. It is free, with no key."
+  - "Run the transcribe script on one file first. If you have the Claude or Copilot command line signed in, it offers to write the notes."
+  - "The built-in notes prompt is in Portuguese. For English notes, add your own prompt, for example: Write meeting notes in English with a summary, decisions and action items with owners."
+  - Open the transcript and notes files. Check names, numbers and every action item against the transcript.
+  - Share the notes only with people who were in the meeting or need them. Then run the rest of your files.
+how_it_works:
+  - title: Find the tools
+    text: It checks that Faster-Whisper or Whisper and ffmpeg are installed, and offers to install them.
+  - title: Check the file
+    text: It confirms the file exists, reads its size and length, and warns you before a very large file.
+  - title: Turn speech into text
+    text: The speech tool writes every segment with start and end times, on your own computer.
+  - title: Pick the notes prompt
+    text: It uses your prompt if you give one, or a built-in one, and asks you to confirm.
+  - title: Write the notes
+    text: Your Claude or Copilot command line reads the transcript and writes topics, decisions and action items.
+  - title: Save the files
+    text: It saves the transcript and notes as Markdown files with the date and time in the name.
+output_shape: |
+  transcript-<date-time>.md
+  File name, language, date
+  [<start> to <end>] <spoken text>, one block per segment
+  ata-<date-time>.md
+  Notes written from the transcript
+  Topics, decisions, action items with owners
+output_sample:
+  input:
+    - An audio or video file of the meeting
+    - Your own notes prompt (optional)
+    - Which output you want, such as notes only or notes and transcript
+  prerequisites:
+    - Python and the speech tool, installed with the included script
+    - Claude or GitHub Copilot command line, signed in, for the notes
+    - Agreement from everyone on the recording
+  output:
+    - name: transcript-date-time.md
+      contains: The file name, detected language, date and every spoken segment with start and end times.
+    - name: ata-date-time.md
+      contains: Meeting notes with topics, decisions and action items, written from the transcript. Ata means minutes.
+works_best_with:
+  tools:
+    - name: Faster-Whisper
+      why: A free speech-to-text tool that runs on your computer, so audio stays local.
+    - name: Claude or GitHub Copilot command line
+      why: It reads the transcript and writes the notes.
+    - name: ffmpeg
+      why: It converts video and uncommon audio files so they can be read.
+  inputs:
+    - A clear recording with little background noise
+    - A list of attendee names, to check the notes against
+    - Your own notes prompt in English
+terms:
+  - term: Transcript
+    meaning: A written copy of what was said, in order.
+  - term: Faster-Whisper
+    meaning: A free speech-to-text tool that runs on your own computer.
+  - term: Ata
+    meaning: The Portuguese word for meeting minutes. It is the name the script gives the notes file.

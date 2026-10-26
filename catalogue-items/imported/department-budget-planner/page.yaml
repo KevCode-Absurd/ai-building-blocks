@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds numbers from history and checks them against targets.
 new_slug: department-budget-planner
 name: Department budget planner
-summary: Give it past spending and targets. Get a phased budget by department,
-  with variance reports and fixes.
+summary: Build a department budget from past spending and targets. Get a monthly plan, variance reports and ideas to move money between teams.
 job: money-and-investing
 headline: Department budget planner
-subhead: A budget for each department, set up so you can compare actual spending
-  to it every month. Give it six to twelve months of past spending and your
-  targets and you get a phased budget, variance reports and suggested fixes.
+subhead: A budget for each department, set up so you can compare actual spending to it every month. Give it six to twelve months of past spending and your targets and you get a phased budget, variance reports and suggested fixes.
 explain: |
   A budget for each department, set up so you can compare actual spending to it every month. Give it six to twelve months of past spending and your targets and you get a phased budget, variance reports and suggested fixes.
 
@@ -18,6 +15,10 @@ when:
   - Spending keeps running over and nobody can say why.
   - Finance asks for a monthly variance report.
   - You need to move money between teams mid-year.
+not_for:
+  - "You want to predict cash coming in and going out: use a cash-flow forecast in a spreadsheet or ask your accountant."
+  - "You need to cost one project, not a whole department: use a simple project cost sheet."
+  - "You need tax, audit or investment advice: talk to a qualified accountant."
 you_give:
   - Past spending by department and category
   - Revenue targets and priorities
@@ -29,7 +30,29 @@ you_get:
   - Variance report with causes
   - Reallocation suggestions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your past spending by department and cost type. A spreadsheet export or pasted table works.
+  - Add your department list, your spending target and the budget period. Mention any big costs you know are coming.
+  - Read the budget and check that each department total matches your target. Ask your AI to fix any line that looks wrong.
+  - Each month, paste in your actual spending and ask for a variance report.
+  - Have an accountant or finance lead review the plan before you share it. The AI does not need code, web access or a paid tool.
+output_sample:
+  input:
+    - Your last 6 to 12 months of spending by department and cost type
+    - Your company spending target or revenue goals
+    - Your list of departments
+    - The budget period (month, quarter or year)
+    - Known upcoming costs (optional)
+  output:
+    - name: Department budget
+      contains: A budget for each department, split into lines like pay, software, travel and marketing.
+    - name: Monthly phasing
+      contains: Each line spread across the months, with renewals and seasonal peaks placed where they fall.
+    - name: Comparison to baseline
+      contains: How the new budget compares with past spending and with your overall target.
+    - name: Variance report
+      contains: Budget against actual for each line, in dollars and percent, labelled timing, volume, rate or permanent.
+    - name: Year-end projection
+      contains: Where spending will land if the current run rate holds.
+    - name: Reallocation suggestions
+      contains: Where to move unused money, and which lines need a formal budget revision.

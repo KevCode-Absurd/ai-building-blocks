@@ -50,12 +50,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Copy foundation docs builder.** Use the skill `copy-foundation-docs-builder`. Writes the buyer profile and brief the quiz questions and results will lean on.
-2. **Store quiz funnel builder.** Use the skill `store-quiz-funnel-builder`. Give it the persona from the steps before. Builds the quiz, its result pages and offer from the buyer profile and brief.
+2. **Store quiz funnel builder.** Use the skill `store-quiz-funnel-builder`. Give it the persona from the steps before. Builds the quiz, its result pages and offer from the buyer profile and brief. Hands step 3 the quiz and its question list; you run traffic through it and export the answers.
 
 Pause here: Send paid traffic through the quiz for a week or two and export the answers and drop-off numbers.
 
-3. **Quiz answers to ad angles reader.** Use the skill `quiz-answers-to-ad-angles-reader`. Reads the exported answers for the most common problems and words, and turns them into ranked ad angles.
-4. **Ad angle planner.** Use the skill `ad-angle-planner`. Give it the brief from the steps before. Turns the top quiz angles into a campaign brief for the next round of ads.
+3. **Quiz answers to ad angles reader.** Use the skill `quiz-answers-to-ad-angles-reader`. Give it the landing page from the steps before. Uses the answers you export from the quiz step 2 built (your spreadsheet), and step 2's question list to read short column names. Hands step 4 a ranked angle list with a read of how aware buyers are.
+4. **Ad angle planner.** Use the skill `ad-angle-planner`. Give it the brief and the angle library from the steps before. Takes the top ranked angle and its awareness read from step 3, and the buyer brief from step 1. Hands you a campaign brief for the next round of ads.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

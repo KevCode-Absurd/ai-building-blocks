@@ -1,6 +1,6 @@
 slug: plan-a-purchase-around-your-real-budget
 name: Plan a purchase around your real budget
-summary: Share the source files. Get a total-cost comparison and a decision brief that respects your cash limit.
+summary: See what a purchase really costs over time and whether it fits your cash limit. Give it your budget and quotes to get a cost table and decision brief.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,23 +8,26 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
+  - type: spreadsheet
+    required: false
   - type: question
     required: false
 outputs:
   - type: plan
   - type: audit_report
   - type: document
+needs_mode: manual
 uses:
   - personal-budget-builder
   - vendor-comparison-writer
   - decision-checklist-runner
 steps:
   - uses: personal-budget-builder
-    note: Find the amount available for the purchase without changing protected commitments.
+    note: Find the amount available for the purchase without changing protected commitments. Hands the cash limit to step 3, which checks the quote against it. Step 2 does not read it.
   - uses: vendor-comparison-writer
-    note: Compare the options on required use, full quoted cost and practical trade-offs.
+    note: Uses your quotes, not step 1's output. Compares the options on required use, full quoted cost and practical trade-offs, and hands the cost table and leading quote to step 3.
   - uses: decision-checklist-runner
     note: Check the proposed purchase against the user supplied budget, must-have requirements and decision rules, marking unknown answers.
 origin: rebuilt

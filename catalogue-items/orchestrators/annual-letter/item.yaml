@@ -15,8 +15,8 @@ uses: [long-term-principles-writer, input-metric-picker, cash-versus-earnings-ch
 steps:
   - {uses: long-term-principles-writer, note: "A short list of promises that explain how you will choose."}
   - {uses: input-metric-picker, note: "Controllable inputs, one check output and a proxy test for each."}
-  - {uses: cash-versus-earnings-checker, note: "Free cash flow next to earnings, with what growth costs."}
-  - {uses: value-created-tally-builder, note: "A value figure for each group, with assumptions and the weakest link."}
+  - {uses: cash-versus-earnings-checker, note: "Free cash flow next to earnings, with what growth costs. Hands step 5 the cash view."}
+  - {uses: value-created-tally-builder, note: "A value figure for each group, with assumptions and the weakest link. Uses your figures and step 2's input metrics, not step 3's cash view. Hands step 5 the tally."}
   - {uses: annual-letter-writer, note: "A letter that carries the principles, metrics, cash view and tally."}
 origin: rebuilt
 version: 1.0.0

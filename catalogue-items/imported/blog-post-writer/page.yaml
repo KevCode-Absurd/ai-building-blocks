@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Posts follow standard formats.
 new_slug: blog-post-writer
 name: Blog post writer
-summary: Give it a topic. Get a blog post with outline, hook and call to action,
-  as how-to, list or story.
+summary: Write a blog post from a topic. Get a how-to, list, opinion or case study with an outline, a hook and a call to action in your brand voice.
 job: write-and-tell-stories
 headline: Blog post writer
-subhead: "Write a blog post in the right shape for its purpose: a how-to guide,
-  a list, an opinion piece or a case study. You get an outline, a hook and a
-  clear call to action, so the post has a point and a next step."
+subhead: "Write a blog post in the right shape for its purpose: a how-to guide, a list, an opinion piece or a case study. You get an outline, a hook and a clear call to action, so the post has a point and a next step."
 explain: |
   Write a blog post in the right shape for its purpose: a how-to guide, a list, an opinion piece or a case study. You get an outline, a hook and a clear call to action, so the post has a point and a next step.
 
@@ -18,6 +15,10 @@ when:
   - You want a list-style post that compares options.
   - You have a strong opinion and want it shaped into a post.
   - You have a customer result to turn into a case study.
+not_for:
+  - "You need a product launch announcement or news piece: write a press release instead."
+  - "You need to check what ranks on Google right now: use a search tool, or paste the top results into your chat for your AI to read."
+  - "You want a short social post or email: write that by hand or ask your AI for a short note, not a full blog post."
 you_give:
   - A topic
   - Your reader and brand voice
@@ -29,7 +30,29 @@ you_get:
   - A full draft with hook and call to action
   - Title and meta text suggestions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill's instructions into a new chat.
+  - Add your topic, your reader, your tone, the action you want readers to take, and a word count.
+  - Add your main keyword if you have one. Pick a format, or let your AI suggest one.
+  - Read the outline first. Ask for changes before it writes the full draft.
+  - Check every number and claim against a real source before you publish. Add your own internal links.
+  - Publish the post, or turn the draft into a social post or email.
+output_sample:
+  input:
+    - Your topic or working title
+    - Your reader and the tone you want
+    - Your main search keyword (optional)
+    - "The format: how-to, list, opinion or case study (optional)"
+    - The action you want readers to take, and a target word count (optional)
+  prerequisites:
+    - Web search or pasted search results, if you want it to check what already ranks
+  output:
+    - name: Keyword and format choice
+      contains: One main keyword, a few related ones, and the post format picked with a reason.
+    - name: Outline
+      contains: A title, a hook idea, headings for each section, and a closing call to action.
+    - name: Full draft
+      contains: The whole post in prose, with a hook, a clear promise to the reader, transitions and a call to action.
+    - name: Search tweaks
+      contains: Keyword placement, a meta description of 150 to 160 characters, image alt text and a short URL slug.
+    - name: Final review notes
+      contains: Checks for spelling, grammar, weak sections, and claims that still need a source.

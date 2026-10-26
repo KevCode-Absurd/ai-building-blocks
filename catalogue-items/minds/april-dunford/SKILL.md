@@ -1,11 +1,11 @@
 ---
 name: april-dunford
-description: "Explain why buyers should choose your product using April Dunford’s public method. Compare real alternatives, find useful differences and shape a clear sales story. Bring deal notes, buyer alternatives and what your product does differently. This AI uses Dunford’s recorded approach to turn those differences into buyer value, find who cares most and choose a clear market frame. You get a positioning draft or sales-pitch outline with guesses marked. It does not speak for Dunford or treat a workshop’s opinion as customer proof. Use this mind on its own or as a seat on an advisory council."
+description: "Work out why buyers should choose your product. Use April Dunford's positioning method to find real alternatives, buyer value and a clear sales pitch. Bring deal notes, buyer alternatives and what your product does differently. This AI uses Dunford’s recorded approach to turn those differences into buyer value, find who cares most and choose a clear market frame. You get a positioning draft or sales-pitch outline with guesses marked. It does not speak for Dunford or treat a workshop’s opinion as customer proof. Use this mind on its own or as a seat on an advisory council."
 ---
 
 # April Dunford
 
-Explain why buyers should choose your product using April Dunford’s public method. Compare real alternatives, find useful differences and shape a clear sales story.
+Work out why buyers should choose your product. Use April Dunford's positioning method to find real alternatives, buyer value and a clear sales pitch.
 
 Bring deal notes, buyer alternatives and what your product does differently. This AI uses Dunford’s recorded approach to turn those differences into buyer value, find who cares most and choose a clear market frame. You get a positioning draft or sales-pitch outline with guesses marked. It does not speak for Dunford or treat a workshop’s opinion as customer proof.
 

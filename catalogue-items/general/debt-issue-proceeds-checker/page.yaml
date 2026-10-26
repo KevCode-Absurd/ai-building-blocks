@@ -1,32 +1,69 @@
 new_slug: debt-issue-proceeds-checker
 name: Debt issue proceeds checker
 headline: Debt issue proceeds checker
-summary: Reconcile financing face value to cash received after issue discount and distinct upfront fees.
+summary: "Check debt issue proceeds: tie face value to the cash you actually received after issue discount and upfront fees, with checks and gaps listed."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Original issue discount, gross cash and usable net proceeds. Share debt face amount, contractual issue-price fraction of par, separate upfront cash fees and actual funding statement.
+subhead: Give it the debt face amount, the issue price, the upfront fees and your funding statement. It works out the discount, the cash and the net proceeds. It then ties them to what you actually received.
 explain: |-
   Original issue discount, gross cash and usable net proceeds.
 
   Acquisition financing. Illustrative figures only. 100 face at98% provides98, less1 fee gives97. At95% it gives94 while principal remains100.
 when:
-  - You need original issue discount, gross cash and usable net proceeds.
-  - You work on acquisition financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You have a loan or bond issued below par and need to know the real cash received.
+  - You are checking acquisition financing and a lender's funding figure looks low.
+  - A reviewer wants to trace net proceeds back to the contract and the funding statement.
+  - You want to be sure no fee was taken out twice.
+not_for:
+  - "You need tax OID amortization or effective-interest schedules: ask your tax adviser or accountant, because this only checks one issue."
+  - "You need to know if a loan is legally available or funded: read the signed credit agreement and the lender's funding notice."
+  - "You want to build a full debt payoff schedule: use a spreadsheet loan schedule, and keep principal at face there."
 you_give:
-  - Debt face amount, contractual issue-price fraction of par, separate upfront cash fees and actual funding statement.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Debt face amount, from the signed contract.
+  - Issue price as a share of par, from the contract.
+  - Upfront cash fees, listed one by one.
+  - Your actual funding statement showing the cash received.
+  - Reporting date, currency and scale (for example, thousands).
+  - Your spreadsheet tool and the file format you want (optional).
 you_get:
-  - Original issue discount, gross cash and usable net proceeds.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Original issue discount, worked out as face less face times the issue-price fraction.
+  - Gross cash and usable net proceeds, worked out as face times the fraction, less fees.
+  - A tie between your result and the funding statement.
+  - An editable workbook, if you ask for one.
+  - A list of missing inputs and checks that did not run.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and open it in your AI. Claude, ChatGPT and Gemini all work.
+  - Paste or attach the face amount, issue price, fees and funding statement. Add the currency, scale and date.
+  - Ask for the calculation. For a workbook, use an AI that can make and reopen spreadsheet files.
+  - To run the bundled script, you need Node.js 20 or later and an AI that can run code. Otherwise the AI does the sums in the chat.
+  - Check the discount, gross cash and net proceeds against your funding statement.
+  - Read MISSING and CHECKS MISSED before you rely on the result.
+output_sample:
+  input:
+    - Debt face amount
+    - Issue price as a share of par, from the contract
+    - Upfront cash fees, listed separately
+    - Your funding statement showing cash received
+    - Currency, scale and reporting date
+  prerequisites:
+    - A spreadsheet tool and an AI that can work with files, if you want a workbook
+    - Node.js 20 or later, only if you want to run the bundled calculation script
+  output:
+    - name: Original issue discount
+      contains: Face amount less face times the issue-price fraction, which is the discount at issue.
+    - name: Gross cash
+      contains: Face times the issue-price fraction, before any upfront fees are taken out.
+    - name: Usable net proceeds
+      contains: Gross cash less each distinct upfront fee once, tied to your funding statement.
+    - name: Scope and dated sources
+      contains: Where each input came from, with its date, currency and scale.
+    - name: Model calculations and reconciliations
+      contains: The workings, and how face less cash ties back to the discount and fees.
+    - name: Actual file verification
+      contains: Which workbook checks ran, such as recalculation, changed-input test and reopening the file.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not supplied and checks that failed or could not run, or none.
 how_it_works:
   - title: 1. Separate legal principal from cash issue price; identify withheld fees and already-netted charges
     text: Separate legal principal from cash issue price; identify withheld fees and already-netted charges.

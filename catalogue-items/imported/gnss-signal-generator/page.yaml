@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Signal options are set but numerous.
 new_slug: gnss-signal-generator
 name: GNSS signal generator
-summary: Pick a GPS or Galileo signal. Get a baseband waveform with realistic
-  channel effects.
+summary: Make a GPS, Galileo or NavIC test signal for your receiver. You get a baseband waveform with Doppler, delay and noise added, built in MATLAB.
 job: build-software
 headline: GNSS signal generator
-subhead: Pick a GPS or Galileo signal. Get a baseband waveform with realistic
-  channel effects. Bring the satellite system to simulate. Use the result to
-  plan your next step.
+subhead: Pick a GPS or Galileo signal. Get a baseband waveform with realistic channel effects. Bring the satellite system to simulate. Use the result to plan your next step.
 explain: |
   A test signal for a satellite navigation receiver, made on demand. Choose GPS, Galileo or NavIC and you get a baseband waveform for several satellites. It carries real navigation data, so a receiver can decode it and work out a position.
 
@@ -18,6 +15,10 @@ when:
   - You want to see how Doppler and delay change decoding.
   - You need a signal with a specific noise level.
   - You are building a full receiver simulation.
+not_for:
+  - "You need to find, track or decode a signal, or work out a position: use a receiver-processing tool in MATLAB instead."
+  - "You need BeiDou or GLONASS signals: this skill does not cover them, so use another signal tool."
+  - "You want to send the signal through radio hardware: use your radio's own software, as this skill stops at the waveform."
 you_give:
   - The satellite system to simulate
   - Which satellites to include
@@ -29,9 +30,34 @@ you_get:
   - Channel effects applied
   - MATLAB code to run again
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Satellite Communications
-    Toolbox.
+  - Check that you have MATLAB R2026a or newer with Satellite Communications Toolbox. Add Navigation Toolbox if you want the RINEX path.
+  - Use an AI that can run MATLAB code. Paste the skill into the chat or add its folder.
+  - Copy the helper files named in the skill into your project folder.
+  - Tell your AI the system, signal type and satellites. Say if you want scenario mode or your own Doppler, delay and noise.
+  - Confirm the choices your AI shows you before it makes the waveform.
+  - Run the MATLAB code. Check the waveform summary, then feed the signal to your receiver.
+output_sample:
+  input:
+    - "The satellite system to simulate: GPS, Galileo or NavIC"
+    - The signal type, such as GPS L1 C/A or Galileo E1
+    - Which satellites to include
+    - Scenario mode, or your own Doppler, delay and noise values
+    - Your own navigation data file (optional)
+  prerequisites:
+    - MATLAB release R2026a or newer
+    - Satellite Communications Toolbox
+    - Navigation Toolbox, only if you use the RINEX path
+    - Helper files copied from MathWorks examples into your project folder
+  output:
+    - name: Waveform generator setup
+      contains: The generator settings for your chosen system and signal type.
+    - name: Satellite scenario
+      contains: Satellite positions over time, built only in scenario mode.
+    - name: Channel parameters
+      contains: Doppler and delay from orbit physics, or the custom values you typed, plus the noise level.
+    - name: Navigation data
+      contains: Ephemeris encoded into the signal so a receiver can decode it and find a position.
+    - name: Baseband waveform
+      contains: The multi-satellite signal with Doppler, delay and noise applied.
+    - name: MATLAB script
+      contains: Code you can run again to rebuild the same waveform.

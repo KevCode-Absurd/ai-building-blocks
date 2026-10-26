@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares two texts line by line.
 new_slug: privacy-policy-drift-checker
 name: Privacy policy drift checker
-summary: Describe a data plan. Get where your privacy policy no longer matches,
-  with fix wording. Not legal advice.
+summary: Check if your privacy policy still matches what your team does. Paste your policy and a new practice to get gaps and fix wording. Not legal advice.
 job: check-contracts
 headline: Privacy policy drift checker
-subhead: Find the places where your privacy policy no longer matches what your
-  team actually does, with fix wording ready. It is a first check, not legal
-  advice.
+subhead: Find the places where your privacy policy no longer matches what your team actually does, with fix wording ready. It is a first check, not legal advice.
 explain: |
   Find the places where your privacy policy no longer matches what your team actually does, with fix wording ready. It is a first check, not legal advice.
 
@@ -18,6 +15,10 @@ when:
   - You want a regular check of policy against practice.
   - Someone proposes collecting a new type of data.
   - A privacy review found a mismatch you need to fix.
+not_for:
+  - "You need a lawyer to approve a policy change: ask your privacy counsel, because this is a first check only."
+  - "You want to know how a new law affects you: ask your lawyer or read the law's own guidance, as this only compares your policy to your own practice."
+  - "You have no written privacy policy yet: write a first draft with your lawyer or a policy template, then run this check."
 you_give:
   - Your current privacy policy
   - Description of the new practice
@@ -29,12 +30,33 @@ you_get:
   - Suggested replacement wording
   - Timing advice
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved privacy setup notes and your
-    policy file.
-  - Where the skill points to /privacy-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open your AI tool and paste the skill text, or upload the skill folder if your AI can read files.
+  - Paste your current privacy policy. Add the date of your last check if you have one (optional).
+  - To check one new plan, describe it in a sentence, such as using a new analytics tool. To run a sweep, give your AI the saved reviews since the last check.
+  - Read each gap marked required first. These are places where your policy says something untrue.
+  - Show the suggested wording to your lawyer before you change the policy.
+  - If your AI cannot read saved files, paste the policy and the practice into the chat. The check still works.
+output_sample:
+  input:
+    - Your current privacy policy text
+    - A description of the new practice, such as a new tracking tool
+    - Saved privacy reviews and vendor reviews since the last check (optional)
+    - The date of your last check (optional)
+  prerequisites:
+    - An AI that can read your policy and any saved review files
+    - Saved privacy setup notes from the privacy-legal plugin, or the same details pasted into the chat
+  output:
+    - name: Sweep Report
+      contains: A count of files scanned and gaps found, split into required and advisable updates, when you run the weekly sweep.
+    - name: REQUIRED updates
+      contains: Places where the policy says something that no longer matches practice, each with a policy quote, the gap and suggested wording.
+    - name: ADVISABLE updates
+      contains: Places where the policy is silent on a practice, each with the gap and suggested wording.
+    - name: No action needed
+      contains: Practices the policy already covers, so you know what was checked.
+    - name: Privacy Policy Check
+      contains: For one new practice, a verdict of covered, missing or conflicting, with suggested wording for each gap.
+    - name: Timing
+      contains: Advice on when to update the policy compared with when the new practice starts.
+    - name: Next steps
+      contains: A short list of choices for what to do with the gaps found.

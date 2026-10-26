@@ -1,6 +1,6 @@
 new_slug: lead-nurture-follow-up
 name: Offer useful information first and follow up with stalled leads
-summary: Give it your product and who has the costly problem. Get an information offer and follow-up emails for stalled leads.
+summary: Plan an information offer and write follow-up emails for stalled leads. Give it your product and who has the costly problem, and get both.
 job: make-offer
 thinking: high
 thinking_why: It writes an offer and a message series that must give each person a real reason to reply. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want leads to raise their hand before you sell to them.
   - People ask for your price or quote, then go quiet, and you have no plan for what comes next.
   - Your ads or letters pitch straight away and bring in few replies.
+not_for:
+  - "You want to reach strangers who never heard of you: this workflow needs leads who already made contact, so start with a simple cold intro written by you or a salesperson."
+  - "You only want an offer for people who just bought: use the After-sale offer planner."
+  - "You want a bonus added to an offer you already have: use the Offer bonus package builder."
 you_give:
   - Your product or service, what it costs and what it does
   - Who has the costly problem and what it costs them
@@ -32,6 +36,23 @@ how_to_use:
   - Describe your product and who has the costly problem. It builds the information offer and the reply plan.
   - Say how far the stalled leads got, and add any doubts they gave in their own words. It writes the follow-up series.
   - Check that your email tool follows the rules in your area on consent and unsubscribes before you send.
+output_sample:
+  input:
+    - Your product or service, what it costs and what it does
+    - Who has the costly problem and what it costs them
+    - Your offer terms and any real deadline
+    - What the stalled leads did and how far they got
+    - Reviews, replies or questions from leads (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Information-led lead offer"
+      contains: The one piece of information you offer, a short ad or letter, what counts as a reply, and a plan to route replies.
+    - name: "Step 2: Almost-buyer follow-up emails"
+      contains: Follow-up emails for each group of stalled leads, with a subject, next step, new reason, send schedule and stop rule.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the information offer
     text: Names who has the costly problem, picks the one piece of information they would ask for, and sets how a reply is recorded and routed.

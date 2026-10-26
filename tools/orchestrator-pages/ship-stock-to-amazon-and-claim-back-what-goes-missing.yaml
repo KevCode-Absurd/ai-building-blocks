@@ -1,6 +1,6 @@
 new_slug: ship-stock-to-amazon-and-claim-back-what-goes-missing
 name: Ship stock to Amazon and claim back what goes missing
-summary: Give it your sales and product facts. Get a shipment plan, then the claims to file.
+summary: Plan your Amazon shipment to FBA, then find lost or short units Amazon owes you. Give it sales and product facts. Get claims to file.
 job: sell-on-amazon
 thinking: medium
 thinking_why: It runs two skills with a wait between them. A mid-size model is enough.
@@ -11,9 +11,13 @@ explain: |
 
   The steps cover both ends. First it sizes your first order from sales and lead time, splits the shipment so one lost box does not stop sales, and gives a checklist that includes the proof to keep: receipts, packing list and bill of lading. You then ship, track each shipment to closed and export the shipment, fee, damaged and lost reports. The second step reads your checklist and those reports, compares sent against received, checks size tiers and fee lines, and lists the claims to file with a score for how much it could check.
 when:
-  - You are sending your first or next shipment to Amazon.
+  - You are about to send your first or next shipment to Amazon.
   - Your shipments have closed and you have never checked what Amazon received.
-  - You suspect fees or size tiers are wrong but have not checked.
+  - You think fees or size tiers are wrong but have not checked.
+not_for:
+  - "You have no sales yet and no closed shipments: plan by hand with Amazon's own shipment tool, and come back once shipments close."
+  - "You only want to check fees or lost stock on old shipments: skip step 1 and give the reports straight to your AI, or ask Amazon seller support."
+  - "You sell on Shopify or eBay, not Amazon: use your own platform's stock report and your carrier's claim form."
 you_give:
   - Your sales so far, lead times and case sizes
   - "Product facts: size, weight, cost and barcode setup"
@@ -25,10 +29,36 @@ you_get:
   - A list of claims to file for short shipments, wrong fee tiers, and damaged or lost stock
   - A score for how much of the check could be run, and a monthly routine
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Give it your sales, lead times and case sizes. Check Amazon's current fee tables and size tiers before you commit cash.
-  - When it pauses, ship, keep the proof and wait until the shipments close. Then export the reports and come back.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project. Say "Follow HANDOFF.md".
+  - Paste your sales, lead times, case sizes and product facts. Check Amazon's current fee tables before you commit cash.
+  - When it pauses, ship your stock and keep the receipts, packing list and bill of lading. Wait until the shipments close.
+  - Export the shipment, fee, damaged and lost reports. Give them to your AI to get the claim list.
+  - Check each claim against your proof before you file it with Amazon.
+output_sample:
+  input:
+    - Your sales so far, lead times and case sizes
+    - "Product facts: size, weight, cost and barcode setup"
+    - Shipment, fee, damaged and lost reports, once shipments close
+    - Your shipment receipts and packing lists (optional for step 1, needed for step 2)
+  prerequisites:
+    - Step 2 needs your shipments to be closed first.
+    - Reports exported from your Amazon seller account.
+  output:
+    - name: "Step 1: Shipment plan"
+      contains: How many units to send, when, and how to split them into shipments.
+    - name: Shipment checklist
+      contains: Barcode, prep, case limit, label and carrier checks, plus the proof to keep.
+    - name: "Step 2: Sent vs received"
+      contains: A comparison of units you sent with units Amazon received, shipment by shipment.
+    - name: Size tier and fee check
+      contains: Whether each product sits in the right size tier and whether fee lines look right.
+    - name: Damaged, lost and returns check
+      contains: Stock Amazon damaged, lost or failed to return that may be paid back.
+    - name: Claim list
+      contains: Each claim to file with the proof to attach, and a score for how much could be checked.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, steps not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the shipment
     text: Sizes the first order at three to six months of sales, splits the shipment, allows for slow check-in and checks barcodes, prep, case limits and box labels. Lists the proof to keep.

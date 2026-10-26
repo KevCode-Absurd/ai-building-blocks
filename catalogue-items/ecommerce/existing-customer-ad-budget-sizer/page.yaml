@@ -1,6 +1,6 @@
 new_slug: existing-customer-ad-budget-sizer
 name: "Existing customer ad budget sizer"
-summary: "Give customer count, CPM and frequency. Get a monthly dollar cap and a test to prove it."
+summary: "Size your existing customer ad budget in dollars. Give customer count, CPM and frequency. Get a monthly cap, a lower CPA ceiling and a test to prove it."
 job: launch-and-scale-ads
 thinking: medium
 thinking_why: "It is a formula plus judgement about category, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - Your reports show strong ROAS and you suspect past buyers are flattering it.
   - A large share of your Meta spend goes to retargeting or existing customers.
   - You have a customer list of a few thousand buyers or more and don't know what to spend on it.
+not_for:
+  - "You have under a few thousand buyers synced to Meta: skip the cap and put the budget into finding new customers."
+  - "Your repeat buying is weak: look at your product and buyer experience first, or ask a person who knows retention, because ads will not fix it."
+  - "You want a plan for what to show past buyers: use the AI workflow handoff planner only for setup, and write the ads by hand or with your own AI."
 
 you_give:
   - How many existing customers are synced to Meta
@@ -36,6 +40,30 @@ how_to_use:
   - Say what you sell and how long buyers usually wait before they reorder.
   - Set the cap it gives you as a ceiling and run the 30 percent cut test for a week or more.
   - Run a conversion lift test on the existing-customer campaign for 30 days to prove the number.
+output_sample:
+  input:
+    - How many existing customers are synced to Meta
+    - Your CPM on existing customers
+    - Your target and current monthly frequency
+    - Your current daily spend and sales on existing customers
+    - Your category and how long buyers take to reorder
+  prerequisites:
+    - Audience segment reporting turned on in your Meta advertiser settings
+  output:
+    - name: BUDGET CAP
+      contains: Customers times frequency times CPM divided by 1,000, shown as a monthly dollar cap next to your current spend and the gap.
+    - name: FREQUENCY CHECK
+      contains: Your frequency on its 7 or 30 day window, the source range, a verdict and what to cut first.
+    - name: CPA CEILING FOR EXISTING CUSTOMERS
+      contains: A cost per sale limit set below your new-customer cost per sale.
+    - name: CATEGORY CALL
+      contains: Near zero, a small controlled campaign, or a dedicated new-arrivals budget, based on what you sell.
+    - name: TESTS
+      contains: A spend cut of about 30 percent to compare sales, and a 30 day conversion lift test on the existing-customer campaign.
+    - name: MONEY FREED FOR NEW CUSTOMERS
+      contains: The monthly spend you can move into finding new customers.
+    - name: CHECKS MISSED
+      contains: Any checks that failed or could not run, or none.
 
 how_it_works:
   - title: Sizes the budget in dollars

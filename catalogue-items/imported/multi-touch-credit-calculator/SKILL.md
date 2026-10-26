@@ -19,6 +19,35 @@ Read the [shared channel contract](references/channel-contract.md),
 [metrics contract](references/metrics-contract.md) before preparing inputs. Follow the
 [implementation guide](references/implementation.md) for exact commands and projections.
 
+## What you need first
+
+- Touch history (ad clicks and visits) and conversion records, each with exact source keys.
+- An explicit identity bridge that says which touch subject is which buyer. No bridge means no
+  credit. Never guess one.
+- Spend by channel and day, with currency.
+- Time zone, conversion-date range, lookback days, and the model to report.
+- The three contract files and the SQL in `references/`. SKILL.md alone is not enough.
+- A Google Cloud project with BigQuery and the `bq` command line tool signed in. Live runs run
+  billed BigQuery jobs in the person's project and need permission to create query jobs. Each
+  runner job is capped at 1 GiB. Without BigQuery, explain the method and draft inputs, and say
+  nothing was run.
+
+## If something is missing
+
+Ask once for each missing boundary. If it is still missing, write `MISSING: <what>` and stop.
+Never invent a bridge, a currency, a time zone or a lookback. Never add a Direct touch for a sale
+with no touch. If there are no tracked touches at all, say this skill cannot run.
+
+## What you hand back
+
+1. **Credit ledger**: every conversion under all five models, one row per touch and model.
+2. **Coverage report**: how many conversions were credited, had no subject match, had no
+   eligible touch, or were repeat buyers left out of an acquisition run.
+3. **Cost report**: for one chosen model, cost per sale (or CAC and ROAS only when their
+   conditions hold) by channel and day, with null reasons for any ratio that cannot be worked out.
+4. **Read-me note**: the model, population and window used, and that credit rules describe how
+   credit is split, not what caused the sale.
+
 ## Workflow
 
 1. Declare qualified touch/conversion keys, the explicit subject bridge, source currencies,

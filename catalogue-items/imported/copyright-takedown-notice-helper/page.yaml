@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Sworn statements and fair use need care.
 new_slug: copyright-takedown-notice-helper
 name: Copyright takedown notice helper
-summary: Describe a copy of your work online, or paste a notice. Get a draft or
-  options. Have a lawyer review.
+summary: Draft a copyright takedown notice, or sort out one you received. Your AI checks fair use and drafts a notice for a lawyer to review before sending.
 job: check-contracts
 headline: Copyright takedown notice helper
-subhead: Describe a copy of your work online, or paste a notice. Get a draft or
-  options. Have a lawyer review. Bring description of your original work. Use
-  the result to plan your next step.
+subhead: Describe a copy of your work online, or paste a notice. Get a draft or options. Have a lawyer review. Bring description of your original work. Use the result to plan your next step.
 explain: |
   Help with a copyright takedown: either a draft notice to get your work removed, or a read on a notice sent to you, with your options laid out. It saves you from missing the required parts of a notice.
 
@@ -18,6 +15,10 @@ when:
   - You received a takedown notice and need to understand it.
   - You want to check if a copy might count as fair use.
   - You need a notice with the legally required parts.
+not_for:
+  - "Your work or the website is outside the US: use the notice process under your own country's law, or ask a local lawyer."
+  - "Fair use is a close call, for example a review, a parody or a short quote: talk to a copyright lawyer before you send anything."
+  - "You want to send a counter-notice to get your own content back online: use a lawyer, because it needs a sworn statement and consent to a US court."
 you_give:
   - Description of your original work
   - Where the copy appears
@@ -29,10 +30,31 @@ you_get:
   - Options when responding
   - Short triage memo
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Where the skill points to /ip-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Run the setup-interview in the folder first. It builds your practice profile. Without it, the skill stops at the first step.
+  - Open your AI tool. Use one that can read and write files, such as Claude, and load the skill folder.
+  - Say whether you want to send a notice, respond to one you received, or write a counter-notice.
+  - Add your work description, the web address of the copy and your proof of ownership. Paste the notice you received if you have one.
+  - Read the fair use check and the draft. Fix anything that is not true.
+  - Give the draft to a lawyer. A takedown notice is a sworn statement, so do not send it unreviewed.
+output_sample:
+  input:
+    - A short description of your original work
+    - The web address where the copy appears
+    - Proof that you own the work
+    - The notice you received (optional)
+  prerequisites:
+    - The ip-legal practice profile, set up with the setup-interview first
+    - An AI that can read and write files in a folder
+  output:
+    - name: notice-v1.md
+      contains: The takedown notice in plain text, ready for a lawyer to review and paste into the host's form.
+    - name: Fair use check
+      contains: Your answers on whether the copy could count as fair use, checked before the notice is drafted.
+    - name: Good faith and authority checks
+      contains: Confirms you believe the use is not allowed, the facts are accurate and you have the right to act.
+    - name: Triage memo
+      contains: "For a notice you received: what it says, how solid it looks and a recommended choice."
+    - name: Options
+      contains: "The four choices when you get a notice: comply, counter, talk to the sender, or ignore."
+    - name: submission.md
+      contains: A record of where and when you sent the notice, plus the date to watch for a reply.

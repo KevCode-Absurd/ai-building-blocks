@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It reads and flags, and does not rewrite.
 new_slug: technical-doc-proofreader
 name: Technical doc proofreader
-summary: Give it an English technical doc. Get a list of typos, grammar slips,
-  term clashes and jargon, with no rewrites.
+summary: Proofread your English technical doc. Get a checklist of typos, grammar slips, mixed terms and jargon, each with a fix. Nothing gets rewritten.
 job: work-with-files
 headline: Technical doc proofreader
-subhead: Give it an English technical doc. Get a list of typos, grammar slips,
-  term clashes and jargon, with no rewrites. Bring the English technical
-  document. Use the result to plan your next step.
+subhead: Paste your English technical document. Your AI reads it once and lists the typos, grammar slips, mixed-up terms and filler. You fix the items yourself and keep your own voice.
 explain: |
   A clean checklist of the typos, grammar slips, mixed-up terms and jargon in your English technical document, so you can fix them yourself and keep your own voice. Nothing is rewritten and no fact is changed quietly.
 
@@ -16,20 +13,39 @@ explain: |
 when:
   - Your README is about to go public and you want a last check.
   - Your docs call the same feature by three different names.
-  - You wrote a blog draft and fear small errors.
+  - You wrote a blog draft about a technical topic and fear small errors.
   - A tutorial has steps that read unevenly.
-  - You want review without losing your own style.
+not_for:
+  - "You want marketing copy or fiction edited: use a human editor, since this checks technical writing only."
+  - "You need the technical facts checked: ask a subject expert or read the source docs. This tool only marks doubtful claims to verify."
+  - "Your document is not in English: use a native-language editor, as other languages are out of scope."
 you_give:
-  - The English technical document
+  - Your English technical document, pasted or attached as plain text or Markdown
   - The document type if you know it (optional)
   - Any style rules you follow (optional)
 you_get:
-  - A checklist of original, suggestion and reason
-  - Terms flagged where naming is inconsistent
-  - Doubtful facts marked to verify
-  - Counts of issues by category
+  - A checklist of each issue with the original, a suggestion and the reason
+  - Terms flagged where the same idea has more than one name
+  - Doubtful facts marked [verify], not changed
+  - A count of issues by category
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, web access or paid tool is needed.
+  - Paste your document as text, or attach it as a Markdown or text file.
+  - Say the document type and any style rules, if you have them.
+  - Read the checklist and fix the items yourself. Your AI does not rewrite the document.
+  - Ask the code owner or a subject expert about each [verify] item.
+  - Run the check again on the changed sections only, not for another full polish pass.
+output_sample:
+  input:
+    - Your English technical document, pasted or attached as plain text or Markdown
+    - The document type, such as tutorial, API reference or README (optional)
+    - Any style rules you follow (optional)
+  output:
+    - name: Itemized checklist
+      contains: Each issue shown as the original text, a suggested fix and the reason, with a line number or short quote.
+    - name: Terminology notes
+      contains: Places where one idea has several names, with the most frequent form suggested as the standard.
+    - name: Verify marks
+      contains: Doubtful technical statements flagged for you to confirm, left unchanged in the text.
+    - name: Statistics
+      contains: A closing count of items in total and by category, such as typos, grammar, terminology and style.

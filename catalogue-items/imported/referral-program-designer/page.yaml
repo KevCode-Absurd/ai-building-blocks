@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It designs rewards and flow in set steps.
 new_slug: referral-program-designer
 name: Referral program designer
-summary: Describe your product. Get a referral or affiliate program with
-  rewards, flow and launch plan.
+summary: Design a referral program or affiliate program for your product. Get reward sizes, an invite-to-payout flow, share messages and a launch plan.
 job: grow-social
 headline: Referral program designer
-subhead: A referral or affiliate program designed for your product, with the
-  rewards, the sign-up flow and a launch plan. You can see how the numbers would
-  work before you spend on it.
+subhead: A referral or affiliate program designed for your product, with the rewards, the sign-up flow and a launch plan. You can see how the numbers would work before you spend on it.
 explain: |
   A referral or affiliate program designed for your product, with the rewards, the sign-up flow and a launch plan. You can see how the numbers would work before you spend on it.
 
@@ -18,6 +15,10 @@ when:
   - You are weighing a referral program against an affiliate scheme.
   - A past referral offer got little use and you want to fix it.
   - You need to know how big a reward you can afford.
+not_for:
+  - Your product is backend or internal-only, with little natural sharing. Put your effort into content or partnerships instead.
+  - You only want more customer reviews. Use a review request plan from a person on your team, since this page is built for referral rewards.
+  - You need a legal contract for affiliates. Ask a lawyer to write the terms.
 you_give:
   - Product and customer type
   - Average customer value
@@ -29,7 +30,29 @@ you_get:
   - Share message copy
   - Launch plan and measures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code or paid tool is needed.
+  - Tell your AI what you sell and who buys it.
+  - Add your average customer value and what it costs now to win a customer.
+  - Say if you want a customer referral program, an affiliate program or both.
+  - Check that the reward costs less than your other ways of winning a customer.
+  - Ask for the launch plan and follow the checklist before you go live.
+output_sample:
+  input:
+    - Your product and who buys it
+    - Whether you want a customer referral program, an affiliate program or both
+    - Your average customer value
+    - What it costs you now to win a customer
+    - Past referral attempts (optional)
+  output:
+    - name: Program type
+      contains: Whether a customer referral program, an affiliate program or both fits your product, and why.
+    - name: Reward design
+      contains: Who gets paid, what they get, and how the reward compares with your cost to win a customer.
+    - name: Invite-to-payout flow
+      contains: Each step from the moment a customer is asked to share to the moment the reward is paid.
+    - name: Share message copy
+      contains: Ready-to-use invite text and a launch email for your customers.
+    - name: Launch checklist
+      contains: What to build, test and announce before and during launch.
+    - name: Measures for the first 30 days
+      contains: The numbers to watch after launch, such as active referrers and referral conversion rate.

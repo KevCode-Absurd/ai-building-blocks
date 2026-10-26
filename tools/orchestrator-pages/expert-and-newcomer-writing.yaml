@@ -1,6 +1,6 @@
 new_slug: expert-and-newcomer-writing
 name: Write something experts admire and newcomers enjoy
-summary: Give it what you are making and who it is for. Get a trimmed draft that works for both experts and newcomers.
+summary: Write for experts and newcomers at once. Give it your piece and your audiences. You get a layered, trimmed draft and a test plan for both groups.
 job: write-and-tell-stories
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are making a talk, article, course, product page or song for people who range from beginners to experts.
   - Feedback pulls you both ways, with one person saying it is too basic and another saying it is too hard.
   - A draft has grown past what it can carry and you cannot say what it is really about.
+not_for:
+  - "You write for one audience only: use the Creative brief reframer, or a plain editor, to sharpen the brief."
+  - "You only need a quick edit of a finished draft: ask a plain editor or your AI to tighten it."
+  - "You need to know what buyers want before you write: use the Customer needs finder."
 you_give:
   - What you are making and where people will meet it
   - Who the experts are and who the newcomers are, with real comments if you have them
@@ -32,6 +36,31 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Say what you are making, who will see it and who will deliver it. It works step by step and saves each result.
   - Run the test with one expert and one newcomer, each alone. Bring back their answers for the last step.
+output_sample:
+  input:
+    - What you are making and where people will meet it
+    - Who the experts are and who the newcomers are
+    - Who will deliver it, if it is not you
+    - Your facts, material and length limit
+    - What one expert and one newcomer said after trying it (added later)
+  prerequisites:
+    - An AI that can save files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Two-audience brief"
+      contains: Both audiences described, the two ways to fail, and one promise to each.
+    - name: "Step 2: Fit plan"
+      contains: What the deliverer does well, where the showpiece goes, and which lines to swap.
+    - name: "Step 3: Layered draft"
+      contains: A plain surface with tagged deeper touches. This is the copy draft used by steps 4 to 6.
+    - name: "Step 4: Cut draft"
+      contains: A shorter draft, every cut listed with a reason, and an order to put cuts back.
+    - name: "Step 5: Test plan"
+      contains: Who to pick, what to watch, questions for each group, and pass lines.
+    - name: "Step 6: Ranked rewrite list"
+      contains: Changes in rank order, each marked with the group it serves.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Names both audiences
     text: Describes what the expert notices and what loses the newcomer, names the two ways to fail and writes one promise to each.
@@ -44,7 +73,7 @@ how_it_works:
   - title: Plans the test
     text: Sets who to try it on, what to watch, the same questions for each group and a pass line for each, fixed before you start.
   - title: Sorts what they said
-    text: After the test, groups the notes by place in the draft and ranks the changes, marking which audience each serves.
+    text: Uses the notes your testers send back after step 5's test. Groups them by place in the draft and ranks the changes, marking which audience each serves.
 output_shape: |-
   STEP 1: BRIEF FOR BOTH AUDIENCES
     The expert | The newcomer | Two ways to fail, with a test each | A promise to each

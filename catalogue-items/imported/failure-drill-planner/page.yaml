@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Safe fault tests need careful scoping.
 new_slug: failure-drill-planner
 name: Failure drill planner
-summary: Name a system. Get safe experiments that break parts on purpose, with
-  limits, checks and lessons.
+summary: Plan a safe failure drill for your system. Give it a service and a fault. You get a test plan with limits, a rollback step and a write-up.
 job: test-and-fix-code
 headline: Failure drill planner
-subhead: A safe plan for breaking part of your system on purpose, so you learn
-  how it fails before your customers do. Every plan has a stop rule, so a test
-  cannot turn into an outage.
+subhead: A safe plan for breaking part of your system on purpose, so you learn how it fails before your customers do. Every plan has a stop rule, so a test cannot turn into an outage.
 explain: |
   A safe plan for breaking part of your system on purpose, so you learn how it fails before your customers do. Every plan has a stop rule, so a test cannot turn into an outage.
 
@@ -18,6 +15,10 @@ when:
   - You are planning a game day with your engineering team.
   - You need to know how many users a test could affect.
   - You want to review a colleague's experiment plan for safety.
+not_for:
+  - "You are fixing an outage that is happening now: use your on-call person and your incident process, not a drill."
+  - "You want to know how much traffic your system can take: run a load test, because this plan tests failures, not capacity."
+  - "You have no way to watch the system live or no one on call: wait until you do, then plan the drill."
 you_give:
   - The service or system to test
   - What should keep working (the steady state)
@@ -31,8 +32,25 @@ you_get:
   - A tool suggestion
   - A short results write-up
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code and read your project files.
+output_sample:
+  input:
+    - The service you want to test
+    - What should stay true while the fault runs (the steady state)
+    - The fault you want to try, such as slow network
+    - Share of traffic and number of users that could be hit
+    - How long the test will run
+  prerequisites:
+    - An AI that can run Python code, to use the three scripts (optional, you can also run the steps in chat)
+    - A named approver and an on-call person before any test in production
+  output:
+    - name: Experiment plan
+      contains: Hypothesis, steady state, fault, size, duration, blast radius, abort limits, rollback steps, dashboards to watch and one question to learn.
+    - name: Blast radius result
+      contains: Users who could be affected, error budget used, a green, yellow or red risk score, and advice to proceed, reduce or abort.
+    - name: Tool suggestion
+      contains: A pick such as Chaos Toolkit, Chaos Mesh, Litmus, Gremlin or AWS FIS, based on your setup.
+    - name: Results write-up
+      contains: Summary, whether the hypothesis held, what you learned, what surprised you, and follow-up actions with owners.

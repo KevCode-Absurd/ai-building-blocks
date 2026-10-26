@@ -1,6 +1,6 @@
 new_slug: search-title-and-snippet-writer
 name: "Search title and snippet writer"
-summary: "Paste your page topic, search phrase and benefit. Get three titles and descriptions within the length limits."
+summary: "Write a search title and description for your page. Give it your topic, search phrase and benefit. Get three options with character counts."
 job: get-found-in-search
 thinking: low
 thinking_why: "It writes short lines to set length limits."
@@ -17,6 +17,10 @@ when:
   - "Your page ranks but few people click."
   - "You are publishing a new page."
   - "Your titles are cut off in search."
+not_for:
+  - "You need a full SEO check of every tag on a page: use the Title and meta tag writer."
+  - "Your titles are fixed by a product feed or listing tool: edit them in that tool instead."
+  - "You have no main search phrase yet: research what people type first, or ask a colleague who knows your buyers."
 
 you_give:
   - "What the page is about"
@@ -33,6 +37,23 @@ how_to_use:
   - "Under it, describe the page and its search phrase."
   - "Say who it is for and the best benefit."
   - "Paste the pick into your page settings and check how it looks in search."
+output_sample:
+  input:
+    - What the page is about, in two sentences
+    - The main search phrase people type
+    - Who the page is for and its best benefit
+    - Page type and brand name (optional)
+  output:
+    - name: Option 1
+      contains: A title and description with character counts, written from one angle such as the direct answer.
+    - name: Option 2
+      contains: A second title and description with counts, written from a different angle such as the benefit.
+    - name: Option 3
+      contains: A third title and description with counts, written from another angle such as a question.
+    - name: Social line
+      contains: One short line to use when the page is shared on social media.
+    - name: Pick
+      contains: The option that fits best, with one reason for the choice.
 
 how_it_works:
   - title: "Title"

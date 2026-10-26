@@ -1,52 +1,93 @@
 new_slug: plan-a-vendor-change-without-losing-work
 name: Plan a vendor change without losing work
 headline: Plan a vendor change without losing work
-summary: Share the source files. Get a vendor decision, migration plan and continuity checklist.
+summary: Switch software or service vendors without dropping work. Get a vendor choice, an exit checklist with notice dates and a staged rollout with rollback.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A vendor decision, migration plan and continuity checklist. Share current vendor tasks, contract terms, data exports, replacement requirements and migration deadline. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your current vendor's contract, a list of the work they do for you, your data export and the replacement options. It compares the options, maps the risks of moving and plans the switch in stages.
 explain: |-
-  A vendor decision, migration plan and continuity checklist.
+  Changing a vendor usually fails in the gaps: a notice date nobody saw, a data export that is missing a field, or a weekly job that only the old vendor did. This workflow plans a vendor change from the work that has to keep running.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Data access, notice periods, rollback and essential work are covered before cancellation is proposed. Missing tools or evidence stay visible in the final summary.
+  Step 1 compares the replacement options with the current vendor, using your required tasks and the quotes and terms you supply. Step 2 maps what could go wrong while you move: dependencies, data, the cost of paying for both for a while and the fallback. Step 3 plans the switch in stages, keeps a rollback open until you have accepted the new vendor, and builds the exit checklist with dates.
+
+  Cancellation is only proposed after data access, notice periods and essential work are covered. It reads the terms you give it. It does not give legal advice.
 when:
-  - You need a vendor decision, migration plan and continuity checklist.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your contract renews in the next few weeks and you must give notice or stay another term.
+  - A tool or service you rely on is getting worse and you are choosing a replacement.
+  - A vendor is raising prices and you want to know the real cost of moving.
+  - The person who set up a vendor is leaving and nobody knows everything it does.
+not_for:
+  - You have not picked a replacement and only want to compare quotes. Use the Vendor comparison writer.
+  - You only want a plain summary of the contract. Use the Plain-words contract summary.
+  - The change is inside your team, such as a new process, with no vendor. Use the Change rollout planner.
+  - You need a lawyer to read notice terms or a dispute. This workflow reads terms but gives no legal advice.
+  - The contract has no exit terms and no way to export your data. This workflow lists that as the top risk, but you need the vendor, and a lawyer, to fix it.
 you_give:
-  - Current vendor tasks, contract terms, data exports, replacement requirements and migration deadline.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your current vendor's contract or order form, with the renewal date and notice period
+  - A list of the work the vendor does for you, who relies on it and how often
+  - A data export, or a list of the data the vendor holds
+  - Your must-haves, and the replacement options with their quotes or terms
+  - Your switch deadline, such as the contract end date
 you_get:
-  - A vendor decision, migration plan and continuity checklist.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A comparison of the options with year-one and three-year cost
+  - "A risk list for the move: dependencies, data, double-running cost and fallback"
+  - An exit checklist with notice dates and data access dates
+  - A staged rollout plan with a rollback you keep until the new vendor is accepted
+  - A list of facts still missing, such as a clause nobody has read
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Open Claude, ChatGPT or Gemini. Pick one that can read files, since you will attach a contract and a data export.
+  - Add the workflow pack. Attach the contract, your list of the work the vendor does, your data export and the quotes. Say your switch deadline.
+  - After step 1, check that every task on your list is covered by the pick, or shown as a gap.
+  - After step 2, check each risk has a fallback. Look at the notice date and the data export first.
+  - After step 3, read the exit checklist with whoever signs the contract. Fill every MISSING line before you give notice.
 how_it_works:
   - title: Vendor comparison writer
-    text: Compare the replacement options using the required tasks, costs and actual supplied evidence.
+    text: "Compares the current vendor and each replacement on the tasks you need, the cost and the evidence you supplied. Hands step 2 the chosen option and the list of tasks it must cover. Check before moving on: every cost has a source, and every required task is covered or shown as a gap."
   - title: Project risk and portfolio manager
-    text: Map migration dependencies, data risks, overlap costs and fallback options.
+    text: "Maps what could go wrong during the move: shared dependencies, data that may not export, the cost of paying for both, and what you fall back on. Hands step 3 the ranked risks. Check before moving on: each risk has a cost or an unknown, and a fallback."
   - title: Change rollout planner
-    text: Plan tool-change adoption, practice, support and staged transition using the assessed dependencies. Keep a rollback option until acceptance is checked.
+    text: "Plans the switch in stages, with training, support and a rollback you keep until the new vendor is accepted. Adds the exit checklist with notice and data access dates. Check before moving on: no date or cancellation step comes before data access is covered."
 output_shape: |-
-  Scope and source coverage
-  A vendor decision, migration plan and continuity checklist.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  DECISION           <stay | switch to <vendor> | decide after <fact>> because <reason>
+  COST COMPARISON    <option> | year one | three years | what is included
+  ESSENTIAL WORK     <task the vendor does now> | who relies on it | covered by <option> from <date> | gap
+  MIGRATION RISKS    <risk> | cost if it happens | fallback
+  ROLLOUT PLAN       <stage> | who | dates | go or no-go check
+  ROLLBACK           <what stays running> until <acceptance check>
+  EXIT CHECKLIST     <item> | owner | date | contract clause
+  MISSING            <each gap, and what it stops>
+  CHECKS MISSED      <one line each, or none>
+output_sample:
+  input:
+    - Your current vendor's contract or order form
+    - A list of the work the vendor does for you
+    - A data export, or a list of what data they hold
+    - Replacement options with quotes or terms, and your switch deadline
+  prerequisites:
+    - An AI that can read files, to read the contract and the export (optional if you paste the terms)
+  output:
+    - name: Decision
+      contains: Stay, switch or wait for one named fact, with the reason.
+    - name: Cost comparison
+      contains: Year-one and three-year cost for each option, and what each price includes.
+    - name: Essential work map
+      contains: Each task the vendor does now, who relies on it and whether the new option covers it.
+    - name: Migration risks
+      contains: What could fail during the move, what it would cost and the fallback.
+    - name: Rollout plan and rollback
+      contains: Stages with dates and go checks, and what keeps running until you accept the new vendor.
+    - name: Exit checklist
+      contains: Notice dates, data access and handback items, each with an owner and a contract clause.
+    - name: MISSING and CHECKS MISSED
+      contains: Terms or figures you did not supply, and any check that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Data access, notice periods, rollback and essential work are covered before cancellation is proposed.
+  - what: A shorter deadline
+    how: Pull the switch date forward. The plan shows which stages squeeze and what risk grows.
+  - what: Two replacements
+    how: List both. Step 1 compares them side by side with the current vendor.
+  - what: Keep the old vendor longer
+    how: Add a month of overlap. The cost comparison shows the double-running cost.
 judge:
   - Data access, notice periods, rollback and essential work are covered before cancellation is proposed.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +100,27 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep a one-page list of what each vendor does for you, and update it when the work changes.
+  - Put every contract's renewal and notice date in your calendar the day you sign.
+  - Ask the vendor to confirm in writing how and when you can export your data.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It can read the contract and the data export directly, so clause references and dates come from the documents.
+    - name: A spreadsheet
+      why: Handy for the cost comparison if you want to change a number and see the effect.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A named person who signs the contract and approves the notice.
+    - Past invoices, to check what you really pay now.
 terms:
+  - term: Notice period
+    meaning: How long before the contract ends that you must tell the vendor you are leaving.
+  - term: Rollback
+    meaning: Keeping the old way ready, so you can go back if the new one fails.
+  - term: Double-running cost
+    meaning: What you pay while both the old and new vendor are in use.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.
+next:
+  - prepare-a-team-absence-handover
+  - trace-why-work-keeps-missing-deadlines

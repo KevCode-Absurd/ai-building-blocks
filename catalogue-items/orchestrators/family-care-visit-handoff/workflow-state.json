@@ -1,0 +1,60 @@
+{
+  "schema": "abb-task-stages/1",
+  "name": "Family care visit and handoff",
+  "governingInstruction": "SKILL.md",
+  "execution": "user-ai-environment",
+  "stages": [
+    {
+      "order": 1,
+      "id": "care-card",
+      "title": "Reconcile the supplied care card",
+      "needs": "Visit purpose/date, minimal care summary and reported changes.",
+      "work": "Preserve dates and who reported each fact. Flag conflicting notes and unknowns; do not reconcile medication descriptions, diagnoses or doses by guessing. Ask for only the information needed for this organizational task, not a full clinical record.",
+      "hands": "Short factual card, changes list and unresolved questions.",
+      "gate": "Facts without a source remain unconfirmed. Clinical interpretation stays with the care team.",
+      "state": "NOT_STARTED",
+      "dependsOn": []
+    },
+    {
+      "order": 2,
+      "id": "agenda",
+      "title": "Prepare the visit questions",
+      "needs": "The factual card and caregiver priorities.",
+      "work": "Turn the caregiver's concerns and conflicts into questions for the care team. Group questions by visit purpose and priority without diagnosing, triaging symptoms, interpreting legal documents or giving medication advice.",
+      "hands": "Pre-visit agenda and questions, with original uncertainties retained.",
+      "gate": "This stage can finish before the visit; later outcome capture waits for actual reported notes.",
+      "state": "NOT_STARTED",
+      "dependsOn": [
+        "care-card"
+      ]
+    },
+    {
+      "order": 3,
+      "id": "visit-notes",
+      "title": "Record the reported visit outcome",
+      "needs": "Actual caregiver-supplied visit notes or care-team instructions.",
+      "work": "Record medical instructions verbatim when provided, with who said them and when. Separate direct quotes, the caregiver's report and unresolved wording. If the visit has not happened or notes are absent, stop this stage at AWAITING_NOTES; do not invent a clinician response or substitute a sample.",
+      "hands": "Attributed reported-outcome notes and clarification questions.",
+      "gate": "Unclear instructions stay unresolved for the care team. No dose, refill date, diagnosis or urgency level is inferred.",
+      "state": "NOT_STARTED",
+      "dependsOn": [
+        "agenda"
+      ]
+    },
+    {
+      "order": 4,
+      "id": "handoff",
+      "title": "Draft the minimum necessary handoff",
+      "needs": "Reported outcome notes, intended recipient roles and user-approved sharing limits.",
+      "work": "Propose which exact facts each recipient needs, the question/decision owner and a supplied or explicitly proposed due date. Keep private details to the minimum for that recipient. Draft only; sending messages, changing calendars and writing a stored care card require authorization for that action and an appropriate destination.",
+      "hands": "Recipient-specific handoff draft and open-items register.",
+      "gate": "Nothing is represented as sent, scheduled or remembered across sessions unless actually performed with authorization.",
+      "state": "NOT_STARTED",
+      "dependsOn": [
+        "visit-notes"
+      ]
+    }
+  ],
+  "actionsPerformed": [],
+  "completion": "All applicable stage inputs, outputs and blocking checks accepted with real evidence."
+}

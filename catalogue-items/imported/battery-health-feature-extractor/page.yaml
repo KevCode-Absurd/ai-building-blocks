@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set steps for each test data type.
 new_slug: battery-health-feature-extractor
 name: Battery health feature extractor
-summary: Give it battery test data. Get health and wear features ready for life
-  prediction.
+summary: Turn battery cycling test data into health and wear features for state of health and life prediction models in MATLAB.
 job: build-software
 headline: Battery health feature extractor
-subhead: Give it battery test data. Get health and wear features ready for life
-  prediction. Bring battery cycling or test data. Use the result to plan your
-  next step.
+subhead: Give it battery test data. Get health and wear features ready for life prediction. Bring battery cycling or test data. Use the result to plan your next step.
 explain: |
   Health and wear numbers pulled out of battery test data, ready for models that estimate state of health or predict remaining life. Give it cycling files and it produces more than 165 features, from simple statistics per charge or discharge segment to differential curves that show electrode aging.
 
@@ -18,6 +15,10 @@ when:
   - You want to see capacity fade through differential curves.
   - You must process fifty test files the same way.
   - You need statistics from a partial charge segment.
+not_for:
+  - "You want to simulate a battery or build a Simulink battery model: use a simulation tool in MATLAB or Simulink instead."
+  - "Your data comes from fuel cells, supercapacitors or other sensors: use a general signal processing tool instead."
+  - "You want to train the prediction model or make charts: use your own machine learning tool, then bring the features from this one."
 you_give:
   - Battery cycling or test data
   - Which cycling phase to use
@@ -29,9 +30,29 @@ you_get:
   - Peak features from the curves
   - A batch pipeline for many files
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Predictive Maintenance
-    Toolbox.
+  - Open an AI that can run MATLAB code. You need MATLAB and the Predictive Maintenance Toolbox.
+  - Paste the skill into the chat, or add the skill folder to your AI tool.
+  - Share your cycling data and say what you want to predict, such as state of health or remaining life.
+  - Tell your AI which cycling phase to use and which column is which, if the names are not clear.
+  - Check the feature table. The AI stops to ask only if column names, a cycle or the phase is unclear.
+  - Use the features in your own model, or ask for the batch version to run many files.
+output_sample:
+  input:
+    - Your battery cycling test data, as a MATLAB table or file
+    - Which cycling phase to use, such as charge or discharge
+    - Which column holds voltage, current, time and temperature
+    - Several test files for a batch run (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the Predictive Maintenance Toolbox
+  output:
+    - name: Cycling feature table
+      contains: More than 165 features per cycle, from simple statistics to cumulative values, ready for health or life models.
+    - name: Measurement statistics
+      contains: Statistics and cumulative values for one full or partial charge or discharge segment.
+    - name: Differential curves
+      contains: Incremental capacity, differential voltage and differential temperature curves that show electrode aging.
+    - name: Curve peak features
+      contains: Peak features pulled from the differential curves.
+    - name: Batch pipeline
+      contains: MATLAB code that runs the same extraction over many test files.

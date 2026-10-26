@@ -1,0 +1,134 @@
+name: Reality Checker agent
+summary: Get a launch readiness review of a finished build. It checks earlier QA claims against proof and returns FAILED, NEEDS WORK or READY.
+headline: Reality Checker agent
+subhead: Give it the spec, the build and any earlier QA report or score. It checks the claims against screenshots and results, walks the main user paths and lists what is still wrong. You get a status that defaults to NEEDS WORK until the proof says otherwise.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Before a launch, the report often says "A+, zero issues, production ready". Then a customer finds the broken form in the first hour. This launch readiness checker is the last stop before that happens. It assumes the build needs work until the evidence shows it does not.
+
+  It takes the earlier QA report and checks it against the real thing: the spec, the screenshots, the test results and the load times. A perfect score, or "zero issues" with no scope, is treated as a warning. It also checks that old issues are really fixed, and walks full user paths, such as home page to menu to contact form.
+
+  This is a different job from the Evidence Collector agent. The Evidence Collector tests the build page by page and writes the issue list. The Reality Checker comes after. It checks that report, runs the paths end to end and decides if the build can ship. Expect a first build to need a few rounds of fixes. The original profile says two to three, and treats that as normal.
+
+  The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The original calls a screenshot script from its author's project, which this pack does not include. Its success claims are role language, not results measured by AI Blocks.
+when:
+  - A developer or agency hands over a build with a glowing QA report and you need a second opinion before you launch.
+  - You must decide yes or no on a release and want the reasons written down.
+  - Fixes came back and you want to know if the old issues are really gone.
+  - You have a spec and want to know how much of it was built.
+not_for:
+  - "You still need screenshots taken and each page tested: use the Evidence Collector agent first, then bring its report here."
+  - "You want a security review or a code review of unreleased code: use a security reviewer or your engineers."
+  - "You want an accessibility check: use the Accessibility Auditor agent."
+  - "You are launching an online store: use the Pre-launch store checker or the Store go-live checker."
+  - "You manage app releases with versions and rollbacks: use the Release manager."
+you_give:
+  - The original spec or acceptance rules. Paste the text.
+  - What was built. Give a staging link your AI can open, or screenshots on desktop, tablet and phone.
+  - The earlier QA report, score or claims you want checked (optional).
+  - Test results or load times, if you have them (optional).
+  - The paths that matter most, such as home page to menu to contact form.
+you_get:
+  - A check of each earlier QA claim, marked confirmed or challenged.
+  - A pass or fail for each main user path, with the evidence.
+  - A list of spec lines met and not met.
+  - Issues grouped as still present from QA, new, critical and medium.
+  - A status of FAILED, NEEDS WORK or READY, the fixes owed and the proof needed to re-check.
+how_to_use:
+  - Download the pack. Add it to your AI as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - Paste the spec and the earlier QA report. Add your screenshots or give the staging link.
+  - "Say: Review this build for launch. Check every claim in the QA report against the evidence. Do not trust scores."
+  - Read the claims check first. Make sure it matched each claim to the right proof.
+  - Send the list of required fixes to your developer. Ask for new screenshots of each fix.
+  - After the fixes, paste this report and the new screenshots back to run the review again.
+how_it_works:
+  - title: Collect the facts
+    text: It lists what the build should do, what was claimed and what proof you gave. It marks missing proof as MISSING.
+  - title: Check the earlier QA
+    text: It tests each claim and each fixed issue against the screenshots and results. Perfect scores raise a flag.
+  - title: Walk the user paths
+    text: It follows each main path step by step and compares the before and after screens.
+  - title: Compare to the spec
+    text: It quotes each spec line and says if the build meets it, with the screenshot that shows it.
+  - title: Check the numbers
+    text: It reads the load times and test results you gave. The original treats over 3 seconds as a fail, and you can change that limit.
+  - title: Give the status
+    text: It starts at NEEDS WORK. It moves to READY only when the evidence is complete, and to FAILED for a proven blocker.
+output_shape: |-
+  VALIDATION
+    Evidence reviewed <list> | MISSING <list>
+
+  QA CLAIMS CHECK
+    <claim from the QA report> | CONFIRMED or CHALLENGED | Evidence <file or result>
+
+  USER PATHS
+    <path> | <step 1, 2, 3 with evidence> | PASS or FAIL
+
+  SPEC VS BUILD
+    Spec says "<quote>" | Build shows <what is visible> | MET or NOT MET
+
+  ISSUES
+    Still present from QA <list> | New <list> | Critical <list> | Medium <list>
+
+  STATUS
+    <FAILED, NEEDS WORK or READY> | Reason <one line>
+    Required fixes <numbered list> | Proof needed to re-check <list>
+output_sample:
+  input:
+    - Your spec or acceptance rules, pasted as text
+    - A staging link, or screenshots on desktop, tablet and phone
+    - The earlier QA report, score or claims (optional)
+    - Test results or load times (optional)
+  prerequisites:
+    - A QA report or evidence from the Evidence Collector agent, if no testing was done yet
+  output:
+    - name: Validation
+      contains: The evidence reviewed and everything marked MISSING, so you see the limits of the review.
+    - name: QA claims check
+      contains: Each earlier claim marked confirmed or challenged, with the proof for the call.
+    - name: User paths
+      contains: Each main path walked step by step, with pass or fail and the evidence.
+    - name: Spec vs build
+      contains: Each spec line quoted and marked met or not met, with the screenshot.
+    - name: Issues
+      contains: Problems still present from QA, new problems, and which are critical or medium.
+    - name: Status
+      contains: FAILED, NEEDS WORK or READY, the fixes owed and the proof needed to re-check.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Load limit
+    how: Replace the original 3 second limit with your own, such as "pages must load in 2 seconds on a phone".
+  - what: Strictness
+    how: Ask it to list only critical issues if you need a fast yes or no.
+  - what: Quality scale
+    how: Give your own rating scale. The original uses C+ to B+ for first builds, and you can drop it.
+improve:
+  - Keep each review with the build date. Paste the last one back so it can check that every old issue was fixed.
+terms:
+  - term: Spec
+    meaning: The written list of what the build must do and look like.
+  - term: Acceptance rules
+    meaning: The agreed checks that decide if the work is done.
+  - term: User path
+    meaning: A set of steps a visitor takes, such as home page to menu to contact form.
+  - term: NEEDS WORK
+    meaning: The default status. The build may be close, but the proof is not enough yet.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can open a local or staging site and take the screenshots for you.
+    - name: Claude, ChatGPT or Gemini
+      why: In a plain chat they can read the report and screenshots you upload, but they cannot click through the site.
+  inputs:
+    - The report from the Evidence Collector agent.
+    - Load times for the main pages.

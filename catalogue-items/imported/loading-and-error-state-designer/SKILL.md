@@ -18,21 +18,30 @@ Use this skill when you need add appropriate user feedback states (loading, succ
 
 ## When NOT to use
 
-- For only the words inside a state → use `/ss-copy`
-- For accessibility issues in existing states → use `/ss-a11y`
-- For brand-new component creation → use `/ss-component`
-- For analytics or error-logging plumbing — UI presentation only
+- For only the words inside a state: write the wording separately, then drop it into the states.
+- For accessibility problems in states that already exist: run an accessibility review.
+- For a brand-new component: build the component first, then come back here.
+- For analytics or error-logging plumbing: this skill covers what the user sees only.
+- For static content that loads nothing and saves nothing: it needs no states.
 
-Target: **$ARGUMENTS**
+## Inputs
+
+Ask once, in one message, for anything not given:
+- The component or page code, or its path (required). If you cannot read the user's files, ask them to paste the code.
+- What data it loads and what actions it runs, such as a fetch, a form submit or a delete (required if it is not clear from the code)
+- The design style or component library in use (optional). Match what is already in the code.
+
+If the code is missing, ask for it and stop. Never invent data fields, API names or components that are not in the code.
 
 ## Instructions
 
-1. Read the target file and identify all data-dependent areas.
+1. Read the target file and identify all data-dependent areas. Skip areas that load nothing and save nothing.
 
-2. Read the design language reference:
-   - `DESIGN-LANGUAGE.md` sections on Loading States (Skeleton), Empty States, Error States
+2. Look for a design-language or style file in the project (for example `DESIGN-LANGUAGE.md`, a Storybook, or a tokens file). If one exists, follow its rules for loading, empty and error states. If none exists, use the rules below and match the look already in the code.
 
-3. For each data-dependent area, implement ALL 4 states:
+3. For each data-dependent area, implement ALL 4 states.
+
+The code examples below are React with Tailwind classes and are from the original author's design system. Names such as `bg-card`, `bg-surface-muted`, `text-text-secondary`, `EmptyState` and `Button` are examples. Swap in your own components and tokens. For another framework, keep the same rules and write the states in that framework.
 
 ### State 1: Loading (Skeleton)
 ```tsx
@@ -47,9 +56,8 @@ Target: **$ARGUMENTS**
 </div>
 ```
 Rules:
-- Show skeleton for 300ms minimum (prevent flash)
-- Delay skeleton display by 300ms (fast loads skip skeleton entirely)
-- Use `animate-pulse` (1.5s cycle)
+- Wait 300ms before showing the skeleton, so fast loads skip it. Once it shows, keep it up for at least 300ms, so it does not flash.
+- Use a soft pulse (1.5s cycle)
 - Match skeleton shapes to real content dimensions
 - Never use spinners inside cards
 
@@ -64,9 +72,9 @@ Rules:
 ```
 Rules:
 - Center-aligned in the card
-- Icon: 32px, `text-text-tertiary`
-- Title: 14px, `text-text-secondary`
-- Always suggest a next action
+- Icon: 32px, a quiet (tertiary) text color
+- Title: 14px, a secondary text color
+- Say why it is empty, and always suggest a next action
 - Zero values show as "0" (don't hide or dash)
 
 ### State 3: Error (Load Failed)
@@ -78,10 +86,10 @@ Rules:
 </div>
 ```
 Rules:
-- Partial failure: only affected card shows error, rest loads normally
-- Full page failure: full-screen EmptyState with retry
-- Error message: plain language, blame the system
-- Always provide retry button
+- Partial failure: only the affected card shows the error, the rest loads normally
+- Full page failure: a full-screen empty-style message with retry
+- Error message: plain language, blame the system, not the user
+- Always provide a retry button
 
 ### State 4: Success (Action Feedback)
 ```tsx
@@ -94,8 +102,9 @@ toast("Item deleted", { action: { label: "Undo", onClick: handleUndo } })
 Rules:
 - Info toast: 3s display
 - Action toast (with undo): 5s display
-- Toast position: above BottomNav
-- One toast at a time (new replaces old)
+- If the app has a bottom navigation bar, place the toast above it
+- One toast at a time (a new one replaces the old one)
+- If the project has no toast component, use its existing alert or banner pattern. Do not add a new library without asking.
 
 4. Implementation pattern:
 ```tsx
@@ -107,7 +116,21 @@ function DataCard({ data, isLoading, error }) {
 }
 ```
 
-5. Check `prefers-reduced-motion` — disable `animate-pulse` when reduced motion is preferred.
+5. Respect reduced motion. Turn off the pulse when the user prefers reduced motion.
+
+6. Check your work. Re-read the changed code and confirm that each data-dependent area has all four states, that retry calls the real reload function, and that nothing else in the file changed. If you can run the app, test it with a slow request and a failed request.
+
+## Output format
+
+```
+Changed: <file paths>
+States added
+| Area | Loading | Empty | Error | Success |
+| <component or section> | <skeleton name> | <message and action> | <message and retry> | <toast text> |
+Skipped: <areas with no data, and why>
+Open questions: <wording you guessed, missing reload function, no toast component>
+How to test: <how to force a slow, empty and failed load>
+```
 
 ## Limitations
 

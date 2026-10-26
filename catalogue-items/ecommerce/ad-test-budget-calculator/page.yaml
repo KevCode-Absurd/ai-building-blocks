@@ -1,6 +1,6 @@
 new_slug: ad-test-budget-calculator
 name: "Ad test budget calculator"
-summary: "Give it your target CPA and test days. Get a budget, a keep or cut rule and read window."
+summary: "Work out your ad test budget: daily spend, how much to spend before you judge, and a keep or cut rule, from your target cost per sale."
 job: plan-ad-tests
 thinking: low
 thinking_why: "It is mostly simple arithmetic and clear rules, so a fast, small model is enough."
@@ -17,6 +17,10 @@ when:
   - You are about to launch a batch of new ads and do not know what to spend before judging them.
   - Someone told you to wait for 50 sales in 7 days and that number is far too big for your budget.
   - Your product costs hundreds of dollars and you only see a few sales a week, so tests never seem to finish.
+not_for:
+  - "You want to compare ads that already run inside your scaling campaign: use Meta's own experiment tools, since this plans new tests only."
+  - "You do not know your target cost per sale yet: work out your break-even cost per sale first, with a simple profit sum or with your accountant."
+  - "You want ad copy or hooks written: ask your AI to write the ads first, then come back here to size the test."
 
 you_give:
   - Your target cost per sale (or break-even cost per sale)
@@ -36,6 +40,27 @@ how_to_use:
   - Say how many sales you need to call a test and how many days you have.
   - Add your average order value and orders a week, so it can say if your store has enough signal.
   - Use the checkpoints during the test and write down the result.
+output_sample:
+  input:
+    - Your target cost per sale
+    - How many sales you need to call a result (optional)
+    - How many days you can wait (optional)
+    - Your average order value and orders a week (optional)
+  output:
+    - name: INPUTS USED
+      contains: The numbers it worked from, with MISSING marked next to anything you did not give.
+    - name: TEST BUDGET
+      contains: The daily budget sum, the total for the test, and how it compares with Meta's 50 sales in 7 days advice.
+    - name: JUDGE AT
+      contains: The spend limit in dollars at 3 times or 5 times your target, and the keep, wait or cut rule.
+    - name: READ WINDOW
+      contains: How many days to read results, why, and how many ads to test for one idea.
+    - name: AFTER THE TEST
+      contains: What to do with a winner and with a loser.
+    - name: LOW SIGNAL PLAN
+      contains: "For high order values only: a cheaper signal, organic tests, a rule for what goes to paid, and a final check on purchase."
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none.
 
 how_it_works:
   - title: Sizes the daily budget

@@ -1,6 +1,6 @@
 new_slug: monthly-catalogue-clean-up-keeper
 name: Monthly catalogue clean-up keeper
-summary: Run it monthly. Get missing costs, clashing SKUs and hidden products found, and a short fix list in the right order.
+summary: Check your Shopify product catalogue each month. Find missing costs, clashing SKUs and hidden products, and get a short fix list in order.
 job: run-your-store
 thinking: medium
 thinking_why: It runs read-only reports in a set order and tracks counts. A mid-range model is enough.
@@ -14,6 +14,10 @@ when:
   - You have dozens of products or more and nobody checks the data on a schedule.
   - Your margin or stock reports have looked off and you suspect missing costs.
   - You want to be sure every live product is on every channel you sell on.
+not_for:
+  - "Your store has only a handful of products: look through them by hand, it is faster."
+  - "You want the agent to fix products for you: it only reads and lists fixes, so make the changes in your store admin."
+  - "You need a one-off check of one problem, such as clashing SKUs: run the single skill, such as the duplicate SKU finder, instead."
 you_give:
   - A connection to your Shopify store, or a product export
   - The sales channels every live product should appear on, the first time
@@ -29,6 +33,30 @@ how_to_use:
   - Ask it to run this month's check. Fix costs and SKUs first.
   - Tell it what you fixed. It re-checks those items and shows the new count.
   - Run it again next month. It shows what is new, still open or fixed.
+output_sample:
+  input:
+    - Your Shopify store connection, or a product export
+    - The sales channels every live product should be on (first run)
+    - A naming map for sizes and colours (optional)
+    - Required fields such as material (optional)
+  prerequisites:
+    - An AI that can connect to your store, or a product export with SKU, barcode, cost, stock, collections and channels
+    - Last month's saved counts, if this is not your first run
+  output:
+    - name: This month
+      contains: The problem count for each check, set against last month.
+    - name: Fix first
+      contains: Products with no cost, clashing SKUs and impossible stock, with names and a plain fix.
+    - name: Listings to improve
+      contains: The 15 thinnest listings and what each one is missing.
+    - name: Not selling where it should
+      contains: Products missing from a channel or from every collection.
+    - name: Stuck
+      contains: Problems that have stayed open for three months or more.
+    - name: Skipped
+      contains: Any check not run, and why.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Read last month
     text: Opens the saved counts and channel list, or marks this as the baseline run.

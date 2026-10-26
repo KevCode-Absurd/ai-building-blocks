@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It traces crawl and redirect problems across a whole site.
 new_slug: search-indexing-auditor
 name: Search indexing auditor
-summary: Give it your site, folder or Search Console export. Get why pages are
-  not indexed and a fix list.
+summary: Find why Google is not indexing your pages. Give it your site or a Search Console export. You get a fix list and a cleaner site plan.
 job: build-websites
 headline: Search indexing auditor
-subhead: A diagnosis of why Google is skipping your pages, with a fix list and a
-  cleaner site plan. It finds what is behind messages like "Discovered but not
-  currently indexed" and says whether each cause is content, technical or
-  structure.
+subhead: A diagnosis of why Google is skipping your pages, with a fix list and a cleaner site plan. It finds what is behind messages like "Discovered but not currently indexed" and says whether each cause is content, technical or structure.
 explain: |
   A diagnosis of why Google is skipping your pages, with a fix list and a cleaner site plan. It finds what is behind messages like "Discovered but not currently indexed" and says whether each cause is content, technical or structure.
 
@@ -19,6 +15,10 @@ when:
   - You are moving a site and want to catch redirect loops and lost pages first.
   - Your sitemap has old or broken links and you are not sure which.
   - You are planning a new site structure and want it checked before launch.
+not_for:
+  - "You have one page to check: use the URL Inspection tool in Google Search Console."
+  - "Your AI cannot read your files or open web pages: paste a Search Console export into the chat, or ask a developer to run the checks."
+  - "You need to ask Google to index a page: do that yourself in Search Console, because this skill gives steps only."
 you_give:
   - A site address, site folder or Search Console export
   - A sitemap and robots file (optional)
@@ -30,8 +30,34 @@ you_get:
   - Sitemap fixes
   - A redesigned structure and redirect plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your files or open your site.
+  - Open your AI (Claude, ChatGPT or Gemini) and paste in the skill text.
+  - "Add what you have: your site address, a site folder or a Search Console export. Add your sitemap and robots file if you have them."
+  - Check that your AI can read files or open your site. If it cannot, paste the export into the chat instead.
+  - Read the master issue table first. Fix the high priority rows before the rest.
+  - Make the fixes on your site. Then ask for indexing yourself in Search Console.
+output_sample:
+  input:
+    - Your site address, site folder or Search Console export
+    - Your sitemap and robots file (optional)
+    - A planned URL layout (optional)
+    - Recent site changes (optional)
+  prerequisites:
+    - An AI that can read your files or open web pages, for a folder or live site scan
+    - A Search Console export is enough if your AI cannot open sites
+  output:
+    - name: Indexing system health
+      contains: Pages Google rejected, such as 404s, soft 404s and noindex tags, and whether each cause is content, technical or structure.
+    - name: Crawl architecture
+      contains: How deep pages sit, which pages have no links to them, and where crawl effort is wasted.
+    - name: Sitemap audit
+      contains: Which sitemap entries are redirects, broken or not indexable, and whether language tags match.
+    - name: URL and redirect plan
+      contains: Duplicate and parameter URLs, redirect chains and loops, and a cleaner URL and redirect map.
+    - name: Content and server checks
+      contains: Thin or duplicate pages, server errors, blocked crawlers and pages that look different to Google.
+    - name: Internal linking design
+      contains: A hub and spoke linking plan that groups pages by topic.
+    - name: Master issue table
+      contains: Every issue with its affected pages, root cause, technical fix, structural fix, priority and status.
+    - name: Cleanup roadmap
+      contains: A step-by-step fix order from day 1 to day 30.

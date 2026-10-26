@@ -1,6 +1,6 @@
 new_slug: campaign-email-writer
 name: Campaign email writer
-summary: Give it a campaign goal and product facts. Get email copy by block, with subject lines.
+summary: Write a campaign email that says one thing. Give it your goal and product facts. You get subject lines, copy by block, a plain-text version and two A/B tests.
 job: write-emails
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You have a launch, sale, restock or value email to send this week.
   - Your emails get opens but few clicks, and you suspect the message is too crowded.
   - You use AI to draft emails and want them to sound like your store.
+not_for:
+  - "You already have a draft and want it checked: use the Email draft reviewer."
+  - "You are writing to a cold list or a first contact: write a short personal note yourself, because this skill assumes people agreed to hear from you."
+  - "You want to clean up AI-sounding copy: use the Anti-AI-slop copy editor."
 you_give:
   - The campaign type and goal (promotion, launch, value or restock)
   - Product or topic facts, including any real deadline or stock limit
@@ -30,6 +34,28 @@ how_to_use:
   - Paste your brand voice notes and the best-fit reviews, if you have them.
   - Read the draft, edit it by hand and check every claim against your facts.
   - Send variant A and B as a manual 50/50 split and judge by orders.
+output_sample:
+  input:
+    - Campaign type and goal (promotion, launch, value or restock)
+    - Product or topic facts, with any real deadline or stock limit
+    - Your customers' pains and doubts
+    - Your brand voice (optional)
+    - Reviews that answer a doubt (optional)
+  output:
+    - name: Subject and preview options
+      contains: Two subject and preview pairs, one with value in the first three words and one short title-case option.
+    - name: Email
+      contains: "About 100 words in blocks: banner, headline, subhead, body, review, benefit block, code line, button and optional P.S."
+    - name: Plain-text version
+      contains: A short friendly note signed by a person, with one call to action.
+    - name: A/B variants
+      contains: Version A as written and version B with one thing changed.
+    - name: Claims check
+      contains: Each claim in the email set against your facts, marked pass or fail.
+    - name: Checks missed
+      contains: Any check that still fails, or none.
+    - name: Missing
+      contains: Any facts, doubts, voice notes or reviews you did not give, so nothing is invented.
 how_it_works:
   - title: Sets one message
     text: One core message per email, and one or two themes at most. It cuts filler and long paragraphs.

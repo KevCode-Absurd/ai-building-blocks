@@ -1,13 +1,13 @@
 slug: rough-text-to-article-tidier
 name: Rough text to article tidier
-summary: Paste rough text. Get a tidy article with a title, summary and headings, in your words.
+summary: Turn rough notes or a transcript into a tidy article with a title, summary, headings and lists. Your words stay, and every change is listed.
 category: general
 type: prompt
 role: make
 job: copy
 level: beginner
 inputs:
-  - type: source_text
+  - type: copy_draft
     required: true
 outputs:
   - type: document

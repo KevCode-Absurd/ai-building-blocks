@@ -1,33 +1,26 @@
 slug: issuer-revenue-comparability-review-assistant
 name: Issuer revenue comparability review assistant
-summary: Review new revenue disclosures for period, currency, perimeter and presentation changes.
+summary: Check if a company's sales growth is like for like after period, currency, business and reporting changes. Get a change log and workbook.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - build-a-comparable-trailing-revenue-model
   - gross-to-net-revenue-bridge
 steps:
   - uses: build-a-comparable-trailing-revenue-model
-    note: Run the governing workflow when On a new user-provided revenue release or restated comparative note, compare business/currency buckets and fiscal periods with the accepted revenue model.
+    note: Run this when a new revenue release or a restated comparative note arrives. Compare its periods, businesses and currencies with the accepted model, then rebuild trailing revenue on one basis. It hands step 2 a revenue figure that bridges back to what was reported.
   - uses: gross-to-net-revenue-bridge
-    note: If gross-versus-net presentation or deductions changed, rebuild the policy-supported revenue bridge before calculating growth. An unexplained difference stays a residual and is never automatically called an acquisition or currency effect.
+    note: Run this only when the way sales are shown changed, such as gross to net, or deductions changed. Rebuild the bridge from gross billings to reported revenue before you work out growth. An unexplained difference stays as a residual and is not labelled an acquisition or currency effect.
 origin: own
 version: 1.0.0
 added: 2026-10-22

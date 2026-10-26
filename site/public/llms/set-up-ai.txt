@@ -1,78 +1,88 @@
 # Set up AI to work for you: AI Blocks
 
-> 74 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 84 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Ad prompt comparison review](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer): Paste old and new prompt ads. Get a blind test, a decision and a score out of 100.
-- [Agent action approval reviewer](https://useaiblocks.com/skills/copilot-verify-agent-action): Share a proposed agent action. Get its scope, risks and missing evidence checked before execution.
-- [Agent answer feedback designer](https://useaiblocks.com/skills/copilot-agentic-eval): Share an agent task. Get checks and feedback loops to improve the quality of its answers.
-- [Agent context setter](https://useaiblocks.com/skills/agent-context-setter): Describe your project. Get the right rules and files loaded so your AI stays accurate through long sessions.
-- [Agent goal writer](https://useaiblocks.com/skills/agent-goal-writer): Give it a vague job. Get a goal an AI agent can finish, with proof of done, limits and stop rules.
-- [Agent instructions auditor](https://useaiblocks.com/skills/agent-instructions-auditor): Point it at your repo. Get a short, checked AGENTS.md with real commands and no guesses.
+- [Ad prompt comparison reviewer](https://useaiblocks.com/skills/old-vs-new-ad-prompt-scorer): Compare old and new ad prompts with a blind test. Paste both sets of ads. Get a keep-or-switch decision and a score out of 100.
+- [Agent action approval reviewer](https://useaiblocks.com/skills/copilot-verify-agent-action): Check an AI agent action before it runs. Get a review of its scope, approval, risks and missing evidence, with a clear result and reason.
+- [Agent goal writer](https://useaiblocks.com/skills/agent-goal-writer): Share a multi-step job or existing goal. Get a clear outcome, proof of completion, a bounded work loop and stop rules.
 - [Agent loop designer](https://useaiblocks.com/skills/agent-loop-designer): Say the job you want repeated. Get a bounded AI loop with checks, stop rules and handoffs.
-- [Agent OWASP risk checker](https://useaiblocks.com/skills/copilot-agent-owasp-compliance): Share your agent code. Get findings against the OWASP agent risks, with evidence and fixes.
-- [Agent plugin integrity checker](https://useaiblocks.com/skills/copilot-agent-supply-chain): Share your agent tools and packages. Get file checks and a record of supply chain risks.
-- [Agent prompt writer](https://useaiblocks.com/skills/agent-prompt-writer): Paste a rough request. Answer a few questions. Get one clear prompt to give an AI agent.
-- [Agent readiness dashboard builder](https://useaiblocks.com/skills/copilot-acreadiness-assess): Point it at your repo. Get a dashboard showing what stops coding agents from working well.
-- [AgentRC instruction file writer](https://useaiblocks.com/skills/copilot-acreadiness-generate-instructions): Point it at your repo. Get project rules for coding agents, with a preview before files change.
-- [AI agent architecture planner](https://useaiblocks.com/skills/copilot-agent-architecture): Describe the agent you need. Get a system design and the trade-offs to settle before building.
-- [AI agent control designer](https://useaiblocks.com/skills/copilot-agent-governance): Share how your agent uses tools. Get controls for permissions, trust and risky actions.
+- [Agent OWASP risk checker](https://useaiblocks.com/skills/copilot-agent-owasp-compliance): Check your AI agent code against the OWASP agent security risks. Get a pass or fail for each of 10 risks, with evidence and fixes.
+- [Agent plugin integrity checker](https://useaiblocks.com/skills/copilot-agent-supply-chain): Check your agent plugin folder for changed, missing or new files. Get a hash manifest and a list of loose dependency versions.
+- [Agent prompt writer](https://useaiblocks.com/skills/agent-prompt-writer): Turn a rough request into a clear AI agent prompt. Answer a few questions and get one prompt to copy, with exact names and paths filled in.
+- [Agent readiness dashboard builder](https://useaiblocks.com/skills/copilot-acreadiness-assess): Run an agent readiness check on your repo and get a dashboard of what stops coding agents from working well, with a fix plan.
+- [AgentRC project rules writer](https://useaiblocks.com/skills/copilot-acreadiness-generate-instructions): Write AI agent instruction files for your code repo. Get a Copilot instructions file, with a dry-run preview before any file changes.
+- [AI agent architecture planner](https://useaiblocks.com/skills/copilot-agent-architecture): Plan your AI agent architecture before you build. Describe the job and get a design, a PDF report, a diagram and the risks to settle.
+- [AI agent control designer](https://useaiblocks.com/skills/copilot-agent-governance): Set tool permissions, approval rules and an audit log for your AI agent. Get a policy file and a test list before it goes live.
+- [AI agent feedback designer](https://useaiblocks.com/skills/copilot-agentic-eval): Make your AI agent check and fix its own answers. Get a pass or fail rubric, a rewritten task prompt and a stop rule for one task.
+- [AI agent team planner](https://useaiblocks.com/agents/agency-agents-orchestrator): Plan a software build run by a team of AI agents: the phases, who hands what to whom, pass or fail quality checks and when to stop and ask you.
 - [AI agent workflow designer](https://useaiblocks.com/skills/ai-agent-workflow-designer): Describe the job. Get a multi-agent design with handoffs, failure handling and cost limits.
-- [AI app evaluation planner](https://useaiblocks.com/skills/copilot-eval-driven-dev): Share your AI app and goal. Get test cases and a way to compare changes with real results.
-- [AI build-or-buy advisor](https://useaiblocks.com/skills/ai-build-or-buy-advisor): Describe an AI plan. Get an API vs fine-tune call, AI risk class under EU rules and cost break-even.
-- [AI coding agent rules writer](https://useaiblocks.com/skills/ai-coding-agent-rules-writer): Describe your project. Get a plan file and agent rules for working one test at a time.
-- [AI memory habit setter](https://useaiblocks.com/skills/ai-memory-habit-setter): Connect any memory tool. Get clear rules for when your AI recalls and saves decisions, so it stops repeating itself.
-- [AI model training debugger](https://useaiblocks.com/skills/ai-model-training-debugger): Describe your model, data and what goes wrong. Get a check order that finds silent bugs before tuning.
-- [AI pilot evaluation review assistant](https://useaiblocks.com/agents/ai-pilot-evaluation-review-assistant): A pilot evidence brief, data quality gaps and go stop checklist result.
+- [AI app quality reviewer](https://useaiblocks.com/workflows/check-an-ai-app-improvement): Set useful test cases for an AI app change, plan feedback checks and rank the next fixes from real evidence.
+- [AI build-or-buy advisor](https://useaiblocks.com/skills/ai-build-or-buy-advisor): Share your AI plan and usage for model choices, cost estimates, risk guidance, and hiring advice.
+- [AI coding agent rules writer](https://useaiblocks.com/skills/ai-coding-agent-rules-writer): Set up an AI coding agent rules file and plan file so your agent works one test at a time and cannot delete tests to pass.
+- [AI coding rules writer and auditor](https://useaiblocks.com/skills/agent-instructions-auditor): Share your code project. Get an evidence-based AGENTS.md edit, with commands, file rules and any checks that remain unverified.
+- [AI creative workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner): List the steps in your creative AI workflow. Get clear instructions for passing facts and results between them, with claim limits kept intact.
+- [AI memory routine designer](https://useaiblocks.com/skills/ai-memory-habit-setter): Share your memory tool. Get rules for when AI looks up past work and saves key choices, fixes and lessons.
+- [AI model routing planner](https://useaiblocks.com/agents/agency-engineering-autonomous-optimization-architect): Plan which AI model handles each task in your app, with a spend cap, a backup model and a safe trial before any switch. Bring your setup.
+- [AI model training debugger](https://useaiblocks.com/skills/ai-model-training-debugger): Find silent bugs in your AI model training before you tune. Give it your model, data and symptoms. You get a fixed order of checks.
+- [AI pilot decision checker](https://useaiblocks.com/workflows/prepare-an-ai-pilot-go-decision): Share your pilot goals, baseline, real results and approval rules. Get checked findings, data gaps and a go-or-stop checklist result.
+- [AI pilot results reviewer](https://useaiblocks.com/agents/ai-pilot-evaluation-review-assistant): Review actual pilot results against the approved baseline and checklist. Get evidence gaps and a go-or-stop result with the reasons.
+- [AI project context organiser](https://useaiblocks.com/skills/agent-context-setter): Share your project and next task. Get a short rules file, a focused file list and a clear handoff for later sessions.
 - [AI prompt editor](https://useaiblocks.com/prompts/rough-prompt-rebuilder): Share your rough prompt. Get a clearer version with the task, facts and requested result stated plainly.
-- [AI task brief writer](https://useaiblocks.com/prompts/job-to-agent-goal-writer): Paste a vague job. Get a goal an AI agent can finish, with proof of done and stop rules.
-- [AI task handover writer](https://useaiblocks.com/skills/task-handoff-writer): Describe work to pass on. Get a clear handoff to another AI agent, with checks along the way.
-- [AI task opportunity review](https://useaiblocks.com/skills/role-task-breakdown-for-ai-help): Describe a job and who does it. Get the tasks that drain or endanger people and where AI can help.
-- [AI workflow instructions planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner): List your AI workflow steps. Get clear instructions for passing facts and results between them.
-- [AI workflow quality investigator](https://useaiblocks.com/skills/copilot-diagnose): Share a workflow that disappoints. Get its weak points ranked, with causes and practical fixes.
+- [AI task brief writer](https://useaiblocks.com/prompts/job-to-agent-goal-writer): Describe a job and your limits. Get a clear AI task brief with scope, completion checks, approval points and stop rules.
+- [AI task handover and risk planner](https://useaiblocks.com/workflows/hand-tasks-to-ai-without-losing-what-the-job-quietly-does): Describe a role and its tasks. Get AI task options, hidden human duties, handoff notes and a failure-risk review.
+- [AI task handover writer](https://useaiblocks.com/skills/task-handoff-writer): Write a task handoff brief for another AI agent: goal, files it owns, limits and a done check. Plus a plan to track its progress.
+- [AI task loop coordinator](https://useaiblocks.com/skills/goal-to-task-loop-runner): Give it a goal and a folder of skills. Get a checked task plan that runs one task at a time.
+- [AI task opportunity reviewer](https://useaiblocks.com/skills/role-task-breakdown-for-ai-help): Break a job into tasks and find which ones drain or endanger people. See where AI can take the load in a role breakdown, with a person in charge.
+- [AI workflow quality investigator](https://useaiblocks.com/skills/copilot-diagnose): Check an AI workflow for weak spots before it goes live. Get five scores, the worst problems ranked, and clear fixes for each.
 - [AI writing workflow planner](https://useaiblocks.com/skills/ai-writing-workflow-planner): Describe how your team writes. Get what AI should draft, what people own, and rules that keep your voice.
-- [Backup and recovery planner](https://useaiblocks.com/skills/backup-and-recovery-planner): Describe your systems. Get how much loss you can take, a backup plan and a restore drill to run.
-- [Check a new automation before relying on it](https://useaiblocks.com/workflows/check-a-new-automation-before-relying-on-it): Share the source files. Get a process map, failure checks and a reviewable operating procedure.
-- [Check an AI app improvement](https://useaiblocks.com/workflows/check-an-ai-app-improvement): Share your AI app and proposed change. Get evaluation criteria, feedback loops and an evidence-based comparison plan.
-- [Claude memory curator](https://useaiblocks.com/skills/claude-memory-curator): Point it at Claude Code memory. Get what it learned reviewed, kept rules moved up and stale notes cut.
-- [Claude power-user coach](https://useaiblocks.com/skills/claude-power-user-coach): Tell it your work. Get lessons and exercises that make you faster with Claude, one step at a time.
-- [Coding agent readiness criteria planner](https://useaiblocks.com/skills/copilot-acreadiness-policy): Share your repo's needs. Get scoring rules that fit the project and show which checks matter.
-- [Content to workflow builder](https://useaiblocks.com/skills/long-source-to-workflow): Paste a long article, transcript or book notes. Get the method as a workflow, with a skill for every step.
-- [Focus-friendly answer style setter](https://useaiblocks.com/skills/focus-friendly-answers): Turn it on once. Get every reply with the next action first, short numbered steps and time estimates.
+- [Automation governance planner](https://useaiblocks.com/agents/agency-automation-governance-architect): Decide if a business process should be automated. Get a verdict, the risks, a safe design with fallback and the tests to pass before go-live.
+- [Automation reliability reviewer](https://useaiblocks.com/workflows/check-a-new-automation-before-relying-on-it): Review an automation's triggers, inputs and failure paths. Get a process map, test checklist and recovery guide.
+- [Backup and recovery planner](https://useaiblocks.com/skills/backup-and-recovery-planner): Describe systems and agreed loss and downtime limits. Get a backup plan, restore steps and drills, with results when actually run.
+- [Campaign copy writer](https://useaiblocks.com/agents/campaign-copy-draft-agent): Get campaign copy checked against your approved claims. Every claim is tied to its proof, gaps are flagged and a checkpoint is saved.
+- [Claude Code memory editor](https://useaiblocks.com/skills/claude-memory-curator): Review your Claude Code memory notes. Keep the good ones, turn repeated lessons into rules and cut stale entries from your memory file.
+- [Claude usage coach](https://useaiblocks.com/skills/claude-power-user-coach): Share your work. Get lessons and exercises that make you faster with Claude, one step at a time.
+- [Claude workplace glossary builder](https://useaiblocks.com/skills/workplace-shorthand-memory): Turn work terms, nicknames, and project names into Claude memory files and a word list.
+- [Coding agent readiness test planner](https://useaiblocks.com/skills/copilot-acreadiness-policy): Set up an AgentRC readiness policy: turn off checks that don't fit your repo, raise the ones that matter, and set a pass-rate goal.
+- [Coding agent token use optimizer](https://useaiblocks.com/skills/token-saver-for-coding-agents): Cut wasted tokens in coding sessions. Your AI reads only what it needs and keeps test and build logs short, so you hit usage limits later.
+- [Coding-agent project readiness reviewer](https://useaiblocks.com/workflows/make-your-repo-agent-ready): Share your project code and needs. Get readiness findings, draft scoring rules and a preview of instructions for coding agents.
+- [Complete file and list writer](https://useaiblocks.com/skills/full-answer-enforcer): Request a complete file or list. Get the supplied scope filled in without placeholder sections, with missing inputs stated.
+- [Concise AI reply writer](https://useaiblocks.com/skills/short-reply-mode): Switch it on. Get much shorter AI replies that drop filler but keep the facts, to save tokens.
+- [Content to workflow builder](https://useaiblocks.com/skills/long-source-to-workflow): Share a source that teaches a method. Get an outline to approve, then reusable skills and a linked workflow.
+- [Creative AI prompt writer](https://useaiblocks.com/prompts/creative-ai-chat-starter-prompts): Name a creative task like copy, hooks, ads or a sales page. Get one ready-to-paste AI prompt filled with your facts and clear output rules.
+- [Creative evidence reviewer](https://useaiblocks.com/agents/creative-evidence-review-agent): Check ad creative against your brief and product facts. Get ranked issues, a pass or fix call per check and a checkpoint.
+- [Daily AI tool finder](https://useaiblocks.com/skills/daily-ai-help-discovery-guide): Talk through a daily hassle. Get tool ideas or a next step, with any saved memory handled only by choice.
+- [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker): Check finished files against your original request. Get a pass or fail line for every requirement, fixes for small gaps and a README of what is left.
+- [Editable deliverable file writer](https://useaiblocks.com/skills/request-deliverable-drafter): Share the agreed request brief and source facts. Get the named editable files with sources and gaps shown.
+- [Focus-friendly reply style designer](https://useaiblocks.com/skills/focus-friendly-answers): Set up focus-friendly answers once. Your AI then gives the next action first, short numbered steps and time estimates in every reply.
 - [Folder guide writer](https://useaiblocks.com/skills/folder-guide-writer): Pick a folder. Get a short CLAUDE.md that tells future AI helpers how that folder works.
-- [Full answer enforcer](https://useaiblocks.com/skills/full-answer-enforcer): Ask for a full file or list. Get every line, with no placeholders, skipped parts or half answers.
-- [Give AI tasks and keep what the job quietly does](https://useaiblocks.com/workflows/hand-tasks-to-ai-without-losing-what-the-job-quietly-does): Give it a job. Get the tasks AI takes on, what each hides, safe handoffs and a failure check.
-- [Goal-to-task loop runner](https://useaiblocks.com/skills/goal-to-task-loop-runner): Give it a goal and a folder of skills. Get a checked task plan that runs one task at a time.
-- [Local AI model setup](https://useaiblocks.com/skills/local-ai-model-setup): Say what hardware you have. Get Ollama and Open WebUI running local models, tuned for your graphics card.
-- [Long chat failure diagnoser](https://useaiblocks.com/skills/long-chat-failure-diagnoser): Describe how your AI gets worse in long chats. Get the likely cause and a fix to try.
-- [Long chat summariser](https://useaiblocks.com/skills/long-chat-summariser): Give it a long AI session. Get a structured summary that keeps files, decisions and next steps.
-- [Make your repo agent ready](https://useaiblocks.com/workflows/make-your-repo-agent-ready): Share your repo. Get a readiness dashboard, agreed scoring rules and project instructions for coding agents.
-- [Marketing prompt tester](https://useaiblocks.com/skills/marketing-prompt-tester): Give it your prompts and test cases. Get scored comparisons of each version and a saved version history.
-- [MATLAB installer](https://useaiblocks.com/skills/matlab-installer): Name the MathWorks products. Get them installed from the command line, the same way each time.
-- [MATLAB product lister](https://useaiblocks.com/skills/matlab-product-lister): Point it at a MATLAB install. Get a list of every product and add-on package in it.
-- [MCP handler security reviewer](https://useaiblocks.com/skills/copilot-mcp-implementation-security-review): Share your MCP code. Get risks traced through tool handlers, with evidence and fixes.
-- [MCP protocol release tester](https://useaiblocks.com/skills/copilot-mcp-release-qa): Share your MCP server. Get a real session check of its tools, errors and advertised features.
-- [MCP settings risk checker](https://useaiblocks.com/skills/copilot-mcp-security-audit): Share your MCP settings. Get risks in permissions, trust and server access, with fixes.
-- [Metric-driven file improver](https://useaiblocks.com/skills/metric-driven-file-improver): Pick a file and a score. Get an agent that edits, measures and keeps only changes that raise the score.
-- [Multi-agent workflow planner](https://useaiblocks.com/skills/multi-agent-workflow-planner): Give it a big task. Get a plan that splits it among AI agents with clear owners, handoffs and checks.
-- [Parallel work coordinator](https://useaiblocks.com/skills/parallel-work-coordinator): Give it a large task. Get it split across helper agents with clear ownership, then merged into one checked result.
-- [Prepare an AI pilot go decision](https://useaiblocks.com/workflows/prepare-an-ai-pilot-go-decision): Share the source files. Get a pilot evidence brief, data quality gaps and go stop checklist result.
-- [Project memory builder](https://useaiblocks.com/skills/project-memory-builder): Give it a bloated project notes file. Get a lean version, plus a way for your AI to save lasting facts.
-- [Project memory organizer](https://useaiblocks.com/skills/project-memory-organizer): Point it at your project. Get small context files per folder so your AI reads less and costs less.
-- [Prompt and skill tuner](https://useaiblocks.com/agents/prompt-and-skill-tuner): Give it a prompt or skill and test cases. It tests, fixes and re-tests until the checks pass, within four rounds.
-- [Prompt change manager](https://useaiblocks.com/skills/prompt-change-manager): Keep prompts in production. Get versioning, tests of changes, a registry and safe rollbacks.
-- [Prompt fixer](https://useaiblocks.com/skills/prompt-fixer): Give it a prompt that gives weak or uneven answers. Get a tighter version that works more reliably.
-- [Prompt improver](https://useaiblocks.com/skills/prompt-improver): Give it a rough prompt. Get it rebuilt into a clear, structured prompt using a fitting framework.
-- [Prompt safety and bias reviewer](https://useaiblocks.com/skills/copilot-ai-prompt-engineering-safety-review): Paste your prompt. Get risks in its wording, likely failure cases and a safer draft.
-- [Prompt tester and tuner](https://useaiblocks.com/skills/prompt-tester-and-tuner): Give it a prompt and test cases. Get scores for each version and a better prompt backed by results.
-- [Prove your new ad AI setup beats the old one](https://useaiblocks.com/workflows/ad-ai-setup-test): Give it a story ad test plan. Get handoff cards that keep facts whole, then a blind old-versus-new score.
-- [Recurring marketing routine builder](https://useaiblocks.com/skills/marketing-routine-builder): Pick an outcome. Get a loop that runs weekly or daily, checks itself and stops when it should.
-- [Repeatable AI loop designer](https://useaiblocks.com/skills/repeatable-ai-loop-designer): Describe a recurring job. Get a loop with triggers, checks, stop rules and handoffs.
-- [Request acceptance brief](https://useaiblocks.com/skills/request-acceptance-brief): Turn any concrete request into a scope, input list, named deliverables and acceptance checks.
-- [Request acceptance checker](https://useaiblocks.com/skills/request-acceptance-checker): Check generated files against every requirement, repair bounded failures and package an honest handoff.
-- [Request deliverable drafter](https://useaiblocks.com/skills/request-deliverable-drafter): Use an agreed request brief to create its named files, with source evidence and explicit gaps.
-- [Routine task automation planner](https://useaiblocks.com/skills/repeat-chore-automation-planner): List what your team does each week. Get the chores worth handing to a tool, with steps a new hire can run.
-- [Short reply mode](https://useaiblocks.com/skills/short-reply-mode): Switch it on. Get much shorter AI replies that drop filler but keep the facts, to save tokens.
-- [Task automation builder](https://useaiblocks.com/skills/task-automation-builder): Name a repetitive task. Get a script, schedule or trigger that does it for you.
-- [Token saver for coding agents](https://useaiblocks.com/skills/token-saver-for-coding-agents): Turn it on for coding sessions. Get fewer wasted tokens from big reads, noisy logs and repeat reads.
-- [Tune a prompt with real tests, then keep versions](https://useaiblocks.com/workflows/tune-a-prompt-with-real-tests-then-ship-it-with-versions): Give it a rough prompt. Get a clear version, scores on your tests and safe rules for changing it.
-- [Workplace shorthand memory builder](https://useaiblocks.com/skills/workplace-shorthand-memory): Share your nicknames and codes. Get a memory so Claude knows who and what you mean in short requests.
+- [Google Ads results reviewer](https://useaiblocks.com/agents/google-results-review-agent): Review your Google Ads results against your targets. Get ranked findings, tracking gaps, proposed changes and a checkpoint for your next review.
+- [Local AI model setup planner](https://useaiblocks.com/skills/local-ai-model-setup): Share your hardware. Get steps to run Ollama and Open WebUI with a local model.
+- [Long chat failure diagnoser](https://useaiblocks.com/skills/long-chat-failure-diagnoser): Describe how your AI gets worse in long chats. Get likely failure patterns, checks and fixes to try.
+- [Long chat summariser](https://useaiblocks.com/skills/long-chat-summariser): Turn a long AI chat into a sectioned summary of files, decisions, and next steps.
+- [Marketing prompt tester](https://useaiblocks.com/skills/marketing-prompt-tester): Compare prompt versions on shared test cases. Get scores, flagged failures and a saved version history.
+- [MATLAB installer](https://useaiblocks.com/skills/matlab-installer): Get install scripts and checks for your system, release, and chosen products.
+- [MATLAB package inventory reporter](https://useaiblocks.com/skills/matlab-product-lister): Provide a MATLAB install folder or release. Get its recorded products and support packages in separate lists.
+- [MCP handler security reviewer](https://useaiblocks.com/skills/copilot-mcp-implementation-security-review): Review your MCP server code for security gaps. Get a report of risks in each tool handler, with file and line evidence and fixes.
+- [MCP protocol release tester](https://useaiblocks.com/skills/copilot-mcp-release-qa): Test your MCP server before release. Get a real session check of its tools, errors and docs, with exact commands and a clear pass or fail.
+- [MCP settings risk checker](https://useaiblocks.com/skills/copilot-mcp-security-audit): Share MCP server settings. Get static checks for exposed secrets, shell patterns and changing package versions, with proposed fixes.
+- [Meta Ads results reviewer](https://useaiblocks.com/agents/meta-results-review-agent): Review your Meta Ads results against your targets. Get ranked findings, tracking gaps, proposed fixes and a checkpoint for the next review.
+- [Multi-agent system architect](https://useaiblocks.com/agents/agency-engineering-multi-agent-systems-architect): Design a team of AI agents that holds up in real use, with each agent's job, limits, failure plan and the points where a person signs off.
+- [Multi-agent workflow planner](https://useaiblocks.com/skills/multi-agent-workflow-planner): Plan a multi-agent workflow for a big task. You get a task graph with one owner per step, clear handoffs, approval points and checks.
+- [Parallel work coordinator](https://useaiblocks.com/skills/parallel-work-coordinator): Split a large AI task across helper agents with clear owners, then merge their work into one checked result you can review.
+- [Project memory builder](https://useaiblocks.com/skills/project-memory-builder): Sort an overgrown CLAUDE.md and let your AI save lasting project facts, each traced to its source and kept only after you approve it.
+- [Project memory organizer](https://useaiblocks.com/skills/project-memory-organizer): Share your project. Get small context files per folder so your AI reads less and costs less.
+- [Prompt and skill improvement tester](https://useaiblocks.com/agents/prompt-and-skill-tuner): Test a prompt or skill against agreed cases. Try one change at a time and keep fixes that avoid regressions.
+- [Prompt change manager](https://useaiblocks.com/skills/prompt-change-manager): Set up prompt versioning, tests and rollback for AI features already live. Get a prompt registry, eval plan and safe deploy steps for your team.
+- [Prompt editor](https://useaiblocks.com/skills/prompt-improver): Turn a rough request into a clear prompt for any AI. Give it your idea and get a prompt improver result you can paste and use right away.
+- [Prompt fixer](https://useaiblocks.com/skills/prompt-fixer): Fix a prompt that gives vague or uneven answers. Paste it in with one bad reply and get a tighter version that works more reliably.
+- [Prompt safety and bias reviewer](https://useaiblocks.com/skills/copilot-ai-prompt-engineering-safety-review): Check an AI prompt for safety, bias and security risks before you use it. Get a risk report, test ideas and a safer rewritten prompt.
+- [Prompt tester and tuner](https://useaiblocks.com/skills/prompt-tester-and-tuner): Test a prompt against examples. Get scores for each version and a revision to review.
+- [Prompt version and test planner](https://useaiblocks.com/workflows/tune-a-prompt-with-real-tests-then-ship-it-with-versions): Share your prompt, task and examples. Get a clearer draft, test cases, observed comparisons where tools allow and a version record.
+- [Python LLM app evaluation planner](https://useaiblocks.com/skills/copilot-eval-driven-dev): Share a Python LLM app and goal. Get test cases and a plan to compare changes against results.
+- [Recurring AI task prompt builder](https://useaiblocks.com/skills/repeatable-ai-loop-designer): Turn a recurring task or existing loop into a bounded prompt with checks and stop rules.
+- [Recurring marketing workflow planner](https://useaiblocks.com/skills/marketing-routine-builder): Build a recurring marketing routine for one outcome. Get a loop with a run schedule, approval points and stop rules, so it checks itself and halts.
+- [Request brief builder](https://useaiblocks.com/skills/request-acceptance-brief): Share your request and constraints. Get a clear brief with files, required inputs and checks for success.
+- [Routine task automation planner](https://useaiblocks.com/skills/repeat-chore-automation-planner): Plan which repeat chores to automate. List your weekly tasks and get ranked picks, steps a new hire can run, and a small first version.
+- [Specialist findings coordinator](https://useaiblocks.com/agents/specialist-findings-brief-agent): Combine findings from several specialists into one decision brief. Settle clashes, rank next steps and get a checkpoint with owners.
+- [Story ad workflow test planner](https://useaiblocks.com/workflows/ad-ai-setup-test): Plan an old-versus-new story ad test, define what each AI step receives, then compare saved outputs and costs.
+- [Task automation builder](https://useaiblocks.com/skills/task-automation-builder): Turn a repetitive task into a script, schedule or file watcher. Name the task and its trigger, and get a tested task automation you can run.

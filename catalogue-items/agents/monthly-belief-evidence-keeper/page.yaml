@@ -1,6 +1,6 @@
 new_slug: monthly-belief-evidence-keeper
 name: Monthly belief and evidence keeper
-summary: Give it the beliefs your plan rests on. Each month get the evidence for and against, and what to test next.
+summary: Track the beliefs your plan rests on. Each month get the evidence for and against, a keep, change or stop call, and what to test next.
 job: think-and-decide
 thinking: high
 thinking_why: It weighs evidence against beliefs the person wants to keep, judges when a bet failed and must not flatter. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your plan rests on beliefs about buyers and prices that nobody has tested in a year.
   - You keep remembering the evidence for your idea and losing track of the evidence against.
   - You want a monthly habit that tells you when a belief has quietly died.
+not_for:
+  - "You need to weigh one single decision once: paste it into your AI as a plain question, or ask a trusted person to challenge it."
+  - "You want the plan changed for you: this agent never edits the plan, so make that call yourself or with your team."
+  - "You have no beliefs written down yet and no evidence to check: first write five to ten one-sentence beliefs, then come back."
 you_give:
   - Five to ten beliefs your plan rests on, each in one sentence
   - This month's evidence, with where each fact came from (advised)
@@ -32,6 +36,31 @@ how_to_use:
   - Each month, paste the new evidence with its source. Include the facts that hurt.
   - Read the moved beliefs and the flags. Change the plan yourself where the record says to.
   - Run it again on the first Friday of next month, and on any bet's check date.
+output_sample:
+  input:
+    - Five to ten beliefs your plan rests on, one sentence each
+    - This month's evidence, with where each fact came from
+    - Your plan, so a changed belief can be traced (optional)
+    - Last month's register, once it exists
+  prerequisites:
+    - An AI that can keep notes or files between months, such as Claude Code, or a note you keep yourself
+  output:
+    - name: This month
+      contains: One line with beliefs tracked, how many moved, how many are quiet and how many bets are due.
+    - name: The register
+      contains: Each belief with facts for and against, the verdict and the next check date.
+    - name: Moved beliefs
+      contains: New facts against and for, a keep, change or stop call, and what to learn next.
+    - name: The record says otherwise
+      contains: Any belief you still hold against strong evidence, with your stated reason.
+    - name: Quiet beliefs
+      contains: Hardest questions, how many you can answer, and a learn, borrow, start small or pass plan.
+    - name: Bets
+      contains: Each bet that is due, with what was predicted, what happened and a held, failed or unclear verdict.
+    - name: What the record cannot show
+      contains: One line per belief on what the evidence cannot tell, and the fact that would settle it.
+    - name: Files and missing
+      contains: Each step's file and every line marked MISSING.
 how_it_works:
   - title: Set up each new belief
     text: Writes what it predicts, the fact that would sink it, a small bet and a check date.

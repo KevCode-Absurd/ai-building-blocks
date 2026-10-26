@@ -2,12 +2,19 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: support-ticket-thread-summarizer
 name: Support ticket thread summarizer
-summary: Paste a thread or share a ticket. Get the timeline, attempted fixes, blockers, and next actions.
+summary: Summarize a support ticket thread into a short timeline, what was tried, blockers and next steps. Paste the thread or give a Gorgias ticket number.
 job: help-customers
 headline: Support ticket thread summarizer
 subhead: Paste a conversation or give it a Gorgias ticket number. It tracks the issue, earlier attempts, and who is waiting for what. You get a short summary, timeline, current state, and clear next actions for the next person handling it.
 when:
-  - You use this tool for customer support and need help with this task.
+  - A teammate takes over a ticket with five or more messages and needs to catch up fast.
+  - You are handing a ticket to another team and want a clear note on what was tried.
+  - You return to an old ticket and cannot recall where it stood.
+  - You want to spot long gaps between replies on a ticket.
+not_for:
+  - "You have a single-message ticket: write a short reply yourself, a summary adds nothing."
+  - "You want to write the reply to the customer: draft it yourself or ask your AI for a reply, since this only summarizes."
+  - "Your tickets are in a help desk other than Gorgias: paste the thread text instead of using a ticket number."
 you_give:
   - A pasted thread or a Gorgias ticket number.
   - Any available owner, status, and date details.
@@ -25,8 +32,32 @@ works_best_with:
     - name: Gorgias for ticket lookup; pasted threads also work
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for support ticket thread summarizer by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide a pasted thread or a Gorgias ticket number.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Open your AI (Claude, ChatGPT or Gemini) and paste the skill text from SKILL.md.
+  - Paste the full ticket thread below it. Include dates and names if you have them.
+  - For a Gorgias ticket number, your AI needs to run commands. It also needs Composio CLI with Gorgias linked. If not, copy the thread in by hand.
+  - Check the Current State and Action Items. Fix any owner or date it guessed wrong.
+  - Paste the Action Items into the ticket's internal note or your handover message.
+output_sample:
+  input:
+    - A pasted support thread, or a Gorgias ticket number
+    - Owner, status and dates (optional, if not in the thread)
+  prerequisites:
+    - "For a ticket number: Composio CLI with your Gorgias account linked, and an AI that can run commands"
+    - Not needed if you paste the thread
+  output:
+    - name: Ticket Summary header
+      contains: Subject, ticket number, status, created date, message count, customer name and email, and who it is assigned to.
+    - name: TL;DR
+      contains: One or two sentences on the issue and where it stands now.
+    - name: Problem Statement
+      contains: What the customer is going through or asking for, in plain words.
+    - name: Timeline
+      contains: "A table with one line per message: date, who wrote it and a short summary."
+    - name: What's Been Tried
+      contains: Fixes already attempted, who tried them and what happened.
+    - name: Current State
+      contains: Whether it is resolved, what blocks it, and who is waiting on what.
+    - name: Action Items
+      contains: A checklist of specific next steps, with an owner where known.
+    - name: Internal Notes
+      contains: Context not for the customer, such as related tickets, known bugs and workarounds.

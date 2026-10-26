@@ -2,18 +2,60 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: research-paper-reading-guide
 name: Research paper reading guide
-summary: Share a paper. Get its main idea, evidence and sections to read
-  closely, with questions to test your understanding.
+summary: "Get a research paper reading guide: the main idea, the results, and which parts to read closely. Share the paper and see what to focus on."
 job: study-and-practice
 headline: Research paper reading guide
-subhead: Supply a paper you have permission to use and say what you need from
-  it. Get a reading guide grounded in that paper, with the main claims and
-  sections that deserve a closer read.
+subhead: Share a research paper you have permission to use, and say why you are reading it. You get a plain reading guide with the main idea, the results and the parts worth a close read.
 when:
-  - You are reading a paper for a class
-  - research project or work decision.
+  - Your teacher assigns a paper and you do not know where to start.
+  - You are starting a research project and need to grasp a key paper fast.
+  - You must read a paper before a work decision and have little time.
+  - You get stuck on the math or terms by page two.
+not_for:
+  - "You want to judge whether the paper's claims and evidence hold up: ask for paper-critique instead."
+  - "You want to compare several papers on one topic: ask for literature-map instead."
+  - "You want a quiz to test what you remember: ask for understanding-check instead."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Attach the paper as a PDF, or paste its text. Check you have permission to use it.
+  - Say why you are reading it. Add your course slides or project notes if you have them.
+  - Read the guide first, then read the paper using the close-read and skim list.
+  - Ask your AI to explain any section that still feels unclear.
+  - Ask for a critique, a comparison or a quiz when you are ready for the next step.
+output_sample:
+  input:
+    - The paper itself, as a PDF, pasted text or a link
+    - Why you are reading it, such as a class, a project or a work decision
+    - Your course slides or project notes (optional)
+  prerequisites:
+    - A paper you have permission to use
+    - Web access, only if you name a paper without sharing it (optional)
+  output:
+    - name: The One-Sentence Summary
+      contains: What the paper does in one plain sentence, with no acronyms or notation.
+    - name: The Problem
+      contains: What the paper solves, why it is hard, and why earlier work fell short.
+    - name: The Key Idea
+      contains: The core method explained in terms you already know.
+    - name: Where It Sits in the Field
+      contains: The earlier work it builds on, what it changed, and whether later work replaced it.
+    - name: How It Connects to Your Material
+      contains: How the paper links to your notes or slides. Only appears if you share them.
+    - name: The Results (What They Showed)
+      contains: What was tested, what it was compared with, and whether the win was clear or mixed.
+    - name: What to Read Closely (and What to Skim)
+      contains: Key sections, safe skips, the best figures and tables, and tips for heavy notation.
+    - name: Key Terms
+      contains: 3 to 7 terms you may not know, each with a short definition.
+    - name: 3 Things You Should Be Able to Explain After Reading
+      contains: Three specific things to explain to show you understood the paper.
+you_give:
+  - The full paper, as a PDF, pasted text or a link
+  - Why you are reading it, such as a class, a project or a work decision
+  - Your course slides or project notes (optional)
+you_get:
+  - A one-sentence summary anyone could follow
+  - The problem, the key idea and the results in plain words
+  - A map of what to read closely and what to skim
+  - Key terms with short definitions
+  - Three things to explain once you have read it

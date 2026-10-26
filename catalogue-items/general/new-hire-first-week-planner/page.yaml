@@ -1,6 +1,6 @@
 new_slug: new-hire-first-week-planner
 name: "New hire first week planner"
-summary: "Paste the role and your team. Get a day-by-day first week with one small real task and who they meet."
+summary: "Plan a new hire's first week day by day. Give it the role and team. You get meetings, one real task and check-ins, ready to share by Monday."
 job: hire-people
 thinking: low
 thinking_why: "It arranges given people, tools and one task across five days."
@@ -17,6 +17,10 @@ when:
   - "Someone starts on Monday and you have not planned past the welcome coffee."
   - "Your last hire said the first week was confusing."
   - "You are the only manager and want a plan you can hand to a colleague to run."
+not_for:
+  - "You are onboarding a contractor or intern on a short project: use a simple one-page checklist of access and contacts instead."
+  - "You need to choose between candidates: use an interview scorecard or ask a colleague to help you compare them."
+  - "You want a plan for the first 30 or 90 days: plan those with your manager, as this covers five days only."
 
 you_give:
   - "The role and the problem it solves"
@@ -33,6 +37,29 @@ how_to_use:
   - "Add the tools and a real task if you have one."
   - "Do the BEFORE DAY ONE list this week."
   - "Share the plan with the hire on day one, and run the day 5 look back."
+output_sample:
+  input:
+    - The role and the problem it solves
+    - Who they report to and work with
+    - The tools and accounts they need
+    - One small real task with a clear done (optional but advised)
+  output:
+    - name: FRIDAY OUTCOME
+      contains: One line on what the hire will have done and can say by the end of day five.
+    - name: BEFORE DAY ONE
+      contains: Each item to set up first, such as accounts and laptop, with an owner and a deadline.
+    - name: DAY 1 to 5
+      contains: A morning and afternoon block for each day, each with one purpose, people and length.
+    - name: MEETINGS
+      contains: Who they meet, for how many minutes, and the one question to leave with.
+    - name: THE REAL TASK
+      contains: The task, what done looks like, who checks it, and what to do if finished early.
+    - name: CHECK-INS
+      contains: When the short check-ins happen, how long they last, and the questions for the day 5 look back.
+    - name: MISSING
+      contains: People, tools or facts you did not give, so you can fill them in.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Sets the Friday outcome"

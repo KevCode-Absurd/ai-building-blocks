@@ -1,54 +1,69 @@
 new_slug: seo-worth-it-checker
 name: "SEO worth-it checker"
-summary: "Give it your margin, cash and hours. Get a go, go small or not-now call, scored."
+summary: "Find out if SEO will pay back for your store before you spend. Get a go, go small or not-now call, scored from your numbers."
 job: get-found-in-search
 thinking: high
 thinking_why: "It weighs money, time and demand against each other and the call can cost months of effort, so a stronger model is safer."
 
 headline: "SEO worth-it checker"
-subhead: Give it your average order value, margin, months of cash, hours a month and the terms your buyers search. It checks demand, margin, who ranks, how winnable the terms are and how long you can wait, then gives you a go, go small or not-now call with a score out of 100.
+subhead: "Give it your average order value, margin, months of cash, hours a month and the terms your buyers search. It checks demand, margin, who ranks, how winnable your terms are and how long you can wait. You get a go, go small or not-now call, a score out of 100 and the first pages to build."
 
 explain: |
-  Search can be a store's best sales channel or a waste of months. It fails for a brand-new product nobody searches, for a very low order value, for razor-thin margins and for a store that needs orders this quarter. Many owners find out after paying an agency for blog posts.
+  Is SEO worth it for your online store? Sometimes it is your best sales channel. Sometimes it wastes months. It tends to fail for a brand-new product nobody searches for, for a very low order value, for thin margins and for a store that needs orders this quarter. Many owners find out after paying an agency for blog posts.
 
-  This skill checks the case before you spend. It looks at demand, works out how many organic orders you would need to cover the cost, looks at who ranks for your best term, and tests whether your terms are winnable. It checks you have the cash and the hours. Then it makes a call and shows its score and its maths. If the answer is not now, it names what to do instead.
+  This SEO worth-it checker tests the case before you spend. It checks if people search for what you sell. It works out how many organic orders you would need to cover the cost. It looks at who ranks for your best term and whether your terms are winnable. It checks that you have the cash and the hours to wait.
+
+  Then it makes the call and shows its maths. If the answer is not now, it says what to do instead. The score weights are the writer's choice, so the call follows the rules and not the number alone.
 
 when:
   - You are about to hire an agency or start a search project and want to know if it can pay back.
-  - You have thin margins or a low order value and wonder if search is worth the work.
+  - You have thin margins or a low order value and wonder if SEO is worth the work.
   - You sell something new and are not sure anyone searches for it.
+  - An agency quoted a monthly fee and you want your own numbers before you say yes.
+
+not_for:
+  - "You have decided to do SEO and want a plan for each month. Use the Monthly store SEO planner."
+  - "An agency sent a proposal and you want to judge it. Use the SEO and AI search agency vetter."
+  - "You want to know which keywords deserve a page. Use the Store keyword validator."
+  - "You need sales this quarter. Search takes months, so this will say not now. Look at ads or email instead."
 
 you_give:
   - Your average order value and gross margin
-  - Three to five search terms a buyer would use to find your products
+  - Three to five search terms a buyer would type to find your products
   - Months of cash you can run without organic orders
   - Hours per month someone can spend on search
-  - Your ad spend, any SEO spend and store conversion rate (optional)
+  - Monthly search volume for those terms, from Google's free Keyword Planner (optional)
+  - What you see on page one when you search your best term (optional)
+  - Your ad spend, any SEO spend, store conversion rate and per-order costs (optional)
+
 you_get:
-  - A call of go, go small or not now, with reasons
+  - A call of go, go small or not now, with plain reasons
+  - Your break-even maths, step by step
   - A score out of 100 for the strength of the case, with the weights shown
   - The first money pages to build, the one number to track and what would break the case
+  - What to use instead if the call is not now
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code. Free keyword tools help, but you can run it without them.
   - Paste your order value, margin, cash, hours and search terms.
-  - Add your store conversion rate and per-order costs so it can work out the break-even.
+  - Add your search volume from Google Keyword Planner. If you skip it, the demand check is marked not run.
   - Search your best term yourself and tell it who ranks on page one.
-  - Follow the call. If it says not now, use the other channel it names and rerun later.
+  - Add your store conversion rate and per-order costs so it can work out the break-even.
+  - Follow the call. If it says not now, use the other channel it names and run it again later.
 
 how_it_works:
   - title: Checks demand
-    text: Looks at search volume for your terms. If nobody searches your category, it stops and says no.
+    text: It looks at search volume for your terms. If nobody searches your category, it stops and says no.
   - title: Works the money
-    text: Finds profit per organic order, then the orders and visits needed each month to cover the cost.
+    text: It finds profit per organic order, then the orders and visits needed each month to cover the cost.
   - title: Reads the results page
-    text: Stores with collection and product pages on page one mean you can win. Only blogs or giants mean it is harder.
+    text: Stores with collection and product pages on page one mean you can win. Only blogs or giant brands mean it is harder.
   - title: Tests the terms
-    text: Looks for variants with difficulty under about 35 to 40 and buying intent. Above 50, it plans narrow variants.
+    text: It looks for variants with a low difficulty score and buying intent. Its starting rule is under about 35 to 40, and narrow variants above 50.
   - title: Checks runway and hours
-    text: Needs cash for 6 months and no need for orders this quarter, plus about a working day a month.
+    text: It wants cash for at least 6 months, no need for orders this quarter and about a working day a month.
   - title: Defends the brand
-    text: Checks you hold page one for your own name before you spend on ads or search.
+    text: It checks you hold page one for your own name before you spend on ads or search.
   - title: Makes the call
     text: Go if demand, margin and runway pass. Go small if one is weak. Not now if demand or runway fails.
 
@@ -56,24 +71,57 @@ output_shape: |
   CALL: <GO | GO SMALL | NOT NOW> because <reasons>
 
   CHECKS
-  Demand: <pass | weak | fail> | <numbers> | <points>/25
+  Demand: <pass | weak | fail | NOT RUN> | <numbers> | <points>/25
   Rankability: <...> | <points>/20
-  Order value and margin: profit per order <n>; orders needed <n>; visits needed <n> | <points>/20
-  Runway: <months> | <points>/20
+  Order value and margin: contribution profit per order <n>; orders needed <n> a month; visits needed <n> | <points>/20
+  Runway: <months of cash> | <points>/20
   Capacity: <hours> | <points>/10
   Brand defence: <...> | <points>/5
   Who ranks: <stores | blogs | giants>
 
-  SCORE  <n>/100 (<sum>)
-  NOT RUN: <check, and data needed>
+  SCORE  <n>/100 (<sum of points>) or "not scored"  | weights are the writer's choice, not a source's
+  NOT RUN (checks missed): <check, and data needed, or none>
 
   BUILD FIRST
   <up to 10 money pages>
 
-  THE ONE NUMBER: organic search revenue, starting at <n>
-  WHAT BREAKS THE CASE: <...>
-  INSTEAD (if not now): <ads | email | other>
+  THE ONE NUMBER
+  Organic search revenue, starting at <n>
+
+  WHAT BREAKS THE CASE
+  <...>
+
+  INSTEAD (if not now)
+  <ads | email | other>
+
   MISSING: <what>
+
+output_sample:
+  input:
+    - Your average order value and gross margin
+    - Three to five search terms a buyer would type
+    - Months of cash you can run without organic orders
+    - Hours per month you can spend on search
+    - Search volume, page one results and conversion rate (optional)
+  prerequisites:
+    - Google Keyword Planner for search volume (optional, free)
+  output:
+    - name: Call
+      contains: Go, go small or not now, with the reasons tied to your numbers.
+    - name: Checks
+      contains: Demand, rankability, order value and margin, runway, capacity and brand defence. Each shows its numbers and points, or "not run".
+    - name: Break-even maths
+      contains: Profit per organic order, the orders needed each month and the visits needed to cover the cost.
+    - name: Score
+      contains: A score out of 100 with the weights and sum shown, and a note that the weights are the writer's choice.
+    - name: Build first
+      contains: Up to 10 money pages, such as collections and products, to build first.
+    - name: The one number
+      contains: Organic search revenue, with the value to start from.
+    - name: What breaks the case
+      contains: The things that would turn the call, such as a lost month of cash or a margin change.
+    - name: Instead
+      contains: If the call is not now, the channel to use instead, such as ads or email.
 
 tweaks:
   - what: Order value and margin
@@ -104,7 +152,7 @@ improve:
   - Add your own margin floor and cash rules to the skill file.
   - Add your usual per-order costs, such as shipping and payment fees.
   - Rerun it every six months and compare the scores.
-  - Pair it with the Store keyword validator for the terms, and the Collection page planner for the first pages to build.
+  - Pair it with the Store keyword validator for the terms, and the Monthly store SEO planner for the first months of work.
 
 works_best_with:
   tools:
@@ -124,5 +172,7 @@ terms:
     meaning: How many months you can keep going before you must see sales from this work.
   - term: Money page
     meaning: A page that sells directly, such as a collection or a product page.
+  - term: Keyword difficulty
+    meaning: A score from a keyword tool for how hard a search term is to rank for. Each tool scores it differently.
   - term: Brand defence
     meaning: Holding the top results when someone searches for your own name.

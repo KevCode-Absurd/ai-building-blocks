@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It lists each state, then builds each one.
 new_slug: screen-states-designer
 name: Screen states designer
-summary: "Give it a screen. Get the states people hit first: empty, loading,
-  error, offline, no results and success."
+summary: "Find the empty, loading, error and offline states your screen is missing, then build each one. Use it as a screen states checklist and builder."
 job: build-websites
 headline: Screen states designer
-subhead: "Most screens are built for the best case: lots of data, fast network,
-  nothing breaking. Real people hit the other cases first. This skill takes a
-  screen you are building and finds those states, then builds each one
-  properly."
+subhead: "Most screens are built for the best case: lots of data, fast network, nothing breaking. Real people hit the other cases first. This skill takes a screen you are building and finds those states, then builds each one properly."
 explain: |
   Most screens are built for the best case: lots of data, fast network, nothing breaking. Real people hit the other cases first. This skill takes a screen you are building and finds those states, then builds each one properly.
 
   It goes through a list for every screen that loads, lists, searches or saves: first use, empty, loading, partial data, error, offline, bad input, no results and success. It keeps only the ones that can happen, then writes the content and design for each, with a way out of every error. It works on its own. An optional connection to the UXKIN screen library can show how other products handle the same case.
 when:
   - Your screen only shows the version with perfect data and you need the rest.
-  - A new user would see an empty list on day one and you have nothing designed
-    for it.
+  - A new user would see an empty list on day one and you have nothing designed for it.
   - Someone asked you to make a screen ready for real use.
   - You want to review a finished feature for missing error and offline cases.
+not_for:
+  - "You only need backend work or a static page with no data: use a code review or testing step instead."
+  - "You want a visual redesign of the whole screen: ask a designer, or start with a plain design brief."
+  - "You need exact error wording from your server: ask your backend developer for the real messages first."
 you_give:
   - The screen or component, as code, a screenshot or a description
   - What data it loads or saves
@@ -30,8 +29,26 @@ you_get:
   - Error messages with a clear next step
   - Built versions in your code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI tool and paste in this skill. If it can read files, give it access to your project.
+  - Paste or attach the screen you are building. Add what data it loads or saves.
+  - Check the state list it writes first. Say which states matter most to you.
+  - Let it build each state with your existing components and copy style.
+  - Read the report at the end. Answer any open questions, such as what an error should say.
+  - Test the states in your own app with slow, failed and offline requests.
+output_sample:
+  input:
+    - Your screen or component, as code, a screenshot or a description
+    - What data the screen loads or saves
+    - Your design style or component library (optional)
+  prerequisites:
+    - An AI that can read your project files, to build and check states in your code
+    - The UXKIN connection and a UXKIN plan, only if you want real app examples (optional)
+  output:
+    - name: State list
+      contains: The states that can happen on your screen, such as first use, empty, loading, error, offline and success.
+    - name: Built states
+      contains: Each state built with your own components and copy style, with a clear next step on every error.
+    - name: State checks
+      contains: How each state was triggered and checked, at phone and desktop widths.
+    - name: Report
+      contains: Which states were built, which were checked and how, and which need a decision from you.

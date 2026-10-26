@@ -1,6 +1,6 @@
 new_slug: store-go-live-checker
 name: "Store go-live checker"
-summary: "Give it your store setup. Get a score out of 100, the blockers and a test-order plan."
+summary: "Check your online store before it opens. Give it your setup and test orders. You get a go or no-go, a score out of 100 and the blockers first."
 job: set-up-store
 thinking: medium
 thinking_why: "It works through a long checklist and weighs what blocks a sale, so a middle model is enough. Use a stronger one for a store with many warehouses."
@@ -17,6 +17,10 @@ when:
   - Your store is built and you are about to remove the password or switch from coming soon to live.
   - You changed payments, shipping or tax and want to be sure checkout still works.
   - You sell from more than one place or use a warehouse app and need to prove orders reach it.
+not_for:
+  - "Your store is not built yet: finish building it first, then come back to run the check."
+  - "You need legal advice on your privacy policy or terms: ask a qualified lawyer, because this only checks the pages exist and are filled in."
+  - "You want proof your tax registrations are right: ask an accountant, because a test order only proves checkout works."
 
 you_give:
   - Your platform (Shopify or WooCommerce) and a store link or preview link
@@ -36,6 +40,32 @@ how_to_use:
   - Paste the results of any test orders you have placed. Never paste live payment keys, card numbers or bank details.
   - Fix the blockers first, place the test orders it lists, and tell it what you saw.
   - Run it again until there are no blockers, then switch to live in the order it gives you.
+output_sample:
+  input:
+    - Your platform (Shopify or WooCommerce) and a store or preview link
+    - "What you have set up: products, payments, shipping, tax, policies and domain"
+    - The countries you ship to, your shipping zones and rates
+    - Any warehouse or fulfilment app you use (optional)
+    - Results of test orders you have already placed (optional)
+  prerequisites:
+    - A payment account where you can place a test order and a low-value real order
+  output:
+    - name: VERDICT
+      contains: A go or no-go with a one-line reason.
+    - name: SCORE
+      contains: "A score out of 100 with the sum shown: 15 off per blocker, 5 off per warning."
+    - name: BLOCKERS
+      contains: Problems that stop a sale, each with one fix.
+    - name: WARNINGS
+      contains: Problems that do not stop a sale, each with one fix.
+    - name: CHECKLIST
+      contains: Each area graded pass, fix, block or not tested, with a short note.
+    - name: TEST ORDERS TO PLACE
+      contains: The address, product and payment mode for each test order, and what to confirm.
+    - name: SAFE SWITCH TO LIVE
+      contains: The steps to go live in order, with removing the password last.
+    - name: NOT TESTED
+      contains: Items it could not grade and what you need to test them.
 
 how_it_works:
   - title: Sweeps settings

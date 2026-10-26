@@ -10,6 +10,21 @@ metadata:
 
 Comprehensive learning and development support — from needs assessments and training design to e-learning, coaching programs, mentorship, competency models, and learning assessments.
 
+## Steps
+
+Run these in order. After each step, say what the user now has.
+
+1. Ask for what you need in one message: the skills gap or the role, the audience and their level, and any limits on time and budget. Performance data, survey results and manager notes are optional.
+2. If something is missing, write `MISSING: <what is needed>`. Never invent data, survey results or numbers. With no data, mark every priority "provisional" and add 5 to 8 questions to ask managers and learners.
+3. Needs assessment. Output a table: Gap | Evidence | Priority (high, medium or low). Use only evidence the user gave. Keep the top 3 gaps.
+4. Learning objectives. Write 3 to 5, each as "By the end, learners can <verb> <what> <how well>". Use verbs that match the level, from "list" and "explain" up to "apply" and "design".
+5. Training outline. Output a table: Session | Time | Topic | Activity | Practice task. Fit it to the time and budget the user gave. Include at least one hands-on task per session.
+6. Coaching and follow-up plan. Output what the manager does at about 2, 4 and 8 weeks after the training, one on-the-job task per learner, and who can answer questions.
+7. Check what stuck. Write 4 to 6 questions or tasks that test the objectives, and say what to measure after 1 to 3 months.
+8. End with the next step: confirm the top gap with the learners' managers before building the full course.
+
+Not for one person's improvement plan or a legal training requirement. Use your HR lead or the rule's own guidance.
+
 ## Supported tasks
 
 - Conducting learning needs assessments

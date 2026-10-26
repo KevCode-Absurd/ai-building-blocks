@@ -2,34 +2,74 @@ thinking: medium
 thinking_why: Clear wording matters and local rules differ.
 new_slug: hr-policy-drafter
 name: HR policy drafter
-summary: Give it a policy topic and your country. Get a plain draft, a manager
-  guide and a rollout plan. Not legal advice.
+summary: Draft an HR policy in plain words, such as remote work or leave, with a manager guide and rollout plan. Not legal advice.
 job: hire-people
 headline: HR policy drafter
-subhead: A clear company policy that staff can read and follow, with the guide
-  and rollout plan to go with it. Give a topic and your country and get a plain
-  draft, a manager guide and a plan for telling everyone.
+subhead: "Give it a policy topic, your country and your company size. It writes a plain-language draft, a one-page manager guide and a dated rollout checklist. It marks every point that depends on local law, so you know what to check with an employment adviser before use."
 explain: |
-  A clear company policy that staff can read and follow, with the guide and rollout plan to go with it. Give a topic and your country and get a plain draft, a manager guide and a plan for telling everyone. It is not legal advice.
+  An HR policy draft that staff can read and follow, with a manager guide and a rollout plan to go with it. It is a first draft for review. It is not legal advice.
 
-  It can write policies on leave, remote work, conduct, performance and discipline, and build or update a handbook. Each policy comes with an approval flow, an owner and a review date, so none goes stale. It also drafts talking points for managers, a question-and-answer sheet for staff, a change summary between old and new versions, an exception process and a sign-off tracker. For several countries it adapts wording to each place.
+  The skill writes each policy in the same nine parts, from purpose and rule to owner and review date, so nothing goes stale. It keeps the rule apart from the steps to follow it. It also writes the manager talking points, the questions staff will ask, and a change summary if you are replacing an old policy.
+
+  It does not know your local law, and it does not guess. Where wording depends on the law, it adds a CHECK note and lists it for your adviser. Policies on dismissal, discipline, discrimination and pay always need an adviser to read them first.
 when:
-  - You have no remote work policy and staff are asking for one.
-  - You are updating an old handbook after a law change.
-  - You need to explain a policy change to managers and staff.
-  - Your policies are scattered and nobody knows who owns them.
+  - Staff keep asking for a remote work policy and you have none.
+  - You are updating an old handbook after a rule or law has changed.
+  - You must explain a policy change to managers and staff.
+  - Your policies are scattered and nobody is named as the owner.
+not_for:
+  - "You need a final contract or a disciplinary decision on a real case: use an employment lawyer. For a case, see the Exit interview and grievance guide for a fair process."
+  - "You want a policy on how your team uses AI in hiring: use the HR AI use policy writer."
+  - "Staff only want an answer about an existing rule: use the Company policy explainer."
+  - "You want to check whether your HR files meet the rules: use the HR compliance audit planner."
 you_give:
-  - The policy topic
+  - The policy topic, such as remote work or parental leave
   - Your country or state
   - Company size and industry
   - Your current policy text (optional)
+  - Other countries the policy must cover (optional)
 you_get:
-  - A plain-language policy draft
-  - A manager guide with talking points
-  - A staff question-and-answer sheet
-  - A rollout and sign-off plan
+  - A policy draft in plain words with owner and review date
+  - A one-page manager guide with talking points and likely questions
+  - A rollout checklist with steps, owners and timing
+  - A change summary, if you are replacing an old policy
+  - A list of points to check with an employment adviser
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text. Then give the topic, your country, company size and industry. Paste your old policy if you have one.
+  - Read the CHECK notes and the adviser list first. These are the parts a person must confirm.
+  - Edit the draft to match how your company really works, such as who approves and who owns the policy.
+  - Send the draft and the adviser list to your employment adviser or lawyer before you use it.
+  - After sign-off, use the manager guide and rollout checklist to tell people.
+output_sample:
+  input:
+    - The policy topic
+    - Your country or state, and your company size and industry
+    - Your current policy text (optional)
+  output:
+    - name: Policy draft
+      contains: Purpose, who it covers, the rule, steps to follow it, who to ask, exceptions, owner, approver and review date.
+    - name: Manager guide
+      contains: What changed, talking points, likely staff questions with answers and what managers must not promise.
+    - name: Rollout checklist
+      contains: Approval, announcement, manager briefing and staff sign-off, each with an owner and a date.
+    - name: Change summary
+      contains: Old rule, new rule and the reason, when you replace an existing policy.
+    - name: Check with an adviser
+      contains: Each point in the draft that depends on local law, marked CHECK.
+how_it_works:
+  - title: Gather the details
+    text: It asks for topic, country, size and any old policy. If the country is missing, it writes without local wording.
+  - title: Write the draft
+    text: It writes the policy in nine set parts, in plain language.
+  - title: Mark local law points
+    text: It adds a CHECK note wherever the wording depends on the law, and does not state local rules.
+  - title: Write the guide
+    text: It writes manager talking points and likely staff questions.
+  - title: Plan the rollout
+    text: It writes a dated checklist from approval to sign-off.
+terms:
+  - term: Employment adviser
+    meaning: A lawyer or HR consultant who knows employment law where you operate.
+  - term: Handbook
+    meaning: The document that holds your main workplace rules for staff.

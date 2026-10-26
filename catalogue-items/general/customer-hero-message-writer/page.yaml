@@ -1,6 +1,6 @@
 new_slug: customer-hero-message-writer
 name: "Customer-hero message writer"
-summary: "Paste your offer and buyer. Get a one-line message, a short page script and a first step, with the customer as hero."
+summary: "Write a clear website message: paste your offer and buyer, get a one-line message, a short page script and a first step, with the customer as hero."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It follows a fixed order but must choose the customer's real want and problem from your material."
@@ -17,6 +17,10 @@ when:
   - "Your homepage or pitch opens with \"we are\" and visitors do not act."
   - "You can say what you do but not in one line."
   - "You are launching and need a short message for a page, email or intro."
+not_for:
+  - "You have no offer to describe yet. Decide what you sell first, then come back."
+  - "Your message must start from a belief or cause. Use the Why-first message writer."
+  - "You need one word or line that sets you apart from rivals. Use the One-line position writer."
 
 you_give:
   - "What you offer, in a few lines"
@@ -53,6 +57,32 @@ how_it_works:
     text: "Problem, answer and result in one sentence."
   - title: "Writes the script"
     text: "Puts it in page order, then names any check it missed."
+
+output_sample:
+  input:
+    - "What you offer, in a few lines"
+    - "Who your buyer is and what bothers them (optional)"
+    - "Customer words, word for word (optional)"
+    - "Your proof, such as a result or number you can back (optional)"
+  prerequisites:
+    - "Your brand file, from the Website brand brain builder (optional)"
+  output:
+    - name: "They want"
+      contains: The one goal your customer would say in their own words.
+    - name: "The problem"
+      contains: The practical problem, how it feels and why it should not be this way.
+    - name: "Guide"
+      contains: Two lines that show you understand the problem and can solve it, with one proof.
+    - name: "Plan"
+      contains: Three or four short steps to work with you.
+    - name: "Calls to action"
+      contains: One direct call and one lighter call for people not ready to act.
+    - name: "Stakes and result"
+      contains: What the customer risks by waiting, and the better life after, each said once.
+    - name: "One line"
+      contains: Your message in a single sentence, plus two other versions.
+    - name: "Page script"
+      contains: All the pieces in page order, from headline to result.
 
 output_shape: |
   THEY WANT

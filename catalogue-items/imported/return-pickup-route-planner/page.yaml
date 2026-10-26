@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Mixing drop-offs and pickups adds hard limits.
 new_slug: return-pickup-route-planner
 name: Return pickup route planner
-summary: Give it your deliveries and returns to collect. Get routes that bring
-  returns back on the same trip.
+summary: "Plan return pickup routes: give it your drop-off and pickup stops and van sizes. Get one route per van that collects returns on the way back."
 job: plan-supply-chain
 headline: Return pickup route planner
-subhead: Give it your deliveries and returns to collect. Get routes that bring
-  returns back on the same trip. Bring delivery stops with quantities. Use the
-  result to plan your next step.
+subhead: Give it your deliveries and returns to collect. Get routes that bring returns back on the same trip. Bring delivery stops with quantities. Use the result to plan your next step.
 explain: |
   Delivery routes that also pick up returns on the same trip, so vans drive back loaded instead of empty. That cuts miles and trips.
 
@@ -18,6 +15,10 @@ when:
   - Your vans often come back empty after drop-offs.
   - You run a recycling or reverse logistics round.
   - You want to cut the number of trips for returns.
+not_for:
+  - You only deliver or only collect. Use a simple route in your maps app, since there is nothing to combine.
+  - A pickup and a drop-off are paired, so the item must go from one named stop to another. Use the pickup-delivery-problem skill.
+  - You need exact delivery time windows for every stop. Plan those by hand or with a routing tool that handles time slots.
 you_give:
   - Delivery stops with quantities
   - Pickup stops with quantities
@@ -30,8 +31,31 @@ you_get:
   - Total distance or cost estimate
   - Advice on method for your job size
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Paste your stops as a table with these columns: stop name, type (delivery or pickup), quantity and coordinates."
+  - Say how many vans you have, how much each van can carry, and where the depot is.
+  - Ask for one route per van, with the load after each stop.
+  - Check each route against van capacity, and check that every delivery comes before any pickup.
+  - For the route map and bigger jobs, use an AI that can run Python code (numpy, ortools and matplotlib).
+output_sample:
+  input:
+    - Your delivery stops with the quantity for each
+    - Your pickup stops with the quantity for each
+    - Your depot location
+    - Your van count and van capacity
+    - Distances or travel times between stops (optional)
+  prerequisites:
+    - An AI that can run Python code, for the larger jobs and the route map
+  output:
+    - name: Problem summary
+      contains: How many delivery stops, pickup stops and vans you have, and the capacity of each van.
+    - name: Solution metrics
+      contains: Total distance, vans used, total units delivered and total units picked up.
+    - name: Route details
+      contains: One row per van with its delivery stops, pickup stops, units moved and distance.
+    - name: Capacity check
+      contains: The load on each van as it empties at deliveries and refills at pickups.
+    - name: Route map
+      contains: A drawing of each van's route from the depot, if your AI can run code.
+    - name: Method advice
+      contains: Which solving method suits your job size, and what to try if deliveries and pickups are uneven.

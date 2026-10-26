@@ -2,17 +2,54 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-github-actions-runtime-upgrade-conventions
 name: GitHub Actions runtime upgrade helper
-summary: Share your Actions workflows. Get supported action versions while
-  keeping the build's behavior intact.
+summary: Fix GitHub Actions runtime deprecation warnings. Give it your workflow files and get safe, pinned action versions that keep your build working.
 job: ship-and-host
 headline: GitHub Actions runtime upgrade helper
-subhead: Share your Actions workflows. Get supported action versions while
-  keeping the build's behavior intact. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Give it your GitHub Actions workflow files and the warning lines from your run log. It picks safe new versions of each action and pins them to a commit. Your build keeps working the same way.
+not_for:
+  - Your workflows show no deprecation warning. Leave them as they are, or turn on Dependabot for routine version updates.
+  - You use CI other than GitHub Actions, such as GitLab or CircleCI. Use that vendor's own upgrade guide.
+  - You want updates applied to your repo with no review. Ask a developer to check each change and re-run the workflows.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI tool and paste the skill text, or upload the skill file.
+  - Paste your workflow files and the deprecation warning lines from your run log.
+  - Ask it to upgrade the actions and pin each one to a full commit SHA.
+  - Check every SHA against the action's release page before you use it. Your AI cannot confirm them without web access.
+  - Commit the changes, then re-run the affected workflows and read the logs for new warnings.
+  - Paste the PR notes into your pull request.
+output_sample:
+  input:
+    - Your workflow files from .github/workflows (.yml or .yaml)
+    - The exact deprecation warning lines from your run log
+    - Your repo's default branch and the permissions your workflows need (optional)
+  prerequisites:
+    - An AI that can read your workflow files
+    - Access to each action's release page to check commit SHAs
+  output:
+    - name: Upgrade list
+      contains: Each action to upgrade, with its current version, the new version, and the full commit SHA to pin.
+    - name: Updated workflow files
+      contains: Your workflow steps with the new pinned uses lines and an optional version comment.
+    - name: Actions that could not move
+      contains: Any action that cannot reach a new major version, with the reason.
+    - name: Verification checklist
+      contains: Checks that triggers and permissions are unchanged, upgraded steps pass, and no new warnings appear.
+    - name: PR notes
+      contains: A summary of what was upgraded, what was held back, and which workflows were re-run.
+when:
+  - Your run log says an action uses a deprecated runtime, such as an old Node.js version.
+  - You need to update action versions in your .github/workflows files.
+  - You want newer actions without changing how your build behaves.
+  - Dependabot is off for workflows, or the warning came before an update arrived.
+you_give:
+  - Your workflow files from .github/workflows
+  - The exact deprecation warning lines from your run log
+  - Your repo's default branch (optional)
+  - The permissions your workflows need (optional)
+you_get:
+  - A list of actions to upgrade, from version and to version
+  - A full commit SHA to pin for each action
+  - Updated workflow steps that keep your triggers and permissions
+  - A note on any action that cannot move to a new major version
+  - A checklist to confirm the build still works
+  - Notes you can paste into your pull request

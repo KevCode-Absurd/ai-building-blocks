@@ -1,6 +1,6 @@
 new_slug: quarterly-accessibility-keeper
 name: Quarterly accessibility keeper
-summary: Give it your site each quarter. Get accessibility gaps ranked, last quarter's fixes checked and a statement kept current.
+summary: Check your site for accessibility gaps each quarter. Get fixes ranked, last quarter's fixes re-checked and statement notes kept current.
 job: design-work
 thinking: high
 thinking_why: It ranks problems by whether they block a real task, reads code to place fixes and must never over-claim. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You fixed accessibility once and are not sure it held.
   - A redesign or brand refresh just shipped.
   - A buyer or a regulator asked for your accessibility statement and you do not have a current one.
+not_for:
+  - "You need a one-off check of a single page: run the standards checks by hand in your AI, or ask a developer to review that page."
+  - "You need a formal conformance claim or a legal opinion: hire an outside accessibility auditor. This agent never claims a level."
+  - "You want the fixes made for you: ask your developer to apply the list. This agent only proposes changes."
 you_give:
   - Your site address and the pages where people buy, sign up, pay or get help
   - Your code or templates, so fixes can be placed (advised)
@@ -33,6 +37,33 @@ how_to_use:
   - Say what changed since last quarter.
   - Read the fix list. Make the changes you agree with, then tell the agent which were done.
   - Run the human test with five users. Run the agent again next quarter; it re-checks what you fixed.
+output_sample:
+  input:
+    - Your site address and the pages where people buy, sign up, pay or get help
+    - Your code or templates (advised)
+    - Your colour tokens or design direction (advised)
+    - What changed since last quarter (advised)
+    - Whether any buyer is a government body (optional)
+  prerequisites:
+    - An AI that can read your site or code, such as Claude Code
+    - Last quarter's gaps file, once you have run it before
+  output:
+    - name: This quarter
+      contains: One line with gaps by level against last quarter, fixes that held and fixes reopened.
+    - name: Fix first
+      contains: At most ten fixes, task-blocking first, each with page, criterion, level and where in the code.
+    - name: Re-checks
+      contains: Each fix from last quarter, marked held or reopened with the reason.
+    - name: Colour pairs
+      contains: Failing colour pairs with their ratio and the closest passing colour, if the palette changed.
+    - name: Government notes
+      contains: Section 508 gaps and report notes, only if a government buyer applies.
+    - name: Statement notes
+      contains: What is true now, dated, with known gaps and no conformance claim.
+    - name: Human test
+      contains: Five tasks to try with people who use assistive technology, and what to watch for.
+    - name: Files and missing
+      contains: Each step's file and every MISSING line.
 how_it_works:
   - title: Read last quarter
     text: Lists every fix marked done, to re-check before anything new.

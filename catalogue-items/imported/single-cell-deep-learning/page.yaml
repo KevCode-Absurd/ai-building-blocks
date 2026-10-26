@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It needs model choices and checks on results.
 new_slug: single-cell-deep-learning
 name: Single-cell deep learning analyst
-summary: Give it single-cell data. Get your datasets merged, batch effects fixed
-  and cell types found with scvi-tools.
+summary: Merge single-cell datasets, remove batch effects and find cell types with scvi-tools. Give it your raw count data and get a clean shared map of cells.
 job: build-software
 headline: Single-cell deep learning analyst
-subhead: Single-cell datasets merged, batch effects removed and cell types found
-  with scvi-tools, the deep learning toolkit for single-cell data. Your samples
-  then line up so real biology shows through.
+subhead: Single-cell datasets merged, batch effects removed and cell types found with scvi-tools, the deep learning toolkit for single-cell data. Your samples then line up so real biology shows through.
 explain: |
   Single-cell datasets merged, batch effects removed and cell types found with scvi-tools, the deep learning toolkit for single-cell data. Your samples then line up so real biology shows through.
 
@@ -18,6 +15,10 @@ when:
   - You want to label new cells using a reference dataset.
   - You work with CITE-seq or multiome data.
   - You need a latent space for clustering or comparison.
+not_for:
+  - "Your data is bulk RNA-seq, or has no raw integer counts: use a standard scanpy or Seurat workflow instead."
+  - "You have no Python setup and no way to run code: ask a bioinformatician to run the steps for you."
+  - "You only want a quick look at one sample with no batches: a basic scanpy workflow is simpler."
 you_give:
   - Single-cell data, often an AnnData file
   - Batch or sample information
@@ -29,8 +30,34 @@ you_get:
   - Transferred cell type labels
   - A latent representation for downstream work
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run Python code. Make sure scvi-tools is installed. Use a GPU if you have one.
+  - Check that your data is an AnnData file with raw integer counts saved in adata.layers['counts'].
+  - Tell your AI the name of your batch column, your data type, and any labels you have.
+  - Ask your AI to run validate_adata.py first, then follow the steps for the model it picks.
+  - Check the UMAP and clusters. Batches should mix, and real cell types should stay apart.
+  - Use the latent matrix and de.csv for your next analysis.
+output_sample:
+  input:
+    - Your single-cell data as an AnnData file (.h5ad) with raw integer counts
+    - The name of your batch or sample column
+    - Cell type labels for some cells (optional)
+    - "Your data type: RNA, RNA plus protein, chromatin, multiome or spatial"
+  prerequisites:
+    - An AI that can run Python code
+    - Python with scvi-tools installed
+    - A GPU is best but not required
+  output:
+    - name: Model choice
+      contains: The scvi-tools model that fits your data type, and the reference file that explains its steps.
+    - name: validate_adata.py check
+      contains: A report on whether your data has the counts and batch column the model needs.
+    - name: prepared.h5ad
+      contains: Your data after quality checks and selection of 2000 or more highly variable genes.
+    - name: Trained model and adata_trained.h5ad
+      contains: The trained model and your data with the latent matrix, a shared space with batch effects reduced.
+    - name: adata_clustered.h5ad
+      contains: Your data with neighbors, a UMAP and Leiden clusters added.
+    - name: de.csv
+      contains: Differential expression results that show marker genes for each group.
+    - name: Transferred labels
+      contains: Cell type labels carried from a labelled reference to your new cells, when you use scANVI.

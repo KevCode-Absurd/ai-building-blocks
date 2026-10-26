@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It collects ideas without shaping them.
 new_slug: idea-fragment-miner
 name: Idea fragment miner
-summary: Talk through a topic. Get raw fragments and ideas pulled out, with no
-  structure yet.
+summary: Talk through a topic and your AI saves every useful line to one file. Mine raw writing ideas and fragments before you outline anything.
 job: write-and-tell-stories
 headline: Idea fragment miner
-subhead: A file of raw material for a piece of writing, collected while you
-  talk. Chat about a topic and it saves every useful scrap to one document, with
-  no outline and no polish yet.
+subhead: A file of raw material for a piece of writing, collected while you talk. Chat about a topic and it saves every useful scrap to one document, with no outline and no polish yet.
 explain: |
   A file of raw material for a piece of writing, collected while you talk. Chat about a topic and it saves every useful scrap to one document, with no outline and no polish yet.
 
@@ -18,6 +15,10 @@ when:
   - You want to think out loud and keep the best lines.
   - You are building notes for a talk, essay or newsletter.
   - You keep losing good ideas that come up mid-conversation.
+not_for:
+  - "You already have an outline or a draft: edit it in your AI directly, or ask a person to review it."
+  - "You want the finished article now: use a writing skill that shapes notes into a piece, not this one."
+  - "You only need a quick list of ideas with no talking: ask your AI for a brainstorm list instead."
 you_give:
   - A topic to talk through
   - A file location for the notes
@@ -28,7 +29,23 @@ you_get:
   - Possible leading words for the piece
   - Material ready to be shaped later
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Say what you want to write about. Your first message already counts, so give it real detail.
+  - Tell your AI where to save the file. If it cannot save files, ask it to show the notes at the end so you can copy them.
+  - Answer its questions and tell stories. It adds each good line to the file as you go.
+  - Say things like cut the last one, rewrite that sharper, or merge those two at any time.
+  - When the file is full, keep it. Use it later as the raw material to build an outline and a draft.
+output_sample:
+  input:
+    - A topic you want to write about
+    - Where to save the notes file
+    - Your stories, opinions and half-thoughts as you chat
+  prerequisites:
+    - An AI that can create and edit a file, or a chat where you copy the notes out yourself
+  output:
+    - name: Working title
+      contains: One heading at the top of the file. It can change later.
+    - name: Fragments
+      contains: Sharp lines, claims, stories, quotes and half-thoughts from both sides of the chat, split by horizontal rules.
+    - name: Leading word
+      contains: A short metaphor or coined term the whole piece can hang on, saved as its own fragment.

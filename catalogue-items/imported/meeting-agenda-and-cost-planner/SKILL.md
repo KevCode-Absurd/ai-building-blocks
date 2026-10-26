@@ -11,6 +11,30 @@ metadata:
 
 # Meetings — Cost Gate → Timeboxed Agenda → Owned Actions
 
+## How to run this skill in a chat
+
+Added by AI Blocks. The method below is the original. This part covers chats that cannot run code.
+
+**Use it when:** you are asked to call or join a meeting and want to know if it is worth the cost, then get an agenda that ends in a decision.
+**Skip it when:** it is an urgent incident that needs people on a call now, or the meeting is a social one.
+
+**You need:** how many people, how long, the average hourly pay rate, the decision the meeting must reach, and the topics (each with the outcome you want and an owner). Ask once for anything missing. Never invent a rate or a headcount.
+
+**No Python? Work it by hand.**
+- Direct cost = people x (minutes / 60) x hourly rate.
+- Refocus cost (optional) = people x (23 / 60) x hourly rate.
+- Total = direct + refocus. Cost per minute = total / minutes.
+- Decision, agenda and owner all present: MEET. No decision: ASYNC (write a short memo, stop). Decision but no agenda or owner: NOT-READY (say which is missing).
+- Always end the gate with `VERDICT: <ASYNC | NOT-READY | MEET> (exit N) — total $X`.
+
+**What you get back:**
+1. The verdict line, the cost in dollars and the cost per minute.
+2. Only for MEET: a timed agenda, decision topics first, a pre-read line and a 5-minute closing slot to read out actions.
+3. After the meeting, if you paste notes: a checklist grouped by owner, with ORPHAN (no owner) and NO-DUE flags and counts.
+
+Nothing is sent or booked. You send the memo, the invite and the actions.
+
+
 > **Portability:** Reasoning-led skill with 3 stdlib Python scripts. No external APIs, no LLM calls
 > in scripts, nothing auto-sent. The scripts fix the discipline; the user runs the meeting.
 
@@ -27,6 +51,7 @@ checklist that flags every orphan. An ASYNC verdict is a win, not a failure.
 the gate cannot run honestly without it. Then price it and apply the three checks. No decision → ASYNC (exit 2): draft a memo
 instead, stop here. Decision but missing agenda/owner → NOT-READY (exit 3), naming the gap.
 All present → MEET (exit 0) with total cost and a cost-per-minute line.
+Always print the verdict line as `VERDICT: <ASYNC | NOT-READY | MEET> (exit N) — total $X`, even when you work it by hand. Name the exit code that matches: ASYNC 2, NOT-READY 3, MEET 0.
 
 **2. Agenda.** Only for MEET. Every topic needs a desired outcome — empty outcomes are refused by
 name (exit 2). Decision topics (decide/choose/approve) sort before discuss/inform. Timeboxes plus

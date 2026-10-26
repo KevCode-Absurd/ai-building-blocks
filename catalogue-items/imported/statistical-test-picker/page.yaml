@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a clear guide to choose and check the test.
 new_slug: statistical-test-picker
 name: Research test picker and reporter
-summary: Give it your data and question. Get the right test, assumption checks,
-  effect sizes and a write-up in APA style.
+summary: Find the right statistical test for your data. Get assumption checks, effect sizes with confidence intervals and an APA-style write-up.
 job: track-numbers
 headline: Research test picker and reporter
-subhead: Give it your data and question. Get the right test, assumption checks,
-  effect sizes and a write-up in APA style. Bring your data file or a
-  description of it. Use the result to plan your next step.
+subhead: Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style. Bring your data file or a description of it. Use the result to plan your next step.
 explain: |
   The right statistical test for your question, run properly, and written up in APA style. You describe your data and what you want to know, and you get a choice of test with the reason for it, checks that its assumptions hold, effect sizes with confidence intervals, and report-ready wording.
 
@@ -18,6 +15,10 @@ when:
   - A journal asks for effect sizes and assumption checks, not just p-values.
   - You need to know how many participants a study requires.
   - You want a methods and results paragraph written in APA format.
+not_for:
+  - "You want to judge power after the study is done: run a sensitivity analysis instead, which shows the smallest effect your sample could detect."
+  - "Your data has clusters or repeated measures from the same people: ask a statistician or use a specialist mixed model instead."
+  - "You need low-level model code for statsmodels or PyMC: use those tools directly instead."
 you_give:
   - Your data file or a description of it
   - The research question
@@ -30,8 +31,30 @@ you_get:
   - A power or sample size estimate
   - APA-style results text
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Check that your AI can run Python code. This skill needs Python 3.12 and a few science packages, and the skill file lists the install steps.
+  - Paste the skill into your AI chat, or upload the skill folder.
+  - Add your data file or a short description of it. Say what you want to know and how the study was set up.
+  - Read the assumption checks first. The AI flags concerns, but you decide if the test fits your study.
+  - Check the write-up. Any example numbers in the report templates are placeholders, so use only your real results.
+output_sample:
+  input:
+    - Your data file, or a description of your data
+    - Your research question
+    - Your study design, such as paired or independent groups
+    - Your alpha level (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Python 3.12 or newer with the scientific packages from the skill's install steps
+  output:
+    - name: Hypothesis and design
+      contains: Your question restated as a hypothesis, with the design and the number of groups.
+    - name: Assumption checks
+      contains: Normality, equal spread and outlier checks with plots, and concerns flagged for your review.
+    - name: Test results
+      contains: The chosen test with its statistic, degrees of freedom, exact p-value and post-hoc tests where needed.
+    - name: Effect sizes
+      contains: The size of the effect with confidence intervals, not only the p-value.
+    - name: Power analysis
+      contains: The sample size you need for a set effect size, or the smallest effect your sample can detect.
+    - name: APA-style report
+      contains: Methods and results wording with descriptives, test statistics, effect sizes and assumption checks.

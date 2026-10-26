@@ -2,38 +2,114 @@ thinking: high
 thinking_why: Small clauses can cost real money, so it reads closely.
 new_slug: saas-terms-check
 name: Software subscription terms checker
-summary: Give it a software subscription contract. Get renewal traps, price
-  rises, uptime and data terms flagged. A first check, not legal advice.
+summary: Find renewal traps, price rises, uptime promises and data exit terms in a software contract before it renews. A first check, not legal advice.
 job: check-contracts
 headline: Software subscription terms checker
-subhead: "A subscription contract can cost far more over three renewals than in
-  year one. Give it a software agreement and it flags the traps: auto-renewal
-  windows, price rises, uptime promises and what happens to your data."
+subhead: "Paste a software subscription contract and your own rules for what you accept. You get the cancel-by date, price rise limits, uptime promises and data exit terms flagged, plus a bottom line on whether to sign."
 explain: |
-  A subscription contract can cost far more over three renewals than in year one. Give it a software agreement and it flags the traps: auto-renewal windows, price rises, uptime promises and what happens to your data. It is a first check, not legal advice.
+  A software subscription can cost far more over three renewals than in year one. This software contract checker reads a subscription agreement the way a careful buyer would. It looks for the clauses that bite hardest: how and when it auto-renews, how fast the price can rise, what happens to your data when you leave, and what you get if the service goes down.
 
-  It runs your standard contract review, then adds checks that matter most for subscriptions: renewal notice periods, caps on price increases, service credits, exit and data return rights, and who handles your data downstream. It warns that rules differ by place, since California, New York and the EU are not the same, and it will not quietly guess to fill gaps.
+  It checks the contract against your own rules, not a rule of its own. If you have no written rules, it asks you what you will accept on each point and records your answer. It does not apply a fixed number from the skill.
+
+  It also looks at AI training rights, liability caps and which law governs. Auto-renewal rules in California, New York and the EU are not the same. Where the contract points to one place and you work in another, it flags that and does not quietly guess. It is a first pass for you or your lawyer, not legal advice.
 when:
   - A vendor sent a software contract and you must reply before it renews.
-  - You want to know when you can cancel without paying for another year.
-  - You need to confirm what happens to your data if you leave.
-  - Your finance team wants price rise limits written into the deal.
+  - You want to know the last day you can cancel without paying for another year.
+  - You need to know if you can get your data out, and in what format, if you leave.
+  - Your finance lead wants a limit on yearly price rises written into the deal.
+not_for:
+  - "The deal is large, cross-border or hard to leave: have a lawyer review it, and use this check to prepare your questions."
+  - "You want a plain-words summary of what a contract says: use the Plain-words contract summary."
+  - "You are signing with an AI tool and care most about data training: use the AI vendor terms checker."
+  - "You only need an NDA checked: use the NDA traffic-light checker."
 you_give:
-  - The subscription contract or terms
-  - Your standard terms or playbook (optional)
-  - Where you operate
-  - Your budget or key worries (optional)
+  - The software subscription contract or terms, pasted or uploaded
+  - Your own rules for what you will accept, such as notice window and price rise limit (optional)
+  - Whether you are the customer or the vendor
+  - Where you operate and what law the contract names
+  - Whether the service is critical to your work (optional)
 you_get:
-  - Flagged renewal and price traps
-  - Notes on uptime and support terms
-  - Data and exit terms review
-  - Suggested changes to ask for
+  - A bottom line on whether you can sign, or what to fight for first
+  - The renewal date and the last day to cancel
+  - Price rise, uptime and data exit findings, each rated for legal risk and business impact
+  - AI training, liability cap and law findings
+  - A record you can copy into a renewal tracker
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your own rules for what you will accept.
-  - Where the skill points to /commercial-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill instructions. No code, web search or paid tool is needed.
+  - Paste the contract text. Say if you are the customer or the vendor, and where you operate. Add your own rules for what you accept, if you have them. If not, answer the questions it asks.
+  - Read the bottom line and the auto-renewal block first. Put the cancel-by date in your calendar.
+  - Check any law or case it names against an official source before you rely on it. If a note says verify, it came from the AI's memory.
+  - Send the suggested changes to your lawyer or the vendor. For a large deal, ask a lawyer to review the whole contract first.
+  - Give the renewal record to the Monthly contract renewal keeper, so you get a reminder before the cancel-by date.
+how_it_works:
+  - title: Which side you are on
+    text: It asks if you are buying or selling, then uses your rules for that side. If it cannot tell, it asks.
+  - title: Your rules, not its own
+    text: It compares each term with the positions you give it. Where you have none, it asks, and records your answer.
+  - title: Subscription checks
+    text: It reviews auto-renewal, price rises, data export and exit, uptime credits, subprocessors and service changes.
+  - title: AI and liability
+    text: It works through AI training rights, who owns outputs, the liability cap and what sits above it.
+  - title: Law check
+    text: It compares the contract's governing law with where you work and flags rules that may override the contract.
+  - title: Report
+    text: It writes the bottom line, the findings with two severity ratings, the renewal record and the next steps.
+output_shape: |
+  ### Bottom line
+  <can you sign, fight for something first, or walk, in one sentence>
+
+  ### AI and machine learning rights
+  <training rights, output ownership, AI subprocessors>
+
+  ## SaaS-specific findings
+  ### Auto-renewal
+  Renewal date: <date>. Cancel by: <date>. Price on renewal: <as written>.
+  ### Price escalation
+  ### Data exit
+  ### SLA
+  ### Subprocessors
+  ### Service changes
+
+  Renewal record: <counterparty, term end, notice days, cancel-by date, price on renewal>
+output_sample:
+  input:
+    - The software subscription contract or terms
+    - Your own rules for what you will accept (optional)
+    - Whether you are the customer or the vendor
+    - Where you operate
+  prerequisites:
+    - An AI that can read pasted text or uploaded files
+    - Your answers to a few setup questions, if you have no written rules
+  output:
+    - name: Bottom line
+      contains: One sentence on whether you can sign, must fight for something first, or should walk away.
+    - name: AI and machine learning rights
+      contains: Whether the vendor can train on your data, and who owns the results.
+    - name: Auto-renewal
+      contains: The renewal date, the last day to cancel, how to give notice and the price on renewal.
+    - name: Price escalation
+      contains: The yearly price rise, overage pricing and what counts as a fee.
+    - name: Data exit
+      contains: How you export your data, in what format, at what cost, and what the vendor keeps.
+    - name: SLA
+      contains: The uptime promise, the credits you get when it fails, and whether credits are your only remedy.
+    - name: Subprocessors and service changes
+      contains: Who else handles your data, and how much notice you get before the product changes.
+    - name: Renewal record
+      contains: The counterparty, term end, notice days and cancel-by date, ready for a renewal tracker.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It works in any chat AI. One that can read a PDF saves you pasting the contract.
+  inputs:
+    - Your own rules for notice windows, price rises and data export, since the check is only as good as the positions you give it.
+    - The order form or pricing page, if prices sit outside the main contract.
+terms:
+  - term: Auto-renewal
+    meaning: A contract that continues on its own unless you cancel in time.
+  - term: SLA
+    meaning: A promise about uptime, with credits if the vendor misses it.
+  - term: Subprocessor
+    meaning: Another company the vendor uses to handle your data.
+  - term: Liability cap
+    meaning: The most one side can be made to pay if things go wrong.

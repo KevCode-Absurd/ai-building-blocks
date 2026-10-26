@@ -18,8 +18,8 @@ uses: [offer-builder, reasons-to-switch-page-writer, customer-question-finder, l
 steps:
   - {uses: offer-builder, note: "Makes the offer the page will carry, built to settle the buyer's main doubt."}
   - {uses: reasons-to-switch-page-writer, note: "Builds the page around the offer from the step before, with one reason and one piece of proof each."}
-  - {uses: customer-question-finder, note: "Checks the new page against customer questions and lists each doubt it does not yet answer."}
-  - {uses: landing-page-auditor, note: "Reads the finished page like a stranger and ranks what to fix before it goes live."}
+  - {uses: customer-question-finder, note: "Checks the new page against customer questions and lists each doubt it does not yet answer. Uses the page from step 2 and your reviews; hands the unanswered doubts to step 4."}
+  - {uses: landing-page-auditor, note: "Reads the finished page like a stranger and ranks what to fix before it goes live. Takes the page from step 2 and counts step 3's unanswered doubts as findings."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-get-a-reasons-to-switch-page-that-answers-buyer-doubts/skeleton.yaml

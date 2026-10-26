@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It reads one ad and quotes it, with no outside research.
 new_slug: job-ad-reader
 name: Job ad reader
-summary: Paste a job ad. Get what the job is, firm needs versus wishes, what is
-  missing, and questions to ask.
+summary: Paste a job ad and see what the job really is, which needs are firm, what is missing and what to ask. A plain job post decoder.
 job: think-and-decide
 headline: Job ad reader
-subhead: A job ad decoded before you spend a weekend on an application. Paste
-  the post or give a link. The skill sums up the real job in three sentences,
-  then sorts every requirement into firm, wish or unclear, quoting the ad for
-  each.
+subhead: A job ad decoded before you spend a weekend on an application. Paste the post or give a link. The skill sums up the real job in three sentences, then sorts every requirement into firm, wish or unclear, quoting the ad for each.
 explain: |
   A job ad decoded before you spend a weekend on an application. Paste the post or give a link. The skill sums up the real job in three sentences, then sorts every requirement into firm, wish or unclear, quoting the ad for each. It counts years and tools asked for and says if the list looks too broad for one person.
 
@@ -19,6 +15,10 @@ when:
   - An ad asks for ten years of everything and you wonder if you should apply.
   - You want smart questions to ask in a first call.
   - You need help tailoring your application to the ad.
+not_for:
+  - "You want pay levels or reviews of the employer: check a salary site or employee review site, because this reads only the ad."
+  - "You think the ad is a scam: check the company through its own site and other sources, as this skill does not judge employers."
+  - "You need a CV or cover letter written: use your own CV and write it yourself or with a plain chat, since this only reads the ad."
 you_give:
   - The job post text or link
   - Your current role and skills (optional)
@@ -30,7 +30,30 @@ you_get:
   - Phrases worth a question
   - Questions to ask the employer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste the full text of the job ad. If you give a link, your AI needs web access. If it cannot open it, paste the text.
+  - Add what you do now and what you want next (optional). Without this, the fit part is skipped.
+  - Read the firm needs first, then the missing details.
+  - Take the questions to your first call with the recruiter, and use the lead points to tailor your application.
+output_sample:
+  input:
+    - The text of the job ad, or a link to it
+    - What you do now (optional)
+    - What you want next (optional)
+  prerequisites:
+    - Web access only if you give a link. Otherwise paste the text.
+  output:
+    - name: The job in plain words
+      contains: Three sentences on the daily work, who you work with, and what success looks like, using only the ad.
+    - name: Requirements, sorted
+      contains: Each requirement quoted and placed as firm, wish or unclear, with a count of years and tools asked for.
+    - name: What the post leaves out
+      contains: A list of missing details such as pay, location, hours, team size, contract type and how to apply.
+    - name: Phrases worth a question
+      contains: Quoted phrases like fast-paced, what each can mean, and the question to ask about it.
+    - name: Questions to ask
+      contains: Six to eight questions specific to this ad, in the order you would ask them.
+    - name: Fit and tailoring
+      contains: Which firm needs you meet, which you do not, and three points to lead with. Only if you shared your background.
+    - name: One-line summary
+      contains: A short line starting with Worth applying if, based only on the ad and what you told it.

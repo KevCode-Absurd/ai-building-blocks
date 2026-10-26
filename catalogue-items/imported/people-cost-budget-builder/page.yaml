@@ -2,34 +2,110 @@ thinking: medium
 thinking_why: The maths is simple but the assumptions matter.
 new_slug: people-cost-budget-builder
 name: People cost budget builder
-summary: Give it your headcount plan. Get a budget by team, a month-by-month
-  view and notes to explain gaps to finance.
+summary: Turn your headcount plan into a people cost budget by team and month, with notes that explain any gap between plan and actual spend.
 job: hire-people
 headline: People cost budget builder
-subhead: "A people budget finance will accept: headcount costs by team and cost
-  centre, spread month by month, with notes that explain every gap. It puts HR
-  in the same financial language as finance."
+subhead: Give it your headcount plan, pay rates and assumptions. It builds a people budget by team, spreads it month by month, keeps approved and planned roles apart, and writes notes that explain every gap to finance.
 explain: |
-  A people budget finance will accept: headcount costs by team and cost centre, spread month by month, with notes that explain every gap. It puts HR in the same financial language as finance.
+  A people budget goes wrong when roles that are only planned get counted as approved, or when no one wrote down the assumptions. This people cost budget builder costs each role from its start month and keeps approved and planned roles in separate columns.
 
-  The skill models base pay, benefits and planned hires, keeping approved and not-yet-approved roles apart. It sets assumptions for merit increase, attrition and backfill timing, allocates shared costs such as learning or recruiting across cost centres, and tracks actuals against budget each month to flag risk early. It can build scenarios for mid-year hiring changes or a reorganisation, and draft the narrative for an executive review.
+  It applies the merit increase from its start date, takes off the cost of empty seats using your attrition and backfill delay, and spreads shared costs such as recruiting or training across teams with a key you choose. Give it actual spend and it shows budget, actual and variance for each team, with the cause in words.
+
+  Every assumption is listed with its source. Any you did not give is marked MISSING, not guessed, so finance can see what still needs a decision.
 when:
   - You are building next year's headcount budget by team.
-  - A reorg changes the hiring plan and you need the cost impact.
+  - A reorg changes the hiring plan and you need the cost effect.
   - Finance asks why actual people spend differs from budget.
   - You need to share recruiting and training costs across teams.
+not_for:
+  - "You are planning one job offer, not a team budget: use the Job offer planner. This does not run payroll either."
+  - "You want to decide how many people to hire: use the Headcount plan builder first, then bring its plan here."
+  - "You need a full company budget or a finance-approved model: use your finance team's planning model, and use this for the people lines."
 you_give:
-  - Headcount plan with roles and start dates
-  - Pay and benefit rates
-  - Assumptions such as merit and attrition
+  - Your headcount plan with roles, teams, start dates and whether each is approved
+  - Pay rates for each role
+  - Benefit and employer cost rates
+  - Assumptions such as merit increase, attrition and backfill delay
   - Actual spend to date (optional)
+  - Shared costs to spread, such as recruiting or training (optional)
 you_get:
-  - A budget by team and cost centre
+  - A budget by team and cost center, with approved and planned roles apart
   - A month-by-month spend view
-  - Variance notes against actuals
-  - A narrative for finance review
+  - Attrition savings and shared cost shown as their own lines
+  - Variance notes against actuals, with the cause in words
+  - A half-page note for finance
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Put your headcount plan in a sheet, one row per role, with team, start date, pay and approval status.
+  - Write down your assumptions: merit increase and date, attrition, backfill delay and benefit rates.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill, then attach the sheet and the assumptions.
+  - Check the assumptions list first. Fix any placeholder before you trust a total.
+  - Add last month's actual spend and ask for the variance notes. Send the finance note with the sheet.
+output_sample:
+  input:
+    - Your headcount plan with roles, teams and start dates
+    - Pay, benefit and employer cost rates
+    - Assumptions such as merit, attrition and backfill delay
+    - Actual spend to date (optional)
+  output:
+    - name: Assumptions
+      contains: Each assumption with its value and source, and MISSING where you gave none.
+    - name: Budget by team
+      contains: Approved cost, planned but not approved cost, and the total for each team or cost center.
+    - name: Month by month
+      contains: One row per team and one column per month, with totals.
+    - name: Adjustments
+      contains: Attrition and backfill savings, and shared costs spread across teams with the key used.
+    - name: Variance
+      contains: Budget, actual and variance for each team, with the cause in plain words.
+    - name: Scenario
+      contains: A changed case, such as a hiring freeze, shown next to the base total.
+    - name: Note for finance
+      contains: Totals, key assumptions, biggest risks and decisions needed, in half a page.
+how_it_works:
+  - title: List the assumptions
+    text: Writes down each one with its source and asks you to confirm the ones finance must sign off.
+  - title: Cost each role
+    text: Counts pay, benefits and employer costs from each start month, with merit from its effective date.
+  - title: Split approved and planned
+    text: Keeps roles that are only planned apart, so the budget never overstates what is committed.
+  - title: Adjust for gaps and shared costs
+    text: Takes out the cost of empty seats and spreads shared costs by the key you give.
+  - title: Spread by month
+    text: Builds the month-by-month view for every team.
+  - title: Explain the variance
+    text: Compares actual with budget and names the cause of each gap in words.
+output_shape: |-
+  ASSUMPTIONS
+    <assumption> | <value> | <source> | MISSING if blank
+
+  BUDGET BY TEAM
+    <team> | approved <n> | planned, not approved <n> | total <n>
+
+  MONTH BY MONTH
+    <team> | <month 1> ... <month 12> | total <n>
+
+  ADJUSTMENTS
+    Attrition and backfill savings <n> | Shared costs spread <n> (key: <key>)
+
+  VARIANCE
+    <team> | budget <n> | actual <n> | variance <n> | cause <words>
+
+  NOTE FOR FINANCE
+    <totals, assumptions, risks, decisions needed>
+works_best_with:
+  tools:
+    - name: Google Sheets or Excel
+      why: The month-by-month view is a sheet, and finance will want to change the numbers.
+    - name: Any chat AI that reads spreadsheets
+      why: It can read your headcount sheet and return the budget as a table you can paste.
+  inputs:
+    - Last year's people budget and actuals
+    - Your finance team's calendar and cost center codes
+    - Your hiring pace by quarter so far
+terms:
+  - term: Cost center
+    meaning: A team or unit that finance tracks costs for.
+  - term: Variance
+    meaning: The gap between what you budgeted and what you spent.
+  - term: Backfill
+    meaning: Hiring a replacement for someone who left.

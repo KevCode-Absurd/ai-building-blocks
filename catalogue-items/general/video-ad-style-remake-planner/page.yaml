@@ -1,6 +1,6 @@
 new_slug: video-ad-style-remake-planner
 name: "Video ad style remake planner"
-summary: "Paste your best ad. Get a video remake plan with every word kept, a shot table and a cast note."
+summary: "Remake an ad you already run as a new video style or shape. Every word stays in order, with a shot table and a cast note."
 job: make-video-ads
 thinking: high
 thinking_why: "It studies ads or pages closely and works out why they work."
@@ -17,6 +17,10 @@ when:
   - An image ad works and you want a short video of it for stories and reels.
   - You want a live ad remade in an animated or handmade style, or in a new shape.
   - You're handing the remake to a video tool or an editor and need the words locked.
+not_for:
+  - "You want a still image or carousel remake: use the Image ad remake planner, which locks the words the same way."
+  - "You have no original ad to copy and need a new video ad written from scratch: use the Video ad script writer from customer quotes."
+  - "You want to improve weak lines in your ad: fix the ad first, because this plan keeps every word as it is."
 
 you_give:
   - The original ad, shot by shot or part by part, with every spoken word, on-screen line and the post text, plus the image or screenshots of each shot (attach them; your AI can see pictures)
@@ -36,6 +40,31 @@ how_to_use:
   - Say the new style and its length, for example "15-second video, 9:16, live action".
   - Add the real product photos you have, so the product is rebuilt from them.
   - Read the notes before making anything. If the beat that sells is at risk, decide whether the remake is still worth it, then take the locked script and cast note to the clips skill it names.
+output_sample:
+  input:
+    - "Your original ad: each shot or part with its time, picture, spoken words, on-screen lines and post text"
+    - The new video style and shape, such as live action 9:16 or claymation
+    - Limits such as total length or characters per on-screen line (optional)
+    - Real product photos and how the product is used (optional, but strongly advised)
+    - Your brand brain claims list, for flags only (optional)
+  prerequisites:
+    - Screenshots or the image of each shot, attached so your AI can see them
+    - A video ad script from the Video ad script writer from customer quotes is optional, not required
+  output:
+    - name: Laid out
+      contains: Your original ad in order, with each part's time, picture, words and the job it does.
+    - name: The beat that sells
+      contains: The part that persuades, and whether the new style helps or weakens it.
+    - name: Shot table
+      contains: Each shot with its time, the original words and a new picture note.
+    - name: Slots
+      contains: Each on-screen line with its limit, the line used, or a flag if empty.
+    - name: Cast note
+      contains: Who carries the remake and which clips skill makes it next.
+    - name: Notes
+      contains: Word check, changes, product source, claim flags and anything missing.
+    - name: Checks missed
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: Lays the ad out

@@ -16,6 +16,12 @@ inputs:
     required: true
   - type: offer
     required: false
+  - type: ad_copy
+    required: false
+  - type: objection_map
+    required: false
+  - type: hooks
+    required: false
 outputs:
   - type: ad_copy
     required: true

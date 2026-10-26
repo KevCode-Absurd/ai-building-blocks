@@ -1,6 +1,6 @@
 new_slug: summing-up-paragraph-writer
 name: Summing-up paragraph writer
-summary: Paste your ad draft. Get a short section that pictures the gain, sums up the case and gives a reason to act.
+summary: Write a summing-up paragraph for your ad. Paste your draft and get a short section that pictures the gain, sums up the case and gives one real reason to act.
 job: write-ad-copy
 thinking: medium
 thinking_why: It chooses what to sum up and which reason to act is real, but the order is fixed.
@@ -14,10 +14,14 @@ when:
   - Your ad has a headline, a body and a button but nothing in between.
   - People read your ad, agree, and do not act.
   - Your price comes before the reader has seen the value.
+not_for:
+  - "You only need the final ask or button line: use the Call-to-action writer."
+  - "Your ad has no proof yet: write or gather the proof first, then come back to sum it up."
+  - "Your offer has no real deadline, limit or cost of waiting and you want urgency: skip it, because this skill will not invent one."
 you_give:
   - Your ad draft with headline, body and proof
   - A proof map or list of reader doubts (optional)
-  - What waiting costs the reader or what acting gains them, if you know
+  - What waiting costs the reader, or what acting gains them (optional)
 you_get:
   - A short summing-up section ready to place before your ask
   - The picture of the gain, built from your facts
@@ -28,6 +32,26 @@ how_to_use:
   - Paste your draft. Add the proof map if you made one.
   - Place the new section between the last proof and the ask.
   - Read the draft aloud from the headline to the ask and fix any jump.
+output_sample:
+  input:
+    - Your ad draft with headline, body and proof
+    - A proof map or list of reader doubts (optional)
+    - What waiting costs, or what acting gains, if you know (optional)
+  output:
+    - name: MAIN POINTS
+      contains: The three or four points your case rests on, each in a short phrase.
+    - name: SUMMING-UP SECTION
+      contains: The short section, ready to paste between your last proof and your ask.
+    - name: PICTURE USED
+      contains: The ordinary moment shown to the reader and the fact behind it.
+    - name: REASON TO ACT
+      contains: One reason to act now, marked gain or loss, with the fact that makes it real.
+    - name: SMALL EXTRA
+      contains: A true extra touch from your facts, or none.
+    - name: MISSING
+      contains: Any fact the skill needed but did not have.
+    - name: CHECKS MISSED
+      contains: One line for each check the section still fails, or none.
 how_it_works:
   - title: Picks the main points
     text: Chooses the three or four points the case rests on.

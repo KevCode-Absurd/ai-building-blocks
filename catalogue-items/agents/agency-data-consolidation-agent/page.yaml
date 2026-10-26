@@ -1,0 +1,147 @@
+name: Sales data consolidation agent
+summary: Turn your sales rows into one report by territory and rep, with quota attainment, pipeline by stage and top performers. Bring your sales table.
+headline: Sales data consolidation agent
+subhead: Paste your sales numbers by rep and territory, and your open deals if you have them. The agent checks the rows, then builds one sales performance report. You get territory totals, rep results, a pipeline snapshot and your top five performers.
+job: track-numbers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Sales numbers usually sit in several sheets, one per rep or per month. This
+  sales data consolidation agent joins them into one report by territory and by
+  rep, so you can see who is on quota and where the pipeline sits. It is a
+  sales performance report you build from a pasted table, not a live dashboard.
+
+
+  It follows a few strict rules. It uses the latest date for each rep and each
+  view. It works out quota attainment as revenue divided by quota, times 100,
+  and shows "n/a" when quota is zero or missing, never a made-up 0%. It keeps
+  month to date, year to date and year end views apart, so they are never added
+  together. It also checks that rep rows add up to the territory total.
+
+
+  It does not read a database or refresh itself. It builds the report from the
+  rows you paste, so a new month means pasting new rows. This is a role profile
+  from Agency Agents, shared under MIT. The download includes the original
+  profile, its licence and a setup guide. The profile's speed and refresh
+  targets describe a live system. They are not results measured by AI Blocks.
+when:
+  - Your reps send sales figures in separate sheets, and you need one report for the sales meeting.
+  - You need to see quota attainment by territory and rep at month end.
+  - Your open deals are in a CRM export, and you want them next to the sales figures.
+  - A boss asks who your top five performers are this year, and you need numbers to back it up.
+not_for:
+  - "You still have the raw Excel files and need the numbers pulled out first: use the Sales spreadsheet extraction agent."
+  - "You want a dashboard people can open every day: use the Offline dashboard builder or the Recurring KPI report maker."
+  - "You want to review deal health and forecast the quarter: use the Sales pipeline health and forecast agent or the Weekly sales pipeline reviewer."
+  - "You want final figures for tax or accounts. Use this for management reports only, and have your accountant sign off the books."
+you_give:
+  - A table of sales results by rep, with territory, date, revenue and quota, and a column that says if the row is month to date, year to date or year end
+  - The view you want, such as the whole team or one territory
+  - A table of open deals with stage, value and win chance (optional)
+  - Trailing months of revenue, if you want a trend (optional)
+  - How you count a rep with no quota, if that applies (optional)
+you_get:
+  - A data check that lists rows read, dates used and any gaps
+  - A territory summary with month to date and year to date revenue, quota attainment and rep count
+  - A rep table with each rep's latest revenue, quota and attainment
+  - A pipeline snapshot by stage with deal count, value and weighted value
+  - A six-month trend and the top five performers by year to date revenue
+  - A list of checks still open before you share the report
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your sales rows with their column headings. Add your open deals as a second table if you have them. For a big file, attach it if your AI accepts files, or paste the first 100 rows and say how many there are.
+  - Say which view you want, such as "Whole team, year to date" or "Deep dive on the North territory".
+  - Read the data check first. If it lists missing quotas or old dates, fix the rows or accept the limit before you trust the rest.
+  - Compare one territory total with your own sheet. If they match, share the report.
+  - Next month, paste the new rows and last month's report into a fresh chat to get a new report.
+how_it_works:
+  - title: Check the rows
+    text: It counts the rows, finds the latest date for each rep and view, and flags gaps, duplicates and missing quotas.
+  - title: Group by territory
+    text: It adds each territory's revenue and counts its reps, keeping month to date, year to date and year end apart.
+  - title: Work out attainment
+    text: It divides revenue by quota and multiplies by 100. A zero or missing quota shows n/a.
+  - title: Add the pipeline
+    text: It groups open deals by stage and shows count, value and weighted value, if you gave win chances.
+  - title: Rank and trend
+    text: It lists the top five reps by year to date revenue and sets out the last six months of revenue.
+  - title: Reconcile
+    text: It checks that rep rows add up to each territory total, and lists anything that does not.
+output_shape: |-
+  DATA CHECK
+    Rows read <n> | Latest dates used <date per view> | Gaps <missing quotas, dates or reps>
+
+  TERRITORY SUMMARY
+    <territory> | MTD revenue <$> | YTD revenue <$> | Quota <$> | Attainment <%> | Reps <n>
+
+  REP PERFORMANCE
+    <rep> | <territory> | <view> | Revenue <$> | Quota <$> | Attainment <% or n/a>
+
+  PIPELINE SNAPSHOT
+    <stage> | Deals <n> | Value <$> | Weighted value <$ or MISSING>
+
+  SIX-MONTH TREND
+    <month> | <revenue per territory>
+
+  TOP 5 BY YTD REVENUE
+    <rank> | <rep> | <territory> | <YTD revenue>
+
+  OPEN CHECKS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your sales results by rep, with territory, date, revenue and quota
+    - The view you want, such as whole team or one territory
+    - Your open deals with stage, value and win chance (optional)
+    - Your last six months of revenue (optional)
+  prerequisites:
+    - An AI you can paste a table into, such as Claude, ChatGPT or Gemini
+    - Your numbers pulled out of Excel first, if they sit in many files. The Sales spreadsheet extraction agent does this.
+  output:
+    - name: Data check
+      contains: Rows read, the dates used and any missing quotas or gaps.
+    - name: Territory summary
+      contains: Month to date and year to date revenue, quota attainment and rep count for each territory.
+    - name: Rep performance
+      contains: Each rep's latest revenue, quota and attainment, with n/a where quota is missing.
+    - name: Pipeline snapshot
+      contains: Deals by stage with count, value and weighted value.
+    - name: Six-month trend
+      contains: Revenue by month for each territory.
+    - name: Top 5 by YTD revenue
+      contains: Your five best reps this year, ranked.
+    - name: Open checks
+      contains: What to confirm in your own records before you share the report.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A file upload or a long paste lets it hold the whole table and add up each territory without dropping rows.
+  inputs:
+    - Last month's report, so the new one can show what changed.
+    - A column that says which rows are month to date, year to date or year end.
+    - Your quota list, if quotas are not in the sales table.
+terms:
+  - term: Quota attainment
+    meaning: Revenue divided by quota, times 100. A rep with $80,000 revenue on a $100,000 quota is at 80%.
+  - term: MTD, YTD, year end
+    meaning: Month to date, year to date, and the full-year figure or projection. They are separate views.
+  - term: Weighted pipeline
+    meaning: Each deal's value times its chance of winning, added up. It is a smaller, more careful number than the raw total.
+  - term: Territory
+    meaning: A region or customer group assigned to a set of reps.
+tweaks:
+  - what: Scope
+    how: Ask for one thing at a time, such as only the territory summary, or only the top five.
+  - what: Format
+    how: Ask for the result as a table, or as JSON if you plan to load it into a dashboard tool.
+  - what: Quota rule
+    how: Say how to treat reps with no quota, such as leaving them out of attainment.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

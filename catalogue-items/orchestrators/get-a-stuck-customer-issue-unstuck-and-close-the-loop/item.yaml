@@ -16,8 +16,8 @@ outputs:
   - {type: copy_draft}
 uses: [customer-question-researcher, escalation-brief-writer, customer-reply-drafter, complaint-reply-promise-checker]
 steps:
-  - {uses: customer-question-researcher, note: "What your docs, past tickets and chats say about this issue, each source named, and the question nobody has answered yet."}
-  - {uses: escalation-brief-writer, note: "A brief for engineering, operations or leadership: the customer's impact, what was tried, what you need from them and by when."}
+  - {uses: customer-question-researcher, note: "What your docs, past tickets and chats say about this issue, each source named, and the question nobody has answered yet. Hands the brief writer the facts and the open question."}
+  - {uses: escalation-brief-writer, note: "A brief for engineering, operations or leadership: the customer's impact, what was tried, what you need from them and by when. Hands the reply drafter the impact and what was tried."}
   - {uses: customer-reply-drafter, note: "The reply to the customer with the real answer or the real date, in your voice, and what to check before sending."}
   - {uses: complaint-reply-promise-checker, note: "Every promise checked against what the owner actually agreed, tone flags, and a repaired reply. Nothing is sent until you say so."}
 origin: own

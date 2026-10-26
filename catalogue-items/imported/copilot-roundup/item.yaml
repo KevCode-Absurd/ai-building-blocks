@@ -8,8 +8,12 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: meeting_notes
+  - type: brief
     required: true
+  - type: source_text
+    required: false
+  - type: tool_connection
+    required: false
 outputs:
   - type: document
 uses: []
@@ -29,4 +33,4 @@ credits:
   - title: roundup skill
     by: GitHub Copilot community
     url: https://github.com/github/awesome-copilot/tree/main/skills/roundup
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and added a short run guide at the top of the skill.

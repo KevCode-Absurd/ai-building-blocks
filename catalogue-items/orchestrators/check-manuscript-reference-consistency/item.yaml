@@ -1,6 +1,6 @@
 slug: check-manuscript-reference-consistency
 name: Check manuscript reference consistency
-summary: Share the source files. Get a manuscript reference cross check, duplicate candidates and unresolved source requests.
+summary: Check your manuscript's citations against its reference list and the papers you cite, once, before you submit. Get a mismatch table and source requests.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,21 +8,23 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: copy_draft
     required: true
   - type: source_text
+    required: true
+  - type: question
     required: false
 outputs:
-  - type: document
+  - type: audit_report
   - type: copy_draft
 uses:
   - source-note-summariser
   - proofreader
 steps:
   - uses: source-note-summariser
-    note: Extract publication titles, authors, dates and identifiers actually visible in the supplied cited source files. Keep an evidence location for each and leave missing metadata unresolved; do not invent a DOI lookup or run absent scripts.
+    note: "Reads each cited paper you supplied and records its title, authors, date and any identifier that is visible, with the page it saw them on. Leaves missing details blank and does not look up a DOI. Hands step 2 one record per paper."
   - uses: proofreader
-    note: Cross-check manuscript citation spelling, years, numbering and bibliography consistency against the supplied publications and reference list. Suggest duplicate candidates for review; do not invent sources or imply metadata proves a claim.
+    note: "Uses your manuscript and reference list together with step 1's paper records. Cross-checks citation spelling, years, numbering and style, and suggests duplicate candidates for review. It invents no sources and does not treat a metadata match as proof a paper supports a claim."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

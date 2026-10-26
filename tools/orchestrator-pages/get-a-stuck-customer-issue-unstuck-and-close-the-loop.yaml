@@ -1,6 +1,6 @@
 new_slug: get-a-stuck-customer-issue-unstuck-and-close-the-loop
 name: Get a stuck customer issue unstuck and close the loop
-summary: Give it the stuck issue. Get the facts, an escalation brief and a reply that keeps its promises.
+summary: "Get a stuck customer issue unstuck: give it the issue and messages. You get the facts, an escalation brief and a reply that keeps its promises."
 job: help-customers
 thinking: high
 thinking_why: It must find the truth across your records and promise the customer only what was agreed. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A customer has written three or more times and the thread has no answer.
   - Support keeps saying "we're looking into it" because nobody inside has said anything.
   - An issue needs engineering, the warehouse or a supplier, and the request to them is vague.
+not_for:
+  - "You have one unanswered ticket with no repeat contact: send a normal support reply, or ask a teammate for the answer."
+  - "You only need to check a reply you already wrote: use the Customer reply promise checker."
+  - "You need to write a policy or help page from a fix: write it yourself or ask your AI, then run this only if the customer is still stuck."
 you_give:
   - "The issue and its history: what the customer asked and what was said back"
   - The customer's own messages, in full
@@ -29,6 +33,26 @@ how_to_use:
   - Paste the issue, the customer's messages and who owns the fix. It finds the facts and writes the brief.
   - Send the brief to the owner. Wait for an answer or a date and paste it back.
   - Read the checked reply and send it. Note the date you promised.
+output_sample:
+  input:
+    - The stuck issue and its history, with what the customer asked and what was said back
+    - The customer's own messages, in full, with dates
+    - Who can fix this kind of problem and how to reach them
+    - Your docs, past tickets or chat logs on the topic (optional)
+  prerequisites:
+    - An AI chat that can read files, such as Claude Code or a Claude Project
+    - The handoff pack zip with HANDOFF.md and the skill files
+  output:
+    - name: "Step 1: What is known"
+      contains: Facts from your docs, tickets and chats with each source named, what was told to the customer, and the open question.
+    - name: "Step 2: Escalation brief"
+      contains: A brief for the owner with customer impact, what was tried, what you need from them and by when.
+    - name: "Step 3: Reply draft"
+      contains: A reply to the customer in your voice with the real answer or date, and what to check first.
+    - name: "Step 4: Checked reply"
+      contains: Each promise marked agreed or removed, tone flags, and a repaired reply. Nothing is sent without your yes.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find what is already known
     text: Reads your docs, tickets and chats, lays out what is known with each source named, and states the open question.

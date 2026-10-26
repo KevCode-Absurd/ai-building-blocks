@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It fetches one post and formats it.
 new_slug: x-post-reader
 name: X post reader
-summary: Give it an X post link. Get the text, author and numbers as clean data.
-  Collects data from websites.
+summary: Paste an X post link and get the post text, author and like, reply and view counts back as clean data. A simple X post reader for your AI.
 job: work-with-files
 headline: X post reader
-subhead: "Paste a link to a post on X and get its content back as clean,
-  structured data: the text, the author, the time and the like, reply and view
-  counts."
+subhead: "Paste a link to a post on X and get its content back as clean, structured data: the text, the author, the time and the like, reply and view counts."
 explain: |
   Paste a link to a post on X and get its content back as clean, structured data: the text, the author, the time and the like, reply and view counts. You can then summarise it, quote it or compare it with others.
 
   The skill pulls the handle and post ID out of an x.com or twitter.com link. It then calls a free third-party web service with a simple curl request and reads the JSON that comes back. Because someone else runs the service, it may fail or miss posts, and the numbers are only as current as the fetch. The skill notes the retrieval time.
 when:
   - A colleague sends an X link and you want a summary without opening the app.
-  - You are collecting posts for research and need the author and counts in a
-    table.
+  - You are collecting posts for research and need the author and counts in a table.
   - You want the full text of a long X Article.
   - You need to quote a post and record when you read it.
+not_for:
+  - "You need a private, deleted or protected post: open it in the X app, or in a browser where you are signed in."
+  - "The service fails or returns nothing: read the post in the X app, or copy the text and paste it into your AI."
+  - "You want to scrape many accounts or a whole feed: this reads one post link at a time, so use X's own tools."
 you_give:
   - One or more X or Twitter post links
   - A question to answer from the post, such as a summary (optional)
@@ -30,8 +30,28 @@ you_get:
   - The full article text for long posts
   - A note of when the data was fetched
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands.
+  - Use an AI that can run commands and open web links. A plain chat window without that cannot fetch the post.
+  - Copy the full link to the X post. It must look like x.com/name/status/number.
+  - Paste the link into your AI and say what you want, such as a summary or the like count.
+  - Your AI fetches the post data from a free outside service called ADHX.
+  - Check the fetch time and the counts. If you get an error, the post may be private, deleted or missing from the service.
+  - If the fetch fails, copy the post text from X and paste it into your AI instead.
+output_sample:
+  input:
+    - One X or Twitter post link (x.com, twitter.com or adhx.com)
+    - A question about the post, such as a summary (optional)
+  prerequisites:
+    - An AI that can run a curl command and reach the web
+  output:
+    - name: text
+      contains: The short post text. It is empty when the post is a long X Article.
+    - name: author
+      contains: The display name, the handle and the profile image link of the person who posted.
+    - name: createdAt
+      contains: The time the post was made.
+    - name: engagement
+      contains: The counts of replies, retweets, likes and views at the time of the fetch.
+    - name: article
+      contains: "For long posts: the title, a short preview, the cover image link and the full text."
+    - name: Retrieval time
+      contains: A note of when the data was fetched, so you know how current the counts are.

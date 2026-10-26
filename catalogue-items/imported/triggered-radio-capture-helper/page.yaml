@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Triggers need tuning to the signal.
 new_slug: triggered-radio-capture-helper
 name: Triggered radio capture helper
-summary: Say which signal to catch. Get a radio that records only when it appears.
+summary: Set up a triggered radio capture that records only when your signal appears. Get MATLAB code for NI USRP radios, plus a check that it caught the real thing.
 job: build-software
 headline: Triggered radio capture helper
-subhead: A software radio that saves data only when your signal shows up, so you
-  skip hours of empty recordings. You tell it what to catch, and it writes the
-  capture code and checks it works.
+subhead: A software radio that saves data only when your signal shows up, so you skip hours of empty recordings. You tell it what to catch, and it writes the capture code and checks it works.
 explain: |
   A software radio that saves data only when your signal shows up, so you skip hours of empty recordings. You tell it what to catch, and it writes the capture code and checks it works.
 
@@ -17,6 +15,10 @@ when:
   - Your detector never fires, or fires on every bit of noise.
   - You need to catch a known preamble from a wireless device.
   - You want a repeatable capture script for lab tests.
+not_for:
+  - "You have no NI USRP radio or MATLAB Wireless Testbench: use your radio maker's own capture tool, or record a plain continuous capture."
+  - "You want to decode or analyse a signal you already saved: use MATLAB's own signal tools on that file."
+  - "You do not know the signal's frequency or bandwidth: scan the band with a spectrum analyser first, then come back."
 you_give:
   - The signal to catch, such as its frequency and bandwidth
   - Your radio model and setup
@@ -28,9 +30,30 @@ you_get:
   - A check that the capture is a real signal
   - Tuning steps if detection fails
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Wireless Testbench and a USRP
-    radio.
+  - "Set up first: an NI USRP radio, MATLAB and Wireless Testbench. Note your radio model, centre frequency and bandwidth."
+  - Open a chat with an AI that can read the skill folder. Paste the skill instructions if it cannot read files.
+  - Tell it which signal to catch. Add a known preamble if you have one.
+  - Answer any questions it asks. It will not guess missing values.
+  - Run the MATLAB code on your radio. This needs the radio and MATLAB, so a plain chat cannot run it.
+  - Check the status and ratio it reports. If nothing fires or it fires on noise, ask for the threshold tuning steps.
+output_sample:
+  input:
+    - The signal to catch, such as its centre frequency and bandwidth
+    - Your radio model and setup
+    - A known preamble, such as WLAN or 5G NR (optional)
+    - What the signal looks like on a spectrum plot (optional)
+  prerequisites:
+    - An NI USRP radio
+    - MATLAB with Wireless Testbench installed
+    - An AI that can run MATLAB, or you run the code yourself
+  output:
+    - name: Detector choice
+      contains: Energy detection for any strong signal, or preamble detection for a known pattern, with the reason for the pick.
+    - name: Checked settings
+      contains: Your parameters tested against the API limits before any code is written.
+    - name: Capture code
+      contains: MATLAB code built from one of seven ready capture patterns, set for your radio and signal.
+    - name: Capture results (data, status, r)
+      contains: The captured samples, a status showing whether a trigger fired, and a ratio that shows if it was a real signal.
+    - name: Threshold tuning steps
+      contains: A plot, diagnose and adjust routine, given when nothing fires or it fires on noise.

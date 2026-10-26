@@ -1,72 +1,65 @@
 new_slug: powerpoint-chart-data-rebuilder
 name: PowerPoint editable chart rebuilder
-summary: Share chart data and your deck. Get editable PowerPoint charts with
-  checked labels and values.
+summary: "Turn picture charts in your deck into editable PowerPoint charts from your real data, with every value checked against the source."
 job: work-with-files
 thinking: high
 thinking_why: Native file features, source meaning and check evidence must
   survive the workflow.
 headline: PowerPoint editable chart rebuilder
-subhead: Share chart source data and your deck. Get native editable PowerPoint
-  charts with matched labels and numbers. Work on a copy of your file. Get a
-  clear record of what passed and what still needs checking.
-explain: >-
-  Share chart source data and your deck. Get native editable PowerPoint charts
-  with matched labels and numbers.
+subhead: Give it your deck and the data behind each chart. It rebuilds each picture chart as a real PowerPoint chart you can edit, then checks every label and number against your data. You get a new copy of the deck and a list of what passed and what still needs a check.
 
+explain: |
+  A chart pasted into a deck as a picture cannot be edited. To change a colour, fix a label or update a number, you have to start again. This skill rebuilds the chart as an editable PowerPoint chart with its own data table, so anyone on your team can change it.
 
-  It works with the actual PowerPoint files and follows a specific method for
-  this task. Your source files stay intact. The method starts by checking what
-  your AI already knows and which files it can read. It asks only for missing
-  facts that change the work.
+  It needs the real numbers. A screenshot cannot give exact values, so without data it stops and asks. It can offer a labelled estimate read from the picture, but only for you to approve, and it never calls that exact.
 
+  It then checks the new chart category by category and series by series, including signs, scale, rounding and totals. Two categories swapped with the same total still fail. It also tells you if the chart holds a copy of the data or is linked to a live Excel file, so you do not assume a link that is not there.
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  It needs an AI that can open and save .pptx files, such as Claude with file tools or a coding assistant. A chat that cannot open files gives you the comparison table and hand-built steps instead of a finished deck. Any check that needs PowerPoint itself stays marked not run.
+
 when:
-  - Share chart source data and your deck. Get native editable PowerPoint charts
-    with matched labels and numbers.
-  - Actual deck, complete approved chart data, categories, series, units, chart
-    type and source citations.
-  - You need a checked copy while keeping your original files intact.
+  - Your deck has charts pasted in as pictures and you need to change them.
+  - A colleague sent a deck and the numbers behind the charts are in a spreadsheet.
+  - A chart must match a new set of numbers and keep its labels and look.
+  - You need proof that the numbers in a chart match the source before you share the deck.
+
+not_for:
+  - "You have a picture of a chart and no data behind it. Get the data first. It can offer a labelled estimate, but never exact values."
+  - "The chart is already editable and you only want it to look better: restyle it in PowerPoint, or use the PowerPoint template populator."
+  - "You want to check that slide figures match an Excel workbook without rebuilding charts: use the Excel to PowerPoint number checker."
+  - "You want to see what changed between two versions of a deck: use the PowerPoint deck change reviewer."
+
 you_give:
-  - Actual deck, complete approved chart data, categories, series, units, chart
-    type and source citations.
-  - The app and file tools your AI can use for the requested work
+  - Your deck as a .pptx file, with the slide numbers of the charts to rebuild
+  - The data behind each chart, with categories, series, values and units, in a sheet or a pasted table
+  - The chart type you want, such as bar, line or pie (optional if the old chart shows it)
+  - Where each chart's numbers come from, such as a report or sheet name (optional)
 you_get:
-  - editable-charts.pptx, embedded chart workbooks where required, and a
-    chart-data comparison.
-  - A record of source files, changes and check results
-  - Missing facts and any checks that could not run
+  - A copy of your deck with each chart rebuilt as an editable PowerPoint chart (editable-charts.pptx)
+  - A comparison of every category and series value against your data
+  - A source map that shows which sheet or cell backs each chart
+  - A list of checks that passed, failed or did not run, and what is still open
+
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
-  - Review the native output and its real check evidence before sharing it.
+  - Open the skill in Claude, ChatGPT or Gemini with file tools on, or in a coding assistant that can edit files. A chat that cannot open files gives you the comparison table and steps to rebuild by hand.
+  - Attach the deck and the data. Say which slides hold the charts.
+  - If a chart is only a picture with no data, say so. Expect a request for the data, not guessed numbers.
+  - Read the comparison first. Every category and series should say passed.
+  - Open the new deck in PowerPoint and click a chart to edit its data. Anything marked not run is yours to check by hand.
+  - Your original deck is never changed. All work goes into a copy.
+
 how_it_works:
-  - title: Step 1
-    text: 1. Inspect the original chart or image and obtain its actual source data.
-      Pixels alone are insufficient for exact values; stop or request data
-      instead of inventing a series.
-  - title: Step 2
-    text: 2. Define categories, series order, missing values, axis units and
-      intended comparison. Preserve zeros and gaps according to the source
-      meaning.
-  - title: Step 3
-    text: 3. Create a native chart and its editable data using supported PPTX
-      tooling. Use a literal data snapshot only when that is the approved
-      requirement; do not imply a live Excel connection.
-  - title: Step 4
-    text: 4. Compare every category and series value with the source, including
-      sign, scale, rounding and totals. Check any embedded workbook and formulas
-      required by the task.
-  - title: Step 5
-    text: 5. Render the slide to inspect axes, legends and data labels. Reopen the
-      deck and verify the chart is editable; retain the source map and state any
-      unsupported native feature.
+  - title: Finds the real data
+    text: Looks at the original chart and your data. A picture alone is not enough for exact values, so it asks for the data instead of inventing a series.
+  - title: Fixes the chart's shape
+    text: Sets categories, series order, missing values, axis units and what the chart compares. Zeros and gaps keep the meaning they have in your source.
+  - title: Builds the chart
+    text: Creates a PowerPoint chart with its own editable data table. It says so when the chart holds a copy of the data rather than a live Excel link.
+  - title: Compares every value
+    text: Checks each category and series against your source, including sign, scale, rounding and totals, and any embedded workbook the task needs.
+  - title: Renders and reopens
+    text: Draws the slide to check axes, legends and labels, then reopens the saved deck to confirm the chart is still editable.
+
 output_shape: >-
   FILES
 
@@ -87,6 +80,30 @@ output_shape: >-
   OPEN ITEMS
 
   <missing fact or unsupported check> | <next action>
+
+output_sample:
+  input:
+    - Your deck as a .pptx file
+    - The data behind each chart, with categories, series and units
+    - The slide numbers of the charts to rebuild
+    - Where the numbers come from (optional)
+  prerequisites:
+    - An AI that can open and save .pptx files, such as Claude with file tools or a coding assistant
+    - PowerPoint on your own computer, to check the last things by eye
+  output:
+    - name: editable-charts.pptx
+      contains: A copy of your deck where each chart is an editable PowerPoint chart with its own data table.
+    - name: Chart-data comparison
+      contains: Every category and series value set against your source, with sign, scale, rounding and totals checked.
+    - name: Files
+      contains: What was made, such as the new deck and any embedded chart workbooks, and where each one is saved.
+    - name: Source map
+      contains: For each chart, the file, sheet and cell or slide that backs it.
+    - name: Checks
+      contains: Each check marked passed, failed or not run, with the evidence behind it.
+    - name: Open items
+      contains: Missing data or checks that could not run, each with the next action.
+
 tweaks:
   - what: Your source files
     how: Actual deck, complete approved chart data, categories, series, units, chart
@@ -97,6 +114,25 @@ tweaks:
   - what: The app used to check it
     how: Say which Excel or PowerPoint version you will use. Your AI must name any
       check it cannot run.
+
+works_best_with:
+  tools:
+    - name: Claude with file tools, or a coding assistant
+      why: It can open the .pptx, build native charts, draw the slides and reopen the saved file to check it.
+    - name: PowerPoint on your computer
+      why: It is the last check. Click each chart to confirm the data table opens and edits.
+  inputs:
+    - The spreadsheet or report the chart numbers came from
+    - A note of the units and rounding you want shown, such as thousands or one decimal
+
+terms:
+  - term: Editable chart
+    meaning: A real PowerPoint chart with a data table you can open and change, not a picture of one.
+  - term: Series
+    meaning: One set of values on a chart, such as one line or one colour of bars.
+  - term: Data snapshot
+    meaning: A copy of the numbers stored inside the chart. It does not update when your Excel file changes.
+
 judge:
   - No invented values from a screenshot.
   - Chart data agrees at category and series level.

@@ -1,0 +1,153 @@
+name: Drone/Reality Mapping Specialist agent
+summary: "Plan a drone mapping job: flight settings, ground control points, processing steps and accuracy checks for orthomosaics, terrain models and 3D meshes."
+headline: Drone/Reality Mapping Specialist agent
+subhead: Describe the site, the products you need and the accuracy you must reach. The agent plans the flight, the ground control points, the processing steps and the quality checks. You get a capture and processing plan for drone photogrammetry.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A good drone map is decided on the ground, before the flight. Too little photo overlap leaves holes. Too few ground control points let the map drift. A sharp pixel size gets mistaken for accuracy. This drone mapping agent plans the capture and the processing so the final orthomosaic or terrain model matches the accuracy you need.
+
+  It covers the full path: flight height and overlap, camera settings, lighting and weather, ground control points and RTK or PPK, then processing in order. That order is image check, alignment, dense cloud, mesh, orthomosaic and height model, with ground control added. It plans checks you can run, such as the error at control points and a visual check for seams and blur. It separates pixel size (GSD) from positional accuracy, because they are different things.
+
+  It plans only. It cannot fly a drone, see your photos or run your software. It cannot confirm airspace rules or permits, and its output is not a certified survey. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience claims are not results measured by AI Blocks.
+when:
+  - You are planning a first drone mapping flight over a site and want a settings plan.
+  - You need an orthomosaic or height model for construction progress, a mine, a farm or a flood study.
+  - Your last map had holes, blur or position errors, and you need to find out why.
+  - You must choose between GCPs and RTK, or between Pix4D, Metashape and WebODM.
+not_for:
+  - "You need a legal boundary or certified survey: hire a licensed surveyor."
+  - "You need to analyze satellite images: use the GeoAI/ML Engineer agent."
+  - "You only need an aerial photo placed on a map: use the GIS Analyst agent."
+  - "You already have LiDAR and need a 3D scene: use the 3D & Scene Developer agent."
+you_give:
+  - "The site: area size, terrain and any boundary file"
+  - The products you need, such as an orthomosaic, height model, point cloud or 3D mesh, and what each is for
+  - The accuracy you must reach, in centimeters, and whether it is survey grade
+  - Your drone and camera or sensor, such as RGB, multispectral, thermal or LiDAR, and whether it has RTK or PPK
+  - The processing software you have, such as Pix4D, Agisoft Metashape or WebODM (optional)
+  - Ground control points you already have, and how they are measured (optional)
+you_get:
+  - A flight plan with height, overlap, speed and camera settings
+  - A ground control and checkpoint plan
+  - Go and no-go checks for weather and light
+  - A processing order with the quality check after each stage
+  - A product table with pixel size and file format for each product
+  - An accuracy report plan and open questions
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Write your brief. Give the site size, the products and the accuracy you need, and your drone and camera. Add your software if you have it.
+  - Say 'Plan this mapping job. Do not guess my accuracy target.' Your AI asks once for what is missing.
+  - Read the ground control plan first. Change it if you cannot place points at the spread it asks for.
+  - Check the airspace rules and any permit for your site yourself. The AI cannot confirm them.
+  - After the flight, send back image problems or error figures from your software, and ask what to change.
+how_it_works:
+  - title: Collect the brief
+    text: It confirms the site, products, accuracy, drone and software. It asks once for anything missing, then marks it MISSING.
+  - title: Plan the flight
+    text: It sets height, overlap, speed, camera settings and the best light, and adjusts for hills.
+  - title: Plan ground control
+    text: It plans where to place control points and checkpoints, and when RTK or PPK is enough.
+  - title: Plan the checks on the day
+    text: It lists weather limits and image checks that tell you to re-fly before leaving site.
+  - title: Plan the processing
+    text: It orders image culling, alignment, dense cloud, mesh, orthomosaic, height model and ground control.
+  - title: Plan accuracy and handoff
+    text: It plans the error report, visual checks and how to load products into your GIS tool.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    Site <area, terrain> | Products <list> | Accuracy needed <cm> | Equipment <drone, sensor, RTK or PPK>
+    Assumed: <list> | MISSING: <list>
+
+  FLIGHT PLAN
+    Height <value> | Pixel size (GSD) <value> | Forward overlap <value> | Side overlap <value> | Speed <value>
+    Camera <settings> | Light and time of day <note> | Terrain handling <note>
+
+  GROUND CONTROL
+    Control points <count and spread> | Checkpoints <count> | How measured <method> | RTK or PPK note
+
+  ON-SITE CHECKS
+    <check> | <go or no-go rule>
+
+  PROCESSING STEPS
+    <number> | <stage> | <setting> | <quality check>
+
+  PRODUCTS
+    <product> | <pixel size> | <format> | <use>
+
+  ACCURACY REPORT PLAN
+    Control point error <how> | Checkpoint error <how> | Visual checks <list> | Point density <how>
+
+  GIS HANDOFF
+    <product> | <where it loads> | <check>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - The site size and terrain
+    - The products you need and the accuracy you must reach
+    - Your drone, camera or sensor, and RTK or PPK
+    - Your processing software (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A drone and processing software to carry out the plan
+    - Local permission to fly, which you must confirm yourself
+  output:
+    - name: Brief and assumptions
+      contains: The site, products, accuracy and equipment as understood, with assumptions and MISSING items.
+    - name: Flight plan
+      contains: Height, pixel size, overlap, speed, camera settings and light notes.
+    - name: Ground control
+      contains: How many control points and checkpoints, where they go and how to measure them.
+    - name: On-site checks
+      contains: Weather and image checks, each with a go or no-go rule.
+    - name: Processing steps
+      contains: Numbered stages from image culling to height model, with a quality check after each.
+    - name: Products
+      contains: Each product with pixel size, file format and use.
+    - name: Accuracy report plan
+      contains: How to measure error at control points and checkpoints, and what to check by eye.
+    - name: GIS handoff and open questions
+      contains: How products load into your GIS tool, and what is still unknown.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Accuracy target
+    how: Give the error you can accept in centimeters. It decides how many control points you need.
+  - what: Software
+    how: Name the program you use so the processing steps use its terms.
+  - what: Products
+    how: Ask for only the products you need, since each adds processing time.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Orthomosaic
+    meaning: One sharp, to-scale photo of the site made by joining many drone photos.
+  - term: GSD
+    meaning: Ground sample distance, the ground size of one pixel. It is not the same as accuracy.
+  - term: GCP
+    meaning: Ground control point, a marked spot with a measured position that fixes the map to the Earth.
+  - term: RTK and PPK
+    meaning: Ways to correct the drone's position, live or after the flight.
+  - term: DTM and DSM
+    meaning: Height maps. DTM is bare ground, and DSM includes buildings and trees.
+  - term: RMSE
+    meaning: A single number for the average position error at your control points.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan works from a pasted profile and your brief.
+    - name: Claude Code
+      why: It can read your project folder and quality reports, so fixes fit your real results.
+  inputs:
+    - The quality report from your processing software.
+    - A map of the site boundary and where control points can go.

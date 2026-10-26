@@ -1,6 +1,6 @@
 new_slug: customer-progress-measure-picker
 name: Customer progress measure picker
-summary: Paste the numbers you track and your job spec. Get which ones miss the customer and three measures of progress to use.
+summary: Find which numbers you track miss the customer. Get three to five customer progress measures, each checked for gaming, with an owner.
 job: plan-strategy
 thinking: high
 thinking_why: It judges what each number really describes and finds ways teams could game a measure. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your reports are full of figures and nobody can say if customers got what they came for.
   - You count purchases or sign-ups and cannot tell if people use the thing.
   - Teams hit their numbers and customers still complain.
+not_for:
+  - "You have no numbers to track yet: start with the Job spec writer, then come back."
+  - "You want to clean up numbers you share with investors or the press: use the Vanity metric fixer."
+  - "You are planning a one-off product launch: write a simple launch checklist with your team instead."
 you_give:
   - The numbers and reports you track now
   - A job spec (optional but best)
@@ -29,6 +33,26 @@ how_to_use:
   - Paste what you track and your job spec.
   - Read the tags. Check that they match your view of each number.
   - Take the measures to your team and agree an owner for each.
+output_sample:
+  input:
+    - The numbers and reports you track now
+    - Your job spec (optional but best)
+    - How you collect data today (optional)
+  output:
+    - name: What you track
+      contains: Each number with a tag and a pass or flag on the three data traps, plus a count by tag.
+    - name: Promises in the job
+      contains: Plain sentences a customer would agree with, taken from your job spec.
+    - name: Measures (3 to 5)
+      contains: Each measure with formula or question, source, collector, rhythm, target, defect rule, gaming risk, guard, owner and action.
+    - name: Repeat use
+      contains: One measure of later use, or a clear note that you cannot capture it yet.
+    - name: Stop reviewing weekly
+      contains: Up to three numbers to drop from the weekly review, with a reason for each.
+    - name: Missing
+      contains: Gaps in your inputs, such as no definition, target or job spec.
+    - name: Checks missed
+      contains: One line for each check the AI did not pass, or none.
 how_it_works:
   - title: Tags every number
     text: Product, customer type, costs, a rival or customer progress.

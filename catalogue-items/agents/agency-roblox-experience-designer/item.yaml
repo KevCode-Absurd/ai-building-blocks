@@ -1,0 +1,41 @@
+slug: agency-roblox-experience-designer
+name: Roblox Experience Designer agent
+summary: "Get a Roblox experience design plan. See the first-minute flow, a return loop, fair Game Pass ideas and the player numbers to watch."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: document
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/roblox-studio/roblox-experience-designer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/roblox-studio/roblox-experience-designer.md
+  licence: MIT
+  original_name: Roblox Experience Designer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 36fb12b8b76ba666e8e9e2830328f63e713556b8f503fe12ab883902a77b308a
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Roblox Experience Designer
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Roblox Experience Designer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/roblox-studio/roblox-experience-designer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

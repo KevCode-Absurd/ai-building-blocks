@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It checks a file against a fixed rule list.
 new_slug: skill-file-validator
 name: Skill file validator
-summary: Give it a SKILL.md. Get a list of structure, wording and naming
-  problems to fix before you share it.
+summary: Check your SKILL.md file for structure, naming and wording problems before you share it. Get a score and a fix for each issue.
 job: make-skills
 headline: Skill file validator
-subhead: A list of structure, wording and naming problems in your SKILL.md,
-  found before anyone else hits them. It checks the file against the open agent
-  skills specification and Anthropic's advice.
+subhead: A list of structure, wording and naming problems in your SKILL.md, found before anyone else hits them. It checks the file against the open agent skills specification and Anthropic's advice.
 explain: |
   A list of structure, wording and naming problems in your SKILL.md, found before anyone else hits them. It checks the file against the open agent skills specification and Anthropic's advice.
 
@@ -18,6 +15,10 @@ when:
   - A skill never triggers and you do not know why.
   - You review skills from a team and need a standard.
   - You are adding a skill to a marketplace.
+not_for:
+  - "You need a security scan, token count or anti-slop check: use SkillCheck Pro, the paid version."
+  - "You want to check scripts or other files a skill points to: review those by hand, since this only reads SKILL.md."
+  - "You want your file fixed for you: ask your AI to edit it, since this tool only reads and reports."
 you_give:
   - Your SKILL.md file or folder
   - The target marketplace or tool (optional)
@@ -28,8 +29,29 @@ you_get:
   - A quality score
   - Fixes for the issues found
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your skill files.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Paste the full text of your SKILL.md, or upload the file if your AI takes files.
+  - "Say: check this skill file."
+  - Fix the critical issues first, then the warnings. Suggestions are optional.
+  - Paste the fixed file in again to see if the score went up.
+  - This skill needs no code running, web access or paid tool. It only reads your file.
+output_sample:
+  input:
+    - Your SKILL.md file, pasted or uploaded
+    - The tool or marketplace you plan to share it on (optional)
+    - Any extra team rules (optional)
+  prerequisites:
+    - An AI that can read your file, or a chat where you can paste its text
+  output:
+    - name: Score
+      contains: A number from 0 to 100, with a grade of Excellent, Good, Needs Work or Poor.
+    - name: Critical issues
+      contains: Serious problems, each with a check ID, a line number, a message and a fix.
+    - name: Warnings
+      contains: Smaller problems to fix, listed with check IDs, line numbers and fix suggestions.
+    - name: Suggestions
+      contains: Optional improvements, such as a better name, with a fix for each.
+    - name: Strengths
+      contains: Good habits found in the file, like examples, error handling and a clear output format.
+    - name: Passed checks
+      contains: The number of checks your file passed with no issue.

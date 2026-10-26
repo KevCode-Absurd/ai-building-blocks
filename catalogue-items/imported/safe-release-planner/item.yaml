@@ -1,6 +1,6 @@
 slug: safe-release-planner
 name: Safe release planner
-summary: Describe your release. Get a deploy plan with checks, rollback steps and how to know it worked.
+summary: "Get a safe deploy plan for your app: what to check first, the steps in order, how to roll back and how to know the release worked."
 category: general
 boards: []
 type: skill

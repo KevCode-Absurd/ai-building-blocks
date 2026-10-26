@@ -1,51 +1,99 @@
 new_slug: stress-test-a-case-competition-recommendation
 name: Stress test a case competition recommendation
 headline: Stress test a case competition recommendation
-summary: Share the source files. Get a revised case deck, financial bridge and challenge register.
+summary: Stress test your case competition deck against the rubric. Get a revised deck, a financial bridge that ties to the exhibits and a challenge register.
 job: speak-and-persuade
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A revised case deck, financial bridge and challenge register. Share the full case, judging rubric, team recommendation, financial exhibits, explicit assumptions, time limit and available PPTX tools. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the case, the judging rubric, your recommendation and your financial exhibits. It rebuilds the deck answer first, ties every scenario total to its exhibit and lists each claim a judge could attack. You get the deck, the bridge and the register.
 explain: |-
-  A revised case deck, financial bridge and challenge register.
+  A case competition deck often fails in three places. The recommendation sits on slide nine. A total on a slide does not match the exhibit. A market claim has no source behind it. This workflow helps you stress test a case competition recommendation before judges do it for you.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The recommendation answers the rubric; scenario arithmetic reconciles and every rendered slide is inspected. Missing tools or evidence stay visible in the final summary.
+  Step one rebuilds the deck from your case and rubric. The answer goes on the slide after the title, and every title is a full sentence. Each analysis slide gets one chart with real numbers. Then it builds a financial bridge that ties each scenario total to the exhibit it came from, and lists any mismatch instead of fixing it.
+
+  Step two reads the final slides like a doubting judge. It lists every market claim, customer claim and forecast that no exhibit supports, ranked by risk, with the kind of source that would settle each one. The result is your challenge register.
+
+  The editable PowerPoint file needs an AI that can run Python. Without that you get a slide-by-slide outline, and the run says so.
 when:
-  - You need a revised case deck, financial bridge and challenge register.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your recommendation is drafted and you want it attacked before the judges do.
+  - A teammate rebuilt a financial slide and nobody has checked that the totals still tie to the exhibits.
+  - The judges' rubric is clear and you are not sure your deck answers each point.
+  - You have a deck full of market claims and few sources.
+not_for:
+  - "You have no case brief or no analysis yet: start with a plan, then use the Case competition slide deck builder."
+  - "You want practice Q&A questions and answer notes: use the Prepare case competition judge questions workflow."
+  - "You already ran this once and only a number or the rubric changed: use the Case competition evidence review assistant."
 you_give:
-  - The full case, judging rubric, team recommendation, financial exhibits, explicit assumptions, time limit and available PPTX tools.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: Python PPTX adapter and a compatible renderer."
+  - The full case, with every exhibit and its figures
+  - Your recommendation, as a draft deck, an outline or a few paragraphs
+  - The judging rubric and time limit (optional, but slide count and speaking time depend on them)
+  - Your own analysis, assumptions and sources (optional)
+  - Python with python-pptx, if you want the PowerPoint file built (optional)
 you_get:
-  - A revised case deck, financial bridge and challenge register.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A revised deck with the answer first, full-sentence titles and a chart on each analysis slide
+  - A financial bridge for each scenario, tied to its exhibit, with mismatches listed
+  - "A challenge register: each claim or number a judge could attack, with the risk and the fix"
+  - A list of assumptions and open questions for the team
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to an AI that can run Python, such as Claude Code. In Claude, ChatGPT or Gemini without code, you get an outline instead of a file.
+  - Attach the case, the exhibits, the rubric and your recommendation.
+  - "Say: Follow the workflow, and mark any fact you cannot find in the files as MISSING."
+  - Open the deck and read only the slide titles. They should tell the whole story. Ask for rewrites if they read like labels.
+  - Check every bridge row against its exhibit, then work down the challenge register. Decide each fix as a team.
+  - Rerun it after big changes, or use the evidence review assistant for smaller ones.
+output_sample:
+  input:
+    - The full case and every exhibit
+    - Your recommendation or draft deck
+    - The judging rubric and time limit (optional)
+    - Your own analysis and sources (optional)
+  prerequisites:
+    - An AI that can run Python with python-pptx, for the .pptx file (optional). Without it you get an outline
+  output:
+    - name: Revised deck (case.pptx)
+      contains: Editable slides with the answer after the title, full-sentence titles and real charts, or an outline if code cannot run.
+    - name: Slide titles and rubric map
+      contains: The titles in order, and the slide that answers each rubric criterion.
+    - name: Financial bridge
+      contains: Each scenario's start, steps and end, tied to its exhibit, with any mismatch shown.
+    - name: Challenge register
+      contains: Each unsupported claim or weak number with its slide, risk, fix and who decides.
+    - name: Assumptions and open questions
+      contains: Every assumption with its source or marked as one, and what the team must still answer.
+    - name: Hand-back summary
+      contains: Each file, the sources used, every MISSING line and the checks that could not run.
 how_it_works:
-  - title: Case competition slide deck builder
-    text: Follow the actual case framework and checked build adapter. Challenge alternatives, supply real chart data, reconcile the financial bridge and preserve assumptions and sources. Build the editable deck only with the required tools.
-  - title: Unsupported claim spotter
-    text: Read the final slide text and source exhibits. Flag unsupported market claims, fabricated customer evidence and scenarios presented as forecasts.
+  - title: Rebuild the deck
+    text: Maps each rubric point to a slide, puts the answer after the title, writes full-sentence titles and gives each analysis slide one chart with real values.
+  - title: Build the financial bridge
+    text: Walks each scenario from start to end and ties each total to its exhibit. A total that does not match is listed with both values.
+  - title: Build the file
+    text: Uses the bundled build script to make an editable PowerPoint with native charts, then renders every slide to check it. Without Python you get an outline.
+  - title: Build the challenge register
+    text: Reads the final slides and lists every market claim, customer claim and forecast that no exhibit supports, ranked by risk, with a fix for each.
 output_shape: |-
-  Scope and source coverage
-  A revised case deck, financial bridge and challenge register.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  REVISED DECK
+    case.pptx, or a slide-by-slide outline (say which)
+    Slide titles in order | Rubric criterion -> slide
+
+  FINANCIAL BRIDGE
+    <scenario> | Start <value> | Steps <...> | End <value> | Ties to <exhibit> | Match: <yes, or no with both values>
+
+  CHALLENGE REGISTER
+    <n> | Where: <slide> | Issue | Risk: <high, medium or low> | Fix | Who decides
+
+  ASSUMPTIONS AND OPEN QUESTIONS
+    <assumption> | Source or ASSUMPTION | <question the team must answer>
+
+  HAND-BACK SUMMARY
+    Files | Sources used | MISSING lines | CHECKS MISSED
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: The recommendation answers the rubric; scenario arithmetic reconciles and every rendered slide is inspected.
+  - what: The rubric
+    how: Paste it in full. Each criterion is then mapped to the slide that answers it.
+  - what: Your numbers
+    how: Give figures with their source and date. Anything without one is labelled an assumption on the slide.
+  - what: How you will present
+    how: Say your time limit. It sets the slide count and how much goes to the appendix.
 judge:
   - The recommendation answers the rubric; scenario arithmetic reconciles and every rendered slide is inspected.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,16 +106,24 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the challenge register and update it after each rehearsal, so fixed points stay fixed.
+  - Add your own approved examples of a good bridge slide, so later runs match your style.
+  - Send the revised deck to a teammate who has not seen the case, and log where they got lost.
 works_best_with:
   tools:
-    - name: Python PPTX adapter and a compatible renderer
-      why: Use the bundled launch-tools/USAGE.md, actual financial exhibits and build_case.py adapter; inspect every actual slide.
+    - name: Claude Code or another AI that can run Python
+      why: It builds the editable deck from the bundled launch-tools/build_case.py. A chat AI without code gives an outline.
+    - name: PowerPoint or Google Slides
+      why: Open the deck and look at every slide. The AI cannot judge how a slide looks to a person.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Judges' feedback from earlier rounds
+    - A past winning deck from the same competition, if you have it
+next:
+  - case-competition-evidence-review-assistant
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Financial bridge
+    meaning: A walk from a start figure to an end figure, with each step shown, so judges can see how the total is made.
+  - term: Challenge register
+    meaning: A list of the claims and numbers a judge could attack, with the risk and the fix for each.
+  - term: Exhibit
+    meaning: A chart, table or data page that comes with the case.

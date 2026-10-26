@@ -1,6 +1,6 @@
 new_slug: annual-letter
 name: "Write an annual letter with long-term priorities and metrics"
-summary: "Paste your year's numbers. Get principles, input metrics, a cash check, a value tally and a draft letter."
+summary: "Write an annual letter to your team, partners or owners. Paste your year's numbers and get principles, metrics, a cash check and a draft."
 job: lead-people
 thinking: high
 thinking_why: "It joins principles, metrics, cash and value into one honest letter. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You write a year-end letter to your team, partners or owners.
   - You have results and metrics but no story that joins them.
   - You want to tell the bad news in a way people trust.
+not_for:
+  - "You need a monthly update or a one-project report: write a short status note yourself instead."
+  - "You only want to check whether profit is backed by cash: use the Cash versus earnings checker."
+  - "You want to explain ad results to a client: use the Ad results report writer."
 
 you_give:
   - Your business, who the letter is for and the hard trade-offs you face
@@ -37,6 +41,27 @@ how_to_use:
   - Paste your business, your numbers and the year's mistakes. It works step by step and saves each result.
   - Read the metric plan and the weak numbers before the letter is written. Fix any that are too generous.
   - Send the draft to two readers before it goes out.
+output_sample:
+  input:
+    - Your business, who the letter is for and the hard trade-offs you face
+    - Your reported numbers by year, with earnings, depreciation, working capital and capital spending
+    - Share or owner counts, and figures for staff, partners and customers (optional)
+    - The mistakes you made this year
+  prerequisites:
+    - An AI that can read the files in the handoff pack
+  output:
+    - name: Principles
+      contains: A short list of promises on how you will choose when short and long term pull apart, each with its cost.
+    - name: Input metrics
+      contains: Three to six numbers you control, each with an owner, a target and a proxy test, plus one output kept as a check.
+    - name: Cash view
+      contains: Free cash flow beside earnings, what growth costs, and a score out of 100.
+    - name: Value tally
+      contains: A value estimate for each group you serve, with assumptions in view and the group you serve least well.
+    - name: Letter
+      contains: A draft of 700 to 1,200 words that puts the bad news first and says what you will stop.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 
 how_it_works:
   - title: Write the long-term principles

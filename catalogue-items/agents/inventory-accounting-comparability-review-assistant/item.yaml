@@ -1,33 +1,26 @@
 slug: inventory-accounting-comparability-review-assistant
 name: Inventory accounting comparability review assistant
-summary: Review inventory reserve and charge changes before comparing issuer margins and cash investment.
+summary: Check how a listed company's LIFO reserve, inventory write-downs and stock build change its margins and cash use. Get a change register and workbook.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - explain-inventory-accounting-margin-effects
   - trailing-period-financial-bridge
 steps:
   - uses: explain-inventory-accounting-margin-effects
-    note: Run the governing workflow when On a new inventory note or fiscal-period update supplied by the user, compare reserve definitions, charges and write-offs with the prior accepted margin bridge.
+    note: Run this when a new inventory note or fiscal-period update arrives. Compare the costing basis, reserve definition, charges and write-offs with the last accepted margin bridge, then run the three bridges. It hands step 2 a reconciled cost of goods sold and a record of which basis was used.
   - uses: trailing-period-financial-bridge
-    note: If the requested comparison uses a trailing period, reconstruct additive revenue and COGS over matching intervals before calculating margins. A change from LIFO or in reserve scope requires a documented new basis rather than a carried-forward formula.
+    note: Run this only when you want a trailing-period comparison. Rebuild revenue and cost of goods sold over matching periods before margins are worked out. A change from LIFO, or in reserve scope, needs a new documented basis, not a carried-forward formula.
 origin: own
 version: 1.0.0
 added: 2026-10-22

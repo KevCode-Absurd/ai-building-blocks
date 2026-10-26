@@ -1,36 +1,70 @@
 new_slug: monthly-product-opportunity-scout
-name: Monthly product opportunity scout
-summary: Name your market each month. Get a short list of products scored and checked, with one pick and a small test plan.
+name: Product candidate test planner
+summary: Find your next product to sell each month. Give it your market, costs and ad captures. Get one capped test plan, or a plain no pick.
 job: find-products
 thinking: high
 thinking_why: It runs up to eight skills, drops or keeps each candidate on the results and carries a pipeline from month to month. Give it your strongest model.
-headline: Monthly product opportunity scout
-subhead: Give it your market and the evidence you collected. It re-checks last month's candidates, scores the new ones, runs the deeper checks only on those that earn them, and hands back one pick with a small test plan for you to approve.
+headline: Product candidate test planner
+subhead: Give it your market, your costs and the ad or sales captures you saved. Each month it re-checks last month's candidates, scores the new ones and checks rivals on the few that pass. You get one product to test with a spending cap and a stop rule, or a plain "no pick this month".
 explain: |
-  Finding a product is not a single search. A product that looked open last month can fill with rivals. A product that scores well can sit in a category that is about to fade. Most owners check once, fall for a good-looking idea, and order stock before they know the field has changed.
+  Finding a product to sell is a monthly habit, not one search. A product that looked open in March can be full of rivals by April. A product with a good score can sit in a category that is about to fade. Most owners check once, fall for a good-looking idea and order stock before they see the field has changed.
 
-  This agent keeps a running list of candidates and checks them each month. It drops the ones where rivals piled in. It scores new finds on price, cost and fit, and only the few that pass get the deeper checks on rivals, buyer groups and trend risk. At the end you get at most one pick, with a capped test and a kill rule. It never orders, contacts a supplier or spends anything. It also says "no pick this month" when nothing earns one.
+  This product candidate planner keeps a running list in a file called scout/pipeline.md. Each month it re-checks every product on watch for new rivals and drops the ones that got crowded. It scores new finds on price, cost and fit. Only the few that pass get the deeper checks on rivals, untapped buyer groups and trend risk.
+
+  At the end you get at most one pick, with a spending cap and a stop rule. If nothing earns a pick, it says so. It reads only the captures you give it, and it never browses, orders stock or contacts a supplier.
 when:
-  - You want to add a product and want a steady way to find and check candidates.
-  - You have a list of ideas and want to know which ones are worth a small test.
-  - You want to know when a product you were watching has gotten too crowded.
+  - You want a steady way to find your next product to sell, not a one-off hunch.
+  - You have a list of product ideas and want to know which are worth a small test.
+  - A product on your watch list may have filled up with rivals and you want to know before you order.
+  - You saved ad library captures or sales rankings and want them turned into a pick and a plan.
+not_for:
+  - You have already chosen the product. Use the New product line checker to judge it and plan the test.
+  - You have one idea and want a quick yes or no on price and margin. Use the Product idea viability scorer.
+  - You have no captures and no cost figures. It cannot browse, so it has nothing to read. Collect the ads and rankings first.
+  - You sell on Amazon. Use the Amazon product viability scorer for that marketplace.
 you_give:
   - Your market and who buys, in a short paragraph
-  - Ad library, sales ranking or product-graph captures to read (the first time, then each month)
-  - Your expected landed cost, target price and the most you can risk on a test
+  - Screenshots from the Meta Ad Library, sales rankings or product graphs for your market (the first month, then fresh ones each month)
+  - Your expected landed cost per unit (product plus shipping to the customer), your target price and the most you can lose on a test
+  - Last month's scout/pipeline.md, if you ran it before (a pasted copy works in a chat)
   - Customer reviews of the category (optional)
   - A list of what you already sell (optional)
 you_get:
-  - One pick with its score, rival check, category call and why it won, or a clear "no pick"
-  - A capped test plan with a pass result and a kill rule
-  - A watch list with what would move each product
-  - A list of what was dropped and why
+  - One pick with its score out of 100, its rival check, its category call and why it beat the rest, or a clear "no pick this month"
+  - A test plan with a spending cap, a pass result and a kill rule
+  - A watch list showing what would move each product
+  - A list of dropped products with one reason each
   - What to bring next month
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's scout.
-  - Attach the evidence you collected, and give your market, costs and risk limit.
-  - Read the pick and the test plan. Decide whether to run the test. The agent does not order, list or spend anything.
-  - Run it again next month. It reads the pipeline file and re-checks every candidate.
+  - Add the agent to your AI. In Claude Code, save it in .claude/agents or add it as a skill. In Claude, ChatGPT or Gemini, paste it at the start of a chat. It saves a scout folder, so Claude Code is easiest; in a plain chat, paste last month's pipeline and save the new one yourself.
+  - Save your evidence first. Capture ads for each product from the Meta Ad Library, and screenshot a sales ranking or product graph. The agent cannot browse the web.
+  - Type your market, buyers, landed cost, target price and the most you can lose on one test. Mark any cost you are unsure of as a guess.
+  - Read the pick. Check that every score shows its sums, and that each dropped or watched product has a reason.
+  - Decide on the test yourself. The agent never orders, lists a product or spends money. When you run the test, add the result to the pipeline.
+  - Next month, run it again with fresh captures and last month's pipeline. Take the pick to the New product line checker for a full launch check.
+output_sample:
+  input:
+    - Your market and who buys, in a short paragraph
+    - Ad library captures or sales rankings for your market
+    - Your landed cost per unit, target price and the most you can lose on a test
+    - Last month's scout/pipeline.md (optional)
+    - Customer reviews of the category (optional)
+  prerequisites:
+    - An AI that can read images and, ideally, save files, such as Claude Code
+    - Ad and sales screenshots you saved yourself, because the agent cannot browse
+  output:
+    - name: This month's pick
+      contains: One product with its score, field call, category call, launch call and why it beat the rest, or no pick.
+    - name: Test plan
+      contains: The cheapest test, the spending cap, the pass result and the kill rule.
+    - name: Watch list
+      contains: Products kept on watch, with what would move each one.
+    - name: Dropped this month
+      contains: Each dropped product with a one-line reason.
+    - name: Needs from you
+      contains: Costs or evidence still missing so next month can score them.
+    - name: scout/pipeline.md
+      contains: One row per candidate with score, field verdict, status and the reason for the last change.
 how_it_works:
   - title: Read the pipeline
     text: Opens last month's list of candidates and finds the ones on watch.
@@ -46,7 +80,8 @@ how_it_works:
     text: Picks the single best one and plans a capped test with a kill rule. If it fails the check, there is no pick this month.
 output_shape: |-
   THIS MONTH'S PICK
-    <product> | score <n>/100 | field: <GO | TEST FAST> | category: <GO | HOLD> | why it beat the rest
+    <product> | score <n>/100 | field: <GO | TEST FAST> | category: <GO | HOLD | not checked> | launch: <GO | TEST FIRST> | why it beat the rest
+    Or: NO PICK THIS MONTH, because <weakest point>
 
   TEST PLAN
     1 <cheapest test> | cap <amount> | pass: <result>

@@ -2,35 +2,56 @@ thinking: low
 thinking_why: It repeats one fixed step.
 new_slug: customer-tag-bulk-updater
 name: Customer tag bulk updater
-summary: Pick customers and tags. Get tags added or removed across the whole
-  group. Changes live customer data.
+summary: Bulk update customer tags in Shopify. Pick a group by search or ID list, add or remove tags, and preview every change before it goes live.
 job: run-your-store
 headline: Customer tag bulk updater
-subhead: Hundreds of customers can be tagged or untagged in one pass instead of
-  one by one in the admin. Tags drive your discounts, email groups and support
-  rules, so getting them right in bulk saves hours.
+subhead: Give it a customer search or a list of customer IDs, plus the tags to add or remove. It shows a preview first. After you approve, it updates the tags on live Shopify customers and saves a CSV of every change.
 explain: |
   Hundreds of customers can be tagged or untagged in one pass instead of one by one in the admin. Tags drive your discounts, email groups and support rules, so getting them right in bulk saves hours.
 
   You choose who to change, either with a search such as total spent over 500 or with a list of customer IDs. You say which tags to add and which to remove. The skill first shows who matches and what each tag set will become. It stops if more people match than your size cap, so a wrong filter cannot touch the whole store. Merge mode keeps existing tags. Replace mode overwrites them, so check the preview closely. Needs access to your Shopify store.
 when:
   - You want everyone who joined your newsletter to get a tag for a campaign.
-  - A tag was misspelled and needs to be swapped on hundreds of customers.
-  - You need to remove an old promotion tag from a whole group.
+  - A tag was misspelled and must be swapped on hundreds of customers.
+  - A promotion has ended and you need to remove its tag from a whole group.
   - You have a list of customer IDs from a spreadsheet to tag.
+not_for:
+  - "You need to delete customers or change anything besides tags: do that in your Shopify admin."
+  - "You only have one or two customers to tag: edit them by hand in the Shopify admin, it is faster."
+  - "You want to find your best customers first: work out the list in a spreadsheet or report, then bring the IDs here."
 you_give:
-  - Your store address
-  - A customer search or a list of IDs
-  - Tags to add or remove
+  - Your store address, like mystore.myshopify.com
+  - A customer search or a list of customer IDs
+  - Tags to add (optional if you only remove)
+  - Tags to remove (optional if you only add)
   - A size cap for the run (optional)
 you_get:
-  - Preview of matching customers
-  - Before and after tag sets
-  - Tags updated on live customer records
-  - Count of changes made
+  - A preview of matching customers with their tags before and after
+  - Tags added or removed on live Shopify customer records, after you approve
+  - A count of customers matched, updated, unchanged and failed
+  - A CSV file with one row per customer and its status
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Use an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store.
+  - "Sign in to your store first with this command: shopify store auth --store <your-store>.myshopify.com --scopes read_customers,write_customers"
+  - Paste the skill into your AI. Give it your store address, your search or ID list, and the tags to add or remove.
+  - Let it run the preview. It is on by default and changes nothing. Check the match count and a few before and after tag sets.
+  - Check the spelling and case of each tag. Shopify tags are case sensitive, so VIP and vip are different.
+  - Keep the default merge mode, which keeps existing tags. Replace mode wipes a customer's current tags, so use it only if you have a backup. Then ask your AI to run it for real.
+output_sample:
+  input:
+    - Your store address
+    - A customer search (like total spent over 500) or a list of customer IDs
+    - Tags to add or remove
+    - A size cap for the run (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify access with the read_customers and write_customers scopes
+  output:
+    - name: Preview run
+      contains: The customers that match your search and the tags each one would have after the change, with nothing saved yet.
+    - name: Start banner and step lines
+      contains: A header with store and start time, then one line per step with its key inputs and result.
+    - name: Outcome summary
+      contains: Counts of customers matched, updated, already correct and failed, plus the tags added and removed.
+    - name: bulk_tag_update_<date>.csv
+      contains: One row per customer with name, email, old tags, tags added, tags removed, new tags and a status.

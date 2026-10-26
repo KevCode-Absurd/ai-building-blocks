@@ -1,6 +1,6 @@
 new_slug: gmv-max-campaign-setup-planner
 name: "GMV Max campaign setup planner"
-summary: "Give top products and target cost per order. Get GMV Max settings, an ROI target and creator offers."
+summary: "Plan your TikTok Shop GMV Max campaign setup. Give top products and target cost per order. Get ROI target, budget and creator offers."
 job: launch-and-scale-ads
 thinking: medium
 thinking_why: "It does margin math and sets several linked numbers, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You sell in TikTok Shop and want to start GMV Max ads without wasting the first week.
   - TikTok suggests a return target and you can't tell if it makes you money.
   - You want creators to make videos for your products and need to set commissions that leave you a margin.
+not_for:
+  - "Your shop is outside a country where GMV Max is open, or sells a restricted product type: check TikTok's current help page for what your shop can run."
+  - "You want to run ads outside TikTok Shop: GMV Max only promotes shop products, so use a different ad type in TikTok Ads Manager."
+  - "You have no unit costs, shipping or fees yet: work out your costs first, or the break-even and commission checks stay blank."
 
 you_give:
   - Your top products with orders, price and unit cost
@@ -35,6 +39,31 @@ how_to_use:
   - Paste your top products with orders, price, cost, shipping and fees, and your target cost per order.
   - Check that your shop is eligible. GMV Max is open only in some countries, and some product types can't be sold.
   - Set the campaign as the plan says. Check impressions after a few days, and read the creatives tab each week.
+output_sample:
+  input:
+    - Your top products with orders, price and unit cost
+    - Your target cost per order
+    - Your shipping, payment fees and returns rate
+    - Your Seller Center, Business Center and Ads Manager link status (optional)
+    - How many creators you can send samples to (optional)
+  prerequisites:
+    - A TikTok Shop with a Seller Center account
+    - Admin access to your Business Center and Ads Manager
+  output:
+    - name: Eligibility and prerequisites
+      contains: Whether your shop can run GMV Max, and each setup link marked Done or Missing.
+    - name: Break-even
+      contains: Your contribution margin after costs and commission, and the break-even return worked out as 1 divided by that margin.
+    - name: Products
+      contains: The top 20 percent of products to launch on, and listing fixes to make first.
+    - name: Campaign settings
+      contains: The ROI target, daily budget, promotion-day control and creative settings, each checked against break-even.
+    - name: Creator offers
+      contains: An open collaboration offer and a target collaboration offer, with a margin check after commission and ads.
+    - name: After launch
+      contains: When to check impressions and what to read in the creatives tab each week.
+    - name: Checks missed
+      contains: Any check that failed, or a note that none did, plus anything marked MISSING.
 
 how_it_works:
   - title: Checks the setup

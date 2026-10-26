@@ -45,7 +45,7 @@ This skill runs on its own. If something marked required below is missing, ask o
 - **Approved script, claims and offer** (required): the only words, claims and terms the ad may carry.
 - **What you sell** (required): real pack photos and how the product is opened and used.
 - **Buyer** (optional): who the ad is for and what they already know.
-- **Delivery** (optional): shapes, maximum length, caption style, what the editor can do.
+- **Delivery** (optional): shapes, maximum length, caption style, what the editor can do. A creator filming brief gives the shapes, the length, the shoot order and the file names to match clips to beats. A shot list gives each planned shot's beat, timing and on-screen text, so match each clip to its shot.
 
 ## Steps
 1. **Sort the footage by job.** Give each usable moment one job: stop the scroll, name the problem or benefit, show the product or how it works, prove it, ask for the action. That order is a starting point: a demo can show the product at once; an indirect opening can hold it back. Keep a moment only if it earns its place. If a job has no footage, name the shot that would fill it. Never use an unrelated picture as proof.

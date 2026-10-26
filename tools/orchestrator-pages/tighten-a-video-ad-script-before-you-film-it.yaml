@@ -1,6 +1,6 @@
 new_slug: tighten-a-video-ad-script-before-you-film-it
 name: Tighten a video ad script before you film it
-summary: Give it your video ad script. Get a tighter script, a sound-off check, a viewer test and a ship call.
+summary: Tighten a video ad script before you film it. Get a tighter script, a sound-off check, a ten-viewer test and a ship call.
 job: check-ads
 thinking: medium
 thinking_why: Each check is a clear pass or fail on a short script. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - You have a script and a shoot booked, and want one more check before it is too late.
   - Your last video ad ran and people could not say what it sold.
   - A creator or agency sent a script and you need to judge it.
+not_for:
+  - "You have a finished cut and only need the sound-off test: use the sound-off checker on its own."
+  - "You have no script yet: use the Video ad script writer from customer quotes first."
+  - "You want a policy check on a Meta ad: use the Meta ad policy checker."
 you_give:
   - Your video ad script, with shots or on-screen text if you have them
   - Who the ad is for and your product facts (optional)
@@ -25,10 +29,32 @@ you_get:
   - A playback count of how many viewers repeated your claim, and what took the rest
   - Stop-ship mistakes, each with a fix, a verdict and a score out of 100
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - At the pause, apply the fixes, then show the script or a rough cut to ten people who fit your buyer. Ask only "What did that ad say?" and write down their words.
-  - Come back and paste their answers. Do not tell them your claim first.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to your AI as files, in Claude Code or a Claude Project, and say "Follow HANDOFF.md".
+  - Paste your script when asked. Add your brand brain if you have one.
+  - At the pause, apply the fixes from steps 1 and 2. Show the script to ten people who fit your buyer.
+  - Ask each person only "What did that ad say?" Write down their words. Do not tell them your claim first.
+  - Paste the answers back. Check the stop-ship result before you book the shoot.
+output_sample:
+  input:
+    - Your video ad script, with shots and on-screen text
+    - Your brand brain (optional)
+    - Who the ad is for and your product facts (optional)
+    - Ten viewers' answers to "What did that ad say?" (added at the pause)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - Ten people who fit your buyer, for the pause after step 2
+  output:
+    - name: "Step 1: Bridge and pacing"
+      contains: Each line marked by job, when the product enters, and a tighter version of your script.
+    - name: "Step 2: Sound-off check"
+      contains: What a silent viewer learns, a pass or fail on claim, opening, product and brand, and fixes.
+    - name: "Step 3: Playback count"
+      contains: Your one claim, each viewer answer scored, the playback share, what took attention, and cuts.
+    - name: "Step 4: Stop-ship check"
+      contains: Mistakes on claims, safe zones and brand details, each with a fix, a verdict and a score.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check the bridge and the pacing
     text: Marks every line by job, plots how much the viewer feels sold to, checks when the product enters, and writes a tighter script.

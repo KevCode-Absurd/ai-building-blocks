@@ -1,56 +1,66 @@
 new_slug: key-moment-designer
 name: "Key moment designer"
-summary: "Name an event like a first day or a launch. Get the one peak to build and the rest kept simple."
+summary: "Plan an event people remember. Get the one peak worth building, the expected step to break and a plan with owners, dates and costs."
 job: lead-people
 thinking: medium
 thinking_why: "It weighs several ideas and picks one, but the parts it works with are fixed."
 
 headline: "Key moment designer"
-subhead: Give it an event, such as a first day, a launch or a farewell, and who it is for. It finds where people expect a set routine, picks one peak worth real effort and plans the rest to stay simple. You get a short plan with owners and dates.
+subhead: Give it an event, such as a first day, a launch or a farewell, and the usual steps people expect. It picks the one moment worth real effort and finds a step to break on purpose. It keeps every other step plain and cheap. You get a short plan with owners, dates and costs.
 
 explain: |
-  People do not remember an event evenly. They remember a few high points, the start, the end and the moments where something changed. Most teams spread effort across every step, so the event feels smooth and is forgotten by Friday.
+  People do not remember an event evenly. They keep a few high points, the start, the end and the moments where something changed. Most teams spread effort over every step. The event runs smoothly and is forgotten by Friday.
 
-  This skill picks the single moment people will talk about. It looks for the step everyone expects to go a set way and breaks that script on purpose. It then adds one lift (something that raises feeling), one proof of progress or new insight, and one link to other people or to a shared purpose. It plans who does what, and takes cost out of the steps that do not matter. It also refuses to dress up an event where the basics are broken.
+  This skill helps you plan a memorable event on a small budget. It lists the moments and picks the single one people will retell. It finds the step everyone expects to go a set way and breaks that script on purpose. Around that peak it adds one lift (something that raises feeling), one proof of progress or new insight, and one link to other people or to the reason the event exists. The idea comes from Chip Heath's work on memorable experiences.
+
+  Every other step stays plain and cheap, and still gets done well. The skill also refuses to dress up an event where the basics are broken. A late start or a cold room is fixed first, not hidden behind a surprise.
 
 when:
-  - You are planning a first day, launch, farewell, event or customer visit and every step looks the same.
+  - You are planning a first day, a launch, a farewell, an away day or a customer visit and every step looks the same.
   - Your budget is small and you need to know where one effort counts most.
-  - People leave your event happy and cannot say what it was like a week later.
+  - People leave your events happy but cannot say what happened a week later.
+  - You are about to add a surprise to every step and suspect that is the wrong move.
+
+not_for:
+  - "You run a regular meeting, not a one-off event: use the one-on-one meeting planner, or the process and meeting cull planner to cut meetings."
+  - "You are planning a new hire's first week as a whole: use the new hire first week planner. Come here for the one moment inside it."
+  - "You want to reward people for hitting targets: use the recognition plan designer."
+  - "The basics are broken, such as a late start, no food or no clear directions. It will tell you to fix those first, and a peak will not cover them."
 
 you_give:
-  - The event, who it is for and when it happens
-  - What usually happens at this kind of event
-  - Your budget and who can help (optional)
-  - What went wrong or felt flat last time (optional)
+  - "The event, who it is for and when it happens"
+  - "What usually happens at this kind of event, step by step"
+  - "Your budget and who can help (optional)"
+  - "What went wrong or felt flat last time (optional)"
 you_get:
-  - The one peak to build, with the reason it was chosen
-  - The expected step you will break and how
-  - A plan with owners, dates and costs, and the steps kept plain
-  - A note on any basic that must be fixed before the peak will work
+  - "The one peak to build, with the reason it was picked"
+  - "The expected step you will break, and what happens instead"
+  - "One lift, one proof of progress or insight, and one link to others or to your purpose"
+  - "A plain, cheap version of every other step"
+  - "Who does what, by when, at what cost, and any basics to fix first"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the event, the people it is for and what normally happens.
-  - Say what it costs to do things and who is available. Mention any known problem, such as a late start or a dirty room.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools.
+  - Describe the event and the people it is for. List the usual steps in order, as people expect them.
+  - Add your budget, who can help and anything that felt flat last time, such as a late start or a dirty room.
   - Read the chosen peak. If it does not suit your people, say why and ask for the next best one.
-  - Give each owner their line of the plan.
+  - Copy the owners and dates into your task list, and fix the basics before you spend on the peak.
 
 how_it_works:
-  - title: Picks the moment
-    text: Lists the moments in your event and chooses the one people would tell a story about.
-  - title: Finds the script
-    text: Writes down what people expect at each step, then picks one expectation to break on purpose.
-  - title: Adds one lift
-    text: Adds something special that raises feeling, such as a surprise, a place or a performance.
-  - title: Adds pride or insight
-    text: Adds a way for people to see their progress or learn something about themselves.
-  - title: Adds a link
-    text: Connects people to each other or to the reason the event exists.
-  - title: Plans cost and owners
-    text: Gives each piece an owner, a date and a cost, and cuts polish from the steps that do not matter.
+  - title: Lists the moments
+    text: Writes every step from first contact to last, and notes how much people will feel at each one.
+  - title: Picks the peak
+    text: Chooses the one moment people would retell, and says why.
+  - title: Breaks one script
+    text: Writes what people assume at each step, then breaks one expectation in a way that is safe, kind and pleasant.
+  - title: Adds the three parts
+    text: One lift, one proof of progress or insight, and one link to other people or to the shared purpose.
+  - title: Keeps the rest plain
+    text: Writes a simple one-line version of every other step, and moves cost and polish into the peak.
+  - title: Plans owners and cost
+    text: Gives each part an owner, a date and a cost. If the budget is short, it cuts the lift first.
   - title: Checks the basics
-    text: Flags any broken basic that a peak cannot cover, and runs its own checks.
+    text: Names any broken basic, such as a late start or no food, puts it first and runs its own checks.
 
 output_shape: |
   EVENT
@@ -81,6 +91,28 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check missed, or none>
+
+output_sample:
+  input:
+    - "The event, who it is for and when it happens"
+    - "What usually happens at this kind of event, in order"
+    - "Your budget and who can help (optional)"
+    - "What felt flat or went wrong last time (optional)"
+  output:
+    - name: "THE PEAK"
+      contains: "The one moment to build and why people will retell it."
+    - name: "THE SCRIPT WE BREAK"
+      contains: "What people expect at that step and what happens instead."
+    - name: "THE PARTS OF THE PEAK"
+      contains: "One lift, one proof of progress or insight, and one link to other people or purpose."
+    - name: "THE REST, KEPT SIMPLE"
+      contains: "A plain one-line version of every other step, with no extra polish."
+    - name: "WHO DOES WHAT"
+      contains: "Each task with an owner, a date and a cost, checked against your budget."
+    - name: "BASICS TO FIX FIRST"
+      contains: "Any broken basic, such as a late start or no food, listed ahead of the peak."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Any fact you did not give, such as budget or usual steps, and any check it could not pass."
 
 tweaks:
   - what: What people expect
@@ -113,15 +145,17 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Choosing a peak and writing the plan is text work any strong chat AI does well."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Choosing a peak and writing the plan is text work. No files, web access or paid tools needed."}
     - {name: "A shared task list", why: "The owners and dates in the plan go straight into a list the team can tick off."}
   inputs:
-    - "Feedback comments from the last event"
+    - "Comments from people who came to the last event"
     - "A list of what the budget can and cannot cover"
-    - "A short profile of the people attending"
+    - "A short note on the people attending and what they care about"
 
 terms:
   - term: Peak
     meaning: The one moment in an event that people remember and talk about afterwards.
   - term: Script
     meaning: The set of steps people expect from an event of this kind.
+  - term: Lift
+    meaning: Something special that raises feeling above normal, such as a place, a gift or a surprise guest.

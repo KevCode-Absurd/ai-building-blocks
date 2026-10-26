@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It checks each claim and its source one by one.
 new_slug: ai-answer-fact-checker
 name: AI answer fact-checker
-summary: Paste one or more AI answers. Get each claim checked against public
-  sources, with links and a short verdict.
+summary: Check an AI answer claim by claim. You get a verdict for each claim, with links to public sources, so you know what holds up.
 job: think-and-decide
 headline: AI answer fact-checker
-subhead: A list of the claims in an AI answer, each checked against current
-  public sources, with links and a short verdict. It also compares answers from
-  several AIs and shows where they agree, clash or leave out proof.
+subhead: Paste an AI answer and the question you asked. Your AI splits the answer into single claims and checks each one against public sources. You get a verdict and a link for every claim.
 explain: |
   A list of the claims in an AI answer, each checked against current public sources, with links and a short verdict. It also compares answers from several AIs and shows where they agree, clash or leave out proof.
 
@@ -16,22 +13,48 @@ explain: |
 when:
   - An AI gave you facts and you need to know which ones hold up.
   - You asked two or three AIs the same question and the answers differ.
-  - A cited source looks odd and you want to see if it says what the AI claims.
+  - A source cited by an AI looks odd and you want to see if it says what the AI claims.
   - You must send a checked summary to a boss or client.
+not_for:
+  - "You need legal, medical or financial advice you can rely on: ask a qualified professional, and use this only to prepare questions."
+  - "The answer sits in a private chat or behind a login: paste the answer text yourself, since it will not log in for you."
+  - "You want a single score to rank AIs: this gives a verdict per claim, not a ranking, unless you ask for one and agree the rule."
 you_give:
-  - The original question
-  - The AI answer text or public link
+  - The question you asked the AI
+  - The AI answer text, or a public link to it
   - Which AI gave each answer
   - A date or country that matters (optional)
 you_get:
-  - Each claim listed one by one
-  - A verdict per claim with source links
-  - Where several answers agree or clash
-  - Claims that are stale or lack proof
-  - A short report
+  - Each claim from the answer, listed one by one
+  - "A verdict for each claim: supported, contradicted or insufficient"
+  - A check of whether each cited source says what the AI claims
+  - Links to the public pages that back each finding
+  - A comparison of where several AIs agree or clash
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and open pages.
+  - Open Claude, ChatGPT or Gemini with web search turned on. The check needs a web-enabled AI.
+  - Paste the skill text into the chat.
+  - Paste your question, then the AI answer. Label each answer with the AI that wrote it.
+  - Add the date or country that matters, if there is one.
+  - Read the claim matrix first. Open the links for any claim that matters to you.
+  - For contradicted claims, fix them before you use the answer. For insufficient claims, find better proof or ask an expert.
+output_sample:
+  input:
+    - The question you asked the AI
+    - The AI answer text, or a public link to it
+    - Which AI gave each answer
+    - A date or country that matters (optional)
+  prerequisites:
+    - An AI that can search the web and open pages
+  output:
+    - name: Question and scope
+      contains: The question you asked and the date or country the check covers.
+    - name: Executive finding
+      contains: A short summary of what held up and what did not.
+    - name: Claim matrix
+      contains: One row per claim with its verdict, citation check and the evidence link.
+    - name: Citation-fidelity findings
+      contains: Whether each cited source exists and really says what the AI claims.
+    - name: Platform comparison
+      contains: Where the AIs agree, clash, or cover facts the others skipped.
+    - name: Unresolved limitations
+      contains: Claims it could not settle, and what needs your documents or an expert.

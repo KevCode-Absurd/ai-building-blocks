@@ -37,7 +37,7 @@ How to start:
 
 ## What you need
 - **Platform** (required): Shopify, WooCommerce or other, and a store or preview link.
-- **What is set up** (required): products, payments, shipping, tax, policies, domain. Ask for what they are unsure about too.
+- **What is set up** (required): products, payments, shipping, tax, policies, domain. Ask for what they are unsure about too. The store, shipping and tax plans can stand in for what was planned: check each one against the live store.
 - **Where you sell** (strongly advised): the countries, shipping zones and rates, tax settings, and where the business is registered.
 - **Fulfilment** (advised): every place orders ship from, and any warehouse or fulfilment app.
 - **Test results** (optional): what any test order showed.

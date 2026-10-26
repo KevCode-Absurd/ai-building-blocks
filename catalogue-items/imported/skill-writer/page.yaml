@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It drafts, tests and improves a skill in rounds.
 new_slug: skill-writer
 name: Skill writer
-summary: Describe the job. Get a new skill with test prompts and a description
-  that makes it trigger well.
+summary: Turn a task you repeat into a reusable AI skill. Get a drafted skill, test prompts, side by side results and a better trigger description.
 job: make-skills
 headline: Skill writer
-subhead: A new skill that works the first time you use it, built from a plain
-  description of the job. You say what you want, and the skill narrows it down,
-  drafts the instructions, and writes a few realistic test prompts.
+subhead: A new skill that works the first time you use it, built from a plain description of the job. You say what you want, and the skill narrows it down, drafts the instructions, and writes a few realistic test prompts.
 explain: |
   A new skill that works the first time you use it, built from a plain description of the job. You say what you want, and the skill narrows it down, drafts the instructions, and writes a few realistic test prompts.
 
@@ -18,6 +15,10 @@ when:
   - You have a skill draft that gives uneven results.
   - You want proof a change made your skill better, not just different.
   - Your skill does not trigger when you expect it to.
+not_for:
+  - "You only need the task done once: type a plain prompt in Claude, ChatGPT or Gemini instead."
+  - "You want a one-off answer or document, not a set of reusable instructions: ask your AI directly."
+  - "Your AI cannot run code or open files and you want full testing: ask for the draft and trigger description only, and judge the results by hand."
 you_give:
   - A plain description of the job
   - An existing skill draft (optional)
@@ -29,8 +30,35 @@ you_get:
   - Side by side results with pass rates
   - A sharper trigger description
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and add the skill instructions. In a chat AI, paste them in.
+  - Describe the job you want the skill to do. Add a draft or good and bad examples if you have them (optional).
+  - Answer the questions it asks, then read the draft skill and the test prompts it writes.
+  - If your AI can run code and files, it runs the tests and opens a results viewer. This needs Python. If it cannot, review the results in the chat by hand.
+  - Tell it what is wrong. It rewrites the skill and tests again.
+  - When you are happy, ask it to improve the trigger description, then save the final skill.
+output_sample:
+  input:
+    - A plain description of the job you want the skill to do
+    - An existing skill draft (optional)
+    - Examples of good and bad results (optional)
+    - Your feedback on each round of test results
+  prerequisites:
+    - An AI that can run code and read files, for the test runs and results viewer (Python needed)
+    - A chat AI is enough to draft the skill and the trigger description
+  output:
+    - name: SKILL.md
+      contains: The drafted skill with a name, a short description and clear step by step instructions.
+    - name: Test prompts
+      contains: A few realistic requests a user would type, used to try the skill.
+    - name: Test results
+      contains: Runs with the skill and without it, so you can compare them side by side.
+    - name: benchmark.json
+      contains: Simple numbers such as pass rates for each version of the skill.
+    - name: Results viewer
+      contains: A page where you read each result and leave feedback for the next rewrite.
+    - name: Improved skill
+      contains: A rewrite based on your feedback, tested again on a larger set of prompts.
+    - name: Trigger description
+      contains: A sharper short description so the skill starts when it should.
+    - name: .skill file
+      contains: The packaged skill, made only when your AI can present files.

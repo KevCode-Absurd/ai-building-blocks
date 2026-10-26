@@ -2,12 +2,16 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-and-hubspot-contact-check
 name: Gorgias and HubSpot contact check
-summary: Connect Gorgias and HubSpot. Get missing contacts, mismatched fields, and suggested fixes.
+summary: Check your Gorgias and HubSpot contacts. Find customers missing from your CRM and fields that do not match, with fixes to review.
 job: organise-work
 headline: Gorgias and HubSpot contact check
 subhead: Connect Gorgias and HubSpot and ask for a contact check. It matches customer email addresses from recent support tickets to your contact records. You get missing contacts, conflicting names or fields, and suggested fixes to review.
 when:
   - You use this tool for customer support and need help with this task.
+not_for:
+  - "You want records created or synced for you: this only reports gaps, so use a sync tool or fix them by hand in HubSpot."
+  - "You have no way to connect Gorgias and HubSpot to your AI: do a manual review of a ticket export against your HubSpot contact list."
+  - "You want to find CRM contacts who never wrote to support: this only counts them, so use a HubSpot list or report."
 you_give:
   - Recent Gorgias customer email addresses and names.
   - HubSpot contact records for comparing those fields.
@@ -25,8 +29,27 @@ works_best_with:
     - name: Gorgias and HubSpot
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias and hubspot contact check by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Recent Gorgias customer email addresses and names.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Open an AI that can run Composio CLI commands. This check needs code running and live access to your accounts.
+  - Link your accounts. If the AI says Gorgias or HubSpot is not connected, run the link command it gives you, then try again.
+  - Ask the AI to run the Gorgias and HubSpot contact check. Say how far back to look, for example the last 30 days of tickets.
+  - Let it list your recent tickets, then look up each customer email in HubSpot.
+  - Read the report. Fix the contacts missing from HubSpot first, then the mismatched fields.
+  - Make any changes in HubSpot yourself. This check does not change any records.
+output_sample:
+  input:
+    - Recent Gorgias tickets with customer emails and names
+    - Your HubSpot contact records, looked up by email
+  prerequisites:
+    - An AI that can run Composio CLI commands
+    - Gorgias and HubSpot accounts linked through Composio
+  output:
+    - name: In Gorgias but not in HubSpot
+      contains: A table of customers with tickets but no CRM record, with ticket counts and first and last contact dates.
+    - name: Data mismatches
+      contains: A table of contacts found in both tools where a field differs, with a suggested value to keep.
+    - name: In HubSpot with no tickets
+      contains: A count of CRM contacts who never filed a ticket. This is for information only.
+    - name: Health score
+      contains: The share of contacts in sync, the number missing from the CRM, the mismatch count, and an overall rating.
+    - name: Recommendations
+      contains: Specific actions to fix the gaps you found.

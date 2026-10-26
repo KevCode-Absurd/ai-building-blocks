@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Emission math needs the right method for each source.
 new_slug: supply-chain-carbon-tracker
 name: Supply chain carbon tracker
-summary: Give it your shipping, energy and supplier data. Get emissions worked
-  out by source, plus ways to cut them.
+summary: Work out your supply chain carbon footprint by source from shipping, energy and supplier data. Get a ranked list of ways to cut emissions.
 job: track-numbers
 headline: Supply chain carbon tracker
-subhead: Your supply chain emissions, worked out by source, with a ranked list
-  of ways to cut them. You can see where most of the carbon sits and which fix
-  pays off most.
+subhead: Your supply chain emissions, worked out by source, with a ranked list of ways to cut them. You can see where most of the carbon sits and which fix pays off most.
 explain: |
   Your supply chain emissions, worked out by source, with a ranked list of ways to cut them. You can see where most of the carbon sits and which fix pays off most.
 
@@ -18,6 +15,10 @@ when:
   - You need to know whether freight or suppliers cause more emissions.
   - You are planning reduction targets.
   - You want to compare cutting options by cost.
+not_for:
+  - "You need audited or regulatory filings: use a certified carbon accounting tool or an auditor, since this gives estimates only."
+  - "You have no emission factors from a source you trust: get them from a published database first, or the sums will not hold up."
+  - "You want to cut waste through reuse and recycling: ask a sustainability adviser, because this tracks emissions and does not plan circular programs."
 you_give:
   - Shipping and freight data
   - Energy use
@@ -29,8 +30,32 @@ you_get:
   - Ranked reduction ideas
   - A reduction roadmap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Pick a mode that can run code, or the sums may be rough.
+  - Paste the skill text from this page into the chat.
+  - Add your shipping, energy and supplier data. Add your own emission factors, with source and year, if you have them.
+  - Tell your AI your goal, such as a customer request, a target or a baseline.
+  - Check which numbers are real and which are estimates, and check each factor's source and unit.
+  - Use the ranked ideas to pick your first cuts. Do not use the result for audited filings.
+output_sample:
+  input:
+    - Your shipping and freight data
+    - Your energy use, such as electricity and fuel
+    - Your supplier or purchase data, with spend
+    - Your own emission factors, with source and year (optional)
+    - Your reduction targets or reporting needs (optional)
+  prerequisites:
+    - An AI that can run code, so it can do the sums
+    - Emission factors from a source you trust
+  output:
+    - name: Executive summary
+      contains: Total footprint, change on last year, progress to targets, main sources and the biggest initiatives.
+    - name: Emissions inventory by scope
+      contains: A table of emissions by scope and category, with share of total and change on the prior year.
+    - name: Emissions by business unit
+      contains: Emissions and intensity for each unit, set against its target, with a status.
+    - name: Supplier emissions
+      contains: Each supplier's spend, emissions, data quality and priority, so you can see where to ask for better data.
+    - name: Reduction initiatives
+      contains: Each idea with status, tonnes saved per year, cost, timeline and payback.
+    - name: Data quality assessment
+      contains: Coverage and the share of real versus estimated data for each scope, with a quality score.

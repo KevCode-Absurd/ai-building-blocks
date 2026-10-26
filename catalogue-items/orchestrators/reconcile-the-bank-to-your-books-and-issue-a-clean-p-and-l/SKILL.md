@@ -26,7 +26,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Make the corrections in your books. Then export the updated ledger and the figures for the last period.
 
-3. **P&L and balance sheet writer.** Use the skill `p-l-and-balance-sheet-writer`. Give it the spreadsheet from the steps before. Builds statements from the books after your fixes, and flags big swings. Have an accountant review them.
+3. **P&L and balance sheet writer.** Use the skill `p-l-and-balance-sheet-writer`. Give it the matched ledger from step 1, after you have posted the fixes step 2 listed. Builds statements from the books after your fixes, and flags big swings. Have an accountant review them.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

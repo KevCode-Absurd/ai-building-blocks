@@ -1,66 +1,78 @@
 new_slug: storyboard-first-story-builder
 name: "Storyboard-first story builder"
-summary: "Paste your places, memories and hero. Get a rough board that finds the story before you write."
+summary: "Turn the places, memories and person you keep thinking about into a 12 to 20 frame story board, with an ending that comes from the board."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It has to make a story from loose material and test it for realism."
 
 headline: "Storyboard-first story builder"
-subhead: "Give it the places, memories and person you keep thinking about. It builds a hero from a real person, lays out a rough board and lets the ending come from it. You get 12 to 20 frames, a tested set of hurdles and off-cuts kept."
+subhead: "List the places, memories and objects you keep returning to. It builds a hero from a real person you name, lays out a rough board of 12 to 20 frames and lets the ending come from the board. You also get tested hurdles and the off-cuts kept."
 
 explain: |
-  Some stories have no outline to begin with. You have a place you remember, a person you know and a feeling you want to capture. Waiting for the plot to appear means waiting a long time, and writing from a formula gives you a story that could be anyone's.
+  Some stories start with no outline. You have a place you remember, a person you know and a feeling you want to capture. Waiting for a plot to appear takes a long time. Writing from a formula gives you a story that could be anyone's.
 
-  This skill starts with what you have kept: places, memories and objects. It builds the hero from a real person of the right age and puts you in their place. It sketches the story as a board of 12 to 20 frames and lets the ending come from what keeps returning. It tests each hurdle: could a real person that age get through it? It keeps the off-cuts, and checks the plot follows its own rules.
+  This story board maker starts from what you have kept: places, memories and objects. It builds the hero from a real person of the right age, using only what you tell it about them. It sketches the story as a board of 12 to 20 frames. It reads the board back for whatever keeps returning, such as an object, a fear or a place, and writes the ending from that.
+
+  It then tests each hurdle: could a real person that age get through it? Ideas that do not fit are kept as off-cuts. It needs at least five places or memories to start. With fewer, it asks for more and stops. It never fills a board with generic scenes.
 
 when:
-  - "You have images and memories but no plot for a story, film or picture book."
-  - "You want a brand film or talk that comes from real places and people, not a template."
+  - "You have images and memories but no plot for a short story, film or picture book."
+  - "You want a brand film or a talk that comes from real places and people, not a template."
   - "Your outline feels like a formula and you want something that feels lived."
+  - "You can see the first scene clearly but have no idea where the story goes."
+
+not_for:
+  - "You already have the plot and want it split into parts: use the Serial story planner."
+  - "You know the feeling you want at the end but have no places or memories yet: use the Ending-first story planner."
+  - "You have a finished draft and want it checked: use the Story rules checker."
+  - "You want sales copy or an ad, not a story: use the Marketing brief writer."
 
 you_give:
-  - "The places, memories and objects you keep returning to"
-  - "A real person the hero could be based on (optional)"
-  - "The age and setting of the hero (optional)"
+  - "Five or more places, memories or objects you keep returning to, one line each"
+  - "A real person the hero could be based on, and how they act (optional)"
+  - "The hero's age and setting (optional)"
   - "A mood or feeling (optional)"
+  - "How many frames you want, 12 to 20 (optional)"
 you_get:
   - "Your material grouped into three or four clusters"
-  - "A board of 12 to 20 frames"
-  - "An ending that comes from the board"
-  - "Tested hurdles and a list of off-cuts"
+  - "A hero built from the real person, with only the facts you gave"
+  - "A board of 12 to 20 frames, one line each"
+  - "An ending that comes from what keeps returning on the board"
+  - "Each hurdle tested for the hero's age, plus the off-cuts you can use later"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "List the places, memories and objects you have kept, even if they seem small."
-  - "Name a real person the hero could be based on."
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start it by name. If not, paste the skill file into a new chat. It needs no files or paid tools."
+  - "List the places, memories and objects you have kept, even if they seem small. Give at least five."
+  - "Name a real person the hero could be based on, and say how they act, what they notice and what scares them."
   - "Say the hero's age and setting."
-  - "Read the board aloud frame by frame, and mark any frame that does not feel true."
+  - "Read the board aloud, one frame at a time. Mark any frame that does not feel true, then ask for a new board with those frames fixed."
+  - "Keep the off-cuts. Paste them into your next project."
 
 how_it_works:
   - title: "Gathers the material"
-    text: "Places, memories and objects, in clusters."
+    text: "Groups your places, memories and objects into three or four clusters. It adds none of its own."
   - title: "Bases the hero on a real person"
-    text: "Five facts about how they act."
+    text: "Writes up to five facts about how they act, from what you said. Missing facts are marked MISSING and asked for."
   - title: "Stands in their place"
-    text: "Walks the first place in the hero's voice."
+    text: "Walks the first place in the hero's voice, using only details you gave."
   - title: "Draws the board"
-    text: "12 to 20 frames, one line each."
+    text: "Writes 12 to 20 frames, one line each: where, who, what is seen and what is felt. The last three stay blank."
   - title: "Finds the ending"
-    text: "From what keeps returning on the board."
+    text: "Reads the board for what keeps returning and writes the last three frames from that."
   - title: "Tests each hurdle"
-    text: "Could a real person that age get through?"
+    text: "Asks whether a real person that age could get through it, and with whose help. It changes any hurdle that needs luck."
   - title: "Keeps the off-cuts"
-    text: "Notes on where they might go."
+    text: "Lists what did not fit, with a note on where it might go."
   - title: "Checks the plot"
-    text: "Against the rules of the world. Then names any check it missed."
+    text: "Writes the rules of the world and checks each frame against them. Then it names any check it missed."
 
 output_shape: |
   CLUSTERS
   <cluster>: <places, memories, objects>
 
   THE HERO
-  Based on: <real person>
-  Five facts: <list>
+  Based on: <real person, or MISSING>
+  Facts: <up to five, from you>
 
   THE BOARD
   1. <where> | <who> | <seen> | <felt>
@@ -86,6 +98,24 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Five or more places, memories or objects, one line each"
+    - "A real person the hero could be based on, and how they act (optional)"
+    - "The hero's age and setting (optional)"
+    - "A mood or feeling (optional)"
+  prerequisites:
+    - "An AI chat. No files, web access or paid tools are needed."
+  output:
+    - {name: "Clusters", contains: "Your places, memories and objects sorted into three or four groups."}
+    - {name: "The hero", contains: "Who the hero is based on, with up to five facts you gave about them."}
+    - {name: "The board", contains: "12 to 20 numbered frames, each with where, who, what is seen and what is felt."}
+    - {name: "What keeps returning", contains: "The object, fear or place that comes back across the board."}
+    - {name: "Ending", contains: "The last three frames, written from what keeps returning."}
+    - {name: "Hurdles", contains: "Each problem the hero faces, and whether a real person that age could get through it."}
+    - {name: "Off-cuts", contains: "Ideas that did not fit, each with a note on where it could go."}
+    - {name: "Rules of the world", contains: "The rules the plot must follow, and any frame that breaks one."}
 
 tweaks:
   - what: "How much you give it"

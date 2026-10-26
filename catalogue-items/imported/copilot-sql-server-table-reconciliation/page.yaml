@@ -2,17 +2,59 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-sql-server-table-reconciliation
 name: SQL Server migration data checker
-summary: Share two SQL Server tables. Get schema and row differences to check a
-  data migration.
+summary: Check a SQL Server data migration by comparing two tables. You get a report of missing rows, extra rows, changed values and schema drift.
 job: test-and-fix-code
 headline: SQL Server migration data checker
-subhead: Share two SQL Server tables. Get schema and row differences to check a
-  data migration. Share your goal and the files you already have. The skill file
-  sets out the steps and the tools needed for this job.
+subhead: Give it two SQL Server tables, one from the old system and one from the new. It finds rows that are missing, extra or changed, and columns that do not match. You get a report to check a data migration.
+not_for:
+  - "You only need a quick row count on a small table: run a plain COUNT query on both sides instead."
+  - "Your data is not in SQL Server, such as MySQL, Postgres or spreadsheets: use a checker built for that source, or ask a data person."
+  - "You want to fix the differences for you: this only reports them, so a person must change the load and run it again."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open an AI that can run Python code and reach your servers. A plain chat window cannot do this.
+  - "Install the packages: pip install mssql-python pyarrow pandas."
+  - Set your sign-in details as environment variables. Use read-only accounts, especially on production.
+  - Paste the skill and give it your server names, database names and tables.
+  - Read the summary first. Then open the detail for each table that failed.
+  - Fix the load for any mismatch, then run the check again.
+output_sample:
+  input:
+    - Source server and database name
+    - Target server and database name
+    - The tables to compare, or a wildcard like all tables in one schema
+    - "How you sign in: SQL user and password, or Entra"
+    - The key column that identifies each row (optional)
+  prerequisites:
+    - An AI that can run Python code and reach both servers
+    - The packages mssql-python, pyarrow and pandas installed
+    - Read-only sign-in details for both databases, set as environment variables
+  output:
+    - name: Per-table result
+      contains: Source and target row counts, plus counts of missing rows, extra rows and mismatched rows for each table.
+    - name: Status label
+      contains: A pass or fail line for each table, so you can see which ones differ.
+    - name: Schema drift details
+      contains: Column differences between source and target, shown in full when you check a single table.
+    - name: Sample mismatched rows
+      contains: Example rows that differ, shown in full for single tables and for tables that fail.
+    - name: Summary line
+      contains: Total tables passed, failed and skipped across the run.
+    - name: Export file (optional)
+      contains: The same results as a CSV or JSON file, if you ask for that format.
+when:
+  - You moved data to a new server and need to prove it all arrived.
+  - A nightly load fills a staging table and you want to compare it with production.
+  - Two tables should match, but a report shows different totals.
+  - You changed a table design and want to see what drifted.
+you_give:
+  - The source server and database name.
+  - The target server and database name.
+  - The tables to compare, or a schema wildcard.
+  - "How you sign in: SQL user and password, or Entra."
+  - The key column that identifies each row (optional).
+you_get:
+  - Row counts for source and target, for each table.
+  - Counts of missing rows, extra rows and changed rows.
+  - A pass or fail result for each table.
+  - Schema differences between the two tables.
+  - A CSV or JSON file of the results (optional).

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must trace where untrusted text enters and what it can trigger.
 new_slug: prompt-injection-defender
 name: Prompt injection defender
-summary: Describe your AI app. Get a threat map and fixes against hidden
-  instructions in text it reads.
+summary: Find where hidden instructions in emails, web pages or files could take over your AI app. Get a prompt injection defense plan with fixes and tests.
 job: secure-code
 headline: Prompt injection defender
-subhead: A threat map and a fix list for your AI app, so text it reads cannot
-  take it over. You see exactly where hidden instructions could get in and what
-  they could reach.
+subhead: A threat map and a fix list for your AI app, so text it reads cannot take it over. You see exactly where hidden instructions could get in and what they could reach.
 explain: |
   A threat map and a fix list for your AI app, so text it reads cannot take it over. You see exactly where hidden instructions could get in and what they could reach.
 
@@ -18,6 +15,10 @@ when:
   - You want a security review before giving your AI access to tools.
   - You suspect an injection happened and need to investigate.
   - You need to document remaining risk for a client or auditor.
+not_for:
+  - Your app has no outside text and no tools. A normal code review is enough.
+  - You need proof that a live system is safe. Hire a security reviewer to run a real penetration test.
+  - You want to attack a system you do not own. Do not use this. Test only what you have written approval to test.
 you_give:
   - Description of the AI app and its purpose
   - List of input sources
@@ -31,8 +32,34 @@ you_get:
   - Injection tests
   - Residual risk notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Download the skill folder. It holds SKILL.md, references/defense-patterns.md and scripts/audit_boundary_manifest.py.
+  - Open Claude, ChatGPT or Gemini. Upload SKILL.md, or paste its text into the chat. Add the other two files if your AI can read files.
+  - Describe your app in a few lines. Say what it does, where its text comes from, what tools it can use and what secrets it can reach.
+  - Ask your AI to follow the skill and give you the threat map, defense plan and tests.
+  - Check the plan for controls marked missing or planned. Those are your gaps to fix first.
+  - The manifest check runs a Python script. It needs an AI that can run code. Skip it if yours cannot.
+output_sample:
+  input:
+    - A short description of your AI app and what it is for
+    - Every place text comes from, such as users, emails, web pages and files
+    - The tools and permissions your AI has
+    - The secrets and private data it can reach
+    - Past incidents (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - An AI that can run code and read files, only if you want the boundary manifest check (optional)
+  output:
+    - name: Data flow and trust map
+      contains: Where text enters, what the AI can reach, and where results go, with untrusted sources marked.
+    - name: Threat model
+      contains: What needs protecting, which channels an attacker controls, the paths for injection, and the rules that must always hold.
+    - name: Defense plan
+      contains: Each attack path matched to controls that prevent, limit, detect and recover, marked missing, planned, implemented or verified.
+    - name: Code or configuration changes
+      contains: Changes to your app, only within the scope you have approved.
+    - name: Regression suite
+      contains: Safe test cases for direct, indirect, stored, encoded, cross-agent and image or audio attacks, as they apply.
+    - name: Verification evidence
+      contains: What the tests showed, which cases failed, and how normal tasks held up.
+    - name: Residual risk and recovery plan
+      contains: The risk that remains, what to monitor, and how to contain and recover from an incident.

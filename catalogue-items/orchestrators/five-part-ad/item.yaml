@@ -15,14 +15,14 @@ outputs:
   - {type: audit_report}
 uses: [buyer-wants-finder, ad-headline-writer, headline-promise-checker, four-kind-proof-finder, proof-backed-sales-copy-writer, summing-up-paragraph-writer, call-to-action-writer, five-part-ad-checker]
 steps:
-  - {uses: buyer-wants-finder, note: "The one want to lead with, and the reward it promises."}
-  - {uses: ad-headline-writer, note: "Headlines for the chosen want."}
-  - {uses: headline-promise-checker, note: "Keeps only a headline that picks its reader and promises a reward."}
-  - {uses: four-kind-proof-finder, note: "Each claim paired with the strongest proof, and the claims left bare."}
-  - {uses: proof-backed-sales-copy-writer, note: "The body that pays off the headline and backs it up."}
-  - {uses: summing-up-paragraph-writer, note: "The short stretch between proof and ask that breaks inertia."}
-  - {uses: call-to-action-writer, note: "A clear ask with a real reason to act now."}
-  - {uses: five-part-ad-checker, note: "Pass or fail on attention, advantage, proof, persuasion and action."}
+  - {uses: buyer-wants-finder, note: "Makes the brief: the one want to lead with, and the reward it promises. Steps 2 and 4 build on it."}
+  - {uses: ad-headline-writer, note: "Uses the brief from step 1. Writes headlines for the chosen want and hands them to step 3 to check."}
+  - {uses: headline-promise-checker, note: "Uses the headlines from step 2. Keeps only a headline that picks its reader and promises a reward, and hands that headline on as the opening for step 5."}
+  - {uses: four-kind-proof-finder, note: "Uses the brief from step 1 and your product facts, not the step 3 check. Pairs each claim with the strongest proof, flags the claims left bare, and hands that proof map to steps 5 and 6."}
+  - {uses: proof-backed-sales-copy-writer, note: "Uses the kept headline from step 3 as its opening, the proof map from step 4 and the brief from step 1. Writes the body that pays off the headline and backs it up."}
+  - {uses: summing-up-paragraph-writer, note: "Uses the body from step 5 and the proof map from step 4. Writes the short stretch between proof and ask that breaks inertia, and hands the draft to step 7."}
+  - {uses: call-to-action-writer, note: "Uses the draft from step 6 and your offer. Writes a clear ask with a real reason to act now, and hands the full ad to step 8."}
+  - {uses: five-part-ad-checker, note: "Uses the full ad from step 7 and the brief from step 1. Gives a pass or fail on attention, advantage, proof, persuasion and action."}
 origin: rebuilt
 version: 1.0.0
 minds: [victor-schwab]

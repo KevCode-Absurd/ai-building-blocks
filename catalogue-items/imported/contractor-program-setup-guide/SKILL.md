@@ -10,6 +10,32 @@ metadata:
 
 Helps HR, procurement, and legal teams manage the non-employee workforce — contractors, freelancers, temporary staff, and staffing agency workers — including classification, vendor management, and program governance.
 
+## How to run this skill
+
+1. **Ask once for what is missing.** You need: what work the contractors do, how they are directed and paid, how long they have stayed, and the country or state. Optional: current vendors, the contractor agreement. Ask the user to describe roles, not names or ID numbers. If the country or state is missing, say the check is general and mark `MISSING: country or state`.
+2. **Check the classification factors** against the description: control over how the work is done, tools and equipment, schedule, exclusivity, integration into normal business, tenure, and whether the person runs their own business. Rate each factor low, medium or high risk and give one action. Judge the real working relationship, not the label in the contract.
+3. **Never decide a worker's status.** Do not write "this person is a contractor" or "is an employee". Give risk ratings and say which points to take to an employment lawyer who knows local law. Do not state a country's legal test as fact unless the user supplied it. If you describe a test, say it is general and should be checked.
+4. **Design the program:** sourcing, onboarding, offboarding (including system access removed on the contract end date), access rules kept apart from employee systems, and a yearly review of long-running engagements.
+5. **Plan vendors:** roles, service levels, what to report (spend and headcount by department), and how to review staffing agencies. Use a vendor management system (VMS) or managed service provider (MSP) only if the user has one or wants one.
+6. **Write the statement of work outline** and, if asked, the steps to convert a contractor to an employee. Leave `[BRACKETS]` for names, dates and fees. Never invent amounts or legal clauses.
+
+### Output format
+
+```
+## Risk check
+| Factor | What you told us | Risk (low, medium, high) | Action |
+## Onboarding checklist
+## Offboarding checklist
+## Vendor plan
+## Statement of work outline
+## Converting a contractor to staff
+## Common mistakes
+## Questions for your lawyer
+## MISSING (anything you could not fill)
+```
+
+This is guidance for HR and buying teams, not legal advice.
+
 ## Supported tasks
 
 - Assessing worker classification (employee vs. independent contractor)
@@ -54,7 +80,7 @@ Helps HR, procurement, and legal teams manage the non-employee workforce — con
 ## Tips
 
 - Review contractor classification against local legal tests, not just the label used in the contract.
-- Track contractor tenure carefully; long-running "temporary" engagements of 12+ months in the same role raise worker reclassification risk under many labor regulations and should be reviewed proactively.
+- Track contractor tenure carefully. A "temporary" engagement that runs a year or more in the same role is worth a proactive review. This is a prompt to check, not a legal limit, and the rules depend on local law.
 - Keep contingent worker onboarding and system access separate from full-time employee processes to manage co-employment risk.
 - Centralize contingent workforce spend visibility, which is often scattered across department budgets.
 

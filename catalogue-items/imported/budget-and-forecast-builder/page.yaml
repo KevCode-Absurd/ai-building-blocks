@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds from set steps but needs sensible assumptions.
 new_slug: budget-and-forecast-builder
 name: Budget and forecast builder
-summary: Give it your past numbers and plans. Get a budget, a forecast and a
-  note on gaps against actuals.
+summary: Build a budget and forecast from your past numbers. Get monthly costs, best and worst cases, and a plan to track gaps against actuals.
 job: money-and-investing
 headline: Budget and forecast builder
-subhead: Give it your past numbers and plans. Get a budget, a forecast and a
-  note on gaps against actuals. Bring past revenue and cost numbers. Use the
-  result to plan your next step.
+subhead: Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals. Bring past revenue and cost numbers. Use the result to plan your next step.
 explain: |
   A budget and forecast for the next year or the next few, built from your history and the things that actually drive your numbers, with a plan to track the gaps.
 
@@ -18,6 +15,10 @@ when:
   - You want a cash forecast that shows what happens if sales dip.
   - You are planning headcount and need the cost shown by month.
   - Your board asks for best and worst cases.
+not_for:
+  - "You need tax filings, audited accounts or an investor model: use an accountant or a finance professional."
+  - "You want to check or audit your past actual numbers: use the financial-analysis skill."
+  - "You have no past numbers at all: start with a simple list of your monthly income and spending in a spreadsheet."
 you_give:
   - Past revenue and cost numbers
   - Your main revenue and cost drivers
@@ -30,7 +31,32 @@ you_get:
   - What-if results
   - A budget against actuals tracker
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your past revenue and cost numbers. A spreadsheet export or a pasted table both work.
+  - Answer the questions about your time frame, business unit, and main revenue and cost drivers.
+  - Check the list of assumptions first. Change any that look wrong, then ask for a new version.
+  - Save the budget against actuals layout. Fill in real numbers each month to see the gaps.
+  - Only ask for the calculation script if your AI can run code. Otherwise it works through the numbers in the chat.
+output_sample:
+  input:
+    - Two or three years of past revenue and cost numbers
+    - Your main revenue and cost drivers, like price, sales or hiring
+    - Your plans for hiring, pricing or spending
+    - How far ahead you want to forecast
+  prerequisites:
+    - An AI that can run code, if you want it to use the built-in calculation script (optional)
+  output:
+    - name: Executive Summary
+      contains: Your key targets for revenue, EBITDA and net cash flow, plus the list of assumptions used.
+    - name: Monthly or quarterly P&L forecast
+      contains: Expected revenue, costs and profit for each month or quarter, built from your drivers.
+    - name: Personnel and headcount plan
+      contains: Planned hires and the cost of your team, shown over time.
+    - name: Capital Expenditure roadmap
+      contains: Big purchases you plan to make and when the cash leaves.
+    - name: Scenario matrix
+      contains: Best, worst and base cases side by side.
+    - name: Sensitivity table
+      contains: What happens to year-end cash when a main driver, like churn, moves up or down.
+    - name: Budget vs. actual setup
+      contains: A simple layout to compare your plan with real results as the months pass.

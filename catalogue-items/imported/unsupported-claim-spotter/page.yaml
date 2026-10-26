@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It sorts each claim by risk but does not verify them.
 new_slug: unsupported-claim-spotter
 name: Unsupported claim spotter
-summary: Paste a draft. Get every claim that needs a source, ranked by risk,
-  with the kind of source to find.
+summary: Find the claims in your draft that need a source before you publish. Each one is ranked by risk, with the kind of source to look for.
 job: research-topics
 headline: Unsupported claim spotter
-subhead: A list of every sentence in your draft that needs a source before you
-  publish, ranked by how much damage it could do if wrong.
+subhead: A list of every sentence in your draft that needs a source before you publish, ranked by how much damage it could do if wrong.
 explain: |
   A list of every sentence in your draft that needs a source before you publish, ranked by how much damage it could do if wrong. You fix the risky ones first.
 
@@ -17,6 +15,10 @@ when:
   - An editor asked you to source your numbers.
   - Your draft says things like studies show and you cannot name one.
   - You wrote a long piece and may have contradicted yourself.
+not_for:
+  - You want an AI to say whether each claim is true or false. This tool does not rule on truth, so use a human fact-checker or an editor.
+  - Your piece contains legal, medical or money advice. Have a qualified professional review it before you publish.
+  - Your piece is fiction or a personal story with no factual claims. Skip this step and use a plain proofread.
 you_give:
   - Your draft text or a link
   - Where it will be published (optional)
@@ -28,7 +30,27 @@ you_get:
   - The kind of source that would settle each
   - Internal conflicts in your draft
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini.
+  - Paste the skill text into the chat as your first message.
+  - Paste your full draft in the next message. Say where you will publish it if you know.
+  - Add any sources you already have, and say if you want a strict check (optional).
+  - Read the summary, then work down the table from high risk to low.
+  - Find a real source for each claim, or use the safer wording. Check the counts against the table.
+output_sample:
+  input:
+    - Your draft text, pasted in or as a link
+    - Where it will be published (optional)
+    - Sources you already have (optional)
+    - How strict to be (optional)
+  prerequisites:
+    - An AI chat that can read pasted text
+    - Web access only if you give a link instead of pasting
+  output:
+    - name: Summary
+      contains: How many claims need support, how many are high risk, and the three that matter most.
+    - name: Claims table
+      contains: Each claim's exact words, type, risk level, what would settle it, and its status.
+    - name: Safer wording
+      contains: Careful rewrites of high-risk claims you cannot source, with blanks for you to fill in.
+    - name: Source list to collect
+      contains: The sources you need to find, in order of risk.

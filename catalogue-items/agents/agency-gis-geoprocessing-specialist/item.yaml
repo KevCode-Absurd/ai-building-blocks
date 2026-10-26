@@ -1,0 +1,41 @@
+slug: agency-gis-geoprocessing-specialist
+name: Geoprocessing Specialist agent
+summary: "Turn a repeat ArcGIS Pro task into a Python script, toolbox or Model Builder model. Get a build plan with parameters, checks and a draft script."
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: gis/gis-geoprocessing-specialist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-geoprocessing-specialist.md
+  licence: MIT
+  original_name: Geoprocessing Specialist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 28efb48c3c4312ac7a662c8f2da69cc013d74e5d59880a04a71a40783e0ba424
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Geoprocessing Specialist
+  - Agency Agents
+  - GIS
+credits:
+  - title: Geoprocessing Specialist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-geoprocessing-specialist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,6 +1,6 @@
 new_slug: revive-a-hero-ad-that-is-slowing-down
 name: Revive a hero ad that is slowing down
-summary: Give it your fading ad's results. Get the cause, scored new hooks and a read on what won.
+summary: Revive a hero ad that is slowing down. Give it your weekly results and script. Get the cause of the fade, scored new hooks and what won.
 job: plan-ad-tests
 thinking: high
 thinking_why: It runs four skills in a row and the first call (why the ad is fading) steers the rest. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your best ad costs more every week and its return is falling, but you do not want to rebuild it from scratch.
   - One ad takes more than half of your ad spend, and you want a replacement ready before it fades.
   - You have a few strong ads and want to know what their openers have in common.
+not_for:
+  - "You have a new ad with no results yet: use the Pre-launch ad checker before you spend."
+  - "You want ad copy tested on its own: use the Ad test brief writer to plan the test."
+  - "You only need to check an ad against Meta rules: use the Meta ad policy checker."
 you_give:
   - The ad's spend and return by week since launch (frequency and audience size too, if you can see them)
   - The transcript of the ad
@@ -26,11 +30,33 @@ you_get:
   - A hit rate showing how many of your ads cleared your return line, and which ideas to keep making
   - A hook rubric of your winners, with fill-in-the-blank hook templates
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Paste the ad's weekly spend and return, and its transcript. Add your stock and cash position, so it picks the right pace.
-  - After the hook scores, film the top hooks on the old body and run them for about a week. Then export the results.
-  - Give it the results and your own break-even return. It counts the winners and builds the rubric.
+  - Open Claude Code, or a Claude Project where you can add files. This workflow runs four skills in order.
+  - Add the skill files and HANDOFF.md from the download, then say "Follow HANDOFF.md".
+  - Paste the ad's weekly spend and return, its transcript, and who it speaks to. Say how your stock and cash look.
+  - Read the cause call and the hook scores. Film the top hooks on the old body and run them for about a week.
+  - Come back with the results and your break-even return. It counts the winners and builds your hook rubric.
+  - Keep the rubric and grade each new hook against it before you film.
+output_sample:
+  input:
+    - Your ad's spend and return by week since launch
+    - The transcript of your ad
+    - Who the ad speaks to, in a line or two
+    - Your past hooks and a sheet of your other ads (optional)
+    - Your break-even return, for the hit rate
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Film and run the top hooks for about a week between step 2 and step 3
+  output:
+    - name: "Step 1: Revival plan and hooks"
+      contains: The cause of the fade, life stage, pace, ranked revival moves and ten or more hook briefs on the same body.
+    - name: "Step 2: Hook scores"
+      contains: Each hook scored out of 100, who it attracts, rewrites and the three hooks to film first.
+    - name: "Step 3: Hit rate"
+      contains: How many of your ads cleared your return line, and which ideas to make next.
+    - name: "Step 4: Hook rubric"
+      contains: What winning and losing hooks share, plus fill-in-the-blank hook templates and grades for new drafts.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Find why the ad is fading
     text: Reads the ad's life, calls the cause (stale or too small an audience), ranks the revival moves and writes ten or more new hook briefs on the same body.

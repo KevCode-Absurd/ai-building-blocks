@@ -1,6 +1,6 @@
 new_slug: prospecting-block-planner
 name: "Prospecting block planner"
-summary: "Paste your week and target list. Get a protected call block, a two-minute research batch and one reason to call each lead."
+summary: "Plan a protected prospecting block for cold calls. Give it your week and lead list. You get a call block, quick research and one reason per lead."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It builds a schedule and list from a fixed method."
@@ -17,6 +17,10 @@ when:
   - "You plan to call new leads and keep putting it off."
   - "You spend too long researching each lead."
   - "Your pipeline is thinner than you want."
+not_for:
+  - "You are working with inbound leads or current customers: reply to them directly, or plan the talk with the Negotiation call prep planner."
+  - "You need to prepare for one live negotiation call: use the Negotiation call prep planner."
+  - "You have no list of leads yet: build a short list of likely buyers by hand first, then come back."
 
 you_give:
   - "Your week and fixed commitments"
@@ -34,6 +38,29 @@ how_to_use:
   - "Say when your buyers usually pick up or reply."
   - "Put the block in your calendar as a fixed event."
   - "At the end of the week, tell the skill your counts and ask it to adjust."
+output_sample:
+  input:
+    - Your week and fixed commitments
+    - Your list of leads, with a role and company for each
+    - When your buyers usually pick up or reply (optional)
+    - Your pipeline numbers (optional)
+  output:
+    - name: Reachable hours
+      contains: The hours your buyers are easiest to reach, marked as known or a guess.
+    - name: Block schedule
+      contains: The day, time and length of each call block, with a rule to protect it.
+    - name: List for the first block
+      contains: The leads to call first, with one or two facts and a reason to call each.
+    - name: Research batch
+      contains: A set time slot before the block and a two-minute cap for each lead.
+    - name: Sprint start
+      contains: The fixed start time and the first leads to call.
+    - name: Pipeline rule
+      contains: How many new opportunities to add for each one that leaves.
+    - name: End of day count
+      contains: Calls made, conversations held and opportunities added.
+    - name: Missing and checks missed
+      contains: Gaps you should fill and any checks the plan did not pass.
 
 how_it_works:
   - title: "Finds reachable hours"

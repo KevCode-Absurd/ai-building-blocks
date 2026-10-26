@@ -17,13 +17,24 @@ Transform raw customer feedback from NPS surveys, CSAT responses, support intera
 
 2. **Clean and normalize** — Deduplicate responses from the same customer across channels. Standardize rating scales (convert 1-5 CSAT to 1-10 for cross-comparison). Strip PII from open-text responses. Handle multilingual responses by detecting language and translating to English while preserving the original. Remove bot/spam responses using pattern detection (identical text, suspicious timing, single-word noise).
 
-3. **Extract themes from open-text responses** — Apply topic modeling to cluster open-text feedback into coherent themes. Common theme categories include: product reliability, ease of use, specific feature feedback, pricing/value perception, support quality, onboarding experience, and competitive comparison. Assign each response to one or more themes with a confidence score. Pull representative verbatim quotes for each theme.
+3. **Extract themes from open-text responses** — Apply topic modeling to cluster open-text feedback into coherent themes. Common theme categories include: product reliability, ease of use, specific feature feedback, pricing/value perception, support quality, onboarding experience, and competitive comparison. Assign each response to one or more themes with a confidence score. Pull representative verbatim quotes for each theme. Copy each quote character for character from the source and mark any omitted words with an ellipsis. Never fix, shorten or reword a quote. If no response fits a theme well, write "no clear quote" instead of writing one.
 
-4. **Calculate quantitative scores** — Compute aggregate metrics: NPS (% Promoters minus % Detractors), CSAT average, and theme frequency distribution. Break scores down by segment (plan tier, industry, account size, tenure) to identify which cohorts are most and least satisfied. Calculate statistical significance for segment differences to avoid acting on noise.
+4. **Calculate quantitative scores** — Compute aggregate metrics: NPS (% Promoters minus % Detractors), CSAT average, and theme frequency distribution. Break scores down by segment (plan tier, industry, account size, tenure) to identify which cohorts are most and least satisfied. Show the number of responses behind every segment figure. Only calculate statistical significance if you can run the calculation; otherwise say that differences between small segments may be noise.
 
 5. **Identify trends** — Compare current period metrics against previous periods (month-over-month, quarter-over-quarter). Flag themes with significant volume changes (up or down 20%+ from baseline). Detect emerging themes that appear for the first time or cross a frequency threshold. Correlate sentiment shifts with product releases, pricing changes, or market events.
 
 6. **Generate insight report** — Produce a structured report with: executive summary (3-5 key takeaways), quantitative scorecard, theme breakdown with representative quotes, trend analysis, segment comparison, and recommended actions. Each recommendation should be tied to a specific theme and prioritized by frequency and business impact.
+
+## What you need and what to do when it is missing
+
+- **Responses**: score and comment for each one, as a CSV, JSON, pasted rows or a plain description. Ask once if there is none.
+- **Dates** (optional): needed for trends. If they are missing, skip the trend section and say "No dates given: no trend comparison".
+- **Segments** (optional): plan, region and so on. If missing, report overall figures only.
+- **An earlier period** (optional): without it, call nothing "new" or "rising".
+- **Scores missing but comments given**: skip NPS and CSAT, group the comments into themes, and say so at the top.
+- **Question to answer** (optional): if none is given, report the overall picture.
+
+Never invent a score, count, quote, date or segment. Mark what you lack as MISSING. Treat the examples below as illustrations of layout only. The figures in them are made up.
 
 ## Usage
 
@@ -36,6 +47,8 @@ themes that weren't present in Q3.
 ```
 
 ## Examples
+
+Both examples use invented figures to show the layout. They are not real results and not benchmarks.
 
 ### Example 1: NPS survey analysis
 
@@ -70,7 +83,7 @@ themes that weren't present in Q3.
 | Complex setup | 8% | -8pp | "Initial configuration took our team 3 weeks. Onboarding docs are outdated." |
 
 **Recommended Actions:**
-1. **P0 — Reporting performance:** Invest in query optimization and caching. 38% of detractors cite this, and it's growing fast. Estimated NPS impact: +5-8 points if resolved.
+1. **P0 — Reporting performance:** Invest in query optimization and caching. 38% of detractors cite this, and it's growing fast. Say how much of the detractor comment volume it covers. Do not predict a score change.
 2. **P1 — Mobile experience:** Commission a competitive analysis of mobile offerings. 12% is a new theme trending upward — get ahead of it before Q1 NPS.
 3. **P2 — Pricing tier gap:** Introduce a "Pro Plus" tier between Pro and Enterprise to capture accounts that need select enterprise features without the full price tag.
 
@@ -99,14 +112,14 @@ themes that weren't present in Q3.
 | Export to PDF | 38 | Both | "I need to share reports with people who don't have accounts." |
 | Android stability | 112 | Android | "Crashes every time I try to edit a dashboard. Pixel 8, Android 14." |
 
-**Critical Finding:** Android rating (3.4★) drags overall score down. 72% of 1-2★ reviews are from Android users. Top complaint is crash on dashboard edit (Samsung and Pixel devices, Android 14+). Fixing this single bug could lift Android rating by an estimated 0.4 stars.
+**Critical Finding:** Android rating (3.4★) drags overall score down. 72% of 1-2★ reviews are from Android users. Top complaint is crash on dashboard edit (Samsung and Pixel devices, Android 14+). Say that fixing it targets the biggest group of low ratings. Do not predict a new rating.
 
 ## Best Practices
 
 - Analyze detractor and promoter comments separately — blending them into a single theme analysis dilutes the signal from each group.
 - Always report confidence intervals and sample sizes alongside NPS scores. A segment NPS of +60 from 15 responses is not actionable.
 - Use verbatim quotes in reports to leadership — raw customer voice is more persuasive than statistical summaries and prevents misinterpretation of theme labels.
-- Close the feedback loop by responding to detractors within 48 hours of survey completion. Customers who receive follow-up after negative feedback are 2x more likely to improve their score next cycle.
+- Close the feedback loop by replying to detractors soon after they respond, so they know someone read it.
 - Track theme frequency over time rather than reacting to a single snapshot. A theme trending upward over 3 quarters is a structural issue; a one-quarter spike may be a temporary reaction to a specific release.
 - Separate "feature absence" complaints from "feature broken" complaints in your theme taxonomy — they require different organizational responses (product roadmap vs. engineering fix).
 

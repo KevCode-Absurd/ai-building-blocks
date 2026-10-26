@@ -1,25 +1,18 @@
 slug: reconcile-service-capacity-and-shared-cost
 name: Reconcile service capacity and shared cost
-summary: A service contribution bridge with allocated and idle shared cost
+summary: "See what a service team's hours really earn after delivery cost and shared cost, with the cost of unused capacity shown on its own line."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
+needs_mode: manual
 uses:
   - service-utilization-margin-builder
   - shared-service-activity-cost-allocator
@@ -36,6 +29,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This checks arithmetic and tracing against the figures you supply. It does not read your contracts, give advice or approve a payment. A person who knows the source documents must review it.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

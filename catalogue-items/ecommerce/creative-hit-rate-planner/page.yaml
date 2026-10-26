@@ -1,6 +1,6 @@
 new_slug: creative-hit-rate-planner
 name: "Creative hit rate planner"
-summary: "Paste a prospecting ad export. Get your hit rate, concepts above your profit line and what to iterate."
+summary: "Find your creative hit rate from a prospecting ad export. See which ad concepts clear your profit line and what to make next."
 job: read-ad-results
 thinking: medium
 thinking_why: "It follows a fixed formula on an export, so a mid-size model is enough. Use a stronger one if the export is large or messy."
@@ -17,6 +17,10 @@ when:
   - You launched a batch of ads and want to know whether one winner in twenty is normal for your store.
   - You are deciding how many ads to make next month and want a number tied to your own results.
   - You have a few winners and want briefs for the next round that aren't just a new headline.
+not_for:
+  - "You want a call on one ad or one test: use a person you trust on your team, or compare the two ads by hand against your target cost per sale."
+  - "You have under two weeks of data or fewer than about 20 ads: wait for more results, since the hit rate will swing too much to trust."
+  - "You run retargeting or email, not prospecting ads to new people: check those results in your own ad account instead, since this counts only new-customer ads."
 
 you_give:
   - A prospecting ad export for a closed window of about 14 days or more (spend, purchases, ROAS or CPA, standard and incremental if you have them)
@@ -34,6 +38,28 @@ how_to_use:
   - Paste or attach the export and tell it your target CPA or lowest ROAS. If you don't know it, ask the skill to help you work out break-even.
   - Pick the concepts to iterate and brief your team or your AI maker on the swings it listed.
   - Run it again after the next batch, using the same window length.
+output_sample:
+  input:
+    - A prospecting ad export for 14 days or more
+    - Your target cost per sale, or lowest ROAS that still makes money
+    - Your concept list and launch dates (optional)
+  prerequisites:
+    - Incremental columns in Meta Ads Manager, if your account has them
+  output:
+    - name: Hit rate
+      contains: Hits out of ads launched as a percentage, with the date window, your line and whether it is standard or incremental.
+    - name: Too new
+      contains: Ads launched too recently to count, listed so they are not treated as misses.
+    - name: Sample
+      contains: A note on whether you have enough ads, or only a rough guide.
+    - name: Concept list
+      contains: Each concept ranked by spend, with return, above or below your line, and keep, leave alone, iterate or drop.
+    - name: Iteration briefs
+      contains: Real swings to try for each winning concept, not one-word headline changes.
+    - name: Volume advice
+      contains: How many ads to make next, tied to your hit rate, plus a quality check before raising volume.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any inputs that would sharpen the result.
 
 how_it_works:
   - title: Sets your line

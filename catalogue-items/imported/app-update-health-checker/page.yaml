@@ -2,35 +2,56 @@ thinking: low
 thinking_why: It reads numbers and reports them.
 new_slug: app-update-health-checker
 name: App update health checker
-summary: Name your Expo app. Get crash rates, installs and update sizes for each
-  published update.
+summary: Check if your latest Expo app update is crashing. Get crash rate, launches, users and bundle size for each EAS update. Needs the EAS command line.
 job: ship-and-host
 headline: App update health checker
-subhead: "A clear read on whether your latest Expo app update is healthy: crash
-  rate, launches, unique users and bundle size, for each published update. You
-  can answer is the new release crashing more than the last one in minutes."
+subhead: "Give it your Expo app and the update you want to check. It reads your EAS update numbers and tells you if the release is crashing. You see crash rate, launches, users and bundle size for each platform."
 explain: |
   A clear read on whether your latest Expo app update is healthy: crash rate, launches, unique users and bundle size, for each published update. You can answer is the new release crashing more than the last one in minutes.
 
   The skill uses the Expo command line tool, so it needs to be installed and signed in. It lists recent update groups, then pulls per-platform launches, failed launches, crash rate and daily numbers for the one you pick. For a channel and runtime, it shows how many users run the embedded build and how many run over-the-air updates, and which updates are most popular. It reports totals only. It cannot show a single user's crash or device detail.
 when:
   - You just pushed an update and want to know if it is crashing.
-  - You need to compare two releases quickly.
+  - You need to compare the new release with the last one.
   - You want to know how many users still run the old build.
   - You want to check bundle size before the next push.
+not_for:
+  - "You need one user's crash or device details: use your crash reporting tool, since this only shows totals."
+  - "You have no Expo or EAS Updates set up: there is nothing to read, so set up updates first."
+  - "You want to find why an app crashes: use your app's crash logs or a developer, since this only shows how often."
 you_give:
-  - Your Expo app or project folder
-  - The update or channel to check
+  - Your Expo app folder
+  - The update group or channel to check
   - Runtime version (optional)
-  - An Expo login
+  - Your Expo login
 you_get:
-  - Crash and failed launch rates
+  - Crash rate and failed launch counts for each platform
   - Launch and unique user counts
-  - Embedded and over-the-air user split
-  - Most popular updates and payload size
+  - How many users run the embedded build and how many run updates
+  - The most popular updates on a channel
+  - Average update size
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and sign in to Expo.
+  - Use an AI that can run commands on your computer. A plain chat window cannot do this.
+  - Install the EAS command line tool and sign in to Expo. Open your app folder.
+  - Ask your AI to check the health of your latest update, and name the channel or branch.
+  - Read the crash rate for each platform. Look for a spike on one platform only.
+  - "Next step: compare the crash rate with the previous update. If it rose sharply, pause the channel or roll back, then check your crash logs."
+  - Note that new updates may show zeros for a short time, and numbers lag by up to a day.
+output_sample:
+  input:
+    - Your Expo app folder
+    - The update group or channel to check
+    - Runtime version (optional)
+    - Your Expo login
+  prerequisites:
+    - An AI that can run commands on your computer
+    - The EAS command line tool installed and signed in to Expo
+  output:
+    - name: Update list
+      contains: Recent update groups with their group IDs, branch names, runtime versions and platforms.
+    - name: Update insights
+      contains: Launches, failed launches, crash rate, unique users and average payload size for each platform, plus a daily breakdown.
+    - name: Channel insights
+      contains: How many users run the embedded build and how many run over-the-air updates, plus the most popular updates.
+    - name: Health read
+      contains: A short note on whether crash rate looks high, and whether iOS and Android differ.

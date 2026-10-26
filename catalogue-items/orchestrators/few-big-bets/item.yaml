@@ -12,10 +12,10 @@ outputs:
   - {type: plan}
 uses: [mispriced-bet-tester, lifetime-punch-card-bet-ranker, incentive-checker, room-for-error-plan-checker, sit-still-rule-writer]
 steps:
-  - {uses: mispriced-bet-tester, note: "For each idea, whether the odds really favour you or the price already says it"}
-  - {uses: lifetime-punch-card-bet-ranker, note: "A short ranked list with sizes. Reads the odds test from the step before"}
-  - {uses: incentive-checker, note: "Who gains from steering you, and where it pulls the wrong way. Reads the sized plan"}
-  - {uses: room-for-error-plan-checker, note: "Whether the concentrated plan survives a bad year. Reads the sized plan"}
+  - {uses: mispriced-bet-tester, note: "For each idea, whether the odds really favour you or the price already says it. Hands the odds test to step 2."}
+  - {uses: lifetime-punch-card-bet-ranker, note: "A short ranked list with sizes. Reads the odds test from the step before and hands the sized plan to steps 3, 4 and 5."}
+  - {uses: incentive-checker, note: "Who gains from steering you, and where it pulls the wrong way. Uses the sized plan from step 2 (not step 3's report), and hands its audit to the rule writer in step 5."}
+  - {uses: room-for-error-plan-checker, note: "Whether the concentrated plan survives a bad year. Uses the sized plan from step 2 (not the incentive audit), and hands its audit to the rule writer in step 5."}
   - {uses: sit-still-rule-writer, note: "A one-page holding rule set. Reads the sized plan and the risk checks"}
 origin: rebuilt
 version: 1.0.0

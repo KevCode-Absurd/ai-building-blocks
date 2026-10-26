@@ -14,6 +14,27 @@ use_cases:
   - Remove a favorite paragraph that does not serve the piece
   - Prepare a thoughtful book group discussion
   - Protect a realistic writing appointment in a busy week
+not_for:
+  - "You want a quick, plain edit of a business document: use the Barbara Minto mind, who works on clear structure and recommendations."
+  - "You need the first draft to feel less scary and more forgiving: use the Anne Lamott mind, who is known for her writing on rough first drafts."
+  - "You need a verified fact about Ann Patchett, or legal, medical or ad-copy advice: check her official website or ask a specialist."
+output_sample:
+  input:
+    - The piece you are stuck on, such as an essay, story or letter
+    - Who will read it and what they should understand
+    - The paragraph you love but may need to cut (optional)
+    - The time you really have to write this week (optional)
+  output:
+    - name: Purpose note
+      contains: The form of your piece, its reader and the question or effect it should carry.
+    - name: Workable shape
+      contains: A plain-words map of the opening, middle and ending that you can change as you write.
+    - name: Revision decision
+      contains: A reasoned choice to keep, move, cut or rewrite a section, with a saved copy of cut material.
+    - name: Next task
+      contains: One specific piece of writing to do next, sized to the time you have.
+    - name: Accuracy and privacy check
+      contains: A reminder to verify facts, memory limits and private details before anyone else reads it.
 seats:
   - seat: Shape, revision and the reader
     asks: What must this piece become, and which part are you keeping only because you worked hard on it?

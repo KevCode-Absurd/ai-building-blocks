@@ -2,35 +2,53 @@ thinking: medium
 thinking_why: It fills gaps in a vague idea by asking the right questions.
 new_slug: idea-to-dev-brief-writer
 name: Idea to dev brief writer
-summary: Give it a rough idea or feature request. Get a clear brief a developer
-  can build from, with scope and open questions.
+summary: Turn a rough idea into a dev brief a developer can build from. Get scope, testable checks and open questions, with no guessing.
 job: build-product
 headline: Idea to dev brief writer
-subhead: A brief that a developer or AI agent can build from without guessing.
-  Hand over a rough idea or feature request and get a spec with scope,
-  acceptance checks and a list of open questions.
+subhead: Give it a rough idea, a feature request or a bug. It asks questions first, then writes a brief a developer or AI agent can build from. You get scope, checks that can be tested and a list of open questions.
 explain: |
   A brief that a developer or AI agent can build from without guessing. Hand over a rough idea or feature request and get a spec with scope, acceptance checks and a list of open questions.
 
   If the idea is vague, the first step is to ask questions. It will not write a spec around a fog. It then works through four phases to clarify the problem, define the user and the success measure, set scope with what is out, and write acceptance criteria as testable statements. It can also write a bug report others can act on, rank a backlog of requests, and slice a large initiative into small shippable parts. It is not tied to any tech stack.
 when:
-  - A manager says "add something like X" and you need to turn that into real
-    work.
-  - You need a product requirements document for kickoff.
-  - You have a pile of feature requests and must decide the order.
-  - A bug report keeps bouncing back because it lacks detail.
+  - A manager says "add something like this" and you must turn it into real work.
+  - You need a product requirements document before a project kicks off.
+  - You have a pile of feature requests and need to pick the order.
+  - A bug report keeps coming back because it lacks detail.
+not_for:
+  - "You plan a whole quarter or year across many projects: use a roadmap planning step or a simple shared plan with your team instead."
+  - "You need to test if people even want the idea: talk to a few real customers first, then come back with what you learn."
+  - "You need to find a bug in code that already exists: ask a developer, or paste the code into your AI for a review."
 you_give:
-  - The idea or request
-  - The audience affected
-  - Constraints such as stack or deadline
-  - How you will measure success
+  - Your idea or request, even if it is rough
+  - Who it is for, such as first-time visitors who do not buy
+  - Limits such as your tools, deadline or other work it depends on (optional)
+  - How you will know it worked, such as one number you can track
 you_get:
-  - A feature spec with scope
-  - Testable acceptance criteria
-  - A list of open questions
-  - A smaller, shippable breakdown
+  - A feature spec with the problem, users and what is out of scope
+  - Acceptance criteria written so each one can be tested
+  - A short dev brief with steps to check the work is done
+  - A bug report with steps to repeat the problem
+  - A list of open questions and the smallest version to ship first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Before you start, write down four things: the problem, who it is for, your limits and how you will measure success."
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat, or upload the skill file. No code or web access is needed.
+  - Paste your idea and the four answers. Say if you want a feature spec, a dev brief or a bug report.
+  - Answer any questions it asks. If your idea is vague, it asks before it writes.
+  - Read the open questions and the out of scope list. Fix gaps before you share the brief.
+  - Hand the brief to your developer or AI agent. Walk through it with them before they start building.
+output_sample:
+  input:
+    - Your rough idea or feature request
+    - Who it is for
+    - Limits such as tools, deadline or other work it depends on
+    - How you will know it worked
+  output:
+    - name: spec-[feature-name].md
+      contains: A feature spec with the problem, users, proposal, user stories, acceptance criteria, out of scope, dependencies, metric, effort and priority.
+    - name: brief-[task-name].md
+      contains: A short dev brief with context, the task, what must not change, and exact steps to check the work is done.
+    - name: bug-[summary].md
+      contains: A bug report with where it happens, what you see, what should happen, steps to repeat it and a priority.
+    - name: README.md
+      contains: For bigger projects, an overview of the related specs and the order to build them in.

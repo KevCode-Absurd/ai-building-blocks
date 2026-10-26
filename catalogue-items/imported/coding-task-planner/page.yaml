@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It skims the project, then fills a fixed plan template.
 new_slug: coding-task-planner
 name: Coding task planner
-summary: Describe a coding task. Get a short plan with scope, ordered action
-  items, tests and open questions.
+summary: "Turn a vague coding task into a coding task plan: scope, an ordered checklist, tests and open questions, before anyone writes code."
 job: build-software
 headline: Coding task planner
-subhead: A short plan you can act on, produced before anyone touches the code.
-  It lists what is in scope, what is not, and an ordered checklist from
-  discovery to rollout.
+subhead: A short plan you can act on, produced before anyone touches the code. It lists what is in scope, what is not, and an ordered checklist from discovery to rollout.
 explain: |
   A short plan you can act on, produced before anyone touches the code. It lists what is in scope, what is not, and an ordered checklist from discovery to rollout.
 
@@ -18,6 +15,10 @@ when:
   - You want to hand a clear checklist to a teammate or agent.
   - You are unsure what a feature will touch.
   - You need to decide the order of work.
+not_for:
+  - "You have a one-line fix or a task you already know how to do: send your AI a direct prompt instead."
+  - "You want the code written now: ask your coding AI to build it, or plan first and then hand it the checklist."
+  - "You need a plan with no access to your project files: describe the project in the chat, or ask a developer to review it."
 you_give:
   - The task in your own words
   - Repo access
@@ -28,8 +29,25 @@ you_get:
   - An ordered action checklist
   - Test steps and open questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini. A tool that can read your project files gives the best plan.
+  - Paste the skill, then describe your task in a line or two. Add any limits on time or tools.
+  - Give it access to your project files. If it cannot read files, paste your README and the files likely to change.
+  - Answer the one or two questions it asks, if any. It makes an assumption when it can.
+  - Check the scope and the order of the checklist. Fix anything wrong before you start.
+  - "Next step: paste the checklist into your coding AI or issue tracker and tick items off. Run the skill again if the scope changes."
+output_sample:
+  input:
+    - Your coding task in one or two lines
+    - Access to your project files so your AI can read them
+    - Limits on time or tools (optional)
+  prerequisites:
+    - An AI that can read your project files works best. Without that, paste in the key details.
+  output:
+    - name: Plan
+      contains: One to three sentences on what you are doing, why, and the approach.
+    - name: Scope
+      contains: A short list of what is in scope and what is out of scope.
+    - name: Action items
+      contains: An ordered checklist of verb-first steps, from discovery to changes, tests and rollout.
+    - name: Open questions
+      contains: Up to three unknowns that could change the plan.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs one standard formula and explains the result.
 new_slug: one-time-stock-quantity-picker
 name: One-time stock quantity picker
-summary: Give it cost, price and demand range for a short-life item. Get the
-  best order amount and the risk of each choice.
+summary: Find the best one-time stock quantity for a short-life item. Give it cost, price and demand. You get the order size and the risk of other choices.
 job: plan-supply-chain
 headline: One-time stock quantity picker
-subhead: The best quantity to order when you only get one shot, such as seasonal
-  clothing, event merchandise or food that spoils. Order too few and you lose
-  sales.
+subhead: The best quantity to order when you only get one shot, such as seasonal clothing, event merchandise or food that spoils. Order too few and you lose sales.
 explain: |
   The best quantity to order when you only get one shot, such as seasonal clothing, event merchandise or food that spoils. Order too few and you lose sales. Order too many and you eat the leftovers.
 
@@ -17,8 +14,11 @@ when:
   - You must place one order for a holiday item and cannot reorder.
   - A food product spoils in a week and you need to decide how much to make.
   - You sell event shirts and unsold ones go to a discount bin.
-  - You want to see how much profit you give up if you order less than the best
-    amount.
+  - You want to see how much profit you give up if you order less than the best amount.
+not_for:
+  - "You can restock the item often: use a normal reorder point method, or ask your supplier for a repeat order plan."
+  - "You have no cost, price or demand guess yet: gather those first, or ask your sales lead for a rough range."
+  - "You plan stock over many weeks or months: use a multi-period planning method, since this tool covers one order only."
 you_give:
   - Cost per unit
   - Selling price
@@ -30,8 +30,33 @@ you_get:
   - The chance of running out
   - Profit and risk at other order sizes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat.
+  - Type your cost per unit, selling price and salvage value for unsold units.
+  - Add your demand as an average and a spread, or paste your past sales numbers.
+  - Add your cost of a lost sale and any minimum order size (optional).
+  - Ask your AI to run the numbers. Code running (Python) gives the most exact result, but is not required.
+  - Check the order size against your budget and supplier limits. Then place your order and watch early sales.
+output_sample:
+  input:
+    - Your cost per unit
+    - Your selling price per unit
+    - What unsold units are worth (salvage value)
+    - Your demand guess as an average and a spread, or your past sales
+    - Your cost of a lost sale (optional)
+  prerequisites:
+    - An AI that can run Python code is best, but a chat AI can do the maths in plain steps
+  output:
+    - name: Executive Summary
+      contains: The product, the best order quantity, expected profit, expected leftover units and a plain recommendation.
+    - name: Problem Setup
+      contains: A table of your cost, price, salvage value, cost of lost sales, cost of extra stock and the critical fractile.
+    - name: Demand Forecast
+      contains: The average demand, the spread, the type of demand curve used and how uncertain demand is.
+    - name: Optimal Solution
+      contains: Best order size, expected sales, leftover stock, lost sales, service level and expected profit.
+    - name: Sensitivity Analysis
+      contains: A table showing order size and profit if demand or salvage value changes.
+    - name: Risk Assessment
+      contains: The chance demand beats your order, the chance of large leftovers and the worst-case profit.
+    - name: Recommendations
+      contains: Numbered next steps, such as rounding to case packs, planning a clearance channel and checking early sales.

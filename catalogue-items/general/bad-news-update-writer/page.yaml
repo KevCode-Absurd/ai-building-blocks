@@ -1,6 +1,6 @@
 new_slug: bad-news-update-writer
 name: "Bad news update writer"
-summary: "Paste the facts of a setback. Get a short update with the loss, the numbers, what went right and the next step."
+summary: "Write a bad news update that opens with the loss, gives the real numbers and ends on next steps. Paste the facts of the setback to start."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It has to keep the update honest and plain while deciding what order the facts go in."
@@ -17,6 +17,10 @@ when:
   - "A project, launch or quarter has missed, and you must tell people today."
   - "You must tell customers about a delay, outage, recall or price rise."
   - "Your draft sounds like a press release and you want it to sound like a person."
+not_for:
+  - "You have good news, or a decision is not made yet: wait until you know, or write a plain note saying what is still open."
+  - "You must speak to an angry group in person: use a speech planner built for that, and use this update as the written follow-up."
+  - "You want to find who caused the problem: hold a separate review later, since this update leaves blame out on purpose."
 
 you_give:
   - "The facts of the setback: what, when, the numbers"
@@ -35,6 +39,31 @@ how_to_use:
   - "Say who will read it and what it costs them."
   - "Paste your own draft if you have one so it can be fixed."
   - "Check every number against your source before you send."
+output_sample:
+  input:
+    - "The facts of the setback: what happened, when and the numbers"
+    - Who the update is for and how it affects them
+    - What you plan to do next
+    - Your own draft update (optional)
+  output:
+    - name: Update
+      contains: The loss in one plain sentence, with the number or date, placed first.
+    - name: The numbers
+      contains: What was lost and what was not, each figure on one line with its unit.
+    - name: What held
+      contains: What worked and who made it work, named by role or name.
+    - name: Cause
+      contains: One sentence saying the cause will be looked at, by whom and when.
+    - name: What we still have
+      contains: What remains in figures, such as money, people, customers, time or stock.
+    - name: Next
+      contains: Each action, who owns it and by when.
+    - name: Soft words replaced
+      contains: Each soft phrase from your draft with the plain word put beside it.
+    - name: Missing
+      contains: Any number you did not give, marked MISSING and never guessed.
+    - name: Checks missed
+      contains: One line for each check the update still fails, or none.
 
 how_it_works:
   - title: "Leads with the loss"

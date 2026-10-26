@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It picks a stack, then builds with performance limits in mind.
 new_slug: 3d-web-scene-builder
 name: 3D web scene builder
-summary: Describe the scene or product viewer. Get working 3D page code with
-  fast loading and a fallback.
+summary: Describe your 3D product viewer or portfolio scene. Get working 3D web page code with a loading state, a fallback and a speed checklist.
 job: build-websites
 headline: 3D web scene builder
-subhead: Describe the scene, product viewer or portfolio piece and the devices
-  it must run on. It picks a tool (Spline, React Three Fiber or Three.js),
-  prepares your models and sets up loading, controls and a fallback. You get the
-  scene as code, the tool choice with reasons and a performance checklist.
+subhead: Describe the scene, product viewer or portfolio piece and the devices it must run on. It picks a tool (Spline, React Three Fiber or Three.js), prepares your models and sets up loading, controls and a fallback. You get the scene as code, the tool choice with reasons and a performance checklist.
 explain: |
   A product viewer, configurator or portfolio scene can run in the browser, load quickly, and fall back to a plain view on devices that cannot run it.
 
@@ -19,6 +15,10 @@ when:
   - You are building a 3D portfolio and do not know which library to use.
   - Your 3D scene runs slowly on phones.
   - You need a 3D scene that still looks fine when WebGL is off.
+not_for:
+  - "You only need a flat image or video of your product: use a plain image or video on your page, which loads faster and works everywhere."
+  - "You want a full game or a heavy 3D app: use a game engine such as Babylon.js, which this skill only lists as an option."
+  - "You have no web project to add code to: ask a web developer to set one up first, or start with a Spline scene."
 you_give:
   - A description of the scene or product
   - Your 3D model files, or a request to find a stand-in
@@ -31,8 +31,31 @@ you_get:
   - Controls tuned for first-time users
   - A performance checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill's instructions, or upload the skill folder.
+  - Describe your scene or product in a few lines. Add the devices it must run on and the framework your site uses.
+  - Add your 3D model file, usually a GLB. If you have none, ask for a stand-in.
+  - Read the tool choice first. Spline needs a Spline account. Compressing models needs gltf-transform installed on your computer.
+  - Copy the scene code into your web project. Replace any placeholder model or Spline link with your own.
+  - Run the performance checklist on a real phone and a desktop. This works best when your AI can run code and open a browser.
+output_sample:
+  input:
+    - A short description of the scene or product
+    - Your 3D model file, or a request for a stand-in
+    - The framework your site uses (optional)
+    - The devices it must run on
+  prerequisites:
+    - A basic web project to add the code to
+    - A Spline account, only if you pick Spline
+    - A local install of gltf-transform, only if you compress models
+    - An AI that can run code and open a browser (best results)
+  output:
+    - name: Tool choice
+      contains: Which of Spline, React Three Fiber or Three.js fits your brief, with the reasons.
+    - name: Scene code
+      contains: The working 3D scene with lights, camera controls and your model loaded.
+    - name: Model preparation steps
+      contains: How to export your model as GLB and compress it so it loads fast.
+    - name: Loading and fallback handling
+      contains: A progress display while loading and a plain view when 3D cannot run.
+    - name: Performance checklist
+      contains: Checks for load time, frame rate, pixel density, reduced motion and keyboard use on your target devices.

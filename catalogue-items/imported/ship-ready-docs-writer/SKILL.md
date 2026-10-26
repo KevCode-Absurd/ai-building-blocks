@@ -5,6 +5,30 @@ description: "The durable documentation set that makes an AI-built (vibe-coded) 
 
 # Shipping Artifacts: The Docs That Make AI-Built Code Reviewable
 
+## How to run this skill in a chat
+
+AI Blocks added these notes. The original named three commands (`/document-app`, `/derive-tests`, `/ship-check`) that are not part of this item, so we replaced them below with plain steps. The method is unchanged.
+
+### What you need
+- The app's code folder. Your AI must be able to open and read the files.
+- Optional: the repo's `AGENTS.md` or `CLAUDE.md`, any existing docs, and who will review the app.
+
+### Steps
+1. Find the repo's setup, as described in the next section. Say what you found.
+2. First pass: read the code and write `architecture.md`, `flows.md`, `permissions.md` and `variables.md`. Add a conditional document only when the app has that feature. Otherwise write one line in `architecture.md`.
+3. Second pass: write `tests.md` from those documents and from the tests already in the project.
+4. Hand back the list of files written, and for each one whether it follows the repo's setup or a default.
+
+### If something is missing
+- If you cannot read the code, say so and stop. Ask for the files. Never describe code you have not read.
+- Where the code does not answer a question, write `UNKNOWN: not found in the code`. Never guess a role, a rule or a setting.
+- In `variables.md`, write setting and secret names only. Never copy a real key, password or token into any document.
+- Every known risk must point to a place in the code. Do not add generic risks.
+
+### What you hand back
+- The documents, then `CHECKS MISSED:` with anything you could not check, or "none".
+- The next step: give the documents to a reviewer, or run the AI-written code reviewer or the Code security scanner against them.
+
 ## Purpose
 
 AI agents write code fast, but they leave no durable record of *intent* — what the system is supposed to do, who is allowed to do what, where the secrets live, which rules are actually verified. Without that record, no human (and no auditing agent) can tell whether the code is safe to ship. This skill defines the small set of documents that restore reviewability.
@@ -13,7 +37,7 @@ These docs are written for two readers: a human reviewer and the next AI coding 
 
 ## Locations and names: the repo's setup wins
 
-Every location, file name and doc-format convention in this plugin is a **default**. The host repo's own setup comes first. Before writing anything (a system doc, the coverage map, an audit report), look for that setup:
+Every location, file name and doc-format convention in this skill is a **default**. The host repo's own setup comes first. Before writing anything (a system doc, the coverage map, an audit report), look for that setup:
 
 1. **Agent instructions** — `AGENTS.md`, `CLAUDE.md`, and whatever they import or point to. They often name the docs folder, the files in it, who maintains each one, and how dates are recorded.
 2. **A docs location** — an existing `docs/`, `documentation/` or similar folder.
@@ -24,11 +48,11 @@ Every location, file name and doc-format convention in this plugin is a **defaul
 Then:
 
 - **Follow what you find.** Write into the repo's docs location, update its existing equivalent instead of creating a parallel file, and keep its naming and date conventions. What each document must contain does not change; only where it lives and what it is called. If its agent instructions say how or by whom a doc is maintained, follow that too.
-- **Use the plugin's defaults only where the repo has none:** docs in `documentation/` at the repo root, the file names below, the coverage map at `documentation/tests.md`, reports at `reports/<name>_{timestamp}.md`, and no "updated date" line (the file's history is the source of truth).
-- **Say which you did.** The output names every location and file written, and whether each follows the repo's setup or a plugin default.
+- **Use this skill's defaults only where the repo has none:** docs in `documentation/` at the repo root, the file names below, the coverage map at `documentation/tests.md`, reports at `reports/<name>_{timestamp}.md`, and no "updated date" line (the file's history is the source of truth).
+- **Say which you did.** The output names every location and file written, and whether each follows the repo's setup or a default.
 - **Never create a file whose name differs from an existing one only in letter case** — `tests.md` beside `TESTS.md`, `Architecture.md` beside `architecture.md`. On Windows and macOS they are the same file, so the write overwrites it; elsewhere they become two files that collide on the next checkout. Check case-insensitively before creating a file. If the existing one covers the same thing, use it. If it covers something else (a `TESTS.md` that is the testing method, not a coverage map), do not write into it: use the repo's real equivalent, and where there is none, pick a name that collides with nothing.
 
-Throughout this plugin, a name such as `architecture.md` or `tests.md` means *that document, wherever and under whatever name the repo keeps it*.
+Throughout this skill, a name such as `architecture.md` or `tests.md` means *that document, wherever and under whatever name the repo keeps it*.
 
 ## How the set is organized
 
@@ -36,7 +60,7 @@ The set is **not** a fixed list — it is a small **core** plus **conditional** 
 
 - **Core docs** — every reviewable app has these surfaces, so always produce them.
 - **Conditional docs** — include one only if the app actually has that capability. If it doesn't, write a single line in `architecture.md` ("No scheduled work — no `cron.md`.") rather than inventing an empty document. Reviewability comes from an honest map, and "we don't do X" is part of the map.
-- Most docs are reverse-engineered from code by `/document-app`. The one exception is `tests.md`, which is *derived from the other docs* by `/derive-tests` — it is the verification map, not a description of a subsystem.
+- Most docs are reverse-engineered from the code in the first pass (see "How to run this skill in a chat"). The one exception is `tests.md`, which is *derived from the other docs* in the second pass — it is the verification map, not a description of a subsystem.
 
 Be brutally honest about the current state without being paranoid. The job is an accurate map, not a clean bill of health. Each doc is short, table-and-bullet heavy, and skips generic theory.
 
@@ -68,7 +92,7 @@ Each entry: default file name · one-line purpose · what it must capture · how
      - **Gaps** — documented rules with no verification at all, ranked by what crossing them exposes.
    - Each row carries: use-case → rule → expected behavior (including the deny/negative case) → evidence source (doc + code) → status (existing / proposed / none). It also notes which checks the repo's gate requires: under the gate policy the repo states (e.g. a local command plus a human go), or, where it states none, the CI checks that gate merges to `main`.
    - Reviewer use: the operational form of "documented == implemented" — it shows whether each rule the other docs claim is actually pinned by a test today, only proposed, or unverified.
-   - Produced by `/derive-tests` (not `/document-app`), because it is derived from the other docs and the existing test suite rather than read off a subsystem.
+   - Written in the second pass, not the first, because it is derived from the other docs and the existing test suite rather than read off a subsystem.
 
 ## Conditional documents (include only when the capability exists)
 
@@ -93,6 +117,6 @@ Each entry: default file name · one-line purpose · what it must capture · how
 - Each produced doc adds a reference to itself in `architecture.md` under a "Related Documents" section (or in the index the repo already keeps for its docs), so the set stays discoverable.
 - Skip any conditional document that doesn't apply, and say so in one line rather than inventing content.
 - Keep examples and finished templates out of these docs — they describe *this* system, not the general method.
-- The agent operating-context file (`AGENTS.md` or `CLAUDE.md`, whichever the repo's structure makes canonical) is a *different* artifact — instructions derived from these docs, not system documentation. It is produced at the handoff step by `/ship-check`, which follows that structure, not here.
-- `tests.md` is produced by `/derive-tests`; the rest are produced by `/document-app`.
+- The agent operating-context file (`AGENTS.md` or `CLAUDE.md`, whichever the repo's structure makes canonical) is a *different* artifact — instructions derived from these docs, not system documentation. Write it only if the person asks for it, after these docs exist, and follow the repo's own structure for it.
+- `tests.md` is written in the second pass; the rest are written in the first pass.
 - Keep the repo's date convention. Where it has none, do not include an "updated date" line; the file's history is the source of truth.

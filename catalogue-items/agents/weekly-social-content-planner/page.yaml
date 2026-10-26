@@ -1,6 +1,6 @@
 new_slug: weekly-social-content-planner
 name: Weekly social content planner
-summary: Give it last week's post numbers. Get next week's posts planned from what worked, with hooks checked.
+summary: Plan next week's social posts from last week's numbers. It learns what worked, checks each post for reasons to share, and fixes weak ones.
 job: grow-social
 thinking: medium
 thinking_why: It reads numbers, keeps a lessons file and rewrites weak posts for up to two rounds. A mid-size model does it well. Use a stronger one for the monthly format review.
@@ -14,6 +14,10 @@ when:
   - You post to one platform by hand and want a plan that gets better each week.
   - You have posted for a while and never looked back at which posts worked.
   - You keep running out of ideas and want next week built from your own results.
+not_for:
+  - "You post on several platforms at once: run it once per platform, or plan the first week with the Platform native content planner."
+  - "You need one post for a launch or a sale: use the Shareable content checker on that single draft."
+  - "You have no numbers from last week and no brand file: write a brand file first with the Brand profile builder, then come back."
 you_give:
   - Last week's posts with format, hook, date and numbers
   - Your brand file with voice and what you may claim
@@ -32,6 +36,29 @@ how_to_use:
   - Each week, paste or attach last week's post numbers from your platform's analytics.
   - Read the week's plan. Post the pieces you agree with yourself, or in your scheduler.
   - Run it again next week. It adds the numbers to its log and keeps learning.
+output_sample:
+  input:
+    - Last week's posts with format, hook, date and numbers
+    - Your brand file with voice and what you may claim
+    - Your platform and your goal this month
+    - How many hours a week you can give
+    - Launches, sales or news coming up (optional)
+  prerequisites:
+    - A brand brain from the Brand profile builder, or your own brand file
+    - An AI that can keep files between weeks, such as Claude Code, to save the log and lessons
+  output:
+    - name: Last week
+      contains: Your best and worst post and engagement compared with your own average.
+    - name: What we learned
+      contains: Up to three lessons, each with the posts behind it.
+    - name: Next week's posts
+      contains: One line per post with day, format, topic, first line, score out of 30 and a ready or weak tag.
+    - name: For the ads team
+      contains: Any post that far beat your usual views, and whether to run it as is or reshoot the hook.
+    - name: Pace
+      contains: Posts a week and the hours they take, set from what you really kept up.
+    - name: Files and missing
+      contains: Each step's saved file and every line marked MISSING.
 how_it_works:
   - title: Log last week
     text: Adds last week's posts and numbers to its running file and reads the saved lessons.

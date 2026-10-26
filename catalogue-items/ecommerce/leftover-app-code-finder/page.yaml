@@ -1,6 +1,6 @@
 new_slug: leftover-app-code-finder
 name: "Leftover app code finder"
-summary: "Give it your theme files and removed apps. Get each leftover script found and the lines to delete."
+summary: "Find leftover app code in your Shopify theme. Give it your theme files and removed apps. You get each file and line to delete, plus a clean score."
 job: speed-up-store
 thinking: medium
 thinking_why: "It searches many files for names and judges what is safe to remove. A mid-size model does this well if it can open the files."
@@ -17,6 +17,10 @@ when:
   - "You just uninstalled an app, a pixel or a widget."
   - "PageSpeed still shows a script from an app you no longer use."
   - "You inherited a store and don't know what is in the theme."
+not_for:
+  - "Your store has never had an app, pixel or widget removed: there is nothing to find, so skip it."
+  - "You cannot duplicate your theme or open a code editor: hand the job to a developer."
+  - "You want to know which apps to remove: use the App script auditor first, then bring its list here."
 
 you_give:
   - "Your theme folder (download it from Online Store, Themes, then unzip it) or the pasted theme.liquid, head and footer files"
@@ -35,6 +39,30 @@ how_to_use:
   - "Download the copy, unzip it and open the folder in your AI (in Claude Code) or paste the key files."
   - "Give the list of removed apps and pixels you still use."
   - "Make the edits one at a time on the copy, preview your homepage, a collection page, a product page and checkout, then publish the copy only when all work."
+output_sample:
+  input:
+    - Your theme folder, or the pasted theme.liquid, head and footer files
+    - The list of apps, pixels and services you removed, with brand and short names
+    - Your live ad and analytics pixels (optional, so they are left alone)
+    - Your PageSpeed third-party script list (optional)
+  prerequisites:
+    - A duplicate of your theme to edit, never the live one
+    - A code editor with search across files, or an AI that can open the theme folder
+  output:
+    - name: Clean score
+      contains: A score out of 100 now and after the edits, with the deduction sum shown.
+    - name: Removed app hits
+      contains: For each removed app, the file, line, what the line is, the action and the risk.
+    - name: Unknown scripts to ask about
+      contains: Scripts or pixels nobody can name, with the file, line and who might know.
+    - name: Left alone
+      contains: The ad and analytics tags you still use, which are not marked for deletion.
+    - name: Safe edit plan
+      contains: One change at a time on the duplicate theme, with the pages to preview after each.
+    - name: Retest
+      contains: A three-run PageSpeed average and the dated log line to write.
+    - name: Not run
+      contains: Anything that could not be searched, and what is missing.
 
 how_it_works:
   - title: Sets up a safe search

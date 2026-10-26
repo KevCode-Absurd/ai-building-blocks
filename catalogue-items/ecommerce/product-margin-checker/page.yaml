@@ -1,6 +1,6 @@
 new_slug: product-margin-checker
 name: "Product margin checker"
-summary: "Give it a price and every cost. Get true margin, break-even ROAS and CAC, scored out of 100."
+summary: "Check your product margin before you set ad targets. Give it a price and every cost. Get gross margin, break-even ROAS and CAC, and a score."
 job: track-numbers
 thinking: medium
 thinking_why: "It is careful arithmetic across many cost lines, and a mid-size model does that well if it shows its sums."
@@ -17,6 +17,10 @@ when:
   - You are about to launch a product and want to know what you can afford to spend on ads.
   - Your ads look fine on paper but the bank balance does not agree.
   - You are planning a sale and need to know what the margin is at the lower price.
+not_for:
+  - "You sell a service, or a bundle that shares costs across products: ask your accountant for a full profit and loss review."
+  - "You have no cost quotes at all yet: get a quote from your supplier, carrier and warehouse first, then come back."
+  - "You want to pick a price from scratch: use the waterfall price setter, then check the result here."
 
 you_give:
   - Selling price, excluding tax
@@ -37,6 +41,24 @@ how_to_use:
   - Paste your return and discount rates from the last 90 days. For a new product, say they are guesses.
   - Read the gap between product margin and gross margin first. That gap is the money your ad targets were missing.
   - Run it again at your sale price before any promotion.
+output_sample:
+  input:
+    - Your selling price, without tax
+    - Your unit cost, plus freight and duty per unit
+    - Shipping to the customer, pick and pack, and packaging per order
+    - Your payment fee percent
+    - Your refund rate and average discount from the last 90 days
+  output:
+    - name: Cost of delivery
+      contains: Every cost line per order, including payment fee and an allowance for returns and discounts, added to a total.
+    - name: The three margins
+      contains: Product margin, gross margin (CM2) and contribution margin (CM3), with the gap between product and gross margin.
+    - name: Break-even
+      contains: Break-even ROAS, break-even CAC and how much of the price can go to marketing.
+    - name: Score
+      contains: A score out of 100 with its sum, split into margin level, room for ads and evidence.
+    - name: Flag and next step
+      contains: A go, fix or no-go call, the first change to make, and any missing cost lines.
 
 how_it_works:
   - title: Takes tax out of the price

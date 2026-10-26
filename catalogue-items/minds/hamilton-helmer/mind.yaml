@@ -16,6 +16,28 @@ use_cases:
   - "Plan a second business that builds on what your first one already does well"
   - "Separate good operations, which every rival needs, from a real strategic edge"
   - "Question a team's belief that it already has a moat"
+not_for:
+  - "You want to know why strong firms miss simpler rivals: hire Clayton Christensen instead."
+  - "You want a plan for team culture, feedback or hard talks: hire Kim Scott instead."
+  - "You want stock picks or buy and sell calls: this mind gives no investment advice, so talk to a licensed adviser."
+output_sample:
+  input:
+    - Your business model and what customers pay for
+    - Your margins and costs (optional)
+    - Your main rivals and who leads your market
+    - "Your stage: just starting, growing fast or settled"
+    - The advantage you think you have
+  output:
+    - name: Benefit and barrier test
+      contains: One sentence on the benefit your business earns and one on what stops rivals from taking it.
+    - name: Materiality check
+      contains: Whether the advantage is big enough to move your price or cost, and holds against each kind of rival.
+    - name: Powers that fit your stage
+      contains: The one or two of the seven powers you hold or could build now, each with a fact behind it.
+    - name: Gaps and thin evidence
+      contains: What is missing or only a claim, and which fact would change the view.
+    - name: Next move
+      contains: The open power to build first, with a first test and a pass line you can count.
 seats:
   - {seat: "Lasting advantage", asks: "What is our benefit, and what stops a rival from taking it away?"}
   - {seat: "Counter-positioning", asks: "Is there a model the market leader can't copy without damaging its own business?"}

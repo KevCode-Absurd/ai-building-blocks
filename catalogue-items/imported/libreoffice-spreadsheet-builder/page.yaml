@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows known file steps.
 new_slug: libreoffice-spreadsheet-builder
 name: LibreOffice spreadsheet builder
-summary: Describe the sheet. Get an ODS file with formulas and charts, or a
-  conversion to Excel or CSV.
+summary: Build a spreadsheet from a plain description. You get an ODS file with formulas and charts, or a copy in Excel, CSV or PDF format.
 job: work-with-files
 headline: LibreOffice spreadsheet builder
-subhead: A working spreadsheet with formulas and charts, built from a plain
-  description, and ready to open in Excel or save as CSV. You describe the sheet
-  and skip the manual setup.
+subhead: A working spreadsheet with formulas and charts, built from a plain description, and ready to open in Excel or save as CSV. You describe the sheet and skip the manual setup.
 explain: |
   A working spreadsheet with formulas and charts, built from a plain description, and ready to open in Excel or save as CSV. You describe the sheet and skip the manual setup.
 
@@ -18,6 +15,10 @@ when:
   - A partner wants Excel but you use LibreOffice.
   - You have a pile of CSV files and want them as tidy sheets.
   - The same formulas must be added to many workbooks.
+not_for:
+  - "You need Excel macros or a live link to a database report: use Excel itself, or ask a person who builds database reports."
+  - "You want Excel-native work, such as an XLSX file built for Excel only: use xlsx-official."
+  - "You have no way to run code or install LibreOffice: ask your AI to describe the formulas, then type them into a sheet yourself."
 you_give:
   - What the sheet should track
   - Sample data or a CSV (optional)
@@ -30,8 +31,29 @@ you_get:
   - XLSX, CSV or PDF copies
   - A batch conversion command
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Install LibreOffice on your computer. It is free.
+  - "Write a short brief: what the sheet tracks, the totals you need, and the file format you want back."
+  - Add a CSV or sample data if you have it (optional).
+  - Paste the brief into an AI that can run code and save files, and ask it to use this skill.
+  - Open the ODS file and check the formulas and charts.
+  - Open the converted copies, such as XLSX or CSV, and check they look right before you send them.
+output_sample:
+  input:
+    - What the sheet should track, in plain words
+    - Sample data or a CSV file (optional)
+    - The totals and formulas you need
+    - The file format you want back
+  prerequisites:
+    - LibreOffice installed on your computer
+    - An AI that can run code and save files
+  output:
+    - name: ODS spreadsheet
+      contains: Your sheet in LibreOffice's own format, with the data, formulas and totals you asked for.
+    - name: Formulas
+      contains: Cell formulas such as sums, written into the sheet so totals update when numbers change.
+    - name: Charts
+      contains: Charts built from your numbers, when you ask for them.
+    - name: Converted copies
+      contains: The same sheet saved as XLSX, CSV or PDF, whichever you ask for.
+    - name: Batch conversion command
+      contains: A command that converts many files in one folder to another format in one go.

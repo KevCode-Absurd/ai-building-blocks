@@ -2,6 +2,6 @@
 
 > 3 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Advisory council](https://useaiblocks.com/skills/advisory-council): Ask a hard question. Get several great minds arguing it, then a brief you can act on.
-- [Settle a hard decision with a council, then commit](https://useaiblocks.com/workflows/settle-a-hard-decision-with-a-council-then-commit-the-team): Give it a hard decision. Get a council's call, a stress-tested plan and a note that commits the team.
-- [Three-viewpoint decision brief](https://useaiblocks.com/prompts/three-mind-debate-brief): Paste a hard decision. Get three thinkers arguing it and a brief with three first steps.
+- [Advisory decision review planner](https://useaiblocks.com/workflows/settle-a-hard-decision-with-a-council-then-commit-the-team): Share the decision, evidence and constraints. Get simulated advisory views, dissent, a checked action plan and a draft team decision note.
+- [Council decision brief writer](https://useaiblocks.com/skills/advisory-council): Get an advisory council of great minds to argue your hard decision. You get a brief with the call, the strongest dissent and your first three steps.
+- [Three-viewpoint decision brief writer](https://useaiblocks.com/prompts/three-mind-debate-brief): Describe a hard decision. Get three simulated viewpoints, counterarguments and a decision brief with first steps.

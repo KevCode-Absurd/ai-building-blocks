@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must learn your data from your answers.
 new_slug: data-skill-builder
 name: Data skill builder
-summary: Describe your data warehouse and terms. Get a custom data analysis
-  skill that knows your tables and metrics.
+summary: Build a data analysis skill that knows your warehouse tables, metric rules and team terms, so your AI answers in your words.
 job: track-numbers
 headline: Data skill builder
-subhead: "A custom data analysis skill that already knows your warehouse: your
-  tables, your metric definitions and your team's slang. Later questions get
-  answers in your terms instead of generic ones."
+subhead: "A custom data analysis skill that already knows your warehouse: your tables, your metric definitions and your team's slang. Later questions get answers in your terms instead of generic ones."
 explain: |
   A custom data analysis skill that already knows your warehouse: your tables, your metric definitions and your team's slang. Later questions get answers in your terms instead of generic ones.
 
@@ -18,6 +15,10 @@ when:
   - A new analyst needs your team's data knowledge in one place.
   - Your metric definitions live only in people's heads.
   - You want to add notes on a new data domain to an existing skill.
+not_for:
+  - "You have one spreadsheet and no data warehouse: ask your AI to read the sheet directly, or keep a plain notes file."
+  - "You only want charts and dashboards: use a BI tool such as Looker or Tableau."
+  - "Nobody on your team can explain how the data is used: ask an analyst to join you first, because the skill needs their answers."
 you_give:
   - Your database type and access
   - Table and metric names you use
@@ -29,8 +30,32 @@ you_get:
   - Metric definitions in writing
   - Updates when you add context
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to your data warehouse.
+  - Use an AI that can connect to your data warehouse and run queries. Read-only credentials are the safest choice.
+  - Paste this skill into a chat, or load it as a skill, and say you want to create a data skill for your warehouse.
+  - Tell it your database type. It will list your schemas and ask which 3 to 5 tables matter most.
+  - "Answer its questions one at a time: what a customer is, your main metrics and formulas, what to always filter out, and common mistakes."
+  - Check the files it writes, especially metric formulas and filters. Fix anything wrong, then load the zip into your AI tool.
+  - To add a new topic later, load your existing skill and say which topic needs more detail. It will ask a few questions and add a new reference file.
+output_sample:
+  input:
+    - Your warehouse type, such as BigQuery, Snowflake, PostgreSQL, Redshift or Databricks
+    - The 3 to 5 tables your analysts use most
+    - Your answers to a few questions about terms, metrics and filters
+    - An existing skill folder, if you want to improve it (optional)
+  prerequisites:
+    - An AI that can connect to your data warehouse through a connector
+    - Read-only database access is the safest choice
+    - An analyst who knows how your data works
+  output:
+    - name: SKILL.md
+      contains: The main file of your new skill, with its name, description, SQL dialect notes and links to the reference files.
+    - name: references/entities.md
+      contains: What words like user or customer mean in your data, the ID fields that identify them, and how they relate.
+    - name: references/metrics.md
+      contains: Each key metric in plain words, with its exact formula, source tables and edge cases.
+    - name: references/tables/[domain].md
+      contains: One file per area, listing table paths, key columns, joins, standard filters and sample queries.
+    - name: references/dashboards.json
+      contains: An optional list of your existing dashboards.
+    - name: Zip package
+      contains: All the files bundled so you can load the skill into your AI tool.

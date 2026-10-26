@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It reads logs, finds the cause and plans a fix.
 new_slug: ci-failure-fixer
 name: CI failure fixer
-summary: Point it at a failing pull request. Get the cause of the failed GitHub
-  check and a fix plan.
+summary: Find why a GitHub check failed on your pull request. Get the error lines, the likely cause and a fix plan to approve before any code changes.
 job: test-and-fix-code
 headline: CI failure fixer
-subhead: A red check on your pull request turns into a clear cause and a short
-  plan to fix it. Point it at the PR, and it reads the logs from the failed
-  GitHub Actions run, pulls out the lines that matter and tells you what went
-  wrong.
+subhead: A red check on your pull request turns into a clear cause and a short plan to fix it. Point it at the PR, and it reads the logs from the failed GitHub Actions run, pulls out the lines that matter and tells you what went wrong.
 explain: |
   A red check on your pull request turns into a clear cause and a short plan to fix it. Point it at the PR, and it reads the logs from the failed GitHub Actions run, pulls out the lines that matter and tells you what went wrong.
 
@@ -19,6 +15,10 @@ when:
   - The logs are thousands of lines and you want only the error.
   - You want a plan to approve before any code is touched.
   - Several checks failed and you need to know which one to fix first.
+not_for:
+  - "Your checks run in Buildkite or another outside CI tool: it only reports the details link, so open that tool's own page to read the logs."
+  - "You have no GitHub command line signed in: sign in first with gh auth login, or read the failed run in the GitHub Actions tab yourself."
+  - "You want your AI to change code with no review step: this one stops and waits for your approval, so ask a developer or your AI directly instead."
 you_give:
   - The repo folder
   - The pull request number or link (optional)
@@ -29,8 +29,30 @@ you_get:
   - A likely cause
   - A fix plan to approve
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run the GitHub CLI and reach your repo.
+  - Open your AI in a place where it can run code and see your repo folder. This skill needs the GitHub command line, so a plain chat window will not do.
+  - Sign in to GitHub once by running gh auth login, then check it with gh auth status.
+  - Give your AI the skill and say which pull request to check. Skip the number to use the pull request for your current branch.
+  - Read the failing checks and error lines it returns. Check that the likely cause makes sense.
+  - Approve the fix plan, or ask for changes. It does not edit code until you say yes.
+  - After the fix, rerun your tests and the pull request checks to confirm they pass.
+output_sample:
+  input:
+    - The folder of your repo
+    - The pull request number or link (optional, it uses the current branch's pull request if you skip it)
+    - A GitHub command line that is signed in to your repo
+  prerequisites:
+    - An AI that can run code and the GitHub command line in your repo
+    - A GitHub sign-in with repo and workflow access
+  output:
+    - name: Failing checks
+      contains: Each failed GitHub Actions check with its name and a link to the run.
+    - name: Failure snippet
+      contains: The trimmed error lines from each log, with a note when a log is missing.
+    - name: Skipped external checks
+      contains: Checks that run outside GitHub Actions, listed with their details link only.
+    - name: Likely cause
+      contains: A short plain reading of what went wrong, based on the error lines.
+    - name: Fix plan
+      contains: A short plan of changes for you to approve before any code is touched.
+    - name: Recheck advice
+      contains: After approved changes, a suggestion to rerun the tests and the pull request checks.

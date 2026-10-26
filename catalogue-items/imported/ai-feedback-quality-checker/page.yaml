@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It judges feedback against learning research, then rewrites it.
 new_slug: ai-feedback-quality-checker
 name: AI feedback quality checker
-summary: Paste the feedback your tool gives students. Get a check of its timing
-  and wording, plus a better version.
+summary: Check your AI tutor's feedback to students for timing and wording, then get a better version. Paste the student's work and the reply.
 job: teach-and-train
 headline: AI feedback quality checker
-subhead: A check of the feedback your AI tool gives students, with a better
-  version written for you. Vague feedback such as "good effort" changes nothing.
+subhead: A check of the feedback your AI tool gives students, with a better version written for you. Vague feedback such as "good effort" changes nothing.
 explain: |
   A check of the feedback your AI tool gives students, with a better version written for you. Vague feedback such as "good effort" changes nothing. Feedback that does the thinking for the student teaches nothing.
 
@@ -17,6 +15,10 @@ when:
   - Your AI feedback gives away the answer.
   - "You are choosing when an AI should comment: right away or after an attempt."
   - You want to compare the feedback two tools give.
+not_for:
+  - "You want to grade or mark student work: use your own judgement or your school's marking scheme."
+  - "You need a final mark or a decision on a grade: ask the teacher, as this check only reviews the feedback."
+  - "You only want to know if the student's answer is right: check it against your answer key or ask a colleague."
 you_give:
   - What the student submitted
   - The AI's current feedback
@@ -28,7 +30,27 @@ you_get:
   - The reasons behind each change
   - Set-up tips for timing and tone
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the instructions from this skill.
+  - Paste what the student wrote or did.
+  - Paste the reply your AI tool gave the student.
+  - Add the year group and subject. Add the learning goal if you have one (optional).
+  - Read the diagnosis first, then the rewritten reply.
+  - Check the rewrite fits your class before you reuse it.
+output_sample:
+  input:
+    - What the student submitted
+    - The feedback your AI gave now
+    - Student level and subject (optional)
+    - What the feedback should achieve (optional)
+    - Limits such as length or timing (optional)
+  output:
+    - name: Diagnosis
+      contains: What works and what does not in the current feedback, judged against research on useful feedback.
+    - name: Feedback Type Analysis
+      contains: Whether the comments are about the task, the method, the student's self-checking, or the student as a person.
+    - name: Improved Feedback Design
+      contains: A rewritten reply that is specific, can be acted on, and leaves the thinking with the student.
+    - name: Design Rationale
+      contains: The reason behind each change you were given.
+    - name: Implementation Notes
+      contains: Tips for when the feedback should appear and what tone to use.

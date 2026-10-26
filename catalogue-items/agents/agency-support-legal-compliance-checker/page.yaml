@@ -1,0 +1,135 @@
+name: Legal Compliance Checker agent
+summary: Check a business practice, promotion or policy against the laws where you sell. Get the rules that apply, gaps and questions for a lawyer.
+headline: Legal Compliance Checker agent
+subhead: Describe one thing you do or plan to do, such as a promotion, a sign-up flow or a new market, and where you do it. It names the rules that touch it. You get a status for each rule, the documents to update and a plan in three time bands.
+job: check-contracts
+thinking: high
+thinking_why: It must pick only the rules that fit your facts, say when it cannot tell and keep what the law says apart from what it assumes. Use a model that reasons well and states its limits.
+explain: |-
+  A legal compliance check (also called a regulatory compliance review) often starts with a long list of every law. That list buries what matters. This agent starts with one thing you do and where you do it. Then it names only the rules that touch it. It looks at data privacy (GDPR, CCPA), health data (HIPAA), card payments (PCI-DSS), financial reporting (SOX), and the standards for marketing and advertising.
+
+  For each rule it says in one line what the rule asks. It then compares that with what your documents show. Each rule gets a status: Covered on the evidence, Possible gap, Gap or Cannot tell. After the rules it lists the documents that need an update, such as your privacy policy, terms or vendor terms. It closes with a plan in three bands: Now, Next and Later.
+
+  It is wider than the Data Privacy Officer agent, which goes deep on one privacy review. It is not a clause-by-clause read like the Legal Document Review agent. It gives no score and no fine amounts. It marks each point that needs a lawyer. The result is an AI reading of public rules, not legal advice.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You plan to sell in a new country or state and want to know which rules come with it.
+  - You are about to run a promotion, contest or ad campaign and want to check the marketing rules first.
+  - A partner or big customer sends a compliance questionnaire and you do not know what you can say yes to.
+  - You are about to update your privacy policy and terms and want to know what they must now cover.
+not_for:
+  - You need a lawyer's sign-off on a contract or a filing with a regulator. Ask a lawyer. Use this agent to prepare.
+  - You want one contract read clause by clause. Use the Legal Document Review agent.
+  - You want a deep privacy review of one way you use customer data. Use the Data Privacy Officer agent.
+you_give:
+  - What you do or plan to do, in a few lines, such as a promotion, a sign-up flow, a vendor setup or a new market
+  - Where you sell and where your customers live
+  - Your industry, and whether you handle health, card or financial data
+  - Your privacy policy, terms or vendor agreements (optional)
+  - Past complaints, audit notes or regulator letters (optional)
+you_get:
+  - A scope note with the practice reviewed and the places covered
+  - A table of the rules that apply, each with what it asks in one line
+  - A status for each rule, with the evidence behind it
+  - A list of documents to update
+  - A plan with Now, Next and Later actions
+  - Questions to take to a lawyer
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe the one practice you want checked. Say where you sell and where your customers live.
+  - Attach your privacy policy, terms or vendor agreements if they relate. No code or web access is needed.
+  - Type "Check this. Name only the rules that apply. Mark anything you cannot tell. Do not call anything compliant without evidence."
+  - Read the Gap and Cannot tell rows first. Add what is missing and ask it to re-run the check.
+  - Take the lawyer questions to a lawyer before you act. Check any rule it names against the official text.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the practice, the places, the industry and the kind of data. Anything missing is asked once, then marked MISSING.
+  - title: Pick the rules
+    text: It lists only the rule areas that touch your facts, such as privacy, health data, card payments or advertising.
+  - title: Compare with your evidence
+    text: For each rule it checks what your documents say against what the rule asks.
+  - title: Set a status
+    text: Each rule is marked Covered on the evidence, Possible gap, Gap or Cannot tell, with the line that supports it.
+  - title: List document updates
+    text: It names the policies, terms and vendor papers that need to change, and what each should add.
+  - title: Plan the actions
+    text: It groups actions into Now, Next and Later, based on risk and how hard the fix is.
+  - title: Hand back lawyer questions
+    text: It lists the points a lawyer should decide, tied to the rule behind each.
+output_shape: |-
+  SCOPE
+    Practice <what you do> | Places <where you sell and where customers live> | Industry <field> | Sensitive data <yes or no, which>
+
+  RULES THAT APPLY
+    <area> | <rule or law> | <what it asks in one line> | <why it touches this practice> | <check against the official text>
+
+  FINDINGS
+    <rule> | <Covered on the evidence, Possible gap, Gap or Cannot tell> | <evidence seen> | <what is missing>
+
+  DOCUMENTS TO UPDATE
+    <document> | <what to add or change> | <rule behind it>
+
+  ACTION PLAN
+    Now <actions> | Next <actions> | Later <actions>   (each: <action> | <size: small, medium or large>)
+
+  QUESTIONS FOR YOUR LAWYER
+    <question> | <rule it relates to>
+output_sample:
+  input:
+    - What you do or plan to do, in a few lines
+    - Where you sell and where your customers live
+    - Your industry, and whether you handle health, card or financial data
+    - Your privacy policy, terms or vendor agreements (optional)
+  prerequisites:
+    - An AI that can read files, if you attach policies or contracts
+  output:
+    - name: Scope
+      contains: The practice reviewed, the places covered, the industry and the kinds of data involved.
+    - name: Rules that apply
+      contains: Only the rules that touch your facts, each with what it asks in one line.
+    - name: Findings
+      contains: A status for each rule, Covered on the evidence, Possible gap, Gap or Cannot tell, with evidence.
+    - name: Documents to update
+      contains: The policies, terms and vendor papers that need to change, and what to add.
+    - name: Action plan
+      contains: Actions grouped as Now, Next and Later, each marked small, medium or large.
+    - name: Questions for your lawyer
+      contains: Points the AI cannot settle, tied to the rule behind each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your policies and vendor terms next to your description and quote the line behind each finding.
+  inputs:
+    - A list of the countries and US states where your customers live.
+    - Your last privacy policy and terms, with their dates.
+    - The ad copy or promotion rules you plan to run, if marketing is the issue.
+terms:
+  - term: Compliance
+    meaning: Following the laws, rules and standards that apply to your business.
+  - term: Regulator
+    meaning: A government body that makes sure a law is followed, such as a data protection authority.
+  - term: HIPAA
+    meaning: The US law that protects health information held by care providers and their partners.
+  - term: PCI-DSS
+    meaning: The security standard for businesses that take card payments.
+  - term: Jurisdiction
+    meaning: A place whose laws apply, such as a country or a US state.
+tweaks:
+  - what: Practice
+    how: Check one practice at a time. "Our sign-up flow" gives a sharper answer than "our whole business".
+  - what: Places
+    how: Name every country and state where you sell. One missing place can change which rules apply.
+  - what: Evidence
+    how: Attach the actual policy or contract. Without it, most rules land as Cannot tell.
+improve:
+  - Keep each check with its action plan and run it again when you enter a new market.
+  - Add the rule areas your industry always faces to the pack, so the first pass starts closer to your needs.
+  - Pair it with the Policy page drafter to write the updated policy or terms for your lawyer to check.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -1,6 +1,6 @@
 new_slug: collection-page-planner
 name: "Collection page planner"
-summary: "Give it your range and keyword data. Get a set of collection pages, each aimed at one search."
+summary: "Plan collection pages for your online store. Give it your products and checked keywords. You get a page map, briefs and a build order."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It applies a few clear rules to a product list, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You sell a range of products but have only a few broad collections.
   - You want more search entry points without adding new products.
   - You are about to build many collections and need an order and a naming plan.
+not_for:
+  - "You want the page copy for one collection: use the Collection page SEO builder."
+  - "You want to lift sales on a collection page that is already live: use the Collection page fixer."
+  - "You sell one product only: write a strong product page and posts that answer buyer questions instead."
 
 you_give:
   - Your product list with tags, price, type, use and audience
@@ -29,11 +33,33 @@ you_get:
   - A build order in batches of 5 to 10
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your product list and the keywords you checked, and name your best-selling category.
-  - Paste your current collections so it does not repeat them.
-  - Build the first batch, then check indexing and impressions in Search Console before the second.
-  - Take each brief to the Collection page SEO builder, one page at a time.
+  - Open a chat in Claude, ChatGPT or Gemini. Add the skill, or copy it and paste it in.
+  - Paste your product list and your checked keywords. Name your best-selling category.
+  - Paste your current collections so the plan does not repeat them.
+  - Read the map. Check that no two collections share a keyword.
+  - Build the first batch. Check Search Console (free) for indexing and impressions before the next batch.
+  - Take each brief to the Collection page SEO builder, one page at a time. No code or paid tool is needed for this skill.
+output_sample:
+  input:
+    - Your product list with tags, price, type, use and audience
+    - Keywords you have already checked, with volume and difficulty if you have them
+    - Your current collections and their web addresses (optional)
+    - Your best-selling category (optional)
+  prerequisites:
+    - Checked keywords, ideally from the Store keyword validator. Without them, the plan marks every keyword as not validated.
+  output:
+    - name: COLLECTION MAP
+      contains: Each collection with its keyword, handle, product count, parent, children and whether it is new, existing or merged.
+    - name: BRIEF PER COLLECTION
+      contains: A goal, products to include and links for each page, ready to hand to the Collection page SEO builder.
+    - name: BUILD ORDER AND BATCHES
+      contains: Batches of 5 to 10 collections, with what to check in Search Console after each.
+    - name: NOT ADDED
+      contains: Variants left out, each with the reason.
+    - name: CHECKS MISSED
+      contains: Any check that failed, or none.
+    - name: MISSING
+      contains: Any input you did not give, so nothing is invented.
 
 how_it_works:
   - title: Starts with sales

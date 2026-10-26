@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks what to keep, then writes the skill files.
 new_slug: pattern-to-skill-extractor
 name: Pattern to skill extractor
-summary: Name a fix you keep repeating. Get it packaged as a reusable skill with
-  notes and examples.
+summary: Turn a fix you keep repeating into a reusable skill. Describe the pattern and get a skill folder with steps, notes and examples.
 job: make-skills
 headline: Pattern to skill extractor
-subhead: A fix you keep repeating, turned into a skill you can reuse in any
-  project. Describe the pattern and get a packaged folder with instructions,
-  notes and examples.
+subhead: A fix you keep repeating, turned into a skill you can reuse in any project. Describe the pattern and get a packaged folder with instructions, notes and examples.
 explain: |
   A fix you keep repeating, turned into a skill you can reuse in any project. Describe the pattern and get a packaged folder with instructions, notes and examples.
 
@@ -18,6 +15,10 @@ when:
   - A tricky setup fix lives only in your head.
   - You want to share a fix with your team as a skill.
   - Your notes hold a pattern worth packaging.
+not_for:
+  - "You hit a one-off fix: write a short note in your project README instead."
+  - "The pattern only fits one codebase: keep it in your team wiki or project README."
+  - "You have not solved the problem yet: fix it first, then come back to package it."
 you_give:
   - Description of the recurring pattern
   - Skill name (optional)
@@ -29,8 +30,28 @@ you_get:
   - Step-by-step instructions
   - Example of the fix in use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can save files.
+  - Use Claude Code with auto-memory on. Copy this skill folder into your skills directory.
+  - Check that the skill-extractor agent is installed too. The skill calls it to write the files.
+  - Run /si:extract with a short description of your pattern. Add --name to pick the skill name.
+  - Add --dry-run to preview first, or --output to choose where the folder goes.
+  - Answer up to two questions if it asks what problem the fix solves.
+  - Read the new SKILL.md without your old context. If it makes sense, install it.
+output_sample:
+  input:
+    - A short description of the pattern or fix
+    - A name for the skill (optional)
+    - An output folder (optional)
+    - Saved memory notes about the fix (optional)
+  prerequisites:
+    - Claude Code, which can run commands and save files
+    - Auto-memory turned on, if you want it to search your saved notes
+    - A skill-extractor agent, which the skill calls to write the files and is not in this folder
+  output:
+    - name: SKILL.md
+      contains: The main skill file with a name, a trigger description, a quick reference table, solutions, trade-offs and edge cases.
+    - name: README.md
+      contains: A short overview a person can read to see what the skill solves.
+    - name: reference/examples.md
+      contains: Concrete examples and edge cases for the fix (optional supporting file).
+    - name: Report
+      contains: A summary of the files created, how to install the skill and which memory notes it came from.

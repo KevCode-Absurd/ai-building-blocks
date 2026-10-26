@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Sorting by clear rules is simple.
 new_slug: file-organizer
 name: File organizer
-summary: Point it at a messy folder. Get files sorted by type, date or project,
-  with duplicates found.
+summary: Sort a messy folder by file type or date, find duplicate files, and see the full move plan before anything moves. Built for your Downloads folder.
 job: organise-work
 headline: File organizer
-subhead: A cluttered folder sorted into a clear structure, with duplicate files
-  found, and nothing moved until you have seen the plan. Downloads stops being a
-  pile.
+subhead: A cluttered folder sorted into a clear structure, with duplicate files found, and nothing moved until you have seen the plan. Downloads stops being a pile.
 explain: |
   A cluttered folder sorted into a clear structure, with duplicate files found, and nothing moved until you have seen the plan. Downloads stops being a pile.
 
@@ -18,6 +15,10 @@ when:
   - You need photos or exports sorted into year and month folders.
   - You suspect you have the same file saved five times.
   - You want old files out of the way but not deleted.
+not_for:
+  - "You want to tidy a live code project: use Git and move files by hand, so your build and history stay safe."
+  - "Your files sit on a shared or network drive: copy them to your own computer first, then sort the copy."
+  - "You have no backup and cannot restore the folder: copy it first, or sort a few files by hand."
 you_give:
   - The folder path
   - "How to sort: by type, date or project"
@@ -30,8 +31,29 @@ you_get:
   - Renamed files
   - An archive of stale files
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Use an AI that can run code and reach your files. A plain chat window cannot move files for you.
+  - "Paste this skill into your AI. Give it the folder path and say how to sort: by type, by date or by your rules."
+  - Add a naming style or a rules file if you have one.
+  - Read the move plan and the duplicate list. Reply yes, no, or ask for changes. Nothing moves until you say yes.
+  - After it runs, open _organization-log.json and check you can undo the moves. Then run the archive step if you want old files set aside.
+output_sample:
+  input:
+    - The path to your folder
+    - "How to sort: by file type, by date, or by your own rules"
+    - A naming style, such as kebab-case (optional)
+    - A rules file in YAML or JSON (optional)
+  prerequisites:
+    - An AI that can run code and read and move files on your computer
+  output:
+    - name: Scan summary
+      contains: How many files were found, and which ones are exact duplicates of each other.
+    - name: Move plan
+      contains: Every file with where it is now and where it will go, for you to approve.
+    - name: Sorted folders
+      contains: Your files moved into folders by type, date or project, with new names if you asked.
+    - name: _duplicates folder
+      contains: Older copies of duplicate files, held there for you to review before you delete anything.
+    - name: _organization-log.json
+      contains: A record of every move and rename, so you can undo the work.
+    - name: _archive folder
+      contains: Files not touched for 12 months by default, kept in the same folder layout (optional step).

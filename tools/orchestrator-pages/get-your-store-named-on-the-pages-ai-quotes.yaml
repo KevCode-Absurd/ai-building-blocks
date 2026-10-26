@@ -1,6 +1,6 @@
 new_slug: get-your-store-named-on-the-pages-ai-quotes
 name: Get your store named on the pages AI quotes
-summary: Give it your category and rivals. Get the sources AI cites instead of you and a plan to show up on them.
+summary: Find the sites and Reddit threads AI cites instead of your store, then get a plan to get named on them. Built for AI search visibility.
 job: get-found-in-search
 thinking: high
 thinking_why: It compares answers from several AI assistants and ranks sources. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - AI answers name your rivals but not you, and you want to know why.
   - You have no idea which sites and threads AI trusts in your category.
   - You have a few hours a week for outreach and want to spend them on the pages that count.
+not_for:
+  - "You sell one product, or no rivals show up in AI answers: use the Category search plan builder to pick a category first."
+  - "You want to compare pages on your own site against rivals: use the Comparison page set planner."
+  - "You want to find out why a social post did badly: use the Social post performance reviewer."
 you_give:
   - Your category, with the collection page and three or four product pages
   - Who does the work and how many hours a week they have
@@ -31,6 +35,26 @@ how_to_use:
   - Give it your category pages and say how many hours a week you have. The plan is sized to that.
   - Run the questions it writes in each AI assistant you can use, and paste the answers back. It cannot run them for you.
   - At the pause, pick the three to five sources and threads to go after first.
+output_sample:
+  input:
+    - Your category, with the collection page and three or four product pages
+    - Who does the work and how many hours a week they have
+    - Five to ten rivals (optional)
+    - Your brand file and product facts (optional)
+  prerequisites:
+    - Access to the AI assistants you want to test, so you can run the questions and paste back the answers
+    - A real team member who can post on Reddit under their own name
+  output:
+    - name: Category plan
+      contains: Your category, five core questions, the publishing order, a 90-day plan sized to your hours and re-check dates.
+    - name: AI panel log
+      contains: For each question, who each assistant named, linked or left out, your share of voice and a visibility score.
+    - name: Source targets
+      contains: Ranked sites and threads AI cites, in three tiers, with placement type, cost, pitch angle and a do-not-do list.
+    - name: Reddit plan
+      contains: Cited threads sorted open or closed, five to ten communities, an honest answer template and a comparison template.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the category
     text: Picks one category, checks what your site already covers, picks five core questions with different intent, and orders the work from your own site to outside placements.

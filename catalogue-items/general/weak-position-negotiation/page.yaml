@@ -1,6 +1,6 @@
 new_slug: weak-position-negotiation
 name: "Negotiation prep planner for the weaker side"
-summary: "Describe a talk where the other side holds more power. Get your terms, their needs and the order to move in."
+summary: "Prepare for a negotiation where the other side has more power. Give it your situation. You get firm terms, their needs and the order to move in."
 job: sell-and-negotiate
 thinking: high
 thinking_why: "It weighs terms, pressure and other people's needs against each other, and a poor plan can cost you the deal."
@@ -17,6 +17,10 @@ when:
   - A large customer is changing your terms and you depend on them for much of your income.
   - You are asking a landlord, manager or council for a change they can refuse.
   - A partner or supplier holds more power than you and a deadline is coming.
+not_for:
+  - "You hold the power or no deal is needed: just decide what you want and write it down, no plan required."
+  - "You need questions to ask in a sales call: use a sales call question list or ask a colleague to role-play the buyer."
+  - "You need a legal view on a contract or dispute: ask a lawyer before you sign or push back."
 
 you_give:
   - What the talk is about and who is on each side
@@ -34,6 +38,26 @@ how_to_use:
   - Paste anything the other side has written, such as emails, contracts or policies.
   - Read the non-negotiables out loud. Change any you would give up under pressure.
   - Use the step list to decide when to open, wait or escalate.
+output_sample:
+  input:
+    - What the talk is about and who is on each side
+    - What you want and what you cannot accept
+    - Emails, contracts or policies from the other side (optional)
+  output:
+    - name: The end state
+      contains: One sentence describing an outcome both sides could live with.
+    - name: The other side
+      contains: Their needs, fears and words, each marked as known or a guess.
+    - name: Your non-negotiables
+      contains: The terms you will not give up, each with the reason, plus what you can give.
+    - name: Steps, mild to strong
+      contains: At least five options with force and cost, and the mildest effective one named as the first move.
+    - name: Everyone affected
+      contains: Each group who must live with the outcome and whether they have been heard.
+    - name: Timing
+      contains: The signals to open talks, pause, or step back, and any date that changes your position.
+    - name: Missing and checks missed
+      contains: Gaps that would sharpen the plan, and any of its own checks it failed.
 
 how_it_works:
   - title: Writes the end state

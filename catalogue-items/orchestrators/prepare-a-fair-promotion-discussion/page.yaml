@@ -1,52 +1,94 @@
 new_slug: prepare-a-fair-promotion-discussion
 name: Prepare a fair promotion discussion
 headline: Prepare a fair promotion discussion
-summary: Share the source files. Get an evidence map, development gaps and a promotion discussion brief.
+summary: Prepare a fair promotion discussion. Match work evidence to the promotion criteria and get a gap list and a brief for the talk.
 job: lead-people
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An evidence map, development gaps and a promotion discussion brief. Share role expectations, work evidence, promotion criteria and the employee goals shared with consent. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give your AI the promotion criteria, the person's work evidence and the goals they chose to share. It turns the criteria into things you can see, maps the evidence to each one and lists the gaps. You get a brief for the talk that states the evidence, not opinions.
 explain: |-
-  An evidence map, development gaps and a promotion discussion brief.
+  A promotion talk goes wrong when it rests on impressions. "She is not ready" or "He deserves it" does not tell the person what to do. It also leaves room for bias, because nothing written ties the view to the work.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Claims use job-related evidence; a recommendation is separate from an approved promotion or pay change. Missing tools or evidence stay visible in the final summary.
+  This workflow keeps the talk to job-related evidence. Step 1 turns your promotion criteria into work you could see someone do, and says what evidence would count. Step 2 sets the real evidence against the target role and lists the practical development work left. Step 3 turns that into a brief: what the evidence shows, what is unclear and when you will look again.
+
+  Anything about age, health, family, background or other personal traits is left out and listed as excluded. The result is a recommendation to discuss. It is not a decision. Your HR reviewer reads it before any promotion or pay change is promised.
 when:
-  - You need an evidence map, development gaps and a promotion discussion brief.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Someone asks "what would it take to get promoted?" and you want an answer tied to evidence.
+  - You are about to tell someone they are not ready yet and want it to be specific and fair.
+  - You must put forward a promotion case and need to show how the evidence meets each criterion.
+  - Two people on your team are at similar levels and you want both judged against the same criteria.
+not_for:
+  - You are making the final promotion or pay decision. That stays with your HR reviewer and your policy. Use the pay band builder for pay ranges.
+  - You want a yearly review of how someone has done. Use the performance review helper.
+  - You need levels and criteria for a whole job family, not one person. Use the career ladder and growth plan writer on its own.
+  - The talk is about poor conduct, not growth. Use the feedback conversation planner.
 you_give:
-  - Role expectations, work evidence, promotion criteria and the employee goals shared with consent.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The role expectations for the target role, and the promotion criteria (from your career ladder or job description)
+  - The person's work evidence, with dates, such as projects, results, peer feedback and dated notes
+  - The goals the person chose to share with you (optional)
+  - Your HR reviewer's name and your promotion timing
+  - What you cannot promise, such as budget or headcount (optional)
 you_get:
-  - An evidence map, development gaps and a promotion discussion brief.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - Each criterion rewritten as work you could see, with the evidence that would count
+  - An evidence map showing, for each criterion, what was found, its source and its strength
+  - A list of development gaps, each with practical work, a date and a sign that it worked
+  - A brief for the talk, with the evidence to state, the open questions and the next review date
+  - A list of anything left out as unrelated to the job, and a list of missing facts
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste the criteria and the person's dated evidence. Say which goals they shared with you.
+  - After step 1, check that every criterion is something you could watch happen.
+  - After step 2, check that each claim has a source and a date. Remove any that rely on memory alone.
+  - Send the brief to your HR reviewer before you talk to the person. Do not promise an outcome.
 how_it_works:
   - title: Role skills framework builder
-    text: Translate the supplied promotion criteria into observable work and evidence requirements.
+    text: Turns each promotion criterion into work you could see at the target level and names the evidence that counts. Hands step 2 the list of criteria. Check before moving on, no criterion is a trait.
   - title: Career ladder and growth plan writer
-    text: Map the actual evidence to the target role and identify practical development work.
+    text: Sets the person's real evidence against each criterion and finds the gaps. Suggests practical development work. Hands step 3 the evidence map and the gaps. Check before moving on, each claim has a source.
   - title: Feedback conversation planner
-    text: Prepare a discussion that states the evidence, unresolved questions and next review point.
+    text: Takes step 2's evidence map and gaps and writes a brief for the talk that states the evidence, the unresolved questions and the next review point. It makes no promise about the outcome.
+  - title: Check and hand back
+    text: Joins the three files, lists what was left out as unrelated to the job and shows who must review before any decision.
 output_shape: |-
-  Scope and source coverage
-  An evidence map, development gaps and a promotion discussion brief.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  CRITERIA AS WORK
+    <criterion | what you would see at the target level | evidence that counts>
+  EVIDENCE MAP
+    <criterion | evidence found, source and date | strength: none, thin or clear | gap>
+  DEVELOPMENT GAPS
+    <gap | practical work | by when | what shows it worked>
+  DISCUSSION BRIEF
+    <opening, evidence to state, open questions, what you can and cannot say about the outcome, next review date>
+  LEFT OUT <information not related to the job, not used>
+  APPROVAL <HR reviewer, status: recommendation only>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - "The target role's expectations and the promotion criteria"
+    - "The person's dated work evidence"
+    - "The goals they chose to share (optional)"
+    - "Your HR reviewer's name and the promotion timing"
+  prerequisites:
+    - "An AI that can read files or long pasted text"
+    - "Your career ladder or job description for the target role"
+  output:
+    - name: "Criteria as work"
+      contains: "Each criterion written as work you could see, with the evidence that would count."
+    - name: "Evidence map"
+      contains: "For each criterion, the evidence found, its source and date, and how strong it is."
+    - name: "Development gaps"
+      contains: "Practical work to close each gap, with a date and a sign that it worked."
+    - name: "Discussion brief"
+      contains: "The evidence to state, the open questions, what not to promise and the next review date."
+    - name: "Left out and missing"
+      contains: "Information set aside as unrelated to the job, and every unknown fact marked MISSING."
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Claims use job-related evidence; a recommendation is separate from an approved promotion or pay change.
+  - what: Same criteria
+    how: Run it for each person up for the same role with the same criteria file. The maps then compare fairly.
+  - what: Evidence dates
+    how: Say which period counts, such as the last 12 months. Older evidence is flagged, not used.
+  - what: Outcome
+    how: Say whether you expect a yes or a not yet. The brief changes tone, and the evidence stays the same.
 judge:
   - Claims use job-related evidence; a recommendation is separate from an approved promotion or pay change.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +101,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep one criteria file for each level so every person is judged on the same words.
+  - Ask your HR reviewer to mark anything in the brief that breaks your policy, and keep their notes.
+  - After the talk, record what was said and the review date, and use it as the evidence for the next run.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads the criteria and the evidence together. Nothing is sent or changed for you.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your written promotion criteria for the target level.
+    - Dated peer or customer feedback that names the work, not the person.
 terms:
+  - term: Evidence map
+    meaning: A table that links each promotion criterion to the proof found, with its source and date.
+  - term: Job-related
+    meaning: About the work and its results, not about the person's age, health, family or background.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

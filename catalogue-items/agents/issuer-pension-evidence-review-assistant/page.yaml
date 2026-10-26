@@ -1,51 +1,118 @@
 new_slug: issuer-pension-evidence-review-assistant
-name: Issuer pension evidence review assistant
-headline: Issuer pension evidence review assistant
-summary: Review pension funded status, recognized costs and cash contributions as separate measures.
+name: Pension costs and funding reviewer
+headline: Pension costs and funding reviewer
+summary: Check a company's pension plan balances, costs and cash paid in. Spot new assumptions, gaps and any proposed move from OCI to profit.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A pension change brief and linked funded-status and cost/funding schedules. Share the prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-explain: |-
-  A pension change brief and linked funded-status and cost/funding schedules.
+subhead: Give it the new pension plan notes, the funding records and your last accepted model. It rebuilds each plan's opening and closing balances, splits the change into cost, cash paid in and remeasurement, and checks whether any amount may move into profit. You get a change brief and linked schedules, with gaps left open.
+explain: |
+  A company's pension deficit can stay flat while three different things happen underneath it. The yearly cost goes through profit. Cash goes into the plan as contributions. Changes in assumptions and investment returns go through other comprehensive income (OCI), which sits outside profit. If a model treats the cash paid in as the expense, or moves an OCI amount into profit because it looks like a cost, the earnings figures are wrong.
 
-  Public-market evidence review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This pension review agent keeps a record of the last accepted review. For each plan it holds the obligation and asset balances, the discount rate dates, service cost and net interest, OCI, contributions, settlements, any asset ceiling and every unexplained difference. A new note is compared with that record plan by plan. The agent then runs the Pension funding, expense and remeasurement checker, so opening and closing balances tie and cost, cash and OCI stay apart.
+
+  It runs the Profit and OCI transfer checker only when someone proposes moving an OCI amount into profit, and only after the filing shows that this amount may be moved. If the filing says it stays in OCI, the agent stops and says so. It does not value the plan. The actuary's numbers come from the filing, and missing ones stay open. A person who knows the plan checks the result.
 when:
-  - You need a pension change brief and linked funded-status and cost/funding schedules.
-  - You work on public-market evidence review and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A company's annual report adds new pension plan notes and you want to see how each plan's balances moved.
+  - The deficit looks flat, and you can't tell how much was cost, how much was cash and how much was changed assumptions.
+  - A model treats the cash the company paid into the plan as pension expense.
+  - A colleague wants to move a pension remeasurement from OCI into profit, and you need to know if the filing allows it.
+  - A plan was added, closed or settled, and the list of plans in your model is out of date.
+not_for:
+  - You want an actuary's valuation, or a view on the right discount rate. It uses the numbers in the filing and does not value the plan.
+  - You only want to see the size of the deficit and how it moved. Use the Pension funding gap tracker.
+  - You only need the cost and cash split for one plan. Use the Pension cost and funding checker.
+  - The question is about moving an amount between OCI and profit for something other than pensions. Use the Profit and OCI transfer checker.
+  - You want to change a pension amount in a filed account or send anything to an auditor. It prepares the review only.
 you_give:
-  - The prior accepted model and review log, newly supplied dated filings, changed source notes and the user-defined materiality threshold.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The new dated pension notes or actuarial disclosures, plan by plan (from the pension note in the annual report)
+  - Contribution and benefit payment records for the same period (from the cash flow statement or the plan note)
+  - The filing's own line on whether remeasurements can move into profit (from the accounting policy note)
+  - The last accepted pension model and its review log (optional on a first run)
+  - Your materiality threshold, and the reporting date, currency and scale
+  - The record from the last review, pasted in (optional on a first run)
 you_get:
-  - A pension change brief and linked funded-status and cost/funding schedules.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A pension change brief, plan by plan, with what changed since the last review
+  - A funded-status schedule. Opening and closing obligation and assets are shown, and the change in the deficit is tied to them.
+  - A cost and funding schedule. Service cost, net interest, remeasurement and cash paid in are kept apart.
+  - A ruling on any proposed move from OCI to profit, with the filing line it rests on
+  - Questions for your reviewer on missing actuarial items, plus MISSING lines, CHECKS MISSED and a record for next time
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, pick one that can create spreadsheets. In plain chat it returns the same tables as text.
+  - Say whether this is the first run. If not, paste the record from last time. Then attach the pension notes and funding records, and paste the filing's line on whether remeasurements move to profit.
+  - Read "what changed" first. Check that the list of plans matches the filing, with any new, closed or settled plan marked.
+  - Pick one plan and check it by hand. Opening plus movements should equal closing, for the obligation and for the assets.
+  - Check that cash paid in is not inside the expense line. Then read the ruling on any OCI move and the filing line behind it.
+  - Answer the questions or leave them marked MISSING. Nothing is filed or sent.
 how_it_works:
-  - title: Separate pension cost funding and remeasurement
-    text: Run the governing workflow when When the user provides new pension plan notes, actuarial disclosures or contribution records, compare the plan perimeter and assumptions with the last accepted reconciliation.
-  - title: OCI reclassification bridge
-    text: If a proposed earnings adjustment treats pension OCI as recycled profit, verify eligibility first; do not run a fictional recycling entry for a non-recyclable remeasurement. Use the conservation bridge only for an independently permitted reclassification.
-output_shape: |-
-  A pension change brief and linked funded-status and cost/funding schedules.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this company, or sets a first baseline. Compares the list of plans, the assumptions and the dates with the record. If nothing changed and no review is due, it says so and stops.
+  - title: Proves each plan's balances
+    text: Rolls the obligation and the assets from opening to closing, plan by plan. Unexplained differences stay as named residuals and are never forced to zero.
+  - title: Splits the deficit change
+    text: Separates what went through profit, what went through OCI and what was cash paid in. Contributions are shown as cash, never as expense.
+  - title: Keeps exceptions visible
+    text: Settlements, asset ceilings and currency gaps are listed on their own lines, so they can't hide inside another figure.
+  - title: Rules on any move into profit
+    text: Reads the filing to see whether the amount may be moved. If not, it stops and builds no entry. If yes, it uses the OCI transfer checker and shows total comprehensive income unchanged.
+  - title: Saves the record
+    text: Writes the short record for next time and lists what is still MISSING. It keeps the old record.
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <plans added, closed or settled; new assumptions>
+  PLAN <name>
+    OBLIGATION  <opening> + service <n> + interest <n> - benefits <n>
+                +/- remeasurement <n> = <closing>
+    ASSETS      <opening> + interest income <n> + contributions <n>
+                - benefits <n> +/- return above interest <n> = <closing>
+    DEFICIT     <opening> to <closing>, change <n>
+  WHAT MOVED IT  cost in profit <n>; OCI <n>; cash paid in <n>; check <sum>
+  EXCEPTIONS     <settlements, asset ceiling, currency gaps, residuals>
+  PROPOSED MOVE FROM OCI TO PROFIT  <allowed or stopped, with the filing line>
+  REVIEWER QUESTIONS  <one per gap>
+
+  RECORD FOR NEXT REVIEW  plans, balances, discount rate dates, residuals
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The new dated pension notes or actuarial disclosures, plan by plan
+    - Contribution and benefit payment records for the same period
+    - The filing's own line on whether remeasurements can move into profit (only if a move is proposed)
+    - Your materiality threshold, reporting date, currency and scale
+    - Your last accepted pension model and its record (optional on a first run)
+  prerequisites:
+    - An AI that can read files. For a workbook, one that can create spreadsheets.
+    - A named person who knows the plans and will check the result
+  output:
+    - name: Changed since last review
+      contains: Plans added, closed or settled, and new assumptions such as the discount rate and its date, with their source.
+    - name: Plan balances
+      contains: For each plan, the obligation and the assets from opening to closing, tied to the filing, and the change in the deficit.
+    - name: What moved the deficit
+      contains: Cost in profit, remeasurement in OCI and cash paid in, kept apart. Cash paid in is never shown as expense.
+    - name: Exceptions
+      contains: Settlements, asset ceilings, currency gaps and any unexplained difference, each on its own line.
+    - name: Proposed move from OCI to profit
+      contains: A ruling of allowed or stopped, with the filing line it rests on. If stopped, no entry is built.
+    - name: Reviewer questions
+      contains: One question for each missing actuarial item or unclear plan.
+    - name: Record for next review
+      contains: Plans, balances, discount rate dates and any residuals.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops. Each check that failed or could not run, or "none".
+    - name: Workbook (if your AI can make one)
+      contains: Inputs, formulas and a checks tab, with each plan proved on its own first.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Plan balances reconcile with costs and funding; expense, OCI and contributions remain distinct; unsupported reclassification is stopped and actuarial gaps remain explicit.
+  - what: A bigger contribution
+    how: Raise the cash paid in. The deficit falls by the same amount, and the cost in profit does not move.
+  - what: A second plan
+    how: Add another plan's balances. Each plan is proved on its own first, then added up, and a plan that doesn't tie is flagged.
+  - what: An allowed move into profit
+    how: Paste a filing line that permits the move. The agent builds the transfer and shows total comprehensive income unchanged.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
 judge:
   - Plan balances reconcile with costs and funding; expense, OCI and contributions remain distinct; unsupported reclassification is stopped and actuarial gaps remain explicit.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +123,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
+  - Keep plan names the same every time. Without stable names it can't tell a new plan from a renamed one.
+  - Paste the filing's accounting policy line on remeasurements once, and reuse it, so the ruling always rests on a quoted source.
+  - Pair it with the Pension funding gap tracker when you only need the deficit view, and the Profit and OCI transfer checker when only the move is in question.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: The company's annual report
+      why: Holds the pension note, the cash flow statement and the accounting policy line, each with a page you can cite.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The actuary's disclosures by plan, not a group total, so each plan can be proved on its own.
+    - The accounting policy line on remeasurements, so any move into profit rests on a source.
+    - A named reviewer who knows the plans and will answer the questions it raises.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Funded status
+    meaning: Plan assets minus the pension obligation. A negative number is a deficit.
+  - term: OCI
+    meaning: Other comprehensive income. Gains and losses that are counted in equity but sit outside profit.
+  - term: Remeasurement
+    meaning: A gain or loss from changed assumptions, such as the discount rate, or from asset returns that differ from the assumed return.
+  - term: Service cost
+    meaning: The pension benefit employees earned this year, counted as an expense.
+  - term: Net interest
+    meaning: Interest on the obligation less interest on the plan assets. It is usually counted in profit.
+  - term: Asset ceiling
+    meaning: A limit on how large a surplus can be shown as an asset.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

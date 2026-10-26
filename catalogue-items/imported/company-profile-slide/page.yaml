@@ -2,35 +2,77 @@ thinking: medium
 thinking_why: It collects facts and fits a slide.
 new_slug: company-profile-slide
 name: Company strip profile slide maker
-summary: Name a company. Get a one-slide profile with business, key numbers and
-  ownership in a standard layout.
+summary: "Name a listed company. Get a one-page company profile slide with the business, key financials and top shareholders, sourced from filings."
 job: money-and-investing
 headline: Company strip profile slide maker
-subhead: One clean slide that tells a reader what a company does, its key
-  numbers and who owns it. It is the kind of page that sits at the front of a
-  bank or investor pack.
+subhead: Name a listed company. Your AI gathers its business, three years of financials, valuation and top shareholders from filings, shows you an outline with the real numbers, then builds a PowerPoint profile slide. Any figure it cannot source shows as n/a.
 explain: |
-  One clean slide that tells a reader what a company does, its key numbers and who owns it. It is the kind of page that sits at the front of a bank or investor pack.
+  A company profile slide, also called a strip profile, puts what a company does, its key numbers and who owns it on one page. It sits at the front of a pitch book or deal pack, so a busy reader gets the whole story fast.
 
-  Claude asks whether you want one slide or a few, then researches from filings, investor decks and market data. It collects three years of revenue, margins, profit, valuation, growth and the top five shareholders, in one currency and one scale. Before building, it shows you an outline with real numbers and the chosen fonts and colours. It then builds the slide as a PowerPoint file, turns it into an image, checks for overlap and cut-off text, and waits for your approval before going further.
+  The slide has four blocks: company overview, business and position, key financials with valuation, and shareholders or recent news. Revenue, margins, profit and growth cover three years, in one currency and one scale. The skill shows you the outline with real numbers and the style it plans to use before it builds anything. Then it builds the slide, turns it into an image and checks for overlap and cut-off text. It waits for your approval.
+
+  It works from filings and investor presentations. Market data and consensus usually come from paid terminals such as Bloomberg or FactSet. Without them, those cells stay n/a. Nothing is estimated to fill a gap.
 when:
   - You need a company snapshot for a pitch, a deal or a meeting.
   - A manager asked for a one-pager on a competitor by tomorrow.
   - You want the business, the numbers and the owners on one page.
   - You have a house slide style and need the profile to follow it.
+not_for:
+  - You want a Word page of numbers and ratios for a reader such as an investor or a client. Use the company one-page tear sheet maker.
+  - The company is private and has no filings. There is nothing to source, so use the anonymous company teaser writer if you are selling it.
+  - You want a whole deck, not one profile. Use the editable slide deck builder.
 you_give:
-  - The company name
-  - One slide or several
+  - The company name, and its ticker if it is listed
+  - One slide, or three to four
   - Topics to stress, such as growth or segments (optional)
-  - Your slide template (optional)
+  - Your slide template or brand colours (optional)
+  - Your own market data export, if you pay for Bloomberg, FactSet or CapIQ (optional)
 you_get:
   - A one-slide company profile as a PowerPoint file
-  - Key financials and valuation figures
-  - An ownership and segment breakdown
-  - An outline you approve before the build
+  - Three years of financials and valuation figures
+  - Top five shareholders and a segment mix
+  - An outline with real numbers that you approve first
+  - A list of figures marked n/a
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and make slides.
+  - Use an AI that can search the web and run code, such as Claude Code. It builds the slide file with code. Without that, ask for the slide text as a table per block and paste it into PowerPoint yourself.
+  - Open the skill and name the company. Say whether you want one slide or a few, and add your template if you have one.
+  - Read the outline it prints. Check each number against the company's filings, and approve or change it.
+  - Check the slide image it shows you for overlap, cut-off text and chart edges. Tell it what to fix.
+  - Look at every n/a. Fill those cells yourself from the latest filing or your data terminal.
+  - Only then drop the slide into your pack. Put the sources and dates in the footer.
+output_sample:
+  input:
+    - The company name or ticker
+    - One slide or several
+    - Topics to stress (optional)
+    - Your slide template or brand guide (optional)
+  prerequisites:
+    - An AI that can search the web and run code to build a PowerPoint file
+    - Paid market data from Bloomberg, FactSet or CapIQ (optional)
+  output:
+    - name: Outline for approval
+      contains: Four to five bullets per block with real numbers, plus the fonts and colours it plans to use.
+    - name: Company overview block
+      contains: Headquarters, founding year, employees, leaders, listing and a one-line business summary.
+    - name: Business and position block
+      contains: What drives revenue, products, market position and the segment or region mix.
+    - name: Key financials block
+      contains: A table of revenue, margins, profit and growth for three years, with valuation multiples.
+    - name: Shareholders or news block
+      contains: Top five shareholders with percentages, or recent deals and developments for a private company.
+    - name: Slide image and PowerPoint file
+      contains: The finished slide and a picture of it, checked for overlap, with sources in the footer.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Runs the slide code, renders an image and checks the layout for you.
+  inputs:
+    - The company's latest annual report and investor presentation
+    - A data export from your terminal, if you have one
+terms:
+  - term: Strip profile
+    meaning: A one-page company profile, often at the front of a pitch book.
+  - term: EV
+    meaning: Enterprise value. Market value of the company plus its net debt.
+  - term: Consensus
+    meaning: The average of analyst forecasts.

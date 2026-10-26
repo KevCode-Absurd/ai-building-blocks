@@ -1,6 +1,6 @@
 slug: loading-and-error-state-designer
 name: Loading and error state designer
-summary: Give it a component or page. Get loading, success, error and empty states added, so users always know what is happening.
+summary: "Add loading, empty, error and success states to a component or page, so nobody stares at a blank box. Your code is changed for you."
 category: general
 boards: []
 type: skill

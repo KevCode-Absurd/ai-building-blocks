@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It detects the stack and fills a known pattern.
 new_slug: build-pipeline-writer
 name: Build pipeline writer
-summary: Point it at your project. Get a CI/CD pipeline file for your stack with
-  test and deploy stages.
+summary: Write a CI/CD pipeline file for your project. It reads your stack and builds GitHub Actions or GitLab CI with test, build and deploy stages.
 job: ship-and-host
 headline: Build pipeline writer
-subhead: Point it at your project. Get a CI/CD pipeline file for your stack with
-  test and deploy stages. Bring your project folder. Use the result to plan your
-  next step.
+subhead: Point it at your project. Get a CI/CD pipeline file for your stack with test and deploy stages. Bring your project folder. Use the result to plan your next step.
 explain: |
   A CI/CD pipeline file written for the stack your project really uses, with test, build and deploy stages, ready to commit.
 
@@ -18,8 +15,14 @@ when:
   - Your copied pipeline file no longer matches your project.
   - You are moving from GitHub Actions to GitLab CI or back.
   - You want to check that your pipeline steps match your real stack.
+not_for:
+  - "You already have a mature, tested pipeline: keep it and harden it with the deployment gates notes in the skill's references instead."
+  - "You need a custom release process with special approval rules: ask a developer or your DevOps person to design it."
+  - "You have no project files and only an idea: start with a simple checklist of the steps you want, then add code first."
 you_give:
   - Your project folder
+  - Your lockfile, such as package-lock.json (optional)
+  - Your exact test, lint and build commands
   - GitHub or GitLab as the target
   - Deploy environments (optional)
 you_get:
@@ -28,8 +31,28 @@ you_get:
   - Caching and matrix settings
   - A pre-merge checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run Python and open your project folder. A plain chat window cannot run the scripts.
+  - Give your AI the skill folder and your project folder.
+  - Ask it to detect your stack first, and read the summary to check it is right.
+  - Tell it to write the pipeline for GitHub or GitLab and save it to the right path.
+  - Check that your test, lint and build commands exist. Set any deploy secrets in GitHub or GitLab.
+  - Run the pipeline locally if you can, then merge. Add deploy stages only after the basic checks pass.
+output_sample:
+  input:
+    - Your project folder
+    - GitHub or GitLab as the place to run the pipeline
+    - Deploy environments such as staging and production (optional)
+  prerequisites:
+    - An AI that can run Python code and read your project files
+    - Python 3 installed where the code runs
+  output:
+    - name: Detected stack summary
+      contains: The language, runtime and tools found in your project, as text and as a JSON file.
+    - name: detected-stack.json
+      contains: The same detection result in a form the pipeline script can read again.
+    - name: CI/CD pipeline file
+      contains: A GitHub Actions or GitLab CI file with lint, test and build stages, plus deploy stages if you ask.
+    - name: Caching and matrix settings
+      contains: Cache rules and test version lists that suit the stack found in your project.
+    - name: Pre-merge checklist
+      contains: Steps to confirm your test, lint and build commands exist, run the pipeline locally and document secrets.

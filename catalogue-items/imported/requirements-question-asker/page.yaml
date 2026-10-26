@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It spots gaps and asks a short list of questions.
 new_slug: requirements-question-asker
 name: Requirements question asker
-summary: Give it a vague request. Get the few questions that matter, with
-  default answers, before any work starts.
+summary: Turn a vague request into 1 to 5 short questions with default answers. A requirements question asker that stops wrong work before it starts.
 job: think-and-decide
 headline: Requirements question asker
-subhead: The handful of questions that matter before work begins, each with a
-  default answer so you can reply with one word. It stops wrong work before it
-  starts.
+subhead: The handful of questions that matter before work begins, each with a default answer so you can reply with one word. It stops wrong work before it starts.
 explain: |
   The handful of questions that matter before work begins, each with a default answer so you can reply with one word. It stops wrong work before it starts.
 
@@ -18,6 +15,10 @@ when:
   - You want a change made but did not say what must stay the same.
   - You would rather answer three questions than redo the work.
   - The task is risky and hard to undo.
+not_for:
+  - "Your request is already clear and the change is small and easy to undo: just ask your AI to do it."
+  - "A quick look at your files or settings can answer the gap: let your AI check first, then ask only what is left."
+  - "You want a full plan or the finished work now: tell your AI to go ahead with stated assumptions instead."
 you_give:
   - Your request, however vague
   - Short answers to the questions
@@ -28,7 +29,24 @@ you_get:
   - Clear list of confirmed requirements
   - Work that starts only when the picture is clear
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. No code or paid tool is needed.
+  - Paste your request below it, even if it is vague. Add any file or notes that relate to it.
+  - Read the numbered questions. Reply with defaults, or with short picks like 1a 2b.
+  - Check the restated requirements. Fix anything wrong before the work starts.
+  - Paste the restated requirements into your task or your next prompt, so the work follows them.
+output_sample:
+  input:
+    - Your request, even if it is vague
+    - Any file, spec or notes that relate to it (optional)
+    - The tool, setting or version the work is for (optional)
+  output:
+    - name: Must-have questions
+      contains: One to five short numbered questions, with lettered options and a clearly marked default on each.
+    - name: Fast reply line
+      contains: A short reply format, such as typing defaults or a compact set of choices like 1a 2b.
+    - name: Nice-to-know questions
+      contains: Optional extra questions kept apart, so the main list stays short.
+    - name: Restated requirements
+      contains: One to three sentences saying what you confirmed, the key limits and what success looks like.
+    - name: Start of the work
+      contains: The task begins only after the must-have answers arrive or you approve the stated assumptions.

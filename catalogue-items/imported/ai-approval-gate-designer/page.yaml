@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Wrong gates cause harm or friction, so it weighs each action.
 new_slug: ai-approval-gate-designer
 name: AI approval gate designer
-summary: Describe what your AI agent does. Get clear rules for which actions
-  need a person to approve and when to escalate.
+summary: "Describe what your AI agent does. Get an approval gate design: which actions need a person to sign off, who approves, and who steps in."
 job: build-software
 headline: AI approval gate designer
-subhead: Clear rules for which actions your AI agent may do alone, which need a
-  person to approve, and who steps in when nobody answers. A yes-or-no pop-up is
-  not real oversight, so the approval is tied to the exact action being taken.
+subhead: Describe what your AI agent can do. The skill sorts each action by risk and decides which ones need a person to approve. You get rules, a screen design and tests.
 explain: |
   Clear rules for which actions your AI agent may do alone, which need a person to approve, and who steps in when nobody answers. A yes-or-no pop-up is not real oversight, so the approval is tied to the exact action being taken.
 
@@ -18,6 +15,10 @@ when:
   - An approval step exists but people just click yes.
   - You need to show an auditor who approved what and when.
   - You need a plan for when approvers are away or the log system is down.
+not_for:
+  - "You only need one approval on a low-risk action you can undo: use a simple confirm button instead."
+  - "You need the approval system built and running: ask a software developer, since this gives a design and a test plan."
+  - "You want legal advice on rules that bind your company: ask your lawyer or compliance lead."
 you_give:
   - What your agent does and every action it can take
   - Who may approve what
@@ -30,7 +31,32 @@ you_get:
   - A design for the approver's screen
   - A decision log format and test list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Describe your agent and list every action it can take.
+  - Add who can approve, how fast decisions must be, and any rules you must follow (optional).
+  - Read the risk tier table first. Fix any action ranked too high or too low.
+  - Send the tier table and open decisions to the policy owner for sign-off.
+  - If your AI can run code, ask it to check the policy file with validate_gate_policy.py.
+output_sample:
+  input:
+    - What your AI agent does and every action it can take
+    - Who may approve what, and who is on call
+    - How fast decisions must be made
+    - Company or legal rules that apply (optional)
+  prerequisites:
+    - An AI that can run code, if you want the policy file checked by the validation script
+  output:
+    - name: Action inventory and risk tiers
+      contains: Every action your agent can take, with a risk tier and the reason for it.
+    - name: Gate policy
+      contains: Who can approve, how many people, time limits, escalation, log outage rules and exceptions.
+    - name: State machine
+      contains: The steps from prepared to approved, rejected, expired, failed or recovered, and what moves between them.
+    - name: Approval experience
+      contains: "What the approver sees: the exact action, effects, doubts, options, and safe ways to reject or edit."
+    - name: Decision record schema
+      contains: The fields saved for each decision, plus keep and redaction rules.
+    - name: Tests and plan
+      contains: Policy and timing tests, and a file-level plan to build the gates.
+    - name: Open decisions and residual risk
+      contains: Items the policy owner must settle, risks that remain, and the recovery plan.

@@ -1,6 +1,6 @@
 new_slug: starving-crowd-market-scorer
 name: Starving crowd market scorer
-summary: Paste the markets you could serve. Get each scored on pain, money, reach and growth, and the one to commit to.
+summary: Score the markets you could serve on pain, money, reach and growth. Find your starving crowd market and the one to commit to for a set number of tries.
 job: make-offer
 thinking: medium
 thinking_why: It scores each market on a fixed scale using what you tell it, then picks one. Real evidence on size and growth improves it.
@@ -14,6 +14,10 @@ when:
   - You could sell to anyone and are not sure whom to aim at.
   - Your offer is good but nothing is selling.
   - You keep switching target groups.
+not_for:
+  - "You already sell to a market at a profit: keep going there and test your price or offer, not a new market."
+  - "Your problem is price, not who you serve: use the Commodity trap checker to see if your offer looks like everyone else's."
+  - "You need market size from a research firm: ask a person who knows your industry, or use a trade report."
 you_give:
   - What you can do and what you know
   - The groups you could serve, or let it propose some
@@ -29,6 +33,29 @@ how_to_use:
   - Paste what you can do and the groups you are weighing, with any numbers you have on size and growth.
   - Check the evidence for each score. Fix any you know to be wrong.
   - Take the pick to Niche price ladder builder.
+output_sample:
+  input:
+    - What you can do and what you know
+    - The groups you could serve, or let it propose some (optional)
+    - Numbers on group size and growth (optional)
+    - Findings from the Commodity trap checker (optional)
+  output:
+    - name: Candidates
+      contains: "Each group you could serve, with the big want it sits in: health, wealth or relationships."
+    - name: Scores
+      contains: A table scoring each market 0 to 3 on pain, money, reach and growth, with evidence and a total out of 12.
+    - name: Ruled out
+      contains: Markets with a zero on pain, money or growth, and the reason for each.
+    - name: What the offer must carry
+      contains: Whether the market is great, normal or bad, and how strong your offer needs to be.
+    - name: The pick
+      contains: The market to commit to, three places to reach them this week, and a first test.
+    - name: Commitment
+      contains: How many tries before you review, and the only reasons to leave early.
+    - name: Missing
+      contains: Gaps in your input, each marked so nothing is made up.
+    - name: Checks missed
+      contains: One line per check the skill could not pass, or none.
 how_it_works:
   - title: Starts from the three big wants
     text: Health, wealth and relationships, then looks for a narrower group inside one.

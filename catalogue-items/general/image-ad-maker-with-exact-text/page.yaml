@@ -1,6 +1,6 @@
 name: "Image ad maker with exact text"
 new_slug: image-ad-maker-with-exact-text
-summary: "Paste your image plan and attach photos. Get a word-perfect prompt, tool settings and a fix for each fault."
+summary: "Write a word-perfect image ad prompt with exact text, photo jobs and tool settings, plus a fix for each fault in what comes back."
 job: make-image-ads
 thinking: high
 thinking_why: "It has to keep the product, its label and every word on the picture exact."
@@ -17,6 +17,10 @@ when:
   - You've agreed what an image should say and show, and want it made right in as few tries as possible.
   - Your image tool keeps misspelling words, redrawing your label or copying things from your reference photos.
   - You found a prompt online and want to use its look without its people, brands or claims.
+not_for:
+  - "You still need to decide what the image says: settle the plan first, because this item only writes the prompt for an agreed plan."
+  - "You need body copy or legal lines on the image: add that text in a design tool such as Canva or Figma after the picture is made."
+  - "You want a video ad: this item makes still images only, so use a video tool or a person who edits video."
 
 you_give:
   - The agreed plan, with the exact words (or "no words"), the scene, the layout and the sizes
@@ -36,6 +40,28 @@ how_to_use:
   - Attach your photos and say what each is for, such as "the product as sold" or "the light I want".
   - In your image tool, set the ratio, size and quality first. Then attach the photos in the order given and paste the prompt.
   - Attach the image that comes back to the same chat for its match check. If one thing is wrong, paste the fix line for that one thing and keep the rest.
+output_sample:
+  input:
+    - Your agreed image plan, with the exact words, scene, layout and sizes
+    - Reference photos, each with what it is for (optional)
+    - Facts about how your product looks and is used (optional)
+    - Your brand colours as hex codes (optional)
+  prerequisites:
+    - An agreed image plan, written before you start
+    - An image tool that takes reference photos, such as GPT Image, Nano Banana, FLUX or Ideogram
+  output:
+    - name: Settings
+      contains: The ratio, size, quality and photo order to set in your image tool, kept apart from the prompt.
+    - name: Prompt
+      contains: One paste-ready prompt with a job for each photo, the product facts, the scene, the layout and every word once in quotes.
+    - name: Check when it comes back
+      contains: The words to read letter by letter, the product details to compare and the likely leaks from your photos.
+    - name: Missing
+      contains: Anything the plan did not settle, listed so you can fill it in.
+    - name: Match check
+      contains: A six-point check of the prompt and each image that comes back, with one line for each miss.
+    - name: Fix table
+      contains: One edit for each common fault, with what to keep, and when to start fresh instead.
 
 how_it_works:
   - title: Locks the plan

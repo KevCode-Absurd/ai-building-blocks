@@ -1,41 +1,52 @@
 new_slug: place-principles-writer
 name: "Place principles writer"
-summary: "Describe your space or service. Get a statement of who it serves and what it must never be."
+summary: "Write a short signed statement for a space, service or app: who it serves, what it must never be and a rule for each part, to guide your team."
 job: design-work
 thinking: medium
 thinking_why: "It turns loose wishes into firm rules, and each rule needs a judgement call."
 
 headline: "Place principles writer"
-subhead: "Give it the space or service you plan and who it is for. It sets out the feeling, the things it must never be and rules for each part of the place. You get a short statement you can sign."
+subhead: "Tell it what your shop, clinic, school, office or app is, who uses it and who works there. It names the people most likely to be forgotten, then sets the feeling, a must-not list and a rule for each part. You get a short statement one person signs."
 
 explain: |
   Plans for a shop, clinic, school, office or app often start with a list of features. A list says what to build. It does not say who the place is for, or what would spoil it. Teams then drift toward whatever looks impressive, and the people with the least power in the place get forgotten.
 
-  This skill writes a statement of intent in short lines. It starts with who the place serves, including the smallest and least served. It then states the feeling, the must-not list, rules for each part of the place, how people move through it and a long-term plan. It ends in the first person so one person owns it.
+  This skill writes a statement of intent in short lines. It starts with who the place serves, including the smallest and least served. It then states the feeling, the must-not list and rules for each part of the place. Each rule is something a person walking through can check. It adds how people move through the place and a plan that reaches past opening day. It ends in the first person so one named person owns it.
+
+  The method follows the public statement of intent Hayao Miyazaki wrote for the Ghibli Museum. It is our reading of that approach, not his words.
 
 when:
   - "You are about to design or rebuild a space, a service or a product and the team has no shared aim."
   - "A project keeps drifting toward looking impressive instead of serving people."
   - "You need a short statement that new staff and suppliers can follow."
+  - "Two people on the team keep settling design choices by taste and you want a rule to point to."
+
+not_for:
+  - "You already have signed principles and need a brief for a designer. Use the Design brief rules writer."
+  - "You want colour, type and grid rules for a brand or event. Use the Visual system rules writer."
+  - "You want a floor plan or screen layout. This writes principles, not drawings. For screens, use the Page grid and type planner."
+  - "You do not know who will use the place yet. It asks for that first and writes nothing until you answer."
 
 you_give:
   - "What the place or service is, and where it will be"
   - "Who will use it, and who works there"
   - "Two or three things you already know you want or dislike (optional)"
   - "Your plan for the first year and for later years (optional)"
+  - "The name of the person who will sign (optional)"
 you_get:
-  - "Who it is for, with the least served named"
-  - "The feeling it should have, and a must-not list"
-  - "Rules for the building or screens, staff, displays, shop and grounds"
+  - "Who it is for, with the least served named first"
+  - "The feeling it should have, each line with a reason"
+  - "A must-not list, each item saying who it would harm"
+  - "A rule for each part, such as the building or screens, staff, displays, shop and grounds"
   - "A renewal plan, a long-term plan and a first-person sign-off"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Describe the place or service in a few lines and say who it is for."
+  - "Open the skill in your AI, or copy it and paste it in."
+  - "Describe the place or service in a few lines and say who uses it and who works there. If you give neither, the skill asks two short questions and stops."
   - "Name the people most likely to be forgotten, such as small children, older people or people with disabilities."
   - "Paste anything you already know you want or hate."
-  - "Read the statement aloud to your team. Change any line nobody can act on."
-  - "Sign it and pin it where decisions are made."
+  - "Read the statement aloud to your team. Change any line nobody could check by walking through the place."
+  - "Sign it and pin it where decisions are made. Then hand it to a designer with the Design brief rules writer."
 
 how_it_works:
   - title: "Names who it is for"
@@ -129,3 +140,27 @@ works_best_with:
 terms:
   - term: "Statement of intent"
     meaning: "A short signed list of what a place is for and what it must never become."
+
+output_sample:
+  input:
+    - What the place or service is, and where it will be
+    - Who will use it, and who works there
+    - Things you already want or dislike (optional)
+    - Your plan for the first year and later years (optional)
+  output:
+    - name: FOR WHOM
+      contains: Each user group with what they need, with the smallest and least served first.
+    - name: IT SHOULD FEEL
+      contains: Four to eight short lines on the feeling, each with a reason tied to a group.
+    - name: IT MUST NOT BE
+      contains: Failures to avoid, each saying who it would harm.
+    - name: RULES BY PART
+      contains: A checkable rule for the building or screens, staff, displays or content, shop and grounds.
+    - name: HOW PEOPLE MOVE
+      contains: Whether visitors are guided or free to explore, where they rest and how new people find the way.
+    - name: OVER THE YEARS
+      contains: A renewal plan and a longer plan for the surroundings, with dates marked MISSING if not given.
+    - name: SIGNED
+      contains: The final lines in the first person, as promises from one named owner.
+    - name: MISSING
+      contains: Facts that would sharpen a rule.

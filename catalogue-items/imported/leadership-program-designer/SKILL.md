@@ -10,6 +10,56 @@ metadata:
 
 Comprehensive leadership development support — from designing leadership programs and competency frameworks to conducting assessments, executive coaching, succession planning, and global leadership initiatives.
 
+## When to use it
+
+Use it to design a leadership program for one group, from new managers to senior leaders. You can ask for one piece or the full set.
+
+Skip it when:
+
+- You need one workshop or a short course. Ask your AI for a single session plan instead.
+- You want pairs of mentors and mentees. Use the Mentoring program builder.
+- You want to measure how well managers manage today. Use the Manager quality review planner.
+- You only need a replacement plan for key roles. Use the Succession plan builder.
+
+## What to gather first
+
+Ask for anything missing once, in one message. Mark what you still lack as MISSING. Never invent your company's values, people or results.
+
+1. Who you are training: level and number of people.
+2. The skills you want them to build.
+3. Company size and industry.
+4. Time and budget limits (optional).
+5. Your own competency list or values (optional).
+
+## Steps
+
+1. State the audience and 3 to 5 goals for the program.
+2. Build a competency framework for the audience: each competency with what good looks like at their level.
+3. Outline the program by month: topic, format, practice task and hours.
+4. Write the 360 review form (feedback from the person's manager, peers and team). Rating items first, then 3 open questions.
+5. Write a short coaching guide for the people who support participants.
+6. Set a scorecard to track progress, with before and after checks.
+7. If asked, add a succession plan for named roles.
+
+## Output format
+
+1. Program outline (audience, goals, month-by-month table)
+2. Competency framework (table: competency, what good looks like, example behaviours)
+3. 360 review form (rating items, open questions, who answers)
+4. Coaching guide
+5. Progress scorecard
+6. Succession plan (table: role, ready now, ready in 1 to 2 years, gap, next step). Leave names MISSING unless the user gave them.
+
+## Rules
+
+- Use 360 feedback for development. Do not use one person's results for pay or firing without HR review.
+- Set a minimum number of raters per group, such as 3, before results are shown, so no one can be identified.
+- Do not invent return-on-investment figures. Offer the measures to track and let the user fill in results.
+
+## After you run it
+
+Test the 360 form with two managers before the launch. Then use the Mentoring program builder for peer support.
+
 ## Supported tasks
 
 - Creating leadership development programs and training materials
@@ -60,7 +110,7 @@ Comprehensive leadership development support — from designing leadership progr
 ### Reporting and communication
 
 1. "Write a leadership development proposal for senior leadership that justifies investment in [specific program]."
-2. "Create a leadership development report that shows the ROI and outcomes of our leadership programs."
+2. "Create a leadership development report that shows the outcomes of our leadership programs, using the user's own data. Do not invent ROI figures."
 3. "Design a leadership development scorecard that tracks participant progress and program effectiveness."
 4. "How should I create a leadership development dashboard that gives HR and business leaders visibility into pipeline health?"
 5. "Write a leadership communication strategy for a leader who needs to improve [specific communication skill]."

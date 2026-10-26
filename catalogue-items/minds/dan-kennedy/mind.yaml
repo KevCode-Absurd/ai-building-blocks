@@ -16,6 +16,31 @@ use_cases:
   - "Prepare answers to common objections before a sales call"
   - "Revive an old ad that used to work but has stopped pulling"
   - "Cut any marketing spend that can't show a result"
+not_for:
+  - "You want a brand-only campaign or a positioning idea: use the Al Ries or the April Dunford mind instead."
+  - "You want tests built around product facts and coded replies: use the Claude Hopkins mind instead."
+  - "You need legal or medical copy checked, or personal money advice: ask a qualified specialist, since this mind teaches marketing only."
+output_sample:
+  input:
+    - Your ad, flyer, web page or marketing budget
+    - Who you sell to, in plain words
+    - Your real offer, price and any true deadline or limit
+    - How people can reply today, such as a phone number, link or booking page (optional)
+  output:
+    - name: Offer check
+      contains: Points out where the offer is missing or weak and what the reader gets.
+    - name: Reason to act now
+      contains: A real deadline or limited places to add, with a warning not to fake one.
+    - name: One clear instruction
+      contains: A single written step telling the reader exactly what to do next.
+    - name: Tracking plan
+      contains: Ways to tell which ad brought each lead, such as a code, number or page.
+    - name: Follow-up plan
+      contains: What to send to leads who did not buy, and when.
+    - name: What to cut
+      contains: Spending or copy that breaks these rules and cannot show a result.
+    - name: Caveats
+      contains: Notes that his rules grew from mail, print and seminars, and that urgency can wear out trust.
 seats:
   - {seat: "Direct response", asks: "Where's the offer, why should they act today, and how will we know it worked?"}
   - {seat: "Follow-up", asks: "What happens to the people who almost bought? Who contacts them next, and when?"}

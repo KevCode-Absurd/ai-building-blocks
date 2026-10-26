@@ -1,6 +1,6 @@
 new_slug: buying-path-rebuilder
 name: "Buying path rebuilder"
-summary: "Paste what your best customers read, watched or did before buying. Get the steps every new lead should follow."
+summary: "Paste what your best customers did before buying. Find the buying path they share and get steps to add for every new lead, plus a test."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It finds a pattern in small data and decides what may be chance, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - Your best customers seem to have something in common in how they found you.
   - Sales spends time with leads who are not ready.
   - You have good content that only some leads ever see.
+not_for:
+  - You have fewer than about 10 top customers. Talk to your buyers directly instead, because a small list gives a hunch, not a pattern.
+  - You do not yet know who your best customers are. Pick them out first with the Best customer finder.
+  - You want to write the content or emails for each step. This skill finds the steps, so use your own writer or your AI chat for the copy.
 
 you_give:
   - What each top customer read, watched or did before buying, in order
@@ -35,6 +39,29 @@ how_to_use:
   - Add the same for a few weaker customers, if you can.
   - Add the profile from "Best customer finder" if you have it.
   - Run the test it sets and look at the win rule before you roll it out.
+output_sample:
+  input:
+    - What each top customer read, watched or did before buying, in order
+    - Their words on why they bought, such as reviews or notes
+    - How weaker customers behaved (optional)
+    - A profile of your best customer (optional)
+  prerequisites:
+    - A list of your top customers, which the Best customer finder can help you make
+  output:
+    - name: Paths
+      contains: One line per top customer with each piece they read, watched or did, in order.
+    - name: Counts
+      contains: Each step with how many top customers did it, written as x of n.
+    - name: The pattern
+      contains: What most top customers share, and any sign it may be chance.
+    - name: Steps for every lead
+      contains: Each step to add, how a lead reaches it, and what triggers it.
+    - name: Best pieces for sales
+      contains: The pieces most top customers used, with the reason, for sales to hand-pick.
+    - name: Test
+      contains: Two lead groups, how long to run it, what to measure and the number that counts as a win.
+    - name: Missing and checks missed
+      contains: Data you did not give, and any checks the skill could not pass.
 
 how_it_works:
   - title: Lists each path

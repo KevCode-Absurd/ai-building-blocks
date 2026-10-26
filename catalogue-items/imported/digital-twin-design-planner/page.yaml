@@ -1,22 +1,58 @@
 new_slug: digital-twin-design-planner
 name: Plan a governed digital twin
-summary: Plan how a digital twin will track the real system, test its claims and control each action.
+summary: Plan a digital twin you can trust. Give it your system and data sources. You get a twin plan with proof checks and clear limits on actions.
 job: build-software
 headline: Plan a governed digital twin
-subhead: Bring a real system and its data sources. Set freshness and proof rules, then get a twin plan with action limits.
+subhead: Give it a real system, its data sources and the decision you want help with. Your AI sorts your idea into model, shadow or twin. You get a plan with proof checks and limits on what the twin may do.
 explain: Bring a real system and its data sources. Set freshness and proof rules, then get a twin plan with action limits.
 when:
-  - You want to plan a governed digital twin.
+  - Someone says "build a digital twin" and you need to know what that should mean.
+  - You have a dashboard or event feed and want to know if it is really a twin.
+  - A twin shows old or clashing data and you must decide whether to pause it.
+  - You want to let a twin act on a real system and need proof it is safe.
+not_for:
+  - "You only need a dashboard or a list of what depends on what: build that with your usual monitoring or data tools, since no twin is needed."
+  - "You want rules for how your whole company uses AI: ask your AI for an AI governance policy, or a person who owns that work."
+  - "You want help running one named tool, such as a cloud or build tool: use that tool's own guide or support."
 you_give:
-  - The represented entity/process, authoritative data sources and intended decision.
-  - Freshness/fidelity needs, model assumptions, owners, risks and permitted action scope.
+  - The system or process the twin will copy.
+  - The places its data comes from.
+  - The decision the twin should help with.
+  - How fresh and accurate the data must be.
+  - The owner, the risk level and the actions the twin may take (optional).
 you_get:
-  - A twin/shadow classification, architecture contracts and evaluation plan.
-  - A release-evidence checklist with independent validation, stop rules and unresolved gaps.
+  - "A label for your idea: model, shadow or twin."
+  - A plan for identities, data formats, timing and proof of origin.
+  - A test plan that checks the twin against real results.
+  - A checklist of proof needed before the twin may act.
+  - A list of open gaps with owners.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text, or upload the skill folder if your AI accepts files.
+  - Describe your system, data sources, the decision, the owner and the risk level.
+  - Say which actions, if any, the twin may take. If you do not know, say so.
+  - Ask for the classification first, then the plan and the release checklist.
+  - Read the open gaps and fill them in before you trust the plan.
+  - No code or paid tool is needed. The plan is a document, not a running twin.
+output_sample:
+  input:
+    - The real system or process you want to copy
+    - Where its data comes from
+    - The decision the twin should help with
+    - Who owns it and how risky a mistake is
+    - Which actions the twin may take, if any (optional)
+  output:
+    - name: Classification
+      contains: Says if your idea is a model, a shadow or a true twin, and what is missing.
+    - name: Twin manifest
+      contains: Names the system copied, its data sources, how fresh the data must be, and what actions are allowed.
+    - name: Architecture contracts
+      contains: Sets identities, event formats, timestamps, proof of origin, and how uncertainty is shown.
+    - name: Evaluation plan
+      contains: Shows how to test the twin against real results, and when it must stop and hold.
+    - name: Release evidence checklist
+      contains: Lists the proof needed before the twin may do more than watch, with a decision of approve, hold or block.
+    - name: Open gaps
+      contains: Lists unresolved questions, each with an owner or a way to escalate.
 how_it_works:
   - title: Frame and classify
     text: Identify the original, useful decision, simpler alternatives and whether this is a model, shadow or twin.

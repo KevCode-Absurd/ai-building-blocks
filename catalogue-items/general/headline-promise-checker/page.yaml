@@ -1,6 +1,6 @@
 new_slug: headline-promise-checker
 name: "Headline promise checker"
-summary: "Paste your headline and offer. Get whether it picks the right reader and promises a clear reward, with stronger versions."
+summary: "Check your headline promise before you spend on ads. Paste the line and your offer. You get a score out of 100 and stronger versions."
 job: check-ads
 thinking: low
 thinking_why: "It applies a short fixed test to one line at a time."
@@ -17,6 +17,10 @@ when:
   - "Your headline sounds fine but nobody replies."
   - "You have a slogan where a promise should be."
   - "You want to compare a gain version with a loss version of the same promise."
+not_for:
+  - You need to check body copy or a full ad. Use the Meta ads compliance checker for rules, or ask a colleague to read it.
+  - You have no offer facts yet. Use the Fact-based ad copy writer first, then bring the headline here.
+  - You want to plan which version to test. Use the Ad test brief writer after this.
 
 you_give:
   - "Your headline, or the ad it belongs to"
@@ -35,6 +39,29 @@ how_to_use:
   - "Paste your offer facts, or say they are missing."
   - "Test the gain and loss versions it writes."
   - "Run it again on your top pick."
+output_sample:
+  input:
+    - Your headline, or the ad it belongs to
+    - "Your offer facts: price, speed, terms, proof"
+    - Who the reader is (optional)
+    - More than one headline to compare (optional)
+  output:
+    - name: SCORE
+      contains: A score out of 100, with points for reader, reward, specifics, tied tease and supported facts.
+    - name: Reader the line should pick out
+      contains: "Who the headline is for, and whether the line picks them out: yes, partly or no."
+    - name: Reward
+      contains: What the line promises, whether it is a gain or a loss avoided, and the so-what result.
+    - name: Speed, ease or cost
+      contains: How soon, how simply or how cheaply, only if your offer states it. Otherwise marked missing.
+    - name: Tease tied to product
+      contains: Whether any curiosity in the line points to something your product delivers.
+    - name: Stronger versions
+      contains: Two to four rewrites, each with what changed and the offer fact behind it.
+    - name: Missing
+      contains: Every fact the AI needed but did not have, so you can add it.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: "Names the reader"

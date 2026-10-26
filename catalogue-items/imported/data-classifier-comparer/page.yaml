@@ -2,35 +2,62 @@ thinking: high
 thinking_why: It chooses models, then judges results with statistics.
 new_slug: data-classifier-comparer
 name: Data classifier comparer
-summary: Give it a data table. Get several classifiers trained and ranked by
-  accuracy, with tests that show real differences.
+summary: Compare classifiers on your data table and see which models truly lead on accuracy, and which gaps are chance. Runs in MATLAB.
 job: build-software
 headline: Data classifier comparer
-subhead: Find out which classification models really are the best on your data,
-  and which ones are only slightly different by chance. Rankings alone can
-  mislead, so this adds statistical tests.
+subhead: Give it a data table with a category column to predict. It trains many classifiers in MATLAB and ranks them by accuracy. Then it runs statistical tests to show which top models are truly equal.
 explain: |
   Find out which classification models really are the best on your data, and which ones are only slightly different by chance. Rankings alone can mislead, so this adds statistical tests.
 
   You bring a table with predictors and a category column to predict. The skill cleans and prepares it, picks promising classifiers, and trains them in MATLAB. It compares accuracy with cross-validation, a holdout split or hyperparameter search. It then runs McNemar, 5 by 2 cv and Friedman tests to show which models sit in the top group with no real difference. It supports a uniform prior for imbalanced classes but nothing more custom. It does not handle images, sequences or numeric targets, and it needs MATLAB with statistics tools.
 when:
-  - You need to choose a model for churn, fraud or diagnosis data.
-  - Two models score 91 and 92 percent and you wonder if that gap is real.
+  - You must pick a model for churn, fraud or diagnosis data.
+  - Two models score 91 and 92 percent and you wonder if the gap is real.
   - You want a fair accuracy comparison across many classifiers.
   - Your classes are unbalanced and you need to handle that.
+not_for:
+  - You need to predict a number, such as price or sales. Use a regression tool, or ask a data analyst.
+  - Your data is images, text sequences or time series. Use a tool built for that type of data, such as a deep learning setup.
+  - You have no MATLAB licence with the Statistics and Machine Learning Toolbox. Use a free tool such as scikit-learn in Python, or ask a data analyst.
 you_give:
-  - A data table with a category column
-  - Evaluation method preference (optional)
-  - Whether classes are imbalanced (optional)
+  - Your data table, with one column holding the category to predict
+  - How you want to test accuracy (optional)
+  - Whether some classes are much rarer than others (optional)
+  - Whether you need models that are easy to explain (optional)
 you_get:
-  - Trained classifiers
-  - Accuracy ranking
-  - Statistical test results
-  - Top tier of equal models
+  - A set of trained classifiers
+  - An accuracy ranking of every model
+  - Test results that show which gaps are real
+  - The top group of models that are equal
+  - A short summary of what to pick
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Statistics and Machine
-    Learning Toolbox.
+  - Check you have MATLAB with the Statistics and Machine Learning Toolbox. Both need a paid licence. Your AI also needs a way to run MATLAB code.
+  - Open your AI tool and add this skill. Say which file holds your data and which column to predict.
+  - Say how you want to test accuracy, or let your AI ask you. Tell it if some classes are rare.
+  - Answer its questions about your data and about easy-to-explain models.
+  - Read the ranking, then the test results. Models in the top tier are equal, so pick the simplest or fastest one.
+  - If you lack MATLAB, do not use this skill. Ask a data analyst or use a free tool like scikit-learn.
+output_sample:
+  input:
+    - Your data table, with one column holding the category to predict
+    - "How you want to test accuracy: cross-validation, holdout split or tuning (optional)"
+    - Whether some classes are much rarer than others (optional)
+    - Whether you need models that are easy to explain (optional)
+  prerequisites:
+    - MATLAB with the Statistics and Machine Learning Toolbox (paid licence)
+    - An AI that can run MATLAB code, such as through a MATLAB connection
+  output:
+    - name: Data check and cleaning
+      contains: What was found in your table, such as missing values, and how it was cleaned before training.
+    - name: Trained classifiers
+      contains: A set of classifiers chosen to suit your data, each trained and scored the same way.
+    - name: Accuracy ranking
+      contains: Every model listed from best to worst accuracy, with charts to compare them.
+    - name: Statistical test results
+      contains: McNemar, 5 by 2 cv and Friedman test results showing which accuracy gaps are real.
+    - name: Top tier of equal models
+      contains: The group of best models that cannot be told apart by accuracy.
+    - name: Summary
+      contains: A short plain write-up of the findings and which models to consider.
+    - name: Saved models and retraining script
+      contains: Optional files with your chosen models and code to train them again.

@@ -16,6 +16,29 @@ use_cases:
   - "Match the attitude of a design to the attitude of its readers"
   - "Decide when an experiment helps the message and when it just gets in the way"
   - "Keep a human, hand-made feel in digital work"
+not_for:
+  - "You need a form, safety notice or legal page that must be read fast: ask a plain-language designer, or use the Dieter Rams mind for a clarity-first check."
+  - "You want a clean, honest product design review: use the Dieter Rams mind instead."
+  - "You want to judge a chart or graph for truthful reading: use the Alberto Cairo mind instead."
+output_sample:
+  input:
+    - The layout, cover, poster or page you want reviewed, described or pasted
+    - Who it is for and what it must say
+    - What a reader must be able to find or do (a date, a price, an action)
+    - Photos or scraps of your own you could use (optional)
+  output:
+    - name: Audience and message
+      contains: A short line naming who the design is for and what it needs to say.
+    - name: The default spotted
+      contains: Which choices the software or template made for you, rather than you.
+    - name: Crop, move or cut actions
+      contains: A few plain moves to try by hand, such as cropping harder, shifting things or cutting cover lines.
+    - name: Experiment check
+      contains: Whether the bold move helps the message or gets in the reader's way, and where clarity must come first.
+    - name: A test with real readers
+      contains: One quick check that the reader still finds the key information.
+    - name: Questions back to you
+      contains: Short questions such as whether you chose that, where the idea came from and whether you are having fun.
 seats:
   - {seat: "Break the layout", asks: "Who's this for, what's the message, and does the layout make them feel it, or is it just the template again?"}
   - {seat: "Gut check", asks: "Forget the rules for a second. Does this look right to your eye, and does it move you?"}

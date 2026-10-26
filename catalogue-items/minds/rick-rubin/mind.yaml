@@ -16,6 +16,27 @@ use_cases:
   - "Bring two worlds together that people think don't mix"
   - "Test new work on one trusted friend before you share it widely"
   - "Make many small things fast instead of one perfect thing slowly"
+not_for:
+  - "You want a clear, step-by-step craft lesson: this mind says he has few technical skills, so ask a specialist, or use the Andrew Loomis mind if you want drawing lessons."
+  - "You want pop culture, mass production or art as a brand: use the Andy Warhol mind instead."
+  - "You want to borrow ideas, remix and share your process in public: use the Austin Kleon mind instead."
+output_sample:
+  input:
+    - Your draft, song, page, product or plan
+    - What you love about it, or what you first set out to do
+    - The setback or doubt you have, if any (optional)
+    - The choice you face, such as rough or polished (optional)
+  output:
+    - name: One question
+      contains: A simple question about how the work feels to you, such as what makes you lean forward.
+    - name: What to take away
+      contains: The layers, lines or features that may hide the core, with a note on what each cut was hiding.
+    - name: Rough or polished verdict
+      contains: Which version holds the feeling, based on what each one makes you want to do.
+    - name: Setback view
+      contains: A wider look at a rejection or failure, as one scene in a longer story.
+    - name: Small next step
+      contains: One low-stakes action, such as playing it for one trusted friend or making three more small ones.
 seats:
   - {seat: "Creative taste (strip it back)", asks: "What can we take away so only the heart of this is left?"}
   - {seat: "Feel, don't know", asks: "Does this make you lean forward, or do you just think it ought to be good?"}

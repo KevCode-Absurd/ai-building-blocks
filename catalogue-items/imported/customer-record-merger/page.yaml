@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Merging cannot be undone, so it checks each step.
 new_slug: customer-record-merger
 name: Customer record merger
-summary: Name the duplicate and the one to keep. Get the records merged with
-  tags and notes kept. Changes live customer data.
+summary: Merge duplicate customers in Shopify. Give the record to keep and the one to merge in, check a preview, and keep tags and notes. Cannot be undone.
 job: run-your-store
 headline: Customer record merger
-subhead: Duplicate customers split orders, notes and history across two records.
-  Name the duplicate and the one to keep, and the two are merged in Shopify with
-  tags and notes carried over.
+subhead: Give it the customer record to keep and the duplicate to merge in. It first tries Shopify's own merge, which moves orders and addresses. If that is not possible, it copies tags and notes to the record you keep and leaves a pointer note on the other. In that case both records stay and orders do not move.
 explain: |
   Duplicate customers split orders, notes and history across two records. Name the duplicate and the one to keep, and the two are merged in Shopify with tags and notes carried over.
 
@@ -18,19 +15,49 @@ when:
   - A customer used two emails and their orders are split.
   - Support cannot see the full history on one record.
   - You are cleaning up before an email campaign.
+not_for:
+  - "You do not yet know which records are duplicates: check them by hand in Shopify Admin first, because a wrong merge cannot be undone."
+  - "The duplicate is a B2B account, a gift card holder or has an active subscription: use the manual merge in Shopify Admin (Customers, then Merge)."
+  - "You need to merge many pairs at once: run this one pair at a time, or ask a developer to script it."
 you_give:
-  - Your Shopify store with write access
+  - Your Shopify store domain
   - The ID of the record to keep
   - The ID of the duplicate to merge in
-  - Options for tags and notes (optional)
+  - Choices for tags and notes (optional)
 you_get:
-  - A merge preview
-  - One combined customer record
-  - Tags and notes carried over
-  - A note on the old record pointing to the new one
+  - A preview of the merge, with both records side by side
+  - One combined customer record when Shopify's own merge works
+  - Tags and notes copied to the record you keep
+  - A pointer note on the old record if the fallback runs
+  - A summary of which path ran and any errors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Use an AI that can connect to your Shopify store and change it. A plain chat cannot do this.
+  - In Shopify Admin, open each customer. The number at the end of the page link is the ID. The record with more orders or the older date is usually the one to keep.
+  - Paste the skill into your AI. Give your store domain, the ID to keep and the ID to merge in.
+  - Run the preview first. It is the default. Check that both records are the same person, and look at the order counts.
+  - Check the plan for B2B accounts, gift cards and active subscriptions. Use the manual merge in Shopify Admin for those.
+  - Say yes to run it. Then check the kept record. Shopify finishes native merges in the background, so wait for it to be done.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - The ID of the customer record to keep
+    - The ID of the duplicate record to merge in
+    - Choices for tags, notes and the pointer note (optional)
+  prerequisites:
+    - An AI that can connect to your Shopify store and change it
+    - Shopify access that can read and write customers
+  output:
+    - name: Session start banner
+      contains: The store name and start time, shown before anything runs.
+    - name: Customer lookup
+      contains: Name, email, phone, tags, note, order count and total spent for both records. It stops if an ID is not found.
+    - name: Merge preview
+      contains: The plan for the merge, with each change marked as a dry run. Nothing changes yet.
+    - name: Native merge
+      contains: Shopify's own merge, which moves orders and addresses to the record you keep. It gives a job ID.
+    - name: Fallback update on the winner
+      contains: Tags from both records combined, and the old note added with a date. Orders are not moved.
+    - name: Pointer note on the old record
+      contains: A note and tags marking it as a duplicate, with the ID of the record to keep.
+    - name: Merge outcome summary
+      contains: Which path ran, the job ID, tags combined, whether notes were added, and the error count.

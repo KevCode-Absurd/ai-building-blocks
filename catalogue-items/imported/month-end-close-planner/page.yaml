@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It orders known tasks into a calendar.
 new_slug: month-end-close-planner
 name: Month-end close planner
-summary: Say what must be done to close the books. Get a dated task list with
-  owners and blockers.
+summary: Plan your month-end close with dated tasks, owners and blockers. Find the longest chain of tasks that sets your close time and how to cut it.
 job: track-numbers
 headline: Month-end close planner
-subhead: A dated close plan for your books with an owner on every task and the
-  blockers listed up front. It shows the longest chain of tasks, which is what
-  sets your real close time.
+subhead: A dated close plan for your books with an owner on every task and the blockers listed up front. It shows the longest chain of tasks, which is what sets your real close time.
 explain: |
   A dated close plan for your books with an owner on every task and the blockers listed up front. It shows the longest chain of tasks, which is what sets your real close time.
 
@@ -18,6 +15,10 @@ when:
   - You must cut close time by two days.
   - Intercompany confirmations keep arriving last.
   - You are taking over a close and need a clean schedule.
+not_for:
+  - "You only need to match one bank account to your books: use a plain bank reconciliation in your accounting tool, or ask your accountant."
+  - "You need to write the accrual or adjustment entries: use the Journal entry skill, then come back to place them on the calendar."
+  - "You need to build the final statements from a closed ledger: use the Statement preparation skill instead."
 you_give:
   - Current close length and your target
   - The list of recurring close tasks
@@ -31,7 +32,24 @@ you_get:
   - A blocker list
   - Ideas to shorten the close
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
+  - Tell your AI your current close length in working days and your target.
+  - Paste your list of close tasks with owners and how long each takes. Add your systems and how many entities you close.
+  - Name any known problem areas, such as late intercompany confirmations or manual accruals (optional).
+  - Check the result. Confirm the critical path matches how your close really runs, then share the calendar with your team.
+  - Run it again after the close to log what slipped and plan the next cycle.
+output_sample:
+  input:
+    - Your current close length and your target, in working days
+    - Your list of recurring close tasks, with owners and how long each takes
+    - The systems and entities in scope
+    - Known problem areas, such as late intercompany confirmations (optional)
+  output:
+    - name: Close Calendar
+      contains: A day-by-day task table with an owner and dependencies on every task, laid out on the five-day pattern.
+    - name: Critical Path
+      contains: The longest chain of linked tasks, which sets your close length, with ways to shorten it.
+    - name: Blocker Log
+      contains: Open blockers with their impact, owner and escalation status.
+    - name: Improvement Actions
+      contains: A ranked list of changes for next month, ordered by impact and effort.

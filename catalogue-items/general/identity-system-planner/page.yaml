@@ -1,6 +1,6 @@
 new_slug: identity-system-planner
 name: "Identity system planner"
-summary: "Paste your client facts and where the brand appears. Get a three-phase plan and hand-off guide."
+summary: "Plan your brand identity system in three phases. Give it client facts and every place the brand shows. Get a fixed core and a hand-off guide."
 job: design-work
 thinking: medium
 thinking_why: "It plans in phases with judgement on what is fixed and what moves."
@@ -17,6 +17,10 @@ when:
   - "You are building or renewing a brand that will appear in many places."
   - "You want an identity that can change with the seasons and still be recognised."
   - "You need a plan for handing the brand to a team that did not make it."
+not_for:
+  - "You only need the mark itself: use the Brand mark system planner."
+  - "You need a one-off logo or a single flyer: ask a designer, or brief your AI on that one piece."
+  - "You want a finished design: this plans the work, it does not draw the logo, type or colours."
 
 you_give:
   - "The client facts: history, audience, what is not working"
@@ -36,6 +40,31 @@ how_to_use:
   - "Run the experiments in phase one on real pieces, not blank pages."
   - "Look at the whole set side by side in phase two."
   - "Teach the client team with the hand-off guide and name the decision-maker."
+output_sample:
+  input:
+    - "The client facts: history, audience and what is not working"
+    - Every place the brand will appear
+    - A design direction already chosen (optional)
+    - Who will run it day to day (optional)
+  output:
+    - name: Client study
+      contains: The client's history, audience and what is not working now, with MISSING lines for any gap.
+    - name: "Phase 1: Experiments"
+      contains: Which typefaces, colours and motifs to try, on which real pieces, and whether they read as one identity.
+    - name: "Phase 2: Refinement"
+      contains: Pieces that look too alike, pieces that look wrong, and how to tell which is which.
+    - name: Fixed core and what may change each season
+      contains: What never changes, what moves with the seasons, and how far it may move.
+    - name: Tested on
+      contains: How the identity looks in each place the brand appears, with fixes for any that fail.
+    - name: Launch and wait
+      contains: What will look strange at launch and how long to wait before judging.
+    - name: "Phase 3: Hand-off"
+      contains: An outline of the guide that teaches the client team to run the system.
+    - name: Decision-maker
+      contains: The one person or role who leads identity decisions after launch.
+    - name: Checks missed
+      contains: One line for each check the plan still misses, or none.
 
 how_it_works:
   - title: "Studies the client"

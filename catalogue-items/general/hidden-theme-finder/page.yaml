@@ -1,6 +1,6 @@
 new_slug: hidden-theme-finder
 name: "Hidden theme finder"
-summary: "Paste a finished draft. Get what it seems to be about, and the scenes to add, sharpen or cut for it."
+summary: "Find what your story is really about. Paste a finished draft and get three readings, the best one picked, and scenes to add, sharpen or cut."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It reads for pattern and meaning across a whole draft, which takes judgment."
@@ -17,6 +17,10 @@ when:
   - "Your first draft is done and you do not know what to fix first."
   - "Readers say it was fine but not memorable."
   - "You suspect there is a bigger idea in the draft you have not named."
+not_for:
+  - Your draft is still being written, so finish a first draft and let it rest, then come back.
+  - Your piece is nonfiction or an idea with no people in trouble, so write the story first or ask a friend who reads for notes.
+  - You want to shorten the draft, so use the ten percent cutter and run this after the cuts.
 
 you_give:
   - "Your draft"
@@ -35,6 +39,31 @@ how_to_use:
   - "Add your own guess about the meaning. It tests it against the draft."
   - "Read the pick. If it feels wrong, ask for the next best."
   - "Use the list in the second draft."
+output_sample:
+  input:
+    - Your finished draft
+    - The list of things that keep coming back, from the cold re-read marker (optional)
+    - What you think the story is about (optional)
+    - What drew you to write it (optional)
+  prerequisites:
+    - A finished first draft, ideally one that has rested for a while
+  output:
+    - name: What recurs
+      contains: The objects, images, words and moments that appear three or more times, with pages and counts.
+    - name: Why it was worth writing
+      contains: One line on what you kept returning to, taken from the draft or from you.
+    - name: Three readings
+      contains: Three answers to what the story is about, each a tension, with the scenes that back it and a count.
+    - name: The pick
+      contains: The best-supported reading and why it beats the other two.
+    - name: Add or sharpen
+      contains: Up to five places in the second draft to add or sharpen something that shows the reading.
+    - name: Cut or reduce
+      contains: Scenes that pull another way, each marked to cut, shorten or change.
+    - name: Warning
+      contains: Any place in the plan that reads like a lecture instead of a scene.
+    - name: Checks missed
+      contains: One line for each check the result failed, or none.
 
 how_it_works:
   - title: "Counts the repeats"

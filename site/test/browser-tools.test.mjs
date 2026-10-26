@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { BROWSER_TOOLS, countText, cleanText, contrastRatio, parseCsv, csvToJson, formatJson, rankTasks, scoreOptions } from '../src/tools/browser-tools.mjs';
 
 test('browser utilities have distinct searchable routes', () => {
-  assert.equal(BROWSER_TOOLS.length, 32);
+  assert.equal(BROWSER_TOOLS.length, 42);
   assert.equal(new Set(BROWSER_TOOLS.map(t => t.slug)).size, BROWSER_TOOLS.length);
   assert.ok(BROWSER_TOOLS.every(t => t.kind === 'browser' && t.summary && t.category));
 });

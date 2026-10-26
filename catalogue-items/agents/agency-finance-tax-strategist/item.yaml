@@ -1,0 +1,42 @@
+slug: agency-finance-tax-strategist
+name: Tax Strategist agent
+summary: "Get a tax planning brief for one decision: your facts, the options, the questions for your tax pro and the deadlines to check. Not a tax filing."
+category: agent
+boards: []
+type: agent
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: brief
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: finance/finance-tax-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-tax-strategist.md
+  licence: MIT
+  original_name: Tax Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 37ea1a246e1290f473ef59abe1bba9ecc4f346c9867522fefcc11d37cd0265ab
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Tax Strategist
+  - Agency Agents
+  - Finance
+credits:
+  - title: Tax Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-tax-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -16,7 +16,7 @@ uses: [headcount-forecast-builder, headcount-plan-builder, people-cost-budget-bu
 steps:
   - {uses: headcount-forecast-builder, note: "Starts with how many people you will need and lose, with a stated margin of error."}
   - {uses: headcount-plan-builder, note: "Reads the forecast from the step before and turns it into named roles in the order to hire them."}
-  - {uses: people-cost-budget-builder, note: "Prices the roles in the plan against the forecast so finance can approve a number."}
+  - {uses: people-cost-budget-builder, note: "Reads the hiring plan from step 2 and the forecast from step 1, adds the pay and cost rates you give it, and prices the roles so finance can approve a number."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/plan-a-year-of-hiring-and-what-it-will-cost/skeleton.yaml

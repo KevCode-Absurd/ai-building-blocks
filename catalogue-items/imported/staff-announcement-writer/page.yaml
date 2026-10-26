@@ -2,34 +2,90 @@ thinking: low
 thinking_why: It shapes clear messages from facts you give.
 new_slug: staff-announcement-writer
 name: Staff announcement writer
-summary: Say what is changing. Get a clear internal announcement, a rollout plan
-  and answers to likely questions.
+summary: "Write a clear staff announcement, plus manager talking points, a FAQ and a rollout order, for routine news or a hard change."
 job: hire-people
 headline: Staff announcement writer
-subhead: A clear internal announcement, a plan for sending it and answers to the
-  questions people will ask. Tell it what is changing and who it affects.
+subhead: "Tell it what is changing, who it affects and when. You get a plain announcement, a version for each channel, talking points for managers, a FAQ and a send order."
 explain: |
-  A clear internal announcement, a plan for sending it and answers to the questions people will ask. Tell it what is changing and who it affects. It writes in plain words so staff read it, understand it and trust it.
+  Most staff read the first two lines of an internal announcement and skim the rest. This staff announcement writer puts what changes, who it affects and when in those first lines, in short plain sentences.
 
-  It covers routine news like policy updates and benefits, and sensitive ones such as restructures or leadership changes. It can adapt one message for email, Slack, a town hall or the intranet, and write talking points for managers. It suggests timing and order to stop rumours starting, and builds an FAQ to go with it.
+  It first decides whether your news is routine, like a policy update or holiday schedule, or sensitive, like a restructure or leadership change. Then it matches the tone. Cheerful wording on bad news loses trust, so it avoids it.
+
+  It writes versions for the channels you use, talking points for managers, and a FAQ built only from facts you give it. Where the answer is not known yet, the FAQ says so and gives a date. A rollout order tells you who hears first, so rumours do not start.
 when:
   - A policy is changing and everyone needs to hear it clearly.
   - You must share hard news and want the tone right.
-  - Managers need talking points before the announcement lands.
-  - You want one message adapted for email and chat.
+  - Managers need talking points before the announcement goes out.
+  - You want one message ready for email, Slack and a team meeting.
+not_for:
+  - "You are announcing a re-org or layoffs and want the full package with a town hall script: use the Org change announcement writer or the Internal change announcement writer."
+  - "The news is about one person's performance or discipline: use a one-to-one meeting or your HR case process."
+  - "You need the legal wording of a policy or job cut terms: ask HR or a lawyer to write it."
 you_give:
   - What is changing and why
-  - Who it affects
-  - The channels you will use (optional)
-  - Date and timing constraints (optional)
+  - Who it affects and the date
+  - The channels you will use, such as email or Slack (optional)
+  - Facts you cannot share yet (optional)
+  - Whether the news is routine or sensitive (optional)
 you_get:
-  - A plain-language announcement
-  - Versions for different channels
-  - Manager talking points
-  - An FAQ
-  - A suggested rollout order
+  - A plain announcement
+  - One version for each channel you use
+  - Talking points for managers
+  - A FAQ of 5 to 8 questions
+  - A rollout order with timing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. Paste the skill text into the chat.
+  - Paste what is changing, why, who it affects, the date and your channels. Add any facts you cannot share yet.
+  - Read the first two sentences of the announcement. A stranger should know what changes and when.
+  - Check each FAQ answer against your facts. Remove any answer you cannot back up.
+  - Send the manager talking points first. Send the staff message after managers have read it.
+  - Show any job cut or legal change message to HR or a lawyer before you send it.
+output_sample:
+  input:
+    - What is changing and why
+    - Who it affects and the date
+    - The channels you will use (optional)
+    - Facts you cannot share yet (optional)
+  output:
+    - name: Main announcement
+      contains: What changes, who it affects and when in the first two sentences, then the reason and next steps.
+    - name: Channel versions
+      contains: The same facts, shaped for each channel you named, such as email, Slack or a meeting script.
+    - name: Manager talking points
+      contains: Three to five key lines and answers to the hardest questions.
+    - name: FAQ
+      contains: Five to eight questions with answers from your facts, or a date for when you will know.
+    - name: Rollout order
+      contains: Who hears first, what to send and when, including a follow-up message.
+    - name: Check list
+      contains: What to confirm before sending, such as facts, rumour risks and the leader who signs.
+how_it_works:
+  - title: Ask what is missing
+    text: It asks once for the change, audience, date and channels. Gaps are marked, not filled.
+  - title: Size the news
+    text: It decides if the news is routine or sensitive and matches the tone.
+  - title: Write the message
+    text: It leads with what changes, who and when, in short plain sentences.
+  - title: Adapt and brief
+    text: It writes channel versions and talking points for managers.
+  - title: Build the FAQ and order
+    text: It writes a FAQ from your facts and sets who hears first.
+output_shape: |
+  Announcement: <what changes, who, when> + <why> + <what happens next>
+  Channel versions: <email>, <Slack>, <meeting script>
+  Manager talking points: <key lines> + <hard questions with answers>
+  FAQ: <question> - <answer or "we will tell you by date">
+  Rollout: <managers first> - <staff> - <follow-up date>
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a writing job that any strong chat AI does well.
+  inputs:
+    - The old policy or notice, so the new one can say what is different
+    - Questions staff have already asked
+    - The name and title of the leader who will sign it
+terms:
+  - term: Talking points
+    meaning: A few short lines a manager can say out loud when staff ask about the news.
+  - term: Rollout order
+    meaning: The order in which people hear the news, such as managers first, then staff.

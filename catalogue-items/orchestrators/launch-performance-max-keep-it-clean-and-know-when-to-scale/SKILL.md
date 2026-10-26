@@ -42,11 +42,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Performance Max launch planner.** Use the skill `performance-max-launch-planner`. Says go or wait, then gives the build.
+1. **Performance Max launch planner.** Use the skill `performance-max-launch-planner`. Says go or wait, then gives the build. Hands step 2 the plan to check the live campaign against.
 
 Pause here: Build the campaign as planned and leave the big settings alone for three to four weeks. Then export the asset group, product, search term and placement reports.
 
-2. **Performance Max routine keeper.** Use the skill `performance-max-routine-keeper`. Checks the live campaign against the plan and lists what to exclude or replace.
+2. **Performance Max routine keeper.** Use the skill `performance-max-routine-keeper`. Give it the launch plan from step 1 and the reports you exported. Checks the live campaign against the plan and lists what to exclude or replace. Hands step 3 the clean-up findings.
 3. **Google Ads scale gate checker.** Use the skill `google-ads-scale-gate-checker`. Give it the audit report from the steps before. Takes the clean-up findings and decides whether raising spend is safe.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

@@ -14,6 +14,10 @@ when:
   - You are hiring and have no written process beyond a job post.
   - You have a stack of resumes and need a fair way to cut it down.
   - You want to send an offer without a term that causes trouble later.
+not_for:
+  - "You only need to score interview notes you already have: use the Candidate comparison table builder."
+  - "You are hiring for a sales role and want a scorecard built for it: use the Sales hiring scorecard builder."
+  - "The person already accepted and you need their first weeks planned: use the New hire first week planner or the 30-60-90 day onboarding planner."
 you_give:
   - A hiring brief with the role, the team, the pay range and the place of work
   - The resumes or applications you received
@@ -30,6 +34,30 @@ how_to_use:
   - Give it the hiring brief. Say where the person will work, because the offer check depends on it.
   - After the shortlist, interview with the questions from the packet and write notes right after each one.
   - Paste your notes for the comparison. Pick your finalist, fill in the offer template, then bring the letter back for the check.
+output_sample:
+  input:
+    - Your hiring brief with the role, team, pay range and place of work
+    - The resumes or applications you received
+    - Your notes from each interview, written straight after
+    - The finalist's offer details, such as pay and start date
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+    - Time to interview the shortlist between steps 2 and 3
+  output:
+    - name: "Step 1: Hiring packet"
+      contains: A job post, interview questions with strong and weak answers, a scoring guide and an offer letter template.
+    - name: "Step 2: Shortlist"
+      contains: Applicants ranked only on the job's needs, grouped as interview, maybe, no or cannot assess, with a reply drafted for each.
+    - name: Pause for interviews
+      contains: You interview the shortlist with the packet's questions and write notes right after each one.
+    - name: "Step 3: Comparison"
+      contains: Scores per question with evidence from your notes, a bias check and the case for and against each finalist.
+    - name: Pause for the pick
+      contains: You choose the finalist and fill the offer template with the role, pay and start date.
+    - name: "Step 4: Offer check"
+      contains: Place of work, employee or contractor terms, non-compete and local rules, and a list of items to review.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 how_it_works:
   - title: Build the hiring packet
     text: Fixes what the role must deliver, writes the job post, writes interview questions with strong and weak answers, and drafts an offer letter template.

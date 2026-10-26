@@ -2,34 +2,103 @@ thinking: medium
 thinking_why: It reads a long transcript and condenses it.
 new_slug: youtube-video-summariser
 name: YouTube video summariser
-summary: Give it a YouTube link. Get a detailed summary of the talk or lesson,
-  taken from its transcript.
+summary: "Turn a YouTube link into detailed notes from its transcript: topics in order, key takeaways and gaps, so you can skip rewatching."
 job: organise-work
 headline: YouTube video summariser
-subhead: Give it a YouTube link. Get a detailed summary of the talk or lesson,
-  taken from its transcript. Bring a YouTube video link. Use the result to plan
-  your next step.
-explain: |
-  A long, detailed written summary of a YouTube talk, lecture or tutorial, built from its transcript so you do not need to rewatch it.
+subhead: Give it a YouTube link. It reads the video's captions, then writes notes topic by topic from what the speaker said. You get a detailed summary, key takeaways, the terms used and a list of gaps.
+explain: |-
+  Long talks and lectures are hard to rewatch. This YouTube video summariser reads the caption text of a video and writes detailed notes, so you can find the points you need without playing it again.
 
-  The skill first checks that Python and the youtube-transcript-api package are present, and offers to install it if not. It confirms the video can be read, pulls the transcript, and then writes a thorough summary using two frameworks, STAR and RISE, which cover the situation, the key points and the takeaways. It favours completeness over brevity, so it suits reference notes for lectures, courses and technical walkthroughs. It stops with a clear message if captions are off or the video is private. You can then ask follow-up questions about any part of it.
+  It works only from the transcript. It writes the situation first, then each topic in the order spoken, then the conclusions. It drops any claim the transcript doesn't contain, marks unclear passages instead of guessing, and does not invent titles, dates or timestamps.
+
+  There are two ways in. If your AI can run Python, it can fetch the captions with an unofficial tool called youtube-transcript-api. YouTube does not run that tool, it may stop working, and it may not fit YouTube's terms, so your AI asks you first. If you prefer, you copy the transcript from YouTube and paste it in.
 when:
-  - You sat through a two-hour lecture and need notes.
+  - You sat through a two-hour lecture and need notes you can search.
   - You want a reference summary of a tutorial for later.
-  - You need the key arguments of a talk before a meeting.
-  - You want to check if a video is worth watching in full.
+  - You need the main arguments of a talk before a meeting.
+  - You want to check whether a video is worth watching in full.
+not_for:
+  - You need exact quotes for print or a post. Captions contain errors, so check each quote in the video.
+  - The video has no captions, or it is private. There is nothing for the skill to read.
+  - "You want a transcript saved as a file by channel and date: use the YouTube transcript saver."
+  - "You want hooks and claims from many short videos: use the Social video transcript analyst."
 you_give:
   - A YouTube video link
-  - Python on your computer
-  - The aspects you care most about (optional)
+  - The transcript language you want (optional)
+  - What to focus on, such as "the steps" (optional)
+  - The transcript text, if your AI can't fetch it (optional)
 you_get:
-  - A detailed structured summary
-  - The key points and arguments
-  - Takeaways to act on
-  - A clear error message if the video has no captions
+  - A short summary of the whole video
+  - Detailed notes, topic by topic, in the order spoken
+  - Key takeaways to act on or remember
+  - The terms the speaker uses, with their meaning
+  - A list of gaps, such as unclear caption text
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and fetch web pages.
+  - Copy the video link. Check that the video has captions (look for the CC button on the player).
+  - Open Claude, ChatGPT or Gemini and paste the skill. If your AI can run Python, it can fetch the captions. It asks first and says it uses an unofficial tool.
+  - If it can't, open the video on YouTube, click "...more" under it, choose "Show transcript", copy the text and paste it into the chat.
+  - Paste the link. Say your language and focus if you have one.
+  - Check the notes against a few moments in the video. Treat any quote as unchecked until you've heard it.
+  - Ask to save the summary alone, with the transcript, or the transcript only.
+how_it_works:
+  - title: Check the link
+    text: It reads the video ID from the link and asks again if the link is not valid.
+  - title: Get the transcript
+    text: It fetches the captions with youtube-transcript-api, after asking you, or uses the text you paste.
+  - title: Stop if it can't read
+    text: If captions are off or the video is private, it says so and does not summarise from the title.
+  - title: Write the notes
+    text: It states the situation, then goes through each topic in order with reasons, examples and steps the speaker gave.
+  - title: Check against the text
+    text: It removes any claim, number or name that is not in the transcript, and marks unclear parts.
+  - title: Offer save options
+    text: It offers to save the summary, the transcript or both, and to answer questions on any part.
+output_shape: |-
+  # <Video title, or MISSING>
+  Link: <link>   Channel: <channel or MISSING>   Transcript: <manual or auto-generated, language>
+  ## Summary in brief
+  <3 to 5 sentences>
+  ## Detailed summary
+  ### <Topic 1>
+  <points, reasons, examples, numbers and steps the speaker gave>
+  ### <Topic 2>
+  ## Key takeaways
+  - <point to act on or remember>
+  ## Terms the speaker uses
+  - <term>: <meaning>
+  ## Gaps and doubts
+  - <anything unclear or possibly wrong in the captions>
+output_sample:
+  input:
+    - A YouTube video link
+    - The transcript language you want (optional)
+    - What to focus on (optional)
+  prerequisites:
+    - A video with captions switched on
+    - Python 3 and the youtube-transcript-api library, if your AI fetches captions (optional)
+    - Or the transcript text copied from YouTube, if it can't (optional)
+  output:
+    - name: Summary in brief
+      contains: Three to five sentences on what the video says and why it matters.
+    - name: Detailed summary
+      contains: Notes for each topic in the order spoken, with reasons, examples and steps.
+    - name: Key takeaways
+      contains: The points to act on or remember.
+    - name: Terms the speaker uses
+      contains: Each term with the meaning the speaker gives it.
+    - name: Gaps and doubts
+      contains: Unclear or garbled caption passages, and anything to check in the video.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with code running
+      why: It can fetch the captions for you. Without code, you paste the transcript yourself.
+  inputs:
+    - A focus, such as the steps or the pricing advice
+    - The video's chapter list, to check the order of topics
+terms:
+  - term: Transcript
+    meaning: The words spoken in the video, written out as text.
+  - term: Auto-generated captions
+    meaning: Captions made by YouTube's software, which can contain mistakes.
+  - term: youtube-transcript-api
+    meaning: An unofficial tool that reads a video's captions. YouTube does not run it, so it can break.

@@ -2,12 +2,10 @@ thinking: low
 thinking_why: Cleaning follows clear rules.
 new_slug: data-cleaner
 name: Data cleaner
-summary: Give it a messy dataset. Get missing values, duplicates, wrong types
-  and outliers fixed.
+summary: "Clean a messy data file: fix blanks, duplicate rows, wrong types and outliers. You get a cleaned file and a log of every change."
 job: work-with-files
 headline: Data cleaner
-subhead: A messy file becomes analysis ready, with a log of every change made.
-  You see exactly what was fixed and can undo or adjust it.
+subhead: A messy file becomes analysis ready, with a log of every change made. You see exactly what was fixed and can undo or adjust it.
 explain: |
   A messy file becomes analysis ready, with a log of every change made. You see exactly what was fixed and can undo or adjust it.
 
@@ -17,6 +15,10 @@ when:
   - You need clean data before building a report.
   - Your customer list has the same person twice with different spelling.
   - Numbers are stored as text and break your formulas.
+not_for:
+  - "You need charts or a written analysis of the data: clean it here first, then ask your AI to analyse the cleaned file."
+  - "You have no way to run code and the file is huge: a person with Excel or Google Sheets can clean a small file by hand."
+  - "You need missing contact details filled in: this skill never invents emails or phone numbers, so get them from the source."
 you_give:
   - The raw data file
   - Expected column types and ranges (optional)
@@ -27,8 +29,29 @@ you_get:
   - Data quality report
   - List of remaining issues
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open spreadsheets.
+  - Use an AI that can run code and open files, such as Claude or ChatGPT with code tools turned on.
+  - Paste the skill into the chat, then upload your raw data file.
+  - Say how to treat outliers, and add expected column types if you know them (optional).
+  - Read the cleaning log first. Check that the changes make sense for your data.
+  - Answer any question about columns with many blanks. The skill asks before it drops them.
+  - Load the cleaned file into your report or formula tool.
+output_sample:
+  input:
+    - Your raw data file, such as a CSV or spreadsheet
+    - Expected column types and ranges (optional)
+    - "How to treat outliers: cap, blank or keep (optional)"
+  prerequisites:
+    - An AI that can run code and open your file
+    - Python with pandas installed
+    - great_expectations for the final checks (optional)
+  output:
+    - name: Data profile
+      contains: Blank cells per column, duplicate rows and columns with mixed types, found before any change is made.
+    - name: Cleaned dataset file
+      contains: Your data with gaps handled, duplicates removed, types fixed, formats matched and outliers treated.
+    - name: Cleaning log
+      contains: Every change made, with counts, so you can check it, undo it or adjust it.
+    - name: Validation report
+      contains: Results of checks for blanks, ranges, unique values and allowed values, and any problems still left.
+    - name: Columns flagged for you
+      contains: Columns with many blanks, which the skill asks you about before it drops them.

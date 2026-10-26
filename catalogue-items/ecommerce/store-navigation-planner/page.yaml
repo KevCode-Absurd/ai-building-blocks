@@ -1,6 +1,6 @@
 new_slug: store-navigation-planner
 name: "Store navigation planner"
-summary: "Give it your collections. Get a menu, homepage feature list, sub-collection links and breadcrumbs."
+summary: "Plan your store menu, homepage collections and breadcrumbs so shoppers reach top products in fewer clicks. Get a before and after click count."
 job: get-found-in-search
 thinking: low
 thinking_why: "It applies fixed rules to a list of collections, so a fast, cheap model is enough."
@@ -17,6 +17,10 @@ when:
   - Your menu has grown messy and top products take three or more clicks to reach.
   - You are adding many collections and need to place them.
   - Your homepage features collections by taste, not by what people search and buy.
+not_for:
+  - "You have not yet chosen which collections to keep: plan those first with the Collection page planner."
+  - "You need tags and filter setup for shoppers: use the Collections and menu planner."
+  - "You need a new site structure or a new theme: ask a Shopify developer or theme designer."
 
 you_give:
   - Your collections with search volume, revenue and product counts
@@ -34,6 +38,29 @@ how_to_use:
   - Count the clicks from your homepage to your top 10 collections and add the numbers.
   - Make the changes in your theme, starting with the menu and the homepage.
   - Count the clicks again and paste the new numbers so it can fill the after table.
+output_sample:
+  input:
+    - Your collections with search volume, revenue and product counts
+    - Your current main menu and homepage sections
+    - Your theme name and how many products you sell (optional)
+    - Your click counts from the homepage to your top 10 collections
+  output:
+    - name: Click depth today
+      contains: The clicks and path from your homepage to each of your top 10 collections now.
+    - name: Main menu
+      contains: The menu style that fits your range size, with the top items and their children.
+    - name: Homepage featured collections
+      contains: Collections in order of volume and revenue, with how each one is shown.
+    - name: Filters
+      contains: Whether to keep filters, and which filter values need their own collection.
+    - name: Sub-collection links
+      contains: Which child collections to show on each parent page, and whether to add images.
+    - name: Product page links
+      contains: Breadcrumbs, tag-style links and related products for product pages.
+    - name: Grid rules
+      contains: A grid that loads without JavaScript, with 36 to 48 products per page and numbered pages.
+    - name: Click depth after
+      contains: The new click count for each top 10 collection, to compare with before.
 
 how_it_works:
   - title: Measures click depth

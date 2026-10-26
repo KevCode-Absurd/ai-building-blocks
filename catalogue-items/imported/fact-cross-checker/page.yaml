@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It compares many sources and weighs where they disagree.
 new_slug: fact-cross-checker
 name: Fact cross-checker
-summary: Give it a claim to check. Get an evidence table with sources,
-  confidence, conflicts and gaps.
+summary: Fact-check a claim against several independent sources. You get an evidence table with confidence levels, conflicts and open gaps.
 job: think-and-decide
 headline: Fact cross-checker
-subhead: A claim checked against several independent sources, with a table that
-  shows what supports it, what contradicts it and where the evidence runs out.
-  You stop trusting the first search result.
+subhead: A claim checked against several independent sources, with a table that shows what supports it, what contradicts it and where the evidence runs out. You stop trusting the first search result.
 explain: |
   A claim checked against several independent sources, with a table that shows what supports it, what contradicts it and where the evidence runs out. You stop trusting the first search result.
 
@@ -18,6 +15,10 @@ when:
   - You are about to put a claim in a report and want proof behind it.
   - Two sources disagree and you need to see why.
   - You want to know which parts of a story rest on one source only.
+not_for:
+  - "You need one simple fact that a single official source answers: look it up on that source yourself."
+  - "You want to audit the claims in an earlier AI run: use the plain @audit-agent-run-evidence skill, not this page."
+  - "Your topic is private or must not be searched online: ask a qualified person, and do not paste it here."
 you_give:
   - The claim or question to check
   - How deep to go (optional)
@@ -29,8 +30,29 @@ you_get:
   - A list of conflicts between sources
   - A list of gaps still open
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini in a mode that can search the web and open pages.
+  - Paste the skill text from this page into the chat.
+  - Type the claim you want checked. Add how deep to go, trusted sources or off-limit sources if you have them.
+  - Read the table by confidence first. Then read the conflicts and gaps before you use the claim.
+  - Click the cited links yourself for anything important. The check shows how well sources agree. It does not prove a claim is true.
+  - Running the validator needs an AI that can run code. Without it, ask for the table in plain text.
+output_sample:
+  input:
+    - The claim or question you want checked
+    - How deep to go (optional)
+    - Sources you already trust (optional)
+    - Anything you do not want searched (optional)
+  prerequisites:
+    - An AI that can search the web and open pages, with at least two different search tools
+    - An AI that can run code, only if you want the report file checked by the bundled validator
+  output:
+    - name: Question and budget
+      contains: The exact claim being checked and the search limit, about six searches and six page opens.
+    - name: Evidence ledger (research-report.json)
+      contains: Each claim linked to its sources, marked as supporting or contradicting, as sourced or inferred, with a confidence level.
+    - name: Sourced synthesis
+      contains: Findings sorted by confidence, with each citation next to its claim and sourced facts kept apart from inference.
+    - name: Conflicts
+      contains: Places where sources disagree, so you can see why.
+    - name: Gaps and failed searches
+      contains: What could not be confirmed, which search tools were unavailable, and the search date for time-sensitive claims.

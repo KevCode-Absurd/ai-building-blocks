@@ -16,12 +16,12 @@ outputs:
   - {type: plan}
 uses: [repeat-order-bottleneck-finder, first-use-gap-checker, reorder-and-second-order-planner, delivery-update-flow-builder, best-and-worst-customer-profiler, top-customer-touch-planner]
 steps:
-  - {uses: repeat-order-bottleneck-finder, note: "Every month: the repeat health score, the stage that holds buyers back and the likely cause, read against last month."}
-  - {uses: first-use-gap-checker, note: "Only when buyers stall between the first order and the second and returns, tickets or reviews show trouble: where buyers get stuck before real use."}
-  - {uses: reorder-and-second-order-planner, note: "Only when first use looks healthy and the product wears out or runs out: the reorder and second-order timing, with a check that skips unhappy buyers."}
-  - {uses: delivery-update-flow-builder, note: "Only when late or unclear delivery is the likely cause: the delivery date rule, the update flow and a delay script."}
-  - {uses: best-and-worst-customer-profiler, note: "Only when buyers from one source or offer repeat far less than the rest: who your best and worst buyers are and where they came in."}
-  - {uses: top-customer-touch-planner, note: "Only when the first-to-second order rate is fine but too few buyers spend a lot: a touch plan for your top customers with a control group."}
+  - {uses: repeat-order-bottleneck-finder, note: "Every month: the repeat health score, the stage that holds buyers back and the likely cause, read against last month. Passes on the stage to fix, which picks one path below."}
+  - {uses: first-use-gap-checker, note: "Only when buyers stall between the first order and the second and returns, tickets or reviews show trouble: where buyers get stuck before real use. Uses your reviews, returns, tickets and product facts, not step 1's report. Passes on a first-use score."}
+  - {uses: reorder-and-second-order-planner, note: "Only when first use looks healthy and the product wears out or runs out: the reorder and second-order timing, with a check that skips unhappy buyers. Uses how long one unit lasts and your sales numbers, not step 2's report. Passes on the reorder email flow."}
+  - {uses: delivery-update-flow-builder, note: "Only when late or unclear delivery is the likely cause: the delivery date rule, the update flow and a delay script. Uses your delivery dates and the reorder flow from step 3 where there is one. Passes on the update flow."}
+  - {uses: best-and-worst-customer-profiler, note: "Only when buyers from one source or offer repeat far less than the rest: who your best and worst buyers are and where they came in. Uses the orders export by source and offer, not the delivery flow. Passes on the buyer profiles."}
+  - {uses: top-customer-touch-planner, note: "Only when the first-to-second order rate is fine but too few buyers spend a lot: a touch plan for your top customers with a control group. Uses the orders export for top customers and your brand brain, with step 5's profiles where it ran. Passes on the touch plan."}
 schedule: "On the first working week of each month, after last month's orders are closed"
 asks_before: [sending any email or text to customers, changing prices, offers or discounts, changing shipping promises or carrier settings, spending money on gifts, mail or inserts, changing a live flow or automation]
 origin: own

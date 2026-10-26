@@ -1,44 +1,77 @@
 new_slug: review-contractual-debt-service-cash-tests
 name: Review contractual debt service cash tests
 headline: Review contractual debt service cash tests
-summary: A defined cash coverage pack with period headroom and source exceptions
+summary: Test your cash against two loan covenants over three periods. Get a headroom table for each test and a note on where the two tests differ.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A defined cash coverage pack with period headroom and source exceptions. Share signed cash-coverage and fixed-charge definitions, source cash bridge, taxes/capital/rent details, scheduled debt service and three covenant periods.
+subhead: Give your AI the credit agreement's definitions, the loan repayment schedule and cash figures for three test periods. It builds a cash cover test and a fixed charge test. You get the headroom for each period and notes where the two tests differ.
 explain: |-
-  A defined cash coverage pack with period headroom and source exceptions.
+  Lenders often set two cash tests. One compares qualifying cash with debt service (interest plus scheduled repayments). The other, fixed charge cover, also counts rent, and may take off tax and upkeep spending. They sound alike. Each has its own definition of cash and of charges, so the numbers differ.
 
-  Credit covenant review. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 builds the cash cushion over the minimum in each of three periods. Step 2 builds the fixed charge test from its own signed definition, then ties debt service and rent back to step 1 and explains each difference.
+
+  Each test keeps its own top and bottom number. The AI never swaps one definition for the other. It does not say whether you are in breach, need a waiver or can cure. Those calls belong to your lender and your lawyer.
 when:
-  - You need a defined cash coverage pack with period headroom and source exceptions.
-  - You work on credit covenant review and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A lender asks for a compliance certificate with a debt service or fixed charge test.
+  - Your cash is close to the covenant floor, and you want to know which period is tightest.
+  - Two covenant ratios give different answers, and you need to explain why.
+  - You are checking a borrower's compliance numbers before you rely on them.
+not_for:
+  - "You want to know if you are in breach or need a waiver: ask your lender and a lawyer. This does the arithmetic only."
+  - "Your covenant is net debt to EBITDA: use the net debt to EBITDA and cure workflow listed under After this."
+  - "You test one period for one ratio: use the Debt service covenant headroom checker, or the Fixed charge coverage bridge builder, on its own."
+  - "You are building project finance cover ratios over the life of a loan: use the Build a project debt service cash pack workflow."
 you_give:
-  - Signed cash-coverage and fixed-charge definitions, source cash bridge, taxes/capital/rent details, scheduled debt service and three covenant periods.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed definitions of qualifying cash, debt service and fixed charges, from the credit agreement
+  - Cash before charges for each of three test periods, from the compliance certificate or your accounts
+  - Cash taxes, upkeep spending and rent for each period, if the contract counts them
+  - Interest and scheduled repayments for each period, from the loan schedule
+  - The minimum cover for each test, such as 1.25 times and 1.2 times
+  - The test dates, currency and scale
 you_get:
-  - A defined cash coverage pack with period headroom and source exceptions.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "A headroom table for the cash test: qualifying cash, debt service, cash needed and headroom in each period"
+  - The tightest period and any cash gap against the minimum
+  - A fixed charge test with a bridge from cash before charges to cash available
+  - A tie between the two tests for debt service and rent, with differences explained
+  - A list of what is MISSING and which checks were missed
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the credit agreement pages with the definitions, the loan schedule and your period figures. Give the test dates and currency.
+  - Ask your AI to follow the pack, save a file for each step and stop a step when an input is missing.
+  - After step 1, check that qualifying cash follows the contract wording, not your own accounts line.
+  - After step 2, read the notes on differences between the tests, then send both tables to your lender contact or lawyer. A spreadsheet tool is needed for the workbook. Without one, your AI gives the tables in chat.
 how_it_works:
   - title: Debt service covenant headroom checker
-    text: Build the three-period debt-service cash test with the actual minimum covenant and qualifying cash. Pass the period debt-service components and definition exceptions to the fixed-charge review.
+    text: Builds the three-period cash test from the actual minimum and qualifying cash. Shows headroom, the tightest period and any gap. Hands step 2 the debt service parts for each period and any definition exceptions.
   - title: Fixed charge coverage bridge builder
-    text: Construct the fixed-charge numerator independently from its signed contract definition, explicitly reconciling rent and debt service to step1. Explain differences between tests; no waiver, breach opinion or equity cure is invented.
+    text: Builds the fixed charge numerator on its own from the signed definition. Ties rent and debt service back to step 1 and explains differences between the tests. Invents no waiver, breach opinion or equity cure.
 output_shape: |-
-  A defined cash coverage pack with period headroom and source exceptions.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES   <test dates, agreement clauses, currency, scale>
+  CASH TEST HEADROOM        <period | qualifying cash | debt service | minimum multiple | cash needed | headroom>
+  TIGHTEST PERIOD           <period, headroom and any cash gap>
+  FIXED CHARGE BRIDGE       <cash before charges | less taxes | less upkeep | cash available | charges | ratio | headroom>
+  TIE BETWEEN TESTS         <debt service and rent in each test, differences explained>
+  MISSING                   <inputs not given>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - The signed cash cover and fixed charge definitions
+    - Cash and charges for three test periods
+    - The loan repayment schedule
+    - The minimum cover for each test
+  prerequisites:
+    - An AI that can read files
+    - The agreement pages that define qualifying cash and fixed charges
+  output:
+    - name: outputs/step-1-debt-service-covenant-headroom-checker.md
+      contains: Headroom for each of three periods, the tightest period and any cash gap.
+    - name: outputs/step-2-fixed-charge-coverage-bridge-builder.md
+      contains: The bridge to cash available, total fixed charges, the ratio and headroom.
+    - name: Tie between tests
+      contains: How debt service and rent match across both tests, and why the answers differ.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,13 +93,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads long documents
+      why: The definitions decide every number. In plain chat, paste the exact clauses.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The latest compliance certificate.
+    - The signed loan schedule.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Covenant
+    meaning: A promise in a loan agreement, such as keeping cash above a set multiple of debt payments.
+  - term: Debt service
+    meaning: The interest and scheduled repayments due on a loan in a period.
+  - term: Fixed charges
+    meaning: Costs that must be paid each period, such as interest, scheduled repayments and rent.
+  - term: Headroom
+    meaning: How far the result sits above the minimum. A negative number means it is below.
+before: []
+next:
+  - review-leverage-headroom-and-cure
+  - build-a-project-debt-service-cash-pack
+  - debt-cash-sweep-checker
+  - borrower-credit-memo-writer

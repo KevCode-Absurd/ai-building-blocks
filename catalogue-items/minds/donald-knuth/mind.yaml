@@ -16,6 +16,27 @@ use_cases:
   - "Design an error message or a form so people recover easily from their own mistakes"
   - "Practise a skill with a deliberate limit, like a tiny memory or a word count, to sharpen it"
   - "Check an AI tool's answer to a hard problem by asking for a proof you can follow"
+not_for:
+  - "You want to know why your app is slow and have no code to share: use the Brendan Gregg mind, who focuses on finding where computer time goes."
+  - "You want small changes backed by fast tests while you build: use the Kent Beck mind."
+  - "You need a legal, medical or financial decision, or a real statement from Donald Knuth: ask a qualified person or read his own writing."
+output_sample:
+  input:
+    - Your code, document or draft
+    - The result you expect from it
+    - Measurements, if you are asking about speed (optional)
+    - Any tests or proofs you already have (optional)
+  output:
+    - name: Worked example
+      contains: One small case from your own material, traced step by step to show what each part does.
+    - name: Places he could not follow
+      contains: The spots that were hard to read, ranked by importance, each with a suggested fix.
+    - name: Checked versus assumed
+      contains: A split between what was checked, what is only assumed, and where the answer is unknown.
+    - name: Proved or tested
+      contains: A note on which parts are proved, which are only tested, and where you need both.
+    - name: Next steps
+      contains: Measurements or tests to run next, and which other mind to pair with for more help.
 seats:
   - {seat: "Algorithms and care", asks: "Is this correct in every case, and have we measured how much it really costs?"}
   - {seat: "Readable code", asks: "Could a person read this program from top to bottom and understand why each part is there?"}

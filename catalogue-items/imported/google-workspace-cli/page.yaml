@@ -2,35 +2,102 @@ thinking: medium
 thinking_why: It follows the tool's command guide for each job.
 new_slug: google-workspace-cli
 name: Google Workspace command-line operator
-summary: Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands
-  set up and run for you.
+summary: Run Gmail, Drive, Sheets and Calendar jobs with the gws command line. Install it, sign in, then send, list, share or audit, with a check before changes.
 job: connect-tools
 headline: Google Workspace command-line operator
-subhead: Gmail, Drive, Sheets, Calendar, Docs, Chat and Tasks handled by
-  commands instead of clicks. Say what you want done, such as sending an email
-  or listing files, and it sets up the tool and runs the right command.
+subhead: "Tell your AI what to do in Gmail, Drive, Sheets, Calendar, Docs, Chat or Tasks. It sets up the free gws command-line tool, signs you in, and runs the commands. It shows you each change before it runs. You need Node 18 or newer and a Google sign-in."
 explain: |
-  Gmail, Drive, Sheets, Calendar, Docs, Chat and Tasks handled by commands instead of clicks. Say what you want done, such as sending an email or listing files, and it sets up the tool and runs the right command.
+  Some Google Workspace jobs are slow by hand. Moving 200 Drive files, searching a year of email, or checking who has outside access to your documents all take many clicks. This Google Workspace command line helper turns each job into commands that your AI runs for you.
 
-  It uses the open source gws command-line tool, which builds its commands from Google's own API list as it runs. Because the tool is still early, the skill checks each command's real options with a help call before it scripts anything. A doctor script confirms the tool is installed and signed in, and an output script turns results into tables. It also covers admin tasks and security checks. It needs Node 18 or newer and a Google sign-in.
+  It uses gws, an open source tool from the Google Workspace team that builds its commands from Google's own list of APIs. The tool is still before version 1.0, and its commands can change. So the skill checks a command's real options with a help call before it uses it, and does not run a command it has not checked.
+
+  The skill adds five small Python helpers. One checks that gws is set up and signed in. One guides sign-in. One lists ready-made recipes. One runs a security audit. One turns raw results into tables.
 when:
-  - You want to send or search email from a script.
-  - You need to list or move many Drive files at once.
-  - You manage a Workspace and want to run security checks.
-  - You want a daily job that reads or updates a Sheet.
+  - You need to find, list or move many Drive files and clicking through them would take hours.
+  - You want a daily job that reads or adds rows to a Google Sheet.
+  - You manage a Workspace and want to check outside sharing, forwarding rules and who is an admin.
+  - You want a weekly standup list of your meetings and tasks from Calendar.
+not_for:
+  - "You want one small edit or a single email: do it in Google's own app, as it is faster than setting up a tool."
+  - "You do not have Workspace admin rights and want admin changes: ask your admin, as those commands will fail."
+  - "You run Microsoft 365, not Google: use the Microsoft 365 admin helper."
+  - "You only want to plan an automation without running anything: use the No-code automation planner."
 you_give:
-  - What you want done in Google Workspace
-  - A Google sign-in for the tool
-  - Node 18 or newer
-  - Admin rights for admin tasks (optional)
+  - What you want done, in plain words, such as "list my 50 biggest Drive files"
+  - A Google account to sign in with
+  - Node 18 or newer installed on your computer
+  - Admin rights, for admin tasks and the security audit (optional)
+  - The names of the people, files or sheets involved (optional)
 you_get:
-  - The tool installed and checked
-  - Commands run for your task
-  - Results shown as tables
-  - Reusable scripts for repeat jobs
+  - gws installed, signed in and checked
+  - The commands for your job, with each change shown before it runs
+  - Results as a table, with name, type, date and link where they apply
+  - A security audit list with a fix for each failed check (if you ask for it)
+  - A saved script for jobs you repeat
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands on your computer.
+  - Use an AI that can run commands on your computer, such as Claude Code or Codex. Install Node 18 or newer first.
+  - Say what you want done and in which Google service. Name the people, files or sheets you mean.
+  - Let the AI install gws and run the doctor check. Then sign in with only the permissions your job needs.
+  - Start with a read-only job, such as a list. Check the table it shows before you ask for any change.
+  - For anything that sends, shares, moves or deletes, ask for a dry run first and read it. Say yes only when it matches what you meant.
+  - If the job will repeat, ask for a saved script and run it on a small test first.
+how_it_works:
+  - title: Check the setup
+    text: It runs the doctor script to see if gws is installed and signed in.
+  - title: Sign in with small permissions
+    text: It guides you through sign-in and asks for only the Google services the job needs.
+  - title: Check the command
+    text: It looks up the exact options of each command with a help call before it uses it.
+  - title: Show, then run
+    text: For changes, it shows the command and what it will touch, and waits for your yes.
+  - title: Present the result
+    text: It turns the JSON reply into a table, or a security audit list with fixes.
+output_shape: |
+  Job: <what you asked for>
+  Checks done: <gws installed, signed in, command options checked>
+
+  | <name> | <type> | <modified> | <link> |
+  (one row per result; columns depend on the job)
+
+  Changes made: <none, or each change with the count of items>
+  Next step: <save as a script, export to a Sheet, or run the audit>
+output_sample:
+  input:
+    - What you want done in Gmail, Drive, Sheets, Calendar, Docs, Chat or Tasks
+    - A Google account to sign in with
+    - The people, files or sheets involved (optional)
+  prerequisites:
+    - Node 18 or newer, so the gws tool can be installed
+    - An AI that can run commands on your computer
+    - Google Workspace admin rights, only for admin tasks and the audit
+  output:
+    - name: Setup check
+      contains: Whether gws is installed, signed in and able to reach each service you need.
+    - name: Command and dry run
+      contains: The exact command, and a preview of what it would change before it runs.
+    - name: Results table
+      contains: Your files, emails or events as a table, such as name, type, modified date and link.
+    - name: Security audit
+      contains: Pass or fail for outside sharing, forwarding rules, mail records, app grants and admin count, with a fix for each fail.
+    - name: Saved script
+      contains: A script you can rerun for a repeat job, such as a daily Sheet update.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can install gws, run the commands and read the results on your own computer.
+    - name: Chat AI without commands
+      why: It can write the commands for you to run yourself, then explain what comes back.
+  inputs:
+    - A list of the files or addresses you mean, so no bulk step touches the wrong ones.
+    - The Google Cloud project name, if your company already set one up for sign-in.
+terms:
+  - term: gws
+    meaning: A free command-line tool that talks to Google Workspace for you.
+  - term: Command line
+    meaning: A window where you type commands instead of clicking.
+  - term: Dry run
+    meaning: A preview of what a command would change, without changing anything.
+  - term: Scope
+    meaning: A permission you give a tool, such as read-only access to your email.
+  - term: Service account
+    meaning: A robot sign-in for scripts that run without a person.

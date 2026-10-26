@@ -1,26 +1,112 @@
 new_slug: diagnose-a-slow-power-bi-report
 name: Diagnose a slow Power BI report
-summary: Find what slows your Power BI report. Get a plan to test each likely cause.
+summary: Find what makes your Power BI report slow. Get likely causes ranked by evidence, and a before-and-after test for each fix.
 job: track-numbers
 headline: Diagnose a slow Power BI report
-subhead: Share the slow steps and measured times. Trace likely causes across the report and data model. Get a test plan.
-explain: Share the slow steps and measured times. Trace likely causes across the report and data model. Get a test plan.
+subhead: Tell it which page or visual is slow, who feels it and what you have measured. It sorts the causes into visuals, DAX, model, gateway and capacity. You get a ranked list of causes, a test for each, and fixes to try in order.
+explain: |
+  A slow Power BI report has many possible causes, and the wrong fix wastes days. Cutting visuals will not help if one DAX measure takes 20 seconds. Moving to a bigger capacity will not help if the model is bloated.
+
+  This skill starts with the facts: which page, which action, who is affected, and how long it takes. It reads your timings from Performance Analyzer, DAX Studio or refresh logs. Then it splits the time between visual drawing, DAX, the model, the data source and the capacity, and names the likeliest cause first.
+
+  For each cause it gives one test to run and what result would confirm it. Fixes come with a before-and-after measurement. It never promises a speed gain it has not seen.
+
+  Free tools are the starting point. Performance Analyzer in Power BI Desktop costs nothing. The Fabric Capacity Metrics app needs a paid Fabric or Premium capacity. This skill comes from GitHub's awesome-copilot collection, shared under MIT.
 when:
-  - You want to diagnose a slow Power BI report.
+  - A report page takes too long to open and people have stopped using it.
+  - One visual or slicer freezes when someone clicks it.
+  - A scheduled refresh used to take minutes and now takes hours.
+  - Someone suggests buying more capacity and you want proof first.
+not_for:
+  - The slowdown is a data-source outage or a gateway fault. Send it to your data platform team first.
+  - You want a full review of your tables and links. Use the Review a Power BI data model.
+  - You want a better page layout, not a faster one. Use the Design a Power BI report layout.
+  - You want to plan a new Power Platform app. Use the Plan a Power Platform solution.
 you_give:
-  - The slow interaction, affected users, model configuration and exported timing or capacity measurements.
+  - The slow action, such as which report, page or visual, and what the person clicks
+  - Who is affected, and when it is slow
+  - Measured times from Performance Analyzer or DAX Studio (optional but best)
+  - How the model is set up, such as Import or DirectQuery, and the slowest measures (optional)
+  - Capacity and gateway details, if the report is online (optional)
 you_get:
-  - A diagnostic plan that distinguishes visual rendering, DAX, model, gateway and capacity causes.
+  - A ranked list of likely causes, each with its evidence
+  - One test per cause, and what result would confirm it
+  - Fixes to try in order, each with a before-and-after measurement
+  - A note when the problem is outside Power BI, and who to ask
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Add this skill to your AI, or paste SKILL.md into a new chat.
+  - Describe the slow action and who feels it. Say how long it takes now and how long you want.
+  - Paste your timings. In Power BI Desktop, open View, then Performance analyzer, start recording, click the slow page and export the result. With no timings, ask for the measurement plan first.
+  - Read the top-ranked cause and its test. Run the test before you change anything.
+  - Make one change at a time. Measure again, and keep the change only if the time drops.
+  - Send anything marked as a gateway, source or capacity problem to the team that owns it.
 how_it_works:
   - title: Define the slowdown
-    text: Record the affected report, operation, users, timing and business target.
-  - title: Compare evidence layers
-    text: Use supplied Performance Analyzer, query timing and infrastructure evidence to narrow hypotheses.
-  - title: Plan and verify changes
-    text: Rank scoped changes and specify before-and-after measurements; do not invent speed gains.
+    text: It records the report, the action, the users, the time and the target.
+  - title: Compare the layers
+    text: It splits your timings across visuals, DAX, the model, the data source and capacity.
+  - title: Rank the causes
+    text: It lists the likeliest causes with the evidence for each, and marks what it cannot tell yet.
+  - title: Plan the tests
+    text: Each cause gets one test and the result that would confirm it.
+  - title: Plan the fixes
+    text: It orders the fixes and names the before-and-after number to measure. It does not invent speed gains.
+output_shape: |-
+  PROBLEM AND SCOPE
+    <report and action> | <who> | <time now> | <target>
+
+  LIKELY CAUSES, RANKED
+    <cause: visual, DAX, model, design, gateway or capacity> | <evidence> | <test to run> | <result that confirms it>
+
+  FIXES TO TRY, IN ORDER
+    <fix> | <what to measure before> | <what to measure after>
+
+  NOT A POWER BI PROBLEM
+    <what points elsewhere> | <who to send it to>
+
+  NEXT STEP
+    <what to measure or do next>
+output_sample:
+  input:
+    - The slow report, page or visual, and what the person does
+    - Who is affected and when it is slow
+    - Timings from Performance Analyzer or DAX Studio (optional)
+    - How the model is set up (optional)
+  prerequisites:
+    - Power BI Desktop, to record timings with Performance Analyzer
+  output:
+    - name: Problem and scope
+      contains: The slow action, who feels it, the time now and the time you want.
+    - name: Likely causes, ranked
+      contains: Each cause with its evidence, the test to run and the result that would confirm it.
+    - name: Fixes to try, in order
+      contains: Each fix with the number to measure before and after.
+    - name: Not a Power BI problem
+      contains: Signs that point to the data source, gateway or capacity, and who to ask.
+    - name: Next step
+      contains: What to measure next, or which review to run.
+works_best_with:
+  tools:
+    - name: Power BI Desktop with Performance Analyzer
+      why: It is free and shows how long each visual and DAX query takes.
+    - name: DAX Studio
+      why: It shows how a slow DAX query spends its time, for deeper checks.
+    - name: Any chat AI
+      why: It can read your exported timings and follow the steps.
+  inputs:
+    - A Performance Analyzer export from the slowest page
+    - The text of your three slowest measures
+    - The model size and storage mode
+terms:
+  - term: Performance Analyzer
+    meaning: A free Power BI Desktop tool that times each visual and the query behind it.
+  - term: DAX
+    meaning: The formula language Power BI uses for measures and calculated columns.
+  - term: DirectQuery
+    meaning: A mode where Power BI asks the data source for answers on each click, instead of storing a copy.
+  - term: Gateway
+    meaning: Software that lets Power BI online reach data kept inside your own network.
+  - term: Capacity
+    meaning: The computing power your organisation pays for to run Power BI online.
 thinking: medium
 thinking_why: It weighs your evidence and follows a specific method.

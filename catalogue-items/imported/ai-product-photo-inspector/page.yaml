@@ -2,37 +2,55 @@ thinking: medium
 thinking_why: It judges flaws like warped hands or fabric, which takes careful looking.
 new_slug: ai-product-photo-inspector
 name: AI product photo inspector
-summary: Give it an AI-made product photo. Get a risk rating, eight checks and
-  lines to add to your prompt before you retry.
+summary: Check your AI product photo before it goes in an ad. Get a risk rating, eight checks and prompt lines to fix faults before you retry.
 job: product-photos
 headline: AI product photo inspector
-subhead: Check an AI-made product photo before it reaches an ad. You get a risk
-  rating of low, medium or high, a verdict on each of eight checks, and a call
-  to run it, redo it or send it for a manual touch-up.
+subhead: Give it an AI-made product photo. It rates the risk as low, medium or high and checks eight common faults. It then tells you to run the photo, redo it or touch it up by hand.
 explain: |
   Check an AI-made product photo before it reaches an ad. You get a risk rating of low, medium or high, a verdict on each of eight checks, and a call to run it, redo it or send it for a manual touch-up.
 
   The eight checks cover a warped product, an odd face, bad hands, wrong limbs, garbled text, clashing light and shadow, cut-out edge marks, and platform rule breaks. The last part is the most useful. It writes one to three English lines you can paste onto the end of your image prompt, so the next try fixes the exact fault. A person still makes the final call. It runs through the dlazy command line and spends credits.
 when:
-  - You made a model-wearing-product photo with AI and want to know if it is
-    ad-ready.
+  - You made a model-wearing-product photo with AI and want to know if it is ad-ready.
   - Your AI images keep having odd hands or smeared logos.
   - You generate many product images and need a fast first filter.
   - You want exact prompt fixes instead of redoing from scratch.
+not_for:
+  - "You want a final ad approval or a ruling on platform rules: ask a person to review it, because this check can miss faults or flag good photos."
+  - "You need to make or edit the image itself: use your image tool, since this only judges the photo and writes fixes."
+  - "Your image is not a product photo, such as a chart or a screenshot: look at it yourself, since the eight checks are made for product shots."
 you_give:
-  - The AI-made product image
-  - The prompt you used (optional)
+  - Your AI-made product photo
+  - The prompt you used to make it (optional)
   - The ad platform it is for (optional)
-  - A dlazy account with credits
+  - The real product photo, to check the product looks the same (optional)
 you_get:
   - A low, medium or high risk rating
   - A pass or fail result for all eight checks
   - A run, redo or retouch call
   - One to three prompt lines to fix the faults
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can look at images, and run code if you want it
-    to retry for you.
+  - Install the dlazy command line tool on your computer. This step needs a place where your AI can run code.
+  - Get your key from your dlazy account. Save it by running dlazy auth set with your key.
+  - Add --dry-run to the command first. It shows the credit cost without a real run.
+  - Run the check on your photo. Read the risk rating, then the eight checks, then the advice.
+  - Paste the prompt fixes at the end of your image prompt, make the photo again, and check it once more.
+  - Look at the final photo yourself before it goes into an ad.
+output_sample:
+  input:
+    - Your AI-made product photo
+    - The ad platform it is for (optional)
+    - A second image of the real product to compare (optional)
+  prerequisites:
+    - An AI that can read images
+    - The dlazy command line tool, installed and signed in with your key
+    - dlazy credits, because each check costs credits
+  output:
+    - name: 风险等级 (Risk level)
+      contains: "One rating for the whole photo: low, medium or high risk."
+    - name: 风险项逐条判定 (Eight checks)
+      contains: A table with a pass or hit for each of the eight checks, plus one line of evidence.
+    - name: 投放建议 (Advice)
+      contains: A call to run the photo, redo it, or send it for manual touch-up.
+    - name: 修正建议 (Prompt fixes)
+      contains: One to three English lines to add to the end of your image prompt, or a note that none are needed.

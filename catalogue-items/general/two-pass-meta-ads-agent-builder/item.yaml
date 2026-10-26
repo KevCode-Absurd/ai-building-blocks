@@ -1,6 +1,6 @@
 slug: two-pass-meta-ads-agent-builder
 name: Two-pass Meta Ads agent builder
-summary: Build a Meta Ads agent that gathers evidence before writing findings. Keep account scope, cost limits and proposed actions clear.
+summary: "Plan a Meta Ads agent that checks the numbers first, then asks a stronger AI only about hard cases. Get a build plan, cost caps and tests."
 category: general
 type: skill
 role: make
@@ -10,9 +10,13 @@ inputs:
   - type: codebase
     required: true
 outputs:
-  - type: code_change
+  - type: plan
     required: true
+  - type: code_change
+    required: false
 uses: []
+before: [meta-developer-app-setup-planner]
+next: []
 package_files: all
 origin: own
 example_pending: true

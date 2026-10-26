@@ -7,7 +7,15 @@ description: Use when a change in your market or work makes the current plan wro
 
 When the ground moves, a team needs three things in one page: what changed, what now comes first, and what each person does next. This skill writes that memo in your voice from your facts. It is for a change in a market, a technology, a rule or a customer habit, in any kind of business or team.
 
-Use [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer) instead when you need a decision on a proposal, not a change of direction announced to your leaders.
+## When not to use this
+
+- You need a yes or no on a proposal: use the [Six-page narrative memo writer](https://useaiblocks.com/skills/six-page-narrative-memo-writer).
+- You are sharing bad news, not changing direction: use the [Bad news update writer](https://useaiblocks.com/skills/bad-news-update-writer).
+- It is a routine status update or a fix for one team: a short plain email is enough.
+
+## Ask first when the three required facts are missing
+
+This rule beats the "go ahead" step in Before you start. If the person has given none of the three required inputs (what changed, how their view moved, their areas), do not return a memo full of `MISSING:` lines. Ask for the three in one message and stop. If they gave some, write the memo and mark the rest `MISSING:`.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -42,12 +50,44 @@ How to start:
 5. **List the changes by area.** For each area write: what stops, what starts, who owns it and by when. At least one area must stop something. Keep each to one line. If an area is not affected, say so, so no one wonders. Do not give two areas the same line.
 6. **Ask each leader to use the new thing.** Write a request with a date: each leader uses the new tool, product or method themselves, and looks at how two rivals handle it, then reports one lesson in a sentence. Name who reports to whom.
 7. **Promise a revision.** State that the plan will change as the team learns, and give the date of the next review and who joins it. Say what would trigger an earlier review.
-8. **Write the memo.** Use the output shape: title, to and from, the top priority first, what changed, the earlier shift, who does it well, the changes by area, the request to leaders, and the revision date. Keep it to one page, about 450 words. Use plain words and the first person.
+8. **Write the memo.** Use the layout under What you hand back, with those exact headings. Keep it to one page, about 450 words. Use plain words and the first person. Put the new top priority in the first lines.
 9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
 
-The memo, ready to send. `MISSING:` lines for anything the person must fill in. Last, CHECKS MISSED: one line per check missed, or "none".
+The memo, ready to send, in this layout:
+
+```
+<MEMO TITLE>
+To: <who> | From: <you> | Date: <date>
+
+THE NEW TOP PRIORITY
+<one line>
+
+WHAT CHANGED
+<three to five sentences, including how your view moved>
+
+AN EARLIER SHIFT
+<two sentences>
+
+WHO IS DOING IT WELL
+<rival or other> | <what they do well>
+
+WHAT CHANGES IN EACH AREA
+<area> | stop | start | owner | date
+
+WHAT I ASK OF EACH LEADER
+<the ask, with dates>
+
+WHEN THE PLAN IS REVISED
+<date, who joins, what brings it forward>
+
+MISSING
+<what the person did not tell you, or none>
+
+CHECKS MISSED
+<one line per check still missed, or none>
+```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -62,6 +102,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The new priority is in the first lines.
 - Rivals' strengths are named honestly.
 - Each area has a concrete change.
+- At least one area says what stops, not only what starts.
 - The memo states when the plan will be reviewed.
 
 ## If something is missing

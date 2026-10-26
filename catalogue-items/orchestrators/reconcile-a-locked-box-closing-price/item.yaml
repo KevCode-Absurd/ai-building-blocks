@@ -1,25 +1,20 @@
 slug: reconcile-a-locked-box-closing-price
 name: Reconcile a locked-box closing price
-summary: Combine unrecovered leakage and a separately documented ticking amount.
+summary: Work out a locked-box deal price after seller leakage and the daily delay fee. Get one bridge from the signed price, transfer ledger and ticking clause.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - locked-box-leakage-checker
   - deal-ticking-fee-checker

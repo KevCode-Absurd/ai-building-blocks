@@ -1,39 +1,46 @@
 # Check ads before they go live: AI Blocks
 
-> 35 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 42 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Ad and page match checker](https://useaiblocks.com/skills/ad-and-page-match-checker): Attach your ad and its page. Get a match score out of 100, ranked mismatches and fixes.
-- [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker): Paste your ad, page or email. Get policy risks flagged line by line, safer rewrites and a compliance score.
+- [Ad and page match checker](https://useaiblocks.com/skills/ad-and-page-match-checker): Check that your ad and landing page match. Get a score out of 100, mismatches ranked by risk, and a fix for each one.
+- [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker): Paste ad, page, script or email copy and name the platform. Get risks flagged line by line, safer rewrites and a checklist-based score.
+- [Ad awareness stage reviewer](https://useaiblocks.com/skills/ad-awareness-stage-checker): Check your ad's awareness stage. Attach the ad and get a score out of 100, the clashes between image and copy, and rewrites to fix them.
 - [Ad claims checker](https://useaiblocks.com/prompts/ad-claim-proof-gap-finder): Share your ad and evidence. Find unsupported claims and get specific fixes with a score out of 100.
-- [Ad distraction checker](https://useaiblocks.com/skills/ad-distraction-checker): Paste your ad and ten viewers' takes on it. Get what stole their attention and what to cut.
-- [Ad launch review agent](https://useaiblocks.com/agents/pre-launch-ad-check-and-fix-loop): Give it a finished ad. It checks, fixes and re-checks until it passes, then hands you a version ready to upload.
-- [Ad layout readability review](https://useaiblocks.com/skills/ad-reading-flow-checker): Share a print ad layout. Find where attention gets lost and what to move, simplify or cut.
-- [Ad meaning test planner](https://useaiblocks.com/skills/ad-meaning-test-planner): Paste your ad and audience groups. Get a short test of whether each group reads it as you mean.
-- [Ad recall risk checker](https://useaiblocks.com/skills/ad-recall-risk-checker): Paste your ad or creator brief. Get a brand-recall score out of 100 and fixes.
-- [Ad response troubleshooter](https://useaiblocks.com/skills/ad-pull-diagnoser): Paste an ad that gets few replies. Get its causes ranked by likelihood and cost to fix.
-- [Ad sameness checker](https://useaiblocks.com/skills/ad-sameness-checker): Paste your live ads with persona, angle, offer. Get idea groups and a sameness score out of 100.
-- [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules): Paste feedback on AI work. Get each fix as a rule with a prompt line and a check line.
-- [Anti-AI-slop copy editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor): Paste your copy. Get each machine-sounding line fixed, the full rewrite and a score out of 100.
-- [Brand campaign recognition review](https://useaiblocks.com/skills/campaign-fame-checker): Share your campaign plan. Get a scored review of recognition, reach and distinctiveness, with the first improvement to make.
-- [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor): Paste your ad and customer quotes. Get off-brand words fixed, claims untouched, and a score out of 100.
-- [Buyer awareness review](https://useaiblocks.com/skills/ad-awareness-stage-checker): Attach your ad. Get its awareness stage, mismatches, a score out of 100 and rewrites.
-- [Direct mail package reviewer](https://useaiblocks.com/skills/direct-mail-package-reviewer): Paste your mailing, envelope line and letter. Get a review of the envelope, offer, copy and look, with fixes.
-- [Find why an ad is not pulling and fix it](https://useaiblocks.com/workflows/ad-not-working-fix): Give it an ad that gets no replies. Get likely causes in order, a fixed version and a test to prove it.
-- [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker): Paste your finished ad. Get a pass or fail on its five jobs, a score out of 100 and ranked fixes.
-- [Fix a static ad's pitch and clear it to run](https://useaiblocks.com/workflows/fix-a-static-ad-then-clear-it-to-run): Give it a static ad and its copy. Get a scored critique, a rewrite that fits the buyer and a ship call.
-- [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker): Paste your headline and offer. Get whether it picks the right reader and promises a clear reward, with stronger versions.
-- [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker): Paste your headline. Get a score out of 100 for who it picks out and what it promises, plus stronger versions.
-- [Image ad review](https://useaiblocks.com/skills/static-ad-critic): Attach a static ad and its page. Get a score out of 100, fixes and two rewrites.
-- [Marketing claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher): Share your copy and evidence. See which claims are supported, which go too far and how to fix them.
-- [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker): Paste your ad and image. Get a compliance score out of 100, every problem and a fixed ad.
-- [Permission email audit](https://useaiblocks.com/skills/permission-email-audit): Paste your email list source and last ten messages. Get which contacts gave real permission and which messages earn it.
-- [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker): Attach your finished ad. Get stop-ship mistakes, each fix, a verdict and a score out of 100.
-- [Sales copy flow review](https://useaiblocks.com/skills/slippery-slide-copy-checker): Share your ad or page. Find lines that break the reading flow and get fixes that keep the argument moving.
-- [Sales copy readiness checker](https://useaiblocks.com/skills/sales-copy-readiness-checker): Paste finished copy and facts. Get ship, fix or rewrite, three fixes and a score out of 100.
-- [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker): Paste a video ad script or storyboard. Get a pass or fail on whether it still sells with the sound off.
-- [Telegram ad vetter](https://useaiblocks.com/skills/telegram-ad-vetter): Give it a channel and its price. Get a verdict on audience, fake followers and fair cost per thousand.
-- [Tighten a video ad script before you film it](https://useaiblocks.com/workflows/tighten-a-video-ad-script-before-you-film-it): Give it your video ad script. Get a tighter script, a sound-off check, a viewer test and a ship call.
-- [USP claim checker](https://useaiblocks.com/skills/usp-claim-checker): Paste an ad and your product facts. Get a pass or fail on whether its one claim is real, unique and strong.
-- [Video ad transition review](https://useaiblocks.com/skills/video-ad-bridge-checker): Paste a video ad script. Get a bridge score out of 100, early-sell spots and a tighter script.
-- [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer): Paste your video hooks and who sees them. Get each scored out of 100, with rewrites.
-- [Winners and losers ad comparer](https://useaiblocks.com/skills/winners-and-losers-ad-comparer): Paste your ads with their replies. Get them ranked, a checklist of what differs and what your winners share.
+- [Ad distraction checker](https://useaiblocks.com/skills/ad-distraction-checker): Check your ad for distractions. Paste it with ten viewers' answers. See what stole attention from your claim and what to cut.
+- [Ad draft repair reviewer](https://useaiblocks.com/agents/pre-launch-ad-check-and-fix-loop): Review a finished ad before upload. Fix supported issues, recheck changed areas and return open facts or remake needs.
+- [Ad layout readability checker](https://useaiblocks.com/skills/ad-reading-flow-checker): Share an image or print ad layout. Find where attention gets lost and what to move, simplify or cut.
+- [Ad meaning test planner](https://useaiblocks.com/skills/ad-meaning-test-planner): Plan a short test of how each audience group reads your ad. Paste your ad and groups, and get questions that show where meanings split.
+- [Ad recall risk checker](https://useaiblocks.com/skills/ad-recall-risk-checker): Share an ad or creator brief. Get a five-part brand-recall review, a checklist score and practical fixes.
+- [Ad response troubleshooter](https://useaiblocks.com/skills/ad-pull-diagnoser): Find why your ad gets few replies. Paste the ad and your results to get likely causes ranked, with the cheapest fix first.
+- [Ad results comparison analyst](https://useaiblocks.com/skills/winners-and-losers-ad-comparer): Find what your best ads have in common. Give it results for five or more ads and get them ranked, with a rule to test and the counts behind it.
+- [Ad sameness checker](https://useaiblocks.com/skills/ad-sameness-checker): Share your ads with buyer, message, offer and format. Get idea groups, a repeat score and specific changes for repeated ideas.
+- [AI visual feedback editor](https://useaiblocks.com/skills/ai-image-fix-rules): Turn feedback on AI images and video into fix rules. Each rule gets a prompt line to paste and a check line, so the same mistake is not paid for twice.
+- [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor): Paste finished copy. Get quoted style problems, plain fixes, a full rewrite and before-and-after scores using its own rules.
+- [Brand voice editor](https://useaiblocks.com/skills/brand-voice-editor): Paste your ad, voice rules and customer quotes. Get small wording fixes that keep claims intact, plus a line-based voice score.
+- [Campaign attention reviewer](https://useaiblocks.com/skills/campaign-fame-checker): Share a campaign plan. Get four scores, the weakest area and one change to test.
+- [China healthcare marketing reviewer](https://useaiblocks.com/agents/agency-healthcare-marketing-compliance): Check China healthcare ads and posts for banned claims before you publish. Get flagged lines, risk levels and safer rewrites. Not legal advice.
+- [Claim evidence checker](https://useaiblocks.com/skills/claim-and-proof-matcher): Share your copy and evidence. See which claims are supported, which go too far and how to fix them.
+- [Creative sprint readiness reviewer](https://useaiblocks.com/skills/creative-sprint-readiness-reviewer): Check a creative sprint before you brief, generate images or launch ads. Get a PASS, FIX or NOT CHECKED result for each gate, with an owner.
+- [Direct mail package reviewer](https://useaiblocks.com/skills/direct-mail-package-reviewer): Check your direct mail package before it prints. Paste the envelope line and letter. Get a score out of 100 and a fix for each problem.
+- [Email consent and message reviewer](https://useaiblocks.com/skills/permission-email-audit): Share how contacts joined and ten messages. Get an evidence review, a custom score and changes to your email plan.
+- [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker): Paste your finished ad. Get a pass or fail on its five jobs, a score and ranked fixes.
+- [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker): Share a headline and offer facts. Check who it speaks to, the benefit it promises and which claims need clearer wording or proof.
+- [Headline relevance checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker): Check a headline for who it speaks to and what it promises. Get a score out of 100 and stronger versions, backed by your own facts.
+- [Image ad launch reviewer](https://useaiblocks.com/workflows/fix-a-static-ad-then-clear-it-to-run): Review a finished image ad, rewrite its pitch for the buyer and check the actual revised ad before launch.
+- [Image ad reviewer](https://useaiblocks.com/skills/static-ad-critic): Check your static ad before you spend. Attach the image and headline. You get a score out of 100, ranked fixes and two rewritten headlines.
+- [Low-response ad repair planner](https://useaiblocks.com/workflows/ad-not-working-fix): Review a weak ad against its results and your past ads. Get ranked likely causes, a revised draft, readiness checks and a test plan.
+- [Marketing evidence expiry reviewer](https://useaiblocks.com/skills/marketing-evidence-expiry-reviewer): Check which marketing claim evidence is out of date or out of scope. Get affected ads and pages, plus a review queue with owners and next steps.
+- [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker): Share ad copy, images or a script. Get possible policy issues, a custom score and changes to review.
+- [Meta Ads 30-check account auditor](https://useaiblocks.com/skills/meta-ads-30-check-account-auditor): Check your Meta Ads account with 30 tests. Get a score out of 100 for tracking, creative, structure and audiences, plus ranked fixes.
+- [Meta creative similarity risk reviewer](https://useaiblocks.com/skills/meta-creative-similarity-risk-reviewer): Find Meta ads that look too alike. Get a creative diversity score out of 100, the repeat pairs, and what new format, hook or look to make next.
+- [Meta event matching evidence reviewer](https://useaiblocks.com/skills/meta-event-matching-evidence-reviewer): Check how well your Meta events match real customers. Get a per-event review of missing fields, hashing and duplicates, with fixes in order.
+- [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker): Share your ad, audience and approved facts. Get located issues, fixes, human checks and a custom score before launch.
+- [Sales copy flow reviewer](https://useaiblocks.com/skills/slippery-slide-copy-checker): Share your ad or page. Find lines that break the reading flow and get fixes that keep the argument moving.
+- [Sales copy readiness checker](https://useaiblocks.com/skills/sales-copy-readiness-checker): Check your sales copy before it goes out. Paste the finished piece and your facts. Get ship, fix or rewrite, up to three fixes and a score.
+- [Sound-off commercial checker](https://useaiblocks.com/skills/sound-off-commercial-checker): Check if your video ad still sells with the sound off. Paste a script or storyboard. Get a pass or fail and a shot for each spoken-only line.
+- [Telegram ad vetter](https://useaiblocks.com/skills/telegram-ad-vetter): Use Telegram channel views, ad terms, and prices to compare costs and flag audience risks.
+- [USP claim checker](https://useaiblocks.com/skills/usp-claim-checker): Check your ad claim before you spend on it. Paste your ad and product facts. You get a pass or fail on offer, rivals and pull, plus a score.
+- [Video ad script and feedback reviewer](https://useaiblocks.com/workflows/tighten-a-video-ad-script-before-you-film-it): Share your video script, product facts and real viewer notes. Get clearer lines, silent-view checks, distraction findings and a pre-launch review.
+- [Video ad transition reviewer](https://useaiblocks.com/skills/video-ad-bridge-checker): Check a video ad script before you film it. Find where viewers feel sold to too soon, and get a bridge score out of 100 plus a tighter script.
+- [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer): Score your video ad hooks out of 100, see who each one attracts, and get rewrites for the weak ones before you film.
+- [Weighted advertising health score builder](https://useaiblocks.com/skills/weighted-advertising-health-score-builder): Score your Meta and Google ad account health out of 100 with weighted checks, a grade for each category and a ranked list of fixes.

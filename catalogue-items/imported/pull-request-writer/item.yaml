@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: code_change
     required: true
+  - type: test_report
+    required: false
 outputs:
   - type: document
 uses: []

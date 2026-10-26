@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It looks up documents, then writes code that follows them.
 new_slug: docs-backed-coder
 name: Docs-backed coder
-summary: Name the framework you use. Get code checked against its official docs,
-  with sources cited.
+summary: Get framework code checked against the official docs, with source links. Name your framework and version and build with the docs, not memory.
 job: build-software
 headline: Docs-backed coder
-subhead: Name the framework you use. Get code checked against its official docs,
-  with sources cited. Bring your framework and version. Use the result to plan
-  your next step.
+subhead: Name the framework you use. Get code checked against its official docs, with sources cited. Bring your framework and version. Use the result to plan your next step.
 explain: |
   Code that follows your framework's official documentation, with the sources shown, so you are not relying on what the AI remembers about an old version.
 
@@ -18,6 +15,10 @@ when:
   - The AI keeps using an outdated API from an older version.
   - You need to be sure a pattern is the recommended one.
   - You want a source link for each framework decision.
+not_for:
+  - "You only need a rename, a typo fix or a file move: ask your AI to do it directly, since no docs are needed."
+  - "You want plain logic like loops or data structures: write it directly, since it works the same in every version."
+  - "You want speed over checking: ask your AI for a quick draft, then check it yourself against the docs."
 you_give:
   - Your framework and version
   - The feature you want to build
@@ -29,8 +30,28 @@ you_get:
   - A note where several approaches exist
   - A check that the version matches
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and read your project files.
+  - Open Claude, ChatGPT or Gemini in a chat that can browse the web. Paste the skill text from this page.
+  - Tell it your framework, its version and the feature you want. If your AI can read files, share your dependency file, such as package.json.
+  - Check the stack it reports. Fix it if a version is wrong.
+  - Read the conflict notes and pick the approach you want.
+  - Open the cited links for any choice you doubt. Look at anything marked UNVERIFIED.
+  - Run your project's tests before you use the code.
+output_sample:
+  input:
+    - Your framework and version, or your project's dependency file
+    - The feature you want to build, such as forms, routing or login
+    - Your existing code (optional)
+  prerequisites:
+    - An AI that can open web pages, so it can read the official docs
+    - An AI that can read your project files (optional, helps it find your versions)
+  output:
+    - name: Stack detected
+      contains: The frameworks and versions found in your dependency file, and where each one came from.
+    - name: Code
+      contains: Code that follows the patterns in the official docs for your version.
+    - name: Source comments
+      contains: Full links to the doc pages, placed in code comments next to each framework choice.
+    - name: Conflict notes
+      contains: Places where the docs and your existing code disagree, with two options for you to pick from.
+    - name: UNVERIFIED flags
+      contains: Patterns it could not find in official docs, marked so you can check them before use.

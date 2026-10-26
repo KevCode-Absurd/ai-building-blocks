@@ -2,11 +2,10 @@ thinking: high
 thinking_why: It builds across many files and checks as it goes.
 new_slug: spec-builder
 name: Spec builder
-summary: Give it a spec and tickets. Get the work built in code, tested and reviewed.
+summary: Give it a spec and its tickets. Spec builder gets the feature built in code on one branch, with tests and a code review. Needs an AI that runs code.
 job: build-software
 headline: Spec builder
-subhead: A finished feature, built in code from a spec and its tickets, then
-  tested and reviewed. The tickets are treated as a task graph, not a list.
+subhead: A finished feature, built in code from a spec and its tickets, then tested and reviewed. The tickets are treated as a task graph, not a list.
 explain: |
   A finished feature, built in code from a spec and its tickets, then tested and reviewed. The tickets are treated as a task graph, not a list. Some are blocked by others, so there is always a set of tickets ready to start.
 
@@ -16,6 +15,10 @@ when:
   - Your tickets depend on each other and you want safe parallel work.
   - You want every ticket tested and merged into one branch.
   - You want a review pass before anything lands on main.
+not_for:
+  - "You have a spec but no tickets yet: write the tickets first, or ask a developer to split the spec into tasks."
+  - "You want one small change or bug fix: ask your AI to build it test-first in a normal chat, no tickets needed."
+  - "Your AI cannot run code or reach your project files: use a plain chat to plan the work, then have a developer build it."
 you_give:
   - A written spec
   - Its tickets with blocking links
@@ -28,8 +31,30 @@ you_get:
   - A code review of the result
   - A draft pull request (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open an AI that can run code and read your project files, such as Claude Code. A plain chat cannot do this job.
+  - Add the skill, and make sure the tdd and code-review skills are there too.
+  - Give it your spec, your tickets and your issue tracker details. Add research notes if you have them (optional).
+  - Tell it to implement the spec. It builds ready tickets in parallel and merges each one into the branch.
+  - Check the code review fixes and the final report before you merge to main.
+output_sample:
+  input:
+    - Your written spec
+    - Its tickets, with links showing which ticket blocks which
+    - Your issue tracker details
+    - Notes from earlier code research (optional)
+  prerequisites:
+    - An AI that can run code, read your project files and start helper agents
+    - Git, with support for separate worktrees (extra working copies of your project)
+    - The tdd and code-review skills
+    - An issue tracker set up for your AI, as the skill expects
+  output:
+    - name: Integration branch
+      contains: One branch that holds every finished ticket, merged in as each one is done.
+    - name: Ticket branches
+      contains: One branch per ticket, built test-first in its own worktree, then merged into the integration branch.
+    - name: Draft pull request
+      contains: Opened after the first merge if your tracker closes work through pull requests or you ask for one, then marked ready at the end.
+    - name: Code review fixes
+      contains: Problems found by the code review on the whole branch, fixed together in one pass.
+    - name: Final report
+      contains: The integration branch name and how each ticket was closed in your tracker.

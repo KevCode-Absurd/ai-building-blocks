@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It weighs money, risk and terms before it advises.
 new_slug: deal-desk-reviewer
 name: Deal desk reviewer
-summary: Give it a deal with a big discount or redlined terms. Get margin, risky
-  terms and a verdict.
+summary: Check a deal desk request before you sign. Give it a big discount or redlined contract. Get margin after discount, risky terms and who must approve.
 job: sell-and-negotiate
 headline: Deal desk reviewer
-subhead: Give it the deal size, discount, tier and any redlined contract terms.
-  It scores margin, risk and fit out of 100 and lands on approve, review,
-  escalate or decline. You get the margin after discount, risky terms with
-  counters, and who should sign off.
+subhead: Give it the deal size, discount, tier and any redlined contract terms. It scores margin, risk and fit out of 100 and lands on approve, review, escalate or decline. You get the margin after discount, risky terms with counters, and who should sign off.
 explain: |
   A big discount request or a customer's redlined contract gets a score, a clear verdict and the right approver. It never approves on its own, so a person always signs off.
 
@@ -19,6 +15,10 @@ when:
   - A customer sent back the contract with edits.
   - You need margin after discount for a CFO review.
   - You want a consistent way to route approvals.
+not_for:
+  - "You need to write the proposal or contract itself: ask your AI to draft it, or have a person write it. This item only reviews a deal."
+  - "You need a full legal review of contract text: send it to your lawyer. This item only scans a short list of risky terms."
+  - "You want to set your discount rules or list prices: decide those first with your finance lead. This item applies rules you already have."
 you_give:
   - Deal size, discount and tier
   - Cost or margin details
@@ -30,8 +30,30 @@ you_get:
   - Risky terms with counters
   - Margin after discount
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can run code, since the scoring uses Python scripts.
+  - Upload the skill folder, or paste the skill text into the chat.
+  - "Describe the deal: size, term, discount, tier, payment terms and costs. Paste the customer's contract edits if you have them."
+  - Ask your AI to run the deal scorer, the discount router and the terms checker.
+  - Read the verdict, the approver chain and the risky terms. Fix or counter the risky terms.
+  - Send the packet to the named approvers. The skill never approves a deal itself.
+output_sample:
+  input:
+    - Deal size, term and discount
+    - Customer tier and payment terms
+    - Cost or margin details
+    - Contract terms or redline from the customer
+    - Your discount policy (optional)
+  prerequisites:
+    - An AI that can run Python code, since the scoring runs as scripts
+    - Your discount and approval rules, if you have them
+  output:
+    - name: Deal score and verdict
+      contains: A score out of 100 across margin, risk, strategic value, commercial fit and term shape, ending in approve, review, escalate or decline.
+    - name: Discount approval chain
+      contains: The people who must sign, from account exec up to CFO or CRO, with estimated days.
+    - name: Risky terms
+      contains: Each risky clause found, how serious it is, a standard counter and who must sign it.
+    - name: Margin after discount
+      contains: How much margin the discount removes from the deal.
+    - name: Review packet
+      contains: The three results combined into one recommendation. A person still approves the deal.

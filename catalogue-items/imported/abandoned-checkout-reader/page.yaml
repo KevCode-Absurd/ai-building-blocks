@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It adds up records into a table.
 new_slug: abandoned-checkout-reader
 name: Abandoned checkout reader
-summary: Pick a date range. Get abandoned checkouts counted by cart value and
-  hour of day.
+summary: Pick a date range and get your abandoned checkouts counted by cart value and hour of day, so you see when Shopify buyers leave.
 job: run-your-store
 headline: Abandoned checkout reader
-subhead: Give it your Shopify store and a start and end date. It pulls every
-  abandoned checkout in that range and counts them by cart value band and by
-  hour of the day. You get both tables, the total found and plain notes on where
-  and when buyers drop off most.
+subhead: Give it your Shopify store and a start and end date. It pulls every abandoned checkout in that range and counts them by cart value band and by hour of the day. You get both tables, the total found and plain notes on where and when buyers drop off most.
 explain: |
   Shoppers who leave at checkout do it at certain prices and certain hours, and this report shows both. It splits abandoned checkouts by cart value and by hour of day.
 
@@ -19,6 +15,10 @@ when:
   - You suspect high-value carts are the ones being dropped.
   - You want to time a reminder email for the busiest drop-off hour.
   - You need numbers for a checkout fix you plan to test.
+not_for:
+  - "You want a checkout conversion rate or drop-off by product: use your Shopify Analytics reports, since this only counts abandoned checkouts."
+  - "You want to email people who left their carts: use Shopify's own abandoned checkout emails, because this report sends nothing."
+  - "You want device type or shopper location: check Shopify Analytics, as this report cannot see either."
 you_give:
   - Your Shopify store address
   - A start date and an end date
@@ -30,8 +30,27 @@ you_get:
   - The total number found
   - Plain notes on where drop-off is highest
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Open an AI that can run commands on your computer, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Sign in to the Shopify command line for your store and make sure it can read checkouts.
+  - Paste the skill into your AI. Then give it your store address, a start date and an end date.
+  - Add your own cart value bands if the default ones do not fit your prices (optional).
+  - Read both tables. Hours are in UTC, so convert them to your local time before you act.
+  - For a busy store, use a shorter date range such as 7 to 14 days. It runs faster.
+output_sample:
+  input:
+    - Your Shopify store address
+    - A start date and an end date
+    - Your own cart value bands (optional)
+  prerequisites:
+    - An AI that can run commands on your computer, such as Claude Code, Cursor, Codex or Gemini CLI
+    - The Shopify command line, signed in to your store
+    - Shopify read access to checkouts (the read_checkouts permission)
+  output:
+    - name: "Table 1: Abandonment by Cart Value Bucket"
+      contains: Each cart value band with its count of abandoned checkouts and its share of the total.
+    - name: "Table 2: Abandonment by Hour of Day (UTC)"
+      contains: Each hour from 00:00 to 23:00 UTC with its count of abandoned checkouts and its share of the total.
+    - name: Outcome summary
+      contains: The total abandoned checkouts found, the date range used and the number of errors.
+    - name: JSON output (optional)
+      contains: The same totals and both tables as structured data, if you ask for the json format.

@@ -2,17 +2,27 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-ticket-priority-planner
 name: Gorgias ticket priority planner
-summary: Connect Gorgias. Get open tickets grouped by urgency and issue type, with suggested next steps.
+summary: Sort your open Gorgias tickets into a support ticket priority list. You get P0 to P3 groups, a category for each, and next steps.
 job: help-customers
 headline: Gorgias ticket priority planner
-subhead: Connect Gorgias and ask which tickets need attention first. It reads recent open tickets and up to fifteen full threads. You get a queue grouped by urgency and issue type, with the customer, ticket age, and suggested next steps.
+subhead: Connect your Gorgias account and ask which tickets need care first. Your AI reads your recent open tickets and the full thread of up to 15 of them. You get a priority list with a category, the customer, the ticket age and a short summary for each.
 when:
-  - You use this tool for customer support and need help with this task.
+  - You start the day with a full Gorgias queue and need to know what to answer first.
+  - A busy sale or a launch floods your inbox with tickets.
+  - You hand the queue to a teammate and want a clear order of work.
+  - You want to spot billing problems or broken features among routine questions.
+not_for:
+  - "You only need a reply to one ticket: write it yourself or use the Gorgias inbox."
+  - "Your support runs on email only, with no Gorgias account: use your email inbox filters or a simple spreadsheet."
+  - "You want a deep review of past tickets or trends: export them from Gorgias and look at them in a spreadsheet."
 you_give:
-  - Recent open Gorgias tickets and message threads.
-  - Any status, date, or tag filters you want to use.
+  - Your Gorgias account, linked through Composio.
+  - A status, tag or time range to focus on (optional).
 you_get:
-  - Show each ticket with its age, category, customer, summary, and recommended next step.
+  - Open tickets sorted into four levels, from P0 critical to P3 low.
+  - "A category on each ticket: bug, billing, how-to, feature, account or other."
+  - The customer, ticket age and a short summary for each ticket.
+  - A list of next steps for the most urgent tickets.
 how_it_works:
   - title: Read open tickets
     text: Fetch recent open tickets and read the full conversations for up to fifteen.
@@ -25,8 +35,28 @@ works_best_with:
     - name: Gorgias
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias ticket priority planner by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Recent open Gorgias tickets and message threads.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Use an AI that can run terminal commands and read skill files, such as Claude Code. A plain chat window cannot do this.
+  - Install Composio CLI and make a Composio account. Check its current pricing first.
+  - Run composio link gorgias and sign in to your Gorgias account when asked.
+  - Add the downloaded folder to your AI and ask for the ticket triage by name.
+  - Add a filter if you want one, such as a tag or a date range.
+  - Read the list. Check the P0 and P1 tickets first, and approve any account changes before they happen.
+output_sample:
+  input:
+    - Your Gorgias account, linked through Composio
+    - A status, tag or date filter (optional)
+  prerequisites:
+    - An AI that can run commands in a terminal
+    - Composio CLI installed, with your Gorgias account linked
+    - A Composio account, which may have its own cost
+  output:
+    - name: P0 - Critical
+      contains: A table of tickets about outages, data loss, security issues or angry VIP customers.
+    - name: P1 - High
+      contains: A table of tickets about broken features, billing problems or repeated complaints.
+    - name: P2 - Medium
+      contains: A table of general questions, how-to requests and minor bugs.
+    - name: P3 - Low
+      contains: A table of feature requests, feedback and non-urgent questions.
+    - name: Recommended Actions
+      contains: A list of next steps for the most urgent tickets.

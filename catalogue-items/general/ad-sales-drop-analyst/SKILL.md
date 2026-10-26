@@ -29,7 +29,7 @@ How to start:
 
 ## What you need
 - **Results rows** (required): totals by ad or campaign for an earlier period and the current one, with dates, currency, the attribution window (how long after a click or view a sale still counts), how long sales take to show, and what each campaign is for.
-- **Targets** (required before calling anything good or bad): target cost per sale or target return, and margin if known.
+- **Targets** (required before calling anything good or bad): target cost per sale or target return, and margin if known. A break-even report from an earlier step gives the target.
 - **Change log** (optional, valuable): dated changes to ads, offers, pages, budgets, targeting and tracking.
 - **Delivery details** (optional): reach, frequency (views per person), and any "learning" status the platform shows.
 - **Tracking details** (optional): event counts, the platform's own match score as it reports it, and the setup with private details removed.
@@ -53,7 +53,7 @@ How to start:
 ## What you hand back
 - **Basis:** what the data covers and what's missing.
 - **Recalculated table** for both periods, and the **chain split**: each link's change and share of the change in cost per sale.
-- **Findings,** ranked: what you saw, the possible reasons (at least two unless the evidence settles it), what to check, the proposal and when to revisit.
+- **Findings,** ranked: what you saw, the possible reasons, what to check, the proposal and when to revisit. Every finding, including the counting check and cost to be seen, lists at least two possible reasons, (a) and (b). If only one fits, say what evidence rules the others out.
 - **Not concluded:** what the data can't support yet.
 - **Score:** both periods, with the sum.
 - The line: "Proposals only. Nothing has been changed."
@@ -73,12 +73,13 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every rate is recalculated from totals, with currency, window and period stated.
 - Counting was checked before any reason about the ad or the audience.
 - The chain split adds up to the change in cost per sale.
+- Every finding lists at least two possible reasons, or says what rules the others out.
 - No promised saving, recovered revenue or guaranteed return.
 - No change is described as made, and nothing is paused.
 - Practice numbers are labelled.
 
 ## If something is missing
-Write `MISSING: <what>`. Without targets, describe only and say so. Never guess targets.
+Write `MISSING: <what>`. Without targets, describe only and say so. Never guess targets. Without an earlier period, describe the numbers and say you can't call a drop. Say this in the first lines, before any finding.
 
 ## Avoid
 - Averaging rates across rows.

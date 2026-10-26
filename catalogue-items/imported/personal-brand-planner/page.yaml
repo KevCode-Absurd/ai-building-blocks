@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It shapes a focus from your goals, then builds a routine around it.
 new_slug: personal-brand-planner
 name: Personal brand planner
-summary: Say who you want to be known as. Get your focus, your audience and a
-  plan to show up steadily.
+summary: "Build a personal brand plan: say who you want to be known as and get your focus, audience, bios and a 90-day plan to show up steadily."
 job: grow-social
 headline: Personal brand planner
-subhead: A clear answer to who you are for, what you stand for and what you want
-  to be known for, with a plan to show up steadily.
+subhead: A clear answer to who you are for, what you stand for and what you want to be known for, with a plan to show up steadily.
 explain: |
   A clear answer to who you are for, what you stand for and what you want to be known for, with a plan to show up steadily. The aim is not fame but to be the obvious choice for a certain kind of person.
 
@@ -17,6 +15,10 @@ when:
   - You are changing careers and need a new public story.
   - You publish ideas but have no focus or rhythm.
   - You are a founder and need your voice to fit your company.
+not_for:
+  - "You only need a brand for your company: use the Brand messaging skill or a brand guide for the business."
+  - "You have no public goal yet, such as clients, speaking or a new job: decide that first, then come back."
+  - "You want your origin story told: use the Brand story skill, then bring the result here."
 you_give:
   - Your name, role and background
   - Who you want to reach
@@ -29,7 +31,37 @@ you_get:
   - Channels to use
   - A steady posting plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the text of SKILL.md into a new chat.
+  - "Say: I want to build my personal brand. Then answer the questions it asks about your role, background, audience, goal, strengths and views."
+  - Add your company brand notes if you have them (optional).
+  - Read sections 01 to 09. Check that the one thing and the positioning line sound like you.
+  - Ask for changes to any section, then start with the Month 1 steps.
+output_sample:
+  input:
+    - Your name and current role
+    - Your background and what you know better than most
+    - Who you want to reach and why
+    - Your platforms and any content you have made (optional)
+    - Your company brand notes (optional)
+  prerequisites:
+    - Company brand notes in .agents/brand-context.md, only if you run a company brand too
+  output:
+    - name: 01 Personal brand foundation
+      contains: Your brand statement, the territory you own, and the one thing you want people to remember.
+    - name: 02 Audience definition
+      contains: Who you want to reach, what they struggle with, and what they need from you.
+    - name: 03 Positioning and differentiation
+      contains: Who else is in your space, the gap you fill, and a one-line positioning statement.
+    - name: 04 Point of view
+      contains: Three or four core beliefs, why most people avoid them, and why you can say them.
+    - name: 05 Personal brand voice
+      contains: How you sound, three tone words, what is off-brand for you, and writing style notes.
+    - name: 06 Platform strategy
+      contains: The one platform to own first, why it fits you, and a realistic posting rhythm.
+    - name: 07 Content pillars
+      contains: Three or four themes with post ideas, plus a suggested mix of content types.
+    - name: 08 Bio versions
+      contains: A long bio, a short bio, a one-liner and a profile headline.
+    - name: 09 90-day launch plan
+      contains: A month-by-month plan for foundation, consistency and expansion.

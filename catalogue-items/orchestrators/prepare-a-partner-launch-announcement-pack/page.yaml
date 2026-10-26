@@ -1,52 +1,104 @@
 new_slug: prepare-a-partner-launch-announcement-pack
 name: Prepare a partner launch announcement pack
 headline: Prepare a partner launch announcement pack
-summary: Share the source files. Get a shared message brief, announcement drafts and an approval tracker.
+summary: Get a shared message brief, announcement drafts for each audience and an approval tracker for a partner launch, so both brands say the same thing.
 job: write-emails
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A shared message brief, announcement drafts and an approval tracker. Share agreed partnership facts, each party approved messaging and voice examples, dates, audiences and distribution permissions. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the facts you and your partner agreed, each side's approved messaging and voice examples, the date and your audiences. Your AI writes one shared brief, drafts for each audience and a tracker for who must approve what.
 explain: |-
-  A shared message brief, announcement drafts and an approval tracker.
+  A partner launch has two brands, two sets of approvers and one story. The usual failure is small: one side says "launching Tuesday", the other says "this week", and a claim your partner never agreed to goes out under both names. This workflow keeps everyone to the same agreed facts.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Both parties claims and brand use are sourced; a draft remains unpublished until the named owners approve. Missing tools or evidence stay visible in the final summary.
+  It starts with who needs to know and who must check what. Then it writes a one-page shared brief of the agreed facts, a core announcement and a version for each audience. Last it checks each version against the right brand's voice and makes sure the joint claims match everywhere.
+
+  Every draft stays unpublished until the named approvers say yes. The tracker shows who approved what and when. It never sends or posts anything for you.
 when:
-  - You need a shared message brief, announcement drafts and an approval tracker.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You and a partner have signed a deal and a launch date is set, and you need the announcement
+  - You must tell customers, the partner's customers and your own staff, each in a different way
+  - Your partner's legal or brand team must approve the wording before anything goes out
+  - You want one shared set of facts so emails, posts and press notes never disagree
+not_for:
+  - The partner has not signed off on the deal or the date. Settle the terms first with Set up a partner deal both sides win from.
+  - You want a media list and pitch emails for the press. Use the Press outreach planner.
+  - You are telling only your own staff about a change. Use the Staff announcement writer.
+  - You want a progress update for a team or leaders. Use the Stakeholder update writer.
 you_give:
-  - Agreed partnership facts, each party approved messaging and voice examples, dates, audiences and distribution permissions.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - "The agreed partnership facts: what you are launching, the date, and what each side does"
+  - Each side's approved messaging, and the rules for using each other's name and logo
+  - A few examples of each brand's voice, such as past posts or emails
+  - The audiences you will tell, such as your customers, their customers, staff or press
+  - Where you may post or send it, and who approves on each side (optional)
 you_get:
-  - A shared message brief, announcement drafts and an approval tracker.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A shared message brief: the agreed facts, the claims each side may make and words to avoid"
+  - "An audience and approver map: who you tell and who checks each message"
+  - A core announcement and one draft for each audience, in the right voice
+  - "An approval tracker: each draft, its audience, approver, status and date"
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Share the agreed facts, each side's approved messaging and voice examples, and the audiences. Use only facts both sides agreed.
+  - Read the shared brief first. Send it to your partner and fix any fact either side disputes.
+  - Send each draft to its approvers. Record their answers in the tracker. Publish nothing until each draft is approved.
 how_it_works:
   - title: Stakeholder map builder
-    text: Map the audiences and the people who must check the announcement.
+    text: Maps the audiences you will tell and the people who must check the announcement on each side. It hands on the audiences, approvers and agreed facts.
   - title: Stakeholder update writer
-    text: Draft the core announcement and audience variants using the agreed facts.
+    text: Writes a one-page shared brief, then a core announcement and a version for each audience, from the agreed facts. It hands on the brief and every draft.
   - title: Brand voice editor
-    text: Check each version against the appropriate voice while keeping joint claims consistent.
+    text: Checks each version against the right brand's voice and keeps joint claims the same in every draft. It hands back drafts ready for approval.
 output_shape: |-
-  Scope and source coverage
-  A shared message brief, announcement drafts and an approval tracker.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SHARED MESSAGE BRIEF
+  Agreed facts | Claims each side may make | Words to avoid | Date | Open questions
+
+  AUDIENCE AND APPROVER MAP
+  Audience | What they need to know | Approver on our side | Approver on partner's side
+
+  DRAFTS
+  Core announcement
+  Audience version | Voice used | Facts used
+
+  APPROVAL TRACKER
+  Draft | Audience | Approver | Status (not sent, in review, approved, changes) | Date | Notes
+
+  HAND-BACK SUMMARY
+  Files | MISSING lines | Checks missed | One next step
+output_sample:
+  input:
+    - The agreed partnership facts, with the date
+    - Each side's approved messaging and logo rules
+    - Examples of each brand's voice
+    - The audiences you will tell
+    - Where you may post or send, and who approves (optional)
+  prerequisites:
+    - A signed or agreed deal, so the facts are final
+  output:
+    - name: Shared message brief
+      contains: The agreed facts, the claims each side may make, words to avoid and open questions.
+    - name: Audience and approver map
+      contains: Each audience, what they need to know and who must approve on each side.
+    - name: Core announcement
+      contains: The main message, using only the agreed facts.
+    - name: Audience versions
+      contains: One draft per audience, edited to the right brand's voice, with joint claims unchanged.
+    - name: Approval tracker
+      contains: Each draft with its audience, approver, status and date, all unpublished until approved.
+    - name: Hand-back summary
+      contains: Files saved, MISSING facts, checks not done and one next step.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Name the audiences and channels you need now. Add the rest later.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Share the agreed terms and approved wording, not your memory of them.
   - what: Acceptance
-    how: Both parties claims and brand use are sourced; a draft remains unpublished until the named owners approve.
+    how: Name who must approve on each side. No draft goes out before they do.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They read the agreed facts and voice examples and keep each step as a file. They do not send, post or contact your partner. You do that.
+  inputs:
+    - Your brand brain or voice notes, and your partner's if they share them.
+    - A named contact at the partner for questions on the facts.
 judge:
   - Both parties claims and brand use are sourced; a draft remains unpublished until the named owners approve.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,13 +114,13 @@ improve:
   - Add your own acceptance rules and one approved example without changing the component licences.
   - Keep corrections with the result so the next run uses current facts and the same definitions.
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+next:
+  - press-outreach-planner
+  - staff-announcement-writer
 terms:
+  - term: Joint claim
+    meaning: A statement about the partnership that both sides have agreed to, such as the date or what the product does.
+  - term: Approval tracker
+    meaning: A table that shows who must approve each draft and whether they have.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

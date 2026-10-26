@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: competitor_set, required: true}
   - {type: brand_brain, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: angle_library}
 origin: rebuilt

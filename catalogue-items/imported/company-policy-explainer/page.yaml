@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It finds a rule and restates it.
 new_slug: company-policy-explainer
 name: Company policy explainer
-summary: Ask about leave, travel or expenses. Get the rule in plain words from
-  your handbook. Check with HR for big decisions.
+summary: Ask a plain question about leave, travel or expenses. Get your company policy explained in plain words, with the section it came from.
 job: hire-people
 headline: Company policy explainer
-subhead: Straight answers to questions like how much leave you get or what you
-  can claim on a trip, taken from your own handbook and put in plain words.
+subhead: Straight answers to questions like how much leave you get or what you can claim on a trip, taken from your own handbook and put in plain words.
 explain: |
   Straight answers to questions like how much leave you get or what you can claim on a trip, taken from your own handbook and put in plain words. Staff stop waiting days for HR to reply to simple questions.
 
@@ -17,6 +15,10 @@ when:
   - You are unsure whether an expense is covered before you spend.
   - Your handbook is 80 pages and nobody reads it.
   - HR keeps getting the same five questions each week.
+not_for:
+  - "You have a pay dispute or a legal question: go straight to HR or a lawyer."
+  - "Your handbook has no text on the topic: ask HR, because this tool will not guess a rule."
+  - "You need your own leave balance and have no HR system linked: check your HR portal or ask HR."
 you_give:
   - Your employee handbook or policy text
   - The question in your own words
@@ -27,8 +29,28 @@ you_get:
   - Steps to follow, such as who to ask or what form to file
   - A note when HR should confirm
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your handbook or wiki.
+  - Open Claude, ChatGPT or Gemini and paste this skill into the chat.
+  - Paste your handbook text, or attach the file if your AI can read files.
+  - "Type your question the way you would say it, such as: can I work from Europe for a month?"
+  - Add your country or region if rules differ by place (optional).
+  - Check the Source line against your handbook before you act.
+  - For a dispute, a legal issue or a big decision, ask HR.
+output_sample:
+  input:
+    - Your employee handbook or policy text
+    - Your question in your own words
+    - Your country or region (optional)
+  prerequisites:
+    - Your handbook text, pasted into the chat or shared as a file
+    - An HR system link, only if you want your own leave balance (optional)
+  output:
+    - name: Quick Answer
+      contains: A one or two sentence direct answer to your question.
+    - name: Details
+      contains: The policy points, explained in plain words.
+    - name: Exceptions / Special Cases
+      contains: Any exceptions or edge cases that may change the answer.
+    - name: Who to Contact
+      contains: The person or team to ask when the handbook does not cover your case.
+    - name: Source
+      contains: The document name, page or section the answer came from.

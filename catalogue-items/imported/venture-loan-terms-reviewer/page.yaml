@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It weighs loan terms against a startup's profile.
 new_slug: venture-loan-terms-reviewer
 name: Venture loan terms reviewer
-summary: Give it a startup loan offer. Get the cost, warrants and covenants
-  explained, with points to question.
+summary: Check a venture loan term sheet before you sign. See the cost, warrants and covenants in plain words, plus risks and questions for the lender.
 job: money-and-investing
 headline: Venture loan terms reviewer
-subhead: "A startup loan offer explained in plain words: what it costs, what you
-  give up and where the lender can pull the plug. It checks the rate, usually
-  the prime rate plus a margin, and whether you pay interest only first or repay
-  from day one."
+subhead: "A startup loan offer explained in plain words: what it costs, what you give up and where the lender can pull the plug. It checks the rate, usually the prime rate plus a margin, and whether you pay interest only first or repay from day one."
 explain: |
   A startup loan offer explained in plain words: what it costs, what you give up and where the lender can pull the plug. It checks the rate, usually the prime rate plus a margin, and whether you pay interest only first or repay from day one. It calculates warrant coverage, for example 10 percent of the loan, and how many shares that gives the lender at today's price. It tests whether the loan adds six to nine months of runway. It reads covenants such as minimum cash or revenue, and reviews the material adverse change clause that lets a lender freeze a credit line. Last, it flags refinance risk if your next round slips.
 when:
@@ -17,18 +13,48 @@ when:
   - You want to extend runway without selling more shares.
   - You are comparing two debt offers and cannot tell which is cheaper.
   - You want to know what could trigger the lender to stop funding.
+not_for:
+  - "You need legal advice on a signed or final offer: ask a lawyer to review the term sheet before you sign."
+  - "You want to raise money by selling shares: talk to your investors or a startup adviser, as this only reviews debt."
+  - "You run a steady small business with assets to pledge: ask your bank for a standard business loan instead."
 you_give:
   - The loan term sheet or its main terms
   - Your monthly revenue, growth and margins
   - Cash in the bank and monthly burn
   - Your investors and how much you raised
+  - Your share price or company valuation, to count warrant shares
+  - What the money is for, such as runway, equipment or a purchase (optional)
 you_get:
   - A summary of cost and repayment
   - Warrant size and share count
   - Covenants and clauses explained
   - Risks and questions to ask the lender
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Paste your term sheet, or type its main terms: amount, rate, repayment, warrants and covenants."
+  - Add your revenue, growth, margins, cash, monthly burn and share price or valuation.
+  - Ask your AI to review the offer from your side as the borrower.
+  - Read the covenants and risks first. Then take the questions to the lender.
+  - Have a lawyer check the final term sheet before you sign.
+output_sample:
+  input:
+    - Your loan term sheet or its main terms
+    - Your monthly revenue and growth rate
+    - Your cash in the bank and monthly burn
+    - Your investors and how much equity you have raised
+    - Your share price or valuation, so it can count warrant shares
+  prerequisites:
+    - An AI that can run code, if you want the exact maths from the calculate script (optional)
+  output:
+    - name: The Terms
+      contains: Loan amount, interest rate (usually prime plus a margin), repayment period, warrant coverage and strike price.
+    - name: Warrant calculation
+      contains: The warrant coverage and how many shares the lender can buy at the current valuation.
+    - name: Runway check
+      contains: Whether the loan adds six to nine months before your cash runs out.
+    - name: Covenants
+      contains: Minimum cash and minimum monthly revenue targets you must meet, explained in plain words.
+    - name: Material adverse change review
+      contains: How the clause could let the lender freeze your credit line if your business weakens.
+    - name: Risk Assessment
+      contains: "Refinance risk: whether you could raise your next round in time to repay."

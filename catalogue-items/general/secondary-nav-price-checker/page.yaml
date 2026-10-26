@@ -1,7 +1,7 @@
 new_slug: secondary-nav-price-checker
 name: Secondary NAV price checker
 headline: Secondary NAV price checker
-summary: Reconcile an LP-interest NAV quote with interim distributions and remaining cash-call exposure.
+summary: Check a secondary NAV price quote. See your closing payment after interim distributions, plus the future cash calls you would also have to fund.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need quoted price, adjusted closing payment and a separate future-call funding budget.
   - You work on private fund secondaries and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need a fair value or a view on future NAV: ask a valuation professional, since this only does price arithmetic."
+  - "The deal has interim cash calls, currency conversion or a discount-rate valuation: use a valuation specialist, as this check does not cover them."
+  - "You need to know if the deal terms are legal or binding: ask a lawyer, because the arithmetic cannot settle that."
 you_give:
   - Dated reference NAV, signed price fraction, interim distributions retained by seller under a dollar-for-dollar price adjustment and transferred unfunded commitment.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,26 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Your reference NAV and its date
+    - Your price fraction, such as the percent of NAV quoted
+    - Interim distributions the seller keeps and credits against the price
+    - Your unfunded commitment that transfers to the buyer
+    - Your reporting date, currency and scale
+  prerequisites:
+    - An AI that can run code and make spreadsheet files, for the workbook and the calculation script (optional for a plain answer)
+  output:
+    - name: Scope and dated sources
+      contains: The deal, the sources used and the date of each one.
+    - name: Inputs and assumptions
+      contains: Each input with its source, date, currency and scale, and every assumption made.
+    - name: Model calculations and reconciliations
+      contains: Quoted price, adjusted closing payment and the separate future-call funding budget, with checks that tie them back.
+    - name: Actual file verification
+      contains: Which workbook and script checks ran and what they found.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not supplied and checks that failed or could not run.
 how_it_works:
   - title: 1. Confirm the quoted NAV date, transferred interest and treatment of calls and distributions between reference date and closing
     text: Confirm the quoted NAV date, transferred interest and treatment of calls and distributions between reference date and closing.

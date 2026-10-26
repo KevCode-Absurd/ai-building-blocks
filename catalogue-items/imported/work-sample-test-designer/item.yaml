@@ -1,6 +1,6 @@
 slug: work-sample-test-designer
 name: Work sample test designer
-summary: Name the role. Get a work test, a scoring guide and fairness checks. You make the hiring call, not the AI.
+summary: Design a work sample test for any role, with a scoring guide and fairness checks, so you hire on what candidates can actually do.
 category: general
 boards: []
 type: skill
@@ -10,6 +10,10 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: plan
+    required: false
+  - type: document
+    required: false
 outputs:
   - type: document
 uses: []

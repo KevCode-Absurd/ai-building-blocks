@@ -15,6 +15,29 @@ use_cases:
   - "Create a balanced scorecard for a neighbourhood event"
   - "Examine a local decision's effects on people and places elsewhere"
   - "Choose a career learning direction using a richer idea of a good life"
+not_for:
+  - "You want a sustainability certificate or an exact footprint: no AI chat can give one, so use a specialist or the formal Doughnut Economics Action Lab method."
+  - "You need to judge a choice on odds, outcomes and when to quit: use Annie Duke."
+  - "You need a budget or plan for family money: use Beth Kobliner."
+output_sample:
+  input:
+    - The household arrangement, event, project or purchase you want to review
+    - What you hope it will make possible for people
+    - Who does the care, time and upkeep work today
+    - What you already know about costs, access and materials (optional)
+  output:
+    - name: Purpose
+      contains: A short statement of the needs and qualities of life the activity should support.
+    - name: Provision map
+      contains: Paid services, public help, household care, shared resources and material demands, including work that usually goes unseen.
+    - name: Shortfalls and pressures
+      contains: Whose needs are unmet and where burdens fall, kept side by side instead of one score.
+    - name: Scorecard
+      contains: A few measures you can gather, with what each one shows and cannot show.
+    - name: Trade-offs and evidence gaps
+      contains: The choices that remain and the facts you would need to check.
+    - name: Next decision or inquiry
+      contains: One practical step, such as a talk, a trial or a request for evidence.
 seats:
   - {seat: "Thriving within social and ecological limits", asks: "Whose needs are met, and what pressures does the arrangement create?"}
   - {seat: "Care, commons and wider consequences", asks: "What value and cost have we left outside the picture?"}

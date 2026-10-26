@@ -1,6 +1,6 @@
 new_slug: business-worth-owning
 name: "Find out if a business is worth owning long term"
-summary: "Give it a business and its figures. Get a pass, fail or too-hard call on ten tests, and what to check next."
+summary: "Check if a business is worth owning long term. Give it a business and its accounts. Get ten tests marked pass, fail or unknown, and a verdict."
 job: money-and-investing
 thinking: high
 thinking_why: "It runs seven skills, reads accounts and has to tell a gap from a pass. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You are weighing a business to buy or to own a share of, and want a plain call before you spend time on its price.
   - You like a business and want to know if your liking holds up against ten tests.
   - You are comparing two businesses and want them on the same page.
+not_for:
+  - "You want a buy or sell call or a share price: use the Bad-year break-even tester or a licensed adviser, since this gives no buy or sell calls."
+  - "You only want to know what the assets are worth: use the Business asset value estimator."
+  - "The business has no public or shared accounts, such as a very young company: ask for its books first, or talk to an accountant."
 
 you_give:
   - The business, in a few lines, and what you know of its rivals (optional)
@@ -37,6 +41,30 @@ how_to_use:
   - Describe the business, then paste or attach its accounts for the last four or five years.
   - Read the unknowns on the last page first. They show what to read or ask next.
   - If the verdict is worth a price check, carry on with "Value a business and the discount to ask for".
+output_sample:
+  input:
+    - The business, in a few lines, and its rivals (optional)
+    - "Four or five years of accounts: profit, equity, debt, sales, spending, working capital"
+    - Notes on its managers, such as letters to owners (optional)
+  prerequisites:
+    - An AI that can read pasted text or attached files, such as Claude with the handoff pack
+  output:
+    - name: "Step 1: Lasting edge"
+      contains: What customers get, the barrier that protects it, and how long the edge should last.
+    - name: "Step 2: Inside what you understand"
+      contains: A yes, no or too tough call on whether you can judge this business.
+    - name: "Step 3: Steady record"
+      contains: Steady, mixed, changing or too young, with flags for changes of course.
+    - name: "Step 4: The people running it"
+      contains: Whether managers are able, honest and owner-minded, each with evidence.
+    - name: "Step 5: Returns and margins"
+      contains: Return on equity, margins and the one-dollar test, each marked pass, fail or unknown.
+    - name: "Step 6: Owner earnings"
+      contains: The cash an owner could take out, as a low, middle and high figure.
+    - name: "Step 7: The ten tests"
+      contains: Ten tests marked pass, fail or unknown, a verdict, red flags and what to read or ask next.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every missing item in one list.
 
 how_it_works:
   - title: Tests for a lasting edge

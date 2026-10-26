@@ -2,24 +2,23 @@ thinking: high
 thinking_why: Control choice depends on classification and many notes.
 new_slug: nz-gov-security-check
 name: New Zealand government security checker
-summary: Describe your agency system. Get which NZISM controls apply, your gaps
-  and what certification needs.
+summary: Check your New Zealand government security controls. Describe your system and get the NZISM controls that apply, your gaps and the steps to certification.
 job: check-contracts
 headline: New Zealand government security checker
-subhead: Describe your agency system. Get which NZISM controls apply, your gaps
-  and what certification needs. Bring a description of the system and what it
-  handles. Use the result to plan your next step.
+subhead: Describe your agency system. Get which NZISM controls apply, your gaps and what certification needs. Bring a description of the system and what it handles. Use the result to plan your next step.
 explain: |
   If you work with a New Zealand government agency, this tells you which security rules from the NZISM apply to your system and where you fall short. It uses the real control numbers, not made-up ones, so you can check each answer against the manual.
 
   First it fixes the classification of your system, from Unclassified up to Top Secret, and assumes Restricted if you do not say. It then matches controls to your setup and builds a gap table with status, evidence needed and notes. It can also lay out the certification and accreditation steps, write policy documents, and explain supplier duties. Incident answers name the right New Zealand bodies to tell.
 when:
-  - You supply software to a New Zealand agency and need to know which controls
-    reach you.
-  - Your agency system is heading for certification and you need the steps and
-    paperwork list.
+  - You supply software to a New Zealand agency and need to know which controls reach you.
+  - Your agency system is heading for certification and you need the steps and paperwork list.
   - You are writing a security policy and want it tied to NZISM control numbers.
   - A supplier asks what security duties pass down to them.
+not_for:
+  - "Your system has no link to a New Zealand agency: use ISO 27001 for a general security standard, or the Protective Security Requirements (PSR) if you need New Zealand government guidance."
+  - "You need a legal ruling or a certification decision: ask a qualified assessor or a lawyer, because this gives general guidance only."
+  - "You only want to know if your contract terms are safe: ask your lawyer to review the contract, since this checks security controls, not contract wording."
 you_give:
   - A description of the system and what it handles
   - The classification level, if known (optional)
@@ -31,7 +30,30 @@ you_get:
   - Policy text with control references
   - Classification handling guidance
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. If your AI accepts files, also add the three reference files in the skill folder.
+  - Describe your system in plain words. Say what information it holds and whether you are an agency or a supplier.
+  - Add the classification level if you know it. If you skip it, the skill assumes Restricted.
+  - "Ask for what you need: a gap table, certification steps, a policy or help with one control."
+  - Check each control number against the official NZISM before you act on it.
+  - Ask a qualified assessor to confirm the results before any certification decision. You can use the gap table as the base for your plan of action or your system security plan outline.
+output_sample:
+  input:
+    - A short description of your system and what information it handles
+    - The classification level, if you know it (optional)
+    - Whether you are an agency or a supplier
+    - Your current controls or policies (optional)
+  prerequisites:
+    - An AI that can read the skill's reference files, so control numbers come from the verified list
+  output:
+    - name: Gap table
+      contains: One row per control with control ID, section, description, whether it applies, status, evidence needed and gap notes.
+    - name: Control guidance
+      contains: "For a chosen control: purpose, requirement, steps to put it in place and the evidence an auditor will want."
+    - name: Certification and accreditation pathway
+      contains: Step-by-step path to certification with the paperwork you need at each step.
+    - name: Policy document
+      contains: A full structured security policy with NZISM control references.
+    - name: Classification guidance
+      contains: What each classification level means, how to handle it and which controls apply.
+    - name: Supplier duties
+      contains: Which security duties pass down from an agency to its suppliers.

@@ -34,3 +34,27 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - You want a small, time-boxed test with a cost cap and a stop rule. Use the Community growth experiment planner.
+  - Your members are developers and you need channels, welcome text and rules. Use the Developer community builder.
+  - You want reward sizes and an invite-to-payout flow. Use the Referral program designer.
+output_sample:
+  input:
+    - What your product or brand does and who uses it
+    - The platform you use or are thinking about, such as Discord, Slack, Circle or Reddit
+    - Your stage and size, from pre-launch to established
+    - Your main goal, such as retention, fewer support tickets, feedback or word of mouth
+    - Your product marketing notes (optional)
+  output:
+    - name: Community strategy doc
+      contains: Platform choice, the identity members share, the weekly core loop and a 90-day launch plan.
+    - name: Channel architecture
+      contains: Each channel or category with its purpose and posting guidelines.
+    - name: New member welcome path
+      contains: A pinned welcome post, a DM template and first-week prompts.
+    - name: Community ritual calendar
+      contains: Weekly and monthly threads, calls and challenges that build a habit.
+    - name: Ambassador program brief
+      contains: Who to pick, the benefits, an outreach template and how to track results.
+    - name: Health audit report
+      contains: Your current numbers, a diagnosis and the top three things to fix.

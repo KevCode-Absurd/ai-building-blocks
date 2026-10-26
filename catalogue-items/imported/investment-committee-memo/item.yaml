@@ -1,7 +1,7 @@
 slug: investment-committee-memo
 renamed_from: investment-committee-memo-drafter
 name: "Investment committee memo drafter"
-summary: "Give it diligence findings and deal terms. Get a structured committee memo with facts, risks and open questions."
+summary: "Turn your diligence notes and deal terms into an investment committee memo for an Indian deal, with a recommendation, risks and open questions."
 category: general
 boards: []
 type: skill
@@ -13,6 +13,10 @@ inputs:
     required: true
   - type: brief
     required: true
+  - type: audit_report
+    required: false
+  - type: document
+    required: false
 outputs:
   - type: document
 uses: []

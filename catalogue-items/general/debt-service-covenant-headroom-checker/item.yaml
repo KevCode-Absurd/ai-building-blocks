@@ -1,15 +1,13 @@
 slug: debt-service-covenant-headroom-checker
 name: Debt service covenant headroom checker
-summary: A debt service covenant schedule and minimum cash headroom
+summary: "See your cash cushion over a debt service covenant in each of three test periods, and where cash falls short of the floor."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - fixed-charge-coverage-bridge-builder
+  - net-leverage-covenant-checker
+  - review-contractual-debt-service-cash-tests
 origin: own
 version: 1.0.0
 added: 2026-10-22

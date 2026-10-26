@@ -1,28 +1,35 @@
 new_slug: value-ladder-planner
 name: "Value ladder planner"
-summary: "Paste your product, prices and what buyers do next. Get a ladder from a free first step to a top tier."
+summary: "Turn what you sell into a value ladder: a free first step, rising rungs, what moves buyers up and the one rung to fix this quarter."
 job: make-offer
 thinking: medium
 thinking_why: "It arranges your offers and picks one rung to fix, which takes some judgement, but the steps are fixed."
 
 headline: "Value ladder planner"
-subhead: Give it everything you sell, its prices and what buyers do next. It starts a ladder with a free or very cheap first step, puts each rung higher in price and result, and adds one recurring rung. You get the ladder, what moves a buyer up and the one rung to work on this quarter.
+subhead: Give it your offers, their prices and what each one does for the buyer. It builds a value ladder with a free or low first step and rungs that rise in price and result. You get the ladder, what moves a buyer up each rung and the one rung to work on this quarter.
 
 explain: |
-  Many businesses have one offer at one price. A buyer who is not ready for it leaves, and a buyer who wants more has nowhere to go. A value ladder is a set of offers in order, from a free or low first step to a top tier, where each rung solves a bigger problem for the same buyer at a higher price.
+  Many businesses sell one offer at one price. A buyer who is not ready leaves. A buyer who wants more has nowhere to go. A value ladder fixes both. It puts your offers in order, from a free or low first step to a top tier. Each rung solves a bigger problem for the same buyer at a higher price.
 
-  This skill lists everything you sell and what each costs the buyer. It starts the ladder with a free or very cheap step that solves one small problem, then puts each next rung at a higher price and a bigger result. It adds one recurring-fee rung so income repeats, marks one core path, writes what moves a buyer up each rung and picks the single rung to build or fix this quarter.
+  This skill lists what you sell and what each offer costs the buyer. It starts the ladder with a small, easy step. Then it puts each next rung higher in price and result. It adds one rung with a repeat fee, so income comes again. It marks the core path and writes what moves a buyer up. Last, it picks the one rung to build or fix this quarter, so you do not try to fix everything at once.
 
 when:
-  - You sell one main thing and lose buyers who are not ready for it.
+  - You sell one main thing, and buyers who are not ready for it leave.
   - You have many products with no clear order between them.
   - Buyers stop after one purchase and you do not know what to offer next.
+  - A teammate asks "what do we sell first, and what comes after?"
+
+not_for:
+  - You have no offers or prices yet. Start with the Hidden offer finder or the Offer builder that answers buyer doubts, then come back.
+  - You want to price one offer in good, better and best versions. Use the Three-tier price ladder drafter.
+  - You want a plan for funding a product range from sales. Use the Staged product ladder planner.
+  - You want add-ons at checkout. Use the After-sale offer planner.
 
 you_give:
-  - Everything you sell, with prices
-  - What each offer gives the buyer
-  - Who your best buyers are (optional)
-  - Sales by offer, if you have them (optional)
+  - Everything you sell, with prices (rough is fine), from your price list or store
+  - What each offer gives the buyer, in plain words
+  - Who your best buyers are and what they buy next (optional)
+  - Sales by offer, from your store or sales sheet (optional)
 you_get:
   - A ladder of rungs from free or low to top tier
   - The result and price of each rung
@@ -30,11 +37,11 @@ you_get:
   - The one core path and the single rung to work on this quarter
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your offers and prices, even rough ones.
-  - Add what buyers do after each purchase, if you know.
-  - Read the ladder and check that each rung really suits the same buyer.
-  - Work on the one rung it picks before the others.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it in. It needs no tools or files.
+  - Paste a list of what you sell. Give each offer a price and the result the buyer gets.
+  - Add what buyers buy next and your sales by offer, if you have them. Without them, the quarter pick is a judgement, and it says so.
+  - Read the ladder. Check that every rung is for the same buyer and gives a bigger result than the one below.
+  - Fix any rung marked "to build" or MISSING, then work on the one rung it picks before the others.
 
 how_it_works:
   - title: Lists what you sell
@@ -78,6 +85,30 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Everything you sell, with prices (rough is fine)"
+    - "What each offer gives the buyer"
+    - "Who your best buyers are (optional)"
+    - "Sales by offer (optional)"
+  prerequisites:
+    - "Your brand brain from the Website brand brain builder (optional)"
+  output:
+    - name: "WHAT YOU SELL"
+      contains: "One line per offer with its price and the result the buyer gets."
+    - name: "THE LADDER"
+      contains: "Rungs from a free or low first step up to the top tier, each with price and result."
+    - name: "Recurring rung"
+      contains: "The one offer a buyer can pay for again each period, with the fee."
+    - name: "CORE PATH"
+      contains: "The rungs most buyers should take, plus side offers and which rung each one feeds."
+    - name: "WHAT MOVES A BUYER UP"
+      contains: "For each step up, the event or message that makes the buyer ready."
+    - name: "WORK ON THIS QUARTER"
+      contains: "The single rung to build or fix first, with the reason."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check the ladder still fails."
 
 tweaks:
   - what: Real prices

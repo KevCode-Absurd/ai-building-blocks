@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs set scans and ranks what they find.
 new_slug: secure-development-checker
 name: Secure development checker
-summary: Give it your project. Get a scan for code flaws, weak packages and
-  exposed secrets, with fixes ranked.
+summary: Scan your project for code flaws, weak packages and exposed secrets. Get a secure development check with fixes ranked by severity.
 job: secure-code
 headline: Secure development checker
-subhead: A security scan of your project that finds code flaws, risky packages
-  and exposed secrets, with fixes ranked by severity. Three bundled Python tools
-  do the work and can export JSON for your build pipeline.
+subhead: A security scan of your project that finds code flaws, risky packages and exposed secrets, with fixes ranked by severity. Three bundled Python tools do the work and can export JSON for your build pipeline.
 explain: |
   A security scan of your project that finds code flaws, risky packages and exposed secrets, with fixes ranked by severity. Three bundled Python tools do the work and can export JSON for your build pipeline.
 
@@ -18,6 +15,10 @@ when:
   - A client asks whether you meet SOC 2 or GDPR basics.
   - You want to know which outdated packages carry known vulnerabilities.
   - You need a severity-sorted list to hand to a developer.
+not_for:
+  - "You need SOC 2, PCI-DSS, HIPAA or GDPR sign-off: hire a qualified auditor, because this scan is not a certification."
+  - "You want to test a live running app from the outside: use a penetration tester, because this does not run dynamic (DAST) tests."
+  - "You have no project files to share, or your AI cannot run Python: ask a developer to run the three scans for you."
 you_give:
   - Your project folder
   - A framework to check against (optional)
@@ -30,8 +31,30 @@ you_get:
   - A compliance gap report
   - JSON output for builds
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run code and read files, such as Claude with code tools. Check that Python is installed.
+  - Add the skill to your AI, or paste its text into the chat.
+  - Give your AI your project folder. Say which framework to check against and the lowest severity to show (both optional).
+  - Ask it to run the code scan, the package scan and the compliance check in that order.
+  - Read the results from the top. Fix critical findings first, then rerun the scans.
+  - Save the JSON files if you want to use them in your build pipeline.
+output_sample:
+  input:
+    - Your project folder
+    - A framework to check against, such as SOC 2 or GDPR (optional)
+    - A severity cutoff, such as high (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Python installed on the computer that runs the scans
+  output:
+    - name: Security scanner report
+      contains: Code flaws such as hardcoded secrets, SQL injection, XSS, command injection and path traversal, each with its location.
+    - name: Vulnerability assessor report
+      contains: Known CVE IDs with scores, affected package versions, fixed versions and an overall risk score from 0 to 100.
+    - name: Compliance checker report
+      contains: Gaps in access control, encryption, audit logging, authentication, security documents and build controls for the framework you pick.
+    - name: security.json
+      contains: The code scan results in JSON, ready for a build pipeline.
+    - name: vulns.json
+      contains: The package scan results in JSON, ready for a build pipeline.
+    - name: compliance.json
+      contains: The compliance check results in JSON, ready for a build pipeline.

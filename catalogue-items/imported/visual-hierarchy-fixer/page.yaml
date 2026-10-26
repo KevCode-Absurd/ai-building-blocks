@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks a design against clear visual rules and suggests changes.
 new_slug: visual-hierarchy-fixer
 name: Visual hierarchy fixer
-summary: Give it a web page or screen. Get fixes for spacing, color, type and
-  depth so it looks professional.
+summary: Fix a web page that looks off. Give it a screen or code and get a score out of 10 plus fixes for visual hierarchy, spacing, color and depth.
 job: design-work
 headline: Visual hierarchy fixer
-subhead: A web page or app screen that looks professional because the eye knows
-  where to go first. You get a short list of fixes you can apply in code or in a
-  design tool.
+subhead: A web page or app screen that looks professional because the eye knows where to go first. You get a short list of fixes you can apply in code or in a design tool.
 explain: |
   A web page or app screen that looks professional because the eye knows where to go first. You get a short list of fixes you can apply in code or in a design tool.
 
@@ -18,6 +15,10 @@ when:
   - You are about to launch and want a final polish pass.
   - You need a spacing, type and colour scale you can reuse.
   - You are building a dark theme and want it to stay readable.
+not_for:
+  - "You need to pick a typeface: use a typography guide or ask a designer, because this item checks type scale but does not choose fonts."
+  - "You want to test how easy your site is to use: run a usability test with real people instead."
+  - "You need a new brand identity, logo or colors from scratch: hire a brand designer, since this item polishes an existing layout."
 you_give:
   - A page, screen, screenshot or code
   - The page goal, such as sign-ups
@@ -29,7 +30,25 @@ you_get:
   - A set of design tokens
   - Updated styles or code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Add your page as a screenshot, a link or code. A screenshot works in most chat tools. Say what the page should do.
+  - Add your brand colors, fonts or design system if you have them.
+  - Ask for a score and a fix list. Read which checks failed first.
+  - Apply the fixes, then paste the new version back in to see if the score goes up.
+output_sample:
+  input:
+    - Your page, screen, screenshot or code
+    - What the page should do, such as get sign-ups
+    - Your brand colors or fonts (optional)
+    - Your design system or limits (optional)
+  output:
+    - name: Score
+      contains: A score out of 10 based on eight yes or no checks, with the failed checks named.
+    - name: Quick Diagnostic
+      contains: The eight checks marked pass or fail, covering hierarchy, spacing, type, color, depth, borders and components.
+    - name: Fixes
+      contains: Specific changes to spacing, type, color, shadows and borders, ordered to reach a score of 10.
+    - name: Design tokens
+      contains: A reusable set of spacing, type, color and shadow values so every screen stays consistent.
+    - name: Updated styles or code
+      contains: Revised styles or code that apply the fixes, with a dark theme if you ask for one.

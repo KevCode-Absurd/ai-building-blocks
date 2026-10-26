@@ -1,0 +1,154 @@
+name: Rust Refactoring Specialist agent
+summary: Get a Rust refactoring plan or a full change set, with every affected file named and the cargo checks to run before you merge.
+headline: Rust Refactoring Specialist agent
+subhead: Share your Rust code, the refactor goal and what must not change. It finds every place the change reaches, lists the findings or writes the change set, and gives the cargo checks to run.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  A Rust refactor is rarely one edit. Rename a function and you also touch its
+  callers, imports, tests, docs and feature-gated code. Miss one and the build
+  breaks, or worse, the behavior shifts. This Rust refactoring specialist agent
+  plans the whole change so no half-finished migration is left behind.
+
+
+  It works in two modes. In audit mode it reads the scope you gave and lists
+  each real opportunity, with the place, the evidence, the end state, the risk
+  and how to verify it. In change mode it writes the full set of edits for one
+  goal, then checks the diff for stray changes. It treats public API, error
+  behavior, ordering, drop timing and lock scope as things that must not move
+  unless you say so.
+
+
+  It is the opposite of a one-line patch. For a tiny fix, use the Minimal
+  Change Engineer agent. This is a role profile from Agency Agents, shared under
+  MIT. A chat AI cannot run cargo, so you run the checks it lists. Targets in
+  the original profile are goals, not results from AI Blocks.
+when:
+  - You want a rename, a module split or a signature change done everywhere it reaches, not just where you spotted it.
+  - Clippy or compiler warnings have piled up, and you want them fixed without turning off the lint.
+  - A function takes owned values and clones them at every call, and you want to borrow instead.
+  - You inherited a Rust crate and want a ranked list of safe clean-ups before you touch it.
+not_for:
+  - You need a one-line bug fix with the smallest possible diff. Use the Minimal Change Engineer agent.
+  - Your code is not Rust. Use the Code Reviewer agent, or the Senior Developer agent for other languages.
+  - You want a security review of unsafe code or crypto. Use the Application Security Engineer agent, and have a Rust expert review it.
+  - You have no tests and no way to run cargo. Expect a plan and a list of tests to write first, not changes you can trust.
+you_give:
+  - The Rust code in scope, such as files, a module or a crate, pasted or attached
+  - The goal in one sentence, such as "borrow paths instead of cloning them" or "split config.rs into modules"
+  - Whether you want an audit list or the full change
+  - What must not change, such as the public API, error types or the minimum Rust version
+  - Your Cargo.toml and the current test or Clippy results (optional)
+you_get:
+  - In audit mode, a numbered list of findings, each with place, evidence, end state, risk and how to verify
+  - In change mode, the full set of edits across every affected file, with before and after code
+  - A note on what stays the same, and any change in behavior that needs your yes
+  - The cargo commands to run, marked as run or not run
+  - A list of what it could not check, such as feature flags or other targets
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your goal, what must not change, and the code. Say "audit only" if you want findings first. A chat AI can read only what you paste, so add the callers and tests too.
+  - Read the findings or plan first. Remove any item you do not want, then ask for the change.
+  - Check the list of public items it will touch. Say yes or no to each. It will not change public API without your yes.
+  - In your own terminal, run cargo fmt, cargo test and cargo clippy as listed. Paste any failure back into the chat.
+  - Use a coding AI that can open your repo, such as Claude Code, for a large crate. It can follow every reference and run cargo itself.
+how_it_works:
+  - title: Pick audit or change
+    text: It sorts your request into audit, change, explanation or plan, and sets the scope and what you allow to change.
+  - title: Map what is reached
+    text: It traces definitions, callers, imports, re-exports, tests, macros, feature flags and docs. It does not assume "pub" means a change breaks outsiders.
+  - title: Set a baseline
+    text: It lists the tests and checks to run before any edit, so earlier failures are not blamed on the refactor.
+  - title: Group the work
+    text: It bundles edits that must land together, and orders the bundles by dependency and risk.
+  - title: Write the full change
+    text: It updates every definition and reference, adds a test for each real bug it fixes, and leaves no old and new paths side by side.
+  - title: Review the diff
+    text: It checks that each changed file belongs to the goal, then lists remaining risk and anything it could not run.
+output_shape: |-
+  SCOPE AND GOAL
+    goal <one sentence> | mode <audit or change> | must not change <list> | ASSUMED: <list> | MISSING: <list>
+
+  FINDINGS (audit mode)
+    RUST-<number> | <type> | <title>
+      location <file and symbol> | evidence <what you saw> | end state <what it becomes>
+      coupled changes <files> | API or behavior impact <none or described> | risk and value <low, medium, high> | verification <commands>
+
+  CHANGE SET (change mode)
+    <file> | <before and after code> | why it changes
+
+  BEHAVIOR AND API
+    kept the same <list> | needs your yes <list>
+
+  VERIFICATION
+    <cargo command> | what a pass looks like | RUN or NOT RUN
+
+  REMAINING RISK
+    <coverage gaps> | <deferred opportunities>
+output_sample:
+  input:
+    - The Rust files, module or crate in scope
+    - The goal, and whether you want an audit or the full change
+    - What must not change, such as public API or the minimum Rust version
+    - Your Cargo.toml and current test results (optional)
+  prerequisites:
+    - Rust and cargo installed, to run the checks the AI lists
+    - Your tests passing first, or a list of the ones that already fail
+  output:
+    - name: Scope and goal
+      contains: The goal in one line, the mode, what must stay the same, and what is missing.
+    - name: Findings
+      contains: Each opportunity with place, evidence, end state, risk and how to verify it (audit mode).
+    - name: Change set
+      contains: Before and after code for every affected file, so no caller or test is left behind.
+    - name: Behavior and API
+      contains: What stays identical, and any public change that waits for your yes.
+    - name: Verification
+      contains: The cargo format, test and Clippy commands to run, with what a pass looks like.
+    - name: Remaining risk
+      contains: What it could not check, such as other targets or feature flags, and deferred ideas.
+works_best_with:
+  tools:
+    - name: Claude Code or another AI that can open your repo and run commands
+      why: It can search every reference and run cargo itself, so the checks are real. In a plain chat you paste the code and run them yourself.
+    - name: Cargo, rustfmt and Clippy
+      why: These are Rust's own build, format and lint tools. They tell you if the refactor is safe.
+  inputs:
+    - Your Cargo.toml and workspace layout, so it knows which crates and features exist.
+    - The output of cargo test and cargo clippy before the change.
+    - A note of which items are public to other crates.
+terms:
+  - term: Refactor
+    meaning: Changing how code is built without changing what it does.
+  - term: Crate
+    meaning: A Rust package, the unit you build and share.
+  - term: Clippy
+    meaning: Rust's lint tool. It flags code that compiles but is likely wrong or clumsy.
+  - term: Public API
+    meaning: The parts of your code other programs depend on. Changing them can break those programs.
+  - term: Ownership
+    meaning: Rust's rule for which part of the code owns a value. It decides when you must copy it or can borrow it.
+  - term: Drop timing
+    meaning: When a value is cleaned up. A refactor can shift it by accident.
+tweaks:
+  - what: Mode
+    how: Say "audit only" for a ranked list with no edits, or "make the change" for the full set. Audit first on a crate you do not know.
+  - what: What may change
+    how: Name the public items you allow to change, if any. Without that, they stay fixed.
+  - what: Batches
+    how: Ask for one batch at a time, such as "borrowing changes first, module split second". Smaller steps are easier to test.
+improve:
+  - Add your crate's rules to SKILL.md, such as error types to use, module layout and which Clippy lints are on.
+  - Keep a list of changes that broke something before, and tell the agent to check for them.
+  - Pair it with the Code Reviewer agent. Have it read the final diff before you merge.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: The tests are fact-heavy and differ by place.
 new_slug: employee-or-contractor-checker
 name: Employee or contractor checker
-summary: Describe how someone will work for you. Get employee or contractor
-  risks flagged. Not legal advice.
+summary: Check if a worker should be an employee or a contractor. Describe the job and get the tests that apply and the risk flags. Not legal advice.
 job: hire-people
 headline: Employee or contractor checker
-subhead: A first read on whether a person should be treated as an employee or a
-  contractor, with the risk points marked. Describe how they will work for you,
-  and you get the tests that apply and where your plan does not fit.
+subhead: Describe how someone will work for you. Your AI runs the employee or contractor tests for your place. You get the risk points marked, and what to fix before work starts.
 explain: |
   A first read on whether a person should be treated as an employee or a contractor, with the risk points marked. Describe how they will work for you, and you get the tests that apply and where your plan does not fit. This is not legal advice. For existing relationships, talk to a lawyer.
 
@@ -16,24 +13,50 @@ explain: |
 when:
   - You want to hire a freelancer for six months.
   - You have a recruiter who works only for you.
-  - Someone's job looks more like employment than their contract says.
-  - You are drafting a contractor agreement.
+  - A role looks more like a job than the contract says.
+  - You are about to draft a contractor agreement.
+not_for:
+  - The person already works for you. Talk to an employment lawyer, because this check is only for work that has not started.
+  - You need a final legal ruling or a signed opinion. Ask an employment lawyer, because this gives a first read only.
+  - You need a contract written. Ask a lawyer or use a contract template, because this does not draft agreements.
 you_give:
-  - How the person will work
-  - Where they are based
-  - Tools, hours and pay terms
-  - Contract draft (optional)
+  - How the person will work day to day
+  - Where the person will do the work
+  - Who sets their hours, and who supplies tools
+  - How they are paid, and whether they work for others
+  - Your contract draft (optional)
 you_get:
-  - The tests that apply
+  - The tests that apply in your place
   - Flags where the plan looks like employment
   - Questions to settle before starting
-  - A summary of risk areas
+  - A short summary of the risk areas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web for current local tests.
-  - Where the skill points to /employment-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - If you are not using Claude Code, ignore any setup file path. Instead, tell your AI your country or state and that the work is not started yet.
+  - Paste your answers about the work, the hours, the tools, the pay and the place.
+  - The legal research step works best with a paid tool like Westlaw or CourtListener. Without one, your AI uses web search or memory, so check every cited law before you rely on it.
+  - Read the bottom line and the flagged items first.
+  - Take the red flags to an employment lawyer before you sign anything.
+output_sample:
+  input:
+    - How the person will work day to day
+    - Where they will do the work
+    - Who sets their hours, and who supplies tools
+    - How they are paid, and whether they work for others
+    - Your contract draft (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - A legal research tool like Westlaw or CourtListener (optional, paid). Without one, check every cited law yourself.
+  output:
+    - name: Bottom line
+      contains: A short verdict on whether the plan looks like a contractor, an employee, or is unclear.
+    - name: Classification
+      contains: The label the facts support, and how it compares with the label you wanted.
+    - name: Test results
+      contains: One block per test that applies in your place, with how each fact scores.
+    - name: Gap analysis
+      contains: The points where real working life clashes with the contractor label.
+    - name: Escalation
+      contains: Which flagged items to take to an employment lawyer before you sign.
+    - name: Next steps
+      contains: What to settle or change before the work starts.

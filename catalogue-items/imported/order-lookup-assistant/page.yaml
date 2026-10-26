@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fetches and tidies one record.
 new_slug: order-lookup-assistant
 name: Order lookup assistant
-summary: "Give an email, phone or order number. Get the full order summary:
-  items, payment, shipping and history."
+summary: "Look up a customer's order by email, phone or order number. Get items, payment, shipping, tracking and refunds in one summary."
 job: run-your-store
 headline: Order lookup assistant
-subhead: "Everything about a customer's order on one screen: what they bought,
-  what they paid, where it is going, tracking, refunds and history. Support
-  agents answer in seconds without clicking through the Shopify admin."
+subhead: "Give it an order number, email or phone. It reads your Shopify store and shows what the customer bought, what they paid, where it is going and any refunds. It never changes an order."
 explain: |
   Everything about a customer's order on one screen: what they bought, what they paid, where it is going, tracking, refunds and history. Support agents answer in seconds without clicking through the Shopify admin.
 
@@ -16,21 +13,53 @@ explain: |
 when:
   - A customer writes in asking where their parcel is.
   - You need to check if a refund already went out.
-  - You only have an email address and need their orders.
-  - A support agent needs order details during a chat.
+  - You only have an email address and need that customer's orders.
+  - A support agent needs order details during a live chat.
+not_for:
+  - "You need to issue a refund or change an order: this only reads data, so do it in your Shopify admin or with a refund tool."
+  - "You have no Shopify store or no admin access: ask the store owner to run the lookup, as it needs a signed-in Shopify session."
+  - "You want a report on many orders at once: export them from your Shopify admin, as this returns only a few matches."
 you_give:
-  - Store domain
-  - Order number, email or phone
-  - How many orders to return (optional)
-  - Readable or JSON output (optional)
+  - Your store domain, like mystore.myshopify.com
+  - Whether you are searching by order number, email or phone
+  - "The order number (with the # sign), the email, or the phone number with country code"
+  - How many orders to show (optional)
+  - Readable summary or JSON (optional)
 you_get:
-  - Order summary with items and totals
+  - An order summary with items and totals
   - Payment and fulfilment status
-  - Shipping address and tracking
-  - Refund details
+  - Shipping address and tracking links
+  - Refund dates and amounts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Install the Shopify CLI. Then run shopify auth login --store followed by your store domain.
+  - Check your login can read orders and customers in Shopify.
+  - Give your AI this skill, your store domain, how you are searching and the value to search for.
+  - "Type order numbers with the # sign, like #1001. Type phone numbers with country code, like +15551234567."
+  - Read the summary. To refund or reorder, use the refund-and-reorder skill.
+output_sample:
+  input:
+    - Your store domain
+    - "How to search: order number, email or phone"
+    - The order number, email or phone to look up
+    - How many orders to show (optional)
+    - Readable summary or JSON (optional)
+  prerequisites:
+    - An AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - A signed-in Shopify CLI session for your store
+    - Access to read orders and customers in Shopify
+  output:
+    - name: Order header
+      contains: The order number, date, payment status and fulfilment status.
+    - name: Customer details
+      contains: The customer's name, email and phone.
+    - name: Line items
+      contains: Each product bought, with its quantity, SKU, price and fulfilment status.
+    - name: Totals
+      contains: The subtotal, shipping cost, order total and amount refunded.
+    - name: Shipping address
+      contains: The address the order is going to.
+    - name: Tracking
+      contains: The carrier, tracking number and tracking link for each shipment.
+    - name: Refunds
+      contains: The date and amount of each refund, plus any order note and tags.

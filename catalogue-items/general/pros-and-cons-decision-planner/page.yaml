@@ -1,85 +1,119 @@
 new_slug: pros-and-cons-decision-planner
 name: "Pros and cons decision planner"
-summary: "Describe a choice you cannot settle. Get a two-column list built over days, matched pairs struck out, and a call after sleep."
+summary: "Settle a choice you cannot decide. Get pros and cons built over days, matched pairs struck out, and a call you can revisit."
 job: think-and-decide
 thinking: low
 thinking_why: "It follows a fixed routine and weighs reasons you supply."
 
 headline: "Pros and cons decision planner"
-subhead: "Describe a choice you cannot settle and the reasons you have so far. It sets the two columns, a schedule for adding reasons, strikes out matched pairs, waits a day and writes the decision with what would change it."
+subhead: "Describe a choice you cannot settle, the date you must decide by and the reasons you have so far. Your AI sets two columns, plans days for adding reasons, strikes out matched pairs, and writes the decision with the fact that would change your mind. You come back to the same chat on each day."
 
 explain: |
   Choices drag on when you keep thinking of new reasons and cannot compare them. The loudest reason of the moment wins, and you doubt it the next day.
-  
-  This skill gives the choice a page with two columns and a few days to fill it. Reasons are added as they come, each with a rough weight. A pro and a con of about the same weight are struck out together, and the process repeats until one side has nothing left to cancel. After one more day it checks that a single large reason is not carrying the decision, then writes the choice and the fact that would change your mind.
+
+  This pros and cons decision planner gives the choice a page with two columns and a few days to fill it. Reasons are added as they come, each with a rough weight and the day it came. A pro and a con of about the same weight are struck out together. The process repeats until one side has nothing left to cancel.
+
+  One thing to know: a chat cannot wait for you. It sets the schedule, and you come back to the same chat on each day to add what you thought of. If you need a call in one sitting, it gives a provisional one and says so. After the last day, it checks that a single large reason is not carrying the decision. Then it writes the choice and the fact that would change your mind.
 
 when:
   - "You are weighing a job offer, a move or a big purchase."
   - "You have gone round the same options for weeks."
   - "Two people disagree and need a fair way to compare reasons."
+  - "You pick whatever reason is loudest that day, then doubt it the next morning."
+
+not_for:
+  - "The outcome is fixed, or you must decide in under a day. Compare the costs of each option directly."
+  - "You want to know whether a choice can be undone. Use the One-way or two-way choice sorter."
+  - "Both options feel bad and you want a better one. Use the Third option finder."
+  - "You are afraid of one step and keep putting it off. Use the Fear-setting planner."
 
 you_give:
-  - "The choice and the options"
-  - "Your reasons so far (optional)"
+  - "The choice, the options and the date you must decide by"
+  - "Your reasons so far, each marked small, medium or large (optional)"
   - "Costs and risks of each option (optional)"
+  - "Who else is affected (optional)"
 you_get:
-  - "A two-column page with weighted reasons"
-  - "A list of struck-out pairs and why"
-  - "A decision date and a change-my-mind trigger"
+  - "A two-column page with weighted reasons, each marked with the day it came"
+  - "The pairs struck out, and why each pair matches"
+  - "A decision, a decision date and the fact that would change your mind"
+  - "A day-by-day schedule of what to add"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Write the choice and the deadline."
-  - "Paste the reasons you have and give each a weight."
-  - "Come back each day on the schedule and add what you thought of."
-  - "Make the call after the last day's sleep."
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. Use one chat for the whole choice, so it keeps the page between days."
+  - "Write the choice, the options and the date you must decide by. Paste the reasons you have. If you send no choice or no date, it asks and stops."
+  - "It replies with the page and a schedule. It cannot wait for you. Come back to the same chat on each day and add what you thought of."
+  - "After the last day, ask for the call. It strikes out matched pairs, checks for one big reason, and writes the decision."
+  - "If you need an answer today, say so. You get a call marked PROVISIONAL, because the reasons came on one day."
+  - "Save the 'would change my mind' fact and check it on the review date."
 
 how_it_works:
-  - title: "Write the choice and the page"
-    text: "Writes the choice at the top of a page with Pro and Con columns."
-  - title: "Set the schedule"
-    text: "Plans for reasons to be added over three or four days, not all at once."
-  - title: "Add the reasons so far"
-    text: "Records reasons with a rough weight."
-  - title: "Strike out matched pairs"
-    text: "Strikes out a pro and a con that weigh about the same."
-  - title: "Keep going until one side is left"
-    text: "Keeps going until one side has nothing left to cancel."
-  - title: "Wait a day, then check"
-    text: "Waits one more day and checks for one big reason fooling you."
-  - title: "Decide and write the trigger"
-    text: "Decides and writes what would change your mind."
-  - title: "Checks its own work"
-    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+  - title: "Writes the choice and the page"
+    text: "Puts the choice at the top of a page with Pro and Con columns."
+  - title: "Sets the schedule"
+    text: "Plans three or four days for adding reasons, with a prompt for each day."
+  - title: "Adds the reasons so far"
+    text: "Records each reason in your words, with a rough weight and the day it came."
+  - title: "Strikes out matched pairs"
+    text: "Strikes out a pro and a con that weigh about the same, and says why they match."
+  - title: "Repeats until one side is left"
+    text: "Keeps striking until one column has nothing left to cancel."
+  - title: "Waits a day, then checks"
+    text: "After the wait day you confirm, it checks that one big reason is not carrying the decision."
+  - title: "Decides and writes the trigger"
+    text: "Writes the decision, the date and what would change your mind, then lists any checks it missed."
 
 output_shape: |
   CHOICE
   <question, options, decide by date>
-  
+
   SCHEDULE
   Day 1: <prompt>  Day 2: <prompt>  Day 3: <prompt>
-  
+
   PAGE
-  Pro: <reason> (small / medium / large)
-  Con: <reason> (small / medium / large)
-  
+  Pro: <reason> (small / medium / large) [day <n>]
+  Con: <reason> (small / medium / large) [day <n>]
+
   STRUCK OUT
   <pro> with <con>: because <weight match>
-  
+
   LEFT
   <remaining reasons and side>
-  
+
   ONE-BIG-REASON CHECK
-  <result>
-  
+  <result, or MISSING until the wait day has passed>
+
   DECISION
-  <sentence> | Date | Would change my mind: <fact>
-  
+  <sentence> | <date> | Would change my mind: <fact>
+  <PROVISIONAL if every reason came on one day>
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "The choice, the options and the date you must decide by"
+    - "Your reasons so far, with a weight for each (optional)"
+    - "Costs, risks and who else is affected (optional)"
+  output:
+    - name: "CHOICE"
+      contains: "The question, the options and the date you decide by."
+    - name: "SCHEDULE"
+      contains: "Three or four days, each with a prompt for the reasons to add that day."
+    - name: "PAGE"
+      contains: "Pro and Con columns, each reason in your words with a weight and the day it came."
+    - name: "STRUCK OUT"
+      contains: "Each pro and con of about equal weight crossed out together, with why they match."
+    - name: "LEFT"
+      contains: "The reasons that remain after striking out, and which side they favour."
+    - name: "ONE-BIG-REASON CHECK"
+      contains: "Whether one large reason, or a mood, is carrying the whole decision."
+    - name: "DECISION"
+      contains: "The call in one sentence, the date, and the fact that would change your mind."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Gaps in what you gave, and one line for each of its own checks it missed."
 
 tweaks:
   - what: "The deadline"
@@ -119,4 +153,7 @@ works_best_with:
     - "Opinions from people affected"
 
 terms:
-
+  - term: "Struck out"
+    meaning: "A pro and a con of about the same weight, crossed out together because they cancel."
+  - term: "Weight"
+    meaning: "How much a reason matters: small, medium or large."

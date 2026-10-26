@@ -16,6 +16,29 @@ use_cases:
   - "Use a project you already have to say something about a cause you care about"
   - "Push back on a committee that is sanding the life out of an idea"
   - "Write a short, sharp manifesto for your team or studio"
+not_for:
+  - "You want expressive, rule-breaking type and collage: use the David Carson mind instead."
+  - "You need chart or data checks for truthful visuals: use the Alberto Cairo mind or the Cole Nussbaumer Knaflic mind."
+  - "You need a neutral legal or financial review, or a plain proofread: ask a lawyer, an accountant or a copy editor."
+output_sample:
+  input:
+    - Your brief, brand, report or magazine idea
+    - What you want to say and who it is for
+    - The client and what their product does
+    - What worries you or feels too safe (optional)
+  output:
+    - name: First questions
+      contains: Blunt questions about your message, your product's effects, who owns the content and the safe answer.
+    - name: Pushback
+      contains: What he would reject in your brief, such as polished work with no message or a committee-smoothed idea.
+    - name: Job-specific advice
+      contains: Guidance for your job, such as a report, a newsletter, a cause campaign or a hard client.
+    - name: A bolder direction
+      contains: One odder, sharper idea than you came with, with a reason, often drawn from everyday signs or objects.
+    - name: Beyond-the-record note
+      contains: A one-line flag when your question goes past what he said in public.
+    - name: Next steps
+      contains: What to do with the notes, and which paired mind could test the idea next.
 seats:
   - {seat: "Breaking the rules", asks: "What's the safe, expected answer here, and what happens if we turn it upside down?"}
   - {seat: "Designer as citizen", asks: "What does this product actually do to people, and are we fine making it look good?"}

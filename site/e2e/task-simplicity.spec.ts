@@ -81,7 +81,7 @@ test("keyboard request transfer contains all instructions and is honest about ex
 });
 test("reference anchor opens preserved checks", async ({ page }) => {
  await page.goto(`${TASK}#test`, { waitUntil: "domcontentloaded" });
- await expect(page.locator("#test > details")).toHaveAttribute("open", "");
+ await expect(page.getByTestId("bp-details")).toHaveAttribute("open", "");
  await expect(page.locator("#test .checks")).toContainText(/owner|date/);
  await expect(page.locator("#file")).toBeAttached();
 });

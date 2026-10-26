@@ -1,6 +1,6 @@
 new_slug: monthly-tech-debt-keeper
 name: Monthly tech debt keeper
-summary: Point it at your code each month. Get new debt found, last month's clean-up checked and the next small fixes ranked.
+summary: Check your code for tech debt each month. See what is new, whether last month's clean-up worked, and which small fixes to make next.
 job: build-software
 thinking: medium
 thinking_why: It runs up to five skills and compares two snapshots, but each step is a read and a count. A mid-level model is enough.
@@ -14,6 +14,10 @@ when:
   - You work in a codebase that gets slower to change each quarter.
   - You agree clean-up work in planning but never see whether it helped.
   - One person is the only one who understands a part of the code.
+not_for:
+  - "You want a first look at code you have never seen: ask a developer for a one-off code review instead."
+  - "You are chasing one bug: debug that bug by itself, or ask a developer to pair with you on it."
+  - "You want the AI to change your code on its own: this agent only suggests fixes and waits for your yes."
 you_give:
   - The code, as a folder or repo the AI can open
   - How many people work on it and how many days a month can go to clean-up (optional)
@@ -30,6 +34,28 @@ how_to_use:
   - Read the fixes. Say yes to the ones you want, and it records them for next month.
   - Make the fixes in your normal way, or say yes to one and let it make only that change on its own branch.
   - Run it again next month. It checks whether the fixes worked.
+output_sample:
+  input:
+    - Your code, as a folder or repo your AI can open
+    - Your team size and clean-up days per month (optional)
+    - The parts of the code that hurt most (optional)
+    - Last month's debt folder (after the first run)
+  prerequisites:
+    - An AI that can open and read your code folder, such as Claude Code
+    - Last month's debt folder, to compare against (not needed on the first run)
+  output:
+    - name: This month in one line
+      contains: Counts of items that are new, gone and still open, against last month.
+    - name: Last month's fixes
+      contains: Each agreed fix marked done, did not work or not started, with item counts before and now.
+    - name: Fixes to approve
+      contains: Up to five fixes with items, size, who knows the code and a first reviewable step.
+    - name: Design cause
+      contains: The shared cause when three or more top items sit in one area, or none found.
+    - name: Left for later
+      contains: The rest of the ranked list, one line each.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Scan the code
     text: Finds debt, scores each item and saves a dated list.

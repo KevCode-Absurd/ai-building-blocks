@@ -2,17 +2,57 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-acreadiness-generate-instructions
 name: AgentRC instruction file writer
-summary: Point it at your repo. Get project rules for coding agents, with a
-  preview before files change.
+summary: Write AI agent instruction files for your code repo. Get a Copilot instructions file, with a dry-run preview before any file changes.
 job: set-up-ai
 headline: AgentRC instruction file writer
-subhead: Point it at your repo. Get project rules for coding agents, with a
-  preview before files change. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Give it your code repo. It reads your code and writes instruction files that tell AI coding agents how your project works. It shows a preview first, so nothing changes until you say yes.
+not_for:
+  - Your repo has no code yet. Write a short README by hand first, then come back.
+  - You want a readiness score for your repo. Run the /acreadiness-assess skill first, then use this one to close the gaps.
+  - You need rules that run in a build check. Instruction files guide AI agents only, so use a linter or CI step instead.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can run terminal commands and read your repo. Make sure Node and npm are installed.
+  - Check you have access to the AI model AgentRC uses. It may need a key and may cost money.
+  - Paste the skill and say which file you want. Pick flat or nested. Say if you have areas.
+  - Read the dry-run preview. Check the file list and the area globs.
+  - Say yes. Your AI runs the command again and writes the files.
+  - Read the summary, then open a pull request so your team can review the files.
+output_sample:
+  input:
+    - Your code repo, open in a folder your AI can read
+    - "Which file you want: Copilot instructions or AGENTS.md"
+    - Flat (one file) or nested (one file per topic)
+    - Your agentrc.config.json with named areas (optional)
+  prerequisites:
+    - An AI that can run terminal commands and read your files
+    - Node and npm installed, so npx can fetch the AgentRC tool
+    - Access to the AI model AgentRC uses, which may need a key and may cost money
+  output:
+    - name: Dry-run preview
+      contains: A short list of files that would be created or overwritten, the areas found, and their applyTo globs.
+    - name: .github/copilot-instructions.md
+      contains: Always-on rules for your whole repo, written from the languages, tools and habits found in your code.
+    - name: .github/instructions/<topic>.instructions.md
+      contains: Optional topic files for nested mode, such as testing or style, each with an applyTo glob.
+    - name: .github/instructions/<area>.instructions.md
+      contains: Optional per-area rules for monorepos, each limited to that area's folders by an applyTo glob.
+    - name: AGENTS.md or CLAUDE.md
+      contains: Optional files for repos that use several AI agents, made only when you choose them.
+    - name: Synopsis
+      contains: One paragraph on the stack found, the rules captured, file length, and each file with its glob.
+when:
+  - You use Copilot or Claude on a repo and want it to follow your project rules.
+  - Your assess report shows gaps in AI tooling.
+  - Your old instruction file is out of date and needs a refresh.
+  - Your monorepo needs different rules for each area.
+you_give:
+  - Your code repo, open in a folder your AI can read
+  - "Which file you want: Copilot instructions or AGENTS.md"
+  - Flat (one file) or nested (one file per topic)
+  - Your agentrc.config.json with named areas (optional)
+you_get:
+  - A preview of every file before anything is written
+  - A .github/copilot-instructions.md file built from your real code
+  - Topic or area files with applyTo globs, if you ask for them
+  - A short summary of what was captured
+  - Next steps to check your score again

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Text in the picture must be readable, so it checks each block.
 new_slug: product-detail-image-maker
 name: Product detail image maker
-summary: Give it a product photo and selling points. Get detail page pictures
-  with the text built in. Your image model draws them.
+summary: Turn one product photo and your selling points into detail page images with the text already on the picture, ready to upload to your listing.
 job: product-photos
 headline: Product detail image maker
-subhead: Product detail page images with the selling points already laid out as
-  text on the picture, ready to upload. Most image models scramble written text,
-  so the model you pick matters more than any other setting.
+subhead: Product detail page images with the selling points already laid out as text on the picture, ready to upload. Most image models scramble written text, so the model you pick matters more than any other setting.
 explain: |
   Product detail page images with the selling points already laid out as text on the picture, ready to upload. Most image models scramble written text, so the model you pick matters more than any other setting.
 
@@ -18,6 +15,10 @@ when:
   - You want headlines and feature lines placed on the image.
   - Plain photos make your listing look unfinished.
   - You are launching a product with only one source photo.
+not_for:
+  - "You only need a clean background or a cropped photo: use a plain photo editor instead."
+  - "You have no verified selling points yet: check your product facts first, or ask your supplier for the real specs."
+  - "You need a full page with prices, deals or test results: write those yourself and check each one."
 you_give:
   - A clear product photo
   - Your selling points and headline wording
@@ -29,9 +30,33 @@ you_get:
   - Advice on choosing a model that renders text
   - Tips to keep the product true to the photo
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate). The sample layouts are in Chinese.
+  - Open Claude, ChatGPT or Gemini and paste this skill. Add your product photo link or file, your product type and your selling points.
+  - "Keep each line short: a headline of 8 characters or fewer, a subhead of 16 or fewer, and icon text of 5 or fewer."
+  - "Ask for one prompt per block: banner, icons, material, details and size. Do not ask for the whole page at once."
+  - Run each prompt in an image model that draws text well. The skill uses dLazy with a paid account and about 5 credits per image. Another text-friendly model also works. Make 2 or 3 tries per block.
+  - Read every word on each picture. Fix garbled text with the fix lines, and check that each claim matches your real product specs.
+  - Join the blocks into one long image in a design tool, then upload. The sample text is for illustration only, so replace it with your own.
+output_sample:
+  input:
+    - One clear product photo, 20KB to 15MB, at least 400 by 400 pixels
+    - Your selling points in short lines, about 100 characters in all
+    - Your product type, such as clothing, bags, beauty or home goods
+    - Access to an image model that draws text well
+  prerequisites:
+    - A dLazy account, an API key and paid credits (about 5 per image), or another image model that draws text cleanly
+    - An AI that can run commands, if you want it to call the image model for you
+  output:
+    - name: Top banner prompt
+      contains: A prompt for the first screen, with a big headline, a small subhead and the product shown as in your photo.
+    - name: Selling point icon row prompt
+      contains: A prompt for three or four round icons, each with a short line of text under it.
+    - name: Material block prompt
+      contains: A prompt for a close-up of the fabric or material, with a short title and two lines of text.
+    - name: Detail block prompt
+      contains: A prompt for a close-up of one part of the product, with a note on how it is made.
+    - name: Size and specs block prompt
+      contains: A prompt for a simple size table or spec list with a title.
+    - name: Fix lines
+      contains: Extra sentences to add when text is garbled, overlaps the product, sits crooked or the product looks changed.
+    - name: Final check list
+      contains: Steps to proofread every word, join the blocks into one long image and check each claim.

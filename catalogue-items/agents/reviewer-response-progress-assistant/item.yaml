@@ -1,30 +1,29 @@
 slug: reviewer-response-progress-assistant
 name: Reviewer response progress assistant
-summary: A response matrix, revision tasks and unresolved evidence requests.
+summary: "Turn journal reviewer comments into a response matrix, revision tasks and a list of missing evidence. Nothing is marked done without proof."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: source_text
+    required: true
+  - type: brief
     required: false
   - type: meeting_notes
     required: false
 outputs:
   - type: document
   - type: plan
-  - type: copy_draft
 uses:
   - map-journal-reviewer-requests-to-evidence
   - source-note-summariser
 steps:
   - uses: map-journal-reviewer-requests-to-evidence
-    note: "Run when: An author supplies revised manuscript evidence, a reviewer comment or a response deadline."
+    note: Maps each reviewer comment to the manuscript and the evidence, builds the task register and checks any response draft. Runs when revised evidence, a new comment or a deadline arrives. Hands step 2 the response matrix and task register, so it knows which reviewer request each result must answer.
   - uses: source-note-summariser
-    note: Run map-journal-reviewer-requests-to-evidence for changed evidence or a due review. If a task is reported complete, compare the actual revised section or result to the reviewer request before changing its recorded status.
+    note: Reads the revised section or result when a task is reported done, so the status changes only after it is compared with the reviewer request. Uses the revised section or result you supply and step 1's response matrix. Hands back the updated status of each task.
 schedule: At a user-requested response preparation checkpoint. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

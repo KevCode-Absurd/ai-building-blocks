@@ -1,6 +1,6 @@
 name: "Old vs new ad prompt scorer"
 new_slug: old-vs-new-ad-prompt-scorer
-summary: "Paste old and new prompt ads. Get a blind test, a decision and a score out of 100."
+summary: "Compare old and new ad prompts with a blind test. Paste both sets of ads. Get a keep-or-switch decision and a score out of 100."
 job: set-up-ai
 thinking: high
 thinking_why: "It judges work against many checks, so a stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - You rewrote a prompt or skill and want to know if the ads really improved.
   - You cut down the information you give the AI to save money and want to check quality didn't drop.
   - You're choosing between two versions of a prompt and want a fair test before rolling one out.
+not_for:
+  - "You have one ad or one output to review: ask your AI for a plain review against your brief and approved facts."
+  - "You never saved the ads your old prompt made: a fair test can't run, so save the old outputs first, then test the next change."
+  - "You want to know which ad will get clicks or sales: run a live ad test on your ad platform instead."
 
 you_give:
   - The ads your old prompt made, saved before you changed anything
@@ -36,6 +40,25 @@ how_to_use:
   - Run the new prompt on exactly the same briefs and paste both sets, labelled by brief.
   - Attach the approved facts and offer terms for each brief.
   - For a fairer result, have a second person or a fresh chat do the picking without knowing which side is new.
+output_sample:
+  input:
+    - The ads your old prompt made, saved before the change
+    - The ads your new prompt made from the same briefs
+    - The briefs, with approved facts and offer terms for each
+    - Token counts and spend for both runs (optional)
+  output:
+    - name: SET-UP
+      contains: The pairs, how A and B were assigned, who judged, anything else that differed, and what is missing.
+    - name: PAIR
+      contains: "For each pair: pass-or-fail checks, both rounds of picks, the counted result and the reasons."
+    - name: SUMMARY
+      contains: Outright failures per side, wins, ties and losses, decided pairs against wins needed, and cost per usable ad.
+    - name: SCORE
+      contains: The new version's wins out of decided pairs as a score out of 100.
+    - name: Pass rate
+      contains: How many ads passed every check on each side, with the sums shown.
+    - name: DECISION
+      contains: One paragraph saying switch, keep or test more, and why. It judges ad quality, not sales.
 
 how_it_works:
   - title: Freezes the old outputs

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It scans a whole codebase and weighs design options.
 new_slug: codebase-architecture-reviewer
 name: Codebase architecture reviewer
-summary: Point it at your code. Get an HTML report of design improvements, then
-  work through the one you pick.
+summary: Find the design problems in your codebase. Get an HTML architecture review report, then work through the fix you pick, one step at a time.
 job: build-software
 headline: Codebase architecture reviewer
-subhead: An HTML report of design improvements for your codebase, then a guided
-  session on the one you pick. The focus is turning shallow, tangled modules
-  into deep ones that are easier to test and easier for an AI to navigate.
+subhead: An HTML report of design improvements for your codebase, then a guided session on the one you pick. The focus is turning shallow, tangled modules into deep ones that are easier to test and easier for an AI to navigate.
 explain: |
   An HTML report of design improvements for your codebase, then a guided session on the one you pick. The focus is turning shallow, tangled modules into deep ones that are easier to test and easier for an AI to navigate.
 
@@ -18,6 +15,10 @@ when:
   - Tests are hard to write because modules are tangled.
   - You want the riskiest design spots named.
   - An AI agent keeps getting lost in your code.
+not_for:
+  - "You are starting a new project with little code or history: wait until there is code and commits, or ask a developer for a quick design check."
+  - "You already know which module to fix: ask your AI for a normal code review of that module instead."
+  - "You want a bug hunt or a security check: use a dedicated code review or security audit, since this only looks at design."
 you_give:
   - Your codebase
   - An area to focus on (optional)
@@ -28,8 +29,31 @@ you_get:
   - A short list ranked by payoff
   - A guided walkthrough of the one you choose
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Use an AI that can read your project folder and run commands, such as Claude Code. A plain chat window will not do.
+  - Check that your project is a git repository with some commit history. The skill uses it to find the parts of the code that change most.
+  - Install the companion skills codebase-design, grilling and domain-modeling next to this one. This skill calls them, and they are not in this folder.
+  - Ask your AI to run this skill. Name an area to focus on if you have one, or leave it open.
+  - Open the HTML report and read the top recommendation. Then tell your AI which candidate you want to explore.
+  - Answer the questions as they come. The skill does not propose a design until you pick a candidate.
+output_sample:
+  input:
+    - Your codebase, as a project folder your AI can read
+    - An area to focus on, like one module or pain point (optional)
+    - Your GLOSSARY.md and past decision records in docs/adr (optional)
+  prerequisites:
+    - An AI that can read your project files and run commands
+    - A git repository with commit history
+    - The companion skills codebase-design, grilling and domain-modeling, which are not in this folder
+  output:
+    - name: Architecture review HTML report
+      contains: A page saved in your temp folder and opened for you, with one card per improvement idea.
+    - name: Candidate cards
+      contains: Files involved, the problem, the proposed change, the benefits for testing, a before and after diagram, and a strength badge.
+    - name: Top recommendation
+      contains: The candidate to tackle first and the reason why.
+    - name: Grilling session
+      contains: "Questions on the candidate you pick: limits, dependencies, the shape of the new module and which tests survive."
+    - name: GLOSSARY.md updates
+      contains: New or sharper domain terms added as decisions are made.
+    - name: Decision record offer
+      contains: An offer to save an ADR when you reject an idea for a lasting reason.

@@ -2,34 +2,104 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: minimal-style-guide-writer
 name: Minimal style guide writer
-summary: Describe your product. Get a style guide built on space, plain type and
-  few colours, with checks.
+summary: Get a minimal style guide for your product, with plain type, few colours, spacing tokens, part rules and a contrast check.
 job: design-work
 headline: Minimal style guide writer
-subhead: A style guide for a clean, minimal interface that designers and
-  engineers can use right away. Describe your product and you get fixed choices
-  for type, colour, spacing and behaviour, plus rules for what to do and avoid.
+subhead: Describe your product and who uses it. Your AI writes a minimal style guide with fixed choices for type, colour, spacing and behaviour. It checks the contrast of each colour pair and lists what to do and what to avoid.
 explain: |
-  A style guide for a clean, minimal interface that designers and engineers can use right away. Describe your product and you get fixed choices for type, colour, spacing and behaviour, plus rules for what to do and avoid.
+  A minimal design is easy to start and easy to spoil. Without written rules, spacing drifts and near-identical greys pile up. This skill writes the rules down as a minimal UI style guide that designers and developers can build from.
 
-  The foundations come first: a type scale with a main font and a display font, a palette with primary, neutral, success, warning and danger colours as named tokens, and a spacing scale of 4, 8, 12, 16, 24 and 32. Accessibility is set to WCAG 2.2 AA with clear focus states and keyboard use. Writing tone is short and confident. Rules say to use named tokens over raw values and never to use low contrast text.
+  Your AI starts with one sentence on the design idea. The defaults are Open Sans for text, Inter for display type, Inconsolata for code, near-black text on a warm off-white surface, one indigo accent and spacing steps of 4, 8, 12, 16, 24 and 32. It then writes rules for each part and its states. The source gives no type sizes, only the words "expressive scale", so the skill sets exact sizes for you.
+
+  The guide also checks contrast. Near-black text on the off-white surface is easy to read, but the green and orange status colours are not. They come out near 3 to 1, below the 4.5 to 1 normal text needs. The guide tells you to use them for icons and fills, or to darken them.
 when:
   - You are starting a product and have no design rules yet.
-  - Your screens use random spacing and several near-identical colours.
-  - You want your team to build the same-looking components.
-  - You need accessibility rules written down for engineers.
+  - Your screens use random spacing and several near-identical greys.
+  - You want your team to build components that look the same.
+  - An engineer needs accessibility rules written down.
+not_for:
+  - "Your brand needs bold colour, illustration or a lot of personality: use the Bold-border style guide writer or the Soft clay style guide writer."
+  - "You build a dense admin tool full of tables and filters: whitespace costs you space, so start from the Design rules file writer on your real project."
+  - "You only need colour, type and spacing as code files from one brand colour: use the Design token builder."
+  - "You want a vintage look: use the Retro throwback style guide writer."
 you_give:
-  - A description of your product
-  - Brand colours or fonts (optional)
-  - Platforms you build for (optional)
+  - A description of your product and what it does
+  - Who uses it
+  - Brand colours or fonts you must keep (optional)
+  - Platforms you build for, such as web, iOS or Android (optional)
 you_get:
-  - Type, colour and spacing tokens
-  - Accessibility rules
-  - Do and don't lists
-  - Component guidance
-  - A writing tone note
+  - Type, colour and spacing tokens, with a contrast ratio for each colour pair
+  - Rules for each part and its states
+  - Accessibility rules you can test
+  - Do and don't lists, tone notes and a review checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product description and who uses it. Add any brand colours or fonts you must keep.
+  - Answer the one round of questions it asks, or say "use the defaults". Anything you do not give is marked MISSING.
+  - Check the type sizes and the colour table. Darken any text colour below 4.5 to 1.
+  - Give the guide to your designer or developer, or paste it into your coding AI's project instructions. Later, run the Page design standards checker on a built page to see if it follows the guide.
+how_it_works:
+  - title: State the design idea
+    text: It writes one sentence on the look and who it is for, before it sets any rules.
+  - title: Set the foundations
+    text: It sets named colour tokens, three fonts, exact type sizes and spacing steps from 4 to 32.
+  - title: Check the contrast
+    text: It tests each text and background pair and flags any below the 4.5 to 1 needed for normal text.
+  - title: Write part rules
+    text: For each part it covers anatomy, variants, states, and how it works by keyboard, mouse and touch.
+  - title: Add tone and bans
+    text: It adds tone examples, do and don't pairs, and notes for moving old inconsistent screens.
+  - title: End with a checklist
+    text: It finishes with a short list your team can run in code review.
+output_shape: |-
+  1. Context and goals: <the design idea in one sentence, the product, who uses it>
+  2. Design tokens
+     | Token | Value | Use | Contrast on surface |
+     | <text> | <hex> | <where it goes> | <ratio, pass or fail> |
+     Fonts: <text>, <display>, <code>
+     Type steps: <name = size on desktop, size on phone>
+     Spacing: <steps>
+  3. Parts: <button, input, card> with anatomy, variants, states, small screens
+  4. Accessibility rules: <rule> and <how to test it>
+  5. Tone: <voice words>, then <before> and <after> examples
+  6. What not to do: <rule> and <example to avoid>
+  7. Review checklist: - [ ] <check>
+  Next step: <who gets the guide>
+  MISSING: <anything you did not give>
+output_sample:
+  input:
+    - Your product and what it does
+    - Who uses it
+    - Brand colours or fonts you must keep (optional)
+    - Platforms you build for (optional)
+  output:
+    - name: Context and goals
+      contains: One sentence on the minimal look, the product and who it is for.
+    - name: Design tokens and foundations
+      contains: Colours, fonts, exact type sizes and spacing as named tokens, with a contrast ratio for each pair.
+    - name: Component rules
+      contains: Anatomy, variants, states and small-screen behaviour for each part.
+    - name: Accessibility requirements
+      contains: Testable rules for focus, contrast, keyboard use and touch size.
+    - name: Content and tone standards
+      contains: Short, confident voice words with before and after examples.
+    - name: Anti-patterns
+      contains: What not to build, each paired with an example.
+    - name: QA checklist
+      contains: A list your team can run in code review before shipping.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - Your brand colours as hex codes
+    - Your current CSS or Tailwind colour list, to see which tokens you already use
+    - Screenshots of your busiest screen
+    - The device sizes your users have
+terms:
+  - term: Style guide
+    meaning: A written set of rules for how a product looks, so every screen matches.
+  - term: Token
+    meaning: A named value, such as text colour or small space, used in place of a raw number.
+  - term: Contrast ratio
+    meaning: How far apart two colours are in brightness. Normal text needs at least 4.5 to 1.

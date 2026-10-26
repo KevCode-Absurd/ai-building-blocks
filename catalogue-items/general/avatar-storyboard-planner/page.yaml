@@ -1,6 +1,6 @@
 new_slug: avatar-storyboard-planner
 name: "Video avatar and storyboard planner"
-summary: "Paste your script, attach product photos. Get an avatar, angle sheets and a storyboard ready for the clips."
+summary: "Turn an approved ad script and product photos into a video avatar planner pack: avatar card, angle sheets, lock lines and a storyboard."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You have an approved script and want to make it as AI video without the character drifting.
   - Your AI clips keep changing the face, the outfit or the product between shots.
   - You want to check the ad has a clear opening, a reason to believe and one call to action before you spend on clips.
+not_for:
+  - "You have no approved script yet: write the script first, or ask your AI for a short ad script from your buyer and offer."
+  - "A real founder or creator will film the ad: say so, and you get a casting note and a real-camera shot list instead of an AI avatar."
+  - "You want finished video clips now: take the approved storyboard to a clips skill or a video tool, since this only plans stages 1 to 4."
 
 you_give:
   - The approved script, with the buyer, their doubt and the call to action
@@ -36,6 +40,29 @@ how_to_use:
   - Read the avatar card and reply yes, or ask for changes.
   - Make the reference images, pick one, then make the sheets and approve them with the lock lines.
   - Approve the storyboard, then take it to the clips skill for your look, or the shot list skill, for stage 5.
+output_sample:
+  input:
+    - Your approved ad script, with the buyer, their doubt and the call to action
+    - Real product photos from more than one angle
+    - The look you want, such as phone video, live action or clay
+    - An avatar you already approved (optional)
+  prerequisites:
+    - An AI that can read pictures, so it can use your product photos
+  output:
+    - name: "Stage 0: Script in"
+      contains: The places, props and product states the ad needs, and any script lines a made-up avatar can't honestly say.
+    - name: "Stage 1: Avatar card"
+      contains: Two or three avatar options, then the pick written as a card for your first approval.
+    - name: "Stage 2: Reference images"
+      contains: Prompts for three or four images of the avatar in your look, and which one you picked.
+    - name: "Stage 3: Sheets and lock lines"
+      contains: Character, product and set sheets, plus fixed lock lines to paste into every later prompt, for your second approval.
+    - name: "Stage 4: Storyboard"
+      contains: One frame prompt and one shot card per shot, each with one job, for your third approval.
+    - name: Continuity and links
+      contains: What stays fixed between shots, and which shot carries who, gain, proof, risk and next step, or marks a gap.
+    - name: Missing and checks missed
+      contains: Anything the skill could not fill in, and any check the board failed.
 
 how_it_works:
   - title: Checks the script

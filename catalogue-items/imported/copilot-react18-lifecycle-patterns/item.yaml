@@ -1,6 +1,6 @@
 slug: copilot-react18-lifecycle-patterns
 name: React unsafe lifecycle migrator
-summary: Share your React class components. Get replacements for unsafe lifecycle methods and notes on changed behavior.
+summary: Replace componentWillMount, componentWillReceiveProps and componentWillUpdate in React class components with safe methods for React 18.
 category: general
 boards: []
 type: skill
@@ -11,7 +11,7 @@ inputs:
   - type: codebase
     required: true
 outputs:
-  - type: test_report
+  - type: code_change
 uses: []
 origin: imported
 source:

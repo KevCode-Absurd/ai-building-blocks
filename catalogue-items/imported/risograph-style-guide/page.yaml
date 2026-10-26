@@ -2,35 +2,116 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: risograph-style-guide
 name: Risograph print style guide writer
-summary: Describe your product. Get a style guide with a two-colour print look
-  on warm paper, plus rules for each part.
+summary: Get a risograph style guide for your site, with a pink and blue print look on warm paper and rules a developer can build from.
 job: design-work
 headline: Risograph print style guide writer
-subhead: "A style guide for a two-colour print look on warm paper: bright pink,
-  deep blue and offset shadows that feel hand printed. Your team can build pages
-  that look like a risograph poster."
+subhead: Describe your product and who it is for. Your AI writes a style guide for a two-colour print look, like a risograph poster. You get colour, type and spacing values, rules for each part of the page, and a checklist to review the finished site.
 explain: |
-  A style guide for a two-colour print look on warm paper: bright pink, deep blue and offset shadows that feel hand printed. Your team can build pages that look like a risograph poster.
+  A risograph style guide is a set of written rules for a website that looks hand printed: two bright inks on warm paper, with offset shadows. Without the rules, every page ends up with a slightly different pink and a different shadow. This skill writes the rules once, so a designer and a developer build the same thing.
 
-  You describe the product. The skill restates the design idea in one line, then sets the foundations: warm off-white paper as the background, pink kept only for things people click, and blue for headings and the offset shadow. It fixes type sizes, a friendly sans font, spacing and tokens. It then writes rules for each component with states and variants, plus accessibility rules to WCAG 2.2 AA. It closes with tone examples, things to avoid and a review checklist.
+  The look rests on three choices. The background is one warm off-white paper colour on every section. Bright pink is kept for things people can click, so pink always means "press me". Deep blue carries the headings and the offset shadow. Your AI states the design idea in one sentence first, then sets the values, then writes rules for each part.
+
+  The skill also tests its own colours. Bright pink is hard to read as small text, so your AI checks each text and background pair against the WCAG AA contrast rule and changes any pair that fails. You get numbers a developer can use, not words like "bold" or "playful".
 when:
-  - You want a playful print look instead of a plain web style.
-  - A zine, event or creative brand needs a consistent site.
-  - Developers need exact colours and spacing for the style.
-  - You want pink to mean click, and nothing else.
+  - A zine, print shop, event or creative studio wants a site that looks printed by hand.
+  - Your designer says "make it like a risograph poster" and a developer needs exact colours and shadows.
+  - Pink shows up all over your pages and visitors cannot tell what is clickable.
+  - You are about to build a small shop or newsletter site and want one clear look first.
+not_for:
+  - "You want a calm, plain look for a data-heavy dashboard: use the Minimal style guide writer."
+  - "You want a vintage feel with old-style type, not a print-shop look: use the Retro throwback style guide writer."
+  - "You need your own brand colours and logo rules, not a named look: use the Brand style guide writer."
 you_give:
-  - A description of your product
-  - Your audience
-  - Any brand colours to keep (optional)
-  - Components or pages you need covered (optional)
+  - A short description of your product, in a sentence or two
+  - Who it is for
+  - Brand colours or fonts you must keep (optional)
+  - The parts the guide must cover, such as buttons, forms and cards (optional)
 you_get:
-  - A risograph style guide
-  - Colour, type and spacing tokens
-  - Component rules with states
-  - Accessibility checks
-  - Tone examples and a review checklist
+  - A one-line design idea that sums up the look
+  - Colour, type, spacing and shadow values for the print look
+  - Rules for each part, with hover, focus, disabled and error states
+  - Accessibility rules you can test, with contrast checked
+  - Tone examples, things to avoid and a review checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill to your AI, or paste the skill text into a new chat.
+  - Paste your product description and who it is for. Add any brand colours or fonts, and name the parts you need.
+  - Read the one-line design idea first. If it does not match your product, correct it before your AI goes on.
+  - Ask your AI to show the contrast ratio for text on each colour. Any pair under 4.5 to 1 should be changed.
+  - Ask for any part the guide left out, such as a form or a menu.
+  - Give the finished guide to your designer or developer. It writes rules only. It does not build pages or draw pictures.
+how_it_works:
+  - title: States the design idea
+    text: Writes one sentence for the look, based on your product, before any rule.
+  - title: Sets the foundations
+    text: Fixes the paper colour, the pink and blue inks, the type sizes, the spacing steps and the offset shadow as named values.
+  - title: Checks the colours
+    text: Tests each text and background pair for contrast and swaps any pair that fails.
+  - title: Writes the part rules
+    text: For each part, describes its pieces, versions and states, and how it behaves with keyboard, mouse and touch.
+  - title: Adds accessibility and tone
+    text: Writes rules that someone can test, plus tone examples and things to avoid.
+  - title: Ends with a checklist
+    text: Closes with a short list a reviewer can run before the site goes live.
+output_shape: |
+  DESIGN IDEA
+  <one sentence>
+
+  CONTEXT AND GOALS
+  <product, audience, what the look must do>
+
+  FOUNDATIONS
+  Paper: <warm off-white value>
+  Pink (click only): <value>   Blue (headings, shadow): <value>
+  Type: <fonts and size steps>   Spacing: <steps>
+  Offset shadow: <offset, blur, colour>
+
+  COMPONENT RULES
+  <part>: pieces, versions, states, small-screen behaviour
+
+  ACCESSIBILITY
+  <rules you can test, with contrast ratios>
+
+  TONE
+  <examples of the voice>
+
+  AVOID
+  <things that break the look>
+
+  QA CHECKLIST
+  <items a reviewer can tick>
+output_sample:
+  input:
+    - A short description of your product
+    - Who it is for
+    - Brand colours or fonts you must keep (optional)
+    - The parts the guide must cover (optional)
+  prerequisites:
+    - An AI chat you can paste the skill into
+  output:
+    - name: Design idea
+      contains: One sentence that says what the look is and why it suits your product.
+    - name: Foundations
+      contains: Paper, pink and blue values, type sizes, spacing steps and the offset shadow, each with a name.
+    - name: Component rules
+      contains: Pieces, versions, states and small-screen behaviour for each part you asked for.
+    - name: Accessibility rules
+      contains: Contrast, keyboard and focus rules that a developer can test.
+    - name: Tone and avoid list
+      contains: Example wording in your brand voice and a list of things that break the look.
+    - name: QA checklist
+      contains: A short list a reviewer can run before the site ships.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - A link or screenshot of a page you like, so your AI can match the mood
+    - Your logo colours, so the pink and blue can be matched to your brand
+    - A list of the pages you plan to build
+terms:
+  - term: Risograph
+    meaning: A print method that lays down one ink at a time, giving flat colours and slight shifts.
+  - term: Token
+    meaning: A named value, such as a colour or a spacing step, that is used the same way everywhere.
+  - term: Contrast ratio
+    meaning: A number that says how easy text is to read on its background. WCAG AA asks for at least 4.5 to 1 for normal text.

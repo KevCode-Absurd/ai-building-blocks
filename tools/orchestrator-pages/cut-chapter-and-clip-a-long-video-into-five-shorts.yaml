@@ -1,6 +1,6 @@
 new_slug: cut-chapter-and-clip-a-long-video-into-five-shorts
 name: Cut, chapter and clip a long video into five shorts
-summary: Give it a raw recording transcript. Get a cut list, chapters and five shorts with new first lines.
+summary: Cut a long video tighter, add YouTube chapters and find five shorts. Give it your raw transcript. Get a cut list, chapters and first lines.
 job: grow-social
 thinking: medium
 thinking_why: Each step reads a transcript and picks times. A mid-size model does it well. Use a stronger one for transcripts over an hour.
@@ -14,6 +14,10 @@ when:
   - You record long videos where you talk to camera and want them tighter.
   - Your video has no chapters, so viewers can't jump to the part they want.
   - You want shorts from a long video but don't know which moments will stand alone.
+not_for:
+  - "Your video is only a few minutes long: skip chapters and pick clips by hand in your editor."
+  - "Your recording is a screen capture with no speech: a transcript has nothing to read, so mark the cuts yourself."
+  - "You want ad shots, not shorts from a talking video: use the Video ad shot list maker."
 you_give:
   - The transcript of your raw recording, with times
   - The link to the video after you cut and upload it
@@ -28,6 +32,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the transcript of your raw recording. Apply the cut list in your editor, then upload the new version.
   - Give it the link to the uploaded video, or paste its captions. It picks up from there.
+output_sample:
+  input:
+    - The transcript of your raw recording, with times
+    - The link to the video after you cut and upload it, or its captions
+    - Your channel topic (optional)
+    - "Where the shorts will go: YouTube Shorts, TikTok or Reels (optional)"
+    - How many chapters you want (optional)
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+    - A video editor, to make the cuts yourself and upload the new version
+  output:
+    - name: "Step 1: Cut list"
+      contains: Each pause, filler line and retake to cut, with its time, a short reason and the time saved.
+    - name: "Step 2: Final transcript"
+      contains: The transcript of the cut video you uploaded, with times that match the final version.
+    - name: "Step 3: Chapters"
+      contains: A block to paste in your description, starting at 00:00 and checked against YouTube's rules.
+    - name: "Step 4: Five shorts"
+      contains: Start and end times, a new first line and on-screen text for each of five clips.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and every MISSING line in one list.
 how_it_works:
   - title: List the cuts
     text: Reads your raw transcript and marks pauses, filler lines and restarted sentences, each with a time and a short reason.

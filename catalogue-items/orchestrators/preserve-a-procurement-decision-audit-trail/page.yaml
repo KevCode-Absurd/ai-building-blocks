@@ -1,50 +1,84 @@
 new_slug: preserve-a-procurement-decision-audit-trail
 name: Preserve a procurement decision audit trail
 headline: Preserve a procurement decision audit trail
-summary: Share the source files. Get a vendor evidence comparison, checklist result and decision trace.
+summary: "Keep a procurement audit trail: compare vendor proposals on fixed criteria, run your approval checklist and get a decision record you can defend."
 job: check-contracts
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A vendor evidence comparison, checklist result and decision trace. Share actual vendor proposals, evaluation evidence, existing ordered approval checklist with stop rules, evaluator decisions and declared conflicts. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the vendor proposals, your approved criteria, your approval checklist and the evaluators' notes. It compares the proposals on the same scope, then runs your checklist with its stop rules. You get an evidence comparison, a checklist result and a decision trace.
 explain: |-
-  A vendor evidence comparison, checklist result and decision trace.
+  When a purchase is questioned later, you need to show why one vendor won. This workflow builds a procurement audit trail as you decide, not afterwards: what each vendor offered, what you checked and who decided what.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Criteria are not changed after seeing vendors; unknown mandatory checks remain failed or blocked. Missing tools or evidence stay visible in the final summary.
+  The Vendor comparison writer compares the real proposals on the criteria you approved before you saw them, on the same commercial scope. It keeps exclusions, evidence gaps and exit costs in view. The Decision checklist runner then runs your own ordered approval checklist against that comparison. Every stop rule stays in force, and an unknown stays unknown.
+
+  It never invents criteria after the fact. If a must-have check cannot be answered, the result says blocked, not pass. It records and checks. People make the decision, and it places no order.
 when:
-  - You need a vendor evidence comparison, checklist result and decision trace.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You must show an auditor, board or funder why you picked a vendor.
+  - Two or three vendors replied and an evaluator wants to change the criteria late.
+  - A conflict of interest has been declared and must be on the record.
+  - Your approval checklist exists on paper but nobody has run it against the proposals.
+not_for:
+  - You have not written criteria yet. Use the Vendor scorecard builder first, then come back.
+  - You want a software pick with a weighted scorecard. Use the Software vendor chooser.
+  - You have one vendor and no written proposals, or the purchase is small. Run the Decision checklist runner on its own and keep the note.
 you_give:
-  - Actual vendor proposals, evaluation evidence, existing ordered approval checklist with stop rules, evaluator decisions and declared conflicts.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Each vendor's written proposal, with its date (PDF, Word or pasted text)
+  - The criteria and weights you approved before you saw the proposals
+  - Your approval checklist in order, with its stop rules (items that end the process if failed)
+  - Each evaluator's notes or scores, with their names and dates
+  - Any declared conflicts of interest (optional)
 you_get:
-  - A vendor evidence comparison, checklist result and decision trace.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A comparison of the proposals on the same scope, with exclusions, evidence gaps and exit costs shown
+  - "A checklist result: each item pass, fail or unknown, with the evidence"
+  - "A decision trace: who decided what, on which evidence and when"
+  - A list of unknowns or failed items that block approval
+  - A hand-back note with MISSING lines and any check that did not run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give the whole folder to Claude, ChatGPT or Gemini.
+  - Attach the proposals, your criteria, your checklist and the evaluator notes. Say which purchase this record is for.
+  - Check the comparison first. Every vendor must be measured on the same scope. A proposal that leaves something out must show an exclusion, not a lower price.
+  - Check the checklist result. A failed stop item ends the run for that vendor. An unknown on a must-have stays blocked until someone answers it.
+  - Save the decision trace with the proposals in your records. Your approver signs off outside this tool.
 how_it_works:
   - title: Vendor comparison writer
-    text: Compare the actual proposals on the approved criteria and same commercial scope, retaining exclusions, evidence gaps and exit costs.
+    text: "Compares the actual proposals on your approved criteria and the same commercial scope. Keeps exclusions, evidence gaps and exit costs. Hands step 2 the comparison and the source file for each claim. Check before moving on: no criterion was added or changed after the proposals arrived."
   - title: Decision checklist runner
-    text: Run the existing ordered approval checklist against the supplied comparison and source records. Preserve all stop rules and unknowns; do not create substitute criteria.
+    text: "Runs your ordered approval checklist against the comparison and the source records. Answers each item pass, fail or unknown with the evidence and keeps every stop rule. Hands back the result and the decision trace. Check before moving on: no unknown on a must-have is counted as a pass."
 output_shape: |-
-  Scope and source coverage
-  A vendor evidence comparison, checklist result and decision trace.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  PURCHASE   <what is being bought, date, approver>
+  COMPARISON <criterion> | <vendor A> | <vendor B> | <evidence file> | <exclusions>
+  CHECKLIST  <item, in order> | <stop rule: yes or no> | <pass, fail or unknown> | <evidence>
+  TRACE      <who> | <what they decided> | <basis> | <date> | <conflicts declared>
+  BLOCKERS   <failed or unknown must-have items>
+  SOURCES    <each file and date>
+  MISSING    <each gap and what it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - Each vendor's written proposal, with its date
+    - The criteria and weights you approved before seeing them
+    - Your approval checklist and its stop rules
+    - Each evaluator's notes, with names and dates
+  prerequisites:
+    - An AI that can read PDF or Word files
+  output:
+    - name: Comparison
+      contains: Vendors side by side on the same scope, with exclusions, evidence gaps and exit costs.
+    - name: Checklist result
+      contains: Each approval item as pass, fail or unknown, with the evidence and stop rules kept.
+    - name: Decision trace
+      contains: Who decided what, on which evidence and when, with declared conflicts.
+    - name: Blockers
+      contains: Failed or unknown must-have items that stop approval.
+    - name: Hand-back note
+      contains: Saved files, MISSING lines and checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Criteria are not changed after seeing vendors; unknown mandatory checks remain failed or blocked.
+  - what: Two vendors only
+    how: Attach just the final two proposals. The comparison and checklist stay short.
+  - what: A late criterion
+    how: If someone adds a criterion after the proposals arrived, say so. It is recorded as a late change, not applied.
+  - what: Exit costs
+    how: Ask for exit and switching costs by name. They then get their own row for each vendor.
 judge:
   - Criteria are not changed after seeing vendors; unknown mandatory checks remain failed or blocked.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +91,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Save the criteria with a date before the proposals arrive. That date is your proof they came first.
+  - Keep the proposals, notes and trace in one folder for the length of your record-keeping rule.
+  - Record any check that needs a person, such as a conflict declaration, and finish it before approval.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads PDF and Word files
+      why: It can quote each claim from the proposal it came from. If the proposals are on paper, paste the key sections.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A dated copy of your criteria and weights.
+    - Your organization's own approval checklist and its stop rules.
 terms:
+  - term: Audit trail
+    meaning: A record that shows what was decided, on what evidence, by whom and when.
+  - term: Stop rule
+    meaning: A checklist item that ends the process for a vendor if it fails.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result of one step, passed to the next.

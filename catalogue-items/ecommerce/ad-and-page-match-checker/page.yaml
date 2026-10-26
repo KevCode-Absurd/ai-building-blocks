@@ -1,6 +1,6 @@
 new_slug: ad-and-page-match-checker
 name: "Ad and page match checker"
-summary: "Attach your ad and its page. Get a match score out of 100, ranked mismatches and fixes."
+summary: "Check that your ad and landing page match. Get a score out of 100, mismatches ranked by risk, and a fix for each one."
 job: check-ads
 thinking: medium
 thinking_why: "It compares two things side by side against a short list of checks, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You are about to send paid traffic to a page, and want to check the join first.
   - Your ads get clicks but few buy, and you suspect the page doesn't match the ad.
   - You changed the ad or the page and want to be sure they still agree.
+not_for:
+  - "Your offer or price is weak: a clean match will not fix it, so get a person to review the offer and copy first."
+  - "You only have the ad and no page yet: there is nothing to match, so finish the page first, then run this check."
+  - "You want to know if the page layout or checkout works on its own: use a page audit or ask a person to test the page on a phone."
 
 you_give:
   - The ad (an image, video or text) and its landing page link or screenshots
@@ -33,6 +37,27 @@ how_to_use:
   - Say who the ad is for, and what comes after the page.
   - Fix the highest-ranked mismatch first, then run the check again.
   - Aim for no Stop-level mismatch before you spend on the traffic.
+output_sample:
+  input:
+    - Your ad (an image, video or text)
+    - Your landing page link or phone screenshots of its first screen
+    - The step after the page, such as cart, quiz result or checkout (optional)
+    - "Who the ad is for: cold, warm or existing buyers (optional)"
+  prerequisites:
+    - An AI chat that can read images, if you attach the ad or page as pictures
+  output:
+    - name: Ad promise and audience
+      contains: One line on what the ad promises and shows, and who it is aimed at.
+    - name: Checks M1 to M6
+      contains: Points for promise, product, look, offer and price, next step, and what the ad says it is for.
+    - name: Score
+      contains: Points earned over points possible, out of 100, with the sum shown.
+    - name: Mismatches, most likely to lose the visitor first
+      contains: Each mismatch rated Stop, Fix or Polish, quoting the ad and the page, with the exact line or look to change.
+    - name: Not run
+      contains: Any check skipped and what you need to add to run it.
+    - name: Missing
+      contains: Any input you did not give, such as the ad, page, audience or next step.
 
 how_it_works:
   - title: Reads the ad as a stranger

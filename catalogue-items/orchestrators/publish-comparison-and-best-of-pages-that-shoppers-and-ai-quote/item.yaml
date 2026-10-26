@@ -16,8 +16,8 @@ outputs:
   - {type: copy_draft}
 uses: [comparison-page-set-planner, best-of-page-writer, answer-first-page-rewriter]
 steps:
-  - {uses: comparison-page-set-planner, note: "Plans the versus, alternative and best-of pages worth building and their order."}
-  - {uses: best-of-page-writer, note: "Writes the first page from the facts you gathered, fairly and with sources."}
+  - {uses: comparison-page-set-planner, note: "Plans the versus, alternative and best-of pages worth building and their order. Hands the page plan to you, and you pick the first page for step 2."}
+  - {uses: best-of-page-writer, note: "Writes the first page from the facts you gathered, fairly and with sources. Uses the page you picked from step 1's plan and the facts you gathered. Hands the draft to step 3."}
   - {uses: answer-first-page-rewriter, note: "Rewrites the draft so each section opens with the answer, ready to be quoted. Reads the draft from the step before."}
 origin: rebuilt
 version: 1.0.0

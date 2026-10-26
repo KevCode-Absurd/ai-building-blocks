@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It lays out a dated sequence from a set method.
 new_slug: brand-launch-planner
 name: Brand launch planner
-summary: Say when and where you launch. Get a rollout plan with the message and
-  steps for each stage.
+summary: Plan your brand launch with dates, channels and a message for each stage. Works for a new brand or a rebrand. Give it your date and team.
 job: plan-strategy
 headline: Brand launch planner
-subhead: A launch plan with dates, channels and the message for each stage, so
-  your brand lands with momentum instead of a quiet whimper. It works for a new
-  brand or a rebrand.
+subhead: A launch plan with dates, channels and the message for each stage, so your brand lands with momentum instead of a quiet whimper. It works for a new brand or a rebrand.
 explain: |
   A launch plan with dates, channels and the message for each stage, so your brand lands with momentum instead of a quiet whimper. It works for a new brand or a rebrand.
 
@@ -18,6 +15,10 @@ when:
   - You are changing your brand name or look and must roll it out.
   - You need to decide between a big day and a gradual release.
   - You have a small team and need to focus on a few channels.
+not_for:
+  - "Your brand is already live and nothing is changing: you don't need a launch plan, so plan regular content instead."
+  - "Your rebrand has no new name or look yet: finish that work first with a rebranding step, then come back here."
+  - "You need finished ads, videos or a full website: a designer, writer or ad tool will make those, this plan only says what to make."
 you_give:
   - Launch type, new or rebrand
   - Date and any hard deadline
@@ -29,7 +30,33 @@ you_get:
   - Channel plan with key messages
   - Success measures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Say if this is a new brand or a rebrand. Add your launch date and any hard deadline.
+  - List what is ready, who the launch is for, your team size, your budget and your channels.
+  - Paste your brand strategy or messaging if you have it (optional). Your AI will ask only for what is missing.
+  - Read the plan. Check that the dates fit your team, then fill in the targets in the metrics table.
+  - Ask your AI to write any copy you still need, such as the launch email or the founder post.
+output_sample:
+  input:
+    - "Launch type: new brand or rebrand"
+    - Your launch date and any hard deadline
+    - "What is ready: website, logo, social profiles, product, press materials"
+    - Your main audience, team size, budget and channels
+    - What a good launch looks like for you
+  prerequisites:
+    - Your saved brand strategy, positioning and messaging, if you have them (optional)
+  output:
+    - name: Launch strategy overview
+      contains: The launch story, a measurable goal, and whether it is a hard launch, soft launch or phased rollout.
+    - name: Pre-launch phase
+      contains: Team briefing, an asset checklist, and optional teasers, waitlists and embargoed press briefings.
+    - name: Launch day plan
+      contains: The main channel and a timed table of actions with an owner for each.
+    - name: Launch content plan
+      contains: A table of content to make before launch, plus copy for the social post, founder post and email.
+    - name: Post-launch first 30 days
+      contains: Week by week steps for momentum, brand storytelling, then measuring and improving.
+    - name: Rebrand additions (rebrands only)
+      contains: A plan to tell existing customers, a why-we-changed letter, and what stays the same.
+    - name: Launch metrics
+      contains: A table of measures with a target and a way to track each one.

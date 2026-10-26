@@ -1,6 +1,6 @@
 name: "Video format picker for ad scripts"
 new_slug: video-ad-format-picker
-summary: "Paste a finished script. Get formats ranked by fit score out of 100, plus the skills to use."
+summary: "Paste a finished ad script and get video formats ranked by fit score, plus the skills to make it. A simple video ad format picker."
 job: make-video-ads
 thinking: high
 thinking_why: "It judges work against many checks, so a stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - You have a finished script and you're deciding what to make it as.
   - An ad tested badly and you suspect the format, not the words.
   - You're choosing between a person on camera, animation and an image ad for the same idea.
+not_for:
+  - "Your script is still being written: use the Video ad script writer from customer quotes first, then come back."
+  - "You want a written script in a style you already chose: use the matching script skill named in your result, such as selfie-style-ad-script."
+  - "You only need a still image ad: use single-image-ad-planner or carousel-ad-writer instead."
 
 you_give:
   - The finished script
@@ -36,6 +40,25 @@ how_to_use:
   - Add what the product is and any limits (no presenter, no budget for animation).
   - Read the "must" lines first. Each one should quote your script.
   - Make the top-ranked format, or the blend it suggests.
+output_sample:
+  input:
+    - Your finished ad script
+    - What the product is and how it is bought (optional)
+    - The buyer stage and why someone buys (optional)
+    - Your limits, like budget, footage or presenters (optional)
+  prerequisites:
+    - A finished script, for example from the Video ad script writer from customer quotes
+  output:
+    - name: Part that carries it
+      contains: The part of the script doing the persuading, with the quoted line that shows it.
+    - name: Properties
+      contains: Six needs marked must, helps or no, each with a quoted line as the reason.
+    - name: Best formats
+      contains: Formats ranked by fit score out of 100, with the musts each holds and a blend if needed.
+    - name: Make it with
+      contains: The script skill and clips skill for video, or the image skill for a still, tied to a must.
+    - name: Length
+      contains: Whether the carrying part fits at this length, the best length, and where to add length.
 
 how_it_works:
   - title: Finds the carrying part

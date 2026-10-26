@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It checks many areas and ranks what could break live.
 new_slug: shipped-app-gap-finder
 name: Shipped app gap finder
-summary: Point it at a shipped repo. Get gaps found in database rules, webhooks,
-  secrets, payments and mobile use.
+summary: Check your shipped app for gaps before launch. Get a score and a ranked list of database, webhook, secret and payment problems to fix.
 job: secure-code
 headline: Shipped app gap finder
-subhead: A list of the gaps in a live app that AI-built projects often miss,
-  found before a user or attacker finds them. It looks at the deployed product,
-  not just the code in your editor.
+subhead: A list of the gaps in a live app that AI-built projects often miss, found before a user or attacker finds them. It looks at the deployed product, not just the code in your editor.
 explain: |
   A list of the gaps in a live app that AI-built projects often miss, found before a user or attacker finds them. It looks at the deployed product, not just the code in your editor.
 
@@ -18,6 +15,10 @@ when:
   - You built the app with AI and are unsure what a real launch would expose.
   - You take payments and need to know a retry cannot charge a customer twice.
   - You want a score and a to-do list for your project.
+not_for:
+  - "You want line-by-line security checks while you write code: use a code-time security review in your editor instead."
+  - "Your repo is private or not on GitHub: the audit reads public GitHub signals, so ask a developer to review it by hand."
+  - "You build a library or command line tool: the score is only partial, so use a code review from a person."
 you_give:
   - The repo folder
   - The live URL (optional)
@@ -29,8 +30,31 @@ you_get:
   - Fix suggestions
   - A saved report for later sessions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - "Check first: your repo must be public on GitHub, and it must not hold secrets or private files. The audit runs an outside npm package, pinned to commitshow@0.3.23, on your machine. It sends your repo's public signals and live link to api.commit.show. Run it only if you approve that."
+  - Open your AI in your project folder. It needs to run code and read files. Chat-only AI cannot run this.
+  - "Ask your AI to run: mkdir -p .commitshow, then npx commitshow@0.3.23 audit . --json, saving the result in .commitshow/audit.json. The first run takes 60 to 90 seconds."
+  - Read the score and the top concerns. Ask your AI to check the file named in the concern you care about, since the audit can flag a gap that is fixed elsewhere.
+  - Ask for a small fix to one concern. Look at the diff and approve it before anything changes.
+  - Run the audit again with --refresh after you fix a gap. The score then shows the change.
+output_sample:
+  input:
+    - Your repo folder, with the repo public on GitHub
+    - Your live app link (optional)
+    - Your stack, such as Supabase or Stripe (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Node installed, so the audit tool can run
+    - Your OK to run an outside npm package on your machine
+  output:
+    - name: Score
+      contains: A 0 to 100 production-readiness score, with the change since the last audit when there is one.
+    - name: Band
+      contains: A label of strong, mid or early that sums up how ready the app is.
+    - name: Top concerns
+      contains: The biggest gaps, ordered by impact, each tagged with an area such as Security or Infrastructure.
+    - name: Fix proposal
+      contains: A small patch shown as a diff for the concern you pick, applied only after you approve.
+    - name: .commitshow/audit.json
+      contains: The full saved audit result, so later sessions can read it without a new run.
+    - name: .commitshow/audit.md
+      contains: A readable copy of the audit that sits next to the saved result.

@@ -1,6 +1,6 @@
 slug: review-comment-fixer
 name: Review comment fixer
-summary: Point it at your open pull request. Get each reviewer comment handled and the code updated.
+summary: Turn the review comments on your open GitHub pull request into a numbered list. Pick which to fix and your AI changes only those.
 category: general
 boards: []
 type: skill
@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: codebase
     required: true
+  - type: feedback_notes
+    required: false
 outputs:
   - type: code_change
 uses: []

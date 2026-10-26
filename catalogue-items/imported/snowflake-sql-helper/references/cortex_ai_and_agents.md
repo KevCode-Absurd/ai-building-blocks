@@ -236,7 +236,7 @@ result = (
 result.show()  # Execution happens here
 ```
 
-### Vectorized UDFs (10-100x Faster)
+### Vectorized UDFs
 
 ```python
 from snowflake.snowpark.functions import pandas_udf
@@ -276,5 +276,5 @@ session.sproc.register(
 
 - Never hardcode credentials. Use environment variables, key pair auth, or Snowflake's built-in connection config.
 - DataFrames are lazy. Calling `.collect()` pulls all data to the client -- avoid on large datasets.
-- Use vectorized UDFs over scalar UDFs for batch processing (10-100x performance improvement).
+- Use vectorized UDFs over scalar UDFs for batch processing (they process rows in batches; compare timing on your own data).
 - Close sessions when done: `session.close()`.

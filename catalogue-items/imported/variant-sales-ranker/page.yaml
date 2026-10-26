@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It joins sales, refunds and stock.
 new_slug: variant-sales-ranker
 name: Variant sales ranker
-summary: Get every size and color ranked by sales, units and refunds, with
-  stock, to spot top sellers and dead weight.
+summary: Rank your Shopify variants by sales, units and refund rate, with stock beside each one, to find top sellers and dead weight.
 job: run-your-store
 headline: Variant sales ranker
-subhead: Know which exact sizes and colors make your money and which sit on the
-  shelf. Each variant is ranked by revenue, units sold and refund rate, then set
-  beside the stock you have left.
+subhead: Know which exact sizes and colors make your money and which sit on the shelf. Each variant is ranked by revenue, units sold and refund rate, then set beside the stock you have left.
 explain: |
   Know which exact sizes and colors make your money and which sit on the shelf. Each variant is ranked by revenue, units sold and refund rate, then set beside the stock you have left.
 
@@ -18,6 +15,10 @@ when:
   - You suspect one color is returned far more than the rest.
   - You want to clear slow stock before the next season.
   - Your best-selling variant might be running low and you need to check.
+not_for:
+  - "You have a new product with no sales yet, or a period under 30 days: wait for more orders, or look at product-level sales in your Shopify reports."
+  - "You want sales for each product, not each size and color: use the sales report in your Shopify admin."
+  - "You want to change prices or stock: this only reads data, so make those changes in Shopify yourself."
 you_give:
   - Your store domain
   - A start and end date
@@ -29,8 +30,30 @@ you_get:
   - Current stock next to sales
   - Lists of top performers and dead weight
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI tool that can run commands and save files, like Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Log in to your store with the Shopify CLI, using an account that can read orders and products.
+  - Paste the skill into your AI. Give it your store domain and a start and end date. A 30 to 90 day range works best.
+  - "Pick how to rank: revenue, units or refund rate. Set a minimum units sold, such as 5, to skip variants with very few sales."
+  - Open the CSV and the two tables. Check any variant with a high refund rate before you reorder it.
+  - Pair it with the dead-stock-identifier skill for a wider look at stock health.
+output_sample:
+  input:
+    - Your store domain
+    - A start and end date
+    - "The ranking you want: revenue, units or refund rate"
+    - How many top and bottom variants to show (optional)
+    - The fewest units sold to include a variant (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands and save files, such as Claude Code, Cursor, Codex or Gemini CLI
+    - A Shopify login with read access to orders and products
+  output:
+    - name: Start banner and step lines
+      contains: Your store, the start time, and a short line for each step with what it found.
+    - name: Top performers table
+      contains: The best variants by the ranking you chose, shown in the chat.
+    - name: Dead weight table
+      contains: Variants with stock on hand that earn the least for each unit of stock.
+    - name: variant_performance CSV file
+      contains: One row per variant with units sold, revenue, refunds, refund rate, stock and revenue per unit of stock.
+    - name: Outcome summary
+      contains: Orders processed, variants analysed, date range, ranking used and error count.

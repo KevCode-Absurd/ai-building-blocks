@@ -24,11 +24,11 @@ uses:
   - learning-documentation-planner
 steps:
   - uses: community-project-unit-planner
-    note: Frame an appropriate local problem and the learning students should demonstrate.
+    note: Frame an appropriate local problem and the learning students should demonstrate. Hands the project plan, with its tasks, skills and approvals, to the brief writer.
   - uses: project-based-unit-brief-writer
-    note: Define deliverables, roles, milestones and realistic assessment criteria.
+    note: Define deliverables, roles, milestones and realistic assessment criteria. Writes the student brief from step 1's plan. Hands the milestones and products to the documentation planner.
   - uses: learning-documentation-planner
-    note: Plan observations of learner decisions for teacher planning. Keep this documentation distinct from the separate curriculum assessment.
+    note: Plan observations of learner decisions for teacher planning. Keep this documentation distinct from the separate curriculum assessment. Reads step 2's milestones and products.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

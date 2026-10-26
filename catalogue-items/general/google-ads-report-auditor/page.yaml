@@ -1,6 +1,6 @@
 new_slug: google-ads-report-auditor
 name: "Google Ads report auditor"
-summary: "Paste one Google Ads export and your target. Get changes worth making and a score out of 100."
+summary: "Check a Google Ads export for wasted spend. Get proposed changes with the rows behind them, plus a score out of 100 against your target."
 job: read-ad-results
 thinking: high
 thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
@@ -17,6 +17,10 @@ when:
   - You downloaded a Google Ads report and don't know which numbers matter.
   - You want to cut wasted searches without excluding ones that bring in sales.
   - You want each change written down with its proof before anyone touches the account.
+not_for:
+  - "You want one pass over your whole account: pull one report at a time and run this once per area."
+  - "You want the changes made for you: this only proposes, so make each approved change by hand in Google Ads."
+  - "You need Meta or Facebook ad results read: use the Campaign keep-or-change checker, or your Meta Ads Manager report with a person you trust."
 
 you_give:
   - Which part to review (search terms, keywords, Quality Score, Performance Max assets, Display, video, or bids and budgets)
@@ -37,6 +41,29 @@ how_to_use:
   - Add your target, for example "target cost per purchase $30". If you don't have one, write "exploratory".
   - If it lists MISSING exports, pull exactly the export and columns it lists and run it again.
   - Treat every proposed change as a suggestion. Approve it, make it by hand, then use the check it gives you.
+output_sample:
+  input:
+    - Which Google Ads area to review, such as search terms or bids and budgets
+    - The export for that area, with source, pull date, date range and currency
+    - Your target cost per sale or target return (optional, but without it the skill only describes)
+    - Your brand terms and current negative keywords (optional, for search terms)
+  prerequisites:
+    - An export from Google Ads for one area, saved as a CSV or pasted as text
+  output:
+    - name: Coverage note
+      contains: Rows read, rows left out for privacy, date range, currency and where the file came from.
+    - name: Check
+      contains: Whether the file has the columns this area needs, or a stop with the exact export to pull.
+    - name: Findings
+      contains: Each finding with its IDs, the rows behind it, a proposed change and how to check it worked.
+    - name: Missing and what to pull
+      contains: Any target, column or export still needed, named exactly.
+    - name: Report
+      contains: "The same findings in a structured list: area, rows, dates, currency, findings and missing items."
+    - name: Score
+      contains: A score out of 100 for spend meeting your target, with the sum shown and unjudged spend added up.
+    - name: Summary
+      contains: The top three findings in plain words, ending with a note that nothing has been changed.
 
 how_it_works:
   - title: Picks one part

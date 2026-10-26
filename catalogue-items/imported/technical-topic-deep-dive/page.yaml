@@ -2,18 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: technical-topic-deep-dive
 name: Technical topic deep dive
-summary: Choose a topic you know partly. Practice explaining how it works, its
-  tradeoffs and where it can fail.
+summary: Practice a technical topic you know a little about. Your AI guides you through how it works, its tradeoffs and failure cases, then you explain it back.
 job: study-and-practice
 headline: Technical topic deep dive
-subhead: Choose a technical topic whose basics you already know. It checks your
-  starting point, then explores how it works, tradeoffs and failure cases. You
-  explain each step back and finish with a short account of the idea in your own
-  words.
-explain: Choose a technical topic whose basics you already know. It checks your
-  starting point, then explores how it works, tradeoffs and failure cases. You
-  explain each step back and finish with a short account of the idea in your own
-  words.
+subhead: Choose a technical topic whose basics you already know. It checks your starting point, then explores how it works, tradeoffs and failure cases. You explain each step back and finish with a short account of the idea in your own words.
+not_for:
+  - "You are new to the topic and need the basics first: ask your AI to teach it from scratch, step by step, before you try this."
+  - "You need to fix a bug or build something right now: work through it with your AI directly, then come back to study the idea."
+  - "You hold a wrong idea about the topic: ask your AI to check and correct that idea first, then start this."
+explain: Choose a technical topic whose basics you already know. It checks your starting point, then explores how it works, tradeoffs and failure cases. You explain each step back and finish with a short account of the idea in your own words.
 you_give:
   - A technical topic and what you already understand.
   - The interview, design choice or bug that makes it useful.
@@ -29,9 +26,25 @@ how_it_works:
   - title: Step 3
     text: Finish with an explanation written in your own words.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI the topic, what you already know and why you need it.
+  - Answer the first check question. Your AI skips any steps you can already do.
+  - Answer each checkpoint in your own words before moving on. Explain the worked trace back, give your own tradeoff view and name edge cases yourself.
+  - Finish by writing one paragraph that explains the idea to a beginner.
+output_sample:
+  input:
+    - The technical topic you want to go deeper on
+    - What you already understand about it
+    - Why you need it, such as an interview, a design choice or a bug (optional)
+    - Questions or gaps you already know about (optional)
+  output:
+    - name: Context
+      contains: The topic, the step you start from and the reason you are studying it.
+    - name: Depth ladder progress
+      contains: Which of the five steps you have finished and which one comes next.
+    - name: Current step exploration
+      contains: A worked trace, a tradeoff case or edge cases at your level, depending on the step.
+    - name: Checkpoint question
+      contains: One question you must answer before moving up to the next step.
+    - name: Exit synthesis prompt
+      contains: A request to write one paragraph explaining the idea to someone who just learned the basics.

@@ -33,3 +33,29 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - "You only need the letter itself. Use the Offer letter drafter."
+  - "You already have a letter and want its legal terms checked. Use the Offer letter and non-compete checker."
+  - "You have not picked a candidate yet. Compare your finalists with the Fair candidate comparer first."
+output_sample:
+  input:
+    - The role, level and pay range
+    - What the candidate has said they want, and any other offers they hold
+    - Your limits on pay and equity
+    - The points you must win (optional)
+    - Market pay data for the role (optional)
+  output:
+    - name: Candidate context
+      contains: Current pay if known, what they asked for, rival offers, what drives them and likely doubts.
+    - name: Proposed package
+      contains: A table of base, bonus, equity, sign-on and totals, with where each sits against the market.
+    - name: Negotiation strategy
+      contains: Both sides' fallback options, the order of concessions, your limits and your walk-away point.
+    - name: Counter-offer defense
+      contains: The likely counter from their current employer and how to respond.
+    - name: Closing plan
+      contains: Dates for the call, the written offer and the deadline, who talks to them, and a backup candidate.
+    - name: Risk table
+      contains: Each risk rated high, medium or low, with an action.
+    - name: Call scripts
+      contains: Words for the verbal offer and the written offer, in order.

@@ -58,8 +58,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Find the reasons people buy.** Use the skill `customer-buying-reasons-finder`. Rank the reasons in your reviews with the exact phrases, so the quote ads use real ones.
 2. **Make quote image ads.** Use the skill `customer-quote-image-ad`. Give it the angle library from the steps before. Build the quote ads from the ranked reasons and their exact phrases.
 3. **Make a review card ad.** Use the skill `complaint-review-image-ad-maker`. Give it the ad copy from the steps before. Add one plain review card whose small grumble works as a reason to buy, in copy that matches the quote ads.
-4. **Check the ads against Meta rules.** Use the skill `meta-ads-compliance-checker`. Give it the ad copy and the static ads from the steps before. Check the quote ads and the feed text against Facebook and Instagram ad rules.
-5. **Find the ad types still missing.** Use the skill `image-ad-gap-finder`. Give it the static ads from the steps before. Code the ads from this run, find the types the set leaves out and brief the next three.
+4. **Check the ads against Meta rules.** Use the skill `meta-ads-compliance-checker`. Give it the ad copy and the static ads from step 2, and the review card prompt from step 3. Check the quote ads, the review card and the feed text against Facebook and Instagram ad rules.
+5. **Find the ad types still missing.** Use the skill `image-ad-gap-finder`. Give it the static ads from step 2 and your reviews, not step 4's report. Code the ads from this run, find the types the set leaves out and brief the next three.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

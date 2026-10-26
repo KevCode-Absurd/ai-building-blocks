@@ -2,32 +2,33 @@ slug: gumloop
 name: Gumloop
 maker: Gumloop
 url: https://www.gumloop.com
-promise: "Build agents that work across your connected apps from a written task."
+promise: "Build AI agents that read and update Slack, Gmail, HubSpot and Sheets for you."
 use_cases: [automate]
 categories: [automation]
 what_it_does:
-  - Builds agents from a plain-words description of the job.
-  - Connects to Slack, Gmail, Salesforce, HubSpot, Notion, GitHub and Google Sheets.
-  - Watches the web or your apps and acts when your conditions match.
-  - Saves reusable skills that agents write, refine and share.
-  - Makes shareable dashboards, documents and web apps from your connected data.
-  - "Lets IT manage access, sign-in and records of what agents do."
+  - "Builds agents from a description of the job in plain words, using any AI model (checked 26 Oct 2026)."
+  - "Connects to Slack, Gmail, Salesforce, HubSpot, Notion, Linear, GitHub and Google Sheets, plus 100 or more MCP server connections (checked 26 Oct 2026)."
+  - "Watches the web or your apps and acts when your conditions match (checked 26 Oct 2026)."
+  - "Saves reusable skills that agents write, refine and share (checked 26 Oct 2026)."
+  - "Makes dashboards, documents, spreadsheets, presentations and shared web apps from your connected data (checked 26 Oct 2026)."
+  - "Gives IT sign-in control, audit logs and usage monitoring. It also lists VPC deployments (checked 26 Oct 2026)."
 benefits:
-  - Hand off lead research, CRM updates and ticket sorting.
+  - Hand off lead research, CRM updates and ticket sorting to an agent.
   - Share one agent with the whole team instead of rebuilding it.
   - Let a team build agents while IT keeps control of access.
-  - "Set reports to run on a schedule."
+  - "Build on it in code too, through its API, SDKs and command line tool (checked 26 Oct 2026)."
 best_for:
   - "Marketing, sales and operations teams that want agents to use their connected apps."
   - Companies where IT must approve what agents can reach.
   - Teams replacing manual lead and CRM work.
 not_for:
-  - One-off text writing with no apps involved.
-  - People who need a clear free plan, since sources disagree on whether one exists.
+  - "One-off text writing with no apps involved. Use Claude or ChatGPT."
+  - "Simple app-to-app moves with fixed steps. Zapier or Make may be enough."
+  - "Anyone who needs a price before they start. We could not read the pricing page on 26 Oct 2026."
 pricing:
   model: subscription
-  from: Check the maker's site
-  note: The pricing page did not load. Sources dated August and September 2026 list a Pro plan from about US$37 per month, plus Enterprise, but disagree on a free plan. Credits are used per run.
+  from: Not confirmed. Check the maker's site
+  note: "We could not read Gumloop's pricing page on 26 Oct 2026. Its own blog says the Solo and Team plans were combined into one Pro plan. Earlier notes from other sites listed Pro at about US$37 a month and disagreed on a free plan. We did not confirm either. Check the plan, the credits and the cost of each run on the vendor's page before you build anything that runs often."
 works_with:
   - Slack
   - Gmail
@@ -38,8 +39,27 @@ works_with:
 runs_in: [web, api, slack]
 blocks: []
 alternatives: [lindy, zapier, make, n8n]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Open gumloop.com and sign up, or book a demo if you are a company team. The sign-up steps were not on the pages we could read, so check the site."
+  - "Look at the plan and credit rules on the pricing page before you build."
+  - "Write the job in one or two sentences, such as: when a new HubSpot lead arrives, research the company and post a summary in Slack."
+  - "Connect only the apps the job needs, such as HubSpot and Slack. Sign in to each when asked."
+  - "Run the agent once on one test record. Open the result in Slack, check it against the lead, and fix the task wording before you switch on a trigger."
+needs:
+  - "A Gumloop account on a plan that includes agents. We could not confirm which plan."
+  - "Access to each app you want it to use, such as Slack or Gmail. A company may need IT to approve it."
+  - "One job written in plain words, with the app it starts in and where the result should go."
+example:
+  task: "When a new HubSpot lead arrives, research the company and post a summary in Slack."
+  cost: "Not known. We could not read the credit rules, so we cannot say what one run costs. Run it once and read the usage."
+  reply: "A short message in a Slack channel with the company name, what it does and a line on why it may fit. The exact shape depends on your task wording, so ask for the fields you want."
+not_verified:
+  - "Any price, any free plan, and the credits used per run. The pricing page did not load on 26 Oct 2026."
+  - "The sign-up steps for a first agent. The pages we could read did not list them."
+  - "How scheduled reports are set up. The home page lists them as a use case only."
 sources:
-  - https://www.gumloop.com/pricing
-  - https://gumloop.com
+  - https://www.gumloop.com
   - https://www.gumloop.com/blog/simplifying-gumloop-pricing
+  - https://docs.gumloop.com

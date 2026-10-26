@@ -1,17 +1,20 @@
 import { Link } from "./lib/router";
-import { INFO_PAGES, SUPPORT_EMAIL, emailLink } from "./lib/site-info.mjs";
+import { INFO_PAGES, SOCIAL_PROFILES, SUPPORT_EMAIL, emailLink } from "./lib/site-info.mjs";
 import { openTailor } from "./Tailor";
+import { usePeopleVisible } from "./lib/people";
 
+// A short set: the four places people start, then help. Policies sit in the bottom row.
+// Minds, From a source, the growth planner and the app starter pack are reached from these pages, not listed again here.
 const groups = [
-  { label: "Explore", links: [["/#library", "Block library"], ["/minds", "Minds"], ["/tools", "Mini tools"], ["/ai-tools", "AI tools"], ["/tools/growth-channel-planner", "Growth channels"]] },
-  { label: "Create", links: [["/compose", "Build a custom workflow"], ["/from-a-source", "Create skills from content"], ["/apps", "Example apps"], ["/apps/starter-pack", "App starter pack"], ["/space", "My space"], ["/people", "From people"]] },
+  { label: "Explore", links: [["/#library", "Find a task"], ["/compose", "Build a workflow"], ["/tools", "Tools"], ["/apps", "Example apps"], ["/space", "My space"]] },
   { label: "Help", links: [["/how-it-works", "How it works"], ["/support", "Help & contact"], ["/about", "About AI Blocks"]] },
 ];
 export default function SiteFooter() {
+  const people = usePeopleVisible(); // From people shows here only once the public list has 20 or more items
   return <footer className="footer">
     <div className="wrap">
-      <div className="footer-grid"><div className="footer-brand"><Link to="/" className="footer-name">AI Blocks</Link><p>Reusable AI skills and workflows for the work you do.</p><a href={emailLink()} className="footer-email">{SUPPORT_EMAIL}</a><span className="small">Support, feedback and privacy requests</span></div>
-        {groups.map(group => <nav key={group.label} aria-label={`Footer ${group.label.toLowerCase()}`}><h2>{group.label}</h2>{group.links.map(([to, label]) => <Link key={to} to={to}>{label}</Link>)}{group.label === "Help" && <><Link to="/api-and-mcp" data-testid="footer-api-mcp">API &amp; MCP</Link><Link to="/api-and-mcp#api" data-testid="footer-documentation">Documentation</Link><button className="link-btn" onClick={() => openTailor()} data-testid="tailor-footer">Get a skill tailored for you</button></>}</nav>)}
+      <div className="footer-grid"><div className="footer-brand"><Link to="/" className="footer-name">AI Blocks</Link><p>Reusable AI skills and workflows for the work you do.</p><a href={emailLink()} className="footer-email">{SUPPORT_EMAIL}</a>{SOCIAL_PROFILES.length > 0 && <nav className="footer-social small" aria-label="AI Blocks on other sites">{SOCIAL_PROFILES.map(({ label, url }) => <a key={url} href={url} rel="me noopener" target="_blank">{label}</a>)}</nav>}<span className="small">Support, feedback and privacy requests</span></div>
+        {groups.map(group => <nav key={group.label} aria-label={`Footer ${group.label.toLowerCase()}`}><h2>{group.label}</h2>{group.links.map(([to, label]) => <Link key={to} to={to}>{label}</Link>)}{group.label === "Explore" && people && <Link to="/people" data-testid="footer-people">From people</Link>}{group.label === "Help" && <><Link to="/api-and-mcp" data-testid="footer-api-mcp">API &amp; MCP</Link><Link to="/api-and-mcp#api" data-testid="footer-documentation">Documentation</Link><button className="link-btn" onClick={() => openTailor()} data-testid="tailor-footer">Get a skill tailored for you</button></>}</nav>)}
       </div>
       <div className="footer-bottom"><span>© {new Date().getFullYear()} AI Blocks</span><nav aria-label="Policies">{INFO_PAGES.filter(page => !["/support", "/about"].includes(page.path)).map(page => <Link key={page.path} to={page.path}>{page.label}</Link>)}</nav></div>
     </div>

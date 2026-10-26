@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Judge bias is subtle and the setup needs careful choices.
 new_slug: ai-answer-judge-designer
 name: AI answer judge designer
-summary: Say what good looks like. Get a scoring guide an AI can use to grade
-  answers fairly, with bias checks.
+summary: "Build an AI answer judge: a scoring guide that grades answers the same way each time, with checks for position and length bias."
 job: test-and-fix-code
 headline: AI answer judge designer
-subhead: A scoring guide that an AI judge can use to grade answers the same way
-  each time, plus checks for the biases judges are known to have.
+subhead: A scoring guide that an AI judge can use to grade answers the same way each time, plus checks for the biases judges are known to have.
 explain: |
   A scoring guide that an AI judge can use to grade answers the same way each time, plus checks for the biases judges are known to have. It starts from what good looks like for your use.
 
@@ -17,6 +15,10 @@ when:
   - Your scores change every time you run the same test.
   - You are comparing two prompts and want to pick the winner.
   - You need a rubric both people and AI can apply the same way.
+not_for:
+  - "You need to check one fact that has a known answer: use a plain exact-match test, such as comparing the answer to the correct text."
+  - "You only want a person to review a few answers: ask a teammate to score them with a short checklist."
+  - "You want to fix the prompt or code that gave a bad answer: debug it by hand first, then come back to grade the new results."
 you_give:
   - What a good answer looks like
   - Examples of good and bad answers (optional)
@@ -28,7 +30,31 @@ you_get:
   - Checks for position and length bias
   - A way to compare AI and human scores
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down what a good answer looks like for your use. Name the two or three things that matter most.
+  - Gather at least 20 answers that people have already scored. Keep some aside as a test set that you do not show the judge while you build it.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste your description of a good answer and your scored examples.
+  - Pick direct scoring for facts and instructions, or pairwise comparison for tone and style. Ask your AI to write the rubric and the judge prompt.
+  - Run the judge on your test set. Compare its scores with the human scores and fix the rubric where they differ.
+  - For pairwise grading, judge each pair twice with the order swapped. Treat disagreement as a tie.
+output_sample:
+  input:
+    - What a good answer looks like for your use
+    - Examples of good and bad answers (optional)
+    - What you are comparing, such as two prompts or two models
+    - A few answers scored by people, to check the judge against (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - Some answers to grade, or a plan for where they will come from
+  output:
+    - name: Rubric
+      contains: The criteria, a score scale, and a short description of what each score level looks like.
+    - name: Direct scoring prompt
+      contains: A judge prompt that rates one answer per criterion and gives a short reason before each score.
+    - name: Pairwise comparison prompt
+      contains: A judge prompt that picks the better of two answers, with a winner, confidence and reasoning.
+    - name: Position swap check
+      contains: A way to judge each pair twice with the order swapped, and call a tie if the two runs disagree.
+    - name: Length bias guard
+      contains: Rubric wording that says length is not quality, so long answers do not win by default.
+    - name: Calibration check
+      contains: Steps to compare the judge's scores with human scores before you trust it.

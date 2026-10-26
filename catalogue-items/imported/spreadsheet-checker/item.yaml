@@ -10,9 +10,15 @@ level: intermediate
 inputs:
   - type: spreadsheet
     required: true
+  - type: audit_report
+    required: false
+  - type: plan
+    required: false
 outputs:
   - type: spreadsheet
     required: true
+  - type: audit_report
+    required: false
 uses: []
 origin: imported
 source:

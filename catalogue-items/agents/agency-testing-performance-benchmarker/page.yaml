@@ -1,0 +1,144 @@
+name: Performance Benchmarker agent
+summary: Plan a repeatable speed and load test for your site or API. Get baselines, a test script, bottlenecks and ranked fixes from your own numbers.
+headline: Performance Benchmarker agent
+subhead: Name the page, API or user path to test and the speed goal. The agent builds a baseline table, a load test plan and a ready-to-adapt test script. Paste your results back and it ranks the bottlenecks and the fixes.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A site feels slow, or a launch is coming and nobody knows how many visitors it can take. Guessing does not help. You need a number before the fix and the same number after it. This performance benchmark agent sets those numbers up so any test can be run again the same way.
+
+  It starts with a baseline. That means what to measure (response time, error rate, page load), under what load, and how many runs. It then plans four kinds of test. Load tests use normal and peak traffic. Stress tests find the breaking point. Spike tests jump suddenly. Endurance tests run long. It writes a k6 load test script you can adapt, and it tells you what to change before you run it.
+
+  A chat AI cannot run a load test for you. You run the script or the tool, then paste the results. The agent only reads numbers you give it. When a number is missing it writes MISSING. It never makes up a figure, a saving or a gain in sales. The original profile has targets such as "95 percent under 500 ms". Treat those as starting points and set your own.
+
+  The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience and success claims are role language, not results measured by AI Blocks.
+when:
+  - You are about to launch, run a sale or send a big email, and need to know if the site will hold.
+  - Pages or an API feel slow and you want numbers before you pay for fixes.
+  - You made a speed fix and want proof that it helped.
+  - Your developer asks for "a performance budget" and you need one you can check each release.
+not_for:
+  - "You want to run a load test on a live production site without the owner's okay: stop, and test a staging copy instead."
+  - "You want to read a Shopify speed report in plain words: use the Store speed report reader."
+  - "You want code changes that make one page faster: use the Website speed tuner."
+  - "You want to check that an API returns the right answers: use the API Tester agent."
+  - "You have test results to sort by failure cause: use the Test Results Analyzer agent."
+you_give:
+  - What to test, such as a page link, an API endpoint or a path like login then dashboard.
+  - Your speed goal, such as "95 percent of requests under 500 ms" (optional). Without one it proposes a goal and marks it as a proposal.
+  - Where you will test (staging or production) and who owns that system.
+  - Past numbers, such as a Lighthouse report, k6 output or server logs (optional).
+  - How many users you expect at peak (optional).
+you_get:
+  - A baseline table of what to measure, the number today (or MISSING) and the target.
+  - A test plan with load, stress, spike and endurance scenarios, and how many runs to do.
+  - A k6 test script to adapt for your path, with notes on what to change first.
+  - A ranked list of bottlenecks, drawn only from results you paste.
+  - Ranked fixes with the effort and the likely gain, marked as an estimate.
+  - A status against your goal: MEETS, FAILS or NOT DETERMINED, with the reason.
+how_to_use:
+  - Download the pack. Add it to your AI as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - "Say what you want tested and your goal. Ask for a plan first, such as: Plan a baseline and a test for this page. Do not invent numbers."
+  - Check the baseline table. Fill in the MISSING numbers from your own tools, such as Lighthouse, your host's dashboard or your logs.
+  - "Run the test yourself. You need k6 (free) and a staging copy of your system. Claude Code or Codex can run it for you if you allow it."
+  - Paste the raw results back. Ask for the bottleneck list and the ranked fixes.
+  - After each fix, run the same test again and paste the new numbers. Ask for a before and after comparison.
+how_it_works:
+  - title: Set the baseline
+    text: It lists what to measure, the critical user paths, the goal for each, and how to record today's numbers.
+  - title: Design the tests
+    text: It plans load, stress, spike and endurance runs, a realistic mix of traffic, and the number of runs needed for a fair result.
+  - title: Write the script
+    text: It drafts a k6 script with checks for status and content, and thresholds that fail the run when the goal is missed.
+  - title: Read your results
+    text: It reads the numbers you paste, such as the 95th percentile, the error rate and the requests per second, and compares them with the baseline.
+  - title: Find the bottleneck
+    text: It looks at the database, the app code, the servers, the network and outside services, and names the layer the numbers point to.
+  - title: Rank the fixes
+    text: It orders fixes by gain against effort, and says which result would prove each fix worked.
+output_shape: |-
+  BASELINE
+    Metric <name> | Today <number or MISSING> | Target <goal> | Source <tool>
+
+  TEST PLAN
+    Scenario <load, stress, spike, endurance> | Users <ramp> | Length <time> | Runs <count> | Pass rule <rule>
+
+  TEST SCRIPT
+    <k6 script with checks and thresholds, plus what to change first>
+
+  RESULTS READ
+    <metric> | <your number> | <vs target> | <meaning>
+
+  BOTTLENECKS
+    1. <layer> | Evidence <your number> | Likely cause <cause, marked as a guess if unproven>
+
+  FIXES, RANKED
+    <fix> | Effort <low, medium, high> | Likely gain <estimate> | Proof <which re-test result>
+
+  STATUS
+    <MEETS, FAILS or NOT DETERMINED> | Reason <one line> | Checks still needed <list>
+output_sample:
+  input:
+    - The page, API or path to test
+    - Your speed goal, if you have one (optional)
+    - Where you will test and who owns it
+    - Past numbers such as a Lighthouse report, k6 output or logs (optional)
+  prerequisites:
+    - A staging copy of your system, so a load test cannot hurt real customers
+    - k6 or another load test tool, or an AI that can run code (to run the test itself)
+  output:
+    - name: Baseline
+      contains: What to measure, today's number or MISSING, and the target for each.
+    - name: Test plan
+      contains: Load, stress, spike and endurance scenarios, with users, length, runs and pass rules.
+    - name: Test script
+      contains: A k6 script draft with checks and limits, and the lines you must change first.
+    - name: Results read
+      contains: Each number you pasted, set against the baseline and the goal.
+    - name: Bottlenecks
+      contains: The layers the numbers point to, with the evidence for each.
+    - name: Fixes, ranked
+      contains: Fixes ordered by gain and effort, and the re-test that would prove each one.
+    - name: Status
+      contains: MEETS, FAILS or NOT DETERMINED against your goal, and the checks still needed.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Test type
+    how: Ask for one kind only, such as "a spike test for Black Friday traffic".
+  - what: Goal
+    how: Give your own limit, such as "checkout under 1 second for 95 percent of users", so it does not use the sample targets.
+  - what: Tool
+    how: Say if you use another test tool, such as Lighthouse, JMeter or Locust, and ask for the plan in that format.
+improve:
+  - Keep every result with its date and test setup. Paste the last one back so the next test compares like with like.
+terms:
+  - term: Baseline
+    meaning: Your numbers today, measured the same way you will measure after a fix.
+  - term: 95th percentile
+    meaning: The time that 95 out of 100 requests beat. It shows how slow it is for the slower visitors.
+  - term: Load test
+    meaning: A test that sends the traffic you expect, to see if the system keeps up.
+  - term: Stress test
+    meaning: A test that keeps adding traffic until the system fails, to find its limit.
+  - term: k6
+    meaning: A free tool that runs load tests from a script.
+  - term: Core Web Vitals
+    meaning: Google's page speed scores for load time, response to clicks and layout shift.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can write the k6 script to a file and run it on a test system, if you allow it.
+    - name: Claude, ChatGPT or Gemini
+      why: In a plain chat they can plan the test and read the results you paste, but they cannot run the test.
+  inputs:
+    - A Lighthouse or PageSpeed report for the same page.
+    - A week of server or hosting logs.

@@ -1,6 +1,6 @@
 new_slug: bold-bet-downside-checker
 name: "Bold bet downside checker"
-summary: "Paste a bold plan. Get the worst case, how to cap it, and a clear go or no-go."
+summary: "Check a bold plan before you commit. Get the worst case in numbers, ways to cap the loss and a go, change or no verdict."
 job: think-and-decide
 thinking: medium
 thinking_why: "It looks for the worst case and ways to cap it, and gives a verdict, using fixed questions."
@@ -17,6 +17,12 @@ when:
   - "You are about to launch a new product line, enter a new market or sign a big contract."
   - "A partner wants you to commit a large sum quickly."
   - "You feel strongly about a plan and want a cold check before you act."
+  - "Your team is excited about a big move and nobody has written down what it could cost."
+not_for:
+  - "The choice is small and easy to undo: use the Reversible decision sorter."
+  - "You want the single outcome that could end the business, whatever its odds: use the Ruin risk stress tester."
+  - "You want the strongest argument against your plan: use the Case-against writer."
+  - "You are not sure the idea is wanted yet: use the Smallest test picker first."
 
 you_give:
   - "The plan in a few lines"
@@ -30,11 +36,12 @@ you_get:
   - "A stop signal, a review date and a one-word verdict"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste the plan, the budget and what the business could not survive losing."
-  - "Add what your customer-facing people think, even if they are unsure."
-  - "Read the worst case first. Check the numbers against your own."
-  - "If the verdict is change, adopt a cap and run it again."
+  - "Open the skill in your AI, or copy it and paste it into Claude, ChatGPT or Gemini. It needs no files or tools."
+  - "Paste the plan, what it would cost in money and time, and what the business could not survive losing. Without a plan and a cost, it stops and asks."
+  - "Add what the people closest to customers think, even if they are unsure."
+  - "Read the worst case first. Check each figure against your own."
+  - "Say your gut feeling out loud when it asks, after you have seen the numbers."
+  - "If the verdict is change, pick a cap and run it again. Then use the Informed captain decision planner to name who decides."
 
 how_it_works:
   - title: "Say the move in one sentence"
@@ -122,3 +129,27 @@ works_best_with:
 terms:
   - {term: "Cap", meaning: "A limit that stops a loss from growing past what you can afford."}
   - {term: "Stop signal", meaning: "A figure or event, set in advance, at which you stop or change course."}
+
+output_sample:
+  input:
+    - "Your plan in a few lines"
+    - "What it would cost in money and time"
+    - "What you cannot afford to lose"
+    - "What the people closest to customers think (optional)"
+  output:
+    - name: "THE MOVE"
+      contains: "Your bold plan in one sentence: what, by when and with what."
+    - name: "WORST CASE"
+      contains: "What you lose in money, time and other harm if it fails, and what you cannot afford to lose."
+    - name: "WAYS TO CAP IT"
+      contains: "Smaller first versions, partners or separate companies, each marked doable or not, with what it costs in upside."
+    - name: "WHAT THE PEOPLE NEAR CUSTOMERS SAY"
+      contains: "Each person's view, their reason and what they would test first."
+    - name: "STOP SIGNAL and LOOK ON"
+      contains: "The figure or event at which you stop, and the date you review progress."
+    - name: "GUT CHECK"
+      contains: "How you feel after seeing the numbers, compared with the worst case."
+    - name: "VERDICT"
+      contains: "One word, go, change or no, with one reason."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check the answer failed, or none."

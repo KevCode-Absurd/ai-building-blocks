@@ -2,17 +2,116 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-qdrant-monitoring
 name: Qdrant health monitoring planner
-summary: Share your Qdrant setup. Get useful health metrics, alerts and checks
-  for slow or unhealthy search.
+summary: "Get a Qdrant monitoring plan: what to watch, which alerts to set, and how to find why search is slow or memory keeps growing."
 job: ship-and-host
 headline: Qdrant health monitoring planner
-subhead: Share your Qdrant setup. Get useful health metrics, alerts and checks
-  for slow or unhealthy search. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Tell it how you run Qdrant, the database behind search by meaning. It plans which numbers to watch, which alerts to set and which health checks to add. If something is already wrong, it helps you find the cause.
+explain: |
+  Qdrant is a database that stores data so apps can search by meaning. When it slows down or runs out of memory, the cause is often hidden in a few numbers. Most teams only look at those numbers after an outage.
+
+  This planner works in one of two modes. In setup mode, it plans Qdrant monitoring: where to collect metrics with Prometheus, which health checks to add, which alerts to set and how to keep logs. In problem mode, it takes the symptom you see, such as a stuck optimizer, growing memory or slow requests, and tells you which number to read first.
+
+  The skill checks the optimizer first, because background work is the most common cause of slow search. It also knows that a full page cache is normal, so it will not tell you to fix memory that is fine.
+when:
+  - You are about to put Qdrant into production and have no monitoring yet.
+  - Search was fast last week and is slow now, and you do not know why.
+  - Memory use keeps climbing and you cannot tell if it is a real problem.
+  - Qdrant runs on Kubernetes and you need health checks and alerts that fit.
+not_for:
+  - "You already know search is slow and want settings to change: use the Qdrant search speed tuner."
+  - "Search is fast but results are wrong or missing: use the Qdrant search relevance investigator."
+  - "You need to add servers or size a cluster: use the Qdrant cluster capacity planner."
+you_give:
+  - Where Qdrant runs, such as your own server, Kubernetes, Qdrant Cloud or Hybrid Cloud
+  - Your Qdrant version
+  - Whether you want to set up monitoring or fix a problem you can see now
+  - The symptom and any numbers from your dashboards or logs (optional)
+  - What you already use, such as Prometheus or Grafana (optional)
+you_get:
+  - A list of the metrics to collect and where to find them
+  - Health checks for your setup
+  - A short list of alerts to set, with the reason for each
+  - A log plan, if you need central or audit logs
+  - For a live problem, the likely cause, the number that proves it and what not to touch
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Upload the whole skill folder so your AI can open the setup and debugging files, or paste the main file and the file you need.
+  - Say which mode you want. Then give where Qdrant runs, its version and, for a problem, what you see and when it started.
+  - Paste any numbers you have, such as memory use or request times. Without them, the plan says what to read first.
+  - Check the first item in the answer before you change anything. Do not change settings while the optimizer is busy.
+  - If your AI can open web links, it can read the Qdrant docs the skill points to. If not, it says so and answers from the skill file only.
+  - When the plan is set, ask for it as a task list, and pair it with the Qdrant search speed tuner for fixes.
+how_it_works:
+  - title: Pick the mode
+    text: It asks whether you are setting up monitoring or fixing a live problem, and notes where Qdrant runs and its version.
+  - title: Plan the metrics
+    text: For setup, it covers where Qdrant exposes metrics, and the extra cluster pods to watch on Hybrid Cloud.
+  - title: Add health checks
+    text: It adds the three health endpoints for Kubernetes, one each for status, liveness and readiness.
+  - title: Set the alerts
+    text: It lists the minimum alerts, such as optimizer errors, a node not ready, too few replicas and disk over 80 percent.
+  - title: Check the optimizer first
+    text: For a problem, it checks background optimizer work before memory or requests, because it is the most common cause.
+  - title: Read memory and requests
+    text: It tells resident memory from page cache, and uses request times and segment counts to explain slow queries.
+output_shape: |
+  MODE: <setup or problem>
+  SETUP: <Qdrant version, where it runs>
+
+  METRICS TO COLLECT
+  - <endpoint or metric> : <what it tells you>
+
+  HEALTH CHECKS
+  - <endpoint> : <what it checks>
+
+  ALERTS
+  - <alert> : <why it matters>
+
+  LOGS
+  - <what to keep and where>
+
+  IF YOU HAVE A PROBLEM
+  - Likely cause: <cause>
+  - Number to check: <metric or endpoint>
+  - Do not: <what to leave alone>
+
+  NEXT: <first three actions>
+output_sample:
+  input:
+    - Where Qdrant runs and which version
+    - Whether you want setup or a problem fixed
+    - The symptom and your numbers (optional)
+  prerequisites:
+    - Access to your Qdrant metrics, or someone who has it
+    - An AI that can open web links (optional, for the Qdrant docs)
+  output:
+    - name: Metrics to collect
+      contains: Where each metric lives and what it tells you about health.
+    - name: Health checks
+      contains: The status, liveness and readiness checks to add for Kubernetes.
+    - name: Alerts
+      contains: The minimum alerts to set, each with the reason it matters.
+    - name: Log plan
+      contains: How to keep logs in a form you can search, and where audit logs go.
+    - name: Problem diagnosis
+      contains: For a live problem, the likely cause, the number that proves it and what to leave alone.
+    - name: Next steps
+      contains: The first three actions to take, in order.
+works_best_with:
+  tools:
+    - name: Prometheus and Grafana
+      why: They collect and chart Qdrant metrics, and Qdrant publishes example setups for both.
+    - name: Claude or ChatGPT with web access
+      why: They can open the Qdrant docs the skill links to.
+  inputs:
+    - A copy of your Qdrant config file
+    - A screenshot or export of your current dashboards
+    - The last 24 hours of the symptom, with times
+terms:
+  - term: Qdrant
+    meaning: A database that stores data so apps can search by meaning.
+  - term: Optimizer
+    meaning: Qdrant's background work that merges and indexes data. It can slow search while it runs.
+  - term: Prometheus
+    meaning: A free tool that collects numbers from your systems over time.
+  - term: Hybrid Cloud
+    meaning: Qdrant Cloud running on servers you manage yourself.

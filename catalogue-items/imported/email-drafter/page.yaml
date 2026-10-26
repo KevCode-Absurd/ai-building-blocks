@@ -2,13 +2,10 @@ thinking: low
 thinking_why: One short message needs little planning.
 new_slug: email-drafter
 name: Email drafter
-summary: Say who it is for and what you need. Get one clear email with the right
-  tone and a call to action.
+summary: Write one clear email with a subject line, short body and a single ask. Give it who it is for and what you need. Fits cold, follow-up and support emails.
 job: write-and-tell-stories
 headline: Email drafter
-subhead: One clear email, written for the person who will read it. Say who it is
-  for and what you need, and you get a subject line, body and call to action in
-  the right tone.
+subhead: One clear email, written for the person who will read it. Say who it is for and what you need, and you get a subject line, body and call to action in the right tone.
 explain: |
   One clear email, written for the person who will read it. Say who it is for and what you need, and you get a subject line, body and call to action in the right tone.
 
@@ -18,6 +15,10 @@ when:
   - You are writing a hard follow-up and want the tone right.
   - You must answer an upset customer.
   - You have the points but not the words.
+not_for:
+  - "You want a run of follow-up emails over several weeks: use sales-email-sequences, not a single draft."
+  - "Your email holds contract terms, NDA wording or legal promises: get a lawyer or another person to review it before you send."
+  - "You need a long newsletter or a blog post: write it in your AI as a normal chat, with the topic and your readers named."
 you_give:
   - Type of email
   - Who it is for
@@ -29,7 +30,26 @@ you_get:
   - One clear call to action
   - A quick checklist review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code, files or paid tools are needed.
+  - Tell your AI the email type, who it is for, what you want to happen, and the tone. Add key points if you have them.
+  - Read the draft and check every number, promise, discount and product claim against your real facts. Delete any detail you did not give it.
+  - Ask for changes, such as shorter, warmer or a different ask. Keep one ask per email.
+  - Paste the final email into your email app and send it. For follow-ups over several weeks, use sales-email-sequences.
+output_sample:
+  input:
+    - The type of email, such as cold outreach, follow-up, support reply, internal update or meeting request
+    - "Who it is for: name, job and company if you know them"
+    - What you want to happen after they read it
+    - Key points to include (optional)
+    - The tone you want, such as formal, casual, empathetic or urgent (optional)
+  output:
+    - name: Subject line
+      contains: A specific subject under 60 characters that names a clear benefit or context point.
+    - name: Email body
+      contains: A short opening hook, then two or three tight paragraphs of the core message.
+    - name: Call to action
+      contains: One clear ask at the end, such as a time for a call or a reply.
+    - name: Sign-off and signature
+      contains: A closing line that matches the tone, then your name, title and contact details.
+    - name: Checklist review
+      contains: A quick check of subject, tone, single ask, word count and any placeholders left unfilled.

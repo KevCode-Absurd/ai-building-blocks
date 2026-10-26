@@ -1,55 +1,111 @@
 new_slug: restricted-cash-availability-checker
 name: Restricted cash availability checker
 headline: Restricted cash availability checker
-summary: A reconciled cash availability bridge and funding gap
+summary: See how much of your bank cash you can really spend. Get available cash after restrictions, collateral and pending debits, and any shortfall.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A reconciled cash availability bridge and funding gap. Share dated bank balances, nonoverlapping restricted portions, collateral blocks, unverified transfers and approved operating cash floor.
+subhead: Give it dated bank balances, the restricted cash, collateral blocks, pending debits and your minimum cash. It takes each block off once. You get the cash you can spend, the headroom over your minimum and any shortfall.
 explain: |-
-  A reconciled cash availability bridge and funding gap.
+  A bank balance is not the same as cash you can spend. Some cash is restricted by a grant or a contract. Some is blocked as collateral. Some is already promised to payments that have not cleared. This restricted cash availability checker takes those amounts off and shows what is really free.
 
-  Treasury liquidity. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+  It starts from the gross balance on one date. It splits the balance into free, restricted, collateral-blocked and unverified parts, and subtracts each part once. Then it compares available cash with the minimum cash you have approved. The gap, if any, is the shortfall.
+
+  Two checks matter most. The blocks must not overlap, and together they must not be more than the balance they come from. If they are, the skill lists the excess as an exception. It never treats restricted cash as spendable, and it never releases or moves cash.
 when:
-  - You need a reconciled cash availability bridge and funding gap.
-  - You work on treasury liquidity and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your bank balance looks fine but part of it is held for a grant or a loan.
+  - A lender or board asks how much cash is free on a given date.
+  - Pending payments are about to clear and you want to know if you stay above your minimum.
+  - You are preparing a cash note and need to show gross cash and available cash side by side.
+not_for:
+  - You want to check cash against a lender's covenant test over several periods. Use the Debt service covenant headroom checker.
+  - You want to split grant money from free cash across a whole period. Use the Grant restrictions cash reconciler.
+  - You want to sequence payments through the day. Use the Settlement liquidity ladder builder.
+  - You want to release, move or invest cash. This only does the sums. The bank or lender decides what is free.
 you_give:
-  - Dated bank balances, nonoverlapping restricted portions, collateral blocks, unverified transfers and approved operating cash floor.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Gross cash balance on one date (from the bank statement)
+  - Restricted cash, with the agreement that restricts it (from the grant or contract)
+  - Cash blocked as collateral (from the collateral or loan agreement)
+  - Pending debits that have not cleared (from the bank's pending list or your payment run)
+  - The minimum cash you have approved (from your policy or board paper)
+  - The date, currency and units
+  - Your own cash spreadsheet (optional)
 you_get:
-  - A reconciled cash availability bridge and funding gap.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "Available cash: gross cash less restricted cash, collateral blocks and pending debits"
+  - "Headroom: available cash less your minimum cash"
+  - "Shortfall: how far below the minimum you are, or zero"
+  - A list of any block that is larger than the balance it comes from
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the bank balance and each block. Say which agreement or statement each one comes from, and give the date, currency and units.
+  - Say if any block covers the same money as another one. The skill will count that money once.
+  - "Check one line yourself: available cash is gross cash less every block. For 1,000 less 350, that is 650."
+  - Read the shortfall, then MISSING and CHECKS MISSED. Ask your bank or lender before you act on the result.
 how_it_works:
-  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
-    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
-  - title: 2. Partition every account balance into available, restricted, collateral-blocked or unverified portions without overlapping deductions
-    text: Partition every account balance into available, restricted, collateral-blocked or unverified portions without overlapping deductions.
-  - title: 3. Subtract restrictions and pending debits; compare available cash with the approved minimum without treating restricted funds as spendable
-    text: Subtract restrictions and pending debits; compare available cash with the approved minimum without treating restricted funds as spendable.
-  - title: 4. Tie every deduction back to source balances and retain excess deductions as an exception; show gross and available amounts separately
-    text: Tie every deduction back to source balances and retain excess deductions as an exception; show gross and available amounts separately.
+  - title: Lists the sources
+    text: Writes each balance with its date, account, currency and units. Stops any line that has no evidence.
+  - title: Splits the balance
+    text: Sorts the gross balance into free, restricted, collateral-blocked and pending parts without overlaps.
+  - title: Takes the blocks off
+    text: Subtracts restricted cash, collateral blocks and pending debits from the gross balance once each.
+  - title: Compares with the minimum
+    text: Shows headroom over your approved minimum cash, or a shortfall if you are under it.
+  - title: Flags exceptions
+    text: Lists any block that is larger than the balance it comes from, instead of hiding it.
 output_shape: |-
-  A reconciled cash availability bridge and funding gap.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Available cash <amount> | Headroom over minimum <amount> | Shortfall <amount or zero>
+
+  SCOPE AND SOURCES
+  <currency, units, balance date; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <gross cash, restricted cash, collateral block, pending debits, minimum cash>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <total blocks; available cash; headroom; shortfall; exceptions where a block is more than its balance>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Your gross bank balance on one date
+    - Your restricted cash and collateral blocks
+    - Your pending debits
+    - The minimum cash you have approved
+  prerequisites:
+    - The bank statement and the agreements that set each restriction
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Available cash, headroom over your minimum and any shortfall.
+    - name: SCOPE AND SOURCES
+      contains: The balance date, currency and units, with a source for each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Your balance and each block, kept apart from assumptions.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Total blocks, available cash and shortfall, plus any block larger than its balance.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every material input has a source location, date, unit, sign and approval status.
+  - what: Release of a restriction
+    how: Give the signed notice that frees the cash and ask for a second run. A release without evidence is not counted.
+  - what: Overlapping blocks
+    how: Tell the skill if two blocks cover the same money, so it is taken off once.
+  - what: Minimum cash
+    how: Say who approved the minimum and when. The shortfall is only as good as that number.
 judge:
   - Every material input has a source location, date, unit, sign and approval status.
   - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
@@ -64,15 +120,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Dated bank statements
+    - The grant, loan and collateral agreements
+    - The list of pending payments
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Restricted cash
+    meaning: Cash you hold but may not spend freely, because a contract or grant limits its use.
+  - term: Collateral block
+    meaning: Cash a lender holds back as security for a loan.
+  - term: Pending debit
+    meaning: A payment out that has been made but has not yet cleared the bank.
+  - term: Headroom
+    meaning: How far available cash is above your minimum.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+next:
+  - settlement-liquidity-ladder-builder
+  - debt-service-covenant-headroom-checker

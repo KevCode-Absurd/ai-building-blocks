@@ -1,6 +1,6 @@
 slug: tagline-score-card
 name: "Tagline score card"
-summary: "Paste your tagline and rivals' lines. Get a pass or fail on ten tests, a score out of 100 and sharper lines."
+summary: "Test your tagline on ten pass or fail checks. Get a score out of 100, a truth check and four rewritten taglines, each scored."
 category: general
 type: prompt
 role: check

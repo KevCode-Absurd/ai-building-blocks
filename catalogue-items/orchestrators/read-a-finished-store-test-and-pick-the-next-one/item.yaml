@@ -18,7 +18,7 @@ uses: [store-test-verdict-maker, test-idea-ranker, big-swing-test-picker]
 steps:
   - {uses: store-test-verdict-maker, note: "Starts from your test numbers and says whether the result can be trusted and whether to ship."}
   - {uses: test-idea-ranker, note: "Takes what step 1 learned and writes each next idea as a hypothesis with the evidence behind it."}
-  - {uses: big-swing-test-picker, note: "Fits the ideas and the step 1 verdict to what your traffic can prove, in order."}
+  - {uses: big-swing-test-picker, note: "Fits the ranked ideas from step 2 and the step 1 verdict to what your traffic can prove, in order. Uses your store size and where ads land; hands the next bold tests back to you."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/read-a-finished-store-test-and-pick-the-next-one/skeleton.yaml

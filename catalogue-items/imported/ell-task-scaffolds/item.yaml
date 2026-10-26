@@ -11,6 +11,8 @@ level: intermediate
 inputs:
   - type: document
     required: true
+  - type: audit_report
+    required: false
 outputs:
   - type: copy_draft
     required: true

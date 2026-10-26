@@ -16,6 +16,29 @@ use_cases:
   - "Make a map, a sign or a diagram clearer, and know what you give up"
   - "Ask what a project means before you choose how it looks"
   - "Spend a client's or your own budget responsibly on print and production"
+not_for:
+  - "You want charts that tell the truth about data: hire Alberto Cairo or Cole Nussbaumer Knaflic instead."
+  - "You want loud, expressive type that breaks the rules: hire David Carson instead."
+  - "You want a witty, one-off visual idea for a logo: hire Alan Fletcher instead."
+output_sample:
+  input:
+    - The project and what it needs to say, and to whom
+    - Your readers and where they will see it (print, screen, signs)
+    - Your current design, logo or documents (optional)
+    - Your budget and any limits on paper, time or size
+  output:
+    - name: Meaning first
+      contains: A short statement of what the project means and for whom, before any choice of look.
+    - name: Grid
+      contains: One chosen grid for the job, with the reason it fits.
+    - name: Type list
+      contains: A short list of typefaces, with rules for weight, scale and alignment.
+    - name: White space
+      contains: Where to add room and which elements to cut.
+    - name: Logo advice
+      contains: Whether to keep, lightly tidy or replace your logo, and why.
+    - name: Rules to take away
+      contains: A few short rules your team can follow, plus a check that real readers understand the result.
 seats:
   - {seat: "Grids and type systems", asks: "What is the structure here, and does every element sit in it for a reason?"}
   - {seat: "Meaning before form", asks: "What does this need to mean, and to whom, before we decide what it looks like?"}

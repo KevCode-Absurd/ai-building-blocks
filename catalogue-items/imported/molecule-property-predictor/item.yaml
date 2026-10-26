@@ -1,6 +1,6 @@
 slug: molecule-property-predictor
 name: Molecule property predictor
-summary: Give it molecules and measured results. Get a tested model that predicts a property, with fair train and test splits.
+summary: "Predict a molecule property such as solubility from your lab results. Get scaffold-split test scores and predictions, using DeepChem and Python."
 category: general
 boards: []
 type: skill

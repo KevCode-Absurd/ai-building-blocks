@@ -2,35 +2,116 @@ thinking: medium
 thinking_why: It picks the right explainer and checks the results hold up.
 new_slug: prediction-driver-explainer
 name: Prediction driver explainer
-summary: Give it a trained model and data. Get which inputs drove each
-  prediction and overall, with checked plots.
+summary: See which inputs pushed a trained model's predictions up or down, one row at a time and overall, with SHAP plots that pass an add-up check.
 job: track-numbers
 headline: Prediction driver explainer
-subhead: "See why a trained model made its predictions: which inputs pushed each
-  result up or down, and which matter most overall. Every plot is checked
-  against the real model output so you can trust it."
+subhead: Give it a trained model, the rows to explain and a background sample. It picks the right SHAP explainer and shows which inputs pushed each prediction up or down, and which matter most overall. It checks the numbers add up to the model's output.
 explain: |
-  See why a trained model made its predictions: which inputs pushed each result up or down, and which matter most overall. Every plot is checked against the real model output so you can trust it.
+  A model gives you a number, such as a 0.82 chance of a sale. It does not tell you why. SHAP is a method that splits each prediction into pieces, one per input, so you can see what pushed it up or down. This prediction driver explainer runs SHAP for you and checks its work.
 
-  The skill uses SHAP in Python 3.12 or newer. It chooses the right explainer for your model type, picks a sensible background sample, and says which output is explained, such as a probability or raw score. It checks that the pieces add up to the prediction before showing plots. It warns that SHAP shows model behaviour, not cause, and refuses to open untrusted model files.
+  It picks an explainer that fits your model type, such as trees, linear models or any other model. It chooses a background sample and says which output it explains, such as a probability or a raw score. Before it shows a plot, it checks that the starting value plus all the pieces equals the model's output. A pass means the pieces add up. It does not mean the model is right.
+
+  You get a bar plot of overall importance, a beeswarm plot, a waterfall plot for single rows and CSV files of the numbers.
+
+  SHAP describes how the model behaves. It does not show cause, and it is not a fairness test. The skill refuses to open model files from sources you do not trust. It comes from K-Dense's scientific agent skills, shared under MIT, and needs Python 3.12 or newer.
 when:
-  - A manager asks why the model rejected a customer.
-  - You want to know which features matter most.
-  - You suspect a feature is leaking the answer.
-  - You need plots for a model review.
+  - A manager asks why the model rejected one customer.
+  - You want to know which inputs matter most across all predictions.
+  - You suspect an input is leaking the answer.
+  - You need plots and tables for a model review.
+not_for:
+  - You want proof of why a decision was made, or a claim of cause. SHAP shows model behaviour only.
+  - You want a fairness audit. Pair it with performance and fairness checks. Use the Statistical model checker for fit checks.
+  - You have not built a model yet. Use the Bayesian model builder or the Fast data table analyst first.
+  - You want to explain a model in MATLAB. Use the Model decision explainer.
 you_give:
-  - Trained model
-  - Dataset to explain
-  - Which output to explain
-  - Python 3.12 or newer
+  - A trained model, saved from a source you trust
+  - The rows you want explained
+  - A sample of training rows to use as the background
+  - Which output to explain, such as the chance of one class
+  - A computer that can run Python 3.12 or newer
 you_get:
-  - Feature importance plots
-  - Explanations for single predictions
-  - Additivity check results
-  - Notes on limits of the explanation
+  - Bar and beeswarm plots of which inputs matter most
+  - A waterfall plot for each single prediction you choose
+  - An add-up check showing the pieces match the model's output
+  - CSV tables of importances and per-row contributions
+  - A note on what the explanation cannot show
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Download the skill folder from this page and add it to an AI that can run Python, such as Claude Code. Keep the references and scripts folders with SKILL.md.
+  - Share the model code or file, the rows to explain and a training sample. Only share a model file you made or trust, because model files can run code when opened.
+  - Say which output to explain. For a classifier, name the class and whether you want a probability or a raw score.
+  - Check the add-up result first. If it fails, stop and fix the inputs before you read any plot.
+  - Read the bar plot, then the beeswarm, then the waterfall plot for one row. Write down the rule you used to pick rows.
+  - Bring the plots to your model review with your accuracy and fairness checks. Do not use them alone to explain a decision to a customer.
+how_it_works:
+  - title: Define the target
+    text: It records the model, the output and its units, the rows, the background and the library versions.
+  - title: Pick the explainer
+    text: It chooses a SHAP explainer and masker that suit your model type and your inputs.
+  - title: Compute the explanation
+    text: It runs SHAP on your rows with the background you chose.
+  - title: Check the add-up
+    text: It checks the starting value plus the pieces equals the model's output. It stops if they differ.
+  - title: Draw the plots
+    text: It makes bar, beeswarm, waterfall and scatter plots that answer your question.
+  - title: State the limits
+    text: It reports the output, background, sample and a plain note that SHAP is not proof of cause.
+output_shape: |-
+  WHAT WAS EXPLAINED
+    <model> | <output and units> | <rows> | <background size> | <explainer and masker> | <versions>
+
+  ADD-UP CHECK
+    <largest difference> | <pass or fail>
+
+  GLOBAL VIEW
+    <bar plot> | <beeswarm plot> | feature_importance.csv
+
+  SINGLE PREDICTIONS
+    <row chosen and why> | <waterfall plot> | first_row_contributions.csv
+
+  LIMITS AND NEXT STEP
+    <what SHAP cannot show> | <checks to pair with it>
+output_sample:
+  input:
+    - Your trained model, from a source you trust
+    - The rows you want explained
+    - A sample of training rows for the background
+    - The output to explain, such as one class probability
+  prerequisites:
+    - Python 3.12 or newer, and an AI that can run it
+  output:
+    - name: What was explained
+      contains: The model, output and units, rows, background size, explainer and library versions.
+    - name: Add-up check
+      contains: Whether the starting value plus the pieces matches the model's output, with the largest difference.
+    - name: feature_importance.csv
+      contains: Each input with its average effect size on the predictions.
+    - name: first_row_contributions.csv
+      contains: How much each input pushed the first chosen prediction up or down.
+    - name: prediction_reconstruction.csv
+      contains: The add-up check row by row, against the model's own output.
+    - name: Plots
+      contains: Bar, beeswarm, waterfall and scatter images for the output you chose.
+    - name: metadata.json
+      contains: The settings and versions used, so the run can be repeated.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can set up Python 3.12, run SHAP and save the plots and CSV files.
+    - name: Any chat AI that runs Python
+      why: It can run the bundled script on a small table to learn the plots first.
+  inputs:
+    - A held-out set of rows that were not used to train the model
+    - Your accuracy and calibration numbers for the same model
+    - A note on which inputs are linked, such as income and job type
+terms:
+  - term: SHAP
+    meaning: A method that splits one prediction into a piece for each input.
+  - term: Background sample
+    meaning: A set of typical rows that SHAP compares each prediction against.
+  - term: Add-up check
+    meaning: A test that the starting value plus all the pieces equals the model's output.
+  - term: Beeswarm plot
+    meaning: A chart with one dot per row and input, showing which way and how far each pushed.
+  - term: Waterfall plot
+    meaning: A chart that walks from the starting value to one prediction, one input at a time.

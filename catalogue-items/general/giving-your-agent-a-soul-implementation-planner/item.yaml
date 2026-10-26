@@ -1,6 +1,6 @@
 slug: giving-your-agent-a-soul-implementation-planner
 name: Agent role file loader builder
-summary: Build a role loader with validated metadata and bounded context.
+summary: "Plan a safer loader for your AI agent's role files, with checked fields, trimming that keeps the rules, clear failures and tests. Draft code only."
 category: general
 type: skill
 role: make

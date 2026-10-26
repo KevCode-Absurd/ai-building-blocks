@@ -2,38 +2,65 @@ slug: grok
 name: Grok
 maker: xAI
 url: https://grok.com
-promise: "Search X and the web, ask questions, draft text and create images."
+promise: "Ask questions, search X and the web, and make images from text."
 use_cases: [ask-an-assistant, research, make-images]
 categories: [chat-assistant]
 what_it_does:
-  - Answers questions and drafts text from a message you type or say.
-  - Searches X and the web for what people are saying now.
-  - Makes images from a written description.
-  - Reads files and images you share with it.
-  - Offers deeper research on harder questions.
+  - "Answers questions and drafts text from a message you type. grok.com opens a chat box with a mode picker, and the page showed a mode called Fast (checked 26 Oct 2026)."
+  - "Searches the web and X. xAI sells both as API tools, Web Search and X Search (checked 26 Oct 2026)."
+  - "Makes and edits images with its Imagine models, through the API (checked 26 Oct 2026)."
+  - "Makes video clips with Imagine, through the API (checked 26 Oct 2026)."
+  - "Turns text into speech and speech into text with a Voice API (checked 26 Oct 2026)."
+  - "Gives developers a Responses API for chat and function calling, and a coding model (checked 26 Oct 2026)."
 benefits:
-  - See what people are saying about a topic today.
-  - "Explore a recent topic through posts on X and linked web sources."
-  - Get a quick image for a post or mock-up.
-  - Try it free before you pay.
+  - "Look up what people are saying about a topic today, in posts on X."
+  - "Get a quick image for a post or a mock-up."
+  - "Try an assistant before you pay. Sign up is on grok.com."
+  - "Build search and images into your own app, and pay by use."
 best_for:
   - "Reading what people are saying about recent topics."
   - Social media research.
   - People who already use X every day.
 not_for:
-  - Work that needs calm, balanced sources, since posts on X are often one-sided.
-  - Heavy daily use on the free plan, which has caps.
+  - "Work that needs calm, balanced sources, since posts on X are often one-sided. Perplexity or Claude with sources you choose may suit better."
+  - "Private customer or staff data. We did not read xAI's data terms, so check them first."
+  - "Heavy daily use on a free plan. Third-party sites report caps, which xAI's pages we could open do not confirm."
 pricing:
   model: freemium
-  from: US$30 per month
-  note: Free plan with usage caps. SuperGrok costs US$30 per month and SuperGrok Heavy US$300 per month. X Premium plans also include Grok.
+  from: "Check the maker's site (plan prices not confirmed)"
+  note: "Checked 26 Oct 2026 on docs.x.ai. API prices per 1 million tokens for the grok-4.3 model are US$1.25 for input and US$2.50 for output, and grok-4.7 is US$2.00 and US$6.00, for prompts under 200K tokens. Images cost US$0.02 to US$0.05 each. Web Search is US$5 per 1,000 calls. X Search is US$5 per 1,000 posts or US$10 per 1,000 profiles, billed per item returned. Token charges apply on top. The grok.com app plans are not confirmed. Third-party sites list a free plan with caps, SuperGrok at US$30 a month and SuperGrok Heavy at US$300 a month, and they disagree on details."
 works_with:
   - X
 runs_in: [web, mobile, api]
 blocks:
   - recent-topic-pulse-researcher
 alternatives: [chatgpt, claude, perplexity, gemini]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  chat:
+    - "Open grok.com and choose Sign up or Sign in. The page we could read does not show plan or sign-in rules, so read what it asks."
+    - "Pick a mode from the chat box. The page showed one called Fast, and we could not see the others."
+    - "Ask about a recent topic you already know well, such as an event you followed this week."
+    - "Check the answer against two sources you trust before you use it. Posts on X can be one-sided."
+  api:
+    - "Open docs.x.ai and follow its steps to get an API key. We did not check the sign-up steps."
+    - "Send one short test prompt through the Responses API with the model you chose. Add the web_search tool if you want current results."
+    - "Read the token counts in the reply and work out the cost from the price table on docs.x.ai."
+needs:
+  - "Chat: a Grok account. We could not confirm plan rules."
+  - "API: an xAI developer account, an API key and a funded balance."
+  - "A clear question or topic."
+example:
+  task: "Ask about something that happened this week, in your own words."
+  cost: "In the API, Web Search costs US$5 per 1,000 calls plus token charges, and X Search costs US$5 per 1,000 posts returned. A single image costs US$0.02 to US$0.05, depending on the model."
+  reply: "A written answer. We could not confirm whether chat answers list their sources, so ask for sources and open them yourself."
+not_verified:
+  - "grok.com plan prices and the free plan's caps. xAI's pages we could open did not show them."
+  - "That X Premium plans include Grok."
+  - "Whether the grok.com chat searches X and the web, reads files and images, and offers deeper research. We confirmed search and images only as API features."
+  - "xAI's privacy and data terms."
 sources:
-  - https://www.cloudzero.com/blog/grok-pricing/
-  - https://ai-toolbox.co/grok-models/grok-pricing-plans-api-2026
+  - https://grok.com
+  - https://docs.x.ai/docs/overview
+  - https://docs.x.ai/developers/pricing

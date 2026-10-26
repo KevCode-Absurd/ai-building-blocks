@@ -1,6 +1,6 @@
 new_slug: angry-customer-reply-writer
 name: "Angry customer reply writer"
-summary: "Paste an angry message. Get a reply that names the feeling, fixes what you can and promises nothing false."
+summary: "Write a reply to an angry customer that names the feeling, states the facts and fixes what you can. Paste their message and your options."
 job: help-customers
 thinking: low
 thinking_why: "It writes one short reply from the facts and the fixes you give it."
@@ -17,6 +17,10 @@ when:
   - "A customer was charged twice and is threatening a chargeback."
   - "A one-star review just landed and you want to reply within the hour."
   - "You are the owner and the agent, it is late, and you are too tired to be kind."
+not_for:
+  - "The customer threatens legal action or reports an injury: pass it to a person who can handle it, such as a lawyer or your insurer."
+  - "You need to settle a dispute with a business account, such as a contract or invoice fight: talk to the account owner directly."
+  - "Your reply already mentions a refund or other money: run the draft through the Customer reply promise checker before you send it."
 
 you_give:
   - "The customer's message as written and the channel"
@@ -34,6 +38,25 @@ how_to_use:
   - "List what you can really do, with limits and how long each takes."
   - "Read THE REAL COMPLAINT. If it missed the point, say what the point is and run it again."
   - "Check the fix line against your policy, then send."
+output_sample:
+  input:
+    - The customer's angry message, as written, and the channel it came in on
+    - What you can do, with limits and how long each takes
+    - The order facts with dates (optional)
+    - A line or two on how your business talks to customers (optional)
+  output:
+    - name: THE REAL COMPLAINT
+      contains: The one problem and the one fear under the anger, each in one line.
+    - name: REPLY
+      contains: A reply that names the feeling, states the facts, makes the fix with its timing and asks for one thing at most.
+    - name: IF PUBLIC
+      contains: A short version under 80 words, with details moved to private.
+    - name: DO NOT SAY
+      contains: Lines a tired agent might write that would make things worse.
+    - name: MISSING
+      contains: Facts or permissions the AI did not have, so you can fill them in.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Finds the real complaint"

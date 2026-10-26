@@ -1,6 +1,6 @@
 new_slug: ad-matched-landing-page-writer
 name: "Ad-matched landing page writer"
-summary: "Paste your ad, facts and reviews. Get landing page copy that picks up where the ad left off."
+summary: "Write landing page copy that picks up where your ad left off. Give it the ad, your facts and reviews. You get a page with the full cost stated."
 job: write-landing-page
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your ad gets clicks but the page it sends people to doesn't sell.
   - You're launching an ad for a new kind of buyer and need a page that speaks to them.
   - Your product page tries to say everything to everyone, and you want a focused version.
+not_for:
+  - "You have no ad and no page yet: write the ad first with the Fact-based ad copy writer, then come back here."
+  - "You want to check a finished page against a list: use the Landing page 30-point checker."
+  - "You want to check ad rules before you publish: use the Meta ads compliance checker."
 
 you_give:
   - Your facts, such as what you sell, prices and offer names, guarantee, delivery and shipping terms, the claims you may make and any rating you hold
@@ -36,6 +40,31 @@ how_to_use:
   - Paste the ad word for word, attach its picture, and say who it's for.
   - Paste 10 to 20 real reviews or pre-sale questions with where each came from.
   - Check the "Left empty" list, then read the first screen on your phone to see it fits.
+output_sample:
+  input:
+    - Your product facts, prices, offers and terms
+    - The ad that sends people to the page, with its picture
+    - Your reviews and pre-sale questions, each with a source (optional)
+    - Whether the product is used up or kept (optional)
+  output:
+    - name: Page brief
+      contains: The one buyer, one reason to buy and one offer the page is built for, plus the ad's opening line.
+    - name: First screen
+      contains: Headline, what-it-is line, picture note, offer and price, one proof, button and risk line, all matched to the ad.
+    - name: Doubt list
+      contains: Each worry in the buyer's own words, its sources, and the section that answers it.
+    - name: Body sections
+      contains: One section per doubt, with a heading that states the answer and short copy from your facts.
+    - name: Cost block
+      contains: Price, renewal price, shipping, delivery range and returns or guarantee terms, placed before the last button.
+    - name: Questions and answers
+      contains: Doubts still open, asked in the buyer's words and answered from your facts.
+    - name: Closing
+      contains: One line back to the ad's promise, the button and the risk line.
+    - name: Left empty
+      contains: Every fact the page needed but you did not supply, marked MISSING.
+    - name: Checks missed
+      contains: Each of its own checks the page still fails, with the reason, or none.
 
 how_it_works:
   - title: Pins the page

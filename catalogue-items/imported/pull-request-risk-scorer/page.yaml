@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores with set checks, then writes comments.
 new_slug: pull-request-risk-scorer
 name: Pull request risk scorer
-summary: Point it at a pull request. Get complexity and risk scored, code smells
-  flagged and review comments written.
+summary: Check a pull request for risk. Get a complexity score, code smells and review comments, so you know where to look first in your code review.
 job: test-and-fix-code
 headline: Pull request risk scorer
-subhead: A quick score for how risky and complex a pull request is, with code
-  smells flagged and review comments already written. You know where to look
-  before reading line by line.
+subhead: A quick score for how risky and complex a pull request is, with code smells flagged and review comments already written. You know where to look before reading line by line.
 explain: |
   A quick score for how risky and complex a pull request is, with code smells flagged and review comments already written. You know where to look before reading line by line.
 
@@ -18,6 +15,10 @@ when:
   - A change looks large and you want to know where the danger is.
   - You want consistent review standards across languages.
   - You need a checklist to support your review notes.
+not_for:
+  - "You need a security audit of sensitive code: use a dedicated security scanning tool, because this only spots common patterns like leaked keys."
+  - "You want to skip human review: ask a teammate to read the change, since this report only guides where they look."
+  - "You have no git repository or code to share: write down what the change does and ask a teammate to look at it."
 you_give:
   - The pull request or code diff
   - Language or languages used
@@ -28,8 +29,28 @@ you_get:
   - Language-specific findings
   - Review checklist and written comments
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run code and read files, such as Claude with code tools. A plain chat will not run the scripts.
+  - Give your AI the skill folder and your code repository.
+  - Tell it which branch is the pull request and which is the base, for example feature-branch and main.
+  - Ask it to run the pull request analyzer, the code quality checker, then the review report generator.
+  - Read the verdict and the file order first. Check the critical and high risks by hand.
+  - Paste the suggested comments into the pull request. Run it again after the fixes.
+output_sample:
+  input:
+    - Your code repository, or the pull request branch and the main branch to compare
+    - The language or languages in the code (optional)
+    - Your team coding rules (optional)
+  prerequisites:
+    - An AI that can run Python scripts and read your files
+    - Git history for the repository, so the two branches can be compared
+  output:
+    - name: PR analysis
+      contains: A complexity score from 1 to 10, risks sorted from critical to low, and the order to review files.
+    - name: Commit message check
+      contains: A check of whether the commit messages are written clearly.
+    - name: Code quality findings
+      contains: Long functions, large files, deep nesting, too many parameters and other code smells, plus language-specific issues.
+    - name: Review report
+      contains: "One report that joins both analyses and ends in a verdict: approve, approve with suggestions, request changes or block."
+    - name: Review checklist and comments
+      contains: Suggested comments and checks you can paste into the pull request.

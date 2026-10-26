@@ -18,10 +18,10 @@ outputs:
   - {type: hooks}
 uses: [fatigued-ad-reviver, video-hook-scorer, creative-hit-rate-planner, winning-hook-rubric-builder]
 steps:
-  - {uses: fatigued-ad-reviver, note: "Starts with the slowing ad and gives back a revival plan and new hooks."}
-  - {uses: video-hook-scorer, note: "Scores the new hooks from the revival plan and picks which to film."}
-  - {uses: creative-hit-rate-planner, note: "Reads how the new hooks did against the return line."}
-  - {uses: winning-hook-rubric-builder, note: "Saves what won as a rubric so the next revival starts from it."}
+  - {uses: fatigued-ad-reviver, note: "Starts with the slowing ad and gives back a revival plan and new hooks. Hands step 2 the new hooks, plus a revival plan."}
+  - {uses: video-hook-scorer, note: "Scores the new hooks from the revival plan and picks which to film. Takes step 1's hooks. Hands you the scored hooks and the ones to film."}
+  - {uses: creative-hit-rate-planner, note: "Reads how the new hooks did against the return line. Uses your own results export from the test week, not step 2's output, plus your return line. Hands step 4 the hit rate and which hooks cleared the line."}
+  - {uses: winning-hook-rubric-builder, note: "Saves what won as a rubric so the next revival starts from it. Uses your transcript, your results export and step 3's hit report to split winners from losers. Hands you the rubric and the hooks it rates."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/revive-a-hero-ad-that-is-slowing-down/skeleton.yaml

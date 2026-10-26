@@ -32,3 +32,26 @@ how_to_use:
   - Give the complete folder to your AI. Start with START_HERE.txt, then provide the named inputs in the coordinator skill.
   - Follow its checkpoints and check the evidence before using any output. Agent packs run one requested cycle; they do not create a schedule.
 thinking: high
+not_for:
+  - "You only want to convert instrument files, with no term checks: use Lab instrument data converter."
+  - "You only want to score the quality of a data set: use Data quality auditor."
+  - "You want a method validation plan, not a data import: use Lab method validation planner."
+output_sample:
+  input:
+    - Your original instrument export files (CSV, Excel, TXT or PDF) and which instrument and run they came from
+    - The target schema, with version, field definitions, units and an approved example
+    - The scientific columns that need ontology terms, with sample context
+    - What processing is allowed on your computer and who owns the destination
+  prerequisites:
+    - An AI that can run code on your files, or it will return draft structures marked NOT RUN
+  output:
+    - name: Converted records
+      contains: Draft JSON and flat CSV, or the proposed structure if no files could be made.
+    - name: Mapping table
+      contains: Source file and field, target field, rule, unit, evidence and approval state for each field.
+    - name: Verified-term table
+      contains: Original label, checked term ID and definition, with unclear matches left open.
+    - name: Row-level exceptions
+      contains: Accepted and blocked rows, with count checks against the raw files.
+    - name: Import-owner handoff
+      contains: What the destination owner must still do, with PASS, FAIL or NOT RUN for every check.

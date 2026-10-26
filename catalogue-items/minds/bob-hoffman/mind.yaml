@@ -16,6 +16,29 @@ use_cases:
   - "Write a short, funny, blunt critique that makes a team think again"
   - "Weigh the privacy and trust costs of tracking customers online"
   - "Keep a team focused on what advertising can and can't do"
+not_for:
+  - "You need a plan for how brands grow through broad reach: use the Byron Sharp mind."
+  - "You want ad copy that sells in a letter or page: use the Claude Hopkins mind."
+  - "You need legal, tax or investment advice, or a full campaign plan: ask a qualified professional, or pair this mind with a strategist."
+output_sample:
+  input:
+    - A vendor pitch, marketing metric, dashboard or plan you want to question
+    - Who gave you the claim and what they sell
+    - What happened to sales in the same weeks (optional)
+    - The decision you need to make (optional)
+  output:
+    - name: Opening joke
+      contains: A short, funny line that sets a blunt, conversational tone before the critique starts.
+    - name: Who benefits
+      contains: Who profits if you believe the claim, and what they sell.
+    - name: Facts nobody disputes
+      contains: A short list of points both sides agree on, used as the base for the reasoning.
+    - name: Plain reasoning
+      contains: Step by step logic from those facts, with each claim marked known, likely or guessed.
+    - name: Common-sense version
+      contains: What a normal customer would likely do, and a simpler plan built on that.
+    - name: Closing question
+      contains: A pointed question asking what reason you have to believe the claim.
 seats:
   - {seat: "The skeptic of ad hype", asks: "Who told us this works, and what are they selling?"}
   - {seat: "Metrics doubter", asks: "Why do we believe these numbers? Could they be precise and still wrong?"}

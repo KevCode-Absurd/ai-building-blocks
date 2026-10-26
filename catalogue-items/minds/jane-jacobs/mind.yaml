@@ -15,6 +15,29 @@ use_cases:
   - "Plan a neighbourhood walk that includes different residents"
   - "Choose a shop location by routes and complementary uses"
   - "Build local career connections without forced networking"
+not_for:
+  - "You need a legal, structural, fire or financial verdict: use a qualified professional reviewer, as she only helps you find the right question to ask them."
+  - "You want a plan to grow a business or manage a team: use the Peter Drucker mind, not a street-level review."
+  - "You want help with a bank balance, a budget or family money habits: use the Beth Kobliner mind, since this mind looks at places and daily routes."
+output_sample:
+  input:
+    - "Your ordinary week: where you shop, work, rest and meet people"
+    - Two candidate addresses, or the proposal or site you want reviewed
+    - Your rough budget or rent figures (optional)
+    - Accounts from other people who use the place (optional)
+  output:
+    - name: Relationship map
+      contains: The uses and connections at stake, shown through the present place and the proposed or alternative version.
+    - name: Timetable of current uses
+      contains: Who uses the place before work, after school and at night, and where long gaps appear.
+    - name: Comparison sheet
+      contains: For each address or option, the routines it supports, the burdens it adds and what is still unknown.
+    - name: Options and tradeoffs
+      contains: A repair option, an additive option and any justified replacement, with what each keeps and loses.
+    - name: Short recommendation
+      contains: A plain account of who gains and loses, and the decision you can reasonably make now.
+    - name: Open questions
+      contains: What needs more evidence, and which people or professionals should review it.
 seats:
   - {seat: "Street life and local knowledge", asks: "What is working here that the plan cannot see?"}
   - {seat: "Everyday community connections", asks: "Who uses this place at different hours?"}

@@ -2,35 +2,56 @@ thinking: high
 thinking_why: It plans trials, compares results and decides when to stop.
 new_slug: tuning-experiment-runner
 name: Tuning experiment runner
-summary: Name the setting to tune and the score to improve. Get a small tested
-  search with a trial log and stop rule.
+summary: Tune settings with a small, tested search. Give it one score and your settings. You get a baseline, a trial log and a stop rule.
 job: test-and-fix-code
 headline: Tuning experiment runner
-subhead: A small, controlled search for better settings, with a log of each
-  trial and a rule for when to stop. You avoid burning compute on random changes
-  with no baseline.
+subhead: Give it one score to improve and the settings you can change. It runs a baseline, tries one change at a time and logs each trial. It stops when the budget ends or gains flatten.
 explain: |
   A small, controlled search for better settings, with a log of each trial and a rule for when to stop. You avoid burning compute on random changes with no baseline.
 
   You name one score to push up or down and list the settings with their ranges and defaults. The skill runs a baseline first, sets a budget in trials, time or money, and then tries one change at a time unless you allow parallel runs. It compares each trial to the best so far, writes down the result and the reason for the next step, and stops at the limit or when gains flatten. It works for model settings, prompts, inference options, simulations and control policies.
 when:
-  - You want to tune hyperparameters with a fixed small budget.
+  - You want to tune model settings with a small, fixed budget.
   - You need a record of what you tried and what each trial scored.
+  - You tune prompts or search settings against a score you can measure.
   - You are not sure when to stop trying new settings.
-  - You tune prompts or inference settings against a measurable score.
+not_for:
+  - Your goal is a matter of taste and has no score. Ask a person to review the options instead.
+  - You have not agreed to spend compute or paid API money. Get that approval first, then come back.
+  - You only need to fix a bug or review code. Ask your AI for a plain code review instead.
 you_give:
-  - One score to improve and its direction
-  - The settings to tune with their ranges
-  - A budget in trials, time or cost
-  - A way to run and score a trial
+  - One score to improve, and whether higher or lower is better
+  - The settings to tune, with their ranges and defaults
+  - A budget in trials, time or money
+  - A way to run a trial and read its score
 you_get:
-  - A baseline result
-  - A trial log with scores
-  - The best settings found
-  - A stop rule and final summary
+  - A baseline result from your current settings
+  - A trial log with settings, scores and notes
+  - The best settings found and the gain over the baseline
+  - A stop reason and a final summary with tradeoffs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Say the one score to improve, the settings with their ranges, and your current settings.
+  - Set a cap on trials, time or money before the first run. Trials can use paid API calls or compute.
+  - Let your AI run the baseline, then one trial at a time. Code running helps here. If it cannot run code, run each trial yourself and paste back the score.
+  - Read the trial log and the stop reason. Check the best settings on held-out data or a fresh run before you rely on them.
+output_sample:
+  input:
+    - The one score to improve, and whether higher or lower is better
+    - The settings to tune, with ranges and defaults
+    - A budget in trials, time or money
+    - A way to run a trial and read its score
+  prerequisites:
+    - An AI that can run code, or a way for you to run each trial and report the score
+    - Permission to use compute or paid API calls
+  output:
+    - name: Baseline
+      contains: The score of your current settings, run before any change, so every trial has something to beat.
+    - name: Trial log
+      contains: One row per trial with settings, score, notes and whether it failed.
+    - name: Comparison
+      contains: How the best trial stacks up against the baseline and a simple search.
+    - name: Stop decision
+      contains: "Why the search ended: budget used up, gains flattened, or no good next trial."
+    - name: Recommendation
+      contains: The best settings found, the measured gain, the tradeoffs and what to check before real use.

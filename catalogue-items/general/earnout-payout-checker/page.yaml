@@ -1,53 +1,84 @@
 new_slug: earnout-payout-checker
 name: Earnout payout checker
 headline: Earnout payout checker
-summary: Check one linear earnout payout between its signed threshold and cap.
+summary: Check one earnout that pays on a straight line between a threshold and a cap. Get the share earned and the payout, with gaps marked.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Bounded payout arithmetic and unresolved metric adjustments. Share signed metric definition, measurement period, agreed result, zero-payment and full-payment thresholds and maximum payout.
+subhead: Give it the agreed result for the earnout metric, the threshold where payment starts, the cap where it is full and the maximum payout. It works out how far along the line the result sits. You get the share earned and the payout, with any disputed adjustment kept apart.
 explain: |-
-  Bounded payout arithmetic and unresolved metric adjustments.
+  An earnout is extra money paid to the seller after a sale, but only if the business hits a target. Many earnouts pay on a straight line. Below a threshold, nothing is paid. Above a cap, the full maximum is paid. In between, the payment rises evenly. This earnout payout checker does that sum and shows each step.
 
-  Acquisition earnouts. Illustrative figures only. 15 is halfway between10 and20, paying20 of40. Result25 caps payment at40.
+  First it works out how far the result is above the threshold, and how wide the range from threshold to cap is. Dividing the first by the second gives the share earned. The skill holds that share between zero and one, so a result below the threshold pays nothing and a result above the cap pays the maximum. It then multiplies the share by the maximum payout.
+
+  It uses the agreed result, not a claimed one. If the buyer and seller disagree on a metric adjustment, the skill shows the payout on each figure as its own line and never blends them. It does not read the contract for you, handle catch-up payments or acceleration, or give the fair value of the earnout for the accounts.
 when:
-  - You need bounded payout arithmetic and unresolved metric adjustments.
-  - You work on acquisition earnouts and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A year has ended and you need the earnout payment based on the agreed result.
+  - The buyer and seller disagree on an adjustment and you want to see what it is worth in cash.
+  - You are checking a payment calculation in a statement against the contract terms.
+  - You want to see the payout at several results before you agree a target.
 you_give:
-  - Signed metric definition, measurement period, agreed result, zero-payment and full-payment thresholds and maximum payout.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The metric the earnout is based on, and the period it covers (from the signed agreement)
+  - The agreed result for that metric (from the buyer and seller's statement)
+  - The threshold where payment starts (from the agreement)
+  - The cap where payment is full (from the agreement)
+  - The maximum payout (from the agreement)
+  - A disputed adjustment, if there is one (optional)
+  - The currency and units, such as USD in millions
 you_get:
-  - Bounded payout arithmetic and unresolved metric adjustments.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The share of the range earned, from 0% to 100%
+  - The payout in your currency
+  - A separate payout line for any disputed adjustment, so the two are not blended
+  - A check that a result at the threshold pays zero and a result at the cap pays the maximum
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the earnout clause, or the threshold, cap and maximum from it. Say which metric it uses and what period it covers.
+  - Paste the agreed result. If the two sides disagree on an adjustment, paste both figures and say which is which.
+  - "Check one line yourself: the share earned is the result less the threshold, divided by the cap less the threshold. For 15, 10 and 20, that is one half."
+  - Read the check lines, MISSING and CHECKS MISSED before you share anything. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Confirm zero below threshold, linear interpolation and a fixed maximum; check acceleration and cliff exclusions
-    text: Confirm zero below threshold, linear interpolation and a fixed maximum; check acceleration and cliff exclusions.
-  - title: 2. Compute achievement over the positive threshold range and bound the fraction between zero and one
-    text: Compute achievement over the positive threshold range and bound the fraction between zero and one.
-  - title: 3. Multiply by maximum payout; keep disputed metric adjustments separate from agreed results
-    text: Multiply by maximum payout; keep disputed metric adjustments separate from agreed results.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units. Agreed results are kept apart from disputed ones.
+  - title: Reads the shape
+    text: Confirms zero below the threshold, a straight line to the cap and a fixed maximum. Flags a catch-up, cliff or acceleration it cannot handle.
+  - title: Checks the range
+    text: Works out cap less threshold. It must be above zero, or the sum stops.
+  - title: Works out the share earned
+    text: Takes the result less the threshold and divides by the range. It is held between zero and one.
+  - title: Works out the payout
+    text: Multiplies the share earned by the maximum payout.
+  - title: Keeps disputes apart
+    text: Runs any disputed figure as its own line and shows the difference in cash.
 output_shape: |-
-  Bounded payout arithmetic and unresolved metric adjustments.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Share earned <percent> | Payout <amount>
+
+  SCOPE AND SOURCES
+  <currency, units; the metric and period; source and date for each input; the clause that sets threshold, cap and maximum>
+
+  INPUTS AND ASSUMPTIONS
+  <agreed result, threshold, cap, maximum; any disputed adjustment on its own line>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <range, result above threshold, share earned held between 0 and 1, payout; check at the threshold and at the cap; disputed line if any>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Full-payment threshold must exceed the zero-payment threshold.
+  - what: Agreed or claimed
+    how: Say whose figure each result is. Only the agreed result gives the payout. A claimed one is shown as its own line.
+  - what: Currency and units
+    how: Use the same currency and units for the result, threshold, cap and maximum. Say them once at the start.
+  - what: What if
+    how: Ask for the payout at two or three other results, to see how it moves. Each is its own run, not a forecast.
 judge:
   - Full-payment threshold must exceed the zero-payment threshold.
   - Lower-threshold result pays zero and full-threshold result pays the maximum.
@@ -62,15 +93,57 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The earnout page of the signed agreement
+    - The agreed statement of the metric for the period
+    - Any notice that disputes an adjustment
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Earnout
+    meaning: Extra money paid to a seller after a sale if the business hits a set target.
+  - term: Threshold
+    meaning: The result at or below which the earnout pays nothing.
+  - term: Cap
+    meaning: The result at or above which the earnout pays its full maximum.
+  - term: Straight-line payout
+    meaning: A payout that rises evenly between the threshold and the cap.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+not_for:
+  - Your earnout has more than one tier, a catch-up payment, a cliff or acceleration on a sale. This covers one straight-line range only.
+  - You want the earnout's value for the accounts, weighted by how likely it is. Take that to your accountant.
+  - You want to settle the working capital after closing. Use the Working capital true-up checker.
+  - You want the cash needed at closing. Use the Deal funding gap checker.
+output_sample:
+  input:
+    - The earnout clause, or its threshold, cap and maximum payout
+    - The metric and the period it covers
+    - The agreed result for the metric
+    - A disputed adjustment (optional)
+  prerequisites:
+    - The signed agreement page with the earnout terms
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The share of the range earned and the payout.
+    - name: SCOPE AND SOURCES
+      contains: The currency and units, the metric and period, and the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: The result, threshold, cap and maximum, with any disputed adjustment on its own line.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: The range, the share earned, the payout, and checks at the threshold and the cap.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
+next:
+  - working-capital-true-up-checker
+  - deal-funding-gap-checker

@@ -1,0 +1,160 @@
+name: HR Onboarding agent
+summary: Get a new hire onboarding plan from first checklist to day 90, with owners, a day-one schedule and a manager guide. Give it the role and start date.
+headline: HR Onboarding agent
+subhead: Give it the role, the start date, the manager and your rules. It builds a new hire onboarding plan with a checklist for before day one, a day-one schedule, a first-week plan and a 30-60-90 day plan. Each step has an owner and a date. You also get a list of paperwork deadlines to check.
+job: hire-people
+thinking: high
+thinking_why: The plan has dates, owners and legal deadlines that vary by place. Use a model that keeps the dates straight and marks what you must confirm.
+explain: >-
+  A new hire forms a view of your company in the first week. A missing laptop,
+  an empty calendar or a late form says a lot. This new hire onboarding plan
+  agent gives you one plan that runs from the offer to day 90, so nothing is
+  left to memory.
+
+
+  It works in the order the original profile uses. Pre-boarding comes first:
+  equipment, access, a buddy and a welcome note. Then day one, week one, and
+  a 30-60-90 day plan with check-ins. It adds a short guide for the manager,
+  because the manager shapes how the first months feel. It lists the paperwork
+  and benefits deadlines to check, and marks each one for you to confirm.
+
+  This is a role profile from Agency Agents, shared under MIT. It drafts a
+  plan only. The original uses US forms such as the I-9 and W-4, so give your
+  country and state, or it will mark the rules as unknown. It is not legal
+  advice. The retention and survey targets in the original are goals and not
+  results from AI Blocks.
+when:
+  - Someone starts on Monday and you have no checklist for their laptop, accounts, first-day schedule or manager.
+  - You are hiring your first few people and want one plan to reuse for each of them.
+  - A new hire is remote, and you want a plan that still makes them feel welcome.
+  - You want to hand a new manager a clear list of what to do in the first 30 days.
+not_for:
+  - You need an answer on employment law, payroll or benefits rules. Ask your payroll provider or an employment lawyer. This agent only lists what to check.
+  - You only want a plan for the first five days. Use the New hire first week planner.
+  - You only want the 30, 60 and 90 day goals. Use the 30-60-90 day onboarding planner.
+  - You want a weekly check on one person's progress over time. Use the New hire onboarding keeper.
+  - You are onboarding a customer, not an employee. Use the Customer onboarding keeper.
+you_give:
+  - The role, the team, the start date and the manager's name or title
+  - Whether the job is on site, remote or mixed, and the country and state, so the paperwork list fits
+  - Your tools and accounts the person needs, such as email, chat, payroll and role software
+  - Your own rules, such as probation length, benefits sign-up window, required training and dress code (optional)
+  - Anything the new hire has asked for, such as an access need or time off at the start (optional)
+you_get:
+  - A pre-boarding checklist with dates and owners, from two weeks out to the day before
+  - A day-one schedule from welcome to wrap-up
+  - A first-week plan and a 30-60-90 day plan with a goal, an owner and a check-in for each stage
+  - A paperwork and benefits deadline list that marks what you must confirm
+  - A short guide for the manager and a list of questions still open
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Include the role, the start date, the manager, on site or remote, the country and state, and the tools they need.
+  - Paste your own onboarding rules or handbook parts if you have them. It will use them instead of its own defaults.
+  - Read the dates first. Check each start-of-job deadline against your payroll provider, benefits plan and local law.
+  - Send the manager guide to the manager, and the pre-boarding list to whoever sets up equipment and access.
+  - Keep the plan in a shared file. Tick items off as you go, and ask it for the next check-in message when one is due.
+how_it_works:
+  - title: Set the facts
+    text: It lists the role, dates, place and owners, and marks anything it does not know as missing.
+  - title: Build the pre-boarding list
+    text: It works back from the start date. It covers equipment, access, a welcome note, a buddy and manager readiness.
+  - title: Plan day one
+    text: It writes a day-one schedule that mixes paperwork, systems, a team lunch and a buddy chat.
+  - title: Plan the first 90 days
+    text: It breaks the time into learn, contribute and accelerate, with goals, check-ins and a sign of success for each.
+  - title: List the paperwork deadlines
+    text: It lists forms, training and benefit sign-up deadlines to confirm, with no legal claims of its own.
+  - title: Guide the manager
+    text: It adds a short list of what the manager does before day one and in week one, and what to watch for.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    role <title> | start <date> | manager <name or role> | place <on site | remote | mixed> | location <country, state> | MISSING: <list> | ASSUMED: <list>
+
+  PRE-BOARDING CHECKLIST
+    <2 weeks | 1 week | day before> | <task> | owner <role> | due <date>
+
+  DAY ONE
+    <time> | <session> | host <role> | content <list>
+
+  FIRST WEEK
+    <day> | <focus> | owner <role> | outcome <what is true by the end>
+
+  30-60-90 DAY PLAN
+    days 1-30 learn | goals <list> | check-ins <list> | sign of success <line>
+    days 31-60 contribute | goals <list> | check-ins <list> | sign of success <line>
+    days 61-90 accelerate | goals <list> | check-ins <list> | sign of success <line>
+
+  PAPERWORK AND DEADLINES TO CONFIRM
+    <form, training or benefit> | due <when, per your rules> | confirm with <payroll, benefits or legal> | status <to confirm>
+
+  MANAGER GUIDE
+    before day one <list> | week one <list> | warning signs <list>
+
+  OPEN QUESTIONS
+    <item>
+output_sample:
+  input:
+    - The role, team, start date and manager
+    - On site or remote, and the country and state
+    - The tools and accounts the person needs
+    - Your own onboarding rules, such as probation or training (optional)
+  prerequisites:
+    - Your handbook or rules if you have them, because the AI cannot know your policies
+    - Someone to check legal and payroll dates before you rely on them
+  output:
+    - name: Pre-boarding checklist
+      contains: Tasks from two weeks out to the day before, each with an owner and a due date.
+    - name: Day one
+      contains: A timed schedule from welcome through paperwork, systems, lunch and a buddy chat.
+    - name: First week
+      contains: One line per day with the focus, the owner and what should be true by the end.
+    - name: 30-60-90 day plan
+      contains: Goals, check-ins and a sign of success for learn, contribute and accelerate.
+    - name: Paperwork and deadlines to confirm
+      contains: Forms, training and benefit deadlines, each marked for you to confirm.
+    - name: Manager guide
+      contains: What the manager does before day one and in week one, and warning signs.
+    - name: Open questions
+      contains: Facts it needs from you, so nothing is guessed.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can build the plan. A stronger model keeps dates and owners consistent across a long plan.
+    - name: Your HR or payroll system, such as BambooHR, Rippling or Workday
+      why: The AI cannot read it. Use its forms and deadlines as the source, and copy them into your brief.
+  inputs:
+    - Your employee handbook or the list of policies a new hire must read
+    - The role's job description, so the 30-60-90 goals fit the work
+    - The names of the buddy, the manager and who sets up IT
+terms:
+  - term: Pre-boarding
+    meaning: The work you do between the signed offer and the first day.
+  - term: 30-60-90 day plan
+    meaning: A plan with goals for the first 30, 60 and 90 days in a job.
+  - term: HRIS
+    meaning: The system where you keep employee records, such as BambooHR or Workday.
+  - term: Buddy
+    meaning: A teammate who answers a new hire's everyday questions.
+judge:
+  - Every task has an owner and a date that counts back from the real start date.
+  - Paperwork deadlines are marked "to confirm" and are not stated as legal fact.
+  - The plan fits the role and place you gave, and does not use another country's forms.
+  - The manager guide has things the manager can do this week.
+  - Gaps are listed as open questions and not filled with guesses.
+test:
+  - Give it a start date two weeks away and check the dates count back correctly.
+  - Run it for a remote role and an on-site role. The day-one schedule should change.
+  - Leave out the country. It should ask, or mark the paperwork as unknown.
+tweaks:
+  - what: Place and rules
+    how: Name the country and state, and paste your own rules. The deadline list is only as good as these.
+  - what: Role type
+    how: Say if the person is a manager, a sales rep or a developer. The 30-60-90 goals change a lot.
+  - what: Team size
+    how: A team of three needs a lighter plan than a team of thirty. Say which one you are.
+  - what: Remote setup
+    how: Add time zones and how the team talks. It will plan the welcome and check-ins to fit.
+improve:
+  - Put your real day-one schedule and policy list in SKILL.md so every plan starts from your own.
+  - Add a list of the accounts each role needs, so access requests are never forgotten.
+  - After each hire, write down what went wrong in week one, and add a fix to the checklist.

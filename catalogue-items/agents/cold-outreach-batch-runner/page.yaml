@@ -1,6 +1,6 @@
 new_slug: cold-outreach-batch-runner
 name: Cold outreach batch runner
-summary: Give it your prospects and last batch's results. Get a checked batch of cold emails to approve and send.
+summary: Run your weekly cold email batch. Give it your prospects and last batch's numbers. You get checked emails to approve and send yourself.
 job: write-emails
 thinking: high
 thinking_why: It chooses between fixing the setup, the list or the angle from your numbers, then loops on checks. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You send cold emails every week and want each batch to learn from the last.
   - Your replies are low and you do not know whether the list, the email or the setup is the cause.
   - You want emails that sound like you, with no made-up facts about the person.
+not_for:
+  - "You have no offer, no proof you can state, or only a few dozen prospects: write and send those by hand."
+  - "You want one email, not a weekly batch: use the Cold email writer."
+  - "You want to send without reading each email: this agent never sends, and you must approve every one."
 you_give:
   - Who you write to and what you offer, with the one ask
   - Any result or client you can state as true
@@ -32,6 +36,32 @@ how_to_use:
   - Paste last batch's numbers and any replies.
   - Read the batch. Approve what you want and send it from your own mailbox.
   - Run it again next week. It reads the log and changes one thing.
+output_sample:
+  input:
+    - Who you write to, what you offer and your one ask
+    - Your prospects, each with a fact about them and its source
+    - "Last batch's numbers: sent, bounced, replied, positive replies"
+    - A few emails you have sent and liked (optional)
+  prerequisites:
+    - Your sender name, postal address and how people opt out
+    - A mailbox or sending tool to export results from and send approved emails
+  output:
+    - name: The call this week
+      contains: The path chosen, such as fix setup, change angle or tighten list, with the numbers behind it.
+    - name: Batch
+      contains: A table of prospect, subject, body and check result, with only emails that passed.
+    - name: Dropped
+      contains: Each prospect removed from the batch and the reason.
+    - name: Follow-ups due
+      contains: Who needs which touch, the send date and a draft.
+    - name: Replies
+      contains: Each reply sorted by type, with drafts for positive and not now ones.
+    - name: Setup changes to approve
+      contains: Any change to mailbox, domain or volume that needs your yes.
+    - name: Next week
+      contains: The one thing it will change and how it will read the result.
+    - name: Files and missing
+      contains: The batch folder, the log line and every MISSING note in one list.
 how_it_works:
   - title: Read the folder
     text: Loads your offer, voice, log and do-not-contact list. On the first run it builds them from what you give it.

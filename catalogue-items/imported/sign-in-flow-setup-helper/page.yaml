@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Security steps are fixed but the right flow depends on your app.
 new_slug: sign-in-flow-setup-helper
 name: Sign-in flow setup helper
-summary: Say which app and service. Get a secure OAuth sign-in flow, with the
-  right steps for your case.
+summary: Set up a secure OAuth sign-in flow for your app. Name your provider and app type, and get working login, callback and token code.
 job: connect-tools
 headline: Sign-in flow setup helper
-subhead: A secure OAuth sign-in flow built for your app and your provider, with
-  the right steps for your case. It avoids the common mistakes that leak tokens
-  or break at the redirect.
+subhead: A secure OAuth sign-in flow built for your app and your provider, with the right steps for your case. It avoids the common mistakes that leak tokens or break at the redirect.
 explain: |
   A secure OAuth sign-in flow built for your app and your provider, with the right steps for your case. It avoids the common mistakes that leak tokens or break at the redirect.
 
@@ -18,6 +15,10 @@ when:
   - Two servers need to call each other's API safely.
   - You are building a command line tool that needs a user login.
   - Your redirect keeps failing and you cannot see why.
+not_for:
+  - "You only need to call one API from your own script with no user login: use a plain API key from that service."
+  - "Two servers talk to each other and no user signs in: ask for client credentials only, or use a plain API key if the service offers one."
+  - "You want a ready-made login page with no code: use the sign-in tool built into your host or platform."
 you_give:
   - The provider you use
   - "App type: web app, single page app, command line or server"
@@ -29,8 +30,31 @@ you_get:
   - Callback and token exchange
   - Safe token storage and refresh steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell it your provider, app type, scopes and framework. If you leave one out, it should ask.
+  - Register your app with the provider using the steps it gives you. Paste the redirect address exactly.
+  - Copy the code into your project. Add your client ID and secret as private settings, not in the code.
+  - Test the sign-in with a test account before you ship. Check the redirect and the token refresh.
+  - Your AI can write the code in chat. You run it yourself, or use an AI that can run code and read your files.
+output_sample:
+  input:
+    - The provider you use, such as Google, GitHub or Auth0
+    - "Your app type: web app, mobile app, command line tool or server"
+    - The scopes (access levels) you need
+    - Your framework or language
+  prerequisites:
+    - An AI that can write code, and ideally read your project files
+    - A developer account with your provider, to register the app
+  output:
+    - name: Grant type choice
+      contains: "The OAuth flow that fits your app, with a short reason: code with PKCE, client credentials or device code."
+    - name: App registration steps
+      contains: What to set in the provider's developer console, including the exact redirect address, and which values to record.
+    - name: Authorization request
+      contains: Code that builds the sign-in link with a random state value and, for PKCE, a code verifier and challenge.
+    - name: Callback and token exchange
+      contains: Code that checks the state value on return, then swaps the code for tokens.
+    - name: Token storage and refresh
+      contains: Code that keeps tokens safe and renews them before they expire.
+    - name: Best practices and edge cases
+      contains: Notes on common mistakes, such as redirect mismatches and refresh errors, and how to handle them.

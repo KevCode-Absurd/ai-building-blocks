@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It searches many places and ranks what it finds.
 new_slug: brand-materials-finder
 name: Brand materials finder
-summary: Point it at your tools. Get a report of style guides, decks and call
-  notes you already have, plus gaps.
+summary: Find the brand guides, decks and call notes you already own in Notion, Drive and Slack. Get a ranked report with conflicts and gaps.
 job: brand-file
 headline: Brand materials finder
-subhead: A report on every brand document you already own, spread across your
-  work tools, with the best sources ranked and the gaps called out. You stop
-  writing a voice guide from a blank page.
+subhead: A report on every brand document you already own, spread across your work tools, with the best sources ranked and the gaps called out. You stop writing a voice guide from a blank page.
 explain: |
   A report on every brand document you already own, spread across your work tools, with the best sources ranked and the gaps called out. You stop writing a voice guide from a blank page.
 
@@ -18,20 +15,46 @@ when:
   - You need a voice guide but don't know what already exists.
   - Two documents disagree about tone.
   - You want to find old decks and call notes quickly.
+not_for:
+  - "You already know where your style guide is: open that guide and read it, no search needed."
+  - "You have the documents and only want a voice guide written: ask your AI to write brand voice guidelines from them, or paste them in directly."
+  - "None of your document tools are connected: connect Google Drive, SharePoint, Notion, Confluence or Box first, or paste your files into the chat."
 you_give:
-  - Connected work tools to search
-  - A brand or company name
-  - Anything you know is out of date (optional)
-  - Your approval before saving
+  - The work tools you want searched, such as Notion, Google Drive or Slack
+  - Your company name
+  - Places you already know hold brand files (optional)
+  - Your go-ahead before anything is saved
 you_get:
   - A discovery report of what exists
   - Sources ranked by usefulness
   - Conflicts and gaps listed
   - Draft brand voice guidelines after your review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search your connected tools, such as Notion,
-    Google Drive and Slack.
+  - Connect your work tools to your AI first. Connect at least one document tool, such as Google Drive, SharePoint, Notion, Confluence or Box.
+  - Check call transcripts and Slack for customer data before you include them. Leave them out if unsure.
+  - Paste the skill into your AI and say you want to find your brand materials. Give your company name.
+  - Read the plan it shows and confirm which tools to search. It waits for your go-ahead.
+  - Read the report. Confirm or change each open question, and note any conflicts between documents.
+  - Pick a next step. To write guidelines, ask your AI to run generate-guidelines with the report. Nothing is saved until you approve.
+output_sample:
+  input:
+    - The tools to search, such as Notion, Google Drive or Slack
+    - Your company name
+    - Places you already know hold brand files (optional)
+    - Whether to include call transcripts or only documents
+  prerequisites:
+    - An AI with access to your connected work tools
+    - At least one document tool connected, such as Google Drive, SharePoint, Notion, Confluence or Box
+  output:
+    - name: Plan and scope check
+      contains: A short plan of the search and a question on which tools to search, before anything starts.
+    - name: Discovery report
+      contains: What was found across your tools, with the key brand elements pulled from the best sources.
+    - name: Ranked sources
+      contains: Each style guide, deck, template or transcript sorted by how useful it is for brand voice.
+    - name: Conflicts
+      contains: Places where two documents disagree, such as an old style guide and a newer brand update.
+    - name: Open questions
+      contains: Gaps and unclear points, each with a suggested answer you can confirm or change.
+    - name: Next steps
+      contains: Options to write guidelines now, settle questions first, save the report, or search more tools.

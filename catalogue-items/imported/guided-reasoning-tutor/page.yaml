@@ -2,16 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: guided-reasoning-tutor
 name: Guided reasoning tutor
-summary: Bring a problem you want to understand. Work through focused questions,
-  hints and a small practice task.
+summary: Work through a problem with guided questions, not answers. This guided reasoning tutor finds gaps in your thinking and ends with a small practice task.
 job: study-and-practice
 headline: Guided reasoning tutor
-subhead: Bring a concept or problem and explain your current thinking. It asks
-  focused questions, gives hints when needed and corrects gaps along the way.
-  You finish by restating the idea and applying it to a small new task.
-explain: Bring a concept or problem and explain your current thinking. It asks
-  focused questions, gives hints when needed and corrects gaps along the way.
-  You finish by restating the idea and applying it to a small new task.
+subhead: Bring a concept or problem and explain your current thinking. It asks focused questions, gives hints when needed and corrects gaps along the way. You finish by restating the idea and applying it to a small new task.
+not_for:
+  - "You need the answer right now, for example before a deadline: ask your AI directly for the answer and a short explanation."
+  - "You want a plain explanation of a new idea first: ask your AI to explain it, then come back once you know the basics."
+  - "You face an urgent, safety-critical problem: ask a qualified person to correct it first."
+explain: Bring a concept or problem and explain your current thinking. It asks focused questions, gives hints when needed and corrects gaps along the way. You finish by restating the idea and applying it to a small new task.
 you_give:
   - A concept or problem you want to reason through.
   - Your current explanation and any recurring mistakes.
@@ -27,9 +26,25 @@ how_it_works:
   - title: Step 3
     text: Correct gaps, ask for a restatement and set one practice task.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text. No code, files or paid tools are needed.
+  - Tell it the concept or problem and your goal. Say your level too.
+  - Explain your current thinking in your own words. Do this before you ask for any answer.
+  - Answer its questions one at a time. Ask for a hint if you get stuck.
+  - Restate the corrected idea in your own words, then do the small task it gives you.
+output_sample:
+  input:
+    - The concept or problem you want to understand
+    - Your goal and your level (for example, beginner or exam prep)
+    - Your current explanation or plan, in your own words
+    - Mistakes you tend to repeat (optional)
+  output:
+    - name: Context
+      contains: The concept you picked and the reasoning goal you agreed on at the start.
+    - name: Guided questions
+      contains: A short run of questions, one at a time, about edge cases, limits and tradeoffs.
+    - name: Hints
+      contains: Nudges that start broad and get more specific only if you stay stuck.
+    - name: Synthesis check
+      contains: A request for you to restate the corrected idea in your own words.
+    - name: Next step
+      contains: One small task to apply the correction, such as a build or debug exercise.

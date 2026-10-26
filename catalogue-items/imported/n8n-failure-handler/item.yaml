@@ -8,8 +8,10 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: tool_connection
+  - type: question
     required: true
+  - type: tool_connection
+    required: false
 outputs:
   - type: tool_connection
 uses: []

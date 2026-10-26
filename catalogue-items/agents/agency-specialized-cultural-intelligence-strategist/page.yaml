@@ -1,0 +1,121 @@
+name: Cultural Intelligence Strategist agent
+summary: Review your forms, copy or image prompts for cultural blind spots. Get ranked exclusion risks and copy-ready fixes for the markets you serve.
+headline: Cultural Intelligence Strategist agent
+subhead: Give it the screens, form fields, copy or image prompt you plan to ship, and the markets you serve. It looks for rigid defaults and cultural assumptions. You get ranked risks, fixes you can paste and checks to run with real people.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A cultural sensitivity review for software finds what a team cannot see from inside. A form that needs a first and last name. A colour that means something else in another market. An image prompt that keeps drawing the same stereotype. This agent asks one question first: who is left out?
+
+  It reads your material and lists each rigid default, who it may fail and why. For each one it writes a fix you can paste: a new field, a rewritten line, or a prompt with limits that block known stereotypes. It assumes your team meant well. It explains the reason behind each fix, so the team learns the rule.
+
+  It follows the Cultural Intelligence Strategist profile from Agency Agents. It is an AI reading of public ideas about inclusive design. It does not speak for any group and cannot replace people from your market. Treat each finding as a question to check with them.
+when:
+  - You are about to ship a sign-up form, checkout or profile page to new countries.
+  - You are writing an email, campaign or app copy for a group you do not belong to.
+  - An AI image prompt keeps giving the same stereotype and you want guardrails.
+  - You want an inclusion check on a workflow before launch.
+not_for:
+  - You need legal, HR or hiring advice. Ask a qualified professional.
+  - You only want images that show people fairly. Use the Inclusive Visuals Specialist agent.
+  - You want to learn from real users. Use the UX Researcher agent to plan the research, then talk to them.
+  - You are preparing for a business meeting in South Korea or France. Use the Korean Business Navigator agent or the French Consulting Market Navigator agent.
+you_give:
+  - "The material to review: form fields, screen text, a flow, an email or an image prompt"
+  - The markets, languages or groups it serves
+  - What the product does and who uses it today
+  - What you already know about your users, such as support tickets (optional)
+  - Limits, such as languages you cannot add yet (optional)
+you_get:
+  - A ranked list of exclusion risks, with who each one may affect and why
+  - "A fix you can paste for each risk: a new field, rewritten copy or a safer prompt"
+  - A short reason for each fix, so your team learns the rule
+  - Guardrails for image prompts, if your material uses them
+  - A list of what to check with people from the market, and what was not researched
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md, then references/source-agent.md, then your material into a new chat.
+  - Paste what you want reviewed. Say which markets or groups it serves and what you cannot change.
+  - Say "Review this. Rank the risks and write a fix for each." Answer its one round of questions.
+  - If your AI can browse the web, ask it to name the sources and dates it used. If not, it marks that part "Not researched".
+  - Check each high risk with someone from that market before you change anything. Use the AI to raise questions, not to decide.
+  - Paste the fixes into your design or copy. Run the review again on the new version.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms what is reviewed, who it serves and what you cannot change. Gaps are asked once, then marked MISSING.
+  - title: Ask who is left out
+    text: It goes through names, gender fields, dates, addresses, units, colour, icons, tone and images, and notes each rigid default.
+  - title: Rate each risk
+    text: Each finding gets High, Medium or Low severity and a confidence of Likely, Possible or Unknown.
+  - title: Research, if it can
+    text: With web access it looks up current guidance and names the source. Without it, it says "Not researched".
+  - title: Write the fix
+    text: Each risk gets a replacement field, line or prompt you can paste, built to fix the structure, not decorate it.
+  - title: Explain and hand off
+    text: It writes the reason for each fix and the questions to ask people from the market.
+output_shape: |-
+  SUMMARY
+    <what was reviewed> | <markets or groups> | <number of risks by severity>
+  RISKS (ranked High, Medium, Low)
+    <number> | <where in the material> | <the assumption> | <who it may fail> | <severity> | <confidence>
+  DESIGN PROPOSALS
+    <risk number> | <replacement field, copy or prompt, ready to paste>
+  WHY NOTES
+    <risk number> | <one or two sentences on the rule behind the fix>
+  IMAGE PROMPT GUARDRAILS (only if images are involved)
+    Avoid <tropes to forbid> | Add <respectful, specific details to include>
+  VERIFY WITH PEOPLE FROM THE MARKET
+    <question> | <who to ask>
+  NOT RESEARCHED AND CHECKS MISSED
+output_sample:
+  input:
+    - Your form fields, screens, copy or image prompt
+    - The markets or groups it serves
+    - What you already know about your users (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Web browsing in your AI, so it can look up current guidance (optional)
+  output:
+    - name: Risk list
+      contains: Each blind spot ranked High, Medium or Low, with where it is, who it may fail and why.
+    - name: Design proposals
+      contains: A replacement field, rewritten line or safer prompt for each risk, ready to paste.
+    - name: Why notes
+      contains: One or two plain sentences on the rule behind each fix.
+    - name: Image prompt guardrails
+      contains: Tropes to forbid and respectful details to add, when your material includes images.
+    - name: Verify with the market
+      contains: Questions to ask people from each market before you change anything.
+    - name: Not researched
+      contains: What the AI could not look up or check, so you know what is still open.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Market focus
+    how: Name the one or two markets that matter most, so the review goes deep on them.
+  - what: Severity cut-off
+    how: Ask for High risks only if your launch is close.
+improve:
+  - Keep the answers from people in your market. Paste them back on the next review so findings reflect what they said.
+terms:
+  - term: Invisible exclusion
+    meaning: A design choice that quietly fails some users, with no one meaning it to.
+  - term: Cultural intelligence (CQ)
+    meaning: The skill of working well across cultures.
+  - term: Localization
+    meaning: Adapting a product to a language and place, beyond translating the words.
+  - term: Tokenism
+    meaning: A small show of diversity that changes nothing about how the product works.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search
+      why: Guidance on respectful language changes over time, so an AI that can browse can name current sources.
+  inputs:
+    - Screenshots of the screens, so it can read layout and colour
+    - Support tickets or reviews from the markets you serve
+    - A list of the languages you support now

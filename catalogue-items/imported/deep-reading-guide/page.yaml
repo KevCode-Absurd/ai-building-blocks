@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It reads closely and builds questions from the text.
 new_slug: deep-reading-guide
 name: Deep reading guide
-summary: Give it a book, paper or document. Get its claims and evidence mapped,
-  then recall questions.
+summary: "Deep reading guide for books and papers: find the author's claims, check the evidence, and get recall questions that show what you missed."
 job: think-and-decide
 headline: Deep reading guide
-subhead: "Give it a book, paper, article or PDF and pick a mode: quick, deep,
-  map, Feynman or whole book. It separates the author's claims from the evidence
-  behind them. You get a thesis and claim list, an evidence ledger, an idea map
-  and recall questions that show where your understanding has gaps."
+subhead: "Give it a book, paper, article or PDF and pick a mode: quick, deep, map, Feynman or whole book. It separates the author's claims from the evidence behind them. You get a thesis and claim list, an evidence ledger, an idea map and recall questions that show where your understanding has gaps."
 explain: |
   Understand a book or paper well enough to explain it from memory. Give it a document and choose a mode, and you get the author's claims separated from their evidence, then questions that test whether you really got it.
 
@@ -19,6 +15,10 @@ when:
   - You are studying a book and want to remember it in a month.
   - You need to separate what an author proves from what they assume.
   - You want a map of how a long document's ideas connect.
+not_for:
+  - "You need to find sources across the web: use a research tool with web search, since this only reads what you give it."
+  - "You want a short executive summary with citations: ask your AI for a plain summary instead, because this builds a full argument map."
+  - "You only skimmed an excerpt but want whole-book coverage: read the full book first, or ask for quick mode only."
 you_give:
   - The book, paper, article or PDF
   - "Mode: quick, deep, map, Feynman or book"
@@ -29,7 +29,33 @@ you_get:
   - Idea map
   - Recall questions with gap check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your text or attach your PDF. Very long books may need to go in parts.
+  - "Name a mode: quick, deep, map, Feynman or book. If you skip this, you get deep mode."
+  - Read the central claim first. Check that it matches what you think the author argues.
+  - Answer the recall questions with the report closed. Ask your AI to mark the gaps in your answers.
+  - Next, run Feynman mode on the same text, or turn the questions into a review plan over a few weeks. The Chinese trigger words in the skill are optional. Your AI answers in your language.
+output_sample:
+  input:
+    - Your book, paper, article or PDF
+    - "The mode you want: quick, deep, map, Feynman or book (deep is the default)"
+    - What you want to use it for (optional)
+  prerequisites:
+    - An AI that can read your file, or text you can paste into the chat
+  output:
+    - name: Source and extraction status
+      contains: Whether the text was read in full, and any missing pages or broken text.
+    - name: One-paragraph synthesis
+      contains: A short summary of what the source says and how it argues.
+    - name: Central claim
+      contains: The one point the author wants you to accept, written as a full statement.
+    - name: Argument tree
+      contains: Claims, reasons, examples and assumptions, each linked to the claim it supports.
+    - name: Evidence ledger
+      contains: Each key claim with its evidence, location, confidence label and caveat.
+    - name: Key concepts and definitions
+      contains: The main terms the author uses and what they mean.
+    - name: Assumptions, counterarguments and limitations
+      contains: Hidden premises, fair objections and where the conclusion stops holding.
+    - name: Questions for recall and transfer
+      contains: Questions to answer without looking, plus one to apply the idea somewhere new.

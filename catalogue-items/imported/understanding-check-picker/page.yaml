@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It matches a known technique to your moment and goal.
 new_slug: understanding-check-picker
 name: Understanding check picker
-summary: Describe the lesson moment and age group. Get the best quick check to
-  use and how to run it.
+summary: Pick the best quick check of understanding for your lesson. Give the moment, goal and year group. You get 2 or 3 techniques and how to run them.
 job: teach-and-train
 headline: Understanding check picker
-subhead: The best quick check for the moment in your lesson, with a clear way to
-  run it. You stop reaching for the same exit ticket every time.
+subhead: The best quick check for the moment in your lesson, with a clear way to run it. You stop reaching for the same exit ticket every time.
 explain: |
   The best quick check for the moment in your lesson, with a clear way to run it. You stop reaching for the same exit ticket every time.
 
@@ -17,6 +15,10 @@ when:
   - You need an end-of-lesson check that takes five minutes.
   - You teach a large class and need a quick way to scan answers.
   - You have no devices and only paper or whiteboards.
+not_for:
+  - "You want to write a question that splits right and wrong ideas: use a hinge question designer, or write one yourself."
+  - "You want a short end-of-lesson task that you write from scratch: use an exit ticket designer."
+  - "You need a full lesson plan, not one check: plan the lesson first, then come back to pick the check."
 you_give:
   - When in the lesson the check happens
   - What you want to check
@@ -28,7 +30,26 @@ you_get:
   - How to read the answers
   - A backup option
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Say when in the lesson the check happens and what you want to find out.
+  - Add the year group. Add class size, subject and gear such as mini-whiteboards if you can.
+  - Read the ranked techniques and pick the one that fits your time.
+  - "Run it in class, then use the answer guide to decide: move on, reteach or regroup."
+output_sample:
+  input:
+    - When in the lesson the check happens
+    - What you want to check
+    - Student age or year group
+    - Class size (optional)
+    - Subject and resources, such as mini-whiteboards (optional)
+  output:
+    - name: Formative Assessment header
+      contains: The lesson moment, what you are checking and the student level, restated at the top.
+    - name: Recommended Techniques
+      contains: Two or three techniques ranked by fit, each with steps to run it in class.
+    - name: Technique rationale
+      contains: Why each technique suits this moment and goal.
+    - name: Response Interpretation Guide
+      contains: What different patterns of answers mean and what to do next.
+    - name: Common Mistakes with These Techniques
+      contains: Slips teachers often make when running these checks, and how to avoid them.

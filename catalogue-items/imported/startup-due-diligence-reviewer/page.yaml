@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It researches many areas and weighs them from three views.
 new_slug: startup-due-diligence-reviewer
 name: Startup due diligence reviewer
-summary: Name a startup. Get its market, traction, money and team reviewed from
-  an investor, job seeker and founder view.
+summary: Check a startup before you invest or join. Name the company and get an investor, job seeker and founder review, each with a verdict.
 job: money-and-investing
 headline: Startup due diligence reviewer
-subhead: "A review of a startup from three points of view: investor, job seeker
-  and founder. Name the company. The skill searches the web, the company's site
-  and press, then gathers basics, funding, product, traction and team."
+subhead: "A review of a startup from three points of view: investor, job seeker and founder. Name the company. The skill searches the web, the company's site and press, then gathers basics, funding, product, traction and team."
 explain: |
   A review of a startup from three points of view: investor, job seeker and founder. Name the company. The skill searches the web, the company's site and press, then gathers basics, funding, product, traction and team.
 
@@ -18,6 +15,10 @@ when:
   - You are thinking of investing in a private company.
   - You want to know how healthy a competitor is.
   - Someone asks what you think of a company and you want facts.
+not_for:
+  - "You want facts on a public company: read its filings and earnings reports, or ask a financial adviser."
+  - "You need a quick fact check, like founding year or last funding round: search the web or open the company's Crunchbase page."
+  - "You need legal or tax advice on a deal or equity offer: ask a lawyer or an accountant."
 you_give:
   - The startup's name
   - What you want to decide (optional)
@@ -29,8 +30,30 @@ you_get:
   - A founder view with a verdict
   - Gaps in the public data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can search the web.
+  - Paste the skill text into the chat. If your AI can read files, add the three reference files too.
+  - Type the startup's name. Say if you are weighing a job or an investment, and add any offer details.
+  - If the AI cannot find enough, give it the company's website link, a Crunchbase page or a job post.
+  - Read the three verdicts first. Then check the data gaps before you act on any of them.
+output_sample:
+  input:
+    - The startup's name
+    - Its website link (optional, but helps when little is public)
+    - What you want to decide, such as join or invest (optional)
+    - Offer or deal details (optional)
+  prerequisites:
+    - An AI that can search the web
+    - Your own copy of the three reference files (vc-framework.md, job-applicant-framework.md, ceo-framework.md) if your AI can read files
+  output:
+    - name: Summary
+      contains: A short overview that states all three verdicts up front.
+    - name: VC Investor view
+      contains: Market, traction, unit economics, team and defensibility, with a bull case, key risks and an investment verdict.
+    - name: Job Applicant view
+      contains: Runway, equity value, career growth, culture and red flags, ending in an employment verdict.
+    - name: CEO/Founder view
+      contains: Product fit, growth efficiency, competitive position and urgent areas to fix, ending in a health grade.
+    - name: Cross-perspective synthesis
+      contains: Where the three views agree, where they differ, and a bottom line for your situation.
+    - name: Data gaps
+      contains: Facts it could not find in public sources, with its confidence level on each guess.

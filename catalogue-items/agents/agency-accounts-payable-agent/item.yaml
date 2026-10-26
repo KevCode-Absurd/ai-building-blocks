@@ -1,0 +1,42 @@
+slug: agency-accounts-payable-agent
+name: Accounts Payable agent
+summary: "Paste invoices, approved vendors and your approval rule. Get each invoice checked for duplicates and mismatches, plus a payment proposal to approve."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/accounts-payable-agent.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/accounts-payable-agent.md
+  licence: MIT
+  original_name: Accounts Payable Agent
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: f0f401daf0b61441eedb41a077e4bef13e0ff626483652d3c8a6eaae08b09a6e
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Accounts Payable Agent
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Accounts Payable Agent
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/accounts-payable-agent.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

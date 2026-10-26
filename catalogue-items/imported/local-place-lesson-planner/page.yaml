@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches set content to a local setting.
 new_slug: local-place-lesson-planner
 name: Local place lesson planner
-summary: Name a place near your learners. Get lessons that tie your content to
-  that place, its community and its heritage.
+summary: Name a place near your school and your content. Get a place-based lesson plan that ties the topic to the local community and its heritage.
 job: teach-and-train
 headline: Local place lesson planner
-subhead: Lessons that start from a real place near your students and still cover
-  your curriculum. Name the place and the content and get an inquiry plan where
-  the place is the text.
+subhead: Lessons that start from a real place near your students and still cover your curriculum. Name the place and the content and get an inquiry plan where the place is the text.
 explain: |
   Lessons that start from a real place near your students and still cover your curriculum. Name the place and the content and get an inquiry plan where the place is the text.
 
@@ -18,6 +15,10 @@ when:
   - There is a canal, park or building near school you could use.
   - You teach local history and want fresh sources.
   - Your class cannot visit and you need a way to still use the place.
+not_for:
+  - "Your topic has no real place nearby and no local source: use a standard unit plan, or ask a colleague for one."
+  - "You want to redesign teaching for a culture or community you serve: use the culturally-responsive-teaching-designer."
+  - "You want to start a unit from one puzzling event or phenomenon, not a place: use the phenomenon-based-unit-anchor."
 you_give:
   - The curriculum content
   - The local place
@@ -30,7 +31,26 @@ you_get:
   - An inquiry sequence
   - An action step for students
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Before you start, note your year group, subject and the content to teach. Write a few lines about the place. Decide if students can visit.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
+  - Paste your content and place. Add any Indigenous links and local experts you know of.
+  - Read the plan. Check that the place facts are right and the local people are real and reachable.
+  - Edit anything that does not fit your class. Then plan a visit or a classroom version.
+output_sample:
+  input:
+    - The curriculum content you need to teach
+    - The local place, such as a river, park, building or canal
+    - Year group and subject (optional)
+    - Any Indigenous history or meaning the place holds (optional)
+    - Local people who know the place well (optional)
+  output:
+    - name: What This Place Teaches
+      contains: What students can learn from direct contact with this exact place.
+    - name: Multiple Ways of Knowing
+      contains: How a scientist, a historian and a local resident each see the place, and how to bring those views in.
+    - name: Inquiry Design
+      contains: A step-by-step inquiry sequence that links your curriculum content to the place.
+    - name: Action Dimension
+      contains: A step where students act on what they learned, plus questions on who the place serves and who it leaves out.
+    - name: Community Knowledge Holders
+      contains: Local people to involve and how they could help students learn.

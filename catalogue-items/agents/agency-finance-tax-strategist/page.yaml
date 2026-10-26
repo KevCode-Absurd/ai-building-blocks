@@ -1,0 +1,139 @@
+name: Tax Strategist agent
+summary: "Get a tax planning brief for one decision: your facts, the options, the questions for your tax pro and the deadlines to check. Not a tax filing."
+headline: Tax Strategist agent
+subhead: "Describe one decision that has a tax effect, such as a new entity, a big purchase, a sale or a hire in another state. Add your country, tax year and income picture. You get a brief with the facts, the options, the points to confirm and the questions to take to your tax professional."
+job: money-and-investing
+thinking: high
+thinking_why: Tax rules depend on place, year and facts, and the agent must say what it cannot confirm. Use a model that reasons carefully, shows its limits and does not quote rules from memory as settled.
+explain: |-
+  A tax planning brief sets out the tax side of a decision before you make it. Most owners ask their accountant after the contract is signed, when the options are gone. The cost of a wrong structure or a missed election can be large, and it is hard to undo.
+
+  This agent starts with your facts and your place. It asks for the country or state, the tax year, the type of business and what is changing. Then it lists the questions that decide the answer, and the options each one points to. For each option it says what could change in your tax, what you would need to keep as proof, and how firm the footing is.
+
+  It never states a rate, a limit or a deadline from memory as settled. It marks each one "check against the current official text". It is an AI reading of your facts, not tax advice, and it does not file anything. Its best use is to make your meeting with a tax professional shorter and sharper.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You plan to start a company, change your entity type or add a partner and want to know which tax questions to ask.
+  - You are about to buy a big asset, sell a business or take on staff in another state or country.
+  - You have income that is changing, such as a big contract, and want to see your tax choices before year end.
+  - You are meeting your accountant soon and want to arrive with the facts and the right questions.
+not_for:
+  - You need a return prepared or filed. A qualified tax professional must do that.
+  - You need a binding tax position or a ruling. Ask a licensed adviser or the tax authority.
+  - You want to work out deferred tax from a balance sheet. Use the Deferred tax calculator.
+  - You want your books cleaned before tax time. Use the Bookkeeper & Controller agent.
+you_give:
+  - Your country or state, the tax year and the type of business, such as sole trader, LLC or company.
+  - The decision, in a few lines, with the amounts and dates.
+  - A short income and cost picture for the year, from your accounts or last return.
+  - Where you have staff, customers or property outside your home state or country (optional)
+  - What your tax professional has already told you (optional)
+you_get:
+  - A fact sheet of what you told it, and a list of what it assumed
+  - The questions that decide the answer
+  - Two to four options, with what each could change in your tax and what you would have to keep as proof
+  - A risk note for each option, in plain words
+  - A list of deadlines and rules to check, and questions for your tax professional
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Name your country or state, the tax year and your business type. Describe the decision with amounts and dates.
+  - Paste a short income and cost summary, or last year's return, with names, ID numbers and account numbers removed. No code or web access is needed.
+  - Type "Write the planning brief. Mark any rule, rate or deadline you are not sure of as CHECK. Do not guess my facts."
+  - Read the questions that decide the answer. Add what you know, then ask it to run the brief again.
+  - Take the brief and the CHECK list to your tax professional. Check every rule and deadline against the official source before you act.
+how_it_works:
+  - title: Fix the facts
+    text: It records your place, tax year, entity and decision. Anything missing is asked once, then marked MISSING.
+  - title: Find the deciding questions
+    text: It lists the questions the answer turns on, such as where staff work or when income arrives.
+  - title: Lay out the options
+    text: It sets out two to four ways to do it, with what each could change in your tax.
+  - title: Rate the footing
+    text: For each option it says how firm the rule is, how it could be challenged and what proof you would keep.
+  - title: Check the clock
+    text: It lists the deadlines and elections to look up, with each marked CHECK until you confirm it.
+  - title: Hand over
+    text: It lists the points for a tax professional and what to bring to the meeting.
+output_shape: |-
+  FACTS AND ASSUMPTIONS
+    Place <country or state> | Tax year <year> | Entity <type> | Decision <what, amount, date>
+    Assumed <item> | <why>
+
+  QUESTIONS THAT DECIDE THE ANSWER
+    <question> | <why it matters> | <your answer or MISSING>
+
+  OPTIONS
+    <option> | <what could change in your tax> | <proof to keep> | <cash effect>
+
+  RISK NOTES
+    <option> | <how firm the footing is> | <how it could be challenged> | <plain-words rating: low, medium or high>
+
+  RULES AND DEADLINES TO CHECK
+    <rule or date> | <where to confirm it> | <status: CHECK>
+
+  QUESTIONS FOR YOUR TAX PROFESSIONAL
+    <point the AI cannot settle> | <what to confirm>
+
+  DOCUMENTS TO KEEP
+    <document> | <why it matters>
+output_sample:
+  input:
+    - Your country or state, the tax year and your business type
+    - The decision, with amounts and dates
+    - A short income and cost picture, or last year's return with identifiers removed
+    - Where you have staff, customers or property elsewhere (optional)
+  prerequisites:
+    - An AI that can read files, if you attach a return or accounts
+  output:
+    - name: Facts and assumptions
+      contains: What you told it, and each item it had to assume.
+    - name: Questions that decide the answer
+      contains: The questions the result turns on, with your answers or MISSING.
+    - name: Options
+      contains: Two to four routes, with the tax effect, proof to keep and cash effect.
+    - name: Risk notes
+      contains: How firm each option is, how it could be challenged and a plain rating.
+    - name: Rules and deadlines to check
+      contains: Each rule or date to confirm, and where to confirm it.
+    - name: Questions for your tax professional
+      contains: Points the AI cannot settle, with what to confirm.
+    - name: Documents to keep
+      contains: The records that would support each option if asked.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads last year's return and your accounts next to your description, and ties each question to a line in them.
+  inputs:
+    - Last year's return, with names and ID numbers removed.
+    - Your year-to-date profit and loss.
+    - Any letters from the tax office about open issues.
+terms:
+  - term: Entity
+    meaning: The legal form of your business, such as sole trader, LLC or company.
+  - term: Election
+    meaning: A choice you must file with the tax office by a set date, such as how your business is taxed.
+  - term: Nexus
+    meaning: A link to a state or country, such as staff or sales, that can make you owe tax there.
+  - term: Tax year
+    meaning: The 12-month period that a return covers.
+  - term: Footing
+    meaning: How strong the rule behind a tax position is, if the tax office asks about it.
+tweaks:
+  - what: Decision
+    how: Plan one decision at a time, such as "form an LLC in April". A whole year of questions in one go gives thin answers.
+  - what: Place
+    how: Name every state or country where you have staff, sales or property. Tax rules change a lot by place.
+  - what: Risk
+    how: Say if you want a careful path or are open to firmer positions. It then shows the options in that order.
+improve:
+  - Keep each brief with your tax file, and note what your professional decided. It speeds up next year's plan.
+  - Add your entity and filing dates to the pack, so you do not retype them.
+  - Pair it with the Chief Financial Officer agent when the decision is also a big cash decision.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

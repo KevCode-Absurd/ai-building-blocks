@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a short upload path and builds one link.
 new_slug: matlab-code-sharer
 name: MATLAB code sharer
-summary: Give it your MATLAB files. Get them uploaded to GitHub or MATLAB Drive,
-  plus an Open in MATLAB Online link.
+summary: Share MATLAB code online. Give it your files. You get them on GitHub or MATLAB Drive, plus an Open in MATLAB Online link anyone can click.
 job: ship-and-host
 headline: MATLAB code sharer
-subhead: Your MATLAB files online, with a link that opens them in MATLAB Online
-  in one click. Anyone you send it to can run your code without installing
-  anything.
+subhead: Your MATLAB files online, with a link that opens them in MATLAB Online in one click. Anyone you send it to can run your code without installing anything.
 explain: |
   Your MATLAB files online, with a link that opens them in MATLAB Online in one click. Anyone you send it to can run your code without installing anything.
 
@@ -18,18 +15,42 @@ when:
   - Your README needs an Open in MATLAB Online badge.
   - You are unsure whether to use GitHub, Drive or File Exchange.
   - You have a GitHub repo and need the right link format.
+not_for:
+  - "You only want to run your code on your own computer: open it in MATLAB there, no upload needed."
+  - "Your code must stay private: use a MATLAB Drive share and send the link only to people you trust, not a public GitHub repo."
+  - "You want to try MATLAB Online or ask about licences and accounts: use the MathWorks site or support."
 you_give:
-  - Your MATLAB files or repo link
-  - Who will open them
-  - A GitHub or MathWorks account
+  - Your MATLAB files, or the link to your repo, Drive share or File Exchange page
+  - "Where you want to share them: GitHub, MATLAB Drive or File Exchange (optional)"
+  - Which file should open first (optional)
 you_get:
   - Files uploaded to the place you chose
   - A working Open in MATLAB Online link
   - A README badge (optional)
   - Upload steps in plain words
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and use the GitHub tool.
+  - Open Claude, ChatGPT or Gemini and paste this skill. Add your MATLAB files or your repo link.
+  - Tell your AI who will open the code. It picks GitHub, MATLAB Drive or File Exchange with you.
+  - For GitHub, your AI needs to run commands and use the gh tool. If it can't, it gives you the steps to do yourself.
+  - Check the files before you say yes to a public GitHub repo. A public repo shows your code to anyone on the internet.
+  - For MATLAB Drive or File Exchange, follow the upload steps on the MathWorks site. Paste the share link or ID back to your AI.
+  - Click the finished link to test it. Then send it, or add the badge to your README.
+output_sample:
+  input:
+    - Your MATLAB files, or the link to your GitHub repo, Drive share or File Exchange page
+    - Where you want to share them (GitHub, MATLAB Drive or File Exchange), if you know
+    - A file name to open first (optional)
+  prerequisites:
+    - A GitHub account and the gh tool for the GitHub path, which needs an AI that can run commands
+    - A MathWorks account for MATLAB Drive or File Exchange
+  output:
+    - name: Starting point check
+      contains: "Where your files are now: only on your computer, on GitHub, on MATLAB Drive or on File Exchange."
+    - name: Platform choice
+      contains: A short pick between GitHub, MATLAB Drive and File Exchange, based on who should see your code.
+    - name: Upload steps
+      contains: Commands run for you on GitHub, or plain steps for you to follow on MATLAB Drive and File Exchange.
+    - name: Open in MATLAB Online link
+      contains: One link per file, or one link for the whole repo, folder or submission.
+    - name: README badge
+      contains: A clickable Open in MATLAB Online button in markdown, for GitHub only (optional).

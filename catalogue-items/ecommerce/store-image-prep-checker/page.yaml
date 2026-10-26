@@ -1,6 +1,6 @@
 new_slug: store-image-prep-checker
 name: "Store image prep checker"
-summary: "Give it your image files and sizes. Get what to resize and rename, alt text and a score."
+summary: "Check your store images before upload. Get what to resize, crop and rename, plus alt text, gallery order and a score out of 100."
 job: speed-up-store
 thinking: low
 thinking_why: "It checks sizes and names against fixed rules. A small, fast model is enough if it can read your list or files."
@@ -17,6 +17,10 @@ when:
   - "You're about to upload a batch of product or banner images."
   - "Your store's Files list shows images over 1 MB."
   - "Product grids look uneven or load slowly on phones."
+not_for:
+  - "You need the files compressed: use a free image compressor such as Squoosh or TinyPNG, then come back to check the set."
+  - "You want to judge whether your photos look good or sell well: use the Product page image checker."
+  - "You are making images for print: this checker uses web limits, so ask your printer for their file rules."
 
 you_give:
   - "A list or folder of image files with pixel size and file size"
@@ -36,6 +40,25 @@ how_to_use:
   - "Say where each one is used (product page, collection, banner) and your grid shape."
   - "Resize first, then crop by hand to the grid shape, then compress. Keep the original files."
   - "Upload each file once and reuse it, then check your Files list for anything over 1 MB."
+output_sample:
+  input:
+    - A list or folder of your image files, with pixel size and file size
+    - Product name, the key detail of each shot, and where each image is used
+    - Your grid shape, square or 4:5
+    - Your store's Files list sorted by size (optional)
+  output:
+    - name: Prep score
+      contains: A score out of 100 for the set now and after the fixes, with the sum shown.
+    - name: Image blocks
+      contains: "For each image: size, weight and format now, the action to take, a new file name and alt text."
+    - name: Gallery order
+      contains: The upload order for each product and which image goes with which variant.
+    - name: "Files list: over 1 MB"
+      contains: Each large file already in your store, its size and the fix.
+    - name: Pass to other skills
+      contains: Which files to send to an image compressor and which to an alt text writer.
+    - name: Not run
+      contains: Checks it could not do, such as missing file sizes, and what it needs.
 
 how_it_works:
   - title: Checks the size ceiling

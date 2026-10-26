@@ -16,6 +16,31 @@ use_cases:
   - "Weigh the upside of a powerful new tool against its risks, and plan the safety work"
   - "Borrow ideas from how the brain or nature works when you're stuck on a design problem"
   - "Decide when to share your results freely and when to hold back"
+not_for:
+  - "You want a plain, step-by-step lesson on building small AI models: use the Andrej Karpathy mind."
+  - "You need fair tests, good data or a check on who a tool affects: use the Fei-Fei Li mind."
+  - "You want to test what a machine can do, or ask whether it thinks: use the Alan Turing mind."
+output_sample:
+  input:
+    - Your goal or stuck project, in a line or two
+    - The options you are weighing (optional)
+    - What data you have, or whether a simulator exists (optional)
+    - How you would judge a good result (optional)
+  output:
+    - name: Goal in one line
+      contains: Your aim restated plainly, so the rest of the plan has one point to aim at.
+    - name: Root problem
+      contains: The problem that would unlock the others, and why it was picked over your other options.
+    - name: Three tests
+      contains: Your problem checked for a huge space with structure, a clear score, and enough data or a simulator.
+    - name: Milestones
+      contains: Three or four steps in order, each one proving something, with a first milestone you can reach soon.
+    - name: First experiment
+      contains: The cheapest test to run first, and what a failure would still teach you.
+    - name: Who to ask before release
+      contains: Outside experts to consult on safety, privacy or misuse before you share or ship.
+    - name: Gaps and hedges
+      contains: What is unknown or uncertain, and anything beyond his recorded views, marked clearly.
 seats:
   - {seat: "AI research strategy", asks: "Is this a root problem that unlocks others, and does it have a huge search space, a clear score, and enough data or a good simulator?"}
   - {seat: "Scientific care", asks: "What's the careful, scientific way to do this, instead of moving fast and breaking things?"}

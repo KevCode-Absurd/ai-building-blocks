@@ -1,6 +1,6 @@
 new_slug: cost-per-customer-calculator
 name: "Cost per customer calculator"
-summary: "Paste ad costs, samples and orders. Get what a customer really costs, how soon it pays back and which ads to keep."
+summary: "Work out what a customer really costs from your ad costs, samples and orders. See payback time and which ads to keep. Give it your numbers."
 job: read-ad-results
 thinking: medium
 thinking_why: "It does sums and applies fixed rules, but you must check which costs are included."
@@ -17,6 +17,10 @@ when:
   - "You judge ads by cost per click or reply."
   - "You give out samples or trials and do not count them as a cost."
   - "You are deciding which ads or offers to repeat."
+not_for:
+  - "You want to measure brand awareness: use reach and recall surveys, because this tool only counts buyers."
+  - "You cannot tell which ad drew each order: use a plain cost-per-sale report from your store or ad account."
+  - "You want to plan new ad tests: ask a person or write a simple test plan first, then bring the results here."
 
 you_give:
   - "Costs: ad space or spend, samples, handling, follow-up"
@@ -35,6 +39,29 @@ how_to_use:
   - "Add your price and profit per sale."
   - "Read the table, then the ads to keep and drop."
   - "Update the numbers when new orders arrive."
+output_sample:
+  input:
+    - "Your costs: ad space, samples, handling and follow-up"
+    - Replies and orders for each ad, headline or offer
+    - Sale value and profit per order
+    - Repeat orders you can tie to a first order (optional)
+  output:
+    - name: Data score
+      contains: A score out of 100 for how complete your data is, with the sums that led to it.
+    - name: Table
+      contains: Total cost, replies, customers, cost per reply and cost per customer for each ad or offer, with the sums.
+    - name: Costs included
+      contains: Ad space, samples, handling and follow-up, each shown as a line.
+    - name: Repeat buyers
+      contains: The repeat orders you could tie to a first order, and the ones not counted.
+    - name: Payback
+      contains: How many days or orders it takes for sales profit to cover the cost of a customer.
+    - name: Most you can pay for a customer
+      contains: Profit on the first sale plus the repeat profit shown, compared with each ad.
+    - name: Keep and Drop or fix
+      contains: Each ad marked keep, fix or drop, with a reason.
+    - name: Missing and Checks missed
+      contains: Gaps in your data, and any check the AI could not pass.
 
 how_it_works:
   - title: "Adds the costs"

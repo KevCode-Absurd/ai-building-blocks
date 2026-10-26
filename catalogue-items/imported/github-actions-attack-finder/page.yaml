@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Each finding needs a worked attack path.
 new_slug: github-actions-attack-finder
 name: GitHub Actions attack finder
-summary: Point it at your workflows. Get only the holes an outsider could use,
-  each with the exact attack.
+summary: Check your GitHub Actions workflows for security holes. Get only the ones an outsider could use, each with the exact attack and a fix.
 job: secure-code
 headline: GitHub Actions attack finder
-subhead: "A security review of your GitHub Actions that reports only what an
-  outsider could really exploit. Each finding must come with the exact attack:
-  who the attacker is, what they send, and what they gain."
+subhead: "A security review of your GitHub Actions that reports only what an outsider could really exploit. Each finding must come with the exact attack: who the attacker is, what they send, and what they gain."
 explain: |
   A security review of your GitHub Actions that reports only what an outsider could really exploit. Each finding must come with the exact attack: who the attacker is, what they send, and what they gain. If the attack cannot be built, it is not reported.
 
@@ -18,19 +15,45 @@ when:
   - You are about to make a repo public and want its pipelines checked.
   - A scanner gave you many warnings and you need the real ones.
   - You use AI agents in CI and want to see how they could be abused.
+not_for:
+  - "You want to check code you wrote for bugs: ask a developer for a code review, because this only reads workflow files."
+  - "You have write access and want to test what a teammate could do: this skips attacks that need write access, so use a manual review."
+  - "Your pipeline runs on another CI tool, such as Jenkins or GitLab CI: use a review made for that tool."
 you_give:
   - Your workflow files or repo
   - Any custom actions or scripts they call
   - Which triggers matter most (optional)
   - Past scan results (optional)
 you_get:
-  - Only findings with a working attack path
-  - The exact steps an attacker would take
-  - Impact for each hole
-  - A fix for each finding
+  - Findings with a full attack path, listed with severity and the workflow line
+  - The steps an attacker would take, and what they would gain
+  - A fix for each proven finding
+  - A separate list of unproven items to check by hand
+  - A list of workflows that were checked and cleared
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Add your workflow files from .github/workflows, plus any custom actions or scripts they call.
+  - Say which triggers worry you most, if you know. This is optional.
+  - Read the Findings first. Fix the HIGH items, then re-run the review on the changed files.
+  - Check the Needs Verification list by hand. Those items are not proven.
+  - The review works best when your AI can read your project files. It does not run code.
+output_sample:
+  input:
+    - Your workflow files or repo
+    - Any custom actions or scripts they call (optional)
+    - Which triggers matter most (optional)
+  prerequisites:
+    - An AI that can read your project files, or workflow files pasted into the chat
+  output:
+    - name: Findings
+      contains: Each proven hole gets an ID, severity, workflow line, trigger, and HIGH confidence label.
+    - name: Exploitation Scenario
+      contains: The attacker's entry point, payload, how it runs, and the steps they would follow.
+    - name: Impact
+      contains: What the attacker gains, such as stolen tokens, code running in your pipeline, or write access.
+    - name: Fix
+      contains: Changed code or settings that close the hole.
+    - name: Needs Verification
+      contains: Medium confidence items where one link is unconfirmed, with what to check. These are not proven.
+    - name: Reviewed and Cleared
+      contains: Workflows that were checked and found safe.

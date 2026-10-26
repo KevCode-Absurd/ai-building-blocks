@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Tools disagree, so it must weigh messy data.
 new_slug: attribution-model-chooser
 name: Attribution model chooser
-summary: Share your channels and numbers. Get the right attribution model and a
-  way to settle conflicting reports.
+summary: Find out which channel really drives your sales. Pick an attribution model and settle conflicting numbers from Google Analytics and your ad tools.
 job: read-ad-results
 headline: Attribution model chooser
-subhead: A clear answer to which marketing effort caused your sales, and what to
-  do when your tools disagree. Share your channels, sales cycle and the numbers
-  each tool reports.
+subhead: A clear answer to which marketing effort caused your sales, and what to do when your tools disagree. Share your channels, sales cycle and the numbers each tool reports.
 explain: |
   A clear answer to which marketing effort caused your sales, and what to do when your tools disagree. Share your channels, sales cycle and the numbers each tool reports.
 
@@ -18,6 +15,10 @@ when:
   - You don't know which channel to cut when budget shrinks.
   - Your sales cycle is long and last-click gives a wrong picture.
   - You want to track customers across your own site and app.
+not_for:
+  - "You need event tracking, UTM tags or GA4 set up: use an analytics setup guide or ask your developer."
+  - "You need ad pixels or conversion tracking fixed on Meta or Google Ads: set that up in the ad platform first."
+  - "You want pipeline or CRM revenue reports: use your CRM's own reports or a revenue operations specialist."
 you_give:
   - Your channels and monthly spend
   - Your sales cycle and business type
@@ -29,7 +30,29 @@ you_get:
   - A short list of blind spots
   - A first-party tracking plan (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell it your channels, monthly spend, sales cycle and business type.
+  - Paste the numbers each tool reports for the same dates, such as Google Analytics and your ad platforms.
+  - Read the readout. Check the source of truth and the gaps before you move any budget.
+  - Ask for the first-party tracking plan only if you control your site and have an analytics account and webhook access. Skip it otherwise.
+output_sample:
+  input:
+    - Your channels and monthly spend
+    - Your sales cycle and business type
+    - The numbers each tool reports for the same period
+    - Your main conversion goal
+  prerequisites:
+    - "For the optional first-party tracking plan: control of your site or app, an analytics account and webhook access"
+  output:
+    - name: The question
+      contains: The exact question you want answered, written in one line so the readout stays focused.
+    - name: Source of truth
+      contains: Which data source to trust first, and why it wins over the others.
+    - name: What each source says
+      contains: The numbers each tool reports side by side, and why they differ.
+    - name: Model comparison (for long cycles)
+      contains: How first-touch, last-touch and multi-touch models would credit your channels, shown only when your sales cycle is long.
+    - name: Confidence & gaps
+      contains: How sure the answer is, plus blind spots like dark social and direct traffic.
+    - name: Recommendation
+      contains: The attribution model to use, with reasons, and the next steps to take.

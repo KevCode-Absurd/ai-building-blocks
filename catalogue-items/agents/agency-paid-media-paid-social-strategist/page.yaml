@@ -1,0 +1,140 @@
+name: Paid Social Strategist agent
+summary: Plan paid ads on Meta, LinkedIn and TikTok. Get platform picks, a funnel, audiences, creative briefs, a budget split and a test plan.
+headline: Paid Social Strategist agent
+subhead: Give it your goal, monthly budget, customer and the ads you run now. It picks the social platforms worth your money, plans prospecting through retargeting, and writes a creative brief for each. You get a paid social media plan with a first month of tests.
+job: plan-ad-tests
+thinking: high
+thinking_why: It weighs platforms, audiences and budget against your goal and must not invent benchmarks. Use a model that reasons well and marks guesses as guesses.
+explain: |-
+  A paid social media strategy has to answer three things. Which platforms get your budget? What does a person see at each stage, from first view to buying? And how will you know it worked? Many plans copy one ad to every platform. This agent builds a separate plan for each one, because people behave differently on Meta, LinkedIn and TikTok.
+
+  It lays out a funnel: reach new people, win their attention, retarget those who engaged, then keep customers. For each stage it sets audiences, what to exclude so you do not pay twice for the same people, and the ad format that fits the platform. It adds a creative brief per platform and a budget split by stage. Last, it sets how to measure results and what to test in the first 30 days.
+
+  It works only from what you give it. It does not read your ad account, and it will not state average costs or rates as fact. The original profile lists targets such as frequency and return on ad spend. They are the author's goals, shown as "targets to check", not benchmarks. Compare any target with your own results first.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are about to run ads on social media for a new product, offer or launch.
+  - You spend on one platform and want to know if LinkedIn or TikTok should get part of the budget.
+  - You sell to businesses and want to pair LinkedIn with Meta retargeting.
+  - Your results have flattened and you need a clear funnel and test plan, not more of the same ads.
+not_for:
+  - You want an audit of an ad account you already run. Use the Paid Media Auditor agent, or the Meta Ads 30-check account auditor for Meta.
+  - You only need the Meta campaign layout. Use the Meta account structure planner.
+  - You need paid search plans. Use the PPC Campaign Strategist agent. For display and programmatic, use the Programmatic & Display Buyer agent.
+  - You want unpaid posts and a content calendar. Use the Social Media Strategist agent.
+you_give:
+  - Your goal, such as sales, leads or app installs, and the product or offer
+  - Your monthly ad budget, and your target cost per sale or lead if you know it
+  - Your customer, in plain words, and where they spend time online
+  - The ad platforms you use now, with recent results or an export (optional)
+  - Your ad creative so far, such as videos, images or your best posts (optional)
+  - A customer email list or website visitor data you could use for audiences (optional)
+you_get:
+  - A short list of platforms to use, with a reason and a share of budget for each
+  - A funnel from first view to retargeting, with audiences and exclusions per stage
+  - A creative brief per platform, with formats and what to show
+  - A way to measure results, and where your tracking may be weak
+  - A 30-day test plan with one change per test and what a good result looks like
+  - Facts still missing and what to check in your own ad accounts
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - State your goal, monthly budget, customer and product. Paste recent results from each ad platform if you have them. No code is needed.
+  - Say which platforms you already use and what creative you have. Add your customer list size if you could use it for audiences.
+  - Read the platform picks and the "Facts still missing" list first. Add what you know and ask it to re-run the plan.
+  - Before you spend, check each setting and format in the ad platform itself. Ad tools change often, so confirm any limit or spec on its help page.
+  - Launch one test at a time. Record the result against your own numbers, not the plan's targets.
+how_it_works:
+  - title: Set the goal and limits
+    text: It confirms your goal, budget, customer, platforms and results. Gaps are asked once, then marked MISSING.
+  - title: Pick the platforms
+    text: It matches each platform to your customer, goal and creative. It says why a platform is in or out.
+  - title: Build the funnel
+    text: It sets stages from prospecting to retargeting and retention, with audiences and exclusions for each stage.
+  - title: Write the creative briefs
+    text: It writes one brief per platform with format, hook idea and what to show, so ads feel native to the platform.
+  - title: Plan the measurement
+    text: It names the results to track, how each platform counts them, and where tracking or reporting may disagree.
+  - title: Set the budget and tests
+    text: It splits budget by stage and platform, then lists the tests for the first 30 days, one change each.
+output_shape: |-
+  PAID SOCIAL PLAN
+    Goal <goal> | Budget <per month> | Customer <who> | Platforms in <list> | Platforms out <list and why>
+
+  PLATFORM PICKS
+    <platform> | <why it fits> | <share of budget> | <main objective>
+
+  FUNNEL AND AUDIENCES
+    <stage> | <audience> | <exclusions> | <ad format> | <platform>
+
+  CREATIVE BRIEFS
+    <platform> | <format> | <hook idea> | <what to show> | <what to avoid>
+
+  MEASUREMENT
+    <result to track> | <where it is counted> | <weak spot to check>
+
+  30-DAY TEST PLAN
+    <test> | <one change> | <budget> | <what a good result looks like for you>
+
+  FACTS STILL MISSING
+    <fact> | <what it limits> | <how to get it>
+output_sample:
+  input:
+    - Your goal, product and monthly budget
+    - Your customer and where they spend time online
+    - Platforms you use now, with recent results (optional)
+    - Your existing ad creative (optional)
+  output:
+    - name: Paid social plan
+      contains: Your goal, budget and customer, with the platforms in and out and why.
+    - name: Platform picks
+      contains: Each platform with why it fits, its share of budget and its main objective.
+    - name: Funnel and audiences
+      contains: Each stage from first view to retargeting, with the audience, exclusions and ad format.
+    - name: Creative briefs
+      contains: One brief per platform with format, hook idea, what to show and what to avoid.
+    - name: Measurement
+      contains: What to track, where it is counted and where the numbers may not match.
+    - name: 30-day test plan
+      contains: Tests with one change each, a budget and what a good result looks like for you.
+    - name: Facts still missing
+      contains: Gaps that limit the plan and how to close them in your ad accounts.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read an export from your ad platforms next to your goals, so budget and audience advice follows your real results.
+    - name: Your own ad platform dashboards
+      why: Use them to confirm formats, limits and audience sizes before you launch. The AI cannot see your account.
+  inputs:
+    - A last-90-days export from each ad platform you use.
+    - Your best-performing videos, images or posts.
+    - A list of your customers, to build audiences from.
+terms:
+  - term: Funnel
+    meaning: The path from first seeing your brand to buying. Stages are usually reach, interest, buying and keeping.
+  - term: Prospecting
+    meaning: Ads shown to people who have never dealt with you.
+  - term: Retargeting
+    meaning: Ads shown to people who already visited your site or watched your video.
+  - term: Frequency
+    meaning: How many times, on average, one person sees your ad.
+  - term: Lookalike audience
+    meaning: A group of new people the platform picks because they resemble your customers.
+tweaks:
+  - what: Goal
+    how: Choose one goal for the plan. Sales, leads and installs need different funnels.
+  - what: Platforms
+    how: Name the ones you want to test. Two or three are easier to run well than five.
+  - what: Budget
+    how: Give the real monthly figure. A small budget gets fewer platforms and a tighter test plan.
+improve:
+  - After each month, paste the new results and ask it to compare them with the test plan and rank what to keep.
+  - Keep the creative briefs in one doc, with a note on which ones won, so new ads start from what worked.
+  - Use the Tracking & Measurement Specialist agent if the measurement section shows weak spots.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

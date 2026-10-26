@@ -1,52 +1,58 @@
 new_slug: real-knowledge-tester
 name: Real knowledge tester
-summary: Name a topic and your claim. Get the hardest follow-up questions, which you can answer, and where you only sound right.
+summary: Test how well you really know a topic. Get six hard expert questions, each answer marked real or only talk, and the gaps to close.
 job: think-and-decide
 thinking: high
 thinking_why: It must write hard questions and tell real knowledge from fluent talk, including your own.
 headline: Real knowledge tester
-subhead: Name a topic and say what you believe about it. It writes the six hardest follow-up questions an expert would ask, has you answer each from what you know, marks each answer as real, partial or only talk, and turns the gaps into questions to learn or ask.
+subhead: Name a topic and say what you believe about it. The skill writes six hard questions an expert would ask. You answer from memory, and it marks each answer real, partial or only talk. You get a score and the gaps turned into questions you can look up or ask an adviser.
 explain: |-
-  It is easy to know the words and not the subject. Someone who has memorised the talk can pass until the first hard question from the floor. There are two kinds of knowing: the kind from paying your dues, and the kind that sounds right.
+  You can know the words without knowing the subject. Someone who has only read about a topic can sound sure until the first hard question from an expert. Real knowledge comes from doing the work. Sounding right comes from reading and hearing.
 
-  This skill tests which kind you have. It writes six questions from the edges of the topic: exceptions, numbers, what changed, what the other side says, how it fails and how you know. You answer each without looking things up. It marks the answers and turns every gap into a question to learn or ask an adviser.
+  This skill tests which one you have. It writes six questions from the edges of the topic: an exception, a number, what changed lately, what the best opponent says, how it fails and how you know it is true. You answer each from memory, with no lookups. An answer only counts as real when you can name an example, a number or an event behind it.
+
+  Then it scores your claim and shows where you sounded surer than your answers were. Every gap becomes a question to look up or to ask an adviser who has nothing to gain. It never answers for you. The idea comes from Charlie Munger's public talks, where he warns that you are the easiest person to fool. This version is ours, not his.
 when:
-  - You are about to give advice or make a bet on something you have mostly read about.
-  - You can explain a topic smoothly and wonder if you really understand it.
-  - Someone is selling you a topic you cannot test.
+  - You are about to give advice or place a bet on a topic you have mostly read about.
+  - You explain a topic smoothly and wonder if you could handle the follow-up questions.
+  - A salesperson or adviser is pushing an idea in a field you are not sure you understand.
+  - You plan to teach, pitch or write about a topic and want to find the weak spots first.
+not_for:
+  - You can settle it with a quick search. Look the fact up instead.
+  - You have not yet worked out what you know. Use the Circle of competence mapper first.
+  - You want to check a claim someone else made. Use the Claim skepticism kit.
 you_give:
-  - The topic and your claim or plan about it
-  - The circle result (optional)
-  - Your own answers when asked
+  - Your topic, and what you believe about it in a sentence or two
+  - What you plan to do because of it (optional, but it makes the questions push harder)
+  - The result from the Circle of competence mapper (optional)
+  - Your answers to the six questions, typed from memory when it asks
 you_get:
   - Six hard questions an expert would ask
-  - Each answer marked real, partial or only talk
-  - A score and a verdict on the claim
-  - The gaps turned into questions to learn or ask
+  - Each answer marked real, partial or only talk, with where the knowledge came from
+  - A score out of six and a one-line verdict on your claim
+  - The places where you sounded surer than you were
+  - Gap questions you can look up or ask an adviser, ranked by how much they could change your decision
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - State your topic and claim. Answer each question from memory, with no lookups.
-  - Be honest where you are guessing. Guessing is useful to know.
-  - Take the gap questions to a book, a trial or an adviser you have checked.
+  - Type your topic and your claim. Add what you plan to do because of it.
+  - Answer each question from memory in two or three lines, with one real example or number. If you are guessing, say so.
+  - Check the marks. An answer marked real should have an example, number or event behind it.
+  - Take the gap questions to a book, a trial or an adviser you have checked. Run it again once you have learned them.
 how_it_works:
-  - title: State the claim
-    text: Writes the topic and what you believe about it.
-  - title: Write six hard questions
-    text: Writes six questions an expert would ask from the edges.
-  - title: Collect your answers
-    text: Asks for an answer to each without lookups.
-  - title: Mark each answer
-    text: Marks each answer real, partial or only talk.
-  - title: Say where the knowledge came from
-    text: Notes the source behind each real answer.
-  - title: Score the claim
-    text: Gives a score and a verdict.
-  - title: Flag over-confidence
-    text: Points out where confidence ran ahead of evidence.
-  - title: Turn gaps into questions
-    text: Turns each gap into a question to learn or ask.
+  - title: States the claim
+    text: Writes down your topic, your claim and what you plan to do. Starts probing at the edge you say you know least.
+  - title: Writes six hard questions
+    text: One each on an exception, a number, what changed, the best opponent, how it fails and how you know.
+  - title: Marks your answers
+    text: Real needs a specific example, number or event. Partial is right but thin. Talk is smooth with nothing behind it.
+  - title: Says where it came from
+    text: Asks whether each answer came from doing, studying, reading or hearing, and weighs them in that order.
+  - title: Scores the claim
+    text: Counts the real answers, gives a verdict and lists where your confidence ran ahead of your answers.
+  - title: Turns gaps into questions
+    text: Writes each gap as a question you can look up or ask, ranked by how much it could change your decision.
   - title: Checks its own work
-    text: Runs its own checks and names any it missed.
+    text: Runs its own checks, fixes what it can and names any it missed.
 output_shape: |-
   CLAIM
   <topic> | claim | what you plan to do
@@ -60,7 +66,7 @@ output_shape: |-
   6. how you know: ...
 
   SCORE
-  <n> real | verdict
+  <n> of 6 real | verdict
 
   OVER-CONFIDENCE
   <claims>
@@ -96,15 +102,37 @@ improve:
 works_best_with:
   tools:
     - name: Any good chat AI
-      why: This is text reasoning that any strong chat AI handles with the skill.
+      why: Writing the questions and marking answers is text work. Claude, ChatGPT and Gemini all do it with this skill. It needs no files.
     - name: A notes app or document
       why: Keeps your answers and the result in one place you can come back to.
   inputs:
-    - The output of Circle of competence mapper
-    - Your notes on the topic
-    - A knowledgeable friend to check the questions
+    - The result from the Circle of competence mapper
+    - Your own notes on the topic, kept closed while you answer
+    - A knowledgeable friend to check the six questions
 terms:
   - term: Real knowledge
     meaning: Knowing a field well enough to answer the next hard question from the floor.
   - term: Only talk
     meaning: Smooth, correct-sounding words with no example, number or event behind them.
+  - term: Over-confidence
+    meaning: Sounding surer than your answers support.
+output_sample:
+  input:
+    - Your topic and what you believe about it
+    - What you plan to do because of it (optional)
+    - Your answers to its six questions, typed from memory
+  prerequisites:
+    - The result from the Circle of competence mapper (optional)
+  output:
+    - name: CLAIM
+      contains: Your topic, your claim and what you plan to do, in one or two lines.
+    - name: QUESTIONS AND ANSWERS
+      contains: Six hard questions, your answer to each, a REAL, PARTIAL or TALK mark and where it came from.
+    - name: SCORE
+      contains: The count of real answers out of six and a one-line verdict on your claim.
+    - name: OVER-CONFIDENCE
+      contains: Claims where you sounded sure but the answer was only partial or only talk.
+    - name: GAP QUESTIONS
+      contains: Questions to look up or ask an adviser, ranked by how much they could change your decision.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts you did not give, and any of its own checks it could not pass, or none.

@@ -1,6 +1,6 @@
 new_slug: competitor-saturation-checker
 name: "Competitor saturation checker"
-summary: "Give it a product name. Get store counts, rival strength, a score out of 100 and a go."
+summary: "Check how crowded a product is before you test it. Give it rival ads from the Ad Library. You get a score out of 100 and a go, test fast or skip."
 job: find-products
 thinking: medium
 thinking_why: "It sorts and counts what you paste in and applies fixed limits, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You found a product and want to know how many stores already run ads for it.
   - A product looks crowded and you need to know if a better offer could still win.
   - You are about to scale a product and want to repeat the count as a fresh snapshot.
+not_for:
+  - "You sell a branded product: this check counts real brands only, so use a plain brand check by hand instead."
+  - "You sell only on TikTok Shop or Amazon: the Ad Library does not show those sellers, so check those marketplaces yourself."
+  - "You need to find the ad ideas rivals use: use the Facebook ad library collector to list their ads."
 
 you_give:
   - The product name and two or three other search words
@@ -36,6 +40,31 @@ how_to_use:
   - Add the wider niche term, such as the other forms of the same product, and your country.
   - Read the counts and the verdict. Put the rival pages it names on a watch list and check them again in a few days.
   - If it says test fast, run the untapped buyer finder next to find a group nobody targets.
+output_sample:
+  input:
+    - Your product name and two or three other search words
+    - Ad Library results for the product, pasted or attached
+    - The wider niche term and your country (optional)
+    - Ad spy tool results (optional, paid)
+    - Links to rival stores (optional)
+  prerequisites:
+    - Ad Library results, which you can get from the Facebook ad library collector skill or by searching the Ad Library yourself
+    - A paid ad spy tool if you want the stores-selling check, otherwise that check is marked not run
+  output:
+    - name: COUNTS
+      contains: Stores advertising the product in the last 7 days, serious rivals, new advertisers, and how crowded the wider niche is.
+    - name: RIVALS
+      contains: One line per rival store with its ad count, oldest ad date, whether it sells one product, and its offer.
+    - name: SCORE
+      contains: A score out of 100 with the sum of each check shown, and a note that it scores openness, not sales.
+    - name: VERDICT
+      contains: Go, test fast or skip, with one line on why.
+    - name: WATCH
+      contains: The rival pages to check again, with the date.
+    - name: RIVAL LIVE ADS
+      contains: The ad links you pasted, or none.
+    - name: CHECKS MISSED
+      contains: Any check it could not run and what it needs, plus anything missing from your input.
 
 how_it_works:
   - title: Plans the searches

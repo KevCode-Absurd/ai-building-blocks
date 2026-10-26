@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a standard package from the topic.
 new_slug: youtube-title-and-tags-writer
 name: YouTube title and tags writer
-summary: Give it a video or podcast topic. Get title, description, tags and
-  timestamps, or an audit of one that is stuck.
+summary: Write a YouTube title, description, tags and timestamps from your video topic, or audit a video that gets few views. Works for podcasts too.
 job: get-found-in-search
 headline: YouTube title and tags writer
-subhead: Give it a video or podcast topic. Get title, description, tags and
-  timestamps, or an audit of one that is stuck. Bring the topic, transcript or
-  episode link. Use the result to plan your next step.
+subhead: Give it a video or podcast topic. Get title, description, tags and timestamps, or an audit of one that is stuck. Bring the topic, transcript or episode link. Use the result to plan your next step.
 explain: |
   A complete upload package for a video or podcast episode, or an audit of one that is stuck: title, description, tags, hashtags and timestamps.
 
@@ -18,6 +15,10 @@ when:
   - A podcast episode has barely any views and you want to know why.
   - You cut a short clip from a longer episode and need matching text.
   - You need show notes and timestamps for an episode.
+not_for:
+  - "You want channel branding or thumbnail design: use a designer or your AI's image tool, since this only writes text."
+  - "Your video is live and gets good views: leave it alone, or ask a person to review it before you change anything."
+  - "You need a guaranteed ranking: no tool can promise one, so check results on YouTube itself."
 you_give:
   - The topic, transcript or episode link
   - Your target keyword (optional)
@@ -29,7 +30,32 @@ you_get:
   - Timestamps or show notes
   - An audit scorecard for a stuck video
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can search the web and open web pages.
+  - Paste the text of SKILL.md, then paste the detailed guide file that comes with it.
+  - "Say what you want: a new upload package, an audit of a live video, or a short clip."
+  - Add your topic, transcript or link, and your target keyword if you have one. If you skip it, your AI will ask you to confirm one.
+  - Read the result. Check the title and tags against what people really search on YouTube, then paste them in.
+output_sample:
+  input:
+    - Your video or podcast topic, transcript or episode link
+    - Your target keyword (optional)
+    - The live video link, if you want an audit (optional)
+    - Your channel or show name (optional)
+  prerequisites:
+    - An AI that can search the web and open web pages, to research keywords
+    - The skill file and its detailed guide, pasted into your chat
+  output:
+    - name: Title
+      contains: A main title built on your target keyword, plus a second version to test.
+    - name: Description
+      contains: A written description that uses your keyword and may include place details when they fit.
+    - name: Tags and hashtags
+      contains: A set of tags and hashtags matched to your topic.
+    - name: Chapters
+      contains: Timestamps with short labels so viewers can jump to each part.
+    - name: Show notes
+      contains: Episode details and notes for podcast episodes.
+    - name: Audit scorecard
+      contains: "For a live video with weak views: scores, findings, rewritten text and fixes in order."
+    - name: Short clip package
+      contains: A short title, a short description and hashtags for a clip cut from a longer episode.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies known form patterns.
 new_slug: web-form-designer
 name: Web form designer
-summary: Name your form. Get fields, error messages, spam protection and a plan
-  to raise completions.
+summary: Get a web form design that people finish, with fewer fields, clear error messages and spam kept out. Name your form and its goal to start.
 job: build-websites
 headline: Web form designer
-subhead: A form that people finish, with spam kept out and clean data passed on
-  to your tools. It matters because forms are where visitors turn into leads and
-  orders, and small flaws lose them.
+subhead: A form that people finish, with spam kept out and clean data passed on to your tools. It matters because forms are where visitors turn into leads and orders, and small flaws lose them.
 explain: |
   A form that people finish, with spam kept out and clean data passed on to your tools. It matters because forms are where visitors turn into leads and orders, and small flaws lose them.
 
@@ -18,6 +15,10 @@ when:
   - You get spam in your inbox or database.
   - You are redesigning a long application or checkout form.
   - You need form data to flow into your CRM.
+not_for:
+  - "You want to lift sales across a whole page: use a general conversion review, not a form audit."
+  - "You need the words on the form or page rewritten: use a copywriter or a landing page copy skill."
+  - "You need a full accessibility audit: use an accessibility audit, since this only covers the basics for forms."
 you_give:
   - What the form is for
   - The current fields or a link to the form
@@ -29,7 +30,31 @@ you_get:
   - Spam protection plan
   - Steps to track and raise completions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell your AI what the form is for and paste your current fields, or a screenshot if your AI can read images.
+  - Add your tools, such as your CRM or email service. Add your completion and spam numbers if you have them.
+  - Read the field cuts first. Change those, then add the spam protection.
+  - Send a test entry and check that the data lands in your CRM or inbox. This step is done by you, not your AI.
+  - Check your numbers again after a few weeks to see if spam and completions have improved.
+output_sample:
+  input:
+    - What the form is for
+    - "Your current form: a link, a screenshot or the list of fields"
+    - Your completion rate and spam rate (optional)
+    - "Where submissions go: CRM, email tool or database"
+    - Your volume and how much a missed lead costs you (optional)
+  output:
+    - name: Form inventory
+      contains: Every form on your site, listed with its purpose.
+    - name: Per-form review
+      contains: "For each form: its purpose, its fields and how it performs now."
+    - name: Recommendations
+      contains: Which fields to cut, how to fix validation and error messages, and design changes.
+    - name: Spam defense plan
+      contains: The layers of spam protection for each form, such as a hidden field, a time check and rate limits.
+    - name: Accessibility status
+      contains: Whether each form passes the basics, such as labels, keyboard use and error cues.
+    - name: Downstream integration map
+      contains: Where the data from each form goes after someone sends it.
+    - name: Monitoring plan
+      contains: What to track over time, such as completions, spam and the field where people quit.

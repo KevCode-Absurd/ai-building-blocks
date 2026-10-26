@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads a long transcript for patterns.
 new_slug: meeting-coaching-analyst
 name: Meeting coaching analyst
-summary: Give it a meeting transcript. Get speaking patterns, habits that hurt
-  and coaching you can act on.
+summary: Find out how you come across in meetings. Give it your transcripts and get speaking share, hedging habits and coaching tied to your own quotes.
 job: organise-work
 headline: Meeting coaching analyst
-subhead: Honest feedback on how you come across in meetings, based on what you
-  actually said. Give it a folder of transcripts and you get numbers and
-  examples, not general advice.
+subhead: Honest feedback on how you come across in meetings, based on what you actually said. Give it a folder of transcripts and you get numbers and examples, not general advice.
 explain: |
   Honest feedback on how you come across in meetings, based on what you actually said. Give it a folder of transcripts and you get numbers and examples, not general advice.
 
@@ -18,6 +15,10 @@ when:
   - You lead a call and suspect quiet people are being shut out.
   - You want to catch hedging words that weaken your points.
   - You have a month of recordings and want to see trends across them.
+not_for:
+  - "You want notes or action items from one call: ask your AI for a plain meeting summary instead."
+  - "You only have a short standup under five minutes: the patterns will not be reliable, so skip it."
+  - "You want to judge a colleague without their knowledge: have a 1:1 coaching conversation with them instead."
 you_give:
   - Meeting transcripts in a folder
   - Your name or speaker label
@@ -28,7 +29,32 @@ you_get:
   - Examples of hedging and indirect phrasing
   - Coaching points tied to quotes from the call
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Only use recordings where everyone knew they were being recorded. Check your local recording law before you share the results.
+  - Export your transcripts from Zoom, Google Meet, Teams, Otter, Fireflies or Granola. Name files like 2026-01-15 - Team sync.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. Upload your transcripts. This needs a chat that can read files.
+  - Tell your AI your name as it appears in the transcripts.
+  - Check the inventory table it shows first. Confirm the meetings are the right ones.
+  - Read the Top 3 Findings, then pick one growth action to try in your next meeting.
+output_sample:
+  input:
+    - A folder of meeting transcripts (VTT, SRT, text, Word, Markdown or JSON)
+    - Your name or speaker label
+    - Which meetings to include (optional)
+  prerequisites:
+    - An AI that can read your uploaded files
+    - Transcripts with speaker names, or the per-person checks will be limited
+  output:
+    - name: Inventory table
+      contains: Each file with its date, length, number of speakers and word count, for you to confirm before analysis.
+    - name: Top 3 Findings
+      contains: The three habits that matter most, each with a direct quote and timestamp.
+    - name: Speaking Dynamics
+      contains: Each speaker's share of words, turns, average turn length, long monologues and interruptions, with red flags.
+    - name: Directness & Conflict Patterns
+      contains: Hedging and avoidance moments with quotes, a severity tag and a more direct rewrite.
+    - name: Verbal Habits
+      contains: Filler word counts and rate per 100 words, shown only when the rate is high.
+    - name: Listening & Questions
+      contains: Your question types, signs of good or poor listening, and examples.
+    - name: Strengths and Growth Opportunities
+      contains: Three things you do well, and three changes ranked by impact with a try-this-next-time action.

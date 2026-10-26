@@ -1,6 +1,6 @@
 new_slug: review-ad-copy
 name: Turn reviews into ad copy in your brand voice
-summary: Give it customer reviews and your brand file. Get a buyer brief, an ad angle, fact-based ad copy and a voice check.
+summary: Turn customer reviews into ad copy that sounds like your brand. Get a buyer brief, an ad angle, fact-based copy and a voice check.
 job: understand-customers
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have reviews or customer emails and no one has turned them into ad copy.
   - Your ad copy sounds generic or sounds nothing like your site.
   - You need copy a stranger can trace back to a fact you can prove.
+not_for:
+  - "You have no customer words yet: collect reviews, emails or survey answers first, or build your brand file with the Website brand brain builder."
+  - "You only want the argument an ad should make: use the Ad angle planner."
+  - "You already have ad copy and only need it to match your voice: use the Brand voice editor."
 you_give:
   - Customer reviews, copied as written
   - Your brand file
@@ -27,6 +31,25 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. It works step by step and saves each result.
+output_sample:
+  input:
+    - Customer reviews, tickets, survey answers or call notes, with source and date
+    - Your brand file (facts, voice, claims, buyers)
+    - "Your product facts: price, variants, how it is used"
+    - A video ad script (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project with the handoff pack uploaded
+  output:
+    - name: Buyer brief
+      contains: The moment the buyer started looking, what pushes and holds them back, and their own words.
+    - name: Ad angle
+      contains: The argument the ad should make, matched to what the buyer already knows, with the reason.
+    - name: Ad copy
+      contains: Headlines and text, each built on one product fact with its source.
+    - name: Voice check
+      contains: Each line flagged if it breaks your voice rules, with a fix and a voice score.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Writes the buyer brief
     text: Uses the buyer brief skill to find the buying moment, sort the pushes and holds, and quote the buyer's words.

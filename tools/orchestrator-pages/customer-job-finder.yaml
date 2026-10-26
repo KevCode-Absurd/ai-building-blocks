@@ -1,6 +1,6 @@
 new_slug: customer-job-finder
 name: Find the job customers hire your product for
-summary: Describe what you sell and when people buy it. Get an interview plan and the ranked reasons they bought.
+summary: Find the job customers hire your product for. Describe what you sell and get an interview plan, then a ranked list of buying reasons with exact quotes.
 job: understand-customers
 thinking: high
 thinking_why: It reads real customer words and has to rank reasons without making them up. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You know who buys, but not what they are trying to get done when they buy.
   - Sales are flat and you suspect you are marketing to the wrong reason.
   - You have a pile of reviews or interview notes and no ranking of why people bought.
+not_for:
+  - "You have no customers yet: use the Buyer problem list builder to map the problems your future buyers have."
+  - "You only want to know who your best buyers are: use the Best customer finder."
+  - "You only need a script for the interview itself: use the Customer purchase interview script writer."
 you_give:
   - What you sell and when or where people buy it
   - Your question, such as why people buy or switch
@@ -29,11 +33,36 @@ you_get:
   - A ranked map of buying reasons, each with the best exact quote and how many separate people said it
   - A list of risky quotes to check before you use them, and a score out of 100 for how many of its own checks the map passes
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Describe what you sell and when people buy it. It writes the plan and stops.
-  - Do the observation day and the interviews. Keep each person's own words with an ID and a date.
-  - Bring the answers back and say "carry on from step 2".
+  - Open Claude, ChatGPT or Gemini. Paste the Customer job interview planner skill, or upload the workflow files if your AI can read files.
+  - Describe what you sell and when people buy it. Add your question. It writes the plan and stops.
+  - Watch buyers and run the interviews. Write each person's exact words with an ID and a date.
+  - Come back and paste the answers. Say "carry on with step 2".
+  - Check the ranked reasons and the quotes marked "Check before use" before you put them in an ad or page.
+output_sample:
+  input:
+    - What you sell and when or where people buy it
+    - Your question, such as why people buy or switch
+    - Reviews, tickets or interview notes in the customer's own words
+    - Your product facts (optional)
+    - Your brand brain (optional)
+  prerequisites:
+    - Time to watch buyers for a day and interview people who switched to you
+    - Interview answers kept word for word, each with an ID and a date
+  output:
+    - name: "Step 1: Customer job interview plan"
+      contains: A plan for an observation day with a log sheet, exit questions for buyers and an interview plan for switchers.
+    - name: Forces map
+      contains: Buying reasons ranked by separate people, each with its best exact quote, ID and backup quotes.
+    - name: Never said by the brand
+      contains: Reasons customers gave that your own pages and ads never mention, with how many people said each.
+    - name: What nearly stopped them
+      contains: The exact words buyers used for what almost kept them from buying, with IDs.
+    - name: Check before use
+      contains: Quotes that look risky to use, each with the reason it was flagged.
+    - name: Checks passed
+      contains: A score out of 100 for the map's own checks, with each miss named.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Sets up the observation
     text: Plans a day at the place of purchase, with a log for who buys, when and whether they use it on the spot.

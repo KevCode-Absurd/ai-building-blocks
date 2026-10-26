@@ -2,16 +2,32 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-program-measurement-planner
 name: Nonprofit program measurement planner
-summary: Share your program goals and records. Get measures, tracking dates, owners, and clear rules for reports.
+summary: "Build a nonprofit program measurement plan: pick measures, set targets and dates, and report results with clear limits. Give it your goals and records."
 job: track-numbers
 headline: Nonprofit program measurement planner
 subhead: Share the changes your program aims to make and the records you can collect. It chooses useful measures and a realistic way to track them. You get an evaluation plan, collection calendar, and report structure that keeps missing data and limits visible.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - Your funder asks for an evaluation plan and you do not know what to measure.
+  - You count people served but cannot show that anything changed.
+  - You need a calendar for who collects which data and when.
+  - You must write the results section of a funder or annual report.
+not_for:
+  - "You have no outcomes yet and need a logic model: use nonprofit-program-design first, then come back here."
+  - "You are deciding whether a community needs a program at all: use nonprofit-needs-assessment, which covers research before you start."
+  - "You want the outcomes written into a grant proposal story: use nonprofit-grant-writing, and bring this plan's results to it."
 you_give:
-  - Program model or outcome list, available records, budget, staff time, and existing baselines.
+  - Your program's outcome list or logic model.
+  - The records you can collect, such as attendance, enrollment and case notes.
+  - Your budget and the staff time you have for data work.
+  - Past numbers to use as baselines (optional).
+  - How you will reach people for follow-up (optional).
+  - Any survey scales you plan to use (optional).
 you_get:
-  - Outcome measures with targets, a collection calendar, an evaluation approach, and a results report outline.
+  - An indicator table with baselines, targets, sources and timing.
+  - A named evaluation design that fits your budget.
+  - A data collection calendar with an owner for each task.
+  - A one-page board scorecard.
+  - A funder-ready results section that shows sample size, response rate and limits.
 how_it_works:
   - title: Choose useful measures
     text: Match each intended change to a clear measure that your team can afford to collect.
@@ -26,5 +42,34 @@ works_best_with:
   inputs:
     - Reported outcomes go to funders and the board as fact.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Gather your outcome list, your record sources and any baseline numbers before you start.
+  - Open Claude, ChatGPT or Gemini. Paste the skill, then paste your outcomes and details. No code or paid tool is needed.
+  - If you use a validated scale, check whether it needs permission first.
+  - Read the indicator table and fix any target your leaders do not agree with.
+  - Check the response-rate floor and how each rate is counted before you share any results.
+  - Have a person review the report before it goes to funders or the board.
+output_sample:
+  input:
+    - Your program's intended outcomes, or a rough logic model
+    - The records you already keep, such as attendance, enrollment or case notes
+    - Any past numbers to use as a baseline (optional)
+    - Your budget and staff time for collecting data
+    - How you can reach people for follow-up (optional)
+  prerequisites:
+    - An outcomes list from a logic model. If you have none, run nonprofit-program-design first.
+    - Permission or a license for any validated scale you want to use, since some require it
+  output:
+    - name: Indicator table
+      contains: Each outcome with its indicators, baseline, target, data source and how often you collect it.
+    - name: Evaluation design
+      contains: The named design, such as pre/post, matched to your budget, with its limits stated.
+    - name: Data collection calendar
+      contains: Who collects what, at intake, midpoint, exit and follow-up, with the tool and the person who enters data.
+    - name: Instrument list
+      contains: The surveys, scales or other tools you will use, with citations for any validated scale.
+    - name: Response-rate floor
+      contains: The minimum follow-up response you need before results count as reportable.
+    - name: Board scorecard
+      contains: A one-page view of each indicator with target, actual and trend.
+    - name: Funder results narrative
+      contains: Results with design, sample size, response rate, how each rate is counted, and limitations.

@@ -1,0 +1,42 @@
+slug: agency-product-trend-researcher
+name: Trend Researcher agent
+summary: "Find out if a product trend is real and worth acting on. Get a brief with the evidence, its stage, adoption risks and next steps."
+category: agent
+boards: []
+type: agent
+role: make
+job: research
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: product/product-trend-researcher.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/product/product-trend-researcher.md
+  licence: MIT
+  original_name: Trend Researcher
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 69c8e54a9413ba411195e8d5274ee3cd88fa8cda18486db70c0f19ce374550a2
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Trend Researcher
+  - Agency Agents
+  - Product
+credits:
+  - title: Trend Researcher
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/product/product-trend-researcher.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

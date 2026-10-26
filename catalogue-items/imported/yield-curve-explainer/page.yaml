@@ -3,7 +3,7 @@ thinking: medium
 thinking_why: It computes slopes and interprets the shape.
 new_slug: yield-curve-explainer
 name: Yield curve explainer
-summary: Explain a government bond curve using dated, comparable yields. Show slope formulas, the sign convention and missing points.
+summary: Explain a government yield curve from dated official data. You get slopes with a stated sign, real rates and gaps named, in plain words.
 job: money-and-investing
 headline: Yield curve explainer
 subhead: Pick a market and date. Get sourced curve slopes and plain-language context from comparable government yields.
@@ -14,6 +14,10 @@ when:
   - You are writing a market note and need clean slopes and real rates.
   - You need to compare today's curve with the last few years.
   - You want a neutral explanation of reported slope and rate data.
+not_for:
+  - "You want a trade idea or position size: this explains the curve only, so ask a licensed adviser."
+  - "You need live prices, swap spreads or swaption data: use a paid market data terminal, as the free sources here do not cover them."
+  - "You want a forecast of inflation: a breakeven is only a nominal rate minus a real rate, so read a published inflation forecast instead."
 you_give:
   - The government or market, such as US or euro area
   - The date or period you care about
@@ -26,8 +30,29 @@ you_get:
   - Historical context for today's levels
   - A source and date on every table
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the web.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Say which market and date you want, such as the US Treasury curve on one date.
+  - Name the slopes you want, such as 2s10s, if you have a preference.
+  - Use an AI that can search the web. Without it, paste in the official yield table yourself.
+  - Check that every table shows a source and date, and that gaps are left blank.
+  - Use the result in a market note, or run it again for a later date from the same series to compare.
+output_sample:
+  input:
+    - The government or market, such as US or euro area
+    - The date or period you care about
+    - The slopes you want, such as 2s10s (optional)
+    - Who the write-up is for (optional)
+  prerequisites:
+    - An AI that can reach the web, so it can fetch dated official yields
+    - An AI that can run code helps, but is not required
+  output:
+    - name: Curve table
+      contains: Nominal yield for each tenor, with a matched real rate and breakeven only where the data allows.
+    - name: Curve metrics
+      contains: Slopes such as 2s10s and 5s30s, the butterfly, and the curve shape, with the formula and sign stated.
+    - name: Real-rate comparison
+      contains: Nominal, breakeven and real yield by tenor, shown only when matched inputs exist.
+    - name: Plain-language read
+      contains: A neutral explanation of what the slopes and real rates show, with the limits of the data.
+    - name: Sources and gaps
+      contains: The source, observation date and retrieval date, plus any missing points left blank with a reason.

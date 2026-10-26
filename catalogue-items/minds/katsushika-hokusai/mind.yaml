@@ -16,6 +16,29 @@ use_cases:
   - "Find fresh subjects in everyday work and ordinary people around you"
   - "Plan a new stage of your career, and decide what to leave behind"
   - "Take an idea from another tradition and make it your own"
+not_for:
+  - "You want to learn to draw heads and hands step by step: use the Andrew Loomis mind."
+  - "You want a way to see one place through changing viewpoints in photos or digital drawing: use the David Hockney mind."
+  - "You need facts about history, or anything after 1849, or a real print job: use a historian or a professional printer."
+output_sample:
+  input:
+    - Your subject, such as a drawing, a product or a place
+    - Your medium and the time you can give each day
+    - Your brief for a maker, if you have one (optional)
+    - Where you are now and what stage you want to reach (optional)
+  output:
+    - name: First questions
+      contains: Short questions about how the thing is built, where else you could stand, and who works nearby.
+    - name: Simple shapes
+      contains: A way to break your subject into circles, squares and lines before you add detail.
+    - name: Series plan
+      contains: One subject that stays the same, with the place, season, weather and people changing around it.
+    - name: Maker's brief
+      contains: Clear written notes to a printer or supplier on what to do and what not to change.
+    - name: Daily practice
+      contains: Small steps for tomorrow morning and a date to compare your pages later.
+    - name: What he would push back on
+      contains: Blunt notes on weak habits, such as copying a style without studying how the real thing is built.
 seats:
   - {seat: "Series and craft", asks: "What would you learn if you made this same thing thirty-six times, from thirty-six places?"}
   - {seat: "Lifelong practice", asks: "What will you do every day so that your work is better in ten years?"}

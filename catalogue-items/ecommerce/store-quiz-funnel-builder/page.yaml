@@ -1,6 +1,6 @@
 new_slug: store-quiz-funnel-builder
 name: "Store quiz funnel builder"
-summary: "Give it your customer research and offer. Get a quiz, info cards, summary page and a drop-off check."
+summary: "Build a store quiz funnel from your customer research. Get questions, info cards, a summary page, routes by answer and a drop-off check."
 job: write-landing-page
 thinking: high
 thinking_why: "Each question has a job and the summary page has to match the answers, so a stronger model holds the whole funnel together."
@@ -13,6 +13,10 @@ when:
   - Your ads send people to a product page and few buy.
   - You sell several products and want each buyer sent to the one that suits them.
   - You want to learn what your buyers want and fear before you write more ads.
+not_for:
+  - "Your product is a low-price repeat buy or needs no persuasion: send ad traffic to a product page instead."
+  - "You want a long sales page, not a quiz: use the Shopify landing page builder."
+  - "You only want to check a page you already wrote: use the Landing page 30-point checker."
 you_give:
   - "Customer research: your offer, buyer, the beliefs they must hold, their objections and what they tried before"
   - Screenshots of every step of a quiz from your niche that works
@@ -26,9 +30,33 @@ you_get:
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your customer research and offer. Attach screenshots of a quiz that works in your niche.
-  - Review the question list. Cut any question the skill cannot give a job.
-  - Build it in your quiz tool, with per-question analytics switched on, and an email platform.
+  - Review the question list. Cut any question that has no clear job.
+  - Build the quiz in a quiz tool with per-question analytics, and set up emails in an email platform. Heyflow and Klaviyo are paid tools, so check current prices. A free plan or a cheaper tool can work for a first test.
   - After a few hundred starts, paste the per-question numbers and run the drop-off check.
+output_sample:
+  input:
+    - "Your customer research: offer, buyer, beliefs they must hold and their doubts"
+    - Screenshots of every step of a quiz that works in your niche
+    - Your products and who each one suits
+    - Your per-question starts and drop-off, after launch (optional)
+  prerequisites:
+    - An AI that can read screenshots
+    - A quiz tool with per-question analytics and an email platform, to build and run it
+  output:
+    - name: Question list
+      contains: "Each question with its format, answer options and its job: a small commitment, a belief or a doubt."
+    - name: Info cards
+      contains: Screens placed every 3 to 5 questions that give a true fact, a reassurance or a short plan.
+    - name: Loading step and summary page
+      contains: A short loading screen, then a page that repeats their answers, shows proof, the offer, buy box and guarantee.
+    - name: Email step and routes
+      contains: Where to ask for an email, plus a landing page and offer for each main pain point.
+    - name: Email segments brief
+      contains: A plan for a 5 to 7 email follow-up, varied by quiz answer.
+    - name: Drop-off check
+      contains: A table of starts and drop-off per question, with an action for any spike, filled in after launch.
+    - name: Finish rate and claims note
+      contains: Finish rate against the 30% target, and a note on any claim a qualified person should check.
 how_it_works:
   - title: Sends traffic to the quiz
     text: Most paid traffic goes into the quiz, not a product page. The ad button says take the quiz, not shop now.

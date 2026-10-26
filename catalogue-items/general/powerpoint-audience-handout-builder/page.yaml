@@ -1,76 +1,74 @@
 new_slug: powerpoint-audience-handout-builder
 name: PowerPoint audience handout builder
-summary: Share your deck and sharing rules. Get a readable audience handout with
-  private material excluded.
+summary: Turn your PowerPoint deck into an audience handout PDF. Private notes, hidden slides and comments stay out, and the export is checked.
 job: work-with-files
 thinking: high
-thinking_why: Native file features, source meaning and check evidence must
-  survive the workflow.
+thinking_why: Native file features, source meaning and check evidence must survive the workflow.
 headline: PowerPoint audience handout builder
-subhead: Share a deck and sharing rules. Get a readable audience handout with
-  the right notes and private material excluded. Work on a copy of your file.
-  Get a clear record of what passed and what still needs checking.
+subhead: Share a deck and sharing rules. Get a readable audience handout with the right notes and private material excluded. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share a deck and sharing rules. Get a readable audience handout with the right
-  notes and private material excluded.
+  Share a deck and sharing rules. Get a readable audience handout with the right notes and private material excluded.
 
 
-  It works with the actual PowerPoint files and follows a specific method for
-  this task. Your source files stay intact. The method starts by checking what
-  your AI already knows and which files it can read. It asks only for missing
-  facts that change the work.
+  It works with the actual PowerPoint files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
 
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share a deck and sharing rules. Get a readable audience handout with the
-    right notes and private material excluded.
-  - Actual PPTX, handout format and page size, audience, notes policy and
-    explicit treatment of hidden slides, comments and personal information.
+  - Share a deck and sharing rules. Get a readable audience handout with the right notes and private material excluded.
+  - Actual PPTX, handout format and page size, audience, notes policy and explicit treatment of hidden slides, comments and personal information.
   - You need a checked copy while keeping your original files intact.
+not_for:
+  - "You need a final print-ready file with accessibility sign-off: ask a person who checks accessibility to review the PDF."
+  - "Your AI cannot write or export PowerPoint or PDF files: ask it for a plan and a sharing checklist only, then export the handout yourself in PowerPoint."
+  - "You want to edit slide content or design: change the deck in PowerPoint first, then run this on the finished copy."
 you_give:
-  - Actual PPTX, handout format and page size, audience, notes policy and
-    explicit treatment of hidden slides, comments and personal information.
+  - Actual PPTX, handout format and page size, audience, notes policy and explicit treatment of hidden slides, comments and personal information.
   - The app and file tools your AI can use for the requested work
 you_get:
-  - audience-handout.pdf or another requested supported format, plus an
-    unchanged presenter source and a sharing checklist.
+  - audience-handout.pdf or another requested supported format, plus an unchanged presenter source and a sharing checklist.
   - A record of source files, changes and check results
   - Missing facts and any checks that could not run
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Supply your actual files and describe the result. The AI checks existing context before asking for missing information.
   - Review the native output and its real check evidence before sharing it.
+output_sample:
+  input:
+    - Your PowerPoint deck (PPTX file)
+    - The handout format and page size, such as PDF on A4
+    - Who the audience is
+    - Your notes policy, and what to do with hidden slides, comments and personal details
+  prerequisites:
+    - An AI that can read PowerPoint files and export a PDF
+  output:
+    - name: audience-handout.pdf
+      contains: The handout in the format you asked for, with readable slides and no excluded notes or hidden content.
+    - name: Presenter source
+      contains: Your original deck, left unchanged, so private notes stay with the presenter.
+    - name: Sharing checklist
+      contains: What was left out on purpose, such as private notes, hidden slides and comments, and how each was checked.
+    - name: Source map
+      contains: Which file and slide each part of the handout came from.
+    - name: Checks
+      contains: Each check marked passed, failed or not run, with the evidence.
+    - name: Open items
+      contains: Missing facts or checks that could not run, with the next action.
 how_it_works:
   - title: Step 1
-    text: 1. Inspect the deck, speaker notes, comments, hidden slides, linked files
-      and supplied sharing instructions. Resolve missing disclosure rules before
-      removing or including sensitive material.
+    text: 1. Inspect the deck, speaker notes, comments, hidden slides, linked files and supplied sharing instructions. Resolve missing disclosure rules before removing or including sensitive material.
   - title: Step 2
-    text: 2. Choose readable slides-per-page or notes-page layouts suited to the
-      requested format. Retain chart labels, source notes and essential caveats
-      without shrinking the deck into illegible thumbnails.
+    text: 2. Choose readable slides-per-page or notes-page layouts suited to the requested format. Retain chart labels, source notes and essential caveats without shrinking the deck into illegible thumbnails.
   - title: Step 3
-    text: 3. Make an audience copy under the approved notes and hidden-slide policy.
-      Preserve the original presenter deck and report any content deliberately
-      excluded.
+    text: 3. Make an audience copy under the approved notes and hidden-slide policy. Preserve the original presenter deck and report any content deliberately excluded.
   - title: Step 4
-    text: 4. Export through a real supported renderer. Inspect first, middle and
-      last pages, tables, crops, page numbers and any links the audience needs.
+    text: 4. Export through a real supported renderer. Inspect first, middle and last pages, tables, crops, page numbers and any links the audience needs.
   - title: Step 5
-    text: 5. Check that the saved audience file contains the intended pages and no
-      excluded notes or hidden content. Deliver files locally; do not email,
-      upload or publish them without separate authorization.
+    text: 5. Check that the saved audience file contains the intended pages and no excluded notes or hidden content. Deliver files locally; do not email, upload or publish them without separate authorization.
 output_shape: >-
   FILES
 
-  audience-handout.pdf or another requested supported format, plus an unchanged
-  presenter source and a sharing checklist.
+  audience-handout.pdf or another requested supported format, plus an unchanged presenter source and a sharing checklist.
 
 
   SOURCE MAP
@@ -88,42 +86,28 @@ output_shape: >-
   <missing fact or unsupported check> | <next action>
 tweaks:
   - what: Your source files
-    how: Actual PPTX, handout format and page size, audience, notes policy and
-      explicit treatment of hidden slides, comments and personal information.
+    how: Actual PPTX, handout format and page size, audience, notes policy and explicit treatment of hidden slides, comments and personal information.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any
-      page or slide limit.
+    how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
-      check it cannot run.
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - Presenter and audience versions are separate.
   - Excluded content is checked in the actual export.
   - A PDF is delivered only after a real export and review.
   - The result names its sources and keeps unrun checks visible.
 test:
-  - "Try this case: Presenter notes contain private negotiation limits, and the
-    audience copy excludes notes. Check that it does this: Keep them in the
-    presenter source and verify they are absent from the audience PDF."
-  - "Try this case: A six-slides-per-page export makes chart labels unreadable.
-    Check that it does this: Use fewer slides per page or an approved
-    alternative layout."
-  - Reopen the saved result and compare it with the source. Keep any failed or
-    unrun check in the report.
+  - "Try this case: Presenter notes contain private negotiation limits, and the audience copy excludes notes. Check that it does this: Keep them in the presenter source and verify they are absent from the audience PDF."
+  - "Try this case: A six-slides-per-page export makes chart labels unreadable. Check that it does this: Use fewer slides per page or an approved alternative layout."
+  - Reopen the saved result and compare it with the source. Keep any failed or unrun check in the report.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Add your confirmed field names, file rules and target app version to the required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same meanings and checks.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.
 tests:
-  - input: Presenter notes contain private negotiation limits, and the audience copy
-      excludes notes
-    expected: Keep them in the presenter source and verify they are absent from the
-      audience PDF.
+  - input: Presenter notes contain private negotiation limits, and the audience copy excludes notes
+    expected: Keep them in the presenter source and verify they are absent from the audience PDF.
   - input: A six-slides-per-page export makes chart labels unreadable
     expected: Use fewer slides per page or an approved alternative layout.

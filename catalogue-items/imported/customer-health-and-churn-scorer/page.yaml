@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores with set formulas, then you read what they mean.
 new_slug: customer-health-and-churn-scorer
 name: Customer health and churn scorer
-summary: Give it your customer data. Get health scores, churn risk and upsell
-  chances for each account.
+summary: Score customer health, spot churn risk and find upsell chances for each SaaS account. Give it your customer data file and get ranked lists.
 job: understand-customers
 headline: Customer health and churn scorer
-subhead: Which accounts are healthy, which are about to leave and which are
-  ready to grow? Give it your customer data and you get a health score, a churn
-  risk and an upsell score for each account.
+subhead: Which accounts are healthy, which are about to leave and which are ready to grow? Give it your customer data and you get a health score, a churn risk and an upsell score for each account.
 explain: |
   Which accounts are healthy, which are about to leave and which are ready to grow? Give it your customer data and you get a health score, a churn risk and an upsell score for each account.
 
@@ -18,19 +15,42 @@ when:
   - Renewals are coming and you want an early warning list.
   - You want to find accounts with spare seats or unused modules to upsell.
   - Leadership asks for a customer health review.
+not_for:
+  - "Your customers are not SaaS accounts, or you have no usage data: use a CRM report or review each account by hand."
+  - "You have no way to run Python code: ask a person on your team to run the three tools, or review accounts by hand."
+  - "You need live scores that update on their own: use the health dashboard in your CRM or customer success tool."
 you_give:
-  - A JSON file of customers with usage, engagement and support data
-  - Contract end dates and revenue
-  - Seats and plan tier for upsell scoring (optional)
-  - Python on your computer
+  - A JSON file of your customers with usage, engagement, support and relationship data
+  - Contract end dates and yearly revenue for each account
+  - Seats, plan tier and module use for upsell scoring
+  - The previous period's scores, to show trends (optional)
 you_get:
   - A health score per account
   - A churn risk rating with reasons
   - An expansion opportunity score
   - Ranked lists for follow-up
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Export your customer data from your CRM and match the layout of the sample file in the skill folder.
+  - Open an AI that can run Python code, and upload the skill folder and your data file.
+  - Ask it to run the health score, churn risk and expansion tools on your file.
+  - Read the red and yellow accounts first, then the high and critical churn risks.
+  - Check that the number of accounts in each result matches your file before you act.
+  - Pick upsell targets from the healthy accounts with spare seats or unused modules.
+output_sample:
+  input:
+    - A JSON file of your customers (name, segment, yearly revenue)
+    - Usage, engagement, support and relationship data for each account
+    - Contract end dates for each account
+    - Seats, plan tier and module use for upsell scoring
+  prerequisites:
+    - An AI that can run Python code, or Python 3.7 or newer on your computer
+    - Your customer data exported from your CRM into the JSON format of the sample file
+  output:
+    - name: Health score results
+      contains: A score from 0 to 100 per account, a green, yellow or red rating and the trend against the last period.
+    - name: Churn risk results
+      contains: A risk score and tier per account, from low to critical, with the warning signs behind it.
+    - name: Expansion results
+      contains: Upsell, cross-sell and extra seat chances per account, with rough revenue estimates and a priority rank.
+    - name: JSON files (optional)
+      contains: The same three results in a format other tools can read, if you ask for it.

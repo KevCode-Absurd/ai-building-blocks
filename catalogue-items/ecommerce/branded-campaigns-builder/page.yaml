@@ -1,6 +1,6 @@
 new_slug: branded-campaigns-builder
 name: "Branded Search and Shopping builder"
-summary: "Give it your brand name and offer. Get branded Search and Shopping campaigns with settings, keywords and ads."
+summary: "Build branded Google Search and Shopping campaigns for your store name, with settings, exact-match keywords, ads and monthly checks."
 job: run-google-ads
 thinking: medium
 thinking_why: "It follows set rules and writes short ads, so a mid-size model does well. Use a stronger one when the sources' two views need weighing for your account."
@@ -17,6 +17,10 @@ when:
   - Your brand name is searched and a rival or a reseller shows above you.
   - You run Performance Max or Shopping and want brand clicks in their own campaign.
   - You are new to Google Ads and want cheap early sales data to feed the algorithm.
+not_for:
+  - "You need to find and stop non-brand traffic leaking into your brand terms: use a Brand and non-brand splitter, or check your search terms report by hand."
+  - "You want to win new customers who have never heard of you: build a non-brand Search or Performance Max campaign instead."
+  - "Nobody searches your brand name yet: put the budget into ads that reach new people before you build this."
 
 you_give:
   - Your brand name, common misspellings and site address
@@ -36,6 +40,33 @@ how_to_use:
   - Say if brand searches are low, since a brand nobody searches gets almost no volume.
   - Build the Search campaign first, then the Shopping campaign once your feed is clean.
   - Check impression share and search terms monthly with the rules it gives you.
+output_sample:
+  input:
+    - Your brand name, common misspellings and site address
+    - Your current offer or discount code (optional)
+    - Your logo and brand colours (optional)
+    - A customer list exported from your store (optional)
+    - Whether Merchant Center is connected and products are approved
+  prerequisites:
+    - A Google Ads account
+    - Google Merchant Center connected with approved products, for the Shopping campaign
+  output:
+    - name: FIT
+      contains: Whether your brand is searched enough to pay off, and a spend cap of about 3 to 8 percent of Google spend.
+    - name: SEARCH CAMPAIGN SETTINGS
+      contains: Goal, network, location, bidding with both views and the pick, budget, and the customer list as observation.
+    - name: KEYWORDS (exact)
+      contains: "About four exact-match keywords: brand, a misspelling, the name without a space, and brand plus main product."
+    - name: ADS
+      contains: Headlines with your brand pinned first, a trust line, an offer line, descriptions and assets like logo and sitelinks.
+    - name: SHOPPING CAMPAIGN SETTINGS
+      contains: Standard Shopping setup with bidding, priority, budget, how non-brand terms are kept out and which customers are excluded.
+    - name: MONTHLY CHECKS
+      contains: Rules for reading impression share and search terms, and when to raise the cap.
+    - name: CHECKS MISSED
+      contains: Any check that failed, or none.
+    - name: MISSING
+      contains: Any gap, such as brand terms, offer, customer list or feed status, marked and never invented.
 
 how_it_works:
   - title: Checks the fit

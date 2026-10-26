@@ -18,11 +18,11 @@ outputs:
   - {type: upscaled_image}
 uses: [big-idea-and-mechanism-builder, 3d-cutaway-image-ad-maker, accurate-product-image-ad-maker, pre-launch-ad-checker, image-upscale-checker]
 steps:
-  - {uses: big-idea-and-mechanism-builder, note: "Starts from your product facts and buyer words."}
-  - {uses: 3d-cutaway-image-ad-maker, note: "Takes the mechanism from the brief and draws it as one frozen moment."}
-  - {uses: accurate-product-image-ad-maker, note: "Reads the brief and the ad words from the step before and rewrites the prompt so the product looks like yours."}
-  - {uses: pre-launch-ad-checker, note: "Reads the words and the prompt together and flags any claim that shows more than your proof."}
-  - {uses: image-upscale-checker, note: "Takes the image you approved after the pause."}
+  - {uses: big-idea-and-mechanism-builder, note: "Starts from your product facts and buyer words. Hands a brief with the big idea and the mechanism to step 2."}
+  - {uses: 3d-cutaway-image-ad-maker, note: "Takes the mechanism from the brief and draws it as one frozen moment. Hands the image prompt and the ad words to step 3."}
+  - {uses: accurate-product-image-ad-maker, note: "Reads the brief and the ad words from the step before and rewrites the prompt so the product looks like yours. Hands the new prompt to step 4."}
+  - {uses: pre-launch-ad-checker, note: "Reads the words and the prompt together and flags any claim that shows more than your proof. Hands a fix list; fix it before you make the image."}
+  - {uses: image-upscale-checker, note: "Uses the image you made and approved after the pause, not step 4's report. Hands back the enlarged image with a fidelity check."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/make-a-cutaway-ad-that-shows-how-your-product-works/skeleton.yaml

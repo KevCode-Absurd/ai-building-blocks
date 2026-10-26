@@ -1,6 +1,6 @@
 new_slug: read-a-finished-store-test-and-pick-the-next-one
 name: Read a finished store test and pick the next one
-summary: Give it your test numbers and dates. Get a ship call, ranked ideas and the next bold tests.
+summary: "Read a finished store test: check the result is real, get the gain as a range in money, then pick the next bold tests your traffic can prove."
 job: test-store-changes
 thinking: high
 thinking_why: The first step does the test sums and the last sizes tests to your traffic. Give it your strongest model.
@@ -14,6 +14,11 @@ when:
   - A test just ended and you aren't sure the result is real.
   - You won or lost a test and don't know what to test next.
   - Your store has modest traffic and past tests ended with no clear answer.
+  - Your testing tool shows a high chance to win and you want a second check before you ship.
+not_for:
+  - "Your test is still running or ran under two weeks: wait for it to finish, then come back."
+  - "You only want a verdict on one result and no next-test plan: use the Store test verdict maker alone."
+  - "You want to know if your traffic is enough before you start a test: use the A/B test traffic checker."
 you_give:
   - "Test numbers: visits, orders and revenue for each version, with start and end dates"
   - The test plan, if you wrote one (optional)
@@ -25,11 +30,32 @@ you_get:
   - Five bold tests your traffic can prove, with the main number and guardrails for each
   - A month-by-month order, one test per page, and what not to test at your size
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Export the test numbers for both versions with dates. Say if anything else changed during the test, like a sale or an email.
-  - Add the research you already have, such as heatmap notes or survey answers, for step 2.
-  - Give your monthly orders and visits so step 3 can size tests to your traffic.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project. Say "Follow HANDOFF.md".
+  - Export the test numbers for both versions, with start and end dates. Say if anything else changed during the test.
+  - Add research you already have, such as heatmap notes or survey answers.
+  - Give your monthly orders and visits so the last step can size tests to your traffic.
+  - Read the verdict first. Check the dates and the money gain before you ship anything.
+output_sample:
+  input:
+    - Visits, orders and revenue for each version of the test
+    - The start and end dates of the test
+    - Anything else that changed during the test, like a sale or an email
+    - Your monthly orders and visits
+    - Customer reviews or survey answers (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack uploaded
+  output:
+    - name: "Step 1: Verdict"
+      contains: Whether the test can be trusted, the lift as a range, the gain in money and a ship, do not ship or re-test call.
+    - name: "Step 2: Ranked ideas"
+      contains: Repairs split from tests, each idea written as a hypothesis with its evidence and ranked by profit.
+    - name: "Step 3: Next tests"
+      contains: Five bold tests your traffic can prove, each with a main number and guardrails, and what not to test.
+    - name: Month-by-month order
+      contains: The tests laid out one per page by month.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Get the verdict
     text: Checks the split and how the test ended, looks for tracking faults and other changes, gives the lift as a range and in money, checks order value and margin, then makes the call.

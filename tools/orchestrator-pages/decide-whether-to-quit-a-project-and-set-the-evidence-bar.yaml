@@ -1,6 +1,6 @@
 new_slug: decide-whether-to-quit-a-project-and-set-the-evidence-bar
 name: Decide whether to quit and set the evidence bar
-summary: Give it the project you want to quit. Get a push, change or stop call that survived an attack.
+summary: Decide whether to quit a project or push on. Give it your facts and doubts. You get a push, change or stop call, tested and dated.
 job: think-and-decide
 thinking: high
 thinking_why: Each step argues with the one before it. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have thought about quitting for weeks and keep going back and forth.
   - You have put in a lot of time or money and cannot tell whether more will pay off.
   - You must tell a partner or team whether you are staying.
+not_for:
+  - "You face a legal or medical question: ask a lawyer or a doctor, not this workflow."
+  - "Nothing is at stake, no money, time or people: just decide, or flip a coin."
+  - "You only want to test a group choice: use the Group decision reviewer."
 you_give:
   - The project, its start date and what you have put in
   - What results you have had and when
@@ -30,6 +34,25 @@ how_to_use:
   - Write the facts first, such as dates, hours, money and results. Add feelings after, and mark them as feelings.
   - Name the person who would disagree most. Step 2 writes their case.
   - Put the decision date in your calendar before you close the last file.
+output_sample:
+  input:
+    - The project, when it started and what you have put in
+    - What results you have had and when
+    - Your reasons to stay and to quit, unsorted
+    - What is at stake if it fails (optional)
+  prerequisites:
+    - An AI that can work with files, or one that lets you paste each step's result into the next
+  output:
+    - name: "Step 1: The call"
+      contains: Facts, effort test, prize test, evidence versus fear, cost of staying, and one call with a date.
+    - name: "Step 2: The case against"
+      contains: Your opponent's three best arguments, each marked answered or open, plus the weak assumption and what would change your mind.
+    - name: "Step 3: The loss cap"
+      contains: What the plan depends on, the loss you could not recover from, fixes with cost and an early warning sign.
+    - name: "Step 4: The evidence bar"
+      contains: How reversible the choice is, how much proof is enough, the first fact to get and the date to decide.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Call it dip or dead end
     text: Gets the facts, tests whether more effort ever raised results, asks if getting through would make you best at something worth it, splits evidence from fear and makes one call with a date.

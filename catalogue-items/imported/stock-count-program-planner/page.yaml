@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a standard counting routine.
 new_slug: stock-count-program-planner
 name: Stock count program planner
-summary: Give it your item list. Get a rolling count schedule, who counts what,
-  and how to trace count mismatches.
+summary: Plan a stock count program that counts a little each week. Give it your item list. You get a rolling schedule, count rules and a mismatch checklist.
 job: plan-supply-chain
 headline: Stock count program planner
-subhead: A plan for counting inventory a little each week, so you never have to
-  shut down for one big yearly count. You get a rolling schedule, a list of who
-  counts what, and a method to trace mismatches back to their cause.
+subhead: A plan for counting inventory a little each week, so you never have to shut down for one big yearly count. You get a rolling schedule, a list of who counts what, and a method to trace mismatches back to their cause.
 explain: |
   A plan for counting inventory a little each week, so you never have to shut down for one big yearly count. You get a rolling schedule, a list of who counts what, and a method to trace mismatches back to their cause.
 
@@ -18,6 +15,10 @@ when:
   - Your system says you have stock but the shelf is empty.
   - Auditors ask how you keep inventory records accurate.
   - You have staff time for a few counts a day and need to decide what to count.
+not_for:
+  - "You need to set how much stock to hold: use a stock level or reorder point method, or ask your buyer."
+  - "You need a new warehouse layout: use a warehouse layout planner or a layout consultant."
+  - "You have no item list yet: build one in a spreadsheet first, then come back."
 you_give:
   - Item list with value and sales rate
   - Warehouse size and storage type
@@ -31,7 +32,31 @@ you_get:
   - A mismatch tracing checklist
   - Accuracy targets and tracking
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Paste your item list with value and sales rate. Add your warehouse size, staff time and how you count now.
+  - Answer any questions your AI asks about your tools and audit needs.
+  - Check the count schedule against your real staff time. Ask for changes if it is too heavy.
+  - Run the first counts. Then paste the results back and ask your AI to update the schedule.
+output_sample:
+  input:
+    - Your item list with value and sales rate
+    - Your warehouse size and storage type
+    - Your current accuracy and how you count now
+    - Staff time you can spare for counting
+    - Audit or compliance needs (optional)
+  output:
+    - name: Initial assessment
+      contains: A short summary of your current accuracy, size, tools, staff and pain points.
+    - name: Item ranking
+      contains: Your items grouped A, B and C by value and sales.
+    - name: Count schedule
+      contains: How often each group is counted and a rolling plan for who counts what.
+    - name: Tolerance and recount rules
+      contains: How far a count can be off and when to count again.
+    - name: Root cause checklist
+      contains: Steps to trace a mismatch to its cause, with a fix for each cause.
+    - name: Accuracy targets and tracking
+      contains: Targets by item group and the measures to track.
+    - name: Cycle Counting Program Design Document
+      contains: The full plan in one document, ready to share with your team.

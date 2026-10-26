@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It extracts entities and links with a set method.
 new_slug: text-to-knowledge-graph-builder
 name: Text-to-knowledge-graph builder
-summary: Give it unstructured text. Get people, things and links pulled out and
-  drawn as a graph.
+summary: Turn a long document into a knowledge graph. Paste your text and get the people, tools and links pulled out, plus a diagram you can paste.
 job: think-and-decide
 headline: Text-to-knowledge-graph builder
-subhead: Paste a long document and get a map of who and what is in it and how
-  they connect. Instead of rereading pages, you see a diagram of people,
-  companies, tools and ideas, with labelled links between them.
+subhead: Paste a long document and get a map of who and what is in it and how they connect. Instead of rereading pages, you see a diagram of people, companies, tools and ideas, with labelled links between them.
 explain: |
   Paste a long document and get a map of who and what is in it and how they connect. Instead of rereading pages, you see a diagram of people, companies, tools and ideas, with labelled links between them.
 
@@ -18,6 +15,10 @@ when:
   - You need data for a graph database from plain text.
   - You want a diagram of a system described only in prose.
   - You are checking that a document does not leave important links unsaid.
+not_for:
+  - "You have a short passage you can read in a few minutes: just read it, or ask your AI for a plain summary."
+  - "You need a table of numbers or a spreadsheet cleaned up: use a spreadsheet tool or ask a person who knows the data."
+  - "You need facts checked against outside sources: use a search tool or a person, as this only maps what your text says."
 you_give:
   - The text or documents
   - "Output format: Cypher, JSON-LD or Mermaid (optional)"
@@ -30,8 +31,30 @@ you_get:
   - A Mermaid diagram
   - A list of gaps found
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open Claude, ChatGPT or Gemini and start a new chat.
+  - Paste the skill instructions first. Then paste your text under them.
+  - "Say which format you want: Cypher, JSON-LD, CSV or Mermaid. You can also name the entity types to keep."
+  - For a long document, share it in parts. Your AI merges the parts and warns you if the graph gets too big to read.
+  - Read the review notes. Fix wrong links, then ask your AI to expand any part you want.
+  - To save Cypher, JSON-LD or CSV as files, use an AI that can run code. Otherwise copy the text from the chat.
+output_sample:
+  input:
+    - Your text or documents
+    - "The output format you want: Cypher, JSON-LD, CSV or Mermaid (optional)"
+    - The entity types you care about (optional)
+    - A size limit for the graph (optional)
+  prerequisites:
+    - An AI that can run code and save files, only if you want the graph data saved as files
+  output:
+    - name: Entities
+      contains: A table of each entity with its type and any notable details found in the text.
+    - name: Relationships
+      contains: Each link as a subject, link name and object, with the source sentence.
+    - name: Schema
+      contains: A short list of entity types and the link names the graph uses.
+    - name: Graph data
+      contains: Cypher for Neo4j, JSON-LD or a CSV of subject, link and object rows.
+    - name: Mermaid diagram
+      contains: A diagram you can paste into a document, showing the main nodes and links.
+    - name: Review notes
+      contains: Orphan entities, vague link names, contradictions and links the AI inferred rather than read.

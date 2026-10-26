@@ -1,6 +1,6 @@
 name: "Ad angle planner"
 new_slug: ad-angle-planner
-summary: "Name your ad's buyer. Get a short brief on how it opens, argues and asks."
+summary: "Plan your ad angle before you write. Give it your buyer and idea. You get a brief under 200 words on how the ad opens, argues and asks."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -14,9 +14,14 @@ explain: |
   This skill uses two classic readings from Eugene Schwartz. The first is how aware the buyer is, from unaware to most aware. The second is how much the market has already heard, from a promise nobody has made to promises nobody believes. For the level, it sets five things: the first words, when the product enters, how firmly the ad asks, the length, and what usually goes wrong. For the stage, it sets how the ad argues. You paste the brief into your writer's brief. An ad written from it should open, bring in the product and ask differently from one written for the level next door.
 
 when:
-  - You're briefing a writer, or an AI, and want the ad to fit the buyer you're aiming at.
-  - You're making ads for strangers and for past visitors, and want them to differ properly.
-  - Your ads keep pitching too early, or keep explaining a product the buyer already knows.
+  - You are briefing a writer, or an AI, and want the ad to fit the buyer you are aiming at.
+  - You make ads for strangers and for past visitors, and want them to differ.
+  - Your ads pitch too early, or explain a product the buyer already knows.
+  - "You are copying the shape of an ad you like: skip this, it is for ads that choose their own shape."
+not_for:
+  - "You are remaking an ad and want to copy its structure: use the Ad idea extractor, or ask a writer to follow the reference ad."
+  - "You need the exact first line of the ad: use the Sales copy opening writer once you have this brief."
+  - "You want finished ad copy: use the Fact-based ad copy writer, and bring this brief to it."
 
 you_give:
   - The ad idea, who it's for, the reason they'd buy and the format
@@ -36,6 +41,25 @@ how_to_use:
   - Paste the awareness level and market stage from your buyer brief, if you have one.
   - Paste the buyer's main doubt and your offer terms from your brand file.
   - Copy the brief it returns into your writer's brief, word for word.
+output_sample:
+  input:
+    - "Your ad idea: who it is for, why they would buy, and the format"
+    - How aware the buyer is (optional)
+    - What your market has already heard, or what competitors promise (optional)
+    - Your brand file with the buyer's main doubt, proof and offer terms (optional)
+  output:
+    - name: Level
+      contains: The one awareness level chosen for your buyer, with a few words on what that buyer knows.
+    - name: Market stage
+      contains: The one stage from 1 to 5, showing how much your market has already heard.
+    - name: Brief settings
+      contains: The first words, when the product enters, how firmly to ask, the length, and how to argue.
+    - name: Usually goes wrong
+      contains: The common slip to avoid at this level.
+    - name: Why
+      contains: One line on why this level and stage were chosen, with anything assumed labelled.
+    - name: Checks missed
+      contains: One line for each of its own checks the brief still fails, or none.
 
 how_it_works:
   - title: Picks the level

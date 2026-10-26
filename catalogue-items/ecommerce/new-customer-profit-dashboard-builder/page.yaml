@@ -1,6 +1,6 @@
 new_slug: new-customer-profit-dashboard-builder
 name: "New-customer profit dashboard builder"
-summary: "Give it Shopify and ad exports. Get a daily sheet of new-customer MER, CAC and profit."
+summary: "Build a daily new-customer profit dashboard in Google Sheets. Give it orders, costs and ad spend. You get MER, CAC and profit formulas."
 job: track-numbers
 thinking: medium
 thinking_why: "It lays out formulas and definitions from clear rules, which a mid-size model handles if it checks each column."
@@ -17,6 +17,10 @@ when:
   - Total revenue looks fine but ad spend keeps climbing.
   - You want one daily page a team can read in a minute.
   - Your product costs are not all tagged in Shopify and margin is a guess.
+not_for:
+  - Your orders have no new or returning flag. Fix that in Shopify first, or the new-customer lines cannot be trusted.
+  - You spend heavily on influencers, TV or retail. One platform's spend misleads, so run a lift test instead.
+  - You want to judge how fast a customer pays back their cost. Use the CAC payback checker, which is not in this list yet.
 
 you_give:
   - Shopify orders with a new or returning flag
@@ -38,6 +42,31 @@ how_to_use:
   - Tell it your yearly revenue band so it can give the right action list.
   - Paste the formulas into a sheet and fill a week of data to check the numbers against your own.
   - Fix the cost gaps it lists in Shopify before you rely on the margin lines.
+output_sample:
+  input:
+    - Your Shopify orders, with a new or returning flag
+    - Your cost of goods for each product
+    - Your ad spend by day
+    - Your yearly revenue band
+    - Your profit by customer group at 30, 90 and 180 days (optional)
+  prerequisites:
+    - A spreadsheet app such as Google Sheets to paste the formulas into
+    - An order export from Shopify
+  output:
+    - name: DASHBOARD
+      contains: One page with one row per day, latest on top, and a column for each metric.
+    - name: DEFINITIONS
+      contains: One plain rule for each metric, such as net revenue, MER, new-customer MER and blended CAC.
+    - name: SHEET FORMULAS
+      contains: One formula for each column, with cell references you can paste into your sheet.
+    - name: READING RULES
+      contains: One line per metric on what up or down means and what to do.
+    - name: 180-DAY BAND
+      contains: Your 180-day gross profit compared with CAC, with the band it falls in.
+    - name: ACTIONS FOR YOUR REVENUE BAND
+      contains: The steps that suit your yearly revenue.
+    - name: COST GAPS
+      contains: The products that have no cost, so you know which margin lines to distrust.
 
 how_it_works:
   - title: Fixes the definitions

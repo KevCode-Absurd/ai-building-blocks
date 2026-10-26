@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows set lease rules and a payment schedule.
 new_slug: lease-accounting-calculator
 name: Lease accounting calculator
-summary: Give it a lease contract. Get the lease liability, right-of-use asset
-  and yearly entries under IFRS 16 or ASC 842.
+summary: Work out your lease accounting under IFRS 16 or ASC 842. Give it the lease terms. You get the liability, right-of-use asset and yearly entries.
 job: money-and-investing
 headline: Lease accounting calculator
-subhead: "The numbers for a lease on your books: the liability, the right-of-use
-  asset and the entries for each year. Give the contract terms. The skill first
-  checks whether it is a lease at all, then settles the lease term, which
-  payments count and which discount rate applies."
+subhead: "The numbers for a lease on your books: the liability, the right-of-use asset and the entries for each year. Give the contract terms. The skill first checks whether it is a lease at all, then settles the lease term, which payments count and which discount rate applies."
 explain: |
   The numbers for a lease on your books: the liability, the right-of-use asset and the entries for each year. Give the contract terms. The skill first checks whether it is a lease at all, then settles the lease term, which payments count and which discount rate applies.
 
@@ -19,6 +15,10 @@ when:
   - Your auditor asked for a lease schedule.
   - You need to know if a service contract hides a lease.
   - You are deciding whether the short-term exemption applies.
+not_for:
+  - "You need final numbers for a filed balance sheet: have your accountant review and sign off first."
+  - "Your lease runs 12 months or less: check the short-term exemption first, since it may let you expense the payments with no schedule."
+  - "You only need the monthly journal entries: use a simple journal entry step or ask your accountant."
 you_give:
   - Lease contract terms and payments
   - Start date and any extension options
@@ -31,7 +31,29 @@ you_get:
   - Year by year interest and depreciation schedule
   - Journal entries
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run code if you can, so the schedule gets checked.
+  - Paste the skill instructions into the chat.
+  - "Paste your lease terms: payments, start date, length, options, discount rate and standard. Add prepaid costs and incentives if you have them."
+  - "Ask: Follow this skill and write the lease accounting memo."
+  - "Check the first question the memo answers: is it a lease at all, and does an exemption apply?"
+  - Check the rate and option choices under Judgments, then review the numbers with your accountant before you post anything.
+output_sample:
+  input:
+    - Your lease contract terms and payment amounts
+    - The start date and any extension or end options
+    - Your discount rate, or details to work out your borrowing rate
+    - "Which standard to follow: IFRS 16 or ASC 842"
+    - Prepaid costs and incentives (optional)
+  prerequisites:
+    - An AI that can run code, so the schedule is checked by script rather than by hand
+  output:
+    - name: Conclusion
+      contains: Whether the contract is a lease, how it is classed under US GAAP, and which exemptions apply.
+    - name: Measurement
+      contains: A table of the lease term, rate and payments, with the starting lease liability and right-of-use asset.
+    - name: Schedule
+      contains: A full table of opening balance, interest, payment and closing balance for each period, plus depreciation of the asset.
+    - name: Annual journal entry summary
+      contains: The entries to post each year for interest, depreciation and payments.
+    - name: Judgments
+      contains: How extension options, the borrowing rate and variable payments were treated, and why.

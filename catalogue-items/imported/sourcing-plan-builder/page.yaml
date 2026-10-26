@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a standard multi-step sourcing method.
 new_slug: sourcing-plan-builder
 name: Sourcing plan builder
-summary: Name a spend category. Get a sourcing plan with supplier list, quote
-  request, scoring rules and negotiation levers.
+summary: "Name a spend category and get a sourcing plan: supplier long list, quote request, scoring rules and negotiation levers for your next re-bid."
 job: plan-supply-chain
 headline: Sourcing plan builder
-subhead: A full sourcing plan for one spend category, with supplier list, quote
-  request, scoring rules and negotiation tactics. Name the category, its yearly
-  spend, how important it is and who supplies it today.
+subhead: A full sourcing plan for one spend category, with supplier list, quote request, scoring rules and negotiation tactics. Name the category, its yearly spend, how important it is and who supplies it today.
 explain: |
   A full sourcing plan for one spend category, with supplier list, quote request, scoring rules and negotiation tactics. Name the category, its yearly spend, how important it is and who supplies it today.
 
@@ -18,6 +15,10 @@ when:
   - You want to know how much pull you have with your suppliers.
   - You need a supplier shortlist and a quote request in one go.
   - You are preparing for a price negotiation and want levers ready.
+not_for:
+  - "You are making a one-off or low-spend buy: ask two or three suppliers for a quote and compare them yourself."
+  - "You have not looked at your spend yet: sort out your spend data first, then come back to build the plan."
+  - "You only need to compare and score suppliers you already have: use a simple scoring sheet in Google Sheets instead."
 you_give:
   - The spend category
   - Yearly spend and volume
@@ -30,7 +31,33 @@ you_get:
   - Quote request and scoring rules
   - Negotiation tactics
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. You do not need code running or any files.
+  - Tell your AI the spend category, yearly spend and volume, current suppliers and contract terms.
+  - Add your goals, such as cost, risk or quality (optional).
+  - Read the Kraljic position first. It sets how hard to push, so check it fits what you know.
+  - Replace any sample numbers or rates in the plan with your own figures before you share it.
+output_sample:
+  input:
+    - The spend category, such as packaging or software
+    - Yearly spend and volume for that category
+    - Your current suppliers and contract terms
+    - Your goals, such as cost, risk or quality (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini. No code running is needed to get the plan.
+  output:
+    - name: Category profile
+      contains: What you buy, what you spend, who uses it and the specs that matter.
+    - name: Supply market view
+      contains: Who supplies this category, what is changing in the market and where the risks sit.
+    - name: Kraljic position
+      contains: Where the category sits on the Kraljic grid and how hard to push suppliers as a result.
+    - name: Value levers
+      contains: Ways to save, such as bundling volume, changing specs and adding competition, ranked for this category.
+    - name: Supplier long list
+      contains: Current and new suppliers worth asking, with the criteria used to qualify them.
+    - name: Quote request and scoring rules
+      contains: The questions to send suppliers and the weights used to score their replies.
+    - name: Negotiation approach
+      contains: Tactics and levers to have ready, plus a should-cost check on the quotes.
+    - name: Rollout plan
+      contains: Milestones, owners and risks for contract signing, onboarding and tracking results.

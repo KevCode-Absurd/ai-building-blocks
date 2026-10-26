@@ -1,52 +1,88 @@
 new_slug: prepare-a-contract-renewal-negotiation
 name: Prepare a contract renewal negotiation
 headline: Prepare a contract renewal negotiation
-summary: Share the source files. Get a renewal deadline plan, risk summary and negotiation brief.
+summary: "Prepare a contract renewal negotiation: get a notice-deadline plan, a plain risk summary and keep, renegotiate or replace options with costs."
 job: check-contracts
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A renewal deadline plan, risk summary and negotiation brief. Share the current agreement, notice deadline, actual usage, performance issues and renewal quote. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the current agreement, your real usage and the renewal quote. It finds the notice dates, reviews what renewing or leaving means, and compares keep, renegotiate and replace. You get a deadline plan, a risk summary and a negotiation brief.
 explain: |-
-  A renewal deadline plan, risk summary and negotiation brief.
+  A renewal often locks you in by default. Miss the notice date and the contract renews, sometimes at a higher price. This workflow helps you prepare a contract renewal negotiation before that date passes, with the dates, the risks and your options in one place.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Notice terms are quoted accurately; price comparisons use the same scope and term. Missing tools or evidence stay visible in the final summary.
+  The Vendor agreement status checker confirms the renewal and notice dates and lists what must be decided before each one. The Contract risk reviewer then looks at what renewing, ending or changing terms means for cost and daily operations. The Vendor comparison writer sets keep, renegotiate and replace side by side, with costs on the same scope and term.
+
+  Quotes are only compared like for like. If the new quote covers a different scope, the result says so. It prepares you for the talk. It sends nothing to the vendor and gives no legal advice.
 when:
-  - You need a renewal deadline plan, risk summary and negotiation brief.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A renewal quote arrives and the price went up.
+  - You think a notice date is close but cannot find it in the contract.
+  - You pay for seats, licences or services that few people use.
+  - Your manager asks whether to renew, push back or switch.
+not_for:
+  - You want a calendar of many renewals at once. Use the Renewal watch planner.
+  - The notice date has already passed. Ask your legal reviewer what is still possible, then use the Negotiation prep coach for the talk.
+  - You are choosing between new vendors. Use the Software vendor chooser, or Preserve a procurement decision audit trail if you need a record of the choice.
 you_give:
-  - The current agreement, notice deadline, actual usage, performance issues and renewal quote.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The current signed agreement (PDF, Word or pasted terms)
+  - The renewal quote or order form
+  - The renewal date and notice period, if you know them (the contract shows them)
+  - "What you actually use: seats, volumes or hours from the last 6 to 12 months (optional, but it sharpens the options)"
+  - Problems with the vendor, such as outages or missed service levels (optional)
 you_get:
-  - A renewal deadline plan, risk summary and negotiation brief.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A deadline plan: renewal date, notice date, the clause each came from and what to decide by then"
+  - A risk summary for renewing as is, renewing with changes and leaving
+  - Keep, renegotiate and replace options with costs on the same scope and term
+  - "A negotiation brief: points to raise, your fallback and questions for the vendor"
+  - Anything marked MISSING, and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give the whole folder to Claude, ChatGPT or Gemini. If your AI cannot search your contract tools, attach the agreement. It works from the file.
+  - Attach the agreement and the renewal quote. Paste your usage numbers and a few lines on any problems.
+  - Check the deadline plan first. Each date must match the clause it quotes. Fix any error before step 2.
+  - Check that the options compare the same scope and term. A cheaper quote for fewer features is not a saving.
+  - Take the negotiation brief to whoever owns the budget before the notice date. Nothing is sent to the vendor for you.
 how_it_works:
   - title: Vendor agreement status checker
-    text: Confirm renewal and notice dates and list what must be decided before each deadline.
+    text: "Reads the agreement and quote for the term, renewal and notice rules. Lists each date and what must be decided before it. Hands step 2 the dates and clauses. Check before moving on: each date is quoted from the contract, not guessed."
   - title: Contract risk reviewer
-    text: Review the commercial and operational effect of renewal, termination and proposed changes.
+    text: "Reviews what renewing, ending or changing the terms means for cost, lock-in and operations. Works from your agreement and step 1's dates. Hands step 3 the risks by option. Check before moving on: every risk points to a clause."
   - title: Vendor comparison writer
-    text: Prepare keep, renegotiate and replace options with explicit costs and open questions.
+    text: "Builds keep, renegotiate and replace options with year-one and three-year costs, and uses your usage and issues as leverage. Hands back the negotiation brief. Check before moving on: all options use the same scope and term."
 output_shape: |-
-  Scope and source coverage
-  A renewal deadline plan, risk summary and negotiation brief.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE        <vendor, agreement version, quote date>
+  DEADLINES    <renewal date> | <notice date> | <clause> | <what to decide by then>
+  RISKS        <renew as is, renew with changes, leave> | <risk> | <clause>
+  OPTIONS      <keep, renegotiate, replace> | <year-one cost> | <three-year cost> | <what changes>
+  NEGOTIATION  points to raise: <list>
+  BRIEF        fallback: <position>
+               questions for the vendor: <list>
+  SOURCES      <each file, version and date>
+  MISSING      <each gap and what it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - The current signed agreement
+    - The renewal quote or order form
+    - Your usage for the last 6 to 12 months (optional)
+    - Problems with the vendor (optional)
+  prerequisites:
+    - An AI that can read PDF or Word files
+  output:
+    - name: Deadline plan
+      contains: Renewal and notice dates with the clause each came from and what to decide by then.
+    - name: Risk summary
+      contains: What renewing as is, renewing with changes and leaving each mean for cost and operations.
+    - name: Options table
+      contains: Keep, renegotiate and replace compared on the same scope and term, with year-one and three-year costs.
+    - name: Negotiation brief
+      contains: Points to raise, your fallback and questions for the vendor.
+    - name: Hand-back note
+      contains: Saved files, source coverage, MISSING lines and checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Notice terms are quoted accurately; price comparisons use the same scope and term.
+  - what: A price-only talk
+    how: Tell it price is the only thing you will negotiate. The brief then drops the other points.
+  - what: A switch
+    how: Name one replacement vendor and attach its quote. The replace option uses real numbers, not guesses.
+  - what: Usage evidence
+    how: Paste monthly usage for the last 6 to 12 months. The brief then shows how much of the paid amount goes unused.
 judge:
   - Notice terms are quoted accurately; price comparisons use the same scope and term.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +95,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Save the deadline plan and put the notice date in your own calendar. The pack does not set reminders.
+  - Keep each year's usage and issue notes together so next year's renewal starts with evidence.
+  - Record any check that needs a person, such as who can sign for the budget, and finish it before the talk.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads PDF and Word files
+      why: It can quote notice clauses straight from the contract. If it can also search your contract tools, the status check starts faster.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A usage export from the vendor's admin page.
+    - A note of who at the vendor you deal with and what you have been told about the price.
 terms:
+  - term: Notice period
+    meaning: How long before the end date you must tell the vendor you are leaving or changing terms.
+  - term: Auto-renewal
+    meaning: A contract that renews itself unless you act before the notice date.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result of one step, passed to the next.

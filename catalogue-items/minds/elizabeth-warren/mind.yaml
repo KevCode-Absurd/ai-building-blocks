@@ -16,6 +16,29 @@ use_cases:
   - "Read a budgeting rule as a starting point rather than a moral score"
   - "Teach a teenager to ask about the costs and risks of borrowing"
   - "Separate an individual workaround from a problem requiring wider support"
+not_for:
+  - "You need a legal, tax or debt decision, such as which debts to stop paying: ask a qualified adviser, like a nonprofit credit counsellor, tax preparer or lawyer."
+  - "You want practical money lessons for kids and everyday family finances: use the Beth Kobliner mind instead."
+  - "You want to judge the quality of a risky decision apart from how it turned out: use the Annie Duke mind instead."
+output_sample:
+  input:
+    - Your income sources and what an ordinary month costs
+    - Your recurring bills and any big commitment, with the real terms
+    - The size of the shortfall or change you are worried about
+    - The agreement, job offer or money argument you want to examine (optional)
+  output:
+    - name: Ordinary-month account
+      contains: What your household needs each month and what currently works, with facts kept apart from guesses.
+    - name: Dependency map
+      contains: Which bills and needs continue if one income changes, and which might change or need notice.
+    - name: Commitment sheet
+      contains: The full cost, terms and exit conditions of an agreement, marking what is documented and what was only said.
+    - name: Job-offer comparison
+      contains: Pay set beside commute, care, scheduling and effects on other people in the household.
+    - name: Conversation draft
+      contains: A neutral opening that puts the shortfall, the cost increase and the disputed spending side by side.
+    - name: Unanswered questions
+      contains: What you still need to verify, and where qualified help is needed before deciding.
 seats:
   - {seat: "Household resilience and fixed commitments", asks: "Which bills remain if the income changes?"}
   - {seat: "Clear bargains and consumer questions", asks: "Can you explain the cost, risk and obligation before agreeing?"}

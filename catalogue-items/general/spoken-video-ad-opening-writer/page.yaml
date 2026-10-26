@@ -1,6 +1,6 @@
 new_slug: spoken-video-ad-opening-writer
 name: Spoken video ad opening writer
-summary: Paste your ad, attach product photos. Get three spoken openings, a storyboard and clip prompts.
+summary: Write spoken video ad openings for the ad you already run. Give it your ad and product photos. Get three 6-second openings, a storyboard and clip prompts.
 job: make-video-ads
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You have an ad that explains well but loses people in the first seconds.
   - You want to test new openings on the same ad without filming a new one.
   - You need a talking opening but don't have a creator available.
+not_for:
+  - "You want a full new ad from scratch: write the script first with your own brief, then come back for openings."
+  - "Your ad uses a real creator or customer who speaks about their own results: ask that person to film a new opening instead."
+  - "You want an opening with no talking: use a short wordless clip made by a video editor or a video tool."
 you_give:
   - The ad you already run (its first spoken line, a screenshot of its first frame, and the script if you have it)
   - Your product photos (front, in hand, in use), how it's handled and what it replaces
@@ -32,6 +36,33 @@ how_to_use:
   - Paste your brand facts, the claims you can back and a few real reviews. Attach product photos.
   - Read each opening aloud, then your ad's first line. Approve the line-up, then the presenter, the sheet and the storyboard.
   - Make one clip, check the join, then the rest. Test each opening on the same ad as separate ads.
+output_sample:
+  input:
+    - The first spoken line of your ad, and a screenshot of its first frame
+    - Your product photos, such as front, in hand and in use
+    - Your buyer, their main doubt and the claims you can back
+    - Your ad's approved presenter card and sheet (optional)
+    - The clip length your video tool makes (optional)
+  prerequisites:
+    - An AI that can read images, so it can check your photos and first frame
+    - A video tool that makes speech, if you want to turn the clip prompts into clips
+  output:
+    - name: Line-up (Stage 0)
+      contains: Three openings, each with its move, word count, energy and distance, and the ad line that pays it off.
+    - name: Avatar card (Stage 1)
+      contains: The presenter, reused from your ad or newly made, for you to approve.
+    - name: Reference images (Stage 2)
+      contains: The picked picture from your ad, or one to four new ones of the presenter.
+    - name: Character sheet (Stage 3)
+      contains: Views and expressions of the presenter, plus lock lines for presenter, room and product.
+    - name: Storyboard (Stage 4)
+      contains: One frame and one shot card per opening, with the product in place and the line to say.
+    - name: Clip prompts (Stage 5)
+      contains: One prompt per opening in plain phone-video words, with the line, the touch and the still last second.
+    - name: Edit list
+      contains: How to join each opening to your ad, add captions and the AI label, and what to deliver.
+    - name: Checks missed
+      contains: One line for each of its own checks the openings still miss, or none.
 how_it_works:
   - title: Picks three moves
     text: From mirror, gap, promise, proof and flip, only where your facts support it. Each one names the line in your ad that pays it off.

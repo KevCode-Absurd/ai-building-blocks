@@ -1,15 +1,13 @@
 slug: build-a-comparable-trailing-revenue-model
 name: Build a comparable trailing revenue model
-summary: Link fiscal periods, currency, business scope and extra-week adjustments into a comparable revenue model.
+summary: "Build trailing 12-month revenue, then remove currency swings, acquisitions, disposals and an extra week to show real comparable growth."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - trailing-period-financial-bridge
   - constant-currency-revenue-bridge

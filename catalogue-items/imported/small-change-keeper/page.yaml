@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It is a short set of rules your AI follows while it works.
 new_slug: small-change-keeper
 name: Small change keeper
-summary: Turn it on while you code. Your AI changes only what you asked for and
-  picks the simplest fix.
+summary: Keep your AI coder to a small code change. It fixes only what you asked and lists the extra edits it held back for your approval.
 job: build-software
 headline: Small change keeper
-subhead: An AI coder that fixes what you asked and nothing more. It stops the
-  habit of adding extra layers, renaming files or tidying code nobody mentioned,
-  so your review stays small.
+subhead: An AI coder that fixes what you asked and nothing more. It stops the habit of adding extra layers, renaming files or tidying code nobody mentioned, so your review stays small.
 explain: |
   An AI coder that fixes what you asked and nothing more. It stops the habit of adding extra layers, renaming files or tidying code nobody mentioned, so your review stays small.
 
@@ -17,7 +14,11 @@ when:
   - Your AI keeps rewriting files you did not mention.
   - You want a bug fix that is three lines, not thirty.
   - Pull requests from your AI are too big to review.
-  - You want the AI to ask before it widens the scope.
+  - You want your AI to ask before it widens the scope.
+not_for:
+  - "You want a full refactor, tests or docs: ask your AI for them by name and it will do them in full."
+  - "You are building a new project from scratch: a small-change rule will slow you down, so turn it off."
+  - "You want an AI to find other problems in your code: ask for a review as a separate request."
 you_give:
   - The change or bug you want fixed
   - The files it may touch
@@ -28,8 +29,25 @@ you_get:
   - Questions when the request is unclear
   - Smaller changes that are easier to review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI coding tool, or a chat if you can paste in the code.
+  - Paste the skill text, or add the skill folder if your tool supports it.
+  - "Say: use this skill for the whole session."
+  - Describe the bug or change, and name the files it may touch.
+  - Read the change. Approve or skip each held-back edit it lists.
+  - "If the change is still too big, say: too much, revert. The skill then offers a fix of 10 lines or fewer."
+output_sample:
+  input:
+    - The bug or change you want, in plain words
+    - The files your AI may touch
+    - A request to turn the skill on for the session
+  prerequisites:
+    - An AI that can read your project files, such as a coding assistant
+  output:
+    - name: Minimal change
+      contains: The smallest edit that does what you asked, using code that already exists and no new files or packages.
+    - name: Held-back edits
+      contains: A list of other changes your AI wanted to make and why, for you to approve or skip.
+    - name: Questions
+      contains: Short questions when the request is unclear, a new package seems needed or other files must change.
+    - name: Moyu checklist result
+      contains: A final check that the change stays in scope, adds nothing extra and is small enough to review fast.

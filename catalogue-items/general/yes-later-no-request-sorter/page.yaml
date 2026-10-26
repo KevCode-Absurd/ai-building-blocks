@@ -1,6 +1,6 @@
 new_slug: yes-later-no-request-sorter
 name: "Yes-later-no request sorter"
-summary: "Paste your feature requests, who asked and your product focus. Get yes, later or no on each, with a kind reply."
+summary: "Sort feature requests into yes, later or no. Paste your requests and product focus. You get a ruling and a kind reply for each one."
 job: build-product
 thinking: medium
 thinking_why: "It weighs demand, cost and fit, which takes some judgement."
@@ -17,6 +17,10 @@ when:
   - "A big customer is pushing for something that would change your product."
   - "Your request list is long and you cannot tell what matters."
   - "You need to say no without losing the customer."
+not_for:
+  - "You need work for one customer only: talk to that customer or your sales lead, and quote the custom work as a separate job."
+  - "You want every check run on a request: use the Feature request screener."
+  - "You have no list of requests yet: ask a few customers what they want first, then come back."
 
 you_give:
   - "The requests, with who asked and when"
@@ -34,6 +38,25 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - Your feature requests, with who asked and when
+    - What your product is for and who it is not for
+    - What is already planned
+    - Support emails or comments (optional)
+  output:
+    - name: Repeats
+      contains: How many different people asked for the request, and over how long.
+    - name: Cost
+      contains: Screens, help text, copy, support questions, promises at risk, yearly upkeep and a rough effort, for each request that counts.
+    - name: Fit
+      contains: Whether the request goes with, against or neutral to your product focus, with one sentence why.
+    - name: Ruling
+      contains: Yes, later or no, with one reason.
+    - name: Reply
+      contains: A kind message under 90 words with no date or promise.
+    - name: MISSING
+      contains: Who asked or when, if you did not say.
 
 how_it_works:
   - title: "Start at not now"
@@ -86,8 +109,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "Dates for each request"
-  - "Your product focus in two sentences"
+    - "Dates for each request"
+    - "Your product focus in two sentences"
 
 terms:
   - term: "Wave"

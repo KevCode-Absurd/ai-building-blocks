@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps goals to events by set steps.
 new_slug: tracking-plan-builder
 name: Tracking plan builder
-summary: Say what you need to measure. Get a tracking plan with events, names
-  and tags for GA4, Mixpanel or similar tools.
+summary: Plan your tracking before you touch a tag. Give it your goals and tools. You get a GA4 or Mixpanel tracking plan with event names and UTM rules.
 job: plan-strategy
 headline: Tracking plan builder
-subhead: A tracking plan that lists every event, its name, its properties and
-  the question it answers. That is what you get before anyone touches a tag, so
-  your numbers stay clean from day one.
+subhead: A tracking plan that lists every event, its name, its properties and the question it answers. That is what you get before anyone touches a tag, so your numbers stay clean from day one.
 explain: |
   A tracking plan that lists every event, its name, its properties and the question it answers. That is what you get before anyone touches a tag, so your numbers stay clean from day one.
 
@@ -18,6 +15,10 @@ when:
   - Your current analytics has messy event names and nobody trusts the numbers.
   - You need UTM rules your whole team will follow.
   - You want to check that conversions are recorded before you spend on ads.
+not_for:
+  - "You need to pick an attribution model or sort out numbers that differ between tools: use attribution."
+  - "You need to send conversions to ad platforms with pixels or server-side tags: use conversion-tracking."
+  - "You want to measure an A/B test result: use ab-testing."
 you_give:
   - The decisions you want data to inform
   - Your key conversions
@@ -30,7 +31,29 @@ you_get:
   - UTM and conversion rules
   - A test checklist for launch
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell your AI which decisions you want data to inform and what your key conversions are.
+  - Add the tools you use, such as GA4, Mixpanel or Google Tag Manager. Add your privacy rules and current setup if you have them.
+  - Read the event list. Cut any event that does not help a decision.
+  - Check that every name follows the same pattern, then share the plan with whoever sets up the tags.
+  - Use the test checklist after setup to confirm each event fires. This step needs your live site and your analytics tool.
+output_sample:
+  input:
+    - The decisions you want your data to inform
+    - Your key conversions
+    - The tools and tech stack you use
+    - Your privacy or consent rules (optional)
+    - Your current tracking setup (optional)
+  output:
+    - name: Overview
+      contains: The tools in use, the goals the plan serves and the decisions the data will inform.
+    - name: Events
+      contains: Each event with its name, when it fires, its properties and the question it answers.
+    - name: Custom Dimensions
+      contains: The extra details to save with events so you can split reports the way you need.
+    - name: Conversions
+      contains: Which events count as conversions and how each one is recorded.
+    - name: UTM rules
+      contains: Naming rules for campaign links so every team member tags traffic the same way.
+    - name: Validation checklist
+      contains: Steps to test that events fire correctly before you launch or spend on ads.

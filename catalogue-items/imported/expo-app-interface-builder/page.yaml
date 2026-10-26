@@ -2,36 +2,108 @@ thinking: medium
 thinking_why: It follows Expo guides for each part of the app.
 new_slug: expo-app-interface-builder
 name: Expo app interface builder
-summary: Describe the mobile screens you want. Get Expo Router code with native
-  tabs, styling and motion.
+summary: Describe your mobile app screens. Get Expo Router screen files with native tabs, styling, motion and a color theme you can run in Expo Go.
 job: build-software
 headline: Expo app interface builder
-subhead: Describe the mobile screens you want. Get Expo Router code with native
-  tabs, styling and motion. Bring description of the screens and flow. Use the
-  result to plan your next step.
+subhead: Describe the screens and how people move between them. It writes the Expo Router files, sets up native tabs, adds styling and motion, and lists the packages to install. The result looks like a real phone app, not a web page.
 explain: |
-  Mobile screens written as Expo Router code, with native tabs, tidy styling and smooth motion, so your app feels like it belongs on the phone.
+  Expo is a toolkit for building iPhone and Android apps with React Native. This Expo app interface builder writes the screens for it. You describe the screens, and your AI turns them into files that follow Expo's own guidance.
 
-  You describe the screens. The skill builds the route structure, including dynamic routes and groups, and sets up navigation with native tabs. It adds animations with Reanimated for entering, leaving and gestures, and uses native controls such as switches, sliders and date pickers. It also covers form sheets, search bars, gradients, icons, camera and media, and local storage. Reference notes for each area sit alongside the main guide, so code follows current Expo patterns.
+  It sets up the folder of routes (each file is one screen), the layout files, and a bottom tab bar that uses the phone's own tabs. It adds smooth entry and exit motion, native switches and pickers, search bars and sheets that slide up. It keeps colors in one theme file that follows light and dark mode.
+
+  What sets it apart is the rule set. It follows the guide's rules, such as routes only in the app folder, kebab-case file names, no legacy packages and a safe-area fix on every scroll view.
+
+  Many of the polish features, such as SF Symbols and liquid glass, work on iPhone first. Test on a real phone.
 when:
   - You are starting an Expo app and need the screens and navigation set up.
   - Your tab bar looks like a web page, not a phone app.
   - You want smooth entry and exit motion on a list or card.
-  - You need a search bar, form sheet or native picker.
+  - You need a search bar, a sheet that slides up or a native date picker.
+not_for:
+  - Your app is web only or not built with Expo. Use the React app structure planner for a web app.
+  - You need server routes that keep secret keys safe. Use the Expo API route builder.
+  - You need to move an existing app to a newer Expo version. Use the Expo upgrade helper.
+  - You need fetching, caching and offline data code. Use the Mobile data fetching coder.
 you_give:
-  - Description of the screens and flow
-  - Expo project (existing or new)
-  - Look you want, such as colors or style (optional)
-  - Data to store on the device (optional)
+  - A description of the screens and how people move between them
+  - Your Expo project, new or existing
+  - The look you want, such as colors or style (optional)
+  - Data the app must keep on the phone, such as settings (optional)
 you_get:
-  - Expo Router screens and layout files
-  - Native tab navigation
-  - Animations
-  - Native controls and forms
-  - Storage setup
+  - Expo Router screen files in an app folder
+  - Layout files that set up stacks and native tabs
+  - A color theme file that works in light and dark mode
+  - Motion, native controls, search and sheets where you asked for them
+  - The list of packages to install
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude Code, or any AI that can read and write your project files. Paste in this skill, or add the whole folder, so it can open the notes for each area.
+  - Describe each screen in a line or two and say how people move between them. Say whether you have a project already.
+  - Run the app first with npx expo start and the Expo Go app on your phone. You only need a custom build for features Expo Go lacks.
+  - Check each screen on a real phone. Look at the tab bar, the top bar, the scroll behavior and dark mode.
+  - Ask for fixes screen by screen. Then connect your real data with the Mobile data fetching coder.
+how_it_works:
+  - title: Plans the routes
+    text: Lays out the app folder, with one file per screen and groups for tabs, following Expo's route rules.
+  - title: Sets up navigation
+    text: Builds stack layouts and native tabs, with modals and sheets where the flow needs them.
+  - title: Builds the screens
+    text: Writes each screen with a scroll view that respects the safe area, native controls and a proper title.
+  - title: Styles with a theme
+    text: Keeps colors in one theme file that follows light and dark mode, and uses the guide's rules for spacing and shadows.
+  - title: Adds motion
+    text: Adds entering and exiting animations with Reanimated, plus search, gradients and icons when you ask.
+  - title: Checks the rules
+    text: Checks the files against the library and code style rules and removes old route files after a move.
+output_shape: |
+  FILE TREE
+  app/_layout.tsx | app/(<group>)/_layout.tsx | app/(<group>)/<screen>.tsx
+  theme/colors.ts
+  PACKAGES TO INSTALL
+  <package list, with the install command>
+  SCREENS
+  <file name>: <what it shows and what it links to>
+  TRY IT
+  npx expo start, then open the app in Expo Go
+  OPEN QUESTIONS
+  <anything you did not say>
+output_sample:
+  input:
+    - A description of each screen and how people move between them
+    - Your Expo project, new or existing
+    - The look you want (optional)
+    - Data to keep on the phone (optional)
+  prerequisites:
+    - An AI that can read and write your project files
+    - Node installed, and the Expo Go app on your phone to try the result
+  output:
+    - name: app/_layout.tsx
+      contains: The root layout, including the native tab bar and the light and dark theme.
+    - name: app group layout files
+      contains: A stack layout inside each tab, with header options and screen titles.
+    - name: Screen files
+      contains: One file for each screen you described, with a scroll view and native controls.
+    - name: theme/colors.ts
+      contains: One place for your colors, set to follow light and dark mode.
+    - name: Package list
+      contains: The packages to install and the command to run.
+    - name: Try-it steps
+      contains: How to start the app and check it in Expo Go.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can write the files into your project and run the start command.
+    - name: Expo Go
+      why: It runs your app on your phone while you build, with no custom build step.
+  inputs:
+    - A sketch or a list of your screens
+    - Your brand colors
+    - The iPhone and Android versions you must support
+terms:
+  - term: Expo Router
+    meaning: A way to build app navigation from files. Each file in the app folder is a screen.
+  - term: Native tabs
+    meaning: A tab bar drawn by the phone itself, so it looks and feels like other apps on that phone.
+  - term: Expo Go
+    meaning: A free app that runs your Expo project on your phone while you build it.
+  - term: Safe area
+    meaning: The part of the screen not covered by the notch, clock or home bar.

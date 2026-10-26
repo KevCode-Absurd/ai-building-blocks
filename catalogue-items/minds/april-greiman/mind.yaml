@@ -16,6 +16,29 @@ use_cases:
   - "Get past fear of a project that feels too big or too new"
   - "Answer critics who dismiss new tools or personal work"
   - "Describe your practice without letting a label shrink it"
+not_for:
+  - "You need clear signs, forms or instructions: use a plain systems designer, because layered play can hurt clarity."
+  - "You want bold, expressive type and collage that break software defaults: use the David Carson mind."
+  - "You want to judge whether a chart tells the truth: use the Alberto Cairo mind."
+output_sample:
+  input:
+    - Your brief or project idea
+    - The tool or medium you want to explore, such as AI, video or print
+    - Materials you already have, like photos, scraps or text (optional)
+    - What scares you about the project (optional)
+  output:
+    - name: The new move
+      contains: The one fresh idea this tool or medium allows that the old way could not.
+    - name: Layers and media to try
+      contains: Which images, type, video stills and textures to combine, keeping each one looking like itself.
+    - name: Beyond the page
+      contains: Where else the work could live, such as screen, wall, room, building or light.
+    - name: Questions about fear and texture
+      contains: Questions on what scares you and whether you are hiding the texture of the medium.
+    - name: One small first experiment
+      contains: A small test to make first, then show to people before you plan around it.
+    - name: Limits she would flag
+      contains: Where the idea may hurt clarity, and what falls outside her recorded work.
 seats:
   - {seat: "Design and new tools", asks: "What can this new tool do that the old one couldn't, and are we letting it show its own texture?"}
   - {seat: "Cross-media explorer", asks: "Why stop at the page? Where else could this live: on screen, in space, in light?"}

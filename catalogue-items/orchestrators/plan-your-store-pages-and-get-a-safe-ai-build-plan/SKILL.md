@@ -44,10 +44,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Set up products and variants.** Use the skill `product-and-variant-setup-planner`. Starts from your product list and makes the clean product facts every later step reads.
-2. **Plan collections, filters and the menu.** Use the skill `collections-and-menu-planner`. Give it the product data from the steps before. Reads the product facts from step 1 and groups them into collections, filters and a menu.
-3. **Plan the product page sections.** Use the skill `product-page-section-planner`. Give it the product data from the steps before. Takes the product facts from step 1 and plans the page that answers each buyer doubt.
-4. **Get the safe AI build plan.** Use the skill `ai-store-build-planner`. Give it the product data from the steps before. Uses the product facts from step 1 and tells the build to follow the menu and page sections from steps 2 and 3.
+1. **Set up products and variants.** Use the skill `product-and-variant-setup-planner`. Starts from your product list and makes the clean product facts every later step reads. Hands steps 2, 3 and 4 the product facts.
+2. **Plan collections, filters and the menu.** Use the skill `collections-and-menu-planner`. Give it the product data from the steps before. Reads the product facts from step 1 and groups them into collections, filters and a menu. Hands step 3 the collections, and step 4 the menu.
+3. **Plan the product page sections.** Use the skill `product-page-section-planner`. Give it the product data and the plan from the steps before. Takes the product facts from step 1 and the collections from step 2, and plans the page that answers each buyer doubt. Hands step 4 the section-by-section page layout.
+4. **Get the safe AI build plan.** Use the skill `ai-store-build-planner`. Give it the product data, the plan and the page layout from the steps before. Uses the product facts from step 1 and tells the build to follow the menu and page sections from steps 2 and 3.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

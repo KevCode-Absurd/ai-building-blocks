@@ -1,6 +1,6 @@
 new_slug: long-form-video-ad-script-writer
 name: "Long-form video ad script writer"
-summary: "Paste research and proof. Get a 1 to 10 minute narrated script with a picture for every line."
+summary: "Write a long video ad script from your research and proof. Get a timed 1 to 10 minute narration with a picture note for every line."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You're selling to people who don't know yet that they need a product like yours.
   - Your product needs explaining before people trust it, and 15 seconds can't hold that.
   - Someone asked for a 5-minute video and you want to know if your facts can fill it.
+not_for:
+  - Your buyer is ready to buy and a short offer ad would do. Ask your AI for a short ad instead of a long script.
+  - "You need the script read aloud and tightened for speech: use the Ad script read-aloud editor."
+  - "You have the script and want it checked against Meta rules: use the Meta ad policy checker."
 
 you_give:
   - The brief, the length you want, where it will run, and the buyer stage
@@ -37,6 +41,27 @@ how_to_use:
   - Say the length and where it runs, for example "5 minutes, YouTube, skippable".
   - Read the stock list first. If it chose a shorter length, it says what a longer one would need.
   - Read the whole script aloud with a timer before it goes to the editor.
+output_sample:
+  input:
+    - "Your brief: length wanted, where it runs, and why people buy"
+    - "Your buyer stage: how much they already know"
+    - Your customer research, in the buyer's own words
+    - Your product facts and the proof you hold, each with a source
+    - Footage you own, as screenshots (optional)
+  prerequisites:
+    - A brand brain from the Brand profile builder (optional)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: Stock
+      contains: Your problems, explanations, doubts, proof and time points, each with a source, plus the rounds, length and word budget.
+    - name: Script table
+      contains: One row per line with time, narration, on-screen text and a picture note.
+    - name: Round, product, proof and ask marks
+      contains: Labels in the table showing where each round starts, the product arrives, proof appears and each ask comes.
+    - name: Notes
+      contains: What would add another round, and any items marked MISSING.
+    - name: CHECKS MISSED
+      contains: One line for each check the script could not meet, or none.
 
 how_it_works:
   - title: Checks it fits

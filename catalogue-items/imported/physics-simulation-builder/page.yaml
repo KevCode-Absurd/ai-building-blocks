@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Geometry, loads and meshing must all fit together.
 new_slug: physics-simulation-builder
 name: Physics simulation builder
-summary: Describe the part and its loads. Get a finite element model built,
-  solved and plotted.
+summary: Build a finite element model of your part in MATLAB. Set loads, solve for heat, stress or vibration, and get plots of the results.
 job: build-software
 headline: Physics simulation builder
-subhead: Describe a part and the forces or heat acting on it, and get a finite
-  element model built, solved and plotted. It covers heat, stress and
-  electromagnetic problems.
+subhead: Describe a part and the forces or heat acting on it, and get a finite element model built, solved and plotted. It covers heat, stress and electromagnetic problems.
 explain: |
   Describe a part and the forces or heat acting on it, and get a finite element model built, solved and plotted. It covers heat, stress and electromagnetic problems.
 
@@ -18,6 +15,10 @@ when:
   - You want stress in a bracket from a CAD file.
   - You need the vibration modes of a simple structure.
   - You want a plot of a field across a shape.
+not_for:
+  - "You need a Simulink or Simscape system model: use a Simulink or Simscape tool, since this skill only covers finite element parts."
+  - "You only want a surface mesh to look at, with no solve: use your CAD or mesh software."
+  - "You need a custom equation system outside heat, stress and electromagnetics: ask an engineer who can set up the older general PDE workflow."
 you_give:
   - The part shape or CAD file
   - Materials
@@ -29,8 +30,30 @@ you_get:
   - Field plots
   - Derived values such as peak stress or temperature
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the PDE Toolbox.
+  - Open a chat with an AI that can run MATLAB code. You need MATLAB R2025a or newer with the PDE Toolbox.
+  - Paste the skill text, or upload the skill folder if your AI accepts files.
+  - Describe your part, its materials, and the loads, fixed faces or temperatures. Say which analysis you want. Attach your CAD file if you have one.
+  - Ask your AI to build, mesh, solve and plot the model, then report the key values.
+  - Check the mesh quality and compare the numbers with a hand calculation before you use them in a design decision.
+output_sample:
+  input:
+    - Your part shape, as a CAD file (STEP or STL) or simple shapes with sizes
+    - Materials for the part
+    - Loads, fixed faces and temperatures
+    - The kind of analysis you want, such as steady heat or static stress
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB R2025a or newer with the PDE Toolbox
+  output:
+    - name: Geometry
+      contains: The part built from shapes or imported from a file, with its faces and edges identified.
+    - name: Model setup
+      contains: The model with materials, supports, loads and starting conditions set for your chosen analysis type.
+    - name: Mesh
+      contains: The part split into small elements, using default settings first and refined if needed.
+    - name: Solved result
+      contains: "The solution for your case: steady, time-varying, vibration or frequency."
+    - name: Derived values
+      contains: Values read from the result, such as peak stress, temperature, displacement or reaction forces.
+    - name: Plots
+      contains: Plots of the fields across the part, such as temperature or stress.

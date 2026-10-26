@@ -1,6 +1,6 @@
 new_slug: startup-idea-tester
 name: "Startup idea tester"
-summary: "Paste your idea. Get a score out of 100 for real problem, who needs it badly and the cheapest check."
+summary: "Test your startup idea before you build it. Get a score out of 100, the small group who need it most, and a cheap demand check to run this week."
 job: test-an-idea
 thinking: medium
 thinking_why: "It weighs several signs against each other and has to tell a real need from a plausible-sounding one."
@@ -17,6 +17,10 @@ when:
   - You have an idea and want an honest first read before you spend time on it.
   - Your idea came from "this seems like a good business" and not from a problem you felt.
   - You are choosing between two or three ideas.
+not_for:
+  - "You need to split a budget between brand and sales: use the Brand and sales budget splitter."
+  - "You already have a business and want to check the money: use the Bad-year break-even tester."
+  - "You want to test the idea with real buyers: use the Seven-question startup scorer after this."
 
 you_give:
   - Your idea in a few sentences
@@ -33,6 +37,24 @@ how_to_use:
   - Describe the idea and say why you picked it. Be honest if it came from a list of trends.
   - Say if you or someone you know has the problem.
   - Do the check it gives you this week. Bring back what happened.
+output_sample:
+  input:
+    - Your idea in a few sentences
+    - Who you think needs it, and why you picked it
+    - Anything you have already tried or heard (optional)
+  output:
+    - name: The problem
+      contains: One line that states the problem as someone has it today, without naming your product.
+    - name: Score
+      contains: A score out of 100 with six parts, each with a number and a short note.
+    - name: Who needs it badly
+      contains: The small group in urgent need and why, or a note that none was found.
+    - name: The cheapest check this week
+      contains: One action, the result that counts as demand, and what does not count.
+    - name: Missing
+      contains: Facts that would sharpen the score.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: Writes the problem

@@ -2,36 +2,104 @@ thinking: low
 thinking_why: It follows a set prompt recipe for one garment.
 new_slug: ghost-mannequin-photo-maker
 name: Ghost mannequin photo maker
-summary: Give it a clothing flat lay. Get a photo shaped as if worn by an
-  invisible model. Your image model draws it.
+summary: Turn a clothing flat lay into a ghost mannequin product photo. You get a ready prompt and a checklist. ChatGPT or Gemini draws the picture.
 job: product-photos
 headline: Ghost mannequin photo maker
-subhead: A cheap flat lay of a garment becomes a full, shaped product photo, as
-  if an invisible person were wearing it. The shoulders fill out, sleeves bend,
-  the neckline shows its inside and the hem casts a light shadow.
+subhead: "Give it a flat lay photo of one garment. It checks the photo, then writes the prompt for an image maker that fills out the shoulders, bends the sleeves and shows the inside of the collar. You get the prompt, the image settings and a checklist for the result."
 explain: |
-  A cheap flat lay of a garment becomes a full, shaped product photo, as if an invisible person were wearing it. The shoulders fill out, sleeves bend, the neckline shows its inside and the hem casts a light shadow.
+  A ghost mannequin photo shows clothing as if an invisible person wears it. This skill turns a plain flat lay into that shaped look, so your store photos look less cheap without a model shoot.
 
-  It sits between a flat lay, which looks plain, and a model shoot, which costs more and brings likeness issues. The skill sets what the image should keep, such as colour, knit pattern and ribbing, and writes the prompt for your image model. Claude does not draw the image itself. A separate image tool does, so you need access to one. The original skill is written in Chinese.
+  It sits between a flat lay and a photo shoot. A flat lay is cheap but looks flat. A shoot costs more and brings model and likeness issues. Here you keep the real garment, and only the shape changes.
+
+  Claude does not draw the picture. The skill writes a prompt that locks the colour, knit, print, ribbing and label, then you give the prompt and your photo to an image maker. It also lists fixes for common faults, such as a mannequin growing in the frame or a collar that looks like a flat hole. The original skill is in Chinese. We added an English guide at the top of the file.
 when:
-  - Your store photos are flat lays and look cheap.
-  - You cannot afford a model shoot for every item.
-  - You want a consistent catalogue look across clothing.
+  - Your store photos are flat lays and look cheap next to your competitors.
+  - You cannot afford a model shoot for every garment.
+  - You want one consistent look across tops, dresses and coats.
   - You need to show shape and fit without a person in the photo.
+not_for:
+  - "The garment is worn by a person in the photo: use the Virtual try-on photo maker."
+  - "The garment is folded, piled, or part of a set in one photo. Lay out one piece flat, or split the set and run each piece."
+  - "You want a full set of store photos, not one shaped garment: use the Product photo set builder."
+  - "You cannot use any image maker. This skill writes the prompt only, and something else must draw the picture."
 you_give:
-  - A flat lay photo of the garment
-  - Garment type and colour
-  - Access to an image maker
-  - Background preference (optional)
+  - A flat lay photo of one garment, laid flat on a plain background
+  - Garment type, colour and fabric, if the photo does not show them
+  - A shape reference photo to copy (optional)
+  - Background colour and a tall or square picture size (optional)
+  - Access to an image maker such as ChatGPT or Gemini
 you_get:
-  - A ghost mannequin image prompt
-  - Rules to keep colour and texture true
-  - A shaped product image from your image tool
-  - Notes on what to check in the result
+  - A photo check that says pass, or what to fix first
+  - One image prompt that keeps colour, knit, print and label true
+  - Size and quality settings for the image maker
+  - Fix lines to add if the first try goes wrong
+  - A checklist for judging the finished picture
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Take a flat lay photo of one garment. Lay it fully flat, front view, plain background, no folds and no big wrinkles. The file must be 20KB to 15MB, larger than 400 by 400 pixels, and jpg, png or webp.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Attach the photo and say what the garment is.
+  - Read the photo check. If it says to fix something, fix it first.
+  - Copy the prompt your AI writes. Give it and your photo to an image maker. This can be the image feature in ChatGPT or Gemini. It needs no code.
+  - Make two or three versions and pick one. Check for no body in the frame, the same proportions, a collar that shows its inside and a stitch pattern you can still see.
+  - If a fault shows up, paste the matching fix line from your AI at the end of the prompt and run it again.
+how_it_works:
+  - title: Check the photo
+    text: It tests size, format, flatness and whether the garment is single and clear. A bad photo stops the run.
+  - title: Set the shape
+    text: It writes three shape controls, filled shoulders and chest, a natural sleeve bend and a visible collar inside.
+  - title: Add the room rules
+    text: It adds a soft hem shadow and a ban on any mannequin, person or support in the frame.
+  - title: Lock the garment
+    text: It lists colour, knit, print position, ribbing and label, so the image maker keeps them as they are.
+  - title: Pick size and quality
+    text: It picks a square or tall picture, and high quality for knits and fur.
+  - title: Check the result
+    text: It gives you a checklist and fix lines, and asks you to try two or three versions.
+output_shape: |
+  Photo check: <pass or what to fix>
+  Garment details: <type, colour, fabric, print, label, or MISSING>
+  Image prompt: <one English prompt with the shape controls and the faithful-garment line>
+  Settings: <size, quality, number of versions>
+  Fix lines: <lines to add for each fault>
+  Checklist: <4 things to check in the result>
+output_sample:
+  input:
+    - A flat lay photo of one garment
+    - Garment type, colour and fabric
+    - A shape reference photo (optional)
+    - Background colour and picture size (optional)
+  prerequisites:
+    - An image maker such as ChatGPT or Gemini, to draw the picture
+    - A dLazy account or your own image key, only if you use the command line path
+  output:
+    - name: Photo check
+      contains: Pass, or what to fix in the flat lay before you start.
+    - name: Image prompt
+      contains: One English prompt that sets the shape and keeps colour, knit, print and label the same.
+    - name: Settings
+      contains: Square or tall size, quality level, and how many versions to make.
+    - name: Fix lines
+      contains: Extra lines to add if a mannequin, a puffy shape or a flat collar shows up.
+    - name: Result checklist
+      contains: Four things to check in the finished picture before you use it in your store.
+works_best_with:
+  tools:
+    - name: ChatGPT image feature
+      why: It edits a photo you attach, so it can keep your real garment while it adds shape.
+    - name: Gemini image feature
+      why: It also edits an attached photo and gives you a second option to compare.
+    - name: dLazy command line
+      why: It runs the original skill's own path and can preview the cost first. It needs an account and credits.
+  inputs:
+    - A second photo of the same garment from the back
+    - A shape reference photo from a similar garment
+    - Your store's background colour
+    - Close-ups of the label or print
+terms:
+  - term: Ghost mannequin
+    meaning: A product photo where clothing looks worn by an invisible body.
+  - term: Flat lay
+    meaning: A photo of a garment laid flat, seen from above.
+  - term: Shape reference
+    meaning: A photo whose shape and angle the new image should copy.
+  - term: Credits
+    meaning: Pre-paid balance that a service uses up for each image it makes.

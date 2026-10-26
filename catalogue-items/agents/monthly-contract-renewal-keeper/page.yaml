@@ -1,6 +1,6 @@
 new_slug: monthly-contract-renewal-keeper
 name: Monthly contract renewal keeper
-summary: Give it your vendor contracts each month. Get renewals and notice dates due, the traps in each and the asks to make.
+summary: Check your vendor contracts every month. Get a renewal calendar, notice dates to act on, price rises caught and the asks to make before you renew.
 job: check-contracts
 thinking: high
 thinking_why: It reads contract wording, traces changes clause by clause and decides which renewals need action first. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a dozen or more vendor and software contracts and some renew without anyone deciding.
   - A price rise arrived in a terms update and you found out from the invoice.
   - You want to renegotiate supplier terms and need the asks ready before the call.
+not_for:
+  - "You have one new contract to read before signing: use the Contract intake reviewer."
+  - "You need legal advice on a dispute or a breach: ask a lawyer."
+  - "You want it to renew, cancel or email a vendor for you: do that yourself, as this agent never acts."
 you_give:
   - Every signed vendor, software and supplier contract, with amendments and notices
   - A register with dates, price and owner per contract, or let the first run build one (advised)
@@ -33,6 +37,31 @@ how_to_use:
   - Add one line per vendor on whether you still use it. The cancel candidates depend on it.
   - Read the notice windows first. Decide, act in your own tools, then tell the agent the outcome.
   - Run it again on the first Monday of next month. It records what happened and tracks promises.
+output_sample:
+  input:
+    - Your signed vendor, software and supplier contracts, with any amendments and price notices
+    - Your contract register with dates, price and owner (optional, the first run can build one)
+    - One line per vendor on whether you still use it
+    - Your cash picture for supplier payment terms (optional)
+    - Last month's keeper file (once it exists)
+  prerequisites:
+    - An AI that can read your contract files or pasted text
+    - Claude Code if you want it to keep the register and promises files between months
+  output:
+    - name: This month in one line
+      contains: Contracts on file, renewals in 90 days, notice windows closing in 45 days and the value at stake.
+    - name: Notice windows first
+      contains: "Each contract with a notice window closing soon, with the date, price and a call: renew, renegotiate or cancel candidate."
+    - name: What changed
+      contains: Each vendor that sent new terms or a price notice, with the clause and the old and new wording.
+    - name: Software traps
+      contains: Renewal traps, price rises, uptime and data terms for subscriptions renewing within 90 days.
+    - name: Asks
+      contains: A two-minute summary and the terms to push for on each renewal due within 60 days.
+    - name: Broken promises
+      contains: What a vendor promised and did not deliver, to raise on the call.
+    - name: Files and missing
+      contains: Each step's file and every MISSING line for facts it could not find.
 how_it_works:
   - title: Read last month
     text: Records how each renewal and notice ended, and whether vendor promises were kept.

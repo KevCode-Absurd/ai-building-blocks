@@ -2,17 +2,108 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-qdrant-version-upgrade
 name: Qdrant version upgrade planner
-summary: Share your Qdrant version and setup. Get upgrade, backup and validation
-  steps that protect availability.
+summary: "Get a Qdrant version upgrade plan with the safe order of steps, a backup, checks after each step, and how to avoid downtime."
 job: ship-and-host
 headline: Qdrant version upgrade planner
-subhead: Share your Qdrant version and setup. Get upgrade, backup and validation
-  steps that protect availability. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Give it your current Qdrant version, the version you want and how you run it. It works out the upgrade path, whether you can avoid downtime, and the order for your app code and your database. You get a numbered plan with a backup and checks.
+explain: |
+  Qdrant is a database that stores data so apps can search by meaning. Upgrading it is not always one jump. Its data format is only guaranteed to carry over one minor version at a time, so a big jump may need several stops. Skipping a stop is not supported.
+
+  This planner uses Qdrant's own compatibility rules. It checks whether your path is one step or several, tells you to upgrade your app's Qdrant library before the server, and checks whether your cluster has enough copies of its data to upgrade one machine at a time with no downtime.
+
+  You get a numbered plan for your setup with a backup first and a check after every step. If you run on Qdrant Cloud, it points you to Qdrant's command line tool, which needs a Qdrant Cloud account.
+when:
+  - You run an older Qdrant and want to move to the latest version.
+  - You must plan the order of steps for a jump of more than one minor version.
+  - Your app must stay online while you upgrade.
+  - Your app's Qdrant library and your server are on different versions, and you want to line them up.
+not_for:
+  - "You are changing your embedding model, not the Qdrant version: use the Qdrant embedding migration planner."
+  - "You want to move from your own server to a hosted one: use the Qdrant hosting option adviser."
+  - "You need a general plan to ship any release safely: use the Safe release planner."
+you_give:
+  - Your current Qdrant server version and the version you want
+  - The version of your app's Qdrant library, or SDK
+  - How you run Qdrant, such as one machine, a cluster, Kubernetes or Qdrant Cloud
+  - How many copies of each shard of data you keep, called the replication factor
+  - How much data you store, and how long a short outage would be acceptable (optional)
+you_get:
+  - The upgrade path, as one step or several
+  - A numbered plan with the order for your app library and your server
+  - A backup step, and a check to run after each step
+  - A clear answer on whether you can avoid downtime
+  - A rollback note for each step
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill's instructions, or upload the skill folder.
+  - Give the versions, how you run Qdrant and your replication factor. If you do not know the replication factor, ask your AI how to find it.
+  - Read the path first. If it has more than one stop, plan time for each stop.
+  - Test the plan on a copy of your data in a test setup before you touch live data.
+  - Run the backup, then each step, and run the check after each one. Stop if a check fails.
+  - On Qdrant Cloud, you need a Qdrant Cloud account to use its command line tool.
+how_it_works:
+  - title: Gather the facts
+    text: It asks for your server and library versions, the target version, how you run Qdrant and your replication factor.
+  - title: Work out the path
+    text: Data is only guaranteed across one minor version, so it splits a bigger jump into stops. Qdrant Cloud can jump straight to the new version.
+  - title: Order the upgrade
+    text: It tells you to upgrade your app's Qdrant library first, then the server.
+  - title: Check downtime
+    text: With two or more copies of each shard, it plans a rolling upgrade, one machine at a time. With fewer, it says to expect downtime.
+  - title: Add the backup and checks
+    text: It puts a backup before each stop, and a check after it, such as the health endpoints and a known search.
+  - title: Write the plan
+    text: It hands you the steps in order, with a way back and the point where you should stop and ask for help.
+output_shape: |
+  YOUR SETUP: <server version, library version, target, how it runs, replication factor or MISSING>
+
+  PATH
+  - <from version> to <next version> to <target>
+
+  DOWNTIME: <none with rolling upgrade, or expected window> : <why>
+
+  PLAN
+  1. Back up : <what to save and how to check it>
+  2. Upgrade library : <version> : check <what>
+  3. Upgrade server to <version> : <how> : check <what>
+  (repeat for each stop)
+
+  WAY BACK: <what to do if a check fails>
+  NEXT: <first step to take>
+output_sample:
+  input:
+    - Your current and target Qdrant versions
+    - Your app library version
+    - How you run Qdrant and your replication factor
+  prerequisites:
+    - A test setup to rehearse on (strongly advised)
+    - A Qdrant Cloud account, only if you use its command line tool
+  output:
+    - name: Upgrade path
+      contains: The versions to stop at, one minor version at a time for your own servers.
+    - name: Downtime answer
+      contains: Whether a rolling upgrade works for you, and why.
+    - name: Numbered plan
+      contains: Backup, library upgrade, server upgrade and a check after each step.
+    - name: Way back
+      contains: What to do if a check fails, and when to stop.
+works_best_with:
+  tools:
+    - name: Qdrant release notes
+      why: They list changes per version, and your AI can check them for breaking changes.
+    - name: Qdrant Cloud command line tool
+      why: It manages upgrades on Qdrant Cloud, and needs a Cloud account.
+  inputs:
+    - Your Qdrant config file
+    - The output of your Qdrant collection info
+    - A list of the searches your app depends on
+terms:
+  - term: Qdrant
+    meaning: A database that stores data so apps can search by meaning.
+  - term: SDK
+    meaning: The code library your app uses to talk to Qdrant.
+  - term: Replication factor
+    meaning: How many copies of each piece of data your cluster keeps.
+  - term: Rolling upgrade
+    meaning: Upgrading one machine at a time while the others keep serving.
+  - term: Minor version
+    meaning: The middle number in a version, such as the 17 in 1.17.2.

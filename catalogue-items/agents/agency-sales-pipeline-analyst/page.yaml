@@ -1,0 +1,158 @@
+name: Sales pipeline health and forecast agent
+summary: Find out if your pipeline can hit quota. Get coverage, stalled deals to act on and a forecast range of commit, best case and upside.
+headline: Sales pipeline health and forecast agent
+subhead: Paste a list of your open deals, with stage, value, close date and last activity, and your quota left for the period. The agent checks the data, then scores pipeline health and finds stalled or risky deals. You get a sales forecast with a range and a list of deals to act on this week.
+job: track-numbers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  A CRM often says you have plenty of pipeline. Then the quarter ends short.
+  This sales pipeline health and forecast agent checks the pipeline for
+  problems the CRM does not show. It looks for deals nobody has touched in 30
+  days, deals with no close date and late-stage deals with only one contact. It
+  then asks whether the pipeline is big enough to reach your number.
+
+
+  It follows the profile's method. It works out pipeline coverage, which is open
+  pipeline divided by quota left, and adjusts it for deals that look weak. It
+  scores deal health using a checklist called MEDDPICC, together with how
+  recently buyers replied and how long each deal has sat in its stage. It builds
+  the forecast as a range: Commit, Best Case and Upside. It never gives one
+  number with no range.
+
+
+  It only knows what you paste. It does not connect to your CRM, and the
+  win rates and cycle times it uses come from your own history. If you give none,
+  it says MISSING and does not guess a benchmark. This is a role profile from
+  Agency Agents, shared under MIT. The download includes the original profile,
+  its licence and a setup guide. The profile's success targets are examples, not
+  results measured by AI Blocks.
+when:
+  - Your quarter ends in a few weeks and you need to know whether the pipeline can still reach quota.
+  - Your forecast call is coming, and you want to see which deals are real before you commit a number.
+  - Win rates are falling, and you need to know at which stage deals die.
+  - You want a short list of deals to rescue this week, with an action for each.
+not_for:
+  - "You want a repeat review each Monday from a fresh export: use the Weekly sales pipeline reviewer."
+  - "You only want a forecast, with the maths shown: use the Bookings forecast builder."
+  - "You want to find where visitors drop off on a website or app: use the Conversion funnel analyst."
+  - "You want live numbers. Use your CRM's own reports, and use this agent to question them."
+  - "You have fewer than about 10 open deals. A short list of deals is easier to review by hand."
+you_give:
+  - A list of open deals, with name, stage, value, expected close date and the date of last activity
+  - Your quota or target left for the period
+  - The owner of each deal, and the segment or deal size, if you want a breakdown (optional)
+  - Closed won and lost deals from the last 6 to 12 months, to work out your own win rates (optional)
+  - The stage each deal entered, to measure time in stage (optional)
+  - Which qualification facts you know for each deal, such as who signs and who champions it (optional)
+you_get:
+  - A data check that lists stale deals, missing dates and missing values, and how far to trust the rest
+  - Pipeline coverage against quota left, and a coverage figure adjusted for weak deals
+  - Conversion by stage and time in stage, when you give history
+  - A list of deals that need action, each with the risk and one next step
+  - A forecast with Commit, Best Case and Upside, and the assumptions behind each
+  - A comparison with your CRM's stage-weighted number
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Export your open deals from your CRM. Paste them with the column headings. Add closed deals from the last 6 to 12 months if you can.
+  - Say the period, your quota left and the date today, such as "Q3, $400,000 left, today is 15 Aug".
+  - Read the data check first. Fix missing close dates and stale deals in your CRM or accept the limits.
+  - Take the list of deals to act on into your pipeline review. Do the next step for each, then update the CRM.
+  - Run it again next week with a new export. Paste last week's report so it can show what changed.
+how_it_works:
+  - title: Check the data
+    text: It flags deals with no activity in 30 days, no close date, no value or a stage that never changes.
+  - title: Measure coverage
+    text: It divides open pipeline by quota left, then adjusts it for deals that look weak, stale or single-threaded.
+  - title: Score each deal
+    text: It looks at how complete the qualification is, how recently the buyer was in touch and how fast the deal moves.
+  - title: Find the stalls
+    text: It lists deals stuck in a stage past your usual time, and late-stage deals with gaps.
+  - title: Build the forecast
+    text: It sorts deals into Commit, Best Case and Upside, and compares the result with your CRM's number.
+  - title: Name the actions
+    text: It ranks the at-risk deals by value and ease of rescue, and gives one concrete next step for each.
+output_shape: |-
+  DATA CHECK
+    Deals read <n> | Stale 30 days or more <n> | No close date <n> | No value <n> | Trust level <high, medium or low, with the reason>
+
+  COVERAGE
+    <segment or total> | Quota left <$> | Open pipeline <$> | Coverage <n>x | Adjusted for weak deals <n>x
+
+  STAGE CONVERSION AND TIME IN STAGE
+    <stage> | Deals <n> | Converted <%> | Average days in stage <n> | Your usual days <n or MISSING>
+
+  DEALS TO ACT ON
+    <deal> | <stage> | <value> | <days quiet> | <risk> | <next step this week>
+
+  FORECAST
+    Commit <$> | Best Case <$> | Upside <$>
+    Assumptions <what each category includes>
+    CRM stage-weighted number <$> | Difference <$>
+
+  RISKS AND GAPS
+    <risk with the amount at stake> | <missing data and how to get it>
+
+  OPEN CHECKS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your open deals with stage, value, close date and last activity date
+    - Your quota or target left for the period
+    - Closed won and lost deals from the last 6 to 12 months (optional)
+    - Owner and segment for each deal (optional)
+  prerequisites:
+    - A CRM export or a spreadsheet of your deals
+    - An AI that can read a long table, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Data check
+      contains: Stale deals, missing dates and values, and how far to trust the numbers.
+    - name: Coverage
+      contains: Open pipeline against quota left, plus a figure adjusted for weak deals.
+    - name: Stage conversion and time in stage
+      contains: How many deals move on at each stage and how long they wait there, when you give history.
+    - name: Deals to act on
+      contains: At-risk deals with the risk and one next step each.
+    - name: Forecast
+      contains: Commit, Best Case and Upside with assumptions, next to your CRM's number.
+    - name: Risks and gaps
+      contains: Amounts at stake and the data you should collect.
+    - name: Open checks
+      contains: What to confirm in your CRM before the forecast call.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A file upload keeps every deal in view, so none are dropped from a long paste.
+    - name: Your CRM
+      why: You export the deals from it, and update it after you act on the list.
+  inputs:
+    - Closed deals from the last year, so win rates come from your own history.
+    - The date each deal entered its current stage.
+    - Meeting notes or the last email date for your biggest deals.
+terms:
+  - term: Pipeline coverage
+    meaning: Open pipeline divided by quota left. A 3x coverage means three dollars of pipeline for each dollar you still need.
+  - term: Commit, Best Case and Upside
+    meaning: Three layers of forecast, from the deals most likely to close to those that would be a bonus.
+  - term: MEDDPICC
+    meaning: A checklist for how well you know a deal. It covers metrics, who signs, how they decide, the paper process, the pain, a champion and the competition.
+  - term: Single-threaded
+    meaning: A deal where you only talk to one person at the buyer. If they leave, the deal stalls.
+  - term: Stage-weighted forecast
+    meaning: Each deal's value times a fixed chance for its stage. It is often too high.
+tweaks:
+  - what: Segment
+    how: Ask for the same review by owner, deal size or region, so you can see where it differs.
+  - what: Coverage target
+    how: Say what coverage you aim for. The profile uses about 3x for steady businesses and higher for new markets or new reps.
+  - what: Scope
+    how: Ask for only the deals to act on, if you do not need the forecast.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

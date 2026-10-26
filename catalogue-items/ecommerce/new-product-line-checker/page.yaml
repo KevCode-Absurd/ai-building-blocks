@@ -1,6 +1,6 @@
 new_slug: new-product-line-checker
 name: "New product line checker"
-summary: "Name a product to add. Get CAC or LTV, a score out of 100, a test cap."
+summary: "Check a new product line before you buy stock. Get a CAC or LTV label, a score out of 100, go or no-go, and a capped test plan."
 job: find-products
 thinking: medium
 thinking_why: "It follows three checks and a score sheet, but needs sound judgment on your numbers."
@@ -17,6 +17,10 @@ when:
   - You are choosing your next product and have more ideas than cash.
   - A new product is selling to your own list but not to cold traffic, and you wonder why.
   - You want a rule for when to drop a flop instead of spending to rescue it.
+not_for:
+  - "You only want to know if a product category is a fast trend: run a category and trend risk check first, then come back."
+  - "You sell print-on-demand or dropship items and have no list or ad budget: skip the order gate and test with a small email send or organic post instead."
+  - "You need sales forecasts or a full budget: ask your accountant or use a spreadsheet, as the score is not a forecast."
 
 you_give:
   - The new product idea, with price and margin
@@ -38,6 +42,30 @@ how_to_use:
   - Say what your current buyers already own or buy, and where else it could sell.
   - Say the most you can afford to lose on the launch.
   - Read the label, score and test plan. Run the small test before you order stock.
+output_sample:
+  input:
+    - Your product idea, with its price and margin
+    - What your current buyers already own or buy
+    - Where else it could sell, such as Amazon or wholesale
+    - Your cash cap for the launch
+    - Your current ad results (optional)
+  output:
+    - name: Product and label
+      contains: The product name and whether it is a CAC product or an LTV product, with a one-line reason.
+    - name: Check 1 CAC or LTV
+      contains: Points for price, market size and whether the product stands alone and is not just an add-on.
+    - name: Check 2 LTV effect
+      contains: Points for whether buyers of the new product go on to buy your old one.
+    - name: Check 3 distribution
+      contains: Points for a named place to sell, such as Amazon, wholesale or a big retailer.
+    - name: Score and verdict
+      contains: The sum, the score out of 100, and GO, TEST FIRST or NO-GO with the reason.
+    - name: Launch cap and test plan
+      contains: The most you can lose, then an email test, an organic test and a small paid test.
+    - name: Order gate and kill rule
+      contains: The buyer commitment needed before a factory minimum order, and the rule that ends the test.
+    - name: Track, checks missed and missing
+      contains: What to watch after launch, which checks could not be scored, and any facts you left out.
 
 how_it_works:
   - title: Labels CAC or LTV

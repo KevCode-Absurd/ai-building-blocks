@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It chooses shots by what research says helps sales.
 new_slug: product-shoot-brief-writer
 name: Product shoot brief writer
-summary: Tell it your product. Get a shot list for photos and video, with a
-  reason for each shot.
+summary: Write a product shoot brief for your photographer. Give it your product and get a shot list for photos and video, with a reason for each shot.
 job: product-photos
 headline: Product shoot brief writer
-subhead: A shot list for photos and video where every shot has a reason behind
-  it. Instead of taste, the brief follows findings on what moves sales and
-  willingness to pay.
+subhead: Give it your product and where the pictures will run. It writes a shot list you can hand to a photographer. Each shot comes with the reason behind it.
 explain: |
   A shot list for photos and video where every shot has a reason behind it. Instead of taste, the brief follows findings on what moves sales and willingness to pay.
 
@@ -18,6 +15,10 @@ when:
   - You must decide whether a product needs video.
   - Your product images do not sell and you do not know why.
   - You need to choose between candidate hero images.
+not_for:
+  - "You need page layout, buttons, variants or price position: use the Product page skill, since this only covers photos and video."
+  - "You need the product description text: use the Product copy skill, since this writes shots, not words."
+  - "You want a studio, a photographer or lighting set up: hire a photographer, because this writes the brief but takes no photos."
 you_give:
   - The product and how it is used
   - Where the visuals will run
@@ -29,7 +30,27 @@ you_get:
   - Pose and composition notes
   - A pick between candidate images
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code, files or paid tools are needed.
+  - Tell your AI what the product is, how people use it and where the pictures will run.
+  - Say who buys it and which way they read. Add candidate images if you have them (optional).
+  - Check the shot list. Treat shots marked with a dagger as tips, not measured findings.
+  - Send the list to your photographer. Then use the Product page skill or the Product copy skill for the rest of the page.
+output_sample:
+  input:
+    - Your product and how people use it
+    - Where the visuals will run, such as product page, ads or social
+    - Your audience and which way they read (left to right or right to left)
+    - Candidate images to compare (optional)
+  output:
+    - name: Product type
+      contains: Whether your product is bought for enjoyment or for a job, which decides the video or stills advice.
+    - name: Shot list table
+      contains: Numbered shots, each with a direction, the rule behind it and the effect it relies on.
+    - name: Format advice
+      contains: Whether you need video, stills or a slow-motion shot, based on your product type.
+    - name: Pose and composition notes
+      contains: Where the model looks, hand use, which side the product sits, shine, spacing, props and colour.
+    - name: What not to do
+      contains: A short list of choices to avoid for this product, such as direct gaze or a matte finish.
+    - name: Image pick
+      contains: Which candidate image to use and why, when you supply candidates.

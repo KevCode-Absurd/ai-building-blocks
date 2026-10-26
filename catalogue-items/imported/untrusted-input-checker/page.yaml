@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It lists entry points, then checks each one in turn.
 new_slug: untrusted-input-checker
 name: Untrusted input checker
-summary: Point it at code. Get every place outside data enters found and checked
-  before it reaches your logic.
+summary: Find every place outside data enters your code and add checks before it reaches your logic. An untrusted input checker for APIs, forms and webhooks.
 job: secure-code
 headline: Untrusted input checker
-subhead: A list of every place outside data enters your code, each one checked
-  before it reaches your logic. Bad input then stops at the edge instead of
-  causing silent bugs or security holes.
+subhead: Give it your code. It lists every place outside data enters, marks how risky each one is, and adds checks at the edge. Bad input is then stopped early instead of causing quiet bugs or security holes.
 explain: |
   A list of every place outside data enters your code, each one checked before it reaches your logic. Bad input then stops at the edge instead of causing silent bugs or security holes.
 
@@ -16,20 +13,43 @@ explain: |
 when:
   - You are adding an API route or form handler.
   - Your code uses request body or query values directly.
-  - You parse webhooks or third-party responses and want safe handling.
+  - You parse webhooks or replies from other services and want safe handling.
   - You want to find every place your app trusts outside data.
+not_for:
+  - "Your code only uses its own internal data and never takes outside input: skip it and use a normal code review."
+  - "You have a short, throwaway script where strict checks add more noise than value: add a quick type check by hand."
+  - "You want proof that bad input is rejected at run time: write your own tests that send bad data, because this skill only traces each entry point."
 you_give:
   - The code or files to check
-  - The language and framework
-  - Which entry points you already know (optional)
+  - The language and framework you use
+  - Entry points you already know about (optional)
 you_get:
-  - A list of every entry point
-  - A risk label for each
-  - Validation filters added
-  - A check that bad input is stopped
+  - A list of every entry point in scope
+  - A trust level for each one
+  - Checks added at each risky entry point
+  - A trace showing which entry points have a filter
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and edit your project files.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
+  - Paste your code, or upload the files. Say which language and framework you use.
+  - Ask your AI to list every entry point and its trust level first. Check that list for gaps.
+  - Let it write the checks, then read the verification table at the end.
+  - "Test it yourself: send bad input to each entry point and confirm it is rejected with a clear error."
+  - Run it again each time you add a new route or webhook.
+output_sample:
+  input:
+    - Your code or files to check
+    - Your language and framework
+    - Entry points you already know about (optional)
+  prerequisites:
+    - An AI that can read your code, and ideally edit your project files
+  output:
+    - name: Boundary map
+      contains: A table of every entry point in scope, its trust level, and the filter it needs.
+    - name: Trust levels
+      contains: Each input marked trusted, semi-trusted or untrusted, so you see which ones need a filter.
+    - name: Filter code
+      contains: Type checks, shape checks, cleaning and presence checks added at each entry point, with clear errors on bad input.
+    - name: Verification table
+      contains: A trace of each entry point showing a filter exists and what kind it is.
+    - name: Unfiltered input flag
+      contains: A warning for any untrusted input that still reaches logic, storage or display without a filter.

@@ -2,36 +2,96 @@ thinking: medium
 thinking_why: It builds a model, tests it and runs it many times.
 new_slug: queue-and-process-simulator
 name: Queue and process simulator
-summary: Describe a process with queues and limited resources. Get a simulation
-  with repeated runs and a clear summary of results.
+summary: Test a queue or process before you change it. Get a simulation of waits and busy staff or machines, run many times, with a plain summary.
 job: track-numbers
 headline: Queue and process simulator
-subhead: Find out how a system with waiting lines will behave before you build
-  it or change it. You get a simulation with repeated runs and a clear summary,
-  such as average wait, how busy each resource is, and how much the results
-  vary.
+subhead: Describe a process where people or jobs wait for limited staff, desks or machines. Your AI builds a queue simulation, runs it many times and reports average waits, how busy each resource is and how much the results vary.
 explain: |
-  Find out how a system with waiting lines will behave before you build it or change it. You get a simulation with repeated runs and a clear summary, such as average wait, how busy each resource is, and how much the results vary.
+  A queue simulation lets you try a change on paper before you pay for it. You can ask what happens to waits if you add a till, drop a shift or double the orders, and see the answer first.
 
-  You describe the process: who arrives, what they wait for, and how long each step takes. The skill first writes down the question, the boundary of the model, the time units and when a run ends. It then builds the model in Python with SimPy, sets a warm-up period and run length, and repeats the run many times. Results come with ranges, not a single lucky number. Python and uv are needed.
+  The skill starts by writing down your question, what is inside the model, the time unit and when each run ends. It then builds the model in Python with a library called SimPy. It sets a warm-up period and run length, and repeats the run many times with different random numbers.
+
+  You get ranges, not one lucky average. It also tells you what the model leaves out, so you know how far to trust the numbers. Your AI needs to run Python code. A plain chat can write the code, but you would run it yourself.
 when:
-  - You want to know how many staff or machines a busy shop floor needs.
-  - A queue at a service desk keeps growing and you need to test fixes.
-  - You are sizing a warehouse or logistics flow before spending money.
-  - You need results that show spread, not a single average.
+  - A queue at your service desk, counter or call line keeps growing and you want to test fixes.
+  - You want to know how many staff or machines a busy shift needs before you hire or buy.
+  - You are sizing a warehouse, packing line or returns desk and the cost of getting it wrong is high.
+  - Someone shows you an average wait and you want to see how much it swings from day to day.
+not_for:
+  - You have one step and no waiting line. A spreadsheet sum is faster and clearer.
+  - You want to forecast sales or traffic from past figures. Use the Trend and forecast analyst or the Quick time series forecaster.
+  - You have no real timing figures at all. Time a sample of 20 to 30 jobs first, or the results will only repeat your guesses.
 you_give:
-  - Description of the process and its steps
-  - Arrival rates and step durations
-  - The question you want answered
-  - Python with uv installed
+  - The question you want answered, in one line
+  - The steps of the process, in order
+  - How often people or jobs arrive, from a log or a stopwatch count
+  - How long each step takes, and how many staff or machines handle it
+  - The longest queue you allow, and the time unit you think in (optional)
 you_get:
-  - Simulation code
-  - Waits, usage and queue lengths
-  - Repeated runs with ranges
-  - Plain summary of results
+  - A short model plan with the question, assumptions and what is left out
+  - The simulation code, ready to rerun
+  - Results for waits, queue length, how busy each resource is and jobs turned away
+  - A range for every result, from many repeated runs
+  - A plain summary and the next numbers to test
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Write your question in one line, such as "Do 3 packers keep waits under 10 minutes on a Monday?" Gather your arrival counts and step times first.
+  - Add the skill to an AI that can run Python, such as Claude Code. In a plain chat, ask your AI to write the code and run it yourself.
+  - Paste your question and numbers. Ask your AI to show the model plan first. Check that the steps, staff counts and time unit are right before it runs anything.
+  - Let it install SimPy 4.1.2 and run the repeated runs. Open the results and read the ranges, not just the averages.
+  - Change one number, such as adding a person, and run it again. Compare the two ranges to see if the change really helps.
+  - Check the list of limits at the end before you act on the numbers. Test any big decision with a small real trial.
+how_it_works:
+  - title: Write down the question
+    text: It records the decision, what is inside the model, the time unit and when a run ends.
+  - title: Record the assumptions
+    text: It lists how people arrive, how long steps take, who has priority and what is left out.
+  - title: Build a bounded model
+    text: It writes SimPy code with caps on time, jobs and events so a run cannot loop forever.
+  - title: Test the model
+    text: It checks simple cases and counts, such as jobs in equal jobs out, before trusting a run.
+  - title: Repeat the runs
+    text: It runs many independent runs with set random seeds and builds ranges from the whole runs.
+  - title: Report limits
+    text: It reports warm-up, unfinished jobs, run length, precision and how far the model has been checked.
+output_shape: |
+  QUESTION     <the decision this run informs>
+  MODEL        <steps, resources, time unit, run end, warm-up>
+  ASSUMPTIONS  <arrival and step-time rules, what is left out>
+  RUNS         <number of runs, run length, seeds>
+  RESULTS      <average wait, queue length, resource use, jobs turned away>
+               each as <average> and <range across runs>
+  CHECKS       <tests passed, jobs unfinished at the end>
+  SO WHAT      <plain reading of the numbers>
+  NEXT         <the one number to change and test next>
+  MISSING      <inputs not given, or none>
+output_sample:
+  input:
+    - The question you want answered
+    - The steps of your process and how many staff or machines handle each
+    - How often people or jobs arrive
+    - How long each step takes
+    - The longest queue you allow (optional)
+  prerequisites:
+    - An AI that can run Python, or a person who can run it
+    - Python 3.10 or newer and the uv tool
+    - SimPy 4.1.2, which the skill installs for you
+  output:
+    - name: Model plan
+      contains: The question, what is inside the model, the time unit, assumptions and what is left out.
+    - name: Simulation code
+      contains: A SimPy script with limits on time, jobs and events, and set random seeds.
+    - name: Results table
+      contains: Wait, queue length, resource use, throughput and jobs turned away, each with a range across runs.
+    - name: Checks and limits
+      contains: Tests passed, jobs unfinished at the end, warm-up used and how far the model is validated.
+    - name: Plain summary
+      contains: What the numbers mean for your decision and which number to change next.
+terms:
+  - term: Simulation
+    meaning: A computer model of your process that you run many times to see what could happen.
+  - term: SimPy
+    meaning: A free Python library for modelling processes where things wait for limited resources.
+  - term: Warm-up
+    meaning: The first stretch of a run, thrown away so an empty start does not skew results.
+  - term: Range across runs
+    meaning: The spread between repeated runs. A wide range means the answer is less certain.

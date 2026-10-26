@@ -1,6 +1,6 @@
 name: Brand profile builder
 new_slug: website-brand-brain-builder
-summary: Share your website. Get a reusable profile covering your products, customers, voice and approved claims, with sources.
+summary: Build a reusable brand profile from your website. Get eight files on your products, buyers, voice and approved claims, each fact with a source.
 job: brand-file
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You use AI for marketing and keep pasting the same background into every chat.
   - You're briefing a new writer, designer or AI tool and want them working from facts you can stand behind.
   - Your facts are spread across your site, product sheets and old ads, and you can't tell which claims are proven.
+not_for:
+  - "You need one ad or one email and have no site or brand material: ask your AI to write it directly, with the facts pasted in."
+  - "You only want a quick look at a rival: read their site yourself, or ask your AI to summarise their pages."
+  - "You want a printable design guide for a designer: this gives facts and rules, not a formatted guide, so ask a designer to make one from the files."
 you_give:
   - Your website address, or your pages pasted in if it can't be read
   - Brand material you already have, like product sheets, a style guide or past ads, each with a label and date (optional)
@@ -26,9 +30,38 @@ you_get:
   - A two-sentence diagnosis of your biggest gap, and a list of what's missing and who can answer it
   - A short slice for your next step, if you name one
 how_to_use:
-  - Supply the relevant brief and material, or name files in the authorized project.
-  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
-  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+  - Paste your website address into your AI. If it can't read sites, paste your key pages as text instead.
+  - Add any product sheets, style guides, reviews or past results. Label each one and give its date.
+  - Name your next step, such as writing ads. You then get a short slice for that job.
+  - Check the short fact sheet it shows you and correct anything wrong. Answer its questions, or skip them.
+  - Review the eight files. Look at claims marked pending and the list of what's missing.
+  - Save the files in a Claude project, a ChatGPT project or a Gemini Gem. Use 00-start-here.md as the instructions.
+output_sample:
+  input:
+    - Your website address, or your pages pasted in
+    - Product sheets, a style guide or past ads (optional)
+    - Customer reviews, survey answers or support emails (optional)
+    - Past results from ads, emails or offers (optional)
+    - Your next step, such as planning, writing or image work (optional)
+  output:
+    - name: 00-start-here.md
+      contains: The business in five lines, your biggest gap, house rules for any AI, and which file fits which task.
+    - name: business.md
+      contains: One-line description, category, stage, positioning, the story your site tells and your promise.
+    - name: offers.md
+      contains: Each product or plan with price, terms, what is included, policies word for word and buyer questions.
+    - name: customers.md
+      contains: Two to four buyer profiles with quotes, what pushed them, what held them back and the words they use.
+    - name: proof-and-claims.md
+      contains: Each claim marked approved, pending or banned, with its proof, source and date.
+    - name: voice-and-look.md
+      contains: Voice traits, tone by situation, words to use and avoid, colours, fonts, logo files and image style.
+    - name: market.md
+      contains: The options buyers weigh, a competitor table and the open ground no one holds.
+    - name: log.md
+      contains: Dated changes, decisions, graded results and open questions, newest first.
+    - name: Slice for your next step
+      contains: Only the facts your named next step needs, if you name one.
 how_it_works:
   - title: Reads the site and your material
     text: Reads the pages every business has, then the ones your kind of business has, then each labelled piece you gave it. If the site can't be read, it builds from your material.

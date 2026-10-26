@@ -1,6 +1,6 @@
 slug: prepare-case-competition-judge-questions
 name: Prepare case competition judge questions
-summary: Share the source files. Get a judge question bank, sourced answer notes and backup slide briefs.
+summary: Prepare for the Q&A at a case competition. Get practice judge questions, answer notes tied to your exhibits and briefs for backup slides.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,25 +8,29 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: source_text
+    required: true
+  - type: copy_draft
+    required: true
+  - type: question
     required: false
 outputs:
   - type: document
-  - type: slide_deck
-  - type: copy_draft
+  - type: audit_report
 uses:
   - source-note-summariser
+  - hardest-objections-answer-writer
   - presentation-builder
   - proofreader
 steps:
   - uses: source-note-summariser
-    note: Extract the recommendation, economics, constraints and weakest assumptions from the actual deck and case exhibits with locations.
+    note: Read the deck and exhibits. List the recommendation, the main numbers and the weakest assumptions, each with its slide or exhibit. Hands the weak-spot list and source index to step 2.
+  - uses: hardest-objections-answer-writer
+    note: Write tough practice questions for each weak spot, with an answer note that cites a slide or exhibit or says assumption. Marks every question as practice. Hands the question bank to step 3.
   - uses: presentation-builder
-    note: Prepare practice question prompts and backup-slide outlines around trade-offs, feasibility and financial sensitivities; label these as practice, not actual judge questions.
+    note: "Outline a backup slide for each question that needs a chart or table: title, chart, point and source. Outline only, no file. Hands the briefs to step 4."
   - uses: proofreader
-    note: Check prepared answer notes for consistent terms, currencies, periods and support from the indexed exhibits.
+    note: Check answer notes and briefs for matching terms, currencies, periods and figures. Report a mismatch, never fix a number quietly.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -37,6 +41,10 @@ credits:
     by: AI Blocks
     url: https://useaiblocks.com/skills/source-note-summariser
     used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Hardest objections answer writer
+    by: AI Blocks
+    url: https://useaiblocks.com/skills/hardest-objections-answer-writer
+    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
   - title: Presentation builder
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/presentation-creation
@@ -46,3 +54,4 @@ credits:
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/proofreading
     used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
 warnings: []
+needs_mode: manual

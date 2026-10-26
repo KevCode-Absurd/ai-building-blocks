@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It uses set processing steps with checks on timing and quality.
 new_slug: body-signal-analysis-builder
 name: Body signal analysis builder
-summary: Give it heart, skin or breathing signals. Get a cleaned, checked
-  analysis of events and variability.
+summary: Clean heart, skin or breathing recordings and get checked peaks, events and heart rate variability, with a Python script you can rerun.
 job: research-topics
 headline: Body signal analysis builder
-subhead: Turn raw heart, skin or breathing recordings into a cleaned, checked
-  analysis of events and variability. The code is repeatable, so another person
-  can rerun it and get the same result.
+subhead: Turn raw heart, skin or breathing recordings into a cleaned, checked analysis of events and variability. The code is repeatable, so another person can rerun it and get the same result.
 explain: |
   Turn raw heart, skin or breathing recordings into a cleaned, checked analysis of events and variability. The code is repeatable, so another person can rerun it and get the same result.
 
@@ -18,6 +15,10 @@ when:
   - You want heart rate variability from a short recording.
   - You need skin conductance or breathing signals cleaned.
   - You must line up signals from several sensors on one timeline.
+not_for:
+  - "You need a diagnosis, patient monitoring or alarms: use a validated clinical tool and a clinician."
+  - "You need to prove a new sensor or medical device works: use a formal validation study with a statistician."
+  - "You have no Python and no way to run code: ask a researcher or analyst to process the recording for you."
 you_give:
   - Signal files or arrays
   - The sampling rate
@@ -29,8 +30,31 @@ you_get:
   - Variability and complexity measures
   - Plots and a rerunnable script
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open an AI that can run Python code and read files. Check that Python 3.10 or newer and uv are set up.
+  - Add the skill to your AI. Paste its text into the chat, or load the skill folder if your tool allows it.
+  - Add your deidentified signal files. Say the sampling rate and the signal type, such as ECG or EDA. Add event markers if you have them.
+  - Ask your AI to follow the skill and build the analysis. Then look at the plots to check that peaks sit in the right places.
+  - Keep the script and the pinned library version. Rerun them to get the same result.
+output_sample:
+  input:
+    - Your signal files or arrays, such as ECG, skin conductance or breathing
+    - The sampling rate of each signal
+    - The signal type, such as ECG or EDA
+    - Event markers (optional)
+  prerequisites:
+    - An AI that can run Python code and read your files
+    - Python 3.10 or newer and uv installed
+    - Deidentified recordings stored on your own computer
+  output:
+    - name: Cleaned signal table
+      contains: Your filtered signals, with the sampling rate and the cleaning method used stated.
+    - name: Peak and event table
+      contains: Where beats, peaks and events were found, with times linked to the sampling rate.
+    - name: Heart rate variability table
+      contains: Variability measures for your recording, with the length of the recording stated.
+    - name: Complexity measures
+      contains: Complexity values with their settings, since the results change with length and method.
+    - name: Plots
+      contains: Charts of the cleaned signals and detected peaks so you can check the work by eye.
+    - name: Rerunnable script
+      contains: Python code with the library version pinned, so another person gets the same result.

@@ -1,6 +1,6 @@
 new_slug: seo-and-ai-search-agency-vetter
 name: "SEO and AI search agency vetter"
-summary: "Paste an agency proposal. Get red flags, questions to send, a keep-or-walk verdict and a score out of 100."
+summary: "Check an SEO agency proposal before you sign. Get red flags, questions to send, a keep, renegotiate or walk verdict and a score out of 100."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It weighs a sales pitch against a list of known warning signs, so a mid-level model is enough. Use a stronger one if the proposal is long."
@@ -17,6 +17,10 @@ when:
   - An agency or freelancer has sent you a proposal and you are about to sign.
   - You already pay for SEO or "GEO" (AI search) and cannot tell if it works.
   - A salesperson promises AI visibility, links or hundreds of pages.
+not_for:
+  - "You are still deciding whether to hire anyone for SEO at all: run the SEO worth-it checker first, or ask a person you trust who runs a store."
+  - "You need legal advice on a contract: this checks the pitch, not the legal terms, so ask a qualified person to read it."
+  - "You want to fix your own site's search problems: use Google Search Console to see real clicks and pages, and check indexing there."
 
 you_give:
   - The proposal, pricing page or your notes from the sales call
@@ -36,6 +40,29 @@ how_to_use:
   - Add your organic revenue for the last 6 to 12 months if you have it. Without it the skill cannot set a baseline.
   - Send the questions it lists to the agency and paste their answers back. Ask for the score again.
   - Sign only on month-to-month terms, with accounts in your name and one agreed number.
+output_sample:
+  input:
+    - The agency proposal, pricing page or your notes from the sales call
+    - The monthly price and the contract length
+    - Their customer stories and logos (optional)
+    - Your organic search revenue for the last 6 to 12 months (optional)
+  output:
+    - name: PROPOSAL and FIRST 90 DAYS
+      contains: The agency, monthly price, contract length and what ships in the first 90 days, with counts.
+    - name: POINTS
+      contains: Each point marked red, yellow or green, with the line that earned it and a question to ask.
+    - name: SCORE
+      contains: "A score out of 100 with the sum shown: 15 off per red flag, 7 off per yellow."
+    - name: VERDICT
+      contains: Keep, renegotiate or walk, with the reason.
+    - name: QUESTIONS TO SEND
+      contains: Questions to send the agency before you sign, each with what a good answer sounds like.
+    - name: TERMS TO ASK FOR
+      contains: Accounts in your name, month-to-month terms, and one agreed number with a baseline.
+    - name: SMALL PAID TEST
+      contains: A small trial with the scope, a control group of pages and a stop rule.
+    - name: NOT CHECKED
+      contains: Anything missing from the proposal, marked MISSING, so nothing is guessed.
 
 how_it_works:
   - title: Reads the plan

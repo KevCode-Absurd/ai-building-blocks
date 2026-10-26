@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It sets how fast help is removed for your students.
 new_slug: example-to-solo-practice-planner
 name: Example to solo practice planner
-summary: Describe where students can follow examples but not solve alone. Get a
-  path from examples to independent problems.
+summary: Plan how to move students from worked examples to solving problems alone. Give it your skill and class state. You get a step-by-step fade plan.
 job: teach-and-train
 headline: Example to solo practice planner
-subhead: Describe where students can follow examples but not solve alone. Get a
-  path from examples to independent problems. Bring the skill you are teaching.
-  Use the result to plan your next step.
+subhead: Describe where students can follow examples but not solve alone. Get a path from examples to independent problems. Bring the skill you are teaching. Use the result to plan your next step.
 explain: |
   A teaching sequence that moves students from watching worked examples to solving problems alone, one step at a time, so they stop freezing when the help disappears.
 
@@ -18,6 +15,10 @@ when:
   - You are not sure when to stop giving worked examples.
   - You need a set of practice problems that get harder in a sensible order.
   - Some students feel sure they understand but fail on new problems.
+not_for:
+  - Your students cannot yet follow one worked example. Teach the basic method first, then come back.
+  - You need a single worked example written out. Write that example first, or ask your AI for one, then plan the fade.
+  - You want to grade student work or give feedback on answers. Use your own marking, or a person who knows the class.
 you_give:
   - The skill you are teaching
   - What students know now and how you know it
@@ -30,7 +31,27 @@ you_get:
   - Independent practice design
   - Plan for stuck students
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat, or upload the skill file if your AI takes files.
+  - Type the skill you are teaching, in one clear sentence.
+  - Describe where your students are now and what shows it, such as work you have seen. Add year group, time and number of problems if you know them.
+  - Read the plan. Check the fading steps match how your students really work, and ask your AI to change any stage that does not.
+  - Use the plan in class. After it, plan the practice tasks and hints that go with it.
+output_sample:
+  input:
+    - The skill you are teaching
+    - Where your students are now and what shows it
+    - Year group and subject (optional)
+    - Number of practice problems and time available (optional)
+    - How students will be assessed (optional)
+  output:
+    - name: Complete Transition Sequence
+      contains: The stages from worked examples to solo problems, with when to move on and which problems to use.
+    - name: Expertise Reversal Checkpoints
+      contains: Points where you check if the help still works or has started to slow students down.
+    - name: Fading Schedule
+      contains: Which step to remove from each example, and in what order, as students get it right.
+    - name: Independent Practice Design
+      contains: How hard the solo problems should be, how they build up, and what to do when a student is stuck.
+    - name: Common Pitfalls
+      contains: Mistakes to watch for, including students who feel sure but cannot yet solve new problems.

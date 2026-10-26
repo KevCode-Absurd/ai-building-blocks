@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs effort against gain for each chore.
 new_slug: hr-process-automation-designer
 name: HR process automation designer
-summary: Name your HR processes, like onboarding. Get which to automate, which
-  tool fits each and a build order.
+summary: Find which HR tasks to automate first. Give it your HR processes and tools. You get a ranked list, a tool for each and a build order.
 job: hire-people
 headline: HR process automation designer
-subhead: A shortlist of HR tasks worth automating, with the tool for each and
-  the order to build them in. Name your processes, such as onboarding or leave,
-  and get a plan that saves real hours without breaking accuracy.
+subhead: A shortlist of HR tasks worth automating, with the tool for each and the order to build them in. Name your processes, such as onboarding or leave, and get a plan that saves real hours without breaking accuracy.
 explain: |
   A shortlist of HR tasks worth automating, with the tool for each and the order to build them in. Name your processes, such as onboarding or leave, and get a plan that saves real hours without breaking accuracy.
 
@@ -18,6 +15,10 @@ when:
   - You want to automate onboarding but do not know where to start.
   - You need a business case to get budget for an HR tool.
   - Data in your HR system is messy and you fear it will break automation.
+not_for:
+  - "You need final payroll or legal compliance decisions: ask your HR lead or a legal adviser to review them."
+  - "You need your HR system set up or configured: ask your HR system vendor or a consultant."
+  - "You want to automate how you judge candidates or staff performance: keep a person in charge of that decision."
 you_give:
   - The HR processes you run
   - Your HR system and other tools
@@ -29,7 +30,30 @@ you_get:
   - Tool suggestions for each flow
   - A business case and build order
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
+  - List the HR processes you run, such as onboarding or leave.
+  - Add your HR system, your other tools and how many hires or requests you handle each month.
+  - Add your pain points and goals if you have them.
+  - Read the ranked list first. Check that the top tasks are ones your team does often and by fixed rules.
+  - Ask your AI to design the flow for your top task. Have HR or legal review it before you build.
+output_sample:
+  input:
+    - The HR processes you run, such as onboarding or leave
+    - Your HR system and other tools
+    - How many hires or requests you handle each month
+    - Your pain points and goals (optional)
+  output:
+    - name: Ranked task list
+      contains: Each task scored on volume, difficulty and payoff, so you see what to automate first.
+    - name: Process maps
+      contains: Your chosen processes broken into steps, with the manual steps that can be automated marked.
+    - name: Workflow designs
+      contains: One automated flow per process, such as signed offer to day-one ready, with where a person approves.
+    - name: Tool suggestions
+      contains: For each flow, whether your HR system, a no-code tool or an AI helper fits best.
+    - name: Data quality checks
+      contains: What to clean up in your HR data so the automation does not break.
+    - name: Change plan
+      contains: How to bring staff and managers along so the new flows do not add friction.
+    - name: Business case and build order
+      contains: The case for budget, the order to build in, and ways to measure time saved and errors cut.

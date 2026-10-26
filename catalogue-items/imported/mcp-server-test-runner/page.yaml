@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes tests with checkable answers, then reads the results.
 new_slug: mcp-server-test-runner
 name: MCP server test runner
-summary: Point it at your MCP server. Get realistic task tests and a report on
-  whether an AI picks the right tool.
+summary: Test your MCP server with real tasks and see if an AI picks the right tool. You get a scored report and fixes to try.
 job: test-and-fix-code
 headline: MCP server test runner
-subhead: Tests for your MCP server that show if an AI picks the right tool for a
-  real task. Point it at the server and get a report on what passes, what fails
-  and why.
+subhead: Tests for your MCP server that show if an AI picks the right tool for a real task. Point it at the server and get a report on what passes, what fails and why.
 explain: |
   Tests for your MCP server that show if an AI picks the right tool for a real task. Point it at the server and get a report on what passes, what fails and why.
 
@@ -18,6 +15,10 @@ when:
   - The AI keeps choosing the wrong tool for a request.
   - You need regression checks before each release.
   - Your hosted server must handle many users at once.
+not_for:
+  - "You need to fix bugs in your server code: use the MCP server implementation skill, or ask a developer."
+  - "You want to rewrite tool names and descriptions: use the MCP server design skill, then come back to test."
+  - "You want a security scan or a login check: use the MCP server security or MCP server auth skill."
 you_give:
   - The MCP server code or address
   - Sample real data
@@ -30,8 +31,38 @@ you_get:
   - A tool selection accuracy report
   - CI test gates
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Download the skill folder and open it in an AI that can run code and save files, such as Claude Code. A plain chat can only walk you through the steps.
+  - Give your AI the path to your server code, your sample data file and a list of typical user tasks.
+  - Add the API key or model access the agent tests need. Tell your AI how to start your server.
+  - Ask your AI to follow the MCP server testing skill. It checks the build, the Inspector and the conformance suite first. Then it writes and runs the evals.
+  - Read the failing runs, not just the score. Each one shows where the AI took the wrong tool or got stuck.
+  - Fix the tool descriptions with the MCP server design skill. Then run the suite again, and again after any code change or model change.
+output_sample:
+  input:
+    - Your MCP server code, or its address
+    - A file of sample real data the server can read
+    - A list of typical tasks users ask for
+    - Access to an AI model to run the agent tests (an API key)
+    - Your CI setup (optional)
+  prerequisites:
+    - An AI that can run code and save files
+    - Node.js and npx installed to run the Inspector and conformance suite
+    - Python 3 to run the eval suite checker
+    - A server that builds and starts
+  output:
+    - name: Inspector pass
+      contains: Results for every tool, including error paths, empty results and oversized input.
+    - name: Conformance report
+      contains: Each failed spec check, with a written note on why it failed and what to do.
+    - name: evals.xml
+      contains: About ten read-only questions on real data, each with one verified answer and a set format.
+    - name: Eval suite lint check
+      contains: Flags duplicate questions, answers that may change over time, and answers leaked in the question.
+    - name: Baseline accuracy report
+      contains: Accuracy, tool calls, speed and tokens for the agent run, plus the agent's own feedback.
+    - name: Tool selection results
+      contains: Which tool the AI picked for each task, and which tool descriptions overlap.
+    - name: CI regression gates
+      contains: "Checks that run on each change: build, conformance, evals and a schema diff."
+    - name: Load test thresholds
+      contains: Error rate and speed limits for remote servers, set for a realistic mix of tool calls.

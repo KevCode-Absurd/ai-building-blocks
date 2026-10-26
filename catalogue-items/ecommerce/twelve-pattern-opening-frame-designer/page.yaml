@@ -1,6 +1,6 @@
 new_slug: twelve-pattern-opening-frame-designer
 name: Twelve-pattern opening frame designer
-summary: Choose opening frames from twelve visual patterns. Get a clear design brief for each first-frame test.
+summary: Pick opening frames for your ad from twelve visual patterns. Get a design brief for each first-frame test, with layout, light and text notes.
 job: make-image-ads
 headline: Twelve-pattern opening frame designer
 subhead: Share product photos, buyer, ad angle, brand rules and placement. Get three to five opening frame specs with layout and light notes.
@@ -12,6 +12,10 @@ when:
   - You need three to five opening frame specs with layout and light notes.
   - You need twelve-pattern opening frame designer for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - You need a finished image or a render. This gives written briefs only, so use a designer or an image tool to make the frame.
+  - You want the spoken or written first line of the ad. Write that first, then pair it with each frame, because the method says to match the two.
+  - You plan regulated health claims or competitor comparisons without checked facts. Use a plain product shot with no claim text instead.
 you_give:
   - Product photos
   - Buyer
@@ -24,6 +28,24 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+output_sample:
+  input:
+    - Your product photos and packaging
+    - Your core claim or ad angle
+    - Your buyer, in plain words
+    - Where the ad will run, such as Meta feed, Reels, Story or Google Display
+    - Your brand visual rules (optional)
+  output:
+    - name: Chosen patterns
+      contains: Three to five of the twelve visual patterns, picked to fit your theme, product and buyer.
+    - name: Frame spec
+      contains: "For each pattern: subject, layout, background, text overlay, light and colors."
+    - name: Production notes
+      contains: "For each frame: photo type, assets you have or lack, time estimate and A/B test variants."
+    - name: Verbal hook pairing
+      contains: A spoken or written hook to pair with each frame, as the rules require.
+    - name: Sources, gaps and assumptions
+      contains: The facts used, inputs that were missing and what the AI had to assume.
 how_it_works:
   - title: Check the inputs
     text: Confirm product photos, buyer, ad angle, brand rules and placement. Mark facts that are missing.

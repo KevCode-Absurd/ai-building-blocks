@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks each file against a set list.
 new_slug: browser-test-reviewer
 name: Browser test reviewer
-summary: Point it at your Playwright tests. Get each one checked against 20 bad
-  habits with fixes.
+summary: Check your Playwright tests for flaky habits. You get a score for each file and a fix for every problem, so you can clean up your test suite.
 job: test-and-fix-code
 headline: Browser test reviewer
-subhead: Point it at your Playwright tests. Get each one checked against 20 bad
-  habits with fixes. Bring a test file, a folder, or your whole project. Use the
-  result to plan your next step.
+subhead: Point it at your Playwright tests. Get each one checked against 20 bad habits with fixes. Bring a test file, a folder, or your whole project. Use the result to plan your next step.
 explain: |
   A scored review of your Playwright tests that shows what is flaky or weak, with a fix beside each problem.
 
@@ -18,6 +15,10 @@ when:
   - You inherited a test suite and need to judge its quality fast.
   - You are about to add many tests and want clean habits first.
   - You want a quick score for each test file.
+not_for:
+  - "You test with Cypress, Selenium or another tool: use a review made for that tool, or ask a teammate who knows it."
+  - "You only want a quick style check: run eslint-plugin-playwright in your project instead."
+  - "You want new tests written from scratch: ask your AI to write them first, then come back here to review them."
 you_give:
   - A test file, a folder, or your whole project
   - Your Playwright config (optional)
@@ -28,8 +29,28 @@ you_get:
   - A fix for each problem
   - A list of missing test cases
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Download the skill folder. Keep anti-patterns.md in it, because the review needs that file.
+  - Open your AI in your project, or paste in the test files if it cannot read your files.
+  - Ask it to run the Playwright test review. Give it a file, a folder, or say whole project.
+  - For a whole project, use an AI tool that supports sub-agents or /batch. Otherwise review one folder at a time.
+  - Read the critical problems first. Say yes when it asks to apply the fixes, or copy the fixes by hand.
+output_sample:
+  input:
+    - One test file, a folder of tests, or your whole project
+    - Your Playwright config file (optional)
+    - Page objects and fixtures that the tests use (optional)
+  prerequisites:
+    - An AI that can read your project files
+    - The anti-patterns.md file from the skill folder
+    - For a whole project, an AI tool that can run sub-agents or /batch
+  output:
+    - name: File review
+      contains: One block per test file with a score from 1 to 10, and problems listed by level with line numbers.
+    - name: Critical, Warning and Suggestions lists
+      contains: Problems sorted by how much they matter, each with a fix beside it.
+    - name: Summary table
+      contains: Total files, average score and count of critical issues, for a whole-project review.
+    - name: Fix list
+      contains: Corrected code for each critical issue, with an offer to apply the changes for you.
+    - name: Coverage gaps
+      contains: Pages or features that have no tests yet.

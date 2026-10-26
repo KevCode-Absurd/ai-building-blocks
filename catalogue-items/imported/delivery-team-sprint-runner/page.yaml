@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows set team routines and adjusts to your numbers.
 new_slug: delivery-team-sprint-runner
 name: Delivery team sprint runner
-summary: Tell it your team and sprint. Get metrics, capacity plans, ceremony
-  agendas and a sprint report for your PMO routine.
+summary: Plan sprints from real capacity and get a sprint report from your tracker data. Includes meeting agendas and delivery team metrics for your PMO routine.
 job: organise-work
 headline: Delivery team sprint runner
-subhead: A steady rhythm for a delivery team, with numbers instead of
-  adjectives. It sets up the team's metrics, checks sprint plans against real
-  capacity, gives you templates for each meeting, and writes the sprint report
-  from your tracker.
+subhead: A steady rhythm for a delivery team, with numbers instead of adjectives. It sets up the team's metrics, checks sprint plans against real capacity, gives you templates for each meeting, and writes the sprint report from your tracker.
 explain: |
   A steady rhythm for a delivery team, with numbers instead of adjectives. It sets up the team's metrics, checks sprint plans against real capacity, gives you templates for each meeting, and writes the sprint report from your tracker.
 
@@ -19,11 +15,16 @@ when:
   - Sprint planning keeps overcommitting and nobody knows why.
   - Leadership asks how the team is doing and you have only opinions.
   - Finance wants to turn story points into cost.
+not_for:
+  - "You need to write the tickets that go into the sprint: use ticket-authoring, or write them by hand."
+  - "You want the story of a retro or a postmortem: use after-action-report, since this only runs the meeting."
+  - "You want to set goals or decide what ships this quarter: use okr-design or roadmap-planning."
 you_give:
   - Team size and sprint length
-  - Tracker export or sprint history
+  - Your tracker export or sprint history
   - Planned absences (optional)
   - Which meeting or report you need
+  - Spend per agent run, if AI coding agents work in your team (optional)
 you_get:
   - Metric set for the team
   - Capacity-based sprint plan
@@ -31,7 +32,32 @@ you_get:
   - Sprint report
   - Points-to-hours ratio
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions. It does not need code running.
+  - Paste your tracker export, or attach it as a file. Add your team size, sprint length and planned time off.
+  - "Tell your AI what you need: a metric set, a sprint plan check, a meeting agenda or a sprint report."
+  - Check the numbers against your tracker. If history is missing, the result says so and does not invent a baseline.
+  - Use the ratio for planning only. Ask finance or an accountant to approve it before any capitalisation use.
+output_sample:
+  input:
+    - Your tracker export with created, started, done and reopened dates for each ticket
+    - Your team list and planned time off for the sprint
+    - The last 3 to 6 sprints of history (optional)
+    - Your sizing scale, such as points or t-shirt sizes
+    - Hours logged on capitalizable tickets, if finance needs a points-to-hours ratio (optional)
+  prerequisites:
+    - Tracker access or an export from Jira, Linear or GitHub Issues
+    - An AI that can read a file or pasted data
+    - "For agent lanes only: a paid coding-agent plan or API key, and a way to record spend per run"
+  output:
+    - name: sprint-[number]-report.md
+      contains: A one-page report with goal met or not, the eight metrics with a three-sprint trend, carryover reasons and risks.
+    - name: quarterly-rollup-[YYYY-QN].md
+      contains: The same metric table across the quarter, the points-to-hours ratio if used, and the changes the team made.
+    - name: Capacity math
+      contains: Available person-days minus absences and an unplanned-work buffer, set against trailing throughput for the coming sprint.
+    - name: Ceremony notes
+      contains: One note each for planning, standup, refinement, review and retro, using the matching template.
+    - name: Points-to-hours ratio
+      contains: "A per-team ratio from trailing history, with the window it was computed from. A planning aid: have finance or an accountant approve any capitalisation use."
+    - name: Agent-lane metrics
+      contains: "Separate rows for AI coding agents: dispatches, draft-PR cycle time, review rework, honest stops and cost per merged PR."

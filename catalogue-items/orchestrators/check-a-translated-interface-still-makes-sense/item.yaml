@@ -10,18 +10,15 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: copy_draft
-    required: false
-  - type: persona
-    required: false
   - type: source_text
-    required: false
-  - type: codebase
+    required: true
+  - type: copy_draft
+    required: true
+  - type: design_file
     required: false
 outputs:
   - type: copy_draft
-  - type: source_text
-  - type: code_change
+  - type: audit_report
   - type: document
 uses:
   - plain-words-interface-rewriter
@@ -29,11 +26,11 @@ uses:
   - screen-states-designer
 steps:
   - uses: plain-words-interface-rewriter
-    note: Clarify the original labels and preserve the meaning and variables in each string.
+    note: Clarify the original labels and preserve the meaning and variables in each string. Hands step 2 the original strings and a list of source fixes.
   - uses: translator
-    note: Compare the source and target UI strings for meaning, glossary consistency, placeholders and plural rules; flag languages you cannot assess.
+    note: Uses your translated strings and the original strings, not step 1's clearer suggestions. Compares them for meaning, glossary consistency, placeholders and plural rules; flags languages you cannot assess. Hands step 3 the table of strings and their problems.
   - uses: screen-states-designer
-    note: Check that translated strings cover all states and identify layouts requiring visual review.
+    note: Uses your screenshots or screen list with the string table from step 2. Checks that translated strings cover all states and identifies layouts requiring visual review.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

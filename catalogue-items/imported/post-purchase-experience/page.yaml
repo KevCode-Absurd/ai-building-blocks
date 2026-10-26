@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs timing and wording choices across several steps.
 new_slug: post-purchase-experience
 name: After-purchase experience planner
-summary: Give it your shipping, returns and loyalty setup. Get a plan for what
-  happens after checkout so customers order again.
+summary: Plan what happens after checkout so customers order again. Give it your returns, shipping and loyalty setup. Get a clear keep or change list.
 job: run-your-store
 headline: After-purchase experience planner
-subhead: Raise the chance that every order leads to the next one. Share your
-  shipping, returns and loyalty setup and get a plan for what happens after
-  checkout.
+subhead: Raise the chance that every order leads to the next one. Share your shipping, returns and loyalty setup and get a plan for what happens after checkout.
 explain: |
   Raise the chance that every order leads to the next one. Share your shipping, returns and loyalty setup and get a plan for what happens after checkout.
 
@@ -18,6 +15,10 @@ when:
   - You are rewriting your returns policy.
   - You are launching a loyalty programme and want it simple.
   - Your cart reminder emails go out too soon.
+not_for:
+  - "You want to fix cart layout, checkout fields or payment errors: use a checkout review step or your store platform's checkout settings, not this plan."
+  - "You want more reviews or a way to handle complaints: ask a person on your team to run a review request, since no sibling item covers it yet."
+  - "You want a referral scheme or a full store trust audit: use a simpler step, like a one-page referral offer, before this plan."
 you_give:
   - Return and refund policy
   - Abandoned-cart email timing
@@ -29,7 +30,29 @@ you_get:
   - Returns and refund policy suggestions
   - Loyalty programme structure
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Paste your return policy, cart email timing, box contents, average order value and free-shipping threshold.
+  - Add your loyalty setup if you have one (optional).
+  - Read the plan table. Check each keep or change line against how your store really works.
+  - Note that some rules are practitioner tips, not measured findings. The skill marks these, so test them before you rely on them.
+  - Make the top three changes first. Check your cart recovery and repeat orders again after 30 days.
+output_sample:
+  input:
+    - Your abandoned-cart email timing
+    - What goes in the box, such as inserts and codes
+    - "Your return policy: who pays, when you refund, drop-off options"
+    - Your loyalty setup, if you have one (optional)
+    - Your average order value and free-shipping threshold
+  output:
+    - name: Plan table
+      contains: Each after-checkout element, with keep or change, the replacement, and the rule behind it.
+    - name: Abandoned-cart timing
+      contains: When your reminder email should go out, based on a 24 to 72 hour window.
+    - name: Box and thank-you note
+      contains: What to put in the box, and a note with no offer attached.
+    - name: Returns and refund policy
+      contains: Free return terms and when to refund, with limits for items that need checking.
+    - name: Loyalty structure
+      contains: One automatic tier with a simple reward after a set number of buys.
+    - name: Sequence
+      contains: The order to roll out changes, from confirmation to box, returns, loyalty and cart timing.

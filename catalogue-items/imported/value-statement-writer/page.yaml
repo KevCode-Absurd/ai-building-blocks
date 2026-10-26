@@ -2,35 +2,54 @@ thinking: low
 thinking_why: It rewrites one message for three audiences.
 new_slug: value-statement-writer
 name: Value statement writer
-summary: Give it your value proposition. Get versions for marketing, sales and
-  onboarding, ready to use.
+summary: Turn your value proposition into value statements for each customer group, with versions for marketing, sales and onboarding copy.
 job: make-offer
 headline: Value statement writer
-subhead: Ready-to-use value statements for each group you sell to, in versions
-  for marketing, sales and onboarding. You stop rewriting the same pitch for
-  every audience.
+subhead: Give it your value proposition and your customer groups. It writes a clear value statement for each group. You get versions for marketing, sales and onboarding, so you stop rewriting the same pitch.
 explain: |
   Ready-to-use value statements for each group you sell to, in versions for marketing, sales and onboarding. You stop rewriting the same pitch for every audience.
 
   You give the skill your value proposition and your segments. For each segment it writes a statement that names the person, states the main benefit and result, and points to the feature that makes it happen. The tone is clear and direct. The skill follows a worked example using a design tool to show the pattern: one statement for social media marketers, another for small business owners, each focused on what that person cares about. You can then reuse each version in ads, decks and welcome emails, adjusting length for each place.
 when:
-  - You have one pitch but three kinds of customer and they care about different
-    things.
+  - You have one pitch but three kinds of customer, and each cares about different things.
   - Your sales deck sounds the same as your website.
-  - You are writing a welcome email and want to restate the value clearly.
+  - You are writing a welcome email and want to state the value clearly.
   - A new campaign needs a short line for each audience.
+not_for:
+  - "You have no value proposition yet: work out your positioning first with a simple one-page note on who you serve and why you are better, then come back."
+  - "You need pricing or a price page: set your price first, then write the offer around it."
+  - "You want one ad or one email written in full: write that piece directly in your AI, using the statement as the start."
 you_give:
-  - Your value proposition
-  - The customer groups you serve
-  - The main features behind the benefit
-  - Where the copy will be used (optional)
+  - Your value proposition, or the key benefits of your product
+  - The customer groups you serve, and what each one cares about
+  - Your main features and what sets you apart
+  - "Where the copy will be used: marketing, sales or onboarding (optional)"
+  - Your brand tone or voice notes (optional)
 you_get:
-  - A statement for each customer group
+  - A value statement for each customer group
   - Versions for marketing, sales and onboarding
-  - Benefits tied to the features that deliver them
-  - Short and long lengths
+  - Each benefit tied to the feature that delivers it
+  - Clear, direct wording you can reuse in ads, decks and welcome emails
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the prompt from the skill into the chat. Swap $ARGUMENTS for your product name.
+  - Add your value proposition, your customer groups, your key features and where the copy will run.
+  - Add your brand tone if you have one, such as plain, warm or formal.
+  - Read each statement. Check that the benefit is true and the feature really delivers it.
+  - Ask for a shorter or longer version if a place needs a different length.
+output_sample:
+  input:
+    - Your value proposition, or the key benefits of your product
+    - The customer groups you serve, and what each cares about
+    - Your main features and what makes you different
+    - "Where the copy will be used: marketing, sales or onboarding (optional)"
+    - Your brand tone or voice notes (optional)
+  output:
+    - name: Segment statements
+      contains: One statement per customer group that names the person, the main benefit and result, and the feature that delivers it.
+    - name: Marketing version
+      contains: Statements for ads, web pages and social posts, in clear and direct language.
+    - name: Sales version
+      contains: Statements shaped for decks and pitch conversations with each customer group.
+    - name: Onboarding version
+      contains: Statements that restate the value in welcome messages for new customers.

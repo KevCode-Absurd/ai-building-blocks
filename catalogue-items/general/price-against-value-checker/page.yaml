@@ -1,6 +1,6 @@
 new_slug: price-against-value-checker
 name: Price against value checker
-summary: Share dated cash flows, costs and a rate. Get value scenarios, missing assumptions and a maximum-price rule where the inputs support one.
+summary: Check a price against value. Share dated cash flows, costs and a rate. You get three value cases, a price limit if the inputs support one, and gaps.
 job: money-and-investing
 thinking: high
 thinking_why: It builds a value range from thin facts and compares it with alternatives, which needs careful reasoning.
@@ -14,9 +14,15 @@ when:
   - You are about to buy a business, equipment, a contract or a stake and must set a price.
   - A seller says it is a bargain and you cannot tell.
   - You want to compare a new opportunity with what you already have.
+not_for:
+  - "Your purchase has no dated cash flows, or a known market quote sets the price: use a comparable-sales check or the quoted price instead."
+  - "You want a personal verdict on whether to buy or sell a named security: ask a licensed financial adviser, as this method does not give advice."
+  - "You have no rate and no way to choose one: first settle your rate with an adviser or accountant, then come back."
 you_give:
-  - Dated cash amounts and currency, start or end timing, finite horizon or explicit perpetual assumption, and your chosen rate with its period
-  - The price, terms and all stated fees, with any maximum-price rule you want to compare
+  - Your dated cash amounts, with currency and whether each arrives at the start or end of a period
+  - Your time span in years, or a clear statement that the payments last forever
+  - Your chosen rate and the period it covers
+  - The asking price, all fees and terms, and any price rule you want to test
   - Your next best alternative for the same money or time (optional)
 you_get:
   - Three supported value scenarios with dated sums, or the gaps that block them
@@ -28,6 +34,31 @@ how_to_use:
   - Paste dated cash flows, their currency, timing and horizon, your chosen rate and period, the asking price and fees. Name the alternative.
   - Check each assumption it writes down and correct any you know are wrong.
   - Review any supported maximum-price scenario and its assumptions before using it. Missing or crossed cases give no manufactured limit. This is not financial advice.
+output_sample:
+  input:
+    - Your dated cash amounts, with currency and timing
+    - Your chosen rate and the period it covers
+    - The asking price, fees and terms
+    - Your next best alternative for the same money or time (optional)
+  output:
+    - name: Cash flows
+      contains: Your dated amounts in bad, ordinary and good cases, with timing and horizon. Unknown items are marked missing.
+    - name: Case values
+      contains: Each case discounted by date, with every term of the sum shown.
+    - name: Range
+      contains: A low, middle and high range only if the cases fit that order. Otherwise no range is given.
+    - name: Maximum price
+      contains: Your price rule applied to the middle case, with the gap to the asking price. Left open if checks fail.
+    - name: Quality over time
+      contains: A sum showing what a steady return does over a long hold. An illustration, not a forecast.
+    - name: Alternative
+      contains: Your next best use of the same money or time, compared with this choice.
+    - name: Friction
+      contains: Fees, taxes, switching costs and sales commissions, and what they cost over the period.
+    - name: Before you commit
+      contains: Short answers on timing, funding, exit, better uses of the money and approvals.
+    - name: Missing and checks missed
+      contains: Gaps in your inputs and any checks the skill could not pass, or none.
 how_it_works:
   - title: List what you get
     text: Lists supplied dated cash flows in bad, ordinary and good cases. Unknown amounts or dates stay missing.

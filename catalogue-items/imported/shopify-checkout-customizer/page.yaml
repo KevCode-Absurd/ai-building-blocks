@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows the extension rules, with a few design choices.
 new_slug: shopify-checkout-customizer
 name: Shopify checkout customizer
-summary: Say what checkout should add, such as a field or upsell. Get working
-  checkout extension code.
+summary: "Build a Shopify checkout customizer: say what checkout should add, like a gift note field or upsell, and get working extension code."
 job: build-software
 headline: Shopify checkout customizer
-subhead: Working checkout code for the change you want, such as a gift note
-  field, a post-purchase upsell or a rule that blocks bad orders. It stays safe
-  when Shopify updates checkout.
+subhead: Working checkout code for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. It stays safe when Shopify updates checkout.
 explain: |
   Working checkout code for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. It stays safe when Shopify updates checkout.
 
@@ -18,19 +15,45 @@ when:
   - You want to offer an upsell after the customer pays.
   - You need to stop orders that break a business rule.
   - You want to add content to the customer account or order status page.
+not_for:
+  - Your store has no Shopify Plus or checkout extensibility. Ask a Shopify developer to change the theme or Liquid files instead.
+  - You need backend rules, such as discounts or shipping logic that run on Shopify's servers. Use the Shopify Functions skill for that.
+  - You need real legal age checks. The age example here is a tick box the buyer fills in, so use a proper age check service.
 you_give:
-  - The change you want at checkout
-  - Which page it should appear on
-  - A Shopify Partner account
-  - Shopify CLI and a plan with checkout extensibility
+  - The change you want at checkout, such as a gift note field or an upsell
+  - The page it should appear on, such as checkout, thank-you page or customer account
+  - The web address of your own app, if the extension must fetch data (optional)
 you_get:
   - Extension code for your change
   - Project and file setup
   - Validation or field logic
   - Steps to test and deploy
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use the Shopify CLI.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Describe the change you want and the page it should appear on.
+  - Ask your AI to list any imports or app web addresses you must add before the code runs.
+  - Run the setup and preview commands yourself, or use an AI that can run code. You need the Shopify CLI for this.
+  - Preview the extension in your checkout editor and test it on a phone before you deploy.
+output_sample:
+  input:
+    - The change you want at checkout, such as a gift note field
+    - The page it should appear on
+    - The web address of your own app, if the extension must call it (optional)
+  prerequisites:
+    - A Shopify Partner account
+    - Shopify CLI installed
+    - A store on Shopify Plus or with checkout extensibility
+    - An AI that can run code, if you want it to run the setup for you
+  output:
+    - name: Extension folder
+      contains: The extension project made with the Shopify CLI, with the source code for your checkout change.
+    - name: shopify.extension.toml
+      contains: The settings file that names the extension and sets which part of checkout it appears in.
+    - name: Checkout code file
+      contains: The screen code for your field, banner, upsell or account page, with any imports it needs.
+    - name: Locale file
+      contains: The text strings for your extension, so you can add other languages.
+    - name: Validation or field logic
+      contains: Code that saves custom field values or blocks the buyer from moving on when a rule fails.
+    - name: Test steps
+      contains: How to preview the extension with the dev command and the checkout editor before you deploy.

@@ -38,12 +38,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Web font pairing picker.** Use the skill `web-font-pairing-picker`. Picks fonts and sizes that fit the site's tone.
-2. **Page grid and type planner.** Use the skill `page-grid-and-type-planner`. Give it the design direction from the steps before. Keeps the fonts from the step before and sets a grid and layout around them.
+1. **Web font pairing picker.** Use the skill `web-font-pairing-picker`. Picks fonts and sizes that fit the site's tone. Hands step 2 the type direction.
+2. **Page grid and type planner.** Use the skill `page-grid-and-type-planner`. Give it the design direction from the steps before. Keeps the fonts from step 1 and sets a grid and layout around them. Hands step 3 the design direction and the page layout, which you add to your brief at the pause.
 
 Pause here: Add the type list, grid and page layout to your brief for the page, with the words and images you have.
 
-3. **Website art director.** Use the skill `website-art-director`. Builds the page from the brief, following the type and grid you added.
+3. **Website art director.** Use the skill `website-art-director`. Give it the design direction and the page layout spec from the steps before. Builds the page from your brief plus the design direction and page layout from step 2, so the type and grid carry through. Hands step 4 the built page.
 4. **Web app tester.** Use the skill `web-app-tester`. Give it the web app from the steps before. Opens the built page and clicks through it to find what is broken.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

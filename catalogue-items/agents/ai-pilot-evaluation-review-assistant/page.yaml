@@ -1,56 +1,112 @@
 new_slug: ai-pilot-evaluation-review-assistant
 name: AI pilot evaluation review assistant
 headline: AI pilot evaluation review assistant
-summary: A pilot evidence brief, data quality gaps and go stop checklist result.
+summary: Turn your AI pilot results into an evidence brief, data quality gaps and a go or stop checklist result. Missing baselines are flagged, not guessed.
 job: set-up-ai
 thinking: high
-thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A pilot evidence brief, data quality gaps and go stop checklist result. Share the bounded AI pilot hypothesis, approved baseline, actual test cases and results, budget and existing ordered go stop checklist. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
+thinking_why: It checks a test table, a baseline and a checklist against each other and must not turn a demo into a decision.
+subhead: Give it your AI pilot's goal, the baseline you measured before it, the test results and your go or stop checklist. It checks the numbers, flags what is weak and applies the checklist in order. You get an evidence brief, a gap list and a checklist result.
 explain: |-
-  A pilot evidence brief, data quality gaps and go stop checklist result.
+  An AI pilot often ends with a good demo and a hopeful meeting. Then someone asks what the old way scored, how many cases were tested, what it cost and what went wrong. If nobody wrote those down first, the answer is a feeling. This AI pilot evaluation review turns the pilot into a test with numbers.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. A prototype demo is distinct from representative evaluation; absent baseline, privacy or mandatory checks blocks the affected decision. Missing tools or evidence stay visible in the final summary.
+  It starts with the goal you stated and the baseline you measured before the pilot. It marks which success signals were set before the results and which were added after, because a goal moved after the fact proves little. Then it reads your case table. It checks how many cases were tried, how many passed, what the failures were, what the pilot cost and whether the sums add up. A few good examples are called a demo, not evidence.
+
+  Last, it applies your own go or stop checklist in order. Each item is a pass, a fail or unknown. An unknown required item blocks the call. The agent never turns on a tool, spends budget or approves anything. If your baseline or success measure changes, it starts a new labeled version, so you never claim an improvement on a different yardstick.
 when:
-  - You need a pilot evidence brief, data quality gaps and go stop checklist result.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - Your pilot has new test results and a gate meeting is coming.
+  - A manager asks whether the AI is actually better than the current way, and you need numbers.
+  - You changed the success measure or the baseline and need to keep old and new results apart.
+  - You review the pilot each month and want each review to start from the last one.
+not_for:
+  - You only have a demo or a few good examples and no baseline. Affected checklist items come back Unknown, and you will not get a Go.
+  - You have no go or stop checklist. It applies yours and does not write one. Agree one with your team first.
+  - You need one decision and no record for later. Use the Prepare an AI pilot go decision workflow.
+  - You want to track what you promised pilot customers. Use the Pilot customer promise review assistant.
+  - You want to check one spreadsheet for errors. Use the Spreadsheet checker.
 you_give:
-  - The bounded AI pilot hypothesis, approved baseline, actual test cases and results, budget and existing ordered go stop checklist. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - The pilot's goal, in one or two sentences (what you expect the AI to do better, and by how much)
+  - The baseline, which is how the work is done today with numbers, and where and when you measured it
+  - Your test cases and results as a spreadsheet or table, one row per case, with what happened and pass or fail
+  - The pilot budget and the cost so far
+  - Your go or stop checklist, in order, with its stop rules
+  - The date your results run to
+  - The record from your last review (optional)
 you_get:
-  - A pilot evidence brief, data quality gaps and go stop checklist result.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - An evidence brief with the goal, the baseline, which success signals were set first, and what was measured
+  - A data quality gap list covering missing counts, missing costs, unrepresentative cases and sums that do not add up
+  - Your checklist applied in order, each item marked Pass, Fail or Unknown, with the evidence
+  - A call of Go, Stop or Cannot decide yet, with the reason
+  - A short record to start your next review from
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, or paste SKILL.md into a new chat. Claude, ChatGPT and Gemini work if they can read your files. Without file access, paste your results table as text.
+  - Attach your results table, your baseline and your checklist. Type the goal, the budget and the results date. Add your last record on a repeat run.
+  - Say "Run the review. Do not guess any missing number." Your AI asks once for anything missing.
+  - Read pilot-evidence-brief.md first. Check the baseline and the counts against your own records.
+  - Open go-stop-checklist.md. Any Unknown on a required item needs a fix before the gate. data-quality-gaps.md says what to collect.
+  - Keep next-review-record.md. Run it again when new results arrive or the gate date comes up. The agent changes no budget and turns nothing on.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep pilot ID, approved hypothesis, baseline version, case set, results cutoff and gate evidence. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A bounded pilot receives new representative test results or an approved gate becomes due.
-  - title: Choose the next step
-    text: Run prepare-an-ai-pilot-go-decision for changed evidence or a due review. If the baseline or success definition changes, establish a new labeled evaluation version rather than claiming an improvement on the old basis.
-  - title: Check and save evidence
-    text: A prototype demo is distinct from representative evaluation; absent baseline, privacy or mandatory checks blocks the affected decision. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read the last record
+    text: If you supply one, it loads the goal, baseline version, case set and open items. On a first run it sets a baseline.
+  - title: Find what changed
+    text: New representative results or a gate date starts a review. If nothing changed and no review is due, it says so and stops.
+  - title: Check the goal and the baseline
+    text: It marks which success signals were set before the results and which were added after. If the baseline or success measure changed, it starts a new labeled version.
+  - title: Check the results table
+    text: It counts the cases, passes, failures and costs, redoes the sums and separates measured results from stories.
+  - title: Find the data gaps
+    text: It lists missing counts, missing costs, cases that look nothing like real work and anything that does not add up, and what to collect.
+  - title: Apply your checklist
+    text: It goes through your checklist in order. Each item is Pass, Fail or Unknown, with the evidence. Unknown required items and stop rules are kept.
+  - title: Save the record
+    text: It writes the goal, baseline version, case set, results date and gate evidence, so your next review starts from here.
 output_shape: |-
-  Scope and source coverage
-  A pilot evidence brief, data quality gaps and go stop checklist result.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE  <pilot name> | <results to date> | <baseline version> | <n> cases
+  CHANGED SINCE LAST REVIEW  <what changed, or "first run">
+
+  EVIDENCE BRIEF
+    GOAL  <hypothesis> | set before results? <yes or added later>
+    BASELINE  <how it is done today, with numbers> | <source and date>
+    RESULTS  <cases> | <passed> | <failed> | <not scored> | <cost so far> | <budget>
+    FAILURES  <what went wrong, in groups, with counts>
+    MEASURED OR STORY  <what the numbers show> | <what is only an example>
+
+  DATA QUALITY GAPS
+    <gap> | <what it blocks> | <what to collect>
+
+  CHECKLIST RESULT
+    <item in your order> | <Pass, Fail or Unknown> | <evidence> | <stop rule hit?>
+
+  CALL  <Go, Stop or Cannot decide yet> | <reason>
+  MISSING  <each gap and what it blocks>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The pilot's goal in one or two sentences
+    - The baseline, with numbers, source and date
+    - Your test cases and results as a table
+    - The pilot budget and the cost so far
+    - Your ordered go or stop checklist
+    - The record from your last review (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - A baseline measured before the pilot started
+    - A go or stop checklist your team agreed
+  output:
+    - name: pilot-evidence-brief.md
+      contains: The goal, the baseline, which success signals were set first, the case counts, costs, failure groups and what is measured versus only an example.
+    - name: data-quality-gaps.md
+      contains: Missing counts, missing costs, unrepresentative cases and sums that do not add up, with what each blocks and what to collect.
+    - name: go-stop-checklist.md
+      contains: Your checklist in order, each item Pass, Fail or Unknown with evidence, the stop rules hit, and the call.
+    - name: next-review-record.md
+      contains: The goal, baseline version, case set, results date, open items and the trigger for your next review.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: A prototype demo is distinct from representative evaluation; absent baseline, privacy or mandatory checks blocks the affected decision.
+  - what: Baseline
+    how: Measure how the work is done today before the pilot, and give the numbers, the date and where they came from. Without one, the agent marks improvement claims Unknown.
+  - what: Success signals
+    how: Write the success measure before you look at results. The agent then marks it as set first.
+  - what: Cases
+    how: Say how cases were picked. Easy cases picked by hand are marked as not representative.
 judge:
   - A prototype demo is distinct from representative evaluation; absent baseline, privacy or mandatory checks blocks the affected decision.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -63,16 +119,25 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Record the baseline before the next pilot starts, with its date and source.
+  - Keep each review's record in a dated folder, so a changed measure never hides an old result.
+  - Add the checks your own team requires, such as privacy review, so they appear in the checklist from the start.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads your results table, baseline and checklist together and redoes the sums.
+    - name: A spreadsheet export
+      why: A CSV or Excel file with one row per case lets it count passes, failures and costs without retyping.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The privacy or security review for the pilot.
+    - A named owner who approves the go or stop call.
+    - Cost records from billing for the same dates.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Baseline
+    meaning: How the work is done today, measured before the pilot, so you can compare.
+  - term: Representative cases
+    meaning: Test cases that look like the real work, not only the easy ones.
+  - term: Gate
+    meaning: A planned meeting where you decide to go on or stop.
+  - term: Record
+    meaning: A short file that says where this review stopped, so the next review can start from it.

@@ -5,6 +5,22 @@ description: When the user wants to optimize delivery routes, solve vehicle rout
 
 # Route Optimization
 
+## How to run this version
+
+This block was added by AI Blocks. The method below is the original author's.
+
+**Ask first, never guess.** You need: the stops (address or coordinates), the depot, number of vehicles and their capacity, shift length, minutes at each stop, and any delivery windows. If one is missing, ask once. If the user does not know, write MISSING next to it in the report and say what it would change. Do not invent stops, distances or capacities.
+
+**Distances.** The code uses straight-line distance between coordinates. Real roads are longer. If the user gives only addresses, say that you cannot measure road miles without a maps tool, and ask for a distance table or a maps export. Otherwise label every mile and minute figure "straight-line estimate".
+
+**What the result is.** The methods here (nearest neighbor, savings, sweep, local search) are heuristics. They give low-mileage routes, not a proven shortest set. The file itself says they can be 10 to 30 percent worse than the best possible. Never call the result "the shortest" or "optimal" unless an exact solver finished and proved it.
+
+**Tools.** Small lists (under about 15 stops) can be worked in plain chat. Larger lists need an AI that can run Python with NumPy and SciPy. The exact method uses PuLP with its free CBC solver. OR-Tools is free too. Gurobi, CPLEX and the routing products named near the end are paid and are not needed.
+
+**Output.** Use the layout in "Output Format" below. Every number in that layout is a placeholder showing where a figure goes, not a benchmark. Fill it only with figures you calculated from the user's stops. If no current routes were given, leave out the "Current" column and say so.
+
+**Stop and say so** if there are fewer than about 5 stops (a map app is enough) or the user needs live re-routing during the day (use a dispatch tool).
+
 You are an expert in transportation route optimization and vehicle routing problems. Your goal is to help design optimal delivery routes that minimize costs, reduce travel distance, improve service levels, and maximize fleet utilization.
 
 ## Initial Assessment
@@ -1223,47 +1239,36 @@ def solve_vrp_ortools(distance_matrix, num_vehicles, depot=0):
 ### Route Optimization Report
 
 **Executive Summary:**
-- Total routes: 12
-- Total distance: 845 miles (15% reduction vs. current)
-- Total time: 96 hours
-- Vehicle utilization: 87% average
-- On-time delivery: 98% (vs. 89% current)
+- Total routes: <n>
+- Total distance: <miles> (<change> vs. current, or "no current routes given")
+- Total time: <hours>
+- Vehicle utilization: <percent> average
+- Late stops: <count> (only if time windows were given)
 
 **Route Details:**
 
 | Route | Driver | Stops | Distance | Duration | Load | Utilization | Start Time |
 |-------|--------|-------|----------|----------|------|-------------|------------|
-| R1 | Smith | 18 | 72 mi | 8.5 hrs | 1,850 lbs | 93% | 7:00 AM |
-| R2 | Jones | 15 | 65 mi | 7.8 hrs | 1,720 lbs | 86% | 7:00 AM |
-| R3 | Brown | 22 | 83 mi | 9.2 hrs | 1,980 lbs | 99% | 6:30 AM |
+| R1 | <name> | <n> | <miles> | <hours> | <load> | <percent> | <time> |
+| R2 | <name> | <n> | <miles> | <hours> | <load> | <percent> | <time> |
 
-**Stop Sequence (Example Route R1):**
+**Stop Sequence (one table per route):**
 
-1. Depot - 7:00 AM
-2. Customer A (123 Main St) - 7:25 AM (ETA: 7:20-7:40)
-3. Customer B (456 Oak Ave) - 7:52 AM (ETA: 7:45-8:00)
-4. Customer C (789 Elm St) - 8:18 AM (ETA: 8:00-8:30)
-...
-18. Customer R (321 Pine Rd) - 3:45 PM (ETA: 3:30-4:00)
-19. Return to Depot - 4:15 PM
+1. Depot - <start time>
+2. <Stop name and address> - <arrival time> (window: <from-to>, if any)
+3. ...
+n. Return to depot - <time>
 
-**Performance Metrics:**
+**Performance Metrics (needs the current routes; otherwise skip this table):**
 
-| Metric | Current | Optimized | Improvement |
-|--------|---------|-----------|-------------|
-| Total miles | 995 | 845 | -15% |
-| Labor hours | 112 | 96 | -14% |
-| Vehicles used | 14 | 12 | -14% |
-| Avg stops/route | 15 | 18 | +20% |
-| Fuel cost | $1,990 | $1,690 | -15% |
-| Late deliveries | 11% | 2% | -82% |
+| Metric | Current | New plan | Change |
+|--------|---------|----------|--------|
+| Total miles | <value> | <value> | <value> |
+| Labor hours | <value> | <value> | <value> |
+| Vehicles used | <value> | <value> | <value> |
+| Late deliveries | <value> | <value> | <value> |
 
-**Recommendations:**
-1. Implement route optimization software
-2. Provide mobile apps to drivers
-3. Establish dynamic re-optimization process
-4. Monitor and adjust time windows
-5. Consider adding 1 vehicle for peak days
+**Recommendations:** 3 to 5 changes, each tied to a number in the report above. Name stops that cause trouble (tight windows, far outliers).
 
 ---
 

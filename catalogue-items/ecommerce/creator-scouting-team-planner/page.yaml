@@ -1,6 +1,6 @@
 new_slug: creator-scouting-team-planner
 name: "Creator scouting team planner"
-summary: "Say what you sell and who buys. Get scouting roles, a finding method and a weekly routine."
+summary: "Plan an in-house creator scouting team for your store. Say what you sell and who buys. Get roles, a scouting method and a weekly routine."
 job: grow-social
 thinking: medium
 thinking_why: "It builds a team plan from a few facts, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You want to find creators in-house instead of paying an agency.
   - Your creator list all looks the same, or comes from one city.
   - You are weighing a TikTok Shop and want a clear fit check before you start.
+not_for:
+  - "You already pay an agency under contract: keep the agency, or ask a person on your team to compare its list with your buyer."
+  - "You want a general creator partnership plan with no team: use the creator partnership planner."
+  - "You have no budget for creator pay or free product: start with a simple weekly list of creators your buyer follows, and add a team later."
 
 you_give:
   - Who your buyer is and where they live
@@ -35,6 +39,30 @@ how_to_use:
   - Say how many people and how many hours a week you can give it.
   - If you plan to use a shop, paste sales by day for each channel you sell in.
   - Run the first week's routine, then test the fit rules on your first 10 posts.
+output_sample:
+  input:
+    - Who your buyer is and where they live
+    - Your budget, and how many people and hours you can use
+    - The platforms you will use
+    - Your sales by day for each channel (optional)
+    - Your product price and landed cost (optional)
+  output:
+    - name: TEAM
+      contains: Scout, relationship manager and lead roles, with who fits each and a weekly routine.
+    - name: SCOUTING METHOD
+      contains: How scouts find varied creators, the niche to start in, when to widen, sizes and the weekly list.
+    - name: BRIEF AND RELATIONSHIP RULES
+      contains: "A light brief, the #ad disclosure rule, and whether to track with codes, links or the halo read."
+    - name: SHOP FIT
+      contains: A go or no-go for a TikTok Shop, showing price, buyer fit and spillover.
+    - name: HALO READ
+      contains: Which other channels to watch in the week a video lands.
+    - name: BIAS CHECK
+      contains: Creators found by region set against buyers by region.
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none.
+    - name: MISSING
+      contains: Any facts you did not give, marked so nothing is invented.
 
 how_it_works:
   - title: Sets the team

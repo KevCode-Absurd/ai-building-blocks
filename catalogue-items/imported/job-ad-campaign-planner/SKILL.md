@@ -10,6 +10,55 @@ metadata:
 
 Plan and run marketing campaigns that attract candidates at scale — job ad copy, content calendars, paid and organic channel strategy, and campaign measurement — distinct from one-to-one candidate outreach.
 
+## When to use it
+
+Use it to plan a campaign that gets many applications for one role or a group of similar roles.
+
+Skip it when:
+
+- You need to find or message one person. Use the Candidate sourcing planner or the Candidate outreach drafter.
+- You only need a job post. Use the Job post writer.
+- You want a career-site rebuild or an employer brand project. This plan covers a campaign, not a brand.
+
+## What to gather first
+
+Ask for anything missing once, in one message. Mark what you still lack as MISSING. Never invent past results or market rates.
+
+1. The role, the number of hires and the start date.
+2. Time left and budget (a number, or "none").
+3. Who you want to reach and where they spend time.
+4. Channels you use now and how they did, in your own numbers (optional).
+5. Your tone and any rules for what ads may say (optional).
+
+## Steps
+
+1. Describe 1 or 2 candidate types in a few lines. Split active job seekers from people who are not looking.
+2. Pick channels and split the budget. Label every split a starting guess to adjust after the first week.
+3. Write the main ad copy: clear, no jargon, no impossible requirements.
+4. Write 3 headline variants, each testing one idea.
+5. Build a 4-week content calendar for the careers page and social posts.
+6. Write a test plan: what you change, what you measure, and how long you run it.
+7. Set the funnel measures: views, clicks, applications, interviews, hires.
+
+## Output format
+
+1. Campaign summary (goal, timeline, candidate types)
+2. Channels and budget table (channel, share of budget, why)
+3. Ad copy and 3 headline variants
+4. 4-week content calendar (table: week, channel, post idea)
+5. Test plan (table: idea tested, measure, run time, how to decide)
+6. Funnel report layout with blank cells for your results
+
+## Rules
+
+- Do not state click rates, apply rates or hire rates for any industry. Give the formula, leave the cell empty, and tell the user to fill it from their own history or a named source.
+- Do not claim a result the campaign has not earned.
+- Keep ad wording free of bias and of promises the employer did not make.
+
+## After you run it
+
+Run the first week, then compare your numbers to the test plan. Use the Candidate sourcing planner for hard-to-fill roles. Use the Hiring progress reporter for updates to leaders.
+
 ## Supported tasks
 
 - Planning recruitment marketing campaigns tied to specific hiring goals
@@ -53,7 +102,7 @@ Plan and run marketing campaigns that attract candidates at scale — job ad cop
 1. "Design a recruitment marketing funnel report tracking impressions, clicks, applications, and hires by channel."
 2. "How do we attribute hires to specific recruitment marketing campaigns when candidates touch multiple channels?"
 3. "Summarize campaign performance and ROI for [campaign] to present to TA and marketing leadership."
-4. "What benchmark click-to-apply and apply-to-hire rates should we expect for [role type/channel], and how do ours compare?"
+4. "How do our click-to-apply and apply-to-hire rates compare with our own past campaigns? Do not state industry rates unless the user gives a named source."
 
 ## Tips
 

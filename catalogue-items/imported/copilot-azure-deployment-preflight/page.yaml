@@ -2,17 +2,56 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-azure-deployment-preflight
 name: Bicep deployment preflight checker
-summary: Share your Bicep deployment. Get syntax, permission and proposed-change
-  checks before it goes live.
+summary: Check your Bicep files before you deploy to Azure. Get syntax checks, a preview of changes and a permission check in one report.
 job: ship-and-host
 headline: Bicep deployment preflight checker
-subhead: Share your Bicep deployment. Get syntax, permission and proposed-change
-  checks before it goes live. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Give your AI your Bicep files and tell it where you deploy. It checks the syntax, previews what will change and tests your permissions. You get one report file, preflight-report.md, to read before you deploy.
+not_for:
+  - "You use Terraform or raw ARM JSON templates: use the native plan or validate commands for that tool, or ask a cloud engineer to review them."
+  - "Your app fails after it is live: read your app logs or Azure Monitor, because this only checks the deployment files."
+  - "You have no Azure CLI or Azure Developer CLI on your computer: install them first, or ask a teammate who has them to run the checks."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can run commands on your computer, and sign in to Azure first with az login or azd auth login.
+  - Open your project folder in your AI tool and add this skill.
+  - "Say: Validate my Bicep deployment before I run it. Add your resource group, subscription and location."
+  - Let it run the checks. It keeps going even if one step fails.
+  - Open preflight-report.md and fix every error first.
+  - Run the check again until no deletes surprise you, then deploy with azd up or az deployment group create.
+output_sample:
+  input:
+    - Your Bicep file, or your project folder if it has an azure.yaml file
+    - Your parameter file (optional)
+    - Your resource group name, subscription and location
+    - Your azd environment name (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - Azure CLI, Azure Developer CLI and Bicep CLI installed
+    - You are signed in to Azure
+  output:
+    - name: Summary
+      contains: The overall pass or fail status, the time of the check, the files checked and the target scope.
+    - name: Tools Executed
+      contains: The commands that ran, the tool versions and the validation level used.
+    - name: Issues
+      contains: Each error and warning with how serious it is and how to fix it.
+    - name: What-If Results
+      contains: Which resources will be created, changed, deleted or left alone.
+    - name: Recommendations
+      contains: The next steps to take before you deploy.
+when:
+  - You are about to deploy Bicep files to Azure and want to see what will change first.
+  - You changed a Bicep file and want to catch errors before they reach Azure.
+  - You are not sure your account has the rights to deploy.
+  - You are about to run azd provision or azd up and want a safety check.
+you_give:
+  - Your Bicep file, or your project folder
+  - Your parameter file (optional)
+  - Your resource group name, or your location for wider scopes
+  - Your Azure subscription
+  - Your azd environment name (optional)
+you_get:
+  - A preflight-report.md file in your project folder.
+  - A list of syntax errors and warnings with line numbers.
+  - A preview of what will be created, changed or deleted.
+  - A note if your permissions look too low to deploy.
+  - Clear next steps to fix before you deploy.

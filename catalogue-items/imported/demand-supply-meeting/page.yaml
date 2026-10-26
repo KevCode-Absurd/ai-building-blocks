@@ -2,34 +2,112 @@ thinking: medium
 thinking_why: It follows a standard monthly planning cycle.
 new_slug: demand-supply-meeting
 name: Monthly demand and supply meeting planner
-summary: Give it your forecast and capacity. Get a monthly meeting agenda, gap
-  list and decisions that need an owner.
+summary: Plan your monthly S&OP meeting. Give it your forecast and capacity to get an agenda, a demand and supply gap list and decisions with owners.
 job: plan-supply-chain
 headline: Monthly demand and supply meeting planner
-subhead: Give it your forecast and capacity. Get a monthly meeting agenda, gap
-  list and decisions that need an owner. Bring demand forecast. Use the result
-  to plan your next step.
+subhead: Give it your demand forecast, your capacity and the people who attend. It builds the agenda for your monthly planning meeting and lists each gap between demand and supply. You also get the decisions to make, each with a named owner.
 explain: |
-  A monthly planning meeting that gets sales, operations and finance agreeing on one plan. You give it your forecast and capacity, and you get an agenda, a list of gaps between demand and supply, and decisions that each need a named owner.
+  Sales promises more than operations can build. Finance works from a third number. A monthly sales and operations planning meeting (S&OP) fixes this by getting every team to agree on one plan for demand and supply.
 
-  It begins by learning how you plan today, who attends, how many products you handle and where it hurts. Then it lays out the standard monthly cycle: update demand, check supply, find the gaps, resolve what staff can, and take the rest to leadership. Inputs, outputs and measures for each step are listed. It also helps you track forecast accuracy and service levels so the meeting improves over time.
+  This skill sets up that meeting for you. It first asks how you plan today, who attends and where it hurts. Then it lays out the monthly cycle: update demand, check supply, find the gaps, settle what staff can, and take the rest to leaders. For each step it lists what goes in and what comes out.
+
+  It does not guess your numbers. Costs and limits it shows in examples are placeholders. You give your own, or it marks them MISSING. Run it once a month so the meeting ends in decisions, not updates.
 when:
-  - Sales promises more than operations can build.
-  - Your planning is in separate spreadsheets that never match.
+  - Sales promises more than operations can build, and nobody owns the gap.
+  - Your plans sit in separate spreadsheets that never match.
   - You want a monthly meeting that ends in decisions, not updates.
   - Leadership asks for one number to run the business on.
+not_for:
+  - "You only need a demand forecast from past sales: use the Demand forecast planner."
+  - "You need to split limited stock across orders: use the Supply and demand balancer."
+  - "You want to test one late shipment or demand spike: use the What-if supply scenario planner."
+  - "You plan one product or a one-off decision. This is for a monthly cycle across product families."
 you_give:
-  - Demand forecast
-  - Capacity and inventory data
-  - Who attends and how often you meet
-  - Current pain points (optional)
+  - Your demand forecast by product family and month
+  - Your capacity and stock by product family and month
+  - Who attends the meeting and how often you meet
+  - Last month's actual sales, to check forecast accuracy (optional)
+  - Your current pain points (optional)
 you_get:
-  - Meeting agenda by step
-  - Demand and supply gap list
-  - Decisions with owners
-  - Measures to track
+  - A meeting agenda for the monthly cycle, with a time for each item
+  - A gap list showing demand against capacity for each family and month
+  - Options to close each gap, with costs only from your own numbers
+  - Decisions to make, each with a named owner
+  - Measures to track next month, and a list of what is missing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Open Claude, ChatGPT or Gemini and paste the skill. A plain chat works. If your AI cannot run code, it does the sums in a table."
+  - "Gather your forecast, your capacity and stock, and the attendee list. A spreadsheet or pasted table is fine."
+  - "Paste them in and say how often you meet and what hurts most. Say what you do not have."
+  - "Read the gap list first. Check that each number matches your own sheets."
+  - "Fill in the cost of each option yourself. Any cost marked as a placeholder or MISSING needs your figure."
+  - "Take the agenda and decision list to the meeting. Give each decision an owner and a date, and run the skill again next month."
+how_it_works:
+  - title: Learn how you plan
+    text: Asks how you plan now, who attends, how many products you have and where it hurts.
+  - title: Check the numbers
+    text: Reads your forecast and capacity and flags anything missing or odd.
+  - title: Find the gaps
+    text: Compares demand with capacity for each product family and month.
+  - title: List the options
+    text: Sets out overtime, build ahead, outsource, limit demand or do nothing, with costs from you.
+  - title: Build the agenda
+    text: Lays out the five-step monthly cycle with the real attendees and times.
+  - title: Name the decisions
+    text: Lists each decision with an owner and a date, then the measures to track.
+output_shape: |
+  S&OP meeting pack, <month>
+
+  Summary: <one line on the biggest gap>
+
+  Agenda
+  1. <item> (<minutes>) | <who>
+
+  Gap list
+  | Family | Month | Demand | Capacity | Gap |
+
+  Options per gap
+  | Gap | Option | Extra supply | Cost (yours or MISSING) |
+
+  Decisions
+  1. <decision> | owner: <name> | by: <date>
+
+  Measures to track: <list>
+  Missing: <list>
+output_sample:
+  input:
+    - Your demand forecast by product family and month
+    - Your capacity and stock figures
+    - Who attends and how often you meet
+    - Last month's actuals and pain points (optional)
+  output:
+    - name: Meeting agenda
+      contains: The monthly cycle as agenda items with times and the people who attend.
+    - name: Gap list
+      contains: Demand against capacity for each family and month, with the gap.
+    - name: Options table
+      contains: Ways to close each gap, with costs only from your own numbers.
+    - name: Decisions
+      contains: Each choice the meeting must make, with a named owner and a date.
+    - name: Measures to track
+      contains: Forecast accuracy and service measures to review next month.
+    - name: Missing list
+      contains: The inputs you did not give, so you can fill them before the meeting.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A plain chat is enough. A tool that runs code can build the forecast checks for you.
+  inputs:
+    - A spreadsheet export of your forecast and capacity
+    - Last month's actual sales
+    - Your overtime and outsourcing costs per unit
+terms:
+  - term: S&OP
+    meaning: Sales and operations planning. A monthly meeting where teams agree one plan for demand and supply.
+  - term: Product family
+    meaning: A group of similar products you plan together.
+  - term: Capacity
+    meaning: The most you can make or ship in a period.
+  - term: Gap
+    meaning: Demand minus capacity. A negative number means you cannot meet demand.
+  - term: Forecast accuracy
+    meaning: How close your forecast was to what really sold.

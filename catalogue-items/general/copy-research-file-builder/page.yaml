@@ -1,6 +1,6 @@
 new_slug: copy-research-file-builder
 name: "Copy research file builder"
-summary: "Paste your product material and past issues. Get sorted research files and a short list of proof you can give away."
+summary: "Sort a pile of product emails, issues and old promotions into research files. Get proof you can give away and the past hits, ready to write from."
 job: understand-customers
 thinking: low
 thinking_why: "It sorts and copies passages by rules, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - "You have years of emails, issues or old pages and have not read them in order."
   - "You are taking over a product and need to learn it fast."
   - "You want a research base before writing a sales page, launch or email series."
+not_for:
+  - "You have one short brief and no past material: write from the brief, or start with the Website brand brain builder."
+  - "You want to name the one feeling to write to: use the Dominant emotion finder."
+  - "You need a finished sales page or email: write it from the research files, this only sorts the material."
 
 you_give:
   - "Product material: issues, emails, bonuses, old promotions, with dates"
@@ -35,6 +39,29 @@ how_to_use:
   - "Paste it in, newest first. If it is too long, send it in parts."
   - "Check the files against your own memory of what matters."
   - "Take the angle library to Dominant emotion finder."
+output_sample:
+  input:
+    - "Your product material: issues, emails, bonuses and old promotions, each with a title and date"
+    - Your brand file (optional)
+    - Customer words with dates (optional)
+    - Sales or response figures for old promotions (optional)
+  output:
+    - name: WHAT I READ
+      contains: Every item you gave it, newest first, with title and date, and a flag on anything undated.
+    - name: PEOPLE FILE
+      contains: Passages about the people behind the product, copied word for word, each with its source.
+    - name: FEELING FILE
+      contains: Passages that touch the buyer's strongest fears, wishes, frustrations and pride, each with its source.
+    - name: PROBLEM FILE
+      contains: Passages that make the buyer's problem real and show why other fixes failed.
+    - name: BONUSES
+      contains: A stated value and a two-sentence mini-ad for each bonus, or MISSING where no value is given.
+    - name: PROOF TO GIVE AWAY
+      contains: Tips and facts that stand alone, marked safe to give away or not, plus fascinating lines.
+    - name: PAST HITS
+      contains: The top pieces by your results, with promise, lead, feeling, offer and why each worked.
+    - name: ANGLE LIBRARY
+      contains: Ranked angles with their passages and proof, plus brand file additions and a list of gaps.
 
 how_it_works:
   - title: "Takes stock"

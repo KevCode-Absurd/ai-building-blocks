@@ -1,0 +1,142 @@
+name: GIS Analyst agent
+summary: Get a step by step plan to make a map or answer a location question, with data checks, symbols and layout, for QGIS or ArcGIS Pro.
+headline: GIS Analyst agent
+subhead: Tell it the question your map or query must answer and list your data layers. The agent checks the data first, then plans the queries, the map type and the layout. You get a work plan you can follow in QGIS or ArcGIS Pro.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Most GIS mistakes are small. Two layers use different coordinate systems. A column has blanks. A legend says one thing and the colors say another. This GIS analyst agent works like the hands-on operator who catches these before they reach a report.
+
+  It plans in a fixed order. First it inspects the data: coordinate system, attributes and geometry. Then it plans the queries and basic geoprocessing, such as select, buffer, clip, dissolve and intersect. Then it picks the map type and symbols for your audience. A map for executives is simple and bold. A technical map is detailed and annotated. It ends by asking if the result answers your first question.
+
+  It writes a plan and cannot open your files or run your GIS tool. You carry out the steps and report back. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience claims are not results measured by AI Blocks.
+when:
+  - Someone says "can you just make a quick map of this?" and you do not know where to start.
+  - You must find which sites fall inside a distance, an area or a boundary.
+  - Layers do not line up on the map, which is often a coordinate system problem.
+  - You have a spreadsheet with latitude and longitude and need a clear map for a report.
+not_for:
+  - "You need a strategy or a tool choice for a whole organization: use the Technical Consultant agent."
+  - "You need hot spot tests, regression or prediction: use the Spatial Data Scientist agent."
+  - "You need an automated data pipeline: use the Spatial Data Engineer agent."
+  - "You need the map styling worked out in depth: use the Cartography Designer agent."
+  - "You need a repeat task turned into a script or toolbox: use the Geoprocessing Specialist agent."
+you_give:
+  - The question the map or query must answer, in plain words
+  - Your data layers, with file type (Shapefile, GeoPackage, GeoJSON or a CSV with latitude and longitude) and what each holds
+  - The coordinate system, if you know it (optional)
+  - Who reads the result and where, such as a print PDF, a slide or a web page
+  - Your GIS tool, such as QGIS or ArcGIS Pro (optional)
+  - Known data problems, such as blanks or duplicates (optional)
+you_get:
+  - "A data check list to run first: coordinate system, blanks, duplicates and geometry"
+  - Numbered query and geoprocessing steps, in order
+  - A map type, symbol and color choice for your reader
+  - A layout plan with legend, scale bar, north arrow and sources note
+  - A last check that the result answers your question
+  - Open questions
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Write the question first. Then list each layer with its file type and what it holds. A few sample rows are enough. Leave out private data.
+  - Say 'Plan this map task. Do not assume my coordinate system.' Your AI asks once for what is missing.
+  - Run the data checks in your GIS tool before anything else. Tell the AI what you find.
+  - Follow the numbered steps. Spot check the result against a few features you know.
+  - Ask for fixes where a step fails, and keep the sources note with the finished map.
+how_it_works:
+  - title: Restate the task
+    text: It says the question back in one line, lists assumptions and marks missing inputs as MISSING.
+  - title: Plan the data checks
+    text: It lists checks for coordinate system, blanks, duplicates and bad geometry, before any analysis.
+  - title: Plan the query and geoprocessing
+    text: It orders the select, buffer, clip, dissolve, intersect or measure steps that answer the question.
+  - title: Choose the map and symbols
+    text: It picks a map type for your reader, with colors that work for color blind readers.
+  - title: Plan the layout and export
+    text: It places the legend, scale bar, north arrow and sources note, and picks print or web export.
+  - title: Check against the question
+    text: It lists how to confirm the result answers the first question, and what to document.
+output_shape: |-
+  TASK AND ASSUMPTIONS
+    Question <one line> | Reader <who> | Output <print, web or slide>
+    Assumed: <list> | MISSING: <list>
+
+  DATA CHECKS (run these first)
+    <layer> | coordinate system <value or unknown> | blanks <field> | duplicates <how to find> | geometry <check>
+
+  STEPS
+    <number> | <operation> | <layers> | <settings> | <what to check after>
+
+  MAP DESIGN
+    Map type <reference, thematic or analysis> | Symbols <rule> | Colors <scheme> | Labels <rule>
+
+  LAYOUT AND EXPORT
+    Title, legend, scale bar, north arrow, sources <placement> | Export <format>
+
+  FINAL CHECK
+    <does it answer the question> | <spot checks> | <what to document>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - The question your map or query must answer
+    - Your data layers with file type and what each holds
+    - Who reads the result and where
+    - Your GIS tool and known data problems (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - QGIS or ArcGIS Pro to run the steps
+  output:
+    - name: Task and assumptions
+      contains: The question, reader and output as understood, with assumptions and MISSING items.
+    - name: Data checks
+      contains: Per layer, the coordinate system, blank, duplicate and geometry checks to run first.
+    - name: Steps
+      contains: Numbered operations with layers, settings and a check after each one.
+    - name: Map design
+      contains: Map type, symbols, colors and label rules for your reader.
+    - name: Layout and export
+      contains: Where the legend, scale bar, north arrow and sources go, and the export format.
+    - name: Final check
+      contains: How to confirm the result answers the question, and what to document.
+    - name: Open questions
+      contains: What is unknown and what each answer changes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Reader
+    how: Say if it is for executives or for technical staff. It sets how simple or detailed the map is.
+  - what: Tool
+    how: Name QGIS or ArcGIS Pro so the steps use the right menu and tool names.
+  - what: Data size
+    how: Give a row count or file size, since it changes which steps are practical.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Coordinate system (CRS)
+    meaning: The rule that places map data on the Earth. Layers in different systems will not line up.
+  - term: Buffer
+    meaning: A zone drawn around a feature at a set distance.
+  - term: Clip
+    meaning: Cutting one layer to the shape of another.
+  - term: Dissolve
+    meaning: Merging features that share a value into one shape.
+  - term: Symbology
+    meaning: The colors, sizes and shapes that show your data on a map.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan works from a pasted profile, your question and your layer list.
+    - name: QGIS or ArcGIS Pro
+      why: You run the steps there. The AI cannot open your files.
+  inputs:
+    - The column names and first five rows of each table.
+    - A screenshot of the layers that do not line up.

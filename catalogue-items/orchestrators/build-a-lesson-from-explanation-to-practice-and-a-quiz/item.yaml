@@ -15,11 +15,11 @@ outputs:
   - {type: audit_report}
 uses: [direct-teaching-lesson-builder, online-worked-example-builder, practice-problem-set-writer, retrieval-quiz-writer, overloaded-lesson-checker]
 steps:
-  - {uses: direct-teaching-lesson-builder, note: "What to say, what to show, in what order, with a check for understanding after each new idea, for these learners and this time."}
-  - {uses: online-worked-example-builder, note: "Worked examples that fade: a full one, then one with gaps, then one the learner completes, each with the thinking shown."}
-  - {uses: practice-problem-set-writer, note: "A practice set from easy to hard, mixed enough to make learners choose the method, with answers."}
-  - {uses: retrieval-quiz-writer, note: "A short quiz that asks learners to recall and do, not recognise, with answers and the misconception each question catches."}
-  - {uses: overloaded-lesson-checker, note: "Too many new ideas at once, too much text, too few pauses. What to cut, split or move to a second session."}
+  - {uses: direct-teaching-lesson-builder, note: "What to say, what to show, in what order, with a check for understanding after each new idea, for these learners and this time. Hands the lesson plan to the worked-example step."}
+  - {uses: online-worked-example-builder, note: "Worked examples that fade: a full one, then one with gaps, then one the learner completes, each with the thinking shown. Built from step 1's lesson plan. Hands the examples to the practice step."}
+  - {uses: practice-problem-set-writer, note: "A practice set from easy to hard, mixed enough to make learners choose the method, with answers. Copies the method from step 2's examples. Hands the set to the quiz step."}
+  - {uses: retrieval-quiz-writer, note: "A short quiz that asks learners to recall and do, not recognise, with answers and the misconception each question catches. Draws on the lesson plan and the practice set. Hands the quiz to the overload check."}
+  - {uses: overloaded-lesson-checker, note: "Too many new ideas at once, too much text, too few pauses. What to cut, split or move to a second session. Reads the whole lesson: plan, examples, practice set and quiz."}
 origin: own
 version: 1.0.0
 example_pending: true

@@ -1,6 +1,6 @@
 new_slug: feature-cutting-planner
 name: "Feature cutting planner"
-summary: "Paste your feature list and the users' main job. Get what to keep, cut and merge so it explains itself."
+summary: "Plan which features to cut. Give it your feature list and the main job users want done. You get keep, cut or merge calls with reasons."
 job: design-work
 thinking: medium
 thinking_why: "It weighs every feature against one job and decides keep, cut or merge, with reasons."
@@ -17,6 +17,10 @@ when:
   - Your product has more features than users can name.
   - A review found parts that serve no purpose and you need a plan.
   - You are planning a simpler next version.
+not_for:
+  - Your product has no users yet, so there is no main job to test against. Write down the job you expect first, or talk to a few likely users.
+  - You need a legal or compliance review of what must stay. Ask a specialist, because this skill only marks those parts as fixed.
+  - You want a review of how the design looks and works first. Use the Design ten-principles reviewer, then bring its report here.
 
 you_give:
   - Your list of features, parts or steps
@@ -35,6 +39,29 @@ how_to_use:
   - Add anything that cannot be cut, such as legal needs or promises to customers.
   - Read each cut and its reason. Overrule any you disagree with.
   - Follow the plan in order and test with a user after each stage.
+output_sample:
+  input:
+    - Your list of features, parts or steps
+    - The main job users hire the product for
+    - A review report, such as the one from the Design ten-principles reviewer (optional)
+    - Usage counts, support requests or promises to customers (optional)
+  output:
+    - name: The one job
+      contains: The single job the product does for the user, and who would want to own the result.
+    - name: Part by part
+      contains: A keep, cut or merge decision for every part, with one reason tied to the main job.
+    - name: Order of what is left
+      contains: The kept parts in the order a new user needs them, with why each comes there.
+    - name: Consistency
+      contains: Mismatches in size, colour and wording between parts that do the same thing, with fixes.
+    - name: Durability
+      contains: Which kept parts will still make sense in a few years, and which will need rework.
+    - name: Plan
+      contains: The changes in order, with a date or stage and a check that each one worked.
+    - name: Missing
+      contains: What is not known and would change a decision, such as usage data.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: States the one job

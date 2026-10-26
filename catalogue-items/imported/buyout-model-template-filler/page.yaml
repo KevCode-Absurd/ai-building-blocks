@@ -2,36 +2,78 @@ thinking: high
 thinking_why: It fills linked sheets with many assumptions.
 new_slug: buyout-model-template-filler
 name: Buyout model template filler
-summary: Give it a blank buyout template and deal facts. Get the model filled
-  with live formulas and checked.
+summary: Fill your own LBO model template in Excel from deal facts, with live formulas, balanced funding and checks that pass or fail.
 job: money-and-investing
 headline: Buyout model template filler
-subhead: "Give it a blank buyout model in Excel plus the deal facts: price,
-  debt, fees and forecast assumptions. It fills in the funding, forecast, debt
-  schedule and returns using your file's own layout. You get a completed model
-  with live formulas and a list of checks that passed or failed."
+subhead: "Give it your blank LBO model in Excel and the deal facts: price, debt, fees and forecast assumptions. It fills the funding, forecast, debt schedule and returns in your file's own layout, one section at a time. You get a finished model with live formulas and a list of checks."
 explain: |
-  A blank buyout template becomes a finished, checked model. You hand over the template and the deal facts, and the skill fills in the purchase funding, operating forecast, debt schedule and returns, using your file's layout exactly instead of building a new one.
+  An LBO model template filler takes your blank buyout model (an LBO) and completes it from the deal terms. It keeps your layout, rows and sign rules. It does not build a new model beside yours.
 
-  It works through the spreadsheet with a command line tool. Calculations are written as live formulas, never typed-in numbers, and inputs and formulas are colour coded so reviewers can follow them. If you give no template, it asks, then falls back to a standard one with sources and uses, operating model, debt schedule and returns. It runs checks before you open the file. You need the template file and deal assumptions.
+  It works one section at a time: sources and uses, operating forecast, debt schedule, returns, then sensitivity tables. After each section it shows you what it built and waits for your yes before the next one. This keeps a wrong cell in the funding table from flowing into the returns.
+
+  Every calculation is a live formula, never a typed number. Inputs, formulas and links are colour coded so a reviewer can follow them. If you have no template, it builds a standard four-section layout and tells you so. It runs checks before it hands the file back.
 when:
   - Your firm has its own buyout template and you need a deal dropped into it.
   - You have deal terms from a call and need a first model before the meeting.
   - A teammate left a half-filled model and you must finish and check it.
   - You want formulas you can audit rather than pasted values.
+not_for:
+  - You have no template and want a model built from a company's accounts. Use the buyout returns modeler.
+  - The deal is not an LBO, a buyout paid for mostly with debt, or you need a full three-statement model. This fills an LBO layout only.
+  - You want a model you can send to a lender as it is. Have a finance professional review it first.
 you_give:
-  - A blank buyout model template (Excel)
-  - Deal facts such as price, debt and fees
-  - Operating forecast assumptions
-  - Exit timing and multiple (optional)
+  - Your blank LBO model template, as an Excel file
+  - Purchase price or entry multiple, and fees
+  - Each layer of debt with amount and interest rate
+  - Revenue and margin forecast, tax rate and capital spending
+  - Exit year and exit multiple (optional)
 you_get:
-  - A completed Excel model in your template
-  - Live formulas, not typed-in numbers
-  - A debt schedule and returns section
+  - Your template, filled in, with live formulas
+  - A sources and uses table that balances
+  - A debt schedule and returns section with IRR and MOIC
+  - Sensitivity tables with the base case highlighted
   - A list of checks that passed or failed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Use an AI that can run commands and save files, such as Claude Code. The skill builds the file with a command line tool called officecli. A plain chat cannot do this.
+  - Open the skill and attach your blank template. Add the deal facts, and say which currency and units the model uses.
+  - Answer any question it asks about your template. It will not guess where a number goes.
+  - Check each section when it pauses, starting with sources and uses. Debt plus equity must equal the total price.
+  - Reply "continue" for the next section. Fix anything wrong before you do.
+  - At the end, read the checks list. Open the file and confirm the base case in the sensitivity table matches the headline IRR.
+output_sample:
+  input:
+    - Your blank LBO model template (Excel)
+    - Deal facts such as price, debt layers, rates and fees
+    - Operating forecast assumptions
+    - Exit year and multiple (optional)
+  prerequisites:
+    - An AI that can run commands and save files, with the officecli tool installed
+  output:
+    - name: Sources and uses
+      contains: What the deal costs and how it is paid for, with the balancing item calculated as the difference.
+    - name: Operating model
+      contains: Forecast revenue, costs and free cash flow, each a formula that links to your assumptions.
+    - name: Debt schedule
+      contains: Opening balance, interest, repayments and closing balance for each debt layer, never below zero.
+    - name: Returns analysis
+      contains: IRR and MOIC from the investment and exit cash flows, with signs checked.
+    - name: Sensitivity tables
+      contains: Five by five or seven by seven grids, with the base case in the centre and highlighted.
+    - name: Checks list
+      contains: Each check run, passed or failed, including the formula error count and any assumed inputs.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Runs the command line tool, saves the Excel file and checks it for errors.
+  inputs:
+    - A model your firm already uses, so the layout is not new to your reviewers
+    - A note of your sign rules, such as outflows as negatives
+terms:
+  - term: LBO
+    meaning: A buyout paid for mostly with borrowed money.
+  - term: Sources and uses
+    meaning: A table of what the deal costs and where the money comes from.
+  - term: IRR and MOIC
+    meaning: Yearly return, and total money back divided by money put in.
+  - term: Live formula
+    meaning: A cell that works out its value from other cells, so it updates when inputs change.

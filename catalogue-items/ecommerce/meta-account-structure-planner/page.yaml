@@ -1,6 +1,6 @@
 new_slug: meta-account-structure-planner
 name: "Meta account structure planner"
-summary: "Give your spend, products and margins. Get a Meta campaign and ad set layout with budgets and KPIs."
+summary: "Plan your Meta ads account layout. Give your spend, margins and buyer groups. Get a campaign map with budgets, KPIs and a spend cap per concept."
 job: launch-and-scale-ads
 thinking: high
 thinking_why: "It weighs spend, margins, regions and creative output against each other, so a stronger model makes better trade-offs."
@@ -17,6 +17,10 @@ when:
   - You are setting up Meta ads for a store, or you inherited an account with campaigns nobody can explain.
   - Your spend is growing and you need to know when to add a campaign and when to leave the layout alone.
   - You sell in several countries or at several margin levels and don't know how much to split.
+not_for:
+  - "Your account is past testing and needs to scale winners: use the Meta scaling campaign planner."
+  - "You have no margin data yet: work out your gross margin by product first, then come back."
+  - "You want to audit an account that already runs: use the Meta campaign purpose checker."
 
 you_give:
   - Monthly Meta spend and your current campaigns
@@ -36,6 +40,32 @@ how_to_use:
   - Add your buyer groups, countries, stock locations, orders per day, average order value and how many new ads you can make each month.
   - Read the layout against the five questions it lists, and build only the tier that matches your spend.
   - Check the Meta setting names in your own account, because Meta renames them often.
+output_sample:
+  input:
+    - Your monthly Meta spend and your current campaigns
+    - Your product categories with gross margin, orders per day and average order value
+    - Your buyer groups, countries and where stock sits
+    - How many new ads you can make each month
+    - Your brand file (optional)
+  output:
+    - name: TIER and FIVE QUESTIONS
+      contains: Your spend tier, plus your answers on categories, margin spread, buyer groups, countries and ads per month.
+    - name: CAMPAIGN MAP
+      contains: Each campaign and ad set with its purpose, budget type, daily budget, ad count and the reason it exists.
+    - name: KPI AND READ WINDOW
+      contains: A target for each level and how many days to wait before you read it.
+    - name: SPEND CAP PER CONCEPT
+      contains: The most one concept can take, and what to do after one month.
+    - name: SETTINGS TO SWITCH OFF
+      contains: The Meta settings that hide your data, such as flexible ads and one-day view reporting.
+    - name: NAMING RULE
+      contains: How to name ad sets so results read by buyer group, angle, offer, format and launch date.
+    - name: PAGE CAP PLAN
+      contains: How to avoid hitting the live ad limit on a Facebook page, only if you launch many ads.
+    - name: WHEN TO REVISIT
+      contains: The spend or sales level where the next layer makes sense.
+    - name: CHECKS MISSED
+      contains: Any check that failed, or none.
 
 how_it_works:
   - title: Asks five questions

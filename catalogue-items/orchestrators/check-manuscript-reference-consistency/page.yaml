@@ -1,50 +1,87 @@
 new_slug: check-manuscript-reference-consistency
 name: Check manuscript reference consistency
 headline: Check manuscript reference consistency
-summary: Share the source files. Get a manuscript reference cross check, duplicate candidates and unresolved source requests.
+summary: Check your manuscript's citations against its reference list and the papers you cite, once, before you submit. Get a mismatch table and source requests.
 job: research-topics
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A manuscript reference cross check, duplicate candidates and unresolved source requests. Share the manuscript, existing reference list, actual cited source files with publication metadata and the target citation style. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your manuscript, its reference list, the papers you cite and the citation style. It reads what each cited paper actually shows, then checks every in-text citation and list entry against it. You get a mismatch table, duplicate candidates and a list of sources you still need to supply.
 explain: |-
-  A manuscript reference cross check, duplicate candidates and unresolved source requests.
+  A manuscript reference check usually means flipping between the text, the reference list and a folder of PDFs. A year is off by one. An author is spelled two ways. Citation 14 in the text is number 15 in the list. The same paper sits in the list twice, once with a short title. This workflow does that cross-check, citation by citation, before you submit.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every suggested correction traces to an actual supplied publication; citation metadata is not proof of the cited claim. Missing tools or evidence stay visible in the final summary.
+  Step 1 reads the papers you supply and records each one's title, authors, year and identifiers, with the page where it saw them. If a first page shows no year, the year stays blank. Step 2 compares your citations and reference list with that record. It checks spelling, years, numbering and the style you named, and it suggests which entries may be duplicates. You decide what to change.
+
+  It does not look up a DOI, run a script or guess a missing detail. A matching title does not show that the paper supports your sentence, so it never says so. It suggests corrections and never edits your manuscript.
 when:
-  - You need a manuscript reference cross check, duplicate candidates and unresolved source requests.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are about to submit and want the reference list checked against the text.
+  - You added, cut or moved citations during a revision and the numbers may have shifted.
+  - A co-author merged their reference list into yours and you suspect repeats.
+  - A journal asks you to switch citation style and you want a list of what no longer fits.
+not_for:
+  - You want missing DOIs, volumes or page numbers looked up. This workflow uses only what you supply and lists the gaps as source requests. Your reference manager can fill them.
+  - You want a record that carries over to your next revision. Use the Bibliography revision review assistant.
+  - You want to know if a cited paper really backs your sentence. Use the Source note summariser on that paper, then compare it to your claim.
+  - You want grammar and wording fixed in the text. Use the Proofreader.
 you_give:
-  - The manuscript, existing reference list, actual cited source files with publication metadata and the target citation style.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your manuscript, as a file or pasted text, with its version or date
+  - Your reference list as it stands now (from your reference manager export or the end of the manuscript)
+  - The papers you cite, as PDFs or pasted first pages. Add as many as you have.
+  - The citation style your journal wants, such as APA 7 or Vancouver (from the journal's author guide)
+  - The sentences you changed since the last version (optional)
 you_get:
-  - A manuscript reference cross check, duplicate candidates and unresolved source requests.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A cross-check table with each citation, its list entry, what the cited paper shows, and any mismatch
+  - Duplicate candidates, each with the two entries and why they may be the same paper
+  - A list of sources to request, for citations with no paper supplied or details the paper does not show
+  - Suggested corrections, each traced to a supplied paper
+  - A hand-back summary with MISSING lines and the checks that could not run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini.
+  - Attach the manuscript, the reference list and the cited papers. Say which citation style the journal wants.
+  - After step 1, spot-check three papers. Open each one and check that the title, authors and year the AI recorded are really on the page it names.
+  - After step 2, go through the mismatch table line by line. Accept a correction only when it names the paper it came from.
+  - Fill each source request yourself. Edit your manuscript and reference list yourself, because nothing here changes your files.
 how_it_works:
   - title: Source note summariser
-    text: Extract publication titles, authors, dates and identifiers actually visible in the supplied cited source files. Keep an evidence location for each and leave missing metadata unresolved; do not invent a DOI lookup or run absent scripts.
+    text: "Reads the supplied papers and records each title, author list, date and identifier that is visible, with the page where it saw them. Leaves any missing detail blank. It does not look up a DOI. Hands step 2 a record of what the papers show."
   - title: Proofreader
-    text: Cross-check manuscript citation spelling, years, numbering and bibliography consistency against the supplied publications and reference list. Suggest duplicate candidates for review; do not invent sources or imply metadata proves a claim.
+    text: "Compares your in-text citations and reference list with that record. Checks name spelling, years, numbering and your citation style, and suggests duplicate candidates for you to review. It does not invent sources and does not treat a metadata match as proof that a paper supports your claim."
 output_shape: |-
-  Scope and source coverage
-  A manuscript reference cross check, duplicate candidates and unresolved source requests.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  CROSS-CHECK TABLE    <in-text citation | list entry | cited paper shows (page) | match or issue | suggested fix>
+  DUPLICATE CANDIDATES <entry A | entry B | why they may be the same paper>
+  SOURCE REQUESTS      <citation | what is needed | why>
+  STYLE NOTES          <style rule | entries that break it>
+  FILES                <each saved file>
+  MISSING              <each gap and the line it stops>
+  CHECKS MISSED        <one line each, or none>
+  NEXT STEP            <one step>
+output_sample:
+  input:
+    - Your manuscript, with its version or date
+    - Your reference list
+    - The papers you cite, as PDFs or pasted first pages
+    - The citation style your journal wants
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Cross-check table
+      contains: Each citation next to its list entry and what the cited paper shows, with any mismatch in year, name or number.
+    - name: Duplicate candidates
+      contains: Pairs of list entries that may be the same paper, with the reason, for you to decide.
+    - name: Source requests
+      contains: Papers or details you still need to supply, and which citation each one blocks.
+    - name: Style notes
+      contains: Entries that break the journal's citation style, each with the rule.
+    - name: Hand-back summary
+      contains: Each saved file, MISSING lines, checks that did not run and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Every suggested correction traces to an actual supplied publication; citation metadata is not proof of the cited claim.
+  - what: Citation style
+    how: Name the exact style and edition, such as APA 7 or Vancouver. Style notes follow that rule and nothing else.
+  - what: Number of papers
+    how: Attach as many cited papers as you have. Citations with no paper stay in the table, marked as not checked against a paper.
+  - what: What changed
+    how: List the sentences you changed since the last version. Citations in those sentences are checked first.
+  - what: Strictness
+    how: Say if first-name spelling variants count as a mismatch or only a note.
 judge:
   - Every suggested correction traces to an actual supplied publication; citation metadata is not proof of the cited claim.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +94,23 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the reference list the AI hands back and attach it to your next revision, so you check only what changed.
+  - Add the journal's author guide as a file, so the style notes quote its own rules.
+  - Fix the table in your reference manager, not only in the manuscript, so the same error does not return.
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Reads the manuscript, the list and the cited papers in one run.
+    - name: A reference manager
+      why: Holds the corrected entries once you accept them, and fills in missing details from a trusted source.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The journal's author guide with its citation style.
+    - An export of your reference list in plain text.
+    - A co-author who can supply any paper you do not have.
 terms:
+  - term: In-text citation
+    meaning: The number or author and year in your text that points to a reference list entry.
+  - term: Duplicate candidate
+    meaning: Two list entries that look like the same paper, listed for you to confirm.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

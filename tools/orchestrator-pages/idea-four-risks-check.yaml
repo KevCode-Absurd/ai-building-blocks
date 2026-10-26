@@ -1,6 +1,6 @@
 new_slug: idea-four-risks-check
 name: Check an idea's four risks and rewrite your roadmap
-summary: Paste your product idea. Get its four risks rated and a feature list rewritten as problems with results to measure.
+summary: Check your product idea's four risks and see which to test first. Your feature list is rewritten as problems with results to measure.
 job: build-product
 thinking: high
 thinking_why: It has to judge evidence and then rewrite a whole roadmap from it. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a product idea and want to know which risk to test first, before you spend on building.
   - Your roadmap is a list of features and nobody can say what each one should change.
   - A leader keeps asking for features, and you want to turn the requests into problems you can measure.
+not_for:
+  - "Your product is finished and you already have customer data: use a usage analysis of what people really do, or ask your analyst."
+  - "You want to screen one feature request, not a whole roadmap: use the Feature request screener."
+  - "You only want a small test for one idea: use the Smallest test picker."
 you_give:
   - The idea, the problem it solves and who it is for
   - What you already know, such as customer words, tests, costs and limits
@@ -32,6 +36,29 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your idea and your feature list. It works step by step and saves each result.
   - Run the cheapest test on the riskiest risk, then bring back what you learn.
+output_sample:
+  input:
+    - Your product idea, the problem it solves and who it is for
+    - What you already know, such as customer words, tests, costs and limits
+    - Your list of features, tasks or requests, with any dates
+    - Customer reviews or messages (optional)
+    - Your brand brain (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack from this page (optional if you paste the skills yourself)
+  output:
+    - name: Product idea risk check
+      contains: The problem and customer, the four risks with evidence or unknown, an owner for each, and an evidence score out of 100.
+    - name: The riskiest risk and first test
+      contains: The riskiest of the four, the cheapest test for it, and the result that would change your plan.
+    - name: Your list, sorted
+      contains: Each item on your roadmap marked as a feature, a problem or a result, with who asked for it.
+    - name: Problems to solve
+      contains: Three to five problems for named customers, each with one result to measure.
+    - name: Review point
+      contains: A review point and the evidence needed, in place of fixed dates, plus any items dropped or parked and why.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: States the problem
     text: Writes the problem and the customer in plain words, so everything after it has something to check against.

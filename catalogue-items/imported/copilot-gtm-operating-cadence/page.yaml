@@ -2,17 +2,55 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-operating-cadence
 name: Company meeting rhythm designer
-summary: Share your team and goals. Get meeting rhythms, metric reviews and
-  decision rules that fit your stage.
+summary: Fix slow decisions and too many meetings. Give your team size, stage and goals. Get a meeting rhythm, weekly metric review and decision rules.
 job: plan-strategy
 headline: Company meeting rhythm designer
-subhead: Share your team and goals. Get meeting rhythms, metric reviews and
-  decision rules that fit your stage. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Tell your AI your team size, company stage, goals and current meetings. It designs a meeting rhythm, a weekly metric review and clear decision rules. It is one text file, so you need no setup and no paid tools.
+not_for:
+  - Your team is under 20 people. Talk in a short weekly chat with your team instead of building a full meeting system.
+  - Your meetings already produce decisions. Keep what works and change one meeting at a time.
+  - You need a plan for one project or one launch. Write a simple task list with owners and dates instead.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste in the full text of the skill file. It is one text file and needs no setup or paid tools.
+  - Tell your AI your team size, company stage, top 1 to 3 goals and current meetings. Add the metrics you track if you have them.
+  - Let your AI ask any questions it has before it designs anything.
+  - Read the meeting plan and check each meeting against your real calendar.
+  - Treat the sample numbers in the weekly report as examples only. Swap in your own metrics.
+  - Start with one or two changes. Review them after a month.
+output_sample:
+  input:
+    - Your team size and company stage
+    - Your current list of meetings (optional)
+    - Your top 1 to 3 goals
+    - The metrics you already track (optional)
+  output:
+    - name: Meeting architecture
+      contains: Which meetings to run at which level, how long each lasts, who joins and what each one decides.
+    - name: Weekly metric report
+      contains: A fixed weekly format with the main metric, team metrics, a trend arrow and one line of context for each.
+    - name: Quarterly planning process
+      contains: A plan for setting goals each quarter so the company does not drift from its strategy.
+    - name: Decision rules
+      contains: Who decides what, how fast, and when a choice moves up to a leader.
+    - name: Async communication rules
+      contains: What to share in writing instead of in meetings.
+    - name: CEO weekly update
+      contains: A short, repeatable format for the leader to share progress with the whole company.
+    - name: Meeting keep or cut check
+      contains: A short test to decide if each meeting is worth keeping.
+when:
+  - Your leadership meetings use up the week and still produce no decisions.
+  - The company is growing, but people know less about what other teams do.
+  - Decisions take weeks because nobody knows who decides.
+  - You are growing past 20 people and the old meeting habits no longer work.
+you_give:
+  - Your team size and company stage.
+  - Your current list of meetings.
+  - Your top 1 to 3 goals.
+  - The metrics you already track (optional).
+you_get:
+  - A meeting plan with a daily, weekly and company-wide rhythm that fits your size.
+  - A weekly metric report format with trend arrows and red, yellow or green status.
+  - A quarterly planning process.
+  - Rules for who makes which decisions.
+  - A check for which meetings to keep or cut.

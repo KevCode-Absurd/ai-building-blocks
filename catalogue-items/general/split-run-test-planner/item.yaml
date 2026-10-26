@@ -1,16 +1,16 @@
 slug: split-run-test-planner
 name: "Split-run test planner"
-summary: "Paste two versions to run together on matched halves of one audience. Get one change, a key on each, a winner rule."
+summary: "Plan a fair split-run test of two ads, emails or pages. Get one change, a key on each, the audience size and a winner rule."
 category: general
 type: skill
 role: make
 job: research
 level: intermediate
 inputs:
-  - {type: ad_copy, required: true}
-  - {type: copy_draft, required: false}
+  - {type: copy_draft, required: true}
   - {type: offer, required: false}
   - {type: performance_sheet, required: false}
+  - {type: ad_copy, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt
@@ -18,3 +18,6 @@ version: 1.0.0
 minds: [john-caples, claude-hopkins]
 credits:
   - {title: "Tested Advertising Methods, fifth edition (1997)", by: "John Caples, revised by Fred E. Hahn", used: "Split-run testing (both versions at the same time and place to matched halves), key numbers that change with every edit, one difference per test, about a hundred replies per version, a control ad to measure each new ad against, and testing a series in rounds. The sample-size rule of thumb in step 5 is ours, not his."}
+before: []
+next: [test-reply-offer-planner, split-run-result-reader]
+needs_mode: manual

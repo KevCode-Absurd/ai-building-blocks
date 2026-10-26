@@ -2,34 +2,104 @@ thinking: medium
 thinking_why: It compares what is collected with what is needed.
 new_slug: employee-data-privacy-checker
 name: Employee data privacy checker
-summary: Name the AI tool using staff data. Get a privacy review, a shorter data
-  list and a notice. Not legal advice.
+summary: Check an AI tool that uses your staff's data. Get a privacy review, a shorter list of data to collect and a staff notice. Not legal advice.
 job: hire-people
 headline: Employee data privacy checker
-subhead: Name the AI tool using staff data. Get a privacy review, a shorter data
-  list and a notice. Not legal advice. Bring the AI tool and what it does. Use
-  the result to plan your next step.
+subhead: Name the AI tool that touches your staff's data, such as a hiring screener or a monitoring tool. Your AI maps what it collects against what it needs and flags what to cut. You get a privacy review, a shorter data list, vendor questions and a staff notice. This is guidance, not legal advice.
 explain: |
-  A privacy review for the AI tool that touches your staff's data, with a shorter list of what it really needs and a notice to send employees. This is general guidance, not legal advice.
+  A vendor says its HR tool is "compliant", and nobody has checked what data it takes. This employee data privacy checker starts with a plain question for each data field: does the tool need it for its stated purpose? Fields it does not need are marked to cut or to ask the vendor about.
 
-  Name the tool, such as a hiring screener, performance system or monitoring software. The skill helps you map what it collects against what it needs, and cut the rest. It builds an impact assessment, a vendor question list, a consent and transparency notice, retention and deletion rules, access controls and a breach response outline. It covers laws such as GDPR, PDPA and PIPL, cross-border transfers and employee access requests.
+  From that list it builds a privacy review, a list of questions for the vendor, a notice that tells staff what is collected and why, and rules for how long to keep data and who can see it. It also outlines steps for a data breach and for a staff request to see their data. It names the laws you give it, such as GDPR, PDPA or PIPL, and flags cross-border transfers.
+
+  It does not say a tool is legal. It lists what to check, and your lawyer or data protection officer decides.
 when:
-  - HR wants to buy an AI hiring tool and you must check it.
-  - You need to explain to staff what data is used.
-  - A vendor collects more than seems necessary.
-  - An employee asks to see their data.
+  - HR wants to buy an AI hiring tool and you must check it first.
+  - You need to tell staff what data an AI tool uses.
+  - A vendor collects more than seems needed.
+  - An employee asks to see the data an AI tool holds about them.
+not_for:
+  - "You need a binding legal decision on one tool or one law: ask your lawyer or data protection officer."
+  - "You want to compare vendors and pick one: use the HR AI tool vendor checker."
+  - "You want a written company policy on AI in hiring: use the HR AI use policy writer."
+  - "You want to audit your HR files and processes in general: use the HR compliance audit planner."
 you_give:
-  - The AI tool and what it does
+  - The AI tool and what it does, such as a resume screener
   - Where your staff are located
-  - Data it collects (optional)
-  - Vendor documents (optional)
+  - The data fields it collects (optional)
+  - The vendor's privacy documents (optional)
 you_get:
-  - A privacy impact assessment
-  - A reduced data list
-  - A staff notice
-  - A vendor question list
+  - A privacy review of the tool, with risks rated
+  - A table of data fields with a keep, cut or ask-the-vendor action for each
+  - A list of questions to ask the vendor
+  - A draft notice for staff
+  - Rules for how long to keep data and who can see it
+  - Steps for a data breach and for a staff request for their data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Check your AI tool's data settings first, then paste the skill.
+  - Describe the tool, what it does and where your staff live. Do not paste names, ID numbers or health details. Describe the data types instead, such as "performance scores".
+  - If you have the vendor's privacy policy, paste the relevant parts.
+  - Read the data table first. Anything marked "ask vendor" goes into a question to the vendor.
+  - Send the review and the staff notice to your lawyer or data protection officer before you use them.
+how_it_works:
+  - title: Describe the tool
+    text: It asks what the tool does, where staff are and what data it takes, and marks any gap.
+  - title: Map the data
+    text: It lists each data field and asks if the tool needs it for its stated purpose.
+  - title: Rate the risks
+    text: It rates privacy risks and says when a full impact assessment is likely needed.
+  - title: Write the questions
+    text: It drafts questions for the vendor about storage, sharing, transfers and deletion.
+  - title: Draft the staff notice
+    text: It writes a plain notice that says what is collected, why, how long it is kept and how to ask questions.
+  - title: Set the rules
+    text: It adds retention and deletion rules, access controls, a breach outline and steps for a staff data request.
+output_shape: |
+  ## Tool and purpose
+  ## Data map
+  | Data field | Needed for the purpose? (yes, no, unsure) | Action (keep, cut, ask vendor) |
+  ## Privacy risks
+  ## Questions for the vendor
+  ## Staff notice (draft)
+  ## Retention and access rules
+  ## Breach outline
+  ## Staff data request steps
+  ## For your lawyer to confirm
+output_sample:
+  input:
+    - The AI tool and what it does
+    - Where your staff are located
+    - The data fields it collects (optional)
+    - The vendor's privacy documents (optional)
+  prerequisites:
+    - Check your AI tool's data settings before you paste anything about staff
+  output:
+    - name: Data map
+      contains: Each data field marked needed or not, with an action to keep, cut or ask the vendor.
+    - name: Privacy risks
+      contains: The main risks rated, and whether a full impact assessment is likely needed.
+    - name: Questions for the vendor
+      contains: What to ask about storage, sharing, transfers outside your region and deletion.
+    - name: Staff notice
+      contains: A plain draft that says what is collected, why, and how long it is kept.
+    - name: Retention and access rules
+      contains: How long each data type is kept and who may see it.
+    - name: Breach outline
+      contains: First steps and who to tell if staff data leaks.
+    - name: Staff data request steps
+      contains: How to answer an employee who asks to see their data.
+    - name: For your lawyer to confirm
+      contains: Legal points the AI cannot settle, such as the lawful basis for processing.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a checking and writing job. Use one whose data settings you have reviewed.
+  inputs:
+    - The vendor's data processing agreement
+    - A list of the data fields in your HR system
+terms:
+  - term: Data minimization
+    meaning: Collecting only the data a tool needs for its stated purpose.
+  - term: Privacy impact assessment
+    meaning: A written check of the privacy risks of a tool before you use it.
+  - term: Data subject access request
+    meaning: A staff member's request to see the personal data you hold about them.

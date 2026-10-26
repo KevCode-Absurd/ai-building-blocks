@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies a short set of pricing rules to one price.
 new_slug: price-display-planner
 name: Price digits and placement planner
-summary: Give it a price you are weighing. Get whether to round it, how to price
-  add-ons, and where to place it.
+summary: Find the right price digits for your product. Get advice on rounding, add-on prices, flat rate or pay-per-use, and where to place the price.
 job: set-prices
 headline: Price digits and placement planner
-subhead: Decide how to show a price so it sends the signal you want. Give it a
-  price you are weighing and learn whether to round it, how to price add-ons and
-  where to put it on the page.
+subhead: Decide how to show a price so it sends the signal you want. Give it a price you are weighing and learn whether to round it, how to price add-ons and where to put it on the page.
 explain: |
   Decide how to show a price so it sends the signal you want. Give it a price you are weighing and learn whether to round it, how to price add-ons and where to put it on the page.
 
@@ -18,6 +15,10 @@ when:
   - You are adding upgrades and want fair-looking prices.
   - You want to know where the price should sit on the page.
   - You are setting an opening price for a negotiation.
+not_for:
+  - "You need to know how much people will pay: use a price research step or ask a few real customers."
+  - "You want to word a sale or coupon: write the discount message on its own, as this tool does not cover it."
+  - "You already have a price and only need a layout check for the whole product page: ask a designer or test two versions."
 you_give:
   - Product and candidate price
   - Brand position, premium or value
@@ -29,7 +30,28 @@ you_get:
   - Price placement and colour tips
   - Reasoning behind each choice
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell it your product, the price you are weighing, and whether this is a promotion or an everyday price.
+  - Add your brand position and market. Say if the price will be negotiated.
+  - Read the table you get back. Check that the reason for each choice fits your product.
+  - Treat the color advice as a weak tip. Test it on your own page before you rely on it.
+output_sample:
+  input:
+    - Your product and the price you are weighing
+    - Your brand position, premium or value
+    - Whether this is a promotion price or an everyday price
+    - Your market, such as Japan or China (optional)
+    - Whether the price will be negotiated (optional)
+  output:
+    - name: Recommended price
+      contains: The price to use, with the digits chosen to fit the signal you want.
+    - name: Digit style
+      contains: Rounded, just-below or precise, and the reason it fits your product.
+    - name: Add-ons / components
+      contains: How to price add-ons and parts so they look simple and fair.
+    - name: Structure
+      contains: Whether to use a flat rate, pay-per-use, or neither.
+    - name: Placement & color
+      contains: Where the price sits on the page and which color to use.
+    - name: Alternatives rejected
+      contains: Other prices you considered and why each was set aside.

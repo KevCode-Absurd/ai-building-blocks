@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: performance_sheet, required: true}
   - {type: ad_breakdowns, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: audit_report}
   - {type: brief}

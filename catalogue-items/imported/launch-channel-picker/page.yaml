@@ -2,34 +2,98 @@ thinking: medium
 thinking_why: It weighs seven options against your case.
 new_slug: launch-channel-picker
 name: Launch channel picker
-summary: Describe your product and buyers. Get the best of seven ways to reach
-  them, with tools and first steps.
+summary: Pick the best of seven ways to reach your first buyers. Get a fit score for each, a channel mix and a 90-day plan with tools to try.
 job: plan-strategy
 headline: Launch channel picker
-subhead: Describe your product and buyers. Get the best of seven ways to reach
-  them, with tools and first steps. Bring what you sell and the price. Use the
-  result to plan your next step.
+subhead: Describe your product, price, buyer and team. It scores seven go-to-market channels against your sales cycle and deal size, then picks two to four to start with. You get fit scores, a primary and backup channel, tools to try and a 90-day plan with measures.
 explain: |
-  A clear pick of how to reach your first buyers, chosen from seven proven approaches. Describe your product, price and who buys it. The skill weighs inbound content, outbound sales, paid ads and four other motions against your sales cycle and deal size, since a cheap app and an enterprise contract need very different ones.
+  New businesses often try every channel at once and win at none. This picker helps you choose a few. It looks at seven ways to reach buyers: content, cold outreach, paid ads, community, partners, account-based campaigns and product-led growth. A cheap app and a six-figure contract need very different ones.
 
-  For each approach it names tools, tactics, who it suits, its strength and its main weakness. You get the best fit first, with first steps and the tools to start with, plus a view of whether a self-serve or sales-led model fits better. It helps you stop spreading thin across every channel.
+  It scores each channel from 1 to 10 against your price, sales cycle, buyer, budget and team. It then picks a main channel and one or two support channels, and says which to start first. Each channel comes with example tools, the usual tactics, what it is good at and its main weakness.
+
+  The output ends with a 90-day plan, the people and money needed, and the numbers to watch. It also shows whether self-serve or a sales-led model fits you better. Review the mix again each quarter.
 when:
   - You are about to launch and do not know where to spend your first month.
-  - You are deciding between cold outreach and content marketing.
-  - You wonder whether self-serve signup or a sales team fits your product.
-  - Your current channel stopped working and you need a new one.
+  - You are torn between cold outreach and content marketing.
+  - You wonder whether self-serve sign-up or a sales team fits your product.
+  - Your main channel has stopped working and you need a new one.
+not_for:
+  - You already run several channels and need to split spend between them. Use the Channel budget mix planner.
+  - You want growth loops that feed themselves. Use the Growth loop designer.
+  - You need a launch sequence and early buyer targets for a new product. Use the First customer launch planner.
 you_give:
-  - What you sell and the price
-  - Who buys it
-  - Your team size and budget
-  - Channels you already tried (optional)
+  - What you sell, and its price
+  - Who buys it and how they decide
+  - How long a sale takes, from first contact to payment
+  - Your team size and monthly budget
+  - Channels you tried, and what happened (optional)
 you_get:
-  - A ranked list of go-to-market approaches
-  - Tools for the top pick
-  - First steps for week one
-  - Trade-offs of each channel
+  - A fit score from 1 to 10 for each of seven channels
+  - A main channel, support channels and the order to start
+  - Example tools and tactics for each pick
+  - A 90-day plan with milestones
+  - The people and budget needed, and the numbers to watch
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
+  - Describe your product, price, buyers, sales cycle, team and budget in a few lines. Add any channel results you already have.
+  - Ask for the scores first. Check each score against what you know about your buyers, and tell the AI where it is wrong.
+  - Ask for the channel mix and the 90-day plan. Fill in any line marked MISSING.
+  - Treat tool names as examples. Check each tool's current price and fit before you sign up.
+  - Start the first channel. Review the mix after 90 days. This needs no code and no paid tools.
+how_it_works:
+  - title: Describe your product
+    text: It sets price, sales cycle, buyer, product complexity and market size.
+  - title: Check market conditions
+    text: It looks at competition, how easy buyers are to reach, budget, team skills and time to revenue.
+  - title: Score seven channels
+    text: It rates content, outbound, paid, community, partners, account-based campaigns and product-led growth from 1 to 10.
+  - title: Pick the mix
+    text: It picks a main channel and one to three more, and says which to start first.
+  - title: Write the 90-day plan
+    text: It sets quick wins, team and tool needs, measures, budget and when to scale or stop.
+output_shape: |
+  CHANNEL PLAN: <product>
+  1. Your facts: <price, sales cycle, buyer, team, budget>
+  2. Fit scores: <channel, score out of 10, reason>
+  3. Mix: <main channel, support channels, start order>
+  4. Tools and tactics: <channel, example tools, first moves>
+  5. 90-day plan: <weeks 1-4, 5-8, 9-12, with milestones>
+  6. Resources: <people, budget>
+  7. Measures: <channel, number to watch, review date>
+  MISSING: <facts you did not give>
+output_sample:
+  input:
+    - What you sell, and its price
+    - Who buys it and how long a sale takes
+    - Your team size and monthly budget
+    - Channels you have tried, with results (optional)
+  output:
+    - name: Fit scores
+      contains: A 1 to 10 score for each of seven channels, with a one-line reason.
+    - name: Channel mix
+      contains: A main channel and one to three support channels, with the order to start.
+    - name: Tools and tactics
+      contains: Example tools and first moves for each chosen channel.
+    - name: 90-day plan
+      contains: Milestones for each month, with quick wins first.
+    - name: People and budget
+      contains: What the plan needs in time, team and money.
+    - name: Success measures
+      contains: The numbers to watch for each channel, and when to review them.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A chat AI can weigh your facts against each channel and explain the scores.
+  inputs:
+    - Results from channels you already tried
+    - Names of three to five communities where your buyers gather
+    - Your gross margin, so the budget can be checked
+terms:
+  - term: Go-to-market channel
+    meaning: A way you reach and win buyers, such as ads or cold email.
+  - term: Account-based marketing
+    meaning: Treating a small set of big prospects as separate markets, with tailored outreach.
+  - term: Product-led growth
+    meaning: People try the product themselves and pay without a sales call.
+  - term: Sales cycle
+    meaning: Time from first contact to payment.

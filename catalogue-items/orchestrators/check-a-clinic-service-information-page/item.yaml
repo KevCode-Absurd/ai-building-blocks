@@ -1,6 +1,7 @@
 slug: check-a-clinic-service-information-page
 name: Check a clinic service information page
-summary: Share the source files. Get a source gap list and corrected administrative FAQ draft.
+summary: Check your clinic's FAQ against approved service facts. Get a list of
+  unsupported claims and a corrected, plain-words FAQ draft.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -11,22 +12,25 @@ inputs:
   - type: brief
     required: true
   - type: copy_draft
-    required: false
-  - type: brand_brain
+    required: true
+  - type: source_text
     required: false
 outputs:
   - type: audit_report
   - type: copy_draft
-  - type: feedback_notes
   - type: document
 uses:
   - unsupported-claim-spotter
   - plain-english-editor
 steps:
   - uses: unsupported-claim-spotter
-    note: Check the FAQ against approved service information. Flag unsupported availability, eligibility, pricing, medical benefit or outcome claims for the responsible reviewer.
+    note: Check the FAQ against approved service information. Flag unsupported
+      availability, eligibility, pricing, medical benefit or outcome claims for
+      the responsible reviewer. Hands step 2 the marked FAQ and the gap list.
   - uses: plain-english-editor
-    note: Edit the existing administrative FAQ for understandable booking and contact instructions, preserving eligibility limits and removing or marking unapproved claims.
+    note: Edit your existing administrative FAQ, using the gap list from step 1
+      to remove or mark unapproved claims. Makes booking and contact steps easy
+      to follow and keeps every eligibility limit.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -36,9 +40,13 @@ credits:
   - title: Unsupported claim spotter
     by: Pro Skill Packs
     url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Plain English editor
     by: AI Blocks
     url: https://useaiblocks.com/skills/plain-english-editor
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

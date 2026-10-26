@@ -1,6 +1,6 @@
 new_slug: rival-gap-message-writer
 name: Rival gap message writer
-summary: Name a rival and your proven strengths. Get messages where your strength is their gap, plus their likely reply.
+summary: Write rival gap messages from your proven strengths and a rival's public weak spots. Get the evidence and their likely reply for each.
 job: study-competitors
 thinking: medium
 thinking_why: It weighs proof against a rival's likely reply, which takes judgement.
@@ -14,6 +14,10 @@ when:
   - A bigger rival owns your category and you need a way in.
   - You say you are better but cannot say how.
   - You are about to run an ad that compares you with a named rival.
+not_for:
+  - "Your market has no weak spot a buyer can check: build the message on your own proof, or ask a customer why they chose you."
+  - "You want an ad that names the rival: get a legal or ad-policy review first, because this prompt does not name them."
+  - "You want the full set of checks: use the Rival weakness message finder."
 you_give:
   - The rival and public facts about it, with sources
   - Your strengths, with proof
@@ -25,9 +29,28 @@ you_get:
   - A list of claims that have no proof yet
 how_to_use:
   - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
-  - Add a source and date for each fact about the rival.
-  - Be honest about proof. Claims with no proof will be set aside.
-  - Show the messages to someone outside the business before you use them.
+  - Add the rival's public facts. Put a source and date beside each one.
+  - Add your strengths and the proof for each. Strengths with no proof are set aside.
+  - Check that each fact about the rival is true and allowed in your market.
+  - Have someone outside the business read the messages. Get a legal or ad-policy review before any message names a rival.
+output_sample:
+  input:
+    - The rival's public facts, each with a source and date
+    - Your strengths, each with proof you can show
+    - Your brand brain (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+  output:
+    - name: MESSAGE 1 (use first)
+      contains: A headline about your strength, the proof a buyer can check, the rival gap behind it, and their likely reply.
+    - name: MESSAGE 2 and MESSAGE 3
+      contains: The same layout for your next two best pairs of strength and rival gap.
+    - name: Risk to you
+      contains: Whether the rival's reply would expose a weak spot of yours, or none.
+    - name: CLAIM ONLY (not used)
+      contains: Strengths you gave with no proof, set aside and not used in any message.
+    - name: MISSING
+      contains: Anything the AI could not source, marked so it never invents a fact.
 how_it_works:
   - title: List rival gaps
     text: Weak spots come from public facts with sources.

@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It must plan, screen and synthesise many sources with checked citations.
 new_slug: systematic-review-writer
 name: Systematic review writer
-summary: Name a research question. Get a reproducible search, screened papers, a
-  PRISMA flow and a cited review.
+summary: Turn your research question into a logged literature search, screened papers, a PRISMA flow diagram and a themed review with DOI-checked citations.
 job: research-topics
 headline: Systematic review writer
-subhead: Give it a research question and your inclusion rules. It builds search
-  strings, runs them across sources such as PubMed and arXiv, logs every query
-  and screens the papers. You get a repeatable search, a screened paper list, a
-  PRISMA flow diagram and a themed review with checked citations.
+subhead: Give it a research question and your inclusion rules. It builds search strings, runs them across sources such as PubMed and arXiv, logs every query and screens the papers. You get a repeatable search, a screened paper list, a PRISMA flow diagram and a themed review with checked citations.
 explain: |
   A literature review you can defend: a recorded search, papers screened with clear rules, a PRISMA flow diagram, and a written synthesis whose citations have been checked. Reviewers can repeat your steps and get the same papers.
 
@@ -20,6 +16,10 @@ when:
   - You have dozens of papers and need them screened by clear rules.
   - You want a PRISMA diagram with numbers that add up.
   - You suspect some citations in your draft are wrong or invented.
+not_for:
+  - "You only want quick background reading on a topic: ask your AI for a plain literature summary instead."
+  - "You need a single-database search, such as one PubMed query: run it yourself in that database."
+  - "You need the meta-analysis maths done: use a statistics tool or a statistician, as this skill only helps you plan one."
 you_give:
   - Your research question
   - Inclusion and exclusion rules
@@ -31,8 +31,35 @@ you_get:
   - A PRISMA flow diagram
   - A themed review with verified citations
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search public paper databases.
+  - Open an AI that can run code and reach the internet. Install the skill folder, or paste in its instructions.
+  - Paste your research question and your inclusion and exclusion rules. Add your databases and date range if you have them.
+  - Check the search strings it writes before it runs them. Save the search log it keeps.
+  - Ask a second person to screen the full texts and settle any disagreements. Then check the PRISMA counts add up.
+  - Read the citation check as a DOI and metadata check only. Open each source yourself to confirm it supports the claim.
+  - Ask for a PDF only if Pandoc and XeLaTeX are installed. Schematics need a paid OpenRouter key.
+output_sample:
+  input:
+    - Your research question
+    - Your inclusion and exclusion rules
+    - Databases or date range to search (optional)
+    - Papers or records you already have (optional)
+  prerequisites:
+    - An AI that can run code (Python 3.10 or newer) and reach the internet
+    - A second person to screen full texts, for a true systematic review
+    - Pandoc and XeLaTeX, only if you want a PDF
+    - An OpenRouter key, only if you want AI-drawn schematics (paid)
+  output:
+    - name: Search log
+      contains: Every search string, database, date and result count, so someone else can repeat your search.
+    - name: Screening record
+      contains: Counts of records screened, reports assessed and studies included, with reasons for each exclusion.
+    - name: PRISMA flow diagram
+      contains: A flow chart built from the reconciled screening counts.
+    - name: Data extraction and quality notes
+      contains: A structured table of what each included study reports and how strong the evidence is.
+    - name: Themed synthesis
+      contains: Findings grouped by theme across studies, with gaps and limits of the evidence named.
+    - name: Verified bibliography
+      contains: Your reference list, with each DOI checked to be registered and its metadata compared.
+    - name: Markdown and PDF review
+      contains: The full review written to the review template headings, as a Markdown file and an optional PDF.

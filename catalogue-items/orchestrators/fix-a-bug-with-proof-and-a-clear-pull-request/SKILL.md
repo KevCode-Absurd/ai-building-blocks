@@ -39,13 +39,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Prove the cause, then fix.** Use the skill `bug-root-cause-finder`. Finds and proves the cause, then makes a minimal fix once you agree.
-2. **Find the missing tests.** Use the skill `test-gap-finder`. Give it the code change from the steps before. Reads the fix and says which behaviour no test would catch if it broke again.
+1. **Prove the cause, then fix.** Use the skill `bug-root-cause-finder`. Makes the code change: finds and proves the cause, then makes a minimal fix once you agree. Steps 2, 3 and 4 all work from this change.
+2. **Find the missing tests.** Use the skill `test-gap-finder`. Give it the fix from step 1 and your tests. Reads the fix and says which behaviour no test would catch if it broke again.
 
 Pause here: Add the tests it proposes, starting with one that fails on the old code, and run them.
 
-3. **Review the fix.** Use the skill `code-change-reviewer`. Give it the code change from the steps before. Reviews the fix and its tests against your standards and the bug report.
-4. **Write the pull request.** Use the skill `pull-request-writer`. Give it the code change from the steps before. Describes the fix with the cause and the before and after proof.
+3. **Review the fix.** Use the skill `code-change-reviewer`. Give it the fix from step 1 together with the tests you added after step 2, not step 2's report itself. Reviews the fix and its tests against your standards and the bug report.
+4. **Write the pull request.** Use the skill `pull-request-writer`. Give it the fix from step 1 with the tests you added, and the cause and review points from steps 1 to 3. Describes the fix with the cause and the before and after proof.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

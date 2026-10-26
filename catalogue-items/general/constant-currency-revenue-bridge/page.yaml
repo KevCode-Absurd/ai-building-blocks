@@ -1,53 +1,110 @@
 new_slug: constant-currency-revenue-bridge
 name: Constant-currency revenue bridge
 headline: Constant-currency revenue bridge
-summary: Separate reported growth from translation effects using an explicit exchange-rate convention.
+summary: Split revenue growth into real growth and the effect of exchange rates. Get reported growth, constant-currency growth and the currency effect in money.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A reported and constant-currency growth bridge with a signed translation effect. Share prior/current local revenue by currency, matching domestic revenue and prior/current average reporting-currency-per-local-currency rates.
+subhead: Give it revenue by currency for two periods, the average exchange rate for each, and any revenue already in your reporting currency. It restates current revenue at last period's rates. You get reported growth, constant-currency growth and the translation effect, with the convention stated.
 explain: |-
-  A reported and constant-currency growth bridge with a signed translation effect.
+  If you sell in more than one currency, a weaker or stronger exchange rate can change your reported revenue even when you sold the same amount. A constant-currency revenue bridge removes that effect. It shows what growth would have been if the rates had not moved.
 
-  Issuer revenue and cash-flow reconciliation. Illustrative figures. Prior100×1+40=140. Current120×.8+50=146; fixed-rate current120×1+50=170. Reported growth4.285714%, constant-currency21.428571%; translation effect minus24.
+  This skill uses one clear convention. Current local revenue is translated at the average rate of the prior period. Rates are always written as reporting currency per one unit of local currency, so a rate is never read upside down. It uses average rates for the period, not closing balance sheet rates.
+
+  It then gives three numbers side by side: reported growth, constant-currency growth, and the translation effect in money. Constant-currency revenue is a management measure. It sits next to reported revenue and never replaces it.
 when:
-  - You need a reported and constant-currency growth bridge with a signed translation effect.
-  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Revenue grew on paper and you want to know how much of that came from exchange rates.
+  - You report in one currency but sell in several, and you need a fair growth rate to show a board or a lender.
+  - A reviewer asks for the translation effect as a number, not a guess.
+  - You are writing results commentary and want reported and constant-currency growth side by side.
+not_for:
+  - You need revenue as reported under GAAP or IFRS. Constant-currency revenue is a management measure and cannot replace it.
+  - Your figures include acquisitions, disposals, hedging results or a hyperinflationary economy. Deal with those first. For acquisitions and disposals use the Like-for-like sales growth checker.
+  - "You want a trailing 12-month figure: use the Trailing year financial calculator."
+  - You only have closing rates. Revenue is translated at the average rate for the period, so you need those.
 you_give:
-  - Prior/current local revenue by currency, matching domestic revenue and prior/current average reporting-currency-per-local-currency rates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Prior-period and current-period revenue in local currency, for each foreign currency
+  - The average exchange rate for each period, as reporting currency per one unit of local currency
+  - Revenue already in your reporting currency, for both periods
+  - The reporting currency, the scale (thousands or millions) and the period dates
+  - Your reported revenue for both periods, to tie to (optional)
 you_get:
-  - A reported and constant-currency growth bridge with a signed translation effect.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Reported growth and constant-currency growth, side by side
+  - The translation effect as a signed amount
+  - A table by currency showing how each figure was translated
+  - A tie to reported revenue, with any residual left open
+  - Sources, assumptions and a list of anything missing
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open Claude, ChatGPT or Gemini and add the skill, or paste SKILL.md into a new chat.
+  - Paste the revenue by currency for both periods, the average rates and your reporting-currency revenue. Say what the rates mean, for example USD per EUR.
+  - Give the reporting currency, scale and dates. Add your reported revenue if you want the bridge tied to it.
+  - Ask for the bridge. If you have many currencies, the AI builds one row for each and adds them up.
+  - Check that the translation effect is negative when the local currency weakened, then read MISSING and CHECKS MISSED.
+output_sample:
+  input:
+    - Revenue in local currency for the prior and current period, by currency
+    - Average exchange rates for both periods, as reporting currency per local currency
+    - Revenue already in your reporting currency, for both periods
+    - Reporting currency, scale, dates, and your reported revenue (optional)
+  prerequisites:
+    - An AI that can create and reopen spreadsheet files (only if you want a workbook)
+    - Node.js 20 or later (only to run the bundled calculation script)
+  output:
+    - name: Scope and dated sources
+      contains: The period, currency, scale and the dated source for every figure.
+    - name: Inputs and assumptions
+      contains: Each figure with its sign and source, and any assumption made.
+    - name: Convention
+      contains: "The rule used: current local revenue at prior-period average rates, with rate units stated."
+    - name: Growth bridge
+      contains: Reported and constant-currency revenue, both growth rates and the signed translation effect.
+    - name: Editable workbook
+      contains: The bridge as a spreadsheet with inputs, formulas and checks, if you ask for one.
+    - name: Actual file verification
+      contains: What was recalculated, rendered and reopened in the saved file, and what could not run.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs you did not give and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Fix the convention as current local revenue translated at prior-period average rates; do not mix the inverse rate or a different issuer convention
-    text: Fix the convention as current local revenue translated at prior-period average rates; do not mix the inverse rate or a different issuer convention.
-  - title: 2. Translate each currency bucket at actual current rates for reported revenue and at prior rates for constant-currency revenue; add unchanged domestic amounts
-    text: Translate each currency bucket at actual current rates for reported revenue and at prior rates for constant-currency revenue; add unchanged domestic amounts.
-  - title: 3. Calculate both growth rates against reported prior revenue and reconcile their dollar difference; separate hedging, hyperinflation and transaction FX as needed
-    text: Calculate both growth rates against reported prior revenue and reconcile their dollar difference; separate hedging, hyperinflation and transaction FX as needed.
+  - title: Fixes the convention
+    text: Current local revenue is translated at the prior-period average rate. Rates are reporting currency per local currency.
+  - title: Translates each currency
+    text: Reported revenue uses the actual current rate. Constant-currency revenue uses the prior rate. Domestic revenue is added unchanged.
+  - title: Calculates both growth rates
+    text: Both are measured against reported prior revenue, and the money difference between them is the translation effect.
+  - title: Ties and separates
+    text: Compares with reported revenue and keeps hedging, hyperinflation and transaction effects apart if you supply them.
 output_shape: |-
-  A reported and constant-currency growth bridge with a signed translation effect.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  CONVENTION
+  Constant-currency = current local revenue x prior-period average rate
+  Rates: <reporting currency> per 1 <local currency>
+
+  BY CURRENCY (<scale>)
+  <currency> | Prior local | Prior rate | Prior reported | Current local | Current rate | Current reported | At prior rate
+  Domestic revenue: <prior> | <current>
+
+  GROWTH
+  Reported growth: <percent>
+  Constant-currency growth: <percent>
+  Translation effect: <signed amount>
+
+  TIE TO REPORTED REVENUE
+  <difference or none>
+
+  SOURCES AND ASSUMPTIONS
+  <figure | source | date | assumption>
+
+  MISSING:
+  <each missing input>
+
+  CHECKS MISSED:
+  <each check that failed or could not run, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Exchange-rate units explicitly state reporting currency per local currency.
+  - what: Rate direction
+    how: Say which way your rates are written. Reporting currency per local currency is the one used here.
+  - what: Average rates
+    how: Use the average for the period, not the closing rate on the balance sheet date.
+  - what: Extra currencies
+    how: Add one line per currency. The bridge adds them up and ties to your reported figure.
 judge:
   - Exchange-rate units explicitly state reporting currency per local currency.
   - Average revenue translation rates are not replaced with closing balance-sheet rates.
@@ -67,10 +124,15 @@ works_best_with:
     - name: Node.js 20 or later
       why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your revenue note split by currency
+    - Average exchange rates for each period from a named source
+    - Your reported revenue for both periods
 terms:
+  - term: Constant currency
+    meaning: Revenue restated at last period's exchange rates, so the rates cannot change the growth figure.
+  - term: Translation effect
+    meaning: The change in reported revenue that comes only from the exchange rate moving.
+  - term: Reporting currency
+    meaning: The currency your accounts are presented in.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not real data.

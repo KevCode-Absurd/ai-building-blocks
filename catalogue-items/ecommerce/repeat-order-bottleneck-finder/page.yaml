@@ -1,6 +1,6 @@
 new_slug: repeat-order-bottleneck-finder
 name: "Repeat order bottleneck finder"
-summary: "Give it your order export. Get a repeat health score out of 100 and the one stage to fix first."
+summary: "Find your repeat order bottleneck from an order export. Get a repeat health score out of 100 and the one stage to fix first, with tests."
 job: keep-customers
 thinking: high
 thinking_why: "It works through an order export, builds cohorts and ranks causes, so a stronger model makes fewer counting mistakes."
@@ -17,6 +17,10 @@ when:
   - You have a repeat problem but do not know whether to fix the product, the offer, the flows or who you acquire.
   - Your email revenue looks fine but second orders stay low.
   - You are about to launch a VIP program and want to know if it is the right next move.
+not_for:
+  - You have under a few hundred orders or 6 months of history. Use a plain spreadsheet to count repeat buyers, as cohort numbers will be noise.
+  - You only want a repeat rate or cohort table with no diagnosis. Use a spreadsheet formula or a calculator skill instead.
+  - You sell subscriptions and want to know why people cancel. Use a subscription churn review, not this order-based check.
 
 you_give:
   - An orders export with customer id, date, order value, discount code and refund
@@ -35,6 +39,29 @@ how_to_use:
   - Add review or survey comments and your email revenue if you have them.
   - Read the bottleneck first, then the causes, then pick two tests from the list.
   - Run it again in a quarter on the next cohort to see if the bottleneck moved.
+output_sample:
+  input:
+    - "Your orders export: customer id, date, order value, discount code and refund"
+    - Your product list, marking which products are consumable
+    - Cost of goods per product (optional)
+    - Your email flow and campaign revenue (optional)
+    - Review or survey comments (optional)
+  prerequisites:
+    - An AI that can read a spreadsheet
+    - At least a few hundred orders and 6 months of history
+  output:
+    - name: Repeat health score
+      contains: A score out of 100 built from 12-month repeat rate, cohort trend and how many cause layers look clear.
+    - name: Stage numbers
+      contains: First-to-second order rate, gross profit per customer at 90, 180 and 365 days, and the top 20 percent share.
+    - name: Bottleneck
+      contains: The one stage to fix first, with the evidence behind it.
+    - name: Causes, top down
+      contains: Findings on product quality, range, acquisition, experience, then email and SMS, in that order.
+    - name: Tests for the bottleneck
+      contains: Tests that attack the bottleneck, each with what to measure and how long to run it.
+    - name: Route to, Not run, Missing
+      contains: The next skill to use, any part that could not run, and any input you did not give.
 
 how_it_works:
   - title: Splits the path

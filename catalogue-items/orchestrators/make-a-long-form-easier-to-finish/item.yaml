@@ -27,11 +27,11 @@ uses:
   - small-usability-test-planner
 steps:
   - uses: web-form-designer
-    note: Map required information, remove needless fields and define labels and validation rules.
+    note: "Map required information, remove needless fields and define labels and validation rules. Hands the revised field list to step 2."
   - uses: multi-step-form-designer
-    note: Decide whether the retained form warrants multiple steps; keep a short simple form on one page, otherwise plan step order, saved progress and final review.
+    note: "Takes the revised field list from step 1 and decides whether it warrants multiple steps: keep a short simple form on one page, otherwise plan step order, saved progress and final review. Hands the form plan to step 3."
   - uses: small-usability-test-planner
-    note: Test whether a person can finish the revised flow, recover from an error and understand what happens next.
+    note: "Test whether a person can finish the revised flow from step 2, recover from an error and understand what happens next. Uses your goal and any usability review you have."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

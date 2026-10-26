@@ -1,6 +1,6 @@
 slug: issues-how-agents-track-work-implementation-planner
 name: Agent issue and checkout builder
-summary: Build an issue schema and atomic checkout and release flow.
+summary: "Plan a task table where one AI agent claims a task at a time, with expiring claims, blocked tasks and tests. Draft code only."
 category: general
 type: skill
 role: make

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It mixes sharing ideas with a build plan.
 new_slug: shareable-tool-builder
 name: Shareable tool builder
-summary: Say what to build. Get a quiz, name generator or calculator designed so
-  people share it.
+summary: Plan a shareable quiz, name generator or calculator. You get the input, the logic, the result and the share card, ready to build.
 job: build-websites
 headline: Shareable tool builder
-subhead: Say what to build. Get a quiz, name generator or calculator designed so
-  people share it. Bring the tool idea and audience. Use the result to plan your
-  next step.
+subhead: Say what to build. Get a quiz, name generator or calculator designed so people share it. Bring the tool idea and audience. Use the result to plan your next step.
 explain: |
   A quiz, name generator, avatar maker or calculator designed so people want to share the result. It follows one pattern: minimal input, a clever step in the middle, and a result worth showing off.
 
@@ -18,6 +15,10 @@ when:
   - You have a quiz idea and need the questions, scoring and results planned.
   - You want a name or title generator people send to friends.
   - Your calculator gets used once and never shared.
+not_for:
+  - "You need a tool that uses real data or gives regulated advice (money, health, law): ask a qualified person, or use a plain calculator."
+  - "You want a full landing page or a sales page: write that page directly, or ask your AI for a landing page plan."
+  - "You want the working code built for you: this plans the tool, so hand the plan to a developer or a coding AI."
 you_give:
   - The tool idea and audience
   - Your brand and topic
@@ -29,7 +30,28 @@ you_get:
   - A quiz structure with scoring
   - Screenshot and share button advice
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed.
+  - Describe your tool idea, who it is for and your topic.
+  - Say what you can ask the user for, such as a name, a birthday or five answers.
+  - Read the plan. Check that each result feels good to share and looks clear on a phone.
+  - Hand the plan to a developer or a coding AI to build it.
+output_sample:
+  input:
+    - Your tool idea (quiz, name generator, calculator or avatar maker)
+    - Who it is for
+    - Your brand and topic
+    - What you can ask the user for, such as a name or a birthday
+    - Where you want people to share it (optional)
+  output:
+    - name: Input design
+      contains: What the user types or picks, and how much effort it asks for.
+    - name: Result type
+      contains: "Which kind of result fits: identity, comparison, prediction, score or visual."
+    - name: Tool logic
+      contains: How the tool turns the input into a result, such as weighted scoring or a name picked from the input.
+    - name: Quiz structure
+      contains: "For quizzes: five to ten questions, scoring weights and four to eight distinct results."
+    - name: Result page and share card
+      contains: The result title, short description, share image and buttons, designed to look good as a phone screenshot.
+    - name: Share checks
+      contains: Fixes for missing social preview tags, random results that change, missing share buttons and poor mobile layout.

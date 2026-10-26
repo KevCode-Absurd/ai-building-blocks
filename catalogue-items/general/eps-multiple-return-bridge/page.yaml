@@ -1,7 +1,7 @@
 new_slug: eps-multiple-return-bridge
 name: EPS and multiple return bridge
 headline: EPS and multiple return bridge
-summary: Explain an observed share-price change through earnings and valuation-multiple effects.
+summary: Explain a share-price change through earnings growth and P/E multiple change. Give EPS, P/E and dividends. You get a bridge that adds up to the price move.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a sequential price-return attribution that reconciles exactly to the observed change.
   - You work on public equity and share counts and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "Your EPS is zero or negative: the bridge needs positive EPS, so use a valuation model built for loss-making firms, or ask an analyst."
+  - "You need dividends reinvested, tax, fees or a forecast: use a total-return model in a spreadsheet, as this bridge covers none of these."
+  - "You want a buy, sell or price call: speak to a licensed adviser, because this only explains a past move."
 you_give:
   - Positive comparable starting and ending EPS, dated P/E multiples, cash dividends and corporate-action adjustments.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,29 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Starting and ending EPS on the same basis
+    - Starting and ending P/E multiples, with dates
+    - Cash dividends paid in the period
+    - Currency, scale and reporting date
+    - Share splits or other corporate actions (optional)
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later to run the bundled calculation script (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The question, the period, and the dated sources used for each input.
+    - name: Inputs and assumptions
+      contains: Every input with its date, currency, scale and any assumption made.
+    - name: Model calculations and reconciliations
+      contains: The earnings effect, the multiple effect, the dividend and the total return, checked against the price change.
+    - name: Editable workbook
+      contains: A spreadsheet with inputs, formulas and checks, plus an input schema and test cases.
+    - name: Actual file verification
+      contains: Which checks ran on the real files, such as recalculation, a changed input and reopening.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that could not be found and checks that failed or did not run.
 how_it_works:
   - title: 1. Put both EPS figures on the same split, accounting and period basis; derive comparable price from EPS times P/E at each date
     text: Put both EPS figures on the same split, accounting and period basis; derive comparable price from EPS times P/E at each date.

@@ -1,26 +1,25 @@
 slug: milestone-tranche-funding-checker
 name: Milestone tranche funding checker
-summary: Check approved tranche cash and the commitment still awaiting funding.
+summary: "Check how much of a staged funding request is approved, the cash you get after fees, the commitment still unfunded and any unsupported part."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: source_text
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: [contract-and-term-sheet-reviewer]
+next: []
 origin: own
 version: 1.0.0
 added: 2026-10-22

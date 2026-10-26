@@ -1,6 +1,6 @@
 new_slug: ad-test-budget-setter
 name: Ad test budget setter
-summary: Paste your target cost per sale. Get a daily test budget, a spend limit per ad and a rule for reading it.
+summary: Set your ad test budget from your target cost per sale. You get a daily budget, a spend limit per ad and a rule for when to cut or wait.
 job: plan-ad-tests
 thinking: low
 thinking_why: It is a few sums and fixed rules.
@@ -14,6 +14,10 @@ when:
   - You are about to start testing ads and do not know how much to spend.
   - You keep cutting ads too early.
   - You need a clear rule you can follow without second-guessing.
+not_for:
+  - "You have no cost per sale figure yet: work out your break-even cost per sale from your margin first, then come back."
+  - "You want the full version with every check: use the Ad test budget calculator."
+  - "You want to plan which ideas to test: use a simple list of your top three ad ideas, then run them through this one."
 you_give:
   - Your target cost per sale
   - Sales needed and test days (optional)
@@ -28,6 +32,26 @@ how_to_use:
   - Under the prompt, write your target cost per sale and, if you know them, sales needed and days.
   - Check the sum for the daily budget with a calculator.
   - Write the spend limit down before you launch, so you do not change it later.
+output_sample:
+  input:
+    - Your target cost per sale
+    - Sales you need to call a result (optional)
+    - Days you can test (optional)
+  output:
+    - name: INPUTS
+      contains: Your target cost per sale, sales needed and test days, as the AI read them.
+    - name: DAILY BUDGET
+      contains: The sum for a daily test budget with your numbers shown, plus the total spend.
+    - name: SPEND LIMIT PER AD
+      contains: The most each ad can spend before you judge it, at 3 times and 5 times your target, in dollars.
+    - name: READ WINDOW
+      contains: How many days to wait before reading results, with the reason.
+    - name: ADS FOR THIS IDEA
+      contains: How many ads a new idea needs, as a starting point.
+    - name: IF IT WINS / IF IT LOSES
+      contains: Next steps for a winning ad and for a losing one.
+    - name: MISSING
+      contains: Anything you did not give, so you know what to add.
 how_it_works:
   - title: Works out the budget
     text: Sales needed x cost per sale / days.

@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It maps material data to the right settings.
 new_slug: pcb-material-setup-helper
 name: PCB material setup helper
-summary: Name your board material. Get a substrate, conductor and layer stack
-  set up with loss included.
+summary: "Set up a PCB material in MATLAB: a substrate, a copper or gold conductor and a layer stack, with loss included, ready for your RF board design."
 job: build-software
 headline: PCB material setup helper
-subhead: Pick your board material and walk away with a substrate, a metal and a
-  layer stack that behave like the real thing, loss included. Every RF board
-  design starts here, and wrong material numbers ruin every result after it.
+subhead: Pick your board material and walk away with a substrate, a metal and a layer stack that behave like the real thing, loss included. Every RF board design starts here, and wrong material numbers ruin every result after it.
 explain: |
   Pick your board material and walk away with a substrate, a metal and a layer stack that behave like the real thing, loss included. Every RF board design starts here, and wrong material numbers ruin every result after it.
 
   The skill looks up common materials such as FR4 or Teflon from a built-in catalogue, or builds your own from dielectric constant, loss tangent and thickness. It sets conductors like copper or gold with real conductivity. For several layers it builds a stack with a thickness for each. For wide frequency ranges it adds a frequency-dependent loss model so results stay accurate. It runs in MATLAB with the RF PCB Toolbox.
 when:
   - You are starting an RF board design and need a substrate defined first.
-  - Your datasheet gives dielectric constant and loss tangent, and you need a
-    material from them.
+  - Your datasheet gives dielectric constant and loss tangent, and you need a material from them.
   - You want a multi-layer stack for a stripline or embedded design.
   - Results need to stay accurate across a wide frequency band.
+not_for:
+  - "You need to build the board layers themselves: use the matlab-assemble-pcb-layout skill, which is not listed here yet."
+  - "You want to design a transmission line or filter: a design skill for that comes next, after materials are set."
+  - "You have no MATLAB or RF PCB Toolbox: ask a board designer for the material values, or use a free field solver."
 you_give:
   - Your material name or its datasheet values
   - Layer thicknesses
@@ -30,8 +30,28 @@ you_get:
   - A multi-layer stack with thickness per layer
   - Material code you can pass to later designs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox.
+  - Check first that you have MATLAB and the RF PCB Toolbox. Both are paid tools, and the code will not run without them.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - "Send a clear request, for example: FR4, 1.6 mm thick, copper conductor, 1 to 10 GHz."
+  - Read the MATLAB code it returns. Check that thickness is in meters and the loss model fits your range.
+  - Copy the code into MATLAB and run it. Then pass the substrate and conductor to your next design.
+output_sample:
+  input:
+    - Your material name, such as FR4, or its datasheet values
+    - Thickness of each layer
+    - The metal you use, such as copper or gold (optional)
+    - Your frequency range (optional)
+  prerequisites:
+    - MATLAB with the RF PCB Toolbox, both paid products
+    - An AI that can write MATLAB code
+  output:
+    - name: Dielectric (substrate)
+      contains: MATLAB code that makes your substrate from the catalog or from your own permittivity, loss tangent and thickness.
+    - name: Metal (conductor)
+      contains: MATLAB code for a conductor such as copper or gold, with real conductivity and thickness.
+    - name: Multi-layer stack
+      contains: A substrate with several layers, each with its own thickness, for stripline or embedded designs.
+    - name: Frequency-dependent loss model
+      contains: Code that sets a reference frequency so loss stays accurate across a wide band.
+    - name: Property check
+      contains: Code that reads permittivity and loss tangent at your chosen frequencies, and plots them.

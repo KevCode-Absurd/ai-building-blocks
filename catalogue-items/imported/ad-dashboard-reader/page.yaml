@@ -2,15 +2,10 @@ thinking: high
 thinking_why: It weighs biased numbers against each other before advising.
 new_slug: ad-dashboard-reader
 name: Ad dashboard reader
-summary: Paste your ad numbers. Get each metric explained, platforms reconciled
-  and a scale, hold or cut call.
+summary: Read your ad dashboard numbers with confidence. Paste your platform and sales figures to get a plain reading and a scale, hold or cut call.
 job: read-ad-results
 headline: Ad dashboard reader
-subhead: Paste your dashboard numbers from each ad platform, your own sales data
-  and the date range and attribution settings. It explains how each platform
-  inflates its own credit and reconciles them against your sales. You get a
-  plain reading of each metric, a noise check on changes, a scale, hold or cut
-  call and a suggested incrementality test.
+subhead: Paste your dashboard numbers from each ad platform, your own sales data and the date range and attribution settings. It explains how each platform inflates its own credit and reconciles them against your sales. You get a plain reading of each metric, a noise check on changes, a scale, hold or cut call and a suggested incrementality test.
 explain: |
   Ad numbers stop being a puzzle once each metric is explained. See where platforms disagree with each other, and whether to scale a campaign or cut it.
 
@@ -20,6 +15,10 @@ when:
   - ROAS looks great but your bank balance does not.
   - You cannot tell if last week's dip is real or random.
   - You want to know whether to raise or cut spend.
+not_for:
+  - "You need a plan for which channels to buy: use a paid media strategy step or talk to a media buyer first."
+  - "You want to write or test new ad creative: use a creative testing step, not a dashboard reading."
+  - "You have no sales or order data at all: pull a simple sales export from your shop or bank first, or the totals cannot be checked."
 you_give:
   - Dashboard numbers from each ad platform
   - Your own sales or order data
@@ -32,7 +31,26 @@ you_get:
   - A scale, hold or cut call
   - A suggested incrementality test
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste your dashboard numbers from each ad platform, one platform at a time.
+  - Add your own sales figures, the date range and each platform's attribution window.
+  - Ask your AI to read each metric, then reconcile the totals to your sales.
+  - Ask for the noise check, then the scale, hold or cut call and one test to run next.
+  - Check the result against your own bank figures before you change any budget.
+output_sample:
+  input:
+    - Dashboard numbers from each ad platform you run
+    - Your own sales or order data for the same dates
+    - The date range and attribution settings on each platform
+    - Your margin or customer value (optional)
+  output:
+    - name: Metric readings
+      contains: One plain line per metric saying what it counts, what it leaves out, and how far to trust it.
+    - name: Reconciliation table
+      contains: Each platform's claimed sales set against your own sales, showing where credit is counted twice.
+    - name: Noise verdict
+      contains: A call on whether a recent change is real or likely random, based on the size of the data.
+    - name: Scale, hold or cut call
+      contains: One clear decision on spend, with the reasons and any numbers still missing.
+    - name: Incrementality test
+      contains: One proposed test, such as holding out a region, to show what the ads really caused.

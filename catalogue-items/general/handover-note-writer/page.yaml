@@ -1,6 +1,6 @@
 new_slug: handover-note-writer
 name: "Handover note writer"
-summary: "Paste what you are handing over and to whom. Get a note the next person can run from on day one."
+summary: "Turn a brain dump into a handover note. The person covering your work sees what breaks first and what is due, and can act on day one."
 job: document-work
 thinking: low
 thinking_why: "It sorts a brain dump into a fixed shape and keeps every fact as given."
@@ -17,6 +17,10 @@ when:
   - "You are going on leave and someone is covering your work."
   - "You are leaving a job and want the successor to start well."
   - "You are the only person who knows how a thing runs and that has started to feel like a risk."
+not_for:
+  - "You want to turn one repeated task into steps: use the Repeat task how-to writer."
+  - "Nothing is written down yet and you have no time to dump it: talk it through with the person covering first, then paste your notes here."
+  - "You need to pass on passwords or keys: share them through your password manager, never in the note."
 
 you_give:
   - "A brain dump of everything about the work, in any order"
@@ -33,6 +37,31 @@ how_to_use:
   - "Say who takes over and your dates. Never include passwords."
   - "Read IF YOU READ NOTHING ELSE. If anything there is wrong, fix it first."
   - "Walk the taker-over through the note once before you leave."
+output_sample:
+  input:
+    - A brain dump of everything about the work, in any order
+    - Who takes over and for how long
+    - Your leave dates and the deadlines in that time (advised)
+    - What the person covering already knows (optional)
+  output:
+    - name: IF YOU READ NOTHING ELSE
+      contains: The things that break, expire or get missed if nobody acts, each with a date, an action and a result.
+    - name: DUE IN THE WINDOW
+      contains: Deadlines in date order, with what done looks like and who is waiting.
+    - name: LIVE WORK
+      contains: Each piece of work with its status, next step, files, people and any decision pending.
+    - name: WHERE THINGS LIVE
+      contains: Tools and folders, what is in each, and how access is granted. No passwords.
+    - name: PEOPLE
+      contains: Each person's role, what they care about, how to contact them and useful quirks.
+    - name: LEAVE ALONE
+      contains: Work that should wait until you are back, and why.
+    - name: REACHING ME
+      contains: Whether and how you can be reached, for what, and who decides if it is urgent.
+    - name: MISSING
+      contains: Dates, owners or facts your brain dump did not give.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: "Finds the time bombs"

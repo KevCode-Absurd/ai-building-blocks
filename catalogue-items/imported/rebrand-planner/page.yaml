@@ -2,34 +2,65 @@ thinking: high
 thinking_why: It judges what to keep and what to drop, which takes careful thought.
 new_slug: rebrand-planner
 name: Rebrand planner
-summary: Say why your brand must change. Get what to keep, what to change and a
-  rollout plan.
+summary: Plan a rebrand that keeps what works. Give it your reason for change. You get a keep and change list and a rollout plan.
 job: plan-strategy
 headline: Rebrand planner
-subhead: A rebrand plan that says what to keep, what to change and how to roll
-  it out without losing customer trust. It begins with the real reason for the
-  change, since a new logo alone never fixes a strategy problem.
+subhead: Tell your AI why your brand must change and what you want to keep. It checks the real reason, sorts what to keep and what to change, and writes a rollout plan. You also get draft messages for customers, staff and the public.
 explain: |
   A rebrand plan that says what to keep, what to change and how to roll it out without losing customer trust. It begins with the real reason for the change, since a new logo alone never fixes a strategy problem.
 
   It asks why you are rebranding, what triggered it, what is broken, and what has value worth keeping. Then it audits what exists. It classes the job as a full transformation, a repositioning, a visual refresh or a name change. It builds the new brand direction, and then a phased transition plan covering who must be told, in what order, and how to avoid confusion on the day.
 when:
-  - A merger, new market or new owner means the brand must change.
+  - A merger, new owner or new market means the brand must change.
   - Customers see you as something you no longer are.
-  - You want a refresh but fear losing recognition.
-  - You need a rollout plan covering staff, customers and channels.
+  - You want a refresh but fear losing the name or look people know.
+  - You need a rollout plan that covers staff, customers and channels.
+not_for:
+  - "You only want a small visual tweak with no change in strategy: make a simple refresh of your colors or fonts yourself."
+  - "You are not sure the brand is the problem: first review what you have with a brand audit, then come back here."
+  - "You need the full launch plan for the public day: use this plan for the big picture, then plan the launch step by step with your team."
 you_give:
-  - Reason for the rebrand
-  - What is broken and what must stay
-  - Stakeholders
-  - Existing brand notes (optional)
+  - Why you want to rebrand, and what set it off
+  - What is broken in the brand today
+  - What must stay, such as a name, color or phrase
+  - Who must agree to the change
+  - Your deadline (optional)
+  - Your brand context file or existing brand notes (optional)
 you_get:
-  - Audit of the current brand
-  - Keep and change list
-  - New brand direction
-  - Phased rollout plan
+  - A plain diagnosis of the real problem behind the rebrand
+  - A list of what has value and what is broken
+  - A table of what to keep, update or replace
+  - A new brand direction
+  - Draft messages for customers, staff and the public
+  - A four-phase rollout plan and a list of risks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, web access or paid tool is needed.
+  - Paste the skill text from this page into the chat.
+  - Type your reason for the rebrand, what is broken and what must stay. Paste any brand notes too.
+  - Answer any questions your AI asks. It may push back if your reason is only a fresh look.
+  - Read the diagnosis first. If it does not match your real problem, say so and ask for a redo.
+  - Check the keep and change table with your team before you share the messages.
+output_sample:
+  input:
+    - Why you want to rebrand, and what set it off
+    - What is broken in the brand today
+    - What must stay, such as a name, color or well-known phrase
+    - Who must agree to the change (customers, staff, investors)
+    - Your deadline (optional)
+  prerequisites:
+    - Your brand context file, if you have one (optional)
+  output:
+    - name: Rebrand diagnosis
+      contains: The real problem behind the change, the type of rebrand, and what is driving it.
+    - name: Brand equity audit
+      contains: What has value, what works, what is broken and what is neutral in the current brand.
+    - name: Rebrand scope
+      contains: A table that marks each element as keep, update or replace, with a reason.
+    - name: The new brand direction
+      contains: The new positioning, what changed, what stayed, the new personality and the audience.
+    - name: Transition narrative
+      contains: Draft messages that explain the change to customers, staff and the public.
+    - name: Rebrand rollout plan
+      contains: "Four phases: internal, owned assets, public launch and the transition period."
+    - name: Rebrand risks
+      contains: Risks of customer confusion, lost recognition, staff doubt, bad timing and weak execution, with ways to lower each.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows set rules for code that can be converted.
 new_slug: matlab-to-c-converter
 name: MATLAB to C converter
-summary: Give it MATLAB code. Get C, C++ or CUDA code that is checked and tuned
-  for speed.
+summary: Turn a MATLAB function into C, C++ or CUDA code with MATLAB Coder. It checks the result against MATLAB and tunes settings for speed.
 job: build-software
 headline: MATLAB to C converter
-subhead: MATLAB code turned into C, C++ or CUDA that has been checked against
-  the original, and tuned for speed. Give it a function and say what you need it
-  to run on.
+subhead: MATLAB code turned into C, C++ or CUDA that has been checked against the original, and tuned for speed. Give it a function and say what you need it to run on.
 explain: |
   MATLAB code turned into C, C++ or CUDA that has been checked against the original, and tuned for speed. Give it a function and say what you need it to run on.
 
@@ -18,6 +15,10 @@ when:
   - A MATLAB function is too slow and you want a compiled version.
   - You want GPU code from MATLAB without writing CUDA yourself.
   - You must prove the generated code gives the same results.
+not_for:
+  - "You work in Simulink models: use Simulink Coder or Embedded Coder in Simulink, since this skill covers MATLAB code only."
+  - "You need a language other than C, C++ or CUDA: ask a developer to port it by hand."
+  - "You have a hand-written MEX C file: edit it yourself, because this skill only works with code that MATLAB Coder makes."
 you_give:
   - The MATLAB function or class
   - Input types and sizes
@@ -29,8 +30,32 @@ you_get:
   - Speed settings
   - Notes on limits
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with MATLAB Coder.
+  - Check that you have MATLAB with MATLAB Coder. For CUDA you also need GPU Coder.
+  - Open your AI tool and paste the contents of the skill's SKILL.md file. Use an AI that can run MATLAB, or be ready to paste results back.
+  - Paste your MATLAB function. Say the type and size of each input, and whether you want C, C++ or CUDA.
+  - Let your AI run the screener first. Read what it cannot convert before you go on.
+  - Check the match result against your MATLAB function. Do this before you use the generated code.
+  - Ask for speed tuning last. Review the settings it suggests before you apply them.
+output_sample:
+  input:
+    - Your MATLAB function or class
+    - The type and size of each input
+    - "Your target: C, C++ or CUDA"
+    - What the code will run on, such as a PC, embedded chip or GPU (optional)
+  prerequisites:
+    - MATLAB with a MATLAB Coder licence
+    - An AI that can run MATLAB commands, or that you can paste results back to
+    - GPU Coder or Embedded Coder only if you want CUDA or embedded targets
+  output:
+    - name: Screener result
+      contains: A list of calls and messages showing what in your code MATLAB Coder cannot convert.
+    - name: Codegen-ready MATLAB
+      contains: Changes needed to make your code convertible, shown to you first. Your source is not edited without your approval.
+    - name: MEX test build
+      contains: A compiled test version of your function, built first to check the code before the final build.
+    - name: Generated source code
+      contains: The C, C++ or CUDA code built from your function, as a library, DLL or executable.
+    - name: Match check
+      contains: A test run comparing the generated code with your MATLAB function on the same inputs.
+    - name: Speed settings and notes
+      contains: Config choices that make the code faster, plus any limits or unsupported features found.

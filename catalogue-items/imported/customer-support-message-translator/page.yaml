@@ -2,17 +2,28 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: customer-support-message-translator
 name: Customer support message translator
-summary: Paste a customer message. Get an English translation and a reply draft in the customer’s language.
+summary: Translate a customer message into English and get a reply draft in their language, with an English check. Works for pasted text or a Gorgias ticket.
 job: help-customers
 headline: Customer support message translator
-subhead: Paste a customer message or give it a Gorgias ticket number. It identifies the language, explains unclear phrases, and matches the level of formality. You get an English translation, a reply draft in the original language, and its English meaning.
+subhead: Paste a customer message, or give a Gorgias ticket number. Your AI finds the language, translates the message and flags unclear phrases. You get an English version, a reply in the customer's language, and what that reply says in English.
 when:
-  - You use this tool for customer support and need help with this task.
+  - A customer writes in a language you do not speak.
+  - A message has a saying or slang you cannot read.
+  - You want a reply that sounds natural and matches the customer's level of formality.
+  - You need to check what a reply says in English before you send it.
+not_for:
+  - "You need legal, refund or contract wording: have a person who knows the language and the policy write and check it."
+  - "You need a fully translated help center or long documents: use a professional translation service or a human translator."
+  - "You only want a reply in English: write it yourself or ask your AI for a plain reply, no translation needed."
 you_give:
-  - The customer message or Gorgias ticket number.
-  - Verified product facts for the reply.
+  - The customer message, pasted as text.
+  - A Gorgias ticket number, if you want your AI to fetch the message (optional).
+  - Verified product facts to use in the reply (optional).
 you_get:
-  - Write a reply in the customer's language and translate that reply into English for review.
+  - The language and formality level of the message.
+  - A clear English translation with notes on unclear phrases.
+  - A reply draft in the customer's language.
+  - An English version of that reply, so you can check it.
 how_it_works:
   - title: Identify the language
     text: Read the message. Identify its language, possible dialect, and how formal it is.
@@ -25,8 +36,30 @@ works_best_with:
     - name: Gorgias for ticket lookup; pasted text also works
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for customer support message translator by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide the customer message or Gorgias ticket number.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Open Claude, ChatGPT or Gemini and paste the skill text, or add the skill folder if your AI reads files.
+  - Paste the customer message. Add any product facts the reply must include.
+  - To use a Gorgias ticket number instead, your AI must run commands, and Composio CLI must be linked to your Gorgias account.
+  - Read the English translation and cultural notes first.
+  - Check the English back-translation against the reply draft. Fix anything that does not match your facts.
+  - Have a person who knows the language review any reply about refunds, legal or contract terms before you send it.
+output_sample:
+  input:
+    - The customer message, pasted as text
+    - Or a Gorgias ticket number
+    - Verified product facts for the reply (optional)
+  prerequisites:
+    - "For a Gorgias ticket number: Composio CLI with your Gorgias account connected, and an AI that can run commands"
+    - Pasted text needs none of this
+  output:
+    - name: Translation header
+      contains: The language and dialect your AI detected, how sure it is, and whether the message is formal or informal.
+    - name: Customer's Message (Original)
+      contains: The customer's text, quoted as it was written.
+    - name: English Translation
+      contains: A clear English version that keeps the customer's tone and intent.
+    - name: Cultural Notes
+      contains: Sayings, context or unclear phrases the support person should know, with possible meanings.
+    - name: Draft Reply
+      contains: A reply in the customer's language, with the right formal or informal address.
+    - name: English Back-Translation
+      contains: What the reply says in English, so you can check it before sending.

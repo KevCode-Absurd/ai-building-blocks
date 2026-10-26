@@ -2,17 +2,63 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-aws-well-architected-review
 name: AWS workload practice reviewer
-summary: Share your AWS design. Get architecture gaps and proposed fixes against
-  AWS workload guidance.
+summary: Review your AWS setup for gaps in security, reliability and cost. Get an AWS Well-Architected review with fixes, then GitHub issues to track them.
 job: ship-and-host
 headline: AWS workload practice reviewer
-subhead: Share your AWS design. Get architecture gaps and proposed fixes against
-  AWS workload guidance. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: "Share your infrastructure files and give your AI read access to your AWS account. It checks the setup against all six AWS Well-Architected pillars and rates each gap High, Medium or Low. After you say yes, it opens one GitHub issue per gap."
+explain: |
+  A setup can run fine and still be one failure away from an outage or a security hole. This AWS Well-Architected review reads your infrastructure files and checks them against a list for each pillar: operations, security, reliability, performance, cost and sustainability.
+
+  Every finding gets a risk rating, so you fix single points of failure and missing backups before small tidy-ups. It shows a summary of the top High risk items and waits for your yes before it creates any issue.
+
+  Each issue includes the fix in code, an AWS command line fallback, links to AWS guidance and a checklist to confirm the fix.
+when:
+  - "You are about to launch a workload on AWS and want a second look."
+  - "A customer or auditor asks how your AWS setup handles security and backups."
+  - "You inherited an AWS account and do not know what is weak."
+  - "You want review findings your team can track in GitHub."
+not_for:
+  - "You do not use AWS: use a review tool made for your own cloud, or ask a cloud engineer."
+  - "You want to check one resource, like a single S3 bucket: check it by hand in the AWS console."
+  - "You want a quick scan with no code files or GitHub issues: use AWS Trusted Advisor or the AWS Well-Architected Tool directly."
+you_give:
+  - "The folder with your infrastructure files (Terraform, CloudFormation, CDK or SAM)"
+  - "Read access to your AWS account through the AWS command line"
+  - "The GitHub repository that should get the issues"
+  - "The type of workload, such as serverless or SaaS (optional)"
+you_get:
+  - "A diagram of the AWS services found in your files"
+  - "A check against all six pillars, with each finding rated High, Medium or Low"
+  - "A summary of finding counts and top High risk items, shown before anything is created"
+  - "One GitHub issue per finding, with the fix, a command line fallback and a checklist"
+  - "One tracking issue with a table of findings by pillar and a ranked checklist"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI that can run code, read your files and use the AWS CLI. Set up the GitHub MCP server too, with permission to write issues.
+  - Add the skill to your AI, or paste it into a chat.
+  - Tell it the folder that holds your infrastructure code. Name the workload type if you know it.
+  - Read the review summary. It shows the counts and top High risk findings, and nothing is created yet.
+  - Say yes to create the GitHub issues. If issue creation fails, you get the findings as text instead.
+  - Start with the High risk issues. Each one has a fix you can put into your code.
+output_sample:
+  input:
+    - The folder with your infrastructure code (Terraform, CloudFormation, CDK or SAM)
+    - Read-only access to your AWS account through the AWS CLI
+    - Your GitHub repository, where the issues will be created
+    - The type of workload, such as serverless or SaaS (optional)
+  prerequisites:
+    - An AI that can run code and read your files
+    - AWS CLI set up and signed in
+    - GitHub MCP server set up and signed in, with permission to write issues
+  output:
+    - name: Architecture diagram
+      contains: A Mermaid diagram of the AWS services found in your code, grouped by compute, data, network, security and monitoring.
+    - name: Pillar review
+      contains: "Checks against all 6 pillars: operations, security, reliability, performance, cost and sustainability."
+    - name: Risk ratings
+      contains: Each finding rated High, Medium or Low risk, with the pillar it belongs to.
+    - name: Review summary
+      contains: Counts of findings by risk and the top High risk items, shown before anything is created. You confirm first.
+    - name: Finding issues
+      contains: One GitHub issue per finding, with description, fix in code, AWS CLI fallback, AWS links and a checklist to confirm the fix.
+    - name: EPIC issue
+      contains: One tracking issue with a table of findings by pillar, the diagram, a prioritized checklist and success criteria.

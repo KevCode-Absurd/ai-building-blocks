@@ -2,33 +2,84 @@ thinking: medium
 thinking_why: It applies a style guide to your draft.
 new_slug: ai-instruction-writer
 name: AI instruction writer
-summary: Say which skill or instruction file you are writing. Get it written so
-  your AI follows it well.
+summary: "Rewrite your AGENTS.md, CLAUDE.md or skill so your AI follows it the same way each run. Get a sharper trigger line and a tighter file."
 job: make-skills
 headline: AI instruction writer
-subhead: A guide to writing skills and instruction files so your AI follows them
-  the same way each run. It applies to skills, AGENTS.md or CLAUDE.md, and any
-  document the AI is pointed to.
+subhead: Paste the skill or instruction file your AI keeps ignoring or follows differently each time. Your AI finds the weak lines, rewrites the trigger line, and sorts what to keep loaded from what to link. You get a tighter file and a list of triggers.
 explain: |
-  A guide to writing skills and instruction files so your AI follows them the same way each run. It applies to skills, AGENTS.md or CLAUDE.md, and any document the AI is pointed to.
+  If your AI skips a skill or an instruction file you wrote, the cause is often one line: the one it always sees that says what a document is and when to open it. This skill, adapted from Matt Pocock's guide to writing for agents, teaches your AI to fix that line first.
 
-  The key idea is the context pointer: the line your AI always sees that says what a document is and when to open it. Its wording decides whether the AI reaches the material. So you put the key word first, give each distinct case one trigger, and drop synonyms and words the body already says. The guide also weighs two costs. Always-loaded text uses attention on every turn. Too many documents leave the human as the index.
+  It puts the key word first, gives each different case one trigger, and drops synonyms and words the file already says. It also weighs two costs. Text that is always loaded uses your AI's attention on every turn. Too many files leave you as the person who must remember which one to use.
+
+  Then it tightens the document itself. It moves detail that only some cases need behind a link, and cuts lines your AI would follow anyway. Your AI follows the same steps each run, even when the exact words differ.
 when:
   - Your AI skips a skill or file you wrote for it.
-  - Your AGENTS.md is long and you must decide what to cut.
-  - You are writing a new skill and want it triggered at the right time.
-  - You want results to vary less between runs.
+  - Your AGENTS.md or CLAUDE.md has grown long and you must decide what to cut.
+  - You are writing a new skill and want it to fire at the right time.
+  - Your AI gives different results each run from the same instructions.
+not_for:
+  - "You want to build a skill from a task you repeat: use the skill writer or the skill builder."
+  - "You only want a skill file checked for structure and naming: use the skill file validator."
+  - "You want to know why one skill never fires, with grades across all your skills: use the skill trigger auditor."
+  - "You are writing for people, not an AI, such as a handbook or a help page."
 you_give:
-  - The skill or instruction file you are writing or fixing
-  - The cases it should handle
+  - The skill or instruction file you are writing or fixing, pasted in full
+  - The cases it should handle, in a short list
   - Times it failed to trigger or ran wrongly (optional)
+  - Where the file sits, such as a skill, AGENTS.md or CLAUDE.md (optional)
 you_get:
-  - A rewritten pointer or description
-  - Guidance on what to keep always loaded and what to link
+  - A rewritten trigger line or skill description
+  - A list of what to keep always loaded and what to link instead
   - A tighter version of your document
-  - A list of triggers by case
+  - A table of triggers, one per case
+  - A short list of lines cut and why
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, or upload the file. If you also use skill files, add SKILL-MECHANICS.md. No code or paid tools are needed.
+  - Paste the file you want fixed. List the cases it should handle. Add any time it failed.
+  - Ask your AI to start with the trigger line. Read the new line and check that each case has one trigger.
+  - Ask for the keep-loaded and link-instead list, then the tighter file. Check that no rule you rely on was cut.
+  - Put the new file in place and run it on two real tasks. If your AI still misses the file, ask for a stronger trigger word.
+how_it_works:
+  - title: Read the file
+    text: It sorts your document into steps and reference, and spots lines that repeat or never matter.
+  - title: Fix the trigger line
+    text: It puts the key word first and gives each different case one trigger.
+  - title: Weigh the two costs
+    text: It decides what stays loaded each turn and what moves behind a link.
+  - title: Check each step ends clearly
+    text: It sharpens how each step says it is done, so your AI does not stop early.
+  - title: Cut and tighten
+    text: It removes repeats and lines your AI already follows, and states rules as what to do.
+output_sample:
+  input:
+    - The skill or instruction file you want fixed
+    - The cases it should handle
+    - Times it failed to trigger or ran wrongly (optional)
+  output:
+    - name: Rewritten trigger line
+      contains: The line your AI always sees, with the key word first and one trigger per case.
+    - name: Keep loaded or link
+      contains: A list of what stays in the main file and what moves behind a link.
+    - name: Trigger table
+      contains: Each case and the one word or phrase that should fire it.
+    - name: Tighter document
+      contains: Your file with repeats cut, steps ending clearly and rules stated as what to do.
+    - name: Cuts and reasons
+      contains: Each line removed or moved, with a one-line reason.
+works_best_with:
+  tools:
+    - name: Claude
+      why: Claude Code and Claude read AGENTS.md, CLAUDE.md and skill files, so you can test the fix at once.
+    - name: Any good chat AI
+      why: ChatGPT and Gemini can rewrite the text. You test the result in the tool that reads your file.
+  inputs:
+    - Two or three real prompts where your AI failed
+    - The other skills or files that sit beside this one
+    - A copy of the file before you change it
+terms:
+  - term: context pointer
+    meaning: The line your AI always sees that says what a document is and when to open it.
+  - term: trigger
+    meaning: A word or case that makes your AI open a skill or file.
+  - term: AGENTS.md
+    meaning: A file of standing instructions that an AI coding tool reads in a project. CLAUDE.md does the same job for Claude.

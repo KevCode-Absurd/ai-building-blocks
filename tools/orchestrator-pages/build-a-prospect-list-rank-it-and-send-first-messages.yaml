@@ -1,6 +1,6 @@
 new_slug: build-a-prospect-list-rank-it-and-send-first-messages
 name: Build a prospect list, rank it and send first messages
-summary: Give it your ideal customer. Get a qualified list, a ranking, checked first messages and a daily block.
+summary: Build a prospect list from your ideal customer, rank it, and get checked first messages plus a daily block to send them. Free workflow.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It judges who to approach and writes messages real strangers will read. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a product people like and no pipeline.
   - You bought or built a list of 800 names and have called none of them.
   - Your first emails get no reply and you do not know whether it is the list or the message.
+not_for:
+  - "You want to sell more to people who already bought: use your own customer list and a short note from you, not this workflow."
+  - "You sell to shoppers, not businesses: this builds lists of companies and roles, so use a simple ad or store page plan instead."
+  - "A prospect has already replied: write your next message by hand, since this only writes first messages to strangers."
 you_give:
   - "Your ideal customer: company type, size, role, the problem they have"
   - What you offer and the price
@@ -30,6 +34,28 @@ how_to_use:
   - Paste your ideal customer and your offer. It builds and ranks the list.
   - Read the first message and the checker's notes. Fix any claim it flagged.
   - Send to the top tier yourself, in your daily block. Log replies and bring them back after two weeks.
+output_sample:
+  input:
+    - "Your ideal customer: company type, size, role and the problem they have"
+    - What you offer and the real terms, such as price
+    - Your current list of prospects (optional)
+    - Your week and how much time you can give to prospecting
+  prerequisites:
+    - Your brand brain from the Brand profile builder (optional, but it helps)
+    - Your offer from the New offer opportunity finder (optional, but it helps)
+  output:
+    - name: Prospect list
+      contains: Accounts that match your ideal customer, with the reason each fits and the right person to contact.
+    - name: Ranked list
+      contains: Each account scored on fit and activity and sorted into tiers, so the first hour goes to the best.
+    - name: First message and follow-up
+      contains: A short message and one follow-up a stranger can answer in a line, asking for a referral or short answer.
+    - name: Checked messages
+      contains: Each claim checked against your facts, spam triggers removed, and a repaired version ready to send.
+    - name: Daily prospecting block
+      contains: A protected daily time slot, a two-minute research batch per prospect and one real reason to reach out.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build the list
     text: Builds a list of accounts that match your ideal customer, with the reason each fits and who to contact.

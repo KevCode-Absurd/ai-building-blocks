@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must test the metric against seven checks.
 new_slug: north-star-metric-picker
 name: North star metric picker
-summary: Describe your product. Get the one metric to steer by, plus 3 to 5
-  supporting numbers that feed it.
+summary: "Pick your North Star metric: describe your product, get the one number to steer by plus 3 to 5 smaller numbers that move it."
 job: track-numbers
 headline: North star metric picker
-subhead: One number your whole team can steer by, plus three to five smaller
-  numbers that move it. Without this, teams chase many figures and pull in
-  different directions.
+subhead: One number your whole team can steer by, plus three to five smaller numbers that move it. Without this, teams chase many figures and pull in different directions.
 explain: |
   One number your whole team can steer by, plus three to five smaller numbers that move it. Without this, teams chase many figures and pull in different directions.
 
@@ -18,6 +15,10 @@ when:
   - You are setting up a metrics plan for a new product.
   - You have a candidate metric and want to test it.
   - Revenue is your headline and you suspect it is the wrong guide.
+not_for:
+  - "You want to set goals or targets: use an OKR, which sets a goal on a metric. Pick the metric here first."
+  - "You need a full list of every number to track: ask a finance or data person for a reporting plan."
+  - "You want to judge ad or campaign results: use the numbers inside your ad platform, not a company-wide metric."
 you_give:
   - A description of your product and customers
   - What value customers get
@@ -29,7 +30,24 @@ you_get:
   - Three to five input metrics
   - A test of the metric against the criteria
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Describe your product, your customers and the value they get. Add your current metrics and any North Star idea if you have them.
+  - Read the game type first. Check that it fits how your business makes money.
+  - Check the seven-criteria test. If the metric fails one, ask your AI to try another.
+  - Review the input metrics and pick who owns each one.
+output_sample:
+  input:
+    - A description of your product and customers
+    - The value customers get from it
+    - Metrics you track now (optional)
+    - A North Star idea you already have (optional)
+  output:
+    - name: Business game
+      contains: Whether your business plays the attention, transaction or productivity game, and why.
+    - name: North Star metric
+      contains: One customer-centred number that shows the value people get from your product.
+    - name: Seven-criteria test
+      contains: How the metric scores on clarity, customer focus, lasting value, vision, numbers, action and leading signs.
+    - name: Input metrics
+      contains: Three to five smaller numbers that are easier to move and feed the North Star.

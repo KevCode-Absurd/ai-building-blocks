@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: hooks, required: true}
   - {type: offer, required: true}
+  - {type: shortlist, required: false}
 outputs:
   - {type: plan, required: true}
   - {type: shortlist, required: true}

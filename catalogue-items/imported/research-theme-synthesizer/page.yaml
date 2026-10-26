@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must group notes and rank the findings.
 new_slug: research-theme-synthesizer
 name: Research theme synthesizer
-summary: Give it interviews, surveys or tickets. Get themes ranked by how often
-  they come up, with quotes.
+summary: Turn interview notes, survey answers or support tickets into ranked themes with real quotes. A research theme synthesizer for your next decision.
 job: understand-customers
 headline: Research theme synthesizer
-subhead: The themes in your interviews, surveys or support tickets, ranked by
-  how often they come up and backed by real quotes. You stop reading piles of
-  notes and start seeing the pattern.
+subhead: The themes in your interviews, surveys or support tickets, ranked by how often they come up and backed by real quotes. You stop reading piles of notes and start seeing the pattern.
 explain: |
   The themes in your interviews, surveys or support tickets, ranked by how often they come up and backed by real quotes. You stop reading piles of notes and start seeing the pattern.
 
@@ -18,6 +15,10 @@ when:
   - A survey has hundreds of open answers to sort.
   - Support tickets keep raising problems and you need the top ones.
   - You must show your team evidence behind a product decision.
+not_for:
+  - "You need to prove a trend with numbers from fewer than about 5 sources: collect more responses first, or use a survey tool or your analytics to size it."
+  - "You want exact counts across thousands of survey rows: use a spreadsheet or your survey tool, then bring the open answers here."
+  - "You have no notes yet: run a few interviews or send a short survey first, then come back."
 you_give:
   - Notes, transcripts, survey answers or tickets
   - The question or decision this informs
@@ -29,7 +30,30 @@ you_get:
   - Evidence strength notes
   - Recommendations tied to your question
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your notes, transcripts, survey answers or tickets. You can also upload files if your AI accepts them.
+  - Say what decision the research should inform, and how many people you spoke to.
+  - Read the ranked themes. Check each quote against your notes.
+  - Ask your AI to fix any theme that looks wrong, then use the recommendations.
+  - Connected tools are optional. They need your own accounts and may cost money. Pasted text is enough.
+output_sample:
+  input:
+    - Your interview notes, transcripts, survey answers or support tickets
+    - The question or decision the research should inform
+    - How many people or sources you have (optional)
+    - Tickets, usage data or meeting notes from connected tools (optional)
+  prerequisites:
+    - Connected tools need your own accounts and may need a paid plan. The skill works fully from pasted text alone.
+  output:
+    - name: Research Overview
+      contains: What was studied, how many sources, and the question the research answers.
+    - name: Key Findings
+      contains: Themes ranked by how often they come up and how much they matter, with supporting quotes.
+    - name: User Segments / Personas
+      contains: Groups of users who share goals, pain points and habits, built from the evidence.
+    - name: Opportunity Areas
+      contains: Where the findings point to problems worth solving, ranked by frequency and impact.
+    - name: Recommendations
+      contains: Next steps tied to your question, each linked to the findings behind it.
+    - name: Open Questions
+      contains: Gaps, contradictions and surprises that need more research.

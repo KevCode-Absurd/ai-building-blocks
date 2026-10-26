@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It plans branching replies for many kinds of confusion.
 new_slug: tutor-chat-script-writer
 name: Tutor chat script writer
-summary: Give it a topic and where students get stuck. Get a back-and-forth
-  tutoring script with replies for each difficulty.
+summary: Write a tutoring chat script for your topic. Give the goal and where students get stuck. You get replies for each wrong turn.
 job: teach-and-train
 headline: Tutor chat script writer
-subhead: A back-and-forth tutoring script that answers the places students
-  actually get stuck. Each wrong turn has a ready reply, so your chatbot or
-  tutor does not just repeat the same hint.
+subhead: A back-and-forth tutoring script that answers the places students actually get stuck. Each wrong turn has a ready reply, so your chatbot or tutor does not just repeat the same hint.
 explain: |
   A back-and-forth tutoring script that answers the places students actually get stuck. Each wrong turn has a ready reply, so your chatbot or tutor does not just repeat the same hint.
 
@@ -18,9 +15,13 @@ when:
   - You want a chatbot to handle the common wrong answers well.
   - A teacher plans one-to-one support and needs guided questions.
   - You want hints that ramp up instead of giving the answer at once.
+not_for:
+  - "You only need fact-recall quizzes or a list of common questions: use a simple FAQ bot or a quiz maker instead."
+  - "You want to replace a teacher's marking or feedback on student work: keep that with a human teacher."
+  - "You need one worked answer to a single problem: write a worked-solutions page instead."
 you_give:
   - The skill or idea students should master
-  - Where students usually struggle
+  - Where students usually get stuck, such as wrong ideas or common errors
   - Student age and level (optional)
   - The subject area (optional)
 you_get:
@@ -29,7 +30,26 @@ you_get:
   - A ladder of hints
   - A closing check for understanding
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the prompt from SKILL.md into a new chat.
+  - "Fill in the two required parts: what students should learn, and where they get stuck. Add level and subject if you know them."
+  - Run it and read the Example Dialogue first. Check that each wrong turn gets a reply that helps, not just the answer.
+  - Fix any reply that is too easy or too hard for your students, then use the script in your chatbot or lesson.
+output_sample:
+  input:
+    - The skill or idea students should master
+    - "Where students usually get stuck: wrong ideas, common errors, gaps"
+    - Student age and level (optional)
+    - The subject (optional)
+    - How long the chat should last (optional)
+  output:
+    - name: Dialogue Architecture
+      contains: The phases of the chat, the decision points and how the branches connect.
+    - name: Dialogue Move Library
+      contains: The kinds of tutor replies used, such as questions, hints and prompts that ask students to explain.
+    - name: Decision Rules
+      contains: What the tutor does next for each kind of student answer.
+    - name: Example Dialogue
+      contains: A sample back-and-forth chat that shows the branches in use.
+    - name: Design Rationale
+      contains: Why the script is built this way, in plain terms.

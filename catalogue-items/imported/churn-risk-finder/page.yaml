@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs several signals per account.
 new_slug: churn-risk-finder
 name: Churn risk finder
-summary: Give it usage, engagement and support data. Get at-risk accounts scored
-  with ideas for how to step in.
+summary: Find which customer accounts may leave. Give it usage, support and billing data. You get a churn risk score per account and a plan for each.
 job: understand-customers
 headline: Churn risk finder
-subhead: A scored list of customer accounts most likely to leave, each with a
-  suggested next step. You share usage, engagement and support data, and every
-  account gets a score from 0 (healthy) to 100 (about to go).
+subhead: A scored list of customer accounts most likely to leave, each with a suggested next step. You share usage, engagement and support data, and every account gets a score from 0 (healthy) to 100 (about to go).
 explain: |
   A scored list of customer accounts most likely to leave, each with a suggested next step. You share usage, engagement and support data, and every account gets a score from 0 (healthy) to 100 (about to go).
 
@@ -18,18 +15,44 @@ when:
   - You have a usage export and want to know who needs a call this week.
   - Your support team sees rising tickets from one customer.
   - You need a clear reason to ask for time from a sales or success lead.
+not_for:
+  - Your accounts are under 90 days old. Track onboarding steps done instead, because there is too little history to show a trend.
+  - You only have one number per account, with no split by product. Score each product line on its own first, or the result will hide the weak one.
+  - You want to know why customers left in the past. Ask a few of them, or read their exit notes, instead.
 you_give:
-  - Usage data per account
-  - Support ticket history
-  - Billing and renewal dates
-  - Satisfaction scores (optional)
+  - Usage data per account for the last 90 days, such as logins, active users and features used
+  - Support ticket history, with ticket counts and satisfaction scores
+  - Billing and renewal dates, plus any late payments or downgrade requests
+  - Seat counts per account, so usage can be compared fairly
+  - Product line for each account, if you sell more than one (optional)
+  - Survey scores such as NPS (optional)
 you_get:
   - A risk score per account
   - Four risk tiers
   - Key signals for each account
   - A recommended action per tier
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Export your data as a spreadsheet or CSV. Use one row per account and a 90 day window.
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code or paid tool is needed for a small list.
+  - Paste your data or attach the file. Add the renewal dates and say which accounts matter most.
+  - Read the scoring table first. Check the top accounts against what your team already knows.
+  - Fix any account flagged for missing data, then run it again.
+  - Use the plan for each tier to book calls, starting with the Critical accounts.
+output_sample:
+  input:
+    - Usage data per account for the last 90 days
+    - Support ticket history
+    - Billing and renewal dates
+    - Survey or satisfaction scores (optional)
+    - Notes from your account managers (optional)
+  output:
+    - name: Scoring table
+      contains: Each account with its risk score from 0 to 100, its tier, key signals and a suggested action.
+    - name: Risk tiers
+      contains: Accounts sorted into Critical, High, Medium and Healthy, with the score range and time to act for each.
+    - name: Signal breakdown
+      contains: For one account, the score and evidence for usage, support, billing and engagement.
+    - name: Intervention plan
+      contains: Day by day steps to win back an account, from the first call to the renewal.
+    - name: Data quality flags
+      contains: Notes on accounts that lack data for a signal, so you know which scores to trust less.

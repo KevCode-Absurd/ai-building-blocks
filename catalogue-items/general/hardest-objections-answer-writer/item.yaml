@@ -1,6 +1,6 @@
 slug: hardest-objections-answer-writer
 name: "Hardest objections answer writer"
-summary: "Paste your argument or pitch. Get the hardest objections, your answers, and a plain note on what your evidence cannot show."
+summary: "Find the toughest objections to your pitch or argument. Paste it and your evidence, get fair answers, open gaps and a rewrite that admits its limits."
 category: general
 type: skill
 role: check
@@ -20,3 +20,5 @@ credits:
   - {title: "On the Origin of Species, first edition", by: "Charles Darwin, 1859", url: "https://www.gutenberg.org/ebooks/1228", used: "Stating the hardest difficulties against the case, answering them fairly and admitting what the record cannot show"}
   - {title: "The Autobiography of Charles Darwin", by: "Charles Darwin", used: "The habit of writing down facts that go against the case as soon as they are met"}
   - {title: "Computing Machinery and Intelligence", by: "Alan Turing, Mind, 1950", used: "Listing every objection, including ones that sound absurd, and answering each on its own terms"}
+next: [honest-persuasion-editor, hostile-room-speech-planner]
+needs_mode: manual

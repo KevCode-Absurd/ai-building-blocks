@@ -50,7 +50,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Pick the three to five sources and threads to go after first, based on the ranking.
 
-4. **Reddit answer planner.** Use the skill `reddit-answer-planner`. Plans honest answers in the chosen threads so your store is named where AI already looks.
+4. **Reddit answer planner.** Use the skill `reddit-answer-planner`. Give it the sources and threads you picked from step 3's ranking. Plans honest answers in the chosen threads so your store is named where AI already looks. Uses the threads you picked from step 3's ranking.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

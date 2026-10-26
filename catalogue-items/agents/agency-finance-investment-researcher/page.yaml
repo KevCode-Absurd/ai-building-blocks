@@ -1,0 +1,147 @@
+name: Investment Researcher agent
+summary: "Get a research brief on one company or asset: sourced evidence, bull and bear cases and the downside to plan for. Not personal advice."
+headline: Investment Researcher agent
+subhead: "Name one company or asset, your time horizon and the filings or notes you have. It builds a brief with the evidence and where each fact came from, the bull and bear cases, the downside in numbers and what would break the idea. You decide. It does not tell you what to buy."
+job: money-and-investing
+thinking: high
+thinking_why: It must keep the good story apart from the evidence and say when a source is missing. Use a model that reasons well, cites what you gave it and admits what it cannot check.
+explain: |-
+  An investment research brief gathers what you would need to know before putting money into one company or asset. Most people read a few headlines and a price chart. They do not ask what the business earns, where the cash goes or what would prove the idea wrong.
+
+  This agent works the other way round. It starts with your question and your time horizon, because a six-month trade and a five-year hold need different checks. It builds an evidence table from the filings and notes you supply, with the source beside each fact. Facts it cannot find in your material are marked MISSING, not filled in from memory.
+
+  It then writes the case for and the case against with equal care, puts a loss figure on the downside, and lists the "thesis breakers", the events that would show the idea is wrong. It gives a view on the evidence, not a rating or price target for you to follow. This is an AI reading of public material. It is not personal financial advice. Check every figure against the filing and talk to a licensed adviser before you act.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - A friend, a newsletter or a forum is pushing one stock or fund and you want the case and the risks written down.
+  - You are thinking of putting savings into a company and want to know what could go wrong first.
+  - You own a position and want to know which events would mean you were wrong.
+  - You are looking at a small private business or startup and want a list of what to check before you put money in.
+not_for:
+  - You want a buy or sell call for your own money. Take that to a licensed adviser.
+  - You want a quick one-page note on a listed company. Use the Stock research snapshot writer.
+  - You want ratios and a health check from a company's filings. Use the Company financial health reviewer.
+  - You want a formal committee paper for a deal. Use the Investment committee memo drafter.
+you_give:
+  - The company or asset, and your time horizon, such as 6 months or 5 years.
+  - Your question, such as "is this worth a closer look?" or "what could go wrong?"
+  - The sources you have, such as annual reports, earnings call notes, a pitch deck or articles.
+  - How you plan to hold it and how much it matters to you, such as a small bet or a large part of savings (optional)
+  - What you already believe or have heard about it (optional)
+you_get:
+  - An evidence table with each fact and where it came from
+  - The case for, with the numbers that support it
+  - The case against, with the loss you could face in a bad case
+  - A list of events that would show the idea is wrong
+  - A list of what is missing, and what to check before you act
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Name the company or asset and your time horizon. Attach or paste the filings, notes or articles you have. Web access helps but is not needed.
+  - Say what you want to know, and how large this is for you.
+  - Type "Write the brief. Show a source for each fact. Mark anything you cannot find as MISSING. Do not tell me to buy or sell."
+  - Read the missing list first. Add what you can, then ask it to run the brief again.
+  - Check each figure you plan to rely on against the filing itself. Take your decision to a licensed adviser before you buy or sell.
+how_it_works:
+  - title: Fix the question
+    text: It confirms the asset, the time horizon and what you want to know. Anything missing is asked once, then marked MISSING.
+  - title: Build the evidence table
+    text: It pulls each fact from your material with the source, and marks facts it could not find.
+  - title: Write the case for
+    text: It sets out the strongest points for the idea, each with its number and its source.
+  - title: Write the case against
+    text: It gives the bear case the same weight, and puts a number on the loss in a bad outcome.
+  - title: Set the value range
+    text: It shows a value range in three cases from your inputs, and says what each case assumes. It gives no price target.
+  - title: Name the thesis breakers
+    text: It lists the events or data points that would show the idea is wrong, so you know what to watch.
+  - title: List gaps and checks
+    text: It lists what is missing, how confident the evidence is, and what to verify before you act.
+output_shape: |-
+  QUESTION AND SCOPE
+    Asset <name> | Time horizon <period> | Question <what you want to know> | Weight in your savings <small, medium or large, if given>
+
+  EVIDENCE TABLE
+    <fact> | <number or detail> | <source and date> | <Found or MISSING>
+
+  CASE FOR
+    <point> | <supporting number> | <source>
+
+  CASE AGAINST AND DOWNSIDE
+    <risk> | <effect in numbers> | <source>
+    Bad outcome | <loss as % or amount, with the assumptions>
+
+  VALUE RANGE
+    <Bear, Base or Bull> | <key assumptions> | <resulting value range>
+
+  THESIS BREAKERS
+    <event or data point> | <threshold> | <what it would mean>
+
+  CONFIDENCE AND GAPS
+    <what is missing> | <how it limits the brief> | <how to get it>
+
+  CHECKS BEFORE YOU ACT
+    <check> | <who or where>
+output_sample:
+  input:
+    - The company or asset, and your time horizon
+    - Your question, and how large this is for you
+    - The sources you have, such as annual reports, call notes or articles
+    - What you already believe or have heard (optional)
+  prerequisites:
+    - An AI that can read files, if you attach reports
+    - Web access is helpful but not required (optional)
+  output:
+    - name: Question and scope
+      contains: The asset, the time horizon, your question and how large the position is for you.
+    - name: Evidence table
+      contains: Each fact with its number, source and date, or MISSING when not found.
+    - name: Case for
+      contains: The strongest points for the idea, each with a number and a source.
+    - name: Case against and downside
+      contains: The main risks with numbers, and the loss in a bad outcome.
+    - name: Value range
+      contains: A bear, base and bull range with the assumptions behind each. No price target.
+    - name: Thesis breakers
+      contains: Events or data points that would show the idea is wrong, with thresholds.
+    - name: Confidence and gaps
+      contains: What is missing, how it limits the brief and how to get it.
+    - name: Checks before you act
+      contains: What to verify and where, before you rely on anything here.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload and web access
+      why: It can read an annual report you attach and look up filings, with the link beside each fact.
+  inputs:
+    - The latest annual report and the last two quarterly reports, so trends show.
+    - Notes from the last earnings call or investor letter.
+    - Your own limit, such as the most you could lose without it hurting.
+terms:
+  - term: Thesis
+    meaning: The reason you think the investment could work, in one or two lines.
+  - term: Thesis breaker
+    meaning: An event or number that would show your reason is wrong.
+  - term: Bear case
+    meaning: The version of events where the investment does badly.
+  - term: Time horizon
+    meaning: How long you plan to hold, such as six months or five years.
+  - term: Primary source
+    meaning: The original document, such as a company filing, not a summary of it.
+tweaks:
+  - what: Horizon
+    how: Say how long you will hold. A six-month view and a five-year view need different checks.
+  - what: Sources
+    how: Give filings, not opinions. The brief then rests on what the company said, not on what others said about it.
+  - what: Depth
+    how: Ask for the evidence table and downside first, then the other sections if the idea survives.
+improve:
+  - Keep each brief with its date. Re-run it after the next earnings report and compare the thesis breakers.
+  - Add your own risk limit to the pack, so each brief tests the downside against it.
+  - Pair it with the Company financial health reviewer to check the ratios in the filings before you rely on them.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

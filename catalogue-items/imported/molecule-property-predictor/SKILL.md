@@ -42,6 +42,30 @@ are in [references/review.md](references/review.md).
    original target units and applicability limits. Successful fitting is not
    evidence of prospective scientific performance.
 
+## If something is missing
+
+Ask once for the SMILES column, the target column, the target units and the assay
+conditions. If the person cannot give units or conditions, write MISSING in the
+report and say the numbers cannot be compared with other assays. Never guess a
+unit. If the data has many empty labels across several tasks, say the custom
+solubility and HF scripts need complete targets and stop for the person to choose.
+If the AI cannot run Python in this chat, give the exact commands below for the
+person to run, and wait for the printed results.
+
+## What to hand back
+
+The scripts print results. Report only what they printed, plus your own notes:
+
+- Metrics in the original target units, with the count of molecules in each split
+- Predictions for any query SMILES the person gave, in original units
+- How many rows the loader rejected or stopped on, and why (from the error text)
+- Your notes on duplicates, scaffold overlap and where the model should not be trusted
+- A plain line that a good fit is not proof for new chemistry
+
+The scripts do not save rejected rows, split IDs, a prediction file or a tuned
+model. If the person needs those, write the extra code and save them, and say so.
+Do not describe a hyperparameter search that was not run.
+
 ## Essential model contracts
 
 | Model path | Input |

@@ -13,6 +13,10 @@ explain: |-
 when:
   - You want the result described above from the files and facts you already have.
   - You need a repeatable process and a clear next action.
+not_for:
+  - "You are ready to change the code: use the Oracle to Npgsql code migrator or the Oracle stored procedure migrator."
+  - "You only want to review code you already moved: use the Oracle migration risk reviewer on its own."
+  - "Your move is not from Oracle to PostgreSQL, or your data access is not .NET: use the Migration planner or the Zero-downtime migration planner."
 you_give:
   - The source files, notes or product facts for this job
   - Your goal, deadline and limits
@@ -26,15 +30,35 @@ how_to_use:
   - Share your goal and the files listed above.
   - Ask it to follow the steps and mark any missing facts.
   - Review the result before approving external actions.
+output_sample:
+  input:
+    - Your .NET solution, with every project that touches the database
+    - Where any existing Oracle or PostgreSQL schema files (DDL) are kept (optional)
+    - Your existing integration tests and test project (optional)
+    - Your migrated code or the changes made, for the final review
+  prerequisites:
+    - An AI that can open and read your code folder
+    - A test project that already builds, before the baseline tests can be written
+  output:
+    - name: Master migration plan
+      contains: Solution summary, a project inventory marked migrate or skip, and the order to move projects.
+    - name: Integration testing plan
+      contains: Data access methods to test, test cases for each, seed data needs and Oracle and PostgreSQL differences to check.
+    - name: Oracle baseline tests
+      contains: Integration tests that record what the Oracle code does today, with seed data and checks on exact values.
+    - name: Migration risk review
+      contains: A table of behavior differences with where they apply, the risk, the fix and whether a test covers it.
+    - name: Verdict and decisions needed
+      contains: Each risk marked addressed or not, open design choices and whether tests passed or were not run.
 how_it_works:
   - title: Oracle to Postgres program planner
-    text: Share your .NET solution. Get a project inventory, migration scope and a master plan to track the work.
+    text: Share your .NET solution. Get a project inventory, migration scope and a master plan to track the work. The plan goes to step 2.
   - title: Oracle migration test planner
-    text: Share your data access code. Get test scope and parity checks for an Oracle to Postgres migration.
+    text: Share your data access code. Get test scope and parity checks for an Oracle to Postgres migration. It reads the master plan and hands the testing plan to step 3.
   - title: Oracle behavior baseline test writer
-    text: Share your Oracle data access code. Get tests that record what the code does before you change databases.
+    text: Share your Oracle data access code. Get tests that record what the code does before you change databases. It reads the testing plan and hands the baseline tests to step 4.
   - title: Oracle migration risk reviewer
-    text: Share your migrated code. Get Oracle and PostgreSQL behavior gaps checked before release.
+    text: Share your migrated code. Get Oracle and PostgreSQL behavior gaps checked before release. It checks the migrated code against the baseline tests.
 output_shape: |-
   Migration inventory and plan
   Baseline test scope and tests

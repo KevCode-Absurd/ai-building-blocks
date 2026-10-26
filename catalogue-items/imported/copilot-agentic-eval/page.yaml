@@ -2,17 +2,102 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-agentic-eval
 name: Agent answer feedback designer
-summary: Share an agent task. Get checks and feedback loops to improve the
-  quality of its answers.
+summary: Make your AI agent check and fix its own answers. Get a pass or fail rubric, a rewritten task prompt and a stop rule for one task.
 job: set-up-ai
 headline: Agent answer feedback designer
-subhead: Share an agent task. Get checks and feedback loops to improve the
-  quality of its answers. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: "Tell it the task your agent does and what a good answer looks like. It turns that into a short rubric, writes a check prompt and a fix prompt, and sets when the loop stops. You get a rewritten task prompt and a loop you can run in a chat or in code."
+explain: |
+  AI agents often hand back a first answer and stop. An agent self-check loop makes the agent grade its answer against your rules, then fix only what failed. This skill designs that loop for one named task, so answers improve before you see them.
+
+  It starts with your success criteria and trims them to 3 to 5 checks with a pass line you could verify yourself. Then it picks the right pattern: a single self-check, a separate judge and fixer, a test-driven loop for code, or a side-by-side comparison of two answers. It writes both prompts, plus rules that stop the loop after a few rounds or when a round does not help.
+
+  Models tend to be easy on their own work. So it tells you to try the loop on real tasks and have a person check some of the results.
+when:
+  - Your agent's first answers are close but miss your rules, such as tone, format or facts.
+  - You keep fixing the same mistakes by hand after the agent finishes.
+  - You need reports, code or summaries to meet a standard before they go out.
+  - You want a rubric for what good looks like, so a second AI can score answers.
+not_for:
+  - "You want one answer fixed once: ask your AI to fix it, no loop needed."
+  - "You cannot yet say what a good answer is: write the success criteria first, or use the Agent goal writer."
+  - "You want to improve the agent's prompts and skills over many runs: use the Agent self-improvement loop builder."
+  - "You want a full test plan with pass marks before you ship: use the Agent system tester."
+you_give:
+  - The task your agent does, in the words it gets today
+  - What a good answer must do, in plain sentences
+  - One good answer and one bad answer (optional)
+  - Whether you will run the loop by hand in a chat or in code (optional)
+you_get:
+  - A rewritten task prompt with the success criteria built in
+  - A rubric table with weights and a pass line for each check
+  - A check prompt and a fix prompt, ready to paste
+  - Stop rules for the loop
+  - Steps to run it in a chat, or the code pattern for it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. No code or paid tools are needed to run the loop by hand.
+  - Paste the skill text into the chat, or open the skill if you added it to your AI.
+  - Paste your agent's task and what a good answer must do. Add a good and a bad example if you have them.
+  - If you cannot say what good looks like, say so. It marks the gap and does not invent criteria.
+  - Read the rubric first. Cut any check you could not verify yourself.
+  - Run the loop on three real tasks. Read the results yourself before you trust it.
+how_it_works:
+  - title: Build the rubric
+    text: It turns your criteria into 3 to 5 checks, each with a weight and a pass line.
+  - title: Pick the pattern
+    text: It chooses a single self-check, a judge and fixer pair, a test-driven loop, or a side-by-side comparison.
+  - title: Write the check prompt
+    text: The check returns PASS or FAIL and one sentence of feedback for each rubric item.
+  - title: Write the fix prompt
+    text: The fix changes only what failed and keeps everything that passed.
+  - title: Set stop rules
+    text: The loop stops when all checks pass, after a set number of rounds, or when a round does not improve the score.
+  - title: Show how to run it
+    text: It gives chat steps, or the code pattern with the parts you must supply marked.
+output_shape: |
+  Task prompt: <the agent's task with the criteria built in>
+  Rubric: <check> | <weight> | <pass line> | <feedback>
+  Check prompt: <ready to paste>
+  Fix prompt: <ready to paste>
+  Stop rules: <max rounds>, <pass threshold>, <no-progress rule>
+  How to run: <chat steps or code pattern>
+  Gaps: <missing inputs> and <what to test next>
+output_sample:
+  input:
+    - The task your agent does, word for word
+    - What a good answer must do
+    - One good and one bad answer (optional)
+    - How you will run the loop (optional)
+  output:
+    - name: Rewritten task prompt
+      contains: Your agent's task with the success criteria built into it.
+    - name: Rubric table
+      contains: Three to five checks, each with a weight, a pass line and a feedback field.
+    - name: Check prompt
+      contains: A prompt that marks each rubric item PASS or FAIL and gives one line of feedback.
+    - name: Fix prompt
+      contains: A prompt that repairs only the failed items and keeps what passed.
+    - name: Stop rules
+      contains: The most rounds to run, the score that counts as done, and when to stop early.
+    - name: How to run it
+      contains: Chat steps, or the matching code pattern with the parts you must supply marked.
+    - name: Gaps and next steps
+      contains: Missing inputs, and a reminder to test on real tasks before you trust the loop.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Claude, ChatGPT or Gemini can run the check and fix by hand in one chat.
+    - name: A second AI as judge
+      why: A different model grades more fairly than one marking its own work.
+  inputs:
+    - Past answers that people marked good or bad
+    - Your style guide or format rules
+    - Facts the answer must match
+terms:
+  - term: Rubric
+    meaning: A short list of checks, each with a pass line, used to score an answer.
+  - term: Reflection loop
+    meaning: The agent grades its answer, fixes what failed, and repeats.
+  - term: LLM as judge
+    meaning: Using an AI to score or compare answers.
+  - term: Pass line
+    meaning: The point at which a check counts as passed.

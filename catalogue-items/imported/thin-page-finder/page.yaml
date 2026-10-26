@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It checks length and missing fields.
 new_slug: thin-page-finder
 name: Thin page finder
-summary: Get store pages and blog posts that are empty, short or missing search fields.
+summary: "Find thin pages and blog posts in your Shopify store: empty, too short, or missing a search title or description. Get a CSV list to fix."
 job: audit-landing-page
 headline: Thin page finder
-subhead: Search engines downgrade pages with almost no words or no search
-  titles, and customers leave them fast. This skill lists every page and blog
-  post in your Shopify store and flags the weak ones so you know exactly what to
-  fix.
+subhead: Search engines downgrade pages with almost no words or no search titles, and customers leave them fast. This skill lists every page and blog post in your Shopify store and flags the weak ones so you know exactly what to fix.
 explain: |
   Search engines downgrade pages with almost no words or no search titles, and customers leave them fast. This skill lists every page and blog post in your Shopify store and flags the weak ones so you know exactly what to fix.
 
@@ -18,6 +15,10 @@ when:
   - You are about to rewrite your blog and need a priority list.
   - You inherited a store with many half-finished pages.
   - You want a quick content check before an SEO review.
+not_for:
+  - "You want to check product or collection search fields: use the SEO metadata audit, or check them by hand in Shopify."
+  - "You have no Shopify admin access: ask the store owner to add you, or to run it and send you the list."
+  - "You want a full review of one landing page: read it yourself, or ask a writer to check it."
 you_give:
   - Your store address
   - Shopify login with read access to content
@@ -29,8 +30,28 @@ you_get:
   - Blog posts with the same problems
   - A list to give your writer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI that can run commands and connect to Shopify, such as Claude Code. A plain chat window cannot read your store.
+  - Sign in to your store with read access to content. The skill only reads, so nothing in your store changes.
+  - Tell your AI to run the Thin page finder on your store address. Add a minimum body length or ask for unpublished items if you want.
+  - Open the CSV file it makes. Start with your About, FAQ and Contact pages.
+  - Give the list to a writer, or fix the empty pages and missing search fields yourself.
+output_sample:
+  input:
+    - Your store address
+    - Your Shopify login with read access to content
+    - The shortest body length you accept (optional)
+    - Whether to include unpublished pages and posts (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands and use your store
+    - A Shopify login with read content access
+  output:
+    - name: Start banner
+      contains: The skill name, your store address and the start time.
+    - name: Step log
+      contains: One line per step showing what was read and how many items came back.
+    - name: Summary
+      contains: How many pages and blog posts were scanned, how many have issues, and each issue by title.
+    - name: content_audit CSV file
+      contains: "One row per page or post: type, id, title, handle, publish date, body length, SEO flags and the issue."
+    - name: JSON summary (optional)
+      contains: Counts of pages scanned, posts scanned, issues found and the CSV file name.

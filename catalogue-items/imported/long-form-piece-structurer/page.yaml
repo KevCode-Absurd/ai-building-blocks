@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It picks a structure by piece type, then shapes your points to fit.
 new_slug: long-form-piece-structurer
 name: Long-form piece structurer
-summary: Say what you are writing, such as a case study or whitepaper. Get a
-  clear outline and structure that avoids padding.
+summary: Plan a long-form piece like a case study or whitepaper. Get a clear outline with word targets per section and a list of sections to cut.
 job: write-and-tell-stories
 headline: Long-form piece structurer
-subhead: "A clear outline for one long piece, such as a case study, whitepaper,
-  research report or ebook, where every section earns its place. It aims to stop
-  the two common failures: stretching a short idea with filler, and piling on
-  facts with no spine."
+subhead: "A clear outline for one long piece, such as a case study, whitepaper, research report or ebook, where every section earns its place. It aims to stop the two common failures: stretching a short idea with filler, and piling on facts with no spine."
 explain: |
   A clear outline for one long piece, such as a case study, whitepaper, research report or ebook, where every section earns its place. It aims to stop the two common failures: stretching a short idea with filler, and piling on facts with no spine.
 
@@ -19,6 +15,10 @@ when:
   - Your 1,500-word post is being stretched to 5,000 and feels padded.
   - You have a pile of research and need a spine to organise it.
   - You are planning an ebook and want each chapter to justify its length.
+not_for:
+  - "Your piece is under about 1,500 words: write a normal blog post instead, no outline needed."
+  - "You need the structure for a whole set of linked pages: use the pillar-content-architecture skill for that hub plan."
+  - "You want to write the full draft now: use this outline first, then draft each section yourself or with your AI."
 you_give:
   - The type of piece
   - Your main point or thesis
@@ -31,7 +31,30 @@ you_get:
   - A list of sections to cut
   - An ending that lands
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool. Paste in the skill text, or upload the skill file if your tool allows files.
+  - Say what type of piece you are writing, such as a case study or whitepaper.
+  - Add your main point, your audience and the goal of the piece.
+  - Paste your notes or research if you have them (optional).
+  - Read the outline. Check each section earns its word target, then cut what is on the cut list.
+  - Ask your AI to adjust any section that does not fit your point, then start drafting.
+output_sample:
+  input:
+    - The type of piece, such as a case study or whitepaper
+    - Your main point
+    - Your audience and the goal of the piece
+    - Your notes or research (optional)
+  output:
+    - name: Format fit
+      contains: Which long-form format suits your point and what readers of that format expect.
+    - name: Structural archetype
+      contains: The overall shape chosen for the piece, such as problem and solution or layered argument.
+    - name: Section outline
+      contains: Each section in order, with its job in the piece.
+    - name: Section weight
+      contains: A word target for each section, based on how much weight it needs.
+    - name: Lede plan
+      contains: How to open the piece with a clear thesis the body will deliver.
+    - name: Cut list
+      contains: Sections that only add length and should be removed or shortened.
+    - name: Closing plan
+      contains: An ending that leaves the reader with one specific thing to do or remember.

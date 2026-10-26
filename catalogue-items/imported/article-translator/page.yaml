@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The polished mode adds analysis and review passes.
 new_slug: article-translator
 name: Article translator
-summary: Give it an article. Get a translation in your language, quick or
-  polished with review, using consistent terms.
+summary: Translate an article into another language in quick, normal or refined mode. Key terms stay the same from start to end of the piece.
 job: write-and-tell-stories
 headline: Article translator
-subhead: Your article in another language, at the care level you choose. Quick
-  mode translates straight through. Normal mode studies the piece first, so
-  names, tone and tricky phrases are settled before any sentence is written.
+subhead: Give it an article and pick how much care it takes. Quick mode translates straight through. Normal mode studies the article first. Refined mode also reviews and polishes the draft.
 explain: |
   Your article in another language, at the care level you choose. Quick mode translates straight through. Normal mode studies the piece first, so names, tone and tricky phrases are settled before any sentence is written. Refined mode goes further: it drafts, reviews the draft against the original, and polishes the wording until it reads like it was written in that language.
 
@@ -18,6 +15,10 @@ when:
   - Your product terms are being translated three different ways.
   - A long article keeps losing paragraphs when you paste it into a chat.
   - You want a translation reviewed, not just converted word by word.
+not_for:
+  - "You need a sworn, legal, medical or regulatory translation: hire a certified professional translator."
+  - "You only need one word or a short phrase: use a dictionary or ask your AI directly in a chat."
+  - "You want text inside images translated: ask a designer or an image tool, since this skill only lists images that may need it."
 you_give:
   - The article, as text, a file or a link
   - The target language
@@ -29,7 +30,33 @@ you_get:
   - A consistent term list
   - A reviewed, polished final version (refined mode)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Use an AI that can run code and save files. The skill needs bun or npx to split long articles.
+  - Add the skill to your AI, or paste its instructions into a chat.
+  - "Answer the first-time questions: target language, mode, audience and style. Your answers are saved for next time."
+  - Paste your article, attach the file or share the link.
+  - Open translation.md in the output folder. In normal and refined modes, read 01-analysis.md to check the key terms.
+  - If the result needs more care, ask your AI to run the refined mode.
+output_sample:
+  input:
+    - Your article, as pasted text, a file or a link
+    - The language you want it translated into
+    - "The mode: quick, normal or refined"
+    - Terms that must stay as they are (optional)
+  prerequisites:
+    - An AI that can run code and save files
+    - Bun or npx installed, for the splitting scripts
+  output:
+    - name: translation.md
+      contains: The final translated article. It always has this name, in every mode.
+    - name: 01-analysis.md
+      contains: The subject, tone and key terms of the article, plus hard phrases. Normal and refined modes only.
+    - name: 02-prompt.md
+      contains: The translation instructions built from the analysis and your saved preferences. Normal and refined modes only.
+    - name: 03-draft.md
+      contains: The first full translation, before any review. Refined mode only.
+    - name: 04-critique.md
+      contains: A review of the draft against the original. It lists problems but does not fix them. Refined mode only.
+    - name: 05-revision.md
+      contains: The draft rewritten using the review notes. Refined mode only.
+    - name: chunks/
+      contains: The source pieces and translated pieces, when a long article is split.

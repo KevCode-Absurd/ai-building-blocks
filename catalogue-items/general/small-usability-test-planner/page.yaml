@@ -1,6 +1,6 @@
 new_slug: small-usability-test-planner
 name: "Small usability test planner"
-summary: "Name what people should do. Get a one-morning test plan with tasks, a script and a fix list."
+summary: "Plan a small usability test in one morning. Name what people should do. You get tasks, a read-aloud script and a fix list of the worst problems."
 job: design-work
 thinking: medium
 thinking_why: "It picks tasks and people, and must keep the script neutral."
@@ -17,6 +17,10 @@ when:
   - "You have a page or app people struggle with and you want evidence, not opinions."
   - "A review found problems, and you need to know which ones real people hit."
   - "You want a repeatable monthly test that takes one morning."
+not_for:
+  - "Your page has no visitors yet and no real tasks to test: ask two or three people to try your idea on paper or a rough draft instead."
+  - "You have no review of the page and want a cheap check first: use the Usability heuristic reviewer, then come back."
+  - "You want numbers from hundreds of people: use an analytics tool or a survey, because this plan is for three to four testers."
 
 you_give:
   - "What you want people to be able to do"
@@ -36,6 +40,32 @@ how_to_use:
   - "Recruit three people, plus one outside your target group, using the plan."
   - "Run the test in one morning with the team watching from another room or screen."
   - "Fill in the fix list, fix the worst three and book the next round."
+output_sample:
+  input:
+    - What you want people to be able to do, in one sentence
+    - A review of the page (from the Usability heuristic reviewer, or your own list of problems)
+    - Who your visitors are (optional)
+    - A link or screenshot of the page or app (optional)
+  prerequisites:
+    - An AI chat that can read text you paste or attach
+    - A way to record each session, with the tester's consent
+  output:
+    - name: Goal
+      contains: The one thing people should be able to do, in your words.
+    - name: Tasks
+      contains: Three to five tasks written as a visitor would say them, each with why it matters and what done looks like.
+    - name: Who to recruit
+      contains: Three people from your target group, one outsider, and where to find each, including a real beginner.
+    - name: Script
+      contains: A read-aloud script that says you test the site, not them, asks them to think aloud, and gives each task on a card.
+    - name: Watcher rules
+      contains: "Rules for the team: say nothing, note every pause and wrong click, and record from the first screen."
+    - name: Note sheet
+      contains: "One row per task per person: where they stalled, what they said, and whether they feared clicking."
+    - name: Fix list
+      contains: Only the worst problems seen, how many of the four people hit each, and the fix.
+    - name: Next round
+      contains: Who watches and the date of the next small test, plus any MISSING facts and CHECKS MISSED.
 
 how_it_works:
   - title: "Picks the tasks"

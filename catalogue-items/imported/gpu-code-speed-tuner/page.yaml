@@ -2,22 +2,23 @@ thinking: high
 thinking_why: It profiles, rewrites and measures again in a loop.
 new_slug: gpu-code-speed-tuner
 name: GPU code speed tuner
-summary: Give it MATLAB code bound for the GPU. Get faster generated CUDA code,
-  measured after each change.
+summary: Speed up MATLAB code for GPU Coder. Get faster generated CUDA code, timed after each change, with results checked against your original.
 job: test-and-fix-code
 headline: GPU code speed tuner
-subhead: "Your MATLAB function, rewritten to run faster as generated CUDA code,
-  with proof it still gives the same answers. It works in loops: compile, time
-  it, change one structure, profile, and check the output against the original."
+subhead: "Your MATLAB function, rewritten to run faster as generated CUDA code, with proof it still gives the same answers. It works in loops: compile, time it, change one structure, profile, and check the output against the original."
 explain: |
   Your MATLAB function, rewritten to run faster as generated CUDA code, with proof it still gives the same answers. It works in loops: compile, time it, change one structure, profile, and check the output against the original.
 
   It uses the GPU Performance Analyzer to find slow kernels, memory waste and poor parallelism. Then it fixes the diagnostics it reports. Each change is checked for numerical equivalence before the next. It tunes only the main design file, not helper functions, and it does not handle Simulink or standalone executables. It needs MATLAB with GPU Coder, an NVIDIA GPU, and representative test inputs.
 when:
-  - Your generated GPU code runs slower than expected.
-  - You want to cut GPU memory use in a MATLAB function.
-  - The Performance Analyzer shows warnings you cannot read.
-  - You need to confirm a speed-up did not change results.
+  - Your generated GPU code runs slower than you expected.
+  - You want to cut GPU memory use or memory copies in a MATLAB function.
+  - The GPU Performance Analyzer shows warnings you cannot read.
+  - You need proof that a speed-up did not change your results.
+not_for:
+  - "You build a standalone executable with coder.gpuConfig exe: switch to a mex or lib build first, then rebuild the exe from the final code."
+  - "You use Simulink GPU code generation: this skill only handles MATLAB design files, so use the GPU Coder tools built for Simulink."
+  - "Your code has no GPU involved or you want a new function written: ask a MATLAB developer or use plain MATLAB profiling for CPU-only speed."
 you_give:
   - Your MATLAB design file
   - Representative test inputs
@@ -29,8 +30,31 @@ you_get:
   - Profiler findings explained
   - Proof that results still match
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with GPU Coder and a GPU.
+  - Open an AI that can run MATLAB with GPU Coder on a machine with an NVIDIA GPU. Without that, it can only advise, not measure.
+  - Paste the skill text into the chat, or add the skill folder if your AI accepts files.
+  - Say you want to speed up your MATLAB file for GPU Coder. Mention GPU, CUDA or MEX so the skill starts.
+  - Give it your .m design file and test inputs that match real use. Add a speed target if you have one.
+  - "Let it loop: it compiles, times, changes the code, profiles and checks results each round."
+  - Read the Final Report. Check that Numerical Verification passes before you use the best version.
+output_sample:
+  input:
+    - Your MATLAB design file (.m)
+    - Test inputs that match real use
+    - A speed target (optional)
+  prerequisites:
+    - MATLAB with GPU Coder installed
+    - An NVIDIA GPU
+    - An AI that can run MATLAB code and read files
+  output:
+    - name: Files
+      contains: The original file, the best optimized version, and the session folder that holds all work files.
+    - name: Inputs Used
+      contains: The test inputs the AI used to time and check each version.
+    - name: Performance
+      contains: Timing of the original and the best version, so you can see the speed change.
+    - name: Diagnostics Resolved
+      contains: The Performance Analyzer warnings that were fixed, and any that remain.
+    - name: Changes Applied
+      contains: Each code change made, in order, with the reason for it.
+    - name: Numerical Verification
+      contains: The check that the optimized code gives the same answers as your original.

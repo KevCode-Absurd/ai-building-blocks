@@ -2,6 +2,8 @@
 
 > This file contains the detailed procedure and reference material extracted from `SKILL.md` for focused loading. The root skill defines activation, examples, safety constraints, and limitations.
 
+> **Read this first (AI Blocks note).** The time bands, activation benchmarks, "more likely" figures, funnel numbers and named-company examples in this guide are the original author's rules of thumb. We have not checked them. Use them to shape a draft, and never present them to the person as facts or industry data. Use the person's own numbers when they give them.
+
 ## Overview
 
 Developer onboarding is the critical window between "I signed up" and "I understand how to use this." You have about 10 minutes of developer attention. Every second of confusion, every error message without guidance, every "it should work but doesn't" moment costs you users.

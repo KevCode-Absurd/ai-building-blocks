@@ -1,6 +1,6 @@
 new_slug: customer-stage-flow-mapper
 name: "Customer stage flow mapper"
-summary: "Describe your flows. Get each split into new, returning and loyal paths with their own goals."
+summary: "Split your cart and post-purchase flows by customer stage. Get new, returning and loyal paths, each with a goal, tone and offer rule."
 job: write-emails
 thinking: medium
 thinking_why: "It applies one splitting rule across several flows and checks it against margin and list size."
@@ -17,6 +17,10 @@ when:
   - Your cart and post-purchase flows send the same emails to first-time and repeat buyers.
   - You give a discount to people who would have bought anyway.
   - A flow underperforms and you cannot tell which type of customer it is failing.
+not_for:
+  - "Your store has no automated flows yet: write the first emails by hand, or ask your email tool for its starter flows."
+  - "You want to find which flows you lack: use the email flow gap checker first, then come back here."
+  - "You want the emails written: use a flow builder skill with the flow spec this one gives you."
 
 you_give:
   - A list of your flows, with triggers, number of emails and delays
@@ -37,6 +41,28 @@ how_to_use:
   - Add your discount limits and your margin per product.
   - Read the map, then build the branch with the biggest bottleneck first.
   - Use the flow spec with the matching flow builder skill to write the emails.
+output_sample:
+  input:
+    - A list of your flows, with triggers, number of emails and delays
+    - How you define new, returning and loyal customers
+    - Your offer rules and margin limits (optional)
+    - Whether you run a subscription (optional)
+    - Flow results by flow (optional)
+  output:
+    - name: Stages
+      contains: Your definitions of a new, returning and loyal or subscriber customer, using your own filters or proposed ones.
+    - name: Branch rules
+      contains: A goal, a tone and an incentive rule for the new, returning and loyal branches.
+    - name: Flow entries
+      contains: Each flow with its stage split, any exceptions, and the emails and delays for each branch.
+    - name: Build order
+      contains: The flows and branches to build first, ranked by where the biggest bottleneck is.
+    - name: Offer and margin check
+      contains: A note on whether each incentive fits your margin, or a mark that it was not checked.
+    - name: Email flow spec
+      contains: "For each branch: trigger, filters, delays, exit rules and the purpose of each email."
+    - name: Checks missed and missing
+      contains: Any checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Defines the stages

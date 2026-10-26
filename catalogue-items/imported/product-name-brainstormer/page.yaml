@@ -2,34 +2,94 @@ thinking: low
 thinking_why: It generates options from your brand values.
 new_slug: product-name-brainstormer
 name: Product name brainstormer
-summary: Describe your product and buyers. Get five memorable name ideas, each
-  with the reason it fits.
+summary: Get five product name ideas for a launch or a rename, each with why it fits your buyers, and a reminder to check trademarks and domains yourself.
 job: brand-file
 headline: Product name brainstormer
-subhead: Five product names that fit your brand and buyers, each with the reason
-  it works. You compare real options side by side instead of staring at a blank
-  page.
+subhead: Describe your company, the product and who will buy it. You get five product names, each with the reason it works, how it fits your brand and why it is easy to remember. You then have real options to compare instead of a blank page.
 explain: |
-  Five product names that fit your brand and buyers, each with the reason it works. You compare real options side by side instead of staring at a blank page.
+  Naming a product is hard to start. A blank page is no help, and a team vote on ideas nobody has written down goes nowhere. A product name generator gives you a first set of real options to react to.
 
-  You describe the company, the product and the people who will buy it. For each name, Claude gives the rationale, how it fits your brand, why it is easy to remember and stand out, and notes on what to check before you commit. Names are built around the value of the product and the tone of your market, not random word mashing.
+  You describe the company, the product and the people who will buy it. For each of five names, your AI gives the reason it works, how it fits your brand, why people will remember it, and a short note on trademark and domain concerns. The names are built around what the product does for the buyer and the tone of your market, not random word mixing.
+
+  Your AI cannot look up live trademark records or domain names. Any note on availability is a guess to check, not a result. Before you fall for a name, search a trademark database for your country and a domain registrar yourself. This skill is a brainstorm. It does not pick the winner for you.
 when:
-  - You are naming a new product or feature.
-  - You are renaming an existing product.
-  - You have a shortlist and want fresh alternatives.
-  - You need a quick set of options before a team vote.
+  - You are naming a new product or feature before launch.
+  - You are renaming a product and want fresh options beside the old name.
+  - You have a shortlist you do not love and want different directions.
+  - You need a set of names to bring to a team vote.
+not_for:
+  - "You want to name a whole group of products that sound like one family. Use the Name family planner."
+  - "You are naming an offer or a deal, not a product. Use the Offer name writer."
+  - "You are naming a new category. Use the Category name writer."
+  - "You want to know if your current brand name can cover a new product. Use the Brand name stretch checker."
+  - "You need to know a name is free to use. Only a trademark search and a domain check can tell you, and this cannot run either."
 you_give:
-  - A short description of the product
-  - Your brand values and tone
-  - Your target audience
-  - Names you already dislike or like (optional)
+  - "A short description of the product and what it does for the buyer"
+  - "Your company, brand values and tone of voice"
+  - "Who the buyers are and what they care about"
+  - "Competitor names you want to stand apart from (optional)"
+  - "Names you already like or dislike, and any naming pattern your company uses (optional)"
 you_get:
-  - Five name ideas
-  - The reasoning behind each name
-  - How each fits your brand
-  - Notes on memorability and checks to run
+  - "Five product names"
+  - "The reason each name works for your product and buyers"
+  - "How each fits your brand"
+  - "Why each is easy to remember and different"
+  - "A note on trademark and domain concerns for each, to check yourself"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Add the skill to your AI, or copy it into a new chat in Claude, ChatGPT or Gemini."
+  - "Describe the product, your brand, the buyers and any names you like or dislike. Add competitor names if you have them."
+  - "Read all five. Pick two or three that you can say out loud and spell without help."
+  - "Search each one in a trademark database for your country and on a domain registrar. The AI cannot do this for you."
+  - "Test the names that survive with a few real buyers before you hold a team vote."
+how_it_works:
+  - title: Takes the role of a naming consultant
+    text: Reads your company and product context as an experienced branding consultant would.
+  - title: Suggests five names
+    text: Builds names around the product's value, your buyers and your brand tone.
+  - title: Explains each name
+    text: Gives the rationale, the brand fit, why it is memorable, and a note on domain and trademark concerns.
+  - title: Prefers names that are simple and different
+    text: Favors names that are easy to say and spell, set apart from competitors and relevant to the use case.
+output_shape: |-
+  <Name 1>
+  Rationale: <why it works for the product and buyers>
+  Brand fit: <how it supports your brand>
+  Memorability: <why it is distinctive>
+  Domain and trademark: <concerns to check yourself>
+
+  <Name 2 to Name 5, same layout>
+output_sample:
+  input:
+    - "A short description of the product and what it does for the buyer"
+    - "Your company, brand values and tone"
+    - "Who will buy it"
+    - "Competitors, names you like or dislike (optional)"
+  output:
+    - name: "Five names"
+      contains: "Five product names, each shown with the same five fields."
+    - name: "Rationale"
+      contains: "Why the name works for the product, the buyer and your brand positioning."
+    - name: "Brand fit"
+      contains: "How the name supports your wider brand and messaging."
+    - name: "Memorability"
+      contains: "Why the name is easy to remember and different from competitors."
+    - name: "Domain and trademark"
+      contains: "A note on possible conflicts, for you to check in a trademark search and at a domain registrar."
+next: [name-family-planner, brand-name-stretch-checker, brand-guide-builder]
+works_best_with:
+  tools:
+    - name: Any chat AI
+      why: A one-message prompt. Nothing to install.
+    - name: A trademark database and a domain registrar
+      why: Needed to check that a name is free to use. Your AI cannot look these up.
+  inputs:
+    - Your brand guidelines and tone of voice
+    - Competitor names to stand apart from
+    - Markets or languages the name must work in
+terms:
+  - term: Trademark
+    meaning: A legal claim on a name for a type of product, which another company may already hold.
+  - term: Rationale
+    meaning: The reason a name was chosen.
+  - term: Rebrand
+    meaning: Changing a product or company name and its look.

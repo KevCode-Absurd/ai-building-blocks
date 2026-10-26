@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must spot data risks and tie them to rules.
 new_slug: privacy-impact-assessment-writer
 name: Privacy impact assessment writer
-summary: Describe a new feature that uses personal data. Get a privacy impact
-  assessment with conditions and owners. First check, not legal advice.
+summary: Write a privacy impact assessment for a new feature that uses personal data. You get risks, launch conditions and named owners. A first check only.
 job: check-contracts
 headline: Privacy impact assessment writer
-subhead: A privacy impact assessment for a new feature that uses personal data,
-  with conditions, named owners and a route to sign-off. It is a first check,
-  not legal advice.
+subhead: A privacy impact assessment for a new feature that uses personal data, with conditions, named owners and a route to sign-off. It is a first check, not legal advice.
 explain: |
   A privacy impact assessment for a new feature that uses personal data, with conditions, named owners and a route to sign-off. It is a first check, not legal advice.
 
@@ -18,6 +15,10 @@ when:
   - You are unsure whether a new feature needs a formal review.
   - You have a product requirements doc and need the privacy section.
   - Legal wants named owners for each risk.
+not_for:
+  - "You need to file with a regulator or give final sign-off: ask a qualified privacy lawyer to review before any filing or launch decision."
+  - "You only want to know if a feature needs a review: ask your AI to run just the first check, or ask your privacy lead."
+  - "You are reviewing a vendor contract, not a feature: use your legal team or a contract review step, not this skill."
 you_give:
   - Feature description or requirements doc
   - Data types involved
@@ -29,12 +30,33 @@ you_get:
   - Policy consistency check
   - Conditions with owners
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved privacy setup notes and your
-    files.
-  - Where the skill points to /privacy-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open your AI tool and paste in the skill instructions. If your AI can read files, upload the skill folder instead.
+  - Paste your feature description or requirements doc. Say which data types and regions are involved.
+  - Add your house assessment format or a past one if you have it. If not, say so and your AI will ask for your review trigger and privacy policy promises.
+  - Answer the product team questions it asks. It marks anything missing rather than guessing.
+  - Check the risks, the policy check and the conditions list. Make sure each condition has an owner.
+  - Send the result to a privacy lawyer before you file anything or decide to launch.
+output_sample:
+  input:
+    - A short description of the feature, or your product requirements doc
+    - The kinds of personal data it uses
+    - The regions where your users live
+    - Your house assessment format or a past assessment (optional)
+  prerequisites:
+    - An AI that can read your files, if you want it to use your saved privacy setup notes
+    - If you have no setup notes, the skill asks you for your review trigger, format and privacy policy promises
+  output:
+    - name: Is an assessment needed
+      contains: A check of your own trigger and the rules in each region you serve, with sources cited.
+    - name: Executive summary
+      contains: A short overview of the feature, the main risks and the recommendation.
+    - name: Description of processing, lawful basis and data flow
+      contains: What data is used, why, on what legal ground, and where it moves.
+    - name: Privacy policy consistency
+      contains: A check of whether your privacy policy matches the new practice, with a diff of changes needed.
+    - name: Risks and mitigations
+      contains: Each risk with how likely and serious it is, and the step that reduces it.
+    - name: Data subject rights
+      contains: How people can see, fix or delete their data under this feature.
+    - name: Recommendation and conditions
+      contains: What must be done before launch, each with a named owner, and a route to sign-off.

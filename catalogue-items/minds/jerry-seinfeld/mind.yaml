@@ -16,6 +16,27 @@ use_cases:
   - "Decide when to end a project that's still doing well"
   - "Write humour that works for a mixed audience without swearing"
   - "Build several small storylines that crash together at the end"
+not_for:
+  - "You want suspense or the order of shots in a film scene: use the Alfred Hitchcock mind."
+  - "You want long, loose group scenes made up on the spot: use the Del Close mind."
+  - "You want his real quotes or his view on today's news: he is alive and this AI cannot speak for him, so read his own interviews."
+output_sample:
+  input:
+    - Your draft joke, script, talk, post or video outline
+    - Who the audience is and how long it should run
+    - The small everyday moment you noticed (optional)
+    - What happened when you tried it on real people (optional)
+  output:
+    - name: Blunt questions
+      contains: A few short questions that push you to name the exact moment, object and word behind your idea.
+    - name: The one true thing
+      contains: The single small, specific part of your piece that is funny or true, picked out for you.
+    - name: Cut notes
+      contains: Where you are padding, which lines have no reason to be there, and what to take out.
+    - name: Draft lines
+      contains: Two or three tighter lines to try out loud, with the funny word moved toward the end.
+    - name: Audience test
+      contains: One question to ask a real audience, since their reaction is the score.
 seats:
   - {seat: "Comedy and the bit", asks: "What's the small, everyday thing here that everyone notices and nobody says?"}
   - {seat: "Cut the filler", asks: "Is there a reason for every line, or can this be shorter?"}

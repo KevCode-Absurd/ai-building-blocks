@@ -1,6 +1,6 @@
 new_slug: write-a-rival-alternative-page-that-wins-on-a-real-gap
 name: Write a rival alternative page that wins on a gap
-summary: Give it your rivals. Get their message gaps, a fair alternative page and a review of it.
+summary: Write an alternative page for a rival's name. Give it your rivals. You get their message gaps, a fair page that wins on a real gap, and a review.
 job: study-competitors
 thinking: medium
 thinking_why: The research reads public pages and the writing is plain. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - Buyers ask how you differ from a named rival.
   - Searches for a rival's name send you no traffic.
   - You want a page that is fair enough to be trusted.
+not_for:
+  - "You have one rival and no proof you can back: write a plain category comparison page instead, or ask a customer who switched for a quote first."
+  - "You want to attack a rival or claim you are better: this page stays fair, so use your own ad copy for that."
+  - "You need live rival prices or sales data: check each rival's own site or ask a person who knows the market, since this reads public pages only."
 you_give:
   - The names of one to five rivals
   - Your product facts and where you honestly win (optional)
@@ -29,6 +33,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Name the rivals and the one buyer question you want the page to answer.
   - Check every rival price and claim on their own site before you publish.
+output_sample:
+  input:
+    - The names of one to five rivals
+    - Your product facts and where you honestly win (optional)
+    - What your buyers say about the choice (optional)
+    - Your brand file (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, to follow HANDOFF.md
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+  output:
+    - name: "Step 1: Rival messages"
+      contains: A profile of each rival, a matrix of headlines, claims and proof, topics nobody covers, threats and next moves.
+    - name: "Step 2: White space map"
+      contains: Ratings for every rival and you on the features that decide the choice, plus open spaces and fights to skip.
+    - name: "Step 3: Alternative page"
+      contains: A fair page with why people look, a comparison, who should switch, a move path, proof and a call to act.
+    - name: "Step 4: Page review"
+      contains: The page's job, notes from a glance, a skim and a doubtful read, ranked fixes and a score.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Compare how rivals pitch themselves
     text: Reads each rival's site, news and content, and builds a matrix of headlines, claims and proof, plus topics nobody covers.

@@ -1,6 +1,6 @@
 slug: stalled-deal-indecision-checker
 name: "Stalled deal indecision checker"
-summary: "Paste notes on a quiet deal. Get whether the buyer doubts you or fears a mistake, a firm recommendation and safety nets."
+summary: "Find out why a quiet deal stalled: doubt, endless research or fear of a mistake. Paste your deal notes, get a plan and a message to send."
 category: general
 type: skill
 role: check
@@ -18,3 +18,5 @@ minds: [matthew-dixon]
 credits:
   - {title: "The JOLT Effect with Matt Dixon (podcast interview)", by: "Brainfluence podcast", used: "Indecision as a cause of stalled deals, giving a recommendation, limiting exploration and offering safety nets"}
   - {title: "The JOLT Effect: How High Performers Overcome Customer Indecision", by: "Matthew Dixon and Ted McKenna", used: "Judging indecision, recommending, limiting exploration and taking risk off the buyer"}
+next: [ask-which-closing-planner, objection-answer-sheet-writer]
+needs_mode: manual

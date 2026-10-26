@@ -1,26 +1,28 @@
 slug: net-leverage-covenant-checker
 name: Net leverage covenant checker
-summary: Check contractual net leverage and debt headroom with an explicit cash-netting cap.
+summary: Check a net debt to EBITDA loan covenant on one test date. Get net debt, your ratio against the limit and the room left.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - equity-cure-scenario-checker
+  - debt-service-covenant-headroom-checker
+  - cash-and-pik-interest-checker
 origin: own
 version: 1.0.0
 added: 2026-10-22

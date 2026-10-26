@@ -13,6 +13,29 @@ use_cases:
   - Make a drawing habit without needing finished pictures
   - Study an object before designing or repairing it
   - Give useful feedback on a beginner's drawing practice
+not_for:
+  - "You want to learn to build a head or figure from simple shapes: use Andrew Loomis."
+  - "You want a method to unlock a stiff, symbol-filled drawing by switching how you see: use Betty Edwards."
+  - "You need a repair diagnosis, a safety check or a finished illustration critique: ask a qualified repairer or a designer, because a sketch cannot show hidden faults."
+output_sample:
+  input:
+    - An ordinary object you can see now, such as an old shoe
+    - What you want this study to help you notice
+    - The tool and time you have, such as a pencil and ten minutes
+    - A photo or description of your drawing, if you want feedback (optional)
+  output:
+    - name: Session card
+      contains: Your chosen subject, one observation question and a clear stopping point for the session.
+    - name: Observation routine
+      contains: Ordered steps for following one visible form slowly, with your eye on the object.
+    - name: Action study set
+      contains: Short studies that keep one direction or weight, with one plain sentence on what each studied.
+    - name: Weekly practice card
+      contains: Three realistic appointments, each with its own study question and a review prompt.
+    - name: Feedback response
+      contains: One supported observation about the drawing you supplied and one next question to study.
+    - name: Closing note
+      contains: What to check on the page, what you guessed and what stays unknown.
 seats:
   - seat: Observation through drawing
     asks: What is the object actually doing, and where did you stop looking?

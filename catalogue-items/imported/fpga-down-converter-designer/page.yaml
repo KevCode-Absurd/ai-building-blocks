@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Hardware rate limits make it exacting.
 new_slug: fpga-down-converter-designer
 name: FPGA down converter designer
-summary: Describe the rates and bands. Get a digital down converter built for
-  FPGA or ASIC use.
+summary: Design a digital down converter for FPGA or ASIC. Give your sample rates and bands. Get a MATLAB model, a simulation and Verilog or VHDL code.
 job: build-software
 headline: FPGA down converter designer
-subhead: Describe the rates and bands. Get a digital down converter built for
-  FPGA or ASIC use. Bring input sample rate. Use the result to plan your next
-  step.
+subhead: Give your sample rates, carrier and bandwidth. Your AI asks a few questions, then builds the converter in MATLAB. You get a tested design and Verilog or VHDL you can run in your simulator.
 explain: |
   A digital down converter that takes a radio signal to baseband, built in MATLAB and ready for FPGA or ASIC code generation. It covers both whole-number and fractional sample rate changes.
 
@@ -18,6 +15,10 @@ when:
   - Your output rate does not divide evenly into the input rate.
   - You have a floating-point down converter and need an HDL version.
   - You need a CIC and FIR filter chain with sensible word lengths.
+not_for:
+  - "You need embedded C code, not HDL: use a standard MATLAB DSP workflow with C code generation instead."
+  - "You do not have MATLAB with the DSP HDL Toolbox: ask a DSP engineer or use a plain filter design tool first."
+  - "You only need a simple filter, not a full converter chain: design the filter on its own in MATLAB."
 you_give:
   - Input sample rate
   - Carrier frequency
@@ -31,8 +32,31 @@ you_get:
   - Verilog or VHDL output
   - Notes on design rules followed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with DSP HDL Toolbox.
+  - Open MATLAB with the DSP HDL Toolbox and HDL Coder. Your AI needs to run code there.
+  - Paste the skill into your AI chat, or add the skill folder to your AI tool.
+  - Say you want a digital down converter. Your AI asks for your rates and bands, one question at a time.
+  - Check the simulation against the floating-point reference before you generate HDL.
+  - Run the generated Verilog or VHDL testbench in your HDL simulator to confirm the result.
+output_sample:
+  input:
+    - Your input sample rate
+    - Your carrier frequency
+    - Your target output rate
+    - Your bandwidth and filter needs
+    - Your word lengths (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the DSP HDL Toolbox and HDL Coder
+  output:
+    - name: DDC parameters
+      contains: The phase increment, decimation split between stages and other values worked out from your rates and carrier.
+    - name: CIC compensation FIR
+      contains: A filter design that corrects the droop from the CIC stage.
+    - name: System objects
+      contains: The oscillator, mixer, CIC decimator and FIR decimator set up in MATLAB, with a Farrow stage for fractional rates.
+    - name: Simulation
+      contains: A streaming run of the design checked against a floating-point reference.
+    - name: Design function and testbench
+      contains: MATLAB files that wrap the converter and drive it with a test signal.
+    - name: HDL code
+      contains: Verilog or VHDL generated from the design with HDL Coder.

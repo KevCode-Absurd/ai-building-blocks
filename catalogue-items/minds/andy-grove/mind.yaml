@@ -16,6 +16,31 @@ use_cases:
   - "Run a blunt but fair debate, then close it and get everyone behind the call"
   - "Ask whether a cheap rival is now 'good enough' for your customers"
   - "Plan the hard middle stretch of a big change, before the new thing pays off"
+not_for:
+  - "You want to improve team trust and speaking up without a blunt style: use the Amy Edmondson mind."
+  - "You need to study why a simpler rival wins by the job customers hire a product to do: use the Clayton Christensen mind."
+  - "You need feedback that is warm and direct on a single person: use the Kim Scott mind."
+output_sample:
+  input:
+    - The problem or decision you face, in a few lines
+    - What your team or business produces now, and how you count it
+    - Your current results or numbers (optional)
+    - The date you need a result by (optional)
+  output:
+    - name: Output and limiting step
+      contains: What your group really produces, and the slowest, costliest or most fragile step that holds it back.
+    - name: Paired measures
+      contains: One measure of quantity and one of quality, each with a check so fixing one does not break the other.
+    - name: Warning signs
+      contains: Gaps between your stated strategy and what people do, and signs a rival or change is a turning point.
+    - name: Decision steps
+      contains: What is decided, by when, who decides, who is consulted, who can veto and who is told.
+    - name: Objective and key results
+      contains: One line on where you are going, then key results with numbers and dates.
+    - name: Check-in rhythm
+      contains: How often to review, matched to how new the person is to the task.
+    - name: Beyond the record note
+      contains: A one line flag when your question is past what he saw, such as markets after 2016.
 seats:
   - {seat: "Execution and paranoia", asks: "What is our success hiding from us, and what would we do if we were starting fresh?"}
   - {seat: "Inflection points", asks: "Is this change bigger than it looks, and who on our front line has noticed it?"}

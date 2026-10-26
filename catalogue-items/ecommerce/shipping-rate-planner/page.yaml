@@ -1,6 +1,6 @@
 new_slug: shipping-rate-planner
 name: "Shipping rate planner"
-summary: "Give it your parcels, costs and countries. Get shipping zones, rates and a free-shipping line to enter."
+summary: "Plan your shipping rates before you enter them. Give it parcels, costs and countries. Get zones, rates and a free-shipping line to set up."
 job: set-up-store
 thinking: medium
 thinking_why: "It does sums and keeps several rules in view at once, so a middle model is enough. Use a stronger one for many zones."
@@ -17,6 +17,10 @@ when:
   - You are setting up shipping for a new store and do not know where to start.
   - Your shipping looks like it loses money, or every cart shows free shipping.
   - You are adding a second country or a free-shipping line and want it to lift order value, not cut margin.
+not_for:
+  - "You sell heavy or bulky goods that need weight-based rates: use your carrier's own rate calculator."
+  - "You only want to know if a product is profitable: work out your margin per product first, or ask your accountant."
+  - "You already have rates set and only need the checkout settings clicked through: follow your platform's own help pages."
 
 you_give:
   - The countries or states you will ship to, and where each ships from
@@ -36,6 +40,28 @@ how_to_use:
   - Say your platform and whether you ship from one place or several.
   - Enter the rates it gives you, then place the test carts it lists and tell it what you saw.
   - Check the price you charge against your real carrier bill after your first week of orders.
+output_sample:
+  input:
+    - The countries or states you ship to, and where each ships from
+    - Your real carrier cost per country or weight band
+    - Product weights, packed box sizes and empty-box weight
+    - Your average order value and margin (optional)
+    - Your platform, Shopify or WooCommerce (optional)
+  output:
+    - name: ZONES
+      contains: One row per zone with where it ships from, the rate method, the price and the free-shipping line.
+    - name: FREE-SHIPPING LINE
+      contains: The cart value for each zone where shipping becomes free, with the reason for it.
+    - name: MARGIN CHECK
+      contains: Your real carrier cost against the price you charge for a typical parcel, and whether it covers the cost.
+    - name: SETTINGS TO ENTER
+      contains: The steps and values to type into your platform, one per line.
+    - name: CHECKOUT WORDING
+      contains: Delivery-time text, an announcement bar line and a left-for-free-shipping notice.
+    - name: TEST CARTS
+      contains: Carts that cross each line and the exact boundary, with the carrier and price you should see.
+    - name: NOT COVERED
+      contains: Countries left without a rate, weight-based rates, and any missing inputs marked MISSING.
 
 how_it_works:
   - title: Starts narrow

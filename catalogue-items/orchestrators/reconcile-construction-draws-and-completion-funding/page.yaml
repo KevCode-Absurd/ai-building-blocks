@@ -1,53 +1,67 @@
 new_slug: reconcile-construction-draws-and-completion-funding
-name: Reconcile construction draws and completion funding
-headline: Reconcile construction draws and completion funding
-summary: A construction funding, capitalized interest and completion gap schedule
+name: Construction funding and interest checker
+headline: Construction funding and interest checker
+summary: Share approved project costs, loan terms and draw dates. Get cost draws, interest schedules and a completion-funding gap check.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A construction funding, capitalized interest and completion gap schedule. Share certified annual costs and approved draw timing, usable equity/debt commitments, fixed construction interest terms, spent costs and current completion estimate/contingency.
+subhead: Share approved costs by year, the equity and loan money you can use, the loan's interest terms, costs already spent and the cost to finish. Your AI plans draws in the agreed funding order and works out interest from the real timing. It then checks what is left to cover. You get the funding gap and where it comes from.
 explain: |-
-  A construction funding, capitalized interest and completion gap schedule.
+  A construction project spends money before it earns any. Equity and loan draws pay for costs, the loan adds interest as it grows, and a limit caps what can be borrowed. The usual mistakes are counting interest twice, forgetting it when the limit is checked, or calling a cost overrun a funding gap.
 
-  Project construction funding. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow runs three steps in order. It first plans the cost-only draws in the funding order your agreements set. It then works out interest from the actual debt and the draw dates, and checks the closing debt against the facility limit. Last, it adds the unpaid cost and the interest still to come, once each, and compares the total with cash and commitments you can really use.
+
+  A cost overrun and a funding gap are shown as two different things. If interest cannot be paid from available funding, that shortfall is listed. Nothing is treated as financed just because a line of credit might cover it.
 when:
-  - You need a construction funding, capitalized interest and completion gap schedule.
-  - You work on project construction funding and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are building a draw schedule for a lender or an investor.
+  - The loan limit is close and you need to know if interest will push you over it.
+  - Costs rose and you need to know if there is enough money to finish.
+  - A lender asks how much equity is still needed to complete the build.
+not_for:
+  - "You only want interest on the loan: use the Construction loan interest calculator."
+  - "You only want a draw plan with uncovered costs: use the Construction funding schedule planner."
+  - "You only need to know if the remaining cost is funded: use the Project completion funding checker."
+  - "You need to know if a lender will approve a draw or more money: ask your lender. This does the arithmetic."
 you_give:
-  - Certified annual costs and approved draw timing, usable equity/debt commitments, fixed construction interest terms, spent costs and current completion estimate/contingency.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Certified costs by year and approved draw timing, from the lender's cost schedule
+  - Equity and loan commitments you can use, with the funding order from the agreements
+  - "The loan's fixed interest terms: rate and when interest is added to the debt"
+  - Costs already spent, from the project ledger
+  - The current cost-to-finish estimate and contingency, from the project manager
 you_get:
-  - A construction funding, capitalized interest and completion gap schedule.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A cost-only draw schedule by period, in the funding order your agreements set
+  - An interest schedule with closing debt checked against the loan limit
+  - Cost to finish with unpaid cost and future interest each counted once
+  - A funding gap, with cost overruns shown apart from cash shortfalls
+  - A list of missing facts and checks that did not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the cost schedule, funding agreements and loan terms. Say the period unit, the currency and the date of your estimate.
+  - Tell your AI to follow the pack and save each step's file. A spreadsheet suits this job, since each step feeds the next.
+  - After step 1, check that the draws follow the order in your agreements and that no interest sits in the cost lines.
+  - After step 3, check that the cost to finish counts each unpaid cost and each interest amount once. Read the gap before you share it.
 how_it_works:
-  - title: Construction funding draw planner
-    text: Build the cost-only equity/debt draw schedule using the actual contractual funding order. Pass actual debt draws and undrawn commitment by period to the interest and completion bridges.
-  - title: Construction interest schedule builder
-    text: Accrue interest using actual opening debt and sourced draw timing, adding interest only at period end if the contract permits. Identify interest outside the cost-only draw schedule and reconcile final debt, including interest, against the facility cap.
-  - title: Completion funding gap checker
-    text: Include future unpaid cost and interest requirements exactly once in cost to complete, then compare with genuinely usable cash and remaining commitments. Distinguish cost overrun from funding gap and retain any interest-funding shortfall explicitly.
+  - title: Construction funding schedule planner
+    text: "Builds the cost-only equity and debt draw schedule in the funding order the contracts set. Hands step 2 the debt draws and the undrawn commitment for each period. Check before moving on: no interest appears in the cost lines, and each draw sits within its commitment."
+  - title: Construction loan interest calculator
+    text: "Works out interest from the opening debt and the draw dates, adding interest at period end only if the contract allows. Flags interest outside the cost-only schedule and checks closing debt, with interest, against the loan limit. Check before moving on: closing debt is at or under the limit, or the excess is shown."
+  - title: Project completion funding checker
+    text: "Adds future unpaid cost and interest once each to get the cost to finish, then compares it with cash and commitments you can really use. Shows a cost overrun apart from a funding gap, and any interest shortfall. Check before you use it: nothing is financed without a commitment."
 output_shape: |-
-  A construction funding, capitalized interest and completion gap schedule.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES    <files, dates, currency, scale, estimate date>
+  DRAW SCHEDULE        <period | cost | equity draw | debt draw | undrawn commitment>
+  INTEREST SCHEDULE    <period | opening debt | interest | closing debt | limit headroom>
+  COST TO FINISH       <unpaid cost | future interest | total>
+  FUNDING GAP          <usable cash | usable commitments | gap | cost overrun | interest shortfall>
+  MISSING              <each gap and what it stops>
+  CHECKS MISSED        <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Cost draws exclude separately capitalized interest; interest is checked against commitment capacity; no uncovered interest or cost is silently financed.
+  - what: Period unit
+    how: Say whether the schedule runs by month, quarter or year. Interest follows that unit.
+  - what: Interest added to debt
+    how: Say if the loan adds interest to the balance at period end. If the contract is silent, your AI marks it MISSING.
+  - what: Contingency
+    how: Give contingency as its own line. It is shown apart from the base estimate.
 judge:
   - Cost draws exclude separately capitalized interest; interest is checked against commitment capacity; no uncovered interest or cost is silently financed.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -62,13 +76,36 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads files and builds spreadsheets
+      why: Draws, interest and the gap link through three schedules. A spreadsheet lets you trace each one. In a plain chat they come back as tables.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The lender's latest draw request (optional).
+    - Change orders that moved the budget (optional).
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Draw
+    meaning: A payment of loan or equity money into the project to cover costs.
+  - term: Capitalized interest
+    meaning: Interest added to the project's cost or loan balance instead of paid in cash.
+  - term: Commitment
+    meaning: Money a lender or investor has agreed to provide, up to a limit.
+  - term: Funding gap
+    meaning: The part of the cost to finish that usable cash and commitments do not cover.
+output_sample:
+  input:
+    - Approved costs by year and draw timing
+    - Equity and loan commitments, the funding order and the loan's interest terms
+    - Costs already spent and the cost to finish
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool, if you want a workbook (optional)
+  output:
+    - name: outputs/step-1-construction-funding-draw-planner.md
+      contains: Cost-only draws for equity and debt, with undrawn commitment by period.
+    - name: outputs/step-2-construction-interest-schedule-builder.md
+      contains: Interest by period, closing debt and headroom under the loan limit.
+    - name: outputs/step-3-completion-funding-gap-checker.md
+      contains: Cost to finish, usable funding, the gap and any interest shortfall.
+    - name: Workbook (optional)
+      contains: The three schedules in one linked spreadsheet, if your AI can build files.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.

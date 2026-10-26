@@ -1,0 +1,167 @@
+name: RAG Pipeline Engineer agent
+summary: "Plan a RAG pipeline that finds the right passages in your documents: chunking, search setup and a question set to score each change."
+headline: RAG Pipeline Engineer agent
+subhead: RAG means your AI looks up passages in your own documents, then answers from them. Describe your documents and the questions people ask. It plans how to split, index and search them, and how to test each change. You get a build plan and a score sheet.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  When a document chatbot gives a wrong answer, the AI model often gets the
+  blame. The real fault is usually retrieval, the step that fetches the
+  passages. The answer was split across two chunks, or the search matched the
+  wrong words, or the wrong documents were searched. This agent plans a
+  retrieval pipeline that you can measure, so you can see what fails and fix it.
+
+
+  It follows the RAG Pipeline Engineer profile. It starts with your documents
+  and the questions people really ask, not with tools. It tests at least two
+  embedding models on your own text, and builds a small set of question and
+  answer-passage pairs to score against. It adds re-ranking only if the scores
+  show it is needed. It changes one thing per round and keeps only what the
+  scores prove.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its example
+  code and targets describe the intended work. They are not measured results
+  from AI Blocks. Your AI writes the plan and sample code. It can't run your
+  pipeline or score it.
+when:
+  - Your document chatbot gives wrong, vague or unrelated answers.
+  - You plan a chatbot over PDFs, help articles or contracts and don't know how to split and index them.
+  - You need to choose between search by meaning, search by keyword or both.
+  - You changed something and want proof that answers got better, not just a feeling.
+not_for:
+  - You want a whole AI feature, with model choice and deployment. Use the AI Engineer agent.
+  - You want to improve a site or product search box. Use the Search Relevance Engineer agent.
+  - Your source data is messy, duplicated or broken. Use the Data Engineer agent first.
+you_give:
+  - What your documents are, how many, how long, and in which languages
+  - Ten to twenty real questions people ask, with the document that holds each answer if you know
+  - Your current setup and where it fails (optional)
+  - Your stack and limits, such as database, language, hosting, speed and budget
+  - Who may see which documents (optional)
+you_get:
+  - An audit of your documents, and a chunking plan that fits their layout
+  - Embedding and index choices, with a way to compare two or more on your own text
+  - A search plan that mixes keyword and meaning search, with filters
+  - A rule for whether to add re-ranking
+  - A test plan with question pairs and four scores to track
+  - A one-change-at-a-time improvement loop, and what to watch after launch
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Describe your documents, paste your real questions and say where answers fail today. Remove private data first.
+  - Read "Corpus audit" and "Chunking plan" first. Check that the plan fits how your documents are laid out.
+  - Build the question set it asks for. Fifty pairs of a question and its right passage is the profile's starting size.
+  - Run the compare and score steps yourself with your tools. Paste the scores back and ask for the next single change.
+  - Keep a change only if the scores improve and no other score drops.
+how_it_works:
+  - title: Audit the documents
+    text: It looks at document types, length, layout and language, and the kinds of questions users will ask. Layout decides how to split.
+  - title: Plan metadata
+    text: It lists the labels to filter on, such as date, category or source, before it designs the index.
+  - title: Compare embeddings and indexes
+    text: It tests at least two embedding models on 100 to 200 of your documents and scores each on your question set.
+  - title: Design the search
+    text: It combines keyword and meaning search, filters by metadata first, and sets how many passages to fetch.
+  - title: Decide on re-ranking
+    text: It adds a re-ranker only if precision is low and the gain is worth the extra delay.
+  - title: Score and iterate
+    text: It runs the four scores, finds the lowest, guesses the cause, changes one variable and runs again.
+output_shape: |-
+  CORPUS AUDIT
+    Documents: <types> | <count> | <length> | <languages> | <structure>
+    Questions users ask: <types of question> | <examples>
+
+  METADATA PLAN
+    <label> | <values> | <used to filter by>
+
+  CHUNKING PLAN
+    <document type> | <method: fixed, by meaning or by headings> | <size and overlap> | <why>
+
+  EMBEDDING AND INDEX TEST
+    <model> | <recall on your question set> | <cost or speed note>
+    Index choice: <type> | <settings> | <speed against recall>
+
+  SEARCH DESIGN
+    Keyword and meaning mix: <weights> | Filters: <list> | Passages fetched: <number> | Duplicate rule: <rule>
+
+  RE-RANKING DECISION
+    Baseline precision: <number> | Trial: <yes or no> | Keep only if: <gain and delay limits>
+
+  EVAL PLAN
+    Question set: <size> | Scores: context precision, context recall, faithfulness, answer relevancy | <how to run>
+
+  MONITORING
+    Log: <fields> | Weekly drift check: <what to compare>
+
+  GAPS
+    MISSING: <what> | <why it matters>
+output_sample:
+  input:
+    - A description of your documents, or a sample of them
+    - Ten to twenty real questions your users ask
+    - Your stack and limits, such as database, hosting and speed
+    - Your current setup and where it fails (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - A way to run and score a pipeline, because your chat AI can't (optional)
+  output:
+    - name: Corpus audit
+      contains: Your document types, length, layout and languages, and the kinds of questions users ask.
+    - name: Chunking plan
+      contains: How to split each document type, with size, overlap and the reason.
+    - name: Embedding and index test
+      contains: Which models and index settings to compare on your own text, and how to score them.
+    - name: Search design
+      contains: The keyword and meaning mix, metadata filters, passages fetched and the duplicate rule.
+    - name: Re-ranking decision
+      contains: A rule for when to add re-ranking, based on your scores and delay limit.
+    - name: Eval plan
+      contains: How to build the question set and track four scores after each change.
+    - name: Monitoring
+      contains: What to log and the weekly check that spots drift.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Your real questions
+    how: Paste actual user questions, not ones you made up. They set the chunk size and the test set.
+  - what: Document layout
+    how: Say if files have headings, tables or scans. Layout decides how to split.
+  - what: Speed and cost limits
+    how: Give a delay limit and a budget. Re-ranking and larger models are only added if they fit.
+improve:
+  - Keep your question set and scores. Rerun them after every change so you can compare rounds.
+  - Add failed questions to the set as you find them in the logs.
+  - Pair it with the Search Relevance Engineer agent if you also run a search box on the same content.
+terms:
+  - term: RAG
+    meaning: Retrieval-augmented generation. The AI fetches passages from your documents, then answers from them.
+  - term: Chunk
+    meaning: One piece of a document, small enough to fetch and read as a whole.
+  - term: Embedding
+    meaning: A list of numbers that stands for the meaning of a piece of text, used to search by meaning.
+  - term: Hybrid search
+    meaning: Search that mixes keyword matching with search by meaning.
+  - term: Re-ranking
+    meaning: A second pass that reorders the fetched passages by how well they fit the question.
+  - term: Faithfulness
+    meaning: How well the answer sticks to the passages it was given.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read sample documents and question lists together.
+    - name: RAGAS
+      why: The profile uses it to score precision, recall, faithfulness and answer relevancy.
+  inputs:
+    - Real user questions from your chat logs or support inbox.
+    - A sample of 100 to 200 of your documents.
+    - The right passage for ten or more of those questions.

@@ -1,6 +1,6 @@
 new_slug: collection-page-seo-builder
 name: "Collection page SEO builder"
-summary: "Give it a collection and keyword. Get the title, H1, URL, two-part copy, FAQ and links."
+summary: "Build a collection page SEO setup: give it a collection, products and one keyword. You get the title, H1, URL, listing, copy, FAQ and links."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It writes copy within fixed limits from facts you give it, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You are launching a collection and want the search setup right the first time.
   - A collection has only a name and a grid, and ranks poorly.
   - You are working through collections one by one after planning the set.
+not_for:
+  - Your store has very few products, so start with the pages Search Console already shows, or ask a person to review your top pages first.
+  - You need a one-off landing page, so write it by hand around one offer instead of using a collection template.
+  - You have not planned which collections to make yet, so use the Collection page planner first.
 
 you_give:
   - The collection name and its main keyword
@@ -36,6 +40,35 @@ how_to_use:
   - Add real reviews and the questions customers ask, if you have them.
   - Edit the copy so it sounds like you, then paste each part into the right Shopify field.
   - Back up your theme before splitting the description, and check the page on a phone.
+output_sample:
+  input:
+    - Your collection name and main keyword
+    - The products in it and their key features
+    - One or two supporting keywords (optional)
+    - Customer questions or People Also Ask questions (optional)
+    - Three real reviews that name the products (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+    - Your Shopify theme name, if you want the notes for splitting the description (optional)
+  output:
+    - name: FIELDS
+      contains: The title tag, H1, URL handle and search listing, with character counts and a redirect note.
+    - name: ABOVE THE GRID
+      contains: A short description of two lines or fewer that sits under the H1 so shoppers reach products fast.
+    - name: BELOW THE GRID
+      contains: The long description with link marks, its word count and the reason for that length.
+    - name: FAQ
+      contains: Questions and answers built from your product facts and the questions shoppers ask.
+    - name: FEATURED REVIEWS
+      contains: Three real reviews you supplied, shown as they are. Left empty if you have none.
+    - name: LINKS
+      contains: Sub-collections, internal links and outside links for the page.
+    - name: GRID AND IMAGES
+      contains: Grid setting, products per page, and file names and alt text for images.
+    - name: THEME NOTES
+      contains: How to split the description in Shopify, with a reminder to back up your theme first.
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none, plus a MISSING line for facts you did not give.
 
 how_it_works:
   - title: Sets the key fields

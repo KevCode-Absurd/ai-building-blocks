@@ -10,6 +10,10 @@ level: beginner
 inputs:
   - type: copy_draft
     required: true
+  - type: document
+    required: false
+  - type: slide_deck
+    required: false
 outputs:
   - type: audit_report
 uses: []

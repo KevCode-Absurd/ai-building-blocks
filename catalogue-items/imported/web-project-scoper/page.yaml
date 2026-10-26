@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It asks structured questions and organises answers.
 new_slug: web-project-scoper
 name: Web project scoper
-summary: Describe a web project. Get its goals, users, features, design tokens
-  and page plan in one scoped brief.
+summary: Turn your web project idea into a scoped brief. Get goals, users, features, design tokens, a tech pick and an MVP plan for your web project.
 job: build-product
 headline: Web project scoper
-subhead: "A single scoped brief for a new website or page: who it is for, what
-  it must do, how people move through it, how it looks and what to build first."
+subhead: "A single scoped brief for a new website or page: who it is for, what it must do, how people move through it, how it looks and what to build first."
 explain: |
   A single scoped brief for a new website or page: who it is for, what it must do, how people move through it, how it looks and what to build first. You start a project knowing what you are making.
 
@@ -17,6 +15,10 @@ when:
   - You are briefing a designer or developer.
   - You are about to redesign a site and need a plan.
   - You must choose between tech options for a build.
+not_for:
+  - You have a finished site that only needs copy edits. Ask a writer or your AI to edit the text instead.
+  - You want to write the site code. This gives a plan, so use your AI or a developer to build from it.
+  - You only want to map one user flow in depth. Use a UX flow tool or a designer brief instead.
 you_give:
   - Your project idea in a few lines
   - Who it is for
@@ -28,7 +30,27 @@ you_get:
   - A page and flow plan
   - Design tokens and a tech suggestion
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI your project idea and who it is for. Add brand colours or fonts if you have them.
+  - Answer the questions one phase at a time. There are six phases. Say "you choose" if you are unsure and your AI will suggest a default.
+  - Ask for the full project blueprint when the phases are done. You can stop after any phase.
+  - Check the MVP section. Move any extra features to Phase 2 before you share the brief.
+output_sample:
+  input:
+    - Your project idea in a few lines
+    - Who the site is for
+    - Your must-have features (optional)
+    - Your brand colours, fonts or sites you like (optional)
+  output:
+    - name: Product Concept
+      contains: The value proposition and the top features the project must have.
+    - name: Information Architecture & UX
+      contains: The pages, the main user flow and whether the layout starts on mobile or desktop.
+    - name: Styling & Aesthetics
+      contains: The look, colour tokens and fonts for the site.
+    - name: Technical Architecture
+      contains: The suggested framework, styling method and data setup, with security needs flagged early.
+    - name: SEO & Performance
+      contains: The title plan, accessibility points and how the site will load fast.
+    - name: MVP vs Phase 2 Roadmap
+      contains: What to build first, and which nice-to-have features wait until later.

@@ -2,8 +2,7 @@ thinking: medium
 thinking_why: It scores set areas, then ranks fixes.
 new_slug: company-health-scorer
 name: Company health scorer
-summary: Score company functions from supplied metrics using published thresholds. Show missing data and the reason for each rating.
-  areas with what to fix first.
+summary: Score your company health across eight areas with a clear colour for each. See which problem to fix first and which numbers are missing.
 job: lead-people
 headline: Company health scorer
 subhead: Use the same stated thresholds for every company stage; flag unknown inputs instead of guessing.
@@ -16,6 +15,10 @@ when:
   - A board or investor meeting is coming and you need to know your weak spots.
   - You suspect a problem in one team but have no number to show it.
   - You want to repeat the check each quarter and compare.
+not_for:
+  - "You want a forecast of what will happen next: build a financial model or ask your finance lead, because this scores only the numbers you supply."
+  - "You already track one team's problem with a clear number: do a single-team review instead of scoring the whole company."
+  - "You want to fill gaps by guessing: gather the real numbers first, because missing data is shown as unscored, not estimated."
 you_give:
   - Key numbers from each team
   - Company stage
@@ -26,7 +29,28 @@ you_get:
   - A list of what to fix first
   - A saved score to compare next quarter
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Pick your company stage first, such as Seed or Series A. Stage sets the thresholds.
+  - "Gather key numbers for each area: money (runway, burn, margin), revenue (retention, churn, pipeline), product (NPS, usage), engineering (deploys, incidents), people (attrition, engagement), operations, security and market."
+  - Open Claude, ChatGPT or Gemini and paste the skill. Then paste your stage and numbers. Missing numbers are fine, they are marked as data needed.
+  - Or run the Python scorer if your AI can run code. It asks for each metric and prints the scored dashboard.
+  - Read the dashboard. Check each colour against the number and threshold shown beside it.
+  - Start with the top priorities. Save the result and run it again next quarter to compare.
+output_sample:
+  input:
+    - Your company stage, such as Seed or Series A
+    - Key numbers for each area, such as runway, retention, attrition and incidents
+    - The one area you want to look at closely (optional)
+  prerequisites:
+    - An AI that can run Python code, only if you want the guided scorer script (optional)
+    - The benchmark reference file, for stage thresholds
+  output:
+    - name: Dashboard header
+      contains: Company name, date, stage, overall score out of 10 and whether the trend is improving, stable or declining.
+    - name: Dimension scores
+      contains: One line for each of eight areas with a colour, a score and the key numbers behind it.
+    - name: Top priorities
+      contains: The weakest areas ranked, each with the reason and a suggested action and owner.
+    - name: Watch list
+      contains: Knock-on risks, such as how a people problem can slow engineering and then hurt revenue.
+    - name: Data gaps
+      contains: Metrics you did not supply, marked as data needed and left out of the score.

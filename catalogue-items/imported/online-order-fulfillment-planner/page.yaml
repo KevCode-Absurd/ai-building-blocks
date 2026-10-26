@@ -2,34 +2,81 @@ thinking: medium
 thinking_why: It weighs in-house work against outside help.
 new_slug: online-order-fulfillment-planner
 name: Online order fulfillment planner
-summary: Give it your order volume and setup. Get ways to pick, pack and ship
-  faster and cheaper, with returns handled.
+summary: Plan how to pick, pack and ship your online orders for less. Get a stage-by-stage review, ranked fixes and a returns process from your own numbers.
 job: run-your-store
 headline: Online order fulfillment planner
-subhead: A plan to pick, pack and ship your online orders faster and cheaper,
-  with returns handled as part of the flow. You describe your volume and setup
-  and get fixes ranked by how much they save.
+subhead: Tell it your order volume, products, carriers and costs. It reviews each stage from stock arriving to returns coming back. You get fixes ranked by what they could save, a model comparison and a returns process.
 explain: |
-  A plan to pick, pack and ship your online orders faster and cheaper, with returns handled as part of the flow. You describe your volume and setup and get fixes ranked by how much they save.
+  Online order fulfillment is everything between "order placed" and "parcel delivered", plus returns. When it slips, you see late parcels, wrong items and shipping that eats your margin. This planner looks at the whole flow, so you fix the biggest problem first.
 
-  The skill starts with your order count, average order value, product range, who does the shipping, and your current accuracy. It then looks at each stage: receiving stock, warehouse layout, picking methods, packing, carrier choice and delivery speed. It compares doing it yourself against a third-party warehouse or a mix. It also covers returns, peak-season capacity and the tools that hold it together, such as warehouse and order systems.
+  Your AI asks about your volume, product range, setup, carriers and current accuracy. It then reviews receiving, storage, picking, packing, carrier choice and returns in turn. It also compares doing it yourself, using a third-party warehouse (3PL) and a mix of the two.
+
+  It never uses made-up benchmarks as fact. Where you give no figure, the plan says MISSING. Every saving is shown as an estimate, with the inputs behind it.
 when:
   - Orders are growing and packing by hand is falling behind.
-  - Shipping costs are eating your margin.
-  - You are weighing a third-party warehouse against doing it yourself.
-  - Returns arrive with no clear process.
+  - Shipping costs are eating your margin and you do not know where to start.
+  - You are weighing a third-party warehouse against shipping from your own space.
+  - Returns arrive with no clear process for what happens next.
+not_for:
+  - You sell online and in shops. Use the Order fulfillment mix planner.
+  - Your problem sits inside one warehouse, such as picking methods. Use the Pick, pack and ship improver.
+  - You deliver locally in your own vehicle. Use the Last-mile delivery planner.
+  - You want a Shopify store pulled and analysed for you. Use the Online store bottleneck finder.
 you_give:
-  - Orders per day, average and peak
-  - Number of products and their size
-  - Current setup and carriers
-  - Shipping and error costs
+  - Orders per day, average and busiest
+  - Number of products and how big they are
+  - Who ships today (you, a 3PL or both) and which carriers
+  - Cost per order for shipping, packing and errors
+  - Your biggest pain points, such as cost, speed, accuracy or returns
 you_get:
-  - A stage-by-stage fulfillment review
-  - Ranked cost and speed improvements
-  - A comparison of fulfillment models
-  - A returns process
+  - A review of each stage, from receiving stock to returns
+  - A comparison of in-house, 3PL and mixed fulfillment
+  - Fixes ranked by estimated saving, cost and effort
+  - A returns process with a restock or sell-off rule
+  - A peak season plan and next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your numbers first. A spreadsheet export of last month's orders and shipping costs helps. Any chat AI works, and you do not need to run code.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Paste your figures and say what hurts most.
+  - Answer the one round of questions it asks. If you do not know a figure, say so. It will mark it MISSING and will not guess.
+  - Read the ranked fixes. Check that each saving shows the inputs it used. Ask for a recalculation if one looks wrong.
+  - Pick one fix to try this week and one for this month. Then run the pair skills named in the next steps.
+output_sample:
+  input:
+    - Orders per day, average and busiest
+    - Products, their sizes and your current setup
+    - Carriers and your cost per order
+    - Your return rate and biggest pain points
+  prerequisites:
+    - Your own figures. The plan marks any figure you do not give as MISSING
+  output:
+    - name: Where you are now
+      contains: Your volume, model, cost per order, accuracy, cycle time and return rate in one place.
+    - name: Stage by stage findings
+      contains: For receiving, storage, picking, packing, carriers and returns, the main problem and one fix to try.
+    - name: Fulfillment model comparison
+      contains: In-house, 3PL and mixed options with when each fits, cost, control and risk.
+    - name: Ranked fixes
+      contains: Each fix with estimated saving, cost to do and the assumptions to check.
+    - name: Returns process
+      contains: Steps from request to restock or resale, who does each, and the rule for each outcome.
+    - name: Peak season plan
+      contains: What breaks first at peak and what to arrange before it does.
+    - name: Next steps
+      contains: One action for this week, one for this month, and which skill to run next.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The skill is mostly questions and reasoning, so no special tool is needed.
+    - name: A spreadsheet
+      why: Lets you check the sums behind each saving.
+  inputs:
+    - A month of order and shipping cost data
+    - A quote from a 3PL, if you are comparing
+    - Your current return rate and the top reasons
+terms:
+  - term: 3PL
+    meaning: A third-party logistics company that stores, packs and ships orders for you.
+  - term: Cycle time
+    meaning: How long an order takes from placed to shipped.
+  - term: Order accuracy
+    meaning: The share of orders sent with the right items and no damage.

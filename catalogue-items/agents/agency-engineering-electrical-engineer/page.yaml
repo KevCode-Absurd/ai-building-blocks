@@ -1,0 +1,138 @@
+name: Electrical Engineer agent
+summary: Get an electrical design review with checked units, sizing sums, standards and open risks. A licensed engineer must sign off before building.
+headline: Electrical Engineer agent
+subhead: Share your design basis and documents, such as load lists, single-line drawings and parts lists. It checks the units, redoes the sizing sums and compares your documents with each other. You get a review that shows the standards used, what passed, what failed and what is still open.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Many power design errors are unit errors. A load is listed in kW on one page and kVA on the next. A battery is listed in amp-hours with no discharge rate. This agent checks units and inputs first, before any sizing. It lists every missing input as MISSING and stops any conclusion that depends on it.
+
+  It covers low-voltage AC and -48 V DC power for telecom sites and buildings: loads, cables, batteries, rectifiers, generators, solar, earthing and lightning protection. Each sum shows its inputs, formula, standard and result, so a second engineer can redo it by hand. Where a value is unknown, it takes the safer side and marks it ASSUMED.
+
+  This is analysis, not approval. It never declares a design compliant, and it lists which clauses it checked and which it did not. AI can misquote a standard, so check each clause against the edition you hold. This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have a site survey, a single-line drawing and a parts list, and you suspect they disagree.
+  - You need a first sizing for batteries, rectifiers, a generator or a cable run before an engineer reviews it.
+  - You want the design basis written down before detailed calculation starts.
+  - You manage many sites and want clear pass or fail rules that your software can check on each record.
+not_for:
+  - You plan to build, connect or switch on anything from this output. A licensed electrical engineer must review and sign it first.
+  - You need wiring advice for a home or a small job. Ask a licensed electrician in your area.
+  - You want a plan for the software inside a device. Use the Embedded firmware engineer.
+you_give:
+  - "Your design basis: site type, voltages, backup hours needed, how often the grid fails, and the standards your project or operator uses"
+  - Your load list, with a unit on every number (W, kW or kVA) and the power factor for AC loads
+  - Documents to check, such as the single-line drawing, cable list, parts list and survey record (optional)
+  - The battery data sheet, showing capacity, discharge rate and end voltage per cell, if batteries are in scope
+  - Site facts such as lowest air temperature, height above sea level and soil resistance (optional)
+you_get:
+  - A list of every input with its unit and source, and what is MISSING or ASSUMED
+  - Sizing sums for the parts you asked about, each with inputs, formula, standard and result
+  - A table of differences between your documents, such as a drawing that says 100 A where the parts list says 63 A
+  - Pass, fail or not checked for each clause it used
+  - A list of open risks, and a closing line that a licensed electrical engineer must sign off
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your design basis and load list. Attach drawings, parts lists and survey records if you have them. Keep the unit on every number.
+  - "Say what you want reviewed: sizing, a document check or both. Name your standards and editions if you know them."
+  - Your AI asks once for what is missing. Anything still missing is marked MISSING, and the sums that need it stop there.
+  - Read the MISSING list and the differences table first. Fix your inputs and run it again.
+  - Give the result to a licensed electrical engineer. Check each standard clause against the published edition before anyone relies on it.
+how_it_works:
+  - title: Check the inputs
+    text: It converts values to SI units, keeps a unit on every number, never adds kW to kVA, and lists what is MISSING.
+  - title: Set the basis
+    text: It names the standards and editions, the spare capacity, the backup level and the pass rule for each sum, with every assumption and its reason.
+  - title: Do the sums in order
+    text: It works from load to DC plant, then cables and protection, then backup power, then earthing, because each step feeds the next.
+  - title: Compare the documents
+    text: It cross-checks the drawing, survey record and parts list, and logs each difference with the two sources.
+  - title: Judge each result
+    text: It marks each clause pass, fail or not checked, and compares answers with rules of thumb to spot outliers.
+  - title: Package the review
+    text: It lists open items, and adds the line that a licensed engineer must review and sign before building, switch-on or submission.
+output_shape: |-
+  BASIS
+    Standards and editions: <list> | Backup hours: <h> | Spare capacity: <%> | Redundancy: <N+1 or other>
+
+  INPUTS
+    <item> | <value and unit> | <source document and revision>
+    MISSING: <list> | ASSUMED: <list, each with its reason>
+
+  SIZING SUMS (one block per part)
+    <part> | Inputs: <values> | Formula: <formula> | Standard: <clause> | Result: <value and unit> | <pass, fail or not checked>
+
+  DOCUMENT DIFFERENCES
+    <item> | <document A says> | <document B says> | <proposed fix>
+
+  FINDINGS
+    <clause> | <pass, fail or not checked> | <what was found>
+
+  OPEN RISKS
+    <risk> | <what would settle it>
+
+  REVIEW LINE
+    This is analysis only. A licensed electrical engineer must review and sign it before construction, switch-on or submission.
+output_sample:
+  input:
+    - Your design basis (site type, voltages, backup hours, standards)
+    - Your load list with units and power factors
+    - Drawings, parts lists or survey records (optional)
+    - Battery data sheet with discharge rate and end voltage (optional)
+  prerequisites:
+    - An AI that can read files and do arithmetic
+    - A licensed electrical engineer to review the result
+  output:
+    - name: Basis
+      contains: The standards and editions used, backup hours, spare capacity and redundancy level.
+    - name: Inputs
+      contains: Every value with its unit and source, plus the MISSING and ASSUMED lists.
+    - name: Sizing sums
+      contains: One block per part, showing inputs, formula, clause, result and pass or fail.
+    - name: Document differences
+      contains: Each place your drawing, survey record and parts list disagree, with a proposed fix.
+    - name: Findings
+      contains: Pass, fail or not checked for each clause used.
+    - name: Open risks
+      contains: What is still unknown and what would settle it.
+    - name: Review line
+      contains: A statement that a licensed engineer must sign off before anything is built.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Parts in scope
+    how: Name the parts you want sized, such as batteries only, so the review stays short.
+  - what: Standards
+    how: Give the standards and editions your operator or local authority requires. They override the defaults.
+  - what: Extras
+    how: Ask for an inspection checklist, a draft parts list or software check rules after the review is done.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: kW and kVA
+    meaning: kW is real power. kVA is apparent power. They differ by the power factor, so never add them.
+  - term: Power factor
+    meaning: A number from 0 to 1 that links kW and kVA for AC loads.
+  - term: Single-line diagram
+    meaning: A simple drawing of how power flows from the supply to each load.
+  - term: Backup hours (autonomy)
+    meaning: How long the batteries must run the load with no mains power.
+  - term: Rectifier
+    meaning: A unit that turns mains AC into DC to run equipment and charge batteries.
+  - term: Earthing
+    meaning: Connecting a system to the ground so faults and lightning have a safe path.
+  - term: MISSING and ASSUMED
+    meaning: MISSING means the AI was not given the value. ASSUMED means it picked a safe value and says why.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads several documents at once and compares them line by line.
+  inputs:
+    - The manufacturer data sheet for each battery, rectifier and generator.
+    - Your operator's own limits, such as low-voltage disconnect level and earth resistance target.

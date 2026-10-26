@@ -1,6 +1,6 @@
 new_slug: product-bill-of-materials-builder
 name: "Product bill of materials builder"
-summary: "Give it your product and quote. Get a cost sheet by part, with each maker and price-break questions."
+summary: "Turn one factory quote into a product bill of materials. Get a cost sheet by part, with each maker and price-break questions to ask."
 job: plan-supply-chain
 thinking: medium
 thinking_why: "It builds a structured sheet from your quote and a few facts, so a mid-level model does it well. Use a stronger one if your product has more than 15 parts."
@@ -17,6 +17,10 @@ when:
   - The factory quotes one price per unit and you want to know what is inside it.
   - You buy about $1 million a year of product, or you are heading there, and want to find volume savings.
   - You are comparing two factories and need the same cost breakdown from both.
+not_for:
+  - You have no factory quote yet. Get a written quote first, then come back.
+  - Your product is made of one material with few parts. Ask the factory for a simple split of material, labor and margin instead.
+  - You want the full cost of getting goods to your door. Use a landed cost calculator once this sheet is done.
 
 you_give:
   - Your product name, plus a photo or spec sheet
@@ -35,6 +39,27 @@ how_to_use:
   - Add any part prices you found. Say which parts you could not price.
   - Read the sheet. Ask the factory to fill the rows you left blank.
   - Take the price-break questions to your next call, and check every cost cut against returns before you accept it.
+output_sample:
+  input:
+    - Your product name, plus a photo or spec sheet
+    - The factory's price per unit, the volume it is for, and your units per year
+    - Part prices you can look up, such as metals, fabric or packaging (optional)
+    - A quote from a second factory (optional)
+  output:
+    - name: Cost sheet
+      contains: One row per part with cost, maker, country, lead time, terms and source, plus labor, overhead and margin rows.
+    - name: Extra cost rows
+      contains: Inbound freight, insurance, compliance, credit insurance and financing cost on their own lines, then a check against the quote.
+    - name: Price-break questions
+      contains: "One question per row: at what volume does this get cheaper, and what does the factory's supplier give."
+    - name: Look up each month
+      contains: The parts whose prices move, how to check each one, and why it moves.
+    - name: Cost ideas and return risk
+      contains: Each saving idea with its amount, a low, medium or high return risk, and a decision.
+    - name: Worth doing now
+      contains: A yes or not yet, based on your yearly cost of goods.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Splits the unit

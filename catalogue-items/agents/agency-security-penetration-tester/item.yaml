@@ -1,0 +1,43 @@
+slug: agency-security-penetration-tester
+name: Penetration Tester agent
+summary: Get an authorized penetration test plan with scope and evidence rules.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: security/security-penetration-tester.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-penetration-tester.md
+  licence: MIT
+  original_name: Penetration Tester
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: f52c2524309fb048250b412daa6a2ad0a906b5daff01f64f195052d024b9e1a0
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Penetration Tester
+  - Agency Agents
+  - Security
+credits:
+  - title: Penetration Tester
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-penetration-tester.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

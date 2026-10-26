@@ -60,7 +60,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Pause here for the talks.
 
 ### Second half: after the talks
-4. **Sort what you heard.** Use the skill `customer-interview-notes`. Give it the notes from the talks and the idea. It sorts each talk into what they did, what it cost them and what they committed to, and flags compliments, vague claims and feature ideas as weak, with the follow-up to ask next time.
+4. **Sort what you heard.** Use the skill `customer-interview-notes`. Give it your own notes from the talks, the idea and the big three questions from step 2. It sorts each talk into what they did, what it cost them and what they committed to, and flags compliments, vague claims and feature ideas as weak, with the follow-up to ask next time.
 5. **Plan the commitment to ask for.** Use the skill `commitment-ask-planner`. Give it the idea and the sorted notes from step 4. For each person it plans the next step to ask for, in time, reputation or money, and marks anyone who is all praise and no commitment.
 6. **Make the call.** Use the skill `idea-evidence-review`. Give it the idea and the sorted notes from step 4, plus the ask plan from step 5. It sets what you believed against what people did, and ends with keep going, change or stop, the reason, and the next three talks to have.
 7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.

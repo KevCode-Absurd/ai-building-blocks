@@ -6,6 +6,27 @@ license: Complete terms in LICENSE.txt
 
 These are instructions for creating design philosophies - aesthetic movements that are then EXPRESSED VISUALLY. Output only .md files, .pdf files, and .png files.
 
+## BEFORE YOU START
+
+**What this skill is for:** one finished, design-forward poster or piece of art, made on a canvas with code. Words on it are few. It is not a template tool, and it does not make photo-real images or exact brand logos.
+
+**When NOT to use it:**
+- A poster that must carry a lot of text, such as a full event schedule or a price list. Use a layout or slide tool instead.
+- A poster that must use a real logo or a product photo. This skill does not draw them. Place them yourself afterwards.
+- A print job with strict press rules (bleed, colour profile). Ask the printer for specs first and check the file against them.
+
+**Needs:** an AI that can run code (for example Python with a drawing library) and save files. If it cannot, say so, write the design philosophy and a short brief for the piece, and stop. Do not pretend to have made an image.
+
+**Ask once, in one message, for anything not given:**
+- The topic or message of the poster (required)
+- The exact words that must appear, such as an event name, date and place (optional). If given, use them exactly as written and check the spelling. Never invent a date, a place, a name or a price.
+- Size and format (optional). If none is given, make a portrait A3 page (297 x 420 mm) as a PNG at 150 dots per inch (1754 x 2480 pixels), or as a PDF if the user wants to print it. Say which you chose.
+- Mood, colours or style hints (optional)
+
+If the topic is missing, ask for it and stop. For anything else that is missing, use your own choice and list it under "Assumed" at the end.
+
+If the poster needs to say what it is about (an event name, a date), put those few words on it in a clear, readable way. That need comes before the idea of a hidden, subtle reference below.
+
 Complete this in two steps:
 1. Design Philosophy Creation (.md file)
 2. Express by creating it on a canvas (.pdf file or .png file)
@@ -107,13 +128,22 @@ To create museum or magazine quality work, use the design philosophy as the foun
 
 **Text as a contextual element**: Text is always minimal and visual-first, but let context guide whether that means whisper-quiet labels or bold typographic gestures. A punk venue poster might have larger, more aggressive type than a minimalist ceramics studio identity. Most of the time, font should be thin. All use of fonts must be design-forward and prioritize visual communication. Regardless of text scale, nothing falls off the page and nothing overlaps. Every element must be contained within the canvas boundaries with proper margins. Check carefully that all text, graphics, and visual elements have breathing room and clear separation. This is non-negotiable for professional execution. **IMPORTANT: Use different fonts if writing text. Search the `./canvas-fonts` directory. Regardless of approach, sophistication is non-negotiable.**
 
-Download and use whatever fonts are needed to make this a reality. Get creative by making the typography actually part of the art itself -- if the art is abstract, bring the font onto the canvas, not typeset digitally.
+Use fonts from the `./canvas-fonts` folder first. Only fetch another font if none of them fits, and only if you can reach the internet and the font's licence allows it. Get creative by making the typography actually part of the art itself -- if the art is abstract, bring the font onto the canvas, not typeset digitally.
 
 To push boundaries, follow design instinct/intuition while using the philosophy as a guiding principle. Embrace ultimate design freedom and choice. Push aesthetics and design to the frontier. 
 
-**CRITICAL**: To achieve human-crafted quality (not AI-generated), create work that looks like it took countless hours. Make it appear as though someone at the absolute top of their field labored over every detail with painstaking care. Ensure the composition, spacing, color choices, typography - everything screams expert-level craftsmanship. Double-check that nothing overlaps, formatting is flawless, every detail perfect. Create something that could be shown to people to prove expertise and rank as undeniably impressive.
+**CRITICAL**: Aim for a very high level of finish and detail. Ensure the composition, spacing, color choices and typography all show expert-level craftsmanship. Do not add a signature, an artist credit or any claim that a person made the work. Double-check that nothing overlaps, formatting is flawless, every detail perfect. Create something that could be shown to people to prove expertise and rank as undeniably impressive.
 
 Output the final result as a single, downloadable .pdf or .png file, alongside the design philosophy used as a .md file.
+
+Then end your reply with this short note:
+```
+Files: <poster file name and size in pixels or mm>, <philosophy file name>
+Movement: <the one or two word name>
+Text on the poster: <the exact words used>
+Assumed: <size, colours or anything you chose yourself>
+Next: ask for another round (change colours, spacing or layout), or add your logo and print details yourself.
+```
 
 ---
 

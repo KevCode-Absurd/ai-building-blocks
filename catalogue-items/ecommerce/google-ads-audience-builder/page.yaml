@@ -1,6 +1,6 @@
 new_slug: google-ads-audience-builder
 name: "Google Ads audience builder"
-summary: "Give it your site traffic and customer list. Get remarketing lists, exclusions and custom segments to build."
+summary: "Plan your Google Ads audiences: remarketing lists, cart abandoner lists, customer exclusions and custom segments, sized to your store's traffic."
 job: run-google-ads
 thinking: medium
 thinking_why: "It turns your traffic numbers into a list of audiences with rules, which a mid-size model does well."
@@ -17,6 +17,10 @@ when:
   - You are about to run remarketing and do not know if your lists are big enough.
   - Your cold campaigns might be reaching people who already bought.
   - You want custom segments for Demand Gen or YouTube from search terms and competitor sites.
+not_for:
+  - "Your store gets under about 1,000 visitors a month: run all-visitor remarketing or email to past buyers first, because cart lists will be too small."
+  - "You want the campaign itself, with ads and budgets: use the Google remarketing campaign builder once your lists are ready."
+  - "You have no consent to use customer data in ads: get that sorted with a qualified person or your privacy policy before any customer upload."
 
 you_give:
   - Monthly site visitors and add-to-cart numbers
@@ -35,6 +39,29 @@ how_to_use:
   - Say whether customers agreed to their data being used for ads. Fix that first if they did not.
   - Build the lists in GA4 and Google Ads in the order it gives, and wait about a day for lists to fill.
   - Check list sizes after a week and drop or merge lists that are too small.
+output_sample:
+  input:
+    - Your monthly site visitors, add-to-carts and purchases
+    - The fields your customer list has, and how many customers
+    - How customers agreed to their data being used for ads
+    - Competitor sites and the search terms your buyers type (optional)
+  output:
+    - name: Size check
+      contains: Your visitors and add-to-carts set against the list size Google needs, and which lists are usable.
+    - name: Audiences
+      contains: Each list to build, with its source, its window in days and how you will use it.
+    - name: Cart abandoners
+      contains: The GA4 list of people who added to cart and did not buy, with the sum shown.
+    - name: Customer lists
+      contains: An all-customers list and a best-customers list, with a consent line.
+    - name: Exclusions
+      contains: Which campaigns should leave out which lists, so you stop paying to reach buyers.
+    - name: Custom segments
+      contains: Search terms and competitor sites that define cold audiences.
+    - name: Settings and order
+      contains: Optimised targeting off for remarketing, and the build steps with the GA4 link last.
+    - name: Checks missed
+      contains: Any check that failed, or none, plus anything marked MISSING.
 
 how_it_works:
   - title: Sizes your lists

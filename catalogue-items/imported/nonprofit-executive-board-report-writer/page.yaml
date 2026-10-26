@@ -1,22 +1,60 @@
 new_slug: nonprofit-executive-board-report-writer
 name: Write a nonprofit executive board report
-summary: Write a board report that asks for clear decisions. Explain results, risks and the next steps the executive owns.
+summary: Write a nonprofit executive board report that puts decisions first and flags risks early. Give it your results, limits and open issues.
 job: lead-people
 headline: Write a nonprofit executive board report
-subhead: Bring the board’s goals, results and open issues. Draft the executive’s report, chair agenda or review memo with evidence and clear requests.
+subhead: Give it your board's goals, your results and your open issues. It drafts your board report, chair agenda or review memo. Decisions come first and claims point to evidence.
 explain: Bring the board’s goals, results and open issues. Draft the executive’s report, chair agenda or review memo with evidence and clear requests.
 when:
-  - You want to write a nonprofit executive board report.
+  - Your board packet is due and you need the executive narrative.
+  - You want talking points for the executive session.
+  - You need an agenda for your next call with the board chair.
+  - Your annual review is coming and you must write your own self-evaluation memo.
+not_for:
+  - "You run the board itself, or write bylaws, committee plans or board job descriptions: use a board governance adviser or your board chair."
+  - "You need a note for all staff or for funders: write it as a plain message from the executive, not as a board report."
+  - "You are planning a CEO handover: use a transition plan with your board chair, not a board report."
 you_give:
-  - Board governance model, written expectations and upcoming decisions
-  - Verified results, risks, dashboard and previous commitments
+  - Your board's written goals, limits and expectations
+  - Your last board packet and dashboard
+  - Your approved budget and results so far
+  - Decisions the board must make at the next meeting
+  - Open risks and past commitments (optional)
 you_get:
-  - Executive narrative and decision requests
-  - Chair meeting agenda, executive-session preparation or evaluation memo
+  - A board report that lists every decision requested at the top
+  - Results reported against your board's written limits, with problems named early
+  - A short narrative that does not repeat the dashboard
+  - A chair meeting agenda, executive-session notes or a self-evaluation memo
+  - A meeting debrief note with owners and follow-ups
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste your goals, limits, last packet, dashboard, budget and open decisions.
+  - "Say which item you want: board report, chair agenda, executive-session notes, self-evaluation or debrief."
+  - Check that the decisions block is on page one and that every number matches your own records.
+  - Fill any gap your AI marks as missing before you send the packet. Send it 5 to 7 days before the meeting.
+  - Your board report becomes part of the governance record, so have a person review it first.
+output_sample:
+  input:
+    - Your board's written goals, limits and expectations
+    - Your last board packet and dashboard
+    - Your approved budget and results so far
+    - Decisions the board must make at the next meeting
+    - Open risks and past commitments (optional)
+  output:
+    - name: Decisions requested
+      contains: Each decision the board is asked to make at this meeting, in one sentence each, or a clear note that there are none.
+    - name: Generative question
+      contains: A real strategic question for the board to discuss, with why you raise it now and what input you want.
+    - name: Exception reporting
+      contains: Where you are inside or outside the board's written limits and goals, with the worst news stated early.
+    - name: Executive narrative
+      contains: A short story of what changed and why, tied to evidence, without repeating the dashboard in prose.
+    - name: What was left out
+      contains: Detail cut because the board cannot act on it, plus any appendix items marked read if interested.
+    - name: Chair 1:1 agenda or executive-session notes
+      contains: A standing call agenda or talking points for when staff and guests leave the room.
+    - name: Board-meeting debrief
+      contains: A post-meeting note to the chair with follow-ups, owners and commitments.
 how_it_works:
   - title: Establish the board’s frame
     text: Confirm the governance model and written limits, then separate vote requests, exceptions and questions for discussion.

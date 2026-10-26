@@ -1,6 +1,6 @@
 new_slug: page-tree-url-sketcher
 name: "Page tree and URL sketcher"
-summary: "Paste what your site does and who it is for. Get a page tree, menu and web addresses."
+summary: "Plan your website page tree and URL structure before you build. Give it what your site does and who visits. You get a menu and short web addresses."
 job: build-websites
 thinking: low
 thinking_why: "It follows a clear pattern and needs few judgement calls."
@@ -17,6 +17,10 @@ when:
   - "You are about to build a new site and need to know which pages to make."
   - "Your menu has grown into a mess."
   - "You are moving to a new platform and want a clean structure first."
+not_for:
+  - "You are building one landing page: you do not need a tree, so write the page copy and keep one address."
+  - "You want a full site plan with every check: use the Site map planner."
+  - "Your site only needs copy edits: change the text on the pages you have and keep the structure as it is."
 
 you_give:
   - "What your site does and who it is for"
@@ -33,6 +37,25 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - What your site does and who visits it
+    - Your top three goals for the site
+    - Pages and addresses you already have (optional)
+    - Your most important pages (optional)
+  output:
+    - name: PAGE TREE
+      contains: An indented list of pages from the home page down, with a short web address for each.
+    - name: MAIN MENU
+      contains: Five to seven menu items and where the one main action button goes.
+    - name: FOOTER
+      contains: The pages that belong in the footer list.
+    - name: KEY LINKS
+      contains: For each key page, two or three pages it should link to, with the reason.
+    - name: REDIRECTS NEEDED
+      contains: Old web addresses that must keep working, each paired with its new address.
+    - name: MISSING
+      contains: Facts you did not give, marked so nothing is made up.
 
 how_it_works:
   - title: "Pick the site type"
@@ -95,8 +118,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "Your top three site goals"
-  - "A list of old addresses worth keeping"
+    - "Your top three site goals"
+    - "A list of old addresses worth keeping"
 
 terms:
   - term: "Redirect"

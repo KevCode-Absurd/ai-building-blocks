@@ -2,38 +2,62 @@ thinking: high
 thinking_why: It rebuilds the lesson order and the starter problem.
 new_slug: struggle-first-lesson-reshaper
 name: Struggle-first lesson reshaper
-summary: Give it a lesson that starts with the explanation. Get a version where
-  students try the problem first.
+summary: Turn a lesson that starts with the explanation into a try-first lesson plan. Students attempt the problem before you teach the method.
 job: teach-and-train
 headline: Struggle-first lesson reshaper
-subhead: A lesson that opens with a hard problem instead of an explanation, so
-  students meet the gap before you fill it. Students who wrestle with an idea
-  first tend to remember the explanation better.
+subhead: Tell your AI the concept and how you teach it now. It rebuilds the lesson so students try a hard problem first, then you explain. You get a plan with the opening problem, safeguards and prep notes.
 explain: |
   A lesson that opens with a hard problem instead of an explanation, so students meet the gap before you fill it. Students who wrestle with an idea first tend to remember the explanation better.
 
   You describe the concept and how you teach it today. The skill rebuilds the sequence in two phases. First, a generation phase where students try the problem with what they already know. Then a consolidation phase where you explain and compare their attempts to the right method. It adds safeguards so struggle does not turn into frustration, flags places where students might lean on shortcuts, and gives you prep notes for running it.
 when:
-  - You teach a concept by explaining first and the students forget it a week
-    later.
-  - You want to try a try-first lesson but are unsure how to set up the opening
-    problem.
-  - A topic like standard deviation or ratios keeps confusing the same students.
-  - You need a plan for what to do when students get stuck in the first phase.
+  - Students can do the method but cannot say what the answer means.
+  - Students forget a concept a week after you explained it.
+  - You want to try a try-first lesson but do not know how to write the opening problem.
+  - You need a plan for when students get stuck in the first part of the lesson.
+not_for:
+  - "You need students to memorise facts or vocabulary: use short recall quizzes or direct teaching instead."
+  - "Your students do not yet know enough to attempt the opening problem: teach the basics first with worked examples."
+  - "You want a full term of lessons: ask a colleague or your head of department to plan the sequence, as this covers one concept."
 you_give:
-  - The concept you want taught
-  - How you currently teach it
+  - The concept you want students to understand
+  - How you teach it today
   - Student age and level (optional)
-  - Time available (optional)
+  - Time available for the lesson (optional)
   - What students already know (optional)
 you_get:
-  - A two-phase lesson sequence
+  - "A lesson plan in two parts: try first, then explain"
   - The opening problem for students to attempt
-  - Built-in difficulties that help memory
-  - Safeguards for when students get stuck
-  - Teacher prep notes
+  - Built-in hard parts that help students remember
+  - Steps to take when students get stuck
+  - Notes on shortcuts students may use
+  - Prep notes for you before the lesson
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini in a new chat. No code, files or paid tools are needed.
+  - Paste the skill text from this page into the chat.
+  - Type the concept, how you teach it now, the year group and the time you have. Add what students already know if you can.
+  - Read the opening problem. Check that students can start it with what they know. Ask your AI to make it easier or harder if not.
+  - Read the safeguards and prep notes. Adjust the timings to fit your room before you teach.
+  - Run the lesson. Afterwards, tell your AI what happened and ask it to improve the plan.
+output_sample:
+  input:
+    - The concept you want students to understand
+    - How you teach it today
+    - Student age and level (optional)
+    - Time available for the lesson (optional)
+    - What students already know (optional)
+  output:
+    - name: Productive Failure Sequence
+      contains: The full lesson plan, with the opening problem, how long each part runs and the step from struggle to explanation.
+    - name: "Phase 1: Generation"
+      contains: The problem students try first, using only what they already know, and how to run the group work.
+    - name: "Phase 2: Consolidation"
+      contains: How to compare student attempts, then teach the correct method and show why it works.
+    - name: Desirable Difficulties Embedded
+      contains: The built-in hard parts that help students remember, and why each one is there.
+    - name: Failure Safeguards
+      contains: What to do when students get stuck or upset, so struggle does not turn into giving up.
+    - name: Cognitive Offloading Risks
+      contains: Places where students may lean on shortcuts like calculators or AI, and how to reduce that.
+    - name: Teacher Preparation Notes
+      contains: What to prepare, what to watch for in the room and what to collect from students.

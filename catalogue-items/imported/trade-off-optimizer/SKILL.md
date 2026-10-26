@@ -17,6 +17,34 @@ metadata:
 
 Pymoo is a comprehensive Python framework for optimization with emphasis on multi-objective problems. Solve single and multi-objective optimization using state-of-the-art algorithms (NSGA-II/III, MOEA/D, SPEA2), benchmark problems (ZDT, DTLZ), customizable genetic operators, and multi-criteria decision making methods. Excels at finding trade-off solutions (Pareto fronts) for problems with conflicting objectives. Targets stable **pymoo 0.6.2**, reviewed 2026-10-01 against current official docs and native toy runs.
 
+## Before you start
+
+Ask once for anything missing. Never invent objectives, ranges or formulas.
+
+1. **Goals.** Each thing to improve, and whether lower or higher is better.
+2. **Settings you can change.** Each one with its type (number, whole number, yes/no, choice) and its range.
+3. **Hard limits (optional).** Written as "must stay below" or "must be at least".
+4. **How a design is scored.** The formulas, or code that returns the goal values. If the user has neither, stop and say the skill cannot run without a way to score a design. Offer to write a placeholder scorer they must replace.
+
+This skill needs Python 3.10 or newer and a way to run code. If your AI cannot run code, write the script, say it is untested, and tell the user how to run it.
+
+## When not to use
+
+- One clear goal and no real conflict: use a normal single-goal solver, or a plain spreadsheet.
+- A design takes minutes or hours to score and cannot be sped up: say so. These methods need thousands of scores.
+- The user wants a single answer with no comparison. Show the options and let them choose.
+
+## What you produce
+
+1. A Python script that defines the problem, the method and the stopping rule, with the random seed written in.
+2. A table of the best trade-off solutions: settings and goal values, one row each.
+3. A chart of the trade-off curve (use `MPLBACKEND=Agg` and save a PNG when running without a screen).
+4. A check against a known test problem (ZDT or DTLZ) using the same method, with a one-line verdict.
+5. A "How to choose" note: which solutions suit which priority, and what each gives up.
+6. A "Not checked" line, for example constraints that were not met or runs not repeated with other seeds.
+
+If no solution met the limits, say so and show how far the closest one is out. Do not call it a solution.
+
 ## Installation
 
 ```bash

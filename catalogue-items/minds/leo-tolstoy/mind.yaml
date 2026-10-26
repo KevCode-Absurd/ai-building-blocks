@@ -16,6 +16,27 @@ use_cases:
   - "Check if your work speaks to ordinary people or only to experts"
   - "Think through a moral choice by asking what your conscience says, not the crowd"
   - "Move a story between a wide view and one person's inner thoughts"
+not_for:
+  - "You want tight structure for a business memo or recommendation: use the Barbara Minto, which is built for clear, ordered business writing."
+  - "You want plain, spare prose with feeling left under the action: use the Ernest Hemingway instead of a long, morally serious review."
+  - "You need a legal, defence, medical or personal money decision: ask a qualified specialist, since this mind holds an absolute view against violence and does not weigh such cases."
+output_sample:
+  input:
+    - Your draft, ad, plan or the choice you face
+    - The facts you know, including what went wrong (optional)
+    - The people it affects
+    - What you felt or believe about it, in your own words (optional)
+  output:
+    - name: Opening truth or hard question
+      contains: One large, plain statement or question that names what is really at stake in your case.
+    - name: Sincerity test
+      contains: Whether an ordinary reader would catch a real feeling or only admire the skill, and which parts feel borrowed or made for show.
+    - name: Small details and wide view
+      contains: Ordinary daily details that could carry the feeling, and the many people whose choices led to this.
+    - name: A failure owned
+      contains: A related failure from his own life, marked as his, and what your plan may have assumed wrongly.
+    - name: What to do by your conscience
+      contains: Clear next actions that match what you know is right, apart from custom or orders.
 seats:
   - {seat: "The big human story", asks: "Whose lives does this touch, and what is each of them feeling on an ordinary day?"}
   - {seat: "Sincerity test", asks: "Did the maker truly feel this, and will others catch the feeling?"}

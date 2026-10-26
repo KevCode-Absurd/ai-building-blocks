@@ -1,0 +1,43 @@
+slug: agency-xr-interface-architect
+name: XR Interface Architect agent
+summary: Get a spatial interface design with interaction and comfort checks.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: spatial-computing/xr-interface-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/xr-interface-architect.md
+  licence: MIT
+  original_name: XR Interface Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 995b459992ab42162269a3bc607131371206742df9c55a4ef614e0171f34e92b
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - XR Interface Architect
+  - Agency Agents
+  - Spatial Computing
+credits:
+  - title: XR Interface Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/xr-interface-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -14,6 +14,31 @@ when:
   - Your plan keeps growing and the date keeps slipping.
   - Requests arrive faster than you can judge them.
   - You want to say no kindly and have the reason ready.
+not_for:
+  - "You only have one big request to answer, with no plan to shape: use the Feature request screener."
+  - "Your plan is already set and you want to shrink it to hit a launch date: use Launch a smaller product on the date you set."
+  - "You want to cut a live product down to what matters: use Review a product against ten principles, then cut extras."
+  - "You need a task list for a sprint, not a bet: use the Sprint Prioritizer agent."
+output_sample:
+  input:
+    - Your product plan, goal and who it is for
+    - Your team size and any fixed date
+    - Your list of requests, with who asked and when
+    - Customer comments about the product (optional)
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+  output:
+    - name: "Step 1: One-page brief"
+      contains: Goal, audience, limits, what could go wrong and the open questions you still need to answer.
+    - name: "Step 2: Six-week bet"
+      contains: A score of the plan, a bet a small team can finish, what is cut, a no list and a default answer of no.
+    - name: "Step 3: Request screen"
+      contains: Each request with how many people asked, the full cost of a yes, a fit check, a ruling and a reply.
+    - name: Replies
+      contains: A short, kind note for each request, with the reason and no promised date.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
+
 you_give:
   - Your product plan, goal and who it is for
   - Your team size and any fixed date

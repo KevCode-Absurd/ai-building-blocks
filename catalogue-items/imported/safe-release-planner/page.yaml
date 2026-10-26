@@ -2,34 +2,115 @@ thinking: medium
 thinking_why: It weighs risk to pick a safe path.
 new_slug: safe-release-planner
 name: Safe release planner
-summary: Describe your release. Get a deploy plan with checks, rollback steps
-  and how to know it worked.
+summary: "Get a safe deploy plan for your app: what to check first, the steps in order, how to roll back and how to know the release worked."
 job: ship-and-host
 headline: Safe release planner
-subhead: A deploy plan that tells you what to check before shipping, how to go
-  back if it fails, and how to tell it worked. Describe your release and it fits
-  the steps to where you host.
+subhead: Say what you are releasing and where it runs, such as Vercel, Railway or your own server. It picks the deploy method for that host. You get checks, a backup, steps, a way back and a watch period after the release.
 explain: |
-  A deploy plan that tells you what to check before shipping, how to go back if it fails, and how to tell it worked. Describe your release and it fits the steps to where you host.
+  Each host deploys in a different way. A site on Vercel goes out with a code push. A server you manage needs a backup and manual steps. Kubernetes has its own way back. A plan for one will not suit another.
 
-  It starts with the platform, because a static site on Vercel, a small app on Railway, a server with PM2, Docker and Kubernetes each deploy differently. Before release you pass four checks: code quality, build, environment and safety. The deploy runs in five phases: prepare, back up, deploy, verify, and then either keep or roll back. It stresses the reasons behind each step so you can adapt, rather than a script to copy. Rollback steps are written before you start, not after something breaks.
+  This planner starts with your host. It then runs four checks before any release: code quality, the production build, settings and secrets, and safety. Safety means a backup and a written way back. The deploy itself runs in five phases: prepare, back up, deploy, verify, and then keep it or roll back.
+
+  It explains why each step is there, so you can adapt the plan when your setup changes. You decide the rollback triggers before you start, not after something breaks.
 when:
-  - You are shipping a change that touches the database and want a safe order.
+  - You are shipping a change that touches your database and want a safe order of steps.
   - Your team deploys by hand and forgets steps.
-  - You need a rollback plan before a risky release.
-  - You are moving to a new host and need a deploy method.
+  - You are about to move to a new host, such as Vercel, Railway, Render or your own server, and need a deploy method.
+  - You want a release plan that includes a way back and a watch period.
+not_for:
+  - "You want one quick plan for a single release from a pasted prompt: use the Release day rollback planner."
+  - "You want a read-only check of a code change for deploy risks: use the Release readiness reviewer."
+  - "You want deploys to run on their own whenever you push code: use the Build pipeline writer."
 you_give:
-  - What you are deploying
-  - Where it runs
+  - What you are releasing, such as a web app, an API or a static site
+  - Where it runs, such as Vercel, Railway, a server, Docker or Kubernetes
   - Whether the release changes the database
+  - Who is affected if it breaks (optional)
   - Your current deploy steps (optional)
 you_get:
-  - A pre-release checklist
-  - A step-by-step deploy plan
-  - Rollback steps
-  - Checks that show the release worked
+  - The deploy method that fits your host
+  - A pre-release checklist in four groups
+  - A step-by-step plan in five phases
+  - Rollback triggers and steps for your host
+  - Checks to run in the first hour and the next day
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill's instructions, or upload the skill folder. No code running or paid tool is needed.
+  - Describe your release. Say where it runs, whether the database changes, and how you deploy today.
+  - Read the host choice and the rollback plan first. Check that the rollback steps match what your host really offers.
+  - Fill in the checklist. Do not start the deploy until the backup and the rollback plan are ready.
+  - Run the deploy while you watch it, then follow the checks after it. Do not walk away.
+  - Save the plan with your project. Ask your AI to adjust it the next time you release.
+how_it_works:
+  - title: Choose the platform
+    text: It asks where your release runs and picks the deploy method for that host.
+  - title: Run four checks
+    text: It checks code quality, the production build, environment settings and secrets, and safety before you start.
+  - title: Back up
+    text: It saves the current state first, because you cannot roll back without it.
+  - title: Deploy and watch
+    text: It lists the deploy steps with a pause after each one, and tells you to watch the release as it goes.
+  - title: Verify
+    text: It checks the health endpoint, error logs, key user flows and response times for the next hour and the day after.
+  - title: Keep or roll back
+    text: It names the signs that mean roll back now, and the rollback method for your host.
+output_shape: |
+  RELEASE: <what, where it runs, database change or not>
+  HOST METHOD: <how this host deploys and rolls back>
+
+  PRE-RELEASE CHECKS
+  - Code quality: <tests, review>
+  - Build: <production build result>
+  - Environment: <settings and secrets>
+  - Safety: <backup and rollback plan>
+
+  PLAN
+  1. Prepare : <step>
+  2. Back up : <step>
+  3. Deploy : <step>
+  4. Verify : <step>
+  5. Keep or roll back : <decision>
+
+  ROLLBACK
+  - Roll back if: <signs>
+  - How: <steps for this host>
+
+  AFTER RELEASE: <5 minutes, 15 minutes, 1 hour, next day>
+  MISSING: <anything not given>
+output_sample:
+  input:
+    - What you are releasing and where it runs
+    - Whether the release changes the database
+    - Your current deploy steps (optional)
+  prerequisites:
+    - Access to your host, where you can deploy and roll back
+    - A tested backup, if your release changes data
+  output:
+    - name: Host method
+      contains: How your host deploys and how it rolls back.
+    - name: Pre-release checklist
+      contains: Four groups of checks, from code quality to a ready rollback plan.
+    - name: Deploy plan
+      contains: Five phases from prepare to keep or roll back, in order.
+    - name: Rollback plan
+      contains: The signs that mean undo, and the steps to undo on your host.
+    - name: After-release checks
+      contains: What to check at 5 minutes, 15 minutes, 1 hour and the next day.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT
+      why: Any good chat AI can write the plan from your description.
+    - name: Your host's dashboard
+      why: It shows the real deploy and rollback options, so you can check the plan against them.
+  inputs:
+    - Your last deploy notes or a copy of your deploy script
+    - A list of the pages and actions that must keep working
+    - Names of the people to tell before you deploy
+terms:
+  - term: Rollback
+    meaning: Going back to the version that worked before the release.
+  - term: Staging
+    meaning: A copy of your live setup where you test before you release.
+  - term: Rolling deploy
+    meaning: Replacing instances one at a time, so the app stays up.
+  - term: Blue-green
+    meaning: Running old and new versions side by side, then switching traffic.

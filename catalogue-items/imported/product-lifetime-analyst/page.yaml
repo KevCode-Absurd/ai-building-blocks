@@ -2,35 +2,108 @@ thinking: high
 thinking_why: It must choose the right model and judge how well it fits.
 new_slug: product-lifetime-analyst
 name: Product lifetime analyst
-summary: Give it failure or test data. Get life curves, failure rates and
-  confidence ranges, worked out in MATLAB.
+summary: Find how long your product lasts. Get life curves, failure rates and confidence ranges from your test data, as MATLAB code.
 job: build-software
 headline: Product lifetime analyst
-subhead: Life curves, failure rates and confidence ranges for a product, worked
-  out from your test or field data in MATLAB. You learn how long things last and
-  how sure you can be.
+subhead: Give it the times your units failed in testing or in the field. Your AI fits life curves, picks the best one, and works out the mean life and the B10 life with confidence ranges. You get MATLAB code you can rerun. It needs paid MATLAB.
 explain: |
-  Life curves, failure rates and confidence ranges for a product, worked out from your test or field data in MATLAB. You learn how long things last and how sure you can be.
+  How long will your product last, and how sure can you be? This is a product lifetime analysis, also called reliability analysis. It turns a list of failure times into numbers you can plan with, such as a warranty period or a maintenance schedule.
 
-  Claude fits life distributions such as Weibull, compares several fits to find the best one, and computes figures like mean time to failure and B10 life. It builds Kaplan-Meier survival curves and empirical CDFs, handles accelerated life models, and uses bootstrapping for confidence intervals on the results. It writes MATLAB code using the standard fitting and probability tools, so you need MATLAB with the Statistics toolbox.
+  Your AI fits several life distributions, such as Weibull, lognormal and exponential, and compares them. It picks the best fit and says why. It then works out mean time to failure and B10 life, which is the time by which 10 percent of units have failed. It adds a range for each number, so you can see how much to trust it. Units that are still running are handled as censored data, so they count without pulling the result down.
+
+  The code runs in MATLAB with the Statistics and Machine Learning Toolbox. Both are paid products. If you only want a quick chart of your data, a spreadsheet is enough.
 when:
-  - You have failure times from testing and need a life estimate.
-  - You want to compare Weibull and other distributions.
-  - You need a warranty or maintenance figure with confidence limits.
-  - Some units have not failed yet and the data is censored.
+  - You have failure times from testing and need an estimate of product life.
+  - You want to compare Weibull with other life curves and pick one.
+  - You need a warranty or maintenance figure with a confidence range.
+  - Some units have not failed yet and your data is censored.
+not_for:
+  - "You want general statistics on data that is not about failures: use the Data analysis coder."
+  - "You want to simulate failures with Monte Carlo or fault trees: this skill only fits curves to real data."
+  - "You do not have MATLAB: ask your AI for a Python version instead, and check the code yourself."
+  - "You have only one or two failures: the ranges will be very wide, so treat any figure as a rough guide."
 you_give:
-  - Failure or test data with times
-  - Which units are still running (optional)
-  - Stress levels for accelerated tests (optional)
-  - MATLAB with the Statistics toolbox
+  - Failure or test times for each unit, in one time unit
+  - A flag for each unit that is still running (optional)
+  - The stress level for each unit, for accelerated tests (optional)
+  - The normal operating level you want to predict for (optional)
 you_get:
-  - Fitted life distributions
-  - Mean time to failure and B10 life
-  - Kaplan-Meier survival curves
-  - Confidence intervals on results
+  - A table comparing the life curves, with the best fit picked
+  - Mean time to failure and B10 life, each with a confidence range
+  - A survival curve and probability plots
+  - A MATLAB script you can rerun on new data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Statistics Toolbox.
+  - Put your failure times in a spreadsheet or list. Add a column that says which units were still running when the test ended. Note the time unit, such as hours.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text. Then paste your data, or attach the file.
+  - Say what you need, for example mean life, B10 life or a survival curve. Say if it was an accelerated test.
+  - Copy the MATLAB script it writes and run it in MATLAB. A chat AI cannot run MATLAB for you.
+  - Paste back the numbers and any error. Ask your AI to check the fit and explain the ranges in plain words.
+  - Before you use a figure for a warranty or a safety decision, have an engineer who knows your product check it.
+how_it_works:
+  - title: Check your data
+    text: It counts units, failures and censored units, and confirms the time unit with you.
+  - title: Fit the curves
+    text: It fits Weibull, lognormal and exponential curves, counting units still running as censored.
+  - title: Compare the fits
+    text: It ranks them by AIC, and checks them on probability plots and against the data.
+  - title: Work out the life figures
+    text: It computes mean time to failure, B10 life and the survival curve from the best fit.
+  - title: Add the ranges
+    text: It resamples your data many times to put a confidence range on each figure.
+  - title: Model accelerated tests
+    text: If you tested under stress, it fits an accelerated life model and predicts life at normal use.
+output_shape: |
+  Data check: <units, failed, censored, time unit>
+  Best fit: <distribution> because <reason>
+  | Distribution | Parameters | AIC |
+  | <name> | <values> | <value> |
+  | Figure | Estimate | Range |
+  | Mean time to failure | <value> | <low to high> |
+  | B10 life | <value> | <low to high> |
+  Plots: <probability plots, survival curve, curve overlay>
+  Script: <MATLAB file name>
+  Cautions: <few failures, heavy censoring, close fits>
+output_sample:
+  input:
+    - Failure times for each unit, with the time unit
+    - Which units were still running at the end (optional)
+    - Stress levels for accelerated tests (optional)
+  prerequisites:
+    - MATLAB with the Statistics and Machine Learning Toolbox (paid)
+    - MATLAB R2026a or later for accelerated life models
+  output:
+    - name: Data check
+      contains: How many units failed or were censored, and the time unit used.
+    - name: Fit comparison table
+      contains: Each life curve with its parameters and AIC, and which one fits best.
+    - name: Life figures
+      contains: Mean time to failure and B10 life, each with a bootstrap confidence range.
+    - name: Plots
+      contains: Probability plots, a survival curve and the fitted curves over your data.
+    - name: MATLAB script
+      contains: The code that produced the results, ready to rerun on new data.
+    - name: Cautions
+      contains: Warnings such as too few failures, heavy censoring or fits that are close.
+works_best_with:
+  tools:
+    - name: MATLAB with the Statistics and Machine Learning Toolbox
+      why: This is paid software, and it runs the code. Accelerated life models need R2026a or later.
+    - name: Claude Code or Codex
+      why: They can run MATLAB on your computer if it is set up, so you do not copy code by hand.
+    - name: Any good chat AI
+      why: It writes the code and explains the results. You run the code yourself.
+  inputs:
+    - Test conditions, such as temperature or load for each unit
+    - The date each unit started and failed, if you have no ready hours
+    - The warranty length or maintenance period you need to plan for
+terms:
+  - term: Censored data
+    meaning: Units that had not failed when the test ended. They still tell you something, so they stay in.
+  - term: Weibull
+    meaning: A common curve for how long things last. It can show wear-out or early failure.
+  - term: B10 life
+    meaning: The time by which 10 percent of units have failed.
+  - term: Confidence range
+    meaning: The span the true value probably sits in. A wide range means less certainty.
+  - term: AIC
+    meaning: A score that compares fits. Lower is better.

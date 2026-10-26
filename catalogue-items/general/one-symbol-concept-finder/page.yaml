@@ -1,38 +1,49 @@
 new_slug: one-symbol-concept-finder
 name: "One-symbol concept finder"
-summary: "Describe your poster, cover or video opening. Get one symbol, one feeling and what to leave out."
+summary: "Find the one idea for your poster, cover or video opening. Get a one-line core, one feeling, one symbol and a list of what to leave out."
 job: design-work
 thinking: medium
 thinking_why: "It makes a creative choice among options, but the steps and checks are fixed."
 
 headline: "One-symbol concept finder"
-subhead: "Give it what your poster, cover or video opening is about and where people will see it. It finds the one line, the feeling and one symbol, sets the limits and lists what to leave out. You get a short concept plan."
+subhead: "Tell it what your poster, cover or video opening is about and where people will see it. It writes the core in one line, names one feeling and picks one symbol. You get strict limits and a list of what to leave out, as a short plan for a designer or an image tool."
 
 explain: |
-  Design that tries to say everything says nothing. A poster with six ideas gets a glance and no memory. The hard part is deciding what one idea to carry, and that decision usually gets skipped.
+  Design that tries to say everything says nothing. A poster with six ideas gets a glance and no memory. The hard part is deciding which one idea to carry, and that choice usually gets skipped.
 
-  This skill works backward from the feeling. It writes the core in one line, names the feeling a stranger should have, lists symbols that could stand for it and picks one. It then sets limits (shapes, colours, moves), twists the symbol so it looks fresh, and lists what you are leaving out on purpose. You get a plan you can hand to a designer or an image tool.
+  This skill works backward from the feeling. It writes what the piece is about in one line, then names the one feeling a stranger should have. It lists six objects or shapes that could stand for the idea and picks one. It then sets limits you can check by looking, such as two colours and three shapes. Next it twists the symbol so people look twice, and lists what you are leaving out on purpose.
+
+  The method follows public accounts of how the designers Saul Bass and Paul Rand worked. It is our reading of their approach, not their words. You get a plan, not a picture. A designer or an image tool draws it.
 
 when:
   - "You are about to brief a poster, cover, logo or event graphic and have too many ideas."
   - "You need the first ten seconds of a video or talk to set one mood."
   - "Your design feels busy and you cannot say what to cut."
+  - "A designer asked what the one thing is that this should say, and you had three answers."
+
+not_for:
+  - "You want the finished design or its layout. This plans the idea only. For a layout, use the Layout default breaker, then hand the result to a designer."
+  - "You are drawing the letters of a name. Use the Wordmark sketch planner."
+  - "You already have several logo ideas and want to pick one. Use the Logo strength tester."
+  - "You need a whole brand identity for many places. Use the Identity system planner."
 
 you_give:
-  - "What the piece is about, in a few sentences"
-  - "Where and how long people will see it"
+  - "What the piece is about, in a few sentences (required)"
+  - "Where people will see it and for how long, such as a poster glanced at for two seconds"
   - "Fixed items such as colours, logo or required words (optional)"
 you_get:
-  - "The core in one line and the feeling it should set"
-  - "One chosen symbol, with the options you did not use"
-  - "Limits for shapes, colour and motion"
+  - "The core in one line and the one feeling it should set"
+  - "Six symbol options, with the one chosen and why"
+  - "Limits for shapes, colour and motion that you can check by looking"
+  - "A twist that makes the symbol look new"
   - "A list of what to leave out and why"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste what the piece is about, where it will be seen and any fixed items."
-  - "Read the core line first. If it is wrong, say so and rerun before looking at the symbol."
-  - "Pick the symbol, then pass the plan to your designer or to an image prompt writer."
+  - "Open the skill in your AI, or copy it and paste it in."
+  - "Paste what the piece is about, where it will be seen and any fixed items. If you give no subject at all, the skill asks for it and stops."
+  - "Read the core line first. If it is wrong, say so and run it again before looking at the symbol."
+  - "Check the limits against your fixed items, then pick the symbol or ask for a different one."
+  - "Pass the plan to your designer, or to an image tool such as ChatGPT or Gemini to draw it."
 
 how_it_works:
   - title: "Writes the core"
@@ -127,3 +138,26 @@ terms:
     meaning: "One simple object or shape that stands for the whole idea."
   - term: "Limits"
     meaning: "Rules you set before designing, such as two colours and three shapes."
+
+output_sample:
+  input:
+    - What the piece is about, in a few sentences
+    - Where people will see it and for how long
+    - Fixed items such as colours, logo or required words (optional)
+  output:
+    - name: CORE
+      contains: One sentence that says what the piece is really about.
+    - name: FEELING
+      contains: One plain feeling word and the reason it fits the core.
+    - name: SYMBOL OPTIONS
+      contains: Six objects or shapes, each with what it says and what it might say by mistake, and the one chosen.
+    - name: LIMITS
+      contains: Rules you can check by looking, such as the number of shapes, the colours, the moves and the type.
+    - name: THE TWIST
+      contains: One way to make the symbol strange so people look twice.
+    - name: TIMING
+      contains: For moving pieces only, the beat, where the symbol enters and where it ends.
+    - name: LEFT OUT ON PURPOSE
+      contains: At least three things cut from the first draft, each with a reason.
+    - name: MISSING
+      contains: Anything you did not give that would sharpen the plan.

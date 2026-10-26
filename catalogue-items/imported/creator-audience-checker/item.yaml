@@ -32,4 +32,4 @@ credits:
   - title: audience-research skill
     by: ScrapeCreators
     url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/audience-research
-    used: Copied as it is, under the MIT licence. We gave it a plain name.
+    used: Copied under the MIT licence. We gave it a plain name and added a no-key route, an unknowns section and missing-input rules.

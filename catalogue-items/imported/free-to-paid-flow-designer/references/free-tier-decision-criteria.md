@@ -10,7 +10,7 @@ The free-tier decision is upstream of upgrade flow design. The structure determi
 
 Different free-tier structures warrant different upgrade flows.
 
-**The win.** A SaaS product chooses freemium because users provide product value (data, virality, network). Upgrade flow surfaces capacity-based paywalls. Conversion is 3 percent but volume produces meaningful revenue.
+**The win.** A SaaS product chooses freemium because users provide product value (data, virality, network). Upgrade flow surfaces capacity-based paywalls. Conversion is low but volume produces meaningful revenue.
 
 **The fail.** Same product chooses free-trial without realizing user value matters more than time-bound trial. Trial ends; users churn rather than convert; the product loses the network effect users were providing for free.
 
@@ -28,7 +28,7 @@ Users use the product indefinitely without paying.
 - Paid tier removes constraints or unlocks more.
 - Users may stay free forever; conversion happens when they hit constraints they value enough to pay around.
 
-**Conversion baseline.** 2-5 percent typical for B2B SaaS; varies widely.
+**Conversion baseline.** Often quoted at 2-5 percent for B2B SaaS. A rough rule of thumb; varies widely.
 
 **Strengths.**
 
@@ -57,7 +57,7 @@ Users get full or near-full product for a defined period.
 - After trial, must pay to continue.
 - Often credit-card-required at start (with auto-charge) or credit-card-not-required (with explicit conversion at end).
 
-**Conversion baseline.** 10-25 percent of trial signups; higher with credit-card-required.
+**Conversion baseline.** Often quoted at 10-25 percent of trial signups. A rough rule of thumb.
 
 **Strengths.**
 

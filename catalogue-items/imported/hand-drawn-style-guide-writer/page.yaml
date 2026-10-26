@@ -2,38 +2,107 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: hand-drawn-style-guide-writer
 name: Hand-drawn style guide writer
-summary: Describe your product. Get a style guide for a sketchy, hand-drawn
-  look, with rules for every part.
+summary: Get a hand-drawn style guide for a sketchy, playful look, with tokens, part rules and contrast fixes so text stays easy to read.
 job: design-work
 headline: Hand-drawn style guide writer
-subhead: "Describe your product, its audience and the screens you plan to build.
-  It writes a style guide for a playful, hand-sketched look: doodle lines,
-  handwritten fonts and a loose, friendly feel. You get colour, type and spacing
-  tokens, rules for each component and its states, accessibility checks and a
-  code review checklist."
+subhead: Tell your AI about your product and who uses it. It writes a style guide for a playful, hand-sketched look with doodle lines and handwritten fonts. You get colours, type, spacing, rules for each part and a contrast check.
 explain: |
-  A written style guide for a playful product that looks sketched by hand. It gives your designers and developers the same rules for doodle-style lines, handwritten fonts and a loose, friendly feel, so screens do not drift apart.
+  A sketchy look is easy to lose. One team draws wobbly borders, another uses straight ones, and the handwritten font turns up in long paragraphs where it is tiring to read. This skill writes the rules for the hand-drawn look, so designers and developers build screens that match.
 
-  The guide starts with the basics: a font scale, a colour palette with named values, and spacing steps. Then it covers each component, its states such as hover, focus, disabled and error, and how it behaves on small screens. It adds accessibility rules you can test, tone rules for button and label text, a list of things to avoid, and a checklist to run in code review. Playful does not mean hard to read, so contrast and keyboard use come first.
+  Your AI states the look in one sentence, then sets colours, type sizes and spacing as named values. It gives the thinnest allowed line width as a number. Each part, such as buttons and forms, gets every state: default, hover, focus, disabled, loading and error. It adds tone rules for button and label text, a list of things to avoid, and a checklist for code review.
+
+  Playful must not mean hard to read. The default sky blue is only about 2.3 to 1 on white, which fails even for borders. The guide shows the ratio for each pair and tells you where to use a darker colour, so the doodle look stays usable.
 when:
-  - You want an informal, sketchy look for a kids app, a creative tool or a
-    friendly brand.
-  - Your team keeps building buttons and forms that look different from each
-    other.
-  - You need rules a developer can follow without asking a designer each time.
+  - You want an informal, sketchy look for a kids' app, a creative tool or a friendly brand.
+  - Your team keeps building buttons and forms that look different from each other.
+  - A developer needs rules for wobbly lines and handwritten fonts without asking a designer each time.
   - You want a playful style that still passes accessibility checks.
+not_for:
+  - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
+  - "You are building serious enterprise or finance screens where a sketchy look would cost trust: use the Minimal style guide writer."
+  - "You want chunky, bold borders rather than loose lines: use the Bold-border style guide writer."
+  - "You want the look of paper, leather or other real surfaces: use the Real-world texture style guide writer."
 you_give:
-  - A short description of your product and audience
-  - Brand colours or fonts you must keep (optional)
-  - The screens or components you plan to build
-  - Any existing UI that feels inconsistent (optional)
+  - A description of your product and what it does
+  - Who uses it
+  - Brand colours and fonts you must keep (optional)
+  - Screens or parts to cover first (optional)
+  - Web, iOS or Android (optional)
 you_get:
-  - Design tokens for colour, type and spacing
-  - Rules for each component and its states
-  - Accessibility checks you can test
-  - A code review checklist
+  - Colours, type sizes and spacing as named values, with a contrast ratio for each colour pair
+  - Line widths and handwritten font rules set as numbers
+  - Rules for each part, such as buttons and forms, with every state
+  - Accessibility rules you can test, plus do and don't lists
+  - A review checklist your team can run before shipping
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill into a new chat, or add it to your AI first.
+  - Paste your product description and who uses it. Add any fonts or colours you must keep, and say if it is for web, iOS or Android.
+  - Answer the one round of questions it asks, or say "use the defaults". The default colours are placeholders, not your brand.
+  - Check the colour table first. Fix any text pair under 4.5 to 1, and any border or icon under 3 to 1.
+  - Hand the guide to your designer or developer, or paste it into your coding AI's project instructions.
+how_it_works:
+  - title: State the idea
+    text: It writes one sentence on the hand-drawn look and who it is for, before it sets any rules.
+  - title: Set the foundations
+    text: It sets colours as named tokens, a handwritten and a plain font, type sizes, spacing steps and line widths.
+  - title: Check the contrast
+    text: It tests each text and background pair, and flags any under 4.5 to 1 for text or 3 to 1 for borders and icons.
+  - title: Write part rules
+    text: For each part it covers anatomy, variants, states and how it works by keyboard, mouse and touch.
+  - title: Add tone and bans
+    text: It adds tone examples and do and don't pairs, plus notes for moving old screens to the new look.
+  - title: End with a checklist
+    text: It finishes with a short list your team can run in code review.
+output_shape: |-
+  1. Context and goals: <the hand-drawn look in one sentence, the product, who uses it>
+  2. Design tokens
+     | Token | Value | Use | Contrast on surface |
+     | <primary> | <hex> | <where it goes> | <ratio, pass or fail> |
+     Fonts: <handwritten for headings>, <plain for body>, <code>
+     Type steps: <name = size>   Spacing: <steps>   Thinnest line: <px>
+  3. Parts: <button, form, card> with anatomy, variants, states, small screens
+  4. Accessibility rules: <rule> and <how to test it>
+  5. Tone: <voice words>, then <before> and <after> examples
+  6. What not to do: <rule> and <example to avoid>
+  7. Review checklist: - [ ] <check>
+  Next step: <who gets the guide>
+  MISSING: <anything you did not give>
+output_sample:
+  input:
+    - Your product and what it does
+    - Who uses it
+    - Brand colours and fonts you must keep (optional)
+    - Screens or parts to cover first (optional)
+  output:
+    - name: Context and goals
+      contains: One sentence on the hand-drawn look, the product and who it is for.
+    - name: Design tokens and foundations
+      contains: Colours, fonts, type sizes, spacing and line widths, with a contrast ratio for each pair.
+    - name: Component rules
+      contains: Anatomy, variants, states and small-screen behaviour for each part, such as buttons and forms.
+    - name: Accessibility requirements
+      contains: Testable rules for focus, contrast, keyboard use and touch size.
+    - name: Content and tone standards
+      contains: Voice words with before and after examples.
+    - name: Anti-patterns
+      contains: What not to build, each paired with an example.
+    - name: QA checklist
+      contains: A list your team can run in code review before shipping.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - Your logo colours as hex codes
+    - A few sketches or doodles you like, described in a few words
+    - A screenshot of your current screens
+    - Your current CSS or Tailwind colour list
+terms:
+  - term: Token
+    meaning: A named value, such as primary blue, used in place of a raw colour code.
+  - term: Contrast ratio
+    meaning: How far apart two colours are in brightness. Normal text needs at least 4.5 to 1.
+  - term: Component
+    meaning: One reusable part of a screen, such as a button, a form field or a card.
+  - term: Focus state
+    meaning: How a button or field looks when the keyboard is on it.

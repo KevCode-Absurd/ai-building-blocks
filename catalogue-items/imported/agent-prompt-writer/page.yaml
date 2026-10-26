@@ -2,35 +2,53 @@ thinking: low
 thinking_why: It asks a round of questions, then writes one prompt.
 new_slug: agent-prompt-writer
 name: Agent prompt writer
-summary: Paste a rough request. Answer a few questions. Get one clear prompt to
-  give an AI agent.
+summary: Turn a rough request into a clear AI agent prompt. Answer a few questions and get one prompt to copy, with exact names and paths filled in.
 job: set-up-ai
 headline: Agent prompt writer
-subhead: One clear prompt, ready to hand to an AI agent, written from your rough
-  request. The skill writes the instruction. It never does the work the prompt
-  describes.
+subhead: Give it a rough request. It asks a few questions, then writes one clear prompt for an AI agent. It writes the instruction and never does the task itself.
 explain: |
   One clear prompt, ready to hand to an AI agent, written from your rough request. The skill writes the instruction. It never does the work the prompt describes.
 
   It starts with one round of questions, usually two to five. First it reads the files and notes you point to, so it only asks what you alone can decide: what better means, what is out of scope, what the agent may change, and what done looks like. Each question comes with a suggested answer you can accept. Then it returns only the prompt, with exact names and paths filled in. If you say no questions, it skips straight to writing.
 when:
   - You have a rough idea and need a prompt an agent will not misread.
-  - You want an agent to improve a file, but you want the instruction, not the
-    edit.
+  - You want an agent to improve a file, and you need the instruction, not the edit.
   - You keep getting off-target results and need to pin down what you want.
   - You want to hand a job to another AI and need a clean brief.
+not_for:
+  - "You want the task done, such as a rewritten file or a finished report: give the prompt to your AI agent, because this skill only writes the instruction."
+  - "You only want feedback or wording tips on an existing prompt or guide: ask your AI for a plain review, because this skill returns a new prompt."
+  - "You need a quick one-line instruction and have no files or details to add: just type it to your AI, because this skill adds a round of questions first."
 you_give:
   - Your rough request
   - Files, links or notes the agent should know about (optional)
   - Things the agent must not touch (optional)
   - What the agent should report back (optional)
 you_get:
-  - A few focused questions with suggested answers
-  - One finished prompt
-  - Exact names and paths worked in
-  - No extra work done for you
+  - A few short questions, each with a suggested answer
+  - One finished prompt you can copy
+  - Exact file names and paths worked in
+  - Up to three assumptions for you to check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill instructions from the SKILL.md file.
+  - Send your rough request. Add any files, links or notes the agent should know. Say so if it should skip the questions.
+  - Answer the questions. Say yes to accept a suggested answer.
+  - Copy the prompt from the code block. Check the assumptions listed under it.
+  - Paste the prompt into your AI agent. Check its result against the done checks in the prompt.
+output_sample:
+  input:
+    - Your rough request, in your own words
+    - Files, links or notes the agent should know about (optional)
+    - Things the agent must not touch (optional)
+    - What the agent should report back (optional)
+  prerequisites:
+    - An AI that can read your files or links, if you want exact paths and names worked in
+  output:
+    - name: Questions
+      contains: One round of two to five questions, each with a suggested answer you can accept by saying yes.
+    - name: Finished prompt
+      contains: One copy-ready prompt in a code block, with the goal, limits, what to leave alone and what done means.
+    - name: Report-back request
+      contains: A line inside the prompt telling the agent what to report when it finishes.
+    - name: Assumptions
+      contains: Up to three guesses the skill made that you did not confirm. Left out if there are none.

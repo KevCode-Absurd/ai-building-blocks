@@ -2,35 +2,111 @@ thinking: high
 thinking_why: It picks the model type and loss, then runs costly training.
 new_slug: embedding-model-trainer
 name: Embedding model trainer
-summary: Say what your search or matching must do. Get an embedding or reranker
-  model trained from a ready template.
+summary: Say what your search must match. Get a training script that fine-tunes an embedding model or reranker on your own text pairs.
 job: build-software
 headline: Embedding model trainer
-subhead: A trained search or matching model, built from a tested template rather
-  than written from scratch. Say what your search must do and you get an
-  embedding model or a reranker, fine-tuned on your data.
+subhead: Tell it what your search or matching must find, and give it pairs of related text. It picks the right model type, copies a tested training template, trains on your data and reports whether training beat the starting model.
 explain: |
-  A trained search or matching model, built from a tested template rather than written from scratch. Say what your search must do and you get an embedding model or a reranker, fine-tuned on your data.
+  If a ready-made search model keeps missing results in your field, you can train an embedding model on your own text. This embedding model trainer does that with the sentence-transformers library, starting from a tested template instead of a script written from memory.
 
-  The skill is a router. It asks whether you need a bi-encoder for fast retrieval, a cross-encoder to rerank the top results, or a sparse encoder for keyword-style search. Then it makes you read the matching guides on losses, evaluators and model design before touching code. You copy the production template script for that type and adapt it. It stresses matching the loss to your data shape and the right batch settings. You need Python, the sentence-transformers library and usually a GPU.
+  First it decides what you need. A bi-encoder turns each text into numbers for fast search. A cross-encoder reranks the top results. A sparse encoder suits keyword-style search. Then it makes the AI read the matching notes on losses, evaluators and settings before it writes code.
+
+  What sets it apart is the check. It scores the model before training, trains, scores again and prints one line: WIN, MARGINAL or REGRESSION. You see at once whether training helped.
+
+  You need Python, a GPU for most jobs and training pairs. Nothing is published unless you say so.
 when:
-  - Off-the-shelf search misses results in your field.
-  - You need a reranker to sort the top results.
-  - You have pairs of related texts to train on.
-  - You want to measure whether training helped.
+  - Ready-made search misses results in your field, such as legal, medical or product terms.
+  - You need a reranker to sort the top 100 search results.
+  - You have pairs of related texts, such as questions and the answers that match them.
+  - You want proof that training helped before you switch models.
+not_for:
+  - You only want to turn text into vectors with a model that already exists. Use the Text embedding maker.
+  - You want to search your own documents with an AI answer on top. Use the RAG pipeline designer.
+  - You have no pairs or labels at all. Collect some first, or use a ready-made model.
+  - You want to fine-tune a chat model. Use the Language model trainer.
 you_give:
-  - What the model must find or match
-  - Training pairs or labelled data
-  - Base model choice (optional)
-  - A Python setup, ideally with a GPU
+  - What the model must find or match, in one or two lines
+  - Your training data, such as pairs of related texts or texts with labels
+  - A starting model, such as one from Hugging Face (optional)
+  - A Python setup with a GPU (optional for small tests)
+  - Whether you want the result saved only on your computer or also sent to Hugging Face (optional)
 you_get:
-  - The right model type for your job
-  - A training script from the template
-  - Evaluation setup and metrics
-  - A fine-tuned model
+  - The model type that fits your job and why
+  - A training script copied from a tested template
+  - A before and after score on your data
+  - A one-line verdict: WIN, MARGINAL or REGRESSION
+  - A trained model saved on your computer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run Python code, such as Claude Code, and paste in this skill. The skill folder holds the templates and notes, so add the whole folder.
+  - Say what your search must do and show your data. Answer its question if the model type is unclear.
+  - Check the model type it picks. Ask it to run a one-step smoke test on a tiny slice of your data first.
+  - Run the full training. A GPU is strongly advised. Renting one from Hugging Face Jobs costs money, so check the current price before you start.
+  - Read the verdict line and the before and after scores. Keep the model only if it beat the start. Say so if you want it pushed to the Hugging Face Hub. It stays on your computer unless you do.
+how_it_works:
+  - title: Picks the model type
+    text: Chooses a bi-encoder, cross-encoder or sparse encoder from what your search must do. It asks if this is unclear.
+  - title: Reads the notes first
+    text: Reads the notes on losses, evaluators, settings and your data format before it writes any code.
+  - title: Copies the template
+    text: Starts from the matching production training script instead of writing one from scratch.
+  - title: Adapts it to you
+    text: Swaps in your model, data, loss and evaluator, and checks the loss fits the shape of your data.
+  - title: Scores before training
+    text: Records the starting score on your data so there is something to beat.
+  - title: Smoke tests, then trains
+    text: Runs one step on a tiny slice, then the full run, and logs to a file.
+  - title: Gives a verdict
+    text: Prints WIN, MARGINAL or REGRESSION with the score change, then suggests another try if the result is weak.
+output_shape: |
+  MODEL TYPE
+  <bi-encoder / cross-encoder / sparse encoder> because <reason>
+  SETUP
+  Base model: <name> | Data: <pairs or labels> | Loss: <name> | Evaluator: <name>
+  FILES
+  <training script> | <log file> | <saved model folder>
+  RESULT
+  VERDICT: <WIN / MARGINAL / REGRESSION> | score=<after> | baseline=<before> | delta=<change>
+  NEXT
+  <one suggestion to try>
+output_sample:
+  input:
+    - What your search or matching must find
+    - Your training pairs or labelled data
+    - A starting model (optional)
+    - Whether to keep the result on your computer or push it to Hugging Face (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Python with the sentence-transformers library installed
+    - A GPU for anything beyond a small test
+  output:
+    - name: Model type choice
+      contains: Which of the three model types fits your job, with the reason.
+    - name: Training script
+      contains: A copy of the matching template, filled in with your model, data, loss and evaluator.
+    - name: Run log
+      contains: A log file for the run, saved under logs.
+    - name: Verdict line
+      contains: WIN, MARGINAL or REGRESSION, with the score before, the score after and the change.
+    - name: Trained model
+      contains: The fine-tuned model, saved in a folder on your computer.
+    - name: Experiment notes
+      contains: A short entry added to logs/experiments.md, with a try-next suggestion if the result is weak.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the smoke test and the training script and read the log.
+    - name: Hugging Face
+      why: It hosts base models and datasets, and rents GPUs for training if yours is too small.
+  inputs:
+    - A few real searches with the results you expected
+    - Hard negatives, which are wrong answers that look close to right
+    - Your GPU memory size
+terms:
+  - term: Embedding model
+    meaning: A model that turns text into a list of numbers, so similar texts end up close together.
+  - term: Reranker
+    meaning: A model that takes the top results from a first search and puts them in a better order.
+  - term: Loss
+    meaning: The score the training tries to push down. It must fit the shape of your data.
+  - term: Smoke test
+    meaning: A very short run on a tiny slice of data, to catch errors before a long run.

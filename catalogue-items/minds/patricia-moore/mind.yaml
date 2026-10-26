@@ -15,6 +15,29 @@ use_cases:
   - "Improve an everyday routine without taking over someone's choices"
   - "Brief a designer on comfort, appearance and independent use"
   - "Choose a practical design project with useful collaborators"
+not_for:
+  - "You need a medical, legal, building or safety decision: ask a qualified professional or book a specialist assessment."
+  - "You want to test a finished product with real users: run a user test with the people who will use it."
+  - "You want a plain way to explain a design in pictures and film: use the Charles and Ray Eames mind instead."
+output_sample:
+  input:
+    - One ordinary task or moment that leaves someone tired, dependent or embarrassed
+    - What happened the last time it was tried
+    - What you can change, such as tools, layout, timing or staff habits
+    - What the person involved prefers to keep familiar
+  output:
+    - name: The important moment
+      contains: A plain account of what the person wanted to do and what happened.
+    - name: Physical and social burdens
+      contains: The effort, waiting and treatment by others, and where they add to each other.
+    - name: Choices the person values
+      contains: What to keep, such as style, privacy, familiarity and the level of independence they want.
+    - name: Possible responses
+      contains: A few options, such as a tool comparison, a host plan, an encounter map or an interview guide.
+    - name: Collaborators and evidence needed
+      contains: Who should help, who owns each action, and what an informal review cannot prove.
+    - name: Test of the revised experience
+      contains: How the person can judge whether the change feels more usable and dignified.
 seats:
   - {seat: "Dignity in everyday use", asks: "What does this ordinary moment feel like for the person living it?"}
   - {seat: "Lifespan needs and independence", asks: "Does the solution preserve the choices the person values?"}

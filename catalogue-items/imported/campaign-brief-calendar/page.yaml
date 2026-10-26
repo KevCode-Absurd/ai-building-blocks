@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It builds a full plan from a short brief.
 new_slug: campaign-brief-calendar
 name: Campaign brief and calendar builder
-summary: Describe your launch or push. Get a brief with goal, audience,
-  messages, channels and a weekly calendar.
+summary: Plan a campaign brief in minutes. Give your goal, audience, dates and budget. You get messages, channels and a week-by-week content calendar.
 job: plan-strategy
 headline: Campaign brief and calendar builder
-subhead: "Describe your campaign: the goal, the audience, the dates and the
-  budget range. It fills each section of a brief and asks for any missing detail
-  first. You get a brief with a measurable goal, audience and message sections,
-  a channel plan, a week-by-week calendar and success measures."
+subhead: "Describe your campaign: the goal, the audience, the dates and the budget range. It fills each section of a brief and asks for any missing detail first. You get a brief with a measurable goal, audience and message sections, a channel plan, a week-by-week calendar and success measures."
 explain: |
   A launch plan you can hand to a team: goals, audience, messages, channels and a week-by-week calendar, all in one brief. Describe your push and the skill fills each section, asking for any key detail that is missing first.
 
@@ -19,6 +15,10 @@ when:
   - Your team keeps asking what the campaign is trying to achieve.
   - You need a content calendar that ties each post to a goal.
   - You want one document to share with stakeholders for approval.
+not_for:
+  - "You need always-on brand strategy, not one campaign with an end date: work it out with your team first, then plan each push."
+  - "You only want a few social posts: ask your AI to write them directly, no full brief needed."
+  - "You already have a brief and only need dates for posts: ask your AI to turn it into a simple content calendar in a spreadsheet."
 you_give:
   - Campaign goal
   - Target audience and their pain points
@@ -32,7 +32,37 @@ you_get:
   - A week-by-week content calendar
   - Success measures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Describe your campaign: the goal, the audience, your dates and your budget range if you have one."
+  - Answer any question your AI asks about missing details. It asks before it writes.
+  - Read the goal and the audience sections first. Fix anything that does not match your plan.
+  - Check the calendar against your real dates and team time. Treat any benchmarks as rough starting points.
+  - Ask for a deeper section, draft content pieces, or a plan for a different budget or timeline.
+output_sample:
+  input:
+    - Your campaign goal, such as signups, leads or a product launch
+    - Your target audience and their pain points
+    - Your start date, end date or fixed deadlines
+    - Your budget range (optional)
+    - Past results, brand rules or product details (optional)
+  output:
+    - name: Campaign Overview
+      contains: A campaign name, a one-line summary, and a main goal with a measurable target.
+    - name: Target Audience
+      contains: Who the campaign is for, their pain points, where they spend time, and their buying stage.
+    - name: Key Messages
+      contains: One core message, three or four supporting messages, and proof points for each.
+    - name: Channel Strategy
+      contains: The channels that fit your audience and goal, and the role each one plays.
+    - name: Content Calendar
+      contains: A week-by-week plan of what to publish, where, and what depends on what.
+    - name: Content Pieces Needed
+      contains: A list of the assets to make, such as posts, emails and pages.
+    - name: Success Metrics
+      contains: The numbers to track for your type of campaign, and how to tell if it worked.
+    - name: Budget Allocation
+      contains: How to split your budget across channels. Only included if you give a budget.
+    - name: Risks and Mitigations
+      contains: What could go wrong and how to reduce each risk.
+    - name: Next Steps
+      contains: What to do first, plus offers to go deeper on any section.

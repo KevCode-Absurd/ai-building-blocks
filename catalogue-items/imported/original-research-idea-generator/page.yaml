@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Finding truly new ideas needs deep reasoning.
 new_slug: original-research-idea-generator
 name: Original research idea generator
-summary: Describe your problem. Get new directions from eight creative methods,
-  such as borrowing ideas from other fields.
+summary: Get new research ideas for your AI or computer science problem. Eight creative methods give cross-field links, reframes and a short list to test.
 job: research-topics
 headline: Original research idea generator
-subhead: Fresh research directions that are not a small tweak of last year's
-  paper. You get ideas from eight proven creative methods, each fitted to your
-  own problem.
+subhead: Fresh research directions that are not a small tweak of last year's paper. You get ideas from eight proven creative methods, each fitted to your own problem.
 explain: |
   Fresh research directions that are not a small tweak of last year's paper. You get ideas from eight proven creative methods, each fitted to your own problem.
 
@@ -18,6 +15,10 @@ when:
   - You are preparing for a research retreat or ideation session.
   - You want a cross-field idea, not just a literature gap.
   - Every idea you have looks like an extension of someone else's paper.
+not_for:
+  - "You need a plan to sort, rank and run a batch of ideas as a project: use a project brainstorming step, then test the best ideas yourself."
+  - "You need a survey of what has already been published: use a literature review step or search a paper database."
+  - "You already have a clear problem and only need help to carry it out: use a tool made for that task."
 you_give:
   - Your problem or research area
   - What has been tried
@@ -29,7 +30,23 @@ you_get:
   - Reframed versions of your problem
   - A short list worth testing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text from this page into the chat.
+  - Write your problem, what has been tried, and any limits. Add two or three fields you know well if you like.
+  - Ask your AI to follow the skill and work through all eight methods.
+  - Read the short list. Drop ideas that only look alike on the surface, then test the best ones.
+output_sample:
+  input:
+    - Your problem or research area
+    - What has been tried so far
+    - Your known limits, such as data, compute or time (optional)
+    - Two or three fields you know well (optional)
+  output:
+    - name: "Phase 1: Map the space"
+      contains: Your problem restated, the usual assumptions in your subfield, and where your thinking is stuck.
+    - name: Ideas from the eight methods
+      contains: New directions from combining concepts, reframing, analogy, constraints, inversion, abstraction, nearby possibilities and opposing ideas.
+    - name: "Phase 3: Deepened leads"
+      contains: The most promising ideas worked further, with the real structural link to your topic.
+    - name: "Phase 4: Evaluation"
+      contains: Each lead checked for novelty and fit, ending in a short list worth testing.

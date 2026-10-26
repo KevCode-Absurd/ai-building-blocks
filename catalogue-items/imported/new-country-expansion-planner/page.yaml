@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs many markets and routes before it recommends.
 new_slug: new-country-expansion-planner
 name: New country expansion planner
-summary: Name the markets you eye. Get a market pick, entry route, localisation
-  list and rules to check.
+summary: Plan your new country expansion. Name the markets you are weighing and get a scored pick, an entry route, a localisation list and rules to check.
 job: plan-strategy
 headline: New country expansion planner
-subhead: A clear pick of which country to enter next, and how to enter it. You
-  name the markets you are considering, and the skill scores each one so the
-  choice is not a gut call.
+subhead: A clear pick of which country to enter next, and how to enter it. You name the markets you are considering, and the skill scores each one so the choice is not a gut call.
 explain: |
   A clear pick of which country to enter next, and how to enter it. You name the markets you are considering, and the skill scores each one so the choice is not a gut call.
 
@@ -18,6 +15,10 @@ when:
   - You are choosing between two or three countries for next year.
   - You want to test a market before hiring anyone there.
   - You need a localisation to-do list for a launch.
+not_for:
+  - "You have already chosen the market: skip the scoring and ask a local lawyer or adviser about the rules and set-up."
+  - "You have no product demand yet: do market research and test your offer at home first."
+  - "You need a full legal or tax opinion: ask a local lawyer or accountant. This gives a list of rules to check, not advice."
 you_give:
   - The countries you are weighing
   - Your product and who it serves
@@ -29,7 +30,23 @@ you_get:
   - A localisation checklist
   - A list of legal rules to check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - List the two or three countries you are weighing. Say what you sell and who buys it.
+  - Add any demand you already see abroad, plus your budget and team size, if you have them.
+  - Ask for a scored table, one pick with an entry route, a localisation checklist and a list of rules to check.
+  - Read the scores and check the rules with a local expert before you spend money.
+output_sample:
+  input:
+    - The countries you are weighing
+    - Your product and who it serves
+    - Current customers or demand abroad (optional)
+    - Budget and team size (optional)
+  output:
+    - name: Market scoring table
+      contains: Each country scored on market size, competition, rules, culture, existing demand and how hard operations would be.
+    - name: Recommended market and entry route
+      contains: "The country to enter first and the route: sell remotely, partner, hire locally, or set up a company."
+    - name: Localisation checklist
+      contains: Product, go-to-market and operations tasks, such as language, local prices, payment methods and legal terms.
+    - name: Rules to confirm
+      contains: Legal, tax, data and hiring points to check with a local expert before you commit.

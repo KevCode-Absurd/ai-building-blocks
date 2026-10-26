@@ -5,9 +5,9 @@ description: Clean up messy spreadsheet data — trim whitespace, fix inconsiste
 
 # Clean Data
 
-## India
+## India (only when the data uses Indian conventions)
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
+Skip this section unless the sheet has Indian fiscal years (April to March), rupee amounts or lakh and crore units. For everything else, clean the data as the workflow below says. If it does apply: this skill operates on **Indian markets**. Load **`india-market-conventions`**
 before building anything, and **`india-market-data`** for sources. Two rules cause
 most Indian errors:
 
@@ -24,10 +24,23 @@ never substitute a proxy and present it as the real thing.
 
 Clean messy data in the active sheet or a specified range.
 
+## What you need first
+
+- The spreadsheet file (.xlsx). A CSV also works: save the cleaned result as .xlsx.
+- Optional: a range to clean and the columns that matter most. If none is given, use the whole used range of the active sheet and say so.
+- Never overwrite the original. Save the cleaned copy under a new name.
+
+## If something is missing
+
+- No file or pasted data: ask for it. Do not make up rows.
+- The tools named under Environment are not available: use what you have (for example Python with openpyxl or pandas to write a new copy, or give the user the helper-column formulas to paste). Say which route you used and what you could not do.
+- The companion skills named under Environment are optional. If they are not loaded, follow the steps below as written.
+- You cannot tell how a column should look (for example, is 03/08/26 3 August or 8 March): ask once. Do not guess dates.
+
 ## Environment
 
-- Operate on the .xlsx with the `officecli` CLI. Read with `officecli get <file> <path>` or `officecli view <file> text`; write helper-column formulas with `--prop formula="TRIM(A2)"`. The in-place vs helper-column decision still applies.
-- Load **`xlsx-author`** for the build loop and **`officecli-xlsx`** for the element vocabulary.
+- Operate on the .xlsx with the `officecli` CLI when it is installed. Read with `officecli get <file> <path>` or `officecli view <file> text`; write helper-column formulas with `--prop formula="TRIM(A2)"`. The in-place vs helper-column decision still applies.
+- If they are available, load **`xlsx-author`** for the build loop and **`officecli-xlsx`** for the element vocabulary. They are not required.
 
 ## Workflow
 
@@ -65,3 +78,10 @@ Show a summary table before changing anything:
 - For destructive operations (removing duplicates, filling blanks, overwriting originals), confirm with the user first
 - After each category of fix (whitespace → casing → number conversion → dates → dedup), show the user a sample of what changed and get confirmation before moving to the next category
 - Report a before/after summary of what changed
+
+## What you hand back
+
+- The cleaned copy of the spreadsheet, with its file path. Fixes are in helper columns next to the originals unless the user asked to overwrite values.
+- A change summary: for each column, the issue, how many cells changed and the fix used.
+- A flag list of columns that mix types, and rows you were unsure about, for the user to decide.
+- A list of what you did not check or change, and any duplicates you left in because the user did not confirm removal.

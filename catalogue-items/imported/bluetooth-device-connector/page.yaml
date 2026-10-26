@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs a set scan and connect routine.
 new_slug: bluetooth-device-connector
 name: Bluetooth device connector
-summary: Name a Bluetooth Low Energy device. Get it scanned, connected and its
-  data read or written.
+summary: Scan for a Bluetooth Low Energy device, connect from MATLAB, then read, write or stream its data. Get working BLE connection code.
 job: build-software
 headline: Bluetooth device connector
-subhead: Find a Bluetooth Low Energy device near you, connect to it from MATLAB,
-  and read, write or subscribe to its data. This is the setup step for anything
-  that needs live sensor or wearable data.
+subhead: Find a Bluetooth Low Energy device near you, connect to it from MATLAB, and read, write or subscribe to its data. This is the setup step for anything that needs live sensor or wearable data.
 explain: |
   Find a Bluetooth Low Energy device near you, connect to it from MATLAB, and read, write or subscribe to its data. This is the setup step for anything that needs live sensor or wearable data.
 
@@ -18,19 +15,47 @@ when:
   - You need to scan for a nearby BLE device by name or address.
   - You must write a value to a device characteristic.
   - You want to stream data from a wearable using notifications.
+not_for:
+  - "You need Bluetooth Classic devices: use MATLAB's separate bluetooth object, which this skill does not cover."
+  - "You want MATLAB to act as a BLE server that advertises: this skill only connects to other devices, so build that with another tool."
+  - "You use an Arduino board over its support package or need Simulink blocks: use the matlab-connect-arduino skill or a person who knows Simulink."
 you_give:
   - The device name or address
   - The service or characteristic you need (optional)
-  - Whether to read, write or subscribe
-  - A bluetooth-capable computer with MATLAB
+  - Whether you want to read, write or subscribe
+  - How long to log data, if you want a log file (optional)
 you_get:
   - A scan result narrowed to your device
   - A live connection to the device
   - Read, write or notification code that works
   - Data flowing into MATLAB
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and reach a Bluetooth device.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Your AI must be able to run MATLAB code, so use a setup that connects to MATLAB.
+  - Switch on your device and make sure it is advertising. Close other apps that may hold its connection.
+  - Tell your AI the device name or address and whether you want to read, write or subscribe.
+  - Pick your device from the scan list when your AI asks. It never picks for you.
+  - Check the connection summary, then run the read, write or subscribe code.
+  - To log data, ask for a notification log. Then open the text file in MATLAB to look at the data.
+output_sample:
+  input:
+    - Your device name, address or service ID
+    - The characteristic you want to use (optional)
+    - Whether you want to read, write or subscribe
+    - How long to log notifications, and a file name (optional)
+  prerequisites:
+    - MATLAB, which is a paid product, on a computer with Bluetooth
+    - An AI that can run MATLAB code and reach your device
+    - Your BLE device switched on and advertising
+  output:
+    - name: Existing connection check
+      contains: A check for a connected ble object, since a connected device stops advertising and cannot be scanned.
+    - name: Scan results
+      contains: A table of nearby devices with Name, Address, RSSI and Advertisement, strongest signal first.
+    - name: Connection confirmation
+      contains: The device name and address, plus how many services and characteristics it has.
+    - name: Characteristic access
+      contains: Code that picks one characteristic using its service and characteristic identifiers.
+    - name: Read, write or subscribe code
+      contains: Code to read a value, write bytes, or subscribe to notifications and unsubscribe after.
+    - name: Notification log file
+      contains: A tab-separated text file with one timestamped row per notification, made by bleDataCollector.

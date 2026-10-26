@@ -17,12 +17,12 @@ outputs:
 uses: [shopper-question-and-fan-out-mapper, ai-recommendation-panel-runner, ai-recommendation-gap-finder, brand-facts-accuracy-fixer, ai-citation-source-finder, ai-shortlist-readiness-checker, ai-ready-product-page-editor]
 steps:
   - {uses: shopper-question-and-fan-out-mapper, note: "Once, then again only when your range changes: the fixed list of shopper questions every later month is run against."}
-  - {uses: ai-recommendation-panel-runner, note: "Every month: the same questions, the same assistants, scored against last month."}
+  - {uses: ai-recommendation-panel-runner, note: "Every month: the same questions, the same assistants, scored against last month. Hands steps 3, 4 and 5 the panel results, with what each assistant said and the sources it cited."}
   - {uses: ai-recommendation-gap-finder, note: "Only when your share fell, or a rival gained, by more than the agent's bar: why rivals are named and you are not."}
-  - {uses: brand-facts-accuracy-fixer, note: "Only when an assistant states a wrong fact about your store: the source it used and the fix."}
-  - {uses: ai-citation-source-finder, note: "Only when the gap is marked build or influence: which sites the assistants quote instead of you."}
-  - {uses: ai-shortlist-readiness-checker, note: "Only when the gap is marked fix: whether your public pages can be found, matched and chosen."}
-  - {uses: ai-ready-product-page-editor, note: "Only for up to two pages the readiness check fails: the page rewritten from your facts."}
+  - {uses: brand-facts-accuracy-fixer, note: "Only when an assistant states a wrong fact about your store: the source it used and the fix. Uses the assistants' wording from step 2's answers and your true facts and policies, not step 3's gap report."}
+  - {uses: ai-citation-source-finder, note: "Only when the gap is marked build or influence: which sites the assistants quote instead of you. Uses the shopper questions from step 1 and the cited sources in step 2's panel sheet."}
+  - {uses: ai-shortlist-readiness-checker, note: "Only when the gap is marked fix: whether your public pages can be found, matched and chosen. Uses your store address and key product pages, not step 5's source list. Hands step 7 the pages that fail."}
+  - {uses: ai-ready-product-page-editor, note: "Only for up to two pages the readiness check fails: the page rewritten from your facts. Uses your product facts and the shopper questions from step 1, on the pages step 6 failed."}
 schedule: "On the first Monday of each month, with the same questions as last month"
 asks_before: [publishing page changes, editing theme files or robots.txt, contacting sites or journalists for a mention, posting on forums or Reddit, paying for placements or reviews]
 origin: own

@@ -1,6 +1,6 @@
 new_slug: shipping-zone-and-rate-drafter
 name: "Shipping zone and rate drafter"
-summary: "Paste where you ship and real carrier costs. Get zones, rates, a free-shipping line and test carts."
+summary: "Draft shipping zones and rates that cover your real carrier cost. Paste where you ship and your parcel. Get a free-shipping line and test carts."
 job: set-up-store
 thinking: low
 thinking_why: "It compares charged price to real cost, zone by zone."
@@ -17,6 +17,10 @@ when:
   - "You are setting up shipping for the first time."
   - "You are adding a new country."
   - "You suspect free shipping is costing you margin."
+not_for:
+  - "You sell digital goods with nothing to ship: skip shipping rates and set up delivery by email in your store settings."
+  - "Your supplier sets shipping, as in dropshipping: use the supplier's rate card and enter it as is."
+  - "You need weight-band rates for heavy or bulky goods: use the Shipping rate planner, which has the full set of checks."
 
 you_give:
   - "Where you ship (required): countries or states, and where each ships from."
@@ -35,6 +39,26 @@ how_to_use:
   - "Under it, paste your details: where you ship; real carrier cost; parcel; average order value and margin; platform."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Where you ship, and where each place ships from
+    - Your real carrier cost per country or weight band
+    - Your packed parcel weight and box size
+    - Your average order value and margin (optional)
+    - Your store platform, such as Shopify or WooCommerce (optional)
+  output:
+    - name: ZONES
+      contains: Each zone with where it ships from, the rate model chosen, and the price charged.
+    - name: MARGIN CHECK
+      contains: For a typical parcel, the carrier cost against the price charged, and whether the zone covers cost or loses money.
+    - name: FREE-SHIPPING LINE
+      contains: A free-shipping amount for each zone, set above your average order value, with the reason.
+    - name: WORDING
+      contains: Checkout text and announcement bar text that match your rates.
+    - name: TEST CARTS
+      contains: Four test carts, including one at the exact line value, each with the carrier and price to expect.
+    - name: NOT COVERED
+      contains: Heavy or bulky goods and countries that still have no rate.
 
 how_it_works:
   - title: "Start narrow"

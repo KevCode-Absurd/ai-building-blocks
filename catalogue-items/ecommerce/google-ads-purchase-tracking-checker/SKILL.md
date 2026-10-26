@@ -32,6 +32,7 @@ How to start:
 This skill runs on its own. All it needs to start is the list of conversion actions, as text or a screenshot. If something is missing, ask once in one short message for what you can't work without, then carry on with what you have and mark each gap `MISSING:` or `[inferred]`.
 
 - **Conversion actions** (required): each with source, goal, primary or secondary, and counted value. Read an attached screenshot directly.
+- **The tracking setup plan** (optional): from the Shopify Google tracking builder, so the test order is checked against what should have been set up.
 - **Platform** (advised): Shopify, WooCommerce or other.
 - **Monthly ad spend** (advised).
 - **Google purchases and revenue, and store orders and revenue, for the same dates** (advised).

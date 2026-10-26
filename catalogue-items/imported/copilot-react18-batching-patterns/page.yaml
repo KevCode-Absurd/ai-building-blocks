@@ -2,17 +2,99 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-react18-batching-patterns
 name: React batching regression fixer
-summary: Share a React class component. Get fixes for state updates that break
-  under automatic batching.
+summary: Find and fix React 18 automatic batching bugs in class components, such as state read after await, without overusing flushSync.
 job: test-and-fix-code
 headline: React batching regression fixer
-subhead: Share a React class component. Get fixes for state updates that break
-  under automatic batching. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Paste a React class component that broke after the React 18 upgrade. Your AI finds code that reads this.state after an await, sorts each case, and rewrites it. It adds flushSync only where the screen must update first.
+explain: |
+  React 18 groups several setState calls into one screen update, even inside setTimeout, promises and async methods. In React 17 each call updated the screen at once. A class method that reads this.state after an await can now see old values, and nothing warns you. This is a silent bug.
+
+  This skill reads every async method in your class and asks one question. Does code after an await read this.state to make a choice? If yes, it is a state-read bug and the fix is a rewrite. If no, but the user must see a screen state before the next step, it uses flushSync. If neither, it only tidies the code.
+
+  The point is to avoid the quick fix. Many developers wrap everything in flushSync, which removes the speed gains of React 18. This skill keeps flushSync for the few places that need it. It also fixes tests that checked a state that no longer shows up on its own.
+when:
+  - Your React 17 to 18 upgrade went through, but a screen now shows stale or wrong values.
+  - An async class method has two or three setState calls and a choice made after an await.
+  - A test fails because it checks a loading or step state that React 18 no longer renders alone.
+  - A teammate suggests adding flushSync everywhere to make it work again.
+not_for:
+  - "You want to move off componentWillMount or componentWillReceiveProps: use the React unsafe lifecycle migrator."
+  - "Your code uses function components with hooks only: batching rarely breaks there, so check the effect logic with your own review."
+  - "You are moving to React 19, not 18: use the React 19 source migration helper for the API changes."
+you_give:
+  - The class component file that misbehaves
+  - Your React version before and after the upgrade
+  - The failing test or the screen bug you see (optional)
+  - Other files the method calls, such as a service or store (optional)
+you_get:
+  - A list of async methods, each sorted as a state-read bug, a refactor or a flushSync case
+  - Rewritten code for each method
+  - A reason for every flushSync, or a note that none is needed
+  - Test changes where a test asserted a state React 18 now skips
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page. If your AI takes file uploads, upload the whole skill folder so it can read the references folder.
+  - Paste your class component. Say which React version you used before and which you use now.
+  - Ask your AI to list every async method that reads this.state after an await, sort each one, and show the fix.
+  - Check each flushSync it adds. The reason should be that the user must see a screen state before the next step. If not, ask for a refactor instead.
+  - Copy the changes into your project and run your tests. Your AI cannot run them from a chat window, so this step happens on your own machine.
+how_it_works:
+  - title: Read the async methods
+    text: Your AI scans each class method that uses await, setTimeout, a promise or a native event handler.
+  - title: Ask the state question
+    text: For each method it checks whether code after an await reads this.state to make a choice.
+  - title: Sort into A, B or C
+    text: A is a silent state-read bug. B is a refactor with no flushSync. C needs flushSync because the user must see a state first.
+  - title: Rewrite the method
+    text: It applies the before and after pattern for that category from the reference files.
+  - title: Apply the flushSync rule
+    text: It adds flushSync only for a spinner before a fetch, or for steps the user must see one after another.
+  - title: Fix the tests
+    text: It rewrites tests that assert an in-between state, preferring waitFor over flushSync.
+output_shape: |
+  Method list
+  - <method name>: category <A, B or C>, because <reason>
+  Fixes
+  - <method name>: <before code> then <after code>
+  flushSync used
+  - <method name>: <why the user must see this state> (or "none needed")
+  Test changes
+  - <test name>: <old assertion> then <new assertion>
+  Check by hand
+  - <anything unclear, such as code in another file>
+output_sample:
+  input:
+    - Your class component file
+    - Your React version before and after the upgrade
+    - The failing test or screen bug (optional)
+    - Files the method calls, such as a service (optional)
+  prerequisites:
+    - A project already running React 18
+    - An AI that can read your pasted code or uploaded files
+  output:
+    - name: Method list
+      contains: Each async method with its category, A, B or C, and the reason.
+    - name: Fixes
+      contains: Before and after code for every method that needs a change.
+    - name: flushSync used
+      contains: Each flushSync call with the screen state the user must see first.
+    - name: Test changes
+      contains: Tests rewritten so they no longer depend on an in-between render.
+    - name: Check by hand
+      contains: Spots your AI could not decide without seeing other files.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can read pasted code and sort the methods. Upload the skill folder if it accepts files.
+    - name: An AI coding tool in your project
+      why: It can run your tests after each fix and show the result.
+  inputs:
+    - The failing test output
+    - A short note on what the screen should show at each step
+    - Your list of other class files with async methods
+terms:
+  - term: Automatic batching
+    meaning: React 18 joins several setState calls into one screen update.
+  - term: flushSync
+    meaning: A React call that forces the screen to update right away.
+  - term: Class component
+    meaning: A React component written as a class with a render method.

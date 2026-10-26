@@ -1,6 +1,6 @@
 new_slug: code-vendor-bills-flag-odd-ones-and-find-supplier-savings
 name: Code vendor bills, flag odd ones and find supplier savings
-summary: Give it your vendor bills. Get each coded, the odd ones flagged and the biggest savings ranked.
+summary: Code vendor bills in one run. Get each bill coded, odd ones flagged, and supplier savings ranked, with nothing paid until you say yes.
 job: money-and-investing
 thinking: medium
 thinking_why: The work is reading and sorting. A mid-level model is enough, but check the flagged bills yourself.
@@ -14,6 +14,10 @@ when:
   - Bills pile up in an inbox or a folder and coding them takes hours.
   - You suspect a double payment or a price creep but have no way to see it.
   - You want to renegotiate or cut suppliers and need a ranked list to start from.
+not_for:
+  - "You have only a handful of bills: code them by hand, or ask your bookkeeper."
+  - "You need bills entered into QuickBooks or Xero for you: this stages entries and a payment run, and you enter them yourself."
+  - "You want to chase a flagged bill with a supplier: check it in your records first, then email the supplier yourself."
 you_give:
   - Vendor bills as PDFs, photos or emails
   - Your chart of accounts, and how you code your jobs or teams
@@ -30,6 +34,23 @@ how_to_use:
   - Attach the bills and your account list. Step 1 stages the entries and a payment run. Approve or change it yourself.
   - Look at the flagged bills with the supplier or your records before you act.
   - Use the savings list as a start for conversations, not as a final answer.
+output_sample:
+  input:
+    - Your vendor bills as PDFs, photos or emails
+    - Your chart of accounts, and how you code jobs or teams
+    - Purchase orders and receipts, if you use them (optional)
+    - Your rule for what counts as odd (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with files in a Project or Claude Code
+  output:
+    - name: "Step 1: Coded bills"
+      contains: One table with vendor, number, dates, lines, account, order match and unreadable fields, plus a payment run to approve.
+    - name: "Step 2: Odd bills"
+      contains: The bills that look repeated, jumped in price or break a vendor's pattern, each with a short reason.
+    - name: "Step 3: Savings"
+      contains: Spend grouped by type, supplier and team, with overlap, ranked savings, quick wins and asks for each supplier.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Read and code the bills
     text: Removes repeat copies, reads vendor, number, dates, lines and totals, codes each bill from your accounts and past habits, matches it to the order and receipt, and stages a payment run.

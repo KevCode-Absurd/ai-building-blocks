@@ -1,0 +1,154 @@
+name: Offer & Lead Gen Strategist agent
+summary: Share your offer and buyer. Get a check of the offer's four levers, a stronger offer, a lead magnet and one channel to test first for more leads.
+headline: Offer & Lead Gen Strategist agent
+subhead: Describe what you sell, who buys it and what you offer today. It rates your offer on four levers, rebuilds the weakest one, designs a lead magnet that helps buyers before they pay, and picks one channel to test first with a plan for it.
+job: make-offer
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Many sales problems are really offer problems. People see the page and still
+  hold back, because the result feels slow, risky or too much work. This offer
+  and lead generation agent starts with the offer, not the traffic. It rates the
+  offer on four levers: how big the result is, how likely it feels, how long it
+  takes and how much effort it asks. It then fixes the weakest lever before
+  touching the price.
+
+
+  After the offer, it designs one lead magnet, a free piece that solves a narrow
+  problem on its own. It lists what must be ready before you launch it, such as
+  the welcome emails and the next offer. Then it picks one of four ways to get
+  leads, which are warm outreach, free content, cold outreach and paid ads, and
+  plans a first test. Extra reach from referrals, partners and agencies comes
+  last.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. The rules of
+  thumb in it, such as 100 outreach actions a day or a 3 to 1 return on
+  customer cost, are the author's. Check them against your own numbers.
+when:
+  - People visit your page but few buy, and you cannot tell if the offer or the traffic is the problem.
+  - You want a free guide, tool or sample that brings in real buyers, not just email addresses.
+  - You have time or money for one lead channel and need to choose where to start.
+  - You are about to hire an agency or sign up affiliates and want to know if the offer is ready.
+not_for:
+  - You want to answer one buyer doubt using real review wording. Use the Offer builder that answers buyer doubts.
+  - You only need a guarantee drafted. Use the Guarantee designer.
+  - Your reply-based lead offer is live and not working. Use the Lead offer tuner.
+  - You only need to choose between a premium, free or discount first step using your numbers. Use the Front-end offer picker.
+  - You need sign-off on price, refunds or legal terms. Ask your finance lead or a lawyer.
+you_give:
+  - What you sell, its price and who buys it.
+  - Your current offer and what a buyer gets today, as a link or a short description.
+  - What stops buyers, from reviews, sales calls or emails (optional, but it makes the rebuild sharper).
+  - Your numbers if you have them, such as cost to deliver, leads per week and sales per week (optional).
+  - How much time and money you can spend, and what you have already tried.
+you_get:
+  - A rating of your offer on four levers, with the weakest one named and why.
+  - A rebuilt offer with the buyer's result, proof, guarantee options, time to first result and effort removed.
+  - One lead magnet spec, with what must be ready before you launch it.
+  - One lead channel to start with, a first test and a stop rule.
+  - A short plan for referrals, partners or agencies, once the offer is proven.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe what you sell, the buyer and your current offer. Paste any reviews or call notes.
+  - Answer the questions it asks once. Missing numbers are marked MISSING, never guessed.
+  - Read the lever ratings first. These are your AI's estimates from what you shared, so change any you disagree with.
+  - Build the welcome emails and the next offer before you launch the lead magnet.
+  - Run the first channel test for two weeks, then paste back the real numbers for a second pass.
+how_it_works:
+  - title: Check the offer
+    text: It rates four levers from the buyer's side, which are the result, how likely it feels, the wait and the effort. It names the weakest.
+  - title: Rebuild the weak lever
+    text: It adds proof, a guarantee option, a faster first result or fewer steps for the buyer. Price is the last thing it touches.
+  - title: Design the lead magnet
+    text: It picks one narrow problem, a magnet type and a format, and states what the buyer gets even if they never buy.
+  - title: Set up what follows
+    text: It lists the welcome emails, the nurture and the next offer that must exist before the magnet goes live.
+  - title: Choose one channel
+    text: It picks one of four lead channels to start with, sets a daily action you can really do, and sets a stop rule.
+  - title: Plan the reach boosters
+    text: It lists referrals, partners and agencies in order and says which need a proven offer first.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    offer <what you sell and for how much> | buyer <who> | ASSUMED: <list> | MISSING: <list>
+
+  OFFER CHECK (estimates from what you shared)
+    result <1 to 10, why> | likelihood <1 to 10, why> | wait <1 to 10, why> | effort <1 to 10, why> | weakest lever <name>
+
+  REBUILT OFFER
+    result in the buyer's words <text> | proof <what you have, what is missing> | guarantee options <list> | first result in <time> | steps removed <list> | price and value anchor <text, if you gave numbers>
+
+  LEAD MAGNET
+    buyer and stage <text> | type <solve, teach or sample> | format <text> | standalone promise <text> | fields to ask for <list>
+    MUST EXIST BEFORE LAUNCH: <welcome emails> | <next offer> | <how a lead leaves the list>
+
+  FIRST CHANNEL TEST
+    channel <warm, content, cold or paid> | daily action <number you can sustain> | owner <role> | weekly numbers to watch <list> | stop rule <text>
+
+  REACH BOOSTERS (after the offer is proven)
+    <referrals, partners, agency> | when to start <condition>
+
+  CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - What you sell, its price and who buys it
+    - Your current offer, as a link or short description
+    - Buyer doubts from reviews or calls (optional)
+    - Your numbers and what you can spend (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - Real review or call wording, if you have it, to ground the rebuild (optional)
+  output:
+    - name: Offer check
+      contains: Four lever ratings from the buyer's side, with a reason for each and the weakest one named.
+    - name: Rebuilt offer
+      contains: The result in buyer words, proof, guarantee options, time to first result and steps you remove.
+    - name: Lead magnet
+      contains: The type, format, standalone promise and fields to ask for.
+    - name: Must exist before launch
+      contains: The welcome emails, the next offer and how a lead leaves the list.
+    - name: First channel test
+      contains: One channel, a daily action you can sustain, the numbers to watch and a stop rule.
+    - name: Reach boosters
+      contains: Referrals, partners and agencies in order, with the condition to start each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach reviews, sales call notes and your price list so the rebuild uses real buyer words.
+    - name: A spreadsheet such as Google Sheets or Excel
+      why: Track the weekly numbers for your first channel test and paste them back for a second pass.
+  inputs:
+    - Ten real buyer reviews or sales call notes.
+    - Your cost to deliver, so any price or guarantee advice fits your margin.
+    - The pages and emails you already have for leads.
+terms:
+  - term: Lead magnet
+    meaning: A free piece, such as a guide, calculator or sample, that solves a small problem in return for contact details.
+  - term: Value equation
+    meaning: A way to judge an offer by its result and how likely it feels, against the wait and the effort.
+  - term: Nurture
+    meaning: The emails or messages that follow a sign-up and lead the person toward a purchase.
+  - term: Affiliate
+    meaning: A person or business that promotes your offer and gets paid when a sale happens.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Starting point
+    how: Say if you want the offer, the lead magnet or the channel plan first. By default it starts with the offer.
+  - what: Buyer evidence
+    how: Paste real reviews or call notes. Without them the proof and wording are marked as gaps.
+  - what: Capacity
+    how: Say how many outreach or posting actions you can really do each day, so the plan is not too big.
+improve:
+  - Paste your real results after a two-week test and ask for the next change to one lever.
+  - Keep your best offer wording and the lead magnet that worked as examples for the next run.

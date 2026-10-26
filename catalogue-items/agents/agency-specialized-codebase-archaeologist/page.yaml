@@ -1,0 +1,138 @@
+name: Codebase Archaeologist agent
+summary: Find silent mismatches in code built over many AI sessions, such as reversed fallbacks, duplicate logic and stale docs, ranked by risk with files named.
+headline: Codebase Archaeologist agent
+subhead: Give your AI a repo and its history. It looks for places where one file assumes something another file changed, such as two helpers that disagree. You get a drift registry with every finding tied to files, a risk level and the likely cause.
+job: document-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  When several AI tools and sessions build one codebase, each one writes with no memory of the others. The code runs, but the layers do not line up. One file turns cents into dollars, and another already did. A fallback is written backwards. A README describes a flow that no longer exists. A linter finds none of this, because each file looks fine alone.
+
+  This codebase archaeologist agent reads the code in layers. It groups the history into eras, compares the same kind of file across eras, and lists every job that has more than one implementation. Then it runs two checks that most reviews skip: what each event handler assumes already exists, and what unit each money or quantity value is in.
+
+  It reports and does not fix. It never blames a person or a tool. If it cannot tell whether a mismatch is a bug or a choice, it says so and does not guess a severity.
+when:
+  - A project grew over months with several AI coding tools, and you do not trust that the parts agree.
+  - Money, orders or stock numbers come out slightly wrong and no single bug explains it.
+  - You inherited a codebase and want to know what was half-migrated and left behind.
+  - Before a big refactor, you want to know which files are safe to build on.
+not_for:
+  - You are new to a repo and want to know how it is laid out. Use the Codebase Onboarding Engineer agent.
+  - You want a code review of a pull request or one file. Use the Code Reviewer agent or the Bug and security code reviewer.
+  - You want to find out where docs no longer match one feature. Use the Code and docs drift checker.
+  - Something is broken in production now. Debug it first, then use this for the wider cleanup.
+you_give:
+  - The repo, as files your AI can open, such as a folder, a zip or a project open in Claude Code
+  - The git history, or the output of git log with dates (optional but it makes the eras far clearer)
+  - Where to look, such as orders and payments, or the whole repo
+  - Your README and docs, to compare with the code (optional)
+  - Any earlier drift registry, so this run can check what stayed fixed (optional)
+you_get:
+  - A drift registry with four views, by finding, by era, by responsibility and by risk
+  - Each finding with the files, the failure it could cause, a severity and its likely origin
+  - A list of event handlers checked, marked safe or unguarded
+  - A list of money and quantity values traced, with the unit at each step
+  - Dead code, doc-versus-code mismatches and a cleanup order
+  - A list of the files it read and the ones it did not
+how_to_use:
+  - Give your AI the code. A tool that opens folders and runs git works best, such as Claude Code or Codex. In a plain chat, paste the git log, the file list and the files you suspect.
+  - Add the pack as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - Say where to look. For example, "Audit the orders and payments code for drift. Here is the git log." Pick one area on a large repo.
+  - Read the critical findings first. For each one, open both files and check that the mismatch is real.
+  - Fix one finding at a time, in both files. Then rerun with the registry attached to see that it stayed fixed.
+  - Hand confirmed findings to a person or tool that can edit the code. This agent does not change files.
+how_it_works:
+  - title: Rebuild the eras
+    text: It groups commits or file dates into rough phases, so each mismatch can be explained as a file that never got migrated.
+  - title: List repeated jobs
+    text: It finds every job done more than once, such as validation or retries, and compares the versions.
+  - title: Trace fallbacks and names
+    text: It follows default-value chains on key fields, and checks that similar names point to the same thing.
+  - title: Check handler assumptions
+    text: For each event or job handler, it lists the state it reads and checks if anything guarantees that state exists first.
+  - title: Trace units
+    text: It follows each money or quantity value from where it is made to every place it is read, and checks the unit is the same.
+  - title: Rate and register
+    text: It confirms shared purpose before flagging duplicates, sorts findings as critical, moderate or cosmetic, and fills the four views.
+output_shape: |-
+  DRIFT REGISTRY
+    Scope: <what was audited> | Files read: <list> | Not read: <list>
+
+  VIEW 1, BY FINDING
+    <finding> | <files> | <type> | <severity> | <status>
+
+  VIEW 2, BY ERA
+    <era> | <date range> | <dominant pattern> | <files that follow it>
+
+  VIEW 3, BY RESPONSIBILITY
+    <job> | <implementations found> | <consistent, yes or no>
+
+  VIEW 4, BY RISK
+    Critical: <findings> | Moderate: <findings> | Cosmetic: <findings>
+
+  FINDING DETAIL (one per critical or moderate finding)
+    Files: <paths> | Pattern found: <what each side does> | Risk: <one plain sentence> | Likely origin: <era or pattern shift> | Fix direction: <suggestion only>
+
+  CHECKED AND SAFE
+    <handler or value> | <guarantee found, or unit confirmed>
+
+  DEAD CODE
+    <file> | <what replaced it> | <no references found>
+
+  DOC VERSUS CODE
+    <doc section> | <what it claims> | <what the code does>
+
+  CLEANUP ORDER
+    Critical: <list> | Moderate: <list> | Cosmetic: <list>
+output_sample:
+  input:
+    - Your repo, as a folder, zip or open project
+    - The git log with dates (optional)
+    - The area to audit, such as orders and payments
+    - Your README and docs (optional)
+  prerequisites:
+    - An AI that can open files, such as Claude Code, Codex or a chat that takes a zip
+  output:
+    - name: Drift registry
+      contains: Four cross-linked views of every finding, by finding, by era, by responsibility and by risk.
+    - name: Finding detail
+      contains: For each serious finding, the files, what each side does, the risk and the likely origin.
+    - name: Checked and safe
+      contains: Handlers and values it checked and found safe, so you know they were covered.
+    - name: Dead code
+      contains: Files with no remaining references and the thing that replaced them.
+    - name: Doc versus code
+      contains: Each doc claim that no longer matches the code, with what the code does now.
+    - name: Cleanup order
+      contains: Critical, moderate and cosmetic items in the order to fix them.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They run git, search the repo and open many files, which this audit needs.
+  inputs:
+    - A list of the tools and rough dates that touched the code, so eras are easier to name.
+    - A short note on which values are money or stock, so the unit check starts in the right place.
+terms:
+  - term: Drift
+    meaning: A mismatch that builds up when different sessions or tools change the same code with no shared record.
+  - term: Fallback
+    meaning: A default value the code uses when the first choice is empty.
+  - term: Era
+    meaning: A rough period of the project with its own coding style.
+  - term: Event handler
+    meaning: Code that runs when something happens, such as a payment webhook arriving.
+tweaks:
+  - what: Scope
+    how: Name one area, such as payments. A narrow audit finds more than a whole-repo skim.
+  - what: Severity bar
+    how: Say what a critical failure means for you, such as wrong money or lost orders, so ratings match your risk.
+improve:
+  - Keep the registry in your repo. Attach it on the next run, and ask the AI to re-check each Fixed item.
+  - After each big change, ask whether the fix touched both sides of the mismatch.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

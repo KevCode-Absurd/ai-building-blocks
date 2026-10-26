@@ -1,6 +1,6 @@
 new_slug: shareable-content-checker
 name: Shareable content checker
-summary: Paste your post, video or product idea. Get a score on six reasons people share and the one change most worth testing.
+summary: Check if your post or video is worth sharing. Get a score out of 30 on six reasons people pass things on, plus one change to test.
 job: grow-social
 thinking: medium
 thinking_why: It judges each reason from your draft and picks the change that matters most.
@@ -14,6 +14,10 @@ when:
   - You have a post, video or idea and want to know if anyone would pass it on.
   - You are choosing between two ideas and want a way to compare them.
   - A piece got little sharing and you want to see which reason was missing.
+not_for:
+  - "You want to know if an ad will get clicks or sales: test it with real ads, or ask a media buyer, because this score does not predict reach."
+  - "Your offer is only a price cut or a discount: the six reasons add little here, so rework the offer itself with a person who knows your buyers."
+  - "You want a plan for what to post and where: write that plan first, then bring each draft here."
 you_give:
   - The post, script or product idea (as text, or attach the picture or video)
   - A brief or goal (optional)
@@ -30,6 +34,26 @@ how_to_use:
   - Read the six reasons and the weakest one.
   - Test the suggested change against your original with the same audience.
   - Do not treat the score as a forecast of reach.
+output_sample:
+  input:
+    - Your post, video script or product idea (attach the picture or video if you have one)
+    - Your goal and where it will appear (optional)
+    - A short description of who will see it (optional)
+  output:
+    - name: The draft
+      contains: One line on what the draft is, who sees it and what it asks them to do.
+    - name: Six reasons
+      contains: A rating from 0 to 5 for each reason, with a reason taken from your draft.
+    - name: Score
+      contains: The six ratings added up to a number out of 30, with a note that it does not predict reach.
+    - name: Weakest
+      contains: The reason with the lowest rating.
+    - name: Angle to test
+      contains: One angle that makes an ordinary thing worth talking about, built from facts you gave.
+    - name: One change
+      contains: The single edit to your draft that adds the angle, and where it goes.
+    - name: Missing and checks missed
+      contains: Facts it needed but did not have, and any of its own checks that failed.
 how_it_works:
   - title: Reads the draft
     text: Pulls out what the thing is, who sees it and what it asks them to do.

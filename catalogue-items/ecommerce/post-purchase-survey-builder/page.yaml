@@ -1,6 +1,6 @@
 new_slug: post-purchase-survey-builder
 name: "Post-purchase survey builder"
-summary: "Say your store and customers. Get a post-purchase survey, a list survey and review-mining prompts."
+summary: "Write a post-purchase survey that shows why customers buy and what almost stopped them. Get a list survey, call script and review prompt."
 job: understand-customers
 thinking: low
 thinking_why: "It writes short questions and a table from a clear method, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You get traffic but cannot say why most visitors do not buy.
   - You have hundreds of reviews and have never read them for patterns.
   - You are about to rewrite a product page and want the words to come from customers.
+not_for:
+  - You have no customers yet, so there is nobody to survey. Talk to a few likely buyers in person or on a call.
+  - You sell to other businesses and have a short list of accounts. Call each account with the call script instead of sending a survey.
+  - You want to know what visitors do on your page. Watch session recordings or heatmaps in your store analytics tool.
 
 you_give:
   - What you sell, your main products and your orders per month
@@ -37,6 +41,32 @@ how_to_use:
   - Set up the survey in your tool, and send the list email if you have no survey yet.
   - Run the review-mining prompt with your review export attached.
   - After a few dozen answers, paste them back to fill the objection table, then send the test ideas to the test idea ranker.
+output_sample:
+  input:
+    - What you sell, your main products and your orders per month
+    - The survey app or email tool you use
+    - A CSV export of your reviews (optional)
+    - Your customer list size (optional)
+    - Survey or support answers you already have (optional)
+  prerequisites:
+    - A survey app or email tool to run the survey (the skill writes plain text that works in any tool)
+  output:
+    - name: POST-PURCHASE SURVEY
+      contains: The two core questions, up to two short follow-ups, and where to set it up in your tool.
+    - name: LIST SURVEY EMAIL
+      contains: A one-time email for your list with subject, body, prize draw incentive and a rules line.
+    - name: CALL SCRIPT
+      contains: Three to five questions to ask customers on a call, in order.
+    - name: REVIEW MINING PROMPT
+      contains: A prompt you paste with your review export to find themes, tone, buzzwords, friction and doubts.
+    - name: EXIT-INTENT QUESTION
+      contains: One line to ask non-buyers on cart and product pages, if you want it.
+    - name: OBJECTION TABLE
+      contains: Each doubt in customer words, where to answer it on the page, a hypothesis and a test idea.
+    - name: FAQ PLAN
+      contains: Your three biggest doubts and the proof to answer each.
+    - name: READ-OUT PLAN
+      contains: When to read answers, how to group them and where they go next.
 
 how_it_works:
   - title: Checks the volume

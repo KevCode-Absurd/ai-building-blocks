@@ -15,11 +15,11 @@ outputs:
   - {type: plan}
 uses: [store-security-checkup, store-sign-in-security-checker, store-script-and-app-risk-auditor, domain-and-certificate-watch-checker, fraud-rules-setter]
 steps:
-  - {uses: store-security-checkup, note: "Every quarter: the scored baseline across sign-in, access, apps, card data, backups and habits, set against last quarter."}
-  - {uses: store-sign-in-security-checker, note: "Only when the checkup lost points on two-step sign-in or access, or the way people sign in changed."}
-  - {uses: store-script-and-app-risk-auditor, note: "Only when the checkup lost points on apps, or apps or scripts were added since last quarter."}
-  - {uses: domain-and-certificate-watch-checker, note: "In the first run, then whenever a domain, DNS record or registrar user changed, and at least once a year."}
-  - {uses: fraud-rules-setter, note: "Only when the chargeback rate is at or above half a percent, or false holds rose, and the store takes about 100 orders a month or more."}
+  - {uses: store-security-checkup, note: "Every quarter: the scored baseline across sign-in, access, apps, card data, backups and habits, set against last quarter. Hands the score and the checks that lost points to steps 2 and 3, and the fix list to the final merge."}
+  - {uses: store-sign-in-security-checker, note: "Only when the checkup lost points on two-step sign-in or access, or the way people sign in changed. Uses the checkup's sign-in findings and your sign-in details; hands the sign-in fixes to the final merge."}
+  - {uses: store-script-and-app-risk-auditor, note: "Only when the checkup lost points on apps, or apps or scripts were added since last quarter. Uses your script and app lists, with the checkup's app findings; hands the risky apps and scripts to the final merge."}
+  - {uses: domain-and-certificate-watch-checker, note: "In the first run, then whenever a domain, DNS record or registrar user changed, and at least once a year. Starts from your domain list and who can log in to the registrar and DNS, not step 3's report; hands the domain and certificate fixes to the final merge."}
+  - {uses: fraud-rules-setter, note: "Only when the chargeback rate is at or above half a percent, or false holds rose, and the store takes about 100 orders a month or more. Starts from your order and chargeback numbers and payment setup, not step 4's report; hands the rules plan to the final merge."}
 schedule: "Once a quarter, in the first week"
 asks_before: [removing an app or a staff account, changing a sign-in rule or a DNS record, changing payment or fraud settings, emailing staff or customers]
 origin: own

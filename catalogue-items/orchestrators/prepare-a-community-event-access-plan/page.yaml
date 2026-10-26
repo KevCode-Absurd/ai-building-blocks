@@ -1,50 +1,88 @@
 new_slug: prepare-a-community-event-access-plan
 name: Prepare a community event access plan
 headline: Prepare a community event access plan
-summary: Share the source files. Get an event access run sheet, responsibility map and confirmation requests.
+summary: "Plan access for a community event: a run sheet from arrival to exit, who does what, and confirmation requests to send the venue."
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An event access run sheet, responsibility map and confirmation requests. Share confirmed event format, venue information, participant access needs shared voluntarily, approved budget and actual organizer responsibilities. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your event format, venue details and the access needs people chose to share. It maps who is involved, writes the arrival-to-exit steps, flags what the venue has not confirmed and drafts the questions to ask.
 explain: |-
-  An event access run sheet, responsibility map and confirmation requests.
+  Community events fail on access in small ways: a locked side door, a lift nobody checked, a quiet room that is the storage cupboard. This event access plan puts those checks on paper before the day, so the venue confirms them and your helpers know their jobs.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Access arrangements are verified with the responsible provider; proposed adjustments are not described as booked. Missing tools or evidence stay visible in the final summary.
+  Step 1 maps the people: organizers, venue contacts, access providers such as interpreters or hire companies, and the groups of guests who need help. It uses roles and counts, not names. Step 2 writes the run sheet from arrival to exit from the venue facts you have confirmed, and flags every facility you have not. The workflow then drafts one confirmation request for each unverified fact, to the right contact.
+
+  Nothing is described as booked until the venue or provider confirms it. Needs shared with you stay private and are used only for this event.
 when:
-  - You need an event access run sheet, responsibility map and confirmation requests.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are running a local meeting, fair or workshop and guests have asked about access.
+  - You are using a venue you have not visited and need to check step-free routes.
+  - Volunteers ask who does what when someone needs help on the day.
+  - You have a small access budget and need to decide where it goes.
+not_for:
+  - You want a general run of show with no focus on access. Use the Process and SOP writer.
+  - You need a certificate or a legal check of the building. A qualified person or the venue must do that. This plans and does not certify.
+  - You only want to see who is involved. Use the Stakeholder map builder.
+  - The event is a group stay in a hotel. Use the Prepare a hotel group booking handover workflow.
+  - The event is for a work team. Use the Prepare a small team offsite workflow.
 you_give:
-  - Confirmed event format, venue information, participant access needs shared voluntarily, approved budget and actual organizer responsibilities.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The event format, date, time and how many people you expect
+  - "Venue details: address, floor plan, the venue's own access page and a contact"
+  - Access needs that guests chose to share, grouped by need, such as step-free entry (names only if the person agreed)
+  - Your approved budget for access, such as hire or an interpreter (optional)
+  - Who on your team does what on the day
 you_get:
-  - An event access run sheet, responsibility map and confirmation requests.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A map of who is involved, by role
+  - A run sheet from arrival to exit, with a helper named for each step
+  - A list of venue facts that are still unconfirmed
+  - Draft confirmation requests, one per unconfirmed fact
+  - A short list of what to fix first, within your budget
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Open Claude, ChatGPT or Gemini. Pick one that can read files if you will attach a floor plan or the venue's access page.
+  - Add the workflow pack. Paste the event format, venue details, the access needs as counts and groups, your budget and who is helping.
+  - After step 1, check the role map for anyone missing. Remove any name that should not be there.
+  - After step 2, read the run sheet as if you were a guest arriving. Every facility marked unconfirmed needs a call or email.
+  - Send the draft requests yourself and fill each confirmation back in. Re-run step 2 once the venue answers.
 how_it_works:
   - title: Stakeholder map builder
-    text: Map organizers, venue contacts, access providers and affected participants using role information; mark proposed stakeholders and protect personal details.
+    text: "Maps organizers, venue contacts, access providers and the groups of guests who need help, by role. Proposed people are marked proposed, and personal details stay out. Hands step 2 the role list and the needs by group. Check before moving on: no guest is named with a need they did not agree to share."
   - title: Process and SOP writer
-    text: Document arrival, wayfinding, communication, assistance and escalation steps from confirmed venue facts and participant preferences; flag unverified facilities.
+    text: "Writes the arrival-to-exit run sheet: entrance and routes, wayfinding, seating, toilets, a quiet space, communication and who helps at each point, plus who to call when something fails. Facts you have not confirmed are flagged. The workflow then drafts one confirmation request per flagged fact. Check before moving on: no step relies on a facility marked unconfirmed."
 output_shape: |-
-  Scope and source coverage
-  An event access run sheet, responsibility map and confirmation requests.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  PEOPLE AND ROLES       <role> | <what they do> | <contact role> | confirmed or proposed
+  NEEDS BY GROUP         <need> | <number of guests> | <what helps>
+  RUN SHEET              <time or stage> | <what happens> | helper <role> | venue fact used | confirmed or unconfirmed
+  UNCONFIRMED FACTS      <fact> | who can confirm | needed by
+  CONFIRMATION REQUESTS  to <contact role>: <draft message>
+  BUDGET                 <item> | within approved budget or not
+  MISSING                <each gap, and what it stops>
+  CHECKS MISSED          <one line each, or none>
+output_sample:
+  input:
+    - Your event format, date, time and expected numbers
+    - Venue details and the venue's access page or floor plan
+    - Access needs guests chose to share, grouped by need
+    - Your approved access budget and who is helping (optional)
+  prerequisites:
+    - A named contact at the venue
+  output:
+    - name: People and roles
+      contains: Organizers, venue contacts, access providers and guest groups, by role, with confirmed or proposed marked.
+    - name: Needs by group
+      contains: What guests asked for, counted by need, with no names unless agreed.
+    - name: Run sheet
+      contains: Arrival to exit, with a helper for each step and each venue fact it depends on.
+    - name: Unconfirmed facts
+      contains: Facilities nobody has verified, who can confirm each, and by when.
+    - name: Confirmation requests
+      contains: One draft message per unconfirmed fact, addressed to the right contact. Not sent.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in venue or budget details, and any check that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Access arrangements are verified with the responsible provider; proposed adjustments are not described as booked.
+  - what: A new venue
+    how: Swap in the other venue's details. The unconfirmed list and requests change.
+  - what: A smaller budget
+    how: Lower the access budget. The plan shows what stays and what drops.
+  - what: A new need
+    how: Add one more group's need and run step 2 again. The run sheet gains the steps for it.
 judge:
   - Access arrangements are verified with the responsible provider; proposed adjustments are not described as booked.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +95,27 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the venue's written confirmations with the run sheet, so helpers can check them on the day.
+  - Ask guests how they want their needs used and shared before you send them to anyone.
+  - After the event, note what worked and what did not, and use it next time.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It can read the venue's floor plan or access page, so the run sheet uses their facts.
+    - name: Email
+      why: The confirmation requests are drafts. You send them from your own email and keep the replies.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A photo or map of the entrances and routes.
+    - The venue's own access statement, if it has one.
 terms:
+  - term: Step-free
+    meaning: A route with no stairs, using a ramp or a lift.
+  - term: Access provider
+    meaning: A person or company that supplies help, such as an interpreter, a ramp or a hearing loop.
+  - term: Run sheet
+    meaning: A time-ordered list of what happens, who does it and where.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.
+next:
+  - prepare-a-hotel-group-booking-handover
+  - prepare-a-small-team-offsite

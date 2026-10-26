@@ -1,6 +1,6 @@
 new_slug: subscription-churn-watcher
 name: Subscription churn watcher
-summary: Give it your monthly cancels. Get where subscribers leave, whether last month's fix worked and one fix to make.
+summary: Check your subscription churn each month. See where subscribers cancel, whether last month's fix worked, and get one fix to approve.
 job: keep-customers
 thinking: high
 thinking_why: It scores four parts, compares two months, picks one fix from the scores and runs the matching writer. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You sell subscriptions and want one monthly check on where people leave.
   - Churn moved and you do not know which part changed.
   - You made a change last month, such as new billing emails, and want to know if it helped.
+not_for:
+  - "You have only a few hundred subscribers or fewer: the day-by-day chart is too thin, so treat the result as a rough guess or run the Subscription churn audit alone."
+  - "You sell one-off orders with no repeat billing: use a plain repeat-purchase check in your shop reports instead."
+  - "You want emails sent or your subscription app changed for you: this agent only lists changes, so make them yourself in your own tools."
 you_give:
   - Last month's cancels with date, order number and reason
   - Revenue per customer by month and a first-order subscription flag, if you have them
@@ -32,6 +36,31 @@ how_to_use:
   - Add your cancel reasons in your customers' own words if you can. A cancel flow needs them.
   - Read the fix and the change list. Make the changes you agree with in your tools. Nothing goes out until you do.
   - Run it again next month. It compares against its saved summary.
+output_sample:
+  input:
+    - Last month's cancels with date, order number and reason
+    - Each email you sent to subscribers, with dates
+    - Your save rate from the cancel portal
+    - Cancel reasons in your customers' own words (optional)
+    - Last month's saved summary (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code, if you want it to keep last month's summary
+    - Your brand brain and offer, only if it needs to write emails (optional)
+  output:
+    - name: This month
+      contains: Your churn score out of 100 and the four part scores, each shown against last month.
+    - name: Last month's fix
+      contains: Whether the part you fixed helped, made no change or got worse, with the numbers.
+    - name: Where subscribers leave
+      contains: Cancels grouped by days since the first order, with the biggest spike named.
+    - name: The fix chosen
+      contains: The weakest part, the skill that ran for it and why it was picked.
+    - name: Changes to approve
+      contains: Each change, where it goes and why, with the most important first.
+    - name: Watch next month
+      contains: The one number that shows whether the fix worked.
+    - name: Files and missing
+      contains: Each step's saved file and every line marked MISSING.
 how_it_works:
   - title: Check it is worth running
     text: With fewer than a few hundred subscribers the day-by-day chart is too thin, so it marks its findings as guesses.

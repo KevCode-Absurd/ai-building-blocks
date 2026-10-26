@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs a short set of load steps.
 new_slug: road-scene-importer
 name: Road scene importer
-summary: Give it a map file. Get it loaded into RoadRunner as a driving scene
-  you can check by eye.
+summary: Load a map file into RoadRunner and check your driving scene by eye. Give it an RRHD or OpenDRIVE file. You get a saved scene.
 job: build-software
 headline: Road scene importer
-subhead: A map file loaded into RoadRunner as a driving scene you can look over
-  by eye, so you can see whether a conversion worked. Setup mistakes are caught
-  before the import runs.
+subhead: A map file loaded into RoadRunner as a driving scene you can look over by eye, so you can see whether a conversion worked. Setup mistakes are caught before the import runs.
 explain: |
   A map file loaded into RoadRunner as a driving scene you can look over by eye, so you can see whether a conversion worked. Setup mistakes are caught before the import runs.
 
@@ -18,6 +15,10 @@ when:
   - You have an OpenDRIVE file to bring into RoadRunner.
   - You want asphalt, bridges or junctions set when building a scene.
   - You need to check that a converted road looks right.
+not_for:
+  - "You need to open RoadRunner or manage projects: use the roadrunner-core skill first."
+  - "You need to turn a Lanelet2 map into RRHD: use the roadrunner-convert-lanelet2-to-rrhd skill."
+  - "You need to write or edit road content in an RRHD file: use the roadrunner-rrhd-authoring skill."
 you_give:
   - A map file (.rrhd or .xodr)
   - A running RoadRunner session
@@ -29,8 +30,31 @@ you_get:
   - Build options applied
   - A scene ready for visual checking
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with RoadRunner.
+  - Open an AI that can run MATLAB code and has your RoadRunner session connected. Set that up first with the roadrunner-core skill.
+  - Paste in this skill, or upload its folder.
+  - Give your AI the path to your map file and say whether you want to load only or also build.
+  - Tell it your asphalt, bridge or junction choices if you have any. Ask it to check if your map has closed loops.
+  - Let it run the checks and the import. Fix anything the checks flag.
+  - Open the saved scene in RoadRunner and look over the roads by eye.
+output_sample:
+  input:
+    - Your map file (.rrhd or .xodr)
+    - Your RoadRunner project folder
+    - Build options such as asphalt, bridges or junctions (optional)
+    - Whether to only load the map or also build the scene (optional)
+  prerequisites:
+    - A paid MATLAB licence
+    - A paid RoadRunner licence
+    - An AI that can run MATLAB code and files
+    - A running RoadRunner connection (the rrApp handle) from the roadrunner-core skill
+  output:
+    - name: Project folder copy
+      contains: Your map file, copied into the RoadRunner project folder before the import runs.
+    - name: Checks before import
+      contains: A pass or fail on the file location, the file type and the build options.
+    - name: Imported scene
+      contains: Your map loaded into a new RoadRunner scene, with bridge detection on and junctions kept.
+    - name: Build result
+      contains: The full built scene, only when you ask for a build. Otherwise the map is only loaded.
+    - name: Saved scene
+      contains: A scene file named after your map, ready for you to look over by eye.

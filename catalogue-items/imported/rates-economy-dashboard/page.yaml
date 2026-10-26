@@ -3,17 +3,21 @@ thinking: medium
 thinking_why: It gathers indicators and reads them together.
 new_slug: rates-economy-dashboard
 name: India economy dashboard
-summary: Build an India economy dashboard from dated official data. Show key measures, sources, gaps and limits.
+summary: Build an India economy dashboard from dated official data. Get growth, prices, yields and real rates, with sources, dates and gaps shown.
 job: track-numbers
 headline: India economy dashboard
 subhead: India economic data and sovereign yields with clear dates, formulas and missing-input notes.
 explain: |
   A dated India macro dashboard using comparable official data. It records source definitions, periods, release dates, units and revisions. It calculates only supported growth, CPI comparisons, same-date government-curve slopes and matched-horizon expected real yields. It omits CCIL curve values when permission for the intended use is not established and names each missing input. The method does not declare a cycle phase from incomplete evidence or recommend trades.
 when:
-  - You need a quick view of where the economy sits in the cycle.
-  - You want to know if the yield curve is flattening or steepening.
-  - You are writing a market note and need clean macro charts.
-  - You have to explain real rates to your team.
+  - You need a dated snapshot of India's growth, prices, jobs and policy rate from official sources.
+  - You want to see if the government yield curve slope is wider or narrower on one date.
+  - You are writing a market note and need clean, sourced numbers with formulas shown.
+  - You have to explain expected real yields to your team and need matched inputs.
+not_for:
+  - "You want a forecast, a trade call or a cycle verdict from thin data: read the official releases directly or use a full macro model."
+  - "You need yield curve values but cannot confirm CCIL permission: get written permission from CCIL first, or the curve is left out."
+  - "You need data for the US or euro area: use a source made for that market, as this one covers India only."
 you_give:
   - India is the fixed market for this method
   - Time window
@@ -24,8 +28,32 @@ you_get:
   - Cautious interpretation when comparable evidence is sufficient
   - Notes on missing data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach the web.
+  - Set your data cutoff date and the India measures you want.
+  - Gather the official source files or links, with each release date. Ask your AI to open the pages if it has web access.
+  - If you want yield curve values, confirm you have CCIL permission for your use. Without it, the curve is left out.
+  - Paste the files and details into Claude, ChatGPT or Gemini, along with the skill text.
+  - "Ask it to run the calculations and fill the six sections: as of, source ledger, indicators, yields, real yield, and gaps."
+  - Check the source ledger first. Every number should have a source, date and unit.
+output_sample:
+  input:
+    - The date you want data up to
+    - The Indian measures you want, such as GDP, prices, jobs, policy rate or yields (optional)
+    - Official source files or links with their release dates
+    - Government yields and an expected inflation figure with the same horizon (optional)
+    - Confirmation that you may use CCIL curve data for your purpose (optional)
+  prerequisites:
+    - An AI that can open official source pages, or files you paste in yourself
+    - Written CCIL permission if you want curve values used commercially
+  output:
+    - name: As of
+      contains: The data cutoff date and the date each source was retrieved.
+    - name: Source ledger
+      contains: "For each value: source, series, unit, period, release date, base year or definition, and revision status."
+    - name: Macro indicators
+      contains: Only the values and growth or inflation calculations the sources support, with each formula and its inputs.
+    - name: Government yields
+      contains: Dated curve tenors and rates when source and permission are clear, or a note on why they are unavailable.
+    - name: Expected real yield
+      contains: A real yield only where the yield and inflation figure share a horizon, otherwise n/a and the reason.
+    - name: Interpretation and gaps
+      contains: Careful observations, missing inputs, unsettled revisions and any cycle view held back for lack of evidence.

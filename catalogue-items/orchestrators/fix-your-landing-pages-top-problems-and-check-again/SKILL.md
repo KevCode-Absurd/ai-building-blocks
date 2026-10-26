@@ -41,12 +41,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Audit the page.** Use the skill `landing-page-auditor`. Reads your page and ranks what gets in a buyer's way.
-2. **Sort what to fix now.** Use the skill `page-issue-sorter`. Give it the audit report from the steps before. Takes the audit from step 1 and sorts it into fix now, investigate and test.
+1. **Audit the page.** Use the skill `landing-page-auditor`. Reads your page and ranks what gets in a buyer's way. It hands that ranked audit to step 2.
+2. **Sort what to fix now.** Use the skill `page-issue-sorter`. Give it the audit report from the steps before. Takes the audit from step 1 and sorts it into fix now, investigate and test. It hands you the fix-now list to work through.
 
 Pause here: Make the fix-now changes, then save the updated page text and screenshots.
 
-3. **Check the fixed page.** Use the skill `landing-page-30-point-checker`. A second, separate check on the fixed page. Compare it with the fix-now list from step 2.
+3. **Check the fixed page.** Use the skill `landing-page-30-point-checker`. Use your own updated page after you made the fix-now changes, not step 2's list. Runs a second, separate check on it; compare the result with the fix-now list from step 2.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

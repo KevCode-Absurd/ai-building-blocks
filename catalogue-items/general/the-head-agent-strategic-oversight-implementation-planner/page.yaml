@@ -1,40 +1,139 @@
 new_slug: the-head-agent-strategic-oversight-implementation-planner
 name: Multi-agent findings brief builder
-summary: Build a daily brief from agent findings. Merge duplicates, rank open issues and plan scoped handoffs with owners.
+summary: "Turn findings from several AI agents into one daily brief. Merge repeats, rank open issues and plan who handles each. Draft only."
 job: build-software
 headline: Multi-agent findings brief builder
-subhead: Build a daily brief from agent findings. Merge duplicates, rank open issues and plan scoped handoffs with owners.
+subhead: "Give it the findings your AI agents posted, each agent's job and who may hand work to whom. It merges repeats, ranks what is open and plans each handoff. You get a daily brief, a handoff plan and test cases. Nothing is sent or changed."
 explain: |-
-  Share scoped specialist findings, priorities and authority registry. Get a deduplicated daily brief and a dependency-aware delegation plan.
+  When several AI agents report to one place, the same problem shows up three times in three wordings. One agent says it is a spending issue. Another says it is a creative issue. Nobody sees that it is one issue, and nobody knows who should act first.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill builds a daily brief for multiple AI agents. It groups findings that describe the same issue for the same client or team. It keeps what each agent saw, and shows where two agents disagree instead of picking a side. It ranks open items by urgency and impact. It then plans the handoffs: who gets which task, whether the rules allow it, and what is blocked until another task finishes.
+
+  It also reads a starter coordinator module and lists what is missing. The starter pulls findings and sends tasks, but it does not write the brief and does not check who may receive work. The skill drafts the fixes. It does not run code, post messages or change any account.
 when:
-  - You need a deduplicated daily brief and a dependency-aware delegation plan.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - "Three agents flag the same client problem on the same morning and you want one clear item, not three."
+  - "You want a short daily brief you can read in two minutes, with the first action on top."
+  - "Agents disagree, such as one says pause and another says keep going, and you need both views side by side."
+  - "You are about to let one agent hand tasks to others and want the rules checked first."
+not_for:
+  - "You run one agent. Its own report is enough. A brief only pays off when several agents report."
+  - "You want one person's daily summary of email and meetings. Use the Executive daily briefing writer."
+  - "You want the task table where agents claim work. Use the Agent issue and checkout builder."
+  - "You want rules for who must approve an action. Use the Agent action approval builder."
+  - "You want it to post the brief or assign the tasks. It drafts the brief and the plan. You send them."
 you_give:
-  - Scoped specialist findings, priorities and authority registry
+  - "The findings your agents posted, with agent name, date, client or team, severity, title and evidence"
+  - "Your agent list, with what each one handles"
+  - "The handoff rules, meaning which agent may give work to which, and the longest chain of handoffs allowed"
+  - "How you rank urgency, such as money at risk or customer impact (optional)"
+  - "Who makes the call on each kind of decision"
+  - "Your coordinator code and tables (optional)"
 you_get:
-  - A deduplicated daily brief and a dependency-aware delegation plan
-  - A failure checklist and synthetic test cases
+  - "A daily brief with one top action, merged issues and a ranked open list"
+  - "Each disagreement shown with both views and what would settle it"
+  - "A handoff plan with an owner, a rule check and blockers for each task"
+  - "A list of decisions that need a named person"
+  - "A list of gaps in the starter code, and test cases on made-up findings"
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Open the skill in your AI. A chat AI works if you paste your findings in. Claude Code or Codex works better if you want it to read your code."
+  - "Paste the findings, your agent list and your handoff rules. Remove client names and keys first."
+  - "Read MISSING first. It lists anything you left out and what that stops."
+  - "Check MERGED ISSUES against the raw findings. Make sure no two different problems were joined."
+  - "Check the HANDOFF PLAN. Each task needs a rule that allows it. Fix any that do not."
+  - "Run the test cases on a copy of your system before it sends anything. Send the brief yourself."
 how_it_works:
-  - title: Step 1
-    text: Group findings that describe the same issue.
-  - title: Step 2
-    text: Compare evidence and disagreements.
-  - title: Step 3
-    text: Rank by urgency and business impact.
-  - title: Step 4
-    text: Route work through the authority registry and depth limit.
-  - title: Step 5
-    text: Keep blockers attached to child tasks.
-  - title: Step 6
-    text: Escalate unresolved decisions.
-  - title: Step 7
-    text: Synthesize recommendations without changing campaigns directly.
+  - title: Groups the same issue
+    text: Puts findings together when they name the same thing, for the same client or team, in the same window. It never joins findings from different clients.
+  - title: Compares the evidence
+    text: Keeps what each agent saw and shows where they disagree, with what would settle it.
+  - title: Ranks open items
+    text: Orders them by urgency and impact, using your rule. If you gave none, it says what it assumed.
+  - title: Plans each handoff
+    text: Checks your handoff rules and the chain limit for every task. A task with no rule behind it goes back for review.
+  - title: Ties blockers to tasks
+    text: Marks a task blocked until the task it needs is done. A parent task is done only when its child results pass your checks.
+  - title: Escalates what only a person can decide
+    text: Lists each open decision with the person who owns it. It recommends but never changes anything itself.
+  - title: Lists gaps and tests
+    text: Reads the starter code, names what is missing, and writes test cases on made-up findings.
+output_shape: |-
+  BASIS
+  <what was read; nothing was run>
+  MISSING: <inputs and what each stops>
+
+  DAILY BRIEF
+  <date and window> | <scope>
+  TOP ACTION: <one sentence>
+
+  MERGED ISSUES
+  <#> | <issue> | <scope> | <reported by> | <evidence> | <severity>
+
+  RANKED OPEN ITEMS
+  <rank> | <item> | <why it ranks here> | <owner>
+
+  DISAGREEMENTS
+  <issue> | <view A> | <view B> | <what would settle it>
+
+  HANDOFF PLAN
+  <task> | <from> | <to> | <rule that allows it> | <depth> | <blocked by>
+
+  ESCALATIONS
+  <decision> | <person who decides> | <if no answer>
+
+  GAPS IN THE STARTER
+  <#> | <what is missing> | <fix>
+
+  TEST CASES
+  <name> | <set-up> | <expected result>
+
+  NEXT STEP
+  <one smallest useful step>
+output_sample:
+  input:
+    - "The findings your agents posted"
+    - "Your agent list and what each one handles"
+    - "Your handoff rules and the longest chain allowed"
+    - "How you rank urgency (optional)"
+  prerequisites:
+    - "Agents that already post findings somewhere you can copy from"
+    - "Your coordinator code, if you want the gaps listed (optional)"
+  output:
+    - name: "Daily brief"
+      contains: "The date, the window and one top action, written in one sentence."
+    - name: "Merged issues"
+      contains: "Findings that describe one problem, with who reported it and the evidence."
+    - name: "Ranked open items"
+      contains: "What is still open, in order, with the reason for the rank and an owner."
+    - name: "Disagreements"
+      contains: "Where two agents say different things, both views and what would settle it."
+    - name: "Handoff plan"
+      contains: "Each task with its sender, receiver, the rule that allows it, and what blocks it."
+    - name: "Escalations"
+      contains: "Decisions only a person can make, with the person named."
+    - name: "Gaps in the starter"
+      contains: "What the starter code leaves out, and the fix for each gap."
+    - name: "Test cases"
+      contains: "Made-up findings that check merging, ranking and the handoff rules."
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your coordinator code, findings table and agent list together and proposes exact edits.
+    - name: Any good chat AI
+      why: Enough if you paste in a day of findings and want the brief and the plan only.
+  inputs:
+    - "A real day of findings, so the merging is tested on your own wording"
+    - "Last week's brief, to see what should stay open"
+    - "A line on who reads the brief, so the top action fits them"
+terms:
+  - term: Finding
+    meaning: A note an agent posts when it sees something that needs attention.
+  - term: Handoff
+    meaning: One agent giving a task to another agent.
+  - term: Authority registry
+    meaning: Your list of which agent may give work to which other agent.
+  - term: Chain depth
+    meaning: How many handoffs deep a task goes before it must come back for review.
+  - term: Blocker
+    meaning: A task that must finish before another task can start.
 thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It compares findings across agents and follows a set method, so it needs care but not deep reasoning.

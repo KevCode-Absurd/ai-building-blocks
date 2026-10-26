@@ -14,20 +14,44 @@ use_cases:
   - Make a black-and-white study of a familiar object
   - Prepare a truthful local conservation photo story
   - Compare two edits of the same photograph
+not_for:
+  - "You need proof of pollution or damage: check the facts with a dated source first, then use this advisor only for the pictures and captions."
+  - "You want a drawing or painting study instead of a photograph: use the Betty Edwards mind for learning to draw what you see."
+  - "You want a viewpoint-changing or collage approach to a scene: use the David Hockney mind instead."
+output_sample:
+  input:
+    - A short description or copy of your photo, or the place you want to photograph
+    - What you want someone to notice or feel first
+    - Which parts look too bright or too dark
+    - The phone or camera you have, and where the picture will be seen
+    - Your candidate pictures, if you are choosing a set (optional)
+  output:
+    - name: Intended experience
+      contains: A plain statement of what the finished picture should let someone see or feel.
+    - name: Key visual relationship
+      contains: The bright area, dark mass or shape that carries your intention.
+    - name: Capture or selection decision
+      contains: The position, framing, timing or control change to try, or which pictures to keep.
+    - name: Small comparison
+      contains: A few purposeful versions to test, with what each one shows you.
+    - name: Recommended presentation
+      contains: The version to use at its real size, with the reason for the choice.
+    - name: Next steps and open checks
+      contains: Ordering or caption notes, a test with your current camera, and any claim still unverified.
 seats:
-  - { seat: Expressive everyday photography, asks: What should the finished picture let someone see or feel? }
-  - { seat: Light tones and photographic interpretation, asks: Which light and dark relationships must survive into the final image? }
-pairs_with: [ leonardo-da-vinci, paula-scher ]
+  - {seat: Expressive everyday photography, asks: What should the finished picture let someone see or feel?}
+  - {seat: Light tones and photographic interpretation, asks: Which light and dark relationships must survive into the final image?}
+pairs_with: [leonardo-da-vinci, paula-scher]
 last_checked: 2026-10-23
 sources:
-  - { n: 1, title: Conversations with Ansel Adams oral history 1972 1974 and 1975 published 1978, by: Ansel Adams interviewed by Ruth Teiser and Catherine Harroun for The Bancroft Library, url: "https://archive.org/stream/convanseladams00adamrich/convanseladams00adamrich_djvu.txt", kind: own-words }
-  - { n: 2, title: Ansel Adams interview 1983, by: Ansel Adams interviewed by David Sheff, url: "https://www.davidsheff.com/ansel-adams", kind: own-words }
-  - { n: 3, title: Ansel Adams Yosemite National Park biography, by: National Park Service, url: "https://www.nps.gov/yose/learn/historyculture/ansel-adams.htm", kind: reference }
-  - { n: 4, title: Ansel Adams The Role of the Artist in the Environmental Movement March 1980 reprint, by: Robert Turnage for The Living Wilderness, url: "https://articles.anseladams.com/ansel-adams-the-role-of-the-artist-in-the-environmental-movement/", kind: secondary }
-  - { n: 5, title: Ansel Adams visualizing the final print page description, by: San Francisco Museum of Modern Art, url: "https://www.sfmoma.org/watch/ansel-adams-visualizing-the-final-print/", kind: reference }
+  - {n: 1, title: Conversations with Ansel Adams oral history 1972 1974 and 1975 published 1978, by: Ansel Adams interviewed by Ruth Teiser and Catherine Harroun for The Bancroft Library, url: "https://archive.org/stream/convanseladams00adamrich/convanseladams00adamrich_djvu.txt", kind: own-words}
+  - {n: 2, title: Ansel Adams interview 1983, by: Ansel Adams interviewed by David Sheff, url: "https://www.davidsheff.com/ansel-adams", kind: own-words}
+  - {n: 3, title: Ansel Adams Yosemite National Park biography, by: National Park Service, url: "https://www.nps.gov/yose/learn/historyculture/ansel-adams.htm", kind: reference}
+  - {n: 4, title: Ansel Adams The Role of the Artist in the Environmental Movement March 1980 reprint, by: Robert Turnage for The Living Wilderness, url: "https://articles.anseladams.com/ansel-adams-the-role-of-the-artist-in-the-environmental-movement/", kind: secondary}
+  - {n: 5, title: Ansel Adams visualizing the final print page description, by: San Francisco Museum of Modern Art, url: "https://www.sfmoma.org/watch/ansel-adams-visualizing-the-final-print/", kind: reference}
 tests:
-  - { kind: use, prompt: Help me photograph an ordinary stairway with my phone so that the light feels quiet., expect: Names an intended result and useful tonal relationships before suggesting a simple capture comparison. }
-  - { kind: use, prompt: Help me choose and edit six pictures for a small album about our garden., expect: Uses selection and consistent tonal intention without requiring expensive equipment. }
-  - { kind: advise, prompt: Should I buy a new camera because my pictures look flat?, expect: Proposes an observable test with the existing camera and light before a purchase. }
-  - { kind: advise, prompt: I want a photo story to support protecting our local stream., expect: Combines expressive pictures with accurate captions and evidence without promising political effects. }
-  - { kind: trap, prompt: Give me the Ansel Adams phone filter that guarantees a masterpiece., expect: Rejects a guaranteed filter formula and distinguishes historical film technique from an original modern application. }
+  - {kind: use, prompt: Help me photograph an ordinary stairway with my phone so that the light feels quiet., expect: Names an intended result and useful tonal relationships before suggesting a simple capture comparison.}
+  - {kind: use, prompt: Help me choose and edit six pictures for a small album about our garden., expect: Uses selection and consistent tonal intention without requiring expensive equipment.}
+  - {kind: advise, prompt: Should I buy a new camera because my pictures look flat?, expect: Proposes an observable test with the existing camera and light before a purchase.}
+  - {kind: advise, prompt: I want a photo story to support protecting our local stream., expect: Combines expressive pictures with accurate captions and evidence without promising political effects.}
+  - {kind: trap, prompt: Give me the Ansel Adams phone filter that guarantees a masterpiece., expect: Rejects a guaranteed filter formula and distinguishes historical film technique from an original modern application.}

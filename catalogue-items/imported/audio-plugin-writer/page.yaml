@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows a strict class pattern and a validator.
 new_slug: audio-plugin-writer
 name: Audio plugin writer
-summary: Describe the effect or sound. Get a tested audio plugin you can export
-  as VST or AU.
+summary: Describe the audio effect or sound you want. Get a MATLAB audio plugin that passes validation and exports as a VST or AU file for your music software.
 job: build-software
 headline: Audio plugin writer
-subhead: A working audio effect or sound generator that you can export as a VST
-  or AU plugin for use in music software. Describe the sound you want, such as a
-  warm compressor, a delay or a synth tone, and the AI writes the MATLAB class
-  that does it.
+subhead: A working audio effect or sound generator that you can export as a VST or AU plugin for use in music software. Describe the sound you want, such as a warm compressor, a delay or a synth tone, and the AI writes the MATLAB class that does it.
 explain: |
   A working audio effect or sound generator that you can export as a VST or AU plugin for use in music software. Describe the sound you want, such as a warm compressor, a delay or a synth tone, and the AI writes the MATLAB class that does it.
 
@@ -19,6 +15,10 @@ when:
   - Your plugin fails validation and you can't see why.
   - You want to add a neural network to a real-time effect.
   - You are turning a research filter into something a producer can use.
+not_for:
+  - "You want to read audio files or pull out features: use plain MATLAB with Audio Toolbox functions, no plugin needed."
+  - "You want audio blocks inside Simulink: build them in Simulink, since this skill only writes plugin classes."
+  - "You have no MATLAB or Audio Toolbox: ask a plugin developer, or use a plugin maker that does not need MATLAB."
 you_give:
   - A description of the effect or sound
   - Settings you want to control
@@ -30,8 +30,29 @@ you_get:
   - Build steps for a VST or AU file
   - Notes on settings and state
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Audio Toolbox.
+  - Open an AI that can run MATLAB with Audio Toolbox. If yours cannot, you will need to run the MATLAB commands yourself.
+  - Paste in the skill text, then describe the effect or sound you want.
+  - List the settings you want to control and the format you want, such as VST or AU.
+  - Let the AI write the plugin class, then run the validation commands it gives you.
+  - Send any validation errors back to the AI and ask it to fix them.
+  - When validation passes, run the build command to export the plugin and load it in your music software.
+output_sample:
+  input:
+    - A description of the effect or sound you want
+    - The settings you want to control, such as gain or cutoff
+    - An existing MATLAB audio algorithm (optional)
+    - The plugin format you want, such as VST or AU
+  prerequisites:
+    - MATLAB with Audio Toolbox, run by you or by an AI that can run MATLAB
+    - A Mac to build AU plugins, since AU is macOS only
+  output:
+    - name: Plugin class file
+      contains: A MATLAB classdef file with your settings, a process step, a reset step and the plugin interface.
+    - name: Enum class files (if needed)
+      contains: Small helper files for settings with options of different lengths, such as mode choices.
+    - name: Validation results
+      contains: The outcome of the validateAudioPlugin checks, with fixes for anything that failed.
+    - name: Code check results
+      contains: The outcome of checkcode on each file, with every warning resolved.
+    - name: Plugin build
+      contains: The exported plugin file in the format you picked, such as VST, VST3, AU, standalone app or JUCE project.

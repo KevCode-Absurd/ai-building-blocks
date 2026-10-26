@@ -1,0 +1,135 @@
+name: Customer Service agent
+summary: "Get a customer service reply draft, the steps to fix the issue and a clear call on when to escalate. Paste the message and your policy."
+headline: Customer Service agent
+subhead: Paste a customer's message and the policy that applies. It sorts the issue, drafts a warm reply for your channel and lists the steps your team must take. It also says if the case should go to someone senior, and gives you a short note for your records.
+job: help-customers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A hard customer message can go wrong two ways. You can answer with cold policy talk. Or you can promise something you cannot deliver. This customer service agent drafts a reply that does neither. It starts by acknowledging the person, then fixes the problem, and promises only what you can do.
+
+  It follows the steps in the original profile. For a complaint: acknowledge, validate, ask what happened, act and commit with a time. For a plain question: answer first, then check it was understood. For a cancellation: find out why, offer one fair alternative, then respect the choice. It sorts every message as a question, account, order, complaint or cancellation, and checks for reasons to pass it up, such as a safety risk or a legal threat.
+
+  It cannot look up orders or accounts, and it cannot send anything. You paste the facts. Where a fact is missing, the draft shows MISSING for you to fill. It will not invent order status, refund times or policy. The first-contact and satisfaction targets in the original profile are goals, not results. Check any cancellation or refund wording against the rules where you sell.
+when:
+  - A customer writes in angry and you need a calm reply that does not promise too much.
+  - A customer asks about an order, a return or a refund and you want a clear, kind answer.
+  - A customer wants to cancel and you want to offer one real alternative, then respect their choice.
+  - You are not sure whether to answer a message yourself or pass it to someone senior.
+not_for:
+  - You have a pile of new emails to sort and answer. Use the Customer inbox triage and reply drafter.
+  - You only want one calming reply for an angry customer. Use the Angry customer reply writer.
+  - The message is about a return or refund at a shop. Use the Retail Customer Returns agent or the Refund request reply writer.
+  - The customer is a hotel or restaurant guest, or a patient. Use the Hospitality Guest Services agent or the Healthcare Customer Service agent.
+  - The message names a safety risk or a lawyer. Pass it to a person at once. The agent flags it, but a person decides.
+you_give:
+  - The customer's message, copied as written
+  - Where it came in, such as email, chat, text message, social post or phone
+  - What you sell, and the tone you use
+  - The policy that applies, such as the returns window, refund rules or cancellation terms
+  - What you may offer, and the limit you cannot pass
+  - Order or account facts you looked up, such as status and dates (optional)
+you_get:
+  - A read of the message with its type, mood and urgency
+  - A reply draft fitted to your channel
+  - The steps your team must take, in order
+  - A clear call on whether to escalate, to whom and why
+  - A short record note with what was promised and when to follow up
+  - A list of facts still missing
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md. Claude, ChatGPT and Gemini all work.
+  - Paste the customer's message. Remove card numbers, passwords and anything private you do not need.
+  - Add the policy that applies, what you may offer and your limit. Add order facts you looked up in your own system.
+  - 'Say: "Draft my reply. Use only the facts I gave. Put MISSING where a fact is needed."'
+  - Replace each MISSING with the real fact. Check that every date, amount and promise is one you can keep.
+  - Send the reply yourself. Then file the record note and set the follow-up it names.
+how_it_works:
+  - title: Read the message
+    text: It sorts the message as a question, account issue, order issue, complaint or cancellation, and notes the mood and urgency.
+  - title: Check for escalation
+    text: It looks for safety risks, legal threats, repeat issues and requests above your limit. It says who should take it and what to tell them.
+  - title: Pick the reply pattern
+    text: A question gets the answer first. A complaint gets acknowledge, validate, ask, act and commit. A cancellation gets one alternative, then respect.
+  - title: Draft the reply
+    text: It writes in your channel and tone, in plain words, with no blame and only promises you can keep.
+  - title: List the steps and the note
+    text: It lists what your team does next, with owners and times, and writes a short record note.
+  - title: Check the draft
+    text: It checks for invented facts, vague promises and anything that blames the customer, and lists what is missing.
+output_shape: |-
+  READ OF THE MESSAGE
+    Type <question, account, order, complaint, cancellation> | Mood <calm, frustrated, urgent, distressed> | Urgency <now, today, can wait>
+
+  ESCALATION
+    <escalate now, escalate today, no> | trigger <what> | to <role> | handover note <what to tell them>
+
+  REPLY DRAFT
+    <channel> | <reply text, with MISSING where a fact is needed>
+
+  STEPS FOR YOUR TEAM
+    <number> | <action> | <owner> | <by when>
+
+  RECORD NOTE
+    Customer <name> | Issue <one line> | What we promised <list> | Follow-up <date or MISSING> | Risk of leaving <yes or no>
+
+  MISSING AND CHECKS
+    <facts to fill in> | <promises to confirm before you send>
+output_sample:
+  input:
+    - The customer's message, as written
+    - Where it came in and the tone you use
+    - The policy that applies and what you may offer
+    - Order or account facts you looked up (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - Your own system to look up orders and accounts, since the AI cannot
+  output:
+    - name: Read of the message
+      contains: The type of issue, the customer's mood and how urgent it is.
+    - name: Escalation
+      contains: Whether to pass it up, the trigger, who takes it and a handover note.
+    - name: Reply draft
+      contains: A reply in your channel and tone, with MISSING where a fact is needed.
+    - name: Steps for your team
+      contains: The actions to take next, each with an owner and a time.
+    - name: Record note
+      contains: The customer, the issue, what was promised and the follow-up date.
+    - name: Missing and checks
+      contains: Facts to fill in and promises to confirm before you send.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Your policy
+    how: Paste the real policy text. The reply then keeps to it and does not guess.
+  - what: Your limit
+    how: State what you may give, such as a refund up to an amount. Anything above it goes to escalation.
+  - what: Channel
+    how: Say email, chat, text message, social or phone. Length and tone change with it. For phone you get a short script.
+  - what: Tone
+    how: Paste two replies you liked. The draft then sounds like your business.
+improve:
+  - Save the replies you sent and the ones customers liked. Paste them in next time as examples of your tone.
+  - Keep a short list of your common questions and exact answers, so the agent can use them word for word.
+  - Add your own escalation rules to the brief, such as "any refund over a set amount goes to the owner".
+terms:
+  - term: Escalate
+    meaning: Pass a case to someone with more power or skill to solve it.
+  - term: Warm transfer
+    meaning: Handing a customer to a colleague after you have briefed that colleague, so the customer does not repeat the story.
+  - term: Retention offer
+    meaning: A fair alternative offered to a customer who wants to cancel, such as a pause or a cheaper plan.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: All three draft replies well. Keep the customer's private details out of the paste.
+    - name: Your help desk or order system
+      why: It holds the order and account facts the AI cannot see. Look them up first and paste what you need.
+  inputs:
+    - Your returns, refund and cancellation policies as text.
+    - Two or three past replies you are proud of.
+    - A list of what each team member may offer without asking.

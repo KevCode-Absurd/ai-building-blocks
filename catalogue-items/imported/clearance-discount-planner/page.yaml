@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Discounts change demand in ways you must model.
 new_slug: clearance-discount-planner
 name: Clearance discount planner
-summary: Give it your slow stock and past sales. Get when and how much to cut
-  prices to sell out.
+summary: Plan when and how deep to cut prices on slow stock. Give it your stock and sales history. You get a clearance discount schedule by item.
 job: set-prices
 headline: Clearance discount planner
-subhead: Give it your slow stock and past sales. Get when and how much to cut
-  prices to sell out. Bring stock list with quantities and age. Use the result
-  to plan your next step.
+subhead: Give it your slow stock, your costs and your past sales. It works out how price cuts changed your sales before. You get a schedule of when to cut and how deep, with a price floor for each item.
 explain: |
   A markdown plan for slow stock that tells you when to cut prices and by how much, so you clear inventory without giving away more margin than needed. You give your stock and sales history, and you get steps by week.
 
@@ -18,6 +15,10 @@ when:
   - You have too much of one item and a new delivery coming.
   - You do not know whether to cut early and small or late and deep.
   - You need a markdown rate that fits a margin limit.
+not_for:
+  - "You have brand-new stock with no sales history: split it across stores first with retail-allocation, then come back once sales data exists."
+  - "You want a planned sale or promotion for items selling well: use promotional-planning instead."
+  - "You only need a price for one new product: set it by hand from your cost and the margin you want."
 you_give:
   - Stock list with quantities and age
   - Cost and current price
@@ -25,13 +26,37 @@ you_give:
   - Margin floor and deadline
   - Competitor pricing (optional)
 you_get:
-  - A markdown schedule by item
-  - The price floor for each
-  - Expected sell-through
-  - Cash recovered compared with other paths
+  - A markdown schedule by item, with the week and depth of each cut
+  - A recommended price for each item
+  - Expected revenue and how many units should clear
+  - A week-by-week plan, with store-level changes
+  - A before and after estimate of markdown cost
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Paste your stock list, costs, current prices and weekly sales. A spreadsheet export works.
+  - Add your lowest acceptable margin and your deadline. Add competitor prices if you have them.
+  - Use an AI that can run code, such as ChatGPT with data analysis or Claude with code tools. The price modeling needs it.
+  - Check each price against your margin limit before you change anything.
+  - Next, send the schedule to promotional-planning if you want to tie the cuts to a sale.
+output_sample:
+  input:
+    - Your stock list with quantities and weeks on hand
+    - Your cost and current price for each item
+    - Your past sales by week
+    - Your lowest acceptable margin and your deadline
+    - Competitor prices (optional)
+  prerequisites:
+    - An AI that can run code, for the price and sales modeling
+  output:
+    - name: Executive Summary
+      contains: Stock at risk, current and target markdown rate, expected markdown cost and expected revenue recovered.
+    - name: SKU-Level Markdown Recommendations
+      contains: "For each item: weeks of supply, sell-through, action to take, discount, new price and expected revenue."
+    - name: Markdown Cadence by SKU
+      contains: Each item's cuts by stage and week, ending with what to do with the remainder.
+    - name: Store-Level Variations
+      contains: Where a store group should follow the chain cut, go deeper, or transfer stock.
+    - name: Financial Impact
+      contains: Revenue recovered, markdown cost, units cleared and weeks to clear, with and without the plan.
+    - name: Implementation Plan
+      contains: A week-by-week list of actions, the items each covers and the expected impact.

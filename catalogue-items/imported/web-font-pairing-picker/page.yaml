@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Font pairing and sizing follow clear rules you can check quickly.
 new_slug: web-font-pairing-picker
 name: Web font pairing picker
-summary: Describe your site. Get font pairs, sizes and line spacing that read
-  well on every screen.
+summary: Get a web font pairing for your site, plus sizes and line spacing that are easy to read on phones and desktops. Includes a ten-point score.
 job: build-websites
 headline: Web font pairing picker
-subhead: A font pair, size scale and line spacing that read well on every
-  screen, chosen to fit what your site says about you. Readers stay longer when
-  text is easy on the eyes.
+subhead: A font pair, size scale and line spacing that read well on every screen, chosen to fit what your site says about you. Readers stay longer when text is easy on the eyes.
 explain: |
   A font pair, size scale and line spacing that read well on every screen, chosen to fit what your site says about you. Readers stay longer when text is easy on the eyes.
 
@@ -18,6 +15,10 @@ when:
   - You are choosing fonts for a new brand or page.
   - Your text is hard to read on phones.
   - You want fonts to load fast without a flash of change.
+not_for:
+  - "You need a full UI design system with colours, spacing and components: use a UI design system guide, as this skill only covers type."
+  - "You want a bold, dramatic type poster or art piece: ask a designer, as this skill favours easy reading over show."
+  - "You only need to pick a logo font: ask a brand designer, as this skill is built for body text and page headings."
 you_give:
   - A description of your site and tone
   - "The kind of content: articles, shop, app"
@@ -29,7 +30,30 @@ you_get:
   - Responsive type rules
   - A score on ten typography checks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the instructions from this skill. No code or paid tool is needed.
+  - Describe your site, its tone and the kind of content, such as articles, a shop or an app.
+  - Add your current fonts or your page code if you have them (optional).
+  - Read the font pair, size scale and line spacing it gives you.
+  - Check the ten-point score and fix the rows that fail first.
+  - Copy the sizes and spacing into your site, or hand them to your web developer.
+output_sample:
+  input:
+    - A short description of your site and its tone
+    - The kind of content, such as articles, a shop or an app
+    - Your current fonts or brand fonts (optional)
+    - Your page or CSS to review (optional)
+  output:
+    - name: Score
+      contains: Your current score out of 10 and the checks that fail.
+    - name: Typeface choice
+      contains: A heading font for impact and a steady body font for long reading.
+    - name: Pairing rationale
+      contains: Why the two fonts work together and how much they contrast.
+    - name: Type scale and measurements
+      contains: Body size of 16px or more, a size scale, line height of 1.4 or more and line length under 75 characters.
+    - name: Type hierarchy
+      contains: How headings, subheads, body text and small text differ in size and weight.
+    - name: Responsive and loading advice
+      contains: Sizing that adapts to screen width, fallback fonts and tips to load fonts fast.
+    - name: Common mistakes
+      contains: Typography errors in your setup to fix first.

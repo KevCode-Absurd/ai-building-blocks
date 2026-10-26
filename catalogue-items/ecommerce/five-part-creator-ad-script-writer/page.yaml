@@ -1,45 +1,114 @@
 new_slug: five-part-creator-ad-script-writer
 name: Five-part creator ad script writer
-summary: Write a creator ad in five parts, from hook to CTA. Get timing, delivery notes and a short shot list.
+summary: Write a creator video ad script in five parts, from hook to call to action. Get timed lines, delivery notes and a shot list.
 job: make-video-ads
 headline: Five-part creator ad script writer
-subhead: Share creator type, buyer, product use steps, approved claims and length. Get a five-part timed script and four-to-eight-shot filming list.
-explain: |-
-  Write a creator ad in five parts, from hook to CTA. Get timing, delivery notes and a short shot list.
+subhead: Give it your product, the buyer's problem, the creator's profile, the video length and the claims you can back up. It writes a timed script that sounds like a person talking to their phone, with delivery notes and a shot list.
+explain: |
+  A creator ad that sounds like an ad gets scrolled past. This script writer builds a short script that sounds like a real person talking to a camera. It uses five parts: a hook of three to seven words, a setup, a demonstration, a turn and a soft call to action. The timing scales to a 15, 30, 45 or 60 second video.
 
-  Share creator type, buyer, product use steps, approved claims and length. Get a five-part timed script and four-to-eight-shot filming list.
+  It also says how to deliver it: tone, pace, camera angle, setting and props, then four to eight shots. Voice rules keep the words plain. It uses contractions and short fragments, and it bans hype words.
+
+  One rule matters most. The creator must have really used the product. Every personal story, number and result comes from facts you give it or from the creator. Anything else stays as a bracket for the creator to fill. Paid or gifted posts also need a clear disclosure, so check the rules for your country and platform.
 when:
-  - You need a five-part timed script and four-to-eight-shot filming list.
-  - You need five-part creator ad script writer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are sending a brief to a creator and they need the actual lines, not only the idea.
+  - You have no creator-style video yet and need a first script fast.
+  - A new creator needs something to say on camera.
+  - A real customer agreed to film a short review and needs a simple outline.
+not_for:
+  - "You want a founder telling their own story. Use the Founder ad script builder."
+  - "You want a long sales video in seven parts. Use the VSL ad scripter."
+  - "You only need opening lines in different voices. Use the Five-voice video opener writer."
+  - "You already have the script and need a filming brief. Use the Creator filming brief writer."
+  - "The creator has not used the product yet. Send them the product first, so the review is honest."
 you_give:
-  - Creator type
-  - Buyer
-  - Product use steps
-  - Approved claims and length
+  - Your product, with one line on what it is
+  - The problem it solves for the buyer
+  - The creator's age range, daily life and how they know the product
+  - The tone you want, such as sceptic turned fan, enthusiast, teacher, contrarian or quiet fan
+  - The video length (15, 30, 45 or 60 seconds), and the angle if you have one, such as morning routine or test drive
+  - Claims you can back up, plus your offer or code for the call to action
 you_get:
-  - A five-part timed script and four-to-eight-shot filming list
-  - The sources used, missing inputs and assumptions
+  - A script in five parts, with a time range for each part
+  - Delivery notes for tone, pace, camera, wardrobe and props
+  - A shot list of four to eight shots
+  - A list of lines the creator must confirm, plus a place for the paid-post disclosure
+  - A MISSING list for anything you did not give
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. It needs no code, files or web access.
+  - Paste the product, the problem, the creator, the tone, the length, the angle and the claims you can back up.
+  - Read the script out loud. If it sounds like an ad, ask for a rewrite in plainer words.
+  - Check every number and every personal line. The creator must really have done or felt it. Fill each bracket with their own words.
+  - Send the script, delivery notes, shot list and disclosure line to the creator. Write the filming brief with the Creator filming brief writer.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm creator type, buyer, product use steps, approved claims and length. Mark facts that are missing.
-  - title: Collect Inputs
-    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
-  - title: Script Structure
-    text: Follow the script structure section in the full method and keep its required fields and decision rules.
-  - title: The Voice Rules
-    text: Follow the the voice rules section in the full method and keep its required fields and decision rules.
-  - title: Delivery Notes
-    text: Follow the delivery notes section in the full method and keep its required fields and decision rules.
-  - title: Shot List
-    text: Follow the shot list section in the full method and keep its required fields and decision rules.
-  - title: Rules
-    text: Follow the rules section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a five-part timed script and four-to-eight-shot filming list. Check facts, math and the decisions before any action.
+  - title: Collect the inputs
+    text: Product, problem, creator, tone, length, angle and call to action. A missing one is marked, not made up.
+  - title: Fit five parts to the length
+    text: Hook, setup, demonstration, turn and call to action, with time ranges that scale from 15 to 60 seconds.
+  - title: Write in a spoken voice
+    text: Contractions, fragments and plain words, with no hype words. The call to action stays soft.
+  - title: Keep the facts honest
+    text: Numbers and personal moments come from your facts or from the creator. Everything else becomes a bracket to fill.
+  - title: Add delivery notes
+    text: Tone, pace, camera angle, wardrobe, setting and props.
+  - title: Build the shot list
+    text: Four to eight shots, each with its time, framing and what happens.
+  - title: List what to confirm
+    text: Each claim, number and personal line, with its source, and a disclosure line for paid or gifted posts.
+output_shape: |
+  INPUTS USED / MISSING: <...>
+
+  SCRIPT (<length> seconds, <tone>)
+  1 Hook, 0-3s: <3 to 7 words> [<tactic>]
+  2 Setup, <time>: <...>
+  3 Demonstration, <time>: <...> | on screen: <...>
+  4 Turn, <time>: <...>
+  5 Call to action, <time>: <soft ask>
+
+  DELIVERY NOTES
+  Tone <...> | Pace <...> | Camera <...> | Wardrobe and setting <...> | Props <...>
+
+  SHOT LIST
+  Shot 1 (0-3s): <framing>, <setting>, <what happens>
+  ... up to 8 shots
+
+  CREATOR MUST CONFIRM
+  <each personal line, number and claim, and where it came from>
+  Disclosure line: <for a paid or gifted post>
+
+  MISSING: <...>
+output_sample:
+  input:
+    - Your product and the problem it solves for the buyer
+    - The creator's profile, the tone you want and the video length
+    - Claims you can back up, and your offer or code
+    - The angle (optional)
+  prerequisites:
+    - A creator who has really used the product, so the story is true
+  output:
+    - name: Script
+      contains: Five parts with time ranges, which are hook, setup, demonstration, turn and a soft call to action.
+    - name: Delivery notes
+      contains: Tone, pace, camera angle, wardrobe, setting and props for the creator.
+    - name: Shot list
+      contains: Four to eight shots with time, framing, setting and what happens in each.
+    - name: Creator must confirm
+      contains: Each personal line, number and claim with its source, and the disclosure line for a paid or gifted post.
+    - name: Missing list
+      contains: Inputs you did not give, shown as brackets in the script.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  inputs:
+    - Customer reviews, so the problem is in your buyers' own words
+    - One or two earlier videos from the creator, so the voice matches how they talk
+    - Your list of approved claims, so no line goes beyond what you can prove
+terms:
+  - term: Hook
+    meaning: The first few words that make someone stop scrolling.
+  - term: Turn
+    meaning: The line that tells the viewer why this matters to them.
+  - term: Soft call to action
+    meaning: A gentle ask, such as "link's in the comments", not "BUY NOW".
+  - term: Shot list
+    meaning: A list of camera shots, each with its time and what is on screen.

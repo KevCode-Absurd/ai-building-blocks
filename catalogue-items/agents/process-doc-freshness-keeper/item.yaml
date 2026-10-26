@@ -15,10 +15,10 @@ outputs:
   - {type: plan}
 uses: [company-wiki-planner, sop-and-runbook-checker, repeat-task-step-guide-writer, process-and-sop-writer]
 steps:
-  - {uses: company-wiki-planner, note: "Once: the register of which processes need a written doc, who owns each and how often to review it. Skipped if the register exists."}
-  - {uses: sop-and-runbook-checker, note: "Every month: finds docs with no owner, no review date, vague steps or no way to undo. Runs again on each rewrite draft."}
-  - {uses: repeat-task-step-guide-writer, note: "Only for a flagged doc that is a short repeat task: a rewrite draft with exact steps and fixes if it goes wrong."}
-  - {uses: process-and-sop-writer, note: "Only for a flagged doc that is a longer process across people: a rewrite draft with who does what and the edge cases."}
+  - {uses: company-wiki-planner, note: "Once: the register of which processes need a written doc, who owns each and how often to review it. Skipped if the register exists. Hands the register to the checker."}
+  - {uses: sop-and-runbook-checker, note: "Every month: finds docs with no owner, no review date, vague steps or no way to undo. Runs again on each rewrite draft. Uses your docs and step 1's register. Hands its findings to the rewrite steps."}
+  - {uses: repeat-task-step-guide-writer, note: "Only for a flagged doc that is a short repeat task: a rewrite draft with exact steps and fixes if it goes wrong. Uses the checker's finding for that doc. Hands the draft back to step 2 to check again."}
+  - {uses: process-and-sop-writer, note: "Only for a flagged doc that is a longer process across people: a rewrite draft with who does what and the edge cases. Runs instead of step 3, not after it. Uses the checker's finding for that doc. Hands the draft back to step 2 to check again."}
 schedule: "On the first working day of each month"
 asks_before: [replacing or deleting a live document, archiving a document, publishing a rewrite to the wiki or shared drive, assigning an owner to a person who did not agree, telling the team about a changed process]
 origin: own

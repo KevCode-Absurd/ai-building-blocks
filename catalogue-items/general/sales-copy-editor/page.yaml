@@ -1,6 +1,6 @@
 new_slug: sales-copy-editor
 name: Sales copy editor
-summary: Paste a draft and facts. Get weak lines fixed, each with its gain, and a one-line verdict.
+summary: Edit your sales copy with facts you supply. Get each weak line fixed with its gain, plus a one-line verdict on whether the reason to buy is the real problem.
 job: write-ad-copy
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You have a draft ad, page, email or script and want an editor's read before it goes out.
   - Your copy leans on words like "premium" or "potent", and you want your real facts in their place.
   - You need to change one thing in copy that already works, without breaking the rest.
+not_for:
+  - "You have no draft yet and need new ad copy from scratch: use the Fact-based ad copy writer first, then bring the draft here."
+  - "You want a full rewrite in a new voice: this edit only fixes lines where a reader would stop, and keeps the rest."
+  - "You have no facts to give it: it can only mark MISSING and cannot add details it was not given."
 you_give:
   - The draft, with each part labelled (headline, main text, button)
   - The ad's image, if it's an ad (attach it; your AI can see pictures)
@@ -28,9 +32,38 @@ you_get:
   - Claims to send to a claims check, missing facts, and a one-line verdict
   - Any of its six checks (ten for an ad) the edited draft still misses, one line each
 how_to_use:
-  - Supply the relevant brief and material, or name files in the authorized project.
-  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
-  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+  - Open Claude, ChatGPT or Gemini and paste the skill. It needs no code, web access or paid tool.
+  - Paste your draft with each part labelled, such as headline, main text and button. Attach the image if it is an ad.
+  - "Paste your facts: product details, approved claims, price, renewal and guarantee terms, and claims you must never make."
+  - Add your buyer and their main doubt, or one specific change you want (optional).
+  - Read the ledger first. Accept the changes that gain something, and send any flagged claims to a claims check.
+  - Check the final ask line states the price, then use the edited draft.
+output_sample:
+  input:
+    - Your draft, with each part labelled (headline, main text, button)
+    - "The facts it may use: product facts, approved claims, price and guarantee terms"
+    - The ad image, if it is an ad (optional)
+    - Your buyer and their main doubt (optional)
+    - One specific change you want, if the copy already runs (optional)
+  output:
+    - name: Locked
+      contains: The claims, numbers, terms and order of argument that the edit will not change.
+    - name: Specifics protected
+      contains: Every number, name and true odd detail that stays as written.
+    - name: Measures
+      contains: Word count, reading grade and longest sentence, before and after the edit.
+    - name: Promise
+      contains: The sentence that says what the buyer gets, or a note that row one writes it.
+    - name: Ledger
+      contains: Each change with old text, new text, the reader problem and what it gains.
+    - name: Left as is
+      contains: Lines kept as written, and why.
+    - name: For a claims check / MISSING
+      contains: Claims your facts do not back, and facts a fix needed.
+    - name: Verdict
+      contains: Whether the problem is wording or a weak reason to buy.
+    - name: Checks missed
+      contains: One line for each check the edited draft still fails, or none.
 how_it_works:
   - title: Locks what can't move
     text: Locks approved product facts, prices, terms and quotes. It flags draft errors against those facts instead of protecting an accidental falsehood.

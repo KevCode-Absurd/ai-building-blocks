@@ -1,50 +1,85 @@
 new_slug: compare-supplier-prices-on-the-same-basis
 name: Compare supplier prices on the same basis
 headline: Compare supplier prices on the same basis
-summary: Share the source files. Get a normalized quote table and a decision brief with cost and delivery risks.
+summary: Compare supplier quotes for a physical product on the same units, currency and delivery terms. Get a quote table, a risk view and a decision brief.
 job: plan-supply-chain
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A normalized quote table and a decision brief with cost and delivery risks. Share physical-product supplier quotes, planned retail price, stock cash limit, quantities, currency, delivery terms, quality evidence and payment schedules. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it two or more supplier quotes, your planned selling price and any evidence about each supplier. Your AI puts every quote on the same unit and currency, then adds a risk view from the evidence you have. You get a quote table and a short decision brief.
 explain: |-
-  A normalized quote table and a decision brief with cost and delivery risks.
+  Supplier quotes rarely line up. One prices per piece, another per case. One includes freight, another does not. One asks for a large deposit. Looking at the headline price can make the worst deal look like the best.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Quantities, units, currency and delivery scope agree; missing charges remain visible. Missing tools or evidence stay visible in the final summary.
+  Step 1 turns every quote into one table: the same unit, the same currency, the same delivery terms. It flags what each price leaves out and works out your cash up front and your margin. Step 2 adds a risk view for each supplier, using only the quality, capacity and delivery evidence you give it. If you have no evidence for an area, it says so.
+
+  It does not pick for you. You get the cheapest, the safest and the gap between them.
 when:
-  - You need a normalized quote table and a decision brief with cost and delivery risks.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Two suppliers quote the same product in different units, such as per piece and per case.
+  - A cheaper quote asks for a bigger deposit or a longer lead time.
+  - You are about to send a deposit and want to know what each quote leaves out.
+  - A supplier's price looks low, and you want to check the risk behind it.
+not_for:
+  - "You are comparing software or service vendors: use the Vendor comparison writer."
+  - "You have one supplier and want your cost per unit after freight and duty: use the Landed cost calculator."
+  - "You already chose suppliers and want to divide an order: use the Set your order size and split it across suppliers workflow."
+  - "You only want the quote table, fast: use the Supplier quote table builder."
 you_give:
-  - Physical-product supplier quotes, planned retail price, stock cash limit, quantities, currency, delivery terms, quality evidence and payment schedules.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Two or more supplier quotes with unit price, pack size, minimum order, lead time and what the price covers
+  - The currency, quantity and delivery terms of each quote, such as who pays freight
+  - Payment terms and deposit asked, for each supplier
+  - Your planned selling price and the cash you can tie up in stock (optional)
+  - Quality, capacity or delivery evidence for each supplier, such as samples or past orders (optional)
 you_get:
-  - A normalized quote table and a decision brief with cost and delivery risks.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - One quote table with the same unit and currency for every supplier
+  - What each price leaves out, and the lead-time and payment gaps
+  - Cash up front, weeks to stock and landed cost per unit for each
+  - A risk view per supplier, with warning signs and areas that have no evidence
+  - A short decision brief and the terms to settle before a deposit
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Collect each quote and write down your quantity and delivery terms. Remove private details you do not need to share.
+  - Give the pack to Claude, ChatGPT or Gemini. Attach the quotes and paste any evidence about quality or delivery.
+  - Say your planned selling price. Without it, the table cannot show your margin.
+  - Check the table first. Every row should be in the same unit and currency.
+  - Send the questions in the brief to each supplier before you pay a deposit. Then run it again with their answers.
 how_it_works:
   - title: Supplier quote comparer
-    text: Compare the normalized quotes and flag exclusions, lead time and payment differences.
+    text: Builds one table with price, pack size, minimum order, lead time, exclusions and payment terms, plus cash up front, weeks to stock and landed cost. Adds a deposit safety score. Hands step 2 the table and the flagged differences.
   - title: Supplier risk scorecard builder
-    text: Use only supplied financial, quality, capacity and delivery evidence to assess risk. Do not turn sample risk weights, stock buffers or example cost-reduction rates into the buyer facts.
+    text: "Rates each supplier's risk from the financial, quality, capacity and delivery evidence you gave. Lists warning signs and a backup supplier plan. Areas with no evidence say so. Check first: each risk point has a source."
 output_shape: |-
-  Scope and source coverage
-  A normalized quote table and a decision brief with cost and delivery risks.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  QUOTE TABLE
+    supplier | unit price | currency | pack size | MOQ | lead time | excludes | payment terms | delivery terms | cash up front | weeks to stock | landed cost | margin before ads
+  RISK VIEW         <supplier | risk level | evidence behind it | warning signs | NO EVIDENCE areas>
+  DECISION BRIEF    <cheapest | safest | the gap between them | what to ask before a deposit>
+  TERMS TO SETTLE   <refunds | quantity variance | short shipment | who owns the design>
+  FILES SAVED       <each file and the step that made it>
+  MISSING           <each gap, and what it stops>
+  CHECKS MISSED     <one line each, or none>
+output_sample:
+  input:
+    - Two or more supplier quotes
+    - Quantity, currency and delivery terms for each
+    - Your planned selling price (optional)
+    - Quality, capacity or delivery evidence (optional)
+  prerequisites:
+    - Quotes in writing, as files or pasted text
+  output:
+    - name: Quote table
+      contains: Every supplier on the same unit and currency, with exclusions, lead time and margin.
+    - name: Risk view
+      contains: Each supplier's risk level, the evidence behind it, warning signs and areas with no evidence.
+    - name: Decision brief
+      contains: The cheapest, the safest, the gap between them and what to ask before a deposit.
+    - name: Terms to settle
+      contains: Refund rules, quantity variance, short shipments and design ownership to agree in writing.
+    - name: Missing and checks missed
+      contains: Facts nobody supplied and checks that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Unit
+    how: State the unit you sell in, such as one piece. Every quote is then restated to that unit.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Quantities, units, currency and delivery scope agree; missing charges remain visible.
+    how: Add sample notes, certificates or past order records. The risk view then shows real evidence, not blanks.
+  - what: Cash limit
+    how: Give the most cash you can tie up. Quotes above it are flagged.
 judge:
   - Quantities, units, currency and delivery scope agree; missing charges remain visible.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +92,25 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Ask each supplier the open questions in the brief and run the workflow again with the answers.
+  - Keep a supplier file with each quote, date and result, so the next comparison starts from history.
+  - After the first order, add real delivery dates and quality results to the evidence.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It reads quotes in PDF or text and keeps every row on one unit. A spreadsheet export helps when quotes are long.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your tech pack or product spec, so quotes are for the same item.
+    - Photos or notes from any sample you have received.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: MOQ
+    meaning: "Minimum order quantity: the smallest order a supplier will accept."
+  - term: Lead time
+    meaning: How long a supplier takes from order to ready goods.
+  - term: Landed cost
+    meaning: The cost of one unit once freight, duty and fees are added.
+  - term: Deposit
+    meaning: Money paid before production, which is hard to get back if the supplier fails.
+next:
+  - landed-cost-calculator
+  - set-your-order-size-and-split-it-across-suppliers

@@ -1,6 +1,6 @@
 new_slug: design-brief-rules-writer
 name: "Design brief rules writer"
-summary: "Describe the design job. Get a brief with tight limits that leave room to play."
+summary: "Turn a loose design job into a design brief with three to five firm limits and room to play. Give it the job and the audience."
 job: design-work
 thinking: medium
 thinking_why: "It chooses limits and one idea, which takes judgement, but the brief shape is fixed."
@@ -17,6 +17,10 @@ when:
   - "You are about to brief a designer, a printer or an AI tool and have only a general wish."
   - "Past projects came back off-target because the brief was too loose."
   - "You want a one-page brief that a new person can follow."
+not_for:
+  - "You want to judge finished artwork or a logo: use a person you trust to review it, or ask your AI to score it against the brief."
+  - "You need a brand name, not a design brief: use a naming session with your team, or a plain list of options to test with customers."
+  - "You need the logo or mark itself designed: use the Brand mark system planner after the brief is done."
 
 you_give:
   - "A few lines on the job: what it is for, when and where"
@@ -36,6 +40,31 @@ how_to_use:
   - "Paste any limits you already know."
   - "Read the limits aloud. Remove any that you would break in a minute."
   - "Send the brief with the collecting step to the designer."
+output_sample:
+  input:
+    - "The design job: what it is for, when and where it will be seen"
+    - Who it is for and what they should do or see differently
+    - Limits you already know, such as size, budget or date (optional)
+    - Your brand brain or brand file (optional)
+  output:
+    - name: Core facts
+      contains: Four short lines on what the job is, why it exists, when it is due and where it will be seen.
+    - name: Audience, client and the change
+      contains: Who the work is for, who signs it off, and what the audience should do or see differently.
+    - name: The need
+      contains: One or two sentences on what the design must do for that audience.
+    - name: The one idea
+      contains: One sentence a stranger could take in at a glance, plus what was left out.
+    - name: Limits
+      contains: Three to five specific, checkable rules such as a size, two colours, one typeface or a date.
+    - name: Left free on purpose
+      contains: What the designer decides, such as the image, the layout or the tone.
+    - name: Collect first
+      contains: Ten images or objects that catch the eye, and the named places to find them.
+    - name: MISSING
+      contains: Facts the brief could not fill, marked so you can add them.
+    - name: CHECKS MISSED
+      contains: One line for each check the brief still fails, or none.
 
 how_it_works:
   - title: "Pulls out the facts"

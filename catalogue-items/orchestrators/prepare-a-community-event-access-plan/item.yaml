@@ -1,6 +1,6 @@
 slug: prepare-a-community-event-access-plan
 name: Prepare a community event access plan
-summary: Share the source files. Get an event access run sheet, responsibility map and confirmation requests.
+summary: "Plan access for a community event: a run sheet from arrival to exit, who does what, and confirmation requests to send the venue."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,9 +20,9 @@ uses:
   - process-and-sop-writer
 steps:
   - uses: stakeholder-map-builder
-    note: Map organizers, venue contacts, access providers and affected participants using role information; mark proposed stakeholders and protect personal details.
+    note: Map organizers, venue contacts, access providers and groups of guests who need help, by role. Mark proposed people and keep personal details out. Hand step 2 the roles and the needs by group.
   - uses: process-and-sop-writer
-    note: Document arrival, wayfinding, communication, assistance and escalation steps from confirmed venue facts and participant preferences; flag unverified facilities.
+    note: "Write the arrival-to-exit steps from confirmed venue facts and the needs shared, and flag every unverified facility. Then draft one confirmation request for each. Uses the roles and needs by group from step 1."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

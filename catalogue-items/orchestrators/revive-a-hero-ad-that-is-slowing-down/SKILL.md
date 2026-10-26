@@ -51,13 +51,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Fatigued ad reviver.** Use the skill `fatigued-ad-reviver`. Starts with the slowing ad and gives back a revival plan and new hooks.
+1. **Fatigued ad reviver.** Use the skill `fatigued-ad-reviver`. Starts with the slowing ad and gives back a revival plan and new hooks. Hand step 2 the new hooks.
 2. **Video hook scorer.** Use the skill `video-hook-scorer`. Give it the hooks from the steps before. Scores the new hooks from the revival plan and picks which to film.
 
 Pause here: Film the top hooks on the old body and run them for about a week.
 
-3. **Creative hit rate planner.** Use the skill `creative-hit-rate-planner`. Reads how the new hooks did against the return line.
-4. **Winning hook rubric builder.** Use the skill `winning-hook-rubric-builder`. Give it the hooks from the steps before. Saves what won as a rubric so the next revival starts from it.
+3. **Creative hit rate planner.** Use the skill `creative-hit-rate-planner`. Use your own results export from the test week, not step 2's output, plus your return line. Reads how the new hooks did against the return line. Hand step 4 the hit rate and which hooks cleared the line.
+4. **Winning hook rubric builder.** Use the skill `winning-hook-rubric-builder`. Give it the hooks from the steps before. Use your transcript, your results export and step 3's hit report to split winners from losers. Saves what won as a rubric so the next revival starts from it.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -1,6 +1,6 @@
 new_slug: research-a-question-and-write-a-cited-report
 name: Research a question and write a fully cited report
-summary: Give it the question. Get an outline, the sources, a cited report and a check of every claim.
+summary: Research a question and get a cited report. It outlines the question, finds sources, cites every claim and checks each one against its source.
 job: research-topics
 thinking: high
 thinking_why: It must judge sources and refuse to state what they do not support. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A decision rests on a factual question and you want an answer you can defend.
   - You write for people who check sources.
   - Your last report had a claim that turned out to be unsupported.
+not_for:
+  - "You want an opinion piece or a question with no evidence to cite: ask your AI for a plain summary instead."
+  - "You only want a source search for one sub-question: use the Community evidence researcher."
+  - "You already have a draft and only need its claims checked: ask your AI to check each claim against its source, without the full workflow."
 you_give:
   - The question, in your words
   - What the answer is for and who will read it
@@ -30,6 +34,25 @@ how_to_use:
   - Paste the question and what the answer is for. It outlines the research and searches for sources.
   - Read the shortlist. Add sources you trust or strike ones you do not.
   - Read the report and the claim check. Publish or file the corrected version.
+output_sample:
+  input:
+    - Your question, in your words
+    - What the answer is for and who will read it
+    - Sources you already trust (optional)
+    - Sources to avoid (optional)
+  prerequisites:
+    - An AI that can search scholarly and public sources, or sources you paste in yourself
+  output:
+    - name: "Step 1: Outline"
+      contains: Each sub-question, the evidence that would answer it, and what counts as a source for your reader.
+    - name: "Step 2: Sources"
+      contains: A shortlist of sources per sub-question, with what each shows, how strong it is, and a link.
+    - name: "Step 3: Report"
+      contains: An answer to each sub-question with a citation on every claim, plus where sources disagree and what is unknown.
+    - name: "Step 4: Claim check"
+      contains: Each claim read against its source, marked supported or not, and kept, softened or cut.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Outline the question
     text: Breaks the question into sub-questions and says what evidence would answer each.

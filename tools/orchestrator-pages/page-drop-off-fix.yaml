@@ -1,6 +1,6 @@
 new_slug: page-drop-off-fix
 name: "Find where your page loses buyers and test the fix"
-summary: "Give it your page and step numbers. Get the worst drop-off, the unanswered doubts and how long a fair test needs."
+summary: "Find where your page loses buyers, fix the worst step, then check if your traffic can prove the fix worked. Give it your page and step numbers."
 job: audit-landing-page
 
 headline: "Find where your page loses buyers, fix it, then prove the fix worked"
@@ -15,6 +15,10 @@ when:
   - Your page gets visits but few sales, and you don't know which step loses the most people.
   - You've changed your page before and couldn't tell whether it worked.
   - You want to know if your traffic is big enough to run a fair A/B test.
+not_for:
+  - "Your page has no visitors yet: there is nothing to measure, so use the Landing page conversion reviewer to review the page by eye first."
+  - "You want a fast pass or fail on the page itself: use the 30-point landing page checker."
+  - "You need a new page written from scratch: use the Reasons-to-switch page writer."
 
 you_give:
   - Your page, as a link, text or screenshots
@@ -34,6 +38,27 @@ how_to_use:
   - Have your inputs ready. Your page, the numbers at each step and your customers' questions.
   - It works step by step and pauses twice. First while you fix the worst step, then while you add answers and export your traffic.
   - Give each pause's result to the next step.
+output_sample:
+  input:
+    - Your page, as a link, text or screenshots
+    - Visits or orders at each step of the buying path
+    - Customer questions or reviews, copied as written
+    - Visits and orders for the last few weeks, as an export
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: Step table
+      contains: Visits at each step, the drop-off between steps, and the leakiest step with the page that owns it.
+    - name: Fixes
+      contains: Each finding from the phone review, sized by effort, with a note on whether to ship it or test it.
+    - name: Open doubts
+      contains: Customer doubts the fixed page still leaves open, the missing answer or proof, and where to add it.
+    - name: Test size
+      contains: The smallest lift worth finding, the weeks a fair test needs, and a verdict on whether you can test.
+    - name: Rules for running the test
+      contains: Simple rules to follow while the test runs, plus a test readiness score out of 100.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Finds the worst drop-off
@@ -78,15 +103,15 @@ example:
     STEP TABLE
     Product page -> cart: 14% | Cart -> checkout: 52% | Checkout -> order: 61%
     Leakiest step: product page to cart | Page: the product page
-    
+
     FIXES
     The price shows only after scrolling | Effort: small | Ship
-    
+
     PAUSE: fix it and save the page
-    
+
     OPEN DOUBTS
     "How do I cancel?" (5 reviews) | Add at: before the button
-    
+
     TEST SIZE
     Smallest lift worth finding: 20% | Weeks needed: 5 | Verdict: can test
 

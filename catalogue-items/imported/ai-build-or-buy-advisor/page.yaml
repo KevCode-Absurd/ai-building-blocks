@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs set decisions and cost maths for your plan.
 new_slug: ai-build-or-buy-advisor
 name: AI build-or-buy advisor
-summary: Describe an AI plan. Get an API vs fine-tune call, AI risk class under
-  EU rules and cost break-even.
+summary: Decide whether to use an AI API, fine-tune or build your own. Get a 3-year cost, your EU AI risk class and a self-hosting break-even point.
 job: set-up-ai
 headline: AI build-or-buy advisor
-subhead: Describe an AI plan. Get an API vs fine-tune call, AI risk class under
-  EU rules and cost break-even. Bring a description of your AI use case. Use the
-  result to plan your next step.
+subhead: Describe an AI plan. Get an API vs fine-tune call, AI risk class under EU rules and cost break-even. Bring a description of your AI use case. Use the result to plan your next step.
 explain: |
   Straight answers on four AI choices for a small company: use an API, fine-tune or build your own; whether your use is high risk under EU rules; when to move to your own hosting; and which AI role to hire next.
 
@@ -18,18 +15,45 @@ when:
   - You want to know if your AI use counts as high risk under EU law.
   - Your API bill is growing and you wonder when self-hosting pays off.
   - You are about to hire and are unsure which AI role you need.
+not_for:
+  - "You need to build a RAG tool, an agent or a prompt set: ask an AI engineer or use a hands-on engineering guide."
+  - "You need legal sign-off on EU or US AI rules: ask a lawyer, because this gives a first read only and is not legal advice."
+  - "You only want to cut your current API bill with small tweaks: try shorter prompts and cheaper models first."
 you_give:
   - A description of your AI use case
-  - Expected monthly usage
-  - Your company's stage and team
-  - Where you operate and who is affected
+  - Your expected monthly usage, such as tokens per day
+  - Your company stage and team size
+  - Where you operate and who your AI decisions affect
+  - Your budget and how fast answers must be (optional)
 you_get:
   - A model route recommendation with a three-year cost
   - A break-even point for self-hosting
   - A risk class and what it requires
   - A next-hire recommendation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down your use case, your monthly usage, your team size, and where you operate.
+  - Open Claude, ChatGPT or Gemini. Use one that can run Python code, because the cost and risk tools are scripts.
+  - Paste the skill text, then paste your details. Say which of the four decisions you want help with.
+  - Read the Bottom Line and The Evidence first. Check the numbers against your own bills.
+  - Check every law and price it names against current official sources before you act. Rules and prices change.
+  - Take the three next steps, then make the final call yourself.
+output_sample:
+  input:
+    - A description of your AI use case
+    - Expected monthly usage, such as tokens per day
+    - Your company stage and team size
+    - Where you operate and who your AI decisions affect
+    - Your budget and how fast answers must be (optional)
+  prerequisites:
+    - An AI that can run Python code, for the cost and risk calculators
+  output:
+    - name: Bottom Line
+      contains: One sentence with the decision and the reason for it.
+    - name: The Decision
+      contains: "Which of the four calls this is: model choice, risk class, cost break-even or next hire."
+    - name: The Evidence
+      contains: Numbers from the calculators, such as the three-year cost and the break-even point, not opinions.
+    - name: How to Act
+      contains: Three concrete next steps you can take.
+    - name: Your Decision
+      contains: The final call that only you, the founder or owner, can make.

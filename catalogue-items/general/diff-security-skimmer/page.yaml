@@ -1,6 +1,6 @@
 new_slug: diff-security-skimmer
 name: "Diff security skimmer"
-summary: "Paste a code change. Get the security risks in only what changed, ranked, with the line and a fix."
+summary: "Check a code diff for security risks. Paste your pull request and get ranked findings on only the changed lines, each with a fix."
 job: secure-code
 thinking: medium
 thinking_why: "It must trace how changed lines could be abused."
@@ -17,6 +17,10 @@ when:
   - "Someone opened a pull request that touches login or payments."
   - "An AI wrote a change and you need a fast second look."
   - "You have no security reviewer on the team."
+not_for:
+  - "You need a full codebase audit or a compliance sign-off: ask a qualified security person."
+  - "You want a deeper check with every test: use the Security-focused change reviewer."
+  - "You have no diff, only a finished app or a single file: paste the changed lines first, or ask a developer to review it."
 
 you_give:
   - "The diff or pull request text"
@@ -33,6 +37,20 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - Your diff or pull request text
+    - What the change is for, in one or two lines
+    - What the code protects, such as logins, payments or personal data (optional)
+  output:
+    - name: VERDICT
+      contains: "One call: safe to merge, fix first, or needs a closer look."
+    - name: FINDINGS
+      contains: Risks ranked worst first, each with the changed line, how it could be abused, its level and the smallest fix.
+    - name: NOT CHECKED
+      contains: Code outside the diff that you would need to read to be sure.
+    - name: Closing line
+      contains: A reminder to check high-risk findings with a qualified security person.
 
 how_it_works:
   - title: "Sort the changes by risk"
@@ -86,8 +104,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "Context lines around each change"
-  - "A note on what the code protects"
+    - "Context lines around each change"
+    - "A note on what the code protects"
 
 terms:
   - term: "Diff"

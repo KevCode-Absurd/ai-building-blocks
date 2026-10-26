@@ -1,37 +1,133 @@
 new_slug: google-ads-audit-engine-builder
 name: Google Ads audit engine builder
-summary: Share your codebase, schema and audit rules. Get a typed Google Ads audit engine, check registry and score report with coverage gaps.
+summary: Plan a Google Ads audit engine for your own code, with typed checks and a score that counts only checks that ran. Read-only, with tests.
 job: build-software
 headline: Google Ads audit engine builder
-subhead: Share your codebase, schema and audit rules. Get a typed Google Ads audit engine, check registry and score report with coverage gaps.
+subhead: Give it your project, your Google Ads access details and the checks you want. It plans a read-only audit engine with a typed list of checks, a score that counts only the checks that ran, and a coverage report. You also get a test plan. Nothing is run.
 explain: |-
-  Share selected codebase, schema, google ads access setup and approved check rules. Get a typed google ads audit engine and check registry.
+  A Google Ads audit engine reads an account through the API, runs a set of checks and reports what it found. The risk is a score that looks complete. If 20 of 74 checks cannot run, a score out of 100 hides that. This skill plans an engine that keeps the two apart. The score counts only the checks that ran and applied. A separate coverage report counts how many were planned, run, failed, missing and not applicable.
 
-  The source inventory is a historical starting catalogue. Current platform fields and account strategies must be verified. Unsupported rules remain unevaluated rather than fabricated or replaced with private dependencies.
+  It starts from a draft list of 74 checks in six groups: conversion tracking, wasted spend, account structure, keywords, ads and assets, and settings. That list is a starting point. Some checks are rules, such as a campaign with spend and no conversions. Others are review prompts that fit some accounts only, such as how keywords are grouped. The plan labels each one, and every limit is marked as proposed until you confirm it.
+
+  The result is a plan with a file map, a check registry, a scoring design and tests. The engine never changes a campaign and makes no AI calls. For one area only, use a smaller prompt such as the Performance Max checks coding prompt. For the whole system around it, see the Google Ads Operator Agent coding prompt.
 when:
-  - You need a typed google ads audit engine and check registry.
+  - You are building your own Google Ads audit tool and want one engine behind it.
+  - You have a list of checks, but no way to score them honestly when some can't run.
+  - An audit score looked good and you later found half the checks had been skipped.
+  - You work across several client accounts and need the same checks on each.
+not_for:
+  - You want a one-time audit of an account, not code. Paste an export into the Google Ads report auditor.
+  - You only need one area, such as Performance Max or Display placements. Use the Performance Max checks coding prompt or the Display placement review coding prompt.
+  - You have no Google Ads API access yet. Start with the Google Ads Cloud and OAuth client planner, then the Google Ads token and access check planner.
+  - You want the engine to fix the account. It reads and reports. You make changes in Google Ads.
 you_give:
-  - Selected codebase, schema, Google Ads access setup and approved check rules
-  - Synthetic data fixtures and the intended account types
+  - Your code project, or its main folders, language and database
+  - Your Google Ads access details by name, such as the manager account, the customer ID and where credentials are kept (never the secrets)
+  - The checks you want and the limits you accept, or a yes to the draft list
+  - The kinds of account you audit, such as lead generation or online store (optional)
+  - Small made-up sample data for tests (optional)
 you_get:
-  - A typed Google Ads audit engine and check registry
-  - A coverage-aware score report and validation plan
+  - A file map and the types for each finding and run
+  - A check registry with the data, the rule and the limit for each check
+  - Exact counts of checks planned, run, failed, missing and not applicable
+  - A score design that counts only the checks that ran, with a separate coverage line
+  - A test plan and a list of open questions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in your AI. A chat AI works if you paste the code in. Claude Code or Codex can read your files.
+  - Paste your project details and the checks you want. If you have no list, say so and it uses the draft list.
+  - Give the access details by name. Never paste a developer token, secret or refresh token.
+  - Read the check registry first. Mark each check you don't want, and say yes or change each limit.
+  - Check the counts. Planned must not be shown as run.
+  - Build the engine in your own project from the plan, then run the tests on made-up data before any live account.
 how_it_works:
-  - title: Step 1
-    text: Inspect the selected repository, Google Ads client setup, manager/target account mapping, secrets model and supported API/library versions. Plan dependencies deliberately; do not install packages or call an account just because the source brief contains a command.
-  - title: Step 2
-    text: Define typed raw rows, date ranges, normalized currency/micros helpers, validated query responses and a Finding contract with check ID, applicability, status, severity, metric, threshold, evidence and proposed action. Fetch only the authorized account and validate each data shape.
-  - title: Step 3
-    text: Implement the API client and separate account, campaign, ad-group, keyword, search-term and conversion data fetchers. Keep credential errors, unavailable fields, rate limits and account authorization distinct; avoid logging credential or customer payload values.
-  - title: Step 4
-    text: Turn the supplied seventy-four-item inventory into a versioned rule registry. For each rule check current applicability and owner-approved thresholds. Structural preferences such as keyword grouping, match-type share, recommendations, attribution or optimization score are context-dependent review prompts, not universal failures.
-  - title: Step 5
-    text: "Calculate weighted category scores only for evaluated applicable rules. Keep missing/unsupported checks out of the earned/max denominator and report coverage separately. Preserve exact counts: planned inventory, evaluated, failed, missing and not applicable. No completed-check claim follows from a label saying seventy-four."
-  - title: Step 6
-    text: Add quick-win ranking, scoped persistence and deterministic synthetic tests for micros conversion, scoring, empty or partial data, cross-account rejection and failing provider calls. Produce the code/change plan, interface map, configured inventory and actual test results or not-run reasons. No campaign mutation or AI call is required by the audit engine.
+  - title: Looks at your project first
+    text: Reads your folders, any Google Ads client, how secrets are kept and the library versions. It lists dependencies but does not install them.
+  - title: Defines the types
+    text: Plans typed rows, one money helper for Google's micros, and a finding with its ID, status, severity, evidence and proposed action.
+  - title: Plans the data fetchers
+    text: Separate fetchers for account, campaigns, ad groups, keywords, search terms and conversions. Failures are kept apart and no secret is logged.
+  - title: Builds the check registry
+    text: Turns the check list into a versioned file. Each check says what it tests, what data it needs and whether it is a rule or a review prompt.
+  - title: Scores only what ran
+    text: Counts points for checks that were evaluated and applied. Missing and not-applicable checks stay out, and coverage is shown on its own.
+  - title: Ranks quick wins and plans tests
+    text: Ranks findings by severity and share of spend. Plans tests for empty data, a check that can't run and a wrong account.
+output_shape: |-
+  STATUS
+  <plan and draft only; nothing run; what was read>
+
+  EVIDENCE USED
+  <project files, reference brief, access details by name>
+  MISSING: <each missing input and what it stops>
+
+  FILE AND INTERFACE MAP
+  <files to add or change, what each exports>
+
+  FINDING CONTRACT
+  <fields of a finding and of a run result>
+
+  CHECK REGISTRY
+  <id> | <group> | <what it tests> | <data needed> | <applies when> | <threshold> | <rule, review prompt or needs data>
+
+  INVENTORY COUNTS
+  planned <n> | evaluated <n> | failed <n> | missing <n> | not applicable <n>
+
+  SCORE AND COVERAGE REPORT
+  <group scores, overall score, coverage line, quick wins>
+
+  TEST PLAN
+  <number> | <case> | <expected result> | <ran or not run>
+
+  ASSUMPTIONS AND OPEN QUESTIONS
+  <starting values and who confirms them>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - Your code project, or its main folders, language and database
+    - Your Google Ads access details by name, never the secrets
+    - The checks you want and the limits you accept, or a yes to the draft list
+    - The kinds of account you audit (optional)
+  prerequisites:
+    - Google Ads API access with read permission, set up before you run the engine
+    - A coding assistant that can open your project, such as Claude Code or Codex
+  output:
+    - name: File and interface map
+      contains: The files to add or change in your project and what each one exports.
+    - name: Finding contract
+      contains: The fields of a finding and of a run result, such as check ID, status, severity and evidence.
+    - name: Check registry
+      contains: Each check with its group, data needed, limit, and whether it is a rule or a review prompt.
+    - name: Inventory counts
+      contains: How many checks were planned, run, failed, missing and not applicable.
+    - name: Score and coverage report
+      contains: Group scores and an overall score from checks that ran, a coverage line and the top quick wins.
+    - name: Test plan
+      contains: Cases for money conversion, scoring, empty data, a check that can't run and a wrong account.
+    - name: Assumptions and open questions
+      contains: Each starting limit, weight and grade band, and who confirms it.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your Google Ads files and project together, drafts code and runs your tests when you allow it.
+    - name: Codex
+      why: Edits files in your repository and shows each change for review.
+    - name: Google Ads Editor or the Google Ads screen
+      why: Lets you check a flagged finding by hand before you act on it.
+  inputs:
+    - A list of the account types you audit and which checks matter for each
+    - An export of one account, to compare the engine's first findings against
+terms:
+  - term: Audit engine
+    meaning: Code that reads account data, runs a list of checks and reports a result for each.
+  - term: Check registry
+    meaning: A file that lists every check with its rule, data needed and limit.
+  - term: Coverage
+    meaning: The share of planned checks that could actually run on this account.
+  - term: Micros
+    meaning: Google Ads reports money in millionths of a currency unit. Divide by one million to get the amount.
+  - term: Review prompt
+    meaning: A check that points to something worth a look but is not wrong for every account.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

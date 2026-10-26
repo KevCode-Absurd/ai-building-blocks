@@ -1,6 +1,6 @@
 new_slug: quarterly-headcount-plan-keeper
 name: Quarterly headcount plan keeper
-summary: Give it each quarter's people numbers. Get the plan checked against what happened, the scenario to follow and the budget gap.
+summary: Check your headcount plan against last quarter's hires and exits, see if it still holds, and get the budget gap and roles for leaders to decide.
 job: hire-people
 thinking: high
 thinking_why: It does sums on plan against actuals, picks a path by a threshold and keeps three linked files in step. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a hiring plan and want it checked against what happened every quarter.
   - You want to know when the plan needs a rebuild and when it only needs a note.
   - You want a short update for leaders and the cost of each new role request.
+not_for:
+  - "You have fewer than about 15 people: work out each hire on its own with the Headcount business case builder."
+  - "You have no stable goals for the year: write them down first, or the forecast only repeats the past."
+  - "You cannot share people data with an AI: give counts only, or do the check by hand in a spreadsheet."
 you_give:
   - Last quarter's headcount by team, with hires and exits, as counts
   - Your growth goals and people budget, the first time and when they change
@@ -29,6 +33,32 @@ how_to_use:
   - Give counts and roles only. Leave out names and individual pay.
   - The first time it builds a plan and a forecast for you to approve. After that it compares each quarter with them.
   - Read the update with your leaders. The decisions on hires and budget are yours.
+output_sample:
+  input:
+    - Last quarter's headcount by team, with hires and exits as counts
+    - Your growth goals and people budget
+    - Actual people spend by team (optional)
+    - Hiring pipeline numbers and new role requests (optional)
+  prerequisites:
+    - An AI that can keep a folder of files, such as Claude Code
+    - Counts and roles only, with no names or individual pay
+  output:
+    - name: The quarter
+      contains: Headcount, hires made against planned, and exits against forecast, with the sums shown.
+    - name: Path taken
+      contains: Whether the plan holds or a new forecast and scenarios were built, and why.
+    - name: Scenario in force
+      contains: The base, best or worst case now in use, and the switch signs to watch.
+    - name: Budget
+      contains: Spend against budget by team, with each gap explained.
+    - name: Open roles
+      contains: Each open role with days open and its pipeline numbers.
+    - name: New role requests
+      contains: Yearly cost, hire or contract comparison and budget effect for each request, with no ranking.
+    - name: Decisions for leaders
+      contains: The choices only your leaders can make, listed plainly.
+    - name: Files and missing
+      contains: Each step's saved file, and every line marked MISSING.
 how_it_works:
   - title: Build the base
     text: On the first run, it builds a role-by-role plan and a forecast with a range for you to approve.

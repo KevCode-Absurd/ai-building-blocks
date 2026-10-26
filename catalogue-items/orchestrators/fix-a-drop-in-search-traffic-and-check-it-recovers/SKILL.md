@@ -43,13 +43,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Search Console traffic drop diagnoser.** Use the skill `search-console-traffic-drop-diagnoser`. Finds the pages and queries that lost clicks and the likely causes.
-2. **Store SEO fix prioritiser.** Use the skill `store-seo-fix-prioritiser`. Give it the audit report from the steps before. Ranks the faults behind the drop so you fix crawl and index problems before content. Reads the diagnosis from the step before.
-3. **Shopify duplicate page fixer.** Use the skill `shopify-duplicate-page-fixer`. Give it the audit report from the steps before. Fixes the duplicate and thin pages the ranked list put first. Reads the findings from the step before.
+1. **Search Console traffic drop diagnoser.** Use the skill `search-console-traffic-drop-diagnoser`. Finds the pages and queries that lost clicks and the likely causes, and hands that diagnosis to step 2.
+2. **Store SEO fix prioritiser.** Use the skill `store-seo-fix-prioritiser`. Give it the audit report from the steps before. Ranks the faults behind the drop so you fix crawl and index problems before content. Reads the diagnosis from the step before, and hands the ranked list to step 3.
+3. **Shopify duplicate page fixer.** Use the skill `shopify-duplicate-page-fixer`. Give it the ranked list from step 2 and your theme files. Fixes the duplicate and thin pages the ranked list put first. Your fixes go live before step 4.
 
 Pause here: Make the fixes live, then wait four weeks and export a fresh Search Console report for the same pages.
 
-4. **Organic search report builder.** Use the skill `organic-search-report-builder`. Reports non-branded clicks, branded trend and organic sales for the new window, so you can see whether the drop is recovering.
+4. **Organic search report builder.** Use the skill `organic-search-report-builder`. Use your own fresh Search Console export for the same pages, taken four weeks after the fixes, not step 3's output. Reports non-branded clicks, branded trend and organic sales for the new window, so you can see whether the drop is recovering.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

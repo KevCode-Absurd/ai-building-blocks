@@ -16,6 +16,29 @@ use_cases:
   - "Understand why some jobs pay more than others, from risk, training and how steady the work is"
   - "Find where a market is too small for specialists, and what would make it bigger"
   - "Check how pay and ownership affect care with other people’s money."
+not_for:
+  - "You want to understand crashes, slumps or job losses across a whole economy: Keynes fits better, though he is not yet a listed mind here, so ask a trained economist."
+  - "You need legal, medical or personal money advice: talk to a qualified lawyer, doctor or financial adviser."
+  - "You want to know whether rewards like bonuses and praise really work on kids or staff: use the Alfie Kohn mind."
+output_sample:
+  input:
+    - A question about work, pay, prices or a business rule
+    - The people involved and what each one gains (optional)
+    - Who proposed the idea, if it is a proposal (optional)
+    - Your local market, such as how many buyers there are (optional)
+  output:
+    - name: Small everyday case
+      contains: Your problem turned into a simple scene, such as a baker or a small workshop, so you can see it.
+    - name: Who gains and who pays
+      contains: The people involved, what each one gains, and what each will do because of it.
+    - name: Effects forward
+      contains: What happens next to prices, pay and effort, followed a few steps beyond the first result.
+    - name: Who proposed it
+      contains: Who brought the idea, who profits from it, and what it may cost everyone else.
+    - name: Fairness check
+      contains: How a fair outsider with no stake would judge what you plan to do.
+    - name: Next steps
+      contains: One or two practical things to do, plus where his old ideas stop fitting today's economy.
 seats:
   - {seat: "Markets and incentives", asks: "Who gains from this, who pays for it, and what will people do once the rule is in place?"}
   - {seat: "The fair outsider", asks: "How would a fair spectator, with no stake in this, judge what we're about to do?"}

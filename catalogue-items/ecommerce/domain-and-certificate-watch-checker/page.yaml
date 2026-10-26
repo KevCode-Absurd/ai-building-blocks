@@ -1,6 +1,6 @@
 new_slug: domain-and-certificate-watch-checker
 name: "Domain and certificate watch checker"
-summary: "List your domains and subdomains. Get leftover records and weak registrar access flagged, a score out of 100 and fixes."
+summary: "Check your domains and subdomains for leftover records and weak registrar access. You get a score out of 100 and a clean-up list."
 job: protect-your-store
 thinking: medium
 thinking_why: "It goes through a list of records against fixed rules. A mid-size model is accurate enough."
@@ -17,6 +17,10 @@ when:
   - You have several domains or old subdomains for past campaigns, landing pages or test stores.
   - A developer or agency set up your DNS and you do not know who can log in to it.
   - You see a lookalike of your store name and want to know what to protect.
+not_for:
+  - "You want to plan your domain layout or redirects: use the Domain and DNS planner."
+  - "You want rules for staff to spot fake email addresses: use the Staff phishing rules briefer."
+  - "You want headers and HTTPS checks for your site pages: use the Website security check skill."
 
 you_give:
   - Every domain and subdomain you know of, with where each points
@@ -35,6 +39,29 @@ how_to_use:
   - Say who has registrar and DNS logins and how each signs in.
   - Delete records that point to services you no longer use, after a developer confirms.
   - Set up a free alert for new certificates on your domain, and run the checker again in six months.
+output_sample:
+  input:
+    - Every domain and subdomain you know of, with where each points
+    - Who can log in to your registrar and DNS host, and how they sign in
+    - Your certificate provider
+    - Renewal dates and who is notified (optional)
+  output:
+    - name: Domains and subdomains
+      contains: One row per name with where it points, whether you still need it, the risk level and one action.
+    - name: Account access
+      contains: Who can log in to the registrar and DNS host, how they sign in, and whether the transfer lock is on.
+    - name: Certificates
+      contains: Whether you have a record naming allowed certificate providers and an alert for new certificates.
+    - name: Score
+      contains: A score out of 100 with the sum shown, and the score again after the fixes.
+    - name: DNS clean-up list
+      contains: The records to delete or change, to be confirmed by a developer first.
+    - name: Registrar checklist
+      contains: Steps for access, a second sign-in step, the transfer lock and auto-renew.
+    - name: Owners and renewals
+      contains: "For each domain: owner, renewal date, auto-renew setting and who is notified."
+    - name: Not run
+      contains: Any check it could not do, and what it needs to do it.
 
 how_it_works:
   - title: Lists every record

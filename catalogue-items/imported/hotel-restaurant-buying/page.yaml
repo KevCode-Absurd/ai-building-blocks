@@ -2,35 +2,109 @@ thinking: medium
 thinking_why: It ranks spend by category and supplier.
 new_slug: hotel-restaurant-buying
 name: Hotel and restaurant buying planner
-summary: Give it what you buy. Get a sourcing plan, a supplier shortlist and
-  negotiation points to cut costs.
+summary: Lower what your hotel or restaurant pays suppliers. Give it your spend to get a sourcing plan, a supplier shortlist and negotiation points.
 job: plan-supply-chain
 headline: Hotel and restaurant buying planner
-subhead: A buying plan for your hotel or restaurant that lowers what you pay
-  without hurting what guests get. You come away with a supplier shortlist and
-  the points to raise when you negotiate.
+subhead: Give it your hotel or restaurant spend by category and your current suppliers. It splits the spend, picks a buying approach for each group, and scores suppliers. You get a shortlist, negotiation points for each contract and a savings target you can check.
 explain: |
-  A buying plan for your hotel or restaurant that lowers what you pay without hurting what guests get. You come away with a supplier shortlist and the points to raise when you negotiate.
+  Hotels and restaurants buy hundreds of things from dozens of suppliers: meat, produce, cleaning supplies, linens, repairs. Prices drift, contracts roll over unread, and each manager buys a little differently. The result is a hotel or restaurant purchasing plan that nobody wrote.
 
-  It starts by sizing up your property, your spend and your current suppliers. Then it splits spend into groups: food and drink, cleaning and guest supplies, linens and uniforms, equipment and services. For each group it picks a sourcing approach, such as one main supplier, a group buying deal or local producers. It compares contract types, scores suppliers on price, quality and reliability, and lays out negotiation points and a savings target for each category.
+  This skill starts with your property and your spend. It splits the spend into groups: food and drink, cleaning and guest supplies, linens and uniforms, equipment and services. For each group it picks an approach, such as one main supplier, a group buying deal or local producers, and says why. It scores suppliers on price, quality and reliability, using only what you tell it.
+
+  Savings targets come from your quotes and goals. The percentages in the skill are examples, not promises. Where you have no quote, it writes MISSING and says which suppliers to ask.
 when:
-  - Your food costs keep rising and you are not sure which suppliers are
-    overcharging.
+  - Your food costs keep rising and you do not know which suppliers overcharge.
   - You run several sites and want to buy as one group.
-  - A key supplier contract is coming up for renewal.
-  - You want sustainability goals reflected in what you buy.
+  - A key supplier contract comes up for renewal next quarter.
+  - You want sustainability or local sourcing goals to show in what you buy.
+not_for:
+  - "You want to set room prices, not buy supplies: use the Hotel room pricing planner."
+  - "You plan the food supply chain from farm to plate: use the Food supply chain planner."
+  - "You want savings across all your business payments, not only supplies: use the Spend savings finder."
+  - "You need to compare two supplier quotes line by line. Use the Supplier quote comparer."
 you_give:
-  - Property type and size
-  - Annual spend by category
-  - Current suppliers and contract terms
+  - Property type, size and service level, such as 80 rooms or a 60-seat restaurant
+  - Annual spend by category, from your accounts
+  - Current suppliers and contract end dates
   - Goals such as cost, quality or sustainability (optional)
+  - Quotes from other suppliers (optional)
 you_get:
-  - A sourcing plan by spend category
-  - A supplier shortlist with scoring
+  - Your spend split by category
+  - A buying approach for each category, with the reason
+  - A supplier shortlist scored on price, quality and reliability
   - Negotiation points for each contract
-  - A savings target and action list
+  - A savings target with its basis, an action list and a missing data list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Open Claude, ChatGPT or Gemini and paste the skill. A plain chat works. For a large spend file, attach the spreadsheet."
+  - "Export your spend by category and supplier from your accounts. Add contract end dates and your goals."
+  - "Paste or attach them, then say your property type and size."
+  - "Check the spend split against your accounts first. Fix any category that looks wrong."
+  - "Treat a savings figure with no quote behind it as an aim. Ask the suppliers it names for quotes."
+  - "Take the negotiation points to your next supplier meeting. Run it again after renewals."
+how_it_works:
+  - title: Size up your property
+    text: Asks about type, scale, service level, and how buying is run today.
+  - title: Split the spend
+    text: Groups your spend into food and drink, supplies, linens, equipment and services.
+  - title: Pick an approach
+    text: Chooses one main supplier, group buying or local producers for each group, and says why.
+  - title: Score suppliers
+    text: Rates suppliers on price, quality and reliability, using only your facts.
+  - title: Plan the negotiation
+    text: Writes points for each contract, tied to its end date.
+  - title: Set a target
+    text: Sets a savings target from your quotes and goals, or marks it MISSING.
+output_shape: |
+  Buying plan for <property>
+
+  Spend by category
+  | Category | Annual spend | Suppliers |
+
+  Approach per category
+  - <category>: <approach> because <reason>
+
+  Supplier shortlist
+  | Supplier | Category | Price | Quality | Reliability | Notes |
+
+  Negotiation points
+  - <contract>, ends <date>: <points>
+
+  Savings target: <amount and basis, or MISSING>
+  Actions: <action> | owner: <name>
+  MISSING: <list>
+output_sample:
+  input:
+    - Your property type and size
+    - Annual spend by category and supplier
+    - Contract end dates
+    - Goals and quotes from other suppliers (optional)
+  output:
+    - name: Spend by category
+      contains: Your spend split into food and drink, supplies, linens, equipment and services.
+    - name: Approach per category
+      contains: One main supplier, group buying or local producers, with the reason for each.
+    - name: Supplier shortlist
+      contains: Suppliers scored on price, quality and reliability, using only your facts.
+    - name: Negotiation points
+      contains: What to raise for each contract, tied to its end date.
+    - name: Savings target
+      contains: A target with its basis, or MISSING where you have no quote.
+    - name: Action list
+      contains: Next steps with owners, and the data still missing.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach a spend export from your accounting system.
+  inputs:
+    - A year of purchase records by supplier
+    - Current contracts or price lists
+    - Delivery and quality complaints by supplier
+terms:
+  - term: Spend category
+    meaning: A group of things you buy, such as food and drink or cleaning supplies.
+  - term: Group purchasing
+    meaning: Several sites or businesses buying together to get a better price.
+  - term: Contract renewal
+    meaning: The date a supplier deal ends or rolls over, and the best moment to renegotiate.
+  - term: Supplier shortlist
+    meaning: The few suppliers worth asking for a quote in a category.

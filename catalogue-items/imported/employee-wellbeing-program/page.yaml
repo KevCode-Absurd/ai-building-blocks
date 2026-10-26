@@ -2,34 +2,104 @@ thinking: medium
 thinking_why: The topic is sensitive and needs careful wording.
 new_slug: employee-wellbeing-program
 name: Employee wellbeing program planner
-summary: Give it your team's needs. Get a wellbeing plan, a manager guide and
-  return-to-work steps. Not medical advice.
+summary: Plan an employee wellbeing program around how your team works. Get a plan, a burnout checklist for managers and a return-to-work plan. Not medical advice.
 job: hire-people
 headline: Employee wellbeing program planner
-subhead: A wellbeing plan built around how your team really works, with a
-  manager guide and a return-to-work process. This is HR planning support, not
-  medical advice.
+subhead: Tell your AI your team size, the type of work and the pressures people face. It writes a wellbeing program plan, an early-warning checklist and a guide for managers. You also get a return-to-work plan for someone back from leave. This is HR planning support, not medical advice.
 explain: |
-  A wellbeing plan built around how your team really works, with a manager guide and a return-to-work process. This is HR planning support, not medical advice.
+  A team is stretched and you fear burnout, but a yearly wellness week will not fix it. This employee wellbeing program planner builds a plan around what is actually straining your people, such as workload, change or unclear roles.
 
-  The skill explains modern wellbeing as continuous, not a yearly event. It covers burnout early warning from workload and survey signals, mental health support and crisis steps, flexible work and leave policies, and how to measure what helps. It also drafts manager guidance, staff messages and a proposal for leaders, plus return-to-work plans after burnout or leave. It can use AI to look at wellbeing data and draft supportive messages.
+  The plan covers early-warning signs for managers, what managers should say and do, support such as flexible work and leave, and how to measure whether it helped. It leaves slots for your local emergency number and your employee assistance contact. For someone back from leave, it writes a return-to-work plan with check-ins at 30, 60 and 90 days.
+
+  It plans and drafts. It does not diagnose anyone, and it works with team-level numbers, not data on named people.
 when:
   - Your team is stretched and you fear burnout.
   - You need a proposal to fund a wellbeing program.
-  - A colleague is returning after mental health leave.
-  - Managers ask what they should say and do.
+  - A colleague is coming back after mental health leave.
+  - Managers ask what they should say and do when someone is struggling.
+not_for:
+  - "Someone may be in danger or may harm themselves: contact local emergency services or their clinician now. Do not use an AI plan."
+  - "You want to diagnose or assess one person: that is for a qualified clinician, not HR or an AI."
+  - "One person needs a workplace adjustment: use the Workplace accommodation process builder or the Prepare a workplace accommodation conversation prompt."
+  - "You want to find out how the whole team feels first: use the Employee survey designer."
 you_give:
-  - Team size and type of work
-  - Known pressures or risks
-  - Existing benefits and policies (optional)
-  - Survey or workload data (optional)
+  - Your team size and the type of work
+  - Known pressures, such as long hours or a recent restructure
+  - Your current benefits and policies (optional)
+  - Team-level survey or workload numbers, with no names (optional)
+  - A budget range (optional)
 you_get:
-  - A wellbeing program plan
-  - A manager guide
-  - A return-to-work plan
-  - Staff communications
+  - A wellbeing program plan with goals, actions, owners and measures
+  - An early-warning checklist for managers
+  - A manager guide for hard conversations
+  - Crisis steps with slots for your local contacts
+  - A return-to-work plan with 30, 60 and 90-day check-ins
+  - Staff messages and, if you ask, a proposal for leaders
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Check your AI tool's data settings, then paste the skill.
+  - Describe your team, the work and the pressures. Do not paste names, health details or one person's records. Use team-level numbers.
+  - Read the plan's risks as things to check, not findings. Ask which ones you can test with a short team survey.
+  - Fill the contact slots in the crisis steps with your real emergency, employee assistance and HR contacts.
+  - Share the manager guide with a manager or your HR lead before you roll it out.
+how_it_works:
+  - title: Set the safety rules
+    text: It stops and points you to emergency help if someone may be in danger, and works with team-level data only.
+  - title: Check the risks
+    text: It names likely sources of strain from what you describe and marks them as signals to check.
+  - title: Write the plan
+    text: It sets goals, actions with owners, support options and how you will measure the result.
+  - title: Guide the managers
+    text: It writes an early-warning checklist and a guide for what to say and do, with privacy rules.
+  - title: Plan the return
+    text: It builds a return-to-work plan with a first week and check-ins at 30, 60 and 90 days.
+  - title: Draft the messages
+    text: It drafts staff messages and a short proposal for leaders if you ask.
+output_shape: |
+  ## Wellbeing plan
+  Goals / Risks to check / Actions (owner, date) / Measures
+  ## Manager early-warning checklist
+  ## Manager guide
+  ## Crisis steps
+  <emergency number> / <employee assistance contact> / <HR contact>
+  ## Return-to-work plan
+  Week 1 / 30-day check-in / 60-day check-in / 90-day check-in
+  ## Staff messages
+  ## Proposal for leaders (if asked)
+output_sample:
+  input:
+    - Your team size and the type of work
+    - Known pressures, such as long hours or a restructure
+    - Your current benefits and policies (optional)
+    - Team-level survey or workload numbers (optional)
+  prerequisites:
+    - Remove names and health details before you paste anything
+    - Check your local data protection rules before you use workload data
+  output:
+    - name: Wellbeing plan
+      contains: Goals, risks to check, actions with owners and dates, and how to measure the result.
+    - name: Manager early-warning checklist
+      contains: Signs of burnout to watch for and a question to ask for each.
+    - name: Manager guide
+      contains: What to say and do, who to call at HR and what stays private.
+    - name: Crisis steps
+      contains: Escalation steps with blank slots for your emergency and support contacts.
+    - name: Return-to-work plan
+      contains: A first-week plan and check-ins at 30, 60 and 90 days after someone returns.
+    - name: Staff messages
+      contains: Short drafts that explain the program and how to reach support.
+    - name: Proposal for leaders
+      contains: A short case for funding the program (only if you ask).
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a planning and writing job. Claude, ChatGPT or Gemini all do it well.
+  inputs:
+    - Your employee assistance program details
+    - Your leave and flexible work policies
+terms:
+  - term: Burnout
+    meaning: Long-term exhaustion from work stress that does not ease with rest.
+  - term: Employee assistance program
+    meaning: A work benefit that gives staff confidential counselling and support.
+  - term: Return-to-work plan
+    meaning: A plan that eases someone back into work after a long leave.

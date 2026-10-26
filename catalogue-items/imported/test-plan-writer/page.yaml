@@ -2,35 +2,119 @@ thinking: medium
 thinking_why: It must choose where tests give the most value.
 new_slug: test-plan-writer
 name: Test plan writer
-summary: Describe what you are building. Get a test plan with what to test, at
-  what level and where the gaps are.
+summary: Describe what you are building. Get a test plan with what to test, which kind of test, sample cases and the gaps in the tests you already have.
 job: test-and-fix-code
 headline: Test plan writer
-subhead: A test plan that says what to test, at what level and where the gaps
-  are, for the thing you are building. You spend test time on the paths that
-  matter, not on getters and framework code.
+subhead: Describe your software and its parts. You get a test plan by part, with the type of test, coverage targets, sample cases and the gaps in any tests you have. Time goes to the paths that matter.
 explain: |
-  A test plan that says what to test, at what level and where the gaps are, for the thing you are building. You spend test time on the paths that matter, not on getters and framework code.
+  A test plan answers one question: where should we spend our testing time? This test plan writer starts from the risks in your system, the paths where a bug costs money or trust, and plans the tests around them. Getters and framework code get skipped.
 
-  The skill applies the testing pyramid: many fast unit tests, some integration tests and few slow end-to-end tests. It then adjusts by component. APIs get logic tests plus contract tests, data pipelines get input and idempotency checks, front ends get component, interaction and accessibility tests, and infrastructure gets smoke and load tests. It aims at business-critical paths, error handling, edge cases, security boundaries and data integrity. The plan includes coverage targets, sample cases and the gaps in any tests you already have.
+  It uses the testing pyramid: many fast unit tests, some integration tests, and a few slow end to end tests. Then it adjusts for each part. APIs get logic and contract tests. Data jobs get input and repeat-run checks. Front ends get component, interaction and accessibility tests. Infrastructure gets smoke and load tests.
+
+  The plan ends with sample cases in plain words, what you chose not to test, and an order to work in that fits your time and team size.
 when:
-  - You are starting a project and need a test approach before coding.
-  - You inherited code with a few random tests.
-  - A manager asks what your testing strategy is.
-  - You are unsure whether to write unit or end-to-end tests.
-  - You need to decide what is not worth testing.
+  - You are starting a project and need a test approach before you write code.
+  - You inherited code with a few random tests and no plan.
+  - A manager or client asks what your testing strategy is.
+  - You cannot decide between unit tests and end to end tests.
+not_for:
+  - You have a single script or a one-off task. A few manual checks are enough.
+  - You already have a plan and want a test written. Use the Test-first coach to build it one step at a time.
+  - Your existing tests fail and you need them green. Use the Failing test fixer.
+  - You want a test plan for an AI feature that gives different answers each time. Use the AI answer testing planner.
 you_give:
-  - A description of what you are building
-  - "The parts: API, front end, data jobs"
-  - Existing tests (optional)
-  - Time and team limits (optional)
+  - What you are building, who uses it and what it must never get wrong
+  - The parts, such as API, front end, data jobs, and your languages
+  - Your existing tests and how long they take (optional)
+  - Team size, time and release date (optional)
 you_get:
-  - A test plan by component
-  - Test type for each area
-  - Coverage targets
-  - Example cases and gaps in current tests
+  - A test plan by part, with test types and a rough count
+  - Coverage targets with a reason for each
+  - Sample test cases in plain words
+  - The gaps in your current tests, and what to drop
+  - An order to work in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill.
+  - Describe your software in a few lines. Name the parts and what must never go wrong.
+  - Add your current tests and your time limits if you have them. Skip them if you do not.
+  - Read the top risks first. If a risk is wrong, correct it, then ask for the plan to be redone.
+  - Pick the first three items in the order of work and start there.
+  - When a test is ready to write, use the Test-first coach to build it.
+how_it_works:
+  - title: Restate the system
+    text: It writes two or three lines on what it does and what would hurt most, for you to correct.
+  - title: Rank the risks
+    text: It names the five to eight things that most need a test, such as payments, login and data loss.
+  - title: Plan by part
+    text: For each part it picks test types and counts, keeping many unit tests and few end to end tests.
+  - title: Write sample cases
+    text: Each risk gets two or three cases in plain words with an input and an expected result.
+  - title: Find gaps
+    text: It compares your current tests to the plan and lists what is missing and what to drop.
+  - title: Set the order
+    text: It puts the riskiest paths first and fits the plan to your time and team.
+output_shape: |
+  System summary
+  <two or three lines>
+
+  Top risks
+  1. <risk>
+
+  Plan by component
+  | component | test types | what to cover | rough count | coverage target |
+  <one row per part>
+
+  Sample test cases
+  | risk | test type | input | expected result |
+  <two or three per risk>
+
+  Gaps in current tests
+  <missing tests, tests to drop>
+
+  Not testing
+  <what is skipped and why>
+
+  Order of work
+  1. <step>
+
+  Next steps
+  <who starts, which tool to use>
+output_sample:
+  input:
+    - A short description of what you are building
+    - The parts and the tools you use
+    - Your existing tests (optional)
+    - Your team size and time (optional)
+  output:
+    - name: System summary
+      contains: Two or three lines on what the system does and what would hurt most.
+    - name: Top risks
+      contains: A ranked list of the paths that most need a test.
+    - name: Plan by component
+      contains: Test types, what to cover, rough count and coverage target for each part.
+    - name: Sample test cases
+      contains: Plain-word cases for each risk, with an input and an expected result.
+    - name: Gaps in current tests
+      contains: What is missing and what is not worth keeping.
+    - name: Not testing
+      contains: What the plan skips on purpose, and the reason.
+    - name: Order of work
+      contains: A numbered list that puts the riskiest paths first.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This skill is advice from what you describe, so no code access is needed.
+    - name: Claude Code
+      why: It can read your repo and list the tests you already have, so the gaps are real.
+  inputs:
+    - The output of your test run
+    - A list of past bugs that reached users
+terms:
+  - term: Unit test
+    meaning: A fast test of one small piece of code on its own.
+  - term: Integration test
+    meaning: A test that checks several parts work together, such as code and a database.
+  - term: End to end test
+    meaning: A slow test that runs a whole user journey, such as sign up and buy.
+  - term: Contract test
+    meaning: A test that checks an API still gives the answers other code expects.

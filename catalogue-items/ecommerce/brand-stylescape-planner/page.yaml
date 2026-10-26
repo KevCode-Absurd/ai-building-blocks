@@ -1,41 +1,81 @@
 new_slug: brand-stylescape-planner
 name: "Brand stylescape planner"
-summary: "Give it your brand traits and buyers. Get three visual directions, a merged pick and photo rules."
+summary: "Plan three brand mood board directions for your store. Get one merged pick, photo rules, type and colour choices and a shoot brief."
 job: brand-file
 thinking: medium
 thinking_why: "It compares three directions against your values and writes rules, so a mid-size model works and a stronger one gives more distinct directions."
 
 headline: "Brand stylescape planner"
-subhead: Give it your brand values, traits and buyers. It plans three different visual directions as wide mood boards, grades each against your values, merges the best into one named direction, and writes testable photo rules, type jobs, colours and a short shoot brief.
+subhead: "Give it your brand values and who buys from you. It plans three different looks as mood boards and checks each against your values. Then it merges the best into one. You get photo rules, type and colour choices and a shoot brief."
 
 explain: |
-  Many stores pick a look by taste, then pay for revisions when it does not fit. A stylescape is a wide mood board that shows the brand on the pack, on a screen and on the product at the same time. Making three early, and grading them against your values, settles the look before design money is spent.
+  Many stores pick a look by taste, then pay for changes when it does not fit. A brand stylescape is a wide mood board. It shows the brand on the pack, on a screen and on the product at once. Plan three early and check them against your values. You settle the look before you pay for design.
 
-  This skill turns your values into rules for what may be shown. It plans three distinct directions, each with a theme, colour mood, type feel and imagery. A fit grid shows which ones match your values and your buyer. You then merge the best parts into one named direction and lock it. From it you get four to six photo rules, each with a Yes or No test, type jobs, a colour system and a shoot brief. A designer or image tool builds the actual boards.
+  This skill turns your values into rules for what may be shown. It plans three directions, each with a theme, colour mood, type feel and imagery. A fit grid shows which ones match your values and your buyer. You merge the best parts into one named direction and lock it. From it you get four to six photo rules, each with a Yes or No test, plus type jobs, a colour system and a shoot brief.
+
+  It cannot draw the boards. It writes what goes on each one. A designer or an image tool builds them from the plan.
 
 when:
   - You are launching or rebuilding a store and cannot decide how it should look.
   - Your photos, pack and site look like they came from different brands.
-  - You are about to brief a photographer or a designer and need rules they can follow.
+  - A photographer says "what look do you want?" and you have no answer yet.
+  - You are choosing between a few looks and want a way to pick that is not taste alone.
+
+not_for:
+  - "Your logo and look are settled and customers know them. Use the Brand style guide writer to write the rules down."
+  - "You want finished mood boards or images. This plans them in words. Build them in Figma or an image tool, and use the Brand-to-image prompt compiler for the prompts."
+  - "You want to know if your site, emails and pack already say the same thing. Use the Store brand signal auditor."
+  - "You are still choosing how you differ from rivals, not how you look. Start with the Positioning grid builder."
 
 you_give:
-  - Your values and the traits the brand should show
-  - What you sell and who buys it
-  - Three to five competitor brands, as links or screenshots
-  - Reference images you like (optional)
-  - Whether your logo is already known to customers
+  - "Three to five values you will not give up, and the traits your brand should show (write them, or take them from your brand brain)"
+  - "What you sell and who buys it"
+  - "Three to five rival brands, as screenshots or links to their site and pack (advised)"
+  - "Where the look must show up, such as pack, site, social or product (advised)"
+  - "Images you like, with a line on what you like in each (optional)"
+  - "Whether customers already know your logo"
 you_get:
-  - Three named visual directions, each with theme, colour mood, type feel, imagery and where it shows up
-  - A fit grid against your values and buyer, and one merged direction
-  - Four to six photo rules, each with a Yes or No test, plus type jobs and a colour system
-  - A short shoot brief
+  - "Three named visual directions, each with a theme, colour mood, type feel, imagery and where it shows up"
+  - "A fit grid that marks each direction Yes, Partly or No against each value and your buyer"
+  - "One merged direction, with what came from which board"
+  - "Four to six photo rules, each with a Yes or No test, plus type jobs and a colour system"
+  - "A short shoot brief for your photographer or designer"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your values, traits and buyers, and attach competitor and reference images.
-  - Read the three directions and the fit grid, then say which you prefer and what you want to borrow from the others.
-  - Give the photo rules and shoot brief to your photographer or designer, with the reference images.
-  - Test the look on your home page and one product page before you roll it out.
+  - "Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. Use an AI that can read images if you want to attach any. It needs no code and no paid tool."
+  - "Paste your values, what you sell and who buys. Add your brand brain if you have one. With no values, the AI will ask for three to five before it does anything else."
+  - "Attach screenshots of three to five rivals and any images you like. Say what you like in each, and say if your logo is already known."
+  - "Read the three directions and the fit grid. Tell the AI which you prefer and what to borrow from the others."
+  - "Check each photo rule. You should be able to answer it Yes or No by looking at one photo. Ask for a rewrite of any rule you cannot."
+  - "Give the photo rules and shoot brief to your photographer or designer. Build the home page and one product page in the new look before you change anything else."
+
+output_sample:
+  input:
+    - "Your brand values and traits, or your brand brain"
+    - "What you sell and who buys it"
+    - "Screenshots or links for three to five rival brands (advised)"
+    - "Images you like (optional)"
+    - "Whether your logo is already known to customers"
+  prerequisites:
+    - "An AI that can read images, if you attach any"
+    - "Your brand brain from the Website brand brain builder (optional)"
+  output:
+    - name: "Value filters"
+      contains: "One rule for each value you will not give up. It says what you always show and what you never show."
+    - name: "Three directions"
+      contains: "Each has a name, a one-line theme, colour mood, type feel, imagery and where it shows up. It says what goes on its board."
+    - name: "Fit grid"
+      contains: "A table that marks each direction Yes, Partly or No against each value and your buyer, with a reason. Off-story directions are dropped."
+    - name: "Merged direction"
+      contains: "A named direction built on the strongest board, with the best parts of the others. It says what came from which board."
+    - name: "Photo rules"
+      contains: "Four to six rules. Each has a Yes or No test, a do example and a do-not example, and says which reference images to find."
+    - name: "Type jobs and colours"
+      contains: "Which typeface does headers, body and technical copy. One anchor colour with accents, checked on pack and on screen."
+    - name: "Context test"
+      contains: "The two pages to build first, usually your home page and one product page, before you roll the look out."
+    - name: "Shoot brief"
+      contains: "The shots, light, set styling, people in frame and what to avoid, built from the photo rules."
 
 how_it_works:
   - title: Turns values into filters

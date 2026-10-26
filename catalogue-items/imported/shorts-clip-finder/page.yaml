@@ -2,33 +2,88 @@ thinking: medium
 thinking_why: It judges which moments stand alone.
 new_slug: shorts-clip-finder
 name: Shorts clip finder
-summary: Give it a long video transcript. Get the best five moments to clip,
-  each with a new first line.
+summary: Find the best five moments in a long video to cut into YouTube Shorts, each with timecodes, a new first line and on-screen text.
 job: grow-social
 headline: Shorts clip finder
-subhead: The five best moments in a long video to cut into Shorts, each with a
-  new first line, on-screen text and a loop point. A good clip stands alone
-  without the video around it.
+subhead: Paste the transcript of a long video. It finds the moments that still make sense without the video around them, ranks the best five, and writes a new first line, on-screen text and loop point for each.
 explain: |
-  The five best moments in a long video to cut into Shorts, each with a new first line, on-screen text and a loop point. A good clip stands alone without the video around it.
+  A short clip cut from a long video only works if it survives without the video around it. Many clips flop because the first sentence needs the minute before it. This Shorts clip finder picks moments that stand alone, so you can turn a podcast or long video into Shorts that cold viewers understand.
 
-  Paste your transcript. It looks for 20 to 55 second spans that open on a complete thought, contain a turn (a claim, then proof or a twist) and end on a strong line. It ranks them and shows five with timecodes so you can reject one fast. For each, it writes a fresh opening line for viewers with no context, different words for the first two seconds of on-screen text, and an ending that loops back. Nothing is posted for you.
+  Paste your transcript with timecodes. It looks for 20 to 55 second spans that open on a complete thought, contain a turn (a claim, then proof or a twist) and end on a strong line. It ranks them and shows five with timecodes, so you can reject one fast.
+
+  For each clip it writes a fresh first line for viewers with no context, different words for the first two seconds of on-screen text, and an ending that loops back. Nothing is posted for you.
 when:
   - You recorded a one-hour podcast and want Shorts from it.
   - Your clips keep flopping because they need earlier context.
-  - You want hook lines that work for cold viewers.
+  - You want first lines that work for people who have never seen your channel.
   - You edit for a client and need timecodes to hand over.
+not_for:
+  - Your video is under about 5 minutes or relies on what is on screen. A human editor will pick better moments.
+  - You need to cut filler and retakes from a recording. Use the dead air and retake cutter.
+  - You want to plan a full social video edit with captions and export checks. Use the social video edit planner.
 you_give:
-  - The long video transcript with timecodes
-  - The audience or channel topic (optional)
-  - Preferred clip length (optional)
+  - The video transcript with timecodes
+  - Who watches your channel, or the video topic (optional)
+  - How long you want each clip (optional)
 you_get:
-  - Five ranked clip moments with timecodes
-  - A new first line for each
+  - Five ranked clip moments with start and end timecodes
+  - A new first line for each clip
   - On-screen text for the first two seconds
-  - A loop point and a crop note for vertical video
+  - A loop point for each clip
+  - A crop note for vertical video
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Get your transcript. On YouTube, open the video, tap "...more", then "Show transcript". Copy it with the timecodes.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its instructions into the chat. Then paste the transcript.
+  - Add who watches your channel and your preferred clip length, if you want to set them.
+  - Check each timecode against your video. Play the first and last few seconds to see that the clip starts and ends clean.
+  - Reject any moment that still needs earlier context. Ask for a replacement.
+  - Cut the clips in your editor, add the on-screen text, and post. Nothing is published for you.
+how_it_works:
+  - title: Read the transcript
+    text: It reads for spans of 20 to 55 seconds, or your preferred length.
+  - title: Run three tests
+    text: A clip must open on a complete thought, contain a turn, and end on a line, not a trail-off.
+  - title: Rank the candidates
+    text: It ranks the moments that pass and picks the top five. If fewer pass, it gives fewer.
+  - title: Write a new first line
+    text: It replaces the long video's opening line with one that makes sense to a cold viewer.
+  - title: Add the on-screen text and loop
+    text: It writes different words for the first two seconds of text, and an ending that sets up the first line.
+  - title: Add a crop note
+    text: It says what a vertical crop cuts out of the wide frame and whether that matters.
+output_shape: |
+  Clip <n>: <start> to <end> (<seconds> seconds)
+  Why it stands alone: <one line>
+  New first line: <text>
+  On-screen text: <text>
+  Loop point: <last line and how it sets up the first>
+  Crop note: <what the vertical crop cuts>
+output_sample:
+  input:
+    - The video transcript with timecodes
+    - Who watches your channel (optional)
+    - Your preferred clip length (optional)
+  output:
+    - name: Clip cards, ranked
+      contains: Up to five clips, each with start and end timecodes and a line on why it stands alone.
+    - name: New first line
+      contains: A replacement opening line that makes sense to someone who has not seen the full video.
+    - name: On-screen text
+      contains: Words for the first two seconds, different from what is spoken.
+    - name: Loop point
+      contains: The last line of the clip and how it sets up the first line.
+    - name: Crop note
+      contains: What a vertical crop removes from the wide frame, and whether it matters.
+works_best_with:
+  tools:
+    - {name: "Claude, ChatGPT or Gemini", why: "Any chat AI works. Paste the transcript in. No code runs."}
+  inputs:
+    - "A transcript with accurate timecodes, from YouTube or your editing tool"
+    - "A list of past clips that did well, to show what your audience likes"
+terms:
+  - term: Timecode
+    meaning: The minute and second mark where a moment starts or ends in the video.
+  - term: Loop point
+    meaning: An ending that leads straight back into the first line, so a viewer who keeps watching sees the clip again.
+  - term: Cold viewer
+    meaning: Someone who finds your clip without having seen your channel or the full video.

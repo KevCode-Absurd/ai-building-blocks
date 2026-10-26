@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It runs a fixed tool on each file.
 new_slug: image-compressor
 name: Image compressor
-summary: Give it images. Get smaller WebP or PNG files that look the same and
-  load faster.
+summary: Compress images to smaller WebP or PNG files that look the same. Point it at one file or a folder and get faster-loading images.
 job: make-images
 headline: Image compressor
-subhead: Smaller image files that look the same and load faster. Point it at one
-  file or a folder and get compressed WebP or PNG copies.
+subhead: Smaller image files that look the same and load faster. Point it at one file or a folder and get compressed WebP or PNG copies.
 explain: |
   Smaller image files that look the same and load faster. Point it at one file or a folder and get compressed WebP or PNG copies.
 
@@ -17,6 +15,10 @@ when:
   - You have a folder of screenshots to shrink before sharing.
   - You want to convert PNG or JPEG files to WebP.
   - You need the same quality settings every time.
+not_for:
+  - "You have vector art like SVG logos: keep the original file, since compressing it only makes sense for photos and bitmaps."
+  - "You need a file with no quality loss at all: run it with the PNG format and the keep option, or keep your original."
+  - "Your AI cannot run code or save files: use a free web image compressor in your browser instead."
 you_give:
   - An image file or folder
   - Output format and quality (optional)
@@ -26,8 +28,27 @@ you_get:
   - Original files kept if you choose
   - Size savings per image
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open an AI that can run code and save files, such as Claude with code tools. You need Bun or npx installed on your computer.
+  - Paste in this skill and tell your AI the path to your image or folder.
+  - Say which format and quality you want. The default is WebP at quality 80. Add the keep option to keep your originals.
+  - "Warning: by default the original file is replaced. Back up your images first, or ask your AI to keep the originals."
+  - Check the size report, then open a few images to confirm they still look right.
+  - Next, put the images on your page and test how fast it loads.
+output_sample:
+  input:
+    - An image file or a folder of images
+    - "Output format: webp, png or jpeg (optional)"
+    - Quality from 0 to 100 (optional)
+    - Whether to keep the original files (optional)
+  prerequisites:
+    - An AI that can run code and save files
+    - Bun or npx installed on your computer
+  output:
+    - name: Compressed image files
+      contains: Each image saved as WebP by default, or as PNG or JPEG if you choose, at the quality you set.
+    - name: Size report
+      contains: One line per image showing the old size, the new size and the percent saved.
+    - name: JSON output (optional)
+      contains: The same results in a format other tools can read, if you ask for it.
+    - name: EXTEND.md preferences (optional)
+      contains: Your default format, quality and keep-original choice, saved at project, config or home level.

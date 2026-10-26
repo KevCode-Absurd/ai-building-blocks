@@ -1,6 +1,6 @@
 new_slug: screen-a-startup-deal-from-first-look-to-committee-memo
 name: Screen a startup deal from first look to committee memo
-summary: Give it the pitch and the numbers. Get a diligence review, a valuation range and the committee memo.
+summary: Screen a startup deal from pitch to committee memo. Get a diligence review, a valuation range and a clear pass, proceed or wait call.
 job: money-and-investing
 thinking: high
 thinking_why: It judges a company from thin evidence and writes a memo other people will act on. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A founder sent you a deck and wants an answer in two weeks.
   - You want your memos to say no more often, and to say why.
   - Your committee complains that memos repeat the pitch.
+not_for:
+  - "You want to judge a public company or a late-stage round: use a full analyst process or an outside adviser, as this is built for early-stage equity deals."
+  - "You only need a quick score of the idea itself: use the Seven-question startup scorer."
+  - "You already have the term sheet and need to read it: use a lawyer, or the Contract review workflow for a plain summary and edits."
 you_give:
   - The pitch deck and any data room files, as text
   - What the founders told you in calls, and their asking valuation and terms
@@ -30,6 +34,26 @@ how_to_use:
   - Paste the deck, the numbers and your call notes. It reviews the company and estimates a valuation range.
   - Ask the founders the open questions it lists. Paste their answers.
   - Read the screening memo. If it says proceed, take the committee memo to your partners.
+output_sample:
+  input:
+    - The pitch deck and any data room files, pasted as text
+    - Your call notes, with the founders' asking valuation and terms
+    - Your fund's thesis, cheque size and stage
+    - Market facts you already trust (optional)
+  prerequisites:
+    - An AI that can read several files, such as Claude with the handoff pack
+    - The founders' answers to the open questions, pasted at the pause
+  output:
+    - name: Diligence review
+      contains: Team, market, product and traction, the claims to check and the questions to ask the founders.
+    - name: Valuation range
+      contains: A range for the stage, the method used and how it compares with the founders' ask.
+    - name: Screening memo
+      contains: A pass, proceed or wait call, the three facts it rests on and the open risk.
+    - name: Investment committee memo
+      contains: The case for, the strongest case against, terms, risks and what would change your mind. Only written if the call is proceed.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Review the company
     text: Reviews team, market, product and traction, lists the claims to check and the questions to ask the founders.

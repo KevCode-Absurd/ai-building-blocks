@@ -2,35 +2,103 @@ thinking: medium
 thinking_why: It scores risk first, then designs within clear rules.
 new_slug: mobile-app-designer
 name: Mobile app designer
-summary: Describe the app screen. Get a touch-first design that fits iOS or
-  Android, with a risk score before you build.
+summary: Get a phone-screen design that fits iOS or Android, with a risk score, thumb-friendly layout and offline states before you build.
 job: design-work
 headline: Mobile app designer
-subhead: A phone screen design that fits the platform and has been checked for
-  risk before anyone builds it. It treats the phone as a phone, not a small
-  desktop.
+subhead: Describe a phone app screen and who uses it. Your AI scores how risky it is to build, then designs a touch-first layout with iOS and Android notes, offline and loading states, and a list of what to simplify if the score is low.
 explain: |
-  A phone screen design that fits the platform and has been checked for risk before anyone builds it. It treats the phone as a phone, not a small desktop.
+  A screen that looks fine on a laptop can feel wrong on a phone. Buttons sit out of thumb reach, lists stall, and nothing works when the signal drops. This mobile app designer treats the phone as a phone, so you find problems before you pay a developer.
 
-  Before designing, the skill asks which platform you target, then scores the screen on five points: how clear the platform is, how complex the touches are, how heavy it is on speed, how much it needs a network, and how well it works for people with different abilities. The score runs from minus 10 to plus 10. A low score means simplify first. Then it designs with thumb reach, touch size and offline states in mind.
+  Before it designs, your AI asks which platform you build for, and which framework, navigation and devices. Then it scores the screen from 0 to 5 on five points: platform clarity, accessibility readiness, how complex the touches are, how heavy it is on speed and how much it needs a network. The total runs from minus 15 to plus 10. Below 0 means redesign first.
+
+  The skill is strict about phone habits: touch targets of at least 44 points on iOS and 48 on Android, main actions in thumb reach, a button for every gesture and a state for loading, errors and no signal. The skill folder also holds deeper notes on touch, speed, navigation and each platform.
 when:
   - You are sketching the first screen of an iOS or Android app.
   - A design looks good on a laptop and you worry it will feel wrong on a phone.
   - You want to know which screens are risky before paying a developer.
-  - You need the screen to work when the signal drops.
+  - You need the screen to still work when the signal drops.
+not_for:
+  - "You want iPhone screens only, with Apple design details: use the iPhone screen designer."
+  - "You want runnable app code: use the Expo app interface builder."
+  - "You want to check a finished Apple app against Apple rules: use the Apple app design checker."
+  - "You are laying out a web page or a desktop app: use the Interface designer."
 you_give:
   - A description of the screen and what the user does there
-  - Target platform, iOS, Android or both
+  - The platform, iOS, Android or both
   - Who will use it, including any access needs
-  - Brand colors or style notes (optional)
+  - Your framework, such as React Native, Flutter or native (optional)
+  - Brand colours or style notes (optional)
 you_get:
-  - A risk score with the reasons behind it
-  - A touch-first screen layout
-  - Platform-specific design notes
-  - Offline and loading states
-  - Changes to make if the score is low
+  - A risk score with a reason for each of the five points
+  - A touch-first layout with the main action in thumb reach
+  - Notes on what differs between iOS and Android
+  - Loading, error and no-signal states
+  - What to simplify first, if the score is low
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. For the deepest result, give your AI the whole skill folder, so it can read the notes inside it.
+  - Describe the screen and what the user does there. Say iOS, Android or both, and your framework if you have one.
+  - Answer the one round of questions it asks. Anything you cannot answer is marked ASSUMED and lowers the score.
+  - Read the score and the reasons before the layout. If the total is below 3, simplify before you build.
+  - Hand the layout to your designer or developer. To get code, use the Expo app interface builder. To check the finished app, use the Apple app design checker.
+how_it_works:
+  - title: Ask what is missing
+    text: It asks once for platform, framework, navigation, offline needs, devices and audience.
+  - title: Score the risk
+    text: It scores the screen 0 to 5 on five points and adds them up into one number with reasons.
+  - title: Read the platform notes
+    text: It reads its notes on touch, speed and the platform you picked before it designs anything.
+  - title: Design for thumbs
+    text: It places the main action in thumb reach, sizes touch targets and gives each gesture a button.
+  - title: Split iOS and Android
+    text: It keeps the logic the same and changes navigation, back behaviour, icons and dialogs per platform.
+  - title: Plan the weak moments
+    text: It adds states for loading, errors and no signal, and a release checklist.
+output_shape: |-
+  Screen: <what it is and what the user does>
+  Platform and framework: <iOS, Android or both, framework, or MISSING>
+  MFRI: <score> (<Safe, Moderate, Risky or Dangerous>)
+  | Dimension | Score 0 to 5 | Reason |
+  Layout: <top to bottom, thumb zone, touch sizes, main action>
+  Platform notes: <what differs on iOS and Android>
+  Offline and loading states: <no signal, loading, error>
+  Changes to make: <only if the score is below 3>
+  Open questions: <anything assumed>
+output_sample:
+  input:
+    - A description of the screen and what the user does there
+    - The platform, iOS, Android or both
+    - Who uses it, including any access needs
+    - Your framework (optional)
+  prerequisites:
+    - The skill folder with its notes, so your AI can read the deeper guidance (optional)
+  output:
+    - name: Risk score
+      contains: A number from minus 15 to plus 10 with a 0 to 5 score and reason for each of five points.
+    - name: Layout
+      contains: The screen top to bottom, with thumb zone, touch sizes and where the main action sits.
+    - name: Platform notes
+      contains: What changes between iOS and Android for this screen, such as back behaviour and icons.
+    - name: Offline and loading states
+      contains: What shows with no signal, while loading and after an error.
+    - name: Changes to make
+      contains: What to simplify first when the score is low.
+    - name: Open questions
+      contains: Anything your AI assumed, marked so you can correct it.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI can score the screen and write the layout from your description.
+    - name: Claude Code, Cursor or Codex
+      why: They can read the skill folder and its notes, and run the optional audit script on React Native or Flutter code. The script needs Python.
+  inputs:
+    - A sketch or screenshot of the screen
+    - Your main user, such as one-handed, outdoors or on a bad network
+    - Your navigation, such as tabs or a stack of screens
+    - Devices you must support
+terms:
+  - term: Thumb zone
+    meaning: The part of a phone screen your thumb reaches easily with one hand.
+  - term: Touch target
+    meaning: The area a finger can tap. It must be big enough to hit without missing.
+  - term: MFRI
+    meaning: Mobile Feasibility and Risk Index. A score for how risky a screen is to build.

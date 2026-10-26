@@ -1,6 +1,6 @@
 new_slug: price-first-cost-squeeze-planner
 name: "Price-first cost planner"
-summary: "Name the price you want to sell at. Get a plan that works backward from it to cut cost."
+summary: "Set the price your buyers can pay first. This price-first cost planner shows which costs to cut, keep or simplify to reach it, plus one small test."
 job: make-offer
 thinking: high
 thinking_why: "It weighs cost lines against what the customer needs and estimates volume and margin, so errors are costly."
@@ -17,6 +17,10 @@ when:
   - Your price is too high for the people you most want to serve.
   - A rival sells for less and you do not know where the cost gap is.
   - You are about to add features and want to ask first what you could remove.
+not_for:
+  - Your product has safety, legal or rules-based parts you cannot change. Keep those fixed, and ask a compliance adviser before you cut anything.
+  - You have no cost per unit at all. Start with a simple list of costs from your accountant or your own invoices, then come back.
+  - You want to find savings in what you throw away. Use the Waste and by-product finder instead, since this plan looks at cost lines, not scrap.
 
 you_give:
   - Your product or service, its price and what goes into it
@@ -35,6 +39,29 @@ how_to_use:
   - Name the price you want, or the people you want to reach.
   - Add what rivals charge and where people travel to buy now.
   - Run the test it names on one job before changing anything else.
+output_sample:
+  input:
+    - Your product or service, its price and what goes into it
+    - The price you want to sell at, or who you want to reach and what they can pay
+    - Your cost lines (optional)
+    - Rivals and their prices, or the far-off store people use now (optional)
+  output:
+    - name: Target
+      contains: Who you sell to, the price they can pay, your target price and the cost that price allows.
+    - name: Cost lines
+      contains: Each cost with whether the customer needs it, a keep, simplify or remove action, and the saving.
+    - name: Where competition is thin
+      contains: Places or groups where few sellers serve and buyers now travel far or pay more.
+    - name: Volume and margin
+      contains: An estimate of how many you could sell at the target price and your margin, with guesses marked.
+    - name: Price gap
+      contains: Your target price against the far-off alternative, as a number or marked missing.
+    - name: Single-job test
+      contains: One job to try first, what to measure, how long to run it and what counts as a pass.
+    - name: Missing
+      contains: Any figures it needed but did not get.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: Sets who and what price

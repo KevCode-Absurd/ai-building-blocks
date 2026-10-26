@@ -1,6 +1,6 @@
 new_slug: sales-call-question-planner
 name: "Sales call question planner"
-summary: "Paste what you know about the buyer. Get the order of questions that finds their problem, its cost and the fix's value."
+summary: "Plan your sales call questions. Give it what you know about the buyer and get problem, cost and value questions in the order to ask them."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It sorts facts from questions and orders them for one buyer, but the question types are fixed."
@@ -17,6 +17,10 @@ when:
   - You have a first call with a buyer and only a page of notes about them.
   - Your calls end with "send me a quote" and no real need was found.
   - You sell something expensive that several people at the buyer must agree to.
+not_for:
+  - "You need answers to push-back after the call: use the Hardest objections answer writer."
+  - "The buyer already knows what they want and only asks for a price: send the quote and a short check on what they need, not a question plan."
+  - "You are renewing a current customer: ask them directly what changed since they signed, with your own account notes."
 
 you_give:
   - What you sell and who the buyer is, with anything you know about their company or role
@@ -34,6 +38,29 @@ how_to_use:
   - Say how many meetings you expect and who else may join the decision.
   - Print the plan. Use it as a guide on the call, not a script.
   - After the call, note which questions got the buyer talking and keep those for next time.
+output_sample:
+  input:
+    - What you sell and who the buyer is
+    - Anything you know about their company or role
+    - Text from their website, news or job posts (optional)
+    - Who else helps decide (optional)
+  output:
+    - name: Buyer in one line
+      contains: Who the buyer is and what you sell them.
+    - name: Look up first
+      contains: Facts to find before the call, with where to find each one.
+    - name: Background questions
+      contains: Two to four questions only the buyer can answer.
+    - name: Problem questions
+      contains: Four to six questions on what is not working, with what a useful answer sounds like.
+    - name: Cost questions
+      contains: Three to five questions on what the problem does to time, money and people.
+    - name: Value questions
+      contains: Three or four questions that let the buyer say what a fix is worth.
+    - name: When to change the order
+      contains: Notes on when to skip ahead or go back.
+    - name: Missing and checks missed
+      contains: What would sharpen the plan, and any checks the plan still fails.
 
 how_it_works:
   - title: Sorts facts from questions

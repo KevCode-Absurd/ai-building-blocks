@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It moves content step by step and checks it builds.
 new_slug: latex-paper-converter
 name: LaTeX paper converter
-summary: Give it your paper and a new journal template. Get the paper rebuilt in
-  that format.
+summary: Convert your LaTeX paper to a new journal template. Give it your .tex file and the template folder. You get a rebuilt paper that compiles.
 job: work-with-files
 headline: LaTeX paper converter
-subhead: Give it your paper and a new journal template. Get the paper rebuilt in
-  that format. Bring your source .tex file. Use the result to plan your next
-  step.
+subhead: Give it your paper and a new journal template. Get the paper rebuilt in that format. Bring your source .tex file. Use the result to plan your next step.
 explain: |
   Your paper, rebuilt in a different journal's template without retyping it. Give it your LaTeX file and the folder for the new template. The skill compares the layouts, such as single column against double, and writes a Python script that pulls out your sections and drops them into the new file.
 
@@ -18,6 +15,10 @@ when:
   - A conference gave you a new template and a short deadline.
   - Your tables overflow after moving to a two-column layout.
   - Your figures broke after you changed folders.
+not_for:
+  - Your journal accepts only Word or Markdown files. Use the journal's own submission tool or convert the file by hand.
+  - Your paper is very short. Copy it into the new template by hand, which is faster than setting up a script.
+  - You have no LaTeX install or cannot run Python. Ask a co-author who does, or use an online editor such as Overleaf.
 you_give:
   - Your source .tex file
   - The new template folder
@@ -29,8 +30,28 @@ you_get:
   - A compiled PDF
   - A list of fixes made
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open an AI that can run code and save files, such as Claude with code tools. You also need LaTeX and Python on your computer.
+  - Paste the skill into the chat, or upload the skill folder.
+  - Add your .tex file, your figures, your bibliography and the new template folder. Name the target journal if you can.
+  - Ask your AI to convert the paper. If the two layouts differ a lot, it may ask how to map sections such as abstract and keywords.
+  - Open the compiled PDF and check it against the journal's author guidelines.
+  - Send the list of fixes to a co-author to review.
+output_sample:
+  input:
+    - Your source .tex file
+    - The new journal template folder
+    - Your figures and bibliography files
+    - The name of the target journal (optional)
+  prerequisites:
+    - An AI that can run code and save files
+    - A LaTeX install with pdflatex and bibtex
+    - Python
+  output:
+    - name: convert_format.py
+      contains: A Python script that pulls out your sections and places them in the new template. You can rerun it.
+    - name: Converted .tex file
+      contains: Your paper rebuilt with the new template's preamble, your body text and the back matter.
+    - name: Fixes applied
+      contains: Changes to math environment names, float placement, figure paths and table widths so the paper fits the new layout.
+    - name: Compiled PDF
+      contains: The paper built with pdflatex and bibtex after the log was read and errors were cleared.

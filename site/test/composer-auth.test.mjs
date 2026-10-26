@@ -37,13 +37,13 @@ test("public config never returns a secret, and usage ignores caller-supplied ac
   const store = memoryComposer();
   await store.claim({ id: "one", fingerprint: "f", day: new Date().toISOString().slice(0, 10), ip: "ip", user_id: "user_alice", charge: .03, status: "done", result: "{}" }, 2);
   const own = await handleAccount(authRequest(token({ sub: "user_bob" }), "/api/auth?usage&user_id=user_alice"), env, store);
-  assert.deepEqual(await own.json(), { completed: 0, attemptsToday: 0, dailyAttemptLimit: 10 });
+  assert.deepEqual(await own.json(), { completed: 0, attemptsToday: 0, dailyAttemptLimit: 5, dailyIpAttemptLimit: 10, unlimited: false });
 });
 
 const catalogue = decodeCatalogue(JSON.parse(fs.readFileSync("public/data/blocks.json", "utf8")));
 const goal = "Build a landing page from scratch";
 const modelEnv = { ANTHROPIC_API_KEY: "unit-test-only", WORKFLOW_COMPOSER_ENABLED: "true", WORKFLOW_DEFAULT_MODEL: "claude-haiku-5-5", WORKFLOW_DAILY_CAP_USD: "2" };
-function request(id = crypto.randomUUID(), patch = {}) { return new Request("https://example.test/api/compose", { method: "POST", headers: { "content-type": "application/json", "idempotency-key": id }, body: JSON.stringify({ goal, context: "", ...patch }) }); }
+function request(id = crypto.randomUUID(), patch = {}) { return new Request("https://example.test/api/compose", { method: "POST", headers: { "content-type": "application/json", "idempotency-key": id }, body: JSON.stringify({ goal, context: "", assignMinds: false, ...patch }) }); }
 const run = async (_m, _k, _prompt, schema) => ({ text: JSON.stringify(schema?.properties?.intents ? { intents: [{ query: goal, kind: "create" }] } : freeSelection(catalogue, goal)), usage: { input: 100, output: 500, cached: 0, cacheWrite: 0 }, cost: .003, latencyMs: 10 });
 
 test("generation denies anonymous callers before loading the catalogue or contacting a model", async () => {
@@ -74,13 +74,23 @@ test("migrated D1 preserves historical jobs and enforces per-account limits acro
   assert.equal((await store.get("old")).user_id, null);
   const job = { fingerprint: "f", day: "2026-10-22", charge: .001, status: "pending", result: null, user_id: "user_alice" };
   const results = await Promise.all(Array.from({ length: 14 }, (_, i) => store.claim({ ...job, id: `job-${i}`, ip: `ip-${i}` }, 2)));
-  assert.equal(results.filter(Boolean).length, 10);
+  assert.equal(results.filter(Boolean).length, 5);
   await store.finish("job-0", .003, "done", "{}");
   await store.finish("job-1", .002, "failed", null);
   assert.equal(await store.claim({ ...job, id: "bob-job", user_id: "user_bob", ip: "ip-bob" }, 2), true);
   const usage = await store.usage("user_alice", "2026-10-22");
-  assert.equal(usage.completed, 1); assert.equal(usage.attemptsToday, 10);
-  assert.equal(usage.estimatedCost.toFixed(3), "0.013");
+  assert.equal(usage.completed, 1); assert.equal(usage.attemptsToday, 5);
+  assert.equal(usage.estimatedCost.toFixed(3), "0.008");
   assert.equal((await store.usage("user_bob", "2026-10-22")).completed, 0);
   db.close();
+});
+
+
+test("only the verified configured owner receives a null account count limit", async()=>{
+ const configured={...env,WORKFLOW_UNLIMITED_USER_ID:'user_alice'};
+ const owner=await handleAccount(authRequest(),configured,memoryComposer());
+ assert.deepEqual(await owner.json(),{completed:0,attemptsToday:0,dailyAttemptLimit:null,dailyIpAttemptLimit:null,unlimited:true});
+ const other=await handleAccount(authRequest(token({sub:'user_bob'}),'/api/auth?usage&user_id=user_alice&unlimited=true'),configured,memoryComposer());
+ assert.deepEqual(await other.json(),{completed:0,attemptsToday:0,dailyAttemptLimit:5,dailyIpAttemptLimit:10,unlimited:false});
+ assert.equal((await handleAccount(new Request('https://example.test/api/auth?usage',{headers:{'x-user-id':'user_alice'}}),configured,memoryComposer())).status,401);
 });

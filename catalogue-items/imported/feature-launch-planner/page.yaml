@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It covers many teams and sets rollback rules.
 new_slug: feature-launch-planner
 name: Feature launch planner
-summary: Name your feature. Get a launch plan with messaging, support prep,
-  rollout steps and rollback triggers.
+summary: Plan a feature launch your whole team can follow. Get messaging, support prep, a staged rollout and rollback triggers for your feature.
 job: build-product
 headline: Feature launch planner
-subhead: "A launch plan that covers more than shipping the code: messaging,
-  sales and support prep, a rollout schedule, and clear triggers for rolling
-  back. Many features fail because nobody launched them."
+subhead: "A launch plan that covers more than shipping the code: messaging, sales and support prep, a rollout schedule, and clear triggers for rolling back. Many features fail because nobody launched them."
 explain: |
   A launch plan that covers more than shipping the code: messaging, sales and support prep, a rollout schedule, and clear triggers for rolling back. Many features fail because nobody launched them.
 
@@ -18,6 +15,10 @@ when:
   - You are launching a feature to existing customers in stages.
   - Your last launch got no attention and you want to know why.
   - You need rollback triggers agreed before go-live.
+not_for:
+  - "You have not written the feature spec yet: write the spec first, then come back to plan the launch."
+  - "You need to decide what to build next: use your roadmap or a simple ranked list of ideas instead."
+  - "You want to test whether an idea works before building it: run a small test with a few customers first."
 you_give:
   - The feature name and what it does
   - Who it is for
@@ -31,7 +32,35 @@ you_get:
   - Metrics to track
   - Rollback triggers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI the feature name, who it is for and your target date.
+  - Paste your spec or notes, and list the teams involved, if you have them.
+  - Ask for a launch plan. Check that the tier fits the size of your feature.
+  - Read the rollback triggers with your team and agree on them before go-live.
+  - Share the task list with each owner, then ask your AI to help you review the launch after it goes live.
+output_sample:
+  input:
+    - Your feature name and what it does
+    - Who the feature is for
+    - Your target launch date
+    - Your spec or notes (optional)
+    - The people who need to be involved (optional)
+  prerequisites:
+    - A written spec or clear notes on the feature, which helps the plan fit your goals
+  output:
+    - name: Launch tier
+      contains: How big the launch is, so a small tweak gets a short list and a big feature gets the full plan.
+    - name: Positioning
+      contains: A short statement of who the feature is for, what it solves and why it matters.
+    - name: Internal alignment and task list
+      contains: Tasks for each team, with an owner and a date, so nobody is left out.
+    - name: Customer comms plan
+      contains: The channels, timing and owners for telling customers about the feature.
+    - name: Sales and support prep
+      contains: What sales and support need to know and have ready before go-live.
+    - name: Rollout stages
+      contains: The steps for moving from a small group of users to everyone.
+    - name: Metrics and monitoring
+      contains: What to watch on launch day and after, tied back to your spec goals.
+    - name: Rollback triggers
+      contains: The exact points that mean pause or roll back, agreed before go-live.

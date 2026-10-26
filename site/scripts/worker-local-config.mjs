@@ -10,6 +10,8 @@ config.name = 'ai-building-blocks-local';
 config.workers_dev = false;
 config.preview_urls = false;
 config.vars.SECURITY_LOCAL = 'true';
+config.vars.PUBLIC_API_ENABLED = 'true';
+config.vars.MCP_OAUTH_ENABLED = 'true';
 config.d1_databases = config.d1_databases.map(db => ({ ...db, database_name: 'ai-blocks-local', database_id: '00000000-0000-0000-0000-000000000001' }));
 Object.assign(config.vars, { COMMENTS_SALT: 'local-test-comment-salt', COMMENTS_TEAM_TOKEN: 'local-test-comment-team', SPACES_SALT: 'local-test-space-salt', SPACES_TEAM_TOKEN: 'local-test-space-team' });
 if (outputDir !== process.cwd()) {

@@ -122,6 +122,19 @@ function specialistMatch(c: Library, clause: string, automation: boolean): Part 
   }).filter(x => x.hits > 0 && x.coverage >= 0.6).sort((a, b) => b.score - a.score || a.b.slug.localeCompare(b.b.slug));
   return ranked[0]?.score >= 5 ? ranked[0].b : undefined;
 }
+/** A reviewed workflow whose title, old titles or slug say most of the request ("get my personal money in order"). */
+export function readyWorkflow(c: Library, goal: string): Part | undefined {
+  const wanted = terms(taskFocus(goal), false).filter(t => !GENERIC.has(t) && !MATCH_NOISE.has(t));
+  if (wanted.length < 3) return undefined;
+  let best: Part | undefined, bestHits = 0;
+  for (const b of c.blocks) {
+    if (!(b.type === "workflow" || b.category === "orchestrator") || !b.steps?.length) continue;
+    const words = new Set(terms(`${b.name} ${b.headline ?? ""} ${b.summary} ${(b.aliases ?? []).join(" ")} ${b.slug.replace(/-/g, " ")}`, false));
+    const hits = wanted.filter(t => words.has(t)).length;
+    if (hits / wanted.length >= 0.75 && (hits > bestHits || hits === bestHits && best && (b.steps?.length ?? 0) > (best.steps?.length ?? 0))) { best = b; bestHits = hits; }
+  }
+  return best;
+}
 export function freeSelection(c: Library, request: string, choices: Choices = {}, context = ""): Selection {
   const error = requestError(request); if (error) throw new Error(error);
   const goal = positiveRequest(request);
@@ -159,7 +172,10 @@ export function freeSelection(c: Library, request: string, choices: Choices = {}
     if (automation) by("landing-page-fix-loop", "Preserve the agent's review, state and approval rules for repeated work.");
   } else {
     const recipe = recipeFor(goal);
+    const ready = recipe ? undefined : requestClauses(goal).length <= 2 ? readyWorkflow(c, goal) : undefined;
     if (recipe) for (const [slug, instruction] of recipe) by(slug, instruction);
+    // A reviewed workflow that already does the whole job keeps its order and checks.
+    else if (ready) for (const b of entries(c, ready)) add(b, `Step of the reviewed workflow "${ready.name}" for: ${goal.slice(0, 120)}`);
     else {
     searchedStages = true;
     const clauses = requestClauses(goal);

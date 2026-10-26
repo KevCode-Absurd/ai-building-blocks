@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks numbers and flags what looks off.
 new_slug: pipeline-stage-health-reviewer
 name: Pipeline stage health reviewer
-summary: Ask for a pipeline review. Get coverage, aging, conversion and at-risk
-  deals stage by stage.
+summary: Run a pipeline review to see coverage, aging, conversion and at-risk deals stage by stage, from your CRM or an uploaded export.
 job: sell-and-negotiate
 headline: Pipeline stage health reviewer
-subhead: Ask for a pipeline review. Get coverage, aging, conversion and at-risk
-  deals stage by stage. Bring a connected CRM. Use the result to plan your next
-  step.
+subhead: Ask for a pipeline review. Get coverage, aging, conversion and at-risk deals stage by stage. Bring a connected CRM. Use the result to plan your next step.
 explain: |
   A stage-by-stage read of your sales pipeline: where coverage is thin, which deals have gone quiet, how many move on and which are at risk. Every number links back to its record.
 
@@ -18,6 +15,10 @@ when:
   - You want to know which deals have stalled.
   - Conversion drops between two stages and you need to see why.
   - You want coverage by owner or team.
+not_for:
+  - "You want a sales forecast: this review reads your pipeline but does not predict what will close, so use your own forecast process."
+  - "You have no CRM link and no export file: get a pipeline export from your CRM first, then upload it."
+  - "You want to change one deal: edit that record in your CRM, or ask your AI to update that single deal."
 you_give:
   - A connected CRM
   - Whose pipeline to review
@@ -29,8 +30,29 @@ you_get:
   - Conversion between stages
   - At-risk deals with record links
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM.
+  - Connect your CRM to your AI. If you can't, export your open pipeline and the last two quarters of closed deals to a file.
+  - Paste this skill into your AI, or upload it as a file.
+  - Say whose pipeline to review and for which period. Add your quota if you want a coverage check.
+  - If you uploaded a file, check that it has stage, amount, close date, owner and last activity columns.
+  - Read the at-risk table first. Open each deal record to check the flags before you act.
+  - Make any fixes in your CRM. This review only reads your data and changes nothing.
+output_sample:
+  input:
+    - Your CRM, connected to your AI, or an uploaded pipeline export
+    - "Whose pipeline to review: yours, a named rep or a team"
+    - The time period (optional, the current quarter is the default)
+    - Your quota or target (optional)
+  prerequisites:
+    - A CRM your AI can read, or a pipeline export file with stage, amount, close date, owner and last activity
+    - Admin permission or a paid plan for the CRM connector, if your CRM requires it
+  output:
+    - name: Summary
+      contains: Open deal count and value, weighted value, coverage against the 3x bar, and the count and value of at-risk deals.
+    - name: By-stage table
+      contains: "For each stage: deal count, value, average age, stale deals and deals with a blank next step."
+    - name: At-risk deals table
+      contains: Each flagged deal with account, stage, value, close date, the flags it hit and a suggested action.
+    - name: Conversion signal
+      contains: Stage-to-stage rates, win rate and median cycle length, taken from the last two quarters of closed deals.
+    - name: Recommended focus
+      contains: The biggest at-risk deal and its next action, the stage with most stuck deals, and any coverage gap.

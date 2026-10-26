@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It works in small safe steps and checks as it goes.
 new_slug: vibe-coded-app-cleaner
 name: Vibe-coded app cleaner
-summary: Point it at a fast-built app. Get dead code and broken imports removed
-  without breaking routes or APIs.
+summary: Clean up a vibe-coded app without breaking it. Remove dead imports, unused files and broken references, and keep your routes, APIs and login as they were.
 job: test-and-fix-code
 headline: Vibe-coded app cleaner
-subhead: An app built fast with AI, tidied up without breaking it. Dead imports,
-  unused files and broken references are removed, while your routes, APIs, login
-  and database stay exactly as they were.
+subhead: An app built fast with AI, tidied up without breaking it. Dead imports, unused files and broken references are removed, while your routes, APIs, login and database stay exactly as they were.
 explain: |
   An app built fast with AI, tidied up without breaking it. Dead imports, unused files and broken references are removed, while your routes, APIs, login and database stay exactly as they were.
 
@@ -18,6 +15,10 @@ when:
   - The type checker shows broken imports you do not understand.
   - You are about to launch and want a safe baseline.
   - You are afraid a cleanup will break pages that already work.
+not_for:
+  - "You want new features or a redesign: ask your AI to build them as a separate task, or hire a developer."
+  - "Your app has no way to run or build it: get it running first, because every cleanup step needs a check."
+  - "You need changes to your database, login or payment setup: ask a developer, because this skill leaves those alone."
 you_give:
   - The app code
   - How to run it and its tests
@@ -29,8 +30,33 @@ you_get:
   - Small, reversible changes
   - A check after each batch
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and edit your project files.
+  - Open your project in an AI that can run commands and edit files, such as Claude Code or Cursor. A plain chat can only give advice.
+  - "Paste the skill into the chat. Then say: Clean up this app using this skill. Do not change routes, APIs, login or the database."
+  - Tell it how to run the app, build it and run tests. Name any files that must stay as they are.
+  - Ask it to map the app first and show you the list. Read it before you let it change anything.
+  - Let it work in small batches. After each batch it should run the checks and undo the batch if one fails.
+  - Open the commits when it finishes. Review them one by one, and check the items it left for you to confirm.
+output_sample:
+  input:
+    - Your app code, as files your AI can read
+    - How to run your app, build it and run its tests
+    - Routes or files that must not change (optional)
+    - The stack you used, such as Next.js (optional)
+  prerequisites:
+    - An AI that can run commands and edit your project files, such as Claude Code or Cursor
+    - Node and npm installed, so the type check and build can run
+  output:
+    - name: Map of the app
+      contains: Every page and route found, plus broken imports, unused exports and leftover debug lines, listed before anything changes.
+    - name: Broken import fixes
+      contains: Each broken import pointed at the right file, without deleting the file it names.
+    - name: Dead code removals
+      contains: Files and exports that nothing imports, each confirmed by search before it is removed.
+    - name: Shared helpers
+      contains: Code repeated in three or more places moved into one helper, such as page metadata.
+    - name: Environment variable check
+      contains: Variables used in code but missing from .env.example, flagged without adding any secrets.
+    - name: Check results
+      contains: The type check, lint, build and test results after each batch, with the last batch undone if one fails.
+    - name: Small commits
+      contains: One commit per change, written so you can review or undo each one on its own.

@@ -10,15 +10,29 @@
 //   node tools/test-blocks.mjs stamp  --at <git-rev>            give old runs a fingerprint from the commit they ran on
 //   node tools/test-blocks.mjs plan   [--only a,b]              what run and judge would send, and a rough price, without sending
 //
+//   node tools/test-blocks.mjs prep   [--only a,b]              imported items: write a test input (and judge list) with Haiku, as a batch
+//   node tools/test-blocks.mjs remaining                        write reports/<label>-untested-remaining.json
+//   node tools/test-blocks.mjs spend                            what's spent against the $200 cap (tools/spend-cap.mjs)
+//
 // Options: --label <name> keeps runs apart (default: today's date). --wait polls a submitted batch until it ends.
-// --again redoes everything picked. --strong grades every pick with the strong judge.
+// --again redoes everything picked. judge --new grades only ungraded runs; judge --recheck only light-judge fails. --strong grades every pick with the strong judge.
+// --imported picks only the imported items not yet tested; --own only the own-built ones.
+// --groups general,ecommerce picks groups. --limit N sends only the first N picks, most-used blocks first
+// (usedIn from site/public/data/blocks.json; blocks already marked tested and passed go last).
+//
+// Spend cap: every batch and direct call is priced before it goes out and refused when it could take total spend
+// since 2026-10-26 past $200 minus $10 headroom (tools/spend-cap.mjs, ledger runs/api-spend-2026-10-26.json).
 //
 // Saving tokens:
 // - A block runs again only when what the writer sees changed (skill, add-on, references, example input, files).
 // - Sprout's files sit in a cached system block, so blocks given the same files share the cache.
-// - Easy runs (short output, short judge list, few code-check flags) go to the light judge. A light fail is
-//   graded again by the strong judge on the next `judge`, so a fail always has a strong judge behind it.
+// - Every run goes to the light judge first. A light fail is graded again by the strong judge on the next
+//   `judge`, so a fail always has a strong judge behind it.
 // - The writer hands back only the skill's output; the judge keeps evidence and notes short.
+// Imported items (origin "imported", untested, in site/public/data/blocks.json) have no example input, so `prep` has
+// Haiku write a realistic one from the item's own inputs, pick Sprout's files when they fit, and draw a judge list from
+// the item's own steps and output when the page has none. Their runs say no tools are available, and their judge sees
+// only the files the run was sent.
 // Only ANTHROPIC_API_KEY is read from ../.env, by name. Run state stays in runs/block-tests/<label>/ (git-ignored).
 import crypto from "node:crypto";
 import { execFileSync } from "node:child_process";
@@ -26,6 +40,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import Anthropic from "@anthropic-ai/sdk";
+import { PRICE, cost, estimate, guard, reserve, settle, charge, summary as spendSummary } from "./spend-cap.mjs";
 import YAML from "../site/node_modules/yaml/dist/index.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -35,17 +50,18 @@ const SPROUT = path.join(ROOT, "knowledge/example-businesses/sprout");
 const FLOW_PAGES = path.join(here, "orchestrator-pages");
 
 // The writer and the judge are different models (docs/planning/05_PRODUCTION_PRINCIPLES.md: never grade with the model that wrote it).
-const WRITER = { model: "claude-opus-5-5", effort: "medium" };
+// Sonnet writes; Opus grades every run first; Fable grades again only what Opus failed.
+const WRITER = { model: "claude-sonnet-5-5", effort: "medium" };
 const JUDGE = { model: "claude-fable-5-1", effort: "high" };
-const LIGHT_JUDGE = { model: "claude-sonnet-5-5", effort: "medium" };
-// $ per million tokens: input, output, cache read, cache write (5-minute). Batches are half price.
-const PRICE = {
-  "claude-opus-5-5": [4, 20, 0.2, 5],
-  "claude-fable-5-1": [10, 50, 0.25, 12.5],
-  "claude-sonnet-5-5": [2, 10, 0.2, 2.5],
-};
-// A run is easy enough for the light judge when all of these hold.
-const EASY = { maxOutputChars: 12000, maxJudgeItems: 8, maxCodeFlags: 5 };
+const LIGHT_JUDGE = { model: "claude-opus-5-5", effort: "medium" };
+const PREPPER = { model: "claude-haiku-5-5", effort: "medium" };
+// Prices live in tools/spend-cap.mjs (PRICE), shared with the spend cap.
+// Output tokens (thinking included) assumed per request when pricing a request before it is sent. Past runs:
+// Measured 2026-10-26: Sonnet writer p90 3.1k (imported up to 6.8k), Opus light judge p90 1.6k / max 3.1k; Fable judge
+// p50 3.2k (older runs). Set at about twice the p90; input is priced with no cache discount; the ledger keeps the real cost.
+const EST_OUT = { run: 7000, light: 3000, strong: 6000, prep: 2500 };
+// Imported skills can carry huge references: the writer gets at most this much skill text, the judge less.
+const IMPORTED_CAP = { skill: 40000, refs: 30000, judge: 12000 };
 
 const args = process.argv.slice(2);
 const cmd = args[0];
@@ -54,6 +70,8 @@ const flag = (k) => args.includes(`--${k}`);
 const LABEL = opt("label") || new Date().toISOString().slice(0, 10);
 const STATE = path.join(ROOT, "runs/block-tests", LABEL);
 const only = opt("only")?.split(",").map((s) => s.trim()).filter(Boolean);
+const groups = opt("groups")?.split(",").map((s) => s.trim()).filter(Boolean);
+const limit = opt("limit") ? Number(opt("limit")) : Infinity;
 
 // ---------- key: read only ANTHROPIC_API_KEY, by name, never print it ----------
 function loadKey() {
@@ -74,19 +92,30 @@ let src = disk;
 const read = (p) => src.read(p).replace(/\r\n/g, "\n");
 const yaml = (p) => YAML.parse(read(p));
 
+/** Imported items nobody has tested yet (origin "imported", no tested flag in the site's index). */
+const IMPORTED = (() => {
+  try { return new Set(JSON.parse(fs.readFileSync(path.join(ROOT, "site/public/data/blocks.json"), "utf8")).blocks.filter((x) => x.origin === "imported" && !x.tested).map((x) => x.slug)); }
+  catch { return new Set(); }
+})();
+
+let blockCache;
 function blocks() {
+  if (blockCache) return blockCache;
   const out = [];
-  for (const group of ["general", "ecommerce", "orchestrators"]) {
+  for (const group of ["general", "ecommerce", "orchestrators", "imported", "agents"]) {
     for (const slug of fs.readdirSync(path.join(ITEMS, group)).sort()) {
+      const imported = IMPORTED.has(slug);
+      if ((group === "imported" || group === "agents") && !imported) continue;
       const dir = path.join(ITEMS, group, slug);
-      if (!fs.existsSync(path.join(dir, "item.yaml"))) continue;
+      if (!fs.existsSync(path.join(dir, "item.yaml")) || !fs.existsSync(path.join(dir, "SKILL.md"))) continue;
       const item = yaml(path.join(dir, "item.yaml"));
-      const pagePath = group === "orchestrators" ? path.join(FLOW_PAGES, `${slug}.yaml`) : path.join(dir, "page.yaml");
-      const page = fs.existsSync(pagePath) ? yaml(pagePath) : {};
-      out.push({ group, slug, dir, item, page, flow: group === "orchestrators" });
+      const flow = group === "orchestrators" && !imported;
+      const pagePath = flow ? path.join(FLOW_PAGES, `${slug}.yaml`) : path.join(dir, "page.yaml");
+      const page = (fs.existsSync(pagePath) ? yaml(pagePath) : {}) || {};
+      out.push({ group, slug, dir, item, page, flow, imported, prep: imported ? load(prepFile(slug)) : null });
     }
   }
-  return out;
+  return (blockCache = out);
 }
 
 const SPROUT_FILES = ["brand.md", "reviews.md", "ads.md", "product-page.md", "ad-results.csv"];
@@ -106,50 +135,120 @@ function filesFor(input) {
 
 const GO_AHEAD = "I can't add anything else right now. Go ahead with what I've given you.";
 
+/** The Sprout files a block's run is sent: from its example input, or for an imported item, the ones its prep picked. */
+const filesOf = (b) => (b.imported && !b.page.example?.input ? (b.prep?.sprout_files || []).filter((x) => SPROUT_FILES.includes(x)) : filesFor(exampleInput(b)));
+const judgeList = (b) => (b.page.judge?.length ? b.page.judge : b.imported ? b.prep?.judge || [] : []);
+const outputShape = (b) => b.page.output_shape || (b.imported ? b.prep?.output_shape || "" : "");
+
 const attach = (files) => files.map((f) => `<file name="sprout/${f}">\n${sproutText[f].trim()}\n</file>`).join("\n\n");
 
 /** The skill as someone would install it: SKILL.md, the online-store add-on (Sprout sells online), and any references. */
-function skillText(b) {
+function skillText(b, judgeView = false) {
+  if (b.imported) return importedSkill(b, judgeView);
   let s = read(path.join(b.dir, "SKILL.md")).trim();
   const board = path.join(b.dir, "boards/ecommerce.md");
   if (src.exists(board)) s += `\n\n---\n\n# Online-store add-on\n\n${read(board).trim()}`;
   const refs = path.join(b.dir, "references");
-  if (src.exists(refs)) for (const f of src.list(refs).sort()) s += `\n\n---\n\n# Reference: ${f}\n\n${read(path.join(refs, f)).trim()}`;
+  // References can sit in sub-folders; each file is added with its path under references/.
+  const walk = (d, rel = "") => src.list(d).sort().flatMap((f) => {
+    const p = path.join(d, f);
+    let isDir = false;
+    try { isDir = src === disk ? fs.statSync(p).isDirectory() : !/\.[a-z0-9]+$/i.test(f); } catch {}
+    return isDir ? walk(p, `${rel}${f}/`) : [[`${rel}${f}`, p]];
+  });
+  if (src.exists(refs)) for (const [f, p] of walk(refs)) s += `\n\n---\n\n# Reference: ${f}\n\n${read(p).trim()}`;
   return s;
 }
+
+/** An imported skill, cut to IMPORTED_CAP so one huge reference can't eat the budget. */
+function importedSkill(b, judgeView) {
+  const cut = (t, n) => (t.length > n ? `${t.slice(0, n)}\n[cut: ${t.length - n} more characters]` : t);
+  let s = cut(read(path.join(b.dir, "SKILL.md")).trim(), judgeView ? IMPORTED_CAP.judge : IMPORTED_CAP.skill);
+  if (judgeView) return s;
+  const refs = path.join(b.dir, "references");
+  if (!fs.existsSync(refs)) return s;
+  const walk = (d, rel = "") => fs.readdirSync(d).sort().flatMap((f) => { const p = path.join(d, f); return fs.statSync(p).isDirectory() ? walk(p, `${rel}${f}/`) : [[`${rel}${f}`, p]]; });
+  let room = IMPORTED_CAP.refs;
+  for (const [f, p] of walk(refs)) {
+    if (room <= 0) { s += `\n\n---\n\n# Reference: ${f}\n\n[left out for length]`; continue; }
+    const t = cut(read(p).trim(), room);
+    room -= t.length;
+    s += `\n\n---\n\n# Reference: ${f}\n\n${t}`;
+  }
+  return s;
+}
+
+const NO_TOOLS = `\n\nThis is a test run with no tools: you can't run code, search, open links or read files other than any attached above. Where the skill needs a tool, a file or a result you don't have, say so in a line and do every part you can from what you were given (for example, give the exact commands or the plan). Never describe results of a tool you didn't run.`;
 
 const SYSTEM_WRAP = (skill) => `You are running a skill the user installed. Follow it exactly: its steps, its rules and its output format. Hand back only what its output format asks for: no preamble, no recap of the steps, no closing offer.\n\n<skill>\n${skill}\n</skill>`;
 
 function exampleInput(b) {
-  return (b.page.example?.input || "").replace(/^\[the (skill|handoff pack)\][^\n]*\n?/, "").trim();
+  return (b.page.example?.input || (b.imported ? b.prep?.input : "") || "").replace(/^\[the (skill|handoff pack)\][^\n]*\n?/, "").trim();
 }
 
 const sha = (...parts) => crypto.createHash("sha256").update(parts.join("\u0000")).digest("hex").slice(0, 16);
 /** Everything the writer sees for this block. When it changes, the block needs a new run. */
-const runPrint = (b) => sha(WRITER.model, WRITER.effort, skillText(b), exampleInput(b), filesFor(exampleInput(b)).join(","));
+const runPrint = (b) => sha(WRITER.model, WRITER.effort, skillText(b), exampleInput(b), filesOf(b).join(","), ...(b.imported ? [NO_TOOLS] : []));
 /** What the judge grades against, on top of the run. When it changes, the run needs a new grade. */
-const gradePrint = (b, run) => sha(run.fp || run.at, b.page.judge?.join("\n") || "", b.page.output_shape || "");
+const gradePrint = (b, run) => sha(run.fp || run.at, judgeList(b).join("\n"), outputShape(b));
 
 /** The attached files go first, in a cached system block, so blocks given the same files share one cache. */
-function writerSystem(files, skill) {
+function writerSystem(files, skill, noTools = false) {
   const sys = [];
   if (files.length) sys.push({ type: "text", text: `The user attached these files for this run:\n\n${attach(files)}`, cache_control: { type: "ephemeral" } });
-  sys.push({ type: "text", text: SYSTEM_WRAP(skill) });
+  sys.push({ type: "text", text: SYSTEM_WRAP(skill) + (noTools ? NO_TOOLS : "") });
   return sys;
 }
 
 function runRequest(b) {
   const input = exampleInput(b);
-  const files = filesFor(input);
+  const files = filesOf(b);
   // A test has one turn, so it answers "add more, or shall I go ahead?" up front, as a person would.
   const user = `${files.length ? `${input}\n\n(The files are attached above: ${files.map((f) => `sprout/${f}`).join(", ")}.)` : input}\n\n${GO_AHEAD}`;
   return {
     model: WRITER.model,
     max_tokens: 32000,
     output_config: { effort: WRITER.effort },
-    system: writerSystem(files, skillText(b)),
+    system: writerSystem(files, skillText(b), b.imported),
     messages: [{ role: "user", content: user }],
   };
+}
+
+// ---------- prep: a test input and judge list for imported items, written by Haiku ----------
+const PREP_SCHEMA = {
+  type: "object", additionalProperties: false, required: ["input", "sprout_files", "judge", "output_shape"],
+  properties: {
+    input: { type: "string" },
+    sprout_files: { type: "array", items: { type: "string", enum: SPROUT_FILES } },
+    judge: { type: "array", items: { type: "string" } },
+    output_shape: { type: "string" },
+  },
+};
+const PREP_RULES = `You set up a test of one AI skill from a free library. Write what a real user would send the skill, so a model can run it once and a judge can grade the result.
+
+- input: the user's message, written as the user, 60 to 250 words. Make it specific and realistic for the skill's own inputs (what it says to give it). Put any data the skill needs inline as short sample data (a few rows, a short draft, a short brief). Don't paste whole files; don't name links the model would have to open. If the skill needs files that can't be pasted (photos, audio, big datasets), describe them in a sentence as attached and keep going.
+- sprout_files: Sprout is an example consumer brand (greens gummies sold online) with these files: brand.md (brand voice, look, claims), reviews.md (customer reviews), ads.md (live ad copy), product-page.md (product page text), ad-results.csv (ad results export). Pick the ones a user of THIS skill would attach, only when the skill is about a consumer brand's marketing, brand, product page, ads or reviews. If you pick any, the input must be written as Sprout's owner and mention the attached files. Otherwise leave it empty.
+- judge: 4 to 6 pass/fail checks for the output, drawn from the skill's own steps, rules and output format, each checkable from the output text alone. Include one on not inventing facts beyond the input.
+- output_shape: the skill's output format in one to five lines (section names in order), or "free form" if it defines none.`;
+
+function prepRequest(b) {
+  const page = ["summary", "when", "you_give", "you_get"].filter((k) => b.page[k]).map((k) => `${k}: ${JSON.stringify(b.page[k])}`).join("\n");
+  const skill = read(path.join(b.dir, "SKILL.md")).trim();
+  return {
+    model: PREPPER.model,
+    max_tokens: 4000,
+    output_config: { effort: PREPPER.effort, format: { type: "json_schema", schema: PREP_SCHEMA } },
+    system: [{ type: "text", text: PREP_RULES }],
+    messages: [{ role: "user", content: `<skill name="${b.page.name || b.item.name || b.slug}">\n<page>\n${page}\n</page>\n<skill_md>\n${skill.length > 15000 ? `${skill.slice(0, 15000)}\n[cut]` : skill}\n</skill_md>\n</skill>\n\nSet up the test.` }],
+  };
+}
+
+const prepFile = (slug) => path.join(STATE, "prep", `${slug}.json`);
+function recordPrep(b, req, msg, batch) {
+  let p;
+  try { p = JSON.parse(textOf(msg)); } catch { p = { error: `Reply wasn't JSON (stop: ${msg.stop_reason}).` }; }
+  const model = msg.model || req.model;
+  save(prepFile(b.slug), { slug: b.slug, group: b.group, model, batch, at: new Date().toISOString(), usage: msg.usage, usd: cost(model, msg.usage, batch), ...p });
 }
 
 // ---------- code checks ----------
@@ -209,35 +308,54 @@ Grade strictly and fairly:
 
 Keep it short: each evidence is one quote or note of 25 words or fewer, each why is one line, the fix is one or two sentences.`;
 
-function judgeSystem() {
+const IMPORTED_JUDGE_RULES = `You grade one run of a skill (a reusable AI instruction set) from a free library of AI skills. The skill was given a test input written for this test and, when listed, some files from Sprout, an example consumer brand. The input and those files are the only facts the run was allowed to use.
+
+The run had no tools: it couldn't run code, search, open links or read anything not given. A run that says what it couldn't do and still does every part it can (a plan, the exact commands, a draft) is right. A run that reports results of code or searches it didn't run is inventing.
+
+Grade strictly and fairly:
+1. Each check in the judge list: met or not, with the evidence (quote the output). If a check needs a tool the run didn't have, it is met when the run handled that honestly and did the rest.
+2. invented: every number, quote, source, study, claim or result in the output that isn't in the input or files and can't be worked out from them. Arithmetic on given numbers is fine ("worked_out"). Marked placeholders, examples, MISSING lines, and general knowledge not presented as the user's facts are fine.
+3. For each code-check flag, say what it is.
+4. shape_followed: does the output follow the skill's output format (sections in order, nothing important left out)? Small layout differences are fine.
+5. missing_used_well: when a needed fact wasn't given, did it say so (or ask) instead of guessing? True if nothing was missing.
+6. safety: anything harmful, misleading or against ad, health, legal or privacy rules that the output doesn't flag. Empty if none.
+7. verdict "pass" only if every check is met, nothing is invented, the shape is followed and safety is empty. Otherwise "fail".
+8. summary: two plain sentences on how useful the result is to the user.
+9. fix: if it failed, the smallest change to the SKILL text that would stop it happening again (name the step or rule). Empty if it passed.
+
+Keep it short: each evidence is one quote or note of 25 words or fewer, each why is one line, the fix is one or two sentences.`;
+
+function judgeSystem(b, run) {
+  if (b?.imported) {
+    const files = run?.files || [];
+    return [{ type: "text", text: `${IMPORTED_JUDGE_RULES}${files.length ? `\n\n<files_the_run_was_sent>\n${attach(files)}\n</files_the_run_was_sent>` : ""}`, cache_control: { type: "ephemeral" } }];
+  }
   return [
     { type: "text", text: `${JUDGE_RULES}\n\n<sprout_files>\n${attach(SPROUT_FILES)}\n</sprout_files>`, cache_control: { type: "ephemeral" } },
   ];
 }
 
-/** Light judge for easy runs; the strong judge for the rest, for workflows, with --strong, and after a light fail. */
-function judgeFor(b, run, checks) {
+/** The light judge grades every run first; the strong judge grades again after a light fail, or with --strong. */
+function judgeFor(b) {
   const prev = load(gradeFile(b.slug));
-  if (flag("strong") || b.flow || (prev?.tier === "light" && prev.verdict !== "pass")) return { ...JUDGE, tier: "strong" };
-  const easy = run.output.length <= EASY.maxOutputChars && (b.page.judge || []).length <= EASY.maxJudgeItems
-    && checks.flags.length <= EASY.maxCodeFlags && !checks.missingHeads.length && run.stop_reason === "end_turn";
-  return easy ? { ...LIGHT_JUDGE, tier: "light" } : { ...JUDGE, tier: "strong" };
+  if (flag("strong") || (prev?.tier === "light" && prev.verdict !== "pass")) return { ...JUDGE, tier: "strong" };
+  return { ...LIGHT_JUDGE, tier: "light" };
 }
 
 function judgeRequest(b, run, extra = "") {
   const input = run.input;
   const checks = codeChecks(b, input, run.output);
-  const j = judgeFor(b, run, checks);
-  const judge = (b.page.judge || []).map((j, i) => `${i + 1}. ${j}`).join("\n") || "(none listed: grade against the skill's own checks)";
+  const j = judgeFor(b);
+  const judge = judgeList(b).map((j, i) => `${i + 1}. ${j}`).join("\n") || "(none listed: grade against the skill's own steps and output format)";
   const user = `<block name="${b.page.name || b.item.name}" slug="${b.slug}" role="${b.item.role}">
 <skill>
-${skillText(b)}
+${skillText(b, true)}
 </skill>
 <judge_list>
 ${judge}
 </judge_list>
 <output_shape>
-${b.page.output_shape || "(see the skill)"}
+${outputShape(b) || "(see the skill)"}
 </output_shape>
 </block>
 
@@ -260,7 +378,7 @@ Grade this run.`;
     model: j.model,
     max_tokens: 16000,
     output_config: { effort: j.effort, format: { type: "json_schema", schema: JUDGE_SCHEMA } },
-    system: judgeSystem(),
+    system: judgeSystem(b, run),
     messages: [{ role: "user", content: user }],
   };
 }
@@ -271,11 +389,8 @@ const gradeFile = (slug) => path.join(STATE, "grades", `${slug}.json`);
 const save = (f, v) => { fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, JSON.stringify(v, null, 2)); };
 const load = (f) => (fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : null);
 
-function cost(model, u, batch) {
-  const [i, o, cr, cw] = PRICE[model];
-  const usd = ((u.input_tokens || 0) * i + (u.output_tokens || 0) * o + (u.cache_read_input_tokens || 0) * cr + (u.cache_creation_input_tokens || 0) * cw) / 1e6;
-  return +(batch ? usd / 2 : usd).toFixed(4);
-}
+/** Output tokens to assume for a request when pricing it before it is sent. */
+const estOut = (req) => (req.model === PREPPER.model ? EST_OUT.prep : req.model === WRITER.model ? EST_OUT.run : req.model === LIGHT_JUDGE.model ? EST_OUT.light : EST_OUT.strong);
 
 const textOf = (msg) => msg.content.filter((c) => c.type === "text").map((c) => c.text).join("\n").trim();
 
@@ -284,7 +399,7 @@ function recordRun(b, req, msg, batch) {
   const model = msg.model || req.model;
   save(runFile(b.slug), {
     slug: b.slug, group: b.group, model, effort: req.output_config.effort, batch, fp: runPrint(b), usd_before: spentBefore(runFile(b.slug)),
-    at: new Date().toISOString(), input: req.messages[0].content, files: filesFor(exampleInput(b)),
+    at: new Date().toISOString(), input: req.messages[0].content, files: filesOf(b),
     stop_reason: msg.stop_reason, output: textOf(msg), usage: msg.usage, usd: cost(model, msg.usage, batch),
   });
 }
@@ -306,9 +421,13 @@ const spentBefore = (f) => { const p = load(f); return p ? +((p.usd || 0) + (p.u
 let client;
 const api = () => (client ??= new Anthropic({ maxRetries: 4 }));
 
-async function call(req) {
+/** One direct call, priced and checked against the spend cap first, entered in the ledger after. */
+async function call(req, what = "direct call") {
+  guard(estimate(req, estOut(req), false), `${what} (${req.model})`);
   const stream = api().messages.stream(req);
-  return stream.finalMessage();
+  const msg = await stream.finalMessage();
+  charge({ script: "test-blocks", kind: what, label: LABEL, model: msg.model || req.model }, cost(msg.model || req.model, msg.usage, false));
+  return msg;
 }
 
 async function pool(items, n, fn) {
@@ -317,40 +436,58 @@ async function pool(items, n, fn) {
   await Promise.all(workers);
 }
 
+/** Collect any open batch that has ended, send the picks that aren't in an open batch, and with --wait poll until all end. */
 async function runBatch(kind, list, build, record) {
   const metaFile = path.join(STATE, `${kind}-batches.json`);
   const meta = load(metaFile) || [];
-  const pending = meta.find((m) => !m.done);
-  let id = pending?.id;
-  if (!id) {
-    if (!list.length) { console.log(`Nothing to ${kind}.`); return; }
-    const requests = list.map((b) => ({ custom_id: b.slug, params: build(b) }));
-    const batch = await api().messages.batches.create({ requests });
-    id = batch.id;
-    meta.push({ id, slugs: list.map((b) => b.slug), at: new Date().toISOString(), done: false });
+  const collect = async (entry) => {
+    const bt = await api().messages.batches.retrieve(entry.id);
+    const c = bt.request_counts;
+    console.log(`${kind} batch ${entry.id.slice(-8)}: ${bt.processing_status}. done ${c.succeeded}, errors ${c.errored}, still going ${c.processing}`);
+    if (bt.processing_status !== "ended") return false;
+    const bySlug = new Map(blocks().map((x) => [x.slug, x]));
+    let ok = 0, bad = 0, usd = 0;
+    for await (const r of await api().messages.batches.results(entry.id)) {
+      const blk = bySlug.get(entry.ids?.[r.custom_id] || r.custom_id);
+      if (r.result.type === "succeeded") {
+        const m = r.result.message;
+        usd += cost(m.model, m.usage, true);
+        // A block renamed or removed since it was sent still cost money; it's counted, not recorded.
+        if (blk) record(blk, build(blk), m, true); ok++;
+      } else { bad++; console.log(`  ${r.custom_id}: ${r.result.type}${r.result.type === "errored" ? ` (${r.result.error?.error?.message || r.result.error?.type})` : ""}`); }
+    }
+    entry.done = true;
     save(metaFile, meta);
-    console.log(`Sent ${list.length} ${kind} requests as one batch.`);
-  }
-  const entry = meta.find((m) => m.id === id);
+    settle(entry.id, usd);
+    console.log(`Collected ${ok}, failed ${bad}. This batch cost $${usd.toFixed(2)}.`);
+    return true;
+  };
+  for (const e of meta.filter((m) => !m.done)) await collect(e);
+  const open = new Set(meta.filter((m) => !m.done).flatMap((m) => m.slugs));
+  const fresh = list.filter((x) => !open.has(x.slug));
+  if (fresh.length) {
+    // A custom_id is at most 64 of [A-Za-z0-9_-]; longer or odd slugs go by a hash, kept in the batch's ids map.
+    const ids = {};
+    const cid = (slug) => (/^[A-Za-z0-9_-]{1,64}$/.test(slug) ? slug : ((ids[`h_${sha(slug)}`] = slug), `h_${sha(slug)}`));
+    const requests = fresh.map((x) => ({ custom_id: cid(x.slug), params: build(x) }));
+    const est = requests.reduce((t, r) => t + estimate(r.params, estOut(r.params), true), 0);
+    guard(est, `a ${kind} batch of ${requests.length}`);
+    console.log(`Pricing: about $${est.toFixed(2)} at most for ${requests.length} ${kind} requests.`);
+    const batch = await api().messages.batches.create({ requests });
+    reserve({ id: batch.id, script: "test-blocks", kind, label: LABEL, requests: requests.length, estimate_usd: +est.toFixed(4) });
+    meta.push({ id: batch.id, slugs: fresh.map((x) => x.slug), ids, at: new Date().toISOString(), done: false });
+    save(metaFile, meta);
+    console.log(`Sent ${fresh.length} ${kind} requests as one batch.`);
+  } else if (!meta.some((m) => !m.done)) { console.log(`Nothing to ${kind}.`); return; }
   for (;;) {
-    const b = await api().messages.batches.retrieve(id);
-    const c = b.request_counts;
-    console.log(`${kind} batch: ${b.processing_status}. done ${c.succeeded}, errors ${c.errored}, still going ${c.processing}`);
-    if (b.processing_status === "ended") break;
+    const left = meta.filter((m) => !m.done);
+    if (!left.length) return;
     if (!flag("wait")) { console.log("Run the same command again (or add --wait) to collect the results."); return; }
     await new Promise((r) => setTimeout(r, 60_000));
+    for (const e of left) await collect(e);
   }
-  const bySlug = new Map(blocks().map((b) => [b.slug, b]));
-  let ok = 0, bad = 0;
-  for await (const r of await api().messages.batches.results(id)) {
-    const b = bySlug.get(r.custom_id);
-    if (r.result.type === "succeeded") { record(b, build(b), r.result.message, true); ok++; }
-    else { bad++; console.log(`  ${r.custom_id}: ${r.result.type}${r.result.type === "errored" ? ` (${r.result.error?.error?.message || r.result.error?.type})` : ""}`); }
-  }
-  entry.done = true;
-  save(metaFile, meta);
-  console.log(`Collected ${ok}, failed ${bad}.`);
 }
+
 
 // ---------- workflows: each step runs its own block on the start input plus the earlier steps' work ----------
 /** A workflow needs a new run when its start input, its steps or any step's block changed. */
@@ -366,7 +503,7 @@ async function runFlow(f, all) {
     const prior = steps.map((p) => `<step n="${p.step}" block="${p.slug}">\n${p.output}\n</step>`).join("\n\n");
     const user = `This is step ${i + 1} of ${f.item.steps.length} in the workflow "${f.item.name}". This step: ${s.note}\n\nWhat I gave the workflow at the start:\n${start}${files.length ? `\n\n(The files are attached above: ${files.map((x) => `sprout/${x}`).join(", ")}.)` : ""}${prior ? `\n\nThe work from the earlier steps:\n\n${prior}` : ""}\n\n${GO_AHEAD}`;
     const req = { model: WRITER.model, max_tokens: 32000, output_config: { effort: WRITER.effort }, system: writerSystem(files, skillText(b)), messages: [{ role: "user", content: user }] };
-    const msg = await call(req);
+    const msg = await call(req, "flow step");
     steps.push({ step: i + 1, slug: b.slug, stop_reason: msg.stop_reason, output: textOf(msg), usage: msg.usage, usd: cost(req.model, msg.usage, false) });
     console.log(`  ${f.slug}: step ${i + 1} ${b.slug} (${msg.stop_reason})`);
     if (msg.stop_reason !== "end_turn") break;
@@ -376,7 +513,7 @@ async function runFlow(f, all) {
   save(runFile(f.slug), run);
   const extra = `<workflow_note>This is a ready workflow. The output is every step's work in order. Also check that each step used the earlier steps' work and that the steps agree with each other.</workflow_note>`;
   const req = judgeRequest(f, run, extra);
-  recordGrade(f, req, await call(req), false);
+  recordGrade(f, req, await call(req, "flow grade"), false);
   console.log(`  ${f.slug}: graded ${load(gradeFile(f.slug)).verdict}`);
 }
 
@@ -392,7 +529,7 @@ function report() {
     fs.mkdirSync(tests, { recursive: true });
     const met = (g.criteria || []).filter((c) => c.met).length;
     const md = [
-      `# Test run on Sprout, ${run.at.slice(0, 10)}`,
+      `# Test run${run.files?.length || !b.imported ? " on Sprout" : " on an example input"}, ${run.at.slice(0, 10)}`,
       "",
       `Result: **${g.verdict}**. Ran on ${run.model} (effort ${run.effort}), graded by ${g.model}. Judge list: ${met} of ${(g.criteria || []).length} met. Invented facts: ${(g.invented || []).length}.`,
       "",
@@ -435,7 +572,7 @@ function markItem(b, run, g) {
   const raw = fs.readFileSync(f, "utf8");
   const eol = raw.includes("\r\n") ? "\r\n" : "\n";
   const body = raw.replace(/\r\n/g, "\n").replace(/\ntested:\n(?: {2}.*\n?)*/g, "\n").replace(/\n+$/, "\n");
-  const block = `tested:\n  on: ${run.at.slice(0, 10)}\n  business: sprout\n  model: ${run.model}\n  judge: ${g.model}\n  result: ${g.verdict}\n`;
+  const block = `tested:\n  on: ${run.at.slice(0, 10)}\n  business: ${run.files?.length || !b.imported ? "sprout" : "example-input"}\n  model: ${run.model}\n  judge: ${g.model}\n  result: ${g.verdict}\n`;
   fs.writeFileSync(f, (body + block).replace(/\n/g, eol));
 }
 
@@ -487,55 +624,103 @@ function stamp(rev) {
   console.log(`Stamped ${n} runs from ${rev}${gone ? `; ${gone} blocks weren't in that commit` : ""}.`);
 }
 
-/** What `run` and `judge` would send now, with a rough price from this label's own past runs and grades. */
+/** What `run` and `judge` would send now, priced the cautious way the spend cap prices it, and from real costs when this label has some. */
 function plan() {
   const all = blocks().filter((b) => !b.flow);
-  const runs = all.map((b) => load(runFile(b.slug))).filter(Boolean), grades = all.map((b) => load(gradeFile(b.slug))).filter(Boolean);
-  const avg = (xs, d) => (xs.length ? xs.reduce((a, x) => a + x.usd, 0) / xs.length : d);
-  const toRun = pick(all).filter((b) => flag("again") || runStale(b, load(runFile(b.slug))));
-  const toJudge = pick(all).filter((b) => { const r = load(runFile(b.slug)); return r && !runStale(b, r) && (flag("again") || gradeStale(b, r, load(gradeFile(b.slug)))); });
-  const tiers = toJudge.map((b) => { const r = load(runFile(b.slug)); return judgeFor(b, r, codeChecks(b, r.input, r.output)).tier; });
+  const toRun = first(pick(all).filter((b) => flag("again") || runStale(b, load(runFile(b.slug)))));
+  const toJudge = first(pick(all).filter((b) => { const r = load(runFile(b.slug)); return r && !runStale(b, r) && (flag("again") || gradeStale(b, r, load(gradeFile(b.slug)))); }));
+  const tiers = toJudge.map((b) => judgeFor(b).tier);
   const light = tiers.filter((t) => t === "light").length, strong = tiers.length - light;
-  // A label with nothing done yet is priced from every label's past batch runs and grades.
-  const past = (sub) => fs.readdirSync(path.join(ROOT, "runs/block-tests")).flatMap((l) => { const d = path.join(ROOT, "runs/block-tests", l, sub); return fs.existsSync(d) ? fs.readdirSync(d).map((f) => load(path.join(d, f))) : []; });
-  const perRun = avg(runs.filter((r) => r.batch), avg(past("runs").filter((r) => r.batch && !r.steps), 0));
-  const perStrong = avg(grades.filter((g) => g.tier !== "light" && g.batch), avg(past("grades").filter((g) => g.tier !== "light"), 0) / 2);
-  const perLight = perStrong * (PRICE[LIGHT_JUDGE.model][1] / PRICE[JUDGE.model][1]);
-  const list = toRun.map((b) => `\n  ${b.slug}`).join("");
-  console.log(`run: ${toRun.length} blocks, about $${(toRun.length * perRun).toFixed(2)} as a batch${list}`);
-  console.log(`judge: ${toJudge.length} runs (${light} light, ${strong} strong), about $${(light * perLight + strong * perStrong).toFixed(2)} as a batch`);
-  console.log("Blocks that run again need grading after, so add their grades to the run price.");
+  const runEst = toRun.reduce((x, b) => x + estimate(runRequest(b), EST_OUT.run, true), 0);
+  // A run not made yet is graded on an output of about EST_OUT.run tokens.
+  const fakeRun = (b) => ({ input: exampleInput(b), output: "x".repeat(EST_OUT.run * 3), stop_reason: "end_turn" });
+  const gradeEst = (b, run, j) => estimate({ ...judgeRequest(b, run), model: j.model }, EST_OUT[j.tier], true);
+  const newGrades = toRun.reduce((x, b) => x + gradeEst(b, fakeRun(b), { ...LIGHT_JUDGE, tier: "light" }), 0);
+  const judgeEst = toJudge.reduce((x, b, i) => x + gradeEst(b, load(runFile(b.slug)), tiers[i] === "light" ? { ...LIGHT_JUDGE, tier: "light" } : { ...JUDGE, tier: "strong" }), 0);
+  const done = (sub) => { const d = path.join(STATE, sub); return fs.existsSync(d) ? fs.readdirSync(d).map((x) => load(path.join(d, x))).filter((r) => r.batch && r.model) : []; };
+  const runs = done("runs").filter((r) => r.model === WRITER.model), lights = done("grades").filter((g) => g.tier === "light");
+  const avg = (xs) => (xs.length ? xs.reduce((x, r) => x + r.usd, 0) / xs.length : null);
+  console.log(`run: ${toRun.length} blocks, at most about $${runEst.toFixed(2)} as a batch, plus about $${newGrades.toFixed(2)} to grade them (light judge)`);
+  console.log(`judge: ${toJudge.length} runs (${light} light, ${strong} strong), at most about $${judgeEst.toFixed(2)} as a batch`);
+  if (avg(runs) != null) console.log(`Real so far in ${LABEL}: $${avg(runs).toFixed(4)} a run (${runs.length}), ${avg(lights) != null ? `$${avg(lights).toFixed(4)} a light grade (${lights.length})` : "no light grades yet"}. At that rate: run $${(toRun.length * avg(runs)).toFixed(2)}.`);
+  if (flag("list")) toRun.forEach((b) => console.log(`  ${b.group}/${b.slug}`));
+  console.log(spendSummary());
 }
 
 // ---------- main ----------
-const pick = (list) => (only ? list.filter((b) => only.includes(b.slug)) : list);
+const pick = (list) => list.filter((b) => (!only || only.includes(b.slug)) && (!groups || groups.includes(b.group))
+  && (!flag("imported") || b.imported) && (!flag("own") || !b.imported));
+/** Most-used blocks first (usedIn = how many workflows use it), blocks already tested and passed last, then --limit. */
+function first(list) {
+  let site = {};
+  try { site = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(ROOT, "site/public/data/blocks.json"), "utf8")).blocks.map((x) => [x.slug, x])); } catch {}
+  const done = (b) => (b.item.tested?.result === "pass" ? 1 : 0);
+  const used = (b) => Number(site[b.slug]?.usedIn) || 0;
+  return [...list].sort((a, b) => done(a) - done(b) || used(b) - used(a) || a.slug.localeCompare(b.slug)).slice(0, limit);
+}
 
-if (!["run", "judge", "flows", "status", "report", "stamp", "plan"].includes(cmd)) {
+/** Everything without a final grade in this label, for the next round of testing (subscription subagents). */
+function remaining() {
+  const out = [];
+  for (const b of first(pick(blocks()))) {
+    const r = load(runFile(b.slug)), g = load(gradeFile(b.slug));
+    const stale = r && runStale(b, r);
+    let status = null;
+    if (!r) status = b.imported && !exampleInput(b) ? "no test input yet" : "not run";
+    else if (stale) status = g ? "changed since it was run and graded" : "changed since it was run; not graded";
+    else if (!g || gradeStale(b, r, g)) status = g?.tier === "light" && g.verdict !== "pass" ? "light judge failed it; strong judge not run" : "run, not graded";
+    if (!status) continue;
+    out.push({ slug: b.slug, group: b.group, origin: b.imported ? "imported" : "own", kind: b.flow ? "workflow" : "skill", status,
+      dir: path.relative(ROOT, b.dir).split(path.sep).join("/"), ...(b.imported && exampleInput(b) ? { test_input: exampleInput(b), judge: judgeList(b) } : {}),
+      ...(g?.fix ? { light_judge_fix: g.fix } : {}) });
+  }
+  const file = path.join(ROOT, "reports", `${opt("date") || LABEL}-untested-remaining.json`);
+  save(file, { label: LABEL, written: new Date().toISOString(), count: out.length, items: out });
+  const by = out.reduce((a, x) => ((a[`${x.origin} ${x.status}`] = (a[`${x.origin} ${x.status}`] || 0) + 1), a), {});
+  console.log(`Wrote ${path.relative(ROOT, file)}: ${out.length} items. ${JSON.stringify(by)}`);
+}
+
+if (!["run", "judge", "flows", "status", "report", "stamp", "plan", "spend", "prep", "remaining"].includes(cmd)) {
   const lines = read(fileURLToPath(import.meta.url)).split("\n");
   console.log(lines.slice(0, lines.findIndex((l) => !l.startsWith("//"))).join("\n"));
   process.exit(1);
 }
 if (cmd === "status") { status(); process.exit(0); }
+if (cmd === "spend") { console.log(spendSummary()); process.exit(0); }
+if (cmd === "remaining") { remaining(); process.exit(0); }
 if (cmd === "plan") { plan(); process.exit(0); }
 if (cmd === "report") { const rows = report(); console.log(`Wrote tests/ for ${rows.filter((r) => r.run).length} blocks.`); status(); process.exit(0); }
 if (cmd === "stamp") { if (!opt("at")) throw new Error("stamp needs --at <git-rev>"); stamp(opt("at")); status(); process.exit(0); }
 
 loadKey();
 const all = blocks();
+/** Blocks already in an open batch of this kind; they're left out before --limit counts. */
+const openIn = (kind) => new Set((load(path.join(STATE, `${kind}-batches.json`)) || []).filter((m) => !m.done).flatMap((m) => m.slugs));
+if (cmd === "prep") {
+  const open = openIn("prep");
+  const list = first(pick(all.filter((b) => b.imported && !b.page.example?.input)).filter((b) => !open.has(b.slug) && (flag("again") || !b.prep?.input)));
+  await runBatch("prep", list, prepRequest, recordPrep);
+}
 if (cmd === "run") {
-  const list = pick(all.filter((b) => !b.flow)).filter((b) => flag("again") || runStale(b, load(runFile(b.slug))));
+  // An imported item runs once prep has given it a test input.
+  const open = openIn("run");
+  const list = first(pick(all.filter((b) => !b.flow && (!b.imported || exampleInput(b)))).filter((b) => !open.has(b.slug) && (flag("again") || runStale(b, load(runFile(b.slug))))));
   if (flag("direct")) await pool(list, 6, async (b) => { const req = runRequest(b); recordRun(b, req, await call(req), false); console.log(`  ran ${b.slug}`); });
   else await runBatch("run", list, runRequest, recordRun);
 }
 if (cmd === "judge") {
   // Only grade runs that are current: a run of an old version of the block is run again first.
-  const list = pick(all.filter((b) => !b.flow)).filter((b) => { const r = load(runFile(b.slug)); return r && !runStale(b, r) && (flag("again") || gradeStale(b, r, load(gradeFile(b.slug)))); });
+  // --new grades only runs with no grade yet; --recheck only light-judge fails (strong judge). Neither re-grades a
+  // block just because its page's judge list changed, so a rewrite in progress doesn't trigger a paid re-grade.
+  const want = (b, r, g) => (flag("new") ? !g : flag("recheck") ? g?.tier === "light" && g.verdict !== "pass" : flag("again") || gradeStale(b, r, g));
+  const open = openIn("judge");
+  const list = first(pick(all.filter((b) => !b.flow)).filter((b) => { const r = load(runFile(b.slug)); return !open.has(b.slug) && r && !runStale(b, r) && want(b, r, load(gradeFile(b.slug))); }));
   const build = (b) => judgeRequest(b, load(runFile(b.slug)));
   if (flag("direct")) await pool(list, 6, async (b) => { const req = build(b); recordGrade(b, req, await call(req), false); console.log(`  graded ${b.slug}: ${load(gradeFile(b.slug)).verdict}`); });
   else await runBatch("judge", list, build, recordGrade);
 }
 if (cmd === "flows") {
-  const list = pick(all.filter((b) => b.flow)).filter((b) => { const r = load(runFile(b.slug)); return flag("again") || runStale(b, r) || gradeStale(b, r, load(gradeFile(b.slug))); });
+  const list = first(pick(all.filter((b) => b.flow)).filter((b) => { const r = load(runFile(b.slug)); return flag("again") || runStale(b, r) || gradeStale(b, r, load(gradeFile(b.slug))); }));
   await pool(list, 4, (f) => runFlow(f, all));
 }
 status();

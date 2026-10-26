@@ -1,6 +1,6 @@
 new_slug: how-question-counter-writer
 name: "How-question counter writer"
-summary: "Paste a bad offer or demand you face. Get the 'how' questions that push back without saying no."
+summary: "Turn an offer you can't accept into five how-or-what questions that push back without saying no. Give it the demand and your real limit."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It writes a short set of questions from a constraint you give it."
@@ -17,6 +17,10 @@ when:
   - "A client wants the price cut or the deadline halved and you cannot do either."
   - "A supplier or landlord sends new terms and expects a yes by Friday."
   - "You tend to cave or to blow up, and want a third way ready before the call."
+not_for:
+  - "You have already decided to refuse the deal: a plain, polite no is cleaner and faster."
+  - "You need a plan for a whole negotiation call: use the Negotiation call prep planner."
+  - "You want a message to send, not questions to ask out loud: write a short reply yourself or ask your AI for a draft."
 
 you_give:
   - "The offer or demand, with numbers and dates"
@@ -34,6 +38,29 @@ how_to_use:
   - "Write the real constraint, even if it is just cash."
   - "Say the LABEL and the first question out loud before the call. Change any word that does not sound like you."
   - "Use the questions in order. Let the silence after each one do its work."
+output_sample:
+  input:
+    - The offer or demand, with numbers and dates
+    - Why you cannot accept it, in plain words
+    - What you could accept (advised)
+    - Who they are and what they need from you (optional)
+  output:
+    - name: THEIR POSITION and THEIR NEED
+      contains: What they asked for and what they probably need, with a guess marked as a guess.
+    - name: LABEL
+      contains: One sentence that names the pressure they seem to be under, without agreeing to anything.
+    - name: QUESTIONS
+      contains: Five how or what questions built on your real limit, each with when to use it.
+    - name: HOLDING LINE
+      contains: What to say when they press for an answer now, without accepting or refusing.
+    - name: IF THEY SAY TAKE IT OR LEAVE IT
+      contains: The one question to ask if they give you that ultimatum.
+    - name: SHAPE OF A YES
+      contains: A sentence or two you could say when a question opens a door, inside your range.
+    - name: MISSING
+      contains: Any limit, range or fact you did not give.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or none.
 
 how_it_works:
   - title: "Names their position and need"

@@ -1,6 +1,6 @@
 new_slug: plan-a-month-of-meta-ads-with-the-right-number-of-new-ads-and-budget
 name: "Plan a month of Meta ads and the budget"
-summary: Give it your spend, results, reviews and product facts. Get an ad quota, a budget ranking and test-ready briefs.
+summary: "Plan a month of Meta ads: work out how many new ads to make, where the next dollars go, and get test-ready briefs from your spend and reviews."
 job: plan-ad-tests
 thinking: high
 thinking_why: It runs five skills in a row and does budget sums along the way. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to plan next month's ads and do not know how many new ones you need.
   - Your ads have gone stale and you want fresh ideas that come from what buyers say, not from a guess.
   - You can add budget and want to know which channel should get it.
+not_for:
+  - "You run a brand new store with no spend history: start with a simple test plan, or use the Ad test budget setter."
+  - "You only need one brief for one ad idea: use the Ad test brief writer."
+  - "You want to check an ad before it goes live: use the Pre-launch ad checker or the Meta ad policy checker."
 you_give:
   - A sheet of your ad spend and results by channel and month
   - The question you want answered, such as how many ads you need at this spend
@@ -32,17 +36,39 @@ how_to_use:
   - When it pauses, add your reviews, support emails and product facts in one place.
   - When it pauses again, pick two or three concepts from the matrix. Choose ones that tackle different problems.
   - Check the budget numbers against your own books before you move any money.
+output_sample:
+  input:
+    - Your ad spend and results by channel and month, for a closed date range
+    - The question you want answered, such as how many new ads you need
+    - Your product facts, such as price, variants and how it is used
+    - Customer reviews, support emails or survey answers, with source and date
+  prerequisites:
+    - An AI that can work with files, such as Claude Code or a Claude Project, because the steps save files to an outputs folder
+    - Your brand brain from the Website brand brain builder (optional, it makes the result better)
+  output:
+    - name: step-01-creative-volume-planner.md
+      contains: A range of new ads per month with a start number, split by format and by week.
+    - name: step-02-next-dollar-budget-allocator.md
+      contains: Channels ranked by new-customer revenue from the next $10,000, with stop points and a loss limit.
+    - name: step-03-ad-concept-matrix-builder.md
+      contains: Ranked ad concepts built from buyer words, each with an angle, an offer, a first line and a test order.
+    - name: step-04-creative-brief-writer.md
+      contains: A brief for each chosen concept with one problem, one angle, a format and a proof shot for every claim.
+    - name: step-05-meta-test-campaign-planner.md
+      contains: The Meta test layout with packs, minimum spend, naming and rules for adding ads.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Size the monthly quota
     text: Creative volume planner works out how many new ads you need three ways and gives a range with a start number. It splits the quota by format and by week, and checks the plan does not lean on one concept.
   - title: Rank where the money goes
-    text: Next-dollar budget allocator ranks each channel by new-customer revenue per extra $10,000. It grades the evidence, finds each stop point and names the test that would settle the ranking.
+    text: Next-dollar budget allocator ranks each channel by new-customer revenue per extra $10,000. It grades the evidence, finds each stop point and names the test that would settle the ranking. The budget split goes on to the Meta test layout in step 5.
   - title: Build the concept matrix
-    text: Ad concept matrix builder reads your reviews and facts and writes buyers as a problem in a situation. Each gets an angle, an offer, a first line and a place in the test order.
+    text: Ad concept matrix builder starts from your reviews and facts, not from step 2, and writes buyers as a problem in a situation. Each gets an angle, an offer, a first line and a place in the test order.
   - title: Write the briefs
-    text: Creative brief writer takes each chosen concept and picks one problem and a one-sentence angle. It picks the format, names the shot that proves each claim and writes two versions that change one thing.
+    text: Creative brief writer reads your reviews and facts again, takes each concept you picked from the matrix and picks one problem and a one-sentence angle. It picks the format, names the shot that proves each claim and writes two versions that change one thing.
   - title: Lay out the Meta test
-    text: Meta test campaign planner sizes the campaigns to your budget, groups ads into packs, sets minimum spend and names every ad so you can compare results later.
+    text: Meta test campaign planner takes the briefs and sizes the campaigns to your quota and budget split, groups ads into packs, sets minimum spend and names every ad so you can compare results later.
 output_shape: |-
   STEP 1: AD QUOTA
     Three ways to count | range and start number | creative budget | weekly quota

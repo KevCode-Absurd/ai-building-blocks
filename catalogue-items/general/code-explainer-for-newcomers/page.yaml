@@ -1,6 +1,6 @@
 new_slug: code-explainer-for-newcomers
 name: "Code explainer for newcomers"
-summary: "Paste working code. Get it explained in reading order for someone new, with what each part is for."
+summary: "Paste working code and get a plain-English walkthrough for a newcomer, with each part explained in reading order and what it does on bad input."
 job: build-software
 thinking: medium
 thinking_why: "Good explanations need an eye for where a newcomer gets lost."
@@ -17,6 +17,10 @@ when:
   - "A new teammate has to take over your script."
   - "You wrote something with an AI and want to understand it before you trust it."
   - "You need handover notes for a formula set or automation."
+not_for:
+  - "You want the full version with every check: use the Code walkthrough writer."
+  - Your code does not run yet. The proved or tested labels need a real basis, so get it working first or ask a developer to review it.
+  - You need the code changed or fixed. This only explains it and never edits it, so ask a developer or your AI to debug it first.
 
 you_give:
   - "The code, in full"
@@ -33,6 +37,24 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - Your working code, pasted in full
+    - Who will read the guide and what they already know (optional)
+    - What the code is for and which parts you doubt (optional)
+  output:
+    - name: WHAT IT DOES
+      contains: One paragraph saying what the code does and who the guide is for.
+    - name: IDEAS IN ORDER
+      contains: A numbered list of the ideas a reader must hold, big picture first.
+    - name: WALKTHROUGH
+      contains: A short passage per idea, with the matching named piece of code right after it.
+    - name: BAD INPUT
+      contains: Each odd input, such as empty or wrong type, and what the code does with it.
+    - name: KNOWN OR NOT
+      contains: Each claim that it works, marked as proved, tested on named cases, or not checked.
+    - name: MISSING
+      contains: Gaps the AI could not fill from your code or notes.
 
 how_it_works:
   - title: "List the ideas"
@@ -95,8 +117,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "A line on who the reader is"
-  - "The tests you ran, if any"
+    - "A line on who the reader is"
+    - "The tests you ran, if any"
 
 terms:
   - term: "Walkthrough"

@@ -10,6 +10,12 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: copy_draft
+    required: false
+  - type: plan
+    required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: plan
 uses: []

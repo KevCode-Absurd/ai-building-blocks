@@ -1,6 +1,6 @@
 new_slug: step-cost-tracker
 name: "Step cost tracker"
-summary: "Describe how you make your product. Get a cost for each step, a weekly count sheet and the lines that drain you."
+summary: "Find which product earns and which step wastes. Give it your steps and costs. You get a step cost tracker with a monthly sheet and a weekly count sheet."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sets up counts and ranks products by true earnings, which is arithmetic with a few judgement calls."
@@ -17,6 +17,10 @@ when:
   - You know your sales but not what each product really costs to make.
   - You suspect one product or step loses money but cannot show it.
   - You want a simple count sheet your team can fill in each week.
+not_for:
+  - "Your work has no repeated steps, such as pure consulting: a simple profit and loss review is enough."
+  - "You want to price what you throw away: use the Waste and by-product finder."
+  - "You need a tax or audit-ready accounts: ask an accountant."
 
 you_give:
   - How each product is made or delivered, step by step
@@ -35,6 +39,29 @@ how_to_use:
   - Paste any cost or sales sheet you have for a past month.
   - Hand the count sheet to the people who do each step.
   - Bring the numbers back at month end and ask for the ranking again.
+output_sample:
+  input:
+    - How each product is made or delivered, step by step
+    - Prices, unit costs, wages and quantities (optional)
+    - A sales or cost sheet for a closed month (optional)
+    - Who does each step (optional)
+  output:
+    - name: Steps and measures
+      contains: Each step for each product, with one count or measure, who counts it and on which day.
+    - name: Monthly cost sheet
+      contains: Cost lines per product, a stated rule for shared costs, cost per unit, price and earnings per unit.
+    - name: Comparison of people, shifts or batches
+      contains: Side-by-side numbers that show who saved and who wasted, with the size of the gap.
+    - name: Ranking by true earnings
+      contains: Products ranked by earnings after all steps, and where that differs from a ranking by sales.
+    - name: Carry and drain lists
+      contains: The products or steps that earn more than their share and those that cost more than they earn.
+    - name: First fix
+      contains: The one waste to fix first, with an owner, a next count date and what would show it works.
+    - name: Weekly count sheet
+      contains: One page table of step, measure, who counts, which day and where the figure goes.
+    - name: MISSING and CHECKS MISSED
+      contains: Figures you did not give, and any check the skill could not pass.
 
 how_it_works:
   - title: Lists every step

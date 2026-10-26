@@ -1,6 +1,6 @@
 new_slug: campaign-keep-or-change-checker
 name: "Campaign keep-or-change checker"
-summary: "Paste your ad history and recall and pull results. Get a keep, fix or replace call, with the cost of starting over."
+summary: "Check if your ad is worn out or your team is just bored. Paste recall and pull results to get a keep, fix or replace call."
 job: read-ad-results
 thinking: medium
 thinking_why: "The tests are fixed, but weighing the cost of change against weak evidence takes judgment."
@@ -17,6 +17,10 @@ when:
   - "Your team is bored of an ad that is still selling."
   - "A new manager or agency wants to start again."
   - "Pull has dropped and you do not know whether to fix or replace."
+not_for:
+  - "Your ad is brand new and has no survey data: use the Ad recall and pull calculator first to get your figures."
+  - "You want to plan how often to show an ad: use the Reach-before-repeat planner."
+  - "You need a new ad claim: use the Selling proposition finder, then test it before you drop the old one."
 
 you_give:
   - "Recall and pull results, from the Ad recall and pull calculator"
@@ -34,6 +38,31 @@ how_to_use:
   - "Paste the recall and pull report and the reason for the change."
   - "Add how long the ad has run and what you spent on it."
   - "Take the plan to your team before anything is replaced."
+output_sample:
+  input:
+    - Your recall and pull results, from the Ad recall and pull calculator
+    - Who wants the change, and why
+    - How long the ad has run and what you spent (optional)
+    - Sales or traffic for the same period (optional)
+  prerequisites:
+    - Survey results on recall and pull. Run the Ad recall and pull calculator first if you have none.
+  output:
+    - name: The reason
+      contains: Who wants the change and why, sorted as opinion or evidence.
+    - name: Wear test
+      contains: Whether recall is high enough for the ad to be worn out at all.
+    - name: Real reasons to change
+      contains: Yes, no or missing for pull at zero, a product that no longer fits, a rival owning the claim, and a shrinking market.
+    - name: Cost of starting over
+      contains: The spend per point of recall and what a drop in recall would cost you.
+    - name: Same advert everywhere?
+      contains: Whether the ad makes the same claim in every place it runs.
+    - name: Verdict
+      contains: Keep, fix the delivery, fix the claim or replace, with the reason.
+    - name: If you change
+      contains: What to keep, how to test the new version, and when to ask again.
+    - name: Missing and checks missed
+      contains: What data would sharpen the call, and any checks the skill could not pass.
 
 how_it_works:
   - title: "Names the reason"

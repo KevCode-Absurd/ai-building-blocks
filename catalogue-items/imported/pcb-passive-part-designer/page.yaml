@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Each part needs its own tuning.
 new_slug: pcb-passive-part-designer
 name: PCB passive part designer
-summary: Say which part you need, such as an inductor or balun. Get it designed
-  and checked.
+summary: Design a spiral inductor, interdigital capacitor, balun or resonator for your board. Get its dimensions, L or C values and a mesh check in MATLAB.
 job: build-software
 headline: PCB passive part designer
-subhead: Say which part you need, such as an inductor or balun. Get it designed
-  and checked. Bring the part type. Use the result to plan your next step.
+subhead: Say which part you need, such as an inductor or balun. Get it designed and checked. Bring the part type. Use the result to plan your next step.
 explain: |
   Tell it the part, such as a spiral inductor, interdigital capacitor, ring resonator or balun, and get a design you can measure instead of guess at. It pulls out the numbers that matter: inductance, capacitance and self-resonant frequency.
 
@@ -17,10 +15,14 @@ when:
   - You want to check where a capacitor stops acting like a capacitor.
   - You are building a balun to join a balanced and an unbalanced line.
   - You want a ring resonator for a filter or test structure.
+not_for:
+  - "You need a filter: use a filter design skill such as matlab-design-pcb-filter, since this skill only builds single parts."
+  - "You need a coupler or splitter: use matlab-design-pcb-coupler, which sizes those parts directly."
+  - "You have no MATLAB with the RF PCB Toolbox: ask an RF engineer, or use a free circuit simulator for a rough value."
 you_give:
-  - The part type
+  - The part type, such as spiral inductor, interdigital capacitor, balun, ring resonator, phase shifter or radial stub
   - Your target frequency
-  - The substrate and metal you use
+  - Your substrate and metal, set up first with matlab-manage-pcb-material
   - Size limits (optional)
 you_get:
   - A designed part object
@@ -28,8 +30,32 @@ you_get:
   - Quick behavioural S-parameters
   - A memory and mesh estimate before the full solve
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox.
+  - Check you have MATLAB with the RF PCB Toolbox. Both are paid products and need a license.
+  - Set up your substrate and metal first with matlab-manage-pcb-material.
+  - Give your AI the skill text, the part type and your target frequency.
+  - Let your AI run the MATLAB code. It builds the part and reads L or C at your frequency.
+  - Check the mesh and memory estimate before you approve a full-wave solve.
+  - Compare the quick estimate with the full result, since they differ near resonance.
+output_sample:
+  input:
+    - The part type, such as spiral inductor, balun or ring resonator
+    - Your target frequency
+    - Your substrate and metal (set up first)
+    - Size limits (optional)
+  prerequisites:
+    - MATLAB with the RF PCB Toolbox, both paid and licensed
+    - A substrate and conductor set up first with matlab-manage-pcb-material
+    - An AI that can run MATLAB code
+  output:
+    - name: Part object
+      contains: The designed part with its dimensions set, such as turns, finger count, ring radius or line widths.
+    - name: Inductance or capacitance
+      contains: The L or C value read at your target frequency, with feed line effects removed for capacitors.
+    - name: Self-resonant frequency
+      contains: The point where an inductor stops acting like an inductor, so you can keep your band below it.
+    - name: Behavioral S-parameters
+      contains: A fast estimate of how the part behaves across your frequency range.
+    - name: Memory and mesh estimate
+      contains: A check of mesh density and memory need before you start a full-wave solve.
+    - name: Next steps
+      contains: Pointers to full-wave checks, tuning of dimensions and adding the part to a circuit.

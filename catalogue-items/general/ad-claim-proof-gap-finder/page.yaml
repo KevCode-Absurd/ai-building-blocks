@@ -1,6 +1,6 @@
 new_slug: ad-claim-proof-gap-finder
 name: Ad claim proof gap finder
-summary: Paste your ad and your proof. Get every claim paired with proof, the gaps and fixes, and a score out of 100.
+summary: Find the claims in your ad that your proof does not back up. Paste your copy and proof to get each gap, a fix and a score out of 100.
 job: check-ads
 thinking: medium
 thinking_why: It must read as a doubter and catch claims the copy only implies.
@@ -14,6 +14,10 @@ when:
   - You are about to run an ad that makes a strong promise.
   - A platform has flagged an ad for a claim.
   - You want to know which claims need more proof before you scale.
+not_for:
+  - "You want the full check with every test: use the Claim and proof matcher."
+  - "Your ad makes no claims yet: write the draft first, then run this check."
+  - "You need legal or medical sign-off: ask a qualified person and check your platform's ad rules."
 you_give:
   - Your ad or page copy
   - Your proof, with sources
@@ -28,6 +32,24 @@ how_to_use:
   - Paste your copy under the prompt, then your proof, each with its source.
   - Read the fixes and choose shrink, move or add for each.
   - Check any health, money or legal claim with a qualified person.
+output_sample:
+  input:
+    - Your ad or page copy
+    - Your proof, with where each piece came from
+    - Your offer terms (optional)
+  output:
+    - name: Claim table
+      contains: Each claim with its proof, how close the proof sits, a verdict and a fix.
+    - name: Implied claims
+      contains: Claims the copy only suggests, such as a clean feel that sounds like safe.
+    - name: Worn-out words
+      contains: Stock phrases and exclamation marks that carry no fact.
+    - name: Score
+      contains: Matched claims over claims counted, out of 100, with the sum shown, then again with the fixes.
+    - name: Missing
+      contains: The claims that still need proof from you.
+    - name: Check with a qualified person
+      contains: A note on any health, money or legal claim to have checked.
 how_it_works:
   - title: Lists the claims
     text: Everything a buyer could dispute.

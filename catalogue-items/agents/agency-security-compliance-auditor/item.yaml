@@ -1,0 +1,42 @@
+slug: agency-security-compliance-auditor
+name: Compliance Auditor agent
+summary: "Check your security setup against SOC 2, ISO 27001, HIPAA or PCI-DSS. Get a gap table, an auditor proof list and a fix order."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: security/security-compliance-auditor.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-compliance-auditor.md
+  licence: MIT
+  original_name: Compliance Auditor
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: ebb550ceef8011be23fe5a6fab0a7b3f77c2433f4d6aa22617a7eb87db97274f
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Compliance Auditor
+  - Agency Agents
+  - Security
+credits:
+  - title: Compliance Auditor
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-compliance-auditor.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

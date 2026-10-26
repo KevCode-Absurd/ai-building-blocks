@@ -1,6 +1,6 @@
 new_slug: normal-earnings-estimator
 name: "Normal earnings estimator"
-summary: "Share cleaned earnings and a reliability rating. Get candidate figures and a range only when source and order checks pass."
+summary: "Find normal earnings for a company from 5 to 10 years of results. You get low, normal and high figures, and a range only if the checks pass."
 job: money-and-investing
 thinking: high
 thinking_why: "It chooses a window, applies rules about when the latest year can stand alone and builds a range from judgment. That needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You need one earnings figure to value a business and have several years of results.
   - The latest year is far from the earlier ones and you cannot decide how to treat it.
   - You want a range, not a single number.
+not_for:
+  - "You have no earnings record yet or fewer than five years of results: gather the years first, or value the business from its assets with a licensed financial adviser."
+  - "Your earnings are not cleaned yet or you have not rated how reliable they are: first use the Earnings record reliability checker."
+  - "You want a buy or sell call, or a decision on your own savings: ask a licensed financial adviser, because this gives analysis only."
 
 you_give:
   - Cleaned and restated earnings by year, five to ten years
@@ -35,6 +39,31 @@ how_to_use:
   - Add the share count for each year if you have it.
   - Read why it did or did not use the latest year.
   - Take a validated range to the valuation step only after the source and order checks pass. If they fail, resolve the candidates first.
+output_sample:
+  input:
+    - Your cleaned earnings for each of the last 5 to 10 years
+    - The reliability rating from the Earnings record reliability checker
+    - Your share counts by year (optional)
+  prerequisites:
+    - Cleaned earnings from an earlier cleaning step
+    - A reliability rating from the Earnings record reliability checker
+  output:
+    - name: BASIS
+      contains: The years used, the share count and where it came from, and the reliability rating you gave.
+    - name: AVERAGES
+      contains: Averages with loss years at real value and at zero, plus the five-year and ten-year averages.
+    - name: LATEST YEAR
+      contains: Whether the latest year was used alone, and which of the three conditions held or failed.
+    - name: CANDIDATE EARNINGS PER SHARE
+      contains: Low, normal and high figures, each with its reason, per share and in total.
+    - name: RANGE ORDER
+      contains: PASS or FAIL with the actual inequality, and a range only when the checks pass.
+    - name: LIMITS
+      contains: "What affects the estimate: source coverage, loss treatment, year choice and open assumptions."
+    - name: MISSING
+      contains: Facts you did not give, marked so nothing is invented.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: Checks the rating
@@ -114,9 +143,9 @@ improve:
 
 works_best_with:
   tools:
-    - { name: "Any good chat AI", why: "Choosing a window and building a range is text work." }
-    - { name: "A spreadsheet", why: "Handy for averages and the worst and best three-year runs." }
-    - { name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice." }
+    - {name: "Any good chat AI", why: "Choosing a window and building a range is text work."}
+    - {name: "A spreadsheet", why: "Handy for averages and the worst and best three-year runs."}
+    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
   inputs:
     - "Cleaned earnings by year"
     - "Share counts and any splits"

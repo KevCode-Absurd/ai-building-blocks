@@ -1,0 +1,142 @@
+name: Git workflow agent
+summary: Get a Git workflow plan with branch names, commit rules and a pull request checklist. Bring your team size and release pace.
+headline: Git workflow agent
+subhead: Tell it your team size, how often you release and where your code lives. It picks a branching style, then writes branch names, commit rules, merge rules and a review checklist. You get a one-page plan and safe commands for the first clean-up.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A Git workflow is the set of habits a team uses to share code: how branches are named, how changes are saved and how they join the main line. Without agreed rules, history gets messy, merges hurt and releases feel risky. This agent matches the rules to your team, not to a famous diagram.
+
+  It compares two common styles. Trunk-based work keeps branches short and the main branch always ready to release. Git flow adds a development branch for teams that ship numbered versions. It recommends one with reasons, then sets small commits, clear messages and when to squash, merge or rebase.
+
+  Every risky command comes with a safe version and a way to undo it. It never tells you to force-push a shared branch. It cannot see your repository unless you paste your branch list or log, and it does not change settings on GitHub or GitLab. This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your team is growing and everyone names branches and writes messages a different way.
+  - Feature branches stay open for weeks and merging them hurts.
+  - You need pull request rules that a new hire can follow on day one.
+  - You are choosing between merge, squash and rebase and want a clear answer for your team size.
+not_for:
+  - You need to rewrite shared history or change live repository settings. Have a named engineer do it, using the plan as a guide.
+  - You want your build and release pipeline set up. Use the Deployment pipeline designer.
+  - You want the code inside a pull request reviewed. Use the Code reviewer agent.
+you_give:
+  - Your team size and who can merge to the main branch
+  - How you release, such as every day, every week or numbered versions
+  - Where your code lives (GitHub, GitLab or Bitbucket) and any branch rules already set
+  - What goes wrong now, such as stale branches or big merge conflicts
+  - Your branch list or recent git log output (optional)
+you_get:
+  - A recommended branching style, with the reasons
+  - Branch naming rules with examples
+  - Commit message rules
+  - Rules for when to merge, squash or rebase
+  - A pull request review checklist
+  - Safe commands for a first clean-up, each with its undo step
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your team size, release pace and where your code lives. Describe what goes wrong now in a line or two.
+  - Add your branch list (git branch -a) or recent log output if you want a clean-up plan for your real repository.
+  - Say "Plan our Git workflow. Ask once if anything is missing."
+  - Read the recommended style and its reasons first. If your team cannot follow it, say why and ask for the next best option.
+  - Run each git command yourself, one at a time, in a fresh clone first. Read the undo line before you run it.
+how_it_works:
+  - title: Learn the team
+    text: It notes team size, release pace, hosting and what goes wrong, and asks once for anything missing.
+  - title: Choose the style
+    text: It picks trunk-based work or Git flow, and says why it fits your release pace.
+  - title: Set names and commits
+    text: It writes branch name patterns and commit message rules, with one change per commit.
+  - title: Set merge rules
+    text: It says when to merge, squash or rebase, and where force-pushing is never allowed.
+  - title: Write the review checklist
+    text: It writes what a pull request must show before it can merge, including checks to pass.
+  - title: Plan the clean-up
+    text: It gives safe commands for stale branches, each with a warning and an undo step.
+output_shape: |-
+  TEAM AND RELEASE FACTS
+    <team size> | <who merges> | <release pace> | <host> | MISSING: <list>
+
+  RECOMMENDED STYLE
+    <trunk-based or Git flow> | <why it fits> | <what to avoid>
+
+  BRANCH NAMES
+    <pattern> | <example>
+
+  COMMIT RULES
+    <format> | <size rule> | <example>
+
+  MERGE RULES
+    <situation> | <merge, squash or rebase> | <reason>
+
+  PULL REQUEST CHECKLIST
+    [ ] <item>
+
+  FIRST CLEAN-UP
+    <command> | <what it does> | <risk> | <undo step>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <item> | <how to check>
+output_sample:
+  input:
+    - Your team size and who can merge
+    - Your release pace and where your code lives
+    - What goes wrong now
+    - Your branch list or git log output (optional)
+  prerequisites:
+    - An AI that can read pasted text. It does not need access to your repository.
+  output:
+    - name: Team and release facts
+      contains: What it learned about your team and release pace, with gaps marked MISSING.
+    - name: Recommended style
+      contains: Trunk-based or Git flow, with the reasons it fits and what to avoid.
+    - name: Branch names
+      contains: A naming pattern with examples.
+    - name: Commit rules
+      contains: Message format and size rule, with an example.
+    - name: Merge rules
+      contains: When to merge, squash or rebase, and why.
+    - name: Pull request checklist
+      contains: What each pull request must show before it can merge.
+    - name: First clean-up
+      contains: Safe commands for stale branches, each with its risk and undo step.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Release pace
+    how: Say how often you ship. Daily releases suit short branches. Numbered versions may need Git flow.
+  - what: Team habits
+    how: Say if people already use pull requests, so the plan builds on that.
+  - what: Clean-up
+    how: Paste your branch list to get a list of branches that look safe to delete.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Branch
+    meaning: A separate line of work in Git that you can later join to the main line.
+  - term: Trunk-based
+    meaning: A style where everyone works in short branches off one main branch.
+  - term: Git flow
+    meaning: A style with extra long-lived branches for development and releases.
+  - term: Rebase
+    meaning: Replay your changes on top of the latest main branch. It rewrites your branch history.
+  - term: Squash
+    meaning: Join many commits into one when you merge.
+  - term: Force-push
+    meaning: Overwrite a remote branch. On a shared branch it can erase other people's work.
+  - term: Pull request
+    meaning: A request to merge your branch, with a place for review.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: It plans from pasted text, so no repository access is needed.
+    - name: A coding tool such as Claude Code
+      why: It can read your real branch list and log, but never let it force-push or change settings.
+  inputs:
+    - The output of git branch -a --sort=-committerdate, to spot stale branches.
+    - Your current pull request template, if you have one.

@@ -1,26 +1,27 @@
 import {test,expect} from '@playwright/test';
+import {serveBuiltSite} from './built-site-fixture';
 
 test.beforeEach(async({page})=>{
+ await serveBuiltSite(page);
  await page.route('**/api/auth*',r=>r.fulfill({json:{configured:false}}));
 });
 
 for(const tag of ['', '@mobile ']){
- test(tag+'common jobs remain visible and the complete list lives in More filters',async({page})=>{
+ test(tag+'common jobs and the complete list remain visible',async({page})=>{
   await page.goto('/#library');await expect(page.getByTestId('library-search')).toBeEnabled();
-  for(const id of ['all','coding','marketing','design','writing','business'])await expect(page.getByTestId('job-'+id)).toBeVisible();
-  await expect(page.getByTestId('filter-domain')).toHaveCount(0);
+  for(const id of ['all','coding','marketing','design','writing','business','finance','sales','operations'])await expect(page.getByTestId('job-'+id)).toBeVisible();
+  await expect(page.getByTestId('filter-domain')).toBeVisible();
   await expect(page.getByTestId('filter-task')).toBeVisible();
   await page.getByTestId('job-coding').click();await expect(page.getByTestId('result-count')).toContainText('Coding');
   await page.getByTestId('more-filters').click();
-  await expect(page.locator('#library-more-filters').getByTestId('filter-domain')).toBeVisible();
+  await expect(page.getByTestId('filter-domain')).toBeVisible();
   await page.getByTestId('filter-domain').click();
-  for(const name of ['Sales','Leadership','Science','Teaching','Thinking'])await expect(page.getByRole('option',{name,exact:true})).toBeAttached();
-  await page.getByRole('option',{name:'Sales',exact:true}).click();
+  for(const name of ['Sales','Leadership','Science and research','Education and training','Thinking'])await expect(page.getByRole('option',{name:new RegExp('^'+name)})).toBeAttached();
+  await page.getByRole('option',{name:/^Sales/}).click();
   await expect(page.getByTestId('result-count')).toContainText('Sales');
   expect(new URL(page.url()).searchParams.get('area')).toBe('sales');
   await page.getByTestId('more-filters').click();
-  await expect(page.getByTestId('more-filters')).toContainText('1');
-  await page.reload();await expect(page.getByTestId('more-filters')).toHaveAttribute('aria-expanded','true');
+  await page.reload();await expect(page.getByTestId('more-filters')).toHaveAttribute('aria-expanded','false');
   await expect(page.getByTestId('filter-domain')).toContainText('Sales');
   await page.getByRole('button',{name:'Clear filters',exact:true}).click();
   await expect(page.getByTestId('job-all')).toHaveAttribute('aria-pressed','true');
@@ -41,7 +42,7 @@ test('@mobile More filters fits small screens and leaves search/use case availab
  for(const width of [320,390]){
   await page.setViewportSize({width,height:844});await page.goto('/?q=AEO#library');await page.reload();
   await expect(page.getByTestId('library-search')).toHaveValue('AEO');
-  await expect(page.getByTestId('filter-domain')).toHaveCount(0);
+  await expect(page.getByTestId('filter-domain')).toBeVisible();
   await page.getByTestId('more-filters').click();await page.getByTestId('filter-domain').click();
   await expect(page.getByRole('listbox',{name:'Job function',exact:true})).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);

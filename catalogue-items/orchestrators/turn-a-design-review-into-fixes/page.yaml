@@ -1,52 +1,88 @@
 new_slug: turn-a-design-review-into-fixes
 name: Turn a design review into fixes
 headline: Turn a design review into fixes
-summary: Share the source files. Get an evidence-based issue list, a revised design brief and a usability test.
+summary: Review one screen or prototype and get a ranked issue list, a revised design brief with specific fixes and a usability test script to check them.
 job: design-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: An evidence-based issue list, a revised design brief and a usability test. Share a screen or prototype, its intended users, task and implementation limits. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it one screen or prototype, who uses it and the task they are trying to do. Your AI reviews it for confusing spots, turns each real issue into a specific change, and writes a test so you can check the fixes with people. You get an issue list, a revised brief and a test script.
 explain: |-
-  An evidence-based issue list, a revised design brief and a usability test.
+  Design feedback often stops at "this feels cluttered". A designer then has to guess what to change. This workflow turns a review into fixes. Each fix names the problem it came from, the user task it affects and a way to check it worked.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Each fix names an observed problem, the user task it affects and a check for improvement. Missing tools or evidence stay visible in the final summary.
+  It runs three steps. First it reviews the screen for how easy it is to find what to do, see what happened, and recover from mistakes. Then it turns the agreed issues into specific changes and keeps what it saw apart from what it would prefer. Last it writes a small usability test for the changes, with neutral prompts and clear signs of success.
+
+  The review is an expert-style check of the screen you share. It is not a test with real users, and the page says so. Only the test at the end shows if the fixes work.
 when:
-  - You need an evidence-based issue list, a revised design brief and a usability test.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A teammate says this screen feels off and you need to turn that into changes you can ship.
+  - A new checkout, settings or dashboard screen is about to go to developers and you want one more pass.
+  - You have a design review with ten comments and need to know which three to fix first.
+  - You want to prove a design change helped, not only that it looks better.
+not_for:
+  - You have real test results or customer complaints. Start from those with Turn user complaints into design questions, or the Hard-to-use thing diagnoser for one repeated mistake.
+  - You only want a quick score for a screen. Use the Everyday usability reviewer on its own.
+  - You need to find what blocks a test before you run it. Use the Check a prototype before user testing workflow.
+  - You review a new screen every week. Use the New screen design reviewer.
 you_give:
-  - A screen or prototype, its intended users, task and implementation limits.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - One screen or prototype, as a screenshot, a Figma link or a clear description
+  - The people who use it and the task they are trying to do
+  - Limits on what can change, such as no new pages or a fixed component library
+  - Existing feedback or comments on the design (optional)
+  - Your design rules or principles (optional)
 you_get:
-  - An evidence-based issue list, a revised design brief and a usability test.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - An issue list where each issue names where it is on the screen, which user task it hurts and how serious it is
+  - A revised design brief with a specific change for each agreed issue
+  - A split between what was seen on the screen and what is only a preference
+  - A usability test with tasks, neutral prompts and signs of success
+  - One next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to your AI, such as Claude, ChatGPT or Gemini. One that reads images works best.
+  - Attach the screen and say who uses it and what task they are trying to do. Add any limits on what can change.
+  - After step 1, read the issue list with your team. Delete issues you disagree with. The next step only uses the ones you keep.
+  - After step 2, check each change points back to an issue. Remove any change with no issue behind it.
+  - Run the test from step 3 with a few people before you call the fixes done.
 how_it_works:
   - title: Everyday usability reviewer
-    text: Review the supplied screen for discoverability, mapping, errors and feedback; label the findings as a heuristic review rather than real user test results.
+    text: Reviews the screen for finding what to do, seeing what happened, fixing errors and matching controls. Labels the result as an expert-style review, not a test with real users. Hands step 2 the issue list with where each one is. Check before moving on, each issue points to a place on the screen.
   - title: Design feedback giver
-    text: Turn the agreed issues into specific changes, keeping observations separate from preferences.
+    text: Turns the issues you agreed into specific changes. Keeps what it saw on the screen apart from what it would prefer. Hands step 3 the revised brief. Check before moving on, every change names the issue it fixes.
   - title: Small usability test planner
-    text: Write task-based checks for the changes, with neutral prompts and observable success criteria.
+    text: Writes task-based checks for the changes, with neutral prompts and signs of success a watcher can see. Hands back the test script. Check before moving on, no task tells the person where to click.
 output_shape: |-
-  Scope and source coverage
-  An evidence-based issue list, a revised design brief and a usability test.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCREEN       <name>, <who uses it>, <task>, <limits on change>
+
+  ISSUES       <no.> | <where on the screen> | <what is wrong> | <user task hurt> | <severity> | <seen or preference>
+
+  REVISED BRIEF <issue no.> -> <specific change> | <check that it worked>
+
+  TEST SCRIPT  task <n> | <what the person tries> | finished when <rule> | stuck when <rule>
+
+  MISSING      <each gap, and the line it stops>
+  CHECKS MISSED <one line each, or none>
+  NEXT STEP    <one action for you>
+output_sample:
+  input:
+    - One screen or prototype, as a screenshot, link or description
+    - Who uses it and the task they are trying to do
+    - Limits on what can change (optional)
+    - Existing review comments (optional)
+  output:
+    - name: Issue list
+      contains: Each issue with where it is, the task it hurts, how serious it is and whether it was seen or is a preference.
+    - name: Revised design brief
+      contains: A specific change for each agreed issue, and the check that shows it worked.
+    - name: Test script
+      contains: Tasks, neutral prompts and finished and stuck rules for watching a few people try the changes.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks not run and the one change to try first.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Each fix names an observed problem, the user task it affects and a check for improvement.
+  - what: One task
+    how: Name the one task to review, such as change a delivery address. Issues outside that task are left out.
+  - what: Fixed components
+    how: List the components you must use. Changes only use those, and anything that needs a new one is marked.
+  - what: Existing comments
+    how: Paste the feedback you already have. Step 1 sorts it into seen on the screen and preference.
+  - what: A shorter list
+    how: Ask for the top three issues only. The brief and the test cover just those.
 judge:
   - Each fix names an observed problem, the user task it affects and a check for improvement.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -70,5 +106,11 @@ works_best_with:
     - Approved examples of a good result.
     - A named reviewer and their acceptance rules.
 terms:
+  - term: Usability review
+    meaning: An expert-style check of a screen for what confuses people. It is not a test with real users.
+  - term: Severity
+    meaning: How badly an issue blocks the user's task, from small annoyance to cannot finish.
+  - term: Neutral prompt
+    meaning: A task written without hints, such as Change your delivery address, with no mention of where to click.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result and file passed from one step to the next.

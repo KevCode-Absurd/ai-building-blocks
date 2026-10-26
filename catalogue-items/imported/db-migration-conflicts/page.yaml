@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a diagnosis path with known fixes.
 new_slug: db-migration-conflicts
 name: Database migration conflict fixer
-summary: Describe the Drizzle migration clash. Get it diagnosed and repaired,
-  with steps to stop it coming back.
+summary: Fix a Drizzle migration conflict safely. Paste your error and migration files. Get a diagnosis, repair steps and CI rules to stop repeat clashes.
 job: test-and-fix-code
 headline: Database migration conflict fixer
-subhead: Describe the Drizzle migration clash. Get it diagnosed and repaired,
-  with steps to stop it coming back. Bring your migration folder and git state.
-  Use the result to plan your next step.
+subhead: Describe the Drizzle migration clash. Get it diagnosed and repaired, with steps to stop it coming back. Bring your migration folder and git state. Use the result to plan your next step.
 explain: |
   A clash in your Drizzle migration files, snapshots or journal gets diagnosed and repaired without damaging your history, with a plan so it stops recurring.
 
@@ -18,6 +15,10 @@ when:
   - drizzle-kit check reports migrations that do not commute.
   - Two developers changed the schema on separate branches.
   - Your team keeps hitting migration conflicts in pull requests.
+not_for:
+  - "You want to push schema changes straight to production with drizzle-kit push: use reviewed migrations and a CI check instead."
+  - "You use Prisma, Knex or another migration tool: ask a developer who knows that tool, or check its own docs."
+  - "You need help with schema design or slow queries: ask a database engineer, since this only fixes migration conflicts."
 you_give:
   - Your migration folder and git state
   - The conflict or check error
@@ -29,8 +30,31 @@ you_get:
   - Checks to confirm the fix
   - CI rules to prevent repeats
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool in the project folder, or paste in your error and file names if it cannot read files.
+  - Paste the skill text, then say what happened, such as a failed rebase or a drizzle-kit check error.
+  - Let it run the read-only checks first. Read its diagnosis and the verdict before you agree to any change.
+  - If the verdict is safe to regenerate, confirm the exact files and the branch side it names, then let it make the fix.
+  - Run your own tests on a test database, not production. Then add the CI rules it suggests.
+output_sample:
+  input:
+    - Your migration folder, including the journal and snapshot files
+    - Your git state, such as a merge or rebase in progress
+    - The conflict message or drizzle-kit check error
+    - Your Drizzle Kit version (optional)
+    - Notes on how your team merges branches (optional)
+  prerequisites:
+    - An AI that can read your project files and run git commands
+    - Python 3 installed, only if you want the helper check script to run
+  output:
+    - name: Detected structure and mode
+      contains: Whether your migrations use the older journal layout or the folder layout, and which mode the AI chose.
+    - name: Confirmed conflicts
+      contains: The files that clash and why, kept apart from guesses and missing evidence.
+    - name: Repair path
+      contains: Safe steps to discard and regenerate migrations from your merged schema, with risky steps marked as needing your confirmation.
+    - name: Validation steps
+      contains: Checks to run after the fix, starting with ones that never touch a database.
+    - name: CI and merge rules
+      contains: Team rules to cut repeat migration conflicts in pull requests.
+    - name: Conclusion
+      contains: "One of four verdicts: no conflict found, safe to regenerate, needs your confirmation, or blocked by ambiguity."

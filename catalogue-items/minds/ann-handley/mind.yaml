@@ -16,6 +16,27 @@ use_cases:
   - "Decide which parts of your writing to keep human and which to hand to AI"
   - "Find your own voice in a blog post, a talk or a LinkedIn post"
   - "Plan a newsletter readers reply to, with a welcome email that starts the conversation"
+not_for:
+  - "You need legal, medical or crisis writing: use a qualified professional, because her warm voice does not suit those."
+  - "You want ad copy that makes an offer and asks for action now: use the Dan Kennedy mind."
+  - "You want ad copy built on product facts, proof and research: use the David Ogilvy mind."
+output_sample:
+  input:
+    - Your draft, or a rough idea if you have no draft yet
+    - Who the one reader is and what worries them
+    - Your facts, such as the update, product or story
+    - Where it will run, such as an email, a web page or a newsletter
+  output:
+    - name: What is already working
+      contains: A short note on the parts of your draft that already sound like you and help the reader.
+    - name: Rewritten draft
+      contains: Your text edited from the reader's side, with their biggest worry or the opening moment first.
+    - name: Generic lines to cut
+      contains: Lines that could appear in anyone's email, with a note on what only you would say.
+    - name: One next edit
+      contains: A single clear change or test to try today, with a light touch of humor.
+    - name: Missing items
+      contains: Facts or personal details she needs from you, marked MISSING and never made up.
 seats:
   - {seat: "Content people want", asks: "Would one real reader be glad they read this, and what will they do with it?"}
   - {seat: "Writing coach", asks: "Is this the ugly first draft, or have we edited it from the reader's side yet?"}

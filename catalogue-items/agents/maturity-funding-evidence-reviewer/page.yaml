@@ -1,51 +1,115 @@
 new_slug: maturity-funding-evidence-reviewer
 name: Maturity funding evidence reviewer
 headline: Maturity funding evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: See if your cash and confirmed refinancing cover each loan maturity. Get a funding ladder and a credit limit check, redone when a notice changes.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A maturity funding ladder and connected exposure exception pack. Share actual maturities, accessible opening cash, after-operation cash, confirmed refinancing, connected credit exposures and dated owner-approved monitoring limits. Include the previous dated review and source versions when available.
-explain: |-
-  A maturity funding ladder and connected exposure exception pack.
+subhead: Give it your loan due dates, the cash you can reach, the refinancing your lender has confirmed and your credit limit. It lines up each repayment against the cash that will really be there. It also checks your total credit use against the limit. You get a funding ladder, a limit check and a list of what is still missing.
 
-  Credit funding constraints. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A loan maturity funding review asks one question. When each loan falls due, will confirmed cash be there to pay it? The usual mistake is counting money that is not yours yet. A refinancing the lender has only talked about is not cash. Credit you could draw, but nobody has approved, is not cash either.
+
+  This agent runs two checks on the same evidence. The ladder takes your usable cash and your confirmed refinancing through each due date and shows the shortfall left after each repayment. The limit check adds what you have drawn on your linked facilities to a set share of what you could still draw, and compares the total with the limit your owner approved. The two stay apart. Unused credit never fills a gap in the ladder.
+
+  It keeps a short record of the last review. When a due date, a refinancing notice or a cash source changes, it redoes the affected work and tells you what moved. If a confirmed refinancing changes the interest or fees on a revolving loan, it works that cost out from average balances and puts it in the right future cash period. It reviews and reports. It moves no money and signs nothing.
+
 when:
-  - You need a maturity funding ladder and connected exposure exception pack.
-  - You work on credit funding constraints and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A lender confirms a refinancing and you want to know which repayments it now covers.
+  - A loan due date moves, or a new repayment falls due before the last one is paid.
+  - You hold several facilities with one lender or group and need the total against an approved limit.
+  - You review funding each quarter and want to see only what changed since last time.
+
+not_for:
+  - You want to know if a lender will approve a loan or a refinancing. This reviews evidence you already hold. It does not predict an approval or contact a lender.
+  - Your worry is a foreign currency bill with a forward contract. Use the Currency maturity evidence reviewer.
+  - You want to test a loan covenant, such as cash cover in each period. Use the Debt service covenant evidence reviewer.
+  - You only need the interest and commitment fee on one revolving loan. Use the Revolver interest and fee checker.
+
 you_give:
-  - Actual maturities, accessible opening cash, after-operation cash, confirmed refinancing, connected credit exposures and dated owner-approved monitoring limits. Include the previous dated review and source versions when available.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Each loan's due date and repayment amount (from your loan agreements or debt schedule)
+  - The cash you can reach now, and the cash you expect after operations by each due date (from bank balances and your cash forecast)
+  - Refinancing your lender has confirmed in writing, with amounts and dates (from the lender's notice or signed terms)
+  - Drawn and undrawn amounts on each linked facility, and the approved credit limit with its date (from facility statements and the limit letter)
+  - Your reporting currency, the units you use (such as thousands) and the review date
+  - The last review's record and the earlier versions of your sources (optional, but needed to show what changed)
+  - Average drawn and undrawn balances, rates and fees for a revolving loan (optional, only if a confirmed refinancing changes its cost)
+
 you_get:
-  - A maturity funding ladder and connected exposure exception pack.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A funding ladder with cash left after each repayment, the shortfall at each due date and the lowest point
+  - A credit limit check with drawn plus counted undrawn credit against the limit, and the headroom or excess
+  - A list of what changed since the last review, source by source
+  - A revolving loan cost line, only when a confirmed refinancing changes its interest or fees
+  - A short record to start the next review, plus MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Review maturity funding and credit limits workflow and the Revolver interest and fee checker skill. An AI that reads files works best. In plain chat it still works, but it cannot save files, so you keep the record it gives back.
+  - Say if this is the first run. If not, paste last time's record. Then attach your debt schedule, cash balances and forecast, the lender's refinancing notice and the limit letter.
+  - If you have more than three due dates, tell the AI how to group them. The ladder uses three dated buckets. Check that no maturity was dropped.
+  - Check the ladder before you read the limit check. Confirmed refinancing should appear once. Any unsigned borrowing should show as an open option, not as cash.
+  - Fix every MISSING line and run it again. Run it whenever a due date, a lender notice or a cash source changes. Adding it sets up no schedule.
+
 how_it_works:
-  - title: Review maturity funding and credit limits
-    text: Run the governing workflow when A contractual maturity, confirmed refinancing notice or accessible cash source changes.
-  - title: Revolver interest and fee checker
-    text: If confirmed refinancing changes revolving interest or commitment fees, compute the actual period charge from verified average balances and terms. Feed only supported cash costs into the affected future cash bucket.
-output_shape: |-
-  A maturity funding ladder and connected exposure exception pack.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this debt and cash set, or sets a first baseline. It compares facility IDs, due dates, confirmed funding, the limit version and the source dates. If nothing changed and no review is due, it says so and stops.
+  - title: Builds the funding ladder
+    text: Runs the Debt maturity funding ladder step of the governing workflow. It rolls usable cash, cash after operations and confirmed refinancing through each due date, never reusing the same proceeds. It shows every closing balance and the lowest point, and keeps unsigned borrowing as an open option.
+  - title: Checks the credit limit
+    text: Runs the Credit exposure limit checker step. It adds drawn amounts, the approved share of undrawn credit and other linked exposure, counting each facility once. It compares the total with the dated limit and shows the signed headroom. Unused limit is never added to the ladder.
+  - title: Costs a revolving loan only if needed
+    text: If a confirmed refinancing changes a revolving loan's interest or commitment fee, it runs the Revolver interest and fee checker on verified average balances. Only cash costs it can support go into the affected future period. Otherwise it skips this step and says so.
+  - title: Checks and saves
+    text: Tests the result against the acceptance rules, retries the affected calculation at most twice, then writes the dated files, the reason each step ran or was skipped, and the proposed new record. The old record is kept.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  FUNDING LADDER  <due date 1, 2, 3>: opening cash + cash after operations
+                  + confirmed refinancing - repayment = closing cash;
+                  shortfall <n>; lowest point <n> on <date>
+  OPEN OPTIONS    <unsigned borrowing, shown outside the ladder>
+  LIMIT CHECK     drawn <n> + counted undrawn <n> + other linked <n>
+                  = total <n> against limit <n> on <date>; headroom <n>
+  REVOLVER COST   <interest, commitment fee, period> (only if the branch ran)
+  RECORD FOR NEXT REVIEW  facility IDs, due dates, confirmed funding,
+                          limit version, bucket balances, open costs
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - Your debt schedule with each due date and repayment amount
+    - Your bank balances and your cash forecast after operations
+    - The lender's written notice of any confirmed refinancing
+    - Your facility statements and the approved credit limit letter
+    - The last review's record (optional)
+  prerequisites:
+    - An AI that can read files, so it can save the review files and the record
+    - The Review maturity funding and credit limits workflow and the Revolver interest and fee checker skill, added with the agent
+  output:
+    - name: Changed since last review
+      contains: Each source that moved, with the old and the new value. On a first run it says so and sets a baseline.
+    - name: outputs/step-1-debt-maturity-funding-ladder.md
+      contains: Cash left after each repayment across three due dates, the shortfall at each, and the lowest point. Unsigned borrowing is an open option.
+    - name: outputs/step-2-credit-exposure-limit-checker.md
+      contains: Drawn credit plus the counted share of undrawn credit and other linked exposure, against the approved limit, with headroom or excess.
+    - name: Revolver interest and fee line
+      contains: The period interest and commitment fee on a revolving loan, from verified average balances. It appears only when a confirmed refinancing changed its cost.
+    - name: Record for the next review
+      contains: Facility IDs, due dates, confirmed funding, the limit version, bucket balances and open financing costs, saved to reviews/maturity-funding-evidence-reviewer/state.json or printed for you to keep.
+    - name: MISSING lines and CHECKS MISSED
+      contains: Every gap and the line it stops, then the checks that failed or could not run, or the word none.
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Only confirmed proceeds fund maturities; unused exposure limit is not cash or loan approval; funding and monitoring limits remain separate. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - what: A later due date
+    how: Move the date and run it again. The repayment moves to a different bucket, the closing balances in between change, and the lowest point may move with it.
+  - what: A refinancing that is still a proposal
+    how: Mark it unconfirmed. It leaves the ladder and appears under open options, and the shortfall grows by the same amount.
+  - what: A new credit limit
+    how: Give the new limit with its date. The limit check recalculates the headroom, and the ladder does not change.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Only confirmed proceeds fund maturities; unused exposure limit is not cash or loan approval; funding and monitoring limits remain separate. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +120,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder named by date, so the next run starts from the true earlier state.
+  - Keep each lender notice with its date. A refinancing with no written notice is treated as unconfirmed.
+  - Write down how you group due dates into three buckets, and reuse the same grouping each time.
+  - Pair it with the Treasury settlement evidence reviewer when the question is your cash in the next few days.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds and reopens the ladder workbook, and saves the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your lender's confirmation notices
+      why: A written notice is what turns a refinancing from a hope into cash the ladder may use.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - A debt schedule with facility IDs and due dates.
+    - The limit letter that shows who approved the limit, and when.
+    - A named person who owns funding decisions and will check the dates, the amounts and the limit.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Maturity
+    meaning: The date a loan must be repaid.
+  - term: Refinancing
+    meaning: A new loan, or new terms, used to repay an old loan.
+  - term: Funding ladder
+    meaning: A table that takes your cash through each repayment date in order and shows what is left or missing.
+  - term: Undrawn credit
+    meaning: Credit a lender has agreed to give you that you have not yet borrowed.
+  - term: Revolving loan
+    meaning: A credit line you can borrow, repay and borrow again, with a fee on the part you do not use.
+  - term: Headroom
+    meaning: How far you are below a limit. A negative number means you are over it.

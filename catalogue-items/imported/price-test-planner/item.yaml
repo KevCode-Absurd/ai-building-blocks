@@ -12,6 +12,10 @@ inputs:
     required: true
   - type: product_data
     required: false
+  - type: plan
+    required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: plan
 uses: []

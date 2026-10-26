@@ -1,6 +1,6 @@
 new_slug: write-offers-for-each-buyer-type-and-pick-the-best
 name: Write offers for each buyer type and pick the best
-summary: Give it one product and its reviews. Get an offer per buyer type and a test plan.
+summary: Write offers for each buyer type from your reviews, check profit per visitor, and get a fair test plan to find the offer that earns most.
 job: make-offer
 thinking: high
 thinking_why: It runs four skills in a row, and the profit step does cost sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - One product sells to different buyers and your page speaks to all of them at once.
   - Your offers are all discounts and you want something that keeps your margin.
   - You have several offer ideas and no fair way to choose between them.
+not_for:
+  - "Your product has one kind of buyer: use the Product angle and offer planner on its own."
+  - "You only want to know if a discount still pays: use the Discount margin and ad-cost checker."
+  - "You sell only by subscription and care about repeat orders: use the Reach-before-repeat planner."
 you_give:
   - Your product, its price and what you may truthfully say about it
   - Reviews, survey answers or support lines in your buyers' words
@@ -30,6 +34,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your reviews and your costs. Round costs up.
   - When it reaches the pause, put each offer on its own page for the same dates and traffic. Come back with visits and orders.
+output_sample:
+  input:
+    - Your product, its price and what you may truthfully say about it
+    - Reviews, survey answers or support lines in your buyers' words
+    - Your costs per order, including shipping and fees
+    - Visits and orders for each offer, once you have run them
+    - Your brand file (optional)
+  prerequisites:
+    - An AI that can read files you give it, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Angles and offers"
+      contains: Four to six buyer angles, one offer for each, and a list of claims you must check.
+    - name: "Step 2: Offer review"
+      contains: A score for each offer, the checks passed and failed, and the three changes to test first.
+    - name: "Step 3: Profit per visitor"
+      contains: A cost table for each offer, profit per visitor, flags for losing baskets, and a winner.
+    - name: "Step 4: Test plan"
+      contains: A control offer, the tests to run, a read-out table and a rule for moving ad spend.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write an offer for each buyer angle
     text: Reads your reviews, keeps the four to six reasons buyers give, and builds one offer around each without changing the product. It lists every claim you must check.
@@ -40,7 +65,7 @@ how_it_works:
   - title: Pause and run the offers
     text: You run each offer on its own page for the same dates and traffic, then export visits and orders for each.
   - title: Plan the test
-    text: Reads the offers and your results. Sets a control, splits new and returning buyers, checks you have enough visits, and gives a rule for moving spend.
+    text: Reads the revised offers, the profit check and your results. Sets a control, splits new and returning buyers, checks you have enough visits, and gives a rule for moving spend.
 output_shape: |-
   STEP 1: ANGLES AND OFFERS
     Four to six angles | offer for each | claims to check

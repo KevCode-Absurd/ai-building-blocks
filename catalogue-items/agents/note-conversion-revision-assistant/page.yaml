@@ -1,51 +1,115 @@
 new_slug: note-conversion-revision-assistant
 name: Note conversion revision assistant
 headline: Note conversion revision assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: See how many shares your convertible note turns into, using the lower of the cap price and the discount price. Redone when a term changes.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A sourced accrued-balance-to-shares bridge and cap-versus-discount comparison. Include changed inputs, source versions, branch reasons and checks still blocked. Share signed simple-interest convertible note, funding dates, contractual year fraction, interest conversion rule, approved cap price, round price and an actual lower-of discount clause. If a reserve change is reported, include the before-top-up capitalization and the actual pre-cash target. Supply the previous approved review and actual changed source files with dates.
-explain: |-
-  A sourced accrued-balance-to-shares bridge and cap-versus-discount comparison. Include changed inputs, source versions, branch reasons and checks still blocked.
+subhead: Give it the signed convertible note, the funding dates, the interest rule, the cap price, the round price and the discount. It adds simple interest to the note, then compares the cap price with the discounted round price and takes the lower one. You get the converting balance, the share count and which price won.
 
-  Venture financing. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A convertible note is a loan that turns into shares at your next funding round. Two things set how many shares it becomes. One is what the note is worth on the day: the money lent, plus simple interest if the note lets interest convert. The other is the price per share it converts at. Many notes give the investor the lower of two prices, a cap price and a discounted round price.
+
+  This agent checks both. It adds simple interest from the funding date to the cut-off, using the year fraction written in the note. It works out the discounted round price, picks the lower of that and the approved cap price, and compares the shares you get with plain round-price shares. It names the price that won, so you can see what the cap or the discount is worth.
+
+  It keeps a record of the last review. It runs again when the cut-off date, the interest choice, the discount or the cap price changes, and says what moved. If a new option pool changes the share count behind the cap price, it checks the pool top-up and asks for the updated cap price from whoever approves it. It never guesses a company valuation, and it does not give legal advice.
+
 when:
-  - You need a sourced accrued-balance-to-shares bridge and cap-versus-discount comparison. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - You work on venture financing and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - The date the note converts moves, so interest runs for a different number of days.
+  - You and the investor agree whether interest converts into shares or is paid in cash.
+  - The round price or the discount changes before the round closes.
+  - A new option pool is added before the round, and it may change the cap price.
+
+not_for:
+  - You hold a SAFE, not a note. Use the SAFE financing revision assistant.
+  - Your note charges compound interest, or sets its price a different way. This checks simple interest and a lower-of cap and discount only, and it stops if the note says otherwise.
+  - You want legal advice on what the note means. It reads the clauses you give it and lists what it cannot confirm. Ask your lawyer.
+  - You want the share count once and no record kept. Run the Check a convertible note conversion workflow on its own.
+
 you_give:
-  - Signed simple-interest convertible note, funding dates, contractual year fraction, interest conversion rule, approved cap price, round price and an actual lower-of discount clause. If a reserve change is reported, include the before-top-up capitalization and the actual pre-cash target. Supply the previous approved review and actual changed source files with dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed note with the principal, the funding dates, the interest rate and the interest rule (from your signed note)
+  - The year fraction the note uses and the cut-off date for interest (from the note and your closing timetable)
+  - The cap price, the discount and the clause that says lower-of (from the note)
+  - The round price per share (from the term sheet)
+  - The share rounding rule (optional, from the note)
+  - The share count before an option pool top-up and the pool target (optional, only if a pool change is reported)
+  - The last review's record and the changed source files, with dates (optional, needed to show what changed)
+
 you_get:
-  - A sourced accrued-balance-to-shares bridge and cap-versus-discount comparison. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The interest accrued and the converting balance
+  - The cap price, the discounted round price, the lower one chosen and the shares it gives
+  - How many more shares that is than at the plain round price, and which price was binding
+  - A pool top-up check, only when a pool change affects the cap price
+  - What changed since the last review, a record for the next one, MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Check a convertible note conversion workflow and the Option pool top-up checker skill. An AI that reads files works best. In plain chat it still works, but it cannot save files.
+  - Say if this is the first run. If not, paste last time's record. Then attach the signed note, the term sheet and anything that changed.
+  - Tell it the cut-off date and the year fraction the note uses. Check that the interest it shows matches your own sum of principal x rate x year fraction.
+  - Check that the lower-of clause really appears in the note. If it does not, the comparison should stop and say so. Check the share count is shown unrounded until the rounding rule is confirmed.
+  - If a new option pool changes the cap price, get the updated cap price approved first and give it to the AI. Then run it again.
+
 how_it_works:
-  - title: Check a convertible note conversion
-    text: Run the governing workflow when The note accrual cutoff, interest conversion election, discount term or approved cap price changes.
-  - title: Option pool top-up checker
-    text: If a new option reserve changes the cap-price denominator, check the separate pool top-up and request the independently approved updated cap conversion price before continuing. Do not solve missing SAFE capitalization interactions from the reserve illustration. Otherwise skip the reserve branch.
-output_shape: |-
-  A sourced accrued-balance-to-shares bridge and cap-versus-discount comparison. Include changed inputs, source versions, branch reasons and checks still blocked.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this note, or sets a first baseline. It compares the note version, the funded principal, the dates, the year fraction, the price approvals and the rounding status. If nothing changed and no review is due, it says so and stops.
+  - title: Works out the interest
+    text: Runs the Convertible note interest checker step. It confirms the note uses simple interest, then adds principal x annual rate x year fraction to the principal. This gives the converting balance. It keeps share rounding open until the agreement is checked.
+  - title: Compares cap and discount
+    text: Runs the Cap and discount conversion checker step. It confirms the lower-of clause, works out the round price less the discount, picks the lower of that and the approved cap price, divides the balance by it and compares with round-price shares.
+  - title: Checks a pool change only when it matters
+    text: If a new option reserve changes the share count behind the cap price, it runs the Option pool top-up checker and asks for the independently approved cap price before going on. Otherwise it skips this step and says so. It will not solve the SAFE interactions from a reserve example.
+  - title: Checks and saves
+    text: Tests the result against the acceptance rules, retries the affected calculation at most twice, then writes the dated files, which steps ran or were skipped, and the new record. It never replaces an accepted baseline with an unapproved scenario.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  INTEREST     principal <n> x rate <n> x year fraction <n> = <n>
+               converting balance <n>
+  CONVERSION   cap price <n>; round price <n> less discount <n> = <n>
+               lower price <n> (<cap or discount> binds)
+               shares <n>; at round price <n>; extra shares <n>
+  POOL CHECK   added reserve <n>; shares after top-up <n>
+               (only if a pool change affects the cap)
+  RECORD FOR NEXT REVIEW  note version, funded principal source, accrual
+                          dates, day count, price approvals, balance
+                          converted, rounding status
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
+output_sample:
+  input:
+    - Your signed convertible note
+    - The funding dates and the cut-off date for interest
+    - The cap price, the discount and the round price from the term sheet
+    - The last review's record (optional)
+  prerequisites:
+    - An AI that can read files, so it can save the review files and the record
+    - The Check a convertible note conversion workflow and the Option pool top-up checker skill, added with the agent
+  output:
+    - name: Changed since last review
+      contains: Each input that moved, with its old and new value and its source date. On a first run it sets the baseline.
+    - name: outputs/step-1-convertible-note-interest-checker.md
+      contains: The simple interest accrued, the converting balance with currency and scale, and unrounded shares at the approved price.
+    - name: outputs/step-2-cap-and-discount-conversion-checker.md
+      contains: The cap price, the discounted round price, the lower one chosen, the shares it gives, the extra shares against round pricing, and the binding branch.
+    - name: Option pool top-up check
+      contains: The added reserve and total shares after the top-up, with dilution of existing holders. Only appears when a pool change affects the cap.
+    - name: Record for the next review
+      contains: Note version, funded principal source, interest dates, day count, price approvals, balance converted and rounding status, saved to a state file or printed for you.
+    - name: MISSING lines and CHECKS MISSED
+      contains: Every gap and the line it stops, then the checks that failed or could not run, or the word none.
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Convert only interest the note permits and use an independently checked cap price, not a guessed valuation denominator. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+  - what: A later cut-off date
+    how: Change the date and run it again. Interest grows by the extra days in the year fraction, the converting balance rises, and the share count rises with it.
+  - what: A bigger discount
+    how: Change the discount. If the discounted round price falls below the cap price, the discount becomes the binding price and the cap stops mattering.
+  - what: Interest that does not convert
+    how: Say the note does not let interest convert. The converting balance falls back to the principal, and the interest shows on its own line, left out of the share count.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Convert only interest the note permits and use an independently checked cap price, not a guessed valuation denominator. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +120,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each note's signed copy and every amendment with its date, so a changed term is a visible change.
+  - Write the year fraction your note uses, such as days over 365, once in the agent's file so every run reads it the same way.
+  - Keep the approval for each cap price. A cap price with no approval stops the share count.
+  - Pair it with the Cap and discount conversion checker when you only need the price comparison.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and saves the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your signed note and any amendments
+      why: The interest rule, year fraction, cap and discount are contract terms. Quote them from the page, not from memory.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The term sheet for the round, with the round price.
+    - A cap table that shows the share count before the round.
+    - A named person who approves the cap price and will check the clauses against the result.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Convertible note
+    meaning: A loan that turns into company shares at a later funding round instead of being paid back in cash.
+  - term: Cap price
+    meaning: The highest price per share the note converts at.
+  - term: Discount
+    meaning: A cut to the round price that gives the note holder a lower price than new investors.
+  - term: Lower-of
+    meaning: A clause that lets the note use whichever of two prices is lower.
+  - term: Simple interest
+    meaning: Interest worked out on the original amount only, with no interest on interest.
+  - term: Option pool
+    meaning: Shares set aside for staff to be given later.

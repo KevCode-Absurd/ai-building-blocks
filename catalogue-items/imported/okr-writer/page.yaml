@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Good key results need real judgment about what to measure.
 new_slug: okr-writer
 name: OKR writer
-summary: Give it your goals for the quarter. Get clear objectives and measurable
-  key results, plus a scoring and mid-quarter check routine.
+summary: Write OKRs for your quarter. Give it your goals and get clear objectives, measurable key results, a scoring guide and a mid-quarter check.
 job: plan-strategy
 headline: OKR writer
-subhead: Clear objectives and key results for the quarter that you will actually
-  use in your weekly decisions. The skill pushes you toward goals that stretch
-  you without being impossible.
+subhead: Give it your goals for the quarter. It turns them into clear objectives and key results you can use in weekly choices. You also get a way to score them and check them midway.
 explain: |
   Clear objectives and key results for the quarter that you will actually use in your weekly decisions. The skill pushes you toward goals that stretch you without being impossible.
 
@@ -18,6 +15,10 @@ when:
   - Your team hit every goal last quarter and you suspect they were too easy.
   - Goals were set in week one and nobody looked at them again.
   - You are introducing OKRs to a team that has never used them.
+not_for:
+  - "You only need a plan for one project: use a simple task list or a project plan, since OKRs measure outcomes, not tasks."
+  - "You want to track daily or weekly tasks: use a to-do tool or a spreadsheet, not this skill."
+  - "You want to link pay or bonuses to goal scores: talk with your manager or HR, because this skill treats scores as learning, not pay."
 you_give:
   - The goals or priorities for the quarter
   - Last quarter's goals and scores (optional)
@@ -29,7 +30,28 @@ you_get:
   - A scoring guide
   - A mid-quarter check routine
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code, web access or paid tool is needed.
+  - Paste your goals for the quarter, your team or role, and what you can measure today.
+  - Add last quarter's goals and scores if you have them (optional).
+  - Read the objectives. Each one should describe an outcome, not a task.
+  - Check each key result has a number you can measure. Fix any that are vague.
+  - Save the scoring guide and mid-quarter check. Use them at the halfway point and at quarter end.
+output_sample:
+  input:
+    - The goals or priorities for your quarter
+    - Your team or role
+    - What you can measure today
+    - Last quarter's goals and scores (optional)
+  output:
+    - name: Objectives
+      contains: A short list of goals written as outcomes you want, not tasks to finish.
+    - name: Key results
+      contains: Measurable results under each objective that show whether the outcome happened, with a start point and a target.
+    - name: Stretch check
+      contains: A check that each goal is not too easy and not out of reach.
+    - name: Scoring guide
+      contains: How to score each key result at quarter end and what the score tells you.
+    - name: Mid-quarter check
+      contains: Questions to ask halfway through to spot goals that are off track and decide what to change.
+    - name: Last quarter review
+      contains: A read of last quarter's scores, if you gave them, to show goals that were too easy or too hard.

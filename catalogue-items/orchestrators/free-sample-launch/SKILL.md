@@ -43,12 +43,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Free sample offer planner.** Use the skill `free-sample-offer-planner`. A free sample offer, who gets it, how to claim it and a cost-per-customer check
-2. **Small launch test planner.** Use the skill `small-launch-test-planner`. Give it the offer from the steps before. A small test in a few places and a rollout rule. Reads the offer from the step before
+1. **Free sample offer planner.** Use the skill `free-sample-offer-planner`. Makes the free sample offer, who gets it, how to claim it and a cost-per-customer check. It hands the offer to step 2.
+2. **Small launch test planner.** Use the skill `small-launch-test-planner`. Give it the offer from the steps before. A small test in a few places and a rollout rule. Reads the offer from the step before. It hands you the test plan to run.
 
 Pause here: Run the test in a few places and write down samples sent, replies and orders.
 
-3. **Cost per customer calculator.** Use the skill `cost-per-customer-calculator`. What a customer really costs, how soon it pays back and which ads to keep
+3. **Cost per customer calculator.** Use the skill `cost-per-customer-calculator`. Use your own test results, written down after the test (samples sent, replies, orders and costs), not step 2's plan. Works out what a customer really costs, how soon it pays back and which ads to keep
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

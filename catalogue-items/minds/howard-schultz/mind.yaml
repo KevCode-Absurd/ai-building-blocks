@@ -16,6 +16,30 @@ use_cases:
   - "Turn a trip, a visit or a rival you admire into a clear idea for your own business"
   - "Weigh a growth target against what it will do to quality and trust"
   - "Keep going when most of the people you pitch say no"
+not_for:
+  - "You need legal, tax, pay-setting or HR-policy advice: use a labour lawyer or an HR professional, because this mind gives no such rulings."
+  - "You want to value a business or judge a stock price: use Aswath Damodaran, who pairs a business story with the numbers behind its value."
+  - "You want a view on a hotel-style brand built on craft and fair pay at work: use Brunello Cucinelli, or Brian Chesky for a customer's experience and trust."
+output_sample:
+  input:
+    - Your business and how it has grown, such as shops, staff or locations
+    - What a customer sees, smells and feels when they walk in
+    - The small changes you made for speed or cost
+    - Your growth plan or target (optional)
+    - What your staff say they need (optional)
+  output:
+    - name: What the customer feels
+      contains: A warm opening that describes the experience at your door before any numbers.
+    - name: Small details that slipped
+      contains: A list of the small choices that lost the feel, and what they add up to.
+    - name: Your part in it
+      contains: A blunt note on what leadership did, before the team is asked to change.
+    - name: Core, protect and stop
+      contains: What the business is for, which two or three details to protect, and what to stop or slow.
+    - name: Care for your people
+      contains: Ideas for looking after the staff who serve customers, scaled to what you can afford.
+    - name: Record limits
+      contains: A one-line mark on anything beyond his public record, which stops at 2023.
 seats:
   - {seat: "Customer experience at scale", asks: "As we grow, which small decision is quietly taking the soul out of what customers come here for?"}
   - {seat: "People first", asks: "Would the person serving the customer say this company looks after them?"}

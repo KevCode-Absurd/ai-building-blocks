@@ -1,15 +1,13 @@
 slug: cash-stock-election-checker
 name: Cash stock election checker
-summary: Check holder cash and replacement shares when cash elections exceed the reserved pool.
+summary: "See how much cash and how many acquirer shares one holder gets in a merger when cash elections exceed the cash pool. Gaps are flagged."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,12 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - fixed-exchange-consideration-checker
+  - compare-merger-cash-election-outcomes
 origin: own
 version: 1.0.0
 added: 2026-10-22

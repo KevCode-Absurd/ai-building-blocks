@@ -1,6 +1,6 @@
 slug: turn-an-incident-into-a-safer-procedure
 name: Turn an incident into a safer procedure
-summary: Share the source files. Get a learning report, updated procedure draft and follow-up register.
+summary: "Turn an incident timeline into a blameless report, a safer procedure draft and a tracked list of prevention actions with owners and dates."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,28 +8,26 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: source_text
-    required: false
-  - type: question
+    required: true
+  - type: document
     required: false
   - type: meeting_notes
     required: false
 outputs:
   - type: document
-  - type: plan
+  - type: spreadsheet
 uses:
   - incident-postmortem-writer
   - process-and-sop-writer
   - executive-action-register
 steps:
   - uses: incident-postmortem-writer
-    note: Reconstruct the timeline, impact and contributing factors without assigning unsupported blame.
+    note: "Write a blameless report with a sourced timeline and causes marked confirmed or guess. Pass the confirmed causes and the controls that failed or worked to step 2."
   - uses: process-and-sop-writer
-    note: Draft the procedural changes justified by the report and preserve controls that still worked.
+    note: "Draft the safer procedure. Mark each change with the finding it answers and keep the steps that worked. Pass the list of changes to step 3."
   - uses: executive-action-register
-    note: Track prevention actions with owners, evidence of completion and a review date.
+    note: "Track each prevention action with an owner, a due date, proof of completion and a review date. Name an owner only where someone agreed."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -51,14 +51,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Email topic bank builder.** Use the skill `email-topic-bank-builder`. Builds the bank of reasons to email that are not a discount.
-2. **Email campaign calendar planner.** Use the skill `email-campaign-calendar-planner`. Give it the plan from the steps before. Places the best topics from the bank on a month calendar.
+1. **Email topic bank builder.** Use the skill `email-topic-bank-builder`. Builds the bank of reasons to email that are not a discount. Hands the bank to the calendar.
+2. **Email campaign calendar planner.** Use the skill `email-campaign-calendar-planner`. Give it the plan from the steps before. Takes the best topics from the bank in step 1 and places them on a month calendar. Hands each slot (goal, audience, angle, date) to the writer.
 
 Pause here: Pick the first slot on the calendar and write its one-paragraph brief: the idea, the audience and the product.
 
-3. **Campaign email writer.** Use the skill `campaign-email-writer`. Writes the full email from the brief for that slot.
-4. **Email draft reviewer.** Use the skill `email-draft-reviewer`. Give it the copy draft from the steps before. Reviews the draft against the brand voice before anyone designs it.
-5. **Email layout brief writer.** Use the skill `email-layout-brief-writer`. Give it the copy draft from the steps before. Turns the reviewed draft into a layout brief for the designer.
+3. **Campaign email writer.** Use the skill `campaign-email-writer`. Give it the plan from the steps before. Takes one slot from the step 2 calendar and your brief. Writes the full email for that slot.
+4. **Email draft reviewer.** Use the skill `email-draft-reviewer`. Give it the copy draft from the steps before. Reviews the draft from step 3 against the brand voice before anyone designs it. Hands back cuts and subject fixes to apply.
+5. **Email layout brief writer.** Use the skill `email-layout-brief-writer`. Give it the copy draft and the audit report from the steps before. Takes the step 3 draft with the step 4 cuts and subject fixes applied. Turns it into a layout brief for the designer.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

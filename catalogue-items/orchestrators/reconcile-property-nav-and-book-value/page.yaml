@@ -1,51 +1,86 @@
 new_slug: reconcile-property-nav-and-book-value
 name: Reconcile property NAV and book value
 headline: Reconcile property NAV and book value
-summary: Explain the difference between supplied property NAV and reported common book value per share.
+summary: Explain why a property company's net asset value and reported book value per share differ, with appraisals, tax and share count tied to one date.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked property NAV and book-value bridge with source-dated differences. Share appraisals, balance sheet, property/other net asset perimeter, tax adjustments, equity movements and closing share ledger.
+subhead: Give it the appraisals, the balance sheet, the equity statement, tax adjustments and the closing share count. It builds book value per share, then swaps in the appraised property values to reach net asset value. You get a bridge that explains every part of the gap.
 explain: |-
-  A linked property NAV and book-value bridge with source-dated differences.
+  A property company reports its buildings at book value. Analysts quote net asset value (NAV), which uses current appraisals. The two per-share figures differ, and the gap is often explained with one loose line. Appraisal uplift gets mistaken for earnings, or the share counts and liabilities do not match.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow starts with reported book value per share. It proves closing common equity and closing shares from the equity statement and keeps the book value of every asset and liability used. Then it uses the same date and shares, replaces only the property values you have appraisals for, and reconciles tax and debt conventions. The whole NAV-to-book gap is explained, line by line.
+
+  It works from the appraisals you give it. It does not value property, invent an appraisal or call uplift profit. A person who knows the company's reporting checks the definitions.
 when:
-  - You need a linked property NAV and book-value bridge with source-dated differences.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A report quotes a property NAV per share and you want to see how it links to book value.
+  - Appraisals came in higher than book and you need the uplift shown as a bridge, not as earnings.
+  - The share count or liabilities in an NAV table do not match the balance sheet.
+  - A reviewer asks which tax and debt adjustments sit between NAV and book value.
+not_for:
+  - You only need book value per share. Use the Book value per share roll-forward on its own.
+  - You only need the NAV bridge from supplied valuations. Use the Investment property NAV bridge on its own.
+  - You want to value several businesses inside one group. Use the Reconcile conglomerate valuation perimeters workflow.
+  - You have no appraisals. This workflow does not make up valuations, so get them first.
 you_give:
-  - Appraisals, balance sheet, property/other net asset perimeter, tax adjustments, equity movements and closing share ledger.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Property appraisals with their dates (from the valuer's reports)
+  - The balance sheet and the equity statement for the same date (from the annual or quarterly report)
+  - Which other assets and liabilities belong in NAV, and any tax adjustments (from the notes)
+  - The closing share ledger or share count (from the equity note)
+  - The reporting date, currency and scale, such as millions
 you_get:
-  - A linked property NAV and book-value bridge with source-dated differences.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A book value per share roll-forward, with closing equity and closing shares tied to the equity statement
+  - A property NAV bridge using the same date and shares
+  - The NAV-to-book difference, explained line by line with its source
+  - Every appraisal input traced to its source and date
+  - Every MISSING input and any check that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can build spreadsheets.
+  - Attach the appraisals, balance sheet, equity statement and share ledger. Say the reporting date, currency and scale once at the top.
+  - After step 1, check closing equity and closing shares against the equity statement.
+  - After step 2, check the bridge uses the same date and shares, and that each difference has a source.
+  - Fill every MISSING line before anyone quotes a figure. A person who knows the company checks the tax and debt conventions.
 how_it_works:
   - title: Book value per share roll-forward
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Prove closing reported common equity and actual closing shares from the equity statement; retain book values for every asset and liability used.
+    text: Proves closing reported common equity and closing shares from the equity statement. Keeps the book value of every asset and liability used. Hands step 2 the date, share count and book values. Check before moving on, equity and shares tie to the statement.
   - title: Investment property NAV bridge
-    text: Use the same date and shares, replace only the evidenced property book values with supplied appraisals and reconcile tax/debt conventions. Explain the complete NAV-to-book difference rather than treating appraisal uplift as earnings.
+    text: Uses the same date and shares. Replaces only the property values that have appraisals, and reconciles tax and debt conventions. Explains the whole NAV-to-book gap and never treats uplift as earnings. Check before you rely on it, every difference has a source.
 output_shape: |-
-  A linked property NAV and book-value bridge with source-dated differences.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES  <appraisals, statements, share ledger, dates, currency, scale>
+
+  1 BOOK VALUE PER SHARE  opening equity <n> +/- movements <n> = closing equity <n>
+                          closing shares <n>, book value per share <n>
+  2 PROPERTY NAV BRIDGE   book value of properties <n> -> appraised value <n>
+                          tax and debt adjustments <n>, NAV <n>, NAV per share <n>
+  GAP                     NAV per share less book value per share = <n>, split by cause
+
+  MISSING                 <each gap and the line it stops>
+  CHECKS MISSED           <one line each, or none>
+output_sample:
+  input:
+    - Property appraisals with dates
+    - The balance sheet and the equity statement
+    - Tax adjustments and which assets and liabilities count
+    - The closing share ledger
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool, if you want a workbook
+  output:
+    - name: outputs/step-1-book-value-per-share-rollforward.md
+      contains: Closing equity, closing shares and book value per share, tied to the equity statement.
+    - name: outputs/step-2-investment-property-nav-bridge.md
+      contains: Appraised property values taken to NAV per share on the same date and shares.
+    - name: NAV-to-book gap
+      contains: The difference per share, split into appraisal, tax and debt parts, each with its source.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Common shares and liability perimeters match; NAV-to-book differences reconcile to disclosed valuation/tax adjustments; appraisal inputs are sourced and no valuation is invented.
+  - what: A newer appraisal
+    how: Swap one appraisal for a newer one. The uplift, NAV and the gap all change, and the bridge shows by how much.
+  - what: A different tax view
+    how: Change the tax adjustment. The NAV changes and the gap line for tax moves with it.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and lists what it could not verify.
 judge:
   - Common shares and liability perimeters match; NAV-to-book differences reconcile to disclosed valuation/tax adjustments; appraisal inputs are sourced and no valuation is invented.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +91,25 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep a list of each property with its book value and latest appraisal date, and paste it in every time.
+  - Record which tax and debt conventions you used, so next period's bridge stays comparable.
+  - Pair it with the conglomerate valuation workflow when the group also holds stakes in other businesses.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The valuer's reports, not a summary of them.
+    - The equity note with the closing share count.
+    - The note that lists which assets and liabilities the company counts in NAV.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: NAV
+    meaning: Net asset value. What the assets are worth less what is owed.
+  - term: Book value
+    meaning: What the accounts show for an asset or for the company's equity.
+  - term: Appraisal
+    meaning: A professional estimate of what a property is worth on a set date.
+  - term: Perimeter
+    meaning: Which assets and liabilities are counted inside a figure.
+  - term: Uplift
+    meaning: How much an appraisal is above book value. It is not profit.

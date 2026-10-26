@@ -1,38 +1,53 @@
 new_slug: early-or-broken-checker
 name: "Early or broken checker"
-summary: "Describe an unfinished project. Get a call: keep protecting it, change the approach, change the lead or stop."
+summary: "Find out if your rough project is just early or truly stuck. Get a call: keep protecting it, change the approach, change the lead or stop."
 job: lead-people
 thinking: high
 thinking_why: "It weighs weak signs of progress and morale and has to make a call that can cost a team its project. Give it your strongest model."
 
-headline: "Tell if your rough project is early or truly stuck"
-subhead: Describe the project, who leads it and what changed between its versions. It judges the work against its own past, checks whether notes are moving it, asks whether the team still believes it can be fixed, and gives a call with a date to look again.
+headline: "Early or broken checker"
+subhead: "Describe the project, who leads it and what changed between its versions. It judges the work against its own past, checks whether review notes moved it and asks if the team still believes the problems can be solved. You get one call and a date to look again."
 
 explain: |
   Everything original starts out ugly. If you judge it against finished work, you kill ideas that only needed time. But some projects are not early. They are stuck, and every month of waiting costs more. From the outside the two look the same.
 
-  This skill separates them with four checks. Is it better than its own last version? Did the last round of notes change anything? Do the people working on it still believe the problems can be solved? Is hurry, and not the idea, causing the rough state? It then gives one of four calls: keep protecting, change the approach, change the lead and keep the idea, or stop.
+  This early or broken checker separates them with four checks. Is the work better than its own last version? Did the last round of notes change anything? Do the people working on it still believe the problems can be solved? Is hurry, and not the idea, causing the rough state?
+
+  It then gives one of four calls: keep protecting, change the approach, change the lead and keep the idea, or stop. Each call comes with its evidence, a date to look again and what would flip it. The tests come from Ed Catmull's account of how Pixar decides when to keep going and when to step in.
 
 when:
-  - You can't tell if a rough project needs patience or a hard decision.
-  - Your team keeps getting notes, but the work comes back much the same.
-  - Someone senior wants to cut a new idea because it looks bad today.
+  - "You can't tell if a rough project needs patience or a hard decision."
+  - "Your team keeps getting notes, but the work comes back much the same."
+  - "Someone senior wants to cut a new idea because it looks bad today."
+  - "A product, film, app or campaign has run for months and you must decide whether to fund the next stage."
+
+not_for:
+  - "The work is finished and needs polish. Use an editor or reviewer for that kind of work, such as the Sales copy editor."
+  - "The decision is made and the team still disagrees. Use the Disagree-and-commit note writer."
+  - "You only want to know who is pulling on the project. Use the Incentive checker first, then bring its report here."
+  - "You want a rough idea kept safe from pressure, not judged. Use the New idea protection planner."
 
 you_give:
-  - What the project is, who leads it and how long it has run
-  - The rounds so far, with dates and what changed (strongly better)
-  - A pressure map from "Incentive checker" (optional)
-  - What it costs to carry on (optional)
+  - "What the project is, who leads it and how long it has run"
+  - "A dated list of its versions or reviews, one line each on what it looked like and what changed (at least three points)"
+  - "Notes from each review round (optional)"
+  - "What people on the team have said about whether it can be fixed (optional)"
+  - "A pressure map from the Incentive checker (optional)"
+  - "What it costs to carry on (optional)"
 you_get:
-  - The project's timeline, judged against its own versions
-  - A result for the notes test and a read on whether the team still believes
-  - A call with its evidence, a date to look again and what would flip it
+  - "A dated timeline, judged against the project's own earlier versions"
+  - "A result for the notes test: what changed after each round"
+  - "A read on whether the team still believes, or the one private question to ask each person"
+  - "One of four calls: keep protecting, change the approach, change the lead or stop"
+  - "The evidence, a date to look again and what would flip the call"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the description and list each version or review with its date.
-  - If it asks, put one private question to each team member and bring back the answers.
-  - Bring the result to "New idea protection planner" if the call is keep protecting.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no tools."
+  - "Paste the project description and a dated list of its versions or reviews. If you paste no project, it asks for it and stops."
+  - "Add what changed after each round of notes."
+  - "If it asks, put one private question to each team member and bring back the answers."
+  - "Read the call and what would flip it. Share it with the project lead before the team."
+  - "If the call is keep protecting, take it to the New idea protection planner."
 
 how_it_works:
   - title: Builds the timeline
@@ -58,6 +73,7 @@ output_shape: |
   Against its own past: <better / flat / worse>
   Notes test: <what changed after each round>
   Belief of the team: <healthy / unhealthy / MISSING>
+  Lead wants this version: <yes / no / MISSING>
   Hurry: <is the schedule making it look worse>
   Cost: <of carrying on, of stopping>
 
@@ -70,6 +86,26 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "What the project is, who leads it and how long it has run"
+    - "A dated list of its versions or reviews, with what changed each time"
+    - "Notes from each review round (optional)"
+    - "A pressure map from the Incentive checker (optional)"
+  prerequisites:
+    - "At least three dated versions or reviews of the project"
+  output:
+    - name: "TIMELINE"
+      contains: "Each version or review with its date and what changed since the one before."
+    - name: "CHECKS"
+      contains: "Better than its own past, the notes test, the team's belief, hurry and cost, each with a result."
+    - name: "THE CALL"
+      contains: "Keep protecting, change the approach, change the lead or stop, with evidence, a date to look again and what would flip it."
+    - name: "MISSING"
+      contains: "What would settle the call, such as version history or how the team feels."
+    - name: "CHECKS MISSED"
+      contains: "One line for each of its own checks it missed, or none."
 
 tweaks:
   - what: Version history

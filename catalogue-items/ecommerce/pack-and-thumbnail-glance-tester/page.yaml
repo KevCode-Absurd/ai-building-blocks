@@ -1,6 +1,6 @@
 new_slug: pack-and-thumbnail-glance-tester
 name: "Pack and thumbnail glance tester"
-summary: "Give it your pack image. Get a 3-second read score out of 100 and a sharper pack brief."
+summary: "Test your pack image with a 3-second glance test beside rivals. Get a score out of 100 and the changes to make to your pack front."
 job: brand-file
 thinking: medium
 thinking_why: "It scores answers from strangers and writes small pack changes, so a mid-size model works. A stronger one reads your image more closely."
@@ -17,6 +17,10 @@ when:
   - You are redesigning a pack, label or main product image and want proof it reads fast.
   - Your product sells well on its own site but poorly next to rivals on a marketplace or shelf.
   - You have two pack versions and need a fair way to compare them.
+not_for:
+  - "You need a full pack layout or dieline brief: use a packaging brief writer, or ask your designer."
+  - "Your product has no rivals on a shelf, grid or collection page: ask a few buyers what they think in a short chat instead."
+  - "You want to check a whole product page gallery: use the Product page image checker."
 
 you_give:
   - Your pack front or main image, as a file
@@ -34,6 +38,30 @@ how_to_use:
   - Show the front to five strangers for 2 to 3 seconds beside the rivals, then ask the four questions and write down each answer.
   - Paste the answers and read the score and the weakest question first.
   - Change one or two things, then compare old and new in the same channel before you print or upload everything.
+output_sample:
+  input:
+    - Your pack front or main image, as a file
+    - A screenshot of three rivals in the same view
+    - What five strangers said after a 2 to 3 second look
+    - Sales by pack version, with dates and where sold (optional)
+  prerequisites:
+    - An AI that can read images
+    - Five strangers who can see your pack beside rivals for 2 to 3 seconds
+  output:
+    - name: Glance test header
+      contains: Product name, number of strangers, rivals in view, and whether the score came from strangers or an AI read.
+    - name: Score
+      contains: Points out of 100 from four questions worth 25 each, with the sum and the weakest question.
+    - name: What strangers said
+      contains: Answers to each question, grouped so you can see the pattern.
+    - name: Fixed parts
+      contains: Barcode, legal text and platform rules that stay as they are.
+    - name: Brief changes
+      contains: A colour cue for the variant, the few front claims, and the category look to avoid copying.
+    - name: Split test plan
+      contains: How to compare old and new in the same channel and window, and the measure to use.
+    - name: Not run and missing
+      contains: Which checks were skipped and which inputs are still needed.
 
 how_it_works:
   - title: Gives you the test

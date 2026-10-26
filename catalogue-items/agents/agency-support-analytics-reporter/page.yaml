@@ -1,0 +1,131 @@
+name: Analytics Reporter agent
+summary: Turn your sales, ad or customer export into a plain analytics report with trends, customer groups, ad returns and what to do next.
+headline: Analytics Reporter agent
+subhead: Paste a table of your numbers and the decision you face. The agent checks the data first, then finds the trends, groups your customers and works out what each channel returned. You get a report with findings, evidence and next steps.
+job: track-numbers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Most business numbers sit in exports nobody has time to read. This analytics reporter agent turns a sales, ad or customer table into a report you can act on. It starts from your decision, such as whether to cut a channel, not from a pile of charts.
+
+  Before it reports anything, it checks the data: gaps, duplicates, odd dates and how many rows it really has. Then it picks the right method. That can be month by month growth, customer groups by how recently and how often they buy (called RFM), or a split of ad spend and return by campaign. Each finding comes with the rows that back it and a note on how sure it is.
+
+  It does not run live dashboards or connect to your tools. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The profile's sample numbers and success targets are examples, not results measured by AI Blocks.
+when:
+  - You have a sales, ad or customer export and no time to read it, and you need to know what changed.
+  - A boss or partner asks "how are we doing?" and you need a one-page answer with evidence.
+  - You want to know which customers buy most and which have gone quiet.
+  - You want to know which campaign or channel returned the most per dollar spent.
+not_for:
+  - "You only want a quick answer to one question about a table: use the Data analyst."
+  - "You want a forecast from numbers over time: use the Trend and forecast analyst."
+  - "You want to test whether a result is real, with a study plan: use the Statistician agent."
+  - "You want to build a chart or a dashboard people can open every day: use the Data Visualization Engineer agent or the Offline dashboard builder."
+  - "Your numbers include private customer details you are not allowed to share with an AI tool."
+you_give:
+  - The decision or question the report must help with, such as whether to keep funding a channel
+  - A table of your numbers pasted as text or CSV, such as orders, ad spend or customer rows
+  - The date range, and an earlier period to compare with (optional)
+  - What each column means, if the names are not clear (optional)
+  - Who reads the report, such as you, your team or a client (optional)
+you_get:
+  - A one-page summary with the key findings and the first actions to take
+  - A data check that lists gaps, duplicates and how much you can trust each number
+  - Trends with the rows behind them and a note on how sure the agent is
+  - Customer groups with a line on how to treat each, if your data has customers and order dates
+  - Next questions and the checks still needed before you act
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your table and say the decision it should help with. For a big file, paste the first 100 rows plus the column names, and say how many rows there are.
+  - Say "Check the data first, then report. Do not invent numbers." Your AI asks once for anything missing.
+  - Read the data check before the findings. If it flags a problem, such as missing days, fix the file or accept the limit before you trust the rest.
+  - Pick one next action from the report. Check it against your own records before you spend money on it.
+  - Save the report. To update it next month, paste last month's report and the new table into a fresh chat.
+how_it_works:
+  - title: Set the question
+    text: It confirms the decision, the period and who reads the report. It asks once for what is missing.
+  - title: Check the data
+    text: It looks for gaps, duplicates, odd dates and thin samples, and says how far each number can be trusted.
+  - title: Pick the method
+    text: It chooses growth by month, customer groups by recency, frequency and spend, or spend against return by campaign.
+  - title: Find the trends
+    text: It shows what moved, by how much and which rows prove it. Small samples are flagged, not hidden.
+  - title: Write the report
+    text: It puts the summary first, then the evidence, then actions ranked by effort and size.
+  - title: List the checks
+    text: It names what you should confirm in your own records before you act.
+output_shape: |-
+  EXECUTIVE SUMMARY
+    Key findings <3 findings, each with a number from your data>
+    Do first <1 to 3 actions>
+
+  DATA CHECK
+    Source <file or table> | Rows <count> | Period <dates>
+    Problems found <gaps, duplicates, odd values>
+    Trust level <high, medium or low, and why>
+
+  ANALYSIS
+    Method <what was used and why>
+    Findings <finding> | <rows that show it> | <how sure>
+    Customer groups <group> | <count> | <how to treat them>
+
+  RECOMMENDATIONS
+    <action> | <why> | <effort> | <how to measure it>
+    Roadmap <next 30 days> | <next 90 days>
+
+  OPEN CHECKS
+    <fact to confirm> | <assumption made>
+output_sample:
+  input:
+    - The decision the report must help with
+    - A table of your numbers, pasted as text or CSV
+    - A comparison period and column meanings (optional)
+  prerequisites:
+    - An AI that reads pasted text or a CSV file, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Executive summary
+      contains: Three key findings with numbers from your data, and the first actions to take.
+    - name: Data check
+      contains: Row count, period, gaps and duplicates found, and how far to trust each number.
+    - name: Analysis
+      contains: The method used, each trend with the rows behind it, and customer groups if your data allows.
+    - name: Recommendations
+      contains: Actions ranked by effort, each with why it matters and how to measure it.
+    - name: Roadmap
+      contains: What to do in the next 30 and 90 days, with the check for each step.
+    - name: Open checks
+      contains: Facts to confirm in your own records and assumptions the agent had to make.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Report length
+    how: Ask for the summary and data check only, or for one page for a boss who will not read more.
+  - what: Method
+    how: Name the one analysis you want, such as customer groups only, or ad return by campaign only.
+  - what: Reader
+    how: Say who reads it, such as a client or a board, so the agent sets the tone and skips jargon.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: RFM
+    meaning: A way to group customers by how recently they bought, how often and how much they spent.
+  - term: Trend
+    meaning: A move in a number over time, such as sales rising for three months in a row.
+  - term: Confidence
+    meaning: How sure the agent is that a result is real and not luck. Small samples give low confidence.
+  - term: Attribution
+    meaning: Giving credit for a sale to the ad or channel that helped cause it.
+  - term: ROI
+    meaning: Return on investment. What you got back compared with what you spent.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A pasted table or CSV is enough. An AI that can run code checks the sums more closely. The agent cannot reach your live accounts.
+  inputs:
+    - A second period to compare with, such as last month or the same month last year.
+    - A short note on what each column means and which orders to leave out, such as refunds.

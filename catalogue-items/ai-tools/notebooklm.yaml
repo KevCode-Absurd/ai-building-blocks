@@ -2,31 +2,32 @@ slug: notebooklm
 name: NotebookLM
 maker: Google
 url: https://notebooklm.google.com
-promise: "Ask questions, make study guides and hear summaries from the sources you add."
+promise: "Ask questions of your files and notes, then turn them into slides or audio."
 use_cases: [research, organise-work]
 categories: [chat-assistant, productivity]
 what_it_does:
-  - Reads documents, links, videos and notes you add as sources.
-  - Answers questions with citations back to your own sources.
-  - Makes study guides, briefs and mind maps from them.
-  - Turns your sources into a spoken audio overview.
-  - Lets you share a notebook with other people.
+  - "Works as a research and thinking partner that answers from the information you add (notebook.google.com, checked 26 Oct 2026)."
+  - "Turns your files into slide decks and your brainstorms into mind maps (checked 26 Oct 2026)."
+  - "Turns your material into Audio Overviews and Video Overviews (checked 26 Oct 2026)."
+  - "Lets you keep up to 100 notebooks and 50 sources per notebook on the free plan (checked 26 Oct 2026)."
+  - "Raises those limits on paid Google plans, up to 500 notebooks and 600 sources per notebook (checked 26 Oct 2026)."
 benefits:
-  - "Open linked citations to check an answer against the original source."
-  - Turn a stack of reports into one short brief.
-  - Listen to a summary of a long document on the move.
-  - Keep one topic's papers, notes and links in one notebook.
+  - "Turn a stack of reports into slides or a short audio summary."
+  - "Keep one topic's files and notes together in one notebook."
+  - "Start free with a Google account."
+  - "Check an answer against your own material before you use it."
 best_for:
   - Reading a pile of papers, reports or transcripts.
-  - Study guides and briefings from your own material.
-  - Research you need to cite.
+  - Study material and briefings built from your own files.
+  - Research you need to check against the original.
 not_for:
-  - Questions about topics outside the sources you add.
-  - Writing marketing copy from scratch.
+  - "Questions about topics outside the sources you add. Use Perplexity or Gemini."
+  - "Writing marketing copy from scratch. Use Claude or ChatGPT."
+  - "Private files you may not share with Google. Read the privacy terms first."
 pricing:
   model: freemium
-  from: US$4.99 per month
-  note: Free with a Google account. Paid tiers come with Google AI Plus (US$4.99 per month), AI Pro and AI Ultra, and raise the limits on notebooks and sources.
+  from: Free with a Google account (up to 100 notebooks, 50 sources each; checked 26 Oct 2026)
+  note: "Google's page lists the free Standard plan at 100 notebooks per user and 50 sources per notebook (checked 26 Oct 2026). Google AI Plus raises this to 200 notebooks and 100 sources. Google AI Pro gives 500 notebooks and 300 sources. Google AI Ultra gives 500 notebooks and 500 or 600 sources. Work and school Google accounts can also get paid tiers. The page says limits are subject to change. We did not confirm the prices of the Google AI plans, and an earlier note here of US$4.99 a month for Google AI Plus was not rechecked."
 works_with:
   - gemini
   - Google Drive
@@ -36,7 +37,29 @@ blocks:
   - deep-reading-guide
   - deep-reading-map-builder
 alternatives: [perplexity, chatgpt, claude, gemini]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Go to notebooklm.google.com and sign in with a Google account. Google's own page now says Gemini Notebook, so the name on screen may differ (checked 26 Oct 2026)."
+  - "Make a new notebook and name it for one topic."
+  - "Add your sources: the files and notes you already have on that topic. We did not confirm every type it accepts, so start with a file or pasted text."
+  - "Ask one question you can check yourself, such as what a report says about a number you know."
+  - "Check the answer against your source. Then ask for a summary, a mind map or an audio overview."
+needs:
+  - "A Google account."
+  - "The files, notes or links for one topic, gathered before you start."
+  - "A first question you already know the answer to, so you can test it."
+  - "A paid Google plan only if you go over 50 sources in a notebook."
+example:
+  task: "Turn the quarterly reports you already have into a short brief you can read before a meeting."
+  cost: "Free within the Standard limits of 100 notebooks and 50 sources each (checked 26 Oct 2026). Paid Google plans raise the limits."
+  reply: "Answers drawn from the reports you added, and on request a slide deck, a mind map or an audio overview. Check each figure against the original report."
+not_verified:
+  - "Which source types it accepts, such as links, videos or pasted notes. The page we read does not list them."
+  - "Study guides and briefs. The page names slide decks, mind maps, audio and video overviews, but not study guides."
+  - "That answers carry clickable citations to your sources, and that notebooks can be shared. The page we read does not say."
+  - "Prices of the Google AI plans."
+  - "The product name. notebooklm.google.com now redirects to a page titled Gemini Notebook."
 sources:
   - https://support.google.com/notebooklm/answer/16213268
-  - https://gemini.google/us/subscriptions/
+  - https://notebook.google.com

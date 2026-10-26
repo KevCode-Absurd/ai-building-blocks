@@ -1,6 +1,6 @@
 slug: campaign-copy-draft-agent
 name: Campaign copy draft agent
-summary: Share your brief, offer and approved claims. Get a copy deck checked against those facts, plus a checkpoint for the next revision.
+summary: "Get campaign copy checked against your approved claims. Every claim is tied to its proof, gaps are flagged and a checkpoint is saved."
 category: agent
 type: agent
 role: orchestrate

@@ -1,6 +1,6 @@
 slug: bold-bet-downside-checker
 name: "Bold bet downside checker"
-summary: "Paste a bold plan. Get the worst case, how to cap it, and a clear go or no-go."
+summary: "Check a bold plan before you commit. Get the worst case in numbers, ways to cap the loss and a go, change or no verdict."
 category: general
 type: skill
 role: check
@@ -16,3 +16,5 @@ minds: [richard-branson, ratan-tata, jeff-bezos]
 credits:
   - {title: "Losing My Virginity", by: "Richard Branson", url: "https://en.wikipedia.org/wiki/Losing_My_Virginity", used: "Protecting the main business when trying something bold, using a smaller first version, a licence, a partner or a separate company"}
   - {title: "Oral History of Ratan Tata", by: "Interviewed by Uday Kapoor, Mumbai, 2017", used: "Checking a bold move against what the group cannot afford to lose, and listening to people near the customer"}
+next: [case-against-writer, informed-captain-decisions, smallest-test-picker]
+needs_mode: manual

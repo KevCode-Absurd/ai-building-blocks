@@ -15,6 +15,28 @@ use_cases:
   - "Reduce repeated carrying and searching in a home or volunteer workspace"
   - "Identify gaps in support for an important recurring task"
   - "Plan a practical design learning project with a useful handover"
+not_for:
+  - "You want a calm, simple product or shelf with few parts: hire Dieter Rams."
+  - "You want to turn a messy home into a tidy one by removing things: hire Dana K. White."
+  - "You need structural, electrical, drainage or land-disturbing work signed off: ask a competent local professional, not an AI."
+output_sample:
+  input:
+    - The task your place should support, in plain words
+    - Who uses it, and how often
+    - What is in the space now, and what each item needs
+    - Conditions you have seen, such as light, wind, water and access
+    - Who will look after it (optional)
+  output:
+    - name: Task-and-site brief
+      contains: The real task, the users, the limits, and the conditions you have observed.
+    - name: Function cards
+      contains: What each element needs, what it provides, how often it needs care, and where it conflicts.
+    - name: Placement and connections map
+      contains: Where things should sit by how often they are used, and which links help or add work.
+    - name: Recommendation
+      contains: What to change, why, and what needs a competent person to check first.
+    - name: Handover record
+      contains: Who cares for each part, whom to ask, and the limits, so the next person can run it.
 seats:
   - {seat: "Placement and functional connections", asks: "What does each element need, provide and connect to?"}
   - {seat: "Care frequency and site fit", asks: "Why is this here, and how often must someone attend to it?"}

@@ -2,16 +2,31 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: resale-store-daily-procedure-planner
 name: Resale store daily procedure planner
-summary: Share till issues and store rules. Get opening, closing, cash checks, and stock-loss procedures for review.
+summary: Build opening and closing checklists, till count steps and a loss-prevention plan for your resale store, ready for a manager to review.
 job: organise-work
 headline: Resale store daily procedure planner
-subhead: Share your store setup, register records, cash issues, and approved financial rules. It maps daily tasks and checks where money or stock can go missing. You get opening and closing lists, cash-count steps, deposit checks, and loss-prevention procedures for review.
+subhead: Share your store setup, till records and approved money rules. Your AI writes daily procedures for opening, closing, cash counts, deposits and stock loss. A named person must check them before your store uses them.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - Your till never balances and you need a clear daily count routine.
+  - You are setting up a register system for a thrift or donated-goods store.
+  - Stock loss is rising and you need a loss-prevention plan.
+  - New volunteers need written opening and closing steps.
+not_for:
+  - "You need to set store prices or plan displays: use the Nonprofit retail pricing and merchandising skill, or ask your store lead."
+  - "You need to change the group's approval limits or financial policy: ask your board or finance lead. This page only follows those rules at the register."
+  - "You sell online only: use an online resale guide, as this page covers a store floor with registers."
 you_give:
-  - Register setup, daily sales and cash records, store roles, approved review thresholds, and current procedures.
+  - Your register setup and how many tills you run
+  - Your daily sales and cash records
+  - Your approved variance limits and who reviews them
+  - Your current opening and closing steps (optional)
+  - Your store roles, staff and volunteers (optional)
 you_get:
-  - Opening and closing lists, cash variance template, deposit checks, and stock-loss control steps.
+  - Opening and closing checklists with a sign-off line for each
+  - A daily over/short template with fields for register, cashier, expected cash, counted cash, variance, counters and reviewer
+  - Variance limits and escalation steps that use your approved rules
+  - A deposit check where a second person reviews any difference
+  - A loss-prevention checklist and a monthly shrinkage report outline
 how_it_works:
   - title: Map the daily records
     text: Check that the register reports sales by item group and payment type. Check it supports the store's price rules.
@@ -26,5 +41,34 @@ works_best_with:
   inputs:
     - Cash handling, reconciliation and loss prevention are financial controls.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code or paid tool is needed.
+  - Paste your register setup, cash records, store roles and approved variance limits. Say which are missing.
+  - Ask for opening and closing checklists, the over/short template, deposit checks and loss-prevention steps.
+  - Check the plan against your group's approved financial rules. Fix anything that clashes.
+  - Give the plan to a named reviewer, such as your finance lead, before staff use it.
+  - Train staff and volunteers on the final version and redo it when your register system changes.
+output_sample:
+  input:
+    - Your register setup and how many tills you run
+    - Your daily sales and cash records
+    - Your approved variance limits and who reviews them
+    - Your current opening and closing steps (optional)
+    - Your store roles, staff and volunteers (optional)
+  prerequisites:
+    - Your group's approved financial rules, so the plan follows them
+    - A named person to review the plan before use
+  output:
+    - name: POS and stock system checklist
+      contains: What your register system must report, such as sales by item group and payment type.
+    - name: Opening and closing checklists
+      contains: Step lists for opening and closing, with a sign-off line for the opener and closer.
+    - name: Daily over/short report template
+      contains: A form comparing expected cash with counted cash for each register and cashier, with a place for notes.
+    - name: Variance limits and escalation steps
+      contains: What counts as normal error, when a manager reviews, and when it goes to your finance lead.
+    - name: Deposit reconciliation procedure
+      contains: How to bank cash promptly and match the deposit slip to the sales report, checked by a second person.
+    - name: Loss-prevention checklist
+      contains: Physical and procedural controls, such as receipts for every sale and a locked donation holding area.
+    - name: Monthly shrinkage report
+      contains: A simple review of stock and cash loss, with spot counts in high-value areas.

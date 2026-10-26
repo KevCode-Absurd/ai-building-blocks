@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds a plan from set stages.
 new_slug: event-marketing-planner
 name: Event marketing planner
-summary: Say the event type and goal. Get a plan to fill seats, follow up and
-  turn attendees into pipeline.
+summary: Plan your event marketing to fill seats, book meetings and follow up fast. Say your role and goal. Get a before, during and after plan.
 job: plan-strategy
 headline: Event marketing planner
-subhead: Say the event type and goal. Get a plan to fill seats, follow up and
-  turn attendees into pipeline. Bring main goal for the event. Use the result to
-  plan your next step.
+subhead: Say the event type and goal. Get a plan to fill seats, follow up and turn attendees into pipeline. Bring main goal for the event. Use the result to plan your next step.
 explain: |
   A plan for an event that fills the room and leads to real sales conversations, whether you host, sponsor, speak or just attend.
 
@@ -18,6 +15,10 @@ when:
   - You paid for a booth and want meetings booked before you arrive.
   - You are deciding which of ten conferences deserve your budget.
   - You have a speaking slot and want it to bring leads.
+not_for:
+  - "You are planning a product launch moment: use a launch plan, not an event plan."
+  - "You want an ongoing community program: use a community marketing plan, and treat events as one part of it."
+  - "Your buyers are small, low-price deals that close online: spend on digital first, since in-person fits high-trust, high-price sales."
 you_give:
   - "Your role: host, sponsor, speaker or attendee"
   - Main goal for the event
@@ -30,7 +31,31 @@ you_get:
   - Follow-up sequence
   - Ways to judge event return
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Say your role: host, sponsor, speaker or attendee."
+  - Add your main goal, the buyers you want to meet, your budget and your team size.
+  - Answer any questions your AI asks. It needs no code, files or paid tools.
+  - Check the target list and follow-up tiers, then fix anything that does not fit your buyers.
+  - Book meetings before you go, and send your follow-up within 48 hours.
+output_sample:
+  input:
+    - "Your role: host, sponsor, speaker or attendee"
+    - Your main goal for the event
+    - Who must be in the room
+    - Your budget and team size
+    - Your product marketing notes (optional)
+  output:
+    - name: Role and goal check
+      contains: Your role, one main goal, the buyers you need in the room, and your budget and team.
+    - name: Event selection
+      contains: Advice on which events are worth your budget, based on pipeline value and event type.
+    - name: Before the event
+      contains: A target list, meeting outreach ideas and a plan to announce your presence.
+    - name: During the event
+      contains: How to have qualified conversations, record what was said and make content on site.
+    - name: After the event
+      contains: A follow-up within 24 to 48 hours, split into hot, warm and light-touch tiers.
+    - name: Content plan
+      contains: How to record, slice and reuse talks, clips, recaps and quotes.
+    - name: Measurement
+      contains: Which numbers to track, and how to judge cost per qualified meeting and opportunity.

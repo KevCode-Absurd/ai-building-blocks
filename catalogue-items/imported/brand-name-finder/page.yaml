@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks between making names and judging names, then weighs each one.
 new_slug: brand-name-finder
 name: Brand name finder
-summary: Share your brand brief. Get name ideas, or scores and honest feedback
-  on the names you already have.
+summary: Find a brand name for your business, or get honest scores on names you already have. Share a short brief and get ranked picks with reasons.
 job: brand-file
 headline: Brand name finder
-subhead: Name ideas that come with reasons, or scores and honest feedback on
-  names you already have. It works like a naming consultant, not a random word
-  generator.
+subhead: Name ideas that come with reasons, or scores and honest feedback on names you already have. It works like a naming consultant, not a random word generator.
 explain: |
   Name ideas that come with reasons, or scores and honest feedback on names you already have. It works like a naming consultant, not a random word generator.
 
@@ -18,6 +15,10 @@ when:
   - You have a shortlist and want a frank opinion.
   - Your name is hard to say or spell and you want alternatives.
   - You want names in a particular cultural or language style.
+not_for:
+  - You want to rename a brand that people already know. Talk to a brand strategist first, so you do not lose the trust you built.
+  - You need legal clearance for a name. Ask a trademark lawyer or attorney to check it in your market.
+  - You need a logo or visual look for your name. Work with a designer once you pick the name.
 you_give:
   - What you sell and who it is for
   - The feeling the name should create
@@ -29,7 +30,29 @@ you_get:
   - Honest feedback on weak names
   - A shortlist to take forward
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini in a new chat. No code, files or paid tools are needed.
+  - Paste the full text of this skill into the chat as your first message.
+  - In a second message, describe what you sell, who it is for, and the feeling you want. Add names to avoid.
+  - If you have names already, paste them in too and ask for feedback.
+  - Read the Top 5 first. Ask to see all directions if you want the full list.
+  - Check domain and trademark before you pick. Then say the name aloud to a friend and ask them to spell it.
+output_sample:
+  input:
+    - "A short brief: what you sell and who it is for"
+    - The feeling the name should give
+    - Competitors or names to avoid
+    - Names you already have (optional)
+    - Price level, markets or words you love or hate (optional)
+  output:
+    - name: Naming Strategy
+      contains: A short brief with your audience, positioning, the feeling of the name, and the naming directions to explore.
+    - name: Evaluation Table
+      contains: Every name scored for clarity, memory, sound, look and risk, with an overall score.
+    - name: Top 5 Names
+      contains: The five strongest names, ranked, each with one line on its meaning and why it stands out.
+    - name: My Recommendation
+      contains: One pick, with clear reasons based on your audience, positioning and room to grow.
+    - name: Before You Finalize
+      contains: A checklist for domain, trademark, social handles, saying it aloud and unwanted meanings.
+    - name: Name feedback (if you share names)
+      contains: "For each of your names: what it suggests, ease of saying, logo potential, risk, score and a ranking."

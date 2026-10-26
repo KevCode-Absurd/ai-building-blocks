@@ -1,6 +1,6 @@
 new_slug: offer-test-planner
 name: "Offer test planner"
-summary: "Give it your offers and buyer types. Get separate funnel tests, tags to track and a read-out rule."
+summary: "Plan offer tests for your online store. Give it your offer and weekly visits. Get two to four separate tests, a tag to track and a spend rule."
 job: make-offer
 thinking: medium
 thinking_why: "It plans tests and sets rules from your numbers, which a mid-size model does well. Use a stronger one for a store with many products."
@@ -17,6 +17,10 @@ when:
   - You run one offer all year and want to find out whether a different one sells better.
   - Your growth is stuck and you suspect the first offer is the limit, not your ads.
   - You have a few buyer types and want to know which one deserves more of your ad spend.
+not_for:
+  - "Your store has no sales history yet: sell for a few weeks first, or ask a few buyers why they bought."
+  - "You only want to test a discount amount: run a simple A/B test in your store tool instead."
+  - "You have under about 1,000 visits a week to the page: use a simple A/B test on one change, and treat results as direction only."
 
 you_give:
   - Your current offer and the page it lives on
@@ -37,6 +41,28 @@ how_to_use:
   - Say who builds your pages and how many pages that person can make this month.
   - Build the pages, add the tag question, and run all tests at the same time.
   - Fill in the table each week. Come back at 90 to 120 days with the survey answers.
+output_sample:
+  input:
+    - Your current offer and the page it lives on
+    - Visits per week to the page you want to test
+    - What buyers say, from reviews or support (optional)
+    - The tools you have, such as a pop-up tool or survey (optional)
+    - Who builds your pages and whether you sell subscriptions
+  output:
+    - name: Growth limit
+      contains: Where growth is capped, with the churn sum if you sell subscriptions.
+    - name: Control
+      contains: The current offer and page that stay live as the fair comparison.
+    - name: Tests
+      contains: Two to four tests, each with its own page, buyer type, offer, pop-up question, tag and visit need.
+    - name: Table
+      contains: A weekly table for visits, orders, conversion, opt-in, profit per session and 90-day repeat.
+    - name: Spend rule
+      contains: Steps for when to move ad spend toward one test.
+    - name: Survey
+      contains: One question to send buyers 90 to 120 days later.
+    - name: Checks missed
+      contains: Any checks that failed, and what you did not give it.
 
 how_it_works:
   - title: Finds the real limit

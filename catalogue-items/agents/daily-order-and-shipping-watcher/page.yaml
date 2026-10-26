@@ -1,6 +1,6 @@
 new_slug: daily-order-and-shipping-watcher
 name: Daily order and shipping watcher
-summary: Run it each morning. Get late and stuck orders found before customers write, and risky ones held only on your yes.
+summary: Check your open orders each morning to catch late and stuck Shopify orders before customers write. Risky ones are held only after your yes.
 job: run-your-store
 thinking: medium
 thinking_why: It runs a few checks and compares lists with yesterday. A mid-range model is enough.
@@ -14,6 +14,10 @@ when:
   - You ship a few dozen orders a day or more and late parcels reach you as support tickets first.
   - You want one short morning list instead of scrolling the orders page.
   - You use a carrier or 3PL and want to know when one is slower than the rest.
+not_for:
+  - "You ship only a few orders a day: a short manual look at your Shopify orders page is enough."
+  - "You want a store that changes orders by itself: this agent only lists actions and waits for your yes."
+  - "You have no Shopify connection and no order export: get an export of open orders from your store first, then run it."
 you_give:
   - A connection to your Shopify store, or an export of open orders
   - How many days an order may wait before it ships, and how long tracking may sit still (optional)
@@ -29,6 +33,28 @@ how_to_use:
   - Ask it to run this morning's check. Read the list and act on the top orders.
   - Say yes or no to each tag, hold, release or tracking change it proposes.
   - Run it again the next weekday. It reads yesterday's file and shows what cleared.
+output_sample:
+  input:
+    - A connection to your Shopify store, or an export of open orders
+    - Your limits for unshipped orders and stale tracking (optional)
+    - Corrected tracking numbers from a carrier or 3PL (optional)
+    - Yesterday's saved list, if you have run it before
+  prerequisites:
+    - An AI that can read your store through a Shopify connection, or an export of open orders
+    - Claude Code, if you want it to keep the watch folder and run on a schedule
+  output:
+    - name: Today
+      contains: One line with open, late, stuck and held orders, set against yesterday.
+    - name: Do first
+      contains: Orders open three mornings or more, oldest first, each with age, status and next step.
+    - name: Risky orders
+      contains: Each risky order, the reason Shopify gave, and a suggestion to hold or release.
+    - name: Carrier note
+      contains: "Only if one carrier holds most stale tracking: its transit days against the others, and keep or review."
+    - name: Customers to warn
+      contains: Orders likely to arrive late, so you can send a short note.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Read yesterday
     text: Opens the saved list of late and stuck orders so today can be compared with it.

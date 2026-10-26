@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It drives an app with set steps and compares the results.
 new_slug: no-code-model-trainer
 name: No-code model trainer
-summary: Give it a data table. Get models trained and compared in the Learner
-  apps, and the best one exported.
+summary: Train and compare machine learning models on your data table in MATLAB's Learner apps, then export the best one. No clicking through the app.
 job: build-software
 headline: No-code model trainer
-subhead: Machine learning models trained and compared in MATLAB's Classification
-  Learner and Regression Learner apps, with the best one exported. You do it by
-  code, so you do not click through the apps by hand.
+subhead: Give your AI a data table in MATLAB and the column to predict. It trains many model types in the Classification Learner or Regression Learner app and compares them. You get the best model exported.
 explain: |
   Machine learning models trained and compared in MATLAB's Classification Learner and Regression Learner apps, with the best one exported. You do it by code, so you do not click through the apps by hand.
 
@@ -18,6 +15,10 @@ when:
   - You want to compare models without clicking through the app.
   - You need to explain which features drive predictions.
   - You want to export the winning model for use elsewhere.
+not_for:
+  - "You work with images, text or time series: use a Deep Learning Toolbox workflow or a Python workflow instead."
+  - "You do not have MATLAB with the Statistics and Machine Learning Toolbox: use a Python workflow or ask a data analyst."
+  - "You only need a quick chart or a simple average: use a spreadsheet instead."
 you_give:
   - A data table
   - The column to predict
@@ -29,9 +30,29 @@ you_get:
   - Explanation plots
   - The exported best model
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Classification or
-    Regression Learner app.
+  - Check you have MATLAB with the Statistics and Machine Learning Toolbox. This skill needs an AI tool that can run MATLAB code.
+  - Load your data into MATLAB as a table, with one column to predict.
+  - "Give your AI the skill folder and say: Follow this skill. Add your table name, the column to predict and any model types you want."
+  - Read the comparison of model scores. Ask for explanation plots if you want to know which features matter.
+  - Ask your AI to export the best model, or the code to rebuild it.
+output_sample:
+  input:
+    - Your data table, loaded in MATLAB
+    - The column you want to predict
+    - Model types to try (optional)
+    - Feature selection or tuning wishes (optional)
+  prerequisites:
+    - MATLAB with the Statistics and Machine Learning Toolbox
+    - An AI tool that can run MATLAB code
+    - Parallel Computing Toolbox for faster training (optional)
+  output:
+    - name: Trained models
+      contains: The models you asked for, trained in Classification Learner or Regression Learner on your table.
+    - name: Metrics comparison
+      contains: The accuracy figures for each model, so you can see which one does best.
+    - name: Standard plots
+      contains: The usual app plots for the models, opened for you to check.
+    - name: Explanation results
+      contains: Partial dependence, permutation importance, Shapley and LIME results that show which features drive predictions.
+    - name: Exported model
+      contains: The chosen model sent to your workspace, or code that rebuilds it.

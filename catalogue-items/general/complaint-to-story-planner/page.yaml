@@ -1,6 +1,6 @@
 new_slug: complaint-to-story-planner
 name: "Complaint to story planner"
-summary: "Paste a complaint and your fix. Get the one surprise that turns it into a story customers retell."
+summary: "Turn a fixed customer complaint into a story they retell. Give it the complaint and your fix. You get one small, personal gesture and the note to send."
 job: help-customers
 thinking: medium
 thinking_why: "It weighs five gestures against cost, time and how they would land before picking one."
@@ -17,12 +17,16 @@ when:
   - "A complaint is fixed and you want the customer to leave happier than before it happened."
   - "You have a small budget and want it to buy word of mouth rather than ads."
   - "Your team fixes problems fine but every reply reads the same."
+not_for:
+  - The fix is still pending or uncertain. Finish the fix first, then come back, or send a plain apology with a date for the fix.
+  - Many customers hit the same problem at once. Send one standard apology or a fix notice to everyone instead.
+  - You want a legal or refund decision. Ask the person who owns refunds or your own policy, not this planner.
 
 you_give:
-  - "The complaint in the customer's words"
-  - "The fix you are making and when"
-  - "Anything they mentioned about their life (advised)"
-  - "What you can spend and what your team can do (advised)"
+  - The complaint, in the customer's own words
+  - The fix you are making and when it will be done
+  - Anything they said about their life (optional)
+  - What you can spend and what your team can do in a day (optional)
 you_get:
   - "The personal hook"
   - "Five gestures with cost, owner and the line a friend would hear"
@@ -33,6 +37,29 @@ how_to_use:
   - "Add the fix, your spend limit and anything the customer mentioned."
   - "Read FIX STATUS. If it is not done, finish the fix first."
   - "Send the words with the gesture, and add the TEAM RULE to your support notes."
+output_sample:
+  input:
+    - The complaint, in the customer's own words
+    - The fix you are making and when it will be done
+    - Anything they said about their life (optional)
+    - What you can spend and what your team can do (optional)
+  output:
+    - name: FIX STATUS
+      contains: Says whether the fix is done, in progress or uncertain, so the surprise waits for the fix.
+    - name: THE HOOK
+      contains: One personal detail from the customer's words, or none if they gave nothing.
+    - name: FIVE GESTURES
+      contains: Five options, each with what you do, the cost in money and minutes, who does it, and the line a friend would hear.
+    - name: THE PICK
+      contains: The one gesture with the best story for the cost, and why.
+    - name: THE WORDS
+      contains: A note or call script under 60 words that names the customer's detail.
+    - name: TEAM RULE
+      contains: A rule in the form when X happens, we do Y, within Z.
+    - name: MISSING
+      contains: Any limits or facts you did not give.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: "Checks the fix"

@@ -1,6 +1,6 @@
 new_slug: google-ads-store-account-auditor
 name: "Google Ads store account auditor"
-summary: "Give it your exports and settings. Get brand leakage, a score out of 100 and a 90-day fix order."
+summary: "Run a Google Ads audit for your online store. Give it your exports. You get brand leakage, a score out of 100 and a 90-day fix order."
 job: run-google-ads
 thinking: high
 thinking_why: "It weighs many settings and numbers against each other and must tell a real problem from a normal one, so a stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - Your Google results look fine but sales growth does not match what Google reports.
   - You took over an account, or an agency or freelancer built it, and you want an independent look.
   - You are about to raise budget and want to know what you would be scaling.
+not_for:
+  - "You run lead generation, not a store with a product feed: this audit does not fit, so get a person who knows lead gen accounts to review it."
+  - "Your store has under about 30 conversions a month: keep to tracking, brand and settings, and check the rest by hand once you have more data."
+  - "You want to plan a new account, not check an old one: use the Google Ads launch planner."
 
 you_give:
   - Campaign report with spend, conversions and conversion value for the last 90 days
@@ -34,6 +38,30 @@ how_to_use:
   - Attach screenshots of the settings screens, the conversion goals and one Performance Max asset group.
   - Type your brand names, including misspellings, so brand queries can be counted.
   - Fix in the order it gives you, one area at a time, and run it again after 30 days.
+output_sample:
+  input:
+    - Your campaign report for the last 90 days
+    - Your search terms and product reports (optional, but strongly advised)
+    - Screenshots of campaign settings, conversion goals and Performance Max asset groups
+    - Your brand names and spellings (optional)
+    - Merchant Center screenshots (optional)
+  prerequisites:
+    - An AI chat that can read files and screenshots, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Score
+      contains: A score out of 100 with the points per area and which areas were not checked.
+    - name: Brand leakage
+      contains: The share of cold campaign conversions and spend that comes from brand searches, with the sum shown.
+    - name: Tripwires found
+      contains: Each mistake with its area, the campaign or setting, the evidence and how serious it is.
+    - name: Area ratings
+      contains: Points for tracking, structure, settings, Performance Max, brand, feed, waste and naming.
+    - name: 90-day order
+      contains: The fixes in a safe order, one change at a time.
+    - name: Leave alone
+      contains: What is fine and why, so you do not change it.
+    - name: Not checked and missing
+      contains: Areas it could not judge and the items it still needs.
 
 how_it_works:
   - title: Sweeps for common mistakes

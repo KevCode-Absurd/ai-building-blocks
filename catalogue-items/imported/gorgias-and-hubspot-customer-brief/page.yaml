@@ -2,17 +2,29 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-and-hubspot-customer-brief
 name: Gorgias and HubSpot customer brief
-summary: Share a name or email. Get past tickets, contact details, and recent notes in one brief.
+summary: Look up a customer by name or email. Get their open tickets, contact history and recent notes in one customer brief from Gorgias and HubSpot.
 job: help-customers
 headline: Gorgias and HubSpot customer brief
 subhead: Give it a customer name or email and connect Gorgias and HubSpot. It reads recent support tickets and contact history. You get one customer brief with their open issues, past contact, recent activity, and points needing attention.
 when:
-  - You use this tool for customer support and need help with this task.
+  - A customer writes in and you want their full history before you reply.
+  - You are about to call a customer and need to know their open issues.
+  - A teammate hands you an account and you need to catch up fast.
+  - You want to check if a customer is at risk before a renewal.
+not_for:
+  - The customer has no Gorgias or HubSpot record. Use a plain ticket export from your help desk instead.
+  - You cannot install Composio CLI or connect both accounts. Paste the ticket text and CRM notes into your AI and ask for a summary.
+  - You want to reply to the customer. Use your help desk reply box, then check the brief first.
 you_give:
-  - A customer name or email.
-  - Access to that customer's Gorgias and HubSpot records.
+  - A customer email or name.
+  - Access to your Gorgias account, linked through Composio CLI.
+  - Access to your HubSpot account, linked through Composio CLI.
 you_get:
-  - Combine the profile, support history, activity timeline, and points needing attention.
+  - A profile with company, title, lifecycle stage and owner.
+  - Ticket counts and a table of the five most recent tickets.
+  - A dated timeline of notes, emails and calls.
+  - A simple health score for sentiment, engagement and risk.
+  - A short list of recommended actions.
 how_it_works:
   - title: Find the customer
     text: Search both tools using the name or email you provide.
@@ -25,8 +37,31 @@ works_best_with:
     - name: Gorgias and HubSpot
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias and hubspot customer brief by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide a customer name or email.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Use an AI that can run terminal commands, such as Claude Code. A plain chat window cannot run the live lookup.
+  - Install Composio CLI and link both accounts with composio link gorgias and composio link hubspot.
+  - Add the skill folder and ask for the Customer 360 view.
+  - Give it the customer email or name.
+  - Check the brief. If one system has no match, it shows the other and says so.
+  - Approve any reply or account change yourself before it happens.
+output_sample:
+  input:
+    - A customer email or name
+    - Your Gorgias account, connected through Composio CLI
+    - Your HubSpot account, connected through Composio CLI
+  prerequisites:
+    - An AI that can run commands in a terminal
+    - Composio CLI installed
+    - Gorgias and HubSpot accounts linked to Composio
+  output:
+    - name: Profile (HubSpot)
+      contains: Company, title, lifecycle stage, owner, created date, last activity and any useful custom fields.
+    - name: Support History (Gorgias)
+      contains: Total tickets, open tickets, average resolution time and the date of last contact.
+    - name: Recent Tickets
+      contains: A table of the latest tickets with subject, status, priority, created date and last update.
+    - name: Engagement Timeline (HubSpot)
+      contains: A dated table of notes, emails and calls with a short summary of each.
+    - name: Customer Health Score
+      contains: Sentiment, engagement and risk levels, based on recent tickets and how often they get in touch.
+    - name: Recommended Actions
+      contains: Specific next steps based on the data found.

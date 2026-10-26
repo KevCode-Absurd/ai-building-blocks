@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It needs careful statistics and SQL.
 new_slug: warehouse-a-b-test-runner
 name: Warehouse A/B test runner
-summary: Describe your data setup. Get SQL steps to split users, log exposure
-  and read results with proper stats.
+summary: Plan an A/B test inside your own data warehouse. Get SQL to split users, log who saw what, and read results with proper stats.
 job: track-numbers
 headline: Warehouse A/B test runner
-subhead: A way to run A/B tests inside your own data warehouse, with no testing
-  vendor. You get the SQL and the habits that keep the numbers trustworthy.
+subhead: A way to run A/B tests inside your own data warehouse, with no testing vendor. You get the SQL and the habits that keep the numbers trustworthy.
 explain: |
   A way to run A/B tests inside your own data warehouse, with no testing vendor. You get the SQL and the habits that keep the numbers trustworthy.
 
@@ -17,6 +15,10 @@ when:
   - You need a custom metric a vendor tool cannot compute.
   - You want one source of truth for test results.
   - Your team needs to show every step of the maths.
+not_for:
+  - You have not designed the test yet, with a clear idea, a main metric and a sample size. Settle that with your team first.
+  - You want a ready-made testing tool with no SQL. Pick a testing platform instead, or ask a data person to set one up.
+  - You have no data warehouse or no one who can run SQL. Use a simple spreadsheet comparison or a testing platform.
 you_give:
   - Your warehouse and data tools
   - The test idea and the main metric
@@ -28,8 +30,34 @@ you_get:
   - Metric definitions for dbt
   - An analysis plan with variance reduction
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and query your data warehouse.
+  - Open Claude, ChatGPT or Gemini and paste the skill text, or upload the skill folder.
+  - Tell your AI your warehouse, your test idea, your main metric and the field that identifies users.
+  - Ask for the platform or warehouse call first. Check it fits your team before you go on.
+  - "Work through the parts in order: assignment SQL, exposure log, dbt metric, then the t-test."
+  - Run the SQL in your own warehouse. Your AI can write it, but it cannot query your data unless it can run code.
+  - Check group sizes first, then read the results and decide to ship or stop.
+output_sample:
+  input:
+    - Your warehouse name, such as BigQuery or Snowflake
+    - Your test idea and the main metric
+    - The field that identifies each user
+    - How users are shown each version (optional)
+    - Your test start date (optional)
+  prerequisites:
+    - An AI that can write SQL and Python
+    - Access to your warehouse and dbt to run the SQL yourself (optional)
+  output:
+    - name: Platform or warehouse decision
+      contains: A short call on whether warehouse testing fits you or a testing platform is simpler.
+    - name: Assignment SQL
+      contains: SQL that puts each user in a group using a hash and a named salt.
+    - name: Exposure log
+      contains: The event layout that records which user saw which version, plus a check for uneven group sizes.
+    - name: Metric definitions in dbt
+      contains: dbt model patterns that define your main metric and any extra metrics for the test.
+    - name: Analysis plan
+      contains: SQL or Python for a t-test, plus CUPED to cut noise using pre-test data.
+    - name: Power and sample size check
+      contains: The smallest effect you can detect for your sample, or the sample you need.
+    - name: Peeking and pitfall checks
+      contains: Advice on sequential testing and the common mistakes that break homegrown setups.

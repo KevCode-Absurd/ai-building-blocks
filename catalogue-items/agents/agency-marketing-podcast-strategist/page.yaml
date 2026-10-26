@@ -1,0 +1,145 @@
+name: Chinese Podcast Strategist agent
+summary: Plan a Chinese-language podcast for Xiaoyuzhou, Ximalaya and other China platforms, with show positioning, a first-season plan and ways to grow.
+headline: Chinese Podcast Strategist agent
+subhead: Describe your show idea or your current podcast and who you want to reach in China. The agent plans the show's focus, a 12-episode first season, guest outreach, publishing on Chinese audio platforms and growth steps. You get a show plan you can follow.
+job: work-with-audio
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Podcasting in China runs on different platforms, habits and rules from the English-language market. Xiaoyuzhou has a close-knit community with comments tied to timestamps. Ximalaya is far bigger but aimed at paid courses and audiobooks. This Chinese podcast strategist agent plans a show for that setting, so you do not copy a Spotify playbook that does not fit.
+
+  It starts with focus. It rejects a vague "we talk about everything" show and asks for one clear promise to one clear listener, including where they listen, such as on a commute or before sleep. Then it plans a first season of about 12 episodes, with a guest plan, recording outlines, how to publish through one feed to the platforms that accept it, and what to upload by hand to the ones that do not. It also plans growth through listener groups and short clips, and ways to earn money, with ads labelled as ads.
+
+  It writes plans. It does not record, edit or publish for you, and it cannot see your play counts. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its platform details and play-count targets come from the original author, may be out of date, and are not results measured by AI Blocks. Check each platform's current rules.
+when:
+  - You want to start a podcast for Mandarin-speaking listeners and need a focus, a name and a first season.
+  - Your Chinese-language show has few listeners and you need to know whether the problem is the topic, the title or the platform.
+  - You are booking guests and need a screening list, a pitch and a recording outline.
+  - A brand wants to sponsor your show and you need a plan for ads that listeners will not skip.
+not_for:
+  - "You want to grow a show for English-language listeners on Spotify, Apple Podcasts or YouTube: use the Global Podcast Strategist agent."
+  - "You want to publish the same show in several languages and markets: use the Global Podcast Strategist agent, then adapt for China with this one."
+  - "You want an audio file edited or mastered: use the Video audio finishing plan or a sound editor."
+  - "You want an audio file turned into text: use the Whisper speech transcriber."
+  - "You need legal advice on Chinese broadcast or content rules: ask a qualified professional."
+you_give:
+  - Your show idea or current show, with its topic and format, such as solo, interview or story
+  - Who you want to reach, and when and where they listen
+  - Your platforms now and the ones you want, such as Xiaoyuzhou or Ximalaya
+  - What you have, such as time per week, equipment and a guest list (optional)
+  - Your goal, such as first 1,000 listeners, guests or sponsors (optional)
+  - Current play and subscriber numbers (optional)
+you_get:
+  - A show plan with name ideas, a one-line promise, format, length and publishing rhythm
+  - A first-season plan of about 12 episodes with topic, type and guest idea for each
+  - A recording outline for one episode, with timed parts and the questions to ask
+  - A publishing plan: what to send through one feed and what to upload by hand
+  - Growth steps through groups, short clips and guest sharing, and ways to earn money
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Say whether you are launching or fixing a show. Paste your idea or your current description, your listener and your platforms.
+  - Say "Plan only. Do not invent play counts or platform rules." Your AI asks once for anything missing.
+  - Read the show focus first. If it sounds like any other show, ask for three sharper angles before you go on.
+  - Check every platform claim on that platform's own help pages before you rely on it. Rules change.
+  - Record one episode with the outline. Ask the AI to adjust the season plan after you hear it.
+how_it_works:
+  - title: Set the goal
+    text: It confirms the show, the listener, the platforms and the goal, and asks once for what is missing.
+  - title: Sharpen the focus
+    text: It defines one promise for one listener and tests it against similar shows you name.
+  - title: Plan the season
+    text: It sorts topics into lasting, timely, series and test topics, and fills about 12 episodes.
+  - title: Plan the recording
+    text: It writes timed outlines, guest screening and pre-recording checks for sound and consent.
+  - title: Plan publishing
+    text: It splits what goes through one feed from what you upload by hand, and writes show notes with timestamps.
+  - title: Plan growth and money
+    text: It adds listener groups, clip repurposing, guest sharing and labelled ads, then sets what to measure.
+output_shape: |-
+  SHOW FOCUS
+    Name ideas <list> | Promise <one line> | Listener <who, where, when>
+    Format <solo, interview, story or chat> | Length <minutes> | Rhythm <weekly or other>
+    Different from <shows you named>
+
+  SEASON ONE
+    <episode> | <topic> | <type> | <guest idea> | <why it is there>
+
+  EPISODE OUTLINE
+    <time> | <part> | <question or beat> | <prepared example>
+
+  PUBLISHING
+    One feed to <platforms> | By hand to <platforms> | Show notes <template>
+    Check <platform rules to confirm>
+
+  GROWTH
+    Groups <plan> | Clips <plan> | Guests share <ask> | Partner shows <ideas>
+
+  MONEY (if asked)
+    <route> | <what it needs> | <label required>
+
+  WHAT TO TRACK
+    <metric> | <where to find it> | <what a change means>
+
+  OPEN CHECKS
+    <platform fact or assumption> | <how to confirm>
+output_sample:
+  input:
+    - Your show idea or current show, and your listener
+    - The platforms you use or want
+    - Your goal, time and any numbers you have (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A recording setup, if you will record now
+  output:
+    - name: Show focus
+      contains: Name ideas, one-line promise, listener, format, length and how it differs from similar shows.
+    - name: Season one
+      contains: About 12 episodes, each with topic, type and guest idea.
+    - name: Episode outline
+      contains: A timed outline with opening, parts, questions and wrap-up for one episode.
+    - name: Publishing
+      contains: What goes through one feed, what is uploaded by hand, and a show notes template.
+    - name: Growth
+      contains: Listener group, short clip, guest sharing and partner show ideas.
+    - name: Money
+      contains: Ways to earn from the show, what each needs, and the ad labels to use.
+    - name: What to track
+      contains: The numbers to watch, where to find them and what a change means.
+    - name: Open checks
+      contains: Platform facts and assumptions to confirm before you act.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Language
+    how: Ask for the plan in English with Chinese names for platforms and terms, or in Chinese.
+  - what: Scope
+    how: Ask for the show focus only, or the first season only, to get a shorter result.
+  - what: Listener
+    how: Name one real listener you know, so the plan is built for a person and not a group.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Xiaoyuzhou
+    meaning: A Chinese podcast app with a close community, where listeners comment at exact moments in an episode.
+  - term: Ximalaya
+    meaning: The largest Chinese audio app, strong in audiobooks and paid courses.
+  - term: RSS feed
+    meaning: A web address that lists your episodes, so one upload can reach many podcast apps.
+  - term: Show notes
+    meaning: The text under an episode, with a summary, timestamps and links.
+  - term: Completion rate
+    meaning: The share of listeners who play an episode to the end.
+  - term: Host-read ad
+    meaning: An ad the host says in their own words and voice.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Pasted notes are enough for a plan. The AI cannot open Chinese apps or see your numbers, so paste them in.
+  inputs:
+    - Three to five shows you admire or compete with, with a line on what each does well.
+    - Your current play counts and completion rates, if you have them.

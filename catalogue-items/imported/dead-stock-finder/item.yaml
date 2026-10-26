@@ -1,6 +1,6 @@
 slug: dead-stock-finder
 name: Dead stock finder
-summary: Get products with stock on the shelf but no sales in your chosen number of days.
+summary: Find Shopify products with stock on the shelf but no sales in 90 days. Get a list with units and cost value, ready for a clearance plan.
 category: general
 boards: []
 type: skill

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Location picks the law first, then steps follow.
 new_slug: uae-rules-finder
 name: UAE rules finder
-summary: Describe where your business sits in the UAE. Get which data and cyber
-  rules apply, then the steps for each.
+summary: Find which UAE data and cyber rules apply to your business, based on where it sits. Get a rules table, a gap list and steps for each.
 job: check-contracts
 headline: UAE rules finder
-subhead: In the UAE, where your company sits decides which law covers you. This
-  skill tells you which data and cyber rules apply to your setup and what to do
-  for each.
+subhead: In the UAE, where your company sits decides which law covers you. This skill tells you which data and cyber rules apply to your setup and what to do for each.
 explain: |
   In the UAE, where your company sits decides which law covers you. This skill tells you which data and cyber rules apply to your setup and what to do for each.
 
@@ -18,6 +15,10 @@ when:
   - You handle health or banking data and need to know about residency rules.
   - You must report a data breach and need the deadline.
   - You hold ISO 27001 and want to reuse that work for UAE rules.
+not_for:
+  - "You need legal advice or a filing made: ask a qualified UAE lawyer."
+  - "You need to confirm a central bank licence: check the licence with the regulator or your lawyer."
+  - "Your business sits outside the UAE: ask a local adviser for that country's rules."
 you_give:
   - "Your location: mainland, DIFC, ADGM or other"
   - Your organisation type
@@ -29,7 +30,28 @@ you_get:
   - Steps for each requirement
   - A mapping to ISO 27001 or similar
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Tell your AI where your business sits: mainland, DIFC, ADGM or another free zone."
+  - Add your organisation type, emirate, the data you hold and where it is stored.
+  - Add any certifications you have, such as ISO 27001 (optional).
+  - Read the rules table first. Check it matches your licence and setup before you act on the gaps.
+  - Take the result to a qualified UAE lawyer before any filing or breach report.
+output_sample:
+  input:
+    - "Where your business sits: mainland, DIFC, ADGM or another free zone"
+    - Your organisation type and emirate
+    - The personal or health data you hold, and where it is stored
+    - Your certifications, such as ISO 27001 (optional)
+  output:
+    - name: Intake summary
+      contains: Your location, organisation type, data and storage, with any assumptions your AI had to make written out.
+    - name: Applicability matrix
+      contains: A table of each law, who regulates it, and whether it applies to your setup.
+    - name: Gap assessment
+      contains: "For each law that applies: the requirement, your current state, the gap, the proof needed and the priority."
+    - name: Breach response clocks
+      contains: Which breach reporting deadlines and regulators apply to you, so you know who to tell and when.
+    - name: Roadmap
+      contains: Ordered steps to meet each rule, if you are entering the UAE market.
+    - name: Framework mapping
+      contains: How UAE rules line up with ISO 27001, NIST CSF and SOC 2, so you can reuse work.

@@ -16,10 +16,10 @@ outputs:
   - {type: copy_draft}
 uses: [product-line-cutter, program-keep-or-cut-reviewer, give-up-list-planner, disagree-and-commit-note-writer]
 steps:
-  - {uses: product-line-cutter, note: "The products ranked by what they really earn and what attention they take, and the line cut to the few that pay, in the manner of Steve Jobs's 1997 cull: the grid, the four quadrants, everything else gone."}
-  - {uses: program-keep-or-cut-reviewer, note: "Each programme, campaign and recurring effort reviewed as keep or cut on its results, the way Jeff Bezos and Warren Buffett judge what to stop, with the reason."}
-  - {uses: give-up-list-planner, note: "What you will no longer do, sell or chase, said plainly, following Al Ries and Jack Trout's rule that focus means sacrifice, with the customers and revenue you are giving up named."}
-  - {uses: disagree-and-commit-note-writer, note: "A note in Jeff Bezos's manner that states the decision, records the disagreement honestly, and asks everyone to commit, with what each team does on Monday. Sent only when you say so."}
+  - {uses: product-line-cutter, note: "The products ranked by what they really earn and what attention they take, and the line cut to the few that pay, in the manner of Steve Jobs's 1997 cull: the grid, the four quadrants, everything else gone. Hands steps 2 and 3 the plan and the shortlist of what stays."}
+  - {uses: program-keep-or-cut-reviewer, note: "Each programme, campaign and recurring effort reviewed as keep or cut on its results, the way Jeff Bezos and Warren Buffett judge what to stop, with the reason. Reads step 1's plan and your numbers, and hands you the verdicts to add to the cuts before step 3."}
+  - {uses: give-up-list-planner, note: "What you will no longer do, sell or chase, said plainly, following Al Ries and Jack Trout's rule that focus means sacrifice, with the customers and revenue you are giving up named. Uses step 1's shortlist and plan, not step 2's review, and hands the give-up plan to step 4."}
+  - {uses: disagree-and-commit-note-writer, note: "A note in Jeff Bezos's manner that states the decision, records the disagreement honestly, and asks everyone to commit, with what each team does on Monday. Takes step 3's give-up plan as the actions each team commits to. Sent only when you say so."}
 origin: own
 version: 1.0.0
 minds: [steve-jobs, jeff-bezos, warren-buffett, al-ries, jack-trout]

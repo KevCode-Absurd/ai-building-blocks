@@ -2,36 +2,111 @@ thinking: high
 thinking_why: It picks forecast methods and checks the maths on real numbers.
 new_slug: demand-and-stock-planner
 name: Demand and stock planner
-summary: Give it sales history and lead times. Get a demand forecast, safety
-  stock levels and a restock plan.
+summary: Turn your sales history and supplier lead times into a demand forecast, safety stock levels and a reorder plan for each product.
 job: plan-strategy
 headline: Demand and stock planner
-subhead: A forecast, the right safety stock and a restock plan for each product.
-  Give it sales history and supplier lead times and you get what to order, how
-  much buffer to hold, and when.
+subhead: Give it weekly sales by product, supplier lead times and the service level you want. It picks a forecast method for each product, sets safety stock and reorder points, and plans for promotions and seasons. You get what to order, how much buffer to hold and when.
 explain: |
-  A forecast, the right safety stock and a restock plan for each product. Give it sales history and supplier lead times and you get what to order, how much buffer to hold, and when.
+  Running out of top sellers while slow ones pile up usually comes from one forecast used for everything. This planner first sorts your products by value and by how steady their sales are. Steady items get a simple average. Items with trends or seasons get a method that follows them. Items that sell in bursts get a method built for gaps.
 
-  It picks the forecast method by how each item behaves: moving averages for steady items, smoothing for noisy ones, seasonal splits for items with seasons, and regression when price or promotion drives sales. Accuracy is checked with weighted error, bias and a tracking signal that warns when a model drifts. Safety stock uses your service level, demand swings and lead time. It also estimates the effect of promotions and flags seasonal ramps and slow-moving items.
+  It then sets safety stock from your service level, how much demand swings and how long suppliers take. If a supplier's lead time is unreliable, it adds more buffer for that. It checks its own forecast with error, bias and a tracking signal, so you know when a method has drifted.
+
+  Promotions are planned on top of the base forecast, with the extra sales and the dip after. Slow movers get a clear rule for when to mark down or drop them. The skill was written for a multi-store retailer. The same methods work for an online shop.
 when:
   - You keep running out of your top sellers and overstocking the rest.
   - A promotion is coming and you need to know how much extra to buy.
-  - Supplier lead times changed and your reorder points are now wrong.
-  - You want a simple rule for how much buffer stock to carry.
+  - A supplier's lead time changed and your reorder points are now wrong.
+  - You want a simple rule for how much buffer stock to carry for each product.
+not_for:
+  - You want to know how much cash your orders will tie up. Use the Inventory cash planner.
+  - You sell on Amazon and need a first shipment plan. Use the Amazon inbound stock planner.
+  - You want refill emails timed to when customers run out. Use the Reorder and second-order planner.
 you_give:
-  - Sales history by product
-  - Supplier lead times
-  - Target service level
-  - Promotions and seasons (optional)
-  - Current stock levels
+  - Weekly sales by product, ideally 52 weeks or more
+  - Supplier lead times for each product
+  - The service level you want, such as 95% of orders filled
+  - Stock on hand and on order
+  - Past and planned promotions, with dates and discounts (optional)
 you_get:
-  - Forecast by product
-  - Safety stock levels
-  - Reorder points and quantities
-  - Accuracy and bias check
-  - Promotion impact estimate
+  - A forecast method and a forecast for each product
+  - Safety stock levels with the reasoning
+  - Reorder points and order amounts
+  - An accuracy and bias check on the forecast
+  - A promotion plan with extra sales and the dip after
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat. For a long table, use an AI that can read a spreadsheet file.
+  - Give it your sales history as a table, with one row per week and one column per product. Add lead times, stock on hand and your target service level.
+  - Ask it to sort your products by value and by how steady the sales are. Check that the top sellers look right to you.
+  - Ask for the forecast, safety stock and reorder plan for your top 10 products first. Read the working out for each one.
+  - Spot-check two products by hand. If the AI can run code, ask it to run the maths. If not, check the formulas it shows.
+  - Treat the lift and markdown figures in the skill as the author's rules of thumb. Replace them with your own results once you have them.
+how_it_works:
+  - title: Sort your products
+    text: It groups products by value (A, B, C) and by how steady sales are (X, Y, Z).
+  - title: Pick a forecast method
+    text: Steady items get averages. Items with trends or seasons get smoothing. Gappy items get a method built for gaps.
+  - title: Check forecast accuracy
+    text: It reports weighted error, bias and a tracking signal that warns when a method has drifted.
+  - title: Set safety stock
+    text: It uses your service level, demand swings and lead time, and adds buffer when supplier lead times vary.
+  - title: Plan reorders
+    text: It counts stock on hand plus on order, then sets reorder points and order amounts that fit case packs.
+  - title: Plan promotions and seasons
+    text: It strips old promotions from history, adds a lift on top, and plans the dip after.
+  - title: Flag slow movers
+    text: It tests each slow product against the markdown and drop rules and lists what to act on.
+output_shape: |
+  DEMAND AND STOCK PLAN: <shop or range>
+  1. Product groups: <product, value group, steadiness group, forecast method>
+  2. Forecast: <product, next weeks, accuracy and bias>
+  3. Safety stock: <product, service level, buffer, reason>
+  4. Reorder plan: <product, reorder point, order amount, order date>
+  5. Promotions and seasons: <event, base, extra sales, dip after>
+  6. Watch list: <slow movers, supplier risks, items to check by hand>
+  MISSING: <data you did not give>
+output_sample:
+  input:
+    - Weekly sales by product
+    - Supplier lead times for each product
+    - The service level you want
+    - Stock on hand and on order
+    - Promotion dates and discounts (optional)
+  prerequisites:
+    - At least a year of sales history for items that sell by season
+    - An AI that can read a spreadsheet, or a table pasted into chat
+  output:
+    - name: Product groups
+      contains: Each product sorted by value and by how steady its sales are, with a forecast method.
+    - name: Forecast by product
+      contains: Expected weekly demand for each product, with the method and why it was chosen.
+    - name: Accuracy and bias check
+      contains: Weighted error, bias and tracking signal, with products that need a fresh look.
+    - name: Safety stock levels
+      contains: Buffer stock per product from service level, demand swings and lead time.
+    - name: Reorder plan
+      contains: Reorder point, order amount and order date for each product.
+    - name: Promotion plan
+      contains: Base demand, extra sales from the promotion and the dip that follows.
+    - name: Slow-mover list
+      contains: Products that fail the keep rules, with a markdown or drop step.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with file upload
+      why: They can read a spreadsheet and run the maths, which beats a long pasted table.
+    - name: Google Sheets or Excel
+      why: You can check the AI's numbers and keep the plan up to date.
+  inputs:
+    - Supplier case-pack sizes and minimum order amounts
+    - Past stockouts and how long they lasted
+    - Your holding cost and ordering cost per order
+terms:
+  - term: Safety stock
+    meaning: Extra stock you hold in case demand or supplier delivery is higher than expected.
+  - term: Service level
+    meaning: The share of orders you want to fill from stock, such as 95%.
+  - term: Lead time
+    meaning: Days between placing an order with a supplier and getting the goods.
+  - term: Bias
+    meaning: Whether your forecast is too high or too low on average.
+  - term: Tracking signal
+    meaning: A running check that warns when a forecast method has drifted off track.

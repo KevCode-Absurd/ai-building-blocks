@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs standard checks and lists the results.
 new_slug: dataset-profiler
 name: Dataset profiler
-summary: Give it a table or file. Get its shape, missing values, odd entries and
-  which columns are worth analyzing.
+summary: Profile a dataset before you use it. Give it a table or file and get its size, missing values, odd entries and the columns worth analyzing.
 job: track-numbers
 headline: Dataset profiler
-subhead: "Know what is inside a table or file before you analyse it: its size,
-  its gaps and which columns are worth your time. This catches surprises that
-  would otherwise appear in your final numbers."
+subhead: "Know what is inside a table or file before you analyse it: its size, its gaps and which columns are worth your time. This catches surprises that would otherwise appear in your final numbers."
 explain: |
   Know what is inside a table or file before you analyse it: its size, its gaps and which columns are worth your time. This catches surprises that would otherwise appear in your final numbers.
 
@@ -18,6 +15,10 @@ when:
   - You want to check data quality before building a report.
   - You are picking which columns to use in a model.
   - You need to find duplicates and odd entries quickly.
+not_for:
+  - You already know a small, well-documented table. Skip the check and go straight to your analysis.
+  - You need a final figure, such as total sales or a growth rate. Ask your AI to work out that number directly.
+  - You want to fix or clean the data. This only finds problems. Fix them in your spreadsheet or ask your AI to clean the file after.
 you_give:
   - A table name or data file
   - What you plan to do with it (optional)
@@ -29,8 +30,30 @@ you_get:
   - Duplicates and odd value list
   - Columns worth analysing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. Pick a chat that can run code and accept file uploads.
+  - Paste the text of SKILL.md into the chat.
+  - Attach your CSV, Excel, Parquet or JSON file. Or type the name of a table if your AI has a data tool connected to your warehouse.
+  - Say what you plan to do with the data, if you know. This is optional.
+  - Read the Data Quality Issues first. Each flag is a hint, so check the ones that matter to you.
+  - Pick one of the suggested explorations and ask your AI to run it.
+output_sample:
+  input:
+    - A data file (CSV, Excel, Parquet or JSON) or a table name
+    - What you plan to do with the data (optional)
+    - The questions you want to ask of it (optional)
+  prerequisites:
+    - An AI that can run code, so it can read your file and count the values
+    - A connected data tool, only if you want it to read a live warehouse table
+  output:
+    - name: Overview
+      contains: Row count, column count, a breakdown of column types and the date range the data covers.
+    - name: Column Details
+      contains: A summary table grouped by column type, with missing rates, distinct counts, ranges and common values.
+    - name: Data Quality Issues
+      contains: Flagged problems such as gaps, duplicates, placeholder values, mixed formats and impossible entries, each with a severity.
+    - name: Relationships and patterns
+      contains: Likely link columns, drill-down paths, columns that move together and columns that repeat the same information.
+    - name: Suggested dimensions and metrics
+      contains: The columns best for grouping, measuring and tracking change over time.
+    - name: Recommended Explorations
+      contains: A numbered list of 3 to 5 follow-up analyses to run next.

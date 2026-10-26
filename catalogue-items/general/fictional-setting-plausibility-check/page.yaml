@@ -1,0 +1,65 @@
+name: Fictional setting plausibility check
+headline: Fictional setting plausibility check
+summary: Check your fictional setting plausibility before you draft. Find weak links between land, food, trade and daily life, with fixes for each.
+subhead: Share your setting and its rules. Find weak links between land, resources, trade and daily life. Copy the complete prompt, add your setting and rules, then review the questions.
+job: write-and-tell-stories
+thinking: high
+thinking_why: The task compares evidence and alternatives. Its output still needs the stated checks.
+explain: >-
+  Find weak geography, economy and period assumptions in a fictional setting before drafting scenes.
+
+
+  A bounded one-pass review of a supplied setting sheet is suited to a pasteable prompt. Three source profiles contribute complementary checks to one outcome; three separate clones or a long staged workflow would add friction.
+
+
+  This task uses selected methods from Anthropologist, Geographer, Historian. It is a focused adaptation. The original agents remain available: [Anthropologist agent](https://useaiblocks.com/agents/agency-academic-anthropologist), [Geographer agent](https://useaiblocks.com/agents/agency-academic-geographer), [Historian agent](https://useaiblocks.com/agents/agency-academic-historian).
+when:
+  - You need a short, prioritized list of plausibility questions with quoted setting details.
+not_for:
+  - "You want to check new scenes against an older canon document: use the world-detail consistency checker."
+  - "You want real history or culture fact-checked: ask a historian or read your own sources, since this check needs supplied references."
+  - "You want a score or a yes or no on realism: this gives questions and small fixes, not a grade."
+you_give:
+  - A fictional setting sheet or map description, genre and intentional fantasy/science rules.
+  - Specific historical/cultural references only when the setting borrows from them.
+you_get:
+  - A short, prioritized list of plausibility questions with quoted setting details.
+  - Small revision options and their downstream effects.
+  - Explicit fantasy liberties and unresolved factual claims.
+how_to_use:
+  - Copy the prompt into a new chat.
+  - Replace the input lines with your setting, rules and supplied references.
+  - Review the quoted evidence and suggested changes.
+output_sample:
+  input:
+    - Your setting sheet or map description
+    - Your genre and the rules that may differ from reality
+    - References and a specific time or place (optional)
+  output:
+    - name: Priority issues
+      contains: Up to five weak links, each with a quoted detail, the missing link, a small fix and what it changes.
+    - name: Intentional liberties
+      contains: The fantasy or science rules you chose, kept as they are and not marked as errors.
+    - name: Unresolved questions
+      contains: Real-world claims left unverified and open questions for you to answer.
+how_it_works:
+  - title: 1. A short, prioritized list of plausibility questions with quoted setting details
+    text: Issues quote actual supplied setting details.
+  - title: 2. Small revision options and their downstream effects
+    text: Intentional fantasy rules are preserved rather than labelled impossible.
+  - title: 3. Explicit fantasy liberties and unresolved factual claims
+    text: Material/cultural links are conditional, with uncertainty and alternatives.
+judge:
+  - Issues quote actual supplied setting details.
+  - Intentional fantasy rules are preserved rather than labelled impossible.
+  - Material/cultural links are conditional, with uncertainty and alternatives.
+  - No invented source, authenticity score or absent canon fact appears.
+test:
+  - Try a small supplied case whose facts and result you can check.
+  - Omit one required fact and check that the affected work stays unresolved.
+tweaks:
+  - what: Task scope
+    how: State the intended result, available evidence and actual tools before starting.
+improve:
+  - Keep useful corrections with the task evidence for the next run.
+terms: []

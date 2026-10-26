@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It joins spend to orders, with some guesswork on sources.
 new_slug: cac-by-source
 name: Acquisition cost by source calculator
-summary: Add ad spend per source. Get the cost to win one new customer from each
-  traffic source.
+summary: Find your acquisition cost by source. Add ad spend for Google, Meta or TikTok and get the cost to win one new Shopify customer from each.
 job: run-your-store
 headline: Acquisition cost by source calculator
-subhead: Add your ad spend per source, such as Google, Meta or TikTok, and point
-  it at your Shopify store. It counts first-time buyers by landing page or
-  referrer over the window you choose, reading orders only. You get cost per new
-  customer and new-customer counts for each source in a table.
+subhead: Add your ad spend per source, such as Google, Meta or TikTok, and point it at your Shopify store. It counts first-time buyers by landing page or referrer over the window you choose, reading orders only. You get cost per new customer and new-customer counts for each source in a table.
 explain: |
   For every traffic source, you see what it costs to win one new customer. Add your ad spend per source, such as Google, Meta or TikTok, and the skill matches it to new-customer orders from your Shopify store over the window you choose.
 
   It reads orders and customers only, so nothing in your store changes. It counts first-time buyers by landing page or referrer, drops any source with too few orders to trust, and divides your spend by customers won. Spend figures come from you, since the skill does not pull from ad platforms. You need a Shopify CLI login with order and customer read access, and spend numbers by source.
 when:
-  - You spend on three ad channels and cannot tell which one wins customers
-    cheapest.
+  - You spend on three ad channels and cannot tell which one wins customers cheapest.
   - You are deciding where to move next month's ad budget.
   - Your ad dashboards disagree and you want a count from actual store orders.
   - You want to see cost per new customer rather than cost per click.
+not_for:
+  - "You run ads on one channel only: read cost per customer in that ad platform's own dashboard."
+  - "You want cost per click or cost per impression: use the reports inside Google Ads, Meta Ads or TikTok Ads."
+  - "You need ad spend pulled in for you: this skill cannot read ad platforms, so you must type each spend figure yourself."
 you_give:
   - Your Shopify store domain and a logged-in CLI
   - Ad spend per source for the period
@@ -31,8 +30,31 @@ you_get:
   - Sources with too few orders left out
   - A readable table or JSON output
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Open Claude Code, Cursor, Codex or Gemini CLI. This skill needs a tool that can run commands, so a plain chat window will not work.
+  - Log in to Shopify with the CLI, giving read access to orders and customers.
+  - Paste the skill into your AI. Add your store domain and your ad spend for each source.
+  - Use spend for the same days as the look-back window. If the windows differ, the cost figures will mislead you.
+  - Check the table. Treat direct as a tracking warning, not a real source.
+  - Read the costs as estimates. Views of display and video ads are often missed.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - Ad spend for each source, such as Google, Meta or TikTok
+    - How many days back to look (optional)
+    - The fewest orders a source needs to be shown (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - A Shopify CLI login with permission to read orders and customers
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step showing what was asked of Shopify and how many results came back.
+    - name: Summary table
+      contains: Orders checked, new customers won, total spend, blended cost, and each source sorted by cost, cheapest first.
+    - name: Organic sources
+      contains: Sources with no spend, such as direct and referral, shown as organic with no cost figure.
+    - name: cac_by_source file
+      contains: A CSV with orders, new customers, revenue, spend, cost per new customer and currency for each source.
+    - name: Warnings
+      contains: A note when nearly all orders show as direct, which usually means tracking is not set up.

@@ -1,0 +1,41 @@
+slug: agency-loan-officer-assistant
+name: Loan Officer Assistant agent
+summary: "Get a loan file checklist that shows missing documents, expiry dates, deadlines to track and questions for the reviewer. No credit decisions."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/loan-officer-assistant.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/loan-officer-assistant.md
+  licence: MIT
+  original_name: Loan Officer Assistant
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 3d6bfdb598187fb19fba6ab4b50ff357870cda04ea846aa975649d04788df84b
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Loan Officer Assistant
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Loan Officer Assistant
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/loan-officer-assistant.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

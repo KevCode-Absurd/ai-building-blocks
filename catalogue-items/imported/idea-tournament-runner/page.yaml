@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It runs several rounds of scoring and combining ideas.
 new_slug: idea-tournament-runner
 name: Idea tournament runner
-summary: Give it a pile of rough ideas. Get them scored, crossed and mutated
-  until the strongest few are left.
+summary: Run an idea tournament on your rough notes. Your AI scores, crosses and mutates them over rounds, then gives you a short list of the strongest ideas.
 job: think-and-decide
 headline: Idea tournament runner
-subhead: A pile of scattered ideas narrowed to the strongest few through rounds
-  of scoring, crossing and mutation. Instead of filing ideas away, it makes them
-  compete and improve.
+subhead: Give it your rough ideas. It scores them, crosses them and changes them over several rounds. You get a short list of the strongest ones, and you decide what stays.
 explain: |
   A pile of scattered ideas narrowed to the strongest few through rounds of scoring, crossing and mutation. Instead of filing ideas away, it makes them compete and improve.
 
@@ -18,6 +15,10 @@ when:
   - You want unexpected links between ideas from work and life.
   - One-shot brainstorming gave you a list but no ranking.
   - You want a repeatable way to decide which idea deserves time.
+not_for:
+  - "You have one well-formed idea and want it checked: ask your AI for a plain critique of that one idea instead."
+  - "You want a quick list of new ideas in one go: use a simple brainstorm prompt in your AI chat."
+  - "You already have a short list and need a final call: talk it through with a trusted person who knows the work."
 you_give:
   - Your list of ideas, rough is fine
   - What matters to you, such as value or ease
@@ -28,7 +29,29 @@ you_get:
   - Crossed and mutated new ideas
   - A short list of the strongest survivors
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write your ideas in a list. Give each one a short title and a line or two. Rough is fine.
+  - Open your AI. Paste in the skill text, then paste your ideas. If your AI can use files, save them as ideas.md.
+  - Ask it to set up your idea island, then run round one. It needs no paid service or API key beyond your AI.
+  - Read the scores and the Decisions Needed list. You choose what to keep, set aside or wake up.
+  - Add new ideas or outside input, like news or notes, then ask for another round. Repeat until a few ideas stand out.
+output_sample:
+  input:
+    - Your list of rough ideas, each with a short title and a line or two
+    - What matters to you, such as value or ease (optional)
+    - New input between rounds, like news or notes (optional)
+  prerequisites:
+    - An AI that can read and write files, if you want the full setup with ideas.md and stimuli.md
+    - A chat AI works too, if you paste your ideas in and ask it to run one round at a time
+  output:
+    - name: Species card
+      contains: One card per idea with its core question, full description, parent and child IDs, scores and change history.
+    - name: Six-trait scores
+      contains: A weighted score for novelty, feasibility, value, logic, cross potential and verifiability.
+    - name: Crossbred ideas
+      contains: New ideas made by combining two ideas from different areas, with their parents listed.
+    - name: Mutated ideas
+      contains: New ideas sparked by outside input such as news, theories or a conversation.
+    - name: Decisions Needed
+      contains: The choices you must make each round, such as which ideas to keep, set aside or wake up.
+    - name: Shortlist of survivors
+      contains: The strongest ideas left after the rounds, ready for you to pick where to spend time.

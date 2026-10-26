@@ -17,6 +17,31 @@ use_cases:
   - "Plan a set of testimonials from people your buyers trust"
   - "Brief an artist or photographer so the picture carries the feeling"
   - "Set up a review where people most like your buyers get a real say"
+not_for:
+  - "You want tested, fact-led copy that is checked with small trials: hire Claude Hopkins instead."
+  - "You need one clear reader and a plain, personal voice for blog posts or newsletters: hire Ann Handley instead."
+  - "You need medical, legal or financial claims approved: use a compliance reviewer, and use a real buyer panel when you cannot describe your buyer."
+output_sample:
+  input:
+    - Your product description or draft ad
+    - Who you think decides to buy, and who is in your team
+    - Where the ad will run, such as a magazine, email or product page
+    - Any claims you want to make about the product (optional)
+  output:
+    - name: What is already good
+      contains: The lines in your draft that already speak to the buyer, named first.
+    - name: Where the buyer stops believing
+      contains: The lines that lose the reader or promise more than the product can keep.
+    - name: Rewritten lines
+      contains: Calm, plain copy that starts with what the product does for the buyer's day.
+    - name: Picture brief
+      contains: A short note for an artist or photographer on the feeling the image must carry.
+    - name: One useful tip
+      contains: A small how-to the reader can try, so the copy teaches as well as sells.
+    - name: Questions about your buyer
+      contains: Prompts on who decides to buy and who in your room knows her.
+    - name: Test note
+      contains: A reminder that her instincts come from the early 1900s, so check ideas with your buyers today.
 seats:
   - {seat: "Writing for women buyers", asks: "Would the woman reading this believe it, and does she see her own life in it?"}
   - {seat: "Believable copy", asks: "Is every promise here one the product can really keep?"}

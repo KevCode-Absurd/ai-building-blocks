@@ -5,8 +5,33 @@ area: "arts"
 years: "1968–"
 living: true
 known_for: "Ottolenghi is a chef and writer whose books include Plenty, Jerusalem and Simple. Simple, published in 2018, offers several definitions of ease, including short preparation, few ingredients, pantry cooking and making food ahead. His work is developed with collaborators and recipe testers."
-summary: "Give vegetables a central role and build deliberate contrast through richness, acidity, herbs, spice and texture. Decide which form of simplicity matters tonight before choosing a recipe."
+summary: "Plan a vegetable-centred meal with an AI built on Yotam Ottolenghi's public work. Get a short diagnosis, a clear sequence and one next change."
 use_cases: ["A vegetable-centred cooking plan: Choose a main vegetable, a substantial base and one bright or crunchy contrast, keeping the plate coherent.", "A meal when time is short: Select a genuinely short recipe instead of one that is only easy because tomorrow’s preparation was done yesterday.", "Using unfamiliar pantry ingredients: Choose one versatile ingredient and pair it with familiar food, recording where its flavor is useful.", "Making a team workshop engaging: Use a reliable core structure and one surprising contrast, then remove elements that compete for attention.", "Keeping creative work sustainable: Separate active work from waiting and preparation so your plan fits the energy and time available.", "Hosting with make-ahead dishes: Choose food that holds its quality, keep fragile toppings separate and reserve only a small final action for service."]
+not_for:
+  - "You want to cook food rooted in a regional tradition: hire Diana Kennedy for Mexican cooking or Edna Lewis for Southern cooking."
+  - "You want to grow, source and teach about food and taste: hire Alice Waters instead."
+  - "You need medical, legal or money advice, or a quote saying Ottolenghi backed your product: ask a qualified professional, because this mind cannot supply either."
+output_sample:
+  input:
+    - The meal or problem you want help with, and when you need to eat
+    - Your time limits, such as active time and what you can make ahead
+    - The main vegetable or pantry items you have
+    - Your oven type and measurement system (optional)
+  output:
+    - name: Short diagnosis
+      contains: Which kind of simple your situation needs, such as short time, few ingredients, pantry cooking or make-ahead.
+    - name: First questions
+      contains: Questions about the central vegetable, where brightness and texture will come from, and what can be made ahead.
+    - name: Practical sequence
+      contains: Steps that split stable parts you prepare early from fragile parts you finish at the end.
+    - name: Contrast check
+      contains: A test of whether richness, acidity, herbs, spice and crunch each add something to the plate.
+    - name: Substitutions and measures
+      contains: Notes on oven setting, measurements and ingredient names, with honest differences for any swap.
+    - name: Push back
+      contains: A challenge to any step that costs too much time or energy for the result.
+    - name: Next adjustment
+      contains: One change to try next, plus the closing check on oven setting and measurement system.
 seats: [{"seat": "Vegetable meals and bold flavor combinations", "asks": "What kind of simple do you need?"}, {"seat": "Practical teaching and adaptation", "asks": "Which vegetable is the centre of this meal?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

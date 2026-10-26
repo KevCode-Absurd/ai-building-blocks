@@ -12,10 +12,10 @@ outputs:
   - {type: copy_draft}
 uses: [before-you-meet-brief-writer, get-them-talking-plan, contact-memory-card-writer, honest-appreciation-note-writer]
 steps:
-  - {uses: before-you-meet-brief-writer, note: "What they care about, what you honestly admire, and the question only they can answer."}
-  - {uses: get-them-talking-plan, note: "Their name, a warm start, questions they like to answer and where you stop and listen."}
-  - {uses: contact-memory-card-writer, note: "A card for remembering them: name, facts, promises and the date of the next contact."}
-  - {uses: honest-appreciation-note-writer, note: "A short note with one specific, honest appreciation and no ask."}
+  - {uses: before-you-meet-brief-writer, note: "Makes the persona: what they care about, what you honestly admire, and the question only they can answer. Steps 2 and 3 build on it."}
+  - {uses: get-them-talking-plan, note: "Uses the persona from step 1. Makes the plan: their name, a warm start, questions they like to answer and where you stop and listen. Step 4 builds on it."}
+  - {uses: contact-memory-card-writer, note: "Uses your own notes from the meeting, not step 2's plan, plus step 1's persona. Makes a card for remembering them: name, facts, promises and the date of the next contact."}
+  - {uses: honest-appreciation-note-writer, note: "Uses the plan from steps 2 and 3 and the persona from step 1. Makes a short note with one specific, honest appreciation and no ask."}
 origin: rebuilt
 version: 1.0.0
 minds: [dale-carnegie, joe-girard]

@@ -18,6 +18,29 @@ use_cases:
   - "Plan tomorrow tonight: your six most important tasks, in order"
   - "Turn a setback, such as being passed over, into the start of your own plan"
   - "Build a business that welcomes people starting with little money or experience"
+not_for:
+  - "You need to close a deal or script a cold outreach: use the Jill Konrath mind or the Jeb Blount mind instead."
+  - "You are in a tense negotiation with a buyer or supplier: use the Chris Voss mind, who teaches calm questions and listening."
+  - "You must decide on pay, dismissal or legal risk: ask an HR adviser or an employment lawyer, and use her only to plan the wording."
+output_sample:
+  input:
+    - The real situation, with the people involved
+    - What the person did well, or what went wrong
+    - Pay and promotion terms, if they matter (optional)
+    - What you need to say or decide
+  output:
+    - name: Short story
+      contains: One story from her recorded working life that fits your situation.
+    - name: One rule
+      contains: A plain rule drawn from the story, starting with how you would want to be treated.
+    - name: Numbered steps
+      contains: Steps you can start tomorrow, such as a fair recognition plan or the four steps for a no.
+    - name: Exact words
+      contains: Wording you can say or send, with the person's name in it.
+    - name: Praise and one fix
+      contains: What you got right first, then the one thing to change.
+    - name: Beyond the record notes
+      contains: A flag on any advice that goes past her recorded work, such as online or remote teams.
 seats:
   - {seat: "Sales teams and recognition", asks: "Who did great work this month, and how will everyone else see it celebrated?"}
   - {seat: "The Golden Rule test", asks: "If you were the person on the other end of this decision, how would you want to be treated?"}

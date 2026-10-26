@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Antenna design balances many linked limits.
 new_slug: antenna-designer
 name: Antenna designer
-summary: Name the frequency and goal. Get an antenna or array designed, with its
-  pattern and fit checked.
+summary: Design an antenna or array in MATLAB for your frequency and goal. Get the pattern, impedance and return loss checked, plus files for printed boards.
 job: build-software
 headline: Antenna designer
-subhead: Tell it the frequency and what the antenna must do, and you get a
-  working design with its radiation pattern, impedance and fit checked. It can
-  cover a single antenna, a circuit board antenna or a whole array.
+subhead: Tell it the frequency and what the antenna must do, and you get a working design with its radiation pattern, impedance and fit checked. It can cover a single antenna, a circuit board antenna or a whole array.
 explain: |
   Tell it the frequency and what the antenna must do, and you get a working design with its radiation pattern, impedance and fit checked. It can cover a single antenna, a circuit board antenna or a whole array.
 
@@ -18,6 +15,10 @@ when:
   - You want to see the pattern and return loss before building anything.
   - You need a printed antenna ready for board fabrication files.
   - You are tuning an array to steer a beam.
+not_for:
+  - "You need reflector antennas, reflectarrays, installed antennas or radar cross section (RCS) work: use the MathWorks skill matlab-analyze-antenna-structures."
+  - "You need matching networks, measured antenna data, radio wave propagation or SAR: use the MathWorks skill matlab-integrate-antenna."
+  - "You do not have MATLAB with Antenna Toolbox: ask an RF engineer, or use a free antenna simulator."
 you_give:
   - Target frequency or band
   - Goals such as gain, bandwidth or size
@@ -29,8 +30,30 @@ you_get:
   - Fabrication files for printed designs (optional)
   - Optimised dimensions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Antenna Toolbox.
+  - Open an AI that can run MATLAB code. You need MATLAB with Antenna Toolbox installed.
+  - Paste the skill text, or upload the skill folder if your AI accepts files.
+  - Tell it your frequency and goals. Add the antenna type and board material if you know them.
+  - "Check the plots and numbers it returns: return loss, gain and beamwidth."
+  - Ask for changes or an optimised version, then ask for Gerber files if you plan to print the board.
+output_sample:
+  input:
+    - Your target frequency or band
+    - Your goals, such as gain, bandwidth or size
+    - The antenna type you have in mind (optional)
+    - Your board material (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with Antenna Toolbox installed
+  output:
+    - name: Catalog antenna design
+      contains: A standard antenna such as a dipole, patch or horn, sized to your frequency, with substrate set first.
+    - name: Analysis
+      contains: Impedance, return loss, 3D pattern and 2D cuts, with gain and beamwidth reported with units.
+    - name: Custom or PCB antenna
+      contains: A custom shape or layered board antenna with its feed set, ready to mesh and analyse.
+    - name: Array design
+      contains: A linear, rectangular, circular or infinite array with beam steering, tapering and coupling checks.
+    - name: Gerber files
+      contains: Fabrication files for a printed antenna, written when you ask for board output.
+    - name: Optimised dimensions
+      contains: Antenna sizes tuned for gain, bandwidth or sidelobe level, checked with a full analysis sweep.

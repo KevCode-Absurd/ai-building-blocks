@@ -2,13 +2,10 @@ thinking: high
 thinking_why: A strong opening and clear beats take careful writing.
 new_slug: youtube-script-writer
 name: YouTube script writer
-summary: Give it a video idea. Get scored hook options and a full spoken script
-  with what shows on screen.
+summary: Turn a rough idea into a YouTube script. Get two scored hook options and a spoken script with what to show on screen.
 job: write-and-tell-stories
 headline: YouTube script writer
-subhead: Give it a video idea. Get scored hook options and a full spoken script
-  with what shows on screen. Bring your video idea. Use the result to plan your
-  next step.
+subhead: Give it a video idea. Get scored hook options and a full spoken script with what shows on screen. Bring your video idea. Use the result to plan your next step.
 explain: |
   A full spoken script for one video idea, plus the hook chosen from five options that were actually scored.
 
@@ -18,6 +15,10 @@ when:
   - Your openings lose viewers in the first 30 seconds.
   - You want to see two hook options side by side before choosing.
   - You want a script that tells you what to show on screen.
+not_for:
+  - "You want a short vertical video under a minute: write that by hand, since this script shape is built for longer videos."
+  - "You already have a finished video to cut: use your video editor, as this only writes new scripts."
+  - "You only need a title or thumbnail idea: ask your AI for those directly, as this skill does not write them."
 you_give:
   - Your video idea
   - Your voice notes or three past videos (optional)
@@ -29,8 +30,33 @@ you_get:
   - A runtime estimate
   - The formula the winning hook used
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open a chat with an AI that can run Python code and upload the skill folder.
+  - Paste your video idea. Add any facts, numbers or sources you want used.
+  - Share your voice.md file. If you have none, paste three of your past videos so your AI can write one.
+  - Read the two hooks and their scores. Pick one, or ask for a change.
+  - Read the script and check each ON SCREEN note. Save voice.md so the next run uses it.
+  - "Answer the last question: ship it, or change it?"
+output_sample:
+  input:
+    - Your video idea
+    - Your voice notes or three of your past videos (optional)
+    - Facts, numbers or sources you can use (optional)
+    - The length you want (optional)
+  prerequisites:
+    - An AI that can run Python code, to score the hooks
+    - A saved voice.md file, or three of your past videos so it can write one
+  output:
+    - name: Top two hooks
+      contains: The two best opening lines out of five, each shown with its score.
+    - name: The turn
+      contains: One sentence that says what the video will do, then starts doing it, with no channel intro.
+    - name: Body beats
+      contains: One idea per beat, each with an ON SCREEN note for what the viewer sees.
+    - name: Payoff
+      contains: The moment that delivers what the hook promised, and says it is delivering it.
+    - name: Close
+      contains: One single ask to end the video.
+    - name: Runtime estimate
+      contains: The video length, worked out at 150 words a minute.
+    - name: Winning formula
+      contains: One line naming which of the 21 hook formulas the best hook used and why it fits.

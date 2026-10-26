@@ -1,6 +1,6 @@
 new_slug: shopify-test-setup-picker
 name: "Shopify test setup picker"
-summary: "Give it your Shopify plan and test idea. Get what you can test, the right route, and a setup score."
+summary: "Find out what you can A/B test on your Shopify plan, which testing route fits, and what to ask tools about flicker and stats. Get a setup score."
 job: test-store-changes
 thinking: low
 thinking_why: "It sorts ideas by plan and gives a short list of questions, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You want to A/B test checkout and are not sure your plan allows it.
   - You are about to pay for a testing app and need the right questions to ask.
   - You have several test ideas and need to know which can run side by side.
+not_for:
+  - "You get under 30 orders a month: a test will not give a clear answer, so use the Store test readiness checker first."
+  - "You already have a test result and want to know if it won: use the Store test verdict maker."
+  - "You only want to change one price and are not testing: ask a qualified person about local pricing rules instead."
 
 you_give:
   - "Your Shopify plan: Basic, Shopify, Advanced or Plus"
@@ -37,6 +41,30 @@ how_to_use:
   - Say who will build the changes.
   - Take its questions to any tool you are thinking of buying, and write down the answers.
   - Check Shopify's own checkout rules once a year, as they keep changing.
+output_sample:
+  input:
+    - Your Shopify plan (Basic, Shopify, Advanced or Plus)
+    - Your test ideas, such as product page, cart, checkout or pricing
+    - "Who builds the changes: you, an app or a developer"
+    - Your monthly orders (optional)
+    - Tests already running (optional)
+  output:
+    - name: PLAN
+      contains: Your Shopify plan, who builds the changes and your monthly orders on one line.
+    - name: IDEA lines
+      contains: "For each idea: where it sits, whether your plan can test it, the route, and flicker and speed notes."
+    - name: NOT TESTABLE
+      contains: Ideas your plan cannot test, and what to do instead.
+    - name: ASK EVERY TOOL
+      contains: Questions on free limits, where the split happens, flicker, stats and plan fit.
+    - name: STATS
+      contains: What to check about the stats engine and how to read a result.
+    - name: CONFLICTS
+      contains: Tests that clash on one page, or none.
+    - name: SCORE
+      contains: A setup score out of 100 with the sum shown.
+    - name: NEXT
+      contains: One step to take next.
 
 how_it_works:
   - title: Places each idea

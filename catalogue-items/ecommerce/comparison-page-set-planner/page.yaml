@@ -1,6 +1,6 @@
 new_slug: comparison-page-set-planner
 name: "Comparison page set planner"
-summary: "Name your category and rivals. Get the best-of, review, alternative and versus pages to build, in order."
+summary: "Plan your comparison pages for each rival: best-of, review, alternatives and versus pages, with open searches marked and a build order for your team."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It sorts many page ideas into a build order, which needs steady reasoning but not deep analysis."
@@ -17,6 +17,10 @@ when:
   - You know your top rivals and want to publish comparison pages, but not which ones first.
   - Search Console shows searches that mention your rivals and you want a plan for them.
   - You want a build order that a small team can finish, starting with the five most useful pages.
+not_for:
+  - "You only need one comparison page: ask your AI to write that page directly, or use the best-of page writer."
+  - "You have no rivals that shoppers name or search for: skip comparison pages and work on pages for your own products."
+  - "You are launching one product: a single product page with a plain comparison table is a simpler step."
 
 you_give:
   - Your category and 5 to 10 main rivals
@@ -35,6 +39,28 @@ how_to_use:
   - Paste Search Console searches that mention rivals, if you have them.
   - Pick your first batch from the top of the list, and check the legal rules for naming rivals where you sell.
   - Hand each page to the best-of page writer or your own writer.
+output_sample:
+  input:
+    - Your category and 5 to 10 main rivals
+    - Your real differences from each rival, with proof
+    - Search Console searches that mention rivals (optional)
+    - Your team size and pages per month (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - A Search Console account to check open searches (optional)
+  output:
+    - name: Page table
+      contains: One row per rival and page type, with the search, what the shopper wants, open or owned, and the page or channel.
+    - name: Build order
+      contains: Pages grouped into batches that fit your team, starting with the most useful ones.
+    - name: Fairness rules for every page
+      contains: Objective differences only, where you lose, and the date each fact was checked.
+    - name: Legal check
+      contains: A reminder to confirm the rules for naming rivals and making claims where you sell.
+    - name: Next batch trigger
+      contains: How to find new rival searches in Search Console as pages go live.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any input you did not give.
 
 how_it_works:
   - title: Picks the rivals

@@ -16,6 +16,29 @@ use_cases:
   - "Decide how a small business can give back without faking it"
   - "Train your team to know the product and the cause behind it"
   - "Weigh a big buyout or partnership against what it might do to your values"
+not_for:
+  - "You need legal, financial or medical advice, or a certified supplier audit: use a qualified adviser or the relevant certifier instead."
+  - "You want a plan for fair profit, working hours and craft at a luxury brand: use the Brunello Cucinelli mind."
+  - "You want a plan to grow a big business or fund giving from its profits: use the Andrew Carnegie mind."
+output_sample:
+  input:
+    - A real problem from your business, work or life
+    - What your business says it stands for
+    - What you know about how your product is made and who makes it
+    - Any visits, reports or supplier facts you have (optional)
+  output:
+    - name: First questions
+      contains: The questions she would ask you first, such as what you have seen and who made your product.
+    - name: Her take on your job
+      contains: A blunt, warm answer on your case, such as a claim check, campaign idea or staff plan.
+    - name: What she'd push back on
+      contains: The weak spots in your plan, such as marketing with no action behind it.
+    - name: The plain cost
+      contains: What taking this step could cost you, such as lost sales or hard talks.
+    - name: One practical next step
+      contains: One action to take this week, such as go and see, talk first, then go public.
+    - name: Beyond the record
+      contains: A label on anything outside her public work, so you know where the advice is not hers.
 seats:
   - {seat: "Values as the brand", asks: "What do we stand for, and can a customer see it the moment they walk in?"}
   - {seat: "Campaigner", asks: "Who is hurt by how this is made, and what are we going to say about it?"}

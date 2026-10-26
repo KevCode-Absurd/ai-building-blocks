@@ -48,8 +48,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Pick the lead magnet.** Use the skill `lead-magnet-planner`. Starts from your buyer and returns one free offer with a plan for its page and emails.
-2. **Map the path to a sale.** Use the skill `funnel-flow-planner`. Give it the offer from the steps before. Reads the magnet from the step before and lays out the path from signup to sale.
-3. **Write the signup page.** Use the skill `ad-matched-landing-page-writer`. Give it the offer from the steps before. Writes the page for the magnet from the step before, using your post, ad or link as the first screen.
+2. **Map the path to a sale.** Use the skill `funnel-flow-planner`. Give it the offer from the steps before. Reads the magnet from step 1 and lays out the path from signup to sale. The signup page in step 3 is where that path starts.
+3. **Write the signup page.** Use the skill `ad-matched-landing-page-writer`. Give it the offer from the steps before. Uses the free offer from step 1 (not step 2's path) and your brand brain. Writes the signup page that starts step 2's path, using your post, ad or link as the first screen.
 4. **Review the page before it goes live.** Use the skill `landing-page-auditor`. Give it the landing page from the steps before. Reads the signup page and ranks what to fix first.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

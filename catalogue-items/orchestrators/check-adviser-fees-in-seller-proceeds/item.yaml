@@ -1,15 +1,13 @@
 slug: check-adviser-fees-in-seller-proceeds
 name: Check adviser fees in seller proceeds
-summary: Carry the signed success-fee invoice into seller closing proceeds.
+summary: "Check an adviser's success fee against the engagement letter, credit the retainer you paid, and see what it takes off seller closing proceeds."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false

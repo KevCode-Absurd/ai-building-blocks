@@ -1,6 +1,6 @@
 new_slug: connect-code-to-supabase-builder-prompt
 name: Connect Code to Supabase coding prompt
-summary: Get a coding brief to connect your app to Supabase, with scoped access, safe secrets and a read check.
+summary: Paste one prompt into Claude Code to connect your app to Supabase from the server, keep the secret key safe and run a first read check.
 job: build-software
 headline: Connect Code to Supabase coding prompt
 subhead: Get a coding brief to connect your app to Supabase, with scoped access, safe secrets and a read check.
@@ -12,6 +12,10 @@ when:
   - You need a coding brief for connect code to supabase.
   - You need connect code to supabase prompt for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - "You are building browser code or a client-side app: this prompt makes a server-only client, so use the Supabase docs for your framework."
+  - "You use a framework other than Next.js or Node: follow the Supabase docs for that framework instead."
+  - "You have not made the agent_jobs and agent_activity_log tables yet: create them in Supabase first, or the test will fail."
 you_give:
   - The repository or relevant code and schema
   - The feature requirements and available services
@@ -19,9 +23,31 @@ you_get:
   - A coding brief for connect code to supabase
   - Required files, setup gaps and test cases
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your project in Claude Code. This prompt creates files, so it needs an AI that can write to your project.
+  - Save your Supabase URL and service role key in .env.local.
+  - Paste the prompt from the download and let it create the two files.
+  - Run npx tsx scripts/test-db-connection.ts in your terminal.
+  - Check that you see the two lines about agent_jobs and the activity log. Zero rows is fine on new tables.
+  - If you see an error, check the key names in .env.local and that both tables exist.
+output_sample:
+  input:
+    - Your code project, open in Claude Code
+    - Your Supabase project URL
+    - Your Supabase service role key, saved in .env.local
+    - Your agent_jobs and agent_activity_log tables
+  prerequisites:
+    - Claude Code, or an AI that can create files in your project
+    - A Supabase project with the two tables already made
+    - A Node or Next.js server project
+  output:
+    - name: lib/supabase/admin.ts
+      contains: A server-only Supabase client called supabaseAdmin that stops with a clear error if a key is missing.
+    - name: scripts/test-db-connection.ts
+      contains: A script that reads up to 5 rows from agent_jobs and counts the rows in agent_activity_log.
+    - name: Plain-English explanation
+      contains: Short notes on the service role key, why it stays out of browser code, and the data and error pattern.
+    - name: Test result
+      contains: The lines you should see when you run the script, where zero rows is fine on new tables.
 how_it_works:
   - title: Inspect the target project
     text: Check its file structure, interfaces and service setup before choosing paths.

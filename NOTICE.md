@@ -2825,3 +2825,528 @@ Copied as they are from https://github.com/evilhill/equity-research-skill (commi
 | Block | Original | Licence |
 |---|---|---|
 | `imported/equity-research-valuation-report-builder` | equity-research-skill-v1-2, https://github.com/evilhill/equity-research-skill | MIT |
+
+## Imported from composio-community/support-skills
+
+Copied as they are from https://github.com/composio-community/support-skills (commit 83382c4), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/customer-feedback-report-from-survey-tools` | feedback-digest, https://github.com/composio-community/support-skills/tree/main/feedback-digest | MIT |
+| `imported/customer-message-tone-and-urgency-review` | sentiment-check, https://github.com/composio-community/support-skills/tree/main/sentiment-check | MIT |
+| `imported/customer-support-message-translator` | translate-ticket, https://github.com/composio-community/support-skills/tree/main/translate-ticket | MIT |
+| `imported/delighted-and-satismeter-survey-assistant` | nps-collect, https://github.com/composio-community/support-skills/tree/main/nps-collect | MIT |
+| `imported/dialpad-and-leexi-call-summarizer` | call-summary, https://github.com/composio-community/support-skills/tree/main/call-summary | MIT |
+| `imported/freshdesk-ticket-priority-planner` | freshdesk-triage, https://github.com/composio-community/support-skills/tree/main/freshdesk-triage | MIT |
+| `imported/gorgias-and-hubspot-contact-check` | contact-sync, https://github.com/composio-community/support-skills/tree/main/contact-sync | MIT |
+| `imported/gorgias-and-hubspot-customer-brief` | customer-360, https://github.com/composio-community/support-skills/tree/main/customer-360 | MIT |
+| `imported/gorgias-bug-report-writer` | bug-report, https://github.com/composio-community/support-skills/tree/main/bug-report | MIT |
+| `imported/gorgias-duplicate-ticket-finder` | merge-tickets, https://github.com/composio-community/support-skills/tree/main/merge-tickets | MIT |
+| `imported/gorgias-priority-customer-ticket-brief` | vip-alert, https://github.com/composio-community/support-skills/tree/main/vip-alert | MIT |
+| `imported/gorgias-refund-review-brief` | refund-processor, https://github.com/composio-community/support-skills/tree/main/refund-processor | MIT |
+| `imported/gorgias-response-deadline-checker` | sla-monitor, https://github.com/composio-community/support-skills/tree/main/sla-monitor | MIT |
+| `imported/gorgias-satisfaction-follow-up-writer` | csat-followup, https://github.com/composio-community/support-skills/tree/main/csat-followup | MIT |
+| `imported/gorgias-shift-handover-writer` | handoff-notes, https://github.com/composio-community/support-skills/tree/main/handoff-notes | MIT |
+| `imported/gorgias-support-metrics-report` | support-metrics, https://github.com/composio-community/support-skills/tree/main/support-metrics | MIT |
+| `imported/gorgias-support-queue-action-planner` | inbox-zero, https://github.com/composio-community/support-skills/tree/main/inbox-zero | MIT |
+| `imported/gorgias-support-reply-writer` | draft-reply, https://github.com/composio-community/support-skills/tree/main/draft-reply | MIT |
+| `imported/gorgias-ticket-priority-planner` | ticket-triage, https://github.com/composio-community/support-skills/tree/main/ticket-triage | MIT |
+| `imported/gorgias-ticket-tag-planner` | auto-tag, https://github.com/composio-community/support-skills/tree/main/auto-tag | MIT |
+| `imported/gorgias-to-linear-issue-handover` | escalate, https://github.com/composio-community/support-skills/tree/main/escalate | MIT |
+| `imported/gorgias-weekly-support-report` | weekly-digest, https://github.com/composio-community/support-skills/tree/main/weekly-digest | MIT |
+| `imported/intercom-conversation-action-planner` | intercom-resolve, https://github.com/composio-community/support-skills/tree/main/intercom-resolve | MIT |
+| `imported/notion-help-article-finder` | knowledge-search, https://github.com/composio-community/support-skills/tree/main/knowledge-search | MIT |
+| `imported/support-chatbot-conversation-review` | chatbot-review, https://github.com/composio-community/support-skills/tree/main/chatbot-review | MIT |
+| `imported/support-issue-cause-investigator` | root-cause, https://github.com/composio-community/support-skills/tree/main/root-cause | MIT |
+| `imported/support-reply-tone-editor` | tone-rewriter, https://github.com/composio-community/support-skills/tree/main/tone-rewriter | MIT |
+| `imported/support-ticket-thread-summarizer` | ticket-summarize, https://github.com/composio-community/support-skills/tree/main/ticket-summarize | MIT |
+| `imported/whatsapp-support-reply-assistant` | whatsapp-support, https://github.com/composio-community/support-skills/tree/main/whatsapp-support | MIT |
+| `imported/zendesk-ticket-priority-planner` | zendesk-triage, https://github.com/composio-community/support-skills/tree/main/zendesk-triage | MIT |
+| `imported/zoho-desk-ticket-priority-planner` | zoho-desk-triage, https://github.com/composio-community/support-skills/tree/main/zoho-desk-triage | MIT |
+
+## Imported from yugash007/edu-agent-skills
+
+Copied as they are from https://github.com/yugash007/edu-agent-skills (commit e75f443), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/codebase-learning-map` | repo-understand, https://github.com/yugash007/edu-agent-skills/tree/main/skills/onboarding/repo-understand | MIT |
+| `imported/coding-project-coach` | build-with-me, https://github.com/yugash007/edu-agent-skills/tree/main/skills/projects/build-with-me | MIT |
+| `imported/debugging-practice-coach` | debug-teacher, https://github.com/yugash007/edu-agent-skills/tree/main/skills/projects/debug-teacher | MIT |
+| `imported/guided-reasoning-tutor` | socratic-mode, https://github.com/yugash007/edu-agent-skills/tree/main/skills/teaching/socratic-mode | MIT |
+| `imported/learning-level-check` | find-your-level, https://github.com/yugash007/edu-agent-skills/tree/main/skills/onboarding/find-your-level | MIT |
+| `imported/learning-mistake-coach` | misconception-detector, https://github.com/yugash007/edu-agent-skills/tree/main/skills/assessment/misconception-detector | MIT |
+| `imported/learning-session-handoff` | learning-memory, https://github.com/yugash007/edu-agent-skills/tree/main/skills/memory/learning-memory | MIT |
+| `imported/student-coding-project-review` | project-review, https://github.com/yugash007/edu-agent-skills/tree/main/skills/projects/project-review | MIT |
+| `imported/study-gap-tracker` | weak-area-tracker, https://github.com/yugash007/edu-agent-skills/tree/main/skills/memory/weak-area-tracker | MIT |
+| `imported/study-review-scheduler` | spaced-repetition, https://github.com/yugash007/edu-agent-skills/tree/main/skills/productivity/spaced-repetition | MIT |
+| `imported/study-revision-coach` | revision-mode, https://github.com/yugash007/edu-agent-skills/tree/main/skills/productivity/revision-mode | MIT |
+| `imported/system-design-practice-review` | architecture-review, https://github.com/yugash007/edu-agent-skills/tree/main/skills/projects/architecture-review | MIT |
+| `imported/technical-interview-practice` | interview-mode, https://github.com/yugash007/edu-agent-skills/tree/main/skills/assessment/interview-mode | MIT |
+| `imported/technical-topic-deep-dive` | deep-dive, https://github.com/yugash007/edu-agent-skills/tree/main/skills/teaching/deep-dive | MIT |
+| `imported/technical-topic-explainer` | simplify-topic, https://github.com/yugash007/edu-agent-skills/tree/main/skills/teaching/simplify-topic | MIT |
+
+## Imported from Mohamed-El-Sharqawy/agent-tutor
+
+Copied as they are from https://github.com/Mohamed-El-Sharqawy/agent-tutor (commit 5651e2e), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/personal-study-notebook` | agent-tutor, https://github.com/Mohamed-El-Sharqawy/agent-tutor/tree/main/skills/agent-tutor | MIT |
+| `imported/study-note-diagrams` | agent-tutor-visualize, https://github.com/Mohamed-El-Sharqawy/agent-tutor/tree/main/skills/agent-tutor-visualize | MIT |
+| `imported/study-notebook-review` | agent-tutor-review, https://github.com/Mohamed-El-Sharqawy/agent-tutor/tree/main/skills/agent-tutor-review | MIT |
+
+## Imported from dinqe/language-tutor
+
+Copied as they are from https://github.com/dinqe/language-tutor (commit 946946b), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/spanish-and-turkish-writing-tutor` | language-tutor, https://github.com/dinqe/language-tutor | MIT |
+
+## Imported from davila7/claude-code-templates
+
+Copied as they are from https://github.com/davila7/claude-code-templates (commit 7d85535), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/academic-cv-builder` | academic-cv-builder, https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/career/academic-cv-builder | MIT |
+| `imported/creative-resume-layout-planner` | creative-portfolio-resume, https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/career/creative-portfolio-resume | MIT |
+| `imported/job-reference-list-builder` | reference-list-builder, https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/career/reference-list-builder | MIT |
+| `imported/portfolio-case-study-writer` | portfolio-case-study-writer, https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/career/portfolio-case-study-writer | MIT |
+| `imported/resume-layout-editor` | resume-formatter, https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/career/resume-formatter | MIT |
+| `imported/resume-version-organizer` | resume-version-manager, https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/career/resume-version-manager | MIT |
+
+## Imported from sector-skills/nonprofit-skills
+
+Copied as they are from https://github.com/sector-skills/nonprofit-skills (commit 7d8a2ca), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/community-needs-research-planner` | nonprofit-needs-assessment, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/programs-impact/nonprofit-needs-assessment | MIT |
+| `imported/donated-goods-intake-planner` | nonprofit-donation-intake-grading, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/retail-operations/nonprofit-donation-intake-grading | MIT |
+| `imported/donated-goods-online-resale-planner` | nonprofit-online-resale, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/retail-operations/nonprofit-online-resale | MIT |
+| `imported/nonprofit-annual-appeal-planner` | nonprofit-annual-appeals, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/fundraising-development/nonprofit-annual-appeals | MIT |
+| `imported/nonprofit-board-meeting-and-role-planner` | nonprofit-board-governance, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/governance-compliance/nonprofit-board-governance | MIT |
+| `imported/nonprofit-board-recruitment-planner` | nonprofit-board-recruitment, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/volunteer-people/nonprofit-board-recruitment | MIT |
+| `imported/nonprofit-donor-relationship-planner` | nonprofit-donor-pipeline, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/fundraising-development/nonprofit-donor-pipeline | MIT |
+| `imported/nonprofit-donor-thank-you-and-renewal-planner` | nonprofit-donor-retention, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/fundraising-development/nonprofit-donor-retention | MIT |
+| `imported/nonprofit-earned-income-planner` | nonprofit-revenue-diversification, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/strategy-growth/nonprofit-revenue-diversification | MIT |
+| `imported/nonprofit-fundraising-event-planner` | nonprofit-fundraising-events, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/fundraising-development/nonprofit-fundraising-events | MIT |
+| `imported/nonprofit-grant-funder-researcher` | nonprofit-grant-research, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/fundraising-development/nonprofit-grant-research | MIT |
+| `imported/nonprofit-grant-proposal-writer` | nonprofit-grant-writing, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/fundraising-development/nonprofit-grant-writing | MIT |
+| `imported/nonprofit-leadership-handover-planner` | nonprofit-succession-planning, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/volunteer-people/nonprofit-succession-planning | MIT |
+| `imported/nonprofit-program-expansion-planner` | nonprofit-program-scaling, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/programs-impact/nonprofit-program-scaling | MIT |
+| `imported/nonprofit-program-measurement-planner` | nonprofit-outcomes-measurement, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/programs-impact/nonprofit-outcomes-measurement | MIT |
+| `imported/nonprofit-program-outcome-planner` | nonprofit-program-design, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/programs-impact/nonprofit-program-design | MIT |
+| `imported/nonprofit-sponsor-package-planner` | nonprofit-corporate-sponsorships, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/fundraising-development/nonprofit-corporate-sponsorships | MIT |
+| `imported/nonprofit-volunteer-program-planner` | nonprofit-volunteer-management, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/volunteer-people/nonprofit-volunteer-management | MIT |
+| `imported/resale-store-daily-procedure-planner` | nonprofit-retail-store-operations, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/retail-operations/nonprofit-retail-store-operations | MIT |
+| `imported/resale-store-pricing-and-layout-planner` | nonprofit-retail-pricing-merchandising, https://github.com/sector-skills/nonprofit-skills/tree/main/nonprofit-skills-library/skills/retail-operations/nonprofit-retail-pricing-merchandising | MIT |
+
+## Imported from erphq/skills
+
+Copied as they are from https://github.com/erphq/skills (commit eaa34a7), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/business-data-move-runbook` | migration-runbook, https://github.com/erphq/skills/tree/main/templates/01-org-under-100/migration-runbook | MIT |
+| `imported/business-tool-launch-checklist` | go-live-checklist, https://github.com/erphq/skills/tree/main/templates/01-org-under-100/go-live-checklist | MIT |
+| `imported/client-project-communication-plan` | client-collaboration, https://github.com/erphq/skills/tree/main/departments/project-operations/01-org-under-100/client-collaboration | MIT |
+| `imported/project-requirement-tracker` | requirements-traceability, https://github.com/erphq/skills/tree/main/templates/01-org-under-100/requirements-traceability | MIT |
+| `imported/project-time-and-expense-plan` | time-expense, https://github.com/erphq/skills/tree/main/departments/project-operations/01-org-under-100/time-expense | MIT |
+| `imported/shared-business-record-planner` | master-data-management, https://github.com/erphq/skills/tree/main/departments/information-technology/01-org-under-100/master-data-management | MIT |
+
+## Imported from magnus919/agent-skills
+
+Copied as they are from https://github.com/magnus919/agent-skills (commit 92c327e), each with its own licence file. We changed nothing in the skill files; we gave each a plain name on our site.
+
+| Block | Original | Licence |
+|---|---|---|
+| `imported/ai-knowledge-file-pack-builder` | open-knowledge-format, https://github.com/magnus919/agent-skills/tree/main/open-knowledge-format | MIT |
+| `imported/ai-training-data-labeling-planner` | training-data-annotation, https://github.com/magnus919/agent-skills/tree/main/training-data-annotation | MIT |
+| `imported/backup-communication-plan-builder` | pace-plan, https://github.com/magnus919/agent-skills/tree/main/pace-plan | MIT |
+| `imported/book-writing-project-coach` | writers-helper, https://github.com/magnus919/agent-skills/tree/main/writers-helper | MIT |
+| `imported/community-workshop-guide-builder` | community-guides, https://github.com/magnus919/agent-skills/tree/main/community-guides | MIT |
+| `imported/current-and-target-gap-planner` | gap-analysis, https://github.com/magnus919/agent-skills/tree/main/gap-analysis | MIT |
+| `imported/daily-ai-help-discovery-guide` | daily-life-discovery, https://github.com/magnus919/agent-skills/tree/main/daily-life-discovery | MIT |
+| `imported/executive-office-work-planner` | chief-of-staff-methodology, https://github.com/magnus919/agent-skills/tree/main/chief-of-staff-methodology | MIT |
+| `imported/layered-research-handover-builder` | artifact-pyramids, https://github.com/magnus919/agent-skills/tree/main/artifact-pyramids | MIT |
+| `imported/narrative-decision-memo-writer` | amazon-memo, https://github.com/magnus919/agent-skills/tree/main/amazon-memo | MIT |
+| `imported/open-library-book-and-edition-finder` | openlibrary, https://github.com/magnus919/agent-skills/tree/main/openlibrary | MIT |
+| `imported/personal-goal-reflection-coach` | life-coach, https://github.com/magnus919/agent-skills/tree/main/life-coach | MIT |
+| `imported/personal-trip-guide-builder` | travel-guide, https://github.com/magnus919/agent-skills/tree/main/travel-guide | MIT |
+| `imported/persuasive-claim-truth-checker` | de-spin, https://github.com/magnus919/agent-skills/tree/main/de-spin | MIT |
+| `imported/project-gutenberg-book-text-finder` | gutenberg, https://github.com/magnus919/agent-skills/tree/main/gutenberg | MIT |
+
+
+## Computer Markdown discovery, 24 October 2026
+
+Original skill instructions are preserved with their licence and source revision. Local file paths and excluded documents are kept out of public assets.
+
+| Skill | Source revision | Licence |
+|---|---|---|
+| Check AI workflow value | [magnus919/agent-skills](https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/ai-operating-economics) (92c327e525da) | MIT |
+| Plan an archival CRT image | [magnus919/agent-skills](https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/analog-occultism) (92c327e525da) | MIT |
+| Read AWS resource inventory | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/aws-resource-query) (613efc8c21d9) | MIT |
+| Plan service capacity and cost | [magnus919/agent-skills](https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/capacity-and-cost-engineering) (92c327e525da) | MIT |
+| Audit a constrained decision | [magnus919/agent-skills](https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/constrained-optimization) (92c327e525da) | MIT |
+| Document a GitHub workflow contract | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/create-github-action-workflow-specification) (613efc8c21d9) | MIT |
+| Plan a time-boxed technical spike | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/create-technical-spike) (613efc8c21d9) | MIT |
+| Check CrowdSec protection | [magnus919/agent-skills](https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/crowdsec) (92c327e525da) | MIT |
+| Plan a Dynamics 365 blueprint | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/d365-solution-blueprint) (613efc8c21d9) | MIT |
+| Plan a governed digital twin | [magnus919/agent-skills](https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/digital-twin) (92c327e525da) | MIT |
+| Check a circuit and its evidence | [magnus919/agent-skills](https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/electronics) (92c327e525da) | MIT |
+| Plan enterprise architecture changes | [magnus919/agent-skills](https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/enterprise-architecture) (92c327e525da) | MIT |
+| Plan a nonprofit annual report | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/communications-marketing/nonprofit-annual-report) (7d8a2ca9d471) | MIT |
+| Plan a nonprofit operating budget | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/finance-operations/nonprofit-budgeting) (7d8a2ca9d471) | MIT |
+| Plan a nonprofit capital campaign | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/fundraising-development/nonprofit-capital-campaigns) (7d8a2ca9d471) | MIT |
+| Write a nonprofit executive board report | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/executive-leadership/nonprofit-ceo-board-partnership) (7d8a2ca9d471) | MIT |
+| Plan a nonprofit change rollout | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/strategy-growth/nonprofit-change-management) (7d8a2ca9d471) | MIT |
+| Write a nonprofit donation page | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/communications-marketing/nonprofit-donation-page-copy) (7d8a2ca9d471) | MIT |
+| Plan nonprofit executive and board dashboards | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/executive-leadership/nonprofit-executive-dashboard) (7d8a2ca9d471) | MIT |
+| Plan a team fundraising campaign | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/fundraising-development/nonprofit-peer-to-peer-fundraising) (7d8a2ca9d471) | MIT |
+| Plan nonprofit resale-store staffing | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/retail-operations/nonprofit-retail-staffing) (7d8a2ca9d471) | MIT |
+| Write an ethical nonprofit impact story | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/communications-marketing/nonprofit-storytelling) (7d8a2ca9d471) | MIT |
+| Plan a nonprofit strategy cycle | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/strategy-growth/nonprofit-strategic-planning) (7d8a2ca9d471) | MIT |
+| Review a Power BI data model | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/power-bi-model-design-review) (613efc8c21d9) | MIT |
+| Diagnose a slow Power BI report | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/power-bi-performance-troubleshooting) (613efc8c21d9) | MIT |
+| Design a Power BI report layout | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/power-bi-report-design-consultation) (613efc8c21d9) | MIT |
+| Plan a Power Platform solution | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/power-platform-architect) (613efc8c21d9) | MIT |
+| Review a feature and plan its future | [magnus919/agent-skills](https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/product-lifecycle-learning) (92c327e525da) | MIT |
+| Set product decision rights | [magnus919/agent-skills](https://github.com/magnus919/agent-skills/tree/92c327e525da69c9ad3812fd223a1770e977c2e3/product-operations-and-governance) (92c327e525da) | MIT |
+| Build a Quarkus application feature | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/quarkus-application-development) (613efc8c21d9) | MIT |
+| Prepare a Quarkus native build | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/quarkus-native-and-container) (613efc8c21d9) | MIT |
+| Write a Rhino modeling script | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/rhino3d-scripts) (613efc8c21d9) | MIT |
+| Shuffle flat JSON records | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/shuffle-json-data) (613efc8c21d9) | MIT |
+| Check translation parity across three languages | [Mikefluff/skills](https://github.com/Mikefluff/skills/tree/bbab3d82df330d964c932386158db1a25c24a149/skills/translation-sync) (bbab3d82df33) | MIT |
+| Build an app from an OpenAPI spec | [github/awesome-copilot](https://github.com/github/awesome-copilot/tree/613efc8c21d9b3ce642dff361d17006cd9967e28/skills/openapi-to-application-code) (613efc8c21d9) | MIT |
+| Plan a nonprofit supporter newsletter | [sector-skills/nonprofit-skills](https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/communications-marketing/nonprofit-email-newsletter) (7d8a2ca9d471) | MIT |
+
+<!-- agency-agents-import -->
+## Imported from msitarzewski/agency-agents
+
+283 role profiles from https://github.com/msitarzewski/agency-agents, revision b37b5bb33b78f2c1d6567d98e25ca818e3259219, MIT. Copyright (c) 2025 AgentLand Contributors. Original profiles are preserved unchanged under references/source-agent.md in each agent pack. AI Blocks adds SKILL.md, SETUP.md and catalogue copy; source identity and SHA-256 are in source.json.
+
+| Block | Original profile | Licence |
+|---|---|---|
+| agents/agency-academic-anthropologist | [Anthropologist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-anthropologist.md) | MIT |
+| agents/agency-academic-geographer | [Geographer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-geographer.md) | MIT |
+| agents/agency-academic-historian | [Historian](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-historian.md) | MIT |
+| agents/agency-academic-narratologist | [Narratologist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-narratologist.md) | MIT |
+| agents/agency-academic-psychologist | [Psychologist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-psychologist.md) | MIT |
+| agents/agency-academic-statistician | [Statistician](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/academic/academic-statistician.md) | MIT |
+| agents/agency-design-brand-guardian | [Brand Guardian](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-brand-guardian.md) | MIT |
+| agents/agency-design-image-prompt-engineer | [Image Prompt Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-image-prompt-engineer.md) | MIT |
+| agents/agency-design-inclusive-visuals-specialist | [Inclusive Visuals Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-inclusive-visuals-specialist.md) | MIT |
+| agents/agency-design-persona-walkthrough | [Persona Walkthrough Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-persona-walkthrough.md) | MIT |
+| agents/agency-design-ui-designer | [UI Designer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-ui-designer.md) | MIT |
+| agents/agency-design-ui-finish-gate-reviewer | [UI Finish-Gate Reviewer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-ui-finish-gate-reviewer.md) | MIT |
+| agents/agency-design-ux-architect | [UX Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-ux-architect.md) | MIT |
+| agents/agency-design-ux-researcher | [UX Researcher](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-ux-researcher.md) | MIT |
+| agents/agency-design-visual-storyteller | [Visual Storyteller](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-visual-storyteller.md) | MIT |
+| agents/agency-design-whimsy-injector | [Whimsy Injector](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-whimsy-injector.md) | MIT |
+| agents/agency-engineering-ai-data-remediation-engineer | [AI Data Remediation Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-ai-data-remediation-engineer.md) | MIT |
+| agents/agency-engineering-ai-engineer | [AI Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-ai-engineer.md) | MIT |
+| agents/agency-engineering-api-platform-engineer | [API Platform Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-api-platform-engineer.md) | MIT |
+| agents/agency-engineering-ats-validator-architect | [ATS Validator Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-ats-validator-architect.md) | MIT |
+| agents/agency-engineering-autonomous-optimization-architect | [Autonomous Optimization Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-autonomous-optimization-architect.md) | MIT |
+| agents/agency-engineering-backend-architect | [Backend Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-backend-architect.md) | MIT |
+| agents/agency-engineering-china-network-engineer | [China Network Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-china-network-engineer.md) | MIT |
+| agents/agency-engineering-cms-developer | [CMS Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-cms-developer.md) | MIT |
+| agents/agency-engineering-code-reviewer | [Code Reviewer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-code-reviewer.md) | MIT |
+| agents/agency-engineering-codebase-onboarding-engineer | [Codebase Onboarding Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-codebase-onboarding-engineer.md) | MIT |
+| agents/agency-engineering-data-engineer | [Data Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-data-engineer.md) | MIT |
+| agents/agency-engineering-data-visualization-engineer | [Data Visualization Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-data-visualization-engineer.md) | MIT |
+| agents/agency-engineering-database-optimizer | [Database Optimizer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-database-optimizer.md) | MIT |
+| agents/agency-engineering-database-reliability-engineer | [Database Reliability Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-database-reliability-engineer.md) | MIT |
+| agents/agency-engineering-desktop-app-engineer | [Desktop App Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-desktop-app-engineer.md) | MIT |
+| agents/agency-engineering-developer-tooling-engineer | [Developer Tooling Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-developer-tooling-engineer.md) | MIT |
+| agents/agency-engineering-devops-automator | [DevOps Automator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-devops-automator.md) | MIT |
+| agents/agency-engineering-drupal-performance | [Drupal Performance Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-drupal-performance.md) | MIT |
+| agents/agency-engineering-drupal-shopping-cart | [Drupal Shopping Cart Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-drupal-shopping-cart.md) | MIT |
+| agents/agency-engineering-electrical-engineer | [Electrical Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-electrical-engineer.md) | MIT |
+| agents/agency-engineering-email-intelligence-engineer | [Email Intelligence Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-email-intelligence-engineer.md) | MIT |
+| agents/agency-engineering-embedded-firmware-engineer | [Embedded Firmware Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-embedded-firmware-engineer.md) | MIT |
+| agents/agency-engineering-feishu-integration-developer | [Feishu Integration Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-feishu-integration-developer.md) | MIT |
+| agents/agency-engineering-filament-optimization-specialist | [Filament Optimization Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-filament-optimization-specialist.md) | MIT |
+| agents/agency-engineering-finops-engineer | [FinOps Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-finops-engineer.md) | MIT |
+| agents/agency-engineering-frontend-developer | [Frontend Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-frontend-developer.md) | MIT |
+| agents/agency-engineering-gaussdb-expert | [GaussDB Expert Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-gaussdb-expert.md) | MIT |
+| agents/agency-engineering-git-workflow-master | [Git Workflow Master](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-git-workflow-master.md) | MIT |
+| agents/agency-engineering-i18n-engineer | [Internationalization Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-i18n-engineer.md) | MIT |
+| agents/agency-engineering-identity-access-engineer | [Identity & Access Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-identity-access-engineer.md) | MIT |
+| agents/agency-engineering-incident-response-commander | [Incident Response Commander](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-incident-response-commander.md) | MIT |
+| agents/agency-engineering-iot-fleet-engineer | [IoT Fleet Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-iot-fleet-engineer.md) | MIT |
+| agents/agency-engineering-it-service-manager | [IT Service Manager](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-it-service-manager.md) | MIT |
+| agents/agency-engineering-knowledge-graph-engineer | [Knowledge Graph Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-knowledge-graph-engineer.md) | MIT |
+| agents/agency-engineering-llm-post-training-engineer | [LLM Post-Training Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-llm-post-training-engineer.md) | MIT |
+| agents/agency-engineering-minimal-change-engineer | [Minimal Change Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-minimal-change-engineer.md) | MIT |
+| agents/agency-engineering-mobile-app-builder | [Mobile App Builder](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-mobile-app-builder.md) | MIT |
+| agents/agency-engineering-mobile-release-engineer | [Mobile Release Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-mobile-release-engineer.md) | MIT |
+| agents/agency-engineering-multi-agent-systems-architect | [Multi-Agent Systems Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-multi-agent-systems-architect.md) | MIT |
+| agents/agency-engineering-network-engineer | [Network Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-network-engineer.md) | MIT |
+| agents/agency-engineering-orgscript-engineer | [OrgScript Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-orgscript-engineer.md) | MIT |
+| agents/agency-engineering-payments-billing-engineer | [Payments & Billing Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-payments-billing-engineer.md) | MIT |
+| agents/agency-engineering-pdf-engine-architect | [PDF Engine Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-pdf-engine-architect.md) | MIT |
+| agents/agency-engineering-platform-engineer | [Platform Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-platform-engineer.md) | MIT |
+| agents/agency-engineering-privacy-engineer | [Privacy Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-privacy-engineer.md) | MIT |
+| agents/agency-engineering-prompt-engineer | [Prompt Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-prompt-engineer.md) | MIT |
+| agents/agency-engineering-rag-pipeline-engineer | [RAG Pipeline Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-rag-pipeline-engineer.md) | MIT |
+| agents/agency-engineering-rapid-prototyper | [Rapid Prototyper](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-rapid-prototyper.md) | MIT |
+| agents/agency-engineering-realtime-collaboration-engineer | [Realtime Collaboration Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-realtime-collaboration-engineer.md) | MIT |
+| agents/agency-engineering-rust-refactoring-specialist | [Rust Refactoring Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-rust-refactoring-specialist.md) | MIT |
+| agents/agency-engineering-search-relevance-engineer | [Search Relevance Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-search-relevance-engineer.md) | MIT |
+| agents/agency-engineering-section-508-specialist | [Section 508 Accessibility Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-section-508-specialist.md) | MIT |
+| agents/agency-engineering-senior-developer | [Senior Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-senior-developer.md) | MIT |
+| agents/agency-engineering-servicenow-developer-mentor | [ServiceNow Developer & Mentor](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-servicenow-developer-mentor.md) | MIT |
+| agents/agency-engineering-software-architect | [Software Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-software-architect.md) | MIT |
+| agents/agency-engineering-solidity-smart-contract-engineer | [Solidity Smart Contract Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-solidity-smart-contract-engineer.md) | MIT |
+| agents/agency-engineering-sre | [SRE (Site Reliability Engineer)](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-sre.md) | MIT |
+| agents/agency-engineering-technical-writer | [Technical Writer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-technical-writer.md) | MIT |
+| agents/agency-engineering-universal-document-compiler | [Universal Document Compiler](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-universal-document-compiler.md) | MIT |
+| agents/agency-engineering-uswds-developer | [USWDS Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-uswds-developer.md) | MIT |
+| agents/agency-engineering-video-streaming-engineer | [Video Streaming Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-video-streaming-engineer.md) | MIT |
+| agents/agency-engineering-voice-ai-integration-engineer | [Voice AI Integration Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-voice-ai-integration-engineer.md) | MIT |
+| agents/agency-engineering-webassembly-engineer | [WebAssembly Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-webassembly-engineer.md) | MIT |
+| agents/agency-engineering-wechat-mini-program-developer | [WeChat Mini Program Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-wechat-mini-program-developer.md) | MIT |
+| agents/agency-engineering-wordpress-performance | [WordPress Performance Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-wordpress-performance.md) | MIT |
+| agents/agency-engineering-wordpress-shopping-cart | [WordPress Shopping Cart Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-wordpress-shopping-cart.md) | MIT |
+| agents/agency-finance-bookkeeper-controller | [Bookkeeper & Controller](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-bookkeeper-controller.md) | MIT |
+| agents/agency-finance-financial-analyst | [Financial Analyst](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-financial-analyst.md) | MIT |
+| agents/agency-finance-fpa-analyst | [FP&A Analyst](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-fpa-analyst.md) | MIT |
+| agents/agency-finance-investment-researcher | [Investment Researcher](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-investment-researcher.md) | MIT |
+| agents/agency-finance-tax-strategist | [Tax Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-tax-strategist.md) | MIT |
+| agents/agency-blender-addon-engineer | [Blender Add-on Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/blender/blender-addon-engineer.md) | MIT |
+| agents/agency-economy-designer | [Economy Designer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/economy-designer.md) | MIT |
+| agents/agency-game-audio-engineer | [Game Audio Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/game-audio-engineer.md) | MIT |
+| agents/agency-game-designer | [Game Designer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/game-designer.md) | MIT |
+| agents/agency-godot-gameplay-scripter | [Godot Gameplay Scripter](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/godot/godot-gameplay-scripter.md) | MIT |
+| agents/agency-godot-multiplayer-engineer | [Godot Multiplayer Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/godot/godot-multiplayer-engineer.md) | MIT |
+| agents/agency-godot-shader-developer | [Godot Shader Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/godot/godot-shader-developer.md) | MIT |
+| agents/agency-level-designer | [Level Designer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/level-designer.md) | MIT |
+| agents/agency-narrative-designer | [Narrative Designer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/narrative-designer.md) | MIT |
+| agents/agency-roblox-avatar-creator | [Roblox Avatar Creator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/roblox-studio/roblox-avatar-creator.md) | MIT |
+| agents/agency-roblox-experience-designer | [Roblox Experience Designer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/roblox-studio/roblox-experience-designer.md) | MIT |
+| agents/agency-roblox-systems-scripter | [Roblox Systems Scripter](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/roblox-studio/roblox-systems-scripter.md) | MIT |
+| agents/agency-technical-artist | [Technical Artist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/technical-artist.md) | MIT |
+| agents/agency-unity-architect | [Unity Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unity/unity-architect.md) | MIT |
+| agents/agency-unity-editor-tool-developer | [Unity Editor Tool Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unity/unity-editor-tool-developer.md) | MIT |
+| agents/agency-unity-multiplayer-engineer | [Unity Multiplayer Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unity/unity-multiplayer-engineer.md) | MIT |
+| agents/agency-unity-shader-graph-artist | [Unity Shader Graph Artist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unity/unity-shader-graph-artist.md) | MIT |
+| agents/agency-unreal-multiplayer-architect | [Unreal Multiplayer Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-multiplayer-architect.md) | MIT |
+| agents/agency-unreal-systems-engineer | [Unreal Systems Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-systems-engineer.md) | MIT |
+| agents/agency-unreal-technical-artist | [Unreal Technical Artist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-technical-artist.md) | MIT |
+| agents/agency-unreal-world-builder | [Unreal World Builder](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-world-builder.md) | MIT |
+| agents/agency-gis-3d-scene-developer | [3D & Scene Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-3d-scene-developer.md) | MIT |
+| agents/agency-gis-analyst | [GIS Analyst](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-analyst.md) | MIT |
+| agents/agency-gis-bim-specialist | [BIM/GIS Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-bim-specialist.md) | MIT |
+| agents/agency-gis-cartography-designer | [Cartography Designer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-cartography-designer.md) | MIT |
+| agents/agency-gis-drone-reality-mapping | [Drone/Reality Mapping Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-drone-reality-mapping.md) | MIT |
+| agents/agency-gis-geoai-ml-engineer | [GeoAI/ML Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-geoai-ml-engineer.md) | MIT |
+| agents/agency-gis-geoprocessing-specialist | [Geoprocessing Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-geoprocessing-specialist.md) | MIT |
+| agents/agency-gis-qa-engineer | [GIS QA Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-qa-engineer.md) | MIT |
+| agents/agency-gis-solution-engineer | [Solution Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-solution-engineer.md) | MIT |
+| agents/agency-gis-spatial-data-engineer | [Spatial Data Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-spatial-data-engineer.md) | MIT |
+| agents/agency-gis-spatial-data-scientist | [Spatial Data Scientist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-spatial-data-scientist.md) | MIT |
+| agents/agency-gis-technical-consultant | [Technical Consultant](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-technical-consultant.md) | MIT |
+| agents/agency-gis-web-gis-developer | [Web GIS Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/gis/gis-web-gis-developer.md) | MIT |
+| agents/agency-healthcare-clinical-evidence-agent | [Clinical Evidence Agent](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/healthcare/healthcare-clinical-evidence-agent.md) | MIT |
+| agents/agency-healthcare-innovation-strategist | [Healthcare Innovation Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/healthcare/healthcare-innovation-strategist.md) | MIT |
+| agents/agency-healthcare-sovereign-health-systems-agent | [Sovereign Health Systems Agent](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/healthcare/healthcare-sovereign-health-systems-agent.md) | MIT |
+| agents/agency-marketing-aeo-foundations | [AEO Foundations Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-aeo-foundations.md) | MIT |
+| agents/agency-marketing-agentic-search-optimizer | [Agentic Search Optimizer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-agentic-search-optimizer.md) | MIT |
+| agents/agency-marketing-ai-citation-strategist | [AI Citation Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-ai-citation-strategist.md) | MIT |
+| agents/agency-marketing-app-store-optimizer | [App Store Optimizer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-app-store-optimizer.md) | MIT |
+| agents/agency-marketing-baidu-seo-specialist | [Baidu SEO Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-baidu-seo-specialist.md) | MIT |
+| agents/agency-marketing-bilibili-content-strategist | [Bilibili Content Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-bilibili-content-strategist.md) | MIT |
+| agents/agency-marketing-book-co-author | [Book Co-Author](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-book-co-author.md) | MIT |
+| agents/agency-marketing-carousel-growth-engine | [Carousel Growth Engine](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-carousel-growth-engine.md) | MIT |
+| agents/agency-marketing-china-ecommerce-operator | [China E-Commerce Operator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-china-ecommerce-operator.md) | MIT |
+| agents/agency-marketing-china-market-localization-strategist | [China Market Localization Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-china-market-localization-strategist.md) | MIT |
+| agents/agency-marketing-content-creator | [Content Creator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-content-creator.md) | MIT |
+| agents/agency-marketing-cross-border-ecommerce | [Cross-Border E-Commerce Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-cross-border-ecommerce.md) | MIT |
+| agents/agency-marketing-developer-community-builder | [Developer Community Builder](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-developer-community-builder.md) | MIT |
+| agents/agency-marketing-douyin-strategist | [Douyin Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-douyin-strategist.md) | MIT |
+| agents/agency-marketing-email-strategist | [Email Marketing Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-email-strategist.md) | MIT |
+| agents/agency-marketing-global-podcast-strategist | [Global Podcast Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-global-podcast-strategist.md) | MIT |
+| agents/agency-marketing-growth-hacker | [Growth Hacker](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-growth-hacker.md) | MIT |
+| agents/agency-marketing-instagram-curator | [Instagram Curator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-instagram-curator.md) | MIT |
+| agents/agency-marketing-kuaishou-strategist | [Kuaishou Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-kuaishou-strategist.md) | MIT |
+| agents/agency-marketing-linkedin-content-creator | [LinkedIn Content Creator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-linkedin-content-creator.md) | MIT |
+| agents/agency-marketing-livestream-commerce-coach | [Livestream Commerce Coach](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-livestream-commerce-coach.md) | MIT |
+| agents/agency-marketing-multi-platform-publisher | [Multi-Platform Publisher](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-multi-platform-publisher.md) | MIT |
+| agents/agency-marketing-podcast-strategist | [Podcast Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-podcast-strategist.md) | MIT |
+| agents/agency-marketing-pr-communications-manager | [PR & Communications Manager](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-pr-communications-manager.md) | MIT |
+| agents/agency-marketing-private-domain-operator | [Private Domain Operator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-private-domain-operator.md) | MIT |
+| agents/agency-marketing-reddit-community-builder | [Reddit Community Builder](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-reddit-community-builder.md) | MIT |
+| agents/agency-marketing-seo-specialist | [SEO Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-seo-specialist.md) | MIT |
+| agents/agency-marketing-short-video-editing-coach | [Short-Video Editing Coach](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-short-video-editing-coach.md) | MIT |
+| agents/agency-marketing-social-media-strategist | [Social Media Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-social-media-strategist.md) | MIT |
+| agents/agency-marketing-tiktok-strategist | [TikTok Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-tiktok-strategist.md) | MIT |
+| agents/agency-marketing-twitter-engager | [Twitter Engager](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-twitter-engager.md) | MIT |
+| agents/agency-marketing-video-optimization-specialist | [Video Optimization Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-video-optimization-specialist.md) | MIT |
+| agents/agency-marketing-wechat-official-account | [WeChat Official Account Manager](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-wechat-official-account.md) | MIT |
+| agents/agency-marketing-weibo-strategist | [Weibo Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-weibo-strategist.md) | MIT |
+| agents/agency-marketing-x-twitter-intelligence-analyst | [X/Twitter Intelligence Analyst](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-x-twitter-intelligence-analyst.md) | MIT |
+| agents/agency-marketing-xiaohongshu-specialist | [Xiaohongshu Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-xiaohongshu-specialist.md) | MIT |
+| agents/agency-marketing-zhihu-strategist | [Zhihu Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-zhihu-strategist.md) | MIT |
+| agents/agency-paid-media-auditor | [Paid Media Auditor](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-auditor.md) | MIT |
+| agents/agency-paid-media-creative-strategist | [Ad Creative Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-creative-strategist.md) | MIT |
+| agents/agency-paid-media-paid-social-strategist | [Paid Social Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-paid-social-strategist.md) | MIT |
+| agents/agency-paid-media-ppc-strategist | [PPC Campaign Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-ppc-strategist.md) | MIT |
+| agents/agency-paid-media-programmatic-buyer | [Programmatic & Display Buyer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-programmatic-buyer.md) | MIT |
+| agents/agency-paid-media-search-query-analyst | [Search Query Analyst](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-search-query-analyst.md) | MIT |
+| agents/agency-paid-media-tracking-specialist | [Tracking & Measurement Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/paid-media/paid-media-tracking-specialist.md) | MIT |
+| agents/agency-product-behavioral-nudge-engine | [Behavioral Nudge Engine](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/product/product-behavioral-nudge-engine.md) | MIT |
+| agents/agency-product-dx-engineer | [DX Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/product/product-dx-engineer.md) | MIT |
+| agents/agency-product-feedback-synthesizer | [Feedback Synthesizer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/product/product-feedback-synthesizer.md) | MIT |
+| agents/agency-product-manager | [Product Manager](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/product/product-manager.md) | MIT |
+| agents/agency-product-sprint-prioritizer | [Sprint Prioritizer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/product/product-sprint-prioritizer.md) | MIT |
+| agents/agency-product-trend-researcher | [Trend Researcher](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/product/product-trend-researcher.md) | MIT |
+| agents/agency-project-management-experiment-tracker | [Experiment Tracker](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-experiment-tracker.md) | MIT |
+| agents/agency-project-management-jira-workflow-steward | [Jira Workflow Steward](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-jira-workflow-steward.md) | MIT |
+| agents/agency-project-management-meeting-notes-specialist | [Meeting Notes Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-meeting-notes-specialist.md) | MIT |
+| agents/agency-project-management-project-shepherd | [Project Shepherd](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-project-shepherd.md) | MIT |
+| agents/agency-project-management-studio-operations | [Studio Operations](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-studio-operations.md) | MIT |
+| agents/agency-project-management-studio-producer | [Studio Producer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-studio-producer.md) | MIT |
+| agents/agency-project-manager-senior | [Senior Project Manager](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-manager-senior.md) | MIT |
+| agents/agency-research-synthesist | [Research Synthesist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/research/research-synthesist.md) | MIT |
+| agents/agency-sales-account-strategist | [Account Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-account-strategist.md) | MIT |
+| agents/agency-sales-coach | [Sales Coach](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-coach.md) | MIT |
+| agents/agency-sales-deal-strategist | [Deal Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-deal-strategist.md) | MIT |
+| agents/agency-sales-discovery-coach | [Discovery Coach](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-discovery-coach.md) | MIT |
+| agents/agency-sales-engineer | [Sales Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-engineer.md) | MIT |
+| agents/agency-sales-offer-lead-gen-strategist | [Offer & Lead Gen Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-offer-lead-gen-strategist.md) | MIT |
+| agents/agency-sales-outbound-strategist | [Outbound Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-outbound-strategist.md) | MIT |
+| agents/agency-sales-pipeline-analyst | [Pipeline Analyst](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-pipeline-analyst.md) | MIT |
+| agents/agency-sales-proposal-strategist | [Proposal Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/sales/sales-proposal-strategist.md) | MIT |
+| agents/agency-security-ai-generated-code-auditor | [AI-Generated Code Security Auditor](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-ai-generated-code-auditor.md) | MIT |
+| agents/agency-security-appsec-engineer | [Application Security Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-appsec-engineer.md) | MIT |
+| agents/agency-security-architect | [Security Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-architect.md) | MIT |
+| agents/agency-security-blockchain-security-auditor | [Blockchain Security Auditor](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-blockchain-security-auditor.md) | MIT |
+| agents/agency-security-cloud-security-architect | [Cloud Security Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-cloud-security-architect.md) | MIT |
+| agents/agency-security-compliance-auditor | [Compliance Auditor](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-compliance-auditor.md) | MIT |
+| agents/agency-security-incident-responder | [Incident Responder](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-incident-responder.md) | MIT |
+| agents/agency-security-penetration-tester | [Penetration Tester](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-penetration-tester.md) | MIT |
+| agents/agency-security-secrets-credential-engineer | [Secrets & Credential Hygiene Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-secrets-credential-engineer.md) | MIT |
+| agents/agency-security-senior-secops | [Senior SecOps Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-senior-secops.md) | MIT |
+| agents/agency-security-threat-detection-engineer | [Threat Detection Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-threat-detection-engineer.md) | MIT |
+| agents/agency-security-threat-intelligence-analyst | [Threat Intelligence Analyst](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-threat-intelligence-analyst.md) | MIT |
+| agents/agency-macos-spatial-metal-engineer | [macOS Spatial/Metal Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/macos-spatial-metal-engineer.md) | MIT |
+| agents/agency-terminal-integration-specialist | [Terminal Integration Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/terminal-integration-specialist.md) | MIT |
+| agents/agency-visionos-spatial-engineer | [visionOS Spatial Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/visionos-spatial-engineer.md) | MIT |
+| agents/agency-xr-cockpit-interaction-specialist | [XR Cockpit Interaction Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/xr-cockpit-interaction-specialist.md) | MIT |
+| agents/agency-xr-immersive-developer | [XR Immersive Developer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/xr-immersive-developer.md) | MIT |
+| agents/agency-xr-interface-architect | [XR Interface Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/xr-interface-architect.md) | MIT |
+| agents/agency-accounts-payable-agent | [Accounts Payable Agent](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/accounts-payable-agent.md) | MIT |
+| agents/agency-agentic-identity-trust | [Agentic Identity & Trust Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/agentic-identity-trust.md) | MIT |
+| agents/agency-agents-orchestrator | [Agents Orchestrator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/agents-orchestrator.md) | MIT |
+| agents/agency-automation-governance-architect | [Automation Governance Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/automation-governance-architect.md) | MIT |
+| agents/agency-business-strategist | [Business Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/business-strategist.md) | MIT |
+| agents/agency-change-management-consultant | [Change Management Consultant](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/change-management-consultant.md) | MIT |
+| agents/agency-chief-financial-officer | [Chief Financial Officer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/chief-financial-officer.md) | MIT |
+| agents/agency-corporate-training-designer | [Corporate Training Designer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/corporate-training-designer.md) | MIT |
+| agents/agency-customer-service | [Customer Service](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/customer-service.md) | MIT |
+| agents/agency-customer-success-manager | [Customer Success Manager](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/customer-success-manager.md) | MIT |
+| agents/agency-data-consolidation-agent | [Data Consolidation Agent](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/data-consolidation-agent.md) | MIT |
+| agents/agency-data-privacy-officer | [Data Privacy Officer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/data-privacy-officer.md) | MIT |
+| agents/agency-esg-sustainability-officer | [ESG & Sustainability Officer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/esg-sustainability-officer.md) | MIT |
+| agents/agency-government-digital-presales-consultant | [Government Digital Presales Consultant](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/government-digital-presales-consultant.md) | MIT |
+| agents/agency-grant-writer | [Grant Writer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/grant-writer.md) | MIT |
+| agents/agency-healthcare-aging-parent-care-companion | [Aging Parent Care Companion](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/healthcare-aging-parent-care-companion.md) | MIT |
+| agents/agency-healthcare-customer-service | [Healthcare Customer Service](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/healthcare-customer-service.md) | MIT |
+| agents/agency-healthcare-marketing-compliance | [Healthcare Marketing Compliance Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/healthcare-marketing-compliance.md) | MIT |
+| agents/agency-hospitality-guest-services | [Hospitality Guest Services](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/hospitality-guest-services.md) | MIT |
+| agents/agency-hr-onboarding | [HR Onboarding](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/hr-onboarding.md) | MIT |
+| agents/agency-identity-graph-operator | [Identity Graph Operator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/identity-graph-operator.md) | MIT |
+| agents/agency-language-translator | [Language Translator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/language-translator.md) | MIT |
+| agents/agency-legal-billing-time-tracking | [Legal Billing & Time Tracking](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/legal-billing-time-tracking.md) | MIT |
+| agents/agency-legal-client-intake | [Legal Client Intake](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/legal-client-intake.md) | MIT |
+| agents/agency-legal-document-review | [Legal Document Review](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/legal-document-review.md) | MIT |
+| agents/agency-loan-officer-assistant | [Loan Officer Assistant](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/loan-officer-assistant.md) | MIT |
+| agents/agency-lsp-index-engineer | [LSP/Index Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/lsp-index-engineer.md) | MIT |
+| agents/agency-ma-integration-manager | [M&A Integration Manager](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/ma-integration-manager.md) | MIT |
+| agents/agency-medical-billing-coding-specialist | [Medical Billing & Coding Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/medical-billing-coding-specialist.md) | MIT |
+| agents/agency-operations-manager | [Operations Manager](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/operations-manager.md) | MIT |
+| agents/agency-organizational-psychologist | [Organizational Psychologist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/organizational-psychologist.md) | MIT |
+| agents/agency-personal-growth-mentor | [Personal Growth Mentor](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/personal-growth-mentor.md) | MIT |
+| agents/agency-real-estate-buyer-seller | [Real Estate Buyer & Seller](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/real-estate-buyer-seller.md) | MIT |
+| agents/agency-recruitment-specialist | [Recruitment Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/recruitment-specialist.md) | MIT |
+| agents/agency-report-distribution-agent | [Report Distribution Agent](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/report-distribution-agent.md) | MIT |
+| agents/agency-resume-tailor | [Resume Tailor](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/resume-tailor.md) | MIT |
+| agents/agency-retail-customer-returns | [Retail Customer Returns](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/retail-customer-returns.md) | MIT |
+| agents/agency-sales-data-extraction-agent | [Sales Data Extraction Agent](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/sales-data-extraction-agent.md) | MIT |
+| agents/agency-sales-outreach | [Sales Outreach](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/sales-outreach.md) | MIT |
+| agents/agency-specialized-chief-of-staff | [Chief of Staff](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-chief-of-staff.md) | MIT |
+| agents/agency-specialized-civil-engineer | [Civil Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-civil-engineer.md) | MIT |
+| agents/agency-specialized-codebase-archaeologist | [Codebase Archaeologist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-codebase-archaeologist.md) | MIT |
+| agents/agency-specialized-cultural-intelligence-strategist | [Cultural Intelligence Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-cultural-intelligence-strategist.md) | MIT |
+| agents/agency-specialized-developer-advocate | [Developer Advocate](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-developer-advocate.md) | MIT |
+| agents/agency-specialized-document-generator | [Document Generator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-document-generator.md) | MIT |
+| agents/agency-specialized-fedramp-rmf-compliance | [FedRAMP & RMF Compliance Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-fedramp-rmf-compliance.md) | MIT |
+| agents/agency-specialized-focus-music-architect | [Focus Music Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-focus-music-architect.md) | MIT |
+| agents/agency-specialized-french-consulting-market | [French Consulting Market Navigator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-french-consulting-market.md) | MIT |
+| agents/agency-specialized-korean-business-navigator | [Korean Business Navigator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-korean-business-navigator.md) | MIT |
+| agents/agency-specialized-master-plan-architect | [Master Plan Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-master-plan-architect.md) | MIT |
+| agents/agency-specialized-mcp-builder | [MCP Builder](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-mcp-builder.md) | MIT |
+| agents/agency-specialized-model-qa | [Model QA Specialist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-model-qa.md) | MIT |
+| agents/agency-specialized-pricing-analyst | [Pricing Analyst](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-pricing-analyst.md) | MIT |
+| agents/agency-specialized-salesforce-architect | [Salesforce Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-salesforce-architect.md) | MIT |
+| agents/agency-specialized-strategy-duel-agent | [Strategy Duel Agent](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-strategy-duel-agent.md) | MIT |
+| agents/agency-specialized-workflow-architect | [Workflow Architect](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-workflow-architect.md) | MIT |
+| agents/agency-study-abroad-advisor | [Study Abroad Advisor](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/study-abroad-advisor.md) | MIT |
+| agents/agency-supply-chain-strategist | [Supply Chain Strategist](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/supply-chain-strategist.md) | MIT |
+| agents/agency-zk-steward | [ZK Steward](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/zk-steward.md) | MIT |
+| agents/agency-support-analytics-reporter | [Analytics Reporter](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/support/support-analytics-reporter.md) | MIT |
+| agents/agency-support-executive-summary-generator | [Executive Summary Generator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/support/support-executive-summary-generator.md) | MIT |
+| agents/agency-support-finance-tracker | [Finance Tracker](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/support/support-finance-tracker.md) | MIT |
+| agents/agency-support-infrastructure-maintainer | [Infrastructure Maintainer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/support/support-infrastructure-maintainer.md) | MIT |
+| agents/agency-support-legal-compliance-checker | [Legal Compliance Checker](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/support/support-legal-compliance-checker.md) | MIT |
+| agents/agency-support-support-responder | [Support Responder](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/support/support-support-responder.md) | MIT |
+| agents/agency-testing-accessibility-auditor | [Accessibility Auditor](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-accessibility-auditor.md) | MIT |
+| agents/agency-testing-api-tester | [API Tester](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-api-tester.md) | MIT |
+| agents/agency-testing-evidence-collector | [Evidence Collector](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-evidence-collector.md) | MIT |
+| agents/agency-testing-performance-benchmarker | [Performance Benchmarker](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-performance-benchmarker.md) | MIT |
+| agents/agency-testing-reality-checker | [Reality Checker](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-reality-checker.md) | MIT |
+| agents/agency-testing-test-automation-engineer | [Test Automation Engineer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-test-automation-engineer.md) | MIT |
+| agents/agency-testing-test-results-analyzer | [Test Results Analyzer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-test-results-analyzer.md) | MIT |
+| agents/agency-testing-tool-evaluator | [Tool Evaluator](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-tool-evaluator.md) | MIT |
+| agents/agency-testing-workflow-optimizer | [Workflow Optimizer](https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-workflow-optimizer.md) | MIT |
+<!-- /agency-agents-import -->
+
+<!-- agency-curated-tasks -->
+## Selected Agency Agents task adaptations
+
+AI Blocks selected distinct task methods after comparing the published library. There is no one-to-one format conversion. Source: https://github.com/msitarzewski/agency-agents, revision b37b5bb33b78f2c1d6567d98e25ca818e3259219, MIT, copyright (c) 2025 AgentLand Contributors. Original profiles remain unchanged. New task packs contain exact original sources as background/provenance; rewritten task instructions define the active scope. New browser utilities are original local implementations inspired by the credited methods. Search-query source additionally credits John Williams (@itallstartedwithaidea).
+
+- skill: telemetry-detection-rule-builder; sources: agency-security-threat-detection-engineer
+- skill: human-representation-reviewer; sources: agency-design-inclusive-visuals-specialist
+- skill: podcast-pilot-brief-builder; sources: agency-marketing-global-podcast-strategist
+- workflow: firmware-update-recovery-rehearsal; sources: agency-engineering-iot-fleet-engineer, agency-engineering-embedded-firmware-engineer
+- workflow: family-care-visit-handoff; sources: agency-healthcare-aging-parent-care-companion
+- prompt: fictional-setting-plausibility-check; sources: agency-academic-anthropologist, agency-academic-geographer, agency-academic-historian
+- tool: coordinate-csv-checker; sources: agency-gis-qa-engineer, agency-gis-spatial-data-engineer
+- tool: frame-budget-checker; sources: agency-unity-architect, agency-macos-spatial-metal-engineer
+- tool: search-term-ngram-analyzer; sources: agency-paid-media-search-query-analyst
+- tool: issue-git-traceability-checker; sources: agency-project-management-jira-workflow-steward
+- tool: population-shift-calculator; sources: agency-specialized-model-qa
+- tool: citation-lineage-checker; sources: agency-research-synthesist
+
+Selection and overlap evidence: reports/2026-10-25-agency-curated-selection.json.
+<!-- /agency-curated-tasks -->
+
+<!-- taste-senlin -->
+## Sen Lin website design analysis skill
+
+The Website design analyst package copies the original instructions, six reference files and README from senlindesign/taste-skill at 6dce223f2f5665d3636ca9a44ec3a7aa1322a9b8. The upstream README declares MIT © 2025 Sen Lin. Its original notice, exact README, source hashes and factual licence packaging note accompany the downloadable skill. AI Blocks adds its own display metadata and usage notes.
+
+<!-- claude-howto-learning -->
+## Claude Code learning skills
+
+Claude Code learning coach and Claude Code quiz coach adapt the self-assessment and lesson-quiz skills from luongnv89/claude-howto at 188f468893231cbe4525f45e657d554746232072. MIT, copyright (c) 2024 luongnv89. Each package retains the original licence, primary source, selected references and ten lesson texts as exact Git blobs. AI Blocks supplies adapted instructions, local lesson paths, transparent scoring limits and display metadata. Executable hooks, installation scripts and plugin configurations are excluded.
+
+<!-- elaya-design-motion -->
+## Elaya design animation skill
+
+Design animator imports the original design-to-motion instructions from elayadesign/ai-design-skills at 38bbe5765600b9178b5395a823c9f6c8d2b8e730, MIT, copyright (c) 2026 Elaya. The complete instructions, original licence and source credits are retained. The author credits general motion rules adapted from emilkowalski/skills, Owl-Listener/designer-skills and dylantarre/animation-principles; no additional third-party code was imported. The existing landing-page skill is retained without duplicate publication because its source text is unchanged.

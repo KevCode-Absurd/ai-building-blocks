@@ -17,11 +17,11 @@ outputs:
   - {type: plan}
 uses: [prospect-list-builder, lead-prioritizer, stranger-first-message-writer, cold-email-pre-send-checker, prospecting-block-planner]
 steps:
-  - {uses: prospect-list-builder, note: "A qualified list of accounts that match your ideal customer, with the reason each one fits and the right person to contact."}
-  - {uses: lead-prioritizer, note: "Each account scored on fit and activity and sorted into tiers, so the first hour goes to the best twenty."}
-  - {uses: stranger-first-message-writer, note: "A first message and one follow-up a stranger can answer in a line, in Aaron Ross's manner: short, about them, asking for a referral or a short answer, never a meeting."}
-  - {uses: cold-email-pre-send-checker, note: "Every claim checked against your facts, every line checked for length and tone, spam triggers removed, and a repaired version."}
-  - {uses: prospecting-block-planner, note: "A protected daily block in your calendar, a two-minute research batch per prospect and one real reason to reach out, the way Jeb Blount teaches."}
+  - {uses: prospect-list-builder, note: "A qualified list of accounts that match your ideal customer, with the reason each one fits and the right person to contact. Hands the list to the ranking step."}
+  - {uses: lead-prioritizer, note: "Each account scored on fit and activity and sorted into tiers, so the first hour goes to the best twenty. Hands the ranked list to the message writer and to the block planner."}
+  - {uses: stranger-first-message-writer, note: "A first message and one follow-up a stranger can answer in a line, in Aaron Ross's manner: short, about them, asking for a referral or a short answer, never a meeting. Reads the top tier from step 2, plus your offer and ideal customer. Hands the drafts to the checker."}
+  - {uses: cold-email-pre-send-checker, note: "Every claim checked against your facts, every line checked for length and tone, spam triggers removed, and a repaired version. Hands you the checked messages to send yourself."}
+  - {uses: prospecting-block-planner, note: "A protected daily block in your calendar, a two-minute research batch per prospect and one real reason to reach out, the way Jeb Blount teaches. Uses step 2's ranked list and your own week, not step 4's messages."}
 origin: own
 version: 1.0.0
 minds: [aaron-ross, jeb-blount]

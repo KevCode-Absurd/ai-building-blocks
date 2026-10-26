@@ -31,7 +31,7 @@ How to start:
 ## What you need
 - **Store size and platform** (required): visits a day, Shopify or another hosted platform, or self-hosted.
 - **Public pages and interfaces** (required): cart, checkout, login, sign-up, forgot-password, gift card or coupon check, search.
-- **Tools already in place** (strongly advised): platform bot protection, a CDN, a CAPTCHA app.
+- **Tools already in place** (strongly advised): platform bot protection, a CDN, a CAPTCHA app, and any fraud rules you already run, such as a plan from the Fraud rules setter.
 - **Signs seen** (strongly advised): failed logins, odd order bursts, small test charges. Recent failed-login counts per hour and top source addresses help most.
 - **Goal for AI shopping assistants** (required): allow, allow some, or block.
 - **Fastest real use** (optional): support staff, a shared office, wholesale buyers.

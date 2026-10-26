@@ -1,42 +1,131 @@
 new_slug: the-10-step-heartbeat-protocol-implementation-planner
 name: Single-task agent heartbeat builder
-summary: Build a bounded one-task heartbeat with run and cost records.
+summary: "Plan a safe AI agent run loop: one task per run, no overlapping runs, time and cost limits, and a run record. Draft code only."
 job: build-software
 headline: Single-task agent heartbeat builder
-subhead: Share agent state, pending wakeups, work queue, budget and time limits. Get a bounded one-task heartbeat with run and cost records.
+subhead: "Give it your agent's jobs, its work queue, the order it should pick work and its time and cost limits. It plans a run loop that does one task, then stops and records the run. You get the steps, a run record, a schedule worksheet and tests. Nothing is run."
 explain: |-
-  Share agent state, pending wakeups, work queue, budget and time limits. Get a bounded one-task heartbeat with run and cost records.
+  An AI agent that works on its own needs a heartbeat. That is a run that wakes it up, picks one task, does it and goes back to sleep. Without limits, two runs start at once and do the same task. A stuck run blocks the agent for good. A crash leaves a task locked.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill plans an AI agent heartbeat that does exactly one task per run. Before any work it checks four things: is the agent switched on, is there budget left, is another run already going, and how long may this run take. If any check fails, the run is skipped and the reason is saved. Then the agent picks one item in your order, locks it in one step, does it and saves the result. At the end it always releases the lock and writes a run record, even after a failure.
+
+  It starts from a starter runner and does not trust it. It finds where the starter would leave a task locked, let two runs overlap or lose a wakeup. Then it plans the fixes. It does not run code or touch your database.
 when:
-  - You need a bounded one-task heartbeat with run and cost records.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - "You want an agent to work through its task list on a timer without doing the same task twice."
+  - "An agent run hung once and the task stayed locked, and you want that fixed."
+  - "You need a record of every run: what it did, how long it took and what it cost."
+  - "You have a starter runner with stubs and need to know what to fill in first."
+not_for:
+  - "You have one script that does one job on a timer. A plain scheduled job is enough."
+  - "You want to plan how wakeups are saved, claimed and retried. Use the Agent wakeup and stale-claim builder."
+  - "You want the task table and the lock on each task. Use the Agent issue and checkout builder."
+  - "You want hard spending limits. Use the Agent spending cap builder."
+  - "You want jobs that survive a server restart. Use the Recoverable agent job queue builder."
 you_give:
-  - Agent state, pending wakeups, work queue, budget and time limits
+  - "Your agents, and what each one is responsible for"
+  - "The kinds of work in your queue and the order the agent should pick them"
+  - "The ways a run can start, such as a timer, a wakeup or a person"
+  - "How long a run may take, how many runs a day and the cost limit for each"
+  - "Your runner code and tables (optional)"
 you_get:
-  - A bounded one-task heartbeat with run and cost records
-  - A failure checklist and synthetic test cases
+  - "A numbered run loop, with what stops the run at each step"
+  - "The four checks that run before any work, and what is saved when one fails"
+  - "The pick order for work, with how ties are broken"
+  - "The fields of the run record"
+  - "A schedule worksheet for each agent"
+  - "A list of gaps in the starter runner, and test cases"
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Open the skill in an AI that can read your code, such as Claude Code or Codex. A chat AI works if you paste the files in."
+  - "Paste your agent list, work types, pick order and limits. Never paste a key or a password."
+  - "Read GAPS IN THE STARTER first. Mark each one as a problem for you or not."
+  - "Check the PICK ORDER against how you would sort your own to-do list."
+  - "Check the RUN RECORD has the fields you need to answer 'what did it do last night?'"
+  - "Run the draft code and the test cases on a copy of your system. This skill never runs anything."
 how_it_works:
-  - title: Step 1
-    text: Load agent and scope.
-  - title: Step 2
-    text: Claim due wakeups.
-  - title: Step 3
-    text: Check pause state, policy and budget.
-  - title: Step 4
-    text: Find eligible assigned or approved work.
-  - title: Step 5
-    text: Atomically check out exactly one task.
-  - title: Step 6
-    text: Execute it within limits.
-  - title: Step 7
-    text: Save result and status.
-  - title: Step 8
-    text: Release the lock, reconcile cost and finalize the run even after failure.
+  - title: Runs four checks first
+    text: Is the agent on, is there budget, is another run going, and how long may this run take. A failed check skips the run and saves why.
+  - title: Loads the agent and its scope
+    text: Reads what the agent is allowed to do and which client or team it works for.
+  - title: Claims due wakeups
+    text: Takes the wakeups for this agent in one step, so two runs cannot take the same one.
+  - title: Picks exactly one item
+    text: Uses your order, such as in-progress work first. Ties go to priority, then the oldest.
+  - title: Locks it, does it, saves it
+    text: Locks the item in one step, does the work within the time limit and saves the result and new status.
+  - title: Always finishes the run
+    text: Releases the lock, adds up the cost and writes the run record, even after a failure or a timeout.
+output_shape: |-
+  BASIS
+  <what was read; nothing was run>
+  MISSING: <inputs and what each stops>
+
+  RUN LOOP
+  <step> | <what happens> | <stops the run if> | <what is saved>
+
+  CHECKS BEFORE WORK
+  <check> | <how it is tested> | <what is saved when it fails>
+
+  PICK ORDER
+  <order> | <kind of work> | <how ties are broken>
+
+  RUN RECORD
+  <field> | <meaning>
+
+  SCHEDULE WORKSHEET
+  <agent> | <purpose> | <how often> | <active hours and time zone> | <wakeup types> | <longest run> | <runs per day> | <cost limit>
+
+  GAPS IN THE STARTER
+  <#> | <what it does> | <why it matters> | <fix>
+
+  TEST CASES
+  <name> | <set-up> | <expected result>
+
+  NEXT STEP
+  <one smallest useful step>
+output_sample:
+  input:
+    - "Your agents and what each is responsible for"
+    - "Your work types and the order to pick them"
+    - "How runs start, and the time, run count and cost limits"
+    - "Your runner code and tables (optional)"
+  prerequisites:
+    - "A task list the agent can read, or the starter layout to build one"
+    - "Somewhere to save a run record, such as a database table"
+  output:
+    - name: "Run loop"
+      contains: "The steps of one run in order, what stops the run at each, and what is saved."
+    - name: "Checks before work"
+      contains: "Switch, budget, one-run-at-a-time and time limit, with what is saved when one fails."
+    - name: "Pick order"
+      contains: "Which kind of work goes first, and how ties are broken."
+    - name: "Run record"
+      contains: "The fields saved for every run, such as status, reason, items done and cost."
+    - name: "Schedule worksheet"
+      contains: "For each agent, how often it runs, its active hours, and its time and cost limits."
+    - name: "Gaps in the starter"
+      contains: "Where the starter would leave a task locked or run twice, and the fix for each."
+    - name: "Test cases"
+      contains: "Cases such as two runs at once, a hung run and a crash in the middle of a task."
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your runner, your tables and your queue code together and proposes exact edits.
+    - name: Supabase
+      why: The run record and the one-run-at-a-time rule are written for Postgres, which Supabase uses.
+  inputs:
+    - "Your longest and shortest normal run times, to set the time limit"
+    - "A day of real run logs, to check the schedule worksheet"
+    - "Past cases where a task was done twice, to turn into tests"
+terms:
+  - term: Heartbeat
+    meaning: One run of an agent that wakes up, does one task and records what happened.
+  - term: Wakeup
+    meaning: A signal that tells an agent to run now, such as a new approval.
+  - term: Lock
+    meaning: A mark on a task that says which agent holds it, so no other run takes it.
+  - term: Run record
+    meaning: A saved note of one run, with its status, reason, time and cost.
+  - term: Timeout
+    meaning: The longest a run may take before it is stopped.
 thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It compares supplied evidence and follows a set method, so it needs care but not deep reasoning.

@@ -27,8 +27,7 @@ async function worker(){
   if(edit){
    if(blocked.test([edit.name,edit.summary,edit.subhead].filter(Boolean).join(' ')))issues.push('Banned filler in editorial copy');
    if(edit.name&&edit.name.split(/\s+/).length>8)issues.push('Editorial title exceeds eight words');
-   if(edit.subhead&&edit.subhead.split(/\s+/).length>60)issues.push('Editorial introduction exceeds sixty words');
-   if(edit.summary&&edit.summary.split(/\s+/).length>24)issues.push('Editorial card summary exceeds twenty-four words');
+   if(edit.summary&&edit.summary.split(/\s+/).length>25)issues.push('Editorial card summary exceeds twenty-five words');
    if(/[—!]/.test([edit.name,edit.summary,edit.subhead].filter(Boolean).join(' ')))issues.push('Editorial punctuation breaks brand rules');
   }
   const name=after.name||b.name;

@@ -1,15 +1,13 @@
 slug: check-staged-follow-on-commitments
 name: Check staged follow-on commitments
-summary: Reconcile participation plans, two-company reserves and one milestone-limited draw.
+summary: "Check how much to invest in two companies' next rounds, whether your reserve covers it, and what a milestone lets you draw."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false

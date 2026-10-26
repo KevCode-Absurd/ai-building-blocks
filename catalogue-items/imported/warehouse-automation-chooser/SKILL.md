@@ -5,6 +5,27 @@ description: When the user wants to implement warehouse automation, evaluate aut
 
 # Warehouse Automation
 
+## How to run this version
+
+This block was added by AI Blocks. The method below is the original author's.
+
+**Work in this order.**
+1. Ask why the user wants automation: labour cost or supply, accuracy, speed or growth.
+2. Collect order volume now and later, lines and units per order, the building (size, ceiling height, layout), labour cost and budget range.
+3. Compare options from simple (conveyors, put-to-light) to robots, shuttles and automated storage.
+4. For each option, estimate cost and payback, check fit with the space and the warehouse software, and name the risks (peak load, downtime).
+5. Rank the options and give a phased plan that starts small.
+
+**Ask first, never guess.** If volume, order profile or labour cost is missing, ask once. If the user does not know, write MISSING and say what it blocks. Without those three, give only a list of options to ask vendors about. Do not give payback figures.
+
+**Every cost and speed figure in this file is a placeholder.** The price ranges (for example per robot), the pick rates (100 and 150 lines an hour), the 15 percent running cost and the 20 percent buffer are rough examples from the original file. They are not quotes. Replace each with a vendor quote or the user's own data, and say where each figure came from. Payback built on placeholders is not a business case. The Output Format below is only a layout.
+
+**Tools.** The ranking, risks and phased plan can be done in plain chat. The sizing and payback code needs an AI that can run Python with NumPy. The control and simulation software named near the end is paid and not needed.
+
+**Output.** Use the layout in "Output Format" below. Present options as a table, one row per option: capital cost, yearly saving, payback in years, main risk and fit with the site. Mark any figure that is not a vendor quote or the user's own number as an estimate.
+
+**Stop and say so** if the business has one small site and no order history, or the question is about layout (use the Warehouse layout planner) or fixing a slow process (use the Warehouse slot assigner or Warehouse picker route planner first). Check these cheaper fixes before suggesting machines.
+
 You are an expert in warehouse automation and material handling systems. Your goal is to help evaluate, design, and implement automation technologies that improve operational efficiency, reduce labor costs, increase accuracy, and enable scalability.
 
 ## Initial Assessment
@@ -363,6 +384,10 @@ def gtp_system_comparison(pick_lines_per_day, operating_hours=16,
     Parameters:
     - pick_lines_per_day: Daily pick volume (lines)
     - operating_hours: Operating hours per day
+    - cost_per_robot: from a vendor quote (required for cost figures)
+    - manual_lines_per_hour, assisted_lines_per_hour: the user's own pick rates
+    - operating_cost_rate: yearly running cost as a share of fleet cost, from the vendor
+    - buffer: extra robots for charging and repairs (1.2 is a starting guess)
     - warehouse_sqft: Available warehouse space
 
     Returns:
@@ -447,12 +472,12 @@ print(gtp_comparison)
 - Navigate autonomously (no fixed paths)
 - Flexible and scalable
 - Examples: Locus Robotics, 6 River Systems, GreyOrange
-- Cost: $30K-$50K per robot
+- Cost: rough range in the original file, $30K-$50K per robot. Get quotes.
 
 **AGVs (Automated Guided Vehicles):**
 - Follow fixed paths (wires, magnets, or tape)
 - Less flexible but robust
-- Cost: $50K-$150K per vehicle
+- Cost: rough range in the original file, $50K-$150K per vehicle. Get quotes.
 
 **Use Cases:**
 - Picking assistance (collaborative picking)
@@ -462,7 +487,9 @@ print(gtp_comparison)
 ```python
 def amr_fleet_sizing(orders_per_day, lines_per_order=5, avg_travel_distance_ft=500,
                     robot_speed_ft_per_min=150, pick_time_per_line_sec=10,
-                    operating_hours=16):
+                    operating_hours=16, cost_per_robot=None,
+                    manual_lines_per_hour=None, assisted_lines_per_hour=None,
+                    operating_cost_rate=None, buffer=1.2):
     """
     Calculate AMR fleet size requirements
 
@@ -484,7 +511,7 @@ def amr_fleet_sizing(orders_per_day, lines_per_order=5, avg_travel_distance_ft=5
 
     # Time per order
     travel_time_min = avg_travel_distance_ft / robot_speed_ft_per_min
-    pick_time_min = (lines_per_order * pick_time_per_sec) / 60
+    pick_time_min = (lines_per_order * pick_time_per_line_sec) / 60
     total_time_per_order_min = travel_time_min + pick_time_min
 
     # Orders per robot per hour
@@ -493,21 +520,21 @@ def amr_fleet_sizing(orders_per_day, lines_per_order=5, avg_travel_distance_ft=5
     # Robots needed
     robots_needed_raw = (orders_per_day / operating_hours) / orders_per_robot_per_hour
 
-    # Add buffer for charging, maintenance (20%)
-    robots_needed = np.ceil(robots_needed_raw * 1.2)
+    # Add buffer for charging and maintenance
+    robots_needed = np.ceil(robots_needed_raw * buffer)
 
     # Cost
-    cost_per_robot = 40000  # Average AMR cost
+    if None in (cost_per_robot, manual_lines_per_hour, assisted_lines_per_hour, operating_cost_rate):
+        raise ValueError("Need a vendor quote and the user's own pick rates. Do not use placeholder figures.")
     fleet_cost = robots_needed * cost_per_robot
 
     # Annual operating cost (maintenance, support)
-    annual_operating_cost = fleet_cost * 0.15  # 15% of capital
+    annual_operating_cost = fleet_cost * operating_cost_rate
 
     # Productivity improvement
-    # Traditional picking: 100 lines/hour
-    # AMR-assisted: 150 lines/hour (50% improvement)
-    traditional_pickers = picks_per_day / (100 * operating_hours)
-    amr_pickers = picks_per_day / (150 * operating_hours)
+    # Use the user's own pick rates, measured before and (from a vendor trial) after
+    traditional_pickers = picks_per_day / (manual_lines_per_hour * operating_hours)
+    amr_pickers = picks_per_day / (assisted_lines_per_hour * operating_hours)
     labor_reduction = traditional_pickers - amr_pickers
 
     return {
@@ -523,12 +550,17 @@ def amr_fleet_sizing(orders_per_day, lines_per_order=5, avg_travel_distance_ft=5
         'labor_reduction_%': round((labor_reduction / traditional_pickers) * 100, 1)
     }
 
-# Example
+# Example. The cost, pick rates and running cost are PLACEHOLDERS to show the
+# call. Replace them with a vendor quote and the user's own measured rates.
 amr_fleet = amr_fleet_sizing(
     orders_per_day=2000,
     lines_per_order=5,
     avg_travel_distance_ft=500,
-    operating_hours=16
+    operating_hours=16,
+    cost_per_robot=40000,
+    manual_lines_per_hour=100,
+    assisted_lines_per_hour=150,
+    operating_cost_rate=0.15
 )
 
 print(f"AMRs needed: {amr_fleet['robots_needed']}")
@@ -1086,57 +1118,42 @@ print(automation_recs)
 ### Automation Feasibility Study
 
 **Executive Summary:**
-- Automation recommendation
-- Expected ROI and payback
-- Capital investment required
-- Implementation timeline
+- Recommendation: <option or phased plan>
+- Why: <the goal it serves: labour, accuracy, speed or growth>
+- Capital cost: <value, source: quote or estimate>
+- Payback: <years, with the assumptions>
+- Timeline: <months>
 
 **Current State Analysis:**
 
-| Metric | Current | Pain Points |
-|--------|---------|-------------|
-| Orders/Day | 3,000 | Peaks to 8,000, can't scale |
-| Labor Cost/Year | $3.5M | High turnover, tight market |
-| Pick Rate | 85 lines/hr | Low productivity |
-| Order Accuracy | 97.5% | Below target 99% |
-| Space Utilization | 65% | Poor cube utilization |
+| Metric | Current | Pain point |
+|--------|---------|------------|
+| Orders per day | <value, and peak> | <issue> |
+| Labour cost per year | <value> | <issue> |
+| Pick rate (lines per hour) | <value> | <issue> |
+| Order accuracy | <percent> | <issue> |
+| Space use | <percent> | <issue> |
 
-**Recommended Automation:**
+**Options compared (one row per option):**
 
-| Technology | Purpose | Capacity | Cost | ROI |
-|-----------|---------|----------|------|-----|
-| AMR Fleet (20 robots) | Picking assistance | +40% productivity | $800K | 2.1 yrs |
-| Shuttle GTP System | Dense storage, GTP | 5K positions | $4M | 3.5 yrs |
-| Sliding Shoe Sorter | Order sortation | 10K units/hr | $2M | 2.8 yrs |
-| **Total** | - | - | **$6.8M** | **3.1 yrs** |
+| Option | What it does | Capital cost | Yearly saving | Payback (years) | Main risk | Fit with your site |
+|--------|--------------|--------------|---------------|-----------------|-----------|--------------------|
+| <option> | <purpose> | <value> | <value> | <value> | <risk> | <good, partial, poor and why> |
 
 **Financial Analysis:**
 
-| Metric | Value |
-|--------|-------|
-| Total Capital Investment | $6.8M |
-| Annual Labor Savings | $1.4M (40% reduction) |
-| Annual Productivity Gain | $500K (50% more throughput) |
-| Annual Accuracy Savings | $150K (reduced errors) |
-| Annual Net Savings | $1.65M (after $400K maintenance) |
-| Simple Payback | 4.1 years |
-| 7-Year NPV (10% discount) | $2.1M |
-| ROI (7 years) | 75% |
+| Metric | Value | Source |
+|--------|-------|--------|
+| Total capital investment | <value> | <quote or estimate> |
+| Yearly labour saving | <value> | <how worked out> |
+| Yearly running cost | <value> | <quote or estimate> |
+| Simple payback | <years> | <formula> |
 
-**Implementation Plan:**
-- **Months 1-3**: Design, engineering, vendor selection
-- **Months 4-9**: Equipment fabrication and delivery
-- **Months 10-12**: Installation and integration
-- **Months 13-14**: Testing and training
-- **Month 15**: Go-live
-- **Months 16-18**: Ramp-up and optimization
+**Implementation Plan:** phases in order, each with its months and the first small step.
 
-**Risk Mitigation:**
-- Pilot AMRs before full fleet purchase
-- Phased cutover (one zone at a time)
-- Maintain manual backup processes
-- Extensive training program
-- Vendor support and SLAs
+**Risk Mitigation:** pilot first, one zone at a time, a manual backup, training, vendor support terms.
+
+**Numbers still needed:** list each MISSING input and who can supply it (vendor quotes, finance, your order report).
 
 ---
 

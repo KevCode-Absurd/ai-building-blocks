@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Each claim needs separate sourcing and weighing.
 new_slug: claim-fact-checker
 name: Claim fact-checker
-summary: Give it a text. Get each claim checked against trusted sources and
-  scored by confidence.
+summary: Check each claim in a text against trusted sources. You get a verdict and confidence score for every claim, so you can fact check before you publish.
 job: think-and-decide
 headline: Claim fact-checker
-subhead: Paste a text and get a verdict on each claim in it, with a confidence
-  score and the sources behind it. Instead of one true or false for the whole
-  piece, you see exactly which sentence holds up and which does not.
+subhead: Paste a text and get a verdict on each claim in it, with a confidence score and the sources behind it. Instead of one true or false for the whole piece, you see exactly which sentence holds up and which does not.
 explain: |
   Paste a text and get a verdict on each claim in it, with a confidence score and the sources behind it. Instead of one true or false for the whole piece, you see exactly which sentence holds up and which does not.
 
@@ -18,6 +15,10 @@ when:
   - A colleague sent a statistic and you doubt it.
   - You want to check an AI answer before you rely on it.
   - You need to know which parts of an article are weak.
+not_for:
+  - "You need a legal, medical or money decision: ask a qualified professional, and use this only to find claims to raise with them."
+  - "You need a live figure, like a price or case count: check the source site yourself, since this only checks against a stated date."
+  - "You want to judge opinions or predictions: this skips them, so ask a colleague or an editor to weigh them."
 you_give:
   - The text or statement to check
   - Claims to focus on (optional)
@@ -29,8 +30,28 @@ you_get:
   - Source links
   - An overall summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini and turn on web search. This skill needs it to look up sources.
+  - Paste the skill instructions into the chat.
+  - Paste the text you want checked. Add any claims to focus on, or a report format (optional).
+  - Read the verdicts and confidence scores. Open the source links for any claim you plan to rely on.
+  - Fix or remove claims marked False, Mostly False or Unverifiable before you publish.
+output_sample:
+  input:
+    - The text or statement to check
+    - Claims to focus on (optional)
+    - Preferred report format (optional)
+  prerequisites:
+    - An AI that can search the web, with web search turned on
+  output:
+    - name: Extracted claims
+      contains: Each checkable statement from your text on its own line, with its type, such as statistical, historical or scientific.
+    - name: Not checkable list
+      contains: Opinions and unfalsifiable statements that were set aside, noted so you know they were skipped.
+    - name: Verdicts
+      contains: "One verdict per claim: True, Mostly True, Half True, Mostly False, False or Unverifiable."
+    - name: Confidence scores
+      contains: A score from 0.0 to 1.0 for each claim, with a short reason.
+    - name: Evidence and source links
+      contains: What the sources say for each claim, and where to read them.
+    - name: Overall assessment
+      contains: A short summary of how accurate the whole text is.

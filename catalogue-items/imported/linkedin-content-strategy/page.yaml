@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It plans across your goals and time.
 new_slug: linkedin-content-strategy
 name: LinkedIn content strategy planner
-summary: Say your goal. Get content pillars, positioning and a posting rhythm
-  you can keep.
+summary: "Plan your LinkedIn content strategy: give it one goal and your weekly time. You get pillars, a positioning line and a posting rhythm you can keep."
 job: grow-social
 headline: LinkedIn content strategy planner
-subhead: "A LinkedIn plan you can keep: who you write for, what you stand for,
-  what you will not post about, and how often you will show up."
+subhead: "A LinkedIn plan you can keep: who you write for, what you stand for, what you will not post about, and how often you will show up."
 explain: |
   A LinkedIn plan you can keep: who you write for, what you stand for, what you will not post about, and how often you will show up. It is a plan, not a pile of posts.
 
@@ -17,6 +15,10 @@ when:
   - You are changing careers and need a clear public position.
   - You posted hard for two weeks, then stopped.
   - You wonder if a newsletter is worth your time.
+not_for:
+  - "You want a single post drafted or checked: use a LinkedIn post writer, or ask your AI to draft it once you have your pillars."
+  - "You need a plan for a company page or a whole marketing team: use a company content strategy, not this one-person plan."
+  - "You want to know what already happened on your posts: look at your LinkedIn analytics first, then come back to decide what to do next."
 you_give:
   - Your one main goal
   - Your audience
@@ -30,7 +32,31 @@ you_get:
   - A realistic posting rhythm
   - A newsletter decision
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Answer the five brief questions one at a time: goal, audience, proof, pillars and what you will not post about."
+  - Say how many minutes a week you can spare in a bad week, and your stage, such as starting out.
+  - If your AI can run Python 3 code and files, it can run the three checks. If not, ask it to follow the same steps in chat.
+  - Read the minimum viable week first. Check it is a week you could really keep.
+  - Ask about the newsletter only after the brief and the weekly plan are done.
+output_sample:
+  input:
+    - Your one main goal, such as a career change, consulting, thought leadership, hiring, fundraising or community
+    - Your audience, narrow enough to leave people out
+    - Your work and the proof you already have
+    - Minutes per week you can spare, even in a bad week
+    - Your follower count and newsletter hours per month (optional)
+  prerequisites:
+    - An AI that can run Python 3 code, if you want the checks run for you. Without code, your AI can follow the same steps in chat.
+  output:
+    - name: Positioning brief
+      contains: Your one objective, your narrow audience and at least two groups or topics you will not serve.
+    - name: Content pillars
+      contains: Two to four pillars with shares that add up to 100, each with a reason it is yours to write.
+    - name: 90-day criteria
+      contains: Signs you can observe to tell if the plan is working, with no follower count goal.
+    - name: Weekly cadence
+      contains: Each activity priced in minutes, with more time in other people's comments if you are starting out.
+    - name: Minimum viable week
+      contains: The smallest set of actions you can keep up in a bad week.
+    - name: Newsletter decision
+      contains: Whether you can start one, based on followers and time, plus a 12-issue arc and a stop rule.

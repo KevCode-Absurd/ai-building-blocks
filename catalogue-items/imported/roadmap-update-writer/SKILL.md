@@ -16,6 +16,43 @@ Use this skill for:
 - Generating changelogs from git history
 - Structuring feature announcements
 
+## When Not To Use
+
+- The person wants sprint status or a single ticket update: use their project tracker or the Sprint plan writer.
+- The person wants release notes from commits only, with a version bump: use the Release notes writer.
+- The person wants a changelog from git history only: use the Changelog writer.
+- The person wants to rewrite a feature list as goals: use the Feature roadmap to outcomes rewriter.
+- The person has no plans yet. This skill formats and explains plans. It does not decide them.
+
+## Inputs
+
+Ask once for anything missing. If the person cannot answer, mark it MISSING in the output and carry on. Never invent initiatives, dates, owners, metrics or commits.
+
+1. The plans: initiatives, features or a roadmap draft, with any dates, owners and status the person has.
+2. The audience: executives or board, engineering, customers, or more than one.
+3. What to produce: a roadmap story, a stakeholder update, release notes, a changelog, a feature announcement, or a mix.
+4. Optional: a release date or version range, and the git history or list of commit messages for a changelog.
+
+## Steps
+
+1. Read the plans. List what is committed, what is only planned and what has no date. Do not turn a hope into a promise.
+2. Choose the roadmap format (see below) from how certain the plans are, and say why in one line.
+3. Write the update for each audience (see below). Write one version per audience; do not blend them.
+4. For release notes, choose user-facing or internal and use the templates in `references/communication-templates.md`.
+5. For a changelog, run the script if the person's AI can run Python and git (see below). Otherwise, ask the person to paste commit subjects and group them by prefix yourself.
+6. Check every piece against the quality checklist at the end. Fix any item that fails.
+
+## Output
+
+Return only the pieces the person asked for, in this order, under the headings below. Keep each under about 400 words.
+
+1. **Format choice**: the roadmap format and why, in one or two lines.
+2. **Roadmap story**: the plans in that format, using `references/roadmap-templates.md`.
+3. **Update**: one version for each audience named.
+4. **Release notes**: user-facing or internal, using the templates.
+5. **Changelog**: grouped by type of change, in markdown or plain text.
+6. **Missing**: every input marked MISSING and how it limits the update.
+
 ## Roadmap Formats
 
 1. Now / Next / Later
@@ -63,16 +100,20 @@ See `references/communication-templates.md` for reusable templates.
 
 ## Changelog Generation
 
-Use:
+This step needs git and Python 3 on the person's own computer. A chat AI cannot run it. If the person has them, ask them to run:
 ```bash
 python3 scripts/changelog_generator.py --from v1.0.0 --to HEAD
 ```
+and paste the result. Replace `v1.0.0` with their real start tag or commit.
 
 Features:
 - Reads git log range
 - Parses conventional commit prefixes
 - Groups entries by type (`feat`, `fix`, `chore`, etc.)
 - Outputs markdown or plain text
+- Also runs with `--stdin` on pasted commit subjects, or `--demo` for sample output
+
+No git or Python? Ask the person to paste commit subjects, one per line, and group them by prefix in the chat. Commits with no prefix go under "Other". Never invent commits.
 
 ## Feature Announcement Framework
 

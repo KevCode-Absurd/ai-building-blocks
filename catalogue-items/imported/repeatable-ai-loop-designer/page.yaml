@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It designs a process from known loop patterns.
 new_slug: repeatable-ai-loop-designer
 name: Repeatable AI loop designer
-summary: Describe a recurring job. Get a loop with triggers, checks, stop rules
-  and handoffs.
+summary: Turn a repeated job into a safe AI loop with a start trigger, a check, stop rules and a handoff. Get one short, copy-ready prompt.
 job: set-up-ai
 headline: Repeatable AI loop designer
-subhead: Describe a recurring job. Get a loop with triggers, checks, stop rules
-  and handoffs. Bring what you want done repeatedly. Use the result to plan your
-  next step.
+subhead: Describe a recurring job. Get a loop with triggers, checks, stop rules and handoffs. Bring what you want done repeatedly. Use the result to plan your next step.
 explain: |
   A loop for an AI agent to repeat a recurring job, with a trigger to start it, a check that it worked, a rule for when to stop, and a handoff to a person. It keeps the agent from running endlessly.
 
@@ -18,6 +15,10 @@ when:
   - An agent loop you wrote keeps running without finishing.
   - You want to adapt a ready-made loop to your own tools.
   - You are not sure which repeated work is worth automating.
+not_for:
+  - You have a one-off task. Use a plain prompt in your AI chat instead.
+  - Nothing new can change the next step, so there is no feedback. Use a one-shot workflow or a simple checklist.
+  - You want a loop already built for your exact job. Ask the skill to find a published one first, or ask a teammate who owns the work.
 you_give:
   - What you want done repeatedly
   - Trigger and how often it runs
@@ -30,7 +31,31 @@ you_get:
   - Guardrails and handoff points
   - Review notes on an existing loop
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
+  - "Say what you want: design a loop, find one, review yours, or scan your work for repeated jobs."
+  - "Answer the short questions one at a time: the job, when it runs, what it can touch, how you will know it worked, and when it should stop."
+  - Read the prompt you get back. Check the stop rule and the approval line before you use it.
+  - To scan code or threads, use an AI that can read them. To search published loops, use one with web access.
+output_sample:
+  input:
+    - The job you want the AI to get done
+    - "When it should run: on request, on a schedule, or after something happens"
+    - What it can look at or change, and what is off-limits
+    - How you will know it worked
+    - A loop you already have to review (optional)
+  prerequisites:
+    - Web access, if you want it to search the published Loop Library
+    - An AI that can read your code or threads, if you want it to find repeated work
+  output:
+    - name: Loop name
+      contains: A short title for the loop, in your own terms.
+    - name: Explanation
+      contains: One sentence on what the loop does and when it stops.
+    - name: Prompt
+      contains: "One short paragraph you can copy: the task, the check after each change, the stop rule and what needs your approval."
+    - name: Evidence line
+      contains: "Only for scans: the repeated work found, with at least two examples."
+    - name: Recommendations
+      contains: "Only for find requests: up to three published loops, each with its title, link, fit and the small change needed."
+    - name: Audit fixes
+      contains: "Only for reviews: the weak spots found in your loop and the repairs, with your goal kept."

@@ -33,7 +33,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The page text** (required).
+- **The page text** (required). A refresh plan from an earlier step, saying how deep the update goes, tells you which sections to rewrite.
 - **The questions it should answer** (advised).
 - **Own data, experience and sources** (advised): a test, a customer count, a lesson, a quote from a real expert.
 - **A tone sample and an avoid-word list** (optional).

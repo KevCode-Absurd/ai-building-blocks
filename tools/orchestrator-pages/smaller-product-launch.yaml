@@ -1,6 +1,6 @@
 new_slug: smaller-product-launch
 name: "Launch a smaller product on the date you set"
-summary: "Give it your launch plan, date and budget. Get half the scope, a screened request list and a teaser plan."
+summary: "Cut your launch plan to its core for the same date and budget. You also get a request screen and a teaser plan to build interest before launch day."
 job: build-product
 thinking: high
 thinking_why: "It makes hard cuts, judges requests and plans a launch in order. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - A launch is running late or has grown too big, and the date matters more than the extras.
   - You have a long list of feature requests and no clear way to say no without losing goodwill.
   - You have a product close to ready but no plan to build an audience before launch day.
+not_for:
+  - "You have no plan yet and only an idea: write down the plan first, or ask a friend to poke holes in it, then come back."
+  - "You want to judge feature requests on a product that is already live: use the Feature request screener on its own."
+  - "You want to test whether anyone wants the product: run a small test with real people first, such as the Smallest test picker."
 
 you_give:
   - Your launch plan with the full feature list
@@ -35,6 +39,24 @@ how_to_use:
   - Give it your plan, date and budget, and paste any feature requests.
   - It works step by step and saves each result. Check the cut list before you read the rest, since the later steps use it.
   - Tell your team what is cut before anyone builds, and keep the later list somewhere safe.
+output_sample:
+  input:
+    - Your launch plan with the full feature list
+    - Your launch date and budget
+    - Feature requests from customers, with who asked (optional)
+    - Your brand file (optional)
+  prerequisites:
+    - An AI that can read files, with the handoff pack folder added
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Smaller launch"
+      contains: The fixed date and budget, the heart of the product, the ranked launch list, the later list and a promise check.
+    - name: "Step 2: Request screen"
+      contains: Each request with repeats from different people, hidden costs, a yes, later or no ruling and a short reply.
+    - name: "Step 3: Teaser and launch plan"
+      contains: Hints and sign-up page, insiders, preview, promo site, free sample and the launch message to your list.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Cut the scope
@@ -42,7 +64,7 @@ how_it_works:
   - title: Screen the requests
     text: "Takes the cut plan and answers every request with not now. Counts repeats from different people, lists hidden costs and rules yes, later or no."
   - title: Plan the teaser and launch
-    text: "Works back from the date. Plans hints and a sign-up page, a preview for a few insiders, a free sample and the message to your list."
+    text: "Works back from the date, using the smaller plan from step 1. Plans hints and a sign-up page, a preview for a few insiders, a free sample and the message to your list."
 
 output_shape: |-
   STEP 1: SMALLER LAUNCH

@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It runs set calculations and checks the results agree.
 new_slug: market-size-and-survey-planner
 name: Market size and survey planner
-summary: Give it your market. Get market size two ways, survey sample sizes and
-  segments scored.
+summary: Size your market two ways, plan a survey sample that holds up for each segment, and score which customer groups are real markets.
 job: understand-customers
 headline: Market size and survey planner
-subhead: Your market size worked out two ways, a survey sample that holds up for
-  each segment you report, and a score for which segments are real markets.
+subhead: Your market size worked out two ways, a survey sample that holds up for each segment you report, and a score for which segments are real markets.
 explain: |
   Your market size worked out two ways, a survey sample that holds up for each segment you report, and a score for which segments are real markets. It centers on method and assumptions, not a single big number.
 
@@ -17,6 +15,10 @@ when:
   - You are planning a survey and must pick a sample size.
   - You have a list of customer groups and need to pick the real ones.
   - You want to compare two sizing methods side by side.
+not_for:
+  - "You want to measure a live campaign, like ad spend, ROAS or cost per sale: use your ad platform reports or a campaign analytics tool."
+  - "You need a paid ads or demand plan: ask a marketing planner or agency, since this only builds the evidence."
+  - "You need to set a price or a positioning plan: use a pricing or strategy session, then bring the market size here."
 you_give:
   - Market and product details
   - Customer counts, prices and share assumptions
@@ -29,8 +31,29 @@ you_get:
   - Segment scores with keep or drop
   - Assumptions list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run code, such as Claude or ChatGPT with code tools on.
+  - Paste the skill and say you want market size, survey sample size and segment scores.
+  - "Gather your inputs first: market and product details, customer counts, prices, share assumptions, confidence level, margin of error and candidate segments."
+  - Check the divergence flag before you quote any market size. If it fails, fix your assumptions and run it again.
+  - Fund the minimum sample for each segment you plan to report, not just the total.
+output_sample:
+  input:
+    - Your market and product details
+    - Customer counts, prices and the share you expect to win
+    - Your survey confidence level and margin of error
+    - Your list of candidate customer segments, each with scores
+  prerequisites:
+    - An AI that can run code, since the three tools are Python scripts
+  output:
+    - name: Market size, top-down
+      contains: Total, serviceable and obtainable market worked from a big industry figure down to your share.
+    - name: Market size, bottom-up
+      contains: The same three sizes built up from customer counts and prices.
+    - name: Divergence flag
+      contains: How far the two methods land apart, and a fail flag if they disagree widely.
+    - name: Sample sizes
+      contains: Survey size from your confidence and margin of error, adjusted for small populations, plus a minimum for each segment.
+    - name: Segment scores
+      contains: Each segment scored on five criteria, with a keep or drop call for slices too small or hard to reach.
+    - name: Assumptions list
+      contains: The method, assumptions and confidence behind every number, so you can defend it.

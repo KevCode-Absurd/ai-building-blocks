@@ -1,6 +1,6 @@
 new_slug: review-reason-spotter
 name: Review reason spotter
-summary: Paste 20 or more reviews or emails. Get buying reasons ranked, each in a customer's exact words.
+summary: Find why customers buy from a pile of 20 or more reviews. Get ranked buying reasons, each with an exact customer quote.
 job: understand-customers
 thinking: low
 thinking_why: It sorts and counts what you paste in, with little judgement.
@@ -14,6 +14,10 @@ when:
   - You have a pile of reviews and no time to read them all.
   - You are about to write an ad or page and want the reasons in buyers' own words.
   - You think you know why people buy but have never counted.
+not_for:
+  - "You have fewer than 20 entries: read them yourself, because a count on so few is thin."
+  - "You want the full version with every check: use the Customer buying reasons finder."
+  - "You want finished ad copy: take the ranked reasons to the Ad headline ideas skill."
 you_give:
   - 20 or more reviews, emails or survey answers, numbered
   - One line on what you sell (optional)
@@ -27,6 +31,19 @@ how_to_use:
   - Number your entries, 1 to 20 or more, one per line.
   - Check the quotes against your pile before you use any in an ad.
   - Run it again next quarter with new reviews and compare the order.
+output_sample:
+  input:
+    - 20 or more reviews, support emails or survey answers, numbered
+    - One line on what you sell (optional)
+  output:
+    - name: Buying reasons
+      contains: Each reason in plain words, ranked by separate people, with one exact quote and its entry number.
+    - name: What nearly stopped them
+      contains: The doubts people named, in their own words, with entry numbers and how many people said each.
+    - name: Thin reasons
+      contains: Reasons that fewer than 5 people gave, listed apart so you do not lean on them.
+    - name: Notes
+      contains: Which entries were used or dropped, and what the pile cannot tell you.
 how_it_works:
   - title: Drop empty entries
     text: Entries with no reason, such as "great product", are set aside.

@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Training choices are costly and hard to undo.
 new_slug: language-model-trainer
 name: Language model trainer
-summary: Name your model and data. Get a fine-tuning run set up with TRL, using
-  the right method for your goal.
+summary: Set up a language model fine-tuning run with TRL. Give it your base model, data and goal. You get a ready trl command and the reason for each setting.
 job: build-software
 headline: Language model trainer
-subhead: A fine-tuning run for your language model, set up with the method that
-  matches what you want. Tell it your base model, your data and your goal.
+subhead: A fine-tuning run for your language model, set up with the method that matches what you want. Tell it your base model, your data and your goal.
 explain: |
   A fine-tuning run for your language model, set up with the method that matches what you want. Tell it your base model, your data and your goal. The skill picks from TRL's training types: supervised fine-tuning for following instructions, DPO for learning from preferred versus rejected answers, GRPO and RLOO for reward-based training, and reward model training.
 
@@ -17,6 +15,10 @@ when:
   - You have pairs of good and bad answers and want to train on the preference.
   - You are unsure whether to use SFT, DPO or GRPO.
   - You need a training command you can run on your own machine.
+not_for:
+  - "You only need a different tone or small style tweaks: write a better prompt, or add your documents to the chat instead of training."
+  - "You do not have a GPU or want to avoid training costs: use a hosted fine-tuning service from your model provider."
+  - "You want a model to answer from your own documents: use a search-based setup, not training."
 you_give:
   - The base model
   - Your dataset or its Hugging Face name
@@ -28,8 +30,32 @@ you_get:
   - Settings with a short reason for each
   - Next steps to check results
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
+  - Tell it your base model, your dataset and what the model should do better.
+  - Add your GPU type and memory so it can pick safe settings.
+  - Read the method choice and the reasons for each setting before you run anything.
+  - Run the command on your own machine. The AI cannot train for you unless it can run code on a GPU.
+  - Check the result against the checklist. Test on a small slice of data first, because GPU time costs money.
+output_sample:
+  input:
+    - The base model you want to train
+    - Your dataset file or its Hugging Face name
+    - What the model should do better
+    - Your GPU and memory limits (optional)
+  prerequisites:
+    - Python with the TRL package installed
+    - A GPU, with enough memory for your model size
+    - A Hugging Face login if your model is gated (optional)
+  output:
+    - name: Method choice
+      contains: "Which training type fits your goal: SFT, DPO, GRPO, RLOO or reward model training, and why."
+    - name: trl command
+      contains: One command to run, with your model, dataset, learning rate, epochs and batch settings filled in.
+    - name: Settings and reasons
+      contains: Each setting in the command with a short reason, such as LoRA or packing choices.
+    - name: Config file (optional)
+      contains: The same settings in a YAML file so you can repeat the run.
+    - name: Memory and speed fixes
+      contains: What to change if you run out of memory or training is slow.
+    - name: Result checks
+      contains: What to look for in the results after the run.

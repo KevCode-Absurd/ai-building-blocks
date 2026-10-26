@@ -16,6 +16,29 @@ use_cases:
   - "Find something truly unique to offer, so scarcity is real, not made up"
   - "Spot when someone is using persuasion tricks on you"
   - "Find shared ground with a stranger before a negotiation"
+not_for:
+  - "You need to stay calm in a tense talk and understand the other side: use the Chris Voss mind instead."
+  - "You want to learn which questions help a buyer explain their problem: use the Neil Rackham mind instead."
+  - "You need to check ad policy or legal claims: ask a compliance reviewer or a lawyer, because this mind only reviews persuasion."
+output_sample:
+  input:
+    - The message you want people to say yes to, such as a sales page, pitch, email or request
+    - Who you are asking and what they already want
+    - The real proof you have, such as customer counts, reviews or expertise
+    - The real terms of your offer, including any true limits (optional)
+  output:
+    - name: Key principles
+      contains: The one or two of the seven principles that matter most for your problem, with the reason.
+    - name: Study and evidence
+      contains: A published study figure behind each principle, marked as one result and not a rule.
+    - name: Rewrite or review
+      contains: Marked-up edits or a rewritten message that apply those principles to your draft.
+    - name: What to cut
+      contains: Fake scarcity, made-up proof, stacked tactics and other things that would weaken trust.
+    - name: Ethics check
+      contains: A check that every claim is true and that the person actually wants what you offer.
+    - name: Next step and test
+      contains: A step you can take today and a quick way to test the change on your own audience.
 seats:
   - {seat: "Persuasion science", asks: "Which principle is doing the work here, and is it true, or are we faking it?"}
   - {seat: "Ethics check", asks: "Are we bringing out something the person already wants, or pushing them into something they don't?"}

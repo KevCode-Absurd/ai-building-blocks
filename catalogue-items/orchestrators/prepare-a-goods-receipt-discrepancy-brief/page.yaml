@@ -1,50 +1,84 @@
 new_slug: prepare-a-goods-receipt-discrepancy-brief
 name: Prepare a goods receipt discrepancy brief
 headline: Prepare a goods receipt discrepancy brief
-summary: Share the source files. Get a receipt mismatch table, supplier questions and receiving handover.
+summary: Match purchase orders, receipts and invoices line by line. Get a mismatch table, supplier questions and a handover brief for the receiving lead.
 job: plan-supply-chain
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A receipt mismatch table, supplier questions and receiving handover. Share purchase orders, actual delivery and receipt records, item units, supplier invoices and approved discrepancy handling rules. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your purchase orders, delivery records and supplier invoices. Your AI matches them by item and keeps ordered, delivered, accepted and invoiced quantities apart. You get a mismatch table, questions for the supplier and a brief for the person who takes over.
 explain: |-
-  A receipt mismatch table, supplier questions and receiving handover.
+  A delivery arrives, and the numbers on the purchase order, the delivery note and the invoice do not agree. People often tell the story from memory. The result is a long email thread and a payment made on the wrong number.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Ordered, delivered, accepted and invoiced quantities remain separate; no stock or payment record is changed. Missing tools or evidence stay visible in the final summary.
+  This workflow matches each line by item ID and keeps four numbers apart: what was ordered, delivered, accepted and invoiced. It lists which two numbers differ on each line, and what evidence is still open. Then it writes a handover brief for the lead who will chase the supplier: what is urgent, what is on hold, and what the supplier promised.
+
+  It does not approve goods, approve a payment or change a stock record. Those stay with your receiving and accounts team.
 when:
-  - You need a receipt mismatch table, supplier questions and receiving handover.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A delivery is short, but the supplier invoiced the full order.
+  - Goods were accepted in part after inspection, and the invoice does not show it.
+  - Units differ, such as the PO in cases and the invoice in pieces.
+  - The person who handled the delivery is away, and someone else must chase the supplier.
+not_for:
+  - "You want to approve a payment: use your accounts process, or the Check supplier invoices before approval workflow to prepare the evidence."
+  - "You want to change stock records: do that in your warehouse system after a person signs off."
+  - "A delivery had a quality fault and you need the supplier to fix it: use the Prepare a supplier corrective action review workflow."
 you_give:
-  - Purchase orders, actual delivery and receipt records, item units, supplier invoices and approved discrepancy handling rules.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Purchase orders with item ID, unit and quantity ordered
+  - Delivery or receipt records with quantity delivered, quantity accepted and any inspection or damage notes
+  - Supplier invoices with item ID, unit and quantity invoiced
+  - Unit conversions, if units differ, such as pieces per case (from whoever owns the item data)
+  - Your rules for handling a mismatch, such as holds and who decides (optional)
 you_get:
-  - A receipt mismatch table, supplier questions and receiving handover.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A mismatch table by item: ordered, delivered, accepted, invoiced and which numbers differ"
+  - A list of items found in one record but not another
+  - Draft questions for each supplier
+  - A handover brief for the receiving or purchasing lead
+  - A list of facts still missing
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Collect the purchase order, the receipt record and the invoice for the delivery. Spreadsheets or pasted text both work.
+  - Give the pack to Claude, ChatGPT or Gemini. Attach the files and say who takes over the follow-up.
+  - Paste any unit conversions you know are right. Without them, lines in different units are marked missing.
+  - Check the mismatch table. Pick two lines and confirm the numbers against the originals.
+  - Send the supplier questions yourself. Do not pay or adjust stock until a person has signed off.
 how_it_works:
   - title: Invoice checker
-    text: Match actual PO, receipt and invoice lines, preserving item identity, unit conversions supplied by the owner and evidence of partial deliveries.
+    text: Matches each purchase order line to its receipt line and invoice line by item ID. Keeps ordered, delivered, accepted and invoiced apart and lists which two numbers differ. Uses unit conversions only if you gave them. Hands step 2 the table, the flags and the evidence still open.
   - title: Handover note writer
-    text: Brief the incoming receiving or purchasing lead on mismatches, approved holds, unresolved inspection evidence and supplier commitments; do not approve goods or payments.
+    text: "Writes a brief for the person taking over, from step 1's table: time-critical items first, mismatches by urgency, holds already agreed, open inspection evidence and supplier promises. It does not approve goods or payment. Check first: every mismatch matches the table."
 output_shape: |-
-  Scope and source coverage
-  A receipt mismatch table, supplier questions and receiving handover.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  MISMATCH TABLE
+    item ID | unit | ordered | delivered | accepted | invoiced | variance | which numbers differ | evidence reference | status
+  UNMATCHED           <IDs found in one record but not another>
+  SUPPLIER QUESTIONS  <one list per supplier>
+  HANDOVER BRIEF      <time-critical items | mismatches by urgency | holds agreed | inspection still open | supplier promises | contacts>
+  FILES SAVED         <each file and the step that made it>
+  MISSING             <each gap, and what it stops>
+  CHECKS MISSED       <one line each, or none>
+output_sample:
+  input:
+    - Purchase orders with item ID, unit and quantity
+    - Delivery and receipt records, with accepted quantity
+    - Supplier invoices
+    - Unit conversions, if units differ (optional)
+  prerequisites:
+    - The three documents for the same delivery, as files or pasted text
+  output:
+    - name: Mismatch table
+      contains: Ordered, delivered, accepted and invoiced for each item, with which numbers differ.
+    - name: Unmatched items
+      contains: Item IDs found in one record but not in another.
+    - name: Supplier questions
+      contains: A draft list for each supplier, based on the mismatches.
+    - name: Handover brief
+      contains: "For the lead taking over: urgent items, holds, open inspection evidence and supplier promises."
+    - name: Missing and checks missed
+      contains: Facts nobody supplied and checks that could not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Ordered, delivered, accepted and invoiced quantities remain separate; no stock or payment record is changed.
+  - what: Units
+    how: Paste the pack sizes. Lines in cases and pieces can then be compared, not just flagged.
+  - what: Hold rules
+    how: Add your rules for holds and who decides. The brief then names the next step for each mismatch.
+  - what: Reader
+    how: Say who takes over, such as a receiving lead or a buyer. The brief changes to fit their role.
 judge:
   - Ordered, delivered, accepted and invoiced quantities remain separate; no stock or payment record is changed.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +91,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Add the supplier's answers and run the workflow again to see which lines are now closed.
+  - Keep each brief with the delivery date, so you can see which suppliers often ship short.
+  - Record accepted quantity at the dock for every delivery, so the next match is clean.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It reads PDFs, spreadsheets and pasted text. In plain chat, paste each document in.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The delivery note or goods received record, not just the PO.
+    - Inspection or damage notes from the dock.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Goods receipt
+    meaning: The record that goods arrived, with what was delivered and what was accepted.
+  - term: Purchase order
+    meaning: Your written order to a supplier, with items, quantities and prices.
+  - term: Three-way match
+    meaning: Checking that the order, the receipt and the invoice agree before paying.
+next:
+  - prepare-a-supplier-corrective-action-review

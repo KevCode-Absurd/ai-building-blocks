@@ -1,15 +1,13 @@
 slug: review-a-fund-bridge-and-hurdle
 name: Review a fund bridge and hurdle
-summary: Separate subscription-line return timing from the actual preferred-return start convention.
+summary: See what a capital call bridge does to LP returns, then check the preferred return and the carry split. Get linked checks with gaps listed.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -43,3 +41,4 @@ credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+needs_mode: manual

@@ -38,3 +38,26 @@ Every string ref migrates to `React.createRef()`:
 3. Replace `this.refs.refName` → `this.refName.current` everywhere
 
 Read `references/patterns.md` for the full before/after for each case.
+
+
+## Inputs, guard rails and what to return
+
+Added by AI Blocks. The method above is unchanged.
+
+**You need:** at least one class component that uses `ref="name"` or `this.refs`.
+
+**If something is missing:**
+- No code pasted: ask once for the component. Do not write a migration from memory.
+- A `ref="name"` has no matching `this.refs.name` in the code you can see: it may be read in another file or a parent. Mark it "CHECK" and ask. Do not delete it.
+- A ref is passed to a child component that you cannot see: mark it "CHECK" and say which child file you need.
+- The `references/patterns.md` file is not available: use the migration rule above. Say the list and child cases were not checked against the reference. Do not invent a pattern for them.
+- If there are no string refs, say so and stop.
+
+**Return in this order:**
+1. **Refs found**: component, ref name, where it is set, where it is read.
+2. **Pattern used**: single, multiple, list, callback or child.
+3. **Rewritten code**.
+4. **Check by hand**: items marked CHECK.
+5. **Verify**: the two scan commands to run again. Both should return nothing.
+
+Tell the user to run their tests and try the screen on their own machine.

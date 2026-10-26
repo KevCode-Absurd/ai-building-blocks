@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: slide_deck
     required: true
+  - type: audit_report
+    required: false
 outputs:
   - type: slide_deck
     required: true

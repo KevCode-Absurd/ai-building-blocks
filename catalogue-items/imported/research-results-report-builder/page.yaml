@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a fixed recipe to merge files.
 new_slug: research-results-report-builder
 name: Research results report builder
-summary: Give it your research files. Get one report with a contents list and
-  every checked answer. Unsure ones are left out.
+summary: Build one research report from many result files, with a contents list and only checked answers. Uncertain values are left out.
 job: research-topics
 headline: Research results report builder
-subhead: One report that pulls together the results from many research files,
-  with a contents list and only the answers that were checked. Uncertain values
-  are left out instead of guessed.
+subhead: One report that pulls together the results from many research files, with a contents list and only the answers that were checked. Uncertain values are left out instead of guessed.
 explain: |
   One report that pulls together the results from many research files, with a contents list and only the answers that were checked. Uncertain values are left out instead of guessed.
 
@@ -18,6 +15,10 @@ when:
   - You want a contents list with key numbers beside each item.
   - You cannot afford guesses in a report.
   - You finished a batch of research files and want a clean summary.
+not_for:
+  - "You have only one item to write up: read that result file yourself, or ask your AI to summarize it in a chat."
+  - "Your research is not finished yet: complete the earlier research outline step first, then come back to build the report."
+  - "You need a report that keeps uncertain values with a note: this skill skips them, so review the raw result files by hand."
 you_give:
   - Folder of research result files
   - Outline file for the topic
@@ -29,8 +30,28 @@ you_get:
   - Every field covered per item
   - Uncertain values left out
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and save files.
+  - Use an AI that can run Python and save files, such as Claude with file access. A plain chat will not run the script.
+  - Give your AI the skill text and your topic folder. It must hold outline.yaml, fields.yaml and the result files.
+  - Ask it to run /research-report. It will find your outline and read the result files.
+  - Pick which short fields to show beside each item in the contents list, such as stars, scores or release dates.
+  - Let it write and run generate_report.py. Open report.md and check it before you share it.
+output_sample:
+  input:
+    - A folder of research result files (JSON)
+    - Your outline.yaml file for the topic
+    - Your fields.yaml file that lists the fields for each item
+    - Your pick of short fields to show in the contents list
+  prerequisites:
+    - An AI that can run Python code and save files
+    - Finished research result files from the earlier research outline step
+  output:
+    - name: generate_report.py
+      contains: The Python script that reads every result file and builds the report.
+    - name: report.md
+      contains: The final Markdown report, saved in your topic folder.
+    - name: Table of contents
+      contains: A numbered list of every item with a link and the short fields you chose.
+    - name: Detailed content
+      contains: Each item's fields, grouped by category, with uncertain values left out.
+    - name: Other Info
+      contains: Extra fields found in the result files that your fields list did not name.

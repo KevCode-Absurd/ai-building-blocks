@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It scans many deals for set warning signs.
 new_slug: deal-watch-digest-writer
 name: Deal watch digest writer
-summary: Pick a pipeline, tier or team. Get a short alert list of quiet deals,
-  slipping dates and renewals.
+summary: "Get a short deal watch digest: quiet deals, slipping close dates and renewals opening soon, ranked by urgency for your pipeline, tier or team."
 job: sell-and-negotiate
 headline: Deal watch digest writer
-subhead: "Pick the scope, such as your own pipeline, a tier of accounts or your
-  team, and a time period. It sweeps the open deals and reports only what
-  changed or crossed a line. You get a short alert list ranked by urgency: quiet
-  deals, slipping dates, renewals and competitor mentions."
+subhead: "Pick the scope, such as your own pipeline, a tier of accounts or your team, and a time period. It sweeps the open deals and reports only what changed or crossed a line. You get a short alert list ranked by urgency: quiet deals, slipping dates, renewals and competitor mentions."
 explain: |
   A short alert list you can read every day. It sweeps your open deals and reports only what changed or crossed a line: quiet deals, slipping close dates, renewals opening soon, competitors named, and buyers waiting on a reply.
 
@@ -19,6 +15,10 @@ when:
   - You keep missing renewals until it is too late.
   - A competitor shows up in calls and you want to catch it early.
   - Your manager asks which deals changed since last week.
+not_for:
+  - You have a question about one deal or account. Ask your AI about it directly.
+  - You want CRM records changed without a look first. Make the edit yourself, or review each change this digest suggests.
+  - You need a full forecast or pipeline report. Use your CRM's own reports.
 you_give:
   - "Scope: your pipeline, a tier or a team"
   - Time period (optional)
@@ -30,8 +30,27 @@ you_get:
   - Upcoming renewals
   - Competitor mentions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Say which scope you want: your pipeline, a tier of accounts or your team. Add a time period if you have one, or it uses the last 7 days."
+  - Connect your CRM if your AI can. If not, upload a CRM export. Add an older export so it can show what changed.
+  - Add email or call notes if you can. Without them, the competitor and waiting-reply checks are skipped, and the digest says so.
+  - Read the Act today list first. Check the evidence on each item before you act.
+  - Fix dates and next steps in your CRM yourself. This skill only reads and suggests.
+output_sample:
+  input:
+    - "Your scope: your own pipeline, a tier of accounts or your team"
+    - Your CRM data, or an export of your deals (a second, older export helps show what changed)
+    - Your time period (optional)
+    - Your usual sales cycle length (optional)
+  prerequisites:
+    - An AI that can read your CRM, or a CRM export you can upload
+    - Email and call notes if you want competitor and waiting-reply checks (optional)
+  output:
+    - name: Act today
+      contains: Deals that need action now, each with the signal, one line of evidence, a link to the record and a suggested action.
+    - name: This week
+      contains: Lower urgency items with the same signal, evidence and suggested action.
+    - name: Everything else
+      contains: One line saying nothing else crossed a threshold and how many open deals were checked.
+    - name: Skipped checks
+      contains: A note on any check left out because email, call notes or a CRM link was missing.

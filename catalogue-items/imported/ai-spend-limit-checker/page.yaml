@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It follows one fixed rule, no paid call without a written cap.
 new_slug: ai-spend-limit-checker
 name: AI spend limit checker
-summary: Point it at code that calls paid AI services. Get spending caps and
-  loop limits added before a surprise bill.
+summary: Check code that calls paid AI services for spend limits. Get a cost cap on every call, a hard count on every loop and retry, and a list of caps to set.
 job: secure-code
 headline: AI spend limit checker
-subhead: Code that calls paid AI services can run up a huge bill. A loop that
-  looks finite can repeat forever if a bug feeds it new work.
+subhead: Code that calls paid AI services can run up a huge bill. A loop that looks finite can repeat forever if a bug feeds it new work.
 explain: |
   Code that calls paid AI services can run up a huge bill. A loop that looks finite can repeat forever if a bug feeds it new work. This check puts firm limits in place before that happens.
 
@@ -17,6 +15,10 @@ when:
   - You are reviewing code before it goes live and want to catch runaway costs.
   - A surprise AI bill just hit and you need to find the cause.
   - Your retry logic has no upper limit.
+not_for:
+  - Your code makes no paid API calls. You do not need this check.
+  - You only want a budget alert on your bill. Set it in your provider's billing dashboard.
+  - You want a full security review of your code. Ask a developer or a code security tool, as this checks cost risk only.
 you_give:
   - The code that calls the paid API
   - The price per call (optional)
@@ -27,8 +29,26 @@ you_get:
   - Repeat-safe keys where calls can double up
   - A list of provider caps to set
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open a chat with your AI, such as Claude, ChatGPT or Gemini, and paste in the skill text.
+  - Paste the code that calls the paid service. Add the provider name and the price per call if you know it.
+  - Ask your AI to check the code against the skill and add cost limits. It reads code only, so no tools are needed.
+  - Read the cost line above each call. Check that every loop and retry has a hard limit.
+  - Set the same daily cap in your provider's dashboard. Check the current dashboard steps and prices on the provider's own site first.
+output_sample:
+  input:
+    - The code that calls the paid AI service
+    - The provider you use, such as Fal, Anthropic, OpenAI, Replicate or ElevenLabs
+    - The price per call (optional)
+  prerequisites:
+    - An AI that can read your code files, or code pasted into the chat
+  output:
+    - name: Cost contract
+      contains: A comment above each call site with unit cost, most calls, most dollars per run and the provider cap.
+    - name: Loop and fan-out limits
+      contains: A named constant for every loop bound, and a concurrency limit on calls that run side by side.
+    - name: Retry rules
+      contains: A cap on retries, no retry on client errors, and a repeat-safe key on every charging call.
+    - name: Provider cap settings
+      contains: The spend limit to set in your provider dashboard, so a code bug cannot bypass it.
+    - name: Edge case and red flag list
+      contains: Runaway patterns found in your code, such as self-requeuing jobs, reconnect storms and doubled webhooks.

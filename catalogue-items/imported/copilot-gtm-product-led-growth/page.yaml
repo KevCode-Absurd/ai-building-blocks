@@ -2,18 +2,106 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-product-led-growth
 name: Self serve product growth planner
-summary: Share your product funnel. Get activation and expansion changes, with
-  tests to see whether self serve growth fits.
+summary: Test if self-serve growth fits your product, then plan faster first value, channel math and a three-case forecast for new sign-ups.
 job: plan-strategy
 headline: Self serve product growth planner
-subhead: Share your product funnel. Get activation and expansion changes, with
-  tests to see whether self serve growth fits. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: Describe your product, your buyer and your sign-up steps. It checks whether self-serve growth fits or whether you need sales, then audits how fast new users see value. You get a keep, scale or kill call for each channel, a sales handoff rule and a three-case forecast.
+explain: |
+  Self-serve growth means people sign up, try the product and pay without talking to anyone. It is popular, but it does not suit every product. This planner checks fit first: is value clear in minutes, can a user set up alone, and is the user also the buyer?
+
+  If it fits, it works on three things. It times how long a new user takes to reach their first win. It maps each channel from effort to sign-ups to paying users. And it sets a keep, scale or kill rule per channel, using the cost to win a customer against the money that customer brings.
+
+  It also covers the point where larger deals need a person, and which usage signals tell you when to reach out. A growth plan for a self-serve product should end with a forecast and a written playbook, so this one does too.
+when:
+  - Someone on your team says "we should go product-led" and you want proof before you build.
+  - People sign up for your free plan but few turn into paying customers.
+  - You run several channels and cannot tell which ones pay for themselves.
+  - Your first big accounts need meetings and contracts, and you wonder when to add sales.
+not_for:
+  - You have no users yet and need your first customers. Use the First customer launch planner.
+  - You want to price your plans or set free limits. Use the Technical SaaS pricing adviser or the Free plan designer.
+  - You want growth loops that feed themselves. Use the Growth loop designer.
+you_give:
+  - What the product does and who uses it
+  - Who pays, and whether they are the same person
+  - Your steps from sign-up to first use
+  - Spend, sign-ups and paid users by channel (optional)
+  - Typical deal size (optional)
+you_get:
+  - A self-serve or sales-led fit check, with reasons
+  - A time-to-first-value audit with fixes
+  - A growth equation for each channel
+  - A keep, scale or kill call for each channel
+  - A three-case forecast and a one-page playbook
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
+  - Describe the product and buyer. Paste your sign-up steps and any channel numbers you have, as plain text or a table.
+  - Ask for the fit check first. If it says sales-led, ask for the hybrid plan before you build more self-serve.
+  - Ask for the first-value audit, the channel table and the forecast. Fill in lines marked MISSING with your real numbers.
+  - Read every number in the skill, such as 10 minutes or $5K, as the author's example. Use your own data.
+  - Pick one change to test for four weeks, then write its playbook. This needs no code and no paid tools.
+how_it_works:
+  - title: Check the fit
+    text: It asks if value shows fast, setup is simple and buyer equals user. It then picks self-serve, hybrid or sales-led.
+  - title: Build the growth equation
+    text: For each channel it maps effort to traffic to sign-ups, so a goal turns into a count of posts or dollars.
+  - title: Compare channel economics
+    text: It lines up cost to win a customer, conversion, retention and payback, then rules keep, optimize or kill.
+  - title: Audit first value
+    text: It walks your sign-up as a new user, counts steps and time, and cuts setup before the first win.
+  - title: Set the sales handoff
+    text: It sets the deal sizes where sales joins and the usage signs that trigger a human reach-out.
+  - title: Forecast three cases
+    text: It writes a baseline, upside and downside by channel, to review monthly.
+  - title: Write the playbook
+    text: It turns each proven test into a one-page playbook someone else could run.
+output_shape: |
+  SELF-SERVE GROWTH PLAN: <product>
+  1. Fit check: <self-serve, hybrid or sales-led, with reasons>
+  2. First-value audit: <steps, time to first value, fixes>
+  3. Growth equation: <channel: activity, traffic, conversion, result>
+  4. Channel economics: <channel, cost to win, conversion, retention, payback, call>
+  5. Sales handoff: <deal sizes, usage signals, what to say>
+  6. Forecast: <baseline, upside, downside by channel>
+  7. Playbook: <goal, steps, measures, risks, owner, date>
+  MISSING: <numbers you did not give>
+output_sample:
+  input:
+    - What the product does, who uses it and who pays
+    - Your steps from sign-up to first use
+    - Spend, sign-ups and paid users by channel (optional)
+    - Typical deal size (optional)
+  output:
+    - name: Fit check
+      contains: Whether self-serve, hybrid or sales-led suits your product, with the reasons.
+    - name: First-value audit
+      contains: Steps and time from sign-up to first win, with specific fixes.
+    - name: Growth equation
+      contains: For each channel, how activity turns into traffic, sign-ups and paying users.
+    - name: Channel economics table
+      contains: Cost to win, conversion, retention and payback per channel, with keep, optimize or kill.
+    - name: Sales handoff rules
+      contains: Deal sizes and usage signals that bring in a person.
+    - name: Three-case forecast
+      contains: Baseline, upside and downside sign-ups by channel.
+    - name: Playbook page
+      contains: A one-page how-to for each test that worked.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A chat AI can run the maths if you paste a table of channel results.
+    - name: Your product analytics export
+      why: Real sign-up and retention counts give better calls than guesses.
+  inputs:
+    - Retention by sign-up source
+    - A screen-by-screen list of your onboarding
+    - Your gross margin
+terms:
+  - term: Self-serve
+    meaning: People sign up and pay without talking to your team.
+  - term: Time to first value
+    meaning: How long a new user takes to get their first useful result.
+  - term: Cost to win a customer
+    meaning: Total spend on a channel divided by new customers from it. Also called CAC.
+  - term: Lifetime value
+    meaning: The money a customer brings over the time they stay. Also called LTV.

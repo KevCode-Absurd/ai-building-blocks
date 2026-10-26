@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The math is simple, but honest ranges need careful inputs.
 new_slug: opportunity-size-estimator
 name: Opportunity size estimator
-summary: Give it a baseline and an expected change. Get a low, base and high
-  estimate with every assumption listed.
+summary: Size an opportunity with a low, base and high estimate. Give it a baseline and an expected change. Every assumption is listed.
 job: track-numbers
 headline: Opportunity size estimator
-subhead: A number you can defend when someone asks how big a change could be.
-  You get a low, base and high estimate, never a single figure, plus a list of
-  every assumption behind it.
+subhead: A number you can defend when someone asks how big a change could be. You get a low, base and high estimate, never a single figure, plus a list of every assumption behind it.
 explain: |
   A number you can defend when someone asks how big a change could be. You get a low, base and high estimate, never a single figure, plus a list of every assumption behind it.
 
@@ -18,6 +15,10 @@ when:
   - You have ten ideas and need to rank them by likely payoff.
   - Your manager asks for the return on a change before approving it.
   - You need a rough size for a new market, offer or price change.
+not_for:
+  - "You have no baseline number yet: gather your data first, or run a small test to measure the change."
+  - "You want a forecast of future sales over time: use a forecasting tool or ask an analyst to build a model."
+  - "You need one exact figure for a legal or tax filing: ask your accountant."
 you_give:
   - Your current baseline number
   - The change you expect
@@ -30,7 +31,28 @@ you_get:
   - The formula used
   - A plain summary for decision makers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill's instructions. Attach its reference and template files if your AI allows files.
+  - Say what you want to size, for example a price change or a fix to a gap in your data.
+  - Paste your baseline number, who is affected, the change you expect and your time frame.
+  - Say how sure you are of each number. Your AI will mark the weak ones as assumptions.
+  - Check the low, base and high figures and the assumption log. Change any input that looks wrong and run it again.
+  - Use the plain summary to share the estimate, or rank it against your other ideas.
+output_sample:
+  input:
+    - Your current baseline number
+    - The change you expect
+    - Who or what is affected
+    - Your time frame, monthly or annual
+    - How sure you are of these inputs (optional)
+  prerequisites:
+    - An AI that can run code, if you want it to use the skill's calculation scripts
+    - The skill's reference and template files attached, if you paste the skill into a chat
+  output:
+    - name: Impact estimate
+      contains: A low, base and high figure for the change over your time frame.
+    - name: Assumption log
+      contains: Each estimated input with its source and how much the result moves if it is wrong.
+    - name: impact_estimate_template.md
+      contains: The range, assumptions, confidence level and recommended action in one short page.
+    - name: business_case_template.md (optional)
+      contains: A fuller business case for larger decisions.

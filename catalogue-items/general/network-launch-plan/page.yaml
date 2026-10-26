@@ -1,6 +1,6 @@
 new_slug: network-launch-plan
 name: Network launch distribution planner
-summary: Describe the product and who already hosts your audience. Get a launch route that borrows an existing network.
+summary: Plan a network launch for a product that needs other users. Pick a network that already holds your first users, and set a number to aim for.
 job: grow-social
 thinking: medium
 thinking_why: It judges which network to borrow and sets a number, which needs judgement.
@@ -14,6 +14,10 @@ when:
   - Your product is only useful when other people join it.
   - You have no audience and need a way to reach the first few hundred users.
   - You are choosing which platform or tool to launch on.
+not_for:
+  - Your product works fine for one person alone. Skip this and use a plain launch plan or ask a few buyers directly.
+  - You want your first customers one by one, by hand. Use the First customers by hand planner.
+  - You already have users and want to write ads. Use the Story image ad writer.
 you_give:
   - The product and what it does
   - Who the first users are and where they spend time
@@ -30,6 +34,29 @@ how_to_use:
   - Say what you can spend.
   - Run the first use with a few real people.
   - Count the number it sets, then bring the result back.
+output_sample:
+  input:
+    - Your product and what it does
+    - Who your first users are and where they spend time
+    - What you can spend in time and money
+    - A buyer description (optional)
+  output:
+    - name: The first users
+      contains: Who they are and where they already spend time.
+    - name: Networks to borrow
+      contains: At least four networks compared on reach, cost and ease of sharing, with the pick and why.
+    - name: The first use
+      contains: What a person does first, and how that action invites a second person.
+    - name: The number
+      contains: The tipping-point number, how you will count it and the date to reach it.
+    - name: From borrowed to own
+      contains: The step that moves people from the borrowed network to sharing by word of mouth.
+    - name: Exit
+      contains: What to cut or change if the number is missed by the date.
+    - name: Missing
+      contains: Facts it needed but did not have, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each of its own checks that failed, or none.
 how_it_works:
   - title: Lists networks
     text: Names the networks and tools your first users already use.

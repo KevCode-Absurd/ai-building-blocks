@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It turns numbers into a short story for each reader.
 new_slug: hiring-progress-reporter
 name: Hiring progress reporter
-summary: Paste your pipeline numbers. Get a clear update or chart page for the
-  hiring manager or your leaders.
+summary: Turn your hiring pipeline numbers into a clear update for your hiring manager or leaders. Pick a weekly update, market report, talent map or look back.
 job: hire-people
 headline: Hiring progress reporter
-subhead: "A clear hiring update that a busy manager will actually read. Paste in
-  your pipeline numbers and say who the report is for. The skill turns them into
-  a short story: what happened, what is stuck and what to do next."
+subhead: "A clear hiring update that a busy manager will actually read. Paste in your pipeline numbers and say who the report is for. The skill turns them into a short story: what happened, what is stuck and what to do next."
 explain: |
   A clear hiring update that a busy manager will actually read. Paste in your pipeline numbers and say who the report is for. The skill turns them into a short story: what happened, what is stuck and what to do next.
 
@@ -18,6 +15,10 @@ when:
   - You need a weekly update that takes minutes, not hours.
   - You want to show leaders why a role is hard to fill.
   - You are closing a search and want to record what you learned.
+not_for:
+  - "You only need a list of candidates from one day: use the report in your applicant tracking system (ATS)."
+  - "You need to find or rank candidates: ask a recruiter or search tool, as this skill only reports on numbers you already have."
+  - "You want a branded PDF with your company logo: this skill needs your own brand file and a code tool, so use a design tool or add your own guide."
 you_give:
   - Pipeline counts by stage
   - Outreach and reply numbers
@@ -30,7 +31,32 @@ you_get:
   - A simple chart page if you ask
   - Specific recommendations
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI chat. Paste in the skill text from this page.
+  - "Say which report you want: weekly update, market report, talent map or look back after the role is filled."
+  - Paste your pipeline counts, reply numbers, blockers and notes. Say who will read the report.
+  - Read the executive summary first. Check that every number matches your data and fix anything that does not.
+  - For a chart page, ask for an HTML dashboard. Open the file in any browser. Your AI needs to create files for this.
+  - PDF export and company branding are optional. They need code tools and your own brand guide, so skip them to start.
+output_sample:
+  input:
+    - Your pipeline counts by stage
+    - Your outreach and reply numbers
+    - Blockers and notes on top candidates
+    - "Who the report is for: hiring manager or leaders"
+    - Market or pay data (optional)
+  prerequisites:
+    - An AI chat is enough for the markdown report
+    - An AI that can run code, only if you want a chart page or PDF (optional)
+  output:
+    - name: Executive Summary
+      contains: Three to five bullets with the key findings and what to do next.
+    - name: Pipeline Overview
+      contains: A table of counts at each stage, this week's change and the step-to-step conversion.
+    - name: Key Metrics
+      contains: A short table of main numbers, each with an up, down or flat trend.
+    - name: Recommendations
+      contains: Numbered actions that answer the blockers in your data.
+    - name: Next Steps
+      contains: A checklist of actions, each with an owner.
+    - name: dashboard.html
+      contains: An optional chart page with key number cards, a stage funnel, a source chart and a candidate table.

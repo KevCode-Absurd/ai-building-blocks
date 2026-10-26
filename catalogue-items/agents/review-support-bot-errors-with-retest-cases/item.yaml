@@ -1,6 +1,6 @@
 slug: review-support-bot-errors-with-retest-cases
-name: Support bot evidence review assistant
-summary: Paste redacted conversations and approved help text. Get evidence-linked failures, proposed fixes and repeatable review cases.
+name: Support bot error reviewer
+summary: Paste redacted bot chats and your approved help text. Get a list of wrong answers, fixes to propose and retest cases. Nothing is changed.
 category: agent
 type: agent
 role: orchestrate
@@ -25,9 +25,9 @@ steps:
   - uses: support-chatbot-conversation-review
     note: Use logs, approved sources and scope to classify resolution and accuracy with conversation evidence. Use connected log tools only when authorized; pasted exports allow offline review. Pass related failure clusters onward.
   - uses: support-issue-cause-investigator
-    note: Use conversation clusters and linked tickets to compare shared timing/topics, evidence and counterexamples. Label unverified causes as hypotheses. Hand prioritized evidence-backed proposed fixes to issue drafting.
+    note: Use conversation clusters and linked tickets to compare shared timing/topics, evidence and counterexamples. Label unverified causes as hypotheses. Hand prioritized evidence-backed proposed fixes to issue drafting. Takes step 1's failure clusters as the pasted problem descriptions.
   - uses: bug-report-writer
-    note: Draft one issue per distinct failure with redacted input, observed behavior, source-backed expected facts, escalation expectation and a pass/fail review case. Preserve evidence IDs and unresolved questions.
+    note: Draft one issue per distinct failure with redacted input, observed behavior, source-backed expected facts, escalation expectation and a pass/fail review case. Preserve evidence IDs and unresolved questions. Takes step 2's cause rows, one issue per cluster, as the rough bug reports.
 execution: coordinator
 package_files: all
 origin: own

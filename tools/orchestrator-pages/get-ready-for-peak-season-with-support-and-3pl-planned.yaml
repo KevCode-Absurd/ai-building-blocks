@@ -1,6 +1,6 @@
 new_slug: get-ready-for-peak-season-with-support-and-3pl-planned
 name: "Get support and stock ready for peak season"
-summary: Give it past sales and your peak target. Get a peak forecast, hire dates, 3PL terms and a stock tracker.
+summary: Plan peak season staffing, 3PL terms and stock arrivals from your sales history. Get a peak forecast, hire dates, a bid pack and a bill audit.
 job: plan-supply-chain
 thinking: high
 thinking_why: It builds a forecast and runs sums across five skills. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Most of your profit comes in a few weeks, such as Black Friday, and you cannot ship late or run out.
   - Your support inbox filled up last peak and you do not know when to hire this time.
   - You are picking a new warehouse and want bids on peak volume, not an average month.
+not_for:
+  - "You only need a revenue forecast: run the Store revenue forecast builder on its own."
+  - "You are planning an average month or one product launch: use a simple sheet or ask your 3PL for a normal quote."
+  - "You want to fix a warehouse bill and have no agreement or rate card: ask your 3PL for those first."
 you_give:
   - Daily ad spend and new-customer revenue for 12 to 36 months, and your revenue target
   - Tickets per month, support costs and how long it takes to hire and train an agent
@@ -32,6 +36,29 @@ how_to_use:
   - Paste your sales history, monthly tickets and your revenue target. Say how long a support hire takes to train.
   - Send the request for pricing to several 3PLs, and tell it what the stock orders on the way are.
   - At the pause, run peak with the 3PL. Then collect the invoice, rate card and Shopify orders for the month and give them to it.
+output_sample:
+  input:
+    - Daily ad spend and new-customer revenue for 12 to 36 months, plus your revenue target
+    - Tickets per month, support costs and hire and training time
+    - Product sizes, ship-to countries and your purchase orders
+    - Warehouse bids (optional)
+    - "After peak: the warehouse invoice, rate card and your orders for the month"
+  prerequisites:
+    - An AI that can read files and work with spreadsheets
+    - The handoff pack with every skill file this workflow uses
+  output:
+    - name: Peak forecast
+      contains: Daily orders and revenue, new and returning customers, your sales calendar, the gap to target and actions to close it.
+    - name: Support plan
+      contains: Cost per ticket, forecast tickets, the dates new support staff must start and the top ticket reasons.
+    - name: 3PL bid pack
+      contains: A request for pricing on peak volume, a site-visit checklist, a bid comparison and agreement terms to demand.
+    - name: Inbound tracker
+      contains: A shared sheet for every stock order, update rules, a forwarder quote comparison and an advance shipping notice.
+    - name: Bill audit
+      contains: A line-by-line match of the invoice, overcharges, on-time and pick-time checks, a dispute note and a score out of 100.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Forecast peak orders
     text: Splits revenue into new and returning customers, adds seasonality and your calendar of sales, and shows the gap to your target.

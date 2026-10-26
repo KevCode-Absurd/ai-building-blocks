@@ -1,6 +1,6 @@
 new_slug: niche-readiness-checker
 name: "Niche readiness checker"
-summary: "Paste your offer and how customers found you. Get a verdict, a one-line niche statement and next step."
+summary: "Check if your focus is narrow enough to grow. Paste your offer and how customers found you to get a niche statement and a verdict."
 job: test-an-idea
 thinking: medium
 thinking_why: "It counts and weighs evidence, but the tests are fixed."
@@ -17,6 +17,10 @@ when:
   - "Most of your sales come from people who already know you."
   - "You sell several things and cannot say what you are known for."
   - "You are about to add a new offer or a new customer type."
+not_for:
+  - "You have no paying customers yet: talk to ten likely buyers first, or do simple market research, then come back."
+  - "You want a new product idea: use a plain brainstorm with your AI or a few customer calls instead."
+  - "You only need ad or website copy: write that from your existing brand notes, not from a niche check."
 
 you_give:
   - "What you sell, at what price and to whom"
@@ -33,6 +37,28 @@ how_to_use:
   - "Paste your offer and a list of customers with how each found you."
   - "Check the cold count against your own memory and correct any wrong tie."
   - "Use the next step as your goal for the next month."
+output_sample:
+  input:
+    - What you sell, your price range and who buys it
+    - A list of paying customers and how each one found you
+    - Reviews, call notes or emails (optional)
+  output:
+    - name: Customer table
+      contains: Each paying customer with the date, how they found you and any tie to you.
+    - name: Cold count
+      contains: How many customers came with no tie to you, and why others were set aside.
+    - name: Warning signs
+      contains: Four signs of a blurred focus, each marked yes, no or unsure with evidence.
+    - name: Niche sentence
+      contains: One line naming the pain you solve, the customer you serve and how to find them.
+    - name: Offer list
+      contains: Each other offer marked keep, pause or drop, with one line of reason.
+    - name: Next step
+      contains: A target to double your cold customers, or one place to build momentum first.
+    - name: Verdict
+      contains: Ready, close or not yet, with the two facts behind it.
+    - name: Missing and checks missed
+      contains: Gaps in what you gave, and any checks the skill could not pass.
 
 how_it_works:
   - title: "Lists customers"

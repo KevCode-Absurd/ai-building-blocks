@@ -1,6 +1,6 @@
 new_slug: four-filter-decision
 name: Put a deal, hire or purchase through four filters
-summary: Describe a deal, hire or purchase. Get it tested on knowledge, staying power, people and price, then a clear call.
+summary: Test a deal, hire or purchase on what you know, staying power, people and price. You get a clear yes, no or too-hard call.
 job: plan-strategy
 thinking: high
 thinking_why: It judges four separate questions and weighs them together. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to sign a contract, hire a senior person or buy a business, tool or stake.
   - Someone is pushing you to decide fast on something you only partly understand.
   - You want a fixed way to say no, so you stop being talked into things.
+not_for:
+  - "You are making a small, routine purchase: just decide yourself, or ask a friend you trust."
+  - "You only want to know if a price is fair: use the Business asset value estimator."
+  - "You want to check if someone's advice can be trusted: use the Advice credibility checker."
 you_give:
   - What you are considering, in a few lines, and the years that matter
   - What you have done, studied or read about the field
@@ -31,6 +35,31 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Answer the first step honestly. If it says pass, read the reason before you ask it to carry on.
   - Bring the best chances you saw in the last year to the last step, so the call has something to compare with.
+output_sample:
+  input:
+    - A few lines on the deal, hire or purchase, and the years that matter
+    - What you have done, studied or read about the field
+    - What you know about the people involved and how they are paid
+    - What you would get over time and what it costs
+    - Your best alternative use of the same money or time (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack zip for this workflow
+  output:
+    - name: step-01-circle-of-competence-mapper.md
+      contains: The parts of the deal rated known, partly known or not known, your edge, and a basket of in, learn first or pass.
+    - name: step-02-staying-power-checker.md
+      contains: What protects it, how long a rival needs to copy it, the main threat, the technology test and a grade.
+    - name: step-03-people-trust-checker.md
+      contains: A verdict on the people's ability, honesty, reliability and owner mindset, with questions to ask others.
+    - name: step-04-price-against-value-checker.md
+      contains: A low, middle and high value, a walk-away price and the alternative to beat. Not personal financial advice.
+    - name: step-05-failure-first-plan-check.md
+      contains: What would guarantee failure, the survival risks and the changes to make to the plan.
+    - name: step-06-yes-no-too-hard-call-writer.md
+      contains: A yes, no or too-hard call, the size of the commitment, what would change it and a review date.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Do you understand it?
     text: Splits it into parts, rates each by what you have done, finds the edge and picks a basket.

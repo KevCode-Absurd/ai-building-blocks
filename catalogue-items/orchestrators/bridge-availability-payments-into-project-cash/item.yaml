@@ -1,15 +1,13 @@
 slug: bridge-availability-payments-into-project-cash
 name: Bridge availability payments into project cash
-summary: A contract payment and project cash eligibility bridge
+summary: "Turn a certified availability payment into project cash available for debt service, with deductions, caps and receipt timing checked."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - availability-payment-deduction-checker
   - project-cash-available-bridge

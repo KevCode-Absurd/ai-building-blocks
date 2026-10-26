@@ -1,0 +1,150 @@
+name: Multi-Agent Systems Architect agent
+summary: Design a team of AI agents that holds up in real use, with each agent's job, limits, failure plan and the points where a person signs off.
+headline: Multi-Agent Systems Architect agent
+subhead: Describe the job you want a team of AI agents to do and the tools and data they could touch. It designs who does what, what each agent may access, what happens when one fails and where a person must approve. You get a design to review before anyone builds it.
+job: set-up-ai
+thinking: high
+thinking_why: It traces how one bad output spreads through several agents and plans recovery for each. Use a model that reasons step by step and says when a fact is missing.
+explain: |-
+  A team of AI agents can look great in a demo. Then one agent times out, or returns a confident wrong answer, and the agents after it build on that mistake. Most teams find this out in production.
+
+  This agent designs a multi-agent system like software that must survive failure. First it picks a shape: a simple chain, agents working side by side, one lead agent handing out tasks, a draft and review loop, or agents talking freely. It leans to the lead-agent shape, because free talk is the hardest to debug. Then it gives each agent a written contract: what it receives, what it makes and what it is not allowed to do. It lists every way each step can fail, and gives each a recovery path, ending in a person if all else fails.
+
+  It also limits access so each agent gets only the tools and data its job needs, plans what context passes between agents so nothing important is cut quietly, and places human approval where an action cannot be undone. It writes a design only. The profile's rules of thumb, such as chain length and test counts, are the author's guidance, not measured facts.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You plan to chain several AI agents, such as research, write and review, and want to know where it could break.
+  - Your agent demo works but gives odd results on messy real input.
+  - You have to decide which agents may send email, edit data or spend money, and which need a person's approval.
+  - An agent team gave a wrong answer and you cannot tell which agent caused it.
+not_for:
+  - You use one AI with one prompt and no handoffs. Use the Prompt Engineer agent.
+  - You want a team of agents to build software for you. Use the Agents Orchestrator agent.
+  - You need deep design of agent identity, signed permissions and tamper-proof logs. Use the Agentic Identity & Trust Architect agent.
+  - You want to plan a tool server so your AI can use an app. Use the MCP Builder agent.
+  - You want it to run, test or monitor your agents. It writes the design. Your developers build and test it.
+you_give:
+  - The job the agent team must do, in plain words, and what a good result looks like.
+  - The agents or roles you have in mind, if any (optional)
+  - The tools and data each step may need, such as email, a database or web search.
+  - Which actions cannot be undone, such as sending email, paying or deleting data.
+  - How much work it must handle and how fast, such as 50 requests a day (optional)
+  - The AI tools or framework you use, if you know (optional)
+you_get:
+  - A pipeline map that names the shape and why it fits.
+  - A contract for each agent with what it receives, makes, may use and is not responsible for.
+  - A permission table showing which agent can use which tool and data.
+  - A failure table with a recovery path for each step, ending with a person.
+  - A list of approval points, and a log and test plan to check it before launch.
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write the job, the steps you imagine, the tools and data each step needs, and the actions that cannot be undone. No code access is needed.
+  - Type "Design this agent team. Draw the pipeline first. List how each step can fail. Mark every assumption."
+  - Read the failure table first. For each step ask "what happens if this returns nothing or nonsense?" and fix any gap.
+  - Check the permission table. If an agent has a tool it does not need, remove it.
+  - Give the design to a developer. They build it and run the test cases. The AI does not run any agent.
+how_it_works:
+  - title: Pick the shape
+    text: It compares a chain, side-by-side agents, a lead agent, a draft and review loop and free talk, and picks the simplest one that fits.
+  - title: Write each agent's contract
+    text: For each agent it writes what it receives, what it makes, what it must not do, its tools and its context limit.
+  - title: Plan the context
+    text: It decides what passes from one agent to the next and checks the biggest case fits. It halts rather than cut required facts.
+  - title: List the failures
+    text: It names every way a step can fail, from a timeout to a confident wrong answer, with detection and a recovery path.
+  - title: Limit access and place approvals
+    text: It gives each agent only the tools it needs, treats outside text as untrusted, and puts a person at risky or low-confidence points.
+  - title: Plan logs, tests and cost
+    text: It sets what to log per call, the tests to pass before launch and a cost cap per run.
+output_shape: |-
+  SCOPE
+    Job <one line> | Constraints <list> | Irreversible actions <list> | Assumptions <list>
+
+  PIPELINE MAP
+    <shape> | <why it fits> | <agent A> to <agent B> to <agent C>
+
+  AGENT CONTRACTS
+    <agent> | Receives <fields> | Makes <fields> | Not responsible for <list> | Tools <list> | Context limit <size>
+
+  PERMISSION TABLE
+    <agent> | <tool or data> | <allowed, read-only or denied>
+
+  CONTEXT PLAN
+    <hand-off> | <what passes> | <what is kept word for word> | <what happens if it does not fit>
+
+  FAILURE AND RECOVERY TABLE
+    <step> | <failure> | <how it is detected> | <recovery: retry, backup, plain fallback, person>
+
+  APPROVAL POINTS
+    <action> | <why a person approves> | <what happens if no one answers>
+
+  LOGS, TESTS AND COST
+    <what to log per call> | <tests to pass before launch> | <cost cap per run>
+
+  GAPS AND CHECKS
+    <missing fact> | <why it matters> | <who decides>
+output_sample:
+  input:
+    - The job the agent team must do and what a good result looks like
+    - The tools and data each step may need
+    - Actions that cannot be undone
+    - The agents or roles you have in mind, and your framework (optional)
+  prerequisites:
+    - A developer to build and test the design. This agent only plans.
+  output:
+    - name: Pipeline map
+      contains: The chosen shape, why it fits, and how the agents connect.
+    - name: Agent contracts
+      contains: For each agent, what it receives, makes, may use and must not do.
+    - name: Permission table
+      contains: Which agent may use which tool or data, and what is read-only or denied.
+    - name: Context plan
+      contains: What passes between agents, what stays word for word and what happens if it does not fit.
+    - name: Failure and recovery table
+      contains: Each way a step can fail, how you would spot it and the recovery path.
+    - name: Approval points
+      contains: The actions a person must approve, and what happens if no one answers.
+    - name: Logs, tests and cost
+      contains: What to record per call, the tests to pass before launch and a cost cap per run.
+    - name: Gaps and checks
+      contains: Missing facts and open choices, with who should decide each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A strong reasoning model finds more failure cases. No code running or web access is needed.
+  inputs:
+    - A diagram or short note on the steps you imagine.
+    - Two or three real, messy examples of the input the team will get.
+    - A list of tools and accounts the agents could reach today.
+terms:
+  - term: AI agent
+    meaning: An AI that takes steps on its own, such as calling a tool or writing to a file.
+  - term: Pipeline
+    meaning: Several agents or steps that pass work along in order or in parallel.
+  - term: Contract
+    meaning: A written rule for one agent, covering what it gets, what it makes and what it must not do.
+  - term: Fallback chain
+    meaning: The order of backups when a step fails, ending with a simple plain result and then a person.
+  - term: Human sign-off
+    meaning: A point where a person must approve before the next step runs.
+  - term: Context
+    meaning: The text and facts an AI can see when it answers.
+tweaks:
+  - what: Size
+    how: Say how many agents you want. Two or three agents need a simpler design than seven.
+  - what: Risk
+    how: Say what the worst wrong action would cost. That sets where approvals go.
+  - what: Speed
+    how: Say how fast results must come back. Agents side by side are faster but harder to merge.
+improve:
+  - Keep each design with the failure cases you test. Add a case every time the team gives a wrong answer.
+  - Rerun it when you add an agent or give one a new tool.
+  - Pair it with the Agentic Identity & Trust Architect agent when agents handle money or private data.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

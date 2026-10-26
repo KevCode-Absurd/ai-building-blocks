@@ -10,9 +10,13 @@ level: intermediate
 inputs:
   - type: source_text
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: copy_draft
     required: true
+  - type: brief
+    required: false
 uses: []
 origin: imported
 source:

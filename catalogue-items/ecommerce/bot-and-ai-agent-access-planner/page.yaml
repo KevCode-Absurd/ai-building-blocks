@@ -1,6 +1,6 @@
 new_slug: bot-and-ai-agent-access-planner
 name: "Bot and AI agent access planner"
-summary: "Describe your traffic, logins and checkout. Get which bots and AI agents to allow, check or block."
+summary: "Plan which bots and AI agents to allow, check or block on your store. Give it your traffic and flows. You get a policy, limits and alerts."
 job: protect-your-store
 thinking: high
 thinking_why: "It balances letting real shoppers and useful agents in against stopping abuse, across several flows. A stronger model handles the trade-offs better."
@@ -17,6 +17,10 @@ when:
   - You see failed logins, odd order bursts or small test charges and want a plan.
   - You want AI shopping assistants to find your products but not to scrape or abuse them.
   - You run drops, limited stock or gift cards that bots like to target.
+not_for:
+  - "Your store has no login, sign-up or checkout of its own: skip this and rely on your platform's own bot settings."
+  - "You are a small hosted store with little traffic: switch on your platform's bot protection and set alerts first. Come back when you see real abuse."
+  - "You only want to decide which AI readers may copy your site text: use the AI crawler access editor."
 
 you_give:
   - Your traffic sources and any bot or firewall tool already in place
@@ -37,6 +41,30 @@ how_to_use:
   - Paste any counts you have, such as failed logins per hour. With none, start by collecting one week of counts.
   - Turn on your platform's own bot protection first, then add the rules the plan lists.
   - Review the counts each month and bring them back to the skill.
+output_sample:
+  input:
+    - Your store size and platform
+    - "Which pages are public: cart, checkout, login, gift card, search"
+    - Signs you have seen, such as failed logins or small test charges
+    - Whether you want AI shopping assistants to find and buy your products
+    - Failed-login counts per hour and top source addresses (optional)
+  output:
+    - name: Your size and setup
+      contains: Your traffic, platform, tools already in place and what you can set yourself.
+    - name: Visitor policy
+      contains: Who is permitted, verified, challenged or prevented, and what triggers each level.
+    - name: Rules by flow
+      contains: For each flow, what to count, the limit per account and per address, and what happens next.
+    - name: Messages
+      contains: Exact wording for failed sign-in, forgot password and sign-up replies.
+    - name: Alerts
+      contains: Signals to watch, the level to alert at and who is told.
+    - name: Plan by week
+      contains: What to do in weeks 1 to 4, 3 to 6 and 5 to 12.
+    - name: Monthly review
+      contains: Counts to read each month and a twice-yearly test on a staging copy.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any facts you did not give.
 
 how_it_works:
   - title: Sizes your situation

@@ -54,15 +54,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Find the worst drop-off.** Use the skill `sales-funnel-drop-off-finder`. Shows which step loses the most buyers and which page owns the leak.
+1. **Find the worst drop-off.** Use the skill `sales-funnel-drop-off-finder`. Shows which step loses the most buyers and which page owns the leak. Step 2 checks that page.
 
 Pause here: Fix the worst step it found and save the updated page.
 
-2. **Find the doubts the page leaves open.** Use the skill `customer-question-finder`. Checks the fixed page against real customer questions and says where each answer goes.
+2. **Find the doubts the page leaves open.** Use the skill `customer-question-finder`. Uses your customer words and your page (the one step 1 found leaking), not step 1's report. Hands step 3 the unanswered doubts and where each answer goes.
 
 Pause here: Add the answers to the page, then export visits and orders for the last few weeks.
 
-3. **Size the test.** Use the skill `ab-test-traffic-checker`. Says whether your traffic can prove the new page works and how many weeks that takes.
+3. **Size the test.** Use the skill `ab-test-traffic-checker`. Give it the objection map from the steps before. Uses your own visits and orders, and takes the page change from step 2 as the thing to test. Says whether your traffic can prove it and how many weeks that takes.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

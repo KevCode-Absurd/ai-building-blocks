@@ -1,6 +1,6 @@
 new_slug: ab-test-traffic-checker
 name: "A/B test traffic checker"
-summary: "Paste visits, orders and revenue. Get the test size, weeks needed and a readiness score out of 100."
+summary: "Check if your site has enough visitors for an A/B test. Paste visits, orders and revenue to get the weeks needed and a readiness score out of 100."
 job: audit-landing-page
 thinking: high
 thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
@@ -17,6 +17,10 @@ when:
   - Someone says "our conversion rate dropped" and wants a redesign.
   - You changed a page and want to know if it worked.
   - You're thinking about A/B testing and want to know if you have the traffic for it.
+not_for:
+  - "Your site gets only a few hundred visits a week: ship the obvious fixes and compare revenue per visitor before and after, or ask a person to review the page."
+  - "You want a full review of what is wrong on the page: use the Landing page auditor."
+  - "You have no analytics or order numbers yet: set up tracking first, because this needs real visits and orders."
 
 you_give:
   - Visits, orders or sign-ups, and revenue, with the start and end dates
@@ -36,6 +40,29 @@ how_to_use:
   - Add the split by traffic source if your analytics shows it.
   - Say what you're trying to decide, such as "did the new page work?" or "can we A/B test the plan box?".
   - Check which figures are marked "your data" and which are "rule of thumb" before you quote any of them.
+output_sample:
+  input:
+    - Your visits, orders or sign-ups, and revenue, with start and end dates
+    - Your numbers split by traffic source or device (optional)
+    - The change you would test and the smallest lift worth acting on (optional)
+    - Your margin per order (optional)
+  prerequisites:
+    - Numbers from your analytics or store for one closed date range
+  output:
+    - name: Window
+      contains: The dates your numbers cover.
+    - name: Numbers table
+      contains: Conversion rate, average order value and revenue per visitor, each with its sum, for the whole window and each group.
+    - name: Read
+      contains: Four to six lines on what moved, what the traffic mix explains and what is still unknown.
+    - name: Test sizing
+      contains: The lift used, the sum written out, visitors needed per version and in total, and days at your traffic.
+    - name: Verdict
+      contains: Can test, test a bolder change, or ship and watch.
+    - name: Test readiness score
+      contains: How much of the needed visitors your page reaches in 28 days, as a score out of 100.
+    - name: Next 3 actions
+      contains: Three steps, each tied to one of your numbers.
 
 how_it_works:
   - title: Works out the honest numbers

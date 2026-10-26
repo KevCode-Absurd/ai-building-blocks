@@ -1,6 +1,6 @@
 new_slug: quarterly-store-security-keeper
 name: Quarterly store security keeper
-summary: Give it your staff, apps and chargeback numbers each quarter. Get your score against last quarter and fixes to do first.
+summary: Run a quarterly store security check. Give it your staff, apps and chargeback numbers. Get your score against last quarter and a ranked fix list.
 job: protect-your-store
 thinking: medium
 thinking_why: It runs a scored checklist and picks deeper checks from the result. A mid-range model is enough.
@@ -14,6 +14,10 @@ when:
   - You run a store with staff, contractors or several apps and nobody checks access on a schedule.
   - You want to know if your security basics improved since last quarter.
   - Chargebacks or fake orders are rising and you want to know if rules need changing.
+not_for:
+  - "You think someone has broken into your store or leaked customer data: contact your platform's support and a qualified security professional first."
+  - "You want it to remove access or change settings for you: it only lists fixes and waits for your yes, so make the changes yourself in your platform's admin pages."
+  - "You run a small store with one owner, no staff and few apps: a quick look at your admin list and two-step sign-in each quarter is enough."
 you_give:
   - Everyone with admin or staff access, their role and any contractor end dates
   - Your installed apps and what data each can read
@@ -31,6 +35,31 @@ how_to_use:
   - Read the fix list and do the "today" items first.
   - Tell the agent which fixes you made. It re-checks only those and shows the new score.
   - Run it again next quarter. It compares with the saved score.
+output_sample:
+  input:
+    - Everyone with admin or staff access, their role and contractor end dates
+    - Your installed apps and what data each can read
+    - How staff sign in and how recovery works
+    - Monthly orders and chargeback numbers (optional)
+    - Your domains and who can log in to the registrar (optional)
+  prerequisites:
+    - An AI that can save files in a folder, such as Claude Code
+    - Last quarter's history file, if you have run it before
+  output:
+    - name: SCORE
+      contains: Your score out of 100 this quarter against last quarter, with the sum shown.
+    - name: WHAT MOVED
+      contains: Each check marked better, worse, the same, or still open after two quarters.
+    - name: FIX LIST
+      contains: Fixes grouped as do today, do this month and do this quarter, each with its check and time.
+    - name: DEEPER CHECKS
+      contains: Which deeper checks ran and why, and which were skipped and why.
+    - name: NEXT QUARTER
+      contains: One to three things to watch that decide which checks run next time.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or the word none.
+    - name: FILES AND MISSING
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Read last quarter
     text: Opens the saved history of scores and fixes, or marks this as the baseline run.

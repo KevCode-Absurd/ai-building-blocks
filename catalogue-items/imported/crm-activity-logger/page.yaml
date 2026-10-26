@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It fills a fixed record from your notes.
 new_slug: crm-activity-logger
 name: CRM activity logger
-summary: Describe a call or email. Get a ready entry on the right account and
-  deal, saved when you say so.
+summary: Log a call, meeting or email in your CRM without typing it. Give a short description. You get a draft entry to review, saved when you say so.
 job: sell-and-negotiate
 headline: CRM activity logger
-subhead: A call, meeting or email logged to the right account, contact and deal
-  in your CRM, shown to you first and saved only when you say so.
+subhead: A call, meeting or email logged to the right account, contact and deal in your CRM, shown to you first and saved only when you say so.
 explain: |
   A call, meeting or email logged to the right account, contact and deal in your CRM, shown to you first and saved only when you say so. It turns a quick description or transcript into a clean entry.
 
@@ -17,6 +15,10 @@ when:
   - You have a meeting transcript to log against a deal.
   - You want to see what has been logged on an account.
   - Your team forgets to log emails to prospects.
+not_for:
+  - "You want to plan a future meeting or a to-do: make a task in your CRM instead."
+  - "Your AI cannot write to your CRM: use the paste-ready entry this skill gives you and add it yourself."
+  - "You want to change a deal's stage or next step: edit the deal in your CRM by hand."
 you_give:
   - Description or transcript of the interaction
   - Account or contact name
@@ -28,8 +30,25 @@ you_get:
   - Preview before saving
   - Saved record check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can read and write to your CRM.
+output_sample:
+  input:
+    - A short description of the call, meeting or email, or a transcript
+    - The account or contact name
+    - When it happened (optional)
+    - The outcome or next step (optional)
+  prerequisites:
+    - A CRM connected to your AI, to find records and save the entry (without it you get paste-ready text)
+  output:
+    - name: Matched records
+      contains: The account, contact and open deal the conversation belongs to, with links. You are asked if more than one fits.
+    - name: Drafted entry
+      contains: A subject, type, date, three to six bullet summary and the related records, shown as it will be saved.
+    - name: Saved activity
+      contains: The entry saved as a completed activity once you ask for it, or paste-ready text if writing is off.
+    - name: Check of the saved record
+      contains: A re-read of the record confirming its subject, date, related records and link.
+    - name: Recent activity list
+      contains: In read mode, the last 20 or so activities on an account, newest first, with a note on gaps over 14 days.

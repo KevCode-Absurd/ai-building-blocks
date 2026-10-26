@@ -1,0 +1,41 @@
+slug: agency-specialized-codebase-archaeologist
+name: Codebase Archaeologist agent
+summary: "Find silent mismatches in code built over many AI sessions, such as reversed fallbacks, duplicate logic and stale docs, ranked by risk with files named."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-codebase-archaeologist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-codebase-archaeologist.md
+  licence: MIT
+  original_name: Codebase Archaeologist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: c1b2c22711cb6e74dd834f831d6a8b3f10c93cd462722073b01acae9d0a40700
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Codebase Archaeologist
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Codebase Archaeologist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-codebase-archaeologist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

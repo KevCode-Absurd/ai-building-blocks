@@ -2,18 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: learning-mistake-coach
 name: Learning mistake coach
-summary: Share a repeated mistake. Get a clear correction, a fresh example and a
-  question that checks your understanding.
+summary: Fix a mistake you keep making while learning. Share your wrong answer and get a clear correction, a fresh example and a check question.
 job: study-and-practice
 headline: Learning mistake coach
-subhead: Share the explanation you keep getting wrong and what you have already
-  tried. It checks the belief behind the mistake, then chooses a matching
-  correction. You get a clearer model, a worked example and a fresh question to
-  try.
-explain: Share the explanation you keep getting wrong and what you have already
-  tried. It checks the belief behind the mistake, then chooses a matching
-  correction. You get a clearer model, a worked example and a fresh question to
-  try.
+subhead: Share the explanation you keep getting wrong and what you have already tried. It checks the belief behind the mistake, then chooses a matching correction. You get a clearer model, a worked example and a fresh question to try.
+not_for:
+  - "You have not learned the idea yet and need a first lesson: ask your AI to teach the concept from scratch."
+  - "The error is a one-off slip, like a typo or a wrong click: just fix it and move on."
+  - "The problem comes from your setup or tools, not your understanding: ask your AI to help debug the setup."
+explain: Share the explanation you keep getting wrong and what you have already tried. It checks the belief behind the mistake, then chooses a matching correction. You get a clearer model, a worked example and a fresh question to try.
 you_give:
   - Your incorrect answer or explanation in your own words.
   - The topic and examples of the same mistake happening again.
@@ -29,9 +26,30 @@ how_it_works:
   - title: Step 3
     text: Explain the corrected idea and test it in a new case.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI the topic. Paste your wrong answer in your own words.
+  - Add earlier times you made the same mistake, if you have them.
+  - Read how it describes your belief. Say yes or fix it before it goes on.
+  - Answer the check question in your own words. Your AI will tell you if the mistake is still there.
+  - If the mistake stays after two tries, ask for guided questions that expose the clash in your thinking.
+output_sample:
+  input:
+    - Your wrong answer or explanation, in your own words
+    - The topic you are trying to learn
+    - Earlier times you made the same mistake (optional)
+    - The correct idea, if you know it (optional)
+  output:
+    - name: Mistake type
+      contains: Whether the mistake is about a label, a cause and effect link, or a deeper wrong model, with evidence from your answer.
+    - name: Your belief, restated
+      contains: Your wrong idea written back to you without judgment, so you can confirm it is what you think.
+    - name: Root cause
+      contains: What likely led to the mistake, such as a bad analogy, vague wording or a missing basic idea.
+    - name: Correction
+      contains: A clear definition, a step by step trace or guided questions, matched to the mistake type.
+    - name: Replacement model
+      contains: The correct idea stated plainly, with an example that only works if the correct idea is true.
+    - name: Check question
+      contains: A new case for you to solve and explain, to show the new idea has stuck.
+    - name: Practice plan
+      contains: What to practise next so the corrected idea holds.

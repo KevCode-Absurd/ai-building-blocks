@@ -1,6 +1,6 @@
 slug: stress-test-a-case-competition-recommendation
 name: Stress test a case competition recommendation
-summary: Share the source files. Get a revised case deck, financial bridge and challenge register.
+summary: Stress test your case competition deck against the rubric. Get a revised deck, a financial bridge that ties to the exhibits and a challenge register.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,10 +8,8 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: source_text
-    required: false
+    required: true
   - type: copy_draft
     required: false
 outputs:
@@ -23,9 +21,9 @@ uses:
   - unsupported-claim-spotter
 steps:
   - uses: case-competition-slide-deck-builder
-    note: Follow the actual case framework and checked build adapter. Challenge alternatives, supply real chart data, reconcile the financial bridge and preserve assumptions and sources. Build the editable deck only with the required tools.
+    note: Rebuild the deck answer first, with real chart values. Tie each scenario total to its exhibit and list any mismatch as MISSING. Build the file with launch-tools/build_case.py when Python is available, or return an outline. Hands the final slide text, the bridge and the exhibits to step 2.
   - uses: unsupported-claim-spotter
-    note: Read the final slide text and source exhibits. Flag unsupported market claims, fabricated customer evidence and scenarios presented as forecasts.
+    note: Read the final slide text against the exhibits. List every market claim, customer claim and forecast that no exhibit supports, ranked by risk, with the source that would settle each. This is the challenge register.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -41,3 +39,4 @@ credits:
     url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
     used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
 warnings: []
+needs_mode: manual

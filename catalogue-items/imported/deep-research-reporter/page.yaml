@@ -2,37 +2,78 @@ thinking: high
 thinking_why: It splits the question, compares sources and synthesises.
 new_slug: deep-research-reporter
 name: Deep research reporter
-summary: Give it a topic. Get a report cross-checked across many sources, with
-  conflicts noted and sources listed.
+summary: Get a research report on any topic, checked across many sources. It shows where sources agree or clash, flags single-source claims and lists every link.
 job: test-an-idea
 headline: Deep research reporter
-subhead: Give it a topic or question and any focus areas or source types you
-  prefer. It splits the question into three to six sub-questions and searches
-  academic, official, news and industry sources for each. You get an executive
-  summary, sections by theme, the conflicts and gaps it found and a source list.
+subhead: Give it a topic or question. Your AI splits it into three to six sub-questions, searches different kinds of sources for each, and compares what it finds. You get a summary, sections by theme, disputes and gaps, and a source list.
 explain: |
-  A report on any topic that has been checked against many sources, with the findings and the sources listed. It aims to replace a single search result with a cross-checked answer.
+  This deep research reporter turns one question into a cross-checked briefing. It is a way to do multi-source research, with a report you can hand to a manager, instead of one search result.
 
-  It breaks your question into three to six sub-questions covering different angles. For each one it searches across source types: academic, official documents, reputable news and industry reports. Key claims, numbers and quotes are pulled into notes. Then it compares sources, marks where they agree or conflict, and flags any claim that rests on one source. The final report has a summary, sections per theme and a citation list, and is re-read for gaps before you see it.
+  First it breaks your question into three to six sub-questions, each one a different angle, such as the current state, the main players and the open problems. For each one it looks at several kinds of source: official documents, research papers, reputable news and industry reports.
+
+  Then it compares them. Where sources agree, it says so. Where they clash, it shows both sides and calls the point disputed. A claim that rests on one source is flagged. It opens every source it cites, and drops any it cannot open and confirm, so the list is real.
 when:
-  - You need a briefing on a market or technology by tomorrow.
+  - You need a briefing on a market or a technology by tomorrow.
   - You want facts checked across more than one website.
   - A manager asks for a summary with sources they can open.
   - You want to know where experts disagree on a topic.
+not_for:
+  - You need a quick fact or a single answer. Use a normal search or ask your AI directly.
+  - You want a cited report where each claim is checked against a quote. Use the Cited research report writer.
+  - You are sizing a market. Use the Market research report writer, which shows its assumptions and ranges.
+  - You are weighing a high-stakes decision. Use the Decision research investigator.
 you_give:
-  - Research topic or question
-  - Focus areas or sub-questions (optional)
-  - Depth and length (optional)
-  - Preferred source types (optional)
+  - Your research topic or question
+  - Sub-questions or focus areas (optional)
+  - How deep and how long you want the report (optional)
+  - Source types you prefer, such as official or academic (optional)
 you_get:
-  - Sub-question plan
-  - Executive summary
-  - Sections by theme
-  - Conflicts and gaps noted
-  - Source list
+  - A list of the sub-questions it will research
+  - An executive summary
+  - One section for each theme
+  - Conflicts and gaps, with disputed claims labelled
+  - A source list with link, author and date for each
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open an AI that can search the web, such as Claude, ChatGPT or Gemini with search on, and paste in the skill.
+  - Paste your question. Add focus areas, how long the report should be and any sources you trust.
+  - Read the sub-question plan first. Add, cut or reword any before the research starts.
+  - Open three or four of the cited links yourself. Each one should say what the report says it does.
+  - Remove any claim that has no working source. Check the date on anything that changes fast.
+  - Without web access, the AI can only write from what it already knows. It must say so and mark every claim as unchecked.
+output_sample:
+  input:
+    - Your research topic or question
+    - Focus areas or sub-questions (optional)
+    - Depth, length and preferred source types (optional)
+  prerequisites:
+    - An AI with web search turned on, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Sub-question plan
+      contains: Three to six angles on your question, each one a question the research will answer.
+    - name: Executive summary
+      contains: The main findings in one short section, matching the detail below it.
+    - name: Sections by theme
+      contains: Findings grouped by theme, each claim tagged with its source.
+    - name: Conflicts, gaps and limits
+      contains: Where sources disagree, claims with one source only, and what could not be found.
+    - name: Source list
+      contains: Each source's link, author, date and a line on what it was used for.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search on
+      why: It needs live search to find and open real sources.
+    - name: A built-in deep research mode, if your AI has one
+      why: It can run longer and read more sources. Still open the links yourself.
+  inputs:
+    - The decision the report feeds, so the AI can pick the right angles.
+    - A date range, if only recent sources matter.
+    - A list of sources you already trust.
+terms:
+  - term: Sub-question
+    meaning: One narrower question that covers a single angle of your main question.
+  - term: Cross-checking
+    meaning: Comparing sources against each other to see where they agree or clash.
+  - term: Disputed
+    meaning: A label for a claim where trusted sources disagree and no verdict is safe.
+  - term: Primary source
+    meaning: The original document or data, such as an official page, not someone's summary of it.

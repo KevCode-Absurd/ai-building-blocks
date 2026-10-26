@@ -1,6 +1,6 @@
 new_slug: cost-per-sellable-unit-finder
 name: "Cost per sellable unit finder"
-summary: "Paste a factory quote and your other costs. Get cost per sellable unit and a go or no-go."
+summary: "Find your cost per sellable unit from a factory quote, freight, duty and fees. You get your real margin, ad room and a go, hold or no-go call."
 job: plan-supply-chain
 thinking: low
 thinking_why: "It adds known costs and divides by units that pass."
@@ -17,6 +17,10 @@ when:
   - "You have a factory quote and no true cost yet."
   - "You are about to place a first order."
   - "Freight or duty changed and you want the new margin."
+not_for:
+  - "You already landed the goods and want the true cost: use your accounting books, where the real bills sit."
+  - "You need a full landed cost across several countries: use the Landed cost calculator."
+  - "You only want to compare factory quotes side by side: use a simple spreadsheet with one row per factory."
 
 you_give:
   - "Factory price per unit and units ordered (required)."
@@ -35,6 +39,26 @@ how_to_use:
   - "Under it, paste your details: factory price per unit and units ordered; freight bill, duty and tax rate; other costs; selling price; defect share and target margin."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Factory price per unit and units ordered
+    - Freight bill, duty and tax rate
+    - Other costs such as insurance, packing, pick and pack, courier (optional)
+    - Selling price, and whether tax is in or out
+    - Defect share and target margin (optional)
+  output:
+    - name: LAYERS
+      contains: Each cost on its own line, marked as a real quote, looked up or an estimate.
+    - name: COST PER SELLABLE UNIT
+      contains: Total landed spend divided by the units that pass inspection, with units ordered and defects shown.
+    - name: MARGIN
+      contains: Your margin, the price needed for your target margin, and the ad room per order.
+    - name: STRESS TEST (+10% cost)
+      contains: Your margin again after landed cost rises by 10%.
+    - name: VERDICT
+      contains: GO, HOLD or NO-GO, with the reason and the weakest cost layer.
+    - name: MISSING
+      contains: Anything you did not give, so you can add it and run it again.
 
 how_it_works:
   - title: "List every layer"

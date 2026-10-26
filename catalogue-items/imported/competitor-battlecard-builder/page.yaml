@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set tracking method and writes cards.
 new_slug: competitor-battlecard-builder
 name: Competitor battlecard builder
-summary: Name your rivals. Get a tracking plan, sales battlecards and where to
-  position against them.
+summary: Build a competitor battlecard for your sales team. Give it your rivals and get a threat ranking, tracking plan, battlecards and a positioning map.
 job: study-competitors
 headline: Competitor battlecard builder
-subhead: A way to keep watch on your competitors that leads to decisions, plus
-  sales-ready battlecards you can use on calls. It stops competitor tracking
-  from turning into an endless hobby.
+subhead: A way to keep watch on your competitors that leads to decisions, plus sales-ready battlecards you can use on calls. It stops competitor tracking from turning into an endless hobby.
 explain: |
   A way to keep watch on your competitors that leads to decisions, plus sales-ready battlecards you can use on calls. It stops competitor tracking from turning into an endless hobby.
 
@@ -18,6 +15,10 @@ when:
   - Your sales team wants a sheet on one competitor today.
   - You want to know why you win and lose deals.
   - A rival just raised money or changed pricing and you need to respond.
+not_for:
+  - "You want to know if one ad will pass review: use a plain ad checker, not this tracking plan."
+  - "You have no facts about a rival yet: start with the landscape map, which sorts rivals by threat."
+  - "You need live data pulled from rival sites: your AI can't scrape. Check sources by hand or use a paid tool."
 you_give:
   - Your product and customer type
   - Competitor names
@@ -30,7 +31,33 @@ you_get:
   - A positioning map
   - A win and loss summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code or files are needed.
+  - Tell it your product, who it is for and the rivals you know.
+  - "Say what you want first: a landscape map, a battlecard, a win and loss review or a rival update."
+  - Add facts you have, such as call notes, pricing pages and review quotes. Your AI can't browse unless web search is on.
+  - Check each claim in the result against a source. Mark anything you can't confirm as unknown.
+  - Re-run each quarter and after big rival news, such as new funding or a price change.
+output_sample:
+  input:
+    - Your product and who it is for
+    - Names of your rivals
+    - Recent wins and losses (optional)
+    - The result you most need, such as a battlecard or map
+  prerequisites:
+    - Some facts about each rival from their site, reviews or sales calls
+    - A paid account for some sources, such as Crunchbase (optional)
+  output:
+    - name: Competitor landscape
+      contains: Rivals sorted into direct, indirect and future, including doing nothing, placed on a grid of same customer and same problem.
+    - name: Tracking plan
+      contains: Eight areas to watch for each rival, with where to look and how often to check.
+    - name: Battlecard
+      contains: A one-page sheet per rival for sales to read before a call.
+    - name: Positioning map
+      contains: A two-axis chart that shows where you stand against your rivals.
+    - name: Feature gap table
+      contains: A grid showing which features you and each rival have, with your gaps and strengths marked.
+    - name: Win and loss summary
+      contains: Why you win and lose deals, ranked by how often each reason comes up.
+    - name: Rival update
+      contains: What a named rival did lately and how you might respond.

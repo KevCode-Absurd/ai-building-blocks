@@ -1,6 +1,6 @@
 new_slug: post-sale-follow-up-planner
 name: "Post-sale follow-up planner"
-summary: "Paste what you sell and a customer's details. Get a thank-you note and a plan to keep them: schedule, records, referral ask."
+summary: "Plan your post-sale follow-up: give it what you sell and a buyer's details. You get a thank-you note, a dated contact schedule and a referral ask."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "It writes a short note and a schedule from a fixed pattern."
@@ -17,6 +17,10 @@ when:
   - "You just made a sale and have no plan for what comes next."
   - "Your repeat business is lower than you want."
   - "You want referrals and do not know when to ask."
+not_for:
+  - "You are still working on the sale itself: use the Counter demo script writer."
+  - "You made a one-off cash sale and have no way to contact the buyer again: skip it, a plan needs a phone, email or address."
+  - "You want a mass email to your whole customer list: write one message yourself, because this plan is built for one buyer at a time."
 
 you_give:
   - "What you sell and what service you can promise"
@@ -34,6 +38,30 @@ how_to_use:
   - "Add the customer's name, what they bought and anything they told you."
   - "Send the note and put the dates in your calendar."
   - "After each contact, add what you learned to the record."
+output_sample:
+  input:
+    - What you sell and what service you can promise
+    - The customer's name, what they bought and anything they told you
+    - Your contact channels (optional)
+  output:
+    - name: Thank-you note
+      contains: A short personal note to the buyer that names a smart choice, in under 80 words.
+    - name: Open invitation and promise
+      contains: One or two lines inviting contact, with a service promise you can keep.
+    - name: What to record
+      contains: Facts to note about the buyer and where you will keep them.
+    - name: Contact schedule
+      contains: Dated contacts, each with a reason that helps the buyer.
+    - name: If they have a problem
+      contains: Your first move and an opening line so they feel heard.
+    - name: Referral ask
+      contains: When to ask for names of others, and what to say.
+    - name: Buy-again rule
+      contains: When it is fair to mention something new without pressure.
+    - name: Missing
+      contains: Gaps marked where you gave too little detail.
+    - name: Checks missed
+      contains: One line for each check the plan failed, or none.
 
 how_it_works:
   - title: "Writes the thank-you"

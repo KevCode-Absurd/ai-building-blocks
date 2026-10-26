@@ -1,0 +1,144 @@
+name: Video Streaming Engineer agent
+summary: Plan video that starts fast and stops buffering, with a bitrate ladder, HLS and DASH packaging, a CDN plan and quality checks.
+headline: Video Streaming Engineer agent
+subhead: Give it your video type, your viewers' devices and networks, and your latency and cost limits. It plans the encoding steps, the format, the delivery and the checks. You get a streaming design you can hand to your developer or your video host.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Viewers leave when video is slow to start or stops to buffer. This agent plans the whole chain that decides that: how video is encoded, how it is packaged, how it is protected, how it is delivered, and how it plays. It judges every choice by what viewers feel, which is start time, buffering and failed plays, and not by peak picture quality.
+
+  Its method comes from the Agency Agents profile. Build the bitrate ladder for your content, since a talking head and a sports match need different steps. Always include a small first step so playback starts at once. Package once and serve both HLS and DASH, so you do not store two copies. Choose segment length by use case, because shorter segments cut delay but cost more in requests.
+
+  This is an AI role profile shared under MIT. It writes a design and sample commands. It does not encode, test or host video. The profile's targets, such as a first frame in under one second, are goals and not results measured by AI Blocks. Test on real devices and slow networks before you trust any plan.
+when:
+  - You are launching video on demand or a live stream and need to choose encoding steps and formats.
+  - Viewers report buffering, long start times or black screens on some devices.
+  - Your video delivery bill is climbing and you want to cut it without hurting quality.
+  - You must protect paid content and are unsure how DRM fits into playback.
+not_for:
+  - Your live stream is failing right now. Use the Incident Response Commander agent or the SRE (Site Reliability Engineer) agent.
+  - You want to cut, caption or edit clips for social. Use the Short-Video Editing Coach agent.
+  - You want your marketing videos to perform better on a platform. Use the Video Optimization Specialist agent.
+  - You want to cut cloud costs across your whole system. Use the FinOps Engineer agent.
+you_give:
+  - Your video type, such as on demand, live, low-delay live or two-way calls
+  - The devices and networks your viewers use, such as phones, smart TVs and slow mobile
+  - What your source video looks like, such as resolution and content type
+  - Your limits on delay, bitrate and delivery cost
+  - Whether content needs copy protection (optional)
+  - Your current encoder, player and CDN, if you have them (optional)
+you_get:
+  - A bitrate ladder table with a fast-start step and a role for each step
+  - A packaging plan that serves both HLS and DASH from one source
+  - A delay and segment-length choice for your use case, with the trade-off
+  - A copy protection plan that stays out of the start-up path, if you need DRM
+  - A delivery plan covering caching, expiry times and origin protection
+  - A list of quality measures, with a test plan for real devices and slow networks
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then references/source-agent.md.
+  - Describe your video type, viewers, devices and networks, and your delay and cost limits. Add your current encoder, player and CDN if you have them.
+  - Say "Write the streaming design. Ask me once if anything is missing."
+  - Check the ladder first. Does every step make sense for your content and for your slowest viewers?
+  - If it gives ffmpeg commands, run them on a short test clip on your own computer. ffmpeg must be installed, and the agent cannot run it.
+  - Play the test on real phones, TVs and a throttled slow connection before you launch.
+how_it_works:
+  - title: Profile the content and audience
+    text: It notes your content type, devices, networks and whether the stream is on demand or live.
+  - title: Design the ladder
+    text: It sets steps of picture size and bitrate for your content, with a small first step for a fast start.
+  - title: Plan the encoding
+    text: It aligns keyframes across steps so the player can switch quality cleanly, and picks codecs by device reach.
+  - title: Package once
+    text: It plans one CMAF source that serves both HLS and DASH, and a check of both playlists.
+  - title: Plan protection and delivery
+    text: It plans DRM that does not slow start-up, plus caching, expiry times and origin shielding.
+  - title: Plan the measures
+    text: It lists start time, buffering ratio and failed plays, split by device and network, with alerts on the worst group.
+output_shape: |-
+  STREAMING DESIGN: <service or video name>
+
+  PROFILE
+    Type: <on demand, live, low-delay> | Devices: <list> | Networks: <list> | Limits: <delay, cost>
+
+  BITRATE LADDER
+    <step> | <picture size> | <bitrate> | <role>
+
+  ENCODING AND PACKAGING
+    <choice> | <setting> | <why>
+
+  DELAY CHOICE
+    <use case> | <segment length> | <protocol> | <target delay> | <trade-off>
+
+  PROTECTION (if needed)
+    <system> | <how it avoids slowing start-up> | <test on which devices>
+
+  DELIVERY AND CACHING
+    <item> | <setting> | <why>
+
+  QUALITY MEASURES AND TESTS
+    <measure> | <target> | <how to test it> | <network or device group>
+
+  ASSUMPTIONS AND OPEN QUESTIONS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your video type and viewers' devices and networks
+    - Your delay and delivery cost limits
+    - Whether content needs copy protection (optional)
+    - Your current encoder, player and CDN (optional)
+  prerequisites:
+    - ffmpeg installed, if you want to run the sample commands
+    - Real devices and a throttled network for testing
+  output:
+    - name: Profile
+      contains: Your video type, devices, networks and limits, written back so you can correct them.
+    - name: Bitrate ladder
+      contains: Each step with picture size, bitrate and its job, including a fast-start step.
+    - name: Encoding and packaging
+      contains: Keyframe, codec and CMAF choices that serve HLS and DASH from one source.
+    - name: Delay choice
+      contains: Segment length and protocol for your use case, with what you give up.
+    - name: Protection plan
+      contains: How copy protection avoids slowing start-up, and which devices to test it on.
+    - name: Delivery and caching
+      contains: Cache and expiry settings, plus origin protection, with the reason for each.
+    - name: Quality measures and tests
+      contains: Start time, buffering and failed plays, with targets and how to test them.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+  - what: Slowest viewer
+    how: Describe your slowest typical viewer, such as a phone on 3G, so the first step is sized for them.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Bitrate ladder
+    meaning: A set of video versions, from small to large, that the player switches between.
+  - term: HLS and DASH
+    meaning: Two common ways to send video in short pieces that adapt to the viewer's speed.
+  - term: CMAF
+    meaning: One video file format that both HLS and DASH can use, so you store one copy.
+  - term: DRM
+    meaning: Copy protection that locks video to approved players and devices.
+  - term: CDN
+    meaning: A network of servers that sits close to viewers and delivers your video fast.
+  - term: Rebuffering
+    meaning: Playback that stops while the player waits for more video.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A chat can write the design and sample commands. Run ffmpeg and your player tests on your own devices.
+  inputs:
+    - Your viewer stats for devices and connection speeds, if your analytics has them.
+    - A one-minute sample of your hardest scene, such as fast motion, for ladder tests.

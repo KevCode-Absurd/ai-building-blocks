@@ -23,6 +23,33 @@ This skill teaches **deployment principles**, not bash scripts to copy.
 
 ---
 
+## What you need
+
+Ask once for anything not given:
+
+- What is being released (static site, web app, API, microservices, serverless).
+- Where it runs (Vercel, Netlify, Railway, Render, a server with PM2 or Docker, Kubernetes).
+- Whether the release changes the database.
+- Who is affected if it breaks, and the current deploy steps (optional).
+
+## What you hand back
+
+1. Release and host: what, where, database change or not.
+2. Host method: how this host deploys and rolls back (from sections 1 and 5).
+3. Pre-release checks in the four groups (section 2).
+4. Plan in five phases: prepare, back up, deploy, verify, keep or roll back (section 3).
+5. Rollback: the signs that mean undo, and the steps for this host (section 5).
+6. After release: what to check at 5 minutes, 15 minutes, 1 hour and the next day (section 4).
+7. `MISSING:` list for anything not given.
+
+Write the rollback plan before the deploy steps. Give the reason for each step so the person can adapt it.
+
+## If something is missing
+
+Write `MISSING: <what>` and ask once. Never invent the person's host features, commands, URLs or settings. If the host is unknown, give the general plan and say the host steps are not filled in. Say that the plan does not replace testing the rollback on their own setup.
+
+---
+
 ## 1. Platform Selection
 
 ### Decision Tree

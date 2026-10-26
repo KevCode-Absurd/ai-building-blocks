@@ -1,6 +1,6 @@
 slug: hard-no-planner
 name: "Hard no planner"
-summary: "Paste the request you must turn down and why. Get a word-for-word no that keeps trust and points to another path."
+summary: "Turn down a request without losing trust. Get a clear, respectful no with your real reasons, a fairness check and another way forward."
 category: general
 type: skill
 role: make
@@ -15,3 +15,5 @@ version: 1.0.0
 minds: [mary-kay-ash]
 credits:
   - {title: "The Mary Kay Way, Chapter 1: Golden Rule Leadership", by: "Mary Kay Ash", used: "Treating the other person as you would want to be treated, listening and restating, giving real reasons, a direct no, and another route to their goal"}
+next: [feedback-conversation-planner, order-to-request-rewriter]
+needs_mode: manual

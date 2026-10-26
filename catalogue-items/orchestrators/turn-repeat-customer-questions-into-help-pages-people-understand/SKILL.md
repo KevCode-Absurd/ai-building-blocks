@@ -36,11 +36,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Gather what is known.** Use the skill `customer-question-researcher`. For each question, the answer your docs, tickets and chats already give, each source named, with gaps and contradictions marked.
-2. **Write a page per question.** Use the skill `solved-ticket-help-page-writer`. Give it the gathered answers. A help page for each question: the steps in order, what the reader should see after each, and what to do if it fails. Written for someone who has never written in.
-3. **Check the reading level.** Use the skill `text-difficulty-checker`. Give it each page. The reading level of each page, the sentences and words that push it up, and which pages need a rewrite.
-4. **Rewrite the hard pages.** Use the skill `plain-english-editor`. Give it the pages flagged in step 3. Each flagged page rewritten in plain English with the same substance, following George Orwell's rules: short words, active voice, cut what adds nothing.
-5. **Check every page is right.** Use the skill `documentation-checker`. Give it the final pages and your docs. Each page checked as a reader would use it: missing steps, wrong names for buttons or screens, promises your docs do not back. Fixes listed and applied.
+1. **Gather what is known.** Use the skill `customer-question-researcher`. For each question, the answer your docs, tickets and chats already give, each source named, with gaps and contradictions marked. Hands step 2 the sourced answer for each question.
+2. **Write a page per question.** Use the skill `solved-ticket-help-page-writer`. Give it the gathered answers. A help page for each question: the steps in order, what the reader should see after each, and what to do if it fails. Written for someone who has never written in. Hands step 3 the finished pages.
+3. **Check the reading level.** Use the skill `text-difficulty-checker`. Give it each page. The reading level of each page, the sentences and words that push it up, and which pages need a rewrite. Hands step 4 the list of pages to rewrite.
+4. **Rewrite the hard pages.** Use the skill `plain-english-editor`. Give it the pages flagged in step 3. Each flagged page rewritten in plain English with the same substance, following George Orwell's rules: short words, active voice, cut what adds nothing. Hands step 5 the rewritten pages.
+5. **Check every page is right.** Use the skill `documentation-checker`. Give it the final pages and your docs. Each page checked as a reader would use it: missing steps, wrong names for buttons or screens, promises your docs do not back. Fixes listed and applied. This is the final check, so the pages it hands back are the ones to publish.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

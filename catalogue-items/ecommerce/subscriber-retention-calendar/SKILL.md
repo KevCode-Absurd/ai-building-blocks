@@ -35,7 +35,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Subscriber churn** by month or order number (required). With none, start from months 2, 4 and 6 and test.
+- **Subscriber churn** by month or order number (required), or the lapse points found by the Subscription churn auditor. With none, start from months 2, 4 and 6 and test.
 - **Gift options and their cost.**
 - **Campaign calendar** for the next 90 days.
 - **Other products** you could sample or offer as add-ons (optional).

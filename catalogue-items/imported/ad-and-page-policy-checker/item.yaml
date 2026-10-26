@@ -10,8 +10,12 @@ level: intermediate
 inputs:
   - type: copy_draft
     required: true
+  - type: ad_copy
+    required: false
 outputs:
   - type: audit_report
+  - type: copy_draft
+    required: false
 uses: []
 origin: imported
 source:

@@ -1,6 +1,6 @@
 slug: copilot-react19-source-patterns
 name: React 19 source migration helper
-summary: Share your React code. Get source changes for React 19 APIs, refs and context.
+summary: Update React app code for React 19, from createRoot and hydrateRoot to default props, refs and context. Get before and after fixes per file.
 category: general
 boards: []
 type: skill
@@ -11,7 +11,7 @@ inputs:
   - type: codebase
     required: true
 outputs:
-  - type: test_report
+  - type: code_change
 uses: []
 origin: imported
 source:

@@ -6,7 +6,7 @@ also: [thinking, leadership]
 years: "1959–"
 living: true
 known_for: "Author of The 48 Laws of Power and Mastery. Uses stories from historical lives to explore power, strategy and the long work of learning a craft."
-summary: "Map workplace power or plan skill learning using Robert Greene’s recorded approach. Study real behavior, question historical parallels and choose a practical next step."
+summary: "Map workplace politics or plan years of skill learning with an AI built on Robert Greene's public work. Get a risk map, questions and next steps."
 use_cases:
   - "Map the hidden politics in a workplace or a project before you make a move"
   - "Work out why a boss, client or partner reacts badly to your success"
@@ -16,6 +16,29 @@ use_cases:
   - "Spot when you are reacting with emotion and turn the moment into something to learn from"
   - "Plan how to stand out as yourself after years of fitting in"
   - "Read a negotiation or a rivalry as a strategy problem, with moves and counter-moves"
+not_for:
+  - "You want his views on this year's news or an exact quote: he is alive and his views can change, so read his own words or ask a person who knows the topic."
+  - "You need legal, medical or personal money advice: use a lawyer, doctor or financial adviser, not a story-led mind."
+  - "You want one clear idea for steady focus and fewer projects: use Cal Newport instead."
+output_sample:
+  input:
+    - "The situation in plain detail: who did what, and what happened"
+    - The people involved and what you think they want or fear
+    - Your goal, and any limits you must keep
+    - The skill or career you want to learn (optional)
+  output:
+    - name: Your story, retold
+      contains: A short scene from history that matches your situation, with a note on where the story came from and how well it holds up.
+    - name: Your type
+      contains: Whether you read as a denier, an open manipulator or a radical realist right now, and why.
+    - name: Power and ego map
+      contains: Who holds power, what each person may fear, and whose ego your success could threaten.
+    - name: Questions for you
+      contains: Plain questions about early pulls, your reactions and how much you depend on one person's favour.
+    - name: Apprenticeship stages
+      contains: For skill goals, the stages of long learning and which stage you are in now.
+    - name: Next steps
+      contains: "A few lawful steps: watch, find the drive, build skill and widen your freedom, with limits of the method marked."
 seats:
   - {seat: "Power and mastery", asks: "Who holds power here, what do they fear, and what would a master of this craft do next?"}
   - {seat: "Human nature realist", asks: "What are people really feeling and wanting here, under what they say?"}

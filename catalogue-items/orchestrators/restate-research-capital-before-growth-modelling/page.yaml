@@ -1,46 +1,82 @@
 new_slug: restate-research-capital-before-growth-modelling
 name: Restate research capital before growth modelling
 headline: Restate research capital before growth modelling
-summary: Carry an explicit research cohort adjustment consistently into operating reinvestment and terminal assumptions.
+summary: Treat R&D spend as an asset before you model growth. Get a linked workbook with adjusted profit, reinvestment and a long-run growth check.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked analyst research-asset and growth-consistency workbook alongside reported accounts. Share r&D cohorts, accounting treatment, economic life evidence, invested capital, NOPAT/cash taxes, reinvestment and forecast assumptions.
+subhead: Give your AI yearly R&D spend, how long the research pays off, reported profit and invested capital. It spreads each year's R&D over its life, adjusts profit and reinvestment, then checks that long-run growth is paid for. You get a linked workbook and a list of gaps.
 explain: |-
-  A linked analyst research-asset and growth-consistency workbook alongside reported accounts.
+  Accounting expenses R&D in the year it is spent. That hides an asset. Profit looks lower and invested capital looks smaller than they are, so returns look too high and growth looks too cheap. For a software, drug or chip company, the gap can be large.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow treats R&D as capital in your model only. Step 1 builds a schedule by year of spend. Each year's R&D is spread over a life you pick and can support. It gives the research asset, the yearly amortization and adjusted operating profit. Step 2 uses the same numbers to adjust capital and reinvestment, then shows how much growth that reinvestment can pay for. Step 3 does the same for the stable years after your forecast.
+
+  Your reported accounts stay as filed. Cash taxes stay as the company paid them. The reported and adjusted cases are labelled apart, and the AI tests a shorter and a longer life. A terminal cash flow that only looks better because R&D was dropped is rejected.
 when:
-  - You need a linked analyst research-asset and growth-consistency workbook alongside reported accounts.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You model a company that spends heavily on R&D, such as software, drugs or chips.
+  - Your forecast has high growth but low reinvestment, and a reviewer asks how it is paid for.
+  - Return on capital looks too good because R&D was never counted as capital.
+  - You compare two companies that account for R&D costs in different ways.
+not_for:
+  - "You have no R&D spend by year, or the company is private: get the yearly spend first, since the schedule starts from it."
+  - "You only want to test growth in the stable years: use the Link operating growth to terminal reinvestment workflow."
+  - "You already have a terminal value and want to challenge it: use the Challenge terminal value with excess returns workflow."
+  - "You want a full valuation or a buy or sell view: use the Valuation method comparer. This workflow gives no investment advice."
 you_give:
-  - R&D cohorts, accounting treatment, economic life evidence, invested capital, NOPAT/cash taxes, reinvestment and forecast assumptions.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - R&D spend for each year, from the income statement or notes, going back as far as the life you pick
+  - The life over which R&D pays off, with the reason, such as filings or industry facts
+  - Reported operating profit and invested capital, from the annual report
+  - The tax rate and the cash taxes the company paid
+  - "Your forecast: growth, capital spending, working capital and return on new capital"
+  - "For the stable years: growth rate, return on capital and cost of capital"
+  - The currency, scale and reporting date
 you_get:
-  - A linked analyst research-asset and growth-consistency workbook alongside reported accounts.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A research asset schedule by year of spend, with amortization and adjusted operating profit
+  - Adjusted capital and reinvestment, beside the reported figures
+  - A growth schedule showing how much growth the reinvestment supports
+  - "A stable-years check: the reinvestment that growth needs and the return spread"
+  - A list of what is MISSING and which checks were missed
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the annual reports or paste the R&D notes, plus your forecast sheet. Give the currency, scale and the life you want to test.
+  - Ask your AI to follow the pack, save a file for each step and stop a step when an input is missing.
+  - After step 1, check that R&D is counted once across profit, capital and reinvestment.
+  - After step 3, ask for the result at a shorter and a longer life, and see how far the answer moves. A spreadsheet tool is needed for the workbook. Without one, your AI gives the tables in chat.
 how_it_works:
   - title: Research spend cohort adjustment
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build dated cohorts with the chosen life and preserve statutory treatment. Pass economic amortization and research-asset balances with the unchanged cash-tax convention.
+    text: Groups R&D into yearly cohorts and amortizes each over the chosen life. Keeps the statutory treatment and cash taxes unchanged. Hands step 2 the amortization and the research asset balance for each year.
   - title: Reinvestment-supported growth schedule
-    text: Adjust both capital and operating investment consistently for expensed research; reconcile cash taxes separately, and do not mechanically tax an economic addback or use unadjusted historical ROC.
+    text: Adjusts capital spending and operating investment for the expensed R&D, then links reinvestment to growth through the return on new capital. Reconciles cash taxes separately and never uses an unadjusted historical return on capital. Hands step 3 the adjusted return and reinvestment rate.
   - title: Terminal growth reinvestment check
-    text: Use a defensible stable research life and marginal capital return to couple terminal growth with reinvestment; reject a terminal cash-flow boost created only by omitting research replacement spending.
+    text: "Takes a stable research life and a return on new capital and ties growth in the stable years to the reinvestment it needs. Rejects a cash flow that improves only because R&D replacement spend was left out. Check before you use it: growth is not higher than the return spread supports."
 output_shape: |-
-  A linked analyst research-asset and growth-consistency workbook alongside reported accounts.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES   <currency, scale, life chosen and why, source of each number>
+  RESEARCH ASSET SCHEDULE   <spend year | spend | amortization by year | closing asset>
+  ADJUSTED PROFIT AND CAPITAL <reported | adjustment | adjusted: operating profit, invested capital, reinvestment>
+  SUPPORTED GROWTH          <reinvestment rate x return on new capital = growth supported>
+  STABLE-YEARS CHECK        <growth | reinvestment needed | return spread | cash flow>
+  LIFE TEST                 <shorter life | chosen life | longer life: change in result>
+  MISSING                   <inputs not given>
+  CHECKS MISSED             <one line each, or none>
+output_sample:
+  input:
+    - R&D spend for each year, and the life you choose with your reason
+    - Reported operating profit, invested capital and cash taxes
+    - Your growth, capital spending and return assumptions
+    - Stable growth, return on capital and cost of capital
+  prerequisites:
+    - An AI that can read files, and make a spreadsheet if you want the workbook
+  output:
+    - name: outputs/step-1-research-spend-cohort-adjustment.md
+      contains: The research asset by year of spend, amortization and adjusted operating profit.
+    - name: outputs/step-2-reinvestment-supported-growth.md
+      contains: Adjusted capital and reinvestment, and the growth that reinvestment supports.
+    - name: outputs/step-3-terminal-growth-reinvestment-consistency.md
+      contains: Reinvestment needed for stable growth, free cash flow and a return spread test.
+    - name: Workbook
+      contains: Linked sheets from reported accounts to the adjusted case. Made only if your AI has a spreadsheet tool.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, assumptions, MISSING lines and checks missed.
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,13 +98,25 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI with a spreadsheet tool
+      why: It can link the sheets, recalculate and reopen the workbook. In plain chat you get tables as text.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Evidence for the research life, such as how long patents or products last.
+    - Several years of past R&D spend and capital figures.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: R&D cohort
+    meaning: The R&D spent in one year, treated as one asset that is used up over time.
+  - term: Amortization
+    meaning: Spreading the cost of an asset over the years it is used.
+  - term: Reinvestment
+    meaning: Money put back into the business to grow it, such as capital spending and working capital.
+  - term: Return on capital
+    meaning: Operating profit after tax, divided by the capital invested in the business.
+  - term: Terminal value
+    meaning: The value of the company after the forecast period ends, based on stable growth.
+before: []
+next:
+  - challenge-terminal-value-with-excess-returns
+  - link-operating-growth-to-terminal-reinvestment
+  - company-fair-value-modeler
+  - valuation-method-comparer

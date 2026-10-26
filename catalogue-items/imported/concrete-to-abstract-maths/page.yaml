@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans three linked stages with the right materials.
 new_slug: concrete-to-abstract-maths
 name: Concrete to abstract maths lesson planner
-summary: Name a maths idea. Get lessons from hands-on objects to pictures to
-  symbols, as in the Singapore method.
+summary: Plan a concrete, pictorial, abstract maths lesson sequence for any topic. Give it a concept and year group. You get three linked stages.
 job: teach-and-train
 headline: Concrete to abstract maths lesson planner
-subhead: A maths lesson sequence that starts with objects students can handle,
-  moves to drawings and bar models, and ends with symbols. This is the concrete,
-  pictorial, abstract method used in Singapore classrooms.
+subhead: A maths lesson sequence that starts with objects students can handle, moves to drawings and bar models, and ends with symbols. This is the concrete, pictorial, abstract method used in Singapore classrooms.
 explain: |
   A maths lesson sequence that starts with objects students can handle, moves to drawings and bar models, and ends with symbols. This is the concrete, pictorial, abstract method used in Singapore classrooms.
 
@@ -18,6 +15,10 @@ when:
   - You are introducing fractions, ratio or word problems.
   - You want to use bar models properly and not as pictures of the answer.
   - Your class jumps to symbols before the idea is secure.
+not_for:
+  - "You only need a quick fact recall drill: use a short quiz or flash cards instead."
+  - "Your students already know the symbol method well: teach it directly and skip the hands-on stage."
+  - "You need a full term plan or a set of marked assessments: ask your head of maths or write those by hand."
 you_give:
   - The maths concept
   - Year group and current level
@@ -30,7 +31,30 @@ you_get:
   - Drawing and bar model steps
   - Bridging prompts between stages
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from the skill folder.
+  - Type the maths concept and the year group. Add what students already know.
+  - Add your materials, common mistakes and lesson time if you have them.
+  - Read the three stages and the bridging steps. Check each activity fits your room and your objects.
+  - Change any step that does not suit your class, then use the plan in your lesson.
+output_sample:
+  input:
+    - The maths concept you want students to grasp
+    - Year group and what they know now
+    - Materials you have, such as fraction strips or cubes (optional)
+    - Mistakes students often make (optional)
+    - How you teach it now, and how much lesson time you have (optional)
+  output:
+    - name: "Stage 1: Concrete"
+      contains: Hands-on activities with objects that show the real structure of the idea, and what students should learn from each.
+    - name: "Bridging: Concrete to Pictorial"
+      contains: Prompts and steps that help students link what they handled to the drawings they will make.
+    - name: "Stage 2: Pictorial"
+      contains: Drawing activities using bar models, diagrams and number lines as thinking tools.
+    - name: "Bridging: Pictorial to Abstract"
+      contains: Prompts that connect each drawing to the matching symbols and written rule.
+    - name: "Stage 3: Abstract"
+      contains: Symbol-based practice, so students can use the method without objects or drawings.
+    - name: Common Errors and CPA Responses
+      contains: Typical mistakes with this topic and how to answer each one using the three stages.
+    - name: Assessment Check
+      contains: A short check to see if students understand the idea and not just the steps.

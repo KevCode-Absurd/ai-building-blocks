@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must weigh many possible causes with thin evidence.
 new_slug: traffic-drop-investigator
 name: Traffic drop investigator
-summary: Describe a sudden search traffic drop. Get the likely causes ranked and
-  a fix plan.
+summary: Find why your search traffic dropped fast. Give it the date and your Search Console numbers. You get ranked causes and a fix plan in phases.
 job: get-found-in-search
 headline: Traffic drop investigator
-subhead: When your search traffic falls off a cliff, you need to know why before
-  you change anything. This skill gives you a ranked list of likely causes and a
-  recovery plan in priority order.
+subhead: When your search traffic falls off a cliff, you need to know why before you change anything. This skill gives you a ranked list of likely causes and a recovery plan in priority order.
 explain: |
   When your search traffic falls off a cliff, you need to know why before you change anything. This skill gives you a ranked list of likely causes and a recovery plan in priority order.
 
@@ -18,6 +15,10 @@ when:
   - You launched a redesign or migration and rankings fell after.
   - You think a Google update or penalty hit your site.
   - You need a clear fix list to send to a developer.
+not_for:
+  - "You want a routine SEO health check with no sudden drop: ask your AI to run a standard SEO audit, or ask an SEO person for one."
+  - "Your traffic fell slowly over many months because of weak content: review your top pages by hand, or hire an editor."
+  - "You have no Search Console or analytics access at all: first ask your web developer or agency to give you access, then run this."
 you_give:
   - The date and size of the drop
   - Search Console and analytics numbers
@@ -30,7 +31,29 @@ you_get:
   - A prioritised fix plan
   - Steps to confirm recovery
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the full skill text. It needs no code, files or paid tools.
+  - Tell your AI the date you saw the drop, how big it was, and whether it was sudden or slow.
+  - Paste your Search Console performance export. A CSV with date, clicks, impressions, CTR and position works best. Add device and country columns if you can.
+  - List every site change from the 30 to 60 days before the drop, such as a redesign, plugin update or URL move.
+  - If you have no Search Console access, say so. Paste what you do have, like analytics numbers, and expect a less certain answer.
+  - Check the top cause first, then work through the fix plan in order and confirm each fix before you move on.
+output_sample:
+  input:
+    - The date you first saw the drop, and whether it was sudden or slow
+    - Your Search Console performance export (date, clicks, impressions, CTR, position, device and country if you have them)
+    - A list of site changes in the 30 to 60 days before the drop
+    - Which pages or sections are hit (optional)
+    - Server or deployment logs (optional)
+  prerequisites:
+    - Access to Google Search Console or your analytics, so you can copy numbers into the chat
+  output:
+    - name: Executive incident summary
+      contains: The type of incident, the date range and size of the drop, the top likely causes and a confidence level.
+    - name: Evidence-based findings
+      contains: Each finding with its evidence, likely cause, impact rating and a fix you can act on.
+    - name: Hypothesis checks
+      contains: For each possible cause, the test that would confirm or rule it out.
+    - name: Prioritized action plan
+      contains: "Fixes in phases: first 3 days, days 3 to 14, then 2 to 8 weeks."
+    - name: Monitoring plan
+      contains: What to watch, checkpoints for partial recovery and when to close the incident.

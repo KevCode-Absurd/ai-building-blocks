@@ -8,7 +8,46 @@ metadata:
 
 # Salary benchmarking
 
-Benchmark pay against external market data to set competitive, defensible salary ranges — selecting the right data sources, matching roles accurately, and translating market data into internal pay bands.
+Benchmark pay against external market data to set a competitive, defensible pay range for a role: pick the right data, match the role, and turn market data into an internal band.
+
+This is pay planning help. It is not legal advice and not a check against pay transparency law. Say so in the output.
+
+## Before you start
+
+You need the role (title, level and what the person does), the location, and market data. Market data is a salary survey extract, a table the user pastes, or a public source they name.
+
+- Salary surveys from vendors such as Radford (Aon), Mercer or Pave are often paid or limited by licence. Don't assume the user has one. Free options to suggest: government wage statistics for the country (for example, the US Bureau of Labor Statistics wage data), and pay ranges shown in public job ads where the law requires them. Say which is thin on detail.
+- If there is no market data, don't invent any. Explain the method, list the data to get, and mark every number "MISSING: market data". Stop there.
+- Optional: current pay for the role, target percentile, the survey's date, and any geography or level factors the user already uses.
+
+If a required input is missing, ask once. If it stays missing, mark it MISSING and carry on only where you can do so without a guess.
+
+## Steps
+
+1. **Restate the role.** Title, level, scope, location, who it reports to, and the percentile the user wants (ask if not given; the 50th is the usual starting point).
+2. **Pick the data.** Say which source you use, its date, and its limits (sample size, location, company size). Say how old it is and whether it needs a refresh.
+3. **Match the job.** Find the closest benchmark job in the data. Match on scope and duties, not only title. Note differences, and if the role spans two benchmark jobs, say how you blended them.
+4. **Read the market number.** Take the figure at the target percentile for base pay. If total pay matters, add bonus and equity only if the data has them.
+5. **Adjust.** Apply any level or location factor the user gave, and show the arithmetic. Don't invent a factor. If none was given, say "no adjustment applied" and name what is missing.
+6. **Set the range.** Treat the adjusted market number as the midpoint. Set min and max from a spread the user chooses (state the spread used). Show: midpoint, min = midpoint x (1 - spread / 2), max = midpoint x (1 + spread / 2).
+7. **Check competitiveness.** If current pay was given, show where it sits in the range (below min, in range, above max) and its position as a percent of the midpoint.
+8. **Handle thin data.** If the role has few data points, say so, widen the range, and suggest a second source.
+9. **Write the method note.** Four to six lines a leader can read: source and date, job match, percentile, adjustment, spread, limits. This makes the range easy to defend.
+
+## Output
+
+```
+ROLE AND ASSUMPTIONS
+DATA USED            <source> | <date> | <limits>
+JOB MATCH            <internal role> -> <benchmark job> | differences: <...>
+PAY RANGE            min <n> | midpoint <n> | max <n> | currency | percentile | spread
+ADJUSTMENTS          <factor> | <amount> | shown arithmetic
+COMPETITIVENESS      <current pay> | position in range | compa-ratio (current / midpoint)
+METHOD NOTE          <4 to 6 lines for leaders>
+MISSING AND NEXT     <data gaps> | refresh date | second source to try
+```
+
+If the user asks for a table for several roles, use one row per role with these columns: job code or title, percentile, min, midpoint, max, geography adjustment, source, data date.
 
 ## Supported tasks
 

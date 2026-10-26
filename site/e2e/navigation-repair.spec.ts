@@ -15,7 +15,7 @@ for (const tag of ["", "@mobile "]) {
       await expect(menu.getByTestId(id)).toHaveAttribute("href", href);
       await menu.getByTestId(id).click();
       await expect(page).toHaveURL(new RegExp(href.replace("/", "\\/") + "$"));
-      await expect(page).toHaveTitle("API & MCP documentation | AI Blocks");
+      await expect(page).toHaveTitle("AI Blocks API and MCP server documentation | AI Blocks");
       await expect(page.getByRole("heading", { level: 1 })).toHaveText("Connect with API & MCP.");
       if (id === "nav-documentation") await expect(page.locator("#api")).toBeInViewport();
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);

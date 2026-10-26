@@ -1,6 +1,6 @@
 new_slug: find-where-new-users-leave-and-prove-the-fix-works
 name: Find where new users leave and prove the fix works
-summary: Give it your funnel numbers. Get the biggest leak, a one-morning test and a result check.
+summary: Find where new users leave with this funnel drop-off workflow. Give it your funnel numbers. Get the biggest leak, a one-morning test and a result check.
 job: build-product
 thinking: high
 thinking_why: It reads your numbers, plans a test from what it finds, then judges a second set of numbers. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Sign-ups look fine but few people are still around a month later.
   - Your team wants a new feature to bring users back and you are not sure it will reach them.
   - You shipped a change and cannot tell whether it helped.
+not_for:
+  - "Your product has no 30-day history yet: run a short interview or a small usability test with a few people first."
+  - "You want to know why ad sales fell: use the Ad sales drop analyst."
+  - "You want to check if an A/B test has enough visitors: use the A/B test traffic checker."
 you_give:
   - Visits, sign-ups and users still active at 30 days, for one named period
   - What the goal of a new user is, in a sentence
@@ -31,6 +35,27 @@ how_to_use:
   - Paste your funnel numbers for one named period. Do not mix periods.
   - Stop after step 2, run the test, ship the fix and wait two weeks.
   - Come back with the new export and run step 3 to see what moved.
+output_sample:
+  input:
+    - Visits, sign-ups and users still active at 30 days, for one named period
+    - The goal of a new user, in a sentence
+    - The page or first five clicks of a new visit (optional)
+    - A description of your typical new user (optional)
+    - A second export of the same numbers, two weeks after you ship the fix
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude
+    - Time to run a test and ship a fix, then wait for new numbers
+  output:
+    - name: "Step 1: New user drop-off finder"
+      contains: Your funnel with the share kept at each step, the biggest leak, the actions of an active user and one first-visit change.
+    - name: "Step 2: Small usability test plan"
+      contains: Tasks for the leak, the people to test, a read-aloud script, watcher rules, a note sheet and a short fix list.
+    - name: Pause
+      contains: You run the test with three people and one outsider, ship the fix with the owner's approval and wait for a full window.
+    - name: "Step 3: Product metrics review"
+      contains: Your new numbers set against the old ones and your target, with what moved, what did not and what to do next.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find the leak
     text: Lays out visits, sign-ups and 30-day users with the share kept at each step, names the biggest drop and plans one first-visit change with a measure and a date.

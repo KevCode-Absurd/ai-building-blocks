@@ -1,6 +1,6 @@
 slug: turn-employee-feedback-into-owned-actions
 name: Turn employee feedback into owned actions
-summary: Share the source files. Get a theme summary, prioritized actions and a draft response to staff.
+summary: Turn employee survey comments into a theme summary, priority actions with owners and a draft reply to staff, with small groups kept private.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -15,7 +15,6 @@ inputs:
 outputs:
   - type: document
   - type: plan
-  - type: audit_report
 uses:
   - employee-survey-designer
   - people-risk-register-builder

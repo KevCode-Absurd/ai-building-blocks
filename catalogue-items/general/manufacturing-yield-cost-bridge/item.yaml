@@ -1,15 +1,13 @@
 slug: manufacturing-yield-cost-bridge
 name: Manufacturing yield cost bridge
-summary: A physical yield and net conversion cost bridge
+summary: "Work out the true cost per good kilogram of one production batch after yield loss, conversion cost and scrap sales, with a clear bridge."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,12 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - product-mix-capacity-checker
+  - connect-production-yield-to-mix-contribution
 origin: own
 version: 1.0.0
 added: 2026-10-22

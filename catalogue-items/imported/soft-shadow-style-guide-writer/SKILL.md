@@ -6,6 +6,38 @@ metadata:
   author: typeui.sh
 ---
 
+## How to run this skill
+
+AI Blocks added these notes. The original skill below is unchanged. Where a note here disagrees with it, follow the note.
+
+### What you need
+- A short description of the product, and who will use it.
+- Optional: surface and accent colours to keep, and any accessibility needs.
+
+### If something is missing
+- Ask once for the product and the users. If you still do not have them, write `MISSING: <what>` at the top and go on with clearly marked assumptions.
+- Never invent facts about the product, its customers or its claims.
+
+### Replace what the original left in
+- The heading says "Neumorphism club" and the Brand line says "Join the private club where people are building, monetizing, and marketing products with AI". That is the original author's example, not the user's product. Never copy it into the guide. Use the user's product and audience.
+- The fonts and colours under Style Foundations (Space Mono, `#006666`, `#E7E5E4`) are a starting point. Replace them with the person's brand values when given. If none are given, say they are placeholders.
+- The original lists "high-contrast" as the visual style, but this look is soft. Write it as soft depth that still meets contrast: soft shadows for depth, and enough colour, border or label that nothing relies on a faint shadow alone.
+
+### Write the shadow rules
+- Pick one base surface colour. Write shadows for three looks: raised, pressed (inset) and flat.
+- Write each shadow as offset, blur and colour, for both the light side and the dark side, so a developer can copy it. Check the light and dark shadow colours against the surface.
+- Say how raised, pressed, hover, focus and disabled differ, and what stops people confusing a disabled part with a normal one.
+
+### Check contrast before you hand it back
+- For every text, icon and focus outline, work out the contrast ratio against its background and write it next to the pair. Normal text needs 4.5 to 1. Large text, icons and focus outlines need 3 to 1.
+- With the original colours on the surface `#E7E5E4`, the text colour `#1E2938` is about 11.7 to 1 and the teal `#006666` is about 5.4 to 1. The green `#00A63D`, orange `#FE9900` and red `#FF2157` are about 2.6, 1.7 and 3.0 to 1, so they cannot carry small text. Use darker shades, and add an icon and a text label.
+- If you change a colour, work the ratio out again. Do not guess.
+
+### What you hand back
+- Open with the one-line design idea, then follow the Required Output Structure below, with a section for the shadow rules and a short list of where not to use the style.
+- Finish with `CHECKS MISSED:` and list any check you could not do, or write "none".
+- Say that the guide is rules only. A designer or developer builds the screens from it.
+
 <!-- TYPEUI_SH_MANAGED_START -->
 # Neumorphism club Design System Skill (Universal)
 

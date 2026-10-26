@@ -7,9 +7,7 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -29,6 +27,7 @@ steps:
   - uses: commodity-pass-through-cost-bridge
     note: Model the future replenishment input-price and approved price-recovery scenario using the correct physical intensity. Present old-stock cash recovery and new-cohort margin as separate bridges with explicit timing and no assumed demand response.
 execution: coordinator
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

@@ -12,6 +12,34 @@ Surfaces migration risks and validates migration work against known Oracle/Postg
 1. **Planning** — Before starting migration work on a procedure, trigger, query, or refcursor client. Identify which reference insights apply so risks are addressed up front.
 2. **Validating** — After migration work is done, confirm every applicable insight was addressed and integration tests cover the new PostgreSQL semantics.
 
+## When not to use
+
+- Schema-only or single-query checks with no procedural code, or a general SQL speed review.
+- Moves to a database other than PostgreSQL. The references cover Oracle to PostgreSQL only.
+
+## Inputs to gather first
+
+Ask once for anything missing. Do not guess what the code does.
+
+- The procedures, triggers, queries or views in scope.
+- The application code that calls them.
+- For validating: the migration changes or diff, and the Oracle source if you have it.
+- The existing integration tests.
+
+## Output
+
+Return a table, then a verdict:
+
+```text
+| Difference | Applies to (file, line) | Risk | Recommended fix | Test status |
+|---|---|---|---|---|
+| <reference name> | <where> | <what could go wrong> | <fix pattern> | covered / missing / not applicable |
+```
+
+Then list **Decisions needed** (risks that need a design choice) and a **Verdict**: each applicable difference marked addressed or not, scripts run (yes or no), tests pass (yes or no). Say "not run" when you could not run anything. Never mark a test as passing without seeing it pass.
+
+**Next steps:** fix each open risk, add the missing tests, then run this again in validating mode.
+
 ## Workflow
 
 Determine the task type:

@@ -1,55 +1,99 @@
 new_slug: build-a-comparable-trailing-revenue-model
 name: Build a comparable trailing revenue model
 headline: Build a comparable trailing revenue model
-summary: Link fiscal periods, currency, business scope and extra-week adjustments into a comparable revenue model.
+summary: Build trailing 12-month revenue, then remove currency swings, acquisitions, disposals and an extra week to show real comparable growth.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked reported and comparable trailing-revenue workbook with adjustment ordering. Share annual/YTD revenue by business and currency, prior comparatives, acquisition/disposal data and fiscal-calendar disclosures.
-explain: |-
-  A linked reported and comparable trailing-revenue workbook with adjustment ordering.
+subhead: Give it annual and year-to-date revenue by business and currency, last year's matching figures, acquisition and disposal dates, and the fiscal calendar. It builds the trailing 12 months, then takes out currency, deals and an extra week one at a time. You get one linked workbook that walks from reported revenue to comparable revenue.
+explain: |
+  Reported revenue can grow for reasons that have nothing to do with sales. A weak dollar lifts foreign sales. A bought business adds revenue that last year lacked. A 53-week year has one more week of trading. To compare years fairly, each effect has to come out in the right order, and each one has to be shown.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow runs four steps in a fixed order. Step 1 builds reported trailing revenue as the last annual figure plus current year-to-date, less the matching prior year-to-date. Step 2 removes currency, step 3 removes deals, step 4 removes the extra week. Each step starts from the one before and ends in a table that ties back to reported revenue.
+
+  It uses your sourced figures and one named exchange-rate convention. It does not guess a single currency percentage for the whole company, and it does not judge whether growth is good.
 when:
-  - You need a linked reported and comparable trailing-revenue workbook with adjustment ordering.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A company reports a full year and part of the next, and you need the last 12 months.
+  - Reported growth looks strong, but the company bought a business or a currency moved.
+  - This year had 53 weeks and last year had 52.
+  - Revenue sits in several currencies and you need growth without exchange rates.
+not_for:
+  - You have one currency, no deals and no extra week. A simple trailing sum is enough. Use the Trailing-period financial bridge.
+  - You need to explain gross-to-net deductions and business scope for a presentation. Use the Reconcile revenue presentation and perimeter workflow.
+  - You only need the currency effect. Use the Constant-currency revenue bridge.
+  - You only need to take out an extra week. Use the Extra-week revenue comparability schedule.
 you_give:
-  - Annual/YTD revenue by business and currency, prior comparatives, acquisition/disposal data and fiscal-calendar disclosures.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Annual revenue and year-to-date revenue by business and currency (from the annual and interim reports)
+  - The matching prior-year year-to-date figures, restated if the company restated them
+  - Average exchange rates for each period and the convention you want, if more than one currency (from your rate source)
+  - Revenue from acquired and disposed businesses, with completion dates (from the deal notes)
+  - "The fiscal calendar: period end dates and which year had the extra week"
+  - The reporting currency and scale
 you_get:
-  - A linked reported and comparable trailing-revenue workbook with adjustment ordering.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Reported trailing 12-month revenue, built from annual plus current year-to-date less prior year-to-date
+  - Constant-currency revenue and a signed currency effect
+  - Organic growth on one comparable business perimeter
+  - Revenue with the extra week taken out
+  - A walk from reported to comparable revenue, one adjustment per line
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach the annual report, the interim reports and the deal notes. Paste the exchange-rate convention you want. Say which year had the extra week.
+  - After step 1, check that each fiscal boundary and restatement is shown, and that the figure is called trailing revenue, not annual revenue.
+  - After steps 2 and 3, check that one rate convention is named and that the currency effect is not taken out twice.
+  - After step 4, check that comparable revenue walks back to reported revenue, one line per adjustment. Fill every MISSING line first.
 how_it_works:
   - title: Trailing-period financial bridge
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build reported trailing additive revenue from annual plus current YTD minus matching prior YTD, preserving every fiscal boundary and restatement.
+    text: Builds reported trailing revenue as annual plus current year-to-date less matching prior year-to-date. Keeps every fiscal boundary and restatement. Hands step 2 the revenue split by period and currency.
   - title: Constant-currency revenue bridge
-    text: Use period/currency buckets underlying the trailing bridge and one documented rate convention; reconstruct comparable currency revenue rather than applying an unsupported single global FX percentage.
+    text: Uses the same period and currency buckets with one named exchange-rate convention. Rebuilds comparable-currency revenue and shows the currency effect with its sign.
   - title: Organic revenue perimeter bridge
-    text: Apply evidenced acquisition/disposal adjustments to the same currency-normalized period; map both numerator and denominator to one continuing perimeter and exclude duplicate FX adjustments.
-  - title: Extra-week revenue comparability schedule
-    text: Remove any extra-week contribution still inside the comparable period using sourced calendar evidence; reconcile final comparable revenue back to reported trailing revenue by adjustment.
-output_shape: |-
-  A linked reported and comparable trailing-revenue workbook with adjustment ordering.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+    text: Takes out acquired and disposed revenue using completion dates, so the numerator and denominator cover the same continuing businesses. Does not remove the currency effect a second time.
+  - title: Extra-week revenue comparability
+    text: Removes the extra week's revenue using calendar evidence, then walks final comparable revenue back to reported trailing revenue by adjustment.
+output_shape: |
+  PERIOD AND UNITS  <trailing period end>, <reporting currency>, <scale>, rate convention <name>
+
+  1 TRAILING REVENUE   annual <n> + current YTD <n> - prior YTD <n> = <n>
+  2 CONSTANT CURRENCY  <per currency: local revenue | rate | comparable revenue>
+                       currency effect <n, signed>
+  3 ORGANIC PERIMETER  acquired <n>, disposed <n>, organic growth <n%>
+  4 EXTRA WEEK         extra week <n, actual or estimate>, comparable revenue <n>
+
+  WALK  reported <n> -> currency <n> -> deals <n> -> extra week <n> -> comparable <n>
+  SOURCES, MISSING and CHECKS MISSED  <one line each>
+output_sample:
+  input:
+    - Annual and year-to-date revenue by business and currency
+    - The matching prior-year year-to-date figures
+    - Exchange rates and the convention you want
+    - Acquisition and disposal dates and revenue
+    - The fiscal calendar, with the extra week marked
+  prerequisites:
+    - The company's annual and interim reports, and the notes on deals
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: 1 TRAILING REVENUE
+      contains: Annual plus current year-to-date less prior year-to-date, with each fiscal boundary shown.
+    - name: 2 CONSTANT CURRENCY
+      contains: Revenue by currency at one named rate convention, and the signed currency effect.
+    - name: 3 ORGANIC PERIMETER
+      contains: Acquired and disposed revenue taken out, and organic growth on one continuing perimeter.
+    - name: 4 EXTRA WEEK
+      contains: The extra week's revenue, marked actual or estimate, and comparable revenue without it.
+    - name: WALK
+      contains: Reported revenue to comparable revenue, one adjustment per line, ending on a tie.
+    - name: SOURCES, MISSING and CHECKS MISSED
+      contains: Where each figure came from, each gap and the line it stops, and checks that could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every period/business/currency bucket appears once, adjustments have a stated ordering, no quarter/YTD or calendar mix occurs and final comparable revenue bridges exactly to reported trailing revenue.
+  - what: A different rate convention
+    how: Switch from average to closing rates. The currency effect changes, and the page says which convention it used.
+  - what: A deal part-way through the year
+    how: Give the completion date of an acquisition. Only the months after it count in the organic step.
+  - what: No extra week
+    how: Say neither year had an extra week. Step 4 shows no adjustment and the walk skips that line.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one linked workbook with inputs, formulas and a checks tab.
 judge:
   - Every period/business/currency bucket appears once, adjustments have a stated ordering, no quarter/YTD or calendar mix occurs and final comparable revenue bridges exactly to reported trailing revenue.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -60,17 +104,31 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep a list of each company's fiscal year end and which years had an extra week, and paste it in every run.
+  - Keep the deal dates and the rate convention you chose in one note, so each quarter uses the same rules.
+  - Run the Reconcile revenue presentation and perimeter workflow when you also need to explain gross-to-net deductions.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: The company's filings and deal notes
+      why: They give restated figures and completion dates. A data-site summary often leaves both out.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Prior-year comparatives exactly as the latest report states them.
+    - A named exchange-rate source and convention.
+    - A named reviewer who knows the business.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Trailing 12 months
+    meaning: The last full year of results, rolled forward to the most recent period end.
+  - term: Year-to-date (YTD)
+    meaning: Results from the start of the fiscal year to the latest period end.
+  - term: Constant currency
+    meaning: Revenue restated at one set of exchange rates, so currency moves do not show as growth.
+  - term: Organic growth
+    meaning: Growth from businesses owned in both periods, without acquisitions or disposals.
+  - term: Perimeter
+    meaning: The set of businesses counted in a figure.
+before: []
+next:
+  - reconcile-revenue-presentation-and-perimeter
+  - review-equity-valuation-sensitivity-assumptions

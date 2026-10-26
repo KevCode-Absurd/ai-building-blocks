@@ -1,6 +1,6 @@
 slug: turn-a-worked-example-into-independent-practice
 name: Turn a worked example into independent practice
-summary: Share the source files. Get a staged practice sequence and a short understanding check.
+summary: Turn one worked example into a practice ladder. Get staged problems that fade the help, with answers and a short understanding check.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -23,11 +23,11 @@ uses:
   - study-understanding-check
 steps:
   - uses: worked-example-practice
-    note: Break the example into explanation, partially completed practice and independent work.
+    note: "Splits your example into a full model, completion problems that fade the help and independent problems. Hands the stages and the target skill to the problem step."
   - uses: practice-problem-set-writer
-    note: Create comparable problems and validate their answers and difficulty against the target skill.
+    note: "Writes comparable problems at rising difficulty and checks each answer. Hands the problems and answers to the check step."
   - uses: study-understanding-check
-    note: Check the reasoning behind answers and use errors to choose the next practice.
+    note: "Uses the example, the common mistakes and the problems from step 2 to write why-questions and a feedback line for each likely wrong answer. With real learner answers, it checks the reasoning and picks the next practice. Without them, it is marked not run."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

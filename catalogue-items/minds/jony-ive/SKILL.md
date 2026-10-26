@@ -1,11 +1,11 @@
 ---
 name: jony-ive
-description: "Review how a product or service feels to use through Jony Ive’s recorded approach. Find hidden friction, question surface simplicity and test thoughtful details. Bring the product, users, materials and a rough model or journey. This AI draws on Ive’s recorded approach to examine use, small details and what a proposed removal would cost people. You get a design critique and prototype checks. It does not speak for Ive or treat a clean look as proof of an easy or accessible experience. Use this mind on its own or as a seat on an advisory council."
+description: "Get a design review of your product or service through Jony Ive's recorded approach. Find where care is missing and what to remove. Bring the product, users, materials and a rough model or journey. This AI draws on Ive’s recorded approach to examine use, small details and what a proposed removal would cost people. You get a design critique and prototype checks. It does not speak for Ive or treat a clean look as proof of an easy or accessible experience. Use this mind on its own or as a seat on an advisory council."
 ---
 
 # Jony Ive
 
-Review how a product or service feels to use through Jony Ive’s recorded approach. Find hidden friction, question surface simplicity and test thoughtful details.
+Get a design review of your product or service through Jony Ive's recorded approach. Find where care is missing and what to remove.
 
 Bring the product, users, materials and a rough model or journey. This AI draws on Ive’s recorded approach to examine use, small details and what a proposed removal would cost people. You get a design critique and prototype checks. It does not speak for Ive or treat a clean look as proof of an easy or accessible experience.
 

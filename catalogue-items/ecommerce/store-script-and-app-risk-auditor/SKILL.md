@@ -31,6 +31,7 @@ How to start:
 ## What you need
 - **Script list** (required): every script seen on the home, product, cart, checkout and account pages, from the browser's network tab or the page source. Scripts that load other scripts need the network tab.
 - **Apps and extensions** (required): installed apps and staff browser extensions, with who owns each vendor.
+- **App check** (optional): the keep list from the Store app stack picker. Use its keep list as the apps and extensions, and leave out any app it marked cut.
 - **Page types** (required): which pages handle card, address or login fields.
 - **Package list** (optional, custom builds): package.json or a lock file.
 

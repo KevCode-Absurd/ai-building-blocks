@@ -1,48 +1,60 @@
 new_slug: spending-story-reviewer
 name: "Spending story reviewer"
-summary: "Paste a purchase you are weighing. Get what drives it, its hidden costs and a small test of whether it pleases."
+summary: "Weigh a big purchase before you buy: find what drives the want, add up the real long-run cost and get one small test first."
 job: money-and-investing
 thinking: medium
 thinking_why: "It traces a motive and adds up costs. The steps are fixed, with some judgement on what is driving you."
 
 headline: "Spending story reviewer"
-subhead: "Tell it what you want to buy and what you feel about it. It traces the feeling to its source, adds up the long-run costs, asks who is really watching and checks whether a smaller version would do. You get the real driver, the full cost list and a small test to run first."
+subhead: "Tell it what you want to buy, its price and how you feel about it. It traces the feeling to its source, adds up the long-run costs, asks who is really watching and checks whether a smaller version would do. You get the real driver, the full cost list and a small test to run first."
 
 explain: |
-  A purchase is rarely only about the thing. A car, a house or a course can carry a wish to be seen, a memory from childhood or a reward after hard work. The price tag shows the cost on day one, not the upkeep, the taxes and the hours that follow, and not whether the joy will last.
+  Before a big purchase, it helps to see what is really pulling you. A car, a house or a course can carry a wish to be seen, a memory from childhood or a reward after hard work. The price tag shows the cost on day one. It does not show the upkeep, the taxes and the hours that follow, or whether the joy will last.
 
-  This skill separates the story from the sum. It writes what you want and the feeling behind it, traces the feeling to its source, and adds up the costs over the years. It asks who is really watching and how much they notice. It checks whether the joy fades as comfort grows, and whether a smaller version would please you as well. Then it designs a small test purchase to run first. It never tells you what to buy.
+  This spending review separates the story from the sum. It writes what you want and the feeling behind it, traces the feeling to its source, and adds up the costs over the years you would keep the item. It asks who is really watching and how much they notice. It checks whether the joy fades as comfort grows, and whether a smaller version would please you as well. Then it designs a small test purchase to run first.
+
+  It asks questions before it writes anything. If you give it no item, price or feeling, it asks for them and waits. It never tells you what to buy, and it never recommends a product or an investment. The choice stays yours.
 
 when:
   - You are about to buy something big because it feels like the time to treat yourself.
   - You can't tell if you want the thing or what it says about you.
-  - You want the full cost of an item, not just the price.
+  - You want the full cost of an item over the years, not just the price.
+  - A salesperson or a deadline is hurrying you, and you want a calm second look.
+
+not_for:
+  - "The purchase is small or everyday, such as groceries or a repair you must make. A review takes longer than the choice is worth."
+  - "You want a short copy-and-paste version with no questions: use the Big purchase pause check."
+  - "You want to know if your savings can survive a bad year: use the Room for error plan checker."
+  - "You want to be told to buy or not to buy. This shows the drivers and the costs. The choice stays yours."
 
 you_give:
   - What you want to buy and its price
   - The feeling behind it, in a sentence or two
+  - How long you would keep it, in years (optional)
   - Your monthly money picture, roughly (optional)
   - What you already own that does the same job (optional)
 you_get:
-  - The real driver in plain words
-  - "A list of long-run costs: upkeep, taxes and time"
+  - The real driver in plain words, as a likely cause and not a verdict
+  - "A list of long-run costs: upkeep, taxes and time, with a total over the years you would keep it"
   - A check of who is watching, and whether joy fades with comfort
-  - A small test purchase to try before the big one
+  - A smaller version, and a small test purchase to try before the big one
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Say what you want, the price and what it would feel like to own it.
-  - Answer the questions about where the feeling comes from.
-  - Read the cost list and the test before you decide.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in as your first message. Add it to your AI if you want to reuse it.
+  - Say what you want to buy, the price and what it would feel like to own it. All three are needed. If one is missing, the AI asks for it and waits.
+  - Answer its short questions about where the feeling comes from.
+  - Read the cost list and the test before you decide. Costs you did not give are marked MISSING. Fill in what you can and ask for a rerun.
   - Run the small test and come back with how it felt.
 
 how_it_works:
+  - title: Checks it has the basics
+    text: Needs the item, the price and the feeling. If any is missing, it asks and does not write a review.
   - title: Writes the wish
-    text: States what you want to buy and the feeling behind it.
+    text: States what you want to buy and the feeling behind it, in your words.
   - title: Traces the source
     text: "Looks for the root: upbringing, status, a wish to be seen or comfort after effort."
   - title: Adds the long-run costs
-    text: Lists upkeep, taxes and time, over the years you would own it.
+    text: Lists upkeep, taxes and time, over the years you would own it, and shows the total.
   - title: Asks who is watching
     text: Asks who you imagine is noticing, and how much they actually do.
   - title: Checks the fade
@@ -77,6 +89,22 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "What you want to buy and its price"
+    - "The feeling behind it, in a sentence or two"
+    - "How long you would keep it, and your monthly money picture (optional)"
+  prerequisites:
+    - "Quotes or receipts for upkeep, insurance and taxes, if you have them (optional)"
+  output:
+    - {name: "The wish", contains: "The item, the price and your own word for the feeling."}
+    - {name: "Where it comes from", contains: "The most likely source of the feeling, with what you said as evidence."}
+    - {name: "Long-run costs", contains: "Upkeep, taxes and fees, time and a total over the years you would keep it."}
+    - {name: "Who is watching", contains: "Who you picture noticing, and an honest estimate of how much they do."}
+    - {name: "Does the joy fade", contains: "The likely pattern for this item, and a smaller version that gives the same core feeling."}
+    - {name: "The small test", contains: "A cheap trial with its cost, how long to run it and the one question it answers."}
+    - {name: "MISSING and CHECKS MISSED", contains: "Costs and facts you did not give, and every check that could not run."}
 
 tweaks:
   - what: Your honest feeling

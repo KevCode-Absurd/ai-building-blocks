@@ -2,35 +2,116 @@ thinking: high
 thinking_why: It fits curves and weighs uncertainty, so it needs careful maths.
 new_slug: marketing-budget-scenarios
 name: Marketing budget scenario planner
-summary: Give it past spend and results by channel. Get low and high forecasts
-  for a new budget, with diminishing returns built in.
+summary: Forecast a new marketing budget from your past spend and results by channel, with a cautious and an optimistic case and diminishing returns built in.
 job: track-numbers
 headline: Marketing budget scenario planner
-subhead: Low and high forecasts for a new marketing budget, based on your past
-  spend and results, with diminishing returns built in. The model does not
-  assume that doubling spend doubles results.
+subhead: Give it past spend and results by channel, and your new total budget. It fits a curve to each channel and splits the budget. You get a cautious and an optimistic forecast, funnel counts at each step, and a note on how wrong it was on past periods.
 explain: |
-  Low and high forecasts for a new marketing budget, based on your past spend and results, with diminishing returns built in. The model does not assume that doubling spend doubles results.
+  Many budget plans assume that double the spend gives double the results. It rarely does. Each channel has a point where extra money buys less and less. This marketing budget scenario planner builds that into a forecast, so a bigger budget does not look better than it is.
 
-  You give weekly or monthly spend by channel and the outcomes at each funnel stage. A saturation curve is fitted to each channel. Missing spend data is treated as a gap, not as zero. For a new budget it projects outcomes, then runs many random simulations to give a cautious p10 and an optimistic p90. If you ask it to allocate money, it uses proper optimisation rules so it does not pile everything into one channel. It also backtests on past periods.
+  It starts with your past spend and results for each channel. It fits a curve that flattens as spend grows, and caps channels that look great only because they were small. A blank spend cell is treated as missing, never as zero.
+
+  For a new budget it splits the money using a rule that keeps spend from piling into one channel. It then runs thousands of random draws to give a cautious case (p10) and an optimistic case (p90). Last, it checks the method against past periods to show how far off it could be.
+
+  The result is a forecast from your own history. It is not proof that more spend causes more results. This skill comes from wizard7558's attribution skills, shared under MIT.
 when:
-  - You have a bigger budget next quarter and need a realistic forecast.
-  - You want to split budget across channels based on evidence.
-  - Your plan assumes spend and results scale in a straight line.
-  - You want to know how wrong the model was on past periods.
+  - You have a bigger budget next quarter and need a forecast you can defend.
+  - You want to split a budget across channels based on your own results.
+  - Your plan assumes spend and results grow in a straight line.
+  - You want to know how wrong the forecast would have been on past periods.
+not_for:
+  - You have only one or two periods of history. Use the Channel budget mix planner for a rule-based split.
+  - You want to plan a single campaign in three scenarios. Use the Campaign budget scenario planner.
+  - You want to know where the next $10,000 should go. Use the Next-dollar budget allocator.
+  - You need proof that ads caused sales. Use the Incrementality test planner to run a test.
 you_give:
-  - Past spend by channel and period
-  - Funnel results by period
-  - The new total budget
-  - The timeframe
+  - Past spend by channel and period, weekly or monthly
+  - The results for each channel and period, such as conversions or leads
+  - Funnel counts by period, such as leads, qualified leads and sales
+  - The new total budget and the period it covers
+  - The return per extra dollar and the usual error for each channel (optional, it can be worked out from your history)
 you_get:
-  - Conservative and optimistic forecasts
-  - A channel allocation
-  - Fitted return curves
-  - A past-period error check
+  - A fitted curve for each channel
+  - A budget split across channels
+  - A cautious (p10), expected and optimistic (p90) forecast
+  - Funnel counts at each step for each case
+  - An error check on past periods, or a clear note that it was not run
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your spreadsheet.
+  - Download the skill folder from this page. Keep scripts and references with SKILL.md. Use an AI that can run Python with numpy, such as Claude Code or ChatGPT with data analysis.
+  - Put your history in a sheet with one row per period and channel. Columns are the period, the channel, spend and results. Leave blank any spend you do not know.
+  - Tell your AI your new total budget and the period it covers. Keep the same unit as the history, such as monthly for monthly data.
+  - Ask it to follow the skill and run scripts/run-budget-scenario.py. To test the setup first, run it on references/scenario-fixtures.json.
+  - Read the inputs-used section first, then the cautious and optimistic range. Ask for the error check on past periods before you trust the forecast.
+  - Use the range, not one number, in your plan. Test a bigger spend in one channel before you commit all of it.
+how_it_works:
+  - title: Calibrate
+    text: It reads spend and results by channel, and treats missing spend as a gap, not as zero.
+  - title: Fit the curves
+    text: It fits a curve to each channel that flattens as spend grows. A cap stops small channels from scaling forever.
+  - title: Split the budget
+    text: It shares money across channels so the next dollar earns about the same in each funded channel.
+  - title: Run the draws
+    text: It runs thousands of random draws using each channel's usual error, and reads the cautious and optimistic cases.
+  - title: Project the funnel
+    text: It turns the results into counts at each funnel step using your own step rates.
+  - title: Check against the past
+    text: It compares forecasts with periods held back, and reports the error. It states that forecasts are not proof of cause.
+output_shape: |-
+  INPUTS USED
+    <periods> | <channels> | <gaps found> | <return and error: supplied or worked out>
+
+  FITTED CURVES
+    <channel> | <cap> | <half-way spend> | <average past spend>
+
+  BUDGET SPLIT FOR <total budget> OVER <period>
+    <channel> | <spend>
+
+  FORECAST
+    <cautious p10> | <expected> | <optimistic p90>
+    <funnel step> | <p10> | <mean> | <p90>
+
+  PAST-PERIOD ERROR
+    <error size> | <periods held back>  (or: not run, with the reason)
+
+  CAVEATS
+    <forecast from past patterns, not proof of cause>
+output_sample:
+  input:
+    - Your past spend by channel and period
+    - Your results and funnel counts for each period
+    - Your new total budget and the period it covers
+    - The return per extra dollar and the usual error for each channel (optional)
+  prerequisites:
+    - An AI that can run Python with numpy
+  output:
+    - name: Inputs used
+      contains: Periods and channels used, gaps found, and whether returns and errors were supplied or worked out.
+    - name: Fitted curves
+      contains: One line per channel with its cap, its half-way spend and its average past spend.
+    - name: Budget split
+      contains: How much of the new budget goes to each channel.
+    - name: Forecast
+      contains: Cautious, expected and optimistic results, with funnel counts at each step.
+    - name: Past-period error
+      contains: How far off the method was on periods held back, or why it was not run.
+    - name: Caveats
+      contains: A plain note that this is a forecast from past patterns, not proof of cause.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run the script, keep your sheet and rerun with a new budget.
+    - name: ChatGPT with data analysis
+      why: It can run Python on an uploaded sheet.
+  inputs:
+    - At least six periods of history, if you have them
+    - Notes on any promotion, outage or price change in the history
+    - Your funnel step rates from your CRM
+terms:
+  - term: Diminishing returns
+    meaning: Each extra dollar buys less than the one before it.
+  - term: p10 and p90
+    meaning: The cautious and optimistic ends of a forecast. In the model's own draws, 1 in 10 land below p10 and 1 in 10 land above p90.
+  - term: Saturation curve
+    meaning: A curve that rises quickly at first, then flattens as spend grows.
+  - term: Backtest
+    meaning: Checking a method on past periods you hid from it, to see how wrong it was.

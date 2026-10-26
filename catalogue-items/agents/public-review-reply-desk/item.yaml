@@ -15,10 +15,10 @@ outputs:
   - {type: audit_report}
 uses: [review-request-and-reply-planner, public-review-reply-drafter, angry-customer-reply-checker, low-star-review-triager]
 steps:
-  - {uses: review-request-and-reply-planner, note: "Once, on the first run: sets your reply rules, such as reply to every review, answer a complaint once in public and take the rest private."}
-  - {uses: public-review-reply-drafter, note: "Every run: one specific reply per review, with risky reviews flagged and held, and no refund promised."}
-  - {uses: angry-customer-reply-checker, note: "Only for replies to unhappy reviewers: checks the draft against what they said and the remedies you approved, then fixes and checks again, up to two rounds."}
-  - {uses: low-star-review-triager, note: "Only when the reviews are for an app or software product and at least three are one to three stars: ranks the repeat problems by how much they can hurt."}
+  - {uses: review-request-and-reply-planner, note: "Once, on the first run: sets your reply rules, such as reply to every review, answer a complaint once in public and take the rest private. Hands those reply rules to the drafter and the checker."}
+  - {uses: public-review-reply-drafter, note: "Every run: one specific reply per review, with risky reviews flagged and held, and no refund promised. Uses the new reviews and step 1's saved reply rules. Hands the drafts to the unhappy-reviewer check."}
+  - {uses: angry-customer-reply-checker, note: "Only for replies to unhappy reviewers: checks the draft against what they said and the remedies you approved, then fixes and checks again, up to two rounds. Hands the repaired drafts to you to approve."}
+  - {uses: low-star-review-triager, note: "Only when the reviews are for an app or software product and at least three are one to three stars: ranks the repeat problems by how much they can hurt. Uses the app's one-to-three-star reviews themselves, not step 3's drafts. Hands the ranked brief to you with the replies."}
 schedule: "Once a week, and the same day a one-star review arrives"
 asks_before: [posting any reply, offering a refund, replacement or credit, contacting a reviewer, asking anyone to change or remove a review, reporting a review to a platform, replying to a review that mentions harm, legal action or a dispute with a bank]
 origin: own

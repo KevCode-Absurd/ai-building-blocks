@@ -1,40 +1,50 @@
 new_slug: write-a-thinking-task-english-learners-can-do
 name: Write a thinking task English learners can do
-summary: Give it a subject and skill. Get a task, a language check and a version with help.
+summary: Give a subject and a thinking skill. Get a critical thinking task for English learners, a check of the hard language and a version with word help.
 job: teach-and-train
 thinking: medium
 thinking_why: Each step reads the task from the step before and none needs heavy reasoning. A mid-size model does it well.
 headline: Write a thinking task your English learners can do without making it easier
 subhead: Give it a subject and the thinking skill you want, such as weighing evidence or spotting bias. It writes the task, finds the words and sentences that may block students still learning English, and adds language help that keeps the thinking just as hard.
 explain: |
-  When a task is too hard for English learners, the usual fix is to simplify the thinking. The task gets easier, the students think less and the gap grows. The real problem is often the language around the thinking: long sentences, subject words, questions with hidden steps.
+  When a task is too hard for English learners, the usual fix is to simplify the thinking. The task gets easier, the students think less and the gap grows. The real problem is often the language around the thinking: long sentences, subject words, questions with hidden steps. This workflow writes a critical thinking task for English language learners and keeps the thinking hard.
 
   The steps separate the two. First it writes a task that asks for real thinking in your subject. Then it reads the task for the words and sentence types that may block a learner of English, and separates those from the thinking itself. Last it adds word banks, sentence starters or visuals aimed at those blocks, with lighter help for stronger learners.
 when:
-  - Your class includes students still learning English and your tasks lose them.
-  - You want a critical thinking task for your subject and one version for everyone.
+  - Your class includes students still learning English and your thinking tasks lose them.
+  - You want a task that asks students to weigh evidence or spot bias, with one version for everyone.
   - You are tempted to cut the hard thinking to make a task readable.
+  - A colleague who teaches English as an additional language asks what the language demand of your task is.
+not_for:
+  - Your lesson only needs recall of facts, such as dates or definitions. Write simple questions yourself.
+  - You already have a task and only want its hard language found. Use the Task language demand checker.
+  - You already know the language blocks and only want help added. Use the Task scaffold adder for language learners.
+  - You need a whole lesson, not one task. Use the Build a lesson from explanation to practice and a quiz workflow.
 you_give:
   - The subject and topic
   - The thinking skill, such as weighing evidence, spotting bias or testing an argument
-  - The age group and what you know of your learners' English levels
+  - The year or age group
+  - Your learners' English levels, such as New to English or Developing (optional, say "mixed" if you are not sure)
+  - A text students will read (optional)
+  - Time for the task (optional)
 you_get:
   - A task with its questions and what a strong answer shows
   - A list of the words and sentences likely to block learners of English
   - A version of the task with language help added and the thinking left as hard
+  - A plan for taking the help away as students grow in confidence
 how_to_use:
   - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Name the subject, the thinking skill and the age group. Add your learners' English levels if you know them.
-  - Read the task first and change it to fit your class before the language steps run on it.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Name the subject, the thinking skill and the year group. Add your learners' English levels if you know them.
+  - Read the task from step one first and change it to fit your class. The language steps then work on your version.
   - Try the supported version with one small group, then change the help that did not land.
 how_it_works:
   - title: Write the task
-    text: Names the subject and the thinking skill, picks material for students to weigh, writes the task and its questions, and says what a strong answer shows.
+    text: Picks material for students to weigh, writes the task and its questions, and says what a strong answer shows. It hands the task to the language check.
   - title: Check the language demand
-    text: Reads the task for hard words and sentence types, marks what may block a learner of English and separates language blocks from thinking demands.
+    text: Reads the task for hard words and sentence types and separates language blocks from thinking demands. It hands the list of blocks to the next step.
   - title: Add language help
-    text: Adds word banks, sentence starters or visuals where the check found blocks, keeps the thinking as hard and offers lighter help for stronger learners.
+    text: Adds word banks, sentence starters or visuals where the check found blocks. It keeps every thinking question as hard and adds a plan to remove the help.
 output_shape: |-
   STEP 1: THINKING TASK
     Task | questions | material | what a strong answer shows
@@ -43,10 +53,41 @@ output_shape: |-
     Hard words | hard sentence types | language blocks vs thinking demands | what to support
 
   STEP 3: SUPPORTED TASK
-    Task with word banks, sentence starters or visuals | lighter help for stronger learners
+    Task with word banks, sentence starters or visuals | lighter help for stronger learners | how to remove the help
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
+output_sample:
+  input:
+    - The subject and topic
+    - The thinking skill you want, such as weighing evidence or spotting bias
+    - The year or age group
+    - Your learners' English levels (optional)
+    - A text students will read (optional)
+  output:
+    - name: The Task
+      contains: Student instructions, the material to weigh and the guiding questions for your thinking skill.
+    - name: Critical vs. Surface Response Guide
+      contains: What a strong answer looks like next to a shallow one, with examples of each.
+    - name: Teacher Follow-Up Prompts
+      contains: Questions to ask live that push students to think further.
+    - name: Language Demand Profile
+      contains: The hard words, grammar and sentence types in the task, sorted by kind.
+    - name: Scaffold Recommendations
+      contains: A support for each kind of block, such as sentence starters, word banks or visuals.
+    - name: Modified Task
+      contains: The same task with word banks, sentence starters and chunked steps added.
+    - name: Cognitive Demand Check
+      contains: A check that the supported task still asks students to think as hard.
+    - name: Scaffold Removal Plan
+      contains: How to take the supports away over time as students gain confidence.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read the pack and write the three steps. Nothing needs code or web search.
+  inputs:
+    - A real text or source you plan to use. The language check is sharpest on the actual words students will meet.
+    - Subject words you plan to teach first. The check leaves them out of the blocks.
 tweaks:
   - what: The thinking skill
     how: Name one skill. A task that asks for weighing evidence, spotting bias and writing an essay all at once gives the language check too much to separate.
@@ -70,4 +111,13 @@ improve:
   - Save the language blocks you find over time and ask for them first in every new task.
   - Add your class's home languages to the file so the help can use cognates where they exist.
   - Build up a bank of sentence starters for your subject and give it to step three.
-  - Pair it with a barrier check for the whole lesson once the task is ready.
+  - Pair it with the Check a lesson before teaching it workflow once the task is ready.
+next:
+  - task-rubric-drafter
+  - check-a-lesson-before-teaching-it
+  - adapt-a-lesson-for-different-access-needs
+terms:
+  - term: Language demand
+    meaning: The hard words and sentence types a student must understand to do the task.
+  - term: Scaffold
+    meaning: Help such as a word bank or sentence starter that you take away as students get stronger.

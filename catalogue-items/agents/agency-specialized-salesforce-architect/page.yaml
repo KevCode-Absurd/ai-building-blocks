@@ -1,0 +1,144 @@
+name: Salesforce Architect agent
+summary: Get a Salesforce architecture plan with a data model, system links, decision records and the platform limits to check before you build.
+headline: Salesforce Architect agent
+subhead: Describe your Salesforce setup, your problem and the systems that must connect to it. The agent proposes how to store the data, how systems share it and where the logic lives. You get decision records and a list of limits to check.
+job: connect-tools
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Salesforce projects go wrong when the plan ignores platform limits, or when the data model is fixed too late. This agent works like a Salesforce solution architect. It leads with the decision, then gives the reason, so you do not have to dig for the answer.
+
+  It covers four things. The data model: objects, how they link and who can see them. The integrations: how outside systems send data and what happens when a call fails. The automation: which jobs use Flows or formulas and which need code. The release plan: how changes move from a sandbox to your live org. Each big choice becomes a short decision record with options and trade-offs.
+
+  Salesforce limits change with each release. The agent names the limits that touch your design, such as queries or records per transaction. It marks every number as something to check in current Salesforce documentation, unless you paste that page. It also never guesses your usage. It cannot see your org or change it. It only proposes.
+when:
+  - You are adding another cloud, such as Service or Marketing, to an org you already run.
+  - A system outside Salesforce, such as your store or billing tool, must sync with it and you must pick how.
+  - Your org has old workflows and Flows that clash and you need a clean-up plan.
+  - A developer or partner proposes a design and you want a written second opinion.
+not_for:
+  - You have one how-do-I question about a field, report or Flow. Ask your Salesforce admin or Salesforce Help.
+  - You want changes made inside a live org. This agent only proposes, so hand its plan to your admin.
+  - You want to link two apps with no code, such as Zapier or Make. Use the No-code automation planner.
+you_give:
+  - The business problem you want Salesforce to solve, in plain words
+  - Which Salesforce products you use, and your edition if you know it
+  - Outside systems that must connect, how often data moves and about how many records
+  - Your current objects, Flows or code, as a list or export with no customer records (optional)
+  - Rules you must follow, such as privacy or where data may be stored (optional)
+you_get:
+  - A recommended design with the main decision stated first
+  - A decision record for each big choice, with options, trade-offs and when to look again
+  - A data model sketch showing objects, links and who can see what
+  - An integration plan showing how data moves and what happens on failure
+  - A list of Salesforce limits that touch your design, each marked to check
+  - A short release plan from sandbox to live
+how_to_use:
+  - Add the pack to your AI as a skill. If you cannot, start a new chat and paste SKILL.md, then references/source-agent.md.
+  - Describe the business problem first. Then paste your setup, such as a list of objects and automations. Leave out customer records.
+  - Say what is fixed, such as the products you use, your deadline and who will maintain the build.
+  - Read the recommendation first. If you disagree, say so early and ask it to rework that choice.
+  - Check each limit it names against current Salesforce documentation, or ask your admin, before you trust the number.
+  - Give the decision records to your admin or partner to build from. Nothing in your org changes until a person makes the change.
+how_it_works:
+  - title: Understand your org
+    text: It maps what exists today, the data volumes and the pain points. Anything missing is asked once, then marked MISSING.
+  - title: Shape the data model
+    text: It lists objects, links, record types and the sharing rules that decide who can see what.
+  - title: Choose integration patterns
+    text: For each outside system it picks sync or async, push or pull, and plans for failure and retries.
+  - title: Place the logic
+    text: It uses Flows, formulas and validation rules first, and moves to code only where those get hard to keep.
+  - title: Check limits and security
+    text: It tests the design against bulk loads and Salesforce limits, and flags personal data that needs protecting.
+  - title: Write decisions and a release plan
+    text: Each big choice gets a decision record. A short release plan covers sandbox, testing and rollback.
+output_shape: |-
+  RECOMMENDATION
+    <the main decision in one or two lines> | Why <reason>
+
+  DATA MODEL
+    <object> | links to <objects> | who can see it <rule> | notes
+
+  INTEGRATIONS
+    <system> | <how data moves> | <what happens when it fails>
+
+  AUTOMATION
+    <job> | <Flow, formula, validation rule or code> | <why>
+
+  DECISION RECORDS
+    <title> | status <proposed> | options <A, B> | trade-offs | review on <date or trigger>
+
+  LIMITS TO CHECK
+    <limit and how it affects this design> | check in <current Salesforce documentation>
+
+  RELEASE PLAN
+    <sandbox steps> | <how changes reach live> | <how to roll back>
+
+  OPEN CHECKS
+    <what is unverified>
+output_sample:
+  input:
+    - The business problem you want Salesforce to solve
+    - Your Salesforce products and the outside systems that connect
+    - A list of current objects, Flows or code (optional)
+    - Rules you must follow, such as privacy (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A Salesforce admin or developer who can build and check the design
+  output:
+    - name: Recommendation
+      contains: The main design choice and the reason, up front.
+    - name: Data model
+      contains: Objects, how they link, and who can see each one.
+    - name: Integration plan
+      contains: How each outside system sends data, and what happens when a call fails.
+    - name: Automation choices
+      contains: Which jobs use Flows or formulas and which need code, with reasons.
+    - name: Decision records
+      contains: One short record per big choice, with options, trade-offs and when to review.
+    - name: Limits to check
+      contains: Salesforce limits that touch the design, each marked to check in current documentation.
+    - name: Release plan
+      contains: How changes move from sandbox to live and how to roll back.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Data volumes
+    how: Give record counts per object and how fast they grow. Volume changes which design is safe.
+  - what: Who maintains it
+    how: Say if an admin or a developer will own the build. It decides how much code is sensible.
+  - what: Current mess
+    how: Paste a list of your Flows, triggers and workflows, with names only. It can then plan the clean-up.
+  - what: Rules to keep
+    how: Name your privacy or data location rules up front, so they shape the design instead of arriving late.
+improve:
+  - Keep each decision record in your project notes and review it on the date it names.
+  - Copy the limits list into a sheet with a column for the date you checked each one.
+  - Ask your admin to mark the choices they disagree with, then paste those back to rework them.
+terms:
+  - term: Governor limits
+    meaning: Caps Salesforce puts on what one action can use, such as queries or records.
+  - term: Flow
+    meaning: Salesforce's no-code tool for automating tasks.
+  - term: Apex
+    meaning: Salesforce's own programming language.
+  - term: Sandbox
+    meaning: A safe copy of your org for testing changes.
+  - term: Decision record
+    meaning: A short note on what was chosen, what was rejected and why.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: Good at comparing options across a long brief and writing the decision records.
+    - name: Claude Code
+      why: Useful when your Salesforce project is in a code folder, so it can read your metadata files.
+  inputs:
+    - Your object list from Setup, with no customer records.
+    - Expected record counts and growth for your biggest objects.
+    - The current Salesforce limits page for your edition, pasted in.

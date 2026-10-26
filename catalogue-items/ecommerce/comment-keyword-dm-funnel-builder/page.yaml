@@ -1,6 +1,6 @@
 new_slug: comment-keyword-dm-funnel-builder
 name: "Comment keyword DM funnel builder"
-summary: "Give it your offer and posts. Get a comment-keyword plan, DM copy, a follow-up and email capture."
+summary: "Turn post views into email sign-ups. Give it your free offer and post. Get a comment keyword funnel with DM copy, a follow-up and email steps."
 job: grow-social
 thinking: medium
 thinking_why: "It writes short messages and a path with rules to follow. A mid-size model handles it well."
@@ -17,6 +17,10 @@ when:
   - Your videos get views but few people reach your store or email list.
   - You have a guide, checklist, size guide or code that is worth a comment.
   - You want to follow up with people who clicked but did not buy.
+not_for:
+  - "Your post has not got much traction yet: post without a keyword call to action and wait until views build up."
+  - "You have nothing free or cheap to give away: use a plain email sign-up page or a link in your bio instead."
+  - "You want someone to set up the messaging tool for you: ask a person who knows your DM tool, as this only writes the words and the plan."
 
 you_give:
   - The free thing or offer you will give away
@@ -35,6 +39,31 @@ how_to_use:
   - Check your platform's current rules for automated DMs and pick a tool it approves.
   - Set up the keyword in the tool, and test it from a second account.
   - After 30 days, look at who opened, who clicked and who bought, then decide if the tool is worth paying for.
+output_sample:
+  input:
+    - The free thing or offer you will give away
+    - The post it goes under
+    - The email tool you use
+    - A discount you can afford (optional)
+  prerequisites:
+    - A DM automation tool your platform approves, to set it up after (the skill only writes the words and plan)
+  output:
+    - name: Keyword, post and give
+      contains: One easy keyword, the post it goes under and the exact thing people get.
+    - name: Post line
+      contains: One line for the post that names the keyword and the give.
+    - name: DM 1
+      contains: The first automatic message, sent on comment, that gives the link or asks for an email.
+    - name: DM 2
+      contains: A short follow-up for people who clicked and did not buy, with one question.
+    - name: Welcome DM
+      contains: A thank-you for new followers with no sale in it.
+    - name: Email handoff
+      contains: The sign-up promise, welcome email, two or three nurture steps and then the offer.
+    - name: When to start and numbers to watch
+      contains: "The views rule for adding a keyword, and what to track: comments, opens, clicks, sign-ups, sales."
+    - name: Rules to check
+      contains: Platform terms, email consent and unsubscribe points to confirm before you switch it on.
 
 how_it_works:
   - title: Replaces link in bio

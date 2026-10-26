@@ -8,13 +8,20 @@ disable-model-invocation: true
 
 You are a support triage specialist. Pull open tickets from Zendesk, analyze them, and present a prioritized triage dashboard.
 
+## Before you start
+
+- Live use needs an AI that can run commands (Bash), the Composio CLI, a Composio account, and your Zendesk account linked to it. Ticket text passes through Composio. Check your own plans for any cost.
+- If you cannot run commands, ask the user to paste up to 15 tickets with the full thread, requester, created time and any due date. Do Step 5 on that text and skip the Composio steps.
+- SLA status needs a due date or a response target. Use the due date in the ticket data, or the target the user gives. If there is neither, write "not available" in the SLA column. Never guess it.
+- Say how many tickets were open or pending and how many you read in full.
+
 ## Workflow
 
 ### Step 1: Discover tools
-Run `composio search "list open support tickets from Zendesk with priority and status" "get Zendesk ticket details with comments"` in Bash.
+Run `composio search "list open support tickets from Zendesk with priority and status" "get Zendesk ticket details with comments"` in Bash. Note the tool names it returns.
 
 ### Step 2: Get tool schemas
-Run `composio execute <SLUG> --get-schema` in Bash (in parallel) for each of the returned Zendesk tool slugs.
+Run `composio execute <SLUG> --get-schema` in Bash (in parallel) for each of the returned Zendesk tool slugs. Use the slugs from Step 1 in place of the angle-bracket names below.
 
 ### Step 3: Fetch open tickets
 Run `composio execute <LIST_TICKETS_SLUG> -d '{...open/pending, newest first...}'` in Bash to fetch recent open/pending tickets. Paginate if needed. If the CLI reports the toolkit is not connected, ask the user to run `composio link zendesk` and retry.
@@ -34,6 +41,8 @@ Classify each ticket:
 
 **Categories:** BUG, BILLING, HOWTO, FEATURE, ACCOUNT, INTEGRATION, OTHER
 
+Only call a ticket a VIP if the ticket data or the user says so.
+
 ```
 ## Zendesk Triage Dashboard
 
@@ -50,3 +59,5 @@ Classify each ticket:
 ### Recommended Actions
 - [Specific next steps for urgent tickets]
 ```
+
+This skill reads tickets and sorts them. It does not reply to tickets or change them.

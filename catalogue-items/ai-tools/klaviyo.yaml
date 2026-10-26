@@ -2,15 +2,15 @@ slug: klaviyo
 name: Klaviyo
 maker: Klaviyo
 url: https://www.klaviyo.com
-promise: "Build email and text campaigns from your store’s customer and order data."
+promise: "Build email and text campaigns and flows from your store's customer and order data."
 use_cases: [email-and-sms, run-ads]
 categories: [marketing]
 what_it_does:
-  - Builds campaigns and flows from a prompt with its Composer assistant.
-  - Sends email and text messages from one store-connected account.
-  - "Groups customers using the filters you describe."
-  - Scores customers on predicted lifetime value, churn risk and best send time.
-  - "Uses its Customer Agent to answer questions about orders."
+  - "Builds campaigns and flows from a conversation with its Composer assistant (checked 26 Oct 2026)."
+  - "Sends email and text messages from one account (checked 26 Oct 2026)."
+  - "Helps you define customer groups, including groups you describe in a prompt (checked 26 Oct 2026)."
+  - "Scores customers on predicted lifetime value and churn risk, and on how they buy and which channel they prefer (checked 26 Oct 2026)."
+  - "Answers customer questions and checks order status with its Customer Agent, in 113 languages (checked 26 Oct 2026)."
 benefits:
   - "Draft cart and welcome message flows, then review and launch them."
   - Message the right customers, based on what they bought and did.
@@ -21,12 +21,13 @@ best_for:
   - "Owners who want cart reminders, welcome notes and messages for past buyers."
   - Teams that sync ad audiences from customer lists.
 not_for:
-  - Businesses with no customer or order data to segment on.
-  - Teams that want a flat price, since cost rises with your profile count.
+  - "Businesses with no customer or order data to group on. Start with a plain email tool."
+  - "Teams that want a flat price. Paid prices were not on the page we read, so confirm the cost before you move your list."
+  - "Support inbox work. Gorgias is built for that."
 pricing:
   model: freemium
-  from: Check the maker's site
-  note: The free plan covers up to 250 active profiles and 500 email sends a month. Paid email and text plans scale with your active profiles, and the page only offers an estimate builder.
+  from: Free, then check the maker's site
+  note: "Checked 26 Oct 2026. The free plan covers up to 250 active profiles and 500 emails a month. It also includes US$5 of mobile messages and US$5 of Composer use each month. Paid prices were not on the page we read. The page offers an estimate builder, so use that to price your list."
 works_with:
   - Shopify
   - claude
@@ -48,7 +49,28 @@ blocks:
   - sunset-flow-and-list-cleaner
   - email-and-sms-performance-reader
 alternatives: [hubspot-breeze, shopify-magic, gorgias]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Create a free account at klaviyo.com and connect your store, such as Shopify, so it can read your customers and orders."
+  - "Wait for your customer and order data to load. Check that your profile count looks right."
+  - "Open Composer and describe one flow, such as a 3-email reminder for people who left items in their cart."
+  - "Read each email, the delays between them and which customers it goes to. Change what you do not like."
+  - "Send a test to yourself, then launch. Watch the first week of results before you add more flows."
+needs:
+  - "A Klaviyo account. The free plan is enough to try it."
+  - "A connected store with customer and order data, or an imported customer list."
+  - "Your brand voice and offer in a few lines, so drafts sound like you."
+  - "Consent to email and text your customers. Check your local rules."
+example:
+  task: "Draft a 3-email cart reminder flow for a skincare store."
+  cost: "The free plan covers up to 250 active profiles and 500 emails a month, with US$5 of Composer use a month. Paid prices are not on the page we read."
+  reply: "A draft flow with a start trigger, three emails, the wait between them and the customer group it targets. Review every email, offer and send time before you launch."
+not_verified:
+  - "Paid plan prices, and how cost scales with profiles. The page we read only offers an estimate builder."
+  - "Whether Composer and the Customer Agent are included on paid plans."
+  - "That it predicts the best send time. The AI page lists lifetime value, churn risk, buying patterns and channel preference."
+  - "Which tools work with Klaviyo. Shopify, Claude, ChatGPT, Gorgias and Zapier are from our earlier notes, not the pages we read."
 sources:
   - https://www.klaviyo.com/pricing
   - https://www.klaviyo.com/features/ai

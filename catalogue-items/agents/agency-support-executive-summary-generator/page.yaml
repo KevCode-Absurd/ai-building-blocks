@@ -1,0 +1,136 @@
+name: Executive summary generator agent
+summary: Turn a long report into a 325 to 475 word executive summary with findings, impact, ranked actions and owners. Paste your report.
+headline: Executive summary generator agent
+subhead: Paste a long report, analysis or set of notes. The agent writes a short summary for senior readers in five parts, from the situation to next steps. Every finding carries a number from your material.
+job: document-work
+thinking: high
+thinking_why: It has to pick the findings that matter most, and check that every number comes from your source.
+explain: >-
+  A long report is hard to act on. Senior readers want the answer, what it
+  means in money or risk, and what to do next. This executive summary generator
+  turns your source into a page they can read in about three minutes.
+
+
+  It follows a set layout from consulting practice: the situation first, then
+  3 to 5 findings ordered by business impact, then the impact, then ranked
+  actions. Each finding must carry a number or a comparison from your source.
+  If your source has none, the agent says so. It does not make one up.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its success
+  targets describe the intended work. They are not measured results from AI
+  Blocks.
+when:
+  - Your boss wants the 40-page report on one page before Friday's meeting.
+  - You have survey, sales or project results and need leaders to make a decision.
+  - A board member or client will only read half a page.
+  - You want recommendations that each name an owner, a deadline and an expected result.
+not_for:
+  - You want a plain one-page summary with no decision section. Use the Executive summary writer.
+  - You need notes from a meeting. Use the Meeting notes maker.
+  - You need slides, not a page. Use the Turn a report into an editable briefing deck workflow.
+  - Your source has no figures at all. The agent will list the gaps and will not write findings from thin air, so gather your numbers first.
+you_give:
+  - The report, analysis, data or notes to summarise. Paste it or attach the file.
+  - Who will read the summary and what decision they must make.
+  - A topic name for the title.
+  - Owners and deadlines that already exist, such as "Maria owns this, due 15 June" (optional).
+you_get:
+  - A summary of 325 to 475 words, never over 500.
+  - Five sections: situation, key findings, business impact, recommendations and next steps.
+  - 3 to 5 findings, each with a number and a bold line on why it matters.
+  - 3 to 4 actions ranked Critical, High or Medium, each with an owner, a deadline and an expected result.
+  - A short list of gaps, such as a missing number or an owner to confirm.
+how_to_use:
+  - Add the pack to your AI as a skill. In a plain chat, paste SKILL.md first. Claude, ChatGPT and Gemini all work.
+  - Paste or attach your report. Say who will read the summary and what they need to decide.
+  - Say "Write the executive summary." Your AI asks once for anything missing, then writes it.
+  - Check every number against your report. A figure that is not in your source should not be in the summary.
+  - Fill in any owner or deadline marked "to confirm". The agent does not invent them.
+  - Send the summary yourself. The agent only drafts.
+how_it_works:
+  - title: Read the source
+    text: It lists the numbers, comparisons and decisions in your material, and notes what is missing.
+  - title: Put the answer first
+    text: It builds the summary from the top down. The point comes first and the support comes after.
+  - title: Rank the findings
+    text: It keeps the 3 to 5 findings with the most business impact and puts a number on each.
+  - title: Draft the five sections
+    text: It writes each section to its word limit, with actions ranked Critical, High or Medium.
+  - title: Check the draft
+    text: It counts words, confirms each number is in your source and marks owners and dates it could not find as "to confirm".
+output_shape: |-
+  # Executive summary: <topic>
+
+  ## 1. Situation overview (50 to 75 words)
+  <what is happening, why now, the gap between today and the goal>
+
+  ## 2. Key findings (125 to 175 words)
+  **Finding 1**: <fact with a number>. **Why it matters: <impact>.**
+  <2 to 4 more findings, ordered by impact>
+
+  ## 3. Business impact (50 to 75 words)
+  Financial impact | Risk or opportunity | Time horizon
+
+  ## 4. Recommendations (75 to 100 words)
+  **[Critical]** <action> | Owner | Deadline | Expected result
+
+  ## 5. Next steps (25 to 50 words)
+  <2 or 3 actions in the next 30 days> | Decision needed by <date>
+
+  ## Gaps
+  <missing numbers, owners to confirm>
+output_sample:
+  input:
+    - Your report, analysis or notes
+    - Who will read the summary and the decision they need to make
+    - Owners and deadlines you already know (optional)
+  prerequisites:
+    - An AI that can read long text or files, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Situation overview
+      contains: What is happening, why it matters now and the gap between today and the goal.
+    - name: Key findings
+      contains: Three to five findings ordered by impact, each with a number and a bold reason it matters.
+    - name: Business impact
+      contains: The money gained or lost, the size of the risk or chance, and the time it plays out over.
+    - name: Recommendations
+      contains: Three or four actions ranked Critical, High or Medium, each with an owner, a deadline and a result.
+    - name: Next steps
+      contains: Two or three actions for the next 30 days and the decision that is needed, with its date.
+    - name: Gaps
+      contains: Numbers, owners or dates your source did not give, so you can fill them before sending.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They can take a long report in one go and keep to a word limit.
+  inputs:
+    - The spreadsheet or figures behind the report, so every number can be checked.
+    - A past summary your readers liked, to match tone and length.
+    - A list of who owns which area, so owners are real names or roles.
+terms:
+  - term: Executive summary
+    meaning: A short page that lets a busy leader grasp the facts and decide.
+  - term: SCQA
+    meaning: A consulting layout. Situation, complication, question, answer.
+  - term: Business impact
+    meaning: What the finding means in money, risk or time.
+tweaks:
+  - what: The reader and the decision
+    how: Name the person and the decision. The agent leads with the findings that bear on it.
+  - what: How much source you paste
+    how: Paste the whole report, not just the intro. Findings only come from what you give it.
+  - what: Owners and dates
+    how: Give real names or roles and real dates. Otherwise they come back marked "to confirm".
+improve:
+  - Keep a summary your readers liked and paste it next time to match tone and length.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

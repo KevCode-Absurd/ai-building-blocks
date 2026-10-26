@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: handwritten-note-image-ad-maker
 name: "Handwritten note image ad maker"
-summary: "Paste your story ad. Get a handwritten note in their words and how to photograph it."
+summary: "Make a handwritten note image ad from your story ad. You get the note's words, the paper and place, and how to photograph it on your phone."
 job: make-image-ads
 
 headline: "Handwritten note image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your story has a line the narrator wrote down, such as a list, a sum or a reminder to themselves.
   - The problem is something people feel and don't say out loud.
   - Your story is about blaming yourself, putting something off or adding up what it cost.
+not_for:
+  - "Your story has no note, list or sum the narrator would write: ask your AI for a plain phone snapshot brief instead, since no sibling item covers it yet."
+  - "The note would be in someone else's voice, like a doctor or a customer: use a real, agreed quote with a chat screenshot ad instead."
+  - "You have no story ad yet: write the story ad first, then come back with the text."
 
 you_give:
   - Your approved story ad, with any note or list the narrator writes
@@ -35,6 +39,36 @@ how_to_use:
   - Write the note on the paper it names, in your own ordinary handwriting, and put it where the brief says.
   - Take the photo on your phone in the light it describes, square, a little off-centre.
   - If you use the image prompt instead, read every word in the result. One wrong letter gives the game away.
+output_sample:
+  input:
+    - Your approved story ad, with any note, list or sum the narrator writes
+    - How your buyer would put it in their own words (optional)
+    - Whether words on the image are on or off (optional, on by default)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - A phone camera and a pen, if you write the note yourself
+    - An AI that can make images, only if you use the image prompt instead (optional)
+  output:
+    - name: Scene
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: Who it was for
+      contains: Whether the note was for themselves, someone at home or their past self.
+    - name: Paper and place
+      contains: The paper, where it lies, the light, and what is within reach.
+    - name: The hand
+      contains: The pen, the tone and any crossing-out.
+    - name: Words on the image
+      contains: The note line by line, exactly as written, with the word count.
+    - name: Blank version
+      contains: The same paper with nothing written and the pen beside it.
+    - name: Line under the image
+      contains: A plain caption of about 27 characters, shown with its character count.
+    - name: Flags
+      contains: Whether the words were lifted or written for the image, and words to check.
+    - name: How to make it
+      contains: Steps to write and photograph it by hand, or an image prompt of 60 to 120 words.
+    - name: Checks missed
+      contains: One line for each check it still missed, or none.
 
 how_it_works:
   - title: Sets the house rules

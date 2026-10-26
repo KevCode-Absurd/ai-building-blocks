@@ -1,6 +1,6 @@
 new_slug: amazon-inbound-stock-planner
 name: "Amazon inbound stock planner"
-summary: "Give it sales, lead times and case sizes. Get how much to send, when, and a shipment checklist."
+summary: "Plan your Amazon inbound stock: how many units to order and send, when to re-order, and a first-shipment checklist with a tracking sheet."
 job: sell-on-amazon
 thinking: medium
 thinking_why: "It does stock maths and builds a checklist from rules, which needs care with numbers but not deep reasoning."
@@ -17,6 +17,10 @@ when:
   - You are placing your first order with a maker and need to know how many units to make.
   - You are sending your first shipment to Amazon and want a step-by-step checklist.
   - Your stock is running low and you need a date to re-order.
+not_for:
+  - "You sell wholesale or on another channel: use that channel's own shipping rules, as this plan is for Amazon private-label stock."
+  - "You sell a listing you do not own: ask the owner or the brand to plan the stock."
+  - "You only need a small restock of one item: use the inbound tools in Seller Central."
 
 you_give:
   - Units sold per week and how fast sales are growing
@@ -34,6 +38,31 @@ how_to_use:
   - Say whether this is your first shipment, and which country you sell in.
   - Work through the checklist in order, and fill in the tracking sheet as each shipment moves.
   - Check current fees and limits in Seller Central before you pay for anything.
+output_sample:
+  input:
+    - Units you sell per week, and how fast sales are growing
+    - Your maker's lead time, shipping time and monthly capacity
+    - Case size, weight and units per case
+    - Your stock now and any storage fee notices (optional)
+    - Your country, US or UK, and the cash you can spend on stock (optional)
+  prerequisites:
+    - A Seller Central account, or a plan to open one
+    - A quote from your maker
+  output:
+    - name: Order and send
+      contains: How many units to order, how many to send now and in how many shipments, when to re-order, and cash tied up.
+    - name: Shipment checklist
+      contains: "Seven steps: account plan, barcode, prep, box rules, label checks, carrier and pickup, and paperwork."
+    - name: Tracking sheet
+      contains: One line per shipment from sent to closed, with units received and any gap.
+    - name: Storage watch
+      contains: Stock age, any fee notice and what to do about it.
+    - name: Missing
+      contains: Any input you did not give, such as sales rate, lead time or case size.
+    - name: Check in Seller Central
+      contains: The current fees, size tiers and limits you must confirm before you pay.
+    - name: Checks missed
+      contains: Any check the plan failed, or none.
 
 how_it_works:
   - title: Sizes the order

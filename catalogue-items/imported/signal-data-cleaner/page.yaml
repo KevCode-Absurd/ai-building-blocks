@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Cleaning steps depend on the data.
 new_slug: signal-data-cleaner
 name: Signal data cleaner
-summary: Give it raw signals. Get gaps filled, drift removed, noise cut and
-  labels added for analysis.
+summary: "Clean raw signal data in MATLAB: fill gaps, remove drift and spikes, cut noise, then label and split it. You get a script you can re-run."
 job: build-software
 headline: Signal data cleaner
-subhead: A MATLAB script that turns a raw signal into clean, labelled data ready
-  for analysis. It saves you from inventing filters that are wrong or functions
-  that do not exist.
+subhead: A MATLAB script that turns a raw signal into clean, labelled data ready for analysis. It saves you from inventing filters that are wrong or functions that do not exist.
 explain: |
   A MATLAB script that turns a raw signal into clean, labelled data ready for analysis. It saves you from inventing filters that are wrong or functions that do not exist.
 
@@ -18,19 +15,46 @@ when:
   - The signal drifts slowly and hides what you want to see.
   - You need to label recordings for machine learning.
   - You have a folder of signal files and need one clean dataset.
+not_for:
+  - "You need to design a filter for a set band, a notch or a custom FIR or IIR: use the matlab-design-digital-filter skill."
+  - "You want features from a clean signal, such as RMS or spectral values: use the matlab-extract-signal-features skill."
+  - "You want to classify raw .wav audio and have Audio Toolbox: use audioDatastore in MATLAB instead."
 you_give:
-  - Your signal data or a folder of files
-  - Sample rate
-  - "What problems you see: gaps, drift, noise"
-  - MATLAB with Signal Processing Toolbox
+  - Your signal data, or a folder of signal files
+  - The sample rate
+  - "The problems you see: gaps, drift, spikes or noise"
+  - The file format, such as .mat or .csv
 you_get:
   - A runnable .m cleaning script
   - Gaps filled and drift removed
   - Outlier handling
   - Labelled, split data for training
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Signal Processing Toolbox.
+  - Check that MATLAB and Signal Processing Toolbox are installed. Your AI must be able to run MATLAB code, or you run the script yourself.
+  - Paste the skill into your AI. Add its reference files, since the steps depend on them.
+  - Share your data, the sample rate and the file format. Say which problem to fix first.
+  - Ask for a runnable .m script with one section per step.
+  - Run the script. Check a plot of the signal before and after each step.
+  - Fix the order of steps if a later step looks worse. Spikes go first, then drift, then smoothing.
+output_sample:
+  input:
+    - Your signal data, or a folder of signal files
+    - The sample rate
+    - "Which problems you see first: gaps, drift, spikes or noise"
+    - The file format, such as .mat or .csv
+  prerequisites:
+    - MATLAB with Signal Processing Toolbox installed
+    - An AI that can run MATLAB code, or a way for you to run the script yourself
+  output:
+    - name: Runnable .m script
+      contains: One saved script you can version and re-run, not just values left in the workspace.
+    - name: Repair step
+      contains: Fills missing samples, using interpolation for short gaps and an AR method for long gaps in oscillating signals.
+    - name: Detrend, smooth and deoutlier step
+      contains: Removes spikes, takes out slow drift with a polynomial fit, then smooths noise, in an order that avoids damage.
+    - name: Align or resample step
+      contains: Puts one or more channels on a shared, uniform time base when you need it.
+    - name: Label and split step
+      contains: Builds a datastore from your files, adds labels from filenames or folders, and makes train, validation and test sets.
+    - name: Frame and hand-off step
+      contains: Cuts long signals into frames with labels and shapes the data for training.

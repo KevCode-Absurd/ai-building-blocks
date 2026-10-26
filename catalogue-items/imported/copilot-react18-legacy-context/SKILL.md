@@ -45,3 +45,26 @@ grep -rn "this\.context\." src/ --include="*.js" --include="*.jsx" | grep -v "\.
 - **`references/single-context.md`** - complete migration for one context (theme, auth, etc.) with provider + class consumer + function consumer
 - **`references/multi-context.md`** - apps with multiple legacy contexts (nested providers, multiple consumers of different contexts)
 - **`references/context-file-template.md`** - the standard file structure for a new context module
+
+
+## Inputs, guard rails and what to return
+
+Added by AI Blocks. The method above is unchanged.
+
+**You need:** the provider file and every consumer file. If the user cannot paste them all, ask for the search results from the Scan Commands above, then ask for the files they list.
+
+**If something is missing:**
+- No provider found: say so. Do not create a provider from a guess.
+- A consumer file is named in the search but not pasted: list it as "NOT SEEN" and do not change it. Say that migrating the provider alone will break that consumer.
+- You cannot tell if `this.context` is old or new: mark it "CHECK" and ask. Do not assume.
+- The `references/` folder is not available: use the steps above and say the full examples were not available. Do not invent a different pattern.
+
+**Return in this order:**
+1. **Provider and consumers found**: file names, and what values the context carries.
+2. **Context file**: the new file.
+3. **Updated provider**.
+4. **Updated consumers**: one per file.
+5. **Check by hand**: anything "NOT SEEN" or "CHECK".
+6. **Verify**: the searches to run again. They should return no legacy context.
+
+Tell the user to apply the provider and all consumers together, then run the app and tests on their own machine.

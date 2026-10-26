@@ -32,6 +32,53 @@ User Request → Intent Classification → Policy Check → Tool Execution → A
 - **Production deployments**: Compliance, audit, and safety requirements
 - **Sensitive operations**: Financial transactions, data access, infrastructure management
 
+## When Not to Use
+
+- The agent has no tools and only writes text: there is nothing to permit or block.
+- You need a security review, a penetration test or a compliance sign-off: this designs controls, it does not prove them. Use the AI agent attack tester or the Agent OWASP risk checker.
+- You need to design the tools themselves: use the Agent tool designer.
+- You only want to watch what an agent does after launch: use the AI agent monitoring planner.
+
+## What You Give It
+
+Ask once for any that are missing. If one is still missing, write MISSING and say what it changes. Never invent a tool name, a risk level or a rule.
+
+1. The agent's job in one or two sentences.
+2. Each tool it can call (name, what it does, whether it reads or changes things).
+3. The risk level: internal test, general production, sensitive (money, health, legal) or compliance-critical.
+4. The kinds of sensitive data it can touch (customer details, payment data, secrets).
+5. What logging exists today (optional).
+6. The framework and language, if the person wants code (optional).
+
+## Steps
+
+1. **List the tools.** Put every tool in a table: tool, reads or changes data, worst thing that could go wrong.
+2. **Pick a governance level** from the Governance Levels table, and say why.
+3. **Write the policy.** For each tool: allow, deny, or needs human approval. Add blocked content patterns and a per-run call limit. Where policies stack, most restrictive wins.
+4. **Decide the intent checks.** Say which risky requests to flag before a tool runs. State that pattern checks are a first filter only.
+5. **Design the audit trail.** Choose the fields to log for every allowed, denied and failed call.
+6. **Add trust rules only for multi-agent setups.** Say what an agent may do at each trust level and what makes trust drop.
+7. **Write the test list.** One test per control, using the Quick Start Checklist below.
+
+## Output
+
+Return these in order. If the person wants code, add the matching pattern code after the sections, adapted to their tools.
+
+1. **Governance level and reason**: one short paragraph.
+2. **Tool permission table**: `<tool>` | `<reads or changes>` | `<allow, deny or approval>` | `<why>`.
+3. **Policy file**: the policy as YAML (see Policy as YAML), with blocked patterns and the call limit.
+4. **Intent checks**: the request types to flag, with a warning that these are easy to get around.
+5. **Audit log fields**: the fields logged per call, and where the log is stored.
+6. **Trust rules**: only for multi-agent systems, otherwise "Not needed".
+7. **Test list**: one test per control.
+8. **Gaps and next steps**: every MISSING input, and a note that a human security review is still needed before launch.
+
+## Honest Limits
+
+- The pattern-based intent check in Pattern 2 is a heuristic. Rephrasing, encoding or another language can slip past it. It lowers risk. It is not a security control on its own.
+- The policy only protects what it covers. A tool that is not in the table is not governed.
+- Code below is a starting sketch, not a finished product. Test it in your own setup before you rely on it.
+
 ---
 
 ## Pattern 1: Governance Policy
@@ -207,6 +254,8 @@ def is_safe(content: str, threshold: float = 0.7) -> bool:
 
 **Key insight**: Intent classification happens *before* tool execution, acting as a pre-flight safety check. This is fundamentally different from output guardrails which only check *after* generation.
 
+**Warning**: These patterns are a first filter. Different wording, encoding or another language can get past them, so never rely on `is_safe()` as your only protection. Pair it with the tool allowlist, approvals and the audit trail.
+
 ---
 
 ## Pattern 3: Tool-Level Governance Decorator
@@ -218,7 +267,13 @@ import functools
 import time
 from collections import defaultdict
 
+# Counts calls per policy. This counter does NOT reset by itself.
+# Call reset_call_count(policy.name) at the start of every request or run,
+# or max_calls_per_request will count calls across all requests.
 _call_counters: dict[str, int] = defaultdict(int)
+
+def reset_call_count(policy_name: str) -> None:
+    _call_counters[policy_name] = 0
 
 def govern(policy: GovernancePolicy, audit_trail=None):
     """Decorator that enforces governance policy on a tool function."""
@@ -234,7 +289,7 @@ def govern(policy: GovernancePolicy, audit_trail=None):
             if action == PolicyAction.REVIEW:
                 raise PermissionError(f"Tool '{tool_name}' requires human approval")
 
-            # 2. Check rate limit
+            # 2. Check rate limit (calls since the last reset_call_count)
             _call_counters[policy.name] += 1
             if _call_counters[policy.name] > policy.max_calls_per_request:
                 raise PermissionError(f"Rate limit exceeded: {policy.max_calls_per_request} calls")
@@ -500,8 +555,10 @@ policy = GovernancePolicy(
 async def read_file(path: str) -> str:
     """Read file contents — governed."""
     import os
+    base = os.path.realpath(".")
     safe_path = os.path.realpath(path)
-    if not safe_path.startswith(os.path.realpath(".")):
+    # commonpath avoids the prefix trap: "/app" would otherwise match "/app-secrets"
+    if os.path.commonpath([base, safe_path]) != base:
         raise ValueError("Path traversal blocked by governance")
     with open(safe_path) as f:
         return f.read()

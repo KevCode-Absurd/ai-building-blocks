@@ -2,17 +2,54 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-typescript-mcp-server-generator
 name: TypeScript MCP server starter builder
-summary: Describe your tools and data. Get a TypeScript MCP server project with
-  tools, resources and tests.
+summary: Describe your tools and data. Get a TypeScript MCP server starter project with tools, optional resources and run steps.
 job: connect-tools
 headline: TypeScript MCP server starter builder
-subhead: Describe your tools and data. Get a TypeScript MCP server project with
-  tools, resources and tests. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Tell your AI which tools you want your server to offer. It builds a TypeScript MCP server project you can run and test. MCP is a standard way to connect AI apps to your tools and data.
+not_for:
+  - "You have a server in another language: ask your AI to port it by hand, or use that language's own MCP kit."
+  - "You want no code at all: use a no-code automation app such as Zapier instead."
+  - "You only need to move an old TypeScript v1 server: run the official codemod from the skill, then fix the marked spots."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Write a list of your tools. Give each a name, a purpose, its inputs and its outputs.
+  - Decide if the server runs on your computer (stdio) or over the web (HTTP).
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your tool list and your choice.
+  - Copy the files it writes into a new folder. Or use an AI that can create files for you.
+  - On your computer, run npm install, then start the server with the command it gives you.
+  - Test it with MCP Inspector and fix any errors. Needs Node.js 20 or newer.
+output_sample:
+  input:
+    - The tools you want, with a name, purpose, inputs and outputs for each
+    - Any data sources or APIs the tools call, and how you sign in to them (optional)
+    - Whether the server runs on your computer (stdio) or over the web (HTTP)
+  prerequisites:
+    - Node.js 20 or newer on your computer
+    - An AI that can write project files, or a way to copy its code into files
+  output:
+    - name: package.json
+      contains: Project name, ES module setting, scripts, and the MCP server, transport and Zod packages.
+    - name: tsconfig.json
+      contains: TypeScript settings for ES modules.
+    - name: .gitignore
+      contains: Files to keep out of version control, such as node_modules and build output.
+    - name: src/server.ts
+      contains: The server setup, your tools with input checks, error handling and the chosen transport.
+    - name: Resources and prompts
+      contains: Optional resources and prompts, added only if you asked for them.
+    - name: Run and test steps
+      contains: How to start the server, test it with MCP Inspector, and fix common problems.
+when:
+  - You want to give your AI app a new tool, such as a search or a lookup.
+  - You need a starter project for an MCP server written in TypeScript.
+  - You want to expose your own data or API to AI apps.
+  - You have an old v1 TypeScript server and want the v2 way to write it.
+you_give:
+  - The tools you want, with a name, purpose, inputs and outputs for each
+  - Any data sources or APIs the tools use
+  - Your sign-in details for those APIs, kept as settings and not pasted in chat (optional)
+  - Whether the server runs on your computer (stdio) or over the web (HTTP)
+you_get:
+  - A project folder with package.json, tsconfig and a .gitignore file
+  - A server file with your tools, input checks and error handling
+  - Resources and prompts, if you asked for them
+  - Steps to run the server and test it with MCP Inspector

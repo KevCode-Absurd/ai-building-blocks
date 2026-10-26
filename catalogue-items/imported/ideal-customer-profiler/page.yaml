@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must find patterns in your data before writing the profile.
 new_slug: ideal-customer-profiler
 name: Ideal customer profiler
-summary: Give it survey or customer data. Get a profile of your best customers
-  and what they need.
+summary: Build an ideal customer profile from your survey or customer data. See who your best customers are, how they buy and what they need.
 job: understand-customers
 headline: Ideal customer profiler
-subhead: A profile of the customers who get the most from you and stay longest,
-  drawn from your own survey or research data. Give it the data and get who they
-  are, how they buy and what they need most.
+subhead: A profile of the customers who get the most from you and stay longest, drawn from your own survey or research data. Give it the data and get who they are, how they buy and what they need most.
 explain: |
   A profile of the customers who get the most from you and stay longest, drawn from your own survey or research data. Give it the data and get who they are, how they buy and what they need most.
 
@@ -18,6 +15,10 @@ when:
   - Sales spends time on leads that never become good customers.
   - You want to know which segment to grow next.
   - You need a way to score new leads for fit.
+not_for:
+  - "You have fewer than about 10 customers or no survey, interview or sales data: talk to customers in short interviews first, then come back."
+  - "You want a list of leads to contact: use a lead database or a sales tool, since this skill only describes who fits."
+  - "You need to scope a new product idea with no customers yet: start with a few customer interviews and write down what you learn."
 you_give:
   - Survey, interview or customer data
   - A list of your best and worst customers (optional)
@@ -28,7 +29,30 @@ you_get:
   - Buying behavior patterns
   - Guidance for ranking new leads
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste your survey answers, interview notes or customer data. Add a line on what you sell and to whom.
+  - Add your best and worst customers and any win and loss notes, if you have them.
+  - Ask your AI to build the ideal customer profile from your data.
+  - Check the profile against what you know. Ask your AI to fix anything that does not match your best customers.
+  - Use the disqualification list to score new leads.
+output_sample:
+  input:
+    - Your survey answers, interview notes or customer data
+    - A list of your best and worst customers (optional)
+    - Win and loss notes from sales (optional)
+    - A line on what you sell and to whom
+  output:
+    - name: Firmographic profile
+      contains: Company size, industry, region, job title and background of your best customers.
+    - name: Behavioral profile
+      contains: How they find tools, how long they take to decide, who is involved and how fast they adopt.
+    - name: Jobs to be done
+      contains: What they want to get done, including the feelings and status that come with it.
+    - name: Pain points and needs
+      contains: The top 5 to 7 problems they face and what they need most.
+    - name: Go-to-market implications
+      contains: How to aim your sales and marketing, and what to say to this customer.
+    - name: Disqualification criteria
+      contains: Signs that a lead is not a good fit.
+    - name: Ideal-of-the-ideal segment
+      contains: The highest-value group inside your ideal customer profile.

@@ -42,15 +42,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Best and worst customer profiler.** Use the skill `best-and-worst-customer-profiler`. Shows what your best customers have in common.
+1. **Best and worst customer profiler.** Use the skill `best-and-worst-customer-profiler`. Ranks your customers by profit and shows what the best have in common. Hands step 2 a report with the top group's share of profit; you then export the customer list for the VIP rule.
 
 Pause here: Choose the VIP rule (number of orders or spend) from the profile and export the orders for customers who meet it.
 
-2. **Loyalty and VIP program designer.** Use the skill `loyalty-and-vip-program-designer`. Designs the tiers and perks for the group the profile described.
+2. **Loyalty and VIP program designer.** Use the skill `loyalty-and-vip-program-designer`. Give it the audit report from the steps before. Uses the profile's top-group shares from step 1 and your customer export (spend and orders), not step 1's files alone. Hands step 3 a VIP plan with tiers, perks and the club invite.
 
 Pause here: Set up the tiers and invite the first VIPs, then wait a month and export their orders.
 
-3. **Top customer touch planner.** Use the skill `top-customer-touch-planner`. Plans the personal touches for the VIPs, using how they responded to the program.
+3. **Top customer touch planner.** Use the skill `top-customer-touch-planner`. Give it the plan from the steps before. Uses your fresh customer export from a month after the invite, and step 2's top tier to choose who gets the biggest touch. Hands you the touches, scripts and a control group.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

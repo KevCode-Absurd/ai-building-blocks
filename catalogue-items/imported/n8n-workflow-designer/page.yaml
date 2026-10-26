@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks a known pattern and fills it in.
 new_slug: n8n-workflow-designer
 name: n8n workflow designer
-summary: Describe the automation you want. Get an n8n workflow laid out with a
-  proven pattern, from webhook to schedule.
+summary: Plan your n8n workflow before you build it. Describe the job and get the best-fit pattern, an ordered step list and where errors go.
 job: connect-tools
 headline: n8n workflow designer
-subhead: Pick the shape of an n8n automation before you drag a single node. Many
-  workflows go wrong because the structure was a guess. This skill matches your
-  idea to one of five proven patterns and lays it out step by step.
+subhead: Pick the shape of an n8n automation before you drag a single node. Many workflows go wrong because the structure was a guess. This skill matches your idea to one of five proven patterns and lays it out step by step.
 explain: |
   Pick the shape of an n8n automation before you drag a single node. Many workflows go wrong because the structure was a guess. This skill matches your idea to one of five proven patterns and lays it out step by step.
 
@@ -18,6 +15,10 @@ when:
   - You need to sync two databases on a schedule.
   - You want to know if your task needs an AI agent or a plain flow.
   - A workflow you started has grown messy and needs a cleaner outline.
+not_for:
+  - "You only need a one-off edit to your data: do it by hand in a spreadsheet or the app itself."
+  - "You have one app and one simple trigger: use that app's built-in automation, no plan needed."
+  - "You have a broken node or an error message: check that node's settings and the n8n docs, not a pattern guide."
 you_give:
   - A plain description of what should happen
   - What starts it (a request, a time, an event)
@@ -28,8 +29,27 @@ you_get:
   - Where error handling goes
   - Examples of the same pattern in use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can use the n8n MCP tools.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text.
+  - Describe what should happen, what starts it, and which apps or databases are involved.
+  - Read the pattern it picks and the reason. Say so if the fit looks wrong.
+  - Check the ordered steps and the error step against your idea.
+  - Build the workflow in n8n by hand, or let your AI do it if it has the n8n MCP tools. This is optional and needs your n8n set up.
+output_sample:
+  input:
+    - A plain description of what should happen
+    - What starts it, such as a request, a time or an event
+    - The apps or databases involved
+  prerequisites:
+    - An n8n account to build the plan in later (optional)
+    - The n8n MCP tools, only if you want your AI to search nodes and build for you (optional)
+  output:
+    - name: Best-fit pattern
+      contains: "One of the five patterns: webhook, API fetch, database sync, AI agent or scheduled task, with the reason it fits."
+    - name: Ordered steps
+      contains: The flow from trigger to output, such as trigger, check, change, send and log.
+    - name: Error handling
+      contains: Where an error step belongs and which kind to use, such as an error trigger or a stop and error.
+    - name: Build and test checklist
+      contains: Planning, building, testing and launch checks to tick off before you turn the workflow on.
+    - name: Similar examples
+      contains: Short examples of the same pattern in use, so you can compare it with your idea.

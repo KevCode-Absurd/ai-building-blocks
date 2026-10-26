@@ -1,6 +1,6 @@
 new_slug: slack-and-backup-planner
 name: "Slack and backup planner"
-summary: "Paste how your business or budget runs. Get where it breaks under stress and the slack to add first."
+summary: "Find where one bad week would break your business and what slack or backup to add first. Paste how it runs and get a ranked plan."
 job: think-and-decide
 thinking: high
 thinking_why: "It traces shocks through a system to cash and ranks protections, which needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - "One customer, supplier or channel carries most of your business."
   - "One person knows how the critical thing works and is going on leave."
   - "Things have gone smoothly for two years and that is starting to worry you."
+not_for:
+  - "You run alone with no suppliers, channels or big customers: a simple cash buffer target is enough."
+  - "You are a new startup with no spend history: work out your cash runway first, then come back."
+  - "You want a full year of cash scenarios: use a spreadsheet or ask your accountant."
 
 you_give:
   - "What you depend on and how much each carries"
@@ -34,6 +38,31 @@ how_to_use:
   - "Add months of cash and the loss you cannot afford."
   - "Read BAD WEEKS. If a trace is wrong about your business, correct it and run again."
   - "Start ADD FIRST this month."
+output_sample:
+  input:
+    - What your business depends on and how much each one carries
+    - Months of cash and how long key things take to replace (advised)
+    - Past shocks and what they cost (optional)
+    - The loss you cannot afford (optional)
+  output:
+    - name: DEPENDENCIES
+      contains: Each thing you lean on, the share it carries, whether it has a backup, and any over a third marked.
+    - name: SINGLE POINTS
+      contains: Each dependency with no backup, and what happens the week it fails.
+    - name: BAD WEEKS
+      contains: Three plausible shocks traced to what breaks, weeks until cash hurts, and whether any reach your limit.
+    - name: SLACK TO ADD
+      contains: For each weak point, the backup that would absorb the shock, its cost in money and time, and what it buys.
+    - name: ADD FIRST
+      contains: The top three additions, each with who does it and by when.
+    - name: QUIET RECORD
+      contains: A note on a smooth run not being proof of safety, if your history shows no shocks.
+    - name: LEAVE FRAGILE
+      contains: What is not worth a backup, with the reason.
+    - name: MISSING
+      contains: Any shares, cash figures or replace times you did not give.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or none.
 
 how_it_works:
   - title: "Lists the dependencies"

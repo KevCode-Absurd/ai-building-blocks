@@ -2,17 +2,30 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: gorgias-weekly-support-report
 name: Gorgias weekly support report
-summary: Connect Gorgias. Get the week’s ticket trends, repeated problems, notable cases, and recommended fixes.
+summary: "Get a weekly Gorgias support report: ticket volume, top issues, notable tickets and fixes to try. Review it, then post it to Slack."
 job: help-customers
 headline: Gorgias weekly support report
-subhead: Connect Gorgias and ask for the weekly support report. It gathers the week's tickets and reads a sample of detailed threads. You get volume, timing measures, recurring problems, notable cases, and proposed fixes, with an optional approved Slack post.
+subhead: Connect Gorgias and ask for the weekly support report. Your AI pulls the past 7 days of tickets and reads up to 25 of them in detail. You get a short report with trends and fixes, and you choose whether it goes to Slack.
 when:
-  - You use this tool for customer support and need help with this task.
+  - It is Monday and you want last week's support numbers in one page for your team.
+  - Your tickets sit in Gorgias and you want to spot repeat problems before they grow.
+  - You need a short update for your boss or your team's Slack channel.
+  - You want ideas for help articles or product fixes based on what customers asked.
+not_for:
+  - "You need to look up or reply to one ticket: open it in Gorgias and read the thread there."
+  - "Your support runs on live chat or email outside Gorgias: ask your AI to summarize an export of those messages by hand, or use that tool's own reports."
+  - "You want a report without installing the Composio command line tool: copy your ticket numbers into a spreadsheet and sum them there."
 you_give:
-  - The week's Gorgias ticket records and full-thread sample.
-  - Earlier comparable records if you want a change-over-time comparison.
+  - Your Gorgias account, connected through Composio.
+  - The week you want covered (optional, the past 7 days is the default).
+  - The Slack channel to post to (optional).
 you_get:
-  - Show trends and proposed fixes. Review the report before posting it to a Slack channel.
+  - Counts of new, resolved and open tickets for the week.
+  - Average first response and resolution times, plus CSAT if your data has it.
+  - The top issue groups with ticket counts.
+  - "Three notable tickets: the biggest fire, the longest open, and the best resolution."
+  - Trends and recommended fixes you can act on.
+  - A Slack post of the report, only after you approve it.
 how_it_works:
   - title: Read the week's work
     text: Gather tickets from the past week and read a sample of detailed conversations.
@@ -25,8 +38,32 @@ works_best_with:
     - name: Gorgias; Slack for optional sharing
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for gorgias weekly support report by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide the week's Gorgias ticket records and full-thread sample.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Set up the Composio command line tool and connect your Gorgias account. Connect Slack too if you want to post.
+  - Open an AI that can run commands and load the downloaded skill folder.
+  - Ask for the weekly support digest by name.
+  - If Gorgias is not connected, your AI will ask you to run composio link gorgias. Do that, then ask again.
+  - Read the report. Check the numbers against Gorgias for anything that looks off.
+  - Say yes to post it. Your AI finds the Slack channel and sends it.
+output_sample:
+  input:
+    - Your Gorgias account, connected through Composio
+    - The week to cover (the past 7 days by default)
+    - A Slack channel for the report (optional)
+  prerequisites:
+    - A Composio account and the Composio command line tool set up
+    - Your Gorgias account connected in Composio
+    - A Slack account connected in Composio, only if you want to post the report
+    - An AI that can run commands
+  output:
+    - name: At a Glance
+      contains: New, resolved and open tickets, average first response time, average resolution time, and CSAT score if your data has it.
+    - name: Top Issues This Week
+      contains: The main issue groups, how many tickets each had, and a short note on the trend.
+    - name: Notable Tickets
+      contains: The biggest fire, the longest open ticket, and a resolution worth sharing.
+    - name: Trends
+      contains: New patterns, growing or shrinking issues, and the product areas that bring in the most tickets.
+    - name: Recommendations
+      contains: Process changes, product fixes to cut ticket volume, and help articles to write or update.
+    - name: Slack post
+      contains: The same report sent to your chosen channel after you approve it, with a link to the message.

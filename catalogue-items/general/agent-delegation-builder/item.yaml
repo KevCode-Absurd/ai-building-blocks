@@ -1,6 +1,6 @@
 slug: agent-delegation-builder
 name: Agent delegation and dependency planner
-summary: Plan which agent owns each task, what it may do and which inputs it must wait for. Get handoff and failure rules.
+summary: "Plan which AI agent owns each task, who may hand work to whom and what must finish first. Get a delegation plan and failure test cases."
 category: general
 type: skill
 role: make

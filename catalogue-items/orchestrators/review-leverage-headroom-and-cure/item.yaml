@@ -1,15 +1,13 @@
 slug: review-leverage-headroom-and-cure
 name: Review leverage headroom and cure
-summary: Connect supported EBITDA addbacks to exact net leverage and a permitted cure scenario.
+summary: Check net debt to EBITDA after EBITDA addbacks, and test if an equity cure can fix a shortfall. Get signed headroom and a cure result.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -43,3 +41,4 @@ credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
+needs_mode: manual

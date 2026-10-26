@@ -42,17 +42,17 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Product tech pack writer.** Use the skill `product-tech-pack-writer`. Starts the flow. Turns your photos and ideas into the one spec every factory quotes against.
-2. **Supplier shortlist vetter.** Use the skill `factory-shortlist-vetter`. Give it the document from the steps before. Judges factories by how they answer the tech pack from the step before.
+1. **Product tech pack writer.** Use the skill `product-tech-pack-writer`. Starts the flow. Turns your photos and ideas into the tech pack, the one spec every factory quotes against. Steps 2, 3, 4 and 5 all work from it.
+2. **Supplier shortlist vetter.** Use the skill `factory-shortlist-vetter`. Give it the tech pack from step 1 and the factory answers you collect. Judges factories by how they answer it, and hands you the pick to quote.
 
 Pause here: Send the tech pack and the same quote request to your shortlisted factories. Collect their quotes and order samples from your finalists.
 
-3. **Landed cost calculator.** Use the skill `landed-cost-calculator`. Give it the document from the steps before. Prices the quotes you collected, checked against the tech pack, down to cost per sellable unit and margin.
-4. **Sample approval gatekeeper.** Use the skill `sample-approval-gatekeeper`. Give it the document from the steps before. Judges the samples line by line against the tech pack from the first step.
+3. **Landed cost calculator.** Use the skill `landed-cost-calculator`. Give it the tech pack from step 1 and the quotes you collected from the factories, not step 2's scores. Prices them down to cost per sellable unit and margin.
+4. **Sample approval gatekeeper.** Use the skill `sample-approval-gatekeeper`. Give it the tech pack from step 1 and photos and measures of the samples you ordered, not step 3's costs. Judges the samples line by line and tells you which one to approve.
 
 Pause here: Approve one sample, place the order and wait for production to finish. Keep the approved sample as the gold standard.
 
-5. **Pre-shipment inspection brief writer.** Use the skill `pre-shipment-inspection-brief-writer`. Give it the document from the steps before. Gives the inspector the tech pack and the gold standard to check bulk goods against, and ties payment to the result.
+5. **Pre-shipment inspection brief writer.** Use the skill `pre-shipment-inspection-brief-writer`. Give it the tech pack from step 1, your order sheet and the sample you approved after step 4. Gives the inspector the tech pack and the gold standard to check bulk goods against, and ties payment to the result.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

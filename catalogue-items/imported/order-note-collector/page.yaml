@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It pulls text fields into a list.
 new_slug: order-note-collector
 name: Order note collector
-summary: Get every gift message and special instruction from your orders in one
-  table for your packing team.
+summary: Collect gift messages and special instructions from your Shopify orders into one order notes report your packing team can print.
 job: run-your-store
 headline: Order note collector
-subhead: Every gift message, engraving request and special instruction from
-  recent orders, collected into one table for your packing team. Nothing gets
-  missed because it was buried in an order screen.
+subhead: Every gift message, engraving request and special instruction from recent orders, collected into one table for your packing team. Nothing gets missed because it was buried in an order screen.
 explain: |
   Every gift message, engraving request and special instruction from recent orders, collected into one table for your packing team. Nothing gets missed because it was buried in an order screen.
 
@@ -18,6 +15,10 @@ when:
   - Gift messages must be printed with the right order.
   - Engraved items need the exact text checked.
   - A busy sale week has too many orders to scan by hand.
+not_for:
+  - "You need refunds or stock counts: use the order list in your Shopify admin."
+  - "You need orders older than your chosen look-back window: run it again with more days, or use the order list in your Shopify admin."
+  - "You want to edit or fix an order note: do it by hand in your Shopify admin, because this only reads orders."
 you_give:
   - Store domain
   - Days to look back
@@ -29,8 +30,31 @@ you_get:
   - Item-level instructions
   - Readable or JSON output
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Check that your AI can run code and that you are signed in to the Shopify CLI with permission to read orders. Without that it cannot pull your orders.
+  - Paste this skill into Claude, ChatGPT or Gemini, or open it in a tool that can run code.
+  - Give your store domain and how many days back to look. Add field names like gift_message if you want only those (optional).
+  - Ask for only orders with notes if you want a shorter list (optional).
+  - Check the counts and a few rows against your Shopify admin.
+  - Print the CSV and attach it to your pick list, or import it into a shared sheet for your packers.
+output_sample:
+  input:
+    - Your store domain
+    - How many days back to look (one day if you skip it)
+    - Field names to pull, like gift_message or engraving (optional)
+    - Whether to show only orders that have notes (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A signed-in Shopify CLI session with permission to read orders
+  output:
+    - name: Start banner
+      contains: Your store domain and the time the run began.
+    - name: Step lines
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Summary counts
+      contains: How many orders were checked, how many had notes and how many had custom fields.
+    - name: Order list
+      contains: Each order with its customer, status, note text and item-level fields like gift messages.
+    - name: order_notes_<date>.csv
+      contains: One row per note or field with order name, status, customer, note, item, SKU, field name and value.
+    - name: JSON summary
+      contains: The same counts and file name in plain data form, if you ask for JSON.

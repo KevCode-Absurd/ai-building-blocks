@@ -1,0 +1,147 @@
+name: Drupal Shopping Cart Engineer agent
+summary: Plan or review a Drupal Commerce store, from products and checkout to payments, tax and orders, with a test list to clear before go-live.
+headline: Drupal Shopping Cart Engineer agent
+subhead: Tell it what your Drupal store sells, how checkout and payments work now and what is wrong or new. It writes a plan for the catalog, checkout, payment gateway, tax, promotions and order flow, with a test list. You get a plan for your developer, not live changes.
+job: set-up-store
+thinking: high
+thinking_why: Money is involved, so it must keep prices, payments and orders consistent and say what it cannot check. Use a model that reasons carefully and flags gaps.
+explain: |-
+  A shopping cart is the least forgiving part of a site. If tax is wrong, a card is charged twice or an order goes missing, you lose money and trust at the same moment. On Drupal Commerce, many of these bugs come from shortcuts, such as pricing logic in a template or a payment key in a saved config file.
+
+  This agent plans a Drupal Commerce store the careful way. It sets up the product model first: product types, variations, attributes and stock. It lays out the checkout steps, the payment gateway setup, tax and promotions as settings, and the order flow. Its rules come from the source profile. Prices come from Commerce's own price system, never a theme file. Money is never a float. Secrets stay out of saved config. Test mode and live mode must be easy to tell apart. Orders are moved through states, never deleted.
+
+  It ends with a go-live list that includes a real test payment and a refund. It writes a plan. It cannot see your site, run Drush or change a setting. Your developer does that.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are about to build a Drupal Commerce store and want the plan checked before you build.
+  - Prices, tax or discounts on your Drupal store look wrong at the cart or in the order.
+  - You are adding a payment gateway such as Stripe or PayPal and want the setup and test steps.
+  - You are moving to Drupal Commerce from another shop platform and want to know what to map first.
+not_for:
+  - Your store runs on WordPress and WooCommerce. Use the WordPress Shopping Cart Engineer agent.
+  - Your store is on Shopify. Use the Shopify store setup planner.
+  - You are not a developer and want a no-code store. Use the Shopify store setup planner or the WooCommerce store setup planner.
+  - Customers are being charged wrongly right now. Call your payment provider and your developer first. This agent cannot see or fix a live store.
+  - You want it to change settings, run Drush or deploy. It writes the plan. Your developer applies it.
+you_give:
+  - What you sell, such as physical goods, digital files or variants like size and colour.
+  - Your Drupal and Drupal Commerce versions, and where the site is hosted (optional)
+  - The payment gateway you use or plan to use, and whether it is in test or live mode.
+  - How tax works for you, such as US sales tax or EU VAT, and which countries you sell to.
+  - The problem or goal, for example "tax is wrong at checkout" or "launch in six weeks".
+  - Discounts you run or want, and how they should combine (optional)
+you_get:
+  - A product plan with product types, variations, attributes and stock rules.
+  - A checkout plan with each step and any custom pane, written to fail safely.
+  - A payment plan covering the gateway, test and live mode, webhooks and matching payments to payouts.
+  - A tax and promotion plan, set up as configuration and not custom code.
+  - A go-live test list and a deploy order, with risks and open questions.
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write what you sell, your versions, your gateway and mode, your tax setup and the goal or problem. Never paste API keys or secrets.
+  - Type "Plan this Drupal Commerce store. Use the structure in the skill. Mark every assumption and list what you cannot check."
+  - Check the payment plan first. Make sure test and live mode are clear, webhooks are checked and no secret sits in saved config.
+  - Walk through the go-live list with your developer. Run a real test payment and a refund before launch.
+  - Your developer applies the plan on a staging copy. The AI does not touch your site.
+how_it_works:
+  - title: Model the catalog
+    text: It maps your products to product types, variation types and attributes, and decides where stock drops.
+  - title: Plan the checkout
+    text: It lists each step and pane, and requires custom panes to check input and fail safely.
+  - title: Plan payments
+    text: It sets the gateway type, test and live mode, how keys are stored, webhook checks and how to match payments to payouts.
+  - title: Plan tax and promotions
+    text: It sets tax as configuration and writes stacking rules for discounts, then lists cases to test.
+  - title: Map the order flow
+    text: It sets order states and moves, so that orders are never deleted and refunds keep the full history.
+  - title: Write the go-live list
+    text: It lists the checks to clear, with the deploy order of database updates, config import and cache rebuild, plus a rollback.
+output_shape: |-
+  SCOPE
+    Store goal <build, fix or review> | Versions <Drupal, Commerce> | Gateway and mode <name, test or live> | Assumptions <list>
+
+  PRODUCT PLAN
+    <product type> | <variation type> | <attributes> | <stock rule>
+
+  CHECKOUT PLAN
+    <step> | <panes> | <what happens if a pane fails>
+
+  PAYMENT PLAN
+    <gateway> | <where keys live> | <webhook checks> | <how payments match payouts>
+
+  TAX AND PROMOTION PLAN
+    <tax setup> | <promotion> | <conditions> | <how it combines with others>
+
+  ORDER FLOW
+    <state> | <move> | <what it triggers>
+
+  GO-LIVE AND TEST LIST
+    <check> | <pass if> | <owner>
+
+  RISKS, GAPS AND CHECKS
+    <issue> | <why it matters> | <who decides>
+output_sample:
+  input:
+    - What you sell and how it varies, such as size and colour
+    - Your Drupal and Commerce versions, and your payment gateway and mode
+    - How tax and shipping work for you
+    - The goal or problem, and your discount rules (optional)
+  prerequisites:
+    - A Drupal developer who can apply the plan on a staging copy first.
+  output:
+    - name: Scope
+      contains: Your goal, versions, gateway and mode, and the assumptions the plan makes.
+    - name: Product plan
+      contains: Product types, variations, attributes and when stock is taken.
+    - name: Checkout plan
+      contains: Each checkout step and pane, and how a failing pane is kept from blocking orders.
+    - name: Payment plan
+      contains: Gateway setup, where keys live, webhook checks and how payments are matched to payouts.
+    - name: Tax and promotion plan
+      contains: Tax and discounts as settings, with stacking rules and cases to test.
+    - name: Order flow
+      contains: Order states and moves, with refunds and cancels that keep the record.
+    - name: Go-live and test list
+      contains: Checks to clear, including a real test payment and refund, and the deploy order.
+    - name: Risks, gaps and checks
+      contains: Open questions and risks, with who should decide each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A strong reasoning model keeps prices, tax and order states consistent. No code running or web access is needed.
+  inputs:
+    - A screenshot or export of your tax settings and your list of active discounts.
+    - A short list of the modules and custom code that touch the cart.
+    - Your gateway's test steps from its own docs.
+terms:
+  - term: Drupal Commerce
+    meaning: The shop add-on for Drupal that handles products, carts, checkout, payments and orders.
+  - term: Product variation
+    meaning: One version of a product, such as a red medium shirt, with its own price and stock.
+  - term: Checkout pane
+    meaning: One block in a checkout step, such as the address form or the payment form.
+  - term: Webhook
+    meaning: A message your payment provider sends to your site to say a payment succeeded, failed or was refunded.
+  - term: Staging
+    meaning: A private copy of your site where you test changes before they go live.
+  - term: Reconcile
+    meaning: Check that your orders match what the payment provider paid out.
+tweaks:
+  - what: Scope
+    how: Pick one area to plan first, such as payments or tax. Add the rest after.
+  - what: Selling countries
+    how: List every country you sell to. Tax and payment rules change by country.
+  - what: Risk level
+    how: Say how much a pricing or payment mistake would cost. That sets how many test cases to run.
+improve:
+  - Keep each plan with your test results. Add a test case every time a pricing or payment bug turns up.
+  - Rerun it before each big change, such as a new gateway, a new tax country or a Drupal upgrade.
+  - Pair it with the Application Security Engineer agent to review custom checkout code.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

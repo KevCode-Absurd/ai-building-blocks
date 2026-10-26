@@ -32,7 +32,7 @@ credits:
   - title: daily-news-report skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/daily-news-report
-    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+    used: Adapted under the CC BY-4.0 licence. We gave it a plain name and added rules to check before fetching, steps without tools, and an output format.
   - title: Original author
     by: renat
     url: ""

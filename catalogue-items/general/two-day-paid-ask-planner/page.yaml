@@ -1,6 +1,6 @@
 new_slug: two-day-paid-ask-planner
 name: Two-day paid ask planner
-summary: Paste your idea, buyer and price. Get the buyer-count math, ten people to ask and a go or change rule.
+summary: Plan a two-day test to see if people will pay for your idea. You get the buyer math, ten people to ask, the ask and a go or change rule.
 job: test-an-idea
 thinking: low
 thinking_why: It follows a fixed plan, with a few sums to check.
@@ -14,6 +14,10 @@ when:
   - You have an idea and want to know in two days if anyone will pay.
   - You keep planning and have not asked anyone for money.
   - You want a rule for when to go and when to change.
+not_for:
+  - "You want the fuller test with every check: use the Three-buyer idea test planner."
+  - "Your idea cannot be delivered by hand within a week: first shrink it to a small offer you could do yourself."
+  - "You want to test a feature inside a product you already sell: use the Minimum experiment planner."
 you_give:
   - The idea, the buyer and a price
   - Your profit goal and profit per sale (optional)
@@ -27,6 +31,27 @@ how_to_use:
   - Pick a price you could charge today.
   - Write the rules down and do not change them mid-test.
   - Only offer what you could deliver by hand.
+output_sample:
+  input:
+    - Your idea in one line
+    - Who it is for
+    - A price you could charge today
+    - Your profit goal and profit per sale (optional)
+  output:
+    - name: THE MATH
+      contains: Your profit goal divided by profit per sale, which gives the number of buyers you need.
+    - name: TEN PEOPLE
+      contains: Ten people you can reach within 48 hours who have the problem, and how to reach each.
+    - name: THE ASK
+      contains: Two or three lines with what they get, the price, how to pay and when.
+    - name: SCHEDULE
+      contains: Five asks on day one and five on day two, each with a time and channel.
+    - name: RULES
+      contains: What counts as go, what to change, and when to run one more round.
+    - name: REFERRAL LINE
+      contains: A short question to ask each person who says no, about who else might want it.
+    - name: MISSING
+      contains: Any fact you did not give, such as a price or names, marked instead of guessed.
 how_it_works:
   - title: State the idea
     text: Idea, buyer and one price.

@@ -2,36 +2,60 @@ thinking: high
 thinking_why: Linked numbers and assumptions need careful logic.
 new_slug: financial-model-builder
 name: Financial model builder
-summary: Give it assumptions and past results. Get a P&L, DCF and valuation
-  model you can adjust.
+summary: Turn your growth and cost assumptions into a financial model with a P&L forecast, cash flow and DCF valuation you can change and test.
 job: money-and-investing
 headline: Financial model builder
-subhead: Give it assumptions and past results. Get a P&L, DCF and valuation
-  model you can adjust. Bring revenue and growth assumptions. Use the result to
-  plan your next step.
+subhead: Give it your growth, pricing and cost assumptions, plus past results if you have them. It builds a profit and loss forecast, cash flow and a valuation. You can then change the inputs and see what moves.
 explain: |
   A working model of your business with a profit and loss forecast, a discounted cash flow and a valuation, built from your assumptions so you can change them and see the effect.
 
   You give growth rates, pricing, costs, tax and any past results. The skill builds a revenue forecast from the bottom up, or top down if that is all you have. It projects costs, then derives EBITDA and free cash flow after capex, working capital and tax. It discounts the cash flows with WACC and adds a terminal value to reach a value for the business. It finishes with bear, base and bull scenarios on two or three key assumptions, in a summary table.
 when:
   - You are raising money and need a three-year forecast.
-  - You want to know what your business could be worth.
-  - You are testing how a change in churn affects profit.
-  - You need a model to hand to an investor.
+  - You want a rough idea of what your business could be worth.
+  - You want to see how higher churn would change your profit.
+  - You need a model to show an investor, after a review.
+not_for:
+  - "You only need a fixed budget or a one-month cash check: use a simple spreadsheet or a cash-flow tracker instead."
+  - "You need a final valuation to sign off a deal or file: ask an accountant or adviser to review it first."
+  - "You want a quick guess at what your business is worth with no assumptions: ask a broker or adviser for a rough range."
 you_give:
-  - Revenue and growth assumptions
-  - Cost structure
-  - Past financials (optional)
-  - Projection period
-  - Discount rate, or the inputs to estimate it
+  - Monthly revenue history, if you have it (optional)
+  - Your growth and pricing assumptions
+  - Your cost lines, such as staff, marketing and hosting
+  - Your tax rate and starting cash
+  - How long to project
+  - Your discount rate, or the inputs to estimate it
 you_get:
-  - A projected income statement
-  - Free cash flow
-  - A DCF valuation
-  - Bear, base and bull scenarios
+  - A projected profit and loss with EBITDA
+  - Free cash flow after capex, working capital and tax
+  - A DCF valuation with terminal value
+  - Sensitivity tables on discount rate and growth
+  - Bear, base and bull scenarios in one summary table
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open spreadsheets.
+  - "Gather your inputs first: revenue history, cost lines, tax rate, starting cash and discount rate."
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your inputs and say how long to project.
+  - Check the assumptions list it gives back. Fix any that look wrong before you read the numbers.
+  - Ask for a spreadsheet if you want one. This works best when your AI can run code and make files.
+  - Change one assumption at a time, such as growth or churn, and rerun the scenarios.
+  - Ask an accountant or adviser to check the model before you share it with investors.
+output_sample:
+  input:
+    - Your revenue and growth assumptions
+    - Your cost lines, tax rate and starting cash
+    - Your past financial results (optional)
+    - How many years or months to project
+    - Your discount rate, or the inputs to estimate it
+  output:
+    - name: Core assumptions
+      contains: Every input you gave, with its source or reason, and a check that they fit together.
+    - name: Revenue forecast
+      contains: Revenue built from the bottom up or top down, split by product line or region if needed.
+    - name: Projected P&L
+      contains: Cost of sales, gross margin and running costs by type, down to EBITDA.
+    - name: Free cash flow
+      contains: EBITDA adjusted for capex, working capital and tax, period by period.
+    - name: DCF valuation
+      contains: Cash flows discounted at WACC, plus terminal value, NPV, IRR, payback and sensitivity tables.
+    - name: Bear, base and bull scenarios
+      contains: A summary table showing results when two or three key assumptions change, and which matter most.

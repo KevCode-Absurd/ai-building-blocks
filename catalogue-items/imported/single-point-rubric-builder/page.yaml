@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must turn a goal into clear, checkable criteria.
 new_slug: single-point-rubric-builder
 name: Single-point rubric builder
-summary: Give it a learning goal. Get a one-criterion rubric with open columns
-  for evidence, ready for feedback or self-assessment.
+summary: "Turn a learning goal into a single-point rubric: one clear criterion with open columns for evidence, for self, peer or teacher feedback."
 job: teach-and-train
 headline: Single-point rubric builder
-subhead: A one-criterion rubric with open columns where specific evidence goes,
-  instead of a scoring scale. It gives students feedback they can act on and
-  takes about three minutes to make.
+subhead: A one-criterion rubric with open columns where specific evidence goes, instead of a scoring scale. It gives students feedback they can act on and takes about three minutes to make.
 explain: |
   A one-criterion rubric with open columns where specific evidence goes, instead of a scoring scale. It gives students feedback they can act on and takes about three minutes to make.
 
@@ -18,6 +15,10 @@ when:
   - Students need a way to assess their own work.
   - Peers will review each other and need a simple frame.
   - You plan a task and want one clear target to hang feedback on.
+not_for:
+  - "You need scores or levels for a final grade: use a criterion-referenced rubric generator, because this rubric gives no points."
+  - "You want a rubric with several criteria in one grid: write it by hand, since this makes one criterion at a time."
+  - "You have no clear learning goal yet: write the goal first, or ask a colleague, then come back."
 you_give:
   - A learning goal or target
   - "The purpose: self, peer, teacher or planning"
@@ -28,7 +29,29 @@ you_get:
   - A three-column rubric with open evidence columns
   - A version for the stated purpose
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from the download. No code or paid tool is needed.
+  - Type your learning goal, for example an 'I can...' statement.
+  - "Say who will use the rubric: self, peer, teacher or planning. Add your year group, band system or task if you have them."
+  - Read the criterion. Check it describes one skill in words your students know.
+  - Print or share the rubric with the side columns empty. Students or teachers fill them with real evidence.
+  - When the columns are full, pick one area for growth to work on before the next draft.
+output_sample:
+  input:
+    - Your learning goal or target
+    - "The purpose: self, peer, teacher or planning"
+    - Your band system (optional)
+    - The task the students will do (optional)
+    - Whether students should write their own criterion (optional)
+  output:
+    - name: Criterion
+      contains: One clear statement of what quality looks like for your learning goal.
+    - name: Rubric
+      contains: A table with the criterion in the middle and open columns for areas for growth and strength.
+    - name: Criterion Design Notes
+      contains: Short reasons for the wording choices in the criterion.
+    - name: Usage Guidance
+      contains: How to use the rubric for your stated purpose.
+    - name: Known Limitations
+      contains: What this rubric cannot do, such as give a grade.
+    - name: Student-Generated Prompt
+      contains: A prompt that helps students write their own criterion, only if you ask for it.

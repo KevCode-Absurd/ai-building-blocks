@@ -14,6 +14,24 @@ date_added: "2026-02-27"
 ## When to Use
 Use this skill when making Node.js architecture decisions, choosing frameworks, designing async patterns, or applying security and deployment best practices.
 
+## When Not to Use
+- Front-end only work (browser code, React components with no Node.js server)
+- Choosing a database or hosting company: this skill covers the Node.js side only
+- Fixing one specific bug: paste the bug and code into your AI and ask it to debug directly
+- A finished security audit: the checklist here is a start, not a review
+
+## Output Format
+Reply with these sections, in order:
+
+1. **Your project**: what is being built, where it runs, the team's experience, and anything MISSING.
+2. **Recommended framework**: one pick and one runner-up, with a reason for each factor in the comparison table (deploy target, cold start, team skills, ecosystem, TypeScript).
+3. **Structure**: a folder layout and the layers it needs. Say "single file is fine" if the project is small.
+4. **Async and error handling**: which async patterns fit, and where to handle errors.
+5. **Security and deployment checklist**: only the items that apply, each as a checkbox.
+6. **Next step**: the first thing to build or decide.
+
+If what is being built, where it runs or the team's experience is missing, ask once, then mark it MISSING and say what you assumed. Never state version numbers, speed figures or benchmark results as fact unless the user gave them. Ask the user to check the current release notes for any version or flag.
+
 ---
 
 ## ⚠️ How to Use This Skill
@@ -37,7 +55,7 @@ What are you building?
 │   └── Hono (zero-dependency, ultra-fast cold starts)
 │
 ├── High Performance API
-│   └── Fastify (2-3x faster than Express)
+│   └── Fastify (often faster than Express in published benchmarks. Test on your own workload)
 │
 ├── Enterprise/Team familiarity
 │   └── NestJS (structured, DI, decorators)
@@ -72,7 +90,7 @@ What are you building?
 ### Native TypeScript
 
 ```
-Node.js 22+: --experimental-strip-types
+Recent Node.js: --experimental-strip-types (flag and version differ by release: check the Node.js docs for yours)
 ├── Run .ts files directly
 ├── No build step needed for simple projects
 └── Consider for: scripts, simple APIs

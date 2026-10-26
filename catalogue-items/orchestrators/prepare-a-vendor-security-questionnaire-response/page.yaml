@@ -1,53 +1,87 @@
 new_slug: prepare-a-vendor-security-questionnaire-response
 name: Prepare a vendor security questionnaire response
 headline: Prepare a vendor security questionnaire response
-summary: Share the source files. Get a sourced response draft, evidence index and unanswered questions.
+summary: "Answer a vendor security questionnaire with evidence: get a sourced draft, an evidence index and a list of questions your team still has to answer."
 job: check-contracts
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A sourced response draft, evidence index and unanswered questions. Share the customer questionnaire, approved controls, current policies and permitted supporting evidence. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the customer's questionnaire, your policies and the proof you can share. It maps each question to your evidence, builds a question-to-evidence table and drafts plain answers. You get a sourced draft, an evidence index and the questions you cannot yet answer.
 explain: |-
-  A sourced response draft, evidence index and unanswered questions.
+  When a customer sends a security questionnaire, the risk is a yes you cannot back up. This workflow helps you answer a vendor security questionnaire so every yes has a document behind it and every gap is visible.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every yes has evidence; planned controls are labeled planned and private security details stay restricted. Missing tools or evidence stay visible in the final summary.
+  The Compliance readiness checklist builder maps each question to the proof you would need. The Spreadsheet checker then builds and checks a question-to-evidence table: each yes needs a dated source and the right scope. The Plain English editor drafts the answers from that table only.
+
+  A planned control is labelled planned, not live. Private details such as internal addresses or keys stay out of the answers unless you say they may go in. It drafts. The person who owns security signs off before anything goes to the customer.
 when:
-  - You need a sourced response draft, evidence index and unanswered questions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A prospect or customer sends a security questionnaire before they will sign.
+  - Your answers sit in policies and old questionnaires, not in one place.
+  - You are not sure whether a control is live or only planned.
+  - The same questions come back every few months and each answer is written from scratch.
+not_for:
+  - You are the one sending questions to a vendor. Use the Vendor risk reviewer.
+  - You have no written policies or controls yet. Use the Compliance readiness checklist builder first to see what to build.
+  - You need a SOC 2 or ISO report. This prepares answers and does not certify anything. Your auditor does that.
 you_give:
-  - The customer questionnaire, approved controls, current policies and permitted supporting evidence.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - The customer's questionnaire (spreadsheet, Word, PDF or pasted questions)
+  - Your security policies and controls list (from your security owner or wiki)
+  - Proof you may share, such as policy documents, a recent SOC 2 summary or test reports
+  - Answers from a past questionnaire (optional)
+  - The person who signs off, and the deadline (optional)
 you_get:
-  - A sourced response draft, evidence index and unanswered questions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A question-to-evidence table: each question, proposed answer, source file and date"
+  - A sourced answer draft in plain words, with planned controls marked planned
+  - An evidence index of the files you will attach
+  - A list of unanswered questions, each with who should answer it
+  - A hand-back note with MISSING lines and any check that did not run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give the whole folder to Claude, ChatGPT or Gemini. Pick one that can make spreadsheets if the questionnaire is a workbook.
+  - Attach the questionnaire, your policies and the proof you can share. Say who signs off.
+  - Check the evidence table first. Every yes needs a file and a date. Change any yes without proof to "no evidence yet".
+  - Read the draft answers. Remove anything you would not say to the customer. Send the unanswered list to the people who own those controls.
+  - Ask your security owner to approve the final version before you send it.
 how_it_works:
   - title: Compliance readiness checklist builder
-    text: Map the questionnaire to the evidence needed for each claim and define the response scope.
+    text: "Turns each question into the evidence needed to answer it and sets the scope of your reply. Hands step 2 a list of questions with the proof each needs. Check before moving on: no question lacks a named proof type."
   - title: Spreadsheet checker
-    text: Build a question-to-evidence table and check that each proposed yes has a dated source, correct scope and a visible gap when evidence is absent.
+    text: "Builds the question-to-evidence table and checks that each yes has a dated source and the right scope. Leaves a visible gap where proof is missing. Hands step 3 only the verified rows. Check before moving on: no yes sits on a blank evidence cell."
   - title: Plain English editor
-    text: Draft clear responses from verified facts, preserving gaps and review restrictions.
+    text: "Writes short answers from the verified rows only, keeping the gaps and the limits on what may be shared. Hands back the final draft. Check before moving on: each answer matches its table row."
 output_shape: |-
-  Scope and source coverage
-  A sourced response draft, evidence index and unanswered questions.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  QUESTION  <number and text>
+  ANSWER    <yes, no, partly or planned>: <short answer in plain words>
+  EVIDENCE  <file name, date, section>
+  STATUS    <ready | needs owner | no evidence yet>
+  (one block per question)
+
+  UNANSWERED  <question> | <who can answer>
+  RESTRICTED  <details held back from the reply, and why>
+  SOURCES / MISSING / CHECKS MISSED
+output_sample:
+  input:
+    - The customer's security questionnaire
+    - Your security policies and controls list
+    - Proof you may share, such as policies or test reports
+    - Answers from a past questionnaire (optional)
+  prerequisites:
+    - An AI that can read files, and make spreadsheets if the questionnaire is a workbook
+  output:
+    - name: Question-to-evidence table
+      contains: Each question with its proposed answer, source file, date and status.
+    - name: Answer draft
+      contains: Short plain answers built from verified rows, with planned controls marked planned.
+    - name: Evidence index
+      contains: The files you plan to attach, with dates and what each proves.
+    - name: Unanswered questions
+      contains: Each question with no proof yet, and who should answer it.
+    - name: Hand-back note
+      contains: Saved files, MISSING lines, details held back and checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Every yes has evidence; planned controls are labeled planned and private security details stay restricted.
+  - what: A shorter reply
+    how: Ask for answers of one sentence each, with detail only where the question asks for it.
+  - what: A past questionnaire
+    how: Attach it. Answers that still match your current proof are reused, and the rest are marked to review.
+  - what: Sharing limits
+    how: List the files you may not share. They stay in the index as internal proof only.
 judge:
   - Every yes has evidence; planned controls are labeled planned and private security details stay restricted.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -60,16 +94,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep one evidence folder with dated policies so the next questionnaire starts from current files.
+  - Save the approved answers with their dates. Check them again before reuse.
+  - Record any control that is planned, with its target date, and update it when it goes live.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A spreadsheet-capable AI
+      why: It can read a workbook questionnaire and hand back a checked evidence table. In plain chat you get the same table as text.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your latest policy documents with dates.
+    - A named security owner who approves the answers.
 terms:
+  - term: Evidence index
+    meaning: A list of the files that back up your answers, with dates.
+  - term: Planned control
+    meaning: A safeguard you intend to add but have not finished.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result of one step, passed to the next.

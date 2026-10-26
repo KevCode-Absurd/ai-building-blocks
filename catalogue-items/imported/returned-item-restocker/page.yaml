@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: Restocking damaged items inflates your stock.
 new_slug: returned-item-restocker
 name: Returned item restocker
-summary: Get returned items added back to stock at the right location. Changes
-  live stock, so skip damaged goods.
+summary: Add returned items back to Shopify stock at the right location. Previews first and skips defective goods, so your counts match the shelf.
 job: run-your-store
 headline: Returned item restocker
-subhead: Returned items put back into available stock at the correct location,
-  so your counts match the shelf. It changes live inventory, so it starts in
-  preview mode and skips damaged goods.
+subhead: Returned items put back into available stock at the correct location, so your counts match the shelf. It changes live inventory, so it starts in preview mode and skips damaged goods.
 explain: |
   Returned items put back into available stock at the correct location, so your counts match the shelf. It changes live inventory, so it starts in preview mode and skips damaged goods.
 
   The skill looks at returns closed in the last 14 days by default. For each returned line it adds units to the stock count at the location the return went to, and links the entry to the return record for your audit trail. Items marked defective are left out unless you say otherwise. You can limit it to chosen reasons, such as unwanted or too small, or to one location. Only run it for items that have arrived and been checked.
 when:
-  - Your warehouse processes returns in another system and Shopify counts are
-    behind.
+  - Your warehouse processes returns in another system and Shopify counts are behind.
   - You skipped restocking for a week and need to catch up.
   - You want defective returns kept out of sellable stock.
   - You want a preview of changes before touching inventory.
+not_for:
+  - "Your returns are still open and nothing has arrived yet: wait until the items are received and checked, then run it."
+  - "You want to restock damaged or defective goods: inspect them by hand and adjust stock in Shopify yourself."
+  - "You only want to check if your counts are right: compare them against a stock count by hand, as this changes live stock."
 you_give:
   - Your Shopify store address
   - How many days of returns to cover
@@ -30,9 +30,29 @@ you_get:
   - Defective items left out
   - A record linking each change to its return
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Open an AI that can run Shopify CLI commands and reach your store. Paste in this skill.
+  - Sign in to your store with the Shopify CLI. Give it access to returns, inventory and locations.
+  - Give your store address. Add the days to look back, a location or return reasons if you want to narrow it.
+  - Run it in preview mode first. Check the CSV and make sure each item can be sold again.
+  - Ask your AI to run it for real. Stock changes right away and shows in Shopify's inventory history.
+  - Check the new stock counts in Shopify against the CSV.
+output_sample:
+  input:
+    - Your Shopify store address
+    - How many days of returns to look back (optional, default 14)
+    - One location to restock into (optional)
+    - Return reasons to include (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands and reach your store
+    - A signed-in Shopify CLI session with access to returns, inventory and locations
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store and the start time before any work begins.
+    - name: Restock plan
+      contains: Lists each returned item and quantity grouped by stock item and location, built before any change is made.
+    - name: Step log
+      contains: One line per step showing what was asked and the result, marked DRY RUN while in preview.
+    - name: Summary
+      contains: Counts of returns scanned, items eligible, defective and untracked items skipped, units restocked and errors.
+    - name: restock_on_return_<date>.csv
+      contains: One row per item with return, order, SKU, quantity, reason, location, stock after and status.

@@ -2,17 +2,49 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-impediment-prioritization
 name: Delivery blocker priority scorer
-summary: Share your blockers and possible fixes. Get a ranked list based on
-  value, effort and delay costs.
+summary: Rank your delivery blockers and their fixes in one list. Get a blocker priority score for each, so you know what to fix first.
 job: plan-strategy
 headline: Delivery blocker priority scorer
-subhead: Share your blockers and possible fixes. Get a ranked list based on
-  value, effort and delay costs. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Paste your list of blockers and the fix for each one. Your AI scores each fix on return, cost, ease and risk. You get one ranked table and a short note on the top three.
+not_for:
+  - "You have one blocker and one decision to make: talk it through with your team instead."
+  - "You have no cost or effort details and every score would be a guess: sort the list by hand in a team review first."
+  - "You need someone to carry out the fixes: give the ranked list to your team or project owner, since this skill only ranks."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code or paid tools are needed.
+  - Paste your list of blockers. Add the fix for each one if you have it.
+  - Add any cost or effort figures you know. Say so if you have none, and your AI will mark its scores as estimated.
+  - Read the table and check each score against what you know about your team.
+  - Change any score that looks wrong and ask your AI to rank again.
+  - Review the final order with the people who own the work before you commit to it.
+output_sample:
+  input:
+    - Your list of blockers, gaps or risks
+    - The fix you plan for each one (optional, your AI can suggest one)
+    - Any cost or effort figures you already have (optional)
+    - Links to sources for each fix (optional)
+  output:
+    - name: Prioritized Impediments table
+      contains: One row per blocker with its fix, four scores, a priority number, and a short reason for each score.
+    - name: Scoring key and formula
+      contains: A short note on how each score works and the formula used to rank the rows.
+    - name: Top 3, Act First
+      contains: A short paragraph on each of the three highest ranked blockers and why they come first.
+    - name: Ownership tags (optional)
+      contains: Labels on top items showing who acts, added only if you ask for them.
+when:
+  - Your team has a long list of blockers and cannot agree what to fix first.
+  - You finished a retrospective and need to put the action items in order.
+  - You have audit findings or a risk list and need a fix order for the backlog.
+  - A manager asks why you chose one fix before another.
+you_give:
+  - Your list of blockers, gaps or risks
+  - The fix you plan for each one (optional)
+  - Any cost or effort figures you already have (optional)
+  - Links to sources for each fix (optional)
+you_get:
+  - A table ranking every blocker from first to last
+  - "Four scores for each fix: return, cost, ease and risk"
+  - A priority number worked out with the same formula for every row
+  - A one-line reason behind each score, with guesses marked as estimated
+  - A short note on why the top three come first

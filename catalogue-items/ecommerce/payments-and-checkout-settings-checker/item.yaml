@@ -10,6 +10,7 @@ inputs:
   - { type: question, required: true }
   - { type: store_capture, required: false }
   - { type: performance_sheet, required: false }
+  - {type: audit_report, required: false}
 outputs:
   - { type: audit_report }
 uses: []

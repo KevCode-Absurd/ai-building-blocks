@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a fixed generation recipe.
 new_slug: text-to-music-maker
 name: Text to music maker
-summary: Describe the music or sound you want. Get a generated clip, even one
-  that follows a melody you give.
+summary: Turn a text description into a music clip or sound effect with Meta's AudioCraft. Use this text to music maker with an optional melody file.
 job: build-software
 headline: Text to music maker
-subhead: Type what you want to hear, such as "calm piano with soft rain", and
-  get an audio clip back. You can also hum or supply a melody and have the new
-  music follow it, or ask for a sound effect like footsteps on gravel.
+subhead: Type what you want to hear, such as "calm piano with soft rain", and get an audio clip back. You can also hum or supply a melody and have the new music follow it, or ask for a sound effect like footsteps on gravel.
 explain: |
   Type what you want to hear, such as "calm piano with soft rain", and get an audio clip back. You can also hum or supply a melody and have the new music follow it, or ask for a sound effect like footsteps on gravel.
 
@@ -16,21 +13,48 @@ explain: |
 when:
   - You need background music for a video and have no budget for stock tracks.
   - You want a short sound effect for a game or demo.
-  - You have a tune and want it rendered in a different style.
-  - You are testing audio ideas before a producer gets involved.
+  - You have a tune and want it played in a different style.
+  - You plan to use clips in paid or commercial work. The model weights may allow non-commercial use only, so check the licence first.
+not_for:
+  - "You want a spoken voiceover or text read aloud: use a text-to-speech tool, not this one."
+  - "You want a long, finished commercial track: use a stock music library or a music producer."
+  - "You have no way to run Python code: ask a musician, or pick a stock music site."
 you_give:
   - A text description of the sound
   - A melody file (optional)
   - Clip length
   - A computer with Python and a graphics card
 you_get:
-  - Generated audio clips
-  - A prompt that names mood, genre and instruments
-  - Model size advice
-  - Code you can rerun with changes
+  - One WAV audio file for each prompt you give. Music is 32 kHz and sound effects are 16 kHz.
+  - A prompt that names genre, mood and instruments.
+  - Advice on which model size to pick.
+  - Code you can rerun with changes.
+  - "Next step: import the WAV file into your video editor or game tool."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Write what you want to hear. Name the genre, mood and instruments, such as calm piano with soft rain.
+  - Add a melody audio file if you want the music to follow a tune. A hummed idea will not work unless it is a recorded audio file.
+  - Paste the skill into a chat with an AI that can run Python code. You need a computer with a graphics card for decent speed.
+  - Choose a clip length and a model size. Start with the small model.
+  - Run the code, then listen to the WAV file. Change the prompt and rerun until it sounds right.
+  - Check the licence before you use a clip in paid or commercial work.
+output_sample:
+  input:
+    - A text description of the music or sound
+    - A melody audio file (optional)
+    - How long the clip should be
+    - Which model size to use (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - A computer with a graphics card for decent speed
+    - The audiocraft package installed
+  output:
+    - name: Text-to-music clip
+      contains: A WAV audio file for each text prompt, made with MusicGen at 32 kHz.
+    - name: Melody-guided clip
+      contains: New music in your chosen style that follows the tune in the melody file you give.
+    - name: Stereo clip
+      contains: Music with left and right channels, made with a stereo model.
+    - name: Sound effect clip
+      contains: A short sound effect, such as footsteps on gravel, made with AudioGen.
+    - name: Generation code
+      contains: Python you can rerun after changing the prompt, clip length, model size or creativity settings.

@@ -10,6 +10,7 @@ level: intermediate
 inputs:
   - {type: brief, required: true}
   - {type: product_data, required: true}
+  - {type: ad_copy, required: false}
 outputs:
   - {type: ad_copy}
 uses: [buyer-brief-writer, market-stage-reader]

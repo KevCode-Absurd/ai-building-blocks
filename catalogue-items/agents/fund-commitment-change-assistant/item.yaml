@@ -1,33 +1,26 @@
 slug: fund-commitment-change-assistant
 name: Fund commitment change assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: Work out how much one investor can still be called after an amendment or distribution, and split the next capital call. Shortfalls stay open.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
-  - reconcile-a-private-fund-capital-call
   - fund-recycling-capacity-checker
+  - reconcile-a-private-fund-capital-call
 steps:
-  - uses: reconcile-a-private-fund-capital-call
-    note: Run the governing workflow when A signed commitment amendment, paid call, distribution notice or actual investor excuse changes callable obligations.
   - uses: fund-recycling-capacity-checker
-    note: If distributions are described as recyclable, test eligible cap capacity separately. Increase callable LP commitment only when the separate recallability clause and actual notice support restoration; recyclable and recallable are not interchangeable. Never create or send a call notice from the review.
+    note: Run this first, and only if a distribution is called recyclable. It works out how much reuse the cap allows and hands that cap result to step 2. Room is restored only when a separate recallability clause and the actual notice support it. Skip it, and say so, when no distribution is called recyclable. Never write or send a call notice.
+  - uses: reconcile-a-private-fund-capital-call
+    note: Run the governing workflow when a signed commitment amendment, a paid call, a distribution notice or an investor excuse changes what can be called. Use the cap result from step 1, if it ran, for any restored room, and your signed documents for everything else.
 origin: own
 version: 1.0.0
 added: 2026-10-22

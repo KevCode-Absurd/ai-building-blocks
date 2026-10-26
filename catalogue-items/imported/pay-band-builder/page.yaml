@@ -2,32 +2,118 @@ thinking: high
 thinking_why: Matching roles and reading data takes care.
 new_slug: pay-band-builder
 name: Pay band builder
-summary: Give it a role and market pay data. Get a pay range and a clear method
-  you can explain to leaders.
+summary: Find what to pay for a role. Give it market pay data and get a pay range with a midpoint and a method note leaders can follow.
 job: hire-people
 headline: Pay band builder
-subhead: A pay range for a role, built from market data, with a method you can
-  explain to leaders. It also shows whether current pay is competitive.
+subhead: Give it a role, a location and market pay data. It matches your job to a market job, sets a pay range with a midpoint, shows where current pay sits, and writes a short method note you can show leaders.
 explain: |
-  A pay range for a role, built from market data, with a method you can explain to leaders. It also shows whether current pay is competitive.
+  Hiring for a role and not knowing what to pay is a common stall. This pay band builder turns market pay data into a pay range you can defend. It matches your role to the closest outside job by scope, not just by title, because job titles differ a lot between companies.
 
-  It starts by choosing the right salary survey or data source for the role, industry and place. It matches your internal job to the closest outside job code, adjusts for level and geography, and sets a range with a midpoint. It handles roles with thin data, total pay beyond base salary, regular refreshes and pay across countries. It can write a short methodology note so the range holds up when challenged.
+  It then takes the figure at your target percentile, applies any level or location adjustment you give it, and sets a midpoint, a minimum and a maximum. If you give it current pay, it shows whether that pay is below, in or above the range. It handles roles with thin data by saying so and widening the range.
+
+  It never invents market data. No data means no numbers, only a list of what to get. Salary surveys from vendors are often paid, so it also names free sources to try.
 when:
   - You are hiring for a role and do not know what to pay.
-  - You must show leaders why a range is fair.
-  - Pay for a job has no clear market data.
-  - You hire in several countries and want consistent bands.
+  - You must show leaders why a pay range is fair.
+  - A job has little market data and you need a careful range.
+  - You hire in several countries and want bands built the same way.
+not_for:
+  - "You want pay bands for a whole team with bonus and benefits: use the Pay and benefits plan builder."
+  - "You want to model a stock grant or find pay outliers in your sheet: use the Pay benchmark and equity modeler."
+  - "You have no market data at all: get a survey extract or public pay data first. This skill won't make up numbers."
 you_give:
-  - Role, level and location
-  - Market data or survey source
+  - The role, its level and what the person does
+  - The location
+  - Market data, such as a salary survey extract, a pasted table or a public source
+  - Your target percentile (optional)
   - Current pay for the role (optional)
+  - Any level or location adjustment you already use (optional)
 you_get:
-  - Pay range with midpoint
-  - Job-matching notes
-  - Competitiveness check against the market
-  - Method note for leaders
+  - A pay range with minimum, midpoint and maximum
+  - Notes on how your job matches a market job
+  - Where current pay sits in the range
+  - A list of any gaps in the data
+  - A short method note for leaders
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Get your market data ready. A salary survey extract is best. Free pay statistics for your country also work.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, then the role, location, data and target percentile.
+  - Check the job match first. If the market job does not fit what the role really does, say so and ask for a new match.
+  - Check the arithmetic on the adjustment and the range against your data.
+  - Copy the method note into your pay file or your note to leaders.
+output_sample:
+  input:
+    - The role, its level and its main duties
+    - The location
+    - Market pay data, such as a survey extract or public statistics
+    - Current pay for the role (optional)
+  prerequisites:
+    - Market pay data. Vendor salary surveys are often paid, so free public data can stand in.
+  output:
+    - name: Data used
+      contains: The source, its date and its limits, such as sample size or location.
+    - name: Job match
+      contains: Your role set against the closest market job, with the differences noted.
+    - name: Pay range
+      contains: Minimum, midpoint and maximum, with the percentile and spread used.
+    - name: Adjustments
+      contains: Each level or location factor applied, with the arithmetic shown.
+    - name: Competitiveness
+      contains: Where current pay sits in the range, and its ratio to the midpoint.
+    - name: Method note
+      contains: Four to six lines on source, match, percentile and limits, ready to show leaders.
+    - name: Missing and next
+      contains: Data gaps, when to refresh the data, and a second source to try.
+how_it_works:
+  - title: Restate the role
+    text: Confirms the role, level, location and target percentile before any numbers.
+  - title: Pick the data
+    text: Names the source, its date and its limits, and says if it is too old or too thin.
+  - title: Match the job
+    text: Finds the closest market job by scope and duties, and notes where they differ.
+  - title: Read the market
+    text: Takes base pay at your target percentile, and total pay only if the data has it.
+  - title: Adjust and set the range
+    text: Applies the factors you gave, treats the result as the midpoint, and sets min and max from a stated spread.
+  - title: Check and explain
+    text: Places current pay in the range and writes a method note that holds up if challenged.
+output_shape: |-
+  ROLE AND ASSUMPTIONS
+    <role> | <level> | <location> | percentile <p>
+
+  DATA USED
+    <source> | <date> | <limits>
+
+  JOB MATCH
+    <your role> -> <market job> | differences: <list>
+
+  PAY RANGE
+    min <n> | midpoint <n> | max <n> | <currency> | spread <%>
+
+  ADJUSTMENTS
+    <factor> | <amount> | <arithmetic>
+
+  COMPETITIVENESS
+    current <n> | <below | in | above> range | <% of midpoint>
+
+  METHOD NOTE
+    <4 to 6 lines>
+
+  MISSING AND NEXT
+    <data gaps> | refresh by <date> | try <second source>
+works_best_with:
+  tools:
+    - name: Any chat AI that reads tables
+      why: It needs to read your survey extract and show the arithmetic.
+    - name: Google Sheets or Excel
+      why: Paste the range in to check the numbers and keep a record.
+  inputs:
+    - The date of your market data
+    - Pay for the same role in other locations you hire in
+    - A job description for the role
+terms:
+  - term: Pay band
+    meaning: The lowest and highest pay for a role, with a midpoint between them.
+  - term: Percentile
+    meaning: The share of the market paid less. The 50th percentile is the middle of the market.
+  - term: Compa-ratio
+    meaning: A person's pay divided by the midpoint of the range. One means pay sits at the midpoint.

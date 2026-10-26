@@ -1,0 +1,41 @@
+slug: agency-testing-test-results-analyzer
+name: Test Results Analyzer agent
+summary: "Paste your test run results and get failures grouped by cause, coverage gaps, risks and a go or no-go call on the release."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: testing/testing-test-results-analyzer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-test-results-analyzer.md
+  licence: MIT
+  original_name: Test Results Analyzer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: d33114b519ba657fc9f29db12495d3c31097a8282d170cfd57cbcb029f61f2de
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Test Results Analyzer
+  - Agency Agents
+  - Testing
+credits:
+  - title: Test Results Analyzer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-test-results-analyzer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

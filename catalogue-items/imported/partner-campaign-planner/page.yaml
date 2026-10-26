@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It finds fits, then drafts a plan.
 new_slug: partner-campaign-planner
 name: Partner campaign planner
-summary: Say who you serve. Get partner ideas and a joint campaign plan with a
-  pitch you can send.
+summary: "Plan a co-marketing partnership: get ranked partner ideas, a joint campaign plan and a pitch you can send. Start by saying who you serve."
 job: plan-strategy
 headline: Partner campaign planner
-subhead: A shortlist of partners you could team up with, plus a joint campaign
-  plan and a pitch you can send. It aims at companies that share your buyer
-  without competing for the same budget.
+subhead: A shortlist of partners you could team up with, plus a joint campaign plan and a pitch you can send. It aims at companies that share your buyer without competing for the same budget.
 explain: |
   A shortlist of partners you could team up with, plus a joint campaign plan and a pitch you can send. It aims at companies that share your buyer without competing for the same budget.
 
@@ -18,6 +15,10 @@ when:
   - You have a partner in mind and need campaign ideas.
   - You need to decide if a partner is a good fit.
   - You must write a message asking a company to join.
+not_for:
+  - "You want customers to refer other customers: use a referral program guide, not this planner."
+  - "You are planning a product launch on your own: write a launch plan first, then come back to add partners."
+  - "You already have a signed partner and only need the campaign run: use your own project plan and task list."
 you_give:
   - Who you serve and what you sell
   - Tools your customers already use
@@ -29,7 +30,32 @@ you_get:
   - Roles and split of work
   - Outreach pitch you can send
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code and no files.
+  - Tell your AI who you serve, what you sell and the tools your customers use.
+  - Add your goal and any partner you already have in mind.
+  - Ask for a ranked partner list first. Check that the picks share your buyer and do not compete for the same budget.
+  - Pick one partner. Ask for the campaign plan and the pitch.
+  - Edit the pitch so it sounds like you. Then send it.
+output_sample:
+  input:
+    - Who you serve and what you sell
+    - Tools your customers already use
+    - A partner you already have in mind (optional)
+    - Your goal, such as leads or launch buzz
+    - Your audience size, like email list or followers (optional)
+  prerequisites:
+    - Your product marketing notes, if you have them (optional)
+    - A paid partner data tool such as Crossbeam is optional. Customer surveys work for free.
+  output:
+    - name: Partner shortlist
+      contains: Partner ideas scored 1 to 5 on audience fit, size, brand fit, engagement, give and take, and ease.
+    - name: Campaign options
+      contains: Joint campaign formats that suit the partner, such as a webinar, guide or launch, with effort level.
+    - name: Campaign plan
+      contains: Who does what, key dates, how leads are shared and how you will measure success.
+    - name: Partnership outline
+      contains: "A simple agreement list: roles, timeline, lead handling, promotion, branding, costs and shared data."
+    - name: Outreach pitch
+      contains: A short message asking the partner to talk, with your idea and a clear ask.
+    - name: Call prep list
+      contains: What to bring to the first call, such as campaign ideas and your audience numbers.

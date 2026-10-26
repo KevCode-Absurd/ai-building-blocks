@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks a solver and runs set analyses.
 new_slug: biology-model-simulator
 name: Biology model simulator
-summary: Give it a model. Get it run for what-if cases, with the most
-  influential settings found.
+summary: Run your SimBiology model forward in time, test what-if doses and find which settings move the result most. Needs MATLAB with SimBiology.
 job: build-software
 headline: Biology model simulator
-subhead: Run your SimBiology model forward in time and see what changes when you
-  tweak a dose, a rate or a starting level. You also learn which settings move
-  the result most, so you know where to spend your effort.
+subhead: Run your SimBiology model forward in time and see what changes when you tweak a dose, a rate or a starting level. You also learn which settings move the result most, so you know where to spend your effort.
 explain: |
   Run your SimBiology model forward in time and see what changes when you tweak a dose, a rate or a starting level. You also learn which settings move the result most, so you know where to spend your effort.
 
@@ -18,6 +15,10 @@ when:
   - You need to compare several what-if cases side by side.
   - Gene expression noise matters and you need stochastic runs.
   - You must find out which parameters drive the output most.
+not_for:
+  - "You need to build the model or lay out its diagram: use SimBiology's model building tools in MATLAB, since this skill only runs a model that already exists."
+  - "You want to fit parameters to your own data, or work out AUC or Cmax: do that in SimBiology's fitting tools, then bring the fitted model here."
+  - "You have no MATLAB or SimBiology licence: ask a colleague who has one to run it, as this skill cannot run without both."
 you_give:
   - A SimBiology model
   - The scenarios or ranges to test
@@ -29,8 +30,30 @@ you_get:
   - Plots of the runs
   - A ranked list of influential parameters
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with SimBiology.
+  - Check first that MATLAB and the SimBiology toolbox are installed and licensed. Both are paid products.
+  - Download the skill folder and copy its scripts folder into your MATLAB project.
+  - Open your AI in a tool that can run MATLAB code. Paste in the skill instructions.
+  - Tell your AI where your model file is, which cases to test and which species to watch.
+  - Ask for a plain run first. Check the plots look sensible before you ask for sweeps or sensitivity.
+  - Read the ranked list of influential settings. Spend your effort on the top ones.
+output_sample:
+  input:
+    - Your SimBiology model (a .sbproj file or a model already open in MATLAB)
+    - The doses, rates or starting levels you want to test
+    - How long to run and which species to watch
+    - Whether you want random-event (stochastic) runs (optional)
+  prerequisites:
+    - MATLAB with the SimBiology toolbox installed and licensed (both are paid)
+    - An AI that can run MATLAB code
+    - The skill's scripts folder copied into your project, so the helper scripts can be found
+  output:
+    - name: Basic simulation
+      contains: Time-course results for your model, with a quick plot of each species over time.
+    - name: Scenario results
+      contains: One run per what-if case, with a table that maps each run to its dose or setting.
+    - name: Dose sweep and factorial tables
+      contains: Results for each dose level, or each mix of dose and parameter value, side by side.
+    - name: Stochastic runs
+      contains: Single or repeated random-event runs, for models where noise matters such as gene expression.
+    - name: Sensitivity analysis
+      contains: A ranking of which parameters move the result most, using Sobol, Morris or local methods.

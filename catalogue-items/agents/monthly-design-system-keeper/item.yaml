@@ -16,13 +16,13 @@ outputs:
   - {type: document}
 uses: [design-rules-file-writer, design-system-auditor, colour-contrast-checker, interface-polish-checker, design-ten-principles-reviewer, developer-handoff-spec-writer, design-token-builder]
 steps:
-  - {uses: design-rules-file-writer, note: "Once, and again when the rules change: the DESIGN.md that lists the colours, type, spacing and parts the product really uses, as the base every month is measured against."}
-  - {uses: design-token-builder, note: "Once, when no tokens exist: design tokens, component notes and responsive sizes from the brand colours and fonts."}
-  - {uses: design-system-auditor, note: "Every month: naming problems, hardcoded values and undocumented variants in the components, compared with last month's count."}
-  - {uses: colour-contrast-checker, note: "Only when a token changed or a new colour appeared in the code: every light and dark pair checked, with the closest passing colours."}
-  - {uses: interface-polish-checker, note: "Every month, for screens changed since last time: spacing, type and layout slips, each with a fix proposed."}
-  - {uses: design-ten-principles-reviewer, note: "Once a quarter: the product reviewed against ten principles, with what no longer earns its place."}
-  - {uses: developer-handoff-spec-writer, note: "Only for a new or reworked pattern that passed review: the spec for layout, tokens, states and edge cases."}
+  - {uses: design-rules-file-writer, note: "Once, and again when the rules change: the DESIGN.md that lists the colours, type, spacing and parts the product really uses, as the base every month is measured against. Passes on DESIGN.md, which the colour check reads."}
+  - {uses: design-token-builder, note: "Once, when no tokens exist: design tokens, component notes and responsive sizes from the brand colours and fonts. Uses your brand colours and fonts and your brand guide, not DESIGN.md. Passes on the tokens and notes, which the audit checks."}
+  - {uses: design-system-auditor, note: "Every month: naming problems, hardcoded values and undocumented variants in the components, compared with last month's count. Uses the design file from step 2, or yours. Passes on the drift counts and any colour that moved."}
+  - {uses: colour-contrast-checker, note: "Only when a token changed or a new colour appeared in the code: every light and dark pair checked, with the closest passing colours. Uses the colour tokens in DESIGN.md from step 1, not step 3's report. Passes on the failing pairs and their fixes."}
+  - {uses: interface-polish-checker, note: "Every month, for screens changed since last time: spacing, type and layout slips, each with a fix proposed. Uses the code of the changed screens, not the contrast report. Passes on the slips and fixes for the quarterly review."}
+  - {uses: design-ten-principles-reviewer, note: "Once a quarter: the product reviewed against ten principles, with what no longer earns its place. Uses a description or link of your product, not the slip list. Passes on what to remove and any pattern worth a spec."}
+  - {uses: developer-handoff-spec-writer, note: "Only for a new or reworked pattern that passed review: the spec for layout, tokens, states and edge cases. Uses the design file for that pattern, such as the one from step 2, not the review report. Passes on the spec, saved for your approval."}
 schedule: "On the first Wednesday of each month, after the month's releases"
 asks_before: [changing any code, token, colour or component, publishing the design rules or a spec to the team, removing or renaming a component, changing the brand guide, buying a tool or a font licence]
 minds: [dieter-rams]

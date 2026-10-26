@@ -1,0 +1,41 @@
+slug: agency-engineering-backend-architect
+name: Backend Architect agent
+summary: Get a backend design with a right-sized setup, data tables, an API outline, a failure plan and a safe way to change the database.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-backend-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-backend-architect.md
+  licence: MIT
+  original_name: Backend Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 45d94306c8f0f4c51efb76066008297fa4e87ce5b69f509cfede224084b74dfb
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Backend Architect
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Backend Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-backend-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

@@ -1,6 +1,6 @@
 new_slug: customer-buying-reasons-finder
 name: "Customer buying reasons finder"
-summary: "Paste reviews or support emails. Get buying reasons in customers' exact words and a score out of 100."
+summary: "Paste reviews or support emails to find customer buying reasons in their exact words, ranked by how many people said them, with a score out of 100."
 job: understand-customers
 thinking: high
 thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
@@ -17,6 +17,10 @@ when:
   - You're about to write ads or a product page and want the words to come from customers, not from your team.
   - You have hundreds of reviews and no idea which points come up most.
   - Your ads all say the same three things and you suspect customers care about something else.
+not_for:
+  - "You want to know why people said no: ask non-buyers with a short survey, because reviews mostly come from people who bought."
+  - "You want to set price or change a product from a handful of buyers: talk to those customers yourself, since a few voices make a weak map."
+  - "You have no customer words yet: collect some reviews, tickets or survey answers first, because there is nothing to map without them."
 
 you_give:
   - Customer words such as reviews, tickets, call notes, survey answers or forum posts, each with an ID and date
@@ -36,6 +40,25 @@ how_to_use:
   - Add support tickets or call notes if you can. That's where the anxieties are.
   - Add your product page text so it can tell which reasons you already use.
   - Read the "never said by the brand" list first. Those are the reasons worth testing next.
+output_sample:
+  input:
+    - "Your customer words: reviews, support tickets, call notes or survey answers, each with an ID and date"
+    - Flags like verified buyer, rating or product (optional)
+    - Your own product page text (optional)
+    - Your brand brain folder (optional)
+  output:
+    - name: Forces map
+      contains: Each reason ranked by separate people, with its force, best exact quote, backup quotes and whether your brand says it.
+    - name: Never said by the brand
+      contains: Top reasons customers give that your own pages never mention, with how many people said each.
+    - name: What nearly stopped them
+      contains: Worries and complaints ranked, in customers' exact words with source IDs.
+    - name: Check before use
+      contains: Risky quotes, such as health hints or competitor names, each with the reason it is flagged.
+    - name: Notes
+      contains: How many sources, what kinds, date range, what was dropped, and whether more sources would change the map.
+    - name: Score
+      contains: Checks passed out of all checks, as a score out of 100, with each miss named. It does not predict sales.
 
 how_it_works:
   - title: Cleans and scopes

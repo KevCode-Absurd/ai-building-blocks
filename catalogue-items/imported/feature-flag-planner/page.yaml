@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a rollout pattern but fits your system.
 new_slug: feature-flag-planner
 name: Feature flag planner
-summary: Say what you ship. Get flags with rollout steps, kill switches and a
-  plan to remove them later.
+summary: Plan a feature flag rollout in safe steps. Get flag types, a kill switch check, a ramp schedule and a clean-up plan for old flags.
 job: ship-and-host
 headline: Feature flag planner
-subhead: A plan for shipping a risky change behind a switch, ramping it up in
-  safe steps, and removing the switch once it is done. Old flags are tidied up,
-  not left to rot.
+subhead: A plan for shipping a risky change behind a switch, ramping it up in safe steps, and removing the switch once it is done. Old flags are tidied up, not left to rot.
 explain: |
   A plan for shipping a risky change behind a switch, ramping it up in safe steps, and removing the switch once it is done. Old flags are tidied up, not left to rot.
 
@@ -18,6 +15,10 @@ when:
   - Your codebase has dozens of old flags nobody dares remove.
   - You need to pick a flag tool for your team.
   - You want a gradual rollout to 100% over two weeks.
+not_for:
+  - You are making a one-line or cosmetic change. Ship it with a normal deploy, no flag needed.
+  - You need a long-lived setting like a plan or role entitlement. Use a config or permission setting in your app instead.
+  - You want to pick between hosting providers for your app. Ask a developer or compare the hosts' own pricing pages, as this tool only covers flag tools.
 you_give:
   - The feature you are shipping
   - User numbers and rollout time
@@ -30,8 +31,32 @@ you_get:
   - A stale flag report
   - A clean-up date
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run code and read files, such as Claude with code tools on. You need Python 3 and your project folder, with its Git history.
+  - 'Paste the skill text into your chat, or upload the skill folder. Say: "Follow this skill to plan my feature flag."'
+  - Tell your AI what you are shipping, how many users you have and how many days the rollout should take.
+  - Add your project folder if you want a scan for old flags or a kill switch check. Skip this if you only want a plan.
+  - Read the rollout table and check each abort rule makes sense for your product before you ship.
+  - Test the kill switch before you start the ramp. Set a date to remove the flag once it reaches 100 percent.
+output_sample:
+  input:
+    - The feature you are shipping
+    - Your user numbers and how many days to roll out
+    - Your code folder, for a stale flag scan (optional)
+    - The flag tool you use or want to compare (optional)
+  prerequisites:
+    - An AI that can run Python code and read your project files, for the three scans
+    - Python 3 on your computer, no extra installs
+    - Git history in your repo, so the scan can see flag age
+  output:
+    - name: Flag type and owner
+      contains: Which of the four types your flag is (release, experiment, operational, permission), who owns it, and when it should be removed.
+    - name: Rollout plan
+      contains: A table of phases with date, percent of users, expected user count, abort rules and a check for each step.
+    - name: Kill switch audit
+      contains: A pass, warn or fail for each flag, based on whether its owner, type, kill switch trigger and dashboard are written down.
+    - name: Stale flag report
+      contains: Old flags with few uses, their age in days, where they appear in code and what to do with each.
+    - name: Provider comparison
+      contains: A short match of LaunchDarkly, GrowthBook, Statsig, Unleash, Flipt or a build-your-own option to your needs.
+    - name: Clean-up plan
+      contains: When to remove each flag and its dead code, and a note for your changelog.

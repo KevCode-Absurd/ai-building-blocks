@@ -1,6 +1,6 @@
 new_slug: launch-critical-path-builder
 name: "Launch critical path builder"
-summary: "Name your product and launch date. Get every step from samples to warehouse, dated, with owners and warnings."
+summary: "Build a launch critical path: list every step from samples to warehouse, dated back from your launch day, with owners and delay warnings."
 job: plan-supply-chain
 thinking: medium
 thinking_why: "It sorts steps and counts dates backward, which a mid-range model does well if you check the dates."
@@ -17,6 +17,10 @@ when:
   - You are launching a product with a fixed date, such as a holiday peak.
   - You have several products in development and lose track of what is late.
   - A sample came late last time and you do not want it to happen again.
+not_for:
+  - "You have one product and no fixed launch date: use a simple dated checklist in a sheet."
+  - "You want a better price from your factory: use the Factory price-break negotiator."
+  - "You need your supplier to keep their dates: talk to the supplier directly, because this plan only shows dates."
 
 you_give:
   - Product type and the date you want it on sale
@@ -35,6 +39,27 @@ how_to_use:
   - Name who owns each step, and who owns the whole plan.
   - Set the alerts in any tool you use, such as a sheet, Notion or Asana.
   - Name one person to check the plan every day while the launch is live.
+output_sample:
+  input:
+    - Your product type and the date you want it on sale
+    - Your supplier's lead times and sample shipping times
+    - Who owns each step (optional)
+    - Hard cut-offs, such as holiday shipping dates or warehouse booking windows (optional)
+  output:
+    - name: Header line
+      contains: Your launch date, the plan owner and the cut-off closest to your plan.
+    - name: Critical path
+      contains: The chain of steps with no slack, where a delay moves your launch.
+    - name: Step table
+      contains: Each step with its duration, owner, latest start, latest finish, slack and the steps it overlaps with.
+    - name: Which delay moves the launch
+      contains: For each step, whether a late day moves the launch or is absorbed by slack.
+    - name: Alerts to set
+      contains: Overdue alerts that tell the step owner and the plan owner when a date slips.
+    - name: Rules
+      contains: How supplier changes reach you and who edits the plan, plus the daily check.
+    - name: Checks missed and Missing
+      contains: Any failed checks and any inputs you did not give, marked as gaps.
 
 how_it_works:
   - title: Defines every step

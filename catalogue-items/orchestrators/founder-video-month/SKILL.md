@@ -43,13 +43,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the video series.** Use the skill `founder-video-series-planner`. Turns your brand file into ten episodes and a brief for the first one.
-2. **Script the first episode.** Use the skill `founder-video-ad-script-writer`. Give it the brief from the steps before. Takes the first episode's brief and writes a script that sounds like the founder.
-3. **Make it easy to say aloud.** Use the skill `ad-script-read-aloud-editor`. Give it the script from the steps before. Reads the script aloud line by line and fixes the places a person would stumble.
+1. **Plan the video series.** Use the skill `founder-video-series-planner`. Turns your brand file into ten episodes. It hands step 2 the brief for the first one.
+2. **Script the first episode.** Use the skill `founder-video-ad-script-writer`. Give it the brief from the steps before. Takes the first episode's brief and writes a script that sounds like the founder. It hands the script to step 3.
+3. **Make it easy to say aloud.** Use the skill `ad-script-read-aloud-editor`. Give it the script from the steps before. Reads the script aloud line by line and fixes the places a person would stumble. It hands you the final script to film from.
 
 Pause here: Film the episode using the script and the filming setup.
 
-4. **Plan the edit.** Use the skill `social-video-edit-planner`. Plans cuts, captions, cover and export for the footage you filmed.
+4. **Plan the edit.** Use the skill `social-video-edit-planner`. Use the footage you filmed, not step 3's script. Take the one idea from step 1's brief, and use the script as a guide to what was said. Plans cuts, captions, cover and export for the footage you filmed.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

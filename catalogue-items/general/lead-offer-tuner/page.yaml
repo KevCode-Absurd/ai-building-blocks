@@ -1,50 +1,71 @@
 new_slug: lead-offer-tuner
-name: Lead offer tuner
-summary: "Paste your diagnosis and live reply offer. Get three changes that raise replies or cut weak ones, with what each should do."
+name: "Lead offer tuner"
+summary: "Get more replies, or fewer weak ones, from a free guide, sample, quote or call. Get three changes and your reply offer rewritten."
 job: read-ad-results
 thinking: medium
-thinking_why: It picks from two fixed lists using your numbers and facts, then writes the new offer.
-headline: Lead offer tuner
-subhead: Give it the diagnosis and your current reply offer. It follows the raise list or the cut list, picks the three changes your facts allow, and rewrites the offer and where it sits. You get the new offer and what each change should do to the count.
-explain: |-
-  A free booklet, a sample or a call can bring a great many replies or a few good ones, depending on how you present it. The same offer can be dressed up to draw a crowd or dressed down to draw only serious people.
+thinking_why: "It picks from two fixed lists using your numbers and facts, then writes the new offer."
 
-  This skill uses two lists. To raise replies, it makes the offer more appealing and easier to see. To cut weak replies, it makes the offer plainer, adds a small cost or a question, and tells the reader what they are in for. It picks three changes only, so you can read the result.
+headline: "Lead offer tuner"
+subhead: "Give it your diagnosis and the reply offer you run now. It works from one list: raise replies or cut weak ones. It picks the three changes your facts allow, then rewrites the offer and where it sits in the ad."
+
+explain: |
+  A free booklet, a sample, a quote or a call can bring a great many replies or a few good ones. It depends on how you show it. The same free offer can be dressed up to draw a crowd, or dressed down to draw only serious people. A lead offer tuner helps you choose which one you want.
+
+  This skill uses two lists. The raise list makes the offer more appealing and easier to see. The cut list makes it plainer, adds a small cost or a question, and tells the reader what they are in for. It reads your diagnosis to pick the list, and never mixes the two.
+
+  It picks three changes only, each backed by a fact you gave it, so you can read the result. If a change needs a fact you did not give, it skips that change instead of guessing.
+
 when:
   - You want more replies and your offer is buried in the ad.
-  - Your replies are plentiful but few buy.
-  - You are rewriting a free offer, such as a guide or a quote.
+  - You get plenty of replies, but few of them buy.
+  - You are rewriting a free offer, such as a guide, a sample or a quote.
+  - Your diagnosis says "more leads" or "better leads" and you need to know what to change.
+
+not_for:
+  - "You do not have a diagnosis yet. Use the inquiry problem diagnoser first to see whether you need more leads or better ones."
+  - "The ad itself is weak, not the offer. Use the reply-getting fix writer to fix the headline and the ask."
+  - "Your reply form asks too much or too little. Use the coupon and form fixer."
+  - "You have no reply offer at all. This tunes an offer that already exists."
+
 you_give:
-  - The diagnosis from the Inquiry problem diagnoser, or your own call
-  - Your current reply offer and where it sits in the ad
-  - What you are willing to ask, charge or promise
+  - The diagnosis from the inquiry problem diagnoser, or your own call ("raise replies" or "cut weak replies"), with numbers if you have them
+  - Your current reply offer, its title and where it sits in the ad
+  - What you can truly promise or ask, such as a fee, a question, a guarantee or no sales call (optional)
+  - The name of an expert and their credential, only if they have said yes in writing (optional)
 you_get:
-  - The list used and the three changes picked
-  - The rewritten offer and where to put it
-  - What each change should do to the count and the quality
+  - The list used, and the three changes picked
+  - The fact each change needs, or a note that a change was skipped
+  - The rewritten offer, its title and where to put it
+  - What each change should do to the count and the quality, marked as a guess
   - What to leave alone so you can read the test
+
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the diagnosis and the current offer.
-  - Say what you can truly promise.
-  - Run the new offer against the old, with a code on each.
+  - Paste the diagnosis first. Then paste your current offer and say where it sits in the ad.
+  - Say what you can truly promise or ask. Skip anything that is not true, such as "no one will call you".
+  - Check each of the three changes has a real fact behind it, and that the new offer says what the reader gets and what they must do.
+  - Run the new offer against the old one, with a different code on each, and compare replies and sales.
+
 how_it_works:
   - title: Reads the call
-    text: Chooses the raise list or the cut list.
+    text: Chooses the raise list or the cut list from your diagnosis. If the ad is the problem, it stops and says so.
   - title: Picks three changes
-    text: Only those your facts and promises allow.
+    text: Takes three from one list, only those your facts and promises allow, and skips the rest with a reason.
   - title: Rewrites the offer
-    text: Changes the wording, the title and where it sits.
+    text: Writes the new title, the offer text and where it sits, and keeps the old offer beside it.
   - title: Predicts the effect
-    text: States what each change should do to count and quality.
-output_shape: |-
+    text: States what each change should do to the count and to the share who buy, as a guess to test.
+  - title: Lists what stays the same
+    text: Names everything left unchanged so the test reads cleanly.
+
+output_shape: |
   CALL
   <raise the number or cut weak replies>
 
   CHANGES PICKED
   1. <change> | needs: <fact> | should: <effect>
-  2. ...
-  3. ...
+  2. <change> | needs: <fact> | should: <effect>
+  3. <change> | needs: <fact> | should: <effect>
 
   NEW OFFER
   <wording, title, placement>
@@ -57,24 +78,51 @@ output_shape: |-
 
   CHECKS MISSED
   <one line each, or none>
+
+output_sample:
+  input:
+    - "Your diagnosis: raise replies or cut weak ones, with numbers if you have them"
+    - "Your current reply offer, its title and where it sits in the ad"
+    - "What you can truly promise or ask, such as a fee or a guarantee (optional)"
+  prerequisites:
+    - "A diagnosis from the inquiry problem diagnoser, if you do not have your own call (optional)"
+  output:
+    - name: "CALL"
+      contains: "Whether the offer is changed to raise replies or to cut weak ones."
+    - name: "CHANGES PICKED"
+      contains: "Three changes from one list, each with the fact it needs and its expected effect."
+    - name: "NEW OFFER"
+      contains: "The rewritten title, offer text and where it sits in the ad."
+    - name: "LEFT ALONE"
+      contains: "What stays the same, so the old and new offers can be compared fairly."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts a change needed and you did not give, and any check it could not pass."
+
 tweaks:
   - what: What you can promise
     how: Say if no salesperson will call, if there is a fee, or if there is a guarantee. The list only uses what is true.
   - what: Strength of change
     how: Say if you want a small step or a big one.
+
 judge:
   - Exactly three changes, all from one list.
   - Each change has a fact behind it.
   - The new offer is plain and complete.
   - Nothing promised that is not true.
+
 test:
   - Run the old and new offers with different codes and compare replies and sales.
   - Check that the raise changes raised quality too.
   - Read the new offer aloud to see if a stranger would reply.
+
 improve:
   - Test one list change at a time after the first round.
   - Keep a record of which changes moved which numbers.
   - Pair with the Coupon and form fixer.
+
+before: [inquiry-problem-diagnoser]
+next: [coupon-and-form-fixer, reply-getting-fix-writer, ad-matched-landing-page-writer]
+
 works_best_with:
   tools:
     - name: Any good chat AI
@@ -82,7 +130,10 @@ works_best_with:
   inputs:
     - The diagnosis from the Inquiry problem diagnoser
     - The ad where the offer appears
+
 terms:
+  - term: Reply offer
+    meaning: What a person gets for answering your ad, such as a guide, a sample, a quote or a call.
   - term: Raise list
     meaning: Ways to make the offer more appealing and easier to see.
   - term: Cut list

@@ -2,19 +2,20 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: learning-level-check
 name: Learning level check
-summary: Choose a technical topic. Answer short questions to find a useful
-  starting point for your lessons.
+summary: Find your real level in a technical topic. Answer a few short questions and get a starting level and first lesson to match.
 job: study-and-practice
 headline: Learning level check
-subhead: Share the technical topic you want to learn and your goal. It asks
-  questions that rise in difficulty and stops when the gaps are clear. You get a
-  suggested level, reasons for that choice and a starting point to confirm.
-explain: Share the technical topic you want to learn and your goal. It asks
-  questions that rise in difficulty and stops when the gaps are clear. You get a
-  suggested level, reasons for that choice and a starting point to confirm.
+subhead: Share the technical topic you want to learn and your goal. It asks questions that rise in difficulty and stops when the gaps are clear. You get a suggested level, reasons for that choice and a starting point to confirm.
+not_for:
+  - "You already know your level and want a lesson: ask your AI to teach the topic directly."
+  - "You need a grade, test score or certificate: use an official exam or a teacher."
+  - "Your level is clearly a total beginner or an expert: skip the full check and just say so to your AI."
+explain: Share the technical topic you want to learn and your goal. It asks questions that rise in difficulty and stops when the gaps are clear. You get a suggested level, reasons for that choice and a starting point to confirm.
 you_give:
-  - A technical topic and the outcome you want.
-  - Your self-reported level and any relevant project.
+  - The technical topic you want to learn.
+  - Your goal for learning it.
+  - How confident you feel, from 1 to 5 (optional).
+  - A project you are working on (optional).
 you_get:
   - A short topic-specific level check.
   - An explained starting-level estimate.
@@ -27,9 +28,25 @@ how_it_works:
   - title: Step 3
     text: Suggest a starting level and confirm it with you.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill text. No code, files or paid tools are needed.
+  - Tell your AI the topic and your goal. Add your confidence from 1 to 5 and any project, if you like.
+  - Answer each question on your own. It asks one at a time and gets harder.
+  - It stops when the questions get too hard. Then it names your level and why.
+  - Say if the level feels right. Then start the first lesson it suggests.
+output_sample:
+  input:
+    - The technical topic you want to learn
+    - Your goal for learning it
+    - How confident you feel, from 1 to 5 (optional)
+    - A project you are working on (optional)
+  output:
+    - name: Domain and confidence
+      contains: The topic, your goal and how confident you said you felt.
+    - name: Questions and answer quality
+      contains: Each question asked, from easy to hard, with a note on how well you answered.
+    - name: Inferred level
+      contains: Beginner, Early Intermediate, Intermediate or Advanced, with the reasons for that choice.
+    - name: Confirmation question
+      contains: A short check asking if the level feels right, so you can adjust it.
+    - name: Recommended starting point
+      contains: The first lesson or area to study, matched to your level.

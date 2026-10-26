@@ -2,13 +2,10 @@ thinking: high
 thinking_why: A careless demand can hurt your case, so it checks what you may admit.
 new_slug: demand-letter-drafter
 name: Demand letter drafter
-summary: Give it your finished fact sheet. Get a demand letter draft and a send
-  checklist. A first draft, not legal advice.
+summary: Turn your finished fact sheet into a demand letter draft and a send checklist. A first draft, not legal advice. Have a lawyer review it.
 job: check-contracts
 headline: Demand letter drafter
-subhead: A demand letter draft and a checklist for after you send it, built from
-  a finished fact sheet. It refuses to start if the fact sheet is missing, since
-  the care is in what comes before the writing.
+subhead: A demand letter draft and a checklist for after you send it, built from a finished fact sheet. It refuses to start if the fact sheet is missing, since the care is in what comes before the writing.
 explain: |
   A demand letter draft and a checklist for after you send it, built from a finished fact sheet. It refuses to start if the fact sheet is missing, since the care is in what comes before the writing.
 
@@ -18,6 +15,10 @@ when:
   - A client has not paid and you want a firm but safe first letter.
   - You worry a draft might admit something you did not mean to.
   - You want a list of what to do after the letter goes out.
+not_for:
+  - "You received a demand and need to reply: this skill only writes letters you send, so ask a lawyer or use a tool built for replies."
+  - "Your dispute is outside the US, or crosses borders: hire a lawyer who knows those rules before you write anything."
+  - "You want to skip a lawyer: a lawyer should read the draft before it goes out, so use this only as a first draft."
 you_give:
   - Completed fact sheet from the intake step
   - Your house style or sample letter (optional)
@@ -30,12 +31,33 @@ you_get:
   - Post-send checklist
   - Notes on quotes to verify
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved legal setup notes and make
-    Word files.
-  - Where the skill points to /litigation-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Finish your fact sheet in the demand intake step first. This skill will not start without it.
+  - Run the setup interview once, so your AI has your legal setup notes and house style saved.
+  - Open your AI and add this skill. It works best when your AI can read saved files and make Word files.
+  - Give it the fact sheet, the tone, the reply deadline and any contract or email text to quote.
+  - Read the draft in chat and ask for changes. Check every quote marked to verify against the original.
+  - Save the Word file and the checklist, then have a lawyer review the letter before you send it.
+output_sample:
+  input:
+    - Your finished fact sheet (intake.md) from the demand intake step
+    - Your saved legal setup notes (CLAUDE.md) with your house style
+    - Your sample letter to copy the style from (optional)
+    - The tone and the reply deadline you want
+    - The contract or email text you want to quote
+  prerequisites:
+    - An AI that can read your saved files and make Word files
+    - A finished fact sheet from the demand intake step
+    - Your legal setup notes, made in the setup interview step
+  output:
+    - name: Pre-draft check
+      contains: Your AI checks privileged material, admissions, earlier settlement offers, waiver, tone and facts before it writes.
+    - name: In-chat draft
+      contains: The letter appears in your chat for review, and you ask for changes until you approve it.
+    - name: draft-v[N].docx
+      contains: The approved demand letter as a Word file, numbered by version.
+    - name: Quotes to verify
+      contains: Any quote your AI could not check word for word is marked to verify.
+    - name: checklist.md
+      contains: A list of what to do before you send, how to send, and after the letter goes out.
+    - name: Matter offer
+      contains: If the dispute looks big enough, it offers to open a matter with the fields filled in.

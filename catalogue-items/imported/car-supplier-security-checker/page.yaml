@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It picks levels and labels, then checks set controls.
 new_slug: car-supplier-security-checker
 name: Car supplier security checker
-summary: Describe your work for car makers. Get the right TISAX level, labels
-  and gaps before the assessment.
+summary: Find your TISAX level, labels and gaps before the assessment. Describe your work for car makers and get a plan to prepare for TISAX.
 job: check-contracts
 headline: Car supplier security checker
-subhead: If you sell to car makers, you learn which TISAX level you need, which
-  labels to ask for, and which gaps to close before the assessment.
+subhead: If you sell to car makers, you learn which TISAX level you need, which labels to ask for, and which gaps to close before the assessment.
 explain: |
   If you sell to car makers, you learn which TISAX level you need, which labels to ask for, and which gaps to close before the assessment. Describe the work you do for them, and you get a plan based on the data and prototypes you handle.
 
   TISAX is an assessment with labels you can share with many customers, not a certificate. The skill states which catalogue version applies to your timing, the current one or the new one that takes over for assessments ordered from January 2027. It matches your work to assessment levels and modules such as prototypes, and lists the control areas where firms usually fall short. It is guidance, not an audit.
 when:
   - A car maker customer asked for TISAX and you do not know where to start.
-  - You handle prototype parts or test vehicles and need to know which module
-    applies.
+  - You handle prototype parts or test vehicles and need to know which module applies.
   - Your assessment is coming and you want to find gaps first.
   - You are not sure which catalogue version your assessment falls under.
+not_for:
+  - "You need a legal opinion or a formal audit: use an ENX-accredited audit provider or a lawyer, because this is guidance only."
+  - "You only want an ISO 27001 certificate: work with an ISO 27001 certification body, since TISAX is a different assessment with its own labels."
+  - "You want to show a TISAX result to a customer today: the result comes from an accredited audit provider through the ENX portal, not from this skill."
 you_give:
   - What you do for car makers
   - The kind of data and prototypes you handle
@@ -30,7 +31,28 @@ you_get:
   - Which catalogue version applies
   - A preparation plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather four things: what you do for car makers, the data and prototypes you handle, your sites and security setup, and your planned assessment date (optional)."
+  - Open Claude, ChatGPT or Gemini and paste the SKILL.md instructions into the chat. No code or paid tool is needed.
+  - "Paste your details and say which result you want: label choice, gap table, roadmap or audit prep."
+  - Answer any questions your AI asks about your work, sites and data.
+  - Check the version status and the labels first, then work through the gap table.
+  - Confirm fees, dates and rules on the ENX and VDA sites before you act, and book an accredited audit provider for the real assessment.
+output_sample:
+  input:
+    - What you do for car makers
+    - The kind of data and prototypes you handle
+    - Your sites and security setup
+    - Your planned assessment date (optional)
+  output:
+    - name: Version status
+      contains: Says whether your assessment runs on the current catalogue or the new one that applies to orders from January 2027.
+    - name: Label and level choice
+      contains: Walks from the data and assets you handle to the labels you need and the assessment level.
+    - name: Gap table
+      contains: Lists each control area with the rule type, your maturity now, the target, the gap and the proof needed.
+    - name: Readiness roadmap
+      contains: Phased plan to reach a steady maturity of 3, with the order date decision called out.
+    - name: Audit prep checklist
+      contains: Evidence to collect for each control area, interview prep and on-site tips for the top level.
+    - name: ISO 27001 comparison
+      contains: Shows where your ISO 27001 work counts and what is specific to car makers.

@@ -1,6 +1,6 @@
 new_slug: test-result-trust-checker
 name: "Test result trust checker"
-summary: "Paste a finished test's numbers. Get whether to trust it, the lift as a range and a ship call."
+summary: "Check if a finished store test result can be trusted. Paste your numbers. You get the lift as a range, its worth in money and one ship call."
 job: test-store-changes
 thinking: medium
 thinking_why: "It has to judge how far a result can be trusted."
@@ -17,6 +17,10 @@ when:
   - "A test just finished and the variant looks better."
   - "A big win looks too good to be true."
   - "You need to explain to someone why you are or are not shipping."
+not_for:
+  - "Your test had no planned sample size, or ran under two weeks: wait and finish it, or ask a person who knows testing to set the plan first."
+  - "You want the full set of checks: use the Store test verdict maker."
+  - "You are still choosing what to test: use the Test idea ranker."
 
 you_give:
   - "Visitors and conversions for each version (required)."
@@ -35,6 +39,28 @@ how_to_use:
   - "Under it, paste your details: visitors and conversions for each version; the plan; main metric and guardrails; what else happened; smallest lift worth shipping, gross profit per order and monthly visitors."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Visitors and conversions for each version
+    - "Your test plan: split, sample size and dates"
+    - Your main metric and guardrails, such as order value and margin
+    - What else happened during the test, such as sales or email sends
+    - Smallest lift worth shipping, gross profit per order and monthly visitors (optional)
+  output:
+    - name: CALL
+      contains: "One verdict: ship, do not ship, re-test or inconclusive."
+    - name: CHECKS
+      contains: Pass or fail for the traffic split, run length, early stopping and other changes.
+    - name: RESULT
+      contains: The two versions, the difference, its 95% range and the smallest lift worth shipping.
+    - name: MONEY PER MONTH
+      contains: The monthly gain in money at the low, middle and high end of the range.
+    - name: GUARDRAILS
+      contains: Whether each guardrail number held or got worse.
+    - name: WHY
+      contains: Two sentences giving the reason for the call.
+    - name: MISSING
+      contains: Any detail you did not give, so you can add it and run again.
 
 how_it_works:
   - title: "Check the split"

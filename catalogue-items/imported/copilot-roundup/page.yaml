@@ -2,17 +2,100 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-roundup
 name: Cross tool status briefing writer
-summary: Share your sources and audience. Get a dated status brief with
-  progress, blockers and source links.
+summary: Write a status briefing from your tools or notes. You get a dated update for one audience, with progress, blockers and source notes.
 job: organise-work
 headline: Cross tool status briefing writer
-subhead: Share your sources and audience. Get a dated status brief with
-  progress, blockers and source links. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: "Tell it who the update is for and what time to cover. It reads the sources you list, such as GitHub, Slack, email or pasted notes. You get a dated status briefing in your own style, with progress, blockers and what you could not check."
+explain: |
+  A status briefing for your leaders or team takes an hour when the facts sit in five places. A pull request in GitHub, a thread in Slack, a decision in email, a date in your calendar. This writer pulls them into one story instead of five lists.
+
+  It matches your own style. You give it an audience, the sources to read and a sample of how you write. It then keeps the detail level to what that reader needs. A leader gets themes and risks. A team gets names and tasks.
+
+  It drafts only. Nothing is sent or posted. If it cannot reach a source, it says what is missing and asks you to paste it. If there was little activity, it says so and does not pad.
+when:
+  - Your leader wants a weekly update and the facts are spread across GitHub, chat and email.
+  - You write the same update for two audiences and want each in the right tone.
+  - You are back from leave and need to cover the past two weeks fast.
+  - Your updates sound different each week and you want them to match your style.
+not_for:
+  - "You only have rough notes from one project: use the Weekly status update writer or the Status report writer."
+  - "The note is bad news, a hard ask or a stakeholder reply: use the Executive update drafter."
+  - "You need meeting minutes, not a status update: use the Meeting minutes writer."
+  - "The update is about hiring, firing, legal or a private issue: write it yourself."
+you_give:
+  - Who the update is for and how much detail they want
+  - The time window to cover, such as this week or since Monday
+  - Where the facts live, such as GitHub repos, Slack channels or a notes file
+  - One past update you wrote, as a style sample (optional)
+  - Anything the AI cannot reach, pasted in as text (optional)
+you_get:
+  - A dated briefing for your audience, with the time window stated
+  - Progress, blockers and decisions needed, grouped by theme or project
+  - A note on which sources each point came from
+  - A "Not covered" line for any source it could not read
+  - Options to make it shorter, longer or for another audience
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. A plain chat works if you paste your notes.
+  - Connected tools (GitHub, Slack, Microsoft 365, Google Workspace) are optional. They let your AI read your private email, chat and calendar, and some need a paid plan or an admin. Only connect ones you are happy to let it read.
+  - Paste the skill text. Say who the update is for and what time to cover.
+  - If you have no setup file, fill in the short config the skill asks for. A past update you wrote is the best style sample.
+  - Read the draft. Check every name, date and number against your sources. Ask for it shorter or in another tone.
+  - Copy it into your email or chat yourself. Nothing is sent for you.
+how_it_works:
+  - title: Read your setup
+    text: Reads your audience, source and style notes. If you have none, it asks for a short config.
+  - title: Choose audience and window
+    text: Picks the audience profile and the time window, using the past 7 days if you do not say.
+  - title: Gather quietly
+    text: Reads each source you listed and asks you to paste anything it cannot reach.
+  - title: Join the facts
+    text: Links items across sources into one story, not a list of raw activity.
+  - title: Fit the audience
+    text: Sets the detail level, length and tone to the audience, and applies your never include list.
+  - title: Show the draft
+    text: Presents the draft, then offers shorter, longer, a tone change or another audience.
+output_shape: |
+  <Audience> status briefing, <start date> to <end date>
+
+  <One line summary>
+
+  <Theme or project>
+  - <progress>
+  - <blocker or risk>
+  - <decision needed>
+
+  Not covered: <sources it could not read>
+output_sample:
+  input:
+    - Who the update is for
+    - The time window to cover
+    - Your sources, or notes pasted into the chat
+    - One past update as a style sample (optional)
+  prerequisites:
+    - Connected tools if you want it to read GitHub, Slack, email or calendar (optional, some are paid)
+  output:
+    - name: Status briefing
+      contains: A dated draft in your style, grouped by theme, with progress, blockers and decisions needed.
+    - name: Source notes
+      contains: Which tool or note each point came from, so you can check it.
+    - name: Not covered
+      contains: Sources the AI could not read, so you know the gaps.
+    - name: Edit options
+      contains: Choices to shorten, expand, change tone or write for another audience.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with connected tools
+      why: Connections to GitHub, Slack, email and calendar let it gather facts without pasting.
+    - name: Any chat AI
+      why: Paste your notes and a past update. It works from text alone.
+  inputs:
+    - One or two past updates you wrote
+    - A list of standing items to always mention
+    - Things to leave out
+terms:
+  - term: Audience profile
+    meaning: A short note on who reads the update, what they care about and how much detail.
+  - term: Connected tool
+    meaning: An app your AI can read, like GitHub or Slack, once you allow it.
+  - term: Time window
+    meaning: The dates the update covers.

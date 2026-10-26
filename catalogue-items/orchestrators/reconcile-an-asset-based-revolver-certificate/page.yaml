@@ -1,53 +1,85 @@
 new_slug: reconcile-an-asset-based-revolver-certificate
 name: Reconcile an asset based revolver certificate
-headline: Reconcile an asset based revolver certificate
-summary: A collateral certificate reconciliation and signed revolver availability
+headline: Check what you can still draw on your revolver
+
+summary: Paste your aging, inventory and loan figures for one date. Get a borrowing base check and the amount you can still draw.
+
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A collateral certificate reconciliation and signed revolver availability. Share same-date receivables aging, eligible inventory cost/appraisal, credit agreement, advance rates, caps, reserves, commitment, debt drawings and letters of credit.
-explain: |-
-  A collateral certificate reconciliation and signed revolver availability.
+subhead: Give it your receivables aging, your inventory cost and appraisal, the rates and caps from your credit agreement, and your loan balances, all for one certificate date. It works out each collateral line, caps the total at your commitment and takes off what you have already used. You get signed availability, a flag if it is negative, and a list of what is still unproven.
 
-  Asset based credit controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A borrowing base certificate looks like a page of short lines. Each line hides a rule from your credit agreement: some invoices don't count, one customer can only count up to a cap, inventory is limited by the lower of cost and appraisal, and a reserve set by the lender comes off. Get one wrong and you either draw less than you could, or report more than you are allowed and have to correct it with your lender later.
+
+  This workflow runs the lines in a fixed order. Receivables first, then inventory, then the loan. Each step hands the next a net figure and the reserves it already took, so no reserve comes off twice. The last step caps the total at your commitment and subtracts what you have drawn, your letters of credit and any other block. If the answer is below zero it stays below zero and is labelled an overadvance. It is not rounded up to nothing.
+
+  It checks arithmetic and traces each number to a source. It does not know your agreement beyond what you paste, it does not submit anything to your lender, and a clean result does not mean the lender will fund. A person who knows the agreement reads it and signs.
+
 when:
-  - You need a collateral certificate reconciliation and signed revolver availability.
-  - You work on asset based credit controls and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Month end is close and you are preparing the borrowing base certificate for your lender.
+  - Your draft certificate shows availability of $250,000, your own sheet shows less, and you cannot find the gap.
+  - A new appraisal or a field exam changed the inventory value or a reserve, and you need the whole line re-run.
+  - A new controller wants every figure traced to the aging report and the credit agreement before anyone signs.
+
 you_give:
-  - Same-date receivables aging, eligible inventory cost/appraisal, credit agreement, advance rates, caps, reserves, commitment, debt drawings and letters of credit.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your receivables aging at the certificate date, with the total that ties to your books (from your accounting system)
+  - The ineligible receivables, grouped by reason, and any customer above its concentration cap (the definitions are in your credit agreement)
+  - Inventory at cost, and the latest appraisal's net orderly liquidation value for the same items and date (from the appraisal report)
+  - The advance rates, any inventory sublimit, the lender's reserves and your commitment (from the credit agreement and the lender's latest notices)
+  - The loan drawn, letters of credit outstanding and any other blocks, at the same date (from the lender's statement)
+  - Your draft certificate, to compare against (optional)
+  - The certificate date, the currency and the scale, such as thousands
+
 you_get:
-  - A collateral certificate reconciliation and signed revolver availability.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A receivables line: aging less ineligibles and concentration excess, times the advance rate, less the reserve
+  - An inventory line: the lowest of the cost-based, appraisal-based and sublimit amounts, less the reserve, with the limit that applied named
+  - Availability: both lines added, capped at your commitment, less drawn loan, letters of credit and blocks. It is signed, so a negative shows as an overadvance
+  - A comparison with your draft certificate, each difference explained or flagged
+  - Every MISSING item, and any check that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can create spreadsheets.
+  - Attach the aging report, the inventory and appraisal reports and the lender's statement. Paste the advance rates, caps, reserves and commitment from your credit agreement. State the certificate date once, at the top.
+  - After step 1, check that the aging total matches your books and that no invoice sits in two ineligible groups.
+  - After step 2, check that the date matches step 1 and that the limit it says applied (cost, appraisal or sublimit) is the one you expected.
+  - After step 3, check each reserve comes off once. If availability is negative, treat it as an overadvance to raise with your lender.
+  - Fill every MISSING line. Send nothing to your lender until a person who knows the agreement has reviewed and signed it.
+
 how_it_works:
   - title: Receivables borrowing base builder
-    text: Reconcile eligible receivables and contractual concentration deductions to the aging control total. Pass the net receivables advance plus a reserve ledger to the facility bridge.
+    text: Ties your aging to its control total, takes off ineligible invoices and concentration excess, applies the advance rate, then takes off the reserve. Hands step 2 a net receivables figure and the reserve it used. Check before moving on, the aging total equals your books and no invoice is excluded twice.
   - title: Inventory borrowing base builder
-    text: Calculate inventory advance on the same certificate date using matching cost and liquidation-value populations. Pass net advance and already-applied reserves, identifying appraisal coverage gaps.
+    text: Uses the same certificate date. Works out the advance on cost and on appraisal separately, applies any sublimit, takes the lowest, then takes off the reserve. Hands step 3 a net inventory figure, the limit that applied and any item with no appraisal. Check before moving on, cost and appraisal cover the same items.
   - title: Revolver availability checker
-    text: Combine only compatible net collateral advances, cap by commitment and deduct actual funded/contingent usage and additional nonduplicated blocks. Return signed capacity and all draw-condition gaps without submitting or certifying the certificate.
-output_shape: |-
-  A collateral certificate reconciliation and signed revolver availability.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+    text: Adds the two net figures, caps them at your commitment, and subtracts drawn loan, letters of credit and other blocks. Returns signed availability and an overadvance line if it is negative. Check before moving on, no reserve appears twice and every draw condition is listed.
+
+output_shape: |
+  CERTIFICATE DATE <date>, <currency>, <scale>
+
+  RECEIVABLES   aging <n> - ineligible <n> - concentration excess <n> = eligible <n>
+                x advance rate <%> = <n>, less reserve <n> = net <n>
+  INVENTORY     cost <n> x <%> = <n>; appraisal <n> x <%> = <n>; sublimit <n>
+                lowest <n> (<which limit applied>), less reserve <n> = net <n>
+  AVAILABILITY  borrowing base <n>, commitment <n>, capacity <n> (<which applied>)
+                less drawn <n>, letters of credit <n>, blocks <n>
+                = signed availability <n>   OVERADVANCE <n or none>
+  YOUR DRAFT    <figure> | difference <n> | <explained or flagged>
+
+  SOURCES       <each input, its source, date and unit>
+  MISSING       <each gap, and the line it stops>
+  CHECKS MISSED <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Source populations and certificate date match; every reserve and usage deduction appears once; negative availability stays an overadvance exception.
+  - what: A negative result
+    how: Change drawn loan to a higher number. Availability goes below zero and shows as an overadvance, not as zero.
+  - what: A different cap
+    how: Change the commitment or an advance rate and re-run. The line that applied changes, and the page names which.
+  - what: A new appraisal
+    how: Paste the new NOLV and its date. Only the inventory line and the final availability move.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Source populations and certificate date match; every reserve and usage deduction appears once; negative availability stays an overadvance exception.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +90,64 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep one sheet with your agreement's definitions (ineligible reasons, concentration caps, advance rates) and paste it in each month, so the rules never get retyped.
+  - Save each month's result next to the draft certificate. The next run can then explain what moved.
+  - After this, run the revolver interest and fee checker on the same loan balances to check what the line costs.
+  - If your reserves change often, keep a dated list of the lender's notices and attach it every time.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds, recalculates and reopens the workbook, so you can click into each formula. In plain chat it returns the same tables as text.
+    - name: Your accounting system's aging export
+      why: Gives the aging total that must tie to your books before anything else counts.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The credit agreement's definitions of ineligible receivables and eligible inventory, copied as written.
+    - The latest appraisal report, so the appraisal line is not a guess.
+    - A named reviewer who knows the agreement and will sign.
+
 terms:
+  - term: Borrowing base
+    meaning: The most your collateral lets you borrow, after the lender's rates, limits and reserves.
+  - term: Advance rate
+    meaning: The share of a collateral value the lender will lend against, such as 85% of eligible receivables.
+  - term: Ineligible receivables
+    meaning: Invoices your agreement says don't count, such as ones that are too old or owed by an affiliate.
+  - term: Concentration excess
+    meaning: The part of one customer's balance above the cap your agreement allows.
+  - term: Net orderly liquidation value
+    meaning: What an appraiser expects your inventory to fetch in an orderly sale. Often shortened to NOLV.
+  - term: Reserve
+    meaning: An amount the lender deducts from the borrowing base, set under the agreement.
+  - term: Overadvance
+    meaning: When what you owe and have committed is above what the borrowing base allows.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the calculation works, with no claim about a real company.
+
+not_for:
+  - You only need one line, such as receivables. Use the receivables borrowing base builder on its own.
+  - You want to know what the revolver costs in interest and fees. Use the revolver interest and fee checker.
+  - You want a certificate to send to your lender. This checks the arithmetic and tracing. A person who knows the agreement must review and sign the real one.
+  - Your receivables and inventory are as of different dates, or you don't have the agreement's definitions. It stops those lines instead of guessing.
+
+output_sample:
+  input:
+    - "Your receivables aging at the certificate date, with the currency and scale"
+    - "The ineligible receivables by reason, and any customer above its concentration cap"
+    - "Inventory at cost, and the latest appraisal value"
+    - "The advance rates, sublimit, reserves and commitment from your credit agreement"
+    - "The loan drawn, letters of credit and other blocks from the lender's statement"
+    - "Your draft certificate (optional)"
+  output:
+    - name: "RECEIVABLES"
+      contains: "Aging less ineligibles and concentration excess, times the advance rate, less the reserve."
+    - name: "INVENTORY"
+      contains: "The lowest of the cost, appraisal and sublimit amounts, less the reserve, naming the limit that applied."
+    - name: "AVAILABILITY"
+      contains: "The borrowing base capped at your commitment, less loan, letters of credit and blocks. A negative shows as an overadvance."
+    - name: "YOUR DRAFT"
+      contains: "Each difference from your draft certificate, explained or flagged."
+    - name: "SOURCES"
+      contains: "Each input with its source, date and unit."
+    - name: "MISSING"
+      contains: "Each gap and the line it stops, plus any check that could not run."

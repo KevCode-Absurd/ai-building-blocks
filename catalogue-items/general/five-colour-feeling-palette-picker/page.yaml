@@ -1,6 +1,6 @@
 new_slug: five-colour-feeling-palette-picker
 name: "Five-colour feeling palette picker"
-summary: "Name what it is for and the feeling. Get a palette of five colours or fewer, each with one job."
+summary: "Pick a colour palette from one feeling. Give it what you are colouring and get five colours or fewer, each with a hex code and one job."
 job: design-work
 thinking: low
 thinking_why: "It follows a short set of rules for a small result."
@@ -17,6 +17,10 @@ when:
   - "You are choosing colours for a brand, page or pack."
   - "Your palette feels busy or flat."
   - "You need to explain colour choices to a designer."
+not_for:
+  - "You need a full brand system or style guide: use the Brand style guide writer."
+  - "You want the fuller version with every check: use the Mood colour palette planner."
+  - "You need proof the palette works with real people: show it to a few people and ask what they feel."
 
 you_give:
   - "What it is for and where it is seen"
@@ -32,6 +36,28 @@ how_to_use:
   - "Under it, say what you are colouring and the feeling."
   - "Add any fixed colours."
   - "Try the palette on a mock-up and run the three-second test."
+output_sample:
+  input:
+    - What you are colouring and where it is seen
+    - The feeling, in one word
+    - Colours you cannot change (optional)
+  output:
+    - name: FEELING
+      contains: The one feeling in a word, and what the viewer should sense first.
+    - name: BASELINE
+      contains: A plain description of the subject in its true colours.
+    - name: PALETTE
+      contains: Up to five colours, each with a name, a hex code and one job.
+    - name: THE PUSH
+      contains: The plain and pushed main colour side by side, and what the push adds.
+    - name: BACKGROUND
+      contains: The one background chosen and why text on it stays readable.
+    - name: CUT LIST
+      contains: Any colour removed because it fights the feeling, with the reason.
+    - name: THREE-SECOND TEST
+      contains: Steps to show the palette to a person and compare their word with your feeling.
+    - name: MISSING
+      contains: Any facts the prompt needed but did not get.
 
 how_it_works:
   - title: "Name the feeling"

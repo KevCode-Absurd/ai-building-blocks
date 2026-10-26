@@ -2,36 +2,57 @@ thinking: medium
 thinking_why: Vocabulary choices change how well the model learns.
 new_slug: tokenizer-trainer
 name: Tokenizer trainer
-summary: Give it your text. Get a custom word-splitting tokenizer trained on it,
-  with padding and length limits set up.
+summary: Train a custom tokenizer on your own text so a model reads your product names and jargon as clean pieces. Get a saved tokenizer file and a test.
 job: build-software
 headline: Tokenizer trainer
-subhead: Give it your text. Get a custom word-splitting tokenizer trained on it,
-  with padding and length limits set up. Bring your text files. Use the result
-  to plan your next step.
+subhead: Give it your text files. It trains a tokenizer on them, so a model sees your own terms as clean pieces. You get a saved tokenizer file and a test on sample text.
 explain: |
   A tokenizer built from your own text, so a model sees your words, codes or product names as clean pieces instead of broken fragments. It is useful when general tokenizers split your specialist vocabulary badly.
 
   The skill uses the Hugging Face Tokenizers library. You pick a method: BPE, WordPiece or Unigram. It trains the vocabulary on your files, sets special tokens, and adds rules for padding and maximum length. It can track where each token came from in the original text, which helps with highlighting and entity work. It also loads ready-made tokenizers when you do not need a custom one. The library tokenizes about a gigabyte in under 20 seconds on a normal processor.
 when:
-  - Your industry terms get chopped into odd pieces by standard tokenizers.
-  - You are training a model and need a vocabulary for your data.
-  - You need to map tokens back to positions in the original text.
-  - You must process a large text collection quickly.
+  - Standard tokenizers chop your industry terms or product codes into odd pieces.
+  - You are training a model and need a vocabulary built from your data.
+  - You need to map each token back to its place in the original text.
+  - You must process a very large text collection fast.
+not_for:
+  - "You only need a tokenizer that matches an existing model like BERT or GPT-2: load the pretrained one instead of training a new one."
+  - "You want to count tokens for OpenAI models: use tiktoken, the tokenizer built for GPT models."
+  - "You have no way to run Python code: ask a developer to run the training, or use a pretrained tokenizer."
 you_give:
   - Your text files
-  - "Method preference: BPE, WordPiece or Unigram (optional)"
-  - Vocabulary size
-  - Padding and length limits
+  - "Method: BPE, WordPiece or Unigram (optional)"
+  - Vocabulary size (optional)
+  - Padding and maximum length (optional)
 you_get:
-  - A trained tokenizer file
-  - Special token setup
+  - A trained tokenizer saved as a JSON file
+  - Special tokens set up
   - Padding and truncation settings
-  - Token-to-text position mapping
-  - Test output on sample text
+  - Token positions mapped to the original text
+  - A test encode of sample text showing tokens and ids
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Use an AI that can run Python code, or run the code on your own computer. Install tokenizers, transformers and datasets with pip.
+  - Gather your text files as plain .txt. Note their rough size, because training takes longer on bigger files.
+  - Paste the skill into your AI. Add your files, your method (or ask it to pick) and your vocabulary size.
+  - Check the test encode. Your key terms should stay in one or two pieces. If not, raise the vocabulary size and train again.
+  - Load the saved my-tokenizer.json in your training run, or wrap it for transformers. If a pretrained tokenizer fits your model, use that instead.
+output_sample:
+  input:
+    - Your text files, such as train.txt and validation.txt
+    - "Method: BPE, WordPiece or Unigram (optional)"
+    - Vocabulary size you want (optional)
+    - Padding and maximum length (optional)
+  prerequisites:
+    - An AI that can run Python code, or your own computer with Python
+    - The pip packages tokenizers, transformers and datasets
+  output:
+    - name: my-tokenizer.json
+      contains: The trained tokenizer, saved so you can load it again in a training run or in transformers.
+    - name: Special tokens
+      contains: The reserved tokens for unknown words, padding, start, end and masking, set up for your chosen method.
+    - name: Padding and truncation settings
+      contains: Rules that pad short texts and cut long ones to your maximum length.
+    - name: Test encode
+      contains: A sample sentence turned into tokens and ids, so you can check how your words are split.
+    - name: Offsets
+      contains: For each token, the start and end position in the original text.

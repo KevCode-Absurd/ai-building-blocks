@@ -5,25 +5,30 @@ description: Use when a goal or problem feels too big to start, or you keep fixi
 
 # Big problem splitter
 
-A big problem is often one lump that nobody has cut. This skill asks what the real cause is, what you are afraid of, and what the smallest first move is, and then plans the middle with a light touch. It adds no rules just to feel in control. For a plan with dates and numbers to check, use "Work-backwards plan checker".
+A big problem is often one lump that nobody has cut. This skill asks what the real cause is, what you are afraid of, and what the smallest first move is, and then plans the middle with a light touch. It adds no rules just to feel in control.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+**Not for:** a plan that already has dates and numbers to check (use the Work-backwards plan checker), sorting a long list of open questions against a clear goal (use the Big decisions first sorter), or finding how a finished plan could fail (use the Failure-first plan check).
+
+<!-- needs: hand-written (needs_mode: manual in item.yaml). Keep this section in step with the page. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+This skill runs in any chat AI. It needs no files, web access or paid tools.
 
-**Works best with** (or they can paste their own instead):
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+**What you need:**
+- **The goal or problem** (yours): in your own words, however messy. What does done look like?
+- **What makes it feel too big** (yours): the fear, doubt or pile-up behind it. Be honest. It shapes the first step.
 
 **Makes it better (optional):**
-- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **What you have already tried** (yours): so it skips those and looks for the cause.
+- **Hours you can give each week** (yours): the steps shrink to fit.
+- **Customer or user words about the problem** (yours): reviews, emails or call notes. The whys use what they said.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your question, customer words. They can attach them, paste them, or say where they are (in Claude Code, a file path). Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too.
+2. **If the goal or the fear is missing, stop and ask.** Reply with only a short request for both: "What do you want to get done, and what makes it feel too big? For example: 'Launch my online shop. I'm afraid nobody will buy.'" Do not output the empty plan sections. Once both arrive, do the whole job.
+3. **Do the job.** Mark each gap with `MISSING:` and never invent a cause. Say each point once. In CHECKS MISSED, name only the checks that failed, or write "none".
 
 **Tools that do this best:**
-- **Any good chat AI:** Asking why in turns and shrinking a step is plain text work any strong chat AI does well.
+- **Claude, ChatGPT or Gemini:** asking why in turns and shrinking a step is plain text work.
 <!-- /needs -->
 
 ## What you need
@@ -37,9 +42,9 @@ How to start:
 
 1. **Write the goal in one line.** Write what done looks like, in plain words. This line is copied onto every step so the goal stays visible. If you cannot write it in one line, write `MISSING:` and ask what done means.
 2. **Name the project and the fear.** Write two things: what the project is, and what makes it feel too big. Use the person's own words. Typical fears are being judged, running out of money, not knowing where to begin, or doing it badly. Do not argue with the fear. Write it so the first step can answer it.
-3. **Ask why five times.** Start with the problem as stated. Ask why it is happening. Take the answer and ask why again. Repeat about five times, or until the answers stop changing. Write each pair. Stop at a cause the person can act on. If a why can only be answered with a guess, mark the answer as a guess and ask the person to confirm before going on.
+3. **Ask why five times.** Start with the problem as stated. Ask why it is happening. Take the answer and ask why again. Repeat about five times, or until the answers stop changing. Write each pair. Stop at a cause the person can act on, not a feeling. If a why can only be answered with a guess, mark the answer GUESS. In a chat, put the likely answers to all the whys in one message and ask the person to correct them, rather than asking one at a time. Do not build the steps on a GUESS root cause until the person confirms it, or say plainly that the plan rests on a guess.
 4. **Find the early sign.** Look for the small trouble that is easy to deal with now, before it grows: a late reply, an unclear job, a number drifting. Say where it is, and what a small fix is. If none is found, say so.
-5. **Shrink the first move.** Cut the first step until it takes about an hour to a week of the person's real time. It must be one action with a visible result, such as one page, one call or one test. Write it with who, when and the test that shows it is done.
+5. **Shrink the first move.** Cut the first step until it takes about an hour to a week of the person's real time. It must be one action with a visible result, such as one page, one call or one test. Write it with who, when and the test that shows it is done. If the person gave their weekly hours, size it to fit.
 6. **Ask what you are forcing.** Find what the person is pushing against: a rule that adds work, a deadline nobody believes, a role they are not suited to. Name one thing to stop forcing. Say what could stop if they do.
 7. **Plan the middle lightly.** Write the steps between the first move and the end. Keep them few. For each step: one small action, a test, and the goal line. Do not add checkpoints for their own sake. Set one rule for when to look: after a step finishes, or at a fixed time. Leave the rest alone so the work can move.
 8. **Guard the last stretch.** Work is often spoiled when it is nearly done. Add one check for the end: what to look at before calling it done, and who looks.
@@ -49,14 +54,11 @@ How to start:
 
 The goal in one line. What makes it feel big. The five whys and the root cause. The early sign. The steps, each with a test and the goal line. What to stop forcing. The first move for this week. The last-stretch check. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: hand-written (needs_mode: manual in item.yaml). -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan your strategy** with the [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
-- **Check the money** with the [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser). It takes the plan.
-- **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
-- **Test the idea with real people** with the [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
-- **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
+- **Once the first steps have dates** with the [Work-backwards plan checker](https://useaiblocks.com/skills/work-backwards-plan-checker). It takes the goal and the steps.
+- **To see how the plan could fail** with the [Failure-first plan check](https://useaiblocks.com/skills/failure-first-plan-check). It takes the steps as a plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -71,7 +73,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 
-Write `MISSING: <what> for <step>`. If the person gives no fear, ask for it before planning. Never invent causes. When the five whys need a fact you do not have, mark the answer as a guess.
+Write `MISSING: <what> for <step>`. If the goal or the fear is absent, reply with only the short request in "Before you start" and nothing else. Never invent causes. When the five whys need a fact you do not have, mark the answer GUESS.
 
 ## Avoid
 

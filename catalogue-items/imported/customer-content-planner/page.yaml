@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows a set plan and fits it to your product.
 new_slug: customer-content-planner
 name: Customer content planner
-summary: Say what you sell. Get ways to get customers posting, a creator brief
-  and ideas to reuse their posts in ads.
+summary: Plan how to get customers posting about you. Give it your product and buyer. You get a customer content plan, a creator brief and ad reuse ideas.
 job: grow-social
 headline: Customer content planner
-subhead: Customer posts sell better than brand posts, and this shows you how to
-  get more of them. Say what you sell and who buys it, and you get a plan for
-  getting customers to post, plus a creator brief and ways to reuse their
-  content in ads.
+subhead: Customer posts sell better than brand posts, and this shows you how to get more of them. Say what you sell and who buys it, and you get a plan for getting customers to post, plus a creator brief and ways to reuse their content in ads.
 explain: |
   Customer posts sell better than brand posts, and this shows you how to get more of them. Say what you sell and who buys it, and you get a plan for getting customers to post, plus a creator brief and ways to reuse their content in ads.
 
@@ -19,6 +15,10 @@ when:
   - You want review volume to go up on Google or Trustpilot.
   - You need a brief to hand to a creator you plan to pay.
   - You want to turn real customer videos into ads.
+not_for:
+  - You sell a regulated product, like health or finance, where testimonials are limited. Check the rules with a lawyer or compliance lead first.
+  - You want to pay famous creators to post on their own pages. Use an influencer deal, or ask a person who runs creator outreach.
+  - You only want to write the ad text. Write the ad with your AI directly, once you have the customer posts.
 you_give:
   - What you sell and who buys it
   - Your channels and budget
@@ -31,7 +31,33 @@ you_get:
   - Rights and permission steps
   - A plan to reuse posts in ads
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Tell it what you sell and who buys it.
+  - Add your channels, your goal and your budget. Share any legal limits, like health claims.
+  - Paste your brand notes if you have them (optional).
+  - Read the plan. Check the rules for your market and each review site before you send any request.
+  - Fill in the creator brief, then send it to creators. No code or paid tool is needed.
+output_sample:
+  input:
+    - What you sell and who buys it
+    - Whether customers already post about you
+    - "Your goal: more posts, better ad videos, more reviews, or all three"
+    - Your channels, like Instagram, TikTok or Google reviews
+    - Your budget and any legal limits (optional)
+  prerequisites:
+    - Your brand notes or voice guide, if you have them (optional)
+  output:
+    - name: UGC types and uses
+      contains: Sorts customer content into organic, rewarded and paid creator posts, and what each is used for.
+    - name: Organic UGC generation system
+      contains: Moments and messages that get customers to post, plus a brand hashtag plan.
+    - name: Review generation system
+      contains: When to ask for reviews, the request emails, which review sites to focus on, and safe ways to reward reviews.
+    - name: UGC creator program
+      contains: Where to find creators, what they film, and a creator brief you fill in and send.
+    - name: UGC for paid ads
+      contains: Ad formats, hook lines to try, and a way to test them.
+    - name: UGC rights and legal
+      contains: How to ask permission, what usage rights to set, and disclosure rules to check.
+    - name: UGC content calendar
+      contains: A weekly routine and a monthly review for collecting and reusing customer posts.

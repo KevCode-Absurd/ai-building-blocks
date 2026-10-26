@@ -1,38 +1,126 @@
 new_slug: feedback-loops-humans-teaching-agents-implementation-planner
 name: Agent feedback learning builder
-summary: Build a four-way feedback log and proposed lessons for review.
+summary: Plan how Slack reactions teach your AI agents. Get a four-way feedback log and lessons drafted for a person to review. Draft code only.
 job: build-software
 headline: Agent feedback learning builder
-subhead: Share original finding, human reaction and review owner. Get a four-way feedback log and proposed lessons for review.
+subhead: Give it where your agent posts findings, the four emoji your team will use and who reviews lessons. It reads a starter handler and plans a feedback log with four kinds of feedback and a lesson draft for each repeat. You get gaps, record layout, lesson rules and tests. Nothing is run.
 explain: |-
-  Share original finding, human reaction and review owner. Get a four-way feedback log and proposed lessons for review.
+  Your team already tells your AI agent when it is right or wrong. They say it with a thumbs up, a reply or a sigh. If none of that is saved, the agent makes the same mistake next week. If every reaction rewrites its rules at once, one grumpy Friday can ruin a good agent.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill plans an agent feedback loop that sits between those two. Each reaction becomes a saved record of one of four kinds. Approve. Reject. Right diagnosis but wrong action. Already known. The last two matter. Without them, a fair complaint about the action makes the agent stop spotting real problems, and a "we know" makes it louder instead of quieter. Repeats add up to a drafted lesson. A named person reviews it. Nothing goes live on one reaction.
+
+  It starts from a starter Slack handler and a method note, and finds their gaps. The two list different feedback types. A reply with no reaction is saved as an approval. The lookup for an existing record never finds one. It plans the fix for each. It does not read your Slack or change a rule. To check an agent's own predictions against what happened, use the Agent prediction review builder.
 when:
-  - You need a four-way feedback log and proposed lessons for review.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - Your team keeps correcting an agent in Slack, and it keeps repeating the same mistake.
+  - You want thumbs-up and thumbs-down reactions saved as data, not lost in the channel.
+  - You want an agent's rules improved from real feedback, with a person approving each change.
+  - You have a starter reaction handler and need to know what it is missing before you rely on it.
+not_for:
+  - You want an agent to score its own past predictions against what happened. Use the Agent prediction review builder.
+  - You only need to change one rule once. Edit the agent's rules file by hand.
+  - You want to collect feedback from customers. Use a survey tool. This skill is for your own team's reactions to agent output.
+  - You want the agent to rewrite its own live rules. It only drafts lessons. A person approves each one.
 you_give:
-  - Original finding, human reaction and review owner
+  - The Slack channels where your agent posts findings, and how each message links back to the job that made it
+  - The four emoji your team will use for approve, reject, right diagnosis but wrong action, and already known
+  - Who may give feedback, and who reviews lessons
+  - Where the agent's rules or lessons are kept, such as a file or a table
+  - Your current database tables for feedback and lessons (optional)
+  - One real finding and the reactions it got, with client names removed (optional)
 you_get:
-  - A four-way feedback log and proposed lessons for review
-  - A failure checklist and synthetic test cases
+  - A list of gaps in the starter, each with a fix
+  - Four feedback kinds, each with its emoji and what it teaches
+  - A feedback record layout that keeps client scope
+  - Lesson rules with the settings you choose, and a lesson draft format
+  - A rule for telling a policy change from a data fix
+  - Test cases for each kind and for edge cases
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in an AI that can read your code, such as Claude Code or Codex. A chat AI works if you paste the files in.
+  - Name the channels, the four emoji and the people who give and review feedback. Remove client names from any example you paste.
+  - Read GAPS IN THE STARTER first. Mark each one as a problem for you or not.
+  - Read LESSON RULES. Set how many matching signals it takes before a lesson is drafted, and who reviews.
+  - Run the draft code and the tests on a test channel, never your live one. This skill never runs anything.
+  - After a week, read the first drafted lessons yourself before you approve any.
 how_it_works:
-  - title: Step 1
-    text: Distinguish approve, reject, already-known and right-diagnosis/wrong-action feedback.
-  - title: Step 2
-    text: Keep the original finding immutable.
-  - title: Step 3
-    text: Record who reviewed it and why.
-  - title: Step 4
-    text: Aggregate repeated signals.
-  - title: Step 5
-    text: Draft a lesson or skill change for human review.
-  - title: Step 6
-    text: Do not rewrite live rules from one reaction.
+  - title: Finds the gaps in the starter
+    text: Checks the feedback types, how a reply with no reaction is saved, the record lookup and who may react.
+  - title: Defines the four kinds
+    text: Names each kind's emoji, what it teaches the agent and what it must leave alone.
+  - title: Separates policy changes from data fixes
+    text: A human rule is saved as a rule draft. A data error is marked dismissed and not held against the agent.
+  - title: Plans the feedback record
+    text: Keeps the original finding unchanged. Adds who reacted, when, why, the replies and the client scope.
+  - title: Plans lessons
+    text: Drafts a lesson after enough matching signals. Only a named reviewer can make it live.
+  - title: Writes tests
+    text: Covers each kind, a reply with no reaction, a blocked reactor and a contradicted lesson.
+output_shape: |-
+  BASIS
+  <what was read; nothing was run>
+  MISSING: <inputs and what each stops>
+
+  GAPS IN THE STARTER
+  <#> | <what it does> | <why it matters> | <fix>
+
+  FEEDBACK KINDS
+  <kind> | <emoji> | <what it means> | <what it teaches> | <what it must not change>
+
+  FEEDBACK RECORD
+  <column> | <meaning> | <source>
+
+  LESSON RULES
+  <rule> | <setting you choose> | <who decides>
+  LESSON DRAFT FORMAT
+  <field> | <what it holds>
+
+  POLICY CHANGE OR DATA FIX
+  <case> | <how it is saved> | <who is told>
+
+  TEST CASES
+  <name> | <set-up> | <expected result>
+
+  NEXT STEP
+  <the smallest useful step>
+output_sample:
+  input:
+    - The Slack channels where your agent posts findings, and how each message links to its job
+    - The four emoji your team will use, and who gives and who reviews feedback
+    - Where the agent's rules or lessons are kept
+  prerequisites:
+    - An AI that can read your code files, or the files pasted in
+    - A database for feedback and lessons, or the starter layout to build one
+  output:
+    - name: Gaps in the starter
+      contains: What the starter handler gets wrong, why it matters for you and the fix for each.
+    - name: Feedback kinds
+      contains: The four kinds with their emoji, what each teaches the agent and what it must leave alone.
+    - name: Feedback record
+      contains: The columns saved for each reaction, including who, when, why and the client scope.
+    - name: Lesson rules
+      contains: When a lesson is drafted, what it holds, who reviews it and how it is withdrawn.
+    - name: Policy change or data fix
+      contains: How a human rule and a data error are each saved, so neither teaches the wrong thing.
+    - name: Test cases
+      contains: One case per kind, plus a reply with no reaction and a reaction from someone not allowed.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your Slack handler and the starter together and proposes exact edits.
+    - name: Slack
+      why: A test channel lets you try each emoji before the plan goes near real work.
+  inputs:
+    - A week of your agent's real findings and the reactions they got, with client names removed
+    - The agent's current rules file
+terms:
+  - term: Feedback record
+    meaning: A saved note of one person's reaction to one agent finding, with who, when and why.
+  - term: Lesson
+    meaning: A short rule drafted from repeated feedback, such as "do not flag this case again". A person approves it.
+  - term: Maturity
+    meaning: A lesson's stage. It starts as a draft, becomes validated when a reviewer approves, and is archived when stale.
+  - term: Policy change
+    meaning: A rule your team imposes, such as no budget rises on Fridays, whether or not the agent was wrong.
+  - term: Data fix
+    meaning: A correction to bad source data. The agent was not wrong, so it should not learn from it.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

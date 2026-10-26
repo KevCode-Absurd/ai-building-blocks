@@ -11,6 +11,8 @@ inputs:
   - {type: offer, required: true}
   - {type: voc_reviews, required: false}
   - {type: brand_brain, required: false}
+  - {type: plan, required: false}
+  - {type: copy_draft, required: false}
 outputs:
   - {type: email_flow}
 uses: []

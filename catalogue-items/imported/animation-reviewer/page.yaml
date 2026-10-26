@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It checks each animation against ten fixed standards.
 new_slug: animation-reviewer
 name: Animation reviewer
-summary: Give it a code change with motion. Get a table of fixes and a clear
-  approve or block verdict.
+summary: Paste a code change with motion into this animation reviewer. Get a table of fixes and a clear Approve or Block verdict for each change.
 job: test-and-fix-code
 headline: Animation reviewer
-subhead: A code change that touches motion gets a strict review and a clear
-  verdict, Approve or Block, so nothing sluggish or jarring ships. The review
-  comes as a table of findings, each with a suggested fix.
+subhead: A code change that touches motion gets a strict review and a clear verdict, Approve or Block, so nothing sluggish or jarring ships. The review comes as a table of findings, each with a suggested fix.
 explain: |
   A code change that touches motion gets a strict review and a clear verdict, Approve or Block, so nothing sluggish or jarring ships. The review comes as a table of findings, each with a suggested fix.
 
   The skill acts as a picky motion designer. It checks each animation against ten fixed standards from Emil Kowalski's craft rules: easing curves, durations, where an element appears from, whether it can be interrupted, how often it fires, frame drops, and what happens for people who choose reduced motion. It starts from doubt, so a transition that merely works still gets flagged if it feels wrong. It reviews only motion and does not edit your code unless you ask.
 when:
-  - A pull request changes transitions, modals, drawers or toasts and you want a
-    second opinion.
+  - A pull request changes transitions, modals, drawers or toasts and you want a second opinion.
   - An interface feels slow and you cannot say why.
   - You want a pass or fail before releasing animated features.
   - Your team lacks someone with an eye for motion detail.
+not_for:
+  - "You want a general code review: ask a normal code review step or a teammate, since this only checks motion."
+  - "You want the fixes written into your code: ask your AI to make the edits after the review, because this only reports."
+  - "You need a full accessibility audit: use a dedicated accessibility check, since this covers reduced motion and hover only."
 you_give:
   - The code change or files with the motion
   - Your animation library or stack (optional)
@@ -29,8 +29,34 @@ you_get:
   - Notes on speed, origin and interruption
   - Reduced-motion gaps flagged
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Add the change. Paste the git diff, a PR link, or the paths of the changed files.
+  - Add the nearby CSS or component code. Your AI needs it to judge where motion starts and whether it can be interrupted.
+  - Say your animation library and target devices if you know them.
+  - Read the findings table first, then the verdict.
+  - If your AI can read your project files, point it at the folder. If not, paste the code.
+output_sample:
+  input:
+    - The code change with motion (a pasted diff, a PR link, or the changed file paths)
+    - The nearby CSS or component code, so your AI can judge origin and interruption
+    - Your animation library or stack (optional)
+    - Target devices (optional)
+  prerequisites:
+    - An AI that can read your project files, or enough pasted code to show the full animation
+  output:
+    - name: Findings table
+      contains: One row per issue with the current code, the suggested fix and a short reason.
+    - name: Feel-breaking regressions
+      contains: Slow easing, motion that appears from nowhere, and animation on keyboard or high-frequency actions.
+    - name: Missed simplifications
+      contains: Animations that should be removed or cut back.
+    - name: Performance
+      contains: Properties that are slow to animate and risks of dropped frames.
+    - name: Interruptibility and timing
+      contains: Places where motion should restart from its current state, and enter and exit timing that should differ.
+    - name: Origin, physicality and cohesion
+      contains: Wrong starting points, mismatched feel and jarring crossfades.
+    - name: Accessibility
+      contains: Missing reduced-motion handling and hover effects that are not limited to mouse devices.
+    - name: Verdict
+      contains: A final Block or Approve decision.

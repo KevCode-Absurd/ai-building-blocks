@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks a set list of known trouble spots.
 new_slug: nda-quick-checker
 name: NDA quick checker
-summary: Give it an NDA. Get a green, yellow or red rating and the odd clauses.
-  Have a lawyer check yellow or red.
+summary: Check an NDA before you sign. Get a green, yellow or red rating, the odd clauses and a next step. A screening aid, not legal advice.
 job: check-contracts
 headline: NDA quick checker
-subhead: Give it an NDA. Get a green, yellow or red rating and the odd clauses.
-  Have a lawyer check yellow or red. Bring the NDA as a file, link or pasted
-  text. Use the result to plan your next step.
+subhead: Give it an NDA. Get a green, yellow or red rating and the odd clauses. Have a lawyer check yellow or red. Bring the NDA as a file, link or pasted text. Use the result to plan your next step.
 explain: |
   A traffic-light rating for an NDA someone else sent you, so you know in minutes whether you can sign, need a second look, or must send it to a lawyer.
 
@@ -18,6 +15,10 @@ when:
   - Your team gets many NDAs and wants to sort the simple ones.
   - You want to spot odd clauses before sending it to counsel.
   - You are not sure if the term length is normal.
+not_for:
+  - "The NDA is part of a larger contract: send the whole contract to a lawyer."
+  - "You need a signed legal opinion: ask a lawyer, because this tool only screens."
+  - "You need the NDA redrafted or negotiated: ask a lawyer to mark it up."
 you_give:
   - The NDA as a file, link or pasted text
   - Your own NDA rules (optional)
@@ -28,7 +29,27 @@ you_get:
   - Gaps against the standard checklist
   - A suggested next step
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Paste the NDA text, or upload the file. A link only works if your AI can open it.
+  - Add your own NDA rules and say which side you are on (optional). Without rules, it uses common market defaults and tells you so.
+  - Read the rating first, then the issues list.
+  - Green means standard terms. For yellow or red, send the NDA and the report to a lawyer.
+  - This is an imported Anthropic skill under the Apache-2.0 licence, and its original name is triage-nda. It is a screening aid and not legal advice.
+output_sample:
+  input:
+    - The NDA as a file, link or pasted text
+    - Your own NDA rules (optional)
+    - Which side you are on (optional)
+  output:
+    - name: Classification
+      contains: A green, yellow or red rating that says if you can sign, need counsel, or need a full legal review.
+    - name: Summary details
+      contains: The parties, NDA type, term, governing law, and whether your rules or standard defaults were used.
+    - name: Screening Results
+      contains: A table that marks each check as pass, flag or fail, with a short note.
+    - name: Issues Found
+      contains: Each problem clause marked yellow or red, with why it matters and a suggested fix.
+    - name: Recommendation
+      contains: A plain call on whether to sign, send to counsel, or push back.
+    - name: Next Steps
+      contains: What to do now, including who should review the NDA.

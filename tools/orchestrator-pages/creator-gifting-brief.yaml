@@ -1,6 +1,6 @@
 new_slug: creator-gifting-brief
 name: Send creators a gift and a brief to film from
-summary: Give it your brand file. Get a creator gifting plan, a phone-video script, a filming brief and an edit plan.
+summary: "Plan creator gifting: pick creators by fit, write the gift card, script a phone video, brief the shoot and plan the edit. Give it your brand file."
 job: grow-social
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want creators to post about your product but have no process.
   - Past creator posts missed the point of your product.
   - You want footage you can also use in paid ads, with the right permissions.
+not_for:
+  - "You have not checked creators against their real posts: look at their last posts yourself first, then come back to score them."
+  - "You only want paid ads and no gifting: use the Competitor-inspired video script writer or write the ad script on its own."
+  - "You already have footage and only need captions: use the Video caption maker in your brand font."
 you_give:
   - Your brand file
   - Who you want to reach (optional)
@@ -30,6 +34,30 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. It works step by step and saves each result.
+output_sample:
+  input:
+    - Your brand file, or your brand facts, products, offer and voice
+    - Customer reviews, copied as written
+    - "Your product facts: price, variants, how it is used"
+    - Who you want to reach (optional)
+    - The creator's footage, once it comes back
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - The handoff pack for this workflow
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+  output:
+    - name: Gifting plan
+      contains: A creator shortlist scored on fit, a short card to go with the gift, and the disclosure wording.
+    - name: Phone-video script
+      contains: "A short script a creator can film on a phone: who is speaking and five beats to say."
+    - name: Filming brief
+      contains: Deliverables, the shoot in order, must-haves split from maybes, and how to name the files.
+    - name: Footage check
+      contains: Notes on the footage the creator sends back, matched against the approved script.
+    - name: Edit plan
+      contains: Shots sorted by job, the opening frame, captions, the close and the export sizes.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plans the gifting
     text: Uses the gifting planner to score creators on four fit signals and write the card, including the disclosure wording.

@@ -1,6 +1,6 @@
 slug: launch-talk-writer
 name: "Launch talk writer"
-summary: "Describe your product and who it is for. Get a short launch talk built on one story."
+summary: "Turn a product launch into a two-minute talk. Give your product, audience and venue. Get a timed script with one story, a demo and a closing belief."
 category: general
 type: skill
 role: make
@@ -10,7 +10,7 @@ inputs:
   - {type: brief, required: true}
   - {type: product_data, required: false}
 outputs:
-  - {type: script}
+  - {type: copy_draft}
 origin: rebuilt
 version: 1.0.0
 minds: [steve-jobs]
@@ -18,3 +18,5 @@ credits:
   - {title: "Macworld keynote, 9 January 2007", by: "Steve Jobs", used: "Naming the problem in human terms, listing the pieces and then revealing they are one thing"}
   - {title: "Speech to Apple employees, January 2007", by: "Steve Jobs", used: "Saying what you believe in a line a stranger can repeat"}
   - {title: "Stanford commencement address, 2005", by: "Steve Jobs", url: "https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says", used: "One real story with one lesson, and an ending on a belief"}
+next: [read-aloud-speech-shaper, pitch-deck-checker-10-20-30]
+needs_mode: manual

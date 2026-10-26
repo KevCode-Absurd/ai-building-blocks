@@ -11,6 +11,10 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: plan
+    required: false
+  - type: feedback_notes
+    required: false
 outputs:
   - type: plan
 uses: []

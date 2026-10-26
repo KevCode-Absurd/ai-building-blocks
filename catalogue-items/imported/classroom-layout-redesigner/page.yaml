@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It reworks a space around independence.
 new_slug: classroom-layout-redesigner
 name: Classroom layout redesigner
-summary: Describe your room. Get a layout and materials plan that helps learners
-  work on their own with calm moves between tasks.
+summary: Plan a classroom layout that helps students work on their own. Describe your room and get a clear change list, ordered by cost and effort.
 job: teach-and-train
 headline: Classroom layout redesigner
-subhead: A room plan that lets students find materials, work on their own and
-  move between tasks calmly. You describe your room and what goes wrong, and you
-  get a change list in order of cost and effort.
+subhead: A room plan that lets students find materials, work on their own and move between tasks calmly. You describe your room and what goes wrong, and you get a change list in order of cost and effort.
 explain: |
   A room plan that lets students find materials, work on their own and move between tasks calmly. You describe your room and what goes wrong, and you get a change list in order of cost and effort.
 
   It works on ideas from Montessori prepared spaces. It looks at where things are stored, whether students can reach what they need without asking, and where traffic jams happen. It plans zones for quiet work, group work and gathering. It suggests low shelves, labelled trays, clear paths and a tidy routine. You can set a budget from zero upward, say what is fixed, and how long you have. It also offers a version that suits a conventional school or a home learning space.
 when:
-  - Students keep asking where things are.
-  - Transitions between tasks are noisy and slow.
-  - You have a tiny budget and need free changes first.
-  - You want to move toward more independent work.
+  - Students keep asking you where things are.
+  - Moving between tasks is noisy and slow, with queues for materials.
+  - The walls and shelves feel crowded and some students struggle to focus.
+  - You have a tiny budget and want free changes first.
+not_for:
+  - "You only want to decorate a finished room: ask a colleague or a design friend for display ideas instead."
+  - "Your room has a safety or building problem, like broken fixtures or fire exits: ask your school's facilities team or request a site survey."
+  - "You need a lesson plan or a daily timetable: write that yourself or with a lesson planning prompt, as this plan covers the room only."
 you_give:
   - A description of your room
   - What you want to improve
@@ -25,12 +26,33 @@ you_give:
   - Fixed features of the space (optional)
   - Age group (optional)
 you_get:
-  - A zoned layout plan
-  - Storage and material access ideas
-  - Ways to calm transitions
-  - Changes ordered by cost and time
+  - An audit of what in your room blocks independent work.
+  - A zoned layout plan for quiet work, group work and gathering.
+  - Ideas for storage and easy access to materials.
+  - Changes listed in order of cost and effort.
+  - A simple routine to keep the room in good shape.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - "Describe your room: the layout, where materials are kept, and what goes wrong. Say what you want to improve."
+  - Add your budget, fixed features and age group if you can. These make the plan fit your room.
+  - Read the Implementation Sequence first. Do the free changes at the top before you buy anything.
+  - Try one zero-cost change for a week. Check if students need to ask for materials less often, then do the next change.
+  - Ask for a plan that suits your setting if you are in a regular school or a home space, not a Montessori school.
+output_sample:
+  input:
+    - A description of your room and how it is set up now
+    - What you want to improve, like calmer transitions or easier access to materials
+    - Your age group (optional)
+    - Your budget (optional)
+    - Fixed parts of the space, like windows or built-in furniture (optional)
+  output:
+    - name: Environment Audit
+      contains: What works and what blocks independence in your room now, such as high shelves, locked supplies and crowded walls.
+    - name: Redesign Plan
+      contains: Zones for quiet work, group work and gathering, plus storage, material access and clear paths.
+    - name: Implementation Sequence
+      contains: Changes in order of cost and effort, starting with free ones, fitted to your budget and time.
+    - name: Maintenance Protocol
+      contains: Simple routines to keep the room tidy and working once students use it on their own.
+    - name: Before and After
+      contains: A short side-by-side of how the room works now and how it should work after the changes.

@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It must explain causes from the underlying activity.
 new_slug: variance-commentary
 name: Month-end variance commentary writer
-summary: Give it this period's and last period's numbers. Get a written reason
-  for every line that moved past your limit.
+summary: Write month-end variance commentary for every line that moved past your limit. Give it this period, last period and budget. You get a reason for each.
 job: track-numbers
 headline: Month-end variance commentary writer
-subhead: A written reason for every line in your month-end numbers that moved
-  more than it should. You supply this period, last period and budget. The skill
-  flags a line when its change passes your materiality rule, which defaults to 5
-  percent or a fixed floor, whichever is larger.
+subhead: A written reason for every line in your month-end numbers that moved more than it should. You supply this period, last period and budget. The skill flags a line when its change passes your materiality rule, which defaults to 5 percent or a fixed floor, whichever is larger.
 explain: |
   A written reason for every line in your month-end numbers that moved more than it should. 
   You supply this period, last period and budget. The skill flags a line when its change passes your materiality rule, which defaults to 5 percent or a fixed floor, whichever is larger. Revenue, headcount cost and cash are always checked. For each flagged line it shows the three values, the change against prior and against budget, and a one sentence driver drawn from the activity behind the number, like a vendor, a volume change or a hire. If the cause is not in the data, it writes driver unclear and flags it for the controller instead of guessing.
@@ -18,6 +14,10 @@ when:
   - Your CFO asks why costs jumped and you only have the totals.
   - You need budget variance notes in the board package.
   - You want a consistent threshold for what needs a comment.
+not_for:
+  - "You need statutory or tax reporting: use your accountant or your full close review instead."
+  - "You want notes on lines below your limit: ask your controller first, or use a full close review."
+  - "You have no data on what drove a change: use your controller or the person who owns that line."
 you_give:
   - Current period actuals
   - Prior period actuals
@@ -29,7 +29,25 @@ you_get:
   - A one sentence driver for each line
   - A short summary of the biggest movers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Paste three columns with line names: this period, last period and budget. A spreadsheet pasted as text works."
+  - Add your materiality limit. If you skip it, the AI uses 5 percent or a fixed floor, whichever is larger.
+  - Add any detail behind the lines, like vendor lists, headcount changes or volumes. No system access is needed, but without detail many drivers will be marked unclear.
+  - Read the table. Send every driver unclear line to your controller before the board package goes out.
+output_sample:
+  input:
+    - This period's actuals by line
+    - Last period's actuals for the same lines
+    - Budget for the same lines
+    - Your materiality limit (optional)
+    - Detail behind each line, like vendor lists or headcount changes (optional)
+  prerequisites:
+    - Line names on every row, so the AI can match them
+    - Detail from your accounting system, or the AI will mark drivers as unclear
+  output:
+    - name: Commentary table
+      contains: One row per flagged line with the three values, the change against prior and budget, and a one sentence driver.
+    - name: Driver unclear flags
+      contains: Lines where the cause is not in your data, marked for the controller instead of guessed.
+    - name: Short narrative
+      contains: Three to five sentences on the biggest movers of the period.

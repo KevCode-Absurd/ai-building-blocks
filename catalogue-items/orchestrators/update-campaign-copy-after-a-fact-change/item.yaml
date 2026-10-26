@@ -32,19 +32,19 @@ uses:
   - pre-launch-ad-checker
 steps:
   - uses: campaign-change-impact-mapper
-    note: A scoped impact map with affected fields, dependencies, unchanged locks and unresolved assets.
+    note: A scoped impact map with affected fields, dependencies, unchanged locks and unresolved assets. Hands step 2 the claims, terms and assets to re-check.
   - uses: marketing-evidence-expiry-reviewer
-    note: A per-claim current, review-needed or withdrawn decision with source and next action.
+    note: A per-claim current, review-needed or withdrawn decision with source and next action. Hands step 3 the evidence decisions.
   - uses: claim-and-proof-matcher
-    note: A claim decision register and exact allowed wording/terms for each affected surface.
+    note: A claim decision register and exact allowed wording/terms for each affected surface. Hands step 4 the approved wording, and any claim to remove.
   - uses: theme-based-ad-copy-set-writer
-    note: Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged.
+    note: Patches the ad copy from your baseline ads and step 3's allowed wording. Hands step 5 the updated ads, with the affected-field diff; unaffected ads stay unchanged.
   - uses: campaign-email-writer
-    note: Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged.
+    note: Patches the email from your baseline email, step 3's allowed wording and step 4's updated ads, so the facts agree. Hands step 6 the updated email.
   - uses: ad-matched-landing-page-writer
-    note: Versioned proposed copy and an affected-field diff; unaffected surfaces remain explicitly unchanged.
+    note: Patches the landing page from your baseline page, step 3's allowed wording and the updated ad and email copy. Hands step 7 the updated page.
   - uses: pre-launch-ad-checker
-    note: A text review, unresolved production/destination checks and the exact-version handoff.
+    note: Reviews the updated ads, email and page against the approved change and step 3's claim register. This is the final step, and it hands back the text review, the checks not yet run and the exact-version handoff.
 execution: coordinator
 package_files: all
 needs_mode: manual

@@ -2,35 +2,99 @@ thinking: low
 thinking_why: It follows a short set method.
 new_slug: meeting-agenda-and-cost-planner
 name: Meeting agenda and cost planner
-summary: Give it a meeting idea. Get a call on whether to hold it, its cost in
-  dollars and a timed agenda.
+summary: Find out if a meeting is worth holding. You get its cost in dollars, a meet or send-a-memo call, and a timed agenda if it passes.
 job: organise-work
 headline: Meeting agenda and cost planner
-subhead: A call on whether a meeting should happen at all, with the cost in
-  dollars, and a timed agenda only if it passes. Most meetings should be an
-  email, and this makes that easy to prove.
+subhead: "Give it the people, the length, the pay rate and the decision the meeting must reach. It prices the meeting, says meet or send a memo, and builds a timed agenda only if it passes. After the meeting, it turns your notes into a list of who does what by when."
 explain: |
-  A call on whether a meeting should happen at all, with the cost in dollars, and a timed agenda only if it passes. Most meetings should be an email, and this makes that easy to prove.
+  Most meetings should be an email. This planner makes that easy to show. It works out what a meeting costs in dollars: people times minutes times pay rate, with an optional charge for the time lost refocusing afterwards.
 
-  Three small Python scripts do the work. The first multiplies people, minutes and pay rate, adds the cost of lost focus, and checks that there is a decision, an agenda and an owner. No decision means send a memo. The second builds a decision-first agenda, refuses topics with no outcome, and keeps a five-minute closing slot. The third turns raw notes into a checklist by owner and flags any action with no owner or date.
+  Then it applies three checks. Is there a decision to make? Is there an agenda? Is there an owner? No decision means send a memo. A decision with no agenda or owner means not ready. All three means meet, and the planner builds a decision-first agenda with a five-minute close.
+
+  Afterwards, paste your raw notes. You get a checklist by owner, and every action with no owner or no date is flagged. A send-a-memo result is a win, not a failure.
 when:
   - You are asked to join a recurring meeting and doubt it is worth the time.
   - You need an agenda that fits in 45 minutes and ends with decisions.
   - You want to show your boss what a weekly sync really costs.
   - You have messy notes and need a list of who does what by when.
+not_for:
+  - "You need to find a time across time zones: use the Meeting scheduler."
+  - "You want a pre-read from your Notion pages: use the Meeting pre-read writer."
+  - "You want full minutes from a recording or transcript: use the Meeting minutes writer or the Meeting notes maker."
+  - "You want to cut many meetings at once: use the Process and meeting cull planner."
+  - "An urgent incident needs people on a call now: hold the call, then use this for the follow-up."
 you_give:
-  - Attendee count, length and average pay rate
+  - How many people, how long, and the average hourly pay rate
   - The decision the meeting should reach
-  - Topics with desired outcomes and owners
-  - Raw meeting notes for the action list (optional)
+  - Topics, each with the outcome you want and an owner
+  - Your raw meeting notes for the action list (optional)
 you_get:
-  - A meet or send-a-memo verdict
-  - The meeting cost in dollars
-  - A timed, decision-first agenda
-  - An action checklist with owners and due dates
+  - A one-line verdict, MEET, ASYNC or NOT-READY, with the total cost in dollars
+  - The cost per minute of the meeting
+  - A timed, decision-first agenda with a five-minute closing slot
+  - An action checklist by owner, with missing owners and dates flagged
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini. No code is needed. If your AI can run Python, it uses the three scripts. If not, it works the sums by hand.
+  - Paste the skill text. Then give the people, the length, the pay rate, the decision and the topics.
+  - Read the verdict line first. If it says ASYNC, write the memo. If NOT-READY, fix the missing agenda or owner.
+  - If it says MEET, check each topic has an outcome. A topic with no outcome is refused, so add one or cut it.
+  - After the meeting, paste your notes. Give every ORPHAN action an owner and every NO-DUE action a date before you share the list.
+  - Send the invite, the memo and the actions yourself. Nothing is sent or booked for you.
+how_it_works:
+  - title: Price the meeting
+    text: Multiplies people, minutes and pay rate, with an optional charge for refocus time.
+  - title: Run the gate
+    text: Checks for a decision, an agenda and an owner, and gives one verdict.
+  - title: Build the agenda
+    text: Puts decision topics first, refuses topics with no outcome and keeps a five-minute close.
+  - title: Fit the time
+    text: If topics do not fit the length, it names how many minutes over and what to trim.
+  - title: Extract the actions
+    text: Reads your notes and groups every action by owner, flagging gaps.
+output_shape: |
+  VERDICT: <MEET | ASYNC | NOT-READY> (exit <N>) - total $<cost>
+  Direct cost: $<people x minutes x rate> | Refocus cost: $<optional>
+  Cost per minute: $<amount>
+
+  AGENDA (<length> min)
+  Pre-read: <link or note>
+  <minutes> min | <topic> | Outcome: <decision or result> | Owner: <name>
+  5 min | Actions recap
+
+  ACTIONS BY OWNER
+  <owner>: [ ] <action> (due <date>)
+  ORPHAN: <actions with no owner>
+  NO-DUE: <actions with no date>
+output_sample:
+  input:
+    - How many people, how long and the average hourly pay rate
+    - The decision the meeting should reach
+    - Topics with outcomes and owners
+    - Raw meeting notes after the meeting (optional)
+  prerequisites:
+    - An AI that can run Python for the scripts (optional, it can also work by hand)
+  output:
+    - name: Verdict line
+      contains: MEET, ASYNC or NOT-READY with the exit number and the total cost.
+    - name: Cost breakdown
+      contains: Direct cost, optional refocus cost, total and cost per minute.
+    - name: Timed agenda
+      contains: Decision topics first, each with an outcome, owner and minutes, ending with a recap slot.
+    - name: Action checklist
+      contains: Actions grouped by owner with due dates, plus ORPHAN and NO-DUE flags and counts.
+works_best_with:
+  tools:
+    - name: Claude Code or an AI that can run Python
+      why: It runs the three scripts, so the sums and the verdict are exact.
+    - name: Any chat AI
+      why: It works the cost out by hand and still prints the verdict line.
+  inputs:
+    - A real pay rate range, not a guess
+    - Names of the people who will attend
+terms:
+  - term: ASYNC
+    meaning: Handle it without a meeting, for example by memo or email thread.
+  - term: Refocus cost
+    meaning: The time people lose getting back into their work after a meeting.
+  - term: ORPHAN
+    meaning: An action with no owner.

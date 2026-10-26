@@ -1,6 +1,6 @@
 new_slug: store-blog-plan-builder
 name: "Store blog plan builder"
-summary: "Give it your products and rivals. Get 10 to 30 posts that lift your collections, in order."
+summary: "Plan a store blog that lifts your collections. Give it your products and rivals. You get 10 to 30 posts for one cluster, in the order to write them."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It weighs several sources and checks live results, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You publish blog posts but your collections do not rank or sell more.
   - You are about to start a blog and want to know what to write first.
   - You have a rival whose name shoppers search, and want posts that meet them there.
+not_for:
+  - "Your store has no live collection or product pages yet: build those first, because every post needs a page to link to."
+  - "You want rival comparison pages, not blog posts: use the Comparison page set planner."
+  - "You want one list post written now: use the Best-of page writer."
 
 you_give:
   - Your products, collections and main rivals
@@ -34,6 +38,31 @@ how_to_use:
   - Paste your existing posts and the sales they led to, if you track that.
   - Update the posts it marks for updating first, then write the new ones in order.
   - Check each post's organic revenue after a few months, not its traffic.
+output_sample:
+  input:
+    - Your products, collections and main rivals
+    - Search terms with rival names and questions (optional)
+    - Your existing blog posts with traffic and sales (optional)
+    - Your own stories, results and numbers (optional)
+    - The hours a week you can write
+  prerequisites:
+    - Live collection or product pages for the posts to link to
+    - An AI that can read live search results (helps the results check)
+  output:
+    - name: CLUSTER
+      contains: The topic of the plan and the collection or product it feeds.
+    - name: POSTS, IN ORDER
+      contains: Each post with its format, target search, the page it feeds, a results check and write or update.
+    - name: PER-POST PLAN
+      contains: Title, H1, URL, early link to the money page, related post links, call to action and top-result benchmark.
+    - name: SKIPPED
+      contains: Ideas left out, each with the reason.
+    - name: HUMAN-LAYER CHECKLIST
+      contains: Your results, customer story, numbers, voice file and the part you write by hand.
+    - name: MEASURE
+      contains: Organic revenue from each post's landing page, as the way to judge it.
+    - name: CHECKS MISSED
+      contains: Any check the AI could not do, or none, plus anything missing.
 
 how_it_works:
   - title: Checks the base

@@ -1,6 +1,6 @@
 new_slug: closed-setting-planner
 name: "Closed setting planner"
-summary: "Tell it who is stuck and where. Get a sealed world with every exit shut for a reason."
+summary: "Plan a closed setting for your story. Give it who is stuck and where. You get every exit shut for a reason a reader will believe."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It builds a plan from fixed steps, but it has to test each exit for a reason a reader will accept."
@@ -17,6 +17,10 @@ when:
   - Your story keeps one person in one place, and early readers say "why doesn't she just leave?"
   - You have the idea but not the room, and the setting feels like a stage set.
   - You want the dread to come from small things, not from big events.
+not_for:
+  - Your character moves freely between places. Plan the route and scenes by hand, or use a plain outline.
+  - The threat is a crowd or a disaster, not one person or force holding them. Use a simple timeline of events instead.
+  - You need the trapped person's fair escape tested. Use the Fair escape checker after this plan.
 
 you_give:
   - Who is stuck, who or what holds them, and the place, in a few sentences
@@ -32,6 +36,26 @@ how_to_use:
   - Describe who is trapped, who holds them and where, even if the idea is rough.
   - Answer its questions about injuries, weather, phones and neighbours.
   - Take the list of exits to your outline. Next, use "Volatile antagonist mood mapper".
+output_sample:
+  input:
+    - Who is stuck, who or what holds them, and where
+    - The period of your story (optional)
+    - Fixed rules of your story (optional)
+  output:
+    - name: The place
+      contains: One short paragraph on the building, its rooms and the distance and time to the nearest help.
+    - name: Within reach
+      contains: The objects, tools, routines and people the trapped person can touch, see or hear, one per line.
+    - name: Exits
+      contains: Every way out, with the reason each is shut and what would open it.
+    - name: The watch list
+      contains: Five or six ordinary objects or sounds, with what each can mean later.
+    - name: What only they know
+      contains: What the trapped person knows that the other does not, and the reverse.
+    - name: Missing
+      contains: Facts you still need to give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: Fixes the place

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows API rules, but each query depends on your data.
 new_slug: shopify-data-connector
 name: Shopify data connector
-summary: Say what store data to read or change. Get working Shopify GraphQL
-  queries, with paging and rate limits handled.
+summary: Get working Shopify GraphQL queries for reading or changing store data, with paging and rate limits handled. Built for Shopify API work.
 job: build-software
 headline: Shopify data connector
-subhead: Working Shopify GraphQL queries and updates for the data you want to
-  read or change, with paging and rate limits already handled. You skip the
-  trial and error with the API.
+subhead: Working Shopify GraphQL queries and updates for the data you want to read or change, with paging and rate limits already handled. You skip the trial and error with the API.
 explain: |
   Working Shopify GraphQL queries and updates for the data you want to read or change, with paging and rate limits already handled. You skip the trial and error with the API.
 
@@ -18,6 +15,10 @@ when:
   - You want to update many products in bulk.
   - Your script keeps hitting rate limits and failing.
   - You need to read custom data stored in metafields.
+not_for:
+  - "You want to change your theme or storefront design: edit the theme in Shopify, or ask a Shopify developer."
+  - "You want to build a full Shopify app: use Shopify's own app tools and docs, since this covers data calls only."
+  - "You have no API credentials and don't write code: use Shopify's built-in export for products, orders or customers."
 you_give:
   - What data to read or change
   - Admin or Storefront access credentials
@@ -30,8 +31,33 @@ you_get:
   - Authentication setup
   - Webhook setup where needed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and reach your Shopify store.
+  - Open your AI and paste in this skill's instructions. Use a chat that can write code.
+  - Say what store data you want to read or change, for example all orders from last month.
+  - Add your store address. Say if you need Admin or Storefront access, and name your language if you have one.
+  - Never paste secret keys into the chat. Use placeholders and add the real keys in your own code.
+  - Run the code on your own computer or server. Check a small test first, such as 10 items, before a full run.
+output_sample:
+  input:
+    - What store data you want to read or change
+    - Your store address
+    - Admin or Storefront access details
+    - The language or framework you use (optional)
+  prerequisites:
+    - An AI that can write code
+    - Shopify API credentials for your store
+    - Some comfort with code, or a developer to run it
+  output:
+    - name: Authentication setup
+      contains: Code that signs in to the Admin API, or the Storefront API with its public token.
+    - name: Query or mutation
+      contains: The GraphQL request that reads or changes the data you asked for.
+    - name: Paging loop
+      contains: Code that fetches long lists page by page using cursors.
+    - name: Rate limit handling
+      contains: Code that reads Shopify's cost limits and waits before it retries.
+    - name: Metafields
+      contains: Queries and updates for custom data stored on products, orders and more.
+    - name: Webhooks
+      contains: Subscription code for store events, added only when you need them.
+    - name: Bulk operations
+      contains: A bulk query and a check for when it finishes, for very large pulls.

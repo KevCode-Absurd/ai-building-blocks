@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must try to prove itself wrong before it answers.
 new_slug: claim-stress-tester
 name: Claim stress tester
-summary: Give it a hard question. Get a clear guess, a fair attempt to break it,
-  the evidence and a tested answer.
+summary: Test a hard question before you act on it. Get a clear guess, a fair attempt to break it, the evidence and a final answer with doubts marked.
 job: think-and-decide
 headline: Claim stress tester
-subhead: Give it a hard question. Get a clear guess, a fair attempt to break it,
-  the evidence and a tested answer. Bring the question or problem. Use the
-  result to plan your next step.
+subhead: Give your AI a hard question where a wrong answer costs you. It picks a guess, tries hard to break it, and checks the evidence. You get an answer that was tested, with the doubts shown.
 explain: |
   For a tough question where a wrong answer costs you, this makes the AI commit to a guess, then try hard to prove itself wrong before it gives a final answer. You see the guess, the test, the evidence and the answer that survived.
 
@@ -18,6 +15,10 @@ when:
   - A system is failing and you need to know the real cause.
   - You suspect an AI answer sounds sure but has no proof.
   - You want the uncertain parts marked, not hidden.
+not_for:
+  - "You need a quick fact or a rough estimate: just ask your AI directly, no protocol needed."
+  - "A live outage is happening now: act first with a safe rollback, then test the cause after things are stable."
+  - "You want a finished decision memo or test plan: use this result as the input, then write that document in a normal chat."
 you_give:
   - The question or problem
   - What you already know or tried
@@ -29,7 +30,28 @@ you_get:
   - Evidence for and against
   - A tested answer with uncertainty marked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
+  - Type your question. Add what you already know or tried, and what a wrong answer would cost.
+  - Paste any logs or data if you have them (optional).
+  - Read the mode your AI picks. If it is a simple or urgent question, expect a short answer, not five stages.
+  - Check the strongest attack and the list of what remains uncertain before you act on the answer.
+  - Take the result into a decision memo or a test plan, and run the checks it lists.
+output_sample:
+  input:
+    - Your question or problem
+    - What you already know or have tried
+    - The cost of being wrong (optional)
+    - Data or logs (optional)
+  output:
+    - name: Mode choice
+      contains: "Which route the question takes: act fast, short answer, one round of questions, or the full five stages."
+    - name: Hypothesis
+      contains: A first guess written so that something could prove it wrong.
+    - name: Strongest attack
+      contains: The best attempt to break the guess, with what would show it is false.
+    - name: Evidence
+      contains: Facts for and against the guess, checked against what you gave it.
+    - name: Conclusion
+      contains: The answer that survived, with a confidence level.
+    - name: What remains uncertain
+      contains: The parts the AI could not confirm and what to check next.

@@ -1,0 +1,152 @@
+name: Accounts Payable agent
+summary: Paste invoices, approved vendors and your approval rule. Get each invoice checked for duplicates and mismatches, plus a payment proposal to approve.
+headline: Accounts Payable agent
+subhead: Paste the invoices you owe, your approved vendor list, your past payments and your approval rule. It checks each invoice, flags duplicates, wrong amounts and missing approvals, and writes a payment proposal and a period summary. A person approves and pays.
+job: money-and-investing
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Paying a bill twice, or paying the wrong account, is easy to do and hard to
+  undo. This accounts payable agent works like a careful clerk. It checks each
+  invoice against your approved vendor list, your past payments and the order or
+  contract it belongs to. Then it sorts invoices into three groups, which are
+  fine to propose, hold, and send up for approval.
+
+
+  You get a payment proposal for the invoices that pass, with the payee, amount,
+  reference and approver. You also get a list of the ones that do not, with the
+  reason, and a short summary of what was paid, pending and unmatched for the
+  period. A chat AI cannot move money, and this agent will not try. Your
+  accounting or bank software and your approver do that.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. The original
+  describes an agent that sends payments through tools. This version only
+  prepares the proposal. Its targets, such as zero duplicate payments, are the
+  author's goals, not results.
+when:
+  - You pay a stack of supplier or contractor invoices each week and want them checked before you pay.
+  - An invoice looks a little different from the last one and you want to know if it is a duplicate or a mismatch.
+  - You need a clean list of what is due, who must approve it and what is on hold.
+  - Month end is close and you want a paid, pending and unmatched summary to give your accountant.
+not_for:
+  - You want it to approve or send real payments. It will not. Use your accounting or bank software, with a person approving.
+  - You are chasing invoices that customers owe you. Use the Weekly invoice and cash chaser.
+  - You only want to find duplicates, wrong sums and missing receipts in a supplier batch. Use the Recurring invoice exception review assistant.
+  - You need a full match of your ledger against a bank statement. Use the Account reconciler.
+  - You are building payment software. Use the Payments & Billing Engineer agent.
+you_give:
+  - The invoices to check, with vendor, invoice number, date, amount, currency and any order or contract reference.
+  - Your approved vendor list, with names only. Do not paste full bank account numbers.
+  - Your past payments for the period, so it can spot duplicates.
+  - Your approval rule, such as the amount above which a person must sign off, and who that person is.
+  - The orders or contracts the invoices should match, and ledger or bank lines to reconcile against (optional).
+you_get:
+  - An invoice check table that shows each invoice as fine, on hold or needing approval, with the reason.
+  - A payment proposal for the invoices that pass, with payee, amount, currency, reference and approver.
+  - A list of holds and escalations, such as duplicates, vendors not on your list and amounts that do not match.
+  - A reconciliation gap list and a paid, pending and unmatched summary, with each currency kept separate.
+  - Checks still needed before anyone pays.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your invoices, approved vendors, past payments and approval rule. Mask any bank account numbers to the last four digits.
+  - Answer the questions it asks once. Anything missing is marked MISSING. It will not assume a vendor is approved.
+  - Read the holds first. Fix or explain each one, such as a duplicate or an amount that does not match.
+  - Check new or changed bank details with the vendor by a contact method you already trust. Do this before any payment.
+  - Pay through your own accounting or bank software, with your approver signing off. Record the payment there.
+how_it_works:
+  - title: Read the facts
+    text: It lists the invoices, vendors, history and approval rule it was given, and marks what is missing.
+  - title: Check each invoice
+    text: It checks vendor, duplicates, amount against the order or contract, and the approval rule.
+  - title: Sort the invoices
+    text: Each invoice goes to fine to propose, hold, or needs approval, with a plain reason.
+  - title: Write the proposal
+    text: For passing invoices it lists payee, amount, currency, reference and approver, and suggests a payment method to confirm with your bank.
+  - title: Find the gaps
+    text: It compares what was invoiced, paid and posted, and lists differences, with currencies kept apart.
+  - title: Summarise the period
+    text: It lists paid, pending and unmatched items and what must be checked before anyone pays.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    period <dates> | invoices <count> | approval rule <text> | ASSUMED: <list> | MISSING: <list>
+
+  INVOICE CHECK
+    <vendor> | <invoice no.> | <amount and currency> | approved vendor <yes, no or unknown> | duplicate <yes, no or cannot tell> | matches order <yes, no or unknown> | status <fine, hold or needs approval> | reason <text>
+
+  PAYMENT PROPOSAL (for a person to approve)
+    <payee> | <amount and currency> | <invoice reference> | suggested method <to confirm with your bank> | approver <role> | check before paying <item>
+
+  HOLDS AND ESCALATIONS
+    <invoice> | <problem> | what is needed to clear it <text>
+
+  RECONCILIATION GAPS
+    <item> | invoiced <amount> | paid <amount> | posted <amount> | difference <amount>
+
+  PERIOD SUMMARY (each currency separate)
+    paid <list> | pending <list> | unmatched <list>
+
+  CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - The invoices to check, with vendor, number, date, amount and currency
+    - Your approved vendor list and past payments
+    - Your approval rule and who signs off
+    - Orders, contracts or ledger lines to match (optional)
+  prerequisites:
+    - An AI you can paste a table into, such as Claude, ChatGPT or Gemini
+    - Your accounting or bank software, to approve and make real payments
+  output:
+    - name: Invoice check
+      contains: Each invoice with vendor, duplicate and order checks, a status and the reason.
+    - name: Payment proposal
+      contains: The invoices that pass, with payee, amount, reference and approver, for a person to approve.
+    - name: Holds and escalations
+      contains: Invoices that cannot be paid yet, the problem and what clears it.
+    - name: Reconciliation gaps
+      contains: Differences between invoiced, paid and posted amounts.
+    - name: Period summary
+      contains: Paid, pending and unmatched items, with each currency kept separate.
+    - name: Checks still needed
+      contains: Facts it could not confirm and steps to take before anyone pays.
+works_best_with:
+  tools:
+    - name: A spreadsheet such as Google Sheets or Excel
+      why: Paste invoices and past payments as a table, so duplicate and amount checks are exact.
+    - name: Your accounting software, such as QuickBooks or Xero
+      why: Export your bills and payments as a file or table to paste in. The agent cannot connect to it in a plain chat.
+  inputs:
+    - A bank or card statement for the same period, with account numbers masked.
+    - Your purchase orders or signed contracts for the larger invoices.
+    - A short note on vendors whose details changed this period.
+terms:
+  - term: Duplicate payment
+    meaning: Paying the same invoice twice, often because it arrived twice or was changed slightly.
+  - term: Approval rule
+    meaning: Your limit above which a named person must sign off before payment.
+  - term: Reconciliation
+    meaning: Matching what you invoiced, what you paid and what your books show, and listing the differences.
+  - term: Purchase order
+    meaning: A document that says what you agreed to buy and at what price.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Approval rule
+    how: State your limit and who signs. Without it, every invoice is marked as needing approval.
+  - what: History
+    how: Paste past payments for the same vendors. Without them, duplicates cannot be ruled out.
+  - what: Order match
+    how: Add the order or contract for large invoices so amount checks use your agreed price.
+improve:
+  - Keep your approved vendor list and approval rule in a note, and paste them at the start of each run.
+  - Save each period summary, so the next run can compare against the last one.

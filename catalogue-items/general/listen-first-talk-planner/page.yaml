@@ -1,125 +1,164 @@
 new_slug: listen-first-talk-planner
 name: "Listen-first talk planner"
-summary: "Describe a hard conversation. Get a plan to listen until they feel heard, then state your side and agree a next step."
+summary: "Prepare a hard conversation. Get a plan to listen until they feel heard, say your side once and agree one next step with a date."
 job: lead-people
 thinking: medium
 thinking_why: "It must read tension in your account and avoid hidden rebuttals."
 
 headline: "Listen-first talk planner"
-subhead: "Describe a hard conversation and what you want from it. It plans a listening phase with no rebuttal, phrases that show you understood, a check that they feel heard, your own side stated once and one agreed next step."
+subhead: "Describe a hard conversation and what you want from it. It plans a listening phase with no rebuttal, phrases that show you understood and a check that they feel heard. Then it adds your own side, said once, and one agreed next step with a date."
 
 explain: |
-  Hard talks go wrong when each side prepares a reply instead of listening. The other person then spends the whole time trying to be heard, and nothing moves.
-  
-  This skill plans the talk in an order that works against that. It sets a calm place and a way to give them the floor. It lists the urges you will feel to defend yourself and a quiet response to each. It writes phrases that show you understood and a check that they feel heard. Only then does it plan your side, stated once, then two curious questions and a next step.
+  Hard talks go wrong when each side prepares a reply instead of listening. The other person spends the whole time trying to be heard, and nothing moves. If you have a difficult conversation coming with a colleague, a client or a relative, this is the order that works against that.
+
+  The skill follows Stephen Covey's rule to seek first to understand, and Brene Brown's advice to stay curious. It sets a calm place and a way to hand them the floor. It lists the urges you will feel to defend yourself, with a quiet response to each. It writes phrases that show you took it in, and a check that they feel heard. You do not move on until they say you got it right.
+
+  Only then does it plan your side, in three or four sentences, then two curious questions and a next step. It also checks the draft for contempt and for the pull to bond with others against the person. It does not predict what they will say. What it writes about their feelings is marked as a guess.
 
 when:
-  - "You must tell a colleague something they will not like."
-  - "A client or partner is upset and you want to resolve it face to face."
-  - "A family talk keeps ending in an argument."
+  - You must tell a colleague something they will not like.
+  - A client or partner is upset and you want to settle it face to face.
+  - A family talk keeps ending in an argument.
+  - You have already tried once, it went badly, and you want a better second go.
+
+not_for:
+  - "There is threat, abuse or any safety risk. Do not use a script for this. Get help from a qualified person."
+  - "You are too angry or hurt to listen yet: use the Anger pause and repair planner first, then come back."
+  - "You need to give someone feedback on their work or behaviour: use the feedback conversation planner or the hard feedback message writer."
+  - "You must say no to a request: use the hard no planner."
 
 you_give:
-  - "Who the person is and what the issue is"
+  - "Who the person is and what the issue is, with what has happened so far"
   - "What you want from the talk"
-  - "What you think they feel (optional)"
+  - "What you think they feel, as your own guess (optional)"
+  - "How long you will have, and where (optional)"
+  - "What you fear they will say (optional)"
 you_get:
-  - "A plan for the setup and the listening"
-  - "Phrases that show you understood"
-  - "Your side in three or four sentences"
-  - "One next step with a date"
+  - "A plan for the setting and for giving them the floor"
+  - "A list of the urges you will feel to defend yourself, each with a quiet response"
+  - "Five to eight phrases that show you understood, plus a check that they feel heard"
+  - "Your side in three or four sentences, and two curious questions"
+  - "One next step with a date and an owner"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Describe the person, the issue and what has happened so far."
-  - "Say what you want and what you fear."
-  - "Practise the listening phase with a friend, without answering back."
-  - "Do not go to the second half until they say you got it right."
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools.
+  - Describe the person, the issue and what has happened so far. Say what you want from the talk and what you fear they will say.
+  - Read the listening plan first. Practise it out loud with a friend, without answering back.
+  - Do not move to your side until they say you got it right. That is the sign in the plan.
+  - After the talk, check the next step is in both your diaries.
 
 how_it_works:
-  - title: "Name the person, issue and guess"
-    text: "Names the person, the issue and what you think they feel."
-  - title: "Choose the place and the floor"
-    text: "Chooses a calm place and a way to give them the floor."
-  - title: "Plan the listening"
-    text: "Plans listening without defending or rehearsing a reply."
-  - title: "Write your understanding phrases"
-    text: "Writes phrases that show you understood, and notes on face and posture."
-  - title: "Check they feel understood"
-    text: "Checks with them that you got it right before you speak."
-  - title: "State your side"
-    text: "States the disagreement and checks for a shared enemy."
-  - title: "Plan curious questions and a next step"
-    text: "Plans two questions and ends with one agreed next step."
-  - title: "Checks its own work"
-    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+  - title: Names the person, issue and guess
+    text: Writes who it is, the issue in one sentence and what you think they feel. The feeling is marked as a guess to test.
+  - title: Sets the place and the floor
+    text: Picks a calm, private place with no clock pressure and a way to hand them the floor.
+  - title: Plans the listening
+    text: Lists the urges you will feel to answer, each with a quiet response. No rebuttal and no rehearsing a reply.
+  - title: Writes understanding phrases
+    text: Five to eight phrases that restate what they said and name the feeling you heard, with notes on face and posture.
+  - title: Checks they feel heard
+    text: Writes the question that tests it and names the sign you wait for before you speak.
+  - title: States your side once
+    text: Three or four sentences. It also checks the draft for contempt and for bonding with others against them.
+  - title: Plans questions and a next step
+    text: Two curious questions about their experience, a hint of a third option and one agreed step with a date.
 
 output_shape: |
   THE TALK
   Who: <person> | Issue: <one sentence> | My guess at what they feel: <guess>
-  
+
   SETUP
   Place and time: <...> | How I give the floor: <...>
-  
+
   LISTENING PLAN
   Urge: <reply you will want to give> | Instead: <quiet response>
-  
+
   UNDERSTANDING PHRASES
   <5 to 8 phrases> | Face and posture: <notes>
-  
+
   CHECK
   <question> | Sign they feel heard: <sign>
-  
+
   MY SIDE
   <3 or 4 sentences>
-  
+
   QUESTIONS
   <2 about their experience>
-  
+
   NEXT STEP
   <action, date, who>
-  
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "Who the person is and what the issue is"
+    - "What has happened so far"
+    - "What you want from the talk"
+    - "What you think they feel (optional)"
+  output:
+    - name: "THE TALK"
+      contains: "The person, the issue in one sentence and your guess at what they feel, marked as a guess."
+    - name: "SETUP"
+      contains: "A calm place and time, and how you will hand them the floor."
+    - name: "LISTENING PLAN"
+      contains: "Each urge you will feel to answer back, paired with a quiet response."
+    - name: "UNDERSTANDING PHRASES"
+      contains: "Five to eight phrases that show you took it in, with notes on face and posture."
+    - name: "CHECK"
+      contains: "The question that tests whether they feel heard, and the sign to wait for."
+    - name: "MY SIDE"
+      contains: "Your view in three or four sentences, said once."
+    - name: "QUESTIONS and NEXT STEP"
+      contains: "Two curious questions, then one agreed action with a date and an owner."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Any fact you did not give, and any check it could not pass."
+
 tweaks:
-  - what: "How much time you have"
-    how: "A 20-minute talk needs a tighter plan than a long dinner."
-  - what: "The relationship"
-    how: "Say if it is a boss, a client or a relative. Phrases change with it."
-  - what: "What you fear they will say"
-    how: "Name it. The urge list uses it."
-  - what: "Whether it is the first talk"
-    how: "Say if earlier attempts failed and how."
+  - what: How much time you have
+    how: A 20-minute talk needs a tighter plan than a long dinner.
+  - what: The relationship
+    how: Say if it is a boss, a client or a relative. Phrases change with it.
+  - what: What you fear they will say
+    how: Name it. The urge list uses it.
+  - what: Whether it is the first talk
+    how: Say if earlier attempts failed and how.
 
 judge:
-  - "The listening part holds no rebuttal."
-  - "A clear sign for feeling heard is named."
-  - "Your side is stated once."
-  - "Contempt is absent from every line."
-  - "One next step has a date."
+  - The listening part holds no rebuttal.
+  - A clear sign for feeling heard is named.
+  - Your side is stated once.
+  - Contempt is absent from every line.
+  - One next step has a date.
 
 test:
-  - "Read the plan to a friend and ask if it sounds like a trap."
-  - "Role-play the listening part and count your interruptions."
-  - "After the real talk, check whether they said you had it right."
+  - Read the plan to a friend and ask if it sounds like a trap.
+  - Role-play the listening part and count your interruptions.
+  - After the real talk, check whether they said you had it right.
 
 improve:
-  - "Add your own phrases for showing understanding to step 4."
-  - "Add a list of topics you cannot discuss without help."
-  - "Keep notes on which phrase worked."
-  - "Pair it with \"Anger pause and repair planner\" if you are too angry to start."
+  - Add your own phrases for showing understanding to step 4.
+  - Add a list of topics you cannot discuss without help.
+  - Keep notes on which phrase worked.
+  - Pair it with "Anger pause and repair planner" if you are too angry to start.
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Planning and rewording are text work any strong chat AI does well with this skill."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Planning and rewording are text work. No files, web access or paid tools needed."}
+    - {name: "A friend to practise with", why: "Say the listening phase out loud once. Reading it silently hides how hard it is not to answer back."}
   inputs:
     - "Messages or emails from the person"
     - "What you have already said to them"
     - "What a good outcome looks like"
 
 terms:
-  - term: "Third option"
-    meaning: "A way forward that is better than either side's first plan."
+  - term: Third option
+    meaning: A way forward that is better than either side's first plan.
+  - term: Rebuttal
+    meaning: Answering back to prove the other person wrong, before they have finished.
+  - term: Shared enemy
+    meaning: A common target, such as another person, that two people bond over. It feels close but works against a fair talk.

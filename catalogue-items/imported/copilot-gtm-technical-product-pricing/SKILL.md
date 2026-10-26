@@ -9,6 +9,27 @@ metadata:
 
 # Technical Product Pricing
 
+## Working in a chat (added by AI Blocks)
+
+The frameworks below are the original author's and are unchanged. This section tells you how to run them in a chat.
+
+**What you need.** The five questions under "Initial Assessment" are the inputs. Ask for them once, in one message, and also ask what the customer would otherwise spend on the problem (the alternative cost). If an item is missing, write `MISSING: <item>`, continue with what you have, and do not invent a price, a cost or a customer result.
+
+**What you hand back**, in this order:
+1. The five inputs, restated in one line each.
+2. Value check for each customer group: alternative cost, your price, the ratio, and the plain reading. Show the sum. If the alternative cost was not given, say so and give the questions that would find it.
+3. Pricing model pick (seat, usage, outcome or base plus usage) with when it breaks for this product.
+4. Free-to-paid line: the limit, the trigger type (usage, team or enterprise feature) and the reason. Only if the product has a free tier.
+5. Enterprise call plan: the questions to ask, the value anchor and three options (good, better, best).
+6. Price signal check: does the price match the buyer the person wants?
+7. Verdict: raise, hold or restructure, with timing and how to tell existing customers.
+8. `MISSING:` list.
+
+**Rules.**
+- The figures in this skill ($15K to $45K, "lost zero customers", value ratio bands, on-prem 2 to 5x, support and compliance multiples, 5 to 10% yearly increases) are the author's experience. They are rules of thumb, not proof for this product. Label them that way.
+- Never say a price rise will keep every customer. Suggest a small test first.
+- This skill needs no code, files or paid tools.
+
 
 ## Initial Assessment
 

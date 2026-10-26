@@ -1,6 +1,6 @@
 new_slug: draft-a-paper-review-it-and-fit-your-journals-rules
 name: Draft a paper, review it and fit your journal's rules
-summary: Name your topic and bring your results. Get sources, a draft, a fair review and a paper fitted to the journal.
+summary: Draft a paper from your topic and results. Get real sources, a first draft, a fair review and a paper fitted to your journal's rules.
 job: research-topics
 thinking: high
 thinking_why: A paper draft must not invent a source or a number, so every step needs your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have results and need a first manuscript fast.
   - Your draft has claims with no sources behind them.
   - You are about to submit and are unsure of the journal's rules.
+not_for:
+  - "Your paper is finished and only needs copy-editing: use a person who edits, or ask your AI to fix wording alone."
+  - "You only need the paper fitted to a journal's rules: use the Journal submission formatter on its own."
+  - "You cannot share your data or notes with an AI tool: write the draft yourself and bring only summaries."
 you_give:
   - Your topic and the claims you want to support
   - Your results or data tables (optional)
@@ -30,6 +34,26 @@ how_to_use:
   - Give the topic, your results and your methods notes. Do not paste data you may not share.
   - After the review, fix the weak parts and rerun any analysis it asks for.
   - Name the journal, the year and the article type for the last step.
+output_sample:
+  input:
+    - Your topic and the claims you want to support
+    - Your results or data tables (optional)
+    - Your notes on methods
+    - The journal or conference you aim for, after the review
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Web access, so it can find current sources and open the journal's author instructions
+  output:
+    - name: Source packet
+      contains: Current papers with links, competing findings, background and the gaps in the search.
+    - name: Manuscript draft
+      contains: Each section written from the sources and your results, with the source of each claim and a reference check.
+    - name: Review
+      contains: What is strong, what is weak and what to fix next, written about the work and not the author.
+    - name: Journal fit
+      contains: The paper fitted to the journal's current rules, with the date checked and items still to fix.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Gather the sources
     text: Collects current papers, competing findings and background for your topic, keeps the link for each and notes the gaps in the search.
@@ -40,7 +64,7 @@ how_it_works:
   - title: Fix the draft and pick the journal
     text: Fix what the review found and rerun your analysis where it asks. Then name the journal or conference and bring the revised paper back.
   - title: Fit the paper to the journal
-    text: Opens the official author instructions, records the date checked, then checks page limits, required sections, anonymity and citation style and fits the paper to them.
+    text: Uses your revised paper, not the review report. Opens the official author instructions, records the date checked, then checks page limits, required sections, anonymity and citation style and fits the paper to them.
 output_shape: |-
   STEP 1: SOURCE PACKET
     Sources with links | competing findings | background | gaps in the search

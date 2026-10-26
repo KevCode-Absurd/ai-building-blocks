@@ -1,6 +1,6 @@
 new_slug: subscription-payback-checker
 name: "Subscription payback checker"
-summary: "Give it LTV, margin, CAC and cash. Get max CAC, a score out of 100 and a call."
+summary: "Check if your store can afford to win subscribers. Get your max CAC, cash needed until payback, a safety score out of 100 and a clear call."
 job: make-offer
 thinking: high
 thinking_why: "It chains several sums and weighs cash risk, so a stronger model is less likely to slip on a step."
@@ -17,6 +17,10 @@ when:
   - You are about to push a subscription, and want to know how much you can pay per subscriber.
   - You are thinking of a quarterly or prepaid plan and need to know if it really beats the monthly one.
   - You are scaling ad spend on subscriptions and want to see if your cash will last until the cohorts pay back.
+not_for:
+  - "You have no subscribers or under three months of cohort data: work out the first-order loss from your CAC and margin by hand, then wait for real cohorts."
+  - "You want to cut cancellations in an existing base: use a cancel-flow step instead, since this checks the cost of winning new subscribers."
+  - "You need a full tax or legal check on how you show the charge: ask a qualified person, because this only flags the risk."
 
 you_give:
   - Value of subscribers and non-subscribers at month 3 and 6
@@ -35,6 +39,32 @@ how_to_use:
   - Paste your monthly ad spend and the cash you can put toward payback.
   - If you offer or plan a quarterly or prepaid plan, add its price and take rate.
   - Read the cash needed first, then the score and the call.
+output_sample:
+  input:
+    - Subscriber and non-subscriber value at month 3 and month 6
+    - Gross margin, monthly price and subscription discount
+    - Your current CAC and monthly ad spend
+    - Your cash balance
+    - Take rate of any multi-month plan (optional)
+  prerequisites:
+    - Real cohort data from your store or subscription app
+  output:
+    - name: VALUE
+      contains: Value per subscriber and per one-time buyer at month 3 and month 6.
+    - name: MAX CAC
+      contains: The most you can pay per subscriber at a 3 to 1 ratio and at your own ratio.
+    - name: FIRST ORDER
+      contains: Gross profit, CAC, the loss per customer on order one and the ratio.
+    - name: CASH NEEDED
+      contains: The loss times customers won in the payback window, set against your cash and the share it covers.
+    - name: PLANS
+      contains: First-order gross profit and break-even CAC for monthly, quarterly and annual plans, with the prepay test.
+    - name: CHECKS
+      contains: Whether the real charge is shown, the cohort trend and whether financing is assumed.
+    - name: SCORE
+      contains: A score out of 100, each penalty with its points, and the score after your suggested change.
+    - name: CALL and NEXT
+      contains: Go, slow down or switch to bundles, plus one next step and anything missing.
 
 how_it_works:
   - title: Work out value at month 3 and 6

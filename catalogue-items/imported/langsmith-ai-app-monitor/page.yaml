@@ -2,36 +2,59 @@ thinking: medium
 thinking_why: It reads traces and finds what went wrong.
 new_slug: langsmith-ai-app-monitor
 name: LangSmith AI app monitor
-summary: Give it your AI app. Get traces, test sets and scores so you can find
-  bad answers before users do.
+summary: Set up LangSmith tracing and test sets for your AI app, so you can monitor LLM app errors, cost and bad answers before users see them.
 job: build-software
 headline: LangSmith AI app monitor
-subhead: A way to see what your AI app really did, so bad answers show up in a
-  report before a user complains. Add LangSmith tracing to your app and every
-  model call is recorded with its input, output, delay and token cost.
+subhead: Give it your AI app code. It adds LangSmith tracing, so every model call is recorded with its input, output, delay and cost. Then it helps you build a test set and score your answers.
 explain: |
   A way to see what your AI app really did, so bad answers show up in a report before a user complains. Add LangSmith tracing to your app and every model call is recorded with its input, output, delay and token cost. You can then turn good and bad traces into a test set.
 
   Run that set whenever you change a prompt or model, and score the answers with built-in or custom checkers. A drop in score means you broke something. In production, dashboards track errors, speed and spend. It works with OpenAI, Anthropic, LangChain and LlamaIndex. You need Python, a LangSmith account and an API key.
 when:
   - Your chatbot gave a wrong answer and you cannot see which step failed.
-  - You changed a prompt and want proof it did not make things worse.
-  - You want to track cost and response time of every model call.
+  - You changed a prompt and want proof it did not make answers worse.
+  - You want to track the cost and speed of every model call.
   - You want a test set built from real user questions.
+not_for:
+  - "You want to track model training runs or deep learning experiments: use Weights & Biases."
+  - "You need a general model registry for machine learning: use MLflow."
+  - "You want to watch data drift in a machine learning model: use Arize or WhyLabs."
 you_give:
-  - Your AI app code
-  - A LangSmith account and key
+  - Your AI app code in Python
+  - A LangSmith account and API key
   - Example questions and good answers (optional)
   - What counts as a good answer
 you_get:
-  - Tracing set up in your code
-  - A test set from real traces
-  - Scoring checks you can rerun
-  - Monitoring for errors, speed and cost
+  - Tracing added to your code
+  - A test set built from real or example questions
+  - Scoring checks you can run again after each change
+  - Tips for tracking errors, speed and cost in production
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and use a LangSmith account
-    (paid beyond the free plan).
+  - Open an AI that can run Python code, or plan to run the code yourself. Paste your app code.
+  - Install the package with pip install langsmith. Set LANGSMITH_API_KEY to your key and LANGSMITH_TRACING to true.
+  - Wrap one model call with the traceable tag or the OpenAI wrapper. Run your app once and check that the trace shows in LangSmith.
+  - Hide private data first. Redact names, passwords and other user details before they are traced.
+  - Build a test set from good and bad traces, or write a few questions and answers by hand.
+  - Run the evaluation, then change your prompt and run it again. Compare the two scores to see if answers got better.
+output_sample:
+  input:
+    - Your AI app code in Python
+    - A LangSmith account and API key
+    - Example questions and good answers (optional)
+    - What counts as a good answer
+  prerequisites:
+    - An AI that can run Python code, or a developer to run the code it writes
+    - A LangSmith account (the free plan works to start, paid plans cost more)
+  output:
+    - name: Tracing setup
+      contains: Install steps, the two settings to add, and code that records each model call in your app.
+    - name: Traces
+      contains: A record of each model call with its input, output, delay and token use.
+    - name: Test set
+      contains: Example questions and good answers, made by hand or from real good and bad traces.
+    - name: Evaluation run
+      contains: Code that runs your app on the test set and scores each answer with built-in or custom checks.
+    - name: Feedback scores
+      contains: Optional user ratings or scores attached to a run, so you can see which answers people liked.
+    - name: Monitoring tips
+      contains: Ways to track errors, speed and cost in production, plus sampling to keep volume down.

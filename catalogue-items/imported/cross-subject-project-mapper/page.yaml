@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps curriculum links across several subjects.
 new_slug: cross-subject-project-mapper
 name: Cross-subject project mapper
-summary: Name a real-world problem. Get which subjects connect to it and what
-  each one can teach.
+summary: Plan a cross-subject project around a real-world problem. Get a map of which subjects connect and what each one can teach, fitted to your timetable.
 job: teach-and-train
 headline: Cross-subject project mapper
-subhead: A real-world problem makes a good reason for teachers in different
-  subjects to plan together. Name the problem and your own subject, and you get
-  a map of which other subjects connect to it and what each can teach.
+subhead: A real-world problem makes a good reason for teachers in different subjects to plan together. Name the problem and your own subject, and you get a map of which other subjects connect to it and what each can teach.
 explain: |
   A real-world problem makes a good reason for teachers in different subjects to plan together. Name the problem and your own subject, and you get a map of which other subjects connect to it and what each can teach.
 
@@ -18,6 +15,10 @@ when:
   - Your school wants a cross-curricular unit and you need a starting plan.
   - You teach one subject and want to show why it matters to a real issue.
   - You must cover set content in each subject while linking them.
+not_for:
+  - "Your problem fits one subject only: plan it as a normal lesson sequence, or ask the teacher of that subject."
+  - "You need a full lesson-by-lesson plan for one class: use your usual planner, then come back if other subjects want to join."
+  - "No other department can join and you have no time to talk to them: plan a single-subject unit instead."
 you_give:
   - The real-world problem or issue
   - Your own subject
@@ -30,7 +31,27 @@ you_get:
   - Links to required content
   - Ideas for fitting it into your timetable
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions into a new chat.
+  - Fill in the real-world problem and your own subject. Add year group, other subjects, time and timetable limits if you know them.
+  - Send it and read the connection map first. Check that each link is real for your school.
+  - Check the plan against the curriculum you must cover. Any numbers in the example are made up to show the layout, so use your own figures.
+  - Share the map with other departments, then ask them what they can really offer.
+output_sample:
+  input:
+    - The real-world problem or issue
+    - Your own subject
+    - Year group (optional)
+    - Which other subjects can join (optional)
+    - Time frame and timetable limits (optional)
+  output:
+    - name: Connection Map
+      contains: Shows how the problem links to each subject, with a short note on every link.
+    - name: Disciplinary Contributions
+      contains: Lists the knowledge and skills each subject brings to the problem.
+    - name: Integration Points
+      contains: Shows where subjects overlap and where required curriculum content fits the project.
+    - name: Implementation Plan
+      contains: Sets out how the unit runs across your time frame and timetable.
+    - name: Assessment Approach
+      contains: Suggests how to check what students learned across the subjects.

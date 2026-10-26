@@ -1,6 +1,6 @@
 new_slug: marketing-evidence-expiry-reviewer
 name: Marketing evidence review queue
-summary: Review dated claim evidence and where it is used. Get stale or out-of-scope items, affected assets and an owned review queue.
+summary: Check which marketing claim evidence is out of date or out of scope. Get affected ads and pages, plus a review queue with owners and next steps.
 job: check-ads
 headline: Marketing evidence review queue
 subhead: Review dated claim evidence and where it is used. Get stale or out-of-scope items, affected assets and an owned review queue. Supply the records and asset versions to review.
@@ -9,19 +9,46 @@ explain: |-
 
   Maintains a dated evidence-to-asset use review queue with scope/permission dimensions; not a new claim fact-check, legal-policy search or general stale-process rewrite.
 when:
-  - You need the stated review outcome from existing records.
-  - You want unknowns and proposed repairs separated from completed actions.
+  - A claim in an ad or on a page rests on a study, test or quote that may be old.
+  - You changed a product and want to know which claims no longer fit it.
+  - Someone withdrew permission to use a review, photo or result.
+  - You are getting ready for a quarterly check of the claims you make.
+not_for:
+  - "You need a new fact check of a claim: ask a fact-checker or a researcher, because this only reviews records you already have."
+  - "You need legal clearance for a claim: ask your lawyer or compliance lead, because this does not give legal advice."
+  - "You have no evidence register or asset list yet: start by listing each claim, its source, its date and its owner in a sheet."
 you_give:
-  - document
-  - copy draft (optional)
+  - Your evidence register, with dates, owners and permission notes
+  - The ads, pages or other assets to check, with their versions
+  - The as-of date and timezone to review against
+  - Your own review rules, such as how often evidence must be checked (optional)
 you_get:
-  - An evidence status register with dates and scope kept separate
-  - One review job per underlying issue, linked to affected assets
-  - Renewal decisions, owners and the evidence still needed
+  - A status for each piece of evidence, with dates, scope and permission kept apart
+  - One review job for each evidence issue, linked to the assets that use it
+  - Owners, the decision needed and the evidence still missing for each job
+  - A clear list of what was not checked or done
 how_to_use:
-  - Supply the relevant brief and material, or name files in the authorized project.
-  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
-  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+  - Open Claude, ChatGPT or Gemini and paste in the skill.
+  - Paste your evidence register and the list of assets with their versions. Add the as-of date and timezone.
+  - Ask for the review queue. Say if you have your own rules for how old evidence can be.
+  - Read the status table. Check each status against its source record.
+  - Decide who acts on each job. Any holds or edits to live ads are yours to do. The skill does not make them.
+  - If your AI can read files, name the files and let it save a review ledger. Your original files stay unchanged.
+output_sample:
+  input:
+    - Your evidence register, with dates, owners and permission notes
+    - The ads, pages or other assets to check, with their versions
+    - The as-of date and timezone to review against
+    - Your own review rules, such as how often evidence must be checked (optional)
+  output:
+    - name: As-of and rules
+      contains: The review date, timezone and the owner rules used to judge each record.
+    - name: Evidence status table
+      contains: Each record's date, scope and permission findings, with the assets that use it.
+    - name: Review queue
+      contains: One job per evidence issue, with priority, owner, missing evidence, decision needed and what counts as done.
+    - name: Not run
+      contains: What was not done, such as checking sources today or putting live ads on hold.
 how_it_works:
   - title: Define the review
     text: Establish the as-of time and timezone, applicable owner rules and evidence register supplied. Distinguish explicit expiry, review due date, source publication date and the date somebody last checked it. Do not invent a retention or validity interval.

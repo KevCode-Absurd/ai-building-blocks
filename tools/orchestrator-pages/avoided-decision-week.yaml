@@ -1,6 +1,6 @@
 new_slug: avoided-decision-week
 name: Face the decision you keep avoiding and clear your week
-summary: Paste the decision you keep putting off. Get the worst case, a stop list and the few big tasks for the week.
+summary: Paste the decision you keep putting off. Get its worst case and repair plan, a stop list, and the few big tasks to do this week.
 job: think-and-decide
 thinking: high
 thinking_why: It weighs fears, habits and a full task list against one another. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a move you have put off for weeks, such as quitting, raising prices or ending a deal.
   - Your week fills with small tasks and the one big thing never gets done.
   - You keep saying "after this busy stretch," and the stretch never ends.
+not_for:
+  - "The decision is already made and you only need to act: write the first step in your notes and book the time."
+  - "You have routine tasks and no big decision: sort your list by hand, or pick your top three for the day."
+  - "The move puts savings, a lease or legal rights at risk: talk to an accountant, lawyer or other qualified adviser before you act."
 you_give:
   - The move you are putting off, in one or two sentences
   - What you are afraid will happen, and limits that matter, such as savings or a lease (optional)
@@ -32,6 +36,24 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the decision, last week's calendar and your task list. It works step by step and saves each result.
   - Take the first small step within a day, then follow the stop rules for one week.
+output_sample:
+  input:
+    - The decision you keep putting off, in a sentence or two
+    - What you fear will happen, and limits like savings or a lease (optional)
+    - Last week's calendar or a list of how your time went
+    - Every open task and the hours you have this week
+    - Your main goal this month or quarter
+  prerequisites:
+    - An AI that can read the skill files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: Fear-setting plan
+      contains: Worst realistic outcomes rated for harm and likelihood, a repair for each, the gains, the cost of waiting, and a first step.
+    - name: Not-to-do list
+      contains: Where your time went, the costly few tasks or clients, and stop rules with a number and a swap.
+    - name: Weekly big tasks
+      contains: Tasks sorted into big and small, three priorities with protected time, and tomorrow's list.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Names the worst case
     text: Names the move you are putting off, writes the worst realistic outcomes and rates each one for lasting harm and likelihood.

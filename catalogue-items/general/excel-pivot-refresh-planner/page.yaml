@@ -1,79 +1,77 @@
 new_slug: excel-pivot-refresh-planner
 name: Excel PivotTable refresh planner
-summary: Share a PivotTable workbook. Get source checks and a refresh plan for Excel.
+summary: Check your Excel PivotTable refresh before you share it. Give it your workbook. You get a refresh plan and source checks, with stale data flagged.
 job: work-with-files
 thinking: high
-thinking_why: Native file features, source meaning and check evidence must
-  survive the workflow.
+thinking_why: Native file features, source meaning and check evidence must survive the workflow.
 headline: Excel PivotTable refresh planner
-subhead: Share a workbook with PivotTables. Get a refresh sequence, source
-  checks and a list of stale or unsupported outputs. Work on a copy of your
-  file. Get a clear record of what passed and what still needs checking.
+subhead: Share a workbook with PivotTables. Get a refresh sequence, source checks and a list of stale or unsupported outputs. Work on a copy of your file. Get a clear record of what passed and what still needs checking.
 explain: >-
-  Share a workbook with PivotTables. Get a refresh sequence, source checks and a
-  list of stale or unsupported outputs.
+  Share a workbook with PivotTables. Get a refresh sequence, source checks and a list of stale or unsupported outputs.
 
 
-  It works with the actual Excel files and follows a specific method for this
-  task. Your source files stay intact. The method starts by checking what your
-  AI already knows and which files it can read. It asks only for missing facts
-  that change the work.
+  It works with the actual Excel files and follows a specific method for this task. Your source files stay intact. The method starts by checking what your AI already knows and which files it can read. It asks only for missing facts that change the work.
 
 
-  You get the requested files plus a short record of the sources and checks. A
-  saved file alone does not prove that its formulas, links or layout work. Any
-  check that needs an app your AI cannot use stays marked as not run. Review
-  those limits before you share the result.
+  You get the requested files plus a short record of the sources and checks. A saved file alone does not prove that its formulas, links or layout work. Any check that needs an app your AI cannot use stays marked as not run. Review those limits before you share the result.
 when:
-  - Share a workbook with PivotTables. Get a refresh sequence, source checks and
-    a list of stale or unsupported outputs.
-  - The workbook, approved source data, PivotTable definitions, filters,
-    grouping rules and access to the intended Excel engine if refresh is
-    requested.
-  - You need a checked copy while keeping your original files intact.
+  - Your source table gained a new month and you want to know if the PivotTable still ends last month.
+  - You are about to send a report built on PivotTables and need proof the numbers are current.
+  - You inherited a workbook and need to know which PivotTables depend on which data.
+  - Several PivotTables share sources and you need the right order to refresh them.
+not_for:
+  - "Your workbook has no PivotTables: ask your AI to review the edits in a plain step-by-step pass instead, or have a colleague check it."
+  - "You want your AI to refresh the file for you but it cannot run Excel: use the plan to refresh it yourself in Excel on a copy."
+  - "Your data lives in an outside system that needs a login: export an approved copy of the data first, or ask the data owner to refresh it."
 you_give:
-  - The workbook, approved source data, PivotTable definitions, filters,
-    grouping rules and access to the intended Excel engine if refresh is
-    requested.
+  - The workbook, approved source data, PivotTable definitions, filters, grouping rules and access to the intended Excel engine if refresh is requested.
   - The app and file tools your AI can use for the requested work
 you_get:
-  - pivot-refresh-plan.md and source-checks.csv; a refreshed copy only when an
-    actual supported engine executes it.
+  - pivot-refresh-plan.md and source-checks.csv; a refreshed copy only when an actual supported engine executes it.
   - A record of source files, changes and check results
   - Missing facts and any checks that could not run
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it
-    and paste it in.
-  - Supply your actual files and describe the result. The AI checks existing
-    context before asking for missing information.
-  - Review the native output and its real check evidence before sharing it.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill.
+  - Upload your workbook and the approved source data. Say which filters and grouping rules matter, if you know them.
+  - Say whether you want a plan only or a refreshed copy. A refreshed copy needs your AI to run Excel or a matching tool.
+  - Read the source checks first. Look for any line marked failed or not run.
+  - Follow the refresh plan in Excel on a copy of your file, or check the refreshed copy.
+  - Fix or sign off every not run item before you share the file.
+output_sample:
+  input:
+    - Your Excel workbook with PivotTables
+    - Your approved source data
+    - Your PivotTable filters and grouping rules (optional)
+    - Access to Excel, if you want a refreshed copy made (optional)
+  prerequisites:
+    - An AI that can read Excel files
+    - An AI that can run Excel or a matching tool, only if you want it to refresh a copy
+  output:
+    - name: pivot-refresh-plan.md
+      contains: The order to update sources, caches and PivotTables, plus the stale or unsupported outputs it found.
+    - name: source-checks.csv
+      contains: Each check with a result of passed, failed or not run, and the evidence for it.
+    - name: Refreshed copy
+      contains: A refreshed copy of your workbook, made only when a real Excel-compatible engine ran the refresh.
+    - name: Source map
+      contains: Which file, sheet and cell each PivotTable relies on.
+    - name: Open items
+      contains: Missing facts and checks that could not run, each with the next action.
 how_it_works:
   - title: Step 1
-    text: 1. Inventory PivotTables, caches, source ranges, queries, data model
-      connections, filters, slicers and calculated fields. Preserve unsupported
-      objects instead of rebuilding the file through a lossy library.
+    text: 1. Inventory PivotTables, caches, source ranges, queries, data model connections, filters, slicers and calculated fields. Preserve unsupported objects instead of rebuilding the file through a lossy library.
   - title: Step 2
-    text: 2. Verify source headers, record grain, date types, new rows, duplicate
-      keys and the expected coverage period. Distinguish a fixed source range
-      from a table that expands.
+    text: 2. Verify source headers, record grain, date types, new rows, duplicate keys and the expected coverage period. Distinguish a fixed source range from a table that expands.
   - title: Step 3
-    text: 3. Order source updates before dependent cache and PivotTable refreshes.
-      Identify protected, missing or external sources and stop before any
-      unapproved external access.
+    text: 3. Order source updates before dependent cache and PivotTable refreshes. Identify protected, missing or external sources and stop before any unapproved external access.
   - title: Step 4
-    text: 4. If a real Excel-compatible refresh engine is available and authorized,
-      refresh a copy and record its status. Otherwise deliver a concrete
-      native-application procedure and mark all refresh execution not run.
+    text: 4. If a real Excel-compatible refresh engine is available and authorized, refresh a copy and record its status. Otherwise deliver a concrete native-application procedure and mark all refresh execution not run.
   - title: Step 5
-    text: 5. After an actual refresh, reconcile source totals and filter state,
-      inspect cached period labels and verify a new source record reaches the
-      appropriate output. A saved cache alone does not prove a successful
-      refresh.
+    text: 5. After an actual refresh, reconcile source totals and filter state, inspect cached period labels and verify a new source record reaches the appropriate output. A saved cache alone does not prove a successful refresh.
 output_shape: >-
   FILES
 
-  pivot-refresh-plan.md and source-checks.csv; a refreshed copy only when an
-  actual supported engine executes it.
+  pivot-refresh-plan.md and source-checks.csv; a refreshed copy only when an actual supported engine executes it.
 
 
   SOURCE MAP
@@ -91,42 +89,28 @@ output_shape: >-
   <missing fact or unsupported check> | <next action>
 tweaks:
   - what: Your source files
-    how: The workbook, approved source data, PivotTable definitions, filters,
-      grouping rules and access to the intended Excel engine if refresh is
-      requested.
+    how: The workbook, approved source data, PivotTable definitions, filters, grouping rules and access to the intended Excel engine if refresh is requested.
   - what: The result you need
-    how: Name the file format, audience and parts that must stay editable. State any
-      page or slide limit.
+    how: Name the file format, audience and parts that must stay editable. State any page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
-      check it cannot run.
+    how: Say which Excel or PowerPoint version you will use. Your AI must name any check it cannot run.
 judge:
   - No claim that a JSON summary or exported cache is a native refresh.
   - Filters and slicers are recorded.
   - New source rows are checked explicitly.
   - The result names its sources and keeps unrun checks visible.
 test:
-  - "Try this case: The source table gained a new month but the pivot cache
-    still ends last month. Check that it does this: Flag stale coverage and
-    specify a real refresh check."
-  - "Try this case: Only a Python library with unreliable pivot preservation is
-    available. Check that it does this: Keep the original file intact and return
-    the native refresh plan."
-  - Reopen the saved result and compare it with the source. Keep any failed or
-    unrun check in the report.
+  - "Try this case: The source table gained a new month but the pivot cache still ends last month. Check that it does this: Flag stale coverage and specify a real refresh check."
+  - "Try this case: Only a Python library with unreliable pivot preservation is available. Check that it does this: Keep the original file intact and return the native refresh plan."
+  - Reopen the saved result and compare it with the source. Keep any failed or unrun check in the report.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Add your confirmed field names, file rules and target app version to the required-input section.
+  - Add a small test case with a known answer to the acceptance checks. Keep made-up records separate from real work.
+  - Save the working rules with the file guide so the next run uses the same meanings and checks.
 warnings:
-  - Requires tools for the requested native file format. Checks requiring an
-    unavailable native application must remain marked not run.
+  - Requires tools for the requested native file format. Checks requiring an unavailable native application must remain marked not run.
 tests:
-  - input: The source table gained a new month but the pivot cache still ends last
-      month
+  - input: The source table gained a new month but the pivot cache still ends last month
     expected: Flag stale coverage and specify a real refresh check.
   - input: Only a Python library with unreliable pivot preservation is available
     expected: Keep the original file intact and return the native refresh plan.

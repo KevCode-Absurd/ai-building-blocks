@@ -2,36 +2,72 @@ thinking: medium
 thinking_why: Money code needs care, but the patterns are well known.
 new_slug: stripe-payments-builder
 name: Stripe payments builder
-summary: Say how you charge. Get Stripe checkout, subscriptions and webhooks
-  built safely, with test steps.
+summary: Add Stripe checkout, monthly plans and safe webhooks to your web app, with a step-by-step test run in Stripe test mode before any real money.
 job: build-software
 headline: Stripe payments builder
-subhead: "Working code to take payments with Stripe: one-off checkout, monthly
-  plans, trials, upgrades and downgrades with correct proration, and usage-based
-  billing. You say how you charge, and it builds the pieces and the test steps."
+subhead: Tell it how you charge and what your app is built with. It writes the Stripe checkout, plan changes, webhook and customer portal code, then gives you a test run to follow in test mode.
 explain: |
-  Working code to take payments with Stripe: one-off checkout, monthly plans, trials, upgrades and downgrades with correct proration, and usage-based billing. You say how you charge, and it builds the pieces and the test steps.
+  This skill adds Stripe payments to a web app. It covers one-off checkout, monthly plans, free trials, upgrades with proration, usage-based billing and the customer portal. The sample code is Next.js, and your AI adapts it to your stack.
 
-  It handles the full subscription life: free trial, active, cancel pending, canceled and back again. Webhook handlers verify Stripe's signature and ignore repeated events, which stops double charges and lost updates. It also adds the customer portal, invoices and local testing with the Stripe CLI. You need a Stripe account, a web app and developer skills. Use test mode first and check everything before taking real money.
+  Most billing bugs are in the webhooks, the messages Stripe sends when a payment or plan changes. The webhook code here checks Stripe's signature, skips events it has already handled, and sets values from Stripe instead of adding to them. A retry then cannot charge twice or lose an update.
+
+  It works in test mode only. You get a seven-step test run to follow before you go live. It asks for your plans and prices instead of guessing them. It also warns that some calls differ by Stripe API version, so check them against Stripe's docs.
 when:
   - You are adding paid plans to your web app for the first time.
-  - Customers upgrade mid-month and you must prorate fairly.
-  - Stripe events arrive but your app does not update accounts.
-  - You are changing from flat pricing to pay per use.
+  - Customers upgrade mid-month and you need to charge the right part-month amount.
+  - Stripe sends events but your app does not update the customer's account.
+  - You are moving from flat pricing to pay per use.
+not_for:
+  - "You only need to take a single payment or donation with no app: use a Stripe Payment Link, which needs no code."
+  - "You need tax, VAT or legal advice: ask an accountant. This skill does not give it."
+  - "You cannot run code or read your project files: your AI can only describe the steps, so get a developer to run it."
 you_give:
-  - How you charge, one-off, monthly or usage-based
-  - Your plans and prices
-  - Your app's language and framework
-  - A Stripe account in test mode
+  - How you charge: one-off, monthly, seats or usage
+  - Your plans and prices, with any trial length
+  - Your app's language, framework and database
+  - A Stripe account in test mode, with your keys kept in a .env file
 you_get:
   - Checkout and subscription code
-  - Webhook handlers with signature checks
-  - Upgrade and downgrade logic
-  - Customer portal setup
-  - A local test plan with the Stripe CLI
+  - A webhook route with a signature check
+  - Upgrade and downgrade code with a price preview
+  - Customer portal code
+  - A seven-step test run using the Stripe CLI
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can read and change your project files, such as Claude Code or Codex. Add this skill or paste it into the chat.
+  - Make a Stripe account and stay in test mode. Create your prices there. Keep your secret key in a .env file and never paste it into chat.
+  - Tell your AI how you charge, your plans and prices, and your framework. It asks for anything missing.
+  - Read the list of files it made. Check that it changed only what you expected.
+  - Follow the seven-step test run, in order. Stop at the first step that fails and ask your AI to fix it.
+  - Have a developer who knows payments review the code before you take real money.
+output_sample:
+  input:
+    - How you charge, such as monthly plans with a free trial
+    - Your plans, prices and trial length
+    - Your framework and database
+    - Your Stripe test-mode price IDs, kept in a .env file
+  prerequisites:
+    - A Stripe account in test mode
+    - A web app with sign-in and a database
+    - An AI that can edit your project files
+    - The Stripe CLI to test webhooks on your own machine
+  output:
+    - name: lib/stripe.ts
+      contains: The Stripe client and a table of your plans and price IDs.
+    - name: Checkout route
+      contains: Creates or finds the customer, then sends them to Stripe Checkout.
+    - name: Webhook route
+      contains: Checks Stripe's signature, skips repeat events and updates the user's plan.
+    - name: lib/billing.ts
+      contains: Upgrade and downgrade code, plus a preview of the part-month charge.
+    - name: Customer portal route
+      contains: Lets customers update their card or cancel in Stripe's own page.
+    - name: .env.example
+      contains: Every variable your app needs, with no real keys.
+    - name: First test run
+      contains: Seven steps from first payment to a failed card, each with the result to expect.
+works_best_with: Claude Code or Codex, because they can edit files and run the Stripe CLI. Have your Stripe docs open for your API version.
+terms:
+  webhook: A message Stripe sends your app when something happens, such as a payment or a cancelled plan.
+  proration: Charging or crediting the part of the month left when a customer changes plan.
+  test mode: A Stripe setting where payments are fake and no real money moves.
+  idempotent: Safe to run twice, with the same result as running once.

@@ -1,20 +1,58 @@
 new_slug: prepare-a-quarkus-native-build
 name: Prepare a Quarkus native build
-summary: Build and check a Quarkus native app. Find toolchain, platform and runtime faults.
+summary: "Prepare a Quarkus native build: give it your project and build log, get fixes for native, container and Kubernetes faults, plus tests to run."
 job: ship-and-host
 headline: Prepare a Quarkus native build
-subhead: Share the Quarkus project, target platform and build logs. Match the tools to the target. Get fixes and checks for the built app.
+subhead: Give it your Quarkus project, build tool, target and any build log. It matches the tools to your Quarkus version and target. You get fixes for native build faults, and checks to run on the built app.
 explain: Share the Quarkus project, target platform and build logs. Match the tools to the target. Get fixes and checks for the built app.
 when:
-  - You want to prepare a Quarkus native build.
+  - Your Quarkus native build fails and you do not know why.
+  - Your native app builds but throws ClassNotFoundException when it runs.
+  - You need a container image or Kubernetes manifests for a Quarkus app.
+  - You are building native on a Mac or Windows PC and the binary will not start.
+not_for:
+  - Your project is not Quarkus. Use the java-add-graalvm-native-image-support skill if you have it, or read the GraalVM native image docs.
+  - You only need a normal Java build. Run the standard Maven or Gradle package step, no native flags needed.
+  - You want to move to a newer Quarkus version. Use the quarkus update command from the Quarkus upgrade guide.
 you_give:
-  - The Quarkus project, build tool, target platform and native or container failure evidence.
+  - Your Quarkus project files, such as pom.xml or build.gradle
+  - Your Quarkus version and build tool (Maven or Gradle)
+  - "Your target: your own machine, a Linux container, Kubernetes or OpenShift"
+  - Your build log or runtime error (optional)
 you_get:
-  - Version-aware build guidance, scoped fixes and a verification plan for the actual artifact.
+  - The right build command for your Quarkus version and target.
+  - A list of faults, each with cause, fix and the file or setting to change.
+  - Steps to test the native binary, not just the Java build.
+  - Container image and Kubernetes or OpenShift settings to review before you deploy.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open your AI tool and paste the skill text, or add the skill folder if your tool takes files.
+  - Paste your pom.xml or build.gradle and say which Quarkus version you use.
+  - Say where the app will run, such as a Linux container or Kubernetes.
+  - Paste your build log or runtime error if you have one.
+  - Read the fixes, then run the build yourself. A native build needs Docker, Podman or Mandrel on your machine and can take minutes.
+  - Check the generated YAML and keep secrets out of it before you deploy.
+output_sample:
+  input:
+    - Your Quarkus project files, such as pom.xml or build.gradle
+    - Your Quarkus version and build tool (Maven or Gradle)
+    - "Your target: your own machine, a Linux container, Kubernetes or OpenShift"
+    - Your build log or runtime error (optional)
+  prerequisites:
+    - Docker or Podman for a container build, or Mandrel or GraalVM installed for a local build
+    - An AI that can read your project files, or paste the key files into the chat
+  output:
+    - name: Build command
+      contains: The exact Maven or Gradle command and flags that fit your Quarkus version and target.
+    - name: Native failures
+      contains: Each build or runtime fault with its cause, the fix and the file or property to change.
+    - name: Test the native binary
+      contains: How to run the integration test against the native binary, and how to run it on a non-Linux host.
+    - name: Container image
+      contains: Steps to add a Jib or Docker image extension and set the image name, registry and tag.
+    - name: Kubernetes or OpenShift manifests
+      contains: The extension to add, the properties to set and which generated file to review.
+    - name: Check list
+      contains: Checks to run on the real artifact before you deploy.
 how_it_works:
   - title: Check build compatibility
     text: Identify Quarkus and toolchain versions, host architecture and target runtime before choosing flags.

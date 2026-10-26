@@ -1,6 +1,6 @@
 new_slug: build-your-ads-shopify-page-and-check-it-live
 name: Build your ad's Shopify page and check it live
-summary: Give it your ad, offer and brand facts. Get page copy, Shopify files and a check of the live page.
+summary: Build a Shopify landing page for your ad. Get page copy, uploadable Shopify files and a phone check of the live page, in three steps.
 job: write-landing-page
 thinking: medium
 thinking_why: Three steps that read and write rather than calculate. A mid-size model does the job.
@@ -14,6 +14,10 @@ when:
   - An ad is ready and its page isn't, or the page doesn't match the ad.
   - You have page copy but no easy way to get it into your Shopify theme.
   - You built a page and want a second look at how it reads on a phone.
+not_for:
+  - "Your store is not on Shopify: use the Plain HTML landing page builder to make a page you can host anywhere."
+  - "You only need the page words, with no Shopify files: use the Ad-matched landing page writer."
+  - "You already have a live page and want it reviewed: use the Landing page conversion reviewer."
 you_give:
   - "The ad that will send traffic: its headline and text"
   - "Your brand facts: products, claims, voice and the offer word for word"
@@ -26,11 +30,34 @@ you_get:
   - A list of what still blocks buyers on the live page, with a change to test for each
   - A score out of 100 for how clearly the page lets a shopper act
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Check you have a Shopify store where you can upload theme files, and a phone and a computer for the pause.
+  - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
   - Give it the ad, your offer and your brand facts. If a fact is missing, leave it blank. It marks the gap instead of guessing.
   - Upload the Shopify files to a copy of your theme first, not the live one.
   - Open the page on a phone and a computer, save screenshots, and give them back for the last step.
+output_sample:
+  input:
+    - "Your ad: its headline and text"
+    - "Your brand facts: products, claims, voice and your offer word for word"
+    - Customer reviews or questions (optional)
+    - Product details such as variants and prices (optional)
+    - After the pause, screenshots of the built page on a phone and a computer
+  prerequisites:
+    - A Shopify store where you can upload theme files
+    - A phone and a computer to open the built page
+    - An AI that can work with files, such as Claude Code or a Claude Project
+  output:
+    - name: Page copy (step 1)
+      contains: A first screen taken from your ad, a section for each buyer doubt, the full cost, proof and questions.
+    - name: Shopify files (step 2)
+      contains: A section file, a page template, settings that hold the words, and install steps.
+    - name: Screenshots (the pause)
+      contains: Your own captures of the live page on a phone and a computer, given back for the check.
+    - name: Live page check (step 3)
+      contains: What each screenshot shows, what blocks a shopper, a change to test for each, and a score out of 100.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the page from the ad
     text: Pins one buyer, one reason and one offer. It builds the first screen from the ad's own words, writes a section for each buyer doubt, and states the full cost before the last button.

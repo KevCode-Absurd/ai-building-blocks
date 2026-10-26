@@ -1,6 +1,6 @@
 new_slug: invented-society-planner
 name: "Invented society planner"
-summary: "Paste your world idea. Get a working society: food, homes, quarrels, customs and one strange rule, all fitted together."
+summary: "Build a believable fictional society: paste your world idea and get food, homes, quarrels and one strange custom that all fit the land."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "Many details must fit one another, and it has to find contradictions and hidden costs."
@@ -17,6 +17,10 @@ when:
 - "You are writing fiction or a game and want a world that feels lived in."
 - "You are building a scenario for a workshop or a plan and need a society that is consistent."
 - "Your world has a good idea but the details contradict each other."
+not_for:
+- "You want a real culture or period from history. Use a history source, not this skill."
+- "You need names for your people and places. Use the Name family planner."
+- "You want to plan a plot or a series. Use the Serial story planner."
 
 you_give:
 - "Your world idea, even a few lines"
@@ -53,6 +57,30 @@ how_it_works:
     text: "Make a short list of the key details and check each pair for contradiction."
   - title: "Check it"
     text: "Go through \"Check before you hand it back\" one line at a time and fix any check that fails, if you can."
+
+output_sample:
+  input:
+    - "Your world idea, even a few lines"
+    - "The place or climate (optional)"
+    - "Rules or customs that must stay (optional)"
+    - "How the world will be used, such as story, game or scenario (optional)"
+  output:
+    - name: "Place"
+      contains: The climate, land, rock, wood and water that everything else follows from.
+    - name: "Food, building, trade"
+      contains: What people eat, build with and trade, each with where it comes from.
+    - name: "One home"
+      contains: A typical home room by room, with roof, walls, heat, water and animals.
+    - name: "Quarrels"
+      contains: Who hears a quarrel, what is owed and who pays, with one example.
+    - name: "The strange custom"
+      contains: One custom an outsider would find odd, with its reason inside the society.
+    - name: "The balance"
+      contains: What the society depends on and who could upset it.
+    - name: "Contradiction check"
+      contains: Each pair of details checked for clashes, with a fix for each clash.
+    - name: "Who it frees, who it costs"
+      contains: Who gains from this way of living and who pays for it.
 
 output_shape: |
   PLACE

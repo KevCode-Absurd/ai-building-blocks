@@ -16,6 +16,28 @@ use_cases:
   - "Write a story narrated by a plain-spoken person who sees more than they know"
   - "Give a speech that keeps a crowd laughing and still makes a serious point"
   - "Poke fun at a bad habit or a silly custom without preaching"
+not_for:
+  - "You need legal, medical or financial copy: use a plain-English editor or a copywriter, since humour and a pause do not suit that work."
+  - "You want bare, spare sentences with feeling left under the action: use the Ernest Hemingway mind."
+  - "You want to cut vague words that hide what people do, in a memo or policy: use the George Orwell mind."
+output_sample:
+  input:
+    - Your draft, speech or story
+    - Who will listen or read, and what they think of you
+    - The true details of what happened, and to whom
+    - The one line the whole piece is for (optional)
+    - The tone you want, such as dry, warm or sharp (optional)
+  output:
+    - name: Cut version of your piece
+      contains: Your draft with surplus words removed, the right word in place, and the wandering that works kept.
+    - name: Pause marks
+      contains: Notes on where to pause, where to drop the point quietly and where to look surprised.
+    - name: Rules it breaks
+      contains: A short list of story and plain-word rules your draft breaks, with a fix for each.
+    - name: A story told gravely
+      contains: If you ask for a story, one told with a straight face and a note on timing.
+    - name: Room check
+      contains: Questions about who is listening and whether the humour could hurt people the piece should respect.
 seats:
   - {seat: "Humour and plain speech", asks: "Can we say this in plain words a person would actually use, and is there a laugh in it?"}
   - {seat: "The pompous-detector", asks: "Who here is taking themselves too seriously, and what would happen if we said so?"}

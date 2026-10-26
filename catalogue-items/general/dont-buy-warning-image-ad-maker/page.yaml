@@ -1,6 +1,6 @@
 new_slug: dont-buy-warning-image-ad-maker
 name: "Don't-buy warning image ad maker"
-summary: "Paste your story ad. Get a hand-made warning card image prompt and a blank version."
+summary: "Turn your story ad into a don't-buy warning image ad: a hand-made card prompt, a blank version and the line under the image."
 job: make-image-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your buyers tried things before and were let down.
   - Your story warns against a kind of product, or a habit, and says why.
   - You can back the claim your story uses to answer the warning.
+not_for:
+  - "Your story warns against nothing in particular: use the Tried before products image ad maker."
+  - "Your warning would scare people about health or safety: skip this, as the skill stops and hands back nothing to run."
+  - "You can't give a reason you can back for the warning: get that proof first, or the picture should not run."
 
 you_give:
   - Your approved story ad and the advice it gives
@@ -35,6 +39,40 @@ how_to_use:
   - Write the card yourself and photograph it, or paste the prompt into your image tool.
   - Read the card in the result letter by letter.
   - Check the old thing in the frame looks like no rival's product.
+output_sample:
+  input:
+    - Your approved story ad and the advice it gives
+    - The kind of product that failed, in your buyers' words
+    - Why it failed, and the claim that answers it, with sources
+    - Your brand brain (optional)
+  prerequisites:
+    - Ad copy for your story, for example from the Fact-based ad copy writer
+    - An image tool, only if you want the picture made for you (ChatGPT, Gemini or Higgsfield)
+  output:
+    - name: SCENE
+      contains: One sentence on what someone scrolling would say they saw.
+    - name: WHERE AND WHEN
+      contains: The place, time of day, light and camera spot.
+    - name: THE ADVICE
+      contains: Whether the warning is a stop or a check, and where in the story it comes from.
+    - name: THE REASON
+      contains: One line on why the old thing failed, its source and the claim that answers it.
+    - name: THE FORM
+      contains: Card, envelope or taped note, and the pen used.
+    - name: THE OLD WAY
+      contains: The generic old object in frame, with its labels turned away.
+    - name: WORDS ON IMAGE
+      contains: The three to nine words on the card, exactly, with the word count.
+    - name: BLANK VERSION
+      contains: The same scene with the card left blank.
+    - name: LINE UNDER IMAGE
+      contains: The short line under the picture, its type and its exact character count.
+    - name: FLAGS
+      contains: Words written just for the image and claims to keep in the story.
+    - name: IMAGE PROMPT
+      contains: A 60 to 120 word prompt with the card words in quotes once.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: Sets the house rules

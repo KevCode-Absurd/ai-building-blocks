@@ -56,13 +56,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the layout in your own words.** Use the skill `competitor-landing-layout`. Keeps the layout idea and fills every slot with your own facts and words.
-2. **Plan the design.** Use the skill `landing-page-design-planner`. Give it the landing page from the steps before. Turns the page copy into three on-brand designs and a build brief.
-3. **Build the Shopify files.** Use the skill `shopify-landing-page-builder`. Give it the landing page and the design direction from the steps before. Loads the page copy and chosen design into theme files, with install steps.
+1. **Plan the layout in your own words.** Use the skill `competitor-landing-layout`. Keeps the layout idea and fills every slot with your own facts and words. Hands the landing page copy to step 2.
+2. **Plan the design.** Use the skill `landing-page-design-planner`. Give it the landing page from the steps before. Turns the page copy into three on-brand designs and a build brief. Hands the design direction to step 3.
+3. **Build the Shopify files.** Use the skill `shopify-landing-page-builder`. Give it the landing page and the design direction from the steps before. Loads the page copy and chosen design into theme files, with install steps. You upload them and take screenshots, which step 4 uses.
 
 Pause here: Upload the files to your theme, publish the page and save screenshots of it on a phone and a computer.
 
-4. **Audit the live page.** Use the skill `product-page-screenshot-auditor`. Looks at the built page as a shopper would and lists what blocks buying.
+4. **Audit the live page.** Use the skill `product-page-screenshot-auditor`. Uses your screenshots of the page you published from step 3's files, not the theme files themselves, to look at it as a shopper would and list what blocks buying.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

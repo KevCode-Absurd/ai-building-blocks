@@ -1,6 +1,6 @@
 new_slug: after-sale-offer-planner
 name: "After-sale offer planner"
-summary: "Paste your product and customer list. Get follow-on offers to try, each with a small test."
+summary: "Plan after-sale offers for your buyers. Give it your product and price. You get add-ons that fit, extra profit per order and a test plan."
 job: make-offer
 thinking: medium
 thinking_why: "It judges which add-ons fit and works out extra profit, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - You sell one thing and your buyers could use more.
   - Your average order is small and you want a bigger one.
   - You tried an add-on once and cannot say whether it worked.
+not_for:
+  - "You want a full set of offers from a free step to a top tier: use the Value ladder planner."
+  - "You need to win a first sale from a stranger: use the Stranger first-message writer."
+  - "You sell one-off items and never talk to buyers again: a plain upsell at checkout is enough."
 
 you_give:
   - Your product, price and cost
@@ -35,6 +39,27 @@ how_to_use:
   - Add what buyers have asked for after buying, if you know.
   - Run the first test on a share of orders and keep the rest plain.
   - Write the result in the log when the test ends, even a bad one.
+output_sample:
+  input:
+    - Your product, price and cost
+    - Your current offer and how buyers pay
+    - Past sales or customer data (optional)
+    - What buyers say they need next (optional)
+  output:
+    - name: What buyers need next
+      contains: The needs that follow the first sale, each marked as from buyers or a guess.
+    - name: Offers to try
+      contains: Two to four add-ons with why they fit, price, your cost, the ask and extra profit per order.
+    - name: Follow-up after the sale
+      contains: A short message, when to send it and the question it asks.
+    - name: Test plan
+      contains: One change per test, what it is compared with, how long to run it and the rule for a win.
+    - name: Test log
+      contains: A table with date, offer, result and lesson, including failed tests.
+    - name: Missing
+      contains: Figures you did not give, left open and never guessed.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: Lists what buyers need next

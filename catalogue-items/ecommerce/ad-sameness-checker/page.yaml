@@ -1,6 +1,6 @@
 new_slug: ad-sameness-checker
 name: "Ad sameness checker"
-summary: "Paste your live ads with persona, angle, offer. Get idea groups and a sameness score out of 100."
+summary: "Check your live ads for sameness. Paste each ad's persona, angle, offer and format. Get idea groups, a score out of 100 and what to replace."
 job: check-ads
 thinking: medium
 thinking_why: "It sorts a list of ads into groups by four fields, so a mid-size model is enough, and a stronger one handles long lists better."
@@ -17,6 +17,10 @@ when:
   - You have launched many ads but results are flat, and you suspect they are all the same idea.
   - Cold ads show a frequency above 2 and you want to know if it is a variety problem.
   - Before you brief new creative, you want to see which ideas you already cover.
+not_for:
+  - "You have fewer than about 10 ads: there is too little to group, so add more ads first or ask a person to review them."
+  - "You want to see what rival ads do: use the Competitor ad gap finder."
+  - "You only need ideas for new ads: use a brainstorm with your AI, then come back to check them."
 
 you_give:
   - Your live ads with persona, angle, offer, format and hook text for each
@@ -35,6 +39,27 @@ how_to_use:
   - Add the frequency for each cold ad from the last 30 to 60 days.
   - Replace or change the ads in the biggest clusters first.
   - Run it again after the new ads go live.
+output_sample:
+  input:
+    - Your live ads with persona, angle, offer, format and hook for each
+    - Frequency per cold ad over the last 30 to 60 days
+    - Images or video links (optional)
+    - A creative similarity score from a Meta rep (optional)
+  output:
+    - name: Header line
+      contains: The number of ads, the number of distinct clusters, and a warning or ok verdict.
+    - name: Clusters
+      contains: Each group of ads with its four matching fields, which ad to keep, and which to replace.
+    - name: Score
+      contains: The sameness score out of 100 with the sum shown, and the score after replacements.
+    - name: Cold ads with frequency above 2
+      contains: The cold ads seen more than twice on average over 30 to 60 days.
+    - name: Whole-audience calls
+      contains: Ads that speak to everyone, listed for a rewrite.
+    - name: Hook-level new
+      contains: Ads with a new hook but a body that still overlaps.
+    - name: Not run and missing
+      contains: Any check skipped and what you would need to add.
 
 how_it_works:
   - title: Groups by four fields

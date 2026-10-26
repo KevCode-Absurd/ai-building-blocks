@@ -1,6 +1,6 @@
 new_slug: lead-cost-and-friction-planner
 name: Lead cost and friction planner
-summary: Paste your campaign numbers. Get cost per qualified lead, the friction to add one step at a time and a stop rule.
+summary: Plan your lead cost per qualified lead with handling cost included. Add friction one step at a time, with a stop rule and a qualifier line.
 job: make-offer
 thinking: medium
 thinking_why: It does cost sums and picks friction levers in order. The sums are fixed and the choices follow from your numbers.
@@ -11,9 +11,14 @@ explain: |-
 
   This skill compares campaigns by qualified leads per dollar and adds your handling cost. If the numbers say you need better leads, it adds friction one lever at a time: stated qualifiers, the amount and type of information asked, the number of steps, required viewing and the length of the ad. It sets a stop rule so you add just enough, and writes one qualifier line to repeat at every touchpoint. It also tells you what to check when a free offer does not get a response.
 when:
-  - You have plenty of leads and few buyers.
-  - Your team is swamped by leads who do not buy.
-  - You are deciding between a campaign with many leads and one with fewer.
+  - You get plenty of leads but few buyers.
+  - Your team is swamped by leads who never buy.
+  - You must choose between a campaign with many leads and one with fewer, better leads.
+  - A free offer gets little response and you do not know why.
+not_for:
+  - "You sell a paid offer with no free first step: work from your ad results and sales numbers by hand, since there is no lead stage to filter."
+  - "Your leads are already warm and talk to you: review your sales calls with a person on your team first."
+  - "You have no campaign numbers yet: run a small test campaign first, then come back with spend, leads and buyers."
 you_give:
   - Your chosen route and what the first step costs you to give
   - "Numbers for one or two campaigns: spend, leads, share that qualify"
@@ -29,6 +34,29 @@ how_to_use:
   - Paste spend, leads and the share that qualify for each campaign.
   - Add how long a lead takes to handle and what that time costs.
   - Add one lever at a time and measure for the same period each time.
+output_sample:
+  input:
+    - Your chosen route and what the first step costs you to give
+    - Spend, leads and share that qualify for one or two campaigns
+    - Time and cost to handle one lead (optional)
+    - Your lead form and steps (optional)
+  prerequisites:
+    - Your route and first-step cost, which come from the Front-end offer picker or your own notes
+  output:
+    - name: Campaign sums
+      contains: Spend, leads, qualified leads, handling cost, total cost and cost per qualified lead for each campaign.
+    - name: Which wins
+      contains: The better campaign with and without handling cost, and why.
+    - name: If response is low
+      contains: Which of three causes fits, and how to check it in a week.
+    - name: Friction plan
+      contains: Levers in order, one at a time, each with its change, expected effect and measurement period.
+    - name: Stop rule
+      contains: The numbers that say when to stop adding friction.
+    - name: Qualifier line
+      contains: One sentence to repeat in the ad, page and form.
+    - name: Missing and Checks missed
+      contains: Gaps in your input and any checks the skill could not pass.
 how_it_works:
   - title: Counts qualified leads
     text: Spend divided by qualified leads, not total leads.

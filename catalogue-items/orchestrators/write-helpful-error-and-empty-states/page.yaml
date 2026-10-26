@@ -1,52 +1,68 @@
 new_slug: write-helpful-error-and-empty-states
 name: Write helpful error and empty states
 headline: Write helpful error and empty states
-summary: Share the source files. Get a state inventory, revised messages and a handoff for implementation.
+summary: Write clear error messages and empty states for your app. Share your screens and current text. Get every state listed, new wording and dev notes.
 job: design-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A state inventory, revised messages and a handoff for implementation. Share screens or text for empty, loading, permission-denied and failed actions; actual recovery options. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share your app screens and the error text you have now. Your AI lists every empty, loading, blocked and failed state, rewrites each message in plain words, and adds notes your developer can build from.
 explain: |-
-  A state inventory, revised messages and a handoff for implementation.
+  Most apps look good when everything works. People meet the other screens first: a list with nothing in it, a save that fails, a page they are not allowed to open. This workflow writes the error messages and empty states for those moments, so nobody is left looking at "Something went wrong".
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Every error explains what happened and one available action; messages never promise a recovery the product lacks. Missing tools or evidence stay visible in the final summary.
+  It runs three skills in order. The first lists every state on each screen and what the person can do there. The second writes the message for each failure, and offers only a next step your product can really do. The third adds the small details a developer needs: where focus goes, what the button says and how the screen changes. Each step saves a file and hands it to the next.
+
+  A message never promises a fix your product lacks. If you did not list the recovery options, the AI marks that line MISSING and does not guess. It writes words and specs. It does not change your code.
 when:
-  - You need a state inventory, revised messages and a handoff for implementation.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Support tickets keep starting with "it just says error".
+  - You are about to launch a new screen and have only designed the happy path.
+  - A list, inbox or dashboard is blank on day one and new users do not know what to do first.
+  - A developer asks you for the exact text for every failed state.
+not_for:
+  - "You only have a list of error messages and want better wording: use the Plain error message writer."
+  - "You want a score and full review of one form or screen: use the Error message rewriter or the Plain words interface rewriter."
+  - "Your product has no recovery steps yet, such as retry or undo: decide those first, then run this."
+  - "The text has fixed legal or payment provider wording: check with the provider before you change it."
 you_give:
-  - Screens or text for empty, loading, permission-denied and failed actions; actual recovery options.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your screens, as screenshots or pasted text, for each place that can be empty, load, fail or be blocked
+  - The error text your app shows today, and what causes each one (optional, but it helps)
+  - What people can really do after a failure, such as retry, undo, sign in again or contact support
+  - Your voice, such as calm and friendly (optional)
+  - The code for the screens, if your AI can read it (optional)
 you_get:
-  - A state inventory, revised messages and a handoff for implementation.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A state list for each screen, with what the person sees and can do
+  - One new message per failure, saying what happened and one thing to do next
+  - Empty-screen text that tells a new user what to do first
+  - A build note per message, covering focus, button label and how the screen changes
+  - A list of facts still MISSING and any check that did not run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach your screens, or paste the text on each one. Paste your current error messages and say what causes each.
+  - List what people can really do after each failure. Say so if there is nothing, and do not leave it blank.
+  - Tell your AI to follow the pack and save each step's file. Check the state list from step 1 before step 2 starts.
+  - Read each new message against your product, and cut any promise it cannot keep. Then give the build notes to your developer.
 how_it_works:
   - title: Screen states designer
-    text: List the states and user actions for each supplied screen, including retry and interrupted work.
+    text: Lists the states on each screen you gave it, such as empty, loading, offline, blocked and failed, with what the person can do in each. Hands step 2 every failure and empty state with its cause and recovery options.
   - title: Plain error message writer
-    text: Write a plain message for every failure state using only recovery actions the product supports.
+    text: Writes one message per failure in the person's words, with no blame and one next step your product supports. Ranks them by cost, so lost money and lost data come first. Hands step 3 the final text.
   - title: Small interface details designer
-    text: Specify focus, buttons and transitions so each message can be implemented and checked.
+    text: Turns each message into build notes. It names where focus goes, what the button says and how the message appears and clears. Check before moving on, each note matches its message text.
 output_shape: |-
-  Scope and source coverage
-  A state inventory, revised messages and a handoff for implementation.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE AND SOURCES      <screens, error text and recovery options you gave>
+  STATE LIST             <screen | state | what the person sees | what they can do>
+  MESSAGES               <state | trigger | cost | new message | next step | prevention>
+  EMPTY STATES           <screen | text | first action>
+  BUILD NOTES            <message | focus | button label | how it appears and clears>
+  MISSING                <each gap and the message it stops>
+  CHECKS MISSED          <one line each, or none>
+  NEXT STEP              <one suggestion>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Every error explains what happened and one available action; messages never promise a recovery the product lacks.
+  - what: Voice
+    how: Say whether you want calm, warm or playful. The facts and next steps stay the same and only the tone changes.
+  - what: One screen first
+    how: Start with the screen behind most support tickets. A short run is easier to check than a whole app.
+  - what: Recovery options
+    how: List what each failure allows, such as retry, undo or contact. The messages offer only those.
 judge:
   - Every error explains what happened and one available action; messages never promise a recovery the product lacks.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +75,39 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Save your approved wording for common errors, such as network loss and no permission, and paste it into every run.
+  - Add the support tickets that quote an error. They show which messages cost you most.
+  - Keep a short list of what each failure allows, and update it when the product changes.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads images and files
+      why: It can read screenshots and text exports. In plain chat you paste the screen text instead.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Support tickets or reviews that quote an error message.
+    - Your style guide or a few messages you already like.
 terms:
+  - term: Empty state
+    meaning: What a screen shows when a list or page has nothing in it yet.
+  - term: Recovery action
+    meaning: Something the person can do to carry on, such as retry, undo or contact support.
+  - term: Focus
+    meaning: The control that is active on the screen, so a keyboard or screen reader user lands in the right place.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.
+output_sample:
+  input:
+    - Your screens or screenshots
+    - Your current error text and what causes each one (optional)
+    - What people can really do after a failure
+    - The code for the screens (optional)
+  prerequisites:
+    - An AI that can read files or images
+  output:
+    - name: outputs/step-01-screen-states-designer.md
+      contains: Each screen's states, what people can do in each, and retry and interrupted-work cases.
+    - name: outputs/step-02-plain-error-message-writer.md
+      contains: A plain message for each failure, ranked by cost, with one next step your product supports.
+    - name: outputs/step-03-small-interface-details-designer.md
+      contains: Focus, button labels and screen changes for each message, written for a developer.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines, checks missed and one suggested next step.

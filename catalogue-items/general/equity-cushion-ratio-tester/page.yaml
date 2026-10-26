@@ -1,6 +1,6 @@
 new_slug: equity-cushion-ratio-tester
 name: "Equity cushion ratio tester"
-summary: "Paste a borrower's debts and its owners' stake value. Get the cushion behind your claim and whether it clears the bar."
+summary: "Test the equity cushion ratio before you lend. Give it the borrower's debts and its owners' stake value. You get the ratio, the bar and the weak spot."
 job: money-and-investing
 thinking: high
 thinking_why: "It values a cushion from thin facts, reads two tests against each other and must say what it cannot know. That needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You have checked earnings cover and want a second, independent test.
   - A borrower offers its property as security and you want to know how much that is worth.
   - The earnings look good but the business has little equity behind its debt.
+not_for:
+  - "You want to test earnings cover first: use the Average earnings coverage tester, then come back here."
+  - "You need a final verdict for a lending decision: use the Lender safety verdict writer once you have both tests."
+  - "You are making a large or personal money decision: talk to a licensed financial adviser, because this is a method, not advice."
 
 you_give:
   - The result from "Average earnings coverage tester", or the claim and total debt
@@ -35,6 +39,30 @@ how_to_use:
   - Give a low recent share price, or say how you would value a private stake.
   - Read the line about the two tests together before the verdict.
   - Take the result to "Lender safety verdict writer".
+output_sample:
+  input:
+    - The result from the Average earnings coverage tester, or your claim and the borrower's total debt
+    - What the owners' stake is worth, from a share price and share count or a fair private price
+    - Details of any pledged assets (optional)
+  prerequisites:
+    - The earnings cover result from the Average earnings coverage tester, or the borrower's list of debts
+  output:
+    - name: Total debt
+      contains: All debt level with or ahead of your claim, plus your own claim, and what it is made of.
+    - name: The cushion
+      contains: The value of everything behind your claim, how it was valued and whether a low or peak price was used.
+    - name: Ratio
+      contains: The cushion divided by total debt, the bar for this type of business and the reason for that bar.
+    - name: Two tests together
+      contains: Whether earnings and cushion pass or fail, and what that combination means.
+    - name: Pledged assets
+      contains: How much each pledged asset counts, with the reason.
+    - name: Weak spot
+      contains: What would push the ratio below the bar.
+    - name: Missing
+      contains: Facts you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the skill missed, or none.
 
 how_it_works:
   - title: Totals the debt

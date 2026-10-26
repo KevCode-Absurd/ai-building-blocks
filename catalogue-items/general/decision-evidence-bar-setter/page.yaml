@@ -1,6 +1,6 @@
 new_slug: decision-evidence-bar-setter
 name: Decision evidence bar setter
-summary: Paste a decision and what you know. Get how much evidence is enough, what to get next and a date to decide.
+summary: Find out how much evidence is enough before you decide. Paste your decision and what you know. Get a decide now or wait call and a date.
 job: think-and-decide
 thinking: medium
 thinking_why: It weighs facts and costs, but the steps and the arithmetic are fixed.
@@ -14,6 +14,10 @@ when:
   - A team keeps asking for more data before it will decide.
   - You are about to commit and want to know if you know enough.
   - A choice has dragged on and each week of waiting is costing something.
+not_for:
+  - "You only need to know if a choice can be undone and who owns it: use the Reversible decision sorter."
+  - "People disagree and the real problem is who decides: use the Informed captain decision planner."
+  - "The choice is already made and you want to know if it worked: look back at the results with your team, since this skill sets a bar before you decide."
 you_give:
   - The decision, and whether it can be undone
   - What you know now and what you wish you knew
@@ -30,6 +34,30 @@ how_to_use:
   - List what you know and what you wish you knew.
   - Say what each week of delay costs, if you can.
   - Set the call date in your calendar and tell the team.
+output_sample:
+  input:
+    - The decision, and whether it can be undone
+    - What you know now and what you wish you knew
+    - What waiting costs each week (optional)
+  output:
+    - name: Decision and door
+      contains: The choice, whether it can be undone, and what a reversal would cost.
+    - name: Facts I wish I had
+      contains: Up to ten facts, each weighted 1 to 3 and marked known, partly known or unknown.
+    - name: Information share
+      contains: The known weight divided by the total weight, with the sum shown.
+    - name: The bar
+      contains: The share you need for this choice and the reason for it.
+    - name: Wrong vs slow
+      contains: The cost of being wrong compared with the cost of waiting.
+    - name: Recovery
+      contains: How soon you would spot a bad result and how fast you could fix it.
+    - name: Verdict
+      contains: Decide now, or wait until a named date, with the reasoning.
+    - name: Get first
+      contains: The one cheap fact to get first and the fact that would change the call.
+    - name: Missing and checks missed
+      contains: Gaps in your inputs and any checks the skill could not pass.
 how_it_works:
   - title: Confirms the door
     text: Checks whether the choice can be undone, and how easily.

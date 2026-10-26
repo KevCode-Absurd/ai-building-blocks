@@ -19,6 +19,29 @@ metadata:
 
 # Chief of Staff Methodology
 
+## How to run this skill in a chat
+
+Added by AI Blocks. The method below is the original. This part says what to gather, what you get and what to do when something is missing.
+
+**Use it when:** you prepare work for a leader who makes the final call. That means a decision brief, a triage of what reaches them, a calendar review or a handover record.
+**Skip it when:** you only need action items from a meeting (use the Executive action register keeper), or a one-off meeting prep (use the Executive meeting brief writer).
+
+**Gather first, and ask once for anything missing.** Mark gaps as MISSING. Never invent a cost, date, authority or view.
+1. Who is the accountable leader, and what are they deciding or reviewing?
+2. What can you decide for them, and what must go to them or to someone else?
+3. The records you have: notes, emails, numbers. Say which are confirmed facts.
+4. Any commitments already agreed, with an owner and a date.
+5. The deadline for the decision.
+
+**Pick the task, then produce one of these.** If you cannot open the reference files, use the method below as written.
+- **Decision brief:** Decision needed. Accountable decision-maker. Verified facts. Assumptions and unknowns. Options with trade-offs. Recommendation (marked as advice). Review path and next action. Preparer and reviewer.
+- **Triage list:** Each item, who owns it, the route (decide, delegate, escalate) and why. Safety, legal, HR and fraud matters go straight to the right protected owner.
+- **Calendar review:** Meetings to keep, shorten, delegate or drop, with the reason for each. The leader decides.
+- **Handover record:** What was decided, open commitments with owner and date, and who to ask.
+
+**Rules:** A recommendation is not a decision. Create a task only when an owner has accepted it and there is a real due date. Do not build files on people or score their performance. This skill drafts. A person reviews before anything goes out as the leader's view.
+
+
 The Chief of Staff supports an accountable leader's capacity to operate across
 domains. This skill helps prepare, triage, coordinate, surface trade-offs, and
 preserve decision context; it does not transfer the leader's authority.

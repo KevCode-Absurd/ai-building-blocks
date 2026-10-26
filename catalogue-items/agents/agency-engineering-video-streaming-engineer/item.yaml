@@ -1,0 +1,39 @@
+slug: agency-engineering-video-streaming-engineer
+name: Video Streaming Engineer agent
+summary: Plan video that starts fast and stops buffering, with a bitrate ladder, HLS and DASH packaging, a CDN plan and quality checks.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-video-streaming-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-video-streaming-engineer.md
+  licence: MIT
+  original_name: Video Streaming Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 7abdbe217f43c41c7d0563d28683d44855a0e8c8871e7874ecd3deb31a543df0
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Video Streaming Engineer
+  - Agency Agents
+  - Engineering
+credits:
+  - title: Video Streaming Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-video-streaming-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

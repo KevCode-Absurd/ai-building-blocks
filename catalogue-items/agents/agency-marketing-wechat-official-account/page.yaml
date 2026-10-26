@@ -1,0 +1,134 @@
+name: WeChat Official Account Manager agent
+summary: "Get a WeChat Official Account content plan: reader profile, content themes, a 12-week calendar and a menu and auto-reply set-up. Bring your goal."
+headline: WeChat Official Account Manager agent
+subhead: Give it your business, your readers and your goal for your WeChat Official Account. It builds a reader profile, content themes, a 12-week publishing calendar and a menu and auto-reply plan. You get a content plan you can work from each week.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A WeChat Official Account is not a loudspeaker. People subscribe to hear from you, so every post has to be worth opening. This agent plans for that. It starts with who reads you and what they need, then picks four or five themes your posts will return to.
+
+  The original profile suggests a mix of 60% useful posts, 30% posts that start a conversation and 10% that sell. It suggests two or three posts a week. The agent uses these as a starting point and adjusts them to the time you have. Each calendar slot has a theme, a format, a goal and one clear call to action. It also plans the account menu, the welcome message and keyword replies, so common questions get answered without you.
+
+  It cannot open WeChat or see your numbers. You paste your article stats from the account dashboard, or it marks them as missing. The open rate, growth and sales targets in the original profile are goals, not results you will get. Chinese text is a draft that a native reader should check before you publish.
+when:
+  - You have just opened a WeChat Official Account and need a plan for the first 12 weeks.
+  - Your posts get few opens or reads and you do not know which themes to keep.
+  - You want a welcome message, a menu and keyword replies so subscribers find answers on their own.
+  - You want your account to bring in leads or sales without sounding like an ad.
+not_for:
+  - You want WeChat group chats and customer lists across channels. Use the Private Domain Operator agent.
+  - You are entering the China market and need to choose channels first. Use the China Market Localization Strategist agent.
+  - You post short videos, not articles. Use the Douyin Strategist agent.
+  - You want paid ads, WeChat Pay set-up or a Mini Program built. This agent plans content only.
+you_give:
+  - What your business sells and who your readers are
+  - Your goal, such as awareness, leads, sales or keeping customers
+  - Your account type and number of subscribers, or say it is new
+  - How many posts a week you can write and who writes them
+  - Article stats from the account dashboard, such as opens, reads and unsubscribes (optional)
+  - Two or three rival accounts you read (optional)
+you_get:
+  - A reader profile with needs, pain points and what they like to read
+  - Four or five content themes tied to your goal
+  - A 12-week calendar with theme, format, goal and call to action for each post
+  - A menu, welcome message and keyword reply plan
+  - A weekly review plan with the numbers to watch
+  - A list of assumptions and checks for you
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md. Claude, ChatGPT and Gemini all work.
+  - Paste your business, your readers, your goal and how many posts a week you can write. Say if the account is new.
+  - If the account is running, paste your recent article stats from the WeChat dashboard.
+  - 'Say: "Make my WeChat plan. Do not invent stats or platform rules. Mark anything I must check as a check for me."'
+  - Read the themes first. Cut any theme you cannot write well each week.
+  - Write the first two posts. Ask a native Chinese reader to check the text, then bring back the open and read numbers for the next round.
+how_it_works:
+  - title: Confirm the account
+    text: It confirms the business, readers, goal, account type and weekly capacity. Missing items are asked for once, then marked MISSING.
+  - title: Profile the reader
+    text: It writes who reads you, what they need and what makes them open a post. It uses your stats only if you gave them.
+  - title: Pick the themes
+    text: It sets four or five themes that fit both your goal and your readers, and says why each is there.
+  - title: Build the calendar
+    text: It fills 12 weeks with posts. Each has a theme, a format such as article, poll or video, a goal and one call to action.
+  - title: Plan the menu and replies
+    text: It plans the account menu, the welcome message and keyword replies for the questions you get most.
+  - title: Plan the review
+    text: It sets the weekly numbers to watch, such as opens, reads and unsubscribes, and what to change if they fall.
+output_shape: |-
+  READER PROFILE
+    Who <description> | Needs <list> | What makes them open a post <list> | Evidence <your stats, or MISSING>
+
+  CONTENT THEMES
+    <theme> | why it fits the goal | usual format
+
+  CALENDAR (12 weeks)
+    Week <number> | post <number> | theme <theme> | format <article, poll, video> | goal <goal> | call to action <one line>
+
+  MENU AND REPLIES
+    Menu <main items and what each opens> | Welcome message <text> | Keyword replies <keyword and reply>
+
+  REVIEW PLAN
+    <metric> | your starting number or MISSING | what to change if it is low
+
+  ASSUMPTIONS AND CHECKS
+    <what you must check in WeChat or with a native reader>
+output_sample:
+  input:
+    - Your business and who your readers are
+    - Your goal and how many posts a week you can write
+    - Your account type and subscriber count
+    - Article stats from the dashboard (optional)
+  prerequisites:
+    - A WeChat Official Account, or a plan to open one
+    - A native Chinese reader to check text before you publish
+  output:
+    - name: Reader profile
+      contains: Who reads you, what they need and what makes them open a post.
+    - name: Content themes
+      contains: Four or five themes, with the reason each is there and its usual format.
+    - name: Calendar
+      contains: 12 weeks of posts, each with a theme, format, goal and call to action.
+    - name: Menu and replies
+      contains: The account menu, the welcome message and keyword replies.
+    - name: Review plan
+      contains: The weekly numbers to watch and what to change if they fall.
+    - name: Assumptions and checks
+      contains: What you must check in WeChat or with a native reader.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Posts per week
+    how: Give the number you can keep up for 12 weeks. A smaller true number beats a big plan you drop.
+  - what: Goal
+    how: Name one goal. Awareness, leads and sales call for different themes and calls to action.
+  - what: Content mix
+    how: Say if you want a different split from 60, 30 and 10. A new account may need less selling.
+  - what: Language
+    how: Say if you want the drafts in Chinese, English or both.
+improve:
+  - After each month, paste the stats for your best and worst posts. Ask what they have in common before you plan the next 12 weeks.
+  - Save your reader profile and themes, and paste them in each time so the calendar stays consistent.
+  - Pair it with the Content Creator agent to write the posts the calendar plans.
+terms:
+  - term: Official Account
+    meaning: A WeChat account for a business or creator that publishes articles to subscribers.
+  - term: Menu
+    meaning: The buttons at the bottom of the account chat that lead to pages, posts or replies.
+  - term: Keyword reply
+    meaning: An automatic answer sent when a subscriber types a word you set.
+  - term: Mini Program
+    meaning: A small app that runs inside WeChat.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: All three plan and draft in English and Chinese. A native reader should check the final text.
+  inputs:
+    - A screenshot or export of your article stats from the account dashboard.
+    - Your most read post and your least read post.
+    - Questions subscribers send you most, for the keyword replies.

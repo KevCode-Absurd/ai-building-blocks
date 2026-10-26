@@ -57,9 +57,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Pain-point ad builder.** Use the skill `pain-point-ad-builder`. Writes the ad around the real customer problem found in your reviews.
 2. **Five-part ad checker.** Use the skill `five-part-ad-checker`. Give it the ad copy from the steps before. Checks the ad has all five parts and keeps one idea, and fixes weak lines.
-3. **Ad-matched landing page writer.** Use the skill `ad-matched-landing-page-writer`. Give it the ad copy from the steps before. Writes a page that repeats the ad's promise in its first screen, using the checked ad copy.
-4. **Store social proof placer.** Use the skill `store-social-proof-placer`. Give it the landing page from the steps before. Places reviews on the page where they answer the doubts its copy raises.
-5. **Landing page 30-point checker.** Use the skill `landing-page-30-point-checker`. Give it the landing page from the steps before. Scores the finished page on 30 points before the ad and page go live together.
+3. **Ad-matched landing page writer.** Use the skill `ad-matched-landing-page-writer`. Give it the ad from step 1 with step 2's fixes applied. Writes a page that repeats the ad's promise in its first screen, using the checked ad copy.
+4. **Store social proof placer.** Use the skill `store-social-proof-placer`. Give it the landing page from step 3 and the reviews. Places reviews on the page where they answer the doubts its copy raises.
+5. **Landing page 30-point checker.** Use the skill `landing-page-30-point-checker`. Give it the landing page from step 3 with step 4's proof placements applied. Scores the finished page on 30 points before the ad and page go live together.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

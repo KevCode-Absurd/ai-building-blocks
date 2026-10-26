@@ -10,6 +10,20 @@ description: 'Creates structured bug reports for defects found during Oracle-to-
 - Documenting a defect caused by behavioral differences between Oracle and PostgreSQL
 - Writing or reviewing a bug report for an Oracle-to-PostgreSQL migration project
 
+## When Not to Use
+
+- General application bugs with no Oracle-to-PostgreSQL cause: use the team's normal bug report template.
+- Work that is not a migration from Oracle to PostgreSQL.
+
+## Steps
+
+1. Gather the evidence. Ask once for anything missing, and never invent it: the seed data, the exact operation or call, the Oracle result, the PostgreSQL result, the failing test name, the affected file paths, and the project name. Mark any field you could not fill as MISSING.
+2. Read [references/BUG-REPORT-TEMPLATE.md](references/BUG-REPORT-TEMPLATE.md) and fill each field in order.
+3. Choose the severity from the impact: how many users, rows or endpoints it affects, and whether data is wrong or only slow.
+4. Remove passwords, customer data and other sensitive values from every SQL excerpt and log.
+5. Save the file under the name given in Filename Convention, and show the path.
+6. End with the next step: attach the report to the ticket, then re-run the validation steps on both databases once the fix is in.
+
 ## Bug Report Format
 
 Use the template in [references/BUG-REPORT-TEMPLATE.md](references/BUG-REPORT-TEMPLATE.md). Each report must include:

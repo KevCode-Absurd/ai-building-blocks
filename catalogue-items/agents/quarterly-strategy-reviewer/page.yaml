@@ -1,6 +1,6 @@
 new_slug: quarterly-strategy-reviewer
 name: Quarterly strategy reviewer
-summary: Give it last quarter's plan and results. Get what to keep, cut or change, and next quarter's goals with dated results.
+summary: Review last quarter's plan against your results. Get keep, change or cut calls for each project and next quarter's goals with dated key results.
 job: plan-strategy
 thinking: high
 thinking_why: It compares two quarters, picks its own path from the gap and judges the direction. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - It is the end of the quarter and you want a review you can compare with the last one.
   - You keep carrying the same projects forward and want an honest keep, change or cut.
   - You missed your main goal and want to know if the plan or the direction is the problem.
+not_for:
+  - "You are a team of one with one project: write a short note on what worked and what to change instead."
+  - "You need to set a budget or a price: make that call yourself or with your adviser, then bring the result here."
+  - "You have no plan from last quarter and no numbers: write down your goals and results first, or the review cannot compare anything."
 you_give:
   - Last quarter's plan, with goals, projects, key results and dates
   - This quarter's results for each, with numbers
@@ -30,6 +34,29 @@ how_to_use:
   - Read the keep, change or cut calls first. Argue with any you disagree with, using the numbers.
   - Say yes or no to each decision on the list. It records only the ones you approve.
   - Run it again in the last week of next quarter. It compares with this one.
+output_sample:
+  input:
+    - Last quarter's plan, with goals, projects, key results and dates
+    - This quarter's results for each, with numbers
+    - What changed in your market or team (optional)
+    - Last quarter's review (saved from your first run)
+  prerequisites:
+    - An AI that can save files to a folder, such as Claude Code, to keep each quarter's files (optional, you can paste them instead)
+  output:
+    - name: THE QUARTER
+      contains: Goals hit, missed and not measured, plus the main goal's target against its result.
+    - name: LAST QUARTER'S DECISIONS
+      contains: Whether each past decision happened and what it did to the numbers.
+    - name: KEEP, CHANGE OR CUT
+      contains: Every project with a keep, change or cut call and the reason.
+    - name: DIRECTION
+      contains: Carry on, look harder, or a pivot-or-persevere call, with what triggered it.
+    - name: NEXT QUARTER'S GOALS
+      contains: A few objectives with dated key results, and what was carried over and why.
+    - name: DECISIONS TO APPROVE
+      contains: A numbered list of calls that need your yes before anything changes.
+    - name: FILES AND MISSING
+      contains: The saved files for each step and every line marked MISSING.
 how_it_works:
   - title: Read last quarter
     text: Reads last quarter's plan, review and decisions. With none, it says there is nothing to compare with.

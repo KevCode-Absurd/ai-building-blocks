@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It turns design problems into testable guesses with some judgment.
 new_slug: hypothesis-first-design-planner
 name: Hypothesis-first design planner
-summary: Describe a design problem. Get hypotheses, quick sketching steps and
-  small experiments in place of heavy design documents.
+summary: Turn a design problem into a ranked list of assumptions, clear hypotheses and small tests, so you learn before you build. Get a design plan.
 job: design-work
 headline: Hypothesis-first design planner
-subhead: A design plan built on small tests instead of heavy documents. Describe
-  a design problem and get a list of assumptions, clear hypotheses and quick
-  experiments that show whether you are right before you build much.
+subhead: A design plan built on small tests instead of heavy documents. Describe a design problem and get a list of assumptions, clear hypotheses and quick experiments that show whether you are right before you build much.
 explain: |
   A design plan built on small tests instead of heavy documents. Describe a design problem and get a list of assumptions, clear hypotheses and quick experiments that show whether you are right before you build much.
 
@@ -18,6 +15,10 @@ when:
   - Stakeholders disagree and you need to turn opinions into things to test.
   - You want to replace long spec documents with quick learning.
   - You need a weekly research habit your team will keep.
+not_for:
+  - "You want a usability audit of a screen you already have: ask your AI for a heuristic review instead."
+  - "You need build, measure and learn loops for a whole product: use a lean startup method instead."
+  - "Leadership has already fixed the design and will not test it: talk to the decision maker first."
 you_give:
   - The design problem or feature idea
   - Who the users are
@@ -29,7 +30,25 @@ you_get:
   - Lightweight experiment plans
   - A score of your current process with fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Describe your design problem and who the users are. Add your current process and team size if you can.
+  - Ask your AI to list your assumptions and rank them by risk.
+  - Check the hypotheses. Make sure each one has a success rule you set before testing.
+  - Pick the cheapest experiment for each top hypothesis. Run them, then ask for a fresh score of your process.
+output_sample:
+  input:
+    - The design problem or feature idea
+    - Who the users are
+    - Your current design process (optional)
+    - Team size and roles (optional)
+  output:
+    - name: Assumptions list
+      contains: What you believe about the business and users, ranked by risk and how little you know.
+    - name: Hypothesis statements
+      contains: One hypothesis for each top belief, with a success rule set before the test.
+    - name: Experiment plans
+      contains: The cheapest test for each hypothesis, such as a paper sketch or a fake landing page.
+    - name: Team design and research habits
+      contains: Ways to design together and run research every week.
+    - name: Process score
+      contains: A score out of 10 for your current process, the checks it failed and a fix for each.

@@ -2,15 +2,10 @@ thinking: medium
 thinking_why: It matches principles to your case.
 new_slug: buyer-psychology-advisor
 name: Buyer psychology advisor
-summary: Describe a page or offer. Get the mental models that fit and honest
-  changes to try.
+summary: Find the buyer psychology that fits your page or offer. Get a short list of mental models and honest changes to try on your pricing or headline.
 job: understand-customers
 headline: Buyer psychology advisor
-subhead: Describe the page, offer or price you want to improve and where people
-  hesitate. It picks the mental models and buying biases that apply, such as
-  anchoring or loss aversion. You get a short list of models, a plain
-  explanation of each, specific changes to try and rules for using them
-  honestly.
+subhead: Describe the page, offer or price you want to improve and where people hesitate. It picks the mental models and buying biases that apply, such as anchoring or loss aversion. You get a short list of models, a plain explanation of each, specific changes to try and rules for using them honestly.
 explain: |
   You pick up a short list of mental models that fit your page or offer, plus a way to use each one without tricking anyone. Describe what you are selling and where people hesitate, and you get the models that apply, why they work on people, and a concrete change to make.
 
@@ -20,6 +15,10 @@ when:
   - You want to test a new headline and need ideas rooted in how people decide.
   - A competitor wins on trust and you want to close the gap fairly.
   - You are planning an offer and want to check it against known buying habits.
+not_for:
+  - "You need legal or ad-rule checks on your claims: ask a lawyer or read the ad platform's own rules."
+  - "You want exact price points or a full pricing plan: use a pricing skill, since this one only shows how buyers react to price."
+  - "You want finished page copy written: use a copywriting skill, then come back to check it against these models."
 you_give:
   - A page, offer or price you want to improve
   - Your audience and where they hesitate
@@ -30,7 +29,22 @@ you_get:
   - Specific changes to try on your page
   - Guidance for using each one honestly
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
+  - Paste your page text, offer or price. Say who buys and where they hesitate.
+  - Add your product context file if you have one (optional). It helps the advice fit your buyers.
+  - Read the models it picks. Check that each one fits what you see in real buyers.
+  - Pick one or two changes and test them on your page. Keep the honest use notes in mind.
+output_sample:
+  input:
+    - Your page, offer or price, pasted as text
+    - Your audience and where they hesitate
+    - Your product context file (optional)
+  output:
+    - name: Models that fit
+      contains: A short list of mental models or buying biases that match your page, offer or price.
+    - name: Why it works
+      contains: A plain explanation of the idea behind each model and how it shapes a buyer's choice.
+    - name: Marketing application
+      contains: One specific change to try on your page for each model.
+    - name: Honest use note
+      contains: A short rule for using each model fairly, without tricking anyone.

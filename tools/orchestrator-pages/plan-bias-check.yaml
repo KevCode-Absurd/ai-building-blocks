@@ -1,6 +1,6 @@
 new_slug: plan-bias-check
 name: Check a plan for bias, bad incentives and failure
-summary: Describe a decision. Get the pressures behind it, who is rewarded for what, and how the plan could fail.
+summary: Check a plan for bias before you commit. Describe the decision and get the pressures behind it, who is rewarded for what, and how it could fail.
 job: think-and-decide
 thinking: high
 thinking_why: It has to catch pressures you can't see in your own thinking. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to sign, hire, invest or launch and want the plan attacked before you commit.
   - A deal feels urgent, and you want to know whether the urgency is real.
   - Your team's pay or targets might be pulling people the wrong way and you can't tell.
+not_for:
+  - "You face a small choice that is easy to undo: use a simple pros and cons list instead."
+  - "You have already signed and cannot change course: talk to a trusted adviser about how to limit the damage."
+  - "You want to judge whether advice is honest: use the Advice credibility checker."
 you_give:
   - The decision, and the date you must make it
   - Your reasons for it, in your own words
@@ -31,6 +35,23 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the decision and your reasons. It works step by step and saves each result.
   - Wait a day before you act on the calmer version, and give the attacks to the people you chose.
+output_sample:
+  input:
+    - The decision you face and the date you must make it
+    - Your reasons for it, in your own words
+    - Who is involved and how each person is paid or rewarded
+    - What the plan depends on, such as money, people or one big customer (optional)
+  output:
+    - name: "Step 1: Decision pressure check"
+      contains: Your clear case, the pressures at work, how many stack up, and a cooling-off step.
+    - name: "Step 2: Incentive check"
+      contains: A table of who is rewarded for what, where it pulls the wrong way, and a fix.
+    - name: "Step 3: Failure-first check"
+      contains: What would guarantee failure, survival risks and other ways to fail, and a change for each.
+    - name: The bet and the attacks
+      contains: The bet stated plainly, and attacks on market, timing and team for the people you pick.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Writes your clear case
     text: Writes your reasons first, then checks them for incentives, past promises, the crowd and fear of loss.

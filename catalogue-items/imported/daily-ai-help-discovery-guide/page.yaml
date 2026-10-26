@@ -2,14 +2,23 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: daily-ai-help-discovery-guide
 name: Daily AI help discovery guide
-summary: Talk through a recent day. Find small ways AI could help, matched to tools it can actually use.
+summary: Talk through a recent day and find small ways AI could help. Get a short recap, a few ideas and one small experiment to try this week.
 job: set-up-ai
 headline: Daily AI help discovery guide
 subhead: Share a recent day, a repeated hassle, or a small change you want to try. It asks one focused question at a time and checks what your AI can do. You get a short recap and useful options, with memory choices kept separate.
+not_for:
+  - "You need therapy, a diagnosis or crisis support: contact a doctor, a counselor or an emergency service."
+  - "You already know the task you want done: ask your AI for that task directly, no discovery chat needed."
+  - "You want to write requirements for a product: use a simple stakeholder interview with the people involved."
 you_give:
-  - A recent experience or routine you want to explore, your time limit, and boundaries.
+  - A recent day, a repeated hassle, or a small change you want to try
+  - Your time limit for the chat (optional)
+  - Things your AI should never notice, remember or suggest (optional)
 you_get:
-  - A recap, a few evidence-based help ideas, and an optional small experiment.
+  - A short recap of what you said, in your words
+  - One or two small ideas for AI help, each checked against tools your AI really has
+  - One small experiment you can undo (optional)
+  - A list of memories your AI could save, which you approve or skip
 how_it_works:
   - title: Choose a useful focus
     text: Start with a day review, recurring issue, possible AI help, or one small experiment.
@@ -24,5 +33,28 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open your chat AI and paste in the skill instructions, or upload the skill folder if your AI takes files.
+  - Say you want a daily check-in. Name a recent day, a hassle, or a small change to try.
+  - Tell it how much time you have and what is off limits.
+  - Answer one question at a time. Correct it when it guesses wrong.
+  - Ask it to wrap up when you have enough. Read the recap and pick which ideas, if any, to try.
+  - Say yes or no to each memory. Nothing should be saved without your yes.
+output_sample:
+  input:
+    - A recent day, a repeated hassle, or a small change you want to try
+    - How much time you have for the chat
+    - Anything your AI should never notice, remember or suggest (optional)
+  prerequisites:
+    - A chat AI that can follow the skill instructions
+    - Memory, calendar or other tools are optional, and your AI checks what it really has
+  output:
+    - name: What I heard
+      contains: The recurring situations or needs that came up in your own words.
+    - name: Possible ways I could help
+      contains: One or two small, concrete ideas, each marked as available, unverified, buildable or not a fit.
+    - name: One experiment
+      contains: A small step you can undo, if you want to try one.
+    - name: Possible memories
+      contains: Facts you said that your AI could save, only if you say yes. Empty if none.
+    - name: Open question
+      contains: What is still unclear after the chat.

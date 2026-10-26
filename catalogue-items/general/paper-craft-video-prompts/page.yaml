@@ -1,27 +1,36 @@
 new_slug: paper-craft-video-prompts
 name: "Paper craft video clip prompt writer"
-summary: "Paste your paper-craft script and attach product photos. Get cut-paper image and clip prompts and an edit list."
+summary: "Turn a paper-craft ad script into image and clip prompts where paper moves like real paper: avatar card, sheets, storyboard, clips, edit list."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Paper craft video clip prompt writer"
-subhead: Give it a narrated paper-craft script and product photos. It writes an avatar card, sheets, a storyboard and clip prompts where paper moves only as paper can, stopping three times for your OK. You get every prompt and an edit list for putting the video together.
+subhead: Give it a narrated paper-craft script and photos of your product. It writes an avatar card, sheets, a storyboard and clip prompts where paper moves only as paper can. It stops three times for your OK. You get every prompt and an edit list.
 
 explain: |
-  Paper ads break in familiar ways once an AI video tool gets them. The scene turns into flat clip art. It shows up as a craft model on a desk instead of a world you're inside. The paper woman looks different in every shot, paper bends like rubber, and your label gets redrawn wrong.
+  Paper ads break in familiar ways once an AI video tool gets them. The scene turns into flat clip art. It looks like a craft model on a desk, not a world you are inside. The paper woman looks different in every shot. Paper bends like rubber. Your label gets redrawn wrong.
 
-  This skill runs the same six stages as every video block here. It picks who carries the ad, turns them into an image, and makes a sheet of every angle, plus product and set sheets. A material sentence (build, paper types, edge, colors, one low side light) and a motion sentence (stop-motion on twos, rigid pieces) are locked there and pasted into every prompt. Then a storyboard, where every frame says where the camera stands inside the paper world. Only then come clips, with each paper mechanism written as it really works. You approve the avatar, the sheets and the storyboard first.
+  This skill writes the prompts in six stages. It picks who carries the ad, turns them into an image, and makes a sheet of every angle, plus product and set sheets. Two fixed sentences are pasted into every prompt. One covers the material: build, paper types, edge, colors and one low side light. The other covers motion: stop-motion on twos, with rigid pieces.
+
+  Then it writes a storyboard where every frame says where the camera stands inside the paper world. Only then come the clips, with each paper trick written as it really works. You approve the avatar, the sheets and the storyboard first.
 
 when:
   - You have a paper-craft script and need it made with AI image and video tools.
   - Earlier attempts looked like clip art, clay, or a model on a table.
   - You want to approve each step before you spend credits on video.
+  - Your ad has a pop-up, a flap or a concertina that must move like real paper.
+
+not_for:
+  - You have no script yet. Write one first with the Paper craft video ad script writer.
+  - Your ad has no paper look. For clay figures, use the Clay town video clip prompt writer. For flat cutout figures, use the Paper cutout explainer video clip prompt writer.
+  - You want one still image. Use the Paper craft image ad maker.
+  - You have no product photos and no label text. It still writes prompts, but marks the product sheet check as still to do.
 
 you_give:
-  - The script with narration and picture notes (and its show plan and cast note, if you have them)
+  - The paper-craft script with narration and picture notes (and its show plan and cast note, if you have them)
   - Clean photos of your product's front, side and top, and its label text word for word
-  - How your product is used
+  - How your product is used, in the steps your brand really uses
   - Your tools and clip lengths, and whether your video tool makes sound (optional)
 you_get:
   - An avatar card to approve, then reference image prompts and a pick
@@ -30,11 +39,11 @@ you_get:
   - Clip prompts where paper moves only as paper can, and an edit list
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your script, then your label text, and attach the product photos.
-  - Approve the avatar card, then make the reference images and pick one.
-  - Make the sheets and approve them with the lock lines, then approve the storyboard.
-  - Make the clips from the approved frames, record the narration, and cut the edit from the edit list.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it in. It writes prompts only. You make the pictures and clips in an image tool and a video tool, which may cost credits.
+  - Paste your script. The best start is one from the Paper craft video ad script writer. Paste your label text and attach the product photos.
+  - Approve the avatar card. Make the reference images and pick one.
+  - Make the sheets and check the product sheet against your real pack. Approve the sheets with the lock lines, then approve the storyboard.
+  - Make each clip from its approved frame, 2 or 3 takes each. Record the narration and cut the edit from the edit list.
 
 how_it_works:
   - title: Takes in the script
@@ -161,6 +170,31 @@ example:
     3 and 4)
     CHECKS MISSED: none
 
+output_sample:
+  input:
+    - "Your narrated paper-craft script with picture notes"
+    - "Photos of your product (front, side, top) and its label text word for word"
+    - "How the product is used"
+    - "Your video tool, clip lengths and brand colors (optional)"
+  prerequisites:
+    - "A script, show plan and cast note from the Paper craft video ad script writer, for the best start"
+    - "An image tool and a video tool to make the pictures and clips"
+  output:
+    - name: "Avatar card"
+      contains: "Who or what carries the ad: role, look, clothes, props and what never changes."
+    - name: "Reference image prompts"
+      contains: "Prompts for 3 or 4 paper images of the avatar, and which one to pick."
+    - name: "Sheet prompts and lock lines"
+      contains: "Character, product and set sheets, with the material and motion sentences locked."
+    - name: "Storyboard"
+      contains: "A frame prompt with a camera spot inside the paper world, and a shot card for every shot."
+    - name: "Clip prompts"
+      contains: "One prompt per clip: start frame, one camera move, the timed paper change and what stays fixed."
+    - name: "Edit list"
+      contains: "Clip order, cuts, captions, label overlay, voice, end card, safe zones and MISSING lines."
+    - name: "Checks missed"
+      contains: "One line for each check the prompts still fail, or none."
+
 tweaks:
   - what: Who carries it
     how: One paper figure, paper hands, or the product alone. With no figure, stages 1 to 3 become the product and set sheets.
@@ -193,9 +227,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match."}
-    - {name: "Veo", why: "Starts each clip from your approved frame and can end on a second frame, in 8-second clips."}
-    - {name: "Kling", why: "Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot."}
+    - {name: "Nano Banana", why: "Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match. Check the current limit in the tool."}
+    - {name: "Veo", why: "Starts each clip from your approved frame and can end on a second frame, in 8-second clips. Check that your plan includes it."}
+    - {name: "Kling", why: "Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot. Check the current limit in the tool."}
     - {name: "ElevenLabs", why: "Reads the narration in a stock voice from its library, with tags for pauses and pace."}
   inputs:
     - "Photos of real paper you like (card, tissue, kraft), so the material sentence names paper that exists"

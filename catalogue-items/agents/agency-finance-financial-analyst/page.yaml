@@ -1,0 +1,143 @@
+name: Financial Analyst agent
+summary: "Get your financial model checked: recalculated figures, errors, base, best and worst cases, and which assumption could change your decision."
+headline: Financial Analyst agent
+subhead: "Paste your model's assumptions and key results, and say what you are deciding. It recalculates the figures, finds errors, runs a base, best and worst case and shows which assumption flips the answer. You get a model review and a plain-words choice between options."
+job: money-and-investing
+thinking: high
+thinking_why: It recalculates figures and tests whether the answer holds when one input changes. Use a model that does arithmetic carefully and shows each step.
+explain: |-
+  A financial model review checks the numbers behind a plan before you bet money on it. Most spreadsheet models are built to show a good answer. Few are tested for what happens when sales, costs or timing come in differently.
+
+  This agent starts with the assumptions, not the formulas. It lists each one with its source and says which are history and which are guesses. Then it recalculates your key figures from those inputs and compares them to what the model says. Any mismatch is listed as an error with its likely cause.
+
+  Next it runs three cases (base, better, worse) and changes one input at a time to find the ones that move the answer most. If your choice flips when one input moves by 15%, it says so. The result is a tradeoff table in plain words. It works from what you paste. It does not open your spreadsheet, and it is not an audit, tax or investment opinion.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You built a forecast or a pricing model and want a second pair of eyes before you rely on it.
+  - You have two options, such as a new product line or a new hire, and want the numbers set side by side.
+  - A lender or investor will read your model and you want to find the weak spots first.
+  - You inherited a spreadsheet and do not know which inputs drive the answer.
+not_for:
+  - You want a new model built from scratch. Use the Financial model builder.
+  - You want to know if a single purchase pays back. Use the Business investment analyst.
+  - You want new results worked into an existing model. Use the Financial model refresher.
+  - You need tax, audit or personal investment advice. Take those to a qualified accountant or adviser.
+you_give:
+  - The decision you are making, in one or two lines.
+  - Your model's assumptions, such as growth, margins, costs and timing, pasted as a list or table.
+  - The model's key results, such as profit, cash and payback, as they show in your spreadsheet.
+  - The source of each assumption, such as last year's sales or a supplier quote (optional)
+  - Any figure you are unsure of, and the range you think it could take (optional)
+you_get:
+  - A list of your assumptions marked as history, estimate or guess
+  - Recalculated figures set beside the model's figures, with any mismatch explained
+  - A base, better and worse case with the inputs that differ
+  - The inputs that move the answer most, and the point where your choice flips
+  - A tradeoff table for your options and a list of checks still needed
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - State the decision in a line or two. Paste the assumptions and the model's key results. You can attach the sheet as a file, but pasted tables are easier to check.
+  - Say which numbers are history and which are guesses. No code or web access is needed.
+  - Type "Review this model. Recalculate each key figure and show your working. Do not fill any gap with a guess."
+  - Read the mismatch list first. Fix those cells in your sheet, then ask for the review again.
+  - Check the flip point against your gut. If a small change in one input flips the answer, treat the plan as a coin toss until you know that input better.
+how_it_works:
+  - title: Fix the question
+    text: It restates the decision and the outputs that matter. Anything missing is asked once, then marked MISSING.
+  - title: List the assumptions
+    text: Each input gets a source and a label of history, estimate or guess, so facts and projections stay apart.
+  - title: Recalculate
+    text: It works the key figures again from your inputs and shows its working beside the model's results.
+  - title: Run three cases
+    text: It sets a base, better and worse case. It uses your ranges if you gave them, or labelled test shifts if not.
+  - title: Test one input at a time
+    text: It moves each input up and down to find which ones change the answer most, and where the choice flips.
+  - title: Write the tradeoffs
+    text: It sets the options side by side in plain words, then lists the checks still needed.
+output_shape: |-
+  DECISION AND SCOPE
+    Decision <what> | Outputs that matter <list> | Time span <period>
+
+  ASSUMPTIONS
+    <input> | <value> | <source> | <History, Estimate or Guess>
+
+  RECALCULATED FIGURES
+    <figure> | Model says <value> | Recalculated <value> | Difference <value> | Likely cause <reason>
+
+  ERRORS FOUND
+    <error> | <where> | <effect on the answer> | <fix>
+
+  SCENARIOS
+    <Base, Better or Worse> | <inputs that differ> | <result>
+
+  WHAT MOVES THE ANSWER
+    <input> | <change tested> | <effect on result> | <does the choice flip: yes or no>
+
+  DECISION TRADEOFFS
+    <option> | <result in each case> | <main risk> | <what to watch>
+
+  CHECKS STILL NEEDED
+    <check> | <why it matters> | <who can do it>
+output_sample:
+  input:
+    - The decision you are making, in one or two lines
+    - Your model's assumptions, as a list or table
+    - The model's key results, as your spreadsheet shows them
+    - The source of each assumption and any ranges you think are fair (optional)
+  prerequisites:
+    - An AI that can read pasted tables or a spreadsheet file
+  output:
+    - name: Decision and scope
+      contains: The choice under review, the outputs that matter and the time span.
+    - name: Assumptions
+      contains: Each input with its source, labelled history, estimate or guess.
+    - name: Recalculated figures
+      contains: The model's figures beside recalculated ones, with any difference and its likely cause.
+    - name: Errors found
+      contains: Mistakes with where they sit, their effect on the answer and a fix.
+    - name: Scenarios
+      contains: A base, better and worse case with the inputs that differ.
+    - name: What moves the answer
+      contains: Each input tested, its effect and whether your choice flips.
+    - name: Decision tradeoffs
+      contains: Each option's result in every case, its main risk and what to watch.
+    - name: Checks still needed
+      contains: What to verify, why it matters and who can do it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a spreadsheet as a file and re-add the cells, which is faster than checking by eye.
+  inputs:
+    - The tab or cells where each assumption lives, so errors can be traced to a cell.
+    - Last year's real results, so history can be told apart from guesses.
+    - The range you think is fair for your two shakiest inputs.
+terms:
+  - term: Assumption
+    meaning: A number you have to guess or estimate, such as next year's sales growth.
+  - term: Scenario
+    meaning: One full run of the model with a chosen set of inputs.
+  - term: Sensitivity
+    meaning: How much the result moves when one input changes.
+  - term: Flip point
+    meaning: The input value at which your best choice changes to another.
+  - term: Working capital
+    meaning: The cash tied up in unpaid customer bills and stock, less what you owe suppliers.
+tweaks:
+  - what: Decision
+    how: Name the choice, such as "lease or buy the van". A model with no decision gets a general review.
+  - what: Ranges
+    how: Give a low and high for the two inputs you trust least. Real ranges beat test shifts.
+  - what: Detail
+    how: Ask for the summary first, then ask it to expand any figure that did not match.
+improve:
+  - Keep each review with the model version it checked, so later changes can be compared.
+  - Add a note in your sheet for each assumption's source. It saves retyping next time.
+  - Pair it with the FP&A Analyst agent once the plan is live, to track results against it each month.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -1,15 +1,13 @@
 slug: explain-inventory-accounting-margin-effects
 name: Explain inventory accounting margin effects
-summary: Reconcile inventory reserve movements and charges before comparing margins and cash investment.
+summary: "Bridge LIFO reserves, inventory write-downs and stock cash to see comparable gross margin and operating cash invested in inventory."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - lifo-reserve-earnings-bridge
   - inventory-charge-margin-bridge

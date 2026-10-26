@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks the right trigger and writes the script.
 new_slug: task-automation-builder
 name: Task automation builder
-summary: Name a repetitive task. Get a script, schedule or trigger that does it for you.
+summary: Turn a repetitive task into a script, schedule or file watcher. Name the task and its trigger, and get a tested task automation you can run.
 job: set-up-ai
 headline: Task automation builder
-subhead: Name the repetitive task, what starts it and where it will run. It
-  picks a pattern, such as a script, a file watcher or a scheduled job, then
-  builds and tests it. You get the working script, the trigger set up, error
-  handling and logs, and notes on running it.
+subhead: Name the repetitive task, what starts it and where it will run. It picks a pattern, such as a script, a file watcher or a scheduled job, then builds and tests it. You get the working script, the trigger set up, error handling and logs, and notes on running it.
 explain: |
   A working script, schedule or trigger that does a boring job for you, tested and logged, so you stop doing it by hand. You describe what starts it and what should happen, and the skill builds the right kind of automation.
 
@@ -19,6 +16,10 @@ when:
   - You check a website or API by hand and want an alert instead.
   - You want a job to run every night without you.
   - You need a CI step that runs when code changes.
+not_for:
+  - "You will only run the job once: do it by hand or ask your AI for a one-off command."
+  - "You want a simple link between two apps: use a no-code tool such as Zapier or Make."
+  - "You have nowhere to run a script, such as a server or your own computer: set that up first, or use a hosted no-code tool."
 you_give:
   - The repetitive task in plain words
   - What starts it (time, file, event)
@@ -30,8 +31,29 @@ you_get:
   - Error handling and logs
   - Short notes on how to run and monitor it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Open Claude, ChatGPT or Gemini. Use one that can run code and read files if you want the script tested.
+  - Paste this skill into the chat.
+  - Describe the task, what starts it and where it will run. Add folder paths or the apps involved.
+  - Read the plan and the script. Check any file paths and names before you run it.
+  - Run the tests it gives you, then set up the schedule or trigger.
+  - Keep the notes it writes so you know how to pause or turn off the job.
+output_sample:
+  input:
+    - The repetitive task in plain words
+    - "What starts it: a time, a new file or an event"
+    - Where it will run
+    - Paths or credentials it needs (optional)
+  prerequisites:
+    - An AI that can run code and read your files, to test the automation
+    - A computer or server where the job can keep running
+  output:
+    - name: Automation script or workflow file
+      contains: The working code for the task, in a shell script, Python script or CI file.
+    - name: Schedule or trigger
+      contains: The cron line, file watcher or CI trigger that starts the script.
+    - name: Error handling and logs
+      contains: How the script handles bad input and failures, and where it writes its log.
+    - name: Test results
+      contains: What happened when it ran on the normal case, empty input and failures.
+    - name: Run and monitor notes
+      contains: How to run it, check it, pause it and turn it off.

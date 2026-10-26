@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It is a short set of habits to follow.
 new_slug: token-saver-for-coding-agents
 name: Token saver for coding agents
-summary: Turn it on for coding sessions. Get fewer wasted tokens from big reads,
-  noisy logs and repeat reads.
+summary: Cut wasted tokens in coding sessions. Your AI reads only what it needs and keeps test and build logs short, so you hit usage limits later.
 job: set-up-ai
 headline: Token saver for coding agents
-subhead: Cut wasted tokens in coding sessions so you hit usage limits later and
-  pay less. Every big file or log an agent reads is re-sent on every later step,
-  so a few careless reads cost a lot.
+subhead: Cut wasted tokens in coding sessions so you hit usage limits later and pay less. Every big file or log an agent reads is re-sent on every later step, so a few careless reads cost a lot.
 explain: |
   Cut wasted tokens in coding sessions so you hit usage limits later and pay less. Every big file or log an agent reads is re-sent on every later step, so a few careless reads cost a lot.
 
@@ -18,6 +15,10 @@ when:
   - Your usage bill or limit climbs faster than expected.
   - Test and build logs flood the conversation.
   - You ask your agent to search a large codebase.
+not_for:
+  - "You want a bigger context window or a cheaper AI plan: change the model or plan in your AI tool's settings."
+  - "Your session is very short, a few steps only: skip it, because the rules take about 850 tokens of space themselves."
+  - "You need a report on past token use: the checking script is not in this folder, so read your AI tool's usage page."
 you_give:
   - A coding agent that supports skills
   - A coding task with files, tests or builds
@@ -28,8 +29,26 @@ you_get:
   - Fewer repeat reads
   - Leaner answers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your coding agent in your project folder. It must be able to read files and run shell commands.
+  - Add the skill to your agent, using the setup steps for your AI tool. You can also paste the rules into the chat.
+  - Give your agent a normal coding task, and say "Follow the token saver rules".
+  - Watch for short test output, searches before reads, and no repeat reads of the same file.
+  - If a result looks cut off, ask your AI to search the saved log file for the error.
+output_sample:
+  input:
+    - A coding task that involves files, tests or builds
+    - Your project files, open in an AI that can read them
+    - Permission for your AI to run shell commands
+  prerequisites:
+    - A coding agent that can read files and run shell commands, such as Claude Code, Codex, Cursor or Gemini
+  output:
+    - name: Locate, then read
+      contains: Your AI checks file size and searches first, then reads only the lines it needs.
+    - name: Computed answers
+      contains: For counts, totals and lookups in big data files, a short script prints only the answer.
+    - name: Bounded command output
+      contains: Tests, builds and installs run quietly. Long jobs save to a log file and show the last 40 lines.
+    - name: Diffs and targeted edits
+      contains: Your AI checks changes with git diffs and edits the lines that change, not whole files.
+    - name: Lean final answer
+      contains: A short reply that leads with the result and the exit code, with no recap.

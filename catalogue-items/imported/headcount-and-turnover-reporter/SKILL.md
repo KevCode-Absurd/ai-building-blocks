@@ -6,7 +6,7 @@ argument-hint: "<report type — headcount, attrition, diversity, org health>"
 
 # /people-report
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> If you see unfamiliar placeholders such as ~~HRIS, ignore them unless that tool is connected. A CSV or pasted table works without any connector.
 
 Generate people analytics reports from your HR data. Analyze workforce data to surface trends, risks, and opportunities.
 
@@ -23,19 +23,29 @@ Generate people analytics reports from your HR data. Analyze workforce data to s
 **Diversity**: Representation metrics — by level, team, pipeline
 **Org Health**: Span of control, management layers, team sizes, flight risk
 
+## Steps
+
+1. Ask which report type and what question the report must answer. If the person gives no question, ask once. Do not guess.
+2. Check the data. List the columns you found and the columns you need for this report type (see "What I Need From You"). Name any column that is missing. Do not invent values to fill gaps.
+3. Check the basics before counting: duplicate employee IDs, end dates before start dates, blank team or level, and the date the data was pulled. Fix or flag each one in the Methodology section.
+4. Work out the metrics for the report type (see "Key Metrics"). Show the formula in words next to each figure, for example "attrition rate = exits in the period / average headcount in the period".
+5. Compare with an earlier period only if the data has one. If it does not, mark Trend as "no earlier period" instead of calling it up or down.
+6. Apply the privacy rules below. Then write the report in the Output format.
+7. End with 2 to 4 recommendations that follow from the numbers, and say which ones need a person to check the facts first.
+
 ## Key Metrics
 
 ### Retention
 - Overall attrition rate (voluntary + involuntary)
-- Regrettable attrition rate
+- Regrettable attrition rate (only if the data says which exits were regretted)
 - Average tenure
-- Flight risk indicators
+- Flight risk indicators (at team level only, see privacy rules)
 
 ### Diversity
 - Representation by level, team, and function
 - Pipeline diversity (hiring funnel by demographic)
 - Promotion rates by group
-- Pay equity analysis
+- Pay equity analysis (only with pay data, and have HR and legal review it before anyone acts)
 
 ### Engagement
 - Survey scores and trends
@@ -48,13 +58,14 @@ Generate people analytics reports from your HR data. Analyze workforce data to s
 - Span of control efficiency
 - Time to productivity for new hires
 
-## Approach
+Only report the metrics the data can support. Say "not enough data" for the rest.
 
-1. Understand what question they're trying to answer
-2. Identify the right data (upload, paste, or pull from ~~HRIS)
-3. Analyze with appropriate statistical methods
-4. Present findings with context and caveats
-5. Recommend specific actions based on data
+## Privacy rules
+
+- Report groups, not people. Do not name individuals in flight-risk, performance or pay findings.
+- Do not show a figure for a group of fewer than 5 people. Merge it into a larger group or mark it "too small to show".
+- Demographic and pay analysis is for spotting patterns to look into. It is not a basis for decisions about one person. Tell the reader to have HR and legal review it first.
+- Use only the data given. Do not add outside benchmarks. If the reader asks for one, ask for the source or label it "estimate, check before use".
 
 ## What I Need From You
 
@@ -68,7 +79,7 @@ Upload a CSV or describe your data. Helpful fields:
 ## Output
 
 ```markdown
-## People Report: [Type] — [Date]
+## People Report: [Type] — [Date of data]
 
 ### Executive Summary
 [2-3 key takeaways]
@@ -76,17 +87,17 @@ Upload a CSV or describe your data. Helpful fields:
 ### Key Metrics
 | Metric | Value | Trend |
 |--------|-------|-------|
-| [Metric] | [Value] | [up/down/flat] |
+| [Metric] | [Value] | [up/down/flat/no earlier period] |
 
 ### Detailed Analysis
-[Charts, tables, and narrative for the specific report type]
+[Tables and short narrative by team, level or location for the report type]
 
 ### Recommendations
 - [Data-driven recommendation]
-- [Action item]
+- [Action item, with who should check it first]
 
 ### Methodology
-[How the numbers were calculated, any caveats]
+[How each figure was calculated, data problems found, groups left out for privacy, anything missing]
 ```
 
 ## If Connectors Available

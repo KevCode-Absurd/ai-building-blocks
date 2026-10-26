@@ -16,6 +16,29 @@ use_cases:
   - "Turn a rival into a worthy rival: what their strengths show about your weak spots"
   - "Prepare a talk that rallies people around a belief, not a list of features"
   - "Ask whether a big change of direction still serves your cause"
+not_for:
+  - "You want proof of trust or sales: use your own sales and staff data, because a clear why does not prove either."
+  - "You need a team's psychological safety measured with research behind it: use the Amy Edmondson mind."
+  - "You want hard feedback on how you speak to your team: use the Kim Scott mind, whose approach is clear feedback with care."
+output_sample:
+  input:
+    - The problem you face, such as a pitch, a cost cut or a team in a hard patch
+    - What you do and who you do it for
+    - Who is on your team, and how they feel right now
+    - Any limits you must keep, such as budget, deadlines or fixed terms
+  output:
+    - name: Your why
+      contains: A short purpose line that states what you believe, before how or what.
+    - name: Golden Circle
+      contains: Your why, how and what laid out from the inside out.
+    - name: Rewritten pitch or page
+      contains: Your message reworked to open with the belief, then show features as proof.
+    - name: Circle of safety check
+      contains: Questions on whether your people feel safe, and where you can go first.
+    - name: Finite or infinite game check
+      contains: A look at whether your goals chase a short-term win or the long game.
+    - name: A choice for today
+      contains: One action you can take now, such as going first or saying your why.
 seats:
   - {seat: "Purpose and the why", asks: "Why does this exist, beyond making money, and would anyone outside the room care?"}
   - {seat: "Trust and safety", asks: "Do the people doing the work feel safe here, or are they protecting themselves from us?"}

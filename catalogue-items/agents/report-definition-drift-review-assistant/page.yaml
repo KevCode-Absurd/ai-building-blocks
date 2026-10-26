@@ -1,49 +1,102 @@
 new_slug: report-definition-drift-review-assistant
 name: Report definition drift review assistant
 headline: Report definition drift review assistant
-summary: A metric difference table, reconciled examples and reporting procedure.
+summary: Find where a recurring report's metric definition changed. Get a difference table, worked examples and a reporting procedure.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A metric difference table, reconciled examples and reporting procedure. Share actual recurring reports, source tables, metric definitions, periods, owners and conflicting calculation examples. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your recurring reports, how each metric is worked out and the last review. It checks what changed and shows the old and new sums side by side. You get a difference table, worked examples and a procedure to follow. Anything it cannot check is marked MISSING.
 explain: |-
-  A metric difference table, reconciled examples and reporting procedure.
+  Two reports can both say "conversion rate" and mean different things. One divides by sessions. The other divides by visitors. A new filter, a longer time window or a new data source can move the number. The business did not change. This is called definition drift. It shows up as a trend that looks real and is not.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. A shared label does not imply a shared denominator; definition changes need the metric owner approval. Missing tools or evidence stay visible in the final summary.
+  This agent checks for drift each time you ask for a review. It saves a small record of each metric: report, definition version, denominator, cutoff date, approved owner and open differences. Next time it compares the new reports with that record. If nothing changed, it says so and stops. If something changed, it runs the Align recurring report metric definitions workflow. That workflow uses the Spreadsheet checker to trace why the numbers differ, and the Process and SOP writer to document the procedure.
+
+  The agent does not decide which definition is right. Changing a definition needs the metric owner's approval. Until you have it, the agent marks the trend as not comparable.
 when:
-  - You need a metric difference table, reconciled examples and reporting procedure.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - Your weekly sales report and your monthly board report show different revenue for the same month.
+  - Someone changed a filter or a time window in a dashboard and last quarter no longer matches this quarter.
+  - A new data source feeds an old report and the totals jumped.
+  - You review the same reports every month and want a record of what changed since last time.
+not_for:
+  - "You have one question about two files today, such as why two totals differ. Use the Spreadsheet checker."
+  - "You need a written procedure for a process and no report is in question. Use the Process and SOP writer."
+  - "You want the monthly numbers report itself, not a check on its definitions. Use the Recurring KPI report maker."
+  - "You want a single run with no saved record for next time. Use the Align recurring report metric definitions workflow."
 you_give:
-  - Actual recurring reports, source tables, metric definitions, periods, owners and conflicting calculation examples. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - "The recurring reports you want checked, as exports or files, with the period each covers."
+  - "The source tables or exports behind them, with dates."
+  - "The written definition of each metric, if one exists, or the formula used in the report."
+  - "The name of the person who owns each metric."
+  - "Two or three examples where the same metric gives different numbers."
+  - "The last review's saved record and files (optional on the first run)."
+  - "Who will read the result, and what you may and may not change."
 you_get:
-  - A metric difference table, reconciled examples and reporting procedure.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - "A metric difference table that shows each metric's old and new definition and what changed."
+  - "Worked examples that calculate one period both ways from your own data."
+  - "A reporting procedure for pulling, calculating and reviewing each metric."
+  - "A list of open differences that still need a metric owner's decision."
+  - "A saved record of this review for next time."
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - "Download the pack and add it to Claude, ChatGPT or Gemini. It includes this agent, the Align recurring report metric definitions workflow and the Source note summariser."
+  - "Upload the reports, source exports and definitions. Say which review this is, and add last review's record if you have one."
+  - "Tell it who owns each metric, who will read the result and what it must not change."
+  - "Read the difference table first. Check two rows against your own spreadsheet before you trust the rest."
+  - "Send open differences to the metric owners. Do not publish a trend line across a changed definition until they approve."
+  - "Save the new record file. Give it back to the agent at the next review."
 how_it_works:
   - title: Read scope and prior state
-    text: Keep report ID, definition version, denominator, cutoff, approved owner and unresolved differences. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A recurring report changes its formula, source grain, time window or exclusions.
-  - title: Choose the next step
-    text: Run align-recurring-report-metric-definitions for changed evidence or a due review. If metric ownership or meaning is unclear, extract the conflicting definition records and stop the affected comparison before publishing a trend.
-  - title: Check and save evidence
-    text: A shared label does not imply a shared denominator; definition changes need the metric owner approval. Save source versions, branch reasons, outputs and unresolved checks.
+    text: Loads last review's record if you give one. The record holds report ID, definition version, denominator, cutoff, approved owner and open differences. On a first run it sets the baseline and says no drift can be claimed yet.
+  - title: Check what changed
+    text: Compares each report's formula, data grain, time window and exclusions with the record. A missing export counts as unknown, not as "no change".
+  - title: Choose the path
+    text: If nothing changed and no review is due, it returns a short "unchanged" note. If something changed, it runs the Align recurring report metric definitions workflow. If a definition sits in a long memo or email thread, it runs the Source note summariser first.
+  - title: Trace and document
+    text: The workflow's Spreadsheet checker traces why the same metric differs. Its Process and SOP writer writes the reporting procedure with a named owner and open conflicts.
+  - title: Check and save
+    text: It checks every figure against a source, keeps your original files untouched and allows at most two correction passes. It then saves the files, the run log and the updated record.
 output_shape: |-
-  Scope and source coverage
-  A metric difference table, reconciled examples and reporting procedure.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  REVIEW          <first baseline | comparison with review of <date>>
+  SCOPE           <reports, periods, owners>
+  CHANGED         <metric | what changed | evidence | date seen>
+  DIFFERENCE TABLE
+    <metric> | <report> | <formula and denominator> | <grain and window> | <exclusions> | <owner approved: yes | no | MISSING>
+  WORKED EXAMPLE  <metric | period | result by old definition | result by new definition | gap and why>
+  PROCEDURE       <steps to pull, calculate and review each metric | owner | version>
+  OPEN            <difference | who decides | what is blocked>
+  FILES           <each saved file>
+  MISSING         <every unresolved fact>
+  CHECKS MISSED   <one line each, or none>
+  NEXT            <one proposed action, awaiting approval>
+output_sample:
+  input:
+    - "Your recurring reports, as files or exports, with the period each covers"
+    - "The source tables or exports behind them"
+    - "The written metric definitions or the formulas in the reports"
+    - "The owner of each metric"
+    - "Examples where the same metric gives different numbers"
+    - "The last review's state.json and files (optional on the first run)"
+  prerequisites:
+    - "An AI that can read your files, such as Claude, ChatGPT or Gemini with uploads"
+    - "A spreadsheet tool if you want formulas recalculated and checked (optional)"
+    - "The pack with the Align recurring report metric definitions workflow and the Source note summariser"
+  output:
+    - name: drift-review.md
+      contains: "The difference table: each metric's old and new formula, denominator, time window and exclusions, and owner approval. Also the worked examples and open differences."
+    - name: step-01-spreadsheet-checker.md
+      contains: "Why the same named metric gives different totals. It traces the gap to grain, formulas, time windows, exclusions and source versions, without rewriting either source."
+    - name: step-02-process-and-sop-writer.md
+      contains: "The reporting procedure: how to pull, calculate, reconcile and review each metric, with a versioned definition, a named owner and the unresolved conflicts."
+    - name: run-log.md
+      contains: "The source files and versions used, which steps ran or were skipped and why, and the checks that passed or were missed."
+    - name: state.json
+      contains: "The small record for next time: report ID, definition version, denominator, cutoff date, approved owner and open differences."
+works_best_with:
+  tools:
+    - name: A compatible spreadsheet engine
+      why: Formula recalculation and workbook inspection need a real spreadsheet engine. Without one, the agent reads the tables and says which formulas it could not recalculate.
+  inputs:
+    - Approved examples of a good result.
+    - A named reviewer and their acceptance rules.
 tweaks:
   - what: Scope
     how: Choose one project, team, period or decision so the sources are comparable.
@@ -66,13 +119,14 @@ improve:
   - Add your own acceptance rules and one approved example without changing the component licences.
   - Keep corrections with the result so the next run uses current facts and the same definitions.
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
 terms:
+  - term: Definition drift
+    meaning: When the formula, data source, time window or exclusions behind a metric change over time, so old and new numbers no longer compare.
+  - term: Denominator
+    meaning: The number you divide by. Conversion rate by sessions and by visitors give different answers.
+  - term: Grain
+    meaning: What one row in the data stands for, such as one order, one session or one day.
+  - term: Cutoff
+    meaning: The last date or time a report counts.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

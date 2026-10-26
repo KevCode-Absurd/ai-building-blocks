@@ -1,6 +1,6 @@
 new_slug: job-exit-plan-writer
 name: "Job exit plan writer"
-summary: "Paste your job, notice terms and first clients. Get a notice letter, a talking order and income lined up for three months."
+summary: "Plan how to quit your job and go out on your own. Get a notice letter, the order to tell people, and a check that three months of income are covered."
 job: think-and-decide
 thinking: medium
 thinking_why: "It follows a fixed plan but must read the situation to set the order of conversations."
@@ -17,6 +17,10 @@ when:
   - "You have decided to leave a steady job and want to do it cleanly."
   - "You are being treated badly and are tempted to walk out in the middle of an argument."
   - "You are not sure if you have enough lined up to hand in notice."
+not_for:
+  - "You have not decided to leave yet: talk it through with a trusted friend or a career coach first."
+  - "You have a dispute at work that could still be fixed: raise it with your manager or HR first, and see an employment adviser if it stays stuck."
+  - "You need legal advice on your contract, notice or pay owed: see an employment lawyer or adviser in your area."
 
 you_give:
   - "Your role, your notice terms and what you are owed"
@@ -36,6 +40,31 @@ how_to_use:
   - "Paste the plan and the facts of the job. Say honestly what has gone wrong."
   - "Do not send the letter yet. Run the readiness check first. If it fails, close the gap before you hand in notice."
   - "Check the notice terms with your contract or a local adviser."
+output_sample:
+  input:
+    - Your role, notice terms and what you are owed
+    - "Your plan from the earlier steps: income floor, fees, first clients and cash"
+    - Who relies on you or would be hurt by your leaving (optional)
+    - What has gone wrong at work, in a few lines (optional)
+  prerequisites:
+    - Your income floor and cash target from the Independent income floor calculator and the Lean-year cash rules writer, or the same facts in your own words
+  output:
+    - name: What would keep me
+      contains: The one change in pay, treatment or role that would make you stay, and whether to say it once, or that nothing would.
+    - name: Readiness check
+      contains: Whether signed or paid work covers half your floor for three months and your cash target is met, with a verdict.
+    - name: Notice letter
+      contains: A short letter with dates, your role, your last day, one line of thanks and an offer to hand over.
+    - name: Order of conversations
+      contains: Who hears first, from people who rely on you to the team, with two lines to say to each.
+    - name: Hand-back and owed list
+      contains: What you must return and what you are owed, to be confirmed in writing.
+    - name: If it turns nasty
+      contains: Three calm lines to use if the other side attacks, and how to leave the room.
+    - name: First quarter
+      contains: Signed or paid work week by week, with hoped-for work kept in a separate list.
+    - name: Missing and Checks missed
+      contains: Facts it needed but did not have, and any checks the plan still fails.
 
 how_it_works:
   - title: "Asks what would keep you"

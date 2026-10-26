@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks a template, then fills it from your data.
 new_slug: report-builder
 name: Report builder
-summary: Give it your data. Get a clear report with charts, such as a sprint
-  retro, financial summary or postmortem.
+summary: Turn your raw data into a report with charts and written insights, like a sprint retro, financial summary or postmortem. Give it a table, get a report.
 job: work-with-files
 headline: Report builder
-subhead: A finished report from your raw numbers, with the charts and written
-  insights already in place. A sprint retro, a financial summary or an incident
-  postmortem no longer starts from a blank page.
+subhead: A finished report from your raw numbers, with the charts and written insights already in place. A sprint retro, a financial summary or an incident postmortem no longer starts from a blank page.
 explain: |
   A finished report from your raw numbers, with the charts and written insights already in place. A sprint retro, a financial summary or an incident postmortem no longer starts from a blank page.
 
@@ -18,6 +15,10 @@ when:
   - You have monthly figures and need a clear financial summary.
   - An outage happened and you need a postmortem document.
   - You export the same data every week and format it by hand.
+not_for:
+  - "You need audited financial statements or legal filings: use your accountant or a legal professional, since this report is a draft summary."
+  - "You only want a live dashboard that updates by itself: use a dashboard tool such as Looker Studio or Google Sheets."
+  - "Your data is not ready and has many gaps: fix the file first, or expect the report to list what is missing."
 you_give:
   - Data file or pasted table
   - Report type
@@ -30,8 +31,32 @@ you_get:
   - Written insights and trends
   - Check that every figure matches the data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open your AI tool. Paste your data, or attach the file if your AI can read files.
+  - Say which report you want, such as a sprint retro, financial summary, analytics report or incident postmortem.
+  - "Add the time period and the format you want: Markdown, HTML or PDF. PDF and HTML files need an AI that can run code."
+  - Read the data gaps note first. Fill in any missing figures yourself and ask for a new version.
+  - Check each number in the report against your data before you share it.
+  - Share the report with your team, or keep it as your record for the period.
+output_sample:
+  input:
+    - Your data as a table, JSON, CSV or an export
+    - The report type, such as sprint retro or postmortem
+    - The time period the data covers
+    - The output format you want (optional)
+    - Template changes, such as sections to add or drop (optional)
+  prerequisites:
+    - An AI that can run code and save files, if you want a PDF or HTML file
+    - A chat AI is enough if you only need Markdown text
+  output:
+    - name: Executive summary
+      contains: The main finding and what to do about it, in a short opening paragraph.
+    - name: Metrics tables
+      contains: Your figures with changes, averages, rankings and trends, compared with an earlier period when the data has one.
+    - name: Charts
+      contains: A chart for each key figure, using the chart slots in the chosen template.
+    - name: Written insights
+      contains: Short notes beside each table that say what the numbers show and why it matters.
+    - name: Recommendations or action items
+      contains: Next steps drawn from the data, such as fixes to try or owners for tasks.
+    - name: Data gaps and source note
+      contains: Missing fields, odd values, and where the data came from.

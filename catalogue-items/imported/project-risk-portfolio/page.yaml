@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs risk across several projects at once.
 new_slug: project-risk-portfolio
 name: Project risk and portfolio manager
-summary: Give it your projects. Get risks scored, resources balanced and a clear
-  status for stakeholders.
+summary: Score project risks by cost, balance your team's workload and get a status report leaders read in two minutes. A project risk and portfolio manager.
 job: plan-strategy
 headline: Project risk and portfolio manager
-subhead: "A clear picture across all your projects: which risks cost the most,
-  where people are overloaded and which projects need attention first. You end
-  with a status report leaders can read in two minutes."
+subhead: "A clear picture across all your projects: which risks cost the most, where people are overloaded and which projects need attention first. You end with a status report leaders can read in two minutes."
 explain: |
   A clear picture across all your projects: which risks cost the most, where people are overloaded and which projects need attention first. You end with a status report leaders can read in two minutes.
 
@@ -18,6 +15,10 @@ when:
   - Leaders ask for a status report and you have a pile of updates.
   - You need to put a dollar figure on project risks.
   - Dependencies between teams are causing surprises.
+not_for:
+  - "You run one small project or a single team's task list: a plain status update or a simple checklist is enough."
+  - "You need a project plan for one launch with dates and tasks: ask a project manager or use a simple plan in a spreadsheet."
+  - "You want live data from Jira or Confluence: those links need access and setup first, so paste your updates in by hand."
 you_give:
   - List of projects with budget, dates and owners
   - Known risks with rough odds and impact
@@ -30,8 +31,32 @@ you_get:
   - Health scores and status colours
   - Executive summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. If you can upload files, add the skill folder too.
+  - Paste your project list, risks, team capacity and who the report is for. Mark anything you don't know as unknown.
+  - Ask for the risk register first, then the priority ranking, then the executive report.
+  - If you want the health scores from the scripts, use an AI that can run code and upload your project data file.
+  - Treat any benchmark targets as starting examples. Replace them with your own numbers before you share the report.
+output_sample:
+  input:
+    - Your list of projects with budget, dates and owners
+    - Known risks with rough odds and cost if they happen
+    - Your team's capacity and who is assigned where
+    - Who will read the report (optional)
+  prerequisites:
+    - An AI that can run code, if you want the scripts to run on a data file
+    - Your project data in the format the skill expects (a JSON file)
+  output:
+    - name: Portfolio health scores
+      contains: A score for each project on several dimensions, with a red, amber or green status.
+    - name: Risk register
+      contains: Each risk scored by expected cost, which is the odds times the cost, with the top ones first.
+    - name: Schedule risk ranges
+      contains: Likely finish ranges for projects, built by running many what-if cases on your dates.
+    - name: Priority ranking
+      contains: Your projects ranked with a method such as WSJF, RICE or MoSCoW.
+    - name: Resource capacity check
+      contains: Where people are overloaded or free, compared with what is planned.
+    - name: RACI matrix
+      contains: A table showing who is responsible, accountable, consulted and informed for each task.
+    - name: Executive report
+      contains: A short status report with colours, risks, spend, capacity and next steps for leaders.

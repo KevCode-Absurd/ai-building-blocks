@@ -50,15 +50,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Write the warm reminder.** Use the skill `payment-reminder-letter-writer`. A reminder that assumes good faith, makes paying easy and gives a reason to do it now, in Robert Collier's manner.
+1. **Write the warm reminder.** Use the skill `payment-reminder-letter-writer`. A reminder that assumes good faith, makes paying easy and gives a reason to do it now, in Robert Collier's manner. You send it and wait before step 2.
 
 Pause here: Send the reminder yourself. Wait the days you set before going on.
 
-2. **Find what they can pay.** Use the skill `can-they-pay-deal-checker`. Give it the invoice, your history and what you know of their means. A range they can realistically pay and when, and proposed terms (a plan, a part payment, a date), following Keynes's rule to ask only for what can be paid.
+2. **Find what they can pay.** Use the skill `can-they-pay-deal-checker`. Give it your own invoice, history and what you know of their means, not the reminder text from step 1. A range they can realistically pay and when, and proposed terms (a plan, a part payment, a date), following Keynes's rule to ask only for what can be paid. It hands the proposed terms to step 3.
 
 Pause here: Send the proposed terms yourself. Wait the days you set.
 
-3. **Write the firm follow-up.** Use the skill `late-invoice-reminder-writer`. Give it the proposed terms and the history. A firmer follow-up that states the consequence plainly, restates the terms and leaves the door open. You decide whether to send it.
+3. **Write the firm follow-up.** Use the skill `late-invoice-reminder-writer`. Give it the proposed terms from step 2, the invoice facts and the history. A firmer follow-up that states the consequence plainly, restates the terms and leaves the door open. You decide whether to send it.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

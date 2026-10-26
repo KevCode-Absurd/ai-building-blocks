@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It sequences practice steps for a hard skill.
 new_slug: compare-sources-lesson
 name: Compare history sources lesson builder
-summary: Give it two or more accounts. Get a lesson series that teaches learners
-  to find agreement, conflict and gaps.
+summary: Build a lesson series that teaches students to compare history sources and spot where accounts agree, clash or leave gaps.
 job: teach-and-train
 headline: Compare history sources lesson builder
-subhead: Give it two or more accounts. Get a lesson series that teaches learners
-  to find agreement, conflict and gaps. Bring your historical topic or question.
-  Use the result to plan your next step.
+subhead: Give it two or more accounts. Get a lesson series that teaches learners to find agreement, conflict and gaps. Bring your historical topic or question. Use the result to plan your next step.
 explain: |
   A short lesson series that teaches students to compare accounts of the same event, find where they agree and clash, and notice what none of them says. This is the skill historians use to decide what likely happened.
 
   You give Claude the topic and your class level. It builds on single-source skills first, since students must already know who wrote each document and why. Then it adds tools for side by side comparison, such as a worksheet for what each source says, where they differ and what the gap may mean. Tasks use real puzzles, like the same author contradicting himself in two accounts. It draws on research showing even college students rarely compare documents unprompted.
 when:
   - Your class reads each source alone and never checks it against another.
-  - You are teaching a topic with competing accounts, such as an event with two
-    sides.
+  - You are teaching a topic with competing accounts, such as an event with two sides.
   - Students say two sources disagree but cannot say why.
   - You need a few lessons that build a habit, not a one-off.
+not_for:
+  - "You want to teach students to judge one document alone: use a single-source lesson with a simple who, when and why worksheet."
+  - "You need one lesson, not a series: ask your AI for a single lesson plan."
+  - "Your students do not yet know who wrote a source and why: teach that first, then come back."
 you_give:
   - Your historical topic or question
   - Year group and current skill level
@@ -30,7 +30,26 @@ you_get:
   - Questions on agreement, conflict and gaps
   - Teacher notes on common mistakes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the full skill text. No code or paid tool is needed.
+  - Add your topic, your students' year group and experience, and what they do now with many sources.
+  - Add your document list if you have one, with the type of each source (optional).
+  - Run it and read the Corroboration Progression first. Check it fits the time you have.
+  - Edit the prompts and worksheet to suit your class, then teach the first lesson.
+output_sample:
+  input:
+    - Your history topic or question
+    - Your students' year group and experience with several documents
+    - What students do now when they read many sources
+    - The documents you plan to use (optional)
+    - The mix of source types (optional)
+  output:
+    - name: Corroboration Progression
+      contains: The order of skills across the lessons, from simple side by side reading to weighing gaps.
+    - name: Explicit Instruction Sequence
+      contains: Lesson by lesson steps for you to teach, with modelling before students try it alone.
+    - name: Corroboration Prompts
+      contains: Questions students answer about where sources agree, conflict and say nothing.
+    - name: Common Failure Patterns
+      contains: Mistakes students often make when comparing sources, and how to fix each one.
+    - name: Assessment Indicators
+      contains: Signs you can watch for that show students are comparing sources well.

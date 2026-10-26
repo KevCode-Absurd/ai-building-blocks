@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Ranking opportunity means weighing volume, difficulty and fit.
 new_slug: rival-keyword-gap-finder
 name: Rival keyword gap finder
-summary: Connect Ahrefs and name rivals. Get keywords they rank for that you do
-  not, ranked by opportunity into quick wins.
+summary: Find keywords your rivals rank for and you do not. Connect Ahrefs, name your rivals, and get a scored keyword gap list with quick wins.
 job: study-competitors
 headline: Rival keyword gap finder
-subhead: A ranked list of search terms your rivals appear for and you do not, so
-  you know which pages to write next. Quick wins are marked, and related terms
-  are grouped.
+subhead: A ranked list of search terms your rivals appear for and you do not, so you know which pages to write next. Quick wins are marked, and related terms are grouped.
 explain: |
   A ranked list of search terms your rivals appear for and you do not, so you know which pages to write next. Quick wins are marked, and related terms are grouped.
 
@@ -18,6 +15,10 @@ when:
   - A rival is gaining search traffic and you want to know why.
   - You are entering a new market and need to see the field.
   - You want fast wins from keywords just outside page one.
+not_for:
+  - "You want keyword ideas with no rival to compare against: ask your AI for a plain keyword research list instead."
+  - "You want to improve one page you already have: edit that page by hand with its target keyword in mind."
+  - "You have no Ahrefs account and cannot get rival keyword data: this skill needs that data, so get access first or skip it."
 you_give:
   - Your site address
   - Three to five competitor sites
@@ -31,8 +32,38 @@ you_get:
   - A list of quick wins
   - Content ideas for a calendar
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to Ahrefs.
+  - Check that your AI can connect to your Ahrefs account. This skill needs that link to pull rival keyword data.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste its text into a chat.
+  - Give your site address, three to five rival sites, your target market and language, and what matters most to your business.
+  - Add your list of existing pages if you have one (optional). It helps the skill suggest updates before new pages.
+  - Read the quick wins and the action map first. Check that each keyword fits what your page can really offer.
+  - Plan your content from the top-scored clusters. Run the audit again in a few months, as rivals keep publishing.
+output_sample:
+  input:
+    - Your site address
+    - Three to five rival sites
+    - Your target market and language
+    - Which parts of your business matter most
+    - Your list of existing pages and their topics (optional)
+  prerequisites:
+    - An Ahrefs account
+    - An AI that can connect to Ahrefs
+  output:
+    - name: Executive summary
+      contains: The top three themes and the ten keywords to go after first.
+    - name: Competitor set
+      contains: Which rivals were used, why they were picked, and how much they overlap with you in search results.
+    - name: Gap matrix
+      contains: "Counts for the four groups: both rank, only rivals rank, only you rank, and neither."
+    - name: Pure gap analysis
+      contains: Keywords where rivals rank and you do not, each with a score from 0 to 100.
+    - name: Topic clusters
+      contains: Related keywords grouped so each topic gets one piece of content.
+    - name: Action map
+      contains: For each cluster, whether to create a page, update one, or merge pages.
+    - name: Quick wins
+      contains: The five to ten safest opportunities to go after first.
+    - name: Strategic plays
+      contains: Bigger bets that take longer to pay off.
+    - name: Methodology
+      contains: Where the data came from, the scoring weights, and any gaps or caveats.

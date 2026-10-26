@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sizes each task, then applies set formulas.
 new_slug: ai-assisted-work-estimator
 name: AI-assisted work estimator
-summary: Give it your tasks and how your team uses AI agents. Get time estimates
-  with likely ranges you can plan on.
+summary: Estimate AI-assisted work for your team. Give it your tasks and how much agents do. You get best, likely and worst times with 75 and 90 percent dates.
 job: build-software
 headline: AI-assisted work estimator
-subhead: Time estimates for work done with AI agents, shown as a likely range
-  you can plan on instead of one hopeful number. It works for a single task or a
-  backlog of hundreds.
+subhead: Time estimates for work done with AI agents, shown as a likely range you can plan on instead of one hopeful number. It works for a single task or a backlog of hundreds.
 explain: |
   Time estimates for work done with AI agents, shown as a likely range you can plan on instead of one hopeful number. It works for a single task or a backlog of hundreds.
 
@@ -18,6 +15,10 @@ when:
   - You need a date you can defend with a confidence level.
   - You have a big backlog and need a size for each item.
   - Your past estimates were too hopeful and you want to calibrate.
+not_for:
+  - "You need a fixed-price bid for a client: work out your costs and add a buffer yourself, or ask a senior person to review it."
+  - "Nobody uses AI agents on the work: use the estimation method your team already trusts."
+  - "You want a sprint plan or a staffing plan: this only sizes the tasks, so plan the sprint with your team."
 you_give:
   - The tasks or tickets to estimate
   - How much of the work agents do
@@ -30,7 +31,28 @@ you_get:
   - Output ready for your tracker
   - Notes on how to improve with actuals
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude and paste the skill text from this page into a new chat. No code, files or paid tools are needed.
+  - Paste your tasks or tickets. Add your team size and how much of the work agents do.
+  - Answer any questions your AI asks. It will ask if team size or agent use is missing.
+  - Read the 75 and 90 percent figures. Use one of them when you promise a date, not the likely figure.
+  - Start with one task to check the result feels right. Then paste a bigger list.
+  - After the work is done, paste the real times back in so the next estimate fits your team better.
+output_sample:
+  input:
+    - The tasks or tickets to estimate
+    - How much of the work AI agents do, for example about 60 percent
+    - Team size and how your team works (people only, mixed, or agent-first)
+    - Past actual times for finished tasks (optional)
+  output:
+    - name: Mode
+      contains: Whether your team works people only, mixed, or agent-first, which sets the speed model used.
+    - name: Task sizing
+      contains: Each task sorted by size from XS to XL, with a complexity label and a risk label.
+    - name: Three-point estimate
+      contains: A best, likely and worst time for each task, blended into one expected value.
+    - name: Confidence bands
+      contains: The 50, 75 and 90 percent figures for each task, so you can pick a safe date.
+    - name: Tracker format
+      contains: The same estimates laid out for Linear, Jira, ClickUp, GitHub Issues, Monday or GitLab.
+    - name: Calibration notes
+      contains: How to send back real finished times so later estimates fit your team better.

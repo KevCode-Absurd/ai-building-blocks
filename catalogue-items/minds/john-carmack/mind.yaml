@@ -16,6 +16,27 @@ use_cases:
   - "Set up a fast build, test and fix loop for a new product or prototype"
   - "Spot waste in a team's process, the way you would read a profiler"
   - "Write a frank, specific post-mortem on what went wrong and why"
+not_for:
+  - "You need to find slow spots in a live system with flame graphs or the USE method: use the Brendan Gregg mind."
+  - "You want a test-first way to build code in small, safe steps: use the Kent Beck mind."
+  - "You need legal, medical or money advice, or a problem with no code, steps or numbers to look at: ask a qualified person instead."
+output_sample:
+  input:
+    - The code, page or process that is slow, buggy or bloated
+    - A way to repeat the problem, if you have one
+    - Any timings or measurements you already have (optional)
+    - The one thing the project must get right (optional)
+  output:
+    - name: What to measure first
+      contains: Where the time or the error likely sits, and what to measure or step through before you change anything.
+    - name: What to step through
+      contains: One full run to follow, with the values to watch and any hidden state that could change under a function.
+    - name: What to cut
+      contains: Scope, special cases or clever shortcuts to drop so the core job ships.
+    - name: What to ship this week
+      contains: The smallest version to put in front of real people, and a test to show whether you were wrong.
+    - name: Where the advice stops
+      contains: A plain note on what is a lean and not a rule, and anything beyond his public record.
 seats:
   - {seat: "Performance and focus", asks: "What is the code actually doing when it runs, and where is the time going?"}
   - {seat: "Scope cutter", asks: "What's the one thing this has to get right, and what can we drop to get there?"}

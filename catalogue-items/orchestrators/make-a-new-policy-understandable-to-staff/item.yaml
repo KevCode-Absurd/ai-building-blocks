@@ -1,6 +1,6 @@
 slug: make-a-new-policy-understandable-to-staff
 name: Make a new policy understandable to staff
-summary: Share the source files. Get a plain explanation, staff FAQ and rollout action list.
+summary: "Explain a new staff policy in plain words. Share the approved policy and change list. Get a clear explanation, a staff announcement and a rollout list."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -10,18 +10,19 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: question
+  - type: source_text
     required: false
 outputs:
   - type: document
+  - type: copy_draft
 uses:
   - company-policy-explainer
   - stakeholder-update-writer
 steps:
   - uses: company-policy-explainer
-    note: Explain the approved changes with practical examples drawn only from the policy.
+    note: "Explain the approved changes with practical examples drawn only from the policy. Hands the plain-words entries, the start date and who is affected to step 2."
   - uses: stakeholder-update-writer
-    note: Draft a clear announcement and list acknowledgments or training still requiring an owner.
+    note: "Takes the entries from step 1 as the finished document to draw facts from. Drafts a clear announcement and lists acknowledgments or training still requiring an owner."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

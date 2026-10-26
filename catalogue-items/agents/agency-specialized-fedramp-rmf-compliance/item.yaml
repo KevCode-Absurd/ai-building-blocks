@@ -1,0 +1,42 @@
+slug: agency-specialized-fedramp-rmf-compliance
+name: FedRAMP & RMF Compliance Engineer agent
+summary: "Plan FedRAMP or NIST RMF authorization for a cloud system. Get its impact level, scope notes, control gaps and a fix list for your assessor."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/specialized-fedramp-rmf-compliance.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-fedramp-rmf-compliance.md
+  licence: MIT
+  original_name: FedRAMP & RMF Compliance Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 3269ca423abba6405b074ddff80da26ff1d73ae01787cc34bc7a1d45732936b0
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - FedRAMP & RMF Compliance Engineer
+  - Agency Agents
+  - Specialized
+credits:
+  - title: FedRAMP & RMF Compliance Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/specialized-fedramp-rmf-compliance.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

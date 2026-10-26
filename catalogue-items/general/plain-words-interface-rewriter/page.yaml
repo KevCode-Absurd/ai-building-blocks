@@ -1,6 +1,6 @@
 new_slug: plain-words-interface-rewriter
 name: "Plain words interface rewriter"
-summary: "Paste a form, screen text or process steps. Get a rewrite in your users' own words, with a read-aloud test."
+summary: "Rewrite a form or screen in your users' own words with this plain words interface rewriter. You get swaps, a read-aloud test and new-hire questions."
 job: design-work
 thinking: low
 thinking_why: "It swaps terms for the words users say and tidies steps, which follows a fixed method."
@@ -17,6 +17,10 @@ when:
   - Customers or staff keep misreading a form, screen or set of steps.
   - Your text uses internal terms, codes or vendor words that users do not say.
   - You are writing instructions for someone who has had no training.
+not_for:
+  - "You must keep legal or regulated wording exact: ask a compliance reviewer or a lawyer, and use this only for the plain notes beside it."
+  - "You have no real user words to draw on: first collect support messages, call notes or reviews, or ask a few users what they call each thing."
+  - "You only need to fix error messages: use the Error message rewriter."
 
 you_give:
   - The form, screen text, menu or process steps
@@ -34,6 +38,29 @@ how_to_use:
   - Paste a few real messages or calls from users, so it can pick up their words.
   - Read the result aloud to someone. Mark any line where you stumble.
   - Give it to a new person with no help and note what they ask.
+output_sample:
+  input:
+    - Your form, screen text, menu or process steps
+    - Who uses it, and the words they use for things in it
+    - A few real user messages or call notes (optional)
+    - A buyer or user profile (optional)
+  output:
+    - name: Who uses it
+      contains: Each user group, whether they prefer symbols or words, and the words they say for each thing.
+    - name: Word swaps
+      contains: A table of each old term, the user's word that replaces it, and where it appears.
+    - name: Rewrite
+      contains: The full text again in your users' words, with each instruction starting with a verb.
+    - name: Read-aloud fixes
+      contains: Each sentence that was hard to say, with an easier version.
+    - name: New-hire test
+      contains: Questions a new person with no help would still ask after reading the rewrite.
+    - name: Steps kept
+      contains: The step count before and after, with a note on any steps that were merged.
+    - name: Missing
+      contains: Words or facts you need to confirm, marked MISSING.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: Names the groups

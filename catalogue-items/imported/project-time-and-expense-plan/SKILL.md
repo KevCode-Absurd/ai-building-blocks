@@ -12,6 +12,26 @@ metadata:
 ---
 # Time & Expense — Under 100 People
 
+## How to run this skill in a chat
+
+Added by AI Blocks. The method below is the original. This part sets the answer shape and what to do when facts are missing.
+
+**Use it when:** a team under 100 people records project hours and expenses and bills clients for them (time and materials or retainers) and wants one clear process from entry to invoice.
+**Skip it when:** you do not bill by time, or the team is under about five people (a shared timesheet is enough). Also skip it to check a pay run (use the Payroll timesheet checker) or to sort card transactions (use the Expense sorter).
+
+**Ask once for:** the tools you use now for time and expenses (or "none"), your project and client codes, who approves what, how billing works, and what goes wrong today (late entries, lost receipts, slow approvals). Mark gaps as MISSING. Never invent a rate, threshold or policy. Targets named below (such as 90% on time) are rules of thumb from the original, not facts about your business. Label them "suggested".
+
+**Produce this plan:**
+1. **Entry rules.** Table: what to record (client, project, billable or not, notes), how soon (suggest daily), minimum block, and receipt rules.
+2. **Approval matrix.** Who approves time, who approves expenses, how often, the backup approver, and any auto-approve limit you suggest.
+3. **Billing handoff checklist.** The steps from approved time to a draft invoice, and who does each.
+4. **Exception list.** Late entry, lost receipt, over-budget project, disputed entry, out-of-policy expense, each with the fix and the owner.
+5. **Report checks.** The few numbers to look at each week or month.
+6. **Open questions.** The MISSING items.
+
+**Paid tools:** Harvest, Toggl, Hubstaff, Clockify, Expensify, Ramp, Brex, Pleo and Concur are named below as examples. Most have paid plans. Suggest only the tools the team already has, unless asked, and say to check the price. Hubstaff can record screenshots and activity, so mention that staff should be told. Draft only. Never change a live system.
+
+
 ## What This Process Does
 
 Time + expense at this size is **the foundation of services-business unit economics — capturing who worked on what, what they spent, and turning it into invoices + payroll + analytics.** Time tracking via Harvest, Toggl, Hubstaff, Clockify (or PM-tool-native — Asana Time, Monday Time); expense tracking via Expensify, Ramp, Brex; PM-led approval workflows; sync to billing + payroll + accounting.

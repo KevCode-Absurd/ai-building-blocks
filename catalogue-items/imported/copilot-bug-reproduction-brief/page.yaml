@@ -2,17 +2,59 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-bug-reproduction-brief
 name: Bug reproduction evidence writer
-summary: Share an unclear bug report. Get repeatable steps, a minimal case and
-  the evidence still needed.
+summary: "Turn a vague bug report into a bug reproduction brief: exact steps, a minimal failing case, and the evidence you still need. No fix is made."
 job: test-and-fix-code
 headline: Bug reproduction evidence writer
-subhead: Share an unclear bug report. Get repeatable steps, a minimal case and
-  the evidence still needed. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: Give it a vague or one-off bug report. It cuts the problem down to the smallest case that still fails and checks that it repeats. You get a brief with steps, evidence and open questions, and nothing is fixed yet.
+not_for:
+  - "The bug is already reproduced and you want the cause or a fix: hand the brief to a developer or a separate diagnosis step."
+  - "You need production data changed or a live system tested: ask your engineer to do it safely, since this skill avoids changing production."
+  - "You have no failing command, test or error text at all: collect the exact error from the person who saw it first."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste the bug report, the exact error text, logs with secrets removed, the repo commit, runtime versions, and the failing test or command path.
+  - Say that you want a reproduction only, and no fix.
+  - If your AI cannot run code, it will write the steps for you to run. Run them and paste back the output.
+  - Check that Expected and Actual describe what you can see, with no guessed cause.
+  - Hand the finished brief to whoever diagnoses and fixes the bug.
+output_sample:
+  input:
+    - The bug report, in whatever shape it arrived
+    - The exact error text or wrong result (optional)
+    - Logs with secrets and personal data removed (optional)
+    - The repo commit and runtime versions (optional)
+    - The failing test or command (optional)
+  prerequisites:
+    - An AI that can read your files and run commands, if you want it to run the reproduction and prove it repeats
+  output:
+    - name: Target and commit
+      contains: The code, version and commit where the bug was seen.
+    - name: Environment
+      contains: Runtime, package versions, system, feature flags and whether it ran local, test, staging or production.
+    - name: Expected and Actual
+      contains: Two plain statements of what should happen and what did happen, with no guess at the cause.
+    - name: Minimal steps and Minimal fixture
+      contains: The shortest steps and smallest data that still make the bug happen.
+    - name: Reproduced
+      contains: "Whether the bug repeated: yes, no or intermittent, with how often."
+    - name: Evidence
+      contains: Commands run and their outputs, so anyone can check the result.
+    - name: Unknowns and Safe next hypothesis to test
+      contains: What is still unclear and one safe idea to test next.
+when:
+  - A bug report says only that it sometimes breaks.
+  - A teammate says it works on their machine.
+  - A report names a cause but shows no proof.
+  - You need a clean failing case before anyone starts a fix.
+you_give:
+  - The bug report as you received it
+  - The exact error text or wrong result (optional)
+  - Logs with secrets and personal data removed (optional)
+  - The repo commit and runtime versions (optional)
+  - The failing test or command path (optional)
+you_get:
+  - A short brief with expected and actual behaviour side by side
+  - The smallest steps and data that still show the bug
+  - "A clear answer on whether it repeats: yes, no or intermittent"
+  - The commands and outputs that back it up
+  - A list of what is still unknown

@@ -1,6 +1,6 @@
 new_slug: one-word-positioning
 name: Pick the one word to own in your customers' minds
-summary: Paste your rivals and product. Get one word to own, an honest line to set it up and what to cut.
+summary: Find the one word to own in your market. Paste your rivals and what you sell. You get a word, honest lines to set it up and a cut list.
 job: plan-strategy
 thinking: high
 thinking_why: It weighs many candidate words, then decides what to give up, so it needs your strongest model.
@@ -14,6 +14,10 @@ when:
   - You say too many things and buyers can't say what you stand for.
   - Research says buyers want something and you suspect a rival already owns it.
   - Your range and customer list keep growing and your message keeps changing.
+not_for:
+  - "Your brand has one clear product and already owns a word: keep it and skip this, or ask a marketing person to check it still holds."
+  - "You want to judge how far your brand reaches today: use the Brand reach reviewer."
+  - "You want to test whether your edge over rivals is real: use the Competitive advantage tester."
 you_give:
   - Your main rivals, with their taglines or homepage lines
   - Customer reviews that name you and your rivals (optional)
@@ -29,6 +33,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Ask five people for the first brand and first word that come to mind for your category, and paste their answers in.
   - Say the winning word to five buyers and ask what they assume about you.
+output_sample:
+  input:
+    - Your main rivals, with their taglines or homepage lines
+    - Customer reviews that name you and your rivals (optional)
+    - Your product facts and proof (optional)
+    - Your brand facts and a list of what you sell and to whom (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: owned-word-mapper"
+      contains: The word each rival owns, marked taken, contested or open, plus the empty claims everyone makes.
+    - name: "Step 2: ownable-word-picker"
+      contains: One word to own, two backups, and each scored on four tests.
+    - name: "Step 3: candid-line-writer"
+      contains: A flaw buyers already see and three lines that admit it and turn to your word.
+    - name: "Step 4: give-up-list-planner"
+      contains: What to cut, the one target to aim at, and a rule against changing the position.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Maps the words rivals own
     text: Finds one word per rival, runs a word-association test and marks each word taken, contested or open, with the empty claims listed.

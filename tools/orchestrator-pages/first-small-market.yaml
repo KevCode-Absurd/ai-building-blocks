@@ -1,6 +1,6 @@
 new_slug: first-small-market
 name: "Pick your first small market and the ones after"
-summary: "Give it your product. Get one small first market, the order to grow and a pitch with no rival."
+summary: "Pick your first small market and plan the markets after it. Give it your product. Get one market to win first, the order to grow and a pitch."
 job: plan-strategy
 thinking: medium
 thinking_why: "It runs four skills that each need some judgement but follow fixed tests. A strong model keeps the steps consistent."
@@ -17,6 +17,10 @@ when:
   - Your product could serve many kinds of buyers and you can't pick where to start.
   - You are winning a small group and need to know where to go next.
   - Your pitch starts with "like [big name], but" and you want one that stands alone.
+not_for:
+  - "You already have a proven first market: skip this and use the market-expansion-sequencer step alone to plan what comes next."
+  - "You sell to one clearly defined type of buyer: you have no group to pick, so write your pitch with the Business mission writer."
+  - "You want to know if your edge can hold up against rivals: use the Competitive advantage tester."
 
 you_give:
   - What your product does and the problem it solves
@@ -33,6 +37,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your product and where you can reach people. Count the numbers it asks for before you act on the pick.
   - Use the pitch with one real buyer in the first market and see if they repeat it.
+output_sample:
+  input:
+    - What your product does and the problem it solves
+    - Groups of buyers you think could use it (optional)
+    - Places and people you can reach now (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff folder
+    - The handoff pack with HANDOFF.md and the four skill files
+  output:
+    - name: "Step 1: First market"
+      contains: A ranked list of small groups with scores, the one picked to own, and what to count.
+    - name: "Step 2: Is it real"
+      contains: Your share at four market sizes, the market buyers compare you in, and a call on whether it is real.
+    - name: "Step 3: The order"
+      contains: The next markets, nearest first, each with why it is next and a number that says when to move.
+    - name: "Step 4: The pitch"
+      contains: A one-line pitch, a three-sentence pitch and a thirty-second pitch, with three tests run on them.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Picks the first market

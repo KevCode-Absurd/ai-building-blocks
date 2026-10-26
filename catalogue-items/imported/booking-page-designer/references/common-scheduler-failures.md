@@ -28,7 +28,7 @@
 
 ---
 
-## "No-show rate is over 30 percent."
+## "Our no-show rate is high."
 
 **The diagnosis.** Reminder sequence broken; or commitment friction at booking too low.
 

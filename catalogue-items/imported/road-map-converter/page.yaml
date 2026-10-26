@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps each road feature across formats and checks the result.
 new_slug: road-map-converter
 name: Road map converter
-summary: Give it a Lanelet2 map. Get a RoadRunner HD map built from it, ready
-  for simulation.
+summary: Convert a Lanelet2 map to a RoadRunner HD map file. Give it your .osm file and get an .rrhd scene with lanes, junctions and signs.
 job: build-software
 headline: Road map converter
-subhead: A Lanelet2 map turned into a RoadRunner HD map file you can open and
-  simulate. The whole pipeline runs, so you get a finished scene and not half a
-  road.
+subhead: A Lanelet2 map turned into a RoadRunner HD map file you can open and simulate. The whole pipeline runs, so you get a finished scene and not half a road.
 explain: |
   A Lanelet2 map turned into a RoadRunner HD map file you can open and simulate. The whole pipeline runs, so you get a finished scene and not half a road.
 
@@ -18,19 +15,46 @@ when:
   - You are building driving scenes from public map data.
   - A past conversion left out junctions or signs.
   - You need an .rrhd file for simulation tests.
+not_for:
+  - "Your file is a plain OpenStreetMap export with no lanelet relations: this tool will stop with an error, so export a Lanelet2 map instead."
+  - "Your file is OpenDRIVE (.xodr): import it straight into RoadRunner, no conversion needed."
+  - "You want to build a road map from scratch with no source file: use a RoadRunner authoring workflow or draw it by hand in RoadRunner."
 you_give:
-  - A Lanelet2 .osm file
-  - A project folder in RoadRunner
-  - MATLAB with RoadRunner
-  - Output location (optional)
+  - Your Lanelet2 map file (.osm)
+  - Your map_projector_info.yaml file, if you have one (optional)
+  - A RoadRunner project folder
+  - Where to save the result (optional)
 you_get:
   - A RoadRunner HD map (.rrhd) file
   - Lanes, junctions, signs and markings
   - Check results before saving
   - Conversion scripts you can rerun
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with RoadRunner.
+  - Check you have MATLAB and RoadRunner. Both are paid and must be installed and licensed before you start.
+  - Use an AI that can run MATLAB code and write files. A plain chat window cannot finish this job.
+  - Paste this skill into your AI and give it your .osm file, your project folder and where to save the result.
+  - Let your AI run every step. It must not stop after lanes and boundaries.
+  - Check that the results list shows all checks passed before the file is saved.
+  - Open the new .rrhd file in RoadRunner and look over lanes, junctions and signs.
+output_sample:
+  input:
+    - Your Lanelet2 map file (.osm)
+    - Your map_projector_info.yaml file, if you have one (optional)
+    - Where to save the result (optional)
+  prerequisites:
+    - MATLAB with RoadRunner installed and licensed (both are paid products)
+    - An AI that can run MATLAB code and write script files
+    - A RoadRunner project folder
+  output:
+    - name: MATLAB script files (.m)
+      contains: The conversion steps your AI wrote and ran, saved so you can rerun or edit them.
+    - name: Boundaries and lanes
+      contains: One boundary per road edge, lane direction worked out for each lane, and centre lines for every lane.
+    - name: Junctions
+      contains: Places where lanes meet, found from the map and built into the scene.
+    - name: Barriers, signs, markings and speed limits
+      contains: Every non-lane item found in the map, built as scene objects.
+    - name: Check results
+      contains: Pass or fail results for alignment, position, extensions and completeness, run before saving.
+    - name: RoadRunner HD map (.rrhd)
+      contains: The finished map file, ready to open in RoadRunner for simulation.

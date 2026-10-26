@@ -1,53 +1,94 @@
 new_slug: separate-financing-effects-from-operating-cash
 name: Separate financing effects from operating cash
 headline: Separate financing effects from operating cash
-summary: Reconcile receivable factoring and supplier-finance effects before interpreting operating cash and leverage.
+summary: Separate factoring and supplier finance from operating cash and net debt, so you can read what a company really generates.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked reported and analytical cash/leverage workbook with financing perimeters. Share transfer/facility terms, matched factoring cash ledgers, supplier-finance notes, operating balances, debt and CFO.
-explain: |-
-  A linked reported and analytical cash/leverage workbook with financing perimeters.
+subhead: Give it a company's cash flow statement, its notes on factoring and supplier finance, and its working capital balances. It rebuilds cash timing and net debt with those effects shown apart, then finds the working capital the business really invested. You get a bridge from reported to adjusted figures, with the reported ones kept beside.
+explain: |
+  Operating cash flow can look strong for reasons that are not the business. A company can sell its invoices to a factor and get paid early. It can pay suppliers through a bank that lets it pay later. Both lift operating cash and hide debt. Buying a company or a swing in exchange rates also changes working capital with no cash moving.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow separates the three effects, one at a time. Step 1 swaps the factor's advance for the customer receipts that would have come in, so you see the timing gain. Step 2 moves supplier-finance balances from payables to debt in a labelled scenario and shows net debt. Step 3 strips acquisitions and currency moves out of working capital to find what the business really put in.
+
+  Reported figures stay beside every adjusted figure, and no effect is adjusted twice. It is an analysis scenario, not a ruling on how the company must classify these items.
 when:
-  - You need a linked reported and analytical cash/leverage workbook with financing perimeters.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A company's operating cash flow jumped and its notes mention selling receivables or a factor.
+  - The notes show supplier finance, also called reverse factoring, and you want net debt with it counted.
+  - Working capital moved a lot in a year with an acquisition or a big currency swing.
+  - You are comparing two companies and one uses factoring while the other does not.
+not_for:
+  - The company has no factoring or supplier finance. Use Reconcile working capital and tax cash.
+  - You want a cash forecast for your own business. This reads reports for past years.
+  - You need a ruling on whether a deal is a sale or a loan. That takes an accounting review.
+  - You want earnings per share, not cash. Use Reconcile alternative EPS and comprehensive income.
 you_give:
-  - Transfer/facility terms, matched factoring cash ledgers, supplier-finance notes, operating balances, debt and CFO.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The cash flow statement, with reported cash from operations (from the annual report)
+  - "Factoring records: advances from the factor and customer receipts paid to it, for the same period and pool (from the notes or company records)"
+  - Supplier-finance balances and payment terms (from the notes)
+  - Opening and closing operating balances, plus acquisition, currency and other noncash movements (from the notes)
+  - Debt and cash at the same date, with the currency, scale and period
 you_get:
-  - A linked reported and analytical cash/leverage workbook with financing perimeters.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Operating cash on a look-through timing basis, with reported cash flow beside it
+  - Net debt with supplier-finance balances counted as debt, and the reported figure beside it
+  - Working capital investment with acquisitions and currency moves taken out
+  - One cash story where no effect is counted twice
+  - Missing facts and the checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Pick one that can make spreadsheets if you want a workbook.
+  - Attach the annual report pages, the notes on factoring and supplier finance, and any factor statements. Say the currency, scale and period.
+  - After step 1, check that the factor's advances were swapped for receipts from the same period and pool, and that fees stayed as costs.
+  - After step 2, check each supplier-finance balance moved from payables to debt once, and that total liabilities did not change.
+  - After step 3, check the same effect was not adjusted twice. Fill every MISSING line before anyone relies on it. Nothing here pays, sends or files anything.
 how_it_works:
   - title: Factoring cash-flow timing bridge
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Build a matched receipt-timing view from actual factor advances and customer receipts; preserve reported CFO and fees and avoid inferring cash from face balances alone.
+    text: Finds the factor's advances that sit inside operating cash and the customer receipts paid to the factor. Swaps one for the other for a timing view. Keeps real fees as costs and reported cash flow beside the result. Hands step 2 the adjusted operating cash.
   - title: Supplier finance leverage bridge
-    text: Map debt-like supplier-finance balances once in the analytical debt/payables view; distinguish balance reclassification from any separately justified cash-flow recast.
+    text: Adds the supplier-finance balance to debt and takes it out of operating payables in a labelled scenario. Deducts the same cash once. Total liabilities do not change. Hands step 3 the operating payables it used.
   - title: Noncash working-capital bridge
-    text: Use original reported operating balances and exclude identified financing and noncash changes. Reconcile the final analytical cash narrative without adjusting the same factoring or supplier-finance effect twice.
+    text: Takes the change in operating balances and removes acquisitions, currency effects and other noncash moves. What is left is the real investment. It uses reported balances only, so factoring and supplier finance are not adjusted again.
 output_shape: |-
-  A linked reported and analytical cash/leverage workbook with financing perimeters.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  PERIOD AND BASIS   <period>, <currency>, <scale>
+
+  1 FACTORING TIMING   reported CFO <n> - timing gain <n> (advances <n> - matched receipts <n>) = adjusted CFO <n>
+                       fees kept as costs <n>
+
+  2 SUPPLIER FINANCE   debt <n> + supplier finance <n> - cash <n> = net debt <n> (reported <n>)
+                       operating payables <n> (reported <n>) | total liabilities unchanged <n>
+
+  3 WORKING CAPITAL    balance change <n> - acquisition, currency, other noncash <n> = operating investment <n>
+                       cash effect <n, signed>
+
+  ONE CASH STORY   reported | adjusted | each effect counted once
+  MISSING   <each gap, and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - The cash flow statement and reported cash from operations
+    - Factor advances and the customer receipts paid to the factor
+    - Supplier-finance balances and terms from the notes
+    - Opening and closing operating balances and noncash movements
+  prerequisites:
+    - The annual report and its notes for the period
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: Step 1 factoring timing
+      contains: Reported operating cash, the timing gain from factor advances, fees kept as costs, and adjusted operating cash.
+    - name: Step 2 supplier finance
+      contains: Net debt and operating payables with the supplier-finance balance moved once, beside the reported figures.
+    - name: Step 3 working capital
+      contains: Operating investment after acquisitions and currency moves, with its signed cash effect.
+    - name: One cash story
+      contains: Reported and adjusted cash side by side, with each effect counted once.
+    - name: MISSING and CHECKS MISSED
+      contains: Every gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Reported accounts stay visible, each financing effect has source-backed classification and timing, cash and balance movements are not mixed and analytical reclassifications conserve total liabilities.
+  - what: No supplier finance
+    how: Leave the balance out. Step 2 says there is nothing to move and net debt matches the reported figure.
+  - what: Customer receipts missing
+    how: Step 1 stops. It will not infer cash from face balances alone, and it marks the receipts MISSING.
+  - what: A smaller debt-like share
+    how: Count only part of the supplier-finance balance as debt. The scenario label says which part and why.
 judge:
   - Reported accounts stay visible, each financing effect has source-backed classification and timing, cash and balance movements are not mixed and analytical reclassifications conserve total liabilities.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +99,33 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the company's factoring and supplier-finance notes in one file and reuse it each year, so periods match.
+  - Save each year's adjusted figures, so next year's run starts from them.
+  - Run Reconcile working capital and tax cash after this one, to explain what is still left between the balance sheet and cash.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: The company's annual report
+      why: The notes on receivables sold and supplier finance hold the figures. Use the report itself, not a summary.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Factor statements for the same period and pool as the advances.
+    - The note on supplier finance, with balances and payment terms.
+    - A named reviewer who knows the accounts.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Factoring
+    meaning: Selling your unpaid invoices to a finance company for cash now.
+  - term: Supplier finance
+    meaning: A bank pays your supplier early and you pay the bank later. Also called reverse factoring.
+  - term: Operating cash flow
+    meaning: Cash from running the business in the period, as shown in the cash flow statement. Often shortened to CFO.
+  - term: Net debt
+    meaning: Debt minus cash.
+  - term: Working capital
+    meaning: Money tied up in stock, unpaid invoices and unpaid bills. When it grows, cash falls.
+  - term: Noncash movement
+    meaning: A change in a balance with no cash behind it, such as from an acquisition or exchange rates.
+before: []
+next:
+  - reconcile-working-capital-and-tax-cash
+  - review-leverage-headroom-and-cure

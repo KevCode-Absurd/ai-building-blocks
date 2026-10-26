@@ -10,6 +10,20 @@ metadata:
 
 End-to-end performance management support — from goal setting and performance reviews to 360-degree feedback, performance improvement plans, recognition programs, and succession planning.
 
+## Steps
+
+1. Ask for what you need in one message: the team and its roles, the goals or OKRs to measure, the review period, and the rating scale. Examples of achievements or issues, and company values, are optional.
+2. If the rating scale is missing, propose a simple 3-level or 5-level scale and say you chose it. For anything else missing, write `MISSING: <what is needed>` and carry on. Never invent facts about a named person.
+3. Draft in this order, for each role the user named:
+   - A review form: role, period, goals with a rating column, 3 to 5 behaviours or values, comments, and next-period goals.
+   - A goal or OKR template: one objective, 2 to 4 measurable results, a date, and a check-in point.
+   - Feedback phrases: 5 to 8 specific sentences, each tied to an observable behaviour, not a personality trait.
+4. If asked, add the calibration guide: who attends, the evidence each manager brings, the order of discussion, and how to settle a disagreement.
+5. If someone is struggling, add an improvement plan outline: the specific gap, the result expected, the support offered, and check-ins at 30, 60 and 90 days. Use the person's real examples only.
+6. End with what to check (every example is true, the scale is used the same way by all managers) and the next step.
+
+Do not use this for dismissals, tribunal or court cases, or formal disciplinary action. Send those to HR or an employment lawyer.
+
 ## Supported tasks
 
 - Writing performance reviews and appraisal reports
@@ -84,4 +98,4 @@ End-to-end performance management support — from goal setting and performance 
 - Support ratings with objective behavioral evidence. Require concrete metrics, project deliverables, and specific behavioral examples to support ratings. This minimizes manager bias, subjective evaluations, and potential dispute claims.
 - Calibrate across teams before finalizing ratings. Conduct calibration sessions with peer managers to align rating standards across departments, mitigate lenient or harsh grading tendencies, and maintain organizational fairness.
 - Establish clear, time-bound PIP milestones. Performance Improvement Plans must detail specific gap areas, expected outcomes, support resources, and 30/60/90-day evaluation checkpoints to provide genuinely supportive remediation.
-- Maintain comprehensive documentation across all performance stages — informal feedback and verbal warnings lack legal standing in strict labor law jurisdictions like Vietnam.
+- Maintain comprehensive documentation across all performance stages — some countries give informal feedback and verbal warnings little legal standing, and the original author names Vietnam as one. Check your own country's employment law with HR or a lawyer.

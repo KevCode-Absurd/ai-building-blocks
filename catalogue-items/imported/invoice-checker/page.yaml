@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It matches fields by clear rules.
 new_slug: invoice-checker
 name: Invoice checker
-summary: Give it invoices and purchase orders. Get fields pulled out, matched,
-  checked and coded to the right accounts.
+summary: Check invoices against purchase orders, spot math errors and code each line to an account. Paste text or a CSV and get a flagged, coded record.
 job: track-numbers
 headline: Invoice checker
-subhead: Invoices that arrive as messy text and leave as clean, coded records.
-  Paste an invoice or a batch, as text, OCR output or a CSV, and add your
-  purchase orders if you have them.
+subhead: Invoices that arrive as messy text and leave as clean, coded records. Paste an invoice or a batch, as text, OCR output or a CSV, and add your purchase orders if you have them.
 explain: |
   Invoices that arrive as messy text and leave as clean, coded records. Paste an invoice or a batch, as text, OCR output or a CSV, and add your purchase orders if you have them. The skill identifies the document type, extracts every line with quantity, price and tax, and tests that the lines add up to the stated subtotal and total.
 
@@ -18,6 +15,10 @@ when:
   - You need to know if an invoice matches what you ordered.
   - You want line items coded to the right accounts without doing it by hand.
   - You want a list of invoices to hold before paying.
+not_for:
+  - "You want to approve or pay an invoice: use your bookkeeper or accountant, since this only checks and codes, and it never signs off."
+  - "You need final account codes ready to post: have your bookkeeper or accountant review the codes first, because without your own list they are only examples."
+  - "You have no invoice text yet, only a paper or PDF scan: run it through a scanner or text reader first, then paste the text here."
 you_give:
   - Invoice text, OCR output or a CSV
   - Matching purchase orders (optional)
@@ -30,7 +31,28 @@ you_get:
   - A flag list sorted by severity
   - A batch summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill instructions into a new chat. This skill needs no code, files or paid tools.
+  - Paste your account code list first, if you have one. Say it is your chart of accounts so the codes match your books.
+  - Paste your invoice text or CSV. Add the matching purchase orders (optional) and your vendor records (optional).
+  - Ask your AI to process the invoice or batch. Check the math and the flags before you trust any code.
+  - Ask for a CSV you can import into your accounting software. Send blocked invoices to your accounts payable person for manual review.
+  - Have your bookkeeper or accountant review the coded lines before anything is posted or paid.
+output_sample:
+  input:
+    - Invoice text, OCR output (text read from a scan) or a CSV, for one invoice or a batch
+    - Matching purchase orders (optional)
+    - Your account code list, also called your chart of accounts (optional)
+    - Vendor records (optional)
+  prerequisites:
+    - Your account code list, if you want codes that fit your books. Without it the codes are examples only.
+  output:
+    - name: Invoice record
+      contains: The invoice number, dates, vendor, payment terms, and each line with quantity, unit price, amount and tax, plus the totals.
+    - name: Validation
+      contains: Whether the lines add up to the subtotal and total, and whether the invoice matches its purchase order on price and quantity.
+    - name: Account codes
+      contains: A general ledger account for each line, based on the item, the vendor type and any cost center.
+    - name: Flags
+      contains: Problems grouped as blocking errors, warnings and notes, such as a missing purchase order or a price difference.
+    - name: Batch summary
+      contains: "For a batch: how many invoices passed, had warnings or were blocked, their total value, and the blocked ones to review."

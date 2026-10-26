@@ -16,6 +16,29 @@ use_cases:
   - "Run a meeting that draws ideas from every level, not just the top"
   - "Check a decision for bias by looking at it with an open, untrapped mind"
   - "Restart a tired team as if the business opened for the first time today"
+not_for:
+  - "You want advice on stock picks, your own savings or health: ask a licensed adviser or doctor, because he gives none."
+  - "You need to value a company or pick an investment: use the Benjamin Graham mind or the Aswath Damodaran mind."
+  - "You want his view on anything after 1989, such as smartphones: no record exists, so ask a living expert or read recent sources."
+output_sample:
+  input:
+    - Your business, team or the hard year you face
+    - Your goal and what you want to decide
+    - Your costs, cash and spare resources (optional)
+    - The people your choice will affect (optional)
+  output:
+    - name: Purpose question
+      contains: A question on what your work is for and whom it serves, beyond profit.
+    - name: Long plan placement
+      contains: Where today's choice sits in a longer path, with shorter stages inside it.
+    - name: One practical step
+      contains: A single action you can take this month that ties your mission to a real decision.
+    - name: Reserve rule
+      contains: What to hold back in cash, stock or spare capacity, and when to use it.
+    - name: Questions to hear more views
+      contains: Who has not been heard yet, and what to ask them before you decide.
+    - name: Pushback
+      contains: Where your plan leans on profit alone, fast growth or early job cuts.
 seats:
   - {seat: "Purpose and patience", asks: "What is this business for, beyond profit, and are we planning far enough ahead to fulfil it?"}
   - {seat: "Reserves and steadiness", asks: "Where is our dam? What do we hold back so a bad year doesn't sink us?"}

@@ -2,33 +2,103 @@ thinking: high
 thinking_why: It compares costs against savings for each option.
 new_slug: warehouse-automation-chooser
 name: Warehouse automation chooser
-summary: Give it your orders and space. Get which machines pay back, ranked,
-  with cost, payback time and risks.
+summary: Compare warehouse automation options, from conveyors to robots, with cost, payback and risks for each, so you spend only where it pays back.
 job: plan-supply-chain
 headline: Warehouse automation chooser
-subhead: A ranked list of automation options for your warehouse, with cost,
-  payback time and risks for each, so you spend only where it pays off.
+subhead: Give it your order volume, order profile, building and labour cost. It compares options from conveyors and put-to-light to robots and automated storage. You get a ranked table with cost, payback, risks and site fit, plus a phased plan.
 explain: |
-  A ranked list of automation options for your warehouse, with cost, payback time and risks for each, so you spend only where it pays off.
+  Automation vendors sell the dream, and a robot system can cost more than the labour it saves. This warehouse automation chooser gives you a neutral comparison before you sign anything or ask for a capital budget.
 
-  You describe your orders, the products, the building and your labour costs. The skill first asks why you want automation: labour, accuracy, speed or growth. It then compares options across the range, from simple conveyors and put-to-light to robots, shuttles and automated storage. For each it estimates cost and payback, checks fit with your space and software, and points out risks like peak-season load and downtime. It finishes with a phased plan so you can start small.
+  It starts by asking why you want automation: labour cost or supply, accuracy, speed or growth. Then it compares options across the range, from simple conveyors and put-to-light to robots, shuttles and automated storage. For each, it works out cost and payback, checks fit with your space and software, and names risks such as peak-season load and downtime.
+
+  It ends with a phased plan that starts small. Every cost comes from a vendor quote or your own numbers. Where you have none, it lists what to ask vendors and does not give a payback.
 when:
   - Labour is scarce or costly and you want to know if machines would help.
   - A vendor pitched you a system and you want an independent view.
-  - You expect volume to grow and need capacity.
+  - You expect volume to grow and need more capacity.
   - You need a business case for a capital request.
+not_for:
+  - You run one small site and have no order history. Fix layout and processes first.
+  - Your problem is layout or slow pick walks. Use the warehouse layout planner or the warehouse picker route planner.
+  - You only want to place fast sellers closer to the dock. Use the warehouse slot assigner.
 you_give:
-  - Order volume now and expected later
+  - Order volume now and expected later, from your order report
   - "Order profile: lines and units per order"
   - Building size, ceiling height and layout
   - Labour cost and budget range
+  - Vendor quotes you already have (optional)
 you_get:
-  - A ranked list of options
-  - Cost and payback for each
+  - A ranked table of options
+  - Cost and payback for each, with the source of every figure
   - Risks and fit with your site
   - A phased roll-out plan
+  - A list of numbers you still need
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - Say why you want automation. Paste your order volume, order profile, building details, labour cost and budget.
+  - Add any vendor quotes you hold. They are better than the estimates in the skill.
+  - Answer its questions. It marks missing numbers instead of guessing.
+  - Check each payback. Does it come from a quote or your own figure? Ask it to say which.
+  - Take the top two options to vendors for quotes. Ask for a trial or a pilot first.
+how_it_works:
+  - title: Ask why
+    text: It asks if the goal is labour, accuracy, speed or growth, since the best option differs.
+  - title: Describe your site
+    text: It collects order volume, order profile, building limits, labour cost and budget.
+  - title: Compare technologies
+    text: It sets conveyors, put-to-light, robots, shuttles and automated storage side by side.
+  - title: Work out payback
+    text: For each option it works out cost, yearly saving and payback from quotes and your numbers.
+  - title: Check fit and risk
+    text: It checks the space, the software and risks such as peak load and downtime.
+  - title: Plan in phases
+    text: It ranks the options and gives a plan that starts small.
+output_shape: |
+  Automation Feasibility Study
+  Summary: <recommendation>, <why>, <capital cost>, <payback>
+  Current state: <orders per day>, <labour cost>, <pick rate>, <accuracy>
+  Options: <option>, <cost>, <yearly saving>, <payback>, <risk>, <site fit>
+  Financials: <capital>, <saving>, <running cost>, <payback>, <source>
+  Plan: <phase>, <months>, <first step>
+  Numbers still needed: <input>, <who can supply it>
+output_sample:
+  input:
+    - Order volume now and expected later
+    - Order profile (lines and units per order)
+    - Building size, ceiling height and layout
+    - Labour cost and budget range
+    - Vendor quotes (optional)
+  prerequisites:
+    - An AI that can run Python, for the sizing and payback code (optional)
+  output:
+    - name: Executive summary
+      contains: The recommendation, the goal it serves, capital cost, payback and timeline.
+    - name: Current state analysis
+      contains: Orders, labour cost, pick rate, accuracy and space use, with the pain point for each.
+    - name: Options compared
+      contains: One row per option with cost, yearly saving, payback, main risk and site fit.
+    - name: Financial analysis
+      contains: Capital, saving, running cost and payback, each with its source.
+    - name: Implementation plan
+      contains: Phases with months, starting small with one pilot zone.
+    - name: Numbers still needed
+      contains: Each missing input and who can supply it, such as a vendor or finance.
+works_best_with:
+  tools:
+    - name: ChatGPT with data analysis, or Claude with code execution
+      why: They can run the sizing and payback code on your order file.
+    - name: Any good chat AI
+      why: Fine for the option table, risks and phased plan.
+  inputs:
+    - A year of order data with lines per order
+    - Written vendor quotes
+    - Your measured pick rate and error rate
+terms:
+  - term: Payback
+    meaning: How many years the yearly savings take to cover the cost of the system.
+  - term: AMR
+    meaning: Autonomous mobile robot. A robot that drives itself around the warehouse.
+  - term: Goods-to-person
+    meaning: A system that brings stock to the picker instead of the picker walking to it.
+  - term: Put-to-light
+    meaning: Lights that show a worker which slot gets each item when sorting orders.

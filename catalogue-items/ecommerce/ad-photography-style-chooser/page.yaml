@@ -1,45 +1,118 @@
 new_slug: ad-photography-style-chooser
 name: Ad photography style chooser
-summary: Compare twelve photo styles for your ad. Pick a main style, a test style and one to avoid.
+summary: "Choose the photo style for your ad. Get a main style, a style to test against it and one to avoid, plus shot notes for the shoot."
 job: make-image-ads
 headline: Ad photography style chooser
-subhead: Share product photos, buyer, placement, brand style and ad goal. Get primary, secondary and avoid style picks with shot notes.
+subhead: "Tell it your product, buyer, where the ad will run and what the ad must do. It compares twelve photo styles and picks one main style, one to test and one to avoid. You also get shot notes for light, lens feel, colour, people and props."
 explain: |-
-  Compare twelve photo styles for your ad. Pick a main style, a test style and one to avoid.
+  Most ad photos fail on style, not on skill. A glossy studio shot can feel like an ad to doubtful buyers. A rough phone-style shot can cost a premium brand its price. The style you shoot in changes who trusts you before they read a word.
 
-  Share product photos, buyer, placement, brand style and ad goal. Get primary, secondary and avoid style picks with shot notes.
+  This chooser sets out twelve photo styles, from studio product shots and flat lays to documentary, phone-made and editorial looks. It matches them to your buyer, your platform and what the ad must do. It then names one main style, one different style to test and one to avoid, each with a reason.
+
+  The matches are rules of thumb from ad practice, not proof. Use the second style to test them on your own buyers. If your brand already has a locked photo style, the chooser keeps it and only suggests a variation.
 when:
-  - You need primary, secondary and avoid style picks with shot notes.
-  - You need ad photography style chooser for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are about to brief a photographer, a creator or an AI image tool and need to pick the look first.
+  - Your ad photos feel off, and you cannot say why.
+  - You move an ad from the feed to Reels or TikTok and wonder if the look should change.
+  - You want one clear style to test against the one you run now.
+not_for:
+  - "Your brand already has a locked photo style and you only need the full set of visual choices: use the Eight-lever ad visual planner."
+  - "You want the style your own best ads share: use the Winning image ad style finder, which reads your ads and results."
+  - "You need ready-to-paste picture prompts: use the Six image ad prompt builder once the style is chosen."
+  - "The content is not an ad, such as product pages or email images."
 you_give:
-  - Product photos
-  - Buyer
-  - Placement
-  - Brand style and ad goal
+  - Your product and its category
+  - Your buyer, such as age range and how much they trust ads like yours
+  - Where the ad will run, such as Meta feed, Reels, TikTok or YouTube
+  - What the ad must do, such as win new buyers or win back past visitors
+  - Your brand position, premium, value or niche (optional)
+  - Product photos and past ads that worked or failed (optional)
 you_get:
-  - Primary, secondary and avoid style picks with shot notes
-  - The sources used, missing inputs and assumptions
+  - One main style with the reason it fits your buyer and platform
+  - One different style to test against it, and what the test shows
+  - One style to avoid, with the reason
+  - Shot notes for lighting, lens feel, colour, people and props
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Write one line each for your product, buyer, platform and ad goal.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your four lines. Attach a product photo or two if you can.
+  - Read the main style, the test style and the avoid style. Say which part feels wrong for your brand and why.
+  - Hand the shot notes to your photographer, creator or image tool.
+  - Run the test style as its own ad set so the two looks do not mix.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm product photos, buyer, placement, brand style and ad goal. Mark facts that are missing.
-  - title: Collect Context
-    text: Follow the collect context section in the full method and keep its required fields and decision rules.
-  - title: The 12 Styles
-    text: Follow the the 12 styles section in the full method and keep its required fields and decision rules.
-  - title: Style-to-Context Matrix
-    text: Follow the style-to-context matrix section in the full method and keep its required fields and decision rules.
-  - title: Deliver Spec
-    text: Follow the deliver spec section in the full method and keep its required fields and decision rules.
-  - title: Photography Style Spec
-    text: Follow the photography style spec section in the full method and keep its required fields and decision rules.
-  - title: Rules
-    text: Follow the rules section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return primary, secondary and avoid style picks with shot notes. Check facts, math and the decisions before any action.
+  - title: Collects your context
+    text: "Writes down product, buyer, platform, goal and brand position, and marks any that you left out."
+  - title: Checks for a locked style
+    text: "If your brand already has a fixed photo style, it keeps it and only offers a variation."
+  - title: Matches the twelve styles
+    text: "Compares the styles with your buyer and goal using a table of starting picks, then adjusts for the platform."
+  - title: Names three styles
+    text: "Picks one main style, one different style to test and one to avoid, each with a reason."
+  - title: Writes the shot notes
+    text: "Gives lighting, lens feel, colour, people and props for the main style."
+  - title: Checks the rules
+    text: "Confirms there are no more than two styles to use, no mixed looks and no made-up brand examples or results."
+output_shape: |-
+  ## Photography Style Spec
+  Product: <name and category>
+  Buyer: <who>
+  Platform and goal: <where, and what it must do>
+  Brand position: <premium | value | niche | MISSING>
+
+  ### Main style: <style name>
+  Why: <fit with buyer, platform and goal>
+  What to look for in reference photos: <2 or 3 traits>
+
+  ### Second style to test: <style name>
+  Why: <the different idea it tests>
+
+  ### Avoid: <style name>
+  Why: <how it would clash>
+
+  ### Shot notes
+  Lighting | Lens feel | Colour | People | Props
+
+  LOCKED STYLE: <none | style>
+  MISSING: <input, or none>
+  CHECKS MISSED: <check, or none>
+output_sample:
+  input:
+    - Your product and its category
+    - Your buyer and where the ad will run
+    - What the ad must do
+    - Product photos and brand position (optional)
+  prerequisites:
+    - Nothing needed first. A brand brain from the Website brand brain builder helps if you have one.
+  output:
+    - name: Main style
+      contains: The photo style that fits your buyer and platform best, with the reason.
+    - name: Second style to test
+      contains: A different style to run against the main one, and what you learn from it.
+    - name: Avoid
+      contains: The style most likely to clash with your brand or buyer, with the reason.
+    - name: Shot notes
+      contains: Lighting, lens feel, colour, who appears in the photo and which props to use.
+    - name: Locked style and gaps
+      contains: Whether a brand style was kept, plus anything missing or not checked.
+tweaks:
+  - what: Your buyer
+    how: Give an age range and how much they trust ads. Doubtful buyers and cold buyers lead to different styles.
+  - what: The platform
+    how: Say feed, Reels, TikTok or YouTube. Tall phone-first ads and square feed ads favour different looks.
+  - what: A locked brand style
+    how: Say so up front. The chooser keeps the style and only suggests a variation.
+  - what: Product photos
+    how: Attach one or two. The shot notes then fit the real product shape and colour.
+terms:
+  - term: Documentary lifestyle
+    meaning: Photos that look candid, with natural light and real people.
+  - term: Editorial
+    meaning: A polished magazine look with controlled light and a posed feel.
+  - term: UGC
+    meaning: Short for user-made content. A phone-made look, often held by hand and a little rough.
+  - term: Flat lay
+    meaning: A photo taken from straight above, with the product and extras laid on a surface.
+  - term: Lens feel
+    meaning: How close or wide the shot looks, and how soft the background is.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

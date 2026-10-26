@@ -7,9 +7,7 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -32,6 +30,7 @@ steps:
   - uses: noncash-working-capital-bridge
     note: Use original reported operating balances and exclude identified financing and noncash changes. Reconcile the final analytical cash narrative without adjusting the same factoring or supplier-finance effect twice.
 execution: coordinator
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22

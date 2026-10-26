@@ -2,34 +2,106 @@ thinking: medium
 thinking_why: It applies a strict style guide with a few design choices.
 new_slug: editorial-web-designer
 name: Editorial web designer
-summary: Describe the interface. Get a calm, document-style design with warm
-  greys, crisp borders and quiet motion.
+summary: Get a calm, document-style web design with warm greys, thin borders and quiet motion, plus the code to build it. The look of Notion or Linear.
 job: build-websites
 headline: Editorial web designer
-subhead: A calm, document-style interface in the manner of Notion or Linear,
-  with warm greys, thin borders and quiet motion. You describe the screen and
-  get design and code that avoid the usual busy web look.
+subhead: Describe your screen or paste one you have. You get a calm, document-style design like Notion or Linear, with warm greys, thin borders and quiet motion. You also get the code, or a ranked list of fixes for your current design.
 explain: |
-  A calm, document-style interface in the manner of Notion or Linear, with warm greys, thin borders and quiet motion. You describe the screen and get design and code that avoid the usual busy web look.
+  Most web designs end up looking the same: bright buttons, big shadows, gradients and a stock font. This skill builds the opposite, a quiet, editorial interface that reads like a well-set document. Use it for a dashboard, a docs site or a landing page that should feel clean and grown up.
 
-  The skill sets strict rules. It bans Inter, Roboto and Open Sans, thin icon packs, heavy shadows, gradients, neon colours, pill-shaped big buttons, emojis and filler names like John Doe. It asks for strong type contrast with a serif and sans mix, muted pastel accents and generous white space. You can also have an existing screen reviewed and get the highest-impact fixes. Always check contrast and keyboard use on real content.
+  It works from a strict rulebook. It bans Inter, Roboto and Open Sans, thin icon packs, heavy shadows, gradients, neon colours, pill-shaped big buttons, emojis and filler names like John Doe. It asks for a serif and sans-serif mix, soft pastel accents, 1px borders and a lot of white space. Motion is slow and light.
+
+  You can also hand it a screen you already have. It names the biggest problems first and gives you the change for each. The look is deliberately flat, so always check contrast and keyboard use on your real text before you ship.
 when:
-  - You want a dashboard or docs site that feels clean and adult.
-  - Your interface looks like every other template.
-  - You want a review of a screen with fixes you can build.
-  - You need a plain design that stays out of the way.
+  - You are building a dashboard or docs site and want it to feel clean and adult.
+  - A teammate says your app looks like every other template.
+  - You have a screen and want the three or four fixes that matter most, in order.
+  - You want a plain design that stays out of the way of your content.
+not_for:
+  - "Your screen is a dense data table or trading view: flat greys can hide what matters, so use the Interface polish checker to find spacing and type slips instead."
+  - "You want a bold look that is different for every client: use the Interface designer, which picks a fresh visual direction for each brief."
+  - "You already have a brand system or component library: use the Interface upgrader to fix what is generic without replacing your system."
 you_give:
-  - A description of the screen or product
-  - Your content, in real wording
-  - An existing interface to review (optional)
-  - Brand limits (optional)
+  - A short description of the screen or product, and who uses it
+  - Your real wording for headings, labels and body text
+  - The framework you use, such as React or plain HTML (optional)
+  - An existing screen to review, as code or a screenshot (optional)
+  - Brand fonts or colours you must keep (optional)
 you_get:
-  - A design direction with type, colour and spacing rules
-  - Code or components in that style
-  - A prioritised list of fixes (optional)
-  - A banned-elements checklist
+  - A design direction with fonts, colours, spacing and border rules
+  - Code for your screen in the style
+  - A ranked list of fixes, if you gave it a screen to review
+  - A check that none of the banned elements slipped in
+  - A short list of checks to run yourself, such as contrast and keyboard use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Describe the screen and who uses it. Paste your real text. If you want a review, paste the code or attach a screenshot.
+  - Name your framework. If you do not, your AI should use plain HTML and CSS.
+  - Check the design direction first, before you read the code. Ask for changes there, then ask for the code again.
+  - Copy the code into your project. Test contrast, keyboard use and a phone screen with your real content.
+output_sample:
+  input:
+    - A description of the screen or product
+    - Your real wording for the page
+    - An existing screen to review (optional)
+    - Your framework and any brand limits (optional)
+  prerequisites:
+    - A place to run the code, such as a code editor and a browser, if you want to see it live
+  output:
+    - name: Design direction
+      contains: The fonts and their roles, the colour list with hex values, spacing steps, and border and radius rules.
+    - name: Code
+      contains: The screen or components in your framework, built to the direction above.
+    - name: Fix list
+      contains: For a review only. Each problem ranked by impact, with why it matters and the exact change.
+    - name: Banned-elements check
+      contains: One line per banned item, marked clear or found and fixed.
+    - name: Checks to run yourself
+      contains: Contrast on real text, keyboard use and a screen reader pass, marked as not run if the AI could not.
+how_it_works:
+  - title: Collect the brief
+    text: Asks for the screen, the audience, your real text and your framework. It does not invent any of these.
+  - title: Clear the banned list
+    text: Rules out the stock fonts, thin icon packs, heavy shadows, gradients, neon colours, big pill buttons and emojis.
+  - title: Set the type
+    text: Pairs a serif for big headings with a clean sans-serif for body, and a mono face for code and keys.
+  - title: Set colour and borders
+    text: Uses a warm white or off-white canvas, charcoal text, soft pastel accents, and 1px borders on every card.
+  - title: Lay out the screen
+    text: Uses a flat grid of cards with generous space between sections, then adds slow fade-in motion.
+  - title: Review and report
+    text: For a review it ranks the fixes by impact. It ends with the banned-elements check and the tests you should run.
+output_shape: |-
+  DESIGN DIRECTION
+    Fonts: <heading serif> | <body sans> | <mono>
+    Colours: canvas <hex> | text <hex> | muted text <hex> | border <hex> | accents <hex list>
+    Spacing and borders: <section spacing> | <card padding> | <border rule>
+
+  CODE
+    <files or components in your framework>
+
+  FIX LIST (review only)
+    1. <problem> | why it matters: <reason> | change: <exact change>
+
+  BANNED-ELEMENTS CHECK
+    <ban>: <clear | found and fixed>
+
+  CHECKS TO RUN YOURSELF
+    <contrast | keyboard | screen reader>: <run | not run>
+works_best_with:
+  tools:
+    - name: Claude
+      why: Writes clean front-end code and keeps to a long rulebook like this one.
+    - name: Cursor
+      why: Lets you drop the code into your project and see the result in the same place.
+  inputs:
+    - Your logo and brand fonts, if they must stay
+    - Two or three real screens of text, so the design is checked against real content
+    - Screenshots of the screens you do not like
+terms:
+  - term: Editorial design
+    meaning: A page laid out like a magazine or a book, with strong type and plenty of space.
+  - term: Bento grid
+    meaning: A layout of cards in different sizes, fitted together like a lunch box.
+  - term: Contrast
+    meaning: How easy text is to read against its background. Soft greys can fail this.

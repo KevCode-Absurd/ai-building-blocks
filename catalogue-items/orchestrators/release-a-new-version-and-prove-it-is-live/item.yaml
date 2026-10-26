@@ -12,9 +12,9 @@ outputs:
   - {type: audit_report}
 uses: [release-preparer, ship-readiness-gate, vercel-publisher, deploy-verifier]
 steps:
-  - {uses: release-preparer, note: "Sets the version and writes the changelog from your commits."}
-  - {uses: ship-readiness-gate, note: "Checks the tagged release and gives a go or no-go before anything goes live."}
-  - {uses: vercel-publisher, note: "Puts the cleared release live and returns the link."}
+  - {uses: release-preparer, note: "Sets the version and writes the changelog from your commits. It hands over your project with the version bump and changelog in it."}
+  - {uses: ship-readiness-gate, note: "Checks your project with the new version and gives a go or no-go. It hands over the go or no-go and the list of blockers."}
+  - {uses: vercel-publisher, note: "Uses your project once the gate says go, not the gate report. It puts the release live and hands over the live link."}
   - {uses: deploy-verifier, note: "Opens the live link from the step before and proves it serves the new build, not the old one."}
 origin: rebuilt
 version: 1.0.0

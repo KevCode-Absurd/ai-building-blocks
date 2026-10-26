@@ -38,7 +38,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Brand brain or a short brief** (required): mission, values, the traits the brand should show, and what it sells.
+- **Brand brain or a short brief** (required): three to five values, the traits the brand should show, and what it sells. With none of these, ask one question and stop (see "If something is missing").
 - **Buyer personas** (advised): who the look must speak to.
 - **Competitors** (advised): three to five brands in the same category, with links or screenshots. Attach images so you can see them.
 - **Touchpoints** (advised): pack, site, social, product, email.
@@ -116,7 +116,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 - If the logo has equity, the plan keeps it.
 
 ## If something is missing
-Write `MISSING: <values | buyers | competitors | reference images>`. Without values, ask for three to five before step 1; do not make up values for the brand. Without images, list what to gather and mark all image-based judgments `[inferred]`. Never name a font or tool as a brand fact the person did not give.
+**No brief at all.** If there is no brand brain, no values and no word on what the store sells, send only one short message and stop. Ask for three to five values the brand will not give up, what it sells, and who buys it. Do this even if they said "go ahead". Do not hand back an empty plan or a plan with every part marked MISSING, and do not make up values.
+
+**A brief but gaps.** If you have the values and what the store sells, carry on and write `MISSING: <buyers | competitors | reference images | logo status>` where each gap sits. Without images, list what to gather and mark all image-based judgments `[inferred]`. Without competitors, say the directions are not checked against rivals. If the logo status is not given, ask once, then assume the logo is open and say so. Never name a font or tool as a brand fact the person did not give.
 
 ## Avoid
 - Showing more than three directions, which makes the choice harder.

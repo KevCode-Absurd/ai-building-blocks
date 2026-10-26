@@ -1,44 +1,76 @@
 new_slug: win-a-deal-against-a-named-rival
 name: Win a deal against a named rival
-summary: Give it the deal and the rival. Get a playbook, a battlecard, objection answers and a signature plan.
+headline: Win a deal against a named rival
+summary: Win a sales deal against a named competitor. Get a rival playbook, a battlecard, answers to live objections and a signature plan to share.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It weighs you against a rival in a live deal and plans a path to a signature. Give it your strongest model.
-headline: Win a deal against a named rival
-subhead: Give it the deal and the rival the buyer is weighing. It builds a playbook for winning against that rival, turns it into a battlecard with comparisons and reply scripts, answers objections as they come, and writes a mutual action plan to signature you can share with the buyer.
-explain: |
-  A deal with a named rival in it is won or lost on specifics. The buyer has a comparison sheet. When the buyer says "they're cheaper" or "they have the integration", the answer is improvised, and the deal drifts until the quarter ends.
+subhead: Give it the deal and the rival the buyer is weighing. It builds a playbook for winning against that rival and a battlecard with honest comparisons and replies. It answers objections as the buyer raises them, then writes a mutual action plan to signature you can share.
+explain: |-
+  A deal with a named rival in it is won or lost on specifics. The buyer has a comparison sheet. When the buyer says "they're cheaper" or "they have the integration", the answer is improvised, and the deal drifts until the quarter ends. This workflow helps you win a sales deal against a named competitor with a prepared case, not an improvised one.
 
-  This workflow prepares the deal like a case. It builds a playbook for this rival: where you win and lose against them, the patterns from past deals, the traps they set. It turns that into a battlecard with honest comparisons, reply scripts and the win themes to lead with. When the buyer raises an objection, it tells you what the objection really means and gives a reply that has worked before, with proof. Last, it writes a mutual action plan: the why-buy case and a dated path to signature, written so you can share it with the buyer and work it together.
+  It builds a playbook for this rival: where you win and lose against them, the patterns from past deals and the traps they set. It turns that into a battlecard with honest comparisons, reply scripts and the win themes to lead with. Every line about the rival comes from public sources or from the buyer, not from a guess.
+
+  When the buyer raises an objection, it says what the objection really means and gives a reply with proof you could show in the meeting. Last, it writes a mutual action plan: the case for buying in the buyer's words and a dated path to signature, with tasks for both sides.
+
+  It works in a plain chat with your notes pasted in. Connecting a CRM is optional.
 when:
   - The buyer has told you who else is in the running.
   - You keep losing to the same rival and cannot say why.
   - A deal is stuck between "we like you" and a signature.
+  - A rep needs a one-page battlecard against one competitor before a call.
+not_for:
+  - "The buyer has not named a rival, or has already chosen: for a stalled deal use the Get a quiet deal moving again without pressure workflow."
+  - "You want a position against many rivals for your marketing, not one deal: use the Map your rivals and write a message they cannot answer workflow."
+  - "You only need to prepare a price or terms call: use the Negotiation call prep planner."
 you_give:
   - "The deal: who the buyer is, what they need, the timeline and who decides"
   - The rival's name and what the buyer has said about them
+  - The buyer's objections, pasted as they say them
   - Your past wins and losses against this rival, even rough notes (optional)
-  - Objections as the buyer raises them
+  - Proof you may use and claims you refuse to make (optional)
 you_get:
-  - A playbook for winning against this rival, with win and loss patterns
+  - A playbook for winning against this rival, with win and loss patterns and the ground to fight on
   - A battlecard with honest comparisons, reply scripts and win themes
   - Answers to live objections, with what each one really means and proof to use
   - A mutual action plan to signature you can share with the buyer
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini, in an AI that can read files, and say Follow HANDOFF.md.
   - Paste the deal, the rival and any past wins and losses. It builds the playbook and the battlecard.
+  - Check the battlecard line by line. Remove any claim about the rival that you cannot prove.
   - When the buyer raises an objection, paste their words. It tells you what it means and how to reply.
-  - Share the mutual action plan with the buyer and work the dates together.
+  - Share the mutual action plan with the buyer yourself and work the dates together.
+output_sample:
+  input:
+    - "The deal: buyer, need, timeline and who decides"
+    - The rival's name and what the buyer said about them
+    - The buyer's objections in their own words
+    - Past wins and losses against this rival (optional)
+    - Proof you may use, and claims you refuse to make (optional)
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+    - Web access, to read the rival's public pages (optional)
+  output:
+    - name: Rival playbook
+      contains: Where you win and lose, the traps they set, the question that shows the difference and the ground to fight on.
+    - name: Battlecard
+      contains: Honest comparisons you can prove, the rival's usual claims with replies and three or four win themes.
+    - name: Live objection answers
+      contains: "For each objection: what it means, a short reply, a proof to show and what not to say."
+    - name: Mutual action plan
+      contains: The case for buying in the buyer's words and a dated path to signature with tasks for both sides.
+    - name: Hand-back summary
+      contains: Each step's file, every MISSING line in one list and the checks that could not run.
 how_it_works:
   - title: Build the rival playbook
-    text: Maps where you win and lose against this rival, the patterns from past deals and the ground to fight on.
+    text: Maps where you win and lose against this rival, the patterns from past deals and the ground to fight on. A win rate is stated only with its deal count.
   - title: Write the battlecard
-    text: Turns the playbook into a battlecard with honest comparisons, reply scripts and win themes.
+    text: Turns the playbook into honest comparisons, reply scripts and win themes. It leaves out any claim you refuse to make.
   - title: Answer the live objections
     text: Reads each objection the buyer raises, says what it really means, and gives a reply with proof.
   - title: Plan the path to signature
-    text: Writes the why-buy case and a dated plan to signature, with both sides' tasks, for you to share with the buyer.
+    text: Writes the case for buying and a dated plan to signature, with tasks for both sides, for you to share with the buyer.
 output_shape: |-
   STEP 1: RIVAL PLAYBOOK
     We win when: <...> | We lose when: <...> | Their traps: <...> | Fight on: <...>
@@ -56,16 +88,6 @@ output_shape: |-
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
-example:
-  business: sprout
-  input: |
-    [the workflow]
-    Sprout, a daily greens gummy brand. The deal: a regional grocery chain (120 stores) choosing one greens product for an end-cap programme starting in January. The category buyer decides, with the store operations lead. Decision in five weeks.
-    The rival: a well-known greens powder brand. The buyer said: "They have the name. Your price per serving is higher. Their rep says gummies don't deliver real doses."
-    Us: 28 daily packs, 21 vitamins and minerals, 6 g fibre, third-party tested, a 2025 placebo-controlled study on absorption of vitamin C and folate. Price per day about $1.07 on first order, $1.78 on subscription; the retail 12-pack is $19.97.
-    Past: we won a warehouse club against a powder because the club's members said powders sat unused. We lost a pharmacy chain because our kids line wasn't ready.
-    What I don't want: any claim about weight loss or energy. Our study covers absorption only.
-  output: pending
 tweaks:
   - what: Past wins and losses
     how: Even three rough notes change the playbook. Without them it works only from the public record.
@@ -91,16 +113,30 @@ improve:
   - Save the battlecard and update it after each deal, so the reply scripts improve.
   - Add your proof library (studies, customer quotes with permission, test results) once and reuse it.
   - Pair it with "Get a quiet deal moving again without pressure" if the buyer goes silent after the plan.
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. The deal: a regional grocery chain (120 stores) choosing one greens product for an end-cap programme starting in January. The category buyer decides, with the store operations lead. Decision in five weeks.
+    The rival: a well-known greens powder brand. The buyer said: "They have the name. Your price per serving is higher. Their rep says gummies don't deliver real doses."
+    Us: 28 daily packs, 21 vitamins and minerals, 6 g fibre, third-party tested, a 2025 placebo-controlled study on absorption of vitamin C and folate. Price per day about $1.07 on first order, $1.78 on subscription; the retail 12-pack is $19.97.
+    Past: we won a warehouse club against a powder because the club's members said powders sat unused. We lost a pharmacy chain because our kids line wasn't ready.
+    What I don't want: any claim about weight loss or energy. Our study covers absorption only.
+  output: pending
 works_best_with:
   tools:
     - name: Any good chat AI
       why: Every step is a plan or a piece of writing.
     - name: Your CRM
-      why: Holds past deals against this rival and the action plan's dates.
+      why: Holds past deals against this rival and the action plan's dates. Connecting it is optional.
   inputs:
     - Notes from lost deals against this rival
     - The buyer's own comparison sheet, if they shared it
     - Customer quotes you have permission to use
+next:
+  - negotiation-call-prep-planner
+  - get-a-quiet-deal-moving-again-without-pressure
+  - rival-matchup-scorer
 terms:
   - term: Battlecard
     meaning: "A one-page sheet for sellers: how you compare with one rival, their usual claims and your replies."

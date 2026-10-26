@@ -13,6 +13,25 @@ metadata:
 
 X-specific growth skill. For general social media content across platforms, see `social-content`. For social strategy and calendar planning, see `social-media-manager`. This skill goes deep on X.
 
+## Setup and inputs
+
+- The five Python scripts are optional helpers. They run offline on details the user gives them and do not log in to X or use any API key. If you cannot run code, do each step by hand in the chat. Never claim you ran a script you did not run.
+- Step 2 uses web search. If you have a web search tool, use it on public posts only. If you do not, ask the user to paste 5 to 10 posts from accounts they admire, and work from those. Never invent a competitor's numbers.
+- Ask once for: the topic or niche, the user's X handle or a sample of 10 past posts, their goal (followers, leads, sales), and 3 to 5 accounts they admire (optional). Mark anything missing as MISSING.
+- The algorithm signals, posting numbers and tactics below are the original author's working estimates, not published X rules. X changes its ranking, so say they are estimates when you use them. Do not state them as fact.
+
+## What to produce
+
+Return these parts, in this order:
+
+1. **Profile audit**: bio, pinned post and recent activity against the checklist, each with a fix.
+2. **What works in your niche**: hook patterns, themes, formats and posting times from the posts you saw. Say how many posts that rests on.
+3. **Drafts**: 5 atomic tweets and 1 thread, ready to post. Links go in a reply, not the first post.
+4. **Posting routine**: a 2-week plan with posts per day and the reply work, sized to what the user says they can do.
+5. **Next check**: the 2 or 3 numbers to look at after two weeks (followers, replies, profile visits).
+
+Nothing is posted for you. The user publishes.
+
 ## When to Use This vs Other Skills
 
 | Need | Use |
@@ -132,7 +151,7 @@ Run: `python3 scripts/tweet_composer.py --type thread --topic "your topic" --aud
 
 ## Step 4 — Algorithm Mechanics
 
-### What X rewards (2025-2026)
+### What X rewards (the author's estimates, 2025-2026)
 | Signal | Weight | Action |
 |--------|--------|--------|
 | Replies received | Very high | Write reply-worthy content (questions, debates) |
@@ -151,7 +170,7 @@ Run: `python3 scripts/tweet_composer.py --type thread --topic "your topic" --aud
 - Tagging people who don't engage back
 - Threads with inconsistent quality (one weak tweet tanks the whole thread)
 
-### Optimal Posting Cadence
+### Posting cadence (the author's rule of thumb, not an X rule)
 | Account size | Tweets/day | Threads/week | Replies/day |
 |-------------|------------|--------------|-------------|
 | < 1K followers | 2-3 | 1-2 | 10-20 |

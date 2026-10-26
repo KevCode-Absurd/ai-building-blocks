@@ -1,6 +1,6 @@
 new_slug: negotiation-call-opening-planner
 name: "Negotiation call opening planner"
-summary: "Paste the deal and who you meet. Get an opening, feeling labels, questions and what to learn first."
+summary: "Plan the first five minutes of a hard negotiation call. Paste your deal and get an opening, feeling labels, questions and facts to learn first."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It needs judgement about the other side's likely fears."
@@ -17,6 +17,10 @@ when:
   - "You expect a tense talk with a supplier, client or landlord."
   - "You usually concede too early."
   - "You want a script for the first five minutes."
+not_for:
+  - "You need a full check of the whole talk: use the Negotiation call prep planner."
+  - "You want advice on price or terms: ask a person who knows your field, because this gives none."
+  - "You are about to sign a contract: have a qualified person read it first."
 
 you_give:
   - "Who you meet, what you want and your deadline"
@@ -32,6 +36,29 @@ how_to_use:
   - "Paste the deal and what you know about them under the prompt."
   - "Mark what you know and what you are guessing."
   - "Practise the opening aloud before the talk."
+output_sample:
+  input:
+    - Who you meet, what you want and your deadline
+    - What you could give
+    - What you know about them, such as their role or past words (advised)
+    - Your limits (optional)
+  output:
+    - name: THEIR ASSUMPTIONS
+      contains: Three to five worst things they may assume about you, each marked KNOWN or GUESS.
+    - name: OPENING
+      contains: Two or three calm sentences that name their likely fears before you make your ask.
+    - name: LABELS
+      contains: Two or three feeling labels that start with It seems like or It sounds like, with where to pause.
+    - name: QUESTIONS
+      contains: Four to six how and what questions that put the problem in their hands.
+    - name: SAFE NO
+      contains: One question where no is the easy answer, and what yes and no each tell you.
+    - name: FAST YES
+      contains: A follow-up question to ask if they agree too quickly.
+    - name: LEARN FIRST
+      contains: A ranked list of facts that could change the deal, to ask before you give anything.
+    - name: BEFORE YOU SIGN
+      contains: A reminder to have a qualified person check the terms.
 
 how_it_works:
   - title: "Write their worst assumptions"

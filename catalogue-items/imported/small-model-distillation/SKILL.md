@@ -10,10 +10,48 @@ dependencies: [transformers, torch, datasets]
 
 # Knowledge Distillation: Compressing LLMs
 
+## What you need
+
+- The teacher model (the large one) and the student model (the small one you want to train), by name.
+- Training prompts or text for the task, and a separate set of held-out prompts for testing. Say how many of each you have.
+- A computer with a GPU, Python, and the `transformers`, `torch` and `datasets` packages. Training needs real GPU time, which costs money on a rented machine.
+- Access to both models. Some models, such as the `meta-llama` ones in the examples below, are gated: you must accept their licence on Hugging Face and log in first.
+- If the teacher is a hosted model, its terms of use. Some providers do not allow their outputs to train other models. Check before you generate data.
+
+If the models, the task data or the GPU are missing, ask once. If still missing, write `MISSING: <what>`, give the plan only, and say the code is untested. Never invent training data, scores or model sizes. A chat cannot run training: write the script, and ask the user to run it and paste back the loss and the test results.
+
+## Steps
+
+1. Confirm the teacher, the student, the task and the held-out test prompts. Check the size gap: a very large gap can make the student hard to train, so suggest a closer pair or two stages if the gap is big.
+2. Choose the method: response distillation if you only have teacher text (hosted teacher), soft-target or logit distillation if you can read the teacher's probabilities, reverse KL (MiniLLM) for free-text generation. Say why in one sentence.
+3. Set temperature and the loss weight (alpha). Start from the values in this file and say they are starting points to tune.
+4. Write the training script from the matching section below. Fix any helper that is not defined in this file before you hand it over.
+5. Write the comparison step: run teacher and student on the held-out prompts, and score both with the task's own check (an accuracy test, a rubric, or a human read of 20 or more answers).
+6. Tell the user how to read the result: the student is worth keeping only if it meets the bar on the task they care about.
+
+## Output
+
+Return, in this order:
+
+1. **Plan**: teacher, student, method, and why, in a few lines.
+2. **Training script**: the full code, with the loss, temperature and alpha filled in and a note on each.
+3. **Settings table**: temperature, alpha, learning rate, epochs, batch size, each marked "start here, then tune".
+4. **Comparison script**: runs both models on the held-out prompts and prints the answers side by side with the score.
+5. **Cost and access notes**: the GPU memory and time you expect to need if known, gated model access, and teacher terms of use. Mark anything you do not know as "not known".
+6. **Not checked**: anything you could not test.
+
+Do not promise how much of the teacher's quality the student will keep. Say it must be measured on the user's held-out prompts.
+
+## When not to use
+
+- The teacher and student are close in size. A plain fine-tune of the student may be enough. Use the LLM fine-tuning guide.
+- You have no GPU. A hosted API or a smaller off-the-shelf model may cost less.
+- You only need the model to answer in your style. A prompt or a light fine-tune is simpler.
+
 ## When to Use This Skill
 
 Use Knowledge Distillation when you need to:
-- **Compress models** from 70B → 7B while retaining 90%+ performance
+- **Compress models** from a large teacher (such as 70B) to a smaller student (such as 7B), then test how much quality you kept on your own task
 - **Transfer capabilities** from proprietary models (GPT-4) to open-source (LLaMA, Mistral)
 - **Reduce inference costs** by deploying smaller student models
 - **Create specialized models** by distilling domain-specific knowledge
@@ -117,17 +155,17 @@ for batch in dataloader:
 ```python
 def reverse_kl_loss(student_logits, teacher_logits, temperature=1.0):
     """
-    Reverse KL divergence: KL(Teacher || Student)
-    Better for generative models than forward KL.
+    Reverse KL divergence: KL(Student || Teacher), token by token.
+    This is a simple per-token form for teaching. MiniLLM itself trains on
+    text the student samples and uses a policy gradient (see references/minillm.md).
     """
-    # Teacher distribution (target)
-    p_teacher = F.softmax(teacher_logits / temperature, dim=-1)
-
-    # Student distribution (model)
     log_p_student = F.log_softmax(student_logits / temperature, dim=-1)
+    log_p_teacher = F.log_softmax(teacher_logits / temperature, dim=-1).detach()
+    p_student = log_p_student.exp()
 
-    # Reverse KL: Sum over teacher, student learns to cover teacher's modes
-    reverse_kl = -(p_teacher * log_p_student).sum(dim=-1).mean()
+    # Reverse KL: sum over the student's own distribution of
+    # p_student * (log p_student - log p_teacher)
+    reverse_kl = (p_student * (log_p_student - log_p_teacher)).sum(dim=-1).mean()
 
     return reverse_kl * (temperature ** 2)
 
@@ -146,9 +184,9 @@ for batch in dataloader:
 ```
 
 **Why reverse KL?**
-- **Forward KL** (standard): Student learns to match teacher's *mean*
-- **Reverse KL** (MiniLLM): Student learns to *cover* all teacher's modes
-- Better for diverse text generation
+- **Forward KL** (standard, `KL(Teacher || Student)`): the student is pushed to put some probability on everything the teacher can say, including rare outputs. It can end up spreading probability onto text the teacher would not write.
+- **Reverse KL** (MiniLLM, `KL(Student || Teacher)`): the student is pushed to stay inside what the teacher likes. It tends to focus on the teacher's main modes.
+- The MiniLLM paper argues reverse KL suits free-text generation. Test both on your task before you pick one.
 
 ### Response Distillation
 
@@ -205,7 +243,7 @@ probs_T4 = softmax(logits / 4.0)  # [0.42, 0.34, 0.24]
 # Total loss = alpha * soft_loss + (1 - alpha) * hard_loss
 
 # Soft loss: Learn from teacher's knowledge
-soft_loss = KL(student || teacher)
+soft_loss = KL(teacher || student)   # what F.kl_div(log_softmax(student), softmax(teacher)) computes
 
 # Hard loss: Learn from ground truth labels
 hard_loss = CrossEntropy(student_output, true_labels)
@@ -219,15 +257,13 @@ alpha = 0.3  # More emphasis on labels
 ### 3. Forward vs Reverse KLD
 
 ```python
-# Forward KL: KL(Student || Teacher)
-# - Student matches teacher's average behavior
-# - Mode-seeking: Student focuses on teacher's highest probability modes
-# - Good for classification
+# Forward KL: KL(Teacher || Student)   (the standard soft-target loss above)
+# - Mode-covering: student tries to give some probability to everything the teacher can output
+# - Common choice for classification
 
-# Reverse KL: KL(Teacher || Student)
-# - Student covers all of teacher's behaviors
-# - Mode-covering: Student learns diverse behaviors
-# - Good for generation (MiniLLM)
+# Reverse KL: KL(Student || Teacher)   (MiniLLM)
+# - Mode-seeking: student concentrates on the teacher's main behaviours
+# - Argued in the MiniLLM paper to suit text generation
 ```
 
 ## Training Strategies
@@ -274,7 +310,7 @@ student = distill(teacher, student, epochs=5)
 # Stage 2: Fine-tune on task-specific data
 student = fine_tune(student, task_data, epochs=3)
 
-# Results in better task performance than single-stage
+# Often helps on a specific task. Compare with single-stage on your own data.
 ```
 
 ### Strategy 3: Multi-Teacher Distillation
@@ -406,13 +442,15 @@ alpha = 0.9  # Strong distillation
 ### 2. Model Size Ratio
 
 ```python
-# Good ratios (teacher/student)
+# Rule of thumb from the original skill, not tested here.
+# Try a closer pair first if results are poor.
+# Ratios (teacher/student)
 70B / 7B = 10×    # Excellent
 13B / 1B = 13×    # Good
 7B / 1B = 7×      # Acceptable
 
 # Avoid too large gap
-70B / 1B = 70×    # Too large, ineffective
+70B / 1B = 70×    # Very large gap: harder to train, try two stages
 ```
 
 ### 3. Data Quality
@@ -445,7 +483,9 @@ for prompt in prompts:
     print(f"Prompt: {prompt}")
     print(f"Teacher: {teacher_out[0]['generated_text']}")
     print(f"Student: {student_out[0]['generated_text']}")
-    print(f"Match quality: {calculate_similarity(teacher_out, student_out):.2f}")
+    # Score both answers with your own check on a held-out set:
+    # an exact-match or accuracy test, a rubric, or a human read of 20 or more answers.
+    # Do not train and test on the same prompts.
 ```
 
 ## Resources
@@ -455,4 +495,6 @@ for prompt in prompts:
 - **KD Survey for LLMs (2024)**: https://arxiv.org/abs/2402.13116
 - **MiniLLM GitHub**: https://github.com/microsoft/LMOps/tree/main/minillm
 
+## Credit and licence
 
+Written by Orchestra Research (`orchestra-research/AI-research-SKILLs`), under the MIT licence in `LICENSE`. Keep the credit when you reuse it. The papers listed above are the authority on the methods. The model weights and datasets you load have their own licences.

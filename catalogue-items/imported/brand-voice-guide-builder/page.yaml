@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It finds the pattern across many sources and rates how sure it is.
 new_slug: brand-voice-guide-builder
 name: Brand voice guide builder
-summary: Give it your documents or call transcripts. Get a brand voice guide
-  with rules, examples and open questions.
+summary: Turn your brand documents and sales call transcripts into a brand voice guide, with tone rules, wording to use and avoid, and open questions.
 job: brand-file
 headline: Brand voice guide builder
-subhead: Turn the way your company already talks into a voice guide anyone can
-  follow. The raw material is your own documents and call recordings, so the
-  guide sounds like you, not like a template.
+subhead: Turn the way your company already talks into a voice guide anyone can follow. The raw material is your own documents and call recordings, so the guide sounds like you, not like a template.
 explain: |
   Turn the way your company already talks into a voice guide anyone can follow. The raw material is your own documents and call recordings, so the guide sounds like you, not like a template.
 
@@ -16,9 +13,12 @@ explain: |
 when:
   - You have sales calls and brand decks but no written voice rules.
   - New writers keep producing copy that does not sound like the company.
-  - You want to check what customers and your team actually say before you
-    decide your tone.
+  - You want to check what customers and your team actually say before you decide your tone.
   - Your brand documents disagree and need one consistent summary.
+not_for:
+  - "You have no documents or call transcripts yet: write a few voice rules by hand first, or collect some sources and come back."
+  - "You only want to rewrite one piece of text in your voice: use your finished guide as a plain brief for your AI, not this builder."
+  - "You need the guide checked by your team before use: this builder only drafts, so hold a short review with a person who knows the brand."
 you_give:
   - Brand documents such as PDFs, decks or notes
   - Call or meeting transcripts (optional)
@@ -31,8 +31,31 @@ you_get:
   - Confidence scores on each finding
   - A list of open questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your documents and call transcripts.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Use an AI that can read uploaded files.
+  - Upload your brand documents. Add call transcripts and a discovery report if you have them.
+  - Paste in a few lines on how you want your brand to sound (optional).
+  - Read the guide. Check the confidence scores first, then answer each open question or accept the suggested answer.
+  - Saving to a file needs a working folder. Without one, the guide stays in the chat, so copy it out.
+  - Gong, Granola and Notion are optional. They need your own accounts. If you do not have them, export or paste your transcripts as text files.
+output_sample:
+  input:
+    - Your brand documents, such as PDFs, decks or notes
+    - Sales call or meeting transcripts (optional)
+    - A discovery report from an earlier step (optional)
+    - Your own words on how your brand sounds (optional)
+  prerequisites:
+    - An AI that can read the files you upload
+    - A working folder, if you want the guide saved to a file
+  output:
+    - name: We Are / We Are Not table
+      contains: Four or more voice traits, each paired with its opposite and backed by evidence from your sources.
+    - name: Voice constants and tone flexes
+      contains: What stays the same in all your writing, and what changes by situation.
+    - name: Tone-by-context matrix
+      contains: Formality, energy and technical depth for at least three situations, each with an example phrase.
+    - name: Confidence scores
+      contains: A high, medium or low rating on each section, based on how many sources agree.
+    - name: Open questions
+      contains: Each unclear point, what was found, a suggested answer, and the decision you need to make.
+    - name: brand-voice-guidelines.md
+      contains: The full guide saved in your working folder, with any older version kept under a dated name.

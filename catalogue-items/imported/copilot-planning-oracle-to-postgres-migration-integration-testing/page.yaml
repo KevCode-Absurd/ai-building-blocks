@@ -2,17 +2,59 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-planning-oracle-to-postgres-migration-integration-testing
 name: Oracle migration test planner
-summary: Share your data access code. Get test scope and parity checks for an
-  Oracle to Postgres migration.
+summary: Get an Oracle to Postgres migration test plan for your .NET data access code. It ranks risky methods and lists test cases to check parity.
 job: build-software
 headline: Oracle migration test planner
-subhead: Share your data access code. Get test scope and parity checks for an
-  Oracle to Postgres migration. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: "Share the path to one .NET project and the code that touches its database. It lists every data access method, ranks them by migration risk and proposes test cases for each. You hand the plan to your developers to build the tests."
+explain: |
+  Not every database call is equally likely to break after a move from Oracle to PostgreSQL. This Oracle migration test planner finds the repositories, DAOs and services that touch the database and puts the risky ones first, such as refcursors and TO_CHAR.
+
+  For each one, it suggests test cases that cover known differences, like empty text versus NULL and datetime and timezone handling. It also lists the seed data each test needs. It treats Oracle as the source of truth for expected results.
+
+  At the end, it checks that every database touchpoint has at least one test case. It plans only. A developer writes the tests.
+when:
+  - "You are about to migrate one .NET project from Oracle to PostgreSQL."
+  - "You need to decide which data access methods to test first."
+  - "You want a test plan to hand to your team."
+  - "You want to know if any database call is not covered by a test."
+not_for:
+  - "Your project is not .NET, or your source database is not Oracle: write a general database test plan by hand instead."
+  - "You want the tests themselves written and run: hand this plan to your developers, who build the integration tests from it."
+  - "You need a plan across many projects at once: run it on one project at a time, since it covers a single project only."
+you_give:
+  - "The path to the one project you want to cover"
+  - "Your repository, DAO and service source files that touch the database"
+  - "Notes on Oracle stored procedures or schema the code calls (optional)"
+you_get:
+  - "A list of repositories, DAOs and services that touch the database, with method signatures"
+  - "Methods ranked by migration risk"
+  - "Test cases for each artifact"
+  - "The seed data each test needs"
+  - "A list of Oracle to PostgreSQL differences to check"
+  - "A check that every database touchpoint has at least one test case"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI tool and paste in this skill's instructions.
+  - Give it the path to your one target project and the source files that touch the database.
+  - Add any notes on Oracle stored procedures or schema that the code calls (optional).
+  - Ask it to write the testing plan. It saves a markdown file named after your project in the Reports folder if it can write files. Otherwise it shows the plan in the chat.
+  - Check that every database method appears in the plan, then hand it to your team to build the integration tests.
+output_sample:
+  input:
+    - The path to the one project you want to test
+    - Your repository, DAO and service source files that touch the database
+    - Notes on Oracle stored procedures or schema that the code calls (optional)
+  prerequisites:
+    - An AI that can read your project files, or code pasted into the chat
+  output:
+    - name: Testable artifacts
+      contains: A list of repositories, DAOs and services that touch the database, with their method signatures.
+    - name: Priority ranking
+      contains: Methods ranked by migration risk, with Oracle-specific features such as refcursors and TO_CHAR placed first.
+    - name: Recommended test cases
+      contains: Test cases for each artifact, including empty string versus NULL text and datetime and timezone checks.
+    - name: Seed data requirements
+      contains: The sample data each test needs in the database before it can run.
+    - name: Oracle to PostgreSQL differences
+      contains: Known behavior differences to check, using Oracle as the golden source for expected results.
+    - name: Coverage mapping
+      contains: A check that every database touchpoint has at least one test case, or a reason for fewer.

@@ -1,0 +1,137 @@
+name: Search Relevance Engineer agent
+summary: Fix poor site search with a tested plan for Elasticsearch or OpenSearch, so each change is scored on real queries before it goes live.
+headline: Search Relevance Engineer agent
+subhead: Give it your search setup and examples of bad searches. It finds why results are missing or ranked wrong, and plans each fix so you can score it first. You get a ranked fix plan with a test list and a safe rollout.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Site search fails in two ways. The right item does not show up at all, or it shows up on page two. This agent fixes the first problem before the second. If the right item cannot match, no ranking boost will help. It looks at how words are split and matched, at synonyms and typos, and only then at how fields are weighted.
+
+  Its method comes from the Agency Agents profile. Never tune by one person's favourite query. Build a list of real queries from your search logs, judge the results for each, and score every change against that list before it ships. Search by meaning (vector search) is added to word matching, not used instead of it, because meaning search misses exact product codes.
+
+  This is an AI role profile shared under MIT. The agent writes a plan and the checks to run. It cannot see or change your search server, so you run the checks and paste the answers back. The profile's targets, such as a zero-results rate under 5 percent, are goals and not results measured by AI Blocks.
+when:
+  - Shoppers or staff search your site and get no results for words that should match.
+  - The right product exists but ranks below weaker matches.
+  - Someone asks "can we add AI search?" and you need to know if it will help.
+  - You changed synonyms or boosts and need a way to know if search got better or worse.
+not_for:
+  - You want your pages to rank higher on Google. That is website SEO, not site search. Use the Search Console quick-win finder.
+  - You want an AI to answer questions from your documents. Use the RAG Pipeline Engineer agent.
+  - Your database queries are slow and search is not the cause. Use the Database Optimizer agent.
+you_give:
+  - Which search tool you use, such as Elasticsearch or OpenSearch, and its version
+  - 5 to 10 searches that go wrong, with what you expected to see
+  - Your index mapping and one real search query as JSON (optional)
+  - An export of your top searches and searches with no results (optional)
+  - A few sample documents, such as product records (optional)
+  - Your speed limit, such as how many milliseconds a search may take (optional)
+you_get:
+  - A table that links each bad search to its likely cause and the first check to run
+  - A plan for the query list and the scores to record before you change anything
+  - Ordered fixes for missed matches, then for ranking
+  - A view on whether to add meaning-based search, with the reason
+  - A safe rollout plan, with a test run and a way to roll back
+  - Assumptions and the answers you still need from your search server
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then references/source-agent.md.
+  - Paste your bad searches, what you expected, and your mapping and sample query if you have them.
+  - Say "Write the relevance plan. Ask me once if anything is missing."
+  - Run the first checks it lists on your own search server, such as the analyze and explain tools, and paste the answers back.
+  - Build the query list and record the baseline scores before you apply any fix.
+  - Apply one fix at a time and score each. Keep a change only if the score goes up and speed stays inside your limit.
+how_it_works:
+  - title: Sort the symptoms
+    text: It groups your bad searches into no results, wrong order, broken product codes and weak long-tail searches, each with a likely cause.
+  - title: Plan the baseline
+    text: It lists the real queries to sample and the scores to record first, such as nDCG, MRR and the no-results rate.
+  - title: Fix matching first
+    text: It checks word splitting, stemming, synonyms and typo handling on both the index side and the search side.
+  - title: Then fix ranking
+    text: It plans field weights, freshness and popularity signals, scored one at a time.
+  - title: Decide on hybrid search
+    text: It says where meaning-based search adds value, and keeps word matching for exact terms and filters.
+  - title: Plan the rollout
+    text: It plans a test run, a new index behind an alias so you can roll back, and the dashboards to watch.
+output_shape: |-
+  SEARCH RELEVANCE PLAN: <site or index name>
+
+  SYMPTOM TABLE
+    <bad search> | <likely cause> | <first check to run> | <proposed fix>
+
+  BASELINE TO RECORD
+    <metric> | <how to measure> | <current value or MISSING>
+
+  QUERY LIST PLAN
+    <segment: common, middle, rare> | <how many queries> | <how to judge them>
+
+  FIXES, IN ORDER
+    <step> | <change> | <how to score it> | <speed risk>
+
+  HYBRID SEARCH VIEW
+    <where it helps> | <where it does not> | <how to prove it>
+
+  ROLLOUT AND ROLLBACK
+    <step> | <what must be true to continue>
+
+  ASSUMPTIONS AND OPEN QUESTIONS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your search tool and version
+    - 5 to 10 searches that go wrong, with what you expected
+    - Your index mapping and a sample query (optional)
+    - Your top searches and no-result searches (optional)
+  prerequisites:
+    - Access to your search server, to run the checks the agent lists
+  output:
+    - name: Symptom table
+      contains: Each bad search with its likely cause, the first check to run and a proposed fix.
+    - name: Baseline to record
+      contains: The scores and speed numbers to note before any change, and how to get them.
+    - name: Query list plan
+      contains: How to sample common, middle and rare searches and judge their results.
+    - name: Fixes in order
+      contains: Matching fixes first, then ranking fixes, each with how to score it.
+    - name: Hybrid search view
+      contains: Where meaning-based search helps, where it does not, and how to prove it.
+    - name: Rollout and rollback
+      contains: The test run, the safe index swap and the way back.
+    - name: Assumptions and open questions
+      contains: What the agent had to guess and what to check on your server.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+  - what: Search tool
+    how: If you use another search tool, say so. The method carries over, but the checks and names will differ.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Relevance
+    meaning: How well the results match what the searcher meant.
+  - term: Analyzer
+    meaning: The rules that split text into words and clean them, such as lowercase and word endings.
+  - term: nDCG
+    meaning: A score from 0 to 1 for how well a result list is ordered against your judged results.
+  - term: Hybrid search
+    meaning: Word matching and meaning-based matching used together.
+  - term: Alias
+    meaning: A fixed name that points at an index, so you can swap the index behind it with no downtime.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A chat can write the plan. A tool that reads files can also read a long search log export.
+  inputs:
+    - A search log export with the query text, result clicks and no-result flags.
+    - Ratings from a few teammates on what the top 3 results for 20 searches should be.

@@ -16,6 +16,29 @@ use_cases:
   - "Find a second use for the tools and skills left over from a project that failed"
   - "List all the ways a new product could be used, then pick the first market"
   - "Spot when you're defending an old bet out of pride, and how to admit it was wrong"
+not_for:
+  - You want to understand why something works, so use the Isaac Newton mind or the Albert Einstein mind for theory.
+  - You need to check a claim against evidence, so use the Carl Sagan mind or the Galileo Galilei mind.
+  - You face a legal, medical or financial decision, so ask a qualified professional. For an idea with no prototype, talk to real customers first.
+output_sample:
+  input:
+    - The product or idea you want to make, sell or fix
+    - Who you think will buy it
+    - What you have already tried and written down
+    - Your time, budget and team limits (optional)
+  output:
+    - name: Buyer and use
+      contains: Who will pay for the product and what they will use it for, with the first market to try.
+    - name: Whole-system list
+      contains: Everything else the product needs to work for a customer, such as delivery, repair and payment.
+    - name: Test plan
+      contains: The options to try, run one after another, with a rough version to build first.
+    - name: Result log
+      contains: How to write down every test, including failures, as one more option ruled out.
+    - name: Who to hire
+      contains: The skills your team lacks for the part you can't do yourself.
+    - name: Next test
+      contains: The single next step, plus what is done, what is near and what is only possible.
 seats:
   - {seat: "Trial and error at scale", asks: "Is this result worth getting? Then what's the next test, and have we written down the last one?"}
   - {seat: "The paying customer", asks: "Who will pay for this, and what will they use it for?"}

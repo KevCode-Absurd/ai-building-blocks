@@ -2,16 +2,31 @@ thinking: high
 thinking_why: It weighs real records, missing facts, and choices that affect people or funding.
 new_slug: nonprofit-program-expansion-planner
 name: Nonprofit program expansion planner
-summary: Share program evidence and growth plans. Get a readiness review, expansion options, and a pilot plan.
+summary: Plan a nonprofit program expansion. Share your evidence and limits. Get a readiness review, a fixed-versus-flexible table, and a pilot plan.
 job: plan-strategy
 headline: Nonprofit program expansion planner
 subhead: Share evidence that your program works, your growth goal, and staff and funding limits. It checks readiness before choosing an expansion route. You get a readiness brief, parts that must stay fixed, possible local changes, and a measured pilot plan.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - A board member or funder asks you to open the program in a new city.
+  - You wonder if your program is ready to grow before you commit money.
+  - You need to decide what must stay the same and what can change for a new community.
+  - You are choosing between running new sites yourself and licensing partners.
+not_for:
+  - "You need to design a new program from scratch: use a program design step or a person who knows logic models, because this plan assumes a working program."
+  - "You need to prove the program works: set up outcome measurement first, then come back with the results."
+  - "You want to merge with another group or use a fiscal sponsor: talk to a nonprofit lawyer or advisor, because this plan covers growing your own program only."
 you_give:
-  - Outcome evidence, delivery method, staff capacity, reserves, growth funding, and the proposed new community.
+  - Outcome evidence for your program
+  - How the program is delivered
+  - Staff capacity and financial reserves
+  - Funding set aside for growth (optional)
+  - The new community or group you want to reach
 you_get:
-  - A readiness memo, fixed-versus-flexible component table, expansion route, pilot, and monitoring plan.
+  - A readiness memo with a go, no-go or not-yet call
+  - A table of what must stay fixed and what can change
+  - A recommended way to expand
+  - A pilot plan for one new site
+  - A plan to check results and fix problems
 how_it_works:
   - title: Check readiness first
     text: Review outcome evidence, model clarity, staff capacity, funding, and demand in the new area.
@@ -26,5 +41,32 @@ works_best_with:
   inputs:
     - Replication decisions commit multi-site budgets and staff.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text, or upload your files if your AI accepts them.
+  - Add your outcome evidence, how the program runs, staff and reserves, growth funding and the new community.
+  - Read the readiness memo first. If it says not yet, fix the gaps before you plan the expansion.
+  - Ask frontline staff to check the fixed-versus-flexible table, since they know what really drives results.
+  - Have your board or a nonprofit advisor review the plan before you commit money or staff.
+output_sample:
+  input:
+    - Your outcome evidence for the program, ideally from more than one group or site
+    - How the program is delivered, and what staff do
+    - Your staff capacity and financial reserves
+    - Funding set aside for growth (optional)
+    - The new community or group you want to reach
+  prerequisites:
+    - An AI that can read your files or pasted text
+    - Real outcome results, not only counts of people served
+  output:
+    - name: Readiness memo
+      contains: A go, no-go or not-yet call, rated on evidence, model clarity, capacity, funding runway and local demand.
+    - name: Fidelity matrix
+      contains: Each program part marked core or flexible, with the reason, how much it can vary, and how you will check it.
+    - name: Replication model recommendation
+      contains: Whether to open sites yourself, license partners, share a toolkit, or move into a public system, and why.
+    - name: Program-in-a-box outline
+      contains: The training, staffing rules, operations manual, data tools and checklists a new site needs to start.
+    - name: Growth funding ask
+      contains: A funding request for systems, staff and start-up costs, kept apart from the regular program budget.
+    - name: Monitoring and course-correction plan
+      contains: "How often you check the new site, and what you do if results lag: retrain, adjust, or close."

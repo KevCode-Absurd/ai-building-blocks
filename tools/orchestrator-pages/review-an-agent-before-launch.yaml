@@ -21,6 +21,33 @@ you_get:
   - Agent control review
   - OWASP and plugin findings
   - Evidence review and unresolved risks
+not_for:
+  - "Your agent has no tools and only writes text: there is nothing to lock down, so skip this."
+  - "You want to attack the agent and see if it breaks: use the AI agent attack tester."
+  - "You want to watch the agent once it is live: use the AI agent monitoring planner."
+  - "Your concern is the API behind the agent: use Fix API security gaps with tests and a pull request."
+output_sample:
+  input:
+    - The agent's job in one or two sentences
+    - Each tool the agent can call, and whether it reads or changes things
+    - Your agent code, tool list and package files
+    - A security audit or findings list you already have (optional)
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+  output:
+    - name: "Step 1: Agent control review"
+      contains: A tool permission table (allow, deny or ask a human), a policy file, audit log fields and a test list.
+    - name: "Step 2: OWASP findings"
+      contains: A pass or fail line for each of the 10 OWASP agent risks, with evidence and a fix for each gap.
+    - name: "Step 3: Plugin integrity record"
+      contains: A file hash manifest for your tools and packages, and a verified or tampered result when you recheck.
+    - name: "Step 4: Evidence review"
+      contains: A verdict on any audit you supply, with each claim marked verified, unsupported or not checked.
+    - name: Unresolved risks
+      contains: Open findings ranked by risk, every missing fact and one next action.
+    - name: Hand-back summary
+      contains: Source coverage and each step's status in one list.
+
 how_to_use:
   - Add the complete skill pack to your AI.
   - Share your goal and the files listed above.

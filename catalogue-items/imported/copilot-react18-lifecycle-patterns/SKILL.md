@@ -61,3 +61,25 @@ Read the full reference file for the lifecycle method you are migrating:
 - **`references/componentWillUpdate.md`** - getSnapshotBeforeUpdate + componentDidUpdate pairing
 
 Read the relevant file before writing any migration code.
+
+
+## Inputs, guard rails and what to return
+
+Added by AI Blocks. The method above is unchanged.
+
+**You need:** at least one class component that uses an unsafe lifecycle method. The React version helps.
+
+**If something is missing:**
+- No code pasted: ask once for the component. Do not write a migration from memory.
+- A method does several jobs: split it, as the reference file explains for "Multiple Patterns in One Method". If you cannot tell what a part does, mark it "CHECK" and ask. Do not guess.
+- The method calls a helper in a file you cannot see: say which file you need.
+- The `references/` folder is not available: use the decision tables above. Say the full examples were not available. Do not invent a pattern.
+- If the component has none of the three methods, say so and stop.
+
+**Return in this order:**
+1. **Methods found**: component, method, what it does, safe method it moves to.
+2. **Rewritten code**.
+3. **Behavior changes**: any change in timing or order.
+4. **Check by hand**: items marked CHECK.
+
+Tell the user to run their tests and click through the screen on their own machine.

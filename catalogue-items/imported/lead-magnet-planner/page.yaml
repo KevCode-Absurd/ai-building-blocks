@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It ranks ideas and outlines the winner.
 new_slug: lead-magnet-planner
 name: Lead magnet planner
-summary: Describe your buyer. Get lead magnet ideas, the best pick and the page
-  and emails to go with it.
+summary: Plan a lead magnet for your buyer. You get ideas, the best pick, a signup page outline and a plan for the emails that follow.
 job: make-offer
 headline: Lead magnet planner
-subhead: A free offer your buyer wants enough to hand over their email, with the
-  page and emails to deliver it. Describe your business and the buyer.
+subhead: A free offer your buyer wants enough to hand over their email, with the page and emails to deliver it. Describe your business and the buyer.
 explain: |
   A free offer your buyer wants enough to hand over their email, with the page and emails to deliver it. Describe your business and the buyer. The skill first checks what content, data and expertise you already have, since the best lead magnet is often something you have written already.
 
@@ -17,6 +15,10 @@ when:
   - You have blog posts and data you could repackage.
   - You want leads who are ready to buy, not just free downloaders.
   - You need a plan for the emails sent after the download.
+not_for:
+  - "You want an interactive tool such as a calculator or quiz: use free-tools, which is a separate skill and not yet listed here."
+  - "You want the lead magnet itself written out: ask your AI for copywriting help, since this plan only outlines it."
+  - "You need the follow-up emails written: use an email sequence skill or write them with a person who knows your buyer."
 you_give:
   - What your business sells
   - Your ideal customer
@@ -28,7 +30,26 @@ you_get:
   - A signup page outline
   - A follow-up email plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Describe your business, your ideal buyer and your goal. Add any blog posts or data you already have.
+  - Answer any questions your AI asks about your current signup and your time limits.
+  - Read the recommended pick and check it solves one clear problem for your buyer.
+  - Ask your AI to change the format or topic if it needs less work or fits your skills better.
+output_sample:
+  input:
+    - What your business does and who your ideal buyer is
+    - Blog posts, data or know-how you could reuse (optional)
+    - How you collect leads today (optional)
+    - Your main goal, such as list growth or lead quality
+    - Your time and budget limits
+  output:
+    - name: Lead magnet recommendation
+      contains: The format and topic, the buyer stage it suits, why it fits, and how much work it takes.
+    - name: Content outline
+      contains: The main sections, the length, and what makes it worth having.
+    - name: Gating and capture plan
+      contains: What to gate, which form fields to ask for, and how the signup page is laid out.
+    - name: Distribution plan
+      contains: Where to promote it, such as blog posts, popups, social, paid ads and partners.
+    - name: Measurement plan
+      contains: The numbers to track and the first thing to A/B test.

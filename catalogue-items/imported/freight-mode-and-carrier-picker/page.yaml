@@ -2,36 +2,110 @@ thinking: medium
 thinking_why: It compares cost against transit time.
 new_slug: freight-mode-and-carrier-picker
 name: Freight mode and carrier picker
-summary: Give it your shipments. Get the cheapest mix of modes and carriers, and
-  where to combine loads.
+summary: Cut your freight bill. Give it your freight invoices to get the best mode and carrier for each lane, and where combining loads could save money.
 job: plan-supply-chain
 headline: Freight mode and carrier picker
-subhead: Give it your shipments. Get the cheapest mix of modes and carriers, and
-  where to combine loads. Bring what you ship, with weight and size. Use the
-  result to plan your next step.
+subhead: Give it three months or more of freight invoices and your delivery time needs. It checks parcel, less-than-truckload and full truckload for each lane, suggests carriers, and finds shipments you could combine. You get a lane table and an ordered list of changes.
 explain: |
-  The cheapest mix of shipping modes and carriers for your freight, plus where combining loads would save money without hurting delivery times.
+  A rising freight bill usually hides a few fixable things. A small load that ships alone each day. A lane that should go by truckload and goes by parcel. Seven carriers where three would get better rates. Finding them takes lane-by-lane work most teams never do.
 
-  It starts with what you ship, shipment sizes, lanes, how often, spend now, on-time rate and damage claims. It compares parcel, less-than-truckload, full truckload and other modes for each lane, matches them to transit and handling needs, and recommends carriers. It looks for ways to combine shipments, shift modes and bid out heavy lanes. The result is a list of changes ordered by saving and effort.
+  You give it your freight invoices. It looks at each lane: what you ship, how often, which mode and carrier you use now, what it costs, and how late or damaged the loads were. It compares modes against your delivery time needs, picks a carrier mix, and looks for loads to combine or lanes to bid out.
+
+  Savings come only from your numbers. It works out each saving from your invoices and real quotes, shows the sums, and writes "needs a quote" where it has no price. The rates in the skill are examples, not quotes.
 when:
   - Your freight bill keeps rising and you need ways to cut it.
   - You ship small loads often and think combining them would help.
-  - You are unsure whether parcel or truckload is cheaper on a lane.
-  - You want to check if you use too many carriers.
+  - You are unsure whether parcel, LTL or truckload is cheaper on a lane.
+  - You use many carriers and want to know if fewer would get you better rates.
+not_for:
+  - "You need local delivery routes for your own drivers: use the Delivery route planner."
+  - "You plan the final leg to customers' homes: use the Last-mile delivery planner."
+  - "You have a late or damaged shipment right now: use the Shipment problem handler."
+  - "You have less than three months of freight invoices. There is not enough to find a pattern."
 you_give:
-  - What you ship, with weight and size
-  - Lanes and how often you ship
-  - Current spend and carriers
-  - Transit time needs
-  - Special handling needs (optional)
+  - Freight invoices or a table with date, origin, destination, weight, size, mode, carrier and charge
+  - The lanes you ship on and how often
+  - Delivery time needs and delivery windows
+  - Rate quotes from other carriers (optional)
+  - On-time and damage records by carrier (optional)
+  - Special handling such as cold, hazmat or oversize (optional)
 you_get:
-  - Mode choice per lane
-  - Carrier recommendations
-  - Load combining ideas
-  - Estimated savings
-  - Ordered list of changes
+  - A lane table with the best mode and carrier for each lane
+  - Load combining ideas, with the effect on delivery time
+  - Notes on where to use fewer carriers or bid out a lane
+  - Estimated savings with the sums shown, or "needs a quote"
+  - Changes ordered by saving and effort, and a list of missing data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Open Claude, ChatGPT or Gemini and paste the skill. For a long invoice file, use a tool that can read a spreadsheet or run code."
+  - "Export three months or more of freight invoices as a spreadsheet. Add your delivery time needs per lane."
+  - "Paste or attach them. Add any quotes you hold from other carriers."
+  - "Read the lane table. Check that each lane's current cost matches your own books."
+  - "Treat any saving with no quote behind it as a lead. Ask the carrier for a real quote before you change anything."
+  - "Start with the first change on the list. Run the skill again after a quarter with the new invoices."
+how_it_works:
+  - title: Learn your freight
+    text: Reads what you ship, your lanes, how often, spend now and service needs.
+  - title: Compare modes by lane
+    text: Weighs parcel, LTL, truckload and other modes against your delivery time needs.
+  - title: Match carriers
+    text: Suggests carriers from your own records and quotes, and notes the ones to bid out.
+  - title: Look for shared loads
+    text: Finds shipments on the same route that could ship together.
+  - title: Work out savings
+    text: Takes your current cost minus a real quote, times your shipment count, and shows each step.
+  - title: Order the changes
+    text: Ranks changes by saving and effort, and lists what is missing.
+output_shape: |
+  Freight review, based on <months> of invoices
+
+  Lane table
+  | Lane | Now (mode, carrier) | Suggested (mode, carrier) | Estimated saving and basis | Effort | Next action |
+
+  Load combining ideas
+  - <shipments> could ship together, effect on delivery: <note>
+
+  Carrier notes: <fewer carriers or lanes to bid out>
+
+  Changes in order
+  1. <change> | saving: <estimate or "needs a quote">
+
+  MISSING: <list>
+output_sample:
+  input:
+    - Three or more months of freight invoices
+    - Your lanes, shipment sizes and delivery time needs
+    - Quotes from other carriers (optional)
+    - On-time and damage records (optional)
+  output:
+    - name: Lane table
+      contains: For each lane, the current and suggested mode and carrier, with the saving and its basis.
+    - name: Load combining ideas
+      contains: Shipments that could ship together, and what it does to delivery time.
+    - name: Carrier notes
+      contains: Where to use fewer carriers or send a lane out for bids.
+    - name: Changes in order
+      contains: Actions ranked by saving and effort, with what to do first.
+    - name: Missing list
+      contains: Quotes and data you still need before a saving can be called real.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your invoice export instead of pasting it.
+    - name: A tool that can run code
+      why: It can total hundreds of invoices by lane without sums by hand.
+  inputs:
+    - A year of invoices, so busy and quiet months show
+    - Real quotes for your top three lanes
+terms:
+  - term: Lane
+    meaning: One route from an origin to a destination, such as a warehouse to a city.
+  - term: LTL
+    meaning: Less-than-truckload. Your freight shares a truck with other shippers.
+  - term: Truckload (TL)
+    meaning: A whole truck for your freight alone.
+  - term: Parcel
+    meaning: Small packages sent by couriers such as UPS or FedEx.
+  - term: Intermodal
+    meaning: Freight that travels by rail and truck. Slower but often cheaper on long routes.
+  - term: Consolidation
+    meaning: Combining several small shipments into one larger one.

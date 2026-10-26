@@ -1,40 +1,53 @@
 new_slug: clipper-program-planner
 name: "Clipper program planner"
-summary: "Give it a brief and budget cap. Get pay-on-approval terms, a review checklist and a seeding plan."
+summary: "Plan a paid clipper program: pay only for clips you approve, up to a cap, with a do-not list, a review checklist and a seeding plan."
 job: grow-social
 thinking: high
 thinking_why: "It writes rules that protect your brand from false claims and policy trouble, so a stronger model is safer."
 
 headline: "Clipper program planner"
-subhead: Give it your brief, your footage and a budget cap. It plans a program where clippers post your clips and you pay only on approval up to a cap, with a do-not list, a review checklist, a product seeding plan and the numbers to track.
+subhead: "Give it your brief, the footage clippers may use and a budget cap. It plans a program where clippers post your clips and you pay only for the ones you approve, up to a cap. You get a do-not list, a review checklist, a product seeding plan and the numbers to track."
 
 explain: |
-  A clipper is a person who cuts and posts short clips of your content on their own accounts, for pay. A marketplace can connect you to many of them. You set a target cost per 1,000 views, a total cap and a brief, and you pay only for clips you approve. The aim is views and visits, not followers.
+  A clipper is a person who cuts and posts short clips of your content on their own accounts, for pay. A clip marketplace connects you with many of them. You set a target cost per 1,000 views, a total cap and a brief, and you pay only for clips you approve. The aim is views and visits to your store, not followers.
 
-  The risk is real. Clippers can post off-message clips, make claims you cannot back up, or break a platform's ad rules, and the post speaks for your brand. So this skill leads with brand safety and claims review, then the terms, the brief, a seeding plan for product and the numbers to watch. The sources call this early and risky, and neither had run it at large scale, so it promises no results.
+  The risk is real. Clippers can post off-message clips, make claims you cannot back up, or break a platform's ad rules, and the post speaks for your brand. So this skill leads with brand safety and claims review, then the terms, the brief, a seeding plan for product and the numbers to watch. The sources call this approach early and risky, and neither had run it at large scale, so the plan promises no results.
+
+  It is different from paying one creator a flat fee for one post. Here many small accounts post, and you pay per approved clip, so the review checklist and the cap do most of the work. For the one-creator fee, use the Creator pay planner.
 
 when:
   - You have long videos, podcasts or footage that could be cut into many short clips.
-  - You want more reach from many small accounts and can review every clip before paying.
-  - You send product to many creators and want one plan for seeding and tracking.
+  - You want reach from many small accounts and can review every clip before you pay.
+  - You send free product to many creators and want one plan for seeding and tracking.
+  - A clip marketplace asks you to set terms and you don't know what to put in them.
+
+not_for:
+  - "Your product makes health, money or safety claims and nobody has checked them: wait until you have a claims review. Clippers can post claims you can't back up."
+  - "Nobody can approve clips within a day or two: don't start. Paying only on approval needs quick review."
+  - "You want to pay one creator a flat fee for one post: use the Creator pay planner."
+  - "You want to send gifts to a few creators and track their posts: use the Influencer gifting planner."
 
 you_give:
-  - Your brief and the footage clippers may use
-  - Your budget cap and target cost per 1,000 views
-  - Your brand safety rules and the claims you cannot make
-  - Who approves each clip, and how fast
+  - Your brief and which footage clippers may use (required)
+  - Your total budget cap and your target cost per 1,000 views (required)
+  - Claims you may not make, and your brand safety rules (optional, but strongly advised)
+  - Who approves each clip, and how fast (optional, but strongly advised)
+  - The platform and clip marketplace you plan to use (optional)
+
 you_get:
-  - Program terms, with pay on approval and a total cap
-  - A brief with a do-not list, and a review checklist
-  - A seeding and reuse plan
-  - The numbers to track by group of clippers
+  - A brand safety section first, with the do-not list, claims you can't make, the approver and the review time
+  - Program terms with pay only on approval, a total cap, a stop rule and a paid-label rule
+  - A brief and a pass-or-reject review checklist
+  - A product seeding plan and a way to reuse winning clips
+  - The numbers to track for each group of clippers
+  - A plain risk line saying this approach is early and risky, with no results promised
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your brief, say which footage can be clipped, and list claims you may not make.
-  - Give your budget cap, your target cost per 1,000 views and who approves clips.
-  - Read the brand safety and review parts first, and set them up before you open the program.
-  - Start with a small cap and a few clippers, and review every clip.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - Paste your brief. Say which footage can be clipped and list the claims you may not make.
+  - Give your budget cap, your target cost per 1,000 views, and who approves clips and how fast.
+  - Read the brand safety and review parts first. Set them up before you open the program to anyone.
+  - Read your clip marketplace's own terms on paid posts, reposting and music before you sign up. Start with a small cap and a few clippers, and review every clip.
 
 how_it_works:
   - title: Sets safety first
@@ -46,7 +59,7 @@ how_it_works:
   - title: Writes the review checklist
     text: Claims, labels, music rights, logo, link, tone, and who signs off.
   - title: Plans product seeding
-    text: Packs sent to many creators, with a plan for what to ask and how to track the post rate.
+    text: Packs sent to many creators, with a plan for what to ask and how to track the post rate. Start with a number you can review and ship.
   - title: Shares and remakes winners
     text: Winning clips are shared so others can remake them in their own look, voice or language.
   - title: Multiplies a winning script
@@ -57,6 +70,7 @@ how_it_works:
 output_shape: |
   BRAND SAFETY FIRST
   Do not: <list>   Claims we cannot make: <list>   Approver: <name>   Review time: <hours>
+  RISK  The sources call this approach early and risky. No results are promised.
 
   PROGRAM TERMS
   Pay: only for approved clips   Total cap: <$>   Target cost per 1,000 views: <$>
@@ -73,8 +87,34 @@ output_shape: |
   Seed: <n packs per month>   Ask: <what>   Share winners: <how>   Remake by: <language, age>
 
   TRACK BY GROUP  <views, visits, sales, rejects>   Checked weekly by: <name>
+  HONEST LIMITS  <fast approvals and claim checks are needed; nothing is promised>
   CHECKS MISSED: <none | list>
   MISSING: <what>
+
+output_sample:
+  input:
+    - Your brief and the footage clippers may use
+    - Your total budget cap and target cost per 1,000 views
+    - Claims you may not make (optional)
+    - Who approves each clip, and how fast (optional)
+  prerequisites:
+    - A clip marketplace, or another way to pay clippers only when you approve a clip
+    - A person who can review every clip within a day or two
+  output:
+    - name: BRAND SAFETY FIRST
+      contains: The do-not list, claims you can't make, the approver and review time, with a plain risk line.
+    - name: PROGRAM TERMS
+      contains: Pay only for approved clips, the total cap, target cost per 1,000 views, stop rule, payment date and paid-label rule.
+    - name: BRIEF
+      contains: The goal of views and traffic, the footage to use, what to say and what never to say.
+    - name: REVIEW CHECKLIST
+      contains: Pass-or-reject checks for claims, paid label, music rights, logo, link, price and tone.
+    - name: SEEDING AND REUSE
+      contains: Product packs per month, what to ask for, how to share winners and how to remake them.
+    - name: TRACK BY GROUP
+      contains: Views, visits, sales and rejected clips for each group of clippers, and who checks it each week.
+    - name: HONEST LIMITS, CHECKS MISSED and MISSING
+      contains: What this plan can't promise, any check that failed and any input you did not give.
 
 tweaks:
   - what: Budget cap
@@ -106,12 +146,12 @@ improve:
   - Add your real claims list and past rejected clips to the do-not list.
   - Add the marketplace's own terms to the checklist once you know them.
   - Add a rule for how fast you pay after approval.
-  - Pair it with the creator pay planner for the creators you pay directly.
+  - Pair it with the Creator pay planner for the creators you pay directly.
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "It writes the terms, brief and checklist from your claims list."}
-    - {name: "A clip marketplace", why: "A marketplace where clippers post and you approve before paying is the tool this plan assumes. Read its terms first."}
+    - {name: "A clip marketplace", why: "A site where clippers sign up, post clips of your content and are paid per approved view. This plan assumes one that lets you approve before paying. Read its terms on paid posts, reposting and music first."}
     - {name: "Google Drive", why: "A shared drive for the footage clippers may use, with a clear folder of what is off limits."}
   inputs:
     - "Your claims register or a list of banned claims"
@@ -127,3 +167,5 @@ terms:
     meaning: Sending free product to many creators so they can post about it.
   - term: Pay on approval
     meaning: You pay only for clips you have checked and accepted.
+  - term: Clip marketplace
+    meaning: A site that connects you with clippers, who post clips of your content and are paid per approved view.

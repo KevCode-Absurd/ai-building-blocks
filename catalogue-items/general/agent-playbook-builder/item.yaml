@@ -1,6 +1,6 @@
 slug: agent-playbook-builder
 name: Correlated agent playbook builder
-summary: Build a dry-run playbook with grouped signals and proposed actions.
+summary: "Plan a dry-run playbook that fires when several agents flag the same problem. Get trigger rules, cooldowns, proposed actions and test cases."
 category: general
 type: skill
 role: make

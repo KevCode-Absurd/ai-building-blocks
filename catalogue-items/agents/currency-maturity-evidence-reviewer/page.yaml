@@ -1,51 +1,118 @@
 new_slug: currency-maturity-evidence-reviewer
-name: Currency maturity evidence reviewer
-headline: Currency maturity evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+name: Currency forward contract coverage reviewer
+headline: Currency forward contract coverage reviewer
+summary: Find your open foreign currency exposure and settlement cash after a forward contract. Recheck when a bill, rate or bank notice changes.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A currency exposure bridge and matched forward settlement schedule. Share one currency maturity bucket, documented receivables/payables and commitments, existing buy-forward contract and settlement rates/fees. Include the previous dated review and source versions when available.
-explain: |-
-  A currency exposure bridge and matched forward settlement schedule.
+subhead: Give it the receivables, payables and commitments due in one foreign currency on one date, your forward contract, the settlement rate and the fees. It compares them with your last review, nets the exposure with the forward counted once, and works out the cash to settle. You get the open exposure, the settlement cash, and a short record to start the next review from.
 
-  Treasury foreign exchange settlement. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A company that pays suppliers in euros but reports in dollars carries a currency risk until each bill is paid. A forward contract fixes the rate for part of that bill. The two pieces of paper then tell two stories. One shows how much risk is left. The other shows how much cash leaves the account. If the forward is counted twice, or the already-netted figure is used as the full bill, both stories are wrong.
+
+  This agent reviews one currency and one due date at a time. It keeps a small record of the last review: the currency pair, the quote direction, the due-date bucket, the contract ID, the amount, the source dates, the exposure left and any collateral notice. Each run compares new evidence with that record. A changed payable, a new hedge confirmation, a new settlement rate or a bank collateral notice starts a review. If nothing changed, it says so and stops.
+
+  When there is something to review, it nets receipts and payments, adds the forward once, and passes the original bill and the forward amount to the settlement step. If the bank documents a block on cash as collateral, it also checks how much cash you can use. It never works out a collateral call from a rate scenario. It reviews and reports. It does not buy currency, trade or contact a bank, and it works for contracts that buy foreign currency only.
+
 when:
-  - You need a currency exposure bridge and matched forward settlement schedule.
-  - You work on treasury foreign exchange settlement and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A supplier invoice in a foreign currency changes before its due date.
+  - The bank sends a new confirmation for your forward contract.
+  - The settlement rate is fixed and you want the cash that will leave your account.
+  - The bank tells you part of your cash is blocked as collateral on the contract.
+
+not_for:
+  - You want to choose a new hedge, trade or place an order. It reviews an existing contract and takes no action. Ask your bank or treasury adviser.
+  - Your forward sells the foreign currency, for example to cover a customer receipt. The settlement step handles contracts that buy foreign currency only.
+  - You have no confirmation for the forward. It marks the contract MISSING and stops, because an unsigned deal is not a hedge.
+  - You need a forecast of where the rate will go. It uses the rates you supply and does not predict any.
+  - You only want to know how much cash you can use today. Use the Spendable cash balance checker.
+
+output_sample:
+  input:
+    - The bills, receipts and commitments due in one currency on one date, each with an ID
+    - Your forward contract confirmation, the settlement rate and any fees
+    - Your reporting currency, the quote direction (such as dollars per euro) and a scenario rate
+    - A bank collateral notice and your list of restricted cash (optional)
+    - The record from your last review (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The pack's two component files added to your AI
+    - A signed forward confirmation. Without one the contract is marked MISSING.
+  output:
+    - name: Changed since last review
+      contains: Each bill, contract amount, rate or notice that moved, with its old value, new value and source.
+    - name: Exposure
+      contains: Receipts less payments plus the forward, as an open foreign amount, translated at your base and scenario rates.
+    - name: Settlement
+      contains: Cash locked by the forward, cash bought at the settlement rate and fees, with any open or over-hedged amount.
+    - name: Cash check
+      contains: Only if the bank documents a block. Usable cash after restricted and blocked cash, against cash needed.
+    - name: Record for next review
+      contains: A short record to paste into your next run.
+    - name: Missing and checks missed
+      contains: Each gap, and each check that failed or could not run.
+
 you_give:
-  - One currency maturity bucket, documented receivables/payables and commitments, existing buy-forward contract and settlement rates/fees. Include the previous dated review and source versions when available.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The receivables, payables and firm commitments due in one currency on one date, with their IDs (from your ledgers)
+  - The forward contract confirmation: buy or sell, foreign amount, forward rate, due date and ID (from your bank)
+  - The settlement rate and any fees (from the bank's settlement notice or contract)
+  - The reporting currency, and the base rate and any scenario rate you want tested
+  - Any bank collateral notice and your list of restricted cash (optional, only if a block is in question)
+  - The last review's record and the earlier source versions (optional, needed to see what changed)
+
 you_get:
-  - A currency exposure bridge and matched forward settlement schedule.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - What changed since the last review, source by source
+  - An exposure bridge: receipts, payments, the forward and the open amount in foreign currency, translated at your rates
+  - A settlement schedule: cash locked by the forward, cash bought at the settlement rate, fees, and any over-hedge or open amount
+  - A cash check against a bank collateral block, when one is documented
+  - A short record to paste into the next review, plus MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. The pack holds the Currency exposure and forward settlement checker workflow and the Spendable cash balance checker. In a chat-only tool it still works, but it cannot save files, so you keep the record it hands back.
+  - Say whether this is the first run. If not, paste last time's record. Then attach the ledger lines for the due date, the forward confirmation and the settlement notice.
+  - State the quote direction once, such as "dollars per euro". Check that every rate in the result uses it.
+  - Check that the forward amount appears once in the exposure bridge and once in the settlement. Check that the cash adds up: locked cash, plus bought cash, plus fees.
+  - Fix every MISSING line. Run it again whenever a bill, a confirmation, a rate or a bank notice changes. Installing it sets up no schedule.
+
 how_it_works:
-  - title: Reconcile currency exposure and settlement
-    text: Run the governing workflow when An underlying payable, hedge confirmation, settlement rate or collateral notice changes.
-  - title: Restricted cash availability checker
-    text: If the counterparty documents a collateral cash block, check accessible cash using the actual notice and existing restriction ledger. Do not infer a collateral call from an exchange-rate scenario or arrange a trade.
-output_shape: |-
-  A currency exposure bridge and matched forward settlement schedule.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this currency and due date, or sets a first baseline. Compares the amounts, the contract ID, the quote direction and the source dates. If nothing changed and no review is due, it says so and stops.
+  - title: Nets the exposure
+    text: Adds up foreign receipts and subtracts payments for the due date. Adds a forward that buys currency as a positive amount, and one that sells as a negative. Keeps the open amount in foreign currency, then translates it at your base and scenario rates.
+  - title: Settles the forward
+    text: Works out the cash the forward locks at its contract rate and compares it with the same amount at the settlement rate. Applies the currency bought to the original bill, never to the already-netted figure. Shows the open amount, any over-hedge, the fees and the total cash.
+  - title: Checks a collateral block only if one is documented
+    text: Splits the bank balance into usable, restricted, blocked and unverified parts, using the bank's own notice. It never works out a collateral call from a rate scenario or arranges a trade.
+  - title: Saves the record
+    text: Writes the small record for next time and lists what is still MISSING. It proposes a state update and keeps the old one.
+
+output_shape: |
+  REVIEW DATE <date>, <currency pair, quote direction>, <scale>
+  DUE DATE <date>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  EXPOSURE   receipts <n> - payments <n> + forward <n> = open <n> <foreign>
+             at base rate <n> = <n>; at scenario rate <n> = <n>; move <n>
+  SETTLEMENT locked <n> + bought at settlement rate <n> + fees <n> = cash <n>
+             open or over-hedged <n> <foreign>
+  CASH CHECK account <n> - restricted <n> - blocked <n> = usable <n>
+             against cash needed <n>  (only if a block is documented)
+
+  RECORD FOR NEXT REVIEW  pair, direction, due date, contract ID, amount,
+                          source dates, open exposure, collateral notice
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Maturity, currency units and rate quote direction match; forward notional appears once in exposure netting and once in settlement, never as two hedges. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - what: A different settlement rate
+    how: Change the rate and run it again. The cash bought at the settlement rate moves, the cash locked by the forward does not, and the gain or loss against spot shows the gap.
+  - what: A bigger payable
+    how: Raise the bill. The open amount grows by the same number of foreign units, and the over-hedge line drops to zero if it was showing.
+  - what: A scenario rate
+    how: Add a second rate. The exposure line shows the move, which is the open amount times the change in rate.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Maturity, currency units and rate quote direction match; forward notional appears once in exposure netting and once in settlement, never as two hedges. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +123,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the record from each review in one folder named by date, so the next run starts from the true earlier state.
+  - Write your quote direction, such as dollars per euro, once in the agent's file so every run reads rates the same way.
+  - Keep each bank confirmation and settlement notice with its date. A rate with no source stops the lines that use it.
+  - Pair it with the Cash settlement forecast reviewer when the question is your daily cash, and with the Spendable cash balance checker when only the collateral block is in question.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your bank's forward confirmation and settlement notice
+      why: Give the contract rate, amount, date and fees as facts, so nothing rests on a guess.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - A ledger export of the bills and receipts due on that date, each with an ID.
+    - The bank's collateral notice, if the contract has one.
+    - A named person who owns the hedge policy and will check the quote direction and the rates.
+
 terms:
+  - term: Forward contract
+    meaning: A deal with a bank to buy or sell a foreign currency on a set date at a rate agreed today.
+  - term: Exposure
+    meaning: The amount of foreign currency you still owe or are owed, after receipts, payments and hedges.
+  - term: Quote direction
+    meaning: Which way a rate reads. "1.10 dollars per euro" and "0.91 euros per dollar" are the same price written two ways.
+  - term: Over-hedge
+    meaning: A forward bigger than the bill it was bought to cover.
+  - term: Collateral block
+    meaning: Cash the bank holds back as security for a contract, so you cannot spend it.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the calculation works, with no claim about a real company.

@@ -1,32 +1,69 @@
 new_slug: fund-recycling-capacity-checker
 name: Fund recycling capacity checker
 headline: Fund recycling capacity checker
-summary: Bound eligible recycled distributions by the signed fund recycling cap and usage to date.
+summary: Check how much of your fund's recycling cap is left and how much of a distribution you can reinvest. Give it the cap, the amount used and the distributions.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Remaining cap, reusable amount, excluded excess and prior cap overuse. Share commitment cap base, contractual recycling fraction, actual cumulative recycling used, eligible distributions and confirmation the recycling window remains open.
+subhead: Give it your fund's recycling cap and what you have used so far. It works out what is left to reuse from new distributions. You also see the excess it leaves out.
 explain: |-
   Remaining cap, reusable amount, excluded excess and prior cap overuse.
 
   Private fund commitments. Illustrative figures only. Cap20 on commitment100, used12, leaves8 of15 eligible distributions reusable. Used18 leaves only2.
 when:
-  - You need remaining cap, reusable amount, excluded excess and prior cap overuse.
-  - You work on private fund commitments and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A fund distribution arrives and you need to know how much can be reinvested.
+  - You must show a reviewer how the recycling cap was used.
+  - You suspect past recycling went over the cap and want it shown.
+  - You are checking a fund manager's recycling figures against the signed agreement.
+not_for:
+  - "You need to know if a distribution is legally eligible by date or recall rights: ask your fund's lawyer or the fund administrator."
+  - "You want to decide on a new investment: use your investment committee process, as spare cap does not approve a deal."
+  - "You need to track recalled amounts or commitment changes: use the fund administrator's ledger, as this checks one cap only."
 you_give:
-  - Commitment cap base, contractual recycling fraction, actual cumulative recycling used, eligible distributions and confirmation the recycling window remains open.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The commitment cap base from your fund agreement.
+  - The recycling fraction in the agreement.
+  - The total recycled so far.
+  - The distributions that are eligible to recycle.
+  - Proof that the recycling window is still open.
+  - Reporting date, currency and scale.
 you_get:
-  - Remaining cap, reusable amount, excluded excess and prior cap overuse.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The remaining cap after past recycling.
+  - The amount of new distributions you can reuse.
+  - The excess that is left out.
+  - Any past overuse of the cap, kept visible.
+  - A list of missing inputs and checks that did not run.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini. Use one that can read files.
+  - "Share your fund agreement figures: cap base, fraction, amount used and eligible distributions."
+  - Add the reporting date, currency and scale.
+  - Ask your AI to run the check and list anything it could not confirm.
+  - Read the MISSING lines and the reconciliation before you rely on the numbers.
+  - Ask your fund administrator or lawyer to confirm which distributions are eligible.
+output_sample:
+  input:
+    - Your commitment cap base
+    - The recycling fraction in your fund agreement
+    - How much recycling has been used so far
+    - Your eligible distributions
+    - Proof the recycling window is still open
+  prerequisites:
+    - An AI that can read your files
+    - Node.js 20 or later, only if you want to run the included calculation script (optional)
+  output:
+    - name: Remaining cap
+      contains: The recycling cap left after subtracting what was already recycled, with any past overuse shown.
+    - name: Reusable amount
+      contains: The part of the new eligible distributions that fits inside the remaining cap.
+    - name: Excluded excess
+      contains: The part of the distributions that is over the cap and cannot be recycled.
+    - name: Prior cap overuse
+      contains: Any amount already recycled beyond the cap in earlier periods.
+    - name: Scope and dated sources
+      contains: The documents, dates and currency each input came from.
+    - name: Reconciliations
+      contains: Checks that the eligible, reused and excluded amounts add back to the distributions.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not supplied and checks that failed or could not run.
 how_it_works:
   - title: 1. Check the exact cap basis, investment-period cutoff, eligible distribution categories and any LP approvals
     text: Check the exact cap basis, investment-period cutoff, eligible distribution categories and any LP approvals.

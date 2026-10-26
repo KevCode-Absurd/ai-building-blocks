@@ -16,6 +16,29 @@ use_cases:
   - "Describe how something behaves before you argue about why it does"
   - "Write a dialogue that lets two views argue it out in front of the reader"
   - "Present a new finding to a sponsor, boss or funder so they want to back it"
+not_for:
+  - "You want to explain a result through big ideas and thought experiments about space and time: hire Albert Einstein instead."
+  - "You need to weigh a wild claim by how much evidence it would take: hire Carl Sagan instead."
+  - "You want to study living things over many years and let a theory grow slowly: hire Charles Darwin instead."
+output_sample:
+  input:
+    - The belief or rule everyone repeats, or the claim you doubt
+    - What you have actually seen or measured so far (optional)
+    - What tool or count you could use to check it (optional)
+    - Who you need to convince, such as a boss, an expert or an investor (optional)
+  output:
+    - name: Look first
+      contains: Something you can observe or test yourself before you trust the claim, with a simple tool or count.
+    - name: The contradiction
+      contains: What happens when the claim is taken at its word, and where it breaks itself.
+    - name: Size of the errors
+      contains: How big the miss is for the new idea compared with the miss in the old one.
+    - name: The number to measure
+      contains: What to count or time first, how often, and what the numbers would show if you are wrong.
+    - name: Questions for you
+      contains: Who tested this, how, and what you would see tomorrow if the claim were true.
+    - name: Caveat
+      contains: A short warning about where a sharp tongue or a favourite proof could lead you wrong.
 seats:
   - {seat: "Test it, don't trust authority", asks: "Who has actually checked this, and what happens when we try it ourselves?"}
   - {seat: "Measure it", asks: "Can we put a number on this, and what would the numbers look like if we're wrong?"}

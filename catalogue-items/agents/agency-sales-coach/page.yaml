@@ -1,0 +1,165 @@
+name: Sales Coach agent
+summary: Coach a sales rep from a call transcript or deal list. Get one skill to fix, the first questions to ask and a practice task.
+headline: Sales Coach agent
+subhead: Paste a call transcript, a rep's open deals or a rep's numbers, and say what you want to fix. It finds whether the gap is skill, will or process, picks the one behavior that matters most, and gives you the questions to ask, a practice task and a date to check.
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Most sales feedback fails because it is vague or it comes too late. "Do better
+  discovery" gives a rep nothing to do on the next call. This sales coach agent
+  gives feedback tied to a real moment, such as "when the buyer said they were
+  looking at three vendors, you moved to price." It also gives you the question
+  to ask the rep first, so they find the fix themselves.
+
+
+  It sorts each problem into three kinds. A skill gap means the rep does not
+  know how. A will gap means the rep knows but does not do it. A process gap
+  means the system gets in the way. Coaching fixes the first one. It then picks
+  one behavior, not five, and sets a practice task and a date to look again. In
+  pipeline reviews it asks "what do we not know about this deal?" instead of
+  "when will it close?"
+
+  This is a role profile from Agency Agents, shared under MIT. It works only
+  from what you paste. It cannot hear a call, open your CRM or see a rep's
+  numbers. The profile quotes win-rate and quota figures from coaching studies.
+  AI Blocks has not checked them, so do not repeat them as facts. It is a coaching
+  aid for a manager, not a tool for pay or firing decisions.
+when:
+  - You have a 1:1 coming and want to coach one behavior instead of a list of faults.
+  - You have a call transcript and want the exact moments to go over with the rep.
+  - A rep's pipeline looks full, but the deals do not move.
+  - A new rep starts and you need a 30, 60 and 90 day plan with clear checkpoints.
+not_for:
+  - You want one live deal scored for risk. Use the Deal Strategist agent.
+  - You want to plan your own next discovery call. Use the Discovery Coach agent.
+  - You want a weekly list of which deals to act on today. Use the Weekly sales pipeline reviewer.
+  - You want a forecast and pipeline numbers checked. Use the Pipeline Analyst agent.
+  - You want to decide pay, promotion or firing. This is a coaching aid, so keep those choices with you and HR.
+you_give:
+  - The rep's role and how long they have been selling
+  - What you want to work on, such as discovery, price talks or closing
+  - A call transcript or your notes from a call, or the rep's open deals with stage and next step
+  - The rep's numbers, such as win rate and deal size (optional)
+  - What you have already tried with this rep (optional)
+you_get:
+  - A diagnosis of whether the gap is skill, will or process
+  - The one behavior to change, shown as what the rep does now and what good looks like
+  - Specific moments from the call or the deals, each with a better line to try
+  - Questions to ask the rep before you give any advice
+  - A practice task for the next call and a date to check it
+  - A 30, 60 and 90 day ramp plan for a new rep (when you ask for one)
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Say which job you want. Pick a call review, a pipeline review, a coaching plan or a new rep plan.
+  - Paste the transcript or the deal list. Add the rep's role and the one thing you want to improve.
+  - Answer any question once. Anything you skip is marked MISSING. Names and numbers are never made up.
+  - Read the diagnosis first. If it says will or process, do not coach the skill. Fix that cause first.
+  - Ask the rep the listed questions in the 1:1 before you give advice. Check the practice task on the date it sets.
+how_it_works:
+  - title: Find the real gap
+    text: It reads the call or the deals and sorts the problem into skill, will or process.
+  - title: Pick one behavior
+    text: It chooses the one change that would move the most revenue and sets the rest aside.
+  - title: Show the moments
+    text: It points to specific moments, says what happened, and gives an exact better line.
+  - title: Write the questions
+    text: It writes questions for the rep to answer first, so they work out the fix themselves.
+  - title: Set the practice
+    text: It gives a practice task for the next call and a date and a way to check it.
+  - title: Review the pipeline
+    text: For deals, it asks what changed, who the rep is talking to, the buyer's case, the decision steps, the top risk and the next step.
+  - title: Plan the ramp
+    text: For a new rep, it sets 30, 60 and 90 day checkpoints with a test of skill at each.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <rep role and tenure> | focus <skill to coach> | job <call review, pipeline review, coaching plan or ramp plan> | ASSUMED: <list> | MISSING: <list>
+
+  DIAGNOSIS
+    gap <skill, will or process> | evidence <what you saw> | what would change this view <list>
+
+  COACHING FOCUS (one only)
+    now <what the rep does> | target <what good looks like> | milestone <how you will know> | date <when to check>
+
+  REVIEW
+    call: <moment or time> | what the buyer said | what the rep did | try instead <exact words> | why it matters
+    pipeline: <deal> | what changed | who we talk to | buyer's case | decision steps | biggest risk | next step with owner and date
+
+  QUESTIONS TO ASK THE REP FIRST
+    <question> | what a good answer shows
+
+  PRACTICE AND FOLLOW-UP
+    task <what to try on the next call> | check on <date> | how to score it
+
+  RAMP PLAN (if asked)
+    30 days <list> | 60 days <list> | 90 days <list> | skill test at each stage
+
+  STILL TO CHECK
+    <item> | where to confirm it
+output_sample:
+  input:
+    - A call transcript or your notes, or the rep's open deals with stage and next step
+    - The rep's role and how long they have been selling
+    - The one skill you want to improve
+    - The rep's numbers and what you have tried so far (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - A call recording turned into text, if you want a call review (optional)
+  output:
+    - name: Diagnosis
+      contains: Whether the gap is skill, will or process, with the evidence you gave.
+    - name: Coaching focus
+      contains: The one behavior to change, what good looks like and a date to check.
+    - name: Review
+      contains: Specific moments or deals, each with what happened and an exact better line or question.
+    - name: Questions to ask the rep first
+      contains: Open questions that help the rep find the fix, and what a good answer shows.
+    - name: Practice and follow-up
+      contains: A practice task for the next call, a check date and a way to score it.
+    - name: Ramp plan
+      contains: Skill checks at 30, 60 and 90 days for a new rep.
+    - name: Still to check
+      contains: Facts and numbers you must confirm before using the feedback.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They take a long transcript and point to exact moments. You paste in what the rep says and does.
+    - name: A call recording tool with transcripts
+      why: A transcript lets the review quote real moments instead of your memory of the call.
+  inputs:
+    - Two or three recent calls from the same rep, not one.
+    - The rep's open deals with stage, age and next step.
+    - Your notes from the last coaching session, so the follow-up is real.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Job
+    how: Ask for one job at a time. A call review, a pipeline review and a ramp plan are different sessions.
+  - what: Rep level
+    how: Say if the rep is new or experienced. New reps need skill and process. Experienced reps need sharper questions.
+  - what: Method
+    how: Name the method your team uses, such as MEDDPICC, Challenger or SPIN, so the feedback uses the same words.
+improve:
+  - After the practice date, paste what happened on the next call and ask what to change in the plan.
+  - Keep one running note per rep and paste it each time, so the coaching builds.
+terms:
+  - term: Skill gap and will gap
+    meaning: A skill gap means the rep does not know how. A will gap means the rep knows how but does not do it.
+  - term: Pipeline review
+    meaning: A check of a rep's open deals to see which are real and what happens next.
+  - term: MEDDPICC
+    meaning: A checklist for qualifying a deal, such as who pays, what the problem is and how they decide.
+  - term: Challenger
+    meaning: A selling style where the rep brings a new view of the buyer's problem instead of only asking questions.
+  - term: Ramp plan
+    meaning: The set steps a new rep follows in the first months to become productive.
+  - term: Happy ears
+    meaning: Hearing a polite or keen buyer as if they had agreed to buy.

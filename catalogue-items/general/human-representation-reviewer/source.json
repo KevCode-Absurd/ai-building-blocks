@@ -1,0 +1,14 @@
+{
+  "repo": "msitarzewski/agency-agents",
+  "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+  "adaptation": "selected task methods; original profiles are background/provenance only",
+  "sources": [
+    {
+      "slug": "agency-design-inclusive-visuals-specialist",
+      "path": "design/design-inclusive-visuals-specialist.md",
+      "sha256": "6529724ca198344f31209c0e685a7460c087483b5a4b3a965798e09df70dde07",
+      "licence": "MIT"
+    }
+  ],
+  "review": "reports/2026-10-25-agency-curation-business.json"
+}

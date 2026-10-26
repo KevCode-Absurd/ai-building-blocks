@@ -1,52 +1,93 @@
 new_slug: prepare-a-confidential-conflict-discussion
 name: Prepare a confidential conflict discussion
 headline: Prepare a confidential conflict discussion
-summary: Share the source files. Get a neutral issue map, discussion guide and draft agreements.
+summary: Prepare a workplace conflict discussion. Get a neutral issue map, a discussion guide and draft agreements, with serious issues flagged for HR.
 job: lead-people
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A neutral issue map, discussion guide and draft agreements. Share accounts the parties have agreed to share, relevant work agreements and the desired resolution. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Two people at work disagree and you will lead the talk. Give your AI each person's account, kept separate, and the work agreements that apply. You get a neutral issue map, a guide for the discussion and draft agreements marked proposed. Anything serious is flagged first.
 explain: |-
-  A neutral issue map, discussion guide and draft agreements.
+  A workplace conflict talk fails when the leader picks a side without meaning to, or turns a work problem into a debate about character. This workflow keeps the accounts apart and attributed. It separates what both people agree happened, what each says happened, and what each one needs from the work.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Allegations remain attributed; neither guilt nor agreement is inferred from silence. Missing tools or evidence stay visible in the final summary.
+  Step 1 builds a neutral issue map and checks whether any issue needs a formal process instead. Step 2 turns the map into a discussion guide with neutral questions that look at the work and the future. Step 3 drafts agreements and a minutes template that keep a proposal apart from something both people accepted.
+
+  The AI does not decide who is right. It infers nothing from silence. It does not replace HR, a mediator or a lawyer. A named reviewer reads the pack before you meet, and the talk only goes ahead if both people agreed to it.
 when:
-  - You need a neutral issue map, discussion guide and draft agreements.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Two team members keep clashing over who owns what, and work is slipping.
+  - You must lead a talk between two people and want questions that stay neutral.
+  - One person asked you to "sort it out" and you want to hear both sides fairly.
+  - A past talk ended with no clear agreements and you want a record that shows what was accepted.
+not_for:
+  - Someone alleges harassment, discrimination, violence or a safety breach. Stop and follow your formal process with HR or an employment adviser. The workplace investigation guide helps you plan one.
+  - You need to give one person hard feedback, not run a talk between two. Use the feedback conversation planner or the hard feedback message writer.
+  - One of the people has not agreed to talk. This pack does not prepare an ambush.
+  - You want legal advice or a ruling on who is at fault. Ask an employment adviser.
 you_give:
-  - Accounts the parties have agreed to share, relevant work agreements and the desired resolution.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - A few lines on the conflict: who is involved, what happened and when (from your own notes)
+  - Each person's account, only if they agreed to share it, kept separate and named (from them, in writing or in your notes)
+  - The work agreements that apply, such as roles, handover rules or a team charter (optional)
+  - What a good result would look like for the work
+  - What was already tried, and the name of your HR reviewer (optional)
 you_get:
-  - A neutral issue map, discussion guide and draft agreements.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A neutral issue map, with agreed facts, each person's account and each person's needs kept apart
+  - A flag on any issue that needs a formal process instead of this talk
+  - A discussion guide with ground rules, opening lines and neutral questions for each issue
+  - Draft agreements, each marked proposed, with an owner, a date and a way to check it
+  - A minutes template that separates proposed from accepted
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Paste the accounts, one person at a time, with a name on each. Add the work agreements and what you want for the work.
+  - Read the flags first. If any issue is marked for a formal process, stop and take it to your HR reviewer.
+  - Ask your reviewer to read the guide before you meet. Do not run the talk until they have.
+  - After the talk, run step 3 again with your real notes to record what each person accepted.
 how_it_works:
   - title: Workplace conflict mediation guide
-    text: Separate observed events, disputed accounts and needs; identify issues requiring a formal process.
+    text: Separates what happened, what each person says happened and what each needs. Flags issues that need a formal process. Hands step 2 the issue map. Check before moving on, every account has a name and no side is judged.
   - title: Feedback conversation planner
-    text: Prepare neutral questions and a discussion structure focused on work and future behavior.
+    text: Writes neutral questions and a structure for the talk, focused on the work and what happens next. Hands step 3 the questions and the issues to settle. Check before moving on, no question blames a person.
   - title: Meeting minutes writer
-    text: Draft a record that distinguishes proposed agreements from decisions actually accepted.
+    text: Drafts proposed agreements and a minutes template with proposed and accepted kept apart. After the talk, you run it again with your notes to record what was accepted.
+  - title: Check and hand back
+    text: Joins the issue map, guide, agreements and template. Names who must approve it before the talk and marks every gap.
 output_shape: |-
-  Scope and source coverage
-  A neutral issue map, discussion guide and draft agreements.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  ISSUE MAP
+    <issue | agreed facts | person A's account | person B's account | needs | effect on work | formal process needed: yes, no or unsure>
+  FLAGS <issues to take to a formal process first, and why>
+  DISCUSSION GUIDE
+    <purpose, ground rules, opening lines, neutral questions for each issue, what not to say, how to close>
+  DRAFT AGREEMENTS
+    <proposed agreement | owner | date | how checked>, all proposed
+  MINUTES TEMPLATE <who attended | proposed | accepted | open | next meeting>
+  APPROVAL <reviewer name, status: not yet approved>
+  MISSING <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - "A few lines on the conflict: who, what happened and when"
+    - "Each person's account, shared with their agreement and kept separate"
+    - "The work agreements that apply (optional)"
+    - "What a good result looks like for the work"
+  prerequisites:
+    - "An AI that can read files or long pasted text"
+    - "A named reviewer, such as HR, to read the pack before the talk"
+  output:
+    - name: "Issue map"
+      contains: "Agreed facts, each person's account and needs kept apart, and whether the issue needs a formal process."
+    - name: "Flags"
+      contains: "Any issue to take to a formal process first, with the reason."
+    - name: "Discussion guide"
+      contains: "Ground rules, opening lines and neutral questions for each issue."
+    - name: "Draft agreements"
+      contains: "Proposed agreements with an owner, a date and a way to check each one."
+    - name: "Minutes template"
+      contains: "A record that keeps proposed items apart from items both people accepted."
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Allegations remain attributed; neither guilt nor agreement is inferred from silence.
+  - what: One conflict
+    how: Prepare one conflict between two people at a time. Add a second person's account only if they agreed.
+  - what: Work agreements
+    how: Attach the team charter or role list. The questions then point at the agreed rules, not at the people.
+  - what: Time
+    how: Say how long you have for the talk. The guide fits the issues to the time and drops the rest to a follow-up.
 judge:
   - Allegations remain attributed; neither guilt nor agreement is inferred from silence.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +100,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep your team charter and your HR steps with the pack so the flags match your own process.
+  - Record the review date in the minutes and check it was kept.
+  - Run the discussion guide past your reviewer once, and add their edits to your notes for next time.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files
+      why: It reads both accounts and the pack together. Nothing is sent or filed for you.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The team charter or role list.
+    - Your HR policy on conflict, if you have one.
 terms:
+  - term: Neutral
+    meaning: Written so it does not take a side or blame a person.
+  - term: Formal process
+    meaning: The steps your organisation uses for serious complaints, usually run by HR.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked file one step passes to the next.

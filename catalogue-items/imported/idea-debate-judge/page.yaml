@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It plays two sides and then weighs both.
 new_slug: idea-debate-judge
 name: Idea debate judge
-summary: Give it an idea. Get a three-round debate between a fan and a critic,
-  then a clear verdict.
+summary: Test an idea before you build it. Get a three-round debate between a fan and a critic, then a judge's verdict on whether to go ahead.
 job: think-and-decide
 headline: Idea debate judge
-subhead: A verdict on your idea after both sides have argued it. Give it a
-  concept, feature or project and get a three-round debate between a supporter
-  and a critic, then a judge's summary.
+subhead: A verdict on your idea after both sides have argued it. Give it a concept, feature or project and get a three-round debate between a supporter and a critic, then a judge's summary.
 explain: |
   A verdict on your idea after both sides have argued it. Give it a concept, feature or project and get a three-round debate between a supporter and a critic, then a judge's summary.
 
   In round one, the supporter makes the strongest case and the critic names the biggest risks. In round two, each answers the other's points. In round three, both give closing statements. The rules say neither side may simply agree or disagree; each must argue from logic, market facts and how hard it is to build. A neutral orchestrator then steps in as judge and writes a summary with the key arguments and a clear call on whether to go ahead, with what to watch.
 when:
   - You have a new idea and cannot tell if it is worth your time.
-  - You must choose between product features and want the best arguments for
-    each.
+  - You must choose between product features and want the best arguments for each.
   - You want to test an assumption before you start building.
   - Your own view is too one-sided and you need the other case.
+not_for:
+  - "You need real customer or market data: run a short survey, talk to buyers or try a small sales test instead, because this debate uses no live data."
+  - "You want a guarantee your idea will earn money: the verdict is reasoned opinion only, so check it with real people."
+  - "You have already decided and just need a plan: write the plan yourself or ask your AI for a plain task list."
 you_give:
   - The idea in a few sentences
   - Who it is for (optional)
@@ -28,7 +28,28 @@ you_get:
   - Strongest points for and against
   - A judge's summary and verdict
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text, then write your idea in a few sentences. Add who it is for and any limits on time or budget.
+  - Ask your AI to run the debate and give the verdict.
+  - Read the three rounds, then the verdict. Check that each side answered the other's points.
+  - Turn the risks in the Cons into small tests, such as asking five likely buyers or running a small sales test, before you build.
+output_sample:
+  input:
+    - Your idea in a few sentences
+    - Who it is for (optional)
+    - Limits such as time or budget (optional)
+  output:
+    - name: "Turn 1: Initial pitches"
+      contains: The supporter makes the strongest case for the idea and the critic names the biggest risks and flaws.
+    - name: "Turn 2: Rebuttals"
+      contains: The supporter answers the risks, and the critic challenges the supporter's optimism.
+    - name: "Turn 3: Closing statements"
+      contains: Each side sums up why the idea will succeed or fail.
+    - name: Pros
+      contains: The strongest points in favor of the idea that held up in the debate.
+    - name: Cons
+      contains: The most serious risks the debate found.
+    - name: Final Verdict
+      contains: "One clear call: Strongly Recommended, Proceed with Caution, Pivot Required or Not Worth Building."
+    - name: Why
+      contains: A short reason for the verdict, based on how the debate went.

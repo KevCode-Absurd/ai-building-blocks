@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It fills a standard brief from your answers.
 new_slug: project-kickoff-brief-writer
 name: Project kickoff brief writer
-summary: Describe your project. Get a one-page brief with goal, audience, tone
-  and limits that your team can sign off.
+summary: Turn a rough idea into a project kickoff brief with goal, audience, tone and limits that your team can sign off. Under two pages.
 job: plan-strategy
 headline: Project kickoff brief writer
-subhead: A one-page brief your team can sign off before work starts, so a
-  designer, developer or AI agent knows what to build. It turns "we want a
-  website" into something concrete.
+subhead: A one-page brief your team can sign off before work starts, so a designer, developer or AI agent knows what to build. It turns "we want a website" into something concrete.
 explain: |
   A one-page brief your team can sign off before work starts, so a designer, developer or AI agent knows what to build. It turns "we want a website" into something concrete.
 
   The skill checks what you already know, then asks only for what is missing. It fills ten parts: snapshot, audience, objectives, key message, voice and tone, visual direction, scope and deliverables, limits, inspiration and rivals, and approval. It watches for common failures such as goals nobody can measure or audiences described as everyone. The finished brief gets a final read for gaps, so everyone can agree on it.
 when:
   - You are starting a website, campaign, app or rebrand and need alignment.
-  - You are handing work to a designer, developer or AI and want fewer
-    back-and-forth questions.
+  - You are handing work to a designer, developer or AI and want fewer back-and-forth questions.
   - The team has drifted and you need to restate the goal.
   - You have a vague idea and need to make it buildable.
+not_for:
+  - "You need a product spec or dev ticket: use pm-spec-writing, or ask your developer for their ticket format."
+  - "You are still researching and have not chosen what to build: use brand-discovery first, then come back."
+  - "You only want copy written: use content-and-copy, or write a short draft yourself."
 you_give:
   - Your idea, even if rough
   - Who it is for
@@ -31,7 +31,37 @@ you_get:
   - Scope and limits
   - A list of open questions to settle
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell your AI about your project. Add your goal, audience and limits, even if rough.
+  - Answer the three to five questions it asks to fill gaps.
+  - Read the draft brief. Check that each goal has a number and the audience is one clear group.
+  - Fix anything vague, then share the brief with your team for sign-off.
+  - Ask for a Word doc or PDF if you want a file to send.
+output_sample:
+  input:
+    - Your project idea, even if it is rough
+    - Who it is for and what you want them to do
+    - What success looks like for you
+    - Deadline, budget or other limits
+    - Sites you like and sites you dislike (optional)
+  output:
+    - name: Snapshot
+      contains: One paragraph on what the project is, who it is for, why it exists and when it is due.
+    - name: Audience
+      contains: The main audience, what they want to do, what blocks them today and where you reach them.
+    - name: Objectives
+      contains: Each goal paired with a signal you can measure.
+    - name: Key message
+      contains: The one sentence a visitor should remember.
+    - name: Voice and tone
+      contains: Three to five adjectives, each paired with what you are not.
+    - name: Visual direction
+      contains: Mood, colors, type and image style, with reference links and what you would reject.
+    - name: Scope and deliverables
+      contains: A specific list of what will be made and what is left out.
+    - name: Constraints
+      contains: Time, budget, technical, brand and legal limits.
+    - name: Inspiration and competitors
+      contains: Brands to feel like and brands to feel different from, with a reason for each.
+    - name: Approval
+      contains: Who signs off, what they review, and what happens if there is no sign-off by the deadline.

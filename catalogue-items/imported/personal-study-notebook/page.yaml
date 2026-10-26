@@ -2,18 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: personal-study-notebook
 name: Personal study notebook
-summary: Choose a subject and note folder. Get a study plan, lesson notes,
-  quizzes and a progress dashboard.
+summary: Plan your self-study and get lesson notes, quizzes with honest feedback, review dates and a progress dashboard saved in your own notes folder.
 job: study-and-practice
 headline: Personal study notebook
-subhead: Choose a subject, goal and folder for your notes. It learns your
-  preferences, plans short lessons and checks your answers. You get lesson
-  notes, quiz feedback, review dates and a dashboard that keeps the next study
-  step visible.
-explain: Choose a subject, goal and folder for your notes. It learns your
-  preferences, plans short lessons and checks your answers. You get lesson
-  notes, quiz feedback, review dates and a dashboard that keeps the next study
-  step visible.
+subhead: Choose a subject, goal and folder for your notes. It learns your preferences, plans short lessons and checks your answers. You get lesson notes, quiz feedback, review dates and a dashboard that keeps the next study step visible.
+not_for:
+  - "You need to cram for an exam next week: use a past-paper practice session with a teacher or tutor instead, since this plans slow, spaced study."
+  - "You only want a quick answer to one question: ask your AI directly in a normal chat."
+  - "Your AI cannot read and write files: you can still chat through lessons, but the notes folder and dashboard will not be saved."
+explain: Choose a subject, goal and folder for your notes. It learns your preferences, plans short lessons and checks your answers. You get lesson notes, quiz feedback, review dates and a dashboard that keeps the next study step visible.
 you_give:
   - Your subject, goal, current level and weekly study time.
   - A local folder for notes and any source materials.
@@ -29,8 +26,33 @@ how_it_works:
   - title: Step 3
     text: Quiz each topic and update review dates, logs and the dashboard.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write local notes.
+  - Open your AI tool and use one that can read and write files in a folder. Add the skill's instructions to the chat or project.
+  - Tell it the subject you want to learn, your goal, your level and how many hours a week you have.
+  - Name the folder where your notes should go. Add any books or articles you want it to teach from (optional).
+  - Answer its short questions about how you like things explained. It builds your learner profile and study plan from your answers.
+  - Read each lesson note, then take the quiz. Read the feedback and fix weak spots before moving on.
+  - Come back on your review dates. Open the dashboard to see what to study next.
+output_sample:
+  input:
+    - Your subject and what you want to learn it for
+    - Your current level and weekly study time
+    - A folder for your notes
+    - Books, articles or other source material (optional)
+  prerequisites:
+    - An AI that can read and write files in a folder on your computer
+    - The HTML Reader plugin in Obsidian, only if you pick the web page dashboard and want to see it there (optional)
+  output:
+    - name: learner-profile.md
+      contains: "How you learn best: the explanations that work for you, your tone and pace, and your chosen dashboard format."
+    - name: Study plan
+      contains: Your subject split into phases and topics, shaped by your goal, level and weekly study time.
+    - name: Lesson notes
+      contains: A full note for each topic in your own style, with diagrams and self-check questions.
+    - name: Quiz reports
+      contains: Your quiz answers marked with honest feedback, and what to fix before moving on.
+    - name: Review dates
+      contains: Spaced reviews scheduled so you revisit each topic before you forget it.
+    - name: Session logs
+      contains: A dated record of what you covered in each study session.
+    - name: Dashboard
+      contains: Your progress, notes due for review and the next study step, as a Markdown or static HTML page.

@@ -2,17 +2,28 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: support-issue-cause-investigator
 name: Support issue cause investigator
-summary: Share related tickets or notes. Get shared patterns, a possible cause, evidence, and a fix plan.
+summary: Find the root cause of a support issue. Give it 3 or more related tickets and get the shared pattern, a likely cause, evidence and a fix plan.
 job: help-customers
 headline: Support issue cause investigator
-subhead: Give it related Gorgias tickets, a topic, or pasted issue descriptions. It compares patterns and traces possible causes through repeated why questions. You get an evidence table, impact summary, possible root cause, and fixes to verify with the responsible team.
+subhead: Give it related support tickets, a topic, or pasted issue notes. It looks for what they share and asks why again and again until it finds a likely cause. You get the evidence, the impact, and fixes to check with the right team.
 when:
-  - You use this tool for customer support and need help with this task.
+  - Three or more tickets seem to describe the same problem.
+  - A complaint keeps coming back and you don't know why.
+  - You need to tell engineering what is broken, with proof.
+  - Agents need a workaround while a fix is built.
+not_for:
+  - "You have one ticket or a one-off bug: write a normal reply to that customer instead."
+  - "You need a fast answer for a single customer: reply to them directly, then come back if more tickets arrive."
+  - "You have no ticket text or data to share: gather a few examples first, or ask a teammate who has seen the issue."
 you_give:
   - Related ticket numbers, a topic, or pasted issue descriptions.
-  - Any dated evidence, common errors, or known workarounds.
+  - Dates, common errors or known workarounds (optional).
 you_get:
-  - Show the proposed cause, evidence, impact, fixes by owner, and any temporary workaround.
+  - A likely root cause, stated in specific terms.
+  - An evidence table that shows what each ticket tells you.
+  - An impact summary, with Unknown where your data has no number.
+  - Fixes listed by priority and owner.
+  - A temporary workaround agents can share.
 how_it_works:
   - title: Collect related issues
     text: Read the chosen ticket threads or pasted descriptions and note dates, customers, and common symptoms.
@@ -25,8 +36,31 @@ works_best_with:
     - name: Gorgias for ticket lookup; pasted notes also work
       why: Live lookups need Composio CLI access and connected accounts for these services.
 how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for support issue cause investigator by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Related ticket numbers, a topic, or pasted issue descriptions.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from the page.
+  - Paste your ticket descriptions, or give ticket numbers if Composio CLI and Gorgias are connected.
+  - Add dates, errors or workarounds you know about.
+  - Check the evidence table against your tickets. Make sure each claim has a source.
+  - Send the fixes to the teams that own them and ask them to confirm the cause before acting.
+output_sample:
+  input:
+    - Related Gorgias ticket numbers, a topic, or pasted issue descriptions
+    - Dates, common errors or known workarounds (optional)
+  prerequisites:
+    - Live ticket lookups need Composio CLI with your Gorgias account connected. Pasted text works without it.
+  output:
+    - name: Issue Cluster
+      contains: How many tickets were checked, the time range, and which customers are affected.
+    - name: Symptom
+      contains: What customers see and report, in plain words.
+    - name: Root Cause
+      contains: The specific underlying problem your AI thinks is behind the tickets.
+    - name: Five Whys Chain
+      contains: A chain of why questions from the symptom down to the root cause.
+    - name: Evidence
+      contains: A table of data points and what each one shows.
+    - name: Impact
+      contains: Customers affected, ticket volume, revenue impact and trend. Anything not in your data is marked Unknown.
+    - name: Recommendations
+      contains: A table of fixes with priority, owner and expected impact.
+    - name: Workaround
+      contains: Steps agents can give customers until the fix is live.

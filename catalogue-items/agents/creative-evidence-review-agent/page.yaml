@@ -1,37 +1,121 @@
 new_slug: creative-evidence-review-agent
 name: Creative evidence review agent
-summary: Share your brief, creative assets and product facts. Get ranked issues, evidence and a checkpoint for the next revision.
+summary: Check ad creative against your brief and product facts. Get ranked issues, a pass or fix call per check and a checkpoint.
 job: set-up-ai
 headline: Creative evidence review agent
-subhead: Share your brief, creative assets and product facts. Get ranked issues, evidence and a checkpoint for the next revision.
+subhead: Give it your brief, your ad images, videos or copy, and the facts about your product. It checks each piece against the brief and the facts, and quotes what it saw. You get a ranked issue list, a pass or fix call for each gate and a checkpoint for your next round.
 explain: |-
-  Share brief, supplied creative assets, product truth and approved brand rules. Get a severity-ranked creative qa report and revision checkpoint.
+  An ad can look great and still be wrong. The bottle has the wrong label. The headline claims something your spec sheet does not say. The offer is too small to read on a phone. This creative review agent checks ad creative before it goes live, using your brief and your product facts as the yardstick, not taste alone.
 
-  This is a portable agent procedure for one bounded run. It can be reused with a checkpoint, but it does not claim an installed worker or continuous autonomous runtime.
+  It reads what you actually supply. If you give it an image, it looks at the image. If you give it only the copy, it says "copy only" and marks the visual checks NOT CHECKED. It never invents a flaw from a file name. Each issue quotes the exact thing it saw, or the proof that is missing, and gets a severity. A wrong product shape or an unsupported claim ranks above a taste change.
+
+  Every issue comes with a fix and a simple test for it, so you know when it is solved. Parts you already approved are left alone. The run ends with a checkpoint, so your next round compares the new version with this one. It reviews and proposes. It does not approve the ad for you or publish anything.
 when:
-  - You need a severity-ranked creative qa report and revision checkpoint.
+  - A designer or an AI image tool just made a batch of ads and you need a check before they go live.
+  - You change a product, a label or a price and need to know which ads are now wrong.
+  - An ad was rejected or a customer complained that the picture did not match the product.
+  - You review creative each week and want each review to start from the last one.
+not_for:
+  - You want final approval for paid ads or claims that need legal review. A person with that authority must approve. This agent only checks against the facts you give it.
+  - You want to check one ad's claims against proof. Use the Ad claim proof gap finder.
+  - You want to know if two ads look too alike for Meta to show both. Use the Meta creative similarity risk reviewer.
+  - You want to read test results and see which creative won. Use the Creative test reader.
+  - You want new creative made, not checked. Use the Creative brief writer to plan it first.
 you_give:
-  - Brief, supplied creative assets, product truth and approved brand rules
-  - Authorized tools, owner, limits and any prior checkpoint
+  - Your brief, with the message, who it is for, the format and the placement, such as a Meta feed or a Google display ad
+  - The ads to check, as image files, video frames or a link, or the copy as text
+  - Your product facts, with the date you wrote them (shape, colors, label text, size, price, allowed claims, from your spec sheet or product page)
+  - Your brand rules, such as logo use, voice and words to avoid
+  - Your last checkpoint (optional)
+  - Photos of the real product (optional, they make the product check stronger)
 you_get:
-  - A severity-ranked creative QA report and revision checkpoint
-  - Evidence gaps, proposed actions and checks not run
+  - A ranked issue list, with the exact thing seen, the fix and a test to know it is fixed
+  - A gate table that marks each check PASS, FIX or NOT CHECKED
+  - A list of evidence gaps and checks that could not run
+  - A note on what you already approved and left unchanged
+  - A checkpoint file for your next round
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Download the pack and add it to your AI, or paste SKILL.md into a new chat. Claude, ChatGPT and Gemini can look at images. For video, give a few frames or the script if your AI cannot open the file.
+  - Attach the brief, the ads and your product facts. Add your brand rules and the last checkpoint if you have them.
+  - Say "Review these ads against the brief and facts. Quote what you see." Your AI asks once for anything missing.
+  - Open gate-table.md first. Any FIX on a product or claim gate goes back to the designer before anything else.
+  - Read issue-report.md from the top. Work down the list, and use each acceptance test to confirm the fix.
+  - Fix the evidence gaps, then run it on the new version with your checkpoint attached.
 how_it_works:
-  - title: Step 1
-    text: "On first use configure the role from the brief and optional editable template: scope, owner, allowed tools, evidence sources, output contract, review limits and stop conditions. Resolve only material missing fields. A role file does not deploy a background process or grant access to another agent."
-  - title: Step 2
-    text: Run only the current bounded request or an explicitly authorized repeat. Load the last supplied checkpoint if present, compare its scope and evidence dates, then use the current request as authority. Set a maximum work/time/cost boundary before any paid or external operation.
-  - title: Step 3
-    text: Map the brief to its required message, viewer, format, product identity and proof. Inspect only assets actually accessible and label prompt-only or copy-only review when visual media is absent.
-  - title: Step 4
-    text: Check brief fit, hierarchy, opening, legibility, product fidelity, claim support, voice and placement-specific constraints. Quote the exact observed issue or missing evidence; do not invent an image defect from a filename.
-  - title: Step 5
-    text: Rank blocking product/claim errors above optional taste changes. Give a concrete revision per issue and an acceptance check, preserving already-approved parts. Return PASS, FIX or NOT CHECKED per required gate.
-  - title: Step 6
-    text: End the run with a checkpoint containing scope, evidence dates/IDs, completed deliverables, proposed actions, unresolved facts, approvals and the next review trigger. Store it only in the destination the user requested; otherwise return it in the answer. A later run must revalidate stale facts and approvals. No promise of continuous monitoring or sending is implied.
+  - title: Fix the scope
+    text: It confirms the brief, the ads, the placements and who approves. Missing items are asked once, then marked MISSING.
+  - title: Load the last checkpoint
+    text: If you supply one, it compares the scope and the dates of your facts, and checks that earlier fixes held.
+  - title: Map the brief
+    text: It writes down the message, the viewer, the format, the product identity and the proof the ad must show.
+  - title: Inspect what you supplied
+    text: It looks only at files it can open. For copy-only or prompt-only review it says so and marks the visual gates NOT CHECKED.
+  - title: Check the gates
+    text: It checks brief fit, the first look, readability on a phone, product accuracy, claim support, brand voice and placement limits. Each issue quotes what it saw.
+  - title: Rank and fix
+    text: Blockers, such as a wrong product or an unproven claim, rank above optional taste changes. Each issue gets a fix and an acceptance test, and approved parts stay as they are.
+  - title: Save a checkpoint
+    text: It records the scope, the facts and dates used, what is open and the next review trigger.
+output_shape: |-
+  SCOPE  <brief> | <n> ads checked | <placements> | <date of facts> | <visual files read or copy only>
+  CHANGED SINCE LAST CHECKPOINT  <what changed, or "first run">
+
+  ISSUES (ranked)
+    <rank> | <ad> | <Blocker, Should fix or Optional> | <the exact thing seen or missing> | <fix> | <acceptance test>
+
+  GATES
+    <brief fit | first look | readability | product accuracy | claim support | voice | placement> | <PASS, FIX or NOT CHECKED> | <issue rank or reason>
+
+  LEFT AS APPROVED  <parts you already approved>
+  EVIDENCE GAPS  <what is missing> | <which gate it limits> | <how to get it>
+  CHECKPOINT  <scope, evidence IDs and dates, open issues, approvals, next review trigger>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - Your brief, with message, viewer, format and placement
+    - The ads to check, as images, frames, a link or copy
+    - Your product facts, with their date
+    - Your brand rules (optional)
+    - Your last checkpoint (optional)
+  prerequisites:
+    - An AI that can open images, such as Claude, ChatGPT or Gemini
+    - Product facts that someone on your team has confirmed
+  output:
+    - name: issue-report.md
+      contains: Issues ranked by severity, each with the exact thing seen or missing, a fix and a test to know it is fixed.
+    - name: gate-table.md
+      contains: PASS, FIX or NOT CHECKED for brief fit, first look, readability, product accuracy, claim support, voice and placement.
+    - name: evidence-gaps.md
+      contains: What proof or file is missing, which gate it limits, how to get it, and checks that did not run.
+    - name: checkpoint.md
+      contains: Scope, evidence IDs and dates, open issues, approvals needed and the trigger for the next review.
+tweaks:
+  - what: Product facts
+    how: Write them with a date and the source, such as the spec sheet. The product check then compares the ad with your words, not its own guess.
+  - what: Placement
+    how: Name where the ad will run. Readability and crop rules differ between a feed, a story and a display ad.
+  - what: Strictness
+    how: Say which gates must pass before launch. Anything else comes back as Should fix or Optional.
+improve:
+  - Write your product facts once, with the date, and reuse them. Every review then checks against the same yardstick.
+  - Keep every checkpoint, so a problem that comes back shows up as a repeat.
+  - Add the rejection reasons from your ad platform to your brand rules, so the next review looks for them.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with image upload
+      why: It can look at each ad and quote what it sees. Without images it reviews copy only.
+  inputs:
+    - Photos of the real product from several angles.
+    - Your approved claims list with proof.
+    - Your last two checkpoints, so repeat problems show up.
+terms:
+  - term: Gate
+    meaning: One check an ad must pass, such as product accuracy or claim support.
+  - term: Blocker
+    meaning: An issue that must be fixed before the ad runs, such as a wrong product or an unproven claim.
+  - term: Acceptance test
+    meaning: A simple check that shows an issue is fixed.
+  - term: Checkpoint
+    meaning: A file that records where this review stopped, so the next review can pick up from it.
 thinking: high
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It compares each ad with the brief and the product facts and follows a specific method.

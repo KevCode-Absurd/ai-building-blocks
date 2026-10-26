@@ -2,33 +2,47 @@ thinking: low
 thinking_why: It checks the script against known pitfalls.
 new_slug: powershell-pitfall-checker
 name: PowerShell pitfall checker
-summary: Give it a Windows script. Get operator, quoting and error handling
-  mistakes caught and fixed.
+summary: Check your PowerShell script for operator, quoting and null mistakes. You get a list of problems and a fixed script back.
 job: test-and-fix-code
 headline: PowerShell pitfall checker
-subhead: Give it a Windows script. Get operator, quoting and error handling
-  mistakes caught and fixed. Bring your PowerShell script. Use the result to
-  plan your next step.
+subhead: Paste your Windows PowerShell script. Your AI checks it against a fixed list of known traps, like missing brackets, emoji, null checks and JSON depth. You get a list of what it found and a corrected script.
 explain: |
   Catch the Windows PowerShell mistakes that make scripts fail for no clear reason, and get the corrected script back.
 
   The skill checks for known traps. Logical operators like -and and -or need each command wrapped in brackets. Emoji and fancy symbols break output, so it swaps them for plain tags like [OK] and [!]. It reviews null checks, quoting, error handling and path handling, and rewrites any line that is wrong. You paste your script and get a list of what was found plus a fixed version. It is built for Windows PowerShell.
 when:
-  - A script runs on your machine but errors on a colleague's.
-  - An if statement with -or behaves strangely.
-  - Your output shows garbled characters.
-  - You want a quick review before sharing a script.
+  - A script runs on your machine but fails on a colleague's.
+  - An if line with -or or -and acts strangely or throws a parameter error.
+  - Your script output shows broken characters or an Unexpected token error.
+  - You want a quick check before you share a script.
+not_for:
+  - "You run PowerShell 7 on Linux or macOS: use PSScriptAnalyzer, a free checker made for PowerShell."
+  - "Your script is cmd or batch (.bat): ask a person who knows batch files, or use a batch linter."
+  - "You need proof the script works on your machine: test it yourself in a safe place first."
 you_give:
   - Your PowerShell script
-  - Error message (optional)
-  - Windows or PowerShell version (optional)
+  - The error message you see (optional)
+  - Your Windows and PowerShell version (optional)
 you_get:
-  - List of mistakes found
-  - Corrected script
-  - Plain explanation for each fix
+  - A list of mistakes found in your script
+  - A corrected version of the script
+  - A plain reason for each fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run PowerShell.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your whole script below it.
+  - Add the error text and your PowerShell version if you have them.
+  - Ask for the findings list first, and read it.
+  - Then ask for the corrected script with a reason for each fix.
+  - Test the new script somewhere safe before you use it. No code running is needed.
+output_sample:
+  input:
+    - Your PowerShell script
+    - The error message you see (optional)
+    - Your Windows or PowerShell version (optional)
+  output:
+    - name: Findings list
+      contains: Each mistake found, such as missing brackets around commands joined by -or, emoji in output, or a missing null check.
+    - name: Corrected script
+      contains: Your script with each wrong line rewritten, using brackets, plain [OK] and [!] tags, and Join-Path.
+    - name: Fix explanations
+      contains: A plain reason for each change, so you can spot the same mistake next time.

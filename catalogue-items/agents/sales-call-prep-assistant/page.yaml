@@ -1,6 +1,6 @@
 new_slug: sales-call-prep-assistant
 name: Sales call prep assistant
-summary: Name the deal before a call. Get a one-page plan built on your last call notes, and a follow-up draft after.
+summary: Prepare for a sales call with a one-page plan built from your last call notes, then get a follow-up draft after. Never sends anything.
 job: sell-and-negotiate
 thinking: medium
 thinking_why: It reads notes, picks the right prep for the stage and merges the results onto one page. A mid-tier model does this well.
@@ -14,6 +14,10 @@ when:
   - You have a call coming up on a deal you have talked about before.
   - A deal has gone quiet and you do not know what to say next.
   - Price or terms are on the table and you want a plan before you talk.
+not_for:
+  - "You have a one-off, low-value sale: a short script or a few written lines is enough."
+  - "You want to reply to one objection right now: use the Live objection responder."
+  - "You have no notes and no past calls with this buyer: write your first-call questions with the Sales call question planner."
 you_give:
   - The prospect, what you sell them, the price or terms so far and the call date
   - Your notes or transcript from the last call
@@ -30,6 +34,30 @@ how_to_use:
   - Read the one-page plan before the call. Change any line that does not sound like you.
   - After the call, give it your notes or the transcript. It saves them and drafts the follow-up.
   - Read the follow-up, change it and send it yourself.
+output_sample:
+  input:
+    - The prospect, what you sell them, the price or terms so far and the call date
+    - Your notes or transcript from the last call
+    - What you know about the buyer, such as role and concerns (optional)
+    - What you can move on in price and terms (optional)
+  prerequisites:
+    - An AI that can save files, if you want the deal log kept between runs (Claude Code does this)
+    - The skills it calls for each stage, installed or read from the AI Blocks site
+  output:
+    - name: Where the deal stands
+      contains: "Three lines: promises kept or missed, what changed since last time, and which objections are still open."
+    - name: One-page plan
+      contains: Your goal, three to five lines to say or ask in order, replies to open objections, and a walk-away line.
+    - name: Next step to ask for
+      contains: The step you should ask the buyer to agree to, with a date.
+    - name: Watch for
+      contains: One thing the buyer may say or do that would change the plan.
+    - name: Call log entry
+      contains: "After the call: the date, who was there, promises, objections and next step, saved to the deal's call log."
+    - name: Follow-up draft
+      contains: "After the call: an email draft for you to read, change and send yourself. It is never sent."
+    - name: MISSING lines
+      contains: Every fact it could not support from your notes, listed in one place.
 how_it_works:
   - title: Read the file
     text: Reads the deal's call log. With no log, it treats this as a first call and says nothing was compared.

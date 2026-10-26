@@ -9,7 +9,7 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
+  - type: question
     required: true
 outputs:
   - type: tool_connection

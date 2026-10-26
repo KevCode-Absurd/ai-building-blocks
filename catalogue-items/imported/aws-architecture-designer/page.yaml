@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It follows set patterns and tailors them to your app.
 new_slug: aws-architecture-designer
 name: AWS architecture designer
-summary: Describe your app. Get an AWS design with serverless parts, setup
-  templates and cost cuts.
+summary: Plan your AWS architecture from a short description of your app. You get a design, CloudFormation templates and ways to cut your monthly bill.
 job: ship-and-host
 headline: AWS architecture designer
-subhead: An AWS design for your app that fits your budget, with setup templates
-  ready to deploy. Tell the AI the app type, expected users, monthly spend
-  limit, team experience and any rules such as GDPR or HIPAA.
+subhead: An AWS design for your app that fits your budget, with setup templates ready to deploy. Tell the AI the app type, expected users, monthly spend limit, team experience and any rules such as GDPR or HIPAA.
 explain: |
   An AWS design for your app that fits your budget, with setup templates ready to deploy. Tell the AI the app type, expected users, monthly spend limit, team experience and any rules such as GDPR or HIPAA.
 
   It chooses a pattern, often serverless with Lambda, API Gateway and DynamoDB, or containers and Aurora when that suits better. It writes CloudFormation templates, adds a build and deploy pipeline, estimates costs and suggests savings. It has starting points for a budget under 100 dollars a month and for a bigger setup in the hundreds or low thousands. It also covers how to check the deploy and what to do when it fails. Python helper scripts are included.
 when:
-  - You are building a startup app and need a cloud plan without a cloud
-    engineer.
+  - You are building a startup app and need a cloud plan without a cloud engineer.
   - Your AWS bill is rising and you want to cut it.
   - You need templates to create the same setup in test and live.
   - You are moving an app to AWS from another host.
+not_for:
+  - "You handle health or payment data and have no compliance review yet: get that review from a compliance expert first, then bring the results here."
+  - "Nobody on your team has AWS access: use a managed host that runs the servers for you instead."
+  - "You want a one-click host for a simple site: use a simple site host such as Netlify or Vercel instead."
 you_give:
   - App type and expected traffic
   - Monthly budget
@@ -30,8 +30,30 @@ you_get:
   - A deployment pipeline outline
   - A cost estimate with savings ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Write down your app type, expected users, monthly budget, team experience and any rules like GDPR or HIPAA. Add your current AWS resource list if you want savings ideas.
+  - Open your AI and paste this skill, or upload the skill folder. It works best in a tool that can run code, because it uses Python scripts.
+  - Give it your details and ask for a design. Check that the pattern fits your team and your rules before you ask for templates.
+  - Ask for the CloudFormation template. Read it, and have someone who knows AWS review it before you deploy.
+  - Deploying creates AWS resources that cost money. Set a budget alarm and try it in a test account first.
+  - The cost figures in the examples are only illustrations. Your real costs depend on your usage, so check the AWS pricing pages.
+output_sample:
+  input:
+    - Your app type, such as web app, mobile backend, data pipeline or SaaS
+    - Your expected users and requests per second
+    - Your monthly spend limit
+    - Your team size and AWS experience
+    - Your rules such as GDPR, HIPAA or SOC 2 (optional)
+  prerequisites:
+    - An AI that can run code and Python scripts
+    - An AWS account, ideally a test account, with the AWS command line set up to deploy
+  output:
+    - name: Architecture design
+      contains: The pattern it picked and why, the list of AWS services, a simple text diagram, a monthly cost estimate and trade-offs.
+    - name: CloudFormation template
+      contains: Setup code for API Gateway, Lambda, a DynamoDB table, Cognito sign-in, access roles and logging.
+    - name: CDK or Terraform code
+      contains: The same setup written in CDK TypeScript or Terraform, when you ask for one of those.
+    - name: Cost analysis
+      contains: Your spend by service, right-sizing ideas, savings plan options and storage moves, ranked high, medium or low.
+    - name: Deploy and check steps
+      contains: Commands to create the stack, check its status, and fix a failed deploy.

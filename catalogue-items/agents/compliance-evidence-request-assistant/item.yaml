@@ -1,37 +1,35 @@
 slug: compliance-evidence-request-assistant
 name: Compliance evidence request assistant
-summary: A changed evidence gap list and proposed requests for the responsible owners.
+summary: Find which compliance evidence has expired or is missing, with a draft request for each owner. Give it your evidence list and last gap list.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
   - type: spreadsheet
-    required: false
-  - type: meeting_notes
-    required: false
+    required: true
 outputs:
   - type: audit_report
-  - type: spreadsheet
   - type: plan
-  - type: document
+  - type: spreadsheet
 uses:
   - prepare-evidence-for-a-compliance-review
   - spreadsheet-checker
 steps:
   - uses: prepare-evidence-for-a-compliance-review
-    note: "Run when: Evidence expires, a review requirement changes or a preparation action becomes due."
+    note: "Run when a requirement changed or this is the first baseline. It makes the control checklist, the evidence register and the owner plan."
   - uses: spreadsheet-checker
-    note: Check the evidence index against the saved requirements. Run the preparation workflow for changed requirements; use spreadsheet-checker for refreshed evidence. Keep gaps open until supporting evidence is reviewed, and prepare requests without sending them.
+    note: "Run when evidence was only refreshed. It checks the evidence list for missing dates, owners and broken rows. Gaps stay open until the proof is reviewed. Requests are drafted, never sent."
 schedule: At agreed preparation checkpoints before a compliance review.
 asks_before:
   - Sending or submitting any message or form
   - Changing a live account, calendar, task, permission or published document
   - Spending money, releasing a payment or signing a contract
   - Starting or changing any recurring schedule
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

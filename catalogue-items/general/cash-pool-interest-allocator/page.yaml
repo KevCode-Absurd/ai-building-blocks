@@ -1,55 +1,109 @@
 new_slug: cash-pool-interest-allocator
 name: Cash pool interest allocator
 headline: Cash pool interest allocator
-summary: An entity interest schedule with a pool residual
+summary: "Work out cash pool interest for one period: what depositors earn, what borrowers pay and what the pool center keeps. Gaps are flagged."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An entity interest schedule with a pool residual. Share actual entity deposit and borrowing principal, fixed approved rates, common accrual days and day-count basis; legal pool structure.
+subhead: Give it the balances your group entities put into and take out of a cash pool, the agreed rates and the days covered. It works out interest earned, interest charged and the pool center residual for the period. You get a schedule that ties out, plus a list of any missing facts.
 explain: |-
-  An entity interest schedule with a pool residual.
+  A group cash pool lets companies in one group lend to each other through a central account. Some entities hold extra cash. Others borrow. At the end of a period, someone has to work out how much interest each side earns or pays. This cash pool interest allocator does that sum for you and shows the work.
 
-  Treasury cash pools. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+  It treats deposits and borrowings as two sides. Each side gets its own rate. Both use the same days and the same day count. Borrowers pay interest. Depositors earn interest. The gap between the two is the pool center residual, the amount the pool center keeps or funds. If the two sides do not tie, the skill shows the gap and does not hide it in a plug.
+
+  It does not decide whether your internal rates are fair or legal. That needs a tax or legal adviser. Practice numbers, not a real pool: 1000 deposited at 3%, 600 borrowed at 5%, 30 days on a 360-day year. Both sides come to 2.5, so the center residual is 0. Raise the borrow rate to 6% and borrowers pay 3, so the center keeps 0.5.
 when:
-  - You need an entity interest schedule with a pool residual.
-  - You work on treasury cash pools and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your finance team closes the month and needs interest for each entity in the group cash pool.
+  - A bank statement or treasury report shows pool balances, and you want to check the interest charged.
+  - You need to explain why borrower interest and depositor interest do not match.
+  - An auditor asks for a schedule that traces pool interest back to balances and rates.
+not_for:
+  - You need to prove the internal rates are fair for tax. This gives the arithmetic only. Ask a tax or transfer pricing adviser.
+  - You want to check bank fees and charges on the pool account. Use the Bank fee reconciliation checker.
+  - You want to split a shared cost across teams, not interest. Use the Shared service activity cost allocator.
 you_give:
-  - Actual entity deposit and borrowing principal, fixed approved rates, common accrual days and day-count basis; legal pool structure.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Each entity's deposit and borrowing balance for the period (from your treasury report or bank statement)
+  - The agreed deposit rate and borrow rate, each per year (from your pool agreement or rate memo)
+  - The number of days covered, and the day count the agreement uses, such as 360 or 365
+  - The currency and units, such as USD thousands, and the reporting date
+  - Your own pool spreadsheet (optional)
 you_get:
-  - An entity interest schedule with a pool residual.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Interest each depositing entity earns
+  - Interest each borrowing entity pays
+  - The pool center residual, which is borrower interest minus depositor interest
+  - A check that the two sides tie, with any gap shown
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the balances for each entity, the two rates, the days covered and the day count. Say the currency and units. Attach the pool agreement page if you can.
+  - Ask in plain words, such as what interest does each entity earn or pay for June, and what does the center keep?
+  - Check one line yourself. Interest is balance times rate times days, divided by the day count. Borrower interest minus depositor interest is the center residual.
+  - Read MISSING and CHECKS MISSED before you use any figure. If a rate is missing, no interest is given for that side.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
-    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
-  - title: 2. Separate entity credit balances from borrowings and source the approved internal rates and contractual day-count basis
-    text: Separate entity credit balances from borrowings and source the approved internal rates and contractual day-count basis.
-  - title: 3. Accrue each side on the supplied principal and common period; show deposit interest received and borrower interest paid separately
-    text: Accrue each side on the supplied principal and common period; show deposit interest received and borrower interest paid separately.
-  - title: 4. Compute the center spread and reconcile borrower interest to depositor interest plus center residual
-    text: Compute the center spread and reconcile borrower interest to depositor interest plus center residual.
+  - title: Reads the sources
+    text: Lists each balance, rate, date, currency and unit, with where it came from. Stops on any line it cannot support.
+  - title: Splits the two sides
+    text: Keeps entity deposits apart from entity borrowings, and uses the agreed internal rate for each side.
+  - title: Works out the interest
+    text: Multiplies each balance by its rate and by days over the day count. Shows interest earned and interest paid on separate lines.
+  - title: Finds the center residual
+    text: Subtracts depositor interest from borrower interest. The result is what the pool center keeps or funds.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given and lists checks it could not run. It never fills a gap with zero.
 output_shape: |-
-  An entity interest schedule with a pool residual.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Depositor interest <amount> | Borrower interest <amount> | Pool center residual <amount>
+
+  SCOPE AND SOURCES
+  <period, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <balance per entity, deposit rate, borrow rate, days, day count>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, then the tie of borrower interest to depositor interest plus residual>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Each entity's deposit and borrowing balance for the period
+    - The deposit rate and the borrow rate, each per year
+    - The days covered and the day count
+    - Your own pool spreadsheet (optional)
+  prerequisites:
+    - The pool agreement or rate memo that sets both rates
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: Depositor interest, borrower interest and the pool center residual for the period.
+    - name: SCOPE AND SOURCES
+      contains: The period, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each balance, rate and day count you gave it, kept apart from assumptions.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that borrower interest equals depositor interest plus residual.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every material input has a source location, date, unit, sign and approval status.
+  - what: A different borrow rate
+    how: Change the borrow rate and run it again. Borrower interest moves, and the center residual moves with it.
+  - what: A different period
+    how: Change the days covered. Both sides scale by the same share of the year.
+  - what: Several entities
+    how: Give each entity its own balance and rate. The skill shows one line per entity, then adds them up.
 judge:
   - Every material input has a source location, date, unit, sign and approval status.
   - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
@@ -64,15 +118,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The page of the pool agreement that sets the rates and the day count
+    - The treasury or bank report that shows each entity's balance for the period
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Cash pool
+    meaning: A shared account that lets companies in one group lend spare cash to each other.
+  - term: Pool center
+    meaning: The entity or bank account that runs the pool and sits between depositors and borrowers.
+  - term: Residual
+    meaning: What is left after borrower interest pays depositor interest. The center keeps it, or funds a shortfall.
+  - term: Day count
+    meaning: The rule your agreement uses to count days in a year, such as 360 or 365.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+  - term: Illustrative figures
+    meaning: Practice numbers that show how the sums work. They are not a real pool.

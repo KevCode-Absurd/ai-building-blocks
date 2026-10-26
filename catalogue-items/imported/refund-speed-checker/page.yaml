@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It measures time between two dates.
 new_slug: refund-speed-checker
 name: Refund speed checker
-summary: Get the average days from return request to refund, and the returns
-  that ran late.
+summary: "Check your Shopify refund speed: get the average days from return request to refund, and a list of the returns that ran late."
 job: run-your-store
 headline: Refund speed checker
-subhead: The average number of days between a return request and the refund,
-  plus a list of the returns that took too long. It shows whether you keep the
-  promise you make to customers.
+subhead: The average number of days between a return request and the refund, plus a list of the returns that took too long. It shows whether you keep the promise you make to customers.
 explain: |
   The average number of days between a return request and the refund, plus a list of the returns that took too long. It shows whether you keep the promise you make to customers.
 
@@ -18,19 +15,42 @@ when:
   - You promise refunds within five days and want proof you meet it.
   - You want to find returns still stuck and overdue.
   - You are reviewing how well your support team handles returns.
+not_for:
+  - "You have no written refund promise yet: pick a number of days first, then run this check."
+  - "Your returns are exchanges only: this skips them, so ask your support team to review those by hand."
+  - "You want to change or issue refunds: this only reads data, so do that in your Shopify admin."
 you_give:
-  - Store domain
-  - Days to look back
-  - Maximum acceptable refund days
-  - Output format (optional)
+  - Your store domain, like mystore.myshopify.com
+  - How many days back to look (optional)
+  - The most days a refund should take (optional)
+  - Result format, plain text or JSON (optional)
 you_get:
   - Average days to refund
   - List of returns that ran late
   - Open returns already overdue
   - Summary you can share with the team
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI tool that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot read your store.
+  - Log in to Shopify from the command line with read access to orders and returns.
+  - Give your AI the skill file and tell it to run the refund speed check.
+  - Add your store domain, how many days to look back, and your refund promise in days.
+  - Read the summary first. Then open the CSV to see each late return.
+  - Contact customers on the open returns list before they write to you.
+output_sample:
+  input:
+    - Your store domain
+    - Days to look back (optional, 30 by default)
+    - Most days a refund should take (optional, 5 by default)
+    - Result format, plain text or JSON (optional)
+  prerequisites:
+    - An AI tool that can run code and the Shopify command line
+    - A logged-in Shopify session with read access to orders and returns
+  output:
+    - name: Summary block
+      contains: Returns checked, average days to refund, how many met your limit, how many ran late, and how many are still open.
+    - name: Longest open returns
+      contains: Returns with no refund yet, listed by order name and how many days ago the customer asked.
+    - name: return_sla_<date>.csv
+      contains: One row per return with order name, request date, refund date, days taken, late flag and status.
+    - name: JSON summary (optional)
+      contains: The same totals in a machine-readable form, if you ask for JSON instead of plain text.

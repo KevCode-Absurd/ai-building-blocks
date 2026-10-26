@@ -1,6 +1,6 @@
 new_slug: meta-test-campaign-planner
 name: "Meta test campaign planner"
-summary: "Give it your products, concepts and spend. Get a test campaign layout, ad pack names and scale rules."
+summary: "Plan your Meta test campaign: get a campaign layout, named ad packs, a seven-day minimum spend and rules for adding ads and scaling winners."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It follows a set method and fills in your numbers, so a mid-size model does it well."
@@ -17,6 +17,10 @@ when:
   - You are about to launch your first batch of tests and don't want to set it up wrong.
   - Your new ads never get spend because old winners take the whole budget.
   - Your account has grown messy and you can't tell which concept or hook earned a sale.
+not_for:
+  - "You want to read results from a test that already ran: use the Creative test reader."
+  - "A winning ad is losing steam and needs fresh versions: use the Fatigued ad reviver."
+  - "Your daily budget is under one target cost per sale: run fewer ads or fewer packs, or ask a media buyer before you spend."
 
 you_give:
   - Your concepts, and for each ad the avatar, angle and whether it is top or bottom of the funnel
@@ -36,6 +40,32 @@ how_to_use:
   - Add your stock position and any campaigns already running.
   - Build the packs in Ads Manager, checking each setting against the live menu, and set a calendar reminder for day 7.
   - On day 7, remove the minimum spend, then read results with the creative test reader.
+output_sample:
+  input:
+    - Your concepts, with the buyer, angle and funnel stage of each ad
+    - Your target cost per sale
+    - Your daily budget for this campaign
+    - Your monthly spend, stock position and cash cycle (optional)
+    - Your current campaigns and results by ad (optional)
+  output:
+    - name: Structure
+      contains: The campaigns you need and what each is for, sized to your store and spend.
+    - name: CBO or ABO
+      contains: The budget choice, the trade-off in two lines and when to review it.
+    - name: Budget split
+      contains: Rough ranges of budget for top, middle and bottom of the funnel.
+    - name: Pack plan
+      contains: Each pack with its buyer, angle, funnel stage, three to eight ads and minimum spend.
+    - name: Minimum spend
+      contains: One target cost per sale a day, capped at 20% of daily budget, with a removal date.
+    - name: Settings checklist
+      contains: Objective, conversion event, attribution, exclusions and placements to confirm in the live menu.
+    - name: Naming
+      contains: A naming pattern with concept, hook, first frame and edit, plus an example.
+    - name: Rules
+      contains: How to add ads, how to scale, and what to do if one ad takes over half the spend.
+    - name: Checks missed and missing
+      contains: Any checks that failed and the facts that would sharpen the plan.
 
 how_it_works:
   - title: Sizes the account

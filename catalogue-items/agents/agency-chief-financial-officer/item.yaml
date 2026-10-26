@@ -1,0 +1,42 @@
+slug: agency-chief-financial-officer
+name: Chief Financial Officer agent
+summary: "Get a CFO-style decision brief for one money choice, with options, cash impact, a downside case and the numbers to check first."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: brief
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/chief-financial-officer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/chief-financial-officer.md
+  licence: MIT
+  original_name: Chief Financial Officer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 05efa4015fc7feac9bb41942fa6e9eb2b79e2219bf1280b290c754fd16e15a08
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Chief Financial Officer
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Chief Financial Officer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/chief-financial-officer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

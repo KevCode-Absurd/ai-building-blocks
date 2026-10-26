@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It computes the metrics and interprets them.
 new_slug: saas-metrics-coach
 name: SaaS metrics coach
-summary: Share your revenue and customers. Get your ARR, churn, CAC and LTV
-  read, with what to fix first.
+summary: "Check your SaaS metrics: share your revenue and customer numbers and get ARR, churn, CAC and LTV rated healthy, watch or critical, with fixes."
 job: money-and-investing
 headline: SaaS metrics coach
-subhead: Know whether your subscription business is healthy, and what to fix
-  first. Share your revenue and customer numbers and get your key figures worked
-  out, each marked healthy, watch or critical.
+subhead: Know whether your subscription business is healthy, and what to fix first. Share your revenue and customer numbers and get your key figures worked out, each marked healthy, watch or critical.
 explain: |
   Know whether your subscription business is healthy, and what to fix first. Share your revenue and customer numbers and get your key figures worked out, each marked healthy, watch or critical.
 
   It asks for monthly recurring revenue now and last month, new and lost revenue, customer counts, sales and marketing spend and gross margin. Partial data is fine, and it states its assumptions. It works out annual revenue, growth, churn, cost to win a customer, lifetime value, payback time and net revenue retention, then compares each with ranges for your size and stage. The top weak spots get a plain explanation and actions for this month.
 when:
   - You want to know if your churn is normal for your size.
-  - An investor or partner asked for your SaaS numbers and you need to read them
-    well.
+  - An investor or partner asked for your SaaS numbers and you need to read them well.
   - Growth slowed and you cannot tell if the cause is sales or retention.
   - You want a monthly health report you can repeat.
+not_for:
+  - "You need accounting, tax filings or a valuation model: use an accountant, or ask your AI for a DCF or budget review instead."
+  - "You only want ways to keep customers from leaving: use a customer retention plan, or ask your AI for one."
+  - "You do not run a subscription business, so MRR and churn do not apply: use a simple profit and cash check instead."
 you_give:
   - Monthly recurring revenue, now and last month
   - "Customers: total, new and lost"
@@ -31,7 +31,28 @@ you_get:
   - A short summary of your overall position
   - Priority actions for this month
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Add the skill folder too if your AI accepts files.
+  - "Paste your numbers: monthly recurring revenue now and last month, customers total, new and lost, and sales and marketing spend. Partial numbers are fine."
+  - Say if you sell to large firms, mid-size firms, small firms or self-serve users, and whether you are early, growing or at scale.
+  - If your AI can run code and Python 3 is set up, it runs the metrics script, the quick ratio script and the 12-month projection script. If not, it uses the formulas and the report is the same.
+  - Read the table first. Then act on the priority issues in order, starting with the first one.
+  - If churn comes back critical, fix that before you spend more on growth.
+output_sample:
+  input:
+    - Your monthly recurring revenue now and last month
+    - "Your customer counts: total, new and lost this month"
+    - Your sales and marketing spend
+    - Your gross margin and market segment (optional)
+  prerequisites:
+    - Python 3 only if you want your AI to run the calculator scripts. Without it, your AI uses the formulas instead.
+  output:
+    - name: Metrics at a Glance
+      contains: A table of each metric with your value, the benchmark for your segment, and a healthy, watch or critical label.
+    - name: Overall Picture
+      contains: Two or three plain sentences on how your business is doing.
+    - name: Priority Issues
+      contains: Up to three weak metrics, each with what is happening, why it matters and fixes for this month.
+    - name: What is Working
+      contains: One or two real strengths in your numbers.
+    - name: 90-Day Focus
+      contains: One metric to move, with a numeric target.

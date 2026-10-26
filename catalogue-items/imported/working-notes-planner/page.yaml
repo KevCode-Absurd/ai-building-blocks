@@ -2,34 +2,54 @@ thinking: low
 thinking_why: It keeps three simple files up to date.
 new_slug: working-notes-planner
 name: Working notes planner
-summary: Give it a long task. Get a plan, findings and progress kept in files so
-  your AI stays on track.
+summary: Keep a long AI task on track. Get a plan file, a findings file and a progress log your AI rereads before each big decision.
 job: organise-work
 headline: Working notes planner
-subhead: Three files that act as your AI's memory on a long task, so it stays on
-  track instead of forgetting the goal halfway through. The work survives long
-  sessions.
+subhead: "Give your AI a long task. It keeps three simple files: a plan, what it learned, and what it has done. It rereads them so it does not forget the goal halfway through."
 explain: |
   Three files that act as your AI's memory on a long task, so it stays on track instead of forgetting the goal halfway through. The work survives long sessions.
 
   Before any big task, the skill creates task_plan.md, findings.md and progress.md in your project folder. The plan holds the goal and phases. Findings holds what was learned along the way. Progress logs what is done and what errors came up. Before each major decision the AI rereads the plan to refresh the goal, and after each phase it updates the files. The method is borrowed from how Manus handles working memory on disk.
 when:
-  - You give your AI a task that takes many steps and it loses focus.
-  - A session is long enough that early decisions get forgotten.
+  - Your AI loses focus on a task with many steps.
+  - A session runs long and early decisions get forgotten.
   - You want to see what your AI has learned and done so far.
   - You need to pick the work up again tomorrow.
+not_for:
+  - "You only have a simple question, a quick lookup or a single-file edit: just ask your AI directly, no files needed."
+  - "Your AI can't read or write files, as in a basic chat window: keep a short running list in the chat and paste it back each time."
+  - "You need a team task board with owners and due dates: use a project tool your team already shares."
 you_give:
   - The long task and its goal
-  - A project folder to keep files in
+  - A project folder to keep the files in
   - Phases or milestones (optional)
 you_get:
-  - Task plan file
-  - Findings file
-  - Progress log
-  - Rule to reread the plan before decisions
+  - A task plan file with the goal, phases and decisions
+  - A findings file with what your AI learned
+  - A progress log of what is done and what failed
+  - A habit of rereading the plan before big decisions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write files.
+  - Use an AI that can read and write files in a folder, such as Claude Code. In a plain chat, ask it to show the three files as text and paste them back each session.
+  - Add the skill to your AI tool. The skill's own templates and scripts stay in its folder. Your three files go in your project folder.
+  - Tell your AI the goal and say to follow the planning-with-files skill. It makes task_plan.md, findings.md and progress.md first.
+  - Check task_plan.md before work starts. Fix the goal and phases if they are wrong.
+  - Skip this skill for simple questions, single-file edits and quick lookups.
+  - To resume later, ask your AI to read all three files first, then carry on.
+output_sample:
+  input:
+    - Your long task and its goal
+    - A project folder where the files can be kept
+    - Phases or milestones (optional)
+  prerequisites:
+    - An AI that can read and write files in your project folder
+  output:
+    - name: task_plan.md
+      contains: The goal, the phases with their status, key decisions, and a table of errors with what was tried.
+    - name: findings.md
+      contains: Research and discoveries saved as they happen, so nothing seen in a browser, image or PDF is lost.
+    - name: progress.md
+      contains: A session log of what was done, files created or changed, and test results.
+    - name: Reread rule
+      contains: Your AI reads the plan before each major decision and updates the files after each phase.
+    - name: 3-strike error rule
+      contains: After three failed tries, your AI stops, explains what it tried, shares the error and asks you.

@@ -1,6 +1,6 @@
 slug: review-equity-valuation-sensitivity-assumptions
 name: Review equity valuation sensitivity assumptions
-summary: Share the source files. Get a checked valuation scenario report and assumption challenge list.
+summary: Build a dated stock valuation report with scenario ranges, then flag claims with no source. Get a report and a list of assumptions to challenge.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,10 +8,8 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: source_text
-    required: false
   - type: spreadsheet
     required: false
   - type: copy_draft
@@ -24,9 +22,9 @@ uses:
   - unsupported-claim-spotter
 steps:
   - uses: equity-research-valuation-report-builder
-    note: Use the real valuation engine and matching strict validator to check scenario inputs and arithmetic. Retain the source ledger and inspect the actual rendered report. Treat sensitivities as scenarios, never price predictions.
+    note: Use the real valuation engine and matching strict validator to check scenario inputs and arithmetic. Retain the source ledger and inspect the actual rendered report. Treat sensitivities as scenarios, never price predictions. Hands step 2 the report, its scenarios and the source ledger.
   - uses: unsupported-claim-spotter
-    note: Check thesis and valuation commentary against the filings, dated prices and actual scenario results. Flag implied certainty and missing counter-evidence; give no personalized investment recommendation.
+    note: Check thesis and valuation commentary against the filings, dated prices and actual scenario results. Flag implied certainty and missing counter-evidence; give no personalized investment recommendation. Uses step 1's report as the draft to check.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -42,3 +40,4 @@ credits:
     url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
     used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
 warnings: []
+needs_mode: manual

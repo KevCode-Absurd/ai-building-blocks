@@ -2,34 +2,108 @@ thinking: high
 thinking_why: It designs from your queries and checks for hot spots.
 new_slug: nosql-data-modeler
 name: NoSQL data modeler
-summary: Describe your queries and scale. Get a Cassandra or DynamoDB table
-  design that avoids hot partitions.
+summary: Turn your list of queries into a Cassandra or DynamoDB table and key design, with a check for hot partitions and the trade-offs in plain words.
 job: build-software
 headline: NoSQL data modeler
-subhead: Describe your queries and scale. Get a Cassandra or DynamoDB table
-  design that avoids hot partitions. Bring the queries you need to run. Use the
-  result to plan your next step.
+subhead: List the queries your app must run, plus your expected size and traffic. It designs the tables and keys for Cassandra, ScyllaDB or DynamoDB, checks each partition key for hot spots, and explains the trade-offs.
 explain: |
-  A Cassandra or DynamoDB table design that answers your queries quickly and spreads load evenly, so no single partition gets overloaded.
+  Cassandra and DynamoDB work the other way round from SQL. You do not model your things and join them later. You list your queries first, then build tables that answer each one in a single lookup. This NoSQL data modeler walks you through that, and shows how to design a DynamoDB table or a Cassandra schema from your queries.
 
-  These stores work differently from SQL. You do not model things and link them later. You list your questions first, then build one table per question and copy data so each read is fast. The skill takes you through that: write the access patterns, choose partition and sort keys, check how big and how evenly each partition will grow, and avoid hot spots. It explains the trade-offs, such as eventual consistency and extra storage cost. You can also use it to find why an existing table is slow.
+  It writes your access patterns as a numbered list, picks the partition key and sort key for each table, and checks that traffic spreads evenly. A partition key with few values, such as a status field, sends all traffic to one node. The skill finds that and offers a better key or a split.
+
+  It also names the costs: copied data you must keep in step, eventual consistency and extra storage. You can use it on an existing slow table too. It gives a design to review, not a tested one.
 when:
   - You are moving from SQL to DynamoDB and the model feels backwards.
-  - One partition key is taking all the traffic.
-  - You have ten queries and need to know how many tables to build.
-  - Reads are slow and you suspect the key design.
+  - One partition key takes most of the traffic, and reads or writes slow down.
+  - You have ten queries and need to know how many tables or indexes to build.
+  - Reads on a Cassandra table are slow and you suspect the key design.
+not_for:
+  - Your data fits a normal SQL database. Use the database schema designer or the Postgres schema designer.
+  - You use MongoDB or another document store. This skill covers Cassandra, ScyllaDB and DynamoDB only.
+  - You do not know your queries yet. List them first, since the whole design starts from them.
+  - You want a full system design with services and queues. Use the data system designer.
 you_give:
-  - The queries you need to run
-  - Expected data size and traffic
-  - Cassandra, ScyllaDB or DynamoDB
-  - Your current schema (optional)
+  - The queries you need to run, one line each
+  - Which database, such as Cassandra, ScyllaDB or DynamoDB
+  - Your expected data size and traffic
+  - Your current table design (optional)
 you_get:
-  - A list of access patterns
-  - Table and key designs
-  - A hot partition check
-  - Trade-offs in plain words
+  - A numbered list of your access patterns
+  - A table and key design for each pattern
+  - A hot partition check for every key
+  - The trade-offs in plain words
+  - Next steps to test the design
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste this skill.
+  - List every query in plain words, such as "get a user's orders, newest first". Add which database you use and your expected size and traffic.
+  - Read the access pattern list first. Fix any query it got wrong or missed before you look at the tables.
+  - Check the hot partition notes. If a key has few values, ask for a split or a different key.
+  - Have someone who runs your database review the design. Then load-test the keys with realistic traffic.
+  - Come back and rerun this skill each time you add a new query.
+how_it_works:
+  - title: List access patterns
+    text: It turns your queries into a numbered list, each with the lookup it needs.
+  - title: Choose partition keys
+    text: It picks keys with many distinct values, so traffic spreads across nodes.
+  - title: Choose sort keys
+    text: It adds sort or clustering keys so ranges, such as newest first, read in one pass.
+  - title: Design the tables
+    text: For DynamoDB it may use one table with pre-joined rows. For Cassandra it makes one table per query.
+  - title: Check hot spots
+    text: It checks key variety and how big one partition may grow, and offers a split if needed.
+  - title: Name the trade-offs
+    text: It lists copied data, eventual consistency and storage cost, and what to test next.
+output_shape: |
+  ## Inputs
+  <database, queries, size and traffic, MISSING items>
+
+  ## Access patterns
+  <numbered list, one line each>
+
+  ## Table and key design
+  <per table: partition key, sort key, patterns served>
+
+  ## Hot partition check
+  <per key: distinct values, growth, split plan>
+
+  ## Trade-offs
+  <copied data, consistency, storage>
+
+  ## Next steps
+  <how to test before launch>
+output_sample:
+  input:
+    - Your list of queries, one line each
+    - Which database, such as Cassandra, ScyllaDB or DynamoDB
+    - Your expected data size and traffic
+    - Your current table design (optional)
+  output:
+    - name: Access patterns
+      contains: Your queries as a numbered list, each with the lookup it needs.
+    - name: Table and key design
+      contains: For each table, the partition key, sort key and which queries it serves.
+    - name: Hot partition check
+      contains: How many distinct values each key has, how a partition may grow, and any split plan.
+    - name: Trade-offs
+      contains: Copied data to keep in step, eventual consistency and extra storage.
+    - name: Next steps
+      contains: How to load-test the keys and check partition sizes before launch.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is design advice in text. No code or database access is needed.
+  inputs:
+    - Real traffic numbers, such as reads and writes per second
+    - Examples of your biggest customers or busiest items
+    - Your current schema or slow query logs
+terms:
+  - term: Partition key
+    meaning: The value that decides which server holds a row. It should have many different values.
+  - term: Sort key
+    meaning: Orders rows inside one partition, so ranges read fast. Cassandra calls it a clustering key.
+  - term: Hot partition
+    meaning: One partition that gets far more traffic than the rest, which slows everything.
+  - term: Eventual consistency
+    meaning: A fresh write may take a moment to show up everywhere.
+  - term: Access pattern
+    meaning: One query your app must run, such as "get orders for a user".

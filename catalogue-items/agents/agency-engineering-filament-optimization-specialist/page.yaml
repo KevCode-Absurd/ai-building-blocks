@@ -1,0 +1,137 @@
+name: Filament Optimization Specialist agent
+summary: "Get a Filament admin review: tabs, layout and menu fixes for your forms. Share your PHP resource file and keep every field."
+headline: Filament Optimization Specialist agent
+subhead: Paste your Filament resource file and say what admins do on that screen. It looks for long flat forms, awkward inputs and a messy menu. You get a layout plan, a rewritten resource and a check that no field was dropped.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Filament is a toolkit for building admin panels in Laravel, a PHP framework. Forms there often start as one long list of fields. Adding icons and hint text does not fix that. This agent looks at structure first: how fields are grouped, what sits behind tabs and what can start collapsed.
+
+  It works in a fixed order. Split long forms into tabs. Put related sections side by side. Swap rows of ten radio buttons for a slider. Collapse sections that are usually empty. Label repeater items. Add a short summary at the top of edit forms. Group the menu. It also lists what it left alone, so the form stays calm.
+
+  It reads your real file before it suggests anything. Filament code changes between versions, so tell it your version and check its code against the docs for that version. This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - A Filament form is one long list of more than 8 fields, and admins scroll too much.
+  - A form uses rows of 1 to 10 radio buttons for ratings.
+  - A repeater shows "Item 1, Item 2" instead of useful labels.
+  - Your admin menu is one long flat list and people cannot find things.
+not_for:
+  - You have a bug in your Laravel code, not a layout problem. Use the Code reviewer agent.
+  - Your admin panel is not built with Filament. Use the Full stack developer.
+  - Pages are slow because of database queries. Use the Database performance analyst.
+you_give:
+  - Your Filament resource file, the PHP file that holds the form and table
+  - Your Filament and Laravel versions
+  - What admins do most on this screen, and what annoys them
+  - The model's fields or migration, if the resource file does not show every field (optional)
+  - Your tests for this resource (optional)
+you_get:
+  - A layout plan that shows the form before and after
+  - A ranked list of structure changes, each with its reason
+  - The rewritten resource code
+  - A check that every original field is still there
+  - A list of changes it left out on purpose
+  - Steps to test the create and edit screens
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your resource file. Add your Filament and Laravel versions, and a line on what admins do on this screen.
+  - Say "Review this resource. Do not drop any field. Ask once if anything is missing."
+  - Open the layout plan first. If the groups do not match how your admins think, say so and ask for another grouping.
+  - Check the field list against your original file. Every field must appear once.
+  - Run your tests, then open the create and edit screens in a test copy of your app before you merge.
+how_it_works:
+  - title: Read the file
+    text: It reads your resource file and maps every field, its type and its place on the screen.
+  - title: Find the pain
+    text: It finds the worst part of the form, usually too long, too flat or too noisy.
+  - title: Plan the layout
+    text: It draws the new layout as a comment block, with what is always visible, what sits in tabs and what is collapsed.
+  - title: Upgrade the inputs
+    text: It swaps rating rows for sliders, labels repeater items and collapses sections that are usually empty.
+  - title: Check nothing was lost
+    text: It compares the new field list with the old one and walks through create and edit separately.
+  - title: Trim the noise
+    text: It removes hints, icons and wrappers that add clutter and do not help people scan.
+output_shape: |-
+  LAYOUT PLAN
+    Before: <how the form is laid out now>
+    After: <rows, tabs, side-by-side sections, collapsed sections>
+
+  CHANGES (ranked by impact)
+    <number> | <structure change> | <why it helps admins> | <fields affected>
+
+  REWRITTEN RESOURCE
+    <file name> | <code>
+
+  FIELD CHECK
+    <original field> | <where it is now> | <kept or moved>
+
+  LEFT ALONE ON PURPOSE
+    <field or section> | <why>
+
+  TESTS TO RUN
+    <screen or flow> | <what to check>
+
+  ASSUMPTIONS
+    <version or field detail> | <how to confirm>
+output_sample:
+  input:
+    - Your Filament resource file
+    - Your Filament and Laravel versions
+    - What admins do on this screen and what annoys them
+    - Your model's fields or tests (optional)
+  prerequisites:
+    - An AI that can read code files
+    - A test copy of your app, to try the new layout
+  output:
+    - name: Layout plan
+      contains: The form before and after, with rows, tabs, side-by-side sections and collapsed parts.
+    - name: Changes
+      contains: A ranked list of structure changes, each with why it helps admins.
+    - name: Rewritten resource
+      contains: The full resource code with the new layout.
+    - name: Field check
+      contains: Every original field and where it sits now.
+    - name: Left alone on purpose
+      contains: Fields and sections it kept simple, and why.
+    - name: Tests to run
+      contains: What to check on the create and edit screens.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Grouping
+    how: Say how your admins think about the fields, such as by time of day or by product step. The tabs follow that.
+  - what: Scope
+    how: Ask for one resource at a time. Do the menu in a second pass.
+  - what: Restraint
+    how: Say "no new icons" if your team wants a plain look.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Filament
+    meaning: A toolkit for building admin panels on top of Laravel.
+  - term: Resource
+    meaning: The Filament file that defines the form, table and pages for one kind of record.
+  - term: Repeater
+    meaning: A form part that lets an admin add many rows of the same fields.
+  - term: Tabs
+    meaning: Panels on a form that show one group of fields at a time.
+  - term: Relation manager
+    meaning: A Filament panel for records that belong to another record.
+  - term: Navigation group
+    meaning: A named group of menu items in the side menu.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads the full resource file and returns code you can compare line by line.
+    - name: A coding tool such as Claude Code
+      why: It can edit the file in your project and run your tests.
+  inputs:
+    - A screenshot of the current form.
+    - A list of the fields admins fill in every time, and the ones they skip.

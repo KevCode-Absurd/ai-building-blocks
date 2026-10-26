@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It traces the error step by step.
 new_slug: matlab-bug-tracer
 name: MATLAB bug tracer
-summary: Give it code that fails. Get the cause found, with breakpoints and
-  variable checks to show it.
+summary: Find why your MATLAB code fails or gives a wrong answer. Give it the script and error. You get the line, the cause and a fix.
 job: test-and-fix-code
 headline: MATLAB bug tracer
-subhead: Give it the MATLAB script that fails or returns a wrong answer, the
-  error message and what you expected. It decides whether reading the code is
-  enough or runs it with breakpoints. You get the line and cause, the variable
-  values that prove it and a suggested fix.
+subhead: Give it the MATLAB script that fails or returns a wrong answer, the error message and what you expected. It decides whether reading the code is enough or runs it with breakpoints. You get the line and cause, the variable values that prove it and a suggested fix.
 explain: |
   The cause of a MATLAB error found by running the code, not by guessing. You give it a script that fails or returns a wrong answer, and it shows you the line, the variable and the value that went wrong.
 
@@ -19,6 +15,10 @@ when:
   - A function returns the wrong number and you cannot see where it changes.
   - You need to learn what unfamiliar code does before editing it.
   - You want to know why a variable has an odd value halfway through.
+not_for:
+  - "You want a style or quality review and nothing is failing: use the matlab-review-code skill instead."
+  - "You want tests that check your code is correct: use the matlab-write-tests skill instead."
+  - "Your code works but runs slowly: use a MATLAB profiler, which shows where the time goes."
 you_give:
   - The failing script or function
   - The error message or wrong output
@@ -30,8 +30,29 @@ you_get:
   - The breakpoints used
   - A suggested fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Connect your AI tool to MATLAB with a MATLAB MCP server. Without it, your AI can only read the code and guess.
+  - Add the skill to your AI tool, or paste the SKILL.md text into the chat.
+  - Paste your failing script, the full error message and what you expected.
+  - Let your AI read the code first. If that is not enough, it runs the code in MATLAB and checks variables.
+  - Read the cause and the proof it shows. Then try the suggested fix in your own code.
+output_sample:
+  input:
+    - Your MATLAB script or function that fails
+    - The error message or the wrong result (optional if it runs without an error)
+    - What you expected to get
+  prerequisites:
+    - An AI tool connected to MATLAB through a MATLAB MCP server, a link that lets your AI run MATLAB code
+    - MATLAB installed on your computer
+  output:
+    - name: Approach
+      contains: Says whether reading the code was enough or whether it had to run the code in MATLAB.
+    - name: Cause
+      contains: Names the line and the reason the code fails or gives the wrong answer.
+    - name: Evidence
+      contains: Shows the variable values and the MATLAB commands used to prove the cause.
+    - name: Breakpoints used
+      contains: Lists where it paused the code or printed values, and says they were cleared after.
+    - name: Suggested fix
+      contains: Gives the code change that should solve the problem.
+    - name: Questioned diagnosis
+      contains: Checks the cause once more before you rely on it.

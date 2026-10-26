@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes short prompts for one task.
 new_slug: metacognition-prompts
 name: Thinking-about-thinking prompt set
-summary: Give it a task. Get prompts for planning, checking and reviewing work
-  that students can use alone.
+summary: Get a set of thinking-about-thinking prompts for one task. Students use them to plan, check and review their own work without you.
 job: teach-and-train
 headline: Thinking-about-thinking prompt set
-subhead: Give it a task. Get prompts for planning, checking and reviewing work
-  that students can use alone. Bring the task students are doing. Use the result
-  to plan your next step.
+subhead: Give it a task. Get prompts for planning, checking and reviewing work that students can use alone. Bring the task students are doing. Use the result to plan your next step.
 explain: |
   A set of questions that students can ask themselves before, during and after a task, so they notice when they are lost and fix it without waiting for you. You describe the task and the class, and the prompts are tuned to both.
 
@@ -18,18 +15,42 @@ when:
   - You want a card of self-check questions for word problems.
   - Year 12 students need prompts for close reading.
   - You want students to fix their own mistakes before asking you.
+not_for:
+  - "You want to teach new content to the whole class: plan the lesson yourself, as these prompts only help with a task students have already started."
+  - "Students have not yet tried the task: let them attempt it first, then use these prompts to check their thinking."
+  - "You need help with one subject only, such as maths method: ask your AI for a subject-specific scaffold instead."
 you_give:
   - The task students are doing
-  - Year group and level of self-awareness
-  - The skill to target, such as monitoring
-  - Subject or when the prompts will be used (optional)
+  - Year group and how well students notice their own thinking
+  - "The skill to target: planning, monitoring, evaluating or debugging"
+  - Subject (optional)
+  - "When the prompts will be used: before, during or after the task (optional)"
 you_get:
   - Planning, monitoring, evaluating and debugging prompts
   - Wording matched to the year group
   - Prompts for before, during and after
   - Tips on how to introduce them
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Paste in the task, the year group and the skill you want to target.
+  - Run it and read the prompts. Cut any that do not fit your class.
+  - Print or share the student card.
+  - Model one prompt aloud with the teacher script before students try it alone.
+output_sample:
+  input:
+    - The task students are doing
+    - Year group and how well they notice their own thinking
+    - "Which skill to target: planning, monitoring, evaluating or debugging"
+    - Subject (optional)
+    - "When the prompts will be used: before, during or after (optional)"
+  output:
+    - name: Before the Task (Planning)
+      contains: Questions that help students choose a method and a first step before they start.
+    - name: During the Task (Monitoring)
+      contains: Questions that test whether students truly understand or only recognise the words.
+    - name: After the Task (Evaluating)
+      contains: Questions that check the answer against the success criteria and look back at the method.
+    - name: Teacher Modelling Script
+      contains: Words you can say to show students how to ask themselves these questions.
+    - name: Student Prompt Card
+      contains: A short card of prompts that students can copy, print and use alone.

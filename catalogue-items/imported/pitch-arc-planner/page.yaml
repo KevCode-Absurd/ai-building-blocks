@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sequences ideas to fit what the audience believes.
 new_slug: pitch-arc-planner
 name: Pitch arc planner
-summary: Give it your audience and your goal. Get a pitch or deck outline that
-  builds belief, then asks for a clear decision.
+summary: Plan a sales or investor pitch outline that builds belief first, then asks for a clear decision. Give it your audience and goal.
 job: speak-and-persuade
 headline: Pitch arc planner
-subhead: A pitch or deck outline that moves your audience from attention to
-  trust to a clear decision. It builds belief first and brings in your solution
-  after the need is felt.
+subhead: A pitch or deck outline that moves your audience from attention to trust to a clear decision. It builds belief first and brings in your solution after the need is felt.
 explain: |
   A pitch or deck outline that moves your audience from attention to trust to a clear decision. It builds belief first and brings in your solution after the need is felt.
 
@@ -18,6 +15,10 @@ when:
   - A sales presentation gets interest but no decision.
   - You must pitch a product to a cold audience.
   - You need a clear ask at the close.
+not_for:
+  - The decision is already made, so skip the pitch and send a short note that confirms the next step.
+  - Your claims need legal or ad-policy review, so ask a lawyer or the ad platform's policy team first.
+  - You want finished slide design or polished speaker notes, so use a slide tool or a speaker coach after you have the outline.
 you_give:
   - Audience and what they know
   - Your goal or the decision wanted
@@ -29,7 +30,28 @@ you_get:
   - Where to put proof and the ask
   - Trade-offs stated plainly
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
+  - Describe your audience, what they already know, and the decision you want from them.
+  - Add your verified facts and any known objections. Say if you want a deck, talk track or one-pager.
+  - Answer any question your AI asks about trust, time limit or audience type.
+  - Check each section's proof slot and fill it with your own sourced facts. Treat any cited study as unverified until you check it.
+output_sample:
+  input:
+    - Who your audience is and how much they know about the problem
+    - The decision you want from them
+    - Verified facts about your product or offer
+    - Known objections (optional)
+    - The format you need, such as a deck, talk track or one-pager (optional)
+  output:
+    - name: Audience read
+      contains: Who the audience is, how aware they are of the problem, and how far they trust you.
+    - name: Pitch outline
+      contains: Ordered sections from opening to close, each with the belief it builds and a place for proof.
+    - name: Contrast section
+      contains: The current state set beside the better state, so the gap is easy to see.
+    - name: Solution bridge
+      contains: Where your offer enters, shown as the way through the problem you already raised.
+    - name: Closing ask
+      contains: The key idea, your best proof and the single next step you want the audience to take.
+    - name: Trade-offs and checks
+      contains: Honest limits of the offer, plus a note to verify any research claim before you use it outside.

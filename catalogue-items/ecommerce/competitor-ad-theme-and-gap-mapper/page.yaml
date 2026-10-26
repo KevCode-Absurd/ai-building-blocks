@@ -1,43 +1,112 @@
 new_slug: competitor-ad-theme-and-gap-mapper
 name: Competitor ad theme and gap mapper
-summary: Group competitor ads by thirteen themes. Compare formats and messages, then rank gaps worth testing.
+summary: Sort competitor Meta ads into thirteen themes, see which lanes are crowded or open, and get ranked ad briefs to test next.
 job: study-competitors
-headline: Competitor ad theme and gap mapper
-subhead: Share competitor names, dated ad references and your brand facts. Get a theme and format comparison with ranked test gaps.
-explain: |-
-  Group competitor ads by thirteen themes. Compare formats and messages, then rank gaps worth testing.
-
-  Share competitor names, dated ad references and your brand facts. Get a theme and format comparison with ranked test gaps.
-when:
-  - You need a theme and format comparison with ranked test gaps.
-  - You need competitor ad theme and gap mapper for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
-you_give:
-  - Competitor names
-  - Dated ad references and your brand facts
-you_get:
-  - A theme and format comparison with ranked test gaps
-  - The sources used, missing inputs and assumptions
-how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
-how_it_works:
-  - title: Check the inputs
-    text: Confirm competitor names, dated ad references and your brand facts. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Info
-    text: Follow the collect info section in the full method and keep its required fields and decision rules.
-  - title: Per-Competitor Analysis
-    text: Follow the per-competitor analysis section in the full method and keep its required fields and decision rules.
-  - title: Cross-Competitor Synthesis
-    text: Follow the cross-competitor synthesis section in the full method and keep its required fields and decision rules.
-  - title: Opportunity Recommendations
-    text: Follow the opportunity recommendations section in the full method and keep its required fields and decision rules.
-  - title: Deliver Report
-    text: Follow the deliver report section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a theme and format comparison with ranked test gaps. Check facts, math and the decisions before any action.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+headline: Competitor ad theme and gap mapper
+subhead: Give it ads you collected from two to five competitors in the Meta Ad Library, plus your brand facts. It sorts each ad into one of thirteen themes and compares formats and messages. You get a heat map of crowded and open lanes and five to seven ranked briefs.
+explain: |-
+  Most brands copy what their competitors run, so the whole category ends up saying the same thing. This competitor ad theme and gap mapper shows you where that happens. It tags each competitor ad with one theme, such as social proof, discount, founder story or comparison, then counts the themes per competitor.
+
+  The result is a heat map. A theme that three or more rivals use is crowded. A theme nobody uses is open. It does the same for ad formats and hook types, so you also see if nobody runs video or carousels.
+
+  Then it writes briefs for the open lanes that fit your brand, each with a real hook line and a priority. It never invents spend. The Ad Library shows spend for few ads, so that column says "not disclosed" unless the library shows it.
+when:
+  - You are starting with a new brand or client and need to see the competitive field before the first ad sprint.
+  - Your own ads have stopped improving and you want a lane nobody else is using.
+  - You are launching a product and want to see how rivals frame similar ones.
+  - It is quarterly review time and you want to check whether the gaps moved.
+not_for:
+  - "You want to count ads, formats and ad age from an export: use the Ad library teardown counter."
+  - "You want to check gaps against what buyers say in reviews, with a score: use the Competitor ad gap finder."
+  - "You want to split winning ads into message and look: use the Winning ad DNA mapper."
+  - "Your competitors run no Meta ads, or you sell to other businesses with no ads to study: use a search or sales-data tool instead."
+you_give:
+  - Your brand name, what you sell and what you do well
+  - Two to five competitor names or websites
+  - Their ads from the Meta Ad Library, as screenshots or pasted text, with start dates if shown
+  - Your current ad strategy and budget range (optional)
+you_get:
+  - A landscape table with ad count, formats, main theme and tone for each competitor
+  - A heat map of thirteen themes across your competitors and your brand
+  - The crowded, contested, emerging and open lanes
+  - Five to seven ad briefs with an exact hook line and a priority for each
+  - A one-line positioning statement and your top three insights
+how_to_use:
+  - Open the skill in your AI. Claude, ChatGPT and Gemini all work. Add it to your AI, or copy it and paste it into a new chat.
+  - Go to facebook.com/ads/library. Search each competitor, filter to your country and Active ads.
+  - For each ad, take a screenshot or paste its text. Note the start date, format, headline, offer and landing page.
+  - Paste your brand name, what you sell, and the ads. Say what you do well.
+  - Check the theme tags against the ads. Fix any wrong tag and ask it to redo the heat map.
+  - Pick the top brief. Turn it into a full creative brief or a script.
+how_it_works:
+  - title: Counts each competitor's ads
+    text: Ad count and format mix per competitor, read as how much they test, not how much they spend.
+  - title: Tags each ad with one theme
+    text: One of thirteen themes, chosen by the dominant signal, such as the emotion, the proof or who is on camera.
+  - title: Reads the message
+    text: Main promise, tone, hooks, calls to action and price position, with one strength and one weakness each.
+  - title: Builds the heat map
+    text: Themes across competitors and your brand, marked crowded, contested, emerging or open. Formats and hooks get the same treatment.
+  - title: Checks timing as a hint
+    text: Ads running three months or more may be working. Very new ads may be tests. Neither is proof.
+  - title: Writes the briefs
+    text: Five to seven briefs for the open lanes that fit you, each with an exact hook, a format and a priority.
+output_shape: |
+  LANDSCAPE
+  competitor | ads seen | formats | main theme | tone | spend (only if the library shows it)
+
+  THEME HEAT MAP
+  theme | <competitor 1> | <competitor 2> | <brand> | status (Saturated | Contested | Emerging | Open)
+
+  TOP 3 INSIGHTS
+  1. <insight>
+
+  BRIEFS (5 to 7)
+  OPPORTUNITY <n>: <name>
+  Why: <gap>  Concept: <theme>  Format: <video | static | carousel>
+  Hook: "<exact line>"  Body: <2 to 3 sentences>  CTA: <action>  Priority: <HIGH | MEDIUM | LOW>
+
+  POSITIONING STATEMENT
+  <one sentence>
+
+  SOURCES / MISSING
+output_sample:
+  input:
+    - "Your brand name, what you sell and what you do well"
+    - "Two to five competitor names"
+    - "Their ads from the Meta Ad Library, with start dates and formats"
+    - "Your current ad strategy (optional)"
+  prerequisites:
+    - "Access to facebook.com/ads/library to collect the ads by hand"
+  output:
+    - {name: "Landscape", contains: "Each competitor's ad count, format mix, main theme and tone. Spend only when the library shows it."}
+    - {name: "Theme heat map", contains: "Thirteen themes across all competitors and your brand, each marked crowded, contested, emerging or open."}
+    - {name: "Top 3 insights", contains: "The three things the pattern says about your category."}
+    - {name: "Ad briefs", contains: "Five to seven briefs for open lanes, each with concept, format, exact hook, body, call to action and priority."}
+    - {name: "Positioning statement", contains: "One sentence on where your brand can stand apart."}
+    - {name: "Sources and missing", contains: "The ads and dates it used, and what would sharpen the result."}
+tweaks:
+  - what: Number of competitors
+    how: Two to five works best. More than five makes the heat map hard to read, so run it twice.
+  - what: Country
+    how: Name the country. The Ad Library filters by country, and rivals run different ads in each.
+  - what: Brief count
+    how: Ask for the top three briefs only if you are short on time.
+works_best_with:
+  tools:
+    - {name: "Meta Ad Library", why: "The free public source for competitor ads. You collect the ads by hand."}
+    - {name: "Any good chat AI", why: "Reads screenshots and pasted ad text. No code or paid tool needed."}
+  inputs:
+    - "Screenshots of each ad, with the start date visible"
+    - "Your best-selling product and what customers say about it"
+terms:
+  - term: Meta Ad Library
+    meaning: A free public site where Meta lists the ads that are running now.
+  - term: Heat map
+    meaning: A grid that shows which competitor uses which theme, so crowded and empty spots stand out.
+  - term: Hook
+    meaning: The first line or first seconds of an ad, written to stop the scroll.
+  - term: Scraper starter file
+    meaning: An optional code file in the pack that collects ads automatically. It needs a developer, and you must check Meta's terms and get permission first. This skill works without it.

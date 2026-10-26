@@ -1,6 +1,6 @@
 new_slug: brand-sales-budget-split
 name: "Split your marketing budget between brand and sales"
-summary: "Paste your spend and the numbers you track. Get a balanced scorecard and a brand versus sales budget split."
+summary: "Split your marketing budget between brand and sales. Paste your spend and results to get a scorecard, your current split and the smallest shift to test."
 job: plan-strategy
 thinking: high
 thinking_why: "It has to read your numbers and judge long-term effects from short-term data. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You spend on marketing every month and can't say how much of it builds the brand and how much drives sales.
   - Sales are steady but you are pushing more discounts to hold them, and you suspect the brand is slipping.
   - You are planning next year's marketing budget and want to defend the split to your boss or partners.
+not_for:
+  - You plan one launch campaign. Use a simple channel-by-channel results review, since this needs a year or more of spend history.
+  - You have no results data yet. Start by tracking spend and sales by month, then come back.
+  - You want to know why sales dropped after your ads changed. Use the Ad sales drop analyst.
 
 you_give:
   - Your marketing spend by channel and the results you track
@@ -34,6 +38,28 @@ how_to_use:
   - Paste your spend by channel and the numbers you track. Add your brand file and competitors if you have them.
   - It works step by step and saves each result. Read the scorecard before you read the split.
   - Put the shift it suggests into one channel first, and don't judge it on a short window.
+output_sample:
+  input:
+    - Your marketing spend by channel, by month
+    - The results you track, such as sales, leads or sign-ups
+    - Your brand file with voice and positioning (optional)
+    - Your main competitors and roughly what they spend (optional)
+  prerequisites:
+    - An AI chat that can read pasted text or files, such as Claude
+    - A year or more of spend and results, so long-term effects can show
+  output:
+    - name: "Step 1: Balanced scorecard"
+      contains: Your numbers sorted into short-term and long-term, with what each tells you, how long it takes, and how often to review.
+    - name: Misleading alone
+      contains: The numbers that give a false picture if you read them on their own, with the reason why.
+    - name: "Step 2: Brand versus sales split"
+      contains: Each channel marked as brand building or sales, and your current split against a starting point of about 60 to 40.
+    - name: Share of voice check
+      contains: How your share of ad spend compares with your share of the market, and whether to grow, hold or shrink.
+    - name: Smallest shift to test
+      contains: The one small move to try first, and what the right split depends on for your business.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 
 how_it_works:
   - title: Build the scorecard

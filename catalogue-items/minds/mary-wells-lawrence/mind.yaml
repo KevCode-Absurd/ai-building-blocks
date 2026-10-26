@@ -16,6 +16,31 @@ use_cases:
   - "Give a tired brand a new look and a new story without losing what people liked"
   - "Brief a designer, a writer and a musician so they pull in the same direction"
   - "Pitch a bold idea to a cautious boss or client, and get them to try it"
+not_for:
+  - "You need to test ads on results and clicks: use the Claude Hopkins mind, who checks what sells with small tests."
+  - "You want research-led ads built on product facts and a steady brand image: use the David Ogilvy mind."
+  - "You need a clear category and a sharper place in buyers' minds: use the Al Ries mind."
+output_sample:
+  input:
+    - Your product or shop, and who buys it
+    - What your brand looks like today
+    - Your budget and how much risk your boss or client will accept
+    - Any rivals that look the same as you (optional)
+  output:
+    - name: What people will see
+      contains: A picture of the visible change that would make your brand stand out before any copy is written.
+    - name: The one feeling
+      contains: A single feeling you want people to leave with, to guide the whole idea.
+    - name: Visible changes
+      contains: The look, uniform, signage or packaging changes that would read as news together.
+    - name: The joke or news angle
+      contains: The awkward truth about your product turned into a joke, and why a reporter might care.
+    - name: Who to bring in
+      contains: The kind of designer, writer or musician to cast for the look.
+    - name: A small first try
+      contains: A low-risk test, such as one ad or one place, to ease a cautious client.
+    - name: Pushback
+      contains: A plain note when a showy move is too big for your budget, with a quieter option.
 seats:
   - {seat: "Brand campaigns", asks: "What could we change that people would see, talk about and remember, before we write a word of copy?"}
   - {seat: "Making it news", asks: "Would a reporter want to write about this, or would only our customers notice?"}

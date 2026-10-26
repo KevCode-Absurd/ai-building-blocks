@@ -13,9 +13,9 @@ outputs:
   - {type: copy_draft}
 uses: [what-if-situation-finder, daily-word-quota-planner, scene-detail-picker, unplotted-first-draft-writer]
 steps:
-  - {uses: what-if-situation-finder, note: "One what-if situation, with the people stuck in it and no plot."}
-  - {uses: daily-word-quota-planner, note: "A word count, a finish date and a closed-door routine you can keep."}
-  - {uses: scene-detail-picker, note: "A short detail sheet for each place, so the draft stays in the story."}
+  - {uses: what-if-situation-finder, note: "One what-if situation, with the people stuck in it and no plot. Steps 2, 3 and 4 all read this situation."}
+  - {uses: daily-word-quota-planner, note: "A word count, a finish date and a closed-door routine you can keep. Step 4 reads this plan; step 3 does not."}
+  - {uses: scene-detail-picker, note: "A short detail sheet for each place, built from step 1's situation (not step 2's plan), so the draft stays in the story."}
   - {uses: unplotted-first-draft-writer, note: "Today's pages in order, plus the facts sheet to carry into tomorrow."}
 origin: rebuilt
 version: 1.0.0

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs many kinds of problems and ranks them with evidence.
 new_slug: website-fix-backlog-builder
 name: Website fix backlog builder
-summary: Give it your live site. Get a ranked list of fixes for conversion,
-  usability, message and speed, each with evidence.
+summary: Find the fixes your website needs most. Give it your live site and goal, and get a ranked list of conversion, usability, message and speed fixes.
 job: audit-landing-page
 headline: Website fix backlog builder
-subhead: A ranked list of fixes for a live site that underperforms, each one
-  tied to evidence and a reason. It covers conversion, ease of use, message and
-  speed, so you work on what matters first.
+subhead: A ranked list of fixes for a live site that underperforms, each one tied to evidence and a reason. It covers conversion, ease of use, message and speed, so you work on what matters first.
 explain: |
   A ranked list of fixes for a live site that underperforms, each one tied to evidence and a reason. It covers conversion, ease of use, message and speed, so you work on what matters first.
 
@@ -18,6 +15,10 @@ when:
   - You are not sure which fix to start with.
   - You want fixes backed by evidence, not opinion.
   - You need a plan to hand to a developer or designer.
+not_for:
+  - "You have no site yet: build the first version with your AI and a plain brief, then come back to fix it."
+  - "Your site converts but needs more visitors: use a traffic plan, not a fix list."
+  - "The friction is inside a product app, not your marketing site: use a product usability review with a designer."
 you_give:
   - Your live site address
   - Your goal and main conversion
@@ -29,7 +30,29 @@ you_get:
   - Notes saved in a docs folder
   - A phase-by-phase action plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Check you have the eight companion skills from wondelai/skills. If not, install them first or paste their steps into the chat.
+  - Open your AI in a tool that can save files, such as Claude with file access. Add this skill.
+  - Tell your AI your live site address and the one action you want visitors to take.
+  - Answer the questions at each phase. Phase 1 is a gate, so check the diagnosis before you go on.
+  - Read the ranked list in IMPROVE-WEBSITE-PLAN.md. Hand the top fixes to your developer or designer.
+  - To stop and return later, ask your AI to read the docs folder and resume.
+output_sample:
+  input:
+    - Your live site address
+    - Your goal and the one action you want visitors to take
+    - Your analytics or user research (optional)
+    - Your limits on time or budget (optional)
+  prerequisites:
+    - An AI that can save and read files in a docs folder, so progress carries over between sessions
+    - The eight companion skills from wondelai/skills installed, or their steps pasted into the chat
+  output:
+    - name: docs/METRICS.md
+      contains: Your goal, your main conversion action and the numbers that show whether visitors take it.
+    - name: docs/WEBSITE.md
+      contains: What the site says and does today, and why visitors are not converting.
+    - name: docs/DESIGN.md
+      contains: Usability problems, visual hierarchy fixes and text readability notes from phases two to four.
+    - name: docs/EXPERIMENTS.md
+      contains: Each big fix written as a test you can run, with the reason behind it.
+    - name: IMPROVE-WEBSITE-PLAN.md
+      contains: The ranked fix backlog, with evidence for each fix and your decisions at each phase.

@@ -38,10 +38,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Start the project.** Use the skill `spec-to-starter-repo-builder`. Turns the spec into a project folder with structure and setup.
-2. **Build the service.** Use the skill `backend-builder`. Give it the codebase from the steps before. Fills in the service on the project from the step before.
-3. **Test every route.** Use the skill `api-test-suite-builder`. Give it the codebase from the steps before. Finds the routes the build added and tests each one.
-4. **Write the API spec.** Use the skill `api-spec-writer`. Give it the codebase from the steps before. Documents the routes the build made and the tests now cover.
+1. **Start the project.** Use the skill `spec-to-starter-repo-builder`. Turns the spec into a project folder with structure and setup, and hands that folder to step 2.
+2. **Build the service.** Use the skill `backend-builder`. Give it the codebase from the steps before. Fills in the service on the project from step 1, and hands the project with its new routes to step 3.
+3. **Test every route.** Use the skill `api-test-suite-builder`. Give it the codebase from the steps before. Finds the routes step 2 added and tests each one, and hands the test results to step 4.
+4. **Write the API spec.** Use the skill `api-spec-writer`. Give it the codebase from the steps before. Documents the routes step 2 made and the tests in step 3 now cover.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

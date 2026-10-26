@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Finding the exact split point means reading two calculations closely.
 new_slug: metric-mismatch-tracer
 name: Metric mismatch tracer
-summary: Tell it which number differs between two reports. Get the gap, the step
-  where they split and a fix.
+summary: Find why two reports show different numbers for the same metric. Get the gap, the step where they split, the cause and a fix.
 job: track-numbers
 headline: Metric mismatch tracer
-subhead: The reason two reports show different numbers for the same metric, and
-  the exact step where they split. Name the metric and the two sources, and it
-  finds the gap, the cause and a fix.
+subhead: The reason two reports show different numbers for the same metric, and the exact step where they split. Name the metric and the two sources, and it finds the gap, the cause and a fix.
 explain: |
   The reason two reports show different numbers for the same metric, and the exact step where they split. Name the metric and the two sources, and it finds the gap, the cause and a fix.
 
@@ -18,6 +15,10 @@ when:
   - A number changed after a pipeline update.
   - A leader doubts a figure and you need a firm explanation.
   - You are retiring an old report and must check the new one matches.
+not_for:
+  - "You have one source and nothing to compare: run a data-quality check on that source, or ask the person who owns the report."
+  - "The two numbers are meant to differ, such as gross and net revenue: agree on one definition with your team first."
+  - "You need a new report built from scratch: ask a data analyst or write the query yourself."
 you_give:
   - The metric and its business definition
   - "Both sources: queries, dashboard SQL or raw data"
@@ -30,7 +31,29 @@ you_get:
   - A corrected query or tolerance note
   - A completed reconciliation report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code running is needed.
+  - Paste the metric name, what it means, and the period with the gap.
+  - Paste the query or data from both sources. Add row counts and recent changes if you have them.
+  - "Say: Follow this skill and trace the mismatch."
+  - Check the divergence point against your own query. Then use the fixed query or share the report.
+output_sample:
+  input:
+    - The metric name and what it means in your business
+    - "Both sources: queries, dashboard SQL or raw data"
+    - The period where the numbers differ
+    - Row counts for each source (optional)
+    - Recent changes to pipelines or business rules (optional)
+  prerequisites:
+    - Access to both queries or both sets of data, pasted into the chat
+    - An AI that can read what you paste; it does not need to run code
+  output:
+    - name: Reconciliation report
+      contains: Source A against source B, the gap, the root cause and whether the issue is resolved.
+    - name: Gap
+      contains: The difference between the two values, in amount and in percent.
+    - name: Divergence point
+      contains: The step in one query or pipeline where the two results split, with a short excerpt.
+    - name: Root cause
+      contains: "The cause type: definition mismatch, data freshness, aggregation grain or calculation bug."
+    - name: Corrected query or tolerance note
+      contains: A fixed query if a bug was found, or a note that the gap is within the agreed limit.

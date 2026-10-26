@@ -16,8 +16,8 @@ outputs:
 uses: [case-first-story-builder, idea-buy-in-pitch-planner, talk-tension-planner]
 steps:
   - {uses: case-first-story-builder, note: "Finds the case and outline your talk rests on."}
-  - {uses: idea-buy-in-pitch-planner, note: "Builds the pitch story and vision on the case from the step before."}
-  - {uses: talk-tension-planner, note: "Reorders the outline so the room knows the stakes in the first minute. Reads the case brief from step one."}
+  - {uses: idea-buy-in-pitch-planner, note: "Builds the pitch story and vision on the case from step 1. Hands step 3 a plan with who is in the room and the ask, plus the story to place in the talk."}
+  - {uses: talk-tension-planner, note: "Uses the case outline from step 1, and the people and ask from step 2's plan. Hands you the reordered talk, with the stakes in the first minute."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/build-a-talk-around-one-real-case/skeleton.yaml

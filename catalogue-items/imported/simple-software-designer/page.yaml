@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Judging complexity takes careful reading of how code fits together.
 new_slug: simple-software-designer
 name: Simple software designer
-summary: Give it code or a design. Get complexity spotted and simpler, deeper
-  modules suggested. Uses A Philosophy of Software Design.
+summary: Find needless complexity in your code or design and get simpler module changes, scored out of 10 with a software design review.
 job: build-software
 headline: Simple software designer
-subhead: A review of your code or design that spots needless complexity and
-  suggests simpler, deeper modules. You get a score out of 10 and the exact
-  change each weak point needs.
+subhead: A review of your code or design that spots needless complexity and suggests simpler, deeper modules. You get a score out of 10 and the exact change each weak point needs.
 explain: |
   A review of your code or design that spots needless complexity and suggests simpler, deeper modules. You get a score out of 10 and the exact change each weak point needs.
 
@@ -18,6 +15,10 @@ when:
   - Changing one thing means editing ten files.
   - You are choosing how to split a new feature into modules.
   - You want a second look at a design before it spreads.
+not_for:
+  - "You need a quick one-off script or a throwaway prototype: skip the review and just write it, then come back if it stays."
+  - "You want to check naming, function size or style: ask a teammate for a code review or use a clean-code checklist."
+  - "You want to set boundaries between whole systems or layers: use a clean-architecture review instead."
 you_give:
   - Code or a design description
   - What the module is for
@@ -28,7 +29,23 @@ you_get:
   - Specific refactors for each
   - A simpler module outline
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code running or paid tool is needed.
+  - Paste your code or describe your design. Say what the module is for.
+  - Add any pain points you have noticed, such as editing many files for one change (optional).
+  - Read the score and the failed checks first. Check each reason against your own code.
+  - Apply the change for each failed check, starting with the one that hurts most.
+  - Run the review again on the new design. Then pair it with a clean-code or clean-architecture review.
+output_sample:
+  input:
+    - Your code or a written description of your design
+    - What the module is for
+    - Pain points you have noticed (optional)
+  output:
+    - name: Score
+      contains: A score out of 10, worked out from how many of the eight design checks your code passes.
+    - name: Failed checks
+      contains: Each check your design failed, with a short reason tied to your code.
+    - name: Change for each failed check
+      contains: The specific refactor that fixes each weak point.
+    - name: Simpler module outline
+      contains: A sketch of fewer, deeper modules with small interfaces and hidden internals.

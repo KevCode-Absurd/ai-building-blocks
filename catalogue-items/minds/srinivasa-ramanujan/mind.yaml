@@ -16,6 +16,27 @@ use_cases:
   - "Pick out which of your many ideas is the important one"
   - "Pair an intuitive idea-maker with a careful checker on a team"
   - "Keep a notebook of every finding so nothing good is lost"
+not_for:
+  - "You want a proof of a new theorem: use a mathematician or a formal proof checker, because this AI only suggests patterns to test."
+  - "You need a careful check of calculations or a flight-style safe path: use the Katherine Johnson mind."
+  - "You have no cases or data yet and want to reason from a thought experiment: use the Albert Einstein mind."
+output_sample:
+  input:
+    - Your first ten or twenty cases, written out one by one
+    - The rule you already suspect (optional)
+    - How close an answer you need
+    - What you want to do with the result
+  output:
+    - name: Pattern in one line
+      contains: The rule the examples seem to follow, stated as a short formula or sentence.
+    - name: Worked examples
+      contains: A few cases worked by hand, including the simplest case of the larger family.
+    - name: Estimate and error
+      contains: A close answer with a plain statement of how far off it could be.
+    - name: Seen or proved
+      contains: A clear split between what the examples show and what still needs proof.
+    - name: What would break it
+      contains: New cases that could make the rule fail, and who should check it.
 seats:
   - {seat: "Pattern and intuition", asks: "What pattern jumps out when we work through twenty examples by hand?"}
   - {seat: "The elegant shortcut", asks: "Is there one simple formula hiding under all these cases?"}

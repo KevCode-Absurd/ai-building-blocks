@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Retry rules need care to avoid doubled actions.
 new_slug: api-retry-handler
 name: API retry handler
-summary: Name the API. Get safe code for waiting, retrying and backing off when
-  it says slow down.
+summary: Get API retry code that waits, backs off and retries when an API says slow down, without sending the same action twice. Name your API and language.
 job: build-software
 headline: API retry handler
-subhead: Code that handles an API saying slow down, without crashing your app or
-  sending the same action twice. Name the API and you get a retry layer that is
-  safe, bounded and easy to read.
+subhead: Code that handles an API saying slow down, without crashing your app or sending the same action twice. Name the API and you get a retry layer that is safe, bounded and easy to read.
 explain: |
   Code that handles an API saying slow down, without crashing your app or sending the same action twice. Name the API and you get a retry layer that is safe, bounded and easy to read.
 
@@ -18,6 +15,10 @@ when:
   - Retries sometimes create duplicate orders or messages.
   - A failing service takes your whole app down with it.
   - You need to respect the wait times a service sends.
+not_for:
+  - "You need to send a payment or order that changes data and the API has no way to stop repeats: ask the API's support or check its docs first, or have a person check each retry."
+  - "You run many copies of your app and need one shared limit: use a shared limiter built on a store like Redis, not this single-process code."
+  - "Your call hangs and never answers: set a request timeout in your code. Retries only cover errors the API sends back."
 you_give:
   - The API you call
   - Your language
@@ -29,8 +30,30 @@ you_get:
   - Support for wait-time headers
   - Safe handling of repeated actions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Tell your AI which API you call and which language you use.
+  - Say how bad a repeated call would be, for example a second payment or a second email.
+  - Add the rate limits from the API docs if you have them (optional).
+  - Read the result. Check that actions which change data are not retried without a repeat-safe key.
+  - Run and test the code in your own project. Your AI can only run it if it has code tools.
+output_sample:
+  input:
+    - The API you call
+    - Your programming language
+    - How costly a repeated call would be
+    - Rate limits from the API docs (optional)
+  prerequisites:
+    - An AI that can run code and read your project files helps, but you can also paste the code into your project yourself
+  output:
+    - name: Response sorting
+      contains: A rule for which errors to stop on and which to retry, such as rate limits, timeouts and server faults.
+    - name: Wait time reader
+      contains: Code that reads the Retry-After header first, then falls back to growing waits with random jitter.
+    - name: Retry loop
+      contains: Code that retries up to a set number of times and stops when the total time budget runs out.
+    - name: Safe repeat check
+      contains: A guard that only retries actions that are safe to repeat, unless the API gives a stable repeat-safe key.
+    - name: Request limiter
+      contains: A token bucket that holds back your own requests before the API has to say slow down.
+    - name: Notes and limits
+      contains: Plain notes on what the code does not cover, such as many app copies and hung calls.

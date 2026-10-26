@@ -2,15 +2,10 @@ thinking: low
 thinking_why: It swaps numbers by rule and lists changes.
 new_slug: deck-number-refresher
 name: Deck number refresher
-summary: Give it a deck and new figures. Get every number updated across the
-  slides, with a change log.
+summary: Update every number in your deck with new figures. Find each old value, approve the plan, and get the refreshed deck plus a change log.
 job: work-with-files
 headline: Deck number refresher
-subhead: Give it the deck file and the new figures or a source spreadsheet. It
-  finds every place each number appears, in text, tables, charts and footnotes,
-  and shows you a plan before changing anything. You get the updated deck with
-  formatting untouched, a change log by slide and flags for numbers that do not
-  tie.
+subhead: Give it the deck file and the new figures or a source spreadsheet. It finds every place each number appears, in text, tables, charts and footnotes, and shows you a plan before changing anything. You get the updated deck with formatting untouched, a change log by slide and flags for numbers that do not tie.
 explain: |
   Every figure in your deck updated, with the formatting untouched. Give it the deck and the new numbers and it changes values on slides, tables and charts, then lists exactly what it changed.
 
@@ -20,6 +15,10 @@ when:
   - A client changed one assumption and ten slides depend on it.
   - You need a clean list of changes to send to a reviewer.
   - You worry about missing a number buried in a footnote.
+not_for:
+  - "Your slides need a new story or layout: rebuild those slides by hand or ask your AI to redraft them."
+  - "You have no list of old and new values: write the mapping first, or ask a teammate for the source sheet."
+  - "You need new charts or new slides from scratch: build the deck again in PowerPoint or Google Slides."
 you_give:
   - The deck file
   - New figures or a source spreadsheet
@@ -31,7 +30,27 @@ you_get:
   - Change log by slide
   - Flags for numbers that do not tie
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI in a tool that can edit files, such as the PowerPoint add-in or a chat that accepts uploads.
+  - Paste the skill, then upload your deck.
+  - Paste your old-to-new numbers, or upload the spreadsheet. Say if growth rates and shares should be recalculated.
+  - Read the update plan and the flagged list. Approve it, skip the flagged items, or fix the mapping first.
+  - Open the updated deck and the change report. Check each flagged number and any slide where the story no longer fits.
+output_sample:
+  input:
+    - Your deck file
+    - The new figures, as a pasted old-to-new list or a spreadsheet
+    - Whether to recalculate growth rates and shares (optional)
+  prerequisites:
+    - An AI that can open and edit a PowerPoint file, or the PowerPoint add-in
+    - The india-market-conventions and india-market-data files, only if you want the Indian rules applied
+  output:
+    - name: Update plan
+      contains: Every old value, each place it appears, the exact text, and what it will become, for you to approve.
+    - name: Flagged items
+      contains: Numbers that may be derived, like growth rates or shares, which the AI lists but does not change.
+    - name: Updated deck
+      contains: Your deck with new values in text, tables and chart data, and the original formatting kept.
+    - name: Change report
+      contains: A past-tense list of what changed by slide, plus the items still flagged.
+    - name: Visual check
+      contains: A check of edited slides for text that now overflows or pushes a table wider.

@@ -1,6 +1,6 @@
 slug: making-your-agent-talk-back-implementation-planner
 name: Agent response and Slack format builder
-summary: Build a checked response with message blocks and failure handling.
+summary: "Turn your AI agent's output into a safe Slack message with leak checks, size limits and a plan for each failure, before it posts to a client channel."
 category: general
 type: skill
 role: make

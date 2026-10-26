@@ -1,6 +1,6 @@
 new_slug: sunset-flow-and-list-cleaner
 name: "Sunset flow and list cleaner"
-summary: "Give it your engagement rule and email volume. Get a three-email sunset flow and a monthly routine that suppresses non-openers."
+summary: "Build a sunset flow to clean your email list. Give it your engagement rule and send volume. You get a three-email flow and a monthly suppression routine."
 job: write-emails
 thinking: medium
 thinking_why: "It sets exact conditions and a short flow. A mid-size model is enough, but it should show every condition."
@@ -17,6 +17,10 @@ when:
   - Your open rate is falling and your list keeps growing.
   - Your email bill rises with the number of profiles.
   - You are about to send a big sale and want a clean list first.
+not_for:
+  - "Your list is small or mostly engaged: skip the clean-up and send a simple win-back email to your quiet subscribers yourself."
+  - "You want to fix spam placement or sender setup: use an email setup check from your email tool or a deliverability specialist first."
+  - "You want to split your list by interest or buying stage: build those groups by hand in your email tool, as this skill only finds quiet subscribers."
 
 you_give:
   - Your engagement window (180 days by default) and how often you send
@@ -36,6 +40,28 @@ how_to_use:
   - Build the segment first and check the size before you start the flow.
   - Turn on the flow, then do the suppression step once a month.
   - After the first clean, compare open rate, spam complaints and your monthly bill.
+output_sample:
+  input:
+    - How you define a quiet subscriber, such as no opens or clicks in 180 days
+    - How many emails you send each week
+    - Your email tool, and whether it counts Apple privacy opens
+    - A last-chance offer and your margin (optional)
+    - Your region, so removal and consent rules can be flagged (optional)
+  output:
+    - name: Unengaged segment
+      contains: The exact conditions for quiet profiles, the window, the minimum emails received, and clone versions for other windows.
+    - name: Sunset flow
+      contains: The trigger, the exit rule, and three emails with timing, ending with an unengaged property set on the profile.
+    - name: Second segment and monthly suppression
+      contains: A segment of marked profiles who can still get marketing, and the steps to export and suppress it each month.
+    - name: Send rules
+      contains: Who gets campaigns, and which groups are always left out.
+    - name: Region check
+      contains: A note on removal and consent rules to confirm with a qualified person before you suppress anyone.
+    - name: Checks missed
+      contains: The checks that failed, or none.
+    - name: Missing
+      contains: Anything you did not give, marked so nothing is invented.
 
 how_it_works:
   - title: Defines unengaged

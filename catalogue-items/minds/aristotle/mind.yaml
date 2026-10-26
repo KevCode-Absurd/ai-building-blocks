@@ -17,6 +17,27 @@ use_cases:
   - "Collect what people already believe about a question before you form your own view"
   - "Judge a friendship or partnership by whether it rests on use, pleasure or shared good"
   - "Explain why something happens by asking what it's made of, its form, its maker and its purpose"
+not_for:
+  - "You need legal, medical or personal money advice: talk to a qualified professional, since this is an AI reading of public work and not expert advice."
+  - "You want a plan for building long-term savings and investing: use the Burton Malkiel mind, who writes on diversification and costs."
+  - "You want to learn faster or study better: use the Barbara Oakley mind, whose work turns learning research into practical steps."
+output_sample:
+  input:
+    - A decision, speech, habit or plan you want to work through
+    - Who the audience or the other people involved are (optional)
+    - What you have tried so far (optional)
+    - What you think the goal is, if you know it (optional)
+  output:
+    - name: The goal
+      contains: What the plan, speech or habit is for, so each part can be judged by that aim.
+    - name: The views
+      contains: What most people say and what the wise say, with the puzzles they raise.
+    - name: The distinction
+      contains: One clear split that clears up a key word or a muddled idea.
+    - name: The two extremes and the middle
+      contains: Too much and too little for your case, and the right amount for your situation.
+    - name: A practical rule
+      contains: A rule you can act on, and a note on where it holds only for the most part.
 seats:
   - {seat: "Logic and rhetoric", asks: "What is the argument, who is the audience, and why should they trust the speaker?"}
   - {seat: "The middle path", asks: "What is too much here, what is too little, and what is right for this case?"}

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It runs a long chain of choices from message to page layout.
 new_slug: message-first-website-guide
 name: Message-first website guide
-summary: Describe your business. Get a website plan that starts with your
-  message, then design, then conversion, step by step.
+summary: "Get a message-first website plan: say who it is for and what to say, then design, then conversion, in ten steps saved in plan files."
 job: write-landing-page
 headline: Message-first website guide
-subhead: A step-by-step plan for building a website that gets visitors to act,
-  with the words settled before the looks. Describe your business and you are
-  walked through ten phases, saved in a plan file you can pick up again later.
+subhead: A step-by-step plan for building a website that gets visitors to act, with the words settled before the looks. Describe your business and you are walked through ten phases, saved in a plan file you can pick up again later.
 explain: |
   A step-by-step plan for building a website that gets visitors to act, with the words settled before the looks. Describe your business and you are walked through ten phases, saved in a plan file you can pick up again later.
 
@@ -18,6 +15,10 @@ when:
   - Your site looks fine but nobody signs up.
   - You have a product and no clear message yet.
   - You want the site to collect leads from people who are not ready to buy.
+not_for:
+  - "Your site is already live and you want fixes across it: use a site review or an improve-website skill, not this build plan."
+  - "You are building a software product, not a marketing site: use a create-app skill or talk to a developer."
+  - "You have no business idea or buyer yet: work that out first, or use the positioning phase here before anything else."
 you_give:
   - What you sell and who it is for
   - The main goal, such as trial, demo, purchase or quiz
@@ -28,7 +29,30 @@ you_get:
   - A design brief
   - A conversion and test plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Use an AI that can work with files, such as Claude with a project folder. The plan is saved as files so you can stop and resume.
+  - Install the ten companion skills this guide calls, or paste each one in when its phase starts.
+  - Tell your AI what you sell, who it is for and the main goal of the site. Add any customer notes you have.
+  - Answer the questions your AI asks at each phase. Approve each draft before you move on.
+  - Check that every claim, testimonial and guarantee in the copy is true before you publish.
+  - Come back later and ask your AI to pick up from the plan file.
+output_sample:
+  input:
+    - What you sell and who it is for
+    - The main goal of the site, such as trial, demo, purchase or quiz
+    - Any positioning or customer notes you already have (optional)
+  prerequisites:
+    - An AI that can read and write files in a project folder, so the plan can be saved and picked up later
+    - The ten companion skills this guide calls, from one-page-marketing to steve-jobs-design-review
+  output:
+    - name: docs/MARKETING.md
+      contains: Who the site is for, the one niche you picked and the single job the site must do.
+    - name: docs/POSITIONING.md
+      contains: Your message with the customer as the hero, built with the StoryBrand method.
+    - name: docs/WEBSITE.md
+      contains: The website copy, section by section, ready to place on the page.
+    - name: docs/CREATE-WEBSITE-PLAN.md
+      contains: A tracker of the ten phases, with decisions made and what is left to do.
+    - name: Design brief
+      contains: Look, type and layout choices that serve the message, from the design, type and ease-of-use phases.
+    - name: Conversion and test plan
+      contains: Fixes for why visitors do not act, plus ideas to test and a final review against a high bar.

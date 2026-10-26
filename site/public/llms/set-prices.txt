@@ -1,43 +1,41 @@
 # Set your prices: AI Blocks
 
-> 39 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 37 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Bulk price changer](https://useaiblocks.com/skills/bulk-price-changer): Pick products and a percent or amount. Get every price changed at once, within limits. Changes live prices, so preview first.
-- [Clearance discount planner](https://useaiblocks.com/skills/clearance-discount-planner): Give it your slow stock and past sales. Get when and how much to cut prices to sell out.
-- [Digital product pricer](https://useaiblocks.com/skills/digital-product-pricer): Tell it what you sell, such as a course or ebook. Get the price digits, labels and launch discount to use.
-- [Discount and price change checker](https://useaiblocks.com/agents/discount-and-price-change-checker): Give it a planned sale or price change. Get the deepest discount your margin allows and the wording to use.
-- [Discount sanity checker](https://useaiblocks.com/prompts/discount-sanity-checker): Paste every discount you show. Get a consistency score out of 100, each clash, and one true offer line.
-- [Discount wording planner](https://useaiblocks.com/skills/discount-wording-planner): Give it the discount you plan. Get the percent or amount form, sale price display and banner wording that look biggest.
-- [ETF price gap calculator](https://useaiblocks.com/skills/etf-price-gap-calculator): Give it an ETF ticker. Get how far its price sits above or below its holdings, and why. Collects data from websites.
-- [Event ticket pricer](https://useaiblocks.com/skills/event-ticket-pricer): Tell it about your class, workshop or event. Get ticket prices, early-bird terms and how to show seats and dates.
-- [Fake sale price cleaner](https://useaiblocks.com/skills/fake-sale-price-cleaner): Get strikethrough prices removed where there is no real discount. Changes live prices and the old values are not kept.
-- [Free-to-paid flow designer](https://useaiblocks.com/skills/free-to-paid-flow-designer): Describe your SaaS plans. Get upgrade moments, paywall design, win-back flows and churn prevention steps.
-- [Hotel room pricing planner](https://useaiblocks.com/skills/hotel-room-pricing-planner): Give it your bookings and rates. Get room prices, overbooking limits and a channel mix that fill rooms at the best rate.
-- [Membership plan pricer](https://useaiblocks.com/skills/membership-plan-pricer): Tell it your plans or membership. Get tier prices, flat or pay-per-use advice, and ways to win upgrades.
+- [Buyer pricing survey test planner](https://useaiblocks.com/workflows/set-your-price-from-what-buyers-say-then-test-it-safely): Share product facts and buyer context. Get survey questions, a price-and-tier model after real answers and a reversible price-test plan.
+- [Clearance discount planner](https://useaiblocks.com/skills/clearance-discount-planner): Share stock, past prices, sales, and deadlines for a discount plan with sales and revenue estimates.
+- [Client fee and work-hour reviewer](https://useaiblocks.com/agents/quarterly-client-rate-reviewer): Compare cash collected with all client work hours. Get fee gaps, late-payment issues and proposed terms to review.
+- [Digital product price format planner](https://useaiblocks.com/skills/digital-product-pricer): Share a one-time digital product and candidate price. Compare price endings, labels and launch-offer choices, with reasons and assumptions.
+- [Digital product pricing and email planner](https://useaiblocks.com/workflows/price-a-course-or-ebook-and-write-its-launch-emails): Share your course, ebook or template and buyer evidence. Get a proposed price, discount wording and launch email drafts.
+- [Discount consistency checker](https://useaiblocks.com/prompts/discount-sanity-checker): Paste every discount you show. Get a consistency score out of 100, each clash, and one true offer line.
+- [Discount wording and price display planner](https://useaiblocks.com/skills/discount-wording-planner): Turn a real price cut into sale badges, price displays and coupon wording. Get the sums, suggested wording and checks on the reference price.
+- [Fake sale price cleaner](https://useaiblocks.com/skills/fake-sale-price-cleaner): Share store and age limit. Get stale compare-at prices in dry-run; live updates clear those without a real discount.
+- [Free-to-paid flow designer](https://useaiblocks.com/skills/free-to-paid-flow-designer): Turn SaaS plans and free-tier limits into upgrade prompts, plan options, and win-back flow designs.
+- [Freelance website quote and proposal planner](https://useaiblocks.com/workflows/prepare-your-first-freelance-project-quote): Share website scope, effort, costs and payment terms. Get a bounded proposal draft, price assumptions and contract review questions.
+- [Hotel room pricing planner](https://useaiblocks.com/skills/hotel-room-pricing-planner): Share bookings, room rates, demand and channel costs. Get proposed prices, overbooking limits and channel options based on those inputs.
+- [Membership and subscription pricing planner](https://useaiblocks.com/skills/membership-plan-pricer): Share your tiers, billing cycle and usage. Get proposed prices, upgrade paths and membership rules, with assumptions stated.
 - [Minimum viable price calculator](https://useaiblocks.com/skills/waterfall-price-setter): Share costs, sales targets and acquisition spend. Calculate the lowest viable price or identify a product that cannot pay.
-- [Prepare your first freelance project quote](https://useaiblocks.com/workflows/prepare-your-first-freelance-project-quote): Share the source files. Get a scoped proposal draft, price assumptions and a contract review list.
-- [Price a course or ebook and write its launch emails](https://useaiblocks.com/workflows/price-a-course-or-ebook-and-write-its-launch-emails): Give it your course or ebook. Get a price, honest discount wording and the launch email sequence.
-- [Price a product so it pays after every cost](https://useaiblocks.com/workflows/price-a-product-so-it-pays-after-delivery-ads-and-discounts): Give it a price and every cost. Get your true margin, three test prices and how deep a discount can go.
-- [Price digits and placement planner](https://useaiblocks.com/skills/price-display-planner): Give it a price you are weighing. Get whether to round it, how to price add-ons, and where to place it.
-- [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker): Paste a price and what you sell. Get round, just-below or exact digits, with the reason.
-- [Price position planner](https://useaiblocks.com/skills/price-position-planner): Give it your costs and rival offers. Get a price for each product, response rules for rival discounts, and a rollout plan.
-- [Price presentation planner](https://useaiblocks.com/skills/price-presentation-planner): Give it your product and prices. Get a tier and anchor layout that makes value clear without tricks.
-- [Price rise letter writer](https://useaiblocks.com/prompts/price-rise-letter-writer): Paste the old price, the new price and why. Get a customer letter that keeps most of them.
-- [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker): Paste your offer, price and what buyers say. Get a readiness score out of 100 and what to add first.
-- [Price sensitivity analyst](https://useaiblocks.com/skills/price-sensitivity-analyst): Get which products sell more or less as price changes, plus price points worth testing.
-- [Price test planner](https://useaiblocks.com/skills/price-test-planner): Give it your costs and sales data. Get the best price to try, three outcome cases, and a test you can undo.
-- [Price your software in tiers people pick, then test it](https://useaiblocks.com/workflows/price-your-software-in-tiers-people-pick-then-test-it): Give it your product and customers. Get a revenue model, tiers, a price page and a safe test.
-- [Pricing experiment coordinator](https://useaiblocks.com/agents/price-test-keeper): Give it your costs, sales and rival prices. It plans one undoable price test, reads the result and sets the next.
-- [Pricing model designer](https://useaiblocks.com/skills/pricing-model-designer): Give it your product and price survey data. Get a pricing model, price points and good, better, best tiers.
-- [Pricing strategist](https://useaiblocks.com/skills/pricing-strategist): Describe your product and buyers. Get tiers, a value metric and a test plan for your prices.
-- [Quarterly client rate reviewer](https://useaiblocks.com/agents/quarterly-client-rate-reviewer): Give it your hours and invoices by client each quarter. Get each client's real rate, who to raise and what to propose.
+- [Online store pricing planner](https://useaiblocks.com/skills/price-position-planner): Use ecommerce costs and rival offers to draft product prices, price floors, and response rules.
+- [Price change sales checker](https://useaiblocks.com/skills/price-sensitivity-analyst): Get which products sell more or less as price changes, plus price points worth testing.
+- [Price display planner](https://useaiblocks.com/skills/price-display-planner): Share the product, buyer context and candidate price. Get suggestions for price endings, add-ons and page placement, with reasons to test.
+- [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker): Pick the right price ending for your product. Paste a price and what you sell. You get round, just-below or exact digits, with the reason.
+- [Price layout planner](https://useaiblocks.com/skills/price-presentation-planner): Give it your product and prices. Get a tier and anchor layout that makes value clear without tricks.
+- [Price rise letter writer](https://useaiblocks.com/prompts/price-rise-letter-writer): Share old and new prices, the start date and reason. Get a clear customer notice, choices and a short FAQ.
+- [Price rise readiness checker](https://useaiblocks.com/prompts/price-rise-readiness-checker): Share your offer, proposed price and buyer comments. Get a scored offer review, weak points and a small price-test plan.
+- [Price survey planner](https://useaiblocks.com/skills/willingness-to-pay-survey): Plan two price surveys and a test. See how answers become a profit estimate; no price call without enough replies.
+- [Price test planner](https://useaiblocks.com/skills/price-test-planner): Share costs, sales history and price options. Compare contribution, test demand cases and plan a reversible price test.
+- [Price test results reviewer](https://useaiblocks.com/agents/price-test-keeper): Set cost-based price floors and review tests by profit per visitor. Get a keep, rerun or hold recommendation.
+- [Pricing analyst](https://useaiblocks.com/agents/agency-specialized-pricing-analyst): Set or review a price using your costs, competitor prices and customer value. Get a recommended price, a margin table and a small test plan.
+- [Pricing model designer](https://useaiblocks.com/skills/pricing-model-designer): Share your product and price survey data. Get a pricing model, price points and good, better, best tiers.
+- [Product price and discount planner](https://useaiblocks.com/workflows/price-a-product-so-it-pays-after-delivery-ads-and-discounts): Share price and all relevant costs. Get a margin review, three price scenarios and discount checks against your profit floor.
 - [Repricing rules designer](https://useaiblocks.com/skills/repricing-rules-designer): Give it your margins and stock. Get safe automatic price rules, test cases, and a kill switch you can trust.
-- [Revenue model picker](https://useaiblocks.com/skills/revenue-model-picker): Describe your product and users. Get three to five ways to earn from it, with risks and tests.
-- [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer): Give it your product and customers. Get a value metric, tier layout and pricing tests to run.
-- [Sale price wording picker](https://useaiblocks.com/prompts/sale-price-wording-picker): Paste a full price and a sale price. Get the discount shown the clearest way, with warnings.
-- [Set your price from what buyers say, then test it](https://useaiblocks.com/workflows/set-your-price-from-what-buyers-say-then-test-it-safely): Give it your product. Get a pricing survey, a price model with tiers and an undoable price test.
-- [Three-tier price ladder drafter](https://useaiblocks.com/prompts/three-tier-price-ladder-drafter): Paste what you sell and your costs. Get three tiers with what each includes and why the middle one wins.
-- [Usage pricing designer](https://useaiblocks.com/skills/usage-pricing-designer): Describe your product. Get a pay-as-you-go pricing model users understand, accept and can predict, with no surprise bills.
-- [Wholesale margin checker](https://useaiblocks.com/skills/wholesale-margin-checker): Give it shelf price and costs. Get your margin per unit after retailer cut, promos and freight, scored.
-- [Willingness to pay pricing planner](https://useaiblocks.com/skills/willingness-to-pay-pricing): Describe your product. Get a pricing survey, plan tiers and a price built on what buyers will actually pay.
-- [Willingness-to-pay survey designer](https://useaiblocks.com/skills/willingness-to-pay-survey): Tell it what you sell. Get two survey questions to send customers and a way to turn answers into a best price.
+- [Resale store pricing and layout planner](https://useaiblocks.com/skills/resale-store-pricing-and-layout-planner): Plan resale store pricing and layout. Share your item grades and sales records. Get price bands, a markdown calendar and floor zones.
+- [Revenue model picker](https://useaiblocks.com/skills/revenue-model-picker): Find the best revenue model for your product. Give it your product and buyers. You get 3 to 5 ways to earn, with risks and a cheap test.
+- [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer): Set SaaS pricing with a clear value metric, a three-tier plan and pricing tests to run. Give it your product and buyers.
+- [SaaS pricing strategist](https://useaiblocks.com/skills/pricing-strategist): Use SaaS product details and buyer data to draft pricing tiers and a price test plan.
+- [Sale price wording picker](https://useaiblocks.com/prompts/sale-price-wording-picker): Share a real full price and sale price. Get checked discount sums, display wording, badge text and warnings about claims.
+- [Software pricing tier test planner](https://useaiblocks.com/workflows/price-your-software-in-tiers-people-pick-then-test-it): Share product facts, customers and signup results. Get a revenue model, pricing tiers, page layout and a bounded price-test plan.
+- [Three-package pricing planner](https://useaiblocks.com/prompts/three-tier-price-ladder-drafter): Share offer parts, delivery costs and buyer needs. Get three proposed packages, price assumptions, margin sums and a comparison test.
+- [Usage pricing designer](https://useaiblocks.com/skills/usage-pricing-designer): Describe your product, usage costs and customer workload. Get a pricing metric, tier model and bill examples to review.
+- [Wholesale margin checker](https://useaiblocks.com/skills/wholesale-margin-checker): Check your wholesale margin before you sell to stores. Give it shelf price and costs. You get margin per unit after retailer cut, promos and freight.
+- [Willingness-to-pay pricing planner](https://useaiblocks.com/skills/willingness-to-pay-pricing): Describe your product. Get a survey plan, price tiers and a price based on what buyers say they would pay.

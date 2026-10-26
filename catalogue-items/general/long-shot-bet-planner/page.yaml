@@ -1,55 +1,65 @@
 new_slug: long-shot-bet-planner
 name: "Long-shot bet planner"
-summary: "Describe an idea that might fail. Get a small test, a loss cap and a rule for dropping it."
+summary: "Test a risky idea without risking the business. Get the odds and payoff, a loss cap you can survive and a rule for dropping it."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sets limits and tests from fixed rules, but must judge odds and payoff honestly."
 
 headline: "Long-shot bet planner"
-subhead: Describe an idea with a large upside and a real chance of failing. It weighs the odds against the payoff, sets the most you can lose, and plans a run of cheap tests before any big commitment. You get a small test, a loss cap, a drop rule and a decision date.
+subhead: "Describe an idea with a large upside and a real chance of failing, and say what a big win would look like. It writes the odds and payoff, sets the most you can lose and plans cheap tests before any big spend. You get a loss cap, a decision date and a rule for dropping the bet."
 
 explain: |
-  Some of the best moves look like bad bets: most will fail, but one win pays for many misses. The risk is spending too much too soon, or keeping an idea alive because you have already put money into it. The way through is to set the loss you can carry before you start, and to test cheaply before you commit.
+  Some of the best moves look like bad bets: most fail, but one win pays for many misses. The risk is spending too much too soon, or keeping an idea alive because you have already put money in. The way through is to set the loss you can carry before you start, and to test cheaply before you commit.
 
-  This skill names the bet and what a big win would look like. It writes the odds and payoff honestly and checks the upside is not capped. It sets the most you can lose and still carry on, and gives the bet one owner and a small team on a short build. It says in advance what counts as learning if it fails. Then it lists cheap, low-risk tests, each of which shows how far off your aim is, and sets the measure and decision date.
+  This skill names the bet and what a big win would look like. It writes the odds and the payoff honestly and checks the upside is not capped. It sets the most you can lose and still carry on, and gives the bet one owner and a small team on a short build. It says in advance what counts as learning if the bet fails. Then it lists cheap, low-risk tests that each show how far off your aim is, and sets the measure and the decision date.
+
+  The method draws on Jeff Bezos's shareholder letters and Jim Collins's idea of firing bullets, then cannonballs. It never makes up odds or payoff figures. A hunch is labelled as a hunch.
 
 when:
   - You have an idea that is exciting but unproven, and you do not know how much to put in.
   - A team keeps funding a project because it has already spent so much.
-  - You want to try something bold without risking the business.
+  - You want to try something bold, such as a new product line or market, without risking the business.
+  - You plan a content series or side project and want a spending cap before you start.
+
+not_for:
+  - "You only want the cheapest test for an idea you have already ranked. Use the Smallest test picker."
+  - "One loss could sink the business or your home, so no cap is possible. Don't place the bet. Use the Failure-first plan check to see how it could fail."
+  - "The bet is already running and you have results. Use the Program keep-or-cut reviewer, or the Pivot or persevere decider if you are thinking of changing course."
 
 you_give:
-  - The idea, and what a big win would look like
-  - What you can afford to lose, in money, time or reputation
+  - The idea, and what a big win would look like in figures or a plain outcome
+  - The most you can afford to lose in money, time and reputation. If you leave it out, the skill asks once.
+  - Your honest odds, as a rough number and what it rests on (optional)
   - Any plan or results from an earlier step (optional)
+
 you_get:
-  - The odds and payoff written down, with a check on the upside
+  - The odds and payoff written down, with a check that the upside is not capped
   - A loss cap you can survive
-  - A list of cheap tests, each with what it would show
-  - A decision date, a measure and a rule for dropping the bet
+  - Cheap tests, cheapest first, each with its cost and what counts as a pass
+  - A decision date, a measure and rules for dropping the bet or going bigger
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the idea and say what winning looks like. Give your honest odds.
-  - Say the most you could lose and still carry on.
-  - Run the cheap tests in the order given and record the results.
-  - On the decision date, compare the results with the drop rule and decide.
+  - Open the skill in Claude, ChatGPT or Gemini. If you added it, call it by name. If not, copy it and paste it in.
+  - Describe the idea and what winning looks like. Give your honest odds if you have a number, and say what they rest on.
+  - Say the most you could lose and still carry on. It needs no files or web access.
+  - Run the cheap tests in the order given, cheapest first. Record what buyers did, not what they said.
+  - On the decision date, compare the results with the drop rule and decide. Money already spent is not a reason to go on.
 
 how_it_works:
   - title: Names the bet
     text: States the bet and what a big win would look like.
   - title: Weighs odds and payoff
-    text: Writes the odds and payoff honestly and checks that the upside is not capped.
+    text: Writes the odds and payoff honestly, with the basis for each, and checks that the upside is not capped.
   - title: Sets the loss cap
-    text: Fixes the most you can lose and still carry on.
+    text: Fixes the most you can lose and still carry on, using your own number.
   - title: Gives it a small owner
-    text: Assigns one owner, one small team and a short build time.
+    text: Assigns one owner, one small team and a short build time with a date.
   - title: Names the lesson
-    text: Says in advance what counts as learning if it fails.
+    text: Says in advance what counts as learning if the bet fails.
   - title: Lists the cheap tests
-    text: Lists low-risk tests that each show how far your aim is off.
+    text: Lists low-risk tests, cheapest first, that each show how far your aim is off.
   - title: Sets the decision
-    text: Sets the measure and date, and notes what customers and the market did.
+    text: Sets the measure and date before work starts, with a drop rule and a go-bigger rule.
 
 output_shape: |
   THE BET
@@ -68,7 +78,7 @@ output_shape: |
   <named lesson>
 
   CHEAP TESTS
-  <n>. <test> | Cost: <> | Shows: <how far your aim is off>
+  <n>. <test> | Cost: <> | Shows: <how far your aim is off> | Pass if: <result>
 
   DECISION
   Measure: <>  Date: <>  Drop if: <rule>  Go bigger if: <rule>
@@ -78,6 +88,30 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check missed, or none>
+
+output_sample:
+  input:
+    - The idea, and what a big win would look like
+    - The most you can afford to lose in money, time and reputation
+    - Your honest odds and what they rest on (optional)
+    - Any plan or results from an earlier step (optional)
+  output:
+    - name: The bet
+      contains: What you are trying, and what a big win looks like in figures or a plain outcome.
+    - name: Odds and payoff
+      contains: Your odds with their basis, the payoff, and a check that the upside is not capped.
+    - name: Loss cap
+      contains: The most you can lose and still carry on, and why you can survive it.
+    - name: Owner and team
+      contains: One owner, a small team and a short build time with a date.
+    - name: What you will have learned
+      contains: A named fact you will know even if the bet fails.
+    - name: Cheap tests
+      contains: Tests in order, each with its cost, time and what counts as a pass.
+    - name: Decision
+      contains: The measure, the date, the drop rule and the go-bigger rule.
+    - name: Missing and checks missed
+      contains: What is unknown, plus any check the skill could not pass.
 
 tweaks:
   - what: Your honest odds
@@ -121,3 +155,5 @@ terms:
     meaning: The most you can lose on a bet and still carry on.
   - term: Long-shot bet
     meaning: An idea with a low chance of working and a large reward if it does.
+  - term: Drop rule
+    meaning: A rule set before you start that says when to stop, so the day itself can't talk you out of it.

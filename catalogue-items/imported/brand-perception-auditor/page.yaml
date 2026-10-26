@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It reads many small signals and judges what they add up to.
 new_slug: brand-perception-auditor
 name: Brand perception auditor
-summary: Describe your brand and who it is for. Get a list of mixed signals and
-  changes to close the gap.
+summary: Find the mixed signals in your brand audit. Give it your brand, audience and copy samples. You get a ranked list of changes to close the perception gap.
 job: brand-file
 headline: Brand perception auditor
-subhead: A list of mixed signals your brand sends, and the changes that close
-  the gap between what you mean and what people feel. It looks at how your look,
-  words and behaviour land with your audience.
+subhead: A list of mixed signals your brand sends, and the changes that close the gap between what you mean and what people feel. It looks at how your look, words and behaviour land with your audience.
 explain: |
   A list of mixed signals your brand sends, and the changes that close the gap between what you mean and what people feel. It looks at how your look, words and behaviour land with your audience.
 
@@ -18,6 +15,10 @@ when:
   - Your price and your look don't match.
   - You plan to reposition and need to see the current gap.
   - You want to shift how much trust your messaging earns.
+not_for:
+  - "You have no audience research or product facts yet: run a few customer interviews first, then come back."
+  - "You only want a new logo or color palette: ask a designer, because this audit looks at look, words and behavior together."
+  - "You need proof that a message will raise sales: run a real test with your audience, since this gives ideas to check, not proof."
 you_give:
   - A description of your brand and its audience
   - Samples of copy, visuals and packaging
@@ -29,7 +30,28 @@ you_get:
   - Changes to close the gap
   - Priorities for what to fix first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your brand description, who it is for, and the perception you want.
+  - Add samples of your copy, visuals and packaging. Add customer quotes or research if you have them.
+  - Answer any question it asks about your intended position.
+  - Read the mismatches and check any claim from psychology before you use it in public.
+  - Fix the top change first, then check that it holds across every place customers see you.
+output_sample:
+  input:
+    - Your brand description and the audience you serve
+    - Samples of your copy, visuals and packaging
+    - The perception you want people to have
+    - Your own audience research or customer quotes (optional)
+  output:
+    - name: Current brand schema
+      contains: The impression your audience is likely forming from your look, words and behavior today.
+    - name: Intended position
+      contains: The perception you want, stated in the same terms so the two can be compared.
+    - name: Largest mismatch
+      contains: The strongest conflict between your visual, verbal and behavioral signals.
+    - name: Smallest useful correction
+      contains: The one change most likely to move perception, with a size of fix based on the gap.
+    - name: Cross-touchpoint check
+      contains: Whether the new position holds everywhere your audience meets your brand.
+    - name: Quality check
+      contains: A short check that the change feels more credible, not just prettier.

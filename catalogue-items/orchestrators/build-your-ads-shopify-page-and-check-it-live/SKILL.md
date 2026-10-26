@@ -52,12 +52,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Write the page from the ad.** Use the skill `ad-matched-landing-page-writer`. Starts from your ad, offer and brand facts. It writes the page so it picks up where the ad stops.
-2. **Turn the copy into Shopify files.** Use the skill `shopify-landing-page-builder`. Give it the landing page from the steps before. Loads the page copy from step 1 into a Shopify section you can upload, with install steps.
+1. **Write the page from the ad.** Use the skill `ad-matched-landing-page-writer`. Starts from your ad, offer and brand facts. It writes the page so it picks up where the ad stops. Hands step 2 the page copy.
+2. **Turn the copy into Shopify files.** Use the skill `shopify-landing-page-builder`. Give it the landing page from the steps before. Loads the page copy from step 1 into a Shopify section you can upload, with install steps. Hands you theme files; after you upload them, you save screenshots of the live page for step 3.
 
 Pause here: Upload the files to your theme, open the page on your phone and a computer, and save screenshots of each.
 
-3. **Check the live page.** Use the skill `product-page-screenshot-auditor`. Reads your screenshots of the built page and lists what still blocks a buyer.
+3. **Check the live page.** Use the skill `product-page-screenshot-auditor`. Uses your screenshots of the live page (your store capture), not step 2's files; step 2 builds the page you photograph. Hands you a list of what still blocks a buyer.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It tests a deal against your set criteria.
 new_slug: deal-screening-memo-writer
 name: Deal screening memo writer
-summary: Give it a teaser or CIM and your criteria. Get a one-page memo marking
-  each test pass or fail.
+summary: Screen a deal teaser or CIM against your criteria. Get a one-page deal screening memo with pass or fail marks, red flags and seller questions.
 job: money-and-investing
 headline: Deal screening memo writer
-subhead: "Drop in a teaser, CIM or deal description and your fund's criteria. It
-  pulls the facts: sector, revenue, EBITDA, margins, growth, deal type and
-  asking price. You get a one-page memo with each criterion marked pass or fail,
-  the red flags and the questions to ask the seller."
+subhead: "Drop in a teaser, CIM or deal description and your fund's criteria. It pulls the facts: sector, revenue, EBITDA, margins, growth, deal type and asking price. You get a one-page memo with each criterion marked pass or fail, the red flags and the questions to ask the seller."
 explain: |
   A one-page memo that tells you in minutes whether a deal is worth more time. Drop in a teaser or CIM and your fund's criteria, and you get each test marked pass or fail with the numbers beside it.
 
@@ -19,6 +15,10 @@ when:
   - You have ten CIMs to read this week and want them ranked.
   - You need to explain to your partners why you passed on a deal.
   - You want the same screening format for every deal across your team.
+not_for:
+  - "You are past the first look and need to test the numbers in depth: use a full diligence process with your advisers."
+  - "You want to screen a public company: use a stock research tool or your analyst's own model."
+  - "You have no criteria yet and want your AI to invent them: set your own targets first, or ask a partner."
 you_give:
   - Teaser, CIM or deal description
   - Your investment criteria
@@ -30,7 +30,28 @@ you_get:
   - Questions for the seller
   - One-page screening memo
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Paste your teaser or CIM text, or upload the file if your AI can read files.
+  - Paste your fund's criteria, such as revenue range, margin, growth, sector and geography. If you skip this, your AI will ask.
+  - Read the pass or fail table first. Check each figure against the document.
+  - Fix anything that looks wrong, then share the one-page memo with your partners.
+output_sample:
+  input:
+    - Your teaser, CIM or deal description
+    - Your fund's investment criteria
+    - Your target ranges for size and margin (optional)
+  prerequisites:
+    - An AI that can read pasted text or an uploaded document
+  output:
+    - name: Deal facts
+      contains: Company, sector, what it does, revenue, EBITDA, margins, growth, deal type, asking price, seller motivation, management plans and key customers.
+    - name: Screening table
+      contains: Each criterion with your target, the actual figure from the document, and a pass or fail mark.
+    - name: Verdict
+      contains: "One call: Pass, Further Diligence or Hard Pass."
+    - name: Bull case
+      contains: Two or three bullets on why this could be a good deal.
+    - name: Bear case
+      contains: Two or three bullets on the main risks and concerns.
+    - name: Key questions
+      contains: What you need answered on a first call with the seller.

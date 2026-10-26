@@ -44,8 +44,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Case-first story builder.** Use the skill `case-first-story-builder`. Finds the case and outline your talk rests on.
-2. **Idea buy-in pitch planner.** Use the skill `idea-buy-in-pitch-planner`. Give it the brief from the steps before. Builds the pitch story and vision on the case from the step before.
-3. **Talk tension planner.** Use the skill `talk-tension-planner`. Give it the brief from the steps before. Reorders the outline so the room knows the stakes in the first minute. Reads the case brief from step one.
+2. **Idea buy-in pitch planner.** Use the skill `idea-buy-in-pitch-planner`. Give it the brief from the steps before. Builds the pitch story and vision on the case from step 1. Hands step 3 a plan with who is in the room and the ask, plus the story to place in the talk.
+3. **Talk tension planner.** Use the skill `talk-tension-planner`. Give it the brief and the plan from the steps before. Uses the case outline from step 1, and the people and ask from step 2's plan. Hands you the reordered talk, with the stakes in the first minute.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

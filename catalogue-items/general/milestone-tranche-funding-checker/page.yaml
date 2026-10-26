@@ -1,46 +1,115 @@
 new_slug: milestone-tranche-funding-checker
 name: Milestone tranche funding checker
 headline: Milestone tranche funding checker
-summary: Check approved tranche cash and the commitment still awaiting funding.
+summary: Check how much of a staged funding request is approved, the cash you get after fees, the commitment still unfunded and any unsupported part.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Authorized draw, net cash, remaining commitment and unsupported request. Share signed commitment, actual funded amount, requested tranche, evidence-backed approved draw ceiling and this draw fees.
+subhead: Give it the signed commitment, the amount already funded, the tranche you are asking for, the approved draw ceiling and the fees. It limits the draw to what is approved and still undrawn. You get the draw, the cash after fees, the commitment left unfunded and any part of the request with no approval behind it.
 explain: |-
-  Authorized draw, net cash, remaining commitment and unsupported request.
+  In a staged financing, an investor or lender commits a total amount but pays it out in parts, called tranches. Each part is released when a milestone is met and approved. This tranche funding check answers a plain question. Of the amount you asked for, how much can you actually draw now, and how much cash arrives after fees?
 
-  Venture financing. Illustrative figures only. 100 less40 leaves60 undrawn. Approval25 limits request30, yielding23 after2 fees. Approval30 yields28 cash.
+  The draw is the smallest of three numbers: what you requested, the approved ceiling and what is left of the commitment. The skill then takes off the fees once. It also shows how much of the commitment is still unfunded and how much of your request has no approval behind it. The approval must be real and dated. A milestone that is only expected to be met is not approved.
+
+  It checks one tranche at a time. It does not judge whether the milestone was truly met, and an approved ceiling is not proof that cash has been sent.
 when:
-  - You need authorized draw, net cash, remaining commitment and unsupported request.
-  - You work on venture financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - An investor committed money in stages and the company is asking for the next tranche.
+  - You want to know how much cash will land after fees for the next milestone.
+  - You need to show which part of a request is not backed by an approval yet.
+  - You are checking a closing statement or draw notice for a staged financing.
+not_for:
+  - You want to judge whether the milestone was really met, in technical or sales terms. This uses dated approval evidence only. Projected completion does not count.
+  - You want the financing contract read for risks and questions for a lawyer. Use the Contract and term sheet reviewer.
+  - Investors in a fund are being called for money. Use the Fund capital call checker.
+  - You want to know how much a fund can still call. Use the Remaining fund commitment checker.
+  - You have several tranches to line up over time. This checks one tranche per run.
 you_give:
-  - Signed commitment, actual funded amount, requested tranche, evidence-backed approved draw ceiling and this draw fees.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed commitment, the total amount agreed in the financing documents
+  - The amount already funded, from your bank records or the funding notices
+  - The tranche you are asking for now
+  - The approved draw ceiling, backed by the dated approval for the milestone
+  - The fees taken from this draw
+  - The date, the currency and whether figures are in units, thousands or millions
 you_get:
-  - Authorized draw, net cash, remaining commitment and unsupported request.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The authorized draw, which is the smallest of your request, the approved ceiling and the amount still undrawn
+  - The net cash you receive after fees
+  - The commitment still unfunded after this draw
+  - The unsupported part of your request
+  - The milestone conditions, each matched to dated approval evidence or marked MISSING
+  - A list of every input marked MISSING and every check that could not run
+  - A workbook version of the same lines, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste the text of SKILL.md into a new chat.
+  - Paste the commitment, the amount funded, the tranche request, the approved ceiling and the fees. Add the date, currency and units.
+  - Paste the milestone conditions and the approval letter or notice, with its date. Without a dated approval the skill will not count the ceiling as supported.
+  - Check that the amount already funded is not above the commitment, and that fees are not above the draw.
+  - Read the unsupported part of the request, then MISSING and CHECKS MISSED, before you plan around the cash.
+  - Confirm the figures with the other party to the deal, and a lawyer if the terms are unclear.
 how_it_works:
-  - title: 1. Match each milestone condition to actual dated approval; projected completion is not approval
-    text: Match each milestone condition to actual dated approval; projected completion is not approval.
-  - title: 2. Bound requested draw by undrawn commitment and the independently confirmed approved ceiling
-    text: Bound requested draw by undrawn commitment and the independently confirmed approved ceiling.
-  - title: 3. Deduct fees once and reconcile commitment, funded amount, new draw and remaining unsupported request
-    text: Deduct fees once and reconcile commitment, funded amount, new draw and remaining unsupported request.
+  - title: 1. Match milestones to approvals
+    text: Pairs each milestone condition with an actual dated approval. A projected completion is not approval.
+  - title: 2. Work out what is left
+    text: Takes the funded amount off the signed commitment to find the undrawn amount.
+  - title: 3. Limit the draw
+    text: Takes the smallest of the request, the approved ceiling and the undrawn amount.
+  - title: 4. Take off fees once
+    text: Deducts fees from the draw to give net cash. It stops if fees are larger than the draw.
+  - title: 5. Show what is unfunded and unsupported
+    text: Shows the commitment left after the draw and the part of the request nothing supports.
+  - title: 6. Report gaps
+    text: Lists missing inputs and checks that could not run.
 output_shape: |-
-  Authorized draw, net cash, remaining commitment and unsupported request.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Authorized draw: <amount> | Net cash after fees: <amount> | Commitment still unfunded: <amount> | Unsupported request: <amount>
+
+  SCOPE AND DATED SOURCES
+  <date, currency, units; each figure with its source and date>
+
+  INPUTS AND ASSUMPTIONS
+  <figures given, each assumption, and the financing clauses used>
+
+  MILESTONE EVIDENCE
+  <condition> | Evidence: <document and date, or MISSING> | Approved: <yes / no / unknown>
+
+  DRAW CALCULATION
+  Commitment: <amount> | Less already funded: <amount> | Undrawn: <amount>
+  Requested: <amount> | Approved ceiling: <amount> | Authorized draw (smallest of the three): <amount>
+  Less fees: <amount> | Net cash: <amount>
+  Commitment still unfunded: <undrawn less draw> | Unsupported request: <request less draw>
+
+  RECONCILIATIONS
+  <each figure tied to a record, with differences explained>
+
+  FILE CHECK
+  <what was checked in the workbook or calculator, or that none was made>
+
+  MISSING
+  <inputs not given>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+output_sample:
+  input:
+    - The signed commitment and the amount already funded
+    - The tranche you are asking for and the approved draw ceiling
+    - The fees taken from this draw
+    - The milestone conditions and the dated approval notice (optional but needed to count the ceiling as supported)
+  prerequisites:
+    - The signed financing documents, so the commitment and milestone conditions are the real ones
+    - An AI that can make files, if you want the workbook (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The date, currency and units, and the source and date of each figure.
+    - name: Milestone evidence
+      contains: Each milestone condition matched to a dated approval, or marked missing.
+    - name: Draw calculation
+      contains: The undrawn amount, the authorized draw, fees, and net cash.
+    - name: Unfunded and unsupported
+      contains: The commitment left after the draw and the part of the request nothing supports.
+    - name: Reconciliations
+      contains: Each figure tied to a record, with any difference explained.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not given, and every check that failed or could not run, or "none".
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,15 +131,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: It does the arithmetic and shows each line, so you can check it against your documents.
+    - name: A spreadsheet app and an AI that can make files
+      why: Builds, recalculates and reopens the workbook version of the calculation.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small calculator in the pack on your own figures.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed financing documents, funding notices and the dated milestone approval.
+    - The name of someone on the other side who can confirm the figures.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Tranche
+    meaning: One part of a larger amount that is paid out in stages.
+  - term: Commitment
+    meaning: The total amount an investor or lender has agreed in writing to provide.
+  - term: Undrawn
+    meaning: The part of the commitment that has not been paid out yet.
+  - term: Approved draw ceiling
+    meaning: The most you may draw for this milestone, once the other side has approved it.
+  - term: Net cash
+    meaning: The cash that reaches you after fees come off the draw.

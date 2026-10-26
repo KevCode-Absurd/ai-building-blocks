@@ -1,0 +1,139 @@
+name: Video Optimization Specialist agent
+summary: "Get a YouTube video optimization plan: title ideas, thumbnail ideas, a word-for-word hook and chapters. Bring your topic and your channel numbers."
+headline: Video Optimization Specialist agent
+subhead: Give it a video topic, your viewer and any YouTube Studio numbers. It builds title and thumbnail ideas and writes the first 30 seconds. It also maps the chapters and the description. You get a video optimization plan for YouTube search and viewer retention.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A video can be good and still get no views. Two things decide it: whether people click, and whether they stay. This agent works on both. It treats the title and the thumbnail as one pair that must tell one story. Then it plans the video so viewers stay past the first 30 seconds.
+
+  It gives you 5 to 10 title ideas, each built on a different pull: curiosity, a plain search phrase or a clear benefit. It adds two or three thumbnail ideas with a short line of text that reads on a phone. It writes the hook word for word and flags where viewers may leave. Then it adds chapter points, the start of the description and an end screen link to your next video.
+
+  It cannot see YouTube. It does not know search volume, what is trending or how your video performs. You paste your numbers, or it marks them as checks for you. The click-through and retention targets in the original profile are goals, not results you will get. Thumbnails come as written ideas, not pictures.
+when:
+  - You are about to film or upload a video and want the title, thumbnail and opening settled first.
+  - A video got views from your subscribers but few from YouTube search or suggested videos.
+  - Your retention graph drops in the first minute and you do not know why.
+  - You want chapters and a description that help people find one part of a long video.
+not_for:
+  - You only post on TikTok or Reels. Use the TikTok Strategist agent.
+  - You have a finished video and want the edit fixed, such as cuts, pace and captions. Use the Short-Video Editing Coach agent.
+  - You want a script for a paid YouTube ad. Use the Long-form video ad script writer.
+  - You need the thumbnail picture itself. This writes ideas only. Give them to a designer or an image tool.
+you_give:
+  - Your video topic, or the title and script you have now
+  - Who the video is for and what you want from it, such as search views, subscribers or leads
+  - Your click-through rate, average view duration and where viewers leave, from YouTube Studio (optional)
+  - Two or three videos in your niche that did well (optional)
+  - Your script or outline, if you have one (optional)
+you_get:
+  - 5 to 10 title ideas, each with the pull it uses
+  - Two or three thumbnail ideas with the picture, the words and the colours
+  - The first 30 seconds written out word for word
+  - Chapter points, with what each part must deliver
+  - The first two lines of the description, hashtags and an end screen plan
+  - A list of what you must check yourself, such as search demand
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md. Claude, ChatGPT and Gemini all work.
+  - Paste your topic, your viewer and your goal. Say if the video is planned or already live.
+  - If it is live, paste your YouTube Studio numbers. Attach a screenshot of the retention graph if your AI can read images.
+  - 'Say: "Write my video optimization plan. Do not invent search volume or trends. Mark anything I must check as a check for me."'
+  - Read the hook first. Does it name the problem and promise the answer in the first lines? Ask for another if not.
+  - Pick one title and one thumbnail idea to try. Change one thing at a time and write down the date, so you can compare click-through rate before and after.
+how_it_works:
+  - title: Confirm the video
+    text: It confirms the topic, the viewer, your goal and what YouTube data you have. Missing items are asked for once, then marked MISSING.
+  - title: Read viewer intent
+    text: It says whether people want to learn, be entertained or get a quick answer, and what that means for the title. It uses any rival videos you gave.
+  - title: Build the packaging
+    text: It writes title ideas with different pulls and thumbnail ideas. It checks that the two tell one story and make no false promise.
+  - title: Script the hook
+    text: It writes the first 30 seconds word for word and flags spots where viewers may leave.
+  - title: Map the structure
+    text: It sets chapter points, puts a payoff before attention may drop, and ends on a link to your next video.
+  - title: Write the metadata
+    text: It writes the start of the description, hashtags and the end screen plan, then lists the checks left for you.
+output_shape: |-
+  PACKAGING
+    Main search phrase <phrase or MISSING> | Viewer intent <learn, be entertained, quick answer>
+    Titles <number> | pull <curiosity, search or benefit> | <title> | why it fits
+    Thumbnails <number> | picture <what is shown> | words <three or fewer> | colours <high contrast pair>
+
+  HOOK (first 30 seconds)
+    <word-for-word script> | promise <what the viewer gets>
+
+  STRUCTURE AND CHAPTERS
+    <time> | <chapter title> | <what it must deliver> | <attention risk and fix>
+
+  RETENTION NOTES
+    <where viewers may leave> | <evidence, or "no data given"> | <fix>
+
+  METADATA
+    Description, first 2 lines <text> | Hashtags <tags> | End screen <next video and why>
+
+  OPEN CHECKS
+    <what you must check in YouTube Studio or in search>
+output_sample:
+  input:
+    - Your video topic, or your title and script
+    - Who it is for and what you want from it
+    - Your numbers from YouTube Studio (optional)
+    - Videos in your niche that did well (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - Your YouTube Studio numbers, if the video is already live
+  output:
+    - name: Packaging
+      contains: Title ideas with the pull each uses, and thumbnail ideas with picture, words and colours.
+    - name: Hook
+      contains: The first 30 seconds written word for word, with the promise to the viewer.
+    - name: Structure and chapters
+      contains: Chapter points and what each must deliver, with places where viewers may leave.
+    - name: Retention notes
+      contains: Where viewers leave, the evidence for it, or a note that no data was given.
+    - name: Metadata
+      contains: The first two lines of the description, hashtags and the end screen plan.
+    - name: Open checks
+      contains: What you must check yourself, such as search demand and your own stats.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Your goal
+    how: Say if you want search views, suggested views or subscribers. The title ideas change with the goal.
+  - what: Video length
+    how: Give the planned run time. The chapter points depend on it.
+  - what: Your numbers
+    how: Paste real click-through and retention figures. Without them the advice is general and marked as general.
+  - what: Thumbnail rules
+    how: Add your brand colours and whether you show a face. The ideas then fit your channel.
+improve:
+  - Keep a log of each title and thumbnail you tried, with the date and click-through rate. Paste it in next time so the agent learns what works for your viewers.
+  - Add your own rules to the brief, such as "never use a title that overpromises".
+  - Pair it with the Short-Video Editing Coach agent to plan the edit once the structure is set.
+terms:
+  - term: Click-through rate (CTR)
+    meaning: The share of people who saw your thumbnail and title and clicked.
+  - term: Retention graph
+    meaning: A chart in YouTube Studio that shows how many viewers are still watching at each moment.
+  - term: Hook
+    meaning: The first seconds of a video, which tell the viewer why to keep watching.
+  - term: Packaging
+    meaning: The title and thumbnail together, as the viewer sees them before clicking.
+  - term: End screen
+    meaning: Links to other videos that show in the last seconds of a video.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: All three write titles and hooks. One that reads images can use a screenshot of your retention graph.
+    - name: An image or design tool
+      why: It makes the thumbnail from the idea. The agent does not draw.
+  inputs:
+    - Screenshots from YouTube Studio for your last few videos.
+    - Your best three videos and why you think they worked.
+    - Your channel description and who you want to reach.

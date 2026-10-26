@@ -1,0 +1,125 @@
+name: SEO Specialist agent
+summary: "Get an SEO review of your site: pages that compete, keyword gaps, content fixes and technical problems, ranked by what to fix first."
+headline: SEO Specialist agent
+subhead: Give it your website link, your key pages and the searches you want to win. It first checks whether your own pages compete for the same search. Then it reviews keywords, content and technical health. You get an SEO review with a ranked fix list.
+job: get-found-in-search
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  An SEO review fails when it changes titles before it knows which page owns which search. Two of your pages can fight for the same term and split clicks between them. This agent checks that first. It will not suggest a new title or heading until it knows which page should win each term.
+
+  It uses your Search Console export when you have one. If you don't, it works from your sitemap, titles and headings instead. Then it reviews the technical base, plans keywords around topics, and fixes the pages that matter most.
+
+  It does not guess. It has no search volumes, positions or traffic unless you paste them in, so those cells come back as "needs a keyword tool" or "needs Search Console". The targets in the original profile are goals, not measured results. SEO also takes months, and it says so.
+when:
+  - Your site gets little Google traffic and you want to know what to fix first.
+  - You are about to change page titles and want to avoid pages competing for one search.
+  - You have a Search Console export and want it turned into a plan.
+  - You plan a group of pages around one topic and need to know which page owns which keyword.
+not_for:
+  - Your site sells in China and you need Baidu. Use the Baidu SEO Specialist agent.
+  - Your traffic dropped suddenly and you need the cause. Use the Search Console traffic drop diagnoser.
+  - You want product pages written for an online store. Use the Product page SEO builder.
+you_give:
+  - Your website link and the 3 to 5 pages that matter most
+  - The searches you want to be found for, if you know them
+  - Your goal, such as more leads or more sales
+  - A Search Console export of your pages and search terms (optional, but it makes the overlap check exact)
+  - A keyword tool export with volumes, or a list of competitor sites (optional)
+you_get:
+  - "An overlap check: which pages compete for the same search, and which page should own it"
+  - "A technical review: crawling, sitemap, speed, mobile and page markup, with what to fix"
+  - "A keyword plan: terms grouped by what searchers want, each tied to one page"
+  - "Content fixes: title, heading and page changes for your main pages"
+  - A ranked fix list by impact and effort, and the checks left for you to run
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you can't, paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your link, your key pages, your goal and the searches you want to win.
+  - Attach your Search Console results by page and by search term if you have them. If your AI can't open links, paste your sitemap and your page titles and headings.
+  - "Say: \"Do the overlap check first, then the full SEO review. Don't guess search volumes or positions.\""
+  - Read the overlap check before you change any title. If two pages fight for one term, fix that before you write new content.
+  - Run the checks marked for you, such as a speed test and an indexing check in Search Console. Bring the results back and ask for an updated ranked list.
+how_it_works:
+  - title: Set the scope
+    text: It confirms the site, the key pages, your goal and what data you have. Missing items are asked for once, then marked MISSING.
+  - title: Check for overlap
+    text: With Search Console data it maps each search term to the pages that rank for it. Without it, it compares your sitemap, titles and headings to find pages aimed at the same term.
+  - title: Check the technical base
+    text: It reviews robots.txt, sitemap, site structure, internal links, speed, mobile and structured data.
+  - title: Plan keywords by topic
+    text: It groups terms by intent, ties each to one page and flags gaps. Volume and difficulty stay blank unless you supply them.
+  - title: Fix the pages
+    text: It writes title, heading and content changes for your main pages, never reusing a term another page owns.
+  - title: Rank the fixes
+    text: It orders fixes by impact and effort, adds a link-building idea list if you ask, and lists the checks only you can run.
+output_shape: |-
+  OVERLAP CHECK
+    <search term> | <pages that rank or target it> | <conflict yes or no> | <page that should own it> | <action>
+
+  TECHNICAL REVIEW
+    <area: crawling, sitemap, speed, mobile, markup> | <what was found> | <fix> | <priority>
+
+  KEYWORD PLAN
+    <topic> | <term> | <intent> | <target page> | <volume or "needs a keyword tool">
+
+  CONTENT FIXES
+    <page> | <current title and heading> | <proposed title and heading> | <content change>
+
+  RANKED FIX LIST
+    <rank> | <fix> | <impact> | <effort>
+
+  OPEN CHECKS
+    <what you need to run or supply>
+output_sample:
+  input:
+    - Your website link and your key pages
+    - The searches you want to be found for, and your goal
+    - Your Search Console export of pages and search terms (optional)
+    - A keyword tool export or a list of competitors (optional)
+  prerequisites:
+    - An AI that can open links, or your sitemap and page text pasted in
+    - Search Console set up for your site, if you want the exact overlap check (optional)
+  output:
+    - name: Overlap check
+      contains: Which of your pages compete for the same search, and the one page that should own each term.
+    - name: Technical review
+      contains: Crawling, sitemap, speed, mobile and markup problems, each with a fix and a priority.
+    - name: Keyword plan
+      contains: Search terms grouped by topic and intent, each tied to a single page.
+    - name: Content fixes
+      contains: New titles, headings and content changes for your main pages.
+    - name: Ranked fix list
+      contains: Every fix in order of impact and effort.
+    - name: Open checks
+      contains: What you must run or supply, such as speed tests or keyword volumes.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Search Console
+    meaning: Google's free tool that shows which searches bring people to your pages.
+  - term: Keyword cannibalization
+    meaning: Two of your pages compete for the same search, so neither ranks as well.
+  - term: Search intent
+    meaning: "What the person typing the search wants: to learn, to compare or to buy."
+  - term: Core Web Vitals
+    meaning: Google's speed and stability scores for a page, measured on real visits.
+  - term: Structured data
+    meaning: Extra code that tells search engines what a page is, such as a product or an FAQ.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web access
+      why: It can open your pages and sitemap. Without web access, paste the text and titles.
+  inputs:
+    - A Search Console export of at least a few months, by page and by search term.
+    - Your sitemap link.
+    - Notes on pages you plan to merge, delete or launch.

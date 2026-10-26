@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: code_change
     required: true
+  - type: feedback_notes
+    required: false
 outputs:
   - type: feedback_notes
 uses: []

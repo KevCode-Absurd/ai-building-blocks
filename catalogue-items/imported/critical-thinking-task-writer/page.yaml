@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds a task around one chosen skill.
 new_slug: critical-thinking-task-writer
 name: Critical thinking task writer
-summary: Name a subject and a skill. Get a task where learners weigh evidence,
-  spot bias or test an argument.
+summary: Write a critical thinking task for your class. Give a subject and a skill. You get a task, an answer guide and follow-up questions.
 job: teach-and-train
 headline: Critical thinking task writer
-subhead: Name a subject and a skill. Get a task where learners weigh evidence,
-  spot bias or test an argument. Bring subject and topic. Use the result to plan
-  your next step.
+subhead: Name a subject and a skill. Get a task where learners weigh evidence, spot bias or test an argument. Bring subject and topic. Use the result to plan your next step.
 explain: |
   A classroom task that makes students weigh evidence, spot bias or test an argument, with a guide that shows what a strong answer looks like next to a surface one. It moves lessons past recall and into judgment.
 
@@ -18,6 +15,10 @@ when:
   - You want to teach spotting bias in a history unit.
   - You need an assessment that shows reasoning, not memory.
   - You want follow-up questions ready for discussion.
+not_for:
+  - You only want a recall quiz or a single-fact check. Write simple questions yourself, or use your usual quiz tools.
+  - You want to check if a source can be trusted. Use a source-credibility check instead, since this task builds a whole lesson activity.
+  - You need a full lesson plan with a timed sequence. Plan the lesson yourself, then add this task as one part of it.
 you_give:
   - Subject and topic
   - The thinking skill to target
@@ -29,7 +30,25 @@ you_get:
   - Teacher follow-up prompts
   - Assessment indicators
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Add your subject and topic, the thinking skill, your students' year level and how they think now.
+  - Add the time you have and your preferred format, such as written or discussion (optional).
+  - Read the task and the answer guide. Check the guide matches what you want students to show.
+  - Change the task wording or level if it feels too easy or too hard, then ask your AI to revise it.
+  - Use the follow-up prompts in class and the assessment indicators when you mark the work.
+output_sample:
+  input:
+    - Your subject and topic
+    - The thinking skill you want to build, such as weighing evidence or spotting bias
+    - Your students' year or age level and how they think now
+    - The subject area (optional)
+    - Time available and preferred format (optional)
+  output:
+    - name: The Task
+      contains: Clear student instructions, the stimulus material and guiding questions for the chosen thinking skill.
+    - name: Critical vs. Surface Response Guide
+      contains: Criteria that separate a critical answer from a surface one, with examples of each.
+    - name: Teacher Follow-Up Prompts
+      contains: Questions you can ask live to push students to think further.
+    - name: Assessment Indicators
+      contains: Signs in student work that show the thinking skill is present.

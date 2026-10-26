@@ -1,6 +1,6 @@
 new_slug: clay-town-video-ad-script-writer
 name: "Clay town video ad script writer"
-summary: "Paste your idea and brand file. Get a clay-town video script, set card and cast note."
+summary: "Write a clay town video ad script from your selling idea and brand file. You get a set card, a timed five-part script and a cast note."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -19,6 +19,10 @@ when:
   - Your buyer's problem happens around other people (a commute, an office, a family dinner).
   - You want a playful, handmade-looking ad without hiring a cast or building a set.
   - You want a script ready to hand to an AI video process, with the lead and crowd already cast.
+not_for:
+  - "You want one still image, not a video: use the Clay town image ad maker."
+  - "You want one character on a single tabletop: use the single-character clay script instead."
+  - "Your buyer is ready to buy and needs the real pack, price and terms: write a plain product ad with a person or a simpler step."
 
 you_give:
   - Your selling idea or an existing script
@@ -38,6 +42,25 @@ how_to_use:
   - Attach a clear photo of your product, and type out every line of its label too. It won't invent label words.
   - Say the length, such as "30 seconds".
   - Take the script and cast note to "Turn your clay town script into handmade-looking clips". It runs the video process from there.
+output_sample:
+  input:
+    - Your selling idea or an existing script
+    - Your brand file with the buyer's moment, label lines and approved claims
+    - A photo of your product (recommended)
+    - Length of 20, 30 or 45 seconds (optional)
+  output:
+    - name: FIT and HASSLE
+      contains: Why the problem suits a crowd, what clay cannot prove, and one line on the routine everyone shares.
+    - name: SET CARD
+      contains: The scale, finish, stand-in materials, light and focus used for the whole ad.
+    - name: CAST NOTE
+      contains: The lead described in full, the crowd's base figures, and why this lead carries the ad.
+    - name: Script table
+      contains: One row per shot with movement, narration, picture, who moves and seconds, across five movements.
+    - name: WORDS and NOTES
+      contains: The spoken word count against the target, what was inferred and what is missing.
+    - name: CHECKS MISSED
+      contains: One line for each of the skill's own checks the script still fails, or none.
 
 how_it_works:
   - title: Checks the fit

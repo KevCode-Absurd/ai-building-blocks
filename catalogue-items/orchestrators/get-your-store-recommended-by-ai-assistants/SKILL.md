@@ -47,7 +47,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Shopper question and fan-out mapper.** Use the skill `shopper-question-and-fan-out-mapper`. Builds the 30 to 60 questions shoppers ask about your category.
 2. **AI recommendation panel runner.** Use the skill `ai-recommendation-panel-runner`. Give it the plan from the steps before. Runs those questions on the main assistants and logs who is named and cited. Reads the question list from the step before.
 3. **AI recommendation gap finder.** Use the skill `ai-recommendation-gap-finder`. Give it the audit report from the steps before. Turns the panel results into the gaps that keep you out of answers, with fix, build or influence actions.
-4. **AI-ready product page editor.** Use the skill `ai-ready-product-page-editor`. Give it the plan from the steps before. Rewrites your key product pages with facts, spec tables and FAQs for the gaps found. Reads the question plan and the gap findings.
+4. **AI-ready product page editor.** Use the skill `ai-ready-product-page-editor`. Give it the question plan from step 1 and the gap findings from step 3. Rewrites your key product pages with facts, spec tables and FAQs for the gaps found. Reads the question plan and the gap findings.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

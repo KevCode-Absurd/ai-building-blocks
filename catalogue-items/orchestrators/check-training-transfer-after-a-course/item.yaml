@@ -1,6 +1,6 @@
 slug: check-training-transfer-after-a-course
 name: Check training transfer after a course
-summary: Share the source files. Get a skill evidence comparison, transfer barriers and focused development plan.
+summary: See whether a course changed the work. Compare real post-course work with the skills taught, then get the gaps and a practice plan.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,9 +20,9 @@ uses:
   - training-program-builder
 steps:
   - uses: role-skills-framework-builder
-    note: Map real post-course work evidence to the role behavioral expectations, with missing or conflicting evidence explicitly labeled.
+    note: "Sets out the skills the course aimed at and what each looks like at work, then matches each to your dated work samples. Marks missing or clashing evidence and keeps certificates and self-reports apart. Hands the skill table and the gaps to the plan step."
   - uses: training-program-builder
-    note: Use the demonstrated gaps to plan targeted practice, supervisor support and a later work evidence check; do not claim the intervention already improved performance.
+    note: "Uses step 1's skill table and gaps. Turns the gaps into practice on real work, supervisor support and a later evidence check, with a date. Does not claim the plan has improved performance."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

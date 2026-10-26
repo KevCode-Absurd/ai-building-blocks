@@ -16,6 +16,27 @@ use_cases:
   - "Get sales and marketing to stop blaming each other"
   - "Review a recorded sales call for what the seller asked and what they told"
   - "Coach a new seller to sound less like a persuader and more like an adviser"
+not_for:
+  - "You sell a cheap, quick item in one step: use a simple short pitch, since this method is built for large, complex sales."
+  - "You need to stay calm in a hard negotiation over terms: use Chris Voss instead."
+  - "You want to learn why people say yes to a request, such as social proof: use Robert Cialdini instead."
+output_sample:
+  input:
+    - Your call notes or a recording transcript
+    - A short note on who the buyer is and what you sell
+    - The size of the sale and how many meetings it may take
+    - What your best sellers do in similar calls (optional)
+  output:
+    - name: Question sort
+      contains: Each question you asked, placed into Situation, Problem, Implication or Need-payoff, with the types you under-use or over-use.
+    - name: Question plan
+      contains: A short list of questions to try, grouped by type, with background questions cut that you could research first.
+    - name: Order of questions
+      contains: The sequence to follow in the call, from background to problem, cost and the value of a fix.
+    - name: Check measure
+      contains: A way to see whether the new questions worked, such as coding recorded calls before and after.
+    - name: Limits and gaps
+      contains: Where the method may not fit, other causes of a result, and any missing facts marked as MISSING.
 seats:
   - {seat: "Big-ticket sales questions", asks: "Have we asked enough about the problem and what it costs them, before we offer the answer?"}
   - {seat: "Evidence on selling", asks: "What did the buyers actually do in calls like this, not what do we hope works?"}

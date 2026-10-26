@@ -1,7 +1,7 @@
 slug: second-location-check
 renamed_from: second-location-readiness-checker
 name: "Second location readiness checker"
-summary: "Paste your manual and trial notes. Get the gaps a newcomer found, a profit-without-you check and what to fix before opening."
+summary: "See if your business runs without you before opening a second location. Get trial gaps, a fix list and a ready or not yet call."
 category: general
 type: skill
 role: check
@@ -9,7 +9,7 @@ job: strategy
 level: intermediate
 inputs:
   - {type: plan, required: true}
-  - {type: question, required: false}
+  - {type: feedback_notes, required: false}
 outputs:
   - {type: audit_report, required: true}
 origin: rebuilt
@@ -18,3 +18,6 @@ minds: [ray-kroc]
 credits:
   - {title: "Grinding It Out: The Making of McDonald's (a book summary)", by: "Ray Kroc with Robert Anderson, as summarised by a third party", used: "Treating the first restaurant as a prototype, the problems found in it, and proving one store before spreading the system"}
   - {title: "Book review: Grinding It Out, the Making of McDonald's", by: "J M Finn", url: "https://www.jmfinn.com/our-thinking/book-review-grinding-it-out-making-mcdonalds/", used: "Making applicants work in a store before they opened one, and the fry fix that came from a failed first try"}
+next: [go-or-no-go-launch-checker, bad-year-break-even-tester, market-expansion-sequencer, operations-manual-writer]
+before: [operations-manual-writer]
+needs_mode: manual

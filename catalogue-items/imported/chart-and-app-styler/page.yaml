@@ -2,24 +2,23 @@ thinking: low
 thinking_why: It applies a set of styling calls.
 new_slug: chart-and-app-styler
 name: Chart and app styler
-summary: Give it your charts or app. Get colour palettes, colormaps and dark
-  mode applied the right way.
+summary: Style your MATLAB charts and apps with one set of brand colours, the right colormaps and a dark mode that follows the system theme.
 job: build-software
 headline: Chart and app styler
-subhead: MATLAB charts and apps that use one clean set of colours, with dark
-  mode that works. You give it your figures or app, and it sets palettes,
-  colormaps and themes the way MATLAB expects, instead of scattering colour
-  values through your code.
+subhead: MATLAB charts and apps that use one clean set of colours, with dark mode that works. You give it your figures or app, and it sets palettes, colormaps and themes the way MATLAB expects, instead of scattering colour values through your code.
 explain: |
   MATLAB charts and apps that use one clean set of colours, with dark mode that works. You give it your figures or app, and it sets palettes, colormaps and themes the way MATLAB expects, instead of scattering colour values through your code.
 
   It keeps brand colours in one struct. It uses colororder for series that are categories and colormap for smooth gradients, and never mixes them up. For apps built with uifigure it uses the newer theme tools: dark mode through lightness flipping, a callback that reacts when the system theme changes, and uistyle for conditional colours in tables and trees. It can also bring in a palette from Material Design, Adobe Color or Tailwind. MATLAB is required.
 when:
-  - Your MATLAB plots all look default blue and orange and you want your brand
-    colours.
+  - Your MATLAB plots all look default blue and orange and you want your brand colours.
   - Your app needs a dark mode that follows the user's system setting.
   - You want a table to highlight rows that cross a threshold.
   - You have a colour scheme from a design tool and need it inside MATLAB.
+not_for:
+  - "You want to pick chart types or build a chart from scratch: ask your AI for a chart, or use matlab-build-chart if you have it."
+  - "You need to colour one plot element once: set its Color property directly."
+  - "You style web pages or CSS themes: use your web tool's own theme settings, since this only covers MATLAB."
 you_give:
   - Your MATLAB figures or app code
   - Your brand or palette colours (optional)
@@ -31,8 +30,31 @@ you_get:
   - A colormap for continuous data
   - Dark mode and theme handling for your app
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Paste your MATLAB figure or app code.
+  - Add your brand colours, or a hex palette from a design tool, if you have one.
+  - Say whether you want dark mode and whether your data is categories or smooth values.
+  - Run the code in MATLAB. Dark mode in apps needs R2025a or newer. Check both light and dark views.
+  - "Test it: if a component ignores the theme, remove its explicit colour."
+output_sample:
+  input:
+    - Your MATLAB figure or app code
+    - Your brand or palette colours, or a colour scheme from a design tool (optional)
+    - Whether you want dark mode
+    - Whether your data is categories or smooth values
+  prerequisites:
+    - An AI that can run MATLAB, to test the result
+    - MATLAB R2025a or newer for dark mode in apps
+  output:
+    - name: createTheme
+      contains: One function with a struct holding your brand colours, status colours, border colour and chart series colours.
+    - name: colororder code
+      contains: Lines that give each chart series in an axes its own colour from your palette.
+    - name: colormap code
+      contains: A colormap for heatmaps, surfaces and other smooth value data.
+    - name: Dark mode code
+      contains: Dark colours made from your light ones with fliplightness, for uifigure apps.
+    - name: ThemeChangedFcn wiring
+      contains: A callback that reapplies your colours when the system or user switches theme.
+    - name: uistyle rules
+      contains: Conditional colours for table rows or tree items, such as rows above a threshold.

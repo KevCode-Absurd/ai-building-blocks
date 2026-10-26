@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It reads reviews for patterns and turns them into choices.
 new_slug: amazon-product-edge-finder
 name: Amazon product edge finder
-summary: Give it rival listings and reviews. Get their weak spots, your best
-  selling points, and a ranked fix list.
+summary: Find weak spots in rival Amazon listings. Give it product details and reviews. You get your best selling points and a ranked fix list.
 job: run-your-store
 headline: Amazon product edge finder
-subhead: "A clear view of where rival Amazon listings fall short and what to say
-  about your own product to win. Reviews are the source: complaints show gaps,
-  and praise shows what buyers value."
+subhead: "A clear view of where rival Amazon listings fall short and what to say about your own product to win. Reviews are the source: complaints show gaps, and praise shows what buyers value."
 explain: |
   A clear view of where rival Amazon listings fall short and what to say about your own product to win. Reviews are the source: complaints show gaps, and praise shows what buyers value.
 
-  It works in four levels, and each extra piece of data unlocks more. Product info alone gives a side by side comparison. Add rivals' negative reviews to get ranked pain points. Add your positive reviews to pull out your selling points. Add market data to get a positioning view and a full action plan. It also checks feature gaps, price against value and quality signals, and ends with a ranked list of improvements.
+  It works in four levels, and each extra piece of data adds more detail. Product info alone gives a side by side comparison. Add rivals' negative reviews to get ranked pain points. Add your positive reviews to pull out your selling points. Add market data to get a positioning view and a full action plan. It also checks feature gaps, price against value and quality signals, and ends with a ranked list of improvements.
 when:
   - Your product looks the same as five others on the page.
   - You want to know what buyers hate about a rival's product.
   - You are planning a new version and need to choose features.
   - You need selling points drawn from real customer words.
+not_for:
+  - "You have a brand-new product with no reviews yet: use a plain side by side of rival listings, or wait until you have real buyer words."
+  - "You want search volume or keyword ideas: use a keyword tool or Amazon Ads search term reports."
+  - "You want to write the listing copy itself: take the selling points from this result to your own copy step."
 you_give:
   - Your product details and price
   - Competitor listings
@@ -31,7 +32,28 @@ you_get:
   - A positioning view
   - A ranked improvement plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Collect your product title, price, rating and features. Add the same details for each rival listing.
+  - Copy rivals' negative reviews from their Amazon pages (optional). Add your own positive reviews too (optional). More reviews give better patterns.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste your details and reviews.
+  - Check the pain points against the review text. Make sure each one really appears in the reviews.
+  - Use the ranked plan to update your listing bullets first. The script version needs an AI that can run Python.
+output_sample:
+  input:
+    - Your product title, price, rating and features
+    - Rival listings with price and rating
+    - Rivals' negative reviews (optional)
+    - Your own positive reviews (optional)
+    - Market data (optional)
+  prerequisites:
+    - "Optional: an AI that can run Python, if you want to run the analyzer script. A chat AI can also follow the method from pasted text."
+  output:
+    - name: Competitor comparison matrix
+      contains: Your product and each rival side by side on features, price and rating.
+    - name: Top pain points
+      contains: The most common complaints from rival reviews, ranked by how often buyers mention them.
+    - name: Your unique selling points
+      contains: What buyers praise about your product, with how it compares to rivals.
+    - name: Differentiation opportunities
+      contains: Gaps in the market and in your listing that you could fill.
+    - name: Action plan
+      contains: A ranked list of fixes, grouped by priority.

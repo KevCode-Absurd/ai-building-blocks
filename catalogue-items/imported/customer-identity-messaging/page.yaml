@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads people's self-image and turns it into wording.
 new_slug: customer-identity-messaging
 name: Customer identity messaging mapper
-summary: Give it your audience. Get a map of who they are and want to be, plus
-  copy that reflects it.
+summary: Map who your customers are and who they want to be, then get copy that reflects it. A customer identity messaging tool for believable wording.
 job: understand-customers
 headline: Customer identity messaging mapper
-subhead: People respond to messages that match who they are and who they want to
-  be. Give it your audience and you get a map of their current self-image and
-  their aspired identity, then copy that reflects both without sounding fake.
+subhead: People respond to messages that match who they are and who they want to be. Give it your audience and you get a map of their current self-image and their aspired identity, then copy that reflects both without sounding fake.
 explain: |
   People respond to messages that match who they are and who they want to be. Give it your audience and you get a map of their current self-image and their aspired identity, then copy that reflects both without sounding fake.
 
@@ -18,6 +15,10 @@ when:
   - You are launching to a group with a strong identity, like runners or parents.
   - You want headlines that speak to who the buyer is becoming.
   - You are writing brand messaging for a new audience.
+not_for:
+  - "You have no audience research yet: build a customer profile first, or talk to five real customers, then come back."
+  - "You need a full psychographic profile of your buyers: use the customer-psychographic-profiler skill first."
+  - "You want proof that identity messaging raises sales: this gives ideas to test, so run a real split test."
 you_give:
   - A description of your target audience
   - What the offer or message should do
@@ -29,7 +30,30 @@ you_get:
   - Language patterns that fit
   - Rewritten copy
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Paste your audience description. Real interview quotes or review lines work best.
+  - Say what the message should do, and name any limits on tone, culture or ethics.
+  - Paste the copy you want rewritten (optional).
+  - Read the identity gap rating and the claims to avoid before you use the new copy.
+  - Check any research reference the AI names before you use it in public. Treat them as ideas to test.
+output_sample:
+  input:
+    - A description of your target audience, ideally from real interviews or reviews
+    - What the message or offer should do
+    - Your existing copy to rewrite (optional)
+    - Limits on culture, tone or ethics (optional)
+  prerequisites:
+    - Real audience research, such as interview notes or customer quotes
+  output:
+    - name: Current self-concept
+      contains: How your customer sees themselves today, in plain words.
+    - name: Aspirational identity
+      contains: Who your customer wants to become or be seen as.
+    - name: Identity gap rating
+      contains: A small, medium or large rating, with advice on how far the copy can stretch.
+    - name: Language patterns
+      contains: Words, images and proof that make the aspired self feel recognized.
+    - name: Rewritten copy
+      contains: Your message reworked to reflect the identity without false promises.
+    - name: Claims to avoid
+      contains: Identity promises your product cannot back up, and research notes to check before use.

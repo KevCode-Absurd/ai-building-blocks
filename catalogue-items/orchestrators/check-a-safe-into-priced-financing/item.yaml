@@ -1,15 +1,13 @@
 slug: check-a-safe-into-priced-financing
 name: Check a SAFE into priced financing
-summary: Reconcile a cap-only SAFE stake, pre-round reserve change and eligible participation.
+summary: "Check the stake a cap-only post-money SAFE gives before a priced round, the option pool top-up, and the pro rata cash your side letter allows."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false

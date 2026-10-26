@@ -1,31 +1,26 @@
 new_slug: traction-sales
 name: Sales channel experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a sales channel test for your software product. Paste your product link and get one small test with a cost cap, measures and a stop rule.
 job: sell-and-negotiate
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Sales channel experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused sales plan for your product. It reads the buyer and offer, checks
-  why this channel might work and writes a small test. The default is SaaS; you
-  can ask for general-business mode.
+  A focused sales plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Research a small account set and prepare relevant discovery outreach. Test
-  problem urgency and willingness to take a paid next step before building a
-  sales team.
+  Research a small account set and prepare relevant discovery outreach. Test problem urgency and willingness to take a paid next step before building a sales team.
 
 
-  Meetings and demonstrations are not paying customers. A low-priced self-serve
-  product may not support expensive outbound sales.
+  Meetings and demonstrations are not paying customers. A low-priced self-serve product may not support expensive outbound sales.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You want to compare every growth channel at once: use the Traction workflow, which looks at all 19."
+  - "Your sales channel already brings in paying customers: scale it with your own sales numbers, not a first test."
+  - "You want emails sent or ads bought for you: this plan sends nothing and spends nothing, so use your own email tool or a person."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -35,22 +30,47 @@ you_get:
   - A small test with an owner, cost cap and decision rule
   - The next action and what needs approval
 how_to_use:
-  - Add the skill or whole workflow pack to your AI.
-  - Paste your product URL and any facts you already know.
-  - Ask it to follow the skill and cite what it can verify.
-  - Review the plan and approve any external action separately.
+  - Open Claude, ChatGPT or Gemini. Turn on web browsing if your AI has it.
+  - Paste the skill into the chat.
+  - Paste your product link. Add your goal, buyer, budget and hours if you know them.
+  - Read the plan. Check the evidence and the MISSING list, and fill any gaps.
+  - Approve each outside action yourself, such as sending a message or spending money.
+output_sample:
+  input:
+    - Your product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash and hours limits (optional)
+    - Past tests and their results (optional)
+  prerequisites:
+    - An AI that can browse the web, or product page text you paste in yourself
+  output:
+    - name: Recommendation
+      contains: Whether to test sales now, later, or skip it as a weak fit, with the reason.
+    - name: Evidence
+      contains: Each fact used, with its source link, the date you read it and what it means.
+    - name: Buyer and useful action
+      contains: Who buys, and the first useful thing a new customer does in your product.
+    - name: Channel mechanism
+      contains: How a buyer reaches value through a sales-led path.
+    - name: Pilot
+      contains: The test idea, audience, offer, what you hand over and who owns it.
+    - name: Limits
+      contains: Cash, hours and date caps, marked as proposed or approved.
+    - name: Measurement
+      contains: What to count, which group, the totals you divide by and how you credit wins.
+    - name: Decision
+      contains: The rule for when to continue, revise or stop.
+    - name: Risks and next action
+      contains: The main ways it could fail and the one next step.
+    - name: MISSING
+      contains: The facts the plan still needs from you.
 how_it_works:
   - title: Check 1
-    text: Define a narrow account profile, buying trigger, user, champion and
-      economic buyer. Check whether contract value can support the proposed
-      sales effort.
+    text: Define a narrow account profile, buying trigger, user, champion and economic buyer. Check whether contract value can support the proposed sales effort.
   - title: Check 2
-    text: Map discovery, qualification, demonstration, security or procurement, paid
-      pilot and close with explicit exit criteria.
+    text: Map discovery, qualification, demonstration, security or procurement, paid pilot and close with explicit exit criteria.
   - title: Check 3
-    text: Draft discovery questions about current behaviour and cost, an
-      evidence-led demonstration and a mutual next-step plan. Record objections
-      and losses as learning.
+    text: Draft discovery questions about current behaviour and cost, an evidence-led demonstration and a mutual next-step plan. Record objections and losses as learning.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -64,21 +84,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - Many meetings but no paid commitments occur. Diagnose qualification, urgency
-    and buying friction rather than declare the channel proven.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - Many meetings but no paid commitments occur. Diagnose qualification, urgency and buying friction rather than declare the channel proven.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

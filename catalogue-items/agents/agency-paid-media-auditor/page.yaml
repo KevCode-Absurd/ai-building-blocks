@@ -1,0 +1,147 @@
+name: Paid Media Auditor agent
+summary: Paste your Google, Microsoft or Meta ad exports. Get ranked account problems, each with proof from your data, a fix and the effort needed.
+headline: Paid Media Auditor agent
+subhead: Give it exports from your Google Ads, Microsoft Ads or Meta account, plus your goal and budget. It checks structure, tracking, bids, keywords, ads and landing pages, as far as your data allows. You get findings ranked by severity, each with proof and a fix.
+job: read-ad-results
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  An ad account audit finds waste before it eats your budget. It also finds
+  broken tracking, which hides what is working. This paid media auditor agent
+  reads your exports the way an accountant reads a ledger. It goes area by area
+  and leaves no setting unchecked that your data can show.
+
+
+  Each finding has the same parts: how serious it is, the numbers from your
+  data that prove it, why it matters to your business, and a specific fix. If
+  the data does not show a problem, it is not called a finding. It becomes a
+  question for you. Anything it could not check, such as a setting missing from
+  your export, goes on a separate list so you know what was not covered.
+
+
+  The original profile says it runs more than 200 checks and typically finds
+  15 to 30 percent in efficiency gains. It does not list the checks, and those figures
+  are the author's goals. This pack does not claim them. It checks the areas
+  the profile names against the data you give it, and sizes impact only from
+  your own numbers.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. It reports and
+  proposes only. It never changes your account.
+when:
+  - You are taking over an existing ad account and want to know what is wrong before you touch anything.
+  - Results have slipped over several months and you want a ranked list of likely causes across the whole account.
+  - You are pitching a new client and want to show what their current setup misses.
+  - You plan to double your spend and want to know if tracking and structure can handle it.
+not_for:
+  - You run only Meta, or a Google Shopping store, and want a score. Use the Meta Ads 30-check account auditor or the Google Ads store account auditor.
+  - You advertise on TikTok, LinkedIn or many platforms at once. Use the Twelve-platform ad account auditor.
+  - One number fell right after a change and you need the likely cause. Use the Google Ads dip investigator.
+  - You want the agent to change the account or settle a billing or policy dispute. It only reports. Use the platform's own support.
+you_give:
+  - The platforms to check, such as Google Ads, Microsoft Ads or Meta
+  - Exports for the last 3 to 6 months, such as campaigns, ad groups, search terms or keywords, ads and conversion settings
+  - Your goal, your target cost per sale or return on ad spend, and your monthly budget
+  - What a conversion means for your business, such as a sale, a booking or a lead
+  - A note on how tracking is set up, such as tag manager, Google Analytics, pixel or server events (optional)
+  - The change history from the platform, auction insights and landing page links (optional)
+you_get:
+  - A plain-language summary for someone who does not run ads
+  - A table of findings ranked critical, high, medium or low, each with proof, why it matters, a fix and effort
+  - A rough size of the impact for the top findings, shown as an estimate from your numbers
+  - A list of checks it could not run because the data was missing
+  - A 30-day order for making the fixes
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Download reports from each platform and attach them, or paste the tables. Add your goal, target cost or return, budget and what counts as a conversion. No code is needed.
+  - Type "Audit this account. Rank findings by severity and show the numbers that prove each one."
+  - Read the critical findings first. Open the platform and confirm each one yourself before you change a setting. Then read the list of checks it could not run.
+  - Make the fixes in the platform yourself, one group at a time, and export again after a few weeks to see what moved.
+how_it_works:
+  - title: Set the scope
+    text: It confirms the platforms, the date range, your goal and your cost target, and lists which areas your data can cover.
+  - title: Check each area
+    text: It reviews structure, tracking, bids and budgets, keywords and targeting, ads, product feed, competitors and landing pages, as far as your exports show.
+  - title: Prove each finding
+    text: It keeps a finding only if your data shows it, and quotes the numbers. Otherwise it turns it into a question for you.
+  - title: Rate and size
+    text: It grades severity and estimates the impact from your own spend and results, with its assumptions stated.
+  - title: List what was not checked
+    text: It names every area it could not review and the export that would let it.
+  - title: Order the fixes
+    text: It writes the summary and puts fixes in an order a person can do in 30 days.
+output_shape: |-
+  SUMMARY
+    <3 to 5 plain sentences: biggest problem, biggest chance, what to do first>
+
+  FINDINGS
+    <ID> | <area> | <critical, high, medium or low> | <proof from your data> | <why it matters> | <fix> | <effort> | <impact estimate and assumptions>
+
+  CHECKS NOT RUN
+    <area> | <what data is missing> | <export that would cover it>
+
+  30-DAY FIX ORDER
+    Week 1: <fixes> | Week 2: <fixes> | Weeks 3 and 4: <fixes>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - The platforms to check, and your date range
+    - Exports from each account, such as campaigns, search terms and ads
+    - Your goal, target cost per sale and monthly budget
+    - Tracking notes and change history (optional)
+  prerequisites:
+    - An AI that can read attached files, such as Claude, ChatGPT or Gemini
+    - Read access to your ad accounts, to download the exports
+  output:
+    - name: Summary
+      contains: A short note in plain words with the biggest problem, the biggest chance and the first step.
+    - name: Findings
+      contains: Each problem with its severity, proof from your data, why it matters, a fix, effort and an impact estimate.
+    - name: Checks not run
+      contains: Areas it could not review for lack of data, and the export that would fix that.
+    - name: 30-day fix order
+      contains: The fixes grouped by week, with the most serious first.
+    - name: Open questions
+      contains: Things your data could not settle, and what each answer would change.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach CSV exports so the AI reads real numbers instead of your summary.
+    - name: Google Ads, Microsoft Ads and Meta Ads Manager reports
+      why: Each platform lets you download the tables this audit needs.
+  inputs:
+    - Search terms and conversion settings, which show the most waste and the most tracking faults.
+    - Your change history, so it can link a drop to a change.
+    - Your profit margin, so it can judge cost per sale against what you can afford.
+terms:
+  - term: Severity
+    meaning: How much a problem hurts. Critical means it wastes money or blocks measurement now.
+  - term: Conversion
+    meaning: The action you pay for, such as a purchase, a booking or a form sent.
+  - term: Search terms report
+    meaning: A list of what people typed before they saw and clicked your ad.
+  - term: Cost per sale and return on ad spend
+    meaning: Two ways to judge ads. One is what you pay for each sale, the other is revenue for each unit of spend.
+  - term: Learning period
+    meaning: The time after a change when the platform is still testing, and results swing.
+  - term: Impression share
+    meaning: The share of possible views your ad got, which shows if budget or rank held you back.
+tweaks:
+  - what: Platform
+    how: Name the one platform to start with. Audit the others in separate runs, so the exports stay clear.
+  - what: Reader
+    how: Say if the summary is for you, your boss or a client. It changes the tone, not the facts.
+  - what: Business type
+    how: Say if you sell online, take leads or serve a regulated field such as health or finance, because ad rules differ.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It picks a fitting chart and checks it for honesty and access.
 new_slug: journal-ready-figure-maker
 name: Journal-ready figure maker
-summary: Give it your data. Get clear, honest, colour-safe figures with
-  uncertainty shown, sized for journal export.
+summary: "Make a journal-ready figure from your data: honest scales, visible uncertainty, palettes checked for contrast, and files sized for export."
 job: research-topics
 headline: Journal-ready figure maker
-subhead: Charts that tell the truth and survive peer review. Give it your data
-  and say where the figure is going. The skill records what the numbers mean,
-  the units, how uncertainty is defined and every change made to the data, so
-  the figure can be rebuilt later.
+subhead: Give it your data and say where the figure is going. It picks an honest chart type, shows uncertainty and records every change to your data. Palettes are checked for contrast and greyscale. That is not a certificate of accessibility or journal acceptance.
 explain: |
   Charts that tell the truth and survive peer review. Give it your data and say where the figure is going. The skill records what the numbers mean, the units, how uncertainty is defined and every change made to the data, so the figure can be rebuilt later. It picks an honest chart type: bars start at zero, points show their spread, and no missing values are quietly joined up.
 
@@ -19,6 +15,10 @@ when:
   - A reviewer says your chart is misleading or hard to read.
   - You need uncertainty shown clearly, not just means.
   - Your figures must be readable in black and white or by colour-blind readers.
+not_for:
+  - "You need to clean raw data first: tidy it in a spreadsheet or with a data analyst, then bring the clean table here."
+  - "You need to confirm a journal's current rules: read the publisher's live author guidelines, because this skill will not guess them."
+  - "You want an interactive web chart only: this skill treats interactive and static files as separate jobs and still needs a static version."
 you_give:
   - Your data table or file
   - What each variable and unit means
@@ -31,8 +31,31 @@ you_get:
   - A record of every data transformation
   - A list of journal checks still to do
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Use an AI that can run code and save files. You need Python 3.11 or newer and the uv tool. Plotly static export also needs Chrome or Chromium.
+  - Paste the skill into your AI, or add the skill folder if your AI accepts files.
+  - Upload your data table. Say what each variable and unit means and how uncertainty is defined.
+  - Name the journal, article type, stage and final figure width if you know them. Leave them out if you do not.
+  - Check the figure and the data change record. Then read the journal's live author guidelines yourself before you submit.
+output_sample:
+  input:
+    - Your data table or file
+    - What each variable and unit means
+    - Your target journal, article type and stage (optional)
+    - Your final figure width (optional)
+  prerequisites:
+    - An AI that can run code and save files
+    - Python 3.11 or newer and the uv tool
+    - Chrome or Chromium, only if you want static export of Plotly charts
+  output:
+    - name: Figure files
+      contains: The chart in Matplotlib, Seaborn or Plotly, exported at the width and format you set.
+    - name: Palette contrast and greyscale audit
+      contains: A check of how readable your colours are for contrast and in greyscale.
+    - name: File metadata check
+      contains: A report on the size and format details of the exported image or vector file.
+    - name: Provenance record
+      contains: Your data meaning, units, uncertainty definition, every data change and random seeds, so the figure can be rebuilt.
+    - name: Export plan
+      contains: A list of journal checks still to do once the exact journal and stage are known.
+    - name: Final review checklist
+      contains: A last pass over scales, missing values, labels and accessibility before you submit.

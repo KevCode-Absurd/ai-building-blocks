@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Telling real strategy from wishes needs careful, honest reasoning.
 new_slug: real-strategy-checker
 name: Real strategy checker
-summary: Give it a strategy. Get an honest diagnosis, a guiding policy and
-  coherent actions, or a list of what is hollow.
+summary: Check if your strategy is a real plan or a list of goals. Get a score out of 10, the hollow parts, and a rebuilt plan if yours is thin.
 job: plan-strategy
 headline: Real strategy checker
-subhead: An honest check of your strategy, telling you whether it is a real plan
-  or a list of goals. If it is thin, you get a rebuilt version with a diagnosis,
-  a guiding policy and actions that fit together.
+subhead: An honest check of your strategy, telling you whether it is a real plan or a list of goals. If it is thin, you get a rebuilt version with a diagnosis, a guiding policy and actions that fit together.
 explain: |
   An honest check of your strategy, telling you whether it is a real plan or a list of goals. If it is thin, you get a rebuilt version with a diagnosis, a guiding policy and actions that fit together.
 
@@ -18,6 +15,10 @@ when:
   - You need to review a strategy document before approving it.
   - Leadership says growth is the strategy and you want better.
   - You are writing a new plan and want a sound structure.
+not_for:
+  - "You want to position a product for buyers: use obviously-awesome, not this check."
+  - "You want to find a market with no rivals: use blue-ocean-strategy."
+  - "You need a quick brainstorm of ideas: ask your AI for options, then bring the chosen plan here."
 you_give:
   - Your strategy or plan document
   - Market and competitor context
@@ -29,7 +30,25 @@ you_get:
   - Coordinated actions
   - List of hollow parts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your strategy document. Add notes on your market and competitors.
+  - Add the people, money and time you have, if you know them (optional).
+  - Ask your AI to audit the strategy with the eight-row check.
+  - Read the score first, then the diagnosis, guiding policy and list of hollow parts.
+  - Fix the hollow parts, then run the check again on the new version.
+output_sample:
+  input:
+    - Your strategy or plan document
+    - Notes on your market and competitors
+    - The people, money and time you have (optional)
+  output:
+    - name: Score
+      contains: How many of the eight checks your strategy passes, out of 10, with the changes needed to reach 10.
+    - name: Diagnosis
+      contains: The one critical challenge your strategy has to solve, stated honestly.
+    - name: Guiding policy
+      contains: The main choice that tackles the challenge and rules some things out.
+    - name: Coordinated actions
+      contains: Steps that fit together and have resources behind them.
+    - name: Hollow parts
+      contains: Buzzwords, goal lists and vision statements that pass as strategy but give no plan.

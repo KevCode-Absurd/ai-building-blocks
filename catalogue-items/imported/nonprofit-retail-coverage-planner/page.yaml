@@ -1,12 +1,16 @@
 new_slug: nonprofit-retail-coverage-planner
 name: Plan nonprofit resale-store staffing
-summary: Plan store shifts with paid staff and volunteers. Check trained roles, cash duties and backup cover for no-shows.
+summary: Plan nonprofit resale-store staffing with a shift-by-role grid. Give it your hours and roster. You get gaps flagged and a training plan.
 job: hire-people
 headline: Plan nonprofit resale-store staffing
 subhead: Bring store hours, staff skills and free time. Map each shift to key roles, flag gaps and plan training and backup cover.
 explain: Bring store hours, staff skills and free time. Map each shift to key roles, flag gaps and plan training and backup cover.
 when:
   - You want to plan nonprofit resale-store staffing.
+not_for:
+  - "You need to hire someone, set pay or sort out wage rules: use an HR adviser or your nonprofit HR policy, then come back to plan shifts."
+  - "You want to recruit, screen or thank volunteers: build that process first with a volunteer coordinator or a volunteer program plan."
+  - "You want to set cash handling, opening or closing rules for the store: write those store rules first, then use this plan to staff them."
 you_give:
   - Store hours, role needs, availability and existing cash/key policies
   - Paid and volunteer training status and no-show history
@@ -14,9 +18,29 @@ you_get:
   - Role-by-shift coverage matrix
   - Retail onboarding checkpoints and a staffing-gap review process
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Gather your store hours, the roles each shift needs, your roster with training, and your cash and keyholder rules.
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your facts. No code, files or paid tools are needed.
+  - Ask for the role matrix first. Check that each shift has a trained cashier and a paid keyholder.
+  - Ask for the onboarding track and a plan for no-shows, such as cross-training.
+  - Fix any item marked missing, then check pay and volunteer rules with your HR contact before you use the schedule.
+output_sample:
+  input:
+    - Your store hours by day and part of day
+    - The roles each shift needs, such as cashier, sorter, floor and shift lead
+    - Your paid and volunteer roster, with who is trained for each role
+    - Your no-show history (optional)
+    - Your cash and keyholder rules (optional)
+  output:
+    - name: Floor role matrix
+      contains: A grid of each shift against the roles it needs, showing which roles are filled and which are open.
+    - name: Minimum paid staff rule
+      contains: A plain rule that every shift has a paid keyholder who answers for cash and keys.
+    - name: Retail onboarding track
+      contains: Steps from shadow shift to unsupervised shifts, with sign-off checkpoints for register, grading and safety.
+    - name: Shift schedule template
+      contains: A schedule that flags any shift with enough people but no trained cashier or keyholder.
+    - name: No-show and gap report
+      contains: Missed and late shifts by day and role, with a fix for gaps that repeat.
 how_it_works:
   - title: Define required coverage
     text: List cash, sorting, floor and shift-lead roles by day-part and apply the store’s approved cash and keyholder rules.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows upgrade notes and fixes errors.
 new_slug: expo-upgrade-helper
 name: Expo upgrade helper
-summary: Say which Expo version to reach. Get your app upgraded and broken
-  dependencies fixed.
+summary: Upgrade your Expo app to a newer SDK and fix broken packages. Give it your current and target Expo version. You get ordered steps and code fixes.
 job: build-software
 headline: Expo upgrade helper
-subhead: Say which Expo version to reach. Get your app upgraded and broken
-  dependencies fixed. Bring current Expo version. Use the result to plan your
-  next step.
+subhead: Say which Expo version to reach. Get your app upgraded and broken dependencies fixed. Bring current Expo version. Use the result to plan your next step.
 explain: |
   Your Expo app moved to a newer SDK, with broken packages fixed and old code patterns swapped out, so it builds and runs again.
 
@@ -18,6 +15,10 @@ when:
   - Packages fail to install after you bump the version.
   - You still use the old audio or video package and need to switch.
   - You want to test a beta before it goes stable.
+not_for:
+  - "Your app is not built with Expo: use the upgrade guide for your own framework, or ask a developer."
+  - "You only want to add a new feature to your app: ask your AI directly, or follow the docs for that one package."
+  - "You cannot back up your project first: stop and save a copy before you run anything, or ask a developer to do the upgrade."
 you_give:
   - Current Expo version
   - Target version
@@ -29,8 +30,30 @@ you_get:
   - Code changes for new React and navigation patterns
   - Migration of audio and video code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and edit your project files.
+  - Save your project in git first. Back up ios/, android/, patches/ and app.json. Some steps delete files and folders.
+  - Open your AI in a tool that can run commands and edit your project. Paste this skill into it.
+  - Tell it your current Expo version and the version you want. Add your package.json and any error messages.
+  - Let it run the upgrade steps one at a time. Check the result of each step before you move on.
+  - Run your app and test camera, audio, video and navigation. Fix anything the checklist flags.
+output_sample:
+  input:
+    - Your current Expo version
+    - The Expo version you want to reach
+    - Your package list (package.json)
+    - Any errors from a failed upgrade (optional)
+  prerequisites:
+    - An AI that can run commands and edit your project files
+    - Your project saved in git, with a backup of ios/, android/, patches/ and app.json
+  output:
+    - name: Upgrade steps
+      contains: The order to install the new Expo version, fix packages, run the health check and clear caches.
+    - name: Dependency fixes
+      contains: Package versions that match your new Expo version, plus a review of excluded packages and old patches.
+    - name: Breaking changes checklist
+      contains: Removed features, moved imports and native changes to check in your app after the upgrade.
+    - name: Prebuild and cache steps
+      contains: Commands to rebuild native folders and clear caches, only if your project has ios/ and android/ folders.
+    - name: Housekeeping edits
+      contains: Settings and config files you can delete or trim, such as sdkVersion, babel and metro defaults.
+    - name: Code migrations
+      contains: Updated code for React 19, the New Architecture, Expo Router, and the move from expo-av to expo-audio and expo-video.

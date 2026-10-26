@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Overwrites have no merge, so it previews first.
 new_slug: product-field-bulk-editor
 name: Product field bulk editor
-summary: Pick products and a custom field value. Get it set or removed on all of
-  them. Overwrites live store data.
+summary: Set or delete a custom field value on every Shopify product that matches a tag or vendor. Preview first, then bulk edit product fields in one run.
 job: run-your-store
 headline: Product field bulk editor
-subhead: A custom field value set or cleared on every product that matches your
-  filter, in one run instead of hundreds of manual edits. Typical fields include
-  material, care notes and specs.
+subhead: A custom field value set or cleared on every product that matches your filter, in one run instead of hundreds of manual edits. Typical fields include material, care notes and specs.
 explain: |
   A custom field value set or cleared on every product that matches your filter, in one run instead of hundreds of manual edits. Typical fields include material, care notes and specs.
 
@@ -18,6 +15,10 @@ when:
   - An old field value is wrong across many items.
   - You need to remove a field from a set of products.
   - A storefront feature reads a custom field and needs it filled.
+not_for:
+  - "You need to change one or two products: edit them by hand in your Shopify admin."
+  - "Your theme does not read the field you plan to set: check the field name in your theme first, or the change shows nowhere."
+  - "You cannot undo a change without the saved CSV: do a small test set first, or ask a person on your team to review the plan."
 you_give:
   - Your store domain
   - A filter such as a tag or vendor
@@ -29,9 +30,28 @@ you_get:
   - A count of items changed
   - A list of any that failed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Open an AI that can run code and use the Shopify CLI. Claude Code, Cursor, Codex and Gemini CLI all work.
+  - Log in to your store with the Shopify CLI. Give it read and write access to products.
+  - Paste the skill and give your store domain, filter, namespace, key and value. Leave dry run on.
+  - Check the preview list of matching products and the field name. A typo creates a field no theme reads.
+  - "Turn dry run off and run it. Keep the CSV: its old value column is your record to undo the change."
+  - Look at your storefront after a small test set before you run it on everything.
+output_sample:
+  input:
+    - Your store domain
+    - A filter such as a tag or vendor
+    - The field namespace and key
+    - The value to set, or a request to delete it
+    - Dry run on or off (optional, on by default)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - A Shopify CLI login with read and write access to products
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step with the inputs used and the result, marked DRY RUN while previewing.
+    - name: Outcome summary
+      contains: How many items matched, how many fields were set or deleted, and how many errors.
+    - name: metafield_update CSV
+      contains: One row per item with its ID, title, field, old value, new value and action.

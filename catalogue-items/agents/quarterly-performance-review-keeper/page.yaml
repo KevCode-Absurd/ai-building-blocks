@@ -1,25 +1,31 @@
 new_slug: quarterly-performance-review-keeper
 name: Quarterly performance review keeper
-summary: Give it the quarter's goals and notes per person. Get each review drafted from evidence, with next quarter's goals to approve.
+summary: Turn a quarter of goals and dated notes into fair performance reviews, a plan for each talk and next quarter's goals for you to approve.
 job: lead-people
 thinking: high
 thinking_why: It judges people from evidence, decides when a hard message is earned and drafts goals that must be fair and true. Give it your strongest model.
 headline: Quarterly performance review keeper
-subhead: Give it each person's goals, the quarter's notes and what the business needs next. It builds every review from dated evidence, plans each conversation, writes the hard message only where it is earned, and drafts next quarter's goals. You hold the meetings. It sends and records nothing.
+subhead: Give it each person's goals, the quarter's one-on-one notes and what the business needs next. It writes each performance review from dated evidence, plans the conversation, writes a hard message only where it is earned, and drafts next quarter's goals. You hold the meetings. It sends and records nothing.
 explain: |
   Reviews get written from the last two weeks. The quarter's wins are forgotten, a problem nobody raised becomes a surprise in the meeting, and next quarter's goals are last quarter's with the dates moved. People feel it, and the review loses its point.
 
   This agent builds each review from what happened. It lists every key result hit or missed and every dated note, and flags any problem never raised in the quarter as "raise now, do not grade on it". It drafts the review in a format checked with counsel, plans the conversation so you ask for their view first, and writes a hard message only where results missed and a problem repeated after being raised. Then it drafts next quarter's goals from what the business needs. Every file stays with you.
 when:
-  - You manage people and owe each one a review this quarter.
+  - You manage people and owe each one a performance review at the end of the quarter.
   - Your last reviews were written from memory and it showed.
   - You want next quarter's goals to come from where the business is going, not from last quarter's list.
+  - A review is due for a person whose problem you noted twice, and you are not sure it is fair to grade it.
+not_for:
+  - Someone is facing a warning, a dismissal or a legal complaint. That needs your HR lead or counsel, not a review draft.
+  - You have no dated notes and no key results for the quarter. It will say the review is thin. Start with the One-on-one agenda and feedback planner and come back next quarter.
+  - You want to prepare this week's one-on-one. Use the One-on-one agenda and feedback planner.
+  - You only need next quarter's goals for one person. Use the Objectives and key results writer on its own.
 you_give:
-  - Each person's objectives and key results this quarter, with hit or missed
-  - One-on-one notes, wins and behaviour notes per person, with dates (advised)
+  - Each person's objectives and key results for the quarter, marked hit or missed (from your goals doc or tracker)
+  - Your one-on-one notes, wins and problems for each person, with dates (advised; the One-on-one agenda and feedback planner's person files work)
   - The numbers each person owned this quarter (advised)
   - One paragraph on what the business needs next quarter
-  - The review format from your first run, checked with counsel
+  - The review format you saved on the first run, checked with counsel (optional on the first run, it builds one)
 you_get:
   - A per-person evidence list, every claim dated
   - A draft review per person in your format
@@ -28,11 +34,38 @@ you_get:
   - Next quarter's objectives and dated key results per person
   - A list of problems to raise now rather than grade
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to prepare this quarter's reviews.
-  - On the first run, approve the review format and have counsel check it. It is saved and reused.
-  - Put each person's goals and notes in their private folder, or paste them in the chat. Add your paragraph on next quarter.
-  - Read each review against its evidence. Change what you disagree with. Hold the meetings yourself.
-  - Approve next quarter's goals with each person, then save them for the next run.
+  - Open the agent in Claude, ChatGPT or Gemini, or paste it into a new chat. In Claude Code, add it as a skill or save it in .claude/agents so it can keep one folder per person.
+  - On the first run, approve the review format and have counsel check it before you share any review. It is saved and reused.
+  - Paste one person's goals and dated notes at a time, or point it to their folder. Add your paragraph on next quarter. Leave out anything you would not want in a review file.
+  - Read each review against its evidence. Every claim should point to a result or a dated note. Change what you disagree with.
+  - Hold the meetings yourself, and ask for their view first. Approve next quarter's goals with each person, then save them for the next run.
+output_sample:
+  input:
+    - Each person's goals for the quarter, marked hit or missed
+    - Your dated one-on-one notes for each person (advised)
+    - The numbers each person owned (advised)
+    - One paragraph on what the business needs next quarter
+    - Your saved review format, checked with counsel (optional on the first run)
+  prerequisites:
+    - An AI that can keep a private file per person, such as Claude Code, or a chat where you paste one person at a time
+    - A lawyer or HR lead to check the review format before you share any review
+  output:
+    - name: The quarter
+      contains: One line with reviews written, key results hit and missed, hard messages and thin reviews.
+    - name: Evidence list
+      contains: Each key result and every dated note for the person, with whether the problem was raised.
+    - name: Raise now, do not grade
+      contains: Problems nobody raised during the quarter, to say in the meeting and keep out of the grade.
+    - name: Draft review
+      contains: Each section of your saved format, with every claim tied to a result or a dated note.
+    - name: Conversation plan
+      contains: What to praise, what to say, how to say it, and the question to ask first.
+    - name: Hard message
+      contains: A written message, only where results missed and a raised problem repeated. Otherwise it says not earned.
+    - name: Next quarter goals
+      contains: A few objectives per person, each with key results that have dates.
+    - name: Files and missing
+      contains: Each person's saved file and a MISSING line for every gap.
 how_it_works:
   - title: Set the format once
     text: Builds the review questions and the rules on what is written down, for counsel to check.
@@ -106,7 +139,7 @@ test:
   - Run it twice on the same notes. The reviews should match in substance.
   - Give it a person with no notes. It should say the review is thin, not fill the gap.
 improve:
-  - Use the Weekly one-on-one prep keeper through the quarter, so the evidence is already dated.
+  - Use the One-on-one agenda and feedback planner through the quarter, so the evidence is already dated.
   - Write your review format once with counsel and save it before the first run.
   - Add the numbers each person owns to their file each month, not at quarter end.
   - Keep each person's approved goals in their folder, so next quarter starts from them.

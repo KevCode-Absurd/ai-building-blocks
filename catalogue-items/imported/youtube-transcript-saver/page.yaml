@@ -2,34 +2,56 @@ thinking: low
 thinking_why: It runs a set tool and cleans the text.
 new_slug: youtube-transcript-saver
 name: YouTube transcript saver
-summary: Give it a YouTube link. Get a clean transcript saved as a markdown note
-  you can search later.
+summary: Save a YouTube transcript as a clean markdown note. Give it one video link and get a searchable file, filed by channel and date.
 job: organise-work
 headline: YouTube transcript saver
-subhead: Give it a YouTube link. Get a clean transcript saved as a markdown note
-  you can search later. Bring one YouTube video link. Use the result to plan
-  your next step.
+subhead: Give it one YouTube link. It finds the captions, cleans them up and saves them as a markdown note in your notes folder. It prefers captions written by the creator over auto captions.
 explain: |
   Paste a YouTube link and get the talk saved as a tidy markdown note in your notes folder, ready to search later.
 
   A Python script uses the free yt-dlp tool to list the available subtitles and prefers manual ones over auto captions, because manual ones keep punctuation and speaker names. It then strips the timing marks, removes the doubled lines that auto captions produce, and merges the rest into clean paragraphs. The note is filed by channel and date, with title, channel and date at the top. It also scans for words like framework, decision and lesson, and drops a small idea stub for each hit. You need Python and yt-dlp.
 when:
   - You watch long talks and want them in your notes.
-  - You want to search across everything you have learned from videos.
+  - You want to search across what you have learned from videos.
   - You need a clean transcript, not messy auto captions.
-  - You want ideas from a talk flagged for later writing.
+  - You want key ideas from a talk flagged for later writing.
+not_for:
+  - "You want the video file itself: run yt-dlp on its own with a download option, since this skill only saves text."
+  - "You want a whole channel or playlist: run it once per video link, because it takes one video at a time."
+  - "The video is a live stream or has no captions: you get no transcript, so use your own audio transcription tool first."
 you_give:
   - One YouTube video link
-  - The path to your notes folder
+  - The path to your notes folder (optional)
   - Your preferred caption language (optional)
 you_get:
   - A clean markdown transcript note
-  - A filing path by channel and date
+  - A file saved by channel and date
   - A word count and language
   - Idea stubs for key passages
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Use an AI that can run code and save files, and make sure Python is installed.
+  - "Install the free yt-dlp tool by running: pip3 install --user yt-dlp"
+  - "Run: python3 ingest.py <youtube-url> --vault <path> --lang en,es"
+  - Swap in your video link and your notes folder. Change the language codes if you want other captions.
+  - Open the saved note and check that the title, date and text look right.
+  - Check the video's terms before you store its transcript, and note that this relies on YouTube's own subtitles.
+output_sample:
+  input:
+    - One YouTube video link
+    - The folder where your notes live (optional)
+    - Your preferred caption language (optional)
+  prerequisites:
+    - An AI that can run Python code and save files
+    - yt-dlp installed on your computer
+    - Internet access
+  output:
+    - name: Transcript note
+      contains: A markdown file with the video title, channel, date, language and word count at the top, then the clean transcript.
+    - name: Filing path
+      contains: The note is saved under External Inputs, YouTube, then the channel name, named by date and video title.
+    - name: Idea stubs
+      contains: Small capture notes for passages that mention words like decision, framework, principle or lesson.
+    - name: Run summary
+      contains: A printed line with the file path, word count, language and subtitle source.
+    - name: Metadata stub
+      contains: If the video has no captions, a short note with the video details and link instead of a transcript.

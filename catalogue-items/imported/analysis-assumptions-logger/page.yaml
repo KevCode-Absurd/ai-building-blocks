@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Spotting which assumptions matter most takes some judgment.
 new_slug: analysis-assumptions-logger
 name: Analysis assumptions logger
-summary: Tell it about your analysis. Get every assumption logged with its risk,
-  so reviewers see what could change the answer.
+summary: Log every assumption in your analysis with its confidence and impact, so reviewers see what could change the answer before they sign off.
 job: document-work
 headline: Analysis assumptions logger
-subhead: Every analysis rests on choices that could change the answer. A log of
-  them lets a reviewer see what you assumed, how sure you are, and what breaks
-  if you are wrong.
+subhead: Every analysis rests on choices that could change the answer. A log of them lets a reviewer see what you assumed, how sure you are, and what breaks if you are wrong.
 explain: |
   Every analysis rests on choices that could change the answer. A log of them lets a reviewer see what you assumed, how sure you are, and what breaks if you are wrong.
 
@@ -18,6 +15,10 @@ when:
   - A peer or manager will review your work before sign-off.
   - You are picking up an old analysis and cannot tell why it was done that way.
   - You work somewhere that needs an audit trail.
+not_for:
+  - "You only need to describe your data columns and sources: use a simple data dictionary instead."
+  - "You need to document a trained model and its limits: use a model card instead."
+  - "You are doing a quick one-off check that nobody will review: a short note to yourself is enough."
 you_give:
   - Analysis name and the decision it supports
   - Data sources, time period and population
@@ -30,7 +31,29 @@ you_get:
   - Validation plans for the risky ones
   - A sign-off sheet for reviewers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Add your analysis name, the decision it informs, your data sources and the method choices you made.
+  - Add stakeholder rules and known data problems if you have them.
+  - Ask your AI to log the assumptions and list the critical ones. Running the tracker script needs an AI that can run code.
+  - Check the critical list and run the validation plans.
+  - Send the sign-off sheet to your reviewer.
+output_sample:
+  input:
+    - Your analysis name and the decision it supports
+    - Your data sources, time period and population
+    - The method choices you made and the options you dropped
+    - Business rules from stakeholders (optional)
+    - Known data quality problems (optional)
+  prerequisites:
+    - An AI that can run code, if you want the log kept by the script. Without it, your AI can write the log in the chat.
+  output:
+    - name: Assumptions log
+      contains: Each data, business logic and statistical assumption with its rationale, confidence (high, medium or low) and impact if wrong.
+    - name: Critical assumptions report
+      contains: The low-confidence, high-impact assumptions pulled out into one short list.
+    - name: Validation plans
+      contains: For each critical assumption, a plan to check it and a place to record the result.
+    - name: assumptions_tracker.py
+      contains: A small command line script that logs assumptions, flags critical ones and exports a summary.
+    - name: assumptions_log_template.md
+      contains: The completed log in a sheet that a peer can review and sign off.

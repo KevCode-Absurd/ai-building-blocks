@@ -1,6 +1,6 @@
 slug: shopper-question-and-fan-out-mapper
 name: "Shopper question and fan-out mapper"
-summary: "Give it your products and customer questions. Get the questions shoppers ask AI, the sub-questions it runs and your gaps."
+summary: "Get the questions shoppers ask AI about your products, grouped by topic, with follow-up searches and the pages your store still lacks."
 category: ecommerce
 type: skill
 role: make

@@ -1,41 +1,78 @@
 new_slug: product-sample-approval-loop
-name: Product sample approval loop
-summary: Give it your tech pack and each sample. Get go or hold, fixes for the factory, and a stop at three rounds.
+name: Factory sample revision reviewer
+summary: Check each factory sample against your tech pack. Get a go or hold, numbered fixes for the factory and an inspection brief once a sample passes.
 job: plan-supply-chain
 thinking: high
 thinking_why: It checks many pack lines, decides who is at fault and loops across rounds. Give it your strongest model.
-headline: Product sample approval loop
-subhead: Give it your tech pack and each sample as it arrives. It checks every line, says go or hold, tightens any vague line in the pack, writes the fixes to send the factory, and stops after three rounds.
+headline: Factory sample revision reviewer
+subhead: Share your tech pack (the spec you gave the factory) and the photos and measures of each sample as it arrives. It checks every line, says go or hold, tightens any vague line, and writes numbered fixes to send the factory. It stops after three rounds at one stage.
 explain: |
   Sampling can drag on for months. The factory sends a sample. You spot a problem and email back. The next sample fixes that and breaks something else. Nobody remembers what was agreed, and a vague line in the tech pack gets read two ways.
 
-  This agent checks each sample against your pack, line by line, and scores it. A critical fail is a hold, whatever the score. If a failed line was vague, it tightens that line first. If the pack was clear, it writes the fix list for the factory. On a go, it re-checks your margin with the real quote and, at production stage, writes the inspection brief. After three rounds with a critical fail it stops and helps you pick the next factory. It sends and pays nothing.
+  This factory sample review checks each sample against your pack, line by line, and scores it. Lines count by weight: critical lines such as size, material and safety count most. A critical fail is a hold, whatever the score. If a failed line was vague, it tightens that line first, because the factory may have followed it. If the pack was clear, it writes the fix list. On a go, it re-checks your margin with the real quote and, at the production stage, writes the inspection brief.
+
+  It keeps a log of every round, so the factory is never asked for the same fix twice. After three rounds with a critical fail it stops and helps you pick the next factory to try. It cannot measure anything itself. You bring the measures, weights and photos, and any line without them is marked not checked. It sends nothing, pays nothing and approves nothing.
 when:
   - You are having a product made and samples keep coming back wrong.
+  - A new sample arrived and you need to decide whether it can move to the next stage.
   - You want a written record of what each sample got wrong and what was asked.
   - You want a clear point to stop, so a bad factory does not eat months.
+not_for:
+  - You have no tech pack yet. Write one first with the Factory product brief writer.
+  - You are checking finished goods before they ship. Use the Pre-shipment inspection brief writer, and have an inspector check the real goods.
+  - You are still choosing between factories and no sample exists. Use the Supplier shortlist vetter.
+  - You want one sample checked once, with no round log. Use the Product sample approval reviewer.
 you_give:
-  - Your tech pack, the current version
-  - Photos, measures, weights and colour readings for each sample
+  - Your tech pack, the current version (a document or pasted lines)
+  - Photos of the sample, plus measures, weights and colour readings for the lines that need numbers
   - "The stage: strike-off, pre-production or production sample"
-  - "Which pack lines are critical (strongly advised)"
+  - Which pack lines are critical, such as size, material, safety and legal labels (strongly advised)
+  - Last round's log, if there was one (a pasted copy works in a chat)
   - Your quote and freight, for the margin check (optional)
+  - A shortlist of other factories and their answers, used only if three rounds fail (optional)
 you_get:
-  - A line-by-line pass or fail, a score and a go or hold
+  - A line-by-line pass or fail, a score out of 100 and a go or hold
   - Numbered fixes to send the factory, each with a spec and a number
   - Any pack line tightened, for your approval
-  - On a go, your margin re-checked, and at production the inspection brief
+  - On a go, your margin re-checked, and at production stage the inspection brief
+  - A round log, so the next sample starts from what was agreed
 how_to_use:
-  - Add the agent in Claude Code, or save it in .claude/agents.
-  - Give it the tech pack and the first sample's photos and measures, and say the stage.
+  - Add the agent to your AI. In Claude Code, add it as a skill or save it in .claude/agents. In Claude, ChatGPT or Gemini, paste it at the start of a chat and paste last round's log if you have one.
+  - Attach the tech pack and the first sample's photos and measures. Say the stage. Use a tape measure and a scale, because a photo cannot show a weight or a size.
   - Read the decision. If it is a hold, check the fix list and send it to the factory yourself.
-  - When the next sample comes, run it again. It reads the log and checks only what is new.
+  - When the next sample comes, run it again with the log. It checks only what is new.
   - On a go at production stage, take the inspection brief to your inspector before the goods ship.
+output_sample:
+  input:
+    - Your tech pack, the current version
+    - Photos of the sample, plus measures, weights and colour readings
+    - "The stage: strike-off, pre-production or production sample"
+    - Which pack lines are critical (strongly advised)
+    - Last round's log and your quote and freight (optional)
+  prerequisites:
+    - An AI that can read your pack and photos
+    - A tape measure and a scale, so lines that need numbers can be checked
+    - A folder to keep the round log, if your AI can save files
+  output:
+    - name: This round
+      contains: One line with product, stage, round number, score out of 100 and go or hold.
+    - name: Decision and why
+      contains: The failed lines that decided it, critical ones first, with the spec and what was found.
+    - name: Fix list for the factory
+      contains: Numbered fixes, each with the spec, what was found and the change needed.
+    - name: Pack changes
+      contains: Vague pack lines rewritten more tightly, for your approval before anything is sent.
+    - name: If go
+      contains: Your margin re-checked with the real quote, a gold standard note, and the inspection brief at production stage.
+    - name: Rounds used
+      contains: How many of three rounds are used at this stage, and what happens at the cap.
+    - name: Files and missing
+      contains: Each step's saved file, then every line marked MISSING in one list.
 how_it_works:
   - title: Read the log
     text: Opens the record of earlier rounds and counts how many are used at this stage.
   - title: Check the sample
-    text: Checks every tech pack line against the sample and scores it, with critical lines counted heavier.
+    text: Checks every tech pack line against the sample and scores it, with critical lines counted heavier. A line with no measure or photo is marked not checked.
   - title: Choose the path
     text: On a hold with a vague line, it tightens the pack first. With a clear pack, it writes the factory fix list. On a go, it re-checks the margin.
   - title: Loop with a cap
@@ -95,6 +132,17 @@ works_best_with:
       why: It can keep the sample folder and the log for each product.
     - name: A measuring tape and a scale
       why: Real measures and weights are what turn a photo check into a real one.
+    - name: A leak, fit or wear test you can run at home
+      why: Critical lines such as a cap seal or a zip need a hands-on test. A photo cannot pass them.
   inputs:
     - The factory's quote and your freight costs
     - A shortlist of other factories and their answers
+terms:
+  - term: Tech pack
+    meaning: The document that tells a factory exactly how to make your product, with sizes, materials, colours, labels and packaging.
+  - term: Critical line
+    meaning: A pack line where a miss breaks the product or harms a customer, such as size, material, safety or a legal label.
+  - term: Strike-off, pre-production, production sample
+    meaning: The three sample stages. A strike-off tests materials and prints. A pre-production sample must match the pack and becomes the standard. A production sample is the last one before bulk.
+  - term: Gold standard
+    meaning: The approved sample you keep, one at home and one at the factory, to compare bulk goods against.

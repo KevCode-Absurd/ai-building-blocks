@@ -1,0 +1,151 @@
+name: Godot Multiplayer Engineer agent
+summary: Plan Godot 4 multiplayer with the server owning key game state, the right synced properties and RPCs, and tests to run before cheating or lag breaks it.
+headline: Godot Multiplayer Engineer agent
+subhead: Describe your game, player count and what must stay in sync. It plans who owns what, which properties to sync and which calls to allow. You get a networking plan, draft code and tests to run under lag.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Godot multiplayer breaks in three common ways. Two players see different
+  worlds because nodes were added by hand. A player cheats because the server
+  trusts what a client sends. The game feels fine on one computer and falls
+  apart at 150 milliseconds of lag. A Godot 4 multiplayer plan has to settle
+  these before any code is written.
+
+
+  This agent starts with authority: which peer owns each piece of state. By
+  default the server owns anything that matters, such as position, health and
+  score. Clients send requests by RPC, and the server checks them. It then plans
+  which properties to sync, how nodes spawn on every peer, and what each call
+  may do. It ends with tests: impossible values, a call meant for someone else,
+  lag and a dropped player.
+
+
+  It drafts code but cannot run two game windows or add lag for you. It gives no
+  bandwidth or speed numbers it was not given. It is a role profile from Agency
+  Agents, shared under MIT. Check the Godot calls it names against your
+  version's docs.
+when:
+  - You are starting a Godot 4 multiplayer game and need to decide who owns what before you build.
+  - Players see different things, or objects jump, or a player's actions are ignored.
+  - You want to stop clients from cheating by sending fake positions or damage.
+  - You need a lobby and connect flow, with join, leave and rejoin handled.
+not_for:
+  - You are scripting single-player gameplay, such as health or an inventory. Use the Godot Gameplay Scripter agent.
+  - Your game is in Unity or Unreal. Use the Unity Multiplayer Engineer agent or the Unreal Multiplayer Architect agent.
+  - You need to host servers, pay for them or plan scale. Use the Backend Architect agent.
+  - You want a review of a live server under load. A plan cannot replace a load test you run.
+you_give:
+  - The game type, how many players it must hold and whether one player hosts or a server runs it
+  - Your Godot version and whether players play on desktop, phone or the web
+  - The state that must be shared, such as position, health, score or items
+  - Your scene and script files for the networked parts, pasted as text (optional)
+  - What goes wrong today, if anything (optional)
+you_get:
+  - An authority table that says who owns each piece of state
+  - A sync plan for spawning and for the properties each node shares
+  - An RPC list with who calls it, who runs it and what the server checks
+  - A connect, lobby and leave flow
+  - Draft code for the parts you ask for, marked as not run
+  - A test plan with lag, bad input and rejoin, for you to run
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe the game, the player count, your Godot version and the state that must be shared. Paste the scripts for your networked nodes if you have them.
+  - Type "Plan the authority model and RPCs, then draft the server setup." Your AI asks once for anything missing.
+  - Read the authority table first. Every row must have one owner. Fix any row that says "both".
+  - Test with two game windows on your computer, then add 100 to 200 milliseconds of lag with a tool you choose. Your AI cannot run these tests.
+  - Try bad input, such as an impossible position sent from a client, and check the server refuses it.
+how_it_works:
+  - title: Set the scope
+    text: It states the game type, player count, topology and version. It asks once for what is missing and marks the rest.
+  - title: Build the authority table
+    text: It lists each piece of state, the peer that owns it and how others may ask to change it. The server owns anything that matters.
+  - title: Plan replication
+    text: It plans how nodes spawn on every peer and which properties sync. It uses on-change sync for anything not driven by physics.
+  - title: Plan the RPCs
+    text: It lists each RPC with its mode, who may call it and what the server checks. Any call open to every peer is checked by the server.
+  - title: Plan the tests
+    text: It plans tests for lag, impossible values, calls to the wrong peer, and a dropped player rejoining.
+output_shape: |-
+  SCOPE AND ASSUMPTIONS
+    <game type> | <players> | <topology> | <Godot version> | <assumptions>
+
+  AUTHORITY TABLE
+    <state or node> | <owner peer> | <who may request a change> | <checked by>
+
+  REPLICATION PLAN
+    <scene> | <spawned by> | <properties synced> | <sync mode> | <who receives>
+
+  RPC LIST
+    <rpc name> | <mode> | <reliable or not> | <called by> | <run by> | <what the server checks>
+
+  CONNECTION AND LOBBY FLOW
+    <step> | <what happens> | <what handles it>
+
+  DRAFT CODE (NOT RUN)
+    <file name> | <what it does>
+
+  TEST PLAN
+    <test> | <how to run it> | <what a pass looks like>
+
+  RISKS AND NEXT STEP
+    <risk> | <effect> | <next action>
+output_sample:
+  input:
+    - Your game type, player count and Godot version
+    - The state that must be shared, such as position, health and score
+    - Your networked scripts and scenes (optional)
+    - What goes wrong today (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The Godot editor and two game windows to run the tests
+  output:
+    - name: Authority table
+      contains: Each piece of state with its owner and how others may ask to change it.
+    - name: Replication plan
+      contains: How each scene spawns on every peer and which properties it syncs.
+    - name: RPC list
+      contains: Each remote call with its mode, caller, runner and the checks the server makes.
+    - name: Connection and lobby flow
+      contains: The steps for hosting, joining, leaving and rejoining a game.
+    - name: Draft code
+      contains: Server setup, spawning and RPC code you asked for, marked as not run.
+    - name: Test plan
+      contains: Lag, bad input and rejoin tests, each with what a pass looks like.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your scenes and scripts together and find nodes that sync a property without an owner.
+  inputs:
+    - A short description of what a bad session looks like, so the plan targets it.
+    - The target platforms, since web games need a different connection method than desktop games.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name one system first, such as player movement, and add combat or items after that works under lag.
+  - what: Topology
+    how: Say if you want a dedicated server or one player hosting, so the plan does not cover both.
+improve:
+  - Keep a note of each desync or cheat you find in testing and paste it in on the next run, so the plan adds a check for it.
+terms:
+  - term: Authority
+    meaning: The peer that owns a piece of game state and is the only one allowed to change it directly.
+  - term: RPC
+    meaning: A call made on one computer that runs a function on another, such as a client asking the server to move.
+  - term: Peer
+    meaning: One computer in the game. The server is peer 1.
+  - term: Replication
+    meaning: Copying game state, such as a node's position, to every player so all see the same world.
+  - term: Desync
+    meaning: When players see different game states because their copies drifted apart.
+  - term: Server-authoritative
+    meaning: The server decides what is true. Clients only send requests.

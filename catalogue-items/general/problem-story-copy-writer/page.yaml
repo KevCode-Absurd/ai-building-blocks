@@ -1,6 +1,6 @@
 new_slug: problem-story-copy-writer
 name: "Problem story copy writer"
-summary: "Paste your buyer and product facts. Get a long problem story with your product arriving last."
+summary: "Write a long problem story for buyers who do not know an answer exists, with your product arriving late and every fact from your own notes."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -18,9 +18,15 @@ when:
   - You need a long ad text, an email or a page section that tells the problem as a story.
   - You know why the problem keeps happening and want that told plainly, not as a pitch.
 
+not_for:
+  - "The story must be told in first person by a real customer or founder: use the Story image ad writer."
+  - "Your buyers already know the answer exists and only need a reason to pick you: use the Fact-based ad copy writer."
+  - "You need a short opening line or headline, not a long story: use the Ad first line writer and scorer or the Ad headline writer."
+  - "You have no buyer note or product facts yet: build a short brief first with the Buyer brief writer."
+
 you_give:
   - A note on the buyer, how aware they are, what they want, what they tried and their own words
-  - The real cause of the problem, from your product facts (optional, but best)
+  - The real cause of the problem, from your product facts (optional, but best; without it the story turns on what the person notices and is weaker)
   - Your product facts, offer and the proof you may use
   - How long it can be, in words or characters
   - Your voice notes and claims you must never make (optional)
@@ -163,6 +169,27 @@ improve:
   - Add the fixes your buyers say they tried, from reviews, to step 2, so the drops use them.
   - Save the opening moment that works to your brand file.
   - Run "Buyer brief writer" first, and finish with "Sales copy readiness checker".
+
+output_sample:
+  input:
+    - A note on the buyer, how aware they are, what they tried and their own words
+    - The real cause of the problem (optional, but best)
+    - Your product facts, offer and the proof you may use
+    - How long the story can be, in words or characters
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini
+    - Your brand brain and buyer brief (optional)
+  output:
+    - name: The story
+      contains: Paragraphs of two to five whole sentences, no headings, with your product arriving after the turn.
+    - name: Shape
+      contains: The drops in order, the low point, and where the product first appears as a share of the words.
+    - name: Cause used
+      contains: The fact from your notes the story turns on, quoted, or a line saying none was used.
+    - name: Assumed
+      contains: Anything inferred or made up to illustrate, plus gaps such as a missing cause or proof.
+    - name: Checks missed
+      contains: Any of its own checks that failed, or none.
 
 works_best_with:
   tools:

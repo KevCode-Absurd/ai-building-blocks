@@ -1,50 +1,84 @@
 new_slug: check-a-clinic-service-information-page
 name: Check a clinic service information page
 headline: Check a clinic service information page
-summary: Share the source files. Get a source gap list and corrected administrative FAQ draft.
+summary: Check your clinic's FAQ against approved service facts. Get a list of unsupported claims and a corrected, plain-words FAQ draft.
 job: help-customers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A source gap list and corrected administrative FAQ draft. Share an existing clinic administrative FAQ draft, approved service and booking facts, contact details, eligibility rules and clinical reviewer boundaries. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share your clinic's current FAQ and the approved facts on services, booking, contact details and who can book. Your AI flags each claim the facts do not back up, then rewrites the FAQ in plain words. You get a gap list and a corrected draft for your reviewer.
 explain: |-
-  A source gap list and corrected administrative FAQ draft.
+  A clinic FAQ goes out of date fast. Hours change, a service stops, a phone number moves. This workflow checks each line against the facts your clinic has approved.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Service and booking facts match approved records; medical claims remain for clinical review and are never invented. Missing tools or evidence stay visible in the final summary.
+  Step one reads the FAQ against your approved list and flags what it cannot back up: availability, who is eligible, prices, or claims about health benefits. Step two rewrites the FAQ so booking and contact steps are clear, and keeps the eligibility limits.
+
+  It covers administrative information only: how to book, where to go, what to bring. It does not write or check medical advice. Anything about treatment or outcomes goes to your clinical reviewer, marked as such.
 when:
-  - You need a source gap list and corrected administrative FAQ draft.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A patient called because the website lists a service you no longer offer.
+  - You are updating the booking page after a change in hours or staff.
+  - A new practice manager inherits an FAQ nobody has checked in years.
+  - You want a clinic FAQ that someone who has never visited can follow.
+not_for:
+  - You are writing down how new appointments are taken. Use Document a clinic appointment intake process.
+  - You want to measure waiting or call volume. Use Measure a clinic administrative queue.
+  - You need medical content checked. A clinician must review that. This only flags it.
+  - You have no approved facts yet. List them first, then run this.
 you_give:
-  - An existing clinic administrative FAQ draft, approved service and booking facts, contact details, eligibility rules and clinical reviewer boundaries.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your current clinic FAQ or service page, as pasted text
+  - "Approved facts: services, opening hours, booking steps and fees if listed (from your practice manager)"
+  - "Contact details: phone, address, email"
+  - Who can book each service, such as age or referral rules
+  - The name of the person who signs off health wording (optional)
 you_get:
-  - A source gap list and corrected administrative FAQ draft.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A gap list: each FAQ claim marked supported, unsupported or needs clinical review"
+  - A corrected FAQ draft in plain words, with booking and contact steps clear
+  - A list of changes, each with a reason
+  - Questions for your clinical reviewer
+  - A summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini.
+  - Paste the FAQ first, then the approved facts. Say who reads it, such as new patients.
+  - "Say: follow the workflow file and mark anything you cannot check."
+  - Read the gap list. For each unsupported line, find the right fact or cut the line.
+  - Send the clinical questions to the person who signs off health wording.
+  - Publish the corrected FAQ yourself once it is approved. This does not edit your site.
+output_sample:
+  input:
+    - Your current clinic FAQ
+    - Approved service, booking and contact facts
+    - Eligibility rules for each service
+    - Who signs off clinical wording (optional)
+  prerequisites:
+    - A list of facts your clinic has approved
+  output:
+    - name: step-01-unsupported-claim-spotter.md
+      contains: Each FAQ claim marked supported, unsupported or needing clinical review, with the fact it was checked against.
+    - name: step-02-plain-english-editor.md
+      contains: The corrected FAQ draft in plain words, with every change and reason listed.
+    - name: Hand-back summary
+      contains: Files saved, open questions for the clinical reviewer, checks not run and one next step.
 how_it_works:
   - title: Unsupported claim spotter
-    text: Check the FAQ against approved service information. Flag unsupported availability, eligibility, pricing, medical benefit or outcome claims for the responsible reviewer.
+    text: Checks each FAQ line against your approved facts and flags what they do not back up. Hands step 2 the marked-up FAQ and the gap list.
   - title: Plain English editor
-    text: Edit the existing administrative FAQ for understandable booking and contact instructions, preserving eligibility limits and removing or marking unapproved claims.
+    text: Rewrites the FAQ in plain words, keeping eligibility limits and removing or marking claims nobody approved. Hands back the corrected draft and the list of changes.
 output_shape: |-
-  Scope and source coverage
-  A source gap list and corrected administrative FAQ draft.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  CLINIC <name>, FAQ DATE <date>, FACTS USED <list>
+
+  GAP LIST      <FAQ line> | supported / unsupported / needs clinical review | <approved fact or none>
+  CORRECTED FAQ <question>: <answer in plain words>
+  CHANGES       <original> -> <edit> | <reason>
+  FOR REVIEWER  <question for the clinical reviewer>
+
+  MISSING        <each fact needed>
+  CHECKS MISSED  <one line each, or none>
+  NEXT STEP      <one action>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Service and booking facts match approved records; medical claims remain for clinical review and are never invented.
+  - what: Reader
+    how: Say who reads the page, such as parents or older patients. Wording and reading level change to suit them.
+  - what: Services covered
+    how: Limit the check to one service or one page. The gap list is shorter and easier to act on.
+  - what: Date of facts
+    how: Give the date your approved facts were last confirmed. The AI flags anything that may have changed since.
 judge:
   - Service and booking facts match approved records; medical claims remain for clinical review and are never invented.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +91,19 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the approved facts list as a single file. Run this again each time hours or services change.
+  - Record the clinical reviewer's answers so the next run does not ask them again.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Any good chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It must hold the FAQ and the approved facts side by side.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your booking system's service list
+    - Your clinic's privacy and cancellation notices
+    - Past patient questions from calls or email
+    - A list of terms the clinic prefers, such as 'appointment' not 'consultation'
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Unsupported claim
+    meaning: A line in the FAQ that your approved facts do not back up.
+  - term: Clinical review
+    meaning: A check by a clinician of any wording about treatment or outcomes.

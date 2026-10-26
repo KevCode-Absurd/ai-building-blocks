@@ -1,6 +1,6 @@
 new_slug: video-ad-edit-planner
 name: "Video ad edit planner"
-summary: "List your clips and script. Get a timed cut list, caption windows, a sound plan and exports."
+summary: "Plan a video ad edit from your clips and approved script. Get a timed cut list, caption windows, a sound plan and export settings."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You have founder, customer or product footage and need it cut into a paid ad.
   - You want to swap a new opening onto an ad you already run and check the join.
   - An editor's last cut added claims, urgency or music you never approved.
+not_for:
+  - "You want to edit organic posts that teach rather than sell: use the organic edit skill, or ask your AI for a simple teaching outline."
+  - "You have footage but no approved script or offer: write the script first, or ask a teammate to sign off the words."
+  - "You want a finished video file: this makes a plan only, so use an editing app or an editor to build the cut."
 
 you_give:
   - Your clips, with lengths, shape, and any speech, words on screen or music in them
@@ -38,6 +42,33 @@ how_to_use:
   - Paste the approved script, claims and offer. Say what shapes and length you need.
   - Hand the plan to your editor, or follow it yourself in any editing app.
   - Watch the first frame, every join and the close with sound on and off before you publish.
+output_sample:
+  input:
+    - Your clips, with file names, lengths and what is said or shown
+    - A few screenshots from each clip
+    - Your approved script, claims and offer
+    - What you sell, with real pack photos
+    - A transcript with times (optional)
+  prerequisites:
+    - An AI that can read pictures, to look at your screenshots
+    - A video ad script, for example from the Video ad script writer from customer quotes (optional)
+  output:
+    - name: Cut list
+      contains: Each shot with its source in and out times, its place on the timeline, what it shows and its audio.
+    - name: Joins
+      contains: Checks on how a new opening fits the ad body, if you swap openings.
+    - name: Caption windows
+      contains: Caption text with start and end times, plus the words to check in the transcript.
+    - name: Sound
+      contains: The plan for voice, effects and music, with where the music is cleared for paid ads.
+    - name: Close
+      contains: The one action, offer and destination, worded as approved.
+    - name: Export
+      contains: Shapes, clean and captioned copies, and file settings for each.
+    - name: Gaps
+      contains: Shots, times or clearances you still need, marked MISSING.
+    - name: Checks missed
+      contains: One line for each check the plan could not pass, or none.
 
 how_it_works:
   - title: Maps footage to the argument

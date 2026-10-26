@@ -1,6 +1,6 @@
 new_slug: crowded-category-white-space-finder
 name: "Crowded category white space finder"
-summary: "Name a crowded category and its leaders. Get the gaps in price, reach, taste or buyer."
+summary: "Find gaps in a crowded product category by price, reach, taste or buyer. Give it the top brands and get ranked gaps, a position for each and a test."
 job: find-products
 thinking: high
 thinking_why: "It weighs many gaps against real prices and reviews and must avoid inventing any, so a stronger model helps."
@@ -17,6 +17,10 @@ when:
   - You want to start a product line in a big category and need a point of difference.
   - Your category looks the same everywhere, with the same packs, claims and colors.
   - You have a product idea and want to know which single change would matter most to buyers.
+not_for:
+  - "Your category has no price or review data to look at: gather prices and reviews for three to five leaders first, then come back."
+  - "Your category is very small, new or falling: talk to a few likely buyers first, because this tool works best on big categories buyers already know."
+  - "You have no money for stock or design help: pick the smallest gap, or ask a person who has sold in this category what a first order costs."
 
 you_give:
   - Your category and the top three to five brands in it
@@ -37,6 +41,32 @@ how_to_use:
   - Say what you are good at, such as price or reach. A small store needs a smaller version of any big gap.
   - Read the ranked gaps and the proof needed for the top one. Check the facts yourself.
   - Run the short test before you order stock.
+output_sample:
+  input:
+    - Your category and its top three to five brands
+    - Each brand's price, where it sells and what its reviews complain about
+    - Your strengths, such as price, reach, taste or brand (optional)
+    - Photos or lists of the top ten products (optional)
+    - Who buys and where they buy (optional)
+  output:
+    - name: CATEGORY CHECK
+      contains: Whether the category is big, understood, growing or stale, and whether an Amazon category page exists.
+    - name: GAPS
+      contains: Gaps ranked by money you could win, each with evidence, a one-line position and the first proof needed.
+    - name: SAMENESS REPORT
+      contains: What every rival copies, so you can see where the category looks the same.
+    - name: MISSED SHIFTS
+      contains: Two or three changes in how people live that the category has not caught up with.
+    - name: IDEAS FROM FAR AWAY
+      contains: Ideas borrowed from distant fields, with where each one comes from.
+    - name: ONE-CHANGE IDEA
+      contains: The one big thing to change, what to keep, and the benefit to put on the pack.
+    - name: COPYCAT BARRIER
+      contains: How you would stop a rival from matching you in weeks.
+    - name: SHORT TEST
+      contains: Steps to test the idea, who sees it and what result lets you move on.
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none, plus a MISSING line for data you did not give.
 
 how_it_works:
   - title: Checks the category is worth it

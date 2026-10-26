@@ -1,6 +1,6 @@
 slug: store-seo-fix-prioritiser
 name: "Store SEO fix prioritiser"
-summary: "Paste a crawl report. Get the fixes that matter, an ignore list and a score out of 100."
+summary: "Turn a crawl report into the 5 to 10 store SEO fixes that matter, ranked by sales at risk, with an ignore list and a score out of 100."
 category: ecommerce
 type: skill
 role: check
@@ -8,8 +8,6 @@ job: analysis
 level: intermediate
 inputs:
   - {type: audit_report, required: true}
-  - {type: performance_sheet, required: false}
-  - {type: store_capture, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}

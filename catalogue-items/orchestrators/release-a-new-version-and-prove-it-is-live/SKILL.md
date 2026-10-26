@@ -21,15 +21,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Release preparer.** Use the skill `release-preparer`. Sets the version and writes the changelog from your commits.
+1. **Release preparer.** Use the skill `release-preparer`. Sets the version and writes the changelog from your commits. It hands over your project with the version bump and changelog in it.
 
 Pause here: Review the version bump and changelog, merge them and tag the release.
 
-2. **Ship readiness gate.** Use the skill `ship-readiness-gate`. Checks the tagged release and gives a go or no-go before anything goes live.
+2. **Ship readiness gate.** Use the skill `ship-readiness-gate`. Checks your project with the new version and gives a go or no-go. It hands over the go or no-go and the list of blockers.
 
 Pause here: Fix every blocker it lists. If it said no-go, run the gate again until it says go.
 
-3. **Vercel publisher.** Use the skill `vercel-publisher`. Puts the cleared release live and returns the link.
+3. **Vercel publisher.** Use the skill `vercel-publisher`. Uses your project once the gate says go, not the gate report. It puts the release live and hands over the live link.
 4. **Deploy verifier.** Use the skill `deploy-verifier`. Give it the deploy url from the steps before. Opens the live link from the step before and proves it serves the new build, not the old one.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

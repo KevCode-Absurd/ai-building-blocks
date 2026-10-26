@@ -1,44 +1,123 @@
 new_slug: meta-creative-similarity-risk-reviewer
 name: Meta creative similarity risk reviewer
-summary: Check the spread of formats, hooks and visuals in your ads. Flag observed repetition and suggest what to make next.
+summary: "Find Meta ads that look too alike. Get a creative diversity score out of 100, the repeat pairs, and what new format, hook or look to make next."
 job: check-ads
 headline: Meta creative similarity risk reviewer
-subhead: Share active ad list, previews, spend and concept labels. Get a four-part diversity score and observed similarity risk report.
+subhead: "Paste your active Meta ads with their spend and attach a preview of each. It scores your mix of formats, hooks, looks and spend, finds the pairs of ads that repeat each other, and writes what to make next."
 explain: |-
-  Check the spread of formats, hooks and visuals in your ads. Flag observed repetition and suggest what to make next.
+  When you run many Meta ads that look and sound the same, you pay to show people one idea many times. A creative diversity check shows how alike your ads really are, before you make more of them.
 
-  Share active ad list, previews, spend and concept labels. Get a four-part diversity score and observed similarity risk report.
+  This skill labels each ad by format, hook and visual look, then scores four things out of 25: how many formats you use, how many hooks, how many looks, and how evenly spend is spread. It then compares ads two at a time and groups the repeats. For each group it writes what to change in the next ad, such as a new format or a new opening, not just "make more".
+
+  It reports what you can see, not what Meta does inside. Meta has not published how it groups similar ads, so the skill does not claim to find those groups or to prove higher costs. A low score is a sign your ads need more variety. It is not proof of a cost problem.
 when:
-  - You need a four-part diversity score and observed similarity risk report.
-  - You need meta creative similarity risk reviewer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You run many Meta ads and suspect they are all variations of one idea.
+  - Costs are rising and you want to check ad variety before you blame the audience.
+  - You are about to brief a creator or editor and want to know which format, hook or look is missing.
+  - A teammate says "make one like the winner" and you want to see how many near copies you already have.
+not_for:
+  - "You want a plan of what to test next across 13 concept types and a test budget: use the Meta concept diversity test planner."
+  - "One ad has gone stale and you want ways to bring it back: use the Fatigued ad reviver."
+  - "You want to know if ads will be rejected: use the Meta ads compliance checker."
+  - "You only have ad names and no previews. The score will rest on weak labels. Attach the images first."
+  - "You run fewer than four active ads. There is too little to compare. Make more first."
 you_give:
-  - Active ad list
-  - Previews
-  - Spend and concept labels
+  - Your active ads in a table: ad name, ad ID, format and spend for the review period (CSV or pasted)
+  - A preview image or screenshot of each ad, or a still from each video
+  - The review dates and when each ad went live (optional)
+  - Your own hook or concept tags, if you use them (optional)
 you_get:
-  - A four-part diversity score and observed similarity risk report
-  - The sources used, missing inputs and assumptions
+  - A creative diversity score out of 100, in four parts of 25, with the counts behind each part
+  - A table of every ad with its format, hook, look and spend
+  - The groups of ads that repeat each other, with the matching features and your confidence
+  - A short brief for each group saying what format, hook or look the next ad should change
+  - A list of what could not be judged
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - In Meta Ads Manager, export your active ads with their spend. Paste the table in.
+  - Attach a screenshot or preview image of each ad. Start with the ads that get the most spend. Your AI can see images.
+  - Say if you tag your ads by hook or concept and paste those tags.
+  - Read the "similar pairs" first. Open two ads from a pair side by side and decide if you agree they repeat each other.
+  - Brief the next round from the "next briefs", then run the check again in a few weeks.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm active ad list, previews, spend and concept labels. Mark facts that are missing.
-  - title: Collect Input
-    text: Follow the collect input section in the full method and keep its required fields and decision rules.
-  - title: Fetch Active Ads
-    text: Follow the fetch active ads section in the full method and keep its required fields and decision rules.
-  - title: Score Four Dimensions (25 each, 100 total)
-    text: Follow the score four dimensions (25 each, 100 total) section in the full method and keep its required fields and decision rules.
-  - title: Detect Entity ID Clustering
-    text: Follow the detect entity id clustering section in the full method and keep its required fields and decision rules.
-  - title: Deliver Report
-    text: Follow the deliver report section in the full method and keep its required fields and decision rules.
-  - title: "Andromeda Check: {Brand}"
-    text: "Follow the andromeda check: {brand} section in the full method and keep its required fields and decision rules."
-  - title: Review the result
-    text: Return a four-part diversity score and observed similarity risk report. Check facts, math and the decisions before any action.
+  - title: Confirm the evidence
+    text: It notes whether it can see real ads or only names, and marks every label as seen or provisional.
+  - title: Label each ad
+    text: It records format, hook type, visual look, aspect ratio and text density from what it can see. Anything it cannot see stays unknown.
+  - title: Score four parts
+    text: Formats, hooks, looks and spend balance each score up to 25. It shows the counts behind every number and says which targets it used.
+  - title: Compare ads in pairs
+    text: Ads with the same format, hook and look are near repeats. Two of three matching is partial overlap. Repeats are grouped.
+  - title: Say what it means
+    text: Similar ads show limited variety. It does not claim that one ad hurt another or raised your costs, because that needs separate evidence.
+  - title: Write the next briefs
+    text: For each repeat group it names exactly what changes in the next ad, and suggests a small, time-limited test.
+output_shape: |-
+  BASICS  account <name> | window <from to> | media seen <all, some or names only>
+  DIVERSITY SCORE
+    formats <n of 25> (<count> of 3 target) | hooks <n of 25> (<count> of 4) | looks <n of 25> (<count> of 3) | spend balance <n of 25> (top share <x%>) | total <n of 100 or points available>
+  ADS TABLE
+  <ad ID> | <format> | <hook type> | <look> | <aspect ratio> | <spend> | label source <seen or provisional from name>
+  SIMILAR PAIRS AND GROUPS
+  <ad A> + <ad B> | near repeat or partial overlap | matches <features> | differences <features> | confidence <high or low> | candidate test <x>
+  WHAT THIS DOES AND DOES NOT SHOW  <plain limits>
+  NEXT BRIEFS  group <n> | change the <format, hook or look> to <new> | keep <what works>
+  MISSING AND NOT RUN  <list>
+output_sample:
+  input:
+    - Your active Meta ads with ad ID, format and spend for the period
+    - A preview image or screenshot of each ad
+    - Your own hook or concept tags (optional)
+  prerequisites:
+    - At least four active ads to compare
+    - An AI that can read images, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Diversity score
+      contains: Four scores out of 25 for formats, hooks, looks and spend balance, with the counts behind each.
+    - name: Ads table
+      contains: Every ad with its format, hook, look, aspect ratio, spend and whether the label was seen or guessed.
+    - name: Similar pairs and groups
+      contains: Ads that repeat each other, with matching features, differences and how sure it is.
+    - name: What this does and does not show
+      contains: A plain note that similar ads show limited variety and do not prove higher costs.
+    - name: Next briefs
+      contains: For each repeat group, which format, hook or look to change in the next ad.
+    - name: Missing and not run
+      contains: Any ad, preview or number it could not use, so you know what to add.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  tools:
+    - name: Any chat AI that can read images
+      why: It labels each ad from the preview you attach. Without images it can only use names.
+    - name: Meta Ads Manager
+      why: It is the source of your ad list and spend. Export at ad level.
+  inputs:
+    - The date each ad went live.
+    - Your own concept tags.
+    - Results by ad, so repeat groups can be checked against what they earned.
+terms:
+  - term: Hook
+    meaning: The first seconds or first line of an ad, which decide whether people keep watching.
+  - term: Visual look
+    meaning: How an ad appears, such as its setting, colors, style and who or what is shown.
+  - term: Near repeat
+    meaning: Two ads with the same format, hook and look.
+  - term: CPM
+    meaning: What you pay for every 1,000 times your ad is shown.
+  - term: Spend balance
+    meaning: How evenly your budget is spread across formats, hooks and looks.
+tweaks:
+  - what: Previews
+    how: Attach an image for every ad. Labels from images are much stronger than labels from names.
+  - what: Targets
+    how: The skill looks for three formats, four hook types and three looks, and spend of 40% or less on any one. Change these in SKILL.md if your catalogue is small or very large.
+  - what: Review window
+    how: Use the period in which the ads ran together. Ads that never ran side by side are not competing.
+  - what: Your own tags
+    how: Paste your hook or concept tags and the skill will use them, and mark them as yours.
+improve:
+  - Keep the ads table from each run in one file, so you can see variety change from month to month.
+  - Edit the targets in SKILL.md to match your own account, and note the change.
+  - Add your own hook types to the label list, for example "founder story" or "price drop".
+  - Pair it with the Meta concept diversity test planner to turn the gaps into a test plan.

@@ -2,17 +2,57 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-codeql
 name: CodeQL scan setup helper
-summary: Share your repo and languages. Get CodeQL scanning set up in Actions or
-  the command line.
+summary: Set up CodeQL code scanning for your repo. Give it your languages and setup. You get a CodeQL workflow file or the command line steps to run.
 job: secure-code
 headline: CodeQL scan setup helper
-subhead: Share your repo and languages. Get CodeQL scanning set up in Actions or
-  the command line. Share your goal and the files you already have. The skill
-  file sets out the steps and the tools needed for this job.
+subhead: Give your AI your repo, your languages and how you want to scan. It writes the CodeQL workflow file or the command line steps. It also helps you fix scan errors.
+not_for:
+  - Your private repo has no GitHub Advanced Security plan. Use a free scanner that works without it, or ask your GitHub admin about the plan.
+  - You want your code reviewed for logic bugs or style. Ask a developer on your team for a code review.
+  - You need a scan that is not code, like a check of your server or website. Use a vulnerability scanner built for that.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Tell your AI your repo, your languages and whether you use Actions or the command line.
+  - Add your build command and any error messages if you have them.
+  - Copy the workflow file into .github/workflows/codeql.yml in your repo and commit it.
+  - For the command line route, run the commands yourself on a computer with the CodeQL bundle installed.
+  - Check the Security tab in your repo for the first scan results.
+output_sample:
+  input:
+    - Your repo name and where it lives (GitHub or local)
+    - The languages in your code
+    - Whether you want GitHub Actions or the command line
+    - How your code is built (optional)
+    - Folders to skip, such as tests (optional)
+  prerequisites:
+    - A GitHub repo you can edit
+    - "For the command line route: the CodeQL bundle installed and a computer that can run commands"
+  output:
+    - name: codeql.yml workflow
+      contains: A GitHub Actions file with triggers, permissions, a language list, build modes and the CodeQL init and analyze steps.
+    - name: CodeQL config file
+      contains: Optional file that sets which folders to scan or skip, plus query packs, for monorepos.
+    - name: CLI commands
+      contains: The commands to create a database, analyze it into a SARIF file and upload the results.
+    - name: Troubleshooting fixes
+      contains: Likely causes and fixes if the scan fails, finds too little code or cannot upload.
+    - name: Alert triage tips
+      contains: How to read alert severity, use Copilot Autofix suggestions and dismiss false alarms with a reason.
+when:
+  - You want to turn on code scanning for a new GitHub repo
+  - You need a codeql.yml file that fits your languages and build
+  - Your CodeQL scan fails or finds less code than expected
+  - You have a monorepo and want each part scanned on its own
+you_give:
+  - Your repo name and host
+  - The languages in your code
+  - Actions or command line, whichever you prefer
+  - Your build command for compiled languages (optional)
+  - Folders to skip (optional)
+  - The error message, if a scan is failing (optional)
+you_get:
+  - A ready codeql.yml file for GitHub Actions
+  - Or the command line steps to scan and upload results
+  - A config file to limit which folders are scanned, if you need one
+  - Fixes for common scan errors
+  - Tips on reading and handling alerts

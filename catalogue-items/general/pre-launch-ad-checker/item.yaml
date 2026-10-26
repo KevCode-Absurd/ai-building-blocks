@@ -20,6 +20,10 @@ inputs:
     required: false
   - type: image_prompt
     required: false
+  - type: landing_page
+    required: false
+  - type: copy_draft
+    required: false
   - type: brand_brain
     required: false
 outputs:

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It opens up options first, then narrows to the best one.
 new_slug: idea-sharpener
 name: Idea sharpener
-summary: Share a rough idea. Get it widened, stress-tested and cut to a one-page
-  concept worth acting on.
+summary: Turn a rough idea into a one-page concept. Your AI widens your options, tests them and cuts them to one clear direction to act on.
 job: test-an-idea
 headline: Idea sharpener
-subhead: A rough idea turned into a one-page concept worth acting on. Share what
-  you have and it widens your options, tests them hard and cuts them down to one
-  clear direction.
+subhead: A rough idea turned into a one-page concept worth acting on. Share what you have and it widens your options, tests them hard and cuts them down to one clear direction.
 explain: |
   A rough idea turned into a one-page concept worth acting on. Share what you have and it widens your options, tests them hard and cuts them down to one clear direction.
 
@@ -18,6 +15,10 @@ when:
   - You want to compare a few versions of a plan before picking one.
   - You fear a plan has hidden weak spots and want them found.
   - You need a short page to share with a partner or developer.
+not_for:
+  - "You do not know what you want yet: talk it through with a friend or a coach first, then come back with a rough idea."
+  - "You already picked a direction and need a full spec: write the spec with your AI or a developer."
+  - "You want a market size, sales forecast or price test: use real customer research instead."
 you_give:
   - Your rough idea
   - Who it is for (optional)
@@ -29,7 +30,31 @@ you_get:
   - A one-page concept
   - A not-doing list to keep scope tight
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Before you start, have three things ready: who the idea is for, how you will know it worked, and any limit on time or money."
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
+  - Type your rough idea. Answer the 3 to 5 questions it asks. It will not go on until it knows who the idea is for and what success looks like.
+  - Read the 5 to 8 variations. Say which ones you like and which you do not.
+  - Read the directions it compares and the assumptions it names. Push back if something feels wrong.
+  - Ask for the one-page concept. If your AI can save files, it will ask before saving. Otherwise copy the page into your own notes.
+output_sample:
+  input:
+    - Your rough idea, in a few lines
+    - Who it is for (optional)
+    - Limits on time, money or skills (optional)
+    - Your answers to its 3 to 5 questions
+  prerequisites:
+    - An AI chat you can talk back and forth with
+    - "Optional: an AI that can save files, if you want the page saved"
+  output:
+    - name: Problem Statement
+      contains: Your idea restated as one "How Might We" sentence.
+    - name: Recommended Direction
+      contains: The direction it picked and why, in two or three short paragraphs.
+    - name: Key Assumptions to Validate
+      contains: A checklist of things you are betting on, each with a way to test it.
+    - name: MVP Scope
+      contains: The smallest first version that tests your main bet, with what is in and out.
+    - name: Not Doing (and Why)
+      contains: Good ideas you will skip for now, each with a reason.
+    - name: Open Questions
+      contains: Questions to answer before you start building.

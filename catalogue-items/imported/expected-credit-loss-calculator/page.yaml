@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It models default risk with many judgment calls.
 new_slug: expected-credit-loss-calculator
 name: Expected credit loss calculator
-summary: Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL.
+summary: Work out expected credit losses under IFRS 9 or CECL from your loan or receivable list. You get the allowance, stages and journal entry.
 job: money-and-investing
 headline: Expected credit loss calculator
-subhead: Give it loan data. Get expected credit losses worked out under IFRS 9
-  or CECL. Bring loan or receivable list with balances. Use the result to plan
-  your next step.
+subhead: Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL. Bring loan or receivable list with balances. Use the result to plan your next step.
 explain: |
   Expected credit losses for your loans or receivables, worked out the way IFRS 9 or CECL requires, with the number you need for the loss allowance.
 
@@ -17,6 +15,10 @@ when:
   - Your receivables are aging and you must estimate what you will not collect.
   - You are moving from incurred loss to expected loss reporting.
   - An auditor wants to see how you built your allowance.
+not_for:
+  - "You need a legal write-off or a tax reserve: ask your accountant, as this gives an accounting estimate only."
+  - "You want to post the journal entry without review: have a qualified accountant check the numbers first."
+  - "You only want a quick look at which credit risks exist: list them with a person who knows your lenders or customers first."
 you_give:
   - Loan or receivable list with balances
   - Default history or ratings
@@ -29,8 +31,23 @@ you_get:
   - Journal entry for the allowance
   - Notes on method for audit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code and read your files.
+output_sample:
+  input:
+    - Your loan or receivable list with balances
+    - Your default history or credit ratings
+    - The asset type and the accounting standard (IFRS 9 or CECL)
+    - Your economic scenarios and their weights (optional)
+  prerequisites:
+    - An AI that can run code and read your files, to use the calculation script
+  output:
+    - name: The Portfolio
+      contains: Total amount at risk and a split of your assets across stage 1, 2 and 3.
+    - name: The Provision
+      contains: The total loss allowance and the coverage ratio, which is the allowance divided by the amount at risk.
+    - name: Sensitivity & Scenarios
+      contains: How the loss changes if the chance of the downside economic scenario goes up by 10%.
+    - name: Journal entry
+      contains: The entry that books the loss allowance.

@@ -1,6 +1,6 @@
 new_slug: sales-team-hiring-pay
 name: Hire, pay and measure a sales team on what works
-summary: Describe your sale and past hires. Get a hiring scorecard, a pay plan check and one early sign of customer success.
+summary: Build a sales team hiring scorecard, check your sales pay plan against who stays, and set one early sign of customer success from your own data.
 job: lead-people
 thinking: high
 thinking_why: It reads your hires, pay and customer data and has to spot patterns without inventing any. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are building a sales team and want hiring, pay and targets to rest on data instead of gut feel.
   - Your top earners bring in customers who leave early, and you want to see if the pay plan is part of the cause.
   - You can only tell if a customer is doing well after they cancel, and you want a sign you can see in the first weeks.
+not_for:
+  - "Your customers have no cancel or churn dates yet: pull a sales export from your CRM first, then come back."
+  - "You need legal advice on hiring traits: ask an employment lawyer or HR adviser to check that each trait relates to the job."
+  - "You have no sales team or past hires to learn from: write a simple job description with a person you trust, then use this later."
 you_give:
   - What you sell, who buys it, how hard it is to explain and how long a sale takes
   - How past hires turned out, with a few notes on each (optional)
@@ -32,6 +36,24 @@ how_to_use:
   - Describe your sale and your past hires. It builds the scorecard first.
   - Share your pay plan and each rep's results. Give any pay change at least two quarters before you judge it.
   - Share what customers did after buying. It sets the early sign last and checks it against your costs.
+output_sample:
+  input:
+    - What you sell, who buys it and how long a sale takes
+    - Notes on how past hires turned out (optional)
+    - Your pay plan and each rep's sales and customer churn
+    - What customers did after they bought, with start and cancel dates
+    - Cost to win a customer (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Hiring scorecard"
+      contains: A 1 to 10 scorecard with a test for each trait, a one-page score sheet and a date to re-check.
+    - name: "Step 2: Pay plan check"
+      contains: What your plan rewards and ignores, reps ranked by churn next to earnings, and one change to test.
+    - name: "Step 3: Early sign of success"
+      contains: One sign written as a percent, an action and a time limit, with a way to measure it by cohort.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build the scorecard
     text: Describes your sale, defines the traits that predict success, and writes what a 1, 5 and 10 look like with a test for each.

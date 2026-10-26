@@ -48,16 +48,16 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **YouTube readiness checker.** Use the skill `youtube-readiness-checker`. Decides if YouTube is worth trying now and what to hold back.
+1. **YouTube readiness checker.** Use the skill `youtube-readiness-checker`. Decides if YouTube is worth trying now and what to hold back. Hands step 2 the yes-or-wait call and what to hold back.
 
 Pause here: Cut three to five short video ads from your best Meta video and choose the landing page.
 
-2. **Demand Gen cold traffic builder.** Use the skill `demand-gen-cold-campaign-builder`. Builds the cold campaign around the readiness call and the videos you made.
+2. **Demand Gen cold traffic builder.** Use the skill `demand-gen-cold-campaign-builder`. Builds the cold campaign around the readiness call and the videos you made. Uses your cut videos and landing page from the pause. Hands step 4 the campaign plan.
 
 Pause here: Run the campaign for two to four weeks, then export the results by ad.
 
-3. **YouTube ad results reader.** Use the skill `youtube-ad-results-reader`. Scores each ad against the plan so you know which to scale.
-4. **Google remarketing campaign builder.** Use the skill `google-remarketing-campaign-builder`. Give it the plan from the steps before. Adds a layer for people who watched or visited, using the plan and the winning videos.
+3. **YouTube ad results reader.** Use the skill `youtube-ad-results-reader`. Scores each ad so you know which to scale. Uses your results export by ad and placement, from the pause. Step 2's plan tells you which ad groups to export. Hands step 4 the scale, keep or pause call for each video.
+4. **Google remarketing campaign builder.** Use the skill `google-remarketing-campaign-builder`. Give it the plan from the steps before. Adds a layer for people who watched or visited, using the plan and the winning videos. Uses step 2's plan, your offer and the ads step 3 marked scale.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

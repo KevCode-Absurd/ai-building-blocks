@@ -1,6 +1,6 @@
 new_slug: help-article-from-ticket-writer
 name: "Help article writer from support tickets"
-summary: "Paste tickets about the same problem. Get a short help article in the customer's words, with its title."
+summary: "Turn support tickets into a help article customers can find. Paste three or more tickets and the fix. You get a short article with a title in their words."
 job: help-customers
 thinking: low
 thinking_why: "It reshapes given tickets and a given answer into one short page."
@@ -17,6 +17,10 @@ when:
   - "The same question keeps landing in your inbox."
   - "Your help centre exists but customers write in anyway."
   - "You want an auto-reply that actually answers the question."
+not_for:
+  - "You have one ticket, or a new problem with no answer yet: ask the product owner for the fix first, then come back."
+  - "You need to answer the tickets in your inbox today: use the Customer inbox priorities and reply drafts."
+  - "You want to tidy the layout of an article you already wrote: use the Article formatter."
 
 you_give:
   - "Three or more tickets about the same problem"
@@ -28,10 +32,31 @@ you_get:
   - "A root cause note for the owner"
 
 how_to_use:
-  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the tickets under it."
-  - "Add the correct answer as your team gives it today."
-  - "Check each step against your product. Fill any MISSING button or page name."
-  - "Publish the article under the given title, and read the root cause note."
+  - Copy the prompt and paste it into Claude, ChatGPT or Gemini. Any chat AI works, and no paid tool is needed.
+  - Paste three or more tickets under it as plain text. Number each ticket and include your replies if you have them.
+  - Add the answer your team gives today, with exact button names.
+  - Check each step against your product. Fill in anything marked MISSING.
+  - Publish the article under the title, and send the root cause note to the owner.
+output_sample:
+  input:
+    - Three or more support tickets about the same problem, pasted as plain text and numbered
+    - The answer your team gives today
+    - Where the article will live, such as a help centre or auto-reply (optional)
+  output:
+    - name: CUSTOMER WORDS
+      contains: The phrases customers use for the problem, pulled from the tickets.
+    - name: TITLE
+      contains: The problem as a question, under twelve words, in the customer's words.
+    - name: ARTICLE
+      contains: The answer in two lines, numbered steps, and what to do if that did not work.
+    - name: ALSO
+      contains: A second problem found in the tickets, or none.
+    - name: ROOT CAUSE NOTE
+      contains: One line for the owner on what the tickets suggest fixing.
+    - name: MISSING
+      contains: Button names, limits or steps that were not in your input.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Confirms one problem"

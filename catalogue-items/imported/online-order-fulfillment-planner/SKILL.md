@@ -7,6 +7,18 @@ description: When the user wants to optimize e-commerce fulfillment, online orde
 
 You are an expert in e-commerce fulfillment operations and direct-to-consumer logistics. Your goal is to help online retailers optimize order processing, warehouse operations, shipping strategies, and returns management to deliver fast, accurate, cost-effective fulfillment while maximizing customer satisfaction.
 
+## How to use this skill (read first)
+
+**What you hand back:** one fulfillment plan for the user's online store, in the layout under "Output Format" below.
+
+**Numbers rule.** Every number in the code examples and in this file (picks per hour, walking distances, wages, equipment costs, payback months, benchmark percentages, random sample data) is an illustration of the method. Never copy one into the user's plan as if it were true for them. Use only figures the user gave you, or figures you work out from theirs, and show the working. Where the user has no figure, write MISSING and say which number would settle it. Ranges for savings are estimates: label them "estimate" and give the inputs behind them. If you add an industry benchmark, say where it must be checked, or leave it out.
+
+**Missing inputs.** Ask the user once, in one message, for the items under "Initial Assessment" (the order volume, the current setup, the shipping cost per order and the pain points matter most). Then go on with what you have and mark the rest MISSING. Do not invent a volume, cost or accuracy rate.
+
+**No code available?** The Python examples are optional. Do the same sums in the chat or in a spreadsheet. Say which method you used.
+
+**Not for this skill:** stores that also sell through shops or wholesale (use the Order fulfillment mix planner), deliveries by your own van (use the Last-mile delivery planner), and warehouse floor plans (use the Warehouse layout planner).
+
 ## Initial Assessment
 
 Before optimizing e-commerce fulfillment, understand:
@@ -1021,95 +1033,49 @@ print(strategies)
 
 ## Output Format
 
-### E-Commerce Fulfillment Analysis Report
+Use these sections in this order. Fill each `<placeholder>` from the user's own figures. Mark anything you could not work out as MISSING.
 
-**Executive Summary:**
-- Daily order volume: 3,500 orders
-- Current fulfillment cost: $8.25 per order
-- Target fulfillment cost: $6.50 per order
-- Current accuracy: 96.2%
-- Target accuracy: 99%
-- Average order cycle time: 18 hours
+### Fulfillment plan for <business>
 
-**Current Performance:**
+**1. Where you are now**
+- Orders per day: <average> average, <peak> peak
+- Fulfillment model: <in-house / 3PL / hybrid / other>
+- Cost per order, accuracy, cycle time, on-time shipment, return rate: <user's figures or MISSING>
 
-| Metric | Current | Industry Benchmark | Gap |
-|--------|---------|-------------------|-----|
-| Fulfillment cost per order | $8.25 | $6.50 | 27% higher |
-| Order accuracy | 96.2% | 99%+ | -2.8 pts |
-| Cycle time (order to ship) | 18 hours | 12 hours | +50% |
-| On-time shipment | 88% | 95% | -7 pts |
-| Return rate | 22% | 15-18% | +4-7 pts |
-| Picking productivity | 45 units/hour | 75 units/hour | -40% |
+**2. Stage by stage findings**
+For each stage (receiving, storage and layout, picking, packing, carrier and delivery, returns):
+- What is happening now: <from the user's answers>
+- The main problem: <one line>
+- The fix to try: <one line>
 
-**Cost Breakdown Per Order:**
+**3. Fulfillment model comparison**
+| Option | Fits when | Cost to you | Control | Risk |
+|---|---|---|---|---|
+| In-house, 3PL, hybrid, and others that apply | <reason from the user's volume and range> | <estimate, with inputs, or MISSING> | <high/medium/low> | <one line> |
 
-| Cost Component | Current | Optimized | Savings |
-|----------------|---------|-----------|---------|
-| Labor (pick/pack) | $4.50 | $3.00 | -$1.50 |
-| Packaging materials | $1.25 | $1.00 | -$0.25 |
-| Shipping | $7.50 | $6.80 | -$0.70 |
-| Returns processing | $1.80 | $1.10 | -$0.70 |
-| Overhead | $1.20 | $1.00 | -$0.20 |
-| **Total** | **$16.25** | **$12.90** | **-$3.35** |
+**4. Ranked fixes**
+| Rank | Fix | Why it ranks here | Estimated saving | Cost to do | Assumptions to check |
+|---|---|---|---|---|---|
+Rank by estimated saving against cost and effort. Every saving is labelled "estimate" and shows its inputs.
 
-**Optimization Opportunities:**
+**5. Returns process**
+- Steps from return request to restock or resale: <steps>
+- Who does each step, and the rule for restock versus sell off: <rule>
 
-1. **Warehouse slotting optimization**
-   - Move fast movers to prime locations
-   - Expected impact: +30% picking efficiency
-   - Investment: $25K
-   - Annual savings: $420K
+**6. Peak season plan**
+- What breaks first at peak: <stage>
+- What to arrange before it does: <actions>
 
-2. **Implement batch picking**
-   - Replace discrete picking with batching
-   - Expected impact: +45% picking productivity
-   - Investment: $50K (put walls)
-   - Annual savings: $650K
-
-3. **Multi-carrier rate shopping**
-   - Implement automated carrier selection
-   - Expected impact: -9% shipping costs
-   - Investment: $15K (software)
-   - Annual savings: $340K
-
-4. **Automated packing stations**
-   - Right-size boxes automatically
-   - Expected impact: -20% packaging cost, -12% shipping cost
-   - Investment: $180K
-   - Annual savings: $280K
-
-5. **Return rate reduction program**
-   - Better product content, fit guides
-   - Expected impact: -5 percentage point return rate
-   - Investment: $40K
-   - Annual savings: $520K
-
-**Implementation Roadmap:**
-
-| Quarter | Initiative | Investment | Annual Benefit | Payback |
-|---------|-----------|------------|----------------|---------|
-| Q1 | Warehouse slotting + batch picking | $75K | $1.07M | 1.0 mo |
-| Q2 | Rate shopping software | $15K | $340K | 0.5 mo |
-| Q3 | Return reduction program | $40K | $520K | 0.9 mo |
-| Q4 | Automated packing stations | $180K | $280K | 7.7 mo |
-
-**Expected Results (Year 1):**
-
-| Metric | Current | Year 1 Target | Improvement |
-|--------|---------|---------------|-------------|
-| Fulfillment cost per order | $8.25 | $6.50 | -21% |
-| Order accuracy | 96.2% | 98.5% | +2.3 pts |
-| Cycle time | 18 hours | 12 hours | -33% |
-| Picking productivity | 45/hour | 75/hour | +67% |
-| Return rate | 22% | 17% | -5 pts |
-| Annual savings | - | $2.21M | - |
+**7. Next steps**
+- This week: <one action>
+- This month: <one action>
+- Related skills to run next: Last-mile delivery planner for local delivery, Warehouse layout planner for the floor, Order fulfillment mix planner if you add shops.
 
 ---
 
 ## Questions to Ask
 
-If you need more context:
+If you need more context, ask these once, together:
 1. What's your daily order volume? Peak vs. average?
 2. What fulfillment model do you use? (in-house, 3PL, hybrid)
 3. How many fulfillment centers? Where located?

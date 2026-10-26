@@ -2,35 +2,99 @@ thinking: medium
 thinking_why: It calculates costs with set formulas, then grades them.
 new_slug: stock-trading-cost-checker
 name: Stock trading cost checker
-summary: Give it a stock. Get how easy it is to trade and what a big order may
-  cost. Collects data from websites.
+summary: Check how easily a stock trades and what a big order may cost. Get a liquidity grade, spread, volume and price impact from Yahoo Finance data.
 job: money-and-investing
 headline: Stock trading cost checker
-subhead: Give it a stock. Get how easy it is to trade and what a big order may
-  cost. Collects data from websites. Bring a ticker or list of tickers. Use the
-  result to plan your next step.
+subhead: Give it a ticker and, if you have one, the size of the order you plan. It reads Yahoo Finance data in Python and measures the gap between buy and sell prices, daily volume and turnover. You get a liquidity grade, an estimate of how far your order could move the price, and a side-by-side table for several stocks.
 explain: |
-  Learn how easily you can buy or sell a stock, and what a larger order might really cost you. The quoted price is not what you pay, so it measures the gap between buy and sell prices, daily volume in shares and dollars, and how deep the market is at the top.
+  A stock trading cost checker tells you how easily you can buy or sell a stock, and what a larger order might really cost. The quoted price is not what you pay. This skill measures the gap between buy and sell prices, daily volume in shares and money, and how much of the stock changes hands each day.
 
-  It then estimates how far a given order size could move the price, using a square-root impact method, plus turnover and an illiquidity measure, and rolls it up into a liquidity grade. You can compare several stocks. It shines for small caps and thinly traded names. It uses Yahoo Finance data through Python, so it needs code to run. It is research, not advice.
+  It then estimates how far an order of your size could push the price, using a simple square-root method from trading research. It adds an illiquidity measure and rolls everything into a liquidity grade. It is most useful for small stocks and thinly traded names, and you can compare several tickers at once.
+
+  The data comes from Yahoo Finance through an unofficial Python library. It can be delayed, missing or blocked, and the grade cut-offs are rough rules of thumb. Treat the results as a rough guide, not a quote.
 when:
   - You want to buy a small-cap stock and fear you cannot sell it later.
-  - You plan a large order and want to guess the slippage.
-  - You are comparing the tradability of two or three tickers.
+  - You plan a large order and want a rough guess at the cost of moving the price.
+  - You are comparing how easily two or three tickers trade.
   - A stock looks cheap and you want to know if low volume explains why.
+not_for:
+  - You need live prices or order-book depth to place a trade. Yahoo data is delayed and shows only the top of the book. Use your broker's tools.
+  - You want advice on whether to buy. This gives trading cost data, not a recommendation.
+  - You want to know which stocks move together. Use the Stock co-movement checker.
 you_give:
-  - A ticker or list of tickers
-  - Planned order size in shares or dollars (optional)
-  - A way to run Python
+  - A ticker or a list of tickers
+  - Planned order size, in shares or in money (optional)
+  - An AI that can run Python
 you_get:
-  - A liquidity grade
-  - Typical buy and sell price gap
+  - A liquidity grade for each stock
+  - The typical gap between buy and sell prices
   - Average daily volume and turnover
-  - Estimated price impact for your order size
-  - A side-by-side comparison of tickers
+  - An estimated price impact for your order size
+  - A side-by-side table when you give several tickers
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open Claude, ChatGPT or Gemini with a tool that can run Python. Add this skill, or paste the text of SKILL.md into a new chat.
+  - Give the ticker, and the order size if you have one. For a non-US stock, add the Yahoo suffix, for example RELIANCE.NS.
+  - Say yes if it asks to install the yfinance, pandas and numpy packages.
+  - Read the grade table, then the impact figure for your order size. Note any field marked n/a.
+  - If the impact looks high, ask for the same order split over several days. Check the stock on your broker's own screen before you trade.
+how_it_works:
+  - title: Check the setup
+    text: It tests that yfinance, pandas and numpy are installed and asks you before it installs anything.
+  - title: Pick the measure
+    text: It sends your question to the right check, such as the full dashboard, spread, volume, depth, impact or turnover.
+  - title: Pull the data
+    text: It fetches three months of daily prices and volume, plus the latest quote, for each ticker.
+  - title: Work out the numbers
+    text: It computes spread, average daily volume, turnover and an illiquidity ratio, and a price-impact estimate for your order size.
+  - title: Grade the stock
+    text: It maps volume, spread and illiquidity to a grade from very high to very low, and says the cut-offs are rough rules of thumb.
+  - title: Report with caveats
+    text: It lists the data time, empty fields and limits, such as a 15-minute delay and no full order book.
+output_shape: |
+  What was checked: <tickers>, <lookback period>, <time of data>
+  Liquidity grade: <ticker> | <grade> | <daily dollar volume> | <spread> | <turnover>
+  Order impact: <order size> | <impact in percent> | <impact in basis points> | <cost in money>
+  Impact curve: <share of daily volume> | <impact>
+  Comparison: <ticker A> and <ticker B>, and which trades more easily
+  Gaps and caveats: <n/a fields>, <delay>, <source limits>
+output_sample:
+  input:
+    - A ticker or a list of tickers
+    - Planned order size, in shares or in money (optional)
+  prerequisites:
+    - An AI that can run Python 3
+    - Your yes to installing yfinance, pandas and numpy if they are missing
+  output:
+    - name: Liquidity dashboard
+      contains: Spread, average daily volume in shares and money, turnover and an illiquidity ratio for each ticker.
+    - name: Liquidity grade
+      contains: A grade from very high to very low, with a note that the cut-offs are rough.
+    - name: Order impact estimate
+      contains: How far your order may move the price, in percent, basis points and money.
+    - name: Impact curve
+      contains: Estimated impact for a range of order sizes as a share of daily volume.
+    - name: Comparison table
+      contains: Several tickers side by side, with which one trades more easily and why.
+    - name: Gaps and caveats
+      contains: Empty fields, the data time and the limits of Yahoo data.
+works_best_with:
+  tools:
+    - name: Claude
+      why: It can run the code when code tools are on and keep the tables clear.
+    - name: ChatGPT
+      why: Its data analysis tool runs Python and can chart volume.
+  inputs:
+    - Your real order size, not a round guess
+    - Your broker's quoted spread for the stock, to compare
+    - The tickers of two or three alternatives to compare
+terms:
+  - term: Spread
+    meaning: The gap between the best buy price and the best sell price.
+  - term: Liquidity
+    meaning: How easily you can buy or sell without moving the price.
+  - term: Price impact
+    meaning: How far your own order pushes the price against you.
+  - term: Basis point
+    meaning: One hundredth of one percent. 25 basis points is 0.25%.
+  - term: Turnover
+    meaning: The share of a company's shares that trade in a day.

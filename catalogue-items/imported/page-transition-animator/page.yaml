@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies animation patterns to the existing code.
 new_slug: page-transition-animator
 name: Page transition animator
-summary: Describe the motion you want. Get smooth React page and element
-  transitions that respect reduced-motion settings.
+summary: Add smooth page transitions to your React or Next.js app. Describe the motion and get working code that respects reduced-motion settings.
 job: build-websites
 headline: Page transition animator
-subhead: Describe the motion you want. Get smooth React page and element
-  transitions that respect reduced-motion settings. Bring your React or Next.js
-  code. Use the result to plan your next step.
+subhead: Describe the motion you want. Get smooth React page and element transitions that respect reduced-motion settings. Bring your React or Next.js code. Use the result to plan your next step.
 explain: |
   Smooth movement between screens in your React or Next.js app, such as a card that grows into a detail page, using the browser's built-in transition tool instead of a heavy library.
 
@@ -18,6 +15,10 @@ when:
   - You want a thumbnail to grow into its full page.
   - You are adding animation but fear it will annoy users.
   - You must respect users who set reduced motion.
+not_for:
+  - Your app does not use React. Use your framework's own animation tools, or ask a front-end developer.
+  - You want a slide or fade when data refreshes in the background. Leave those still, because this skill sets them to no animation.
+  - You need each list item to animate one by one during a page change. That does not work yet, so keep one animation for the whole page.
 you_give:
   - Your React or Next.js code
   - Which screens or lists should animate
@@ -28,8 +29,29 @@ you_get:
   - Reduced-motion handling
   - Notes on which moments were left still
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can edit your project files.
+  - Open your AI tool. Use one that can edit your project files if you can.
+  - Paste this skill into the chat, or add the skill folder to your project.
+  - Share the code for the screens or lists you want to animate. Say what feel you want.
+  - Ask your AI to audit first, then add the transitions and the styles.
+  - Run your app and try each move. Then turn on reduced motion in your system settings and check that the animations stop.
+  - Back and forward buttons in the browser do not animate. Use links that navigate to a set address if you need the motion.
+output_sample:
+  input:
+    - Your React or Next.js code, such as the list and detail pages
+    - Which screens or lists should animate
+    - The feel you want, such as subtle or lively (optional)
+  prerequisites:
+    - A React or Next.js project
+    - An AI that can read and edit your project files, or paste the code into a chat
+    - A browser that supports view transitions, such as recent Chrome, Firefox or Safari
+  output:
+    - name: Audit
+      contains: A check of your app for places where a transition says something, such as going deeper or new data arriving.
+    - name: Changed component files
+      contains: Your pages and lists wrapped in transition tags, with triggers set so only the chosen moments animate.
+    - name: Global stylesheet CSS
+      contains: Ready-made animation styles for each navigation type, plus the reduced-motion rule.
+    - name: Next.js setup
+      contains: The settings and link options needed to turn transitions on, if your app uses Next.js.
+    - name: Moments left still
+      contains: A short list of moments with no animation, such as background refreshes, and the reason for each.

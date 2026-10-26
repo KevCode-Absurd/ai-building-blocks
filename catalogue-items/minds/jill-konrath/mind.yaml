@@ -16,6 +16,29 @@ use_cases:
   - "Run the 'So what?' test on a list of benefits until you reach business impact"
   - "Find ways to fill your pipeline with partners, events and webinars in a slow market"
   - "Free up an hour a day by cutting distractions from your selling time"
+not_for:
+  - "You want to build a hard-sell close or a daily prospecting habit: use the Jeb Blount mind."
+  - "You want to sort out a buyer's problem through a set of question types: use the Neil Rackham mind."
+  - "You need legal, medical or personal money advice, or what Konrath would say about events after October 2026: ask a qualified person, because this mind only reflects her recorded work."
+output_sample:
+  input:
+    - Your draft message, email or meeting plan
+    - Who the buyer is and what they do today instead of buying from you
+    - What you offer and any real customer results (optional)
+    - Your goal for the conversation
+  output:
+    - name: Buyer picture
+      contains: A view of your buyer as a busy person, and the real rival, which is usually the way they work today.
+    - name: Value statement
+      contains: Your offer rewritten with a business driver, a verb of change and a number you supply, never one invented.
+    - name: So what? test
+      contains: Your benefits questioned again and again until they reach money, time or competitive edge.
+    - name: Rewritten message or meeting plan
+      contains: One short message for one buyer, with backups, or a first meeting built on a customer story and questions.
+    - name: First questions for you
+      contains: Questions about what the buyer gets, what they do now and who switched to you lately.
+    - name: Push-back and next step
+      contains: What to cut, such as features or an early close, and a sensible next step to take.
 seats:
   - {seat: "Selling to busy buyers", asks: "Would a crazy-busy buyer give this ten seconds? What's in it for them?"}
   - {seat: "Value in their terms", asks: "What business result does the customer get, and can we put a number on it?"}

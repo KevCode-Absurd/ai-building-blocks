@@ -1,6 +1,6 @@
 slug: fix-inbox-placement-and-win-back-your-opens
 name: "Fix inbox placement and win back your opens"
-summary: "Give it your sending setup and results. Get a recovery plan, a wider engaged list and a sunset flow."
+summary: "Get your emails out of spam and your opens back. Share your email setup and 60 days of results. Get a recovery plan, engaged list and sunset flow."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -13,7 +13,7 @@ inputs:
   - { type: email_flow, required: false }
   - { type: offer, required: false }
 outputs:
-  - { type: audit_report }
+  - { type: plan }
 uses: [ email-setup-health-checker, inbox-placement-recovery-planner, engaged-list-expander, sunset-flow-and-list-cleaner, email-and-sms-performance-reader ]
 steps:
   - { uses: email-setup-health-checker, note: "Finds the setup problems that push mail to spam." }

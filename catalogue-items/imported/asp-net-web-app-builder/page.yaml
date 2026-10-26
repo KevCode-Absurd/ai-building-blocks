@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It follows official guidance but must fit your code.
 new_slug: asp-net-web-app-builder
 name: ASP.NET web app builder
-summary: Describe the web app or API. Get ASP.NET Core code that follows current
-  official guidance.
+summary: Build an ASP.NET Core web app or API with current Microsoft guidance. Give it your brief. You get the app style, code files and notes.
 job: build-websites
 headline: ASP.NET web app builder
-subhead: "ASP.NET Core code that matches what Microsoft recommends now, not what
-  old tutorials show. Tell the AI what you are building and it first picks the
-  right style: Blazor, Razor Pages, MVC, a minimal API or controller-based API."
+subhead: "ASP.NET Core code that matches what Microsoft recommends now, not what old tutorials show. Tell the AI what you are building and it first picks the right style: Blazor, Razor Pages, MVC, a minimal API or controller-based API."
 explain: |
   ASP.NET Core code that matches what Microsoft recommends now, not what old tutorials show. Tell the AI what you are building and it first picks the right style: Blazor, Razor Pages, MVC, a minimal API or controller-based API.
 
   It then checks your .NET version and loads only the guidance that fits the job, so the answer isn't cluttered. It covers how the app starts, the request pipeline, dependency injection, settings, login and permissions, live updates with SignalR, gRPC, background work, testing and speed. You can use it to start a new app, review one, or refactor an old one. You need the .NET SDK to run the result.
 when:
-  - You are starting a new .NET web app and can't decide between Blazor, MVC and
-    Razor Pages.
+  - You are starting a new .NET web app and can't decide between Blazor, MVC and Razor Pages.
   - Your Program.cs has grown messy and you want it cleaned up.
   - You need login and role checks added to an existing API.
   - You want a code review of an ASP.NET project against current guidance.
+not_for:
+  - "You work in another stack such as Node, Django or Laravel: use a coding helper made for that stack."
+  - "You need a quick one-off script: ask your AI for a plain console app or a short script instead."
+  - "You already know the app model you want: start from the dotnet new template and write the feature yourself."
 you_give:
   - A description of the app or API
   - Your .NET version and current project files (optional)
@@ -29,8 +29,31 @@ you_get:
   - A clean startup and pipeline setup
   - Notes on tests, speed and security
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. If your AI can read files, add the skill folder.
+  - Describe what you are building in one or two lines. Add login, data and hosting needs.
+  - Add your .NET version and project files if you have an existing app (optional).
+  - Check the app style and the reasons it gives before you read the code.
+  - Copy the code files into your project, then build and run them with the .NET SDK on your computer.
+  - Ask for a review of the result against current ASP.NET Core guidance if something looks off.
+output_sample:
+  input:
+    - A short description of the app or API you want
+    - Your .NET version (optional)
+    - Your current project files (optional)
+    - Your login, data and hosting needs
+  prerequisites:
+    - The .NET SDK on your computer, to build and run the result
+    - An AI that can read your project files and run code (best, not required)
+  output:
+    - name: App style choice
+      contains: The app style picked from Blazor, Razor Pages, MVC, minimal API or controller API, with the reasons.
+    - name: Program.cs and pipeline
+      contains: Startup code that sets up services, settings, logging and the request pipeline.
+    - name: Feature code files
+      contains: The pages, components, endpoints or controllers for your feature, each listed by file path.
+    - name: Security and data setup
+      contains: Login, permission and data access code when your brief needs them.
+    - name: Notes on tests, speed and security
+      contains: Short advice on testing, caching, rate limits and safe settings for your app.
+    - name: Next step
+      contains: The commands to build and run the app so you can check the result.

@@ -2,17 +2,61 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-agent-architecture
 name: AI agent architecture planner
-summary: Describe the agent you need. Get a system design and the trade-offs to
-  settle before building.
+summary: Plan your AI agent architecture before you build. Describe the job and get a design, a PDF report, a diagram and the risks to settle.
 job: set-up-ai
 headline: AI agent architecture planner
-subhead: Describe the agent you need. Get a system design and the trade-offs to
-  settle before building. Share your goal and the files you already have. The
-  skill file sets out the steps and the tools needed for this job.
+subhead: "Describe the AI agent you want, or share one you already have. It asks questions one at a time, then gives you a design, the limits the agent should run under and a PDF report with a diagram. It plans only and does not build the agent."
+explain: |
+  Teams often add memory, extra tools or several agents before they know the job needs them. This AI agent architecture planner asks about the job first. It starts with the simplest option: plain automation, one AI call or a fixed workflow. It adds an agent loop only when you have a concrete reason.
+
+  Each decision is marked as confirmed, your requirement, a proposal, an assumption or an open question. You can see what is fact and what is a guess. You get a first sketch early, then a fuller design as you answer.
+
+  For an agent you already built, it works out what the agent really does, tests each path and reports the problems it can show. Things it could not check are listed as unknowns, not hidden.
+when:
+  - "You are about to build an AI agent and want the design settled first."
+  - "An agent you built makes mistakes or says it is done when it is not."
+  - "You have a spec for an agent and want it turned into a clear design."
+  - "A teammate asks why the agent needs memory, extra tools or several agents."
+not_for:
+  - "You want the agent built or coded: this skill stops at the design, so hand the design to a developer or a build tool."
+  - "You want a general code review: ask a developer or a code review tool, since this skill only checks the agent's architecture."
+  - "You need a simple one-step task done: use a single prompt or a fixed workflow, not an agent."
+you_give:
+  - "A few lines on the agent you need and its job"
+  - "Any spec, notes or files you already have (optional)"
+  - "Limits you know about, such as budget, time or who must approve actions (optional)"
+  - "The setup or code of an existing agent, if you want it reviewed (optional)"
+you_get:
+  - "A first design sketch with the goal, boundaries, main parts and open decisions"
+  - "A list that marks each decision as confirmed, assumed or still open"
+  - "Limits on steps, time, cost and tool calls, and what you receive when the agent stops"
+  - "For an existing agent, the problems found, each with a check to confirm the fix"
+  - "A PDF report with a diagram of the design"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open your AI tool. Use one that can read files and make a PDF if you want the report.
+  - "Paste the skill text or upload the skill folder, then say: Follow this skill."
+  - Describe the agent you need in a few lines. Add any spec or files. To review an existing agent, share how it is set up.
+  - Answer the questions one at a time. If you do not know, ask for a suggested option. It will be marked as an assumption.
+  - Read the first design sketch and say what is wrong. Say when you have given enough, and you get the full design.
+  - Check the PDF report and diagram. Hand the design to a developer to build, since this skill does not write code.
+output_sample:
+  input:
+    - A short description of the agent you need and its job
+    - Any spec, notes or files you already have
+    - Limits you know about, such as budget, time or who must approve actions (optional)
+    - The code or setup of an existing agent, if you want a review (optional)
+  prerequisites:
+    - An AI that can read your files and create a PDF, if you want the report file
+  output:
+    - name: Early design sketch
+      contains: Goal, boundaries, main capabilities, recommended parts, main flow, key limits, assumptions and open decisions.
+    - name: Requirements and decision register
+      contains: Each requirement or decision marked as confirmed, your requirement, proposal, assumption, open question or not applicable.
+    - name: Architecture package
+      contains: Agent capabilities and methods, output formats, how instructions and skills are laid out, and a filled-in end-to-end example.
+    - name: Limits and stopping rules
+      contains: Caps on steps, time, cost and tool calls, when the agent stops, and what you receive then.
+    - name: Audit findings (for an existing agent)
+      contains: Demonstrated problems, unknowns and accepted trade-offs, with checks to confirm each fix.
+    - name: PDF report and diagram
+      contains: The results as a PDF with a rendered diagram, plus editable text and diagram source.

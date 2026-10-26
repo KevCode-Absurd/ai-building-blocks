@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: A policy needs careful limits and plain wording.
 new_slug: hr-ai-use-policy-writer
 name: HR AI use policy writer
-summary: Describe how you use AI in hiring. Get a use policy, a bias check and a
-  staff notice. Not legal advice.
+summary: Write an HR AI use policy for hiring. Describe how you use AI. Get a policy draft, a bias check plan and a staff notice. Not legal advice.
 job: hire-people
 headline: HR AI use policy writer
-subhead: A written rulebook for how your HR team may use AI, plus the notices
-  people need to see. Describe how AI touches hiring and people decisions and
-  get a policy, a bias check plan and a plain-language staff notice.
+subhead: A written rulebook for how your HR team may use AI, plus the notices people need to see. Describe how AI touches hiring and people decisions and get a policy, a bias check plan and a plain-language staff notice.
 explain: |
   A written rulebook for how your HR team may use AI, plus the notices people need to see. Describe how AI touches hiring and people decisions and get a policy, a bias check plan and a plain-language staff notice. It is not legal advice, so have counsel review it.
 
@@ -18,6 +15,10 @@ when:
   - A new law on automated hiring tools applies to you and you need a plan.
   - You must tell candidates in plain words that AI is part of the process.
   - Managers keep asking what they may and may not do with AI.
+not_for:
+  - "You need legal sign-off for your state or country: ask an employment lawyer, since this draft does not replace counsel."
+  - "You need to write a job post or screen real candidates: do that work yourself or with a hiring tool, as this only writes rules."
+  - "You want a ruling on one hiring decision: ask your HR lead or counsel, because this skill writes policy and does not judge single cases."
 you_give:
   - How and where HR uses AI today
   - Your country or state
@@ -29,7 +30,30 @@ you_get:
   - A candidate and staff disclosure notice
   - A vendor review checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Describe how HR uses AI today, such as résumé screening. Add your country or state.
+  - Add your tools and current policies if you have them.
+  - Ask for the policy, the bias check plan, the vendor questions and the notice.
+  - Check that each big decision names a person who reviews it.
+  - Send the draft to an employment lawyer for your area before you use it.
+output_sample:
+  input:
+    - How and where your HR team uses AI today
+    - Your country or state
+    - The tools or vendors you use (optional)
+    - Your current HR policies (optional)
+  output:
+    - name: AI use policy
+      contains: Rules for how HR may use AI in hiring and performance decisions, with a human review step for big decisions.
+    - name: Bias and risk check plan
+      contains: A way to test an AI hiring tool for unfair results, and how often to test again.
+    - name: Tool adoption review
+      contains: Steps HR must follow before it adopts any new AI tool.
+    - name: Vendor questions
+      contains: A checklist on training data, testing and fairness to put to the tool maker.
+    - name: Candidate and staff notice
+      contains: A plain-words note telling people where AI is used in decisions about them.
+    - name: Challenge and escalation path
+      contains: How a person can contest an AI-assisted decision and who handles it.
+    - name: Records and training points
+      contains: What HR must write down about AI-assisted decisions, and what staff should learn.

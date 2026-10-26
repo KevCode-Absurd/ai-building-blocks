@@ -2,34 +2,106 @@ thinking: high
 thinking_why: It plans short and long term at once.
 new_slug: long-goal-coordinator
 name: Long-goal coordinator
-summary: Give it a goal that takes days. Get helpers and schedules set up to work on it.
+summary: Set your AI up to work on a goal for days. It hands tasks to background helpers, keeps a dated notes wiki and suggests check-in schedules.
 job: plan-strategy
 headline: Long-goal coordinator
-subhead: "A set-up that lets your AI work toward a goal that takes days, without
-  losing what it learned along the way. It acts like a chief of staff: it plans,
-  hands out work, and keeps notes."
+subhead: Give it a goal that takes days or weeks, and a place for notes. It acts like a chief of staff. Your AI splits the work between background helpers, keeps what it learns in a linked notes wiki and suggests recurring check-ins. You get a plan, a wiki index and the first helper tasks.
 explain: |
-  A set-up that lets your AI work toward a goal that takes days, without losing what it learned along the way. It acts like a chief of staff: it plans, hands out work, and keeps notes.
+  One chat cannot hold a goal that takes weeks. Context fills up, and what the AI learned is lost. This coordinator fixes that with three habits. The main chat does no heavy work. It sends tasks to background helpers and passes short pointers to notes instead of long copies.
 
-  The main chat does no heavy work itself. It sends tasks to background helpers so its own memory stays clear, and passes them short pointers to notes instead of long copies of text. It keeps a wiki, a folder of linked markdown pages with an index, so lessons survive past the end of a session. It also suggests recurring schedules that move the goal forward. It thinks on two tracks: finishing the task now, and improving things so the next task goes better.
+  It keeps a wiki: a folder of linked pages with an index that outlives the chat. Every claim in the wiki carries a date, and old claims are marked superseded, not rewritten. That way a future session reads history, not guesses.
+
+  It also thinks on two tracks. One is how to finish the task in front of it. The other is how to make the next task easier, such as clearer rules, checklists and access to the data your helpers need. The skill was written for software projects, so some examples are about code.
 when:
   - Your project will take days or weeks and one chat cannot hold it all.
   - You want helpers running in the background while you keep talking to your AI.
   - You keep re-explaining the same background at the start of each session.
   - You want regular check-ins scheduled toward a goal.
+not_for:
+  - You want to break a huge project into open decisions on an issue tracker. Use the Big project mapper.
+  - You only need to turn a vague job into a clear goal with proof of done. Use the Agent goal writer.
+  - You have one job to repeat on a loop with checks. Use the Agent loop designer.
 you_give:
-  - The goal and a rough deadline
-  - Where the notes folder should live
-  - Tools or helpers your AI can use
-  - Recurring checks you want (optional)
+  - Your goal, in a sentence or two, and a rough deadline
+  - A folder where the notes wiki should live
+  - What helpers and tools your AI can use, such as background agents or schedules
+  - Links to sources, such as issues, documents or earlier notes (optional)
+  - Check-ins you want, such as a weekly review (optional)
 you_get:
-  - A coordination plan
-  - A notes wiki with an index
-  - Tasks split across helpers
-  - Suggested recurring schedules
+  - A plan that splits the goal into helper tasks
+  - A notes wiki with an index page and linked pages
+  - Dated notes on each decision and finding
+  - Suggested schedules, such as a weekly wiki check
+  - A list of changes that will make the next task easier
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run subagents and set schedules.
+  - Use an AI that can run background helpers and set schedules, such as Claude Code. In a plain chat, you will run the helper steps yourself in new chats.
+  - Add this skill to your AI, or paste its text. Say your goal, your deadline and where the wiki folder should be.
+  - Check the first plan. It should list helper tasks, each with a name, a job and the notes it should read. Fix anything wrong before it starts.
+  - Let it run. Reply when it asks about the wiki location, decisions or schedules. Do not paste long notes. Point to pages instead.
+  - Open index.md every few days. Check that new claims have dates and that nothing contradicts an older page.
+  - Approve or decline each schedule it suggests. It will not run recurring jobs without a clear yes.
+how_it_works:
+  - title: Own the goal
+    text: "It treats the goal as its own and thinks on two tracks: finish the task now, and improve the setup for the next one."
+  - title: Hand work to helpers
+    text: All real work goes to background helpers, so the main chat stays clear and you can keep talking.
+  - title: Pass pointers
+    text: It sends short pointers to notes, commits or pages, never copies of text the helper can read itself.
+  - title: Keep the wiki
+    text: It keeps index.md and one page per topic. It adds what it learns, checks the wiki before decisions and files useful answers.
+  - title: Write history
+    text: Every claim has a date, and code claims cite a commit. Changed facts become new dated claims.
+  - title: Improve the setup
+    text: It looks for tighter rules, checks that force correctness, data helpers need and an end to workarounds.
+  - title: Suggest schedules
+    text: It proposes recurring jobs, such as a weekly wiki check, and waits for your yes.
+output_shape: |
+  GOAL PLAN: <goal>
+  1. Goal and deadline: <one line each>
+  2. Wiki: <folder, index.md, first pages to create>
+  3. Helper tasks: <name, job, notes to read, where the result goes>
+  4. Schedules suggested: <what, how often, why>
+  5. Setup improvements: <change, what it makes easier>
+  6. Open questions for you: <questions>
+  MISSING: <what you did not give>
+output_sample:
+  input:
+    - Your goal and a rough deadline
+    - A folder where the notes wiki should live
+    - The helpers and tools your AI can use
+    - Links to sources or earlier notes (optional)
+  prerequisites:
+    - An AI that can run background helpers and set schedules, such as Claude Code
+    - A folder the AI can write to, for the wiki
+  output:
+    - name: Goal plan
+      contains: The goal, the deadline and how the work is split between helpers.
+    - name: index.md
+      contains: A list of every wiki page with a link and a one-line summary.
+    - name: Wiki pages
+      contains: One page per decision, problem or preference, with dated claims and links to sources.
+    - name: Helper tasks
+      contains: Each task with its name, its job, the notes to read and where results go.
+    - name: Schedule suggestions
+      contains: Recurring jobs, such as a weekly wiki check, each waiting for your approval.
+    - name: Setup improvements
+      contains: Changes that make the next task easier, such as clearer rules or data access.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run background helpers and schedules, which this skill depends on.
+    - name: Claude, ChatGPT or Gemini chat
+      why: Works as a planner. You run each helper task in a new chat and file the notes.
+  inputs:
+    - Earlier notes, decision logs or issue links
+    - Rules your team already follows, such as a coding standards file
+    - Access to logs or test data that helpers need
+terms:
+  - term: Wiki
+    meaning: A folder of linked notes pages with an index page that lists them all.
+  - term: Helper
+    meaning: A background AI that does one task and reports back. Also called a subagent.
+  - term: Context pointer
+    meaning: A short link to a note, page or commit, used instead of copying the text.
+  - term: Supersede
+    meaning: Mark an older claim as replaced by a newer one, without deleting it.

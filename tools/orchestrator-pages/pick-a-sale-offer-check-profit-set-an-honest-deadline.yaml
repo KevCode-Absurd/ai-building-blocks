@@ -1,6 +1,6 @@
 new_slug: pick-a-sale-offer-check-profit-set-an-honest-deadline
 name: Pick a sale offer, check profit, set an honest deadline
-summary: Give it your margins. Get a sale offer, its needed ad return and a real deadline.
+summary: Plan a sale offer that pays. Give it your margins and costs. Get an offer type, the ad return you need, and a deadline you can keep.
 job: make-offer
 thinking: high
 thinking_why: It runs four skills in a row and the profit step does cost sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You plan a sale and are not sure what kind of offer to run.
   - Your last discount sold well but you are not sure it made money.
   - You want a deadline that is true, so it still works next time.
+not_for:
+  - "You have a brand-new product with no sales history: run a plain price test first, then come back."
+  - "You only want to check one discount against your costs: use the Discount margin and ad-cost checker."
+  - "You want to plan a free gift or bundle for the cart: use the Gift-with-purchase planner or the Cart bundle and gift planner."
 you_give:
   - Your products, prices and costs per order
   - Your order sizes and repeat rate (optional)
@@ -26,10 +30,33 @@ you_get:
   - The ad return you need to hold your profit, a score out of 100 and a verdict
   - A cap, an end date and true lines for each channel
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
-  - Have your costs per order ready, with shipping and fees. Without them the profit step cannot score.
-  - Say how many orders you can ship well. It will not write a cap you cannot keep.
+  - Open Claude, ChatGPT or Gemini. Paste in this workflow, or attach its skill files if your AI takes files.
+  - Add your product, price and costs per order, with shipping and fees. Without costs, the profit step cannot score.
+  - Say how many orders you can ship well. The cap will not go above what you can keep.
+  - Add past sales, reviews or your brand brain if you have them (optional).
+  - Read each step's result before the next one starts. Fix any MISSING line.
+  - Check the hand-back summary. Nothing is sent or published without your yes.
+output_sample:
+  input:
+    - Your product's price, variants and what it is made of
+    - Your costs per order, with shipping and fees
+    - How many orders you can ship well during the sale
+    - Your ad or store results for a past date range (optional)
+    - Customer reviews or survey words (optional)
+  prerequisites:
+    - An AI that can read pasted text or attached files
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+  output:
+    - name: "Step 1: Store offer picker"
+      contains: The offer types worth testing, ranked, with the margin floor and the sums behind the ranking.
+    - name: "Step 2: Reason-why deal writer"
+      contains: The deal in plain words, the buyer's doubts, a reason you can prove, and three versions.
+    - name: "Step 3: Discount impact checker"
+      contains: A cost breakdown, the ad return you need to hold profit, a score and a verdict.
+    - name: "Step 4: Honest urgency planner"
+      contains: Your real capacity, a cap, an end date and true lines for page, ad, email and calls.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Pick the offer type
     text: Names what each offer type trades away, checks your margin floor and order spread, and ranks the types worth testing with the sums.

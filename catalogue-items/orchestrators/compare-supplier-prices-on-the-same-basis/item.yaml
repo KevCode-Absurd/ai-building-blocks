@@ -1,6 +1,6 @@
 slug: compare-supplier-prices-on-the-same-basis
 name: Compare supplier prices on the same basis
-summary: Share the source files. Get a normalized quote table and a decision brief with cost and delivery risks.
+summary: "Compare supplier quotes for a physical product on the same units, currency and delivery terms. Get a quote table, a risk view and a decision brief."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,13 +8,15 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
-  - type: question
-    required: false
   - type: product_data
     required: false
   - type: spreadsheet
+    required: false
+  - type: brief
+    required: false
+  - type: question
     required: false
 outputs:
   - type: audit_report
@@ -24,9 +26,9 @@ uses:
   - supplier-risk-scorecard-builder
 steps:
   - uses: supplier-quote-comparer
-    note: Compare the normalized quotes and flag exclusions, lead time and payment differences.
+    note: "Put every quote on the same unit and currency in one table. Flag exclusions, lead-time gaps and payment differences, and work out cash up front and landed cost. Pass the table to step 2."
   - uses: supplier-risk-scorecard-builder
-    note: Use only supplied financial, quality, capacity and delivery evidence to assess risk. Do not turn sample risk weights, stock buffers or example cost-reduction rates into the buyer facts.
+    note: "Rate each supplier's risk using only the financial, quality, capacity and delivery evidence you supplied, not step 1's table. It takes the supplier names and flagged gaps (lead time, payment terms) from step 1's table to know who to rate. Mark areas with no evidence. Do not use example weights or buffers as facts."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

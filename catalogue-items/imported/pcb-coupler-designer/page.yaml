@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Tuning needs careful technical reasoning.
 new_slug: pcb-coupler-designer
 name: PCB coupler designer
-summary: Name the band and split. Get a power divider or coupler designed and
-  its response plotted.
+summary: Design a PCB power divider or coupler for your band and split ratio in MATLAB. You get the board model and a plotted response.
 job: build-software
 headline: PCB coupler designer
-subhead: A power splitter or coupler designed for your band and split ratio,
-  with its response plotted so you can see if it works. It runs in MATLAB.
+subhead: A power splitter or coupler designed for your band and split ratio, with its response plotted so you can see if it works. It runs in MATLAB.
 explain: |
   A power splitter or coupler designed for your band and split ratio, with its response plotted so you can see if it works. It runs in MATLAB.
 
@@ -17,19 +15,45 @@ when:
   - You are building a feed network for an antenna array.
   - A circuit needs a quadrature or sum and difference network.
   - You want to sample a signal with a directional coupler.
+not_for:
+  - "You want a filter on a PCB: use the PCB filter design skill (matlab-design-pcb-filter), not this one."
+  - "You want to design a plain transmission line or a balun: use the matching MATLAB PCB skill for that part."
+  - "You need to tune an existing design or join several parts into one circuit: use the MATLAB PCB optimize or circuit skills."
 you_give:
-  - Centre frequency and bandwidth
-  - Split ratio
-  - Substrate and conductor settings
-  - MATLAB with RF PCB Toolbox
+  - Your centre frequency and bandwidth
+  - Your split ratio
+  - Your board material and conductor settings
+  - The type of part you want, such as Wilkinson, branchline or ratrace (optional)
 you_get:
   - Designed coupler or splitter model
   - Plotted S-parameter response
   - Mesh and memory estimate
   - Next steps for checking and tuning
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with PCB Toolbox.
+  - Open an AI that can run MATLAB code. You need MATLAB with RF PCB Toolbox.
+  - Set up your board material first, using the material setup skill.
+  - Paste this skill into your AI. Add your centre frequency, bandwidth and split ratio.
+  - Ask your AI to check the mesh and memory estimate before the full solve.
+  - Read the S-parameter plots and check they meet your target across the band.
+  - Tune the sizes or join the part into a larger circuit with the next skills.
+output_sample:
+  input:
+    - Your centre frequency and bandwidth
+    - Your split ratio
+    - Your board material and conductor settings
+    - The coupler or splitter type you want
+  prerequisites:
+    - MATLAB with RF PCB Toolbox
+    - An AI that can run MATLAB code
+    - Your board material set up first, using the material setup skill
+  output:
+    - name: Coupler or splitter model
+      contains: A board model of your chosen part, such as a Wilkinson, branchline, ratrace, corporate divider or Rotman lens.
+    - name: Mesh and memory estimate
+      contains: A check of the mesh density and memory needed, run before the full solve.
+    - name: S-parameter response
+      contains: Plots of how the part behaves across your band, so you can see if it works.
+    - name: Port numbering
+      contains: Which port is which on a 3-port splitter or 4-port coupler, so you read the plots right.
+    - name: Next steps
+      contains: Pointers to check the result with EM analysis, tune the sizes, or join it into a larger circuit.

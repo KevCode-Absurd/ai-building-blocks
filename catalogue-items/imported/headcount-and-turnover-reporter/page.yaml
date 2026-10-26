@@ -2,38 +2,75 @@ thinking: medium
 thinking_why: It counts and compares, then explains the trends.
 new_slug: headcount-and-turnover-reporter
 name: Headcount and turnover reporter
-summary: Give it your people data. Get headcount, turnover and team health
-  reports with a metrics table and trends.
+summary: Turn an employee spreadsheet into a headcount or turnover report for leaders, with a metrics table, trends and next steps.
 job: hire-people
 headline: Headcount and turnover reporter
-subhead: "Upload a spreadsheet of employees with team, level, location and
-  dates, plus exits if you have them. Pick the report: headcount, turnover,
-  representation or org health. You get a summary of findings, a metrics table
-  with trends, detail by team or level, recommended actions and a note on
-  method."
+subhead: "Upload a spreadsheet of employees with team, level, location and dates, plus exits if you have them. Pick a headcount, turnover, representation or org health report. You get a short summary, a metrics table with trends, detail by team and a note on how each number was worked out."
 explain: |
-  A report on who works for you and who is leaving, built from your own people data. Pick the type: headcount, turnover, representation, or org health. Upload a spreadsheet or describe the data.
+  A headcount report or turnover report built from your own people data, for the moment leaders ask how many people you have and who is leaving.
 
-  The skill starts by asking what question you are trying to answer. Then it works out the numbers: headcount by team, location and level, average time in role, voluntary and involuntary exits, regretted exits, manager span of control, and signs someone may leave. Every report has a short summary, a metrics table with trends, the detail, recommended actions, and a note on how each figure was calculated. Use your own data only, and treat small groups carefully to protect privacy.
+  The skill first asks what question the report must answer. It then checks your spreadsheet for gaps, such as missing dates or blank teams, and tells you what it found. It counts headcount by team, location and level, works out the turnover rate, and splits voluntary from involuntary exits. Each figure comes with a plain note on how it was calculated.
+
+  It reports groups, not people. Groups of fewer than 5 are not shown, so no one can be picked out. Pay and representation findings are for spotting patterns to look into, and HR and legal should review them before anyone acts.
 when:
-  - Leadership wants a headcount snapshot by team and location.
-  - You suspect one team has high turnover and want to see the numbers.
-  - You need to report on representation across levels.
+  - Leadership asks for a headcount snapshot by team and location.
+  - You think one team loses people faster than others and want the numbers.
+  - You need to show who sits at each level, for a board or a funding request.
   - You want to find managers with too many direct reports.
+not_for:
+  - "You want to decide on one named person's pay, promotion or exit: use your HR and legal advisers. This reports on groups only."
+  - "You want to plan hires for next year: use the Headcount forecast builder or the Headcount plan builder."
+  - "You want to design the metrics and a dashboard from scratch: use the HR metrics and report builder."
 you_give:
-  - A spreadsheet of employees with team, level, location and dates
-  - Exit dates and reasons, if you have them
-  - The question you want answered
-  - Manager names or IDs (optional)
+  - A spreadsheet of employees with team, level, location, start date and end date
+  - Exit reasons and whether each exit was voluntary (optional)
+  - The question you want the report to answer
+  - Manager names or IDs, for span of control (optional)
+  - Survey scores, for an org health report (optional)
 you_get:
-  - A summary of the main findings
+  - A short summary of the main findings
   - A metrics table with trends
   - Detail by team, level or location
-  - Recommended actions and a method note
+  - Recommendations, with which ones need a check first
+  - A method note that says how each figure was worked out
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read a people data file you
-    upload.
+  - Open Claude, ChatGPT or Gemini. Upload your employee spreadsheet, or paste a table. Remove names and keep IDs if you can.
+  - Paste the skill text. Say which report you want, such as turnover for the last 12 months, and the question it should answer.
+  - Read the data check first. Fix any gap it names, or tell the AI how to treat it.
+  - Check two figures yourself, such as total headcount and the number of exits, against your own records.
+  - Show the report to HR before it goes to leaders, especially any representation or pay finding.
+  - You do not need a connected HR system. A spreadsheet works.
+output_sample:
+  input:
+    - An employee spreadsheet with team, level, location, start date and end date
+    - The question the report must answer
+    - Exit reasons and manager IDs (optional)
+  output:
+    - name: Executive summary
+      contains: Two or three findings leaders can read in a minute.
+    - name: Key metrics table
+      contains: Each metric with its value and trend against an earlier period, when your data has one.
+    - name: Detailed analysis
+      contains: Tables and short notes by team, level or location for the report type you chose.
+    - name: Recommendations
+      contains: Actions that follow from the numbers, marked where a person should check facts first.
+    - name: Methodology
+      contains: How each figure was worked out, data problems found and groups left out for privacy.
+how_it_works:
+  - title: Ask the question
+    text: It asks which report you want and what you need to decide, so the numbers answer something.
+  - title: Check the data
+    text: It lists the columns it found, names any it needs, and flags duplicate IDs and bad dates.
+  - title: Work out the metrics
+    text: It counts headcount, works out the turnover rate and splits voluntary from involuntary exits.
+  - title: Protect privacy
+    text: It leaves out groups under 5 people and avoids naming individuals.
+  - title: Write the report
+    text: It writes the summary, table, detail, recommendations and a method note.
+terms:
+  - term: Voluntary exit
+    meaning: Someone chose to leave, for example they resigned.
+  - term: Span of control
+    meaning: How many people report directly to one manager.
+  - term: Regretted exit
+    meaning: A person you would have liked to keep.

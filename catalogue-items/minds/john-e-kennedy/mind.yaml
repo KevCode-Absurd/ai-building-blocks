@@ -16,6 +16,32 @@ use_cases:
   - "Find the tone and 'personality' that will ring true with one kind of reader"
   - "Cut a big batch of filler posts down to a few strong pieces you repeat"
   - "Add a trial or 'pay for itself' offer that removes the buyer's risk"
+not_for:
+  - "You want long sales letters with big offers and a deadline: use the Dan Kennedy mind, who is a different person."
+  - "You want a brand image and steady look built over years: use the David Ogilvy mind."
+  - "You need legal, medical or ad-policy checks on your claims: ask a qualified person, because this mind only works on selling copy."
+output_sample:
+  input:
+    - Your ad, page, email or campaign idea
+    - Who you think the likely buyer is
+    - Real product facts, such as cost, time saved or results
+    - The objections buyers raise (optional)
+    - Where you run it now and what it sells, if you know (optional)
+  output:
+    - name: One-line job
+      contains: A plain definition of what your ad is meant to do, framed as a salesperson closing a sale.
+    - name: What to cut
+      contains: Slogans, cleverness and filler that give the reader no reason to buy.
+    - name: Reason-why rewrite
+      contains: A new version that leads with the reason to buy and ends on one small action.
+    - name: Objection answers
+      contains: The first objections a buyer would raise, each with the best answer from your facts.
+    - name: Risk-free offer idea
+      contains: A trial or guarantee that lets the buyer say yes, based on your real terms.
+    - name: Keyed test plan
+      contains: How to tag each ad, count replies and work out the cost per reply.
+    - name: Closing question
+      contains: A question that asks you to take the next step.
 seats:
   - {seat: "Salesmanship in print", asks: "If this ad were a salesperson, what reasons would it give, and would they close the sale?"}
   - {seat: "Reason why", asks: "Why exactly should this reader buy, in plain words they would believe?"}

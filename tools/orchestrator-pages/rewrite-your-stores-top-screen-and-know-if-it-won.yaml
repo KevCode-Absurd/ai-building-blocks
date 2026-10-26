@@ -1,6 +1,6 @@
 new_slug: rewrite-your-stores-top-screen-and-know-if-it-won
 name: Rewrite your store's top screen and know if it won
-summary: Give it your offer and proof. Get a new top screen, a one-change test and a ship call.
+summary: Rewrite your store's top screen with five headline options, a one-change test plan and a ship call on the result. Give it your offer and proof.
 job: write-landing-page
 thinking: high
 thinking_why: The last step does the test sums and decides whether to ship. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Visitors land on a store page and leave in the first screen.
   - You rewrote a headline last month and can't tell if sales moved because of it.
   - You want a ship or stop call you can defend, not a feeling.
+not_for:
+  - "Your page has almost no visitors yet: get traffic first, since a test needs enough visits to show a result."
+  - "You want to change many parts of the page at once: use the Landing page design planner for a full redesign."
+  - "You only want a quick headline with no test: use the Website first-screen copy writer."
 you_give:
   - Your offer, with price, guarantee and delivery
   - "Your best proof: reviews, ratings, numbers sold or press"
@@ -31,6 +35,25 @@ how_to_use:
   - Give it your offer, your proof and the ad that sends traffic. Leave nothing out that a visitor would ask about.
   - Put the new top screen live as one version and keep the old one as the other. Change nothing else on the page.
   - Run it for at least two full weeks. Then export visits and orders for each version and give them back.
+output_sample:
+  input:
+    - Your offer, with price, guarantee and delivery
+    - Your best proof, such as reviews, ratings or numbers sold
+    - The ad or link that sends traffic to the page (optional)
+    - The question you want the test to answer, in plain words
+    - After the test, visits and orders for both versions of the page
+  prerequisites:
+    - An AI that can read the handoff folder and save files, such as Claude Code or a Claude Project
+    - Two full weeks to run the test before the last step
+  output:
+    - name: "Step 1 file: top screen"
+      contains: Five headlines with one picked, a subhead, proof, a button, doubt-reducers, an image plan and a first test plan.
+    - name: "Step 2 file: one-change test"
+      contains: Your question, what else could move sales, the one change, what counts as no effect and what each result means.
+    - name: "Step 3 file: ship call"
+      contains: A split check, how the test ended, the lift as a range, the gain in money and a ship, do not ship or re-test call.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the top screen
     text: Matches the headline to your ad's promise, writes five options and picks one, then adds a subhead, proof, a button and doubt-reducers. It drafts a first test plan.

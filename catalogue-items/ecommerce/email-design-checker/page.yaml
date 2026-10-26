@@ -1,6 +1,6 @@
 new_slug: email-design-checker
 name: "Email design checker"
-summary: "Paste an email design. Get a score out of 100 and fixes for layout, links and weight."
+summary: "Check your email design before you send it. Get a score out of 100, pass or fail on each rule, and fixes for layout, links and image weight."
 job: write-emails
 thinking: medium
 thinking_why: "It applies a fixed list of checks to one email, so a mid-level model is enough."
@@ -17,6 +17,10 @@ when:
   - An email is designed and you are about to schedule it.
   - Your emails get opens but few clicks, and you want to find out whether the design is the cause.
   - A designer or an AI tool made the email and you want an independent check.
+not_for:
+  - "You have a plain-text or order-confirmation email: send it as is, because the design rules do not fit it."
+  - "You need a new layout from scratch: use the email layout brief writer first, then check the result here."
+  - "You want the words reviewed, not the design: use the email draft reviewer."
 
 you_give:
   - A screenshot of the full email (or its HTML)
@@ -37,6 +41,31 @@ how_to_use:
   - Say what the offer and code are, so the discount rules can be checked.
   - Fix the first three faults and run the check again on the new design.
   - Before you schedule, send a test to a phone and a computer and click every link.
+output_sample:
+  input:
+    - A full-length screenshot of your email, or its HTML
+    - Your subject line, preview text and email text (optional)
+    - Where each button links, and your discount code if there is one (optional)
+    - Which tests you sent, such as a phone and a computer (optional)
+  prerequisites:
+    - An AI that can read images, if you attach a screenshot
+  output:
+    - name: First screen
+      contains: Pass or fail on the button, headline, supporting image, discount code and top navigation, with where each fault is.
+    - name: Copy
+      contains: Pass or fail on subject, preview, headline, reading level, one topic and length.
+    - name: Links and discount
+      contains: Pass or fail on the product count, buttons, shop-all button, specific links and a code that applies itself.
+    - name: Visuals and weight
+      contains: Pass or fail on footer, live text, alt text, image weight and variety between sends.
+    - name: Phone
+      contains: Pass or fail on text size, padding, button position and product grid.
+    - name: Tests sent
+      contains: Pass, fail or not run for phone and computer tests, link clicks and a saved footer.
+    - name: Score line
+      contains: The score out of 100, the sum behind it, and the rules that could not be judged.
+    - name: Fix order
+      contains: Fixes listed by points gained, one change each, plus anything missing that you could add.
 
 how_it_works:
   - title: Checks the first screen

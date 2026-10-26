@@ -14,6 +14,28 @@ use_cases:
   - Prepare questions about repair and continued device support
   - Review who bears the cost of a platform change
   - Separate a personal workaround from a wider policy problem
+not_for:
+  - "You need a legal ruling on changing a device or on a tool's safety: ask a lawyer or read the maker's current guidance."
+  - "You want a security and privacy risk review of a system: use the Bruce Schneier mind."
+  - "You want to rework how an app or device is designed for people to use: try a design mind, or ask a designer."
+output_sample:
+  input:
+    - The app, device or online community you rely on
+    - What you need it to keep doing
+    - Files, contacts or functions that would be hard to lose
+    - Where you would move your material (optional)
+    - Who else would need to join a change (optional)
+  output:
+    - name: Dependency map
+      contains: Accounts, services, formats and support you rely on, and who can change each one.
+    - name: Exit question list
+      contains: What an export or alternative keeps, and which functions still need the original service.
+    - name: Migration test note
+      contains: A small sample test, what changed, what stayed untested, and the limits of the result.
+    - name: Provider question or contact plan
+      contains: Precise questions for a provider, or a consent-based backup plan for your group.
+    - name: Immediate plan and wider question
+      contains: What you can do now, what stays dependent, and where you need current expert advice.
 seats:
   - seat: Digital ownership and a workable exit
     asks: What happens to your work and relationships if the service changes or you need to leave?

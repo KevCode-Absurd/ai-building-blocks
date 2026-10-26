@@ -1,6 +1,6 @@
 new_slug: product-shot-list-writer
 name: "Product shot list writer"
-summary: "Paste your product and where the photos will run. Get a shot list, with the reason for each shot."
+summary: "Write a product photo shot list with a reason for each shot. Give it your product and where the photos will run, and get a plan for your shoot."
 job: product-photos
 thinking: low
 thinking_why: "It applies a short set of rules to your product, with few judgement calls."
@@ -17,6 +17,10 @@ when:
   - "You are briefing a photographer."
   - "You are about to shoot with a phone and want a plan."
   - "Your current photos do not sell the product."
+not_for:
+  - "You want a full brief with every check for a shoot: use the Product shoot brief writer."
+  - "You need to plan the order of images on a product page: use the Eight-picture product page planner."
+  - "You need a shot list for a video ad: use the Video ad shot list maker."
 
 you_give:
   - "Your product and its price"
@@ -28,10 +32,26 @@ you_get:
   - "A list of what not to do"
 
 how_to_use:
-  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
-  - "Under it, paste your product details."
-  - "Say where the photos will run."
-  - "Give the list to your photographer or work through it yourself."
+  - Copy the prompt and paste it into Claude, ChatGPT or Gemini.
+  - Under it, paste your product, its price, and whether it is held or worn.
+  - Say where the photos will run, such as your product page, ads or social.
+  - Read the shot table and check each reason fits your product.
+  - Give the list to your photographer, or shoot it yourself with a phone.
+output_sample:
+  input:
+    - Your product and its price
+    - Whether it can be held or worn, and by whom
+    - Where the photos will run, such as your product page, ads or social
+    - Whether people buy it for enjoyment or to do a job (optional)
+  output:
+    - name: Kind
+      contains: A line saying if the product is bought for enjoyment or to do a job, and why.
+    - name: Shot table
+      contains: Numbered shots, each with a direction and a plain reason it helps a buyer decide.
+    - name: DO NOT
+      contains: What to avoid for this product, such as a finish or size it does not have.
+    - name: MISSING
+      contains: Any facts you did not give that would change the list.
 
 how_it_works:
   - title: "Classify the product"

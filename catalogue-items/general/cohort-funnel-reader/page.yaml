@@ -1,6 +1,6 @@
 new_slug: cohort-funnel-reader
 name: Cohort funnel reader
-summary: Paste results by join date. Get each group's path, which changes moved which rates, and whether the report holds up.
+summary: Read your results by join week or month. See which changes moved which rates, and whether the report can be trusted.
 job: plan-strategy
 thinking: high
 thinking_why: It compares groups, weighs cause against coincidence and must not claim more than the data shows.
@@ -14,6 +14,10 @@ when:
   - Your numbers rise but you cannot say whether your work caused it.
   - You made a lot of changes and no rate moved.
   - People in your team give different reasons for the same result.
+not_for:
+  - "You have fewer than about 30 people per group, so rates would be guesses: use a plain before-and-after count instead."
+  - "You ran one launch with nothing to compare it to: ask a person who knows the numbers, or run a split test first."
+  - "You only have one week of data and no earlier group: gather at least two join periods, then come back."
 you_give:
   - Counts by join week or month for each step of the customer path
   - Your target rates and planned changes (optional)
@@ -27,6 +31,30 @@ how_to_use:
   - Paste your export with one row per join week or month.
   - Add the dates you released each change.
   - Use the next-test design for your next change.
+output_sample:
+  input:
+    - Counts by join week or month for each step of your customer path
+    - The dates you released each change
+    - Your target rates (optional)
+  prerequisites:
+    - An export with at least two join periods, one row per period
+  output:
+    - name: Group table
+      contains: Each join group's share at every step, with group sizes and thin cells marked too few to read.
+    - name: Reading by step
+      contains: One line per step showing the move from oldest to newest group against your target.
+    - name: Changes
+      contains: Each change marked proven with a comparison group, or unproven when no group went without it.
+    - name: Stuck signs
+      contains: Flat rates, rising totals and weaker new groups, with the figures behind each.
+    - name: Three tests
+      contains: A pass or fail with a reason on whether the report is actionable, accessible and auditable.
+    - name: Verdict
+      contains: Each rate marked moved, flat or too few to tell.
+    - name: Next test
+      contains: A split test with one difference between groups and the rate named in advance.
+    - name: Missing and checks missed
+      contains: Gaps in your data and any checks the skill could not pass.
 how_it_works:
   - title: Builds the group table
     text: Shares of people, with group sizes.

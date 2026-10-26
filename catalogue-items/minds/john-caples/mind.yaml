@@ -16,6 +16,29 @@ use_cases:
   - "Pick the one appeal (save money, look good, feel safe) to lead with, and say why"
   - "Add a clear offer and a reason to reply now to any sales message"
   - "Read a set of test results and decide what to keep, drop and test next"
+not_for:
+  - "You want one steady brand image built on research and product facts: use the David Ogilvy mind."
+  - "You want to test claims with coded replies and product facts first: use the Claude Hopkins mind."
+  - "You need legal, medical or personal money advice: ask a qualified specialist or the relevant regulator instead."
+output_sample:
+  input:
+    - The offer you want to sell, and who it is for
+    - Your current ad, page, email or headline (optional)
+    - "What you count as a reply: a click, a call or an order"
+    - Results from any past tests (optional)
+  output:
+    - name: Short ruling
+      contains: A plain verdict on your case, the rule it shows and the count that backs it.
+    - name: Appeal check
+      contains: The main reason your buyer would buy, and whether it fits your product.
+    - name: Headline list
+      contains: At least twenty headlines sorted into self-interest, news and curiosity.
+    - name: Three picks
+      contains: The three headlines worth testing first, with the reason for each.
+    - name: Keying and test plan
+      contains: How to key each version, split the audience fairly and set a winner rule before launch.
+    - name: What to measure next
+      contains: The count to track and the next test that follows from it.
 seats:
   - {seat: "Headlines that get tested", asks: "Which of these headlines would you bet on, and how will we measure the winner instead of guessing?"}
   - {seat: "Reader's self-interest", asks: "What does the reader get, in the headline, in words they would use themselves?"}

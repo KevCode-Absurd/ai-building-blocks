@@ -1,7 +1,7 @@
 new_slug: project-cash-available-bridge
 name: Project cash available bridge
 headline: Project cash available bridge
-summary: A project cash available bridge with a declared working-capital basis
+summary: Build a project cash available bridge (CFADS) that states its accrual or cash basis and never counts working-capital movements twice.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,19 +14,44 @@ when:
   - You need a contract-defined project cash available bridge with declared accrual or cash basis and no duplicated working-capital movements.
   - You work on project finance cash definitions and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You only need a plain profit forecast: use a simple income forecast in your own spreadsheet instead."
+  - "You are sizing debt or setting loan terms: ask your lender or financial adviser, because this bridge does not do that."
+  - "Your data is actual cash receipts and payments, and you have not checked how it treats working capital: confirm that first, or ask your accountant."
 you_give:
   - Financing cash definition; accrual operating revenue and operating costs excluding depreciation/noncash costs before working-capital cash movements; contract exclusions, cash taxes, maintenance capital and signed working-capital investment. Identify whether source data instead already represents actual cash receipts/payments.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
   - Available spreadsheet tools and required native output format.
 you_get:
-  - A contract-defined project cash available bridge with declared accrual or cash basis and no duplicated working-capital movements.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - An editable workbook with the cash available bridge, built on your stated basis.
+  - A source index showing where each input came from and its date.
+  - A reconciliation table that ties the bridge to source cash and the contract definition.
+  - A list of missing inputs and a CHECKS MISSED list.
 how_to_use:
   - Download the complete pack and read its governing SKILL.md.
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Your financing cash definition from the contract
+    - Operating revenue and operating costs before working-capital movements, or actual cash receipts and payments
+    - Contract exclusions, cash taxes, maintenance capital and working-capital investment
+    - Reporting date, currency, scale and accounting basis
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, to run the bundled calculation (optional)
+  output:
+    - name: Scope and dated sources
+      contains: "The sources you gave, their dates, and the basis chosen: accrual before working capital, or actual cash."
+    - name: Inputs and assumptions
+      contains: Every input with its source, currency, scale, sign and period, kept apart from formulas.
+    - name: Model calculations and reconciliations
+      contains: The bridge from revenue to cash available, tied back to source cash and the contract definition.
+    - name: Actual file verification
+      contains: Results of recalculating, testing a changed input, rendering each sheet and reopening the saved workbook.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that could not be found and checks that failed or did not run, or the word none.
 how_it_works:
   - title: 1. Declare the source basis before calculating
     text: Declare the source basis before calculating. The included model uses accrual operating revenue and an operating cost proxy excluding depreciation and other noncash expenses, both before working-capital settlement movements. Source the financing CFADS definition and matching periods.

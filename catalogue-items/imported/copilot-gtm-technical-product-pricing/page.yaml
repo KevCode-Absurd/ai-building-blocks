@@ -2,17 +2,101 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-technical-product-pricing
 name: Technical SaaS pricing adviser
-summary: Share your product costs and buyers. Get pricing units, free tier
-  limits and trade-offs to test.
+summary: Pick a pricing model, draw the free-to-paid line and plan enterprise price talks for your software or API product, with a raise-or-hold call.
 job: plan-strategy
 headline: Technical SaaS pricing adviser
-subhead: Share your product costs and buyers. Get pricing units, free tier
-  limits and trade-offs to test. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Tell it your product, current prices, costs and buyers. It checks whether you are underpriced, compares seat, usage and outcome pricing, and sets where free ends and paid begins. You get a pricing model pick, a free-tier line, an enterprise price talk plan and a verdict on raising prices.
+explain: |
+  Technical founders often price from cost: "it costs us X, so we charge twice X". Buyers price from value: "this saves us far more than it costs". This adviser compares your price with what the buyer would spend otherwise, and flags when you are leaving money on the table.
+
+  It then compares three ways to charge: per seat, per use and per result. It names when each one breaks, and suggests a base fee plus a usage fee when that fits. For free plans, it helps you set the limit just below where real production use starts, so hobbyists stay free and working teams pay.
+
+  For large customers, it covers how to answer "what does it cost?" with questions first and three options second. It ends with a raise, hold or restructure call on your current prices.
+when:
+  - You have never changed your prices since launch and suspect they are too low.
+  - You are choosing between per-seat and usage-based pricing for an API or SaaS tool.
+  - A large prospect asks "what does it cost?" and you have no plan for the call.
+  - You need to decide where your free plan ends and your paid plan starts.
+not_for:
+  - You want the whole free plan designed, with limits and upgrade prompts. Use the Free plan designer.
+  - You are pricing physical products in a store. Use the Pricing decision planner or the Waterfall price setter.
+  - You have a price test running and need to read the result. Use the Price test keeper.
+you_give:
+  - What the product is, such as an API, developer tool or SaaS app
+  - Your current prices and how long they have stood
+  - How customers buy, such as self-serve, sales-assisted or enterprise
+  - What it costs you to serve one customer or unit
+  - What alternatives cost, including doing nothing
+you_get:
+  - A value check on each customer group
+  - A pricing model pick with the trade-offs
+  - A free-to-paid line with the reason
+  - A plan for the enterprise price call
+  - A raise, hold or restructure verdict
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
+  - Answer the five opening questions: product type, current prices, how you sell, cost to serve and what alternatives cost.
+  - Ask for the value check first. Give your best estimate of what a customer would otherwise spend on the problem.
+  - Ask for the model pick, the free line and the enterprise call plan. Fix any line marked MISSING with real numbers.
+  - Treat the price multiples and the raised-price story in the skill as the author's experience, not proof for your product.
+  - Test any change with a small group before you roll it out. This needs no code and no paid tools.
+how_it_works:
+  - title: Ask five questions
+    text: It starts with product type, current price, sales motion, cost to serve and the alternatives.
+  - title: Check the value ratio
+    text: It divides what the customer would otherwise spend by your price, per group, and reads the result.
+  - title: Compare pricing models
+    text: It sets seat, usage and outcome pricing side by side with when each breaks, and when a hybrid wins.
+  - title: Find the free line
+    text: It maps usage to willingness to pay and sets the free limit below real production use.
+  - title: Plan the enterprise call
+    text: It maps their needs, anchors to value, then offers good, better and best.
+  - title: Read the price signal
+    text: It checks whether your price matches the buyer you want, not only the buyer you have.
+  - title: Decide on a raise
+    text: It reads the timing signals and suggests how to roll out a rise without losing trust.
+output_shape: |
+  PRICING REVIEW: <product>
+  1. Your inputs: <product type, price, motion, cost to serve, alternatives>
+  2. Value check: <customer group, their alternative cost, ratio, reading>
+  3. Model pick: <seat, usage, outcome or hybrid, with trade-offs>
+  4. Free line: <limit, trigger type, reason>
+  5. Enterprise call: <questions, value anchor, three options>
+  6. Verdict: <raise, hold or restructure, with timing and rollout>
+  MISSING: <numbers you did not give>
+output_sample:
+  input:
+    - What the product is and how customers buy
+    - Your current prices and how long they have stood
+    - Your cost to serve one customer or unit
+    - What the customer would otherwise spend on the problem
+  output:
+    - name: Value check
+      contains: Your price against the customer's alternative cost, per customer group, with a plain reading.
+    - name: Pricing model pick
+      contains: Seat, usage, outcome or a base-plus-usage mix, with when each breaks.
+    - name: Free-to-paid line
+      contains: Where free ends, which trigger moves people to paid, and why.
+    - name: Enterprise call plan
+      contains: Questions to ask, how to anchor to value, and three options to offer.
+    - name: Price signal check
+      contains: Whether your price tells the right buyer that the product is for them.
+    - name: Raise or hold verdict
+      contains: A call on raising prices, with timing and how to tell existing customers.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can do the maths if you paste your price list and usage counts.
+  inputs:
+    - A usage report that shows how many units each customer uses each month
+    - Your win and loss notes from the last six months
+    - Competitor price pages, pasted as text
+terms:
+  - term: Value ratio
+    meaning: What the customer would otherwise spend, divided by your price.
+  - term: Seat-based
+    meaning: You charge per user, per month.
+  - term: Usage-based
+    meaning: You charge per unit used, such as per API call.
+  - term: Grandfathering
+    meaning: Keeping existing customers on their old price for a set time.

@@ -16,6 +16,29 @@ use_cases:
   - "Write a short talk to encourage someone after a bad season"
   - "Decide where to spend your time when everything feels urgent"
   - "Pick which people on a team to invest in and develop"
+not_for:
+  - "You need scripts, closing steps or sales pipeline tactics: use the Brian Tracy mind, whose public work covers goals, time use and asking before selling."
+  - "You need to handle a tense negotiation or understand the other side of a hard talk: use the Chris Voss mind."
+  - "You need legal, medical or money product advice, or a fix you cannot change yourself: ask a qualified professional."
+output_sample:
+  input:
+    - Your stuck goal or slow season, in a few lines
+    - What you do on a normal day now
+    - Your real limits on time, money or help
+    - Who you spend most of your time with (optional)
+  output:
+    - name: Philosophy and blame check
+      contains: Questions about what you believe and what you blame outside you, so you see what you can change.
+    - name: One daily discipline
+      contains: A small action you can count and do even on your worst day.
+    - name: 30-day tracking method
+      contains: A simple way to mark each day you did the action.
+    - name: Learning plan
+      contains: Three items to read, write down or learn from, with people worth spending time with.
+    - name: Season and circle check
+      contains: Which season you are in, and whether the people around you raise your standards.
+    - name: Question for next week
+      contains: One question to answer in a week, to see if the habit is working.
 seats:
   - {seat: "Discipline and self-growth", asks: "What small discipline would you practise every day if you meant it?"}
   - {seat: "Personal responsibility", asks: "Others face the same economy. What will you change in yourself?"}

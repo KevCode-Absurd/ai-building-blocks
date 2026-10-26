@@ -12,11 +12,23 @@ description: "Capture a browser page with an available browser screenshot tool. 
 
 First identify whether a browser screenshot tool or an OS capture helper is available. Browser capture records the rendered page only. Desktop, app-window and region capture require a supported OS helper: macOS uses Screen Recording permission, Linux needs one of the listed screenshot utilities, and Windows uses the PowerShell helper. If the required tool or permission is absent, say that capture type is unavailable. Do not describe a browser image as a desktop screenshot. The browser fixture test validates only browser-page capture; it does not validate native OS capture.
 
+This skill was written for Codex. Where it says Codex or "temp mode", that means a capture the AI takes only to look at. In other AIs, use the same steps and read "Codex" as "your AI".
+
+## Privacy first
+
+A screenshot can show private things: messages, passwords, customer records, other open windows. Before you capture, tell the user what will be in the picture (the whole screen, one window or one region). Prefer one window or a region over the whole screen. Ask the user to close or hide anything private. Do not send, upload or share a capture unless the user asks.
+
+## If something is missing
+
+- The user has not said what to capture (whole screen, one app window or a region): ask once. Do not capture the whole screen by default.
+- The app name or window is unknown: on macOS run `--list-windows --app "<name>"` and show the matches. Elsewhere ask for the active window, a region or a window handle.
+- The tool or permission is missing: say that capture type is unavailable and what the user must install or allow. Do not make up a picture.
+
 Follow these save-location rules every time:
 
 1) If the user specifies a path, save there.
 2) If the user asks for a screenshot without a path, save to the OS default screenshot location.
-3) If Codex needs a screenshot for its own inspection, save to the temp directory.
+3) If the AI needs a screenshot only for its own inspection (Codex calls this temp mode), save to the temp directory.
 
 ## Tool priority
 
@@ -266,12 +278,19 @@ gnome-screenshot -w -f output/window.png
 ## Error handling
 
 - On macOS, run `bash <path-to-skill>/scripts/ensure_macos_permissions.sh` first to request Screen Recording in one place.
-- If you see "screen capture checks are blocked in the sandbox", "could not create image from display", or Swift `ModuleCache` permission errors in a sandboxed run, rerun the command with escalated permissions.
+- If you see "screen capture checks are blocked in the sandbox", "could not create image from display", or Swift `ModuleCache` permission errors in a sandboxed run (Codex runs commands in a sandbox), ask the user before you rerun the command with escalated permissions.
 - If macOS app/window capture returns no matches, run `--list-windows --app "AppName"` and retry with `--window-id`, and make sure the app is visible on screen.
 - If Linux region/window capture fails, check tool availability with `command -v scrot`, `command -v gnome-screenshot`, and `command -v import`.
 - If saving to the OS default location fails with permission errors in a sandbox, rerun the command with escalated permissions.
 - Always report the saved file path in the response.
 
+## What you hand back
+
+- The full path of every file saved, one per line. When several windows or displays match, expect extra files with `-w<windowId>` or `-d<display>` in the name.
+- What each file shows (whole screen, one window or a region), which tool made it, and the operating system.
+- Anything that could not be captured and why.
+- A reminder if the picture may hold private data.
+
 ## Repaired capability boundary
 
-Use only a capture tool that is actually available in the current environment. A browser page screenshot can be claimed only after the browser tool returns an image for the requested page or a local fixture. It captures rendered browser content, not the desktop, other applications, hidden windows or arbitrary screen regions. Native operating-system capture requires a working OS capture tool and permission; if unavailable, say desktop capture is unavailable and offer browser-page capture when supported. Never fabricate a screenshot or describe a fixture image as the user's screen. Report the tool, target and saved output path only when returned by the tool. The current Codex native-computer capability may be disabled; confirm capability at runtime.
+Use only a capture tool that is actually available in the current environment. A browser page screenshot can be claimed only after the browser tool returns an image for the requested page or a local fixture. It captures rendered browser content, not the desktop, other applications, hidden windows or arbitrary screen regions. Native operating-system capture requires a working OS capture tool and permission; if unavailable, say desktop capture is unavailable and offer browser-page capture when supported. Never fabricate a screenshot or describe a fixture image as the user's screen. Report the tool, target and saved output path only when returned by the tool. In Codex, the native-computer capability may be disabled; confirm capability at runtime.

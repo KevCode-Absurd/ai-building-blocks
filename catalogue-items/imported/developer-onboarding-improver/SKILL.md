@@ -11,16 +11,44 @@ license_source: https://github.com/jonathimer/devmarketing-skills/blob/main/LICE
 ---
 
 # Reducing Time-to-First-API-Call
-## When to Use
-
-Use this skill when you need reduce time-to-first-API-call (TTFAC) by optimizing every step of the developer onboarding journey. This skill covers authentication simplification, sandbox environments, interactive documentation, and identifying and eliminating common failure points. Trigger phrases: "API...
-
 
 The time between a developer discovering your API and successfully making their first call is the most critical window in your entire developer journey. Every minute of friction here costs you potential users.
 
+## When to Use
+
+- Developers sign up for your API but never make a call.
+- Getting an API key takes many steps or an approval wait.
+- You do not know how long setup takes a new developer.
+- Your sandbox or test mode is hard to find or use.
+
+## When Not to Use
+
+- Your API has no self-serve sign-up (keys are handed out by a sales team). Fix that process first.
+- You need a quickstart page written. Use the Developer quickstart writer.
+- You need API reference docs. Use the Developer docs writer.
+
+## Inputs
+
+Ask once for anything missing. If the person cannot answer, mark it MISSING in the output and carry on. Never invent steps, times or drop-off numbers.
+
+1. A description of the path today: from finding the docs to the first successful call. Each step, in order.
+2. Who the developers are and how skilled they are (see Before You Start).
+3. Optional: drop-off numbers per step, and the current quickstart.
+
+## Output
+
+Return these sections, in this order. Keep the whole answer under about 900 words.
+
+1. **Stage table**: the six TTFAC stages (Discovery, Signup, Credential, Setup, Execution, Success). For each: the step as described, a time estimate marked "estimate" (or a measured figure if the person gave one), and a rating from the benchmark table.
+2. **Where people get stuck**: the 3 biggest friction points, each tied to a stage and to evidence from the description.
+3. **Ranked fixes**: up to 7 fixes, highest impact first. Each has the stage, the change, and the effort (small, medium, large).
+4. **Auth, sandbox and error-message ideas**: only what applies to this API.
+5. **What to measure**: the events to track, so the next review uses real numbers.
+6. **Missing**: any input marked MISSING and how it limits the plan.
+
 ## Overview
 
-Time-to-First-API-Call (TTFAC) is the single most predictive metric for developer adoption. Developers who succeed quickly become active users. Developers who struggle leave—often silently.
+Time-to-First-API-Call (TTFAC) is the single most predictive metric for developer adoption, in the original author's view. Developers who succeed quickly become active users. Developers who struggle leave, often silently.
 
 This skill covers:
 - Measuring and optimizing TTFAC
@@ -31,7 +59,7 @@ This skill covers:
 
 ## Before You Start
 
-Review the **developer-audience-context** skill to understand:
+Ask about, or review the **developer-audience-context** skill for:
 - What's the typical technical sophistication of your developers?
 - What tools and environments do they commonly use?
 - What alternative products have they tried? What was their experience?
@@ -53,6 +81,8 @@ Time-to-First-API-Call measures the elapsed time from a developer's first intera
 6. **Success time**: Receiving successful response
 
 ### TTFAC Benchmarks
+
+These bands are the original author's rules of thumb, not measured industry data. Use them to rate and compare your own stages.
 
 | Rating | TTFAC | Developer Experience |
 |--------|-------|---------------------|
@@ -315,7 +345,9 @@ api.on('request_error', (error, request) => {
 
 ### Most Common First-Call Failures
 
-**1. Authentication Errors (40% of first-call failures)**
+The percentages below come from the skill's original author. They are rough, are not tied to a published study, and will differ for your API. Do not quote them as facts. Use your own error logs when you have them.
+
+**1. Authentication Errors (often the biggest group)**
 ```
 Problem: Wrong key, malformed header, missing auth
 Fix:
@@ -324,7 +356,7 @@ Fix:
 - Auth header format shown with example
 ```
 
-**2. Request Format Errors (25%)**
+**2. Request Format Errors**
 ```
 Problem: Wrong content type, malformed JSON, missing fields
 Fix:
@@ -333,7 +365,7 @@ Fix:
 - Show exactly what was expected vs. received
 ```
 
-**3. Environment/Setup Errors (20%)**
+**3. Environment/Setup Errors**
 ```
 Problem: SDK not installed, wrong SDK version, missing dependencies
 Fix:
@@ -342,7 +374,7 @@ Fix:
 - Quick environment check script
 ```
 
-**4. Rate Limiting (10%)**
+**4. Rate Limiting**
 ```
 Problem: Aggressive rate limits during exploration
 Fix:
@@ -351,7 +383,7 @@ Fix:
 - Don't count failed requests against limits
 ```
 
-**5. Networking Errors (5%)**
+**5. Networking Errors**
 ```
 Problem: Firewall, proxy, SSL issues
 Fix:

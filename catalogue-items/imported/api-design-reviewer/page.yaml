@@ -2,35 +2,55 @@ thinking: medium
 thinking_why: It lints against rules and then judges design.
 new_slug: api-design-reviewer
 name: API design reviewer
-summary: Give it your API spec. Get a scorecard, flagged breaking changes and
-  fixes for naming and errors.
+summary: Check your API spec before it ships. Get a graded scorecard, breaking changes and fixes for naming and errors in your API design review.
 job: test-and-fix-code
 headline: API design reviewer
-subhead: A scorecard for your API design, with a list of breaking changes and
-  fixes for naming, errors and structure. It works best before an API ships, or
-  before you plan a second version.
+subhead: Give it your API spec file. It checks names, errors and URL shape, and flags changes that would break clients. You get a graded scorecard and a list of fixes.
 explain: |
   A scorecard for your API design, with a list of breaking changes and fixes for naming, errors and structure. It works best before an API ships, or before you plan a second version.
 
   The skill runs three scripts and reports what they find. A linter checks resource names, how requests and statuses are used, URL shape, error format and missing docs. A change detector compares two versions of your spec and flags removed endpoints and changed responses. A scoring tool grades the whole design. You fix the issues, then run them again until the linter is clean, nothing breaks without a version bump, and the grade meets your target. It will not sign off on words alone.
 when:
-  - A pull request adds or changes endpoints and you want a proper review.
-  - You are planning a second version and need to know what would break.
-  - Your team has no shared API standards.
+  - A pull request adds or changes endpoints and you want a careful review.
+  - You plan a second version and need to know what would break.
+  - Your team has no shared API rules.
   - Names and errors differ from route to route.
+not_for:
+  - "You have no OpenAPI or Swagger file yet: write the spec first, then come back to review it."
+  - "You have internal scripts with no HTTP API: this review does not apply, so ask a teammate to read the code."
+  - "You want a security test of a live API: use a security scanner or a pen tester, as this only reads the spec."
 you_give:
   - Your OpenAPI or Swagger file
-  - An older version to compare (optional)
-  - Your target grade (optional)
-  - Team naming rules (optional)
+  - An older version of the spec to compare (optional)
+  - The lowest grade you will accept (optional)
+  - Your team naming rules (optional)
 you_get:
-  - A graded scorecard
-  - A list of convention problems
-  - Flagged breaking changes
-  - Fixes for naming and error format
+  - A letter grade with a scorecard
+  - A list of naming, URL and error format problems
+  - A list of breaking changes between two versions
+  - Fixes to make, then a re-check until the results pass
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run code and read files, with Python 3 installed. Add the skill folder and your spec file.
+  - "Ask your AI to run the linter: python3 scripts/api_linter.py openapi.json --format json -o lint.json"
+  - "If you have an older spec, ask it to run: python3 scripts/breaking_change_detector.py openapi-v1.json openapi-v2.json --format json -o breaking.json"
+  - "Ask it to run the scorecard: python3 scripts/api_scorecard.py openapi.json --format json --min-grade B -o scorecard.json"
+  - Read the findings and grade. Ask your AI to fix the spec, then run all three checks again.
+  - Stop when the linter is clean, nothing breaks without a version bump, and the grade meets your target.
+output_sample:
+  input:
+    - Your OpenAPI or Swagger file
+    - An older version of the spec to compare (optional)
+    - The lowest grade you will accept (optional)
+    - Your team naming rules (optional)
+  prerequisites:
+    - An AI that can run code and read your files
+    - Python 3 installed
+  output:
+    - name: lint.json
+      contains: Convention problems found in names, HTTP methods, URL shape, status codes, error format and missing docs.
+    - name: breaking.json
+      contains: Changes between two spec versions that could break clients, such as removed endpoints, removed fields and type changes.
+    - name: scorecard.json
+      contains: A letter grade from A to F, with scores for consistency, docs, security, usability and performance.
+    - name: Review summary
+      contains: The linter findings, breaking changes and grade in one report, with fixes to make before you run the checks again.

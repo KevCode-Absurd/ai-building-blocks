@@ -2,11 +2,10 @@ thinking: low
 thinking_why: It follows a short connect routine.
 new_slug: arduino-connector
 name: Arduino connector
-summary: Plug in a board. Get it found, set up and connected to MATLAB.
+summary: Connect your Arduino board to MATLAB over USB. Find the board, pick the port and get a working connection, with you in charge of each step.
 job: build-software
 headline: Arduino connector
-subhead: Your Arduino board found, set up and connected to MATLAB, with you kept
-  in the loop at every step. You plug it in and the skill handles the checking.
+subhead: Your Arduino board found, set up and connected to MATLAB, with you kept in the loop at every step. You plug it in and the skill handles the checking.
 explain: |
   Your Arduino board found, set up and connected to MATLAB, with you kept in the loop at every step. You plug it in and the skill handles the checking.
 
@@ -16,6 +15,10 @@ when:
   - MATLAB doesn't list your board and you don't know why.
   - You have several boards and need the right port.
   - You are starting a hardware project and need a working connection.
+not_for:
+  - "You need Bluetooth or wifi links, or Simulink hardware tests: this skill covers USB only, so use the MathWorks help pages for those."
+  - "Your Arduino IDE or MATLAB support package is not installed yet: install it first with MathWorks' own install steps, then come back."
+  - "You want a custom library for a part MATLAB does not support: that needs a custom library step, not this connection check."
 you_give:
   - An Arduino connected by USB
   - MATLAB with the Arduino support package
@@ -26,8 +29,31 @@ you_get:
   - A working arduino object in MATLAB
   - Clear steps if no board is found
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and reach an Arduino board.
+  - Plug your Arduino into your computer with a USB cable that carries data.
+  - Open an AI that can run MATLAB commands. Paste in this skill, or add its folder if your AI takes files.
+  - "Tell your AI what you want, for example: connect my Arduino, or read a sensor."
+  - Check the board and port lists it shows you. Tell it which port to use.
+  - Confirm the libraries it suggests, or ask for more.
+  - Read the connection message. Then move on to your task, such as blinking an LED or reading a sensor.
+output_sample:
+  input:
+    - An Arduino board plugged in by USB
+    - Which port or board you want to use (optional)
+    - The task you want to do next, like reading a sensor (optional)
+  prerequisites:
+    - An AI that can run MATLAB commands
+    - MATLAB with the Arduino support package installed
+    - A USB cable that carries data, not just power
+  output:
+    - name: Board and port lists
+      contains: The results of arduinolist and serialportlist, shown to you side by side.
+    - name: No board found help
+      contains: Questions and checks for your operating system if nothing shows up, then it waits for your reply.
+    - name: Port and board choice
+      contains: A question asking you which port to use and, if you know it, the board type.
+    - name: Library list
+      contains: The default libraries plus any extra ones the skill picked from your request, with the reason.
+    - name: arduino connection call
+      contains: The arduino call built from your port, board and libraries, run once.
+    - name: Connection confirmation
+      contains: A one-line message naming the board, port and libraries, or the exact error with one or two fixes.

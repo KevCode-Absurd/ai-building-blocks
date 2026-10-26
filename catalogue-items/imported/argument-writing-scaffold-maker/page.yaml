@@ -2,22 +2,23 @@ thinking: low
 thinking_why: It fills a known frame with your topic.
 new_slug: argument-writing-scaffold-maker
 name: Argument writing scaffold maker
-summary: Give it a claim or question. Get a fill-in frame using Toulmin, PEEL or
-  CER that helps learners build an argument.
+summary: Make an argument writing scaffold for any claim or question. Pick Toulmin, PEEL or CER and get prompts, sentence starters and a model answer.
 job: teach-and-train
 headline: Argument writing scaffold maker
-subhead: A fill-in frame that helps a learner build an argument from a claim or
-  question. Pick the framework and you get labelled sections, guiding prompts,
-  sentence starters and a worked model.
+subhead: A fill-in frame that helps a learner build an argument from a claim or question. Pick the framework and you get labelled sections, guiding prompts, sentence starters and a worked model.
 explain: |
   A fill-in frame that helps a learner build an argument from a claim or question. Pick the framework and you get labelled sections, guiding prompts, sentence starters and a worked model.
 
   The skill uses three common frames. Toulmin names the claim, evidence, reasoning, backing, limits and a reply to opposing views. PEEL gives point, evidence, explain and link for paragraphs. CER is claim, evidence and reasoning, popular in science. It adjusts for the learner's level and subject, because a historical argument is built differently from a science one or a literary one. Weaker writers get more support and stronger writers get less. Teachers can make one in about three minutes.
 when:
   - Your class writes opinion paragraphs that state a view with no proof.
-  - You teach science and need claim, evidence, reasoning sheets.
-  - A student struggles to start an essay.
+  - You teach science and need claim, evidence and reasoning sheets.
+  - A student cannot start an essay and needs a frame to fill in.
   - You need a model answer to show how the frame works.
+not_for:
+  - "You need a research paper built on primary sources: use a full writing guide or ask your subject teacher."
+  - "You want to mark finished drafts: give feedback by hand, since this makes frames, not marks."
+  - "You want a story, poem or other non-argument text: use a plain lesson plan for that genre."
 you_give:
   - A claim or question
   - Subject and year level
@@ -29,7 +30,24 @@ you_get:
   - An annotated model answer
   - Adjusted support for the level
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the prompt from the skill file. No code or paid tool is needed.
+  - Type your claim or question, the year group and how well they write, and the frame you want.
+  - Add the subject and any sources students can use (optional).
+  - Read the scaffold and the model answer. Check any evidence it gives, since your AI can get facts wrong.
+  - Fix anything that does not fit your class, then hand it out.
+output_sample:
+  input:
+    - The claim or question your students will argue
+    - Year group and how well they write now
+    - "The frame to use: Toulmin, PEEL, CER, historical or balanced"
+    - Subject area (optional)
+    - Evidence or sources students can use (optional)
+  output:
+    - name: The Scaffold
+      contains: Labelled sections for your chosen frame, with a prompt and sentence starters for each part.
+    - name: Annotated Model
+      contains: A short model argument with notes showing what each part does.
+    - name: Common Weaknesses at This Level
+      contains: The usual mistakes learners make at this level and what to say about them.
+    - name: Differentiation
+      contains: Ways to give weaker writers more help and stronger writers less.

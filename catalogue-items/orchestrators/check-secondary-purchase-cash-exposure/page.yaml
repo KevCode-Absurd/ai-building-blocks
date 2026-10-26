@@ -1,44 +1,56 @@
 new_slug: check-secondary-purchase-cash-exposure
 name: Check secondary purchase cash exposure
 headline: Check secondary purchase cash exposure
-summary: Connect transferred callable commitments with the signed NAV-based purchase price adjustment.
+summary: Check what a buyer pays for a fund interest in a secondary deal, and the future capital calls it takes on, as two separate cash numbers.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Adjusted purchase payment, verified transferred unfunded amount and separate future-call cash budget. Share authorized transfer package, actual commitment ledger, dated reference NAV, signed quote, seller-retained interim distributions and buyer assumption of unfunded obligations.
+subhead: Give it the transfer package, the commitment ledger and the signed price quote. Your AI works out the unfunded commitment being passed on, then the NAV-based price, and keeps the price and the future calls apart.
 explain: |-
-  Adjusted purchase payment, verified transferred unfunded amount and separate future-call cash budget.
+  In a secondary deal, a buyer takes over an investor's stake in a private fund. The price starts from the fund's net asset value (NAV) on a reference date. It moves with distributions the seller kept. The buyer also takes on capital the fund may still call. People often blend the two. This workflow keeps them as two cash numbers: what you pay now, and what you may owe later.
 
-  Private fund secondaries. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 works out the unfunded commitment that transfers, after calls, restored amounts and reductions to the cutoff date. It flags consent and assumption terms for your lawyer. Step 2 takes that balance and the signed quote, credits only the distributions the contract credits, and gives the adjusted price.
+
+  The future calls are a budget, not a fair value. Nothing here approves a transfer or a purchase.
 when:
-  - You need adjusted purchase payment, verified transferred unfunded amount and separate future-call cash budget.
-  - You work on private fund secondaries and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are offered a stake in a private fund from another investor.
+  - A seller sends a price quote based on a reference NAV.
+  - You need to know how much cash to keep for future calls.
+  - A reviewer asks why the price and the unfunded commitment were added together.
+not_for:
+  - "You run the fund and need to split a new capital call between investors: use the Reconcile a private fund capital call workflow."
+  - "You only need the unfunded balance of your own commitment: use the Unfunded commitment checker."
+  - "You want to know if the price is good: this checks the arithmetic and cash, not the value of the fund."
 you_give:
-  - Authorized transfer package, actual commitment ledger, dated reference NAV, signed quote, seller-retained interim distributions and buyer assumption of unfunded obligations.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The transfer package, with the consent and assumption terms (from the seller or the fund)
+  - "The commitment ledger: amounts called, returned and recallable (from the fund administrator)"
+  - The fund's NAV on the reference date (from the fund statement)
+  - The signed price quote
+  - Distributions the seller kept between the reference date and closing, and what the contract credits
 you_get:
-  - Adjusted purchase payment, verified transferred unfunded amount and separate future-call cash budget.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The unfunded commitment that transfers to the buyer
+  - The adjusted purchase payment due now
+  - A separate budget for future capital calls
+  - Consent and assumption points for your lawyer
+  - A list of missing facts and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the transfer package, ledger, fund statement and quote. Say the cutoff date, currency and scale.
+  - Ask your AI to follow the pack and save each step's file.
+  - After step 1, match the unfunded balance with the fund administrator's figure for the cutoff date.
+  - After step 2, check the price against the signed quote. Send the consent points to your lawyer. Finish every MISSING line first.
 how_it_works:
   - title: Unfunded commitment checker
-    text: Reconcile only the interest being transferred and its actual post-call, restoration and reduction balance at the transfer cutoff. Flag consent and assumption terms for the authorized reviewer.
+    text: Looks only at the interest being transferred. Works out the unfunded balance at the cutoff after calls, restored amounts and reductions. Flags consent and assumption terms. Hands step 2 the transferred unfunded amount.
   - title: Secondary NAV price checker
-    text: Pass the verified transferred callable balance into transferredUnfunded. Use the signed reference-NAV quote and only contractually credited interim distributions, keeping current price and future calls separate.
+    text: Takes the transferred balance from step 1 and the signed reference-NAV quote. Credits only the interim distributions the contract credits. Gives the adjusted price and the future-call budget as separate lines.
 output_shape: |-
-  Adjusted purchase payment, verified transferred unfunded amount and separate future-call cash budget.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES       <transfer package, ledger, NAV statement, quote and cutoff date>
+  UNFUNDED COMMITMENT     <commitment | called | restored | reduced | transferred unfunded>
+  PURCHASE PRICE          <reference NAV | quote terms | credited distributions | adjusted payment>
+  CASH EXPOSURE           <pay now | budget for future calls>
+  MISSING                 <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,13 +72,38 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A spreadsheet tool and an AI that reads files
+      why: The ledger and the price both need dated arithmetic. The AI should recalculate and reopen the saved file.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The fund's latest capital account statement.
+    - The fund agreement's transfer and consent clauses.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Secondary
+    meaning: A deal where one investor sells its fund stake to another.
+  - term: NAV
+    meaning: "Net asset value: the fund's reported value of the investor's stake on a date."
+  - term: Unfunded commitment
+    meaning: Money an investor promised that the fund has not yet called.
+  - term: Capital call
+    meaning: A fund's request for investors to send part of their commitment.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A comparison that explains any difference between two sets of figures that should match.
+output_sample:
+  input:
+    - The transfer package and the commitment ledger
+    - The reference NAV statement and the signed quote
+    - Distributions the seller kept
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: outputs/step-1-unfunded-commitment-checker.md
+      contains: The unfunded commitment that transfers, with consent and assumption points.
+    - name: outputs/step-2-secondary-nav-price-checker.md
+      contains: The adjusted purchase payment and the separate budget for future calls.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, assumptions, MISSING lines, checks missed and one suggested next step.
+next:
+  - reconcile-a-private-fund-capital-call
+  - review-a-fund-bridge-and-hurdle
+  - check-staged-follow-on-commitments
+before: []

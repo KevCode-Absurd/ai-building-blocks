@@ -1,6 +1,6 @@
 new_slug: elevenlabs-spoken-script-writer
 name: ElevenLabs spoken script writer
-summary: Share your idea and length. Get a spoken script with clear speakers, pacing and light delivery cues.
+summary: Write a spoken script for ElevenLabs voice-over or dialogue. Give your idea and length, get clear speakers, pacing and light delivery cues.
 job: work-with-audio
 headline: ElevenLabs spoken script writer
 subhead: Share your idea and length. Get a spoken script with clear speakers, pacing and light delivery cues. Bring the brief and any files you want it to use.
@@ -11,6 +11,10 @@ explain: |-
 when:
   - You need voice-over or dialogue with delivery marks.
   - You want a clear draft and checks from the material you already have.
+not_for:
+  - "You want silent narration or on-screen text only: write plain captions or copy yourself, no audio script needed."
+  - "You want music or sound effects only: use a music or sound tool, since this writes spoken words."
+  - "No audio will be made: use a plain script template or outline instead."
 you_give:
   - brief
   - "Optional: copy draft"
@@ -18,9 +22,27 @@ you_get:
   - script
   - Missing inputs and steps that still need to run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code or paid tool is needed for the script.
+  - Paste your brief, your target length and any draft copy or approved facts.
+  - Say which ElevenLabs voice or model you will use, if you know it. If not, ask for a tag-free version too.
+  - Check the script against your facts. Remove any cue your voice does not support.
+  - Paste the script into ElevenLabs and make one take. Then run the synthesis checks the AI listed before you publish.
+output_sample:
+  input:
+    - Your idea or brief, in a few sentences
+    - Your target length, such as 30 seconds
+    - Your audience and tone (optional)
+    - Your voice or model in ElevenLabs (optional)
+    - Your draft copy or approved product facts (optional)
+  prerequisites:
+    - An ElevenLabs account to turn the script into audio, if you want to hear it
+  output:
+    - name: SCRIPT
+      contains: The spoken words, with each speaker labeled and delivery cues only where they are needed.
+    - name: DELIVERY NOTES
+      contains: Pacing, emotional turns and an estimated length based on word count, not measured audio.
+    - name: NOT RUN
+      contains: The audio and listening checks that still need you, such as generating one take and listening to it.
 how_it_works:
   - title: Read the brief
     text: Confirm purpose, target duration, audience, tone and voice model only where missing information materially changes the script. Use explicit assumptions for a usable first draft.

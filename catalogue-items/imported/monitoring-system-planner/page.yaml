@@ -12,14 +12,14 @@ subhead: "A step-by-step plan for watching your production system: what to
 explain: |
   A step-by-step plan for watching your production system: what to measure, what to log, how to trace requests and when to alert. You can build it in small pieces.
 
-  The plan starts with your critical user journeys and what reliability each needs. Then it picks signals and sets how long data is kept. It builds the smallest set of dashboards and alerts that support your targets, each with an owner, a runbook and a rule for missing data. It checks that counts and totals line up, tests one alert in a safe environment, and measures noise before rolling out. It keeps private data, such as passwords and full request bodies, out of the logs.
+  The plan starts with the main things your users do and what reliability each needs. Then it picks signals and sets how long data is kept. It builds the smallest set of dashboards and alerts that support your targets, each with an owner, a runbook and a rule for missing data. It checks that counts and totals line up, tests one alert in a safe environment, and measures noise before rolling out. It keeps private data, such as passwords and full request bodies, out of the logs.
 when:
   - You are setting up monitoring for the first time.
   - Releases keep causing slowdowns and you cannot say why.
   - You need to agree on reliability targets with your team.
   - You want a privacy check on what your logs capture.
 you_give:
-  - The services and user journeys that matter most
+  - The services and user tasks that matter most
   - Reliability goals
   - Tools in use, such as Prometheus or Grafana
   - Data you must not log
@@ -34,3 +34,30 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - "You only need reliability targets and an error budget. Use the Reliability target setter."
+  - "You want a ready Grafana dashboard and alert config from scripts. Use the Monitoring planner."
+  - "You are watching an AI agent or an AI app. Use the AI agent monitoring planner."
+  - "You cannot get at any metrics, logs or traces yet. Set up the data first, then plan."
+output_sample:
+  input:
+    - The services and user tasks that matter most
+    - The reliability each task needs
+    - The monitoring tools you already use, such as Prometheus or Grafana (optional)
+    - Data you must never log, such as passwords or full request bodies
+  prerequisites:
+    - Access to your metrics, logs or traces, or a person who has it
+    - A safe test environment where you may trigger one alert
+  output:
+    - name: Key user tasks and targets
+      contains: The tasks to protect and how reliable each must be.
+    - name: Signals and retention
+      contains: What to measure, log and trace, and how long to keep each kind of data.
+    - name: Dashboards and alerts
+      contains: The smallest set that supports your targets, each with an owner, a runbook and a missing-data rule.
+    - name: Alert checks
+      contains: How to confirm counts and totals match, test one alert, and measure noise before rollout.
+    - name: Log privacy list
+      contains: The only fields allowed in telemetry, with passwords, prompts and full bodies kept out.
+    - name: Phased build plan
+      contains: Small pieces you can build one at a time.

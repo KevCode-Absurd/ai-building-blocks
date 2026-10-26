@@ -5,35 +5,31 @@ description: Use when you have two versions of an ad, email, page or mailing and
 
 # Split-run test planner
 
-A split-run test shows version A to half of an audience and version B to the other half at the same moment, in the same place. That removes the usual excuses: the weather, the day, the position on the page, the order of the ads. Only the one thing you changed is left to explain a difference. This skill plans that test. For choosing the reply offer, use "Test reply offer planner". If the versions must run in different places, such as two magazines or towns, use "Cross-over copy test planner". For reading the results, use "Split-run result reader".
+A split-run test shows version A to half of an audience and version B to the other half at the same moment, in the same place. That removes the usual excuses: the weather, the day, the position on the page, the order of the ads. Only the one thing you changed is left to explain a difference. This skill plans that test.
 
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
+**Not for:** a quick one-message plan for just two versions (use the Two-version ad test planner), versions that must run in different places such as two magazines or towns (use the Cross-over copy test planner), ranking headline ideas before a test (use the Keyed headline test planner), or reading results you already have (use the Split-run result reader). To choose what people reply to, use the Test reply offer planner.
+
+<!-- needs: hand-written (needs_mode: manual in item.yaml). Keep this section in step with the page. -->
 ## Before you start
-This skill runs on its own. What's below makes the result better, but none of it is required.
+This skill runs in any chat AI. It needs no files, web access or paid tools.
 
-**Works best with** (or they can paste their own instead):
-- **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
+**What you need:**
+- **The two versions** (yours): the ad, email, page or mailing in each form, in full.
 
 **Makes it better (optional):**
-- **A draft** (yours): the ad, page, email or script you want checked or improved.
-- **Your offer**, made by the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-3. **Ad copy** with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). It uses your brand brain and a buyer brief.
-4. **Your offer** with the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder). It uses your brand brain.
-5. This one.
+- **The offer and reply path** (yours): what the reader is asked to do. It must be the same in both versions.
+- **Your usual reply rate** for this channel (yours): replies, clicks or sales per 100 people. It sizes the audience.
+- **How many people you can reach with each version** (yours): so the plan can say if the test is too big.
+- **Past test results** (yours): an export from your email tool or ad platform, to compare with.
 
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.
-2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with ad copy, a draft, your offer. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
+1. **Look first.** Use what they have already pasted or attached. In Claude Code, look in the project too.
+2. **If the versions are missing, ask once.** If they say go ahead anyway, do the plan with the parts that need no copy (steps 2 to 8) and mark the rest `MISSING:`. Optional items never block the job.
+3. **Do the job.** Mark each gap with `MISSING:` and never invent a past result. Say each point once. In CHECKS MISSED, name only the checks that failed, or write "none".
 
 **Tools that do this best:**
-- **Your email tool or ad platform:** Most have an even split option that does the halves for you.
-- **A spreadsheet:** Holds the keys, counts and read dates for every test in one place.
+- **Your email tool or ad platform:** most have an even-split option that makes the halves for you.
+- **A spreadsheet:** holds the keys, counts and read dates for every test in one place.
 <!-- /needs -->
 
 ## What you need
@@ -45,15 +41,16 @@ How to start:
 
 ## Steps
 
-1. **Name the one difference.** Compare the two versions line by line. List every difference. If there is more than one, split them: either choose the one that matters most for this test or plan separate tests. Common single changes: the headline, the lead appeal, the offer, the picture, a subhead above the reply button, or a word added to the headline. Write the difference as a one-line sentence.
+1. **Name the one difference.** Compare the two versions line by line. List every difference. If there is more than one, split them: either choose the one that matters most for this test or plan separate tests. Common single changes: the headline, the lead appeal, the offer, the picture, a subhead above the reply button, or a word added to the headline. Write the difference as a one-line sentence. With no versions given, write `MISSING:` here and go on.
 2. **Hold everything else equal.** Write down what must match: same offer, same price, same reply path, same size, same send time, same audience list, same position. Anything that must be different (such as a different key) is named.
 3. **Choose how to split.**
    - Email or mailing: shuffle the list at random and cut it in half. Do not split by alphabet, date joined or postcode, which can hide a pattern.
    - Page or ad platform: use the platform's own even split, not "A this week, B next week".
-   - Print or a place with no even split: run each version in matched places and swap the places in a second round, then average the two rounds.
-4. **Key each version.** Give a code to each version: a different link tag, phone extension, department number, offer code or form field. The code stays on that version for good. If anything in the version changes later, even a small word, the code changes to the next letter (A, then A2).
-5. **Set the reply target.** Aim for about a hundred replies per version. With ten replies each, a gap is probably luck. With a thousand each, you may spend more than you need. Work out the audience size you need: target replies divided by your usual reply rate, per version. Show the sum: for example, 100 replies at a usual 2 percent reply rate needs 5,000 people per version, so 10,000 in all. Add our rule of thumb for later: the gap between the two reply counts should be more than twice the square root of the two counts added together before you call a winner.
-6. **Write the winner rule before launch.** State it in one line: which number decides (replies, cost per reply, sales per reply), how big a gap counts, and the date you will read it. Include what you will do if the gap is small: rerun with more audience, or keep both.
+   - Print or a place with no even split: run each version in matched places and swap the places in a second round, then average the two rounds. If the versions can only run in different places, use the Cross-over copy test planner.
+4. **Key each version.** Give a code to each version: a different link tag, phone extension, department number, offer code or form field. The code stays on that version for good. If anything in the version changes later, even a small word, the code changes to the next letter (A, then A2). If the person named no tool, suggest a default such as a link tag `?v=A` and `?v=B` and say it is a default.
+5. **Set the reply target.** Aim for about a hundred replies per version. With ten replies each, a gap is probably luck. With a thousand each, you may spend more than you need. Work out the audience size you need: target replies divided by your usual reply rate, per version. Show the sum: for example, 100 replies at a usual 2 percent reply rate needs 5,000 people per version, so 10,000 in all. With no usual rate, show the sum at a low, middle and high rate that you label as guesses, and ask for the real one.
+   Our rule of thumb for later, not a full statistics test: call a winner only when the gap between the two reply counts is more than twice the square root of the two counts added together. With very few replies in either version, say it is too early to call and plan more audience or a longer run.
+6. **Write the winner rule before launch.** State it in one line: which number decides (replies, cost per reply, sales per reply), how big a gap counts, and the date you will read it. If there is no launch date, write the read date as "launch day plus N days", where N is how long it should take to reach the target replies at the usual rate. If you cannot work that out, use 14 and say it is a default. Include what you will do if the gap is small: rerun with more audience, or keep both.
 7. **Plan more than two versions.** Two ways:
    - Rounds: test pairs, then test the winners against each other, like a knockout.
    - Control: pick one version as the control and run every new version against it, one at a time. Rank all the new versions by how far above or below the control each lands. Use a smaller test size so the control does not tire out the audience.
@@ -64,14 +61,11 @@ How to start:
 
 The one-line difference. The equal-list. The split method. The keys. The audience size with the sum. The winner rule with its date. For more than two versions, the round or control plan. The trap list. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+<!-- next: hand-written (needs_mode: manual in item.yaml). -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Reach-before-repeat planner](https://useaiblocks.com/skills/reach-before-repeat-planner). It takes the plan.
-- **Set up AI to work for you** with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner). It takes the plan.
-- **Make an offer people want** with the [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner). It takes the plan.
-- **Write the ad copy** with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer). It takes the plan.
-- **Understand your buyers** with the [Customer discovery interview planner](https://useaiblocks.com/skills/customer-discovery-plan). It takes the plan.
+- **If you are not sure what people should reply to** with the [Test reply offer planner](https://useaiblocks.com/skills/test-reply-offer-planner). It takes this plan.
+- **When the read date comes** with the [Split-run result reader](https://useaiblocks.com/skills/split-run-result-reader). It takes the reply counts for each key.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -81,11 +75,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Both versions run at the same time to matched halves.
 - Each version has its own code that changes if the version changes.
 - The reply target and audience sum are shown.
-- The winner rule was written before launch, with a read date.
+- The winner rule was written before launch, with a read date (a real date, or launch day plus N days).
 
 ## If something is missing
 
-Write `MISSING: <what> for <step>`. With no usual reply rate, show the sum with a range and ask for the rate. Never invent a past result.
+Write `MISSING: <what> for <step>`. With no usual reply rate, show the sum with a labelled range and ask for the rate. With no versions, still give the split, default keys, the size sum, the read date rule and the traps. Never invent a past result.
 
 ## Avoid
 

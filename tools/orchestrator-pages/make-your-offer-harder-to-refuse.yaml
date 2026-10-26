@@ -1,6 +1,6 @@
 new_slug: make-your-offer-harder-to-refuse
 name: Make your offer harder to refuse
-summary: Give it your offer. Get honest limits and deadlines, bonuses, a guarantee and a name, ready to use.
+summary: "Make your offer harder to refuse: add honest limits and dates, bonuses, a guarantee and a name, without cutting your price."
 job: make-offer
 thinking: high
 thinking_why: It runs four skills in a row, and the guarantee step does refund sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your offer is sound but buyers wait, doubt it or ignore it.
   - You are tempted to cut the price to close.
   - You want urgency and a guarantee without fake timers or a refund disaster.
+not_for:
+  - Your offer does not sell at all. The fix is the offer itself, so start with the Niche price ladder builder.
+  - You only want bonuses. Use the Offer bonus package builder.
+  - You want a plan for what to sell buyers after they pay. Use the After-sale offer planner.
 you_give:
   - Your offer, price and how it is delivered
   - How many buyers you can serve well at once
@@ -31,6 +35,26 @@ how_to_use:
   - Tell it how many buyers you can serve well. It will not write a limit you cannot keep.
   - List the objections you hear in sales calls. Each becomes a bonus.
   - Check the refund sums before you publish the guarantee.
+output_sample:
+  input:
+    - Your offer, price and how it is delivered
+    - How many buyers you can serve well at once
+    - Your cost to deliver per buyer
+    - The doubts you hear from buyers (optional)
+    - Your sales and refund numbers (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Limits and deadlines"
+      contains: Your capacity, a limit rule, a date rule, lines for each channel and an honesty check.
+    - name: "Step 2: Bonuses"
+      contains: Each buyer doubt matched to a named bonus with proof and value, plus the order to reveal them.
+    - name: "Step 3: Guarantee"
+      contains: The guarantee in if-then form, the refund sums, three names and a note on rules.
+    - name: "Step 4: Names"
+      contains: Ten offer names with parts marked, three to test and the order to rename the offer.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and every MISSING line in one list.
 how_it_works:
   - title: Add honest limits and deadlines
     text: Sets a cap from your real capacity and a date you will keep, keeps supply a little under demand and writes the lines for each channel.

@@ -1,6 +1,6 @@
 new_slug: expert-and-newcomer-test-planner
 name: "Expert and newcomer test planner"
-summary: "Paste your draft. Get who to try it on, the questions to ask each, and a pass line for both."
+summary: "Plan a test of your draft with an expert and a newcomer. Get who to pick, the questions for each, and a pass line set before you start."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It follows a fixed test design with little judgement."
@@ -17,6 +17,10 @@ when:
   - "You have a draft for a mixed audience and want proof it works for both groups."
   - "Feedback from friends has been warm and useless."
   - "You can show the piece to a few people this week and want to get the most from it."
+not_for:
+  - "You need sales numbers or market data: run a buyer survey instead, since this test only shows how a few people react."
+  - "You already have feedback notes and want them ranked: paste them into the Reader feedback sorter."
+  - "You have no draft yet: write a first version before you plan a test."
 
 you_give:
   - "The draft"
@@ -35,6 +39,27 @@ how_to_use:
   - "Paste the draft and say who the two groups are and how the piece will be shown."
   - "Run the test with one expert and one newcomer, each alone. Fill in the record sheet."
   - "Paste your notes into the Reader feedback sorter."
+output_sample:
+  input:
+    - Your draft, pasted in full
+    - Who counts as an expert and who counts as a newcomer for this piece
+    - "How it will be seen: read, heard or watched"
+    - The main idea and the promise to each group (optional)
+  output:
+    - name: Who to pick
+      contains: What makes a good expert and a good newcomer, who to avoid, and why to see each alone.
+    - name: Setup
+      contains: How to show the piece with no preface, one pass only, and what you say at the end.
+    - name: Watch list
+      contains: What to note without asking, such as where they lean in, laugh, look away or reread.
+    - name: Questions for the newcomer and the expert
+      contains: The same short set for each group, asked straight after and before any talk.
+    - name: Pass lines
+      contains: A clear yes or no rule for each group, fixed before the test.
+    - name: Record sheet
+      contains: One page per person for labels, notes, word-for-word answers and pass or fail.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: "Picks the people"

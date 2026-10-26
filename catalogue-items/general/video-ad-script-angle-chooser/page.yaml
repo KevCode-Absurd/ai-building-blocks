@@ -1,6 +1,6 @@
 new_slug: video-ad-script-angle-chooser
 name: Video ad script angle chooser
-summary: Paste your buyer and facts. Get four different kinds of video script to try, each with its opening.
+summary: Find the right video ad script angle for your buyer. Give it your facts. You get four different script types to test, each with its opening line.
 job: make-video-ads
 thinking: medium
 thinking_why: It must match each kind of script to a fact you really have.
@@ -14,6 +14,10 @@ when:
   - You want to test video scripts that are really different.
   - You have a lot of facts and do not know which to lead with.
   - Your last batch of scripts all sounded alike.
+not_for:
+  - "You want the full version with every check: use the Video ad script type picker."
+  - "You need the script written out in full: use the Phone video ad scriptwriter after you pick your types."
+  - "You have no real facts about your buyer or offer yet: gather a few customer quotes or review lines first."
 you_give:
   - Your buyer, their reason to buy and your offer
   - How much the buyer already knows, and the length
@@ -28,6 +32,22 @@ how_to_use:
   - Write your buyer, what they know and your facts under the prompt.
   - Pick two or three from the four to write first.
   - Write each with the Phone video ad scriptwriter.
+output_sample:
+  input:
+    - Your buyer, their reason to buy and your offer
+    - How much the buyer already knows, and how long the video is
+    - The real facts you can use, such as a doubt, a result you can film or a flaw you will admit
+  output:
+    - name: Four script types
+      contains: Each chosen type, with the reason it sells on and the real fact it opens on.
+    - name: Tone
+      contains: A start tone and an end tone for each script, matched to a real fact.
+    - name: First line
+      contains: An opening line for each script, in the buyer's own words.
+    - name: SKIPPED
+      contains: The types left out, each with the fact that was missing.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 how_it_works:
   - title: Lists the types
     text: Each type needs one real fact.

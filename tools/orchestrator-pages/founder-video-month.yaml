@@ -1,6 +1,6 @@
 new_slug: founder-video-month
 name: Plan a month of founder videos and edit the first
-summary: Give it your brand file. Get ten founder video episodes, a script for the first, and an edit plan for your footage.
+summary: Plan a month of founder videos from your brand file. Get ten episodes, a script for the first, and an edit plan for your footage.
 job: grow-social
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want to post founder videos every week and keep running out of ideas.
   - The founder will film but hates writing scripts.
   - You have raw footage and no plan for the edit.
+not_for:
+  - "You want a paid video ad, not organic posts: use the Founder video ad script writer."
+  - "You only need ideas for a series and no script or edit: use the Founder video series planner."
+  - "You already have footage and only need cuts and captions: use the Social video edit planner."
 you_give:
   - Your brand file
   - The founder's real story, in notes or from a call (optional)
@@ -28,6 +32,28 @@ how_to_use:
   - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Have your inputs ready. It works step by step and saves each result.
+output_sample:
+  input:
+    - Your brand file
+    - The founder's real story, in notes or from a call (optional)
+    - Who the videos are for (optional)
+    - Your footage once you have filmed the first episode
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Series plan
+      contains: Ten episodes in order, each with the buyer question, its thread and what to show on screen.
+    - name: Filming setup
+      contains: One setup you can reuse for every episode.
+    - name: Script for episode 1
+      contains: Two or three openings, the script in four moves and a list of cutaways.
+    - name: Read-aloud fixes
+      contains: A table of lines that trip the tongue, the problem with each and the fix.
+    - name: Edit plan
+      contains: Cuts with in and out times, captions, cover and export checks, plus any checks missed.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every missing item in one list.
 how_it_works:
   - title: Plans the series
     text: Uses the founder video series planner to sort questions into four threads and choose and order ten episodes.

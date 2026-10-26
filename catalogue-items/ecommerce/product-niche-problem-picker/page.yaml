@@ -1,6 +1,6 @@
 new_slug: product-niche-problem-picker
 name: Product niche problem picker
-summary: Name a market. Get 20 buyer problems, the best 5, and what to search to see who sells to each.
+summary: Find a product niche by problem. Name a market and get 20 buyer problems, the best 5, and the ad library searches to see who sells to each.
 job: find-products
 thinking: low
 thinking_why: It lists and ranks by clear tests, with a fixed shape.
@@ -14,6 +14,10 @@ when:
   - You want to sell online but have not picked a product.
   - You have a market in mind and need the right problem inside it.
   - You want to see who already sells to a problem before you spend.
+not_for:
+  - "You already have a product and only need to study ads: search the free Facebook Ad Library yourself."
+  - "You sell services or to other businesses: talk to five likely buyers and ask what they struggle with."
+  - "You want the full version with every check: use the Pain point niche finder."
 you_give:
   - A market
   - "A line about you: experience, budget, country"
@@ -28,6 +32,27 @@ how_to_use:
   - Pick a market with a clear before and after.
   - Run the ad library searches yourself and fill in the table.
   - Check what you can say in ads before you pick a health problem.
+output_sample:
+  input:
+    - A market, such as pets, hair, skincare or sleep
+    - "A line about you: beginner or not, budget, country"
+    - Reviews or comments from that market (optional)
+  prerequisites:
+    - Any chat AI
+    - Free access to the Facebook Ad Library, to run the searches it gives you
+  output:
+    - name: Market line
+      contains: Your market and who it is for. Health markets carry a note to have a qualified person check your claims.
+    - name: 20 problems
+      contains: Specific buyer problems in the buyer's own words, each with who has it.
+    - name: Best five
+      contains: The top five problems, ranked by how often felt, how much wanted, how many products fit, and how well you know it.
+    - name: Product kinds
+      contains: Three kinds of product that could solve each of the five problems.
+    - name: Ad library search words
+      contains: Words to type into the free ad library for each problem, with a blank line for who sells to it.
+    - name: Notes
+      contains: What to check before you spend money.
 how_it_works:
   - title: Check the market
     text: Clear before and after, loyal buyers.

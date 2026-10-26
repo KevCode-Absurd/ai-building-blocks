@@ -1,6 +1,6 @@
 new_slug: unboxing-insert-and-gift-planner
 name: "Unboxing insert and gift planner"
-summary: "Give it order value and margin. Get a costed unboxing plan with insert card, note and gift rules."
+summary: "Plan what goes in the box with an unboxing insert and gift planner. Give it order value and margin. You get costed tiers, a card and a payback check."
 job: keep-customers
 thinking: low
 thinking_why: "The sums are simple and the writing is short, so a small fast model is enough if you give it real costs."
@@ -17,6 +17,10 @@ when:
   - You ship orders in plain boxes and want a reason for customers to come back.
   - You already add inserts or freebies and do not know what they cost or return.
   - You want a plan for your best customers that stays inside a per-order budget.
+not_for:
+  - "Your deliveries run late or returns are hard: fix those first, since a note in a late parcel feels wrong."
+  - "Your average order is under about $30: keep to a card and a sticker, and skip a premium set."
+  - "You want a designer brief for the box itself: write that with the packaging brief writer once you have this plan."
 
 you_give:
   - Average order value and gross margin per order
@@ -35,6 +39,27 @@ how_to_use:
   - Say what you sell and how your brand sounds, with a sample of how you write to customers.
   - Start with the card and one tier. Hold back a few orders as a test group so you can see what the plan really changes.
   - Check that delivery is on time and returns are easy before you add anything more.
+output_sample:
+  input:
+    - Your average order value and gross margin per order
+    - Your packaging cost per order and orders per month
+    - Your repeat rate and cost to win a customer (optional)
+    - Your product type and a few lines of how you write to customers (optional)
+  output:
+    - name: FIT CHECK
+      contains: Whether delivery and returns work, your order value, and whether the plan fits or should shrink to a card and sticker.
+    - name: TIERS
+      contains: What goes in the box for all orders, high-value orders and VIPs, with the cost per order for each.
+    - name: VOLUME MATH
+      contains: The cost per order times your monthly orders, shown as a monthly cost and a share of product cost.
+    - name: INSERT CARD
+      contains: A thank-you line, a link or QR code to a 60-second how-to video, and one next step.
+    - name: NOTE RULE and GIFT RULE
+      contains: Who gets a note and what it names, and what gift goes to whom, with no strings.
+    - name: PAYBACK
+      contains: How many extra repeat orders per 100 customers cover the cost of the plan.
+    - name: MEASURE
+      contains: What to track, split by test group and holdout group, plus any checks missed and missing inputs.
 
 how_it_works:
   - title: Fixes effort first

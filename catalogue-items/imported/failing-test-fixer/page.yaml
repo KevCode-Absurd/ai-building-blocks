@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It groups errors, then fixes each group in turn.
 new_slug: failing-test-fixer
 name: Failing test fixer
-summary: Point it at a broken test suite. Get failures grouped by cause and
-  fixed one group at a time.
+summary: Fix a failing test suite by cause, not one test at a time. Your AI groups the failures, fixes each group, and reruns the tests.
 job: test-and-fix-code
 headline: Failing test fixer
-subhead: A test suite that goes from red to green, fixed one cause at a time
-  instead of one test at a time. Fifty failures often come from three real bugs.
+subhead: A test suite that goes from red to green, fixed one cause at a time instead of one test at a time. Fifty failures often come from three real bugs.
 explain: |
   A test suite that goes from red to green, fixed one cause at a time instead of one test at a time. Fifty failures often come from three real bugs.
 
@@ -17,18 +15,42 @@ when:
   - CI is red and you do not know where to start.
   - You finished a feature and tests that used to pass now fail.
   - You inherited a project with a long list of failing tests.
+not_for:
+  - "You have one failing test and already know why: fix it by hand, or ask your AI to look at just that test."
+  - "Your project has no test command you can run: write a few tests first, or ask a developer to set them up."
+  - "You want new tests written for code that has none: ask your AI to write tests, then come back here when some fail."
 you_give:
-  - Access to the codebase and its test command
-  - The failing output, if you have it (optional)
-  - Project style notes (optional)
+  - Access to your project files and the command that runs your tests, such as make test or pytest
+  - The failing test output, if you have it (optional)
+  - Notes on your code style (optional)
 you_get:
   - Failures grouped by cause
   - Small focused code fixes
   - A re-run result after each group
   - A final full-suite result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open an AI that can run code and read your project files. Chat-only AI can't run your tests.
+  - Paste this skill into the chat, or add it to your AI tool.
+  - Tell your AI your test command. If you have none, say so and ask what to use.
+  - "Say: fix my failing tests. Add the failure output if you have it."
+  - Check each group's result as it finishes. Your AI should not move on until that group passes.
+  - Read the final full-suite result and the code changes before you commit.
+output_sample:
+  input:
+    - Access to your project files and the command that runs your tests
+    - The failing test output (optional)
+    - Notes on your code style (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - A test command that works, such as make test or pytest
+  output:
+    - name: Initial test run
+      contains: The total number of failures, the error types, and the files they come from.
+    - name: Failure groups
+      contains: Failures grouped by error type, file and likely cause, with the biggest and most basic groups first.
+    - name: Fixes
+      contains: A small code change for each group, based on the code and your recent changes.
+    - name: Group check
+      contains: A rerun of only that group's tests, showing whether it now passes before the next group starts.
+    - name: Final full run
+      contains: A rerun of the whole suite to confirm everything passes and nothing else broke.

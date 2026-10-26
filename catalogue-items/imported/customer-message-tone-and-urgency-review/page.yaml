@@ -2,31 +2,83 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: customer-message-tone-and-urgency-review
 name: Customer message tone and urgency review
-summary: Paste customer messages. Get tone, urgency, warning signs, and a suggested response approach.
+summary: Find out how upset a customer is and how fast to reply. Paste their message and get tone, urgency, churn signs and how to respond.
 job: help-customers
 headline: Customer message tone and urgency review
-subhead: Paste a customer message or share a Gorgias ticket number. It looks for emotional language, urgency, and signs the customer may leave. You get ratings with supporting quotes and a suggested tone, priority, and points to address.
+subhead: Paste a customer message, or give a Gorgias ticket number. This customer sentiment check looks for emotion, urgency and signs the customer may leave. You get ratings backed by quotes, plus the tone to use and what to address first.
+explain: |
+  A customer message can read calm and still be a last warning. This tool rates how the customer feels and how urgent the message is, so you can decide how to reply before you write a word.
+
+  It scores sentiment from very negative to very positive, urgency from low to urgent, and churn risk from low to critical. Each rating comes with the exact words from the message that drove it. It also names the emotions it sees, such as frustration, worry or gratitude.
+
+  If you paste a thread, it shows whether the customer is getting calmer or angrier over time. It reads and rates. It does not write the reply or send anything.
 when:
-  - You use this tool for customer support and need help with this task.
+  - A message lands and you cannot tell if it is a mild complaint or a real threat to leave.
+  - You are sorting a busy inbox and need to know which message to answer first.
+  - A customer has written three times and you want to see if their mood is getting worse.
+  - You are handing a hard message to a teammate and want to explain how upset the customer is.
+not_for:
+  - You need a full queue sorted by priority. Use the Support ticket sorter, or the Gorgias ticket priority planner if you use Gorgias.
+  - You have your own reply ready and want it checked. Use the Angry customer reply checker.
+  - The message is about a legal threat, a chargeback or a refund decision. Give it to a person who owns that decision. This tool only rates the tone.
+  - You want to rate Shopify buyers by order history. Use the Customer churn risk scorer.
 you_give:
-  - Customer message text or a Gorgias ticket number.
-  - Earlier customer messages if you want a tone trend.
+  - The customer message, pasted as text
+  - Earlier messages from the same customer, for a trend (optional)
+  - A Gorgias ticket number, if you use Gorgias and have Composio linked (optional)
 you_get:
-  - Show quotes behind each rating and suggest the tone, priority, and concerns to address.
+  - A sentiment, urgency and churn risk rating, each with a confidence level
+  - The emotions found, with quotes from the message
+  - Any signs the customer may leave, or "None detected"
+  - A suggested tone, a priority call, and the points to address
+  - A mood trend across messages, if you gave more than one
+how_to_use:
+  - Open Claude, ChatGPT or Gemini and paste this skill, or add the skill folder if your AI supports it.
+  - Paste the customer message under it. Paste any earlier messages in date order if you want a trend.
+  - Check each rating against the quote next to it. If a quote is not in the message, ask your AI to fix it.
+  - Use the Priority line to decide who answers and how soon.
+  - Write the reply yourself, or ask your AI to draft one in the suggested tone. Nothing is sent for you.
+output_sample:
+  input:
+    - The customer message, pasted as text
+    - Earlier messages from the same customer, in date order (optional)
+    - A Gorgias ticket number (optional)
+  prerequisites:
+    - Only for a Gorgias lookup, an AI that can run commands with Composio CLI and Gorgias linked
+  output:
+    - name: Scores
+      contains: A table of sentiment, urgency and churn risk, each with a confidence level.
+    - name: Emotional Profile
+      contains: The emotions found, such as frustration or worry, each with a quote.
+    - name: Key Phrases
+      contains: The exact words in the message that drove the ratings.
+    - name: Churn Signals
+      contains: Mentions of cancelling, refunds, competitors or a last chance, or "None detected".
+    - name: Recommended Approach
+      contains: The tone to use, whether to escalate, and what matters most to this customer.
+    - name: Sentiment Trend
+      contains: Mood message by message and whether it is improving, stable or getting worse. Thread only.
 how_it_works:
   - title: Read the message
-    text: Use pasted text directly or fetch all customer messages from the chosen ticket.
-  - title: Review the signals
-    text: Rate tone and urgency, identify emotions, and mark language about cancelling or switching.
-  - title: Recommend a response approach
-    text: Show quotes behind each rating and suggest the tone, priority, and concerns to address.
+    text: It uses your pasted text, or fetches every customer message in the Gorgias ticket you named.
+  - title: Rate sentiment
+    text: It scores the message from very negative to very positive, using clear signs such as threats, anger or praise.
+  - title: Rate urgency
+    text: It marks the message urgent, high, medium or low, based on outages, blocked work, deadlines and repeat follow-ups.
+  - title: Name the emotions and churn signs
+    text: It lists emotions it can quote, then flags cancel or refund wording, competitors and "last straw" language.
+  - title: Recommend an approach
+    text: It suggests a tone, whether to escalate, and the points to address, and adds a trend if there are several messages.
 works_best_with:
   tools:
-    - name: Gorgias for ticket lookup; pasted messages also work
-      why: Live lookups need Composio CLI access and connected accounts for these services.
-how_to_use:
-  - Add the downloaded folder to an AI that can read skill files.
-  - Ask for customer message tone and urgency review by name, or ask your AI to read its SKILL.md and follow it. This source uses explicit commands.
-  - Provide Customer message text or a Gorgias ticket number.
-  - Live lookups need Composio CLI and the listed service accounts connected. Pasted-text options work where the source allows them.
-  - Review the result. Approve any proposed sending or account changes before they happen.
+    - name: Pasted text in Claude, ChatGPT or Gemini
+      why: Nothing to install. Paste the message and the rating works from the words alone.
+    - name: Gorgias with Composio CLI
+      why: Lets your AI fetch every customer message in a ticket. It needs an AI that can run commands.
+terms:
+  - term: Churn
+    meaning: A customer stopping, cancelling or leaving for another company.
+  - term: Sentiment
+    meaning: How positive or negative the customer sounds.
+  - term: Composio
+    meaning: A tool that links your AI to apps such as Gorgias. You only need it for ticket lookups.

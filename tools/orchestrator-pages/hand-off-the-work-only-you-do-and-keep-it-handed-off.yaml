@@ -1,6 +1,6 @@
 new_slug: hand-off-the-work-only-you-do-and-keep-it-handed-off
 name: Hand off work only you do and stop it returning
-summary: Describe your week. Get what to hand off, a one-page agreement and a meeting plan.
+summary: Hand off work only you do and stop it coming back. Describe your week. Get a delegation plan, a one-page agreement and a one-on-one plan.
 job: lead-people
 thinking: medium
 thinking_why: Each step plans from the step before and none needs heavy reasoning. A mid-size model does it well.
@@ -14,6 +14,11 @@ when:
   - You are on every decision and your calendar is full of work others could do.
   - You have handed off work before and it came back.
   - A new lead or senior hire needs a clear first job and a clear way to check in.
+  - Someone says they want more to do, and you are not sure what to give them.
+not_for:
+  - "You have no one to hand work to yet: hire or find help first, then run this."
+  - "You have one task to pass on once: write a short note to the person with the result you want and the due date."
+  - "You need to fix a team conflict or a performance problem: talk to the person directly, or ask an HR adviser or a coach."
 you_give:
   - How you spend a typical week, with the main jobs and hours
   - The people who could take on more, with what they do now
@@ -23,11 +28,27 @@ you_get:
   - A one-page agreement for the first job you hand off
   - A one-on-one plan with agenda rules, timing and follow-up
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - "Open Claude Code, or a Claude Project where you can add files. Add the three skill files this workflow uses: founder-leadership-coach, results-agreement-writer and one-on-one-meeting-planner."
+  - "Paste the workflow text and say: run the steps in order."
   - Describe a real week. Add the hours if you can, and name who could take work on.
-  - Choose which job on the plan to hand off first, and tell it who gets the job.
-  - Read the agreement with that person before you start the one-on-ones.
+  - Read the delegation plan. Say which job to hand off first and who gets it.
+  - Read the agreement with that person, then use the one-on-one plan for your first meeting.
+output_sample:
+  input:
+    - How you spend a typical week, with the main jobs and hours
+    - The people who could take on more, with what they do now
+    - What worries you about handing off (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude in a Project or Claude Code
+  output:
+    - name: Delegation plan
+      contains: Your week by job, what only you can do, what to hand off first and your blind spots.
+    - name: Results agreement
+      contains: "A one-page agreement for the first job: results wanted, limits, help, review dates and what happens if it slips."
+    - name: One-on-one plan
+      contains: How often to meet, agenda rules, follow-up and how to handle the hard case.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Audit your week
     text: Looks at how you spend your time, separates what only you can do, writes a delegation plan and names your blind spots.

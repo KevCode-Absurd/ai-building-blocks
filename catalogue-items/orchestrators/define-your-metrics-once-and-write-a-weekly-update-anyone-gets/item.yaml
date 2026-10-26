@@ -15,10 +15,14 @@ outputs:
   - {type: copy_draft}
 uses: [metric-definition-writer, analysis-assumptions-logger, weekly-status-update-writer, number-to-picture-translator]
 steps:
-  - {uses: metric-definition-writer, note: "For each metric: what it counts, what it excludes, where it comes from, how often it updates and who owns it, so every report means the same thing."}
-  - {uses: analysis-assumptions-logger, note: "Every assumption behind this week's analysis, in one place: time windows, exclusions, estimates and anything taken for granted."}
-  - {uses: weekly-status-update-writer, note: "The update in a fixed shape: what changed, why, what we do about it, what we are watching, with each number tied to its definition."}
-  - {uses: number-to-picture-translator, note: "The two or three figures that matter most, translated into pictures a reader can hold in their head, in the manner of Chip Heath, and placed at the top of the update."}
+  - uses: metric-definition-writer
+    note: "For each metric: what it counts, what it excludes, where it comes from, how often it updates and who owns it, so every report means the same thing. Hands the definitions to steps 2 and 3."
+  - uses: analysis-assumptions-logger
+    note: "Every assumption behind this week's analysis, in one place: time windows, exclusions, estimates and anything taken for granted. Reads the definitions from step 1 and hands the log to step 3."
+  - uses: weekly-status-update-writer
+    note: "The update in a fixed shape: what changed, why, what we do about it, what we are watching, with each number tied to its definition. Reads the definitions and the assumptions log, and hands the update to step 4."
+  - uses: number-to-picture-translator
+    note: "The two or three figures that matter most, taken from the update and your numbers, translated into pictures a reader can hold in their head, in the manner of Chip Heath, and placed at the top of the update."
 origin: own
 version: 1.0.0
 minds: [chip-heath]

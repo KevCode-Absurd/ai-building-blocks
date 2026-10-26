@@ -15,10 +15,10 @@ outputs:
   - {type: plan}
 uses: [proven-product-scout, crowded-category-white-space-finder, winning-product-scorer, mvp-experiment-planner]
 steps:
-  - {uses: proven-product-scout, note: "Starts the flow. Finds products that already sell and the sellers behind them."}
-  - {uses: crowded-category-white-space-finder, note: "Takes the rivals from the scout and finds the gap one of them leaves open."}
-  - {uses: winning-product-scorer, note: "Scores your pick and its real costs. The gap you chose in the step before is the problem it must solve."}
-  - {uses: mvp-experiment-planner, note: "Turns the gap plan and the score's first fix into a small test with a pass number set before it runs."}
+  - {uses: proven-product-scout, note: "Starts the flow. Finds products that already sell and the sellers behind them. Hands the rival sellers to step 2."}
+  - {uses: crowded-category-white-space-finder, note: "Takes the rivals from the scout and finds the gap one of them leaves open. Hands the gap plan and ranked gaps on."}
+  - {uses: winning-product-scorer, note: "Scores your pick and its real costs. The gap from step 2 is the problem it must solve. Hands the score report, with its first fix, to step 4."}
+  - {uses: mvp-experiment-planner, note: "Turns the gap plan from step 2 and the score's first fix from step 3 into a small test with a pass number set before it runs."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/find-a-product-that-sells-and-a-gap-rivals-leave-open/skeleton.yaml

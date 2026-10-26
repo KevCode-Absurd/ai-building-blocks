@@ -2,35 +2,109 @@ thinking: medium
 thinking_why: It works through a set checklist against your setup.
 new_slug: mcp-server-hardener
 name: MCP server hardener
-summary: Point it at an MCP server you run. Get a checklist of fixes for
-  transport, auth, access and logging.
+summary: "Lock down an MCP server you run. Get a ranked fix list for encryption, sign-in, per-tool access and logging, with sample configs."
 job: secure-code
 headline: MCP server hardener
-subhead: A checklist of fixes that locks down an MCP server you run. It covers
-  the connection, who may sign in, what each user may do and what gets logged.
+subhead: "Tell it how your MCP server connects, who signs in and which tools it offers. It checks each layer and gives you a ranked list of fixes, with sample settings for the ones that need code or config."
 explain: |
-  A checklist of fixes that locks down an MCP server you run. It covers the connection, who may sign in, what each user may do and what gets logged.
+  An MCP server lets AI agents run real actions, such as reading files or querying a database. If it is open to a network with no lock on it, anyone who reaches it can use those tools. This skill is an MCP server security checklist that turns that worry into a short list of fixes.
 
-  The skill starts with a threat model for MCP servers. Then it works through each layer. For the connection it gives sample TLS setups, including an Nginx proxy, mutual TLS between agent and server and how to create a client certificate. For sign-in it covers OAuth 2.1 and key handling, then access control per tool, input checks and audit logging.
+  It starts from eight known threats, such as stolen keys, one user calling another user's tools, and bad input that tricks a tool. Then it checks four layers in order: the connection, who may sign in, what each user may do, and what gets logged. It also covers input checks, rate limits and how you deploy.
+
+  Where a fix needs code or config, it points to a sample in the skill, such as an Nginx proxy with TLS, a client certificate for mutual TLS, or a per-role tool allowlist. You adapt the samples. The skill does not test your live server.
 when:
-  - You run an MCP server and plan to expose it beyond your own laptop.
-  - Your agents connect to the server with no encryption.
-  - You need per-user access to tools, not one shared key.
-  - A security team asked what protects your MCP server.
+  - You run an MCP server and plan to open it beyond your own laptop.
+  - Your agents connect to the server over plain HTTP, or you are not sure.
+  - Every user shares one key and you need per-user access to tools.
+  - A security team or client asks what protects your MCP server.
+not_for:
+  - "Your server only runs on your own laptop for one person: you can skip most of this. Check input handling and logging only."
+  - "You need a full code review of the server: use the Diff security skimmer on the changed code, or ask a security engineer."
+  - "You want a compliance report for an audit: use the SOC 2 readiness checker."
 you_give:
-  - Your server setup and transport
-  - How users sign in today
-  - The tools and data it exposes
-  - Hosting details (optional)
+  - How your server connects, such as local stdio, or HTTP over the web
+  - How users and agents sign in today, such as a shared key, OAuth or nothing
+  - The list of tools it offers and what each one can touch
+  - The server config or code (optional)
+  - Where it runs, such as one VPS, Docker or a cloud service (optional)
 you_get:
-  - A prioritised fix checklist
-  - TLS and mTLS sample configs
-  - Sign-in and key advice
-  - Access rules per tool
-  - Logging suggestions
+  - A fix list ranked by risk, grouped by layer
+  - Sample settings for TLS, mutual TLS and sign-in checks
+  - A tool-by-tool access plan, with risky tools flagged
+  - Logging advice that keeps secrets out of logs
+  - A list of what it could not check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini. For file-level advice, use one that can read your project files.
+  - Paste the skill text into the chat.
+  - "Under it, paste your details: how it connects, how users sign in, and the list of tools. Add your config if you can."
+  - Read the top three fixes first. If a detail is marked MISSING, answer it and ask for the list again.
+  - Apply the fixes in a test copy of your server first. The sample settings are starting points, not drop-in files.
+  - Ask your AI to re-check the list once the fixes are in.
+output_sample:
+  input:
+    - How your server connects (local or over HTTP)
+    - How users and agents sign in today
+    - The tools your server offers and what each can touch
+    - Your server config or code (optional)
+    - Where it runs (optional)
+  prerequisites:
+    - An MCP server you run, or are about to run
+    - An AI that can read pasted files if you want file-level advice (optional)
+  output:
+    - name: Threats that apply
+      contains: Which of the eight common MCP threats fit your setup and why.
+    - name: Connection fixes
+      contains: TLS setup, optional mutual TLS and how to run a local stdio server safely.
+    - name: Sign-in fixes
+      contains: How to check tokens on every request, or store hashed API keys with expiry.
+    - name: Tool access plan
+      contains: A role-by-role allow and deny list, with risky tools set to need approval.
+    - name: Input and limit fixes
+      contains: Input checks, file and database limits, outbound web rules and rate limits.
+    - name: Logging plan
+      contains: What to log for every tool call, and what never to log.
+    - name: Not checked
+      contains: Anything the skill could not judge from what you gave it.
+how_it_works:
+  - title: Map the threats
+    text: It reads your setup and marks which of the eight threat types apply, such as unauthorised tool use, stolen keys or data leaking back through results.
+  - title: Check the connection
+    text: It checks for TLS on every network route, suggests mutual TLS for high-risk setups, and sets rules for local stdio servers.
+  - title: Check sign-in
+    text: It checks that tokens are verified on every request, with expiry and issuer, or that API keys are stored hashed and expire.
+  - title: Plan tool access
+    text: It builds an allowlist per role, flags dangerous tools, and sets which ones need approval.
+  - title: Check inputs and limits
+    text: It looks at input checks, file and database access, outbound requests and rate limits.
+  - title: Plan the logging
+    text: It sets what to log for each tool call, with secrets removed, and adds deployment and testing checks.
+output_shape: |
+  MCP SERVER FIX LIST
+  Threats that apply: <list>
+
+  FIXES (highest risk first)
+  1. [critical | high | medium | low] <layer: connection | sign-in | access | input | limits | logging | deployment>
+     Finding: <what is wrong or missing>
+     Fix: <the change, and the sample section to adapt>
+
+  TOOL ACCESS PLAN
+  <role>: allowed <tools>, denied <tools>, needs approval <tools>
+
+  NOT CHECKED
+  - <what it could not judge>
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A pasted setup is enough for the checklist. An AI that reads project files can point at your real config lines.
+  inputs:
+    - Your server config or code
+    - The tool list with a note on what each one touches
+terms:
+  - term: MCP server
+    meaning: A program that gives AI agents a set of tools, such as reading files or querying a database.
+  - term: TLS
+    meaning: The lock that encrypts traffic between an agent and the server.
+  - term: Mutual TLS
+    meaning: Both sides show a certificate, so the server knows which agent is calling.
+  - term: Allowlist
+    meaning: A list of the only tools a user or role may call. Anything not listed is blocked.

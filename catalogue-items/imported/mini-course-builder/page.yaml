@@ -2,34 +2,104 @@ thinking: medium
 thinking_why: It plans the course, then builds a page.
 new_slug: mini-course-builder
 name: Mini-course builder
-summary: Name a topic. Get a web mini-course with lessons, flashcards and
-  quizzes in one page.
+summary: Name a topic and get a mini-course web page with 6 to 8 lessons, flashcards and quiz questions. Open it in a browser or host it free.
 job: build-websites
 headline: Mini-course builder
-subhead: A small web course on any topic, in one page you can open in a browser,
-  with lessons, flashcards and quizzes. Name the topic and you get six to eight
-  lessons you can use or share right away, with no server or login.
+subhead: Name a topic and who it is for. You get a small web course as three files, with 6 to 8 short lessons, flashcards and quiz questions. It opens in any browser, with no server or login.
 explain: |
-  A small web course on any topic, in one page you can open in a browser, with lessons, flashcards and quizzes. Name the topic and you get six to eight lessons you can use or share right away, with no server or login.
+  A mini-course is quicker to make than a full learning platform, and easier to share than a slide deck. This skill plans the whole course first, then builds it as one page you can open or host anywhere.
 
-  The skill plans first: a course title, a short description, and ordered lessons, each with a goal, two to four objectives, source links, two or three flashcards and one or two quiz questions. It then builds three files: index.html, styles.css and script.js. The page has a lesson list on the left, a reader, a sources list and a final review. Lessons stay short so the preview loads fast. It uses a warm, readable look.
+  The plan comes first. It sets a course title, a short description and 6 to 8 ordered lessons. Each lesson has a goal, 2 to 4 objectives, 2 or 3 flashcards and 1 or 2 quiz questions. It then builds three files: index.html, styles.css and script.js. The page has a lesson list on the left, a reader, a sources list and a final review.
+
+  It will not make up sources. If you give it links or notes, it shows them as real links. If you give none, the sources card says so, and you should check the facts before you share the course.
 when:
   - You need a quick course for your team on a new tool.
-  - You want to turn a topic you know into a study page.
-  - A client asks for training material they can open anywhere.
-  - You want flashcards and quizzes without a learning platform.
+  - You want to turn what you know into a study page for customers or clients.
+  - A client asks for training material they can open on any device.
+  - You want flashcards and quizzes without paying for a learning platform.
+not_for:
+  - "Your course covers safety, legal, medical or compliance rules: write it by hand, or have an expert check every fact first."
+  - "You need logins, saved scores or certificates: use a learning platform, since this page keeps no records."
+  - "You want only one lesson or a set of recall questions: use the Retrieval quiz writer."
+  - "You want to plan a whole year of teaching: use the Course scope and sequence planner."
 you_give:
   - The topic
-  - Who the learners are (optional)
-  - Source links or notes to base it on (optional)
+  - Who the learners are and what they know now (optional)
+  - Source links or your own notes to base it on (optional)
 you_get:
-  - A six to eight lesson course page
-  - Flashcards for each lesson
-  - Quiz questions with feedback
-  - Three files you can host or open locally
+  - A course plan with a title, a short description and 6 to 8 lessons
+  - Objectives, flashcards and quiz questions for each lesson
+  - A final review for the whole course
+  - Three files, index.html, styles.css and script.js, that open in a browser
+  - A list of facts and sources to check before you share
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can save files and open a browser.
+  - Open Claude Code, or another AI that can save files. Paste in this skill.
+  - Say the topic and who the learners are. Paste your notes or links, if you have them.
+  - Read the course plan before the page is built. Reorder or cut lessons if the order is wrong.
+  - Open index.html in your browser. Click each lesson, flip the flashcards and answer the quiz questions.
+  - Check every fact against your own sources. Then host the three files, or send them as they are.
+output_sample:
+  input:
+    - The topic
+    - Who the learners are (optional)
+    - Source links or your own notes (optional)
+  prerequisites:
+    - An AI that can save files, such as Claude Code
+    - A web browser to open the page
+  output:
+    - name: index.html
+      contains: The course overview, lesson list, lesson reader, sources list and final review.
+    - name: styles.css
+      contains: The warm, readable look, with colours and spacing set once.
+    - name: script.js
+      contains: The lesson data and the page logic for navigation, flashcards, quizzes and progress.
+    - name: Lessons
+      contains: 6 to 8 lessons, each with a goal, objectives, 2 or 3 flashcards and 1 or 2 quiz questions.
+    - name: Facts to check
+      contains: A list in the final message of claims and sources you should confirm before sharing.
+how_it_works:
+  - title: Plan the course
+    text: Writes the title, a short description and 6 to 8 ordered lessons, each with a goal and objectives.
+  - title: Write each lesson
+    text: Keeps each lesson short, with examples before theory, 2 or 3 flashcards and 1 or 2 quiz questions.
+  - title: Add sources
+    text: Shows the links you gave it as real links. With none, it says so on the page.
+  - title: Build the page
+    text: Saves index.html, styles.css and script.js, with a lesson list, a reader and a final review.
+  - title: Test it
+    text: Checks that the script runs, lessons switch, flashcards flip, quiz options give feedback and links work.
+  - title: Hand back
+    text: Lists the lessons, how to open the page and the facts you should check.
+output_shape: |-
+  COURSE PLAN
+    <course title> | <2 or 3 sentence description>
+    Lesson 1 to <8>: <title> | goal: <goal> | objectives: <2 to 4>
+
+  FILES
+    index.html | styles.css | script.js
+
+  PER LESSON
+    flashcards: <2 or 3> | quiz: <1 or 2 questions with feedback>
+
+  FINAL REVIEW
+    <questions across the whole course>
+
+  FACTS TO CHECK
+    <claim or source to confirm before sharing>
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Saves the three files and can open the page to test it.
+    - name: Any good chat AI
+      why: Plans the lessons well, but you must copy the three files into a folder yourself.
+  inputs:
+    - Your own slides, notes or help pages, so lessons use your words
+    - Two or three questions your learners often ask
+    - The tool or process the learners will use, for real examples
+terms:
+  - term: Flashcard
+    meaning: A card with a question on one side and the answer on the other.
+  - term: Learning objective
+    meaning: One thing a learner should be able to do after the lesson.
+  - term: Host
+    meaning: Put the files on a web address so others can open the course.

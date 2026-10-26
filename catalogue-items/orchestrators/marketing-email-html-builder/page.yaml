@@ -9,6 +9,11 @@ when:
   - You have email copy or an angle and want a designed email.
   - You need two visual directions for the same campaign.
   - You want an editable HTML handoff for an email platform.
+not_for:
+  - "You only need the email words: use the Campaign email writer."
+  - "You want a layout plan for your own designer, not finished HTML: use the Email layout brief writer."
+  - "You already have a designed email and want it checked before sending: use the Email design checker."
+  - "You have no real photos of the product: you get a labelled wireframe, not product images."
 you_give:
   - Campaign goal, audience, current offer terms and approved product facts.
   - Brand colours, fonts, logo and real photos of the exact product.
@@ -21,6 +26,32 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+output_sample:
+  input:
+    - Your campaign goal, audience and offer terms, if there is an offer
+    - Your approved product facts and any email copy you already have
+    - Real photos of the exact product
+    - Your brand colours, fonts and logo
+    - One or two emails you like, only if you have the right to use them as references (optional)
+  prerequisites:
+    - An AI that can read your files and photos
+    - A way to preview HTML, if you want rendered previews
+    - Test sends to your real email apps, since the AI cannot check inboxes
+  output:
+    - name: brief.md
+      contains: Subject, preview text, the one action, approved copy by module, claim sources and open facts.
+    - name: email-a.html
+      contains: An editable HTML email in a house design direction, with real text for headlines, terms and buttons.
+    - name: email-b.html
+      contains: A second design from a cleared reference, with the same copy and a table of what was borrowed.
+    - name: Plain-text version
+      contains: The same email as plain text.
+    - name: Assets and usage notes
+      contains: The images used, where each goes and how, with a check that the product matches your photo.
+    - name: Previews and check log
+      contains: Renders at 600, 390 and 320 pixels and the checks that were really run.
+    - name: Open issues
+      contains: Anything not checked or missing, and the next version saved as v2 or v3 with a change note.
 how_it_works:
   - title: Set the message
     text: Confirm facts, audience, offer and one action; write copy and a module map.

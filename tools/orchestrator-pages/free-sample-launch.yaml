@@ -1,6 +1,6 @@
 new_slug: free-sample-launch
 name: Launch with a free sample and learn what customers cost
-summary: Give it your product and price. Get a sample offer, a small test plan and the true cost of each customer.
+summary: Plan a free sample offer and a small launch test. Then work out what each customer really costs and how soon sales pay it back.
 job: make-offer
 thinking: high
 thinking_why: It plans a test and does sums you will rely on with real money. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are launching a product and want to try it on a small crowd before you spend big on ads.
   - Your ads bring plenty of replies or clicks, but you cannot tell what a paying customer costs.
   - You have a new offer or idea and want a clear rule for when to roll it out, change it or drop it.
+not_for:
+  - "You have no price or ad history yet: use the Ad test brief writer first to plan what to test."
+  - "You only want the sample offer itself: use the Free sample offer planner."
+  - "You want to check a discount against margin and ad cost: use the Discount margin and ad-cost checker."
 you_give:
   - Your product facts, such as what it is, its size and what it costs to make
   - Your price
@@ -33,6 +37,24 @@ how_to_use:
   - Give it your product and price. It writes the sample offer and the test plan, then stops.
   - Run the test in a few places and write down samples sent, replies and orders for each place.
   - Bring the numbers back and say "carry on". Read the cost per customer last.
+output_sample:
+  input:
+    - Your product facts, such as what it is and what it costs to make
+    - Your price
+    - Your sample budget and where you could offer it (optional)
+    - "Your test results: costs, replies and orders for each ad, after the test"
+  prerequisites:
+    - An AI that can read files, such as Claude with the handoff pack
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Free sample offer
+      contains: The offer in words you can use, who gets it, how they claim it and a capped budget.
+    - name: Small launch test plan
+      contains: One question, four or five places to try it, what to measure and a roll out, change or drop rule.
+    - name: Cost per customer
+      contains: Cost by ad, headline and offer, days to pay back, the most you can pay for a customer and ads to keep.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Design the sample
     text: Picks the smallest piece a buyer can try, says who gets it and how they claim it, and caps the sample budget.

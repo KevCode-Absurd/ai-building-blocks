@@ -1,6 +1,6 @@
 new_slug: offer-refresh-keeper
 name: Offer refresh keeper
-summary: Give it your offers and their numbers each quarter. It finds the profit winner, tests what is weak, and plans one change.
+summary: Check your offers every quarter. See which makes the most profit per session, what is weak, and the one change to test next.
 job: make-offer
 thinking: high
 thinking_why: It does cost sums across offers, compares with last quarter and picks its checks from the result. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You run more than one offer, or the same offer for months, and want to know what is earning.
   - A sale is planned and you want to know if the maths hold before you announce it.
   - Buyers compare you with cheaper rivals and you want a plan that is not a price cut.
+not_for:
+  - "You have one offer and few orders: run the offer checklist and one test by hand instead, as the sums need more sessions."
+  - "You want a new offer idea: use the New offer opportunity finder, then bring the offer back here."
+  - "You want the agent to change prices or codes for you: it will not. It writes a plan, and you set it up yourself."
 you_give:
   - Your live offers with price, tiers, gifts, discounts and guarantee
   - Product cost, shipping, handling and payment fees
@@ -31,6 +35,33 @@ how_to_use:
   - Include every cost line. Costs left out make every offer look better than it is.
   - Read the one change it proposes and the test plan. Set the test up yourself, or say yes to each step.
   - Run it again next quarter. It reads its own log.
+output_sample:
+  input:
+    - Your live offers with price, tiers, gifts, discounts and guarantee
+    - Product cost, shipping, handling and payment fees
+    - Sessions and orders for each offer, for a closed date window
+    - Reviews, rivals and any planned sale (optional)
+    - Last quarter's log (optional on the first run)
+  prerequisites:
+    - An AI that can read and save files, such as Claude Code, to keep the offers folder and log
+    - Your brand brain from the Brand profile builder (optional)
+  output:
+    - name: Offers table
+      contains: Each offer with profit per session, margin and safety score, this quarter and last, with the sums shown.
+    - name: The call
+      contains: Keep, switch to a named offer, or no call, with what is missing if there is no call.
+    - name: What is weak
+      contains: Findings from the order size, sale, rival and checklist checks that ran.
+    - name: One change to test
+      contains: The change, why, the test design, the read-out rule and how many weeks it needs.
+    - name: Sale check
+      contains: The ROAS a planned sale needs, a verdict and any urgency lines that are true.
+    - name: Look again
+      contains: The date to check back and the numbers to bring.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
+    - name: log.md
+      contains: This quarter's offers, profit per session, safety score, call and planned change, for next quarter to read.
 how_it_works:
   - title: Read the log
     text: Finds last quarter's lead offer, its numbers and the change that was planned.

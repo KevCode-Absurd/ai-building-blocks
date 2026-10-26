@@ -1,6 +1,6 @@
 new_slug: page-type-and-layout-planner
 name: "Page type and layout planner"
-summary: "Give it your ads, buyers and awareness stages. Get which page each ad needs and its section order."
+summary: "Plan which page each ad should land on and the section order. Give it your ads, buyers and awareness stages. Get a landing page routing table."
 job: write-landing-page
 thinking: medium
 thinking_why: "It sorts ads into page types by clear rules and sets section order, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - You run several ads for different buyers and send them all to one page.
   - A new angle or buyer group just won in your ads and needs its own page.
   - You are about to build a page and want the section order before you write anything.
+not_for:
+  - "You have one product and one buyer: send ads to your product page. You do not need a plan."
+  - "You want the page copy written: use the Store advertorial writer for long pages or the Store hero section writer for the top screen."
+  - "You have too few ads to justify several pages: fix the one page you have first, with a person who knows your store."
 
 you_give:
   - A list of live or planned ads, each with its persona, angle and awareness stage
@@ -37,6 +41,30 @@ how_to_use:
   - Add your traffic source, products and any proof you hold.
   - Build the pages in the order listed, with the copy tools you prefer.
   - Check that each page headline matches its ad before you send traffic.
+output_sample:
+  input:
+    - Your ads, each with its buyer, angle and awareness stage
+    - Where each ad runs, such as Meta, Google or email (optional)
+    - Your products, bundles and prices (optional)
+    - The proof you hold, such as reviews (optional)
+    - Your existing pages with traffic and conversion rate (optional)
+  output:
+    - name: Routing table
+      contains: One row per ad with its buyer, angle, awareness stage, traffic, page type and the reason for that page.
+    - name: Pages to build
+      contains: The pages in build order, starting with the angle that wins most spend, each with a brief that echoes the ad headline.
+    - name: Section order
+      contains: For each page, the sections in order, what each holds and the benefit its headline carries.
+    - name: Proof and doubt-reducers
+      contains: Where proof sits on the page and why it sits there.
+    - name: Store closer
+      contains: Product choice, bundle savings in money, proof near add-to-cart and a slide-out cart.
+    - name: Label
+      contains: A note that advertorial pages must be labelled as ads where the platform or law requires.
+    - name: Risks
+      contains: Homepage share of traffic, thin proof and store parts that are untested.
+    - name: Checks missed
+      contains: Any check that was not run, or the word none.
 
 how_it_works:
   - title: Asks who each page is for

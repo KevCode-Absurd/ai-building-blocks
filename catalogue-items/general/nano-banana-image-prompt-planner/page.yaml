@@ -1,6 +1,6 @@
 new_slug: nano-banana-image-prompt-planner
 name: Nano Banana image and edit prompt planner
-summary: Describe an image or edit. Get matching plain-language and JSON prompts with clear reference roles and changes.
+summary: Turn your idea for an image or edit into matching plain-language and JSON prompts for Nano Banana, with a clear role for each reference image.
 job: make-images
 headline: Nano Banana image and edit prompt planner
 subhead: Describe an image or edit. Get matching plain-language and JSON prompts with clear reference roles and changes. Bring the brief and any files you want it to use.
@@ -11,6 +11,10 @@ explain: |-
 when:
   - You need paired natural-language and JSON image/edit prompts.
   - You want a clear draft and checks from the material you already have.
+not_for:
+  - "You only need one quick prompt with no edits or references: ask any image tool directly, or write one sentence yourself."
+  - "You want the finished image made: this writes prompts only, so paste them into Nano Banana in Gemini or your image tool."
+  - "You want to edit a photo you have no rights to use: get permission from the owner first, or use an image you own."
 you_give:
   - brief
   - "Optional: approved image"
@@ -22,6 +26,19 @@ how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
   - Check the result against the supplied facts before using it.
+output_sample:
+  input:
+    - "Your brief: the image you want, or the edit you want made"
+    - An approved image you want to keep or change (optional)
+    - Reference images, such as a product, a face or a style (optional)
+    - What matters most if references clash (optional)
+  output:
+    - name: PLAIN LANGUAGE
+      contains: Copy-ready visual instructions covering subject, setting, style, camera, light, color and any edits.
+    - name: JSON
+      contains: "The same instructions as structured fields: mode, subject, context, style, references, edits and preserve rules."
+    - name: NOT RUN
+      contains: What could not be checked, such as unseen reference images, image generation or the final picture.
 how_it_works:
   - title: Read the brief
     text: Choose generation, edit, composite/outpaint, style extraction or style reuse from the actual request. A single requested change is not permission to redesign the whole scene.

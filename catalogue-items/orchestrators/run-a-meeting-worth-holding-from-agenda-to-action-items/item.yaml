@@ -13,9 +13,9 @@ outputs:
   - {type: meeting_notes}
 uses: [meeting-agenda-and-cost-planner, meeting-pre-read-writer, meeting-notes-maker]
 steps:
-  - {uses: meeting-agenda-and-cost-planner, note: "Starts from your idea for a meeting. Makes a go or no-go call and a timed agenda."}
-  - {uses: meeting-pre-read-writer, note: "Builds on the agenda from the step before. Needs your Notion pages connected to pull in background."}
-  - {uses: meeting-notes-maker, note: "Starts from the recording. Check each decision and action against the agenda you wrote at the start."}
+  - {uses: meeting-agenda-and-cost-planner, note: "Starts from your idea for a meeting. Makes a go or no-go call and a timed agenda. Hands step 2 the go or no-go call and the timed agenda."}
+  - {uses: meeting-pre-read-writer, note: "Builds on the agenda from the step before. Needs your Notion pages connected to pull in background. Hands you the pre-read to send, and step 3 the agenda it follows."}
+  - {uses: meeting-notes-maker, note: "Starts from the recording. Check each decision and action against the agenda you wrote at the start. Takes the agenda from steps 1 and 2 as the meeting header. Hands you the notes with decisions and action items."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/run-a-meeting-worth-holding-from-agenda-to-action-items/skeleton.yaml

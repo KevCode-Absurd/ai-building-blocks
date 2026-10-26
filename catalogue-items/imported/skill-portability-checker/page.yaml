@@ -2,13 +2,10 @@ thinking: low
 thinking_why: A script finds the problems and the AI explains the fixes.
 new_slug: skill-portability-checker
 name: Skill portability checker
-summary: Point it at your skill folder. Get a list of mistakes that stop it
-  loading in other AI tools, with fixes.
+summary: Check your skill folder for mistakes that stop it loading in other AI tools. Get a plain list of errors and warnings, with a fix for each.
 job: make-skills
 headline: Skill portability checker
-subhead: A list of mistakes in your skill folder that stop it from loading in
-  other AI tools, with a fix for each one. Your skill then works beyond the one
-  app you built it in.
+subhead: A list of mistakes in your skill folder that stop it from loading in other AI tools, with a fix for each one. Your skill then works beyond the one app you built it in.
 explain: |
   A list of mistakes in your skill folder that stop it from loading in other AI tools, with a fix for each one. Your skill then works beyond the one app you built it in.
 
@@ -18,18 +15,44 @@ when:
   - A skill loads in one app and fails silently in another.
   - You maintain a repo with many skills and need a bulk check.
   - You want CI to fail on skill errors.
+not_for:
+  - "You only use one AI tool and never share your skill: skip it, your skill already works there."
+  - "You want to know if your skill's instructions give good results: run the skill yourself on a real task, because this only checks the folder."
+  - "You want to know if your skill starts when it should: test it in your AI tool with a few real requests, because this does not check that."
 you_give:
-  - A path to a skill folder or repo
-  - Python 3 for the script (or paste SKILL.md instead)
-  - Strict mode choice (optional)
+  - The path to your skill folder, or to a folder with many skills
+  - Your SKILL.md pasted in, if your AI cannot run code (optional)
+  - Whether warnings should count as a fail (optional)
 you_get:
   - Errors and warnings by skill
   - A plain explanation of each
   - Fixes to apply
   - Machine-readable output if you ask
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Use an AI that can run code and read your files. Make sure Python 3 is installed.
+  - "Add this skill to your AI, then say: check my skill, and give the path to your skill folder."
+  - The AI runs the check script on your folder. It reads your files and changes nothing.
+  - Read the errors first, then the warnings. Each one comes with a fix.
+  - Apply the fixes yourself, or ask your AI to suggest the exact new text. Then run the check again.
+  - No code tools? Paste your whole SKILL.md, front matter included. Your AI checks by reading and says so.
+output_sample:
+  input:
+    - The path to your skill folder, or to a folder that holds many skills
+    - Your SKILL.md pasted in, if your AI cannot run code (optional)
+    - Whether warnings should count as a fail (optional)
+  prerequisites:
+    - An AI that can run code and read your files, with Python 3 installed, to run the script
+    - If you have no code tools, you can paste your SKILL.md and your AI checks it by reading
+  output:
+    - name: Summary table
+      contains: One row per skill with its errors, warnings, line count and script languages, printed by the script as is.
+    - name: Errors
+      contains: Problems that break loading, such as bad front matter, a wrong name, a long description or a link to a missing file.
+    - name: Warnings
+      contains: Portability risks such as extra front matter keys, vendor tool names, missing fallbacks and bodies over 500 lines.
+    - name: Fix for each finding
+      contains: Why it matters in one sentence, plus the exact replacement line when the fix is one line.
+    - name: What was not checked
+      contains: A reminder that it does not test whether instructions work, whether the skill triggers, or anything outside the folder.
+    - name: CI workflow (optional)
+      contains: A setup you can use to run the check automatically, if you ask for one.

@@ -5,8 +5,29 @@ area: "arts"
 years: "1944–"
 living: true
 known_for: "Waters opened Chez Panisse in Berkeley in 1971 and founded the Edible Schoolyard Project in 1995. Her public interviews connect taste, organic agriculture, the culture of the table and practical education through growing, preparing and sharing food."
-summary: "Begin with a good ingredient and a relationship to where it comes from. Let a simple meal teach attention and care, then make the environment help people participate in preparing and sharing it."
+summary: "Plan seasonal meals, get a child to try vegetables, or host an easy supper with an AI built on Alice Waters's public work. Get a plan you can start today."
 use_cases: ["A seasonal cooking plan: Choose a few affordable ingredients at their best, keep preparations simple and use the same purchases across several meals.", "Helping a child enjoy vegetables: Offer a small growing, washing or preparation task and let curiosity precede pressure to eat.", "A modest shared supper: Build an easy meal and a welcoming table that leaves the host available for conversation.", "A better team learning session: Give people something real to make together, connect the task to its wider purpose and let them see its result.", "Restoring a daily rhythm: Choose one meal or plant-care routine that returns your attention to tangible work and other people.", "A small school or community garden: Begin with an achievable crop, named caretakers and a plan for harvesting and using what grows."]
+not_for:
+  - "You want Mexican regional cooking, its methods and its roots: hire Diana Kennedy instead, using the Diana Kennedy mind."
+  - "You want seasonal menus tied to memory and a farming community: use the Edna Lewis mind."
+  - "You need medical, legal or money advice, or a claim about what Alice Waters thinks now or endorses: ask a qualified expert, as this mind cannot say."
+output_sample:
+  input:
+    - The food or meal problem you want help with
+    - Your setting, such as your kitchen, budget and time
+    - Who is eating or taking part, and what they enjoy
+    - What is growing or sold near you this season (optional)
+  output:
+    - name: Short diagnosis
+      contains: A plain read of your problem, based on taste, access and what is good where you live.
+    - name: Practical sequence
+      contains: Ordered steps that use the time, money and equipment you already have.
+    - name: Cues to watch
+      contains: Signs that show what people enjoy and whether the routine fits your household or group.
+    - name: Push back
+      contains: Where a step costs too much or does no real job, and whether to justify it or drop it.
+    - name: One next adjustment
+      contains: A single small change to try next, with a closing check such as setting a modest table first.
 seats: [{"seat": "Seasonal meals and edible education", "asks": "What tastes good to you right now?"}, {"seat": "Practical teaching and adaptation", "asks": "What is growing nearby this season?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

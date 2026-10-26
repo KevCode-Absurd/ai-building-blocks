@@ -1,6 +1,6 @@
 new_slug: bonus-idea-matcher
 name: Bonus idea matcher
-summary: Paste your offer and buyer doubts. Get one named bonus for each doubt, with a value reason.
+summary: Match one named bonus to each reason buyers say maybe to your offer. Get a short description, a value with a reason, and the order to show them.
 job: make-offer
 thinking: low
 thinking_why: It pairs each doubt with a bonus, and the shape is fixed.
@@ -14,6 +14,10 @@ when:
   - People say they will think about it.
   - You want to add value without cutting your price.
   - Your offer has the same core as rivals' and needs something extra.
+not_for:
+  - "You want the full version with every check: use the Bonus stack builder."
+  - "You have no offer yet and want ideas for one: use the New offer opportunity finder."
+  - "You want to cut your price or run a sale: this prompt adds value and keeps your price."
 you_give:
   - Your offer, price and result
   - The doubts buyers voice (optional)
@@ -28,6 +32,20 @@ how_to_use:
   - Use real doubt wording from calls, emails or comments.
   - Only keep bonuses you can make well.
   - Do not publish a value you cannot back.
+output_sample:
+  input:
+    - Your offer, with the price and the result
+    - Reasons buyers hesitate, in their own words (optional)
+    - Any real limits, such as a cap or end date (optional)
+  output:
+    - name: Bonus table
+      contains: "One row per bonus: name, the doubt it answers, what it is, its value with a reason, and any real limit."
+    - name: TOTAL VALUE
+      contains: The sum of the bonus values, or MISSING when there is no basis for a value.
+    - name: ORDER TO SHOW THEM
+      contains: Strongest first on a page, or after the yes in a conversation.
+    - name: MISSING
+      contains: Facts you did not give, so nothing is invented.
 how_it_works:
   - title: List the doubts
     text: Five to eight reasons a buyer says maybe.

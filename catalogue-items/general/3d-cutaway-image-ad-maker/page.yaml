@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: 3d-cutaway-image-ad-maker
 name: "3D cutaway image ad maker"
-summary: "Paste how it works. Get a 3D cutaway image prompt, the words and feed copy."
+summary: "Make a 3D cutaway image ad for a product that works out of sight. You get the image prompt, the words on it and the feed copy."
 job: make-image-ads
 
 headline: "3D cutaway image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your product's main benefit happens out of sight, and buyers doubt it does anything.
   - You have a sourced fact about how it works that a product photo can't show.
   - You made the 3D explainer video and want a still with the same parts and colours.
+not_for:
+  - "Your result can be photographed at normal size: use a real photo or a demo video, which is cheaper and more believable."
+  - "You want the moving version of the idea: use the 3D how-it-works video ad script writer."
+  - "Your product is in health, supplements or beauty: have a qualified reviewer check every claim before you make any image."
 
 you_give:
   - The doubt you want to answer, or your selling idea
@@ -37,6 +41,32 @@ how_to_use:
   - Paste your approved and banned claims. This format lives or dies on them.
   - Read the tests and chain first. If a test fails, use a different format rather than stretch the claim.
   - Make the image from the prompt, then add the headline, labels and your product photo in a design tool.
+output_sample:
+  input:
+    - The doubt you want to answer, or your selling idea
+    - How your product works, step by step, with a source for each step
+    - Your approved and banned claims
+    - Your colours, typefaces and offer (optional)
+    - Product photos with a sharp label (optional at first, needed before the image is made)
+  prerequisites:
+    - An AI that can make images, or an image tool to paste the prompt into (optional)
+  output:
+    - name: Tests
+      contains: A pass or fail with a reason for hidden, true and teaches.
+    - name: Chain and frozen link
+      contains: The process as 2 to 4 marked links, and the one link where your product acts.
+    - name: Parts key and honesty notes
+      contains: One name, colour and shape for each part, plus verbs, pictures and numbers to avoid.
+    - name: Layout
+      contains: The size, the cutaway view and a zone map in percent.
+    - name: Words on the image
+      contains: The headline and up to three labels, each with size, colour and contrast.
+    - name: Image prompt
+      contains: A ready-to-paste prompt for the 3D cutaway, with no text in the image.
+    - name: Feed copy
+      contains: A first line, the main text, a headline and a button.
+    - name: Notes and checks missed
+      contains: Links to confirm, claims left out, anything missing, and any check the plan did not meet.
 
 how_it_works:
   - title: Runs three tests

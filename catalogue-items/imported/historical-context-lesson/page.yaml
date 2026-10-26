@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sequences practice steps for a hard skill.
 new_slug: historical-context-lesson
 name: Historical context lesson builder
-summary: Give it a source and its period. Get a lesson series that teaches
-  learners to use the time and place as evidence.
+summary: Build a historical context lesson series that teaches students to use time, place and audience as evidence when they read a source.
 job: teach-and-train
 headline: Historical context lesson builder
-subhead: A lesson series that teaches learners to ask what was happening when a
-  historical source was made, then use the answer as evidence. Many students
-  read a document as if it were written today.
+subhead: A lesson series that teaches learners to ask what was happening when a historical source was made, then use the answer as evidence. Many students read a document as if it were written today.
 explain: |
   A lesson series that teaches learners to ask what was happening when a historical source was made, then use the answer as evidence. Many students read a document as if it were written today. Others know the background but never use it. This series fixes both.
 
@@ -18,6 +15,10 @@ when:
   - Learners know the background facts but do not use them when reading.
   - You are planning a unit built around primary sources.
   - You want a way to see if the problem is knowledge or skill.
+not_for:
+  - "You want to teach students to check who made a source and why: use a sourcing lesson builder first, or a short talk with your class."
+  - "Your students know nothing about the period yet: teach the background first, then come back to this."
+  - "You want a single quick quiz or one-off worksheet: write a short set of questions by hand instead."
 you_give:
   - The topic or period
   - Learners' age or year group
@@ -30,7 +31,27 @@ you_get:
   - Prompts about time, place and audience
   - Signs of progress to check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Copy the Prompt section from the skill file and paste it into a new chat.
+  - "Fill in the three required items: your topic, your students' level and what they do now."
+  - Add your documents and what students already know, if you have them.
+  - Send it and read the Contextualisation Instruction Plan it returns.
+  - Check the Assessment Indicators to see if the gap is missing knowledge or a missing skill, then adjust the teaching steps for your class.
+output_sample:
+  input:
+    - The topic, period or question your students are studying
+    - Your students' age or year group and how much practice they have had
+    - What students do now, or fail to do, when they place a source in its time
+    - The documents you will use (optional)
+    - What background they already know about the period (optional)
+  output:
+    - name: Contextualisation Progression
+      contains: A step-by-step picture of weak, partial and strong use of context, written for your age group.
+    - name: Explicit Instruction Sequence
+      contains: Teaching steps that move from you modelling the thinking, to working a source together, to learners trying alone.
+    - name: Contextualisation Prompts
+      contains: Questions about time, place and audience that learners ask of a source.
+    - name: Common Failure Patterns
+      contains: Mistakes students often make with context, and what to do when you see them.
+    - name: Assessment Indicators
+      contains: Signs that show whether learners are improving, and whether the gap is knowledge or skill.

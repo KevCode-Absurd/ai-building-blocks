@@ -1,6 +1,6 @@
 new_slug: stranger-first-message-writer
 name: "Stranger first-message writer"
-summary: "Paste what you offer and who you want to reach. Get a first message a stranger can read in seconds."
+summary: "Write a cold email or call opening a stranger can read in seconds. Give it your plan and offer. You get a main message and two short versions."
 job: sell-and-negotiate
 thinking: low
 thinking_why: "The steps are fixed and the output is a short message."
@@ -17,6 +17,10 @@ when:
   - "You are writing a cold email, message or call opening for the first time."
   - "Your first messages get no replies."
   - "You have a long pitch and need to cut it to the one idea."
+not_for:
+  - "You are writing to a warm lead or a current customer: write a direct note yourself, or ask a mutual contact for an intro."
+  - "You need a long sales page, a proposal or a full email series: write those in a separate chat with your own outline."
+  - "You have no clear offer or no idea who to reach yet: work that out first, then come back."
 
 you_give:
   - "Your plan: who you want to reach and why"
@@ -33,6 +37,29 @@ how_to_use:
   - "Paste your plan and your offer, and add the person if you know them."
   - "Read each version aloud. If you stumble, ask it to simplify."
   - "Check local rules, then send to a small test group first."
+output_sample:
+  input:
+    - "Your plan: who you want to reach and why"
+    - What you offer and what it solves
+    - The person, role or company (optional)
+    - Your brand brain (optional)
+  output:
+    - name: Stranger profile
+      contains: Their role, how many seconds they will give you, and what they care about at work.
+    - name: One idea and one reply
+      contains: The single point you want them to know and the easiest next step for them.
+    - name: Main message
+      contains: A first message under 60 words, written as a question to the right person.
+    - name: Short email and call opening
+      contains: A 30-word email and a 15-second call opening, with no jargon.
+    - name: Hook and proof
+      contains: One honest hook and the proof you could send if they ask.
+    - name: Exit line
+      contains: One polite line that lets them say no or stop.
+    - name: Rules to check
+      contains: Reminders to check local email and calling rules. It is not legal advice.
+    - name: Checks missed
+      contains: Any check the draft failed and why, or none.
 
 how_it_works:
   - title: "Names the stranger"

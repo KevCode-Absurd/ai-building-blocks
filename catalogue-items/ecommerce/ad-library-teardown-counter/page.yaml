@@ -1,6 +1,6 @@
 new_slug: ad-library-teardown-counter
 name: "Ad library teardown counter"
-summary: "Paste an Ad Library export. Get ad counts by format, age, page and awareness stage, plus content gaps."
+summary: "Count a rival's Meta Ad Library ads by format, age, landing page and awareness stage. Get content gaps and the longest-running ads to rebuild."
 job: study-competitors
 thinking: medium
 thinking_why: "It counts and labels many ads, so a mid-size model with a table works well. Use a stronger one for 100 or more ads."
@@ -17,6 +17,10 @@ when:
   - You want to know how a rival really runs their ads before you plan yours.
   - You've collected dozens of a competitor's ads and don't know what to do with them.
   - You want to find the buyer groups and messages that no rival in your category covers.
+not_for:
+  - You want to know which ads make money. The library shows no spend or sales, so ask the rival's own data or run your own test.
+  - You only have a handful of ads, under about 20. The counts will swing, so collect more first or just read them one by one.
+  - You want to copy a rival's ad. Rebuild the idea with your own product and proof instead.
 
 you_give:
   - A rival's ads from the public Meta Ad Library (copy, format, start date and link)
@@ -35,6 +39,32 @@ how_to_use:
   - Paste the list and add transcripts of any videos you want checked.
   - Read the gaps first, then pick the concepts on the shortlist to rebuild with your own product and proof.
   - Run the winning ad DNA mapper on the shortlist to see why those ads work.
+output_sample:
+  input:
+    - "A rival's ads from the Meta Ad Library: copy, format, start date and link"
+    - The brand name and every page it runs ads from
+    - Transcripts of the rival's video ads (optional)
+    - A list of the pages the ads point to (optional)
+    - Your own yearly revenue (optional)
+  output:
+    - name: Counts
+      contains: Creative assets, distinct copy lines, formats and the share of catalog ads, with the sample size.
+    - name: Age
+      contains: Median age, oldest live ad and any launch rhythm, worked out from start dates.
+    - name: Destinations
+      contains: The share of ads sent to each page type, and page types that get no traffic.
+    - name: Awareness mix
+      contains: How many ads sit at each awareness stage, with a short reason for each label.
+    - name: Offer mentions
+      contains: The share of ads that mention price, a discount, a guarantee, loyalty, an app or a store.
+    - name: Eight beats
+      contains: Which script beats each transcribed video has, and which beats are missing most.
+    - name: Claims and proof
+      contains: How bold claims get by stage, proof numbers that disagree, and claims to avoid.
+    - name: Content gaps
+      contains: What no ad covers, such as store content, a founder story or a guarantee.
+    - name: Shortlist
+      contains: The longest-running concepts, their format and run length, and how to rebuild each with your proof.
 
 how_it_works:
   - title: Picks the right rivals

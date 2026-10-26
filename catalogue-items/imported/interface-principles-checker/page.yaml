@@ -2,34 +2,106 @@ thinking: medium
 thinking_why: It matches the design against a large list of rules.
 new_slug: interface-principles-checker
 name: Interface principles checker
-summary: Describe or share an interface. Get it scored against 168
-  research-backed UX principles, with common mistakes flagged.
+summary: Check your screen or flow against named UX principles. Get each problem, its severity and a fix, plus trust checks for AI screens.
 job: design-work
 headline: Interface principles checker
-subhead: Your interface scored against 168 research-based UX principles, with
-  common mistakes flagged and a reason for each score. Describe it or share it
-  and see where users are likely to trip.
+subhead: Describe or share a screen, a flow or an AI feature. Your AI reviews it against named UX principles and flags common mistakes. You get a ranked list of problems with where they are, why users trip and how to fix each one.
 explain: |
-  Your interface scored against 168 research-based UX principles, with common mistakes flagged and a reason for each score. Describe it or share it and see where users are likely to trip.
+  Most small teams ship screens without a UX review, because they have no researcher. This interface principles checker gives you a UX principles review in one chat. Every problem it finds is tied to a named principle, so you can show your team why, not just say you do not like a screen.
 
-  The pack has five parts. One evaluates a design against the principle set. One finds antipatterns using a catalogue of UX smells. One audits AI-powered screens against 44 principles on trust, openness and safety. One checks flows for decision, error and feedback problems. The last adds UX context to coding sessions before you build. Pick the part that fits and you get findings tied to a named principle.
+  The source is a collection of five skills by uxuiprinciples. One reviews a screen against a large principle set. One looks for common UX mistakes. One checks screens that use AI for trust, openness and safety. One checks a flow for hard choices, errors and missing feedback. One writes UX rules for your coding AI before it builds. This page runs them as modes in one skill.
+
+  This copy holds the overview, not the full list of 168 principles. Your AI uses well-known named principles, such as Nielsen's usability heuristics, and says so. If you install the source skills, it uses their list. It is an expert-style review, not a test with real users.
 when:
   - You want a UX review before launch and have no researcher.
-  - Your flow loses users at one step and you do not know why.
-  - You built an AI feature and want to check trust and clarity.
-  - You are about to build a screen and want UX rules in mind.
-  - You need review points you can cite to a team.
+  - Your flow loses people at one step and you do not know why.
+  - You added an AI feature and want to check trust and clarity.
+  - You are about to build a screen and want UX rules for your coding AI.
+  - You need review points you can show a team.
+not_for:
+  - "You want to know what real users do: run a usability test, or plan one with the Small usability test planner."
+  - "You want a score against a checklist of usability rules: use the Usability heuristic reviewer."
+  - "You are checking an iPhone, iPad or Mac app against Apple rules: use the Apple app design checker."
+  - "You want to catch UI that looks AI-made: use the AI-look design reviewer."
 you_give:
-  - A description, screenshot or code of the interface
-  - The user flow to check (optional)
-  - Whether it uses AI features
+  - A description, screenshot or code of the screen
+  - Who uses it and what they want to do
+  - The flow to check, step by step (optional)
+  - Whether it uses AI features (optional)
 you_get:
-  - Scores against named principles
-  - Flagged antipatterns
-  - Flow problems with fixes
-  - AI interface trust checks
+  - Problems tied to named principles, ranked by severity, each with a fix
+  - Common UX mistakes found, with where and how to fix them
+  - Flow problems, such as hard choices, errors and missing feedback
+  - Trust checks for AI screens, and a short UX brief for your coding AI if you ask
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste a description, screenshot or code of the screen. Say who uses it and what they want to do.
+  - Add the flow steps if you want a flow check, and say if the screen uses AI.
+  - Read the top 3 fixes first. Check each finding against the real screen, because the AI reviews only what you gave it.
+  - Fix the high items, then test with a few real users. Use the Small usability test planner to set that up.
+how_it_works:
+  - title: Read your screen
+    text: It restates the screen and the user goal in two lines, so you can correct it.
+  - title: Match to principles
+    text: It names the principle each problem breaks and points to the exact element or step.
+  - title: Rank by severity
+    text: Each finding is high, medium or low, with what users will do wrong and a fix.
+  - title: Spot common mistakes
+    text: It lists known UX mistakes it can see, such as no feedback after a click.
+  - title: Check the flow
+    text: If you gave steps, it checks each for the choice, the errors and the feedback, and names where users drop.
+  - title: Review AI features
+    text: For AI screens it checks if the AI is labelled, shows its limits and lets people correct it.
+output_shape: |-
+  Reviewed: <screen, user, goal, mode, principle source>
+  What works: <1 to 3 points>
+  Findings (high first)
+  | # | Principle | Where | What users will do | Severity | Fix |
+  Antipatterns
+  | Pattern | Where | Fix |
+  Flow problems
+  | Step | Problem | Fix |
+  AI interface checks
+  | Check | Pass, partly or fail | Fix |
+  UX brief for your coding AI
+  - <rule>
+  Fix first: 1. <fix> 2. <fix> 3. <fix>
+  Test with users: <what to watch for>
+  MISSING: <anything not given>
+output_sample:
+  input:
+    - A description, screenshot or code of your screen
+    - Who uses it and what they want to do
+    - The flow to check, step by step (optional)
+    - Whether it uses AI features (optional)
+  output:
+    - name: Findings
+      contains: Each problem with its principle, where it is, what users will do, severity and a fix.
+    - name: Antipatterns
+      contains: Common UX mistakes seen on the screen, each with a place and a fix.
+    - name: Flow problems
+      contains: Steps where users must choose, can fail or get no feedback, with a fix for each.
+    - name: AI interface checks
+      contains: Pass, partly or fail on labelling, limits, correction and wrong answers.
+    - name: UX brief
+      contains: Five to eight rules for your coding AI to follow before it builds.
+    - name: Fix first
+      contains: The top three fixes in order, and what to watch for in a user test.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI that reads screenshots can review your screen without any code or files.
+  inputs:
+    - Screenshots of each step in the flow
+    - Where users drop off, if you have the numbers
+    - Support questions about the screen
+    - The user goal in one sentence
+terms:
+  - term: UX principle
+    meaning: A well-known rule for how people use screens, such as keeping choices few.
+  - term: Antipattern
+    meaning: A common design mistake that makes screens harder to use.
+  - term: Flow
+    meaning: The steps a person takes to reach a goal, such as signing up.
+  - term: Severity
+    meaning: How badly a problem hurts users. High means they fail or leave.

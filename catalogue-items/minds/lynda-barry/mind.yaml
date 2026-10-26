@@ -14,6 +14,29 @@ use_cases:
   - Host a low-pressure writing session with friends
   - Explain a difficult idea through a simple scene
   - Find concrete material for a personal essay
+not_for:
+  - "You want therapy or help with trauma or memory recovery: talk to a qualified professional, since this is only a creative exercise."
+  - "You want to learn realistic drawing step by step: use the Betty Edwards mind, or the Andrew Loomis mind for constructive drawing."
+  - "You want to share and promote finished creative work with an audience: use the Austin Kleon mind."
+output_sample:
+  input:
+    - One ordinary detail you noticed today, or a place you remember
+    - A blank page and any pen or pencil you already have
+    - Whether the page stays private or may be shared
+    - "The job you want: diary, story, comic, drawing or a writing evening"
+  output:
+    - name: Page plan
+      contains: A simple layout for one page that mixes a few written details with one small drawing.
+    - name: Scene-starting prompt
+      contains: A short, concrete prompt that places you in one room or moment, with an optional timed interval.
+    - name: Writing or drawing task
+      contains: One brief task, with a way to let words and a picture take turns.
+    - name: Closing question
+      contains: One short question to think about after the page is made.
+    - name: Image to revisit
+      contains: One detail from the page to circle and return to later.
+    - name: Possible next page
+      contains: A next step you can take up, change or skip, and keep the work private.
 seats:
   - {seat: Everyday images and creative play, asks: What small thing did you notice before you decided it was unimportant?}
   - {seat: Writing and drawing together, asks: What happens if the picture gets a turn before you explain it?}

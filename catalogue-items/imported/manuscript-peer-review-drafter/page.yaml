@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must weigh claims against evidence and stay fair.
 new_slug: manuscript-peer-review-drafter
 name: Manuscript peer review drafter
-summary: Give it a paper or proposal. Get a fair, evidence-based review with
-  claim checks, method critique and revision steps.
+summary: Draft a fair peer review of a paper or proposal you are cleared to review. Get claim checks, method critique and ranked revision requests.
 job: research-topics
 headline: Manuscript peer review drafter
-subhead: A fair, evidence-based draft review of a paper or proposal that a human
-  reviewer can edit and sign. It covers claim checks, method critique and clear
-  revision steps.
+subhead: A fair, evidence-based draft review of a paper or proposal that a human reviewer can edit and sign. It covers claim checks, method critique and clear revision steps.
 explain: |
   A fair, evidence-based draft review of a paper or proposal that a human reviewer can edit and sign. It covers claim checks, method critique and clear revision steps.
 
@@ -18,6 +15,10 @@ when:
   - You are reviewing a grant proposal and need to test its claims.
   - You want to check that your review is fair and not just negative.
   - You need to write revision requests the authors can act on.
+not_for:
+  - "You want an accept or reject decision: this draft does not make one, so leave that to the editor or panel and use the venue's own review form."
+  - "You are not cleared to review the manuscript: do not paste it in, and ask the editor or the venue's contact first."
+  - "You want a quick check of your own draft before you submit it: ask a colleague, or use the venue's author checklist."
 you_give:
   - The paper or proposal
   - Proof you are authorised to review it
@@ -30,7 +31,35 @@ you_get:
   - Ranked revision requests
   - A confidentiality checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Check first that you are allowed to review the paper and that the venue allows AI help. If you are not sure, stop and ask the editor.
+  - Open an AI that can run Python and read files. Add the skill folder. Pasting a manuscript into a hosted chat counts as sending it to an outside service, so check the venue rules first.
+  - Fill in the intake file with your authorization, conflicts, venue rules and data handling. Run the intake check. Go on only when it says ready.
+  - Give your AI the manuscript and ask it to follow the skill. It maps claims to evidence, checks methods, and drafts your comments.
+  - Read the whole paper yourself. Check every fact, number and page location the draft cites. Rewrite each comment in your own words.
+  - Run the review check on your draft. Fix what it flags, then submit through the venue's own channel. A good comment gives Location, Observation, Evidence, Why it matters and Requested action.
+output_sample:
+  input:
+    - The paper or proposal you are cleared to review
+    - Proof that you are allowed to review it
+    - The venue's review rules and AI policy
+    - Your conflicts and the limits of your expertise
+    - Protocol, data or code notes, if you have them (optional)
+  prerequisites:
+    - A completed intake file. The check only reads your answers and does not prove them true.
+    - An AI that can run Python 3.11 or newer and read files, to use the bundled checks
+    - A venue that allows the AI tools you plan to use
+  output:
+    - name: Intake check
+      contains: A ready or blocked status showing whether authorization, conflicts, venue policy and data handling are settled.
+    - name: Reporting guideline pick
+      contains: The reporting guidelines that fit the study type, plus a coverage list that does not score the paper.
+    - name: Claim and evidence matrix
+      contains: Each main claim linked to the result, figure or table that should support it, with gaps flagged.
+    - name: Methods and statistics audit
+      contains: Checks on design, analysis, uncertainty, reproducibility and transparency, with notes on where you need a specialist.
+    - name: Citation check
+      contains: A local check that in-text citations match the reference list and that identifiers are well formed.
+    - name: Private review draft
+      contains: A split draft with comments to authors and a short confidential note to the editor.
+    - name: Review lint report
+      contains: Line numbers and rule IDs for leftover placeholders, tone problems, mixed channels and missing action requests.

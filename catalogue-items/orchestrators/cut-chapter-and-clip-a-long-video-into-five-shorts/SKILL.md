@@ -22,13 +22,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Dead air and retake cutter.** Use the skill `dead-air-and-retake-cutter`. Starts from the transcript of your raw recording and gives a timed list of cuts.
+1. **Dead air and retake cutter.** Use the skill `dead-air-and-retake-cutter`. Starts from the transcript of your raw recording and gives a timed list of cuts. You make the cuts in your editor and upload the result.
 
 Pause here: Make the cuts in your editor, export the video and upload it as unlisted or public. You do the editing and publishing.
 
-2. **YouTube transcript and channel reader.** Use the skill `youtube-transcript-reader`. Fresh start after the edit: reads the link to the cut version, so chapters and clips match the final timing. You can paste the captions yourself instead.
-3. **YouTube chapter writer.** Use the skill `youtube-chapter-writer`. Give it the transcript from the steps before. Reads the transcript from the step before and writes the chapter block for the description.
-4. **Shorts clip finder.** Use the skill `shorts-clip-finder`. Give it the transcript from the steps before. Reads the same transcript and picks five moments that stand alone, with a new first line for each.
+2. **YouTube transcript and channel reader.** Use the skill `youtube-transcript-reader`. Uses the link to your cut video, not step 1's cut list (you cut and upload between the steps). Reads its captions so chapters and clips match the final timing, and hands that transcript to steps 3 and 4. You can paste the captions yourself instead.
+3. **YouTube chapter writer.** Use the skill `youtube-chapter-writer`. Give it the transcript from the steps before. Reads the transcript from step 2 and writes the chapter block for the description. The chapters go to you; step 4 does not need them.
+4. **Shorts clip finder.** Use the skill `shorts-clip-finder`. Give it the transcript from the steps before. Uses the step 2 transcript again, not the chapters, and picks five moments that stand alone, with a new first line for each.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -1,6 +1,6 @@
 new_slug: captioned-product-reel
 name: "Get a short product reel with captions that fit"
-summary: "Give it your product facts and photos. Get a satisfying-motion script, a short reel and timed captions."
+summary: "Make a short product reel with captions that fit. Give it your product facts and photos. Get a script, a 10 to 20 second reel and timed captions."
 job: make-video-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -17,6 +17,10 @@ when:
   - You want a short reel that shows your real product in use.
   - Your captions get covered by the feed buttons or run out of time with the speech.
   - You need the same reel in several sizes.
+not_for:
+  - "You have no real photos of the product in use: make a static image ad instead, or take photos first."
+  - "You only want captions on a video you already have: use the Video caption maker in your brand font."
+  - "You want a script for a reel that shows a claim being proven: use the Product claim demo planner."
 
 you_give:
   - Your product facts and how it is used
@@ -37,6 +41,31 @@ how_to_use:
   - Have your inputs ready. Your product facts, how it is used, real photos, your font and the sizes you need.
   - Check the script before the reel is built, then review the reel for at least three rounds.
   - Watch the finished reel on a phone with the sound off before it runs.
+output_sample:
+  input:
+    - Your product facts and how it is used
+    - Real product photos, from the front and in use
+    - Your brand file and your font file
+    - Your offer (optional)
+    - The sizes you need
+  prerequisites:
+    - An AI that can read your files and build video, such as Claude Code or a Claude Project with files
+    - Your brand brain from the Website brand brain builder (optional, but it improves the result)
+  output:
+    - name: Brief
+      contains: The buyer and the one thing the reel argues.
+    - name: Satisfying-motion script
+      contains: An opening built on one satisfying movement, then the demo steps with picture notes.
+    - name: Reel
+      contains: A 10 to 20 second reel built from your real photos, with a beat grid, shot list and every size.
+    - name: On-screen words plan
+      contains: The few words to show, when they appear, and where they sit clear of the feed buttons.
+    - name: Captions
+      contains: Timed caption groups set in your brand font, with a subtitle file.
+    - name: Pre-launch check
+      contains: Stop-ship mistakes, items worth a look and a verdict on what to do next.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Picks the buyer and the angle

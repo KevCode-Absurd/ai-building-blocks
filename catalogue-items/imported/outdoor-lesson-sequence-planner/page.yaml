@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It fits curriculum goals to the space you have.
 new_slug: outdoor-lesson-sequence-planner
 name: Outdoor lesson sequence planner
-summary: Describe your outdoor space and goals. Get a run of outdoor lessons
-  that cover your curriculum.
+summary: Plan outdoor lessons that teach your curriculum. Give your goal and your space. You get prep, an outdoor session and follow-up, plus a safety plan.
 job: teach-and-train
 headline: Outdoor lesson sequence planner
-subhead: A short run of lessons where going outside teaches something that a
-  classroom cannot. Each sequence has prep before, the outdoor activity and
-  follow-up after, so the trip is never just a treat.
+subhead: A short run of lessons where going outside teaches something that a classroom cannot. Each sequence has prep before, the outdoor activity and follow-up after, so the trip is never just a treat.
 explain: |
   A short run of lessons where going outside teaches something that a classroom cannot. Each sequence has prep before, the outdoor activity and follow-up after, so the trip is never just a treat.
 
@@ -18,6 +15,10 @@ when:
   - Outdoor sessions feel like a break, not learning.
   - You need a unit plan with preparation and follow-up.
   - A senior leader asks why a lesson belongs outside.
+not_for:
+  - "Your school has no outdoor space, or you cannot do a site risk check: plan an indoor sequence with your own lesson plan instead."
+  - "You need a one-off trip with a booking, transport and a permission form: use your school's trip planning process."
+  - "You want a single indoor lesson plan with no outdoor part: write it with your usual planning template or ask your AI for a plain lesson plan."
 you_give:
   - Year group and subject
   - Curriculum objective
@@ -30,7 +31,29 @@ you_get:
   - A safety plan
   - Indoor-outdoor links
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page's skill file. No code, web access or paid tool is needed.
+  - Type your learning objective and describe your outdoor space. These two are required.
+  - "Add what you know: year group, subject, class size, adult help, time, weather and risks."
+  - Read the safety plan and check it against your school's rules and your own site risk check.
+  - Do not let students taste any wild plant. Remove any tasting from the plan unless an expert has identified the plant and allergies are checked.
+  - Ask your AI to change anything that does not fit your class, then teach the prep lesson first.
+output_sample:
+  input:
+    - "Your learning objective: what students must learn"
+    - Your outdoor space, such as school grounds, a park or a garden
+    - Year group and subject (optional)
+    - Class size and adult help (optional)
+    - Time, weather limits and known risks (optional)
+  output:
+    - name: "Phase 1: Preparation (Indoor)"
+      contains: A lesson before the outdoor session that gets students ready and sets the questions they will explore.
+    - name: "Phase 2: Encounter (Outdoor)"
+      contains: The outdoor activity, where students use the space to learn the objective, with timing and weather options.
+    - name: "Phase 3: Reflection (Indoor)"
+      contains: A follow-up lesson where students use what they found outside to finish the learning.
+    - name: Safety Framework
+      contains: Risks to check and how to manage them, based on your space and class.
+    - name: Indoor-Outdoor Continuity
+      contains: How ideas move between the classroom and the outdoor session so learning carries on.
+    - name: Equipment and Resources
+      contains: The kit and materials you need to gather before the session.

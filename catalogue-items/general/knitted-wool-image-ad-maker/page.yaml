@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: knitted-wool-image-ad-maker
 name: "Knitted wool image ad maker"
-summary: "Paste your idea, attach photos. Get a knitted-wool image prompt, the ad words and a layout."
+summary: "Make a knitted wool image ad for awkward subjects. Give it your selling idea and photos. You get an image prompt, ad words and a layout."
 job: make-image-ads
 
 headline: "Knitted wool image ad maker"
@@ -17,6 +17,10 @@ when:
   - Your product deals with a subject people find awkward to look at.
   - You run a knitted-wool video and want a still that matches it.
   - You want a soft, unusual image ad for people who don't know you yet.
+not_for:
+  - "You need a knitted-wool video: use the knitted wool ad script skill, which plans moving scenes instead of one still."
+  - "Proof, fit or taste is the point of the ad: use a plain product photo, because a wool doll proves nothing."
+  - "You need a person's face or a real customer in the ad: ask a photographer or use a real photo, because this skill never shows real people."
 
 you_give:
   - The reason someone buys, what the buyer knows and the selling idea
@@ -34,6 +38,29 @@ how_to_use:
   - Read the moment plan. If the implied sentence isn't something you can say, ask for another show job.
   - Check every object in the prompt has knitted, crocheted or felted in front of it.
   - Make the image, then lay the real label and the words on it in your editor.
+output_sample:
+  input:
+    - Your selling idea, what the buyer knows and where the ad runs
+    - Your brand file with label words, claims and offer (optional)
+    - Photos of your product from the front, side and top (optional)
+  prerequisites:
+    - An AI that can make images, or an image tool such as Nano Banana, to turn the prompt into a picture
+    - An editor to lay your real label and words on the finished image
+  output:
+    - name: Moment plan
+      contains: The moment, show job, yarn technique, fabrics, and the sentence the picture implies with its source.
+    - name: Layout
+      contains: The size, 4:5 or 1:1, and a top-to-bottom map of picture, quiet area and product in percent.
+    - name: Words on the image
+      contains: A headline of 7 words or fewer and up to 3 more lines, each claim sourced.
+    - name: Image prompt
+      contains: The scene with a material and colour on every object, plus an avoid field of plain nouns.
+    - name: Post words
+      contains: Primary text, a headline field and a button label for the ad.
+    - name: Edit step
+      contains: How to lay the real label over the crocheted one, place the words and check contrast.
+    - name: Checks missed
+      contains: One line for each check that still fails, or none, plus any MISSING lines.
 
 how_it_works:
   - title: Checks the fit

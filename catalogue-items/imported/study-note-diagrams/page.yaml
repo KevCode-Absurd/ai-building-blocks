@@ -2,16 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: study-note-diagrams
 name: Study note diagrams
-summary: Share a lesson concept. Get a clear diagram or table placed where it
-  helps the explanation.
+summary: "Turn a lesson concept into a clear study note diagram: a flowchart, table or simple drawing, with a caption, placed right beside your explanation."
 job: study-and-practice
 headline: Study note diagrams
-subhead: Share the lesson section and the idea readers need to see. It chooses a
-  table, flowchart or simple drawing to match the idea. You get a compact visual
-  with a caption, ready to place beside the explanation in your notes.
-explain: Share the lesson section and the idea readers need to see. It chooses a
-  table, flowchart or simple drawing to match the idea. You get a compact visual
-  with a caption, ready to place beside the explanation in your notes.
+subhead: Share the lesson section and the idea readers need to see. It chooses a table, flowchart or simple drawing to match the idea. You get a compact visual with a caption, ready to place beside the explanation in your notes.
+not_for:
+  - "You need a full lesson plan: ask your AI to write the plan first, then come back for the pictures."
+  - "Your idea is plain text with no steps or parts: write a short paragraph instead."
+  - "You want a table to compare features: ask your AI for a plain table, no diagram needed."
+explain: Share the lesson section and the idea readers need to see. It chooses a table, flowchart or simple drawing to match the idea. You get a compact visual with a caption, ready to place beside the explanation in your notes.
 you_give:
   - A lesson section and the concept to explain.
   - Your note folder and the learner level.
@@ -27,9 +26,29 @@ how_it_works:
   - title: Step 3
     text: Check the visual and add a caption beside the relevant explanation.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Paste this skill into a chat with Claude, ChatGPT or Gemini. No code running is needed for a Mermaid diagram.
+  - Paste the lesson section and name the one idea you want to show. Add the learner level if you know it.
+  - "Your AI picks the form: flowchart, timeline, mind map, table or drawing. Ask it to explain the choice if you disagree."
+  - Check the diagram. It should have about 15 boxes or fewer, with short labels. Ask for a split if it is too busy.
+  - Paste the diagram code into your notes right after the explanation. Add the caption under it.
+  - For an SVG file, use an AI that can save files, and save it in your notes folder.
+output_sample:
+  input:
+    - The lesson section that explains the concept
+    - The one idea the reader needs to see
+    - The learner level, such as beginner (optional)
+    - Your notes folder, if your AI can save files (optional)
+  prerequisites:
+    - An AI that can write Mermaid code. A viewer like Obsidian shows the diagram.
+    - An AI that can save files, only if you want an SVG drawing saved to your notes folder
+  output:
+    - name: Chosen visual form
+      contains: The type that fits your idea, such as a flowchart, timeline, mind map, table or SVG drawing.
+    - name: Mermaid diagram
+      contains: A small diagram in a code block, under about 15 boxes, with short labels.
+    - name: SVG drawing
+      contains: A static picture file for layouts Mermaid cannot show, only when the idea needs one.
+    - name: Caption
+      contains: One line under the visual that tells the reader what to notice.
+    - name: Placement
+      contains: Where the visual goes in your note, right after the idea it explains, plus the embed link for an SVG.

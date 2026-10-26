@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must spot waste in your own steps.
 new_slug: waste-reduction-planner
 name: Waste reduction planner
-summary: Describe your process. Get a map of waste, a 5S plan and quick fixes
-  ranked by payoff.
+summary: Find where your process wastes time, money and materials. Get a waste map, a 5S plan and quick fixes ranked by payoff.
 job: plan-supply-chain
 headline: Waste reduction planner
-subhead: A map of where your process wastes time, money and materials, plus a 5S
-  plan and quick fixes ranked by payoff. It uses lean methods from
-  manufacturing, but the ideas work in any repeated process.
+subhead: A map of where your process wastes time, money and materials, plus a 5S plan and quick fixes ranked by payoff. It uses lean methods from manufacturing, but the ideas work in any repeated process.
 explain: |
   A map of where your process wastes time, money and materials, plus a 5S plan and quick fixes ranked by payoff. It uses lean methods from manufacturing, but the ideas work in any repeated process.
 
@@ -18,6 +15,10 @@ when:
   - Defects or rework are eating your margin.
   - Your workspace is messy and people lose time looking for things.
   - You want an improvement plan without a big project.
+not_for:
+  - "You need the root cause of defects: use quality-management, a different skill, not this one."
+  - "A machine keeps breaking down: use maintenance-planning, or call your repair person."
+  - "You have a one-off project, not a process you repeat: a simple task list will do."
 you_give:
   - A description of the process and its steps
   - Known problems or delays
@@ -29,7 +30,27 @@ you_get:
   - Quick fixes ranked by payoff
   - Measures to track progress
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text. No code needs to run.
+  - Describe your process step by step. Add the problems you see and your goal.
+  - Add the time each step takes, if you know it. Say so if you do not.
+  - Read the waste map first. Check that each step and delay matches what really happens.
+  - Start with the quick fixes at the top of the ranked list. Then set up the 5S plan in one work area.
+output_sample:
+  input:
+    - A description of your process and its steps
+    - Known problems or delays
+    - Time per step (optional)
+    - Your goal, such as a shorter lead time
+  output:
+    - name: Executive Summary
+      contains: Where your process stands today, the main waste found, your top priorities and the benefits to expect.
+    - name: Value Stream Analysis
+      contains: A table comparing your current and future process on lead time, inventory, distance moved and defects.
+    - name: Waste Analysis
+      contains: Each waste type with its impact, root cause and the actions to take.
+    - name: 5S plan
+      contains: Steps to sort, tidy, clean and standardise your workspace.
+    - name: Implementation Roadmap
+      contains: A phased plan that starts with the foundation and moves on to flow, pull and ongoing improvement.
+    - name: Expected Benefits
+      contains: The gains you can aim for, such as shorter lead time and less inventory.

@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It follows a set procedure but must fit your setup.
 new_slug: secrets-setup-helper
 name: Secrets setup helper
-summary: Name your pipeline and secret store. Get a safe plan for storing,
-  reading and rotating secrets.
+summary: "Get a secrets management plan for your CI/CD pipeline: how to store, read and rotate secrets in Vault, a cloud store or GitHub Actions."
 job: secure-code
 headline: Secrets setup helper
-subhead: A safe plan for how your pipeline stores, reads and changes secrets,
-  without printing a single value. You name the secrets, who owns them, what
-  uses them and which store you have, such as Vault, a cloud secret manager or
-  GitHub Actions.
+subhead: A safe plan for how your pipeline stores, reads and changes secrets, without printing a single value. You name the secrets, who owns them, what uses them and which store you have, such as Vault, a cloud secret manager or GitHub Actions.
 explain: |
   A safe plan for how your pipeline stores, reads and changes secrets, without printing a single value. You name the secrets, who owns them, what uses them and which store you have, such as Vault, a cloud secret manager or GitHub Actions.
 
   It picks the supported backend and keeps environments apart with minimum access. It prefers short-lived identities over stored keys, and keeps pull request checks apart from privileged jobs. Rotation follows four steps: prepare, switch the consumer, verify, revoke the old key. It then tests with fake secret markers in logs and error output, and tries denied access and failed rotation in staging.
 when:
   - Your deploy job needs a database password and you want it handled safely.
-  - You are setting up GitHub Actions secrets and want public pull requests kept
-    away from them.
+  - You are setting up GitHub Actions secrets and want public pull requests kept away from them.
   - You need a rotation plan that will not leave the app and store out of sync.
   - A key showed up in a log and you need to know what to revoke.
+not_for:
+  - "A key is already exposed in a public log: revoke or rotate it first, then use this plan to fix the setup."
+  - "You want to scan your code for leaked keys: use a secret scanning tool, then come back here."
+  - "You need to change real credentials or deploy secret storage without approval: ask the owner of the system first."
 you_give:
   - Names and owners of the secrets
   - What uses each secret
@@ -31,8 +30,27 @@ you_get:
   - Log and artifact leak checks
   - A test list for denied and failed cases
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. If your AI can read files, upload your pipeline files too.
+  - Tell your AI which secret store and CI system you use.
+  - List each secret, its owner, what uses it and which environment it is in. Never paste the secret values.
+  - Read the plan. Check that each environment has its own access and that rotation has a rollback step.
+  - Run the test list in staging first, before you change anything in production.
+output_sample:
+  input:
+    - Names and owners of your secrets
+    - What uses each secret, and in which environment
+    - Your secret store or CI system, such as Vault or GitHub Actions
+    - Your rotation and recovery rules (optional)
+  prerequisites:
+    - An AI that can read your project files is best, but you can paste the details into a chat instead
+  output:
+    - name: Retrieval and access design
+      contains: How each job gets its secret, which identity it uses, and what is kept apart by environment.
+    - name: Rotation sequence
+      contains: "Four steps: prepare, switch the consumer, verify, and revoke the old credential, with a way to roll back."
+    - name: Leak checks
+      contains: Where to look in logs, errors, artifacts and crash reports, using fake secret markers.
+    - name: Test list
+      contains: Checks for allowed access, denied access, missing credentials and failed rotation, to run in staging.
+    - name: Limits and risks
+      contains: Places secrets can still linger, such as backups or subprocess environments, and what to review.

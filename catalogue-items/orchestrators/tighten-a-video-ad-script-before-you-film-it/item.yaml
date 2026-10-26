@@ -16,10 +16,10 @@ outputs:
   - {type: audit_report}
 uses: [video-ad-bridge-checker, sound-off-commercial-checker, ad-distraction-checker, pre-launch-ad-checker]
 steps:
-  - {uses: video-ad-bridge-checker, note: "Starts the chain: scores the script and returns a tighter version."}
-  - {uses: sound-off-commercial-checker, note: "Reads the tighter script from the step before and checks the picture alone carries the claim."}
-  - {uses: ad-distraction-checker, note: "Compares what the ten viewers said with the one claim in the fixed script."}
-  - {uses: pre-launch-ad-checker, note: "Runs the last check on the script after the fixes from the earlier reports."}
+  - {uses: video-ad-bridge-checker, note: "Starts the chain: scores the script and returns a tighter version. Hands step 2 that tighter script and a report of weak lines."}
+  - {uses: sound-off-commercial-checker, note: "Reads the tighter script from the step before and checks the picture alone carries the claim. Hands back a report; the script stays as it was, so you apply the fixes from both reports yourself."}
+  - {uses: ad-distraction-checker, note: "Compares what the ten viewers said with the one claim in the fixed script. Uses your fixed script (step 1's tighter version with the fixes you chose from both reports) and what ten viewers said. Hands step 4 a report of what got through."}
+  - {uses: pre-launch-ad-checker, note: "Runs the last check on the script after the fixes from the earlier reports. Uses the same fixed script, updated with any change from step 3, and checks it against your brand facts. Hands back the ship call."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/tighten-a-video-ad-script-before-you-film-it/skeleton.yaml

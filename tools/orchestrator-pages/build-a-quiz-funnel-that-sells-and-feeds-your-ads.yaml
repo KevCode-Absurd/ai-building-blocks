@@ -1,6 +1,6 @@
 new_slug: build-a-quiz-funnel-that-sells-and-feeds-your-ads
 name: Build a quiz funnel that sells and feeds your ads
-summary: Give it your product and offer. Get a quiz that sorts buyers, then ranked ad angles from their answers.
+summary: Build a quiz funnel that sorts buyers to the right product, then turn their answers into ranked ad angles you can test.
 job: write-landing-page
 thinking: high
 thinking_why: It runs four skills in a row and reads buyer answers for patterns. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You pay for cold traffic in a niche where buyers need guiding to the right choice.
   - Your product page loses visitors who are unsure which version fits them.
   - You want ad ideas based on what buyers say they struggle with, not on what you guess.
+not_for:
+  - "You sell low-priced impulse products: use a plain product page and the Fact-based ad copy writer instead."
+  - "You cannot send paid traffic yet: the quiz needs about 100 answers, so start with the Buyer problem list builder."
+  - "You only want ad ideas from answers you already have: use the Quiz answers to ad angles reader on its own."
 you_give:
   - Your product page text, price and what it replaces
   - Your offer, with terms
@@ -33,6 +37,28 @@ how_to_use:
   - Give it your product page, your offer and any customer words. Attach screenshots of a quiz you like for the structure only.
   - When it pauses, send paid traffic through the quiz for a week or two, then export every answer and the drop-off by question.
   - Bring the export back. Check the finish rate against the 30% target before you change the quiz.
+output_sample:
+  input:
+    - Your product page text, price and what it replaces
+    - Your offer, with terms
+    - Your product list and who each suits
+    - Customer reviews, tickets or survey answers (optional)
+    - After launch, your exported quiz answers and drop-off by question
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - A quiz tool that shows numbers per question, and an email tool
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Buyer research"
+      contains: The buyer research, an offer brief, the beliefs a buyer must hold and four to six buyer types.
+    - name: "Step 2: Quiz"
+      contains: Questions with their job, info cards, result pages by answer, a buy box and an email brief.
+    - name: "Step 3: Angle report"
+      contains: Counts by question, buyer awareness, ranked ad angles, quiz and offer changes, and a data score out of 100.
+    - name: "Step 4: Ad brief"
+      contains: Awareness level, first words, when the product enters, how firmly to ask, and ad length.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the buyer research
     text: Takes your product page and customer words and writes the research, an offer brief and the beliefs a buyer must hold. Adds four to six buyer types.

@@ -2,26 +2,105 @@ thinking: medium
 thinking_why: It follows a process checklist and ties each step to your records.
 new_slug: client-project-communication-plan
 name: Client project communication plan
-summary: Share how you work with clients. Get clear channels, update dates and a record for decisions and approvals.
+summary: Build a client communication plan for each project. You get one main channel, update dates, a decision log and clear sign-off roles.
 job: organise-work
 headline: Client project communication plan
-subhead: Share your client projects, current communication channels and approval problems. It sets a main channel, update rhythm and decision record for each relationship. You get a communication plan, clear approval roles and steps for raising issues before they delay the work.
-explain: Share your client projects, current communication channels and approval problems. It sets a main channel, update rhythm and decision record for each relationship. You get a communication plan, clear approval roles and steps for raising issues before they delay the work.
+subhead: "Tell it which clients you work with, how you talk to them now and what keeps going wrong. It picks one main channel per client and sets update dates. It adds a decision log and sign-off roles, so a client communication plan stops late surprises."
+explain: |
+  A client communication plan answers four plain questions for each client. Where do we talk? When do you hear from us? Who says yes to the work? What happens when something slips?
+
+  Many small teams use email, chat, a shared board and texts for the same project. News gets lost, and a "we never agreed to that" fight has no record to settle it. This skill picks one main channel per client, then sets the update rhythm, the approval roles and a simple decision log.
+
+  It is built for teams under 100 people with 5 to 30 clients. It turns what you tell it into a short plan you can send to each client. It will not send anything or change your tools.
+when:
+  - A client says "I did not know about that" and you want to stop it happening again.
+  - You use email, chat and a shared board for one project and nothing is in one place.
+  - A client sign-off is unclear and nobody can show who approved the work.
+  - A new project manager takes over and needs to know how each client is handled.
+not_for:
+  - "You only need one status email this week: use the Weekly status update writer."
+  - "You work with a large client team and a full account team (1,000+ staff): this plan is sized for small teams."
+  - "You need to set a price or scope for new work: use the Client fee and cap setter or the Client scope decision review assistant."
+  - "You want to chase a late invoice: use the Late invoice reminder writer."
 you_give:
-  - Client projects, stakeholders and current communication channels.
-  - Update needs, approval roles, document access and recurring problems.
+  - The client projects you run, with the 1 to 5 client-side people on each
+  - How you talk to each client today (email, chat, calls, a shared board)
+  - Who approves work on each side, and where documents live now
+  - What has gone wrong, such as late approvals or surprise issues
+  - How often each client expects to hear from you (optional)
 you_get:
-  - A client communication and update plan.
-  - A decision and deliverable-approval log format.
-  - An escalation and handover process.
-how_it_works:
-  - title: Step 1
-    text: Choose a main working channel and a shared home for documents.
-  - title: Step 2
-    text: Set update dates, decision records and approval roles.
-  - title: Step 3
-    text: Plan how issues, delays and stakeholder changes are raised.
+  - A client table with one main channel, document home and update day per client
+  - An update calendar for weekly, monthly and quarterly check-ins
+  - A decision log format with its fields
+  - Named sign-off roles and a backup for each
+  - An escalation path for delays, risks and client staff changes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.
+  - Open Claude, ChatGPT or Gemini. No code or files are needed, and nothing is sent for you.
+  - Paste the skill text into the chat.
+  - Paste your answers to the four questions in "You give". One short paragraph per client works.
+  - Check the client table first. Fix any channel or contact it got wrong, and answer the items marked MISSING.
+  - Copy the decision log and the sign-off rules into your shared document or board. Send each client their own update dates.
+  - Next, if a delay needs a message, use the Weekly status update writer or the Executive update drafter.
+how_it_works:
+  - title: Pick one main channel
+    text: Chooses one channel for talks, one place for documents and one for formal records per client.
+  - title: Set the update rhythm
+    text: Sets weekly status, monthly review and, for key accounts, a quarterly review, each with a sender.
+  - title: Define the decision log
+    text: Fixes the fields for every decision, and who may make it for the client.
+  - title: Name approval roles
+    text: Says who signs off each deliverable, how they sign, and the backup if they go quiet.
+  - title: Plan for trouble
+    text: Sets how delays, risks, scope changes and client staff changes are raised, and by when.
+output_shape: |
+  CLIENT TABLE
+  <client> | <client contacts> | <main channel> | <document home> | <update day>
+
+  UPDATE CALENDAR
+  <weekly / monthly / quarterly> | <who sends> | <what it covers>
+
+  DECISION LOG FORMAT
+  <decision> | <who decided> | <date> | <why> | <what it changes>
+
+  APPROVAL ROLES
+  <deliverable type> | <approver> | <how they sign> | <backup>
+
+  ESCALATION PATH
+  <issue type> | <raised by> | <raised to> | <within how many days>
+
+  OPEN QUESTIONS
+  <items marked MISSING>
+output_sample:
+  input:
+    - Your client projects and the client-side contacts on each
+    - How you talk to each client today
+    - Who approves work, and where documents live
+    - What has gone wrong so far
+  output:
+    - name: Client table
+      contains: One main channel, one document home and one update day for each client.
+    - name: Update calendar
+      contains: Weekly, monthly and quarterly updates, each with a sender and what it covers.
+    - name: Decision log format
+      contains: The fields to record for every decision, so nobody argues about what was agreed.
+    - name: Approval roles
+      contains: Who signs off each deliverable, how, and who steps in if they go quiet.
+    - name: Escalation path
+      contains: How delays, risks and client staff changes get raised, to whom and by when.
+    - name: Open questions
+      contains: Anything you left out, marked MISSING so you can fill it in.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It only needs your text answers. It does not read or change your tools.
+  inputs:
+    - Your current client list with project start dates
+    - A past example of a status email you sent a client
+    - Notes on the last time a client was surprised
+terms:
+  - term: Decision log
+    meaning: A running list of what was decided, by whom and when.
+  - term: Escalation path
+    meaning: The steps and people for raising a problem that is stuck.
+  - term: Sign-off
+    meaning: A clear yes from the client that a piece of work is approved.

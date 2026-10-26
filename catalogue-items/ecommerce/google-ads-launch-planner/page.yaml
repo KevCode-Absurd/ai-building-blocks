@@ -1,6 +1,6 @@
 new_slug: google-ads-launch-planner
 name: "Google Ads launch planner"
-summary: "Give it your store, budget and sales so far. Get the launch order, campaign settings and budget split."
+summary: "Plan your Google Ads launch for your online store. Give it budget and sales so far. Get the launch order, a budget for each campaign and bid steps."
 job: run-google-ads
 thinking: medium
 thinking_why: "It weighs several sources that disagree and has to fit one plan to your cash and data."
@@ -17,6 +17,10 @@ when:
   - You are about to run Google Ads for your store for the first time.
   - Your account has too many campaigns for its budget and none gets enough sales.
   - You want to know when to move from manual bids to a smart bid strategy.
+not_for:
+  - "You have no purchase tracking yet: fix tracking first with a tracking checker or your developer, then come back."
+  - "You want the step-by-step build of one campaign: use that campaign type's own builder, such as the Google remarketing campaign builder."
+  - "Your offer or product page is weak: test the offer on Meta first, because Google mostly catches demand that already exists."
 
 you_give:
   - Your monthly Google budget, and monthly Meta or TikTok spend if you run them
@@ -36,6 +40,32 @@ how_to_use:
   - Say how many purchases Google has counted so far, and whether purchase tracking and Merchant Center are working.
   - If the skill says not yet, fix those items before spending.
   - Follow the stages in order, and use the builder for each campaign type when you reach it.
+output_sample:
+  input:
+    - Your monthly Google budget, and any Meta or TikTok spend
+    - Your average order value and margin, or break-even CPA
+    - How many products you sell and your hero product (optional)
+    - Purchases Google has counted so far (optional)
+    - Merchant Center and purchase tracking status (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional, makes the plan fit your products)
+  output:
+    - name: READY?
+      contains: A yes or not yet verdict, with the fixes to make first if the store is not ready.
+    - name: Budget check
+      contains: Whether your daily budget buys enough sales for your order value, or if you should raise it or lead with a cheaper product.
+    - name: Stage 1, 2 and 3
+      contains: Each campaign with its funnel role, daily budget and bid strategy, plus the signal that starts the next stage.
+    - name: Settings for every campaign
+      contains: The goal, conversion, location and network settings each campaign needs.
+    - name: Bid ladder
+      contains: The steps from manual bids to Target ROAS, with the conversions needed at each step.
+    - name: Brand share
+      contains: How much of your monthly Google spend should go to branded campaigns.
+    - name: Where sources differ
+      contains: The choice made where advice disagrees, and why.
+    - name: Checks missed
+      contains: Any check that failed, or none.
 
 how_it_works:
   - title: Checks you are ready

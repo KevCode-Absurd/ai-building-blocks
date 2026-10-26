@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 name: "Carousel ad writer"
 new_slug: carousel-ad-writer
-summary: "Paste your selling idea. Get 2 to 6 carousel cards that earn each swipe, plus ad text."
+summary: "Turn one selling idea into a carousel ad writer result: 2 to 6 cards that each earn the swipe, plus the text above the ad."
 job: make-image-ads
 
 headline: "Carousel ad writer"
@@ -17,6 +17,10 @@ when:
   - You have one idea that needs a few steps to land, such as how something works or why the old way fails.
   - Your carousels show the product on every card and nobody swipes.
   - You want to break an offer or a set of reasons into parts people can follow.
+not_for:
+  - "You want to show a list of products: build that carousel by hand in Meta Ads Manager, one product per card."
+  - "Your idea fits one picture: use a one-image ad skill or ask your AI for a single image ad instead."
+  - "You have no brand facts yet, such as customer words or your offer: gather those first, or the cards will be thin."
 
 you_give:
   - The selling idea, or an existing script to split into cards
@@ -34,6 +38,21 @@ how_to_use:
   - Paste your brand facts, especially real customer phrases and the doubt that stops people buying.
   - Say how many cards you want, or leave it at five.
   - In Ads Manager, switch off the option that shows the best-performing cards first, so the order holds.
+output_sample:
+  input:
+    - Your selling idea, or a script to split into cards
+    - "Your brand facts: customer words, the doubt that stops buying, product use, claims, proof, offer and guarantee"
+    - How many cards you want, 2 to 6 (optional)
+    - How much the buyer already knows (optional)
+  output:
+    - name: Card blocks
+      contains: One block per card with its job, words, picture note, headline and the gap that leads to the next card.
+    - name: Text above the ad
+      contains: Short text with the same claim as card 1 and a first sentence of 125 characters or fewer.
+    - name: Sources / missing
+      contains: Where every number, quote and term came from, and any facts marked as missing.
+    - name: Checks missed
+      contains: One line for each of the seven checks the result could not meet, or none.
 
 how_it_works:
   - title: Checks the fit

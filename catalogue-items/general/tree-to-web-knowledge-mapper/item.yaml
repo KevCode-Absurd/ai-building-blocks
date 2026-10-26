@@ -1,6 +1,6 @@
 slug: tree-to-web-knowledge-mapper
 name: "Tree to web knowledge mapper"
-summary: "Describe how your team stores what it knows. Get a map of things and links, and a plan to link them."
+summary: "Stop losing what your team knows. Get a map of your documents, people and tools, how they link, and a plan to link them."
 category: general
 type: skill
 role: make
@@ -15,3 +15,5 @@ version: 1.0.0
 minds: [tim-berners-lee]
 credits:
   - {title: "Information Management: A Proposal", by: "Tim Berners-Lee (CERN, 1989 and 1990)", url: "https://www.w3.org/History/1989/proposal.html", used: "Knowledge lost to turnover, why folder trees force one home on each item, a web of typed links, read-only views of old systems, private notes on top and starting plain"}
+next: [company-wiki-planner, operations-manual-writer, weekly-time-audit-planner]
+needs_mode: manual

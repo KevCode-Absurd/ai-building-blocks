@@ -22,12 +22,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Run the council.** Use the skill `advisory-council`. Gives the decision, the strongest dissent, what would change the call and the first steps.
+1. **Run the council.** Use the skill `advisory-council`. Gives the decision, the strongest dissent, what would change the call and the first steps. Hands the council brief to steps 2 and 3.
 
 Pause here: Turn the brief's decision and first three steps into a dated plan with an owner for each step.
 
-2. **Try to break the plan.** Use the skill `failure-first-plan-check`. Tests the plan you wrote from the council's brief and fixes the gaps.
-3. **Write the commit note.** Use the skill `disagree-and-commit-note-writer`. Give it the plan from the steps before. Takes the checked plan and the council's dissent and writes the note that closes the debate.
+2. **Try to break the plan.** Use the skill `failure-first-plan-check`. Give it the council brief from the steps before. Tests the plan you wrote from the council's brief, starting with the council's strongest dissent, and fixes the gaps. Hands the checked plan to step 3.
+3. **Write the commit note.** Use the skill `disagree-and-commit-note-writer`. Give it the plan and the council brief from the steps before. Takes the checked plan from step 2 and the council's dissent from step 1 and writes the note that closes the debate.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

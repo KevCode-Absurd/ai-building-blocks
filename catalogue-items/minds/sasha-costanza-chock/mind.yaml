@@ -15,6 +15,32 @@ use_cases:
   - "Write a fair collaboration agreement for a design volunteer project"
   - "Turn a consultation meeting into a documented decision process"
   - "Decide whether a proposed new app should be built at all"
+not_for:
+  - "Your plan is fixed and you only need a delivery schedule: use a project manager, not a mind that reopens who decides."
+  - "You need a legal, privacy or security check on a tool or survey: ask a legal or data adviser, because this mind will only flag what to check."
+  - "You want a bold look for a logo or poster: use Aaron Draplin, who works on graphic identity rather than who holds power."
+output_sample:
+  input:
+    - The project or service you are planning, in a few lines
+    - Who it will affect most
+    - What the group already does about this issue
+    - Which decisions you think are still open (optional)
+    - Who is paying, volunteering or sponsoring (optional)
+  output:
+    - name: Affected people and existing work
+      contains: Who the project changes life for, and what local groups or habits already deal with the issue.
+    - name: Benefits and burdens
+      contains: Who gains, who does the extra work and who carries the risks, listed separately.
+    - name: Decision register
+      contains: Each open choice, who can change it, and where authority cannot be shared.
+    - name: Participation terms
+      contains: Access, permissions, credit, pay and what people get back for their time.
+    - name: Proposed response
+      contains: A community-chosen option, which may be supporting what exists, changing the plan or not building.
+    - name: Ownership and upkeep
+      contains: Who holds the result, maintains it and answers when something goes wrong.
+    - name: Gaps
+      contains: What the record does not show, stated plainly rather than guessed.
 seats:
   - {seat: "Community power and design accountability", asks: "Who is most affected, and what can they actually decide?"}
   - {seat: "Benefits, burdens and ownership", asks: "Who gains, who carries the work, and who controls the result?"}

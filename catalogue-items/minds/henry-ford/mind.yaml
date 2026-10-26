@@ -15,6 +15,29 @@ use_cases:
   - "Work out whether you can pay your team more because the work produces more"
   - "Break a big job into small, clear steps anyone can learn"
   - "Decide whether to keep improving one product or launch more versions"
+not_for:
+  - "You want a plan for a luxury or special-order brand: use the Bernard Arnault mind, who works on craft and long-term brand care."
+  - "You need to value a company or check an investment: use the Aswath Damodaran mind, who pairs a business story with the numbers."
+  - "You want advice on groups of people, religion or politics: this mind will not give it, so ask a trusted person instead."
+output_sample:
+  input:
+    - Your product, menu or service list
+    - The steps in your work, in order, with times if you have them
+    - What it costs to make or deliver, and your current price
+    - Your current pay setup (optional)
+  output:
+    - name: Who it serves
+      contains: A plain statement of who the business serves, which sets what stays and what goes.
+    - name: Cut list
+      contains: Parts, features or steps that could come out, with the reason each is not needed.
+    - name: Workflow change
+      contains: A new layout of the steps so the work comes to the worker, with wasted motion removed.
+    - name: Price and pay plan
+      contains: How savings could lower the price and raise pay, with the costs to count first.
+    - name: Trial and measure
+      contains: One small job to try the change on, and the count, time or cost to measure.
+    - name: Cautions
+      contains: "Where his record warns you: a market that has moved, and treating staff as parts."
 seats:
   - {seat: "Production and cost", asks: "What would this cost if we made it the simplest possible way, and who gets the savings?"}
   - {seat: "Simplicity", asks: "Which parts of this could we remove without the customer missing them?"}

@@ -25,6 +25,7 @@ How to start:
 
 ## What you need
 - **The figures** (required): each with what it measures, the period and the source.
+- **A spreadsheet check** (optional): if the figures come from a checked workbook, use only the ones the check marked as passed, and leave out any it could not verify.
 - **Who will hear them** (required): and what they already know.
 - **Where you will use them** (optional): slide, speech, email or report.
 

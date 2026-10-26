@@ -1,0 +1,146 @@
+name: FinOps Engineer agent
+summary: Find where your cloud bill goes and what to cut safely. Get spend by owner, ranked savings with their risk, and what to commit to last.
+headline: FinOps Engineer agent
+subhead: Paste your cloud cost report for AWS, Google Cloud or Azure, with a line on what must stay reliable. It shows who owns the spend, ranks the waste to remove and the savings to take, and says what to buy in advance last. You get a plan with owners, not live changes.
+job: ship-and-host
+thinking: high
+thinking_why: It must tie each saving to its risk and its owner, and never invent a figure. Use a model that reasons about trade-offs, does the maths from your data and says when data is missing.
+explain: |-
+  A cloud bill is hard to cut because nobody can say who owns each line. Shutting something off to save money can also cause an outage that costs more than you saved. And buying a one or three year discount plan too early locks you into spend you may not need.
+
+  This agent works in a set order. First it checks who owns the spend, using accounts and tags. Then it looks for waste, such as idle servers, unattached disks and test systems left on at night. Then it checks whether servers are bigger than they need to be, always keeping the headroom your reliability goals need. Then it looks at hidden costs, such as data moving between regions, NAT gateway traffic and old snapshots. Only after that does it look at commitments, which are discounts you get for promising to use a set amount over one to three years. It sizes them to your steady baseline, never to a system you are about to move.
+
+  Every saving gets a dollar figure from your data, a risk and an owner. It never makes up a price or a typical saving. It writes a plan only. It cannot read your account or change a resource.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your AWS, Google Cloud or Azure bill is rising and nobody can say why.
+  - Finance asks which team or product each cloud dollar belongs to.
+  - You are about to buy reserved instances or a savings plan and want to check it is safe to commit.
+  - You want to see cloud cost per customer or per order, not only the total.
+not_for:
+  - You want to review your monthly cloud and AI bills as a routine. Use the Monthly cloud and AI bill keeper.
+  - You want to cap what your app spends on AI model calls. Use the Autonomous Optimization Architect agent.
+  - You want real-time cost alerts or budget changes made for you. Use your cloud provider's own cost tools. This agent writes a plan only.
+  - You want reliability goals and alerts for a service. Use the SRE agent.
+you_give:
+  - Your cost report, such as an AWS Cost and Usage Report, a Google Cloud billing export or an Azure Cost Management export, for 30 to 90 days.
+  - Your accounts or projects, and how they map to teams, if you know.
+  - Which systems are production and which are test or dev.
+  - The reliability you must keep, such as "the app must handle a traffic spike" or "no slower than today".
+  - Moves you plan, such as a migration or a rebuild in the next year (optional)
+  - Customer or order counts for the same months, for cost per customer (optional)
+you_get:
+  - Spend by team and service, with the share nobody owns.
+  - A ranked list of waste to remove, each with a dollar figure from your data and an owner.
+  - Savings from resizing and scheduling, each with its risk to reliability.
+  - A list of hidden costs, such as data transfer and old snapshots.
+  - A commitment plan sized to your steady baseline, plus alerts and a unit cost view if you gave counts.
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Export your cost report as a CSV or paste the top lines by service and account. Remove account IDs you do not want to share. Do not paste keys or passwords.
+  - Type "Review this cloud spend. Ownership first, then waste, then resizing, then commitments last. Use only my numbers. Mark every assumption."
+  - Check the ownership table first. If a big share has no owner, fix that before you cut anything.
+  - Review each saving with the team that owns the system. Skip any that removes headroom you need.
+  - Make changes in the cloud console or code yourself. The AI cannot read your account or change anything.
+how_it_works:
+  - title: Check who owns the spend
+    text: It maps cost to team, service and environment and shows how much has no owner.
+  - title: Find the waste
+    text: It lists idle and forgotten resources and non-production systems left on, ranked by dollars.
+  - title: Check the size of systems
+    text: It looks for systems bigger than their usage needs, and keeps the headroom your reliability goals require.
+  - title: Trace hidden costs
+    text: It looks at data moved between zones and regions, NAT gateway traffic, storage tiers and old snapshots.
+  - title: Plan commitments last
+    text: It sizes discount commitments to your steady baseline, and holds off on any system that is about to change.
+  - title: Set owners and alerts
+    text: It sends each saving to the team that controls it, and plans spend alerts and a cost per customer view.
+output_shape: |-
+  SCOPE
+    Cloud <AWS, Google Cloud or Azure> | Period <dates> | Total spend <from your data> | Reliability limits <list> | Assumptions <list>
+
+  OWNERSHIP
+    <team or service> | <spend> | <share of total> | Unowned spend <amount and share>
+
+  WASTE LIST
+    <resource or group> | <monthly cost from your data> | <action> | <risk> | <owner>
+
+  RESIZE AND SCHEDULE
+    <system> | <current use vs size> | <change> | <saving> | <headroom kept> | <owner>
+
+  HIDDEN COSTS
+    <line item> | <cost> | <cause> | <fix to test>
+
+  COMMITMENT PLAN
+    <system> | <steady baseline> | <stable for the term? yes, no or unknown> | <proposed coverage> | <what to confirm>
+
+  UNIT COST AND ALERTS
+    <measure> | <value, if counts were given> | <alert when>
+
+  GAPS AND CHECKS
+    <missing data> | <why it matters> | <who decides>
+output_sample:
+  input:
+    - Your cost report for 30 to 90 days
+    - How accounts, projects or tags map to teams
+    - Which systems are production and which are test
+    - The reliability you must keep, and planned moves (optional)
+  prerequisites:
+    - Someone with access to your cloud billing pages to export the report and check each finding.
+  output:
+    - name: Scope
+      contains: The cloud, the period, total spend from your data, your reliability limits and assumptions.
+    - name: Ownership
+      contains: Spend by team and service, and the share that has no owner.
+    - name: Waste list
+      contains: Idle and forgotten resources, each with a cost from your data, a risk and an owner.
+    - name: Resize and schedule
+      contains: Systems to shrink or switch off at night, with the saving and the headroom kept.
+    - name: Hidden costs
+      contains: Data transfer, NAT, storage and snapshot costs, with the cause and a fix to test.
+    - name: Commitment plan
+      contains: Which steady workloads could take a discount commitment, and what to confirm first.
+    - name: Unit cost and alerts
+      contains: Cost per customer or order if you gave counts, and when to alert on spend.
+    - name: Gaps and checks
+      contains: Missing data and open choices, with who should decide each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A model that can read a CSV makes the maths easier. Check each total against your own report. No web access is needed.
+  inputs:
+    - A cost export grouped by service and account, plus a tag report.
+    - A list of what runs in production and what is test.
+    - Your team's roadmap for the year, so it does not suggest commitments for systems you will move.
+terms:
+  - term: FinOps
+    meaning: Managing cloud spend so each dollar is tied to a team, a service and a result.
+  - term: Tag
+    meaning: A label on a cloud resource, such as team or environment, that lets you sort the bill.
+  - term: Rightsizing
+    meaning: Moving a system to a smaller or cheaper size that still meets its needs.
+  - term: Egress
+    meaning: Data leaving your cloud, or moving between zones or regions. Providers often charge for it.
+  - term: Reserved instance or savings plan
+    meaning: A discount you get by promising to use a set amount of cloud for one to three years.
+  - term: Unit cost
+    meaning: Cloud cost per customer, per order or per request.
+tweaks:
+  - what: Focus
+    how: Name the biggest line first, such as "compute" or "storage". It puts the largest savings at the top.
+  - what: Caution
+    how: Say which systems must never lose headroom. Those stay out of the resize list.
+  - what: Period
+    how: Give at least 30 days, and 90 if you can. A short window can mistake a spike for your normal use.
+improve:
+  - Keep each review with the savings you took and what changed on the next bill.
+  - Rerun it each quarter, and before any commitment purchase.
+  - Pair it with the SRE agent to check the headroom you keep, and with the Monthly cloud and AI bill keeper for a monthly check.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

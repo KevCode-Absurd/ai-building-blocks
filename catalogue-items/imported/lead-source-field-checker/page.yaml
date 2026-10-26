@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It needs exact rules and careful reading of the match rates.
 new_slug: lead-source-field-checker
 name: Lead source field checker
-summary: Give it your CRM leads and ad history. Learn if your lead source fields
-  are good enough to link leads to ads.
+summary: Check if your CRM lead source fields can be matched to your ad history. You get a clear verdict for each field, with no customer data kept.
 job: track-numbers
 headline: Lead source field checker
-subhead: A yes or no on whether your CRM's source fields are good enough to link
-  leads to the ads that brought them. Give it CRM rows and ad history rows, plus
-  a binding that says which CRM fields join to which ad account, platform and
-  entity type.
+subhead: A yes or no on whether your CRM's source fields are good enough to link leads to the ads that brought them. Give it CRM rows and ad history rows, plus a binding that says which CRM fields join to which ad account, platform and entity type.
 explain: |
   A yes or no on whether your CRM's source fields are good enough to link leads to the ads that brought them. Give it CRM rows and ad history rows, plus a binding that says which CRM fields join to which ad account, platform and entity type. Joins are never guessed from a bare ID.
 
@@ -19,6 +15,10 @@ when:
   - You want to know if campaign IDs in your CRM match your ad platform.
   - You are deciding whether to fix tracking before building attribution.
   - Your agency says attribution is hard and you want evidence.
+not_for:
+  - "You have no ad history export from your ad platform: get that export first, because this check needs it to match against."
+  - "You want proof that an ad caused a sale: this only checks whether fields can link leads to ads, so use a proper attribution test."
+  - "You cannot run code or share files with your AI: ask a developer or analyst to run the check for you."
 you_give:
   - CRM lead rows with source fields
   - Ad history rows
@@ -30,8 +30,27 @@ you_get:
   - Gaps in what is captured
   - Counts you can share without customer data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Node code and read your CRM export.
+  - Install Node on your computer, or use an AI tool that can run Node code.
+  - Download the skill folder and put your CRM export and ad history export inside it.
+  - Write a binding for each CRM to ad join. Use your real field names, and name the ad account, platform and entity type.
+  - Set your pass marks in config.thresholds. The skill will not guess them.
+  - Run node scripts/run-checks.mjs, or ask your AI to run it.
+  - Read the verdict for each field. Fix tracking where a field is rejected or missing before you build attribution.
+output_sample:
+  input:
+    - Your CRM lead rows, with the source fields you want to check
+    - Your ad history rows from your ad platform
+    - A binding that says which CRM fields join to which ad account, platform and entity type
+    - Your pass marks for each check (thresholds)
+  prerequisites:
+    - An AI that can run Node code and read files
+    - A binding written for every CRM to ad join, with real field names
+  output:
+    - name: Verdict per field
+      contains: "One result for each CRM field: propose, corroborate, reject, capture missing or pre-window."
+    - name: Fill and match rates
+      contains: How often each field is filled in and how often its values match your ad history keys.
+    - name: Shape summaries
+      contains: The pattern of values in each field, shown as counts and shapes, not raw values.
+    - name: Diagnostic codes
+      contains: Short stable codes that explain why each field got its verdict.

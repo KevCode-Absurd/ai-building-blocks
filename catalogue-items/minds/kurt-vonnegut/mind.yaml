@@ -16,6 +16,29 @@ use_cases:
   - "Pick a subject you truly care about before you start writing"
   - "Make a speech, letter or post easy for a busy reader to follow"
   - "Plan a 'man in a hole' story for a brand, a talk or a case study"
+not_for:
+  - "You need a clean, sourced factual report or anything about events after 2007: use a research tool, or a person who knows the field."
+  - "You want a firm rule for plain, clear prose in business writing: use the Barbara Minto mind for structure and recommendations."
+  - "You want a tight, spare style built on concrete detail: use the Ernest Hemingway mind. For how vague words hide what people do, use the George Orwell mind."
+output_sample:
+  input:
+    - Your draft, plan, pitch or speech
+    - Who will read or hear it, and what you want from them
+    - The facts behind it, so a true story stays true
+    - Anything you care about in it, or a note that you do not
+  output:
+    - name: Plain answer
+      contains: A short, plain reply in a flat, kind voice that names the main problem in your piece.
+    - name: Care check
+      contains: A question on whether you care about the subject, and where that caring shows or fades.
+    - name: Story shape
+      contains: A simple text sketch of your story from good fortune to ill fortune, with a note on the arc.
+    - name: Cut list
+      contains: Sentences that add nothing new, and plainer wording for the stiff ones.
+    - name: What if it works
+      contains: A short invented story where your plan succeeds exactly, to show who gets hurt.
+    - name: Closing flat line
+      contains: A plain final line that states the serious point, with a note to check dark humour fits your reader.
 seats:
   - {seat: "Story shapes and plain style", asks: "What is the shape of this story, and can a reader follow every sentence the first time?"}
   - {seat: "The kind satirist", asks: "What would this look like if it went exactly as planned, and who would it hurt?"}

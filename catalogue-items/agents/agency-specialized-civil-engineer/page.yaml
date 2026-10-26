@@ -1,0 +1,143 @@
+name: Civil Engineer agent
+summary: Get a second look at a structural or foundation idea. See the code, loads and checks to run, and the questions for your licensed engineer.
+headline: Civil Engineer agent
+subhead: Describe a structure or foundation, where it will be built and the loads and ground data you have. It names the building codes that likely apply and lays out the checks. You get a design basis, a check list with working steps and the points a licensed engineer must confirm.
+job: research-topics
+thinking: high
+thinking_why: It follows codes and loads step by step, and one wrong factor can make a design unsafe. Use a model that reasons well, and check every number it gives.
+explain: |-
+  A structural design check (also called a preliminary structural review or design basis) goes wrong when the first step is skipped. The first step is to name the code, its edition and the local rules before any number is worked out. Two codes can look alike and still differ on load factors, so mixing them gives a wrong answer that looks right.
+
+  This agent starts with that step. It asks where the project is, which code and edition the authority uses and what the owner specifies. If those clash, it says so in writing and picks the stricter rule until the authority says otherwise. It then writes down the assumptions it is making, such as soil strength, how loads travel and how parts connect. It never invents soil values. If you have no ground report, the result says so.
+
+  Next it lays out the checks in order. Strength first, then how much the member bends or settles in use. It shows working steps you can follow, with units, so a person can repeat each one. It covers beams, columns, slabs, footings, retaining walls and the paperwork around them, such as a code compliance table and a drawing and spec checklist.
+
+  It is not an engineer and does not replace one. It cannot see your site, and AI arithmetic can be wrong. Anything that carries load or must pass a building authority needs a licensed engineer to check and sign it.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have a sketch for an extension, deck, retaining wall or small building and want to know which codes and checks apply before you hire an engineer.
+  - An engineer sent calculations or drawings and you want to understand them and the questions to ask.
+  - The owner names one building code and the local authority requires another, and you need to see where they clash.
+  - You need a checklist of what a structural drawing set and specification should include before a permit submission.
+not_for:
+  - You need stamped drawings, a permit or code sign-off. Only a licensed engineer can give these. Take this agent's lists and questions to them.
+  - You want to decide if an existing building is safe, or work on a damaged or failing structure. Call a licensed engineer to the site now.
+  - You want the cost of a build or a list of materials. Ask a quantity surveyor or contractor.
+  - You want to know which engineering or drawing software to buy. Use the Tool Evaluator agent.
+you_give:
+  - The project in a few lines, including what it is, its size and where it will be built (country, region and town)
+  - The code the owner or authority names, and its edition, if you know them (optional)
+  - The loads, spans and materials you have, such as floor use, snow or wind data and steel or concrete grades
+  - A soil or ground report, or a note that none exists
+  - Sketches, drawings or calculations to review (optional)
+you_get:
+  - A design basis listing the codes, editions, loads and assumptions the check rests on
+  - A list of strength and bending checks with working steps and units, each marked as a rough check
+  - A note on any clash between the owner's code and the local code
+  - A code compliance table of each item and what proof is still missing
+  - A list of questions for a licensed engineer, sorted by what matters most
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe the project and the place. Add the code names if you know them, the loads you have, and the ground report or a line saying you have none.
+  - Attach sketches or calculations if you have them. No code or web access is needed.
+  - Type "Start with the design basis. Show every step with units. Mark anything you assumed."
+  - Check every number with a calculator or engineering software. Look up each code clause it cites in the code itself.
+  - Send the lists and the questions to a licensed engineer before you build or file anything.
+how_it_works:
+  - title: Fix the basis
+    text: It confirms the place, the codes and editions, and the owner's requirements. Missing parts are asked once, then marked MISSING.
+  - title: Flag clashes
+    text: It lists where the owner's code and the local code differ and defaults to the stricter rule until the authority decides.
+  - title: State the assumptions
+    text: It writes down the loads, soil values, load paths and connections it is assuming. It never makes up soil data.
+  - title: Lay out the checks
+    text: It sets out strength checks first, then bending and settlement checks, with steps and units you can repeat.
+  - title: Build the compliance table
+    text: Each item gets the rule it falls under and the proof still missing.
+  - title: Hand back the questions
+    text: It sorts open points into what a licensed engineer must confirm and what you can settle yourself.
+output_shape: |-
+  DESIGN BASIS
+    Project <what and where> | Authority <name or MISSING> | Codes and editions <list> | Owner's requirements <list>
+
+  CODE CLASHES
+    <item> | <owner's rule> | <local rule> | <rule used until confirmed>
+
+  ASSUMPTIONS
+    <loads, soil values, load paths, connections> | <source or "assumed">
+
+  CHECKS
+    <member or foundation> | <check: strength, bending or settlement> | <working steps with units> | <rough result> | <marked: rough check>
+
+  CODE COMPLIANCE TABLE
+    <item> | <code and clause> | <status: met, not met, unknown> | <proof still needed>
+
+  DOCUMENT CHECKLIST
+    <drawing or spec item> | <present or missing>
+
+  QUESTIONS FOR YOUR LICENSED ENGINEER
+    <point> | <what they should confirm> | <priority>
+
+  CHECKS STILL NEEDED
+    <item>
+output_sample:
+  input:
+    - The project, its size and where it will be built
+    - The codes and editions named by the owner and the authority (optional)
+    - The loads, spans, materials and ground report you have
+    - Sketches, drawings or calculations to review (optional)
+  prerequisites:
+    - A licensed engineer to confirm and sign anything that carries load or goes to an authority
+  output:
+    - name: Design basis
+      contains: The place, authority, codes, editions and owner requirements the check rests on.
+    - name: Code clashes
+      contains: Where the owner's code and the local code differ, and which rule is used until confirmed.
+    - name: Assumptions
+      contains: Every load, soil value and load path assumed, each marked with its source or "assumed".
+    - name: Checks
+      contains: Strength, bending and settlement checks with working steps and units, marked as rough.
+    - name: Code compliance table
+      contains: Each item with its code clause, status and the proof still needed.
+    - name: Questions for your licensed engineer
+      contains: Open points ranked by importance, with what the engineer should confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your sketches, a ground report or an engineer's calculations next to your description.
+  inputs:
+    - The soil or ground investigation report.
+    - The exact code edition and any local amendments from your building authority.
+    - The engineer's own calculations, if you want them explained.
+terms:
+  - term: Design basis
+    meaning: A written list of the codes, loads and assumptions a design rests on.
+  - term: Strength check
+    meaning: A check that a part will not break under the heaviest load the code expects. Engineers call it the ultimate limit state.
+  - term: Serviceability check
+    meaning: A check that a part will not bend, shake or settle too much in normal use.
+  - term: Authority having jurisdiction
+    meaning: The local body that approves building plans, such as a city building department.
+  - term: Load path
+    meaning: The route a load takes through a building, from the roof or floor down to the ground.
+tweaks:
+  - what: One item at a time
+    how: Ask about one member or one foundation per run. A whole building in one go gives vague checks.
+  - what: Place
+    how: Name the town and the authority. Codes and their local changes differ by place.
+  - what: Units
+    how: Say if you want metric or imperial. Ask it to show units at every step.
+improve:
+  - Keep the design basis and the assumptions list with the project file, and update them when the ground report or loads change.
+  - Add the engineer's replies to the questions list, then rerun the check against their answers.
+  - Ask it to explain each line of an engineer's calculation so you can follow the reasoning.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -1,6 +1,6 @@
 new_slug: photo-product-gallery
 name: "Turn real photos into a product page gallery"
-summary: "Give it your product photos and facts. You get about 8 checked images that each answer a shopper question."
+summary: "Turn your real product photos into a product page image gallery. You get about 8 checked images, each one answering a question shoppers ask."
 job: product-photos
 
 headline: "Turn real photos into a product page gallery"
@@ -15,6 +15,10 @@ when:
   - Your product page gallery is mostly packshots and shoppers keep asking the same questions.
   - You're launching a product and need a full set of gallery images.
   - You've tried AI product images and the pack came out wrong.
+not_for:
+  - "You have no real photos of the product yet: take photos first, or make wordless images with the Product image ad prompt writer."
+  - "You want one ad image, not a full gallery: use the Product image ad prompt writer."
+  - "You only want to check images you already have: use the Product page image checker."
 
 you_give:
   - Real photos of the exact product, as many angles as you have, ideally one in use
@@ -33,6 +37,29 @@ how_to_use:
   - Have your inputs ready. Your product photos (full size, the exact variant you sell), your product facts with amounts, your brand file and, if you can, your reviews.
   - It works step by step and saves each result. Read the truth sheet's missing photos first. Each one is an image it can't make honestly.
   - Approve the plan and every word on it when it asks, then approve the first two images. Nothing gets made before you say yes, and the words don't change after.
+output_sample:
+  input:
+    - Real photos of the exact product, from as many angles as you have
+    - Your product facts, with amounts, size and what is in the box
+    - Your brand file, or your website link
+    - Your customer reviews (optional)
+  prerequisites:
+    - An AI that can save files and follow a folder of steps
+    - An image tool, or a chat that can make images, to produce the pictures
+    - Your brand brain from the Brand profile builder (recommended)
+  output:
+    - name: Truth sheet
+      contains: Shape, colours, printed words, how it opens, what is in the box, what never to draw, and missing photos.
+    - name: Gallery plan
+      contains: A score for each shopper question, about 8 image cards with every word and its source, and a list of gaps.
+    - name: Doubts
+      contains: Your reviews sorted into five fears, with the biggest one placed in image slot 2.
+    - name: Gallery images
+      contains: Each image in its own shapes, named in upload order, with alt text.
+    - name: Image check report
+      contains: 13 checks in three passes, with a Stop, Fix or Polish rating and one fix per fault.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 
 how_it_works:
   - title: Records the real product

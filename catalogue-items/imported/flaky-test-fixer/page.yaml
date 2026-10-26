@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts the cause by a set list, then fixes it.
 new_slug: flaky-test-fixer
 name: Flaky test fixer
-summary: Give it a failing or flaky Playwright test. Get the cause found and the
-  fix made.
+summary: Find why your Playwright test is flaky and get it fixed. Give it a failing test and it finds the cause, fixes it and proves it stays stable.
 job: test-and-fix-code
 headline: Flaky test fixer
-subhead: A failing or flaky Playwright test gets its cause found and fixed,
-  instead of being retried until it passes. You end with a test you can trust in
-  CI.
+subhead: A failing or flaky Playwright test gets its cause found and fixed, instead of being retried until it passes. You end with a test you can trust in CI.
 explain: |
   A failing or flaky Playwright test gets its cause found and fixed, instead of being retried until it passes. You end with a test you can trust in CI.
 
@@ -18,6 +15,10 @@ when:
   - A test fails now and then with no code change.
   - A test only fails when the whole suite runs.
   - You are tempted to add retries and want the real fix instead.
+not_for:
+  - "Your test fails every time because of a real bug in your app: fix the app code first, or ask a developer."
+  - "You use unit tests or another test tool, not Playwright: use your own test runner's debug output, or ask a developer."
+  - "You only want the test to go green fast: this skill fixes the cause, so for a quick stopgap add a retry in your CI settings."
 you_give:
   - Test file path, test name or a description of the failure
   - Access to your Playwright project
@@ -28,8 +29,23 @@ you_get:
   - Fix applied to the test
   - Repeat-run results showing it is stable
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code and read your project files.
+output_sample:
+  input:
+    - Your test file path, test name or a short description of the failure
+    - Access to your Playwright project
+    - Your CI logs or traces (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Playwright already set up in your project
+  output:
+    - name: Root cause
+      contains: "The cause sorted into one of four groups: timing, test isolation, environment or infrastructure, with the specific issue named."
+    - name: Fix applied
+      contains: The change made to the test, shown as a diff.
+    - name: Verification result
+      contains: The result of repeat runs of the test, to show whether it is now stable.
+    - name: Prevention recommendation
+      contains: Suggested config and habits to stop the same flake coming back, such as tracing on first retry.

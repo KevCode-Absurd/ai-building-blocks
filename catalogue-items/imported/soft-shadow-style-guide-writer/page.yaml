@@ -2,34 +2,115 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: soft-shadow-style-guide-writer
 name: Soft shadow style guide writer
-summary: Describe your product. Get a style guide for a soft, pressed-in look,
-  with shadow rules and contrast fixes.
+summary: Get a soft shadow style guide for a raised and pressed-in look, with shadow values and contrast fixes so people can still read it.
 job: design-work
 headline: Soft shadow style guide writer
-subhead: A style guide for a soft, pressed-in interface, where buttons and cards
-  look gently raised or sunk into the page. You describe your product, and the
-  skill writes the shadow rules and the contrast fixes that keep it usable.
+subhead: Describe your product and your users. Your AI writes a style guide for a soft, pressed-in look, where buttons and cards seem gently raised or sunk into one calm surface. You get shadow and colour values, state rules, and contrast fixes that keep it readable.
 explain: |
-  A style guide for a soft, pressed-in interface, where buttons and cards look gently raised or sunk into the page. You describe your product, and the skill writes the shadow rules and the contrast fixes that keep it usable.
+  A soft shadow style guide, also called neumorphism, is a set of written rules for an interface where parts look pushed out of or pressed into one surface. Everything shares one colour, and depth comes from a light shadow on one side and a dark shadow on the other. This skill writes those rules so every button and card gets the same depth.
 
-  This look uses one calm surface colour with light and dark shadows to suggest depth. Its weakness is low contrast, so the guide sets clear rules for text, icons and focus outlines to meet accessibility standards. It defines colour tokens, a type scale, a compact spacing scale, hit area sizes and how raised, pressed and disabled states differ. It also covers empty, loading and error states, and notes where to avoid the style.
+  The risk with this look is that it is quiet. Parts blend into the page, and people cannot tell what to press. So your AI does two jobs. It writes shadow values a developer can copy: how far, how blurred and what colour, for raised, pressed and flat. And it checks contrast for text, icons and focus outlines, then adds a border, a colour or a label where the shadow alone is too faint.
+
+  You also get rules for hit area sizes, and for empty, loading and error views. The guide says where to avoid the style, such as small text, dense tables and anything people must find fast.
 when:
-  - You like the soft embossed look but worry about readability.
-  - You need shadow values your developers can copy.
-  - Users cannot tell which elements are clickable.
-  - You want a consistent look across a dashboard.
+  - You like the soft embossed look but worry that people will not see what is clickable.
+  - Your developers need shadow values they can copy, not a picture.
+  - A dashboard or settings screen looks flat and every control seems the same.
+  - A reviewer says your soft screens fail an accessibility check.
+not_for:
+  - "You want bright, puffy, colourful shapes: use the Soft clay style guide writer."
+  - "You want see-through panels and blur: use the Frosted glass style guide writer."
+  - "You want crisp black outlines and sharp edges: use the Bold-border style guide writer."
 you_give:
-  - A description of your product
-  - Base surface and accent colours (optional)
-  - Your audience
-  - Any accessibility needs
+  - A short description of your product, in a sentence or two
+  - Who will use it
+  - Base surface and accent colours to keep (optional)
+  - Any accessibility needs, such as low vision users (optional)
 you_get:
-  - A style guide for the soft shadow look
-  - Shadow and colour tokens
-  - Contrast and focus fixes
-  - Rules for pressed, raised and disabled states
+  - A one-line design idea for the soft shadow look
+  - Shadow values for raised, pressed and flat parts
+  - Colour, type and spacing values with names
+  - Contrast and focus fixes, checked with numbers
+  - Rules for pressed, raised, disabled, loading, empty and error states
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill to your AI, or paste the skill text into a new chat.
+  - Paste your product description and who will use it. Add surface and accent colours if you have them.
+  - Read the design idea and the shadow values first. Ask your AI to explain any value you do not follow.
+  - Ask for the contrast ratio of every text, icon and focus outline. Any pair that fails should be fixed in the guide.
+  - Ask your AI where the style should not be used in your product, and keep those parts plain.
+  - Hand the guide to your designer or developer. It writes rules only. It does not draw screens.
+how_it_works:
+  - title: States the design idea
+    text: Writes one sentence for the look as it fits your product, and names the trade between depth and contrast.
+  - title: Sets the surface and shadows
+    text: Picks one base colour and writes shadow values for raised, pressed and flat, as offset, blur and colour.
+  - title: Fixes the contrast
+    text: Works out ratios for text, icons and focus outlines, and adds borders, colour or labels where the shadow is too faint.
+  - title: Writes the state rules
+    text: Describes how raised, pressed, hover, focus, disabled, loading, empty and error look and behave.
+  - title: Sets hit areas and edge cases
+    text: Gives minimum sizes for touch and click, and covers long labels and overflow.
+  - title: Ends with a checklist
+    text: Lists where to avoid the style and what a reviewer should tick before it ships.
+output_shape: |
+  DESIGN IDEA
+  <one sentence, with the depth versus contrast trade>
+
+  CONTEXT AND GOALS
+  <product, users, what the look must do>
+
+  FOUNDATIONS
+  Surface: <value>   Accent: <value>
+  Shadows: raised <offsets, blur, colours> / pressed <...> / flat <...>
+  Type: <fonts and size steps>   Spacing: <steps>
+
+  CONTRAST AND FOCUS FIXES
+  <pair>: <ratio> - <fix>
+
+  COMPONENT RULES
+  <part>: pieces, versions, states, hit area
+
+  ACCESSIBILITY
+  <rules you can test>
+
+  WHERE NOT TO USE IT
+  <parts and screens that stay plain>
+
+  QA CHECKLIST
+  <items a reviewer can tick>
+output_sample:
+  input:
+    - A short description of your product
+    - Who will use it
+    - Surface and accent colours to keep (optional)
+    - Any accessibility needs (optional)
+  prerequisites:
+    - An AI chat you can paste the skill into
+  output:
+    - name: Design idea
+      contains: One sentence on how the soft shadow look fits your product and where it trades contrast for depth.
+    - name: Shadow and colour tokens
+      contains: Raised, pressed and flat shadows as offset, blur and colour, plus surface and accent values.
+    - name: Contrast and focus fixes
+      contains: The ratio for each text, icon and outline pair, and the change made to any that fail.
+    - name: Component rules
+      contains: Pieces, versions, states and minimum hit areas for each part.
+    - name: Where not to use it
+      contains: The parts and screens that should stay plain so people can find them fast.
+    - name: QA checklist
+      contains: A short list a reviewer can tick before the design ships.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It is text in, text out. No code or files are needed.
+  inputs:
+    - A screenshot of your current screens, so the guide can name what to fix
+    - Your brand colours, so the base surface suits your brand
+    - A note on who struggles to read your screens today
+terms:
+  - term: Neumorphism
+    meaning: A soft style where parts look pressed out of, or into, one surface using light and dark shadows.
+  - term: Token
+    meaning: A named value, such as a colour or a shadow, that is used the same way everywhere.
+  - term: Contrast ratio
+    meaning: A number that says how easy text is to read on its background. WCAG AA asks for at least 4.5 to 1 for normal text.

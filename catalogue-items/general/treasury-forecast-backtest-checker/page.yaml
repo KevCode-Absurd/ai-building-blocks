@@ -1,55 +1,101 @@
 new_slug: treasury-forecast-backtest-checker
 name: Treasury forecast backtest checker
 headline: Treasury forecast backtest checker
-summary: A signed flow backtest and cumulative cash drift bridge
+summary: "Backtest a cash forecast against what really happened: see each period's miss, the average error and why closing cash ended above or below plan."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A signed flow backtest and cumulative cash drift bridge. Share a frozen three-period net-cash forecast, same-period actual net flows, common opening cash and source cutoffs.
+subhead: "Give it a cash forecast that was frozen before the period, the actual net cash flow for each period and the opening cash. It works out each period's miss, the average miss and the total bias. It then explains the gap in closing cash. You get a short table and a list of what could not be checked."
 explain: |-
-  A signed flow backtest and cumulative cash drift bridge.
+  A cash forecast is only useful if it is close enough to act on. A backtest checks that by setting an old forecast beside what really happened. This treasury forecast backtest does it for each period in your forecast.
 
-  Treasury forecast controls. Illustrative figures only, in USD unless labelled otherwise. This is a focused schedule with explicit period and timing assumptions. Rebuild from actual dated sources before use; the example is not a full financial forecast.
+  It uses signed errors: actual minus forecast. A plus means more cash came in than planned. A minus means less. It also shows the average miss in currency, so a plus in one month does not hide a minus in another. And it ties the pieces together. Closing actual cash minus closing forecast cash must equal the sum of the signed errors.
+
+  Two rules keep it honest. The forecast must be the version frozen before the actuals were known. A forecast you revised later is a different test. And a few periods show how the numbers reconcile, not how reliable your forecasting is. The skill gives no confidence range and no accuracy percent.
 when:
-  - You need a signed flow backtest and cumulative cash drift bridge.
-  - You work on treasury forecast controls and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - "You want to know how far last quarter's cash forecast was from what happened."
+  - "A lender or board asks how good your forecasting is."
+  - "Closing cash came in far from plan and you want to see which period caused it."
+  - "You are choosing how big a cash buffer to keep and want evidence of your usual miss."
+not_for:
+  - "You want a statistical test of forecast quality or a confidence range. A few periods cannot give one."
+  - "You want to know if you can pay debts that fall due: use the Debt maturity funding ladder."
+  - "You want to know how much cash is really free to use: use the Restricted cash availability checker."
+  - "You want to set a cash buffer from your results: use the Lean-year cash rules writer."
 you_give:
-  - A frozen three-period net-cash forecast, same-period actual net flows, common opening cash and source cutoffs.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The cash forecast as it stood before the period, one net cash number per period. It must be the frozen version, not a revised one"
+  - "The actual net cash flow for each period, from your bank statements or ledger"
+  - "The opening cash balance, the same for forecast and actual"
+  - "The cutoff for each period, and whether payments are dated when paid or when cleared"
+  - "The currency and the scale"
+  - "The date the forecast was made (optional)"
 you_get:
-  - A signed flow backtest and cumulative cash drift bridge.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The signed error for each period: actual minus forecast"
+  - "The average miss in currency and the total bias"
+  - "Forecast closing cash and actual closing cash, built from the same opening cash"
+  - "The drift between them, tied to the sum of the errors"
+  - "A list of missing figures and checks that could not run"
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Open the skill in Claude, ChatGPT or Gemini, or paste it in as your first message. Add it to your AI if you want to reuse it."
+  - "Paste the forecast for each period, the actuals for each period and the opening cash. Say when the forecast was made and where each actual came from."
+  - "Confirm the forecast was frozen. If you revised it after seeing actuals, say so. The AI then labels the result a different test."
+  - "Read the errors and the drift line. The drift must equal the total of the errors."
+  - "Use the usual miss in your next forecast and cash buffer. Ask for a rerun if you fix a cutoff."
 how_it_works:
-  - title: 1. Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions
-    text: Create a dated source map of the stated balances, transaction IDs, currency, units, period boundaries and contractual definitions. Stop affected lines on missing evidence.
-  - title: 2. Freeze the forecast version before actual results, align settlement cutoffs and map each forecast period to matching actual net cash
-    text: Freeze the forecast version before actual results, align settlement cutoffs and map each forecast period to matching actual net cash.
-  - title: 3. Compute signed actual-minus-forecast errors and absolute errors; use currency MAE when actual net flow is zero or negative
-    text: Compute signed actual-minus-forecast errors and absolute errors; use currency MAE when actual net flow is zero or negative.
-  - title: 4. Rebuild forecast and actual closing cash from the same opening balance and reconcile ending drift to the sum of flow errors
-    text: Rebuild forecast and actual closing cash from the same opening balance and reconcile ending drift to the sum of flow errors.
+  - title: 1. Maps the sources
+    text: Writes the period boundaries, the currency, the units and where each number came from. Lines with no source wait.
+  - title: 2. Checks the forecast is frozen
+    text: Confirms the forecast version came before the actuals, lines up the cutoffs and pairs each forecast period with its actual.
+  - title: 3. Works out the misses
+    text: Actual minus forecast for each period, then the absolute miss. It reports the average miss in currency, not as a percent.
+  - title: 4. Rebuilds closing cash
+    text: Builds forecast and actual closing cash from the same opening balance and ties the drift to the sum of the errors.
 output_shape: |-
-  A signed flow backtest and cumulative cash drift bridge.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SOURCES AND CUTOFFS
+  <forecast version and date> | <actuals source> | <period boundaries> | <currency and scale>
+
+  PERIODS
+  <period> | Forecast: <amount> | Actual: <amount> | Error (actual - forecast): <amount> | Absolute error: <amount>
+
+  SUMMARY
+  Average absolute error: <amount> | Total bias: <sum of errors>
+
+  CLOSING CASH
+  Opening: <amount> | Forecast close: <amount> | Actual close: <amount> | Drift: <actual - forecast>
+  Drift equals total bias: <yes or no>
+
+  WHAT THIS DOES NOT SHOW
+  <few periods, revised forecast, anything else that limits the result>
+
+  MISSING
+  <figures not supplied>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+output_sample:
+  input:
+    - "The frozen cash forecast, one net cash figure per period"
+    - "The actual net cash flow for the same periods, and the opening cash"
+    - "The cutoff dates, the currency and the scale"
+  prerequisites:
+    - "The forecast file as it was before the period, and bank statements or ledger actuals"
+    - "An AI that can make files, only if you want a spreadsheet (optional)"
+  output:
+    - {name: "Sources and cutoffs", contains: "The forecast version and date, where actuals came from, and the period boundaries."}
+    - {name: "Periods", contains: "Forecast, actual, signed error and absolute error for each period."}
+    - {name: "Summary", contains: "The average absolute error in currency and the total bias."}
+    - {name: "Closing cash", contains: "Forecast and actual closing cash from one opening balance, and the drift tied to the errors."}
+    - {name: "What this does not show", contains: "Why a few periods cannot prove how reliable the forecast is."}
+    - {name: "MISSING and CHECKS MISSED", contains: "What you did not supply, and every check that failed or could not run."}
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Number of periods
+    how: Paste as many periods as you have. The chat version handles any number. The bundled script takes three.
+  - what: Revised forecasts
+    how: Give each revision with its date, and ask for each as its own test so the versions are not mixed.
+  - what: Cutoffs
+    how: Say whether payments count when paid or when cleared. A different cutoff moves cash between periods.
   - what: Acceptance
-    how: Every material input has a source location, date, unit, sign and approval status.
+    how: Actual close minus forecast close equals the sum of the signed errors, and no missing figure becomes zero.
 judge:
   - Every material input has a source location, date, unit, sign and approval status.
   - Keep actual records, contractual inputs and scenarios separate; a missing value never becomes zero.
@@ -60,19 +106,27 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Keep each forecast file with its date, so you can always find the frozen version."
+  - "Run the same backtest every quarter and keep the results to see if your misses shrink."
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Any good chat AI
+      why: The sums are short, so the AI can show the table in the chat.
+    - name: A file-capable AI or a spreadsheet app
+      why: Needed only if you want an editable workbook with a checks tab.
+    - name: Node.js 20 or later (optional)
+      why: Runs the bundled script that repeats the sums for three periods, as a second check.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The frozen forecast file with its date
+    - Bank statements or ledger totals for the same periods
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Backtest
+    meaning: Checking an old forecast against what actually happened.
+  - term: Signed error
+    meaning: Actual minus forecast. A plus means more cash than planned. A minus means less.
+  - term: Average absolute error
+    meaning: The typical miss in currency, with plus and minus signs ignored so they cannot cancel out.
+  - term: Drift
+    meaning: Actual closing cash minus forecast closing cash.
+  - term: Frozen forecast
+    meaning: The forecast as it stood before any actual results were known.

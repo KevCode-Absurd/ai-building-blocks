@@ -1,0 +1,143 @@
+name: Statistician agent
+summary: Test a claim or plan a study. Get the right design, sample size, assumptions and an honest read of what your numbers can and cannot prove.
+headline: Statistician agent
+subhead: Give it a claim with its numbers, or a question you want to test. It finds the weakest link, or designs the study with a sample size worked out before you collect data. You get the result as an estimate and a range, with a plain bottom line.
+job: track-numbers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Numbers sound sure of themselves. "Users of the new feature stay longer, so it works." But the people who chose the feature may be the keen ones, and they would have stayed anyway. This statistics agent asks how the number was made before it asks what the number means.
+
+  For a claim, it walks a chain: what was asked, what was measured, who is in the data, what it was compared with, how it was computed and how easily chance could explain it. It names the weakest link. It says what the data can support, what it cannot, and what would change the answer. It will not let a link between two things pass as a cause without naming the other stories that fit.
+
+  For a new test, it turns a loose question into one you can answer. It picks the design, sets the main outcome and the analysis in advance and works out how many people or days you need to see an effect worth caring about. It reports results as a size and a range, not a bare "significant". A small effect can be significant with enough data, and a real one can be missed with too little.
+
+  A chat AI can do the sums for simple cases, and it shows the working so you can check it. For a final analysis of raw data or a high-stakes call, use a statistician or run the numbers in a tool such as R, Python or a spreadsheet. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience and success claims are role language, not results measured by AI Blocks.
+when:
+  - Someone shows you a chart or a stat, such as "this change raised sign-ups", and you doubt it.
+  - You plan an A/B test and need to know how many visitors or days it needs.
+  - You have survey or sales numbers and need to know what they can and cannot prove.
+  - You must pick between a trial, a before and after check and a survey to answer a question.
+not_for:
+  - "You want the final analysis of raw data for a medical, legal or money decision: use a qualified statistician."
+  - "You have a finished store A/B test and want a quick ship or stop call: use the Test result trust checker."
+  - "You want to log tests over time and what you learned: use the Experiment Tracker agent or the Experiment readout desk."
+  - "You want to check a machine learning model: use the Model QA Specialist agent."
+  - "You want to make a chart or a spreadsheet model from raw rows: ask your AI for that directly, or use a spreadsheet tool."
+you_give:
+  - The claim or question, in plain words, such as "Do users of the new feature stay longer?"
+  - What was measured, in whom and compared with what.
+  - Your numbers. Paste sample sizes, averages, ranges, p-values or a small data table.
+  - The decision it feeds and the smallest effect that would matter to you, such as 2 points.
+  - What you can control, such as whether you can pick groups at random, and your limits on time and people (optional).
+you_get:
+  - The question named as describing, linking or causing, since the right method depends on it.
+  - A review of the claim, with the weakest link named, and the other stories that could explain it.
+  - For a new study, the design, the main outcome, the analysis plan and the sample size, with the assumptions shown.
+  - A result report with the estimate, the range, the comparison, the assumptions and the limits.
+  - A bottom line in plain words that says how sure to be and what would change it.
+  - The checks still needed, such as data to collect or a tool to run.
+how_to_use:
+  - Download the pack. Add it to your AI as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - "State the claim or question first. Then paste your numbers and say how they were collected. Ask: Review this claim. Do not invent numbers."
+  - Check the table of what you gave it. Correct anything it got wrong before you read the verdict.
+  - For a new study, give the usual rate today and the smallest change that matters. Check the sample size with an online calculator or a tool such as R or Python.
+  - Take the checks it lists back to your data. Paste the new numbers and ask for an updated read.
+  - Save the plan before you collect data, so you cannot change the analysis later to fit the result.
+how_it_works:
+  - title: Clarify the question
+    text: It decides if the question describes something, links two things or asks what causes what. This sets the method.
+  - title: Walk the evidence chain
+    text: It checks the measurement, the sample, the comparison, how the number was made and how likely chance is. It names the weakest link.
+  - title: Name the other stories
+    text: It lists the confounders and biases that could produce the same pattern, such as self-selection or a cut-off picked after the fact.
+  - title: Design or check the study
+    text: For a new test, it picks the design and sets the main outcome and the analysis in advance. It works out the sample size for the smallest effect that matters.
+  - title: Report size and range
+    text: It gives the effect in units that mean something, with a range, and states the assumptions and what was checked.
+  - title: Say what to do
+    text: It gives a bottom line with the right level of confidence, and says what would overturn it.
+output_shape: |-
+  QUESTION TYPE
+    <describing, linking or causing> | Claim restated <testable form>
+
+  EVIDENCE CHAIN
+    Measurement <how and how well> | Sample <who is in it, who is missing>
+    Comparison <against what> | Analysis <how the number was made>
+    Chance and bias <how easily could it be produced> | Weakest link <name it>
+
+  OTHER STORIES
+    <confounder or bias> | Why it fits <one line>
+
+  STUDY DESIGN
+    Design <choice and why> | Main outcome <one measure> | Analysis plan <set in advance>
+    Sample size <number> | Assumptions <baseline rate, smallest effect, power, error rate>
+
+  RESULT REPORT
+    Estimate <effect in real units> | Range <interval> | Compared with <baseline>
+    Assumptions <list and which were checked> | Limits <what this cannot say>
+
+  BOTTOM LINE
+    <one sentence> | Confidence <how sure> | Would change if <condition> | Checks still needed <list>
+output_sample:
+  input:
+    - The claim or question, in plain words
+    - What was measured, in whom and compared with what
+    - Your numbers, such as sample sizes, averages or a small table
+    - The decision it feeds and the smallest effect that would matter
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+    - A calculator, spreadsheet, R or Python, to check the sums for an important call
+  output:
+    - name: Question type
+      contains: Whether you are describing, linking or testing a cause, and the claim restated so you can test it.
+    - name: Evidence chain
+      contains: The measurement, sample, comparison, analysis and chance check, with the weakest link named.
+    - name: Other stories
+      contains: The biases and hidden causes that could produce the same numbers.
+    - name: Study design
+      contains: The design, the main outcome, the plan set in advance and the sample size with its assumptions.
+    - name: Result report
+      contains: The effect in real units with a range, the assumptions and what the data cannot say.
+    - name: Bottom line
+      contains: A plain call, how sure to be, what would change it and the checks still needed.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Audience
+    how: Say who reads the result, such as a manager or a researcher, so it uses the right words.
+  - what: Mode
+    how: Ask for "review a claim" or "design a study" so it does only one.
+  - what: Method
+    how: Name a method you prefer, such as a simple before and after comparison, and ask it to check that it fits.
+improve:
+  - Keep each plan and result in one file with the date. Paste the plan back before you look at new data, to keep the analysis honest.
+terms:
+  - term: Confounder
+    meaning: A hidden third thing that affects both what you changed and what you measured.
+  - term: Sample size
+    meaning: How many people, orders or days you need in a test to see an effect of the size you care about.
+  - term: Confidence interval
+    meaning: A range of values that the data fits well. A wide range means a weak result.
+  - term: p-value
+    meaning: How surprising your result would be if there were no real effect. It does not say how big or important the effect is.
+  - term: Power
+    meaning: The chance that a test sees a real effect of the size you care about.
+  - term: Selection bias
+    meaning: When the people in your data are not like the people you want to know about.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: They can review a claim and plan a study from what you paste, and show the sums so you can check them.
+    - name: Claude Code or Codex
+      why: They can run the real numbers on your data file in R or Python, if you allow it.
+  inputs:
+    - The raw numbers behind the claim, not only the summary.
+    - How the groups were chosen, such as who opted in and who was picked at random.

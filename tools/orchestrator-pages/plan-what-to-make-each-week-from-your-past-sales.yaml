@@ -1,6 +1,6 @@
 new_slug: plan-what-to-make-each-week-from-your-past-sales
 name: Plan what to make each week from your past sales
-summary: Give it past sales and your capacity. Get a forecast, a weekly make plan and a meeting agenda.
+summary: Plan what to make each week from your past sales. Give it sales history and your weekly capacity. Get a forecast, a make plan and a meeting agenda.
 job: plan-supply-chain
 thinking: high
 thinking_why: It runs four skills in a row, and the forecast feeds every later step. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You make, bake, sew or pack your own products and set the batch by feel.
   - A busy season is coming and you want to know which weeks you cannot keep up.
   - Sales, the shop floor and the money side each hold a different number and never meet.
+not_for:
+  - "You make to order and have no sales history: plan from your booked orders alone, in a simple spreadsheet."
+  - "You want a price or minimum order quantity from a supplier: ask the supplier, or use the Factory price-break negotiator once you have your plan."
+  - "You only need one number, such as next month's sales: ask your AI for a simple forecast and skip the four steps."
 you_give:
   - Past sales by product and by week or month, ideally two years
   - What you can make in a week, in units, hours or people
@@ -30,6 +34,26 @@ how_to_use:
   - Paste your sales history first. Say if a past stockout or sale distorted a month, so the forecast does not copy it.
   - Give your real weekly capacity. A guess here makes every plan after it wrong.
   - Check the forecast and the gap list yourself before you act on the make plan.
+output_sample:
+  input:
+    - Your past sales by product and by week or month, ideally two years
+    - What you can make in a week, in units, hours or people
+    - Stock on hand and orders already booked
+    - Who joins your monthly planning meeting (optional)
+  prerequisites:
+    - An AI that can read a spreadsheet or pasted table
+    - The handoff pack, a zip with HANDOFF.md and the skill files, given to your AI
+  output:
+    - name: "Step 1: Forecast"
+      contains: The sales pattern found, the method chosen, a forecast by period and how far off it was on held-back months.
+    - name: "Step 2: Capacity check"
+      contains: Your capacity, the periods where demand beats it, the slowest step and ways to close each gap.
+    - name: "Step 3: Weekly make plan"
+      contains: A quantity for each week with stock after, near weeks fixed and far weeks open.
+    - name: "Step 4: Monthly meeting"
+      contains: An agenda with the gaps to settle, a decision and owner for each, and next month's rhythm.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Forecast demand
     text: Reads your sales history, picks a method to match the pattern, tests it on months it did not see and gives a forecast with its likely miss.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It fills a fixed template with exact steps and checks.
 new_slug: on-call-runbook-writer
 name: On-call runbook writer
-summary: Describe a service or process. Get a step-by-step runbook that anyone
-  on call can follow under pressure.
+summary: Write an on-call runbook for your service. You get numbered steps, checks, rollback and who to call, so anyone on call can fix it fast.
 job: document-work
 headline: On-call runbook writer
-subhead: A runbook that a tired person can follow at 3am without asking anyone.
-  You describe a service or a process and get plain, numbered steps with the
-  checks and fixes written out.
+subhead: A runbook that a tired person can follow at 3am without asking anyone. You describe a service or a process and get plain, numbered steps with the checks and fixes written out.
 explain: |
   A runbook that a tired person can follow at 3am without asking anyone. You describe a service or a process and get plain, numbered steps with the checks and fixes written out.
 
@@ -18,18 +15,49 @@ when:
   - An incident exposed that your recovery steps live in someone's head.
   - You are setting up a new service and want a runbook before launch.
   - Your old runbook is long and nobody reads it.
+not_for:
+  - "You need the vendor's own incident steps for a cloud or SaaS product: use the vendor's incident docs."
+  - "Your service has no known failure modes yet: write a post-incident review after the first outage, then build the runbook from it."
+  - "You need the AI to run commands on your systems: use a person with access, because this only writes the document."
 you_give:
   - The service or process to cover
-  - Known failure modes (optional)
-  - Commands, dashboards and contacts
+  - The commands you use, and the access each one needs
+  - Your dashboards and contacts
   - Who is on call
+  - Known failure modes and past incidents (optional)
 you_get:
   - A numbered runbook
   - Troubleshooting steps for common failures
   - Recovery and rollback steps
   - An escalation contact list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code runs and no files are needed.
+  - Describe your service. Add the commands, dashboards, contacts and any past incidents.
+  - Read the runbook. Replace every placeholder host name, ID and phone number with your real ones.
+  - Test it in staging first. Have someone who did not write it follow it step by step.
+  - Fix any step that was unclear, then save it where your on-call team can find it.
+output_sample:
+  input:
+    - The service or process you want covered
+    - The commands you use and the access they need
+    - Your dashboards and who is on call
+    - Known failure modes and past incidents (optional)
+  prerequisites:
+    - A staging copy of your service to test the runbook before real use
+  output:
+    - name: Overview
+      contains: What the service does, why the runbook exists, who owns it, and how serious an outage is.
+    - name: Prerequisites
+      contains: A checklist of the access, tools, network and chat channel needed before you start.
+    - name: Procedure
+      contains: Numbered steps, each with the exact command and what a good result looks like.
+    - name: Verification
+      contains: Checks that confirm the fix worked, such as a health check and clean logs.
+    - name: Rollback
+      contains: Steps to undo the change if the fix fails or causes new problems.
+    - name: Troubleshooting
+      contains: A table of symptoms, likely causes and fixes for the most common failures.
+    - name: Escalation
+      contains: Who to call first and next, and how many minutes to wait before calling.
+    - name: Related runbooks and change log
+      contains: Links to linked runbooks and a dated list of edits.

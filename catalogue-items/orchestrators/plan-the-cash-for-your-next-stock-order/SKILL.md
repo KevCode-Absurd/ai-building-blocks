@@ -44,11 +44,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Landed cost allocator.** Use the skill `landed-cost-allocator`. Starts with what each unit really costs once it is on your shelf.
-2. **Inventory cash planner.** Use the skill `inventory-cash-planner`. Give it the spreadsheet from the steps before. Uses the landed costs to time each order and show the cash it needs.
-3. **Supplier terms and float planner.** Use the skill `supplier-payment-terms-planner`. Give it the spreadsheet from the steps before. Takes the cash gap from the stock plan and shows which supplier terms would close it.
-4. **Growth cash limit checker.** Use the skill `growth-cash-limit-checker`. Give it the spreadsheet and the plan from the steps before. Reads the stock plan and terms to tell you if cash or ads limit your growth.
-5. **Cash lever ranker.** Use the skill `cash-lever-ranker`. Give it the spreadsheet from the steps before. If cash is still the limit, ranks the levers by cash freed, starting from the same cost sheet.
+1. **Landed cost allocator.** Use the skill `landed-cost-allocator`. Starts with what each unit really costs once it is on your shelf. Hands the landed-cost sheet to every step after it.
+2. **Inventory cash planner.** Use the skill `inventory-cash-planner`. Give it the spreadsheet from the steps before. Uses the landed costs from step 1 to time each order and show the cash it needs. Hands step 3 the cash gap, the lowest cash point and the order timing.
+3. **Supplier terms and float planner.** Use the skill `supplier-payment-terms-planner`. Give it the spreadsheet and the plan from the steps before. Uses step 2's cash gap and order timing, plus your landed-cost sheet, to show which supplier terms would close the gap. Hands step 4 the terms and float days.
+4. **Growth cash limit checker.** Use the skill `growth-cash-limit-checker`. Give it the spreadsheet and the plan from the steps before. Reads the stock plan and terms to tell you if cash or ads limit your growth. Hands step 5 the verdict and the cash gap.
+5. **Cash lever ranker.** Use the skill `cash-lever-ranker`. Give it the spreadsheet and the audit report from the steps before. If cash is still the limit, ranks the levers by cash freed, starting from the same cost sheet and step 4's verdict and cash gap. This is the final report.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -46,7 +46,7 @@ This skill runs on its own. If something marked required is missing, ask once, i
 
 ## Steps
 1. **Stop-early check.** Most stores with one core product need no architecture. If that is the case, say so and stop. Do not invent a problem.
-2. **Budget gate.** The five rules assume you can pay for an ad launch. Separate brands cost separate ad budgets, sites and email lists. A store with under a few thousand dollars a month in ads may realistically only afford a store name, and a store with under two staff and a single ad budget should lean to one master brand. Treat those two figures as a starting point to adjust, not a rule from a book. Say so and apply the "small budget" side of rule 3.
+2. **Budget gate.** The five rules assume you can pay for an ad launch. Separate brands cost separate ad budgets, sites and email lists. A store with under a few thousand dollars a month in ads may realistically only afford a store name, and a store with under two staff and a single ad budget should lean to one master brand. Treat those two figures as a starting point to adjust, not a rule from a book. If the owner gives their own limit, use theirs. Say which figure you used and apply the "small budget" side of rule 3 when the budget is under it.
 3. **Run the five rules for the new product.** Give it its own name when expected volume is large, when there is no strong competition yet, when it has a big ad budget, when it is a breakthrough, and when it is bought off the shelf (self-serve). Use the store name when volume is small, the field is crowded, the budget is small, the product is a commodity, or a person sells it. Write the answer to each rule beside the owner's fact, then state which way the rules lean.
 4. **Shopping-list test.** Write the brand name alone on a shopping list and ask what product someone would bring back. If the answer is more than one thing, the name is already too diffuse.
 5. **Bartender test.** Ordering the brand name should get one clear thing. If you need a number or an adjective to get the premium version ("12", "Plus", "Pro"), the extension hurts the base product.
@@ -86,12 +86,13 @@ Same category: <...>
 Stretch: <...>
 
 CALL: <own name | store name with descriptor | store name only>
-STRUCTURE: <monolithic | endorsed | pluralistic>, because <...>
+STRUCTURE: <one master brand (monolithic) | parent with endorsed brands | separate brands (pluralistic)>, because <...>
 DIAGRAM: <parent> > <brand> > <range>
 NAMING RULE: <one rule for future products>
 OLD BRAND NOTE: <how to keep one meaning>
 KEEP / MERGE / STOP: <...>
 REVIEW: <repeat orders at about 6 and 18 months, adjust>
+SOURCE NOTE: <the book case studies are from the 1970s, 80s and 2012; only the logic carries over, never the numbers>
 CHECK WITH A LAWYER: trademark ownership across entities
 CHECKS MISSED: <none, or list>
 ```
@@ -115,12 +116,15 @@ Before you hand it back, check each of these and fix any that fail.
 - The shopping-list, bartender and teeter-totter results are written out.
 - There is one naming rule.
 - No case-study number is presented as a benchmark.
+- The SOURCE NOTE line is present, even when every input is MISSING.
 - The legal note and the trademark and domain note are present.
 
 ## If something is missing
 - No brand description: `MISSING: what the brand stands for in customers' words`. Ask once.
 - No ad budget: `MISSING: ad budget`, and apply the small-budget side of rule 3, saying it is an assumption.
 - No price or volume for the new product: `MISSING: price and expected volume`, and mark rules 1 and 3 not run.
+- No stores or ranges listed beyond one: say the stop-early check cannot be settled, ask once for the list, and if it is not given, write `MISSING: list of stores and ranges` and give only a provisional call.
+- Everything missing: still hand back the full layout with each line marked `MISSING:`, a provisional call from the small-budget side, one naming rule, the SOURCE NOTE and the lawyer note.
 
 ## Avoid
 - Inventing a structure problem for a one-product store.

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set spacing pattern over your dates.
 new_slug: revision-schedule-planner
 name: Revision schedule planner
-summary: List your topics and dates. Get a spaced revision schedule that brings
-  each topic back at the right gaps.
+summary: Plan a revision schedule for your topics and dates. You get a week-by-week table that brings each topic back at spaced gaps.
 job: teach-and-train
 headline: Revision schedule planner
-subhead: A week-by-week revision plan that brings each topic back at gaps chosen
-  to stop it fading from memory. You get new teaching and review slots in one
-  table.
+subhead: A week-by-week revision plan that brings each topic back at gaps chosen to stop it fading from memory. You get new teaching and review slots in one table.
 explain: |
   A week-by-week revision plan that brings each topic back at gaps chosen to stop it fading from memory. You get new teaching and review slots in one table.
 
@@ -18,6 +15,10 @@ when:
   - An exam is in six weeks and you have a long topic list.
   - Students forget early units before the test.
   - You need to show how revision is spaced across the year.
+not_for:
+  - "You need a one-off lesson or a short quiz with no later date: use a single retrieval quiz instead."
+  - "You want the review questions or activities written for you in full: ask your AI for a retrieval quiz on each topic."
+  - "You have no topic list or dates yet: first write your topic list and term dates, then come back."
 you_give:
   - A list of topics
   - The teaching period or dates
@@ -30,7 +31,25 @@ you_get:
   - The reasoning behind each gap
   - A final review plan before the assessment
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down your topics, your term dates and how many lessons you have each week.
+  - Add the assessment date and your hardest topics if you know them.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste your list and dates below the instructions and send them.
+  - Check the table covers every topic and that each review comes after the topic is first taught.
+  - Change any gap that does not fit your timetable, using the spacing note to guide you.
+output_sample:
+  input:
+    - Your list of topics
+    - Your teaching period or term dates
+    - Lessons per week
+    - Assessment date (optional)
+    - Which topics are hardest (optional)
+  output:
+    - name: Week-by-Week Schedule
+      contains: A table showing new teaching and spaced review slots for every topic across your weeks.
+    - name: Spacing Rationale
+      contains: A short note on why each topic comes back at the gaps chosen.
+    - name: Review Activity Suggestions
+      contains: Brief retrieval activities to use in each review slot.
+    - name: Teacher Guidance
+      contains: Tips on how to run the plan and adjust it if the term changes.

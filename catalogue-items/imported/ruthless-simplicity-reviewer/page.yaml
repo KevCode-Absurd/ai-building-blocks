@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies one strong point of view and you decide what to keep.
 new_slug: ruthless-simplicity-reviewer
 name: Ruthless simplicity reviewer
-summary: Share your product or feature. Get a focus and simplicity review, with
-  weak points and features to cut.
+summary: "Get a blunt simplicity review of your product or feature: a score out of ten, what to cut and what to fix, in the style of a Steve Jobs design review."
 job: design-work
 headline: Ruthless simplicity reviewer
-subhead: "A blunt review of your product or feature that says what to cut and
-  what to fix, with a score out of ten. It judges your work the way Steve Jobs
-  ran product reviews: start with the customer, then subtract."
+subhead: "A blunt review of your product or feature that says what to cut and what to fix, with a score out of ten. It judges your work the way Steve Jobs ran product reviews: start with the customer, then subtract."
 explain: |
   A blunt review of your product or feature that says what to cut and what to fix, with a score out of ten. It judges your work the way Steve Jobs ran product reviews: start with the customer, then subtract.
 
@@ -18,6 +15,10 @@ when:
   - You must decide which features to cut from a roadmap.
   - You want an honest answer to whether a feature is good enough to ship.
   - You need to test a first-run flow before launch.
+not_for:
+  - "You need a usability audit of screens and flows: use ux-heuristics, which SKILL.md names for that job."
+  - "You need a pricing, legal or compliance review of a finished product: ask a specialist in that area."
+  - "You only want to polish visual style or small details: use refactoring-ui for visual design or microinteractions for detail polish."
 you_give:
   - A description, screenshots or link to the product or feature
   - Who the customer is
@@ -28,7 +29,27 @@ you_get:
   - A list of what to cut
   - Specific fixes to reach ten
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code running or paid tool is needed.
+  - Paste the full text of SKILL.md into the chat.
+  - "Add your brief: what the product does, who the customer is, and your screenshots or feature list."
+  - Write out the first-run steps yourself. Your AI cannot use the product, so it only knows what you tell it.
+  - Read the score and the failed rows first. Then pick which cuts and fixes you will act on.
+output_sample:
+  input:
+    - A description, screenshots or link to your product or feature
+    - Who the customer is
+    - Your feature list or roadmap (optional)
+    - The first-run steps, written out in your own words
+  prerequisites:
+    - An AI chat tool where you can paste text and attach images
+  output:
+    - name: Score
+      contains: A number from 0 to 10, based on how many of the 7 diagnostic rows your product passes.
+    - name: Failed diagnostic rows
+      contains: The exact checks your product did not pass, such as simplicity, focus or end-to-end experience.
+    - name: Cut list
+      contains: The features, steps or options to remove so only the essential remains.
+    - name: Fix list
+      contains: Specific changes needed to reach 10 out of 10.
+    - name: Verdict
+      contains: A plain call on whether it is ready to ship or needs more work.

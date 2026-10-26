@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It collects a few choices into a style file.
 new_slug: brand-style-setup-wizard
 name: Brand style setup wizard
-summary: Answer ten questions once. Get your colours, fonts and style saved for
-  every page that follows.
+summary: Set up your brand style once with ten questions. Your colours and fonts are saved and reused when you convert Markdown to HTML.
 job: brand-file
 headline: Brand style setup wizard
-subhead: Answer ten questions once. Get your colours, fonts and style saved for
-  every page that follows. Bring answers to ten setup questions. Use the result
-  to plan your next step.
+subhead: Answer ten questions once. Get your colours, fonts and style saved for every page that follows. Bring answers to ten setup questions. Use the result to plan your next step.
 explain: |
   Set your colours, fonts and look once, and have every page you convert afterwards come out in your brand instead of plain defaults.
 
@@ -18,6 +15,10 @@ when:
   - You want one saved style that every converted page and slide deck reuses.
   - You chose a brand colour and need to know if the text on it is readable.
   - One project needs a different look from your usual default.
+not_for:
+  - "You need a full design token system: use a design tool or your existing brand kit."
+  - "You want to design or edit anything that is not Markdown converted to HTML: use your design tool instead."
+  - "You want a full accessibility audit of a page: use a dedicated accessibility checker. This only checks text contrast."
 you_give:
   - Answers to ten setup questions
   - A main brand colour (optional)
@@ -30,7 +31,29 @@ you_get:
   - Style applied to later conversions
   - Project-level overrides
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Make sure Python 3 is installed. You do not need to add anything else.
+  - Download the skill folder and the Markdown to HTML converters. The converters read your saved style.
+  - Run onboard.py in a terminal, or ask an AI that can run code to run it. Answer the ten questions.
+  - For a fast start with default choices, run onboard.py with the --defaults option.
+  - To change one value, use --set, for example --set brand.primary=#FF6B35. Use --reset to start over.
+  - If the contrast check fails, pick a darker main colour and run it again.
+output_sample:
+  input:
+    - Your main brand colour and an accent colour (optional)
+    - Your heading and body fonts from Google Fonts
+    - "Your look: editorial, technical, minimal or playful"
+    - Where to save converted files
+    - Your company name and logo link (optional)
+  prerequisites:
+    - Python 3 on your computer, with no extra installs
+    - An AI that can run code, or a terminal you can type in
+    - The Markdown to HTML converters, so they can read the saved file
+  output:
+    - name: design-system.json
+      contains: Your ten answers, saved once for all later conversions. It can be global or set for one project.
+    - name: derived_palette
+      contains: "Twelve colour values built from your brand: background, surface, border, text, muted text, accent, soft accent, code background, links, success and warning."
+    - name: Contrast check
+      contains: A pass or fail for body text and link colour against the 4.5 to 1 AA level. It will not save on a fail.
+    - name: Project override
+      contains: An optional file in your project folder that replaces the global style for that project only.

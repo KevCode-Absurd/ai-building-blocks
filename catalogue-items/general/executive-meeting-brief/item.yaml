@@ -14,6 +14,7 @@ inputs:
     required: true
 outputs:
   - type: meeting_notes
+  - type: brief
 uses: []
 origin: rebuilt
 version: 1.0.0

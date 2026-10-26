@@ -10,8 +10,13 @@ level: intermediate
 inputs:
   - type: codebase
     required: true
+  - type: source_text
+    required: false
+  - type: design_file
+    required: false
 outputs:
   - type: code_change
+  - type: copy_draft
 uses: []
 origin: imported
 source:

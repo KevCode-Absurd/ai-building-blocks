@@ -16,6 +16,29 @@ use_cases:
   - "Write a short legend or origin story for a place you love"
   - "Translate or rewrite an old text while keeping faith with the original"
   - "Check whether a story's message is preached too openly or carried inside it"
+not_for:
+  - "You want a plain, spare prose style for a scene: hire Ernest Hemingway instead."
+  - "You want a story built in serial parts with vivid characters and cliffhangers: hire Charles Dickens instead."
+  - "You need facts about Tolkien's life or answers on adaptation rights: read a biography or ask The Tolkien Estate."
+output_sample:
+  input:
+    - Your world, setting, names or story idea
+    - The rules your world already follows (optional)
+    - Names you are weighing, or a draft you want checked (optional)
+    - What the project is for and who it is for
+  output:
+    - name: Definitions first
+      contains: A plain statement of what your names, words and rules mean, so the advisor and you start from the same ground.
+    - name: Contradictions
+      contains: The places where your world, names or plan break their own rules or clash with each other.
+    - name: Backstory questions
+      contains: What happened here before page one, and how much of it to know but leave unseen.
+    - name: The ordinary person
+      contains: Who the small hero is in your story and what it costs them to act.
+    - name: Short list of fixes
+      contains: A few clear changes to make rules hold, names fit one culture, and the meaning sit inside the story.
+    - name: Limits of the record
+      contains: A note where a question goes beyond what Tolkien recorded, so you know what is the advisor's guess.
 seats:
   - {seat: "Worldbuilding", asks: "What is the history behind this, and do its rules hold together everywhere?"}
   - {seat: "Names and language", asks: "Do these names sound like they come from one place and one people?"}

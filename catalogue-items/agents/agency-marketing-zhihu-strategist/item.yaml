@@ -1,0 +1,42 @@
+slug: agency-marketing-zhihu-strategist
+name: Zhihu Strategist agent
+summary: "Get a Zhihu plan: topics you can speak on, how to pick questions, answer outlines and a column plan. Bring your field and your proof."
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-zhihu-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-zhihu-strategist.md
+  licence: MIT
+  original_name: Zhihu Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 35f6fd759a67860f92d1ae5245bdf45f5eb524277453a28011899aeb450f5c4c
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Zhihu Strategist
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Zhihu Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-zhihu-strategist.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

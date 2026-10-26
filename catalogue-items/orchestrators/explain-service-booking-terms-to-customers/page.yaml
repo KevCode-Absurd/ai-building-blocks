@@ -1,50 +1,88 @@
 new_slug: explain-service-booking-terms-to-customers
 name: Explain service booking terms to customers
 headline: Explain service booking terms to customers
-summary: Share the source files. Get a booking terms summary, revised explanation and unresolved questions.
+summary: Turn your booking terms into a plain-words explanation for customers. Get a clause-linked summary, a rewritten draft and open questions.
 job: help-customers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A booking terms summary, revised explanation and unresolved questions. Share the full approved booking terms, provider and customer perspectives, current price rules and an existing customer explanation draft. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share your full approved booking terms and the explanation you give customers now. Your AI summarises deposits, cancellations, refunds and notice rules with clause numbers, then rewrites your draft to match. You get a clear explanation and a list of points a lawyer should confirm.
 explain: |-
-  A booking terms summary, revised explanation and unresolved questions.
+  Customers argue about cancellation fees when the terms are long and the explanation is vague. This workflow keeps your explanation tied to the actual terms.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Cancellation, deposit and refund wording preserves the actual contract; proposed wording never changes the terms. Missing tools or evidence stay visible in the final summary.
+  Step one reads your terms and summarises what each side must do: payments, deposits, cancellation, refunds and notice. Each point cites its clause. Step two edits your customer explanation to match, keeping exceptions, dates and anything unclear.
+
+  It never changes what the terms say. If a clause could be read two ways, it goes on a list of questions for you or your lawyer. The AI does not settle it.
 when:
-  - You need a booking terms summary, revised explanation and unresolved questions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A customer disputes a deposit your terms say is not refundable.
+  - You are about to send a booking confirmation and the terms run four pages.
+  - Your terms changed last month and the website still shows the old ones.
+  - A new team member keeps explaining refunds in a different way.
+not_for:
+  - You need new terms written. A lawyer should draft those. This explains terms you already have.
+  - You are reading a contract someone else wants you to sign. Use the Plain-words contract summary on its own.
+  - You want a reply to one refund request. Use the Refund request reply writer.
+  - You are handing over a hotel group booking. Use Prepare a hotel group booking handover.
 you_give:
-  - The full approved booking terms, provider and customer perspectives, current price rules and an existing customer explanation draft.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your full booking terms, pasted or attached
+  - Your current customer explanation, such as an FAQ or confirmation email
+  - Current prices or fee rules the terms refer to
+  - Who the reader is, such as a customer booking a service
+  - The date the terms took effect (optional)
 you_get:
-  - A booking terms summary, revised explanation and unresolved questions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A plain-words summary of duties, payments, cancellation, refunds and notice, with clause numbers
+  - Your customer explanation rewritten to match the terms
+  - A list of unclear points for you or your lawyer
+  - A list of every change made to your draft
+  - A summary and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini.
+  - Paste the full terms first, then your current customer explanation and the price rules.
+  - "Say: follow the workflow file, quote clause numbers and stop if a check fails."
+  - Check the summary against the terms for deposits, cancellation and refunds. These cause most disputes.
+  - Send the unclear points to your lawyer or the person who owns the terms.
+  - Publish the explanation yourself once approved. This does not change your terms.
+output_sample:
+  input:
+    - Your full booking terms
+    - Your current customer explanation
+    - Current price or fee rules
+    - The date the terms took effect (optional)
+  prerequisites:
+    - Terms your business has already approved
+  output:
+    - name: step-01-plain-words-contract-summary.md
+      contains: What each side must do on payment, cancellation, refunds and notice, with clause numbers.
+    - name: step-02-plain-english-editor.md
+      contains: Your customer explanation rewritten to match the terms, with each change listed.
+    - name: Hand-back summary
+      contains: Files saved, unclear clauses for review, checks not run and one next step.
 how_it_works:
   - title: Plain-words contract summary
-    text: Summarize the actual booking duties, payments, cancellation, refund and notice provisions with clause references. Leave unclear legal meaning for the responsible reviewer.
+    text: Summarises payments, deposits, cancellation, refunds and notice, with clause numbers. Hands step 2 the sourced summary and the list of unclear clauses.
   - title: Plain English editor
-    text: Edit the supplied customer explanation draft against the sourced summary, retaining exceptions, effective dates and uncertain terms.
+    text: Edits your customer explanation against that summary, keeping exceptions and dates. Hands back the rewrite and the list of changes.
 output_shape: |-
-  Scope and source coverage
-  A booking terms summary, revised explanation and unresolved questions.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  TERMS <name, version or date>, READER <who>
+
+  SUMMARY OF THE TERMS
+    Payments & deposits   <plain words> [clause <n>]
+    Cancellation          <plain words> [clause <n>]
+    Refunds               <plain words> [clause <n>]
+    Notice                <plain words> [clause <n>]
+  CUSTOMER EXPLANATION    <rewritten text>
+  CHANGES                 <original> -> <edit> | <clause>
+  UNCLEAR POINTS          <clause> | <how it could be read two ways>
+
+  MISSING        <each gap>
+  CHECKS MISSED  <one line each, or none>
+  NEXT STEP      <one action>
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Cancellation, deposit and refund wording preserves the actual contract; proposed wording never changes the terms.
+  - what: Reader
+    how: Say if the reader is a first-time buyer or a returning client. Tone and detail change to match.
+  - what: Format
+    how: Ask for a short FAQ, a confirmation email or a web page. The same facts come back in that shape.
+  - what: Terms version
+    how: Give the effective date. The AI flags any figure or rule that may belong to an older version.
 judge:
   - Cancellation, deposit and refund wording preserves the actual contract; proposed wording never changes the terms.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +95,19 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Each time the terms change, run this again with the new text and keep the clause list.
+  - Add the questions customers ask most to your draft, then check them against the terms.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Any good chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It needs the long terms and your draft in one go.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Past customer emails that argued about fees
+    - Your price list with dates
+    - The booking confirmation your system sends
+    - A lawyer's notes on past disputes
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Clause
+    meaning: One numbered part of a contract.
+  - term: Non-refundable deposit
+    meaning: Money paid at booking that the terms say you will not give back.

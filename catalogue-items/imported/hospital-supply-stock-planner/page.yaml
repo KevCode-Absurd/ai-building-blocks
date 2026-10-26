@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: Stock rules differ by item risk.
 new_slug: hospital-supply-stock-planner
 name: Hospital supply stock planner
-summary: Give it your supply usage. Get par levels, expiry rules and an
-  emergency stock plan.
+summary: Plan hospital supply stock levels with par levels for each item, expiry rules and a crash cart plan. Give it your usage data to cut stockouts and waste.
 job: plan-supply-chain
 headline: Hospital supply stock planner
-subhead: A stock plan for your hospital supply room that cuts both stockouts and
-  waste. It sets a par level for each item, so staff know how much to keep on
-  the shelf and when to reorder.
+subhead: A stock plan for your hospital supply room that cuts both stockouts and waste. It sets a par level for each item, so staff know how much to keep on the shelf and when to reorder.
 explain: |
   A stock plan for your hospital supply room that cuts both stockouts and waste. It sets a par level for each item, so staff know how much to keep on the shelf and when to reorder.
 
   First it asks about your facility, your departments and how you restock today. Then it sorts items by cost and by how critical they are, so a missing glove box and a missing heart valve are not treated alike. It adds first-expired, first-out rules to stop expired stock, sets contents for crash carts, and checks operating room case carts and implant consignment. It also tracks stockout causes so you can fix them.
 when:
-  - You keep running out of items on a ward and staff are borrowing from other
-    units.
+  - You keep running out of items on a ward and staff are borrowing from other units.
   - Expired stock is being thrown away and you want rules to prevent it.
   - You need to set or reset par levels for several departments.
   - You want to check that crash carts and emergency supplies are always ready.
+not_for:
+  - "You only need drug stock rules: ask your pharmacy lead, as this plan covers supplies and not medicines."
+  - "You need clinical sign-off on crash cart or implant contents: use this plan as a draft, then ask your clinical leads to confirm."
+  - "You have no usage records yet: count stock by hand for a few weeks first, then come back."
 you_give:
   - Supply usage by item and department
   - Item costs and expiry dates
@@ -30,7 +30,31 @@ you_get:
   - Crash cart and emergency stock plan
   - Stockout prevention checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Export about 90 days of supply usage by item and department from your stock system into a spreadsheet.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your usage data, then add item costs, expiry dates, bed count and departments. This skill needs no code running.
+  - Answer the questions your AI asks about your facility and how you restock today.
+  - Review the par table before you change any shelf levels. Treat safety stock numbers as starting points.
+  - Ask your pharmacy or clinical leads to confirm crash cart and implant levels before you use them.
+output_sample:
+  input:
+    - Your supply usage by item and department, such as 90 days from your stock system
+    - Item costs and expiry dates
+    - Number of beds and your departments
+    - How you restock today and your pain points (optional)
+  prerequisites:
+    - A spreadsheet or export of your usage data that you can paste into your AI
+    - A clinical or pharmacy lead to review crash cart and implant levels
+  output:
+    - name: Hospital Logistics Optimization Report
+      contains: A short summary of stock held, how well supply is working, suggested changes and the timeline to make them.
+    - name: PAR Level Optimization Results
+      contains: A table by department and item with current par, recommended par, the change and the yearly saving.
+    - name: Inventory Classification
+      contains: Items grouped by cost and how critical they are, with a service target and a way to manage each group.
+    - name: Waste Reduction Opportunities
+      contains: Where waste comes from, such as case cart over-picking and expiry, with an action for each.
+    - name: Implementation Roadmap
+      contains: A phased plan over 12 months, from the top items first to all locations.
+    - name: Key Performance Indicators
+      contains: Measures such as stockout rate and days on hand, each with a baseline, a target and a timeline.

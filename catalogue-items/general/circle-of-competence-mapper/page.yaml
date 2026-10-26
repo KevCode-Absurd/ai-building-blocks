@@ -1,6 +1,6 @@
 new_slug: circle-of-competence-mapper
 name: Circle of competence mapper
-summary: "Describe a topic or decision. Get what you know, half know and don't, and a verdict: in, learn first or pass."
+summary: "Check if you know enough to act. Describe a decision and get each part rated, the edge of what you know, and a verdict: in, learn first or pass."
 job: think-and-decide
 thinking: medium
 thinking_why: It tests your claims honestly against what you can show, which needs care but follows fixed steps.
@@ -14,6 +14,10 @@ when:
   - You are about to commit to something in a field you only partly know.
   - Someone with a good story is asking you to join something you cannot explain.
   - You want to choose which areas to build skill in over the next few years.
+not_for:
+  - "You face a cheap choice you can undo: run a quick test instead of mapping your knowledge."
+  - "You want hard questions to test what you know: use the Real knowledge tester."
+  - "You need facts about a market or field: ask a person who works in it, or read the source reports."
 you_give:
   - The topic or decision
   - What you have done, studied or read about it
@@ -28,6 +32,26 @@ how_to_use:
   - Describe the topic or decision and what you honestly know about it.
   - Back each claim with something you have done, not something you feel.
   - Take the verdict and the edge to "Real knowledge tester" if the answer is learn first.
+output_sample:
+  input:
+    - The topic or decision you are about to act on
+    - What you have done, studied or read about it
+    - Who else is involved and what they know (optional)
+  output:
+    - name: The decision
+      contains: One line on the decision, its field and what a bad outcome would cost.
+    - name: Parts
+      contains: Five to eight parts to understand, each marked known, partly or not, with source and evidence.
+    - name: The edge
+      contains: The nearest part you cannot answer and the first question you could not answer.
+    - name: Aptitude
+      contains: Whether others in this field hold a gift or long training that you lack.
+    - name: Basket
+      contains: A verdict of in, learn first or pass, with the rule and the reason.
+    - name: Grow the circle
+      contains: One narrow area near your edge to build skill in, and the first step.
+    - name: Missing and checks missed
+      contains: Gaps in what you gave, and any of its own checks that failed.
 how_it_works:
   - title: Name the topic
     text: States what you are about to do and in which field.

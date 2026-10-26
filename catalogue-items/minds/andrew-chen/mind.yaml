@@ -16,6 +16,29 @@ use_cases:
   - "Get through the slow months after a launch without restarting from scratch"
   - "Turn a growth problem into a funnel with real numbers at each step"
   - "Find a sharing loop built into the product that rivals can't easily copy"
+not_for:
+  - "You need a clear brand position in buyers' minds: hire April Dunford instead, using the mind named April Dunford."
+  - "You want to grow a brand through broad reach and easy buying: use the Byron Sharp mind, which draws on buying data."
+  - "You need advice on pricing, legal questions or what to invest in: ask a finance or legal adviser, since this mind covers growth frameworks only."
+output_sample:
+  input:
+    - Your funnel counts at each step, from first visit to day 30 (dated)
+    - Your cost per customer in each channel, not the blend
+    - The group of users you think your product needs first
+    - Which side of your business is hardest to win (optional)
+  output:
+    - name: Bottleneck call
+      contains: Says whether the problem is the product, the first visit or growth, and why.
+    - name: Funnel with numbers
+      contains: Your steps from visit to day 30 with a number at each, and the biggest drop.
+    - name: Smallest network and hard side
+      contains: The smallest group that makes your product useful, and which side to win first.
+    - name: Channel risk check
+      contains: How much you lean on paid ads, and a plan for a second channel.
+    - name: Pushback
+      contains: The weak points he would challenge, such as a feature plan that won't fix retention.
+    - name: Next test
+      contains: One focused test to run, plus a note on where his consumer-tech view may not fit.
 seats:
   - {seat: "Network effects and growth", asks: "What's the smallest network where this is useful, and who is on the hard side?"}
   - {seat: "Retention first", asks: "How many of the people who signed up are still here after 30 days?"}

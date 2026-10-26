@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It must build a case and a believable timeline.
 new_slug: mutual-action-plan-builder
 name: Mutual action plan builder
-summary: Name a deal. Get a why-buy case and a dated plan to signature that you
-  can share with the customer.
+summary: Build a mutual action plan for a late-stage deal. Get a business case in your buyer's words and a dated path to signature to share.
 job: sell-and-negotiate
 headline: Mutual action plan builder
-subhead: "Close the gap between a deal that feels close and one that has a
-  signing date. You name the deal and get two documents: a business case in the
-  customer's own words, and a shared plan that works backward from the signature
-  date."
+subhead: "Close the gap between a deal that feels close and one that has a signing date. You name the deal and get two documents: a business case in the customer's own words, and a shared plan that works backward from the signature date."
 explain: |
   Close the gap between a deal that feels close and one that has a signing date. You name the deal and get two documents: a business case in the customer's own words, and a shared plan that works backward from the signature date.
 
@@ -19,6 +15,10 @@ when:
   - Your champion needs a document to sell the deal inside their own company.
   - You suspect the forecast close date is too early.
   - You want to show the buyer who owns each step before signing.
+not_for:
+  - "You have an early-stage deal with no proposal yet: use the deal-advance-gap skill first to find what is missing, then come back."
+  - "You have a renewal with no open approval chain: a short email to your contact with the renewal date and next step is enough."
+  - "You want your AI to guess customer pain with no call notes or emails: gather those first, or the case will be mostly flags."
 you_give:
   - The deal or account name
   - Call notes, proposals or emails about the deal
@@ -30,8 +30,30 @@ you_get:
   - A list of claims that still need proof
   - A draft email to your champion
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Type the deal or account name. Say if you want the business case, the action plan, or both.
+  - Paste your call notes, proposal text or emails. Add your target signature date and your own approval steps if you have them (optional).
+  - If your AI is connected to your CRM, email or docs, it reads them itself. If not, it works from what you paste.
+  - Check the claims to validate list. Confirm those points on your next call before you share the case.
+  - Review the plan dates and the champion email. Then send both. Any CRM change is only proposed until you accept it.
+output_sample:
+  input:
+    - The deal or account name
+    - Call notes, proposals or emails about the deal
+    - Your target signature date (optional)
+    - Your own approval steps and how long they take (optional)
+  prerequisites:
+    - "Optional: a CRM, email and notes tool your AI can read. Without them, paste your deal details and call notes into the chat."
+  output:
+    - name: Business case
+      contains: The customer's current problem, goals, your solution, price against value, cost of waiting and why you, each tied to a call or email.
+    - name: Claims to validate
+      contains: Every point with no customer proof behind it, listed as something to confirm on the next call.
+    - name: Mutual action plan
+      contains: A table working back from signature, with each step, its owner, target date and status.
+    - name: Date warnings
+      contains: Steps whose dates make the close date impossible to meet.
+    - name: CRM suggestions
+      contains: A proposed next step and, if needed, a new close date, shown with evidence before anything changes.
+    - name: Champion email draft
+      contains: A paste-ready note to your main contact sharing the plan and asking them to confirm their owners.

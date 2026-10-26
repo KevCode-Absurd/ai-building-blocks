@@ -2,34 +2,99 @@ thinking: high
 thinking_why: It judges how people lead, which needs care.
 new_slug: manager-quality-review-planner
 name: Manager quality review planner
-summary: Give it your management team. Get skill standards, a 360 feedback form
-  and a plan to support managers who struggle.
+summary: "Plan how to measure and improve manager quality: standards by level, a 360 feedback form with anonymity rules and a support plan."
 job: hire-people
 headline: Manager quality review planner
-subhead: A plan to measure how well your managers manage, and to help the ones
-  who struggle. It links management quality to team health and people leaving.
+subhead: Describe your management team and its levels. It plans a manager quality review. You get standards for each level, a 360 feedback form, a plan to compare scores with your own team data, and a support plan for managers who struggle.
 explain: |
-  A plan to measure how well your managers manage, and to help the ones who struggle. It links management quality to team health and people leaving.
+  A manager quality review shows where management is strong and where teams may be suffering. This skill plans one, from the standards you measure against to the support you give afterward.
 
-  You describe your management team and its levels. The skill writes clear standards for each level, a 360 feedback form with upward questions that surface real issues, and a way to link scores to engagement and attrition data. It then plans support for managers who fall short, with coaching steps and a path for those who do not improve. It adds onboarding for new managers, peer groups and a report format for HR and leaders. It ships with ready prompts you can adapt to your company.
+  It writes standards for each management level. It writes a 360 form with an upward section, so a manager's team can speak up. It sets anonymity rules, such as a minimum number of answers before a result shows. It plans how to compare scores with your own engagement and attrition data, and it says plainly that the scores show patterns, not proof of cause.
+
+  It plans the review. It does not judge a named manager for pay or dismissal. For that, go to HR and an employment adviser.
 when:
-  - Several teams have high turnover and you suspect the manager is the cause.
-  - You need competencies for team leads, managers and directors.
+  - Several teams have high turnover and you suspect the manager is a factor.
+  - You need standards for team leads, managers and directors.
   - You want upward feedback that people will answer honestly.
   - You must plan what happens when a manager does not improve.
+not_for:
+  - "You must decide pay, a promotion or a dismissal for one named manager: take it to HR and an employment adviser."
+  - "One person has a complaint about their manager: use the Workplace conflict mediation guide."
+  - "You want to train managers, not review them: use the Leadership program designer."
+  - "You only want survey questions for staff: use the Employee survey designer."
 you_give:
-  - Your management levels and headcount
-  - Engagement or attrition data (optional)
+  - Your management levels and headcount at each level
   - Your company values
-  - Past feedback methods (optional)
+  - Your country, since privacy rules differ
+  - Engagement or attrition data by team (optional)
+  - How you gather feedback on managers now (optional)
 you_get:
-  - Manager standards by level
-  - A 360 feedback form
-  - A support and intervention plan
-  - A manager onboarding outline
-  - A leadership report layout
+  - Standards for each management level
+  - A 360 feedback form with anonymity rules
+  - A plan to compare scores with your own team data
+  - A support plan for managers who fall short
+  - A new manager onboarding outline and a report layout
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload the skill folder if your tool allows it.
+  - Paste your management levels, headcount, company values and country.
+  - Add engagement or attrition data only if it comes from your own records. Remove names first.
+  - Read the anonymity rules and change the minimum answers to fit your team sizes.
+  - Run the 360 with one team first. Share the report with HR before leaders see it.
+  - Take any step that affects a named person to HR and an employment adviser.
+how_it_works:
+  - title: Write standards
+    text: It describes good management at each level in team results, team health and people growth.
+  - title: Write the 360 form
+    text: It writes rating items and open questions, with an upward section for the team.
+  - title: Set anonymity rules
+    text: It sets a minimum number of answers before results show, and combines small teams.
+  - title: Plan the data link
+    text: It says which columns to export and how to read scores next to engagement and attrition.
+  - title: Plan support
+    text: It writes coaching steps with dates, and ends with a step to take to HR and legal.
+  - title: Plan onboarding and report
+    text: It adds a 90-day new manager outline and a report layout for HR and leaders.
+output_shape: |-
+  Standards by level: <level | team results | team health | people growth>
+  360 form: <rating items | 3 open questions>
+  Anonymity rules: <minimum answers | small teams>
+  Data comparison plan: <what to export | how to read it>
+  Support plan: <step | who | date | what if no progress>
+  New manager onboarding: <90-day outline>
+  Report layout: <sections for HR and leaders>
+output_sample:
+  input:
+    - Your management levels and headcount at each level
+    - Your company values
+    - Your country
+    - Engagement or attrition data by team (optional)
+  output:
+    - name: Standards by level
+      contains: What good looks like for team leads, managers and directors.
+    - name: 360 feedback form
+      contains: Rating items, open questions and an upward section for the manager's team.
+    - name: Anonymity rules
+      contains: The minimum number of answers before any result is shown.
+    - name: Data comparison plan
+      contains: Which of your own numbers to export and how to read them with scores.
+    - name: Support plan
+      contains: Coaching steps with dates, and a step to take to HR and legal.
+    - name: New manager onboarding outline
+      contains: A 90-day plan for people new to managing.
+    - name: Report layout
+      contains: The sections for an HR and leadership report.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI can draft the plan and forms. Collect the 360 answers in a survey tool that protects anonymity.
+  inputs:
+    - Exit and turnover counts by team
+    - Your last engagement survey results
+    - Your performance review form
+terms:
+  - term: 360 feedback
+    meaning: Feedback on one person from their manager, peers and team.
+  - term: Upward feedback
+    meaning: Feedback from a manager's team about the manager.
+  - term: Attrition
+    meaning: People leaving the company.

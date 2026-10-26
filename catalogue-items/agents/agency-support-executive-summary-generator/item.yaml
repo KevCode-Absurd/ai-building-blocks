@@ -1,0 +1,41 @@
+slug: agency-support-executive-summary-generator
+name: Executive summary generator agent
+summary: "Turn a long report into a 325 to 475 word executive summary with findings, impact, ranked actions and owners. Paste your report."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: support/support-executive-summary-generator.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/support/support-executive-summary-generator.md
+  licence: MIT
+  original_name: Executive Summary Generator
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 298891fcf297de5d9b343e9ab9b63864317de63256b15c0c72e6cec172f8f0ff
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Executive Summary Generator
+  - Agency Agents
+  - Support
+credits:
+  - title: Executive Summary Generator
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/support/support-executive-summary-generator.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

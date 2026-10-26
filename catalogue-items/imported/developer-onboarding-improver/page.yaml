@@ -2,35 +2,78 @@ thinking: medium
 thinking_why: It audits each step and ranks fixes.
 new_slug: developer-onboarding-improver
 name: Developer onboarding improver
-summary: Describe your API sign-up path. Get a plan that cuts the time to a
-  developer's first working call.
+summary: Cut the time it takes a new developer to make a first API call. Describe your sign-up path and get a stage-by-stage review with ranked fixes.
 job: build-product
 headline: Developer onboarding improver
-subhead: A plan to cut the time between a developer finding your API and making
-  their first successful call. That one number predicts whether they keep using
-  you.
+subhead: Describe how a developer goes from finding your API to making a first call. It breaks the path into six stages, spots where people get stuck, and ranks the fixes. You get a plan to shorten the time to first API call.
 explain: |
-  A plan to cut the time between a developer finding your API and making their first successful call. That one number predicts whether they keep using you.
+  Developers who cannot make a first API call quickly tend to leave without telling you. This skill improves developer onboarding by looking at that first stretch step by step, from the moment someone lands on your docs.
 
-  The skill breaks the path into six stages: finding the start page, signing up, getting keys, setting up the SDK, running a request and seeing success. It rates your time against benchmarks, from under five minutes to over an hour, and shows where to measure each stage. Then it works on the weak points: simpler sign-up, keys shown up front, a test sandbox, interactive docs and clear error messages. It begins by asking what your developers already know and tools they use.
+  It splits the path into six stages: finding the start page, signing up, getting keys, setting up the SDK, running a request and seeing success. Each stage gets a time estimate and a rating from "excellent" to "failing". The ratings are rules of thumb from the skill's author, not industry data.
+
+  Then it works on the weak spots. Typical fixes are simpler sign-up, keys shown up front, a test sandbox, try-it docs and error messages that tell people what to do next. It starts by asking who your developers are and what tools they use, so the fixes match them.
 when:
   - Developers sign up for your API and never make a call.
-  - Getting an API key takes too many steps or an approval wait.
-  - You do not know how long your own setup takes a new developer.
+  - Getting an API key takes many steps or an approval wait.
+  - You do not know how long setup takes a new developer.
   - Your sandbox or test mode is hard to find or use.
+not_for:
+  - "Your API keys are handed out by a sales team and there is no self-serve sign-up: fix that process first, then come back."
+  - "You need the quickstart page itself written: use the Developer quickstart writer."
+  - "You need reference docs for each endpoint: use the Developer docs writer."
 you_give:
-  - A description of your sign-up and setup steps
+  - Your sign-up and setup steps, in order, from landing page to first call
   - Who your developers are and how skilled they are
-  - Any numbers you have on drop-off (optional)
+  - Numbers on where people drop off (optional)
   - Your current docs or quickstart (optional)
 you_get:
-  - A stage-by-stage time estimate
-  - The biggest points where people get stuck
-  - A ranked list of fixes
-  - Ideas for sandbox, keys and error messages
-  - What to measure going forward
+  - A time estimate and rating for each of the six stages
+  - The three biggest places people get stuck
+  - Up to seven fixes, ranked by impact, with effort for each
+  - Ideas for keys, sandbox and error messages that fit your API
+  - A list of what to measure next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down your path from landing page to first successful call, one line per step. Add your drop-off numbers and quickstart link if you have them.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code, files or paid tools are needed.
+  - Paste your path. Say who your developers are and which tools they use.
+  - Answer any question your AI asks. Any input you skip is marked MISSING, not guessed.
+  - Check each time estimate against your own run. Sign up as a new user in a private window and time it.
+  - Start with the top fix. Then run the Developer quickstart writer if your quickstart needs a rewrite.
+output_sample:
+  input:
+    - Your sign-up and setup steps, in order
+    - Who your developers are and what tools they use
+    - Your drop-off numbers per step (optional)
+    - Your current quickstart (optional)
+  output:
+    - name: Stage table
+      contains: The six stages with a time estimate and a rating for each, from excellent to failing.
+    - name: Where people get stuck
+      contains: The three biggest friction points, each tied to a stage and to what you described.
+    - name: Ranked fixes
+      contains: Up to seven changes, highest impact first, with the stage and effort for each.
+    - name: Auth, sandbox and error-message ideas
+      contains: Changes to keys, test mode and error text that fit your API.
+    - name: What to measure
+      contains: The events to track so your next review uses real numbers.
+    - name: Missing
+      contains: Any input you did not give, and how that limits the plan.
+how_it_works:
+  - title: Ask about your developers
+    text: It asks how skilled your developers are, what tools they use and how urgent their need is.
+  - title: Split the path into six stages
+    text: Discovery, sign-up, keys, setup, first request and success, each timed and rated.
+  - title: Find the friction
+    text: It checks keys, approvals, sandbox access and error messages against common problems.
+  - title: Rank the fixes
+    text: It orders fixes by impact and effort, so you know what to do first.
+  - title: Plan measurement
+    text: It lists the events to track so you can measure the time to first call.
+works_best_with:
+  - Any chat AI. No tools or files are needed.
+  - Pair it with your drop-off numbers from product analytics. They make the ranking stronger.
+  - Run the Developer quickstart writer after it to rewrite the first-call guide.
+terms:
+  - TTFAC: time to first API call. The time from first visit to your first working request.
+  - Sandbox: a test mode where developers try your API without real data or charges.
+  - SDK: a code library that makes your API easier to call.

@@ -2,17 +2,105 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-azure-role-selector
 name: Azure least access role picker
-summary: Describe what an identity must do. Get the narrow Azure role that fits,
-  with reasons.
+summary: Pick the narrowest Azure role for a person, group or app. Get the role, the scope, the CLI command and a Bicep snippet to assign it.
 job: ship-and-host
 headline: Azure least access role picker
-subhead: Describe what an identity must do. Get the narrow Azure role that fits,
-  with reasons. Share your goal and the files you already have. The skill file
-  sets out the steps and the tools needed for this job.
+subhead: Say who needs access and what they must do. It finds the narrowest Azure built-in role that fits, or writes a custom one. You get the scope, the Azure CLI command to assign it and a Bicep snippet, with a note on what the role does not allow.
+explain: |
+  Giving someone Owner or Contributor is easy and often far too much. This Azure role selector finds the smallest role that still does the job, so a mistake or a stolen login can do less harm.
+
+  You describe the identity and the work in plain words, such as a service that must read files in one storage account. It turns that into exact actions, checks whether they are control actions or data actions, and looks up the built-in roles that include them. It then picks the one with the fewest extras and the smallest scope.
+
+  If no built-in role fits, it writes a custom role with only the actions you need. It never runs the assignment. You get the command and the code, and you run them.
+when:
+  - A new app needs to read one storage account and nothing else.
+  - A teammate asks for Contributor on a whole subscription and you want something smaller.
+  - You must give a managed identity access and keep a record of why.
+  - A review found roles that are too broad and you need narrower ones.
+not_for:
+  - You need an Entra ID directory role, such as managing users or groups. Those are not Azure roles.
+  - Access is set by a storage key, a shared access signature or an old Key Vault access policy. Change that setting instead.
+  - You want to check your whole setup against good practice. Use the Azure workload practice reviewer.
+  - You want to check a Bicep file before you deploy it. Use the Bicep deployment preflight checker.
+you_give:
+  - The identity that needs access, such as an app, a group or a person
+  - What it must do, in plain words
+  - The scope: subscription, resource group or one resource
+  - What it must never do (optional)
+  - An AI with the Azure MCP tools connected, and an Azure subscription
+you_get:
+  - The narrowest role that fits, built in or custom
+  - Why it fits and which wider roles were rejected
+  - The scope to use, with a reason
+  - The Azure CLI command to assign it
+  - A Bicep snippet for the same assignment
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Use an AI with the Azure MCP tools connected, such as Claude Code or GitHub Copilot in VS Code. You also need an Azure subscription. Without the tools, the answer is not checked against the live docs, so confirm it on Microsoft Learn.
+  - Paste the skill. Then say who needs access, what they must do and the smallest place it can apply.
+  - Read why the role fits and what it does not allow. Ask for a narrower scope if the reach looks wide.
+  - Copy the CLI command and run it yourself in a test resource group first.
+  - Check the access works and that the blocked actions fail. Then put the Bicep in version control for review.
+how_it_works:
+  - title: List the actions
+    text: It turns your plain request into exact actions and marks each as control or data.
+  - title: Search built-in roles
+    text: It looks through Microsoft's documentation for roles that include those actions and picks the one with the fewest extras.
+  - title: Write a custom role if needed
+    text: When nothing fits, it writes a custom role with only the actions you named.
+  - title: Choose the scope
+    text: It picks the smallest level that works and explains what the identity can reach there.
+  - title: Write the assignment
+    text: It generates the Azure CLI command and a Bicep snippet that follows best practice.
+  - title: State the limits
+    text: It lists what the role does not allow, so you can test it.
+output_shape: |
+  Role: <role name> | <built in or custom>
+  Why this role: <matching actions> | rejected: <wider roles>
+  Scope: <level> | <name> | <reason>
+  CLI command: az role assignment create --assignee <principal-id> --role "<role>" --scope <scope>
+  Bicep snippet: <role assignment resource>
+  Limits and checks: <what it cannot do> | <how to test>
+output_sample:
+  input:
+    - The identity that needs access
+    - What it must do, in plain words
+    - The scope where it applies
+    - What it must never do (optional)
+  prerequisites:
+    - An Azure subscription
+    - An AI with the Azure MCP tools connected
+    - Permission for you or your admin to create role assignments
+  output:
+    - name: Role
+      contains: The narrowest role that fits, and whether it is built in or custom.
+    - name: Why this role
+      contains: The actions it allows that match your need, and the wider roles rejected.
+    - name: Scope
+      contains: The level and name where the access applies, with a reason.
+    - name: CLI command
+      contains: The Azure CLI command that assigns the role, with placeholders for your values.
+    - name: Bicep snippet
+      contains: The same role assignment written as Bicep code.
+    - name: Limits and checks
+      contains: What the identity still cannot do, and how to test the access.
+works_best_with:
+  tools:
+    - name: Claude Code with the Azure MCP server
+      why: It can read Microsoft's documentation and generate commands that match your setup.
+    - name: GitHub Copilot in VS Code
+      why: This skill was written for it, and the Azure MCP tools plug in there.
+  inputs:
+    - The object ID of the identity, if you have it
+    - The resource group or resource names involved
+    - Your team's rule on who may assign roles
+terms:
+  - term: Least privilege
+    meaning: Giving only the access a job needs, and no more.
+  - term: Scope
+    meaning: The place a role applies, such as a subscription, a resource group or one resource.
+  - term: Managed identity
+    meaning: A login that Azure gives to an app, so the app needs no password.
+  - term: Bicep
+    meaning: A language for describing Azure resources as code.
+  - term: Data action
+    meaning: A permission to read or write the data inside a resource, such as the files in a storage account.

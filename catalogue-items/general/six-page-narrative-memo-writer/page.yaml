@@ -1,6 +1,6 @@
 new_slug: six-page-narrative-memo-writer
 name: Six-page narrative memo writer
-summary: Paste your release and questions. Get a six-page memo in full sentences and a realistic writing schedule.
+summary: Turn your press release, questions and numbers into a six-page narrative memo in full sentences, with the ask on page one and a writing schedule.
 job: speak-and-persuade
 thinking: high
 thinking_why: It builds an argument from several inputs and has to choose what stays and what goes.
@@ -14,6 +14,10 @@ when:
   - You have a proposal and slides, and the meeting always turns into a debate about facts.
   - You need your team to read the same thing before they talk.
   - You want to see whether your argument holds in full sentences.
+not_for:
+  - "You need a one-page update after a change broke the plan: use the Top-priority shift memo writer."
+  - "You want one clear idea of what you sell: use the Outcome-first positioning memo writer."
+  - "You have no press release or answered questions yet: write those first, then come back."
 you_give:
   - Your press release and the answered questions
   - The decision you want, and the date
@@ -29,6 +33,32 @@ how_to_use:
   - State the decision you want and who decides.
   - Read the memo aloud to find sentences that do not connect.
   - Follow the schedule, then run "Narrative memo checker".
+output_sample:
+  input:
+    - Your press release and its answered questions
+    - The decision you want, who decides and the date
+    - Numbers you can back, such as costs, revenue or tests (optional)
+  prerequisites:
+    - A press release and answered questions, made with the Future press release writer and the Hard questions FAQ writer
+  output:
+    - name: The decision
+      contains: The ask, who decides, the date, why now, and three sentences on what the proposal is.
+    - name: The customer and the need
+      contains: One specific person or account, what went wrong and what they tried.
+    - name: The idea and how it works
+      contains: What you will build or do, how a customer uses it and what is new, in full sentences.
+    - name: What it costs and what it pays
+      contains: Costs, expected return and timing, with an assumption beside each figure.
+    - name: What we do not know
+      contains: Ranked gaps, how each could change the plan and how you will learn it.
+    - name: Risks and the fallback
+      contains: Two or three ways it could fail, what you do then and the most you can lose.
+    - name: Next steps
+      contains: An owner, a step and a date for each action.
+    - name: Writing schedule
+      contains: First draft, comments from readers, two days away, a fresh edit, then a silent read.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps marked as missing, and one line for each check the memo still fails, or none.
 how_it_works:
   - title: Opens with the decision
     text: Puts the ask, the date and why it matters now on page one.

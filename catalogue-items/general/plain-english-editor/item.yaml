@@ -9,6 +9,8 @@ level: beginner
 inputs:
   - {type: copy_draft, required: true}
   - {type: brand_brain, required: false}
+  - {type: document, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: copy_draft}
   - {type: feedback_notes}

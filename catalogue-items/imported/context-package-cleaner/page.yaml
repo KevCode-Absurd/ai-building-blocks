@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It filters and orders material by what the task needs.
 new_slug: context-package-cleaner
 name: Context package cleaner
-summary: Give it a pile of notes and documents. Get a deduplicated, ordered set
-  that fits your size limit.
+summary: Clean up a pile of notes and documents so it fits your size limit. Get a context package with repeats removed and the best material placed first.
 job: think-and-decide
 headline: Context package cleaner
-subhead: Give it a pile of notes and documents. Get a deduplicated, ordered set
-  that fits your size limit. Bring the pile of text chunks or files. Use the
-  result to plan your next step.
+subhead: Give it a pile of notes, documents or search results, plus your question and size limit. It removes repeats, drops weak material and puts the best parts where your AI will notice them. You get a smaller, ordered block to paste into your prompt.
 explain: |
   A cleaned-up set of notes, documents and search results that fits your size limit and puts the best material where the AI will notice it. Messy input costs money and gives weaker answers, so this trims it before the question is asked.
 
@@ -16,20 +13,48 @@ explain: |
 when:
   - Your search step returns many overlapping chunks and answers come out vague.
   - You pasted several long files and hit the size limit.
-  - You are building an AI helper and want to cut cost per question.
-  - An assistant keeps missing facts that are in the middle of a long prompt.
+  - You are building an AI helper and want to cut the cost of each question.
+  - Your AI keeps missing facts that sit in the middle of a long prompt.
+not_for:
+  - "Your whole pile already fits your size limit and has no repeats: paste it as it is, no cleaning needed."
+  - "You only need to score or rank chunks by how well they match a question: use a ranking step such as context-ranking, or ask your AI to score each chunk."
+  - "You need to shrink the text you already picked: use a compression step such as context-compression, or ask your AI for a shorter summary of each chunk."
 you_give:
-  - The pile of text chunks or files
-  - The question or task
+  - Your pile of text chunks or files
+  - Your question or task
   - Your size limit in tokens
   - Relevance scores from your search (optional)
+  - A list of topics the result must cover (optional)
 you_get:
-  - Deduplicated, filtered context
-  - Chunks in priority order
-  - Token budget per chunk
-  - Coverage check against your question
+  - A deduplicated, filtered set of chunks
+  - The chunks in priority order, strongest first
+  - A size budget for each chunk
+  - A coverage check against your question
+  - A log of what was removed and why
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of SKILL.md as your first message. No code, files or paid tools are needed.
+  - Paste your chunks next. Label each one with its source name, and add its search score if you have one.
+  - Add your question and your size limit in tokens. If you do not know the limit, ask your AI to suggest one.
+  - Ask your AI to run the skill and return the ordered block, the coverage check and the log of removed chunks.
+  - Check the log. If a needed chunk was removed, ask your AI to add it back.
+  - Paste the ordered block into your prompt. Run the skill again when your question changes.
+output_sample:
+  input:
+    - Your pile of text chunks or files
+    - The question or task
+    - Your size limit in tokens
+    - Relevance scores from your search (optional)
+    - A list of topics the result must cover (optional)
+  output:
+    - name: Context audit
+      contains: The total size of your pile compared with your limit, and how much it must shrink.
+    - name: Deduplicated chunks
+      contains: Near-identical passages merged, keeping the most complete version of each.
+    - name: Scored and filtered chunks
+      contains: Each chunk rated for relevance and facts per word, with low scorers and boilerplate removed.
+    - name: Ordered context block
+      contains: The remaining chunks with the strongest first and the second strongest last, ready to paste into a prompt.
+    - name: Coverage check
+      contains: Whether every part of your question still has support, with filtered chunks added back if a gap appears.
+    - name: Log of removed chunks
+      contains: Which chunks were dropped and why, so you can debug a thin answer.

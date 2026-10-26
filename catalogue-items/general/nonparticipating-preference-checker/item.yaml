@@ -1,26 +1,29 @@
 slug: nonparticipating-preference-checker
 name: Nonparticipating preference checker
-summary: Compare one preferred class preference payout with its conversion proceeds.
+summary: See what a preferred investor takes from a sale, money back or conversion to common, whichever pays more, and what is left for common holders.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before:
+  - closing-equity-proceeds-checker
+next:
+  - capped-participation-checker
+  - closing-equity-proceeds-checker
+  - cap-and-discount-conversion-checker
 origin: own
 version: 1.0.0
 added: 2026-10-22

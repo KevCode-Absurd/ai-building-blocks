@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It routes across 14 jobs and needs your channel's context.
 new_slug: youtube-channel-growth-kit
 name: YouTube channel growth kit
-summary: "The full kit: tell it your channel and goal. Get an audit, ideas,
-  scripts, thumbnails, SEO and a calendar."
+summary: "Get a YouTube channel audit, video ideas, scripts, thumbnail briefs and a content calendar. Tell it your niche, size and goal."
 job: grow-social
 headline: YouTube channel growth kit
-subhead: "One front door to a full set of YouTube growth tools. Tell it your
-  niche, your size and your goal, and it sends you to the right one: audit,
-  ideas, hooks, scripts, thumbnails, search, a calendar, Shorts, metrics,
-  repurposing, money, competitors or upload details."
+subhead: "One front door to a full set of YouTube growth tools. Tell it your niche, your size and your goal, and it sends you to the right one: audit, ideas, hooks, scripts, thumbnails, search, a calendar, Shorts, metrics, repurposing, money, competitors or upload details."
 explain: |
   One front door to a full set of YouTube growth tools. Tell it your niche, your size and your goal, and it sends you to the right one: audit, ideas, hooks, scripts, thumbnails, search, a calendar, Shorts, metrics, repurposing, money, competitors or upload details.
 
@@ -19,6 +15,10 @@ when:
   - You need a plan, a script and a thumbnail brief for the same video.
   - You want a content calendar that fits your channel size.
   - You are unsure which part of your channel to fix first.
+not_for:
+  - "You have one video and no channel plan: ask your AI for a script or a hook on its own, with no kit needed."
+  - "You have one metric question, such as why views dropped: paste your numbers into your AI and ask it to explain them."
+  - "You want a finished thumbnail image and have no image tool: this kit writes a brief, so send it to a designer."
 you_give:
   - Your channel niche in specific terms
   - Your subscriber range
@@ -30,9 +30,31 @@ you_get:
   - Chained results across tools when needed
   - A clear next step
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own YouTube API key
-    (the keyword data parts are optional and need your own DataForSEO account).
+  - Open Claude, ChatGPT or Gemini and paste in the kit's instructions.
+  - Tell it what your channel is about, how many subscribers you have and your main goal.
+  - "Say what you want: an audit, ideas, a script, a calendar or something else."
+  - Check the result against your own channel, then follow the Next Steps at the end.
+  - For live channel data, your AI needs to run code and use your own YouTube API key. Without it, paste your numbers in by hand.
+output_sample:
+  input:
+    - Your channel niche, in specific words
+    - Your subscriber range
+    - "Your main goal: growth, money, authority or engagement"
+    - Your channel link (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Your own YouTube API key, only if you want live channel data (optional)
+    - A DataForSEO account, only for live keyword data (optional)
+  output:
+    - name: Channel type and template
+      contains: Your channel sorted into one of nine types, with the matching template loaded.
+    - name: Audit report
+      contains: A scored report on search setup, performance, content plan and money, built from four checks.
+    - name: Content calendar
+      contains: A table of what to post and when, fitted to your channel size.
+    - name: Scripts, hooks and thumbnail briefs
+      contains: Retention-focused scripts, strong openings and thumbnail briefs for your next videos.
+    - name: Video ideas and upload details
+      contains: Video ideas, plus titles, descriptions and tags ready to copy and paste.
+    - name: Next Steps
+      contains: The next tool to use, such as strategy or your lowest-scoring area.

@@ -1,6 +1,6 @@
 new_slug: tired-ad-hook-refresher
 name: Tired ad hook refresher
-summary: Paste a fading winner's numbers. Get the cause, a pace, and ten new opening briefs on the same ad.
+summary: Find why a fading ad is tired and get ten new opening briefs that keep the winning body. Paste your weekly spend, return and script.
 job: launch-and-scale-ads
 thinking: medium
 thinking_why: It must read the numbers, call a cause and write briefs that really differ.
@@ -14,6 +14,10 @@ when:
   - Your best ad is slipping and you do not want to start over.
   - You have stock to sell and want to keep a winner running.
   - You need a shoot list for one quick filming session.
+not_for:
+  - "Your ad is new and has under a week of data: wait for more numbers, or use the Ad opening writer and reviewer for a first launch."
+  - "You want to check an ad against Meta rules before it goes live: use the Meta ad policy checker."
+  - "You want a full rework with every check, not only new openings: use the Fatigued ad reviver."
 you_give:
   - Spend and return by week
   - The ad's script or transcript
@@ -29,6 +33,27 @@ how_to_use:
   - Under the prompt, paste the weekly numbers and the script.
   - List the openings you have already used.
   - Film all the new openings in one session.
+output_sample:
+  input:
+    - Your spend and return by week since launch
+    - Your ad's script or transcript
+    - The openings you have already used (optional)
+    - Your stock and cash position (optional)
+  output:
+    - name: CAUSE
+      contains: Whether the ad is stale, the audience is too small, or both, tied to one number from your data.
+    - name: LIFE STAGE
+      contains: Whether the ad is still climbing, at its limit or falling.
+    - name: PACE
+      contains: Whether to push the ad or run it lower, based on your stock and cash.
+    - name: HOOK BRIEFS
+      contains: Ten openings, or three on a small budget, each changing one thing and keeping the body.
+    - name: TEST PLAN
+      contains: Names for each opener, spend per opener, and the days to wait before you read results.
+    - name: MISSING
+      contains: Facts that would make the advice sharper.
+    - name: CHECK WITH A QUALIFIED PERSON
+      contains: Any health, weight or money claim that needs a check before you run it.
 how_it_works:
   - title: Finds the life stage
     text: Climbing, at limit or falling.

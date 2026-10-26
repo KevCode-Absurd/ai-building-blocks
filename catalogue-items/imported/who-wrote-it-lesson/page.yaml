@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sequences practice steps for a hard skill.
 new_slug: who-wrote-it-lesson
 name: Check who wrote it lesson builder
-summary: Give it a history source. Get a lesson series that teaches learners to
-  ask who wrote it, when and why.
+summary: Build a who wrote it lesson series for history sources. Give it your topic and students. You get steps, questions and common errors.
 job: teach-and-train
 headline: Check who wrote it lesson builder
-subhead: A lesson series that trains students to ask who wrote a source, when
-  and why before they read a word. It builds the habit expert historians use,
-  instead of treating each document as plain fact.
+subhead: A lesson series that trains students to ask who wrote a source, when and why before they read a word. It builds the habit expert historians use, instead of treating each document as plain fact.
 explain: |
   A lesson series that trains students to ask who wrote a source, when and why before they read a word. It builds the habit expert historians use, instead of treating each document as plain fact.
 
@@ -18,6 +15,10 @@ when:
   - You are starting a unit built on primary sources.
   - You want a clear way to show growth in source skills.
   - Your students read first and ask questions later.
+not_for:
+  - Your students already check who wrote a source every time. Move on to a harder skill, such as comparing sources, with your own plan.
+  - You have no documents yet. Pick your sources first, then come back to build the lessons.
+  - You want a single lesson on close reading of text. Write that lesson yourself or ask your AI for a simple close reading plan.
 you_give:
   - Topic or period
   - Students' age and experience
@@ -31,7 +32,27 @@ you_get:
   - Common errors and fixes
   - Signs of progress to watch for
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text into the chat.
+  - Add your topic, your students' age and level, and what they do now with sources.
+  - Add your source type and documents if you have them (optional).
+  - Read the plan. Check that the questions fit your sources, then edit anything that does not suit your class.
+  - Use the plan to teach. Pair it with a lesson on comparing sources if you want to go further.
+output_sample:
+  input:
+    - Your topic, period or question
+    - Your students' age and how much source work they have done
+    - What your students do now when given a source
+    - Type of source, such as letters or photographs (optional)
+    - Your curriculum framework (optional)
+  output:
+    - name: Sourcing Progression
+      contains: The steps students move through, from first attempts to checking a source's author, date and purpose on their own.
+    - name: Explicit Instruction Sequence
+      contains: "A teaching plan in three stages: you model, students practise with help, then students work alone."
+    - name: Guiding Questions
+      contains: Questions on author, date and purpose, matched to your source type.
+    - name: Common Failure Patterns
+      contains: The usual mistakes students make with sources and how you can respond to each.
+    - name: Assessment Indicators
+      contains: Signs you can watch for that show students are sourcing well.

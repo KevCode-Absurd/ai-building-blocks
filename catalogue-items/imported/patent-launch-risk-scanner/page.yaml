@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Reading patent claims is hard and mistakes are costly.
 new_slug: patent-launch-risk-scanner
 name: Patent launch-risk scanner
-summary: Describe a product or feature. Get patents that might block it and a
-  first claim comparison. Not a legal opinion.
+summary: Check your product for patents that could block a launch. Get a shortlist and a first claim comparison to take to a patent lawyer. Not legal advice.
 job: check-contracts
 headline: Patent launch-risk scanner
-subhead: A first-pass list of patents that could block your product, with a
-  claim comparison for the most likely ones. It is a screening step before a
-  lawyer looks, not a legal opinion.
+subhead: Describe your product and where you will sell it. Your AI picks the patents most likely to block you and compares their claims with your product. Use it to prepare before you talk to a patent lawyer.
 explain: |
   A first-pass list of patents that could block your product, with a claim comparison for the most likely ones. It is a screening step before a lawyer looks, not a legal opinion.
 
@@ -16,24 +13,49 @@ explain: |
 when:
   - You are about to launch a feature and want to catch obvious patent problems.
   - A competitor holds patents in your area.
-  - You need to prepare for a talk with patent counsel.
+  - You are preparing for a talk with patent counsel.
   - You want to know which patents to worry about first.
+not_for:
+  - "You need a formal freedom-to-operate opinion or a legal ruling: hire a registered patent attorney, as this only screens."
+  - "You want to know if your own idea can be patented: ask a patent attorney, because this checks other people's patents."
+  - "You need to read a contract or licence: ask a lawyer, as this only looks at patent claims."
 you_give:
-  - Description of the product, process or feature
-  - Countries you will sell in
+  - Your description of the product, process or feature
+  - The countries where you will sell
   - Patents you already know about (optional)
-  - Launch timing
+  - Your launch timing
 you_get:
-  - Shortlist of possibly blocking patents
-  - Claim-by-claim first comparison
-  - Open questions for counsel
-  - Clear note that this is not a legal opinion
+  - A shortlist of patents that might block your launch
+  - A first comparison of each patent's claims with your product
+  - Open questions to ask your patent lawyer
+  - A clear note that this is not a legal opinion
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search patent databases.
-  - Where the skill points to /ip-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open your AI chat and paste in the skill text. It works in Claude, ChatGPT or Gemini.
+  - Paste your product description, your countries and your launch timing.
+  - Add any patent numbers or text you already have. If your AI has no patent search tool, this step matters most.
+  - Read the shortlist and the claim comparison. Check that each patent really matches your product.
+  - Take the open questions to a registered patent attorney before you launch.
+output_sample:
+  input:
+    - Your description of the product, process or feature, with technical detail
+    - The countries where you will sell
+    - Patents you already know about (optional)
+    - Your launch timing
+  prerequisites:
+    - A patent search tool connected to your AI is best, and it may be a paid service. Without one, you paste in the patents yourself.
+    - This skill was built for the Claude for Legal plugin. In a normal chat, skip the setup file and paste your details.
+  output:
+    - name: Subject
+      contains: Your product or feature as the scan understood it, with countries and timing.
+    - name: Search scope
+      contains: What was searched and how, or a note that no patent tool was connected.
+    - name: Patents identified
+      contains: The two to five most plausible patents that could block your launch.
+    - name: Claim charts, first pass
+      contains: Each independent claim compared with your product part by part, with equivalents and shared-infringement risks flagged.
+    - name: Open questions
+      contains: What a full study would need to check, such as validity, history and licence options.
+    - name: Signals
+      contains: Hints that are not confirmed patents.
+    - name: Recommended next steps
+      contains: What to do next, with a note on how knowing about a patent affects wilful infringement.

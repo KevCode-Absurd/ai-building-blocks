@@ -1,6 +1,6 @@
 new_slug: weekly-review-keeper
 name: Weekly review keeper
-summary: Give it your task list and loose notes each week. Get open loops closed, stuck items named and a plan for Monday.
+summary: Run a weekly review of your task list and notes. Close open loops, name stuck tasks and get a plan for Monday that you can start on.
 job: organise-work
 thinking: medium
 thinking_why: It runs a few light skills and counts tasks against last week. A mid-size model does this well.
@@ -14,6 +14,10 @@ when:
   - You want one steady end-of-week routine, not a fresh effort each Friday.
   - The same tasks keep carrying over and you want to face them.
   - Your weeks feel full but your main work does not move.
+not_for:
+  - "You have fewer than about ten tasks and one project: run the Weekly review guide once a month instead."
+  - "You want to sort one messy pile of notes today: use the Brain dump organizer."
+  - "Your calendar is set by other people and you cannot change it: skip the time check and keep the rest."
 you_give:
   - Your task list, ideally the TASKS file from last week
   - Loose notes, ideas and unsorted items (optional)
@@ -25,10 +29,37 @@ you_get:
   - Next week's top three outcomes and a plan for your first focus days
   - Stop rules, in the weeks where others took most of your time
 how_to_use:
-  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's review.
-  - Give it your task list and any notes. The first week it builds the folder and has nothing to compare.
+  - Use it in Claude Code, where it can save files. Add it as a skill, or save it in .claude/agents. A plain chat works too, but it cannot keep the folder.
+  - "Start it by hand each Friday or Sunday: ask it to run this week's review. You can also set a scheduled task, but it will still stop to ask before any change."
+  - Give it your task list and any loose notes. Add last week's calendar export from Google Calendar or Outlook if the week got away from you.
   - Answer its questions on stuck items. Say yes or no to each proposed drop.
-  - Use the plan for Monday. Run it again next Friday and it counts against this week.
+  - Use the plan for Monday. Run it again next week and it counts against this one.
+output_sample:
+  input:
+    - Your task list, ideally the TASKS file from last week
+    - Loose notes, ideas and unsorted items (optional)
+    - Last week's calendar (optional)
+    - The one or two outcomes that matter most this month (optional)
+  prerequisites:
+    - An AI that can read and save files, such as Claude Code, to keep the review folder
+    - Last week's review folder, if you ran it before (the first week has nothing to compare)
+  output:
+    - name: Last week
+      contains: Planned, done, carried over and dropped, with the carry-over share against the week before.
+    - name: Stuck items
+      contains: "Tasks carried over three weeks running, each with three choices: drop, shrink or book."
+    - name: Stalled projects
+      contains: Projects that stopped moving, each with one next action.
+    - name: Next week's top three
+      contains: Three outcomes drawn from your list and your focus goal.
+    - name: Monday's plan
+      contains: Focus hours, up to two shallow work windows, and a second focus day if you named one.
+    - name: Rules to try
+      contains: Up to two stop rules, only in weeks when the time check ran.
+    - name: Proposed drops
+      contains: Tasks it suggests removing, each with a reason, waiting for your yes.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Read last week
     text: Counts what was done, carried over and dropped, and works out the share that slipped.

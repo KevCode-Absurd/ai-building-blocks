@@ -1,58 +1,70 @@
 new_slug: staged-product-ladder-planner
 name: "Staged product ladder planner"
-summary: "Describe your end goal and your first product. Get a step-by-step plan where each sale funds the next, cheaper product."
+summary: "Plan a product ladder where each sale pays for the next, cheaper product. Get prices, a funding check and a limit on your losses."
 job: plan-strategy
 thinking: high
 thinking_why: "It has to check that the money works at every step, and one wrong number breaks the whole plan."
 
 headline: "Staged product ladder planner"
-subhead: Give it your end goal and the first product you could build with what you have. It plans each step so the sales from one fund the next, cheaper one, until you reach the broad product. You get a plan in plain words with prices, funding and limits.
+subhead: "Give it your end goal and the first product you could build with what you have. It plans each step so the sales from one pay for the next, cheaper one, until you reach the broad product. You get prices, a funding check for every step, a risk limit and a short plan for buyers."
 
 explain: |
-  Big goals fail when the first move needs money you do not have. The common way around it is to start small and costly: a first product built in small numbers, sold to early buyers who pay more. The cash from it pays for the next product, which costs less and reaches more people, and so on.
+  A big goal fails when the first move needs money you do not have. A product ladder is one way around that. You start with a small, costly first product, sold to early buyers who pay more. That cash pays for the next product, which costs less and reaches more people. You repeat until you reach the broad, low-price product.
 
-  This skill writes that ladder. It states the end goal in one line, picks a first product you can build with money you can afford to lose, and sets a price so early buyers fund the next step. It defines each next product and what the one before paid for. It checks that no step depends on a hope with no plan behind it, and it writes the plan in public language so buyers can see how the moves fit.
+  This skill writes that ladder. It states the end goal in one line and picks a first product you can build with money you can afford to lose. It sets a price so early buyers fund the next step, then defines each next product and what the one before paid for. It checks that no step depends on a hope with no plan behind it, such as a loan you have not been offered.
+
+  The idea follows the staged plan Elon Musk published for Tesla in 2006. This skill is our reading of it, not his advice. If you plan to take money before the product exists, check refund, delivery and consumer rules where you sell. The skill flags this but gives no legal advice.
 
 when:
   - You have a large goal but only money for something small.
-  - You are deciding how to price a first product so it helps pay for the next.
-  - You want a public plan that explains to early buyers why you start where you do.
+  - You are deciding how to price a first product so its sales help pay for the next.
+  - You want a public plan that tells early buyers why you start where you do.
+  - You are choosing between a cheap broad launch you cannot fund and a small, costly one you can.
+
+not_for:
+  - "You already sell something and want to raise its price: use the Price rise readiness checker."
+  - "You want to turn your own hours into a product: use the Hours-to-assets planner."
+  - "You want narrower versions of one offer at different prices: use the Niche price ladder builder."
+  - "You plan to take pre-orders or deposits and need rules on refunds or delivery dates: ask a lawyer or your local consumer agency. This skill only flags the risk."
 
 you_give:
-  - Your end goal, in a sentence or two (required)
-  - Your first product idea and what you can spend on it (required, in the same message)
-  - Facts about costs and prices (optional)
-  - The most money you can afford to lose (optional)
+  - "Your end goal, in a sentence or two"
+  - "Your first product idea and what you can spend on it"
+  - "The most money you can afford to lose (optional)"
+  - "Costs and prices you know, and which are guesses (optional)"
+  - "How many early buyers you could reach (optional)"
+
 you_get:
-  - The end goal in one line
-  - A ladder of products, each with a price, a cost and what it pays for
-  - A funding check for every step, with the risk limit
-  - A short public version of the plan
+  - "Your end goal in one line"
+  - "A ladder of products, each with a price, a cost to build and what it pays for"
+  - "A funding check for every step, with any step that rests on a hope flagged"
+  - "A risk limit for the first step and what you do if it fails"
+  - "A short plan in public words for early buyers"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Write your end goal, your first product and the most you can lose.
-  - Add any cost and price numbers you have. Say which are guesses.
-  - Read the funding check first. Fix any step it says depends on a hope.
-  - Publish the short plan when the numbers hold.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools."
+  - "Write your end goal, your first product and what you can spend. Both must be in the same message."
+  - "Add any cost and price numbers you have. Say which are guesses. Add the most you can afford to lose."
+  - "Read the funding check first. Fix any step it says depends on a hope."
+  - "Check the sums by hand, or in a spreadsheet. Then publish the short plan, with no promised dates, once the numbers hold."
 
 how_it_works:
   - title: End goal in one line
     text: States where the ladder ends, in one plain line.
-  - title: Pick the first product
-    text: Chooses a first product small and costly enough to build with what you have.
-  - title: Set the first price
-    text: Sets a price so early buyers fund the next step.
-  - title: Define the next product
-    text: Defines the next, cheaper product and what the first one pays for.
-  - title: Repeat the ladder
-    text: Repeats until the broad, low-price product is reached.
-  - title: Limit the risk
-    text: Puts money at risk only up to what you can afford to lose.
-  - title: Plain public plan
-    text: Writes the plan in words buyers can follow.
-  - title: Check it
-    text: Runs its own checks and names any it missed.
+  - title: Picks the broad product
+    text: "Describes the last step first: who buys it, the price and the volume. This sets how cheap earlier steps must get."
+  - title: Picks the first product
+    text: Chooses a first product small and costly enough to build with money you can lose.
+  - title: Sets the first price
+    text: Works out the price that leaves enough to start the next step, and shows the sums.
+  - title: Builds the ladder
+    text: Defines each next, cheaper product and what the one before paid for.
+  - title: Checks the funding
+    text: Writes where each step's money comes from and flags any step that rests on a hope.
+  - title: Limits the risk
+    text: Sets the most you can lose on step one and what you do if it fails.
+  - title: Writes the public plan
+    text: Turns it into words buyers can follow, with no promised dates.
 
 output_shape: |
   END GOAL
@@ -77,6 +89,26 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "Your end goal, in a sentence or two"
+    - "Your first product idea and what you can spend on it"
+    - "The most you can afford to lose (optional)"
+    - "Costs, prices and early buyer numbers you know (optional)"
+  output:
+    - name: "End goal"
+      contains: "Where the ladder ends, in one plain line."
+    - name: "The ladder"
+      contains: "Each step with its product, price, cost to build, buyers needed and what it pays for."
+    - name: "Funding check"
+      contains: "Where each step's money comes from, the gap if any, and a flag on any step that rests on a hope."
+    - name: "Risk limit"
+      contains: "The most you can lose on step one, and what you stop doing if it fails."
+    - name: "The plan in public words"
+      contains: "A short note for early buyers on where you are going and why you start here, with no promised dates."
+    - name: "Missing and Checks missed"
+      contains: "Numbers you did not give, and any check the skill could not pass."
 
 tweaks:
   - what: What you can afford to lose
@@ -109,7 +141,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Laying out a ladder and checking the sums is text and number work any strong chat AI does well."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Laying out a ladder and checking the sums is text and number work. No files, web access or paid tools needed."}
     - {name: "A spreadsheet", why: "Lets you change prices and buyer numbers and watch which step breaks."}
   inputs:
     - "Your costs for the first build, line by line"
@@ -121,3 +153,5 @@ terms:
     meaning: A row of products, each one cheaper and wider in reach than the one before.
   - term: Risk limit
     meaning: The most money you could lose on the first step without hurting the rest of your life or business.
+  - term: Pre-order
+    meaning: Taking money from a buyer before the product is built. Refund and delivery rules often apply.

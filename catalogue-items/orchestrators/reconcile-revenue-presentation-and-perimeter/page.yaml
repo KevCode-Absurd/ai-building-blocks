@@ -1,53 +1,90 @@
 new_slug: reconcile-revenue-presentation-and-perimeter
 name: Reconcile revenue presentation and perimeter
 headline: Reconcile revenue presentation and perimeter
-summary: Explain reported revenue changes through gross-to-net deductions, business scope and extra trading weeks.
+summary: Explain reported revenue growth by gross-to-net deductions, acquisitions, disposals, currency and an extra trading week, each counted once.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked reported revenue and comparable-growth reconciliation workbook. Share gross billings and revenue policies, deductions, acquisition/disposal revenue, currency effects and fiscal-calendar evidence.
+subhead: Give it gross billings, your revenue policies, deductions, acquisition and disposal revenue, currency effects and the fiscal calendar. It rebuilds reported net revenue, then strips out business changes and an extra week. You get reported growth and comparable growth side by side.
 explain: |-
-  A linked reported revenue and comparable-growth reconciliation workbook.
+  Reported revenue growth mixes several things. Some is real trading. Some is a different way of netting off discounts and returns. Some is a business bought or sold, a currency move, or a year with an extra week. When these are mixed, growth is called organic when it is not.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow separates them in order. Step 1 rebuilds reported net revenue from the deductions your policies allow, so presentation differences are fixed first. Step 2 maps the continuing businesses and takes out acquisitions, disposals and currency once, in a stated order. Step 3 applies an extra-week adjustment only if the calendar shows one, and only if step 2 has not already taken it out.
+
+  Reported revenue stays the main number. Any gap that cannot be explained is shown as a gap and is never relabeled organic growth. It works from your figures and does not read your policies for you.
 when:
-  - You need a linked reported revenue and comparable-growth reconciliation workbook.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A results release says revenue grew and you need to know how much is organic.
+  - One year had 53 weeks and the growth rate looks too good.
+  - You bought or sold a business and need comparable growth for the businesses you kept.
+  - Gross billings and net revenue are far apart and you need the deductions explained.
+not_for:
+  - You only need gross to net. Use the Gross-to-net revenue bridge on its own.
+  - You only need to take out acquisitions, disposals and currency. Use the Organic revenue perimeter bridge on its own.
+  - You want a trailing 12-month revenue model. Use the Build a comparable trailing revenue model workflow.
+  - You want to judge customer cash, not revenue. Use the Reconcile contract balances and customer cash workflow.
 you_give:
-  - Gross billings and revenue policies, deductions, acquisition/disposal revenue, currency effects and fiscal-calendar evidence.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Gross billings and the revenue policies for deductions such as returns and rebates (from the accounts and notes)
+  - Reported net revenue for both periods (from the income statement)
+  - Revenue of businesses bought or sold, with dates (from the notes)
+  - Currency effects on revenue (from the issuer's currency disclosure)
+  - The fiscal calendar, including any extra week (from the report)
 you_get:
-  - A linked reported revenue and comparable-growth reconciliation workbook.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A gross-to-net bridge that rebuilds reported net revenue from the deductions
+  - An organic bridge from reported growth to comparable growth, with the order of adjustments stated
+  - An extra-week adjustment, shown only if the calendar supports it
+  - Reported growth and comparable growth side by side
+  - Every MISSING input and any check that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can build spreadsheets.
+  - Attach the income statement, revenue notes and calendar. Say the periods, currency and scale once at the top.
+  - After step 1, check the rebuilt net revenue matches the reported figure.
+  - After step 2, check each acquisition, disposal and currency effect appears once, and the order is written down.
+  - After step 3, check the extra week is not removed twice. Fill every MISSING line before quoting a growth rate.
 how_it_works:
   - title: Gross-to-net revenue bridge
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Reconcile reported net revenue from actual policy-supported deductions; fix presentation differences before comparing reported growth.
+    text: Rebuilds reported net revenue from gross billings and the deductions your policies support. Fixes presentation differences before any growth is compared. Hands step 2 the reconciled reported periods. Check before moving on, net revenue ties to the report.
   - title: Organic revenue perimeter bridge
-    text: Use the reconciled reported periods, map continuing businesses and remove sourced acquisition/disposal and FX effects once with a stated ordering.
+    text: Maps the continuing businesses. Removes acquisitions, disposals and currency effects once, with the order stated. Hands step 3 the comparable growth so far. Check before moving on, no effect is removed twice.
   - title: Extra-week revenue comparability schedule
-    text: Apply only an evidenced calendar adjustment not already included in the organic bridge; retain the exact extra-week amount and explain residual trading-day/holiday differences.
+    text: Applies a calendar adjustment only when the evidence supports it and step 2 has not taken it out. Keeps the exact extra-week amount and explains what is left, such as holiday timing. Check before you rely on it, nothing unexplained is called organic.
 output_shape: |-
-  A linked reported revenue and comparable-growth reconciliation workbook.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  PERIODS <dates>, <currency>, <scale>
+
+  1 GROSS TO NET     gross billings <n> - deductions <n> = net revenue <n>
+                     ties to reported <n>, difference <n>
+  2 ORGANIC BRIDGE   reported growth <n%> - acquisitions <n> + disposals <n>
+                     +/- currency <n> = comparable growth <n%>   (order <list>)
+  3 EXTRA WEEK       extra-week revenue <n>, growth after adjustment <n%>
+  SIDE BY SIDE       reported growth <n%>, comparable growth <n%>
+
+  SOURCES            <each input, its source, date and unit>
+  MISSING            <each gap and the line it stops>
+  CHECKS MISSED      <one line each, or none>
+output_sample:
+  input:
+    - Gross billings, deductions and revenue policies
+    - Reported net revenue for both periods
+    - Acquisition and disposal revenue and currency effects
+    - The fiscal calendar
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool, if you want a workbook
+  output:
+    - name: outputs/step-1-gross-to-net-revenue-bridge.md
+      contains: Net revenue rebuilt from gross billings and deductions, tied to the report.
+    - name: outputs/step-2-organic-revenue-perimeter-bridge.md
+      contains: Comparable growth after acquisitions, disposals and currency, in a stated order.
+    - name: outputs/step-3-extra-week-revenue-comparability.md
+      contains: The extra-week amount and growth after it, only where the calendar supports it.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Gross-to-net, perimeter and calendar effects are mutually exclusive and reconcile; reported revenue remains primary; no unexplained gap is relabeled organic growth.
+  - what: A bigger acquisition
+    how: Raise the acquired revenue. Reported growth stays the same and comparable growth falls.
+  - what: No extra week
+    how: Say both years have the same number of weeks. Step 3 is skipped and says why.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and lists what it could not verify.
 judge:
   - Gross-to-net, perimeter and calendar effects are mutually exclusive and reconcile; reported revenue remains primary; no unexplained gap is relabeled organic growth.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +95,25 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep a list of each acquisition and disposal with its date, and paste it in every time.
+  - Record the order of adjustments you chose, so next period's growth stays comparable.
+  - Save the fiscal calendar for the next two years so extra weeks are known early.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The revenue note from the annual report.
+    - The company's own definition of organic growth.
+    - Prior period revenue by business.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Gross-to-net
+    meaning: How billed amounts become reported revenue after returns, discounts and rebates.
+  - term: Organic growth
+    meaning: Growth from the businesses you owned in both periods, in constant currency.
+  - term: Perimeter
+    meaning: Which businesses are counted inside a figure.
+  - term: Constant currency
+    meaning: Growth with exchange rate moves taken out.
+  - term: Extra week
+    meaning: A 53-week year compared with a 52-week year.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads numbers and turns them into coaching.
 new_slug: sprint-coach
 name: Sprint coach
-summary: Give it your sprint data. Get velocity trends, retro themes and fixes
-  for your team's habits.
+summary: Find out how your sprints are going. Give it your sprint history and get a velocity forecast, a team health grade and retro themes.
 job: lead-people
 headline: Sprint coach
-subhead: A clear read on how your sprints are going, using your own data, and
-  fixes for the habits that slow the team down. Export sprint history from Jira
-  or a similar tool.
+subhead: Give it your sprint history. It works out your velocity trend, a team health grade and which retro themes keep returning. You also get coaching steps for the habits that slow the team down.
 explain: |
   A clear read on how your sprints are going, using your own data, and fixes for the habits that slow the team down. Export sprint history from Jira or a similar tool. Three Python scripts do the maths.
 
@@ -17,21 +14,45 @@ when:
   - You need to forecast how much work the team can finish.
   - Your velocity jumps around and you want to know why.
   - Retro action items keep coming back unfinished.
-  - You want a health grade for your team before a review.
+  - You want a team health grade before a review.
+not_for:
+  - You have fewer than 3 sprints of data. The velocity check will not run, so use a simple burndown chart for a one-off check.
+  - You want a quick read on one sprint. A plain burndown chart or a short chat with your team is faster.
+  - You cannot run Python or export sprint data. Ask a teammate who uses Jira to export it, or run a retro by hand.
 you_give:
-  - Sprint data exported as JSON
+  - Your sprint history exported from Jira or a similar tool, as a JSON file
   - Retro notes and action items (optional)
-  - Python on your computer
-  - Team size and sprint length
+  - Your team size and sprint length
 you_get:
-  - Velocity trends and a range forecast
-  - A sprint health score and grade
-  - Recurring retro themes
-  - Action item follow-through rates
-  - Suggested team improvements
+  - A velocity trend and a forecast shown as a range
+  - A team health score and grade, with the weak areas named
+  - Retro themes that keep coming back
+  - The share of action items your team finished
+  - Coaching steps for the habits that slow the team down
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Export your sprint history from Jira or a similar tool. Match the fields to the layout in assets/sample_sprint_data.json and save it as sprint_data.json.
+  - Open an AI that can run Python code and upload the skill folder with your file. You need at least 3 sprints, and 6 or more gives a better forecast.
+  - Run python velocity_analyzer.py sprint_data.json --format text. You get the trend and the forecast ranges.
+  - Run python sprint_health_scorer.py sprint_data.json --format text. You get the health grade and a score for each area.
+  - Run python retrospective_analyzer.py sprint_data.json --format text. You get action item completion, recurring themes and the team's stage.
+  - Read the three reports before your retro. Plan with the 70 percent forecast, and take fewer new action items if your team finishes under 60 percent of them.
+output_sample:
+  input:
+    - Your sprint history exported from Jira or a similar tool, as a JSON file
+    - Retro notes and action items for at least 3 sprints (optional)
+    - Ceremony and story completion data for each sprint (optional)
+    - Your team size and sprint length
+  prerequisites:
+    - An AI that can run Python code and read files
+    - Your Jira fields mapped to the JSON layout in assets/sample_sprint_data.json
+  output:
+    - name: Velocity report
+      contains: Velocity trend, rolling averages and how much it jumps around, plus anomaly flags with likely causes.
+    - name: Sprint forecast
+      contains: A six-sprint forecast at 50, 70, 85 and 95 percent confidence, so you plan with a range.
+    - name: Sprint health report
+      contains: An overall score and grade, a score for each of six areas, and which area to fix first.
+    - name: Retrospective report
+      contains: How many action items got done, which themes keep coming back, and the team's maturity stage.
+    - name: Improvement suggestions
+      contains: Coaching steps for the weak areas, matched to the team's stage.

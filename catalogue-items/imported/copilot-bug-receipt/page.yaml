@@ -2,17 +2,61 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-bug-receipt
 name: Bug fix evidence recorder
-summary: Share a fix and its checks. Get a dated record of what is verified,
-  partial or blocked.
+summary: Close a bug fix with a bug fix evidence recorder. Give it the defect and your checks. You get a receipt marked verified, partial or blocked.
 job: test-and-fix-code
 headline: Bug fix evidence recorder
-subhead: Share a fix and its checks. Get a dated record of what is verified,
-  partial or blocked. Share your goal and the files you already have. The skill
-  file sets out the steps and the tools needed for this job.
+subhead: "Give it a bug, your fix and the checks you ran. It writes one short receipt of what is proven and what is not. The receipt ends with a status: verified, partial or blocked."
+not_for:
+  - "You are planning a new feature: write a short spec or task list with your AI first, since this only closes out a fix."
+  - "You want a general review of code quality: ask a teammate or your AI for a plain code review instead."
+  - "You have not made or tried a fix yet: find the cause first, then come back with the change and your check results."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Gather the bug description, the fix and your check results first. Add the failing command if you have it.
+  - Paste them in and ask your AI to close out the bug with a receipt.
+  - Read the status and the Gaps line. If it says partial or blocked, run the one next step it names.
+  - Paste the new results back to update the receipt.
+  - For the JSON receipt, use an AI that can run code and read files.
+output_sample:
+  input:
+    - What went wrong and what should happen instead
+    - The failing command, request or steps you ran (optional)
+    - The fix, such as a diff or a short description
+    - The results of your checks, with logs if you have them
+  prerequisites:
+    - An AI that can read your pasted text or files
+    - Code running is only needed if you want the AI to run the checks itself, or to make the optional JSON receipt
+  output:
+    - name: BUG RECEIPT status line
+      contains: "One word at the top: VERIFIED, PARTIAL or BLOCKED."
+    - name: Problem
+      contains: The defect you saw and the behavior you expected.
+    - name: Baseline
+      contains: The failing check and its key result, or not run.
+    - name: Root cause
+      contains: The proven reason it broke, or unproven if the cause is only a guess.
+    - name: Change
+      contains: The fix that is responsible, or none.
+    - name: Proof
+      contains: Each check that was run or supplied, with its result.
+    - name: Gaps
+      contains: What proof is missing and the one next step to close it, or none.
+    - name: Source
+      contains: Whether the evidence was run now, supplied by you, or mixed.
+when:
+  - You fixed a bug and need a record before you close the ticket.
+  - An incident is over and your team wants proof of what was checked.
+  - A teammate asks whether the fix was really tested.
+  - You think it is fixed but only a build passed, and you want to know what is still missing.
+you_give:
+  - A short description of the bug and the behavior you expected
+  - The failing command, request or steps (optional)
+  - The fix, as a diff or a plain description
+  - The results of your checks, such as test output or logs
+  - Any logs or request IDs that show the failure (optional)
+you_get:
+  - "A seven-line receipt: problem, baseline, root cause, change, proof, gaps and source"
+  - A status of verified, partial or blocked
+  - The single next step needed if proof is missing
+  - A note on whether each check was run now or supplied by you
+  - A JSON version of the receipt for CI (optional, needs code running)

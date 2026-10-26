@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It walks a fixed checklist, then checks the live result.
 new_slug: deploy-verifier
 name: Deploy verifier
-summary: Run it before you deploy. Get silent failure modes checked, then proof
-  that the live version is the new one.
+summary: Check your deploy before and after it runs, so you know the live site really is the new version. Use this deploy verification check on every release.
 job: ship-and-host
 headline: Deploy verifier
-subhead: "Proof that your release is live, not just that the pipeline went
-  green. Many bad deploys fail silently: the tool says deployed, but users still
-  get the old version."
+subhead: "Proof that your release is live, not just that the pipeline went green. Many bad deploys fail silently: the tool says deployed, but users still get the old version."
 explain: |
   Proof that your release is live, not just that the pipeline went green. Many bad deploys fail silently: the tool says deployed, but users still get the old version. This gate catches that.
 
@@ -18,19 +15,46 @@ when:
   - An AI agent is about to tell you the release is live.
   - The release includes a database change or a feature flag.
   - You are rolling out in stages and need to confirm each one.
+not_for:
+  - "You need to undo a bad release: roll back with your host's own rollback command, then run this check on the restored version."
+  - "You have no live site or service to check yet: skip this and test the build on your own computer first."
+  - "You want to check the code itself before you push: use the Codebase audit pre-push skill, then come back here for the deploy."
 you_give:
-  - What you are deploying and where
-  - Deploy command or pipeline
-  - URL or service to check
-  - Expected version or visible change
+  - What you are deploying and where it goes
+  - Your deploy command or pipeline (optional)
+  - The web address of your live site or service
+  - The version page or health page that shows which version is running
+  - The version or commit you expect to see live
 you_get:
   - Pre-flight checklist results
   - Silent-failure checks
   - Proof the live version is new
   - Clear ship or hold verdict
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and reach your live site.
+  - Open your AI tool and paste in the skill, or upload the skill folder.
+  - Tell it what you are deploying, where, and which version you expect.
+  - Give it your version or health page address. It needs this for the final check.
+  - Answer its pre-flight check. Fix anything marked BLOCK before you deploy.
+  - Run the deploy yourself or with your usual tools.
+  - Ask it to check the live version. Only call the release shipped when the versions match. Checking a live site works best when your AI can run commands.
+output_sample:
+  input:
+    - What you are deploying and where it goes
+    - Your deploy command or pipeline (optional)
+    - The web address of your live site or service
+    - The version page or health page, and the version you expect to see
+  prerequisites:
+    - An AI that can run commands and reach your live site, if you want it to check the live version itself
+  output:
+    - name: Pre-flight check
+      contains: "Each silent failure risk checked and marked OK, NOTE or BLOCK: database changes, flags, cached files, release pointer, staged rollout, secrets."
+    - name: Verdict
+      contains: A clear SHIP or HOLD, with the failing item named and what to fix before the deploy.
+    - name: Deploy step
+      contains: You or your tools run the deploy. The skill does not run it for you.
+    - name: Live version check
+      contains: The version running on your live site compared with the version you meant to ship.
+    - name: Log check
+      contains: A look at the first errors in production logs after the switch.
+    - name: Final report
+      contains: Shipped only if the live version matches. If not, a plain note of the mismatch.

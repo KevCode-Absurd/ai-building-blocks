@@ -2,35 +2,83 @@ thinking: medium
 thinking_why: It looks at each step and ranks the fixes by payoff.
 new_slug: pick-pack-and-ship-improver
 name: Pick, pack and ship improver
-summary: Describe how orders move through your space. Get the slow steps found
-  and a fix plan with expected time saved.
+summary: Find the slow steps in picking, packing and shipping orders. Get a ranked fix plan, a picking method comparison and the time each fix could save.
 job: run-your-store
 headline: Pick, pack and ship improver
-subhead: Find the slow steps in how orders move through your space and get a fix
-  plan with the time each fix should save. It covers receiving an order through
-  to leaving the door.
+subhead: Describe how orders move from received to out the door. Your AI finds the slow steps, compares picking methods and ranks the fixes. You get a plan with estimated time and accuracy gains.
 explain: |
-  Find the slow steps in how orders move through your space and get a fix plan with the time each fix should save. It covers receiving an order through to leaving the door.
+  Pick, pack and ship is the work between an order arriving and a parcel leaving. If orders go out late or with the wrong item, one of these steps is usually the cause. This improver shows which one, so you fix that first.
 
-  The skill starts with the facts: orders per day, peaks, lines per order, speed promised, accuracy goals, tools in use and limits on space, staff and budget. It then reviews each stage: order intake, picking, packing, shipping and returns. It weighs picking methods and flags where staff walk or wait too much. You get priorities ranked by gain and effort. It fits small shops and large warehouses.
+  Your AI starts with the facts: orders per day, peaks, lines per order, delivery promises, accuracy, tools, and your limits on space, staff and budget. It then reviews intake, picking, packing, shipping and returns. It compares picking methods such as one order at a time, batches, zones and waves.
+
+  It ranks fixes by gain and effort. Rates and targets in the skill are rough ideas, not facts about your site. Gains are labelled as estimates, and any number you do not give is marked MISSING.
 when:
   - Orders go out late and you do not know which step is slow.
-  - Mispicks or wrong parcels are costing refunds.
-  - Peak season is coming and you need capacity.
-  - You are choosing between picking methods.
+  - Wrong items or parcels are costing you refunds.
+  - Peak season is coming and you need to know what capacity you need.
+  - You are choosing between picking one order at a time, in batches or by zone.
+not_for:
+  - You want walking paths for pickers. Use the Warehouse picker route planner.
+  - You want to decide where products sit in the warehouse. Use the Warehouse slot assigner.
+  - You run an online store and want the whole flow, with 3PL and returns. Use the Online order fulfillment planner.
+  - You want to know whether machines pay back. Use the Warehouse automation chooser.
 you_give:
-  - Order volume and peaks
-  - Lines per order
+  - Orders per day, average and busiest
+  - Lines and units per order
   - Delivery promises and cut-off times
-  - Current process and pain points
-  - Staff, space and budget limits
+  - How orders move today, and where it hurts
+  - Limits on staff, space and budget
 you_get:
-  - Bottlenecks found step by step
-  - A ranked fix plan
-  - Expected time and accuracy gains
-  - A comparison of picking methods
+  - The slow steps found, step by step
+  - A comparison of picking methods for your orders
+  - A fix plan ranked by gain and effort
+  - Staff and tools needed at average and peak
+  - Numbers to measure to check each fix worked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down how an order moves today, from received to out the door. Add your order numbers and where it goes wrong. A short list is enough. Any chat AI works, and no code is needed.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Paste your notes and numbers.
+  - Answer the one round of questions it asks. Say "unknown" if you do not have a figure. It will mark it MISSING.
+  - Check that each estimate shows its inputs. Ask your AI to redo any that use a number you did not give.
+  - Pick one fix and measure it before and after. Then run the next skill named in the plan.
+output_sample:
+  input:
+    - Orders per day, average and busiest
+    - Lines per order and delivery promises
+    - How orders move today and your pain points
+    - Limits on staff, space and budget
+  prerequisites:
+    - Your own figures. Any you leave out are marked MISSING
+  output:
+    - name: Order profile
+      contains: Your volume, lines per order, delivery promise, accuracy and on-time rate in one table.
+    - name: Where orders slow down
+      contains: For each step from intake to returns, what happens now and the slow part.
+    - name: Picking method comparison
+      contains: Discrete, batch, zone, wave or cluster picking, with why each fits or not, and one to try first.
+    - name: Fix plan, ranked
+      contains: Each fix with estimated gain, effort and cost, and the assumptions to check.
+    - name: Staff and tools needed
+      contains: People at average and peak with the sums shown, and any tools the fixes need.
+    - name: How to check it worked
+      contains: The numbers to measure before and after, and when.
+    - name: Next steps
+      contains: One action for this week and which skill to run next.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The skill reasons from your description, so no special tool is needed.
+    - name: A spreadsheet
+      why: Lets you check the staff and time sums.
+  inputs:
+    - A week of order data with lines per order
+    - A rough sketch or list of the steps an order goes through
+    - Your current error and late-parcel counts
+terms:
+  - term: Picking
+    meaning: Collecting the items for an order from where they are stored.
+  - term: Batch picking
+    meaning: Collecting items for several orders in one trip, then sorting them.
+  - term: Zone picking
+    meaning: Each picker works one area, and orders pass between areas.
+  - term: Wave picking
+    meaning: Orders are released in timed groups, for example to match carrier pick-up times.

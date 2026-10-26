@@ -1,0 +1,146 @@
+name: Organizational Psychologist agent
+summary: Get a team health review on why people go quiet, burn out or leave. Each finding comes with evidence, and the fixes come in the order to try them.
+headline: Organizational Psychologist agent
+subhead: Describe your team and what worries you, and add any survey results, exit notes or workload facts. It finds the pattern behind the problem, such as low psychological safety or burnout risk. You get findings with evidence, other explanations to rule out, and fixes in order.
+job: lead-people
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  When a team goes quiet, misses dates or loses people, the cause is often how
+  the work is set up. It is rarely one difficult person. This team behavior review agent
+  reads what you know about your team and looks for the pattern behind it. It
+  uses lenses from the source profile: psychological safety, team stages,
+  burnout risk, culture type and motivation.
+
+
+  You get each finding with the evidence behind it, what else could explain it,
+  and a short list of fixes to try in a set order. Trust comes before open
+  debate, and open debate comes before firm commitments. The agent describes
+  conditions in the team. It does not label or diagnose any person.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. The research
+  names and cut-off scores in it are the author's picks and rules of thumb, and
+  AI Blocks has not checked each one. This is an AI reading of the evidence you
+  give it, not a clinical or HR judgement.
+when:
+  - Two people left this quarter and you want to know if it was pay or something else.
+  - Team meetings go quiet and nobody pushes back on ideas, even bad ones.
+  - A team keeps working long hours and you want to spot burnout early.
+  - You start leading a new team and want the right questions for your first 90 days.
+not_for:
+  - You need to settle a dispute between two named people or decide on discipline. Talk to your HR lead or an employment lawyer.
+  - You want to plan your regular check-ins with one person. Use the One-on-one meeting planner.
+  - You want to write down how your team should work. Use the Team culture memo writer or the Company values and culture builder.
+  - Someone shows signs of a mental health crisis. Point them to your employee assistance program or a qualified professional.
+you_give:
+  - Your team in a few lines, with its size, what it does and how long it has worked together.
+  - What worries you, in one or two sentences.
+  - Any evidence you have, such as survey scores, exit notes or workload numbers (optional, but it makes the review stronger).
+  - What you can change, and how much time you have.
+you_get:
+  - Three to five findings, each with the evidence behind it and how sure the agent is.
+  - Other explanations to rule out before you act.
+  - Up to five fixes in the order to try them, with what could go wrong.
+  - A way to check each fix worked, such as a short anonymous survey.
+  - A list of gaps in the evidence and checks still needed.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe your team and what worries you. Paste the evidence you have. Use roles instead of names.
+  - Answer the questions it asks once. Anything you cannot answer is marked MISSING in the result.
+  - Read the "other explanations" list first. Rule out easy causes, like a recent change in pay or tools, before you act.
+  - Try the first fix only. Check it after a few weeks with the measure the agent gives you, then move to the next one.
+  - Take anything about one named person, or any sign of crisis, to HR or a qualified professional.
+how_it_works:
+  - title: Check the evidence
+    text: It lists what you gave it and rates each item as a fact, something people said, or a guess. It names what is missing.
+  - title: Pick the lenses
+    text: It chooses one to three lenses from the profile that fit your question, such as psychological safety or burnout risk, and says why.
+  - title: Write the findings
+    text: Each finding names a pattern in how the team works, quotes the evidence, says how sure it is and lists other causes.
+  - title: Order the fixes
+    text: It puts fixes in the order the profile says they must go, with trust first, and says what could backfire.
+  - title: Plan the check
+    text: It adds a way to see whether each fix worked, using anonymous, grouped survey results.
+  - title: Mark the limits
+    text: It names what it could not judge and sends HR disputes, individual cases and crisis signs to the right professional.
+output_shape: |-
+  QUESTION AND EVIDENCE
+    <what you asked> | <evidence used, each marked FACT, SAID or GUESS> | MISSING: <list>
+
+  FINDINGS (3 to 5)
+    <pattern in the team> | lens <name> | evidence <quote or number> | confidence <high, medium or low>
+
+  OTHER EXPLANATIONS
+    <finding> | <other cause to rule out> | <how to check>
+
+  FIXES, IN ORDER
+    1. <action> | who <role> | try for <time> | look for <sign it works> | could backfire if <risk>
+
+  HOW TO CHECK IT WORKED
+    <measure> | <how to collect it without naming people> | <when to look>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it> | needs HR or a professional: <yes or no>
+output_sample:
+  input:
+    - Your team, with its size, its work and how long it has worked together
+    - What worries you, in a sentence or two
+    - Survey results, exit notes, workload numbers or meeting notes (optional)
+    - What you can change and how much time you have
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - Evidence with names removed or replaced by roles
+  output:
+    - name: Question and evidence
+      contains: What you asked, each piece of evidence marked as fact, said or guess, and what is missing.
+    - name: Findings
+      contains: Three to five patterns in how the team works, each with its evidence and a confidence rating.
+    - name: Other explanations
+      contains: Other causes to rule out for each finding, and how to check them.
+    - name: Fixes in order
+      contains: Up to five actions with an owner, a time to try, a sign it works and a risk.
+    - name: How to check it worked
+      contains: A measure for each fix, such as a short anonymous survey, and when to look.
+    - name: Assumptions and checks still needed
+      contains: Gaps in the evidence and which items need HR or a qualified professional.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach survey exports and notes so each finding points to real evidence.
+    - name: A survey tool you already use, such as Google Forms or Microsoft Forms
+      why: Send the short survey the profile describes, then paste the grouped totals back for a second review.
+  inputs:
+    - Results from your last team survey, with names removed.
+    - Exit interview notes or reasons people gave for leaving.
+    - Rough workload facts, such as hours worked and holidays taken.
+terms:
+  - term: Psychological safety
+    meaning: A team's shared belief that it is safe to speak up, ask questions and admit mistakes.
+  - term: Burnout
+    meaning: Long-term exhaustion from work, with a feeling of distance from it and of doing it poorly.
+  - term: Culture type
+    meaning: The main way a company runs, such as by process, by teamwork, by speed or by results.
+  - term: Fix
+    meaning: A change you try on the team, then check to see if it helped.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Focus
+    how: Name one lens, such as burnout or psychological safety, if you only want that. Otherwise it picks up to three.
+  - what: Evidence
+    how: Add survey scores, exit notes or hours worked. Findings without evidence are marked low confidence.
+  - what: Time and control
+    how: Say what you can change and by when, so the fixes fit your real limits.
+improve:
+  - Keep the findings you agree with and the ones you reject. Paste them in on the next run so the agent builds on them.
+  - Run the same short survey every quarter and paste the grouped results to see what moved.

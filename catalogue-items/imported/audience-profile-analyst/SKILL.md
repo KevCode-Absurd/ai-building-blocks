@@ -15,12 +15,27 @@ Analyze and understand your audience using Apify Actors to extract follower demo
 - The task is to choose and run Apify Actors for audience analysis across Facebook, Instagram, YouTube, or TikTok.
 - You need structured extraction plus a summarized interpretation of audience findings.
 
+## Before you run it (AI Blocks notes)
+
+This skill collects public data about people who follow or comment on an account. Only use it on public accounts, and stop if the platform's terms forbid collecting that data. Collect only what the question needs, set a result cap, and keep the saved file private.
+
+Report patterns across the group, such as common places, interests and how much of the engagement looks genuine. Never list named people or build a profile of one person in your summary. These Actors return public profile fields and comments, not verified age or gender. Label any demographic claim as inferred, and say how many records it rests on.
+
+Apify charges for runs. Before you run, tell the user which Actor you chose and ask them to check its price on its Apify page. Never print the token. The token lives in `.env` only.
+
+The run script is at `reference/scripts/run_actor.js` inside this skill folder. Where the commands below use `${CLAUDE_PLUGIN_ROOT}`, replace it with the path to this skill folder if that variable is not set.
+
+If an input is missing (account link, platform, cap), ask once, then mark `MISSING: <what>` and stop. Never invent audience data. If you cannot run commands, say so, and offer a rough read of a sample of public comments the user pastes, marked as low confidence.
+
+In Step 5, give the summary in this order: the Actor used, the records collected and the file location, who the audience seems to be (labelled as inferred), what they engage with, whether the engagement looks genuine and the signs you used, the limits of the sample, and next steps.
+
 ## Prerequisites
-(No need to check it upfront)
+Check these before you run anything:
 
 - `.env` file with `APIFY_TOKEN`
 - Node.js 20.6+ (for native `--env-file` support)
 - `mcpc` CLI tool: `npm install -g @apify/mcpc`
+- `jq` (used by the schema command in Step 2)
 
 ## Workflow
 

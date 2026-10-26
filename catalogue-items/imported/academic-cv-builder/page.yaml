@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: academic-cv-builder
 name: Academic CV builder
-summary: Share your research and teaching record. Get a CV draft ordered for the academic role you want.
+summary: Build an academic CV for a faculty, postdoc or research job. Share your degrees, papers, grants and teaching. Get a draft in the right order.
 job: find-a-job
 headline: Academic CV builder
 subhead: Share your degrees, publications, research, grants and teaching record. It orders the sections for your target academic role and formats each part. You get a CV draft, field-specific layout notes and a checklist of missing details to confirm.
+not_for:
+  - "You are applying for an industry job or a non-academic role: use a standard resume builder, because this skill is made for academic CVs."
+  - "You need a cover letter or research statement: write those with your AI as a separate task, since this skill only builds the CV."
+  - "You want a one or two page resume: use a standard resume builder, because an academic CV lists your full record and runs longer."
 explain: Share your degrees, publications, research, grants and teaching record. It orders the sections for your target academic role and formats each part. You get a CV draft, field-specific layout notes and a checklist of missing details to confirm.
 you_give:
   - Your degrees, publications, grants and teaching history.
@@ -22,6 +26,25 @@ how_it_works:
   - title: Step 3
     text: Check dates, publication status and missing details.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied notes and ask follow-up questions.
+  - "Gather your details first: degrees with dates and advisors, a publication list with DOIs, grants with amounts and your role, and the job advert."
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code, files or paid tools are needed.
+  - Paste your details, and tell your AI the role and field you are applying for.
+  - Answer any questions your AI asks about missing details.
+  - Check the draft against the job advert. Confirm every item on the missing-details checklist.
+  - Replace any sample names, grants and dates before you send the CV.
+output_sample:
+  input:
+    - Your degrees, with dates, advisors and thesis titles
+    - Your publications, with DOIs if you have them
+    - Your grants, with amounts and your role
+    - Your teaching, mentoring and service history
+    - The academic role and field you are applying for
+  output:
+    - name: Recommended Section Order
+      contains: The order of CV sections that suits your role type and field, such as research, teaching or admin.
+    - name: Section Content
+      contains: Your education, positions, publications, presentations, grants, teaching, mentoring, service and awards, formatted in the style of your field.
+    - name: Formatting Notes
+      contains: Field-specific habits to follow, such as author order, numbered lists and how to mark your own name.
+    - name: Things to Add/Update
+      contains: A checklist of missing or unconfirmed details for you to fill in or check.

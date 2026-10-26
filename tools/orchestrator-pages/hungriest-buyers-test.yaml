@@ -1,6 +1,6 @@
 new_slug: hungriest-buyers-test
 name: Find the hungriest buyers and test a deal on them
-summary: Give it the groups you could sell to. Get the hungriest group, a deal with a believable reason and a small test.
+summary: Find the hungriest group to sell to, write a deal buyers believe, and plan a small test. Give it your groups and offer to start.
 job: make-offer
 thinking: high
 thinking_why: It ranks groups on buying proof, writes the deal and does the sums for a test. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have an offer and several groups to sell it to, and you need to pick the first.
   - Your offers get views but no sales, and you suspect the audience or the reason to buy.
   - You are about to spend on a bigger push and want to test small first.
+not_for:
+  - "You only have one known buyer to sell to: talk to them directly, or use the Customer purchase interview script writer to learn why they would buy."
+  - "You have no offer yet: start with the Buyer problem list builder to learn what your buyers want first."
+  - "You want to find out how to price a product: use a simple price survey with real customers, as this does not research prices."
 you_give:
   - What you sell and the groups you could reach
   - Size and cost for each group, if you know them
@@ -33,6 +37,29 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - List your groups and the deal you want to run. It works step by step and saves each result.
   - Run the small test and compare it with the break-even line, not with your hopes.
+output_sample:
+  input:
+    - What you sell and the groups you could reach
+    - Size and cost for each group, if you know them
+    - The deal you want to run, with real numbers
+    - Your product facts and what each order costs to make and deliver
+    - Results showing who bought what, and when (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude with files
+    - A brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Hungry audience ladder
+      contains: Each group ranked from coldest to hungriest, with the buying proof, the first test group, two backups and checks.
+    - name: The deal
+      contains: The deal in one plain sentence, the doubts a stranger would have and the reasons considered.
+    - name: Three deal versions
+      contains: Three versions of the deal copy, each with a believable reason why and exact claim steps.
+    - name: The sums
+      contains: Reach, cost per thousand, profit per order and the response needed to break even.
+    - name: Test plan and rollout rules
+      contains: Test size, money at risk, the one thing to change and rules for a second test, rollout or stop.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Ranks the groups
     text: Places each group on a ladder from cold names up to your own happy customers, and pushes up those who bought recently or spent more.

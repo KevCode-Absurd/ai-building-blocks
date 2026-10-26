@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It plans a setup, then builds it step by step.
 new_slug: jira-project-setup-helper
 name: Jira project setup helper
-summary: Say how your team works. Get Jira projects, workflows, JQL queries and
-  automations set up for it.
+summary: Set up Jira for how your team works. Get a project plan, workflow, JQL queries and automation rules, plus the steps to do by hand.
 job: organise-work
 headline: Jira project setup helper
-subhead: Jira that matches how your team really works. Say how your team plans
-  and ships, Scrum or Kanban, and what you want to track. The skill picks a
-  project type, then proposes issue types, a workflow with the right statuses
-  and transitions, fields and permissions.
+subhead: Tell your AI how your team plans and ships. It picks a project type and designs the issue types, workflow, fields and permissions. It also writes your JQL searches (Jira's search language) and automation rules.
 explain: |
   Jira that matches how your team really works. Say how your team plans and ships, Scrum or Kanban, and what you want to track. The skill picks a project type, then proposes issue types, a workflow with the right statuses and transitions, fields and permissions.
 
@@ -17,22 +13,48 @@ explain: |
 when:
   - You are starting a new team and need a Jira project that fits.
   - Your board has statuses nobody uses and it confuses everyone.
-  - You need a query that finds overdue work across projects.
+  - You need a search that finds overdue work across projects.
   - You want rules that move or assign tickets for you.
+not_for:
+  - "You need org-wide permission or workflow changes: ask your Atlassian admin."
+  - "You want Jira to create the project for you: make it in the Jira web screen, since this skill cannot do that."
+  - "You only want to read or move a few tickets: do it in Jira, no setup plan needed."
 you_give:
   - "How your team works: Scrum, Kanban or other"
   - What you want to track and report
   - Your current setup and pain points (optional)
-  - Jira access through the Atlassian connector
 you_get:
   - A project and workflow design
-  - Ready JQL queries
+  - Ready JQL queries, each with its purpose
   - Dashboard and filter ideas
   - Automation rules
-  - Steps for what to set up by hand
+  - Steps for what to set up by hand in Jira
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to Jira.
+  - Set up the Atlassian connector in your AI tool first. You need a Jira account.
+  - Paste the skill into a chat, or add it to your AI tool.
+  - Describe your team, how it works and what you want to track.
+  - "Check the plan: project type, workflow, JQL table and manual steps."
+  - Create the project and workflow in the Jira web screen. Your AI cannot do this.
+  - Ask your AI to create or search issues with the connector. Code running is needed for the query and workflow checks.
+output_sample:
+  input:
+    - How your team works, such as Scrum or Kanban
+    - What you want to track and report on
+    - Your current setup and pain points (optional)
+  prerequisites:
+    - A Jira account
+    - The Atlassian connector set up in your AI tool, to search and edit issues
+    - An AI that can run code, if you want the query and workflow checks
+  output:
+    - name: Project design
+      contains: The project type, issue types, fields and permission notes that fit how your team works.
+    - name: Workflow
+      contains: The statuses and transitions, checked for dead ends and states nobody can reach.
+    - name: JQL queries
+      contains: Searches written from plain language, each with its purpose, such as overdue work or stale tickets.
+    - name: Dashboard and filter ideas
+      contains: Charts and saved filters to show progress, such as created versus resolved.
+    - name: Automation rules
+      contains: Triggers, conditions and actions for routine moves, such as assigning or moving tickets.
+    - name: Manual setup steps
+      contains: What you must do in the Jira web screen, such as creating the project.

@@ -1,33 +1,26 @@
 slug: borrowing-base-evidence-reviewer
 name: Borrowing base evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: "Recheck your borrowing base from your aging, inventory and loan terms. See how much you can still borrow, and any overadvance."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
 uses:
   - reconcile-an-asset-based-revolver-certificate
   - credit-exposure-limit-checker
 steps:
   - uses: reconcile-an-asset-based-revolver-certificate
-    note: Run the governing workflow when A new aging, inventory appraisal, reserve notice, utilization record or certificate date is supplied.
+    note: "Run when a new aging, appraisal, reserve notice, usage record or certificate date arrives. It ties the aging to its control total, builds the receivables and inventory advances, and finds signed availability. Negative availability stays an overadvance."
   - uses: credit-exposure-limit-checker
-    note: If the new certificate accompanies a specific proposed funding request and a supplied connected-party limit, review the requested exposure against that limit. Headroom remains a monitoring result, not draw permission.
+    note: "Run only if a proposed draw and a connected-party limit are supplied. It checks the exposure against the limit. Headroom is a monitoring result, not permission to draw. Uses your proposed draw, loan records and limit, not step 1's workbook. Hands back headroom or excess to sit beside step 1's availability."
+needs_mode: manual
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This is an arithmetic and tracing check. It is not a lender-certified certificate, and a person who knows the credit agreement must review and sign the real one.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

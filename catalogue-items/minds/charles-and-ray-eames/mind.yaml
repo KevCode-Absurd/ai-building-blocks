@@ -16,6 +16,29 @@ use_cases:
   - "Run a small studio where people can try odd side projects that may lead somewhere"
   - "Review the details of a product, a room or a page, since the details make the whole"
   - "Turn a hobby or a side interest into a new kind of work, one step at a time"
+not_for:
+  - "You want a strict rules checklist for a product: use the Dieter Rams mind, built on his ten design principles."
+  - "You need a chart or data picture to be honest and clear: use the Alberto Cairo mind."
+  - "You need legal, medical or pricing advice: ask a qualified specialist, since this mind only covers design thinking."
+output_sample:
+  input:
+    - The problem you want to solve, in a few plain words
+    - Who it is for and what they need
+    - "Your limits: money, time, size, materials, people"
+    - Any rough version or draft you already have (optional)
+  output:
+    - name: The need
+      contains: One plain line on what the thing is for and who it serves.
+    - name: Constraints
+      contains: A full list of your limits, with a check on which ones are real.
+    - name: What to build and test first
+      contains: A rough version to make this week, and where to watch it fail.
+    - name: Host check
+      contains: What the people you serve will need before they think to ask.
+    - name: Details and what works
+      contains: Plain notes on loose details and what works, then a step back to the big idea.
+    - name: Questions back to you
+      contains: Short questions that fill gaps in your brief, and an ask to show them what you made.
 seats:
   - {seat: "Design by constraint", asks: "What are all the constraints here, and have we accepted them willingly?"}
   - {seat: "The good host", asks: "What will the people we serve need before they think to ask?"}

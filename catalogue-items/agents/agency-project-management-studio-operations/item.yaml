@@ -1,0 +1,41 @@
+slug: agency-project-management-studio-operations
+name: Studio Operations agent
+summary: "Write step-by-step procedures and an operating plan for your small studio or team. Get who owns what, your tools and vendors, and a support routine."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: project-management/project-management-studio-operations.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-studio-operations.md
+  licence: MIT
+  original_name: Studio Operations
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 8a2e5098d94688d191a128b6b2fdbbf3724bfcd2f4944766de6e25a0709f1517
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Studio Operations
+  - Agency Agents
+  - Project Management
+credits:
+  - title: Studio Operations
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/project-management/project-management-studio-operations.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

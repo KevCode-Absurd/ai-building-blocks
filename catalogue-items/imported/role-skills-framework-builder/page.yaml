@@ -2,35 +2,94 @@ thinking: medium
 thinking_why: It turns roles into clear, level-based skill lists.
 new_slug: role-skills-framework-builder
 name: Role skills framework builder
-summary: Name your roles. Get the key skills for each, what good looks like at
-  each level, and matching interview questions.
+summary: "Build a skills framework for your roles: key skills, what good looks like at each level, and interview questions with scoring guides."
 job: hire-people
 headline: Role skills framework builder
-subhead: A skills framework your team can use for hiring, reviews and growth,
-  written role by role. Name your roles and get the key skills for each, plus
-  what good looks like at every level.
+subhead: "Name your roles and the levels you use. You get the key skills for each role, plain examples of each skill at four levels, and interview questions with scoring guides."
 explain: |
-  A skills framework your team can use for hiring, reviews and growth, written role by role. Name your roles and get the key skills for each, plus what good looks like at every level.
+  When reviews feel vague and interviews feel like guesses, the cause is often the same: nobody wrote down what good looks like. This role skills framework builder writes it down, role by role.
 
-  It sorts skills into those every role shares and those that are role-specific. Each skill gets a definition and plain behaviour examples at four levels, so a manager can point to evidence. For one role it picks the five to seven that matter most and sets the level needed. It then turns the profile into job ad criteria, interview questions with scoring guides, review wording and learning ideas, and shows how to check the framework with leaders.
+  It splits skills into two lists: those every role shares, and those for one role. Each skill gets a one-line definition and an example behaviour at four levels, so a manager can point to evidence. For a single role, it picks the five to seven skills that matter most and sets the level needed for each.
+
+  Then it turns that profile into job ad criteria, interview questions with a scoring guide, review wording and learning ideas. It ends by showing how to test the framework with the leaders who manage the role.
 when:
-  - You are hiring for a new role and want interview questions tied to the
-    skills it needs.
+  - You are hiring for a new role and want interview questions tied to the skills it needs.
   - Performance reviews feel vague and you want clear examples for each level.
   - You want to see where your team has skill gaps.
-  - Your existing skill model is old and needs an update.
+  - Your old skill model is out of date and needs an update.
+not_for:
+  - "You need pay bands or salary ranges: ask your HR lead or use a pay survey, since this builds skills, not pay."
+  - "You are hiring one role once and have no team process: use the Structured interview guide builder or Hiring interview designer."
+  - "You need review forms and goal templates: use the Review cycle form builder."
 you_give:
-  - Role titles and the team or company they sit in
-  - Levels you use, such as entry to senior
+  - The role titles and the team or company they sit in
+  - The levels you use, such as entry to senior
   - Company values or culture notes (optional)
-  - An existing framework to update (optional)
+  - An existing skill list or framework to update (optional)
 you_get:
-  - Key skills for each role
-  - Behaviour examples at each level
+  - Skills every role shares, and skills for each role
+  - One example behaviour per skill at four levels
+  - A profile per role with the 5 to 7 key skills and level needed
   - Interview questions with scoring guides
-  - Review and development wording
+  - Review wording and learning ideas for each skill
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. Paste the skill text into the chat.
+  - Paste your role titles, your levels and any values or old framework. If you have no levels, say so and it will suggest four.
+  - Read the shared skills first. Cut any that every manager would not agree on.
+  - Check the example behaviours for one role against someone you know is excellent. Edit what does not fit.
+  - Ask for the interview questions and review wording for one role. Use them in your next hire or review.
+  - Show the framework to the leaders who manage the role and ask if it describes their best people.
+output_sample:
+  input:
+    - The role titles and the team they sit in
+    - The levels you use
+    - Company values or culture notes (optional)
+    - An existing framework to update (optional)
+  output:
+    - name: Shared skills
+      contains: Skills every role needs, each with a one-line definition.
+    - name: Role skills
+      contains: Skills for a single role or role family, each with a one-line definition.
+    - name: Level examples
+      contains: One plain, observable behaviour for each skill at each of four levels.
+    - name: Role profile
+      contains: The five to seven key skills for one role and the level needed for each.
+    - name: Hiring kit
+      contains: Three to five job ad criteria and one interview question per key skill, with a one to four scoring guide.
+    - name: Review and learning wording
+      contains: A review sentence and a learning idea for each skill.
+    - name: Check plan
+      contains: How to test the framework with leaders and what to change.
+how_it_works:
+  - title: Collect roles and levels
+    text: It asks once for roles, levels and any old framework. It suggests four levels if you have none.
+  - title: Sort the skills
+    text: It splits skills into shared and role-specific lists and keeps both short.
+  - title: Write the levels
+    text: Each skill gets a definition and an example behaviour at every level.
+  - title: Build role profiles
+    text: For each role it picks the five to seven skills that matter most.
+  - title: Make the hiring kit
+    text: It turns profiles into ad criteria, interview questions and scoring guides.
+  - title: Plan the check
+    text: It shows how to test the framework with the leaders who manage the role.
+output_shape: |
+  Shared skills: <skill> - <definition>
+  Role skills: <role> - <skill> - <definition>
+  Level examples: <skill> | <level 1> | <level 2> | <level 3> | <level 4>
+  Role profile: <role> - <5 to 7 skills> - <level needed>
+  Hiring kit: <criteria>, <question> + <scoring guide 1 to 4>
+  Review and learning: <review sentence>, <learning idea>
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a writing and structuring job that any strong chat AI does well.
+  inputs:
+    - Job ads you have used before
+    - Two or three people who do the role well, described in plain words
+    - Your current review form
+terms:
+  - term: Competency
+    meaning: A skill that shows up in what a person does, such as planning or clear writing.
+  - term: Skills framework
+    meaning: A written list of the skills each role needs and what good looks like at each level.

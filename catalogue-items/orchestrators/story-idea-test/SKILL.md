@@ -44,7 +44,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Write the script or draft from the scene list.
 
-3. **Voice-over stripping test.** Use the skill `voice-over-stripping-test`. A verdict on each line: does the story work without it?
+3. **Voice-over stripping test.** Use the skill `voice-over-stripping-test`. Give it the script you wrote from the scene list, and the scene list from step 2 for what each scene should do. A verdict on each line: does the story work without it?
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

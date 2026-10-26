@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks the right method for each image task.
 new_slug: image-processing-coder
 name: Image processing coder
-summary: Say what to do to your pictures. Get MATLAB code that enhances,
-  segments, counts or measures them.
+summary: Describe what you want done to your images. Get MATLAB image processing code that cleans, splits, counts or measures them.
 job: build-software
 headline: Image processing coder
-subhead: Say what to do to your pictures. Get MATLAB code that enhances,
-  segments, counts or measures them. Bring a sample image or a description of
-  it. Use the result to plan your next step.
+subhead: Say what to do to your pictures. Get MATLAB code that enhances, segments, counts or measures them. Bring a sample image or a description of it. Use the result to plan your next step.
 explain: |
   Working MATLAB code that cleans up, splits, counts or measures what is in your pictures, so you skip hours of trial and error with the Image Processing Toolbox. It needs MATLAB with that toolbox.
 
@@ -19,6 +16,10 @@ when:
   - You need to measure the size of objects in a set of pictures.
   - You want to align or stitch several images into one.
   - You are unsure which MATLAB function suits your image problem.
+not_for:
+  - "You work with DICOM or NIfTI medical scans: use the sibling medical imaging skill listed in the SKILL.md routing table."
+  - "You have hyperspectral data or factory defect inspection: use the sibling skills named in the SKILL.md routing table."
+  - "You need point clouds, 3-D reconstruction, video stabilization or code generation: use Computer Vision Toolbox or MATLAB Coder directly."
 you_give:
   - A sample image or a description of it
   - What you want done to it
@@ -29,8 +30,28 @@ you_get:
   - Notes on data types and image size
   - Measurements or masks from your images
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Image Processing Toolbox.
+  - Open your AI chat and paste in this skill's instructions, or load the skill folder if your AI tool supports files.
+  - Describe your image problem in plain words, such as dark, noisy, blurry or uneven light.
+  - Add a sample image or a short description of it, plus what you want done, such as counting cells about 15 pixels wide.
+  - Run the code in MATLAB. You need the Image Processing Toolbox for it to work.
+  - Check the figures and counts against a few images you know well, then run the whole folder.
+output_sample:
+  input:
+    - A sample image, or a plain description of it
+    - What you want done, such as count, measure, clean up or align
+    - Any known sizes, such as how wide each object is (optional)
+    - Your MATLAB version and toolbox list (optional)
+  prerequisites:
+    - MATLAB with the Image Processing Toolbox
+    - An AI that can run MATLAB code, or that you can paste code from into MATLAB
+  output:
+    - name: Method choice
+      contains: The method picked for your task and the reason it fits your image problem.
+    - name: MATLAB code
+      contains: A script that reads your images, processes them and writes or shows the result.
+    - name: Data type and size notes
+      contains: Which data types and row and column order the code uses, so results stay correct.
+    - name: Masks or measurements
+      contains: The masks, counts or measurements the code produces from your images.
+    - name: Figures
+      contains: Plots that show the image before and after, so you can check the result.

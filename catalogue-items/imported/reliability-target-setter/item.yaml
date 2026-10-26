@@ -1,6 +1,6 @@
 slug: reliability-target-setter
 name: Reliability target setter
-summary: Name your service. Get service level targets, error budgets and alerts to track them.
+summary: "Set reliability targets for your service. Get measures of what users feel, an error budget and alert rules you can paste."
 category: general
 boards: []
 type: skill

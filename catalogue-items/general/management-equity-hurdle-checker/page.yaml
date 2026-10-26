@@ -1,32 +1,67 @@
 new_slug: management-equity-hurdle-checker
 name: Management equity hurdle checker
 headline: Management equity hurdle checker
-summary: Check a vested management participation percentage above a fixed equity-value hurdle.
+summary: Check what management earns above a fixed equity hurdle. Give it your incentive terms and equity value. You get the vested payout and any shortfall.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Vested management proceeds, senior residual and hurdle shortfall. Share signed incentive terms, net distributable equity value, fixed senior hurdle, management participation fraction and vested fraction.
+subhead: Give it your signed incentive terms and the equity value. It takes the hurdle off the equity value, then applies the participation and vesting percentages. You get the payout, what is left for others, and any shortfall.
 explain: |-
   Vested management proceeds, senior residual and hurdle shortfall.
 
   Private equity incentives. Illustrative figures only. Equity160 less hurdle100 gives60;10% participation with75% vesting pays4.5. Equity80 pays management zero.
 when:
-  - You need vested management proceeds, senior residual and hurdle shortfall.
-  - You work on private equity incentives and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You need to know what management earns above a fixed equity hurdle.
+  - A deal team wants to check a private equity incentive plan.
+  - A reviewer must trace the payout back to its inputs.
+  - Equity value moves and you want to see when the hurdle is met.
+not_for:
+  - "Your hurdle has a catch-up, ratchet, option exercise price or leaver forfeiture: ask a legal or tax adviser, because this checker leaves those out."
+  - "You need a tax, employment or fair-value accounting view: use an accountant or tax adviser."
+  - "You need legal advice on whether the award terms apply: ask a lawyer who has read the signed documents."
 you_give:
-  - Signed incentive terms, net distributable equity value, fixed senior hurdle, management participation fraction and vested fraction.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your signed incentive terms.
+  - Net equity value left to share out, with its date.
+  - The fixed senior hurdle amount.
+  - Management participation percentage.
+  - Vested percentage.
 you_get:
-  - Vested management proceeds, senior residual and hurdle shortfall.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The vested management payout.
+  - The equity value left for other holders.
+  - The hurdle shortfall, if equity value is below the hurdle.
+  - An editable spreadsheet with your inputs and formulas.
+  - A list of missing inputs and checks that did not run.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and open it in an AI that can work with files.
+  - Share your incentive terms, equity value, hurdle, participation and vesting. Add the currency and scale.
+  - "Ask your AI to follow SKILL.md. Example: equity 160, hurdle 100, participation 10%, vested 75% gives 4.5."
+  - Let it build and recalculate the spreadsheet. Running the script needs Node.js 20 or later.
+  - Read the assumptions, reconciliations and the CHECKS MISSED line before you rely on the result.
+output_sample:
+  input:
+    - Your signed incentive terms
+    - Net equity value left to share out, with its date
+    - The fixed senior hurdle amount
+    - Management participation percentage and vested percentage
+    - Reporting date, currency and scale
+  prerequisites:
+    - An AI that can create and open spreadsheet files
+    - Node.js 20 or later, only if you want the bundled calculation script run
+  output:
+    - name: Vested management proceeds
+      contains: What management is paid after the hurdle, using the participation and vested percentages.
+    - name: Senior residual
+      contains: The equity value left for other holders after the management payout.
+    - name: Hurdle shortfall
+      contains: How far equity value falls below the hurdle, shown as zero payout to management.
+    - name: Editable workbook
+      contains: A spreadsheet with inputs, formulas and checks that you can change and recalculate.
+    - name: Scope and dated sources
+      contains: Where each input came from, with its date, currency and scale.
+    - name: Reconciliations
+      contains: A check that management payout plus other-holder residual equals the equity value above the hurdle and below it.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not supplied and checks that failed or could not run, or none.
 how_it_works:
   - title: 1. Confirm management participates only above a fixed monetary hurdle without catch-up or ratchet; separate purchased rollover equity
     text: Confirm management participates only above a fixed monetary hurdle without catch-up or ratchet; separate purchased rollover equity.

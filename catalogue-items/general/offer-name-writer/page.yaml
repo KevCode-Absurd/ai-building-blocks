@@ -1,6 +1,6 @@
 new_slug: offer-name-writer
 name: Offer name writer
-summary: Paste your offer and buyer. Get ten names from five parts, three to test and a renaming order.
+summary: Name your offer in minutes. Give it your offer and buyer, and get ten offer name ideas, three to test and a plan to refresh a tired name.
 job: make-offer
 thinking: low
 thinking_why: It follows a fixed naming formula and writes short options. Judging the best names is yours.
@@ -14,6 +14,10 @@ when:
   - Your offer has no name or a generic one.
   - Your ads have stopped working but the offer has not changed.
   - You want to test a few wrappers for the same offer.
+not_for:
+  - "Your offer has no fixed time or result: use a plain product name, or ask a customer how they would describe it."
+  - "You need to find or shape the offer itself: use the Hidden offer finder first, then come back for the name."
+  - "You want ad copy, not a name: use the Candid line writer once the name is chosen."
 you_give:
   - "Your offer: what is in it and the result"
   - Your buyer (optional)
@@ -28,6 +32,29 @@ how_to_use:
   - Paste the offer and the buyer in a sentence each.
   - Read the ten names out loud and cross out any you cannot say in one breath.
   - Run the three picks in ads or posts and keep the winner as the control.
+output_sample:
+  input:
+    - "Your offer: what is in it and the result"
+    - Your buyer (optional)
+    - Rules from your ad platform or field (optional)
+    - Your brand brain (optional)
+  output:
+    - name: The parts
+      contains: Options for the reason why, buyer, goal, time and container word.
+    - name: Ten names
+      contains: Ten short names, each with the parts it uses marked.
+    - name: Three to test
+      contains: The three names to run first and why each was picked.
+    - name: Bonus and item names
+      contains: Short names for the main bonuses and sub-items, in the same pattern.
+    - name: Test plan
+      contains: How to run the three names with equal budget and keep a winner.
+    - name: Refresh order
+      contains: What to change, in order, when the offer tires.
+    - name: Missing
+      contains: Gaps in what you gave, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 how_it_works:
   - title: Gives a reason why
     text: "A believable reason for the offer: a season, an opening, an anniversary."

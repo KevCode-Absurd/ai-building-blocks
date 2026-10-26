@@ -2,36 +2,96 @@ thinking: low
 thinking_why: It repeats a fixed step for each order.
 new_slug: bulk-order-fulfiller
 name: Bulk order fulfiller
-summary: Give it orders and tracking numbers. Get them fulfilled in one batch,
-  with customer alerts if you choose. Changes live orders.
+summary: Mark many Shopify orders as shipped in one batch. Give it your order tracking numbers, check the preview, then it adds tracking to each order.
 job: run-your-store
 headline: Bulk order fulfiller
-subhead: Fulfil many open Shopify orders in one batch, adding tracking numbers
-  and, if you choose, sending shipping emails. It changes live orders, so always
-  preview first.
+subhead: Give it your tracking numbers and your Shopify location. It shows a preview of every order it will mark as shipped, then adds the tracking to each one. It changes live orders and cannot be undone.
 explain: |
-  Fulfil many open Shopify orders in one batch, adding tracking numbers and, if you choose, sending shipping emails. It changes live orders, so always preview first.
+  Marking fifty orders as shipped one by one takes a long time. This skill does it in one batch. It finds the open orders at your location, matches each to a row in your tracking list by order number, and adds the tracking.
 
-  The skill pulls every open fulfillment order for one location, up to 250 at a time with paging. You supply a list of order, tracking number, carrier and link. By default it runs as a dry run that only shows what it would do. It creates one fulfilment per order when you approve. Fulfilments cannot be undone through the API. It does not print shipping labels. You need the Shopify CLI signed in with permission to read orders and write fulfilments.
+  It always shows a preview first. The preview lists every order, carrier and tracking number, and says if customers will get an email. Nothing changes until you say go ahead. Customer emails stay off unless you turn them on.
+
+  It does not buy or print labels, so do that in your carrier tool first. It skips orders that ship in parts or have more than 10 lines, and lists them for you to check by hand. Shopify does not let you undo a fulfilment through this route.
 when:
   - You shipped fifty orders today and need to mark them all fulfilled.
   - You have a sheet of tracking numbers from your carrier.
-  - You want to preview exactly which orders will change before committing.
-  - You want customers to get tracking emails automatically.
+  - You want to see exactly which orders will change before anything happens.
+  - You want customers to get a tracking email, and you want to see how many first.
+not_for:
+  - You need shipping labels. Buy them in your carrier tool first, then bring the tracking numbers here.
+  - You ship orders in parts or send each item on its own. This skips them, so fulfil those by hand in Shopify.
+  - You want to pause orders instead of shipping them. Use the Order hold manager.
 you_give:
-  - Your store address
-  - The fulfilment location
-  - Tracking numbers, carriers and links
-  - Whether to email customers (optional)
+  - Your store address, such as mystore.myshopify.com
+  - The location the orders ship from
+  - A list of order numbers with tracking number, carrier and tracking link
+  - Whether to email customers (optional, off if you do not say)
 you_get:
-  - A preview of orders to fulfil
-  - Fulfilments created in one batch
-  - Tracking added to each order
-  - Customer emails if turned on
-  - A summary of results
+  - A preview table of orders to fulfil
+  - A list of orders it skipped, for you to check
+  - A list of tracking rows that match no order
+  - Fulfilments created, one per order, after you say go
+  - A summary and a results file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store.
+  - Sign in to your store with Shopify CLI. Your sign-in needs permission to read orders and write fulfilments.
+  - Give your AI the skill, your store address, your location and your tracking list. Say whether customers should get an email.
+  - Ask for the preview first. Check the order numbers, tracking numbers and the count of emails.
+  - If it looks right, say go ahead. Then read the results for each order and fix any errors in Shopify.
+  - Before you use it on real orders, check that the Shopify API version in the skill is still current. We have not run it on live orders.
+how_it_works:
+  - title: Ask for what is missing
+    text: It asks once for the store, location, tracking list and email choice. It never makes up a tracking number.
+  - title: Find open orders
+    text: It pulls the open orders for your location, up to 250 at a time, and pages until it has them all.
+  - title: Match your tracking list
+    text: Each tracking row is matched to an order by order number. Rows with no order are listed.
+  - title: Skip what needs a person
+    text: Orders that ship in parts, or have more than 10 lines, are left out and listed for you.
+  - title: Show the preview
+    text: A table of orders, carriers and tracking numbers. It stops here until you say go ahead.
+  - title: Create the fulfilments
+    text: One fulfilment per order with its tracking. Rate limits are retried up to 3 times.
+output_shape: |
+  Preview: <order, carrier, tracking number, email on or off>
+  Skipped for manual check: <order, reason>
+  Tracking rows with no order: <list>
+  After go ahead:
+    OUTCOME SUMMARY: <found, created, skipped, unmatched, emails requested, errors>
+    CSV: <order, fulfilment order ID, fulfilment ID, tracking, carrier, email, status>
+output_sample:
+  input:
+    - Your store address
+    - The location the orders ship from
+    - Order numbers with tracking number, carrier and link
+    - Email customers or not (optional, off by default)
+  prerequisites:
+    - An AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify CLI signed in to your store
+    - Permission to read orders and write fulfilments
+    - Shipping labels already bought in your carrier tool
+  output:
+    - name: Preview table
+      contains: Each order with its carrier, tracking number and whether the customer gets an email.
+    - name: Skipped for manual check
+      contains: Orders with partial shipments or many lines, and why each was left out.
+    - name: Unmatched tracking rows
+      contains: Tracking numbers in your list that match no open order.
+    - name: Outcome summary
+      contains: Counts of orders found, fulfilled, skipped, emails requested and errors.
+    - name: fulfillment_batch CSV
+      contains: One row per order with its tracking, fulfilment ID and result.
+works_best_with:
+  tools:
+    - name: Claude Code, Cursor, Codex or Gemini CLI
+      why: They can run Shopify CLI on your machine, which a chat window cannot.
+  inputs:
+    - A tracking export from your carrier tool, with the order number in one column.
+    - A test run on one or two orders before you do the whole batch.
+terms:
+  - term: Fulfilment
+    meaning: The record in Shopify that says an order has shipped, with its tracking.
+  - term: Dry run
+    meaning: A preview that shows what would change, without changing anything.
+  - term: Location
+    meaning: The warehouse or shop in Shopify that the orders ship from.

@@ -1,6 +1,6 @@
 new_slug: share-of-search-tracker-planner
 name: "Share of search tracker planner"
-summary: "Paste your brand and your rivals. Get a monthly share-of-search tracker and how to read it."
+summary: "Set up a share of search tracker for your brand and rivals. Get a term list, a monthly sheet and rules to read the trend."
 job: track-numbers
 thinking: low
 thinking_why: "It sets up a known measure from given names; the design is fixed, the terms vary."
@@ -17,6 +17,10 @@ when:
   - "You spend on brand and want a measure that moves before sales do."
   - "You suspect a rival is gaining and have no number to show it."
   - "Click tracking has got worse and you need something it cannot break."
+not_for:
+  - "Your buyers rarely search for brands by name: use your sales numbers or click data instead."
+  - "You need to know why a rival gained: ask a few recent buyers how they found you, as search share cannot tell you that."
+  - "You want an exact count of visits to your own site: use your website analytics, as this only shows relative search share."
 
 you_give:
   - "Your brand name, misspellings and nicknames"
@@ -34,6 +38,35 @@ how_to_use:
   - "Add your market and, if you have it, monthly sales."
   - "Set up the sheet from COLLECTION and FORMULA, and pull the first twelve months."
   - "Put the same day each month in your calendar and read the trend, not the month."
+output_sample:
+  input:
+    - Your brand name, with common misspellings and nicknames
+    - Your rivals, with their common spellings
+    - What people call your category
+    - Your market, such as the countries to track
+    - Your monthly sales (optional)
+  prerequisites:
+    - A free search trends tool that shows relative search volume
+    - A spreadsheet
+  output:
+    - name: TERMS
+      contains: Each brand with its main term, misspellings, nicknames, and any exclusion or qualifier for names that are also common words.
+    - name: COLLECTION
+      contains: The tool, region, day of the month, who pulls the numbers, and the sheet columns.
+    - name: FORMULA
+      contains: The share of search formula as one sheet formula, so each brand's share adds up to 100.
+    - name: READING RULES
+      contains: What counts as a real move, what to compare it with, and the lead tendency marked to test.
+    - name: ALARMS
+      contains: "Two lines: a sustained fall in your share with flat spend, and a sustained rise by a rival."
+    - name: FIRST REPORT
+      contains: What to pull for the past twelve months, what to chart, and what to look for.
+    - name: LIMITS
+      contains: Three lines on what the measure cannot tell you.
+    - name: MISSING
+      contains: Any market, rivals or sales you did not give.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Builds the term list"

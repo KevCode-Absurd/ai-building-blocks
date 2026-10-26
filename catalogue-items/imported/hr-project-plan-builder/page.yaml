@@ -2,34 +2,81 @@ thinking: low
 thinking_why: Project plans follow a standard shape.
 new_slug: hr-project-plan-builder
 name: HR project plan builder
-summary: Give it an HR project idea. Get a charter, timeline, risk list and
-  status report template.
+summary: Plan an HR project, such as a new HR system or policy rollout, with a charter, milestone timeline, risk list and weekly status report.
 job: hire-people
 headline: HR project plan builder
-subhead: A project plan for an HR change that people can follow from kickoff to
-  review. Give it an idea such as a new HR system or a policy rollout and get a
-  charter, a timeline, a risk list and a status report template.
+subhead: "Describe an HR project idea, your dates, budget and who is involved. It writes the charter, a milestone timeline, a who-does-what chart, a communication plan and a risk list. It adds a rule for handling scope changes and templates for status reports and lessons learned."
 explain: |
-  A project plan for an HR change that people can follow from kickoff to review. Give it an idea such as a new HR system or a policy rollout and get a charter, a timeline, a risk list and a status report template.
+  A project plan for an HR change that people can follow from kickoff to review. It suits a new HR system, a policy rollout, or a change that touches several teams and places.
 
-  It writes a charter that sets goals, scope and what is left out. It builds a milestone timeline for your length of project and a chart of who is responsible, accountable, consulted and informed across HR, IT and the business. It plans communication and lists risks with fixes. It adds scope change rules, a budget plan, phased rollout and a lessons-learned template.
+  The charter comes first. It sets the goal, what is in and out of scope, and success measures you can count. The timeline, the chart of who does what, the communication plan and the risk list all build on that charter, so they agree with each other.
+
+  If you have no dates or budget, it writes TO DECIDE and uses relative timing, such as week 3. It does not make them up. It ends with the three decisions your sponsor must make before you start.
 when:
   - You were asked to run an HR system rollout and have no plan.
-  - A project is drifting and you need to define scope and owners.
+  - A project is drifting and you need to settle scope and owners.
   - Leaders want a regular status update in a set format.
-  - You are rolling a program out in phases across several locations.
+  - You are rolling out a program in phases across several sites.
+not_for:
+  - "You need a legal case plan or a plan for one employee's situation: use your HR counsel, or the Exit interview and grievance guide for a fair process."
+  - "You are choosing a vendor first: use the HR vendor selection planner, then come back to plan the rollout."
+  - "You want to automate HR tasks and decide which to do first: use the HR process automation designer."
+  - "You need a risk list of people and legal risks across the whole team: use the People risk register builder."
 you_give:
-  - The HR project idea and goal
-  - Target dates and budget
-  - People and teams involved
-  - Known risks (optional)
+  - The HR project idea and its goal
+  - Target start and end dates, if set
+  - Budget, if set
+  - The people and teams involved, such as HR, IT, finance and legal
+  - Risks you already know about (optional)
 you_get:
-  - A project charter
-  - A milestone timeline
-  - A responsibility chart and risk list
-  - A status report template
+  - A one-page project charter
+  - A milestone timeline with owners
+  - A who-does-what chart and a communication plan
+  - A risk list with a fix and an owner for each
+  - A rule for handling scope changes
+  - Templates for the weekly status report and lessons learned
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill text. Then paste your project idea, goal, dates, budget and the teams involved.
+  - Read the charter first. Check the scope and the success measures with your sponsor before you use the rest.
+  - If it wrote TO DECIDE anywhere, settle those items first. Then ask it to update the timeline.
+  - Copy the status report template into your weekly email or meeting notes. Use the lessons-learned template when the project closes.
+output_sample:
+  input:
+    - The HR project idea and its goal
+    - Target dates and budget, if set
+    - The people and teams involved
+    - Known risks (optional)
+  output:
+    - name: Charter
+      contains: Goal, why now, scope in and out, success measures, sponsor, lead, budget and main risks.
+    - name: Milestones
+      contains: Each phase with an owner and a date, or a week number if you gave no dates.
+    - name: Who does what
+      contains: A chart of who does the work, signs off, is consulted and is told, across teams.
+    - name: Communication plan
+      contains: Each audience with its message, channel and timing.
+    - name: Risks
+      contains: Likelihood, impact, fix and owner for each of the top risks.
+    - name: Change control
+      contains: How a scope change is raised, who decides and what is checked.
+    - name: Status and lessons templates
+      contains: A weekly report layout and a close-out template.
+how_it_works:
+  - title: Collect the basics
+    text: It asks for goal, dates, budget and teams, and writes TO DECIDE for anything missing.
+  - title: Write the charter
+    text: It sets scope and success measures you can count.
+  - title: Build the plan
+    text: It makes the timeline, the who-does-what chart and the communication plan from the charter.
+  - title: List the risks
+    text: It lists risks with fixes and owners.
+  - title: Add the controls
+    text: It adds a change rule and the status and lessons templates.
+terms:
+  - term: Charter
+    meaning: A one-page agreement on what the project will do, for whom and by when.
+  - term: Scope
+    meaning: What the project covers, and what it leaves out.
+  - term: RACI
+    meaning: A chart of who is responsible, accountable, consulted and informed.

@@ -10,6 +10,59 @@ metadata:
 
 Comprehensive DEI support — from building diversity and inclusion strategies and training programs to measuring inclusion metrics, managing ERGs, addressing bias, and creating equitable HR processes.
 
+## When to use it
+
+Use it to turn your goals and team size into a written inclusion plan.
+
+Skip it when:
+
+- You need a legal review, a compliance check or a pay audit. Ask an employment lawyer or a specialist adviser.
+- You only want a fair job post. Use the Inclusive job post writer.
+- You only want survey questions. Use the Employee survey designer.
+
+## What to gather first
+
+Ask for anything missing once, in one message. Mark any answer you still lack as MISSING. Never invent your team numbers, survey results or progress figures.
+
+1. Team size, industry and country.
+2. How you hire, promote and set pay today.
+3. Your goals for the next 1 year or 3 years.
+4. Survey results or team data you already have (optional).
+5. Who must approve the plan, and any leaders who may push back.
+
+## Steps
+
+1. Summarise the starting point in a short paragraph from what the user gave. Say what you do not know.
+2. Set 3 to 5 goals that fit the team size. Each goal says what will change and how you will see it.
+3. Draft the roadmap for the length the user chose, with milestones, an owner role and a measure for each.
+4. Write fair hiring steps: how roles are written, how people are screened, who is on interview panels, how choices are recorded.
+5. Add the people practices: bias training for managers, mentoring, employee resource groups (staff-run groups for a shared background or interest), and a pay review step.
+6. Build the scorecard and a short survey plan. Do not fill in starting values you were not given.
+7. Write short answers to the pushback the user expects from leaders.
+
+## Output format
+
+Return one plan with these headings, in this order:
+
+1. Starting point
+2. Goals
+3. Roadmap (table: when, milestone, owner, measure)
+4. Fair hiring steps (numbered list)
+5. People practices (bias training, mentoring, groups, pay review)
+6. Scorecard (table: measure, how to collect it, starting value, target)
+7. Survey plan
+8. Talking points for leaders
+
+## Rules
+
+- Do not give statistics or cite studies unless the user supplied them. Name a source the user can check, or say you have none.
+- Say which data needs consent or is restricted by law in the user's country before suggesting you collect it.
+- Treat the plan as a draft for HR and leaders to approve. It is not legal advice.
+
+## After you run it
+
+Share the plan with one leader and one employee for comment. Then use the Employee survey designer for the survey and the Mentoring program builder for the mentoring step.
+
 ## Supported tasks
 
 - Developing comprehensive diversity and inclusion strategies
@@ -27,12 +80,12 @@ Comprehensive DEI support — from building diversity and inclusion strategies a
 
 ### Diversity and inclusion strategy
 
-1. "Describe the business case for diversity and inclusion and its impact on organizational performance."
+1. "Describe the business case for diversity and inclusion. Cite sources the user can check, and give no figures without a source."
 2. "Provide guidance on creating a comprehensive diversity and inclusion strategy aligned with [organization's] mission and goals."
 3. "What measures can ensure that diversity and inclusion are embedded in our organization's core values?"
 4. "How should I develop a diversity and inclusion roadmap with measurable milestones for [1 year/3 years]?"
 5. "How can HR managers address resistance from senior leadership when introducing diversity and inclusion initiatives?"
-6. "Share examples of successful diversity and inclusion initiatives that resulted in positive cultural and business outcomes."
+6. "Share examples of diversity and inclusion initiatives and their outcomes. Name only examples you can source, and say where the user can check them."
 
 ### Inclusive recruiting
 

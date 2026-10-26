@@ -1,6 +1,6 @@
 new_slug: turn-a-static-ad-into-a-sale-with-a-matching-page
 name: "Turn a static ad into sales with a matching page"
-summary: Give it your image ad and offer. Get a stronger ad, a page that matches it and a rules check.
+summary: "Turn a static ad into a sale: fix your image ad, get a landing page that repeats its promise, and check both against Meta's rules."
 job: make-image-ads
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your image ad gets clicks, but few of those visitors buy from the page.
   - You are about to launch a new static ad and want its page written to match from the start.
   - You wrote the ad and the page at different times, and the promise has drifted.
+not_for:
+  - "You have a video ad: use the Pre-launch ad checker, or the Video hook scorer if you only need the first seconds."
+  - "You only want to check ad rules before launch: use the Meta ad policy checker."
+  - "You have no landing page plan yet and only want a new ad picture: use the Single image ad planner."
 you_give:
   - Your image ad, attached as a file
   - The headline and primary text that go with it
@@ -30,6 +34,26 @@ how_to_use:
   - Attach your ad image and paste its headline and text. Add your offer, price and guarantee.
   - Read the fixed ad after step 1. The page is written from it, so change it now if a fix is wrong.
   - Make the fixes the last check lists, then publish the ad and page together.
+output_sample:
+  input:
+    - Your image ad, attached as a file
+    - The headline and primary text that go with the ad
+    - Your offer, price and terms
+    - Your brand brain (optional)
+  prerequisites:
+    - An AI that can read attached files and an image
+    - Your brand brain from the Website brand brain builder (optional, the run works without it)
+  output:
+    - name: Static ad critic
+      contains: A score out of 100, the path the eye follows, ranked fixes, two stronger headlines and fixed ad copy.
+    - name: Ad awareness stage checker
+      contains: How much the buyer knows at the start, where picture and words clash, a score and rewrites.
+    - name: Ad-matched landing page writer
+      contains: A page brief, a first screen that repeats the ad's promise, buyer doubts with answers and a cost block.
+    - name: Meta ads compliance checker
+      contains: A verdict, a score out of 100, findings with fixes and a rewritten ad that passes.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Static ad critic
     text: Scores your ad across nine checks, traces what the eye sees first, and writes two stronger headlines. Its fixed ad copy feeds every later step.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It orders problems by difficulty and checks variety.
 new_slug: practice-problem-set-writer
 name: Practice problem set writer
-summary: Give it a skill. Get practice problems that rise in difficulty and vary
-  just enough, for worksheets or homework.
+summary: Write a practice problem set that rises in difficulty and varies just enough. Give it a skill, a level and a count for worksheets or homework.
 job: teach-and-train
 headline: Practice problem set writer
-subhead: A set of practice problems that start easy, grow harder step by step
-  and change just enough to build real skill. Ready for worksheets, homework or
-  tutoring.
+subhead: A set of practice problems that start easy, grow harder step by step and change just enough to build real skill. Ready for worksheets, homework or tutoring.
 explain: |
   A set of practice problems that start easy, grow harder step by step and change just enough to build real skill. Ready for worksheets, homework or tutoring.
 
@@ -18,6 +15,10 @@ when:
   - Your learners can copy the example but fail on a new version.
   - You tutor and want a smooth ramp in difficulty.
   - You want mixed review problems instead of ten the same.
+not_for:
+  - "You need a full unit plan: plan the unit yourself or ask your AI for a unit outline first."
+  - "You need an assessed exam paper: write it with your exam board's past papers, since this set is for practice only."
+  - "Learners have not seen a model yet: show a worked example first, then come back to build the practice set."
 you_give:
   - Skill or topic to practise
   - Learner level or age
@@ -29,7 +30,24 @@ you_get:
   - Answer key
   - Notes on common mistakes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code or files are needed.
+  - Paste the prompt from the skill into the chat.
+  - Fill in the skill to practise, your learners' level and how many problems you want.
+  - Add the errors learners often make and the worked example they have seen, if you have them.
+  - Read the set. Check the order of difficulty and fix any problem that looks wrong before you print it.
+output_sample:
+  input:
+    - The skill to practise
+    - Your learners' age or year group and current level
+    - How many problems you want
+    - Errors learners often make (optional)
+    - The worked example they have already seen (optional)
+  output:
+    - name: Problem sequence
+      contains: Problems in order from easy to hard, each with its difficulty level and the reason it is placed there.
+    - name: Scaffold reduction plan
+      contains: How help fades across the set, from guided problems to independent ones.
+    - name: Differentiation
+      contains: Ways to give extra support or extra challenge to different learners.
+    - name: Monitoring guide
+      contains: What to watch for while learners work and when to step in.

@@ -2,34 +2,99 @@ thinking: high
 thinking_why: It reads a whole session log and finds patterns.
 new_slug: coding-session-retro-leader
 name: Coding session retro leader
-summary: Finish a coding session. Get what slowed your AI down and the changes
-  that would help next time.
+summary: Review a finished AI coding session and get a ranked list of what slowed it down and which repo changes will speed up the next one.
 job: build-software
 headline: Coding session retro leader
-subhead: After a coding session, you learn what slowed your AI down and what
-  changes to your setup would help next time. The fixes target the working
-  environment, not your prompts.
+subhead: Point it at a coding session record. It reads what your AI did, finds where time and effort went to waste, and lists changes to your repo and setup, ranked by severity. The fixes target the working environment, not your prompts.
 explain: |
-  After a coding session, you learn what slowed your AI down and what changes to your setup would help next time. The fixes target the working environment, not your prompts.
+  After a long AI coding session, the usual lesson is "write a better prompt". This skill looks somewhere else. It asks what in your repo made the work slow or error-prone, and what to change so the next session goes better.
 
-  It reads the session record, by default the current one, and sorts problems into groups. These include navigation, where the agent took too long to find files, and automated checks that could have caught its mistakes. It reads the repo's own lint and CI commands first, so an existing but unplugged check counts as the finding. A repo with no pre-commit hook or CI job gets flagged on its own. Each suggestion names the change to make.
+  It reads the session record, by default the current session. It looks for seven kinds of problem: files that were hard to find, mistakes an automated check could have caught, rules the reviewer should enforce, a bloated instruction file, expensive tool calls, instruction lines that change nothing and facts the AI could not reach. It reads your repo's own lint and CI commands first, so a check that exists but is not wired in becomes the finding. A repo with no pre-commit hook or CI check is flagged on its own.
+
+  Each suggestion names the exact change to make. You get the list ranked by severity and choose what to apply.
 when:
   - Your AI spent an hour hunting for the right file.
   - The agent kept making the same type of mistake.
   - You want to improve your repo for future agent runs.
   - You finished a long session and want lessons from it.
+not_for:
+  - "The session was short with no repeated mistakes: there is little to learn. Skip the retro."
+  - "You want a review of one bug or one diff: use the Pull request reviewer or the Bug diagnoser."
+  - "You want a team meeting agenda after a sprint: use the Sprint retro facilitator."
+  - "Your AI tool does not save session logs: paste the key parts of the session in by hand, or skip this."
 you_give:
-  - The session to review, or the current one
-  - Access to the session logs
-  - The repo's check commands (optional)
+  - The session to review, or say "the current one"
+  - Access to the saved session logs on your computer
+  - Your repo, so it can read the lint, test and CI commands
+  - Your instruction files, such as AGENTS.md or CLAUDE.md (optional)
 you_get:
-  - What slowed the session
-  - Missing checks and guardrails
-  - Navigation pointers to add
-  - A short list of changes to make
+  - A ranked list of what slowed the session
+  - Checks that are missing or not wired in
+  - Navigation pointers to add, so files are easier to find
+  - Rules to add or remove for your code reviewer
+  - For each item, the exact change to make
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your session logs.
+  - Open your AI coding tool in the repo you worked in. It needs to read your files and your saved session logs.
+  - Paste this skill. Name the session to review, or say "the current session".
+  - Tell it to leave out any secrets or keys it finds in the logs. Never paste logs with passwords into a chat.
+  - Read the list from the top. Each item names a category, the evidence and the change to make.
+  - Pick the changes worth making. Ask your AI to apply them one at a time, then run your tests.
+  - Run another session on a similar task and see if the same problem comes back.
+how_it_works:
+  - title: Read the session
+    text: It reads the saved record of the session you name, or the current one.
+  - title: Check the repo's own checks
+    text: It reads your lint, type and test commands and your CI setup before it suggests new ones.
+  - title: Sort the problems
+    text: It sorts what went wrong into navigation, automated checks, coding standards, instruction file size, tool cost, empty rules and missing information.
+  - title: Choose the right fix
+    text: A mistake that follows a fixed pattern gets an automated check. Only judgment calls become written rules.
+  - title: Rank and present
+    text: It lists the candidates by severity, each with the exact change.
+output_shape: |
+  Session reviewed: <session and date range>
+  1. <Category>: <problem>
+     Evidence: <what happened in the session>
+     Change: <the exact file or check to add, change or remove>
+  2. <Category>: <problem>
+     Evidence: <...>
+     Change: <...>
+  Left alone: <categories with nothing to fix>
+output_sample:
+  input:
+    - The coding session to review, or the current one
+    - The saved session logs on your computer
+    - Your repo, with its lint, test and CI commands
+    - Your instruction files such as AGENTS.md or CLAUDE.md (optional)
+  prerequisites:
+    - An AI tool that can read your repo and your session logs
+  output:
+    - name: Navigation findings
+      contains: Places where the AI took too long to find files, with a pointer to add.
+    - name: Automated check findings
+      contains: Mistakes a lint, type or test check could have caught, or checks that exist but are not wired in.
+    - name: Coding standards findings
+      contains: Reviewer rules to add, remove or clarify, with fixed-pattern mistakes turned into checks instead.
+    - name: Instruction file findings
+      contains: Steering lines that should move to checks or reviewer rules, and lines that change nothing.
+    - name: Tool cost and information findings
+      contains: Costly tool calls to cut down and facts the AI could not reach, such as dev server logs.
+    - name: Ranked list
+      contains: All findings in order of severity, each with the exact change to make.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It keeps session logs on your machine and can read your repo and CI files.
+    - name: Codex or Cursor
+      why: Both can read the repo. Paste the session log if the tool will not read it.
+  inputs:
+    - Your CI workflow file
+    - A note on which mistakes bothered you most
+    - Your current instruction file
+terms:
+  - term: Navigation pointer
+    meaning: A short note that tells your AI where to find something in the repo.
+  - term: Guardrail
+    meaning: An automated check, such as a lint rule or a CI test, that catches mistakes without a person.
+  - term: Reviewer agent
+    meaning: A second AI pass that checks a change against your coding rules before you merge it.

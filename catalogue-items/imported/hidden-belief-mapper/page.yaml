@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It separates assumptions from evidence with care.
 new_slug: hidden-belief-mapper
 name: Hidden belief mapper
-summary: Give it a topic or system. Get the beliefs, stories and values that
-  shape it, each checked against evidence.
+summary: Map the hidden beliefs and assumptions behind a team, school or community problem, each one linked to evidence and to the habits it keeps alive.
 job: teach-and-train
 headline: Hidden belief mapper
-subhead: A map of the beliefs, stories and values that keep a system the way it
-  is. When a team, school or community keeps getting the same results, the cause
-  is often how people see the situation, not the rules.
+subhead: A map of the beliefs, stories and values that keep a system the way it is. When a team, school or community keeps getting the same results, the cause is often how people see the situation, not the rules.
 explain: |
   A map of the beliefs, stories and values that keep a system the way it is. When a team, school or community keeps getting the same results, the cause is often how people see the situation, not the rules. This skill helps you see those views and test them against evidence.
 
@@ -18,6 +15,10 @@ when:
   - Two groups clash and you suspect they see the situation differently.
   - You are planning a change and want to know what beliefs will resist it.
   - You want to talk about assumptions without blaming people.
+not_for:
+  - "You have one conflict to reflect on: use a simpler step, such as the ladder of inference, which walks through one clash at a time."
+  - "You want to run it live with students in the room: plan how to keep people safe first, or use it alone to prepare."
+  - "You want to prove what a named person believes: this tool only offers guesses to test, so ask people directly."
 you_give:
   - The issue, system or decision to examine
   - Who is involved and where it happens
@@ -29,7 +30,26 @@ you_get:
   - Reflection questions
   - Non-accusing language to use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the prompt from this skill. It needs no code, files or paid tools.
+  - Add the issue and who is involved. Add any phrases, routines or decisions you have noticed, if you have them.
+  - Read each belief as a guess, not a fact. Check the evidence listed under it.
+  - Pick the top two or three beliefs and test them by asking people or watching what happens.
+  - Next, pair the map with the systems-awareness-iceberg or ladder-of-inference-reflection skills to plan action.
+output_sample:
+  input:
+    - The issue, system or decision you want to look at
+    - Where it happens and who is involved
+    - Phrases, routines or decisions that hint at beliefs (optional)
+    - Groups whose views may differ (optional)
+    - What you want to do with the map (optional)
+  output:
+    - name: Visible Clues
+      contains: The words, routines, objects and decisions that hint at what people believe.
+    - name: Current Mental Models That May Be Operating
+      contains: Each possible belief, who may hold it, the evidence, what it keeps in place, what it protects and what it costs.
+    - name: Aspirational or Alternative Mental Models
+      contains: Other beliefs that could work better, what would make them believable, and one small first step.
+    - name: Dialogue Prompts
+      contains: Questions that invite people to reflect and test evidence without blame.
+    - name: Safer Language Guide
+      contains: Wording that raises sensitive points as possibilities, not as accusations.

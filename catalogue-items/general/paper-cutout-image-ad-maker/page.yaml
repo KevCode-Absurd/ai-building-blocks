@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: paper-cutout-image-ad-maker
 name: "Paper cutout image ad maker"
-summary: "Paste your claim and photos. Get a paper cutout image prompt and the feed copy."
+summary: "Make a paper cutout image ad that proves one claim at a glance. Give it your product facts and photos. You get the image prompt and feed copy."
 job: make-image-ads
 
 headline: "Paper cutout image ad maker"
@@ -17,6 +17,10 @@ when:
   - You have one clear claim, such as fewer steps or what your product replaces, and want it seen in one look.
   - You want an image ad that doesn't look like every other product photo in the feed.
   - You liked the paper cutout video and want a still in the same look.
+not_for:
+  - "You want a moving ad: use the Paper cutout explainer video ad script writer."
+  - "Your ad is only a price or a mood, with no claim to prove: write the offer in plain text, or ask a designer for a simple layout."
+  - "You have no product photo and want your real product shown: take a clear photo first, because the skill never redraws your product."
 
 you_give:
   - The doubt you want to settle, or your selling idea
@@ -37,6 +41,32 @@ how_to_use:
   - Say the point you want to prove, or ask it to pick one from your facts.
   - Make the image from the prompt with your product photo attached, then set the words in a design tool.
   - Show it to someone for two seconds. If they can't say the point, ask for a simpler proof picture.
+output_sample:
+  input:
+    - The doubt you want to settle, or your selling idea
+    - Your product facts, figures with sources, and approved and banned claims
+    - Your colours, typefaces and offer
+    - Product photos with a sharp label (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - An image tool to make the picture from the prompt, such as ChatGPT or Gemini, or a connected one
+  output:
+    - name: Point
+      contains: Your claim in one sentence with one "but", the claim's verb and the one proof picture.
+    - name: Paper kit
+      contains: The paper, cut style, signal colour and pointer, and how photos are treated.
+    - name: Layout
+      contains: The size, 4:5 or 1:1, and a zone map in percent from top to bottom.
+    - name: Words on the image
+      contains: The headline and up to three other items, each with size, colour and contrast.
+    - name: Image prompt
+      contains: A ready prompt for a flat paper collage with no text drawn in it.
+    - name: Feed copy
+      contains: A first line, primary text, headline of 27 characters or fewer, and one button.
+    - name: Notes
+      contains: The source for each figure and anything marked MISSING.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: Checks it fits

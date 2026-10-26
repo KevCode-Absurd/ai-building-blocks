@@ -1,6 +1,6 @@
 new_slug: learn-borrow-or-pass-planner
 name: Learn, borrow or pass planner
-summary: Paste where your knowledge ends. Get a choice to learn, borrow help, start small or pass, with a first-week plan.
+summary: Not sure whether to learn it, borrow help or pass? Paste your knowledge gaps and get a clear choice with a first-week plan and a test date.
 job: think-and-decide
 thinking: medium
 thinking_why: It picks between four paths using fixed rules and writes a plan, with some judgment on cost and risk.
@@ -14,10 +14,14 @@ when:
   - You have found the edge of your knowledge and still have to decide.
   - You are thinking about hiring an expert and want to do it safely.
   - You want to widen your skills without wasting years.
+not_for:
+  - "You need legal, medical or financial advice you will act on: talk to a licensed professional directly."
+  - "You have not yet found where your knowledge ends: first run the Real knowledge tester, then come back here."
+  - "You want a named expert, product or course picked for you: this tool will not name one, so ask a trusted person in that field."
 you_give:
-  - The circle result or knowledge test, with the gaps
-  - The decision, its size and its deadline
-  - Time and money you can spend on learning (optional)
+  - Your list of gaps, from the Real knowledge tester or written in your own words
+  - The decision you face, how costly it is and when it is due (optional)
+  - The time and money you can spend on learning (optional)
 you_get:
   - "A choice: learn, borrow, start small or pass, with reasons"
   - The few big ideas to learn first, if learning
@@ -28,6 +32,32 @@ how_to_use:
   - Paste the gaps and describe the decision and its deadline.
   - Say how much time and money you can spend on learning.
   - Do the first-week plan and book the test date.
+output_sample:
+  input:
+    - Your list of gaps, from the Real knowledge tester or in your own words
+    - The decision you face, how costly it is and when it is due
+    - The time and money you can spend on learning (optional)
+  prerequisites:
+    - A list of what you do not know, or the result of the Real knowledge tester
+  output:
+    - name: Decision size
+      contains: The cost if you are wrong, the deadline and whether you can undo the decision.
+    - name: Aptitude check
+      contains: Whether the other side has a gift or long training you lack, and what that means for your choice.
+    - name: Learning time
+      contains: How long each gap would take to learn, and whether that fits your deadline.
+    - name: Helper checks
+      contains: How a helper is paid, where their bias may lie, and what would make them safe to rely on.
+    - name: Path and reason
+      contains: Learn, borrow, start small or pass, with the reason in two lines.
+    - name: Big ideas
+      contains: The few core ideas to learn first, in order, each with one way to use it this month.
+    - name: First-week plan
+      contains: Seven days of small tasks, each with a time.
+    - name: Retest date and target score
+      contains: When to test yourself again and the score that would change your answer.
+    - name: Checks missed
+      contains: One line for each check the skill failed, or none.
 how_it_works:
   - title: Size the decision
     text: Notes how big, how soon and how reversible it is.

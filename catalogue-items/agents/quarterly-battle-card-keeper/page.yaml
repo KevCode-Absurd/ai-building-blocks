@@ -1,6 +1,6 @@
 new_slug: quarterly-battle-card-keeper
 name: Quarterly battle card keeper
-summary: Give it your won and lost deals each quarter. Get each rival's card refreshed, your edge checked and the objection answers updated.
+summary: Refresh your sales battle cards each quarter from won and lost deals. Check your edge and get objection answers with proof behind each.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It must separate what buyers said from why they chose, judge whether an edge is real and keep every rival fact sourced. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You sell against named rivals and the cards were last updated at a sales kickoff.
   - You lost deals last quarter and the reasons are in a spreadsheet nobody read.
   - A new rival keeps appearing and the team has nothing to say about them.
+not_for:
+  - "You have a new product with no rivals or deals yet: build one card by hand from public facts, then come back next quarter."
+  - "Your deals have no recorded reasons: add a one-line reason to each lost deal first, or the edge check will be weak."
+  - "You want to watch rival ads and web pages each month: use the Monthly competitor watcher."
 you_give:
   - The quarter's won and lost deals with buyer type, rivals on the shortlist, reason, price and date
   - Your product facts, pricing and what you can claim with proof
@@ -33,6 +37,33 @@ how_to_use:
   - Read the shortlist first. If "did nothing" is at the top, that is the card to read next.
   - Review each refreshed card and the objection sheet. Share with the team what you approve.
   - Run it again next quarter. It tracks each rival over time.
+output_sample:
+  input:
+    - The quarter's won and lost deals with buyer type, rivals, reason, price and date
+    - Your product facts, pricing and what you can prove
+    - Your current battle cards and feature grid (optional)
+    - Call notes or lost-deal emails that mention a rival (optional)
+  prerequisites:
+    - Your brand brain from the Brand profile builder, or your own product facts
+    - A CRM export of closed deals, or a spreadsheet with the same columns
+    - An AI that can read files and browse the web, so it can check rival facts
+  output:
+    - name: The quarter
+      contains: One line with deal count, win rate, the rival met most and the top reason for lost deals.
+    - name: The real shortlist
+      contains: Each rival, including doing nothing, with appearances, wins, losses and top reason against last quarter.
+    - name: Cards refreshed
+      contains: For each active rival, what changed, what could not be re-checked and gaps to act on.
+    - name: Your edge
+      contains: Which claims buyers chose you for, which fail the one-thing test, and a verdict.
+    - name: White space
+      contains: A grid of what buyers value against rivals, showing where nobody is strong. Runs yearly.
+    - name: Objection answers
+      contains: Each doubt from lost deals with a short answer and its proof, or a missing-proof mark.
+    - name: Archive
+      contains: Rivals nobody met this year, with the date you last met them.
+    - name: Files and missing
+      contains: Each step's file and every line marked MISSING.
 how_it_works:
   - title: Count the shortlist
     text: Counts each rival's appearances, wins and losses from the deals, with doing nothing as a rival, and archives the ones nobody met.

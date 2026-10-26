@@ -13,10 +13,10 @@ outputs:
   - {type: document}
 uses: [customer-interview-coach, customer-research-analyst, customer-job-mapper, customer-path-blueprint-maker]
 steps:
-  - {uses: customer-interview-coach, note: "Turns your idea into questions that draw honest answers and a plan for finding the people to ask."}
-  - {uses: customer-research-analyst, note: "Reads your interview notes and makes the buyer profile and the quote file the next steps use."}
-  - {uses: customer-job-mapper, note: "Takes the buyer profile and writes the jobs they hire you for, with the trigger and rivals."}
-  - {uses: customer-path-blueprint-maker, note: "Uses the buyer profile and the quote file to map each step they take and where it hurts."}
+  - {uses: customer-interview-coach, note: "Turns your idea into questions that draw honest answers and a plan for finding the people to ask. You take these into your talks and write down what was said."}
+  - {uses: customer-research-analyst, note: "Uses your own interview notes from the talks, not step 1's questions. Makes the buyer profile and the quote file that steps 3 and 4 both use."}
+  - {uses: customer-job-mapper, note: "Takes step 2's buyer profile and writes the jobs they hire you for, with the trigger and rivals. This is one of two final documents; step 4 does not need it."}
+  - {uses: customer-path-blueprint-maker, note: "Uses step 2's buyer profile and quote file, not step 3's jobs document, to map each step they take and where it hurts. This is the second final document."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/interview-customers-and-map-what-they-hire-you-to-do/skeleton.yaml

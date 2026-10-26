@@ -1,46 +1,30 @@
 ---
 name: connect-toll-operating-cash-to-debt-repayment
-description: "A traffic cash scenario and linked debt repayment profile"
+description: "Use when a toll road's income starts from chargeable passages and you need cash for debt service and a repayment profile. Three steps run in order. Not for availability-payment projects or other than three years of data."
 ---
 
 # Connect toll cash to debt repayment
 
-A traffic cash scenario and linked debt repayment profile.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Turn chargeable road passages into a debt repayment profile. Three steps run in order: build toll cash from passages, convert it to cash available for debt service, then sculpt debt repayment. Each step hands the next one figure per year and the basis.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need:**
+- **Traffic and tolls** (yours): chargeable passages for three years before collection loss, the toll per passage and the cash share collected, each marked as assumption or measured.
+- **Operating costs** (yours): operating cash costs for each year.
+- **The lender's cash definition** (yours): what counts as cash for debt service, with taxes, capital spending and working capital.
+- **The accounting basis** (yours): whether operating figures are accrual before working capital, or actual cash receipts and payments.
+- **The loan** (yours): opening debt, loan rate, target service cover and principal rules.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** billing and collection records from the operator, beside the traffic study.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Three annual paid traffic/collection assumptions with sources, operating cost, project cash adjustments, opening debt and financing service-cover terms. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter. Road passages are chargeable units before collection loss.
+The items under "Before you start", as of one reporting date, with the currency and scale stated once. Ask once, in one short message, for only what you cannot work without. If the passages are counts already paid in cash, say so: do not cut them again by collection loss. If the basis is unclear, ask whether operating figures are accrual or actual cash before step 2.
 
 ## Governing scope
 
@@ -50,11 +34,11 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Toll revenue ramp model builder** (`toll-revenue-ramp-model-builder`). Build annual toll cash from the supplied chargeable passages before collection loss, realized tariff and collection assumptions. Hand annual operating cash and excluded tax/capital/working-capital items into the qualification bridge. Use chargeable passages before collection loss, not passage counts already paid in cash. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-toll-revenue-ramp-model-builder.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Toll revenue ramp model builder** (`toll-revenue-ramp-model-builder`). Build annual toll cash from the supplied chargeable passages before collection loss, realized tariff and collection assumptions. Hand annual operating cash and excluded tax/capital/working-capital items into the qualification bridge. Use chargeable passages before collection loss, not passage counts already paid in cash. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-toll-revenue-ramp-model-builder.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** receipts equal passages times toll times the cash share, gross billing and cash are shown apart, and traffic is marked as assumption or measured. If not, stop and say which line is off.
 
-2. **Project cash available bridge** (`project-cash-available-bridge`). Convert each annual toll operating cash result into financing-defined CFADS. Since operating costs were already deducted upstream, record that source basis and avoid deducting them twice. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-project-cash-available-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Project cash available bridge** (`project-cash-available-bridge`). Convert each annual toll operating cash result into financing-defined CFADS. Since operating costs were already deducted upstream, record that source basis and avoid deducting them twice. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-project-cash-available-bridge.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** operating costs come off once, the basis is stated and matches the source, and a cash source has no second working capital deduction.
 
-3. **Debt repayment sculpting planner** (`debt-repayment-sculpting-planner`). Use the resulting annual eligible cash series to calculate debt service and principal. Preserve traffic sensitivity as a scenario, show interest gaps and maturity residual and never claim a forecast proves repayment. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-debt-repayment-sculpting-planner.md` and any actual native file. Stop the affected step on missing tools or inputs.
+3. **Debt repayment sculpting planner** (`debt-repayment-sculpting-planner`). Use the resulting annual eligible cash series to calculate debt service and principal. Preserve traffic sensitivity as a scenario, show interest gaps and maturity residual and never claim a forecast proves repayment. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-debt-repayment-sculpting-planner.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** interest is charged on opening debt, principal is capped at the balance, any interest gap and any maturity residual are shown, and no shortfall is capitalized silently.
 
 ## Workbook checks
 
@@ -71,4 +55,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with the repayment table: cash for debt service, target service, interest, principal and closing debt for each year. Name any interest gap and the residual at maturity. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction. State plainly that a forecast does not prove repayment, that nothing was sent or approved, and that a person who knows the loan agreement must confirm the terms before anyone acts.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- **Test cover by period** with the [Review contractual debt service cash tests](https://useaiblocks.com/workflows/review-contractual-debt-service-cash-tests) workflow.
+- **Check leverage and cure rights** with the [Review leverage headroom and cure](https://useaiblocks.com/workflows/review-leverage-headroom-and-cure) workflow.
+If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

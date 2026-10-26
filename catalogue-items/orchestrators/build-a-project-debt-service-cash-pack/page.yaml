@@ -1,53 +1,93 @@
 new_slug: build-a-project-debt-service-cash-pack
 name: Build a project debt service cash pack
 headline: Build a project debt service cash pack
-summary: A linked project cash, debt repayment and loan-life cover schedule
+summary: Turn three years of project cash into a loan repayment schedule and a loan-life cover check, using your lender's own cash definition and rate.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: "A linked project cash, debt repayment and loan-life cover schedule. Share three annual project operating cash records or approved scenarios, financing CFADS definition, loan opening balance, fixed rate, target service cover and contractual loan-life rate. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter."
-explain: |-
-  A linked project cash, debt repayment and loan-life cover schedule.
+subhead: Give it three years of project cash, the lender's definition of cash available for debt service, the opening loan, the loan rate, the target cover and the loan-life discount rate. It builds the cash for each year, sizes the repayments to it, then tests cover over the life of the loan. You get a linked schedule and a list of weak years.
+explain: |
+  In project finance, repayments follow the cash a project makes, not a fixed schedule. A lender sets a target cover ratio, and repayments are sized so cash covers interest and principal by that margin. Errors creep in when cash is built on one basis and the repayment on another, or when the wrong discount rate is used for the loan-life test.
 
-  Project finance coverage schedules. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow chains three steps on one cash series. Step 1 builds cash available for debt service for each year on a declared basis. Step 2 uses that same series to size interest, principal and the closing balance, and flags any year where cash does not cover interest. Step 3 discounts the same cash at the rate the agreement names and compares it with the loan balance.
+
+  It is built for three annual periods and uses only the cash you supply, never cash after the loan ends. It does not read the loan agreement or approve a repayment. A person who knows the agreement signs off.
 when:
-  - You need a linked project cash, debt repayment and loan-life cover schedule.
-  - You work on project finance coverage schedules and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A lender wants repayments sized to cash with a target cover ratio.
+  - You want to know whether three years of forecast cash support the opening loan.
+  - The loan-life cover test uses a rate set in the agreement and you need it applied correctly.
+  - Your cash forecast mixes accrual figures with actual receipts and payments.
+not_for:
+  - The project earns from traffic or demand, and you need to model that revenue first. Use the Connect toll operating cash to debt repayment workflow.
+  - The project is paid a fixed availability payment. Start with the Bridge availability payments into project cash workflow.
+  - You already have cash available for debt service and want covenant headroom across periods. Use the Review contractual debt service cash tests workflow.
+  - You have fewer or more than three years of cash. This pack is built for three annual periods.
 you_give:
-  - "Three annual project operating cash records or approved scenarios, financing CFADS definition, loan opening balance, fixed rate, target service cover and contractual loan-life rate. Identify operating source basis: accrual before working-capital settlement or actual cash receipts/payments, with a compatible working-capital perimeter."
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Three annual project operating cash records, or approved scenarios (from your project model)
+  - Whether those figures are accrual or actual cash (from your accounts)
+  - The lender's definition of cash available for debt service (from the financing agreement)
+  - The opening loan balance, the fixed annual loan rate and the target cover ratio (from the loan agreement)
+  - The loan-life discount rate the agreement names, and the loan end date
+  - The reporting date, currency and scale
 you_get:
-  - A linked project cash, debt repayment and loan-life cover schedule.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Cash available for debt service for each of the three years
+  - Target service, interest, principal and closing balance for each year
+  - Any year where cash does not cover interest, shown as a gap
+  - A loan-life cover ratio and the cushion above one
+  - The loan balance left after the three years
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach the three years of project cash and the financing agreement's definitions. Paste the opening loan, rate, target cover and discount rate. Say whether the cash figures are accrual or actual cash.
+  - After step 1, check that all three years use one declared basis and that working capital is not taken off twice.
+  - After step 2, check that interest plus principal equals target service each year, and read any year flagged as a gap.
+  - After step 3, check that the discount rate is the contract's, not your cost of capital. Fill every MISSING line first. Nothing here pays, sends or files anything. A person who knows the agreement checks it before anyone acts.
 how_it_works:
   - title: Project cash available bridge
-    text: Build one source-driven CFADS bridge for each of the three annual periods. Pass the actual annual qualifying cash series and definition ledger; the single-period example is a method reference, not a full forecast. Declare the source basis. For actual cash receipts/payments or already-cash operating results, do not deduct receivable/payable working-capital settlement again; explicitly omit it only after reconciliation. For accrual revenue/cost proxies, use the signed working-capital bridge with noncash expenses excluded. Never combine these two routes.
+    text: Builds cash available for debt service for each of the three years on one declared basis. Passes the annual series and the definition ledger to step 2. A single-year example is a method guide, not a forecast.
   - title: Debt repayment sculpting planner
-    text: Use that qualifying annual series, actual opening debt and financing rate to calculate target service, interest, principal, residual balance and any interest-capacity gap. Return the exact debt horizon and balance to the coverage step.
+    text: Uses that series, the opening loan and the loan rate to work out target service, interest, principal, closing balance and any interest gap. Hands step 3 the debt horizon and balance.
   - title: Loan life cash cover checker
-    text: Discount the same eligible cash over the remaining debt tenor at the contract-defined loan-life rate. Reconcile source cash and opening debt to prior steps; do not substitute WACC or include cash beyond maturity.
-output_shape: |-
-  A linked project cash, debt repayment and loan-life cover schedule.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+    text: Discounts the same eligible cash over the remaining loan term at the contract's loan-life rate and compares it with the opening loan. Never uses your cost of capital or cash beyond maturity.
+output_shape: |
+  PERIOD AND BASIS  <3 years>, <currency>, <scale>, <accrual or actual cash>
+
+  1 CASH AVAILABLE   <per year: receipts | operating payments | adjustments | cash available for debt service>
+  2 DEBT SCHEDULE    <per year: opening loan | interest | principal | target service | closing loan>
+                     cover achieved <n>x vs target <n>x, interest gap <year or none>
+  3 LOAN-LIFE COVER  discounted cash <n> / loan balance <n> = <n>x, cushion <n>
+                     discount rate <n%> (from the agreement)
+
+  SOURCES, MISSING and CHECKS MISSED  <one line each>
+output_sample:
+  input:
+    - Three annual project operating cash records, or approved scenarios
+    - The lender's definition of cash available for debt service
+    - The opening loan, loan rate and target cover ratio
+    - The loan-life discount rate from the agreement
+  prerequisites:
+    - The financing agreement's wording on cash, cover and the discount rate
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: 1 CASH AVAILABLE
+      contains: Cash available for debt service for each year, with the basis and every adjustment shown.
+    - name: 2 DEBT SCHEDULE
+      contains: Target service, interest, principal and closing loan for each year, with any year cash cannot cover interest.
+    - name: 3 LOAN-LIFE COVER
+      contains: Discounted cash over the loan term against the loan balance, as a ratio with its cushion.
+    - name: SOURCES
+      contains: Each input with its source, date, currency and scale, and the basis used.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: All annual cash is rebuilt from dated sources; principal rollforward ties; cash beyond maturity and financing proceeds are excluded from loan-life cover. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
+  - what: A weak year
+    how: Cut one year's cash. The schedule shows the interest gap in that year, and the loan-life cover falls.
+  - what: A higher target cover
+    how: Raise the target cover. Target service falls, principal shrinks and more loan is left at the end.
+  - what: A different discount rate
+    how: Use the agreement's rate in place of your own. The page says which rate it used and why.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one linked workbook with inputs, formulas and a checks tab.
 judge:
   - All annual cash is rebuilt from dated sources; principal rollforward ties; cash beyond maturity and financing proceeds are excluded from loan-life cover. Actual receipt/payment sources do not receive a second working-capital deduction; accrual and cash-basis routes are explicitly distinguished.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -58,17 +98,31 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the agreement's cash definition, target cover and discount rate in one note, and paste it in every run.
+  - Save each year's actual cash next to the forecast, so the next run can show where cash fell short.
+  - Run the Review contractual debt service cash tests workflow once you have the schedule, to test covenant headroom.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: Your project financial model
+      why: It holds the three years of cash. Export it as a sheet so the AI reads real figures, not a summary.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The financing agreement's definitions, not a summary of them.
+    - Cash records marked actual or forecast.
+    - A named reviewer from your lender relations or finance team.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Cash available for debt service
+    meaning: Cash left after operating costs, taxes and capital spending that can go to lenders. Often shortened to CFADS.
+  - term: Debt service
+    meaning: Interest plus principal due in a period.
+  - term: Sculpting
+    meaning: Sizing each year's repayment to the cash expected that year.
+  - term: Cover ratio
+    meaning: Cash available divided by debt service. Above 1 means cash is enough.
+  - term: Loan-life cover
+    meaning: Cash over the whole loan term, discounted, divided by the loan balance.
+before: []
+next:
+  - review-contractual-debt-service-cash-tests
+  - review-sponsor-debt-cash-demands

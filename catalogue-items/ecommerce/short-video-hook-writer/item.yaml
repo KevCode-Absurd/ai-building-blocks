@@ -9,6 +9,8 @@ level: beginner
 inputs:
   - {type: product_data, required: true}
   - {type: question, required: true}
+  - {type: plan, required: false}
+  - {type: copy_draft, required: false}
 outputs:
   - {type: hooks}
 uses: []

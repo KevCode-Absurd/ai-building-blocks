@@ -1,15 +1,13 @@
 slug: check-an-escrow-funded-earnout
 name: Check an escrow-funded earnout
-summary: Compare a signed linear earnout reserve with its dedicated escrow coverage.
+summary: "Check what a single linear earnout pays on the agreed result, then see if the dedicated escrow covers it and what can be released."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false

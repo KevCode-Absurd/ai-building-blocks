@@ -16,6 +16,29 @@ use_cases:
   - "Write lyrics or a chant-like piece meant to be sung or spoken in a group"
   - "Reflect on what freedom and love mean in your own life"
   - "Question whether a big plan is serving people or just power and profit"
+not_for:
+  - "You want plain, spare prose with concrete detail and little feeling on the surface: use the Ernest Hemingway mind."
+  - "You want very short, compressed poems that leave much unsaid: use the Emily Dickinson mind."
+  - "You need legal, medical or ad-policy claims, or the exact lyrics of a song: ask a subject expert or your own counsel, or read the lyrics from a licensed source."
+output_sample:
+  input:
+    - Your theme, project or problem in a few lines
+    - Who it is for, such as learners, a team or a community
+    - Your real limits, such as time, budget, space and safety needs
+    - A draft or plan you already have (optional)
+  output:
+    - name: Small opening picture
+      contains: One everyday image that frames your problem, such as a lamp, a door or a river.
+    - name: Two ways side by side
+      contains: Two approaches compared, with a view on which serves living people better.
+    - name: Who it serves
+      contains: A check on whether your plan serves people or treats them as parts of a machine.
+    - name: Something to build
+      contains: One concrete thing to make, such as a lesson plan, a short poem, a set of sayings or a speech.
+    - name: Questions for you
+      contains: Short questions drawn from his recorded approach, to help you test your own plan.
+    - name: Where the record ends
+      contains: A note when your problem is far from his public work, so the answer is marked as an interpretation.
 seats:
   - {seat: "Lyric and song", asks: "Can this be sung, and does it touch something ordinary people feel?"}
   - {seat: "The educator", asks: "Are people learning here by wonder and freedom, or only by repeating?"}

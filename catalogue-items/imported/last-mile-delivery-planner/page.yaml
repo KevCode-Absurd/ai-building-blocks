@@ -2,35 +2,110 @@ thinking: medium
 thinking_why: It weighs cost, speed and customer needs.
 new_slug: last-mile-delivery-planner
 name: Last-mile delivery planner
-summary: Describe your local deliveries. Get ways to cut cost per drop, speed up
-  delivery and plan same-day service.
+summary: Cut the cost of local deliveries. Describe your drops to get ranked changes, ways to fix failed deliveries and a plan for same-day service.
 job: plan-supply-chain
 headline: Last-mile delivery planner
-subhead: Ways to lower your cost per drop and still hit your delivery promise.
-  Describe what you deliver, how far, how many per day and what you promise
-  customers.
+subhead: Describe what you deliver, how many drops a day, what each costs and what you promise customers. It finds where the cost per delivery goes, ranks the changes worth trying, and outlines what same-day delivery would take.
 explain: |
-  Ways to lower your cost per drop and still hit your delivery promise. Describe what you deliver, how far, how many per day and what you promise customers. The skill first asks about service model, city layout, current cost and failed delivery rate, so advice fits your real routes instead of generic tips.
+  The last mile is the final leg to the customer, and it is usually the costliest. Cost per drop climbs when stops are far apart, when customers are out, and when you promise narrow time windows. Generic advice does not help because every service area is different.
 
-  It then looks at cost, speed and customer experience. Changes it may suggest: tighter route batches, time windows, pickup points, delivery photos, fixes for failed drops, and what same-day service needs. It fits parcel, grocery, restaurant and pharmacy runs.
+  This skill starts with your service: what you deliver, city layout, drops per day, current cost and failed delivery rate. It then looks at density, time windows, pickup points, delivery photos and failed deliveries, and how a micro hub or locker network could change the numbers. It fits parcel, grocery, restaurant and pharmacy runs.
+
+  It uses your numbers, not industry averages. Where it lacks a cost, it writes MISSING and says what would move the number. Savings and payback are worked out only from figures you give.
 when:
   - Your cost per delivery keeps climbing and you do not know why.
   - You want to offer same-day delivery and need to know what it takes.
-  - Too many deliveries fail on the first attempt.
-  - You have to choose between hiring drivers and using gig drivers.
+  - Too many deliveries fail on the first try and drivers return with parcels.
+  - You must choose between hiring drivers and using gig drivers.
+not_for:
+  - "You need the best order of stops for today's drivers: use the Delivery route planner."
+  - "Customers choose delivery time slots and you must fit routes to them: use the Delivery time slot route planner."
+  - "You ship pallets and loads between sites: use the Freight mode and carrier picker."
+  - "You collect returns from customers, not deliver orders: use the Return pickup route planner."
 you_give:
-  - What you deliver and where
+  - What you deliver and the area, such as dense city, suburb or rural
   - Deliveries per day
-  - Current cost per drop and on-time rate
-  - Your delivery promise to customers
-  - Depot or hub locations (optional)
+  - Cost per delivery now, or driver, vehicle and hub costs
+  - First-attempt success rate and on-time rate
+  - Your promise to customers, such as a time window or same-day
+  - Own drivers or gig drivers, and depot locations (optional)
 you_get:
-  - A read on where cost is going
-  - Specific changes to try, ranked
-  - A same-day service outline
-  - Metrics to track
+  - Where your cost per delivery goes, in your own terms
+  - The top three changes ranked by the number they move
+  - Fixes for failed deliveries
+  - A same-day service outline, with what must be true to offer it
+  - Metrics to track weekly, and a list of missing data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Open Claude, ChatGPT or Gemini and paste the skill. A plain chat works. Ignore the code demos if your AI cannot run code."
+  - "Write down your drops per day, cost per delivery, failed delivery rate and customer promise. Rough numbers are fine. Say where you are guessing."
+  - "Paste them in and say whether you use your own drivers or gig drivers."
+  - "Check the cost breakdown first. If a line is wrong or MISSING, fix it and ask again."
+  - "Try one change for a few weeks and compare the numbers you track. Do not buy software or lockers on a guess."
+  - "Run the skill again with the new numbers."
+how_it_works:
+  - title: Learn your service
+    text: Asks what you deliver, your area, drops per day, cost and failed delivery rate.
+  - title: Find where cost goes
+    text: Breaks cost per delivery into driver, vehicle, hub and failed drops.
+  - title: Test the levers
+    text: Looks at density, time windows, pickup points, delivery photos, lockers and micro hubs.
+  - title: Rank the changes
+    text: Orders changes by how much they move your cost, with what it assumed.
+  - title: Outline same-day
+    text: Lists the cut-off times and steps same-day delivery needs.
+  - title: Set the metrics
+    text: Picks the weekly numbers that show whether a change worked.
+output_shape: |
+  Last-mile review, <area>, <drops per day>
+
+  Cost per delivery now: <amount or MISSING>
+  | Part | Cost per delivery |
+  | Driver | <amount> |
+  | Vehicle | <amount> |
+  | Hub or overhead | <amount> |
+  | Failed deliveries | <amount> |
+
+  Top changes
+  1. <change> | moves: <number> | assumes: <note>
+
+  Same-day outline: <cut-off, steps, what must be true>
+  Metrics to track: <list>
+  MISSING: <list>
+output_sample:
+  input:
+    - What you deliver and your service area
+    - Deliveries per day and cost per delivery
+    - First-attempt and on-time rates
+    - Your delivery promise to customers
+  output:
+    - name: Cost breakdown
+      contains: Where each delivery's cost goes, with MISSING for any part you did not give.
+    - name: Top three changes
+      contains: Ranked changes, the number each one moves and what it assumes.
+    - name: Failed delivery fixes
+      contains: Ways to cut first-attempt failures, such as notices, time windows or pickup points.
+    - name: Same-day outline
+      contains: Cut-off time, steps and what must be true to offer same-day delivery.
+    - name: Metrics to track
+      contains: Weekly numbers that show whether each change worked.
+    - name: Missing list
+      contains: Figures you still need to give before savings can be worked out.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A plain chat is enough for the advice. Code is optional.
+  inputs:
+    - A week of delivery records with drop count, time and result
+    - Your driver pay and vehicle costs
+    - A list of failed delivery reasons
+terms:
+  - term: Last mile
+    meaning: The final leg of a delivery, from the local hub to the customer.
+  - term: Cost per drop
+    meaning: Total delivery cost divided by deliveries completed.
+  - term: First-attempt success
+    meaning: The share of deliveries that reach the customer on the first try.
+  - term: Delivery density
+    meaning: How many deliveries you make in a given area. Close stops cost less.
+  - term: Micro hub
+    meaning: A small local site that holds stock close to customers for quick delivery.

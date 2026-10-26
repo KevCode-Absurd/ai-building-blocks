@@ -1,14 +1,12 @@
 slug: reconcile-cash-pool-interest-and-fees
-name: Reconcile cash pool interest and fees
-summary: A pool interest residual and external fee reconciliation
+name: Cash pool interest and fee checker
+summary: Share group cash-pool records, agreed rates and bank charges. Get entity interest schedules, a pool residual and a separate fee check.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
   - type: source_text
     required: true
   - type: spreadsheet
@@ -18,8 +16,9 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+next:
+  - reconcile-treasury-settlement-liquidity
+  - reconcile-currency-exposure-and-settlement
 uses:
   - cash-pool-interest-allocator
   - bank-fee-reconciliation-checker

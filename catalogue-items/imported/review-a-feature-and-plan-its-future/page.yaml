@@ -1,20 +1,46 @@
 new_slug: review-a-feature-and-plan-its-future
 name: Review a feature and plan its future
-summary: Check what a feature has achieved. Prepare a plan to keep it, improve it or retire it.
+summary: Review a feature after launch. Compare goals with results and get a decision brief to continue, improve, pause or retire it.
 job: build-product
 headline: Review a feature and plan its future
 subhead: Share the feature goals, results and user feedback. Compare facts with hopes. Get a decision brief for the person who owns the choice.
 explain: Share the feature goals, results and user feedback. Compare facts with hopes. Get a decision brief for the person who owns the choice.
 when:
   - You want to review a feature and plan its future.
+not_for:
+  - "You need to find why an outage or bug happened: run a post-incident review with your team instead."
+  - "You want to set up tracking or build a metrics dashboard: use your analytics tool or ask an analyst."
+  - 'You want a rule like "retire if usage drops below a number": this skill leaves the choice to a person.'
 you_give:
   - The original feature goals, observed outcomes, customer impact, costs and known measurement limits.
 you_get:
   - An outcome review, assumption updates and a decision brief with accountable owners and follow-up.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - "Gather three things first: your feature goals and targets, your usage and outcome numbers with any known gaps, and your user feedback with dates."
+  - If one is missing, say so. Your AI will mark it as missing and will not guess. Add what you can find, or note it as a gap.
+  - Add the skill to your AI tool, or paste its text into a chat. No code or web access is needed.
+  - Paste your three inputs and ask your AI to review the feature and write the decision brief.
+  - Check the facts and gaps first. Then let the person who owns the choice make the decision.
+  - The skill points to follow-up work on customer success and incident learning. Those items are not yet available, so handle customer notices and incident reviews by hand.
+output_sample:
+  input:
+    - Your feature goals and targets
+    - Usage and outcome numbers, with any known gaps
+    - Dated user feedback
+    - Costs and effort to run the feature (optional)
+  output:
+    - name: Outcome review
+      contains: What you expected, what you saw, what is unsure and what is a guess, kept apart.
+    - name: Assumption updates
+      contains: Each early assumption, marked as backed, weakened or still unknown, with the evidence.
+    - name: Feature health assessment
+      contains: Adoption, technical, operational and strategic evidence shown side by side, not as one score.
+    - name: Decision brief
+      contains: The options (continue, improve, harvest, pivot, pause, retire), the trade-offs, and who decides.
+    - name: Retirement plan
+      contains: "If retiring: notice to users, migration, support and internal cleanup."
+    - name: Retained learning record
+      contains: What the team learned, saved for the roadmap, measurement, adoption, tests and future specs.
 how_it_works:
   - title: Separate claims and observations
     text: Label expectations, measured outcomes, uncertainty and inference before comparing results.

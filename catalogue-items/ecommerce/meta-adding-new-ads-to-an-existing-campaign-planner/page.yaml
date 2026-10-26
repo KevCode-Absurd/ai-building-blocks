@@ -1,37 +1,123 @@
 new_slug: meta-adding-new-ads-to-an-existing-campaign-planner
 name: Meta creative refresh setup planner
-summary: Plan a creative refresh in an existing Meta campaign. Preserve working settings and define the new ads, review points and spend limits.
+summary: "Plan new ads inside a running Meta campaign. Get a draft list, a pre-launch checklist and spend limits that keep what already works."
 job: launch-and-scale-ads
 headline: Meta creative refresh setup planner
-subhead: Plan a creative refresh in an existing Meta campaign. Preserve working settings and define the new ads, review points and spend limits.
+subhead: "Tell it the ad set you want to add to, the new creatives and your spend limit. It plans each new ad as a draft, checks the plan against your approved offer and link, and sets a review date. You get a draft list and a checklist for each ad."
 explain: |-
-  Share campaign settings, dated results, target economics and budget limits. Get a campaign plan with proposed settings and review points.
+  Adding new ads to a Meta campaign that already works is risky. A copied ad can carry an old offer, a wrong link or a crop that cuts off your label. A plan on paper catches these before any money is spent. This Meta new ad setup planner keeps the settings that work and checks only what you change.
 
-  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+  It starts by writing down the ad set as it is now: objective, conversion event, link, placements and daily cap. It picks an existing ad to copy from, swaps in each new creative and checks it placement by placement. It compares the text and the link with your approved offer, then gives each ad a stable ID, a name for what it tests and a launch date.
+
+  New ads share delivery with the old ones in the same ad set. So results show how they did side by side, not a controlled test. The skill says this plainly, sets a review date and a keep, hold or stop rule before launch, and never publishes anything for you.
 when:
-  - You need a campaign plan with proposed settings and review points.
+  - Your campaign is working, but the ads are tired and you want to add fresh ones without breaking it.
+  - A creator or editor has sent three new videos and you need to get them into the account safely.
+  - You are adding a new hook or format and want it checked against your approved offer first.
+  - You want a launch list with IDs and dates, so you can read the results later.
+not_for:
+  - "You are starting a new campaign, or changing the objective or conversion event: use the Meta creative test campaign planner."
+  - "One ad has gone stale and you need ideas to revive it: use the Fatigued ad reviver."
+  - "You want each ad marked keep, watch or pause from its numbers: use the Daily Meta ad review planner."
+  - "You want to know if a new ad will be rejected: use the Meta ads compliance checker."
+  - "You want the new ads written or made. This plans the setup. It does not create the creative."
 you_give:
-  - Campaign settings, dated results, target economics and budget limits
-  - The exact change you want and actions you authorize
+  - The campaign and ad set you want to add to, with its objective, conversion event, link and tracking tags
+  - An existing ad to copy from
+  - The new creatives, as files or previews, and what each one tests
+  - Your approved offer text, with any end dates
+  - Your spend limits: the daily cap and the most the new ads may spend before your first review
+  - Recent results and your target cost per sale (optional)
+  - Whether you want drafts only, or drafts plus submission (the default is drafts only)
 you_get:
-  - A campaign plan with proposed settings and review points
-  - Missing inputs and a bounded verification plan
+  - The ad set settings to keep, written down as a baseline
+  - A draft list with a creative ID, a name, what it tests, a launch date and a status for each new ad
+  - A pre-launch checklist for each ad: media, crop, copy, offer dates, link, tracking and placements
+  - Spend limits, a review date and a keep, hold or stop rule
+  - A list of what is missing, and the checks that were not run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - Paste your ad set settings, the ad you want to copy from, and your approved offer text. Attach the new creatives.
+  - Give your daily cap and the most the new ads may spend before you review them. Say "drafts only" if nothing should go live yet.
+  - Read the draft list. Check that each ad tests one thing and has an ID and a date.
+  - In Ads Manager, make the drafts yourself. Tick each item on the checklist, and preview every placement on screen.
+  - On the review date, bring the results back, or paste them into the Creative test reader.
 how_it_works:
-  - title: Step 1
-    text: Confirm the exact account, campaign, ad set, objective, conversion event, destination and creative test goal. Record the active settings and preserve them as the comparison baseline. Verify the current Ads Manager controls rather than assuming a historical button label still applies.
-  - title: Step 2
-    text: Choose an appropriate existing ad as a template and duplicate it into a draft in the intended ad set. Inspect the copied tracking, destination, identity, offer and placements; duplication is a convenience, not proof that inherited settings are correct.
-  - title: Step 3
-    text: Replace the media with the exact approved new asset. Wait for processing and preview every intended placement. Adjust crop only where the actual placement needs it, preserving product detail, visible words, creator framing and safe regions.
-  - title: Step 4
-    text: Review headline, primary text, description, CTA and landing page against the current approved offer and the new creative. Remove expired codes and unsupported claims. Resolve material copy or account questions with the designated reviewer.
-  - title: Step 5
-    text: Give each ad a stable creative ID, meaningful hook or version name, and unambiguous launch date. For additional variants duplicate the checked draft, replace only intended variables, then repeat the media, copy, URL and tracking check.
-  - title: Step 6
-    text: Return the draft inventory and review checklist. Submit or publish only if already authorized; otherwise leave drafts for review. After an authorized submission confirm actual delivery/review status and processing failures. Compare results after an agreed observation window; shared delivery makes this an observational creative test unless a controlled experiment is configured.
+  - title: Write down the baseline
+    text: It records the ad set as it is now. These settings are the ones to keep and to compare with later.
+  - title: Pick a template ad
+    text: It chooses an existing ad to copy and checks the copied link, tracking, identity, offer and placements.
+  - title: Swap in the new media
+    text: It checks each new file in every placement. A crop that cuts a label or a word puts that variant on hold.
+  - title: Check text and link
+    text: It compares headline, text, button and link with your approved offer, and flags expired codes and unapproved claims.
+  - title: Name and date each ad
+    text: Every ad gets a stable ID, a name for the hook or version, and a launch date. Variants change one thing only.
+  - title: Set the review
+    text: It sets spend limits, a review date and a keep, hold or stop rule before launch, and notes that new ads share delivery with the old ones.
+output_shape: |-
+  BASELINE  campaign <name> | ad set <name> | objective <x> | conversion event <x> | link <url + tags> | placements <list> | daily cap <x>
+  DRAFT LIST
+  <creative ID> | <hook or version name> | tests <one thing> | launch <date> | placement check <pass or hold> | copy and link check <pass, hold or NOT RUN> | status <draft, hold or ready for review>
+  PRE-LAUNCH CHECKLIST (per ad)
+  media <ok> | crop <ok> | copy <ok> | offer dates <ok> | link <ok> | tracking <ok> | identity <ok>
+  SPEND LIMITS AND REVIEW  daily cap <x> | spend before review <x> | review on <date> | keep if <rule> | hold if <rule> | stop if <rule>
+  OPEN QUESTIONS AND MISSING  <list>
+  NOT RUN  <check, why>
+output_sample:
+  input:
+    - The ad set to add to, with objective, conversion event, link and tracking tags
+    - An existing ad to copy from
+    - The new creatives and what each one tests
+    - Your approved offer text, and your spend limits
+  prerequisites:
+    - A Meta ad set that is already running
+    - Ads Manager access, to make the drafts yourself
+  output:
+    - name: Baseline
+      contains: The ad set settings to keep, as they are now.
+    - name: Draft list
+      contains: Each new ad with its ID, name, what it tests, launch date and status.
+    - name: Pre-launch checklist
+      contains: For each ad, checks on media, crop, copy, offer dates, link, tracking and placements.
+    - name: Spend limits and review plan
+      contains: The daily cap, the limit before review, the review date and the keep, hold or stop rules.
+    - name: Open questions
+      contains: What is missing and which checks were not run.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+works_best_with:
+  tools:
+    - name: Meta Ads Manager
+      why: You make the drafts and preview every placement here. The plan tells you what to check.
+    - name: Any good chat AI
+      why: It reads your pasted settings and your creative previews. It needs no connection to your account.
+  inputs:
+    - A screenshot of the existing ad's setup, with the link and tracking tags visible.
+    - A list of offers and codes with their end dates.
+    - Your last two weeks of results for the ad set.
+terms:
+  - term: Ad set
+    meaning: The group inside a campaign that holds the budget, audience, placements and your ads.
+  - term: Conversion event
+    meaning: The action Meta tries to get, such as a purchase.
+  - term: Placement
+    meaning: Where an ad shows, such as Feed, Stories or Reels.
+  - term: UTM tags
+    meaning: Extra text at the end of a link that tells your analytics where a visitor came from.
+  - term: Creative ID
+    meaning: A short code you give each ad, so you can find it in your results later.
+tweaks:
+  - what: What each ad tests
+    how: Make each new ad test one thing, such as the hook or the format. Results are easier to read.
+  - what: Spend limits
+    how: Set the most each new ad may spend before your first review. It protects you if an ad does not sell.
+  - what: Review date
+    how: Pick a date that is long enough for sales to come in, given how long your buyers take to decide.
+  - what: Authorization
+    how: Say "drafts only" if you want nothing to go live until you have checked it.
+improve:
+  - Keep your approved offer list in a file with end dates, and paste it in each time.
+  - Add your own naming pattern to SKILL.md, such as product, hook and date, so every ad name looks the same.
+  - Keep each draft list, so you can match later results to the ID and the date.
+  - Pair it with the Creative test reader for the results, and the Fatigued ad reviver when an old ad needs new hooks.

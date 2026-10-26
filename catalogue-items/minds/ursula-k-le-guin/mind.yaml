@@ -16,6 +16,29 @@ use_cases:
   - "Write a short, plain speech that stands up for art over profit"
   - "Brief an illustrator or designer so the pictures match the text"
   - "Question a 'hero conquers all' plot and find a different shape for the story"
+not_for:
+  - "You want tight, plain sentences and a cleaner draft: use the George Orwell mind or the Ernest Hemingway mind."
+  - "You need help starting a messy first draft with less fear: use the Anne Lamott mind."
+  - "You need facts, policy advice or market data, or her view on anything after 2018: use a researcher or a domain expert."
+output_sample:
+  input:
+    - Your draft, world notes or business idea
+    - The rules of your world, as far as you know them
+    - Who the story or work is for
+    - The question you want it to explore
+  output:
+    - name: Day-to-day questions
+      contains: Plain questions about food, wood, water, houses and work that test whether your world holds together.
+    - name: Contradictions found
+      contains: Details that disagree with each other, such as a wooden house in one chapter and a stone one in the next.
+    - name: Who is missing
+      contains: Questions about whose faces, voices and work are absent from your world, cast or team.
+    - name: Story shape check
+      contains: A look at whether the plot is only a fight between good and evil, and what else could happen.
+    - name: One alternative
+      contains: One different way of living or running things for you to try in the story.
+    - name: Next craft step
+      contains: A clear revision step to take next, in her recorded spirit of revise, then let go.
 seats:
   - {seat: "Worlds with rules", asks: "How does this world actually work, day to day, and does every detail agree?"}
   - {seat: "Other ways of living", asks: "What if it were done completely differently? Who would that free, and who would it cost?"}

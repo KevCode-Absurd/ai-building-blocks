@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a set test method and judges what the findings mean.
 new_slug: usability-test-runner
 name: Usability test runner
-summary: Give it a design or prototype. Get a test plan, task scripts, moderator
-  notes and a findings summary.
+summary: Plan a usability test for your prototype. Get task scripts, moderator notes and a ranked list of problems to fix before you ship.
 job: test-an-idea
 headline: Usability test runner
-subhead: Find out whether real people can use your design before you ship it.
-  You get a full test plan, tasks to read aloud, notes for the person running
-  the session and a findings report that ranks the problems.
+subhead: Find out whether real people can use your design before you ship it. You get a full test plan, tasks to read aloud, notes for the person running the session and a findings report that ranks the problems.
 explain: |
   Find out whether real people can use your design before you ship it. You get a full test plan, tasks to read aloud, notes for the person running the session and a findings report that ranks the problems.
 
@@ -18,6 +15,10 @@ when:
   - Analytics show people leaving a page and you do not know why.
   - You redesigned a flow and need proof it did not add new problems.
   - You are choosing between two design directions and want real reactions.
+not_for:
+  - "You want to learn what people need before you design anything: use the ux-research skill, or talk to five customers first."
+  - "You want to lift sales on a live page: use the cro-optimization skill, or run a simple A/B test in your own tool."
+  - "You only need numbers on traffic and drop-off: use your analytics tool, or the analytics-strategy skill."
 you_give:
   - The design, prototype or link to test
   - The tasks people should try
@@ -29,7 +30,29 @@ you_get:
   - Moderator notes
   - A ranked list of findings with fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Gather your brief first: the prototype link, 3 to 5 tasks, a short note on your users, and the tool you will test with."
+  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed.
+  - Paste your brief and ask for the test plan and task scripts.
+  - Run the sessions yourself or with a teammate. Take notes on where people stop, hesitate or go back.
+  - Paste your notes into the chat and ask for the findings report.
+  - Fix the critical problems, then test again to check the fixes worked.
+output_sample:
+  input:
+    - A link to your design or prototype
+    - 3 to 5 tasks people should try
+    - A short description of who your users are
+    - Your test tool or setup, such as a video call or Maze (optional)
+  prerequisites:
+    - A prototype that people can click through, even if it is not finished
+    - A way to find and talk to real users, or a tool that does it for you
+  output:
+    - name: usability-test-plan-[topic].md
+      contains: Your goals, the tasks, moderated or unmoderated choice, who to recruit and how many people.
+    - name: usability-tasks-[topic].md
+      contains: Task wording to read aloud, framed as goals, plus the session order and moderator rules.
+    - name: usability-findings-[topic].md
+      contains: Summary, method, and findings grouped as critical, major, minor and cosmetic, each with a fix.
+    - name: What worked well
+      contains: The parts of the design that people used without trouble, so you keep them.
+    - name: Recommendations and next steps
+      contains: Fixes ranked by severity and effort, plus when to re-test.

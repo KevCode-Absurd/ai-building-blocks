@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It turns what is in your head into steps.
 new_slug: process-and-sop-writer
 name: Process and SOP writer
-summary: Describe how work gets done. Get a flowchart, who does what, and a
-  written procedure with the edge cases.
+summary: Turn how your team works into a clear SOP. Give it a process name or old notes. You get a RACI table, a flow, steps and exceptions.
 job: document-work
 headline: Process and SOP writer
-subhead: A written procedure your team can follow without asking the person who
-  knows it. It covers why the process exists, what is in and out of scope, who
-  does each step, and what to do when things go wrong.
+subhead: A written procedure your team can follow without asking the person who knows it. It covers why the process exists, what is in and out of scope, who does each step, and what to do when things go wrong.
 explain: |
   A written procedure your team can follow without asking the person who knows it. It covers why the process exists, what is in and out of scope, who does each step, and what to do when things go wrong.
 
   You describe the process, paste old notes, or just give its name. Claude asks questions to fill the gaps, then builds a RACI table (who does it, who owns it, who to ask, who to tell), a flow of the steps, and a detailed entry for each step with its trigger, method and output. It ends with an exceptions table and the numbers used to check the process works.
 when:
-  - A process lives in one person's head and you need it written down before
-    they leave.
+  - A process lives in one person's head and you need it written down before they leave.
   - You are handing work to a new hire and need clear steps and owners.
   - An audit asks for a documented procedure.
   - People argue about who owns a step and you need a RACI.
+not_for:
+  - "You have a one-off task that will not repeat: just write a short checklist or message to the person doing it."
+  - "A policy or document already covers the process: use that existing document and update it instead."
+  - "You want to find ways to speed up or cut cost in a process: ask a process expert or your team to review it first."
 you_give:
   - Process name or a short description
   - Existing notes or documents (optional)
@@ -31,7 +31,34 @@ you_get:
   - An exceptions and edge cases table
   - Metrics to track the process
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Type the name of your process, or describe how it works today. Rough notes are fine.
+  - Paste any old notes or documents, and the names of the people involved (optional).
+  - Answer the questions your AI asks. Mention the times when things go off the usual path.
+  - Check the RACI table and steps. Fix any owner or step that does not match real life.
+  - Save the SOP in your shared docs and set a date to review it.
+output_sample:
+  input:
+    - Your process name or a short description
+    - Old notes or documents about the process (optional)
+    - Names of the people or teams involved (optional)
+    - Known exceptions or problem cases (optional)
+  output:
+    - name: Process Document header
+      contains: The process name, owner, last updated date and how often to review it.
+    - name: Purpose
+      contains: Why the process exists and what it gets done.
+    - name: Scope
+      contains: What the process covers and what it leaves out.
+    - name: RACI Matrix
+      contains: "For each step: who does it, who owns it, who to ask and who to tell."
+    - name: Process Flow
+      contains: A text flowchart or step-by-step view of how work moves.
+    - name: Detailed Steps
+      contains: "For each step: who does it, when it starts, how to do it and what it produces."
+    - name: Exceptions and Edge Cases
+      contains: A table of odd situations and what to do in each one.
+    - name: Metrics
+      contains: What to measure, the target for each and how to measure it.
+    - name: Related Documents
+      contains: Links to other processes or policies that connect to this one.

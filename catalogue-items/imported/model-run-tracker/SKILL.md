@@ -15,6 +15,32 @@ without changing the consuming project's modeling environment. `pymc-mlflow`
 is this skill's name; the optional integration module is
 `pymc_marketing.mlflow`, not a separate `pymc-mlflow` package.
 
+## What you need first
+
+- The person's PyMC model code (or the file that fits it), and the Python environment it runs in.
+- Where runs should be stored: a local folder or SQLite file for one person, or an MLflow server.
+- Which runs are for exploring, which are reportable, and which are mock runs.
+- PyMC-Marketing details, only if the model is a marketing mix model or a CLV model.
+- An AI that can edit code and run Python. MLflow is a separate install. Check the installed
+  versions before you change anything.
+
+## If something is missing
+
+Ask once. If the model code, the storage location or the run labels are still missing, write
+`MISSING: <what>` and stop. Never guess a tracking URI, invent package versions or log fake
+metrics. Do not install or downgrade packages without asking.
+
+## What you hand back
+
+1. **Code changes**: the files changed, and the run block added (`with mlflow.start_run():`),
+   with what each change logs.
+2. **Run record fields**: experiment name, run tag (exploring, reportable or mock), data source
+   identity, package versions, seed, sampler settings, diagnostics and the saved inference file.
+3. **Retrieve check**: proof that the saved results file reopens from MLflow, or
+   `NOT CHECKED: <reason>`.
+4. **Comparison**: how to compare runs like with like, and which runs were left out and why.
+5. **Notes**: anything that is tracking only, not model serving.
+
 ## Choose the integration
 
 | Need | Reference |
@@ -74,8 +100,9 @@ use autologging. Direct MLflow tracking does not require PyMC-Marketing.
 
 Do not leave `pm.sample` globally replaced with `mock_sample`. Mock output is
 prior-generated infrastructure data, not posterior inference, and may have no
-sampler statistics. Scope test patches and restore the original callable; see
-[meaningful model testing](../pymc-modeling/references/model-testing.md).
+sampler statistics. Scope test patches and restore the original callable. The model-testing guide in PyMC Labs' separate `pymc-modeling` skill explains how to
+scope test patches. It is not part of this item. Without it, wrap any mock in a `with` block
+that puts the original `pm.sample` back, and tag the run `mock`.
 Enable autologging once per process, not repeatedly in a notebook loop.
 
 Keep tracking databases, posterior files and raw data out of source control.

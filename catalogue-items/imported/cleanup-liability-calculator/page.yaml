@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows accounting rules with a few judgment calls.
 new_slug: cleanup-liability-calculator
 name: Cleanup cost liability calculator
-summary: Give it an asset and its cleanup cost. Get the liability, yearly
-  interest cost and journal entries worked out.
+summary: Work out your cleanup cost liability for an asset. Give it the cost and retirement date. You get the yearly interest and journal entries.
 job: money-and-investing
 headline: Cleanup cost liability calculator
-subhead: If you must clean up or remove an asset later, the cost counts today.
-  You give the asset and the estimated cleanup cost, and you get the liability,
-  the yearly interest cost and the journal entries for each year.
+subhead: If you must clean up or remove an asset later, the cost counts today. You give the asset, the cleanup cost and the retirement date. You get the starting liability, the yearly interest cost and the journal entries.
 explain: |
   If you must clean up or remove an asset later, the cost counts today. You give the asset and the estimated cleanup cost, and you get the liability, the yearly interest cost and the journal entries for each year.
 
@@ -16,21 +13,43 @@ explain: |
 when:
   - You own equipment that must be removed or restored at the end of its life.
   - An auditor asks how you set the decommissioning liability.
-  - You need the yearly accretion expense for your books.
-  - You want the entry for when the real cleanup cost differs from the estimate.
+  - You need the yearly accretion expense, the interest that builds on the liability, for your books.
+  - You need a clear schedule of the liability for each year until retirement.
+not_for:
+  - "You have no law or contract that forces the cleanup: ask your accountant about a provision under IAS 37 or ASC 450 instead."
+  - "You need the liability shown in your financial statements: ask your accountant, or use the statement preparation skill if you have it."
+  - "You want a quick guess with no accounting rules: use a simple spreadsheet that adds the cost and divides by the years."
 you_give:
-  - The asset and its legal obligation
+  - The asset and the law or contract that forces the cleanup
   - Estimated cleanup cost in today's money
   - Expected retirement date
-  - Inflation rate and discount rate
+  - Expected cost inflation rate
+  - "Discount rate, which is the credit-adjusted risk-free rate: a risk-free rate raised for your own credit risk"
 you_get:
-  - Starting liability at present value
-  - The amount added to asset cost
-  - A yearly accretion schedule
-  - Depreciation of the added cost
-  - Journal entries including settlement
+  - The starting liability at present value
+  - The amount added to the asset's cost
+  - A yearly schedule of the liability growing
+  - Yearly depreciation of the added cost
+  - Journal entries for the start and each year
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste the asset, the law or contract behind the cleanup, the cost in today's money and the retirement date.
+  - Add your inflation rate and your discount rate. If you do not know the discount rate, ask your accountant.
+  - Read the yearly table first. Check that the last year's balance matches the future cost.
+  - Check the journal entries with your accountant before you post them. Running the script needs an AI that can run Python.
+output_sample:
+  input:
+    - The asset and the law or contract that forces the cleanup
+    - Estimated cleanup cost in today's money
+    - Expected retirement date
+    - Expected cost inflation rate
+    - Your discount rate (credit-adjusted risk-free rate)
+  prerequisites:
+    - An AI that can run Python, if you want the script to do the math (optional)
+  output:
+    - name: Initial Setup
+      contains: The total future cleanup cost and the present value booked on day one.
+    - name: Annual Table (Rollforward)
+      contains: Each year's beginning balance, accretion, depreciation and ending balance.
+    - name: Journal Entries
+      contains: The entry for first recognition and the entries that repeat each year.

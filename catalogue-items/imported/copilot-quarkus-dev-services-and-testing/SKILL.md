@@ -5,6 +5,35 @@ description: 'Quarkus Dev Services and testing: zero-config containers, @Quarkus
 
 # Quarkus Dev Services and Testing
 
+## What to ask for first
+
+1. The project's pom.xml, or the Quarkus version in it (required).
+2. The class, endpoint or behaviour to test (required).
+3. Whether Docker or Podman is running (required for Dev Services; if not, say tests that need containers cannot run yet).
+4. The services the app uses, such as PostgreSQL or Kafka (optional; read them from the extensions in pom.xml if not given).
+
+If something is missing after one question, write MISSING and carry on. Never guess a version, an extension or a port.
+
+## Steps
+
+1. Check the project's Quarkus version in pom.xml, and which JUnit and mocking dependencies it already uses. Keep those.
+2. Choose how to get the service: Dev Services first, a test resource only if Dev Services does not cover it.
+3. Write the test with `@QuarkusTest` and RestAssured. Add `@TestTransaction`, `@TestSecurity`, `@InjectMock` or `@TestProfile` only when the case needs it.
+4. Add the `application.properties` lines the test needs.
+5. Give the run commands: `./mvnw test`, then `./mvnw verify -DskipITs=false` if there are `*IT` classes.
+6. If you can run commands, run them and report the real result. If you cannot, say the tests have not been run.
+
+## Output
+
+Return, in this order:
+
+- **Assumptions and MISSING items**
+- **Test classes**: full code for each, with one line on what it checks.
+- **Settings**: the `application.properties` lines, or "none needed".
+- **Test resource**: code, only if needed.
+- **Run commands**: with what each one runs and skips.
+- **Open items**: what was not checked or run.
+
 Check the project's Quarkus version first. Framework-neutral Testcontainers usage can use the optional `java-testcontainers` skill if installed (otherwise see <https://java.testcontainers.org/>); this skill covers only Quarkus-specific features.
 
 ## Dev Services

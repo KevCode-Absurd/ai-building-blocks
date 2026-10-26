@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must tell puffery from claims that need proof.
 new_slug: marketing-claims-checker
 name: Marketing claims checker
-summary: Paste your ad or page copy. Get each claim sorted as fine, needs proof
-  or cut, with safer wording. Not legal advice.
+summary: Check your marketing claims before you publish. Paste your ad or page copy and get each claim sorted as fine, needs proof or cut, with safer wording.
 job: check-contracts
 headline: Marketing claims checker
-subhead: Every claim in your ad or page copy sorted into fine, needs proof or
-  cut, with safer wording that keeps the energy. This is a check for risk, not
-  legal advice, and a lawyer should confirm anything high-stakes.
+subhead: Every claim in your ad or page copy sorted into fine, needs proof or cut, with safer wording that keeps the energy. This is a check for risk, not legal advice, and a lawyer should confirm anything high-stakes.
 explain: |
   Every claim in your ad or page copy sorted into fine, needs proof or cut, with safer wording that keeps the energy. This is a check for risk, not legal advice, and a lawyer should confirm anything high-stakes.
 
@@ -18,6 +15,10 @@ when:
   - You are about to launch a landing page and want a risk pass.
   - Your ad compares you to a competitor.
   - You need to show what proof backs each claim.
+not_for:
+  - "You need a lawyer's sign-off on health, finance or children's product claims: use a lawyer who knows that field, and treat this check as a first pass only."
+  - "You want to review a contract or terms of service: ask a lawyer, since this skill only reads marketing copy."
+  - "You only want to polish tone or style: use your own editor or ask your AI for a plain edit, because this skill checks claims, not wording quality."
 you_give:
   - Your ad or page copy
   - Proof you hold for key claims (optional)
@@ -29,12 +30,33 @@ you_get:
   - Proof needed for each
   - Safer rewrites
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved product legal setup notes and
-    search the web.
-  - Where the skill points to /product-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat.
+  - Paste your ad or page copy. Say where it will run.
+  - Add any proof you hold and your company claims standards, if you have them (optional).
+  - Turn on web search if your AI has it, so it can check current ad rules. This is optional.
+  - Read the claim table. Fix or cut every claim marked needs proof or cut.
+  - Send anything high-stakes to a lawyer. This is a risk check, not legal advice.
+output_sample:
+  input:
+    - Your ad or page copy
+    - Where the copy will run, such as a landing page, email or ad
+    - Proof you hold for key claims (optional)
+    - Your company's claims standards (optional)
+  prerequisites:
+    - An AI that can search the web, if you want it to look up current ad rules (optional)
+    - Your saved company claims standards from the product legal setup, if you have them (optional)
+  output:
+    - name: Summary
+      contains: A short overview of the copy and how risky its claims are overall.
+    - name: Claim-by-claim
+      contains: "Each claim with its label: puffery, factual, comparative, implied or absolute, and a call on whether it can run."
+    - name: Suggested revision
+      contains: Safer wording for risky claims that keeps the energy of the original.
+    - name: Substantiation needed before ship
+      contains: The proof you must have on file before each claim goes live.
+    - name: Citation check
+      contains: A check of any sources or studies the copy points to.
+    - name: Disclosure overlays
+      contains: Notes on disclaimers or disclosures the copy may need to carry.
+    - name: Next steps
+      contains: What to do with the result, such as gathering proof or sending it to a lawyer.

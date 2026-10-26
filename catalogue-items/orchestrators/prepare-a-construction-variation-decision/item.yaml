@@ -1,6 +1,6 @@
 slug: prepare-a-construction-variation-decision
 name: Prepare a construction variation decision
-summary: Share the source files. Get a variation comparison, arithmetic review and decision brief.
+summary: Check a construction variation against the signed contract and prices. Get a clause map, a recomputed cost check and a decision brief.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -23,11 +23,11 @@ uses:
   - stakeholder-update-writer
 steps:
   - uses: plain-words-contract-summary
-    note: Locate the contract change procedure, notice, approval and pricing provisions with clause references; leave interpretation to the responsible professional.
+    note: "Locate the contract change procedure, notice, approval and pricing provisions with clause references; leave interpretation to the responsible professional. Hands step 2 the change rules and the pricing terms to check against."
   - uses: invoice-totals-checker
-    note: Recompute the supplied variation quantities and rates against the priced request; expose excluded charges and unmatched units.
+    note: "Recompute the supplied variation quantities and rates against the priced request; expose excluded charges and unmatched units. Hands step 3 the checked totals and the excluded charges."
   - uses: stakeholder-update-writer
-    note: Draft a decision brief showing baseline versus proposed change, approval status, cost and schedule evidence, and unresolved questions.
+    note: "Draft a decision brief showing baseline versus proposed change, approval status, cost and schedule evidence, and unresolved questions. Uses the contract rules from step 1 and the checked totals from step 2 as its facts."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

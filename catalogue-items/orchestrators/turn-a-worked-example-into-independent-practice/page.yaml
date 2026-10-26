@@ -1,52 +1,116 @@
 new_slug: turn-a-worked-example-into-independent-practice
-name: Turn a worked example into independent practice
-headline: Turn a worked example into independent practice
-summary: Share the source files. Get a staged practice sequence and a short understanding check.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A staged practice sequence and a short understanding check. Share a correct worked example, learner prerequisites, target skill and common mistakes. Your AI prepares the work and marks any facts it cannot verify.
+name: Turn a worked example into independent practice
+headline: Turn a worked example into independent practice
+summary: Turn one worked example into a practice ladder. Get staged problems that fade the help, with answers and a short understanding check.
+subhead: Give it a correct worked example, what learners already know, the target skill and the mistakes you see most. Your AI breaks the example into stages, fades the help across the problems, checks the answers and adds a short check of why each answer is right.
 explain: |-
-  A staged practice sequence and a short understanding check.
+  Showing a worked example is not the same as students being able to do it alone. This workflow turns a worked example into independent practice by taking help away in stages, so learners move from watching to finishing to doing.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Support decreases deliberately and the final task requires independent use of the target skill. Missing tools or evidence stay visible in the final summary.
+  First it splits your example into a full model, problems with some steps left blank and problems to solve alone. Then it writes similar problems at rising difficulty and checks every answer. Last it writes questions that ask why a step works, because a right answer can come from a wrong method. Wrong answers point to what to practise next.
+
+  Your example must be correct, because practice built on a mistake teaches the mistake. The AI checks each step first and asks you if one looks wrong.
 when:
-  - You need a staged practice sequence and a short understanding check.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You taught a method and students nod, then cannot start the homework.
+  - You have one good worked example and need a full practice sheet from it.
+  - Students get right answers but cannot say why they work.
+  - You are setting cover work or homework and need staged practice with an answer key.
+not_for:
+  - You have no worked example yet. Build the steps first with the Worked example to practice sequence builder.
+  - You only need a set of problems. Use the Practice problem set writer.
+  - You are planning how to fade help across a unit, not writing the problems. Use the Example to solo practice planner.
+  - The example is for an online course. Use the Online worked example builder.
 you_give:
-  - A correct worked example, learner prerequisites, target skill and common mistakes.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - A worked example that is correct, with every step shown
+  - The target skill, in one line
+  - What learners already know, and their year group or level
+  - Mistakes you often see (optional)
+  - How many problems you want and how long learners have (optional)
+  - Real learner answers, if you have them (optional)
 you_get:
-  - A staged practice sequence and a short understanding check.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A staged sequence: a full model, problems with fading steps and problems to solve alone
+  - Comparable problems with worked answers and a note on how hard each one is
+  - A short understanding check that asks why, with a feedback line for each likely wrong answer
+  - A rule for what to practise next after each kind of mistake
+  - A summary of what was not checked and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste your worked example, the skill, the level and the mistakes you see. Say how many problems you want.
+  - Solve two of the AI's problems yourself and check them against its answers before you print anything.
+  - Run the understanding check with learners, then bring their answers back to choose the next practice.
 how_it_works:
   - title: Worked example to practice sequence builder
-    text: Break the example into explanation, partially completed practice and independent work.
+    text: Splits your example into a full model, completion problems that fade the help and independent problems. It hands the stages and the target skill to the problem step.
   - title: Practice problem set writer
-    text: Create comparable problems and validate their answers and difficulty against the target skill.
+    text: Writes comparable problems at rising difficulty and checks each answer. It hands the problems and answers to the check step.
   - title: Study understanding check
-    text: Check the reasoning behind answers and use errors to choose the next practice.
+    text: Writes why-questions and a feedback line for each likely wrong answer. With real learner answers, it checks the reasoning and chooses the next practice.
 output_shape: |-
-  Scope and source coverage
-  A staged practice sequence and a short understanding check.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  PRACTICE SEQUENCE
+    Stage 1: full model | Stage 2: completion problems with fading steps | Stage 3: independent problems
+    Why the help fades the way it does
+
+  PROBLEMS AND ANSWERS
+    Problem | stage | difficulty | worked answer
+
+  UNDERSTANDING CHECK
+    Why-question | right reasoning | if the answer is wrong, say this and practise that
+
+  NEXT PRACTICE RULE
+    Mistake seen | what to practise next
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not run with real answers | one next step
+output_sample:
+  input:
+    - A worked example that is correct, with every step shown
+    - The target skill, in one line
+    - What learners already know, and their level
+    - Mistakes you often see (optional)
+  prerequisites:
+    - A teacher or tutor who can solve the problems to check the answers
+  output:
+    - name: Practice sequence
+      contains: A full model, completion problems with fading steps and independent problems, with the reason for each fade.
+    - name: Problems and answers
+      contains: Comparable problems at rising difficulty, each with a worked answer.
+    - name: Understanding check
+      contains: Why-questions with the right reasoning and a feedback line for each likely wrong answer.
+    - name: Next practice rule
+      contains: For each kind of mistake, what learners should practise next.
+    - name: Hand-back summary
+      contains: Files saved, checks not run with real learner answers and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read your example as text or a photo of a page. Check any maths or code answers yourself.
+  inputs:
+    - Two or three real learner answers, to test the understanding check.
+    - The worksheet or textbook page the example came from.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: One skill at a time. A mixed example gives muddled stages.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Paste the example exactly as you taught it, with every step.
   - what: Acceptance
-    how: Support decreases deliberately and the final task requires independent use of the target skill.
+    how: Say how many problems each stage needs and what counts as ready to work alone.
+improve:
+  - Bring back learner answers and ask which mistakes to practise next.
+  - Swap problem contexts each year but keep the stages.
+  - Cut a stage if learners always skip it.
+next:
+  - retrieval-quiz-writer
+  - skill-progression-map-builder
+terms:
+  - term: Worked example
+    meaning: A problem with every step solved and explained.
+  - term: Fading
+    meaning: Taking help away step by step until learners work alone.
+  - term: Completion problem
+    meaning: A problem where some steps are done for the learner and the rest are left to finish.
 judge:
   - Support decreases deliberately and the final task requires independent use of the target skill.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,17 +122,3 @@ test:
   - Remove one necessary input. The AI should identify the gap without inventing a replacement.
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
-terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.

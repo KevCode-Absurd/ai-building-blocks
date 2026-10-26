@@ -45,11 +45,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Research the keywords.** Use the skill `keyword-researcher`. The searches around your topic, how often they are made and how hard they are, grouped so the pattern shows.
-2. **Map the intent.** Use the skill `search-intent-keyword-mapper`. Give it the keyword research. What the searcher wants behind each keyword (learn, compare, buy, fix) and the kind of page that answers it.
-3. **Plan the cluster.** Use the skill `topic-cluster-mapper`. Give it the intent map and your current pages. One main page for the broad search and supporting posts for the specific ones, each search given to exactly one page, with your current pages placed or retired.
-4. **Brief every post.** Use the skill `content-brief-writer`. Give it the cluster plan. A brief for each post: the search it answers, the questions to cover, the length, the proof to include and the page it links to.
-5. **Map the links.** Use the skill `internal-link-mapper`. Give it the cluster plan and your site. Which page links to which, with the anchor text, so every post points to the main page and related posts point to each other.
+1. **Research the keywords.** Use the skill `keyword-researcher`. The searches around your topic, how often they are made and how hard they are, grouped so the pattern shows. Hands the keyword list to the intent mapper.
+2. **Map the intent.** Use the skill `search-intent-keyword-mapper`. Give it the keyword research. What the searcher wants behind each keyword (learn, compare, buy, fix) and the kind of page that answers it. Hands the intent map to the cluster mapper.
+3. **Plan the cluster.** Use the skill `topic-cluster-mapper`. Give it the intent map and your current pages. One main page for the broad search and supporting posts for the specific ones, each search given to exactly one page, with your current pages placed or retired. Hands the cluster plan to the brief writer and the link mapper.
+4. **Brief every post.** Use the skill `content-brief-writer`. Give it the cluster plan. A brief for each post: the search it answers, the questions to cover, the length, the proof to include and the page it links to. Hands the briefs to the link mapper.
+5. **Map the links.** Use the skill `internal-link-mapper`. Give it the cluster plan, the briefs and your site. Which page links to which, with the anchor text, so every post points to the main page and related posts point to each other.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

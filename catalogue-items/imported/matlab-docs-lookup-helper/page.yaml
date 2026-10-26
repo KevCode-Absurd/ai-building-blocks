@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It looks up the official page and reports it.
 new_slug: matlab-docs-lookup-helper
 name: MATLAB docs lookup helper
-summary: Ask how a MATLAB function works. Get the right syntax from the official
-  docs, with fewer wrong guesses.
+summary: Find the right MATLAB function syntax in the official MathWorks docs. Ask how a function works and get the exact call, with links.
 job: build-software
 headline: MATLAB docs lookup helper
-subhead: The right MATLAB syntax, taken from the official MathWorks pages,
-  instead of a function call that is almost right. Ask how a function works and
-  it finds the page that answers it.
+subhead: The right MATLAB syntax, taken from the official MathWorks pages, instead of a function call that is almost right. Ask how a function works and it finds the page that answers it.
 explain: |
   The right MATLAB syntax, taken from the official MathWorks pages, instead of a function call that is almost right. Ask how a function works and it finds the page that answers it.
 
@@ -18,6 +15,10 @@ when:
   - Code that worked last release now gives a warning or error.
   - You need the steps for a task in a toolbox you have never used.
   - You want to know what changed in the latest release.
+not_for:
+  - "You only need quick syntax for a function you have installed: type help and the function name in MATLAB."
+  - "You have a general MATLAB coding question, not a MathWorks product question: ask your AI directly or ask a colleague."
+  - "You cannot run MATLAB or let your AI read web pages: read the docs yourself at mathworks.com."
 you_give:
   - The function name or task
   - Your MATLAB release
@@ -28,8 +29,29 @@ you_get:
   - Links to the pages used
   - Notes on release changes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and read web pages.
+  - Check that you have MATLAB with a licence. Your AI tool must be able to run MATLAB code and read web pages from it.
+  - Add the skill to your AI tool, or paste its text into the chat.
+  - Ask your question. Name the function or the task, and say which MATLAB release you use.
+  - Read the answer and open the links it lists to check the syntax.
+  - Run the call in MATLAB. If it fails, send the error back and ask again.
+output_sample:
+  input:
+    - The MATLAB function name or the task you want to do
+    - Your MATLAB release
+    - The toolbox you are using (optional)
+  prerequisites:
+    - MATLAB with a licence
+    - An AI tool that can run MATLAB code and read web pages from MATLAB
+  output:
+    - name: Syntax
+      contains: The exact call forms for the function, taken from the official reference page.
+    - name: Required arguments
+      contains: The inputs the function must have, with their types.
+    - name: Name-value options
+      contains: The optional settings the function accepts and what each one does.
+    - name: Call order
+      contains: The steps to call, in order, when the task needs more than one function.
+    - name: Release notes
+      contains: Changes, warnings or removed features that apply to your MATLAB release.
+    - name: Links used
+      contains: The official MathWorks pages the answer came from.

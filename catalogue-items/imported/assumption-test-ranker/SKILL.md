@@ -9,9 +9,17 @@ Triage assumptions using an Impact × Risk matrix and suggest targeted experimen
 
 ### Context
 
-You are helping prioritize assumptions for **$ARGUMENTS**.
+You are helping prioritize assumptions for the product or idea the user names.
 
 If the user provides files with assumptions or research data, read them first.
+
+### What to ask for first
+
+1. The list of assumptions (required). If there is no list, ask for one. Do not make assumptions up for them.
+2. What the product or idea is, in a sentence (required).
+3. Customer counts, survey results or research notes (optional).
+
+If an optional input is missing, carry on and say that scores are estimates.
 
 ### Domain Context
 
@@ -21,7 +29,7 @@ If the user provides files with assumptions or research data, read them first.
 
 The user will provide a list of assumptions to prioritize. Apply the following framework:
 
-1. **For each assumption**, evaluate two dimensions:
+1. **For each assumption**, score two dimensions, each from 1 (low) to 5 (high). Scores are the AI's estimates unless the user gave real numbers. Mark each score "estimate" or "from your data". Never present an estimate as a measured figure, and never invent customer counts or percentages:
    - **Impact**: The value created by validating this assumption AND the number of customers affected (in ICE: Impact = Opportunity Score × # Customers)
    - **Risk**: Defined as (1 - Confidence) × Effort
 
@@ -36,9 +44,15 @@ The user will provide a list of assumptions to prioritize. Apply the following f
    - Measures actual behavior, not opinions
    - Has a clear success metric and threshold
 
-4. **Present results** as a prioritized matrix or table.
+4. **Present results** in this order:
+   - **Scored list**: a table with assumption, impact (1 to 5), risk (1 to 5), box, and whether the scores are estimates or from the user's data. A score of 4 or 5 counts as high; 1 to 3 counts as low.
+   - **Four-box matrix**: the same assumptions grouped by box.
+   - **Experiments**: for each High Impact, High Risk assumption, the test, the one metric and the pass line.
+   - **What to do next**: test, build, wait or drop for each, with the one or two to run first.
 
-Think step by step. Save as markdown if the output is substantial.
+If the user's list is longer than 15 assumptions, score them all but design experiments for the top five only.
+
+Think step by step. Save as markdown if the output is substantial. End by telling the user to run the first test before building, and offer to design that test in more detail.
 
 ---
 

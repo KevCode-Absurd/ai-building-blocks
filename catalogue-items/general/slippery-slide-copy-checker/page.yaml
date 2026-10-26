@@ -1,6 +1,6 @@
 new_slug: slippery-slide-copy-checker
 name: "Slippery slide copy checker"
-summary: "Paste your ad or page copy. Get each line marked for whether it pulls the reader to the next one."
+summary: "Find where readers stop in your ad or page copy. Get each line marked for pull, a score out of 100 and rewrites for the weakest breaks."
 job: check-ads
 thinking: medium
 thinking_why: "It judges each break in the copy for pull, which needs reading as a reader would."
@@ -17,6 +17,10 @@ when:
   - Your page or ad gets views but readers drop off before the offer.
   - You've written a long page and don't know where it loses people.
   - You have a rough draft and want the weakest breaks found fast.
+not_for:
+  - "You only have one headline to test: pick between versions by hand, or ask a friend which one they would click."
+  - "You want to check that claims have proof: use the Claim and proof matcher."
+  - "Your copy is not written yet: write a first draft first, then bring it here to find the weak breaks."
 
 you_give:
   - Your ad or page copy, in order
@@ -33,6 +37,28 @@ how_to_use:
   - Mark which story, if any, is true, so it can check the rest.
   - Replace each weak break with the rewrite or your own.
   - Reread the new version from the top.
+output_sample:
+  input:
+    - Your ad or page copy, in the order a reader sees it
+    - A short note on who reads it (optional)
+    - Which stories in the copy are true (optional)
+  output:
+    - name: Score
+      contains: "A number out of 100 and the working: strong parts divided by parts counted, less points for failed checks."
+    - name: The slide, part by part
+      contains: Each headline, subhead, caption and sentence with its job and a mark of strong, weak or stop.
+    - name: Where a reader could stop
+      contains: A list of the breaks where a reader may leave, with part numbers.
+    - name: Opening check
+      contains: Whether the first lines are true and pull the reader in.
+    - name: Story and claim check
+      contains: Whether any story is real, any weakness is stated, and the ask comes after the reasons.
+    - name: Rewrites
+      contains: The three to five weakest parts, each with the old line and a new one.
+    - name: Score after fixes
+      contains: A new score out of 100 using the same method.
+    - name: Missing and checks missed
+      contains: Gaps in what you gave, and any check the result still fails.
 
 how_it_works:
   - title: Splits the copy

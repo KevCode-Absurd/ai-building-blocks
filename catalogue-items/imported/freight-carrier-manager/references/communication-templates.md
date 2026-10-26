@@ -294,7 +294,7 @@ This email contains everything you need to get started. Please review carefully 
 - [ ] Confirm after-hours emergency contact (name, phone)
 
 **What to Expect:**
-- **First 30 days:** We'll run trial loads on your awarded lanes. Our minimum standards during trial: ≥93% OTD, ≥85% tender acceptance, ≥95% invoice accuracy.
+- **First 30 days:** We'll run trial loads on your awarded lanes. Our minimum standards during trial: <set with your own targets, for example on-time delivery, tender acceptance and invoice accuracy>.
 - **Day 30 review:** We'll review trial performance together. If targets are met, you'll move to full allocation. If not, we'll discuss what adjustments are needed.
 - **Ongoing:** Quarterly performance reviews, annual rate review aligned with our RFP cycle.
 

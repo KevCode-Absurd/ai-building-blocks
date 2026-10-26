@@ -47,11 +47,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Find the ideas you have not tried.** Use the skill `untried-ad-idea-finder`. Starts the chain: reads your past ads and finds five ideas nobody has tested.
-2. **Lay out the test campaign.** Use the skill `meta-test-campaign-planner`. Give it the brief from the steps before. Takes the five ideas from the step before and sets how many ads go in each pack and when to scale.
+2. **Lay out the test campaign.** Use the skill `meta-test-campaign-planner`. Give it the brief from the steps before. Takes the five ideas from the step before and sets how many ads go in each pack and when to scale. Hands the pack names and rules to the results step.
 
 Pause here: Launch the test and let it run for the read window without changing it. Then export the results.
 
-3. **Learn from the winners and losers.** Use the skill `winners-and-losers-ad-comparer`. Give it the audit report from the steps before. Reads the test results against the ideas and plan, and records what they teach.
+3. **Learn from the winners and losers.** Use the skill `winners-and-losers-ad-comparer`. Give it the audit report and the plan from the steps before. Uses the results you export after the test runs, not step 2's output. Reads them against the ideas from step 1 and the pack names and rules from step 2, and records what they teach.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

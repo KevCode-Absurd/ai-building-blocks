@@ -1,0 +1,147 @@
+name: Identity & Access Engineer agent
+summary: Get a login, single sign-on and permissions design for your app, with session rules, account recovery and the attacks to test before launch.
+headline: Identity & Access Engineer agent
+subhead: Describe your app, who logs in and what each person may see. It designs sign-in, sessions, single sign-on and access rules, and lists the failure cases to test. You get a design a developer can build, plus the questions still open.
+job: secure-code
+thinking: high
+thinking_why: It weighs attack paths against how easy sign-in feels, and must not invent security methods. Use a model that reasons well and says when it is unsure.
+explain: |-
+  Login is the one part of an app every user touches and every attacker tests. It also decides sales. A business customer will ask whether you support single sign-on and automatic removal of leavers before they sign. Home-made login code is where most problems start: tokens that last too long, redirect links that are not checked, one customer able to read another customer's data.
+
+  This agent designs login and access on standard, proven methods. It never makes up its own. First it asks who logs in, from which devices, and who would attack. Then it sets up the account model: users, companies, roles and what happens when a sign-in email matches an existing account. It plans each flow with the failure cases first: expired links, reused tokens, removed staff, an outage at the sign-in provider. It treats account recovery as carefully as login, because attackers go there.
+
+  It writes a design and sample snippets if you ask. It does not run anything or touch your live login. The profile's targets, such as removing access within a minute, are goals from the original author. Set your own limits with your security lead.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are building login for a new app and want to avoid the common mistakes before you write code.
+  - A business customer asks if you support SAML, single sign-on or SCIM and you are not sure what that involves.
+  - Your sessions or tokens feel loose, for example they last for weeks or you cannot sign someone out everywhere.
+  - Your app serves many companies and you need to be sure one company can never see another's data.
+not_for:
+  - You have a small app and want a simple login and permissions plan or review. Use the Login and access builder.
+  - You need rules for AI agents, not people. Use the Agentic Identity & Trust Architect agent.
+  - You want a bug review of finished code. Use the Application Security Engineer agent.
+  - You want it to change your live login or provider settings. It writes the design. Your team makes and tests each change.
+you_give:
+  - What your app does and who logs in, such as shoppers, staff or business customers.
+  - How people sign in today and what you use for it, such as a provider or your own code.
+  - Your tech stack, such as Next.js with Postgres.
+  - The roles and what each may do, and whether one login serves many companies (optional)
+  - What business customers have asked for, such as SAML or SCIM (optional)
+you_get:
+  - A threat list for your login, ranked by what an attacker would try first
+  - A sign-in design with the standard method for each flow and why it was chosen
+  - A session and token plan with lifetimes, renewal and how sign-out works
+  - A single sign-on and user provisioning plan, if business customers need it
+  - An access model that keeps each company's data apart, and a recovery plan
+  - A list of failure tests to run before you launch
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe your app, who logs in, your stack and what customers have asked for. Paste your current login notes or settings if you have them. Never paste real passwords or keys.
+  - Type "Design login and access for this app. Threat list first, then failure cases. Use standard methods only and mark anything you assume."
+  - Read the threat list and the account model first. Correct any wrong fact and ask it to run the design again.
+  - Give the design to your developer or security lead. Ask them to check the lifetimes and settings against your provider's own guidance.
+  - Build it, then run the failure tests. The AI does not run or test your login.
+how_it_works:
+  - title: Threat-model the login
+    text: It asks who logs in, from which devices, and which attackers matter, such as stolen passwords, leavers keeping access or staff over-reaching.
+  - title: Choose standard building blocks
+    text: It picks a sign-in provider or library and the flow to use. It records why, and rejects home-made methods in writing.
+  - title: Design the account model
+    text: It sets users, companies, roles, and the rule for when a sign-in email matches an account that already exists.
+  - title: Design each flow, failures first
+    text: It plans expired codes, reused tokens, removed staff and provider outages before the normal case.
+  - title: Plan the record of events
+    text: It lists which sign-in, reset and permission events to log, without showing attackers the reason a login failed.
+  - title: Plan tests and rollout
+    text: It writes attack tests, a way to switch changes on slowly, and a recovery path for admins if the sign-in provider is down.
+output_shape: |-
+  SCOPE
+    App <what> | Who logs in <list> | Stack <list> | Customer asks <list>
+
+  THREAT LIST
+    <threat> | <what it could cost> | <design part that stops it>
+
+  SIGN-IN DESIGN
+    <flow> | <standard method> | <why> | <what to check on every request>
+
+  SESSION AND TOKEN PLAN
+    <token or session> | <lifetime> | <renewal> | <how sign-out works>
+
+  SINGLE SIGN-ON AND PROVISIONING (if needed)
+    <setting per company> | <rule> | <what happens when a person leaves>
+
+  ACCESS MODEL
+    <role> | <may do> | <how each company's data is kept apart>
+
+  RECOVERY PLAN
+    <flow> | <protection> | <what is logged>
+
+  FAILURE TESTS
+    <attack or failure> | <expected result>
+
+  GAPS AND CHECKS
+    <missing fact or choice> | <why it matters> | <who should decide>
+output_sample:
+  input:
+    - What your app does and who logs in
+    - How people sign in today and what you use for it
+    - Your tech stack
+    - Roles, company setup and what customers have asked for (optional)
+  output:
+    - name: Scope
+      contains: The app, the people who log in, the stack and what customers asked for.
+    - name: Threat list
+      contains: The attacks to expect, ranked, each with the part of the design that stops it.
+    - name: Sign-in design
+      contains: The standard method for each flow, why it was chosen and what to check every time.
+    - name: Session and token plan
+      contains: Lifetimes, renewal rules and how sign-out and cancel work.
+    - name: Single sign-on and provisioning
+      contains: Per-company settings and what happens to access when a person leaves. Only if business customers need it.
+    - name: Access model
+      contains: Roles with what each may do, and how one company's data is kept apart from another's.
+    - name: Recovery plan
+      contains: How password reset and lost devices work safely, and what is logged.
+    - name: Failure tests
+      contains: Attacks and failures to try before launch, each with the result you should see.
+    - name: Gaps and checks
+      contains: Missing facts and open choices, with who should decide each.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A strong reasoning model gives a better threat list. If you attach your current login code, it can point at the exact place a rule is missing.
+  inputs:
+    - Your sign-in provider's settings page or notes, with secrets removed.
+    - The sign-in or access questions from your last security questionnaire or customer review.
+    - A list of roles and the pages or data each one should reach.
+terms:
+  - term: Single sign-on (SSO)
+    meaning: One login at the customer's company that opens your app too. SAML and OIDC are two common ways to set it up.
+  - term: SCIM
+    meaning: A standard that lets a customer's company add and remove users in your app automatically.
+  - term: Session
+    meaning: The period in which your app remembers a person is signed in.
+  - term: Passkey
+    meaning: A sign-in that uses the device's own lock, such as a fingerprint, instead of a password. It resists phishing.
+  - term: Tenant
+    meaning: One customer company inside an app that serves many. Tenant isolation means one company cannot reach another's data.
+tweaks:
+  - what: Provider
+    how: Say which sign-in provider or library you use. Advice is then specific to it instead of general.
+  - what: Customers
+    how: Say if you sell to businesses. That adds single sign-on, user removal and per-company settings to the design.
+  - what: Limits
+    how: Give any rule you must follow, such as a maximum session length from a customer contract.
+improve:
+  - Keep the design and the failure test results together, and rerun the tests after every login change.
+  - Review token lifetimes, unused admin accounts and expiring certificates on a set date each quarter.
+  - Pair it with the Application Security Engineer agent to review the code once it is built.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

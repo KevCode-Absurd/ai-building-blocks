@@ -1,6 +1,6 @@
 slug: ad-data-quality-checker
 name: Ad data quality checker
-summary: Give it your ad and sales tables. Get nine checks that catch missing spend, duplicates and empty columns.
+summary: "Check your ad and sales data in BigQuery before you report. Nine checks find spend gaps, double-counted leads and empty columns."
 category: general
 boards: []
 type: skill

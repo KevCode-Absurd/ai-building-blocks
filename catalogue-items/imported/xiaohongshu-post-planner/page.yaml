@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It adapts content to one platform.
 new_slug: xiaohongshu-post-planner
 name: Xiaohongshu post planner
-summary: Name your topic. Get a Xiaohongshu post plan with cover, title and
-  layout aimed at saves and sales.
+summary: Plan a Xiaohongshu post that earns saves. Give it your topic and get a cover brief, titles, body, hashtags and seed comments.
 job: grow-social
 headline: Xiaohongshu post planner
-subhead: Name your topic. Get a Xiaohongshu post plan with cover, title and
-  layout aimed at saves and sales. Bring your topic, product or message. Use the
-  result to plan your next step.
+subhead: Name your topic. Get a Xiaohongshu post plan with cover, title and layout aimed at saves and sales. Bring your topic, product or message. Use the result to plan your next step.
 explain: |
   A full Xiaohongshu post plan for one topic, built to win saves and, in time, sales on China's biggest lifestyle app.
 
@@ -18,6 +15,10 @@ when:
   - You have a topic and need a cover, title and body that fit the platform.
   - Your posts get views but few saves and you want to fix that.
   - You need a content calendar for the app.
+not_for:
+  - "You need posts for several Chinese platforms at once: ask a Chinese-market content specialist, as this plan covers Xiaohongshu only."
+  - "You want health, medical or skin-result claims: have a qualified person check the claims first, because Chinese ad law is strict on them."
+  - "You need the cover image or video made: use an image or video tool, since this only writes the brief and the text."
 you_give:
   - Your topic, product or message
   - Your target audience
@@ -30,7 +31,27 @@ you_get:
   - Seed comments and likely questions
   - A format recommendation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Type your topic, product or message. Add your audience and your goal: saves, follows or sales."
+  - Add competitor accounts if you have them (optional).
+  - Read the format choice first. Then check the cover brief, titles and body against your real product and facts.
+  - Remove any claim you cannot prove. Label posts that are paid, gifted or linked to a product as ads, as Xiaohongshu rules and Chinese ad law require.
+output_sample:
+  input:
+    - Your topic, product or message
+    - Your target audience
+    - Your goal, such as saves, follows or sales
+    - Competitor accounts to compare (optional)
+  output:
+    - name: Format choice
+      contains: The post format that fits your topic, such as before and after, step by step, comparison, hidden gems or a ranked list.
+    - name: Cover image brief
+      contains: A visual idea, a short text overlay under 10 characters and a color mood.
+    - name: Title options
+      contains: Two or three titles with the main keyword in the first 8 characters and an emotional hook.
+    - name: Body content
+      contains: A hook line, short paragraphs, light emoji use, key points highlighted and a call to action.
+    - name: Hashtags
+      contains: Three to five tags that mix popular and niche ones.
+    - name: Comment engagement plan
+      contains: Seed comments to post and likely reader questions with answers.

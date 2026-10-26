@@ -1,6 +1,6 @@
 new_slug: elevenlabs-voice-description-writer
 name: ElevenLabs voice description writer
-summary: Describe an original voice. Get a short voice design prompt with tone, texture, pace and character.
+summary: Write an ElevenLabs voice description for an original voice. Get one short paragraph with tone, texture, pace and character, ready to paste.
 job: work-with-audio
 headline: ElevenLabs voice description writer
 subhead: Describe an original voice. Get a short voice design prompt with tone, texture, pace and character. Bring the brief and any files you want it to use.
@@ -11,15 +11,34 @@ explain: |-
 when:
   - You need a compact original voice design description.
   - You want a clear draft and checks from the material you already have.
+not_for:
+  - "You want to copy a real person's voice: use a recording of that person, with their permission."
+  - "You need a full narrated script: ask a writer or your AI to write the script first, then use this for the voice."
+  - "You want finished audio: paste the result into ElevenLabs Voice Design to make a preview."
 you_give:
   - brief
 you_get:
   - document
   - Missing inputs and steps that still need to run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open your AI and paste the skill text.
+  - "Add your brief: what the voice is for, who listens, the tone you want and how strong the character should be."
+  - Add a preview of the voice if you already made one (optional).
+  - Read the paragraph it returns and check it fits your use.
+  - Paste it into ElevenLabs Voice Design, listen to the preview and compare it with the traits you asked for.
+  - If something is off, ask your AI to change one quality only, such as pace.
+output_sample:
+  input:
+    - "Your brief: what the voice is for, such as an explainer, an ad or an audiobook"
+    - Who will listen to it
+    - Tone words you want
+    - How strong the character should be (optional)
+    - A voice preview you already made (optional)
+  output:
+    - name: VOICE DESCRIPTION
+      contains: One copy-ready paragraph of 2 to 5 sentences covering age range, pitch, texture, pace and personality.
+    - name: NOT RUN
+      contains: A note that no voice was generated or heard, so you still need to listen to a preview.
 how_it_works:
   - title: Read the brief
     text: Identify use case, personality and intensity before describing vocal traits. Use an original voice; do not imply copying an identifiable person without permission.

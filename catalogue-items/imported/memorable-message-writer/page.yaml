@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks a message against six traits and rewrites it.
 new_slug: memorable-message-writer
 name: Memorable message writer
-summary: Give it a message. Get a rewrite that is simple, surprising, concrete,
-  believable and emotional. Uses the SUCCESs checklist.
+summary: Paste your message and get it scored on six traits, then rewritten so people remember it. Use it to make a memorable message that sticks.
 job: write-and-tell-stories
 headline: Memorable message writer
-subhead: Give it a message. Get a rewrite that is simple, surprising, concrete,
-  believable and emotional. Uses the SUCCESs checklist. Bring the message, copy
-  or slide to improve. Use the result to plan your next step.
+subhead: Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist. Bring the message, copy or slide to improve. Use the result to plan your next step.
 explain: |
   A message that people understand fast and still remember next week. Paste your copy, slide or pitch and get it scored and rewritten with the six traits behind ideas that stick: simple, unexpected, concrete, credible, emotional and told as a story.
 
@@ -18,6 +15,10 @@ when:
   - You are writing a talk and want the audience to remember one thing.
   - A launch email reads like every other launch email.
   - You need a campaign line that is specific, not vague.
+not_for:
+  - "You write legal, pricing or compliance copy: ask a person who knows the rules to edit it plainly instead."
+  - "You need a full brand story for your business: use a brand storytelling guide or a writer, not a one-message rewrite."
+  - "You want to make a post go viral: this tool improves how well one message is remembered, not how far it spreads."
 you_give:
   - The message, copy or slide to improve
   - Who it is for
@@ -28,7 +29,26 @@ you_get:
   - A rewrite with a clear core message
   - Before and after examples
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Paste the message, copy or slide you want to improve.
+  - Say who it is for and what they should remember or do.
+  - Add real proof points you have, such as numbers, quotes or logos (optional). Your AI must not invent any.
+  - Read the score table and the two weakest traits first.
+  - Use the rewrite, and fill each placeholder with a real fact before you publish.
+output_sample:
+  input:
+    - The message, copy, slide or pitch you want to improve
+    - Who it is for
+    - What they should remember or do (optional)
+    - Real proof points such as numbers, quotes or logos (optional)
+  output:
+    - name: Score table
+      contains: A rating from 1 to 10 for each of the six traits, with a total and what the total means.
+    - name: Weakest traits
+      contains: The two lowest scoring traits named, with a short reason each one falls short.
+    - name: Rewrite
+      contains: One new version of your message built around a single core idea.
+    - name: Before and after pairs
+      contains: Your original line next to the improved line for each weak part.
+    - name: Proof placeholders
+      contains: Marked gaps where you need to add a real number, quote or example. Nothing is made up.

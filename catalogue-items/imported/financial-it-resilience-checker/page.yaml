@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It weighs many linked EU rules and supplier terms.
 new_slug: financial-it-resilience-checker
 name: Financial IT resilience checker
-summary: Describe your finance firm and IT suppliers. Get DORA gaps, incident
-  reporting steps and supplier contract checks.
+summary: Check your finance firm against DORA. Give it your firm and IT suppliers. You get gaps, incident reporting steps and supplier contract checks.
 job: check-contracts
 headline: Financial IT resilience checker
-subhead: Share your finance firm, systems and suppliers; get current DORA
-  sources, evidence gaps, and incident facts to confirm.
+subhead: Tell your AI about your finance firm and its IT suppliers. It checks current DORA sources and lists your gaps. It also shows what evidence and incident facts you still need.
 explain: |
   Share your firm, systems and supplier details. The skill checks current DORA sources, maps evidence and lists missing incident facts.
 
@@ -17,6 +15,10 @@ when:
   - A cloud supplier contract needs checking against the required clauses.
   - You need to know when and how to report an IT incident.
   - Your board wants a readiness gap list.
+not_for:
+  - "Your firm is outside DORA scope: ask a lawyer, or look at NIS2 guidance for your sector."
+  - "You need legal advice or a sign-off for your regulator: use a qualified lawyer or an accredited assessor."
+  - "You want one incident classified from an outage time alone: gather all the incident facts first, or ask your regulator."
 you_give:
   - Your firm type and size
   - A list of IT suppliers and what they do
@@ -29,7 +31,30 @@ you_get:
   - A register of information outline
   - Priority actions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Use one that can browse the web, so it can check current DORA texts.
+  - Paste the skill instructions into the chat, or upload the skill folder if your AI accepts files.
+  - "Describe your firm: its type, size and the services it runs."
+  - List your IT suppliers and what each one does. Add contracts, policies and past incidents if you have them.
+  - Check the source links and dates in the answer before you rely on them.
+  - Share the gap list with your compliance lead or lawyer before you act on it.
+output_sample:
+  input:
+    - Your firm type and size
+    - A list of your IT suppliers and what each one does
+    - Your policies and supplier contracts (optional)
+    - Your past incidents (optional)
+  prerequisites:
+    - An AI that can check the web, so it can confirm current DORA texts on EUR-Lex
+  output:
+    - name: Source check
+      contains: The official links and the dates checked for each DORA text used.
+    - name: Gap analysis
+      contains: "A table by phase: governance, incidents, testing and third-party risk, with status and evidence still needed."
+    - name: Incident reporting steps
+      contains: The three report stages with deadlines, plus the incident facts still missing before it can be classified.
+    - name: Supplier contract checks
+      contains: Which required contract clauses each ICT supplier agreement covers and which it lacks.
+    - name: Register of Information outline
+      contains: The fields to fill in for each ICT service arrangement, such as provider, service type and data location.
+    - name: Priority actions
+      contains: The gaps to fix first, in order.

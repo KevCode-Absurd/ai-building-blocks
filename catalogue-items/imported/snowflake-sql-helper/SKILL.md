@@ -9,6 +9,44 @@ Snowflake SQL, data pipelines, Cortex AI, and Snowpark Python development. Cover
 
 > Originally contributed by [James Cha-Earley](https://github.com/jamescha-earley) — enhanced and integrated by the claude-skills team.
 
+## What you need
+
+- The data job in plain words: what should be loaded, cleaned, joined or classified, and what should come out.
+- Source and target table names, and the key column that identifies a row.
+- How fresh the data must be (for example, within 5 minutes), if it matters.
+- Which roles need access to which databases and schemas, if the job includes grants.
+- A Snowflake account to run the result, and a dev schema to test in first.
+
+If the job, the table names or the key column are missing, ask once. If they are still missing, use clear placeholders such as `<target_table>` and write `MISSING: <what>`. Never invent table names, columns, roles or warehouse names, and never ask the user to paste a password or key into the chat. Credentials go in environment variables.
+
+You cannot run SQL in a chat. The helper script needs Python 3 on the user's computer. If it cannot run, write the same statements by hand from the templates in this file.
+
+## Steps
+
+1. Say back the job in one sentence and name the Snowflake feature that fits: Dynamic Table (the default), Streams plus Tasks (for procedural steps), Snowpipe (for files arriving in cloud storage), or a plain query.
+2. Write the SQL with the rules below: snake_case names, CTEs, explicit column lists, and `CREATE OR REPLACE` for repeatable setup.
+3. For an upsert, a Dynamic Table or a set of grants, use the helper script if Python is available, or write the statement from the template. Check the output against the key column and the lag the user gave.
+4. Check the result against the proactive triggers and the common errors table below. Fix any hit before you hand it over.
+5. If the job uses Cortex AI functions, use the current `AI_*` names, and tell the user to try a `LIMIT 10` sample first because these functions are billed.
+6. Hand back the SQL with short reasons and a checklist of what to review before running it.
+
+## Output
+
+Return, in this order:
+
+1. **Plan**: the job, the feature chosen and why, in two or three lines.
+2. **SQL**: each statement in run order, with a one-line comment above it.
+3. **Why these choices**: one short note per non-obvious choice, such as the lag, the key column or the warehouse.
+4. **Review before running**: grants to check, warehouse size and cost, tasks that need `ALTER TASK ... RESUME`, and data the statements will change.
+5. **Test steps**: run in a dev schema first, check row counts, and compare a sample with the source.
+6. **Not checked**: anything you could not confirm, such as table definitions you did not see.
+
+## When not to use
+
+- The database is not Snowflake. Use the SQL query helper for general SQL.
+- You only want tables designed, with no Snowflake code yet. Use the Database schema designer first.
+- You want the result checked against a live account. Ask a Snowflake admin or an engineer to review it first.
+
 ## Quick Start
 
 ```bash
@@ -172,7 +210,7 @@ session = Session.builder.configs({
 - Never hardcode credentials. Use environment variables or key pair auth.
 - DataFrames are lazy -- executed on `collect()` / `show()`.
 - Do NOT call `collect()` on large DataFrames. Process server-side with DataFrame operations.
-- Use **vectorized UDFs** (10-100x faster) for batch and ML workloads.
+- Consider **vectorized UDFs** for batch and ML workloads. They process rows in batches. Compare timing against a normal UDF on your own data before you switch.
 
 ## dbt on Snowflake
 
@@ -292,3 +330,9 @@ Surface these issues without being asked when you notice them in context:
 | `references/snowflake_sql_and_pipelines.md` | SQL patterns, MERGE templates, Dynamic Table debugging, Snowpipe, anti-patterns |
 | `references/cortex_ai_and_agents.md` | Cortex AI functions, agent spec structure, Cortex Search, Snowpark |
 | `references/troubleshooting.md` | Error reference, debugging queries, common fixes |
+
+---
+
+## Credit and licence
+
+Written by Alireza Rezvani (`alirezarezvani/claude-skills`), under the MIT licence in `LICENSE`. The front matter names James Cha-Earley as the original contributor. Keep both credits when you reuse it.

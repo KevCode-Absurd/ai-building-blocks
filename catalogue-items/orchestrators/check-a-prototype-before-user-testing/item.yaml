@@ -1,6 +1,6 @@
 slug: check-a-prototype-before-user-testing
 name: Check a prototype before user testing
-summary: Share the source files. Get a review of test blockers, neutral tasks and a session plan.
+summary: "Check a prototype before user testing: get a list of test blockers, neutral task wording and a session plan so results are about your design."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -18,7 +18,6 @@ inputs:
     required: false
 outputs:
   - type: audit_report
-  - type: code_change
   - type: plan
   - type: document
 uses:
@@ -27,11 +26,11 @@ uses:
   - usability-test-runner
 steps:
   - uses: everyday-usability-reviewer
-    note: Walk through the key tasks and record confusing controls, wording and missing states.
+    note: Walk through the key tasks and record confusing controls, wording and missing states. Hands step 3 the blocker list and the task paths.
   - uses: accessibility-checker
-    note: Check available accessibility evidence and identify barriers that could invalidate the test.
+    note: Uses the prototype itself, not step 1's report. Checks available accessibility evidence and identifies barriers that could invalidate the test. Hands step 3 the barriers and what it could not check.
   - uses: usability-test-runner
-    note: Prepare and, when participants and consent are available, run neutral sessions around the research question.
+    note: Uses the blockers from step 1 and the barriers from step 2 to choose and word neutral tasks. Prepares and, when participants and consent are available, runs sessions around the research question.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

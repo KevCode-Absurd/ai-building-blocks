@@ -16,6 +16,29 @@ use_cases:
   - "Review a design or ad and push it from good enough to great"
   - "Write a short manifesto that rallies a team around a cause"
   - "Plan how to keep a brand's voice the same across many years and products"
+not_for:
+  - "You need proof-led, tested ad copy built on product facts: use the David Ogilvy mind or the Claude Hopkins mind."
+  - "You want a clear market position and category for your product: use the April Dunford mind or the Al Ries mind."
+  - "You need the latest word from Lee Clow on recent ads or plans: he is a living person and this mind only uses his record up to about 2020, so read his own recent interviews."
+output_sample:
+  input:
+    - Your product, brand or creative work, in a few lines
+    - Your brief or draft, if you have one (optional)
+    - Who it is for and what the client or boss wants
+    - Your limits, such as budget, time and risks you cannot take
+  output:
+    - name: The belief
+      contains: A plain statement of what your brand believes, not what the product does.
+    - name: The convention to break
+      contains: What others in your category do, and the habit he would push you to break.
+    - name: Brief without buzzwords
+      contains: Your brief rewritten in plain words, showing where the idea is thin or missing.
+    - name: Brave and safe versions
+      contains: A brave direction beside the safe one, with the risk named, and which to show first.
+    - name: Craft notes
+      contains: One or two details to fix, such as type, pacing or the last frame.
+    - name: One rallying line
+      contains: A single short line that sums up the idea for your team.
 seats:
   - {seat: "Big brand ideas", asks: "What does this brand believe, and would anyone want to join it?"}
   - {seat: "Disruption", asks: "What is the convention here, and what happens if we break it?"}

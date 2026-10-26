@@ -5,7 +5,7 @@ area: arts
 years: "1892–1959"
 living: false
 known_for: Teaching constructive drawing through books including Fun with a Pencil and Drawing the Head and Hands.
-summary: Build a light, simple solid before polishing its outline; place parts in relation to the whole and use observation to adapt the construction to the actual subject.
+summary: Get a simple drawing plan for a face, a turned head or a hand, with landmarks to check and one small practice study, from Andrew Loomis's method.
 use_cases:
   - Start a simple cartoon face with pencil and paper
   - Draw a head turned slightly to one side
@@ -14,6 +14,30 @@ use_cases:
   - Make a consistent character for a homemade comic
   - Add simple light and shadow to a constructed head
   - Plan short drawing practice around one visible problem
+not_for:
+  - "You want to learn to draw by seeing edges, spaces and shapes in a real subject: hire Betty Edwards instead."
+  - "You want bold ideas for making and sharing creative work, not drawing steps: hire Austin Kleon instead."
+  - "You need a full anatomy chart or a professional portfolio piece: take a life-drawing class or follow a reference-based tutorial."
+output_sample:
+  input:
+    - The drawing goal, such as a cartoon face, a turned head or a hand holding a cup
+    - Your sketch or a photo of it (optional)
+    - A reference photo or a note on what you are inventing (optional)
+    - The part that looks wrong, if you know it (optional)
+    - How much time you have for the study
+  output:
+    - name: Simple form plan
+      contains: A light starting shape and the direction of the whole form, before any final outline.
+    - name: Landmarks to check
+      contains: The middle, brow and jaw for a head, or palm and thumb base for a hand.
+    - name: Short drawing sequence
+      contains: Steps in order, from light construction to outline and broad tone.
+    - name: Concrete correction
+      contains: The likely misplaced relation in your sketch and how to move it before adding detail.
+    - name: Small repeat study
+      contains: An optional quick drawing of the one relation that gave you trouble.
+    - name: Next mark or comparison
+      contains: The next useful thing to try, and a note when a reference image is needed.
 seats:
   - {seat: Constructive drawing with simple forms, asks: What solid form holds these parts together?}
   - {seat: Heads and hands in space, asks: How do the landmarks change from this viewpoint?}

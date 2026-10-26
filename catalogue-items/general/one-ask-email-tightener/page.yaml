@@ -1,6 +1,6 @@
 new_slug: one-ask-email-tightener
 name: "One-ask email tightener"
-summary: "Paste an email before you send it. Get it cut to one clear ask the reader can act on."
+summary: "Paste your draft and get a clearer email with one ask, a date and a reason in the first three lines. Edit a work email before you send it."
 job: write-emails
 thinking: low
 thinking_why: "It edits one short email and keeps the facts as given."
@@ -17,6 +17,10 @@ when:
   - "You need a decision from someone senior and have one shot at their inbox."
   - "Your emails get replies that answer a different question than the one you asked."
   - "You wrote four paragraphs and are not sure what you are asking for."
+not_for:
+  - "Your email has no ask at all: use a short status note instead, and the Weekly status update writer if you need a regular one."
+  - "You are sending to a mailing list or a big group: use your email tool's newsletter features, not a one-to-one edit."
+  - "The email is about HR, legal or a complaint: ask a person who handles those, since facts and tone matter more than length."
 
 you_give:
   - "The draft email"
@@ -33,6 +37,28 @@ how_to_use:
   - "Read THE ONE. If it picked the wrong ask, say which one matters and run it again."
   - "Fill any MISSING date with a real date."
   - "Send it. Put the parked asks in your task list."
+output_sample:
+  input:
+    - The draft email you plan to send
+    - The one thing you need from the reader (advised)
+    - Who the reader is and what they already know (optional)
+  output:
+    - name: ASKS FOUND
+      contains: The number of asks in your draft, with each one quoted.
+    - name: THE ONE
+      contains: The ask that was kept and why it matters most now.
+    - name: PARKED
+      contains: The other asks and where each could go, such as a separate email.
+    - name: SUBJECT
+      contains: A subject line that is the ask itself, under eight words.
+    - name: EMAIL
+      contains: "The rewritten email: ask, by when, why, short context and a plain sign-off."
+    - name: WORDS
+      contains: Your word count before and after the edit.
+    - name: MISSING
+      contains: Any date or fact the ask needs that your draft did not give.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Finds every ask"

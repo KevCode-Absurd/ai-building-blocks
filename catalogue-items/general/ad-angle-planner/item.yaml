@@ -11,6 +11,7 @@ level: intermediate
 inputs:
   - {type: brief, required: true}
   - {type: brand_brain, required: false}
+  - {type: angle_library, required: false}
 outputs:
   - {type: brief}
 uses: [buyer-brief-writer, sales-copy-opening-writer]

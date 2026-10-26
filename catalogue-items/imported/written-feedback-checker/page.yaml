@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It judges feedback against clear quality marks.
 new_slug: written-feedback-checker
 name: Written feedback checker
-summary: Paste feedback given to learners. Get a check for how specific and
-  useful it is, with better wording.
+summary: Check your written feedback for learners. Find vague comments and get a clearer rewrite that names one next step.
 job: teach-and-train
 headline: Written feedback checker
-subhead: Vague comments like "good work, add more detail" teach nobody anything.
-  Paste the feedback you gave a learner and get it back graded, with a sharper
-  rewrite you can send.
+subhead: Vague comments like "good work, add more detail" teach nobody anything. Paste the feedback you gave a learner and get it back graded, with a sharper rewrite you can send.
 explain: |
   Vague comments like "good work, add more detail" teach nobody anything. Paste the feedback you gave a learner and get it back graded, with a sharper rewrite you can send.
 
   The skill sorts each comment by level: the task itself, the method used, the learner's own self-checking, or the person. Comments about the person get cut or redirected. It then asks three questions: where is the learner going, how are they doing against that goal, and what should they do next? It also tests whether the wording is specific enough to act on.
 when:
-  - You marked a stack of essays and want to know if your comments will actually
-    change what students do next.
+  - You marked a stack of essays and want to know if your comments will actually change what students do next.
   - A peer reviewer gave a colleague a vague note and you want to rewrite it.
   - You coach new staff and want feedback that names one clear next step.
   - Your feedback keeps getting ignored and you want to see why.
+not_for:
+  - "You need to grade or score the student work itself: use your rubric or a teacher's marking guide, since this checks the comments, not the work."
+  - "You have not read the student work yet: read it first, because the check needs the task and the goal."
+  - "You want to send feedback as written: ask a colleague to read it first, as a person knows the learner better."
 you_give:
   - The feedback text you wrote or received
   - What the learner was doing and the goal of the task
@@ -31,7 +31,30 @@ you_get:
   - A rewritten version of the feedback
   - A short list of habits to change
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat, then add your feedback text.
+  - Add what the learner was asked to do and the goal of the task. Add your rubric or the learner's level if you have them.
+  - Read the Level Analysis and Key Problems first. Check that they match your own view of the work.
+  - Read the Rewritten Feedback. Change any detail that is not true of the student's work, then send it.
+output_sample:
+  input:
+    - The feedback text you wrote or received
+    - What the learner was asked to do, and the goal of the task
+    - A short note on the student work (optional)
+    - The learner's level or year group (optional)
+    - Your rubric or success criteria (optional)
+  output:
+    - name: Original Feedback
+      contains: Your comments, shown back so you can compare them with the new version.
+    - name: Level Analysis
+      contains: Each comment sorted as about the task, the method, self-checking or the person.
+    - name: Three Questions Check
+      contains: Whether the feedback says where the learner is going, how they are doing, and what to do next.
+    - name: Specificity Rating
+      contains: A rating of how clear and usable the wording is.
+    - name: Key Problems
+      contains: The main weaknesses found in the feedback.
+    - name: Rewritten Feedback
+      contains: A sharper version you can send to the learner.
+    - name: What Changed and Why
+      contains: The edits you can see, with the reason for each.

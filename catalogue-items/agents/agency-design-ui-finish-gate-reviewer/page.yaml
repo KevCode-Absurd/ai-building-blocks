@@ -1,0 +1,134 @@
+name: UI Finish-Gate Reviewer agent
+summary: Get a clear PASS or HOLD on a built screen before release, with the generic UI patterns found and the exact fixes to check.
+headline: UI Finish-Gate Reviewer agent
+subhead: Share your built screens at desktop and phone size, and say who uses them and what they do there. The agent writes a short design contract, then checks the real screens against it. You get a PASS or HOLD call and a fix list, with how to verify each fix.
+job: design-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Many screens ship working but look like any other product: equal cards, a default dashboard, soft gradients for show. This agent is the last hard review before release. Its one question is whether the screen could belong to any product, or only to yours.
+
+  It works from evidence, not taste. First it writes a design contract for the screen. The contract names who uses it, what the eye should find first, the main action, how dense it should be and which common defaults are not allowed. It compares with three to five patterns from similar products. Then it checks your real screens, with loading, empty and error states and the phone layout. Each finding comes with a required change and a way to check it.
+
+  It ends with a firm HOLD or PASS, not a list of maybes. It reviews what you attach, so it cannot open your app, and it cannot run itself on a timer. You start each review. The source profile names a free reference site, UIZZE, as an optional source of patterns. Nothing here needs an account or a paid tool.
+when:
+  - A screen is built and about to go live, and someone should ask hard questions first.
+  - The screen works but feels like "any SaaS", or looks AI-made.
+  - You need a clear go or no-go before a release or a demo.
+  - The phone version only stacks the desktop layout, and you suspect it hides the main job.
+not_for:
+  - You want a 0 to 100 score for how AI-made your UI code looks. Use the AI-look design reviewer.
+  - You want every new screen reviewed with several checks each time. Use the New screen design reviewer.
+  - You want a new design, not a review. Use the UI Designer agent.
+you_give:
+  - Screenshots of the built screens at desktop and phone width, or live links
+  - Who uses each screen and the one thing they come to do
+  - Brand, framework or design rules you must keep (optional)
+  - Screens in their loading, empty and error states (optional)
+  - Products you admire, or want to look different from (optional)
+you_get:
+  - A short design contract for each screen, with what is seen first, the main action and the forbidden defaults
+  - A HOLD or PASS call for desktop and for phone, or NOT RATED if you did not show enough
+  - Findings with the evidence and the reason each one breaks the contract
+  - A required change for each finding, and the state or screen width to check it at
+  - A list of choices that already work, so nobody rewrites them
+  - PASS criteria for the next review
+how_to_use:
+  - Add the pack to your AI as a skill. If you cannot, start a new chat and paste SKILL.md, then references/source-agent.md.
+  - Attach screenshots at desktop and phone width. Say who uses the screen and what they come to do.
+  - Say what must stay, such as your brand, framework or existing parts.
+  - Read the design contract first. Correct any wrong guess about the user or the main action before you read the findings.
+  - Fix everything under "Required before PASS". Run it again with new screenshots to get the PASS call.
+  - Keep the "Keep" list. It names the choices that already serve your product.
+how_it_works:
+  - title: Set the product lens
+    text: It asks who uses the screen, what they must understand first and what repeats daily. Gaps are marked as assumptions.
+  - title: Gather comparable evidence
+    text: It notes three to five patterns from similar products, and what each teaches. It copies no design.
+  - title: Write the design contract
+    text: It fixes the first-read object, the main action, the density and the defaults you must avoid.
+  - title: Review the real screens
+    text: It checks legibility, hierarchy, pattern fit, states, phone layout and how well parts match the rest of the product.
+  - title: Return the finish gate
+    text: It gives a HOLD or PASS, the required changes with a check for each, and the criteria for a PASS.
+output_shape: |-
+  DESIGN CONTRACT <screen>
+    User and job <who finishes what> | Seen first <object> | Main action <one action>
+    Density <compact, balanced or spacious, and why> | Forbidden defaults <list>
+
+  FINISH GATE <screen> | DECISION <PASS, HOLD or NOT RATED>
+
+  EVIDENCE
+    <what you can see> -> <why it breaks the contract>
+
+  REQUIRED BEFORE PASS
+    <number>. <change> | verify at <state or screen width>
+
+  KEEP
+    <choice that works>
+
+  PASS CRITERIA
+    <check>
+
+  OPEN CHECKS
+    <what could not be seen from the files>
+output_sample:
+  input:
+    - Screenshots of your built screens at desktop and phone width
+    - Who uses each screen and what they come to do
+    - Brand or framework rules you must keep (optional)
+    - Loading, empty and error states (optional)
+  prerequisites:
+    - An AI that can read images, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Design contract
+      contains: Who uses the screen, what is seen first, the main action, density and forbidden defaults.
+    - name: Decision
+      contains: PASS or HOLD for desktop and for phone, or NOT RATED if not enough was shown.
+    - name: Evidence
+      contains: Each issue seen on the screen and why it breaks the contract.
+    - name: Required before PASS
+      contains: Numbered changes, each with the state or screen width to check it at.
+    - name: Keep list
+      contains: Choices that already work and should not be rewritten.
+    - name: PASS criteria
+      contains: What must be true for the screen to pass the next review.
+    - name: Open checks
+      contains: What could not be judged from the files you shared.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: User and job
+    how: Name the one task the screen exists for. A vague job gives a vague review.
+  - what: Screen states
+    how: Attach loading, empty, error and narrow-width screens. Most generic UI hides there.
+  - what: Rules to keep
+    how: List brand, framework and part rules you cannot change, so fixes stay inside them.
+  - what: Reference products
+    how: Name two or three products your users already know, so the comparisons are fair.
+improve:
+  - Keep each contract with the screen's code, and ask the agent to check new changes against it.
+  - Add your own forbidden defaults to the brief, such as "no equal-weight metric cards".
+  - Pair it with the Colour contrast checker for the numbers and the Visual hierarchy fixer to act on a weak first read.
+terms:
+  - term: Design contract
+    meaning: A short written promise of what the screen is for and what it must not look like.
+  - term: Finish gate
+    meaning: A last check with a clear PASS or HOLD call.
+  - term: Density
+    meaning: How much information sits on the screen at once.
+  - term: Generic UI
+    meaning: A screen that could belong to any product, because its choices are defaults.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with image upload
+      why: It needs to see the real screens, at desktop and phone width.
+  inputs:
+    - Screenshots of the same screen before and after your last change.
+    - Your design rules file or style guide.
+    - Two or three real user quotes about the screen.

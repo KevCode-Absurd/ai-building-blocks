@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Numerical settings can silently give wrong physics.
 new_slug: fluid-flow-simulation-planner
 name: Fluid flow simulation planner
-summary: Describe a flow to model. Get a checked solver setup, run plan and
-  analysis of the results.
+summary: Plan a fluid flow simulation in Python with a checked setup, strict run limits and a results review, so a finished run is not mistaken for a right one.
 job: research-topics
 headline: Fluid flow simulation planner
-subhead: A checked setup for a fluid flow simulation, a run plan with strict
-  limits, and a review of the results. It stops a finished run from being
-  mistaken for a correct one.
+subhead: A checked setup for a fluid flow simulation, a run plan with strict limits, and a review of the results. It stops a finished run from being mistaken for a correct one.
 explain: |
   A checked setup for a fluid flow simulation, a run plan with strict limits, and a review of the results. It stops a finished run from being mistaken for a correct one.
 
@@ -18,6 +15,10 @@ when:
   - You worry a run finished but the numbers cannot be trusted.
   - You need limits so a test run does not use all your memory or disk.
   - You need to record versions and settings so a result can be repeated.
+not_for:
+  - Your flow has walls or a complex shape. These solvers cover periodic box flows only, so use a general CFD package for that.
+  - You want to launch a big cluster job right now. This skill only prepares MPI jobs, so ask your cluster support team to submit it.
+  - You cannot run Python code. Ask a simulation engineer to run the plan for you.
 you_give:
   - Equations and units
   - Domain, boundaries and starting conditions
@@ -31,8 +32,32 @@ you_get:
   - Grid and time step study
   - Record of versions, settings and outputs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and use computing power.
+  - Open a chat with an AI that can run Python code, and paste in the skill text.
+  - Paste your equations, units, boundaries, starting conditions, forcing and what counts as acceptable.
+  - Add your CPU, memory and time limits if you have them (optional).
+  - Review the plan and the dry-run script before anything runs.
+  - Check the pilot report for budgets and divergence, then ask for the grid and time step study.
+  - Ask for the record of versions and settings, and keep it with your results.
+output_sample:
+  input:
+    - Your equations and units
+    - Your domain, boundaries and starting conditions
+    - Your forcing and the outputs you want
+    - What counts as an acceptable result
+    - Your CPU, memory and time limits (optional)
+  prerequisites:
+    - An AI that can run Python 3.11 or newer
+    - FluidSim installed in a project environment, with the FFT extra
+  output:
+    - name: Strict JSON plan
+      contains: Solver choice and set limits for CPU, memory, disk, wall time, output files, time step, CFL, grid size and dealiasing.
+    - name: Validator and resource estimate
+      contains: A check that the plan is allowed, plus an approximate estimate of memory, disk and compute needs.
+    - name: Dry-run script (run.py)
+      contains: A script that does nothing until you run it with the config ID you confirm.
+    - name: Pilot report
+      contains: "Results from one tiny serial run: budgets, divergence, spectral tails, time step history and output growth."
+    - name: Grid and time step study
+      contains: Separate refinement of grid and time step, with budget residuals and how much your results change.
+    - name: Provenance record
+      contains: Versions, lock file, settings, logs, output list, checksums and restart history so the run can be repeated.

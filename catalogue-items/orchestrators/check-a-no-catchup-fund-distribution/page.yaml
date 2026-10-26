@@ -1,44 +1,59 @@
 new_slug: check-a-no-catchup-fund-distribution
 name: Check a no-catchup fund distribution
 headline: Check a no-catchup fund distribution
-summary: Carry a verified simple preference balance into capital-first residual carry allocation.
+summary: "Check a fund distribution with no GP catch-up: see the preferred return owed, what LPs get first, and the carry the GP earns."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers. Share actual no-catchup LPA, constant eligible capital interval, dated accrual basis, unpaid opening preference, distributable cash and residual carry fraction.
+subhead: Give it your fund agreement terms and the cash to distribute. Your AI works out the preferred return owed, pays capital and preference first, then shows the carry the GP earns on what is left.
 explain: |-
-  Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers.
+  In a fund with no catch-up, limited partners (LPs) get their capital back and their preferred return before the general partner (GP) earns any carry. Carry is the GP's share of profit. Errors creep in when the preferred return is guessed instead of worked out, so this workflow checks it before the split.
 
-  Private fund distributions. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 works out the preferred return as simple interest on capital that did not change, for the exact part of a year. It adds any amount left unpaid from before. Step 2 takes that figure and the unreturned capital as two separate amounts, pays them from the cash on hand, and splits only what remains.
+
+  If your fund compounds the return, has a catch-up, or lets GP capital earn the hurdle, the workflow stops and says so. It checks arithmetic. It does not read your legal documents for you.
 when:
-  - You need preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers.
-  - You work on private fund distributions and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A distribution is due and you want to check the carry number before anyone is paid.
+  - An LP asks why the GP received no carry this quarter.
+  - You are building or auditing a distribution schedule for a fund with a simple hurdle and no catch-up.
+  - A reviewer wants every figure tied back to a clause in the fund agreement.
+not_for:
+  - "Your agreement has a catch-up, compound interest on the preferred return, or GP capital that earns the hurdle: this check stops there. Ask your fund administrator to model it."
+  - "The preferred return clock starts later than the capital call because of a credit line: use the Review a fund bridge and hurdle workflow."
+  - "You want to know if the GP must pay carry back: use the GP clawback exposure checker."
 you_give:
-  - Actual no-catchup LPA, constant eligible capital interval, dated accrual basis, unpaid opening preference, distributable cash and residual carry fraction.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The fund agreement clauses on preferred return, return of capital and the carry split
+  - The capital that earns the preferred return, and the dates it was held (from your capital account statement)
+  - The preferred return rate and how the agreement counts a year
+  - Any preferred return still unpaid from before (from your last distribution notice)
+  - The cash available to distribute this time (from the fund's bank or cash records)
+  - The GP's carry share of what is left, such as the percentage in the agreement
+  - Your own spreadsheet or template (optional)
 you_get:
-  - Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The preferred return owed, worked out from capital, rate and the exact part of a year
+  - "How the cash splits: capital back, preferred return paid, then what is left"
+  - The GP carry, which stays at zero until capital and preferred return are paid in full
+  - Any shortfall still owed to LPs
+  - A list of missing facts and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini. Pick a chat that accepts files and can run code or a spreadsheet.
+  - Attach the agreement pages on returns and carry, plus your cash records. Say the distribution date, currency and whether figures are in thousands.
+  - Tell your AI to follow the pack and save each step's file. If it cannot run code, it shows the arithmetic in the chat.
+  - After step 1, check the rate, the dates and the year fraction against the agreement. A wrong year fraction carries into step 2.
+  - After step 2, check that capital back, preference paid, GP carry, LP cash and any shortfall add up to the cash you entered. Finish every MISSING line before you pay anyone.
 how_it_works:
   - title: Preferred return accrual checker
-    text: Verify constant capital and actual year fraction. Produce accrued unpaid preference separately from capital; split changing-capital intervals before proceeding.
+    text: Confirms the return is simple, not compound, and that capital did not change in the period. Multiplies capital by the rate and the year fraction, then adds any unpaid amount from before. Hands step 2 the preference and the unreturned capital as two separate figures. Check before moving on, if capital changed, split the period first.
   - title: No-catchup waterfall checker
-    text: Pass the verified unpaid preference and unreturned capital as separate inputs, using actual available distributable cash. Preserve unpaid capital/preference and zero carry until both tiers are satisfied.
+    text: Pays unreturned capital and the preference first from the cash on hand. Only cash left after both goes to the carry split. If cash runs short, carry stays zero and the shortfall shows. Check before you pay, LP cash, GP cash and the shortfall equal the cash you entered.
 output_shape: |-
-  Preference accrual, capital and preference payments, residual GP/LP cash and unpaid senior tiers.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES       <agreement clauses, dates, currency and scale>
+  INPUTS AND ASSUMPTIONS  <capital | rate | year fraction | unpaid preference | cash | carry share>
+  PREFERRED RETURN        <accrued | unpaid from before | total preference | unreturned capital>
+  DISTRIBUTION SPLIT      <capital returned | preference paid | residual | GP carry | LP cash | shortfall>
+  FILE CHECKS             <recalculation and reopen results>
+  MISSING                 <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,13 +75,41 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A spreadsheet tool and an AI that reads files
+      why: The preferred return and the split are small calculations. The AI should recalculate them and reopen the saved file.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your last distribution notice, so the unpaid preference matches what LPs were told.
+    - A named reviewer, such as your fund administrator.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Preferred return
+    meaning: The yearly return LPs must receive before the GP earns carry. Also called the hurdle.
+  - term: Carry
+    meaning: The GP's share of profit above the preferred return.
+  - term: Catch-up
+    meaning: A clause that lets the GP take extra cash after the hurdle until it has caught up. This workflow does not cover it.
+  - term: Waterfall
+    meaning: "The order in which cash is paid out: capital first, then preference, then the carry split."
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A comparison that explains any difference between two sets of figures that should match.
+output_sample:
+  input:
+    - The fund agreement clauses on preferred return and carry
+    - Capital, rate, year fraction and any unpaid preference
+    - Cash available to distribute
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool or code (optional)
+  output:
+    - name: outputs/step-1-preferred-return-accrual-checker.md
+      contains: The preferred return owed, kept separate from the unreturned capital, with the year fraction used.
+    - name: outputs/step-2-no-catchup-waterfall-checker.md
+      contains: Capital returned, preference paid, GP carry, LP cash and any shortfall in the first tier.
+    - name: Workbook (if asked)
+      contains: Inputs, calculations and checks on separate areas, recalculated and reopened.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, assumptions, MISSING lines, checks missed and one suggested next step.
+next:
+  - gp-clawback-exposure-checker
+  - reconcile-private-fund-fee-charges
+  - review-a-fund-bridge-and-hurdle
+before: []

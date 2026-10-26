@@ -17,13 +17,14 @@ outputs:
   - {type: copy_draft}
 uses: [feature-request-screener, new-user-drop-off-finder, product-metrics-review-writer, feature-priority-scorer, roadmap-update-writer]
 steps:
-  - {uses: feature-request-screener, note: "Every week: adds the new requests to the running tally, then rules yes, later or no on each one that has earned a ruling, with a reply draft."}
-  - {uses: new-user-drop-off-finder, note: "Only when new-user numbers fell against the saved base, or three or more new users say they are lost: finds where they leave before any new feature goes on the roadmap."}
-  - {uses: product-metrics-review-writer, note: "Only when you give this week's product numbers: what moved against targets, so requests are read next to the numbers."}
-  - {uses: feature-priority-scorer, note: "Only when the yes list is longer than one cycle can hold: scores and ranks it so the roadmap change is not a guess."}
-  - {uses: roadmap-update-writer, note: "Only after you approve the roadmap change and ask for a note: writes it for your team, executives or customers."}
+  - {uses: feature-request-screener, note: "Every week: adds the new requests to the running tally, then rules yes, later or no on each one that has earned a ruling, with a reply draft. Hands on: the rulings and the yes list."}
+  - {uses: new-user-drop-off-finder, note: "Only when new-user numbers fell against the saved base, or three or more new users say they are lost: finds where they leave before any new feature goes on the roadmap. Uses your sign-up and active-user counts; step 1's yes list can name the feature to check. Hands on: the biggest leak and the one first-visit fix, which goes on the roadmap change first."}
+  - {uses: product-metrics-review-writer, note: "Only when you give this week's product numbers: what moved against targets, so requests are read next to the numbers. Uses your product numbers and reads step 2's fix as the plan to check."}
+  - {uses: feature-priority-scorer, note: "Only when the yes list is longer than one cycle can hold: scores and ranks step 1's yes list so the roadmap change is not a guess. Step 3's numbers sit beside it as context. Hands on: the ranked short list that fits the cycle."}
+  - {uses: roadmap-update-writer, note: "Only after you approve the roadmap change and ask for a note: writes the change (the ranked list from step 4, or the yes list from step 1) for your team, executives or customers."}
 schedule: "Every Monday morning, after the week's feedback is in"
 asks_before: [replacing the roadmap file, sending replies to the people who asked, promising a date or a feature, posting a changelog or roadmap note, telling a major customer no]
 origin: own
 version: 1.0.0
 example_pending: true
+needs_mode: manual

@@ -2,35 +2,110 @@ thinking: medium
 thinking_why: It applies your rules and cites each one.
 new_slug: onboarding-rules-checker
 name: Onboarding rules checker
-summary: Give it a parsed record and your rules. Get a risk rating, each rule
-  result and missing items. It does not decide.
+summary: Check a client record against your KYC rules. Get a risk rating, each rule result and missing documents. A person still decides.
 job: hire-people
 headline: Onboarding rules checker
-subhead: Your firm's compliance rules applied to a client record, with each
-  result shown and the rule cited. It gives a risk rating and a list of what is
-  missing.
+subhead: Give it a parsed client record and your rules grid. It rates the risk, checks each rule and cites it, and lists the documents and screenings still missing. It never approves or rejects anyone.
 explain: |
-  Your firm's compliance rules applied to a client record, with each result shown and the rule cited. It gives a risk rating and a list of what is missing. It does not approve or reject anyone. That call stays with a person.
+  When a new client or partner joins, someone must check the file against the firm's know-your-customer (KYC) rules. This onboarding rules checker does that first pass. It reads the record, applies your rules grid, and shows which rule caused each flag, so an analyst can check the work in minutes.
 
-  You give it the parsed record and your rules grid. It scores risk factors such as country, client type, how layered the ownership is, political exposure, and how clear the source of funds is. It lists the documents required at that risk level and marks each as received, missing or expired. Then it shows every rule outcome. It never assumes a screening result. If a name was not checked against a sanctions or similar list, it says so.
+  It scores risk factors such as country, client type, how layered the ownership is, political exposure and how clear the source of funds is. It lists the documents your rules require at that risk level and marks each as received, missing or expired. Then it shows every rule outcome.
+
+  It never assumes a screening result. A name that was not checked against a sanctions or similar list is marked NOT SCREENED, and the record goes to manual review. The approve or reject call stays with a person.
 when:
   - You have a parsed client record and need a risk rating with reasons.
   - An analyst must show which rule caused each flag.
   - You want a list of missing and expired documents before sign-off.
   - You need to see which names still need screening.
+not_for:
+  - "You want the AI to approve or reject a client: it won't, that stays with a human reviewer."
+  - "Your documents are still raw scans or PDFs: run the Onboarding document reader first to get the record."
+  - "You have no written rules grid: write your rules first, because this skill won't invent them."
 you_give:
-  - The structured client record
-  - Your rules grid
-  - Screening results from sanctions and politically exposed person checks
-    (optional)
-  - The client type and risk factors
+  - The structured client record from the Onboarding document reader
+  - Your rules grid, as a file
+  - Sanctions and politically exposed person (PEP) screening results, with the source and date (optional)
+  - The client type, if it is not in the record (optional)
 you_get:
-  - A low, medium or high risk rating with factor table
+  - A low, medium or high risk rating with the factor table behind it
   - A document check marked received, missing or expired
-  - Every rule result with the rule cited
-  - Items to send for human review
+  - Every rule result, with the rule cited
+  - A list of names that are NOT SCREENED
+  - A disposition for the reviewer, with the reasons
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Run the Onboarding document reader first, so you have a structured record.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. Attach the record and your rules grid.
+  - Paste your screening results too. If you have none, say so, and every name will show as NOT SCREENED.
+  - Check the factor table and each cited rule against your grid before you rely on the rating.
+  - Send the items marked for human review to your reviewer. Don't act on the disposition alone.
+output_sample:
+  input:
+    - The parsed client record from the Onboarding document reader
+    - Your rules grid
+    - Screening results with source and date (optional)
+  prerequisites:
+    - A sanctions and PEP screening source, which may be a paid service, if you want names checked
+    - The Onboarding document reader run first
+  output:
+    - name: Risk rating
+      contains: Low, medium or high, with a table of the factors that produced it.
+    - name: Document check
+      contains: Each required document marked received, missing or expired.
+    - name: Rule outcomes
+      contains: One row per rule with its id, pass or fail, and the field that drove it.
+    - name: Screening status
+      contains: Every name marked clear, hit or NOT SCREENED, with the source and date.
+    - name: Disposition
+      contains: A JSON block with the rating, next step, missing documents and escalation reasons.
+    - name: Items for human review
+      contains: Each item a person must look at, with the reason it was sent.
+how_it_works:
+  - title: Read the record and rules
+    text: Treats your rules grid as trusted and the client record as data to check, never as instructions.
+  - title: Rate the risk
+    text: Scores country, client type, ownership layers, political exposure, sanctions and source of funds.
+  - title: Check the documents
+    text: Lists what your rules require at that risk level and marks each as received, missing or expired.
+  - title: Apply every rule
+    text: Gives pass, fail or not applicable for each rule, with its id and the field behind it.
+  - title: Check screening
+    text: Marks any name with no screening result as NOT SCREENED and never treats it as clear.
+  - title: Route, don't decide
+    text: Suggests clear, request documents or escalate, and hands every doubtful case to a person.
+output_shape: |-
+  RISK RATING: <low | medium | high>
+    <factor> | <field read> | <score or "MISSING: field">
+
+  DOCUMENT CHECK
+    <document> | <received | missing | expired>
+
+  RULE OUTCOMES
+    <rule id> | <rule text> | <pass | fail | n/a> | driven by <field>
+
+  SCREENING STATUS
+    <name> | <clear | hit | NOT SCREENED> | <source, date>
+
+  DISPOSITION
+    <JSON: risk_rating, disposition, missing_documents, escalation_reasons, rule_outcomes>
+
+  FOR HUMAN REVIEW
+    <item> | <reason>
+works_best_with:
+  tools:
+    - name: Any chat AI that reads files
+      why: It needs to read your record and rules grid together.
+    - name: A sanctions and PEP screening service
+      why: Real screening needs a list source. It may be paid, so check its terms.
+  inputs:
+    - The date your rules grid was last updated
+    - Your list of high-risk countries, if it is not in the grid
+    - Notes from earlier reviews of the same client
+terms:
+  - term: KYC
+    meaning: Know your customer. The checks a firm does on who it deals with before it takes them on.
+  - term: PEP
+    meaning: Politically exposed person. Someone in a public role who may carry higher risk.
+  - term: EDD
+    meaning: Enhanced due diligence. A deeper check for higher-risk clients.
+  - term: Rules grid
+    meaning: Your firm's written table of rules, risk levels and required documents.

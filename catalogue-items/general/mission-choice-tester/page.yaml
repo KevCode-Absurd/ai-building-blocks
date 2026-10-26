@@ -1,36 +1,45 @@
 new_slug: mission-choice-tester
 name: "Mission choice tester"
-summary: "Paste your mission and five choices. Get how many it settles, a score out of 100 and fixes."
+summary: "Test your mission statement on five real choices. Get each one marked clear, partly clear or silent, a score out of 100 and line fixes."
 job: think-and-decide
 thinking: medium
 thinking_why: "It reads each choice against your words and marks it by fixed rules, so a mid-level model is enough."
 headline: "Mission choice tester"
-subhead: "Paste your mission statement and five real choices. It predicts what the statement says about each, marks each as clear, partly clear or silent, and scores the statement out of 100. You get line-by-line fixes and a review date."
+subhead: "Paste your mission statement and up to five real choices. Your AI reads only the statement, says what it points to for each choice, and marks it clear, partly clear or silent. You get a clarity score out of 100, line fixes and a review date."
 explain: |
-  A mission statement is only as good as the choices it settles. Many read well and then say nothing when you are deciding whether to take a project, spend money or confront a friend. You find that out the hard way, usually at a bad moment.
+  A mission statement is only as good as the choices it settles. Many read well and then say nothing when you are deciding whether to take a project, spend money or confront a friend. You usually find that out at a bad moment. This mission statement test shows it before then.
 
-  This skill tests the statement on five real choices. For each, it reads only the statement and writes what it points to, then marks the choice clear, partly clear or silent. The score is out of 100: 20 points for each clear choice, 10 for each partly clear one and 0 for each silent one. It compares the result with what you actually decided, rewrites the lines that failed, re-runs the same five, and sets a review date.
+  The tester takes five real choices, each with a date or a person. For each, it reads only the statement and writes what the statement points to, naming the line. It then marks the choice clear, partly clear or silent. The score is out of 100: 20 points for each clear choice, 10 for each partly clear one and 0 for each silent one. It compares the result with what you actually decided, rewrites the lines that failed, re-runs the same five and sets a review date.
+
+  It scores the statement, not you. A choice that broke the statement tells you which line to change.
 when:
   - You just wrote a mission statement and want to know if it works.
   - A big choice is coming and you want to see what your statement says about it.
   - Your statement has been on the wall for a year and you suspect it says nothing.
+  - You changed jobs or moved, and you want to know if the old statement still fits.
+not_for:
+  - "You have no statement yet. Write one first with the Personal mission statement writer."
+  - "You want a company purpose or brand mission. Use the Business mission writer."
+  - "You want to choose between options today. Use the Pros and cons decision planner."
+  - "You want to know whether a past choice was wise. This only tests what your words say, not whether you chose well."
 you_give:
   - Your mission statement, the short version at least
-  - Five real choices, two recent and three ahead
+  - "Real choices to test, up to five: two recent and three ahead, each with a date or a person"
   - What you decided and why, for the recent ones (optional)
+  - The long version of your statement (optional)
 you_get:
   - Each choice marked clear, partly clear or silent, with the line used
   - What you did against what the statement points to
   - A clarity score out of 100, before and after, with how it was worked out
   - Line fixes, old and new, and a review date
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your statement. List five real choices, with dates or names.
-  - For the recent ones, say what you decided and why.
-  - Read the marks. Where it says silent, decide if the statement should speak or if the choice should be left to judgment.
-  - Keep the fixed statement and set the review date in your calendar.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. No files, web search or code needed.
+  - Paste your statement. List up to five real choices, with dates or names. If you send no statement, or no choices, it asks and stops.
+  - For the recent choices, say what you decided and why.
+  - Read the marks. Where it says silent, decide if the statement should speak or if that choice is for your own judgment.
+  - Keep the fixed statement and put the review date in your calendar.
 how_it_works:
-  - title: Collects five choices
+  - title: Collects the choices
     text: Asks for a yes, a no, a money choice, a conflict and a fork ahead, each real and dated.
   - title: Predicts from the statement
     text: Reads only the statement and writes what it points to, naming the line.
@@ -42,23 +51,43 @@ how_it_works:
     text: 20, 10 or 0 points per choice, with a warning that five is a small sample.
   - title: Fixes the lines
     text: Sharpens, adds or removes a line, shown old beside new.
-  - title: Re-tests and sets a habit
-    text: Runs the same five again and sets a review date.
+  - title: Re-tests and sets a review
+    text: Runs the same choices again with the fixed statement and sets a review date.
 output_shape: |
   CHOICES TESTED
   1. <choice> | Line used: <line> | Mark: <clear/partly/silent> | Why: <reason> | You decided: <decision>
   2. ...
   CLARITY SCORE: <n> out of 100
-  Worked out as 20 per clear, 10 per partly clear, 0 per silent, over five real choices. Five is a small sample.
+  Worked out as 20 per clear, 10 per partly clear, 0 per silent, over <n> real choices. Five is a small sample.
   FIXES
   <line, old> -> <line, new> | Because: <choice it failed>
   AFTER THE FIXES: <n> out of 100
   REVIEW
-  <date> | Habit: <small habit>
+  <calendar date> | Habit: <small habit>
   MISSING
   <what would sharpen the test>
   CHECKS MISSED
   <one line per check still missed, or none>
+output_sample:
+  input:
+    - Your mission statement, the short version at least
+    - Up to five real choices, each with a date or a person
+    - What you decided and why, for the recent ones (optional)
+  prerequisites:
+    - "A written mission statement, such as one from the Personal mission statement writer"
+  output:
+    - name: CHOICES TESTED
+      contains: Each choice with the line used, a mark of clear, partly clear or silent, the reason, and what you decided.
+    - name: CLARITY SCORE
+      contains: A score out of 100, with the sum shown, so you can recompute it from the marks.
+    - name: FIXES
+      contains: Each failing line, old beside new, and the choice that showed the gap.
+    - name: AFTER THE FIXES
+      contains: The score when the same choices are run against the fixed statement.
+    - name: REVIEW
+      contains: A review date about six months out, and one small habit to keep the statement in view.
+    - name: MISSING and CHECKS MISSED
+      contains: What would sharpen the test, and one line for each of its own checks it missed.
 tweaks:
   - what: The five choices
     how: Pick choices that were hard. Easy choices make any statement look clear.

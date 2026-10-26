@@ -1,0 +1,146 @@
+name: Unreal Systems Engineer agent
+summary: Plan an Unreal Engine 5 gameplay feature in C++ and Blueprint. Get the code split, build setup and checks to run before you ship.
+headline: Unreal Systems Engineer agent
+subhead: Describe the feature, your engine version and whether it is multiplayer. The agent splits the work between C++ and Blueprint, plans the Gameplay Ability System setup and flags memory and speed risks. You get a build plan and a list of checks to run in your editor.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Many Unreal projects slow down or break because of one early choice: what goes in C++ and what stays in Blueprint. Logic that runs every frame costs speed in Blueprint. A pointer without the right marker gets cleaned up by the engine while you still use it. This agent plans an Unreal Engine gameplay system with those limits in mind before you write code.
+
+  It splits the feature into a C++ core and a Blueprint layer your designers can edit. For abilities, health and stamina it plans the Gameplay Ability System setup: modules, attribute sets, abilities and tags. It also checks memory use, tick rates and Nanite limits.
+
+  It writes code sketches, not tested code. It cannot open Unreal or compile, so each check comes back as a step for you to run in the editor. Limits that change by engine version, such as what Nanite supports, are marked 'check your version' and not stated as fact. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The profile's targets are its own goals, not results measured by AI Blocks.
+when:
+  - You are adding an ability, health or stamina system and need to know what goes in C++ and what stays in Blueprint.
+  - Your frame rate drops and you suspect Blueprint Tick logic or too many Nanite instances.
+  - A teammate says 'set up GAS' and you want the module and class list first.
+  - Designers need to tune your system in Blueprint without touching C++.
+not_for:
+  - "You need server design for a multiplayer game, such as prediction and dedicated servers: use the Unreal Multiplayer Architect agent."
+  - "You need materials, particle effects or art pipeline help: use the Unreal Technical Artist agent."
+  - "You need level layout or open-world streaming: use the Unreal World Builder agent."
+  - "Your game is built in Unity: use the Unity Architect agent."
+you_give:
+  - The gameplay feature you want, such as a sprint ability or a health system, in a few sentences
+  - Your Unreal Engine version, such as 5.4 (in the editor, open Help, then About Unreal Editor)
+  - Whether the game is single player or multiplayer
+  - Whether your project uses C++, Blueprint or both
+  - Your .Build.cs file and the headers of related classes (optional)
+  - Your target hardware and frame rate (optional)
+you_get:
+  - A plan that says which parts go in C++ and which stay in Blueprint, with the reason for each
+  - The engine modules to add and the classes to create, such as an attribute set and abilities
+  - Code sketches for the main classes, marked as drafts you have not compiled
+  - A list of memory and speed risks for your engine version
+  - A numbered list of checks to run in the editor, each with what a pass looks like
+  - Open questions for anything it could not know
+how_to_use:
+  - Download the pack and add it as a skill in Claude. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - "Write your brief: the feature, your engine version, C++ or Blueprint, and single or multiplayer. Paste your .Build.cs and any class headers you have."
+  - Say 'Plan this feature. Do not assume anything I did not tell you.' Your AI asks once for what is missing, then marks the rest MISSING.
+  - Read the assumptions and the C++ and Blueprint split first. Fix any that are wrong before you read the code.
+  - Copy the sketches into your project and compile. The AI cannot run Unreal, so every check in the list is yours to run in the editor.
+  - Bring back compile errors or an Unreal Insights capture and ask it to adjust the plan.
+how_it_works:
+  - title: Collect the brief
+    text: It confirms the feature, engine version, C++ or Blueprint setup and single or multiplayer. It asks once for anything missing, then marks it MISSING.
+  - title: Split C++ and Blueprint
+    text: Per-frame logic, special data types and engine extensions go in C++. Game flow, interface logic and prototypes can stay in Blueprint.
+  - title: Plan the build setup
+    text: It lists the modules for the Build.cs file, the step to regenerate project files and the classes to add.
+  - title: Design the system
+    text: It plans attribute sets, abilities and tags for the Gameplay Ability System, replicated through the ability system component. It adds a Blueprint layer for designers.
+  - title: Check memory and speed
+    text: It checks object pointers, validity checks, tick rates, and Nanite and Lumen limits against your engine version.
+  - title: List the checks
+    text: It gives numbered checks to run in the editor and lists what is still unknown.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    Feature <feature> | Engine <version> | <C++, Blueprint or mixed> | <single or multiplayer>
+    Assumed: <list> | MISSING: <list>
+
+  C++ AND BLUEPRINT SPLIT
+    <part of the system> | <C++ or Blueprint> | <reason>
+
+  BUILD SETUP
+    Modules to add: <list> | Files to change: <list> | Then: <step>
+
+  SYSTEM DESIGN
+    <class or asset> | <what it does> | <who edits it: engineer or designer>
+
+  CODE SKETCHES (drafts, not compiled)
+    <class name> | <short code>
+
+  RISKS
+    <risk> | <where it shows up> | <how to check it>
+
+  CHECKS TO RUN IN THE EDITOR
+    <number> | <check> | <what a pass looks like>
+
+  OPEN QUESTIONS
+    <question> | <what the answer changes>
+output_sample:
+  input:
+    - Your feature in a few sentences
+    - Your Unreal Engine version and whether it is multiplayer
+    - Your .Build.cs file and class headers (optional)
+    - Your target hardware and frame rate (optional)
+  prerequisites:
+    - An Unreal Engine 5 project to try the plan in
+    - An AI that takes a long pasted file, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Brief and assumptions
+      contains: Your feature, engine version and setup as understood, with each assumption and each MISSING item listed.
+    - name: C++ and Blueprint split
+      contains: Each part of the system marked C++ or Blueprint, with the reason.
+    - name: Build setup
+      contains: Modules to add to Build.cs, files to change and the step to regenerate project files.
+    - name: System design
+      contains: Classes and assets to create, what each does and whether an engineer or a designer edits it.
+    - name: Code sketches
+      contains: Short draft code for the main classes, clearly marked as not compiled.
+    - name: Risks
+      contains: Memory and speed risks for your engine version, with how to check each one.
+    - name: Checks to run in the editor
+      contains: Numbered checks, each with what a pass looks like.
+    - name: Open questions
+      contains: What the agent could not know and what each answer would change.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Feature scope
+    how: Name one feature, such as a sprint ability, not a whole game.
+  - what: Engine version
+    how: Give the exact version, such as 5.4, so version limits are checked against it.
+  - what: Who runs the logic
+    how: Say whether the server or each player runs it, if you know.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Blueprint
+    meaning: Unreal's visual scripting. You connect nodes instead of writing code.
+  - term: C++
+    meaning: The code language Unreal itself is written in. It runs faster than Blueprint.
+  - term: Gameplay Ability System (GAS)
+    meaning: Unreal's built-in kit for abilities, stats such as health, and the tags that mark states.
+  - term: Nanite
+    meaning: Unreal's system for drawing very detailed models without hand-made simpler versions.
+  - term: Tick
+    meaning: Code that runs every frame.
+  - term: Build.cs
+    meaning: The file that lists which engine modules your game code uses.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: The profile is long. These tools take it in one paste or as an attached file.
+    - name: Claude Code
+      why: It can read your project folder and headers, so the plan fits your real classes.
+  inputs:
+    - An Unreal Insights capture of the slow scene.
+    - The Output Log lines from a failed compile.

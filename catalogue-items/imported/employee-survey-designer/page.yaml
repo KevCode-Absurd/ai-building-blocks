@@ -2,34 +2,100 @@ thinking: medium
 thinking_why: It designs questions and reads patterns in answers.
 new_slug: employee-survey-designer
 name: Employee survey designer
-summary: Say what you want to learn. Get survey questions, a focus group guide,
-  a result reading and an action plan.
+summary: Design an employee survey from what you want to learn. Get questions, a focus group guide, a way to read the results and an action plan.
 job: hire-people
 headline: Employee survey designer
-subhead: "A listening plan for your people: survey questions, a focus group
-  guide, a way to read results and an action plan. Say what you want to learn,
-  and you get instruments you can use this month."
+subhead: Say what you want to learn, such as why people leave or how a restructure landed. Your AI writes the survey questions and a focus group or stay interview guide. It then helps you read the answers and turn them into an action plan managers can use.
 explain: |
-  A listening plan for your people: survey questions, a focus group guide, a way to read results and an action plan. Say what you want to learn, and you get instruments you can use this month.
+  Many employee surveys get answers and then nothing happens, so people stop answering. This employee survey designer plans the whole loop: ask, listen, read, act and report back.
 
-  The skill builds engagement surveys and short pulse checks, onboarding checks at 30, 60 and 90 days, and manager feedback forms. It writes focus group, stay interview and skip-level guides. It then helps you read the answers, turn them into actions, equip managers to talk about team results, and plan how to launch and share findings. It also helps measure response rates.
+  You choose what you want to learn. It writes a survey or short pulse check, plus a guide for a focus group or stay interview to hear the "why" behind the numbers. Once you have results, it helps you spot the top themes, split them by team or tenure, and write an action plan with owners and dates. Managers get a guide for talking through their team's results.
+
+  It does not invent benchmarks. If you want to compare against other companies, give it your own past results or a named source.
 when:
-  - You want to know why attrition is up.
-  - You need a quarterly pulse on wellbeing.
-  - Managers need help acting on survey results.
-  - You are checking morale after a restructure.
+  - You want to know why people are leaving.
+  - You need a quarterly pulse on how the team feels.
+  - Managers have survey results and do not know what to do with them.
+  - You want to check morale after a restructure.
+not_for:
+  - "One person has a complaint or a misconduct claim: use the Workplace investigation guide, or hold a 1-to-1."
+  - "You want to learn from one person who is leaving: use the Exit interview and grievance guide."
+  - "You want to map a stage of the employee experience, such as onboarding: use the Employee experience map builder."
+  - "You want review forms for performance: use the Review cycle form builder."
 you_give:
-  - What you want to learn
-  - Number of employees and teams
-  - Past survey results (optional)
-  - Timing and channel (optional)
+  - What you want to learn, in a sentence
+  - How many people and teams will answer
+  - Your past survey results (optional)
+  - When and how you will send it, such as email or Slack (optional)
 you_get:
-  - Survey questions
-  - A focus group or interview guide
-  - A reading of results
-  - An action plan
+  - Survey questions grouped by theme, with an answer scale
+  - A focus group or stay interview guide
+  - A way to read the results and find the top themes
+  - An action plan with owners and dates
+  - A guide for managers to discuss team results
+  - A launch and follow-up plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill.
+  - Say what you want to learn, how many people will answer, and any past results.
+  - Ask for the survey first. Read each question and cut any that no one could act on.
+  - Send the survey. When results arrive, paste the summary numbers and comments. Take names out first, and do not report groups so small that someone could be identified.
+  - Ask for the top themes and an action plan. Share what you will change with your team within a few weeks.
+how_it_works:
+  - title: Pin the goal
+    text: It asks what you want to learn and who will answer, and picks a survey, a pulse check or a talk.
+  - title: Write the questions
+    text: It drafts questions by theme with a clear scale, and keeps anonymity in mind.
+  - title: Add the listening guide
+    text: It writes a focus group, stay interview or skip-level guide for the "why" behind the numbers.
+  - title: Read the results
+    text: It finds the top themes and splits them by team, role or tenure, using only the numbers you give.
+  - title: Plan the action
+    text: It writes an action plan with owners and dates, and a guide for managers to discuss results.
+  - title: Plan the launch
+    text: It plans how to send the survey, share results and follow up with a short pulse.
+output_shape: |
+  ## What we want to learn
+  ## Survey questions
+  <theme>: <question> (scale: <scale>)
+  ## Focus group or stay interview guide
+  ## Reading the results
+  <top themes> / <how to split the data> / <what the numbers cannot tell you>
+  ## Action plan
+  | Theme | Action | Owner | Date |
+  ## Manager guide for team results
+  ## Launch and follow-up plan
+output_sample:
+  input:
+    - What you want to learn, in a sentence
+    - How many people and teams will answer
+    - Past survey results (optional)
+    - Your timing and channel (optional)
+  output:
+    - name: Survey questions
+      contains: Questions grouped by theme, each with an answer scale.
+    - name: Focus group or stay interview guide
+      contains: Open questions and prompts to hear the reasons behind the scores.
+    - name: Reading the results
+      contains: The top themes, how to split them by team or tenure, and what the numbers cannot tell you.
+    - name: Action plan
+      contains: Each theme with one action, an owner and a date.
+    - name: Manager guide
+      contains: How to share a team's results and plan changes with the team.
+    - name: Launch and follow-up plan
+      contains: When to send, how to share results and when to run a short pulse.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a writing and reading job. Claude, ChatGPT or Gemini all do it well.
+    - name: Google Forms or your survey tool
+      why: You send the survey from there. The AI writes the questions only.
+  inputs:
+    - Your last survey's results and comments
+    - Headcount by team
+terms:
+  - term: Pulse survey
+    meaning: A short survey, often 5 to 10 questions, sent often to check how people feel.
+  - term: Stay interview
+    meaning: A talk with a current employee about what keeps them and what might make them leave.
+  - term: Skip-level meeting
+    meaning: A meeting between a leader and people who report to their direct reports.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sorts your type first, then lists set duties.
 new_slug: eu-network-security-check
 name: EU network security rules checker
-summary: Describe your company. Get whether NIS2 covers you, your security
-  duties, reporting deadlines and gaps.
+summary: Check if the EU NIS2 security law covers your company. Get your category, security duties, reporting deadlines and gaps in one plain result.
 job: check-contracts
 headline: EU network security rules checker
-subhead: Describe your company. Get whether NIS2 covers you, your security
-  duties, reporting deadlines and gaps. Bring sector and services you offer. Use
-  the result to plan your next step.
+subhead: Describe your company. Get whether NIS2 covers you, your security duties, reporting deadlines and gaps. Bring sector and services you offer. Use the result to plan your next step.
 explain: |
   A clear answer on whether the EU NIS2 security law covers your company, and what that means in practice: your category, the ten risk measures, reporting deadlines and the gaps to close.
 
@@ -18,6 +15,10 @@ when:
   - You need to know your deadlines if a security incident happens.
   - Your board must approve security measures and wants a checklist.
   - You want a gap table against the ten required measures.
+not_for:
+  - "You need legal advice or a formal audit: ask a qualified lawyer or an accredited security assessor."
+  - "You are a bank, insurer or other financial firm: check the EU DORA rules instead, which this skill only compares."
+  - "You need the exact national law for one country: read that country's official register and law, as local rules differ."
 you_give:
   - Sector and services you offer
   - Employee count, turnover and balance sheet
@@ -30,7 +31,28 @@ you_get:
   - Board duty checklist
   - Fine exposure estimate
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code or paid tool is needed.
+  - "Describe your company: sector, services, staff, turnover, balance sheet and the EU countries you work in."
+  - Add your current security measures if you have them. Say if an incident has happened and when you found out.
+  - Ask for your classification first. Check that the sector and size facts are right before you go on.
+  - Ask for the gap table, reporting timeline and fine estimate. Then check your national law and register before you act.
+output_sample:
+  input:
+    - Your sector and the services you offer
+    - Your employee count, turnover and balance sheet total
+    - The EU countries where you operate
+    - Your current security measures (optional)
+    - The time a security incident began (optional)
+  output:
+    - name: Entity classification
+      contains: Three checks on sector, size and category, ending in essential, important or out of scope, with what that means for oversight.
+    - name: Governance duties
+      contains: A board-ready checklist of management duties under Article 20, including approving measures and training.
+    - name: Gap assessment table
+      contains: Each of the ten Article 21 security measures with current state, gap, priority and recommended action.
+    - name: Incident reporting timeline
+      contains: Deadlines for the early warning, notification and final report, worked out from the time you became aware.
+    - name: Penalty exposure
+      contains: Possible fines under Article 34, worked out with your own turnover figures.
+    - name: Remediation roadmap
+      contains: Quick wins within 30 days and bigger fixes within six months, in priority order.

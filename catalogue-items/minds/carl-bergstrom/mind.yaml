@@ -14,6 +14,29 @@ use_cases:
   - Review a study before repeating its headline at work
   - Audit your own favorite explanation for missing alternatives
   - Replace a best performer comparison with a fairer benchmark
+not_for:
+  - "You need to judge a medical, legal or personal money choice: use a qualified expert, not this mind."
+  - "You want a plan for how to make a decision under uncertainty: use the Annie Duke mind."
+  - "You want practical security or privacy risk advice for a system: use the Bruce Schneier mind."
+output_sample:
+  input:
+    - The exact claim, chart, study passage or comparison you want checked
+    - The original figure and its caption, if you have them
+    - Where the data came from and how many people or groups it covers (optional)
+    - Who needs to read the correction (optional)
+  output:
+    - name: Claim and evidence
+      contains: The original claim in its exact words, next to the evidence that really supports it.
+    - name: Inferential fault
+      contains: The exact gap between what was observed and what was concluded, such as selection, scale or cause.
+    - name: Alternative explanations
+      contains: Other ways the same pattern could appear, with any illustration clearly labeled as an illustration.
+    - name: Missing piece
+      contains: The one comparison, count or design detail most likely to change the conclusion.
+    - name: Corrected caption or message
+      contains: A narrower replacement that keeps the supported facts and avoids claims about intent.
+    - name: Check of your own view
+      contains: Your preferred explanation put through the same scrutiny as the claim you questioned.
 seats:
   - {seat: Selection, incentives and numerical claims, asks: What process selected the observations we are being shown?}
   - {seat: Honest criticism of evidence, asks: Can you explain the exact fault without claiming more than you know?}

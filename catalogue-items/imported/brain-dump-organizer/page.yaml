@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sorts your notes into set groups.
 new_slug: brain-dump-organizer
 name: Brain dump organizer
-summary: Dump everything on your mind. Get it sorted into tasks, ideas and notes
-  with nothing lost.
+summary: Turn a messy brain dump into a sorted list of projects, ideas and tasks, in your own words, with nothing dropped and clear offers of help.
 job: organise-work
 headline: Brain dump organizer
-subhead: Paste a messy stream of thoughts and get it sorted into a clean, usable
-  list with nothing lost. Tasks, ideas and notes each land in their place, still
-  in your own words.
+subhead: Paste a messy stream of thoughts and get it sorted into a clean, usable list with nothing lost. Tasks, ideas and notes each land in their place, still in your own words.
 explain: |
   Paste a messy stream of thoughts and get it sorted into a clean, usable list with nothing lost. Tasks, ideas and notes each land in their place, still in your own words.
 
@@ -18,6 +15,10 @@ when:
   - You pasted a wall of mixed notes and need them sorted.
   - After a meeting you have scattered tasks and ideas.
   - You want a to-do list without losing the odd idea.
+not_for:
+  - You have one clear task. Just do it, or add it to your own task manager.
+  - You need a formal project plan with dates and owners. Use a project tool such as Asana or Trello.
+  - You want a tidy, formal rewrite of your notes. This keeps your casual words, so ask your AI for an edit instead.
 you_give:
   - A messy block of text or dictation
   - Anything you want treated as urgent (optional)
@@ -28,7 +29,26 @@ you_get:
   - Nothing dropped
   - Output sized to match your input
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your messy notes, or dictate them. You do not need to tidy them first.
+  - Answer the one question it may ask, if a single item could be a task or a project.
+  - Check the sections. Nothing should be missing, and the wording should still sound like you.
+  - Pick which offer from How I Can Help it should do next. It waits for your pick.
+  - Connections only looks at files if your AI can see them. To turn it off, tell your AI not to look at your files.
+output_sample:
+  input:
+    - A messy block of text or dictation, typed or pasted
+    - Files or a project your AI can see (optional)
+  prerequisites:
+    - An AI that can read your files or project, only if you want the Connections section filled in
+  output:
+    - name: Projects & Ideas
+      contains: Related items grouped under project names in your words, with open questions and decisions kept inside each project.
+    - name: Tasks
+      contains: A flat list of actions, plus decisions and open questions, each linked to its project when it has one.
+    - name: Connections
+      contains: Real matches between your dump and existing files, or a plain note that none were found or no files were visible.
+    - name: How I Can Help
+      contains: Specific offers that say what would be made and where it would go, ending with a question on which to start.
+    - name: What I heard
+      contains: For a dump of five items or fewer, a short list used in place of the four sections.

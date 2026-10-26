@@ -1,6 +1,6 @@
 new_slug: weekly-saas-numbers-keeper
 name: Weekly SaaS numbers keeper
-summary: Give it your revenue and customers each week. Get recurring revenue, churn and payback read, one growth target and what to skip.
+summary: "Weekly SaaS numbers tracker: give it your billing export each Monday. Get revenue, churn and payback read, one growth target and what to skip."
 job: track-numbers
 thinking: high
 thinking_why: It holds definitions steady, reads several numbers against each other and judges whether growth is worth its cost. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You run a subscription business and read the numbers differently each week.
   - You spend to win customers and are not sure whether each one pays back.
   - You want one number to judge the week by, and permission to skip the rest.
+not_for:
+  - "You sell one-off products with no repeat billing: use a plain sales report from your shop or accounting tool."
+  - "You want a deep read on why customers cancel: use the Subscription churn watcher, and bring your cancel list with dates and plans."
+  - "You have no billing export and no customer list yet: start by writing down each customer's plan, price and start date in a spreadsheet."
 you_give:
   - Last week's billing export with plan, price, start, cancel and payments per customer, or a read-only billing connection
   - Ad spend, sales pay and tools for the week (advised)
@@ -33,6 +37,31 @@ how_to_use:
   - On the first run, approve the definitions of revenue, customer and churn. They are saved and never drift.
   - Add your spend and gross margin once. Update them when they change.
   - Read the target and the one thing to fix. Run it again next Monday.
+output_sample:
+  input:
+    - Last week's billing export with plan, price, start, cancel and payments per customer
+    - Ad spend, sales pay and tools for the week (advised)
+    - Your gross margin per customer (advised)
+    - Your open pipeline, if you sell with a sales team (optional)
+    - Last week's keeper file, once it exists
+  prerequisites:
+    - An AI that can keep files between runs, such as Claude Code, for the weekly rows and definitions
+    - A billing export, or a read-only billing connection
+  output:
+    - name: This week
+      contains: Recurring revenue, growth rate against the target, new and churned customers, and net change.
+    - name: The trend
+      contains: The last eight weeks in rows, with the target line.
+    - name: Fix first
+      contains: The one thing to fix, and whether it is new or repeated from last week.
+    - name: Economics
+      contains: Monthly payback in months, lifetime profit to cost ratio, scores and a scale-or-fix call.
+    - name: Pipeline
+      contains: Commit, best case and pipe-only forecasts with the maths shown, if you gave a pipeline.
+    - name: The week's target
+      contains: One growth target, what it means in customers or revenue, and what to skip.
+    - name: Files and missing
+      contains: Each step's saved file and every MISSING line for facts it lacked.
 how_it_works:
   - title: Fix the definitions once
     text: Writes what counts as recurring revenue, an active customer and churn, approved by you and used every week.

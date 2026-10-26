@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It checks if the data is good enough before it recommends any price.
 new_slug: price-test-planner
 name: Price test planner
-summary: Give it your costs and sales data. Get the best price to try, three
-  outcome cases, and a test you can undo.
+summary: Plan a price test for your online store. Give it your costs and sales history. You get a price to try, three demand cases and a test you can undo.
 job: set-prices
 headline: Price test planner
-subhead: The best price to try next, with three outcome cases and a test you can
-  undo. Give it your costs and sales history and it shows what the numbers can
-  and cannot tell you.
+subhead: The best price to try next, with three outcome cases and a test you can undo. Give it your costs and sales history and it shows what the numbers can and cannot tell you.
 explain: |
   The best price to try next, with three outcome cases and a test you can undo. Give it your costs and sales history and it shows what the numbers can and cannot tell you.
 
@@ -18,6 +15,10 @@ when:
   - You have five price options and need to pick.
   - You need a test design your boss will approve.
   - Your sales history is noisy and you want honest limits.
+not_for:
+  - You have no sales history yet. Check a few similar products and run a simple manual test instead.
+  - You want a price changed on your live store. This only plans. You or your team must make any change.
+  - Your sales history is mostly stockouts or heavy promotions. Collect a few clean weeks first, then run it.
 you_give:
   - Unit costs and fees
   - Sales history by price
@@ -29,7 +30,33 @@ you_get:
   - Test design with guardrails
   - Rollback plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code is needed.
+  - Paste your unit costs, fees and sales history. Show the price paid on each order, not just the list price.
+  - Add notes on traffic, ads and promotions, and the price options you want to compare.
+  - Say your goal, such as profit, and your lowest and highest allowed price.
+  - Read the Data Fitness table first. If your data is weak, expect a test plan, not a firm price.
+  - Approve any change yourself. The AI will not change live prices. The skill ends with a link to Nexscope Data APIs, an optional paid service. You can ignore it.
+output_sample:
+  input:
+    - Your unit costs and fees
+    - Your sales history with the price paid on each order
+    - Traffic, ads and promotion notes (optional)
+    - The price options you are weighing
+    - Your lowest and highest allowed price (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  output:
+    - name: Scope and Objective
+      contains: The decision, your main goal, your channels, and which inputs are confirmed, assumed or unknown.
+    - name: Data Fitness
+      contains: A table of checks on your data, what was found, why it matters and how to fix it.
+    - name: Economics and Constraints
+      contains: Profit per sale at each candidate price, and whether each one stays inside your floor and ceiling.
+    - name: Elasticity Assessment
+      contains: Whether your data can show how demand reacts to price, with the method, limits and doubts.
+    - name: Candidate Scenarios
+      contains: Expected units, revenue and profit for each price under base, low and high demand, plus risks.
+    - name: Decision
+      contains: A call to recommend, test or hold, the chosen price, why, and what would change it.
+    - name: Experiment or Rollout Plan
+      contains: Test scope, main measure, guardrails, controls, and the rules to keep, extend, stop or revert.

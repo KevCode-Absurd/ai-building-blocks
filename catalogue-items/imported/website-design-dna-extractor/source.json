@@ -1,0 +1,58 @@
+{
+  "schema": "abb-upstream-skill/1",
+  "repository": "senlindesign/taste-skill",
+  "commit": "6dce223f2f5665d3636ca9a44ec3a7aa1322a9b8",
+  "originalName": "taste",
+  "author": "Sen Lin",
+  "licence": "MIT",
+  "licenceEvidence": {
+    "file": "README.md",
+    "line": 270,
+    "statement": "MIT © 2025 Sen Lin",
+    "standaloneLicenceFile": false,
+    "note": "LICENSE is an AI Blocks factual packaging notice, not invented upstream licence text."
+  },
+  "copiedFiles": {
+    "SKILL.md": {
+      "sha256": "57c17f418cbbcf1f68ff5a3915cdf259cec69695b4db54e14f7a439c0bdcb97e",
+      "bytes": 21706
+    },
+    "README.md": {
+      "sha256": "3c66875b1c4525340b71911ef6dad880da040884d68061424389ee8a48392e96",
+      "bytes": 11001
+    },
+    "references/extract.js": {
+      "sha256": "82a8831c215c9b316e7ca655af6f469570de9216db3c21b41c9eeac1fa92347a",
+      "bytes": 16596
+    },
+    "references/export-formats.md": {
+      "sha256": "030fbc26b91d2a51c49fe93055d64eb1dd2583d6bae4ac2800cc00734477678e",
+      "bytes": 6418
+    },
+    "references/step1-measure.md": {
+      "sha256": "6b8a4f7bac8c75c626f38b5df36f2eedd5f6f4b700f3a82cbde621c2ffb8dbf8",
+      "bytes": 5719
+    },
+    "references/step2-pattern.md": {
+      "sha256": "aac8ced0ecb160352386bc2493e5e6450dae033d6f6eb7e718bd0d0f3ceee8af",
+      "bytes": 3265
+    },
+    "references/step3-taste.md": {
+      "sha256": "ecf8c23c0731bec0f3329029b9f75c17545ce7f0c51c601d157d0da86f35f486",
+      "bytes": 4131
+    },
+    "references/step4-observer.md": {
+      "sha256": "1592998780627d3b6c22e68cf35c877b693648383a3e927aed9534482914ce8a",
+      "bytes": 5277
+    }
+  },
+  "upstreamRuntimeFiles": 7,
+  "upstreamCodeExecuted": false,
+  "packagingFiles": [
+    "item.yaml",
+    "page.yaml",
+    "source.json",
+    "LICENSE",
+    "AI-BLOCKS-USAGE.md"
+  ]
+}

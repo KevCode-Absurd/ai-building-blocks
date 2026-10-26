@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It sets up code, data storage and privacy choices that are hard to undo.
 new_slug: first-party-tracking-pixel
 name: First-party tracking pixel builder
-summary: Answer a few questions about your site. Get a tracking script and
-  database that keep your visit data in your own hands.
+summary: Set up a first-party tracking pixel for your website. Answer a few questions and get a script, a collector and a Postgres database you own.
 job: track-numbers
 headline: First-party tracking pixel builder
-subhead: Your site gets its own tracking script, a collector that receives the
-  events, and a Postgres database you control. Visit data, page clicks, campaign
-  tags and conversions stay in your hands instead of a third party's.
+subhead: Your site gets its own tracking script, a collector that receives the events, and a Postgres database you control. Visit data, page clicks, campaign tags and conversions stay in your hands instead of a third party's.
 explain: |
   Your site gets its own tracking script, a collector that receives the events, and a Postgres database you control. Visit data, page clicks, campaign tags and conversions stay in your hands instead of a third party's.
 
@@ -18,6 +15,10 @@ when:
   - You need campaign tags and click IDs saved with each visit.
   - You want to link anonymous visits to known customers in your own database.
   - You need tracking that respects consent choices.
+not_for:
+  - "You track a mobile app: use your app platform's own event tool, because this builds a browser script for websites only."
+  - "You run paid ads and need Meta, Google or TikTok pixels: keep those pixels, because this one runs beside them, not instead."
+  - "You already use PostHog, Segment or Snowplow and only lack campaign tags: ask your AI to add those fields there, which is a smaller fix."
 you_give:
   - Platforms and hosting you already use
   - Your website address
@@ -31,9 +32,35 @@ you_get:
   - Config file listing your choices
   - Setup steps for your hosting
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code, and use your own hosting and
-    Postgres database accounts.
+  - Open an AI that can run code and write files, such as Claude with code tools.
+  - Paste the skill text into the chat, or upload the skill folder, and say you want a first-party tracking pixel.
+  - "Answer the questions in one message: your platforms, hosting, consent rules and events. Nothing is built until you answer."
+  - Check the pixel.config.json it shows you. Fix anything wrong, then approve it.
+  - Create the hosting and Postgres accounts it asks for, then deploy the collector and add the script tag to your site.
+  - Test with a few visits and check the rows appear in your database before you rely on the data.
+output_sample:
+  input:
+    - The platforms and hosting you already use
+    - Your website address
+    - Your consent and privacy rules
+    - The events you want to record
+    - Your current analytics tools (optional)
+  prerequisites:
+    - An AI that can run code and write files
+    - A hosting account for the collector
+    - A Postgres database account
+  output:
+    - name: pixel.config.json
+      contains: Every choice you made in the questions, shown back to you for approval before anything is built.
+    - name: Pixel script
+      contains: The script tag for your site that records visits, clicks, campaign tags and conversions.
+    - name: Collector endpoint
+      contains: The service that receives events from the script and writes them to your database.
+    - name: Postgres schema
+      contains: Tables for raw clickstream, the identity graph and conversion events.
+    - name: sessions
+      contains: One row per session with visitor, timing, landing and exit pages, source, medium, channel and click IDs.
+    - name: channel_daily
+      contains: One row per date and channel with sessions, engaged sessions, new visitors and conversions.
+    - name: Setup steps
+      contains: Steps to deploy the collector and database on your own hosting.

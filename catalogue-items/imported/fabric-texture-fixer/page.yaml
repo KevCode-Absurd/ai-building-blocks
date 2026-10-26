@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set edit recipe using your sharp photo as the guide.
 new_slug: fabric-texture-fixer
 name: Fabric texture fixer
-summary: Give it a blurry clothing photo and a sharp product photo. Get clear,
-  believable fabric. Your image model redraws it.
+summary: Fix blurry fabric in a clothing photo. Give it your photo and a sharp product shot, and get a prompt that rebuilds clear, real texture.
 job: product-photos
 headline: Fabric texture fixer
-subhead: A blurry garment photo repaired so the fabric looks real and sharp,
-  while the model, pose and layout stay untouched. Knits that turned to mush
-  when zoomed in get their texture back.
+subhead: A blurry garment photo repaired so the fabric looks real and sharp, while the model, pose and layout stay untouched. Knits that turned to mush when zoomed in get their texture back.
 explain: |
   A blurry garment photo repaired so the fabric looks real and sharp, while the model, pose and layout stay untouched. Knits that turned to mush when zoomed in get their texture back.
 
@@ -18,18 +15,41 @@ when:
   - A supplier image shows the garment but the fabric is blurred.
   - You have a sharp flat-lay and want the on-model shot to match.
   - You need a finishing pass before a product page goes live.
+not_for:
+  - "Your garment has the wrong shape or a broken structure: make the photo again, because this only fixes the fabric surface."
+  - "You want to swap one fabric for another: use fabric-on-body."
+  - "Your photo is very low resolution: take a new photo or ask your supplier for a better one."
 you_give:
   - The blurry garment photo
   - A clear product photo of the same item
-  - dlazy tool and credits
+  - Your dlazy account with credits
 you_get:
   - Enhanced image with clear fabric texture
   - Same model, pose and background
   - Prompt used for repeat runs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Check both photos show the same item. Each file should be over 400 by 400 pixels and between 20KB and 15MB.
+  - Use an AI that can run code. You also need the dlazy tool set up with credits. Chat alone will only write the prompt.
+  - Give your AI both photos, with the blurry one first, and the garment type.
+  - Ask it to follow this skill. It writes the prompt and runs the image model with two variants.
+  - Compare each result with your sharp photo. Check the face, background and colour did not change.
+  - If the result is only sharper, ask your AI to add the fix-up line and run it again.
+output_sample:
+  input:
+    - Your blurry photo of the garment on a model
+    - A sharp product photo of the same item, flat or close up
+    - The type of garment, such as a chunky knit sweater
+  prerequisites:
+    - An AI that can run code and the dlazy command line tool
+    - Credits for the dlazy image model
+  output:
+    - name: Texture enhancement prompt
+      contains: The written instructions that tell the image model which fabric details to rebuild and what to leave alone.
+    - name: Enhanced image
+      contains: One JPG at the size of your photo, with clear fabric texture and the same model, pose and background.
+    - name: Second variant
+      contains: A second version from the batch, so you can pick the more believable fabric.
+    - name: Saved file
+      contains: The result is saved as output-<sku>-enhanced.jpg, apart from your original, so you can compare the two.
+    - name: Fix-up lines
+      contains: Extra sentences to add to the prompt if the result is only sharper, changed colour, or altered the face.

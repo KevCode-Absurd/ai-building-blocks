@@ -1,37 +1,76 @@
 new_slug: google-ads-oauth-setup-planner
 name: Google Ads Cloud and OAuth client planner
-summary: Plan Google Cloud, Ads API and OAuth client setup. Get the fields, access boundaries and checks needed before the token stage.
+summary: Plan your Google Cloud project, Ads API access and OAuth client. Get a setup checklist with field names, access limits and what to do next.
 job: connect-tools
 headline: Google Ads Cloud and OAuth client planner
-subhead: Plan Google Cloud, Ads API and OAuth client setup. Get the fields, access boundaries and checks needed before the token stage.
+subhead: Tell it your app and who owns the Google Cloud project and the Google Ads accounts. It lays out each setup step, picks the OAuth client type that fits and keeps secrets out of the output. You get a checklist to finish before you ask for a token.
 explain: |-
-  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+  Connecting an app to the Google Ads API starts with three separate things: a Google Cloud project, an OAuth client and the right link to your Ads manager account. People often mix them up, or treat a manager account ID as the ID of the account they want to read.
 
-  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+  This Google Ads OAuth setup planner goes one thing at a time. It confirms who owns each project and account, picks the client type for your kind of app (local, installed or web), and lists only the redirect addresses you control. It keeps client secrets out of the chat and out of the notes it hands back.
+
+  It also checks the least access Google offers for your use, and does not promise narrower access than Google gives. Making the app read-only is your code's job. The planner stops before the refresh token and the first account call.
 when:
-  - You need a concrete setup or code-change plan with required files.
+  - You are connecting an app to the Google Ads API for the first time.
+  - You are not sure which OAuth client type fits your app.
+  - You have a manager account and are unsure which account ID goes where.
+  - You want a read-only setup and need to know what Google lets you limit.
 you_give:
-  - The selected codebase, schemas and service setup
-  - The exact change you want and actions you authorize
+  - Your code project, or a short description of the app that will connect (a local script, an installed app or a web app)
+  - Who owns the Google Cloud project and the Google Ads manager account
+  - The Ads account you want to read
+  - Where the app will run, so redirect addresses can be chosen (optional)
+  - What you allow the AI to do, such as plan only or also edit files
 you_get:
-  - A concrete setup or code-change plan with required files
-  - Missing inputs and a bounded verification plan
+  - A setup checklist for the Cloud project, the Ads API and the OAuth client
+  - The names of the fields to fill in, never the secret values
+  - A map of manager and target accounts with the IDs hidden
+  - The least access Google offers for your use
+  - The steps left before a token, and the checks that did not run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in. To change code in your project, use Claude Code or another assistant that can read your files.
+  - Tell it who owns the Cloud project and the Ads accounts, and where the app will run.
+  - Ask it to check Google's current setup pages first, because screens change. It needs web access for this. Without it, it marks the steps as unchecked.
+  - Never paste a client secret or token into the chat. Keep them in your secrets settings.
+  - When the checklist is done, run the Google Ads token and access check planner.
 how_it_works:
-  - title: Step 1
+  - title: Confirm who owns what
     text: Use this for the initial Cloud project, Google Ads manager relationship and OAuth client setup. The later token-and-access planner covers developer-token readiness, refresh authorization and a read-only account probe. Confirm who owns each project and account before choosing settings.
-  - title: Step 2
+  - title: Set up the Cloud project
     text: Inspect the current official setup for the chosen client type and intended internal or external users. Create or select the authorized Cloud project, enable the needed API and configure the consent audience, application identity and authorized redirect locations as applicable.
-  - title: Step 3
+  - title: Pick the client type
     text: Choose the correct OAuth client type for the selected local, installed or web application. Register only redirect locations the user controls. Keep client secret values in secure local or hosted secret settings; the handoff lists field names, never values.
-  - title: Step 4
+  - title: Link the accounts
     text: Confirm the Google Ads manager and target account links and which user can authorize access. Do not create duplicate accounts or assume a manager ID equals the target customer ID. Record the mapping with redacted identifiers in public notes.
-  - title: Step 5
+  - title: Choose the least access
     text: Check the least capability needed for the diagnostic workflow against current provider-supported scopes and consent rules. Do not promise narrower scopes the provider does not offer; the application itself must also enforce read-only operations.
-  - title: Step 6
+  - title: Hand over the checklist
     text: Return the Cloud/client/manager setup checklist and the exact remaining credential steps. Do not claim a refresh token or successful account query from client creation alone. Hand the prepared configuration to the separate final access-check method.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - "You already have the client and want to test the developer token and a read-only call: use Google Ads token and access check planner."
+  - "You want to audit the campaigns themselves: use Google Ads store account auditor."
+  - "You need the connector code written: use API connector builder."
+output_sample:
+  input:
+    - Your code project or a short description of the app
+    - Who owns the Cloud project and the Ads manager account
+    - The Ads account you want to read
+    - Whether the use is read-only
+  prerequisites:
+    - A Google account that can create or edit the Cloud project
+    - Access to the Google Ads manager and the account you want to read
+  output:
+    - name: Setup checklist
+      contains: Cloud project, API switched on, consent screen and redirect addresses for your client type.
+    - name: OAuth client choice
+      contains: The client type that fits your app and the redirect addresses to register.
+    - name: Account map
+      contains: How the manager and target accounts link, with every ID hidden.
+    - name: Access boundary
+      contains: The least access Google offers for your use, and what your own code must enforce.
+    - name: Remaining steps
+      contains: What is left before a refresh token, to hand to the next planner.
+    - name: Evidence and gaps
+      contains: The sources used, open questions and the checks that did not run.

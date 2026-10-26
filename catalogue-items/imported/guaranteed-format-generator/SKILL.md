@@ -10,17 +10,29 @@ dependencies: [outlines, transformers, vllm, pydantic]
 
 # Outlines: Structured Text Generation
 
+## How to run this skill (added by AI Blocks)
+
+1. Ask once for what is missing: the exact shape of each answer (fields and types, allowed labels, or a pattern), two or three sample texts, and the local model and backend (Transformers, llama.cpp or vLLM). Python setup and GPU are optional. If something is still missing, write `MISSING: <what>`. Never invent fields, labels or sample data.
+2. Pick the generator that matches the shape: `choice` for a fixed list, `json` for a Pydantic class or schema, `regex` for a pattern, `integer` or `float` for numbers.
+3. The code in this file uses the `outlines.models.*` and `outlines.generate.*` calls. Newer Outlines releases changed their API, so the calls may not match the version the user installs. Ask which version is installed (`pip show outlines`), check the calls against the docs for that version, and say which version you wrote the code for. Do not claim the code was run unless you ran it.
+4. Hand back: the format definition, the setup commands, the code with its file name, a sample run that shows the result type and values, and speed notes. End with `OPEN QUESTIONS`.
+5. A valid shape does not mean a correct answer. Tell the user to read the sample results and check them before they trust the run.
+6. Never put an API key in code. Read it from an environment variable.
+7. Not for: hosted API models (use the Structured data extractor or the AI data extractor builder), free text, or users who cannot run Python or a local model.
+8. Next step: run the code on 20 or more real samples and check the values against the source text by eye.
+
+
 ## When to Use This Skill
 
 Use Outlines when you need to:
 - **Guarantee valid JSON/XML/code** structure during generation
 - **Use Pydantic models** for type-safe outputs
 - **Support local models** (Transformers, llama.cpp, vLLM)
-- **Maximize inference speed** with zero-overhead structured generation
+- **Keep inference fast** with structured generation that skips tokens it already knows
 - **Generate against JSON schemas** automatically
 - **Control token sampling** at the grammar level
 
-**GitHub Stars**: 8,000+ | **From**: dottxt.ai (formerly .txt)
+**From**: dottxt.ai (formerly .txt)
 
 ## Installation
 
@@ -89,7 +101,7 @@ Outlines uses Finite State Machines (FSM) to constrain token generation at the l
 4. Fast-forward when only one valid token exists
 
 **Benefits:**
-- **Zero overhead**: Filtering happens at token level
+- **Low overhead**: Filtering happens at token level
 - **Speed improvement**: Fast-forward through deterministic paths
 - **Guaranteed validity**: Invalid outputs impossible
 
@@ -218,10 +230,11 @@ generator = outlines.generate.json(model, YourModel)
 #### OpenAI (Limited Support)
 
 ```python
-# Basic OpenAI support
+# Basic OpenAI support. Read the key from an environment variable, never type it into code.
+import os
 model = outlines.models.openai(
     "gpt-4o-mini",
-    api_key="your-api-key"
+    api_key=os.environ["OPENAI_API_KEY"]
 )
 
 # Note: Some features limited with API models
@@ -603,7 +616,7 @@ class Article(BaseModel):
 | Regex Constraints | ✅ Yes | ❌ No | ✅ Yes | ✅ Yes |
 | Local Models | ✅ Full | ⚠️ Limited | ✅ Full | ✅ Full |
 | API Models | ⚠️ Limited | ✅ Full | ✅ Full | ✅ Full |
-| Zero Overhead | ✅ Yes | ❌ No | ⚠️ Partial | ✅ Yes |
+| Low overhead | ✅ Yes | ❌ No | ⚠️ Partial | ✅ Yes |
 | Automatic Retrying | ❌ No | ✅ Yes | ❌ No | ❌ No |
 | Learning Curve | Low | Low | Low | High |
 
@@ -611,8 +624,8 @@ class Article(BaseModel):
 - Using local models (Transformers, llama.cpp, vLLM)
 - Need maximum inference speed
 - Want Pydantic model support
-- Require zero-overhead structured generation
-- Control token sampling process
+- Want structured generation with little extra cost
+- Control the token sampling process
 
 **When to choose alternatives:**
 - Instructor: Need API models with automatic retrying
@@ -622,9 +635,9 @@ class Article(BaseModel):
 ## Performance Characteristics
 
 **Speed:**
-- **Zero overhead**: Structured generation as fast as unconstrained
-- **Fast-forward optimization**: Skips deterministic tokens
-- **1.2-2x faster** than post-generation validation approaches
+- **Low overhead**: The Outlines authors report that structured generation costs little extra time. Measure it on your own model.
+- **Fast-forward optimization**: Skips tokens that have only one valid choice
+- Speed gains over validate-and-retry approaches depend on your model and shape, so test before you plan around them.
 
 **Memory:**
 - FSM compiled once per schema (cached)
@@ -632,14 +645,14 @@ class Article(BaseModel):
 - Efficient with vLLM for high throughput
 
 **Accuracy:**
-- **100% valid outputs** (guaranteed by FSM)
+- **The shape is enforced** by the FSM, so the output matches your schema. The content can still be wrong, so check it.
 - No retry loops needed
 - Deterministic token filtering
 
 ## Resources
 
 - **Documentation**: https://outlines-dev.github.io/outlines
-- **GitHub**: https://github.com/outlines-dev/outlines (8k+ stars)
+- **GitHub**: https://github.com/outlines-dev/outlines
 - **Discord**: https://discord.gg/R9DSu34mGd
 - **Blog**: https://blog.dottxt.co
 

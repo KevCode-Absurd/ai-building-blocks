@@ -1,0 +1,167 @@
+name: Private Domain Operator agent
+summary: Plan a WeChat or WeCom customer community, from first contact to repeat purchase. Give it your brand, customer base and goal.
+headline: Private Domain Operator agent
+subhead: Give it your brand, your product, how many customers you can reach and your repeat-purchase goal. It plans a WeCom private domain, which is a customer list you own on WeChat. You get customer tags, community tiers, a daily content plan, welcome and lifecycle messages, and the numbers to track.
+job: keep-customers
+thinking: high
+thinking_why: The plan needs sound sequencing and a careful eye on platform and privacy rules. Use a model that keeps to limits and does not overpromise results.
+explain: >-
+  In China, many brands run a private domain. This is a list of customers you
+  can reach yourself on WeChat or WeCom, instead of paying for each new click.
+  It only works if customers want to stay. The main risk is over-marketing, so
+  people leave. This WeCom private domain agent plans the system so that
+  trust comes first and sales follow.
+
+
+  It follows the five parts in the original profile. First, set up the
+  WeCom account and the customer tags. Second, split people into community
+  tiers by value, such as new, perks, VIP and super users. Third, write a
+  content calendar that is mostly useful and only partly promotional. Fourth,
+  set messages for each stage, from the first 72 hours to winning back
+  inactive customers. Fifth, track the funnel from friend add to repeat
+  purchase.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It is built for
+  WeChat and WeCom in China. The message limits and targets in the profile are
+  starting points, so read WeCom's current rules and the privacy law before you
+  act. It plans only and does not connect to any tool. The success targets are
+  goals and not results from AI Blocks.
+when:
+  - You sell in China, you have customers coming from package inserts, stores or livestreams, and you want them in one WeCom list.
+  - You have a WeChat group that went quiet or turned into a coupon dump, and you want a plan to bring it back.
+  - You need a daily post plan and a first-72-hours plan for new members.
+  - You want customer stages and messages to bring back people who have not bought for 90 days.
+not_for:
+  - You sell outside China and do not use WeChat or WeCom. Use the Monthly repeat buyer keeper or the Loyalty and VIP program designer.
+  - You run WhatsApp groups or chats. Use the WhatsApp marketing planner.
+  - You want one campaign or an ad plan to find new customers. This plan is for the customers you already reach.
+  - You need to check a regulated claim, such as in finance or health. A compliance reviewer must approve it first.
+  - You want mass messages sent for you. It writes the plan and the text only.
+you_give:
+  - Your brand, product type and price range
+  - Where customers come from now, such as package inserts, stores, livestreams or Mini Programs
+  - How many customers or members you have today, in WeCom or elsewhere, and what you use to manage them
+  - Your goal, such as more repeat orders, more VIP members or fewer lapsed customers
+  - Your staff size, your industry and any content rules you must follow (optional)
+you_get:
+  - An audit of what you have and where customers drop out
+  - Customer tags and a community tier plan, with rules for moving people up and down
+  - A daily and weekly content schedule, and a first-72-hours plan for new members
+  - Lifecycle messages for new, growing, mature and inactive customers
+  - A list of platform and privacy risks, and the weekly numbers to track
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief. Include the product, how customers reach you, how many you have, which tools you use and your goal.
+  - Say which part to do first, such as the audit, the tier plan, the content calendar or the first 72 hours.
+  - Read the risk list before you set anything up. Check each limit and rule against WeCom's own current rules and the privacy law.
+  - Run the plan on your first 1,000 members or fewer. Do not scale until members reply and buy.
+  - Paste the weekly numbers back in and ask what to change.
+how_it_works:
+  - title: Audit what you have
+    text: It lists your customer list, communities and tools, and finds where people drop between friend add and purchase.
+  - title: Design the tags and tiers
+    text: It sets customer tags, community tiers, entry rules and rules for moving people up or out.
+  - title: Plan the content
+    text: It writes a daily and weekly schedule, and keeps most posts useful and the rest promotional.
+  - title: Set the lifecycle messages
+    text: It plans messages for days 0 to 7, 7 to 30, 30 to 90 and after 90 days, with a human step at key moments.
+  - title: Set the guard rails
+    text: It lists consent, message limits, no re-contact after someone leaves, and content that needs a compliance check.
+  - title: Choose the numbers
+    text: It names the weekly numbers to track, and how to work each out from your data.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    brand <name> | product <type> | members today <number> | tools <list> | goal <line> | MISSING: <list> | ASSUMED: <list>
+
+  AUDIT
+    asset <friend list | groups | Mini Program | other> | size <number> | drop-off point <where> | first fix <action>
+
+  TAGS AND TIERS
+    tag <name> | meaning <line>
+    tier <new | perks | VIP | super user> | who gets in <rule> | what they get <list> | when they move <rule>
+
+  CONTENT PLAN
+    <time> | <post type> | example <text> | purpose <line>
+    weekly events <list>
+
+  LIFECYCLE MESSAGES
+    stage <days> | message <text> | human step <where a person steps in>
+    first 72 hours <numbered steps>
+
+  GUARD RAILS TO CONFIRM
+    <rule or limit> | source <profile or platform> | status <to confirm>
+
+  NUMBERS TO TRACK
+    <metric> | how to work it out <formula> | how often <daily | weekly | monthly>
+
+  OPEN QUESTIONS
+    <item>
+output_sample:
+  input:
+    - Your brand, product type and price range
+    - Where customers come from now and how many you have
+    - The tools you use to manage customers
+    - Your goal, such as more repeat orders
+  prerequisites:
+    - A WeCom account and a person to run it, because the AI cannot do the daily work
+    - A plan to read WeCom's rules and the privacy law, which the AI cannot check live
+  output:
+    - name: Audit
+      contains: Your customer assets, where people drop out, and the first fix for each.
+    - name: Tags and tiers
+      contains: Customer tags and community tiers with entry rules and rules to move up or down.
+    - name: Content plan
+      contains: A daily and weekly post schedule with example text and the purpose of each post.
+    - name: Lifecycle messages
+      contains: Messages for each stage, a first-72-hours plan, and where a person steps in.
+    - name: Guard rails to confirm
+      contains: Consent, message limits and content checks to verify against current rules.
+    - name: Numbers to track
+      contains: Weekly metrics from friend adds to repeat purchase, and how to work each out.
+    - name: Open questions
+      contains: What you still need to tell it, so nothing is guessed.
+works_best_with:
+  tools:
+    - name: WeCom (WeChat Work)
+      why: This is the platform the plan is for. Read its own current rules on adds, messages and groups.
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can write the plan. Ask it to write the example posts in Chinese if your customers read Chinese.
+  inputs:
+    - Your current repeat-purchase and churn numbers
+    - A sample of posts your group already gets, and which got replies
+    - The names of any customer tools you use, such as a SCRM or Mini Program
+terms:
+  - term: Private domain
+    meaning: A list of customers you can reach yourself, such as on WeCom, without paying per click.
+  - term: WeCom
+    meaning: WeChat's work version. Brands use it to chat with customers and run groups.
+  - term: SCRM
+    meaning: A tool that tags customers and automates messages on WeChat or WeCom.
+  - term: Mini Program
+    meaning: A small app that runs inside WeChat, often used for shops and member points.
+  - term: Lifecycle
+    meaning: The stages a customer moves through, from new to loyal to inactive.
+judge:
+  - Customers are only added or messaged with their consent, and people who leave are not contacted again.
+  - Most of the content plan is useful to the customer, and only part is promotional.
+  - Message limits and platform rules are marked "to confirm" and not stated as current.
+  - The plan starts small and gives a human step at key moments, not full automation.
+  - Missing facts are open questions. No customer number, sales result or tool setting is made up.
+test:
+  - Run it for one product line only. The plan should be small enough for one person to run.
+  - Leave out your goal. It should ask for one number to aim at.
+  - Ask for a plan that sends daily promotions. It should push back and keep the content mostly useful.
+tweaks:
+  - what: Goal
+    how: Name one number, such as repeat purchase rate in 90 days. Tiers and messages then aim at it.
+  - what: Start size
+    how: Say how many members you have. A plan for 200 people differs from one for 20,000.
+  - what: Industry
+    how: Say if you sell skin care, food, finance or education. Some need a compliance check on every post.
+  - what: Tools
+    how: List your SCRM and Mini Program tools. The tag and automation steps then use their real names.
+improve:
+  - Put your real tier names, tag list and post slots in SKILL.md so each plan starts from them.
+  - Add your approved product claims and banned words, so example posts follow your rules.
+  - Keep a list of the posts that got replies and sales, and paste it in each month.

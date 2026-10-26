@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It turns short notes into rows.
 new_slug: time-log-keeper
 name: Time log keeper
-summary: Tell it what you did today in plain words. Get rows added to your
-  Notion time log, asking when unsure.
+summary: Log your time in plain words and get rows added to your Notion time log. Say "read papers 2h, gym 1h" and it asks when unsure.
 job: track-numbers
 headline: Time log keeper
-subhead: Tell it what you did today in plain words, such as "read papers 2h, gym
-  1h", and get tidy rows added to your Notion time log.
+subhead: Tell it what you did today in plain words, such as "read papers 2h, gym 1h", and get tidy rows added to your Notion time log.
 explain: |
   Tell it what you did today in plain words, such as "read papers 2h, gym 1h", and get tidy rows added to your Notion time log. No forms, no timers.
 
@@ -17,18 +15,46 @@ when:
   - You spent the day in blocks and want to log it at once.
   - You want a weekly look at where your hours went.
   - You have a Notion database ready for time entries.
+not_for:
+  - "You want apps or screens tracked for you: use a separate automatic time tracker, because this only logs what you tell it."
+  - "You do not use Notion: use a simple spreadsheet, since this writes rows only to a Notion database."
+  - 'You need exact hours for client billing: use a timer, because this turns phrases like "a while" into estimates and asks you to confirm.'
 you_give:
-  - A plain-language note of what you did
-  - Notion connected with a time ledger database
-  - The date, if not today (optional)
+  - A plain note of what you did, such as "read papers 2h, gym 1h"
+  - Your own copy of the time-ledger database in Notion
+  - Notion connected to your AI
+  - The date, if it is not today (optional)
 you_get:
   - New rows in your Notion log
   - Category and minutes for each
   - Flags where it was unsure
   - A time review when you ask
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can connect to Notion.
+  - Copy the companion time-ledger template into your Notion workspace. Keep "time-ledger" in the database title.
+  - Connect Notion to your AI and give it access to that database. This needs a paid Claude plan today.
+  - Paste the skill into a chat, or add it to your AI tool.
+  - 'Type what you did, such as "log it: read papers 2h, gym 1h".'
+  - Approve the first write if Notion asks. Then check the rows in Notion.
+  - Answer any questions about rows marked To-confirm. Say "tidy up my time ledger" to clear them in one go.
+output_sample:
+  input:
+    - A plain note of what you did, such as "read papers 2h, gym 1h"
+    - The day you mean, if it is not today (optional)
+    - Your own copy of the time-ledger database in Notion
+  prerequisites:
+    - Notion connected to your AI, with access to your time-ledger database
+    - A copy of the companion Notion template, which is the time-ledger database
+    - A paid Claude plan, since connector setups currently live on paid Claude tiers
+  output:
+    - name: Logged rows
+      contains: One row per activity in your Notion database, with title, activity type, minutes and date.
+    - name: Status on each row
+      contains: Done for clear entries and To-confirm for anything the AI had to guess.
+    - name: Compounding tag
+      contains: A tag on obvious entries that leave something reusable, like learning or building. Unclear ones stay blank.
+    - name: Notes
+      contains: A short clue from your words, or the question your AI needs you to answer.
+    - name: Receipt
+      contains: A short reply listing the rows written, which ones need confirming, and the questions.
+    - name: Batch tidy-up
+      contains: When you say "tidy up my time ledger", one message with all open questions, then rows updated from your answers.

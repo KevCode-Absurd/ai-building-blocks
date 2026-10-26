@@ -1,6 +1,6 @@
 new_slug: product-miss-growth-tests
 name: Would people miss your product? Then pick growth tests
-summary: Give it your product and users. Get a short survey, the 40 percent test and ranked growth ideas.
+summary: Find out if your product is a must-have with the 40 percent survey test, then rank growth ideas and pick the first three tests to run.
 job: test-an-idea
 thinking: high
 thinking_why: It reads survey answers for who your real fans are and ranks tests from them. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have users and want to know if the product is a must-have before you spend on growth.
   - Growth has stalled and the team has twenty ideas, but no way to choose.
   - You are about to raise money or hire for growth and want evidence the product holds up.
+not_for:
+  - "You have fewer than about 30 active users: talk to them one by one first, or use the Customer purchase interview script writer."
+  - "Your product has not launched and has no users: use the Smallest test picker to test the idea with real people first."
+  - "You already know your fans and only want to compare competitors: use the Competitor funnel mystery shopper."
 you_give:
   - What your product does and the core experience a user should have had
   - How many active users you have and how to reach them
@@ -33,6 +37,25 @@ how_to_use:
   - Describe your product and users. It writes the survey and the plan, then stops.
   - Send the survey to active users and wait for the answers. This usually takes a week or two.
   - Bring back the results and your list of growth ideas and say "carry on".
+output_sample:
+  input:
+    - What your product does and the core experience a user should have had
+    - How many active users you have and how to reach them
+    - Your list of growth ideas
+    - The survey answers you collect (after step 1)
+    - A buyer profile or customer reviews (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude with files or Claude Code
+    - A week or two to send the survey and collect answers
+  output:
+    - name: Must-have survey plan
+      contains: Who to ask, the survey with its fixed key question, how to count the 40 percent test, and how to study fans.
+    - name: Growth idea ranking
+      contains: Each growth idea scored 1 to 10 for impact, confidence and ease, averaged and sorted.
+    - name: First three tests
+      contains: One test for each top idea, with a measure, a stop date and a run order.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Picks who to ask
     text: Picks active users who have had the core experience, and plans interviews first if there are too few.

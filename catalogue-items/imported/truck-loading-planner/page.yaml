@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Packing many sizes takes careful trial and error.
 new_slug: truck-loading-planner
 name: Truck loading planner (bin packing)
-summary: Give it your box sizes and counts. Get a plan to pack them into the
-  fewest trucks or containers.
+summary: Give it your carton sizes, weights and counts. Get a truck loading plan and a container count to book, checked box by box.
 job: plan-supply-chain
 headline: Truck loading planner (bin packing)
-subhead: A plan for packing your boxes into the fewest trucks or containers,
-  with a count you can trust before you book freight. A wrong container count
-  costs a full container, so the plan is checked box by box.
+subhead: A plan for packing your boxes into the fewest trucks or containers, with a count you can trust before you book freight. A wrong container count costs a full container, so the plan is checked box by box.
 explain: |
   A plan for packing your boxes into the fewest trucks or containers, with a count you can trust before you book freight. A wrong container count costs a full container, so the plan is checked box by box.
 
@@ -18,6 +15,10 @@ when:
   - Each purchase order must ship whole in one container.
   - Some cartons must stay upright and cannot be tipped.
   - A container looks over 85% full and you want to check the margin.
+not_for:
+  - "You only load pallets: use the pallet-loading skill instead."
+  - "You plan routes or many drop-offs: use the container-loading-optimization skill instead."
+  - "You ship a handful of boxes: a quick volume and weight sum by hand is enough."
 you_give:
   - Box sizes, weights and counts
   - Container size and weight limit
@@ -29,8 +30,35 @@ you_get:
   - Spare room on tight loads
   - A verification check of the plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Put your boxes in a CSV file. Copy the columns from examples/template.csv and read examples/README.md for what each one means.
+  - Add your container size and weight limit. Add group rules and upright boxes if you have them.
+  - "Open a terminal in the skill folder and run: python3 scripts/load_plan.py shipment.csv --out plan/"
+  - This needs only Python 3. There is no API key and nothing to pay for.
+  - Open plan/report.md. Check the container count, the gap to the proven minimum, and the checks that ran.
+  - On tight containers, read the spare room and the tolerance result before you book freight.
+output_sample:
+  input:
+    - Your box sizes, weights and counts
+    - Your container size and weight limit
+    - Your group rules, such as each PO ships whole (optional)
+    - Which boxes must stay upright (optional)
+  prerequisites:
+    - Python 3 on your computer, or an AI that can run code
+    - No API key needed
+  output:
+    - name: Executive Summary
+      contains: How many boxes were packed, how many containers were used, and the average fill.
+    - name: Container Count and Bounds
+      contains: The lowest count that is proven, the count in the plan, and the gap between them.
+    - name: Container Utilization
+      contains: For each container, the box count, volume used, weight and fill.
+    - name: Group Assignment
+      contains: Which POs ride in which container, with fill and spare length, width and height.
+    - name: Tolerance
+      contains: What happened when tight containers were re-checked with every box a few millimetres larger, plus a fallback plan.
+    - name: Checks Run
+      contains: "Which checks ran on the plan: placement, containment, overlap, orientation, support and weight."
+    - name: Item Manifest
+      contains: Every box with its size, weight, position, container and layer.
+    - name: Warnings/Notes
+      contains: Containers with a lot of unused space and fragile boxes that need care.

@@ -1,6 +1,6 @@
 new_slug: rival-weakness-message-finder
 name: "Rival weakness message finder"
-summary: "Name a rival and your strengths. Get the one strength that is also their weakness, as a message you can defend."
+summary: "Find a rival's weak spot that matches your real strength. Get a message you can defend that buyers can check, plus the rival's likely reply."
 job: study-competitors
 thinking: medium
 thinking_why: "It matches strengths to weak spots and weighs which message holds up."
@@ -17,6 +17,10 @@ when:
   - "You are writing positioning against a named rival."
   - "Your ads say you are better and no one believes them."
   - "A rival has just had a problem and you want to use it fairly."
+not_for:
+  - You have no sourced facts about the rival. Gather dated public facts first, such as reviews, prices and policy pages.
+  - You want to know if a cheap new rival is a real threat. Use the Disruption risk checker.
+  - You want to run a comparison ad that names the rival. Ask a lawyer or check your ad platform's rules first.
 
 you_give:
   - "The rival and public facts about it, with sources"
@@ -34,6 +38,26 @@ how_to_use:
   - "List your strengths and the proof for each."
   - "Read the pairs and the reply risk. Drop any message you cannot defend."
   - "Use the top message in one ad or page and watch the response."
+output_sample:
+  input:
+    - The rival's name and public facts about it, with dates
+    - Your strengths and the proof for each
+    - Your brand brain (optional)
+  output:
+    - name: Rival weak spots
+      contains: Each weak spot from public facts, with a source and a date.
+    - name: Our strengths
+      contains: What you do better, with proof, plus a separate claim-only list.
+    - name: Pairs on the same axis
+      contains: Each weak spot beside your matching strength, and how a buyer can check it.
+    - name: Messages
+      contains: A headline and one line of evidence for each pair, without naming the rival.
+    - name: Likely reply
+      contains: The rival's best answer, where it could expose you, and whether to keep, rewrite or drop.
+    - name: Ranked angles
+      contains: The messages in order, with evidence, the rival weakness behind each and the reply risk.
+    - name: Missing and checks missed
+      contains: Gaps in your facts, and any check the skill could not pass.
 
 how_it_works:
   - title: "Lists weak spots"

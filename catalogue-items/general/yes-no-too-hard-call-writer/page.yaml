@@ -1,6 +1,6 @@
 new_slug: yes-no-too-hard-call-writer
 name: Yes, no or too-hard call writer
-summary: Paste your four filter results. Get a yes, no or too-hard call, how big to go, and what would change it.
+summary: Turn your four filter results into a clear yes, no or too-hard call, with how big to commit and what would change it. Built for close choices.
 job: think-and-decide
 thinking: high
 thinking_why: It must weigh four results together, compare with past options and size the commitment with care.
@@ -14,6 +14,10 @@ when:
   - You have run the filters and need to decide.
   - A choice is close and you feel pushed to act.
   - You want a rule for how much to commit when something is clearly good.
+not_for:
+  - "You are making a small everyday purchase: just decide, or ask a friend you trust."
+  - "You have no walk-away price yet: use the Price against value checker first, then come back here."
+  - "You want advice on money or investments from a licensed person: this is decision support, so ask a qualified adviser."
 you_give:
   - The results of the four filters (understand it, quality, people, price)
   - The walk-away price and the best alternative
@@ -28,6 +32,31 @@ how_to_use:
   - Paste the four filter results and the plan with the walk-away price.
   - List the best chances you saw in the last year, to compare.
   - Save the call and its review date.
+output_sample:
+  input:
+    - "The results of your four filters: understand it, quality, people and price"
+    - Your walk-away price and your best alternative
+    - The plan with the price, from the Price against value checker
+    - Your best two or three chances from the last year (optional)
+  prerequisites:
+    - The results of the earlier checks on your choice, pasted in from your AI chat or notes
+  output:
+    - name: Four filters
+      contains: A table with the understand, quality, people and price results side by side, plus the failure check if you ran one.
+    - name: The call
+      contains: Yes, no or too hard, and the rule that gave it.
+    - name: Versus your best chances
+      contains: Where this choice ranks against your best recent chances, and whether it is only average.
+    - name: Size
+      contains: How big a commitment fits, never more than you can afford to lose.
+    - name: Before you commit
+      contains: Answers on timing, funding, exit cost, a better use of the money and any approvals needed.
+    - name: What would change it
+      contains: Two or three things you could see, with numbers or dates, that would flip the call.
+    - name: Review
+      contains: A review date, your main reasons in your words, and what you expect.
+    - name: Missing and checks missed
+      contains: Gaps in your inputs and any of its own checks that failed, or none.
 how_it_works:
   - title: Gather the four results
     text: Lists the understand, quality, people and price results side by side.

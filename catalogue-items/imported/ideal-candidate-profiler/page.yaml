@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It infers motives and habits that the job post never states.
 new_slug: ideal-candidate-profiler
 name: Ideal candidate profiler
-summary: "Give it a job description. Get a profile of who fits: their motives,
-  where they spend time, what moves them."
+summary: "Turn a job description into an ideal candidate profile: their motives, where they spend time and how to reach them. Built for sourcing and outreach."
 job: hire-people
 headline: Ideal candidate profiler
-subhead: "A picture of the person you want to hire that goes beyond the job
-  description. Give it a job description and get a profile of who fits, what
-  moves them, where they spend time and how to reach them."
+subhead: "A picture of the person you want to hire that goes beyond the job description. Give it a job description and get a profile of who fits, what moves them, where they spend time and how to reach them."
 explain: |
   A picture of the person you want to hire that goes beyond the job description. Give it a job description and get a profile of who fits, what moves them, where they spend time and how to reach them.
 
@@ -18,6 +15,10 @@ when:
   - You are a recruiter hunting for a hard-to-find role.
   - You need outreach that speaks to what the person cares about.
   - You want to know which communities to search for a role.
+not_for:
+  - "You want to screen or rank named people: use a structured interview and your own hiring checklist, not a persona."
+  - "You need the job post itself rewritten: ask a recruiter or writer to redraft it from your notes."
+  - "You want to treat the result as fact about real people: check it against your past hires and your hiring manager first."
 you_give:
   - The job description
   - Your company type and culture
@@ -29,7 +30,32 @@ you_get:
   - Places they spend time
   - Outreach angles to try
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. It needs no code and no paid tool.
+  - Paste your job description. Add your company type and culture.
+  - Add a great past hire as an example, and any pay or location limits, if you have them.
+  - Ask your AI to build the candidate persona.
+  - Read the result with your hiring manager. Fix anything that does not match your real hires.
+  - Use the outreach themes and community list to plan your sourcing. Leave out age, family status and other protected traits.
+output_sample:
+  input:
+    - Your job description
+    - Your company type and culture
+    - A great past hire as an example (optional)
+    - Pay and location limits (optional)
+  output:
+    - name: Who They Are
+      contains: A short story of one typical candidate, with their day, what they care about and their career.
+    - name: Professional Profile
+      contains: Likely titles, years of experience, career path, education, company types and industries.
+    - name: Technical Identity
+      contains: Core skills, tools, what they are learning now, and skills that often come with their main ones.
+    - name: What Motivates Them
+      contains: What attracts them, what pushes them to leave, how they judge offers and what turns them off.
+    - name: Where to Find Them
+      contains: Online platforms, communities, events and content they use, ranked by how likely they are to be there.
+    - name: How to Engage
+      contains: Best first channel, message themes that fit, mistakes to avoid and good timing.
+    - name: Counter-Offer Risk
+      contains: How likely their current employer is to counter, and how to reduce that risk.
+    - name: Alternative Personas
+      contains: One or two other backgrounds that could fill the role.

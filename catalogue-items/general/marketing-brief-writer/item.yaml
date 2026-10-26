@@ -1,19 +1,32 @@
 slug: marketing-brief-writer
 name: "Marketing brief writer"
-summary: "Paste product and buyer notes. Get a one-page brief on what to say, to whom and what next."
+summary: "Turn your product and buyer notes into a one-page marketing brief: the one thing to say, why people really buy and how results are counted."
 category: general
 type: skill
 role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: brand_brain, required: false}
-  - {type: voc_reviews, required: false}
-  - {type: offer, required: false}
+  - type: question
+    required: true
+  - type: brand_brain
+    required: false
+  - type: voc_reviews
+    required: false
+  - type: offer
+    required: false
 outputs:
-  - {type: brief}
+  - { type: brief }
 origin: rebuilt
 version: 1.0.0
-minds: [drayton-bird]
+minds: [ drayton-bird ]
 credits:
-  - {title: "The Copywriter Club podcast, episode 165, with Drayton Bird", by: "Kira Hug and Rob Marsh, with Drayton Bird", used: "Start from what has been tried, who buys and why, say the one thing before being creative, check whether the offer could change, and end with the action and how it is counted"}
+  - { title: "The Copywriter Club podcast, episode 165, with Drayton Bird", by: "Kira Hug and Rob Marsh, with Drayton Bird", used: "Start from what has been tried, who buys and why, say the one thing before being creative, check whether the offer could change, and end with the action and how it is counted" }
+before:
+  - customer-buying-reasons-finder
+  - product-differentiation-checker
+next:
+  - ad-test-brief-writer
+  - one-goal-marketing-plan-builder
+  - smallest-test-picker
+needs_mode: manual

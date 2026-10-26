@@ -47,22 +47,36 @@ This inverts a core assumption of traditional SEO. In traditional SEO, a backlin
 - [Key Takeaway](references/details.md)
 - [Reference Data](references/details.md)
 
-## When to Use
+## How to run this skill
 
-- You need a Generative Engine Optimization task for a website: audit, citability, crawlers, schema, llms.txt, content, platform tuning, or client reporting.
-- Run read-only analysis first; propose site changes before making any.
+AI Blocks added this section. It replaces the generic "When to Use", "Limitations" and "Example" text that came with the import, which described a general site audit and did not match this skill. The brand-mention method is in `references/details.md`, and you must follow it.
 
-## Limitations
+### What you need
+- The brand name, spelled exactly, with any other spellings.
+- The website address.
+- Optional: founder or CEO name, top products, up to two rival brands.
+- The file `references/details.md`. If you only have this file, ask the person to add it.
 
-- Audits are read-only analysis; never publish, deploy, or modify the target site without explicit approval.
-- Scores and citation likelihoods are heuristics, not guarantees from AI search platforms.
-- Docs-only import: upstream scripts, agents, hooks, and schema templates are not bundled.
+### Steps
+1. Read `references/details.md`: the platform scoring tables, the Composite Brand Authority Score, the Analysis Procedure and the Output Format.
+2. Follow the Analysis Procedure, step by step.
+3. Write the report in the Output Format and save it as `GEO-BRAND-MENTIONS.md`.
 
-### Example
+### Keep it read-only and polite
+- Read public pages only. Do not log in, post, edit, or change anything on any site.
+- Respect each site's robots.txt and terms. Keep to a few searches per site, with no loops.
+- If a site blocks you, shows a CAPTCHA or asks for a login, stop on that site. Mark it `not checked`. Do not try to get around it.
 
-```bash
-curl -s https://example.com/robots.txt
-curl -s https://example.com/llms.txt
-```
+### If you cannot browse or run code
+- Ask the person to search each site themselves (for example the brand name plus `site:reddit.com`) and paste the results. The Wikipedia check can be done by opening `https://en.wikipedia.org/wiki/<Brand_Name>`.
+- Mark every site you could not check as `not checked`. Never fill in a score, count, subscriber number or quote that you did not see.
+- If not all five groups were checked, show the total as partial. Add up only the groups you checked, divide by their combined weight, and label it "partial, based on <sites>".
+
+### What the score means
+- The score is a rough guide. It is a weighted sum of five site scores, using the weights in `references/details.md`. It does not promise that any AI will name the brand.
+- The study figures in the reference file (the Ahrefs study of 75,000 brands, the correlations) are the original author's claims. Say so, and do not present them as checked.
+
+### Licence and credit
+- The original skill is by zubair-trabzada (MIT). It was shared in sickn33's collection, where written content is under CC BY 4.0. Keep both credits.
 
 > Adapted from [zubair-trabzada/geo-seo-claude](https://github.com/zubair-trabzada/geo-seo-claude) (MIT); frontmatter, When to Use/Limitations, and safety boundaries added for upstream compliance. Docs-only import: upstream runtime helpers not bundled.

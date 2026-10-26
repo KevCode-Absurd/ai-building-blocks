@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It links many tools into one path matched to the buyer.
 new_slug: funnel-flow-planner
 name: Funnel flow planner
-summary: Describe your audience and offer. Get the path from page to lead magnet
-  to emails to sale.
+summary: Plan your funnel flow from landing page to lead magnet, emails and sale. Give it your audience and offer. You get one path per audience.
 job: make-offer
 headline: Funnel flow planner
-subhead: A map of how visitors move from landing page to lead magnet to emails
-  to a sale, with the right path for each audience. Your tools work as one
-  system, not separate pieces.
+subhead: A map of how visitors move from landing page to lead magnet to emails to a sale, with the right path for each audience. Your tools work as one system, not separate pieces.
 explain: |
   A map of how visitors move from landing page to lead magnet to emails to a sale, with the right path for each audience. Your tools work as one system, not separate pieces.
 
@@ -18,6 +15,10 @@ when:
   - Conversions are flat although each tool gets some use.
   - Everyone gets the same email sequence no matter how they arrived.
   - You are setting up your first funnel and need the structure.
+not_for:
+  - You have no traffic or email list yet. Start with a plain landing page and a simple signup form first.
+  - You only need one email or one page written. Ask your AI to write just that piece, not a full funnel map.
+  - You want to design one tool, such as a quiz or a calculator. Build that tool on its own first, then come back to link it in.
 you_give:
   - Your audience groups
   - Your offer and price
@@ -31,7 +32,29 @@ you_get:
   - Offer placement
   - Tests to run next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text from this page into the chat.
+  - Add your audience groups, your offer and price, your tools and pages, and your traffic sources.
+  - Add your current conversion numbers if you have them.
+  - "Check each path: does each audience get its own entry point and its own emails? Ask your AI to fix any that share one path."
+  - Pick the first test from the list and run it before you change anything else.
+output_sample:
+  input:
+    - Your audience groups and how ready each is to buy
+    - Your offer and price
+    - The tools and pages you already have
+    - Where your visitors come from
+    - Your current conversion numbers (optional)
+  output:
+    - name: Audience and stage segments
+      contains: Each audience group, matched to how ready its people are to buy.
+    - name: Entry points
+      contains: Where each group lands and which path it gets sent down.
+    - name: Tool mapping
+      contains: Where your chatbot, quiz, lead magnet and other tools fit on each path.
+    - name: Follow-up sequence
+      contains: The emails for each path, matched to the audience and stage.
+    - name: Offer placement
+      contains: Where the offer appears on each path and what it says.
+    - name: Measurement and tests
+      contains: What to track across the whole funnel and which tests to run first.

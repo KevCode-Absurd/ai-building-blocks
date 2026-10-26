@@ -1,6 +1,6 @@
 new_slug: product-uses-lister
 name: "Product uses lister"
-summary: "Paste what your product does. Get a long list of uses, ranked by who would pay, with the first one to prove."
+summary: "Find new uses for your product. Paste what it does and get uses ranked by who would pay, plus the first one to prove."
 job: plan-strategy
 thinking: medium
 thinking_why: "It needs wide, creative listing first and then careful sorting by who pays, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - You have a product or tool and only one way to sell it.
   - Sales have stalled in your first market.
   - You are about to choose where to focus a launch.
+not_for:
+  - "Your product has no measurable facts yet: talk to ten likely buyers first, then come back with what you learn."
+  - "You want to sort a list of feature requests: use the Feature request screener."
+  - "You have one idea and want to test it cheaply: use the Smallest test picker."
 
 you_give:
   - "What the product does, in plain terms and measured facts"
@@ -36,6 +40,25 @@ how_to_use:
   - "Add its limits and who buys it today."
   - "Read the groups and cross out any use you know is wrong, then ask it to rank again."
   - "Run the first-use test with real buyers."
+output_sample:
+  input:
+    - What your product does, in plain facts like speed, size or cost
+    - What it cannot do or where it fails
+    - Who buys it now (optional)
+    - Cost to make and a rough price (optional)
+  output:
+    - name: What it does
+      contains: The product's function in plain words, with its limits, which no later use may go beyond.
+    - name: Uses by payer
+      contains: At least ten uses grouped by who would pay, each marked wanted now or not, with what else the buyer needs.
+    - name: Top three uses
+      contains: The three best uses, ranked, with one line each on why now and what stands in the way.
+    - name: First use to prove
+      contains: One use and a cheap test, with a pass line set as a number and a date.
+    - name: MISSING
+      contains: The facts that would sharpen the list, marked instead of guessed.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: States what it does

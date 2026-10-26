@@ -1,53 +1,106 @@
 new_slug: current-tax-cash-payment-bridge
 name: Current tax cash-payment bridge
 headline: Current tax cash-payment bridge
-summary: Reconcile current tax expense and tax-payable movements to disclosed cash payments.
+summary: Check how much income tax a company paid in cash. Give it tax expense and payable balances. Get the gap to reported cash tax.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A current-tax payable-to-cash bridge and an unexplained payment residual. Share current tax expense, opening/closing current tax payable, signed noncash movements and reported cash tax paid.
+subhead: Give it current tax expense, opening and closing tax payable, noncash movements and the cash tax paid in the cash flow statement. It rolls the payable forward to infer what was paid. You get the inferred payment, the gap to the reported one, and a list of what could explain it.
 explain: |-
-  A current-tax payable-to-cash bridge and an unexplained payment residual.
+  A company records tax as an expense, but it pays tax in cash at other times. The difference sits in a balance called current tax payable. A current tax cash payment bridge uses that balance to work out how much cash must have gone out, and then checks the answer against the cash tax paid in the cash flow statement.
 
-  Issuer accounting and earnings. Illustrative figures.10+30+4-12=32 inferred cash paid, matching the disclosed32. Closing payable14 implies30 cash paid and an unresolved2 difference.
+  The sum is simple. Take the opening payable, add the current tax expense and any noncash movements, and take away the closing payable. What is left is the inferred cash paid. Deferred tax is left out, because it is not paid in cash this period.
+
+  If the inferred figure and the reported one differ, the skill shows the gap and asks what explains it. Refunds, discontinued operations and where interest or penalties are shown are the usual causes. It never adds a plug to make the numbers match.
 when:
-  - You need a current-tax payable-to-cash bridge and an unexplained payment residual.
-  - You work on issuer accounting and earnings and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are reading a set of accounts and the cash tax paid looks out of line with the tax expense.
+  - A reviewer asks you to tie the tax note to the cash flow statement.
+  - You are checking a company's cash taxes before you value it or lend to it.
+  - An acquisition or a currency move touched the tax payable and you need to see its effect on cash paid.
+not_for:
+  - You need to prepare a tax return or work out tax owed. This checks financial statements and gives no tax advice. Use your accountant or tax software.
+  - You only have the total tax expense and no payable balances. Deferred tax is not cash, so the cash paid cannot be worked out without the balances.
+  - "You want to check working capital as a whole: use the Working capital cash change checker."
 you_give:
-  - Current tax expense, opening/closing current tax payable, signed noncash movements and reported cash tax paid.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Current tax expense for the period, from the tax note and not including deferred tax
+  - Opening and closing current tax payable (write a receivable as a negative)
+  - Noncash movements with their signs, such as payable taken on in an acquisition or currency effects
+  - Cash income tax paid, as reported in the cash flow statement or its notes
+  - The period dates, currency, scale and the reporting basis, such as IFRS
 you_get:
-  - A current-tax payable-to-cash bridge and an unexplained payment residual.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The cash tax payment inferred from the payable roll-forward
+  - The gap to the reported cash tax paid, as a signed amount
+  - A short list of likely causes if the gap is not zero
+  - Sources, assumptions and a list of anything missing
+  - An editable workbook, if your AI can make spreadsheet files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open Claude, ChatGPT or Gemini and add the skill, or paste SKILL.md into a new chat.
+  - Paste the current tax expense, the opening and closing payable and the noncash movements. Say which sign means more payable.
+  - Add the cash tax paid from the cash flow statement, plus the dates, currency and scale.
+  - Ask for the bridge. Check that deferred tax is not inside the expense you gave.
+  - If the gap is not zero, work through the causes it lists, then read MISSING and CHECKS MISSED.
+output_sample:
+  input:
+    - Current tax expense, opening and closing current tax payable
+    - Noncash movements in the payable, with signs
+    - Cash income tax paid, from the cash flow statement
+    - Period dates, currency, scale and reporting basis
+  prerequisites:
+    - An AI that can create and reopen spreadsheet files (only if you want a workbook)
+    - Node.js 20 or later (only to run the bundled calculation script)
+  output:
+    - name: Scope and dated sources
+      contains: The period, currency, scale and the dated source for every figure.
+    - name: Inputs and assumptions
+      contains: Each figure with its sign and source, and any assumption made.
+    - name: Payable roll-forward
+      contains: Opening payable, expense, noncash movements and closing payable, giving the inferred cash paid.
+    - name: Gap to reported cash tax
+      contains: Inferred against reported cash paid, the signed residual and what could explain it.
+    - name: Editable workbook
+      contains: The bridge as a spreadsheet with inputs, formulas and checks, if you ask for one.
+    - name: Actual file verification
+      contains: What was recalculated, rendered and reopened in the saved file, and what could not run.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs you did not give and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Separate current tax from deferred tax expense and confirm payable/receivable netting is valid on the chosen jurisdiction and reporting basis
-    text: Separate current tax from deferred tax expense and confirm payable/receivable netting is valid on the chosen jurisdiction and reporting basis.
-  - title: 2. Start with opening payable, add current tax expense and signed acquisition/FX/other noncash movements, then deduct closing payable to infer cash paid
-    text: Start with opening payable, add current tax expense and signed acquisition/FX/other noncash movements, then deduct closing payable to infer cash paid.
-  - title: 3. Compare with reported cash income-tax payments and explain refunds, discontinued operations and classification differences instead of plugging the gap
-    text: Compare with reported cash income-tax payments and explain refunds, discontinued operations and classification differences instead of plugging the gap.
+  - title: Separates current from deferred tax
+    text: Only current tax feeds the payable. It also checks that netting a payable and a receivable is valid here.
+  - title: Rolls the payable forward
+    text: Opening payable plus expense plus noncash movements, less closing payable, gives the inferred cash paid.
+  - title: Compares with reported cash tax
+    text: The reported payment is set beside the inferred one, and the residual is shown with its sign.
+  - title: Explains the gap, never plugs it
+    text: Refunds, discontinued operations and classification differences are listed as causes. Anything left stays unresolved.
 output_shape: |-
-  A current-tax payable-to-cash bridge and an unexplained payment residual.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  CURRENT TAX PAYABLE ROLL-FORWARD (<currency>, <scale>, <period>)
+  Sign rule: <positive = payable owed>
+  Opening current tax payable: <amount>
+  + Current tax expense: <amount>
+  + Noncash movements: <amount>
+  - Closing current tax payable: <amount>
+  = Cash paid, inferred: <amount>
+
+  COMPARE WITH REPORTED
+  Cash tax paid, reported: <amount>
+  Residual (reported - inferred): <amount>
+  Possible causes: <refunds, discontinued operations, classification, timing>
+
+  SOURCES AND ASSUMPTIONS
+  <figure | source | date | assumption>
+
+  MISSING:
+  <each missing input>
+
+  CHECKS MISSED:
+  <each check that failed or could not run, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Deferred tax expense is not treated as a cash payment.
+  - what: Sign rule
+    how: Tell the AI which sign means a bigger payable, and keep it the same on every line.
+  - what: Scope
+    how: Match the jurisdiction and the group of companies in the tax note to those in the cash flow statement.
+  - what: Noncash items
+    how: List every noncash movement you know of. The bridge assumes the list you give is complete.
 judge:
   - Deferred tax expense is not treated as a cash payment.
   - Payable additions and removals have consistent signs and matching jurisdiction/perimeter.
@@ -67,10 +120,15 @@ works_best_with:
     - name: Node.js 20 or later
       why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The income tax note from the accounts
+    - The cash flow statement and its notes
+    - Notes on acquisitions, disposals and refunds in the year
 terms:
+  - term: Current tax payable
+    meaning: Income tax the company has charged but not yet paid.
+  - term: Deferred tax
+    meaning: Tax recorded now that will be paid or saved in later years. It is not cash this period.
+  - term: Noncash movement
+    meaning: A change in the payable that did not involve cash, such as one from buying a company.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not real data.

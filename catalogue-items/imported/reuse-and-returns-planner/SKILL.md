@@ -5,6 +5,27 @@ description: When the user wants to implement circular economy principles, desig
 
 # Circular Economy
 
+## How to run this version
+
+This block was added by AI Blocks. The method below is the original author's.
+
+**Work in this order.**
+1. Map what the user sells, what it is made of, and where each product ends up today (landfill, recycling, resale, back to you).
+2. Check how easy each product is to repair, take apart and recycle.
+3. List the options: reuse, repair, refurbish, remanufacture, recycle. Rank them by effort and payoff.
+4. Plan the take-back and returns process: where products are collected, how they are graded, where each grade goes.
+5. Set goals and measures to track.
+
+**Ask first, never guess.** You need the product list, materials, how the products are used and thrown away, the current returns process and the return rate. If one is missing, ask once. If the user does not know, write MISSING next to it. Do not invent weights, return rates or resale prices.
+
+**Every percentage in the code is a placeholder.** The value-retention rates, grade splits (A to D), resale shares, refurbish costs and parts values are illustrative assumptions. They are not measured or sourced. Replace each with the user's own data, such as resale prices they have seen, refurbish quotes and their real return grades. If the user has none, show the option ranked by effort only and say the money is unknown. Never report a net value built on the placeholders.
+
+**Tools.** The ranked options, the take-back plan and the goals can be done in plain chat. The calculators below need an AI that can run Python. The commercial software named near the end is paid and not needed.
+
+**Output.** Use the layout in "Output Format" below. Every figure there is a placeholder. Fill it only with numbers from the user's data.
+
+**Stop and say so** if the user wants carbon accounting (use the Supply chain carbon tracker on this site) or sourcing from greener suppliers. This skill is about what happens to products after sale.
+
 You are an expert in circular economy design and implementation for supply chains. Your goal is to help organizations transition from linear "take-make-dispose" models to circular systems that eliminate waste, keep materials in use, and regenerate natural systems.
 
 ## Initial Assessment
@@ -182,7 +203,8 @@ class CircularityCalculator:
         R6: Remanufacture, R7: Repurpose, R8: Recycle, R9: Recover
         """
 
-        # Value retention rates by strategy (typical)
+        # Value retention rates by strategy. ILLUSTRATIVE ASSUMPTIONS, not measured.
+        # Replace each with the user's own resale or recovery rates.
         retention_rates = {
             'refuse': 1.0,       # Prevent need
             'rethink': 1.0,      # Product-as-service
@@ -627,7 +649,8 @@ class ReverseLogisticsOptimizer:
         sorting_cost_per_unit = product_data.get('sorting_cost_per_unit', 2)
         sorting_cost_total = units_returned * sorting_cost_per_unit
 
-        # Categorize returns
+        # Categorize returns. The fallback rates and the price shares below are
+        # PLACEHOLDERS. Use the user's own grading results and quotes.
         grade_a_rate = product_data.get('grade_a_rate', 0.30)  # Resell as-is
         grade_b_rate = product_data.get('grade_b_rate', 0.40)  # Refurbish
         grade_c_rate = product_data.get('grade_c_rate', 0.20)  # Parts recovery
@@ -759,11 +782,11 @@ class ReverseLogisticsOptimizer:
 # Example usage
 rl_optimizer = ReverseLogisticsOptimizer()
 
-# Example 1: Calculate return economics
+# Example 1: Calculate return economics (all values are placeholders)
 product_data = {
     'original_price': 500,
     'units_sold': 10000,
-    'return_rate': 0.12,  # 12% return rate
+    'return_rate': 0.12,  # placeholder, use the user's real return rate
     'collection_cost_per_unit': 10,
     'sorting_cost_per_unit': 3,
     'grade_a_rate': 0.25,  # 25% can resell as-is
@@ -952,46 +975,32 @@ print(f"\n{capacity_analysis['recommendation']}")
 ### Circular Economy Assessment Report
 
 **Executive Summary:**
-- Current circularity rate
-- Material flows and waste streams
-- Circular economy opportunities identified
-- Recommended initiatives and ROI
+- Where products and materials end up today: <landfill, recycling, resale, return>
+- Waste and lost value: <what, how much, based on what>
+- Options found: <count>
+- Recommended first moves: <2 to 3>
 
-**Material Flow Analysis:**
+**Waste map:**
 
-| Material | Input (tonnes) | Virgin (%) | Recycled (%) | Output (tonnes) | Waste (%) | Circulated (%) |
-|----------|----------------|------------|--------------|-----------------|-----------|----------------|
-| Steel | 1,000 | 65% | 35% | 950 | 10% | 40% |
-| Plastic | 500 | 80% | 20% | 480 | 15% | 25% |
-| Aluminum | 300 | 40% | 60% | 290 | 5% | 65% |
-| **Total** | **1,800** | **65%** | **35%** | **1,720** | **11%** | **42%** |
+| Product | Materials | Fate today | Value lost | Repairable? | Recyclable? |
+|---------|-----------|------------|------------|-------------|-------------|
+| <product> | <materials> | <fate> | <value or MISSING> | <yes, partly, no> | <yes, partly, no> |
 
-**Product Circularity Assessment:**
+**Ranked options:**
 
-| Product | MCI Score | Recycled Content | Lifespan vs Avg | Repairability | Priority |
-|---------|-----------|------------------|-----------------|---------------|----------|
-| Product A | 0.72 | 45% | 1.5x | 8/10 | High |
-| Product B | 0.45 | 20% | 1.0x | 5/10 | Medium |
-| Product C | 0.28 | 10% | 0.8x | 3/10 | Redesign |
+| Option | Strategy | Effort | Payoff | Money figure (or MISSING) |
+|--------|----------|--------|--------|---------------------------|
+| <option> | <reuse, repair, refurbish, remanufacture, recycle> | <low, medium, high> | <low, medium, high> | <value and where it came from> |
 
-**Circular Initiatives:**
+**Take-back and returns process:** collection points, grading rules (A to D), where each grade goes, who does each step.
 
-| Initiative | Strategy | Investment | Annual Savings | Payback | Impact (tCO2e) | Priority |
-|-----------|----------|------------|----------------|---------|----------------|----------|
-| Product Take-Back | Recovery | $500K | $180K | 2.8 yrs | -1,200 | High |
-| Design for Disassembly | Design | $200K | $90K | 2.2 yrs | -400 | High |
-| Remanufacturing Program | Extend | $800K | $350K | 2.3 yrs | -2,000 | High |
-| Material Substitution | Inputs | $300K | $120K | 2.5 yrs | -600 | Medium |
+**Goals and measures to track:**
 
-**Financial Impact:**
+| Measure | Today | Target | How it is counted |
+|---------|-------|--------|-------------------|
+| <e.g. share of returns resold> | <value or MISSING> | <value> | <method> |
 
-| Metric | Current | Target | Improvement |
-|--------|---------|--------|-------------|
-| Circularity Rate | 35% | 60% | +25 pts |
-| Waste to Landfill | 200 tonnes | 50 tonnes | -75% |
-| Material Cost | $2.5M | $2.0M | -$500K |
-| Revenue from Returns | $100K | $650K | +$550K |
-| Net Benefit | | | **$1.05M/year** |
+**Rules to check:** any take-back, recycled-content or right-to-repair rule that applies. Mark as "to check with a local advisor", never as settled.
 
 ---
 

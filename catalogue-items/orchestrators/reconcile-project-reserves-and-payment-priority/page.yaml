@@ -1,51 +1,88 @@
 new_slug: reconcile-project-reserves-and-payment-priority
 name: Reconcile project reserves and payment priority
 headline: Reconcile project reserves and payment priority
-summary: A debt reserve rollforward and payment priority reconciliation
+summary: Work out a project's debt reserve top-up, then run one period's cash through senior debt, reserve and junior debt. Unpaid amounts stay visible.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A debt reserve rollforward and payment priority reconciliation. Share actual project cash after operations, senior and junior service schedule, approved reserve draws, next-service requirement, reserve balance and contract payment priority.
+subhead: Give it one period's project cash after operations, the senior and junior debt schedule, approved reserve draws and the reserve balance. It works out the reserve top-up, then runs the same cash through your payment order. You get a reserve rollforward, a payment waterfall and a list of what is still unpaid.
 explain: |-
-  A debt reserve rollforward and payment priority reconciliation.
+  A project loan usually says what gets paid first. Senior debt comes first, then the reserve account is topped up, then junior debt. Two schedules describe this: the reserve rollforward and the payment waterfall. Built apart, they disagree. The reserve top-up gets counted twice, or the two schedules show different deposits.
 
-  Project reserve controls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow builds the reserve rollforward first. It works out the reserve requirement, approved draws and the top-up need from one debt schedule. Then it runs the same cash through your payment order and ties the reserve deposit in the waterfall back to the rollforward. If the two differ, it fixes the input map and records the difference. It never forces a plug.
+
+  It works from your figures and your loan's payment order. It does not read the loan agreement for you, decide whether a payment is allowed, or move money. A person who knows the loan terms checks the definitions first.
 when:
-  - You need a debt reserve rollforward and payment priority reconciliation.
-  - You work on project reserve controls and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A lender asks why the reserve account was topped up by one amount while the cash waterfall shows another.
+  - You are about to pay junior debt and need proof the reserve was funded first.
+  - A reserve draw was approved and you need to restate what is still unfilled.
+  - A reviewer wants every payment traced back to the loan's payment order.
+not_for:
+  - You only need the reserve top-up. Use the Debt reserve rollforward builder on its own.
+  - You only need to split one period's cash in loan order. Use the Project payment waterfall builder on its own.
+  - You want a debt coverage test against loan covenants. Use the Review contractual debt service cash tests workflow.
+  - You want a loan repayment schedule over several years. Use the Build a project debt service cash pack workflow.
 you_give:
-  - Actual project cash after operations, senior and junior service schedule, approved reserve draws, next-service requirement, reserve balance and contract payment priority.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Actual project cash after operations for one period (from the project bank and operating statements)
+  - The senior and junior debt service schedule, with due dates (from the loan agreement or lender schedule)
+  - Approved reserve draws and the reserve balance (from the reserve account statement)
+  - The next-service requirement and the contract payment order (from the loan agreement)
+  - The reporting date, currency and scale, such as thousands
 you_get:
-  - A debt reserve rollforward and payment priority reconciliation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "A reserve rollforward: requirement, approved draws, top-up need and closing balance"
+  - "A payment waterfall: cash paid to senior debt, the reserve and junior debt, in your loan's order"
+  - A tie between the reserve deposit in the waterfall and the rollforward, with any difference recorded
+  - A list of every service or reserve amount that stays unpaid
+  - Every MISSING input and any check that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, use one that can build spreadsheets.
+  - Attach the debt schedule, reserve statement and the payment order from the loan. Say the reporting date, currency and scale once at the top.
+  - After step 1, check the reserve requirement and top-up against the loan terms. The top-up should appear once.
+  - After step 2, check the reserve deposit matches step 1. If it does not, read the recorded reason before you accept it.
+  - Fill every MISSING line before anyone acts on a figure. Nothing here pays anyone. A person who knows the loan signs off.
 how_it_works:
   - title: Debt reserve rollforward builder
-    text: Calculate reserve requirement, approved draws and top-up need from the same debt schedule. Use a sourced cash-after-senior-service limit for preliminary funding and pass requirement, need and opening reserve separately to the waterfall.
+    text: Works out the reserve requirement, approved draws and top-up need from one debt schedule. Limits preliminary funding to cash left after senior service. Hands step 2 the requirement, the need and the opening reserve, kept separate. Check before moving on, the top-up appears once.
   - title: Project payment waterfall builder
-    text: Allocate the same available operating cash through actual senior-service, reserve and junior-service priorities. Tie actual reserve allocation to the rollforward deposit; if it differs from preliminary funding, correct the input map and record the reconciliation instead of forcing a plug.
+    text: Runs the same operating cash through senior service, the reserve and junior service in your order. Ties the reserve deposit to the rollforward. If they differ, it corrects the input map and records why. Check before you rely on it, every unpaid amount is shown.
 output_shape: |-
-  A debt reserve rollforward and payment priority reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES  <debt schedule, reserve statement, loan order, dates, currency, scale>
+
+  1 RESERVE ROLLFORWARD  opening <n> + top-up <n> - approved draws <n> = closing <n>
+                         requirement <n>, unfunded <n>
+  2 PAYMENT WATERFALL    cash available <n>
+                         senior service paid <n>, unpaid <n>
+                         reserve deposit <n>, unfilled <n>
+                         junior service paid <n>, unpaid <n>
+  TIE                    waterfall reserve deposit <n> vs rollforward <n>, difference <n and reason>
+
+  MISSING                <each gap and the line it stops>
+  CHECKS MISSED          <one line each, or none>
+output_sample:
+  input:
+    - Project cash after operations for one period
+    - The senior and junior debt schedule and the payment order
+    - Approved reserve draws, the reserve balance and the next-service requirement
+    - The reporting date, currency and scale
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool, if you want a workbook
+  output:
+    - name: outputs/step-1-debt-reserve-rollforward-builder.md
+      contains: The reserve requirement, approved draws, top-up need and closing balance.
+    - name: outputs/step-2-project-payment-waterfall-builder.md
+      contains: Cash paid to senior debt, the reserve and junior debt, with every unpaid amount.
+    - name: Reserve tie
+      contains: The waterfall reserve deposit against the rollforward, and the reason for any difference.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, MISSING lines and checks missed.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Reserve top-up appears once; preliminary available funding is reconciled to actual waterfall allocation; every unfilled service or reserve obligation stays visible.
+  - what: Less cash
+    how: Lower the cash after operations. The waterfall pays senior debt first and shows reserve and junior amounts as unpaid.
+  - what: A new reserve draw
+    how: Add an approved draw. The requirement, top-up need and unfilled reserve all change, and the tie is run again.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and lists what it could not verify.
 judge:
   - Reserve top-up appears once; preliminary available funding is reconciled to actual waterfall allocation; every unfilled service or reserve obligation stays visible.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +93,25 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep one sheet with the loan's payment order and reserve definition, and paste it in every time.
+  - Record each approved reserve draw with its date so the next run starts from the true balance.
+  - Pair it with the debt service cash tests workflow when the lender also sets a coverage test.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and checks you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The lender's own debt service schedule, not a model of it.
+    - The loan agreement wording on payment order and reserve requirement.
+    - The reserve account statement for the same date.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Reserve account
+    meaning: Money set aside by the loan terms to cover future debt payments.
+  - term: Top-up
+    meaning: The cash added to bring the reserve back up to its required level.
+  - term: Senior debt
+    meaning: Loan that must be paid before junior debt when cash is short.
+  - term: Payment waterfall
+    meaning: The order in which one period's cash pays each claim, until it runs out.
+  - term: Plug
+    meaning: A made-up number added just to make two totals match. This workflow does not use one.

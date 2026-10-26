@@ -1,0 +1,143 @@
+name: Workflow Architect agent
+summary: Turn a feature into a workflow spec with every path, failure, cleanup and test case written down before anyone builds it.
+headline: Workflow Architect agent
+subhead: Describe a workflow, such as signup or checkout, and share the code or notes you have. Your AI maps each step, what can go wrong and what must be cleaned up. You get a build-ready spec that engineers can build from and testers can test from.
+job: document-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Systems rarely fail on the happy path. They fail at step seven of twelve, because nobody asked what happens when step four runs late. This workflow architect agent writes a workflow specification that answers those questions before the code exists.
+
+  For each step it names the actor, the time limit, the input and the output, and every way the step can fail. It says what the customer sees, what an operator sees, and what is in the database at that moment. It defines what passes between systems at each handoff.
+
+  It writes one workflow per document and records every assumption it cannot verify. It does not write code or design screens. It states the behavior the build must have.
+when:
+  - You are about to build a feature with several steps or systems, such as signup, checkout or account deletion.
+  - A flow fails midway in production and leaves half-created records, and you want the full set of paths written down.
+  - You hand a feature to a developer or a testing team and want them to stop asking what happens if it fails.
+  - You inherited a system and want to find the workflows that exist in the code but have no spec.
+not_for:
+  - You want to design how several AI agents hand work to each other. Use the AI agent workflow designer.
+  - You want an automation laid out in n8n. Use the n8n workflow designer.
+  - The process is a business process with people and paperwork, not software. Use the Operations Manager agent.
+  - You want a short task plan for a coding change. Use the Coding task planner.
+you_give:
+  - The workflow to spec, with its name, what starts it and the result you want
+  - The systems and people involved, such as the app, a payment service and an admin
+  - Code, routes, a database schema, config or design notes, if you have them (optional)
+  - Failures you already know about, or fear (optional)
+  - Time limits or service targets for the workflow (optional)
+you_get:
+  - A workflow spec with the steps, each with time limit, input, success output and failure branches
+  - A list of what the customer, the operator and the database show at each step
+  - A cleanup path that undoes partial work, with a list of everything created
+  - A table of handoffs between systems, with the data, success reply, failure reply and time limit
+  - A test case for every branch
+  - A list of assumptions and open questions that need a person to answer
+how_to_use:
+  - Add the pack as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - Name one workflow and say what starts it. Paste or upload any code, routes or notes. Say who the actors are.
+  - Run it once for one workflow. If the AI spots a related workflow, it will name it and leave it for the next run.
+  - Read the assumptions and open questions first. Answer them, or send them to the engineer who knows.
+  - Check the spec against the real code. Mark what matches and what does not. Do not approve a spec that nobody has compared with the code.
+  - Give the spec to the developer and give the test case table to whoever tests.
+how_it_works:
+  - title: Find the facts
+    text: If you share code, it reads the routes, workers, schema and config for the workflow. It notes where the code differs from your description.
+  - title: List the actors
+    text: It names every system and person in the workflow, and what each one does.
+  - title: Map the happy path
+    text: It writes the steps from trigger to finished, with the data passed at each handoff.
+  - title: Branch every step
+    text: For each step it adds the time limit and every failure, with retry or stop rules and what was already created.
+  - title: Show what each party sees
+    text: It states what the customer, the operator, the database and the logs show at each step.
+  - title: Close out
+    text: It adds the cleanup list, the test cases, the assumptions and the open questions, and marks the spec Draft.
+output_shape: |-
+  # WORKFLOW: <name>
+  Version: <0.1> | Date: <date> | Status: Draft
+
+  ## Overview
+  <what it does, who starts it, what it produces>
+
+  ## Actors
+  <actor> | <role in this workflow>
+
+  ## Prerequisites and trigger
+  <what must be true first> | <what starts it>
+
+  ## Workflow tree
+  STEP <n>: <name> | Actor: <who> | Timeout: <time>
+    Input: <fields> | Success output: <fields> then GO TO <next step>
+    Failure branches: <type> then <recovery>
+    Observable states: customer sees <x> | operator sees <y> | database holds <z> | logs show <w>
+
+  ## Cleanup path and cleanup inventory
+  <resource> | <created at step> | <how it is removed>
+
+  ## State transitions
+  <state> to <state> when <condition>
+
+  ## Handoff contracts
+  <system A> to <system B> | payload | success reply | failure reply | timeout
+
+  ## Test cases
+  <test> | <trigger> | <expected behavior>
+
+  ## Assumptions and open questions
+  <assumption> | <where verified or not verified> | <risk if wrong>
+output_sample:
+  input:
+    - The workflow to spec, with what starts it and what it should produce
+    - The systems and people involved
+    - Code, routes, schema or design notes (optional)
+    - Known failures or fears (optional)
+  prerequisites:
+    - An AI that can open files, if you want it to read your code
+  output:
+    - name: Overview, actors and trigger
+      contains: What the workflow does, who is in it, what must be true first and what starts it.
+    - name: Workflow tree
+      contains: Each step with its time limit, input, outputs, failure branches and what each party sees.
+    - name: Cleanup path and inventory
+      contains: How partial work is undone, and a list of everything the workflow creates.
+    - name: Handoff contracts
+      contains: For each system boundary, the data sent, success and failure replies and the time limit.
+    - name: Test cases
+      contains: One test for every branch in the tree, with the trigger and the expected result.
+    - name: Assumptions and open questions
+      contains: Everything the AI could not verify, with the risk if it is wrong.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can read your routes, workers and schema, so the spec matches the real code and not just your description.
+    - name: Claude, ChatGPT or Gemini
+      why: They can write the spec from your notes, but every unverified step lands in the assumptions list.
+  inputs:
+    - The tickets or incident notes from past failures of this workflow.
+    - A list of the services it calls, with any time limits they publish.
+terms:
+  - term: Workflow spec
+    meaning: A written list of every step, branch and failure path a system must follow.
+  - term: Handoff contract
+    meaning: The agreed data and replies when one system passes work to another.
+  - term: Cleanup path
+    meaning: The steps that undo partial work when a workflow fails midway.
+  - term: Idempotent
+    meaning: Safe to run twice, because the second run has no extra effect.
+tweaks:
+  - what: Scope
+    how: Name one workflow and its trigger. Ask for a registry of all workflows only when you want a system-wide map.
+  - what: Detail
+    how: Say if you want a short spec for a small feature or the full tree for something that touches money or data.
+improve:
+  - After each real failure, paste what happened and ask the AI to add the missing branch.
+  - Rerun the spec after big code changes and ask it to list where the code no longer matches.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

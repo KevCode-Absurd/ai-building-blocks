@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows set steps but must judge what looks unusual.
 new_slug: unusual-transaction-finder
 name: Unusual transaction finder
-summary: Give it a large set of transactions. Get the odd ones flagged, with a
-  short reason for each.
+summary: Find unusual transactions in a big payment file. Get a risk score for every row and a short reason for the top flags, ready to review.
 job: money-and-investing
 headline: Unusual transaction finder
-subhead: "Hidden in thousands of payments, a few look wrong: a duplicate, a rare
-  amount, a strange hour. This skill finds them and gives each one a risk score
-  and a short reason, so you review a handful of rows instead of the whole
-  file."
+subhead: "Hidden in thousands of payments, a few look wrong: a duplicate, a rare amount, a strange hour. This skill finds them and gives each one a risk score and a short reason, so you review a handful of rows instead of the whole file."
 explain: |
   Hidden in thousands of payments, a few look wrong: a duplicate, a rare amount, a strange hour. This skill finds them and gives each one a risk score and a short reason, so you review a handful of rows instead of the whole file.
 
@@ -19,19 +15,42 @@ when:
   - You suspect duplicate or split payments but cannot search for them by hand.
   - An audit is coming and you want a ranked list of rows to explain.
   - Fixed rules keep missing new kinds of errors in your payments.
+not_for:
+  - "You have a few hundred rows: sort the sheet and use simple rules, like duplicate amounts or round numbers, which is quicker."
+  - "You need proof for an auditor: treat each flag as a lead and check the source records yourself, or ask an accountant."
+  - "You want to look into a flagged row in depth: use a forensic accounting review once this list gives you the rows to check."
 you_give:
   - A transaction file (CSV or JSON)
   - What counts as odd for you, such as one-off or unusual for that person
-  - Columns like date, amount, vendor and user
-  - Roughly how many rows there are
+  - Your column names, such as date, amount, vendor and user
+  - Roughly how many rows you have
 you_get:
   - A risk score for every row
   - A shortlist of flagged transactions with reasons
   - The factors that drove the scores
   - Python code to rerun on larger files
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Use an AI that can run Python and read files. For a small file, you can paste a sample into a chat instead.
+  - Install Python and the libraries the skill lists, such as Scikit-Learn and PyOD.
+  - Run scripts/calculate.py once. It tests itself, so you know the setup works.
+  - Load your CSV and tell your AI which columns hold date, amount, vendor and user.
+  - Run the script it gives you on the full file.
+  - Open the top 20 flags and check each one against your records before you act.
+output_sample:
+  input:
+    - Your transaction file (CSV or JSON)
+    - What counts as odd for you, such as one-off, or unusual for that person
+    - Columns like date, amount, vendor and user
+    - Roughly how many rows you have
+  prerequisites:
+    - An AI that can run Python code and read your files, needed for large files
+    - Python with the machine learning libraries named in the skill, such as Scikit-Learn and PyOD
+  output:
+    - name: Model Performance
+      contains: The share of rows flagged as unusual and the top factors that drove the scores.
+    - name: The Flags
+      contains: The 20 highest risk transactions with a confidence score and a short reason each was flagged.
+    - name: Risk score for every row
+      contains: A score for each transaction so you can sort the whole file from most to least unusual.
+    - name: Python Integration
+      contains: A ready-to-run script you can use on your full dataset.

@@ -7,6 +7,16 @@ description: 'Migrates Oracle PL/SQL stored procedures to PostgreSQL PL/pgSQL. T
 
 Translate Oracle PL/SQL stored procedures and functions to PostgreSQL PL/pgSQL equivalents.
 
+## When Not to Use
+
+- Moving data or table structure. This skill converts procedures and functions only.
+- Converting the application code that calls the database.
+- Checking finished migration work for risks. Use a migration review skill for that.
+
+## Inputs
+
+The skill expects the Oracle procedures, the Oracle and PostgreSQL table and view definitions, and the project name. The paths below are the default layout. If the files are somewhere else, or only pasted into the chat, ask once for their location and use that. If the PostgreSQL table definitions are missing, say so, translate with the Oracle types, and mark the types as unchecked. Never invent a table or column.
+
 ## Workflow
 
 ```
@@ -44,5 +54,18 @@ Consult the PostgreSQL table/view definitions at `.github/oracle-to-postgres-mig
 **Step 3: Write the migrated procedure to Postgres output directory**
 
 Place each migrated procedure in its own file under `.github/oracle-to-postgres-migration/DDL/Postgres/{ProjectName}/Procedures and Functions/{PACKAGE_NAME_IF_APPLICABLE}/`. One procedure per file.
+
+**After step 3, reply with a short note for each procedure** (not inside the SQL file, since this skill does not generate `COMMENT` statements):
+
+```text
+Procedure: <name>
+Output: <PostgreSQL file path>
+Translated: <Oracle syntax that changed>
+Kept the same: <signature, parameter types, error handling>
+Sort order: <C, locale name, or not used, and why>
+Check before deploy: <UNION ALL queries to plan-check, orafce use, open questions>
+```
+
+**Next steps:** run each migrated procedure against a PostgreSQL test database with the same inputs as Oracle, compare the results, and review each flagged behavior change before deploying.
 
 > `{ProjectName}` is the project's assembly/folder name with spaces normalized to `-` (e.g. `MyApp.DataAccess`). This matches the path used by the agent and other migration skills.

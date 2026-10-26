@@ -15,18 +15,36 @@ description: "Production-grade Stripe integrations: subscriptions with trials an
 
 Implement production-grade Stripe integrations: subscriptions with trials and proration, one-time payments, usage-based billing, checkout sessions, idempotent webhook handlers, customer portal, and invoicing. Covers Next.js, Express, and Django patterns.
 
+The code below is Next.js (App Router) with a Prisma-style `db`. Adapt it to the user's framework and database. Do not paste it in unchanged.
+
 ---
 
-## Core Capabilities
+## Before you write any code
 
-- Subscription lifecycle management (create, upgrade, downgrade, cancel, pause)
-- Trial handling and conversion tracking
-- Proration calculation and credit application
-- Usage-based billing with metered pricing
-- Idempotent webhook handlers with signature verification
-- Customer portal integration
-- Invoice generation and PDF access
-- Full Stripe CLI local testing setup
+Ask once for anything missing. Never guess a price, a plan name or a Stripe ID.
+
+1. **How do you charge?** One-off, subscription, seat-based or usage-based.
+2. **Plans and prices.** Names, amounts, monthly or yearly, trial length. Use placeholder env vars such as `STRIPE_PRO_MONTHLY_PRICE_ID` until the user creates the prices in Stripe.
+3. **Stack.** Language, framework, and the database that stores users.
+4. **Stripe account in test mode.** Work in test mode only. Never ask the user to paste a secret key into chat. Keys go in a `.env` file the AI does not read.
+
+Stop and say so if the user has no web backend. For a single payment with no app, suggest Stripe Payment Links instead.
+
+---
+
+## What you produce
+
+List these at the end, with the path of each file you made or changed:
+
+- `lib/stripe.ts`: the Stripe client and plan table
+- `app/api/billing/checkout/route.ts`: starts a Checkout session
+- `app/api/webhooks/stripe/route.ts`: checks the signature and handles events
+- `lib/billing.ts`: upgrade, downgrade and proration preview
+- `app/api/billing/portal/route.ts`: opens the customer portal
+- `lib/subscription.ts`: the "is this user paid up" check
+- A database change for `stripeEvent` and the user's Stripe fields
+- `.env.example` listing every variable, with no real values
+- A numbered test run (see "First test run")
 
 ---
 
@@ -37,6 +55,12 @@ Implement production-grade Stripe integrations: subscriptions with trials and pr
 - Building usage-based or seat-based billing
 - Debugging webhook delivery failures
 - Migrating from one billing model to another
+
+## When not to use
+
+- A single sale or donation with no app: use Stripe Payment Links.
+- You need tax, VAT or legal advice. This skill does not give it.
+- You want to take live payments straight away. Finish the test run first.
 
 ---
 
@@ -68,8 +92,9 @@ FREE_TRIAL ──paid──► ACTIVE ──cancel──► CANCEL_PENDING ─�
 // lib/stripe.ts
 import Stripe from "stripe"
 
+// Leave apiVersion out to use the version your installed SDK is built for,
+// or pin the version shown in your Stripe dashboard. Do not copy an old date.
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2024-04-10",
   typescript: true,
   appInfo: {
     name: "myapp",
@@ -77,7 +102,7 @@ export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   },
 })
 
-// Price IDs by plan (set in env)
+// Price IDs by plan (set in env). Replace plan names and features with the user's own.
 export const PLANS = {
   starter: {
     monthly: process.env.STRIPE_STARTER_MONTHLY_PRICE_ID!,
@@ -114,7 +139,7 @@ export async function POST(req: Request) {
   if (!stripeCustomerId) {
     const customer = await stripe.customers.create({
       email: user.email,
-      name: "username-undefined"
+      name: user.name ?? undefined,
       metadata: { userId: user.id },
     })
     stripeCustomerId = customer.id
@@ -139,6 +164,8 @@ export async function POST(req: Request) {
   return NextResponse.json({ url: session.url })
 }
 ```
+
+Check that `priceId` is one of the IDs in `PLANS` before you use it. Never take a price from the browser unchecked. The 14-day trial is an example; use the trial length the user gave you, or none.
 
 ---
 
@@ -214,8 +241,9 @@ async function markEventProcessed(eventId: string, type: string) {
 }
 
 export async function POST(req: Request) {
-  const body = await req.text()
-  const signature = headers().get("stripe-signature")!
+  const body = await req.text() // raw body: the signature check fails if you parse it first
+  const signature = headers().get("stripe-signature")
+  if (!signature) return NextResponse.json({ error: "Missing signature" }, { status: 400 })
 
   let event: Stripe.Event
   try {
@@ -261,19 +289,22 @@ export async function POST(req: Request) {
     return NextResponse.json({ received: true })
   } catch (err) {
     console.error(`Error processing webhook ${event.type}:`, err)
-    // Return 500 so Stripe retries — don't mark as processed
+    // Return 500 so Stripe retries. Don't mark as processed.
     return NextResponse.json({ error: "Processing failed" }, { status: 500 })
   }
 }
 
+// Each handler sets values from Stripe (it never adds to a number),
+// so running one twice gives the same result. That is what keeps a retry safe.
+
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   if (session.mode !== "subscription") return
-  
+
   const userId = session.metadata?.userId
   if (!userId) throw new Error("No userId in checkout session metadata")
 
   const subscription = await stripe.subscriptions.retrieve(session.subscription as string)
-  
+
   await db.user.update({
     where: { id: userId },
     data: {
@@ -288,20 +319,21 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
 }
 
 async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
-  const user = await db.user.findUnique({
-    where: { stripeSubscriptionId: subscription.id },
+  // Find the user by subscription ID, or by customer ID if the subscription is new to us
+  const user = await db.user.findFirst({
+    where: {
+      OR: [
+        { stripeSubscriptionId: subscription.id },
+        { stripeCustomerId: subscription.customer as string },
+      ],
+    },
   })
-  if (!user) {
-    // Look up by customer ID as fallback
-    const customer = await db.user.findUnique({
-      where: { stripeCustomerId: subscription.customer as string },
-    })
-    if (!customer) throw new Error(`No user found for subscription ${subscription.id}`)
-  }
+  if (!user) throw new Error(`No user found for subscription ${subscription.id}`)
 
   await db.user.update({
-    where: { stripeSubscriptionId: subscription.id },
+    where: { id: user.id },
     data: {
+      stripeSubscriptionId: subscription.id,
       stripePriceId: subscription.items.data[0].price.id,
       stripeCurrentPeriodEnd: new Date(subscription.current_period_end * 1000),
       subscriptionStatus: subscription.status,
@@ -325,14 +357,14 @@ async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
 async function handleInvoicePaymentFailed(invoice: Stripe.Invoice) {
   if (!invoice.subscription) return
   const attemptCount = invoice.attempt_count
-  
+
   await db.user.update({
     where: { stripeSubscriptionId: invoice.subscription as string },
     data: { subscriptionStatus: "past_due" },
   })
 
+  // sendDunningEmail is yours to write: it sends the "your payment failed" email
   if (attemptCount >= 3) {
-    // Send final dunning email
     await sendDunningEmail(invoice.customer_email!, "final")
   } else {
     await sendDunningEmail(invoice.customer_email!, "retry")
@@ -432,12 +464,28 @@ stripe trigger customer.subscription.updated \
 # View recent events
 stripe events list --limit 10
 
-# Test cards
+# Test cards (test mode only)
 # Success: 4242 4242 4242 4242
 # Requires auth: 4000 0025 0000 3155
-# Decline: 4000 0000 0000 9995
+# Generic decline: 4000 0000 0000 0002
 # Insufficient funds: 4000 0000 0000 9995
 ```
+
+The `brew` line is for Mac. On Windows or Linux, use the install steps on Stripe's own CLI page.
+
+---
+
+## First test run
+
+Give the user these steps in order, and stop at the first one that fails:
+
+1. Create the products and prices in Stripe test mode. Put the price IDs in `.env`.
+2. Run the database change, then start the app.
+3. Run `stripe listen --forward-to localhost:3000/api/webhooks/stripe`. Copy the `whsec_` value it prints into `STRIPE_WEBHOOK_SECRET`.
+4. Open the pricing page, start checkout and pay with the success card. Check the user row shows `trialing` or `active`.
+5. Run `stripe trigger invoice.payment_failed`. Check the status becomes `past_due`.
+6. Send the same event twice. Check the second one is skipped.
+7. Pay with the generic decline card. Check the user is told and not upgraded.
 
 ---
 
@@ -468,9 +516,16 @@ export async function requireActiveSubscription() {
 
 ## Common Pitfalls
 
-- **Webhook delivery order not guaranteed** — always re-fetch from Stripe API, never trust event data alone for DB updates
-- **Double-processing webhooks** — Stripe retries on 500; always use idempotency table
-- **Trial conversion tracking** — store `hasHadTrial: true` in DB to prevent trial abuse
-- **Proration surprises** — always preview proration before upgrade; show user the amount before confirming
-- **Customer portal not configured** — must enable features in Stripe dashboard under Billing → Customer portal settings
-- **Missing metadata on checkout** — always pass `userId` in metadata; can't link subscription to user without it
+- **Webhook delivery order not guaranteed.** Always re-fetch from the Stripe API; never trust event data alone for DB updates.
+- **Double-processing webhooks.** Stripe retries on 500; use the idempotency table. Two retries can arrive at once, so make `stripeEvent.id` a unique key.
+- **Trial conversion tracking.** Store `hasHadTrial: true` in the DB to prevent trial abuse.
+- **Proration surprises.** Always preview proration before an upgrade; show the user the amount before confirming.
+- **Customer portal not configured.** Enable its features in the Stripe dashboard under Billing, then Customer portal settings.
+- **Missing metadata on checkout.** Always pass `userId` in metadata; you cannot link a subscription to a user without it.
+- **Old API calls.** Newer Stripe API versions changed some calls used above: usage records (now Billing Meters), the upcoming-invoice preview and where the period dates live. Check each call against the Stripe docs for the version in use before you ship.
+
+---
+
+## Hand-off note
+
+End your reply with: the files you made, what you assumed, anything you could not check, and this line: "Run the first test run in test mode. Have someone who knows payments review this before you take real money."

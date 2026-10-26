@@ -17,13 +17,13 @@ outputs:
   - {type: audit_report}
 uses: [product-image-spec-writer, product-photo-shoot-planner, product-page-gallery-planner, product-gallery-answers, product-page-image-checker, ai-product-photo-inspector, marketplace-photo-rule-checker]
 steps:
-  - {uses: product-image-spec-writer, note: "Once per product, then reused: the truth sheet and lock lines every prompt repeats, and the shots that cannot be made until a missing photo arrives."}
-  - {uses: product-photo-shoot-planner, note: "Only when the set is for ads, social or email: a style sheet and 6 to 12 matching frames."}
-  - {uses: product-page-gallery-planner, note: "Only when the set is for a product page: about 8 frames, each answering one shopper question."}
-  - {uses: product-gallery-answers, note: "Only on the product page path: the prompts and words for each planned frame, after the owner approves the plan."}
-  - {uses: product-page-image-checker, note: "For every picture that comes back: pass or fail with the smallest fix. Failed frames are redone and checked again, two rounds at most."}
-  - {uses: ai-product-photo-inspector, note: "Only when a frame shows a person, hands or a worn product: eight AI-flaw checks. Spends credits, so it asks first."}
-  - {uses: marketplace-photo-rule-checker, note: "Only when the main image is for Amazon, TikTok Shop, Temu or Shopee: pass or reject against that site's rules."}
+  - {uses: product-image-spec-writer, note: "Once per product, then reused: the truth sheet and lock lines every prompt repeats, and the shots that cannot be made until a missing photo arrives. Hands the truth sheet to the planning steps and to every check."}
+  - {uses: product-photo-shoot-planner, note: "Only when the set is for ads, social or email: a style sheet and 6 to 12 matching frames. Uses step 1's truth sheet and lock lines. Hands the frame prompts to whoever makes the pictures, then to the checks."}
+  - {uses: product-page-gallery-planner, note: "Only when the set is for a product page: about 8 frames, each answering one shopper question. Runs instead of step 2, not after it. Uses step 1's truth sheet and your product facts. Hands the gallery plan to step 4 once you approve it."}
+  - {uses: product-gallery-answers, note: "Only on the product page path: the prompts and words for each planned frame, after the owner approves the plan. Uses the approved plan from step 3 and the truth sheet. Hands the frame prompts and words, then the finished pictures, to step 5."}
+  - {uses: product-page-image-checker, note: "For every picture that comes back: pass or fail with the smallest fix. Failed frames are redone and checked again, two rounds at most. Hands each picture's pass or fail to the redo loop and to the two checks after it."}
+  - {uses: ai-product-photo-inspector, note: "Only when a frame shows a person, hands or a worn product: eight AI-flaw checks. Spends credits, so it asks first. Uses the pictures themselves, not step 5's report."}
+  - {uses: marketplace-photo-rule-checker, note: "Only when the main image is for Amazon, TikTok Shop, Temu or Shopee: pass or reject against that site's rules. Uses the main picture itself, not step 6's report."}
 asks_before: [making pictures with an image tool that bills credits, running a checker that bills credits, uploading or publishing any image, putting any word, price or claim on a picture that is not on file]
 origin: own
 version: 1.0.0

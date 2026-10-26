@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Matching columns is mechanical, but odd fields need a judgment call.
 new_slug: column-mapping-document-writer
 name: Column mapping document writer
-summary: Give it your source and target tables. Get a column-by-column map with
-  rules, gaps and decisions to review.
+summary: Write a column mapping document from your source and target tables. You get a column-by-column map with rules, gaps and decisions to review.
 job: document-work
 headline: Column mapping document writer
-subhead: A column-by-column map from your source tables to your target tables,
-  with the rules for each, the gaps, and decisions someone must still make. It
-  saves your team from guessing where each field comes from.
+subhead: A column-by-column map from your source tables to your target tables, with the rules for each, the gaps, and decisions someone must still make. It saves your team from guessing where each field comes from.
 explain: |
   A column-by-column map from your source tables to your target tables, with the rules for each, the gaps, and decisions someone must still make. It saves your team from guessing where each field comes from.
 
@@ -18,6 +15,10 @@ when:
   - You must document what happened to a field in a migration.
   - A new analyst asks where a column comes from.
   - You are writing a data catalog entry with column lineage.
+not_for:
+  - You need a quick one-off query. Write the SQL by hand, no mapping document is needed.
+  - Your source has no documented columns or types. Build a data dictionary first, or read the source's own docs.
+  - You only want to see how a model is built. Use dbt docs instead.
 you_give:
   - The source table list with column types
   - The target table list
@@ -28,7 +29,31 @@ you_get:
   - Gaps with no source
   - Decisions for review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your source table with column names, types and notes.
+  - Paste your target table, or describe what the target must hold.
+  - Add your business rules and any current SQL (optional).
+  - Ask your AI to write the mapping document. It only runs the comparison script if it can run code.
+  - Check the gaps and decisions. Get a person to settle each one before you build.
+output_sample:
+  input:
+    - Your source table with column names, types and notes
+    - Your target table, or the needs that define it
+    - Your current SQL, dbt or Python logic (optional)
+    - Business rules for values and defaults (optional)
+  prerequisites:
+    - An AI that can run code, if you want the schema comparison script to run
+    - A person who can settle unclear fields
+  output:
+    - name: scripts/schema_compare.py
+      contains: A script that compares the two schemas and finds same-name columns and type mismatches.
+    - name: Column inventory
+      contains: Every source and target column with its type, nullable flag and description.
+    - name: Transformation rules
+      contains: The exact formula for each derived column, such as a cast, a lookup or a calculation.
+    - name: Gaps
+      contains: Target columns with no source, and source columns with no target.
+    - name: Decisions
+      contains: One decision to review for each gap or unclear field.
+    - name: Transformation SQL or dbt YAML (optional)
+      contains: Code built from the mapping, if you ask for it.

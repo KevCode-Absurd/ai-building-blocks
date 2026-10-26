@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It ranks risks by chance and cost, then builds fixes.
 new_slug: supply-chain-backup-plan-builder
 name: Supply chain backup plan builder
-summary: Describe your supply chain. Get the top risks ranked, a backup for
-  each, and who does what if it breaks.
+summary: "Build a supply chain backup plan: rank your top risks, get a backup for each, and see who does what when something breaks."
 job: plan-supply-chain
 headline: Supply chain backup plan builder
-subhead: The biggest threats to your supply chain, ranked, with a backup for
-  each and a clear owner for every step if something breaks. You get a plan to
-  use on the bad day.
+subhead: The biggest threats to your supply chain, ranked, with a backup for each and a clear owner for every step if something breaks. You get a plan to use on the bad day.
 explain: |
   The biggest threats to your supply chain, ranked, with a backup for each and a clear owner for every step if something breaks. You get a plan to use on the bad day.
 
@@ -18,6 +15,10 @@ when:
   - You must write a business continuity plan.
   - You want to know how much a disruption could cost.
   - Management asks how resilient you are.
+not_for:
+  - "You want to review one supplier's performance: ask a buyer or use a supplier scorecard, not a full plan."
+  - "You need to check legal or regulatory exposure: talk to a compliance adviser."
+  - "You want exact loss figures without your own data: the sample numbers in the code are placeholders, so add yours first."
 you_give:
   - A description of your supply chain
   - Key suppliers, routes and sites
@@ -30,7 +31,28 @@ you_get:
   - Owners and actions for a disruption
   - A resilience score
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Use one that can run Python code if you want the scenario and simulation steps.
+  - Paste the skill text, or upload the skill folder if your AI takes files.
+  - "Describe your supply chain: key suppliers, routes, sites and what an outage costs you."
+  - Add your own cost, chance and stock numbers. The code uses placeholder figures for cascade effects, mitigation cost and variability, so replace them with yours.
+  - Check the ranked risks and the owners in the plan. Fix anything that does not match your business.
+  - Share the plan with the people named as owners.
+output_sample:
+  input:
+    - A description of your supply chain
+    - Your key suppliers, routes and sites
+    - Your cost of downtime (optional)
+    - Your current safety stock (optional)
+  prerequisites:
+    - An AI that can run Python code, to run the scenario and simulation steps
+  output:
+    - name: Executive Summary
+      contains: Your top risks, total risk exposure, a value at risk estimate, your resilience score and the first actions to take.
+    - name: Risk Register
+      contains: Each risk with its category, chance, impact, current controls and priority order.
+    - name: Scenario Analysis
+      contains: Disruption cases such as a supplier failure, with chance, length of outage, recovery time and expected loss.
+    - name: Risk Metrics
+      contains: Value at risk, expected yearly loss and resilience index, each compared with a target.
+    - name: Mitigation Plan
+      contains: Each fix, the risk it covers, cost, yearly benefit, timeline and owner.

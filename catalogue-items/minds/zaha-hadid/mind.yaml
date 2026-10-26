@@ -16,6 +16,29 @@ use_cases:
   - "Turn a complex programme of uses into one fluid layout"
   - "Explain to a client why a new form is about organisation, not just looks"
   - "Check the cost and buildability of a bold idea before you commit"
+not_for:
+  - "You need engineering sign-off, structural checks or building rules advice: ask a qualified architect or engineer."
+  - "You want to test how a design works for daily living, using making and clear limits: use Charles and Ray Eames."
+  - "You want a plan built on site observation and natural patterns: use Christopher Alexander."
+output_sample:
+  input:
+    - The space, plan or process you want to rethink
+    - Who uses it and how they move through it
+    - Your budget and any hard limits
+    - A rejected draft or past attempt (optional)
+  output:
+    - name: The box question
+      contains: The default shape or habit she would drop, and why the form may be a box.
+    - name: Movement and ground level
+      contains: How people enter, pause and look, and where the public is invited in.
+    - name: The bolder version
+      contains: A stronger direction for your plan, with the one job the new form must do.
+    - name: Where to open up
+      contains: Places to swap a wall or closed step for a way through.
+    - name: Cost and use warnings
+      contains: Where cost, engineering or everyday use could hurt the idea, so you check early.
+    - name: After a no
+      contains: What to keep and what to learn from a rejected draft.
 seats:
   - {seat: "Bold form", asks: "Why is this still a box? What would happen if we let the space move?"}
   - {seat: "Space and the city", asks: "How does this open up the ground and invite the public in?"}

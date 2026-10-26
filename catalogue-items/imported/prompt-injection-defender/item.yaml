@@ -12,6 +12,12 @@ inputs:
     required: true
   - type: brief
     required: false
+  - type: security_report
+    required: false
+  - type: test_report
+    required: false
+  - type: code_change
+    required: false
 outputs:
   - type: security_report
     required: true

@@ -2,35 +2,89 @@ thinking: medium
 thinking_why: It picks a look first, then builds each slide.
 new_slug: html-slide-deck-maker
 name: HTML slide deck maker
-summary: Describe your talk or share a PowerPoint. Get an animated slide deck in
-  one HTML file that opens in any browser.
+summary: Turn a talk outline or PowerPoint file into one animated HTML slide deck that opens in any browser. Pick your look from style previews first.
 job: work-with-files
 headline: HTML slide deck maker
-subhead: A slide deck in one HTML file that opens in any browser, with no
-  software to install. Describe your talk or hand over a PowerPoint and get
-  animated slides in a distinct design that does not look generic.
+subhead: Give it your talk topic and notes, or an old PowerPoint file. It shows three style previews, you pick one, and it builds the whole deck as a single HTML file. Open it in any browser, with no slide software.
 explain: |
-  A slide deck in one HTML file that opens in any browser, with no software to install. Describe your talk or hand over a PowerPoint and get animated slides in a distinct design that does not look generic.
+  An HTML slide deck is a web page that works like slides. Send one file and it opens on any laptop or phone browser. This skill builds that file from your outline, your notes or a PowerPoint (.pptx) you already have.
 
-  Instead of asking you to choose a style from words, it shows small visual previews so you can pick by sight. Every deck uses a fixed 16:9 stage that scales to any screen, so slides never reflow oddly. It picks bold fonts and a firm color set rather than safe defaults. Existing PowerPoint files can be converted. It can also export to PDF, but that needs Playwright and a browser installed first. One upstream deploy script is missing from this copy.
+  Most people can't describe the look they want in words. So the skill saves three small title-slide previews, in different styles, and you pick by sight. It asks first if the deck is for speaking (few words, big type) or for reading (more detail per slide).
+
+  Every slide sits on a fixed 16:9 stage that scales to the screen, so layouts never jump around. You can fix text right in the browser. A PDF copy is optional and needs extra tools. The one-click share link from the original skill is not in this copy.
 when:
-  - You have a talk next week and want slides that look designed.
-  - You have an old PowerPoint and want it as a web page.
-  - You want to send one file that opens anywhere without special software.
-  - You need to see a few visual style options before choosing.
+  - You have a talk next week and want slides that look designed, not default.
+  - You have an old PowerPoint file and want it as a web page.
+  - You want to send one file that opens on any device.
+  - You are not sure what style you want and need to see a few first.
+not_for:
+  - "You need a file your team will edit in PowerPoint: use the editable slide deck builder, since this deck is HTML."
+  - "Your deck is mostly data tables and charts for a board or client: use the board deck builder or the editable slide deck builder."
+  - "You want a deck from LibreOffice tools only: use the LibreOffice slide builder, which makes ODP and PPTX files."
 you_give:
-  - Your talk outline or topic
-  - An existing PowerPoint file (optional)
-  - Audience and length of the talk
-  - Brand colors or logo (optional)
+  - Your talk topic, outline or rough notes
+  - Who the talk is for and how many slides (5 to 10, 10 to 20, or 20 or more)
+  - Whether it is for speaking or for reading
+  - A PowerPoint (.pptx) file to convert (optional)
+  - Images or a logo (optional)
 you_get:
-  - One self-contained HTML slide deck
-  - Style previews to choose from
-  - Animated slide transitions
-  - A PDF export if the tools are installed
+  - One HTML slide deck file with animated slides
+  - Three style previews to pick from first
+  - Arrow-key and swipe navigation
+  - Text you can edit in the browser
+  - A PDF copy, if the PDF tools are installed (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open an AI that can write and save files, such as Claude Code or ChatGPT with code tools. Add the skill folder, or paste the skill text into a chat.
+  - Tell it your topic, audience, slide count and whether the deck is for speaking or reading. Attach your notes, PowerPoint file or images if you have them.
+  - Open the three style previews it saves. Pick one, or ask it to mix parts of two.
+  - Open the finished HTML file in your browser. Use the arrow keys to move. Press E to edit text.
+  - Click through every slide. Look for cut-off text or crowded slides, and ask for fixes.
+  - For a PDF, it needs Node, Playwright and Chromium already installed. Without them, print the deck to PDF from your browser.
+output_sample:
+  input:
+    - Your talk topic, outline or rough notes
+    - Audience, slide count and speaking or reading deck
+    - A PowerPoint (.pptx) file to convert (optional)
+    - Images or a logo to use (optional)
+  prerequisites:
+    - An AI that can write and save files, and open a browser
+    - Node, Playwright and Chromium, only if you want the PDF export (optional)
+  output:
+    - name: Style previews
+      contains: Three one-slide HTML previews of your title slide in different looks, saved so you can open and compare them.
+    - name: Deck HTML file
+      contains: Your whole deck in one file, with a fixed 16:9 stage, animated slides and the fonts and colors you picked.
+    - name: Converted slides
+      contains: If you gave a PowerPoint, its text, images, slide order and speaker notes rebuilt in your chosen style.
+    - name: PDF copy
+      contains: A still copy of each slide for email or print, without animation. Needs the PDF tools.
+    - name: Hand-over summary
+      contains: File location, style name, slide count, how to move through slides and how to change colors or fonts.
+how_it_works:
+  - title: Find your mode
+    text: It checks if you want a new deck, a PowerPoint turned into HTML, or changes to an HTML deck you already have.
+  - title: Ask once
+    text: It asks purpose, length, content you have and speaking or reading density in one message, then plans slides around your images.
+  - title: Show three styles
+    text: It saves three single-slide previews, one safe preset, one bold template and one custom look, and opens them for you.
+  - title: Build the deck
+    text: It writes one HTML file on a fixed 1920 by 1080 stage, with inline styles, animation and in-browser text editing.
+  - title: Check and hand over
+    text: It checks for overflow and overlapping panels, then tells you the file path, slide count and how to navigate.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can save the files, open the previews in your browser and run the PDF export.
+    - name: Any chat AI that can run code
+      why: It can write the HTML, but you may need to save and open the file yourself.
+  inputs:
+    - Your logo and brand colors, so the style previews use them
+    - Screenshots or photos for the slides, in one folder
+    - A past deck you liked, so it can match the look
+terms:
+  - term: HTML deck
+    meaning: A slide deck built as a web page, in one file that opens in a browser.
+  - term: 16:9 stage
+    meaning: A fixed widescreen slide shape that scales to fit any screen without reflowing.
+  - term: Playwright
+    meaning: A tool that drives a browser by script. The PDF export uses it to capture each slide.

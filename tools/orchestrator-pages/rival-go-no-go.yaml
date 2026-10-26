@@ -1,6 +1,6 @@
 new_slug: rival-go-no-go
 name: "Size up a rival and decide whether to go"
-summary: "Describe your plan and a rival. Get a five-factor matchup, where to fight and avoid, and a go or no-go check."
+summary: "Size up a rival before you move. Give it your plan and what you know about them. You get a five-factor matchup and a go or no-go call."
 job: study-competitors
 thinking: high
 thinking_why: "It has to weigh both sides honestly and then test your plan against that. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You are about to launch a product or offer into a market where a stronger rival already sells.
   - A rival has just cut prices or copied your best idea and you need to decide how to answer.
   - You are choosing between going head to head with a rival and finding a corner they ignore.
+not_for:
+  - "You have no facts on the rival yet: gather their pricing, reviews and ads first, then come back."
+  - "Your choice is about pricing alone: use the Competitive advantage tester or work it out with a simple margin sheet."
+  - "You want to check whether your business can grow fast: use the Rapid growth readiness reviewer."
 
 you_give:
   - Your plan or move, in a few sentences
@@ -35,6 +39,21 @@ how_to_use:
   - Describe your plan, your side and the rival. Be honest about your weak spots.
   - It works step by step and saves each result. Read the matchup before the go or no-go.
   - If the answer is no-go, use the "opening to wait for" in step 1 to decide when to look again.
+output_sample:
+  input:
+    - Your plan or move, in a few sentences
+    - What you know about the rival, such as how they sell and where they are weak
+    - "Your own situation: team, budget and timing"
+    - Other rivals in the market (optional)
+  prerequisites:
+    - An AI chat that can hold a long conversation and save each step's result as a file
+  output:
+    - name: Rival matchup (step 1 file)
+      contains: You and the rival scored on five factors, ranked options, where they are thin and the cost of a long fight.
+    - name: Go or no-go check (step 2 file)
+      contains: Six faults and three readiness checks run on your plan, ending in a go or no-go call with reasons.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Score the matchup

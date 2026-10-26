@@ -16,6 +16,29 @@ use_cases:
   - "Make an everyday item feel special without making it expensive"
   - "Find mentors among the living and the dead for a new project"
   - "Decide if a cross-discipline idea, from music, art or architecture, can fit your work"
+not_for:
+  - "You need legal, pricing or medical advice: ask a lawyer, an accountant or a doctor, as this mind only covers creative direction."
+  - "You want news about Off-White or Louis Vuitton after 2021, or his view on later events: check current news, because he died in 2021."
+  - "You want a bold, expressive type or layout style rather than small edits: use David Carson, or use Coco Chanel for simple lines and repeated signature details."
+output_sample:
+  input:
+    - The product, brand or idea you want to change
+    - Who it is for, from first-time buyers to experts
+    - The things you already love or borrow from
+    - Any limits on rights, budget or time (optional)
+  output:
+    - name: Starting point
+      contains: The familiar thing people already love, which the idea builds on.
+    - name: Small edits
+      contains: A few small changes, such as moving one part, exposing one part or adding one word.
+    - name: Bigger idea
+      contains: The link to art, music or another field that gives the edit a reason to exist.
+    - name: Word or label
+      contains: A word or label that could make people look again, with a warning not to overuse it.
+    - name: Newcomer and expert check
+      contains: How to test whether it welcomes a first-time person and still rewards someone who knows the subject.
+    - name: First thing to make today
+      contains: A quick first version you can put out now, and who to ask about it.
 seats:
   - {seat: "Culture and remix", asks: "What do people already love here, and what is the smallest change that makes it ours?"}
   - {seat: "The tourist and the purist", asks: "Does this speak to someone who just showed up and to someone who has studied it for years?"}

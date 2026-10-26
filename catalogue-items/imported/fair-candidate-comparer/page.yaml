@@ -2,34 +2,61 @@ thinking: high
 thinking_why: It weighs mixed feedback and must not let bias creep in.
 new_slug: fair-candidate-comparer
 name: Fair candidate comparer
-summary: Paste interview notes or transcripts. Get candidates compared on
-  evidence, with bias checks. You make the hiring call.
+summary: Compare job candidates fairly. Paste interview transcripts and your scorecard. You get scored answers, evidence gaps and bias checks.
 job: hire-people
 headline: Fair candidate comparer
-subhead: Interview notes turned into a side-by-side comparison that points to
-  what each candidate actually said. It flags weak spots in the evidence, and
-  you make the hiring call.
+subhead: Paste your interview notes and your scorecard. Your AI scores each answer against your own green and red flags, and shows where the evidence is thin. You make the hiring call.
 explain: |
   Interview notes turned into a side-by-side comparison that points to what each candidate actually said. It flags weak spots in the evidence, and you make the hiring call.
 
   You paste a transcript or notes along with the role's scorecard. For each question, the skill records the answer, key quotes, and whether the planned follow-up was asked. It rates answers against the green and red flags in your rubric, not against other people. It also writes a screen summary grouped by skill, and an entry formatted for your hiring tool. Gaps such as questions never asked are called out, and a bias check looks for ratings that rest on feeling rather than evidence.
 when:
-  - Three interviewers gave you three different opinions on one person.
+  - Three interviewers gave three different opinions on one person.
   - You have a transcript and need a scorecard filled in fast.
-  - You are choosing between two finalists and want a fair comparison.
+  - You are choosing between two finalists and want a fair side-by-side.
   - You want to check whether a rating has real evidence behind it.
+not_for:
+  - "You only have one interviewer's loose notes and no written scorecard: write the scorecard first, with questions and green and red flags, then come back."
+  - "You want the AI to pick who to hire: make the call yourself with your team, and check employment-law and data-protection rules before using AI on candidates."
+  - "You need a legal or HR review of your hiring process: ask an HR adviser or employment lawyer."
 you_give:
   - Interview transcripts or notes
-  - The role scorecard with questions and flags
+  - Your role scorecard with questions, follow-ups, and green and red flags
   - Candidate background or outreach notes (optional)
   - Interviewer names (optional)
+  - Your hiring tool setup, such as Teamtailor question names (optional)
 you_get:
-  - A scorecard filled in question by question
-  - A written screen evaluation
-  - A side-by-side comparison of candidates
-  - A list of evidence gaps and bias flags
+  - A scorecard filled in question by question, with quotes
+  - A written screen evaluation grouped by skill
+  - A side-by-side comparison of candidates with a confidence level
+  - A list of evidence gaps, interviewer gaps and bias flags
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write your role scorecard first. List each question, the follow-ups, and the green and red flags.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste the transcript or notes, then the scorecard. Add candidate notes if you have them.
+  - Ask for the scorecard and the screen evaluation. For several candidates, ask for the comparison matrix.
+  - Check each rating against its quotes. Fix any that rest on feeling, then make the hiring call yourself.
+output_sample:
+  input:
+    - Your interview transcript or notes (a Metaview transcript works, so does any plain text)
+    - Your role scorecard with questions, follow-ups, and green and red flags
+    - Notes on the candidate, such as outreach or background (optional)
+    - Your hiring tool's kit setup, such as Teamtailor (optional)
+  prerequisites:
+    - A written scorecard for the role. Create it first if you do not have one.
+    - Check employment-law and data-protection rules before you use AI on candidate data.
+  output:
+    - name: Teamtailor scorecard
+      contains: Each kit question with the answer, key quotes, whether the follow-up was asked, and an analytical note.
+    - name: Logistics and candidate questions
+      contains: Pay, availability, notice period, other processes, language, and what the candidate asked you.
+    - name: Culture value ratings and summary table
+      contains: One rating with key evidence per trait, plus a one-line entry per question for your hiring tool.
+    - name: Teamtailor comment
+      contains: A short quoted summary you can paste into the candidate card.
+    - name: Screen evaluation
+      contains: Fit against the target persona, ratings by skill group with evidence for and against, red flags, and prep notes for the next interviewer.
+    - name: Process gaps
+      contains: Follow-ups never asked, vague answers accepted, and questions skipped by the interviewer.
+    - name: Comparison matrix
+      contains: Candidates side by side on must-have and nice-to-have skills, with a hire level and confidence for each.

@@ -1,6 +1,6 @@
 new_slug: vanity-metric-fixer
 name: "Vanity metric fixer"
-summary: "Paste the numbers you report. Get which are vanity, per-customer numbers that show cause, and the one number to track."
+summary: "Find the vanity metrics in your weekly report and swap them for per-customer rates you can act on, plus one main number to track."
 job: think-and-decide
 thinking: medium
 thinking_why: "It judges which numbers mislead and rebuilds them, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "Your report shows steady growth but sales feel flat."
   - "You ran a change and cannot tell if it worked."
   - "You report to a board or team and want fewer, better numbers."
+not_for:
+  - "You want a snapshot of one launch day: use a basic dashboard from your analytics tool."
+  - "Your numbers have no per-customer or per-group data: ask your tool or a developer for an export by sign-up month first."
+  - "You need to find why one rate dropped: use a plain root cause check, then come back here to pick the number."
 
 you_give:
   - "The numbers you report, with definitions and dates"
@@ -33,6 +37,29 @@ how_to_use:
   - "Paste your weekly numbers with a short definition of each."
   - "Add the dates of changes you made."
   - "Replace the weekly report with the new set for four weeks and compare."
+output_sample:
+  input:
+    - The numbers you report each week, with what each one means
+    - Your goal (optional)
+    - Dates of releases, price changes or campaigns (optional)
+    - An export with sign-up date and activity date (optional)
+  output:
+    - name: NUMBERS
+      contains: Each reported number with its definition and a yes or no vanity test.
+    - name: REPLACEMENTS
+      contains: A per-customer or per-group rate for each vanity number, with its formula and data needed.
+    - name: SPLITS
+      contains: How each group behaves, split by join date and by release.
+    - name: CAUSES
+      contains: One possible cause for each rate move, and what else changed at the same time.
+    - name: GOAL
+      contains: "One line: raise a rate from a start value to a target by a date."
+    - name: HEADLINE NUMBERS
+      contains: One main number and at most two others to keep in the weekly report.
+    - name: DATA CHECK
+      contains: Who collects the main number, how often, what could be missing, and how to verify it.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in your input, and any check the skill could not pass.
 
 how_it_works:
   - title: "Lists numbers"

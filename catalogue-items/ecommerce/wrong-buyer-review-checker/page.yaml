@@ -1,6 +1,6 @@
 new_slug: wrong-buyer-review-checker
 name: "Wrong-buyer review checker"
-summary: "Paste your low reviews. Get which came from wrong-job buyers, not-for lines and a promise-match score."
+summary: "Check your low reviews to see which came from wrong-job buyers, not a bad product. Get not-for lines and a promise-match score out of 100."
 job: understand-customers
 thinking: medium
 thinking_why: "It tags many reviews against a short list of causes and traces each back to a claim. A mid-range model does this well."
@@ -17,6 +17,10 @@ when:
   - Your star rating is lower than your product deserves, and the complaints do not match what the product is.
   - Returns come from buyers who say "I thought it would".
   - You are about to change a headline or an ad angle and want to know which claims draw the wrong buyer.
+not_for:
+  - "You have fewer than 30 low reviews: read them one by one yourself, since the score needs enough reviews to mean anything."
+  - "Most of your low reviews describe real defects: fix the product first with your own product list, then run this again."
+  - "You want to hide, delete or edit reviews: this tool does not do that, and a clearer promise is the fix it offers."
 
 you_give:
   - 1 to 3 star reviews, return reasons and refund notes, pasted (30 or more)
@@ -34,6 +38,27 @@ how_to_use:
   - Paste your headline, ad angles and main claims, as they run today.
   - Start with the product-failure list if it is more than half of the lows. Fix the product before the copy.
   - Test one new not-for line on one ad set or one page first, and run it again in 30 days.
+output_sample:
+  input:
+    - Your 1 to 3 star reviews and return notes (30 or more)
+    - Your page headline, ad angles and main claims
+    - Your avatar cards or job spec (optional)
+    - Your product facts such as size, noise and limits (optional)
+  output:
+    - name: Tags
+      contains: Each low review marked as product failure, wrong job, expectation you set, or delivery, with a count for each.
+    - name: Product failures
+      contains: Real defects with review counts and quotes, ready to pass to your product list.
+    - name: Wrong-job groups
+      contains: The job each group hired the product for, the claim that drew them, and a not-for line.
+    - name: Claim edits
+      contains: Old claims next to new ones that match your product facts, with where each goes.
+    - name: Same-job reviews to pin
+      contains: Three to five real reviews per use case, from buyers who used the product for the right job.
+    - name: Score
+      contains: A promise-match score out of 100 with its sum shown, and what it does not measure.
+    - name: Re-measure in 30 days
+      contains: A plan to compare return rate and average stars by ad angle.
 
 how_it_works:
   - title: Pulls the lows

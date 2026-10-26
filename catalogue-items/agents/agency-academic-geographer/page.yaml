@@ -1,0 +1,148 @@
+name: Geographer agent for worldbuilding
+summary: Check a fictional map for impossible rivers, climate and resources, or build one that follows real physics. Get a report on land, weather and settlements.
+headline: Geographer agent for worldbuilding
+subhead: Describe your world or region, with its mountains, seas, rivers and cities. The agent checks that climate, water, resources and towns fit together, or builds them from the ground up. You get a coherence report, a climate sketch and a fix for each problem.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  A desert beside a rainforest with no mountains between them. A river that
+  splits and runs to two seas. A big city with no water and no road in. Readers
+  and players notice these things, even if they cannot say why. This geographer
+  agent for worldbuilding checks that your land works as a system before you
+  write the story on top of it.
+
+
+  It builds in a fixed order. First the mountains, because tectonics decides
+  where they sit. Then climate, from latitude, ocean currents and terrain.
+  Then water, which flows downhill and joins. Then plants and animals that fit
+  the climate. Only then does it place people, where they would settle, trade
+  and defend.
+
+
+  Every feature gets a reason, or a flag that it needs an invented or
+  fantastical one. The agent also reminds you that land shapes people but does
+  not decide for them. It reasons from general knowledge. It cannot look up a
+  map, draw one, or give real distances or weather.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its examples and
+  success targets describe the intended work. They are not measured results
+  from AI Blocks.
+when:
+  - You drew a fantasy or science fiction map and want to know if the climate, rivers and mountains could really exist.
+  - You need to explain why a city sits where it does, and what its people eat, trade and fear.
+  - You plan a march, siege or trade route and need the geography to make it hard or easy for a reason.
+  - You moved one mountain range or sea and want to see what else in the world changes.
+not_for:
+  - You need real distances, weather data or a drawn map. Use a mapping tool or a weather service. This agent works from general knowledge in text.
+  - You build 3D terrain in a game engine. Use the Unreal World Builder agent.
+  - You want a short list of plausibility questions on a setting sheet. Use the Fictional setting plausibility check.
+  - You want the customs and beliefs of the people who live there. Use the Anthropologist agent for worldbuilding.
+you_give:
+  - A description of your world or region, or a map described in words or attached as an image
+  - The rules you broke on purpose, such as spells or a very different planet
+  - The size of the place, such as a small kingdom or a vast empire
+  - What you want, such as build a region, check a map or see what changes if you move a feature
+  - Features that are already fixed, such as cities, rivers and trade routes (optional)
+you_get:
+  - A coherence report covering land, climate, water, plants, hazards, resources and where people would settle
+  - A list of problems, each with why it cannot work and what would work
+  - A climate sketch with winds, currents, rain shadows and seasons for your region
+  - Likely trade routes, chokepoints and how many people the land can support
+  - A list of what changes if you move or remove a feature
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe the land from the mountains outward. List the seas, rivers, cities and trade routes you have, and what you broke on purpose. Attach your map if your AI reads images.
+  - Type "Check this map for physical problems", "Build a coherent region around this mountain range" or "What changes if I move this sea?"
+  - Read the problem list first. Redraw or rename what fails, or write down the fantasy reason, then ask it to check again.
+  - Treat numbers such as travel time or population as rough. The AI works from general knowledge and cannot measure a map.
+how_it_works:
+  - title: Place the mountains
+    text: It starts with where plate movement would put ranges and coasts, because this shapes the rest.
+  - title: Build the climate
+    text: It sets weather from latitude, ocean currents, winds and terrain, including rain shadows behind ranges.
+  - title: Add the water
+    text: It checks rivers run downhill and join, and finds where fresh water is scarce.
+  - title: Layer plants and resources
+    text: It matches plants to climate and soil, and places farmland, timber, metals and water where the land allows.
+  - title: Place people
+    text: It finds where towns would form, where trade would flow and which spots are hard to defend or supply.
+  - title: Flag and fix
+    text: It lists each feature that cannot work, why, and what would, or marks it as needing a fantasy reason.
+output_shape: |-
+  GEOGRAPHIC COHERENCE REPORT: <region>
+    Physical geography: <terrain and its origin> | <climate zone> | <water and rivers> | <plants> | <natural hazards>
+    Resources: <farmland> | <metals and stone> | <timber and fuel> | <fresh water>
+    Human geography: <why people live here> | <trade routes> | <chokepoints and strong points> | <how many people the land can feed>
+
+  CLIMATE SKETCH
+    Global factors: <tilt, ocean currents, prevailing winds, position on the continent>
+    Regional effects: <rain shadows> | <coastal effects> | <height effects> | <seasons>
+
+  PROBLEMS
+    <feature> | <why it cannot work> | <what would work> | <or: fantasy reason needed>
+
+  IF YOU MOVE IT
+    <change> | <what else shifts>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - A description or map of your world or region
+    - The rules you broke on purpose, and the size of the place
+    - What you want, such as build, check or test a change
+    - Features already fixed, such as cities and rivers (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - An AI that reads images, if you want to attach a map
+  output:
+    - name: Coherence report
+      contains: Land, climate, water, resources and why people would settle each place.
+    - name: Climate sketch
+      contains: Winds, currents, rain shadows and seasons for your region.
+    - name: Problems
+      contains: Each feature that cannot work, why, and what would work instead.
+    - name: If you move it
+      contains: What else in the world changes when you move or remove a feature.
+    - name: Open questions and checks
+      contains: Facts you must settle, and rough numbers to check with a real source.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with image upload
+      why: You can attach your map and ask it to read where mountains, coasts and rivers sit.
+  inputs:
+    - A hand sketch that shows mountains, coasts, rivers and cities, even if rough.
+    - The latitude range you imagine for your world, such as a cold north and a warm south.
+    - A note on how long a trip between two key places takes in your story.
+terms:
+  - term: Rain shadow
+    meaning: A dry area behind a mountain range, because the range blocks wet air.
+  - term: Biome
+    meaning: A type of natural place set by climate, such as desert, grassland or rainforest.
+  - term: Hydrology
+    meaning: How water moves over land, in rivers, lakes and underground.
+  - term: Chokepoint
+    meaning: A narrow place, such as a pass or strait, that armies and trade must cross.
+  - term: Carrying capacity
+    meaning: How many people a place can feed with the farming and tools of the time.
+  - term: Geographic determinism
+    meaning: The idea that land alone decides how a people live. The agent warns against it.
+tweaks:
+  - what: Task
+    how: Ask for one part at a time, such as only the climate, or only the trade routes.
+  - what: Scale
+    how: Say if you want a village, a kingdom or a whole continent, because each needs different checks.
+  - what: Fantasy rules
+    how: List what is allowed to break physics, such as floating islands, so it does not flag them as errors.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

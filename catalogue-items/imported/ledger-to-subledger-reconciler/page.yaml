@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches by rule and judges likely causes.
 new_slug: ledger-to-subledger-reconciler
 name: Ledger to subledger reconciler
-summary: Give it ledger and subledger data. Get matches, breaks and a likely
-  cause for each break.
+summary: Match your general ledger to your subledger and find each break with a likely cause. Give it both extracts and get a reconciliation report.
 job: track-numbers
 headline: Ledger to subledger reconciler
-subhead: A reconciliation that shows what matches between your general ledger
-  and subledger, what does not, and a likely reason for each gap. Supply both
-  extracts for the same entity and date.
+subhead: A reconciliation that shows what matches between your general ledger and subledger, what does not, and a likely reason for each gap. Supply both extracts for the same entity and date.
 explain: |
   A reconciliation that shows what matches between your general ledger and subledger, what does not, and a likely reason for each gap. Supply both extracts for the same entity and date. The skill lines them up on the lowest shared key, converts dates and amounts to one format, and joins them.
 
@@ -18,6 +15,10 @@ when:
   - You need to match a custodian statement to your books.
   - Your auditor asked for support on reconciling items.
   - You want breaks sorted by likely cause so staff can work them in order.
+not_for:
+  - "You need to reconcile data that is not ledger data, such as bank feeds against invoices: use your accounting software's own bank reconciliation step."
+  - "You have thousands of lines per entity and need an audit trail: use your close or reconciliation software instead."
+  - "You need the final root cause of a break: ask the person who owns the account, since this only gives a likely cause."
 you_give:
   - The general ledger extract
   - The subledger or custodian extract
@@ -29,7 +30,20 @@ you_get:
   - A likely cause for each break
   - A break report for review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions from this page.
+  - Paste or attach both extracts. Say the entity, the date or period, and which column is the matching key.
+  - Add your tolerance rules if you have them. If not, it uses one cent on amounts and zero on quantity.
+  - Read the break report from the top. Check the largest gaps first.
+  - Treat each likely cause as a lead for the person who resolves it, not a final answer.
+  - Use the summary for your close notes or sign-off pack.
+output_sample:
+  input:
+    - Your general ledger extract
+    - Your subledger or custodian extract for the same entity and date
+    - The key that matches rows on both sides, such as an ID or journal line
+    - Your tolerance rules (optional)
+  output:
+    - name: Break report
+      contains: One row per break with the key, both side values, the break type, a likely cause and a short note, largest gaps first.
+    - name: Summary
+      contains: Counts and totals by break type and by likely cause, plus the share of rows that matched.

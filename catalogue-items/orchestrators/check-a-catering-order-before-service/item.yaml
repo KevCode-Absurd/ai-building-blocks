@@ -1,6 +1,6 @@
 slug: check-a-catering-order-before-service
 name: Check a catering order before service
-summary: Share the source files. Get an order discrepancy table, service checklist and owner questions.
+summary: Check a catering order against the quote and event details. Get a table of mismatches, a service checklist and questions for the owner.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,10 +8,8 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: document
-    required: false
+    required: true
   - type: question
     required: false
 outputs:
@@ -22,9 +20,10 @@ uses:
   - process-and-sop-writer
 steps:
   - uses: invoice-totals-checker
-    note: Recompute the supplied order and quote totals, including units, approved fees and rounding, and flag mismatches without deciding tax treatment.
+    note: Recomputes the order and quote totals from your units, approved fees and rounding, and flags mismatches without deciding tax treatment. Hands the totals and gaps to the checklist step.
   - uses: process-and-sop-writer
-    note: Document an order-to-service checklist from the approved procedures and confirmed timings. Carry dietary requirements verbatim to the responsible qualified staff; stop on ambiguity.
+    note: Writes the order-to-service checklist from the totals and gaps step 1 hands over, plus your approved procedures and confirmed timings, after the discrepancy table is built. Carries diet needs word for word to the named qualified staff and stops on anything unclear.
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

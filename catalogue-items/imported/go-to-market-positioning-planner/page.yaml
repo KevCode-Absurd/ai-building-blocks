@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Positioning needs real judgement about your market.
 new_slug: go-to-market-positioning-planner
 name: Go-to-market positioning planner
-summary: Give it your product and rivals. Get positioning, a go-to-market plan
-  and launch steps.
+summary: Plan your go-to-market positioning. Give it your product and rivals. You get an ideal buyer, a positioning statement, battlecards and launch steps.
 job: plan-strategy
 headline: Go-to-market positioning planner
-subhead: A launch plan that starts from the buyer, not the feature list. Give it
-  your product and your rivals and you get a clear position, a go-to-market plan
-  and launch steps in order.
+subhead: A launch plan that starts from the buyer, not the feature list. Give it your product and your rivals and you get a clear position, a go-to-market plan and launch steps in order.
 explain: |
   A launch plan that starts from the buyer, not the feature list. Give it your product and your rivals and you get a clear position, a go-to-market plan and launch steps in order.
 
@@ -18,6 +15,10 @@ when:
   - Your messaging sounds like every competitor's.
   - You need a launch checklist with owners and timing.
   - You want to enter a new market and need a plan.
+not_for:
+  - "Your product has no customers or interviews yet: talk to 10 likely buyers first, then come back with their notes."
+  - "You already have a launch plan and need to run it: use the launch-strategy skill, which is not in this library yet."
+  - "You only need one ad or one page of copy: write it directly with your AI, using your product facts."
 you_give:
   - Product description
   - Main competitors
@@ -29,8 +30,32 @@ you_get:
   - Competitor comparison
   - A go-to-market and launch plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Open Claude, ChatGPT or Gemini and paste in the full skill text.
+  - Add your product description, your main rivals with their websites, and any customer interview notes or win and loss data.
+  - Add your launch date and budget if you have them (optional).
+  - "Ask for the part you need: the ideal customer, positioning, battlecards, a launch plan or a new market plan."
+  - Check the result. Every dollar figure, timeline and target in the skill is an example. Replace each one with your own data.
+  - Test the positioning with customers before you launch.
+output_sample:
+  input:
+    - Your product description
+    - Your main rivals and their websites
+    - Notes from 10 or more customer interviews, or your win and loss data (optional)
+    - Your launch date and budget (optional)
+  prerequisites:
+    - An AI that can read files helps, since the skill points to reference files. A plain chat works too.
+  output:
+    - name: ICP definition
+      contains: Your ideal customer from your best customers, with company traits, tools used, buyer roles and an A to D fit score.
+    - name: Positioning statement
+      contains: A short statement of who it is for, what it does and how you differ from the alternatives.
+    - name: Messaging hierarchy
+      contains: Headline, subhead, benefits, features and proof, ordered from most to least important.
+    - name: Battlecards
+      contains: "For each rival: their claims, strengths, weaknesses, your edge, when you win or lose, and replies to objections."
+    - name: Launch plan
+      contains: Launch tier, steps in order, a launch day checklist and the numbers to watch.
+    - name: Sales enablement kit
+      contains: Outline for a sales deck, one-pagers, a demo script and email templates.
+    - name: International entry plan
+      contains: Steps to enter a new country, including a checklist for translating and adapting your site and pricing.

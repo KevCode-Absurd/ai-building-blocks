@@ -1,6 +1,6 @@
 new_slug: 3pl-bill-auditor
 name: "3PL bill auditor"
-summary: "Paste your 3PL bill, rates and orders. Get overcharges, a dispute note and a score out of 100."
+summary: "Check your 3PL invoice against your own orders and rate card. See each overcharge, a dispute note to send and a match score out of 100."
 job: run-your-store
 thinking: high
 thinking_why: "It does sums on every line and compares them with your orders, so a stronger model makes fewer slips."
@@ -17,6 +17,10 @@ when:
   - Your 3PL invoice arrives each month and you pay it without checking.
   - Your cost per order crept up and nobody changed a rate.
   - Orders were late and you want to claim the penalty your agreement allows.
+not_for:
+  - "You have no 3PL or courier invoice to check: ask your carrier or warehouse for itemised charge lines first."
+  - "You want to judge the agreement itself or its terms: read the contract, or ask a lawyer to review it."
+  - "You want to compare 3PL quotes before you sign: ask each warehouse for a full rate card and compare them side by side in a spreadsheet."
 
 you_give:
   - The 3PL invoice with its charge lines
@@ -35,6 +39,28 @@ how_to_use:
   - Set the tolerance you accept, such as 2 percent.
   - Read the overcharge list. Check any returns or split parcels it asks about.
   - Send the dispute note yourself if the lines hold up.
+output_sample:
+  input:
+    - Your 3PL invoice with its charge lines
+    - The rate card from your agreement
+    - Your Shopify orders and units for the same dates
+    - Your courier invoice (optional)
+    - Your agreed pick time and penalty (optional)
+  output:
+    - name: Match score
+      contains: Matched lines over lines checked, times 100, with the counts and formula shown, plus the gap between billed and expected totals.
+    - name: Line table
+      contains: Each invoice line with billed cost, expected cost and working, difference, and a status of matched, over or under.
+    - name: Overcharges
+      contains: Each line billed above expected, with the amounts and a reason it may differ, such as returns or split parcels.
+    - name: Service checks
+      contains: Delivered-on-time rate, pick time against your agreement, and any penalty you can claim with the clause.
+    - name: Month on month
+      contains: Cost per order this month against last month, and whether a rate change explains it.
+    - name: Dispute note
+      contains: A short draft for you to send, naming each disputed line, the working and what you ask for.
+    - name: Not run and missing
+      contains: Checks it could not do and the inputs it needs to do them.
 
 how_it_works:
   - title: Rebuilds each line

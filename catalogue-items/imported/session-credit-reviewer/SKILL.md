@@ -7,7 +7,19 @@ license: MIT
 # collab-proof
 
 Surfaces AI collaboration evidence the developer didn't consciously record.
-Vela 3-layer pipeline × ADHD 4-frame reasoning — prompt-native, zero dependencies.
+Vela 3-layer pipeline × ADHD 4-frame reasoning — prompt-native. In plain words: three layers (rate the session, score it four ways, write the record) and four scoring frames (technical, uncertainty, fork, AI contribution).
+
+## What you need first
+
+1. **A git repository** with at least a few commits from the session. Layer 01 reads `git log` and `git diff`. If there is no git, say "No git history found" and work from the conversation alone. Write "files changed: unknown" and do not use the file-count rules.
+2. **The conversation from the session.** The decisions and reasons come from what was said here. If the conversation is short or missing, write less. Do not fill the gap.
+3. **Claude Code with local session logs** in `~/.claude/projects`, and `python3`, but only for the optional token count in Layer 03. Skip that step if either is missing, or if the user does not want local logs read. Write `cache:n/a` and `tok:n/a`.
+
+The scores below are a judgement call by you, the AI, using the rubric. They are not measurements. Say so when you show them.
+
+## Where the files go
+
+Write into the current project folder. Append to `DECISIONS.md` and `WORKLOG.md`. Never overwrite them. Create `session-history/` if it does not exist. At the end, list every file you wrote or changed.
 
 ---
 
@@ -58,7 +70,7 @@ Score each frame 0.0–1.0 using the rubric below. Then apply pruning and classi
 - `0.1` Typo fix, comment change, plain text edit
 
 **Frame B — Uncertainty** (developer doubt signals)
-- `1.0` Code written then fully rolled back, explicit doubt expressed ("이게 맞나?", "동작 안 하네"), `git revert`
+- `1.0` Code written then fully rolled back, explicit doubt expressed ("이게 맞나?" meaning "is this right?", "동작 안 하네" meaning "it does not work"), `git revert`
 - `0.5` Advice sought from Claude mid-implementation, 2+ revision requests on same area
 - `0.0` Uninterrupted directive execution — developer knew exactly what to build
 
@@ -203,7 +215,7 @@ Fields:
 - `tok:[total]` — total tokens this session (input + cache_read + cache_create + output, in K e.g. `45K`)
 - verb phrase — what shipped, grounded in git log
 
-**Collect token usage** (bash — run this and capture output):
+**Collect token usage** (optional). This script reads your local Claude Code session logs in `~/.claude/projects`, which hold your past chats. It prints only counts and the first 80 characters of up to three prompts. It picks the most recently changed log file, which may not be this session if you have several open. Ask the user before you run it. If they say no, write `cache:n/a` and `tok:n/a`. Run in bash and capture the output:
 ```bash
 python3 -c "
 import json, sys
@@ -350,11 +362,26 @@ Tell user: "Signal: LOW — Routine session, nothing recorded."
 - Never invent decisions not in the conversation or implied by the diff
 - "inferred:" prefix when reasoning is reconstructed
 - Frame D must be calibrated — neither overclaim nor dismiss
+- Back every AI contribution claim with something said or changed in the session. If you cannot point to it, write "not shown in the session".
+- Back every root cause with something said in the session. Do not guess a cause from the diff alone.
 - If all frames score < 0.4 → write nothing
 
 ---
 
+## What to show the user in chat
+
+When you finish, show these, in this order:
+
+1. `Signal: HIGH / MEDIUM / LOW` and the one-line reason.
+2. The frame scores and the intent (the JSON block from Layer 02), with the note that the scores are a judgement.
+3. A list of the files you wrote or changed, such as `DECISIONS.md`, `WORKLOG.md`, `session-history/<date>-<time>.md` and the proof `.html`.
+4. For a LOW session, only "Routine session, nothing recorded." No files.
+
+---
+
 ## PreCompact snapshot (context compaction defence)
+
+This part is optional. It only applies if you set up a PreCompact hook in Claude Code. If you did not, skip it.
 
 When context compaction is about to happen (triggered by the PreCompact hook),
 run a lightweight mid-session checkpoint before context is lost:

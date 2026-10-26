@@ -18,9 +18,9 @@ outputs:
   - {type: edit_plan}
 uses: [long-form-video-ad-script-writer, voice-over-stripping-test, ad-script-read-aloud-editor, video-ad-shot-list-maker]
 steps:
-  - {uses: long-form-video-ad-script-writer, note: "Starts the chain: a narrated script with a picture for each line."}
-  - {uses: voice-over-stripping-test, note: "Tests the narration from the step before and cuts lines the pictures already say."}
-  - {uses: ad-script-read-aloud-editor, note: "Takes the trimmed script and makes each remaining line easy to say."}
+  - {uses: long-form-video-ad-script-writer, note: "Starts the chain: a narrated script with a picture for each line. Hands step 2 the script."}
+  - {uses: voice-over-stripping-test, note: "Tests the narration from the step before and cuts lines the pictures already say. Hands step 3 the trimmed script."}
+  - {uses: ad-script-read-aloud-editor, note: "Takes the trimmed script and makes each remaining line easy to say. Hands step 4 the final script."}
   - {uses: video-ad-shot-list-maker, note: "Turns the final script into timed shots and clip prompts."}
 origin: rebuilt
 version: 1.0.0

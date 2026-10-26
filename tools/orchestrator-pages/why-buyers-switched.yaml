@@ -1,6 +1,6 @@
 new_slug: why-buyers-switched
 name: "Find why buyers switched and what held others back"
-summary: "Give it what you sell. Get a buying-story interview guide, mapped stories and a plan to ease what holds buyers back."
+summary: "Find why buyers switched to you. Get a buying-story interview guide, mapped stories and a ranked plan to ease what holds buyers back."
 job: understand-customers
 thinking: high
 thinking_why: "It reads long, messy interview notes and has to keep what people said apart from its own guesses. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - Many people look at your product and never switch.
   - Customers say they like it, and you still do not know what made the ones who bought finally move.
   - Your last interviews gave you praise and feature requests.
+not_for:
+  - "You want the product's best customers, not buying stories: use the Best customer finder."
+  - "You only need an interview script for one purchase: use the Customer purchase interview script writer."
+  - "You have no recent buyers to talk to: start with reviews and support emails, or ask a few people who looked and left."
 
 you_give:
   - What you sell and the kind of purchase you want to understand
@@ -36,6 +40,30 @@ how_to_use:
   - Describe what you sell and who bought lately. It writes the guide and stops.
   - Hold five to eight interviews. Write the exact words with an ID and a date for each person.
   - Bring the notes back and say "carry on from step 2".
+output_sample:
+  input:
+    - What you sell and the kind of purchase you want to understand
+    - A list of people who bought in the last few months
+    - Your interview notes in each person's own words, for the second half
+    - Product facts and customer words (optional)
+  prerequisites:
+    - An AI that can read files, so it can follow HANDOFF.md and save each step's file
+    - Five to eight interviews you hold yourself between step 1 and step 2
+  output:
+    - name: Interview guide
+      contains: A timeline interview plan with seven stops, probes, questions to avoid and how to record exact words.
+    - name: Stories
+      contains: Each buyer's story in six lines, each line tied to your notes.
+    - name: Forces
+      contains: Push, pull, habit and worry for each buyer, what they gave up and whether they used it again.
+    - name: Clusters and surprises
+      contains: Matching stories grouped with counts of separate people, plus what does not fit and what to ask next time.
+    - name: Holding forces ranked
+      contains: What holds buyers back, ranked by how many people it hits and how badly.
+    - name: Fixes and first test
+      contains: Two fixes for each held-back force, a not-for line, and one small test with a keep rule.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and every MISSING line in one list.
 
 how_it_works:
   - title: Plans the interviews

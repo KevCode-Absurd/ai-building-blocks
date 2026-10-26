@@ -2,14 +2,10 @@ thinking: low
 thinking_why: Sorting tickets by clear rules needs little deep thought.
 new_slug: support-ticket-sorter
 name: Support ticket sorter
-summary: Give it incoming tickets. Get each one classified, ranked by severity,
-  routed and given a first reply.
+summary: Sort support tickets by type and severity, route each to a team, and get a first reply drafted. Paste a batch and see urgent cases first.
 job: help-customers
 headline: Support ticket sorter
-subhead: Paste a batch of incoming tickets, with your team list and severity
-  rules if you have them. For each ticket it works out what the customer wants,
-  sets a severity, picks the team and drafts a first reply. You get the sorted
-  list with urgent cases flagged for escalation.
+subhead: Paste a batch of incoming tickets, with your team list and severity rules if you have them. For each ticket it works out what the customer wants, sets a severity, picks the team and drafts a first reply. You get the sorted list with urgent cases flagged for escalation.
 explain: |
   A batch of tickets sorted in one pass. Each gets a type, a severity, an owner and a first reply, so urgent ones surface first.
 
@@ -19,6 +15,10 @@ when:
   - You need an outage ticket to jump the line.
   - A new agent needs help judging severity.
   - You want first replies drafted for a whole batch.
+not_for:
+  - "You get sales or vendor emails in the same inbox: filter those out first, or let a person skim them. The sorter only marks them as spam."
+  - "The ticket is a legal threat or a security report: hand it to a person right away, not to a draft reply."
+  - "You have one ticket and a simple question: just write the reply yourself."
 you_give:
   - One or more tickets
   - Your team and category list (optional)
@@ -31,7 +31,26 @@ you_get:
   - A draft first reply
   - An escalation flag for urgent cases
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  - Paste the skill instructions into the chat.
+  - Paste your tickets below them. Add your team list, severity rules and tone if you have them.
+  - Ask your AI to sort the tickets into a table with category, priority, team and a draft reply.
+  - Replace the reply times and refund promises with your own policy. The sample ones are placeholders.
+  - Paste the table into your helpdesk or a spreadsheet. Handle the P0 and P1 rows first and hand them to the right team.
+output_sample:
+  input:
+    - Your support tickets, one or many (subject and body)
+    - Customer details such as plan or account tier (optional)
+    - Your team and category list (optional)
+    - Your severity rules and reply tone (optional)
+  output:
+    - name: Classification table
+      contains: "One row per ticket with its category: billing, bug, feature request or how-to, plus any second category."
+    - name: Priority
+      contains: A level from P0 to P3 for each ticket, raised one level for enterprise accounts.
+    - name: Team routing
+      contains: The team that should own each ticket, such as finance support, engineering triage or product support.
+    - name: Suggested first reply
+      contains: A short draft reply for each ticket that sets expectations and asks questions if the ticket is unclear.
+    - name: Escalation notes
+      contains: For urgent P0 cases, who to alert, the reply clock and how often to update the customer.

@@ -34,6 +34,7 @@ How to start:
 - **Who it's for** (optional): the general public (US grade 7 or below), insiders who share the category's jargon (grade 9 at most, keeping that jargon), or professionals (up to grade 11). Default: the general public.
 - **A few of the brand's published lines** (optional), so you know which words, rhythms and emojis belong to the brand.
 - **Spoken or read** (optional): spoken is the default. Read means text shown on screen or above an image.
+- **A line check** (optional): a list of weak lines a checker already flagged. Fix those first, then say the whole script aloud for the rest.
 - **A recording** (optional): one take of someone reading it. Where they stumbled is the best evidence there is.
 
 ## Steps

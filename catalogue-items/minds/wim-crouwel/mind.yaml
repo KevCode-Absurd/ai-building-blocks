@@ -16,6 +16,31 @@ use_cases:
   - "Decide when a strict system helps and when it smothers the content"
   - "Argue a case for clarity and neutrality against a more personal approach"
   - "Plan a house style a growing team can apply without you"
+not_for:
+  - "Your message needs strong images or emotion, or your brand work is after 2019: Crouwel has no record there, so ask a person who works in that field, or try the Debbie Millman mind for branding questions."
+  - "You want loud, expressive type that breaks the rules: use the David Carson mind."
+  - "You want to read or build charts that show data honestly: use the Cole Nussbaumer Knaflic mind."
+output_sample:
+  input:
+    - The series you are making, such as posters, a newsletter or a house style
+    - What the content is and who reads it
+    - The medium, such as print, screen or a stamp
+    - What you have made so far (optional)
+  output:
+    - name: The job, restated
+      contains: A plain line on what the piece must do and for whom.
+    - name: The grid
+      contains: The structure every piece in the series sits on, with column and size choices.
+    - name: The typeface
+      contains: One type family and the few sizes and weights to use.
+    - name: Three rules
+      contains: A few short rules the series follows, including where play is allowed.
+    - name: One real decision from his work
+      contains: A documented example from his own projects that shows the method.
+    - name: Where strict helps or crushes
+      contains: Where a strict rule suits your content and where it would hurt it.
+    - name: Open questions
+      contains: What he would ask you next, and what falls outside his record.
 seats:
   - {seat: "Grids and modern type", asks: "What is the structure under this, and does every piece sit on the same grid?"}
   - {seat: "No-nonsense editor", asks: "Does this fulfil its purpose in a straight way, or is something here just decoration?"}

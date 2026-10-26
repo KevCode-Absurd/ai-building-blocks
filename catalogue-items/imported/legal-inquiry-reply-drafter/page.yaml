@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must spot cases where a template is unsafe.
 new_slug: legal-inquiry-reply-drafter
 name: Legal inquiry reply drafter
-summary: Name the request, such as a data access request. Get a draft reply and
-  a flag when a lawyer must review.
+summary: Draft a reply to a legal request, like a data access request or subpoena, and see when a lawyer must review it before you send.
 job: check-contracts
 headline: Legal inquiry reply drafter
-subhead: Name the request, such as a data access request. Get a draft reply and
-  a flag when a lawyer must review. Bring the type of request. Use the result to
-  plan your next step.
+subhead: Name the request, such as a data access request. Get a draft reply and a flag when a lawyer must review. Bring the type of request. Use the result to plan your next step.
 explain: |
   A first draft of the reply to a common legal request, with a clear signal when a lawyer must look before it goes out. Name the request type: data subject request, discovery hold, vendor question, NDA request, privacy question, subpoena or insurance notice. The skill finds your saved template for that type, fills in the details and adds escalation triggers.
 
@@ -18,6 +15,10 @@ when:
   - A business team wants an NDA and keeps asking the same questions.
   - A vendor sent a legal question your team answers often.
   - A subpoena arrived and you need a prompt, correct first reply.
+not_for:
+  - "You need legal advice or a final answer on a risky case: ask a qualified lawyer, because this only writes a first draft."
+  - "You want to review or mark up a contract: read it with a lawyer, since this tool replies to requests and does not check contract terms."
+  - "You have no reply templates and want a finished letter: ask a lawyer for an approved template first, or use the draft structure this tool offers as a starting point."
 you_give:
   - The type of request
   - The request itself or its details
@@ -29,8 +30,26 @@ you_get:
   - Escalation flags
   - A note on what a lawyer must check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your legal reply templates.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Say which type of request it is, such as data access request, NDA request, subpoena or vendor question.
+  - Paste the request and your reply template for that type (optional). Add the facts of this case.
+  - Read the escalation check first. If it flags a risk, send the draft to a lawyer before anything else.
+  - Check the draft reply and fill any gaps it marks. Have a qualified person approve it, then send it.
+output_sample:
+  input:
+    - The type of request, such as a data access request, NDA request or subpoena
+    - The request itself or its key details
+    - Your saved reply templates (optional)
+    - Facts about this case, such as names and dates
+  prerequisites:
+    - An AI that can read your reply templates, if you have them
+    - A qualified person to review the draft before it goes out
+  output:
+    - name: Escalation Check
+      contains: A list of warning signs found in this request and whether a lawyer must look before you reply.
+    - name: Generated Response
+      contains: The draft reply, with your details filled into the template for this type of request.
+    - name: Follow-Up Actions
+      contains: The usual next steps after you send the reply, taken from the template.
+    - name: Notes
+      contains: What a lawyer should check, missing details, and where the draft departs from your template.

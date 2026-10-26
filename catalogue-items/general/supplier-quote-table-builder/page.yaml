@@ -1,6 +1,6 @@
 new_slug: supplier-quote-table-builder
 name: "Supplier quote table builder"
-summary: "Paste two or more supplier quotes. Get one table, the cash each needs and a go or walk call."
+summary: "Paste two or more supplier quotes and get one table with cash up front, weeks to stock and a go or walk call before you pay a deposit."
 job: plan-supply-chain
 thinking: low
 thinking_why: "It lays numbers side by side and applies fixed sums."
@@ -17,6 +17,10 @@ when:
   - "You have two or three factory quotes and one deadline."
   - "A supplier wants a deposit this week."
   - "You are not sure a lower price is worth a higher minimum."
+not_for:
+  - "You buy finished goods off a shelf or hire a service: ask the seller for a price list or a written quote instead."
+  - "Freight cost is unknown: get a freight quote for the same order size first, then come back."
+  - "You need contract or customs advice: ask a lawyer to check the contract and a customs broker to check duty rates."
 
 you_give:
   - "Two or more quotes (required): unit price, minimum order, production days. Freight and duty per unit if you have them."
@@ -34,6 +38,24 @@ how_to_use:
   - "Under it, paste your details: two or more quotes; planned retail price; cash you can tie up in stock; shipping time and target launch date."
   - "Send it and read the answer against the checks."
   - "If a line says MISSING, add that detail and send it again."
+output_sample:
+  input:
+    - Two or more supplier quotes with unit price, minimum order and production days
+    - Your planned retail price
+    - The cash you can tie up in stock
+    - Freight and duty per unit (optional)
+    - Shipping time and target launch date (optional)
+  output:
+    - name: TABLE
+      contains: One row per supplier with unit price, minimum order, cash up front, weeks to stock, landed cost and margin before ads.
+    - name: OVER CASH LIMIT
+      contains: The suppliers whose cash up front is more than the cash you said you can tie up.
+    - name: AGREE IN WRITING FIRST
+      contains: "Four terms to settle before a deposit: refunds, quantity variance, short shipment and design ownership."
+    - name: VERDICT
+      contains: "One line per supplier: go, renegotiate or walk away, with the reason."
+    - name: MISSING
+      contains: Any detail it needed but did not get, such as freight, duty, retail price or cash limit.
 
 how_it_works:
   - title: "Build the table"

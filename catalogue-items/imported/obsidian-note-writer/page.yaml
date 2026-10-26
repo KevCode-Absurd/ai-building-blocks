@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It applies known syntax rules to your text.
 new_slug: obsidian-note-writer
 name: Obsidian note writer
-summary: Give it your notes. Get Obsidian-ready Markdown with links, embeds,
-  callouts and properties that show up right.
+summary: Turn rough text into an Obsidian note with links, embeds, callouts and properties that show up right. Get a ready Obsidian Markdown note.
 job: organise-work
 headline: Obsidian note writer
-subhead: Notes that look right the first time you open them in Obsidian. You
-  hand over rough text and get Markdown that uses Obsidian's own features
-  correctly.
+subhead: Notes that look right the first time you open them in Obsidian. You hand over rough text and get Markdown that uses Obsidian's own features correctly.
 explain: |
   Notes that look right the first time you open them in Obsidian. You hand over rough text and get Markdown that uses Obsidian's own features correctly.
 
   The skill starts with a properties block at the top for title, tags and aliases. It writes the body in normal Markdown, then adds links between notes in double brackets, so Obsidian keeps them working if you rename a note. It can link to a single heading or block, embed other notes, images and PDFs, and wrap key points in callouts such as tip or warning. External web links stay as standard links. At the end it checks that the note renders properly in reading view.
 when:
-  - You pasted meeting notes and want them linked to the people and project
-    notes already in your vault.
+  - You pasted meeting notes and want them linked to the people and project notes already in your vault.
   - You want a warning or tip box that stands out in a long note.
   - You need to embed a section of one note inside another.
   - Your tags and dates should show as proper properties, not loose text.
+not_for:
+  - "You want to edit or tidy a whole vault at once: do it in Obsidian itself, or work through the vault one note at a time."
+  - "Your notes are plain text with no links, callouts or properties: a normal Markdown note is enough, so skip this skill."
+  - "You need a check that the note works in your own vault: open it in Obsidian reading view and look yourself."
 you_give:
   - The raw notes or text
   - Names of existing notes to link to (optional)
@@ -30,7 +30,25 @@ you_get:
   - Links and block references
   - Callouts and embeds in the right syntax
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
+  - Paste your rough notes below it.
+  - Add the names of your existing notes, your tags and any images or PDFs to embed (optional).
+  - Copy the note your AI gives you into a new file in your vault folder.
+  - Open it in reading view and check the links, embeds and callouts show up right.
+output_sample:
+  input:
+    - Your rough notes or text
+    - Names of notes in your vault to link to (optional)
+    - Tags and aliases you want to use (optional)
+    - Images or PDFs to embed (optional)
+  output:
+    - name: Properties block
+      contains: Title, date, tags and aliases at the top of the note, written as Obsidian properties.
+    - name: Note body
+      contains: Your text in standard Markdown with headings, lists and tasks.
+    - name: Wikilinks
+      contains: Double-bracket links to other notes, headings or blocks, with external links kept as normal links.
+    - name: Embeds
+      contains: Notes, sections, images or PDF pages shown inline with the exclamation mark syntax.
+    - name: Callouts
+      contains: Key points wrapped in boxes such as note, tip or warning, with optional titles.

@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: Fixes depend on your site platform and which customer details you can send.
 new_slug: meta-pixel-capi-fix
 name: Meta pixel and server events fixer
-summary: Give it your site and Meta pixel. Get a tracking audit, a match quality
-  score and step-by-step fixes for your platform.
+summary: Fix your Meta pixel tracking. Give it your site and pixel ID, and get an audit, a match quality estimate and fixes for your platform.
 job: track-numbers
 headline: Meta pixel and server events fixer
-subhead: A health check of the tracking that tells Meta who bought, with a score
-  and fixes for your platform. Browser tracking alone misses a lot of sales, so
-  the fix is to send events from your server as well and match them with shared
-  event IDs.
+subhead: A health check of the tracking that tells Meta who bought, with a score and fixes for your platform. Browser tracking alone misses a lot of sales, so the fix is to send events from your server as well and match them with shared event IDs.
 explain: |
   A health check of the tracking that tells Meta who bought, with a score and fixes for your platform. Browser tracking alone misses a lot of sales, so the fix is to send events from your server as well and match them with shared event IDs.
 
@@ -19,6 +15,10 @@ when:
   - Your match quality score is low.
   - You use Shopify or Next.js and are unsure the server events work.
   - You just set up tracking and want to test it.
+not_for:
+  - "You have no website or checkout to track: set up the pixel later, once you have a page where people buy or sign up."
+  - "Your platform has its own Meta integration, such as Shopify or GoHighLevel: switch that on first, then use this to check it."
+  - "You want to know how your ads perform, not whether tracking works: use a person who runs your ads or Meta's own reports."
 you_give:
   - Your website or platform
   - Pixel ID and ad account ID
@@ -30,9 +30,32 @@ you_get:
   - Fixes for your platform
   - A test plan to confirm they work
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run shell scripts and use your own Meta
-    access token. Test events go to Meta only when you ask.
+  - Use an AI that can run shell scripts, such as Claude with code running. You also need a Meta access token with ads permissions.
+  - Give your AI the skill folder. Tell it your platform, your pixel ID or ad account ID, and your token.
+  - Ask it to audit your pixel first. Read the scorecard and the fix list.
+  - Ask for the setup steps for your platform, and make the fixes.
+  - Run the test with a test event code. Without one, the test sends real events to your live data. Then check the Test Events tab in Events Manager.
+  - Check your real match quality in Events Manager. The audit score is only an estimate.
+output_sample:
+  input:
+    - Your website platform, such as Next.js, Shopify, WordPress, Webflow, GoHighLevel, ClickFunnels or custom
+    - Your Meta pixel ID, or your ad account ID
+    - Your Meta access token with ads permissions
+    - Details of your current setup (optional)
+  prerequisites:
+    - An AI that can run shell scripts
+    - A Meta access token from a system user with ads_management and ads_read permissions
+    - Access to Events Manager to confirm the real match quality score
+  output:
+    - name: Pixel audit scorecard
+      contains: Pass, fail or warning for each check, an estimated match quality per event type, and a fix list in order of impact.
+    - name: Platform setup guide
+      contains: Pixel base code, standard events, matching settings, server events setup and shared event IDs for your platform, with known traps.
+    - name: CAPI test result
+      contains: A test page view and test purchase sent to Meta, which you then confirm in the Test Events tab.
+    - name: Match quality check
+      contains: Each matching field scored, with the target for purchases and leads and fixes sorted by impact.
+    - name: Custom server event
+      contains: A single event you send by hand, with customer details hashed for you and an event ID made if you give none.
+    - name: Notes in your brand files
+      contains: Pixel ID, estimated scores, platform settings and fixes applied, saved to stack.md and learnings.md.

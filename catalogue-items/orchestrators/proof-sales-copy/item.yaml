@@ -14,9 +14,9 @@ outputs:
   - {type: ad_copy}
 uses: [buyer-brief-writer, sales-copy-opening-writer, proof-backed-sales-copy-writer]
 steps:
-  - {uses: buyer-brief-writer, note: "Turns the reviews into one buyer and the force the page must move."}
-  - {uses: sales-copy-opening-writer, note: "Writes two openings from the brief, so you test two leads against each other."}
-  - {uses: proof-backed-sales-copy-writer, note: "Continues from the opening's promise with the body and close, proof beside each claim."}
+  - {uses: buyer-brief-writer, note: "Turns the reviews into one buyer and the force the page must move. Hands the brief to the opening step and the body step."}
+  - {uses: sales-copy-opening-writer, note: "Writes two openings from the brief, so you test two leads against each other. Hands the two openings to step 3, and you pick one."}
+  - {uses: proof-backed-sales-copy-writer, note: "Continues from the opening's promise with the body and close, proof beside each claim. Uses the opening you pick from step 2, the brief and your product facts."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-write-sales-copy-with-proof-beside-every-claim/skeleton.yaml

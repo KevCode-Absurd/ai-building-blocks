@@ -16,6 +16,28 @@ use_cases:
   - "Choose the people and places that will raise your game"
   - "Set up a remote or flexible way of working that still protects focus time"
   - "Stop preparing and pick the first real step you can take this week"
+not_for:
+  - "You need legal, medical, personal finance or hiring advice: use a qualified professional, not this AI."
+  - "You want a view on luxury brands, craft or long-term brand care: use the Bernard Arnault mind."
+  - "You want a founder's view on customer trust and the guest experience: use the Brian Chesky mind."
+output_sample:
+  input:
+    - The problem you keep coming back to, or the product or offer you want to simplify
+    - How your team spends a normal week (optional)
+    - Who has tried your idea so far (optional)
+  output:
+    - name: Tennis ball check
+      contains: A read on whether this is a problem you can't stop thinking about or just a good idea on paper.
+    - name: Simple core
+      contains: The one thing most people would want, and what to cut or tuck away so anyone can use it.
+    - name: Word of mouth idea
+      contains: A built-in way for users to share it without being asked, such as an invite or shared file.
+    - name: Work about work count
+      contains: A way to count hours lost to searching, updating and alerts, and what to cut.
+    - name: First step this week
+      contains: A small version to build and a plan to show it to five people.
+    - name: Beyond the record notes
+      contains: One line marking anything Drew Houston never spoke about, so nothing is made up.
 seats:
   - {seat: "Simple products for everyone", asks: "Could someone who has never heard of us use this without help, and what can we take out so they can?"}
   - {seat: "The obsession test", asks: "Is this the tennis ball you'd chase even if nobody paid you?"}

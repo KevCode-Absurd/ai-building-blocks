@@ -1,51 +1,129 @@
 new_slug: fund-commitment-change-assistant
-name: Fund commitment change assistant
-headline: Fund commitment change assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+name: Fund commitments and capital call reviewer
+headline: Fund commitments and capital call reviewer
+summary: Work out how much one investor can still be called after an amendment or distribution, and split the next capital call. Shortfalls stay open.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A commitment roll-forward, allocated call and unresolved shortfall. Include changed inputs, source versions, branch reasons and checks still blocked. Share lPA and side letters, original and recall calls, restoration eligibility, commitment changes, approved call budget, excused investors and current eligible denominator. For a distribution, include separate recallability and recycling eligibility clauses, cap use and investment-period approval. Supply the previous approved review and actual changed source files with dates.
-explain: |-
-  A commitment roll-forward, allocated call and unresolved shortfall. Include changed inputs, source versions, branch reasons and checks still blocked.
+subhead: Give it the fund agreement, the signed changes, the call and distribution notices, and your last review. It rebuilds how much one investor can still be called for, splits the approved call, and shows any shortfall. You get a roll-forward and a list of open questions.
+explain: |
+  A fund commitment is a promise to pay in over time. It changes during the life of the fund. An amendment can cut it. A distribution can give some room back, or not. An investor can be excused from one deal. Each change moves how much the fund can still ask one investor to pay. The common slip is to treat any cash paid back as new room to call. It is not, unless the contract says so.
 
-  Private fund calls. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This agent keeps a small record of the last review: the commitment version, the call cutoff, original calls and recall calls (kept apart), approved cuts, the source of any restored amount, recycling used, and open excuse rules. On each run it checks what changed since that record and redoes only the sums that change. If a distribution is called "recyclable", it checks the fund's recycling cap first. A recyclable amount restores callable room only when a separate "recallable" clause and the real notice both back it up.
+
+  It then rebuilds the callable balance, splits the approved call by eligible commitment, and shows any shortfall for fund counsel instead of moving it to other investors. It keeps four numbers apart: fund value (NAV), commitment, recallable capital and the call split. It reviews and reports. It never writes or sends a call notice. Your fund administrator or lawyer checks the sources and the clauses.
+
 when:
-  - You need a commitment roll-forward, allocated call and unresolved shortfall. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - You work on private fund calls and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - The fund signs an amendment that cuts or changes one investor's commitment.
+  - A distribution notice says part of the cash is "recallable" and you need to know if it gives callable room back.
+  - An investor is excused from a deal, so every other investor's share of the call moves.
+  - The approved call budget changed and you must re-split it before the notice goes out.
+
+not_for:
+  - You only want to check an investor's capital account or NAV. Use the Investor statement NAV checker.
+  - Your question is about management fees, a stepdown or fee credits. Use the Fund fee and credit reviewer.
+  - You want a one-off answer with no earlier review to compare against. The Private fund commitment and capital call checker workflow is the simpler run.
+  - You want it to send a call notice or ask investors for money. It never does. Your fund administrator does that.
+
+output_sample:
+  input:
+    - The fund agreement and side letters, with the signed amendments or the commitment register
+    - Original calls and recall calls, with dates and amounts
+    - Distribution notices that mark cash as recallable, with the clause and any recycling cap terms
+    - The approved call budget, the investors excused from this deal and the eligible total of commitments
+    - The record from your last review (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The pack's two component files added to your AI
+    - Signed documents. An email about a change is not enough.
+  output:
+    - name: Changed since last review
+      contains: Each amendment, call, notice or excuse, with its source and date.
+    - name: Recycling cap
+      contains: Only if a distribution is called recyclable. Cap, amount used, amount left and whether the clause was seen.
+    - name: Roll-forward
+      contains: Commitment less calls and cuts, plus restored amounts, less recall calls, ending at the callable balance.
+    - name: Call split
+      contains: The call budget split by eligible commitment, against the callable balance, with any shortfall listed for fund counsel.
+    - name: Kept apart
+      contains: Fund value, commitment, recallable capital and the call split as four separate lines.
+    - name: Record for next review
+      contains: A short record to paste into your next run.
+    - name: Missing and checks missed
+      contains: Each gap, and each check that failed or could not run.
+
 you_give:
-  - LPA and side letters, original and recall calls, restoration eligibility, commitment changes, approved call budget, excused investors and current eligible denominator. For a distribution, include separate recallability and recycling eligibility clauses, cap use and investment-period approval. Supply the previous approved review and actual changed source files with dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The limited partnership agreement (LPA) and any side letters, with dates (from your fund administrator or data room)
+  - The signed commitment register, or the signed amendments that changed a commitment
+  - The original capital calls (not recall calls) and any recall calls, with dates and amounts
+  - Distribution notices that mark part of the cash as recallable, and the clause that allows it
+  - The approved call budget and the list of investors excused from this deal
+  - The current eligible total of commitments for this call, which is the number the split divides by
+  - The recycling cap terms and the amount used so far (only if a distribution is called recyclable)
+  - The last review's record, pasted in or attached (optional on a first run)
+  - The reporting date, the currency and the scale, such as thousands or millions
+
 you_get:
-  - A commitment roll-forward, allocated call and unresolved shortfall. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A commitment roll-forward for the investor, from commitment to callable balance
+  - A list of what changed since the last review, each change with its source and date
+  - The investor's share of the approved call, and any shortfall left open for fund counsel
+  - A recycling cap check, only when a distribution is called recyclable
+  - A short record to start the next review from, with MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Add the agent to Claude, ChatGPT or Gemini, or paste the SKILL.md into a new chat. An AI that can read files works best. In plain chat it still works, but it cannot save files, so you keep the record it hands back.
+  - Say whether this is the first run. If not, paste the record from the last review.
+  - Attach or paste the changed documents (amendments, notices, call records, the call budget) with their dates.
+  - Read "changed since last review" first. Check each change against its document.
+  - Check the roll-forward by hand. It is commitment, less original calls and approved cuts, plus restored amounts, less recall calls.
+  - Read the shortfall and MISSING lines last. Take any shortfall to your fund counsel. Do not move it to other investors yourself.
+  - Run it again when a notice, an amendment or an excuse changes. Installing it sets up no schedule.
+
 how_it_works:
-  - title: Reconcile a private fund capital call
-    text: Run the governing workflow when A signed commitment amendment, paid call, distribution notice or actual investor excuse changes callable obligations.
-  - title: Fund recycling capacity checker
-    text: If distributions are described as recyclable, test eligible cap capacity separately. Increase callable LP commitment only when the separate recallability clause and actual notice support restoration; recyclable and recallable are not interchangeable. Never create or send a call notice from the review.
-output_shape: |-
-  A commitment roll-forward, allocated call and unresolved shortfall. Include changed inputs, source versions, branch reasons and checks still blocked.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this fund and investor, or sets a first baseline. Compares document versions, dates, currency and definitions. If nothing changed and no review is due, it says so and stops.
+  - title: Checks recycling room first
+    text: Runs only when a distribution is called recyclable. Works out the cap, what has been used and what is left. Cash that fits under the cap is still not callable room until a separate recallability clause and the real notice support it.
+  - title: Rebuilds the callable balance
+    text: Starts from the signed commitment. Takes off original calls and approved cuts. Adds only the restoration the contract allows. Takes off recall calls. Recall calls are never counted twice.
+  - title: Splits the call
+    text: Divides the approved call budget by the investor's eligible commitment over the current eligible total, after excused and defaulting investors. It compares the result with the callable balance.
+  - title: Shows a shortfall, never moves it
+    text: If the split is bigger than the callable balance, the gap is listed for fund counsel. It is not shared out to other investors.
+  - title: Keeps four numbers apart
+    text: NAV, commitment, recallable capital and the call split stay as separate lines. An unapproved scenario never overwrites an accepted baseline. The review records which branch ran or was skipped.
+  - title: Saves the record
+    text: Writes the small record for next time, keeps the old one, and lists what is still MISSING. After a failed check it corrects only the affected sum, at most twice, then reports the blocker.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <each amendment, call, notice or excuse, with source and date>
+  RECYCLING CAP (only if run)  cap <n>, used <n>, remaining <n>;
+                               recyclable <n>, fits <yes or part>;
+                               recallability clause <seen or MISSING>
+  ROLL-FORWARD  commitment <n> - original calls <n> - approved cuts <n>
+                + restored <n> - recall calls <n> = callable <n> (was <n>)
+  CALL SPLIT    budget <n> x eligible commitment <n> / eligible total <n>
+                = <n> against callable <n>; shortfall <n or none>
+  KEPT APART    NAV <not reviewed or n>; commitment <n>; recallable <n>;
+                call split <n>
+
+  RECORD FOR NEXT REVIEW  commitment version, call cutoff, recycling used,
+                          restoration source, open excuse rules
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: NAV, commitment, recallable capital and call allocation remain distinct; no notice is issued or money requested. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+  - what: An approved cut
+    how: Change the approved cut. Callable balance and the investor's eligible commitment both move, so the call split changes too.
+  - what: A bigger call budget
+    how: Raise the budget. The split grows in step, and a shortfall appears once it passes the callable balance.
+  - what: A recallable distribution
+    how: Add the clause and the notice. Restored room appears in the roll-forward, up to what the recycling cap allows.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and says what it could not verify.
+
 judge:
   - NAV, commitment, recallable capital and call allocation remain distinct; no notice is issued or money requested. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +134,36 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
+  - Use the same investor ID every time. A renamed investor looks like a new one.
+  - Paste the recallability clause once into the agent's file, so every distribution is tested against the same wording.
+  - Pair it with the Remaining fund commitment checker when you only need the callable balance, and the Fund capital call checker when you only need the split. Use the Fund reinvestment limit checker when only the recycling cap is in question.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your fund administrator's investor register
+      why: Gives signed, dated commitments and call history, so the opening balance is a fact and not an estimate.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The recallability clause, copied from the signed LPA, and the distribution notice that uses it.
+    - The signed amendment itself, not an email about it.
+    - A named reviewer, such as fund counsel or the administrator, who will check the clauses and the shortfall.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Commitment
+    meaning: The total an investor has promised to pay into the fund over time.
+  - term: Capital call
+    meaning: A request from the fund for part of that promised money.
+  - term: Callable balance
+    meaning: What the fund can still ask one investor to pay.
+  - term: Recall call
+    meaning: A call for money that was earlier paid back to the investor and the contract lets the fund ask for again.
+  - term: Recyclable and recallable
+    meaning: Recyclable means the fund may reuse cash within a cap. Recallable means a contract clause lets it call that returned money again. Only recallable cash can restore an investor's room.
+  - term: Eligible commitment
+    meaning: An investor's commitment for this call, after excuse and default rules.
+  - term: Roll-forward
+    meaning: A table that starts from an opening balance, adds and subtracts each change, and ends at a closing balance.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

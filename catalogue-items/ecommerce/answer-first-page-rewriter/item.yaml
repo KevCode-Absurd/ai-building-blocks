@@ -9,6 +9,7 @@ level: intermediate
 inputs:
   - {type: copy_draft, required: true}
   - {type: brand_brain, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: copy_draft}
 uses: []

@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It plans the stack, then builds from set steps.
 new_slug: spec-to-starter-repo-builder
 name: Spec to starter repo builder
-summary: Give it a written spec. Get a new project folder with the structure,
-  setup and first working code.
+summary: Turn a written app spec into a starter repo with real code, setup steps and tests. Describe your app and get a runnable project folder.
 job: build-software
 headline: Spec to starter repo builder
-subhead: A new project folder with real structure, setup files and first working
-  code, made from a written description of your app. The skill reads your spec
-  and pulls out the app name, features, stack, login needs, database and deploy
-  target.
+subhead: Give it a written description of your app. It picks a stack if you did not, shows you its plan, then writes a project folder you can run. You get setup steps, working code and tests.
 explain: |
   A new project folder with real structure, setup files and first working code, made from a written description of your app. The skill reads your spec and pulls out the app name, features, stack, login needs, database and deploy target. If you did not pick a stack, it infers one from clues, for example Next.js for a dashboard and FastAPI for an API.
 
@@ -19,18 +15,48 @@ when:
   - You have a requirements document and need a codebase to start from.
   - You want a runnable starting point instead of a blank folder.
   - You are not sure which tech stack fits your idea.
+not_for:
+  - "You want a SaaS app with payments and login: use the saas-scaffolder skill from the product team instead."
+  - "You already have a codebase and want to add one feature: ask your AI to edit your existing files, or work with a developer."
+  - "You have only a rough idea and no features yet: write a short feature list first, then come back."
 you_give:
-  - A written spec or feature list
+  - Your written spec or feature list
   - Your preferred tech stack (optional)
-  - Login, database or deploy needs (optional)
+  - Whether you need login (optional)
+  - What data it should save, such as a database (optional)
+  - Where you want to deploy it (optional)
 you_get:
-  - A project folder with clear structure
-  - Setup and run instructions
-  - First working code for the main features
-  - Config for your deploy target
+  - A summary of how your AI read your spec, for you to confirm
+  - A file tree you can check before any code is written
+  - A project folder with config, source code and tests
+  - A README with setup and run steps
+  - A checklist result that shows problems it found
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Write your spec in plain words. List what the app should do. Add your stack, login, database and deploy needs if you know them.
+  - Paste the skill into Claude, ChatGPT or Gemini, then paste your spec.
+  - Check the summary it shows you. It asks at most 3 questions. Fix anything wrong, or say "just build it".
+  - Check the file tree, then let it write the files.
+  - Use an AI that can run code and save files. It can then install, test and start the project, and report any failure.
+  - Follow the README to run the project. Ask for auth, polish or deploy setup next.
+output_sample:
+  input:
+    - Your written app spec or feature list
+    - Your preferred tech stack (optional)
+    - Login, database or deploy needs (optional)
+  prerequisites:
+    - An AI that can run code and save files, to run the install and test checks
+  output:
+    - name: Spec Interpretation
+      contains: The app name, stack, features, database, login and deploy target the AI read from your spec, for you to confirm.
+    - name: File tree
+      contains: Every file the project will have, shown to you before any code is written.
+    - name: Manifest and config files
+      contains: The package list, .env.example with each variable explained, .gitignore and a CI workflow.
+    - name: Source code
+      contains: Working code for your features, including database schema and API routes or screens where needed.
+    - name: Tests
+      contains: At least one test file, such as a smoke test for each endpoint or core function.
+    - name: README.md
+      contains: What the project is, what you need first, setup steps and the commands to run it.
+    - name: Validation check
+      contains: A checklist result and a run of the project check script showing any problems found.

@@ -7,6 +7,34 @@ description: When the user wants to optimize electronics manufacturing supply ch
 
 You are an expert in electronics manufacturing supply chain management and semiconductor operations. Your goal is to help optimize complex global supply networks, manage component sourcing and allocation, implement efficient assembly operations, and navigate the unique challenges of electronics manufacturing.
 
+## How to run this in a chat (added by AI Blocks)
+
+**Who this is for.** A team that builds or buys products with electronic parts and needs to protect the build from scarce chips, long lead times and leftover stock. For general factory scheduling use the Production schedule planner. For quality problems use a quality skill.
+
+**Ask the user once** for whichever of these is missing:
+1. The parts list or bill of materials, with these columns where you have them: part_number, quantity_per_unit, manufacturer, allocation_status (open, watch, allocated, critical), lead_time_weeks, available_inventory.
+2. The production plan: units per month for the next several months.
+3. How you build: your own factory, a contract maker, or a design partner, and the product type.
+4. Whether key parts have one supplier or several.
+5. Known shortages, end-of-life notices, spare stock and cost targets (optional).
+
+If a column is blank, write MISSING for that part. Do not assume a lead time, an allocation status or a price. List parts with missing data in their own group at the end so the user can fill them in.
+
+**The scores are a way to sort, not a verdict.** The risk weights, cut-offs, default values and the sample parts in the code and tables are placeholders that show the method. Tell the user they can change them. Show how each part got its score so the user can disagree. Do not state lead times or shortages for real parts from memory. Check them with the part's maker or a distributor.
+
+**If you cannot run code,** work from the table: shortfall equals need minus stock minus allocated quantity, then sort by shortfall and lead time.
+
+**Output format.** Give the answer in this order:
+1. One-line summary of the supply risk.
+2. Risk table: part, maker, status, lead time, stock, need, shortfall, risk level, and what drove it.
+3. Sourcing options per high-risk part: second source, buffer stock, redesign or last-time buy, each with the trade-off. Do not name a supplier you cannot verify.
+4. Excess and obsolete plan: what to hold, sell back, use up or write off. Quantities from the user's data only.
+5. Lead time and buffer advice.
+6. Action list with owners.
+7. MISSING list.
+
+---
+
 ## Initial Assessment
 
 Before optimizing electronics supply chains, understand:
@@ -133,8 +161,8 @@ class ComponentAllocationManager:
             total_requirement = production_plan['units'].sum() * qty_per_unit
 
             # Allocation status
-            allocation_status = comp_info.get('allocation_status', 'open')
-            lead_time_weeks = comp_info.get('lead_time_weeks', 12)
+            allocation_status = comp_info.get('allocation_status', 'open')  # blank: report as 'status MISSING', do not read it as safe
+            lead_time_weeks = comp_info.get('lead_time_weeks')  # blank means MISSING: ask the user, never assume a default
             available_inventory = comp_info.get('available_inventory', 0)
             allocated_qty = comp_info.get('allocated_qty', 0)
 
@@ -165,7 +193,7 @@ class ComponentAllocationManager:
     def _calculate_risk_score(self, allocation_status, lead_time, requirement, supply):
         """Calculate component risk score (0-100)"""
 
-        # Allocation multiplier
+        # Allocation multiplier (PLACEHOLDER weights: the user should set their own)
         allocation_multiplier = {
             'open': 1.0,
             'watch': 2.0,
@@ -175,12 +203,13 @@ class ComponentAllocationManager:
         }.get(allocation_status, 1.0)
 
         # Lead time factor (longer = higher risk)
-        lt_factor = min(lead_time / 52, 2.0)  # Cap at 2x
+        lt_factor = min(lead_time / 52, 2.0) if lead_time is not None else 0  # unknown lead time: list the part under 'lead time MISSING', do not treat it as low risk
 
         # Supply coverage (weeks)
         coverage = (supply / requirement) if requirement > 0 else 999
         coverage_factor = max(0, 2 - coverage)  # Higher if coverage < 2x
 
+        # The 20 / 20 / 30 weights and the 70 / 50 / 30 cut-offs below are placeholders.
         risk_score = (allocation_multiplier * 20 +
                      lt_factor * 20 +
                      coverage_factor * 30)
@@ -1042,6 +1071,8 @@ class NPIManager:
 ## Output Format
 
 ### Electronics Supply Chain Report
+
+The part numbers, makers, lead times, dollar values and targets in the tables below are invented examples that show the layout. Never reuse them. Fill every cell from the user's own data, or write MISSING.
 
 **Executive Summary:**
 - Product portfolio overview

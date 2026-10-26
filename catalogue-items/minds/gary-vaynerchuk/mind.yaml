@@ -16,6 +16,29 @@ use_cases:
   - "Check if you have earned the right to launch a product to your audience"
   - "Give hard feedback to someone on your team with kindness and candour"
   - "Set long-term goals and a short-term pace without burning out"
+not_for:
+  - "You want to know why your brand is not growing in the wider market: use the Byron Sharp mind, whose public work looks at buying data and broad reach."
+  - "You need a clear position and a pitch for why buyers should pick you: use the April Dunford mind instead."
+  - "You want questions on crypto, investing, medical or legal matters: ask a qualified person, because this AI gives no advice on them."
+output_sample:
+  input:
+    - Your business or project, and who your customer is
+    - Where you post now and how often (optional)
+    - What you have given your audience for free so far (optional)
+    - The fear or doubt that is holding you back (optional)
+  output:
+    - name: Where attention is
+      contains: The one platform to start on, and why your customer's attention may be cheap there.
+    - name: This week's posts
+      contains: What to post this week and how often, shaped to fit that platform.
+    - name: Give before you ask
+      contains: One thing to give away first, and a plan to reply to every comment.
+    - name: The fear in the way
+      contains: The doubt he would likely name as the real block, such as fear of being judged.
+    - name: Launch check
+      contains: Whether you have earned the right to sell, and a small release to try first.
+    - name: Check the app first
+      contains: A reminder to test any app-specific tip against the app as it is today.
 seats:
   - {seat: "Social attention", asks: "Where is your customer's attention right now, and is it underpriced there?"}
   - {seat: "Content and the creator", asks: "What have you given your audience for free before you ask them for anything?"}

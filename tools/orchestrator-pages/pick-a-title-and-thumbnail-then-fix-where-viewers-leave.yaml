@@ -14,6 +14,11 @@ when:
   - You have a video idea and want the title and thumbnail to earn the click.
   - Your videos get views but viewers leave early and you don't know why.
   - You want to pick the next video from what worked, not from a hunch.
+not_for:
+  - "You only want title and thumbnail ideas and have nothing published yet: use the Thumbnail and title planner."
+  - "You want the first seconds of a video ad scored before you film: use the Video hook scorer."
+  - "Your video has too few views to show a pattern: wait for more views before reading the retention report."
+  - "You want views from ads on YouTube read, not a video's own viewers: use the YouTube ad results reader."
 you_give:
   - Your video idea and what the viewer gets
   - Your channel, style and audience
@@ -30,6 +35,29 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the video and your channel. Choose one of the three pairs and publish it.
   - After a week or more, open YouTube Studio, download the audience retention report for that video and give it back with the video link.
+output_sample:
+  input:
+    - Your video idea and what the viewer gets
+    - Your channel, style and audience
+    - Your past results and lessons (optional)
+    - The link to the video once it is published
+    - The audience retention export from YouTube Studio, a week or more after you publish
+  prerequisites:
+    - An AI that can read files, to run the handoff pack
+    - A published video with enough views to show a pattern
+  output:
+    - name: "Step 1: Pairs"
+      contains: The single promise, 12 or more title and thumbnail pairs that each change one thing, and a plan for the first minute.
+    - name: "Step 2: Three to test"
+      contains: Scores on five rules, the titles cut and why, the three picks and how to test each.
+    - name: Pause to publish and export
+      contains: You publish the top pair, wait, then download the retention report from YouTube Studio.
+    - name: "Step 3: Transcript"
+      contains: The video's words with times, from the live video or from captions you paste.
+    - name: "Step 4: Where viewers leave"
+      contains: The loss in the opening, the steep drops matched to what you said, the slow slide and the one change to make.
+    - name: Hand-back summary
+      contains: Each step's file and every MISSING line in one list.
 how_it_works:
   - title: Plan the pairs
     text: Writes the single promise, then at least twelve title and thumbnail pairs that each change one thing, and the first minute that pays off the promise.

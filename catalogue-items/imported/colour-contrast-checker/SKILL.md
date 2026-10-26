@@ -35,6 +35,16 @@ components and graphics such as input borders, icons and focus rings **3:1** (1.
 - Use when the user asks whether a text color is readable on its background.
 - Use when an accessibility audit flags contrast and you want the fix at the token level.
 
+## When Not to Use
+
+- Text over photos, gradients or colours with opacity: the script reads tokens, not pixels, so check those on screen.
+- A full accessibility audit: contrast is one part of WCAG. Use a full audit for the rest.
+- Final sign-off on its own: ask an accessibility specialist to confirm before you publish.
+
+## If the User Gives No CSS File
+
+Ask once for the colour pairs instead: each text colour and the background it sits on, as hex codes, and whether each is body text, large text or a border or icon. Then work out each ratio with the WCAG formula, show the numbers you used, and say these are hand-worked, so close results (within 0.2 of the minimum) need a second check in a contrast tool. Never guess pairs the user did not give. If token names do not tell you which is text and which is background, ask.
+
 ## How It Works
 
 ### Step 1: Run the measurement
@@ -68,6 +78,22 @@ If token names do not follow that pattern, write the real pairs to a JSON file a
 To explore a new palette, `--todos` measures every color against every other. `--json out.json`
 writes the results for further processing. The script's output is in Spanish; ratios and token
 names read the same in any language.
+
+### Reading the script output
+
+The script prints in Spanish. The words mean:
+
+| Script says | Means |
+|---|---|
+| tema claro (por defecto) | light theme (the default) |
+| modo oscuro | dark mode |
+| OK / NO | the pair passes / fails |
+| mín. | minimum ratio needed |
+| sobre | on (text colour on background colour) |
+| sugerencia para | suggestion for |
+| Un solo valor para | one value that passes on every background |
+
+English sample of one result: `NO  3.54:1 (min. 4.5) --color-text #888888 on --color-background #ffffff`, then `suggestion for --color-text: #757575 -> 4.62:1`.
 
 ### Step 2: Check what the script cannot see
 
@@ -126,3 +152,7 @@ it only after the user agrees, and run the script again to show it passes.
 ## Related Skills
 
 - `@wcag-audit-patterns` - For a full WCAG 2.2 audit beyond color contrast.
+
+## Licence Note
+
+The front matter above shows the licence the original author declared (MIT). The collection this skill came from says its written content is CC BY 4.0 (see LICENSE-CONTENT). Keep the credit to the original author either way.

@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It runs set commands and reads the results.
 new_slug: lint-and-type-check-runner
 name: Lint and type check runner
-summary: Run it after a change. It runs your project's checks, fixes real
-  failures and reports what did not run.
+summary: Run your project's lint and type checks after a change. Get a clear pass or fail, plus a plain line for any check that never ran.
 job: test-and-fix-code
 headline: Lint and type check runner
-subhead: A clear pass or fail on your project's lint and type checks after a
-  change, with an honest line for any check that never ran.
+subhead: A clear pass or fail on your project's lint and type checks after a change, with an honest line for any check that never ran.
 explain: |
   A clear pass or fail on your project's lint and type checks after a change, with an honest line for any check that never ran. A check that did not run is not the same as a check that passed.
 
@@ -17,6 +15,10 @@ when:
   - Your AI says the checks pass and you want proof.
   - A project has lint settings but you are not sure what is wired up.
   - Type errors keep slipping into your main branch.
+not_for:
+  - "You need to test how the code behaves when it runs: use your project's own test runner instead."
+  - "You want a full audit of a whole repository or its security: ask a developer or use your project's CI."
+  - "Your project has no lint or type check set up: add one first, or ask a developer to set it up."
 you_give:
   - The project folder
   - The files you changed
@@ -28,8 +30,29 @@ you_get:
   - A list of checks that did not run
   - The commands used and their exit results
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands in your project.
+  - Open your AI tool in your project folder. It needs to run commands, so use a tool that can, such as Claude Code.
+  - Paste this skill, or add it to your tool's skills.
+  - Tell your AI which files you changed. Say it may run your project's own lint and type check scripts.
+  - Ask it to read your scripts first. A script named lint can change files, so check what it does before you agree.
+  - Read the report. Look at the checks that did not run before you trust a pass.
+  - After a pass, commit your change. After a fail, ask your AI to fix the listed errors and run the checks again.
+output_sample:
+  input:
+    - Your project folder
+    - The files you changed
+    - Permission to run your project's own checks
+    - Rules your AI must not relax (optional)
+  prerequisites:
+    - An AI that can run commands in your project
+    - Lint or type check tools already installed in the project
+  output:
+    - name: Commands run
+      contains: Each check your AI ran, such as your lint or type check script, and its exit result.
+    - name: Result per check
+      contains: Pass, fail or not run for each check, with the files it covered.
+    - name: Fixes made
+      contains: Real failures your AI fixed, without weakening rules or deleting your work.
+    - name: Checks that did not run
+      contains: Each missing tool or script, named exactly, so a gap is never reported as a pass.
+    - name: Limits
+      contains: What the checks cannot prove, such as runtime bugs or security flaws.

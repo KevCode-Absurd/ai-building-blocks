@@ -1,88 +1,90 @@
 # Make documents, sheets and slides: AI Blocks
 
-> 84 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 86 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Article draft editor](https://useaiblocks.com/prompts/rough-text-to-article-tidier): Paste rough text. Get a tidy article with a title, summary and headings, in your words.
-- [Article formatter](https://useaiblocks.com/skills/article-formatter): Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
-- [Build a monthly Excel and PowerPoint update](https://useaiblocks.com/workflows/build-a-monthly-excel-and-powerpoint-update): Share dated records and a template. Get a monthly workbook, editable deck and checks linking their numbers.
-- [Case competition slide deck builder](https://useaiblocks.com/skills/case-competition-slide-deck-builder): Share your case, judging rules and analysis. Get a recommendation deck with source notes, financials and backup slides for questions.
-- [Chart maker](https://useaiblocks.com/skills/chart-maker): Give it your data. Get clear charts and dashboards made with matplotlib, seaborn or plotly.
-- [Check a spreadsheet before sharing the results](https://useaiblocks.com/workflows/check-a-spreadsheet-before-sharing-the-results): Share the source files. Get a formula issue list, corrected presentation plan and sharing checklist.
-- [Citation and BibTeX fixer](https://useaiblocks.com/skills/citation-and-bibtex-fixer): Give it DOIs, paper titles or a messy bibliography. Get clean, checked BibTeX entries with duplicates removed.
-- [Class roster file checker](https://useaiblocks.com/skills/class-roster-file-checker): Give it a OneRoster CSV set. Get broken links, bad encodings and manifest errors found, with fixes.
-- [Code review page maker](https://useaiblocks.com/skills/code-review-page-maker): Give it a markdown code review. Get one HTML page with severity tags and diffs that are easy to read.
-- [CV writer](https://useaiblocks.com/skills/cv-writer): Give it your background and a job post. Get a paste-ready CV that passes applicant filters, plus a flaw report.
-- [Data cleaner](https://useaiblocks.com/skills/data-cleaner): Give it a messy dataset. Get missing values, duplicates, wrong types and outliers fixed.
-- [Data file cleanup agent](https://useaiblocks.com/agents/data-file-clean-up-loop): Give it a messy data file. It fixes and re-checks until the file passes, and saves your rules for the next one.
-- [Data file reader and writer](https://useaiblocks.com/skills/data-file-reader-and-writer): Name your CSV, Excel, JSON or Parquet file. Get it read or saved correctly, with errors fixed.
-- [Data quality auditor](https://useaiblocks.com/skills/data-quality-auditor): Give it a dataset. Get a report on gaps, duplicates, odd values and the rules that would catch them.
+- [Article formatter](https://useaiblocks.com/skills/article-formatter): Share plain text or rough Markdown. Get clearer structure, title and summary fields, while keeping the body’s words apart from obvious typos.
+- [Article layout and typo editor](https://useaiblocks.com/prompts/rough-text-to-article-tidier): Share rough text or notes. Get a title, summary, headings and lists while body wording stays intact apart from clear typos.
+- [Browser screenshot taker](https://useaiblocks.com/skills/screen-capture-taker): Capture a browser page when browser capture tools are available. State clearly when desktop capture is unavailable.
+- [Business data migration planner](https://useaiblocks.com/skills/business-data-move-runbook): Plan a business data move with field maps, test imports, final switch checks and a recovery plan.
+- [Case competition slide deck builder](https://useaiblocks.com/skills/case-competition-slide-deck-builder): Build a case competition deck that leads with your answer. Get an editable PowerPoint with charts, financials and backup slides for judges' questions.
+- [Chart maker](https://useaiblocks.com/skills/chart-maker): Share a dataset and the question you want answered. Get a chart or dashboard with clear labels and useful context.
+- [Citation and BibTeX fixer](https://useaiblocks.com/skills/citation-and-bibtex-fixer): Give it IDs, paper titles, or a BibTeX file. Get cleaned entries, duplicate checks, and source mismatches.
+- [Class roster file checker](https://useaiblocks.com/skills/class-roster-file-checker): Check your OneRoster roster files before upload. Get a line-numbered list of broken links, bad encoding and manifest errors, with fixes.
+- [Code review page maker](https://useaiblocks.com/skills/code-review-page-maker): Give it a markdown review with diff blocks and severity notes. Get one HTML page with the diff, comments, jump links and named reviewer.
+- [CV writer](https://useaiblocks.com/skills/cv-writer): Share your background and a job post. Get a paste-ready CV and an ATS risk report.
+- [Data analysis repeatability reviewer](https://useaiblocks.com/workflows/document-a-dataset-analysis-for-reproduction): Review an analysis's files and methods. Document the actual steps, versions and outputs, and flag checks or findings that lack run evidence.
+- [Data quality auditor](https://useaiblocks.com/skills/data-quality-auditor): Share data and quality rules. Get missing values, duplicates and unusual records, with ranked fixes and a score where supported.
+- [Data report writer](https://useaiblocks.com/skills/report-builder): Share data and a report goal. Get checked calculations, tables, chart specs and notes on missing data.
 - [Data story writer](https://useaiblocks.com/skills/data-story-writer): Give it your numbers. Get a clear story with the point, the proof and the next step for your readers.
-- [Deck number refresher](https://useaiblocks.com/skills/deck-number-refresher): Give it a deck and new figures. Get every number updated across the slides, with a change log.
-- [Doc typo and term checker](https://useaiblocks.com/prompts/doc-typo-and-term-checker): Paste a document. Get typos, grammar slips and term clashes listed, with no rewrites.
-- [Document a dataset analysis for reproduction](https://useaiblocks.com/workflows/document-a-dataset-analysis-for-reproduction): Share the source files. Get an analysis inventory, repeatable methods procedure and unsupported claims list.
-- [Document file generator](https://useaiblocks.com/skills/document-file-generator): Describe the slides, report, sheet or PDF. Get a new PPTX, DOCX, XLSX or PDF file built from a JSON spec.
-- [Editable slide deck builder](https://useaiblocks.com/skills/editable-slide-deck-builder): Give it your story and sources. Get a PowerPoint deck with real editable text, tables and charts, plus a quality check.
-- [Empty workbook builder](https://useaiblocks.com/skills/empty-workbook-builder): Give a confirmed field list. Get a formatted empty Excel or CSV file, with no invented rows.
-- [Excel and MATLAB bridge writer](https://useaiblocks.com/skills/excel-and-matlab-bridge-writer): Say what to move between Excel and MATLAB. Get VBA macros that send data, run MATLAB and return results.
+- [Dataset cleaner and validator](https://useaiblocks.com/skills/data-cleaner): Give it a dataset and expected schema. Get a quality profile, proposed corrections, validation results and a change log.
+- [Document generation planner](https://useaiblocks.com/agents/agency-specialized-document-generator): Get a script that builds a PDF, Word, slide or Excel file from your data, with the right library for the format and a template you can reuse.
+- [Document layout engine designer](https://useaiblocks.com/agents/agency-engineering-universal-document-compiler): Plan how YAML or JSON data becomes a paged PDF. Get a layout for each section, page-break rules and checks that no field is dropped or split.
+- [Document proofreader](https://useaiblocks.com/prompts/doc-typo-and-term-checker): Paste a document. Get typos, grammar slips and term clashes listed, with no rewrites.
+- [Editable PowerPoint deck builder](https://useaiblocks.com/skills/editable-slide-deck-builder): Turn a brief and sources into an editable PowerPoint deck. Get a story plan, layout details, native slide objects and a record of checks.
+- [Empty workbook builder](https://useaiblocks.com/skills/empty-workbook-builder): Turn a field list you already agreed into an empty Excel workbook or CSV, with clean headings and formats. Use it for a manual register or template.
+- [Excel and MATLAB bridge writer](https://useaiblocks.com/skills/excel-and-matlab-bridge-writer): Give it Excel cells, MATLAB commands and result cells. Get Spreadsheet Link VBA or worksheet formulas to review and run locally.
+- [Excel and PowerPoint version checker](https://useaiblocks.com/workflows/review-revised-excel-and-powerpoint-files): Share old and revised workbooks and decks. Get change reports and checks that the new slides use the new workbook's figures.
 - [Excel input form builder](https://useaiblocks.com/skills/excel-input-form-builder): Share field rules. Get an Excel form with dropdowns, clear entry cells and checks.
+- [Excel input workbook builder](https://useaiblocks.com/workflows/prepare-an-excel-input-workbook-for-handover): Share field rules, allowed values and Excel version. Get an input workbook, validation checks and a guide for the next owner.
 - [Excel monthly rollup builder](https://useaiblocks.com/skills/excel-monthly-rollup-builder): Share dated records. Get an Excel monthly summary with checked counts, totals and rates.
 - [Excel PivotTable refresh planner](https://useaiblocks.com/skills/excel-pivot-refresh-planner): Share a PivotTable workbook. Get source checks and a refresh plan for Excel.
 - [Excel print layout fixer](https://useaiblocks.com/skills/excel-print-layout-fixer): Share a workbook and paper size. Get readable print settings and page checks.
+- [Excel report and PowerPoint update writer](https://useaiblocks.com/workflows/build-a-monthly-excel-and-powerpoint-update): Build a monthly workbook and editable slide update from dated records. Check the numbers across both and add speaking notes.
 - [Excel table join reconciler](https://useaiblocks.com/skills/excel-table-join-reconciler): Share two Excel tables. Get matched rows, unmatched records and duplicate-key checks.
 - [Excel to PowerPoint number checker](https://useaiblocks.com/skills/excel-powerpoint-number-checker): Share Excel and PowerPoint files. Get checks that slide figures match their workbook sources.
 - [Excel workbook change reviewer](https://useaiblocks.com/skills/excel-workbook-change-reviewer): Share old and new workbooks. Get changed values, formulas and file features explained.
-- [Excel workbook handover writer](https://useaiblocks.com/skills/excel-handover-guide-writer): Share your workbook and update steps. Get a guide for its next owner.
-- [Extract a scanned document and verify key facts](https://useaiblocks.com/workflows/extract-a-scanned-document-and-verify-key-facts): Share the source files. Get extracted text, a page-linked fact table and uncertain readings.
-- [Fast data table analyst](https://useaiblocks.com/skills/fast-data-table-analyst): Give it a large data file. Get fast cleaning, grouping and analysis with Polars code that you can rerun.
-- [Finance deck review for India](https://useaiblocks.com/skills/finance-deck-quality-checker): Share a finance deck. Find mismatched numbers, unclear wording and layout issues, using Indian fiscal years and units.
+- [Excel workbook handover writer](https://useaiblocks.com/skills/excel-handover-guide-writer): Write a handover guide for an Excel workbook so its next owner knows the inputs, formulas, update steps and risks. Your original file stays unchanged.
+- [Flat JSON record shuffler](https://useaiblocks.com/skills/shuffle-flat-json-records): Share a flat JSON array. Get reordered records with checks that values stayed intact.
 - [HTML slide deck maker](https://useaiblocks.com/skills/html-slide-deck-maker): Describe your talk or share a PowerPoint. Get an animated slide deck in one HTML file that opens in any browser.
-- [Interactive chart maker](https://useaiblocks.com/skills/interactive-chart-maker): Give it your data. Get an interactive Plotly chart with hover, zoom and pan that you can embed in a page.
-- [JSON query helper](https://useaiblocks.com/skills/json-query-helper): Describe the JSON data and what you need. Get a working jq command that filters, reshapes or sums it.
-- [Lab instrument data converter](https://useaiblocks.com/skills/lab-instrument-data-converter): Give it instrument output files. Get them converted to Allotrope JSON or flat CSV for your lab systems.
-- [LaTeX paper converter](https://useaiblocks.com/skills/latex-paper-converter): Give it your paper and a new journal template. Get the paper rebuilt in that format.
-- [LibreOffice document builder](https://useaiblocks.com/skills/libreoffice-document-builder): Describe the document. Get an ODT file, or a conversion to Word, PDF or HTML.
-- [LibreOffice slide builder](https://useaiblocks.com/skills/libreoffice-slide-builder): Describe the slides. Get an ODP deck, or a conversion to PowerPoint or PDF.
-- [LibreOffice spreadsheet builder](https://useaiblocks.com/skills/libreoffice-spreadsheet-builder): Describe the sheet. Get an ODS file with formulas and charts, or a conversion to Excel or CSV.
-- [Make a research report easier to share](https://useaiblocks.com/workflows/make-a-research-report-easier-to-share): Share the source files. Get an executive summary, slide brief and fact-check list.
-- [Markdown slide deck maker](https://useaiblocks.com/skills/markdown-slide-deck-maker): Give it a markdown outline. Get one HTML slide deck you present with arrow keys, with speaker notes.
-- [Markdown to web page maker](https://useaiblocks.com/skills/markdown-to-web-page-maker): Give it a long markdown file. Get one HTML page with a contents bar, search and light interactivity.
-- [MATLAB report builder](https://useaiblocks.com/skills/matlab-report-builder): Give it your results. Get a PDF, Word or HTML report built with titles, chapters, tables and charts.
-- [Mermaid chart writer](https://useaiblocks.com/skills/mermaid-chart-writer): Describe a flow, system or database. Get a Mermaid diagram you can paste into docs, in the right style.
-- [Messy spreadsheet cleaner](https://useaiblocks.com/skills/messy-spreadsheet-cleaner): Give it messy data. Get spacing, text numbers, dates and duplicates fixed, with mixed columns flagged.
-- [Notebook builder](https://useaiblocks.com/skills/notebook-builder): Say what to explore or teach. Get a clean Jupyter notebook, ready to run.
-- [PDF converter](https://useaiblocks.com/skills/pdf-converter): Give it a PDF and the format you want. Get a faithful Markdown, HTML, Word or JSON copy with tables kept intact.
-- [PDF maker and reader](https://useaiblocks.com/skills/pdf-maker-and-reader): Give it a PDF or a brief. Get the text pulled out or a new PDF with its layout checked.
-- [PDF toolkit](https://useaiblocks.com/skills/pdf-toolkit): Give it a PDF. Get text pulled out, pages merged, split, filled, redacted or checked, with the original kept safe.
-- [PowerPoint accessibility reviewer](https://useaiblocks.com/skills/powerpoint-accessibility-reviewer): Share your deck. Get specific fixes for reading order, titles, alternative text and readable slides.
-- [PowerPoint appendix navigator](https://useaiblocks.com/skills/powerpoint-appendix-navigator): Share a deck with backup slides. Get an appendix index and checked return links.
-- [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder): Share your deck and sharing rules. Get a readable audience handout with private material excluded.
-- [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer): Share old and new decks. Get changes to slides, charts, notes and links explained.
-- [PowerPoint editable chart rebuilder](https://useaiblocks.com/skills/powerpoint-chart-data-rebuilder): Share chart data and your deck. Get editable PowerPoint charts with checked labels and values.
-- [PowerPoint slide size converter](https://useaiblocks.com/skills/powerpoint-slide-size-converter): Share your deck and target size. Get a reflowed PowerPoint copy with layout checks.
-- [PowerPoint speaker notes builder](https://useaiblocks.com/skills/powerpoint-speaker-note-builder): Share your deck and talk length. Get speaker notes, source links and a timing plan.
-- [PowerPoint template populator](https://useaiblocks.com/skills/powerpoint-template-populator): Share your template and approved content. Get an editable PowerPoint deck that follows its layouts.
-- [Prepare a PowerPoint deck for presenting and sharing](https://useaiblocks.com/workflows/prepare-a-powerpoint-deck-for-presenting-and-sharing): Share your deck and sharing rules. Get navigation, speaker notes, accessibility findings and an audience handout.
-- [Prepare an Excel input workbook for handover](https://useaiblocks.com/workflows/prepare-an-excel-input-workbook-for-handover): Share field rules. Get a checked Excel input workbook and a guide for its next owner.
-- [Prepare research poster source notes](https://useaiblocks.com/workflows/prepare-research-poster-source-notes): Share the source files. Get a poster content hierarchy, figure source index and wording review.
-- [Presentation builder](https://useaiblocks.com/skills/presentation-builder): Give it an outline or document. Get a polished slide deck for your audience in Marp, reveal.js or PPTX.
-- [Python chart maker](https://useaiblocks.com/skills/python-chart-maker): Give it your data. Get a clean Matplotlib chart, static, animated or interactive, ready to save as an image.
-- [Repo slide deck builder](https://useaiblocks.com/skills/repo-slide-deck-builder): Point it at a repo. Get a slide deck with cited facts that warns you when the code changes.
-- [Report builder](https://useaiblocks.com/skills/report-builder): Give it your data. Get a clear report with charts, such as a sprint retro, financial summary or postmortem.
-- [Research poster builder](https://useaiblocks.com/skills/research-poster-builder): Give it your approved text and images. Get an editable PowerPoint poster at print size, checked for access and file safety.
-- [Research poster maker](https://useaiblocks.com/skills/research-poster-maker): Give it your results and figures. Get a printable research poster in LaTeX as a PDF.
-- [Review revised Excel and PowerPoint files](https://useaiblocks.com/workflows/review-revised-excel-and-powerpoint-files): Share old and new Excel and PowerPoint files. Get change reports and checks that revised figures match.
-- [Safe database query runner](https://useaiblocks.com/skills/safe-database-query-runner): Ask a question about your Postgres data. Get a read-only query run with write protection and the results back.
-- [Scanned PDF text reader](https://useaiblocks.com/skills/scanned-pdf-text-reader): Give it PDFs, Office files or scans. Get text with page positions, read with OCR when needed, all on your computer.
-- [Screen capture taker](https://useaiblocks.com/skills/screen-capture-taker): Ask for a screen, a window or a part of one. Get a saved screenshot.
-- [Screenshot privacy masker](https://useaiblocks.com/skills/screenshot-privacy-masker): Give it a screenshot. Get phone numbers, emails, keys and IDs masked on your own computer before you share it.
-- [Slide deck image maker](https://useaiblocks.com/skills/slide-deck-image-maker): Give it your content. Get a slide deck outline and one drawn image per slide, ready to share or read.
-- [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker): Give it a spreadsheet. Get it cleaned, reconciled and analysed with formulas and formatting kept intact.
+- [India finance slide reviewer](https://useaiblocks.com/skills/finance-deck-quality-checker): Share a finance deck. Find mismatched numbers, unclear wording and layout issues, using Indian fiscal years and units.
+- [Indian spreadsheet data cleaner](https://useaiblocks.com/skills/messy-spreadsheet-cleaner): Share an Excel file or range. Review fixes for spaces, dates, text numbers and duplicates, with original data protected.
+- [Interactive chart maker](https://useaiblocks.com/skills/interactive-chart-maker): Share your data. Get an interactive Plotly chart with hover, zoom and pan to embed in a page.
+- [jq JSON query writer](https://useaiblocks.com/skills/json-query-helper): Get a working jq command for your JSON. Describe your data and goal, and it filters, reshapes or totals the data and explains each part.
+- [JSON document file generator](https://useaiblocks.com/skills/document-file-generator): Build a new PowerPoint, Word, Excel or PDF file from a JSON layout. Get the generated file and basic file checks.
+- [Jupyter notebook builder](https://useaiblocks.com/skills/notebook-builder): Describe an experiment or lesson. Build a Jupyter notebook with clear cells, notes and checks for the target environment.
+- [Lab instrument data converter](https://useaiblocks.com/skills/lab-instrument-data-converter): Convert lab instrument files into Allotrope JSON or flat CSV, with parser code for handoff.
+- [LaTeX paper converter](https://useaiblocks.com/skills/latex-paper-converter): Bring your LaTeX paper and journal template. Get converted source and a reusable conversion script.
+- [LibreOffice document builder](https://useaiblocks.com/skills/libreoffice-document-builder): Build a document from a plain description and turn it into Word, PDF or HTML, or make many letters from one template and a list, with LibreOffice.
+- [LibreOffice slide builder](https://useaiblocks.com/skills/libreoffice-slide-builder): Build plain slides from an outline with LibreOffice, then convert the deck to PowerPoint or PDF. Handle a whole folder of decks in one run.
+- [LibreOffice spreadsheet builder](https://useaiblocks.com/skills/libreoffice-spreadsheet-builder): Build a spreadsheet from a plain description. You get an ODS file with formulas and charts, or a copy in Excel, CSV or PDF format.
+- [Markdown slide deck maker](https://useaiblocks.com/skills/markdown-slide-deck-maker): Share Markdown with slide breaks and notes. Get a branded HTML deck with keyboard controls, presenter mode and PDF printing.
+- [Markdown to web page maker](https://useaiblocks.com/skills/markdown-to-web-page-maker): Share Markdown with at least 100 lines. Get a branded HTML page with a contents bar, search and code-copy buttons.
+- [MATLAB data file reader and writer](https://useaiblocks.com/skills/data-file-reader-and-writer): Share CSV, Excel, JSON, Parquet or XML files. Get MATLAB import/export code with format, missing-value and data-integrity checks.
+- [MATLAB report builder](https://useaiblocks.com/skills/matlab-report-builder): Share MATLAB results or a Simulink model. Build a PDF, Word or HTML report with repeatable code.
+- [Mermaid chart writer](https://useaiblocks.com/skills/mermaid-chart-writer): Describe a flow, system, database or plan and get Mermaid diagram code you can paste into GitHub, a README or a wiki, with the right chart type.
+- [Nonprofit annual report planner](https://useaiblocks.com/skills/nonprofit-annual-report-planner): Get a report outline, a financial check and a donor recognition checklist.
+- [PDF converter](https://useaiblocks.com/skills/pdf-converter): Turn a PDF into your chosen file type, with layout checks, cleanup, and remaining limits noted.
+- [PDF file editor](https://useaiblocks.com/skills/pdf-toolkit): Share PDFs and the changes you need. Get new files for extraction, merging, forms or other edits, with checks and limits.
+- [PDF layout designer](https://useaiblocks.com/agents/agency-engineering-pdf-engine-architect): Fix HTML to PDF layout for A4, Letter or custom pages. Get print CSS, page-break rules and checks that catch blank pages and blurry text.
+- [PDF maker and reader](https://useaiblocks.com/skills/pdf-maker-and-reader): Read a PDF or make a new one, then check every page as an image. Catch cut-off text and layout slips in your PDF before you send it.
+- [Polars data table analyst](https://useaiblocks.com/skills/fast-data-table-analyst): Share a data file and question. Get grouped results and Polars code to rerun.
+- [PowerPoint accessibility reviewer](https://useaiblocks.com/skills/powerpoint-accessibility-reviewer): Check your PowerPoint accessibility: get fixes for slide titles, reading order, alt text and hard-to-read slides, plus a record of each check.
+- [PowerPoint appendix navigator](https://useaiblocks.com/skills/powerpoint-appendix-navigator): Add an appendix index and working return links to your PowerPoint deck with backup slides. Get a link-test register that shows what passed.
+- [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder): Turn your PowerPoint deck into an audience handout PDF. Private notes, hidden slides and comments stay out, and the export is checked.
+- [PowerPoint deck change reviewer](https://useaiblocks.com/skills/powerpoint-deck-change-reviewer): Compare an old and a new PowerPoint deck. Get every changed message, chart number, note, link and slide move in one list.
+- [PowerPoint editable chart rebuilder](https://useaiblocks.com/skills/powerpoint-chart-data-rebuilder): Turn picture charts in your deck into editable PowerPoint charts from your real data, with every value checked against the source.
+- [PowerPoint presenter handout and notes writer](https://useaiblocks.com/workflows/prepare-a-powerpoint-deck-for-presenting-and-sharing): Share your deck, talk length and sharing rules. Get appendix links, speaker notes, accessibility findings and an audience handout.
+- [PowerPoint slide size converter](https://useaiblocks.com/skills/powerpoint-slide-size-converter): Change a deck from 4:3 to 16:9 or any size. Get a reflowed PowerPoint copy with no stretched images and a list of layouts to check.
+- [PowerPoint speaker notes builder](https://useaiblocks.com/skills/powerpoint-speaker-note-builder): Turn your PowerPoint deck into speaker notes with source links, transitions and a timing plan for your talk length. Your original file stays safe.
+- [PowerPoint storyboard deck builder](https://useaiblocks.com/skills/storyboard-to-powerpoint-deck-builder): Turn your content, sources and audience into a storyboard and an editable PowerPoint deck for a business talk, lesson or report.
+- [PowerPoint template deck builder](https://useaiblocks.com/skills/powerpoint-template-populator): Share your PowerPoint template, outline and approved content. Build an editable deck using its layouts, with source notes and checks.
+- [Project Gutenberg book text finder](https://useaiblocks.com/skills/project-gutenberg-book-text-finder): Find a public-domain book on Project Gutenberg by title or number. You get its details and clean, readable text to use for research.
+- [Python chart maker](https://useaiblocks.com/skills/python-chart-maker): Share your data. Get a clean Matplotlib chart, static, animated or interactive, ready to save as an image.
+- [Repo slide deck builder](https://useaiblocks.com/skills/repo-slide-deck-builder): Share a repo. Get a slide deck with cited facts that warns you when the code changes.
+- [Research poster builder](https://useaiblocks.com/skills/research-poster-builder): Use approved text, local images, and print rules to build a PowerPoint poster you can edit.
+- [Research poster maker](https://useaiblocks.com/skills/research-poster-maker): Share results, figures and size. Get editable LaTeX and a checked PDF when tools are available.
+- [Safe database query runner](https://useaiblocks.com/skills/safe-database-query-runner): Ask a question about your Postgres data in plain words. Get a read-only SQL query run for you, with the results back and write commands blocked.
+- [Scanned document reader and fact checker](https://useaiblocks.com/workflows/extract-a-scanned-document-and-verify-key-facts): Read text from a scan. Check key names and numbers against the original pages and flag what is unclear.
+- [Scanned PDF text reader](https://useaiblocks.com/skills/scanned-pdf-text-reader): Give it PDFs, Office files, or scans. Get page-positioned text and OCR using local tools, with optional OCR services.
+- [Screenshot privacy masker](https://useaiblocks.com/skills/screenshot-privacy-masker): Mask phone numbers, emails, keys and IDs in a screenshot on your own computer. Check the masked copy before you share it.
+- [Slide deck number updater](https://useaiblocks.com/skills/deck-number-refresher): Update every number in your deck with new figures. Find each old value, approve the plan, and get the refreshed deck plus a change log.
+- [Slide outline and image maker](https://useaiblocks.com/skills/slide-deck-image-maker): Give it content. Review a slide outline, then create one image for each approved slide.
+- [Spreadsheet and CSV cleaner](https://useaiblocks.com/agents/data-file-clean-up-loop): Clean a spreadsheet or CSV using agreed rules. Recheck each round and keep unresolved cells for a person to decide.
+- [Spreadsheet checker](https://useaiblocks.com/skills/spreadsheet-checker): Check a spreadsheet for odd totals, broken formulas and messy data. Your original stays safe, and you get findings with proof and a new file.
 - [Spreadsheet formula auditor](https://useaiblocks.com/skills/spreadsheet-formula-auditor): Give it a spreadsheet. Get formula errors, broken links and model checks such as balance sheet tie-out listed.
-- [Storyboard to PowerPoint deck builder](https://useaiblocks.com/skills/storyboard-to-powerpoint-deck-builder): Share your content, sources and audience. Get a storyboard and PowerPoint deck for a business talk, lesson or report.
-- [Technical doc proofreader](https://useaiblocks.com/skills/technical-doc-proofreader): Give it an English technical doc. Get a list of typos, grammar slips, term clashes and jargon, with no rewrites.
-- [Turn a messy spreadsheet into a clean slide deck](https://useaiblocks.com/workflows/turn-a-messy-spreadsheet-into-a-clean-slide-deck): Give it a messy data file. Get clean, checked data, a written story and slides built from it.
-- [Turn a report into an editable briefing deck](https://useaiblocks.com/workflows/turn-a-report-into-an-editable-briefing-deck): Share the source files. Get an editable briefing deck and a content and layout check.
-- [Turn rough notes into a checked Word handout](https://useaiblocks.com/workflows/turn-rough-notes-into-a-checked-word-handout): Share the source files. Get an edited handout and a document quality review.
-- [Web page data extractor](https://useaiblocks.com/skills/web-page-data-extractor): Give it page links. Get tables, lists and prices as a CSV or JSON file. Collects data from websites.
-- [Web page to clean text converter](https://useaiblocks.com/skills/web-page-to-clean-text-converter): Give it a web page link. Get the article as clean text without clutter. Collects data from websites.
-- [X post reader](https://useaiblocks.com/skills/x-post-reader): Give it an X post link. Get the text, author and numbers as clean data. Collects data from websites.
+- [Spreadsheet results reviewer](https://useaiblocks.com/workflows/check-a-spreadsheet-before-sharing-the-results): Check formulas and source totals. Explain the checked results with clear units, dates and limits before you share them.
+- [Technical doc proofreader](https://useaiblocks.com/skills/technical-doc-proofreader): Share an English technical document. Get specific language fixes and fact-check flags without a full rewrite.
+- [Web page data extractor](https://useaiblocks.com/skills/web-page-data-extractor): Share page links. Get tables, lists and prices as a CSV or JSON file. Collects data from websites.
+- [Web page to clean text converter](https://useaiblocks.com/skills/web-page-to-clean-text-converter): Give it a page link. Get the article text with menus and ads removed, or save it as Markdown.
+- [Word handout writer and layout reviewer](https://useaiblocks.com/workflows/turn-rough-notes-into-a-checked-word-handout): Share notes, readers and the required format. Get an edited Word handout, a PDF review copy and a page-by-page layout check.
+- [X post reader](https://useaiblocks.com/skills/x-post-reader): Share an X post link. Get available text, author and engagement counts with the fetch time.

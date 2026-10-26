@@ -1,46 +1,110 @@
 new_slug: extra-week-revenue-comparability
 name: Extra-week revenue comparability schedule
 headline: Extra-week revenue comparability schedule
-summary: Isolate an evidenced extra fiscal week before comparing annual revenue growth.
+summary: Take one extra fiscal week out of this year's revenue to see real growth. You get reported growth and comparable growth side by side.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A reported-to-comparable revenue growth bridge with the calendar assumption exposed. Share reported current/prior revenue, actual or separately estimated extra-week revenue and fiscal-calendar disclosures.
-explain: |-
-  A reported-to-comparable revenue growth bridge with the calendar assumption exposed.
+subhead: Give it this year's and last year's reported revenue, the revenue of the extra week and your fiscal calendar. It takes the extra week out of the longer year and compares like with like. You get reported growth, comparable growth and the gap between them.
 
-  Issuer revenue and cash-flow reconciliation. Illustrative figures. Reported1,060/1,000-1=6%; subtract the evidenced20 extra week to obtain1,040/1,000-1=4%. Extra-week revenue40 leaves2% comparable growth.
+explain: |-
+  A 53-week year sells for one more week than a 52-week year, so reported revenue growth looks better than it was. Comparing the two years straight overstates growth by about the sales of that extra week. An extra-week revenue adjustment removes that effect so growth is fair.
+
+  This skill finds the extra week in your fiscal calendar and takes it out of the longer year. It uses the week's real revenue when you have it. If you only have an estimate, it labels it as an estimate. It does not assume every week sells the same, because holiday weeks do not.
+
+  Both growth rates stay on the page, so a reader sees what the adjustment did. It covers one extra week in the current year. It does not rebuild a full day-by-day calendar.
+
 when:
-  - You need a reported-to-comparable revenue growth bridge with the calendar assumption exposed.
-  - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your company moved from a 52-week to a 53-week fiscal year and growth looks too good.
+  - An investor or board member asks for growth with the extra week taken out.
+  - You are reading a retailer's annual results and the filing names an extra week.
+  - A reviewer wants to trace a comparable growth figure back to its inputs.
+
+not_for:
+  - "Growth is bent by currency, not by a calendar week. Use the Constant-currency revenue bridge."
+  - "Growth is bent by buying or selling businesses. Use the Organic revenue perimeter bridge."
+  - "The extra week sits in last year, or the calendar moved by days or holidays. This only removes one extra week from the current year. Ask your accountant."
+
 you_give:
-  - Reported current/prior revenue, actual or separately estimated extra-week revenue and fiscal-calendar disclosures.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "Reported revenue for this year and last year, from the annual report or accounts"
+  - "Revenue for the extra week, from weekly sales records or a company disclosure"
+  - "An estimate of that week, if there is no real figure (optional, and it is labelled as an estimate)"
+  - "Your fiscal calendar: the start and end dates of both years and which one has the extra week"
+  - "The currency and scale, such as thousands or millions"
 you_get:
-  - A reported-to-comparable revenue growth bridge with the calendar assumption exposed.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "Comparable revenue: this year less the extra week"
+  - "Reported growth and comparable growth, side by side"
+  - "The gap between them, in percentage points"
+  - "A note on every estimate and calendar assumption"
+  - "A list of anything missing"
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Add the skill to your AI, or copy it into a new chat in Claude, ChatGPT or Gemini. Attach the annual report or a sales sheet if your AI reads files."
+  - "Give both years' reported revenue and your fiscal calendar. Say which year has the extra week."
+  - "Give the extra week's revenue, or say you only have an estimate and how you made it."
+  - "Check the assumptions block before the growth figures. The extra week must match the same business and the same dates as the revenue it comes out of."
+  - "Read both growth rates together. Do not quote the comparable rate without the reported rate."
+  - "A reviewer should check the sources before anyone uses the result in a report or a filing."
+
 how_it_works:
-  - title: 1. Read the fiscal calendar to identify the extra week and any shift in holiday or trading days
-    text: Read the fiscal calendar to identify the extra week and any shift in holiday or trading days.
-  - title: 2. Use separately evidenced extra-week revenue rather than automatically treating every week as average; subtract it from the longer current period
-    text: Use separately evidenced extra-week revenue rather than automatically treating every week as average; subtract it from the longer current period.
-  - title: 3. Compare the adjusted amount with the matching shorter prior period and disclose remaining calendar-shift effects or estimates
-    text: Compare the adjusted amount with the matching shorter prior period and disclose remaining calendar-shift effects or estimates.
+  - title: Reads the calendar
+    text: Finds the extra week and any move of holidays or trading days.
+  - title: Takes the extra week out
+    text: Subtracts the extra week's own revenue from the longer year, not an average week.
+  - title: Compares like with like
+    text: Divides the adjusted year by the shorter prior year and subtracts one.
+  - title: Shows both rates
+    text: Keeps reported growth next to comparable growth and shows the gap.
+  - title: Marks what is assumed
+    text: Labels an estimated week as an assumption and names any calendar effect left in.
+
 output_shape: |-
-  A reported-to-comparable revenue growth bridge with the calendar assumption exposed.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES
+  <figure> | <source> | <date> | <currency, scale, period>
+
+  INPUTS AND ASSUMPTIONS
+  Revenue this year / last year: <numbers> | Extra week: <amount, actual or estimate> | Calendar: <dates, extra week position>
+
+  GROWTH BRIDGE
+  Reported growth: <this year / last year - 1>
+  Comparable revenue: <this year less extra week>
+  Comparable growth: <comparable / last year - 1>
+  Gap: <reported less comparable, in points>
+
+  CHECKS RUN
+  <check> | <result>
+
+  MISSING
+  <figure and what it blocked>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+
+output_sample:
+  input:
+    - "Reported revenue for this year and last year"
+    - "Revenue of the extra week, actual or estimated"
+    - "Your fiscal calendar with the dates of both years"
+    - "The currency and scale"
+  prerequisites:
+    - "Annual accounts or sales records for both years"
+    - "A person who can confirm which year has the extra week"
+  output:
+    - name: "SCOPE AND SOURCES"
+      contains: "Each figure with where it came from, its date, currency, scale and the period it covers."
+    - name: "INPUTS AND ASSUMPTIONS"
+      contains: "The revenue figures, the extra week's amount marked actual or estimate, and the calendar facts."
+    - name: "GROWTH BRIDGE"
+      contains: "Reported growth, comparable revenue, comparable growth and the gap between the two rates."
+    - name: "CHECKS RUN"
+      contains: "Each check and its result, including whether the arithmetic script ran."
+    - name: "MISSING"
+      contains: "Any figure or calendar fact it could not find, and what that blocked."
+    - name: "CHECKS MISSED"
+      contains: "Every check that failed or could not run, or none."
+
+next: [constant-currency-revenue-bridge, organic-revenue-perimeter-bridge]
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -48,29 +112,36 @@ tweaks:
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
     how: The extra-week amount is attributed to the correct period and business perimeter.
+
 judge:
   - The extra-week amount is attributed to the correct period and business perimeter.
   - Reported growth remains visible alongside the adjusted convention.
   - Source each balance, flow, period, perimeter, currency and sign; distinguish a true zero from missing evidence.
   - Preserve reported measures beside analytical measures and retain unexplained residuals.
+
 test:
   - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
+
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
       why: Create, recalculate, render and reopen the requested native workbook.
     - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
   inputs:
     - Dated primary financial records and the applicable contractual definitions.
     - A named reviewer and an explicit financial question.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Fiscal year
+    meaning: The 12-month period a company reports on. Some use 52 or 53 whole weeks, so one year can hold an extra week.
+  - term: Comparable growth
+    meaning: Growth after taking out something that makes the two years unlike, here one extra week.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A second check that compares two records or totals and explains any gap.

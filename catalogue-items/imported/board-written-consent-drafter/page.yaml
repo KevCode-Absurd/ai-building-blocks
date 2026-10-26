@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Wording and who must sign matter.
 new_slug: board-written-consent-drafter
 name: Board written consent drafter
-summary: Describe the decision your directors must approve. Get a written
-  consent to sign instead of a meeting. Have a lawyer check it.
+summary: Describe the board decision you need approved. Get a written consent draft, a signing checklist and conflict flags, ready for a lawyer to check.
 job: check-contracts
 headline: Board written consent drafter
-subhead: When directors must approve something, a written consent lets them sign
-  instead of meeting. This skill drafts that consent in your house style,
-  starting from the closest past example in your own files.
+subhead: When directors must approve something, a written consent lets them sign instead of meeting. This skill drafts that consent in your house style, starting from the closest past example in your own files.
 explain: |
   When directors must approve something, a written consent lets them sign instead of meeting. This skill drafts that consent in your house style, starting from the closest past example in your own files.
 
@@ -18,6 +15,10 @@ when:
   - You want one consent that covers several resolutions.
   - A director may have a conflict and you need it flagged.
   - You need to track who has signed and who has not.
+not_for:
+  - "You need a full board meeting with minutes and a vote: ask your corporate lawyer or company secretary, since this only drafts a written consent."
+  - "The action is a major one-off, like a sale of the company or a big financing: bring in outside counsel first, then use this only for the paperwork."
+  - "You need a live check of your state's consent and notice rules: ask a licensed lawyer, since this skill has no legal database to look them up in."
 you_give:
   - A description of the action to approve
   - Your past consents or sample wording
@@ -29,10 +30,27 @@ you_get:
   - Conflict and notice flags
   - Prompts for what to review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Where the skill points to /corporate-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code running or paid tool is needed.
+  - "Add your setup details: board members, state of incorporation and house wording. If you have no setup file, type these in the chat."
+  - Paste one or two past consents from your files. If you have none, paste any sample consent wording you like.
+  - Describe the action to approve in a sentence or two. Name any director who may have a conflict.
+  - If the skill warns this is a major action, stop and talk to outside counsel before going on.
+  - Read the draft and the checklists. Have a licensed lawyer confirm the state rules and the wording before anyone signs.
+output_sample:
+  input:
+    - A short description of the action the board must approve
+    - Your past consents or sample resolution wording
+    - Your board members and your state of incorporation
+    - Any director who may have a conflict (optional)
+  prerequisites:
+    - Your setup file (CLAUDE.md) with board members, state and house wording, or those details typed into the chat
+    - A past consent from your files, or the seed consents in your setup file, to use as the base
+  output:
+    - name: Consent draft
+      contains: The full written consent in your house format, with resolutions based on the closest past example, ready for a lawyer to review.
+    - name: Pre-execution note
+      contains: A short note at the top saying this is a draft for attorney review, to remove before signing.
+    - name: Signatory checklist
+      contains: Each director who must sign, any conflict disclosures, and the state notice rule to confirm.
+    - name: Review prompts
+      contains: "A checklist to run before circulating: exact resolution wording, effective date, exhibits, signers, conflicts and outside counsel review."

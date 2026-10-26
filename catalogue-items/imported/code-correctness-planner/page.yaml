@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It proves the logic step by step before coding.
 new_slug: code-correctness-planner
 name: Code correctness planner
-summary: Give it a tricky function. It writes the rules and edge cases first,
-  then code that keeps them.
+summary: Check a tricky function before you trust it. Your AI writes the rules and edge cases first, then code that keeps them.
 job: test-and-fix-code
 headline: Code correctness planner
-subhead: A tricky function gets its rules written down before any code, so
-  off-by-one and empty-input bugs get caught early. Tests alone often miss
-  these, because the bug lives in the contract, not the loop body.
+subhead: A tricky function gets its rules written down before any code, so off-by-one and empty-input bugs get caught early. Tests alone often miss these, because the bug lives in the contract, not the loop body.
 explain: |
   A tricky function gets its rules written down before any code, so off-by-one and empty-input bugs get caught early. Tests alone often miss these, because the bug lives in the contract, not the loop body.
 
@@ -18,6 +15,10 @@ when:
   - A function passes tests but you do not trust it.
   - You keep hitting off-by-one errors with duplicates or empty lists.
   - You think "I know this algorithm" and want a second check.
+not_for:
+  - "You need a one-line change or simple code: ask your AI to write it plainly, with no extra steps."
+  - "You have not picked an algorithm yet: choose one first, then come back to check it."
+  - "You want tests for code that already works: ask your AI to write unit tests or property-based tests instead."
 you_give:
   - The function you want written or reviewed
   - The chosen algorithm (optional)
@@ -28,7 +29,28 @@ you_get:
   - An edge case list
   - Code that matches those rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code running or paid tool is needed.
+  - Paste your function and name its language. Say if you want it written or checked.
+  - Add the algorithm you chose and any awkward inputs you know of (optional).
+  - Read the contract, invariant and edge cases first. Fix any rule that is wrong before you read the code.
+  - Run the final code on your own tests. Then add property-based tests to cover more inputs.
+output_sample:
+  input:
+    - The function you want written or checked, with its language
+    - The algorithm you chose (optional)
+    - Awkward inputs you already know about (optional)
+  prerequisites:
+    - An algorithm already chosen, before the loop is written
+  output:
+    - name: Contract
+      contains: What the function takes, what it must return, and what it expects from the caller.
+    - name: Invariant
+      contains: One sentence on what stays true on every pass of each loop.
+    - name: Base case and stop argument
+      contains: Where recursion ends, and why each loop or call must finish.
+    - name: Edge case table
+      contains: Empty input, duplicates, boundary values and overflow, with how each is handled.
+    - name: Code
+      contains: The function, with a comment on each loop or recursion stating its rule.
+    - name: Verification
+      contains: A check that the code keeps each rule that was written down.

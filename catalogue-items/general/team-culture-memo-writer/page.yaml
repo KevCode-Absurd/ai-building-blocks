@@ -1,6 +1,6 @@
 new_slug: team-culture-memo-writer
 name: "Team culture memo writer"
-summary: "Describe your team and how you want it to work. Get a short culture memo with a keeper test and feedback rules."
+summary: "Write a one-page team culture memo from your team's results and recent problems. It sets decisions, a keeper test and feedback rules."
 job: lead-people
 thinking: medium
 thinking_why: "It weighs which rules to drop and which behaviours matter most."
@@ -10,13 +10,17 @@ subhead: "Describe your team, its work and what has gone wrong. It names the res
 
 explain: |
   Most culture statements list values that nobody can act on, while real habits form from what gets rewarded. Teams then add rules to patch each problem, and trust drops.
-  
+
   This skill starts from results, not slogans. It sets which decisions people make alone and gives the context to make them, so a rule can be dropped. It adds a keeper test (would you fight to keep this person), a feedback rule that goes to the person and a short list of behaviours. It also lists what you reward and punish in practice, so the gap shows up before the memo does.
 
 when:
   - "Your team has grown and people are guessing how things work."
   - "You keep adding rules after each mistake."
   - "You are about to hire and want new people to know what they are joining."
+not_for:
+  - "You need a first message for a new team or new role: use the New leader first message writer."
+  - "You want to act on a warning, exit or pay decision: check it with your HR policy, local employment law or an HR adviser first."
+  - "You want a values poster or slogans for the wall: write them by hand, as this tool only writes behaviours people can do."
 
 you_give:
   - "Your team size and what it delivers"
@@ -34,6 +38,30 @@ how_to_use:
   - "Say what went wrong in the last quarter."
   - "List who got praised and who got a warning, in plain terms."
   - "Read the memo aloud to one trusted person and ask which line they would not follow."
+output_sample:
+  input:
+    - Your team size and what it delivers
+    - What has gone wrong lately
+    - Who got praised, promoted or warned in the last year
+    - Your brand file for voice (optional)
+    - A draft memo or rule list (optional)
+  output:
+    - name: Results
+      contains: The three or four results the team must deliver this year, each with a number or a date.
+    - name: Seats and pay
+      contains: For each role, the problem the person solves, what great looks like and what top-of-market pay means for you.
+    - name: Decisions
+      contains: A table of recurring decisions marked decide alone, tell first or ask first, with the context people need.
+    - name: Keeper test
+      contains: One test for each person and what you do when the answer is no.
+    - name: Feedback
+      contains: The rule for blunt feedback that goes to the person, with timing and what happens if someone talks behind a back.
+    - name: Behaviours
+      contains: Three to six things a person can do or not do, plus who the team is not for.
+    - name: MISSING
+      contains: Facts it could not fill, such as a pay figure, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each self-check it still failed, or none.
 
 how_it_works:
   - title: "Name the few results"
@@ -58,29 +86,29 @@ how_it_works:
 output_shape: |
   RESULTS
   <3 or 4 results with numbers or dates>
-  
+
   SEATS AND PAY
   <role>: <problem solved>, <what great looks like>
   Pay stance: <top-of-market meaning>
-  
+
   DECISIONS
   <decision> | alone / tell first / ask first | context given
-  
+
   KEEPER TEST
   <test and what follows>
-  
+
   FEEDBACK
   <rule>
-  
+
   BEHAVIOURS
   <3 to 6 things a person can do>
-  
+
   NOT FOR
   <who this team is not for>
-  
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 

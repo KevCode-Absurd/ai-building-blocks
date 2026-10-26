@@ -2,17 +2,60 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: research-paper-evidence-review
 name: Research paper evidence review
-summary: Share a paper and its supporting material. Get a claims review with
-  evidence gaps, limits and questions to investigate.
+summary: Check how far to trust a research paper. Give it the paper and get a claims review with weak spots, limits and what would settle the question.
 job: study-and-practice
 headline: Research paper evidence review
-subhead: Bring the full paper and any available supporting material. Get a
-  review of what the results support, what remains uncertain and what could
-  change the conclusion. Missing evidence stays visible.
+subhead: Give your AI a research paper. It lists the main claims, checks the evidence for each one, and ranks the problems by how much they matter. You get a clear view of how far to trust the results.
 when:
-  - You need to assess how much weight to put on a paper's claims.
+  - You need to decide how much weight to give a paper's results.
+  - You are thinking about using a paper's method in real work.
+  - A paper's abstract sounds strong and you want to test it.
+  - You are writing a review or a study report and need the weak spots.
+not_for:
+  - "You want a plain reading guide to a paper: use the Paper reader."
+  - "You want to compare several papers on one topic: use the Literature map."
+  - "You want to be quizzed on what you learned: use the Understanding check."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Upload the paper as a PDF, or paste its text. Add the appendix if you have it.
+  - Add links to code or data, and say how you plan to use the paper.
+  - Run it. Web access is needed for the follow-up search. Without it, the AI should say that section comes from memory.
+  - Check that each criticism names a section, table or figure. Ask the AI to fix any that do not.
+  - Look up every paper named in the follow-up section yourself. Treat any title or year the AI did not find by search as unverified.
+output_sample:
+  input:
+    - The full paper, as a PDF or pasted text
+    - The appendix, if it is separate (optional)
+    - Links to the paper's code or data (optional)
+    - Course or project notes that use this paper (optional)
+  prerequisites:
+    - Web access is needed for the follow-up search. Without it, your AI says that section comes from memory and may be out of date.
+  output:
+    - name: Verdict
+      contains: Two or three sentences on how much to trust the main claim, led by the biggest issue.
+    - name: Claims ledger
+      contains: A table of each central claim, where it is tested, and a rating of supported, partly supported or unsupported.
+    - name: Threats to validity
+      contains: Problems ranked by impact, split into major and minor, each tied to a section, figure or table.
+    - name: Reproducibility
+      contains: What code, data, settings and compute are shared, and what someone redoing the work would have to guess.
+    - name: Scope limits
+      contains: Where the results stop holding, split into limits the paper states and limits it leaves out.
+    - name: Practitioner read
+      contains: "Whether the method would hold up in real use: cost to adopt, risks, and what data or compute it needs."
+    - name: What would change the verdict
+      contains: A concrete test or piece of evidence that would confirm or refute the main claim.
+    - name: Follow-up work
+      contains: Later papers that confirmed, refuted or replaced it, noting whether they came from search or memory.
+you_give:
+  - The full paper, as a PDF or pasted text
+  - The appendix, if it is a separate file (optional)
+  - Links to the paper's code or data (optional)
+  - Notes on how you plan to use the paper (optional)
+you_get:
+  - A verdict on how far to trust the main claim
+  - A table of claims with their evidence and a rating
+  - Problems ranked from major to minor, each tied to a part of the paper
+  - A note on what is missing for someone to repeat the work
+  - A test that would settle the question
+  - Later work on the paper, marked as searched or from memory

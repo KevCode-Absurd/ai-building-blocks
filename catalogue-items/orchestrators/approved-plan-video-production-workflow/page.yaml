@@ -1,46 +1,122 @@
 new_slug: approved-plan-video-production-workflow
 name: Approved-plan video production workflow
-summary: Turn your footage and brief into an edit plan. Approve the plan, review the render and prepare the delivery files.
-job: make-video-ads
 headline: Approved-plan video production workflow
-subhead: Turn your footage and brief into an edit plan. Approve the plan, review the render and prepare the delivery files.
-explain: |-
-  Turn footage into an edit plan, then use approval, production and QA gates before delivery or posting.
-
-  Share raw footage, transcript, target platform, duration, rights and tool access. Get an approved edit plan, render qa record and delivery handoff.
-when:
-  - You need an approved edit plan, render QA record and delivery handoff.
-  - You need approved-plan video production workflow for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
-you_give:
-  - Raw footage
-  - Transcript
-  - Target platform
-  - Duration
-  - Rights and tool access
-you_get:
-  - An approved edit plan, render QA record and delivery handoff
-  - The sources used, missing inputs and assumptions
-how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
-how_it_works:
-  - title: Check the inputs
-    text: Confirm raw footage, transcript, target platform, duration, rights and tool access. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Intake
-    text: Follow the intake section in the full method and keep its required fields and decision rules.
-  - title: Analyze
-    text: Follow the analyze section in the full method and keep its required fields and decision rules.
-  - title: Edit Plan
-    text: Follow the edit plan section in the full method and keep its required fields and decision rules.
-  - title: Approval Gate
-    text: Follow the approval gate section in the full method and keep its required fields and decision rules.
-  - title: Produce
-    text: Follow the produce section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return an approved edit plan, render qa record and delivery handoff. Check facts, math and the decisions before any action.
+summary: Turn raw footage into a scene-by-scene edit plan. You approve it, then get a render check and delivery files for Reels, TikTok or Shorts.
+job: make-video-ads
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
+subhead: Give your AI raw footage or a timed transcript, the platform, the length and the caption and music style. It builds an edit plan you approve scene by scene. Only then does it move on to the render, a pass or fail check and the delivery files. Paid tools are marked, and each can be skipped.
+explain: |-
+  Most short video edits go wrong at one point. Someone renders first and discovers later that the hook is slow, the captions sit under the app buttons or the cut runs ten seconds long. Then they render again.
+
+  This workflow puts a gate before the render. The AI listens to your footage, finds the scenes, the filler and the dead air, and writes an edit plan: each scene with start, end, action, caption, b-roll and music. You read it and reply approve, change (with scene numbers) or reject. Nothing is rendered before you approve. Every scene must earn its time as a hook, setup, proof, payoff or call to action. If it does not, it is cut.
+
+  After approval, the AI produces the edit or hands you a plan to produce it in your own editor. A check then tests the result against the plan. A fail stops delivery until it is fixed. A paper plan is not a rendered video. The page says which steps need which tools.
+when:
+  - You have a long talking-head recording and want one short vertical edit with captions and an end card.
+  - You post a Reel, TikTok or Short most days and want a repeatable edit with a check before posting.
+  - You cut several shorts from one podcast or talk and want each one approved before any render.
+  - A client pays for the video and you need a record that the edit matched the approved plan.
+not_for:
+  - You want a single static clip trimmed or a quick caption. Edit it in your phone or editing app, or use the video ad edit planner for a cut list.
+  - You have no footage yet. Write the script first with the founder video ad script writer or the video ad script angle chooser.
+  - You only need captions in your brand font. Use the video caption maker in your brand font.
+  - You want finished sound, not a cut. Use the video audio finishing plan workflow.
+you_give:
+  - Raw footage, or a transcript with timestamps for each clip (from your camera, recorder or a transcription tool)
+  - The platform, such as Reel, TikTok, YouTube Short or LinkedIn
+  - The length you want, such as 15, 30, 60 or 90 seconds
+  - Caption style, such as word by word, phrase by phrase or none, and the music mood, or none
+  - Your rights to the footage, music and any people shown (optional but the AI will ask)
+you_get:
+  - An edit plan with each scene's start, end, action, caption, b-roll and music
+  - A clear approve, change or reject gate before anything is rendered
+  - A render plan, and a rendered video if you have the tools to render
+  - A pass or fail check against the plan, with fixes for each fail
+  - Delivery files, with the caption copy and hashtags ready to paste
+how_to_use:
+  - Download the pack and give it to an AI that can read your footage or transcript. Some AIs can watch video. If yours cannot, paste a transcript with timestamps.
+  - Say the platform, length, caption style, music mood and who owns the rights to the footage.
+  - Read the edit plan. Reply approve, change with scene numbers, or reject. Nothing renders before you approve.
+  - To get a finished video you need a way to render, such as Remotion or your own editor. Without one, use the plan as a cut list.
+  - Check the final file against the pass or fail list. Fix every fail before you post.
+how_it_works:
+  - title: Check the inputs
+    text: Confirms platform, length, voice, caption style, music and rights. Asks once for what is missing. Hands step 2 a short brief. Check before moving on, the brief has every field or a MISSING line.
+  - title: Analyze the footage
+    text: Builds a timed transcript, finds scene breaks, filler words, silence and how tight each shot is. Hands step 3 a list of scenes with timestamps.
+  - title: Write the edit plan
+    text: Builds the scene table with a reason for each scene, plus total length, cut list, caption timing, b-roll slots, music and an end card. Hands step 4 a plan you can approve line by line.
+  - title: Approval gate
+    text: Waits for you. You reply approve, change or reject. Changes loop back to step 3. Nothing moves on without a yes.
+  - title: Produce the edit
+    text: Renders to the platform size or writes the render plan. Uses your footage first and only makes b-roll when a slot cannot be filled. Hands step 6 the file and the plan.
+  - title: Check the result
+    text: Tests length, hook, captions, audio, silence, end card, safe zones and colour. Returns pass or fail for each. A fail sends the edit back to step 5.
+  - title: Hand off the delivery
+    text: Returns the final file name, caption copy and hashtags. Publishes only if you gave the go-ahead and connected a scheduler.
+output_shape: |-
+  BRIEF   <platform, length, voice, caption style, music, rights>
+  EDIT PLAN
+    <scene | in | out | action | caption | b-roll | music>, with the reason for each scene
+    <total length, cut list, caption timing, b-roll slots, music, end card>
+  APPROVAL <approve, change or reject, with scene notes>
+  RENDER   <file name and size, or a render plan if nothing was rendered>
+  QA REPORT <check | pass or fail | fix>
+  DELIVERY <final file, caption copy, hashtags, publish status>
+  COSTS    <only items you told the AI the price of, with the date>
+  MISSING  <each gap and the part it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - "Raw footage, or a timed transcript for each clip"
+    - "The platform and the length you want"
+    - "Caption style and music mood"
+    - "Your rights to the footage and music (optional)"
+  prerequisites:
+    - "An AI that can read your footage or a timed transcript"
+    - "A way to render, such as Remotion or your own editor, for a finished file (optional)"
+  output:
+    - name: "Edit plan"
+      contains: "A scene table with start, end, action, caption, b-roll and music, and a reason for each scene."
+    - name: "Approval"
+      contains: "Your reply to the plan: approve, change with scene notes, or reject."
+    - name: "Render"
+      contains: "The rendered video at platform size, or a render plan if you have no way to render."
+    - name: "QA report"
+      contains: "A pass or fail for each check against the plan, with a fix for each fail."
+    - name: "Delivery handoff"
+      contains: "The final file, caption copy, hashtags and whether anything was published."
+tweaks:
+  - what: Length
+    how: Change the target length. The plan cuts or keeps scenes to fit, and each cut shows its reason.
+  - what: Voice
+    how: Say use as is, light edit or heavy structure. It changes how much the plan rearranges your talking.
+  - what: No b-roll
+    how: Say you have no b-roll and want none generated. The plan uses your footage, text cards and cutaways.
+improve:
+  - Keep your checks as a list with your platform's real limits, and paste it each time.
+  - Save approved plans so the next edit starts from one that worked.
+  - Add the hook line from your best past post to the brief, so new hooks follow it.
+works_best_with:
+  tools:
+    - name: An AI that can watch video, such as Gemini
+      why: It can build the timed transcript and the scene list from the video itself. Other AIs need you to paste a timed transcript.
+    - name: Remotion (optional, runs code)
+      why: Renders the approved plan to a video file. Needs a computer with Node installed. Check its licence for your use. The pack has a small starter project in its references folder.
+    - name: Veo (optional, paid)
+      why: Makes b-roll clips when your footage cannot fill a slot. Costs money per clip. Check Google's current price before you use it.
+    - name: Slack and a scheduler (optional)
+      why: Lets approval and posting happen in your team's channel. You can do both in the chat instead.
+  inputs:
+    - A timed transcript, if your AI cannot watch video.
+    - Your own b-roll library, so nothing needs generating.
+terms:
+  - term: Edit plan
+    meaning: A table of scenes with start, end, action, caption, b-roll and music, written before any render.
+  - term: B-roll
+    meaning: Extra footage you cut to while the main clip plays, such as the product or a screen.
+  - term: Safe zone
+    meaning: The part of a vertical video the app's buttons and text do not cover.
+  - term: Render
+    meaning: Turning the plan and footage into a finished video file.

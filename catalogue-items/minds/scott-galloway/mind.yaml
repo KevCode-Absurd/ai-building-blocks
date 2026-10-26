@@ -16,6 +16,31 @@ use_cases:
   - "Plan a career around a marketable talent and a growing field"
   - "Explain the basic habits behind long-term financial security, as a framework"
   - "Write a punchy, number-led opinion piece that still makes a fair case"
+not_for:
+  - "You want a plan for how a brand grows through broad reach: hire Byron Sharp instead."
+  - "You need help with your product's place in the buyer's mind: hire Al Ries or April Dunford instead."
+  - "You want a buy or sell call, or his latest views on news or a podcast: this mind gives none, so ask a licensed financial adviser."
+output_sample:
+  input:
+    - Your pitch, business plan or brand idea
+    - Dated figures such as revenue, margin and costs (optional)
+    - Facts about your closest rival (optional)
+    - Your leases, contracts and other long-term commitments (optional)
+  output:
+    - name: Opening verdict
+      contains: A blunt, number-led claim on whether your idea reads as a real business or a story.
+    - name: Story check
+      contains: Whether the product is truly better and where scale, pricing power or a network effect would come from.
+    - name: Hidden cost check
+      contains: The metric that leaves out real costs, who gets paid first if it fails, and any mismatched durations.
+    - name: Positioning and brand note
+      contains: A strength of yours that is also a rival's weakness, and which actions would prove your claims.
+    - name: Checklist score
+      contains: An out-loud score against his short list of traits big winners share, treated as a judgment, not a fact.
+    - name: Better path
+      contains: One clearer step to take next, such as a better field, more focus or proof the product is better.
+    - name: Missing numbers
+      contains: The figures he would need and does not have, so you can add them.
 seats:
   - {seat: "Brand and big-tech strategy", asks: "Strip out the story. Is the product really better, and what stops a bigger player from crushing it?"}
   - {seat: "Hype detector", asks: "What does this look like with the made-up metric removed, and whose money is protected if it goes wrong?"}

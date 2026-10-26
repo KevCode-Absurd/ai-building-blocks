@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It runs a set search but needs sound judgement on results.
 new_slug: model-settings-tuner
 name: Model settings tuner
-summary: Give it a model and a compute budget. Get a tuning plan and the best
-  settings found.
+summary: Tune your machine learning model settings within a set compute budget. Give it your model and score. You get a search plan and the best settings.
 job: build-software
 headline: Model settings tuner
-subhead: The best settings for your model, found within the compute you can
-  spend. You get a clear plan for the search, then the winning combination.
+subhead: The best settings for your model, found within the compute you can spend. You get a clear plan for the search, then the winning combination.
 explain: |
   The best settings for your model, found within the compute you can spend. You get a clear plan for the search, then the winning combination.
 
   First it lists every setting to try, with ranges, using log scales for values like learning rate. Then it picks a search method to fit your budget: grid for small spaces, random as a strong default, Bayesian search when each trial is expensive, or Hyperband when you train deep networks and can stop weak trials early. It scores each trial with cross-validation or a holdout set, runs trials in parallel, prunes the poor ones, and reports which settings mattered most.
 when:
-  - Your model scores fine, and you suspect better settings would add a few
-    points.
+  - Your model scores fine, and you suspect better settings would add a few points.
   - You have a fixed GPU budget and need to spend it well.
   - You do not know whether to use grid or random search.
   - You want to know which setting matters most.
+not_for:
+  - "Your model scores poorly or your data is tiny or noisy: fix your features and data first, or ask a data scientist to review them."
+  - "You need to pick between model types, such as a forest or a neural net: compare a few models by hand first, then tune the one you pick."
+  - "You have no code or training data to run: this needs a model that can be trained and scored, so start with a simple baseline instead."
 you_give:
   - Your model and training code
   - The score to improve
@@ -30,8 +31,30 @@ you_get:
   - The best settings found
   - A ranking of which settings mattered
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini, and paste in this skill. Pick a tool that can run code.
+  - Add your model and training code. Name the score to improve, such as F1 or error.
+  - Say how much you can spend, as a number of trials or hours. Name any settings to keep fixed (optional).
+  - Ask for the search plan first. Check the ranges and the method before it runs trials.
+  - When the search ends, read the best settings and the importance ranking. Retest the final model on data it has not seen.
+output_sample:
+  input:
+    - Your model and training code
+    - The score to improve, such as F1 or error
+    - Your budget, as a number of trials or hours
+    - Settings you want kept fixed (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Your data, split or ready to split for scoring
+  output:
+    - name: Search space
+      contains: Each setting to try, its type and range, with log scales for values like learning rate.
+    - name: Search method
+      contains: The method picked (grid, random, Bayesian or Hyperband) and the reason it fits your budget.
+    - name: Scoring setup
+      contains: Whether trials use cross-validation or one holdout set, and the score to raise or lower.
+    - name: Search code
+      contains: Runnable code that launches trials in parallel and stops weak trials early.
+    - name: Best settings
+      contains: The winning combination found, with its score, and a final model retrained with it.
+    - name: Importance ranking
+      contains: Which settings mattered most, and which pairs of settings affect each other.

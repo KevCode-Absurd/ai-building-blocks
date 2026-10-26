@@ -1,6 +1,6 @@
 new_slug: interview-customers-and-map-what-they-hire-you-to-do
 name: Interview customers and map what they hire you to do
-summary: Give it your idea. Get interview questions, then a buyer profile, their jobs and their path.
+summary: Interview customers and map what they hire you to do. Give it your idea and your talk notes. Get a buyer profile, their jobs and their path.
 job: understand-customers
 thinking: medium
 thinking_why: It runs four skills in a row, but each one is a clear job. A mid-size model is enough, and the analysis step is the one to check.
@@ -14,6 +14,10 @@ when:
   - You have an idea or a product and have not yet heard from the people you built it for.
   - You have talked to customers before but came away with compliments and no clear change to make.
   - You need a buyer profile and a path map built on what people said, not what you guessed.
+not_for:
+  - "You have no time to talk to people yet and only have reviews or support emails: use the Customer buying reasons finder."
+  - "You only want a quick guess at your buyer: write a short buyer brief with the Buyer brief writer instead."
+  - "You want to test a price or a design with many people: use a survey tool, since this works on five to ten talks."
 you_give:
   - Your idea or product, and who you think it is for
   - Notes or transcripts from five to ten customer talks (you bring these back after the talks)
@@ -29,6 +33,25 @@ how_to_use:
   - Describe your idea and who you could reach for talks. Step 1 stops with your questions and plan.
   - Hold five to ten conversations. Write notes straight after each one, in the words people used.
   - Come back to the same chat and paste all the notes. Steps 2 to 4 run on them.
+output_sample:
+  input:
+    - Your idea or product, and who you think it is for
+    - Notes or transcripts from five to ten customer talks, brought back after the talks
+    - The goal your buyer is trying to reach (optional)
+  prerequisites:
+    - An AI chat that can keep a long conversation, such as Claude, ChatGPT or Gemini
+    - Time to hold five to ten real conversations between step 1 and step 2
+  output:
+    - name: Interview questions
+      contains: Questions about what people did in the past, ways to spot polite answers, who to find and a note template.
+    - name: Buyer profile and quotes
+      contains: Patterns across your talks, the pains and triggers you heard, exact quotes and a buyer profile built on them.
+    - name: Jobs they hire you for
+      contains: The before and after they want, their practical, emotional and social jobs, the trigger and the rivals.
+    - name: Path map
+      contains: Each step the buyer takes, with touchpoints, feelings, friction and fixes in order.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the interview questions
     text: Turns your idea into questions about past behaviour, adds ways to spot polite answers and ends each talk with a real next step.

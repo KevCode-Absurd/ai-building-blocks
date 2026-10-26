@@ -1,6 +1,6 @@
 slug: recovery-rehearsal-evidence-assistant
 name: Recovery rehearsal evidence assistant
-summary: A recovery evidence review, changed rehearsal plan and open remediation actions.
+summary: "Check restore test evidence against your recovery targets. Get a gap table, a changed rehearsal plan and an owner for each open fix."
 category: agent
 type: agent
 role: orchestrate
@@ -23,9 +23,9 @@ uses:
   - incident-postmortem-writer
 steps:
   - uses: build-a-backup-recovery-rehearsal
-    note: "Run when: A restore test is due, its evidence is missing or the protected system changed."
+    note: "Run when: A restore test is due, its evidence is missing or the protected system changed. Hands the updated rehearsal plan and what each test must prove to step 2."
   - uses: incident-postmortem-writer
-    note: Run the rehearsal planning workflow when due or changed. If test evidence exists, run incident-postmortem-writer on failed or missed targets and prepare remediation owners; never execute a restore without the approved test scope.
+    note: "If test evidence exists, run on each failed or missed target and prepare remediation owners; never execute a restore without the approved test scope. Uses your own restore records and notes of what happened, not step 1's plan, which only shows what the test was meant to prove. Hands the findings and fixes to the open-fixes list."
 schedule: At the owner agreed rehearsal interval and after significant system changes.
 asks_before:
   - Sending or submitting any message or form

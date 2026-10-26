@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The plan follows a fixed five-day shape, fitted to your idea.
 new_slug: five-day-idea-test-planner
 name: Five-day idea test planner
-summary: Describe an idea. Get a five-day plan to map, sketch, prototype and
-  test it with real users.
+summary: Plan a five-day design sprint to test an idea with real users. Give it your idea and team. You get a day-by-day plan and a score out of ten.
 job: test-an-idea
 headline: Five-day idea test planner
-subhead: A five-day plan that takes a risky idea from a blank whiteboard to a
-  tested prototype, with real customer reactions by Friday. You learn what works
-  before writing any production code.
+subhead: A five-day plan that takes a risky idea from a blank whiteboard to a tested prototype, with real customer reactions by Friday. You learn what works before writing any production code.
 explain: |
   A five-day plan that takes a risky idea from a blank whiteboard to a tested prototype, with real customer reactions by Friday. You learn what works before writing any production code.
 
@@ -18,6 +15,10 @@ when:
   - Your team keeps arguing about direction and needs a way to decide.
   - You want customer feedback on a prototype before building it.
   - You are the one running a sprint and need a day-by-day schedule.
+not_for:
+  - "Your problem is already clear and you only need to build it: start with a simple build plan and a person who owns it."
+  - "Your decider cannot join for the full week: wait until they can, or pick a smaller test, such as a few customer calls."
+  - "You want ongoing tests over many weeks: use a lean startup test plan from your own team, not a single five-day sprint."
 you_give:
   - The challenge or idea you want to test
   - Names and roles of the team
@@ -30,7 +31,32 @@ you_get:
   - Interview script for five users
   - Plan score with missing items
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from the download. No code or paid tools are needed.
+  - Tell your AI the idea you want to test and who your target customers are.
+  - Add your team names and roles, and the dates you can block out.
+  - Ask for a five-day plan. Check that it names one decider and plans five real users.
+  - Fix anything in the score list marked missing, then run the plan with your team.
+output_sample:
+  input:
+    - The challenge or idea you want to test
+    - Names and roles of your team
+    - Who your target customers are
+    - The dates you can block out for the week
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - A person on your team who can make the final call all week
+  output:
+    - name: Day-by-day schedule
+      contains: Monday to Friday plan with time limits for each part of the day.
+    - name: "Monday: Map"
+      contains: The long-term goal, sprint questions, a map of the challenge and one target customer and moment.
+    - name: "Tuesday: Sketch"
+      contains: Steps for lightning demos and solo sketching, done alone and without group brainstorming.
+    - name: "Wednesday: Decide"
+      contains: How the one decider picks a solution by vote, then a storyboard of the test.
+    - name: "Thursday: Prototype"
+      contains: Roles and a brief for a believable, fake prototype that can be built in one day.
+    - name: "Friday: Test"
+      contains: A five-part interview script for five target users, plus a way to note patterns.
+    - name: Plan score
+      contains: A score out of ten and a list of the missing pieces needed to reach ten.

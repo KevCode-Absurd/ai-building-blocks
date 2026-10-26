@@ -1,0 +1,126 @@
+name: Baidu SEO Specialist agent
+summary: "Get a Baidu SEO plan for China: setup checks, Chinese keyword groups and content fixes, with the first steps to take. Bring your site and goal."
+headline: Baidu SEO Specialist agent
+subhead: Give it your website link, what you sell and your goal in China. It checks what Baidu needs first, such as an ICP filing and Baidu's own site tools. Then it plans Chinese keywords and content. You get a Baidu SEO plan with the first steps and the checks left for you.
+job: get-found-in-search
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Baidu SEO is not Google SEO with Chinese words. A site that ranks well on Google can still be missing from Baidu. This agent starts with what Baidu needs before any content work: a valid ICP filing (the licence a website needs in mainland China), hosting that Baidu can reach fast, Baidu's own tools in place of Google's, and pages in Simplified Chinese.
+
+  Then it plans how people in China search. It groups Chinese keywords by what the searcher wants, and plans content for your own site and for Baidu's own sites, such as Baidu Baike (an online encyclopedia) and Baidu Zhidao (questions and answers).
+
+  It works only from what you give it. It cannot log in to Baidu Webmaster Tools, read your server logs or see your rankings. Anything it cannot check comes back as a check for you to run. It does not file your ICP, post anywhere or promise results. The targets in the original profile are goals, not measured results.
+when:
+  - You want Chinese customers to find your site through Baidu.
+  - You are about to launch a site or store for mainland China and need a search checklist first.
+  - Your China site gets few visits from Baidu and you don't know why.
+  - You need a list of Chinese search terms for one product, grouped by what the searcher wants.
+not_for:
+  - You only care about Google or Bing. Use the SEO Specialist agent.
+  - You want your pages to show up in AI answers. Use the AI Citation Strategist agent.
+  - You want to sell in China through video or social, not search. Use the Douyin Strategist agent or the Xiaohongshu Specialist agent.
+you_give:
+  - Your website link, or the name of the site you plan to launch
+  - What you sell and who in China should find it
+  - Your goal, such as more Baidu visits, more sign-ups or more searches for your brand
+  - What you know about your ICP filing, China hosting and Baidu Webmaster Tools. Write "not sure" if you don't know.
+  - Baidu Tongji or Baidu Webmaster Tools screens, or a list of competitor sites (optional)
+you_get:
+  - "A setup check: ICP filing, hosting, blocked Google tools and Baidu's site tools"
+  - A technical and mobile check with what to fix
+  - "Chinese keyword groups: core, long-tail, brand, competitor and question terms"
+  - A plan for your own pages and for Baidu's own sites
+  - The first actions to take, and the checks left for you to run
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you can't, paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste your site link, what you sell, who you want to reach in China and your goal. Say what you don't know, for example "I'm not sure about my ICP filing".
+  - If your AI can't open links, paste your page text and sitemap. Add any Baidu Tongji or Baidu Webmaster Tools screens you have. The AI can't log in to them.
+  - "Say: \"Make my Baidu SEO plan. Mark anything you can't check as a check for me.\""
+  - Read the setup check first. If your ICP filing or hosting is missing or unknown, settle that before you work on content.
+  - "Run the checks it lists for you, such as a site: search on Baidu to count your indexed pages. Come back with the results and ask for the plan again."
+how_it_works:
+  - title: Confirm the target
+    text: It confirms you are aiming at mainland China, in Simplified Chinese, and what you want from search. Missing facts are asked for once, then marked MISSING.
+  - title: Check the setup
+    text: It goes through ICP filing, hosting location, Google services that China blocks, and Baidu's webmaster tools. Each one is marked Confirmed, Not confirmed or Not supplied.
+  - title: Check the site
+    text: It looks at what Baiduspider (Baidu's crawler) can reach, mobile layout, speed, sitemap and page markup.
+  - title: Plan Chinese keywords
+    text: It groups terms as core, long-tail, brand, competitor and question terms, with the intent for each. It does not make up search volumes.
+  - title: Plan the content
+    text: It plans original pages, update timing, and posts for Baidu's own sites. It rules out click farms and fake accounts.
+  - title: Rank the next steps
+    text: It puts setup problems first, then content, and lists every check you still have to run.
+output_shape: |-
+  SETUP CHECK
+    ICP filing <status, number> | Hosting <place, provider> | Blocked tools found <list> | Baidu webmaster tools <verified or not> | Baidu Tongji <installed or not>
+    (each marked Confirmed, Not confirmed or Not supplied)
+
+  TECHNICAL AND MOBILE CHECK
+    <item> | <what the AI saw> | <fix> | <priority>
+
+  CHINESE KEYWORD GROUPS
+    <group: core, long-tail, brand, competitor, question> | <term in Chinese with English meaning> | <intent> | <page to use> | <where to check demand>
+
+  BAIDU SITES PLAN
+    <Baike, Zhidao, Tieba, Wenku, Jingyan> | <what to publish> | <priority> | <rule to follow>
+
+  CONTENT PLAN
+    <page or post> | <keyword group> | <what makes it original> | <when to publish>
+
+  FIRST ACTIONS AND OPEN CHECKS
+    <action> | <why first> | <check left for you>
+output_sample:
+  input:
+    - Your website link, or the site you plan to launch
+    - What you sell, who in China you want to reach and your goal
+    - What you know about your ICP filing and hosting
+    - Baidu Tongji or Baidu Webmaster Tools screens (optional)
+  prerequisites:
+    - An AI that can open links, or page text you paste in
+    - Access to your own Baidu Webmaster Tools, so you can run the checks it lists (optional)
+  output:
+    - name: Setup check
+      contains: ICP filing, hosting, blocked Google tools and Baidu webmaster tools, each marked Confirmed, Not confirmed or Not supplied.
+    - name: Technical and mobile check
+      contains: What Baiduspider can reach, mobile layout, speed and sitemap, with a fix and priority for each.
+    - name: Chinese keyword groups
+      contains: Core, long-tail, brand, competitor and question terms in Chinese, with the intent behind each.
+    - name: Baidu sites plan
+      contains: What to publish on Baidu Baike, Zhidao, Tieba, Wenku and Jingyan, and the rules to follow.
+    - name: Content plan
+      contains: The pages and posts to make, which keyword group each serves and when to publish.
+    - name: First actions and open checks
+      contains: Setup problems first, then content, plus the checks only you can run.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: ICP filing
+    meaning: The licence number a website needs to run in mainland China. Baidu checks for it.
+  - term: Baidu Webmaster Tools
+    meaning: Baidu's free site dashboard. You verify your site there and send your sitemap.
+  - term: Baidu Tongji
+    meaning: Baidu's site stats tool. It stands in for Google Analytics in China.
+  - term: Baiduspider
+    meaning: The program Baidu uses to visit and read your pages.
+  - term: Baidu Index
+    meaning: Baidu's tool for seeing how often a term is searched and how that changes.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web access
+      why: It can open your site and read Chinese pages. Without web access, paste your page text.
+  inputs:
+    - A list of 3 to 5 competitor sites that rank on Baidu.
+    - Screens from Baidu Index for your main terms.
+    - A native Chinese reader to check keywords and page text before you publish.

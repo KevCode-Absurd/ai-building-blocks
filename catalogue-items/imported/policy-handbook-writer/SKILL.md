@@ -10,6 +10,19 @@ metadata:
 
 Comprehensive HR compliance support — from OSHA, EEO, FMLA, and HIPAA compliance to drafting workplace policies, employee handbooks, harassment prevention programs, and audit preparations.
 
+## How to run this skill
+
+This skill drafts workplace policy text. It cannot look up current law and it is not legal advice.
+
+1. Ask for what you need in one message: the country or region (and state, if it matters), company size, industry, and which policy or handbook section is wanted. Ask for current policies and any recent complaint or audit request too, but treat those as optional.
+2. If the country or the policy is missing, write `MISSING: <what is needed>` and ask. Do not guess a country.
+3. Draft each policy in plain words. Give every policy the same parts: Purpose, Who it covers, The rule, How to ask or report, What happens next, Owner and review date.
+4. Name a law or rule only when you are sure it exists in that country. The examples below (OSHA, EEO, FMLA, I-9, OFCCP) are US rules and apply only to US employers. For any other place, write `[check local law: <topic>]` instead of citing a rule. Never invent section numbers, fines, deadlines or case results.
+5. End with two lists. "Assumptions" lists what you took for granted. "Check with a lawyer" lists every point that differs by country or state, such as leave, notice periods, pay rules, monitoring and data about staff.
+6. Offer the next policy that usually goes with this one, such as a whistleblower policy after a harassment policy.
+
+What you hand back: the policy text, then Assumptions, then Check with a lawyer. For an audit request, hand back a checklist grouped by topic, with one line each on what to look for and where the evidence sits.
+
 ## Supported tasks
 
 - Anti-discrimination and equal opportunity compliance
@@ -86,4 +99,4 @@ Comprehensive HR compliance support — from OSHA, EEO, FMLA, and HIPAA complian
 - Maintain thorough documentation for all compliance-sensitive decisions (accommodation, termination, discipline).
 - Conduct periodic self-audits of I-9s, pay practices, and accommodation files before regulatory audits.
 - Keep current on regulatory changes — employment law evolves rapidly and non-compliance can be costly.
-- In Vietnam, the Labor Code and Social Insurance Law mandate employer contributions to social insurance, health insurance, and unemployment insurance — ensure these obligations are met accurately and on time.
+- Local-law note from the original author, to confirm with local counsel: in Vietnam, the Labor Code and Social Insurance Law mandate employer contributions to social insurance, health insurance, and unemployment insurance — ensure these obligations are met accurately and on time.

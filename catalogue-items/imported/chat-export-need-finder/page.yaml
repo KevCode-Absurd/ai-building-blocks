@@ -2,23 +2,23 @@ thinking: high
 thinking_why: It reads huge files in parts and checks every claim against a quote.
 new_slug: chat-export-need-finder
 name: Chat export need finder
-summary: Give it a Telegram group export. Get a ranked list of unmet needs, each
-  backed by real quotes.
+summary: Find unmet needs in a Telegram group export. Get a ranked list of problems people complain about, each backed by exact quotes and dates.
 job: understand-customers
 headline: Chat export need finder
-subhead: Thousands of group messages turn into a ranked list of problems people
-  keep complaining about, with real quotes as proof. It reads a Telegram Desktop
-  export and shows which needs are worth building something for.
+subhead: Thousands of group messages turn into a ranked list of problems people keep complaining about, with real quotes as proof. It reads a Telegram Desktop export and shows which needs are worth building something for.
 explain: |
   Thousands of group messages turn into a ranked list of problems people keep complaining about, with real quotes as proof. It reads a Telegram Desktop export and shows which needs are worth building something for.
 
   It reads the file in small chunks, so a multi-gigabyte export will not crash your computer. It looks for phrases in English and Russian such as "I wish", "is there a bot" or "waste of time". Themes rank higher when they appear across several separate chats, because one angry person is a story and many people in many groups is a pattern. Every theme needs two to five exact quotes with date and chat name. Themes without quotes are marked unconfirmed.
 when:
-  - You run or study a Telegram community and want to know what members struggle
-    with.
+  - You run or study a Telegram community and want to know what members struggle with.
   - You hunt for product ideas and want proof that people really ask for them.
   - You have exports from several groups and want to compare them.
   - Your export file is too big to open in a normal editor.
+not_for:
+  - "You want live monitoring of a channel or a bot that watches chats: use a dedicated online tool, since this reads saved exports only."
+  - "Your data is support tickets from Zendesk or Intercom: read them with a spreadsheet or ask your AI to sort them by theme."
+  - "You need proof that a market is big: talk to a few customers first, because chat counts are early signals only."
 you_give:
   - One or more Telegram result.json exports
   - The topic or niche you care about (optional)
@@ -29,8 +29,28 @@ you_get:
   - How many chats each need appears in
   - Weak themes marked unconfirmed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read large files.
+  - In Telegram Desktop, export each chat as JSON. This gives you a file called result.json.
+  - Put all the export files in one folder on your computer. Only use chats you are allowed to analyze.
+  - Open an AI that can run code and read large files. Paste in this skill and add the folder.
+  - Tell it your niche and any extra search phrases (optional), then ask it to find unmet needs.
+  - Check each quote against the original export before you use it.
+  - Next, talk to a few customers about the top needs, or write a short feature spec, before you build anything.
+output_sample:
+  input:
+    - One or more Telegram Desktop exports (result.json)
+    - The topic or niche you care about (optional)
+    - Extra search phrases in English or Russian (optional)
+  prerequisites:
+    - An AI that can run code and read large files on your computer
+    - Exports you are allowed to analyze
+  output:
+    - name: Ranked need themes
+      contains: Each theme is scored higher when it shows up in more separate chats, not only when it has many hits.
+    - name: Verbatim evidence
+      contains: Two to five exact quotes per theme, each with its date and chat name.
+    - name: Chat distribution
+      contains: How many chats each theme appears in and how many hits come from each one.
+    - name: Existing coverage check
+      contains: Tools that already solve the need and where they fall short, or a note that it cannot be confirmed.
+    - name: Unconfirmed themes
+      contains: Ideas with no exact quote behind them, marked as unconfirmed.

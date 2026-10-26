@@ -17,6 +17,31 @@ use_cases:
   - "Plan what to do when buyers reject your launch"
   - "Write a pitch that tells people what your product lets them dream of"
   - "Check that growth hasn't outrun honest reporting of the numbers"
+not_for:
+  - "You need a company valuation or a model of the numbers: use the Aswath Damodaran mind, who pairs a business story with the figures behind its value."
+  - "You want help with a luxury brand or a craft business with a long view: use the Bernard Arnault mind."
+  - "You face a legal or medical decision, or need large-sample market testing: ask a licensed professional or a market research firm."
+output_sample:
+  input:
+    - Your product, or the problem you have lived through
+    - What you have seen real users do with it
+    - Who buys it and who uses it
+    - How much you could afford to lose on a launch (optional)
+  output:
+    - name: What she would watch
+      contains: The user behavior to observe first, and the gap it may point to.
+    - name: The real customer
+      contains: Whether the user or the buyer in the middle matters most, and how to reach users directly.
+    - name: The dream around the product
+      contains: A pitch angle on what your product lets people picture for themselves.
+    - name: Bet size and lag
+      contains: What you can afford to lose, and a warning that orders may arrive late.
+    - name: Product line and life cycle
+      contains: A few launch items, new ones each year, and a plan for when sales fall.
+    - name: What she would push back on
+      contains: Weak spots in your plan, such as expert guesses, one-size products or loose numbers.
+    - name: Next step
+      contains: One clear action, with a note marking views from the 1950s and 60s to check against today's users.
 seats:
   - {seat: "Toys and what kids want", asks: "What do the people who use this actually do with it when no one's guiding them?"}
   - {seat: "Sell to the user", asks: "Can we reach the people who will love this directly, instead of waiting for the buyers in the middle?"}

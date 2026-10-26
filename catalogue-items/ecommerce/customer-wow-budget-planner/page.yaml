@@ -1,6 +1,6 @@
 new_slug: customer-wow-budget-planner
 name: "Customer wow budget planner"
-summary: "Give it your weekly cash and support cases. Get a wow budget and delight-versus-fix rules."
+summary: "Plan a customer wow budget: sort each moment into fix or delight, set a weekly spend, and get trigger rules and a note script for support."
 job: keep-customers
 thinking: low
 thinking_why: "It sorts moments into fix or delight and writes short rules, so a small fast model is enough if you describe the moments clearly."
@@ -17,6 +17,10 @@ when:
   - Support has to ask before sending a replacement or a small gift.
   - You are about to send a freebie to someone with a late or broken order.
   - You want to reward top buyers without a discount.
+not_for:
+  - Your store has no margin to give free items. Fix delivery, returns and support first, or use a simple discount rule instead.
+  - You have a problem with no cause fixed yet. Fix the cause first, because a gift will not repair a late or broken order.
+  - You want the full build order for the post-purchase experience. Use the after-purchase experience planner, which this page does not cover.
 
 you_give:
   - Your average order value and cost of goods
@@ -36,6 +40,30 @@ how_to_use:
   - Give your average order, cost of goods and weekly support volume, and name the person who can decide without approval.
   - Fix the problem moments first. Then pilot the wow budget for a month.
   - Track effort and word of mouth, and refresh the surprises each year.
+output_sample:
+  input:
+    - Your average order value and cost of goods
+    - Your weekly support cases and who can decide without approval
+    - The customer moments you want to plan for, and what you do now
+    - Support numbers such as time to resolve (optional)
+    - Your top customers by lifetime value (optional)
+  output:
+    - name: FIT CHECK
+      contains: Whether your margin can take free items and who can decide without approval.
+    - name: MOMENT VERDICTS
+      contains: Each moment marked remove effort or delight, with the reason and the action.
+    - name: WOW BUDGET
+      contains: A weekly amount, who controls it, and a cap per incident, marked as a suggested start.
+    - name: TRIGGER RULES
+      contains: Five to eight rules, each with a gift or action, its cost and the expected effect.
+    - name: SURPRISE NOTE / CALL SCRIPT
+      contains: A short note or call script that names the real reason and asks for nothing back.
+    - name: TRACKING SHEET
+      contains: What to measure for problems and for delight, such as repeat rate and first-contact resolution.
+    - name: REFRESH
+      contains: The date to review the surprises.
+    - name: CHECKS MISSED and MISSING
+      contains: Any check that failed and any input you did not give.
 
 how_it_works:
   - title: Sorts the moment

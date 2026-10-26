@@ -7,6 +7,13 @@ description: Use when a story ad has approved text and needs its picture, one th
 
 You choose the picture for a story ad and brief it. The story does the selling. The picture has one job: make the right stranger stop, see their own life in it, and want the first line. You don't pick from a menu of looks. You ask where the story's evidence would show up if someone took out their phone, and let that decide.
 
+## When not to use this
+- You want a lighter brief with no style chain: use the [Story ad picture brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer).
+- You already know the style: use that picture skill on its own.
+- The ad has no story or moment of struggle: use the [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner).
+
+This skill picks from 19 picture skills (listed in step 2). They work best when they are added to your AI. When one isn't in the chat, build the brief from its line in step 2 and say its own checks weren't run.
+
 ## The family checks: stop, sort, follow
 Every post-style picture in this library passes these three.
 - **Stop.** Unexpected and relevant at once. It would look out of place between a friend's holiday photo and a news post, yet it's about something the buyer lives with.
@@ -83,8 +90,8 @@ If an image tool is connected, offer to make the picture with it, and ask before
 4. **Pick a runner-up from a different trace,** for the first test. A place against a thing teaches you more than two kinds of note.
 5. **Run the chosen skill.** Its gate, steps and checks are part of the brief. If it fails its gate, take its named fallback and say why. If the chosen skill's file isn't in this chat, don't write `MISSING:` for it and don't stop: build the brief from what its line in step 2 says it shows, plus "People and fixes" below, and say in one line that its own checks weren't run.
 6. **Write what the picture makes people wonder,** in one line. The picture never answers it. Check the story's first 125 characters pick it up (that's about what shows before "See more").
-7. **Write the line under the picture.** Meta suggests about 27 characters for this headline. Use one of four: a **plain caption** (what's in the frame, with a time or a count), **a question about the thing** (never about the reader), **the buyer's own line** (real, cut at a whole word) or **the swap** (old step out, new step in). Never the product name, never a line about the reader's body or health.
-8. **Run stop, sort and follow** on the brief.
+7. **Write the line under the picture.** Meta suggests about 27 characters for this headline. Count the characters one by one, spaces included, and write the count. Use one of four: a **plain caption** (what's in the frame, with a time or a count), **a question about the thing** (never about the reader), **the buyer's own line** (real, cut at a whole word) or **the swap** (old step out, new step in). Never the product name, never a line about the reader's body or health.
+8. **Run stop, sort and follow** on the brief. For sort, name the one detail in the frame that only a person with the problem would recognise (a thing, a time, a habit). If you can't name one, the picture fails sort: switch to the runner-up or the problem moment fallback and say why.
 9. **Check it.** Run the four checks in "Check before you hand it back", the four rules in "People and fixes" (skip them when no person is in the picture), and the chosen skill's own checks only if its file is in this chat. Fix any that fail where you can. List any still missed under CHECKS MISSED, one line each, or write "none". Then hand it back.
 
 ## People and fixes, for any skill

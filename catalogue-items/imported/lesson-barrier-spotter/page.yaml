@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It predicts problems from the task and class description.
 new_slug: lesson-barrier-spotter
 name: Lesson barrier spotter
-summary: Paste a lesson and describe your class. Get likely barriers and which
-  ones design can fix. It does not diagnose anyone.
+summary: Spot the barriers in a lesson before you teach it. Paste your task and describe your class. You get a list of fixes and who needs extra help.
 job: teach-and-train
 headline: Lesson barrier spotter
-subhead: A list of places your lesson is likely to trip learners up, before you
-  teach it. Paste the task and describe your class, such as English learners,
-  attention needs or wide reading levels.
+subhead: A list of places your lesson is likely to trip learners up, before you teach it. Paste the task and describe your class, such as English learners, attention needs or wide reading levels.
 explain: |
   A list of places your lesson is likely to trip learners up, before you teach it. Paste the task and describe your class, such as English learners, attention needs or wide reading levels. The skill goes through what students must read, write, say and produce, and predicts where each group may get stuck.
 
@@ -17,8 +14,11 @@ when:
   - You are planning a reading task for a class with mixed levels.
   - You have English learners and want to catch language barriers early.
   - A group project asks for skills some students may find hard.
-  - You want to know which problems to fix in the lesson and which need extra
-    help.
+  - You want to know which problems to fix in the lesson and which need extra help.
+not_for:
+  - "You want to diagnose a student or replace a specialist assessment: talk to your school's special needs lead or a qualified specialist."
+  - "You want to check a finished lesson plan against UDL: use a UDL lesson auditor if your library has one, or ask a colleague to review it."
+  - "You have no idea about your class yet: spend a lesson watching how students work first, then come back."
 you_give:
   - The lesson task and how it is assessed
   - A description of your class
@@ -30,7 +30,34 @@ you_get:
   - Barriers needing individual support
   - Changes to make before teaching
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page.
+  - Paste your lesson task. Say what students read, write, say and make, and how you will assess it.
+  - Describe your class. Name language needs, reading range, attention needs and anything else you know.
+  - Add your room, devices and time (optional). Then send it.
+  - Read the Priority Design Changes first. Make those changes before the lesson.
+  - Check the specialist support list. Pass those needs to your special needs lead. The tool does not diagnose anyone.
+output_sample:
+  input:
+    - The lesson task, with what students read, write, say and make, and how it is assessed
+    - A description of the variability in your class, such as language, reading level or attention needs
+    - Your classroom and devices (optional)
+    - How much time students have (optional)
+  output:
+    - name: Barrier Analysis
+      contains: The task name followed by a short summary of the main access risks for your class.
+    - name: Barriers by Category
+      contains: A table of barriers with affected learners, severity and a design change, grouped into five types.
+    - name: Engagement Barriers
+      contains: Places where students may lose interest, feel anxious or struggle to keep going.
+    - name: Representation Barriers
+      contains: Places where the way information is shown may be hard to read, hear or understand.
+    - name: Action and Expression Barriers
+      contains: Places where the way students must respond or produce work may block them.
+    - name: Environmental Barriers
+      contains: Problems with the room, devices or time that make the task harder.
+    - name: Assessment Barriers
+      contains: Ways the marking or the format of the assessment may hide what students know.
+    - name: Barriers Requiring Specialist Support
+      contains: Needs that design changes cannot meet and that call for individual help.
+    - name: Priority Design Changes
+      contains: The 3 to 5 changes that matter most, to make before you teach.

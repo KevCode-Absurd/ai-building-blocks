@@ -1,6 +1,6 @@
 new_slug: automation-flow-sketcher
 name: "Automation flow sketcher"
-summary: "Paste a task you repeat. Get an automation laid out step by step for Zapier or Make, with what can break."
+summary: "Turn a task you repeat into an automation plan for Zapier or Make. You get each step, filters, and what happens when it fails."
 job: connect-tools
 thinking: low
 thinking_why: "It lays out a flow from a clear task with little judgement."
@@ -17,6 +17,10 @@ when:
   - "You copy the same data between apps every day."
   - "An automation you built keeps failing silently."
   - "You are choosing between Zapier and Make."
+not_for:
+  - "You need custom code or a very high volume pipeline: ask a developer, or use plain code instead."
+  - "You only move data once: copy it by hand, or use an export and import in the app."
+  - "You only want two apps kept in sync: use the sync option built into one of the apps, or use the No-code automation planner for the full version."
 
 you_give:
   - "The task, step by step as you do it now"
@@ -34,6 +38,27 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - The task, step by step as you do it now
+    - The apps involved
+    - How often and how many
+    - What must never happen (optional)
+  output:
+    - name: TRIGGER
+      contains: The event that starts the automation and the app it comes from.
+    - name: STEPS
+      contains: Each step as app, action and the data it needs from the step before.
+    - name: FILTERS
+      contains: The conditions where the automation stops quietly, such as an empty field or a test order.
+    - name: IF IT FAILS
+      contains: For each step, what you will see and what happens, such as an alert, a retry or a log row.
+    - name: AVOIDING DUPLICATES
+      contains: How to stop the same thing running twice.
+    - name: TOOL PICK
+      contains: Zapier or Make for your size of task, with one reason.
+    - name: MISSING
+      contains: Any facts the plan needs that you did not give.
 
 how_it_works:
   - title: "Name the trigger"
@@ -97,8 +122,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "The exact apps and their plans"
-  - "Three example rows of real data with names removed"
+    - "The exact apps and their plans"
+    - "Three example rows of real data with names removed"
 
 terms:
   - term: "Trigger"

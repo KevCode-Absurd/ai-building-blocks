@@ -1,0 +1,167 @@
+name: Account Strategist agent
+summary: Build an account growth plan for a customer you already won, with a stakeholder map, expansion opportunities and early signs of churn.
+headline: Account Strategist agent
+subhead: Describe a customer account, what they bought and the people you know there. It maps who matters, finds the upsell and cross-sell chances that have real evidence behind them, plans the next quarterly review and flags the signs that a customer may leave.
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Winning a customer is the start of the work. The money comes from keeping
+  them and growing the account. Two things go wrong. You depend on one friendly
+  contact, and that person leaves. Or you pitch more to a customer who is not
+  yet happy with what they already own. This account strategist agent builds a
+  customer account plan that avoids both.
+
+
+  It starts with the health of the account. Green accounts get expansion plays.
+  Yellow accounts get a plan to steady them. Red accounts get a save plan and no
+  upsell. It counts a usage jump as a signal only. A real opportunity also needs
+  a reason, a timing and a person who cares. It then writes the case from the
+  customer's side, such as hours saved, not from your revenue goal.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It works from
+  what you paste and cannot open your CRM or product data. Its success targets,
+  such as net revenue retention over 120%, are goals, not results from AI
+  Blocks. Check each number and name against your own records before you act.
+when:
+  - A new customer has signed and you need a plan for the next 12 months with them.
+  - Your only contact at a big customer just changed jobs or went quiet.
+  - A customer's usage is growing, and you want to know if it is a real chance to sell more.
+  - A quarterly business review is coming and you want an agenda that leads to a next step, not a status report.
+not_for:
+  - You want to win a new customer. Use the Deal Strategist agent for a live deal.
+  - You want one page that sums up an account from your CRM, email and calls. Use the Account catch-up brief writer.
+  - You want to rank many accounts against each other. Use the Account tier ranker.
+  - You want churn scores across your whole customer base. Use the Churn risk finder.
+  - You want it to send emails, change your CRM or book meetings. It only writes the plan.
+you_give:
+  - The account name, what they bought, their contract value and the renewal date
+  - What they use, with any usage or support numbers you have
+  - The people you know there, with title, role and when you last spoke
+  - What else you sell that they have not bought
+  - Notes from recent calls or emails (optional)
+  - The date of the next quarterly review (optional)
+you_get:
+  - A health rating for the account (green, yellow or red) with the reasons
+  - A stakeholder map showing champions, buyers, users and detractors, and who is missing
+  - A list of expansion opportunities, each with its signal, why now, who cares and a case in the customer's words
+  - A 60 minute agenda and questions for the next quarterly review (when you ask for one)
+  - A churn warning table and a plan for the next week, month and quarter (for yellow or red accounts)
+  - A shared action plan with owners and dates for both sides
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste what you know about the account, the people and the contract. Add the numbers you have. Say what you want first, such as a growth plan or a review agenda.
+  - Answer any question once. Anything you skip is marked MISSING, and the plan will say what it could not check.
+  - Read the health rating and the stakeholder map first. Fix any person or date that is wrong.
+  - Check each opportunity. Ask whether the customer would call it a good idea and whether you have heard it from them.
+  - Take the action plan to your team. Update the stakeholder map after each call and paste it back in next time.
+how_it_works:
+  - title: Rate the health
+    text: It combines usage, support mood, contact activity, contract timing and sponsor activity into green, yellow or red.
+  - title: Map the people
+    text: It sorts the contacts into champion, buyer, influencer, user and detractor, and counts how many threads you have.
+  - title: Find real opportunities
+    text: It keeps an opportunity only if it has a signal, a reason, good timing and someone who cares.
+  - title: Write the customer's case
+    text: It states each opportunity as a result for the customer, such as time saved, before it mentions revenue.
+  - title: Plan the review
+    text: It builds an agenda that opens with value delivered, then the customer's plans, then how you fit.
+  - title: Watch for churn
+    text: It lists the warning signs and gives a plan for each stage when an account is yellow or red.
+  - title: Agree the next steps
+    text: It ends with actions for both sides, each with an owner and a date.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <account> | contract <value and renewal date or MISSING> | products held <list> | ASSUMED: <list> | MISSING: <list>
+
+  ACCOUNT HEALTH
+    <green, yellow or red> | because <usage, support, contacts, contract timing, sponsor> | play <expand, steady or save>
+
+  STAKEHOLDER MAP
+    <name> | <title> | role <champion, buyer, influencer, user or detractor> | influence <level> | mood <level> | last contact <date> | gap <who is missing>
+
+  EXPANSION OPPORTUNITIES
+    <opportunity> | signal <what you saw> | why now <timing> | who cares <person> | customer case <result for them> | owner | stage
+    NOT YET AN OPPORTUNITY: <observations missing a reason, timing or sponsor>
+
+  QUARTERLY REVIEW PLAN (if asked)
+    agenda in minutes | questions to ask | who must attend
+
+  CHURN WATCH (if yellow or red, or asked)
+    <signal> | current | risk level | action this week, this month, this quarter
+
+  ACTION PLAN
+    <action> | our owner | their owner | due date | status
+
+  STILL TO CHECK
+    <item> | where to confirm it
+output_sample:
+  input:
+    - The account name, what they bought, the contract value and renewal date
+    - The people you know there, with their role and when you last spoke
+    - Usage or support numbers, and notes from recent calls (optional)
+    - What else you sell that they do not own yet
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Your CRM or product usage numbers, pasted in as text (optional)
+  output:
+    - name: Account health
+      contains: A green, yellow or red rating with the reasons, and whether to expand, steady or save.
+    - name: Stakeholder map
+      contains: Each person's role, influence, mood and last contact, plus who you still need to meet.
+    - name: Expansion opportunities
+      contains: Each chance with its signal, timing, sponsor and a case in the customer's words.
+    - name: Quarterly review plan
+      contains: A 60 minute agenda with questions that lead to a next step.
+    - name: Churn watch
+      contains: Warning signs for the account and a plan for this week, this month and this quarter.
+    - name: Action plan
+      contains: Actions for both sides, each with an owner and a due date.
+    - name: Still to check
+      contains: Facts and numbers you must confirm in your own records before acting.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: You paste in account notes and numbers and read a plan back. Nothing is changed in your CRM.
+    - name: Your CRM or customer success tool
+      why: It holds the contract dates, contacts and usage. Copy them into the chat, as the AI cannot read them itself.
+  inputs:
+    - Usage by team or department for the last three months.
+    - Support ticket themes and any recent complaints.
+    - The customer's own goals for the year, from their website or your last review.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: First job
+    how: Ask for one thing first, such as the stakeholder map or the review agenda. Add the rest after you check it.
+  - what: Account size
+    how: Say if the account is large, mid-size or small. Large accounts grow through senior sponsors. Small ones grow through usage.
+  - what: Review length
+    how: Give the real meeting length if it is not 60 minutes, and the agenda will be cut to fit.
+improve:
+  - After each call, paste what changed and ask for an updated map and action plan.
+  - Note which opportunities turned out wrong and why, and add that to the next brief.
+terms:
+  - term: Land and expand
+    meaning: Win a small first deal, then grow the account over time.
+  - term: Stakeholder map
+    meaning: A list of the people at a customer, their role in the decision, and how they feel about you.
+  - term: Champion
+    meaning: A person at the customer who wants you to succeed and can speak for you inside.
+  - term: Multi-threading
+    meaning: Having good contacts with several people at the customer, so one person leaving does not end the account.
+  - term: Net revenue retention
+    meaning: How much of last year's revenue you keep from the same customers, including upsells and losses.
+  - term: Quarterly business review
+    meaning: A regular meeting with a customer about the value they get and what comes next.
+  - term: Whitespace
+    meaning: Things you sell that the customer does not own yet.

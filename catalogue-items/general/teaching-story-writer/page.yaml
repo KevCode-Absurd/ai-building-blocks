@@ -1,6 +1,6 @@
 new_slug: teaching-story-writer
 name: "Teaching story writer"
-summary: "Give it a lesson you want to teach. Get a short funny story that carries it, with a turn to the reader."
+summary: "Turn one lesson into a short, funny teaching story people remember. Give it your lesson and who will hear it. You get a one-minute story."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It follows a short fixed pattern. The writing is light and the rules are simple."
@@ -14,27 +14,54 @@ explain: |
   This skill starts by stating your lesson in one plain sentence. It then picks a small everyday scene, often with a household animal or a shopkeeper, where someone makes the mistake your lesson warns against. It tells the story in plain, quick lines with one funny or surprising turn. Then it steps out and speaks to the reader as a friend about what it means. It may add a pair of things that look alike but are not, to sharpen the point, then returns to the story and closes on what followed.
 
 when:
-- "You need to teach a habit or idea to a team, class or customers and rules are not working."
-- "You want a short story for a talk, email or lesson that people will repeat."
-- "You want a funny way to explain a mistake without blaming anyone."
+  - "You need to teach a habit or idea to a team, class or customers and rules are not working."
+  - "You want a short story for a talk, email or lesson that people will repeat."
+  - "You want a funny way to explain a mistake without blaming anyone."
+not_for:
+  - "You need a true incident report or anything that must be accurate: use a real case, told as it happened."
+  - "You want a story built from a real customer or team case: use the Case-first story builder."
+  - "You need a plain checklist or rule sheet people can look up: write a short list by hand instead."
 
 you_give:
-- "The lesson you want to teach, in a sentence or two"
-- "Who will hear it, and where (optional)"
-- "A scene or setting you prefer (optional)"
-- "Tone limits, for example no jokes about customers (optional)"
+  - "The lesson you want to teach, in a sentence or two"
+  - "Who will hear it, and where (optional)"
+  - "A scene or setting you prefer (optional)"
+  - "Tone limits, for example no jokes about customers (optional)"
 you_get:
-- "A story of about one minute"
-- "One funny or surprising turn"
-- "A short aside that speaks to the reader"
-- "A closing line on the consequence, not a moral"
+  - "A story of about one minute"
+  - "One funny or surprising turn"
+  - "A short aside that speaks to the reader"
+  - "A closing line on the consequence, not a moral"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "State the lesson in a sentence."
-- "Say who the story is for."
-- "Read the story aloud and time it."
-- "Ask for a second version with a different setting if the first does not fit."
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "State the lesson in a sentence."
+  - "Say who the story is for."
+  - "Read the story aloud and time it."
+  - "Ask for a second version with a different setting if the first does not fit."
+output_sample:
+  input:
+    - The lesson you want to teach, in a sentence or two
+    - Who will hear it, and where
+    - A scene or setting you prefer (optional)
+    - Tone limits, such as no jokes about customers (optional)
+  output:
+    - name: LESSON
+      contains: Your lesson written as one plain sentence.
+    - name: STORY
+      contains: A story under 150 words from everyday life, with one funny or surprising turn.
+    - name: TO THE READER
+      contains: Two or three lines where the storyteller steps out and speaks to the reader as a friend.
+    - name: LOOK-ALIKE PAIRS
+      contains: One or two pairs of things that seem the same but differ, only if the lesson needs them.
+    - name: CLOSE
+      contains: A last line on what happened because of the mistake, with no moral.
+    - name: ANOTHER SETTING
+      contains: A one-line seed for a second story in a different scene.
+    - name: MISSING
+      contains: Any gaps in what you gave, marked so nothing is made up.
+    - name: CHECKS MISSED
+      contains: One line for each quality check the story still fails, or none.
 
 how_it_works:
   - title: "State the lesson"
@@ -88,23 +115,23 @@ tweaks:
     how: "Describe the mistake you see most often."
 
 judge:
-- "You can tell it aloud in a minute."
-- "The lesson appears only after the story."
-- "There is one clear laugh or surprise."
-- "The aside speaks to the reader, not about them."
-- "The ending is a consequence, not a moral."
+  - "You can tell it aloud in a minute."
+  - "The lesson appears only after the story."
+  - "There is one clear laugh or surprise."
+  - "The aside speaks to the reader, not about them."
+  - "The ending is a consequence, not a moral."
 
 test:
-- "Tell it to two people and ask them to say the lesson back."
-- "Check no one feels mocked."
-- "Try the second setting and see which sticks."
-- "Check it again a week later: do they remember it?"
+  - "Tell it to two people and ask them to say the lesson back."
+  - "Check no one feels mocked."
+  - "Try the second setting and see which sticks."
+  - "Check it again a week later: do they remember it?"
 
 improve:
-- "Add stock characters from your workplace to step 2."
-- "Add a list of mistakes your team makes often."
-- "Save stories that worked in a file."
-- "Pair it with \"Case-first story builder\" when you need a true case instead of a made-up one."
+  - "Add stock characters from your workplace to step 2."
+  - "Add a list of mistakes your team makes often."
+  - "Save stories that worked in a file."
+  - "Pair it with \"Case-first story builder\" when you need a true case instead of a made-up one."
 
 works_best_with:
   tools:

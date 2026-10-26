@@ -2,7 +2,7 @@ thinking: low
 thinking_why: It runs set calculations on your numbers.
 new_slug: social-media-results-analyst
 name: Social media results analyst
-summary: Get engagement rates, benchmarks, and financial ROI when you supply attributed revenue, matching spend, method, and window.
+summary: Check social media results from your post stats. Get engagement rates, platform benchmarks and top posts. Add revenue and spend to see financial ROI.
 job: grow-social
 headline: Social media results analyst
 subhead: Compare post results and activity costs. Financial ROI appears only with attributed revenue, matching spend, and the method and window used.
@@ -15,6 +15,10 @@ when:
   - You need to show a client the return on a campaign.
   - You want to know if your engagement is good for your platform.
   - You are choosing what to post more of.
+not_for:
+  - "You want to prove paid ad sales or forecast revenue without a measured revenue source: get that from your ad platform or sales records first."
+  - "You need results across many channels, not just social: use a cross-channel analytics tool or a simple spreadsheet."
+  - "You want new posts written, not results checked: ask your AI to draft them in a normal chat."
 you_give:
   - "Post data: reach, likes, comments, shares and dates"
   - Attributed revenue, matching spend, the attribution method, and window (optional; all are required for financial ROI)
@@ -26,8 +30,31 @@ you_get:
   - Comparison with platform benchmarks
   - Top and bottom posts and what to do next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your files.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files.
+  - Paste the skill text, or upload the skill folder.
+  - Add your post stats as a spreadsheet or pasted table. Say which platform they came from.
+  - Add spend, revenue, method and window only if you have them. All four are needed for financial ROI.
+  - Check the totals look right, then use the top and bottom posts to plan what to post next.
+output_sample:
+  input:
+    - "Your post stats: reach, likes, comments, shares and dates"
+    - The platform for the posts, such as Instagram or LinkedIn
+    - Spend for the same period (optional)
+    - Attributed revenue, how it was attributed, and the time window (optional, all needed for financial ROI)
+  prerequisites:
+    - An AI that can run Python code and read your files, so the numbers are worked out the same way each time
+  output:
+    - name: Campaign metrics
+      contains: Total engagements, average engagement rate and click rate across all your posts.
+    - name: Post-by-post breakdown
+      contains: Engagement rate and other rates for each post, so you can compare them side by side.
+    - name: Cost metrics
+      contains: Cost per engagement and cost per click when you give spend and clicks.
+    - name: Financial ROI
+      contains: Return on spend only when revenue, spend, method and window are given. Otherwise it says what is missing.
+    - name: Benchmark comparison
+      contains: "How your engagement rate rates against the average for your platform: poor, average, good or excellent."
+    - name: Top and bottom posts
+      contains: The best and weakest posts ranked by engagement.
+    - name: Recommendations
+      contains: Next steps based on what worked, without guessing business return from likes or clicks.

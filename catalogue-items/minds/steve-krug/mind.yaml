@@ -16,6 +16,26 @@ use_cases:
   - "Check a page with the trunk test: could a lost visitor tell where they are?"
   - "Find the things on your site that drain visitors' goodwill, and fix them"
   - "Add short, well-timed help where a choice really is hard"
+not_for:
+  - "You need a chart or data graphic made clear: hire Cole Nussbaumer Knaflic, who teaches audience, chart choice and explaining numbers."
+  - "You want a bold logo or brand look: hire Aaron Draplin, who is known for logos and a small independent studio."
+  - "Your question is about numbers, like why traffic or sales dropped: check your analytics first, or ask a person who runs analytics."
+output_sample:
+  input:
+    - The page, form, menu or app screen that people get wrong (paste its text or describe it)
+    - The one job a first-time visitor comes to do
+    - Who your visitors are
+    - What you already know about the worst problem (optional)
+    - How many people can watch a test, and when (optional)
+  output:
+    - name: Problems that made him stop
+      contains: A short numbered list of the things a stranger would pause on, with the reason for each.
+    - name: Smallest fix for each problem
+      contains: One plain fix per problem, kept to the least change that works.
+    - name: Test plan
+      contains: The date, the tasks, who takes part, who watches and who runs the lunch debrief.
+    - name: Test script
+      contains: Words to read aloud before the first person sits down, so you do not coach them.
 seats:
   - {seat: "Don't make them think", asks: "Will a first-time visitor get this at a glance, or do they have to stop and puzzle it out?"}
   - {seat: "DIY testing", asks: "Have we watched three people try it this month, and what did we fix?"}

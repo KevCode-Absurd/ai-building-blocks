@@ -15,6 +15,27 @@ use_cases:
   - "Organise a messy draft by asking what the reader needs to know next"
   - "Coach a non-native English writer toward plain, strong English"
   - "Gather far more notes than you need before writing a short piece"
+not_for:
+  - "You want a poem or a novel with rich, long sentences: keep what works, or ask the Billy Collins mind for poems."
+  - "You need your points ordered into a business recommendation: use the Barbara Minto mind for the pyramid structure."
+  - "Your text is legal, medical or financial: ask a specialist to check the wording, because a shorter line can change the meaning."
+output_sample:
+  input:
+    - "Your draft: an email, report, web page, pitch or memoir piece"
+    - Who will read it and what they need to know next
+    - Your point in one sentence (optional)
+    - A word limit (optional)
+  output:
+    - name: Worst sentence, rewritten
+      contains: One of your weakest sentences shown beside a plain rewrite, so you can see the gap.
+    - name: Clutter list
+      contains: The words and phrases that did no work, each with the reason it was cut.
+    - name: Clearer draft
+      contains: Your text with long words made short, people put back in, and one thought per sentence.
+    - name: First questions
+      contains: Questions about your point, your reader and your voice, asked before or after the edit.
+    - name: One rule for tomorrow
+      contains: A single editing rule from the session that you can use on your next draft.
 seats:
   - {seat: "Clear, simple writing", asks: "What is this sentence trying to say, and can we say it in fewer, plainer words?"}
   - {seat: "The editor's pencil", asks: "Which words here are doing no work, and why are they still in?"}

@@ -1,51 +1,91 @@
 new_slug: connect-production-yield-to-mix-contribution
 name: Connect production yield to mix contribution
 headline: Connect production yield to mix contribution
-summary: A yield-linked product contribution and capacity comparison
+summary: Turn measured batch yield into cost per good unit, then check whether your planned product mix fits the bottleneck hours you have.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A yield-linked product contribution and capacity comparison. Share measured batch input/good/scrap quantities and recovery cash for each proposed product, proposed output units, selling prices and verified bottleneck hours.
+subhead: Give it batch results for each product, the scrap you can sell, selling prices, your planned quantities and the bottleneck hours. Step 1 works out cost per good unit. Step 2 builds each product's contribution and checks the plan against capacity. You get a cost bridge and a pass or overload result.
 explain: |-
-  A yield-linked product contribution and capacity comparison.
+  Plans for a product mix often start from a recipe cost. Real batches lose material as scrap, so the cost of each good kilogram is higher than the recipe says. This product mix capacity check starts from what the batches really gave.
 
-  Manufacturing finance planning. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 reconciles input mass to good output and scrap for each product. It counts only scrap recovery you can show, and divides the net batch cost by good output. It converts that to your selling unit and keeps the conversion evidence. Step 2 uses that cost with your selling prices to give contribution per unit. It then multiplies your planned quantities by bottleneck hours and compares with the hours you have.
+
+  The mix you choose stays your proposal. The check shows unused hours or overload. It does not find the best mix or schedule your machines, and it will not raise volumes because a product ranks well.
 when:
-  - You need a yield-linked product contribution and capacity comparison.
-  - You work on manufacturing finance planning and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You have batch results for two products and want to know which earns more per unit after scrap.
+  - A product's real yield is lower than the recipe says and its cost looks wrong.
+  - You have planned quantities for next month and need to know if the bottleneck machine can run them.
+  - A buyer or lender asks how your unit costs and capacity numbers were worked out.
+not_for:
+  - You want the best mix worked out for you. This tests a mix you choose and does not optimize.
+  - You have recipes or targets but no measured batch results. Measure real batches first.
+  - You have more than two products or several bottlenecks. Split the plan into pairs, or ask an analyst.
+  - You only need the cost per good kilogram. Use the Manufacturing yield cost bridge on its own.
 you_give:
-  - Measured batch input/good/scrap quantities and recovery cash for each proposed product, proposed output units, selling prices and verified bottleneck hours.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "For each product, one measured batch: input kilograms, good output and scrap (from production logs)"
+  - The batch's input cost and conversion cash, such as labor and energy (from your accounts)
+  - What scrap sells for, with evidence (optional; without it no recovery is counted and the gap shows)
+  - The selling unit and price for each product (from your price list)
+  - Bottleneck hours per unit and the qualified hours available in the period (from machine records)
+  - The quantity you plan to make of each product
 you_get:
-  - A yield-linked product contribution and capacity comparison.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "Mass reconciliation per batch: input, good output and scrap"
+  - Net batch cost and cost per good kilogram, converted to your selling unit
+  - Contribution per unit and in total for each product
+  - Bottleneck hours needed against hours available, with unused hours or overload
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach your batch logs, cost records, price list and machine hours. Say the selling unit for each product and the period the hours cover.
+  - After step 1, check that input mass equals good output plus scrap for each batch, and that scrap value matches your sale evidence.
+  - After step 2, check that cost and quantities use the same unit, and that hours needed against hours available is clearly shown.
+  - Fill every MISSING line before anyone relies on the plan. Nothing is ordered or scheduled. A person who knows the line should review the bottleneck hours.
 how_it_works:
   - title: Manufacturing yield cost bridge
-    text: Reconcile each product batch mass and net cash after evidenced scrap recovery. Convert cost per good kilogram into the owner-specified selling unit and retain conversion evidence.
+    text: "Reconciles input mass to good output and scrap, values only evidenced scrap recovery, and divides net batch cost by good output. Converts cost to your selling unit. Hands step 2 cost per good unit and the conversion evidence. Check before moving on: mass and cash both reconcile."
   - title: Product mix capacity checker
-    text: Build proposed product contributions from the reconciled yield cost and actual selling assumptions, then check selected volumes against the same-period bottleneck. Expose other production constraints and avoid describing the plan as optimized.
+    text: Builds each product's contribution from the step 1 cost and your selling prices, avoiding double counts of shared fixed costs. Multiplies planned units by bottleneck hours and compares with available hours. Reports unused capacity or overload. Keeps the mix as your proposal.
 output_shape: |-
-  A yield-linked product contribution and capacity comparison.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  YIELD BRIDGE    <product>: input <kg> = good <kg> + scrap <kg>
+                  input cost <n> + conversion cash <n> - scrap recovery <n> = net batch cost <n>
+                  cost per good kg <n> -> per <selling unit> <n>
+                  lost-yield sensitivity <note>
+
+  MIX CHECK       <product>: price <n> - cost <n> = contribution per unit <n>
+                  planned <units> x bottleneck hours <h> = <h> needed
+                  total needed <h> vs available <h> -> <unused or overload>
+
+  SOURCES         <each input, its source, date, unit and period>
+  MISSING         <each gap, and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - "One measured batch for each product: input, good output and scrap"
+    - Input cost, conversion cash and any scrap sale evidence
+    - Selling prices and planned quantities
+    - Bottleneck hours per unit and hours available
+  prerequisites:
+    - Production logs and cost records for real batches
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: YIELD BRIDGE
+      contains: Input, good output and scrap per batch, net batch cost and cost per good unit.
+    - name: MIX CHECK
+      contains: Contribution per unit and in total, hours needed against hours available, and any overload.
+    - name: SOURCES
+      contains: Each input with its source, date, unit and period.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Per-good-unit costs and product mix quantities use identical physical units; planned volume is not increased automatically from contribution rankings.
+  - what: Yield
+    how: Lower the good output for one batch. Cost per good unit rises, contribution falls, and the page shows the lost-yield effect.
+  - what: Scrap recovery
+    how: Add or remove scrap sale evidence. Net batch cost changes only by what you can show, never by an estimate.
+  - what: Planned quantities
+    how: Raise one product's units. Hours needed rise and the page shows when the bottleneck becomes overloaded.
+  - what: Selling unit
+    how: Change from kilograms to packs. Cost and quantities convert together and the conversion evidence is kept.
 judge:
   - Per-good-unit costs and product mix quantities use identical physical units; planned volume is not increased automatically from contribution rankings.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +96,30 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep a simple batch log with input, good output and scrap for every run, and attach it each time.
+  - Record the date of each bottleneck hours figure, so you know when a machine time needs remeasuring.
+  - Add your usual scrap buyers and prices to your copy of the skill, so recovery evidence is easy to cite.
+  - Run the Reconcile service capacity and shared cost workflow next if shared overhead is hiding in your unit margins.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and a checks tab you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Weighed batch records rather than recipe weights.
+    - Machine run logs that show actual bottleneck time per unit.
+    - A named reviewer who runs the line.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Yield
+    meaning: The share of input that comes out as good product.
+  - term: Scrap recovery
+    meaning: Cash from selling the scrap, counted only when you can show it.
+  - term: Contribution
+    meaning: Selling price less the cost that changes with each unit.
+  - term: Bottleneck
+    meaning: The machine or step that limits how much you can make.
+  - term: Overload
+    meaning: The plan needs more bottleneck hours than you have.
+before: []
+next:
+  - reconcile-service-capacity-and-shared-cost
+  - plan-a-purchase-around-your-real-budget

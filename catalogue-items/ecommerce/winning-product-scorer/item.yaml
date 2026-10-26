@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: product_data, required: true}
   - {type: store_capture, required: false}
+  - {type: shortlist, required: false}
 outputs:
   - {type: audit_report}
 uses: []

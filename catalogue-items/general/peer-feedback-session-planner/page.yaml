@@ -1,6 +1,6 @@
 new_slug: peer-feedback-session-planner
 name: "Peer feedback session planner"
-summary: "Paste the stuck project and who could review it. Get a session plan with rules so notes stay honest."
+summary: "Plan a peer feedback session for a stuck project. Get the reviewers, timings and note rules that help people say what is not working."
 job: lead-people
 thinking: medium
 thinking_why: "It chooses who to invite and sets rules from judgement, but the session shape is fixed."
@@ -17,6 +17,10 @@ when:
   - A project has stalled and the team keeps showing only polished updates.
   - You want a review where people say what they really think without fear.
   - You manage a creative or complex team and need a repeatable way to get notes.
+not_for:
+  - "Your project is broken beyond saving: hold a restart talk or a post-mortem with your team first, then plan a review."
+  - "You need a private talk about one person's work: plan that talk yourself, one to one, instead of a group session."
+  - "You want fixes and ideas from experts: ask a trusted mentor or advisor directly, since this plan asks for problems only."
 
 you_give:
   - The stuck project and what stage it is at
@@ -35,6 +39,29 @@ how_to_use:
   - List possible reviewers with their role and any power they have over the owner.
   - Give the owner the plan and the rules before the session.
   - Bring the notes back to the skill after the session to plan the follow-up.
+output_sample:
+  input:
+    - The stuck project, its stage and where it is stuck
+    - Possible reviewers, with their role and any power over the owner
+    - A rough draft or description of the work (optional)
+    - Your time limit and where the session will happen
+  output:
+    - name: The project
+      contains: The project, its stage, the owner and the moment it got stuck.
+    - name: Reviewers
+      contains: The peers chosen, why each fits, and any power they hold over the owner.
+    - name: Left out
+      contains: People not invited, such as bosses or rivals, with the reason for each.
+    - name: Session plan
+      contains: A timed list of what happens and who speaks, with senior voices held back at first.
+    - name: Rules and note form
+      contains: The rule that notes name problems and not fixes, with examples and a form that records each note.
+    - name: Owner's decision
+      contains: A blank space where the owner records what they will change.
+    - name: Follow-up
+      contains: A date a few weeks out and the question to ask then.
+    - name: Missing and checks missed
+      contains: Anything you did not give, and any check the plan did not pass.
 
 how_it_works:
   - title: Picks the peers

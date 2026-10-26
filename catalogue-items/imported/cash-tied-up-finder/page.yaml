@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It calculates standard day counts.
 new_slug: cash-tied-up-finder
 name: Cash tied-up finder
-summary: Give it your receivables, payables and stock. Get days outstanding, the
-  cash cycle and where cash is stuck.
+summary: Find the cash tied up in unpaid invoices, stock and early bill payments. Get your cash conversion cycle and ways to free money. 24 months of data needed.
 job: money-and-investing
 headline: Cash tied-up finder
-subhead: You find out how much cash is locked in customers who owe you, stock on
-  shelves and bills you pay early, and where to free it.
+subhead: You find out how much cash is locked in customers who owe you, stock on shelves and bills you pay early, and where to free it.
 explain: |
   You find out how much cash is locked in customers who owe you, stock on shelves and bills you pay early, and where to free it. Give receivables, payables and stock figures, and you get days outstanding for each and the full cash cycle.
 
@@ -17,6 +15,10 @@ when:
   - You want to know how much cash one day of faster collection would free.
   - Stock keeps growing and you suspect slow items are tying up money.
   - You are negotiating payment terms and need numbers.
+not_for:
+  - "You only need a short-term cash forecast: build a simple cash-flow forecast in a spreadsheet, or ask your accountant."
+  - "You have less than 24 months of monthly balances: gather more history first, or ask your bookkeeper for a rough review."
+  - "You want to check how fast you spend cash as a startup: use a burn rate forecast instead of a working capital review."
 you_give:
   - Monthly receivables, stock and payables for about two years
   - Revenue and cost of goods by month
@@ -29,7 +31,26 @@ you_get:
   - Where cash is stuck and why
   - Actions to free it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files, such as a paid plan with data analysis on.
+  - Paste the full text of the skill into a new chat.
+  - "Send your spreadsheet first: monthly receivables, stock, payables, revenue and cost of goods for about 24 months."
+  - Add your agings and your payment terms list (optional), and say if your sales are seasonal.
+  - Read the Diagnosis before the Action Plan. Check that the day counts match your own books.
+  - Pick one fix to try first, then run it again after a few months to see the change.
+output_sample:
+  input:
+    - Monthly receivables, stock and payables for about 24 months
+    - Revenue and cost of goods by month
+    - Receivable and payable agings
+    - Customer and supplier payment terms (optional)
+  prerequisites:
+    - An AI that can run code, so the day counts are worked out by script and not by guesswork
+  output:
+    - name: Dashboard
+      contains: Your cash conversion cycle trend, the days for each part, and how much cash is tied up against peers.
+    - name: Diagnosis
+      contains: Why each part moved, split into volume, terms or discipline, with the evidence for each.
+    - name: Opportunity Sizing
+      contains: The cash each fix could free, with how hard each one is to do.
+    - name: Action Plan
+      contains: Who owns each fix, the target days, the timeline and the risk to operations.

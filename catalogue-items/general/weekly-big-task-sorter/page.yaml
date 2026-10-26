@@ -1,6 +1,6 @@
 new_slug: weekly-big-task-sorter
 name: "Weekly big task sorter"
-summary: "Paste your task list. Get the few big tasks that matter, the small ones to batch or drop, and a week plan."
+summary: "Paste your task list and sort your weekly tasks into three priorities that fit your real hours, with small tasks batched or dropped."
 job: plan-strategy
 thinking: medium
 thinking_why: "It ranks tasks by consequence and fits them to your hours. The method is fixed, with some judgement on what is big."
@@ -17,6 +17,10 @@ when:
   - Your list has forty items and you cannot tell which three count.
   - You finish each day busy and the main project has not moved.
   - You are starting a week and want a plan that fits the hours you really have.
+not_for:
+  - You have one urgent task or a day with no choices. Just do the task, no sorting needed.
+  - You want to stop small tasks from coming back each week. Use the Not-to-do list builder.
+  - You want to choose your goals for the month. Pick them yourself first, then bring the goal here.
 
 you_give:
   - Every open task, in any order
@@ -35,6 +39,29 @@ how_to_use:
   - Say what you most need to have done by the end of the month.
   - Read the three priorities. Cut anything that does not fit your hours.
   - Run it again each Sunday evening, and tonight for tomorrow.
+output_sample:
+  input:
+    - Every open task, in any order
+    - The hours you really have this week
+    - Your main goal this month or quarter
+    - Who else depends on each task (optional)
+  output:
+    - name: Everything on the plate
+      contains: One numbered list of every task, with rough effort in hours and what each one pays back.
+    - name: Big or small
+      contains: Each task labelled as big work or small work, with a few words on why.
+    - name: The main task
+      contains: The one task that makes others easier or unneeded, which tasks it helps, and why now.
+    - name: Put off longest
+      contains: The task you have delayed most, and a verdict on whether it is big work.
+    - name: The small ones
+      contains: Small tasks grouped into batches with a day and time, handed off to someone, or dropped with a reason.
+    - name: Three priorities this week
+      contains: Exactly three priorities with protected time, plus hours needed against hours you have.
+    - name: Tomorrow
+      contains: Tomorrow's tasks with start times, led by the one that serves priority one.
+    - name: Missing and checks missed
+      contains: Facts that would change the plan, and one line for each check still missed, or none.
 
 how_it_works:
   - title: Lists everything

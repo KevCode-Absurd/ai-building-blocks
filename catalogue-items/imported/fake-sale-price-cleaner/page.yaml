@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies one price rule to many products.
 new_slug: fake-sale-price-cleaner
 name: Fake sale price cleaner
-summary: Get strikethrough prices removed where there is no real discount.
-  Changes live prices and the old values are not kept.
+summary: Remove old strikethrough prices from your Shopify store when there is no real discount. Dry run first, with a CSV of every change.
 job: set-prices
 headline: Fake sale price cleaner
-subhead: A Shopify store where strikethrough prices only show when there is a
-  real discount. It removes old compare-at prices that no longer mean anything,
-  which keeps your pricing honest.
+subhead: A Shopify store where strikethrough prices only show when there is a real discount. It removes old compare-at prices that no longer mean anything, which keeps your pricing honest.
 explain: |
   A Shopify store where strikethrough prices only show when there is a real discount. It removes old compare-at prices that no longer mean anything, which keeps your pricing honest.
 
@@ -18,6 +15,10 @@ when:
   - A product page shows a sale price higher than the old price.
   - You want to meet rules on fair price claims.
   - You are cleaning up after a sale ended.
+not_for:
+  - "You are running a sale right now: skip the cleaner, or turn off the age rule so live sale prices stay."
+  - "You want to change selling prices, not remove old crossed-out ones: edit prices in Shopify admin or a bulk price editor."
+  - "Your AI cannot reach your Shopify store with the Shopify CLI: ask a person with store access to run it."
 you_give:
   - Your store domain
   - Shopify CLI access with product read and write rights
@@ -29,9 +30,26 @@ you_get:
   - Cleared compare-at prices on a live run
   - A count of what changed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Open an AI that can run code and use the Shopify CLI. Sign in to your store with product read and write access.
+  - Paste this skill and give your store domain. Add a collection or tag to limit the run (optional).
+  - Start with a dry run. This is the default, and nothing changes in your store.
+  - Open the CSV and check the rows. Old values are not kept in Shopify, so keep this file as your backup.
+  - If you are in a sale, turn off the age rule. Shopify updates the date on any product edit, so some old-price matches may be wrong.
+  - Run it live only when the CSV looks right. Then check 5 to 10 products on your store.
+output_sample:
+  input:
+    - Your store domain
+    - An age limit in days (optional)
+    - A collection or tag to limit the run (optional)
+  prerequisites:
+    - An AI that can run code and the Shopify CLI
+    - Shopify CLI sign-in with permission to read and write products
+  output:
+    - name: Dry-run summary
+      contains: A count of variants checked and how many would be cleared, split by no-discount and old prices.
+    - name: compare_at_cleanup CSV
+      contains: One row per variant with price, the old compare-at price, the rule matched and the change status.
+    - name: Live run changes
+      contains: Compare-at prices cleared to empty on matching variants, only after you turn off dry run.
+    - name: Final summary
+      contains: Counts of variants checked, cleared by each rule, total cleared and errors, plus the CSV file name.

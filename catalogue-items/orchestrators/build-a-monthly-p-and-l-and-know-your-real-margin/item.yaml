@@ -15,10 +15,10 @@ outputs:
 uses: [landed-cost-allocator, cogs-line-sorter, store-pl-builder, new-and-returning-pl-splitter, daily-contribution-margin-tracker]
 steps:
   - {uses: landed-cost-allocator, note: "Starts from supplier, freight and duty invoices to get the real cost of each product."}
-  - {uses: cogs-line-sorter, note: "Takes the landed costs and sorts every other cost line into COGS or expense with one rule."}
-  - {uses: store-pl-builder, note: "Builds the monthly P&L from the unit costs and the rule for what counts as COGS."}
-  - {uses: new-and-returning-pl-splitter, note: "Takes the P&L and shows what first-time buyers cost and what returning ones earn."}
-  - {uses: daily-contribution-margin-tracker, note: "Turns the monthly P&L rules into a daily margin sheet you can watch."}
+  - {uses: cogs-line-sorter, note: "Takes the landed costs and sorts every other cost line into COGS or expense with one rule. Hands the COGS rule to the P&L builder."}
+  - {uses: store-pl-builder, note: "Builds the monthly P&L from step 1's unit costs and step 2's rule for what counts as COGS. Hands the P&L to the next two steps."}
+  - {uses: new-and-returning-pl-splitter, note: "Takes step 3's P&L and shows what first-time buyers cost and what returning ones earn. Hands you the split; step 5 does not need it."}
+  - {uses: daily-contribution-margin-tracker, note: "Uses step 3's P&L rules and your own daily sales, costs and ad spend, not step 4's split. Turns them into a daily margin sheet you can watch."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/build-a-monthly-p-and-l-and-know-your-real-margin/skeleton.yaml

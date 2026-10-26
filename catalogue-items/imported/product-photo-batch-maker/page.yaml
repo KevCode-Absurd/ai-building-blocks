@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It runs many jobs and watches cost, and you choose the shared style.
 new_slug: product-photo-batch-maker
 name: Product photo batch maker
-summary: Give it a spreadsheet of products. Get one matching photo per product,
-  with a cost limit. Your image model draws them.
+summary: Turn a product spreadsheet into one matching product photo per row with a batch image script. Needs a dLazy account and credits.
 job: product-photos
 headline: Product photo batch maker
-subhead: One matching product photo for every row in your product spreadsheet,
-  so a whole catalog looks like a single shoot. The hard part is keeping a big
-  set consistent, so the style rules never change and only the product details
-  do.
+subhead: One matching product photo for every row in your product spreadsheet, so a whole catalog looks like a single shoot. The hard part is keeping a big set consistent, so the style rules never change and only the product details do.
 explain: |
   One matching product photo for every row in your product spreadsheet, so a whole catalog looks like a single shoot. The hard part is keeping a big set consistent, so the style rules never change and only the product details do.
 
@@ -19,6 +15,10 @@ when:
   - A run failed halfway and you want to resume it.
   - You want to cap image spend before starting.
   - You need a contact sheet to choose from.
+not_for:
+  - "You want mixed visual styles in one batch: run each style as its own batch, or make single photos one at a time."
+  - "You have only one or two products: ask your image tool for a single photo instead of building a batch script."
+  - "You need a cost cap that stops the run on its own: this skill only shows the price check, so watch the total yourself."
 you_give:
   - A CSV of products with descriptions
   - Source product photos
@@ -31,9 +31,32 @@ you_get:
   - A cost limit
   - A contact sheet to pick from
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Open your AI tool and paste in this skill. Use one that can run commands and read your files.
+  - "Before you start: you need a dLazy account with credits. The seedream-5.0 model is the cheap default. The gpt-image-2 model costs about 6 times more and suits products where fine detail matters."
+  - Give it your product CSV, your source photos and the style you want for the whole set.
+  - Run one product first. Then run five more that cover dark, light and shiny items. Fix the style now, because changing it later means rerunning the whole batch.
+  - Do a dry run to see the price, then run the full batch. Check report.csv and rerun the failed products.
+  - Check a sample of the images before you publish them. The prompt templates in the skill are in Chinese.
+output_sample:
+  input:
+    - Your product list as a CSV with a code, a photo path and a short description for each product
+    - One source photo per product (20KB to 15MB, over 400x400, jpg, png or webp)
+    - "Your visual style for the whole set: background, light, angle and shadow"
+    - A dLazy account with credits
+  prerequisites:
+    - An AI that can run shell commands and files
+    - A dLazy account with credits, plus the dlazy command line tool
+    - Prompt templates in the skill are in Chinese
+  output:
+    - name: manifest.csv
+      contains: "Your product list with one row per product: code, photo path and description."
+    - name: Fixed style block
+      contains: The style text that stays word for word the same for every product in the batch.
+    - name: Batch loop script
+      contains: A shell loop that sends each product with its own description, runs five at a time and retries up to three times.
+    - name: Price estimate
+      contains: A dry run price check, multiplied by the number of products, before you run the full batch.
+    - name: One image per product
+      contains: A photo saved under each product code, all in the same style.
+    - name: report.csv
+      contains: One line per product marked ok or fail, with a count so you can rerun the failures.

@@ -1,6 +1,6 @@
 new_slug: search-console-traffic-drop-diagnoser
 name: "Search Console traffic drop diagnoser"
-summary: "Paste a Search Console export. Get pages that lost clicks, the cause and a score out of 100."
+summary: "Find why your Search Console clicks dropped. Paste two periods of data. You get the pages that lost most, the likely cause and a score out of 100."
 job: get-found-in-search
 thinking: high
 thinking_why: "It weighs several possible causes against the evidence, so a stronger model reasons more carefully."
@@ -17,6 +17,10 @@ when:
   - Organic clicks dropped and you want to know which pages and why.
   - Rankings look steady but fewer people click, and you suspect an AI answer above you.
   - Sales fell and you need to know whether search is the cause or something else in the store.
+not_for:
+  - "You have only one period of data: export the earlier period from Search Console first, because without it a drop can't be shown."
+  - "The drop was a single day, such as a site outage: check your host and your uptime first, then come back if clicks stay low."
+  - "You want a general traffic drop check that does not use Search Console: use the general traffic drop investigator, which this skill builds on."
 
 you_give:
   - Search Console pages and searches for the drop window and the period before
@@ -35,6 +39,33 @@ how_to_use:
   - Paste the same view for searches, or for the biggest losers.
   - Add your site change dates and any known Google updates.
   - Fix in the order the skill gives, one group at a time.
+output_sample:
+  input:
+    - Your Search Console pages table for the drop period and the period before
+    - Your Search Console searches table for the same two periods
+    - Dates of site changes and known Google updates (optional)
+    - Your top page links (optional)
+    - Whether store sales fell too, plus your ad and stock status (optional)
+  prerequisites:
+    - A Search Console export covering two periods of the same length
+    - An AI chat tool where you can paste text. No code or paid tool is needed.
+  output:
+    - name: WINDOW
+      contains: The drop period against the period before, and whether store sales also fell, with tracking, stock and ads checked.
+    - name: LOSERS
+      contains: Pages ranked by clicks lost, with clicks, position and click rate before and after.
+    - name: WHAT THEY SHARE
+      contains: The trait the losing pages have in common, such as topic, page type, thin content or competing pages.
+    - name: LIKELY CAUSE BY GROUP
+      contains: For each group of pages, the likely cause, the evidence for it and the fix.
+    - name: AI REPORT
+      contains: Pages with many AI answer impressions and falling clicks, or a note that the report is not available.
+    - name: FIX ORDER
+      contains: "The order to work in: indexing, thin or competing pages, retargeting, then snippet rewrites."
+    - name: SCORE
+      contains: A score out of 100 for how clear the cause is, split into four parts of 25.
+    - name: NOT RUN and MISSING
+      contains: Checks that could not run and any input you did not give.
 
 how_it_works:
   - title: Finds the losers

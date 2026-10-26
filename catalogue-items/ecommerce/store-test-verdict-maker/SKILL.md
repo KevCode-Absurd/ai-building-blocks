@@ -33,6 +33,8 @@ How to start:
 - **Test numbers** (required): visitors and conversions for each version, the planned split, the planned sample and the planned dates. A numbers export from any testing tool works.
 - **The metrics** (required): the main metric, and the guardrails (order value, margin, returns, page speed).
 - **What else happened** (required): any sale, email send, outage, price change or tracking change during the run.
+- **A traffic check** (optional): the A/B test traffic checker's or the Store test readiness checker's report. Take the planned sample, weeks needed and readiness score from it.
+- **A profit check** (optional): the Offer profit-per-session checker's report. Take its winner as the version to read and profit per session as the main metric.
 - **Smallest lift worth shipping and gross profit per order** (strongly advised): to turn the range into money.
 - **Monthly visitors to the page** (optional): to scale the money.
 

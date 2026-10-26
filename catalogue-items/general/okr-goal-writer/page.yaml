@@ -1,6 +1,6 @@
 new_slug: okr-goal-writer
 name: "Objectives and key results writer"
-summary: "Describe your team and the quarter. Get a few objectives, each with dated, numbered key results."
+summary: "Write team goals and key results for the quarter. Give it your team and aim. You get a few objectives with dated, numbered key results."
 job: plan-strategy
 thinking: medium
 thinking_why: "It picks few goals and writes measurable ones, which needs judgment, within a fixed pattern."
@@ -17,6 +17,10 @@ when:
   - "It is the start of a quarter and your team has too many priorities."
   - "Your goals are vague and no one can say if they were met."
   - "You need each person's goals to line up with the team's."
+not_for:
+  - "You have one task or a project with a fixed deliverable: use a simple project plan with steps, owners and dates."
+  - "You want to talk through goals in a weekly meeting with one person: use the One-on-one meeting planner."
+  - "You need a pay or performance review file: ask your manager or HR, because this set is for pacing work, not for scoring people."
 
 you_give:
   - "What your team or business does and the period"
@@ -35,6 +39,29 @@ how_to_use:
   - "Add the objectives of the level above if you have them."
   - "Read each key result and ask if you could mark it done or not done without an argument."
   - "Review the set on the dates it gives, not only at the end."
+output_sample:
+  input:
+    - What your team does and the period
+    - Where you want to be at the end of the period
+    - The objectives of the level above (optional)
+    - Last period's results and current numbers (optional)
+  output:
+    - name: Period and team
+      contains: The period, the team and the aim in one line.
+    - name: Objectives
+      contains: Three to five short objectives, each with the objective above it supports.
+    - name: Key results
+      contains: Two to four key results per objective, each with a start figure, a target number and a date.
+    - name: What we will not do
+      contains: A stop list of work the team will leave alone this period.
+    - name: Check-ins
+      contains: Dates and who looks at which results during the period.
+    - name: How to use this
+      contains: A short note that the set paces the work, and missing an objective is not failure.
+    - name: Missing
+      contains: Start figures or facts you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each self-check that still fails, or none.
 
 how_it_works:
   - title: "Write the objective"

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs scans and reads the output.
 new_slug: dependency-risk-scanner
 name: Dependency risk scanner
-summary: Point it at your project. Get known weak spots in packages found, plus
-  a parts list and license check.
+summary: Scan your project's packages for known security holes. Get a risk report, a parts list (SBOM) and a licence check, with fixes.
 job: secure-code
 headline: Dependency risk scanner
-subhead: Point it at your project. Get known weak spots in packages found, plus
-  a parts list and license check. Bring project folder with manifest and lock
-  files. Use the result to plan your next step.
+subhead: Point it at your project. Get known weak spots in packages found, plus a parts list and license check. Bring project folder with manifest and lock files. Use the result to plan your next step.
 explain: |
   A list of the weak spots in the packages your project uses, plus a parts list and a licence check. Point it at your project and it finds your manifest files, reads lock files to see indirect packages too, and checks each version against public vulnerability databases.
 
@@ -18,6 +15,10 @@ when:
   - A new vulnerability is in the news and you need to know if you use it.
   - You want checks on every build to catch bad packages early.
   - You need to know which package has a licence that conflicts with yours.
+not_for:
+  - Your project has no manifest or lock file. Add one first, or ask a developer to list the packages by hand.
+  - Your company already pays for a scanner under contract. Use your vendor's scanner so the results match what your auditors see.
+  - You want to test a live site or server for attacks. Hire a security tester, since this only reads package lists.
 you_give:
   - Project folder with manifest and lock files
   - Licence policy (optional)
@@ -28,8 +29,31 @@ you_get:
   - Software bill of materials
   - Minimum upgrades to fix problems
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI in a tool that can run code and read files. Give it internet access.
+  - Paste this skill into the chat, or load the skill folder.
+  - Point it at your project folder, or at one manifest file.
+  - Add your licence policy and build system if you have them.
+  - Read the report from the top. Fix Critical and High items first.
+  - Run your tests after any upgrade it suggests. Upgrades can break things.
+output_sample:
+  input:
+    - Your project folder with manifest and lock files
+    - Your licence policy (optional)
+    - The build system you use (optional)
+    - A path to one manifest file, if you do not want a full scan (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Internet access, so your AI can check public advisory databases
+    - The audit tool for your language, such as npm audit or pip-audit, installed
+    - A paid Snyk account, only if you want to use Snyk
+  output:
+    - name: Dependency tree
+      contains: Every direct and indirect package found, with versions, and any package used in code but missing from the manifest.
+    - name: Vulnerability report
+      contains: Known problems sorted by severity, with CVE numbers, the package path, and the fixed version if one exists.
+    - name: Licence check
+      contains: Each package's licence compared with your policy, with flags for copyleft, missing and conflicting licences.
+    - name: Software bill of materials
+      contains: A full parts list of your packages in CycloneDX or SPDX format.
+    - name: Fix suggestions
+      contains: The smallest upgrades that clear each problem, updated manifest files where possible, and notes where no fix exists.

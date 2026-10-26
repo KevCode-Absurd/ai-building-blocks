@@ -1,39 +1,51 @@
 new_slug: layout-default-breaker
 name: "Layout default breaker"
-summary: "Paste a page or layout and its readers. Get the choices software made for you, plus three hand-made alternatives."
+summary: "Find the layout choices your software made for you. Get three hand-made alternatives and a two-reader test for your page, cover or slide."
 job: design-work
 thinking: medium
 thinking_why: "It must tell chosen from inherited layout choices and invent different options, with a risk check on each."
 
 headline: "Layout default breaker"
-subhead: Give it a page, cover or layout, its message and who reads it. It marks every layout choice as made by you or inherited from a template, then gives three different hand-made alternatives that fit the readers' attitude and a two-reader test for the message.
+subhead: Give it a page, cover or layout, its message and who reads it. It marks every layout choice as yours or inherited from a template. You get three different hand-made alternatives and a test with two real readers to check the message still gets through.
 
 explain: |
   Most pages look the way they do because the software offered that margin, that grid and that font size. The result is clean, and it looks like every other page. Readers feel nothing because nothing was decided.
 
-  This skill starts from the audience and the message. It lists each choice in the layout and marks it as one you made or one a template made. It then guides you to gather real material from your own surroundings, to cut or print the parts and move them by hand until the page makes people feel the subject, and to match the attitude of the page to the attitude of its readers. One accident may stay if it helps. You get three alternatives and a plan to check the message still gets through with two real readers.
+  This skill starts from the readers and the message. It lists each layout choice and marks it as one you made or one a template made. Then it points you to real things around you to use, such as tickets, labels or your own photos. You print or cut the parts and move them by hand until the page makes people feel the subject. It sets the attitude of the page to match its readers, and lets one happy accident stay if it helps.
+
+  The method follows public talks and interviews by the designer David Carson. It is our reading of his work, not his words. You get three alternatives that differ in kind, and a plan to check with two real readers.
 
 when:
   - Your page, poster, cover or slide looks clean and forgettable.
   - You used a template and want to know which choices you never made.
   - You want to try a bolder layout without losing the message.
+  - A reader said "nice" about your page but could not say what it was about.
+
+not_for:
+  - Your layout is already tested and working, or it is a form or data table where plain defaults help readers. Use the Usability heuristic reviewer to check it instead.
+  - You want a clear grid, type list and white-space plan with firm rules. Use the Page grid and type planner.
+  - You want a poster made from type only. Use the Type-led poster planner.
+  - You do not know your readers or message yet. Write the brief first with the Design brief rules writer.
 
 you_give:
-  - A page, cover or layout, as a file or description
-  - Who reads it and what the message is
-  - The copy (optional)
+  - Your page, cover or layout, as a picture or a detailed description
+  - Who reads it, and what it must say, in one sentence each
+  - Your copy (optional)
+  - Photos or objects from the subject's world (optional)
 you_get:
-  - A list of layout choices marked as made or inherited
-  - Three different alternatives with reasons
-  - A plan for hand-made trials
-  - A two-reader test plan
+  - A list of layout choices, each marked made by you, inherited or unknown
+  - Real things around you to gather and use
+  - Three alternatives that differ in kind, each with its main risk
+  - Steps for a hand trial with paper or a rough mock-up
+  - A two-reader test with a pass mark
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach your layout, and say who reads it and what the message is.
-  - Read the made-or-inherited list and note any choice you never decided.
-  - Try one alternative by hand with paper, scissors or a rough mock-up.
-  - Show it to two real readers and ask them what it says.
+  - Open the skill in your AI. Use one that can see images if you attach a picture.
+  - Attach your layout. Say who reads it and what the message is in one sentence each. If you leave out all three, the skill asks for them and stops.
+  - Read the made-or-inherited list. Note each choice you never decided.
+  - Gather the real material it names. Your AI can't see or fetch these, so photograph or collect them yourself.
+  - Print or cut the parts and try one alternative by hand. Mark any alternative that needs material you don't have.
+  - Show two real readers each version for ten seconds and ask what it says. Both must name the message to pass.
 
 how_it_works:
   - title: States audience and message
@@ -124,3 +136,30 @@ terms:
     meaning: A layout setting you did not decide, such as a margin or font size a template supplied.
   - term: Hand trial
     meaning: Moving printed or cut parts around by hand to find a layout, before building it on screen.
+
+output_sample:
+  input:
+    - Your page, cover or layout, as a picture or a description
+    - Who reads it and the message, in one sentence each
+    - Your copy (optional)
+  prerequisites:
+    - Paper, scissors and a printer for the hand trial
+    - An AI that can see images, if you attach a picture
+    - Two real readers for the test
+  output:
+    - name: AUDIENCE AND MESSAGE
+      contains: Who reads it and the one sentence that must get through.
+    - name: CHOICES
+      contains: Each layout choice marked made by you, inherited or unknown, with why it matters.
+    - name: REAL MATERIAL TO GATHER
+      contains: Five to eight things from your own surroundings to use in the trial.
+    - name: THREE ALTERNATIVES
+      contains: Three layouts that differ in kind, each with its attitude, what changes and its main risk.
+    - name: HAND TRIAL
+      contains: Steps to print or cut the parts and move them by hand, with a time limit.
+    - name: ACCIDENT RULE
+      contains: Which accident may stay if it helps, and what must never happen.
+    - name: READER TEST
+      contains: A test with two readers, the question to ask and what counts as a pass.
+    - name: MISSING
+      contains: What would sharpen the options.

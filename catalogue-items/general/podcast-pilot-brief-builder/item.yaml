@@ -1,0 +1,50 @@
+slug: podcast-pilot-brief-builder
+name: Podcast pilot brief builder
+summary: Share your show idea and listener. Get a pilot hook, timed run sheet,
+  questions and a recording brief.
+category: general
+boards: []
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-global-podcast-strategist.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-global-podcast-strategist.md
+  licence: MIT
+  original_name: Global Podcast Strategist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 98416e338db666c5cc1d6bfd37c35daffa00532010623fdb4a92ed7dce76a7aa
+  adapter: AI Blocks selective task adaptation
+  derived_from: &a1
+    - agency-marketing-global-podcast-strategist
+credits:
+  - title: Global Podcast Strategist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-global-podcast-strategist.md
+    used: Selected task methods, rewritten and narrowed by AI Blocks. Original role
+      profile retained only as provenance/background.
+package_files: all
+version: 1.0.0
+example_pending: true
+agency_curated:
+  candidate: podcast-pilot-episode-brief
+  review: reports/2026-10-25-agency-curation-business.json
+  formatReason: An episode brief is one bounded production artifact. A reusable
+    skill is sufficient; a second prompt or four-phase launch workflow would
+    duplicate the same task and expand into publishing and monetization
+    unnecessarily.
+  sourceProfiles: *a1

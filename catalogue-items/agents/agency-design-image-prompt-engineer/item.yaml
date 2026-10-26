@@ -1,0 +1,41 @@
+slug: agency-design-image-prompt-engineer
+name: Image Prompt Engineer agent
+summary: "Describe the photo you want. Get an image prompt that sets subject, light, camera and style, plus a leave-out list, for Midjourney, DALL-E or Flux."
+category: agent
+boards: []
+type: agent
+role: make
+job: brand
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: image
+    required: false
+outputs:
+  - type: image_prompt
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: design/design-image-prompt-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-image-prompt-engineer.md
+  licence: MIT
+  original_name: Image Prompt Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 63a564d01dc5812c494cd8aa034ce1217031d8fe8b3eca1323316879769ff13f
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Image Prompt Engineer
+  - Agency Agents
+  - Design
+credits:
+  - title: Image Prompt Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-image-prompt-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

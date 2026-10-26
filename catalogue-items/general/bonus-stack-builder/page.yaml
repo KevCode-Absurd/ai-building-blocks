@@ -1,33 +1,54 @@
 new_slug: bonus-stack-builder
 name: Bonus stack builder
-summary: Paste your offer and the doubts buyers have. Get named bonuses that each answer one doubt, with a value and proof.
+summary: "List the doubts that stop buyers and get 5 to 8 named bonuses that answer them, each with proof, a value and a reveal order."
+
 job: make-offer
 thinking: medium
 thinking_why: It matches each doubt to a bonus and writes short copy for each. The rules are fixed.
 headline: Bonus stack builder
-subhead: Give it your offer and the doubts that stop buyers. It matches one bonus to each doubt, names it with a benefit, says what it is, how you made it and why it works, puts a value on it and shows how to reveal it. It can also line up partner bonuses.
-explain: |-
+subhead: "Give it your offer with its price and the doubts buyers voice. It matches one bonus to each doubt, names it with a benefit and writes five lines to present it. It puts a value on each with a reason, and sets the order to reveal them. You also get ideas for partner bonuses."
+
+explain: |
   When a buyer hesitates, most owners cut the price. That teaches buyers your price is open to talk, and it cuts your margin. A better move is to add something. The price stays, and the value grows.
 
-  This skill builds the bonuses. Each one answers a single doubt the buyer has about whether they can succeed. It prefers tools, checklists and templates over more training, because they cost the buyer less time. It names each with a benefit, writes five lines to present it, and adds a value with a reason. It also covers other businesses' services you can bundle in, and the order in which to reveal bonuses in a one-to-one sale.
+  This bonus stack builder starts from the doubts, not from a list of freebies. Each bonus answers one reason a buyer says maybe: "I won't stick with it", "I don't have time", "will it work for someone like me". It prefers tools, checklists and templates over more training, because they take the buyer less time to use.
+
+  Each bonus gets a name that states a benefit, five lines to present it, and a value with a reason you can defend. Where you have no proof or no basis for a value, it writes MISSING. It never makes up a past client or a number. It also lists partner bonuses from other businesses and the order to reveal bonuses in a one-to-one sale.
+
 when:
-  - Buyers like your offer and still hesitate.
-  - You are tempted to discount to close.
-  - You have useful things you made and never mention.
+  - "Buyers like your offer on a sales call and still say \"let me think about it\"."
+  - "You are about to give a discount to close a sale, and you would rather add value than cut the price."
+  - "You have templates, recordings or checklists you made for clients and never mention them in the offer."
+  - "You are writing a sales page and want the extras on it to answer real objections, not just fill space."
+
+not_for:
+  - "You need a real deadline or a cap on places to make buyers decide. Use the Honest scarcity and urgency planner."
+  - "You have no offer yet and want to build one from a buyer's problem. Use the Offer builder that answers buyer doubts."
+  - "You want to know how buyers will compare your price with others. Use the Commodity trap checker."
+  - "You want a first low-cost step to bring buyers in. Use the Front-end offer picker."
+
 you_give:
-  - Your offer, with price
-  - The limits and dates from Honest scarcity and urgency planner
-  - The doubts from Buyer problem list builder (optional), or tell it what buyers say
+  - "Your offer: what is in it, and the price"
+  - "The doubts buyers voice, from sales calls or the Buyer problem list builder (or the three you hear most)"
+  - "What you already own that could be a bonus: templates, recordings, tools (optional)"
+  - "Real limits and dates from the Honest scarcity and urgency planner (optional)"
+  - "How you sell: one to one, on a page or on a webinar (optional)"
+
 you_get:
-  - Five to eight bonuses, each matched to one doubt
-  - A name, a five-line presentation and a value with a basis for each
-  - Which bonuses carry a limit or a deadline
-  - Partner bonus ideas and the order to reveal bonuses
+  - "5 to 8 bonuses, each matched to one buyer doubt"
+  - "A name with a benefit, a five-line pitch and a value with its reason for each"
+  - "Which bonuses carry a limit or a deadline, using only real ones"
+  - "Partner bonus ideas, and the order to reveal bonuses"
+  - "MISSING lines where proof or a value basis was not given"
+
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your offer and the doubts you hear in sales calls.
-  - "Tell it what you already own that could be a bonus: templates, recordings, tools."
-  - Use the reveal order in your next sale and note which bonus closes.
+  - "Open the skill in Claude, ChatGPT or Gemini. If you added it to your AI, start a chat with it. If not, copy it and paste it in."
+  - "Paste your offer and its price. Add the doubts you hear on sales calls, in the buyer's own words if you have them."
+  - "Tell it what you already own that could be a bonus, such as templates, recordings or checklists. A bonus built from something you have costs nothing new."
+  - "Check each bonus. It must answer one named doubt, its name must say what the buyer gets, and no bonus may replace a price cut on the core."
+  - "Fill every MISSING line yourself, such as proof from a past client or what a bonus costs elsewhere."
+  - "Use the reveal order in your next sale, and note which bonus the buyer mentions after."
+
 how_it_works:
   - title: Starts from doubts
     text: Lists the reasons a buyer says maybe, from your notes.
@@ -60,6 +81,28 @@ output_shape: |-
 
   CHECKS MISSED
   <one line per check missed, or none>
+output_sample:
+  input:
+    - "Your offer, with what is in it and the price"
+    - "The doubts buyers voice, from your calls or the Buyer problem list builder"
+    - "What you already own that could be a bonus (optional)"
+    - "Real limits and dates (optional)"
+  prerequisites:
+    - "The Honest scarcity and urgency planner, if you want real limits and dates (optional)"
+  output:
+    - name: "Doubts"
+      contains: "Five to eight reasons a buyer says maybe, in their words where you gave them."
+    - name: "Bonuses"
+      contains: "One row per bonus: name, doubt answered, what it is, how it was made, how it helps, proof, value, limit."
+    - name: "Totals"
+      contains: "The value of the core offer against the value of the bonuses, with the sum shown."
+    - name: "Partner ideas"
+      contains: "Businesses whose service your buyers need next, what each gives, and what they get."
+    - name: "How to reveal"
+      contains: "The order to reveal bonuses in a one-to-one sale, and the order on a page."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Proof or value bases you did not give, and one line per check still missed."
+
 tweaks:
   - what: What you already own
     how: Say what you can reuse. A bonus built from recordings or templates you have costs nothing new.

@@ -1,6 +1,6 @@
 new_slug: fix-your-marketing-plan-and-cut-it-to-one-goal
 name: Fix your marketing plan and cut it to one goal
-summary: Give it your marketing plan. Get it put in order, its rule-breaks fixed, and one goal with a test calendar.
+summary: "Fix your marketing plan: paste it in and get it put in order, checked against the rules, and cut to one goal with a test calendar."
 job: plan-strategy
 thinking: high
 thinking_why: It scores your plan twice and then picks what to cut. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your plan has twenty tactics and no clear order.
   - You are about to add another channel and have not tested the ones you run.
   - You must hand a short plan to a team or a boss.
+not_for:
+  - "You have one campaign with one tactic: use a simple plan review, or ask a colleague to read it."
+  - "You need a plan from nothing: use the Customer needs finder first, then bring the plan back here."
+  - "You want to test one big choice, not fix a whole plan: use the Business model assumption tester."
 you_give:
   - Your current marketing plan, pasted as it is
   - Your brand facts (optional)
@@ -29,6 +33,26 @@ how_to_use:
   - Paste the plan as it is. Do not tidy it first, because the gaps are what it looks for.
   - Say the goal in your own words at the start. Step 3 turns it into one number.
   - Keep the fix list. Check the stop rules against your calendar before you start.
+output_sample:
+  input:
+    - Your current marketing plan, pasted as it is
+    - Your goal for the quarter, with a number if you have one
+    - Your brand facts (optional)
+    - How much time and money you have (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Plan in order"
+      contains: Every line sorted as diagnosis, strategy or tactic, with the target, position, gaps, tactics that serve neither, and a score.
+    - name: "Step 2: Law check"
+      contains: Where you sit in the buyer's mind, each test with a verdict, a score, a fix list worst first, and what to keep.
+    - name: "Step 3: One goal"
+      contains: One goal with a number and a date, the sales needed, and each tactic scored for impact and ease.
+    - name: Test calendar
+      contains: Start dates, stop dates and a stop rule for the top few tactics, plus a daily and weekly check.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Put the plan in order
     text: Sorts every line as diagnosis, strategy or tactic, finds the target and position, marks tactics that serve neither, and rebuilds the plan in order with a score.

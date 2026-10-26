@@ -1,0 +1,41 @@
+slug: agency-marketing-private-domain-operator
+name: Private Domain Operator agent
+summary: "Plan a WeChat or WeCom customer community, from first contact to repeat purchase. Give it your brand, customer base and goal."
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-private-domain-operator.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-private-domain-operator.md
+  licence: MIT
+  original_name: Private Domain Operator
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 1170edb4c9534149b77cf9c3279c347b0136a578e44e70320f16f784e7fe5f3c
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Private Domain Operator
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Private Domain Operator
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-private-domain-operator.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

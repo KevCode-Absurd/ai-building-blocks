@@ -1,6 +1,6 @@
 new_slug: disruption-risk-checker
 name: "Disruption risk checker"
-summary: "List a cheaper rival and your best customers. Get a check of whether it is a nuisance or a real threat."
+summary: "Check if a cheaper rival is a real threat. Give it the rival's price and buyers plus your numbers. You get a score out of 100 and a verdict."
 job: study-competitors
 thinking: high
 thinking_why: "It tests a theory against facts, looks for a counter-case and weighs a verdict."
@@ -17,6 +17,10 @@ when:
   - "A cheaper or simpler rival has appeared and your team disagrees about how worried to be."
   - "Your best customers say they do not want what the rival offers."
   - "You are deciding whether to build a simpler version or start a new unit."
+not_for:
+  - "You have no price or buyer facts for the rival yet: gather those first, or ask your sales team what customers say about it."
+  - "The rival entered at the top of your market, not the low end: compare features and pricing with your own team instead."
+  - "You want ideas for messages against a rival: use the Rival weakness message finder."
 
 you_give:
   - "The rival: price, buyers, how it makes money, when it started"
@@ -34,6 +38,26 @@ how_to_use:
   - "Describe your best customers and your own margins."
   - "Read the score and the verdict, then the counter-fact."
   - "Take the response to the owner it names."
+output_sample:
+  input:
+    - "The rival: its price, who buys it, how it makes money and when it started"
+    - Your best customers, your prices and your margins
+    - Dated facts on the rival's growth or changes (optional)
+  output:
+    - name: Score
+      contains: A score out of 100 and a line saying it shows how well the rival fits the pattern, not a forecast.
+    - name: Verdict
+      contains: "One of three calls: nuisance, watch or real threat."
+    - name: The tests
+      contains: "Four tests, each with its score and the fact behind it: where it started, overshoot, your blind spot and business model."
+    - name: Argues against
+      contains: One real fact that does not fit the verdict, and the points taken off for it.
+    - name: Response
+      contains: Watch, respond or set up a separate unit, with an owner and a date.
+    - name: Missing
+      contains: Each fact you did not give, marked so nothing is guessed.
+    - name: Checks missed
+      contains: One line for each check the AI could not pass, or none.
 
 how_it_works:
   - title: "Finds the start"

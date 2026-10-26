@@ -21,9 +21,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Trace where the rule came from.** Use the skill `rule-origin-tracer`. Starts from the rule itself and its first reason
-2. **Find what it quietly does.** Use the skill `hidden-value-check`. Give it the plan from the steps before. Reads the origin call and looks for jobs the rule does that nobody wrote down
-3. **Trace what dropping it would cause.** Use the skill `second-order-effects-tracer`. Give it the plan from the steps before. Follows the change from the origin call one step and then another
+1. **Trace where the rule came from.** Use the skill `rule-origin-tracer`. Starts from the rule itself and its first reason. Hands steps 2 and 3 the origin call as a plan
+2. **Find what it quietly does.** Use the skill `hidden-value-check`. Give it the plan from the steps before. Reads the origin call and looks for jobs the rule does that nobody wrote down. Hands those hidden jobs to step 3
+3. **Trace what dropping it would cause.** Use the skill `second-order-effects-tracer`. Give it the plan from the steps before. Reads the origin call from step 1 and the hidden jobs from step 2, then follows the change one step and then another. Hands the revised plan to step 4
 4. **Plan a small trial with a drop rule.** Use the skill `long-shot-bet-planner`. Give it the plan from the steps before. Turns the revised plan into a trial you can undo
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

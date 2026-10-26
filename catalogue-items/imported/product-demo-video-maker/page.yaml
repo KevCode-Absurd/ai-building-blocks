@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans scenes and then renders them with code.
 new_slug: product-demo-video-maker
 name: Product demo video maker
-summary: Give it screenshots or a page. Get a short demo video or GIF that walks
-  through the product.
+summary: Turn screenshots or scene notes into a short product demo video or GIF, with a scene plan and narration script you can use even without video tools.
 job: make-images
 headline: Product demo video maker
-subhead: A short demo video or GIF that walks someone through your product,
-  built from screenshots or scene notes. It is planned like a small film, with a
-  story, pacing and a clear point for every frame.
+subhead: A short demo video or GIF that walks someone through your product, built from screenshots or scene notes. It is planned like a small film, with a story, pacing and a clear point for every frame.
 explain: |
   A short demo video or GIF that walks someone through your product, built from screenshots or scene notes. It is planned like a small film, with a story, pacing and a clear point for every frame.
 
@@ -18,6 +15,10 @@ when:
   - You have screenshots and want them turned into a moving demo.
   - You want a GIF for a README or email.
   - You need narration text even if you record the voice yourself.
+not_for:
+  - "You want to record your live screen as you click through the product: use a screen recorder instead."
+  - "You only have an idea and no screenshots, and the product is visual: grab a few screenshots first, then run this."
+  - "You need a long tutorial or training video: use a video editor and record it yourself."
 you_give:
   - Screenshots or a description of each scene
   - The main message of the demo
@@ -29,8 +30,28 @@ you_get:
   - Narration audio or text
   - Fallback files if a tool is missing
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save video files.
+  - Open your AI chat and paste this skill's instructions. If you use a tool with files, add the skill folder.
+  - Add your screenshots or a short note for each scene. Say the main message and how long the video should be.
+  - Check which tools your AI has. To make the video itself it needs code running, file saving, Playwright, edge-tts and ffmpeg.
+  - Read the scene plan and narration first. Ask for changes before it renders anything.
+  - If a tool is missing, run the build.sh commands yourself or use the scene images and narration in any video editor.
+  - Check the finished clip has sound, is 1920x1080 and has no black frames. Then add it to your launch page or email.
+output_sample:
+  input:
+    - Screenshots of your product, or a short description of each scene
+    - The one main message of the demo
+    - Preferred length and tone (optional)
+  prerequisites:
+    - An AI that can run code and save files, to render the video itself
+    - Playwright, edge-tts and ffmpeg connected (optional, without them you get files to build the video yourself)
+  output:
+    - name: scenes/
+      contains: One HTML file per scene, sized 1920x1080, each built around a single focus.
+    - name: narration/
+      contains: One text file per scene with the voiceover line, ready for a text-to-speech tool.
+    - name: scenes.json
+      contains: A list of the scenes in order with each length and its narration text.
+    - name: build.sh
+      contains: A script that turns scenes into frames, adds audio and joins them into one video.
+    - name: output.mp4
+      contains: The finished demo video with audio and fades between scenes, made when all tools are available.

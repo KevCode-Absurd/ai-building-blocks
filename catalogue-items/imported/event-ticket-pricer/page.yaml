@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It applies a short set of pricing rules to your event.
 new_slug: event-ticket-pricer
 name: Event ticket pricer
-summary: Tell it about your class, workshop or event. Get ticket prices,
-  early-bird terms and how to show seats and dates.
+summary: Set your event ticket price, early-bird terms and how to show full dates. Give it your class or workshop details and get a priced plan with reasons.
 job: set-prices
 headline: Event ticket pricer
-subhead: Tell it about your class, workshop or event. Get ticket prices,
-  early-bird terms and how to show seats and dates. Bring event type and planned
-  ticket price. Use the result to plan your next step.
+subhead: Tell it about your class, workshop or event. Get ticket prices, early-bird terms and how to show seats and dates. Bring event type and planned ticket price. Use the result to plan your next step.
 explain: |
   Ticket prices and offer rules for a class, workshop or dated event, so you sell more seats without making the people who miss out resent you.
 
@@ -18,6 +15,10 @@ when:
   - You want to run an early-bird offer and are unsure how.
   - Your event page shows a seat counter and sales feel flat.
   - You have several dates and want to decide how to show the full ones.
+not_for:
+  - "You want to find what price people will pay: ask a few past buyers or test two prices, as this tool only applies rules to a price you already have."
+  - "You sell a regular product, not a dated event with limited seats: use a normal pricing check for your product page."
+  - "You need the payment form for the ticket sale: set that up in your booking or checkout tool."
 you_give:
   - Event type and planned ticket price
   - Dates and seats per date
@@ -30,7 +31,28 @@ you_get:
   - Early offer terms with deadline
   - Wording ideas for scarcity and proof
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Add your event type, ticket price, dates, seats per date and which dates are full.
+  - Add how far away the first date is, and a bonus you could give (optional).
+  - Read the table of choices and reasons. The 30 percent and 3 week limits are rules of thumb, so check them against your own sales.
+  - Put the deadline on your ticket page. After one sales week, check how many dates are full.
+output_sample:
+  input:
+    - Your event type and planned ticket price
+    - Your dates and how many are sold out
+    - How far away the first date is
+    - A free bonus you could add (optional)
+  output:
+    - name: Ticket price
+      contains: A rounded price for your event, with a note on why it suits an experience.
+    - name: Dates shown
+      contains: Which dates to show, with full ones marked, and whether the full share is too high.
+    - name: Pre-sale
+      contains: "An early offer: a free bonus if the event is three or more weeks away, with a dated deadline."
+    - name: Urgency copy
+      contains: Deadline wording with a reason and time zone, and no seat-count banner.
+    - name: Rejected
+      contains: The ideas from your plan that it dropped, such as a discount or a seat counter.
+    - name: Why
+      contains: One line on the reason for each choice.

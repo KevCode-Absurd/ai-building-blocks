@@ -1,52 +1,69 @@
 new_slug: paid-work-case-writer
-name: Paid-work case writer
-summary: Describe work people expect free. Get a short case for charging, a fair price model and a reply to 'it spreads anyway'.
+name: "Paid-work case writer"
+summary: "Start charging for work people expect free. Get a fair case for payment, a price model with a reason, a short public note and replies to pushback."
 job: sell-and-negotiate
 thinking: medium
-thinking_why: It weighs a fair price against how the work spreads and must keep the tone fair.
-headline: Paid-work case writer
-subhead: Give it the work people expect for free. It sets out what it costs to make, who benefits without paying, and the case for charging in terms of who can keep making it. You get a short note, a price model with a reason and a reply to pushback.
-explain: |
-  Some work gets shared and copied so freely that people stop thinking of it as work. The maker pays the time and money to make it, and the people who benefit pay nothing. In time the maker stops, or cuts the quality.
+thinking_why: "It weighs a fair price against how the work spreads and must keep the tone fair."
 
-  This skill states what the work costs in time and money, names who benefits without paying and makes the case in terms of who can afford to keep making it. It compares what the maker earns per hour with what the work cost. It chooses a price model, per copy, fixed licence or bundle, and tests it against what free sharing does for reach. It writes a short note in plain words, states the fair counter-case, and plans for pushback.
+headline: "Paid-work case writer"
+subhead: "Give it the work people expect for free and what it costs you to make. It sets out who benefits without paying and makes the case for charging, in terms of who can keep making the work. You get a price model with a reason, a short note and replies to pushback."
+
+explain: |
+  Some work is shared and copied so freely that people stop thinking of it as work. The maker pays the time and money to make it, and the people who benefit pay nothing. In time the maker stops, or the quality drops. This writer helps you make the case for charging for free work without insulting the people who use it.
+
+  It states what the work costs in time and money, using figures you can show. It names the groups who benefit without paying, and compares what you earn per hour of the work with what the work cost. It then compares three price models: per copy, a fixed licence and a bundle.
+
+  It picks one with a reason and tests it against what free sharing does for reach. It states the fair counter-case, writes a short note in plain words and plans replies to the objections you are likely to hear, such as "it spreads anyway".
+
 when:
   - People use your work for free and you want to start charging.
-  - You are setting a price and need the reasons written down.
-  - Someone says 'it spreads anyway' and you need a fair reply.
+  - You are setting a price for work that has always been free and need the reasons written down.
+  - Someone says "it spreads anyway" and you need a fair reply.
+  - You need a short public note that explains a new price without sounding angry.
+
+not_for:
+  - "You already charge and want to raise the price. Use the price rise letter writer."
+  - "You are setting a fee for client work by the hour or project. Use the client fee and cap setter."
+  - "You give the work away on purpose to win customers. Use the free sample offer planner to plan what you give and what it costs."
+  - "You have no costs you can show yet. It will mark them missing and pick a price model on a stated assumption you must check."
+
 you_give:
-  - The work and who uses it
-  - What it costs to make, in time and money, with numbers you can show
+  - The work, and who uses it
+  - What it costs to make, in hours and money, with a way to show each figure (invoices, a time log)
   - How it spreads now (optional)
-  - Your offer and any price you have in mind (optional)
+  - Your offer, or a price you have in mind (optional)
+  - Who the note is for, such as students, companies or fans (optional)
 you_get:
-  - The costs set out as numbers you can show
-  - A case for charging, in terms of who can afford to keep making it
-  - A price model with a reason
-  - A short public note and replies to pushback
+  - The costs set out as figures you can show
+  - A case for charging that rests on who can afford to keep making the work
+  - A price model with a reason, and the fair case for free sharing
+  - A short public note and replies to the three likeliest objections
+
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - List the time and money the work took, with real numbers.
-  - Say how it spreads now and who benefits without paying.
-  - Choose a price model from the options and the reason.
-  - Read the note aloud. Cut anything that accuses people without cause.
+  - Describe the work and who uses it. List the time and money it took, with real numbers.
+  - Say how it spreads now, who the note is for, and any price you have in mind.
+  - Check that the price model it picks has a reason you agree with. If you gave no costs, treat its pick as a starting guess to test.
+  - Read the note aloud. Cut anything that accuses people without cause. Add any free sample or discount yourself, if you really offer one.
+
 how_it_works:
   - title: Counts the cost
-    text: Sets out the time and money the work takes to make.
+    text: Sets out the time and money the work takes, and how each figure could be shown.
   - title: Names who benefits
-    text: Says who gets the value and does not pay.
+    text: Lists the groups that get the value and do not pay, with no names and no accusations.
   - title: Makes the case
-    text: Frames it as who can afford to keep making it, with the pay-per-hour comparison.
+    text: Frames it as who can afford to keep making the work, with a pay-per-hour comparison.
   - title: Chooses a model
-    text: Per copy, fixed licence or bundle, with a reason.
+    text: Compares per copy, fixed licence and bundle, and picks one with a reason.
   - title: Tests it against reach
     text: Weighs the price against what free sharing does, and states the fair counter-case.
   - title: Writes the note
-    text: A short public note in plain words.
+    text: A short public note of 80 to 150 words in plain words.
   - title: Plans for pushback
-    text: Replies to the people who object.
+    text: Writes short, fair replies to the likeliest objections.
   - title: Checks the set
     text: Runs its own checks and names any it missed.
+
 output_shape: |
   THE WORK
   <what it is, who uses it>
@@ -55,13 +72,13 @@ output_shape: |
   Time: <hours> | Money: <amount> | Source: <how the figure can be shown>
 
   WHO BENEFITS WITHOUT PAYING
-  <group> | How: <...>
+  <group> | How: <what they get>
 
   THE CASE
   <who can afford to keep making it> | Pay per hour of work: <figure> vs <what it cost>
 
   PRICE MODEL
-  Options: per copy / fixed licence / bundle | Pick: <one> | Why: <...>
+  Options: per copy / fixed licence / bundle | Pick: <one> | Why: <reason> | Assumption: <if facts were missing>
 
   THE COUNTER-CASE, FAIRLY
   <what free sharing does for reach and trust>
@@ -73,7 +90,35 @@ output_shape: |
   <objection> -> <reply>
 
   MISSING
+  <facts not given>
+
   CHECKS MISSED
+  <one line each, or none>
+
+output_sample:
+  input:
+    - "The work and who uses it"
+    - "What it costs to make, in hours and money, and how you could show each figure"
+    - "How it spreads now (optional)"
+    - "Your offer or a price you have in mind (optional)"
+  output:
+    - name: "WHAT IT COSTS TO MAKE"
+      contains: "Time and money as figures you can show, each with its source."
+    - name: "WHO BENEFITS WITHOUT PAYING"
+      contains: "The groups that get the value, and how, with no names and no accusations."
+    - name: "THE CASE"
+      contains: "Why charging lets the maker keep going, with the pay-per-hour comparison shown."
+    - name: "PRICE MODEL"
+      contains: "Per copy, fixed licence or bundle: one pick, the reason and any assumption."
+    - name: "THE COUNTER-CASE, FAIRLY"
+      contains: "What free sharing does for reach and trust, stated in a fair paragraph."
+    - name: "THE NOTE"
+      contains: "A short public note in plain words that does not accuse readers."
+    - name: "IF THEY PUSH BACK"
+      contains: "A fair reply to each of the three likeliest objections."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check it could not pass."
+
 tweaks:
   - what: The cost figures
     how: Give real hours and money. A claim you cannot show weakens the case.
@@ -83,22 +128,28 @@ tweaks:
     how: A note to students reads differently from one to companies. Say who.
   - what: The price you have in mind
     how: Give it, and the model tests it. Otherwise it suggests a range.
+
 judge:
   - The cost claims are numbers you can show, not guesses.
   - The counter-argument about reach is stated fairly.
   - The tone does not accuse readers of theft without cause.
   - A price model is chosen with a reason.
   - The case rests on who can keep making the work.
+
 test:
   - Check each cost figure against your own records.
   - Show the note to someone who uses the work free. Is it fair?
   - Run it twice. The pick of price model should stay close.
   - Compare the case with how your closest peers price.
+
 improve:
   - Add the names of your price tiers to the model step.
   - Add the lines you never write, such as threats, to the note step.
   - Save the objections you hear and the replies to your files.
   - Pair it with a skill that writes the price page.
+
+next: [honest-persuasion-editor, anti-ai-slop-copy-editor]
+
 works_best_with:
   tools:
     - name: Any good chat AI
@@ -107,6 +158,9 @@ works_best_with:
     - Records of hours and money spent
     - Counts of how the work is used
     - Prices of close peers
+
 terms:
   - term: Licence
     meaning: A fixed payment that lets a person or company use the work for a stated time or scope.
+  - term: Price model
+    meaning: The way you charge, such as per copy, a fixed licence or a bundle.

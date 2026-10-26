@@ -1,6 +1,6 @@
 new_slug: idea-validation-analyst
 name: Idea validation analyst
-summary: Give it your idea. It picks the riskiest guess, plans the test, reads the result and says keep, change or stop.
+summary: Test an idea before you build it. Give it your idea and it plans the smallest test, reads the result and says keep, change or stop.
 job: test-an-idea
 thinking: high
 thinking_why: It judges real test results against pass lines, picks its own path and decides when to stop. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have an idea and want to know if it is worth building before you spend on it.
   - A test just finished and you are not sure what the result means.
   - You have run a few tests and cannot tell whether to keep going.
+not_for:
+  - "Your idea has already been selling for months: review your sales numbers in a spreadsheet or with an accountant instead."
+  - "You want a quick opinion on whether the idea is good: ask a few real buyers, because this agent only reads test results."
+  - "You want it to run the test, send messages or spend money for you: do that step yourself, as it only plans and recommends."
 you_give:
   - Your idea, who it is for, and any price or offer
   - Results of the last test, such as notes from customer talks, sign-ups, pre-orders or replies
@@ -30,6 +34,27 @@ how_to_use:
   - When the test finishes, run the agent again and give it the result. It reads the log and picks the next step.
   - Read the call. If it says stop or change, check the evidence it lists before you decide.
   - It stops planning after four tests with no pass. After that, you decide what is next.
+output_sample:
+  input:
+    - Your idea, who it is for, and any price or offer
+    - Results of the last test, such as customer talk notes, sign-ups or pre-orders (from round 2)
+    - Your budget and weeks per test (optional)
+  prerequisites:
+    - An AI that can keep a validation folder and log between rounds, such as Claude Code (optional, you can paste the log back in a chat)
+    - A buyer brief from the Buyer brief writer (optional)
+  output:
+    - name: ROUND
+      contains: The guess tested, the number it needed and the number it got.
+    - name: RESULT
+      contains: Passed, failed or open, with the evidence it counted.
+    - name: CALL
+      contains: Keep going, change one thing, stop or not enough yet, with the reason.
+    - name: NEXT TEST
+      contains: The riskiest untested guess, the smallest test, who to try it on, the pass line, cost and time.
+    - name: LOG
+      contains: How many guesses have passed, failed or are still untested.
+    - name: FILES AND MISSING
+      contains: Each step's saved file and every line marked MISSING.
 how_it_works:
   - title: Read the log
     text: Finds which round this is from the log of guesses and results.

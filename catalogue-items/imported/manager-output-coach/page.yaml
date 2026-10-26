@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies known management ideas to your team and week.
 new_slug: manager-output-coach
 name: Manager output coach
-summary: Describe your team and role. Get meeting rhythms, one-on-ones and the
-  tasks that most raise your team's output.
+summary: Get a manager output coach that scores your meetings, one-on-ones and calendar from 0 to 10 and lists the changes to reach 10.
 job: lead-people
 headline: Manager output coach
-subhead: "A tuned management routine for your team, built on Andy Grove's High
-  Output Management. It judges every habit by one test: does it raise what your
-  team produces?"
+subhead: "A tuned management routine for your team, built on Andy Grove's High Output Management. It judges every habit by one test: does it raise what your team produces?"
 explain: |
   A tuned management routine for your team, built on Andy Grove's High Output Management. It judges every habit by one test: does it raise what your team produces?
 
@@ -18,6 +15,10 @@ when:
   - Your one-on-ones are irregular or run by you only.
   - You track busyness instead of results.
   - You are a new manager and want a proven routine.
+not_for:
+  - "You have no direct reports: a manager routine will not fit, so start with a plain weekly plan of your own tasks."
+  - "You want a system for the whole company: use traction-eos, a separate skill for company-wide planning, not this one."
+  - "You want to boost your team's drive and motivation: use drive-motivation, a separate skill, rather than a meeting and task review."
 you_give:
   - Your role and team size
   - Your current calendar and meetings
@@ -29,7 +30,22 @@ you_get:
   - A meeting and one-on-one rhythm
   - A ranked list of high-impact tasks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - Your role and team size
+    - Your current calendar and meetings
+    - How you measure your team's work today
+    - Your goals for the quarter (optional)
+  output:
+    - name: Score
+      contains: A rating from 0 to 10 for your management routine, with the reason for the score.
+    - name: Gap list
+      contains: The specific changes needed to move your routine from its current score to 10.
+    - name: Meeting and one-on-one rhythm
+      contains: A proposed weekly calendar with the meetings and one-on-ones each person needs, built around your key events.
+    - name: Output measures
+      contains: Ways to track your team's results, each paired with a quality check so you do not track busyness.
+    - name: Ranked task list
+      contains: Your tasks sorted by how much output each hour creates, with the ones that cost output flagged.

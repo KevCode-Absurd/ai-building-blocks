@@ -8,7 +8,42 @@ metadata:
 
 # HR total rewards
 
-Comprehensive total rewards knowledge for HR managers, compensation analysts, benefits specialists, and total rewards leaders — from understanding modern compensation philosophy and market benchmarking to designing salary structures, benefits packages, and pay equity programs.
+Design, test and explain a total pay offer: salary structure and levels, market benchmarks, pay fairness checks, bonus and commission plans, benefits, and a statement that shows employees the full value of their pay.
+
+This is a draft for HR to refine. It is not legal, tax or pay-transparency advice. Pay fairness and pay transparency rules differ by place. Say so in the output, and tell the user to check with an employment lawyer or qualified adviser before acting on a fairness result or publishing pay ranges.
+
+## Before you start
+
+You need the pay goals (for example hire better, keep people, control cost), the team size, the roles and levels, and the budget. Optional: current pay and benefits by person or role, market data, and the location.
+
+If a required item is missing, ask once. If it stays missing, write "MISSING: <item>" and carry on only where you can without a guess. Never invent market pay, survey figures, benefit prices, take-up rates or statistics. Mark any market claim "needs market data" unless the user gave the data.
+
+## Steps
+
+1. **Restate the brief.** Goals, headcount, roles and levels, budget, location, gaps.
+2. **Set the levels.** Group roles into levels by scope and responsibility, not by title. One line per level.
+3. **Set the pay positioning.** Ask whether the user wants to pay below, at or above market, and for which roles. Record the choice.
+4. **Build the bands.** For each level give min, midpoint and max, from market data if supplied. Show spread = (max - min) / min and the cost at midpoint against the budget. Explain compa-ratio (a person's pay divided by the midpoint) and range position in one line each.
+5. **Run a pay fairness screen, only if current pay by person was given.** Compare pay within the same level. List gaps larger than a threshold the user sets, and any gap the stated reasons don't explain. Say this is a first screen, not a statistical analysis, and that a specialist should confirm anything found before remedies are decided. If demographic data was given, handle it with care and mention the legal sensitivity.
+6. **Design bonus or commission.** Offer two or three options with how each pays out, what it rewards and what could go wrong. Model each against low, target and high performance and show the cost in each case.
+7. **Suggest benefits.** Core first, then optional, tied to the goals and budget. No prices unless given.
+8. **Outline the total pay statement.** The sections an employee sees: base pay, bonus, equity if any, benefits, time off, development, with a note on how each value is worked out.
+9. **Plan the raise cycle.** Dates, who does what, the budget pool the user sets, and how raises depend on compa-ratio and performance. Don't suggest typical raise percentages unless the user gave data.
+10. **Flag.** Assumptions, MISSING items, items needing legal or finance review, and the next three actions.
+
+## Output
+
+```
+BRIEF AND ASSUMPTIONS
+LEVELS               <level> | <what it means> | <roles>
+PAY BANDS            <level> | min | mid | max | spread | headcount | cost at mid
+FAIRNESS SCREEN      <level> | <gap found> | <reason given or "unexplained"> (or "not run: no pay data")
+BONUS OR COMMISSION  <option> | rewards | pays out | cost at low / target / high | risk
+BENEFITS             <core> | <optional>
+TOTAL PAY STATEMENT  <sections and how each is valued>
+RAISE CYCLE PLAN     <dates> | <owner> | <budget pool> | <rule>
+FLAGS AND NEXT STEPS <assumptions> | MISSING: <items> | review needed: <items>
+```
 
 ## Supported tasks
 
@@ -24,151 +59,6 @@ Comprehensive total rewards knowledge for HR managers, compensation analysts, be
 - Building compensation review and merit increase cycles
 - Connecting total rewards strategy to retention and talent attraction goals
 - Writing compensation philosophy documents, policies, and communication templates
-
-## What total rewards means in 2026
-
-Modern total rewards is no longer:
-
-- "just setting a salary number during an offer"
-- "only running an annual merit increase cycle"
-- "treating benefits as a fixed, unchanging cost line"
-
-In 2026, modern total rewards increasingly includes:
-
-- pay transparency driven by regulation and candidate expectation
-- continuous market benchmarking rather than annual-only surveys
-- skills-based and role-based pay structures replacing rigid title-based bands
-- proactive pay equity analysis built into every compensation decision
-- flexible and personalized benefits offerings
-- total rewards statements that make hidden value visible to employees
-- AI-assisted compensation modeling and scenario planning
-- global and remote-work pay strategy spanning multiple geographies
-
-Modern total rewards teams are increasingly expected to support:
-
-- pay transparency compliance across multiple jurisdictions
-- retention strategy through competitive and equitable pay
-- talent attraction through clear, defensible compensation philosophy
-- cost management without eroding competitiveness
-- DEI commitments through measurable pay equity outcomes
-- manager enablement for compensation conversations
-
-Pay transparency legislation and skills-based pay are becoming major industry trends in 2026.
-
-## Total rewards ecosystem (2026)
-
-### Compensation benchmarking and survey platforms
-
-- Radford (Aon)
-- Mercer
-- Pave
-- Option Impact (Carta Total Comp)
-- Levels.fyi (for market sensing)
-
-### Compensation management software
-
-- CompTrak
-- Pequity
-- Assemble
-- Workday Advanced Compensation
-- SAP SuccessFactors Compensation
-
-### Equity and stock administration platforms
-
-- Carta
-- Shareworks
-- Pulley
-- Global Shares
-
-### Benefits administration platforms
-
-- Rippling
-- Gusto
-- Sequoia One
-- Justworks
-- Empyrean
-
-### Pay equity and analytics tools
-
-- Syndio
-- Trusaic (PayParity)
-- Visier
-- beqom
-
-### Total rewards statement and communication tools
-
-- Workday
-- ADP
-- Custom HRIS-integrated statement generators
-
-### AI-assisted compensation analytics
-
-- Pave
-- Visier
-- Syndio
-- ChatGPT / Claude for narrative analysis and scenario modeling
-
-AI-assisted compensation modeling is rapidly changing how total rewards teams build pay structures and test pay equity scenarios before they reach employees.
-
-## Types of total rewards roles
-
-### Compensation Analyst
-
-Focuses on:
-
-- market pricing roles against survey data
-- maintaining and updating salary structures
-- supporting merit cycle calculations and modeling
-- running compa-ratio and range penetration reports
-- supporting job evaluation and leveling decisions
-
-### Benefits Specialist
-
-Focuses on:
-
-- administering health, retirement, and ancillary benefits programs
-- managing open enrollment processes
-- evaluating vendor performance and renewal negotiations
-- ensuring compliance with benefits-related regulation
-- analyzing benefits utilization and cost trends
-
-### Total Rewards Manager
-
-Focuses on:
-
-- designing integrated compensation and benefits strategy
-- running annual compensation review and merit cycles
-- partnering with Finance on total rewards budget planning
-- overseeing pay equity analysis and remediation
-- managing compensation philosophy documentation
-
-### Equity Compensation Specialist
-
-Focuses on:
-
-- administering stock option and RSU programs
-- modeling equity refresh and retention grants
-- partnering with Legal and Finance on equity plan design
-- educating employees on equity value and vesting mechanics
-
-### Total Rewards Director / VP
-
-Focuses on:
-
-- setting organization-wide total rewards philosophy
-- benchmarking and adjusting pay positioning strategy (market lead, match, lag)
-- leading pay transparency and pay equity governance
-- presenting total rewards strategy and risk to executive leadership and the board
-- leading global compensation strategy across multiple geographies
-
-### People Analytics Partner (Compensation Focus)
-
-Focuses on:
-
-- building compensation dashboards and reporting infrastructure
-- modeling the financial impact of compensation decisions
-- supporting pay equity statistical analysis
-- connecting compensation data to retention and attraction outcomes
 
 ## Key prompts
 
@@ -212,93 +102,6 @@ Focuses on:
 4. "What are the most effective ways to [communicate a compensation philosophy change] to [employees without creating anxiety or attrition risk]?"
 5. "How do I structure [a flexible benefits offering] that lets employees [choose benefits relevant to their life stage] without [excessive administrative complexity]?"
 
-## Total rewards hiring insights
-
-### Junior Compensation Analyst
-
-Common expectations:
-
-- Strong Excel/Sheets modeling skills
-- Basic understanding of market survey data and job matching
-- Ability to support merit cycle data processing
-- Attention to detail in pay band and compa-ratio calculations
-- Foundational understanding of compensation regulation
-
-### Mid-level Compensation / Total Rewards Specialist
-
-Common expectations:
-
-- Independent market pricing and salary structure maintenance
-- Experience supporting annual compensation review cycles
-- Basic pay equity analysis and reporting capability
-- Cross-functional collaboration with recruiting and finance
-- Familiarity with compensation management software platforms
-
-### Senior Total Rewards Manager
-
-Common expectations:
-
-- End-to-end compensation strategy design and execution
-- Pay equity governance and remediation program ownership
-- Equity compensation program management
-- Executive and board-level compensation reporting
-- Budget modeling and finance partnership for total rewards costs
-- Pay transparency compliance across multiple jurisdictions
-
-### Head of Total Rewards / VP Compensation and Benefits
-
-Common expectations:
-
-- Organization-wide total rewards philosophy and governance
-- Global compensation strategy across multiple geographies
-- Executive compensation and board compensation committee support
-- Total rewards technology strategy and vendor management
-- Leadership on pay transparency and regulatory strategy
-- Long-term total rewards budget and workforce cost planning
-
-## Important hiring realities
-
-### Total rewards is highly cross-functional
-
-Strong total rewards professionals often need:
-
-- statistical and analytical capability for equity and market analysis
-- finance fluency for budget modeling and cost forecasting
-- legal awareness of compensation and benefits regulation
-- communication skill for translating pay decisions into employee-facing language
-- negotiation and vendor management capability for benefits programs
-
-### A well-designed salary band ≠ a functioning pay system
-
-A candidate may:
-
-- design technically sound salary structures on paper
-- but still lack:
-  - the influence to get manager buy-in on band adherence
-  - pay equity monitoring discipline after initial rollout
-  - budget modeling rigor connecting bands to actual cost
-  - communication skill to explain bands to employees without confusion
-
-### Pay equity analysis is not a one-time audit
-
-Strong total rewards professionals understand that:
-
-- pay equity must be re-tested after every merit cycle and new hire cohort
-- remediation budgets must be planned proactively, not reactively
-- equity analysis should be built into the offer approval workflow
-- statistical significance and legal defensibility both matter in methodology
-
-### Strong total rewards professionals think in systems
-
-Strong candidates usually demonstrate:
-
-- systems thinking that connects compensation philosophy to actual pay outcomes
-- ability to model the financial and retention impact of pay decisions
-- comfort defending decisions with data under executive and legal scrutiny
-- sensitivity to how compensation changes are perceived by employees
-
-rather than only spreadsheet and survey-matching expertise.
-
 ## Common HR misunderstandings
 
 ### Total rewards ≠ just salary
@@ -334,9 +137,8 @@ A benefits package with excessive choice can create decision fatigue and lower p
 
 ## Tips
 
-- Senior total rewards professionals are often evaluated on their ability to defend pay decisions with data, model financial impact accurately, and navigate the tension between cost control and competitiveness — not only on technical salary-band design skill.
-- Pay equity analysis should be run before a compensation cycle, not only after — identifying and budgeting for gaps proactively is significantly cheaper and less reputationally risky than remediating after employees discover a disparity.
-- Total rewards statements are one of the highest-usee, lowest-cost retention tools available — many employees significantly underestimate the value of their benefits and equity until it is shown to them explicitly.
-- When designing incentive plans, model the plan against multiple performance scenarios before launch — a commission structure that looks reasonable on paper can create unintended behavior or budget overruns under real performance distributions.
-- Pay transparency regulation is expanding rapidly across jurisdictions; total rewards teams that build defensible, well-documented pay structures proactively are far better positioned than those reacting after a law takes effect.
-- Avoid designing compensation philosophy in isolation from Finance and Legal — total rewards decisions carry budget and regulatory implications that require their input from the earliest stages, not just final sign-off.
+- Run a pay fairness screen before a raise cycle, not only after. It is cheaper to find and budget for gaps early.
+- Show employees their total pay in a statement. Many don't see the value of benefits or equity until it is spelled out.
+- When you design an incentive plan, model it at low, target and high performance before launch. A plan that looks fine on paper can pay too much or reward the wrong thing.
+- Pay transparency rules are changing in many places. Build pay structures you can explain and document now.
+- Don't design a pay philosophy alone. Bring in Finance and Legal early, since pay choices carry budget and legal weight.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: A bad move can lose traffic, so it checks each step.
 new_slug: website-content-mover
 name: Website content mover
-summary: Name your old and new site. Get a move plan that keeps search rank,
-  links and bookmarks working.
+summary: Plan a website migration that keeps your search rank, links and bookmarks. Give it your old and new site. Get a URL map and launch plan.
 job: build-websites
 headline: Website content mover
-subhead: A move plan for taking your content to a new platform, domain or URL
-  layout without losing search rank, links or bookmarks. A bad move can wipe out
-  years of traffic.
+subhead: A move plan for taking your content to a new platform, domain or URL layout without losing search rank, links or bookmarks. A bad move can wipe out years of traffic.
 explain: |
   A move plan for taking your content to a new platform, domain or URL layout without losing search rank, links or bookmarks. A bad move can wipe out years of traffic.
 
@@ -18,6 +15,10 @@ when:
   - You are merging several sites into one.
   - You are changing your domain or URL structure.
   - You are rebranding and want to keep search rank.
+not_for:
+  - You are building a new site with no old content. No move plan is needed, so start with a plain page list.
+  - You only want to edit copy on your current site. Use a writing step or edit the pages by hand.
+  - You want to fix site speed or search setup without changing any web addresses. Use a technical SEO check instead.
 you_give:
   - Old platform, domain and URL structure
   - New platform and URL plan
@@ -29,7 +30,39 @@ you_get:
   - Redirect and launch plan
   - Post-launch check list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell your AI your old platform, your new platform and why you are moving.
+  - Paste your page list or sitemap if you have one. Add traffic and link data if you can.
+  - Ask for the full migration plan. No code or paid tool is needed.
+  - Check the URL map first. Make sure your top pages by traffic and links each have a clear new address.
+  - Use the plan on switch day, then follow the monitoring list for the next 30 to 90 days.
+output_sample:
+  input:
+    - Your old platform, domain and web address layout
+    - Your new platform and planned address layout
+    - Your page list or sitemap (optional)
+    - Why you are moving
+    - Your deadline and who is involved (optional)
+  prerequisites:
+    - Your page traffic and link data from your analytics and search tools, or the plan will mark the gap
+  output:
+    - name: Scope
+      contains: What is part of the move and what is left out.
+    - name: Inventory
+      contains: A page list with title, type, status, traffic, links and files for each page.
+    - name: Audit decisions
+      contains: A keep, update, merge, redirect or delete call for each page, with notes on edits.
+    - name: URL map
+      contains: Each old address matched to a new one, with a 301 or 410 code and a reason.
+    - name: Architecture
+      contains: How the new site is set up and how the redirects are put in place.
+    - name: Cutover plan
+      contains: The steps for switch day, including checks right after the switch.
+    - name: Rollback plan
+      contains: What to do if the move goes wrong.
+    - name: Monitoring plan
+      contains: What to watch in traffic, search results and broken pages for 30 to 90 days.
+    - name: Comms plan
+      contains: What to tell your team and your users, and when.
+    - name: Owners and timeline
+      contains: Who does each task and by when.

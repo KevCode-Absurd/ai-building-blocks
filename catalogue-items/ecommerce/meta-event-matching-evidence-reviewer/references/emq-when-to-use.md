@@ -1,34 +1,27 @@
-# When to use `/emq`
+# When to use this review
 
-**What it does:** Audits Event Match Quality on Meta pixel + CAPI. Scores each event (Purchase, Lead, AddToCart, InitiateCheckout), identifies missing parameters, calculates revenue mis-attribution, and prescribes specific server-side fixes.
-
-**Runtime:** 2-3 minutes.
+**What it does:** Reviews the evidence you give about Meta event matching. It marks which customer fields each event sends, finds hashing mistakes, checks that browser and server events share an event ID, and ranks the fixes. It does not calculate a revenue figure.
 
 ## Run this when
 
-1. **Reported ROAS doesn't match Shopify revenue.** The gap is usually EMQ, not "iOS 14."
-2. **Before onboarding a new client.** EMQ is the single biggest tracking risk. Fix before scaling spend.
-3. **After iOS/browser updates.** Safari and iOS changes periodically break matching. Re-audit quarterly.
-4. **When the algorithm won't exit learning phase.** Low EMQ starves the algorithm of matched users to optimize against.
+1. Events Manager shows a low or middling match quality score for Purchase.
+2. You have just added server events and want a second check.
+3. Meta and your store disagree on sales and you suspect double counting.
 
 ## Before you run
 
-- Meta ad account access (Events Manager -> Data Sources -> Diagnostics shows EMQ scores)
-- Knowledge of which CAPI implementation is in place (Native, Shopify, CAPI Gateway, custom)
-- Access to the server-side code OR the tool that configures CAPI (Stape, Zapier, Segment)
+- The match quality score for each event, copied from Events Manager, with its date range.
+- A redacted list of the customer fields each event sends (yes or no for each). No real customer data.
+- How events are sent, and whether browser and server share an event ID.
 
 ## What you get back
 
-- EMQ score per event with status
-- Missing parameters per event ranked by impact
-- Deduplication rate and health
-- Estimated revenue mis-attribution per month
-- Priority fix list with EMQ impact + time cost per fix
-- Projected post-fix EMQ and ROAS impact
+- A review of each event: supplied score, fields sent and not sent, hashing issues, priority.
+- Where each missing field would come from.
+- Duplicate-event findings, using only the evidence you gave.
+- Fixes in order, and what to read again in Events Manager after new data.
 
 ## Chains well with
 
-- `/audit` before, to see the full Meta account context
-- `/health-score` after, since P04 (Event Match Quality) is one of the 30 checks
-- `/diagnose` after, if ROAS decline turns out to be tracking-related (Pattern 6)
-- `/cross-platform` after, if EMQ fixes change reported Meta numbers enough to affect budget allocation decisions
+- The Meta Ads 30-check account auditor, for the whole account.
+- The Meta server tracking checker, if you still need to choose a server route.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs tools and judges the findings.
 new_slug: code-security-scanner
 name: Code security scanner
-summary: Point it at your source code. Get security flaws found with static
-  tools and rules you can add to CI.
+summary: Run a code security scan on your source code. Get real flaws sorted by severity, with fixes and a CI step to catch new ones.
 job: secure-code
 headline: Code security scanner
-subhead: Point it at your source code. Get security flaws found with static
-  tools and rules you can add to CI. Bring your source code repository. Use the
-  result to plan your next step.
+subhead: Point it at your source code. Get security flaws found with static tools and rules you can add to CI. Bring your source code repository. Use the result to plan your next step.
 explain: |
   Security flaws found in your source code without running the app, with a clean list of real problems and rules you can add to CI so they stay fixed.
 
@@ -18,6 +15,10 @@ when:
   - You suspect secrets are hardcoded in the repo.
   - Your scanner output is too noisy to use.
   - You need security checks added to your CI pipeline.
+not_for:
+  - "You want to test a live app or website while it runs: use a dynamic scanner (DAST) or ask a security tester."
+  - "You need to check packages and libraries you depend on: use a dependency scanner such as Dependabot or npm audit."
+  - "You only have a compiled program with no source code: use a binary analysis tool or ask a security specialist."
 you_give:
   - Your source code repository
   - Existing scanner settings (optional)
@@ -28,8 +29,30 @@ you_get:
   - Config for your scan tools
   - A CI step to run on every change
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini with a tool that can run code and read files. A plain chat can only review code you paste.
+  - Install the scanners you need first, such as Semgrep, Bandit or ESLint security plugins. CodeQL is optional.
+  - Paste the skill, then give the path to your repository. Add your languages and CI platform if you know them.
+  - Say you own the code or have permission to test it.
+  - Read the report. Check the false alarms the AI dropped, then fix the high-severity flaws first.
+  - Add the CI step to your pipeline so new flaws are caught on each pull request.
+output_sample:
+  input:
+    - Your source code repository
+    - Languages or custom rule files (optional)
+    - Where you run CI, such as GitHub Actions or GitLab CI (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - The scan tools installed, such as Semgrep, Bandit or ESLint security plugins
+    - CodeQL, if you want deeper checks (private repos may need a licence)
+    - Permission to test the code
+  output:
+    - name: Scan results
+      contains: Every finding with its type, file, line, severity and CWE number (a standard ID for a kind of flaw).
+    - name: Triage
+      contains: Findings merged across tools, with duplicates removed and each marked real, false alarm or needs review.
+    - name: Findings report
+      contains: Flaws grouped by severity, each with the code, the risk, a fix and links to OWASP and CWE.
+    - name: Tool config
+      contains: Settings and rule sets for the scanners that fit your languages.
+    - name: CI step
+      contains: A pipeline setup that runs the scan on every pull request and can block serious flaws.

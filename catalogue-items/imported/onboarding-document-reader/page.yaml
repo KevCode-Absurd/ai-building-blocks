@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It pulls fields from documents into a fixed form.
 new_slug: onboarding-document-reader
 name: Onboarding document reader
-summary: Give it an onboarding pack. Get identity, ownership, source of funds
-  and a document list in set fields.
+summary: "Turn a client or investor onboarding pack into one KYC record: identity, owners, source of funds and a document list. Blanks stay blank."
 job: hire-people
 headline: Onboarding document reader
-subhead: Raw client or investor onboarding papers turned into one neat record,
-  so your team can check the facts instead of hunting for them. Nothing gets
-  guessed.
+subhead: Raw client or investor onboarding papers turned into one neat record, so your team can check the facts instead of hunting for them. Nothing gets guessed.
 explain: |
   Raw client or investor onboarding papers turned into one neat record, so your team can check the facts instead of hunting for them. Nothing gets guessed. If a field is not in the documents, it stays empty.
 
   The skill first lists every document received, by type: identity, company formation, ownership, address, source of funds and tax forms. Then it pulls out names, dates of birth, addresses, owners and controllers, where the money comes from, and any tax details, into set fields. It treats the documents as untrusted text. It reads data out of them and ignores any instruction written inside them. The result feeds straight into a rules check step.
 when:
-  - A new investor sent a packet of twenty PDFs and you need the key facts in
-    one place.
+  - A new investor sent a packet of twenty PDFs and you need the key facts in one place.
   - You must list which documents you have and which are missing.
   - Someone retypes passport and company details into a form by hand today.
   - You want a consistent record before running compliance checks.
+not_for:
+  - "You only need a simple sign-up with no KYC duty: use a plain web form or ask your compliance lead what is required."
+  - "You want the pack judged against your rules: this only reads and records, so have your compliance team or a rules check make that call."
+  - "Your documents hold personal data you have no right to share with an AI tool: ask your data-protection lead first, or redact it before you paste."
 you_give:
   - The onboarding documents
   - "The type of client: person, company or trust"
@@ -30,8 +30,31 @@ you_get:
   - Source of funds details
   - Empty fields where nothing was found
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your files.
+  - Remove or redact any personal data you should not share, following your data-protection policy.
+  - Open your AI tool and paste in the skill instructions. If your AI can read files, upload the documents. Otherwise paste their text.
+  - Say whether the client is a person, company or trust. Add your required fields or checklist if you have them.
+  - Read the document inventory first. Check it matches what you sent.
+  - Check each field against the documents. Fields set to null mean nothing was found.
+  - Store the JSON record where your policy says, then pass it to your rules check.
+output_sample:
+  input:
+    - The onboarding documents, such as passports, company papers, ownership charts and tax forms
+    - "The type of client: person, company or trust"
+    - The fields your firm needs (optional)
+    - Your document checklist (optional)
+  prerequisites:
+    - An AI that can read your files, or text pasted from them
+    - Documents redacted or handled under your data-protection policy before you upload them
+  output:
+    - name: Document inventory
+      contains: Every document received, with its type and an identifier, sorted into identity, formation, ownership, address, source of funds and tax.
+    - name: Structured KYC record
+      contains: One JSON record with applicant type, legal name, birth or formation date, nationality or jurisdiction, and registered address.
+    - name: Identity and ownership fields
+      contains: ID documents, beneficial owners with ownership share and control basis, and controllers with their roles.
+    - name: Source of funds and tax fields
+      contains: A one-line source of funds with its document reference, the declared PEP status, and signed tax forms.
+    - name: Null fields
+      contains: Any field not found in the documents is set to null, never guessed.
+    - name: Gap notes
+      contains: Plain notes on anything missing or expired, such as an old ID, address proof over 3 months old, or no ownership chart.

@@ -11,6 +11,17 @@ license_source: https://github.com/huggingface/skills/blob/main/LICENSE
 ---
 
 # Train a sentence-transformers Model
+
+## How to run this skill (added by AI Blocks)
+
+This skill is marked `risk: critical` upstream because it runs long, costly training and can publish files. Treat both as actions to confirm with the user.
+
+1. Ask once for what is missing: what the model must find or match, the training data (pairs or labelled texts), a starting model (optional), GPU or no GPU, and whether the result stays local or goes to the Hub. If something is still missing, write `MISSING: <what>`. Never invent training data, scores or model names.
+2. Do the steps in section 5. The results the user sees are: the model type and why, the filled-in training script, the log file, the VERDICT line (WIN, MARGINAL or REGRESSION with score, baseline and delta), the saved model folder, and the entry added to `logs/experiments.md`.
+3. Training data stays on the user's machine. Nothing is sent to the Hub without a clear yes.
+4. Not for: using an existing model to make vectors (use the Text embedding maker), building a document search with answers (use the RAG pipeline designer), or having no training data at all.
+5. Next step: if the verdict is WIN, check the model on a few real searches before you swap it in. If MARGINAL or REGRESSION, try the next change in the experiments log.
+
 ## When to Use
 
 Use this skill when you need train or fine-tune sentence-transformers models across `SentenceTransformer` (bi-encoder; dense or static embedding model; for retrieval, similarity, clustering, classification, paraphrase mining, dedup, multimodal), `CrossEncoder` (reranker; pair scoring for two-stage retrieval / pair...
@@ -74,9 +85,9 @@ Tiebreakers when the request is ambiguous: "embedding model" / "vector search" /
 ## 3. Defaults
 
 Override only if the user specifies otherwise:
-- **Local execution.** Pitch HF Jobs only if local hardware can't fit the job.
+- **Local execution.** Pitch HF Jobs only if local hardware can't fit the job. HF Jobs is paid compute from Hugging Face: say so, and tell the user to check the current price on Hugging Face before they agree.
 - **Single run.** After it completes, propose experimentation if the user would benefit (weak/marginal verdict, "see how high you can push it" framing, etc.). Iteration rules in `references/training_args.md` (Experimentation section).
-- **Public Hub push at end-of-run, wrapped in try-except.** On HF Jobs (ephemeral env) ALSO enable in-trainer push (`push_to_hub=True` + `hub_strategy="every_save"`); details in `references/hf_jobs_execution.md`.
+- **No Hub push unless the user asks.** Save the model and logs locally by default. Push to the Hugging Face Hub only when the user says so, to a private repo unless they ask for a public one, and wrap the push in try-except. The production templates push at the end of a run, so switch that off or remove it when the user has not opted in. On HF Jobs (ephemeral env) the files are lost when the job ends, so there you must ask the user whether to push; if yes, also enable in-trainer push (`push_to_hub=True` + `hub_strategy="every_save"`) with `private=True`; details in `references/hf_jobs_execution.md`.
 
 ## 4. Constraints the produced script must satisfy
 
@@ -86,7 +97,7 @@ These are non-negotiable contracts. Implementation lives in the production templ
 - Emit a single end-of-run line: `VERDICT: WIN|MARGINAL|REGRESSION | score=... | baseline=... | delta=...`. A monitor scrapes for this.
 - Silence `httpx`, `httpcore`, `huggingface_hub`, `urllib3`, `filelock`, `fsspec` to WARNING (otherwise HF download URLs flood the agent's context).
 - Tee logs to `logs/{RUN_NAME}.log`.
-- End with `model.push_to_hub(...)` wrapped in `try/except`.
+- End with `model.save_pretrained(...)` to a local folder. Add `model.push_to_hub(...)` wrapped in `try/except` only when the user opted in (see Defaults).
 - Smoke-test before any long run (`max_steps=1` + tiny dataset slice). The production templates show one common pattern (`SMOKE_TEST` env var).
 - **[CrossEncoder]** Include `EarlyStoppingCallback(patience>=3)` — CE rerankers often peak mid-training and regress.
 - **[SparseEncoder]** Log `query_active_dims` / `corpus_active_dims` on the verdict line; high nDCG with collapsed sparsity is not a win. The keys come back name-prefixed (e.g. `..._query_active_dims`); use suffix matching to pluck them — see the SPARSE production template for the exact pattern.

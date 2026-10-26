@@ -2,30 +2,32 @@ slug: gorgias
 name: Gorgias
 maker: Gorgias
 url: https://www.gorgias.com
-promise: "Manage online-store support in one inbox, with AI for common order questions."
+promise: "Answer online-store support in one inbox, with an AI Agent for order questions."
 use_cases: [sell-and-support]
 categories: [sales-and-support]
 what_it_does:
-  - "Brings email, chat, social, text messages and voice into one inbox."
-  - Shows each customer's orders next to their message.
-  - Runs an AI Agent that answers common questions on its own.
-  - Offers a Shopping Assistant that helps visitors choose products.
-  - Applies rules and flows to sort and answer tickets.
+  - "Brings email, chat, SMS, WhatsApp, Instagram and Facebook into one inbox, with phone support too (checked 26 Oct 2026)."
+  - "Shows a customer's order, customer and product details beside their message, through a native Shopify link (checked 26 Oct 2026)."
+  - "Runs an AI Agent that answers shopper questions, completes tasks in connected apps, and hands over to your team when it cannot finish (checked 26 Oct 2026)."
+  - "Lets you set skills for the question types you get most, such as returns, order status and cancellations (checked 26 Oct 2026)."
+  - "Offers a Shopping Assistant that helps visitors choose products (checked 26 Oct 2026)."
 benefits:
-  - "Answer common questions about orders without typing each reply."
-  - Handle returns and edits from the same screen as the chat.
-  - Pick a ticket plan that fits your store size, and add AI by use.
+  - "Answer common order questions without typing each reply."
+  - "See the order beside the message, so you do not switch tabs."
+  - "Test the AI Agent in a Playground before it talks to a shopper. Test chats are not billed."
+  - "Pick a ticket plan to fit your store, and pay for AI by use."
 best_for:
-  - "Stores that sell through supported apps and need help with order questions."
-  - Small support teams with many order questions.
+  - "Shopify stores with many order questions."
+  - Small support teams that answer the same questions every day.
   - Owners who want support and sales chat in one place.
 not_for:
-  - Businesses that are not selling products online.
-  - Teams that want AI answers with no per-interaction charge.
+  - "Stores that are not on Shopify. Gorgias docs say AI Agent is not supported on BigCommerce, Magento or WooCommerce."
+  - "Teams that want a fixed monthly bill. AI Agent charges for each automated interaction, and each one also counts as a ticket. Intercom Fin and Zendesk AI are others to compare."
+  - "Businesses that are not selling products online."
 pricing:
   model: subscription
   from: US$10 per month
-  note: Starter includes 50 tickets a month. Basic is US$50 a month on yearly billing. The AI Agent costs US$0.90 per automated interaction on annual contracts, or US$1.00 monthly. The page also shows a second set of figures, so confirm before buying.
+  note: "Checked 26 Oct 2026, from the data on gorgias.com/pricing. The visible text shows no prices, and a second block of data on the same page lists higher ones, so confirm at checkout. Per month, Starter is US$10 (monthly billing only, 50 tickets). Basic is US$60, or US$50 billed yearly (300 tickets). Pro is US$360, or US$300 yearly (2,000 tickets). Advanced is US$900, or US$750 yearly (5,000 tickets). Extra tickets cost US$0.36 to US$0.40 each. Enterprise is a custom quote. AI Agent is extra: US$1.00 per automated interaction on a monthly contract, US$0.90 on an annual one, and US$1.50 each above the interactions your plan includes. Each automated interaction also counts as a ticket."
 works_with:
   - Shopify
   - klaviyo
@@ -36,6 +38,32 @@ blocks:
   - delivery-update-flow-builder
   - customer-wow-budget-planner
 alternatives: [intercom-fin, zendesk-ai, hubspot-breeze]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Sign up at gorgias.com and pick a plan. Connect your Shopify store. If you connected it before you subscribed to AI Agent, you may need to update the app permissions."
+  - "Subscribe to AI Agent. You need Lead, Admin or Account Owner access."
+  - "Add knowledge from your store, help center, documents, web links or written guidance. AI Agent needs at least one source before you can turn it on."
+  - "Create skills for your busiest question types, such as returns, order status and cancellations. Leave actions for later, as you do not need them to go live."
+  - "Set a tone of voice and handover rules. Start with few handover topics."
+  - "Open AI Agent, then Playground, choose a channel and send your five most common real order questions. Test chats are not billed and send no real messages."
+  - "Go to AI Agent, then Deploy, and turn on one channel. Read the first live conversations before you add more channels."
+needs:
+  - "A Shopify store connected to Gorgias."
+  - "A Gorgias plan and an AI Agent subscription."
+  - "Lead, Admin or Account Owner access."
+  - "At least one source of knowledge, such as your help center or store pages."
+  - "Your most common order questions, and how many tickets you expect a month, to pick a plan size."
+example:
+  task: "Send one common order question in the Playground, such as where an order is."
+  cost: "On a live store, each automated interaction costs US$0.90 on an annual contract or US$1.00 monthly, and also counts as a ticket. As our own sum, 100 interactions at the annual rate is US$90, before any plan fee."
+  reply: "AI Agent answers from your knowledge and your Shopify order data, or hands the conversation to a person if it cannot finish. Gorgias docs warn that an action in a test chat can change real order data, so use a test customer."
+not_verified:
+  - "Which price list is current. The two sets of data on gorgias.com/pricing disagree, and the second lists Basic at US$77, Pro at US$471 and Advanced at US$1,227 a month."
+  - "Vendor claims such as automating 60% of support. We have not tested them and do not repeat them."
+  - "A full list of channels each plan allows. Plan limits by channel were not on the pages we read."
+  - "Rules and flows. An earlier note listed them, and we did not recheck them."
 sources:
   - https://www.gorgias.com/pricing
+  - https://www.gorgias.com
+  - https://docs.gorgias.com/en-US/set-up-and-go-live-with-ai-agent-500219

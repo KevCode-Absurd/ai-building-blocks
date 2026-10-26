@@ -16,11 +16,11 @@ outputs:
   - {type: plan}
 uses: [one-change-experiment-planner, ab-test-traffic-checker, a-b-test-verdict-maker, split-run-result-reader, mistake-to-principle-writer]
 steps:
-  - {uses: one-change-experiment-planner, note: "Before each test: the plan checked so it changes one thing, names the rate it should move and says what result would prove it wrong."}
-  - {uses: ab-test-traffic-checker, note: "Before each test: the sample size, the weeks needed and a readiness score out of 100. A low score sends the test back to the planner."}
-  - {uses: a-b-test-verdict-maker, note: "When a test ends: the split check, the result with a confidence range, side effects and a ship call."}
-  - {uses: split-run-result-reader, note: "When a test ends, for a two-version test with simple counts: the percentage gap, a luck check and a keep, rerun or stop call, as a second opinion."}
-  - {uses: mistake-to-principle-writer, note: "Only when a test was stopped early, read before its date, or changed two things: the root cause and a written rule for next time."}
+  - {uses: one-change-experiment-planner, note: "Before each test: the plan checked so it changes one thing, names the rate it should move and says what result would prove it wrong. Hands the checked plan to step 2."}
+  - {uses: ab-test-traffic-checker, note: "Before each test: takes step 1's checked plan and your baseline visits, orders and revenue. Hands back the sample size, the weeks needed and a readiness score out of 100. A low score sends the test back to the planner."}
+  - {uses: a-b-test-verdict-maker, note: "When a test ends: uses your end-of-test export for each version and the plan, not step 2's readiness score, which only decided whether the test could run. Hands back the split check, the result with a confidence range, side effects and a ship call."}
+  - {uses: split-run-result-reader, note: "When a test ends, for a two-version test with simple counts: reads the same counts as step 3, not step 3's report, so it is a second opinion. Hands back the percentage gap, a luck check, a keep, rerun or stop call and a lesson for step 5."}
+  - {uses: mistake-to-principle-writer, note: "Only when a test was stopped early, read before its date, or changed two things: uses what you tell it happened, plus the calls and lessons from steps 3 and 4. Hands back the root cause and a written rule for next time."}
 schedule: "Each time a test is proposed, and the day it reaches its read date"
 asks_before: [starting, stopping or extending a test, shipping or reverting a change, changing who is in the test, reading a result before its date, sending the readout to anyone]
 minds: [isaac-newton]

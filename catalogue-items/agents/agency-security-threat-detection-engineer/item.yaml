@@ -1,0 +1,42 @@
+slug: agency-security-threat-detection-engineer
+name: Threat Detection Engineer agent
+summary: Get a threat detection plan with rules and validation cases. Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: security/security-threat-detection-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-threat-detection-engineer.md
+  licence: MIT
+  original_name: Threat Detection Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: b15c0d8be90232a64471d0947dd30cfcd9efeeb2dab2579bb415ca8beb7db7f1
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Threat Detection Engineer
+  - Agency Agents
+  - Security
+credits:
+  - title: Threat Detection Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-threat-detection-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

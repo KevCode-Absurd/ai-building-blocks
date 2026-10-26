@@ -43,13 +43,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Subscription offer designer.** Use the skill `subscription-offer-designer`. Designs the subscription offer: discount, cadence and first-order deal.
+1. **Subscription offer designer.** Use the skill `subscription-offer-designer`. Designs the subscription offer: discount, cadence and first-order deal. Hands the offer to steps 2, 3 and 4.
 2. **Subscription payback checker.** Use the skill `subscription-payback-checker`. Give it the offer from the steps before. Tests the designed offer for payback time and the most you can pay to win a subscriber.
-3. **Subscription cancel flow builder.** Use the skill `subscription-cancel-flow-builder`. Give it the offer from the steps before. Builds the cancel and pause steps for the same offer, so churn does not undo the payback.
+3. **Subscription cancel flow builder.** Use the skill `subscription-cancel-flow-builder`. Give it your own cancel reasons, the offer from step 1 and the payback check from step 2. Builds the cancel and pause steps for the same offer, so churn does not undo the payback.
 
 Pause here: Put the offer live and let it run until you have a few weeks of sign-up data and a page capture.
 
-4. **Subscription page take-rate checker.** Use the skill `subscription-page-take-rate-checker`. Give it the offer from the steps before. Checks the live page shows the offer clearly and that enough first orders choose it.
+4. **Subscription page take-rate checker.** Use the skill `subscription-page-take-rate-checker`. Give it a capture of your live page and the offer from step 1, not step 3's cancel flow. Checks the live page shows the offer clearly and that enough first orders choose it.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

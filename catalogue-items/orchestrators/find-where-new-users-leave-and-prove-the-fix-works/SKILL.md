@@ -43,12 +43,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **New user drop-off finder.** Use the skill `new-user-drop-off-finder`. Finds the biggest leak and the first-visit change to try. Starts from your funnel numbers.
-2. **Small usability test planner.** Use the skill `small-usability-test-planner`. Give it the audit report from the steps before. Plans a one-morning test of the leak the finder named. Reads the audit report from the step before.
+1. **New user drop-off finder.** Use the skill `new-user-drop-off-finder`. Finds the biggest leak and the first-visit change to try. Starts from your funnel numbers and hands the leak report to step 2.
+2. **Small usability test planner.** Use the skill `small-usability-test-planner`. Give it the audit report from the steps before. Plans a one-morning test of the leak the finder named. Reads the audit report from the step before and hands the test plan, with its pass number, to step 3.
 
 Pause here: Run the test with three people and one outsider. Implement the first-visit fix only with the owner’s approval. Export results only after the post-change cohort has completed the full observation window for the measure being reviewed. For 30-day retention, every included user must have had 30 days to return. Use the same cohort rules and complete window for the before and after groups. Earlier first-use results may be reviewed separately, labelled with their shorter window; they do not establish a 30-day retention result.
 
-3. **Product metrics review writer.** Use the skill `product-metrics-review-writer`. Before comparing, check cohort dates, measure definitions and complete observation windows. Stop the affected comparison if either group is too young or the windows differ. Read the supported before-and-after change as an observation, not proof that the fix caused it.
+3. **Product metrics review writer.** Use the skill `product-metrics-review-writer`. Give it the fresh export from after the wait and the test plan from the steps before, so the review uses the pass number and targets set there. Before comparing, check cohort dates, measure definitions and complete observation windows. Stop the affected comparison if either group is too young or the windows differ. Read the supported before-and-after change as an observation, not proof that the fix caused it.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

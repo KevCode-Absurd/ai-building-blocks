@@ -1,6 +1,6 @@
 slug: find-an-amazon-product-gap-and-check-it-will-pay
 name: "Find an Amazon product gap and check it will pay"
-summary: "Give it a category. Get Amazon product ideas page 1 misses, a score out of 100 and a go or no-go."
+summary: Find Amazon product ideas that page 1 misses, then score one out of 100 before you buy stock. You get ideas, a score and a go, test first or no-go.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,15 +8,15 @@ job: research
 level: beginner
 inputs:
   - {type: question, required: true}
-  - {type: product_data, required: true}
+  - {type: product_data, required: false}
   - {type: spreadsheet, required: false}
   - {type: store_capture, required: false}
 outputs:
   - {type: audit_report}
 uses: [amazon-search-gap-finder, amazon-product-viability-scorer]
 steps:
-  - {uses: amazon-search-gap-finder, note: "Starts the flow. Finds searched-for ideas that page 1 misses."}
-  - {uses: amazon-product-viability-scorer, note: "Scores the idea you picked from the shortlist, using the page 1 evidence the gap finder gathered."}
+  - {uses: amazon-search-gap-finder, note: "Starts the flow. Finds searched-for ideas that page 1 misses and hands the shortlist, with its page 1 evidence, to step 2."}
+  - {uses: amazon-product-viability-scorer, note: "Scores the idea you picked from the shortlist, using the page 1 evidence the gap finder gathered. Hands the score and a go, test-first or no-go call back to you."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/find-an-amazon-product-gap-and-check-it-will-pay/skeleton.yaml

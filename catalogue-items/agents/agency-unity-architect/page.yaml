@@ -1,0 +1,145 @@
+name: Unity Architect agent
+summary: Plan a Unity project structure with ScriptableObjects so systems stay separate, designers can edit data, and oversized scripts get split up.
+headline: Unity Architect agent
+subhead: Tell it which Unity systems are tangled, or paste your scripts. It finds hard links and big scripts, then plans how to move shared data into ScriptableObjects. You get a data map, a list of assets to make and a cleanup order.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Unity projects get tangled the same way. One script grows to hundreds of
+  lines and runs everything. Objects find each other with GameObject.Find. A
+  singleton holds the score, and half the game breaks when you move a scene.
+  This agent plans a Unity project structure that avoids those traps.
+
+  Its method comes from the Unity Architect profile by Agency Agents. Shared
+  values and messages live in ScriptableObject assets, which are data files you
+  can edit in the Inspector. Each script does one job. Each prefab works alone
+  in an empty scene. Designers can then change health, speed or events without
+  touching code.
+
+  This is a strong opinion, not a law. The profile pushes it hard, so your AI
+  also checks whether it is too much for your project size, and says so if it
+  is. It plans and reviews. It cannot open Unity or run your game, and any C# it
+  writes is a pattern for you to test.
+when:
+  - One script runs half your game and every change risks breaking something else.
+  - Your designers must ask a programmer to change a number, because values sit inside scripts.
+  - Your prefabs only work in one scene, or break when you load another scene.
+  - You are starting a bigger Unity project and want the structure settled before you write systems.
+not_for:
+  - You are building multiplayer or networking. Use the Unity Multiplayer Engineer agent.
+  - You want a custom editor window or import rule. Use the Unity Editor Tool Developer agent.
+  - You want a shader. Use the Unity Shader Graph Artist agent.
+  - You are making a small jam game or a throwaway test. This structure may cost more time than it saves.
+you_give:
+  - Your Unity version and the platforms you build for
+  - The systems you want to tidy, such as health, inventory or UI
+  - Your scripts, or a list of the big ones and what they do (optional)
+  - Who edits game data, such as designers with no code skills (optional)
+  - The problems you have, such as scene bugs or slow frames (optional)
+you_get:
+  - A list of tangled spots in what you shared, such as singletons and oversized scripts
+  - A data map that shows what each script reads and writes
+  - A list of ScriptableObject assets to create, each with its job
+  - A plan for splitting big scripts into one-job components
+  - A cleanup order in small steps you can test one by one
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Say your Unity version and which systems you want to tidy. Paste the scripts that cause pain. Say MISSING for anything you do not know.
+  - Say "Plan this. Tell me if this is too much for my project." Your AI asks once for anything missing.
+  - Read the fit check first. If it says the project is small, take the smaller plan.
+  - Do the cleanup in the order given, one step at a time. Run your game after each step.
+  - Paste any new errors back and ask for the next step.
+how_it_works:
+  - title: Check the fit
+    text: It asks if your project is big enough to need this structure, and plans lighter if not.
+  - title: Find the tangles
+    text: It looks for hard links between scripts, singletons, Find calls, magic strings and scripts that do more than one job.
+  - title: Map the data
+    text: It lists who reads and who writes each shared value, such as health or score.
+  - title: Design the assets
+    text: It plans variable, event and runtime-set ScriptableObjects, and where they sit in your Assets folder.
+  - title: Split the scripts
+    text: It breaks big scripts into one-job components and checks each prefab works alone.
+  - title: Order the work
+    text: It puts the changes in small steps, each safe to test before the next.
+output_shape: |-
+  FIT CHECK
+    <project size> | <worth the full structure, a lighter version, or not worth it> | <why>
+
+  FINDINGS
+    <script or file> | <problem> | <why it hurts later>
+
+  DATA MAP
+    <shared value> | <who writes it> | <who reads it> | <where it should live>
+
+  SCRIPTABLEOBJECT LIST
+    <asset name> | <type: variable, event or runtime set> | <its job> | <folder>
+
+  COMPONENT SPLIT
+    <big script> > <new one-job components>
+
+  CLEANUP ORDER
+    <step> | <what changes> | <how to test it>
+
+  C# PATTERNS (only if asked)
+    <short code, marked untested>
+
+  RISKS AND OPEN QUESTIONS
+    <what could go wrong, what is missing>
+output_sample:
+  input:
+    - Your Unity version and target platforms
+    - The systems you want to tidy
+    - Your scripts, or a list of the big ones (optional)
+    - Who edits game data (optional)
+  prerequisites:
+    - A Unity project you can edit and run
+  output:
+    - name: Fit check
+      contains: Whether the full ScriptableObject structure suits your project size, or a lighter one does.
+    - name: Findings
+      contains: Each tangled script or file, the problem and why it will hurt later.
+    - name: Data map
+      contains: Each shared value, who writes it, who reads it and where it should live.
+    - name: ScriptableObject list
+      contains: Each asset to create, its type, its job and its folder.
+    - name: Component split
+      contains: How each big script breaks into one-job components.
+    - name: Cleanup order
+      contains: Small steps in order, each with a way to test it.
+    - name: Risks and open questions
+      contains: What could go wrong during the cleanup and what the agent could not see.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: ScriptableObject
+    meaning: A Unity data file that lives in your project, not in a scene. Scripts and designers can share it.
+  - term: Singleton
+    meaning: One global object that any script can reach. Easy to start with, hard to untangle later.
+  - term: Prefab
+    meaning: A saved game object you can drop into any scene.
+  - term: Event channel
+    meaning: A ScriptableObject that one script raises and other scripts listen to, so they need not know each other.
+  - term: Inspector
+    meaning: The Unity panel where you edit the settings of a selected object.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read a set of scripts and map who talks to whom. Upload files if your AI allows it.
+  inputs:
+    - The list of your scripts with line counts.
+    - A short note on your team, such as who is a designer and who is a programmer.

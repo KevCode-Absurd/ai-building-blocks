@@ -15,9 +15,9 @@ outputs:
   - {type: angle_library}
 uses: [positioning-grid-builder, owned-word-mapper, rival-weakness-message-finder]
 steps:
-  - {uses: positioning-grid-builder, note: "Starts the chain: writes the rival set with where each one sits and which corners are open."}
-  - {uses: owned-word-mapper, note: "Reads the mapped rivals from the step before and marks which words are taken and which are open."}
-  - {uses: rival-weakness-message-finder, note: "Takes the map and picks the one strength of yours that is also a rival's weakness."}
+  - {uses: positioning-grid-builder, note: "Starts the chain: writes the rival set with where each one sits and which corners are open. Hands step 2 the rival set."}
+  - {uses: owned-word-mapper, note: "Reads the mapped rivals from the step before and marks which words are taken and which are open. Hands step 3 the word map."}
+  - {uses: rival-weakness-message-finder, note: "Takes the rival set from step 1 and the word map from step 2, then picks the one strength of yours that is also a rival's weakness."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/map-your-rivals-and-write-a-message-they-cannot-answer/skeleton.yaml

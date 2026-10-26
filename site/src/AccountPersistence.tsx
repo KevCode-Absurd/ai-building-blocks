@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
-import { useComposerAccount } from "./lib/composer-account";
+import { accountRoute, useComposerAccount } from "./lib/composer-account";
 import { library, setAccountToken } from "./lib/library-storage";
 import { Link, setSearch, useLocation } from "./lib/router";
 import "./account.css";
@@ -36,7 +36,8 @@ export function Persistence({ children, publicFallback }: { children: ReactNode;
       if (idleWindow.cancelIdleCallback && idleId) idleWindow.cancelIdleCallback(idleId);
     };
   }, [publicHome]);
-  const account = useComposerAccount(accountActive, false), token = useRef(account.token);
+  // Clerk loads only for a possible session or an account page (lib/composer-account.ts); signed-out visitors skip it.
+  const account = useComposerAccount(accountActive, false, accountRoute(path)), token = useRef(account.token);
   token.current = account.token;
   const snapshot = useSyncExternalStore(library.subscribe, library.snapshot);
   const user = account.state === "signed-in" ? account.userId : null;

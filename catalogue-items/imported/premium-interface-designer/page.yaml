@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It picks a look then builds it with careful detail.
 new_slug: premium-interface-designer
 name: Premium interface designer
-summary: Describe the page or app. Get a polished design with premium type,
-  depth and smooth motion, not a template look.
+summary: Describe your page or app. Get premium interface design code with refined type, soft depth and smooth motion, not a template look.
 job: design-work
 headline: Premium interface designer
-subhead: "A page or app that looks expensive: premium type, soft depth, careful
-  spacing and smooth motion, rather than a template look. Describe what you need
-  and get working code."
+subhead: "A page or app that looks expensive: premium type, soft depth, careful spacing and smooth motion, rather than a template look. Describe what you need and get working code."
 explain: |
   A page or app that looks expensive: premium type, soft depth, careful spacing and smooth motion, rather than a template look. Describe what you need and get working code.
 
@@ -18,6 +15,10 @@ when:
   - You want a portfolio with real polish.
   - A SaaS product page feels flat and generic.
   - You need a design review with the top fixes ranked.
+not_for:
+  - "You need brand strategy, conversion research or accessibility testing: use a person who does that work, as this only covers how it looks."
+  - "You are building a tight dashboard, a regulated product or a slow device: use a plain, simple layout, since heavy motion and blur will hurt."
+  - "You have no way to add fonts, icons or animation libraries to your project: ask a developer to set them up first."
 you_give:
   - Page or app description
   - Brand name and tone
@@ -29,8 +30,30 @@ you_get:
   - Motion and hover details
   - Ranked design fixes for a review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Describe your page or app. Add your brand name, tone and any fonts you can use.
+  - To review a design, paste its code or describe it, and ask for the top fixes.
+  - Check that your project has the fonts and icons the code names. Some fonts are paid, so ask for free ones if needed.
+  - Run the code in your project and open it in a browser to see the motion. Your AI cannot show this in plain chat.
+output_sample:
+  input:
+    - Your page or app description
+    - Your brand name and tone
+    - Fonts you can use (optional)
+    - Your existing design to review (optional)
+  prerequisites:
+    - An AI that can write code
+    - A project where you can add fonts, icons and animation libraries
+  output:
+    - name: Style and layout choice
+      contains: The look and layout the AI picked for your brief, and why it fits.
+    - name: Page code
+      contains: Working React, Tailwind or HTML code with nested cards, pill buttons and generous spacing.
+    - name: Type and colour choices
+      contains: The fonts, icon style and colours used, with notes on any font you must add.
+    - name: Motion details
+      contains: Scroll reveals, menu opening and button hover effects, using smooth custom curves.
+    - name: Mobile layout
+      contains: How the design folds into a single column on small screens.
+    - name: Ranked design fixes
+      contains: For a review, the biggest design problems in order, with an improved version.

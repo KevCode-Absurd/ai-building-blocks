@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes options, then picks between them.
 new_slug: youtube-title-thumbnail-check
 name: YouTube title and thumbnail checker
-summary: Give it your video idea. Get ten titles checked for length and repeats,
-  plus a thumbnail brief for the best.
+summary: Check your YouTube title and thumbnail together. Give it a video idea. Get ten titles checked for length, plus a thumbnail brief.
 job: grow-social
 headline: YouTube title and thumbnail checker
-subhead: Ten title ideas checked against hard limits, with a thumbnail brief for
-  the winner. The title and thumbnail are planned as one unit so they do not say
-  the same thing twice.
+subhead: Ten title ideas checked against hard limits, with a thumbnail brief for the winner. The title and thumbnail are planned as one unit so they do not say the same thing twice.
 explain: |
   Ten title ideas checked against hard limits, with a thumbnail brief for the winner. The title and thumbnail are planned as one unit so they do not say the same thing twice.
 
@@ -18,6 +15,10 @@ when:
   - You suspect your title and thumbnail repeat each other.
   - You want to see how a title looks cut off on mobile.
   - You need a thumbnail brief for a designer.
+not_for:
+  - You want to know why a live video is slow. Check your YouTube Studio numbers or ask a person who knows your channel.
+  - You have no video idea yet. Pick the topic first, then come back with a short summary.
+  - You want a script or a full video plan. Write that first, then use this to name it.
 you_give:
   - Your video idea or finished video summary
   - Draft titles or a draft thumbnail text (optional)
@@ -28,8 +29,25 @@ you_get:
   - A thumbnail brief with three words or fewer
   - "A closing question: ship it or change it"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code.
+  - Open Claude, ChatGPT or Gemini. Use one that can run Python code if you can.
+  - Paste the skill text into the chat.
+  - Add your video idea or a short summary. Add draft titles or voice notes if you have them.
+  - Read the top three titles and the issue on each. Check the thumbnail brief does not repeat the title.
+  - "Answer the closing question: ship it, or change it. Then make the video yourself."
+output_sample:
+  input:
+    - Your video idea or a short summary of the finished video
+    - Draft titles or draft thumbnail text (optional)
+    - Your voice notes, or three of your own videos (optional)
+  prerequisites:
+    - An AI that can run Python code, to check the titles with title.py
+    - Without Python, paste the steps into a chat and the AI checks by hand
+  output:
+    - name: Ten titles
+      contains: Ten title options, each checked for length, repeated words, vague wording and too many capital words.
+    - name: Top three
+      contains: The three best titles with a score and the exact issue on each.
+    - name: Thumbnail brief
+      contains: The expression, the framing, up to three words, and what the background must do to stay clear.
+    - name: Ship it or change it
+      contains: A closing question asking if you will publish this pairing or change it.

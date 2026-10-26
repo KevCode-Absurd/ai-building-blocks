@@ -1,6 +1,6 @@
 new_slug: contrarian-belief-tester
 name: "Contrarian belief tester"
-summary: "Paste your big idea. Get the true-but-unpopular belief behind it, who disagrees and the smallest market where it could win."
+summary: "Paste your big idea and see if it rests on a belief few people share. Get a contrarian belief test, plus the smallest market you could win first."
 job: test-an-idea
 thinking: high
 thinking_why: "It must tell a real insight from a popular opinion or a copy, which needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - Your idea sounds like "X, but better" and you can't say why it matters.
   - You want to know if you have a real insight or only an opinion.
   - You are choosing where to start and want a small market you can win.
+not_for:
+  - "You want to argue against a plan you already chose: use the Case-against writer."
+  - "You want a short line that says what you sell and for whom: write it with a positioning statement tool once your belief holds."
+  - "Your idea already has proven demand and you only need to sell it: skip this and talk to buyers directly."
 
 you_give:
   - Your big idea in a few sentences
@@ -33,6 +37,31 @@ how_to_use:
   - Paste your idea and the reasons you believe it. Say who disagrees, if anyone does.
   - Answer its questions about evidence honestly, and mark anything you are guessing.
   - Take the first market and the new description to your next conversation with a buyer or partner.
+output_sample:
+  input:
+    - Your big idea in a few sentences
+    - Why you think it will work
+    - Who disagrees with you (optional)
+    - Who is on your team and how long you have worked together (optional)
+  output:
+    - name: THE BELIEF
+      contains: Your idea as one sentence that starts with "I believe", which a sensible person could disagree with.
+    - name: WHO DISAGREES
+      contains: The groups who push back and their best reason.
+    - name: EVIDENCE AND HOPE
+      contains: "Two lists: what you have seen or tested, and what you only wish were true."
+    - name: NEW OR A COPY
+      contains: A plain verdict on whether the idea is new or a version of something that already works.
+    - name: THE FIRST MARKET
+      contains: The narrowest group of buyers you could lead first, and why you could win it.
+    - name: THE IDEA, WITHOUT A RIVAL
+      contains: Two or three sentences that say what it is and who it is for, naming no competitor.
+    - name: THE LAST-MOVER QUESTION
+      contains: What would need to be true for you to still lead the category in ten years.
+    - name: THE PEOPLE
+      contains: Who must hold the belief with you, how long they have worked together, and the gaps.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts that would sharpen the test, and one line for each check the result still fails.
 
 how_it_works:
   - title: States the belief

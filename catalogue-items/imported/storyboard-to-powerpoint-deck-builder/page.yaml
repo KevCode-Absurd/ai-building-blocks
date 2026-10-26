@@ -2,23 +2,53 @@ thinking: medium
 thinking_why: It follows a set method with a few checks.
 new_slug: storyboard-to-powerpoint-deck-builder
 name: Storyboard to PowerPoint deck builder
-summary: Share your content, sources and audience. Get a storyboard and
-  PowerPoint deck for a business talk, lesson or report.
+summary: Turn your content, sources and audience into a storyboard and an editable PowerPoint deck for a business talk, lesson or report.
 job: work-with-files
 headline: Storyboard to PowerPoint deck builder
-subhead: Build the story before choosing a style. This package turns a
-  structured storyboard into PowerPoint and includes checks for the outline and
-  file. It needs Node and npm packages. Render every slide and check the layout
-  before presenting.
+subhead: Give your AI your content, sources and audience. It plans the story as a storyboard, checks it, then builds an editable PowerPoint deck. You render each slide and check the layout before you present.
 when:
-  - You need an editable PowerPoint deck from a story or lesson outline.
+  - You have a report, lesson notes or research and need a slide deck from it.
+  - You must show where each fact came from on the slides.
+  - You want to plan the story before you pick a look.
+  - You need a deck you can edit in PowerPoint afterward.
+not_for:
+  - "You only need a talk with no slides: write notes or an outline by hand, as this skill always builds a PowerPoint file."
+  - "You can't run Node on your computer: ask a colleague or designer to build the deck, or make slides by hand in PowerPoint."
+  - "You want a style other than corporate-bright with no review: plan to check source notes and layout on every slide yourself."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Use launch-tools/USAGE.md for the complete sample storyboard and visible
-    source-note finalizer. The finalizer is checked for the corporate-bright
-    style.
-  - It works best when your AI can run Node and install the package dependencies
-    on your own machine.
+  - Use an AI that can run code on your computer, and install Node and the npm packages first.
+  - Download the skill folder and open it in your AI tool.
+  - Give your AI your source text, your audience, your goal and the filled-in brief.
+  - Ask it to check the storyboard, build the deck, then run the source-note finalizer.
+  - Render every slide and look at titles, chart units, source notes and wrapped text.
+  - Confirm the deck has the same number of slides as the storyboard before you present.
+output_sample:
+  input:
+    - Your source text, notes or documents
+    - Your audience and the goal of the talk
+    - The filled-in brief (templates/brief.template.md)
+    - Your chosen slide style (corporate-bright is the checked one)
+  prerequisites:
+    - An AI that can run code on your computer
+    - Node and its npm packages installed
+  output:
+    - name: Brief
+      contains: Your audience, goal and key message, written down before any slides are planned.
+    - name: Storyboard (JSON)
+      contains: One entry per slide, with its title, content and visible source note, checked before building.
+    - name: PowerPoint deck (.pptx)
+      contains: An editable presentation built from the storyboard in your chosen style.
+    - name: Source notes
+      contains: Visible source lines on slides, added by the finalizer for the corporate-bright style.
+    - name: Slide check
+      contains: A render of every slide and a check that the slide count matches the storyboard.
+you_give:
+  - Your source text, notes or documents
+  - Your audience and what you want them to do or know
+  - The brief, filled in from templates/brief.template.md
+  - Your slide style (optional, corporate-bright is the checked one)
+you_get:
+  - A written brief and a slide-by-slide storyboard
+  - An editable PowerPoint file
+  - Visible source notes on the slides
+  - A check that every slide was rendered and the slide count matches

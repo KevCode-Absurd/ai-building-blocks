@@ -22,6 +22,28 @@ For `pymc-extras` tasks, start with [feature selection and compatibility](refere
 then load only the relevant workflow reference. Prefer its supported algorithms
 to bespoke implementations; do not use an extension merely because it is installed.
 
+## Before you start
+
+This skill writes and runs Python code. Check these first and say what is missing:
+
+1. **A Python environment** where you can install and run `pymc` (version 6 or newer), `arviz` (1.0), and `pymc-extras`. `nutpie` is optional and speeds up sampling. In a chat window with no code running, you can get model code and a plan, but nothing is fitted and no results exist.
+2. **Your data**, as a spreadsheet or CSV with a known row meaning. If columns are unclear, ask what each one means. Never make up rows or columns.
+3. **The question**, in one sentence ("How much did the campaign lift weekly sales?"). If it is missing, ask once. If still missing, offer to profile the data and suggest two questions it could answer.
+
+State plainly which kind of claim the result supports: a prediction, an estimate of an effect in the data, or a causal claim. A model fit on observed data does not prove cause by itself.
+
+## What you hand back
+
+Return these, in this order. Mark any part you could not run as NOT RUN, with the reason.
+
+1. **The question and the model choice**, in two or three plain sentences, including what you assumed.
+2. **Model code** as a single `.py` file the user can rerun, with the random seed set.
+3. **Prior check**: what the model predicts before seeing the data, and whether that looks plausible.
+4. **Fit diagnostics**: a table of divergences, R-hat, and effective sample size for each main parameter, with a plain verdict (trust, trust with care, do not trust).
+5. **Estimates**: each main parameter with its interval (say the probability and type, for example 89% equal-tailed interval), and a one-line meaning in plain words.
+6. **Predictive check**: how well simulated data from the model matches the real data, and where it does not.
+7. **Answer and limits**: the answer to the question with its range, what the model cannot say, and the next change to try.
+
 ## Choose the primary task
 
 - Construct, fit or initialize a model: use `pymc-modeling`.

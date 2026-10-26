@@ -11,6 +11,8 @@ level: intermediate
 inputs:
   - type: codebase
     required: true
+  - type: code_change
+    required: false
 outputs:
   - type: test_report
     required: true

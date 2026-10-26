@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Wrong limits give wrong answers, so each one is checked.
 new_slug: optimization-model-builder
 name: Optimization model builder
-summary: Describe a choice with limits, like budget or capacity. Get a working
-  model and the best answer it finds.
+summary: Turn a choice with limits, like budget or capacity, into an optimization model. Get runnable Python and the best answer it finds.
 job: plan-supply-chain
 headline: Optimization model builder
-subhead: Turn a decision with limits into a working model and the best answer it
-  can find. Think of picking production amounts, routes or stock levels within a
-  budget or capacity.
+subhead: Turn a decision with limits into a working model and the best answer it can find. Think of picking production amounts, routes or stock levels within a budget or capacity.
 explain: |
   Turn a decision with limits into a working model and the best answer it can find. Think of picking production amounts, routes or stock levels within a budget or capacity.
 
@@ -18,6 +15,10 @@ when:
   - You want the cheapest shipping plan across several warehouses.
   - You have a budget cap and many ways to spend it.
   - Spreadsheet trial and error is no longer good enough.
+not_for:
+  - "You only split one budget across a few lines: use a spreadsheet with a simple formula."
+  - "You need vehicle routes or delivery stops: use a route planning tool or a person who plans routes, since no sibling item covers it yet."
+  - "You need to design a whole network of plants and warehouses: ask an operations analyst, since no sibling item covers it yet."
 you_give:
   - The decision you need to make
   - What to minimise or maximise
@@ -30,8 +31,30 @@ you_get:
   - The best solution found
   - Notes on which limits bind
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code (Python).
+  - Open Claude, ChatGPT or Gemini. Choose a mode that can run Python code.
+  - Paste the skill text into the chat. Or upload the skill folder if your AI accepts files.
+  - Describe your decision, your goal and your limits in plain words. Say which limits are firm.
+  - Paste or upload your data tables. Say which numbers you trust.
+  - Read the answer. Check each limit against your real rules, then rerun with changed numbers to test it.
+output_sample:
+  input:
+    - The decision you need to make
+    - What to minimise or maximise
+    - Your limits, such as budget or capacity
+    - Your data tables, such as costs, demand and capacity
+    - Solver you can use (optional)
+  prerequisites:
+    - An AI that can run Python code, so it can solve the model and check the answer
+  output:
+    - name: Executive Summary
+      contains: The problem, the best solution found, key results and what changes if you act on it.
+    - name: Problem Formulation
+      contains: The decisions, the goal, the limits and where each piece of data came from.
+    - name: Solution Quality
+      contains: A table with the objective value, optimality gap, solve time, model size and solver used.
+    - name: Optimal Solution
+      contains: The value of each decision, how much of each resource is used, and which limits are binding.
+    - name: Sensitivity Analysis
+      contains: How far key numbers can move, shadow prices, reduced costs and what-if scenarios.
+    - name: Implementation Plan
+      contains: Recommended actions, expected improvements, risks and how to reduce them, and a timeline.

@@ -1,6 +1,6 @@
 new_slug: partner-deal-terms-writer
 name: "Franchise and reseller terms writer"
-summary: "Paste your offer and the partner's profit sum. Get a one-page term sheet for people who run your business: duties, fees, exits."
+summary: "Write a franchise or reseller term sheet from your offer and the partner's profit sum: duties, fees, standards and exits, ready for a lawyer."
 job: sell-and-negotiate
 thinking: high
 thinking_why: "Terms have to line up with the partner's profit sum, protect your name and stay fair, and a gap here is costly. Give it your strongest model, then have a lawyer read the result."
@@ -17,6 +17,10 @@ when:
   - You are about to offer a franchise, reseller, licence or distribution deal.
   - A handshake deal has gone wrong, or may, and you want it written down clearly.
   - You want a partner to run your business in a new place under your name.
+not_for:
+  - "You are hiring one employee or a sales agent paid on commission: they need different terms, so ask a lawyer for a plain employment or agent contract."
+  - "You have not checked whether the partner can earn a fair profit: use the Partner profit tester first, then come back here."
+  - "You need a signed contract: this writes a term sheet only, so take it to a lawyer who knows franchise or agency law in your country."
 
 you_give:
   - What you offer the partner and the fees you plan to charge
@@ -35,6 +39,33 @@ how_to_use:
   - Add your standards sheet if you have one, so the terms point to it.
   - Read the lawyer list at the end. Take the term sheet and that list to a lawyer before you sign anything.
   - Give the term sheet to the partner as your first offer, and note what they change.
+output_sample:
+  input:
+    - Your offer to the partner and the fees you plan to charge
+    - The partner's profit sum, or the result from the Partner profit tester
+    - Your standards sheet or manual (optional)
+    - The country where the partner will work (optional)
+  prerequisites:
+    - A profit sum for the partner. Without one, the skill stops and tells you to run the Partner profit tester first.
+  output:
+    - name: The deal in two lines
+      contains: Who the deal is with, what it covers, where, and for how long.
+    - name: Who gives what
+      contains: "Two columns: what you give the partner and what the partner gives you."
+    - name: Standards
+      contains: What is fixed everywhere, what the partner may change locally, and how a local idea becomes a standard.
+    - name: Fees and required purchases
+      contains: Every fee in one table, with when it is due and whether it matches the profit sum.
+    - name: Changes
+      contains: "One rule: any change to the deal, standards or territory counts only if both sides sign it."
+    - name: Exits and review
+      contains: How each side can leave, what happens to stock, equipment and the name, and the first review date.
+    - name: For a lawyer to check
+      contains: Points a lawyer in your country must check before this becomes a contract.
+    - name: Missing
+      contains: Terms you still need to decide.
+    - name: Checks missed
+      contains: One line for each of the skill's own checks that failed, or none.
 
 how_it_works:
   - title: Sets the unit

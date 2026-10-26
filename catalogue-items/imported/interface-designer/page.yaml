@@ -2,36 +2,104 @@ thinking: medium
 thinking_why: It picks a look first, then builds it with a few checks.
 new_slug: interface-designer
 name: Interface designer
-summary: Describe the page or app. Get a built interface with a clear look that
-  does not feel like a template.
+summary: Describe your page or app and get a built interface with its own look, picked for your subject and audience, not a stock template.
 job: build-websites
 headline: Interface designer
-subhead: A built page or app with its own clear look, rather than the same
-  template everyone ships. The skill works like a design lead whose clients each
-  get a distinct identity.
+subhead: Tell it what the page is for and who will use it. It first writes a short design plan with colours, fonts and layout, then checks the plan against your brief. You get the built page or app, plus a list of any placeholder copy to replace.
 explain: |
-  A built page or app with its own clear look, rather than the same template everyone ships. The skill works like a design lead whose clients each get a distinct identity.
+  Many AI-built pages look the same: a cream background, a serif heading, identical rounded cards and a number-and-gradient hero. This skill is built to avoid that. It acts as a design lead whose clients each get a look nobody mistakes for someone else's.
 
-  It first pins down the subject, asking you if the brief is unclear, and designs from that world. The top of the page opens with the most characteristic thing in the subject's field. It picks type deliberately, keeps lines under about eighty characters, and avoids stock tricks such as highlighting one word in a headline or labelling everything in capitals. Structure like borders and numbers must carry meaning. Motion is rare and planned. It also writes real copy when the brief has none.
+  It starts with your subject. A toy for children and a dashboard for analysts should look nothing alike, so it pulls its choices from your field and audience. If the brief is thin, it proposes a subject and asks you to confirm. It opens the page with the most characteristic thing in your world, picks fonts on purpose and keeps lines short.
+
+  It plans first, then checks the plan against your brief. If any part looks like the default it would use for any similar page, it changes that part and tells you why. Only then does it write the code. Copy it writes is placeholder text, to replace before you publish.
 when:
   - You need a landing page that does not look like a template.
   - Your current design feels generic and forgettable.
-  - The brief has no copy and you need believable text.
-  - You want a strong first screen for a specific subject.
-  - You need guidance on choosing fonts that fit the topic.
+  - Your brief has no copy and you need believable placeholder text to test the look.
+  - You want a strong first screen for a specific subject, such as a bakery, a clinic or a course.
+  - You need fonts that fit the topic and not the usual defaults.
+not_for:
+  - "You already have a design system or component library: build in it, or use the Interface upgrader to fix only the generic parts."
+  - "You want a calm, Notion-like document look: use the Editorial web designer, which follows a fixed rulebook for that style."
+  - "You only need spacing, type or layout slips fixed in existing code: use the Interface polish checker."
 you_give:
   - What the page or app is for
-  - Your audience
-  - Any content, brand colours or fonts (optional)
-  - Your framework (optional)
+  - Who will use it
+  - Your real headings, product names and prices (optional)
+  - Brand colours or fonts (optional)
+  - The framework you use, such as React (optional)
 you_get:
-  - A built interface
-  - A clear type and layout system
-  - Real placeholder copy
-  - A distinct visual direction
+  - A design plan with colours, fonts, layout and principles
+  - A built page or app in your framework, or plain HTML and CSS
+  - A list of every placeholder line to replace
+  - A note of which checks were run, such as phone width and keyboard focus
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. Claude Code, which can run code and open a browser, gives the best result.
+  - Say what the page is for and who will use it. Paste any real text, brand colours and fonts.
+  - Read the design plan first. If it feels generic, say what is wrong and ask for a new plan before it builds.
+  - Copy the code into your project and open it in a browser. Check it on a phone.
+  - Replace every placeholder line with your real words. Do not publish made-up testimonials or numbers.
+output_sample:
+  input:
+    - What the page or app is for
+    - Who will use it
+    - Your real wording, brand colours and fonts (optional)
+    - Your framework (optional)
+  prerequisites:
+    - A place to run the code, such as a code editor and a browser
+  output:
+    - name: Design plan
+      contains: Four to six named colours with hex values, the fonts and their roles, a layout sketch and the guiding principles.
+    - name: Built interface
+      contains: The page or app code, with a type scale and layout system, ready to open in a browser.
+    - name: Placeholder list
+      contains: Every line of copy the AI wrote because your brief had none, marked so you can replace it.
+    - name: Checks
+      contains: Whether phone width, keyboard focus and reduced motion were tested, or marked as not run.
+how_it_works:
+  - title: Pin down the subject
+    text: Confirms what the page is, who uses it and its main job. It proposes one if your brief leaves it out.
+  - title: Draw from your field
+    text: Takes its look from your subject's materials, words and habits, not from a default style.
+  - title: Write the plan
+    text: Lists the colours, fonts, layout and principles in a short token set with a wireframe.
+  - title: Check against the brief
+    text: Tests whether any part would suit any similar page. It rewrites those parts and says what changed.
+  - title: Build
+    text: Writes the code to the revised plan, with one memorable element and quiet surroundings.
+  - title: Review and hand back
+    text: Checks phone layout, keyboard focus and motion, then lists placeholder copy and the next step.
+output_shape: |-
+  DESIGN PLAN
+    Colours: <name> <hex> | <name> <hex> | ... (4 to 6)
+    Type: <heading face and role> | <body face and role>
+    Layout: <one-sentence concept>
+    <ASCII wireframe>
+    Principles: <what makes this page its own>
+    Changed after review: <part> -> <why>
+
+  BUILT INTERFACE
+    <files or components>
+
+  PLACEHOLDER LIST
+    <line of copy> | <where it appears>
+
+  CHECKS
+    <phone width | keyboard focus | reduced motion>: <run | not run>
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Can write the files, open a browser and take screenshots to critique its own work.
+    - name: Claude
+      why: Follows long design rules well and shows the plan before the code.
+  inputs:
+    - Two or three sites you like, and one you do not
+    - Your real product photos or a logo
+    - Your customers' own words, for copy that is not made up
+terms:
+  - term: Design token
+    meaning: A named choice, such as a colour or font, that the whole page reuses.
+  - term: Type scale
+    meaning: The set of text sizes a page uses, from small print to the big heading.
+  - term: Wireframe
+    meaning: A rough sketch of where things sit on the page, before any colour or detail.

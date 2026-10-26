@@ -2,17 +2,105 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-data-breach-blast-radius
 name: Sensitive data exposure mapper
-summary: Share your system design or code. Get sensitive data paths, likely
-  exposure and fixes ranked by impact.
+summary: Find out what customer data a breach could expose. Get a data inventory, a flow map, the top exposure points and fixes ranked by impact.
 job: secure-code
 headline: Sensitive data exposure mapper
-subhead: Share your system design or code. Get sensitive data paths, likely
-  exposure and fixes ranked by impact. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Give it your code, database schema or API design. It lists every place you hold personal, health, payment or login data, traces where it flows and where it could leak, and ranks the worst exposure points. You get a report with a data flow map and a fix list.
+explain: |
+  Most teams only ask "how bad would a breach be?" after one happens. This sensitive data exposure mapper asks it earlier. It reads your code and schema, finds every field that holds sensitive data, and shows how that data moves from sign-up to storage, to third parties and out through logs and exports.
+
+  It sorts each field into five tiers, from government IDs and health records at the top to public content at the bottom. It then ranks the exposure points, such as an open endpoint, a log that prints emails, or a storage bucket anyone can read. It also checks which privacy laws are likely to apply, such as GDPR, CCPA or HIPAA, from clues in your code.
+
+  The scores and multipliers are planning aids, and the report labels them that way. Fine ranges come from the skill's own reference files, so check them against the current law and with your lawyer. It never changes your code.
+when:
+  - You are about to get a security review or penetration test and want to know where your sensitive data sits.
+  - You are building or checking a system that holds customer, health or payment data.
+  - Your boss asks "what is our exposure?" and you need a clear answer on paper.
+  - You are filling in a data protection impact assessment and need the data inventory.
+not_for:
+  - "A breach is happening now. Follow your incident response plan and call your lawyer. The Incident Responder agent can help you run it."
+  - "You want a general bug hunt in your code: use the Code security reviewer or the Code security scanner."
+  - You need legal advice on fines or notice rules. The report gives pointers only. Take it to your lawyer or data protection officer.
+you_give:
+  - Your code folder, database schema or API definitions
+  - The area to focus on (optional)
+  - Rough user count and the countries you serve (optional)
+you_get:
+  - A table of every sensitive field, its tier, where it lives and whether it is encrypted or logged
+  - A data flow map from sign-up to storage and out to third parties
+  - The top five exposure points, ranked
+  - A table of which privacy laws likely apply and the likely cost range, labelled as estimates
+  - A fix list ordered by impact for the effort
+  - Three actions to start this week
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Paste this skill into an AI that can open your project, such as Claude Code. In a plain chat, paste your database schema, models and API definitions instead.
+  - Say which folder or area to cover. Give your rough user count and countries if you know them. Anything you leave out is marked "assumed".
+  - If your AI cannot draw diagrams, it gives the flow map as Mermaid code. Paste it into a Mermaid viewer to see the picture.
+  - Read the executive summary and the top exposure points first. Check each one against your real system. The scores are guides, not measurements.
+  - Take the regulatory table to your lawyer or data protection officer before you rely on it. Then work through the fix list and run the mapper again.
+how_it_works:
+  - title: Scan your project
+    text: It finds your language, database layer, API layer and cloud setup files.
+  - title: List sensitive data
+    text: It records each sensitive field with its tier, source and whether it is encrypted.
+  - title: Trace the data flow
+    text: It follows data in, through processing and storage, and out to third parties and logs.
+  - title: Score the exposure
+    text: It ranks each exposure point by tier, likelihood and users affected, with assumptions stated.
+  - title: Estimate the impact
+    text: It matches likely privacy laws and gives fine and cost ranges, labelled as estimates.
+  - title: Write the report and roadmap
+    text: It builds the report and a fix list ordered by impact for the effort.
+output_shape: |
+  Data Breach Blast Radius Report
+  Repository: <name> | Scope: <area> | Languages: <list>
+
+  Executive summary: <3 short paragraphs for a non-technical reader>
+  Sensitive data inventory
+  | # | Field | Source | Tier | Encrypted? | Logged? | Exposed outside? |
+  Data flow map: <diagram or Mermaid code>
+  Top 5 exposure points: <ranked, with score and assumptions>
+  Regulatory table: <law, fine range (from the skill's reference files), likely cost (estimate)>
+  Hardening roadmap: <fix, why, effort, impact, quick win>
+  Next steps: <3 actions with owners>
+output_sample:
+  input:
+    - Your code folder, schema or API definitions
+    - The area to focus on (optional)
+    - Rough user count and countries (optional)
+  prerequisites:
+    - An AI that can open your project files, or pasted schemas and models
+  output:
+    - name: Executive summary
+      contains: Three plain paragraphs on what data you hold, the worst exposure and the first fix.
+    - name: Sensitive data inventory
+      contains: Each sensitive field with its tier, source file, encryption and logging status.
+    - name: Data flow map
+      contains: A diagram of how sensitive data moves in, through storage and out, with red and orange risk points.
+    - name: Top 5 exposure points
+      contains: The five most dangerous leak routes, ranked, with the assumptions behind each score.
+    - name: Regulatory table
+      contains: Likely privacy laws, fine ranges from the skill's reference files, and cost estimates marked as estimates.
+    - name: Hardening roadmap
+      contains: Fixes ordered by impact for the effort, with quick wins marked.
+    - name: Next steps
+      contains: Three actions to start this week and who should own each.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Opens your whole project and reads schemas, logs and config files itself.
+    - name: Mermaid Live Editor
+      why: Turns the flow map code into a picture if your AI cannot draw it.
+  inputs:
+    - A list of third parties that receive your data
+    - Your current privacy policy
+    - Your user count by country
+terms:
+  - term: Blast radius
+    meaning: How much damage one leak could do, and to how many people.
+  - term: PII
+    meaning: Personal data that can point to one person, like a name or email.
+  - term: DPIA
+    meaning: A written check of privacy risk, required before some high-risk uses of data.
+  - term: Exposure point
+    meaning: A place where sensitive data could reach someone who should not see it.

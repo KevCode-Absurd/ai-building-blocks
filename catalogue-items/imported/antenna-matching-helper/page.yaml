@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Matching needs careful design trade-offs.
 new_slug: antenna-matching-helper
 name: Antenna matching helper
-summary: Give it an antenna. Get a matching network and system model that
-  connect it to your RF chain.
+summary: Match your antenna to your radio and cut reflected power. Get an antenna matching network, a reusable antenna model and coverage checks in MATLAB.
 job: build-software
 headline: Antenna matching helper
-subhead: An antenna that does not match your radio wastes power and sends signal
-  back. This skill builds the matching network and the system model that tie
-  your antenna to the rest of your radio chain, so the signal actually gets out.
+subhead: An antenna that does not match your radio wastes power and sends signal back. This skill builds the matching network and the system model that tie your antenna to the rest of your radio chain, so the signal actually gets out.
 explain: |
   An antenna that does not match your radio wastes power and sends signal back. This skill builds the matching network and the system model that tie your antenna to the rest of your radio chain, so the signal actually gets out.
 
@@ -18,6 +15,10 @@ when:
   - You have measured pattern data and want a model you can reuse.
   - You are planning where to place transmitters for coverage.
   - You must show an RF exposure check for a wearable or implant.
+not_for:
+  - "You need to design the antenna shape or an antenna array: use the matlab-design-antenna skill, which this skill does not cover."
+  - "You work with reflector antennas, reflectarrays, installed antennas or radar cross section: use the matlab-analyze-antenna-structures skill."
+  - "You have no MATLAB with the Antenna and RF Toolboxes: ask an RF engineer, or use a free matching calculator for a quick L network."
 you_give:
   - Antenna design or measured data
   - Target impedance and frequency
@@ -29,9 +30,31 @@ you_get:
   - Coverage and link budget results
   - SAR estimate (optional)
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Antenna Toolbox and RF
-    Toolbox.
+  - Check first that you have MATLAB with the Antenna Toolbox and RF Toolbox. Both are paid tools.
+  - Gather your antenna design or data file, your target impedance and your frequency or band.
+  - Open an AI that can run MATLAB code. Paste the skill and your details.
+  - Ask for a matching network first. Check the return loss and Smith chart plots it makes.
+  - Then ask for a measured antenna model, coverage results or a SAR estimate if you need them.
+  - Have an RF expert review any SAR result before you use it for compliance.
+output_sample:
+  input:
+    - Your antenna design, or measured or simulated antenna data
+    - Your target impedance (often 50 ohms) and frequency or band
+    - Site or link details such as transmitter spots and power (optional)
+    - Exposure limit and input power for a SAR check (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB with the Antenna Toolbox and RF Toolbox, which are paid products
+  output:
+    - name: Matching network
+      contains: Ranked L, Pi or Tee network candidates, with two and three element versions compared for bandwidth.
+    - name: Return loss and Smith chart plots
+      contains: Plots that show how well the antenna matches before and after the network.
+    - name: RF circuit export
+      contains: The chosen network as an RF Toolbox circuit, or in distributed form using the Richards transformation.
+    - name: Measured antenna model
+      contains: A reusable antenna model built from your pattern data, simulation or CST and HFSS files.
+    - name: Coverage and link budget
+      contains: Signal strength, path loss, interference and link margin for your transmitter and receiver sites.
+    - name: SAR estimate
+      contains: Absorbed power in tissue, normalized to a known input power and checked with a power balance test.

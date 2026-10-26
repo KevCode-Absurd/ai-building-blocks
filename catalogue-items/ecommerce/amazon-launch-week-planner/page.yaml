@@ -1,6 +1,6 @@
 new_slug: amazon-launch-week-planner
 name: "Amazon launch week planner"
-summary: "Give it your product and audience. Get a pre-launch and launch-day plan for early sales and reviews."
+summary: "Plan your Amazon launch week with a dated pre-launch plan, a launch-day run sheet, a discount with its cost, and honest review steps."
 job: sell-on-amazon
 thinking: medium
 thinking_why: "It builds a dated plan from your audience and cash, and must keep every step inside Amazon's rules."
@@ -17,6 +17,10 @@ when:
   - You have a product with a launch date at least a few weeks away.
   - You have some audience, an email list or a content habit and want to turn it into launch sales.
   - You plan a launch discount and want to know what it costs and when to end it.
+not_for:
+  - "You launch next week and have no audience: use a short plan, or write your listing first with a person or tool you trust."
+  - "You want bought, paid-for or swapped reviews: this tool will not plan them, because they break Amazon's rules and risk your account."
+  - "You only need ad setup or stock quantities: use Seller Central and your own sales numbers, or ask a person who runs Amazon ads."
 
 you_give:
   - Your product, price and launch date
@@ -33,6 +37,27 @@ how_to_use:
   - Say how much cash you can put into a discount, samples and ads.
   - Follow the plan in order. Check that stock will cover the spike before you set the date.
   - After launch, record sales, rating and rank, so the next launch starts from real numbers.
+output_sample:
+  input:
+    - Your product, price and launch date
+    - Your audience, email list and channels (strongly advised)
+    - Your unit profit and cash for a discount, samples and ads (strongly advised)
+    - Your stock on hand (optional)
+  output:
+    - name: FIT CHECK
+      contains: How much time you have, how big your audience is, and whether you get a full or short plan.
+    - name: PRE-LAUNCH PLAN
+      contains: A week by week task list for 8 to 12 weeks, each task with a done-when line.
+    - name: LAUNCH-DAY RUN SHEET
+      contains: The actions for launch day in order, including setting the offer start date and emailing your list.
+    - name: OFFER AND ITS COST
+      contains: Launch price, normal price, unit limit, what the discount costs you, and how the price rises later.
+    - name: REVIEW PLAN
+      contains: Honest review requests and Vine once your brand is registered, all within Amazon's rules.
+    - name: STOCK CHECK
+      contains: The units you need for the first spike against the units you have.
+    - name: MISSING and CHECKS MISSED
+      contains: Any gaps in what you gave, and any checks the plan failed.
 
 how_it_works:
   - title: Checks the time

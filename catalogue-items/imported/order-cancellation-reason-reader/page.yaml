@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Reasons are logged by hand and can be messy.
 new_slug: order-cancellation-reason-reader
 name: Order cancellation reason reader
-summary: Get your cancellation rate over time and why orders were cancelled,
-  such as fraud, stock or declined payment.
+summary: Find your order cancellation rate over time and see why orders were cancelled, such as fraud, stock or declined payment, in your Shopify store.
 job: run-your-store
 headline: Order cancellation reason reader
-subhead: "Know how many orders you lose and why. You get a cancellation rate
-  over time, split by reason: customer request, fraud, stock problems, declined
-  payment, staff or other."
+subhead: "Know how many orders you lose and why. You get a cancellation rate over time, split by reason: customer request, fraud, stock problems, declined payment, staff or other."
 explain: |
   Know how many orders you lose and why. You get a cancellation rate over time, split by reason: customer request, fraud, stock problems, declined payment, staff or other.
 
@@ -18,6 +15,10 @@ when:
   - You suspect stock counts are wrong in your store.
   - You want to see if fraud attempts are increasing.
   - You report monthly on order health to your team.
+not_for:
+  - "You want to know why shoppers leave before paying: use your Shopify checkout abandonment report."
+  - "You want to study refunds on orders that were paid and sent: use your Shopify refund and returns reports."
+  - "You want to fix stock counts or stop fraud: use this to spot the problem, then check your inventory or fraud settings in Shopify admin."
 you_give:
   - Store domain
   - How many days to look back
@@ -30,8 +31,32 @@ you_get:
   - Spikes and shifts flagged
   - A readable table or JSON
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Check you have an AI that can run commands, like Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Sign in to your store with Shopify CLI and give it read access to orders.
+  - Open the skill in your AI and give it your store domain. Add how many days to look back if you want something other than 30.
+  - Add a grouping, a minimum order value or one reason if you want a narrower view. All three are optional.
+  - Read the summary first, then check the flagged weeks. Compare the rates with your own past numbers, not a general figure.
+  - Remember that reasons are only as good as the reason staff picked when they cancelled the order. The skill only reads data and changes nothing.
+output_sample:
+  input:
+    - Your store domain
+    - How many days to look back (optional, 30 by default)
+    - Day, week or month grouping (optional)
+    - Minimum order value (optional)
+    - One cancel reason to focus on (optional)
+  prerequisites:
+    - An AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify CLI signed in to your store with read access to orders
+  output:
+    - name: Start banner
+      contains: Shows the skill name, your store and the start time before the work begins.
+    - name: Step log
+      contains: One line per step with what was asked and how many orders came back.
+    - name: Human summary
+      contains: Total orders, cancelled orders with percent, lost revenue, and a count and percent for each cancel reason.
+    - name: Anomaly buckets
+      contains: Days, weeks or months where one reason ran above twice its recent average, with the rate for each.
+    - name: cancellation_analysis CSV
+      contains: One row per time bucket with order counts, rate, a column for each reason, lost revenue and currency.
+    - name: JSON summary (optional)
+      contains: The same totals, reasons and anomalies in a format other tools can read, if you ask for json.

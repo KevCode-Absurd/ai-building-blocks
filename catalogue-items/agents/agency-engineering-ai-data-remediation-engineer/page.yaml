@@ -1,0 +1,151 @@
+name: Messy data cleanup agent
+summary: Fix messy data with a few tested rules, not row-by-row. You get fix formulas, a change log and a review list of risky rows.
+headline: Messy data cleanup agent
+subhead: Describe your table and paste a sample of the broken rows. The agent groups them into a few pattern families and writes one fix rule for each, then tests every rule on your sample. You get the rules, a before and after check, a change log and a list of rows it will not touch.
+job: track-numbers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Broken data looks like a mountain of separate problems. It usually is not.
+  Thousands of bad rows are often a handful of pattern families, such as dates
+  typed three ways, phone numbers with stray text or names with odd characters.
+  This messy data cleanup agent finds those families and fixes the pattern, not
+  the row. This approach is sometimes called data remediation.
+
+
+  Its main rule is that the AI writes the fix rule and you run it. The rule is
+  a short formula, SQL line or one-line Python function that you can read,
+  test and undo. The AI does not edit your data by hand, so no row changes
+  without a receipt. It tests each rule on your sample, puts any row it cannot
+  fix with confidence into a review list, and checks that fixed rows plus
+  review rows equal the rows you started with.
+
+
+  In a chat, it works on a sample, not your whole file. You run the rules in
+  Excel, Google Sheets, SQL or Python, on a copy of the data. Do not paste real
+  personal or health data into a cloud AI. Swap in made-up values with the same
+  shape. This is a role profile from Agency Agents, shared under MIT. The
+  download includes the original profile, its licence and a setup guide. The
+  profile's engine, stack and success targets describe a system built to run
+  locally. They are not results measured by AI Blocks.
+when:
+  - A column holds the same thing written many ways, such as dates, phone numbers, country names or currency.
+  - An import left thousands of rows with errors, and fixing them by hand would take days.
+  - You need a record of every change, so you can explain to a boss or an auditor what was altered.
+  - You must clean data you cannot send to a cloud service, and want fix rules you can run on your own machine.
+not_for:
+  - "You only want to know what is wrong with a file, not to fix it: use the Dataset profiler or the Data quality scorecard maker."
+  - "You want a file cleaned over several passes until it passes your checks: use the Data file clean-up loop."
+  - "You need to design a data pipeline, warehouse or table layout: use the Data Engineer agent."
+  - "You want to apply fixes straight to live data. Run every rule on a copy first, and keep a backup."
+you_give:
+  - What the table is, and what the column in question should hold
+  - 20 to 50 sample rows that show the broken values, with private details swapped for made-up ones
+  - How many bad rows there are in total, if you know
+  - The format you want, such as dates as YYYY-MM-DD
+  - The column that uniquely names each row, such as an order number
+  - Rules you already apply, so the agent skips what is fixed (optional)
+you_get:
+  - A list of pattern families, each with a name, example rows and a rough count
+  - One fix rule per family, as an Excel formula, SQL line or one-line Python function
+  - A before and after table that shows each rule working on your sample
+  - A review list of rows and families the agent will not auto-fix, with the reason
+  - A change log layout and a row count check, so no row goes missing
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Take 20 to 50 broken rows from your data. Replace names, emails and ID numbers with made-up values that keep the same shape.
+  - Paste them with the column name, the target format and the row key. Say which tool you will run the rules in, such as Excel, SQL or Python.
+  - Read the families first. If two families look like one, or one looks like two, say so and ask it to regroup.
+  - Run each rule on a copy of your data. Count the rows before and after, and check that fixed rows plus review rows equal your starting count.
+  - Spot check 10 fixed rows against the original. Only then apply the rule to your live data.
+how_it_works:
+  - title: Set the target
+    text: It confirms the column, the format you want and the row key, and asks once for what is missing.
+  - title: Group the broken rows
+    text: It sorts your sample into pattern families by the shape of the error, so one rule can cover many rows.
+  - title: Write one rule per family
+    text: It writes a single short formula or function for each family. It never writes code that imports, runs commands or reads files.
+  - title: Test on the sample
+    text: It runs each rule on your sample rows and shows before and after. A rule that breaks any row is rejected.
+  - title: Set rows aside
+    text: Rows it cannot fix with confidence, and rows with different keys that look alike, go to a review list. It never merges two records.
+  - title: Prove nothing was lost
+    text: It sets out the change log columns and the check that source rows equal fixed rows plus review rows.
+output_shape: |-
+  PATTERN FAMILIES
+    <family name> | <what is wrong> | <3 to 5 example rows> | <rough count or MISSING>
+
+  FIX RULES
+    <family name> | <rule as formula, SQL or one-line function> | <confidence 0 to 1, the AI's own estimate> | <what it assumes>
+
+  BEFORE AND AFTER
+    <row key> | <old value> | <new value> | <rule used> | <pass or fail>
+
+  REVIEW LIST
+    <row or family> | <why a person must check it>
+
+  CHANGE LOG AND COUNT CHECK
+    Log columns <row key, old value, new value, rule, confidence, date>
+    Source rows <n> = fixed rows <n> + review rows <n>
+
+  OPEN CHECKS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - A description of your table and the column that is broken
+    - 20 to 50 sample rows with the bad values, with private details swapped out
+    - The format you want and the column that names each row
+    - The tool you will run the rules in, such as Excel, SQL or Python
+  prerequisites:
+    - A copy of your data and a backup, so you can run the rules safely
+    - An AI you can paste a table into, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Pattern families
+      contains: Your broken rows sorted into a few groups, each with examples.
+    - name: Fix rules
+      contains: One short formula, SQL line or function per family, with the assumptions behind it.
+    - name: Before and after
+      contains: Each rule run on your sample rows, so you can see it work or fail.
+    - name: Review list
+      contains: Rows and families a person must check, with the reason for each.
+    - name: Change log and count check
+      contains: The columns to record for every change, and the check that no row went missing.
+    - name: Open checks
+      contains: What to confirm on your real data before you run the rules for real.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A longer chat lets it keep your target format and key in view while it tests each rule.
+    - name: Excel, Google Sheets, SQL or Python
+      why: These run the rules on the full file. The chat only tests them on your sample.
+  inputs:
+    - A list of the valid values for the column, such as the country names you accept.
+    - Rows that you fixed by hand before, with the answer you chose.
+    - A note on which fields are private, so they stay out of the chat.
+terms:
+  - term: Pattern family
+    meaning: A group of broken rows that went wrong in the same way, so one rule can fix them all.
+  - term: Fix rule
+    meaning: A short formula or one-line function that turns a broken value into a good one.
+  - term: Review list
+    meaning: Rows a person checks because the AI is not sure enough to change them.
+  - term: Change log
+    meaning: A record of every change with the old value, new value and rule used.
+  - term: Staging copy
+    meaning: A separate copy of the table where fixes land first, before they touch the real one.
+tweaks:
+  - what: Scope
+    how: Fix one column at a time, so each rule stays short and easy to check.
+  - what: Strictness
+    how: Say what confidence is too low to change, such as below 0.75 as the profile does, and send those rows to review.
+  - what: Tool
+    how: Name where you will run the rules, so the rule comes as an Excel formula, SQL or Python.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

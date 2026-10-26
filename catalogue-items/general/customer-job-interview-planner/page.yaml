@@ -1,6 +1,6 @@
 new_slug: customer-job-interview-planner
 name: "Customer job interview planner"
-summary: "Describe what you sell. Get a plan to watch buyers, ask them on the way out and interview people who switched."
+summary: "Plan a customer job interview: watch buyers, ask them on the way out, and talk to people who switched. You get questions and a log sheet."
 job: understand-customers
 thinking: high
 thinking_why: "It judges what to observe and ask so that answers describe a situation, and a wrong frame hides the real job."
@@ -17,6 +17,10 @@ when:
   - Your buyer profiles do not explain who buys or why.
   - You want ideas for a product or message and do not know what job it does.
   - You have lost buyers to something you did not see as a rival.
+not_for:
+  - "You need pricing or packaging research: use a survey or a review of your sales calls instead."
+  - "You want the exact wording of each interview question: use the Customer interview question writer."
+  - "You want a full timeline script for recent buyers: use the Buying story interview guide."
 
 you_give:
   - What you sell and when or where people buy it
@@ -35,6 +39,32 @@ how_to_use:
   - State what you want to learn, for example why people choose you.
   - Run the observation day and the interviews it plans.
   - Bring the notes back and ask it to write the jobs as situations.
+output_sample:
+  input:
+    - What you sell and when or where people buy it
+    - What you want to learn, such as why people choose you or switch
+    - Product facts (optional)
+    - Reviews or notes, word for word (optional)
+  prerequisites:
+    - A way to watch buyers or reach people who switched to you in the last year
+    - A notebook or voice recorder for the interviews
+  output:
+    - name: Frame
+      contains: Why profiles will not answer your question, and your question restated as a situation.
+    - name: Observation day
+      contains: Where to be, for how long, a log sheet, the busiest slot and the odd one out.
+    - name: Exit questions
+      contains: Three to five short questions for buyers as they leave, with what each answer shows.
+    - name: Who to interview
+      contains: Who switched to you in the last six to twelve months, how many to talk to, how to find them.
+    - name: Switch interview questions
+      contains: Questions on the old way, what made them change, what changed after, and what else they considered.
+    - name: Write the job as
+      contains: A template to write each job as a situation, plus how to check it against your notes.
+    - name: Missing
+      contains: Facts you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: Sets the frame

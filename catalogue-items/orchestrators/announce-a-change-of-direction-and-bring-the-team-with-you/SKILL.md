@@ -44,10 +44,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Write the memo.** Use the skill `top-priority-shift-memo-writer`. A short memo that names the shift, the reason, what stops and what every team does differently, in the manner of Bill Gates's 1995 Internet Tidal Wave memo.
-2. **Plan the rollout.** Use the skill `change-rollout-planner`. Give it the memo. Who hears first, in what setting, how far apart, and what each group needs to be able to do the week after.
-3. **Write the announcement.** Use the skill `org-change-announcement-writer`. Give it the memo and the rollout plan. The leader announcement, manager talking points, the town hall script and honest answers to the hard questions.
-4. **Plan the listening talks.** Use the skill `listen-first-talk-planner`. Give it the rollout plan and the people who will push back. For each person likely to push back, a talk that hears them first, in the manner of Stephen Covey and Brené Brown, held before the announcement. Nothing is announced until you say so.
+1. **Write the memo.** Use the skill `top-priority-shift-memo-writer`. A short memo that names the shift, the reason, what stops and what every team does differently, in the manner of Bill Gates's 1995 Internet Tidal Wave memo. Hands step 2 the memo.
+2. **Plan the rollout.** Use the skill `change-rollout-planner`. Give it the memo. Who hears first, in what setting, how far apart, and what each group needs to be able to do the week after. Uses step 1's memo as the change to roll out. Hands steps 3 and 4 the order of who hears what.
+3. **Write the announcement.** Use the skill `org-change-announcement-writer`. Give it the memo and the rollout plan. The leader announcement, manager talking points, the town hall script and honest answers to the hard questions. Uses the memo and the rollout plan, so the words match the order. Nothing is sent until you say so.
+4. **Plan the listening talks.** Use the skill `listen-first-talk-planner`. Give it the rollout plan and the people who will push back. For each person likely to push back, a talk that hears them first, in the manner of Stephen Covey and Brené Brown, held before the announcement. Uses the rollout plan and the people you name. Nothing is announced until you say so.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -14,11 +14,11 @@ outputs:
   - {type: plan}
 uses: [compliance-checklist, soc-2-readiness-checker, iso-27001-audit-prep-coach, gdpr-audit-prep-coach, gdpr-privacy-checker]
 steps:
-  - {uses: compliance-checklist, note: "Once per framework, then reused: the list of evidence an auditor will ask for, with gaps ranked."}
-  - {uses: soc-2-readiness-checker, note: "Every quarter, only if SOC 2 is in scope: gaps to fix before the watch period."}
-  - {uses: iso-27001-audit-prep-coach, note: "Every quarter, only if ISO 27001 is in scope: gaps to fix before an audit."}
-  - {uses: gdpr-audit-prep-coach, note: "Every quarter, only if GDPR is in scope: article-based gaps to fix before a review."}
-  - {uses: gdpr-privacy-checker, note: "Only when GDPR is in scope and the code or the way you use personal data changed since last quarter: the privacy risks in the change."}
+  - {uses: compliance-checklist, note: "Once per framework, then reused: the list of evidence an auditor will ask for, with gaps ranked. Hands the saved evidence list to the quarterly checks as the base to reuse."}
+  - {uses: soc-2-readiness-checker, note: "Every quarter, only if SOC 2 is in scope: gaps to fix before the watch period. Starts from your scope and evidence (your brief), not step 1's list; hands its gaps to the register."}
+  - {uses: iso-27001-audit-prep-coach, note: "Every quarter, only if ISO 27001 is in scope: gaps to fix before an audit. Starts from your scope and evidence (your brief), not step 2's report; hands its gaps to the register."}
+  - {uses: gdpr-audit-prep-coach, note: "Every quarter, only if GDPR is in scope: article-based gaps to fix before a review. Starts from your scope and evidence (your brief), not step 3's report; hands its gaps to the register and the code check."}
+  - {uses: gdpr-privacy-checker, note: "Only when GDPR is in scope and the code or the way you use personal data changed since last quarter: the privacy risks in the change. Uses your code and your brief, with the GDPR gaps from step 4 as context; hands the privacy risks to the register."}
 schedule: "First week of each quarter"
 asks_before: [contacting an auditor or regulator, sending evidence or policies to anyone, changing access or settings on live systems, changing a policy people have signed, telling customers you are compliant]
 origin: own

@@ -2,33 +2,54 @@ thinking: medium
 thinking_why: It picks the key ideas and writes a question for each.
 new_slug: self-explanation-question-writer
 name: Self-explanation question writer
-summary: Give it a text, example or diagram. Get questions that make students
-  explain the why behind each step.
+summary: Write self-explanation questions for a worked example, text or diagram. Students explain the why behind each step, not just what it says.
 job: teach-and-train
 headline: Self-explanation question writer
-subhead: Questions placed at the right points in your learning material so
-  students stop to explain why each step is true, not just what it says.
+subhead: Paste a worked example, a text or a diagram, and say what students should understand. Your AI picks the steps that are easy to skip and writes a question for each. You get questions that ask why, plus notes on strong and weak answers.
 explain: |
   Questions placed at the right points in your learning material so students stop to explain why each step is true, not just what it says. Research on worked examples shows that students who explain to themselves learn far more, and that prompting them works even for those who would not do it alone.
 
   Give it a text, a worked example or a diagram. It finds the steps where understanding is easiest to skip, then writes prompts that ask why, how and what principle, in place of "what happens here?". Each prompt is checked so it calls for reasoning instead of a restatement. It also drafts the follow-up feedback for a good or shallow answer.
 when:
-  - You have a worked maths or science example and want students to engage with
-    each step.
-  - Your lesson text is dense and learners skim it passively.
-  - You are building a tutoring chat and need good questions to ask mid-study.
-  - You want to replace shallow "what happened" questions with reasoning ones.
+  - You have a worked maths or science example and want students to think about each step.
+  - Your lesson text is dense and learners skim it without thinking.
+  - You are building a tutoring chat and need good questions to ask while students study.
+  - Students can follow the steps but cannot say why a step works.
+not_for:
+  - "You want students to recall facts or practise a drill: use a retrieval quiz or a short teacher-led recap instead."
+  - "Your material has no reasoning steps, like a list of dates or terms: write plain recall questions yourself."
+  - "You need a full set of worked examples or hints: build those first with a separate example or hint tool, then come back here."
 you_give:
   - The text, worked example or diagram
-  - The subject and student level
-  - The learning goal (optional)
+  - What students should understand deeply when they finish (required)
+  - Your students' level and subject (optional)
+  - Mistakes students often make with this content (optional)
+  - How you will use the questions, such as in text, in class or in a tutoring chat (optional)
 you_get:
-  - Why and how prompts at key points
-  - A note on where each prompt goes
-  - Feedback lines for strong and weak answers
-  - A check that questions need reasoning
+  - Why and how questions placed at the key steps
+  - A map of where each question goes and why
+  - Notes on what strong and weak answers look like
+  - A plan for giving less help over time
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill instructions. No code or paid tools are needed.
+  - Paste your text or worked example. For a diagram, upload it or describe it in words.
+  - Write what students should understand when they finish. Add their level and common mistakes if you know them.
+  - Run it and read the Prompt Placement Map. Check each question sits where the reasoning is hardest.
+  - Check each question needs a reason, not a restatement. Ask your AI to rewrite any that do not.
+  - Use the questions in your lesson, handout or tutoring chat.
+output_sample:
+  input:
+    - Your text, worked example or diagram
+    - What students should understand deeply when they finish
+    - Your students' level and subject (optional)
+    - How the questions will be delivered (optional)
+    - Mistakes students often make with this content (optional)
+  output:
+    - name: Prompt Placement Map
+      contains: Where in the material each question goes, and why that point is hard to skip.
+    - name: Self-Explanation Prompts
+      contains: The questions themselves, asking why, how and what principle at each key step.
+    - name: Quality Indicators
+      contains: What a strong answer looks like and what a shallow answer looks like for each question.
+    - name: Scaffolding Sequence
+      contains: How to give more or less help with the questions as students get better.

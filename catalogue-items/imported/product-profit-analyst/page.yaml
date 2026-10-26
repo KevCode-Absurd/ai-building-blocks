@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It splits costs and calculates margins.
 new_slug: product-profit-analyst
 name: Product profit analyst
-summary: Give it revenue and costs by product. Get each product's margin and
-  which ones lose money.
+summary: Find which products make money and which lose it. Give it revenue and costs by product to get each margin and a keep, cut or grow call.
 job: run-your-store
 headline: Product profit analyst
-subhead: Give it revenue and costs by product. Get each product's margin and
-  which ones lose money. Bring revenue by product or segment. Use the result to
-  plan your next step.
+subhead: Give it revenue and costs by product. Get each product's margin and which ones lose money. Bring revenue by product or segment. Use the result to plan your next step.
 explain: |
   Each product's margin laid out, so you can see which ones earn money and which ones lose it. Revenue alone hides this.
 
@@ -18,6 +15,10 @@ when:
   - You are deciding which line to cut or grow.
   - Shared costs make some products look better than they are.
   - You need a product-level P&L for a review.
+not_for:
+  - "You sell one product, or you want a company-wide margin check: use the financial-analysis skill, or a simple profit and loss sheet."
+  - "You want to set product targets for next year: use the budget-forecast skill."
+  - "You only have total sales and no costs by product: gather your cost of goods per product first, or ask your accountant."
 you_give:
   - Revenue by product or segment
   - Variable costs such as COGS
@@ -30,7 +31,23 @@ you_get:
   - Cost allocation notes
   - Keep, cut or grow recommendations
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your table with one row per product. Add columns for product name, revenue, variable cost and the time period it covers.
+  - Add your fixed and shared cost totals. If you have no way to split them, say so and ask your AI to suggest a fair split, such as by share of revenue.
+  - Add budget figures if you have them (optional).
+  - Check the Stack Rank first. Confirm the products and totals match your own books before you act on the advice.
+output_sample:
+  input:
+    - Revenue by product, SKU, category or service line, for one time period
+    - Variable costs for each product, such as cost of goods sold
+    - Totals for fixed and shared costs, such as rent or software
+    - Budget figures by product (optional)
+  prerequisites:
+    - An AI that can run code is helpful, because the skill has a script for exact sums. Without it, the AI does the sums in chat.
+  output:
+    - name: The Stack Rank
+      contains: A table of your products ranked by gross margin and contribution margin percent.
+    - name: Segment P&L
+      contains: One column per product line showing revenue, cost of goods, direct operating costs and net contribution.
+    - name: Optimization Plan
+      contains: Weak products (low margin, low volume), strong products (high margin, high volume), and pricing or cost-cutting ideas.

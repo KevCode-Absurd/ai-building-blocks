@@ -2,41 +2,107 @@ thinking: high
 thinking_why: It weighs many settings at once and says where data is missing.
 new_slug: linkedin-ads-account-auditor
 name: LinkedIn ads account auditor
-summary: Give it your LinkedIn Ads exports. Get a checked audit of your Insight
-  Tag, audiences, lead forms, creative, bids and budgets.
+summary: Audit your LinkedIn Ads account from your exports. Get checked findings on the Insight Tag, B2B audiences, lead gen forms, creative, bids and budgets.
 job: read-ad-results
 headline: LinkedIn ads account auditor
-subhead: A checked audit of your LinkedIn Ads account that separates what the
-  data shows from what to try. Give it your exports and you get findings tied to
-  the numbers they came from.
+subhead: "Give it your Campaign Manager exports, your goal and what counts as a conversion. It checks your Insight Tag first, then job title and company targeting, lead gen forms, creative, bids and budgets. Each finding names the number it came from, and your account is never changed."
 explain: |
-  A checked audit of your LinkedIn Ads account that separates what the data shows from what to try. Give it your exports and you get findings tied to the numbers they came from.
+  When you pay to reach decision makers, waste is easy to miss. This LinkedIn ads account auditor reads your Campaign Manager exports and checks where the money goes. It is built for B2B accounts, such as software, services and recruiting.
 
-  It asks for your goal, the conversion you count, dates, spend and targets. Then it reviews tracking through the Insight Tag, professional audiences, lead forms, account-based campaigns, creative, bidding, budgets and pacing. It marks observations, causes, advice and possible changes as separate things. It will not apply a benchmark that does not match your goal, region or account age. Account changes stay as drafts for you to approve.
+  It starts with measurement: the Insight Tag, your conversions and how leads reach your CRM. Then it reviews who you target by job title, company size and seniority, your lead gen forms, ad formats, creative refresh, bidding, budgets and frequency. Each finding is labelled as something it saw, a likely cause, advice, or a draft change you can approve.
+
+  It checks account age and results before it judges anything. B2B deals close slowly, so it will not call a campaign good or bad on a handful of results. It will not apply a benchmark that does not fit your goal or region.
 when:
   - Your LinkedIn leads cost too much and you do not know why.
-  - You suspect the Insight Tag is not tracking conversions.
-  - You inherited a B2B ad account and need a health check.
-  - You want a second opinion before raising budgets.
+  - You think the Insight Tag is not tracking conversions.
+  - You inherited a B2B ad account and need a first check.
+  - You want a second opinion before you raise budgets.
+not_for:
+  - "Your account has only a few weeks of data or very few conversions. Run it later, or expect many findings marked unknown."
+  - "You advertise on TikTok: use the TikTok ads account auditor. For several platforms in one report, use the Twelve-platform ad account auditor."
+  - "You want to make changes in the account, such as bids or budgets. This audit is read-only, and every change stays a draft."
+  - "You want to know why one campaign underperforms, with no full audit: use the Ad performance diagnoser."
 you_give:
-  - Campaign Manager exports or screenshots
-  - Your goal and conversion definition
-  - Date range, spend and targets
+  - Campaign Manager exports or screenshots, such as campaigns, audiences, lead forms and demographics
+  - Your goal and what counts as a conversion
+  - Date range, currency, countries and spend
   - Account or campaign age (optional)
+  - Your target cost per lead (optional)
 you_get:
-  - Measurement and tag findings
-  - Audience and lead form review
-  - Creative and bidding notes
-  - Prioritised recommendations
-  - A list of things it could not check
+  - An Insight Tag and conversion check, first
+  - A review of audiences and lead gen forms
+  - Notes on creative, bidding, budgets and frequency
+  - Ranked recommendations and draft changes held for your approval
+  - A list of what it could not check, and what to send next
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your ad exports, and optionally read
-    your LinkedIn Ads account with your own read-only access. Changes stay as
-    drafts for your approval.
-  - Where the skill points to ads/references/, use the
-    ads/references/linkedin-audit.md folder inside it. We copied it in so the
-    skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. If your AI can open files, give it the whole folder, so it can read the ads/references file inside.
+  - In Campaign Manager, download reports for campaigns, ads, audiences or demographics, and lead forms. Screenshots work too.
+  - Tell your AI your goal, what counts as a conversion, the date range, currency, countries and account age.
+  - Read the evidence coverage list first. It shows what was checked and what is unknown.
+  - Send the extra reports it asks for, then ask it to run the unknown areas again.
+  - Make one draft change at a time, and check the result after the measurement window it names.
+how_it_works:
+  - title: Collect the basics
+    text: It asks for your goal, conversion definition, dates, spend, targets and account age, and checks you have enough data.
+  - title: Open the control list
+    text: It reads the LinkedIn controls in ads/references, each with an ID such as L01.
+  - title: Record sources
+    text: Each number is tied to the export or screenshot it came from.
+  - title: Check the areas
+    text: It runs measurement first, then audiences, lead gen, creative, bidding, budgets, pacing and policy.
+  - title: Label each finding
+    text: It separates what the data shows, the likely cause, the advice and the draft change, and marks doubt.
+  - title: Write the report
+    text: It returns evidence coverage, findings, ranked recommendations, draft changes and unknowns.
+output_shape: |
+  Account and evidence: <goal, conversion, dates, data given>
+  Evidence coverage: <areas checked, partly checked, unknown>
+  Measurement findings: <Insight Tag and conversion results>
+  Findings by area: <control ID, label, evidence and source, confidence>
+  Prioritised recommendations: <evidence, baseline, step, measurement window, rollback>
+  Draft changes (not applied): <each edit for approval>
+  Contradictions and unknowns: <conflicts, what to send next>
+output_sample:
+  input:
+    - Campaign Manager exports or screenshots
+    - Your goal and what counts as a conversion
+    - Date range, currency, countries and spend
+    - Account or campaign age (optional)
+  prerequisites:
+    - An AI that can open files, if you want it to read the ads/references folder
+    - Read-only access to the live account, only if you want your AI to read it directly
+  output:
+    - name: Evidence coverage
+      contains: Which areas were checked, which were partly checked, and which are unknown.
+    - name: Measurement findings
+      contains: Whether the Insight Tag and conversions work, and how leads reach your CRM.
+    - name: Findings by area
+      contains: Each finding with its control ID, label, source number and confidence.
+    - name: Prioritised recommendations
+      contains: Ranked advice with the evidence, a first step, a measurement window and a rollback.
+    - name: Draft changes
+      contains: Account edits written as drafts, not applied.
+    - name: Contradictions and unknowns
+      contains: Facts that conflict, and the reports to send next.
+works_best_with:
+  tools:
+    - name: Claude
+      why: It handles long exports and can read the reference file in the folder.
+    - name: ChatGPT
+      why: It reads pasted tables and uploaded spreadsheets well.
+    - name: Gemini
+      why: It can take several Campaign Manager screenshots in one go.
+  inputs:
+    - Your CRM export of leads and how many became customers
+    - The length of your usual sales cycle
+    - A list of the companies you want to reach
+    - A note on any targeting change you made in the date range
+terms:
+  - term: Insight Tag
+    meaning: LinkedIn's tracking code for your site. It records conversions and builds audiences.
+  - term: Lead gen form
+    meaning: A form inside LinkedIn that fills in a person's details so they do not leave the app.
+  - term: ABM
+    meaning: Account-based marketing, which targets a named list of companies.
+  - term: Read-only access
+    meaning: Access that lets a tool look at your account but not change it.

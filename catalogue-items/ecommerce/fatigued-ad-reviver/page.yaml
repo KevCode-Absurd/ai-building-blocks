@@ -1,6 +1,6 @@
 new_slug: fatigued-ad-reviver
 name: "Fatigued ad reviver"
-summary: "Give it a fading winner's numbers. Get the cause, ranked revival moves and 10 hook briefs."
+summary: "Fix a fading winning ad. Give it your weekly numbers and get the cause, ranked revival moves and 10 new hook briefs for the same ad body."
 job: launch-and-scale-ads
 thinking: medium
 thinking_why: "It reasons over your numbers and writes many short briefs, which a mid-size model does well."
@@ -17,6 +17,10 @@ when:
   - Your best ad's spend or return is dropping and you don't want to start from zero.
   - An agency or a teammate wants to push one winner harder and you're unsure it is wise.
   - You have a strong ad body and need a batch of new openers to film in one session.
+not_for:
+  - Your ad never worked well. A new hook will not save a weak ad, so write a fresh ad with the Ad first line writer and scorer.
+  - You only have a very small budget and want to test 10 hooks. It will plan 3 hooks, or test fewer openers by hand.
+  - You want to check ad copy against Meta rules. Use the Meta ads compliance checker before the ad goes live.
 
 you_give:
   - Spend and ROAS by week for the ad, plus frequency and audience size if you have them
@@ -36,6 +40,30 @@ how_to_use:
   - Pick the hook briefs you can film in one session, using different people on camera.
   - Put a little spend behind each hook, or post them as trial reels first if the feature is available to you.
   - Add budget to the best thumb-stop and hold, and log which lever changed.
+output_sample:
+  input:
+    - Weekly spend and ROAS for the fading ad, plus frequency and audience size if you have them
+    - The ad transcript and its hook rate, hold rate and ROAS (optional)
+    - Hooks you have already used (optional)
+    - Your stock, cash cycle and backup ads
+    - Who can film, such as staff, customers or creators (optional)
+  output:
+    - name: Cause call
+      contains: Says if the ad is spent, the audience is too small, or both, and ties it to a number from your data.
+    - name: Life stage and pacing
+      contains: Shows if the ad is climbing, at its limit or falling, and whether to squeeze it or run it low.
+    - name: Revival moves
+      contains: A ranked list of moves, each with why it comes in that place and its risk.
+    - name: Hook briefs
+      contains: Ten or more briefs that keep the body, change the first 3 to 5 seconds and name the lever changed.
+    - name: Shoot list
+      contains: The people, places and clips to film in one session.
+    - name: Test plan
+      contains: Hook names, spend per hook, when to read results and how to pick a winner.
+    - name: Log and backups
+      contains: Which lever changed on each ad, and the ads lined up to replace this one.
+    - name: Checks missed and missing
+      contains: Any failed checks and the inputs that would sharpen the result.
 
 how_it_works:
   - title: Reads the ad's life

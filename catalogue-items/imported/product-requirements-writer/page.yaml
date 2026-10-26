@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It fills a set template but must shape the content to your idea.
 new_slug: product-requirements-writer
 name: Product requirements writer
-summary: Describe a product or feature. Get a short product requirements
-  document with goal, audience, value and release plan.
+summary: Describe a feature or product. You get a short product requirements document (PRD) with goal, audience, value and release plan.
 job: build-product
 headline: Product requirements writer
-subhead: A short product requirements document your team can read in a few
-  minutes and start work from. It is built to help people decide, not to fill
-  pages.
+subhead: A short product requirements document your team can read in a few minutes and start work from. It is built to help people decide, not to fill pages.
 explain: |
   A short product requirements document your team can read in a few minutes and start work from. It is built to help people decide, not to fill pages.
 
@@ -18,6 +15,10 @@ when:
   - Engineers and designers need a brief to start from.
   - Leaders want a one-page case before they approve work.
   - You have notes and need them shaped into a PRD.
+not_for:
+  - "You need a finished technical spec or full engineering design: ask your engineers for a design doc, or request a fuller spec."
+  - "You only have a loose idea and no problem or users yet: talk to a few customers first, then come back."
+  - "You want a long, detailed PRD on the first pass: this writes a short one by default, so ask for more detail after."
 you_give:
   - A description of the product or feature
   - The problem and who has it
@@ -29,7 +30,34 @@ you_get:
   - An objective and release plan
   - A list of open questions that block decisions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page.
+  - Describe your feature or product. Add the problem, who has it, and how you will measure success.
+  - Answer up to three short questions if your AI asks. It asks when the problem, users or success measure is missing.
+  - Read the PRD. Check the assumptions and open questions first, then fix anything that is wrong.
+  - Ask for a fuller version of any section you want expanded. Web search is optional and helps with market and competitor facts.
+  - The value proposition method is built in. The linked PM Skills plugin is optional and is not part of this download.
+output_sample:
+  input:
+    - A description of your product or feature
+    - The problem and who has it
+    - How you will measure success
+    - Notes or research you already have (optional)
+  prerequisites:
+    - An AI that can search the web helps, but is not required
+  output:
+    - name: Summary
+      contains: Two or three sentences on what this is, who it is for and why now.
+    - name: Contacts
+      contains: Key people and their roles. Left out if you do not know them.
+    - name: Background
+      contains: The context for the work and what changed to make it timely.
+    - name: Objective
+      contains: Why this matters to customers and the company, with one to three measurable key results.
+    - name: Market Segments
+      contains: Who you are building for, defined by their problems or jobs, with constraints.
+    - name: Value Propositions
+      contains: "One per segment: who, why, what before, how, what after, alternatives, and a closing statement."
+    - name: Solution
+      contains: Key flow, must-have features, optional technology notes, and assumptions and open questions.
+    - name: Release
+      contains: What ships first, what comes later, what you will not do, and rough timeframes.

@@ -29,8 +29,34 @@ you_get:
   - A usability test plan
   - A summary of research themes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Paste the skill into Claude, ChatGPT or Gemini. Or add it as a skill so you can reuse it.
+  - Put your user data in a list with one row per person, such as age, how often they use the product, features used, device and pain points. Add interview notes if you have them.
+  - Ask for personas first. Check each one against your data. Every frustration should have a count, like 14 of 20 users.
+  - Then ask for the path map and the usability test plan for the persona you care about most.
+  - Show each persona to 3 to 5 real users and ask "Does this sound like you?" before your team uses it.
+  - The persona script needs code running. Without it, the AI can still group your notes by hand, but with less structure.
+not_for:
+  - You have notes from fewer than 5 people. The personas will be guesses. Use the Customer interview coach to plan more interviews first.
+  - You only want themes and real quotes from interviews, reviews or tickets. Use the Customer interview synthesizer or the Customer research analyst.
+  - You only want a diagram of the steps a user takes on one task. Use the User flow mapper.
+  - You only want to test a prototype. Use the Usability test runner.
+output_sample:
+  input:
+    - Your user data, one row per person, with age, how often they use it, features used, device and pain points
+    - Interview notes or survey answers (optional)
+    - What your product does, in a sentence or two
+    - The goal you want the path map to follow (optional)
+  prerequisites:
+    - Python installed, so the persona script can run
+    - Data from at least 20 people for a firm result
+  output:
+    - name: Personas
+      contains: Each persona has an archetype, a quote, goals, frustrations with counts, design implications and a confidence level.
+    - name: Path map
+      contains: Stages from start to finish, each with actions, touchpoints, feelings from 1 to 5, pain points and chances to improve.
+    - name: Usability test plan
+      contains: Testable questions, a method, task scenarios, success measures and a guide for the person running the test.
+    - name: Research themes
+      contains: Coded notes grouped into themes, with how many people said each and a recommendation.
+    - name: Segment sizes
+      contains: How many people fall into each group, and which groups are big enough to become a main persona.

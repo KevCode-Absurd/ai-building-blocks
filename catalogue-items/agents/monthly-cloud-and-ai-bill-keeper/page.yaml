@@ -1,6 +1,6 @@
 new_slug: monthly-cloud-and-ai-bill-keeper
 name: Monthly cloud and AI bill keeper
-summary: Give it your cloud and AI bills each month. Get what grew, the waste behind it and caps to add.
+summary: Check your monthly cloud and AI bill against last month. Find what grew, the waste behind it and the caps to add, with nothing changed without your yes.
 job: ship-and-host
 thinking: medium
 thinking_why: It sums bills, compares two months and runs up to five skills. The sums need care but the reasoning is not deep.
@@ -14,6 +14,10 @@ when:
   - You pay for cloud, hosting or AI services and nobody reads the bills closely.
   - Your AI bill jumped and you do not know why.
   - You want to know whether last month's savings really showed up.
+not_for:
+  - "You want a one-off review of a single bill with no earlier month to compare: use cloud-bill-waste-finder for an AWS bill, or ask a person who knows your setup."
+  - "You want waste fixed without your sign-off: this agent only hands back a list, so make the changes yourself or approve each one."
+  - "You only want to check one AWS account for waste: run cloud-bill-waste-finder alone, with no monthly history needed."
 you_give:
   - This month's bills as a spreadsheet or export, one per provider
   - Last month's bills, or let the agent save them from the first run
@@ -31,6 +35,32 @@ how_to_use:
   - Point it at the code if you want caps added. Give it read-only access to any account it needs to look at.
   - Read the list. Say yes to the fixes you want, or make them yourself.
   - Run it next month. It checks whether each fix brought its line down.
+output_sample:
+  input:
+    - This month's cloud, hosting and AI bills, one export per provider
+    - Last month's bills (saved by the agent after the first run)
+    - Your code, so it can add caps to AI calls (optional)
+    - What changed this month, such as a launch (optional)
+    - A monthly budget (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code, to keep the bills folder
+    - Read-only access to any account it needs to look at
+    - Cost Explorer API calls on AWS can carry a small charge, so an export is safer
+  output:
+    - name: This month
+      contains: The total against last month, the change in money and percent, and the budget if you gave one.
+    - name: What moved
+      contains: The one to three lines that explain most of the change, with the cause or a note that it is not known.
+    - name: Caps to put in place
+      contains: Spend caps and loop limits for AI calls, with the file or setting each one goes in.
+    - name: Savings to approve
+      contains: Up to 10 fixes, biggest first, each with its monthly saving, the time to do it and the risk.
+    - name: Last month's fixes
+      contains: Each fix you approved before, with its line before and now, so you see if it worked.
+    - name: Watch next month
+      contains: The one to three lines most likely to move next.
+    - name: Files and missing
+      contains: Each step's saved file, a list of every MISSING line, and a CHECKS MISSED line for any check that failed.
 how_it_works:
   - title: Total each line
     text: Sums every service and provider and shows the sums.

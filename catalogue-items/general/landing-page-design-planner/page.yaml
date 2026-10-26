@@ -1,6 +1,6 @@
 new_slug: landing-page-design-planner
 name: "Landing page design planner"
-summary: "Paste your page copy, colours and fonts. Get three on-brand designs and a build brief."
+summary: "Plan a landing page design from your copy and brand. Get three different directions, a section plan and a build brief, before anyone builds."
 job: write-landing-page
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your page copy and offer are settled and you need a design plan before anyone builds it.
   - A page is built and you want to know what looks wrong or is hard to read on a phone.
   - You want to compare a few real options before committing to a redesign.
+not_for:
+  - "You need the page copy written first: use the Ad-matched landing page writer, then bring the copy here."
+  - "You are designing a dashboard or a tool screen: ask a designer for a product-tool layout brief instead."
+  - "Your offer and copy are not settled yet: finish those first, because this plan does not invent offers, proof or claims."
 
 you_give:
   - Your brand's colours and what each is for, fonts, voice, logo and product photos
@@ -36,6 +40,28 @@ how_to_use:
   - Paste the finished page copy and the ad that sends people to it.
   - Say whether this is a refresh (keep what works) or a redesign (layout can change).
   - Pick one direction, then hand the section plan to whoever builds the page. Once it's built, send screenshots back for the review.
+output_sample:
+  input:
+    - Your brand colours with their jobs, fonts, logo and product photos
+    - Your page copy or brief, the buyer, the ad and the offer
+    - Whether this is a refresh or a redesign (optional)
+    - Phone and desktop screenshots of a built page (optional)
+  prerequisites:
+    - Your brand brain from the Brand profile builder, or your own brand details
+    - An AI that can see pictures, if you send screenshots
+  output:
+    - name: Design system
+      contains: Four to six of your colours with their jobs, font roles, one main visual move, layout rules and accessibility aims.
+    - name: Three directions
+      contains: Each has a name, first screen layout, what the images do, argument order, and phone and desktop notes.
+    - name: Section plan
+      contains: One row per section with the buyer question, phone layout, desktop layout and image.
+    - name: Build brief
+      contains: A short block for the chosen direction that you can paste into a design or build tool.
+    - name: Review
+      contains: Visual and technical findings in two lists, each with section, screen size and fix, plus what could not be checked.
+    - name: Checks missed
+      contains: One line for each check the plan still missed, or none.
 
 how_it_works:
   - title: Checks the kind of page

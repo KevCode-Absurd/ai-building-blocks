@@ -16,6 +16,27 @@ use_cases:
   - "Find unused subscriptions without cutting every small pleasure"
   - "Prepare questions about a recurring financial commitment"
   - "Replace a guilt-heavy money rule with a clear agreement"
+not_for:
+  - "You need investment picks, tax, legal or debt advice: ask a qualified local adviser, since this mind only offers general frameworks."
+  - "You want to understand why people choose as they do in trade and markets: use Adam Smith."
+  - "You want practical money teaching for children: use Beth Kobliner."
+output_sample:
+  input:
+    - Your take-home pay and when it arrives
+    - Your bills and their due dates
+    - A short picture of the life you want your money to support
+    - The money argument or rule you are stuck on (optional)
+  output:
+    - name: Purpose statement
+      contains: A short line on what your money should make possible in your everyday life.
+    - name: Four-bucket table
+      contains: Fixed costs, investments, savings and guilt-free spending, with actuals, estimates and missing numbers kept apart.
+    - name: Main tradeoff
+      contains: The one commitment that limits you and the category that adds most to your stated life.
+    - name: Calendar or meeting agenda
+      contains: Paydays, bill dates and reminders, or a neutral agenda for a money talk with your partner.
+    - name: Next questions and review date
+      contains: Open questions, what needs qualified local advice, and when to look at the plan again.
 seats:
   - {seat: "Conscious spending and household systems", asks: "What should your money make possible in ordinary life?"}
   - {seat: "Money conversations and priorities", asks: "Which rule is doing the thinking for you?"}

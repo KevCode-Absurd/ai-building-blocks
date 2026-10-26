@@ -1,6 +1,6 @@
 new_slug: turn-a-free-checker-into-leads-and-a-paid-first-step
 name: Turn a free checker into leads and a first sale
-summary: Give it your business and buyer. Get a free checker, a cost-per-lead rule and a paid first step.
+summary: Turn a free checker into leads for your service. Get a five-question score, a cost-per-lead rule and a cheap paid first step.
 job: make-offer
 thinking: medium
 thinking_why: It runs three skills in a row and the sums are small. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - You sell a service or a high-ticket product and cold ads do not work.
   - You have a free offer that brings in leads who never buy.
   - You want a first step that is cheap but filters out bargain hunters.
+not_for:
+  - Your product solves no repeat problem. Use a direct sales page, such as the Ad-matched landing page writer.
+  - Your buyers will not pay anything, even a small amount. Talk to a few of them first, or use the Customer needs finder.
+  - You only want to plan a better offer. Use the After-sale offer planner.
 you_give:
   - What you sell and who has the problem it fixes
   - What a visitor could tell you that shows how big the problem is
@@ -30,6 +34,27 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe your service and buyer. State one problem you can really fix.
   - When it pauses, build the checker, run it for one to two weeks and bring back your spend and sign-ups.
+output_sample:
+  input:
+    - What you sell and who has the problem it fixes
+    - What a visitor could tell you that shows how big the problem is
+    - Your ad spend, sign-ups and how many leads fit your buyer, after a run
+    - Your main offer and its price
+    - Your brand brain (optional)
+  prerequisites:
+    - Time to build the checker and run it for one to two weeks before step 2
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Free checker plan
+      contains: The problem, up to five questions, the score rule, what each band says and where the email ask goes.
+    - name: Lead cost and friction plan
+      contains: Cost per qualified lead, the winning campaign, friction to add one lever at a time, and a stop rule.
+    - name: Qualifier line
+      contains: One line to use in the ad, the page and the form.
+    - name: Paid first step plan
+      contains: A cheap first piece, its price, the booked second meeting, a no-show fee and the pitch for your main offer.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Plan the free checker
     text: Names a problem the buyer may not know they have, cuts the questions to five, writes the score and what each band means, and puts the email ask after the result.

@@ -10,6 +10,17 @@ dependencies: [transformers, torch]
 
 # Speculative Decoding: Accelerating LLM Inference
 
+## How to run this skill (added by AI Blocks)
+
+1. Ask once for what is missing: the model to serve, the GPU and its memory, the goal (lower delay per reply or higher throughput), a smaller model from the same family (optional), and 10 to 20 real test prompts (optional). If something is still missing, write `MISSING: <what>`. Never guess a GPU size or a model name.
+2. Before anything else, list what the user needs: a CUDA GPU with enough memory for the target model, Hugging Face access and an accepted licence for gated models such as Llama, and Python with `torch` and `transformers`. Warn that the Llama-2-70b and vicuna-33b examples below need a very large GPU setup. Swap in the user's own model.
+3. Treat the pseudocode and class sketches below (the `speculative_decode` function, the `LookaheadDecoding` class, the Medusa training loop and `select_draft_model`) as illustrations of the idea. They are not working APIs. Before giving any Medusa or lookahead code, check it against the current README of that repository, and say you did or did not.
+4. The speed-up figures (such as 1.5 to 3.6 times) are results reported in the papers, in their setups. Never promise them. Measure the user's own tokens per second.
+5. Hand back a short report: the chosen method and why, the install commands, the code with its file names, the settings to try, and a test plan with a before and after tokens per second table and a check that answers match on a fixed prompt set. End with `OPEN QUESTIONS`.
+6. Not for: hosted API models, machines with no NVIDIA GPU, or training a model on user data.
+7. Next step: run the before and after test on the user's own prompts, then change one setting at a time.
+
+
 ## When to Use This Skill
 
 Use Speculative Decoding when you need to:
@@ -352,6 +363,8 @@ outputs = target_model.generate(
 
 ### Optimal Draft Model Selection
 
+This is a rule of thumb, not a settled rule. Test the draft model you pick.
+
 ```python
 def select_draft_model(target_model_size, target):
     """Select optimal draft model for speculative decoding."""
@@ -373,6 +386,8 @@ draft = select_draft_model("70B", target_model)
 ## Best Practices
 
 ### 1. Choose the Right Method
+
+This is a rule of thumb. Confirm the choice with the speed test.
 
 ```python
 # New deployment → Medusa (best overall speedup, no draft model)
@@ -460,7 +475,6 @@ for output in outputs:
 
 ## See Also
 
-- `references/draft_model.md` - Draft model selection and training
 - `references/medusa.md` - Medusa architecture and training
 - `references/lookahead.md` - Lookahead decoding implementation details
 

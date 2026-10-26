@@ -2,33 +2,55 @@ thinking: high
 thinking_why: Control choice and write-ups need careful detail.
 new_slug: federal-security-controls
 name: Federal security controls planner
-summary: Describe your system. Get the right control baseline, tailoring choices
-  and draft control write-ups.
+summary: Describe your system and get the right NIST 800-53 control baseline, tailoring choices and draft control write-ups for your federal security plan.
 job: secure-code
 headline: Federal security controls planner
-subhead: The right set of NIST 800-53 controls for your system, with notes on
-  what to adjust and draft wording for how you meet each one.
+subhead: Describe your system and the data it handles. Your AI works out the impact rating and the right NIST 800-53 control set. You get tailoring advice and draft wording for how you meet each control.
 explain: |
   The right set of NIST 800-53 controls for your system, with notes on what to adjust and draft wording for how you meet each one. You start your security plan with real text, not a blank page.
 
   You describe your system and what it handles. The skill walks from the impact rating under FIPS 199 to a low, moderate or high baseline, then proposes tailoring choices with reasons. For each control it cites the family, number and enhancement exactly, such as AC-2(3). It writes control narratives with an implementation statement, evidence and responsible roles. It can also run a gap check table and explain the steps of the risk management framework. Treat the output as a draft for your assessor.
 when:
-  - You are building a system security plan for a federal customer.
-  - You need to know whether your system is low, moderate or high impact.
-  - You want draft answers for access control requirements.
-  - You are checking a system against controls before an audit.
+  - You are writing a system security plan for a federal customer.
+  - You need to know if your system is low, moderate or high impact.
+  - You want draft answers for access control or logging requirements.
+  - You are checking your system against the controls before an audit.
+not_for:
+  - "You work on a non-federal system and want a commercial framework: ask your AI for ISO 27001 or NIST CSF guidance instead."
+  - "You need legal advice or a final audit opinion: use a qualified lawyer or an accredited assessor."
+  - "You only need secure coding checks on source code: use a code review by a security engineer or your usual scanner."
 you_give:
-  - A system description
+  - A description of your system
   - The data it stores and processes
   - Your current controls and policies (optional)
   - The control families you care about (optional)
 you_get:
-  - A baseline recommendation
+  - A baseline recommendation with the impact rating behind it
   - Tailoring choices with reasons
-  - Draft control narratives
+  - Draft control narratives you can edit
   - A gap table with fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Describe your system in plain words. Say what data it stores and who uses it.
+  - Ask for the impact rating and baseline first. Check that the rating matches how you see the risk.
+  - Ask for tailoring choices, then draft narratives for the controls you care about.
+  - Replace general wording with your real tools, policies and roles. Share the draft with your assessor.
+output_sample:
+  input:
+    - A description of your system
+    - The data it stores and processes
+    - Your current controls and policies (optional)
+    - The control families you care about (optional)
+  output:
+    - name: System categorization
+      contains: The impact level for confidentiality, integrity and availability, and the overall rating using the highest of the three.
+    - name: Baseline selection
+      contains: The low, moderate or high baseline that fits your rating, plus privacy controls if you handle personal data.
+    - name: Tailoring rationale
+      contains: What to remove, inherit, add or fill in, with a reason for each choice.
+    - name: Control narratives
+      contains: For each control, an implementation statement, status, responsible roles and evidence.
+    - name: Gap table
+      contains: Control ID, requirement, status, finding and fix for each control you checked.
+    - name: RMF step guidance
+      contains: The tasks, outputs and roles for the risk management framework step you ask about.

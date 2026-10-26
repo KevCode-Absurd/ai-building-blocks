@@ -1,6 +1,6 @@
 new_slug: first-offer-new-buyers
 name: Win new buyers with a free or discount first offer
-summary: Give it your offer and lead numbers. Get a free or discount first step, lead rules and the offers that follow.
+summary: Find the right free or discount first offer to win new buyers. Give it your offer and lead numbers. Get a pick, lead rules and a small test.
 job: make-offer
 thinking: high
 thinking_why: It runs five skills in a row and does cost sums on your lead numbers. Give it your strongest model.
@@ -15,6 +15,10 @@ when:
   - Your cost to win a customer is higher than you can afford.
   - You are entering a market where you have no proof yet.
   - Free sign-ups do not book or show up.
+not_for:
+  - "You have no paid option to sell yet: first build an offer people want, then come back."
+  - "Your lead numbers already meet your win rule: use a standard lead magnet or a direct sale instead."
+  - "You want to add extras to an offer you already sell: use the Offer bonus package builder."
 you_give:
   - Your offer and price
   - Your lead numbers, such as spend, leads, how many qualify and how many buy (optional)
@@ -33,6 +37,28 @@ how_to_use:
   - Share your offer and whatever lead numbers you have. Missing numbers are marked, not invented.
   - If it picks free, skip the paid first step. If it picks discount, run it.
   - Run the test for the time it sets and compare to the win rule before you scale.
+output_sample:
+  input:
+    - Your offer and price
+    - Your lead numbers, such as spend, leads, how many qualify and how many buy (optional)
+    - Cash you can spend while you learn
+    - Time it takes to handle one lead
+    - Your brand brain from the Website brand brain builder (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project, to run the handoff pack
+  output:
+    - name: "Step 1: front-end-offer-picker"
+      contains: A pick of premium, free or discount first step, with the reason and what must be true.
+    - name: "Step 2: lead-cost-and-friction-planner"
+      contains: Cost per qualified lead with handling cost, and the friction to add one step at a time.
+    - name: "Step 3: paid-first-step-planner"
+      contains: A cheap first piece, a booked second meeting, a no-show fee and an upsell, if you chose discount.
+    - name: "Step 4: value-ladder-planner"
+      contains: The offers buyers buy after the first step, from the main offer to higher and smaller steps.
+    - name: "Step 5: small-test-and-rollout-planner"
+      contains: A small test with a budget, a time and a win rule written before you start.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Choose premium, free or discount
     text: Scores the three routes against your volume, cost, cash, proof and rules, and picks one with what must be true.

@@ -1,39 +1,50 @@
 new_slug: big-problem-splitter
 name: "Big problem splitter"
-summary: "Describe a problem that feels too big. Get it split into small steps, each with a test and a clear next move."
+summary: "Split a problem that feels too big into small steps. Get the root cause, a test for each step and your first move this week."
 job: plan-strategy
 thinking: medium
 thinking_why: "It must find the real cause and size a first step well, but it follows a fixed order."
 
 headline: "Big problem splitter"
-subhead: Describe a goal or problem that feels too big to start. It finds the root cause, names the fear that makes it feel big, and splits it into small steps. Each step has a test, and you get one move you can make this week.
+subhead: Describe a goal or problem that feels too big to start, and what makes it feel that way. It finds the root cause by asking why five times, names the fear behind it, and splits the work into small steps. Each step has a test, and you get one move you can make this week.
 
 explain: |
   A big problem feels impossible partly because it is one lump. You look at all of it, freeze, and pick the wrong thing to fix because you never found the cause. Adding rules and checkpoints then makes it worse.
 
   This skill first asks why five times to reach the root, and asks what you are afraid of. It looks for an early sign of trouble that is still easy to fix. It shrinks the first move until it fits in a week, plans the middle with a light touch rather than constant poking, and adds a check for the last stretch. The goal stays on every step in one line.
 
+  It needs two things from you: the goal and the fear. Without them it asks for both and stops, rather than guess at causes. If a why can only be answered with a guess, it marks the answer and asks you to correct it before the plan rests on it.
+
 when:
   - A project feels too big and you keep putting off the start.
   - You keep fixing symptoms and the problem comes back.
   - You have too many rules and checks and the work is not moving.
+  - You know what you want done but not what to do first this week.
+
+not_for:
+  - "Your plan already has dates and numbers you want to check: use the Work-backwards plan checker."
+  - "You have a long list of open questions and a clear goal: use the Big decisions first sorter."
+  - "You want to know how a finished plan could fail: use the Failure-first plan check."
 
 you_give:
-  - The goal or problem in your own words
-  - The fear or doubt that makes it feel big
+  - The goal or problem in your own words, however messy
+  - The fear or doubt that makes it feel too big
   - What you have already tried (optional)
+  - How many hours a week you can give (optional)
   - Customer or user words about the problem (optional)
 you_get:
-  - The root problem, found by five whys
   - The goal in one line
+  - The root problem, found by five whys, with any guesses marked
+  - The early sign you can still fix easily
   - A plan of small steps, each with a test
-  - One first move for this week, and one thing to stop forcing
+  - One first move for this week, one thing to stop forcing, and a check for the last stretch
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the problem and say what makes it feel too big. Be honest about the fear.
-  - Answer its why questions. Short answers work best.
-  - Do the first move this week. Come back and run the skill again on the next step.
+  - Describe the goal and say what makes it feel too big. Be honest about the fear.
+  - Check the five whys. Correct any answer marked as a guess.
+  - Do the first move this week. Then run the skill again on the next step.
+  - Once the first steps have dates, check them with the Work-backwards plan checker.
 
 how_it_works:
   - title: Names the goal
@@ -41,7 +52,7 @@ how_it_works:
   - title: Names the fear
     text: Asks what makes the project feel too big and writes it down.
   - title: Asks why five times
-    text: Follows each answer with why until it reaches a root cause that can be acted on.
+    text: Follows each answer with why until it reaches a root cause that can be acted on. Guesses are marked.
   - title: Finds an early sign
     text: Looks for the small trouble that is easy to deal with now.
   - title: Shrinks the first move
@@ -84,6 +95,24 @@ output_shape: |
   CHECKS MISSED
   <one line per check missed, or none>
 
+output_sample:
+  input:
+    - "The goal or problem in your own words"
+    - "What makes it feel too big"
+    - "What you have already tried (optional)"
+    - "Customer or user words about the problem (optional)"
+  prerequisites:
+    - "An AI chat. No files, web access or paid tools are needed."
+  output:
+    - {name: "The goal in one line", contains: "What done looks like. It is repeated on every step."}
+    - {name: "What makes it feel big", contains: "The fear or pile-up behind the problem, in your own words."}
+    - {name: "The five whys", contains: "Each why with its answer, ending at a root cause you can act on. Guesses are marked."}
+    - {name: "Early sign", contains: "The small trouble that is easy to fix now, and a small fix for it."}
+    - {name: "The steps", contains: "Small actions, each with a test for done and the goal line."}
+    - {name: "Stop forcing", contains: "One thing you are pushing against and can stop."}
+    - {name: "First move this week", contains: "One action, who does it and when."}
+    - {name: "Last-stretch check", contains: "What to look at before calling the work done, and who looks."}
+
 tweaks:
   - what: How honest the fear is
     how: Name the real worry, such as being judged or running out of money. It shapes the first step.
@@ -115,7 +144,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Asking why in turns and shrinking a step is plain text work any strong chat AI does well."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Asking why in turns and shrinking a step is plain text work any strong chat AI does well."}
   inputs:
     - "Notes on what you have already tried"
     - "A calendar showing real free hours this week"
@@ -126,3 +155,5 @@ terms:
     meaning: The deepest cause you can act on, found by asking why until the answers stop changing.
   - term: Five whys
     meaning: Asking why after each answer, about five times, to get past symptoms.
+  - term: Early sign
+    meaning: A small trouble that is easy to fix now and costly to fix later.

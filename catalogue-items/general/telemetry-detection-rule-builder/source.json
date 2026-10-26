@@ -1,0 +1,14 @@
+{
+  "repo": "msitarzewski/agency-agents",
+  "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+  "adaptation": "selected task methods; original profiles are background/provenance only",
+  "sources": [
+    {
+      "slug": "agency-security-threat-detection-engineer",
+      "path": "security/security-threat-detection-engineer.md",
+      "sha256": "b15c0d8be90232a64471d0947dd30cfcd9efeeb2dab2579bb415ca8beb7db7f1",
+      "licence": "MIT"
+    }
+  ],
+  "review": "reports/2026-10-25-agency-curation-technical.json"
+}

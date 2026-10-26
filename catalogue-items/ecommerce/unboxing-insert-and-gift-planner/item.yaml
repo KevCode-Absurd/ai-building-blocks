@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: performance_sheet, required: true}
   - {type: brand_brain, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
 uses: []

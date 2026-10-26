@@ -10,8 +10,11 @@ level: advanced
 inputs:
   - type: document
     required: true
+  - type: audit_report
+    required: false
 outputs:
   - type: audit_report
+  - type: copy_draft
 uses: []
 origin: imported
 source:

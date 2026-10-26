@@ -1,0 +1,162 @@
+name: Backend Architect agent
+summary: "Get a backend design with a right-sized setup, data tables, an API outline, a failure plan and a safe way to change the database."
+headline: Backend Architect agent
+subhead: "Say what your app must do, how many users you expect and what your team can run. It picks a setup to fit, sketches the data and API, and plans security, failures, monitoring and growth."
+job: build-software
+thinking: high
+thinking_why: It weighs architecture choices against team size and load, and checks failure and security cases. Use a model that can compare options and state its assumptions.
+explain: >-
+  The usual backend mistake is building for scale you do not have. A team of
+  three ends up running ten services. This Backend Architect agent starts from
+  the simplest design that meets your load and your team, then writes down how
+  to grow. A single app with clear modules is often enough. Microservices only
+  earn their cost when parts need to deploy, scale or be owned separately.
+
+
+  It also plans for the day things fail. For every call to another system, it
+  sets a time limit, a retry rule and a way to avoid doing the same job twice.
+  Database changes follow a step-by-step pattern so you can release without
+  downtime and roll back.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The method is
+  the original author's. AI Blocks adds an intake, a fixed answer layout and
+  review rules. Speed and uptime figures in the profile are examples. Your own
+  targets replace them.
+when:
+  - You are starting a new web or mobile app and need to pick an architecture and a database.
+  - Your single app is getting slow or hard to change and you wonder if you should split it.
+  - You need to plan a database change on a live system without downtime.
+  - You want a security and monitoring plan for the server side before launch.
+not_for:
+  - You want a software design that covers the whole product, with decision records. Use the Software Architect agent.
+  - You are designing an API for outside developers. Use the API Platform Engineer agent.
+  - You have one slow query to fix. Use the Database Optimizer agent or the Slow query fixer.
+  - You need working code today. Use the Backend builder.
+  - You need to change a live system. Ask an engineer with access, using this plan as the brief.
+you_give:
+  - What the app does and the main actions users take.
+  - Expected users and traffic now and in a year, as a rough guess.
+  - Your team size, skills and where you can run software (your cloud or host).
+  - Your existing stack, tables or code, if any (optional).
+  - Your must-haves, such as uptime, response time, privacy rules or budget.
+  - The third-party services your app must call, such as payments or email (optional).
+you_get:
+  - A recommended architecture with the reason, and a note on when to change it.
+  - A split of services or modules, with who owns which data.
+  - A data model sketch with keys, indexes and the main queries it must serve.
+  - An API outline with errors, paging and sign-in rules.
+  - A failure plan with time limits, retries and a plan for jobs that keep failing.
+  - A security, monitoring and growth plan, plus a safe path for each database change.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write what the app does, your team, your expected traffic and your must-haves. Paste your current schema or code if you have any.
+  - Say "Design the backend" for a new app, or "Review this backend and plan a migration" for a live one.
+  - Your AI asks once for anything missing. Unknown traffic stays marked as an assumption you can change.
+  - Read the architecture recommendation and its reason first. Check it against what your team can really run and pay for.
+  - Give the plan to the engineer who will build it. Code samples in it are examples to adapt, not tested code.
+how_it_works:
+  - title: Pin down needs and limits
+    text: It restates the app, the load, the team and the must-haves, and marks what it had to assume.
+  - title: Choose the architecture
+    text: It compares a single app, a modular app, services and serverless on team size, load and cost, then recommends the simplest that fits.
+  - title: Draw data ownership
+    text: It splits the system into parts and says which part owns which data, so two parts never write the same table.
+  - title: Sketch the data and API
+    text: It outlines tables, keys and indexes, and the API with errors, paging and retry-safe writes.
+  - title: Plan for failure
+    text: For each outside call it sets a time limit, a retry rule with waits, and a place for jobs that keep failing.
+  - title: Plan security and monitoring
+    text: It adds least-privilege access, encryption, sign-in rules, logs with request IDs, and service targets with alerts.
+  - title: Plan changes safely
+    text: It plans each database change in small steps, with a backfill, a check and a way back.
+output_shape: |-
+  NEEDS, LIMITS AND ASSUMPTIONS
+    <app and main actions> | <load now and in a year> | <team and hosting> | <must-haves> | <assumptions marked ASSUMED>
+
+  ARCHITECTURE CHOICE
+    <pattern> | <why it fits> | <what would make you change it>
+
+  PARTS AND DATA OWNERSHIP
+    <service or module> | <owns which data> | <talks to>
+
+  DATA MODEL
+    <table> | <key columns> | <indexes> | <queries it serves>
+
+  API OUTLINE
+    <endpoint> | <sign-in rule> | <errors and paging> | <retry-safe?>
+
+  FAILURE PLAN
+    <outside call> | <time limit> | <retry rule> | <failed-job handling>
+
+  SECURITY, MONITORING AND GROWTH
+    <control or target> | <how to check it> | <growth step and trigger>
+
+  MIGRATION PLAN
+    <change> | <steps in order> | <backfill and check> | <rollback>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - What your app does and the main actions users take
+    - Your expected traffic, team size and where you can host
+    - Your current schema or code (optional)
+    - Your must-haves, such as uptime, speed, privacy rules and budget
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - An engineer to build and test the design, because the agent writes a plan and runs nothing
+  output:
+    - name: Needs, limits and assumptions
+      contains: The app, load, team and must-haves restated, with every guess marked.
+    - name: Architecture choice
+      contains: The recommended pattern, why it fits and what would make you change it.
+    - name: Parts and data ownership
+      contains: Each service or module, the data it owns and who it talks to.
+    - name: Data model
+      contains: Tables, keys and indexes sketched, with the queries they serve.
+    - name: API outline
+      contains: Endpoints with sign-in rules, error handling, paging and retry-safe writes.
+    - name: Failure plan
+      contains: Time limits, retry rules and failed-job handling for each outside call.
+    - name: Security, monitoring and growth
+      contains: Access and encryption rules, service targets and alerts, and the steps to grow.
+    - name: Migration plan
+      contains: Each database change in safe steps, with a backfill, a check and a rollback.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your schema or code and get a design that fits what you already run.
+  inputs:
+    - Your current database schema.
+    - A list of the five slowest or most important user actions.
+    - Your monthly hosting budget.
+terms:
+  - term: Modular monolith
+    meaning: One app that you deploy as a single unit, split inside into clear parts.
+  - term: Microservices
+    meaning: Many small apps that deploy and scale on their own and talk over a network.
+  - term: Circuit breaker
+    meaning: A rule that stops calling a failing service for a while so it can recover.
+  - term: Dead-letter queue
+    meaning: A holding place for jobs that keep failing, so you can inspect them without blocking others.
+  - term: Idempotent
+    meaning: Safe to repeat. Running the same request twice gives the same result as once.
+  - term: Expand and contract
+    meaning: A safe way to change a database. Add the new shape, move the data, then remove the old shape.
+  - term: Service level objective (SLO)
+    meaning: A target for service quality, such as the share of requests that must succeed.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Starting size
+    how: Say if you want to start as one app and split later, or if you already know you need separate services.
+  - what: Preferred stack
+    how: Name the database and language your team knows. The design then builds on them.
+improve:
+  - Keep the architecture choice and its reason in your repo as a short decision note, and paste it back in the next run.

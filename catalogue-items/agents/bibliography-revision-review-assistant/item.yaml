@@ -1,28 +1,27 @@
 slug: bibliography-revision-review-assistant
 name: Bibliography revision review assistant
-summary: A manuscript reference cross check, duplicate candidates and unresolved source requests.
+summary: "Check your manuscript's citations against its reference list and cited papers. Get a mismatch table, possible duplicates and sources to request."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
   - type: source_text
     required: false
 outputs:
-  - type: document
-  - type: copy_draft
   - type: audit_report
+  - type: document
 uses:
   - check-manuscript-reference-consistency
   - unsupported-claim-spotter
 steps:
   - uses: check-manuscript-reference-consistency
-    note: "Run when: The manuscript citation set, style requirement or reference metadata changes."
+    note: Reads each supplied paper, then cross-checks the text and the list. Runs when the citation set, the style or the reference details change.
   - uses: unsupported-claim-spotter
-    note: Run check-manuscript-reference-consistency for changed evidence or a due review. If a citation supports a changed substantive claim, review that claim against the supplied source after the reference consistency check. Do not treat a valid DOI as proof of the claim.
+    note: Runs only when a citation backs a changed claim. Checks that claim against the supplied paper, because a valid DOI does not show the paper says it.
 schedule: At each user-requested manuscript revision. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

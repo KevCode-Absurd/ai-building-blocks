@@ -14,6 +14,8 @@ inputs:
     required: false
   - type: persona
     required: false
+  - type: design_file
+    required: false
 outputs:
   - type: plan
   - type: copy_draft
@@ -24,11 +26,11 @@ uses:
   - in-app-tour-designer
 steps:
   - uses: first-use-onboarding-designer
-    note: Use supplied user tasks, the first useful result and ethical constraints to choose the smallest onboarding path. Mark missing audience evidence before proposing behavioral changes.
+    note: Use supplied user tasks, the first useful result and ethical constraints to choose the smallest onboarding path. Mark missing audience evidence before proposing behavioral changes. Hands step 2 the first-use path, one instruction and its control per line.
   - uses: plain-words-interface-rewriter
-    note: Rewrite the selected screens and prompts using the product vocabulary people already understand.
+    note: Rewrite the screens and prompts on step 1's path using the product vocabulary people already understand. Hands step 3 the new labels and prompts.
   - uses: in-app-tour-designer
-    note: Plan optional guidance for the revised flow, with skip, resume and completion behavior.
+    note: Plan optional guidance for the revised flow, with skip, resume and completion behavior. Uses step 1's path for what to teach and step 2's labels for the tip wording.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps each hand-off and picks what to record.
 new_slug: shipment-tracking-planner
 name: Shipment tracking planner
-summary: Describe your shipments. Get what to track at each step, how to tag
-  items, and alerts for late or lost goods.
+summary: "Plan shipment tracking: what to record at each handover, how to tag items, and which alerts flag late or lost goods. Built for recalls and audits."
 job: plan-supply-chain
 headline: Shipment tracking planner
-subhead: A tracking plan that shows where your goods are at each step and warns
-  you when something is late or lost. It also gives you the trail you need for a
-  recall or an audit.
+subhead: A tracking plan that shows where your goods are at each step and warns you when something is late or lost. It also gives you the trail you need for a recall or an audit.
 explain: |
   A tracking plan that shows where your goods are at each step and warns you when something is late or lost. It also gives you the trail you need for a recall or an audit.
 
@@ -18,6 +15,10 @@ when:
   - A regulator or buyer wants proof of where a batch has been.
   - You need to find every shipment holding a recalled lot.
   - You want alerts before a delay becomes a complaint.
+not_for:
+  - "You only track single parcels: use the carrier's own tracking page or app, since it already shows where each parcel is."
+  - "You need live tracking across many carriers: use a transport management system or a control tower tool, because this gives a plan and not live data."
+  - "You want a full compliance programme for FDA or EU rules: ask a compliance specialist, since this plans tracking and does not certify anything."
 you_give:
   - What you ship and how it moves
   - The level of detail you need
@@ -29,7 +30,29 @@ you_get:
   - Alert rules for late or lost goods
   - A plan for who sees tracking data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code running is needed.
+  - "Describe what you ship, how it moves, and how fine the detail should be: pallet, case, unit or serial number."
+  - Add your current systems and any rules you must follow, if you have them.
+  - Read the event table first. Check each step has an owner and an alert rule.
+  - Fix any step that does not match how your goods really move, then share the plan with your team.
+output_sample:
+  input:
+    - What you ship and how it moves from supplier to customer
+    - "How fine the detail should be: pallet, case, unit or serial number"
+    - Your current systems, such as ERP, warehouse or transport software (optional)
+    - Rules you must follow, such as FDA, EU MDR or FSMA (optional)
+  output:
+    - name: Business drivers and scope
+      contains: Why you track, what you track, and the level of detail, from pallet to serial number.
+    - name: Tracking and tracing approach
+      contains: Which questions you answer going forward (where is it now) and backward (where did it come from).
+    - name: Event list
+      contains: A table of each handover with event, location, tag or ID, owner, and alert rule with threshold.
+    - name: Tagging and data capture
+      contains: How items are labelled and read, using barcodes, RFID or sensors, based on your systems.
+    - name: Alert rules
+      contains: Which events trigger a warning for late, lost or stuck goods.
+    - name: Recall and audit trail
+      contains: How you would find every shipment that holds a given lot or batch.
+    - name: Visibility plan
+      contains: Who sees which tracking data, inside the company and outside it.

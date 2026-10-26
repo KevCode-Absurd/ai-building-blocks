@@ -1,0 +1,138 @@
+name: Workflow Optimizer agent
+summary: Improve one work process. Get a step map, ranked bottlenecks, what to automate and small tests to try, from your numbers.
+headline: Workflow Optimizer agent
+subhead: Describe one process step by step, with who does each step and how long it takes. It maps the flow, ranks the bottlenecks, picks steps worth automating and plans small tests of each fix. You get a workflow review you can act on this month.
+job: organise-work
+thinking: high
+thinking_why: It must tell real bottlenecks from guesses and work out savings only from your numbers. Use a model that reasons well and shows its sums.
+explain: |-
+  Workflow optimization means making one repeated process faster, cleaner and less work for the people in it. Most teams jump to a tool, such as a new app or an automation, before they know which step is the problem. This agent starts with the map. It lists each step, who does it, how long it takes, how long work waits before it and how often it goes wrong.
+
+  Then it ranks the bottlenecks by how much they slow the whole flow, not by how annoying they are. For each one it proposes a small test: one change, one owner, one number to measure and a short trial. It also marks steps that suit automation, which are rule-based and repeat often. It keeps a person in the loop where judgment matters.
+
+  It does not invent savings. The original profile includes sample code with preset time cuts and percent targets. Those are the author's examples. This agent calculates a saving only from your numbers and shows the arithmetic. With no numbers, it says "not enough data" and tells you what to time first.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Work moves slowly between steps or people, such as approvals, handoffs or review queues.
+  - Your team does the same manual task every week, and you want to know what is worth automating.
+  - You have a quality problem, such as rework or errors at one step, and want a short list of fixes to test.
+  - You must explain to a boss or client why a process is slow and what you plan to change.
+not_for:
+  - You want the root cause of a slow process, with baseline numbers measured first. Use the Operations Manager agent.
+  - You only want each step marked as value or waste, fast. Use the Process waste finder.
+  - You want to see why deadlines slip, week after week. Use the Weekly project delay evidence assistant.
+  - You want the automation itself set up in Zapier or Make. Use the Automation flow sketcher after this review.
+you_give:
+  - One process, in plain words, with the steps in order and who does each one
+  - Time per step, split into work time and waiting time (rough numbers are fine)
+  - How often the process runs, and what goes wrong, such as errors or redo
+  - The tools used at each step, such as email, a spreadsheet or a ticket system
+  - Your goal, such as faster turnaround, fewer errors or less manual work
+  - An export with real times, such as ticket dates (optional)
+you_get:
+  - A step map of the process as it runs today, with times and who does what
+  - A ranked list of bottlenecks, each with evidence, effect and effort to fix
+  - A short list of steps that suit automation, and ones that should stay with a person
+  - A set of small tests to run, each with one change, an owner, a measure and a trial length
+  - Savings worked out from your numbers, with the sums shown
+  - Facts still missing and what to time first
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe one process, step by step, as it runs now, not as it should run. Add who does each step and the time it takes, even if rough.
+  - Say your goal and how often the process runs. Attach a ticket or task export if you have one. No code is needed.
+  - Read the bottleneck list first. Check each one with the people who do the work, and fix the map if it is wrong.
+  - Pick one or two tests, not all. Run them for the trial length and measure the same number before and after.
+  - Ask the Automation flow sketcher to lay out any step you decide to automate.
+how_it_works:
+  - title: Map the current flow
+    text: It lists each step with who does it, work time, wait time and error points. Gaps are asked once, then marked MISSING.
+  - title: Set the baseline
+    text: It records today's time, volume and error figures from you, and lists the numbers it still lacks.
+  - title: Rank the bottlenecks
+    text: It finds the steps that hold up the whole flow, and sorts them by effect on the end result and effort to fix.
+  - title: Pick what to automate
+    text: It marks rule-based, repeated steps as candidates and keeps judgment calls with people. It names the kind of tool, not a bought plan.
+  - title: Design the tests
+    text: For each fix it writes one change, one owner, one measure and a trial length, with what would count as a success.
+  - title: Check the people side
+    text: It notes who is affected, what training or notice they need, and what could go wrong in the rollout.
+output_shape: |-
+  WORKFLOW REVIEW
+    Process <name> | Goal <goal> | Runs <how often> | Steps <count>
+
+  CURRENT FLOW
+    <step> | <who> | <work time> | <wait time> | <error or redo> | <tool>
+
+  BOTTLENECKS (ranked)
+    <step> | <evidence from your numbers> | <effect on the whole flow> | <effort to fix>
+
+  AUTOMATION CANDIDATES
+    <step> | <why it suits automation or stays with a person> | <kind of tool>
+
+  TESTS TO RUN
+    <change> | <owner> | <measure> | <trial length> | <what counts as a success>
+
+  SAVINGS FROM YOUR NUMBERS
+    <calculation shown> | <result or "not enough data">
+
+  ROLLOUT NOTES AND FACTS MISSING
+    <who is affected and what they need> | <number still to measure>
+output_sample:
+  input:
+    - One process, step by step, with who does each step
+    - Time per step, work time and waiting time
+    - How often it runs and what goes wrong
+    - Your goal, and a ticket or task export (optional)
+  output:
+    - name: Workflow review
+      contains: The process, your goal, how often it runs and how many steps it has.
+    - name: Current flow
+      contains: Each step with who does it, work time, wait time, errors and the tool used.
+    - name: Bottlenecks
+      contains: Steps that hold up the flow, ranked by effect and effort, with your numbers as evidence.
+    - name: Automation candidates
+      contains: Rule-based steps that suit a tool, and judgment steps that should stay with a person.
+    - name: Tests to run
+      contains: Each fix as one change, owner, measure, trial length and the result that counts as success.
+    - name: Savings from your numbers
+      contains: Time or cost saved, with the sum shown, or "not enough data" if numbers are missing.
+    - name: Rollout notes and facts missing
+      contains: Who is affected and what they need, plus the numbers still to measure.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a spreadsheet of ticket dates or task times and work out wait times from your real data.
+  inputs:
+    - An export of tasks or tickets with start and end dates.
+    - The written procedure for the process, if one exists.
+    - A note from the people who do the work on where they get stuck.
+terms:
+  - term: Bottleneck
+    meaning: The step that limits how much the whole process can do. Speeding up other steps does not help.
+  - term: Wait time
+    meaning: Time when the work sits and nobody is working on it, such as waiting for an approval.
+  - term: Rework
+    meaning: Work that has to be done again because of a mistake or a missing detail.
+  - term: Automation
+    meaning: Letting software do a rule-based step, such as copying data between apps, so a person does not have to.
+  - term: Trial
+    meaning: A short test of one change, with the same number measured before and after.
+tweaks:
+  - what: Scope
+    how: Review one process at a time, such as "approve a purchase order". A whole department in one go gives vague answers.
+  - what: Numbers
+    how: Time five real runs if you can. Real times beat guesses, and the savings sums then mean something.
+  - what: Automation limits
+    how: Say what you cannot automate, such as legal sign-off or client calls, so it leaves those with a person.
+improve:
+  - Keep the review and the test results with the process document. Next time, start from the last numbers.
+  - After each trial, paste the new numbers and ask it to compare them with the baseline.
+  - Turn the winning change into a short written procedure so the gain does not fade.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

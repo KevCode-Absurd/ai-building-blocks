@@ -1,6 +1,6 @@
 new_slug: product-vocabulary-sheet-builder
 name: "Product vocabulary sheet builder"
-summary: "Paste a book, manual or product page. Get a sorted sheet of its own phrases, ready for headlines, proof and demos."
+summary: "Turn a manual, book or product page into a product vocabulary sheet: strong phrases in your own words, sorted for headlines, proof and demos."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It sorts and shortens real material, and it must keep each phrase traceable to its source."
@@ -17,6 +17,10 @@ when:
   - You are about to write copy and have a manual, book or long page you have not mined.
   - You have a founder talk or transcript full of good lines nobody has used.
   - Your headlines feel generic and you suspect better ones are already in your material.
+not_for:
+  - "You have no source material yet, only a short brief: use the Website brand brain builder first, then bring the result here."
+  - "You want finished ad headlines or hooks from scratch: use the Ad headline writer or the Shared want hook mapper."
+  - "You want claims checked against ad rules before you publish: use the Meta ads compliance checker."
 
 you_give:
   - "The product material: a book, manual, spec sheet, product page or transcript"
@@ -33,6 +37,26 @@ how_to_use:
   - Add reviews if you have them.
   - Check that each phrase shown appears in the source.
   - Take the headline pile into "Ad headline writer" or "Shared want hook mapper".
+output_sample:
+  input:
+    - "Your product material: a book, manual, spec sheet, product page or transcript"
+    - Section titles or page numbers kept in the paste
+    - Customer reviews or buyer words (optional)
+  output:
+    - name: Source and phrase list
+      contains: What was read, then numbered phrases copied as written, each with its section or page.
+    - name: Our own ideas
+      contains: Ideas that are not in the source, kept in a separate list and marked as ours.
+    - name: Piles
+      contains: Phrase numbers sorted into headlines, long copy, side notes, proof and demonstrations, with a use for each pile.
+    - name: Most dramatic points
+      contains: Five to eight points that would make a reader sit up, with a line on why.
+    - name: Ten-word headlines
+      contains: A headline of ten words or fewer for each long idea, with the phrase number it came from.
+    - name: Missing
+      contains: What the source does not cover, such as proof or numbers a claim needs.
+    - name: Checks missed
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: Listens to the source

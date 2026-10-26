@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It has to line up several versions and trace each clause.
 new_slug: contract-change-tracer
 name: Contract change tracer
-summary: Give it a contract and its amendments. Get what changed and each
-  clause's latest wording. Not legal advice.
+summary: Trace how a contract changed across its amendments. See each change in date order and the latest wording of any clause. Not legal advice.
 job: check-contracts
 headline: Contract change tracer
-subhead: Give it a contract and its amendments. Get what changed and each
-  clause's latest wording. Not legal advice. Bring the base contract. Use the
-  result to plan your next step.
+subhead: Give it a contract and its amendments. Get what changed and each clause's latest wording. Not legal advice. Bring the base contract. Use the result to plan your next step.
 explain: |
   A clear record of how a contract changed over time: what each amendment did, and the wording that rules today for any clause you ask about. You stop flipping between five PDFs to learn what the deal now says.
 
@@ -18,6 +15,10 @@ when:
   - You are taking over a client account and need to know its current contract.
   - Someone claims a clause was changed and you need to check.
   - You are preparing for a renewal and need the live wording.
+not_for:
+  - "You want new amendments drafted: ask a lawyer, because this tool only reads what exists."
+  - "You want the current contract checked against your own rules: ask a lawyer or use a contract review step, since this tool only looks at history."
+  - "Two amendments conflict and you need to know which one wins: take it to a lawyer, because this tool flags the conflict but does not decide it."
 you_give:
   - The base contract
   - All amendments and side letters
@@ -29,10 +30,29 @@ you_get:
   - Clause history with section cites
   - Watch items
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - Where the skill points to /commercial-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions.
+  - Upload the base contract and every amendment. You can also paste the text. No code, web access or paid tool is needed.
+  - Name a clause to trace, such as indemnity. Skip this to get a summary of all changes.
+  - Check the order of the documents the AI used. Fix it if it guessed wrong.
+  - Check each quote and section number against your files before you rely on it.
+  - Take any watch items to a lawyer.
+output_sample:
+  input:
+    - Your base contract
+    - Every amendment, addendum and side letter
+    - A clause to trace, such as indemnity or termination (optional)
+  prerequisites:
+    - Files you can upload or paste as text, such as PDFs
+  output:
+    - name: Header
+      contains: The other party, the agreement type, the base date, the number of amendments and the date of the last change.
+    - name: What changed, in date order
+      contains: For each amendment, its purpose and each material change with section numbers, in plain words.
+    - name: Net current state
+      contains: A table of each clause, where it stands now, its section and when it last changed.
+    - name: Provision trace
+      contains: "For one named clause: the original quote, each change as was and now, and what changed in practice."
+    - name: Current controlling language
+      contains: The exact latest wording of the clause, with its section and source document, plus a plain summary.
+    - name: Watch items
+      contains: Conflicts, shifted section numbers or odd party changes found between documents, each with a section reference.

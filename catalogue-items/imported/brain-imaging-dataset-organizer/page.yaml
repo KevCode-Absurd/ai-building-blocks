@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a strict standard but needs judgement on edge cases.
 new_slug: brain-imaging-dataset-organizer
 name: Brain imaging dataset organizer
-summary: Give it brain imaging files. Get them named, laid out and described to
-  the BIDS standard, with problems flagged.
+summary: Turn raw brain imaging files into a BIDS dataset, with correct names, folders and metadata files, and a list of problems to fix before you share.
 job: research-topics
 headline: Brain imaging dataset organizer
-subhead: Give it brain imaging files. Get them named, laid out and described to
-  the BIDS standard, with problems flagged. Bring your raw imaging or recording
-  files. Use the result to plan your next step.
+subhead: Give it brain imaging files. Get them named, laid out and described to the BIDS standard, with problems flagged. Bring your raw imaging or recording files. Use the result to plan your next step.
 explain: |
   Get a pile of brain imaging and related files named, laid out and described to the BIDS standard, so other people and tools can read them at once. Problems are flagged before you share or submit.
 
@@ -18,6 +15,10 @@ when:
   - A repository asks for BIDS before you can submit.
   - You must add the metadata files BIDS requires.
   - You want a check that finds naming and layout errors.
+not_for:
+  - Your data is already in BIDS and the validator passes. You only need to query it, so use PyBIDS directly.
+  - You need to analyse scans or run statistics. Use your usual analysis software, because this only organises and checks files.
+  - You must meet one archive's own rules. Read that archive's submission guide first, since rules differ by archive.
 you_give:
   - Your raw imaging or recording files
   - Details on the study, subjects and sessions
@@ -29,8 +30,33 @@ you_get:
   - A list of validation problems
   - Notes on what to fix
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read files on your computer.
+  - Open Claude, ChatGPT or Gemini with a mode that can run code and read your files. Plain chat can only give advice.
+  - Paste the skill into the chat, or upload the skill folder if your AI accepts files.
+  - Add your files or folder, then say what the study is, how many subjects and sessions, and which kind of data it is.
+  - Name your target archive if you have one, so your AI can note any extra rules to check.
+  - Read the problem list. Fix or approve each item, then ask your AI to run the validator again.
+  - Run it until the report is clean, then check the archive's own rules before you submit.
+output_sample:
+  input:
+    - Your raw imaging or recording files, such as DICOM, MRI, EEG or MEG
+    - Details on your study, subjects and sessions
+    - The kind of data you have, such as MRI or EEG
+    - The archive you plan to submit to (optional)
+  prerequisites:
+    - An AI that can run code and read files on your computer
+    - Python 3.10 or newer
+    - dcm2niix, only if you start from DICOM files
+    - Internet access to install the tools
+  output:
+    - name: BIDS folder layout
+      contains: Your files renamed and placed in subject, session and data type folders that follow the BIDS standard.
+    - name: dataset_description.json
+      contains: The required file at the root with the dataset name and the BIDS version.
+    - name: participants.tsv
+      contains: A tab-separated table listing each subject in the dataset.
+    - name: Sidecar JSON files
+      contains: Scan or recording settings saved next to each data file, such as timing and phase encoding direction.
+    - name: Validator report
+      contains: Problems found by the BIDS validator, each with the file, the issue and how serious it is.
+    - name: Fix notes
+      contains: Plain steps to fix each problem, such as missing metadata or badly formatted TSV files.

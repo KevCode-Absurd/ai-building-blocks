@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs searches across set sources and lists what each returned.
 new_slug: scholarly-database-searcher
 name: Scholarly database searcher
-summary: Ask a research question. Get papers, preprints, citations and open full
-  text from 18 free sources, with the search shown.
+summary: Search PubMed, arXiv, OpenAlex and 15 more free sources for papers, citations and open full text. Every query is shown so you can repeat it.
 job: research-topics
 headline: Scholarly database searcher
-subhead: A literature search you can repeat and defend. Ask a research question
-  and get papers, preprints, citations and open full text from eighteen free
-  sources, with the exact queries shown so anyone can rerun them.
+subhead: A literature search you can repeat and defend. Ask a research question and get papers, preprints, citations and open full text from eighteen free sources, with the exact queries shown so anyone can rerun them.
 explain: |
   A literature search you can repeat and defend. Ask a research question and get papers, preprints, citations and open full text from eighteen free sources, with the exact queries shown so anyone can rerun them.
 
@@ -18,6 +15,10 @@ when:
   - You have a DOI and want the open access full text if it exists.
   - You need citation counts and related papers for a topic.
   - You want to check whether a journal is open access.
+not_for:
+  - "You need medical advice or a systematic review sign-off: ask a qualified person to check the results, and use PubMed directly for the formal search record."
+  - "You need a paywalled paper: ask your library or the author, because this only finds open access full text."
+  - "You want a summary or a written review of the papers: ask your AI to write it from the papers you pick after this search."
 you_give:
   - Your research question or topic
   - DOIs or titles (optional)
@@ -29,8 +30,29 @@ you_get:
   - Citation data
   - The queries used, so you can repeat them
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can call public web APIs.
+  - Open Claude, ChatGPT or Gemini in a chat that can run Python code and reach the web. Paste in the skill text.
+  - Type your research question. Add a DOI, a date range or a field limit if you have one.
+  - Add free API keys if you have them. Most sources need no login, but CORE full text needs a free CORE key.
+  - Read the Retrieval Summary first. It tells you which sources were searched and which came back empty.
+  - Check the Provenance section and save the queries. Use them to rerun the search later.
+output_sample:
+  input:
+    - Your research question or topic
+    - A DOI, PMID, arXiv ID or paper title (optional)
+    - A date range or field limit (optional)
+    - Free API keys to raise limits or get CORE full text (optional)
+  prerequisites:
+    - An AI that can run Python 3.11 or newer and reach the web
+    - Network access and curl
+    - A free CORE API key, only if you want CORE full text
+  output:
+    - name: Retrieval Summary
+      contains: The question, which databases were searched, and which ones were empty or could not be reached.
+    - name: Results
+      contains: Matching papers and preprints, grouped by database, with identifiers, abstracts, citation data and open access links where they exist.
+    - name: PubMed
+      contains: Biomedical matches from PubMed, shown with the exact query that found them.
+    - name: Unpaywall
+      contains: Whether an open access copy of a paper exists, and the link to it.
+    - name: Provenance
+      contains: The endpoints, parameters, identifiers and access date, so anyone can rerun the search.

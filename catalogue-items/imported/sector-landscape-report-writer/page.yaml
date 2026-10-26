@@ -2,36 +2,106 @@ thinking: medium
 thinking_why: It gathers facts and structures a report.
 new_slug: sector-landscape-report-writer
 name: Sector landscape report writer
-summary: Name an industry. Get a report on its size, main players, competition
-  and trends.
+summary: Name an Indian industry. Get a sector report on market size, main players, competition and trends, with a source beside each figure.
 job: money-and-investing
 headline: Sector landscape report writer
-subhead: An industry report showing how big the sector is, who the main players
-  are, how they compete and where it is heading. This version is set up for
-  Indian markets.
+subhead: Give it a sector, such as Indian cement, and say who the report is for and how deep it should go. It sizes the market, maps the main players and how they compete, and lists trends and risks. You get a report with a company table and a source beside each figure.
 explain: |
-  An industry report showing how big the sector is, who the main players are, how they compete and where it is heading. This version is set up for Indian markets. It uses the April to March fiscal year and lakh and crore units, and it names gaps with no Indian match instead of using a stand-in.
+  A sector landscape report shows how big an industry is, who the main players are, how they compete and where it is heading. People search for it as a sector overview or an industry report. This version is set up for Indian markets, so fiscal years run April to March and money is shown in lakh and crore.
 
-  You set the scope first: sector, purpose, depth from 5 to 30 pages, and a neutral view or a theme. Then it covers market size and growth with sources, how the industry is built, and trends. It profiles the top 5 to 10 companies with revenue, growth, margin and share, and explains how the rivalry is shifting.
+  You set the scope first: the sector, the purpose, the depth from 5 to 30 pages, and a neutral view or a theme. It then covers market size and growth, how the industry is built, and the trends and risks. It profiles the top 5 to 10 companies with revenue, growth, margin and share, and explains how rivalry is shifting.
+
+  Market size, multiples and deal figures often sit behind paid data. The skill marks any figure it cannot source instead of guessing it.
 when:
-  - You need a client-ready overview of an Indian industry.
-  - You are researching a sector before looking at individual companies.
+  - A client wants an overview of an Indian industry before a decision.
+  - You are researching a sector before you look at single companies.
   - You need a market map with the top players and their margins side by side.
-  - You want to test a theme, such as infrastructure spending, against the
-    sector.
+  - You want to test a theme, such as infrastructure spending, against one sector.
+not_for:
+  - You only care about one company. Use the Company stock analyst.
+  - You need a full market study with a survey and a sizing model. Use the Market research report writer.
+  - You want a buy or sell call. This report gives views to test, not a rating or target price.
 you_give:
   - The sector or sub-sector
-  - Report purpose and depth
-  - Neutral view or specific theme
-  - Public only or private companies too
-  - Your data sources (optional)
+  - What the report is for and how deep it should go
+  - A neutral view or a specific theme
+  - Public companies only, or private ones too
+  - Your own data sources or company list (optional)
 you_get:
-  - A market size and growth section
-  - Industry structure and value chain
-  - Company profile table
+  - A market size and growth section with sources and dates
+  - Industry structure and a value chain map
+  - A table of the top 5 to 10 companies
   - Trends, risks and competitive dynamics
+  - A list of figures that still need a source
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Add this skill, or paste the text of SKILL.md into a new chat.
+  - Name the sector and answer five scope questions: purpose, depth, view, public or private companies, and any data you hold.
+  - Let your AI search the web if it can. Attach any research or filings you own, so figures come from named sources.
+  - Read the company table and check three figures against each company's own results. Look for the fiscal year beside each one.
+  - Fix every line marked MISSING or UNSOURCED before you send it. Then ask for the Word or PowerPoint version.
+how_it_works:
+  - title: Set the scope
+    text: It confirms sector, purpose, depth, angle and which companies to cover.
+  - title: Size the market
+    text: It writes market size, growth, segments, structure, value chain, barriers and trends, with a source for each number.
+  - title: Profile the players
+    text: It builds a table of the top 5 to 10 companies and a short profile of each.
+  - title: Set valuation context
+    text: It adds sector multiples and recent deals where it can source them, and marks the rest.
+  - title: Raise views to test
+    text: It lists debates, themes and catalysts as research views, not advice.
+  - title: Package the report
+    text: It lays out the report, charts and an appendix, using Indian fiscal years and units.
+output_shape: |
+  Scope: <sector>, <purpose>, <depth>, <angle>
+  Market overview: <size and growth with source and date>, <segments>, <structure>
+  Trends: <3 to 5 tailwinds>, <headwinds>, <regulation>
+  Company table: <company> | <revenue Rs Cr, FY> | <growth> | <EBITDA margin> | <share> | <edge>
+  Competitive dynamics: <how rivals compete>, <who gains share>
+  Valuation context: <multiples with date>, <recent deals>
+  Views to test: <debates>, <catalysts>
+  Unsourced figures: <list of gaps>
+output_sample:
+  input:
+    - The sector or sub-sector you want covered
+    - Purpose, depth and view (neutral or a theme)
+    - Public companies only, or private ones too
+    - Your own research, filings or data sources (optional)
+  prerequisites:
+    - An AI that can search the web or read your files, so figures can be sourced
+  output:
+    - name: Scope
+      contains: Sector, purpose, depth, angle and the list of companies covered.
+    - name: Market overview
+      contains: Market size, growth, segments, industry structure, value chain and barriers, with sources.
+    - name: Key trends
+      contains: Three to five tailwinds, plus headwinds, technology shifts and rule changes.
+    - name: Company comparison table
+      contains: Revenue, growth, margin and share for the top players, with the fiscal year beside each.
+    - name: Competitive dynamics
+      contains: How rivals compete and who is gaining or losing share.
+    - name: Valuation context
+      contains: Sector multiples and recent deals, or a note that they need a paid source.
+    - name: Views to test
+      contains: Debates and catalysts framed as research views, not advice.
+    - name: Unsourced figures
+      contains: Every number that still needs a source before you share the report.
+works_best_with:
+  tools:
+    - name: Claude
+      why: It keeps a long report in order and can build Word or Excel files when file tools are on.
+    - name: ChatGPT
+      why: Its web search can pull recent figures and name the source.
+  inputs:
+    - Annual reports or investor decks for the top companies
+    - A trade body or government report on the sector
+    - Your client's name and decision, so the "so what" fits
+terms:
+  - term: TAM
+    meaning: Total addressable market. The most sales the whole market could hold.
+  - term: CAGR
+    meaning: Compound annual growth rate. The yearly growth that links two years.
+  - term: EV/EBITDA
+    meaning: A price tag for a company compared with its trading profit.
+  - term: Lakh and crore
+    meaning: Indian units. One lakh is 100,000. One crore is 10,000,000.

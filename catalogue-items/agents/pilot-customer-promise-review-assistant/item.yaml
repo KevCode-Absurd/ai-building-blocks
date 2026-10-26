@@ -1,35 +1,36 @@
 slug: pilot-customer-promise-review-assistant
 name: Pilot customer promise review assistant
-summary: A customer promise register, conflicting commitments and update drafts.
+summary: "Track every promise made to a pilot customer, spot conflicts and see what is proved delivered. Get update drafts for what changed."
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: document
     required: true
   - type: meeting_notes
     required: false
-  - type: question
+  - type: spreadsheet
     required: false
 outputs:
-  - type: plan
+  - type: audit_report
   - type: document
 uses:
   - track-promises-made-to-pilot-customers
   - handover-note-writer
 steps:
   - uses: track-promises-made-to-pilot-customers
-    note: "Run when: An accepted pilot commitment changes or actual delivery evidence arrives."
+    note: "Run when an accepted promise changes or proof of delivery arrives. It lists each explicit promise with its source, owner and due date, then drafts updates for only what changed. A request or sales line is not a promise, and a promise is delivered only with a dated record. Its register is what the handover note reads."
   - uses: handover-note-writer
-    note: Run track-promises-made-to-pilot-customers for changed evidence or a due review. If responsibility transfers, prepare the new owner handover and preserve unaccepted assignments as proposals. Do not tell customers an unverified promise is delivered.
+    note: "Run when a promise changes hands. It writes a handover note with what is promised, what is due and where proof lives. Uses the register from step 1 (not your brief). An owner who has not accepted stays a proposal."
 schedule: At a user-requested pilot commitment review. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form
   - Changing a live account, calendar, task, permission or published document
   - Spending money, releasing a payment or signing a contract
   - Starting or changing any recurring schedule
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

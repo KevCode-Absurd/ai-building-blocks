@@ -1,6 +1,6 @@
 new_slug: signup-popup-builder
 name: "Signup popup builder"
-summary: "Give it your offer and order value. Get desktop and mobile popup specs, copy and tests."
+summary: "Build a signup popup that wins email subscribers. Give it your offer and order value. You get desktop and mobile specs, copy and a test plan."
 job: write-emails
 thinking: medium
 thinking_why: "It applies a set of rules to your offer and writes short copy. A mid-size model does this well."
@@ -17,6 +17,10 @@ when:
   - You are launching a store and need a first popup.
   - Your popup signup rate is low and you do not know what to change first.
   - You want a mobile version that is built for phones, not shrunk from desktop.
+not_for:
+  - You need a lead form for a B2B service. Use a plain contact form on your site instead.
+  - You want the emails that send after someone signs up. Write the welcome emails in your email tool first, then come back.
+  - You have no email tool yet. Set one up first, since the popup needs a list to write to.
 
 you_give:
   - Your offer and gross margin
@@ -37,6 +41,30 @@ how_to_use:
   - Say which email and popup tools you use, and which pages to exclude.
   - Build the desktop and mobile versions from the specs, with the consent line in place.
   - Run the first test, wait for the sample size, and judge it on the whole welcome flow.
+output_sample:
+  input:
+    - Your offer and your gross margin
+    - Your average order value
+    - Your email tool and popup tool
+    - Pages to hide the popup from, and the countries you sell to
+    - Your monthly visitors (optional)
+  output:
+    - name: OFFER CHECK
+      contains: Your offer weighed against your margin and order value, with a verdict on whether to run it.
+    - name: DESKTOP SPEC
+      contains: The yes or no step, email step, optional phone or name step, button text, timing and repeat rule.
+    - name: MOBILE SPEC
+      contains: Button size, text size, the small tab that reopens the form, and mobile timing.
+    - name: TARGETING
+      contains: Who should not see the popup, such as subscribers, cart, checkout, wholesale and countries you skip.
+    - name: CONSENT LINE
+      contains: A short line for your region on what people sign up for and how to leave.
+    - name: SUCCESS PAGE
+      contains: The headline and lines that tell people the offer is on its way and where to look.
+    - name: FIRST THREE TESTS
+      contains: The first three tests in order, each with a sample size and a rule for calling a winner.
+    - name: MISSING
+      contains: Any input you did not give, such as margin, order value, tools or regions.
 
 how_it_works:
   - title: Checks the offer first

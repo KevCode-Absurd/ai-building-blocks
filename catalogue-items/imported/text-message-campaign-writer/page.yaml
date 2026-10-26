@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans flows and writes short messages.
 new_slug: text-message-campaign-writer
 name: Text message campaign writer
-summary: Say your goal. Get SMS or WhatsApp flows for welcome, cart, win-back
-  and promos, with consent rules.
+summary: Plan text message campaigns for welcome, cart, win-back and promo sends. Get message copy, timing and a consent check for SMS or WhatsApp.
 job: write-emails
 headline: Text message campaign writer
-subhead: Say your goal. Get SMS or WhatsApp flows for welcome, cart, win-back
-  and promos, with consent rules. Bring your business type and list size. Use
-  the result to plan your next step.
+subhead: Say your goal. Get SMS or WhatsApp flows for welcome, cart, win-back and promos, with consent rules. Bring your business type and list size. Use the result to plan your next step.
 explain: |
   A set of text message flows you can load into your SMS tool: welcome, abandoned cart, post-purchase, win-back and promo sends, each with message copy and timing. It also covers WhatsApp and the plain account texts like order updates.
 
@@ -17,7 +14,11 @@ when:
   - You want to start texting customers and need a first set of flows.
   - Your abandoned cart emails are slow and you want a faster nudge.
   - You are unsure whether a message should go by text or by email.
-  - You need to check that your opt-in and opt-out wording is compliant.
+  - You need to check that your opt-in and opt-out wording follows the rules.
+not_for:
+  - "You want a newsletter or long teaching content: write it as an email, since texts need to stay short."
+  - "You plan to send US marketing over WhatsApp: use SMS for that, and keep WhatsApp for places that allow it."
+  - "You want to send texts to people who never agreed to get them: get consent first, or use email to a list that agreed."
 you_give:
   - Your business type and list size
   - Your SMS or WhatsApp tool and number type
@@ -29,7 +30,32 @@ you_get:
   - A text-versus-email split
   - A consent and compliance checklist
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or file access is needed.
+  - Tell your AI your business type, list size, phone number type and how people opt in.
+  - "Say your goal: revenue, signups or order updates. Add your country if you sell outside the US."
+  - Read the compliance check first and fix any blockers before you build a flow.
+  - Load the message copy and timing into your SMS tool.
+  - "Know the costs first: you need a paid SMS or WhatsApp account, and US senders must register for 10DLC. Check your provider for current prices."
+output_sample:
+  input:
+    - Your business type and list size
+    - Your SMS or WhatsApp tool and phone number type
+    - How people opt in to texts today
+    - "Your main goal: revenue, signups or updates"
+    - Your country or countries (optional)
+  prerequisites:
+    - A paid SMS or WhatsApp account is needed before you can send anything
+    - US senders must finish carrier registration (A2P 10DLC) first
+  output:
+    - name: Compliance check
+      contains: Whether your registration and opt-in wording are ready, with any blockers listed first.
+    - name: Strategy
+      contains: Which text flows to build first, ranked by likely return for your type of business.
+    - name: Sequence designs
+      contains: "For each flow: the trigger, delay, message copy with character counts, one link and who gets it."
+    - name: Platform recommendation
+      contains: Which SMS tool suits your stack, list size and how complex your flows are.
+    - name: Measurement plan
+      contains: The numbers to track, plus a short list of tests to run.
+    - name: Compliance footer
+      contains: The required disclosures and ready-to-use STOP and HELP reply texts.

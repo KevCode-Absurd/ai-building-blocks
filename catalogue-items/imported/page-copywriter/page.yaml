@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a copy format but picks angles.
 new_slug: page-copywriter
 name: Page copywriter
-summary: Describe the page and your buyer. Get clear page copy with headline,
-  sections and calls to action.
+summary: Write page copy for your homepage or landing page. Give it your buyer and offer. You get a headline, section text and a call to action.
 job: write-landing-page
 headline: Page copywriter
-subhead: Describe the page and your buyer. Get clear page copy with headline,
-  sections and calls to action. Bring page type and its one main action. Use the
-  result to plan your next step.
+subhead: Describe the page and your buyer. Get clear page copy with headline, sections and calls to action. Bring page type and its one main action. Use the result to plan your next step.
 explain: |
   Page copy you can paste in: a headline, section-by-section text and a clear call to action, all aimed at the one thing you want a visitor to do.
 
@@ -18,6 +15,10 @@ when:
   - Your draft feels flat and you want it sharper without losing your voice.
   - You need one headline or paragraph fixed, nothing more.
   - Visitors reach the page but few click the button.
+not_for:
+  - "You want email copy: use an email writing skill, since this one is built for web pages."
+  - "You want popup copy: use a popup copy skill, not this page writer."
+  - "Your copy is finished and you only want a polish: use a copy editing skill, or ask a trusted person to proofread it."
 you_give:
   - Page type and its one main action
   - Your buyer and what worries them
@@ -29,7 +30,24 @@ you_get:
   - Call to action text
   - Short note on the choices made
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Say what type of page it is and the one action you want a visitor to take.
+  - Describe your buyer, what worries them, your offer and any proof you have.
+  - Paste your current draft if you have one. It will keep your voice and words.
+  - Read the copy and the notes. Pick a headline from the alternatives to test.
+  - Ask for a change to one line or section if something feels off.
+output_sample:
+  input:
+    - Page type and its one main action
+    - Your buyer and what worries them
+    - Your offer and any proof, such as numbers or reviews
+    - An existing draft or writing sample (optional)
+  output:
+    - name: Page copy
+      contains: Headline, subhead and text for each section, ending in a call to action.
+    - name: Annotations
+      contains: Short notes on why each key choice was made.
+    - name: Alternatives
+      contains: Other headline and call to action options for you to test.
+    - name: Meta content
+      contains: A page title and meta description, when the page needs them.

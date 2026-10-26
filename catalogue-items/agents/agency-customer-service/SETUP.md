@@ -1,0 +1,28 @@
+# Use Customer Service agent
+
+Get a customer service reply draft, the steps to fix the issue and a clear call on when to escalate. Paste the message and your policy.
+
+## Skill hosts
+
+Install the complete agency-customer-service folder with SKILL.md and references/ together. The skill reads the original profile when used.
+
+## Chat
+
+Paste SKILL.md, then references/source-agent.md, then your task. A plain chat can propose work; files, tools and recurring runs depend on the host you use.
+
+## Claude Code agent
+
+The unmodified references/source-agent.md is the upstream agent file. Copy it to .claude/agents/agency-customer-service.md in your chosen project. Supply the task scope and review rules in SKILL.md when invoking it.
+
+## Other agent hosts
+
+Import the role profile using the host's documented agent format. This pack does not register Codex agents, install software, provision integrations or create schedules.
+
+## Source and checks
+
+Source: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/customer-service.md
+Revision: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+SHA-256 of references/source-agent.md: 71d5b8ccd6fb6c5861230169a708ec5d8c0af628de44fc293ae256181573424f
+Licence: MIT (LICENSE).
+
+AI Blocks adds a skill adapter and task guide. The original profile is unchanged. Static intake checks are recorded in the AI Blocks import report; no model behavior test has been run for this entry.

@@ -15,9 +15,9 @@ outputs:
   - {type: audit_report}
 uses: [due-diligence-checklist-builder, diligence-meeting-prep-writer, financial-statement-analyst, owner-earnings-calculator, business-value-range-calculator]
 steps:
-  - {uses: due-diligence-checklist-builder, note: "What to ask for, what to verify and what a red flag looks like for this kind of business, in the order to do it."}
-  - {uses: diligence-meeting-prep-writer, note: "The questions for the seller, the answers to listen for, and what to ask to see rather than hear."}
-  - {uses: financial-statement-analyst, note: "Trends, margins, what is unusual and what is missing in the statements, with each finding tied to a line."}
+  - {uses: due-diligence-checklist-builder, note: "What to ask for, what to verify and what a red flag looks like for this kind of business, in the order to do it. Hands step 2 the checklist."}
+  - {uses: diligence-meeting-prep-writer, note: "Uses the checklist from step 1 and the listing. The questions for the seller, the answers to listen for, and what to ask to see rather than hear. You take these to the seller and bring back answers and documents."}
+  - {uses: financial-statement-analyst, note: "Uses your books and the seller's answers, not step 2's output. Trends, margins, what is unusual and what is missing in the statements, with each finding tied to a line. Hands step 4 the statement read."}
   - {uses: owner-earnings-calculator, note: "Owner earnings in Warren Buffett's definition: reported earnings plus non-cash charges, minus what the business must spend to stay as it is, including the owner's unpaid work at a fair wage."}
   - {uses: business-value-range-calculator, note: "A value range with the method shown, the price at which the deal stops making sense, and what you must still verify before an offer."}
 origin: own

@@ -1,6 +1,6 @@
 new_slug: rough-notes-to-minutes-writer
 name: Rough notes to minutes writer
-summary: Paste rough meeting notes. Get short minutes with decisions, owners and dates.
+summary: Turn rough meeting notes into short minutes. You get the bottom line, decisions, actions with owners and dates, and open questions.
 job: organise-work
 thinking: low
 thinking_why: It sorts notes into three fixed buckets with few judgement calls.
@@ -11,6 +11,10 @@ when:
   - You have a page of notes and a team waiting for a summary.
   - People left the meeting unsure who owns what.
   - You want minutes sent within the hour.
+not_for:
+  - "You need formal board minutes: use the Board minutes drafter."
+  - "You want a full set of minutes with every check, or a running list of open actions: use the Meeting minutes, open actions and next agenda."
+  - "You need a word-for-word record of the meeting: keep the transcript itself, because minutes leave out most remarks."
 you_give:
   - Rough notes or a transcript
   - Date and who attended (optional)
@@ -24,6 +28,20 @@ how_to_use:
   - Under it, paste your rough notes.
   - Send it and read the result.
   - Send the minutes the same day, while people remember.
+output_sample:
+  input:
+    - Your rough notes or a transcript of the meeting
+    - The meeting date (optional)
+    - Who attended (optional)
+  output:
+    - name: BOTTOM LINE
+      contains: Three lines at most on what the meeting settled.
+    - name: DECISIONS
+      contains: One line per decision, each written as "Decided to" followed by the choice.
+    - name: ACTIONS
+      contains: Each task with its owner and due date, marked [unassigned] or [date to confirm] when the notes lack them.
+    - name: OPEN QUESTIONS
+      contains: Items still undecided, each with the next step and who owns it.
 how_it_works:
   - title: Find the result
     text: What was decided comes first.

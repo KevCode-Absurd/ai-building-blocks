@@ -1,6 +1,6 @@
 new_slug: competitor-white-space-mapper
 name: "Competitor white space mapper"
-summary: "Paste your rivals and what buyers value. Get a grid that shows where nobody is strong and where to stop fighting."
+summary: "Find gaps in your market that no rival serves well. Paste your rivals and what buyers value to get a white space map and a small test."
 job: study-competitors
 thinking: medium
 thinking_why: "It rates rivals on evidence and picks gaps, where a lazy rating gives a false gap."
@@ -17,6 +17,10 @@ when:
   - You compete on the same features as everyone else and margins are thin.
   - You are planning a new offer and want to know where nobody is strong.
   - You need a reason to stop fighting in one area and put effort in another.
+not_for:
+  - "You have no rivals to compare against yet: talk to a few possible buyers first, then come back with what they say."
+  - "You only need one positioning sentence: use the Onliness statement writer."
+  - "You want to know how one rival's ad works: read that ad yourself, or ask your AI to summarise it."
 
 you_give:
   - Your rivals, including those buyers might compare you with
@@ -33,6 +37,29 @@ how_to_use:
   - List your rivals and paste reviews or notes about what buyers value.
   - Say what you like to do and how much risk you can take.
   - Run the test it proposes before building anything big.
+output_sample:
+  input:
+    - Your rivals, including things buyers use instead of you
+    - What buyers in your category value, such as reviews or notes
+    - Your limits and what you love to do (optional)
+    - Your brand file (optional)
+  output:
+    - name: Rivals as buyers see them
+      contains: Each rival, why buyers compare it with you, and the source of that reason.
+    - name: Features that drive success
+      contains: Six to ten features that decide who wins, each with evidence that buyers care.
+    - name: The grid
+      contains: Each rival and you rated strong, middle, weak or unknown on every feature.
+    - name: Gaps nobody serves
+      contains: Features no rival does well, each backed by a buyer quote or fact and a note on fit.
+    - name: Where to stop fighting
+      contains: Crowded features, the level you need to match, and what you can stop trying to beat.
+    - name: Gap rejected
+      contains: One attractive gap you should skip, with the reason.
+    - name: Small test
+      contains: A cheap, reversible test of the top gap with cost, time, the signal to watch and how to undo it.
+    - name: Missing and checks missed
+      contains: What you did not give, and any checks the AI could not pass.
 
 how_it_works:
   - title: Lists rivals as buyers see them

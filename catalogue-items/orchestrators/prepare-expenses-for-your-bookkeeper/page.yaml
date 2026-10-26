@@ -1,51 +1,93 @@
 new_slug: prepare-expenses-for-your-bookkeeper
 name: Prepare expenses for your bookkeeper
 headline: Prepare expenses for your bookkeeper
-summary: Share the source files. Get a categorized expense file, receipt gaps and a reconciliation summary.
+summary: Get your expenses sorted before month end. You get a categorized file, a list of missing receipts and a summary of what matches your bank.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A categorized expense file, receipt gaps and a reconciliation summary. Share receipts, transaction export, dates, currencies and the category rules your bookkeeper has approved. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your receipts, a bank or card export for the same dates and the category list your bookkeeper approved. It sorts each expense into those categories, finds missing receipts and matches the file to your export. You get a clean file and a short list of questions for your bookkeeper.
 explain: |-
-  A categorized expense file, receipt gaps and a reconciliation summary.
+  Bookkeepers lose hours to a shoebox of receipts and a bank file that do not line up. This workflow prepares expenses for your bookkeeper so the questions are already asked. Every transaction is paired with a receipt, or listed as a gap.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Source transactions stay intact; unknown categories and potential personal costs are flagged for the bookkeeper. Missing tools or evidence stay visible in the final summary.
+  It works on a copy and never edits your original export. It uses only the categories your bookkeeper approved. If an expense fits none, or looks personal, it goes on a question list for the bookkeeper. It does not decide tax treatment or what is deductible.
+
+  Then it matches the sorted file back to your bank or card export and lists every amount that does not pair up. You send the file and the questions to your bookkeeper, who makes the final call.
 when:
-  - You need a categorized expense file, receipt gaps and a reconciliation summary.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Month end is close and your receipts are in a folder, a bag or your inbox.
+  - Your bookkeeper asked for expenses in their categories before they start.
+  - You paid for business costs on a personal card and need to separate them.
+  - A bank line has no receipt and you do not know what it was.
+not_for:
+  - You have no approved category list. Ask your bookkeeper for one first. This workflow will not make up categories.
+  - You want tax deductions decided. Ask your bookkeeper or accountant.
+  - You want your bank matched to full books and a profit and loss. Use the Match bank to books and issue a clean P&L workflow.
+  - You want a quick suggested category for each line. Use the Expense sorter.
 you_give:
-  - Receipts, transaction export, dates, currencies and the category rules your bookkeeper has approved.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - Your receipts, as photos, PDFs or a list with date and amount
+  - A bank or card export for the same dates
+  - The category list your bookkeeper approved, or their mapping
+  - The period, and the currency of each account
+  - Your rules for personal and business spending (optional)
 you_get:
-  - A categorized expense file, receipt gaps and a reconciliation summary.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A categorized expense file with a receipt ID and a transaction ID on each row
+  - "A list of receipt gaps: transactions with no receipt and receipts with no transaction"
+  - "A reconciliation summary: matched total, unmatched amounts and any difference"
+  - Questions for your bookkeeper, such as unknown categories and possible personal costs
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach the receipts, the bank export and your bookkeeper's category list. Say the period.
+  - Read the receipt gaps and the question list first. Find what you can and answer what you know.
+  - Send the categorized file, the gaps and the questions to your bookkeeper. They make the final call.
 how_it_works:
   - title: Spreadsheet checker
-    text: Normalize a separate working copy and apply only the bookkeeper approved category mapping. Retain receipt and transaction IDs; leave unknown categories and tax treatment for the bookkeeper.
+    text: Cleans a separate working copy of your export and applies only the approved category mapping. Keeps each receipt and transaction ID. Flags unknown categories for the bookkeeper. Hands the categorized file on.
   - title: Account reconciler
-    text: Match the categorized entries to the transaction export and list unmatched amounts.
+    text: Matches the categorized entries to your bank or card export and lists every amount that does not pair up, with the likely reason.
 output_shape: |-
-  Scope and source coverage
-  A categorized expense file, receipt gaps and a reconciliation summary.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  CATEGORIZED EXPENSE FILE   (a working copy)
+    Receipt ID | <Transaction ID> | <Date> | <Amount> | <Currency> | <Merchant> | <Category> | <Status>
+
+  RECEIPT GAPS
+    Transaction or receipt | <Amount> | <Date> | <What is missing>
+
+  RECONCILIATION SUMMARY
+    <Export total> | <Matched total> | <Unmatched count and total> | <Difference>
+
+  QUESTIONS FOR YOUR BOOKKEEPER
+  MISSING
+  CHECKS MISSED
+  HAND-BACK SUMMARY
+output_sample:
+  input:
+    - Your receipts
+    - A bank or card export for the same dates
+    - The category list your bookkeeper approved
+    - The period and currency
+  prerequisites:
+    - An AI that can open PDFs, images and spreadsheets
+    - A category list from your bookkeeper
+  output:
+    - name: Categorized expense file
+      contains: One row per expense with receipt ID, transaction ID, category and a status such as matched or no receipt.
+    - name: Receipt gaps
+      contains: Bank lines with no receipt and receipts with no bank line, with date and amount.
+    - name: Reconciliation summary
+      contains: The export total, the matched total and every amount that does not pair up.
+    - name: Questions for your bookkeeper
+      contains: Expenses with no fitting category or that may be personal, left for them to decide.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks missed and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Source transactions stay intact; unknown categories and potential personal costs are flagged for the bookkeeper.
+  - what: Category list
+    how: Paste your bookkeeper's exact list. The AI will not add a category of its own.
+  - what: Period
+    how: Use one month or quarter and the same dates for receipts and the export, so they can match.
+  - what: Currency
+    how: State each account's currency. The AI does not convert unless you give the rate and date.
+  - what: Personal costs
+    how: Say what counts as personal for you. Doubtful items still go to the bookkeeper.
 judge:
   - Source transactions stay intact; unknown categories and potential personal costs are flagged for the bookkeeper.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,16 +100,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the merchant-to-category choices your bookkeeper approves, then attach them next time so repeat merchants sort at once.
+  - Add receipt IDs as you collect them during the month, not all at the end.
+  - Finish any check that needs a person or a spreadsheet tool before you send the file.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A spreadsheet tool such as Excel or Google Sheets
+      why: Lets you open the categorized file and re-check a total. The AI cannot recalculate a workbook without one.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your bookkeeper's category list.
+    - Last month's file, as an approved example.
 terms:
+  - term: Category mapping
+    meaning: A list that says which category each type of expense goes into, set by your bookkeeper.
+  - term: Reconciliation
+    meaning: Checking that two lists of the same money agree, and listing any amount that does not.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

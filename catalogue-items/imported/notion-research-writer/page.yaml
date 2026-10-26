@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It gathers from many pages and writes one clear brief.
 new_slug: notion-research-writer
 name: Notion research writer
-summary: Ask a question. Get a cited brief or comparison built from your Notion pages.
+summary: Turn scattered Notion pages into a cited research brief or comparison. Ask one question and get a drafted page with source links.
 job: organise-work
 headline: Notion research writer
-subhead: A research brief written inside Notion, with every claim tied back to
-  the page it came from. You ask a question, and the skill finds the right pages
-  in your workspace instead of guessing from memory.
+subhead: A research brief written inside Notion, with every claim tied back to the page it came from. You ask a question, and the skill finds the right pages in your workspace instead of guessing from memory.
 explain: |
   A research brief written inside Notion, with every claim tied back to the page it came from. You ask a question, and the skill finds the right pages in your workspace instead of guessing from memory.
 
   It starts with targeted searches and asks you to confirm scope if several pages match. Then it reads each page and notes the facts, numbers, dates and limits, keeping the link for every source. Next it picks a format that fits the question: a quick brief, a one-topic summary, a side-by-side comparison, or a full report. It drafts the page in Notion and ends with a references section you can click through. It needs your Notion workspace connected.
 when:
-  - You need a short brief for a meeting and the facts are scattered across ten
-    Notion pages.
-  - You are comparing two options and want the evidence from your own notes side
-    by side.
+  - You need a short brief for a meeting and the facts are scattered across ten Notion pages.
+  - You are comparing two options and want the evidence from your own notes side by side.
   - A manager asks where a number came from and you need the source link.
   - You want a one-topic summary that updates when new pages are added.
+not_for:
+  - "Your question needs facts from the public web: search the web with your AI, then paste the results in."
+  - "Your workspace is very large and you can't say where to look: pick the pages or area first, or the results will be thin."
+  - "You have no Notion workspace or can't connect it: ask a person to gather the notes, or paste them into a chat."
 you_give:
   - The question you want answered
   - The Notion area to search (optional)
@@ -30,8 +30,31 @@ you_get:
   - A references section
   - A comparison table when options are involved
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach your Notion workspace.
+  - Use Codex, and connect Notion first. Run codex mcp add notion with the Notion link, turn on rmcp_client, then run codex mcp login notion.
+  - Restart Codex after you log in.
+  - Ask your AI to follow this skill. Type your question and, if you can, the Notion area to search.
+  - Check the pages it found. Confirm the scope when it asks.
+  - "Pick a format: quick brief, one-topic summary, comparison or full report. Or let it choose."
+  - Open the new Notion page. Click a few reference links to check the claims.
+output_sample:
+  input:
+    - The question you want answered
+    - The Notion area to search (optional)
+    - The format you want, such as brief or comparison (optional)
+  prerequisites:
+    - A Notion workspace you can sign in to
+    - Codex with the Notion connection (MCP) added and logged in with OAuth
+    - A restart of Codex after the first login
+  output:
+    - name: Title and summary
+      contains: A short answer to your question at the top of the new Notion page.
+    - name: Key findings
+      contains: The main facts, numbers, dates and limits found in your pages, grouped by theme.
+    - name: Supporting evidence
+      contains: Quotes or details from each source, with the source noted next to each claim.
+    - name: Comparison table
+      contains: Options side by side, only when your question compares two or more things.
+    - name: Recommendations and next steps
+      contains: What to do next, plus risks, gaps and open questions, when they apply.
+    - name: References
+      contains: A list of links back to every Notion page used.

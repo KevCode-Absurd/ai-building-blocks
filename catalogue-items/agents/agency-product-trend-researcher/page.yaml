@@ -1,0 +1,145 @@
+name: Trend Researcher agent
+summary: Find out if a product trend is real and worth acting on. Get a brief with the evidence, its stage, adoption risks and next steps.
+headline: Trend Researcher agent
+subhead: Name a trend or market you are weighing, and paste the data you have, such as search interest, articles, reviews or rival launches. It tests whether the trend is real, early or fading. You get a trend brief with the evidence, the risks and a clear next step.
+job: research-topics
+thinking: high
+thinking_why: It judges whether a few signals add up to a real trend and must not state forecasts as facts. Use a model that reasons well and can search the web.
+explain: |-
+  Trend research (also called market trend analysis) fails when one loud signal is taken for a movement. A spike in searches, a viral post or a funded rival can each mislead. This agent asks for several kinds of signal and checks that they agree. It looks at what people search for, what they say, what rivals ship, where money is going and what rules are changing.
+
+  First it states what you are deciding. Are you building a product, picking a feature, timing a launch or entering a market? Then it gathers signals from what you paste and, if your AI can search, from public sources. For each signal it records the source and date, and how much weight it deserves.
+
+  It then places the trend on a stage: early signal, growing, at its peak, settling or fading. It lists the forces that push the trend and the barriers that slow it, such as price, habit or rules. If you give it figures, it can size the market in steps you can check. It marks every estimate as an estimate and shows what it rests on.
+
+  It will not promise accuracy. A trend brief is an informed reading of the evidence you can find, and it can be wrong. It shows what would change its mind.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are choosing what product or feature to build next and want to know if demand is rising or a short fad.
+  - A rival launched something new and you need to know if it signals a wider shift.
+  - You are about to enter a market and want to know how big it is and how early you would be.
+  - An investor or your team asks "why now?" and you have no evidence written down.
+not_for:
+  - You want to pull findings from a pile of papers or reports into one summary. Use the Research Synthesist agent.
+  - You want live market numbers, such as exact market size or a financial forecast. It needs real data from you, and a financial adviser should review any plan that relies on it.
+  - You want to see what people say about your brand on X. Use the X/Twitter Intelligence Analyst agent.
+  - You want to compare tools you could buy. Use the Tool Evaluator agent.
+you_give:
+  - The trend, market or product idea to study, and the decision it should help with
+  - Any data you already have, such as search interest, articles, reviews, rival pages or survey results
+  - Who your customer is and where you sell (optional)
+  - The date range and the places to look, such as one country (optional)
+you_get:
+  - A trend brief with a clear verdict and what it rests on
+  - An evidence table listing each signal, its source, date and how much weight it carries
+  - A stage call and the forces that push the trend or hold it back
+  - Adoption risks, assumptions and what would change the verdict
+  - Next steps, from cheap tests to bigger moves
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Say what trend or market you are studying and what you will decide. Paste the data you have, or say that your AI can search the web.
+  - Type "Make the trend brief. Show the source and date for every signal. Mark estimates as estimates."
+  - Read the verdict and the evidence table together. Check that more than one kind of signal agrees.
+  - Open two of the sources it cites. Add what you know about your customers, then ask it to run the brief again.
+  - Use the next steps list for a small test first, such as a landing page or a customer call.
+how_it_works:
+  - title: Frame the decision
+    text: It restates the trend, the decision and the kind of proof needed. Missing parts are asked once, then marked MISSING.
+  - title: Gather the signals
+    text: It lists search, social, rival, money and rule signals from your data. It searches the web only if your AI can.
+  - title: Test each signal
+    text: Each signal gets a source, a date and a weight. Single-source or old signals count for less.
+  - title: Place the stage
+    text: It calls the trend early, growing, peaking, settling or fading, and names the drivers and barriers.
+  - title: Size only with real numbers
+    text: If you give figures, it sizes the market in steps you can check. Without them it says it cannot.
+  - title: Write the brief
+    text: You get the verdict, evidence table, adoption risks, assumptions, checks still needed and next steps.
+output_shape: |-
+  TREND BRIEF: <trend>
+
+  DECISION
+    <what you are deciding> | <deadline>
+
+  VERDICT
+    <real and early, real and crowded, unproven or fading> | <confidence> | <one-line reason>
+
+  EVIDENCE TABLE
+    <signal> | <source and date> | <what it shows> | <weight: high, medium or low>
+
+  STAGE AND FORCES
+    Stage <early, growing, peaking, settling or fading> | Pushing it <list> | Holding it back <list>
+
+  MARKET SIZE (only if figures were supplied)
+    <step> | <number and source> | <estimate or fact>
+
+  ADOPTION RISKS
+    <risk> | <who it affects> | <how to test it>
+
+  ASSUMPTIONS AND WHAT WOULD CHANGE THE VERDICT
+    <item>
+
+  NEXT STEPS
+    <small test first> | <bigger move> | <what to watch>
+
+  CHECKS STILL NEEDED
+    <item>
+output_sample:
+  input:
+    - The trend, market or product idea, and the decision
+    - Data you already have, such as search interest, articles or reviews
+    - Your customer and where you sell (optional)
+    - The date range and places to look (optional)
+  prerequisites:
+    - An AI that can search the web, if you have no data to paste
+  output:
+    - name: Verdict
+      contains: Whether the trend looks real, early, crowded, unproven or fading, with confidence and one reason.
+    - name: Evidence table
+      contains: Each signal with its source, date, what it shows and how much weight it carries.
+    - name: Stage and forces
+      contains: The trend's stage, what pushes it and what holds it back.
+    - name: Market size
+      contains: Sizing steps built only from figures you supplied, each marked estimate or fact.
+    - name: Adoption risks
+      contains: What could stop people from adopting, who it affects and how to test it.
+    - name: Next steps
+      contains: A small test first, a bigger move after it and what to keep watching.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search
+      why: It can pull public signals itself. Without search it only judges the data you paste.
+  inputs:
+    - A search interest export, such as Google Trends data for your terms.
+    - Reviews or comments from your own customers.
+    - A list of rivals and the dates they launched.
+terms:
+  - term: Trend stage
+    meaning: Where a trend sits in its life, from a first faint signal to growth, peak, settling and fade.
+  - term: Weak signal
+    meaning: An early hint that may or may not grow. It needs other signals that agree.
+  - term: Adoption risk
+    meaning: A reason people may not take up something, such as price, habit, trust or rules.
+  - term: TAM, SAM, SOM
+    meaning: The whole market, the part you could serve and the part you could win. The brief builds each from figures you give it.
+tweaks:
+  - what: Decision
+    how: Name the decision, such as "build this feature in Q1". A clear decision gives a sharper verdict.
+  - what: Region
+    how: Name the country or market. Trends differ a lot from place to place.
+  - what: Time window
+    how: Give the period to study, such as the last two years, so old spikes do not skew the stage call.
+improve:
+  - Keep each brief with its evidence table, then rerun it in three months to see what changed.
+  - Record which signals held up so you can weigh them next time.
+  - Follow a real trend with a small test, such as a landing page or a few customer calls.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

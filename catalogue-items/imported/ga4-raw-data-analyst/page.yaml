@@ -2,37 +2,66 @@ thinking: high
 thinking_why: Raw export tables are tricky, and a wrong query gives wrong numbers.
 new_slug: ga4-raw-data-analyst
 name: GA4 raw data analyst
-summary: Point it at your GA4 export in BigQuery. Get sessions, channels and
-  sign-ups, plus why they differ from the GA4 screen.
+summary: Check your GA4 BigQuery export for sessions, channels and sign-ups, and see why raw counts differ from the GA4 screen. Cost shown before each query.
 job: track-numbers
 headline: GA4 raw data analyst
-subhead: Your GA4 numbers finally match what you can trace. Sessions, channels
-  and sign-ups come straight from the raw daily export in BigQuery, with a clear
-  note on why they differ from the GA4 screen.
+subhead: Your GA4 numbers finally match what you can trace. Sessions, channels and sign-ups come straight from the raw daily export in BigQuery, with a clear note on why they differ from the GA4 screen.
 explain: |
   Your GA4 numbers finally match what you can trace. Sessions, channels and sign-ups come straight from the raw daily export in BigQuery, with a clear note on why they differ from the GA4 screen.
 
   It starts by fixing the boundary: which dataset, which dates, which events count as a key event. Then it checks the table layout before it writes a single query. Ready-made SQL covers sessions, channels, landing pages, traffic source checks, ecommerce and a screen reconciliation. Every query is shown first, with a cost estimate and a byte cap. Late events are flagged, since daily tables can still change for a few days.
 when:
-  - Your GA4 report and your own sign-up count do not agree and you need to know
-    why.
-  - You want sessions by channel from raw export tables instead of the GA4
-    screen.
+  - Your GA4 report and your own sign-up count do not agree and you need to know why.
+  - You want sessions by channel from raw export tables instead of the GA4 screen.
   - You need landing page and UTM checks for a set of dates.
   - You want purchase or lead events counted the same way every month.
+not_for:
+  - "You only need numbers from the GA4 screen or the GA4 Data API: use the GA4 reports themselves, since this works on raw export tables."
+  - "You have not turned on the GA4 BigQuery export yet: set that up in GA4 first, or ask your analytics person."
+  - "You need a combined view of users across devices or accounts: this skill does not link people between systems, so use your own customer data."
 you_give:
-  - Access to your GA4 BigQuery export
-  - Dataset name and billing project
-  - Date range to cover
-  - List of key events (optional)
+  - Your BigQuery project and GA4 export dataset name
+  - Your billing project and data location
+  - The first and last date to check
+  - Your key events (optional)
+  - Permission to run queries, with a signed-in bq or gcloud login and Node.js 20 or newer
 you_get:
   - Session and channel tables from raw events
   - Landing page and source comparison
   - Key event and ecommerce counts
   - A note explaining gaps against the GA4 screen
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run SQL on your own Google BigQuery data.
+  - Check that your GA4 daily export is running into BigQuery and that you can run queries on it.
+  - Know that BigQuery bills the queries to your billing project. The cost estimate shown is a real BigQuery charge.
+  - Open your AI tool with the skill files and code running turned on. Give it your dataset, billing project, location and dates.
+  - Ask it to render all the queries first without running them. Read them and the cost estimate.
+  - Approve the run. Then check the results and the note on late events, since daily tables can change for up to three days.
+  - Use the reconciliation result to explain gaps against the GA4 screen.
+output_sample:
+  input:
+    - Your BigQuery project and GA4 export dataset name
+    - Your billing project and data location
+    - The first and last date to check
+    - Your key events, if not purchase, generate_lead and sign_up (optional)
+  prerequisites:
+    - An AI that can run code and read files on your computer
+    - Node.js 20 or newer, and a signed-in bq or gcloud login
+    - Permission to run queries on the dataset
+    - A GA4 daily export already running into BigQuery
+  output:
+    - name: sessions.sql result
+      contains: Each observed session with its timing, source, landing page, engagement and channel.
+    - name: channel_daily.sql result
+      contains: Sessions and purchases grouped by date and channel.
+    - name: landing_pages.sql result
+      contains: The top 20 landing paths across your dates, with their sessions.
+    - name: traffic_source_compare.sql result
+      contains: The top 20 source and medium pairs compared with the UTM tags in landing URLs.
+    - name: params.sql result
+      contains: Raw page views with the event parameters pulled out, up to 1,000 rows.
+    - name: key_events.sql result
+      contains: Each key event that happened, with visitor and session IDs, up to 1,000 rows.
+    - name: ui_reconciliation.sql result
+      contains: Daily row counts, missing IDs and session date spans to explain gaps against the GA4 screen.
+    - name: ecommerce.sql result
+      contains: Transactions, items, conflicts in the data and daily summaries for your dates.

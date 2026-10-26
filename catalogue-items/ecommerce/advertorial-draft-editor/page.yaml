@@ -1,6 +1,6 @@
 new_slug: advertorial-draft-editor
 name: "Advertorial draft editor"
-summary: "Paste your advertorial draft. Get it fixed for AI-sounding lines, weak openings, hard words and loose proof."
+summary: "Paste your advertorial draft and get an edited version with a clear headline, plain words, exact study claims and a list of what still needs proof."
 job: write-landing-page
 thinking: medium
 thinking_why: "It edits against clear rules and does simple sums, so a mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - Your AI-written advertorial draft sounds stiff, choppy or full of stock phrases.
   - Your draft quotes a study and you want the number stated exactly in plain words.
   - Your headline tries to do three things and you want one clear curiosity hook.
+not_for:
+  - "Your page has no real study or proof to check: add the proof first, or use a plain copy editor for the wording only."
+  - "Your ad is not written like an article, such as a short social ad: use the Sales copy editor instead."
+  - "You only want to strip stock AI phrases from any copy: use the Anti-AI-slop copy editor instead."
 
 you_give:
   - The advertorial draft
@@ -35,6 +39,24 @@ how_to_use:
   - Paste any study details exactly (group size, length, control and treated figures, who ran it).
   - Read the change log and the list of claims that need proof.
   - Fix or cut each unproven claim before you publish.
+output_sample:
+  input:
+    - Your advertorial draft
+    - The one idea and advertorial type it should carry (optional)
+    - Proof you hold, such as studies, test results and review counts (optional)
+  output:
+    - name: Edited draft
+      contains: The full draft with a clearer headline, a new opening, smoother lines and plainer words.
+    - name: Subheadline options
+      contains: Three to five options for each section that read as a story when stacked alone.
+    - name: Change log
+      contains: Each change with the reason and a before and after, plus the reading grade before and after.
+    - name: Proof lines
+      contains: Each claim in plain words with a source note, its limits and the exact relative change worked out.
+    - name: Still needs proof or review
+      contains: Claims with no proof, or health, money or legal claims that need a qualified person.
+    - name: Checks missed
+      contains: Any check that was not run, or the word none.
 
 how_it_works:
   - title: Tests the headline

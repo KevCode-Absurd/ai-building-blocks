@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Good hypotheses need creative thinking and strict testing logic.
 new_slug: research-hypothesis-builder
 name: Research hypothesis builder
-summary: Describe what you observed. Get testable hypotheses, rival
-  explanations, predictions and a plan to test them.
+summary: Turn something you observed into testable hypotheses, rival explanations and a plan to test them, so you do not trust the first story that fits.
 job: research-topics
 headline: Research hypothesis builder
-subhead: Testable explanations for something you observed, with rival
-  explanations, predictions that tell them apart and a plan to test them. It
-  keeps you from falling for the first story that fits.
+subhead: Testable explanations for something you observed, with rival explanations, predictions that tell them apart and a plan to test them. It keeps you from falling for the first story that fits.
 explain: |
   Testable explanations for something you observed, with rival explanations, predictions that tell them apart and a plan to test them. It keeps you from falling for the first story that fits.
 
@@ -18,6 +15,10 @@ when:
   - You want rival explanations before you design an experiment.
   - A result surprised you and you need to know what to test next.
   - You are unsure if a link is cause or just association.
+not_for:
+  - "You want to prove a claim or get a yes or no answer: this tool only proposes ideas to test, so run the experiment or ask a statistician."
+  - "You need a summary of what is already published: do a literature review first, then bring your notes here."
+  - "You need patient advice, a diagnosis or a dose: ask a qualified clinician, because this tool never gives clinical advice."
 you_give:
   - Your observation or data
   - Field and context
@@ -30,7 +31,33 @@ you_get:
   - Predictions that separate them
   - Measurement and testing plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions, or upload the skill folder if your AI accepts files.
+  - Describe what you saw in plain words. Add your field, your data and any limits on what you can measure.
+  - If your data is private or unpublished, check you may share it before you paste it.
+  - Ask your AI to follow the skill. Read the rival explanations and predictions before you pick a test.
+  - Check that nothing is called proven or new. Ask for a rewrite if it is.
+  - The small Python tools need an AI that can run code. Without that, the chat steps still work.
+output_sample:
+  input:
+    - What you observed, or your data
+    - Your field and the setting
+    - Notes from past studies (optional)
+    - Limits on what you can measure (optional)
+  prerequisites:
+    - An AI that can run Python code, only if you want the small local tools to read your files
+    - Approval to use your data, if it is private or unpublished
+  output:
+    - name: Research question
+      contains: One clear question built from your observation, with the scope and the facts you started from.
+    - name: Candidate hypotheses
+      contains: Several possible explanations, each with what would have to be true for it to hold.
+    - name: Rival explanations
+      contains: Other stories that could explain the same data, kept apart from cause versus association.
+    - name: Discriminating predictions
+      contains: For each pair of rivals, a result that would favor one over the other.
+    - name: Measurement plan
+      contains: What to measure, how to measure it, and how to check the measure works.
+    - name: Test and analysis plan
+      contains: A design and analysis matched to the claim, written before you see results so it can be preregistered.
+    - name: Replication and update notes
+      contains: How to repeat the test and when to change your view after new evidence.

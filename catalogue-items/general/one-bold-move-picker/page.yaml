@@ -1,42 +1,51 @@
 new_slug: one-bold-move-picker
 name: "One bold move picker"
-summary: "Paste your plan and rivals. Get one move to back, a stop list, the cost and pass test."
+summary: Pick the one move to back from your marketing plan. Get a stop list for the rest, what it costs and a pass or fail test with a date.
 job: plan-strategy
 thinking: high
 thinking_why: "It has to compare rivals' weak spots and judge which one move beats the rest, so deeper thinking gives a sharper pick."
 
 headline: "One bold move picker"
-subhead: "Paste your plan, your fix list from earlier checks if you have one, and your rivals. It finds where each rival is least ready, scores your candidate moves, picks one and writes the stop list, the money it needs, an owner and a pass test with a date."
+subhead: Paste your plan or list of moves, your rivals and your budget if you know it. It finds where each rival is least ready and scores each move on four tests. You get one move to back, a stop list for the rest, a money check and a pass or fail test with a date.
 
 explain: |
-  Plans usually grow into a list of small efforts, each done well. The idea behind this skill is that in any given situation only one move produces a big result, and it is usually aimed where the rival does not expect you. Spreading the same money over ten moves makes each too weak to reach the buyer's mind.
+  Plans tend to grow into a list of small efforts, each done well. The idea behind this skill is that in any one situation, a single move produces the big result. It is usually aimed where the rival does not expect you. Spread the same money over ten moves and none is strong enough to reach the buyer.
 
-  The skill scores each candidate on four yes or no tests: does it hit a real rival weakness, does it feed the one idea you own, would the rival fail to expect or copy it within a year, and can you say it to a buyer in one sentence. It picks the winner, turns every other move into a park or cut, and checks that something you already sell isn't blocking it. It prices the move, names an owner who stays near customers, and sets a pass or fail test with a date, so a failed move is dropped early and not rescued.
+  The skill scores each move on four yes or no tests. Does it hit a real rival weak spot? Does it feed the one idea you own? Would the rival fail to expect it, or need a year to copy it? Can you say it to a buyer in one sentence? It picks the winner and turns every other move into a park or a cut.
+
+  It then checks that something you already sell is not blocking the move, and prices the move. It names an owner who stays close to customers, and sets a pass or fail test with a date. A move that fails is dropped early, not rescued. The method draws on Al Ries and Jack Trout's laws of marketing.
 
 when:
   - Your plan has many moves and each gets a thin slice of money.
-  - You are chasing a bigger rival and can't tell where to hit.
+  - You are chasing a bigger rival and cannot tell where to hit.
   - A fix list from a review has more items than you can do.
   - You keep adding campaigns instead of choosing one.
+not_for:
+  - "You have one campaign to plan, not a choice between moves: use the One-goal marketing plan builder."
+  - "You have no plan or fix list yet: run the Marketing plan law checker first to get one."
+  - "Your product is brand new and has no rivals yet: use the First market picker."
+  - "You want a plan checked against rules, not a move picked: use the Marketing plan law checker."
 
 you_give:
-  - Your plan or list of candidate moves
+  - Your plan, or a list of three to eight moves you are considering
   - Your rivals and what each is known for (optional)
-  - A fix list from "Marketing plan law checker" (optional)
-  - Your budget, if you know it
+  - A fix list from the Marketing plan law checker (optional)
+  - Your budget, as a number or a range (optional)
+  - The one word or idea you own, or want to own (optional)
 you_get:
-  - Where each rival is least ready
-  - A score for each candidate move on four tests
-  - The one move to back, in one sentence
-  - A stop list with the money it frees
-  - A budget check, an owner and a pass or fail test with a date
+  - Where each rival is least ready, with a source or a marked guess
+  - A score out of four for each move
+  - The one move to back, in one sentence a buyer would understand
+  - "A stop list: every other move parked or cut, and the money that frees"
+  - A money check, a named owner and a pass or fail test with a date
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the plan, and the fix list from an earlier check if you have one.
-  - Add your rivals and your budget. If you don't know the budget, say so.
-  - Share the one-sentence move with a few buyers before you commit.
-  - Hold the owner to the pass test on its date.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it into a new chat. It needs no files, web access or paid tools.
+  - Paste your plan. If you have a fix list from the Marketing plan law checker, paste that too.
+  - Add your rivals and what each is known for. Add your budget, or say you do not know it.
+  - Read the one-sentence move. Say it to three buyers and see if they repeat it back.
+  - Check the owner. It should be someone who can decide and who still talks to customers.
+  - Hold the owner to the pass or fail test on its date. If it fails, drop or change the move.
 
 how_it_works:
   - title: Collects the candidates
@@ -86,6 +95,31 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+output_sample:
+  input:
+    - Your plan or list of moves
+    - Your rivals and what each is known for (optional)
+    - A fix list from the Marketing plan law checker (optional)
+    - Your budget (optional)
+  output:
+    - name: WHERE EACH RIVAL IS LEAST READY
+      contains: Each rival's strength, what it stops them doing, and a source or a marked guess.
+    - name: CANDIDATE MOVES
+      contains: Each move scored yes or no on four tests, with a total out of four.
+    - name: THE ONE MOVE
+      contains: The winning move in one sentence a buyer would understand, and why it beats the next.
+    - name: STOP LIST
+      contains: Every other move marked park or cut, with the money or time it frees.
+    - name: THE BLOCKER
+      contains: Anything you sell or say today that would confuse the move, with what to drop.
+    - name: MONEY
+      contains: What the move needs, what you have, the ratio and how to narrow it if money is short.
+    - name: OWNER AND FRONT LINE
+      contains: One person who decides, and how often they visit customers or shop as one.
+    - name: PASS OR FAIL TEST
+      contains: A measure, a threshold and a date, plus what happens if it fails.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts that would change the pick, and any check still failing.
 
 tweaks:
   - what: Candidate moves
@@ -118,7 +152,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Comparing rivals and scoring moves is text work any strong chat AI does with this skill."}
+    - { name: "Any good chat AI", why: "Comparing rivals and scoring moves is text work any strong chat AI does with this skill." }
   inputs:
     - "Rival websites, reviews and ads"
     - "Your fix list from a plan check"
@@ -129,3 +163,5 @@ terms:
     meaning: The moves you decide not to do now, and the money that decision frees.
   - term: Front line
     meaning: The places where customers meet your product, such as shops, calls and delivery.
+  - term: Blocker
+    meaning: Something you sell or say today that would make the new move unclear to buyers.

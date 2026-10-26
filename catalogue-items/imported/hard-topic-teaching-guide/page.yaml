@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It must name real misconceptions and match examples to them.
 new_slug: hard-topic-teaching-guide
 name: Hard topic teaching guide
-summary: Name a topic you find hard to teach. Get common learner mistakes and
-  the examples that clear them up.
+summary: Find the mistakes learners make on a hard topic and the examples that fix them. Get a plan to teach a topic you find hard to teach.
 job: teach-and-train
 headline: Hard topic teaching guide
-subhead: Name the topic, the age group and your background with it. It maps the
-  mistakes learners commonly make and why they make them. You get that list, the
-  best examples and analogies, a read on your likely gaps and questions to check
-  understanding mid-lesson.
+subhead: Name the topic, the age group and your background with it. It maps the mistakes learners commonly make and why they make them. You get that list, the best examples and analogies, a read on your likely gaps and questions to check understanding mid-lesson.
 explain: |
   A topic guide for the lesson you feel least ready to teach. Knowing a subject is one thing. Knowing where learners get stuck, and which example clears it up, is another skill, and it is the one this guide builds.
 
@@ -18,8 +14,11 @@ when:
   - You are teaching a topic outside your main subject and feel unsure.
   - Students keep making the same mistake and you are not sure how to fix it.
   - You want better examples for a concept that never lands.
-  - You are preparing a new unit and want to plan for confusion before it
-    happens.
+  - You are preparing a new unit and want to plan for confusion before it happens.
+not_for:
+  - "You already teach the topic with confidence: use your usual subject course or textbook instead."
+  - "You need a full lesson plan with timings: write one yourself, or ask your AI for a plan after you have this guide."
+  - "You need the facts of the subject itself: read a good textbook or ask a subject expert first."
 you_give:
   - The topic or unit you will teach
   - The age group or year
@@ -32,7 +31,31 @@ you_get:
   - A read on your likely strengths and gaps
   - Questions to check understanding mid-lesson
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text, or upload the skill file if your AI takes files.
+  - Type the topic, the age group and your own background with the topic.
+  - Add the mistakes you already see and your curriculum framework, if you have them (optional).
+  - Send it. No code, web access or paid tool is needed.
+  - Read the mistakes map first. Check it against what you see in class.
+  - Pick one example for each mistake and use the check questions mid-lesson.
+output_sample:
+  input:
+    - The topic or unit you will teach
+    - The age group or year
+    - Your own training and experience with this topic
+    - Mistakes you already see in class (optional)
+    - Your curriculum framework (optional)
+  output:
+    - name: PCK Diagnosis
+      contains: A read on your likely strengths and gaps with this topic, based on your training.
+    - name: Content Knowledge Foundations
+      contains: The core ideas you need to be sure of before you teach the topic.
+    - name: Student Misconceptions Map
+      contains: The mistakes learners commonly make, why they make them, and what each one tells you.
+    - name: Pedagogical Representations
+      contains: The best analogies, models, examples and demonstrations, and which kind of confusion each one suits.
+    - name: Disciplinary Thinking Standards
+      contains: What good thinking in this subject looks like, so you know what to aim for.
+    - name: Dispositional PCK
+      contains: The habits and attitudes learners need for this topic, and how to build them.
+    - name: Developmental Action Plan
+      contains: Next steps to build your own knowledge, including questions to check understanding mid-lesson.

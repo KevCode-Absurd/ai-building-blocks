@@ -2,12 +2,10 @@ thinking: low
 thinking_why: Summarising is a standard task.
 new_slug: summarizer
 name: Summarizer
-summary: Give it long text. Get a short summary at the detail level you choose,
-  from one text or many.
+summary: Summarize long text at the detail level you pick, from one line to layers. Works on one document or several, and flags where sources disagree.
 job: think-and-decide
 headline: Summarizer
-subhead: Long text cut down to the size you need, from a single line to a
-  layered summary. It works on one document or many at once.
+subhead: Long text cut down to the size you need, from a single line to a layered summary. It works on one document or many at once.
 explain: |
   Long text cut down to the size you need, from a single line to a layered summary. It works on one document or many at once.
 
@@ -17,18 +15,42 @@ when:
   - You need one summary of several meeting notes.
   - You want a short version plus a longer one for those who want detail.
   - Sources disagree and you need that noted.
+not_for:
+  - "Your text is already under 100 words: read it directly, since a summary may lose key nuance."
+  - "You need the exact wording of a contract or legal text: read the original, or ask for the extractive method, which quotes key lines."
+  - "You want to rewrite a text for a new audience or tone: use a plain rewrite request in your AI instead."
 you_give:
-  - The text or documents
-  - The detail level you want
+  - The full text or documents, not a cut-off extract
+  - "The detail level you want: one line, short, or layered"
   - The audience (optional)
   - What to focus on (optional)
 you_get:
   - A summary at your chosen detail level
-  - Layered summaries for long text
-  - A merged summary across documents
-  - Notes on conflicts between sources
+  - "Three layers for long text: one line, one paragraph, and a detailed breakdown"
+  - One merged summary across several documents
+  - Notes on conflicts between sources and on text that looks cut off
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions into the chat, then paste your text below them.
+  - Say how much detail you want, who it is for, and what to focus on.
+  - If you have several documents, label each one so they stay separate.
+  - Check the numbers and names in the summary against the source before you share it.
+  - If the text is cut off or the sources disagree, read the notes your AI adds and fix those parts first.
+output_sample:
+  input:
+    - The full text, not a cut-off extract
+    - "The detail level you want: one line, short, or layered"
+    - Your audience (optional)
+    - What to focus on (optional)
+    - Each document kept separate, if you have several (optional)
+  output:
+    - name: TLDR
+      contains: One sentence with the main point of the text.
+    - name: Short summary
+      contains: One paragraph of 3 to 5 sentences with the key facts and findings.
+    - name: Detailed breakdown
+      contains: A section-by-section list of the main points, numbers and names from the source.
+    - name: Multi-document digest
+      contains: One summary built around shared themes, with overlaps merged and agreements and differences noted.
+    - name: Conflict and gap notes
+      contains: Places where the source contradicts itself or looks cut off, so you know what to check.

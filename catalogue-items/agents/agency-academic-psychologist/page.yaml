@@ -1,0 +1,140 @@
+name: Character Psychologist agent
+summary: Get a psychology profile of a character or relationship, built on named theories, so their choices and clashes feel real and hold together.
+headline: Character Psychologist agent
+subhead: Describe a character, or two who clash, and what they do and say. The agent maps the behavior to named theories such as Big Five and attachment. You get a profile, a relationship map and what each person would likely do next.
+job: research-topics
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Writers and game designers often know what a character does but not why. Then the character acts in ways that feel false. This character psychology agent looks for the reason, and for the reason the character would give, which is often different.
+
+  It starts with what the character actually does and says. Then it maps that to named theories, such as the Big Five traits, attachment styles, defense mechanisms and common thinking traps. It uses at least two lenses, because no single theory explains a person. It also checks for stereotypes, like the broken character with a sad backstory.
+
+  It does not diagnose. It describes traits and patterns, labels pop psychology as pop psychology, and says where a theory is weak or tied to one culture. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its experience claims and targets are not results measured by AI Blocks.
+when:
+  - A character acts in a way that feels wrong, and you cannot say why.
+  - Two characters keep clashing and you need the real cause of the clash.
+  - You are writing a character's reaction to loss, stress or conflict.
+  - You want to check that a character stays consistent across a long story or game.
+not_for:
+  - "You want to diagnose, treat or advise on a real person's mental health: see a qualified professional."
+  - "You want to study how a team at work behaves: use the Organizational Psychologist agent."
+  - "You want plot, structure or point of view: use the Narratologist agent."
+  - "You want to know how a culture shapes behavior: use the Anthropologist agent."
+you_give:
+  - The character's name and role in your story, game or script
+  - What the character does and says, with a few real moments or lines
+  - Key past events that shaped them, if known (optional)
+  - The question you want answered, such as why they pull away after a fight
+  - The setting and culture they live in (optional)
+  - Other characters they clash or bond with (optional)
+you_get:
+  - A profile with traits, attachment style, defense mechanisms, core wound and blind spot
+  - A relationship map for two characters, with power, triggers and the unspoken deal
+  - What the character would likely do next in a situation you name
+  - Flags where a character acts against their own pattern
+  - The limits of each theory used, and what to check
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste your character notes and a few scenes or lines. Say the one question you want answered.
+  - Say 'Profile this character. Do not invent a backstory.' Your AI asks once for what is missing.
+  - Read the list of behaviors it found first. Fix anything it got wrong before you read the profile.
+  - Check the profile against your story. Keep what fits and ask for a second reading where it does not.
+  - Save the profile with your story notes. Paste it back in the next chat, because the AI does not remember between chats.
+how_it_works:
+  - title: Collect the evidence
+    text: It lists what the character does and says, and asks once for anything missing. It marks gaps as MISSING.
+  - title: Pick the lenses
+    text: It picks at least two theories that fit the behavior, such as Big Five, attachment or defense mechanisms.
+  - title: Check for stereotypes
+    text: It asks whether the pattern is real psychology or shorthand from films, and removes any label that reduces the person to a diagnosis.
+  - title: Trace the origin
+    text: It proposes which past experience or belief drives the pattern, and labels it as a proposal.
+  - title: Project forward
+    text: It says what the character would likely do in the situation you name, with a second reading when two fit.
+  - title: State the limits
+    text: It names where each theory is weak, where culture changes the reading, and what is still unknown.
+output_shape: |-
+  EVIDENCE
+    <behavior or line> | <where it appears>
+
+  PSYCHOLOGICAL PROFILE: <character name>
+    Frameworks used <list>
+    Traits <Big Five level and how it shows>
+    Attachment style <style> | in relationships <pattern> | triggered by <situations>
+    Defense mechanisms <main one> | under stress <pattern>
+    Core wound <origin, labelled as a proposal>
+    Coping <adaptive and not adaptive>
+    Blind spot <what they cannot see about themselves>
+
+  RELATIONAL DYNAMICS: <character A> and <character B>
+    Model <attachment, transactional analysis or drama triangle>
+    Power <equal, complementary or shifting> | Communication <pattern>
+    Unspoken contract <what each expects> | Trigger points <list>
+    Growth edge <what a healthier version looks like>
+
+  LIKELY NEXT MOVE
+    <situation> | <reading 1> | <reading 2 if needed>
+
+  CONSISTENCY FLAGS
+    <scene> | <what clashes with the pattern>
+
+  LIMITS AND OPEN CHECKS
+    <theory limit, culture note or missing fact>
+output_sample:
+  input:
+    - Your character notes and a few scenes or lines
+    - The one question you want answered
+    - A second character, if you want the relationship mapped (optional)
+    - The setting and culture (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Evidence
+      contains: The behaviors and lines it found, so you can correct them before the profile.
+    - name: Psychological profile
+      contains: Traits, attachment style, defense mechanisms, core wound, coping and blind spot, each tied to a named theory.
+    - name: Relational dynamics
+      contains: Power, communication pattern, unspoken contract, trigger points and growth edge for two characters.
+    - name: Likely next move
+      contains: What the character would probably do in the situation you name, with a second reading.
+    - name: Consistency flags
+      contains: Scenes where the character acts against their own pattern.
+    - name: Limits and open checks
+      contains: Where each theory is weak, culture notes and facts still missing.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Frameworks
+    how: Name the theories you want, such as attachment only, or ask it to avoid Myers-Briggs and Enneagram.
+  - what: Culture
+    how: Say the culture your character lives in, since it changes what counts as healthy.
+  - what: Scope
+    how: Ask for one character or one relationship at a time to keep the result short.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Big Five
+    meaning: Five broad personality traits, from open to new things to calm or anxious, rated high, mid or low.
+  - term: Attachment style
+    meaning: The pattern in how a person seeks or avoids closeness, shaped by early bonds.
+  - term: Defense mechanism
+    meaning: A habit the mind uses to avoid a painful feeling, such as joking or blaming others.
+  - term: Cognitive distortion
+    meaning: A habit of thinking that bends the facts, such as assuming the worst.
+  - term: Core wound
+    meaning: The early hurt that a pattern seems to protect against. Here it is a proposal, not a fact.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The profile works from pasted notes and scenes, so no files or tools are needed.
+  inputs:
+    - Two or three short scenes where the character is under stress.
+    - Notes on the character's family and past, if you have them.

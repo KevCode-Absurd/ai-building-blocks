@@ -1,0 +1,124 @@
+name: Clinical Evidence agent
+summary: Check every health claim in your deck, paper or product page. Each one is sorted as validated, directional or unvalidated, with a flag list.
+headline: Clinical Evidence agent
+subhead: Paste a document that makes health or outcome claims, such as an investor deck, grant draft or product page. It finds each claim and asks where it comes from. You get every claim sorted by proof, a flag list and safer wording.
+job: research-topics
+thinking: high
+thinking_why: It weighs how strong each source is and must not let a weak claim pass as proof. Use a model that reasons well and says when it is unsure.
+explain: |-
+  A clinical evidence check (also called a health claims review) fails when a team states an outcome as fact and never says where it came from. One unsourced number in an investor deck or grant draft can cast doubt on every other line. This agent reads your document with one question for each claim. What is the source?
+
+  It finds every claim about health, outcomes or what your tool does. Then it sorts each into one of three groups. Validated claims come from a peer-reviewed study, a documented pilot, an official label or review, or a sign-off from a licensed doctor. Directional claims come from your own early data or from nearby research. They need softer wording. Unvalidated claims have no real source, such as model output no doctor has seen. They stay out of anything an outsider will read.
+
+  It also checks how you describe your tool. A tool that helps doctors find evidence faster is decision support. The agent flags any line that sounds like it diagnoses or treats, and rewrites it. If you need the same evidence for investors, doctors and patients, you get a version for each audience from one set of facts.
+
+  It does not give medical advice or replace a doctor's review. It works from what you paste and cannot look up studies unless your AI can search the web.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are about to send an investor deck, grant application or pitch that says your health tool improves outcomes, and you want each claim checked first.
+  - Your product page or press release describes what your AI does for patients, and you want to know if any line sounds like a diagnosis.
+  - A reviewer, investor or partner asks "where does that number come from?" and you have no list of sources.
+  - You have one body of evidence and need it written for investors, doctors and patients without changing the facts.
+not_for:
+  - You want advice about a patient, a diagnosis or a treatment. This agent gives none. Ask a qualified doctor.
+  - You want a plain review of research on a topic from many sources. Use the Research Synthesist agent.
+  - You want a legal or regulatory filing written. It prepares claim checks only, and a lawyer and a clinician must review the filing.
+  - You only want an independent check of a single number. Look it up in the original study.
+you_give:
+  - The document to check, pasted as text, such as a deck script, grant draft or product page
+  - The audience for it, such as investors, doctors, regulators, patients or peer reviewers
+  - The sources you rely on, such as study links, pilot data or label pages (optional)
+  - Any claims a licensed doctor has already reviewed, with their name and date (optional)
+you_get:
+  - A claim table with every claim, its source and its group
+  - A flag list of claims that need a source or a doctor's review before anyone outside sees them
+  - Safer wording for each directional claim and each line that sounds like a diagnosis
+  - A version of the key evidence for each audience you name (optional)
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste your document and say who will read it. Add study links or pilot data if you have them. No code is needed.
+  - Type "Check every claim. Show the source for each. Flag anything without one."
+  - Read the flag list first. Fill in the sources you can, or cut the claims, then ask it to run the check again.
+  - Take the claims it marks "needs a doctor's review" to a licensed doctor. Check each source it names yourself before you send the document.
+how_it_works:
+  - title: List the claims
+    text: It reads the whole document first, then marks every claim about health, outcomes or what your tool does.
+  - title: Find the source
+    text: For each claim it asks where it comes from, and writes MISSING when you gave no source.
+  - title: Sort by proof
+    text: Each claim is marked validated, directional or unvalidated, using the tests in the original profile.
+  - title: Reframe the middle group
+    text: Directional claims get a qualifier such as "our pilot suggests". Unvalidated claims are held back from outside readers.
+  - title: Check the tool wording
+    text: It flags any line that sounds like diagnosis or treatment and rewrites it as decision support for doctors.
+  - title: Hand back the flags
+    text: You get the claim table, the flag list and any audience versions. It never says a claim is proven without a source you can open.
+output_shape: |-
+  CLAIM TABLE
+    <claim in one sentence> | <source or MISSING> | <validated, directional or unvalidated> | <why>
+
+  FLAG LIST
+    <claim> | <what is needed: source, doctor review or removal>
+
+  REWORDED LINES
+    <original line> | <safer line> | <reason>
+
+  AUDIENCE VERSION (<investors, doctors, regulators, patients or peer review>)
+    <the same evidence framed for that reader>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <item>
+output_sample:
+  input:
+    - The document to check, pasted as text
+    - The audience for it
+    - Your sources, such as study links or pilot data (optional)
+    - Claims a licensed doctor has already reviewed (optional)
+  prerequisites:
+    - A licensed doctor to review claims the agent marks as needing one
+  output:
+    - name: Claim table
+      contains: Each claim in one sentence, its source or MISSING, its group and the reason for that group.
+    - name: Flag list
+      contains: Claims that need a source, a doctor's review or removal before anyone outside reads the document.
+    - name: Reworded lines
+      contains: Each directional or diagnosis-sounding line, a safer version and why it changed.
+    - name: Audience version
+      contains: The same evidence framed for the reader you named, such as investors or doctors.
+    - name: Assumptions and checks still needed
+      contains: What the agent assumed and what you must still confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web search
+      why: It can open the studies you link and check that they say what your document says. Without search it can only judge the sources you paste.
+  inputs:
+    - The full text of any study you cite, not only the link.
+    - Your pilot method, such as how many people, over how long, and who reviewed the results.
+terms:
+  - term: Validated claim
+    meaning: A claim backed by a peer-reviewed study, a documented pilot, an official label or review, or a licensed doctor's sign-off.
+  - term: Directional claim
+    meaning: A claim from early data or nearby research that points one way but does not prove it. It needs careful wording.
+  - term: Clinical decision support
+    meaning: A tool that helps doctors find evidence faster. It does not diagnose or choose treatment.
+  - term: Peer review
+    meaning: When independent experts check a study before it is published.
+tweaks:
+  - what: Audience
+    how: Name one reader per run. Investors, doctors and patients need different framing for the same evidence.
+  - what: Strictness
+    how: Ask it to treat every directional claim as unvalidated if the document goes to regulators.
+improve:
+  - Keep the claim table with your sources and update it each time the document changes.
+  - Add the study links and doctor sign-offs to the pack so you do not retype them.
+  - Pair it with the Research Synthesist agent when you need to read the wider research first.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

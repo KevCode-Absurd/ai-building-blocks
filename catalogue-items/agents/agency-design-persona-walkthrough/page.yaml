@@ -1,0 +1,156 @@
+name: Persona Walkthrough Specialist agent
+summary: Get a persona walkthrough of your web page. See what a visitor thinks at each scroll, where they doubt or leave, and the fixes ranked.
+headline: Persona Walkthrough Specialist agent
+subhead: Give it your page and a short profile of one visitor. It reads the page as that person, one screen at a time, and writes what they think in their own words. You get scores, the moment they nearly left, and fixes ranked by effort.
+job: audit-landing-page
+thinking: high
+thinking_why: It holds one visitor's mood steady across a whole page, then maps each screen to a conversion framework. Use a model that can stay in character and still reason.
+explain: >-
+  Your analytics show where visitors leave a page. They do not show why. A
+  persona walkthrough fills that gap. This agent becomes one visitor you
+  describe, such as a worried first-time buyer who found you on Google. It reads
+  your page one screen at a time and writes what that person would think, in
+  their own words. A separate expert note then says what the page is missing.
+
+
+  It is not a checklist audit. It first runs a five-second test: what is this,
+  is it for me, and what do I do next. Then it scrolls. Each screen gets two
+  voices that never blend, the visitor and the analyst. The analyst uses three
+  well-known models: LIFT (what pulls people in and what puts them off),
+  Cialdini's persuasion principles, and Fogg's behaviour model. Every fix points
+  to one screen, one reaction and one principle.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It is a
+  simulation by an AI. Treat each finding as a strong guess to test with real
+  visitors, not as proof. The percentages and success targets in the original
+  are the author's opinion, not results from AI Blocks.
+when:
+  - Your page gets visits but few calls, sales or form sends, and you do not know why.
+  - You are about to send ad traffic to a new landing page and want a fresh pair of eyes first.
+  - Your page serves two kinds of visitor and you want to see where their needs clash.
+  - A visitor has just left a polished competitor and you want to see how your page feels next.
+not_for:
+  - You want a quick score and fix list from the page alone, with no visitor profile. Use the Landing page conversion review or the Landing page 30-point checker.
+  - You need proof from real people. This only simulates one visitor. Use the UX Researcher agent to plan a real test.
+  - You have interview notes and want personas built from them. Use the User persona and path mapper.
+  - You have no page yet and want to write one. Use the Ad-matched landing page writer.
+you_give:
+  - Your page, as a link your AI can open, one screenshot per screen, or the page text
+  - Who the visitor is, such as age, country, what is happening in their life, and what they fear
+  - The words they typed into Google, or the ad they clicked
+  - What you want them to do, such as call, buy or send the form
+  - Competitor pages they saw first (optional)
+you_get:
+  - The visitor profile written back, so you can fix it before the walkthrough
+  - A five-second test with a clear yes or no on each of the three questions
+  - One entry per screen, with the visitor's thoughts and a separate expert note
+  - A verdict with three scores out of 10, plus the moment they almost left and the moment they were most engaged
+  - Fixes ranked as quick wins, bigger changes and long-term ideas
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe your visitor in a few lines. Include the Google search, what they fear and how fast they decide. Your AI asks once for anything missing.
+  - Give it the page. An AI with a browser can open the link. Otherwise attach one screenshot per screen, top to bottom, at phone width.
+  - Say "Walk through this page as my visitor." Check the profile it shows back and fix anything wrong before it goes on.
+  - Read the five-second test first. If the visitor cannot say what the page is, who it is for and what to do, fix that before anything else.
+  - Change the page, then run the same visitor again to compare. Test the top weakness with real visitors.
+how_it_works:
+  - title: Build the visitor
+    text: It writes a profile with name, situation, search words, fears, what reassures them and how they decide. It asks once for gaps.
+  - title: Set the scene
+    text: It writes a few lines as the visitor before the page loads, then says what the page must deliver in three seconds.
+  - title: Run the five-second test
+    text: It asks what this is, whether it is for me and what to do. Any "no" is a critical finding.
+  - title: Scroll one screen at a time
+    text: Each screen gets the visitor's thoughts, then an analyst note on mood, trust, the LIFT factor hit, persuasion principles present or missing, and whether they can act now.
+  - title: Give the verdict
+    text: It closes in the visitor's voice, then scores confidence, clarity and relevance out of 10 and lists strengths and weaknesses.
+  - title: Rank the fixes
+    text: Each fix names a screen, a framework principle and the reaction it answers, and is sorted by effort and impact.
+output_shape: |-
+  VISITOR PROFILE
+    <name, age, situation> | search words: <what they typed> | fears: <list> | decides: <fast or slow> | style: <anxious, secure or avoidant>
+
+  LIMITS
+    <qualitative simulation, not statistical evidence> | page seen via: <link, screenshots or text>
+
+  BEFORE THE PAGE
+    <3 to 5 lines in the visitor's voice> | page must deliver in 3 seconds: <list>
+
+  FIVE-SECOND TEST
+    What is this: <yes or no, why> | Is it for me: <yes or no, why> | What do I do: <yes or no, why>
+
+  SCREEN <n>
+    VISITOR: <raw thoughts in first person>
+    ANALYST: mood <word> | trust <up or down, why> | LIFT <factor> | principles present <list> | missing <list> | can act now <yes or no>
+
+  VERDICT
+    confidence <1-10> | clarity <1-10> | relevance <1-10> | would contact <yes, no or maybe, why>
+    strengths <3> | weaknesses <3> | almost left at <screen, trigger> | most engaged at <screen, trigger>
+
+  FIXES
+    <quick win, major improvement or strategic> | <title> | screen <n> | principle <name> | what <change> | why <reaction it answers>
+
+  CHECKS STILL NEEDED
+    <item> | <how to settle it with real visitors or analytics>
+output_sample:
+  input:
+    - Your page, as a link, screenshots or pasted text
+    - A short profile of one visitor and the words they searched
+    - What you want the visitor to do on the page
+    - Competitor pages they saw first (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - A browser tool or screenshots, so the AI can see the real page
+  output:
+    - name: Visitor profile
+      contains: The visitor as the AI understood them, so you can correct it before the walkthrough starts.
+    - name: Five-second test
+      contains: A yes or no on what the page is, whether it is for the visitor and what to do next.
+    - name: Screen-by-screen entries
+      contains: For each screen, the visitor's raw thoughts and a separate analyst note on trust, mood and missing proof.
+    - name: Verdict
+      contains: Confidence, clarity and relevance scores out of 10, plus the moment of near exit and of most interest.
+    - name: Ranked fixes
+      contains: Quick wins, bigger changes and long-term ideas, each tied to a screen and a reaction.
+    - name: Checks still needed
+      contains: What to confirm with real visitors or your analytics before you trust the findings.
+works_best_with:
+  tools:
+    - name: An AI with a browser or screenshot upload
+      why: It can see the real page and its layout, instead of guessing from pasted text.
+    - name: Your analytics tool
+      why: Compare the screens where the visitor loses interest with the screens where real people leave.
+  inputs:
+    - Your top search phrases or ad text, so the visitor arrives with real words.
+    - A second visitor profile, to see where two audiences disagree about the same page.
+terms:
+  - term: Persona
+    meaning: One made-up visitor with a name, a situation, fears and a way of deciding.
+  - term: Screen
+    meaning: One phone-height slice of the page. The visitor judges the page one screen at a time. Also called a fold.
+  - term: LIFT model
+    meaning: A way to judge a page by value, relevance, clarity, urgency, worry and distraction.
+  - term: Cialdini principles
+    meaning: Seven reasons people say yes, such as proof from others, expert signals and limited time.
+  - term: Fogg model
+    meaning: Someone acts only when they want to, can do it easily and are prompted at that moment.
+  - term: Qualitative simulation
+    meaning: A reasoned role-play, not a measurement. Use it to find ideas to test.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Visitor type
+    how: Change how the visitor decides, such as quick or slow, or how they react to trust signals, and run it again to see the page from a second angle.
+  - what: Device
+    how: It assumes a phone about 390 by 844 pixels. Say if you want a laptop view.
+  - what: Number of visitors
+    how: Ask for two or three visitors on the same page to get a table of where their needs match and clash.
+improve:
+  - Keep the visitor profile and run it again after each page change, then compare where the mood improved.
+  - Match the screens where the visitor gives up with the drop-off points in your analytics.

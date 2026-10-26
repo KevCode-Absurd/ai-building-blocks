@@ -1,6 +1,6 @@
 new_slug: uncanny-anime-image-prompt-writer
 name: Uncanny anime image prompt writer
-summary: Share a strange scene idea. Get a cinematic anime image prompt with a clear visual hook, camera and mood.
+summary: Turn a strange scene idea into an uncanny anime image prompt with a clear visual hook, camera angle and mood, ready to paste into an image tool.
 job: make-images
 headline: Uncanny anime image prompt writer
 subhead: Share a strange scene idea. Get a cinematic anime image prompt with a clear visual hook, camera and mood. Bring the brief and any files you want it to use.
@@ -11,6 +11,10 @@ explain: |-
 when:
   - You need cinematic uncanny manga/OVA image prompts.
   - You want a clear draft and checks from the material you already have.
+not_for:
+  - "You want a photo-style image: write a plain photo prompt, or ask a photographer or stock library."
+  - "You want a video clip or motion: use a video tool and write a separate motion and timing brief."
+  - "You need a logo, a poster with exact text or a named living artist's style: hire a designer."
 you_give:
   - brief
   - "Optional: reference set"
@@ -18,9 +22,25 @@ you_get:
   - image prompt
   - Missing inputs and steps that still need to run
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Type your scene idea. Add reference notes or a style if you have them (optional).
+  - Read the DIRECTION first to check the hook fits your idea.
+  - Copy the PROMPT into your image tool. No code or paid tool is needed to write it.
+  - Check the image for stray text or odd shapes, then try a line from OPTIONAL VARIATIONS.
+output_sample:
+  input:
+    - Your strange scene idea in a sentence or two
+    - Any reference images or notes you want it to use (optional)
+    - A visual style you prefer (optional)
+  prerequisites:
+    - An image tool to paste the prompt into, because this skill only writes the prompt
+  output:
+    - name: DIRECTION
+      contains: The visual style and the one uncanny hook that changes what the scene means.
+    - name: PROMPT
+      contains: One prompt for a still image, with camera, foreground, middle, background, line, shading and palette.
+    - name: OPTIONAL VARIATIONS
+      contains: Changes to camera, mood or setting you can try for new versions.
 how_it_works:
   - title: Read the brief
     text: Use the user idea immediately. Offer a small set of visual lanes only if they need direction; do not require artist selection before drafting.

@@ -1,55 +1,108 @@
 new_slug: restaurant-shift-exception-review-assistant
 name: Restaurant shift exception review assistant
 headline: Restaurant shift exception review assistant
-summary: A shift handover, unresolved issue register and escalation notes.
+summary: Turn end-of-shift notes into a restaurant shift handover, an open-issue register and escalation notes for the next lead.
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A shift handover, unresolved issue register and escalation notes. Share actual shift notes, bookings, outstanding orders, equipment issues, approved food safety procedures and the incoming lead. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Paste the outgoing shift's notes, the bookings and orders still open, and your approved food safety procedures. It builds a restaurant shift handover for the incoming lead. It carries open issues over from the last shift and lists who to escalate to. Safety items follow your own procedure. Nothing is made up.
 explain: |-
-  A shift handover, unresolved issue register and escalation notes.
+  A restaurant shift ends with loose ends. A fridge alarm nobody wrote up. A supplier who never called back. A leak that has been nearly fixed for three nights. The next lead hears about them from a note on the pass, or not at all.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Safety issues follow the approved procedure; no temperature, inspection result or resolution is invented. Missing tools or evidence stay visible in the final summary.
+  This agent keeps a short register of open issues. After each shift it sorts your notes into new, still open and closed. An issue counts as closed only when the notes say who fixed it and when. Silence does not close it. Each safety or equipment issue is matched to your own written procedure. If you have none, it says so and writes a question for your lead. It never makes up steps, limits or temperatures.
+
+  It prepares paper only. It does not message your team, place an order, log a temperature or start a schedule. You run it at each shift change, and your lead checks the safety lines before the handover goes out.
 when:
-  - You need a shift handover, unresolved issue register and escalation notes.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A closing lead hands the kitchen to the morning prep lead, and the notes sit in a notebook, a group chat and someone's head.
+  - A fault such as a leaking dishwasher has been open for two or three shifts and nobody owns it.
+  - A supplier order for tomorrow is still unconfirmed when you close.
+  - A busy weekend has bookings with allergies or large groups that the next lead must see first.
+not_for:
+  - A food safety problem is happening now, such as a failing fridge or a guest unwell after eating. Follow your approved procedure and call your lead first. Use this agent afterwards to write it up.
+  - You want one quick note for the next shift and no tracking. Use the Handover note writer.
+  - You need a written procedure for a task, such as how to isolate a leaking machine. Use the Process and SOP writer. This agent only flags that the procedure is missing.
+  - You want a weekly view of who is away and who covers. Use the Weekly team coverage review assistant.
 you_give:
-  - Actual shift notes, bookings, outstanding orders, equipment issues, approved food safety procedures and the incoming lead. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - The outgoing shift's notes, with the date and shift times (from the lead's notebook, messages or the end-of-night report)
+  - The name of the incoming lead and of the manager who handles escalations
+  - Your approved food safety and equipment procedures, as a file or a list of titles (from your food safety folder)
+  - Bookings and supplier orders that are still open (optional, from your booking system and order sheets)
+  - Last shift's issue register (from the second run on; the agent hands it back each time)
 you_get:
-  - A shift handover, unresolved issue register and escalation notes.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A handover for the incoming lead, with the time-critical items first
+  - An issue register with an ID, an owner, the number of shifts open and what proves each issue closed
+  - Escalation notes saying who to tell, by when and what they must decide
+  - Safety issues with no approved procedure, listed as questions for your lead
+  - MISSING lines for anything the notes did not say, and a short record to start the next shift from
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent to Claude, ChatGPT or Gemini with its two helpers, the Prepare a restaurant shift handover workflow and the Process and SOP writer. Or download the pack and attach it.
+  - At the end of the shift, paste the notes. Say the date, the shift times and who is coming in. Attach your procedures. From the second shift, paste last shift's register too.
+  - Read the first section of the handover. Check every food safety line against your own procedure, and fill in any MISSING line before you hand over.
+  - Send the handover and any escalation yourself. The agent sends nothing and changes no booking, order or log.
+  - In a chat-only tool, copy the register it gives you and paste it in at the next shift change. With file access, it saves the register for you. Installing sets up no schedule, so you start each run.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep shift ID, unresolved issue IDs, accepted owner, source time and closure evidence. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A new shift handover is supplied with unresolved orders, equipment or safety escalations.
-  - title: Choose the next step
-    text: Run prepare-a-restaurant-shift-handover for changed evidence or a due review. If an exception has no approved handling path, document the missing procedure and route a question to the responsible lead; do not invent safety instructions.
-  - title: Check and save evidence
-    text: Safety issues follow the approved procedure; no temperature, inspection result or resolution is invented. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read the last shift
+    text: Loads the saved register if it belongs to this restaurant. On the first run it builds a baseline with you, covering the shift times, the lead and which procedures are approved.
+  - title: Sort every item
+    text: Marks each item new, still open, closed or not mentioned. Closed needs evidence, such as who fixed it and when. An item the notes skip stays open.
+  - title: Match to your procedures
+    text: Matches each safety or equipment item to a procedure by title. With no match, it writes a gap note and a question for your lead. It adds no steps or limits of its own.
+  - title: Write the handover and register
+    text: The Handover note writer puts time-critical items first. The Executive action register keeper turns open items into a register with owners and dates.
+  - title: Choose what to escalate
+    text: Escalates a food safety item, an item open for two or more reviews, and any item due in the next shift that has no owner. Contacts come from what you supplied, never from guesswork.
+  - title: Check and save
+    text: Checks that no temperature, inspection result or fix is invented. Saves the files, the run log and the new register, and keeps the old one.
 output_shape: |-
-  Scope and source coverage
-  A shift handover, unresolved issue register and escalation notes.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  HANDOVER <date>, for <incoming lead>
+  FIRST: <the time-critical or safety item, the procedure to follow, MISSING lines>
+  TODAY: <orders, bookings and faults the next shift must act on>
+
+  REGISTER
+  <ID> | <issue> | owner <name or MISSING> | <new or open n shifts> | closes when: <proof>
+  CLOSED THIS SHIFT: <ID> | <proof>
+
+  ESCALATE
+  <issue> | tell <name> | by <time> | decision needed: <what>
+  NO APPROVED PROCEDURE: <issue> | question for <manager>
+
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The outgoing shift's notes, with the date and shift times
+    - The incoming lead and the manager who handles escalations
+    - Your approved food safety and equipment procedures, as a file or a list of titles
+    - Open bookings and supplier orders (optional)
+    - Last shift's issue register (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - The helper skills added, or the pack attached
+    - Your own written food safety procedures, at least as a list of titles
+  output:
+    - name: Handover
+      contains: The note for the incoming lead. Time-critical and safety items come first, then the orders, bookings and faults the next shift must act on.
+    - name: Issue register
+      contains: Every open issue with a fixed ID, an owner, how many shifts it has been open and what proves it is closed.
+    - name: Closed this shift
+      contains: "Issues closed with proof: who fixed them and when."
+    - name: Escalation notes
+      contains: Who to tell, by when and what they must decide. Includes food safety items, issues open for two reviews and unowned items due next shift.
+    - name: No approved procedure list
+      contains: Safety or equipment issues that match none of your procedures, each as a question for your manager.
+    - name: MISSING lines and CHECKS MISSED
+      contains: Every fact the notes did not give, such as a missing reading, and every check that could not run.
+    - name: Record for the next shift
+      contains: Shift ID, open issue IDs, owners, source time and closure proof.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Safety issues follow the approved procedure; no temperature, inspection result or resolution is invented.
+  - what: When to escalate
+    how: The starting point is food safety items, items open for two reviews and unowned items due next shift. Change the number of reviews to suit how fast your issues close.
+  - what: Your procedures
+    how: Paste the titles of your real procedures. The more it can match, the fewer questions it sends your lead.
+  - what: Shift pattern
+    how: Say how many shifts run a day. "Open for 3 shifts" counts shifts, so a split-shift kitchen needs it stated.
+  - what: Who is named
+    how: Give roles, not private details. The register keeps only a name, an owner and the proof of closing.
 judge:
   - Safety issues follow the approved procedure; no temperature, inspection result or resolution is invented.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +115,24 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep one register file per restaurant and give each issue an ID that never changes, so the agent can tell a new issue from a renamed one.
+  - Add your approved procedures once, with their titles, so every run matches against the same list.
+  - Write down who closes each kind of issue, such as the chef for kitchen kit and the manager for suppliers, so owners stop coming out as MISSING.
+  - Record checks that need a person, such as a temperature reading, and finish them before you rely on the handover.
 works_best_with:
   tools:
     - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+      why: Keeps the register file between shifts. In a plain chat tool you paste last shift's register in each time.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Your written food safety and equipment procedures, with titles.
+    - Your temperature log, if you keep one, so the agent can say what was recorded.
+    - The booking list for the next shift.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Shift handover
+    meaning: The note one shift gives the next, so the incoming lead knows what is open and what is urgent.
+  - term: Issue register
+    meaning: A short list of open problems, each with an ID, an owner and what proves it is fixed.
+  - term: Escalation
+    meaning: Telling the person who can decide, such as a manager, because the lead on shift cannot settle it alone.
+  - term: Closure evidence
+    meaning: The proof an issue is fixed, such as who fixed it, when, and a note or photo.

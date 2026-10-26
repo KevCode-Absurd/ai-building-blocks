@@ -1,31 +1,57 @@
 new_slug: executive-due-task-drafts
 name: Due task follow up drafter
-summary: Share due tasks and related threads. Get follow-up drafts linked to each task, with missing facts and send status clear.
+summary: Turn your due tasks into follow-up email drafts. Each draft links to its task and thread, and shows missing facts and send status.
 job: write-emails
 headline: Due task follow up drafter
 thinking: high
 thinking_why: It checks evidence, missing facts and the order of the work.
-subhead: Share due tasks and related threads. Get follow-up drafts linked to each task, with missing facts and send status clear. Bring the facts and files you already have. Your AI follows the steps below, marks gaps and returns work you can review before acting.
+subhead: Give it your due tasks and the email threads behind them. It writes one follow-up draft for each need and keeps a ledger of what is a draft and what is sent. It marks any missing facts instead of guessing.
 explain: |-
   Share due tasks and related threads. Get follow-up drafts linked to each task, with missing facts and send status clear.
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - Several tasks are due and each needs a nudge or a reply by email.
+  - You track tasks in a sheet or export and want drafts tied to each task ID.
+  - You are picking work back up and need to see which drafts exist and which were sent.
+  - You want to review every message before anything goes out.
+not_for:
+  - "You have tasks with no email thread or recipient on file: use a plain task list and ask the owner who to write to."
+  - "You need one email written from scratch: write it directly in your AI chat, since this tool is built for many tasks at once."
+  - "You want messages sent for you: this only makes drafts, so send them yourself after you review each one."
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - A task export or list with task ID, owner, due date, status and thread ID for each task
+  - The email threads for those tasks, pasted or shared
+  - The date window and your time zone
+  - Access to your mail or task tool (optional)
 you_get:
-  - "follow-up-drafts.md: task ID, thread ID, recipients, subject, body"
-  - "draft-ledger.csv: version, state, message ID"
-  - Missing facts and pending approvals
+  - follow-up-drafts.md with task ID, thread ID, recipients, subject and body for each draft
+  - draft-ledger.csv with the version, state and message ID of each draft
+  - A list of missing facts and approvals you still need to give
+  - A short close with source coverage and one next step
 how_to_use:
-  - Add the complete skill pack to your AI.
-  - Share your goal and the files listed above.
-  - Ask it to follow the steps and mark any missing facts.
-  - Review the result before approving external actions.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste your task export and the related email threads. Add the date window and your time zone.
+  - Ask it to draft follow-ups and mark anything missing. It works from pasted text, so no code or paid tool is needed.
+  - Check each draft for the right recipient, the right facts and the right tone.
+  - Answer the missing facts, then send the drafts yourself once you approve them.
+output_sample:
+  input:
+    - Your task list or export, with task ID, owner, due date and status for each task
+    - The email threads linked to those tasks, pasted or shared
+    - The date range you want to cover, and your time zone
+    - Your mail or task tool, if you connect one (optional)
+  prerequisites:
+    - Your task export or notes pasted into the chat, or a mail or task tool your AI can read
+  output:
+    - name: follow-up-drafts.md
+      contains: One draft per need, with task ID, thread ID, To, CC and BCC, subject, body and missing facts.
+    - name: draft-ledger.csv
+      contains: One row per draft with task ID, thread ID, version, state and message ID if known.
+    - name: Missing facts and pending approvals
+      contains: Gaps such as an unknown recipient or status, and each action that still needs your approval.
+    - name: Closing summary
+      contains: Source coverage, proposed outside actions and one next step.
 how_it_works:
   - title: Read the sources
     text: Identify the current request, time window and facts you can verify.

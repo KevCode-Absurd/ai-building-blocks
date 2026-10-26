@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sets a test method and rates findings.
 new_slug: internal-controls-testing
 name: Internal controls testing planner
-summary: Give it your key controls. Get a test plan, sample sizes and a way to
-  rate any control gaps.
+summary: Plan SOX internal controls testing. Give it your key controls and get sample sizes, test steps and a way to rate any control gaps.
 job: check-contracts
 headline: Internal controls testing planner
-subhead: A test plan for your financial controls with sample sizes and a way to
-  rate any gaps, built for SOX-style review. You give it your key controls and
-  get a defensible method an auditor can follow.
+subhead: A test plan for your financial controls with sample sizes and a way to rate any gaps, built for SOX-style review. You give it your key controls and get a defensible method an auditor can follow.
 explain: |
   A test plan for your financial controls with sample sizes and a way to rate any gaps, built for SOX-style review. You give it your key controls and get a defensible method an auditor can follow.
 
@@ -19,6 +16,10 @@ when:
   - A control failed and you must rate how serious it is.
   - You are deciding what internal staff test versus what the auditor relies on.
   - You are building a testing calendar for the year.
+not_for:
+  - "You need a broader external audit program beyond financial reporting controls: use the audit-checklist skill instead."
+  - "Your company is private and has no SOX duty: a simple review by your accountant or bookkeeper is enough."
+  - "You want a final opinion on your controls: ask a qualified internal auditor or your external auditor to review the plan."
 you_give:
   - Your list of key controls
   - Significant accounts and processes
@@ -31,7 +32,28 @@ you_get:
   - A deficiency rating method
   - A findings write-up
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI tool and paste this skill's instructions into a chat. It needs no code and no web access.
+  - Paste your list of key controls, with how often each one runs and the period you cover.
+  - Add the report that shows each control's population and your list of control owners.
+  - Ask for a test plan first. Check the sample sizes against your auditor's rules.
+  - Then ask for a workpaper for one control, such as a monthly bank reconciliation, and fill in the results.
+  - Have a qualified internal auditor or your external auditor review the draft before you rely on it.
+output_sample:
+  input:
+    - Your list of key controls
+    - Your significant accounts and processes
+    - How often each control runs and the period you cover
+    - Your plan for auditor reliance (optional)
+    - The report that lists each control population (optional)
+  prerequisites:
+    - A list of control owners to name in the workpapers
+    - "A draft only: a qualified internal auditor or your external auditor should review the result"
+  output:
+    - name: Header
+      contains: Control ID, description, how often it runs, owner, the assertions it covers, the period, tester and date.
+    - name: Population & Sample
+      contains: Where the population came from, how you checked it was complete, the sample size, the method and the items picked.
+    - name: Attributes & Results
+      contains: A grid of what was checked for each sample item, with any exceptions explained.
+    - name: Conclusion
+      contains: Whether the control is effective or deficient, how serious any gap is, and who fixes it by when.

@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It traces one change through many systems and compares them.
 new_slug: shared-field-change-checker
 name: Shared field change checker
-summary: Name a changed field or flag. Get the places it is missing or read
-  differently, across database, API and apps.
+summary: Check a changed field or flag across your database, API and apps. Find where it is missing or read differently before you release.
 job: test-and-fix-code
 headline: Shared field change checker
-subhead: A read-only report of every place a changed field, status or flag is
-  missing or read differently, across your database, API, apps and analytics. A
-  field added in one schema is not finished until each path agrees on what it
-  means.
+subhead: A read-only report of every place a changed field, status or flag is missing or read differently, across your database, API, apps and analytics. A field added in one schema is not finished until each path agrees on what it means.
 explain: |
   A read-only report of every place a changed field, status or flag is missing or read differently, across your database, API, apps and analytics. A field added in one schema is not finished until each path agrees on what it means.
 
@@ -19,18 +15,45 @@ when:
   - A new status value could break older app versions.
   - The detail endpoint has the field but the list endpoint does not.
   - You are about to release a change that touches database, API and mobile.
+not_for:
+  - "You have a bug in one file with no shared users: use a unit test or a code review."
+  - "You want to check one API request is correct: use a plain API test or a tool like Postman."
+  - "You want the AI to fix the gaps: ask your AI to change the code in a separate step, or ask a developer."
 you_give:
-  - The field, enum or flag that changed
-  - The repo or repos involved
-  - The rollout plan and compatibility needs
+  - The exact name and type of the field, enum or flag that changed
+  - The repos and branches involved
+  - Your database change and rollout plan
+  - The app versions still in use (optional)
 you_get:
   - A definition of each state
   - A map of everywhere the field flows
   - A list of gaps with evidence
   - Missing test and rollout checks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open an AI that can read your project files, such as Claude or Gemini with your repo attached.
+  - Paste the skill into the chat.
+  - Add the field name and type, your repos and branches, the rollout plan and the app versions still in use.
+  - Ask it to run the audit. It only reads and reports. It does not change code.
+  - Read the release verdict first. Then check the missing and unknown rows in the test grid.
+  - Give the gaps to a developer or to your AI in a new step to fix.
+output_sample:
+  input:
+    - The name and type of the field, enum or flag that changed
+    - Your code repos and branches (the AI must be able to read them)
+    - Your database change and rollout plan
+    - The app versions still in use (optional)
+  prerequisites:
+    - An AI that can read your project files
+  output:
+    - name: Semantic contract
+      contains: What missing, null, false, true and unknown values mean, plus the rules old apps and the rollout must follow.
+    - name: Propagation graph
+      contains: Every place the field flows, from storage to API, apps, analytics and tests, with a reason for any skipped place.
+    - name: Evidence by edge
+      contains: Each link marked proven, partial, missing, conflict, unknown or not applicable, with file paths as proof.
+    - name: Boundary checks
+      contains: Findings on old data, list and detail responses, old app versions, the flag and analytics events.
+    - name: State-by-path test matrix
+      contains: A grid of each state against each path, with the expected result and status. Untested cells stay unknown.
+    - name: Release verdict
+      contains: Blocked or inconclusive, with the smallest checks or fixes that would change the answer.

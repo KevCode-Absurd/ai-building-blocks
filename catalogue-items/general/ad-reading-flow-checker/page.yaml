@@ -1,6 +1,6 @@
 new_slug: ad-reading-flow-checker
 name: "Ad reading-flow checker"
-summary: "Paste or describe a print ad layout. Get where the eye goes first, what to move and what to cut."
+summary: "Check your print or image ad layout before it runs. Find where the eye lands first, what to move and what to cut, with a score out of 100."
 job: check-ads
 thinking: low
 thinking_why: "The checks are fixed layout questions that can be answered by looking at the ad."
@@ -17,6 +17,10 @@ when:
   - You have a print, magazine, newsletter or image ad and want a layout check before it runs.
   - Your image ads get seen but not read.
   - You are choosing between two layouts and want a reason.
+not_for:
+  - "You have a video or sound-off ad: use the Sound-off commercial checker."
+  - "You need to choose your brand strategy or the main point of the ad: talk it through with your team or a strategist first."
+  - "You want to test two ads against real buyers: run a live A/B test in your ad platform."
 
 you_give:
   - The ad as an image (best), or a layout description with sizes and positions
@@ -33,6 +37,31 @@ how_to_use:
   - Say where it will run and what is around it.
   - Make the fixes, starting with order and headline size.
   - Run it on the changed version.
+output_sample:
+  input:
+    - Your ad as an image, or a written layout with the size and position of each part
+    - Where it will run, such as a page or feed (optional)
+    - A screenshot or description of what sits around it (optional)
+    - The real print size or feed width (optional)
+  prerequisites:
+    - An AI that can see images, if you want to attach the ad as a picture
+  output:
+    - name: Score
+      contains: "A score out of 100 and the working: checks passed out of checks counted."
+    - name: Eye path
+      contains: What the eye reaches first, next and last in the layout.
+    - name: Checks
+      contains: Pass or fail for picture above headline, headline size, fit with the page, clutter, brand and content.
+    - name: Fixes
+      contains: Numbered changes, each naming the part of the layout to move, resize or cut.
+    - name: Cut list
+      contains: Items at the bottom of the ad to remove.
+    - name: Score after fixes
+      contains: A second score worked out the same way once the fixes are applied.
+    - name: Missing
+      contains: Anything you did not give, marked so no check is guessed.
+    - name: Checks missed
+      contains: One line for each check still failing and why, or none.
 
 how_it_works:
   - title: Finds the first look

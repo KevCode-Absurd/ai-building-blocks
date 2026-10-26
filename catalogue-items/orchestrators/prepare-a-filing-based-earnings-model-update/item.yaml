@@ -1,25 +1,18 @@
 slug: prepare-a-filing-based-earnings-model-update
 name: Prepare a filing-based earnings model update
-summary: Update a sourced earnings workbook while keeping periods, shares, adjustments, taxes and OCI reconciled.
+summary: "Update an earnings model after a new filing: trailing 12 months, share counts, adjusted EPS, cash tax and OCI. Get a linked workbook and change log."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - trailing-period-financial-bridge
   - weighted-average-share-schedule

@@ -1,6 +1,6 @@
 slug: pros-and-cons-decision-planner
 name: "Pros and cons decision planner"
-summary: "Describe a choice you cannot settle. Get a two-column list built over days, matched pairs struck out, and a call after sleep."
+summary: "Settle a choice you cannot decide. Get pros and cons built over days, matched pairs struck out, and a call you can revisit."
 category: general
 type: skill
 role: make
@@ -16,3 +16,4 @@ minds: [benjamin-franklin]
 credits:
   - {title: "Letter to Joseph Priestley, 19 September 1772", by: "Benjamin Franklin", used: "Two columns kept over several days, with reasons of equal weight struck out in pairs until one side is clear"}
   - {title: "The Autobiography of Benjamin Franklin", by: "Benjamin Franklin", used: "Habit of writing decisions and plans down, with checks on himself"}
+next: [case-against-writer, decision-evidence-bar-setter]

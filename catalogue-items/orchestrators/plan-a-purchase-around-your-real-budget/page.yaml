@@ -1,45 +1,81 @@
 new_slug: plan-a-purchase-around-your-real-budget
 name: Plan a purchase around your real budget
 headline: Plan a purchase around your real budget
-summary: Share the source files. Get a total-cost comparison and a decision brief that respects your cash limit.
+summary: See what a purchase really costs over time and whether it fits your cash limit. Give it your budget and quotes to get a cost table and decision brief.
 job: money-and-investing
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A total-cost comparison and a decision brief that respects your cash limit. Share your budget, purchase purpose, comparable quotes, ongoing costs, timing constraints and an existing ordered decision checklist with stop rules. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your income and bills, two or more quotes with their running costs, and your own decision checklist. It finds the cash you can spend without touching fixed bills, compares the full cost of each quote, and checks the purchase against your rules. You get a cost table and a short decision brief.
 explain: |-
-  A total-cost comparison and a decision brief that respects your cash limit.
+  A price tag is often the smallest part of a purchase. Repairs, subscriptions, fees and replacement add up. A purchase can fit this month's cash and still be a bad fit once a year of costs is counted. This workflow plans a purchase around the cash you really have, not around the quote.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Recurring charges, replacement needs and uncertainty are shown; affordability follows your supplied cash limits. Missing tools or evidence stay visible in the final summary.
+  It works in three steps. First it sorts your income and bills and finds the money left for this purchase. Then it compares each quote on what you need it for, the full cost over the time you will keep it, and the trade-offs. Last it runs your own checklist, with your stop rules. An answer you cannot back with a fact counts as a fail until you find the fact.
+
+  The cash limit comes first, and the checklist is yours. It does not pick for you, find quotes, spend money or give tax, legal or investment advice. You decide.
 when:
-  - You need a total-cost comparison and a decision brief that respects your cash limit.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You have two or three quotes for a car, a laptop, a sofa, software or a course, and the price tags hide the running costs.
+  - You can afford the monthly payment but are not sure you can afford the year.
+  - You want a go, wait or no call that you can explain to a partner or co-owner.
+  - You are about to make a big purchase and want to test it against your own rules first.
+not_for:
+  - "You have no budget or cash limit to work from yet: build one first with the Personal budget builder."
+  - "You only want a short pause before an impulse buy: use the Big purchase reviewer."
+  - "You do not have a decision checklist: write one first with the Decision checklist builder, then come back."
 you_give:
-  - Your budget, purchase purpose, comparable quotes, ongoing costs, timing constraints and an existing ordered decision checklist with stop rules.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your monthly take-home income and fixed bills, from pay slips and bank statements
+  - The cash you could put toward this purchase, and any amount you want to keep untouched
+  - Two or more quotes for the same purchase, with price, fees and how long you will keep it
+  - Running costs for each quote, such as repairs, subscriptions, insurance or power (optional)
+  - Your decision checklist with pass lines and stop rules
+  - What you need it to do, and the date you must decide by
 you_get:
-  - A total-cost comparison and a decision brief that respects your cash limit.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A budget that shows the cash available for this purchase
+  - A cost table with each quote's full cost over the time you will keep it
+  - "Your checklist answered line by line: PASS, FAIL or UNKNOWN, with the fact behind each"
+  - A decision brief with the call (go, wait or no), the reason and what would change it
+  - A list of facts still missing
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the workflow pack to Claude, ChatGPT or Gemini.
+  - Attach or paste your income, fixed bills and savings. Add each quote with its price, fees and running costs.
+  - Paste your decision checklist. If you do not have one, build it first with the Decision checklist builder.
+  - After step 1, check the cash figure against your bank balance and bills. Fix anything missing before you go on.
+  - After step 2, check that every quote covers the same time span and includes fees and running costs.
+  - Read the brief and every MISSING line. Treat UNKNOWN answers as open until you find the fact.
 how_it_works:
   - title: Personal budget builder
-    text: Find the amount available for the purchase without changing protected commitments.
+    text: Sorts your income and bills into needs, wants and savings and finds the money left for this purchase. Hands step 3 the cash limit and the fixed bills it must not touch. Step 2 starts from your quotes.
   - title: Vendor comparison writer
-    text: Compare the options on required use, full quoted cost and practical trade-offs.
+    text: Starts from your quotes, not the budget. Compares each quote on what you need it for, the full cost over the time you keep it (price, fees, running costs, replacement) and the risks. Hands step 3 a cost table and the trade-offs.
   - title: Decision checklist runner
-    text: Check the proposed purchase against the user supplied budget, must-have requirements and decision rules, marking unknown answers.
+    text: Runs your checklist in order against the budget and the quotes. An unknown counts as a fail, and a failed stop rule gives no or wait. Ends with the call and a record you can review later.
 output_shape: |-
-  Scope and source coverage
-  A total-cost comparison and a decision brief that respects your cash limit.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  CASH AVAILABLE  income <n>, fixed bills <n>, left for this purchase <n>
+  COST TABLE      <quote> | price | fees | running cost per year | total over <years>
+  TRADE-OFFS      <one line for each quote>
+  CHECKLIST       <item> | PASS / FAIL / UNKNOWN | <the fact behind it>
+  CALL            go, wait or no. Reason. What would change it.
+  MISSING         <each gap>
+  CHECKS MISSED   <each check not done, or none>
+output_sample:
+  input:
+    - Your income, fixed bills and the cash you could use
+    - Two or more quotes with price, fees and running costs
+    - Your decision checklist with stop rules
+    - What you need it to do, and your deadline
+  prerequisites:
+    - A decision checklist, built with the Decision checklist builder or your own
+  output:
+    - name: Cash available
+      contains: Income, fixed bills and the amount left for this purchase.
+    - name: Cost table
+      contains: Each quote's price, fees, running costs and total over the time you keep it.
+    - name: Trade-offs
+      contains: One line for each quote on what you gain and what you give up.
+    - name: Checklist result
+      contains: Every checklist item with PASS, FAIL or UNKNOWN and the fact behind it.
+    - name: Decision brief
+      contains: The call (go, wait or no), the reason and what would change it.
+
 tweaks:
   - what: Scope
     how: Choose one project, team, period or decision so the sources are comparable.
@@ -62,13 +98,22 @@ improve:
   - Add your own acceptance rules and one approved example without changing the component licences.
   - Keep corrections with the result so the next run uses current facts and the same definitions.
   - Record checks that need a person or unavailable tool and complete them before relying on the output.
+
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI with file support
+      why: Reads statements, quotes and your checklist. In plain chat, paste the figures instead.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Three months of bank statements, so the bills are real and not remembered
+    - A partner or co-owner who will read the brief with you
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Total cost
+    meaning: Price plus fees, running costs and replacement over the time you will keep the purchase.
+  - term: Cash limit
+    meaning: The most you can spend without touching bills or savings you want to protect.
+  - term: Stop rule
+    meaning: A checklist line that blocks the purchase if it fails, however good the rest looks.
+next:
+  - big-purchase-pause-check
+before:
+  - decision-checklist-builder

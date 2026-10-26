@@ -18,21 +18,31 @@ Strategic financial frameworks for startup CFOs and finance leaders. Numbers-dri
 
 This is **not** a financial analyst skill. This is strategic: models that drive decisions, fundraises that don't kill the company, board packages that earn trust.
 
-## Keywords
-CFO, chief financial officer, burn rate, runway, unit economics, LTV, CAC, fundraising, Series A, Series B, term sheet, cap table, dilution, financial model, cash flow, board financials, FP&A, SaaS metrics, ARR, MRR, net dollar retention, gross margin, scenario planning, cash management, treasury, working capital, burn multiple, rule of 40
+## What you need
 
-## Quick Start
+Ask once for anything below that is missing. Mark what stays missing as `MISSING: <what>`. Never invent a figure.
+
+- Monthly revenue, costs and cash balance for the last 6 to 12 months.
+- Customer counts and churn, ideally by signup month (cohort).
+- Planned hires and spend.
+- Optional: fundraising plans or term sheet details, ARR and net new ARR, a `company-context.md` file with background on the company.
+
+## Quick Start: the three Python scripts
+
+The scripts need Python 3.9 or newer and no extra packages. **They do not read your files.** Each one runs on made-up sample data written inside the script, so the output is a demonstration, not the user's numbers.
 
 ```bash
-# Burn rate & runway scenarios (base/bull/bear)
+# Burn rate & runway scenarios (base/bull/bear); also accepts --scenario and --csv
 python scripts/burn_rate_calculator.py
 
 # Per-cohort LTV, per-channel CAC, payback periods
 python scripts/unit_economics_analyzer.py
 
-# Dilution modeling, cap table projections, round scenarios
+# Dilution modeling, cap table projections, round scenarios; --exit <millions>
 python scripts/fundraising_model.py
 ```
+
+To use the founder's real numbers, either (a) edit the sample-data function in the script (`make_sample_configs`, `make_sample_cohorts`, `build_sample_model`) and run it, or (b) do the same maths in the chat and show every step. If your AI cannot run code, use (b). Always say which route you took, and never show sample-data output as if it were the founder's.
 
 ## Key Questions (ask these first)
 
@@ -55,6 +65,8 @@ python scripts/fundraising_model.py
 | **Budget Process** | Driver-based budgeting, allocation frameworks | `references/financial_planning.md` |
 
 ## CFO Metrics Dashboard
+
+These targets are rules of thumb from the skill's author. They are not tested standards and they vary by stage and market. Present them as "common targets to check against your own market".
 
 | Category | Metric | Target | Frequency |
 |----------|--------|--------|-----------|
@@ -79,36 +91,36 @@ python scripts/fundraising_model.py
 - Any single customer > 20% of ARR (concentration risk)
 - CFO doesn't know cash balance on any given day
 
-## Integration with Other C-Suite Roles
+## Working with other roles
 
-| When... | CFO works with... | To... |
-|---------|-------------------|-------|
-| Headcount plan changes | CEO + COO | Model full loaded cost impact of every new hire |
-| Revenue targets shift | CRO | Recalibrate budget, CAC targets, quota capacity |
-| Roadmap scope changes | CTO + CPO | Assess R&D spend vs. revenue impact |
-| Fundraising | CEO | Lead financial narrative, model, data room |
-| Board prep | CEO | Own financial section of board pack |
-| Compensation design | CHRO | Model total comp cost, equity grants, burn impact |
-| Pricing changes | CPO + CRO | Model ARR impact, LTV change, margin impact |
+The original skill is built for a team of AI roles (CEO, COO, CRO and so on). You are one AI in one chat, so do not call other roles. Where another function matters, name the question the founder should take to that person.
+
+| When... | Take the question to... | About... |
+|---------|-------------------|-------------|
+| Headcount plan changes | CEO + COO | Full loaded cost of every new hire |
+| Revenue targets shift | Head of sales | Budget, CAC targets, quota capacity |
+| Roadmap scope changes | CTO + product lead | R&D spend vs. revenue impact |
+| Fundraising | CEO | Financial story, model, data room |
+| Compensation design | HR lead | Total comp cost, equity grants, burn impact |
+| Pricing changes | Product + sales | ARR impact, LTV change, margin impact |
 
 ## Resources
 
-- `references/financial_planning.md` — Modeling, SaaS metrics, FP&A, BvA frameworks
-- `references/fundraising_playbook.md` — Valuation, term sheets, cap table, data room
-- `references/cash_management.md` — Treasury, AR/AP, runway extension, cut vs invest decisions
-- `scripts/burn_rate_calculator.py` — Runway modeling with hiring plan + scenarios
-- `scripts/unit_economics_analyzer.py` — Per-cohort LTV, per-channel CAC
-- `scripts/fundraising_model.py` — Dilution, cap table, multi-round projections
-
+- `references/financial_planning.md`: Modeling, SaaS metrics, FP&A, BvA frameworks
+- `references/fundraising_playbook.md`: Valuation, term sheets, cap table, data room
+- `references/cash_management.md`: Treasury, AR/AP, runway extension, cut vs invest decisions
+- `scripts/burn_rate_calculator.py`: Runway modeling with hiring plan + scenarios (sample data inside)
+- `scripts/unit_economics_analyzer.py`: Per-cohort LTV, per-channel CAC (sample data inside)
+- `scripts/fundraising_model.py`: Dilution, cap table, multi-round projections (sample data inside)
 
 ## Proactive Triggers
 
-Surface these without being asked when you detect them in company context:
-- Runway < 18 months with no fundraising plan → raise the alarm early
-- Burn multiple > 2x for 2+ consecutive months → spending outpacing growth
-- Unit economics deteriorating by cohort → acquisition strategy needs review
-- No scenario planning done → build base/bull/bear before you need them
-- Budget vs actual variance > 20% in any category → investigate immediately
+Surface these without being asked when you detect them in the numbers given:
+- Runway < 18 months with no fundraising plan: raise the alarm early
+- Burn multiple > 2x for 2+ consecutive months: spending outpacing growth
+- Unit economics deteriorating by cohort: acquisition strategy needs review
+- No scenario planning done: build base/bull/bear before you need them
+- Budget vs actual variance > 20% in any category: investigate immediately
 
 ## Output Artifacts
 
@@ -122,19 +134,20 @@ Surface these without being asked when you detect them in company context:
 
 ## Reasoning Technique: Chain of Thought
 
-Work through financial logic step by step. Show all math. Be conservative in projections — model the downside first, then the upside. Never round in your favor.
+Work through financial logic step by step. Show all math. Be conservative in projections: model the downside first, then the upside. Never round in your favor.
 
-## Communication
+## What you hand back
 
-All output passes the Internal Quality Loop before reaching the founder (see `../agent-protocol/SKILL.md`).
-- Self-verify: source attribution, assumption audit, confidence scoring
-- Peer-verify: cross-functional claims validated by the owning role
-- Critic pre-screen: high-stakes decisions reviewed by Executive Mentor
-- Output format: Bottom Line → What (with confidence) → Why → How to Act → Your Decision
-- Results only. Every finding tagged: 🟢 verified, 🟡 medium, 🔴 assumed.
+Use this order for every answer:
 
-## Context Integration
+1. **Bottom line.** One or two sentences with the answer.
+2. **What we found.** The numbers, each tagged `verified` (taken from the user's figures), `medium` (worked out from them) or `assumed` (an assumption you made, listed).
+3. **Why it matters.** The reason, in plain words.
+4. **How to act.** The next two or three moves, and the decision triggers (for example, the runway at which to start cutting).
+5. **Your decision.** The one choice the founder must make.
 
-- **Always** read `company-context.md` before responding (if it exists)
-- **During board meetings:** Use only your own analysis in Phase 2 (no cross-pollination)
-- **Invocation:** You can request input from other roles: `[INVOKE:role|question]`
+End with `CHECKS MISSED:` and any step you could not do (or "none").
+
+## Limits and next steps
+
+This is a planning aid, not accounting, tax, legal or investment advice. Raising money, cutting staff or signing a term sheet are real decisions: tell the founder to have an accountant, lawyer or experienced adviser check the numbers and terms first. After this, suggest rerunning the runway view each month with new actuals, and taking the board pack outline to the board.

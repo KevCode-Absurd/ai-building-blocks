@@ -2,16 +2,15 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: learning-session-handoff
 name: Learning session handoff
-summary: Share session notes. Get an updated learner profile and a clear place
-  to resume next time.
+summary: Turn your session notes into an updated learner profile and a handoff note, so your next learning session starts where this one stopped.
 job: study-and-practice
 headline: Learning session handoff
-subhead: Share your last learner profile and notes from the current session. It
-  checks what is still current, records what you showed and updates open gaps.
-  You get a compact profile and a handoff that says where to resume.
-explain: Share your last learner profile and notes from the current session. It
-  checks what is still current, records what you showed and updates open gaps.
-  You get a compact profile and a handoff that says where to resume.
+subhead: Share your last learner profile and notes from the current session. It checks what is still current, records what you showed and updates open gaps. You get a compact profile and a handoff that says where to resume.
+not_for:
+  - "You only want a one-off summary of today's session: ask your AI for a plain session summary instead."
+  - "You have no place to keep the profile between sessions: save the handoff note in a notes app or document yourself."
+  - "You want to find a new learner's starting level: ask your AI for a short level quiz instead."
+explain: Share your last learner profile and notes from the current session. It checks what is still current, records what you showed and updates open gaps. You get a compact profile and a handoff that says where to resume.
 you_give:
   - Your previous learner profile, if one exists.
   - Topics covered, answers checked and current learning goal.
@@ -27,9 +26,28 @@ how_it_works:
   - title: Step 3
     text: Write the resume point, next priorities and topics to skip.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your supplied notes and ask follow-up
-    questions.
+  - Open your AI tool and paste the skill text into a new chat. No code or paid tool is needed.
+  - At the start of a session, paste your last learner profile. If you have none, say so.
+  - Check the recap it gives you and fix anything that is out of date.
+  - At the end of the session, paste your notes or the transcript and the learner's goal.
+  - Read the updated profile and handoff note. Save both somewhere you can find them.
+  - Paste the saved profile at the start of your next session.
+output_sample:
+  input:
+    - Your last learner profile (or say there is none)
+    - Notes or a transcript from this session
+    - The learner's current goal
+    - Answers the learner gave, right or wrong (optional)
+  prerequisites:
+    - A place to save the profile between sessions, such as a notes file or document
+  output:
+    - name: Restored profile summary
+      contains: A short recap of the saved profile, with a prompt to confirm it is still true.
+    - name: Concepts covered with outcomes
+      contains: Each topic from the session, with what the learner showed and how sure they seem.
+    - name: Weak areas
+      contains: New and resolved gaps, kept to the five that matter most right now.
+    - name: Updated learner profile
+      contains: Level, goal, learning style, covered topics, open gaps, current checkpoint and session count.
+    - name: Handoff note
+      contains: Where to resume, what to skip, and the top one or two priorities for next time.

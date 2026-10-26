@@ -16,6 +16,27 @@ use_cases:
   - "Map who supplies, sells and supports a service"
   - "Compare a job's stated mission with its actual incentives"
   - "Explain the cost argument in a historical investing book"
+not_for:
+  - "You want a fund picked or a return forecast: ask a licensed adviser, as this mind gives no personal product choice and no guaranteed returns."
+  - "You want to judge a business by its lasting edge and fair price: use the Benjamin Graham mind instead."
+  - "You want to check what hidden incentives are pushing people's choices: use the Charlie Munger mind instead."
+output_sample:
+  input:
+    - Your statement or fee schedule
+    - The service or team measure you want to question
+    - What the provider says the proposed change is for (optional)
+    - Where you would take an unresolved complaint (optional)
+  output:
+    - name: Flow of value
+      contains: A plain account of what came in, what changed and what left as charges, with missing facts marked.
+    - name: Cost table
+      contains: Each paid layer with who receives it, what it applies to and what service it buys.
+    - name: Responsibility map
+      contains: Who produces, sells, advises and supports the service, and who answers when help fails.
+    - name: Provider questions
+      contains: Three or more questions about fees, conflicts, scope and complaint routes to put to the provider or team.
+    - name: Metric-review note
+      contains: "For a team target: one outcome measure to study, one current measure to read with care and an owner."
 seats:
   - {seat: "Costs, stewardship and the client", asks: "What does the owner retain after all the layers are paid?"}
   - {seat: "Service and accountability", asks: "Who answers for the useful result?"}

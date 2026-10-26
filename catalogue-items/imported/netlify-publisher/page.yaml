@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows a set deploy path.
 new_slug: netlify-publisher
 name: Netlify publisher
-summary: Point it at your site. Get it live on Netlify as a preview or
-  production deploy, with the link.
+summary: Publish your website on Netlify as a preview or live deploy. Give it your project folder and get the link back, with login and build settings checked.
 job: ship-and-host
 headline: Netlify publisher
-subhead: Your website on a live Netlify address, with the link handed back. You
-  can publish a private preview to check first or push straight to the public
-  site.
+subhead: Your website on a live Netlify address, with the link handed back. You can publish a private preview to check first or push straight to the public site.
 explain: |
   Your website on a live Netlify address, with the link handed back. You can publish a private preview to check first or push straight to the public site.
 
@@ -18,6 +15,10 @@ when:
   - You want a preview link to show someone before going public.
   - You are not sure which build settings Netlify needs.
   - You want to update a live site after a change.
+not_for:
+  - "You need a database or a server that runs all the time: use a host built for that, such as a cloud server service."
+  - "You want a free page for plain files with no build step: use GitHub Pages instead."
+  - "You want a site that stays private: Netlify preview links are not private, so add a password in your Netlify site settings first."
 you_give:
   - Your web project folder
   - A Netlify account
@@ -29,8 +30,32 @@ you_get:
   - A deployed site
   - The preview or live link
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run commands and reach your Netlify account.
+  - Open your AI tool on your computer, one that can run commands and see your project folder. A plain chat window cannot do this.
+  - Paste in this skill and say which folder holds your site.
+  - Choose preview or production. Start with preview to check the site first.
+  - Sign in to Netlify in the browser window when asked. The deploy can take a few minutes.
+  - Open the preview link and check your site. Preview links are public, so add a password in your Netlify site settings if you need one.
+  - Ask for a production deploy when you are happy, and you get your live link.
+output_sample:
+  input:
+    - Your web project folder
+    - Your Netlify login (a free account works)
+    - Your choice of preview or live deploy
+    - The name of an existing Netlify site to link (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - A free Netlify account
+    - Node installed on your computer
+  output:
+    - name: Login check
+      contains: Whether you are signed in to Netlify, and the login steps if you are not.
+    - name: Site link status
+      contains: Whether your folder is linked to a Netlify site, or a new site was made.
+    - name: Build settings
+      contains: The framework found in your project, with the build command and publish folder to use.
+    - name: Deploy URL
+      contains: The unique link for this deploy, for checking your site.
+    - name: Site URL
+      contains: Your live address, shown only when you publish to production.
+    - name: Logs link
+      contains: A link to the Netlify dashboard where you can read the build logs.

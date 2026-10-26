@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs mixed signs of how the account is doing.
 new_slug: qbr-prep-brief-writer
 name: QBR prep brief writer
-summary: Name a customer. Get a health read with risk signs, value delivered and
-  an agenda for the review.
+summary: "Name a customer and get a QBR prep brief: a health read, risk signs, value delivered and a meeting agenda, from your CRM or pasted notes."
 job: sell-and-negotiate
 headline: QBR prep brief writer
-subhead: Name a customer and get a plain read on how healthy the account is,
-  plus a prep brief for the quarterly business review. The brief shows risk
-  signs, the value you delivered, and a proposed agenda for the meeting.
+subhead: Name a customer and get a plain read on how healthy the account is, plus a prep brief for the quarterly business review. The brief shows risk signs, the value you delivered, and a proposed agenda for the meeting.
 explain: |
   Name a customer and get a plain read on how healthy the account is, plus a prep brief for the quarterly business review. The brief shows risk signs, the value you delivered, and a proposed agenda for the meeting.
 
@@ -18,6 +15,10 @@ when:
   - You want to know if an account is quietly going cold.
   - You need proof of value delivered before a renewal talk.
   - You are taking over an account and need a fast status.
+not_for:
+  - "You have a new prospect with no account history: review your open deals in your CRM, or ask a colleague for the background."
+  - "You only need to know when a contract ends: check the renewal date in your CRM or contract."
+  - "You want a sales deck or a pitch for a new buyer: write it by hand or with a general writing prompt, as this brief needs past account history."
 you_give:
   - Customer name or ID
   - "Mode: health check or review prep"
@@ -28,8 +29,37 @@ you_get:
   - Trend against the last quarter
   - Meeting agenda and next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Type the customer's name. Say if you want a health check or QBR prep.
+  - If your AI is connected to your CRM, email and calendar, it reads them. If not, paste the account history or upload a file with the customer's row.
+  - Check the health table first. Look at where each number came from.
+  - Anything marked not visible was not available to your AI. Add it yourself before the meeting.
+  - Review any suggested CRM updates. Apply the ones you agree with.
+output_sample:
+  input:
+    - Customer name or ID
+    - "Mode: health check (default) or QBR prep"
+    - Your CRM, email, calendar or call notes, or a pasted account history (optional)
+    - Period to compare, such as last quarter (optional)
+  prerequisites:
+    - An AI that can read your CRM, email and calendar gives the best result
+    - Without those tools, paste the account history or upload a file with the customer's row
+  output:
+    - name: Verdict
+      contains: One sentence on how healthy the account is, and the one or two things driving it.
+    - name: Health table
+      contains: Relationship, engagement trend, commercial, support and value delivery, each marked green, yellow or red with evidence.
+    - name: Watch items
+      contains: Each risk signal, why it matters and a suggested action.
+    - name: Suggested CRM updates
+      contains: Before and after values for any health or status fields, with the evidence for each.
+    - name: Value delivered
+      contains: Outcomes since the last review, in the customer's own metrics, with sources (QBR prep mode).
+    - name: Adoption story
+      contains: What is working and what is underused, using only facts your AI could see.
+    - name: Open items
+      contains: Escalations resolved or still open, and commitments from the last review.
+    - name: Next phase
+      contains: Expansion and renewal topics worth raising in the meeting.
+    - name: Agenda and attendees
+      contains: A proposed agenda, who should be in the room, and the asks for their leaders.

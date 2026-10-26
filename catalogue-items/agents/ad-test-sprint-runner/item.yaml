@@ -15,15 +15,15 @@ outputs:
   - {type: lessons_register}
 uses: [ad-test-budget-calculator, untried-ad-idea-finder, ad-test-brief-writer, meta-test-campaign-planner, creative-test-reader, tiktok-ad-test-reader, ad-sameness-checker, creative-hit-rate-planner, product-test-result-reader]
 steps:
-  - {uses: ad-test-budget-calculator, note: "Once per sprint: the daily test budget, the spend limit per ad and how long to wait before reading."}
-  - {uses: untried-ad-idea-finder, note: "Round 1, and again whenever a round lost to sameness: five ideas the account has not tried."}
+  - {uses: ad-test-budget-calculator, note: "Once per sprint: the daily test budget, the spend limit per ad and how long to wait before reading. Hands step 4 the daily budget and the read window."}
+  - {uses: untried-ad-idea-finder, note: "Round 1, and again whenever a round lost to sameness: five ideas the account has not tried. Uses your brand file and past ad results, not step 1's budget. Hands step 3 the five ideas."}
   - {uses: ad-test-brief-writer, note: "Each time there are new ideas: designer-ready versions of each."}
   - {uses: meta-test-campaign-planner, note: "Each round: the campaign layout, ad packs, minimum spend and rules for the round."}
-  - {uses: creative-test-reader, note: "At the end of each Meta round: keep, leave or replace calls by ad set, false winners and the next brief."}
-  - {uses: tiktok-ad-test-reader, note: "Instead of the Meta reader when the round ran on TikTok: keep, fix or kill for each ad."}
-  - {uses: ad-sameness-checker, note: "Only after a round that missed the target: whether the round tested the same idea many times."}
-  - {uses: creative-hit-rate-planner, note: "Only once 20 or more ads have been tested in total: the hit rate and how many ads the next batch needs."}
-  - {uses: product-test-result-reader, note: "Only after three rounds with no winner: whether the cause is the ad, the page or the checkout."}
+  - {uses: creative-test-reader, note: "At the end of each Meta round: keep, leave or replace calls by ad set, false winners and the next brief. Uses the round's results export by ad, read against the plan from step 4. Hands the next round its brief."}
+  - {uses: tiktok-ad-test-reader, note: "Instead of the Meta reader when the round ran on TikTok: keep, fix or kill for each ad. Uses the round's TikTok numbers, not step 5's calls. Hands the next round its test plan."}
+  - {uses: ad-sameness-checker, note: "Only after a round that missed the target: whether the round tested the same idea many times. Uses the round's ads with persona, angle, offer and format from your sprint log, not the reader's calls. A high score sends the sprint back to step 2."}
+  - {uses: creative-hit-rate-planner, note: "Only once 20 or more ads have been tested in total: the hit rate and how many ads the next batch needs. Uses the export of every ad tested so far, not step 7's score. Hands the next round its batch size."}
+  - {uses: product-test-result-reader, note: "Only after three rounds with no winner: whether the cause is the ad, the page or the checkout. Uses the funnel numbers from the last round, not step 8's output. Hands back the cause and the next fix."}
 schedule: "At the end of each test round, on the read date the plan sets"
 asks_before: [launching a test campaign, spending the test budget, raising budget on a winner, turning ads off, ordering or paying for new creative]
 origin: own

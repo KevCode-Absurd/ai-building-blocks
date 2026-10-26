@@ -2,34 +2,99 @@ thinking: medium
 thinking_why: Worker status has legal risk, so it needs care.
 new_slug: contractor-program-setup-guide
 name: Contractor program setup guide
-summary: Describe the work and workers. Get a classification risk check, an
-  onboarding checklist and a vendor plan. Not legal advice.
+summary: Set up a program for contractors and freelancers. Get a misclassification risk check, onboarding and offboarding checklists and a vendor plan.
 job: hire-people
 headline: Contractor program setup guide
-subhead: Describe the work and workers. Get a classification risk check, an
-  onboarding checklist and a vendor plan. Not legal advice. Bring description of
-  the work. Use the result to plan your next step.
+subhead: Describe the work your contractors do, how they are directed and paid, and where they live. Your AI checks the risk that some of them count as employees, then writes onboarding and offboarding checklists, a vendor plan and a statement of work outline. This is guidance, not legal advice.
 explain: |
-  A set up for working with contractors and freelancers: a check on whether each worker really counts as a contractor, an onboarding checklist, and a plan for vendors. It lowers the chance of misclassifying someone as a contractor when they are an employee.
+  Companies often grow a crowd of freelancers and agency workers with no shared rules. Some of them work full time, take orders from a manager, and stay for years. That is the pattern that can get a "contractor" treated as an employee.
 
-  You describe the work, how it is directed, and who the workers are. The skill walks through classification factors such as control, tools, schedule and exclusivity, and marks risk. It then covers program design, vendor management systems, statements of work, onboarding, offboarding, and converting a contractor to staff. It lists common mistakes to avoid. It is guidance for HR and buying teams, not legal advice.
+  This contractor program planner asks about the work, not the label in the contract. It checks factors such as control, tools, schedule, exclusivity and how long the person has stayed, and rates each as low, medium or high risk. It then builds the program around them: onboarding, offboarding with access removed, a vendor plan, a statement of work outline and steps to convert a contractor to staff.
+
+  It does not decide any worker's status. That call belongs to a lawyer who knows your local law.
 when:
-  - You use freelancers daily and worry they might count as employees.
-  - You are creating a program to manage temporary staff and agencies.
+  - You use freelancers every day and worry some of them count as employees.
+  - You are building a program to manage temporary staff and staffing agencies.
   - You need an onboarding checklist for a new contractor.
-  - You want to hire a contractor full time and need the steps.
+  - A long-term contractor has asked to become an employee, and you need the steps.
+  - A contract ended and you need to be sure the person's system access is removed.
+not_for:
+  - "You only want to check one worker: use the Employee or contractor checker."
+  - "You want to check this month's contractor invoices against what you agreed: use the Monthly contractor roster keeper."
+  - "You need a ruling on one person's status: ask an employment lawyer who knows your local law."
+  - "You are choosing an HR tool or staffing vendor: use the HR vendor selection planner."
 you_give:
-  - Description of the work
-  - How workers are directed and paid
-  - Country or state
-  - Current vendors (optional)
+  - What work your contractors do
+  - How they are directed and paid, and how long they have stayed
+  - The country or state where they work
+  - Your current vendors or agencies (optional)
+  - Your contractor agreement or policy (optional)
 you_get:
-  - Classification risk check
-  - Onboarding and offboarding checklist
-  - Vendor management plan
-  - Statement of work outline
+  - A table of risk factors rated low, medium or high, with an action for each
+  - An onboarding checklist and an offboarding checklist for contractors
+  - A vendor plan with roles and what to track
+  - A statement of work outline
+  - Steps to convert a long-term contractor to an employee
+  - A list of common mistakes to avoid
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill.
+  - Under it, describe the work, who directs it, how people are paid, how long they have stayed, and your country or state.
+  - Do not paste names or ID numbers. Describe roles instead, such as "three designers, full time, two years".
+  - Read the risk table first. Take every high-risk row to a lawyer who knows your local law.
+  - Ask for the checklists, vendor plan and statement of work outline. Have HR or legal review them before you use them.
+how_it_works:
+  - title: Describe the work
+    text: It asks what the work is, who directs it, how people are paid and how long they stay.
+  - title: Check the factors
+    text: It rates control, tools, schedule, exclusivity and tenure as low, medium or high risk, with an action for each.
+  - title: Build the program
+    text: It sets up sourcing, onboarding, offboarding and access rules that keep contractors apart from employees.
+  - title: Plan the vendors
+    text: It outlines roles, what to track and how to review agencies or a vendor system.
+  - title: Write the paperwork outline
+    text: It drafts a statement of work outline and a conversion policy for long-term contractors.
+output_shape: |
+  ## Risk check
+  | Factor | What you told us | Risk (low, medium, high) | Action |
+  ## Onboarding checklist
+  ## Offboarding checklist
+  ## Vendor plan
+  ## Statement of work outline
+  ## Converting a contractor to staff
+  ## Common mistakes
+  ## Questions for your lawyer
+output_sample:
+  input:
+    - What work your contractors do
+    - How they are directed and paid, and how long they have stayed
+    - The country or state where they work
+    - Your current vendors (optional)
+  output:
+    - name: Risk check
+      contains: Each risk factor rated low, medium or high, with one action for each.
+    - name: Onboarding checklist
+      contains: Steps for a new contractor that keep them apart from employee processes.
+    - name: Offboarding checklist
+      contains: Steps to end a contract, including removing system access.
+    - name: Vendor plan
+      contains: Roles, what to track and how to review agencies or a vendor system.
+    - name: Statement of work outline
+      contains: The parts of a contractor job brief, ready for you to fill in.
+    - name: Conversion steps
+      contains: How to move a long-term contractor to an employee role.
+    - name: Questions for your lawyer
+      contains: The high-risk points to take to an employment lawyer.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a planning and writing job. Claude, ChatGPT or Gemini all do it well.
+  inputs:
+    - Your current contractor agreement
+    - A count of contractors and how long each role has run
+terms:
+  - term: Misclassification
+    meaning: Treating someone as a contractor when the law may see them as an employee.
+  - term: Statement of work
+    meaning: A short document that says what a contractor will do, by when and for how much.
+  - term: Vendor management system
+    meaning: Software that tracks contractors and agency workers in one place.

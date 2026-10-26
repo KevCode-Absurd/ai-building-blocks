@@ -43,13 +43,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Rating gap product finder.** Use the skill `rating-gap-product-finder`. Starts the chain: ranked complaints and the review lines behind them.
-2. **Pain point niche finder.** Use the skill `pain-point-niche-finder`. Give it the voc reviews from the steps before. Uses the complaints from the step before to pick the best five problems and the brands already selling to them.
-3. **Crowded category white space finder.** Use the skill `crowded-category-white-space-finder`. Give it the competitor set and the voc reviews from the steps before. Reads the rival brands and review lines from the steps before and finds the one gap to own.
+1. **Rating gap product finder.** Use the skill `rating-gap-product-finder`. Starts the chain: ranked complaints and the review lines behind them. Hands both to step 2.
+2. **Pain point niche finder.** Use the skill `pain-point-niche-finder`. Give it the voc reviews from the steps before. Uses the complaints from the step before to pick the best five problems and the brands already selling to them. Hands the rival brands to step 3.
+3. **Crowded category white space finder.** Use the skill `crowded-category-white-space-finder`. Give it the competitor set and the voc reviews from the steps before. Reads the rival brands and review lines from the steps before and finds the one gap to own. Hands the ranked gaps to step 4.
 
 Pause here: Pick one product for the top gap. Write down its cost, shipping cost and the price you would charge.
 
-4. **Winning product scorer.** Use the skill `winning-product-scorer`. Scores the product you chose for the gap, using your costs.
+4. **Winning product scorer.** Use the skill `winning-product-scorer`. Give it the ranked gaps from the steps before, plus your product and its costs. Scores the product you chose for the gap, using your costs. The gap from step 3 is the problem it must solve; the score is the end result.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -1,6 +1,6 @@
 new_slug: google-ads-dip-investigator
 name: "Google Ads dip investigator"
-summary: "Give it your results and recent changes. Get the likely cause and a fix-or-wait call."
+summary: "Find why your Google Ads results dropped. Give it your results and change history. You get the likely cause and a fix, wait or ignore call."
 job: run-google-ads
 thinking: high
 thinking_why: "It follows a causal chain across business and campaign data and must avoid false causes, so a stronger model reasons better."
@@ -17,6 +17,10 @@ when:
   - Revenue or ROAS from Google fell and you do not know why.
   - You changed several things and cannot tell which one hurt.
   - You are about to rebuild an account and want to be sure that is needed.
+not_for:
+  - Your account has under about 30 conversions a month. Weekly swings are mostly noise, so wait for more data or ask a person who runs your ads.
+  - You want standing problems found, not a drop explained. Use a Google Ads account audit, or ask a person to review the account.
+  - You have no change history and no weekly data for 90 days or more. Export both from Google Ads first, then run this.
 
 you_give:
   - The change history for the last 30 days
@@ -34,6 +38,28 @@ how_to_use:
   - Attach weekly Google campaign data for 90 to 180 days, with the conversions by conversion time columns.
   - Add your store numbers and spend by channel for the same weeks.
   - Change one thing at a time, using the fix it gives, and check again after the learning period.
+output_sample:
+  input:
+    - Your Google Ads change history for the last 30 days
+    - Your Google campaign data by week for 90 to 180 days, with conversions by conversion time
+    - Your store revenue, orders, sessions, AOV and conversion rate over the same weeks
+    - Your spend by channel, such as Meta and Google (optional)
+    - Your promotions, site changes and forecast dates (optional)
+  output:
+    - name: Rules
+      contains: What the change history showed, the weekly window used, and the conversion time basis.
+    - name: Level 1, business
+      contains: Which of sessions, conversion rate or order value moved, plus other channels, site, real KPIs and seasonality.
+    - name: Level 2, Google
+      contains: Top campaigns by cost, the date things changed, the campaign type, the sub-metric that moved and causes checked.
+    - name: Decision
+      contains: A fix, wait or ignore call with the reason.
+    - name: Root cause
+      contains: One sentence saying what fell, which sub-metric drove it, and why.
+    - name: Fix
+      contains: One change to make, and how many days to wait before checking again.
+    - name: Not checked and missing
+      contains: Anything it could not check, and the data needed to check it.
 
 how_it_works:
   - title: Applies three rules

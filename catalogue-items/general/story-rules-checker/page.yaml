@@ -1,6 +1,6 @@
 new_slug: story-rules-checker
 name: "Story rules checker"
-summary: "Paste a story. Get it checked against 18 plain-fiction rules, each fault named with its line, and a score out of 100."
+summary: "Check a short story against 18 plain fiction rules. Get each fault quoted by line, a list of surplus words, and a score out of 100."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It applies a fixed list of rules to a text, with judgment on each."
@@ -14,26 +14,50 @@ explain: |
   This skill checks a draft against a list of rules for plain, honest fiction. They cover purpose, episodes that earn their place, living people with a reason to be present, believable talk that stops when the speakers run out of things to say, characters who match how they are described, one voice per person, the right word and no surplus words. Each rule gets a pass or fail, the offending line is quoted, and the score says how many of the rules that apply were met.
 
 when:
-- "You finished a draft and want a plain check before sending it out."
-- "You can feel something is off in your dialogue but cannot say what."
-- "You edit other people's stories and want a consistent list to check against."
+  - "You finished a draft and want a plain check before sending it out."
+  - "You can feel something is off in your dialogue but cannot say what."
+  - "You edit other people's stories and want a consistent list to check against."
+not_for:
+  - "You want to check an ad, email or web page: use a line editor or your own style guide, since these rules are for fiction."
+  - "You want to write or edit a poem: ask a poetry editor or a trusted reader, because the rules assume plot, people and talk."
+  - "You want a new story idea or a plot made for you: start with your own notes or a writing partner, because this only checks a draft you already have."
 
 you_give:
-- "The story or scene, pasted in full"
-- "The kind of story (realistic, fantasy, humour) (optional)"
-- "What the story is meant to do (optional)"
+  - "The story or scene, pasted in full"
+  - "The kind of story (realistic, fantasy, humour) (optional)"
+  - "What the story is meant to do (optional)"
 you_get:
-- "A pass or fail on each rule that applies, with the line quoted"
-- "A list of surplus words and voice breaks"
-- "A score out of 100, with how it was worked out"
-- "A fix for each fail, with plot changes marked"
+  - "A pass or fail on each rule that applies, with the line quoted"
+  - "A list of surplus words and voice breaks"
+  - "A score out of 100, with how it was worked out"
+  - "A fix for each fail, with plot changes marked"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "Paste the story as text."
-- "Say what kind of story it is, so rules that do not fit can be skipped."
-- "Work through the fails, starting with purpose and people."
-- "Run it again on the fixed draft and compare the score."
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the story as text."
+  - "Say what kind of story it is, so rules that do not fit can be skipped."
+  - "Work through the fails, starting with purpose and people."
+  - "Run it again on the fixed draft and compare the score."
+output_sample:
+  input:
+    - Your story or scene, pasted in full
+    - The kind of story, such as realistic, fantasy or humour (optional)
+    - What the story is meant to do (optional)
+  output:
+    - name: RULES
+      contains: Each rule in order with pass, fail or not applicable, and the line quoted from your text.
+    - name: SURPLUS WORDS
+      contains: Words and phrases that add nothing, each with a cut or a shorter version.
+    - name: VOICE BREAKS
+      contains: Lines where a character suddenly talks in a different style, with the break named.
+    - name: SCORE
+      contains: Rules passed, rules that apply, the score out of 100, and which rules were skipped and why.
+    - name: FIXES
+      contains: A fix for each fail, with a note on whether the fix changes the plot.
+    - name: MISSING
+      contains: Gaps in what you gave, marked so nothing is invented.
+    - name: CHECKS MISSED
+      contains: One line for each self-check still failing, or none.
 
 how_it_works:
   - title: "Check purpose"
@@ -89,23 +113,23 @@ tweaks:
     how: "Name the narrator and the main speakers so voice breaks are clear."
 
 judge:
-- "Every fail has a line quoted that is in your text."
-- "The score shows the passed count and the applicable count."
-- "Surplus words are phrases you can cut without loss."
-- "No fix changes the plot unless it says so."
-- "Rules marked not applicable have a reason."
+  - "Every fail has a line quoted that is in your text."
+  - "The score shows the passed count and the applicable count."
+  - "Surplus words are phrases you can cut without loss."
+  - "No fix changes the plot unless it says so."
+  - "Rules marked not applicable have a reason."
 
 test:
-- "Run it on a published story you admire. It should score high."
-- "Run it on a draft with a known weak spot. Check it finds it."
-- "Fix two fails and run again. The score should rise."
-- "Run it twice. Pass and fail should match on most rules."
+  - "Run it on a published story you admire. It should score high."
+  - "Run it on a draft with a known weak spot. Check it finds it."
+  - "Fix two fails and run again. The score should rise."
+  - "Run it twice. Pass and fail should match on most rules."
 
 improve:
-- "Add rules your genre cares about to the end of the list."
-- "Add your pet words to the surplus list."
-- "Keep the fail lines from old drafts to spot patterns."
-- "Pair it with \"Story shape mapper\" for the shape of the whole."
+  - "Add rules your genre cares about to the end of the list."
+  - "Add your pet words to the surplus list."
+  - "Keep the fail lines from old drafts to spot patterns."
+  - "Pair it with \"Story shape mapper\" for the shape of the whole."
 
 works_best_with:
   tools:

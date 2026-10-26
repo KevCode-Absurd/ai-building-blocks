@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It reads numbers and explains what they mean.
 new_slug: marketing-performance-report
 name: Marketing performance report writer
-summary: Give it your campaign numbers. Get a report with trends, wins, misses
-  and what to change next.
+summary: Turn your campaign numbers into a marketing performance report with trends, wins, misses and next steps that a boss or client can read fast.
 job: read-ad-results
 headline: Marketing performance report writer
-subhead: Give it your campaign or channel numbers, the period and last period's
-  figures if you have them. It writes a report a boss or client can read without
-  a spreadsheet. You get a short summary, a key numbers table, trends, plain
-  wins and problems, and next steps.
+subhead: Give it your campaign or channel numbers, the period and last period's figures if you have them. It writes a report a boss or client can read without a spreadsheet. You get a short summary, a key numbers table, trends, plain wins and problems, and next steps.
 explain: |
   A clear marketing report you can send to a boss or client, built from your raw campaign numbers. It tells them what moved, what worked, what fell short and what to do next, without making them read a spreadsheet.
 
@@ -19,6 +15,10 @@ when:
   - A boss wants a one-page summary of how a campaign did.
   - You need to explain why email did well and paid did not.
   - You want year on year trends added without building charts by hand.
+not_for:
+  - "You want to tune live paid ads day to day: use the ad platform's own dashboard instead."
+  - "You want to judge one post or one send: check it in that channel's own stats page."
+  - "You have no numbers yet: collect your exports first, because the report needs real figures."
 you_give:
   - Your campaign or channel numbers
   - The reporting period
@@ -31,7 +31,34 @@ you_get:
   - Wins and problems listed plainly
   - A list of next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - "Say which report you want: campaign, email, social, paid, search, content or overall."
+  - Paste your numbers and the reporting period. Add last period's numbers if you have them.
+  - Tell it who will read the report, if you want the tone matched to them.
+  - Check each figure in the key numbers table against your source before you send it.
+  - Treat any benchmark it quotes as a rough rule of thumb, not a fixed standard.
+output_sample:
+  input:
+    - Your campaign or channel numbers, pasted or from a spreadsheet
+    - The reporting period, such as last month
+    - Last period's numbers (optional)
+    - Who will read the report (optional)
+  prerequisites:
+    - Connected analytics tools are optional. Without them, you paste your numbers into the chat.
+  output:
+    - name: Executive Summary
+      contains: Two or three sentences on how the period went, with the headline number, one win and one concern.
+    - name: Key Metrics Dashboard
+      contains: A table of this period, prior period, change, target and status for the metrics that fit your report type.
+    - name: Trend Analysis
+      contains: What moved up, down or stayed flat against the earlier period, and what may explain it.
+    - name: What Worked
+      contains: The results that did well, each backed by your numbers.
+    - name: What Needs Improvement
+      contains: The results that fell short, each backed by your numbers.
+    - name: Insights and Observations
+      contains: Patterns across your numbers that are worth knowing.
+    - name: Recommendations
+      contains: Changes to make, ranked by priority.
+    - name: Next Period Focus
+      contains: The few things to work on in the next period.

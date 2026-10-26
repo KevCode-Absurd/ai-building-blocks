@@ -1,6 +1,6 @@
 new_slug: ai-store-build-planner
 name: "AI store build planner"
-summary: "Give it your products and sections you like. Get a Claude Code kickoff prompt and safe build plan."
+summary: "Plan a safe Shopify store build with Claude Code. Give it your products and section screenshots. Get a kickoff prompt and a step-by-step plan."
 job: set-up-store
 thinking: high
 thinking_why: "It plans a multi-step build with safety rules and writes a prompt another AI will follow, so a stronger model is safer."
@@ -17,6 +17,10 @@ when:
   - You want to build or restyle a Shopify store with Claude Code and are comfortable approving commands in a terminal.
   - You have tried one big prompt and the result was a mess.
   - You want a safe way to try a new design without touching your live store.
+not_for:
+  - "You want a ready-made theme with no terminal work: pick a theme from the Shopify theme store and edit it in the theme editor."
+  - "You want one small change on a live store, like a text edit: use the Shopify theme editor, or ask a Shopify developer."
+  - "You want the AI to write the theme code for you in this chat: this plan only guides a Claude Code session, so open Claude Code to build."
 
 you_give:
   - Your store domain and current theme name
@@ -32,10 +36,40 @@ you_get:
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Add your real products to the store first. Then paste your domain, theme name and style words.
-  - Make the inspiration folder as the checklist says, with screenshots, logos and photos.
-  - Follow the plan in order. Sign in to Shopify yourself when the command asks for a code.
-  - Review each section before asking for the next, and publish only after a phone check.
+  - Add your real products to your store first. Then paste your store domain, theme name and style words.
+  - Make the inspiration folder from the checklist, with screenshots, logos and photos.
+  - Follow the plan in order. When the terminal asks you to sign in or enter your preview password, type it yourself. The AI never asks for it.
+  - Review each section before you ask for the next one. Publish only after you check it on a phone.
+output_sample:
+  input:
+    - Your store domain and current theme name
+    - The products already in your store
+    - Logos, product photos and lifestyle photos
+    - Screenshots of sections you like (optional)
+    - A few words about your brand style (optional)
+  prerequisites:
+    - A paid Claude plan that includes Claude Code
+    - Node, Git and the Shopify CLI installed on your computer
+    - Real products already added to your store
+  output:
+    - name: Before you start
+      contains: The tools you need and the command that checks the Shopify CLI is installed.
+    - name: Asset folder
+      contains: "What goes in your inspiration folder: section screenshots, logo versions, product photos and lifestyle photos."
+    - name: Safe copy
+      contains: Steps to duplicate the live theme so the build only touches the copy.
+    - name: Kickoff prompt
+      contains: The first message for Claude Code, telling it to read your files and ask questions before building.
+    - name: Section plan
+      contains: Each section in order, what to ask for, and what to check before moving on.
+    - name: Polish prompt
+      contains: One batch of small fixes for product pages, header, footer and banner.
+    - name: Publish steps
+      contains: How to push as an unpublished theme, edit it, check on a phone and publish.
+    - name: Limits, cost and time
+      contains: Usage limits and rough costs and hours, labelled as examples from videos.
+    - name: Copy edit log
+      contains: A list of which copy Claude edited, so you can check it.
 
 how_it_works:
   - title: Lists the tools

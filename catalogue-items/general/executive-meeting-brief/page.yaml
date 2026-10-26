@@ -1,6 +1,6 @@
 new_slug: executive-meeting-brief
 name: Executive meeting brief writer
-summary: Share a meeting and relevant notes. Get a sourced brief with the goal, open decisions, questions and preparation gaps.
+summary: Prepare for a meeting with a sourced brief. Share the invite and your notes. You get the goal, open decisions, questions and gaps.
 job: organise-work
 headline: Executive meeting brief writer
 thinking: high
@@ -13,6 +13,10 @@ explain: |-
 when:
   - You want the result described above from the files and facts you already have.
   - You need a repeatable process and a clear next action.
+not_for:
+  - "You want to change a meeting time or send invites: use your calendar app or ask the meeting owner."
+  - "You need a record of what was said: use your meeting tool's own notes, and get consent before recording anyone."
+  - "You have no invite and no notes: ask the meeting owner for their agenda first."
 you_give:
   - The source files, notes or product facts for this job
   - Your goal, deadline and limits
@@ -27,6 +31,23 @@ how_to_use:
   - Share your goal and the files listed above.
   - Ask it to follow the steps and mark any missing facts.
   - Review the result before approving external actions.
+output_sample:
+  input:
+    - The meeting invite or calendar export
+    - Past notes, agreed actions or documents about the topic
+    - Your goal for the meeting (optional)
+    - Which calendars you want checked for conflicts (optional)
+  output:
+    - name: meeting-brief.md
+      contains: One brief per meeting with event ID, start time, timezone, attendees and the goal.
+    - name: Prior decisions and open actions
+      contains: What was already agreed and what is still owed, each with a source date.
+    - name: Agenda, questions, required preparation
+      contains: An agenda sized to the meeting length, questions that settle decisions, and facts to bring.
+    - name: Sources and missing inputs
+      contains: Links to what was used, plus facts that were not available and any limits on coverage.
+    - name: Closing note
+      contains: Source coverage, missing facts, proposed outside actions and one next step.
 how_it_works:
   - title: Read the sources
     text: Identify the current request, time window and facts you can verify.

@@ -1,15 +1,13 @@
 slug: constant-currency-revenue-bridge
 name: Constant-currency revenue bridge
-summary: Separate reported growth from translation effects using an explicit exchange-rate convention.
+summary: "Split revenue growth into real growth and the effect of exchange rates. Get reported growth, constant-currency growth and the currency effect in money."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -33,3 +31,6 @@ credits:
     by: AI Blocks contributors
     used: Original instructions, calculations and illustrative examples. External method references are linked separately and retain their own rights.
 package_files: all
+before: []
+next: [organic-revenue-perimeter-bridge, trailing-period-financial-bridge, gross-to-net-revenue-bridge]
+needs_mode: manual

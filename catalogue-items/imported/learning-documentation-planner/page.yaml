@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It sets up a record-keeping routine that fits the setting.
 new_slug: learning-documentation-planner
 name: Learning documentation planner
-summary: Describe a class activity. Get a way to record children's learning,
-  share it with families and plan next steps.
+summary: Plan how to record children's learning in a class activity. Get a capture plan, a family share format and next-step questions for your documentation.
 job: teach-and-train
 headline: Learning documentation planner
-subhead: Describe a class activity. Get a way to record children's learning,
-  share it with families and plan next steps. Bring the activity or
-  investigation. Use the result to plan your next step.
+subhead: Describe a class activity. Get a way to record children's learning, share it with families and plan next steps. Bring the activity or investigation. Use the result to plan your next step.
 explain: |
   A way to record what children do and say in an activity so their learning becomes visible to them, to families and to other teachers. Describe the activity and why you are documenting it. The skill follows the Reggio Emilia approach, in which notes, photos and children's own words are collected and then interpreted instead of only displayed.
 
   It sets out what to capture while the activity runs, how to turn it into a panel or story for families, and which questions the evidence raises for your next plan. You get steps for sharing and for using the notes to decide what children explore next.
 when:
   - Your class is running a project and you want a record of the learning.
-  - You need to show families what children are working out, not only what they
-    made.
+  - You need to show families what children are working out, not only what they made.
   - You want to plan next steps from what children did.
   - Your teaching team wants a shared way to review notes.
+not_for:
+  - "You need formal assessment or benchmark tracking: use your school's standard assessment tool."
+  - "You want a lesson plan for a topic: write the lesson with a colleague or your curriculum guide, then come back to record it."
+  - "You need a single report on one child for a parent meeting: write it by hand from your own notes."
 you_give:
   - The activity or investigation
   - Why you are documenting it
@@ -30,7 +30,27 @@ you_get:
   - Questions to interpret the evidence
   - Ideas for next steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions from the skill file into the chat.
+  - Describe the activity and say why you are documenting it.
+  - Add your age group, display format and tools if you know them.
+  - Read the plan. Check that the capture steps fit your room and your time.
+  - Run the activity, collect your notes, then bring them back to the chat to plan next steps.
+output_sample:
+  input:
+    - The learning activity, project or investigation you want to record
+    - Why you are documenting it
+    - Your children's age group (optional)
+    - How you will show it, such as a wall panel or class book (optional)
+    - The tools you have, such as a camera or notebook (optional)
+  output:
+    - name: What to Observe
+      contains: The moments, words and actions to watch for while the activity runs.
+    - name: How to Record
+      contains: Ways to capture notes, photos, video and children's own words with the tools you have.
+    - name: How to Interpret
+      contains: Questions to ask of your notes so you can see what children think and understand.
+    - name: How to Share
+      contains: How to turn the evidence into a panel or story for families and other teachers.
+    - name: Planning Forward
+      contains: Ideas for what children could explore next, based on what the evidence shows.

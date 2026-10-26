@@ -1,0 +1,146 @@
+name: SRE (Site Reliability Engineer) agent
+summary: Turn how your service fails into reliability goals, alert rules and recovery checks. Give it your service details and get a plan to review.
+headline: SRE (Site Reliability Engineer) agent
+subhead: Describe one service, how it runs and how it has failed before. It sets goals for what "working" means, decides how much failure you can allow, and drafts alert rules and recovery checks. You get a reliability plan you can check against your own numbers.
+job: ship-and-host
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A site reliability plan (also called an SRE plan or a service reliability review) usually fails in one of two ways. Teams set a goal like "99.99% uptime" with no link to what users feel. Or they alert on every spike and the team stops reading alerts. This agent starts from your users instead. What do they do on your service, and what would they call broken?
+
+  From that it writes reliability targets you can measure, such as the share of requests that succeed or finish fast enough. Then it works out the error budget, which is the amount of failure your target allows in a month. When the budget is spent, the plan says to fix reliability before shipping more. Alerts are tied to how fast the budget is burning, not to raw spikes. It also lists your repeat manual work worth automating, and recovery checks you should test before you need them.
+
+  It keeps what you told it apart from what it assumes. It never invents your traffic or error numbers, and it marks any target as a proposal until you confirm it. It writes a plan. It does not touch your systems.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Customers have started to notice your site or app going down, and you have no written goal for how reliable it should be.
+  - Your alerts fire all night and the team now ignores them.
+  - You want to decide when to pause new features and fix stability, and need a rule that is not a gut call.
+  - A big launch is coming and you want to know what could fail and how you would recover.
+not_for:
+  - Your service is down right now. Use the Incident Response Commander agent.
+  - You want only targets and an error budget for one service. Use the Reliability target setter.
+  - You run a small site and want simple uptime pings and an on-call plan. Use the Uptime and alert setup planner.
+you_give:
+  - The service name and what users do with it, such as logging in, paying or loading a page
+  - How it runs, in a few lines. Name the host or cloud, the main parts and how you release changes.
+  - What your users would call broken, and the worst failures you have had
+  - Your current monitoring, alerts and who gets paged (optional)
+  - Request and error numbers for the last 30 days (optional)
+you_get:
+  - Reliability targets for the service, each with how to measure it
+  - An error budget and the rule for what to do when it runs out
+  - Alert rules tied to how fast the budget burns, with who is paged
+  - A list of manual jobs to automate, ranked
+  - Recovery checks to test before you need them
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe one service in plain words. Say what users do on it, how it runs and how it has failed before.
+  - Paste any numbers you have, such as request counts and error rates from your monitoring tool. If you have none, say so. It will mark targets as proposals. No code running or web access is needed.
+  - Type "Make the reliability plan. Mark any number you did not give me as proposed."
+  - Check the targets first. Ask yourself if a user would really call a miss "broken". Fix any that are wrong and ask it to run again.
+  - Take the alert rules and recovery checks to the person who runs your monitoring. The AI cannot change alerts for you.
+how_it_works:
+  - title: Fix the scope
+    text: It picks the one service and what users do on it. Anything missing is asked once, then marked MISSING.
+  - title: Define "working"
+    text: It turns user pain into measures, such as the share of requests that succeed and the share that finish fast enough.
+  - title: Set targets and a budget
+    text: It proposes a target and a time window for each measure, then works out how much failure the target allows.
+  - title: Draft the alerts
+    text: It writes a fast alert for sudden burn and a slow alert for steady burn. It says who is paged and who is only told.
+  - title: Check what you can see
+    text: It checks you can watch delay, traffic, errors and load, and lists any blind spots.
+  - title: Plan recovery and cut repeat work
+    text: It lists recovery checks to test and the repeat manual jobs worth automating.
+output_shape: |-
+  SERVICE SCOPE
+    Service <name> | Users <who> | What counts as broken <plain words>
+
+  RELIABILITY TARGETS
+    <measure> | <target> | <time window> | <how to measure> | <proposed or from your data>
+
+  ERROR BUDGET
+    <measure> | <failure allowed per window> | <what to do when it runs out>
+
+  ALERT RULES
+    <alert> | <fast or slow burn> | <who is paged or told> | <first thing to check>
+
+  WHAT YOU CAN SEE
+    <signal: delay, traffic, errors, load> | <seen or blind spot> | <how to close it>
+
+  RECOVERY CHECKS
+    <check> | <how to test it> | <how often> | <owner>
+
+  REPEAT WORK TO AUTOMATE
+    <task> | <time it takes now> | <order to automate>
+
+  ASSUMPTIONS AND CHECKS MISSED
+    <assumption> | <check that could not run>
+output_sample:
+  input:
+    - One service and what users do on it
+    - How it runs and how you release changes
+    - What users would call broken, and your worst past failures
+    - Your current alerts and request or error numbers (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - Access to your monitoring tool, to copy numbers from it (optional)
+  output:
+    - name: Service scope
+      contains: The service, its users and what they would call broken.
+    - name: Reliability targets
+      contains: Each measure with a target, a time window and how to measure it.
+    - name: Error budget
+      contains: How much failure each target allows, and what to do when it runs out.
+    - name: Alert rules
+      contains: Fast and slow burn alerts with who is paged and what to check first.
+    - name: What you can see
+      contains: Delay, traffic, errors and load, marked seen or blind spot.
+    - name: Recovery checks
+      contains: Checks to test before you need them, with an owner and how often.
+    - name: Repeat work to automate
+      contains: Manual jobs ranked by how much time they cost.
+    - name: Assumptions and checks missed
+      contains: What the AI assumed and what it could not check.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read an exported chart, an alert list or an old outage write-up next to your description.
+  inputs:
+    - A screenshot or export of request and error rates for 30 days.
+    - Your last two outage write-ups, if you have them.
+    - Your current alert list.
+terms:
+  - term: Reliability target (SLO)
+    meaning: A goal for how often your service works, such as 99.9% of requests succeed in a month. SLO is short for service level objective.
+  - term: Error budget
+    meaning: The amount of failure your target allows. When it is used up, fix reliability before you ship more.
+  - term: Burn rate
+    meaning: How fast you are using the error budget. A fast burn needs a page. A slow burn can wait for working hours.
+  - term: Toil
+    meaning: Repeat manual work that grows as your service grows and could be automated.
+  - term: Paged
+    meaning: Sent an urgent alert, often to a phone, that someone must act on now.
+tweaks:
+  - what: Scope
+    how: Plan one service at a time, such as "checkout". A whole company in one go gives vague targets.
+  - what: Your numbers
+    how: Paste real request and error counts. Targets built on your data are firmer than proposed ones.
+  - what: Team size
+    how: Say how many people can be on call. A team of two needs fewer alerts than a team of ten.
+improve:
+  - Keep the plan with your runbooks and review it after each outage.
+  - Update the targets when your traffic or your users change.
+  - Pair it with the Incident runbook writer to turn each alert into steps someone can follow at 3am.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

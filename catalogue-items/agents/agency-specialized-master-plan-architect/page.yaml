@@ -1,0 +1,140 @@
+name: Master Plan Architect agent
+summary: Turn a software change into a written implementation plan with risks, files to change, test steps and a rollback path. No code is written.
+headline: Master Plan Architect agent
+subhead: Describe the change you want and share how your project is laid out. It explains the problem, attacks its own plan to find what could break, and lists every file to add, change or delete. You get one Markdown plan to review before anyone writes code.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Most bad changes start with code written too soon. Nobody checked how the
+  project is really built, what else the change touches, or how to undo it. This
+  agent slows that first step down on purpose. It writes an implementation plan
+  and does not touch your code.
+
+
+  It starts by reading what you share about the project, and it asks for what it
+  cannot see. It explains the core problem and how well-known software handles
+  something similar. Then it tries to break its own plan. It must find at least
+  three ways the change could fail. It also lists what is not allowed in this
+  change, so the work does not grow.
+
+
+  The plan ends with a file list marked new, change or delete, a test list and a
+  way to undo the change. You decide whether to go ahead. It follows the Master
+  Plan Architect profile by Agency Agents. Its claims about experience are
+  role-play, not results.
+when:
+  - You are about to change a database, an API or a core module and want the risks written down first.
+  - A teammate or an AI coding tool will do the work, and you want a plan to hand over that sets the limits.
+  - You inherited a codebase and want to understand why it works as it does before you change it.
+  - You want a second view that challenges your plan, not one that agrees with it.
+not_for:
+  - You want the code written. Use the Senior Developer agent.
+  - You are choosing between designs and want decision records. Use the Software Architect agent.
+  - You want a quick prototype with a small scope. Use the Rapid Prototyper agent.
+  - You have no project files or goal to share. The plan would be guesses.
+you_give:
+  - The change you want, in a few plain sentences, and why
+  - How your project is built, such as a file tree and its package or config files
+  - What must not change in this work (optional)
+  - Known problems, past outages or risky areas (optional)
+  - Who will do the work, such as a person or an AI coding tool (optional)
+you_get:
+  - A short explanation of the problem and the main design ideas behind the fix
+  - A risk review with at least three ways the plan could fail
+  - A list of what is out of scope for this change
+  - A file list marked new, change or delete, each with one reason
+  - A test list and a rollback path
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Paste your goal and your project details. A file tree and the package or config files are the minimum. Say MISSING for anything you cannot share.
+  - Say "Write the plan. Do not write code." Your AI asks once for anything it needs.
+  - Read the risk review first. Check each risk against what you know about your project, and correct any wrong assumption.
+  - Ask for a revised plan, then give the final plan to the person or tool doing the work. Ask them to stick to the file list.
+how_it_works:
+  - title: Check the ground truth
+    text: It reads the project details you share and lists what it could not verify as assumptions.
+  - title: Explain the problem
+    text: It states the core problem, the design ideas that apply, and how well-known systems solve the same thing.
+  - title: Attack the plan
+    text: It looks for weak assumptions, what else could break, and risks from timing, permissions and outside services.
+  - title: Fence the scope
+    text: It lists the features and clean-ups that are not allowed in this change.
+  - title: Write the blueprint
+    text: It lists each file as new, change or delete, and draws how the main parts connect.
+  - title: Plan the proof and the exit
+    text: It lists tests, manual checks and the steps to roll the change back.
+output_shape: |-
+  1. CONCEPT PRIMER
+    Core problem | Design ideas that apply | How similar systems solve it | How the design stays lean
+
+  2. RISK REVIEW
+    Fragile assumptions | What else could break | Not allowed in this change | Permission and safety limits
+    (at least three failure risks)
+
+  3. BLUEPRINT
+    <diagram of the main parts>
+    [NEW] <file> | <one reason>
+    [CHANGE] <file> | <one reason>
+    [DELETE] <file> | <one reason>
+
+  4. VALIDATION
+    Automated tests | Edge cases | Manual checks
+
+  5. ROLLBACK
+    Steps to undo | What happens if a dependency fails
+
+  ASSUMPTIONS AND GAPS
+    <what could not be verified>
+output_sample:
+  input:
+    - The change you want and why
+    - Your file tree and package or config files
+    - What must not change (optional)
+    - Past problems or risky areas (optional)
+  prerequisites:
+    - Access to your project's file list, so the plan is based on real files
+  output:
+    - name: Concept primer
+      contains: The core problem, the design ideas that apply and how well-known systems handle the same thing.
+    - name: Risk review
+      contains: At least three ways the plan could fail, what else it could break and what is out of scope.
+    - name: Blueprint
+      contains: A diagram of the main parts and a file list marked new, change or delete, each with a reason.
+    - name: Validation
+      contains: Tests to run, edge cases and the manual checks a person does before accepting the work.
+    - name: Rollback
+      contains: The steps to undo the change and how the system behaves if a dependency fails.
+    - name: Assumptions and gaps
+      contains: Everything the agent could not verify, so you can check it before work starts.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Red teaming
+    meaning: Trying to break your own plan on paper, so you find the weak spots before they cost you.
+  - term: Rollback
+    meaning: The steps that put the system back as it was if the change goes wrong.
+  - term: Blast radius
+    meaning: Everything else a change could affect besides the part you meant to change.
+  - term: Idempotent
+    meaning: Safe to run twice. The second run gives the same result as the first.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read a file tree and config files. Use an AI that can open your project files for a plan based on the real code.
+  inputs:
+    - The output of a file tree command for your project.
+    - Your main config files, such as package.json or requirements.txt.

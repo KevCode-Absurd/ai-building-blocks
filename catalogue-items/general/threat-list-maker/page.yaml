@@ -1,6 +1,6 @@
 new_slug: threat-list-maker
 name: "Threat list maker"
-summary: "Paste how your app or service works. Get the likeliest attacks ranked, each with one way to reduce the risk."
+summary: "Make a threat list for your app: paste how it works and get the likeliest attacks ranked, with one way to reduce each risk."
 job: secure-code
 thinking: medium
 thinking_why: "It must reason about how parts connect and what an attacker could reach."
@@ -17,6 +17,10 @@ when:
   - "You are designing something that holds customer data."
   - "You are about to add a login, payment or API."
   - "You need a short list to take to a security person."
+not_for:
+  - "You need a full security review of a live system: use the Threat modeler, which runs every check."
+  - "You need proof that your system is safe: hire a qualified security person, because this is a first pass."
+  - "You only want to check one piece of code for bugs: ask a developer to review that code."
 
 you_give:
   - "What the system does"
@@ -33,6 +37,21 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - What your app or service does, in a few lines
+    - Its parts, such as website, login, database or payment service
+    - Who uses it, such as visitors, customers, staff or other systems
+    - What matters most to protect, such as customer data, money or uptime
+  output:
+    - name: PARTS AND ENTRY POINTS
+      contains: Each part of your system and who or what can reach it from outside.
+    - name: TOP THREATS
+      contains: Up to eight attacks, worst first, each with the part hit, likelihood, damage and one way to reduce it.
+    - name: WHAT I ASSUMED
+      contains: The guesses the AI made where your description was thin.
+    - name: TO CONFIRM
+      contains: Questions to ask someone who knows the system well.
 
 how_it_works:
   - title: "Map the parts"
@@ -89,8 +108,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "A sketch of the parts and how they connect"
-  - "A list of controls you already have"
+    - "A sketch of the parts and how they connect"
+    - "A list of controls you already have"
 
 terms:
   - term: "STRIDE"

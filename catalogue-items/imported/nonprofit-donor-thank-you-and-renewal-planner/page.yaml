@@ -7,7 +7,10 @@ job: keep-customers
 headline: Nonprofit donor thank-you and renewal planner
 subhead: Share your giving records, thank-you process, and recent donor messages. It checks where follow-ups stop and which donors do not return. You get a thank-you plan, first-gift welcome steps, renewal timing, and separate plans for lapsed donors. US receipt rules need local review.
 when:
-  - You need this task done for a nonprofit, community program, or donated-goods store.
+  - Fewer first-time donors give a second gift, and you do not know why.
+  - Receipts and thank-you notes go out late or sound the same for every donor.
+  - You want a plan for donors who stopped giving last year or the year before.
+  - Your board asks for a retention number and you have only total dollars raised.
 you_give:
   - Dated giving records, current thank-you process, receipt wording, and donor contact preferences.
 you_get:
@@ -28,3 +31,26 @@ works_best_with:
 how_to_use:
   - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
+not_for:
+  - "You are moving new prospects toward a first gift. Use the Nonprofit donor relationship planner."
+  - "You are planning a mass appeal letter and gift amounts. Use the Nonprofit annual appeal planner."
+  - "You need receipt wording that meets tax rules. This gives drafts only, so have your accountant or lawyer check US receipt text."
+output_sample:
+  input:
+    - Dated giving records, with each donor's gift dates and amounts
+    - How you thank donors today, and your current receipt wording
+    - Donor contact preferences
+    - Recent donor messages (optional)
+  output:
+    - name: Retention measures
+      contains: Overall and first-year donor retention, plus counts of lapsed donors, trended over years.
+    - name: Stewardship matrix
+      contains: Gift-size tiers matched to how and how fast you say thank you.
+    - name: Donor path map
+      contains: Each touch from first gift through year three, including the first 90 days.
+    - name: Acknowledgment templates
+      contains: A first-gift welcome, a renewal receipt, a major-gift thank-you guide and a year-end summary.
+    - name: Renewal timing
+      contains: Asks tied to each donor's own giving dates.
+    - name: Win-back plan
+      contains: Separate messages for donors who lapsed recently and those who lapsed longer ago.

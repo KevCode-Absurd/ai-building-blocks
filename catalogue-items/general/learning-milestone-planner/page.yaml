@@ -1,6 +1,6 @@
 new_slug: learning-milestone-planner
 name: Learning milestone planner
-summary: Paste your plan. Get the rates you hope for, the starting rates to measure and dated milestones that count learning, not output.
+summary: Plan learning milestones for a new product. Paste your plan and get starting rates to measure, dated checkpoints and predictions before the data.
 job: plan-strategy
 thinking: medium
 thinking_why: It builds a rate model and a dated plan from fixed steps, but needs judgment on which rates matter.
@@ -14,6 +14,10 @@ when:
   - You have a new product or project with little revenue and need to show it is on track.
   - Your team reports on features shipped and no one can say if customers care.
   - A boss or investor asks how you will know it is working.
+not_for:
+  - "Your product is established and has plenty of data: review your own dashboard or a simple monthly report instead."
+  - "You only want to read rates from data you already have: use the Cohort funnel reader."
+  - "You need a feature roadmap or ship dates: ask your team lead or use a simple task list instead."
 you_give:
   - Your plan with the figures you hope for
   - Who you report to (optional)
@@ -27,6 +31,26 @@ how_to_use:
   - Paste your plan and any figures you hoped for.
   - Agree the three dates with the people you report to.
   - Write the predictions down and keep them where the team can see them.
+output_sample:
+  input:
+    - "Your plan: what you make, for whom, how they find it and pay"
+    - Your hoped-for figures (optional)
+    - Who you report to and what worries them (optional)
+  output:
+    - name: Rate chain
+      contains: Each step from first contact to the result you want, as a share of the step before, with the hoped-for rate.
+    - name: Starting test
+      contains: Which small test gives which starting rate, who it runs on, and how many people must reach each step.
+    - name: Changes and target rates
+      contains: Each planned change tied to one rate and a size of move, plus a not-now list.
+    - name: Milestones
+      contains: Baseline, tune and decide dates, each with a prediction written before the data.
+    - name: Report
+      contains: Who gets the one-page report, how often, which rates it shows, and what to do on a miss.
+    - name: Missing
+      contains: Any target, date or customer count you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 how_it_works:
   - title: Writes the rate chain
     text: From first contact to the result you want.

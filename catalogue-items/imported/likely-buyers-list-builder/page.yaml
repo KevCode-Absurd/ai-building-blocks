@@ -2,35 +2,83 @@ thinking: medium
 thinking_why: It judges fit across many possible buyers.
 new_slug: likely-buyers-list-builder
 name: Likely buyers list builder
-summary: Describe a company for sale. Get a ranked list of likely buyers,
-  strategic and financial, with fit notes.
+summary: Describe a company you are selling. Get a ranked buyer list, with rivals, neighbours and funds, a fit note for each and who to call first.
 job: money-and-investing
 headline: Likely buyers list builder
-subhead: Before you sell a company, you need to know who might buy it. This
-  builds a ranked list of likely buyers, with a reason each one fits and a
-  sensible order to call them.
+subhead: Describe the company for sale, with its sector, revenue, profit and growth. Your AI finds likely strategic buyers and financial sponsors, scores each one and sorts them into three waves of outreach. Each row shows its source or is marked to verify.
 explain: |
-  Before you sell a company, you need to know who might buy it. This builds a ranked list of likely buyers, with a reason each one fits and a sensible order to call them.
+  This is a buyer list builder for a company sale. It answers one question before you sell: who might buy this, and in what order should you call them?
 
-  Start by describing the company: sector, revenue, profit, growth, assets and what the seller wants. The skill then finds strategic buyers in four groups: direct rivals, neighbours in adjacent markets, customers or suppliers, and platform builders. It then adds financial sponsors. Each buyer is scored on fit, ability to pay and deal history, then sorted into three waves of outreach. Contact names are mapped last.
+  You describe the company. It looks for strategic buyers in four groups: direct rivals, neighbours in nearby markets, customers or suppliers, and large companies that grow by buying. Then it adds financial sponsors, such as funds that want a new platform or an add-on to a company they own. Each buyer is scored on fit, ability to pay and deal history.
+
+  The list is sorted into three tiers. Tier 1 is the first wave of calls. A focused list of 30 to 40 well-checked names beats 200 loose ones. Any buyer or contact it cannot source is marked TO VERIFY, so no invented names reach your pitch.
 when:
-  - You are preparing to sell a business and need a buyer universe.
+  - You are preparing to sell a business and need a buyer universe before you meet a banker.
   - You advise a seller and must pitch a target list to them.
-  - You want to know which rivals might pay a premium.
-  - You need to decide who to call first, second and third.
+  - You want to know which rivals might pay a premium, and which could face competition law trouble.
+  - You must decide who to call first, second and third.
+not_for:
+  - The company is listed and the deal is already in talks with one buyer. A banker or broker process fits better.
+  - You want to size up one deal you have been sent. Use the Deal screening memo writer.
+  - You want to find customers to sell to. Use the Ideal buyer profiler.
+  - You need verified contact details. This gives roles and where to look, not a phone book.
 you_give:
-  - Company description and sector
-  - Revenue, profit and growth
-  - Key assets or strengths
+  - A description of the company, its sector and what it sells
+  - Revenue, profit (EBITDA) and growth, in crore if Indian
+  - Key assets, such as IP, customers, locations or team
   - Expected price range (optional)
-  - Seller preferences (optional)
+  - What the seller wants, such as a strategic buyer, staying on, or timing (optional)
+  - Names the seller wants in or out (optional)
 you_get:
-  - A list of strategic buyers with fit notes
-  - A list of financial sponsors
-  - Buyers ranked into three tiers
-  - Contact mapping for outreach
+  - A table of strategic buyers with fit, capacity and deal history
+  - A table of financial sponsors with focus and recent activity
+  - Buyers sorted into three tiers
+  - Contact mapping for tier 1, by role and best way in
+  - A one-page summary for a pitch or engagement letter
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write a short brief on the company. Use the list above. Say who you are, such as the owner, the adviser or an analyst.
+  - Open the skill and paste the brief. If your AI can search the web, turn that on, so buyers come with sources.
+  - Add the names the seller wants in or out before you read the list.
+  - Check every row marked TO VERIFY against the buyer's own site, exchange filings or news of past deals.
+  - Move names between tiers as you learn more, and ask your AI to update the tables.
+  - Keep contacts in your own sheet. Fill them from public pages or your own network.
+output_sample:
+  input:
+    - A description of the company, its sector and what it sells
+    - Revenue, profit and growth
+    - Key assets and what the seller wants (optional)
+    - Names to include or exclude (optional)
+  prerequisites:
+    - Web search turned on, so buyers carry sources (optional)
+  output:
+    - name: Strategic buyers
+      contains: Rivals, neighbours, customers or suppliers, and platform builders, each with fit and capacity.
+    - name: Financial sponsors
+      contains: Funds seeking a platform or an add-on, with sector focus and recent activity.
+    - name: Tiers 1 to 3
+      contains: Buyers sorted into three waves of outreach, with the reason for each placement.
+    - name: Contact mapping
+      contains: For tier 1, the role to approach, relationship status and best channel, with names only if sourced.
+    - name: Summary statistics
+      contains: Total buyers by tier and by type.
+    - name: One-page universe summary
+      contains: A page for the pitch or engagement letter that explains the list.
+works_best_with:
+  tools:
+    - name: ChatGPT
+      why: Web search can find past deals and company pages as sources.
+    - name: Claude
+      why: Good at weighing fit and writing the tier reasons from your brief.
+  inputs:
+    - Your last two years of results
+    - A list of buyers who have already called you
+    - Rivals' annual reports
+terms:
+  - term: Strategic buyer
+    meaning: A company that buys to grow its own business.
+  - term: Financial sponsor
+    meaning: A fund that buys a company to improve it and sell it later.
+  - term: Bolt-on
+    meaning: A smaller company bought to add to one the buyer already owns.
+  - term: EBITDA
+    meaning: Profit before interest, tax and depreciation.

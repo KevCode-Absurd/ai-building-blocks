@@ -1,6 +1,6 @@
 new_slug: monthly-design-system-keeper
 name: Monthly design system keeper
-summary: Give it your product's code each month. Get the drift from your design rules found, contrast checked and a spec to approve.
+summary: Check your product's code each month for design system drift. Get drift counts, failing colour pairs and specs for new patterns to approve.
 job: design-work
 thinking: high
 thinking_why: It reads code against design intent, judges which drift is a mistake and which is a lesson, and must propose few fixes well. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a design system and suspect the code has drifted from it.
   - A brand refresh changed a colour and you are not sure every pair still passes.
   - New screens ship every month and nobody checks them against the rules until a designer notices.
+not_for:
+  - "Your product has no design system yet and no tokens: start with the design-token-builder skill, then bring this agent in."
+  - "You only want to know if two colours pass contrast: use the colour-contrast-checker skill on its own."
+  - "You want the code changed for you: this agent never edits code, so give its fix list to a developer."
 you_give:
   - Your repo or front-end folder with components and styles
   - Your design file, so intent can be compared with code (advised)
@@ -33,6 +37,33 @@ how_to_use:
   - Each month, tell it which screens or releases changed. Attach the design file if you have one.
   - Read the drift and the fix list. Make the changes you agree with, then tell the agent which were done.
   - Run it again on the first Wednesday of next month. It tracks the drift count over time.
+output_sample:
+  input:
+    - Your repo or front-end folder with components and styles
+    - Your design file (optional, advised)
+    - Your brand guide with colours, type and rules (optional, advised)
+    - The screens or releases that changed this month (optional, advised)
+    - Last month's keeper file (optional, once it exists)
+  prerequisites:
+    - An AI that can read your code files, such as Claude Code
+    - A person to approve the design rules and each fix
+  output:
+    - name: DESIGN.md
+      contains: The colours, type, spacing and parts your product really uses, saved once you approve them.
+    - name: Drift
+      contains: Each hardcoded value, naming problem and undocumented variant, with file, line and the token it should use.
+    - name: Colour pairs
+      contains: Failing light and dark colour pairs with the closest passing colours, when a colour moved.
+    - name: Polish slips
+      contains: Spacing, type and layout slips on this month's changed screens, each with a fix.
+    - name: Quarterly review
+      contains: Verdicts on ten principles and what no longer earns its place, listed for removal first.
+    - name: Specs
+      contains: "A spec for each new pattern: layout, tokens, props, states, breakpoints and edge cases."
+    - name: Fix list
+      contains: At most fifteen fixes, ranked by how many screens each touches.
+    - name: Files and missing
+      contains: Each step's file and every line marked MISSING.
 how_it_works:
   - title: Write the rules once
     text: A DESIGN.md from the colours, type, spacing and parts the code really uses, and tokens from the brand guide if none exist.

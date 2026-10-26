@@ -44,9 +44,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Website brand brain builder.** Use the skill `website-brand-brain-builder`. Reads your store and reviews into a brand file the later steps work from.
-2. **Brand ritual designer.** Use the skill `brand-ritual-designer`. Give it the brand brain from the steps before. Designs one customer ritual around the product. Reads the brand file from the step before.
-3. **Sensory unboxing planner.** Use the skill `sensory-unboxing-planner`. Give it the brand brain from the steps before. Matches weight, colour, sound and smell to the ritual. Reads the brand file from the first step.
-4. **Unboxing insert and gift planner.** Use the skill `unboxing-insert-and-gift-planner`. Give it the brand brain from the steps before. Chooses the inserts and gifts that carry the plan, within your margin. Reads the brand file from the first step.
+2. **Brand ritual designer.** Use the skill `brand-ritual-designer`. Give it the brand brain from the steps before. Designs one customer ritual around the product. Reads the brand file from the step before and hands the ritual to step 3.
+3. **Sensory unboxing planner.** Use the skill `sensory-unboxing-planner`. Give it the brand brain and the plan from the steps before. Reads the ritual from step 2 and the brand file from step 1. Matches weight, colour, sound and smell to the ritual and hands the unboxing plan to step 4.
+4. **Unboxing insert and gift planner.** Use the skill `unboxing-insert-and-gift-planner`. Give it the brand brain and the plan from the steps before. Reads the unboxing plan from step 3 and the brand file from step 1, with your order value and margin. Chooses the inserts and gifts that carry the plan, within your margin.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

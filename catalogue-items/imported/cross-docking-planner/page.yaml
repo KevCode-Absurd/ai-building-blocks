@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It needs timing between arrivals and departures.
 new_slug: cross-docking-planner
 name: Cross-docking planner
-summary: Describe your inbound and outbound loads. Get a plan to move goods
-  truck to truck without storing them.
+summary: Plan a cross-dock that moves goods from inbound trucks to outbound trucks without storage. Get the right type, a flow plan and dock rules.
 job: plan-supply-chain
 headline: Cross-docking planner
-subhead: A cross-dock plan that moves goods from inbound trucks to outbound
-  trucks without putting them on a shelf. You get a layout idea, a flow design
-  and the numbers to check it.
+subhead: A cross-dock plan that moves goods from inbound trucks to outbound trucks without putting them on a shelf. You get a layout idea, a flow design and the numbers to check it.
 explain: |
   A cross-dock plan that moves goods from inbound trucks to outbound trucks without putting them on a shelf. You get a layout idea, a flow design and the numbers to check it.
 
@@ -18,6 +15,10 @@ when:
   - Small shipments from many suppliers need to become full truckloads.
   - A full container has to be split for several stores or customers.
   - Your dock is jammed and you need a clearer flow plan.
+not_for:
+  - "You need long-term storage or a full warehouse layout: use a warehouse design service or a logistics planner."
+  - "You need to schedule truck arrival times at each door: use a dock scheduling tool or your yard team."
+  - "Your goods must sit for days before they ship: plan normal storage, not a cross-dock."
 you_give:
   - Product type and case or pallet size
   - Inbound and outbound volumes and timing
@@ -30,7 +31,26 @@ you_get:
   - Dock assignment rules
   - Handling time and cost targets
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Describe your products, case or pallet size, and inbound and outbound volumes.
+  - Add your dock doors, staging space, time window and any temperature or inspection needs.
+  - Answer any questions your AI asks. Say so if you do not know a figure.
+  - Check the numbers in the plan against your own figures before you act on it.
+output_sample:
+  input:
+    - What you move and the case or pallet size
+    - Inbound and outbound volumes and timing
+    - Your number of dock doors and staging space
+    - Temperature or inspection needs (optional)
+    - Your current WMS or TMS setup (optional)
+  output:
+    - name: Executive Summary
+      contains: Daily volume, dwell time, cross-dock rate and door use against targets, with one main recommendation.
+    - name: Performance Metrics
+      contains: A table of each metric with its current value, target and status.
+    - name: Operational Analysis
+      contains: Dwell time by destination, root causes of long waits, and door use for inbound and outbound.
+    - name: Recommendations
+      contains: Numbered fixes such as synchronized scheduling and better door scheduling, each with its expected impact.
+    - name: Expected Results
+      contains: A table of current against target values for the next six months.

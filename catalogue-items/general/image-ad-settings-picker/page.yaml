@@ -2,7 +2,7 @@ thinking: low
 thinking_why: "It reshapes what you give it, with few judgement calls."
 name: "Image ad settings picker"
 new_slug: image-ad-settings-picker
-summary: "Paste your brief and choices. Get a fixed-line brief, a conflict check and any missing material."
+summary: "Pick one choice per setting and get an image ad brief with fixed lines, a conflict check and any missing material flagged. Plain and repeatable."
 job: make-image-ads
 
 headline: "Image ad settings picker"
@@ -17,6 +17,10 @@ when:
   - Your image or video tool keeps giving you polished stock-looking shots when you wanted something real.
   - You hand briefs to different people or AI tools and want them all to read your intent the same way.
   - You're testing one change at a time, such as soft sell against direct, and need everything else held still.
+not_for:
+  - "You need one quick post and a plain brief will do: just write the brief and skip the settings."
+  - "You have no buyer words yet: use the Buyer brief writer first, then come back."
+  - "You want the full image ad prompt written for you: use the Product image ad prompt writer."
 
 you_give:
   - The brief for the ad, image or video you're making
@@ -33,6 +37,24 @@ how_to_use:
   - List your choices, one per setting, for example "Product in the picture, in the scene". Skip any setting you don't care about.
   - Attach only the material your choices name. If you chose "in the scene", send a real product photo.
   - Copy the finished brief into your image, video or writing tool. Don't reword the snippets.
+output_sample:
+  input:
+    - Your brief for the ad, image or video
+    - One choice for each setting you want to control
+    - Product photos, brand images or a reference ad, if your choices need them (optional)
+  output:
+    - name: BRIEF
+      contains: Your brief, repeated as you sent it.
+    - name: ALWAYS ON
+      contains: The five rules that apply to every brief.
+    - name: "SETTING: CHOICE"
+      contains: One block per choice, with its fixed snippet pasted whole and unchanged.
+    - name: CONFLICT CHECK
+      contains: Says none, or names the two choices that fight and which one wins.
+    - name: MISSING
+      contains: Lists any material a choice needs that you did not send, or says nothing.
+    - name: CHECKS MISSED
+      contains: Lists any check that failed or could not run, or says none.
 
 how_it_works:
   - title: Takes your choices

@@ -1,6 +1,6 @@
 new_slug: buyer-problem-list-builder
 name: Buyer problem list builder
-summary: Share your buyer, product and feedback. Get journey problems and candidate offer outcomes, with facts, guesses and proof needs kept apart.
+summary: "Build a buyer problem list: map the doubts a buyer has from start to result, with quotes and guesses kept apart. Get candidate offer outcomes."
 job: make-offer
 thinking: medium
 thinking_why: It has to think of many problems a buyer has, but the method is fixed and every line can be checked against buyer words.
@@ -14,6 +14,10 @@ when:
   - You are building a new offer and only know a few of the buyer's problems.
   - Buyers say "I need to think about it" and you cannot say what they are thinking about.
   - Your offer sells the thing you make, not the result the buyer wants.
+not_for:
+  - "You have not described your buyer yet: write a short buyer note first, or ask a few real customers what they wanted."
+  - "You need prices, channels or ad copy: those need a separate step, because this list only maps problems and ideas for outcomes."
+  - "You want proof your product can deliver a result: check that with your own product facts and tests, as buyer worries do not prove it."
 you_give:
   - "Your buyer: a persona, or a plain description"
   - Product facts, actual capabilities, limits and claim evidence if available; missing proof blocks claim approval
@@ -29,6 +33,25 @@ how_to_use:
   - Paste your buyer description and what you sell. Add reviews or call notes if you have them.
   - Read the stage list and fix any stage that is out of order or missing.
   - Review each problem with real buyers. Check every candidate outcome against product capability and proof before carrying approved ideas into delivery planning.
+output_sample:
+  input:
+    - Your buyer, as a persona or a plain description
+    - Your product facts, limits and any proof of claims
+    - Reviews, call notes or survey answers in the buyer's words (optional)
+    - Your brand brain files (optional)
+  output:
+    - name: Desired result
+      contains: The place the buyer wants to arrive, written without your product name, in their words where you gave any.
+    - name: Stages
+      contains: Five to ten steps the buyer takes from today to the result, including the step before and after.
+    - name: Problems and candidate outcomes
+      contains: A table of stage, problem, driver, quote or GUESS, candidate How-to outcome, and capability status.
+    - name: Count
+      contains: "The number of problems split by driver: outcome, likelihood, effort and time."
+    - name: Unapproved outcomes
+      contains: Speed, ease, guarantee or result ideas that lack proof and must not be published.
+    - name: Missing and checks missed
+      contains: Gaps marked MISSING, and any check that failed, or none.
 how_it_works:
   - title: Names the place they arrive
     text: Drafts the desired result without a product noun. Supplied buyer words stay distinct from inferred wording.

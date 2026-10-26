@@ -1,33 +1,114 @@
 new_slug: read-any-file-in-plain-english-builder-prompt
 name: Read Any File in Plain English coding prompt
-summary: Get a coding brief for a file reader that turns supported uploads into plain text, with format checks and clear failures.
+summary: "Name a code file in your project. Claude Code explains it block by block in plain English, then sums up what the file does in one paragraph."
 job: build-software
 headline: Read Any File in Plain English coding prompt
-subhead: Get a coding brief for a file reader that turns supported uploads into plain text, with format checks and clear failures.
-explain: |-
-  Share your project and the required feature. Get a coding brief for read any file in plain english, with setup and test steps.
+subhead: "Give Claude Code the path to one code file in your project. It labels each block as one of five kinds, explains it in everyday words and ends with a one-paragraph summary. It reads the file and changes nothing."
+explain: |
+  Code files are written for machines, so they can look like a wall of symbols. This prompt turns one file into a plain English explanation. You can then follow code you did not write without learning to program.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  It sorts every block of the file into one of five kinds, each with an everyday name. Imports are a shopping list. Types are a contract. Functions are recipes. Waiting calls are a waiting room. Exports are the front door. Once you can spot these five, most files in a project stop being a mystery.
+
+  The explanation comes only from the file itself. If the file calls something defined elsewhere, the answer says "not clear from this file" and does not guess. It never repeats a key or password it finds.
+
 when:
-  - You need a coding brief for read any file in plain english.
-  - You need read any file in plain english prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - "A developer or an AI wrote a file for you, and you want to know what it does before you rely on it."
+  - "You inherited a project and need to understand one file at a time."
+  - "A bug report names a file, and you want to know what that file is for."
+  - "You are learning to read code and want to practise on files from your own project."
+
+not_for:
+  - "You have no project folder and only want to paste a snippet into a chat: use the Code explainer for newcomers."
+  - "You want a guide for a whole team, with the reason beside every piece: use the Code walkthrough writer."
+  - "You want the file changed, fixed or tested. This prompt only explains."
+  - "The file is a document, a spreadsheet or a picture, not code. This prompt only reads code."
+
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - "Claude Code, open in your project folder"
+  - "The path to one code file, for example src/queue.ts"
+  - "Who is reading, such as a business owner with no coding background (optional)"
+
 you_get:
-  - A coding brief for read any file in plain english
-  - Required files, setup gaps and test cases
+  - "The file split into blocks, each with its line range, one of five labels and a plain English explanation"
+  - "A one-paragraph summary: what the file is for, what goes in and what comes out"
+  - "A short list of things this file does not show, such as which files call it"
+
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Open your project folder in Claude Code. It needs to read the file itself. Claude Code runs on a paid Claude plan or an API account."
+  - "Pick a short file first, under about 100 lines. Copy the prompt from the skill file and paste it in. Replace FILE_PATH with the real path."
+  - "Read the block-by-block explanation. For any block you did not follow, ask 'explain that block again with a real-life comparison'."
+  - "Read the closing summary. Check it against what you thought the file did."
+  - "Ask 'which other files does this one connect to?' and Claude Code will look in your project. Then repeat on the next file."
+
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: "Reads the whole file"
+    text: "Opens the file you named. If the path is wrong, it asks once. It does not run the file or change it."
+  - title: "Splits it into blocks"
+    text: "Groups the lines into blocks that belong together, such as the imports at the top."
+  - title: "Labels each block"
+    text: "Picks one of five labels: imports, types, functions, waiting calls or exports. Labels that do not apply are left out."
+  - title: "Explains each in plain words"
+    text: "Says what the block is for, in a sentence a non-programmer can follow. Secrets in the file are named, never repeated."
+  - title: "Sums up the file"
+    text: "Ends with one paragraph: the file's job, what it takes in, what it does and what it gives back."
+  - title: "Notes what it cannot see"
+    text: "Lists what depends on other files, such as who calls this file. It does not claim the code works or is in use."
+
+output_shape: |
+  **Lines <start>-<end>: <LABEL> (<everyday name>)**
+  <One or two plain sentences on what this block is for.>
+
+  (one entry per block, in file order)
+
+  SUMMARY
+  This file's job is to <what it does>. It takes <input>, does <process> and produces <output>.
+
+  NOT CLEAR FROM THIS FILE
+  - <what depends on another file or on settings you did not share>
+
+output_sample:
+  input:
+    - "The path to one code file in your project"
+    - "Who is reading (optional)"
+  prerequisites:
+    - "Claude Code, or another coding AI that can read your project folder"
+  output:
+    - name: "Block-by-block explanation"
+      contains: "Each block with its line range, one of five labels and a plain English sentence or two."
+    - name: "IMPORTS (shopping list)"
+      contains: "What the file borrows from other files or tools, and why it needs each one."
+    - name: "TYPES (contract)"
+      contains: "The shape the data must have, in everyday words."
+    - name: "FUNCTIONS (recipes) and WAITING CALLS"
+      contains: "What the file can do, and which outside services it waits on."
+    - name: "EXPORTS (front door)"
+      contains: "What the file offers to the rest of the project."
+    - name: "Summary paragraph"
+      contains: "The file's job, what it takes in and what it produces, in one paragraph."
+    - name: "Not clear from this file"
+      contains: "What depends on other files or settings, so nothing is guessed."
+
+works_best_with:
+  tools:
+    - name: "Claude Code"
+      why: "It opens the file from your folder and can look at the files around it when you ask."
+    - name: "Any coding AI that works inside your folder"
+      why: "It can read the path you give it. A chat AI needs the code pasted in, and the Code explainer for newcomers suits that better."
+  inputs:
+    - "A line about who the reader is, so the comparisons fit them"
+    - "A second file that connects to the first, to see how two files fit together"
+
+terms:
+  - term: "Import"
+    meaning: "A line that borrows tools from another file."
+  - term: "Type"
+    meaning: "A rule about what shape a piece of data must have."
+  - term: "Function"
+    meaning: "A named set of steps the file can carry out."
+  - term: "Async and await"
+    meaning: "Code that asks an outside service for something and waits for the answer."
+  - term: "Export"
+    meaning: "What a file makes available to other files."
+
 thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It needs a careful read of the file and plain explanations that match it.

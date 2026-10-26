@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs how people judge price against your goal.
 new_slug: price-presentation-planner
 name: Price presentation planner
-summary: Give it your product and prices. Get a tier and anchor layout that
-  makes value clear without tricks.
+summary: "Plan your price presentation: give it your product and prices, and get a tier and anchor layout that shows value clearly and fairly."
 job: set-prices
 headline: Price presentation planner
-subhead: A layout for your prices, tiers and anchors that makes value easy to
-  see without tricks. Give it your product and prices and get a plan that is
-  clear and fair.
+subhead: A layout for your prices, tiers and anchors that makes value easy to see without tricks. Give it your product and prices and get a plan that is clear and fair.
 explain: |
   A layout for your prices, tiers and anchors that makes value easy to see without tricks. Give it your product and prices and get a plan that is clear and fair.
 
@@ -18,6 +15,10 @@ when:
   - You want to introduce a third tier.
   - You need to show a large price as good value.
   - You want to test an anchor before changing live prices.
+not_for:
+  - "You sell one flat price with nothing to compare it to: use a plain price list."
+  - "You want to prove a price effect works: run a real test, since the studies it cites need checking before you quote them."
+  - "You want to hide fees or push people with fake countdowns: this skill will not do that."
 you_give:
   - Product and current prices
   - Target buyer
@@ -29,7 +30,28 @@ you_get:
   - Reason each choice works
   - Test ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Paste your product, your current prices, your target buyer and your goal.
+  - Add your limits or market norms if you have them (optional).
+  - Read the layout and the reason for each choice. Check that every anchor is a real price.
+  - Check any study the plan mentions before you quote it to others.
+  - Test the layout on a draft page before you change live prices.
+output_sample:
+  input:
+    - Your product and current prices
+    - Your target buyer
+    - Your goal, such as plan selection or upsell
+    - Your ethical limits or market norms (optional)
+  output:
+    - name: Reference point
+      contains: What your buyer will compare your price against, tied to a real alternative.
+    - name: Price structure
+      contains: Whether to show monthly, annual, per-use, bundle or tiered prices, and why.
+    - name: Tier and anchor layout
+      contains: Your tiers and any anchor or decoy, only where it makes the preferred option clearer.
+    - name: Reasons for each choice
+      contains: One plain reason why each choice should help buyers see value.
+    - name: Quality signal check
+      contains: A check that the layout does not make a premium offer look cheap.
+    - name: Test ideas
+      contains: Ways to try the layout before you change your live prices.

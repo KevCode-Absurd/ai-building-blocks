@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It interviews you, sets numbers, then compares each change against them.
 new_slug: quality-bar-setter
 name: Quality bar setter
-summary: Answer a few questions. Get a written quality bar for your project and
-  a watch for anyone lowering it.
+summary: Set a quality bar for your code project. Answer four questions and get a written file with real numbers, plus a watch for changes that lower it.
 job: test-and-fix-code
 headline: Quality bar setter
-subhead: A short written quality bar for your project, with real numbers, saved
-  in a file the whole team and any AI agent can check. It ends the argument
-  about what good enough to ship means.
+subhead: A short written quality bar for your project, with real numbers, saved in a file the whole team and any AI agent can check. It ends the argument about what good enough to ship means.
 explain: |
   A short written quality bar for your project, with real numbers, saved in a file the whole team and any AI agent can check. It ends the argument about what good enough to ship means.
 
@@ -18,18 +15,47 @@ when:
   - Coverage and speed targets get argued about on every pull request.
   - Your CI has checks but nobody knows which ones really block a merge.
   - You are starting a project and want standards written down first.
+not_for:
+  - "You want a one-off review of a single change: ask a colleague or your AI for a plain code review instead."
+  - "You have no code project, test runner or CI yet and nobody technical to help: bring in a developer before you start."
+  - "You only want to write tests for new code: use your AI's normal test-writing help and set the bar later."
 you_give:
   - Access to your project files
   - Answers to four short questions
-  - Existing standards or CI setup (optional)
+  - Your current standards or CI setup (optional)
 you_get:
   - Written quality bar with numbers
   - List of checks that block a merge
   - Floor rules for the minimum standard
   - A watch for changes that lower the bar
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open an AI that can read your project files and run code, such as Claude Code or ChatGPT with files. A plain chat can still run the questions, but cannot check your project.
+  - "Paste the skill into the chat, or point your AI at the skill folder. Say: set up constraints for this project."
+  - Let it read your project first. It finds your language, tests, linters and CI, so it only asks what it cannot see.
+  - Answer the four questions one at a time. If you do not know, say so and take the default.
+  - Read CONSTRAINTS.md before you accept it. Change any number you do not agree with.
+  - Ask your AI to install the checks and wire them in. Some tools it suggests may need a paid account, so check first.
+output_sample:
+  input:
+    - Your project files, so your AI can read them
+    - Your answers to four short questions
+    - Your current standards or CI setup (optional)
+  prerequisites:
+    - An AI that can read your project files and run code
+    - A code project with a test runner
+    - Access to your CI settings if you want checks wired in
+  output:
+    - name: CONSTRAINTS.md
+      contains: The written quality bar for your project, with the numbers you chose or accepted as defaults.
+    - name: Floor
+      contains: The minimum rules that always apply, with no setup needed.
+    - name: Enforced with numbers
+      contains: Limits such as coverage, speed and accessibility, each with a number and a check that blocks a merge.
+    - name: Measured, not yet enforced
+      contains: Things your project tracks now but does not yet block on.
+    - name: Exceptions
+      contains: Any agreed cases where a rule does not apply, and why.
+    - name: Install and wiring steps
+      contains: The tools each limit needs and where the checks run in your workflow.
+    - name: Guard for the bar
+      contains: A watch that flags changes that lower the bar, such as skipped tests, silenced checks or lowered limits.

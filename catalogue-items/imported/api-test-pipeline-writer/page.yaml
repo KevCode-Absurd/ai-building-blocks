@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills in a known pipeline file for your CI tool.
 new_slug: api-test-pipeline-writer
 name: API test pipeline writer
-summary: Give it your Postman collection. Get a ready CI pipeline file that runs
-  your API tests on every push.
+summary: Turn your Postman collection into an API test pipeline for your CI tool. It runs on every push and fails the build when a test fails.
 job: test-and-fix-code
 headline: API test pipeline writer
-subhead: A ready pipeline file that runs your API tests every time someone
-  pushes code, so a broken endpoint is caught within minutes. You hand over your
-  Postman collection and name your build tool.
+subhead: A ready pipeline file that runs your API tests every time someone pushes code, so a broken endpoint is caught within minutes. You hand over your Postman collection and name your build tool.
 explain: |
   A ready pipeline file that runs your API tests every time someone pushes code, so a broken endpoint is caught within minutes. You hand over your Postman collection and name your build tool.
 
@@ -18,6 +15,10 @@ when:
   - Your team wants API checks on every pull request.
   - You need a test report to show inside your CI results.
   - You are moving from one CI tool to another.
+not_for:
+  - "You want to test how a page looks or clicks in a browser: use a browser testing tool such as Playwright or Cypress."
+  - "You want to see how your API holds up under heavy traffic: use a load testing tool such as k6."
+  - "You have no Postman collection yet: write your API tests in Postman first, then come back."
 you_give:
   - Your Postman collection
   - Your CI platform
@@ -29,8 +30,30 @@ you_get:
   - JUnit or HTML reports
   - A build that fails on test failure
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Tell your AI which CI tool you use, where your collection and environment files live, and when the tests should run.
+  - "Say which reports you want: JUnit, HTML or both. Add your Node.js version if you have a preference."
+  - Copy the pipeline file into your project, in the place your CI tool expects.
+  - Add the secrets your AI lists in your CI tool's settings, then push a change to see the first run.
+  - This skill only writes text, so it needs no code running. It helps if your AI can read your project files.
+output_sample:
+  input:
+    - Your Postman collection file, or its Postman link
+    - Your CI tool, such as GitHub Actions, GitLab CI, Jenkins, Azure DevOps, CircleCI or Bitbucket
+    - Your environment file, or a plan for keeping secrets in your CI tool
+    - "The reports you want: JUnit, HTML or both"
+    - When it should run, and your Node.js version (optional)
+  prerequisites:
+    - A Postman collection with tests in it
+    - A project in a CI tool that you can edit
+  output:
+    - name: Pipeline file
+      contains: A ready config for your CI tool that installs Newman, runs your collection and fails the build on a failed test.
+    - name: Secrets setup notes
+      contains: Comments that say which keys to add in your CI tool's secrets store, so no password sits in the file.
+    - name: Reports
+      contains: JUnit results for your CI test panel and an HTML report saved with the build.
+    - name: Folder layout and .gitignore tip
+      contains: Where to keep your collection and environment files, and a reminder to ignore the results folder.
+    - name: Follow-up offer
+      contains: A question asking if you want Postman test cases made from the pipeline commands.

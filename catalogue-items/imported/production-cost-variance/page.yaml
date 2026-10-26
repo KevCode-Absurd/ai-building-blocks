@@ -2,25 +2,23 @@ thinking: low
 thinking_why: It applies standard variance formulas.
 new_slug: production-cost-variance
 name: Production cost variance explainer
-summary: Give it standard and actual production costs. Get the gap split into
-  price, volume and efficiency causes.
+summary: Find out why production cost missed the standard. Give it standard and actual figures, and get a production cost variance report by cause.
 job: money-and-investing
 headline: Production cost variance explainer
-subhead: When actual production costs miss the standard, you need to know why. A
-  variance report splits the gap into price, usage, labour rate and labour
-  efficiency, so you can see which part is a purchasing issue and which is a
-  shop floor issue.
+subhead: When actual production costs miss the standard, you need to know why. A variance report splits the gap into price, usage, labour rate and labour efficiency, so you can see which part is a purchasing issue and which is a shop floor issue.
 explain: |
   When actual production costs miss the standard, you need to know why. A variance report splits the gap into price, usage, labour rate and labour efficiency, so you can see which part is a purchasing issue and which is a shop floor issue.
 
   You give the standard price and quantity per unit and what really happened. The skill runs the material price and usage formulas, then the labour rate and efficiency formulas, and adds fixed overhead spending and volume gaps. It marks each as favourable or unfavourable and asks the root cause questions: bad buying deal or market spike, machine downtime or poor training. The result opens with a total and the main driver.
 when:
   - Month end shows production cost above budget and nobody can say why.
-  - You need to tell your boss whether the overrun came from suppliers or from
-    the floor.
-  - You are checking whether a favourable material price hid a worse usage
-    problem.
+  - You need to tell your boss whether the overrun came from suppliers or from the floor.
+  - You are checking whether a favourable material price hid a worse usage problem.
   - You are preparing a production audit and need numbers behind each gap.
+not_for:
+  - "You have no standard costs yet: set standards first, for example with a simple budget in a spreadsheet, then come back."
+  - "You want profit by product or SKU: use a product profitability check, not this variance report."
+  - "You need full books or tax figures: ask your accountant, because this only explains production cost gaps."
 you_give:
   - Standard price and quantity per unit
   - Actual price paid and quantity used
@@ -33,7 +31,23 @@ you_get:
   - The primary driver in one line
   - Suggested root causes to check
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your standard price and quantity per unit, then your actual price and quantity used.
+  - Add your standard and actual labour rate and hours. Add overhead budget and actual spend if you have them.
+  - Ask your AI to run the variance report. If it can run code, it can use the included script for the sums.
+  - Read the Summary Dashboard first, then check each unfavourable line against the suggested root causes.
+output_sample:
+  input:
+    - Standard price and quantity per unit
+    - Actual price paid and quantity used
+    - Standard and actual labour rate and hours
+    - Overhead budget and actual spend (optional)
+  prerequisites:
+    - An AI that can run code, if you want the script to do the sums (optional)
+  output:
+    - name: Summary Dashboard
+      contains: The total variance, marked favourable or unfavourable, and the main driver of the gap.
+    - name: Variance Table
+      contains: Material price, material usage, labour rate, labour efficiency and overhead variances side by side.
+    - name: Corrective Actions
+      contains: Suggested fixes for each unfavourable variance, such as retraining a shift or finding a new supplier.

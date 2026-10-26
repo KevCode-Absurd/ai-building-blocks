@@ -1,37 +1,137 @@
 new_slug: base-agent-implementation-planner
-name: Scoped base agent builder
-summary: Build a scoped base agent with explicit tools, one bounded task, a response format and a smoke test.
+name: "Scoped base agent builder"
+summary: "Plan the smallest working AI agent for your codebase: job format, base class, an echo test handler and a smoke test, with every file named."
 job: build-software
-headline: Scoped base agent builder
-subhead: Build a scoped base agent with explicit tools, one bounded task, a response format and a smoke test.
-explain: |-
-  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+headline: "Scoped base agent builder"
+subhead: "Share your project's code, how a job is shaped and how accounts are scoped. This skill plans the smallest working agent: one job format, a shared base layer for status and logging, an echo handler that proves the wiring, and a smoke test. You get every file named, an interface map and the setup steps."
+explain: |
+  A first AI agent often ends up as one big file where the real work, the job queue, the logging and the replies are tangled together. When it breaks you cannot tell which part failed. And one reply does not prove it is safe: it may mix up accounts, run a duplicate job twice, or show a reply it should have filtered.
 
-  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+  This base agent builder looks at your runtime, job format, database client, account scope, reply code and current agent list. Then it fixes one clear job contract. The agent's name, the account, a tracking id and the place to reply are all spelled out and checked before anything is read. Status and logging go in a shared base layer. The real work goes in a handler that extends it.
+
+  It adds an echo handler that sends back only safe test input through your reply filter. It costs nothing, because it makes no paid AI call. A pass proves that one path works and nothing more. Each real agent still needs its own checks for its subject, outside services, permissions, cost, failures and quality. The pack's own rule is to write a plain skill unless you need two or more of memory, scheduling, coordination and approvals.
+
 when:
-  - You need a concrete setup or code-change plan with required files.
+  - "You are adding your first AI agent to an existing project and want the base done right."
+  - "You need an agent that works for several accounts without mixing their data."
+  - "You want a free test that shows a message becoming a job and a reply, before any real work is added."
+  - "Your team keeps putting queue code, logging and the real work in one file."
+
+not_for:
+  - "You need none or only one of memory, scheduling, coordination and approvals. Write a plain skill instead. The pack's own rule is to build an agent only when you need two or more."
+  - "You want a team of several agents. Use the Multi-agent system planner."
+  - "You want the job queue, retries and recovery. Use the Recoverable agent job queue builder."
+  - "You want the Slack routing and replies in full. Use the Slack agent message router builder and the Slack agent response builder."
+  - "You have no project and no plan to write code. The result is a plan for code, so there is nothing to apply it to."
+
 you_give:
-  - The selected codebase, schemas and service setup
-  - The exact change you want and actions you authorize
+  - "Your project's code, or at least the files that define a job, the base class if you have one, the database client and the reply code"
+  - "The language and runtime, such as Node with TypeScript"
+  - "How accounts or clients are separated, and where replies go"
+  - "Your current list of agents (optional)"
+  - "What you allow: plan only, or also write files and run the smoke test in a test copy"
 you_get:
-  - A concrete setup or code-change plan with required files
-  - Missing inputs and a bounded verification plan
+  - "A list of files to add or change, each with its path and purpose"
+  - "An interface map: the job going in, the result coming out, the base class methods and the echo handler"
+  - "Setup steps in order"
+  - "A smoke test plan on made-up data, each check marked run or not run"
+  - "Open questions and checks that did not run"
+
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Add the skill to your AI, or open the pack and give your AI SKILL.md and the files in its references folder. An AI that can read your project folder, such as Claude Code, works best. A chat AI works if you paste the files."
+  - "Paste the files that define a job, your base class if you have one, your database client and your reply code. Never paste keys or passwords."
+  - "Say how accounts are separated and where replies go. Say whether it may only plan, or also write files and run the test."
+  - "Read the interface map first. Check that every job has an agent name, an account and a tracking id."
+  - "Run the smoke test yourself in a test copy, then check each line it marked run or not run."
+
 how_it_works:
-  - title: Step 1
-    text: Inspect the selected runtime, job contract, database client, account scope, shared response layer and current agent registry. Combine the minimal echo example and base class as one starter; the echo mode is a wiring test, not a separate production capability.
-  - title: Step 2
-    text: Define one bounded input and output contract. Keep agent identity, client/account scope, correlation ID and destination explicit. Validate input and scope before reading records or choosing a handler. Unknown scopes and unauthorized destinations fail clearly.
-  - title: Step 3
-    text: Implement shared entry points for job handling and, only if requested, heartbeat handling. Keep status and structured activity logging in the base layer. Put domain-specific work in a subclass or equivalent handler instead of mixing it into transport code.
-  - title: Step 4
-    text: Add an echo handler that returns only safe supplied test input through the shared response filter. Exercise the actual transport and queue path with synthetic data if the environment permits; otherwise provide the exact runnable test plan and mark execution not run.
-  - title: Step 5
-    text: Use finalizers to record completion/failure, reconcile cost and release any locks. Validate duplicate jobs, failed handlers, missing config, rejected account access and response filtering. No paid AI call is required to prove the echo path.
-  - title: Step 6
-    text: Return the base/echo implementation plan or requested code, interface map and smoke-test evidence. An echo pass proves only that limited path; each real agent still needs its own domain, API, permission, cost, failure and output-quality checks.
-thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+  - title: "Inspects what is there"
+    text: "Reads your runtime, job format, database client, account scope, reply layer and agent list. It treats the echo example and the base class as one starter."
+  - title: "Fixes one job format"
+    text: "Spells out agent name, account, tracking id and destination. It checks the input and the account before reading any record. Unknown accounts and destinations fail with a clear error."
+  - title: "Builds the shared layer"
+    text: "Puts job handling, status and activity logging in the base. A heartbeat is added only if you ask. The real work sits in a handler."
+  - title: "Adds the echo handler"
+    text: "Returns only safe test input through the reply filter, with no paid AI call. It tests the real path with made-up data if it may, otherwise it gives the exact test steps."
+  - title: "Plans the safety checks"
+    text: "Covers duplicate jobs, a failing handler, missing settings, a refused account and reply filtering. It also plans how a finished or failed job is recorded and locks are released."
+  - title: "Hands back the plan"
+    text: "Gives the files, the interface map and the smoke test. It says what the echo pass does not prove."
+
+output_shape: |
+  STARTER FOR <agent id>
+  RUNTIME: <language, runtime, queue, database client> | allowed: <plan only | write files | run the test>
+
+  WHAT EXISTS
+  <job format, base class, reply layer, agent list found, or MISSING>
+
+  FILES
+  <path> | <new | changed> | <purpose>
+
+  INTERFACE MAP
+  Job in: <fields> | Result out: <fields>
+  Scope: <how the account is checked> | Destination: <where replies go>
+  Base layer: <methods inherited, methods the agent must write>
+  Echo handler: <what it returns, what it never does>
+
+  SETUP STEPS
+  1 <step>
+
+  SMOKE TEST
+  <check> | made-up data: <...> | passes if: <...> | status: <run | not run>
+
+  WHAT THIS DOES NOT PROVE
+  <list>
+
+  OPEN QUESTIONS
+  <list>
+
+  MISSING
+  <inputs that would change the plan>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+
+output_sample:
+  input:
+    - "Your project's code, or the files for jobs, base class, database client and replies"
+    - "Your language and runtime"
+    - "How accounts are separated and where replies go"
+    - "What you allow: plan only, or write files and run the test"
+  prerequisites:
+    - "An AI that can read your files, or the files pasted in"
+    - "A test copy of your project, if you want the smoke test run"
+  output:
+    - name: "FILES"
+      contains: "Each file to add or change, with its path and what it is for."
+    - name: "INTERFACE MAP"
+      contains: "The job in, the result out, how the account is checked, the base class methods and the echo handler."
+    - name: "SETUP STEPS"
+      contains: "The steps in order to wire the agent into your project."
+    - name: "SMOKE TEST"
+      contains: "Checks on made-up data, such as duplicate jobs and a refused account, each marked run or not run."
+    - name: "WHAT THIS DOES NOT PROVE"
+      contains: "What a passing echo test leaves unchecked for a real agent."
+    - name: "OPEN QUESTIONS, MISSING and CHECKS MISSED"
+      contains: "What it could not find in your project and which checks did not run."
+
+works_best_with:
+  tools:
+    - {name: "Claude Code", why: "It can read your project folder and your existing base code, so the plan fits what you already have."}
+    - {name: "Any good chat AI", why: "Works if you paste the key files. It cannot see the rest of your project, so it marks anything it has to guess."}
+  inputs:
+    - "The file that defines a job"
+    - "Your database client and your reply code"
+    - "A list of the agents you already run"
+
+terms:
+  - term: "Agent"
+    meaning: "An AI worker that takes jobs over time, keeps a record of them and replies."
+  - term: "Base class"
+    meaning: "Shared code that every agent builds on, so each new agent only adds its own work."
+  - term: "Echo handler"
+    meaning: "A handler that sends back the test message it was given, to prove the path works."
+  - term: "Smoke test"
+    meaning: "A quick test that shows the basics work before you add real work."
+  - term: "Tracking id"
+    meaning: "An id that follows one job through every step, so you can find it in the logs."

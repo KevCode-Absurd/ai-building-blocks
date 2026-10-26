@@ -1,0 +1,42 @@
+slug: agency-engineering-pdf-engine-architect
+name: "HTML to PDF layout architect agent"
+summary: "Fix HTML to PDF layout for A4, Letter or custom pages. Get print CSS, page-break rules and checks that catch blank pages and blurry text."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: engineering/engineering-pdf-engine-architect.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-pdf-engine-architect.md
+  licence: MIT
+  original_name: PDF Engine Architect
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 367dd859aeda52d2a3de6ffd33b8c38eac625e884a2f71574a73d38350f8f457
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - PDF Engine Architect
+  - Agency Agents
+  - Engineering
+credits:
+  - title: PDF Engine Architect
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-pdf-engine-architect.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

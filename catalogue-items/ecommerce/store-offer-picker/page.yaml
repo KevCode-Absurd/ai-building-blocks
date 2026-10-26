@@ -1,6 +1,6 @@
 new_slug: store-offer-picker
 name: "Store offer picker"
-summary: "Give it margin, order mix and repeat rate. Get the offer types to test first, with the maths."
+summary: "Pick which store offer to test first. Give it your margin, order sizes and repeat rate. You get two or three offers with the maths for each."
 job: make-offer
 thinking: medium
 thinking_why: "It weighs a few trade-offs and does simple maths, so a mid-size model works if the inputs are complete."
@@ -17,6 +17,10 @@ when:
   - You want to improve your offer and don't know whether to change price, bundle, add a gift or start a subscription.
   - Your conversion rate is fine but your AOV or your repeat rate is the problem.
   - You are about to put a discount on everything and want to know what else you could test.
+not_for:
+  - "You only want to check what one discount does to your margin: use the discount impact checker."
+  - "You have no order export and no margin figures: pull those from your store first, or ask whoever keeps your books."
+  - "You already know the offer and want ad copy: write it with a copywriter or your own words, then test it."
 
 you_give:
   - Gross margin per product, with shipping and fulfilment counted
@@ -36,6 +40,28 @@ how_to_use:
   - Add what customers say stops them buying, if you have it.
   - Read the trade it picks first, then the shortlist. Check each pick with the discount impact checker.
   - Run one test at a time and come back after 90 to 120 days.
+output_sample:
+  input:
+    - Your gross margin per product, with shipping and fulfilment counted
+    - Your average order value and a list of order sizes
+    - How many products you sell, and whether one is your hero product
+    - How often customers reorder, and the cash you could spend on slower payback
+    - Customer reviews or survey answers about their biggest doubt (optional)
+  output:
+    - name: The trade
+      contains: "The one thing your store needs most: more sales, bigger carts or more repeat orders, with the reason."
+    - name: The answers
+      contains: Your margin floor, order spread, product count, repeat rate and cash for slower payback, as the skill read them.
+    - name: Shortlist
+      contains: Two or three offers, best margin impact first, each with its mechanic, AOV, gross margin, break-even ROAS and target CAC.
+    - name: Not for this store
+      contains: The offers to skip for your store, and why.
+    - name: Seven failures check
+      contains: A pass or fail for each of seven common offer mistakes.
+    - name: One voice check
+      contains: Whether your ad, page, cart and email all state the same offer.
+    - name: Review date
+      contains: When to look at results again, 90 to 120 days out.
 
 how_it_works:
   - title: Name the trade

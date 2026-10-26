@@ -2,33 +2,102 @@ thinking: medium
 thinking_why: It reads each comment and judges the right change.
 new_slug: review-comment-fixer
 name: Review comment fixer
-summary: Point it at your open pull request. Get each reviewer comment handled
-  and the code updated.
+summary: Turn the review comments on your open GitHub pull request into a numbered list. Pick which to fix and your AI changes only those.
 job: test-and-fix-code
 headline: Review comment fixer
-subhead: Every reviewer comment on your open pull request, listed and numbered,
-  with the code changes made for the ones you pick. You stay in control of which
-  feedback gets applied.
+subhead: Run it on your branch with an open pull request. It pulls in every reviewer comment and review thread through the GitHub command line, numbers them, and says what each fix would take. You choose the numbers. Only those get changed.
 explain: |
-  Every reviewer comment on your open pull request, listed and numbered, with the code changes made for the ones you pick. You stay in control of which feedback gets applied.
+  A pull request with a dozen review comments is slow to work through. Comments sit in the conversation, in review threads and in review summaries, and some are resolved or out of date already. It is easy to miss one or fix the wrong thing.
 
-  It uses the GitHub command line, so you need to be logged in first. The skill finds the pull request for your current branch and runs a script that fetches every comment and review thread. It numbers them and writes a short note on what a fix would involve for each one. You then say which numbers to handle. Only those get changed. If the connection drops or you are logged out, it asks you to log in again and retries.
+  This skill reads all of them in one go with a small script and the GitHub command line. It numbers every comment and thread, and gives the file, the request in one sentence and a short note on what the fix would take. Resolved and outdated threads are marked. Then it stops and asks you which numbers to fix.
+
+  That pause is the point. You decide what to apply, and nothing else is touched. After the fixes it runs your tests if it can, and tells you what changed and what it skipped. It does not reply on GitHub or resolve threads unless you ask.
 when:
   - Reviewers left a dozen comments and you want to go through them fast.
   - You want to decide which comments to act on before any code changes.
-  - You are mid-branch and want feedback applied without leaving your terminal.
   - A pull request has threads across many files.
+  - You are on the branch already and want feedback applied from your own terminal.
+not_for:
+  - "The pull request has no reviewer comments yet: there is nothing to fix, so wait for the review."
+  - "A check failed in GitHub Actions and you want the cause: use the CI failure fixer."
+  - "You want every comment applied with no choice step: this skill always asks first, so ask your AI directly, and review the changes with the Code change reviewer."
 you_give:
-  - A branch with an open pull request
-  - A logged-in GitHub command line
+  - A branch with an open pull request, checked out in your repo folder
+  - The GitHub command line, signed in (gh auth login)
+  - Python 3, to run the fetch script
   - Your choice of which numbered comments to fix
+  - Your test command (optional)
 you_get:
-  - A numbered list of comments and threads
-  - A short summary of the fix for each
-  - Code changes for the comments you choose
+  - A numbered list of comments, reviews and review threads
+  - The file, the request and a short fix note for each
+  - Resolved and outdated threads marked
+  - Code changes for the numbers you pick
+  - A report of what changed, what was skipped, and the test result if tests ran
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run the GitHub CLI and reach your repo.
+  - Open your AI in a tool that can run commands in your repo folder, such as a coding tool. A plain chat window cannot run the GitHub command line.
+  - Check out the branch of your pull request. Sign in once with gh auth login, then ask your AI to run gh auth status.
+  - Give your AI the skill and ask it to list the comments on your pull request. It runs the fetch script and returns the numbered list.
+  - Read the list. Reply with the numbers to fix, such as "1, 3 and 6". Say which to skip, and answer any question it asks.
+  - Review the code changes. Run your tests if it did not, and then push the branch yourself.
+  - Reply to your reviewers on GitHub yourself. This skill does not post replies.
+how_it_works:
+  - title: Check the sign-in
+    text: It checks that the GitHub command line is signed in, and asks you to sign in if not.
+  - title: Find your pull request
+    text: It finds the open pull request for your current branch.
+  - title: Fetch every comment
+    text: A script pulls conversation comments, review summaries and inline threads, with resolved and outdated marks.
+  - title: Number and summarize
+    text: It numbers each item and says what a fix would involve.
+  - title: Wait for your choice
+    text: It stops and asks which numbers to fix. It does not change code before you answer.
+  - title: Fix and report
+    text: It changes only the chosen items, runs tests when it can, and reports what changed and what was skipped.
+output_shape: |
+  Pull request <number>: <title>
+  1. <file>:<line> <reviewer>: <request in one sentence>
+     Fix: <what it would take> (<open, resolved or outdated>)
+  2. <conversation comment>: <request>
+     Fix: <what it would take>
+  Which numbers should I fix?
+  After your answer
+  Fixed: <numbers and files changed>
+  Skipped: <numbers and why>
+  Tests: <result, or "not run">
+output_sample:
+  input:
+    - Your repo folder, with the pull request branch checked out
+    - The GitHub command line, signed in
+    - Your choice of numbers to fix, after the list appears
+    - Your test command (optional)
+  prerequisites:
+    - An AI tool that can run commands in your repo, with Python 3 installed
+    - An open pull request for the current branch
+  output:
+    - name: Numbered comment list
+      contains: Every comment, review and thread, with the file, the request and a fix note.
+    - name: Status marks
+      contains: Which threads are resolved or outdated, and which need no code change.
+    - name: Code changes
+      contains: Edits to the files for the numbers you picked, and nothing else.
+    - name: Fix report
+      contains: Numbers fixed, files changed and numbers skipped with the reason.
+    - name: Test result
+      contains: The test outcome, or a note that tests were not run.
+works_best_with:
+  tools:
+    - name: Claude Code, Codex or another AI coding tool
+      why: It can run the GitHub command line and the fetch script, and edit files in your repo.
+    - name: GitHub command line (gh)
+      why: The fetch script uses it to read the pull request and its comments.
+  inputs:
+    - Your test command
+    - Your team's code style notes
+    - The reviewers' priorities, such as which comments block the merge
+terms:
+  - term: Pull request
+    meaning: A request to merge your branch into the main code, which others review.
+  - term: Review thread
+    meaning: A group of replies on one line of code in a pull request.
+  - term: GitHub command line
+    meaning: A free tool called gh that lets your AI work with GitHub from a terminal.

@@ -2,34 +2,55 @@ thinking: medium
 thinking_why: It follows a set routine of inspecting the page and reading what comes back.
 new_slug: browser-page-debugger
 name: Browser page debugger
-summary: Point it at a page that misbehaves. Get the real errors, network calls
-  and slow spots found in a live browser.
+summary: Find why your web page breaks. Your AI opens it in Chrome and reads the errors, failed requests and slow spots. Fix it, then check again.
 job: test-and-fix-code
 headline: Browser page debugger
-subhead: Stop guessing why a page breaks. This lets your AI open it in a real
-  browser and read the console errors, network calls, layout and speed numbers
-  for itself.
+subhead: Give your AI a page that misbehaves. It opens the page in a real browser and reads the errors, network calls, layout and speed for itself. You get findings you can act on.
 explain: |
   Stop guessing why a page breaks. This lets your AI open it in a real browser and read the console errors, network calls, layout and speed numbers for itself.
 
   It connects Claude to Chrome DevTools through a small config entry. The skill then guides a loop: reproduce the problem, read console messages, check which requests failed or came back slow, inspect the page structure, and look at load timing and layout shifts. After a fix, it checks again in the live page. By default it uses a separate browser profile, so your own logins stay out of reach. It needs Node.js and Chrome. It is not for back-end only work.
 when:
-  - A button does nothing and you cannot see the error.
+  - A button does nothing and you can't see the error.
   - A page loads slowly and you want to know which request is to blame.
-  - Your layout jumps around while loading.
+  - Your layout jumps around while the page loads.
   - You made a fix and want proof it works in a real browser.
+not_for:
+  - Your change is back-end only, like a server job or a command line tool. Use your usual logs and tests, or ask a developer.
+  - You can't install Node.js or Chrome, or your AI tool can't connect to Chrome DevTools. Ask a developer to set it up first.
+  - You need a page that sits behind your own login. Make a separate test account and Chrome profile first, not your daily browser.
 you_give:
-  - The page address or the local site running
-  - A description of what goes wrong
+  - The page address, or your local site while it runs
+  - A short note on what goes wrong
   - Steps to trigger the problem (optional)
 you_get:
-  - Console errors found
-  - Failed or slow network calls
+  - A list of console errors and warnings
+  - Failed or slow network calls with status and timing
   - Layout and speed findings
-  - A check that the fix works in the browser
+  - A pass or fail check that your fix works in the browser
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can use Chrome DevTools and open a browser.
+  - Check setup first. You need an AI tool that supports MCP, plus Node.js and Chrome. Ask a developer to help if this is new to you.
+  - Add the Chrome DevTools entry to your AI tool's settings. Use the isolated option, so your own logins stay out of reach.
+  - Paste this skill into your AI. Give it the page address and what goes wrong.
+  - Read the findings. Pass the errors to your developer or coding AI to fix.
+  - Ask your AI to run the same check again. Look for a clean console and the pass result.
+output_sample:
+  input:
+    - The page address, or your local site while it runs
+    - A short note on what goes wrong
+    - Steps to trigger the problem (optional)
+  prerequisites:
+    - An AI tool that can connect to Chrome DevTools (called MCP)
+    - Node.js and Google Chrome on your computer
+    - A small config entry added to your AI tool, best done by a developer
+  output:
+    - name: Console errors
+      contains: Each error and warning the page logged, with what it likely means and where it comes from.
+    - name: Network calls
+      contains: Requests that failed or ran slow, with the address, status code, timing and a likely cause.
+    - name: Page structure and styles
+      contains: What the page shows against what it should show, covering the page elements, styles and screen reader labels.
+    - name: Speed and layout findings
+      contains: Load timing, layout shifts, long tasks and the main slow spot found in the trace.
+    - name: Fix check
+      contains: A before and after comparison and a pass or fail on whether the fix works in the browser.

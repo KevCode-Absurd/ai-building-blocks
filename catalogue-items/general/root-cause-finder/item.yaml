@@ -1,6 +1,6 @@
 slug: root-cause-finder
 name: "Root cause finder"
-summary: "Paste a problem that keeps coming back. Get a chain of whys checked against facts, the fixable cause and a prevention check."
+summary: Find the root cause of a problem that keeps coming back. Get a chain of whys checked against facts, a fix and a prevention check.
 category: general
 type: skill
 role: check
@@ -20,3 +20,5 @@ credits:
   - {title: "Excerpts from An Interview with Taiichi Ohno, 1984", by: "Taiichi Ohno", used: "Going to the place and asking why until a cause you can fix appears"}
   - {title: "Five Whys", by: "Eric Ries", url: "https://www.startuplessonslearned.com/2008/11/five-whys.html", used: "Using the chain on software and business problems, with a small fix at each level and no blame"}
   - {title: "Taiichi Ohno", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Taiichi_Ohno", used: "Background on the origin of the method at Toyota"}
+needs_mode: manual
+next: [plan-inversion-checker, process-waste-finder, decision-checklist-builder]

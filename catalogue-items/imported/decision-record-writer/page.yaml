@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It captures a decision you already made in a fixed format.
 new_slug: decision-record-writer
 name: Decision record writer
-summary: Tell it a design choice you made. Get a short record of why, with the
-  options you passed on.
+summary: Write a decision record for a design or tech choice you made. You get the reasons, the options you passed on and the trade-offs, in a short file.
 job: build-software
 headline: Decision record writer
-subhead: Tell it about a design or technology choice, the options you considered
-  and your reasons. It checks your project for an existing record format and
-  matches it. You get a short decision record with the context, the rejected
-  options, the trade-offs you accepted and a suggested file name and place.
+subhead: Tell it about a design or technology choice, the options you considered and your reasons. It checks your project for an existing record format and matches it. You get a short decision record with the context, the rejected options, the trade-offs you accepted and a suggested file name and place.
 explain: |
   A short written record of why you chose option A over option B, so nobody has to ask in six months. Tell it about a design or technology choice and you get a record of the context, the options you passed on and the trade-offs you accepted.
 
@@ -19,6 +15,10 @@ when:
   - A new hire keeps questioning an old technical choice.
   - You are about to change a public API and want the reasoning saved.
   - You find yourself explaining the same decision for the third time.
+not_for:
+  - "You are building a throwaway prototype or making a small choice that is easy to undo: send a short note to your team instead."
+  - "You want to document what the code does: write a clear comment or README section instead."
+  - "You have not made the decision yet: talk it through with your team first, then come back to record it."
 you_give:
   - The decision you made
   - Options you considered
@@ -30,7 +30,31 @@ you_get:
   - Stated trade-offs
   - Suggested file name and place
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down the decision you made, the options you looked at and your reasons. Rough notes are fine.
+  - Check your project for an existing folder of past records, such as docs/decisions or docs/adr. Note the format and the last number.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill, then your notes. Paste one past record too, if you have one.
+  - Read the result. Check that every reason and trade-off is yours, and that nothing was added that you did not say.
+  - Save the file under the suggested name and place. Link it from your README or from the pull request that made the change.
+output_sample:
+  input:
+    - The decision you made
+    - The options you looked at
+    - Your reasons and limits, such as budget or team skills
+    - A link to your project or a past record to match (optional)
+  prerequisites:
+    - An AI that can read your project files, if you want it to check for an existing record format (optional)
+  output:
+    - name: Status
+      contains: Whether the decision is proposed, accepted, replaced by a later record, or no longer used.
+    - name: Date
+      contains: The day the decision was recorded.
+    - name: Context
+      contains: The need and the limits that led to the choice.
+    - name: Decision
+      contains: The option you chose, in one or two lines.
+    - name: Alternatives Considered
+      contains: Each rejected option with its good points, its bad points and why you passed on it.
+    - name: Consequences
+      contains: The trade-offs you accept and what the team must now do or know.
+    - name: File name and place
+      contains: Where to save the record, following your project's numbering and naming.

@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It weighs each clause against your setup.
 new_slug: ai-management-audit-planner
 name: AI management audit planner
-summary: Describe how you run AI. Get gaps against ISO 42001 and a plan to close them.
+summary: Check your AI governance against ISO 42001 clause by clause. Get a gap score, a risk register and a 12 month internal audit plan for your AI systems.
 job: secure-code
 headline: AI management audit planner
-subhead: A clear picture of where your AI governance falls short of ISO 42001,
-  plus a 12 month audit plan to close the gaps. That standard covers how a
-  company manages its AI systems.
+subhead: A clear picture of where your AI governance falls short of ISO 42001, plus a 12 month audit plan to close the gaps. That standard covers how a company manages its AI systems.
 explain: |
   A clear picture of where your AI governance falls short of ISO 42001, plus a 12 month audit plan to close the gaps. That standard covers how a company manages its AI systems.
 
@@ -17,6 +15,10 @@ when:
   - You use AI in products or tools and have no written risk register.
   - An auditor or customer asked how you manage AI risk.
   - You need an internal audit schedule for your AI management system.
+not_for:
+  - "You want an executive plan on whether to build or buy AI: ask your leadership team or an AI strategy adviser, as this checks audit readiness only."
+  - "You need to meet EU AI Act rules for a high-risk system: use a lawyer or a conformity assessment guide, as this is a voluntary standard."
+  - "You want an official ISO 42001 certificate: hire an accredited certification body, as this is a planning aid and not an audit."
 you_give:
   - A description of the AI systems you use or build
   - Your current policies, roles and records
@@ -28,7 +30,29 @@ you_get:
   - A ranked list of fixes
   - A 12 month internal audit plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your AI system list, policies, roles, known risks and past audit findings. Write each set down in plain text first.
+  - Open your AI tool. Paste the skill text, or upload the skill folder if your tool reads files.
+  - "Say which job you want: the gap check, the risk register or the audit plan. Then paste your details."
+  - To run the scripts, use an AI that can run Python code. Otherwise ask it to follow the same steps in chat.
+  - Check each gap, risk and audit date against your own records before you act on it.
+  - Give each fix an owner and a due date, then take the plan to your management review.
+output_sample:
+  input:
+    - A description of the AI systems you use or build
+    - Your current AI policies, roles and records
+    - Known AI risks or incidents (optional)
+    - Your past audit findings and where you are in certification (optional)
+  prerequisites:
+    - An AI that can run Python scripts, or paste the details into a chat and skip the scripts
+    - Your evidence, risks and audit scope written as simple JSON files if you run the scripts
+  output:
+    - name: Gap analysis
+      contains: Each clause from 4 to 10 marked full, partial or missing, with a ranked list of what to close first.
+    - name: AI risk register
+      contains: Each risk with its source, event, consequence, likelihood and impact, plus the Annex A controls that treat it.
+    - name: Residual risk verdict
+      contains: A call per risk on what stays after treatment, for management to accept or reject.
+    - name: 12 month internal audit plan
+      contains: Audit scope, timing and auditor assignments, with checks that nobody audits their own work.
+    - name: Bottom line and next steps
+      contains: One sentence on gap severity, the decision type, the evidence, and three next steps with owners and dates.

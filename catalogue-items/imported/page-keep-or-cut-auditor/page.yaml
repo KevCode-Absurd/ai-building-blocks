@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies a set decision rule to each page.
 new_slug: page-keep-or-cut-auditor
 name: Page keep-or-cut auditor
-summary: Give it your site's content list. Get each page marked keep, update,
-  merge, redirect or delete, with reasons.
+summary: Find which pages to keep, update, merge, redirect or delete in your content audit. Give it your page list and data. You get a call and reason per page.
 job: get-found-in-search
 headline: Page keep-or-cut auditor
-subhead: "A spreadsheet-style decision for every page on your site: keep,
-  update, merge, redirect or delete, each with a reason. It helps when traffic
-  has dropped or you inherited a pile of old posts."
+subhead: "A spreadsheet-style decision for every page on your site: keep, update, merge, redirect or delete, each with a reason. It helps when traffic has dropped or you inherited a pile of old posts."
 explain: |
   A spreadsheet-style decision for every page on your site: keep, update, merge, redirect or delete, each with a reason. It helps when traffic has dropped or you inherited a pile of old posts.
 
@@ -18,18 +15,51 @@ when:
   - Site traffic has slid and you do not know where to start.
   - Two of your pages compete for the same search.
   - You are about to redesign or move the site and want to trim first.
+not_for:
+  - "You want to improve one page only: use a plain on-page SEO check or ask your AI to edit that page directly."
+  - "You want ideas for new posts: use a keyword research step instead of a content audit."
+  - "You have no search or traffic data: get a Search Console and analytics export first, or the calls will have gaps."
 you_give:
   - Your site address or full page list
-  - Search console export for 12 months
-  - Analytics data such as sessions and sales
-  - Backlink export (optional)
+  - Your Search Console export for the last 12 months
+  - Your analytics data, such as sessions and sales
+  - Your backlink export (optional)
 you_get:
   - Each page marked keep, update, merge, redirect or delete
   - Reason for each call
   - Priority order of work
   - Redirect map for pages you remove
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Export your page list, Search Console data and analytics data. Paste them in, or upload the files if your AI allows it.
+  - Add your backlink export if you have one. Backlink tools are often paid. Without one, ask your AI to mark link counts as unknown and not to delete pages on traffic alone.
+  - Ask for the audit spreadsheet and the summary report.
+  - Read the calls on pages with links or rising traffic first. Check them before you change anything.
+  - Do redirects and deletes in batches. Then check the site for broken redirects.
+output_sample:
+  input:
+    - Your site address or full page list
+    - Search Console export for the last 12 months
+    - Analytics data, such as sessions and conversions
+    - Backlink export (optional)
+  prerequisites:
+    - An AI that can read pasted tables or uploaded files
+    - A free Search Console and analytics account for your site
+    - A backlink tool for link counts (optional, often paid)
+  output:
+    - name: Audit spreadsheet
+      contains: One row per page with traffic, rank, links, word count, last update, decision, target, priority and notes.
+    - name: Inventory totals
+      contains: How many pages fall under keep, update, merge, redirect and delete.
+    - name: Cannibalization clusters
+      contains: Groups of pages that compete for the same search, with the page to keep as the main one.
+    - name: Top 20 update priorities
+      contains: The pages most worth updating first, in order.
+    - name: Redirect map
+      contains: A CSV listing each removed or merged page and the page it should point to.
+    - name: Delete list
+      contains: Pages with no traffic, no rankings and no links, to remove as gone (410).
+    - name: Implementation roadmap
+      contains: The order to do the work in, with redirects and deletes done in batches.
+    - name: Measurement plan
+      contains: How to track organic traffic at 30, 60 and 90 days after the changes.

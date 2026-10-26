@@ -1,46 +1,29 @@
 ---
 name: reconcile-service-capacity-and-shared-cost
-description: "A service contribution bridge with allocated and idle shared cost"
+description: "Use when you need to see what a service team's hours earn after delivery cost and a separate shared cost pool. Runs two checkers in order. Not for delivery date promises or pricing decisions."
 ---
 
 # Reconcile service capacity and shared cost
 
-A service contribution bridge with allocated and idle shared cost.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Work out what a service team's hours earn after delivery cost and shared cost. Two steps run in order. The first builds delivery contribution. The second spreads the shared pool and shows idle cost on its own line.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need** (all as of the month):
+- **Hours** (yours): paid hours, client hours, leave and fixed duties for one month.
+- **Realized fees** (yours): what clients actually paid for that month.
+- **Loaded delivery cost** (yours): from payroll and benefits.
+- **Shared service pool** (yours): kept separate from delivery labor, with activity counts for the same month.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** a definition of normal capacity for each team.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Actual paid/client hours, leave/fixed duties, realized fees, loaded delivery cost, a separate shared service pool and homogeneous activity drivers for the same month.
+The items under "Before you start", all as of the month, with the currency and scale stated once. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,9 +33,9 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Service utilization margin builder** (`service-utilization-margin-builder`). Reconcile paid time, available client capacity and actual fee realization to delivery contribution. Pass contribution, month and direct-cost ledger to the allocation step, preserving unbilled work. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-service-utilization-margin-builder.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Service utilization margin builder** (`service-utilization-margin-builder`). Reconcile paid time, available client capacity and actual fee realization to delivery contribution. Pass contribution, month and direct-cost ledger to the allocation step, preserving unbilled work. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-service-utilization-margin-builder.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** paid hours less leave and fixed duties give available client hours, realized fees match invoices, and unbilled work is kept. If not, stop and say which line is off.
 
-2. **Shared service activity cost allocator** (`shared-service-activity-cost-allocator`). Allocate only the separate approved shared service pool using observed activity drivers and normal capacity. Present direct contribution less allocated share as a management view; show idle cost separately and prevent a second deduction of delivery labor. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-shared-service-activity-cost-allocator.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Shared service activity cost allocator** (`shared-service-activity-cost-allocator`). Allocate only the separate approved shared service pool using observed activity drivers and normal capacity. Present direct contribution less allocated share as a management view; show idle cost separately and prevent a second deduction of delivery labor. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-shared-service-activity-cost-allocator.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** delivery labor and the shared pool do not overlap, activity units and hours are bridged, and idle capacity cost is its own line, not hidden in unit fees.
 
 ## Workbook checks
 
@@ -69,4 +52,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with delivery contribution, the allocated shared cost and the idle capacity cost. State plainly that no price or staffing change was made, and that a person who knows the business must check the cost definitions before anyone acts. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- The [Check capacity before promising a delivery date](https://useaiblocks.com/workflows/check-capacity-before-promising-a-delivery-date) workflow, when you need to decide whether to promise a date.
+- The [Reconcile hotel room and food contribution](https://useaiblocks.com/workflows/reconcile-hotel-room-and-food-contribution) workflow, when the business is a property with rooms and food.
+Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

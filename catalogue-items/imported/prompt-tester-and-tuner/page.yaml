@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs a test loop and compares results.
 new_slug: prompt-tester-and-tuner
 name: Prompt tester and tuner
-summary: Give it a prompt and test cases. Get scores for each version and a
-  better prompt backed by results.
+summary: Test your prompt against real cases and see which edits help. Get a baseline score, scores per version and a better prompt backed by results.
 job: set-up-ai
 headline: Prompt tester and tuner
-subhead: A prompt improved by results, not opinion. You get scores for each
-  version against your test cases, so you can see which edits helped and by how
-  much.
+subhead: A prompt improved by results, not opinion. You get scores for each version against your test cases, so you can see which edits helped and by how much.
 explain: |
   A prompt improved by results, not opinion. You get scores for each version against your test cases, so you can see which edits helped and by how much.
 
@@ -18,6 +15,10 @@ when:
   - You need to compare several prompt versions with numbers.
   - Your retrieval setup returns weak or unfaithful answers.
   - You want to see how many tokens a prompt costs before you ship it.
+not_for:
+  - "You will use the prompt once and never again: just rewrite it by hand and read the answer."
+  - "You only need to pick a pattern, like few-shot or step-by-step: read the prompt patterns reference in the skill folder."
+  - "You want to design a full retrieval system or a full agent from scratch: ask a developer or an AI engineer to design it, then use this to test it."
 you_give:
   - Current prompt
   - Test cases with expected outputs (or help building them)
@@ -29,8 +30,31 @@ you_get:
   - Improved prompt with proof
   - Token and cost estimate
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini with a tool that can run Python code and read files. Upload the skill folder.
+  - Paste your current prompt and your test cases. If you have no test cases, ask your AI to help you write 10 to 20 first.
+  - Ask your AI to follow the skill. It will score your current prompt before it changes anything.
+  - Add your provider's price per million tokens if you want cost figures in dollars.
+  - Read the comparison. Ship a new version only if it keeps every case that passed before.
+output_sample:
+  input:
+    - Your current prompt
+    - 10 to 20 test cases with expected answers (or help building them)
+    - Your provider's price per million tokens (optional)
+    - Your retrieval or agent setup file (optional)
+  prerequisites:
+    - An AI that can run Python code and read your files
+  output:
+    - name: baseline.json
+      contains: The saved score, token count and clarity check of your current prompt, kept for comparing every later version.
+    - name: Diagnosis
+      contains: The weak spots found in your prompt, such as vague verbs, repeated text, a missing output format and wasted tokens.
+    - name: Revised prompt
+      contains: A new version with one change at a time, each change tied to a problem it fixes.
+    - name: Comparison against baseline
+      contains: Scores for each version next to the baseline, with a pass or fail for each test case.
+    - name: Token and cost estimate
+      contains: Estimated tokens per call, plus dollar cost only if you give your provider's price.
+    - name: RAG report (optional)
+      contains: Scores for how relevant, complete and faithful your retrieved answers are, compared with an earlier run.
+    - name: Agent config check (optional)
+      contains: Errors and warnings in your agent setup, such as missing tool settings and loop risk.

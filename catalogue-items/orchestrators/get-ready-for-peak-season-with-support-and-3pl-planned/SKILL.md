@@ -24,9 +24,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Store revenue forecast builder.** Use the skill `store-revenue-forecast-builder`. Starts with a daily forecast of peak orders that every later step plans for.
-2. **Support capacity planner.** Use the skill `support-capacity-planner`. Give it the spreadsheet from the steps before. Turns forecast orders into expected tickets and the dates support staff must start.
-3. **3PL bid and agreement builder.** Use the skill `3pl-bid-and-agreement-builder`. Give it the spreadsheet from the steps before. Sends the forecast volumes to 3PLs so bids and terms rest on peak, not an average month.
-4. **Inbound shipment tracker builder.** Use the skill `inbound-shipment-tracker-builder`. Give it the spreadsheet from the steps before. Tracks every stock order against the forecast so the warehouse knows what lands and when.
+2. **Support capacity planner.** Use the skill `support-capacity-planner`. Give it the spreadsheet from the steps before. Turns forecast orders into expected tickets and the dates support staff must start. Hands nothing on: the next steps use step 1's forecast.
+3. **3PL bid and agreement builder.** Use the skill `3pl-bid-and-agreement-builder`. Give it the forecast spreadsheet from step 1, not the support plan. Sends the forecast volumes to 3PLs so bids and terms rest on peak, not an average month. Hands step 5 the agreement terms.
+4. **Inbound shipment tracker builder.** Use the skill `inbound-shipment-tracker-builder`. Give it the forecast spreadsheet from step 1 and your purchase orders. Tracks every stock order against the forecast so the warehouse knows what lands and when. Hands step 5 the tracker.
 
 Pause here: Run peak with the 3PL, then collect the invoice, rate card and Shopify orders for the month.
 

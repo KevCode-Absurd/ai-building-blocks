@@ -1,6 +1,6 @@
 new_slug: advertorial-story-and-belief-checker
 name: "Advertorial story and belief checker"
-summary: "Paste your advertorial. Get each spot the story turns pitchy, fixes and a score out of 100."
+summary: "Check your advertorial for spots where the story turns into a sales pitch. Get a rewrite for each spot, eight pass or fail checks and a score out of 100."
 job: audit-landing-page
 thinking: medium
 thinking_why: "It reads one draft against a fixed list of checks, so a mid-size model is enough. A human read is still needed."
@@ -17,6 +17,10 @@ when:
   - Your advertorial draft is done and you want a read before you spend on traffic.
   - An advertorial is live but readers drop off halfway and you don't know where.
   - Your AI wrote the page and you want to check it hits every belief the buyer needs.
+not_for:
+  - "You only want a style edit of the draft: use the Advertorial draft editor."
+  - "You have a plain sales page, not an article-style ad: ask a person who knows your buyers to review it, since this checker looks for story breaks."
+  - "You need to know if your claims are true or legal: check them against real sources, or ask a compliance reviewer."
 
 you_give:
   - The advertorial draft, or its URL and screenshots
@@ -35,6 +39,27 @@ how_to_use:
   - Add the ad, the avatar and your foundation docs if you have them.
   - Fix the story breaks first, then the failed checks in the order listed.
   - Read the page yourself once more, start to end, before it goes live.
+output_sample:
+  input:
+    - Your advertorial text, or its link and screenshots
+    - The ad that sends people to the page (optional)
+    - Your avatar sheet (optional)
+    - Your foundation docs, such as research, offer brief and necessary beliefs (optional)
+  prerequisites:
+    - An AI that can read screenshots, if you want the button and image checks
+  output:
+    - name: STORY BREAKS
+      contains: Each sentence where the story turns into a pitch, where it sits, and a story-style rewrite.
+    - name: CHECKS
+      contains: A pass, part or fail for mirror, story flow, transformation, mechanism, beliefs, objections, buttons and images, with a reason.
+    - name: HONESTY
+      contains: A separate pass or fail on the ad label and any fake outlet, byline, expert, review or urgency.
+    - name: SCORE
+      contains: A score out of 100 with the sum of the eight checks shown.
+    - name: FIXES IN ORDER
+      contains: The changes to make, ranked, starting with the ones that matter most.
+    - name: CHECKS MISSED
+      contains: Any check that could not run, or none.
 
 how_it_works:
   - title: Marks story breaks

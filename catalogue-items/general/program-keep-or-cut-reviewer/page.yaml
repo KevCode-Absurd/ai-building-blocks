@@ -1,6 +1,6 @@
 new_slug: program-keep-or-cut-reviewer
 name: "Program keep-or-cut reviewer"
-summary: "Paste results for the projects you run. Get each one marked keep, cut or double down, judged on cash and customer value."
+summary: "Paste results for each project you run. This program keep-or-cut review marks every one keep, cut or double down, judged on cash and customers."
 job: plan-strategy
 thinking: high
 thinking_why: "It weighs cash, customer signals and growth needs across many lines, which takes careful comparison."
@@ -17,6 +17,10 @@ when:
   - You run several products, campaigns, clients or services and cannot fund all of them well.
   - A budget review is coming and you need a clear reason for each line.
   - A program has run for a year and nobody has asked if it should continue.
+not_for:
+  - "You run one product with nothing to compare it to: ask a trusted adviser or an accountant to look at it."
+  - "You need to choose between people, not projects: use a simple role review with your own notes."
+  - "You want to plan a new bet, not review old ones: write a short plan with a clear stop rule first."
 
 you_give:
   - A table of programs with what each cost and returned over a period
@@ -34,6 +38,27 @@ how_to_use:
   - Add any customer signals, such as repeat orders, referrals or complaints.
   - Read the verdicts and challenge any where you hold facts it does not.
   - Share the short reasons with the people affected, then plan the changes.
+output_sample:
+  input:
+    - A table of your programs with what each cost and returned
+    - Cash in and out for each one (optional)
+    - Customer signals such as repeat orders or referrals (optional)
+    - The lowest return you will accept (optional)
+  output:
+    - name: Program table
+      contains: Each program with its cost, return, real cash, earnings and the new cash it needs to grow.
+    - name: Customer signals
+      contains: Repeat purchase, word of mouth and brand strength for each program, using only what you gave.
+    - name: Four tests
+      contains: A yes, no or unknown on whether you understand it, its long-term economics, its people and its price.
+    - name: Great, good or gruesome sort
+      contains: Each line marked as earning well on little new cash, earning well but needing more, or fast growth that eats cash.
+    - name: Verdicts
+      contains: Keep, cut or double down for each line, with a short reason you can read to the team.
+    - name: Lessons from cuts
+      contains: One lesson for each cut line on what it taught about customers, price or how it ran.
+    - name: MISSING and CHECKS MISSED
+      contains: Gaps in your figures and any checks the review could not pass.
 
 how_it_works:
   - title: Lists each program

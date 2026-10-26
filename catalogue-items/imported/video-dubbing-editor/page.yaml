@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: You review and fix the transcript and translation before each new dub.
 new_slug: video-dubbing-editor
 name: Video dubbing editor
-summary: Give it a video or podcast. Get versions in other languages that keep
-  each speaker's voice, ready to correct.
+summary: Dub your video or podcast into other languages and keep each speaker's voice. Fix the transcript and translation before you make the final dub.
 job: work-with-audio
 headline: Video dubbing editor
-subhead: Your video or podcast in new languages, still in each speaker's own
-  voice, with a chance to fix the words before the final version. The skill uses
-  the ElevenLabs dubbing service.
+subhead: Your video or podcast in new languages, still in each speaker's own voice, with a chance to fix the words before the final version. The skill uses the ElevenLabs dubbing service.
 explain: |
   Your video or podcast in new languages, still in each speaker's own voice, with a chance to fix the words before the final version. 
   The skill uses the ElevenLabs dubbing service. You upload a file or give a link, and it transcribes the source into editable segments with speaker names and timing. Then you add as many target languages as you like. Each language gets its own translation, and you can refine any segment, then regenerate the dubbed audio. It tells you to use the current projects interface, not the old dubbing calls. You need an ElevenLabs account and an API key, which the setup command can create for the project.
@@ -17,6 +14,10 @@ when:
   - A podcast episode needs a translated audio track.
   - The first translation got a product name wrong and you need to fix it.
   - You want to check the source transcript before paying for several languages.
+not_for:
+  - "You need transcript editing or regenerating on a standard plan: these work on enterprise workspaces only, so create the project and add languages without edits, or ask ElevenLabs about enterprise."
+  - "You want a translated text file or subtitles only: use a plain translation tool or your AI chat, since this skill makes dubbed audio."
+  - "You cannot get an ElevenLabs account or key: ask a translator or voice actor to record the new language instead."
 you_give:
   - A video, audio file or link
   - Target languages
@@ -28,8 +29,31 @@ you_get:
   - Segment-level translation edits
   - Regenerated audio after each change
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own ElevenLabs API key.
+  - Open Claude, ChatGPT or Gemini with an option to run code, and paste in this skill.
+  - Add your video, audio file or public link, and name the languages you want.
+  - Give your ElevenLabs API key, or let the setup command create one for the project.
+  - Ask your AI to make the project and show you the source transcript. Fix any wrong words or names first.
+  - Ask it to add each language, then download the dubbed audio files when they finish.
+  - To fix a translation, edit that segment and regenerate the language. This needs an enterprise workspace and is charged.
+output_sample:
+  input:
+    - Your video, audio file or a public link to it
+    - The language it is spoken in (optional, it can detect this)
+    - One or more target languages
+    - Product or brand names to get right (optional)
+    - Your ElevenLabs API key
+  prerequisites:
+    - An AI that can run code and reach the internet
+    - An ElevenLabs account and API key
+    - An enterprise workspace, only if you want to edit transcripts or regenerate
+  output:
+    - name: Source transcript
+      contains: Editable segments with an id, speaker, start and end time, and text, taken from your source media.
+    - name: Translation per language
+      contains: Each source segment paired with its translation in that language, which you can edit one segment at a time.
+    - name: Dubbed audio file per language
+      contains: One WAV file for each target language, in the original speakers' voices, named by language code.
+    - name: Regenerated audio
+      contains: A fresh WAV after you fix a segment, so the dub matches the edited words.
+    - name: Status updates
+      contains: Progress for the project and each language, including when a dub is out of date after an edit.

@@ -12,7 +12,7 @@ subhead: A trust score from 0 to 100 for a product's reviews, with the exact
 explain: |
   A trust score from 0 to 100 for a product's reviews, with the exact reviews that look bought or copied. Use it before you buy, or to see how clean a rival's rating is.
 
-  Paste the review text, and add dates, star ratings and verified-purchase marks if you have them. More data unlocks more checks. The skill looks for bursts of reviews in a short time, near-identical wording, star counts that do not follow a natural curve, an unusual share of verified buyers, odd review lengths and stock phrases. Each check carries a weight. The result falls into low, medium, high or critical risk, and flagged reviews come with the reason.
+  Paste the review text, and add dates, star ratings and verified-purchase marks if you have them. More data adds more checks. The skill looks for bursts of reviews in a short time, near-identical wording, star counts that do not follow a natural curve, an unusual share of verified buyers, odd review lengths and stock phrases. Each check carries a weight. The result falls into low, medium, high or critical risk, and flagged reviews come with the reason.
 when:
   - A product has a 4.9 rating and you do not believe it.
   - You are choosing a supplier's item and want to avoid inflated reviews.
@@ -33,3 +33,24 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - You want to learn what buyers dislike in a rival's product. Use the Star-rating review miner.
+  - You want to know whether your own low reviews came from the wrong buyers. Use the Wrong-buyer review checker.
+  - You need proof to report to a store or platform. It flags reviews that look off. It does not prove anything.
+output_sample:
+  input:
+    - The review text, pasted or exported
+    - The date of each review (optional)
+    - The star rating of each review (optional)
+    - Whether each reviewer is a verified buyer (optional)
+  output:
+    - name: Authenticity score
+      contains: A score from 0 to 100 for how real the reviews look.
+    - name: Risk level
+      contains: Low, medium, high or critical, with a one-line meaning.
+    - name: Detection dimensions
+      contains: Scores and reasons for timing bursts, copied wording, star-rating shape, verified share, length and stock phrases.
+    - name: High-risk reviews
+      contains: The top flagged reviews, each with a risk percentage and the reason it was flagged.
+    - name: Data to add next
+      contains: Which extra details, such as dates or ratings, would allow deeper checks.

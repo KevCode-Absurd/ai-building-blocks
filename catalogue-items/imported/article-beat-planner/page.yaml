@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It orders ideas and checks each one is explained.
 new_slug: article-beat-planner
 name: Article beat planner
-summary: Give it raw notes. Get them arranged into a story of beats, with each
-  term explained first.
+summary: Turn rough notes into an article one beat at a time. This article beat planner offers choices and explains each term before it is used.
 job: write-and-tell-stories
 headline: Article beat planner
-subhead: Your raw notes, turned into an article one beat at a time. You pick the
-  path, and every term is explained before a later beat relies on it, so readers
-  are never lost.
+subhead: Your raw notes, turned into an article one beat at a time. You pick the path, and every term is explained before a later beat relies on it, so readers are never lost.
 explain: |
   Your raw notes, turned into an article one beat at a time. You pick the path, and every term is explained before a later beat relies on it, so readers are never lost.
 
@@ -18,6 +15,10 @@ when:
   - Readers say your articles use terms before explaining them.
   - You want to choose the story path yourself, step by step.
   - You are writing for people new to the topic.
+not_for:
+  - "You are writing a short post or one quick note: write it straight through, or jot a plain outline first."
+  - "You already have a finished outline: skip the planner and do an editing pass on your draft instead."
+  - "You want one full draft in a single go: ask your AI for a draft, then edit it yourself."
 you_give:
   - A markdown file of raw notes
   - What your readers already know
@@ -28,7 +29,27 @@ you_get:
   - Next beat options after each step
   - A finished article in your file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write your raw notes into one markdown file. Rough is fine.
+  - Open your AI and paste the skill instructions. If your AI can use files, give it your notes file. If not, paste the notes in.
+  - Tell it what your readers already know, and where to save the article.
+  - Read the starting beat options. Pick one, and the AI writes only that beat.
+  - Pick the next beat from the new options. Repeat until the article ends.
+  - Edit any beat you like. The AI re-reads the file each time and keeps your edits.
+output_sample:
+  input:
+    - A markdown file of your raw notes
+    - What your readers already know before they start
+    - Where to save the article file
+  prerequisites:
+    - An AI that can read and write to your article file, or one where you paste the file text in and copy each beat back
+  output:
+    - name: Prerequisites list
+      contains: The ideas your readers already know, so the article can lean on them from the first beat.
+    - name: Starting beat options
+      contains: Two or three different ways in, each showing what new idea it explains and what it opens up next.
+    - name: First beat
+      contains: Only the beat you pick, written to your article file, whether one sentence or several paragraphs.
+    - name: Next beat options
+      contains: Two or three directions after re-reading the file, each using only ideas already explained.
+    - name: Finished article
+      contains: Your article file, built beat by beat until the story reaches a natural end.

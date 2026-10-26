@@ -1,6 +1,6 @@
 new_slug: buyer-wants-finder
 name: Lead want picker
-summary: "Paste your product facts. Get one buyer want to lead with, its reward, the facts behind it and what not to claim."
+summary: "Find the one buyer want to lead your ad with. Paste your product facts. You get the want, its reward, the facts behind it and claims to avoid."
 job: write-ad-copy
 thinking: medium
 thinking_why: It weighs several wants against your facts and picks one, but the lists and tests are fixed.
@@ -14,6 +14,10 @@ when:
   - You are about to write an ad and cannot say in one line what the reader gets.
   - Your product has many features and you do not know which one to lead with.
   - You suspect the ad is written for people like you, not for your buyer.
+not_for:
+  - "You already have a finished ad and want a better headline: use the Ad headline writer."
+  - "You want a ranked list of many reasons to buy, with three to test: use the What you really sell finder."
+  - "You have no facts about your product yet: gather them first, or ask a customer why they bought."
 you_give:
   - "Your product or service: what it is, what it does, price and proof you may use"
   - Who buys it, if you know (optional)
@@ -28,6 +32,29 @@ how_to_use:
   - Paste your product facts. Add customer words if you have any, word for word.
   - Say who you think the buyer is and what you think they want, so it can test the guess.
   - Take the brief to the next step, the headline writer.
+output_sample:
+  input:
+    - "Your product or service facts: what it is, what it does, price and proof you may use"
+    - Who buys it (optional)
+    - Customer words from reviews, emails or calls (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: THE READER
+      contains: One line on who the ad is for.
+    - name: WANTS THAT FIT
+      contains: Wants sorted into gain, be, do and save, each with the fact that backs it.
+    - name: DROPPED
+      contains: Wants removed, each with the reason, such as no fact or a taste risk.
+    - name: LEAD WANT
+      contains: The one want to lead with and its reward, as a gain or a loss avoided.
+    - name: BACKUP WANT
+      contains: A second want from a different group, kept in case the first does not work.
+    - name: DO NOT CLAIM
+      contains: Claims your facts cannot back, so no later step uses them.
+    - name: MISSING
+      contains: Facts that would sharpen the pick.
+    - name: CHECKS MISSED
+      contains: One line for each check the result still fails, or none.
 how_it_works:
   - title: Two sides of the counter
     text: Writes one short list as the maker and one as the buyer, and notes where they differ.

@@ -1,0 +1,135 @@
+name: Personal Growth Mentor agent
+summary: Turn a vague goal into a plain diagnosis, a 30-day plan and a weekly check-in from a coach that asks first and skips the pep talk.
+headline: Personal Growth Mentor agent
+subhead: Tell it the goal, what you do today and the limits on your time and energy. It finds the real bottleneck and builds a 30-day plan with one small daily habit. You get a weekly review sheet to bring back next week.
+job: think-and-decide
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Most goal plans fail for a plain reason. The plan fits a person with more time, energy and focus than you have. This personal growth coach starts from your real week, not from a perfect one.
+
+  It asks before it advises. If key facts are missing, it asks a few short questions and does not guess. Then it separates the goal you say you want from the one your habits point to. It finds the one limit that matters most this month. That may be an unclear standard, a habit that is too big, or a setup that makes the wrong choice the easy one.
+
+  You get two to four options with their trade-offs, one clear pick, and a 30-day plan. Every reply ends with a next step for the next 24 to 48 hours, the signal that the plan is slipping, and, when it helps, one honest truth. It is direct, not harsh. It does not give motivational speeches.
+
+  It is not a therapist, doctor, lawyer or financial adviser. For health symptoms, deep distress, legal trouble or large money risk, it tells you to see a qualified person. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. Its memory claims are role language: your AI will not remember you in the next chat, so you save the plan and paste it back.
+when:
+  - You have a goal, such as a career move, a study plan or a fitness habit, and you keep not starting it.
+  - You are torn between two or three paths and want the trade-offs on one page.
+  - You made a plan that fell apart in week two and want to know why.
+  - You want a weekly check-in with an honest coach, with no fluff.
+not_for:
+  - "You want help with a mental health condition, medical symptoms or a crisis: please see a qualified professional or call your local emergency number."
+  - "You want legal or investment advice: use a qualified lawyer or licensed financial adviser."
+  - "You want to review how your work month matched your roles: use the Monthly roles and goals reviewer."
+  - "You want to grow a business or test a marketing idea: use the Growth experiment agent."
+  - "You want a quick pep talk or a quote: this agent will not give one."
+you_give:
+  - Your goal in your own words, and the area it sits in, such as career, learning, health habits, money habits or focus.
+  - What you do now, such as your routine, tools, and what has got in the way before.
+  - Your limits, such as hours per week, money, energy and other duties.
+  - A date that matters (optional).
+  - For a weekly check-in, last week's commitments and what happened (optional).
+you_get:
+  - A growth diagnostic with your stated goal, your real goal, your current setup, the main bottleneck, a hidden assumption and the best place to start.
+  - Two to four options with trade-offs, and one recommendation.
+  - A 30-day plan with weekly actions, one small daily habit, a way to measure progress and a sign that the plan is slipping.
+  - A decision table, when you must choose between options.
+  - A weekly review sheet to fill in and paste back.
+  - One next action for the next 24 to 48 hours.
+how_to_use:
+  - Download the pack. Add it to your AI as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - "Say what you want and what has stopped you. Add your weekly hours and any hard limits. Start with: Diagnose first. Ask me what you need. Do not give a plan yet."
+  - Answer its questions in short lines. If you do not know an answer, say so.
+  - Read the diagnostic first. Fix anything that does not match your life, then ask for the 30-day plan.
+  - Do the next action it names within two days. Then paste the plan back in a week with what happened.
+  - Save the plan and each review in one note. Your AI does not remember between chats.
+how_it_works:
+  - title: Check the context
+    text: It asks a few short questions if key facts are missing. It does not fill gaps with guesses.
+  - title: Diagnose
+    text: It separates the goal you state from the one your behavior shows, and finds the main bottleneck and the hidden assumption.
+  - title: Offer options
+    text: When there is a real choice, it gives two to four paths with upside, cost, risk and how easy each is to undo.
+  - title: Recommend one
+    text: It picks the path that is simplest to keep up, and explains why in a line.
+  - title: Build the plan
+    text: It writes a 30-day plan, weekly actions and one small daily habit. It shrinks the plan until it fits your limits.
+  - title: Close with accountability
+    text: It ends with the next action, the failure signal and, if it helps, one hard truth. The next week starts from your review.
+output_shape: |-
+  GROWTH DIAGNOSTIC: <area>
+    Stated goal <what you said> | Real goal <what your habits suggest>
+    Current setup <habits, place, limits> | Main bottleneck <one limit>
+    Hidden assumption <belief that may be wrong> | Best place to start <smallest change>
+
+  OPTIONS
+    <option> | Upside <> | Cost <> | Risk <> | Easy to undo <yes or no>
+    Recommendation <pick> | Reason <one line>
+
+  30-DAY FOCUS
+    Direction <long-term aim> | 30-day outcome <measurable>
+    Week 1 <> | Week 2 <> | Week 3 <> | Week 4 <>
+    Daily habit <small and repeatable> | Review measure <how you will check>
+    Failure signal <what shows it is slipping>
+
+  NEXT 48 HOURS
+    Action <one step> | Watch for <risk> | Check-in <date>
+
+  WEEKLY REVIEW (blank, for next week)
+    Commitment <> | Done <> | Missed <> | Why <> | Change <> | Next commitment <>
+output_sample:
+  input:
+    - Your goal in your own words
+    - What you do today and what has got in the way
+    - Your limits on time, money and energy
+    - A date that matters (optional)
+  prerequisites:
+    - An AI that reads pasted text, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Growth diagnostic
+      contains: Your stated and real goal, your setup, the main bottleneck, a hidden assumption and where to start.
+    - name: Options
+      contains: Two to four paths with trade-offs and one recommendation.
+    - name: 30-day focus
+      contains: The 30-day outcome, weekly actions, a daily habit, a progress measure and a failure signal.
+    - name: Decision table
+      contains: A table that compares your options, only when you must choose between them.
+    - name: Next 48 hours
+      contains: One specific action, the risk to watch for and a check-in date.
+    - name: Weekly review
+      contains: A blank sheet for commitments, results, causes and the next commitment.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Tone
+    how: Say how direct you want it, such as "blunt but kind" or "gentle".
+  - what: Area
+    how: Name one area, such as career or fitness habits, so it uses the right mode.
+  - what: Plan length
+    how: Ask for a 7-day or 14-day plan if 30 days feels too long.
+improve:
+  - Save every plan and weekly review in one note. Paste the last two into your next chat so it can see what you really did.
+terms:
+  - term: Bottleneck
+    meaning: The one limit that holds back everything else in your plan.
+  - term: Hidden assumption
+    meaning: A belief behind your plan that you have not tested, and that may be wrong.
+  - term: Failure signal
+    meaning: A sign that your plan is slipping, such as two missed days in a row.
+  - term: Minimum habit
+    meaning: The smallest version of a habit that you can keep on a bad day.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The agent works from what you type, so no files or tools are needed.
+  inputs:
+    - A note with last week's commitments and what happened.
+    - A rough map of your week, with the hours you really have free.

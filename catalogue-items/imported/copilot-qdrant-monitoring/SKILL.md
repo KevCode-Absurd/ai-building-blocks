@@ -13,6 +13,28 @@ Qdrant monitoring allows tracking performance and health of your deployment, and
 
 - Understand available metrics [Monitoring docs](https://search.qdrant.tech/md/documentation/operations/monitoring/)
 
+## What you need
+
+Ask once for anything not given:
+
+- Where Qdrant runs: self-hosted, Kubernetes, Qdrant Cloud or Hybrid Cloud.
+- The Qdrant version. Some checks need v1.17 or later.
+- The mode: set up monitoring, or diagnose a problem happening now.
+- For a problem: the symptom, when it started, and any metric values you have (optional).
+- What is already in place, such as Prometheus, Grafana or log tools (optional).
+
+If you cannot open the linked docs, say so and work from this file only.
+
+## What you hand back
+
+For setup, in this order: Metrics to collect, Health checks, Alerts (each with why it matters), Log plan.
+For a problem: Likely cause, Number to check (the metric or endpoint that proves it), Fix to try, What not to touch.
+Always end with Next steps: the first three actions, in order.
+
+## If something is missing
+
+Write `MISSING: <what>` and ask once. Never invent metric values, versions or thresholds. If the person gives no numbers, say which number to read first and stop there.
+
 
 ## Monitoring Setup
 

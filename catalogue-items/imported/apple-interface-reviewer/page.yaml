@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks a design against many written rules.
 new_slug: apple-interface-reviewer
 name: Apple interface reviewer
-summary: Describe or share your iOS or Mac screen. Get fixes checked against
-  Apple's design rules, including Liquid Glass.
+summary: Check your iOS or Mac screen against Apple's design rules, with contrast and tap target checks, a score and a fix list for Liquid Glass too.
 job: design-work
 headline: Apple interface reviewer
-subhead: An audit of your iOS, macOS, watchOS or visionOS screen against Apple's
-  design guidelines, including the newer Liquid Glass look. You get a scored
-  report with measured fixes.
+subhead: An audit of your iOS, macOS, watchOS or visionOS screen against Apple's design guidelines, including the newer Liquid Glass look. You get a scored report with measured fixes.
 explain: |
   An audit of your iOS, macOS, watchOS or visionOS screen against Apple's design guidelines, including the newer Liquid Glass look. You get a scored report with measured fixes.
 
@@ -18,6 +15,10 @@ when:
   - A reviewer says your tap targets are too small.
   - You are starting a new Apple app and want the right layout.
   - You need a score and a list to hand to a developer.
+not_for:
+  - "You design web pages or Android apps: use a web or Material Design checklist, since Apple's rules do not apply there."
+  - "You want reusable colour and spacing tokens: use the ui-design-system skill, which builds component systems, not Apple rule checks."
+  - "You need to test real users or build personas: use the ux-researcher-designer skill, or talk to a few real users."
 you_give:
   - A screen image, mockup or description
   - The target platform
@@ -29,7 +30,31 @@ you_get:
   - Platform-specific layout advice
   - A prioritised fix list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Use an AI that can run Python 3 if you want the exact score.
+  - Say which platform the screen is for and your app category. Share the screen as an image, or describe it.
+  - Add text colours, background colours and button sizes if you know them. Name each element.
+  - "For the score, ask your AI to save them as audit.json and run: python3 scripts/hig_checker.py batch audit.json. Upload the skill folder so the script is there."
+  - If your AI cannot run code, ask it to work the contrast and size checks by hand. It will tag those as less certain.
+  - Read the bottom line first. Fix the red items, then test any glass surfaces on a real device.
+output_sample:
+  input:
+    - A screen image, mockup or written description
+    - "Your target platform: iOS, macOS, watchOS or visionOS"
+    - Your app category, such as utility, productivity or game
+    - Text and background colours, and button sizes (optional)
+  prerequisites:
+    - Python 3, only if you want the exact score from the check script
+    - An AI that can run code and read files, for the script run (otherwise it works by hand)
+  output:
+    - name: Bottom line
+      contains: One line on compliance status and the score out of 100, with how many fixes you need before release.
+    - name: Contrast check
+      contains: The measured contrast ratio for each text colour pair, tested against the 4.5 to 1 target for normal text.
+    - name: Tap target check
+      contains: The size of each button or control, tested against the 44 by 44 point minimum.
+    - name: HIG audit report
+      contains: The filled audit template, with manual checks such as VoiceOver labels, Dynamic Type and Reduce Transparency.
+    - name: Fix list
+      contains: Each fix with what to change, why it fails, and how to do it, tagged by how sure the check is.
+    - name: Liquid Glass check
+      contains: Whether text stays readable on glass surfaces, and what to test on a real device.

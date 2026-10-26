@@ -1,6 +1,6 @@
 new_slug: big-swing-test-picker
 name: "Big swing test picker"
-summary: "Give it your store size and page data. Get five bold tests your traffic can prove, in order."
+summary: "Pick bold A/B tests for a store with low traffic. Give your sessions, orders and order value. You get five tests in order, with a plan."
 job: test-store-changes
 thinking: low
 thinking_why: "It picks from a fixed idea bank using your numbers, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You have under about 300,000 sessions a month and keep running small tests with no clear winners.
   - You want a first set of tests for your store and do not know where to start.
   - You want a plan for the next three months that fits one person's time.
+not_for:
+  - "Your store has over about 300,000 sessions a month and enough orders: run full testing with an audit and four to eight isolated tests a month."
+  - "You have under about 30 orders a month: tests are not valid yet, so start with known fixes and research, such as surveys and recordings."
+  - "You already have a long list of ideas and only need them ranked: use the test idea ranker."
 
 you_give:
   - Monthly sessions, orders and average order value
@@ -36,6 +40,27 @@ how_to_use:
   - Add anything you learned from surveys or recordings.
   - Take test number one to the store test readiness checker to size it.
   - Run one test at a time, log the result, and move to the next.
+output_sample:
+  input:
+    - Your monthly sessions, orders and average order value
+    - Where your ads send traffic today
+    - Survey answers and recording notes (optional)
+    - Who builds the changes (optional)
+  output:
+    - name: STAGE
+      contains: Your sessions, orders and order value, and whether you should take bold swings, test more fully, or do research and fixes.
+    - name: FIVE BOLD TESTS
+      contains: Five tests in order, each with the reason, main metric, guardrails, build effort and risk.
+    - name: NOT AT YOUR SIZE
+      contains: What to skip at your size, such as small tweaks and tests on several things at once.
+    - name: MONTH BY MONTH
+      contains: A plan for months one to three, with one test per page at a time.
+    - name: SIZE EACH TEST
+      contains: A reminder to run the store test readiness checker on test one before you build it.
+    - name: EXPECT
+      contains: A note that most tests lose, so you keep a log.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs you did not give and any checks the result failed, or none.
 
 how_it_works:
   - title: Places your store

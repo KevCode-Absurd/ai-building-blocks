@@ -1,0 +1,81 @@
+name: Claude Code learning coach
+headline: Claude Code learning coach
+summary: Check what you have tried in Claude Code and find your gaps. Get a short practice plan from a quick or deeper experience check.
+job: study-and-practice
+thinking: medium
+thinking_why: It must keep question choices, scoring and review advice consistent with the supplied answers and source lessons.
+subhead: Tell your AI what you have tried in Claude Code. A quick or deeper check gives you an experience profile, reported gaps and a few useful exercises.
+explain: >-
+  This coach asks about the Claude Code features you have used, then maps your answers to a focused learning path. The quick check has eight experience items. The deeper check separates ten topics and shows how every point was counted.
+
+
+  It uses the bundled lessons to suggest small exercises with clear completion checks. The result is based on your own report, so it does not claim to certify your knowledge or that you passed an exercise.
+when:
+  - You want a starting point for learning Claude Code.
+  - You want a practice path based on the features you have tried.
+not_for:
+  - "You want to prove your skills or screen a job candidate: this is a self-report, so use a live task reviewed by a person."
+  - "You want scored quiz questions on one lesson: use the quiz coach that goes with the lessons."
+  - "You want to learn Claude Code with no check first: open the lesson you need and read it."
+you_give:
+  - Your goal for using Claude Code.
+  - Your answers about which features you have tried.
+  - Whether you prefer the quick or deeper check.
+you_get:
+  - A transparent self-reported experience profile.
+  - Reported gaps and topics not yet assessed.
+  - A short practice plan with bundled lesson pointers.
+how_to_use:
+  - Download the complete folder and keep the references beside SKILL.md.
+  - Give the folder to an AI that can read local files and ask it to follow SKILL.md.
+  - Choose the assessment mode or lesson and answer the questions.
+  - Review the score, unanswered areas and suggested practice.
+output_sample:
+  input:
+    - Your goal for using Claude Code
+    - Quick check or deeper check
+    - Your answers to the experience questions, one round at a time
+    - Your Claude Code version (optional)
+  prerequisites:
+    - An AI that can read local files
+    - The complete downloaded folder, kept beside SKILL.md
+  output:
+    - name: Experience profile
+      contains: A short summary of what you say you have tried, with a level for the quick check.
+    - name: Scoring table
+      contains: The points counted for each topic against its maximum, so you can see how the score was built.
+    - name: Reported gaps
+      contains: The topics you have not tried, plus any round you skipped, marked as not assessed.
+    - name: Practice plan
+      contains: Two or three topics, prerequisites first, each with a reason and the local lesson file.
+    - name: Exercise and completion check
+      contains: One small task per topic and a clear sign that you finished it.
+    - name: Version notes
+      contains: Any place where your Claude Code version may differ from the lessons.
+how_it_works:
+  - title: Choose the scope
+    text: Pick a quick or deeper experience check and state your learning goal.
+  - title: Answer the questions
+    text: Your AI uses the bundled source material and records your actual answers.
+  - title: Check the result
+    text: The AI shows the counted items, unanswered areas and any version-sensitive limits.
+  - title: Plan the next step
+    text: Use the local lesson pointers to practise or review a topic you choose.
+output_shape: A self-reported experience profile and a short practice plan with local lesson pointers.
+judge:
+  - Selected experience items are counted once and unanswered items remain unassessed.
+  - The deeper total uses checkpoints out of one and advanced features out of three.
+  - Practice suggestions fit the learner’s goal and include an observable completion check.
+  - No knowledge certification or completed practice is claimed.
+test:
+  - Try a quick check with no experience items selected, then one with all eight.
+  - Try an incomplete deeper check and confirm unanswered topics are not scored as zero.
+improve:
+  - Correct a scoring or lesson-reference error before reusing the result.
+tweaks:
+  - what: Depth
+    how: Use the quick check for a starting point or the deeper check for a per-topic profile.
+works_best_with:
+  tools:
+    - name: An AI that can read local files
+      why: Reads the selected lesson and question references from the complete folder.

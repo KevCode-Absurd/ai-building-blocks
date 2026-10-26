@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It builds slides and checks every cited line.
 new_slug: repo-slide-deck-builder
 name: Repo slide deck builder
-summary: Point it at a repo. Get a slide deck with cited facts that warns you
-  when the code changes.
+summary: Turn your code repo into a slide deck where every quoted line is cited, then check later if the slides still match the code.
 job: work-with-files
 headline: Repo slide deck builder
-subhead: A slide deck about your code where every fact points to a file and
-  line, and a check that tells you when the slides no longer match.
+subhead: A slide deck about your code where every fact points to a file and line, and a check that tells you when the slides no longer match.
 explain: |
   A slide deck about your code where every fact points to a file and line, and a check that tells you when the slides no longer match. Most decks go stale and nobody notices.
 
@@ -17,19 +15,46 @@ when:
   - A client wants slides about a system you built.
   - Your architecture slides are months old and you doubt they are right.
   - You want proof for every claim on a slide.
+not_for:
+  - "You need slides about something other than code, like a sales pitch or a lecture: write those in your usual slide tool or ask your AI for a plain outline."
+  - "You want a PDF you can check later: check the HTML deck, because the PDF holds no citations."
+  - "You only want to read or explain your code, with no slides: ask your AI to explain the repo in a chat."
 you_give:
-  - Repository to present
-  - Audience and talk length
+  - Your code repository (a git repo)
+  - Who the talk is for and how long it runs
   - Topics to cover (optional)
-  - Python for the drift check
+  - Python 3 and Chrome or Chromium installed on your computer
 you_get:
   - Self-contained HTML slide deck
   - Citations with file, lines and fingerprint
   - "Drift report: current, moved, changed or missing"
   - List of slides to update
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run code and read your files, such as Claude Code, Codex CLI, Copilot CLI or OpenCode. A plain chat window cannot run the checks.
+  - Review before you install. The install step clones an outside repo (glukicov/slideops) and links the skills into your home folder. Check the pinned commit first, then run install.sh.
+  - Open your repository and ask your AI to make slides about it. Answer its short questions on topic, audience, length and theme.
+  - Read the outline it shows you and approve it or ask for changes. It builds the deck after that.
+  - Open the HTML deck and look through each slide. Your AI also checks each slide in Chrome.
+  - Later, ask your AI to check the deck against the code. Fix the slides marked changed or missing, then stamp the deck again.
+output_sample:
+  input:
+    - Your code repository (a git repo)
+    - What the talk is about and who the audience is
+    - How long the talk should be
+    - Theme and extras (optional)
+  prerequisites:
+    - An AI that can run code and read your project files
+    - Python 3 installed
+    - Chrome or Chromium installed, to check how each slide looks
+    - Your code kept in a git repository
+  output:
+    - name: HTML slide deck
+      contains: One self-contained file with every slide, saved by default in docs/slides/ with a short README.
+    - name: Citations
+      contains: Each quoted snippet records its file, line range and a fingerprint of those lines, plus the build commit.
+    - name: Outline
+      contains: A list of slides shown to you for approval before any slide is built.
+    - name: Drift report
+      contains: A check that marks each citation as current, moved, changed or missing, run without a model or network.
+    - name: Repair list
+      contains: The stale citations, so you can fix only those slides and stamp the deck again.

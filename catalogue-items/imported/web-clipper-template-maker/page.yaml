@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads a real page and checks each selector against it.
 new_slug: web-clipper-template-maker
 name: Web clipper template maker
-summary: Name the site you clip from. Get a tested Obsidian Web Clipper template
-  that saves clean, well-labelled notes.
+summary: Make an Obsidian Web Clipper template for one kind of site. Give it a sample page. You get a template with selectors checked on that page.
 job: organise-work
 headline: Web clipper template maker
-subhead: Name the site you clip from. Get a tested Obsidian Web Clipper template
-  that saves clean, well-labelled notes. Bring the site or content type. Use the
-  result to plan your next step.
+subhead: Name the site you clip from. Get a tested Obsidian Web Clipper template that saves clean, well-labelled notes. Bring the site or content type. Use the result to plan your next step.
 explain: |
   A tested template for the Obsidian Web Clipper that saves a clean, well-labelled note from one kind of site, such as recipes, videos or articles. Each clip then lands in your vault with the right fields filled in.
 
@@ -18,6 +15,10 @@ when:
   - You save YouTube videos and want title, channel and link filled in.
   - Your clipped notes are messy and need the same shape each time.
   - You want a template for a site that clips poorly.
+not_for:
+  - "Your site already has a built-in or shared Clipper template: import that one instead, it is quicker."
+  - "You use Notion, Evernote or another notes app: this only makes Obsidian templates, so build a simple template by hand in your app."
+  - "You want to clip many different sites with one template: write a plain general template by hand instead."
 you_give:
   - The site or content type
   - A sample page link
@@ -29,8 +30,28 @@ you_get:
   - Property mapping to your notes
   - Short notes on editing it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open web pages.
+  - Open Claude, ChatGPT or Gemini. Use one that can open web pages. If yours cannot, paste the page's source or a snapshot of it.
+  - Paste the skill text into the chat and say which site or kind of content you clip.
+  - Add a link to one sample page. Add your Obsidian Base file or property names if you have them (optional).
+  - Read the selector checks. If any selector could not be checked, send another link. The AI should not guess.
+  - Copy the template JSON. In the Obsidian Web Clipper, import it, then clip your sample page to try it. 'Tested' here means checked against the fetched page, not imported into Obsidian.
+output_sample:
+  input:
+    - The site or kind of content you clip, such as recipes or videos
+    - A link to one sample page of that kind
+    - Your Obsidian Base file or property names (optional)
+    - The folder where clips should be saved (optional)
+  prerequisites:
+    - An AI that can open web pages, or one that can read a page snapshot you paste
+    - The Obsidian Web Clipper browser extension, to import the template
+  output:
+    - name: Template JSON
+      contains: One code block you can copy and import into the Obsidian Web Clipper, with note name, folder, properties and body.
+    - name: Property mapping
+      contains: How each property from your Base is filled, using page data, meta tags or a selector.
+    - name: Selector checks
+      contains: Each selector tied to the page element it matches, or a clear note that it could not be checked.
+    - name: Template logic
+      contains: Optional blocks, lists and fallbacks, used only where they help, such as showing a section only when it exists.
+    - name: Editing notes
+      contains: Short notes on what the variables mean so you can change the template later.

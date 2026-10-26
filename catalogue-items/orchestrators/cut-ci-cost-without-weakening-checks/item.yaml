@@ -23,26 +23,11 @@ uses:
   - copilot-github-actions-runtime-upgrade-conventions
 steps:
   - uses: copilot-github-actions-efficiency
-    note: 1. Read skills/copilot-github-actions-efficiency/SKILL.md. Share your
-      Actions workflows. Get wasted build minutes, slow jobs and ways to cut
-      repeat work. Save the result with source references. Carry the user's goal
-      and all earlier findings into this step. If required evidence or tool
-      access is missing, mark this step blocked; do not fabricate a result.
+    note: "1. Read skills/copilot-github-actions-efficiency/SKILL.md. Share your Actions workflows. Get wasted build minutes, slow jobs and ways to cut repeat work. Uses your workflow files. Hands step 2 the proposed cost changes, so no saving loosens a permission or a check. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
   - uses: copilot-github-actions-hardening
-    note: 2. Read skills/copilot-github-actions-hardening/SKILL.md. Share your build
-      workflows. Get risky permissions, unsafe inputs and dependency trust
-      problems with fixes. Save the result with source references. Carry the
-      user's goal and all earlier findings into this step. If required evidence
-      or tool access is missing, mark this step blocked; do not fabricate a
-      result.
+    note: "2. Read skills/copilot-github-actions-hardening/SKILL.md. Share your build workflows. Get risky permissions, unsafe inputs and dependency trust problems with fixes. Uses your workflow files again, not step 1's cost list. Hands step 3 the permission and pinning fixes, so version upgrades keep them. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
   - uses: copilot-github-actions-runtime-upgrade-conventions
-    note: 3. Read
-      skills/copilot-github-actions-runtime-upgrade-conventions/SKILL.md. Share
-      your Actions workflows. Get supported action versions while keeping the
-      build's behavior intact. Save the result with source references. Carry the
-      user's goal and all earlier findings into this step. If required evidence
-      or tool access is missing, mark this step blocked; do not fabricate a
-      result.
+    note: "3. Read skills/copilot-github-actions-runtime-upgrade-conventions/SKILL.md. Share your Actions workflows. Get supported action versions while keeping the build's behavior intact. Uses your workflow files again, not the earlier reports. Hands back version changes checked against the savings and fixes from steps 1 and 2. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result."
 origin: rebuilt
 version: 1.0.0
 credits:

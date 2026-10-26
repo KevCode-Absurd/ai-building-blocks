@@ -6,7 +6,7 @@ also: [science, business]
 years: "birth year unconfirmed–"
 living: true
 known_for: "Ad effectiveness researcher and co-author of The Long and the Short of It. His recorded work studies brand building, sales work and how to measure results."
-summary: "Review a marketing budget or measurement plan using Les Binet’s recorded research. Separate near-term sales from brand building and check what the evidence shows."
+summary: "Review your marketing budget or measurement plan using Les Binet's research. Split brand building from short-term sales and check if ads caused the sales."
 use_cases:
   - "Split a marketing budget between long-term brand building and short-term sales"
   - "Check whether you're spending enough to grow, given your share of the market"
@@ -16,6 +16,29 @@ use_cases:
   - "Avoid cutting spend just after sales level off"
   - "Plan broad reach instead of narrow retargeting for a growth goal"
   - "Keep a team focused on what doesn't change about buyers"
+not_for:
+  - "You want a critique of the wording or craft of one ad: use the David Ogilvy mind, since Binet says little about how to make an ad."
+  - "You want to question ad-industry hype and tracking numbers: use the Bob Hoffman mind."
+  - "You want to learn how brands grow through broad reach and buying data: use the Byron Sharp mind."
+output_sample:
+  input:
+    - Your marketing budget and what each part is meant to do
+    - Your market and where you stand in it (optional)
+    - Your goal and the results you have over time
+    - The reports you rely on, such as clicks or attributed sales (optional)
+  output:
+    - name: Job check
+      contains: Says whether your problem is the long job of brand building, the short job of sales, or both.
+    - name: Budget split read
+      contains: A starting split near 60:40, with the caveat that size, price and category can change it.
+    - name: Share of voice check
+      contains: Compares your share of voice with your share of market to see if you are underspending.
+    - name: Measurement check
+      contains: Says whether your numbers show cause or just clicks, and how experiments, modelling and attribution could be combined.
+    - name: Test or model plan
+      contains: A way to test or model the past before you cut spend or switch channels.
+    - name: Practical warning
+      contains: A closing caution, such as do not underspend, do not cut too soon, do not trust clicks alone.
 seats:
   - {seat: "Brand and short-term balance", asks: "What share of this budget builds the brand for next year, and what share sells this month?"}
   - {seat: "Measurement", asks: "Was that sale really caused by the ad, or would it have happened anyway?"}

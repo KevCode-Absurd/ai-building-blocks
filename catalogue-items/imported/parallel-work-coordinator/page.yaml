@@ -2,34 +2,101 @@ thinking: high
 thinking_why: It plans lanes, manages helpers and checks the combined work.
 new_slug: parallel-work-coordinator
 name: Parallel work coordinator
-summary: Give it a large task. Get it split across helper agents with clear
-  ownership, then merged into one checked result.
+summary: Split a large AI task across helper agents with clear owners, then merge their work into one checked result you can review.
 job: set-up-ai
 headline: Parallel work coordinator
-subhead: A big task split into clear pieces, handed to helper agents, then
-  merged into one checked result. The lead agent stays responsible for the final
-  answer.
+subhead: "Give it a large task, the result you want and any limits. It splits the job into separate lanes, gives each helper agent its own owner and files, then merges their work. You get a task table, merged findings and a note on what was checked."
 explain: |
-  A big task split into clear pieces, handed to helper agents, then merged into one checked result. The lead agent stays responsible for the final answer.
+  A parallel work coordinator splits a big job into pieces that several AI helper agents can do at the same time. The lead agent stays in charge. It plans the pieces, collects what the helpers return, settles any clashes and checks the whole before it reports back.
 
-  It breaks the work into bounded pieces, each with a clear output and an owner. Quick, read-only scouts run in parallel with small effort settings to gather facts. Then focused workers handle the pieces that change things, with no two touching the same files. The lead agent collects their results, resolves conflicts, checks the whole, and reports back. Small jobs stay with the lead. It suits Codex.
+  The split follows a few rules. Each piece has one owner and a named output. Quick read-only scouts gather facts first, so they cannot break anything. Helpers that change things each get their own files, so two never edit the same one. Small jobs stay with the lead, because helpers add cost.
+
+  It needs an AI tool that can start helper agents, such as Codex or Claude Code. Without one, it still gives you the plan and runs the lanes one after another.
 when:
   - A task has several independent parts, such as research, review and edits.
-  - You want faster results by running work side by side.
-  - Helper outputs need one person to check and combine them.
-  - You want to stay free to chat while the work runs.
+  - You want results faster by running parts side by side.
+  - Helpers' answers must be checked and combined by one lead.
+  - You want to keep chatting while the work runs.
+not_for:
+  - "The task is small or has one step: do it directly."
+  - "Each part needs the one before it: run the steps in order, for example with the Multi-session build plan writer."
+  - "You want several agents to attempt the same coding task so you can pick the best: use the Competing agent racer."
+  - "You want to design a standing team of agents with roles and memory: use the Agent team builder."
 you_give:
-  - The large task and desired result
-  - Files or areas helpers may touch (optional)
-  - Rules or limits for the work (optional)
+  - The large task and the result you want
+  - Files or areas the helpers may change (optional, read-only by default)
+  - Rules and limits, such as what must not change (optional)
+  - How to check the result, such as tests or a checklist (optional)
 you_get:
-  - Task split with owners and outputs
-  - Parallel scout findings
-  - Merged and verified result
-  - Summary of what each helper did
+  - A task table with a lane, an owner, allowed files and an expected output for each helper
+  - Findings from each read-only scout
+  - One merged result, with clashes between helpers and how they were settled
+  - A note on what was checked and what was not
+  - Open questions that need your approval
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run helper agents in parallel.
+  - Open Claude Code, Codex or another AI tool that can start helper agents. In a plain chat AI it still plans the lanes, then works them one after another.
+  - Paste the skill text, or open the skill if you added it to your AI.
+  - Describe the task and the result you want. Name the files helpers may change, and anything they must not touch.
+  - Read the task table first. Check that no two helpers own the same file before you say go.
+  - When it reports back, read the verification note. Check that tests ran and that clashes were settled.
+  - Review the changes yourself, then run your own tests before you keep or ship anything.
+how_it_works:
+  - title: Split the task
+    text: It breaks the job into bounded lanes, each with one owner and a named output.
+  - title: Send scouts first
+    text: Read-only scouts run in parallel to gather facts, with no power to change anything.
+  - title: Assign workers
+    text: Helpers that make changes each get their own files, so none overlap, and they may not hand work on to others.
+  - title: Match effort to the job
+    text: Routine work gets medium effort. Hard work gets high effort.
+  - title: Merge and settle clashes
+    text: The lead gathers the outputs, compares them and settles conflicts.
+  - title: Verify and report
+    text: The lead checks the combined result, keeps approvals with you, and reports what each helper did.
+output_shape: |
+  Task table: <lane> | <owner> | <files allowed> | <expected output> | <status>
+  Scout findings: <facts found> and <where>
+  Merged result: <combined work> and <clashes settled>
+  Verification note: <what was checked> and <what was not>
+  Open questions: <decisions that need you>
+  Next steps: <what you do now>
+output_sample:
+  input:
+    - The large task and the result you want
+    - Files or areas the helpers may change (optional)
+    - Rules and limits (optional)
+    - How to check the result (optional)
+  prerequisites:
+    - An AI tool that can start helper agents, such as Codex or Claude Code
+  output:
+    - name: Task table
+      contains: Each helper's lane, owner, allowed files and expected output, with no file owned twice.
+    - name: Scout findings
+      contains: What each read-only scout found, and where it found it.
+    - name: Merged result
+      contains: The combined work, with each clash between helpers and how it was settled.
+    - name: Verification note
+      contains: What the lead checked, such as tests or re-read files, and what it could not check.
+    - name: Open questions
+      contains: Decisions that need your approval before anything goes further.
+    - name: Next steps
+      contains: What to do now, such as review the changes or run your tests.
+works_best_with:
+  tools:
+    - name: Codex
+      why: The skill was written for it and uses its helper agents.
+    - name: Claude Code
+      why: It can also run helper agents in parallel.
+  inputs:
+    - A list of tests that must pass
+    - A map of which folders hold which parts of the work
+    - A spending or time limit for helpers
+terms:
+  - term: Helper agent
+    meaning: A second AI that takes one piece of a big job and works on it alone.
+  - term: Scout
+    meaning: A helper that only reads and reports, and cannot change anything.
+  - term: Lane
+    meaning: One separate piece of the job, with one owner.
+  - term: Lead agent
+    meaning: The AI that plans the split, merges the results and is responsible for the final answer.

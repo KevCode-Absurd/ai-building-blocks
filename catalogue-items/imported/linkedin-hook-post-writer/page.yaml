@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It picks a hook pattern and fills it in.
 new_slug: linkedin-hook-post-writer
 name: LinkedIn hook post writer
-summary: Give a topic and angle. Get a LinkedIn post built on a tested opening
-  line for your goal.
+summary: Write a LinkedIn post with a strong hook line. Give your topic and goal, and get a draft built on a proven opening for comments, reposts, likes or saves.
 job: grow-social
 headline: LinkedIn hook post writer
-subhead: "A LinkedIn post that opens with a line chosen for what you want it to
-  do: draw comments, reposts, likes or saves. You pick the goal first and the
-  opening follows."
+subhead: "A LinkedIn post that opens with a line chosen for what you want it to do: draw comments, reposts, likes or saves. You pick the goal first and the opening follows."
 explain: |
   A LinkedIn post that opens with a line chosen for what you want it to do: draw comments, reposts, likes or saves. You pick the goal first and the opening follows.
 
@@ -18,6 +15,10 @@ when:
   - You want more comments, not just views.
   - Your drafts sound like every other AI post.
   - You need a post ready within ten minutes.
+not_for:
+  - "You want to reply to comments on your posts: write those replies yourself or ask your AI in a plain chat, as this skill only drafts new posts."
+  - "You need a carousel, image or video script: use a design tool or a plain chat with your AI, as this skill writes text posts only."
+  - "You want to improve your LinkedIn profile: rewrite the headline and About section by hand, as this skill does not touch profiles."
 you_give:
   - Your topic
   - Your angle or point of view
@@ -30,7 +31,26 @@ you_get:
   - Formatting set for the feed
   - A cleaned version without AI tells
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Add your topic, your angle and your goal: comments, reposts, likes or saves."
+  - Add your own real numbers, names and short stories. Your AI should ask for them, not invent them.
+  - Read the formula it picked and the draft. Ask for another formula if the hook does not fit.
+  - Replace any detail that is not true for you, then post it. Put links in the first comment.
+output_sample:
+  input:
+    - Your topic
+    - Your angle or point of view
+    - "What the post should earn: comments, reposts, likes or saves"
+    - Your audience (optional)
+    - Your real numbers, names and stories (optional)
+  output:
+    - name: Formula pick
+      contains: The hook formula chosen for your goal, with a short reason it fits your topic.
+    - name: Full draft
+      contains: Your post, with the hook in the first 210 characters and short blocks spaced for the feed.
+    - name: Character count
+      contains: The length of the draft, so you can check it against the short, medium or long range.
+    - name: AI-tell scrub
+      contains: The draft with machine-sounding words, em dashes and stock openers removed.
+    - name: Posting window
+      contains: A suggested day and time to post, given as a rule of thumb for work audiences.

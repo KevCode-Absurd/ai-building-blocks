@@ -2,7 +2,7 @@ thinking: high
 thinking_why: "It studies ads or pages closely and works out why they work."
 new_slug: image-ad-remake-planner
 name: "Image ad remake planner"
-summary: "Paste your best ad. Get a carousel or still with image prompts, every word unchanged and in order."
+summary: "Turn your best video ad into an image ad or swipe carousel. Every word stays in order, and you get a prompt for each image or card."
 job: make-image-ads
 
 headline: "Image ad remake planner"
@@ -17,6 +17,10 @@ when:
   - A video ad works and you want the same ad as a feed image or a carousel.
   - You're handing a remake to a designer and need the words locked.
   - You want a carousel where the reveal lands on a swipe, not mid-card.
+not_for:
+  - "Your ad depends on motion you watch finish, like a pour or a before and after: use the Best ad in a new format skill for a video remake."
+  - "You want to reword or shorten the ad: this keeps every word unchanged, so rewrite the script first."
+  - "You have no working ad yet: write a script first with the Video ad script writer from customer quotes."
 
 you_give:
   - The original ad, with a screenshot of each shot, plus every spoken word, on-screen line and the post text
@@ -36,6 +40,31 @@ how_to_use:
   - Say "still" or "carousel" and the size, for example "carousel, 4:5". Attach your product photos.
   - Read the flags. Decide for each over-long line whether to run it as it is or move it to the post text.
   - Make each picture from its prompt, then add the words and your real pack in your editor.
+output_sample:
+  input:
+    - Your original ad, with a screenshot of each shot and every spoken word, on-screen line and post text
+    - Still or carousel, plus the size and number of cards if fixed
+    - Your brand file, with claims, live offer, fonts and colors
+    - Your product photos (optional)
+  prerequisites:
+    - An AI that can read images, if you attach screenshots
+    - An image maker such as Nano Banana, to turn each prompt into a picture
+    - An editor to add your words and real pack on top
+  output:
+    - name: Laid out
+      contains: The original ad in order, with each shot, its words and the job it does.
+    - name: The beat that sells
+      contains: The beat that persuades, whether a still or carousel can carry it, and the risk.
+    - name: Layout and cards
+      contains: A still or carousel plan with every original line placed on a card, with over-long lines flagged.
+    - name: Image prompts
+      contains: One text-free scene prompt per image or card, built from the original setting and product.
+    - name: Post words
+      contains: The original post text, unchanged, or a note that it is missing.
+    - name: Edit step
+      contains: How to lay your real pack and words over each picture and check contrast.
+    - name: Notes and checks missed
+      contains: A word count against the original, flags, missing inputs and any check it could not pass.
 
 how_it_works:
   - title: Lays the ad out

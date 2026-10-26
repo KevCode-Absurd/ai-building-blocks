@@ -1,6 +1,6 @@
 new_slug: product-gallery-answers
 name: Product gallery doubt review and image builder
-summary: Share exact product photos, brand facts and customer feedback. Get a gallery review, image plan and checked files when image tools are available.
+summary: Check your product page gallery against shopper doubts. Get a gallery review, an image plan and checked, numbered files with alt text.
 job: product-photos
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - Your product page isn't selling well and you suspect the images aren't doing their job.
   - You're rebuilding a product page and want the gallery done properly from start to finish.
   - You need images, words and alt text that a team can review in one place before upload.
+not_for:
+  - "You only need one hero photo: take a clear photo of the real product, or use the Product image spec writer to get the facts straight first."
+  - "You have no real photos of the exact variant yet: take them first, because a different variant shown as this one would mislead."
+  - "You want photos with no words for ads: use the Product image spec writer, or ask a photographer."
 you_give:
   - The exact product and variant
   - Your brand facts (claims with sources, reviews, guarantee terms, offers, colours, typefaces, what you never show)
@@ -31,6 +35,29 @@ how_to_use:
   - At the first stop, read the worries and the plan, fill the gaps or accept them, and approve every word.
   - At the second stop, look at the first two images. Change the look now, before the rest are made.
   - Clear every note on the review sheet, then upload the files in their numbered order.
+output_sample:
+  input:
+    - Your product and exact variant
+    - Your brand facts, such as claims with sources, guarantee terms and colours
+    - Real product photos, labelled by job
+    - Your current gallery images in order (optional)
+    - Reviews, return reasons and pre-sale questions (optional)
+  prerequisites:
+    - An AI that can make images, if you want finished files (ChatGPT or Gemini, or Claude with an image tool connected)
+    - Photos of the exact variant you sell
+  output:
+    - name: Gallery audit
+      contains: One row per current image with its job and a verdict of keep, fix or drop, plus questions no image answers.
+    - name: Worries
+      contains: Customer doubts grouped into five fears, counted, with three word-for-word quotes each and the image that answers them.
+    - name: Plan and gaps
+      contains: One card per image with its question, message and words, plus a list of missing facts or photos.
+    - name: Test images 01 and 02
+      contains: The main image and the slot 2 image, made first for your approval.
+    - name: Files
+      contains: Numbered images in upload order, each shape composed on its own, with one line of alt text.
+    - name: Check results and review sheet
+      contains: Check results for every image and the set, plus a sheet of open notes to clear before upload.
 how_it_works:
   - title: Gathers the facts
     text: Collects the product, photos by job, claims, reviews and guarantee, and writes down exactly how the product looks. Every blank becomes a question for you.

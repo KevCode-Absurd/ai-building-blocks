@@ -1,53 +1,111 @@
 new_slug: unfunded-commitment-checker
 name: Unfunded commitment checker
 headline: Unfunded commitment checker
-summary: Reconcile a fund commitment with original calls, recallable restoration and recalled capital.
+summary: Find how much of a fund commitment can still be called. Get the remaining amount after calls, restored commitment, recalls and reductions.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Remaining callable commitment and a classification exception ledger. Share signed commitment register, original calls excluding recall calls, distributions contractually restoring commitment, actual recalls and approved commitment reductions.
+subhead: Give it the signed commitment, the original calls, distributions that restore commitment, recall calls and approved reductions. It adds and takes off each once. You get the remaining callable amount and a list of items that need review.
 explain: |-
-  Remaining callable commitment and a classification exception ledger.
+  An investor in a private fund promises a commitment. The fund calls cash from it over time. Some distributions can be called again, which restores part of the commitment. This unfunded commitment checker works out how much can still be called today.
 
-  Private fund commitments. Illustrative figures only. 100-60+10-5-2=43 callable; increasing approved reductions to5 leaves40.
+  It starts with the signed commitment and adds the distributions your fund agreement lets the fund call back. It takes off the original calls, the later recall calls and any approved reductions. The recall calls are kept apart from the original calls, so nothing is taken off twice.
+
+  Not every cash distribution restores commitment. The skill asks for the agreement term and the distribution notice behind each one, and lists the rest as exceptions. A negative result is shown as an overcall for review. The skill does not change the commitment.
 when:
-  - You need remaining callable commitment and a classification exception ledger.
-  - You work on private fund commitments and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A capital call notice arrives and you want to know how much commitment is left after it.
+  - You are reconciling your records to the fund's capital account statement.
+  - A distribution is paid and you want to know if the fund can call it back.
+  - A reviewer asks how you got from the signed commitment to the unfunded figure.
+not_for:
+  - You want NAV or return figures. Use the Investor statement NAV checker.
+  - You want to split one call between several investors. Use the Capital call allocation checker.
+  - You want to check how much a fund can reinvest from distributions. Use the Fund recycling capacity checker.
+  - You want to price a secondary sale. Use the Secondary NAV price checker.
 you_give:
-  - Signed commitment register, original calls excluding recall calls, distributions contractually restoring commitment, actual recalls and approved commitment reductions.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The signed commitment (from the subscription agreement or commitment register)
+  - Original capital calls, not counting recall calls (from the call notices)
+  - Distributions that the fund agreement lets the fund call back (from the distribution notices and the agreement)
+  - Recall calls already made (from the call notices)
+  - Approved commitment reductions (from signed amendments)
+  - The date, currency and units
+  - Your own commitment spreadsheet (optional)
 you_get:
-  - Remaining callable commitment and a classification exception ledger.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The remaining callable commitment
+  - Restored commitment shown on its own line
+  - A list of distributions that are not proven to be recallable
+  - A flag if the result is negative, as an overcall to review
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the commitment and each call, distribution, recall and reduction. Say which notice or agreement each came from, and give the date, currency and units.
+  - Tell the skill which distributions your agreement lets the fund call back. Without that, they are not counted.
+  - "Check one line yourself: remaining callable is commitment plus restored amount less calls, recalls and reductions. For 100, 10, 60, 5 and 2, that is 43."
+  - Read the exceptions, then MISSING and CHECKS MISSED. Match the result to the latest capital account statement.
 how_it_works:
-  - title: 1. Separate capital account NAV movements from contractual commitment changes; identify which distributions genuinely restore callable commitment
-    text: Separate capital account NAV movements from contractual commitment changes; identify which distributions genuinely restore callable commitment.
-  - title: 2. Subtract original calls and approved reductions from commitment; add eligible restoration and subtract subsequent recall calls
-    text: Subtract original calls and approved reductions from commitment; add eligible restoration and subtract subsequent recall calls.
-  - title: 3. Tie opening and closing callable balance to dated notices without treating every cash distribution as recallable
-    text: Tie opening and closing callable balance to dated notices without treating every cash distribution as recallable.
+  - title: Lists the sources
+    text: Writes each figure with its notice, date, currency and units. Stops any line that has no evidence.
+  - title: Sorts the distributions
+    text: Separates distributions that restore commitment from those that do not, using the agreement and notices.
+  - title: Takes off calls and reductions
+    text: Subtracts original calls and approved reductions from the commitment, then adds the restored amount.
+  - title: Takes off recalls
+    text: Subtracts recall calls once, kept apart from the original calls.
+  - title: Flags exceptions
+    text: Lists unclear distributions and shows a negative result as an overcall to review.
 output_shape: |-
-  Remaining callable commitment and a classification exception ledger.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Remaining callable commitment <amount> | Restored commitment <amount> | Overcall flag <yes or no>
+
+  SCOPE AND SOURCES
+  <currency, units, date; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <commitment, original calls, restored distributions, recall calls, reductions>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <commitment plus restored amount; calls, recalls and reductions; remaining callable; exceptions>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Your signed commitment
+    - Original calls and recall calls
+    - Distributions that restore commitment
+    - Approved commitment reductions
+  prerequisites:
+    - The fund agreement, call notices and distribution notices
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The remaining callable commitment, the restored amount and an overcall flag.
+    - name: SCOPE AND SOURCES
+      contains: The date, currency and units, with the notice behind each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Your commitment, calls, restored distributions, recalls and reductions.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Each sum in order, plus distributions not proven to restore commitment.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Original calls exclude the separate recall-calls input, preventing duplicate deduction.
+  - what: Recallable distributions
+    how: Quote the agreement clause that lets the fund call a distribution back. Without it, the distribution is not counted.
+  - what: Recall calls
+    how: List recall calls apart from original calls so no call is taken off twice.
+  - what: Reductions
+    how: Change an approved reduction and ask for a second run to see the new remaining amount.
 judge:
   - Original calls exclude the separate recall-calls input, preventing duplicate deduction.
   - Restored commitment requires contractual eligibility and actual distribution evidence.
@@ -62,15 +120,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The latest capital account statement
+    - The fund agreement and any amendments
+    - Capital call and distribution notices
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Commitment
+    meaning: The total amount an investor has promised to put into a fund.
+  - term: Unfunded commitment
+    meaning: The part of the commitment the fund can still call.
+  - term: Recallable distribution
+    meaning: A payout the fund agreement lets the fund call back, which restores commitment.
+  - term: Overcall
+    meaning: Calls that add up to more than the commitment allows.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+next:
+  - capital-call-allocation-checker
+  - fund-recycling-capacity-checker

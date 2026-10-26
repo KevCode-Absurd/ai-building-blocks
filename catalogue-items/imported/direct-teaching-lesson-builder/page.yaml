@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a fixed lesson order and fills in each part.
 new_slug: direct-teaching-lesson-builder
 name: Direct teaching lesson builder
-summary: Give it a skill. Get a lesson that moves from you showing it, to
-  practice together, to practice alone.
+summary: Build a direct teaching lesson plan from one skill. You get a lesson that moves from teacher modelling to guided practice to independent work.
 job: teach-and-train
 headline: Direct teaching lesson builder
-subhead: A lesson plan where the teacher shows the skill first, the class tries
-  it together next, and then each learner does it alone. This gradual hand-over,
-  backed by research on explicit instruction, helps new skills stick.
+subhead: A lesson plan where the teacher shows the skill first, the class tries it together next, and then each learner does it alone. This gradual hand-over, backed by research on explicit instruction, helps new skills stick.
 explain: |
   A lesson plan where the teacher shows the skill first, the class tries it together next, and then each learner does it alone. This gradual hand-over, backed by research on explicit instruction, helps new skills stick.
 
@@ -18,6 +15,10 @@ when:
   - Learners nod along but cannot do the task alone afterwards.
   - You are planning a short lesson with a fixed time limit.
   - A new teacher needs a clear model to build lessons from.
+not_for:
+  - "You want open-ended discussion or debate: plan that with a simple list of questions, as this lesson is built for teaching one clear skill."
+  - "Your learners already do the skill well on their own: skip the lesson and give them harder practice tasks."
+  - "You only want quick questions to check learning: write those by hand or use a checking-for-understanding tool."
 you_give:
   - The skill or concept to teach
   - Learner age or year group and prior knowledge
@@ -30,7 +31,27 @@ you_get:
   - Independent practice tasks
   - Quick checks for understanding
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions from the SKILL.md file into the chat.
+  - Add the skill to teach, your learners' age and what they know, and the lesson length in minutes.
+  - Add common mistakes and your success measure if you have them.
+  - Read the plan. Check that the stage times add up to your lesson length and that the think-aloud sounds like you.
+  - Fix any task that is too easy or too hard, then use the plan.
+output_sample:
+  input:
+    - The skill you want to teach
+    - Your learners' age or year group and what they know
+    - How many minutes the lesson lasts
+    - Mistakes learners often make (optional)
+    - Your success measure for the lesson (optional)
+  output:
+    - name: Prerequisites
+      contains: What learners must already know before this lesson can work.
+    - name: I Do
+      contains: The teacher's scripted explanation and think-aloud, with a time guide for this stage.
+    - name: We Do
+      contains: Guided practice tasks, teacher prompts and quick checks that learners are following.
+    - name: You Do
+      contains: Independent practice tasks with points where the teacher checks progress.
+    - name: Differentiation Notes
+      contains: Ways to help learners who need more support and to stretch those who are ready.

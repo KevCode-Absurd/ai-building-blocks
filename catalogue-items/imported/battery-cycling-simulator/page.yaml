@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs a set simulation method and checks it is stable.
 new_slug: battery-cycling-simulator
 name: Battery cycling simulator
-summary: Describe a battery and a charge plan. Get simulated voltage curves,
-  tested for solver error and compared with real data.
+summary: Simulate lithium-ion battery charge and discharge curves with PyBaMM, check them for solver error, and compare them with your measured cycling data.
 job: research-topics
 headline: Battery cycling simulator
-subhead: Simulated voltage curves for a lithium-ion cell going through charge,
-  discharge and rest steps. The skill also checks that the numbers are not just
-  solver error.
+subhead: Describe a lithium-ion cell and a charge plan. The skill runs the simulation and checks that the result is not just solver error. It can also compare the curves with your lab data. It is for battery engineers and researchers.
 explain: |
   Simulated voltage curves for a lithium-ion cell going through charge, discharge and rest steps. The skill also checks that the numbers are not just solver error. Describe the cell and the charging plan, such as a C-rate protocol. It runs real PyBaMM experiments with the single particle model or the fuller DFN model.
 
@@ -18,19 +15,47 @@ when:
   - You need to check a model against lab cycling data.
   - A result changes when you tweak the mesh and you don't trust it.
   - You need a record of which parameters you used.
+not_for:
+  - "You need to control a real battery cycler or set safe limits for hardware: use the cell maker's datasheet and a lab test rig."
+  - "You have questions about ageing, lithium plating or mechanical stress: use a lab test, because this skill models none of them."
+  - "You have no way to run Python code: ask a battery engineer or a simulation specialist to run the model for you."
 you_give:
-  - Cell type and parameter set
-  - Charge, discharge and rest protocol
-  - Measured voltage data (optional)
-  - Choice of SPM or DFN model
+  - Your cell type and parameter set
+  - Your charge, discharge and rest steps
+  - Your choice of SPM (single particle model, the simpler one) or DFN (the fuller one)
+  - Measured time, voltage and current data as a CSV file (optional)
 you_get:
-  - Simulated voltage and charge curves
-  - Mesh and solver sensitivity checks
-  - A comparison with measured data
-  - A record of parameter sources
+  - Simulated voltage and charge curves for each step
+  - Two checks that separate solver error from mesh error
+  - A comparison with your measured data, if you gave it
+  - A record of where the parameters came from
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run code. You need Python 3.12 and a PyBaMM install, set up with the commands in the skill.
+  - Paste the skill into your AI. Add your cell type, parameter source and steps. A C-rate is the current as a share of cell capacity, so 0.5C is half the capacity per hour.
+  - Say whether you want SPM or DFN. Add your measured CSV with time_s, voltage_V and current_A columns if you have one.
+  - Ask your AI to run the simulation into a new output folder.
+  - Read the solver and mesh differences in report.json first. Refine the mesh again if they are too large for your question.
+  - If you gave measured data, check that current and start time match before you trust the voltage error.
+output_sample:
+  input:
+    - Your cell type and where its parameter set comes from
+    - Your charge, discharge and rest steps, with currents and durations
+    - Your choice of SPM or DFN model
+    - Measured time, voltage and current data as a CSV file (optional)
+  prerequisites:
+    - An AI that can run code, with Python 3.12
+    - PyBaMM 26.9.0.0 and pybammsolvers 0.10.0 installed
+    - Internet access for the install
+  output:
+    - name: curve.csv
+      contains: Baseline time, step, voltage, current and net discharge capacity for each point in the run.
+    - name: tight-tolerance.csv
+      contains: The same run on the same mesh with a tighter solver, to show solver error.
+    - name: refined-mesh.csv
+      contains: The run on a doubled mesh with the tighter solver, to show mesh error.
+    - name: parameters.json
+      contains: The base parameters after the starting charge level is set.
+    - name: report.json
+      contains: The protocol, package versions, parameter source, the two numerical comparisons and when each step ended.
+    - name: measurement-residuals.csv
+      contains: Predicted voltage minus measured voltage, plus current mismatch. Only made when you give measured data.

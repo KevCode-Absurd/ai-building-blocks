@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It applies proven flows to your case.
 new_slug: churn-reducer
 name: Churn reducer
-summary: Describe your product and why people leave. Get a cancel flow, save
-  offers and a failed-payment recovery plan.
+summary: Cut subscriber churn with a cancel flow, save offers and a failed-payment plan. Give it your billing setup and churn details to get started.
 job: build-product
 headline: Churn reducer
-subhead: "A plan to keep more subscribers: a cancel flow that asks why, save
-  offers that match each reason, and a way to win back failed payments."
+subhead: "A plan to keep more subscribers: a cancel flow that asks why, save offers that match each reason, and a way to win back failed payments."
 explain: |
   A plan to keep more subscribers: a cancel flow that asks why, save offers that match each reason, and a way to win back failed payments. You describe your product, billing setup and why people leave, and you get the full set.
 
@@ -17,6 +15,10 @@ when:
   - Cancelling takes one click and you offer nothing in return.
   - A share of your lost customers are just expired cards.
   - You want to spot unhappy users before they leave.
+not_for:
+  - "You sell one-off purchases or products with no subscription: churn tactics do not apply, so work on repeat sales or follow-up emails instead."
+  - "You only want a win-back email series for people who already left: write those emails with an email writing tool instead."
+  - "You want an upgrade paywall inside your app: build that with a paywall design step instead."
 you_give:
   - Your monthly churn rate if known
   - Your billing tool and plan types
@@ -29,7 +31,26 @@ you_get:
   - A failed payment recovery plan
   - Early warning signals to watch
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Tell your AI about your product, your billing tool, your plan types and your average revenue per customer.
+  - Add your churn rate and any cancel reasons you already know. Say if you track feature use.
+  - Read the cancel flow and save offers first. Check that each offer fits the reason it is paired with.
+  - Set up the failed payment steps in your billing tool, then test the new cancel flow with a small group.
+output_sample:
+  input:
+    - Your monthly churn rate, if you know it
+    - Your billing tool and plan types
+    - Your average revenue per customer
+    - Reasons people have given for cancelling (optional)
+    - Whether you track how each user uses your product (optional)
+  output:
+    - name: Cancel flow
+      contains: The steps a customer sees when they cancel, including an exit survey that asks why they are leaving.
+    - name: Save offers
+      contains: An offer matched to each cancel reason, such as a pause, a downgrade or a discount.
+    - name: Early warning signals
+      contains: Usage drops and other signs a customer may cancel soon, with ways to reach out first.
+    - name: Failed payment recovery plan
+      contains: Steps before a card fails, retry timing, and a reminder email sequence.
+    - name: Metrics to track
+      contains: The churn numbers to watch and cancel flow tests to run.

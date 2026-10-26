@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It builds a draft in steps and checks each one.
 new_slug: article-shaper
 name: Article shaper
-summary: Give it raw material. Get it shaped into an article, paragraph by paragraph.
+summary: Turn a messy pile of notes into an article, one paragraph at a time. Pick your opening, and your AI builds the rest with you.
 job: write-and-tell-stories
 headline: Article shaper
-subhead: A finished article built one paragraph at a time from a messy pile of
-  notes, quotes and half ideas. You stay in charge of the angle, and the AI does
-  the sorting and drafting.
+subhead: A finished article built one paragraph at a time from a messy pile of notes, quotes and half ideas. You stay in charge of the angle, and the AI does the sorting and drafting.
 explain: |
   A finished article built one paragraph at a time from a messy pile of notes, quotes and half ideas. You stay in charge of the angle, and the AI does the sorting and drafting.
 
@@ -17,6 +15,10 @@ when:
   - You get stuck at the first sentence and need options to react to.
   - You want an article that sounds like a conversation, not a lecture.
   - You keep writing paragraphs that rely on terms you never explained.
+not_for:
+  - "You need a short post or a quick caption: write it yourself or ask your AI for one draft in a single go."
+  - "You already have a finished draft that only needs edits: ask your AI for a plain edit or proofread instead."
+  - "You have no notes yet and need ideas first: talk the topic through with your AI or a colleague, then come back."
 you_give:
   - A file of raw notes, quotes or fragments
   - A description of who will read it
@@ -27,7 +29,27 @@ you_get:
   - A check that each idea is explained before it is used
   - Leftover material you did not need
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Put your raw notes in one file. Messy is fine. A transcript works too.
+  - Open your AI and paste in the skill text. If your AI cannot read files, paste your notes into the chat.
+  - Tell it who will read the article and where to save it.
+  - Say what your reader already knows. Then pick one of the openings it offers, or mix them.
+  - Approve each paragraph in turn. Push back when a paragraph does not earn its place.
+  - Say when the article is done. Your notes file stays unchanged.
+output_sample:
+  input:
+    - A file of raw notes, quotes or fragments
+    - A short description of who will read the article
+    - Where to save the article (optional)
+  prerequisites:
+    - An AI that can read and write files, or a chat where you paste your notes and copy each paragraph out
+  output:
+    - name: Prerequisites list
+      contains: What your reader already knows, agreed with you before any writing starts.
+    - name: Candidate openings
+      contains: Two or three openings, each pointing to a different main idea, for you to pick or mix.
+    - name: Article file
+      contains: The article itself, with each agreed paragraph or block added as soon as you approve it.
+    - name: Grounding check
+      contains: A running list of ideas the reader has met, so no paragraph leans on an idea not yet explained.
+    - name: Gap notes
+      contains: Places where your notes lack an example or fact, so you can add one or cut the section.

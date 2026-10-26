@@ -14,6 +14,30 @@ use_cases:
   - Write a useful title and annotation for a graph
   - Prepare evidence for a job interview without inventing numbers
   - Review an AI-generated chart before sharing it
+not_for:
+  - "You want to learn to read other people's charts for tricks and distortions: use Alberto Cairo."
+  - "You need a final logo, layout or brand design made: hire a professional designer."
+  - "You need to decide a legal, medical or personal money matter from your numbers: ask the relevant specialist."
+output_sample:
+  input:
+    - The chart, table or spreadsheet you want to explain
+    - Who will read or hear it
+    - The question it should help them answer
+    - What each value measures, with period and units
+    - Your draft title or message (optional)
+  output:
+    - name: Audience brief
+      contains: Who the reader is and the question the chart should help them answer.
+    - name: Supported message
+      contains: One observation the data backs, kept apart from any guess about cause.
+    - name: Visual revision
+      contains: What to remove, group or label, and which chart form suits the comparison.
+    - name: Title and annotation
+      contains: An editable title and a note for a verified event or needed context.
+    - name: Source check
+      contains: A list of values, labels, units and scales to compare against your data.
+    - name: Next action or question
+      contains: A proportionate request or open question that fits the uncertainty in the evidence.
 seats:
   - seat: Charts that serve a specific audience
     asks: Who needs to understand this comparison, and what should it help them consider?

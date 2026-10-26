@@ -1,6 +1,6 @@
 new_slug: repeat-job-skill-drafter
 name: "Repeat job skill drafter"
-summary: "Paste a job you repeat. Get a draft skill file with a trigger line and test prompts."
+summary: "Turn a job you repeat into a repeat job skill file. Paste the job and get a draft with a trigger line, steps and three test prompts."
 job: make-skills
 thinking: medium
 thinking_why: "It has to pick out the steps and checks that make the job repeatable."
@@ -17,6 +17,10 @@ when:
   - "You paste the same instructions into a chat every week."
   - "A teammate does a job differently every time."
   - "You want a first draft of a skill to edit, not a blank page."
+not_for:
+  - "You ask a one-off question or a job you have not repeated yet: just ask your AI in a normal chat."
+  - "You want a full skill with every check: use the Skill writer."
+  - "You already have a skill file and want it checked: use the Skill file validator."
 
 you_give:
   - "The job and what a good result looks like"
@@ -33,6 +37,18 @@ how_to_use:
   - "Paste your details under it, in the slots under What you need."
   - "Send it and read the answer against the checks on this page."
   - "Reply with what to change, and keep the version that works."
+output_sample:
+  input:
+    - The job you repeat and what a good result looks like
+    - One example of a result you liked (optional)
+    - Rules to always or never follow (optional)
+  output:
+    - name: SKILL.md
+      contains: A name and description at the top, then What you need, Steps, What you hand back and Checks.
+    - name: Test prompts
+      contains: "Three prompts: a typical one, a vague one and a tricky one, each with what a good answer must include."
+    - name: Guessed
+      contains: A list of anything the AI guessed, so you can check it.
 
 how_it_works:
   - title: "Name the job"

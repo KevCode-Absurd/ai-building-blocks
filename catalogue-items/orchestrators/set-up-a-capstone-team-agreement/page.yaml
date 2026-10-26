@@ -1,50 +1,91 @@
 new_slug: set-up-a-capstone-team-agreement
 name: Set up a capstone team agreement
 headline: Set up a capstone team agreement
-summary: Share the source files. Get a team working agreement, task register and handover rules.
+summary: "Set up a capstone team agreement: get working rules, a task register with owners and due dates, and handover rules your team can sign off."
 job: organise-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A team working agreement, task register and handover rules. Share the assignment rubric, actual team availability, agreed deliverables, collaboration rules and existing decisions. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your assignment rubric, when each person can work and the decisions your team has made. Your AI writes a team working agreement, then a task register that shows who agreed to what. Missing names and dates are marked, not guessed.
 explain: |-
-  A team working agreement, task register and handover rules.
+  A capstone team agreement is a short document that says how your group works. It names who owns what, how files are shared, how work is reviewed, and what happens when someone is stuck or leaves a task half done. Most teams skip it, then sort it out during a fight over a deadline.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Named responsibilities reflect agreement; assessment requirements and contribution evidence remain traceable. Missing tools or evidence stay visible in the final summary.
+  This workflow does two jobs in order. First it writes the agreement from your rubric and each person's real hours, so the rules fit your course. Then it reads your meeting notes and builds the task register. A person counts as the owner of a task only when your notes show they said yes. Everyone else is marked as a suggestion.
+
+  It does not settle disagreements, grade work or send anything to your supervisor. Your team reads the result and agrees to it first.
 when:
-  - You need a team working agreement, task register and handover rules.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your group has just formed and nobody has said who does what.
+  - The rubric marks individual contribution, and you need a record of who did what.
+  - A teammate says "I thought you were doing that" for the second time.
+  - Your supervisor asks for a team contract or a plan before the project starts.
+not_for:
+  - "You work alone, or your course already sets the team rules: follow the course rules as they are."
+  - "You only need the action items from one meeting: use the Executive action register keeper."
+  - "You are starting a project for a paying client: use the Prepare a clear client project kickoff workflow."
 you_give:
-  - The assignment rubric, actual team availability, agreed deliverables, collaboration rules and existing decisions.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The assignment brief and marking rubric, or the list of deliverables (from your course page)
+  - When each person can work, such as class times and busy weeks (ask each teammate)
+  - Rules your team already agreed, such as meeting days and tools (optional)
+  - Notes or messages where tasks and owners were agreed (optional)
+  - Who will read the agreement, such as your supervisor
 you_get:
-  - A team working agreement, task register and handover rules.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A team working agreement with roles, file rules, review rules and handover rules
+  - A task register with an owner, due date and status for each task
+  - A list of tasks that still need an owner or a date
+  - A note of anything your AI could not check
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give it to Claude, ChatGPT or Gemini. Pick one that can read files.
+  - Attach your rubric, each person's hours and your meeting notes. Say who will read the agreement.
+  - Ask your AI to follow SKILL.md and show you the agreement before it builds the register.
+  - Check that each person named as an owner really agreed. Fix any task marked as suggested.
+  - Fill every MISSING line as a team. Then each person reads the agreement and says yes in your team chat.
 how_it_works:
   - title: Process and SOP writer
-    text: Document how the team will version files, review contributions, resolve blockers and hand over work, using the actual assignment constraints.
+    text: "Writes the agreement from your rubric and each person's hours: roles, file rules, review rules, how to raise a blocker and handover rules. Hands step 2 the roles and the deliverables with their dates. Check before moving on: every deliverable has an owner or a MISSING line."
   - title: Executive action register keeper
-    text: Extract accepted commitments from the team decisions, distinguish suggested owners from agreed owners and mark missing dates.
+    text: "Reads your meeting notes and lists each commitment as one row. A person is the owner only if the notes show they agreed. Others are marked suggested, and missing dates are marked MISSING. Check at the end: every task points to a note or a rubric line."
 output_shape: |-
-  Scope and source coverage
-  A team working agreement, task register and handover rules.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  TEAM AGREEMENT
+    Purpose and scope  <what the project is and covers>
+    Roles              <person | role | owns | backup>
+    File rules         <where files live, naming, versions>
+    Review rules       <who checks what, by when>
+    Blocker rule       <when to raise it, who decides>
+    Handover rules     <what to leave when passing on a task>
+    Contribution log   <how each person's work is recorded>
+
+  TASK REGISTER (action-register.csv)
+    id | task | owner | due_at | timezone | status | depends_on | source_id
+
+  CLARIFICATIONS   <tasks that need an owner or a date>
+  FILES SAVED      <each file and the step that made it>
+  MISSING          <each gap, and what it stops>
+  CHECKS MISSED    <one line each, or none>
+output_sample:
+  input:
+    - Your assignment rubric or list of deliverables
+    - When each person can work
+    - Notes from your team meetings (optional)
+    - Rules your team already agreed (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Team agreement
+      contains: Roles, file rules, review rules, a blocker rule and handover rules, built from your rubric and hours.
+    - name: Contribution log
+      contains: A way to record who did what and when, so your marker can see each person's work.
+    - name: Task register
+      contains: One row per task with owner, due date, status and the note or rubric line it came from.
+    - name: Clarifications
+      contains: The tasks that still need an owner or a date.
+    - name: Hand-back summary
+      contains: Files saved, gaps, checks that did not run and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Named responsibilities reflect agreement; assessment requirements and contribution evidence remain traceable.
+  - what: Team size
+    how: Name every person. The roles table gets one row each, with a backup, so no task has a single point of failure.
+  - what: Meeting notes
+    how: Add real notes from each meeting. Owners then come from what people agreed to, not from guesses.
+  - what: Reader
+    how: Say who reads the agreement, such as a supervisor. The detail and tone change to fit.
 judge:
   - Named responsibilities reflect agreement; assessment requirements and contribution evidence remain traceable.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +98,22 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Run the register again after each weekly meeting with the new notes, so the status column stays true.
+  - Add a line to the agreement each time your team settles a dispute, so the same one does not return.
+  - Keep your supervisor's feedback with the agreement and paste it in at the next project.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads files, such as Claude, ChatGPT or Gemini
+      why: It reads the rubric and your notes together. In plain chat, paste the text in. No code or paid tool is needed.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Each person's real weekly hours, not a guess.
+    - The rubric's own words on group and individual marks.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Task register
+    meaning: A table of every task with who owns it, when it is due and its status.
+  - term: Handover rules
+    meaning: What a person leaves behind when they pass on a task, so someone else can carry on.
+  - term: Blocker
+    meaning: Something that stops a task from moving until someone helps.
+next:
+  - weekly-status-update-writer

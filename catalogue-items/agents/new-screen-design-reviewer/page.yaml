@@ -1,6 +1,6 @@
 new_slug: new-screen-design-reviewer
 name: New screen design reviewer
-summary: Point it at each new screen. Get a ready, fix-first or rethink call and a ranked fix list.
+summary: Check each new screen against your own design rules. Get a ready, fix first or rethink call and a ranked fix list before you ship.
 job: design-work
 thinking: medium
 thinking_why: It runs up to six reviews and judges a screen by a set score and rules. A mid-range model is enough. Use a stronger one for a screen with a complex flow.
@@ -14,6 +14,10 @@ when:
   - You ship new screens often and want each one reviewed the same way before it goes out.
   - Pages across your product look slightly different and you want one set of rules to hold them to.
   - You work alone or in a small team with no design reviewer.
+not_for:
+  - "You need a final accessibility audit or a legal sign-off: ask an accessibility specialist to test the screen with real tools."
+  - "You want to know if real people can use the screen: run a short test with five users, since this review only finds likely problems."
+  - "You want the screen designed or redrawn for you: ask a designer, or use your AI for a first sketch. This agent only reviews."
 you_give:
   - "The screen, as a Figma link or mockup, a live page address, or the screen's code"
   - What the person is there to do on it, in one line
@@ -30,6 +34,30 @@ how_to_use:
   - Read the call and the fix list. Make the fixes yourself, or ask it to suggest the exact change for each.
   - Ask for a recheck after you fix. It reruns only the checks that failed, up to two times.
   - Review the next screen. It remembers the scores and the problems that repeat.
+output_sample:
+  input:
+    - The screen, as a Figma link, a live page address or the screen's code
+    - What the person is there to do on it, in one line
+    - Your design rules (optional)
+    - Where it is used, such as phone or desktop (optional)
+  prerequisites:
+    - An AI that can read your code or files, such as Claude Code, to write your design rules and keep the review folder
+    - The skills it calls, such as the Usability heuristic reviewer, installed or readable from the library
+  output:
+    - name: The call
+      contains: Ready, fix first or rethink, with the usability score, the other scores and the working.
+    - name: The task
+      contains: One line on what the person is there to do and what finished looks like.
+    - name: Fix list
+      contains: Up to 12 fixes, highest harm first, each with screen part, harm, size and the step that found it.
+    - name: Off the rules
+      contains: Each value on the screen that is not in your design rules, with the nearest value that is.
+    - name: Keeps coming back
+      contains: Problems seen on 3 or more screens, with a rule that would stop them.
+    - name: Needs a real test
+      contains: Each doubt a review cannot settle, and the test that would settle it.
+    - name: Files and MISSING
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Load the memory
     text: Reads your design rules, the problems you chose to accept and the problems seen on earlier screens.

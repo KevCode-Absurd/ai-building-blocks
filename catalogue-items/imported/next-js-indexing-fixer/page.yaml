@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches each indexing error to a known cause and fix.
 new_slug: next-js-indexing-fixer
 name: Next.js indexing fixer
-summary: Give it your Next.js site and a Search Console error. Get the
-  canonical, sitemap and rendering fixes.
+summary: Fix Next.js indexing problems. Give it a Search Console error and your code. You get the canonical, sitemap, robots and redirect fixes to make.
 job: get-found-in-search
 headline: Next.js indexing fixer
-subhead: Fixes for pages that Google will not index on your Next.js site. You
-  bring the Search Console message and the skill maps it to a cause and a code
-  change.
+subhead: Fixes for pages that Google will not index on your Next.js site. You bring the Search Console message and the skill maps it to a cause and a code change.
 explain: |
   Fixes for pages that Google will not index on your Next.js site. You bring the Search Console message and the skill maps it to a cause and a code change.
 
@@ -18,6 +15,10 @@ when:
   - Google picked a different canonical than the one you set.
   - You are checking sitemap and robots files before a release.
   - Old URLs return 404 and you need the right redirects.
+not_for:
+  - "Your site is not built with Next.js: ask for a general SEO audit from an SEO person or tool instead."
+  - "You want Google to index a page for sure: no tool can promise that, so check the page content and links yourself."
+  - "You want to change URLs or redirects on a live site without a review: ask a developer to check the plan first."
 you_give:
   - The Search Console error or status
   - Your Next.js project code
@@ -29,8 +30,37 @@ you_get:
   - Sitemap and robots code
   - A redirect and internal linking plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Paste the exact Search Console message and a few affected URLs.
+  - Share your project files, such as app/layout.js, sitemap and next.config.js. If your AI cannot read files, paste them in.
+  - Read the cause it finds before you change anything. Check why Google picked a different canonical before you change yours.
+  - Run the commands it gives you in your own terminal. Your AI cannot run them in a normal chat.
+  - Ask a developer to review any change to redirects or canonical rules before you publish.
+output_sample:
+  input:
+    - The Search Console error or status, such as Crawled, not indexed
+    - Your Next.js project code
+    - A list of affected URLs (optional)
+    - Your sitemap and robots setup (optional)
+  prerequisites:
+    - An AI that can read your project files works best
+    - Your site live, so redirects and sitemap can be checked
+  output:
+    - name: Coverage status meaning
+      contains: What your Search Console message means in plain words, and the usual fix for it.
+    - name: Canonical audit
+      contains: Canonical tags to fix, with App Router metadata and generateMetadata examples.
+    - name: Noindex audit
+      contains: Pages or layouts that block indexing by mistake, and how to remove the block.
+    - name: Sitemap health
+      contains: Checks that the sitemap loads, plus App Router sitemap code.
+    - name: Rendering check
+      contains: Which pages are static or dynamic, and where to add generateStaticParams.
+    - name: Internal linking audit
+      contains: Pages with no links pointing to them from other pages.
+    - name: Redirect audit
+      contains: Redirect chains to shorten, with a flat redirect example for next.config.js.
+    - name: robots.txt check
+      contains: Rules that block important pages, and robots.js code to replace them.
+    - name: Indexing checklist
+      contains: A tick list of the checks above to finish before release.

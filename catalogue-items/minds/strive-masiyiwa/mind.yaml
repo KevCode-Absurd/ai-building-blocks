@@ -16,6 +16,31 @@ use_cases:
   - "Reframe your case so a judge, a board or a regulator sees the wider good"
   - "Decide whether to fight a rule in the open or quietly work around it"
   - "Plan for a long setback without running out of money or nerve"
+not_for:
+  - "You need legal, medical or personal money advice: see a qualified lawyer, doctor or financial adviser, because this AI only reflects his recorded approach."
+  - "You want help making a product that people love and can sell: use the Akio Morita mind, who links how a product is made to who it is for."
+  - "You want to scale local production of basic goods like cement or sugar: use the Aliko Dangote mind instead."
+output_sample:
+  input:
+    - The barrier or hard choice you face, such as a bribe request, a blocked licence or a rival with strong friends
+    - Who your customers are and what they lack today
+    - What money, time and help you can count on if this takes years
+    - The rules that apply to you, if you know them (optional)
+  output:
+    - name: Clean path
+      contains: A plain answer on whether your plan can work without a bribe or a connected partner, and the clean version.
+    - name: Who you are serving
+      contains: Who has never had what you offer and what would make them trust it.
+    - name: Cost and runway
+      contains: The hard thing the clean path will cost you and how long to plan to last.
+    - name: Rule, court or larger principle
+      contains: Any rule, court or wider principle your case could rest on.
+    - name: Cheap ways to reach people
+      contains: A low-cost, human way to get the right people talking, with how many need to hear it.
+    - name: First step and quarter win
+      contains: Your first move, plus one thing the team can finish this quarter.
+    - name: Beyond the record notes
+      contains: One line marking anything he never spoke about, so you know where his record ends.
 seats:
   - {seat: "Rules and resilience", asks: "Can we win this the clean way, and how long can we hold out if we have to?"}
   - {seat: "Serving the unserved", asks: "Who has never had this before, and what would it take to make them trust it?"}

@@ -41,3 +41,32 @@ how_to_use:
   - Where the skill points to /litigation-legal:cold-start-interview, use the
     setup-interview folder inside it. We copied it in so the skill works on its
     own.
+not_for:
+  - You already have your facts and want the letter written. Use the Demand letter drafter.
+  - Someone is copying your work and you want them to stop. Use the Cease-and-desist letter helper.
+  - You only need to chase a late invoice. Use the Late invoice reminder writer.
+output_sample:
+  input:
+    - What happened and when, in a few sentences
+    - Who is on each side, and who will read the letter
+    - The contract, emails or records you have (optional, but the result is sharper)
+    - What you want, such as an amount and a date, and what you would settle for
+    - What you have already said to them
+  prerequisites:
+    - An AI that can save files
+    - Your saved legal setup notes from the setup-interview folder (optional)
+  output:
+    - name: intake.md
+      contains: One saved file holding every section below, ready for the drafting step.
+    - name: Posture
+      contains: Your tone, the response window, any settlement marking and who signs.
+    - name: Parties and triggering event
+      contains: Who sends, who receives, what happened, the dates and the evidence you hold.
+    - name: Legal basis and desired outcome
+      contains: The contract terms or rules you rely on, and your specific asks in order.
+    - name: Deadlines and prior outreach
+      contains: Time limits that drive the letter, and what you have already said or done.
+    - name: Strategic block
+      contains: Your bargaining strength, the downside you can accept, and what must stay out of the letter.
+    - name: Seed documents and materiality
+      contains: A list of the files you shared, and whether the matter is big enough for the deeper questions.

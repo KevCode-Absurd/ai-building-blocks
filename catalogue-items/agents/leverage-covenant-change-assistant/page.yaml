@@ -1,51 +1,119 @@
 new_slug: leverage-covenant-change-assistant
-name: Leverage covenant change assistant
-headline: Leverage covenant change assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+name: Loan net debt covenant reviewer
+headline: Loan net debt covenant reviewer
+summary: Recheck a loan's net debt limit when earnings, cash or debt change. Get covenant EBITDA, headroom and a cure test. Not proof of compliance.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A contractual EBITDA bridge, leverage headroom and conditional EBITDA-only cure scenario. Include changed inputs, source versions, branch reasons and checks still blocked. Share signed pre-addback cap, supported adjustments, same-date debt and eligible cash, cash cap, covenant ceiling, cure rights and actual remaining cure eligibility. Include actual prepayment evidence, certified ECF and cash-floor definitions when a sweep is proposed or completed. Supply the previous approved review and actual changed source files with dates.
+subhead: Give it the loan agreement's definitions, the new covenant figures, same-date debt and cash, and your last accepted review. It rebuilds covenant earnings and net debt, then shows signed headroom. It tests a cure or a cash sweep only when the facts allow. You get a headroom schedule and open questions.
 explain: |-
-  A contractual EBITDA bridge, leverage headroom and conditional EBITDA-only cure scenario. Include changed inputs, source versions, branch reasons and checks still blocked.
+  A loan often says that net debt divided by a defined earnings figure must stay under a set limit. The test is easy to get wrong in small ways. The agreement may allow only some add-backs, and only up to a cap. It may count only some of the cash. The debt and the cash must be from the same date. A cure payment helps only if the agreement allows it, the right was still unused, and the payment was made in time. A proposed cash sweep is a plan, not a payment.
 
-  Private credit covenants. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This loan covenant reviewer keeps a short record of the last accepted review. It holds the test date, the version of the covenant, the IDs of the add-backs allowed, the eligible cash, the cash netting cap, whether a sweep is only proposed or paid, the cure deadline and any proof of receipt. When a new certificate, add-back, cash balance or cure record arrives, it compares it with that record. Then it runs the covenant workflow it is built on. That workflow tests the add-backs, then net debt and headroom, and runs the cure only if headroom is negative and a cure right remains.
+
+  A proposed sweep gives a scenario and leaves the real debt as it was. A paid sweep updates only the dated debt and cash, and the ratio is run again. Scenario cash is never proof that the covenant was met. It does not say whether the borrower is in breach in law, and it contacts no lender. It uses only the documents you give it, and a person who knows the loan checks the result.
 when:
-  - You need a contractual EBITDA bridge, leverage headroom and conditional EBITDA-only cure scenario. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - You work on private credit covenants and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A new covenant compliance certificate arrives and you want to rebuild the net debt ratio from the agreement's own definitions.
+  - A company claims extra add-backs and you need to see how much the agreement allows under its cap.
+  - Headroom turned negative and you want to know if an equity cure is still allowed and how much it would take.
+  - A cash sweep was proposed or paid, and you want to see how it changes debt, cash and headroom.
+not_for:
+  - Your covenant is about cash cover for debt payments, not the size of the debt. Use the Loan covenant cash cover reviewer.
+  - You only want the allowed add-backs for one test date. Use the Deal earnings adjustment checker.
+  - You only want net debt and headroom for one test date. Use the Net debt covenant checker.
+  - You only want to test an equity cure or size one cash sweep. Use the Loan covenant equity cure checker or the Excess cash debt payment checker.
+  - You want to know if the borrower is in breach in law, or if a waiver applies. A lawyer or your lender decides that.
 you_give:
-  - Signed pre-addback cap, supported adjustments, same-date debt and eligible cash, cash cap, covenant ceiling, cure rights and actual remaining cure eligibility. Include actual prepayment evidence, certified ECF and cash-floor definitions when a sweep is proposed or completed. Supply the previous approved review and actual changed source files with dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The agreement's definitions, quoted with clause numbers: covenant EBITDA, add-backs and their cap, net debt, cash that may be netted and its cap, the net debt limit for each test date, and cure rights"
+  - The compliance certificate or the earnings figures for the test period, and the add-backs claimed with their support (from the borrower's certificate and back-up)
+  - Debt and eligible cash on the same test date (from the lender statement and bank balances)
+  - Whether a cure right is still unused, the cure deadline and any proof of the cure payment (only if a cure is in play)
+  - Certified excess cash flow, the sweep percentage, the minimum cash and the debt eligible to be paid (only if a sweep is proposed or paid)
+  - The reporting date, currency and scale, and your materiality threshold
+  - Your last accepted review and its record (optional on a first run)
 you_get:
-  - A contractual EBITDA bridge, leverage headroom and conditional EBITDA-only cure scenario. Include changed inputs, source versions, branch reasons and checks still blocked.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A covenant EBITDA bridge. Each add-back shows its support and whether it fits under the cap.
+  - Net debt on the test date, the net debt ratio and signed headroom against the limit
+  - A cure scenario, only if headroom is negative and the cure right is still open. Net debt stays unchanged.
+  - A cash sweep scenario or update, only if a sweep is proposed or paid
+  - Reviewer questions for anything missing, plus MISSING lines, checks that could not run and a record for next time
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, pick one that can create spreadsheets. In plain chat it returns the same tables as text.
+  - Say whether this is the first run. If not, paste the record from last time and attach the last accepted review. Then paste the agreement's definitions with clause numbers, and attach the certificate, the debt and cash balances and the back-up for each add-back.
+  - Read "changed since last review" first. Check each add-back, cash balance and cure record against the clause or statement it came from.
+  - "Check the sums by hand: EBITDA plus the allowed add-backs gives covenant EBITDA. Net debt divided by that figure is the ratio, and the limit less the ratio is the headroom."
+  - If a cure was tested, check that it was used only when headroom was negative and the agreement still allowed it. Check that a proposed sweep did not change the real debt.
+  - Answer the questions or leave them marked MISSING. Nothing is sent to a lender or filed.
 how_it_works:
-  - title: Review leverage headroom and cure
-    text: Run the governing workflow when A new covenant certificate, supported addback, eligible cash balance, cure receipt or debt prepayment record is supplied.
-  - title: Debt cash sweep checker
-    text: If a sweep is proposed, calculate the bounded cash-floor scenario but preserve the actual debt baseline. If it is evidenced as paid, update only the dated debt and cash components and rerun leverage. Cure eligibility and timing still require the actual agreement; scenario cash never becomes compliance evidence.
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this loan, or sets a first baseline. Compares the covenant version, the test date and the evidence with the record. If nothing changed and no review is due, it says so and stops.
+  - title: Tests the add-backs
+    text: Allows only add-backs the agreement lists and the borrower supports. It applies the cap to the pre-add-back figure, as written. If the agreement caps the post-add-back figure instead, it stops this path and asks.
+  - title: Works out net debt and headroom
+    text: Uses debt and eligible cash from the same date, applies the cap on cash that may be netted, and divides by covenant EBITDA. Headroom is shown with its sign, so a breach is not hidden.
+  - title: Tests a cure only when it fits
+    text: Runs only if headroom is negative and the cure right is still open. The cure adds to EBITDA only, net debt is left as it was, and the cash is never counted twice. Otherwise it skips with a reason.
+  - title: Handles a cash sweep
+    text: A proposed sweep is a scenario and the real debt does not change. A paid sweep updates only the dated debt and cash, and the ratio is run again. Payment is the smallest of the sweep due, the cash above the floor and the eligible debt.
+  - title: Reconciles and saves the record
+    text: Ties the ratio and headroom to the clauses and statements, lists each change, and writes a short record for next time. It keeps the old record.
 output_shape: |-
-  A contractual EBITDA bridge, leverage headroom and conditional EBITDA-only cure scenario. Include changed inputs, source versions, branch reasons and checks still blocked.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+  TEST DATE <date>   COVENANT VERSION <named>
+
+  CHANGED SINCE LAST REVIEW  <certificate, add-backs, cash, cure or prepayment records>
+  COVENANT EBITDA            earnings <n> + uncapped items <n> + add-backs <n> (cap <n>) = <n>
+                             add-backs refused <list and why>
+  NET DEBT                   debt <n> - eligible cash <n> (cap <n>) = <n>
+  LEVERAGE                   <n> / <n> = <n>x   limit <n>x   headroom <+/- n>x
+  CURE SCENARIO              <extra EBITDA needed, or "skipped: <reason>">; net debt unchanged
+  CASH SWEEP                 <proposed: scenario only | paid: updated debt and cash | none>
+                             sweep due <n>; cash above floor <n>; eligible debt <n>; paid <n>; unpaid <n>
+  REVIEWER QUESTIONS         <one per gap>
+
+  RECORD FOR NEXT REVIEW  test date, covenant version, add-back IDs, eligible cash, cash cap,
+                          sweep status, cure deadline, proof of receipt
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The agreement's definitions with clause numbers (EBITDA, add-backs and cap, net debt, cash cap, limit, cure rights)
+    - The compliance certificate or earnings for the test period, and the add-backs claimed with support
+    - Debt and eligible cash on the same test date
+    - Cure right status and proof of any cure payment (only if a cure is in play)
+    - Sweep terms and payment evidence (only if a sweep is proposed or paid)
+    - Your last accepted review and its record (optional on a first run)
+  prerequisites:
+    - An AI that can read files. For a workbook, one that can create spreadsheets.
+    - A named person who knows the loan and will check the result
+  output:
+    - name: Changed since last review
+      contains: Each new certificate, add-back, cash balance, cure record or prepayment, with its source and date.
+    - name: Covenant EBITDA bridge
+      contains: Earnings plus uncapped items plus allowed add-backs up to the cap. Refused add-backs are listed with the reason.
+    - name: Net debt and headroom
+      contains: Net debt on the test date, the net debt ratio and signed headroom against the limit.
+    - name: Cure scenario (only if headroom is negative)
+      contains: The extra EBITDA a cure would add, with net debt unchanged. Skipped with a reason if no cure right remains.
+    - name: Cash sweep (only if proposed or paid)
+      contains: A proposed sweep is a scenario only. A paid sweep updates dated debt and cash and reruns the ratio.
+    - name: Reviewer questions
+      contains: One question for each missing clause, add-back support or payment proof.
+    - name: Record for next review
+      contains: Test date, covenant version, add-back IDs, eligible cash, sweep status and cure deadline.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops. Each check that failed or could not run, or "none".
+    - name: Workbook (if your AI can make one)
+      contains: Inputs, formulas and a checks tab linking the bridge, the ratio, the cure and the sweep.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: No addback is admitted without evidence and no cure is treated as received, timely or legally effective without proof. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
+  - what: A different test date
+    how: Give the new date with its debt and cash. Everything is rebuilt on that date and the old date stays in the record.
+  - what: A tighter threshold
+    how: Set a lower threshold, such as 0.05x of headroom. Smaller changes stay in the register but are not raised as questions.
+  - what: A larger cap on cash
+    how: Paste the amended clause. Net debt and headroom are rebuilt, and the register shows how far headroom moved.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
 judge:
   - No addback is admitted without evidence and no cure is treated as received, timely or legally effective without proof. Never overwrite an accepted baseline with an unapproved scenario; record which branch ran or was skipped.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +124,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep each review's record in one folder, named by date, so the next run starts from the true prior state.
+  - Paste the agreement's definitions once into a clause sheet with clause numbers, and reuse it, so every figure points to a clause.
+  - Keep one list of add-backs with the support for each, so the cap test can be rerun line by line.
+  - Pair it with the Loan covenant cash cover reviewer when the loan also has a payment cover test.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file. In plain chat it returns the same tables as text.
+    - name: The signed credit agreement
+      why: Holds the definitions, the cap, the cash netting rule and the cure right, each with a clause number you can cite.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The signed agreement and any amendments, not a summary of them.
+    - Debt and cash statements from the same date.
+    - A named reviewer who knows the loan and will answer the questions it raises.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Net debt covenant
+    meaning: A loan rule that net debt divided by a defined earnings figure must stay under a set limit on each test date.
+  - term: Covenant EBITDA
+    meaning: Earnings as the agreement defines them, with only the add-backs the agreement allows, usually up to a cap.
+  - term: Add-back
+    meaning: A cost the agreement lets the borrower add back to earnings for the test, such as a one-off cost.
+  - term: Headroom
+    meaning: How far the ratio is from the limit. Negative headroom means the limit is passed.
+  - term: Equity cure
+    meaning: New money from owners that the agreement lets count toward earnings so a missed test can be fixed. It is allowed only on the agreement's terms.
+  - term: Cash sweep
+    meaning: A required use of spare cash to pay down the loan, often a share of excess cash flow.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.

@@ -1,6 +1,7 @@
 slug: prepare-work-examples-for-a-job-interview
 name: Prepare work examples for a job interview
-summary: Share the source files. Get a role evidence map, concise example answers and practice questions.
+summary: Turn your real work history into interview answers. Get a role evidence
+  map, short example answers and practice questions for the job.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -12,7 +13,7 @@ inputs:
     required: true
   - type: source_text
     required: false
-  - type: question
+  - type: document
     required: false
 outputs:
   - type: document
@@ -22,11 +23,17 @@ uses:
   - interview-question-set-maker
 steps:
   - uses: role-skills-framework-builder
-    note: Translate the role requirements into observable skills the interview may examine.
+    note: Turns the role requirements into observable skills the interview may
+      examine. Hands step 2 the skills list, each with what it looks like at
+      work.
   - uses: resume-job-application-builder
-    note: Select genuine work examples for those skills and identify gaps honestly.
+    note: Uses your own work notes (not step 1's output) and step 1's skills list.
+      Selects genuine work examples for those skills and records gaps honestly.
+      Hands step 3 the matched skills, short answers and gaps.
   - uses: interview-question-set-maker
-    note: Create role-related practice questions and strong-answer indicators; label them sample questions rather than predictions of the employer interview.
+    note: Reads step 2's matched skills and gaps. Creates role-related practice
+      questions and strong-answer indicators, plus one question per gap. Labels
+      them sample questions, not predictions of the employer's interview.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -36,13 +43,19 @@ credits:
   - title: Role skills framework builder
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-competency-management
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Resume and job application builder
     by: João Vitor Amaral
     url: https://github.com/artificialguybr/resume-ats-linkedin-optimizer
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Interview question set maker
     by: AI Blocks
     url: https://useaiblocks.com/skills/interview-question-set-maker
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

@@ -2,17 +2,53 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-agent-supply-chain
 name: Agent plugin integrity checker
-summary: Share your agent tools and packages. Get file checks and a record of
-  supply chain risks.
+summary: Check your agent plugin folder for changed, missing or new files. Get a hash manifest and a list of loose dependency versions.
 job: set-up-ai
 headline: Agent plugin integrity checker
-subhead: Share your agent tools and packages. Get file checks and a record of
-  supply chain risks. Share your goal and the files you already have. The skill
-  file sets out the steps and the tools needed for this job.
+subhead: Give it your agent plugin folder. It makes a fingerprint (hash) of every file, so you can spot later changes. It also flags loose package versions and tells you if the plugin is ready to go live.
+not_for:
+  - "You want a malware scan or a review of the plugin's logic: ask a security reviewer or run a code review instead."
+  - "You want a list of known vulnerabilities in your packages: use a dedicated software composition analysis (SCA) or SBOM tool."
+  - "Your plugin has no files you can share with your AI: this check needs the real folder to hash."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open an AI that can run Python and read files. Without code running, ask it to give you the code and run it yourself.
+  - Paste this skill into the chat, or upload the skill folder.
+  - Upload or point to your plugin folder. Add any INTEGRITY.json, package.json, requirements.txt or .mcp.json files.
+  - Ask it to make a manifest first. If you already have an INTEGRITY.json, ask it to verify the folder instead.
+  - Read the result. Check every MODIFIED, MISSING and UNTRACKED line before you trust the plugin.
+  - Ask for the dependency audit and the promotion check. Save INTEGRITY.json with the plugin after review.
+output_sample:
+  input:
+    - Your plugin folder (or its path)
+    - An existing INTEGRITY.json (optional)
+    - Your package.json, requirements.txt or pyproject.toml (optional)
+    - Your .mcp.json file (optional)
+  prerequisites:
+    - An AI that can run Python code and read your files, or a computer where you can run the code yourself
+  output:
+    - name: INTEGRITY.json
+      contains: The plugin name, time made, file count, a SHA-256 hash for each file, and one hash for the whole plugin.
+    - name: Verification result
+      contains: VERIFIED if all files match, or a list of MODIFIED, MISSING and UNTRACKED files.
+    - name: Dependency version audit
+      contains: Each loose version found, a severity of MEDIUM or HIGH, and the fix to pin it.
+    - name: Promotion check
+      contains: A ready or not ready answer, with checks for integrity, required files and pinned MCP server versions.
+    - name: CI step
+      contains: A GitHub Actions snippet that fails the build when a file is missing or changed.
+when:
+  - You are about to move a plugin from testing to live use.
+  - You are reviewing a plugin pull request and want to lock the files after review.
+  - You want a build check that fails when a file changes after review.
+  - You are checking a third-party agent tool or MCP server before you trust it.
+you_give:
+  - The folder of your plugin
+  - An existing INTEGRITY.json, if you have one (optional)
+  - Your package.json, requirements.txt or pyproject.toml (optional)
+  - Your .mcp.json file (optional)
+you_get:
+  - An INTEGRITY.json file with a hash for every file in the plugin
+  - A VERIFIED or FAILED result that lists changed, missing and new files
+  - A list of loose package versions, with how to pin each one
+  - A ready or not ready answer for going live
+  - A GitHub Actions step you can paste into your build

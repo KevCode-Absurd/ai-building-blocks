@@ -13,7 +13,32 @@ license_source: https://github.com/AvdLee/SwiftUI-Agent-Skill/blob/main/LICENSE
 # SwiftUI Expert Skill
 ## When to Use
 
-Use when writing, reviewing, or refactoring SwiftUI code for iOS or macOS, including state management and `@Observable` data flow, view composition and invalidation/performance, lists and `ForEach` identity, environment usage, localization, animations, Liquid Glass adoption, migrating...
+Use when writing, reviewing, or refactoring SwiftUI code for iOS or macOS, including state management and `@Observable` data flow, view composition and invalidation/performance, lists and `ForEach` identity, environment usage, localization, animations, Liquid Glass adoption, migrating deprecated APIs, and reading Instruments traces.
+
+## When not to use
+
+- The code is UIKit or AppKit only, or not Apple platform code. Say so and stop.
+- The user wants an app architecture chosen for them. This skill does not enforce one.
+- The user wants a security or App Store review. This skill covers SwiftUI correctness and speed only.
+
+## Before you start
+
+- If no SwiftUI code is attached or readable, ask for the file or the feature description once. Do not invent code to review.
+- Ask for the minimum iOS or macOS version if it is not in the project. It decides which APIs are safe. If still unknown, say you assumed the newest and gate with `#available`.
+- Recording or analysing a trace needs a Mac with Xcode and Python 3, and an AI that can run commands. If you cannot run them, say so and review the code by reading it.
+
+## Output format
+
+For a review, reply with one table, then the fixes:
+
+| File and line | Issue | Fix | Why it matters |
+|---|---|---|---|
+| `<file>:<line>` | `<what is wrong, in one line>` | `<the change>` | `<what breaks or slows down without it>` |
+
+- Put bugs from the Correctness Checklist first, then deprecated APIs, then speed suggestions (labelled "suggestion").
+- After the table, show the changed code for each fix, before and after.
+- End with a "Next" line: what to run or test, and one thing left unchecked. If a trace was used, cite the evidence for each speed finding.
+- If you find nothing wrong, say "No issues found" and list which checklist items you checked.
 
 
 ## Operating Rules

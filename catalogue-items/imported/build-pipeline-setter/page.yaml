@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows known pipeline patterns but must fit your project.
 new_slug: build-pipeline-setter
 name: Build pipeline setter
-summary: Describe how you ship. Get automatic checks and a deploy pipeline so
-  bad changes never reach users.
+summary: Set up a build pipeline that checks every change before it ships. Give it your tools and deploy target. You get ordered checks and a draft workflow file.
 job: ship-and-host
 headline: Build pipeline setter
-subhead: Describe how you ship. Get automatic checks and a deploy pipeline so
-  bad changes never reach users. Bring your language and tools. Use the result
-  to plan your next step.
+subhead: Describe how you ship. Get automatic checks and a deploy pipeline so bad changes never reach users. Bring your language and tools. Use the result to plan your next step.
 explain: |
   Every change is checked automatically before it reaches users, so a broken build gets caught in minutes instead of in production.
 
@@ -18,19 +15,50 @@ when:
   - Bad changes keep slipping into production.
   - Your pipeline is slow and you want a better order of checks.
   - A CI run failed and you need to understand why.
+not_for:
+  - Your project has no code repository or no access to a CI service. Start by putting your code on GitHub, or ask your developer to set it up.
+  - You have no place to deploy yet. Follow your host's own CI guide first, then come back for the checks.
+  - You only need to fix one failing test. Paste the error into your AI and ask for a fix, no pipeline needed.
 you_give:
-  - Your language and tools
-  - How you currently ship code
+  - Your language and tools, such as Node and Jest
+  - How you ship code today
   - Your hosting or deploy target
-  - Existing CI files (optional)
+  - Your existing CI files (optional)
+  - A Vercel token or other host account, only if you want deploy steps (optional)
 you_get:
   - A set of quality gates in the right order
   - A deploy pipeline plan
   - Security and size checks
   - Guidance on fixing CI failures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Tell it your language, tools, host and how you ship today. Paste your CI files if you have them (optional).
+  - Ask for the gates in order, a draft workflow file and a deploy plan.
+  - Check that every gate has a command and a reason. Fix any command that does not match your project.
+  - Add the workflow file to your repository. Store secrets in GitHub Secrets, not in the file.
+  - If a run fails, paste the error back to your AI and ask for a fix. Your AI does not need to run code, but it helps if it can read your files.
+output_sample:
+  input:
+    - Your language and tools
+    - How you ship code today
+    - Your hosting or deploy target
+    - Your existing CI files (optional)
+  prerequisites:
+    - An AI that can read your project files works best
+    - A GitHub repository for the sample workflow files
+    - A Vercel token or another host account if you want deploy steps
+  output:
+    - name: Quality gate pipeline
+      contains: "The checks in order: lint, type check, unit tests, build, integration tests, optional browser tests, security audit, bundle size."
+    - name: CI workflow file
+      contains: A draft GitHub Actions file that runs the gates on every pull request and every push to main.
+    - name: Deploy plan
+      contains: Preview deploys, staged rollout, feature flags and a rollback workflow, matched to your host.
+    - name: Secrets and environment rules
+      contains: Which files to commit, and where CI and production secrets should be stored.
+    - name: Speed-up options
+      contains: "Ways to cut a slow pipeline: caching, parallel jobs, path filters and test sharding."
+    - name: Failure fix guide
+      contains: How to feed a CI error back to your AI so it can fix the cause.
+    - name: Final checklist
+      contains: A short list to confirm gates, branch protection, secrets and rollback are all in place.

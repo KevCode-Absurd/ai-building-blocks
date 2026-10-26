@@ -1,6 +1,6 @@
 new_slug: change-barrier-finder
 name: "Change barrier finder"
-summary: "Describe the change you want from a person or group. Get the barriers and a plan that removes them instead of pushing."
+summary: "Find what blocks a person from a change you want, and get a plan that removes the biggest barrier first instead of pushing harder."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It tests each barrier against what the person said, which takes judgement."
@@ -17,6 +17,10 @@ when:
   - "A person or group keeps saying no to a change you believe in."
   - "You have pushed hard and it made things worse."
   - "You need a plan for a big change that cannot happen in one step."
+not_for:
+  - "You have a one-off decision and nobody is resisting: ask them in a plain request."
+  - "You want to plan the talk itself, starting from what they want: use the Buy-in conversation planner."
+  - "You have no words, emails or notes from the person: gather some first, or every barrier stays a guess."
 
 you_give:
   - "The change and who must make it"
@@ -34,6 +38,24 @@ how_to_use:
   - "Paste their words, emails or notes from talks."
   - "Read the ranked barriers and check them against what you know."
   - "Tell the skill what happened after the first ask and run it again."
+output_sample:
+  input:
+    - The change you want and who must make it
+    - What they have said or done, such as quotes, emails or meeting notes
+    - What you can offer or change, such as trials or options (optional)
+  output:
+    - name: The change
+      contains: The change in one sentence and the person or group who must make it.
+    - name: Barrier checks
+      contains: "Five checks: feeling pushed, attachment, distance, uncertainty and proof. Each has evidence from their words or is marked as a guess."
+    - name: Barriers ranked
+      contains: The barriers in order of how much each blocks, with their words as evidence.
+    - name: The plan
+      contains: A small first ask, the choices on offer, and what to do after a yes or a no.
+    - name: Missing
+      contains: What you still need to ask them.
+    - name: Checks missed
+      contains: One line for each check the skill could not pass, or none.
 
 how_it_works:
   - title: "States the change"

@@ -1,0 +1,42 @@
+slug: agency-finance-bookkeeper-controller
+name: Bookkeeper & Controller agent
+summary: "Get a month-end close review from your bank and ledger exports: accounts that do not reconcile, odd entries and what to fix before closing."
+category: agent
+boards: []
+type: agent
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: finance/finance-bookkeeper-controller.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-bookkeeper-controller.md
+  licence: MIT
+  original_name: Bookkeeper & Controller
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 5510a24274d8f7897ca3f4df2c3318262138a2c82827b37dd2489dcfca8de75a
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Bookkeeper & Controller
+  - Agency Agents
+  - Finance
+credits:
+  - title: Bookkeeper & Controller
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/finance/finance-bookkeeper-controller.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

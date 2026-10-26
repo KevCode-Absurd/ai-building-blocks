@@ -2,35 +2,56 @@ thinking: medium
 thinking_why: It picks the right setup, then follows reference docs.
 new_slug: claude-app-builder
 name: Claude app builder
-summary: Say what to build with Claude. Get working code that calls the Claude
-  API the right way.
+summary: Build a Claude app with working code that calls the Claude API through the official SDK. Pick your language and say what you want to build.
 job: build-software
 headline: Claude app builder
-subhead: Tell it what you want to build with Claude, and get working code that
-  talks to the Claude API correctly. It uses the official software kit for your
-  language, so function names and imports are real and not guessed.
+subhead: Tell it what you want to build with Claude. It writes code that calls the Claude API through the official SDK for your language. It checks the SDK docs for names and imports, and tests the code if it can.
 explain: |
   Tell it what you want to build with Claude, and get working code that talks to the Claude API correctly. It uses the official software kit for your language, so function names and imports are real and not guessed.
 
   It first looks at your project for signs of another AI provider and stops if you are using one. Then it picks the right way to build: a single call, a tool-using loop or a longer-running agent. It covers streaming, tool use, saved prompts to cut cost, token counts and moving to newer models. It warns where old habits from training are out of date, such as how thinking is switched on.
 when:
   - You want to add a Claude feature to an app and need correct code.
-  - Your old code uses settings that have since changed.
+  - Your old Claude code uses settings that have since changed.
   - You need to stream answers or let Claude call your tools.
   - You want to cut cost by caching a long prompt.
+not_for:
+  - You use OpenAI, Gemini or another AI provider. The skill stops when it finds one, so use that provider's own docs.
+  - You have one quick question about the Claude API. Read the plain API docs from Anthropic instead.
+  - You want a no-code tool. Ask a developer, or use a chat app, since this skill writes code you must run.
 you_give:
   - What you want to build
   - Your programming language
   - Your existing code (optional)
-  - An API key from Anthropic
+  - An Anthropic API key from an account with billing, because running the code costs money
 you_get:
-  - Working code using the official kit
+  - Working code that uses the official SDK
   - The right approach for your use
-  - Notes on settings that changed
+  - Notes on settings that have changed
   - Tips on cost and speed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool. Claude Code or another AI that can read files and run code works best.
+  - Add the skill. Paste its text into a chat, or install the skill folder if your tool supports it.
+  - Say what you want to build and name your language. Add your existing code if you have it.
+  - Read the approach it picks before you run anything. Check that it fits your goal.
+  - Add your API key as a setting in your project, not in the code. Then run the code. Each run is billed by Anthropic.
+  - If your AI cannot reach the web, it works from the skill's own notes. Test the code and fix any errors.
+output_sample:
+  input:
+    - What you want to build with Claude
+    - Your programming language
+    - Your existing code (optional)
+  prerequisites:
+    - An Anthropic API key on an account with billing, since running the code costs money
+    - An AI that can read your project files and run code (best, not required)
+  output:
+    - name: Provider check
+      contains: A scan of your project for other AI providers, and a stop if it finds one.
+    - name: Chosen approach
+      contains: Whether you need a single call, a tool-using loop or a longer-running agent, and why.
+    - name: Working code
+      contains: Code that calls Claude through the official SDK for your language, with real function names and imports.
+    - name: Feature notes
+      contains: Help with streaming, tool use, prompt caching, token counts and moving to newer models.
+    - name: Outdated habit warnings
+      contains: Notes on old settings that have changed, such as how thinking is switched on.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must judge which outside factors matter most.
 new_slug: outside-forces-analyst
 name: Outside forces analyst
-summary: "Name your business and market. Get the outside forces that affect you:
-  rules, money, people, tech and nature."
+summary: "Run a PESTLE analysis on your business. Get the outside forces that could help or hurt you, ranked by impact and how likely they are."
 job: plan-strategy
 headline: Outside forces analyst
-subhead: "A list of the outside forces that can help or hurt your business,
-  sorted into political, economic, social, technology, legal and environment. It
-  helps you spot risks before they land."
+subhead: "A list of the outside forces that can help or hurt your business, sorted into political, economic, social, technology, legal and environment. It helps you spot risks before they land."
 explain: |
   A list of the outside forces that can help or hurt your business, sorted into political, economic, social, technology, legal and environment. It helps you spot risks before they land.
 
@@ -18,6 +15,10 @@ when:
   - You are writing yearly strategy and need the outside view.
   - A new law or tariff might change your costs.
   - Investors ask what external risks you face.
+not_for:
+  - You already know your market well and need a go or no-go. Use a simple market size check or a SWOT instead.
+  - You want to judge your own strengths and weaknesses. Use a SWOT, which looks inside your business.
+  - You need live facts, like today's tariff rates or new laws. Check the official source or ask an advisor.
 you_give:
   - Your business and product
   - Market and region
@@ -29,7 +30,30 @@ you_get:
   - The most important factors
   - Questions or actions to follow up
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tools are needed.
+  - Tell your AI your business, product, market and region.
+  - Add your main strategy question, such as entering a new country.
+  - Add any rule or market changes you already know about (optional).
+  - Check the top-ranked factors first. Fix any that don't fit your case, then ask your AI to update the list.
+  - Pick the actions for the top factors and add them to your plan. Review the list once a year.
+output_sample:
+  input:
+    - Your business and product
+    - Your market and region
+    - Your current strategy question
+    - Rule or market changes you already know about (optional)
+  output:
+    - name: Factors by area
+      contains: "Three to five outside forces for each of the six areas: political, economic, social, technological, legal and environmental."
+    - name: Impact and likelihood ratings
+      contains: Each factor rated High, Medium or Low for how much it matters and how likely it is.
+    - name: Priority ranking
+      contains: Factors ordered by impact times likelihood, so the biggest ones come first.
+    - name: Threats and chances
+      contains: Each key factor marked as a chance to use, a threat to avoid, or a rule to follow.
+    - name: Signals to watch
+      contains: Key measures or early signs to track for the most important factors.
+    - name: Backup plans
+      contains: Simple fallback plans for the factors that could hit hardest.
+    - name: Assumptions and unknowns
+      contains: What the analysis guessed and what you still need to research.

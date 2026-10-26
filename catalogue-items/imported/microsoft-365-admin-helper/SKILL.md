@@ -7,6 +7,20 @@ description: Microsoft 365 tenant administration for Global Administrators. Auto
 
 Expert guidance and automation for Microsoft 365 Global Administrators managing tenant setup, user lifecycle, security policies, and organizational optimization.
 
+## Rules for running scripts (read first)
+
+These scripts change a live company tenant. Follow these rules every time.
+
+1. **Ask once for what is missing.** You need the tenant domain, what to set up, and for user jobs the list of people (a CSV with DisplayName, UserPrincipalName, Department, LicenseSku). Never invent names, addresses or licence codes. If the tenant has on-premises Active Directory (a hybrid setup), say that extra setup is needed and stop before any user change.
+2. **Test tenant first.** Say clearly that scripts should run in a test tenant or a small test group before the real one.
+3. **Read first, change later.** Run the audit (read-only) before any policy or user change.
+4. **Confirm before any change.** Before creating or disabling users, changing licences, converting mailboxes, or creating a policy, show the script, say how many accounts it touches, and wait for a clear yes.
+5. **Never lock the admins out.** Every Conditional Access policy that covers all users, or that blocks sign-in, must exclude one or two break-glass admin accounts. Ask the person for them. If they have none, tell them to create two cloud-only admin accounts first, with long passwords stored offline, and stop until they have.
+6. **Report-only first.** Every new Conditional Access policy starts as `enabledForReportingButNotEnforced`. Move to `enabled` only after about 48 hours of sign-in log review.
+7. **Passwords are never lost or shown in chat.** Temporary passwords go to a local file the admin chooses, with a clear note to hand them over safely and delete the file after.
+8. **No tools, no run.** If you cannot run PowerShell here, write the scripts for the admin to run and ask them to paste back any error. Do not invent output.
+9. **Generated scripts follow the same rules.** Scripts from the bundled Python tools must also record temporary passwords, exclude break-glass accounts and start policies in report-only mode. Check each one, and fix it before it is run.
+
 ---
 
 ## Quick Start
@@ -23,11 +37,15 @@ Get-MgPolicyAuthorizationPolicy | Select-Object AllowInvitesFrom, DefaultUserRol
 
 ```powershell
 # CSV columns: DisplayName, UserPrincipalName, Department, LicenseSku
-Import-Csv .\new_users.csv | ForEach-Object {
-    $passwordProfile = @{ Password = (New-Guid).ToString().Substring(0,16) + "!"; ForceChangePasswordNextSignIn = $true }
+# Temporary passwords are saved to .\temp_passwords.csv. Hand them over safely, then delete the file.
+$results = Import-Csv .\new_users.csv | ForEach-Object {
+    $tempPassword = (New-Guid).ToString().Substring(0,16) + "!"
+    $passwordProfile = @{ Password = $tempPassword; ForceChangePasswordNextSignIn = $true }
     New-MgUser -DisplayName $_.DisplayName -UserPrincipalName $_.UserPrincipalName `
-               -Department $_.Department -AccountEnabled -PasswordProfile $passwordProfile
+               -Department $_.Department -AccountEnabled -PasswordProfile $passwordProfile | Out-Null
+    [pscustomobject]@{ UserPrincipalName = $_.UserPrincipalName; TempPassword = $tempPassword }
 }
+$results | Export-Csv .\temp_passwords.csv -NoTypeInformation
 ```
 
 ### Create a Conditional Access Policy (MFA for Admins)
@@ -97,10 +115,13 @@ Wait for DNS propagation (up to 48 h) before bulk user creation.
 
 ```powershell
 # Disable legacy authentication (blocks Basic Auth protocols)
+# Start in report-only mode; switch to "enabled" only after reviewing sign-in logs for about 48 hours.
+# Exclude break-glass admin accounts from any policy that blocks sign-in. Ask the admin for their object IDs.
+$breakGlassIds = @("<break-glass account 1 object ID>", "<break-glass account 2 object ID>")
 $policy = @{
     DisplayName = "Block Legacy Authentication"
-    State = "enabled"
-    Conditions = @{ ClientAppTypes = @("exchangeActiveSync","other") }
+    State = "enabledForReportingButNotEnforced"
+    Conditions = @{ ClientAppTypes = @("exchangeActiveSync","other"); Users = @{ IncludeUsers = @("All"); ExcludeUsers = $breakGlassIds } }
     GrantControls = @{ Operator = "OR"; BuiltInControls = @("block") }
 }
 New-MgIdentityConditionalAccessPolicy -BodyParameter $policy
@@ -114,16 +135,21 @@ Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
 ```powershell
 $licenseSku = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "ENTERPRISEPACK" }).SkuId
 
-Import-Csv .\employees.csv | ForEach-Object {
+# Temporary passwords are saved to .\temp_passwords.csv so new people can sign in.
+# Hand them over safely (not by email to the same account), then delete the file.
+$results = Import-Csv .\employees.csv | ForEach-Object {
     try {
+        $tempPassword = (New-Guid).ToString().Substring(0,12)+"!"
         $user = New-MgUser -DisplayName $_.DisplayName -UserPrincipalName $_.UserPrincipalName `
-                           -AccountEnabled -PasswordProfile @{ Password = (New-Guid).ToString().Substring(0,12)+"!"; ForceChangePasswordNextSignIn = $true }
+                           -AccountEnabled -PasswordProfile @{ Password = $tempPassword; ForceChangePasswordNextSignIn = $true }
         Set-MgUserLicense -UserId $user.Id -AddLicenses @(@{ SkuId = $licenseSku }) -RemoveLicenses @()
         Write-Host "Provisioned: $($_.UserPrincipalName)"
+        [pscustomobject]@{ UserPrincipalName = $_.UserPrincipalName; TempPassword = $tempPassword }
     } catch {
         Write-Warning "Failed $($_.UserPrincipalName): $_"
     }
 }
+$results | Export-Csv .\temp_passwords.csv -NoTypeInformation
 ```
 
 **Validation:** Spot-check 3–5 accounts in the M365 admin portal; confirm licenses show "Active."
@@ -153,10 +179,11 @@ Write-Host "Audit complete. Review ca_policies.csv and no_mfa_users.csv."
 **Step 2: Create MFA Policy (report-only first)**
 
 ```powershell
+# Uses $breakGlassIds from Workflow 1, Step 3. Define it first if you start here.
 $policy = @{
     DisplayName = "Require MFA All Users"
     State = "enabledForReportingButNotEnforced"
-    Conditions = @{ Users = @{ IncludeUsers = @("All") } }
+    Conditions = @{ Users = @{ IncludeUsers = @("All"); ExcludeUsers = $breakGlassIds } }   # break-glass admin accounts stay out
     GrantControls = @{ Operator = "OR"; BuiltInControls = @("mfa") }
 }
 New-MgIdentityConditionalAccessPolicy -BodyParameter $policy
@@ -191,14 +218,15 @@ Invoke-MgInvalidateAllUserRefreshToken -UserId $user.Id
 Write-Host "Sign-in blocked and sessions revoked for $upn"
 ```
 
-**Step 2: Preview with -WhatIf (license removal)**
+**Step 2: Preview what will be removed (a list only; nothing changes)**
 
 ```powershell
 # Identify assigned licenses
 $licenses = (Get-MgUserLicenseDetail -UserId $user.Id).SkuId
 
-# Dry-run: print what would be removed
-$licenses | ForEach-Object { Write-Host "[WhatIf] Would remove SKU: $_" }
+# Preview only: this prints a list and changes nothing. It is not a real -WhatIf run.
+$licenses | ForEach-Object { Write-Host "Would remove SKU: $_" }
+# Show the list to the admin and wait for a clear yes before Step 3.
 ```
 
 **Step 3: Execute Offboarding**
@@ -207,7 +235,8 @@ $licenses | ForEach-Object { Write-Host "[WhatIf] Would remove SKU: $_" }
 # Remove licenses
 Set-MgUserLicense -UserId $user.Id -AddLicenses @() -RemoveLicenses $licenses
 
-# Convert mailbox to shared (requires ExchangeOnlineManagement module)
+# Convert mailbox to shared (requires ExchangeOnlineManagement module and a sign-in first)
+Connect-ExchangeOnline
 Set-Mailbox -Identity $upn -Type Shared
 
 # Remove from all groups
@@ -295,3 +324,19 @@ Install-Module MicrosoftTeams -Scope CurrentUser
 - **User Administrator** — User management
 - **Security Administrator** — Security policies
 - **Exchange Administrator** — Mailbox management
+
+## Output format
+
+Return the work in this order. Leave out a block that does not apply.
+
+```
+Job: <what was asked>
+Checked first: <tenant domain, hybrid or cloud-only, break-glass accounts, test tenant>
+Script(s): <one named .ps1 block per task, with a one-line comment on what it changes>
+Accounts or policies touched: <count>
+Passwords file: <where it is saved, and the reminder to hand over safely and delete>
+Check after running: <what to look at in the admin portal or sign-in logs>
+Next step: <one suggestion>
+```
+
+For a security audit, list each finding with its risk and the fix. Do not run a fix without a yes.

@@ -22,11 +22,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Rank the slow parts by cost.** Use the skill `measure-first-slowdown-finder`. Names the slowest stage and ranks what to fix, so the fix goes where the time is.
+1. **Rank the slow parts by cost.** Use the skill `measure-first-slowdown-finder`. Names the slowest stage and ranks what to fix, so the fix goes where the time is. Hands the ranked report to step 2.
 
 Pause here: Run the timings it planned and note the numbers for the top stage.
 
-2. **Fix the bottleneck and measure again.** Use the skill `slow-code-fixer`. Fixes the stage the ranking named, with a before and after number.
+2. **Fix the bottleneck and measure again.** Use the skill `slow-code-fixer`. Give it your code and the ranked slowdown report from the step before. Fixes the stage the ranking named, with a before and after number. Hands the code change to step 3.
 3. **Write the pull request.** Use the skill `pull-request-writer`. Give it the code change from the steps before. Describes the speed fix with its before and after timings.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

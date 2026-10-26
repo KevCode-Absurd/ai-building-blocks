@@ -1,6 +1,6 @@
 new_slug: weekly-store-numbers-watcher
 name: Weekly store numbers watcher
-summary: Give it weekly Shopify and GA4 numbers. Get which to trust, any sharp drop explained, and the funnel step to fix.
+summary: Check your weekly Shopify and GA4 numbers. See which to trust, why any sharp drop happened, and which funnel step to check first.
 job: track-numbers
 thinking: high
 thinking_why: It compares weeks, picks a path from the gaps and traces causes. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You look at your numbers each week but the sources do not match.
   - Sales or conversion dipped and you want to know why before changing anything.
   - You want one weekly read of your funnel with the same checks every time.
+not_for:
+  - "Your store gets very few orders a week: rates swing too much, so look at a monthly total yourself instead."
+  - "You want it to change tracking, ads or prices: it only names what to check, so make those changes yourself or ask a person you trust."
+  - "You have no GA4 exports yet: set up GA4 first, as it can only check Shopify tiles without them."
 you_give:
   - Shopify analytics numbers for last week and the four weeks before
   - GA4 exports by channel, landing page and funnel step for the same weeks
@@ -30,6 +34,32 @@ how_to_use:
   - Ask it to read this week. Tell it what changed.
   - Read what to check next and look at the page or report it names.
   - Run it again next Monday. It compares with the saved weeks.
+output_sample:
+  input:
+    - Your Shopify analytics numbers for last week and the four weeks before
+    - Your GA4 exports by channel, landing page and funnel step for the same weeks
+    - What changed, such as a sale or a new theme (optional)
+    - Meta or Google conversion reports (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude Code, so it can keep your numbers folder
+    - The library skills it runs, or access to read them from useaiblocks.com
+  output:
+    - name: This week
+      contains: Sales, orders and conversion against your four-week average, with the sums shown.
+    - name: Can you trust it
+      contains: Which Shopify tiles to use and ignore, and the gap between Shopify and GA4 sessions.
+    - name: Path taken
+      contains: Whether it traced a mismatch, looked into a drop, checked the funnel or found a quiet week, and why.
+    - name: What changed and why
+      contains: The main drivers of any sharp drop, ranked, with the evidence for each.
+    - name: Where shoppers leave
+      contains: The funnel step that leaks most, and the likely cause in plain words.
+    - name: Check next
+      contains: One or two things to check, each with where to look and the number that triggered it.
+    - name: Watch next week
+      contains: One to three numbers that decide next week's path.
+    - name: Files and missing
+      contains: Each step's saved file, then every missing item in one list.
 how_it_works:
   - title: Read the recent weeks
     text: Works out the four-week average for sales, orders and conversion from the saved weeks.

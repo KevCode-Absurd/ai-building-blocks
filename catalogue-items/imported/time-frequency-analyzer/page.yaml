@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: Several methods fit; it picks one per signal.
 new_slug: time-frequency-analyzer
 name: Time-frequency analyzer
-summary: Give it a signal that changes over time. Get plots and measures of how
-  its frequencies shift.
+summary: Find how the frequencies in a signal change over time. Get spectrogram plots and a method pick for your MATLAB time-frequency analysis.
 job: build-software
 headline: Time-frequency analyzer
-subhead: See how the pitch or frequency of a signal moves over time, such as a
-  bearing that starts to whine or a heart rhythm that shifts.
+subhead: See how the pitch or frequency of a signal moves over time, such as a bearing that starts to whine or a heart rhythm that shifts.
 explain: |
   See how the pitch or frequency of a signal moves over time, such as a bearing that starts to whine or a heart rhythm that shifts. You get plots and numbers showing when each frequency appears and fades.
 
@@ -17,10 +15,15 @@ when:
   - You need to pull one component out of a mixed signal.
   - You must pick between STFT, wavelets and mode decomposition.
   - You want to see how two signals relate over time.
+not_for:
+  - "You need to design or apply a standard filter: use the MATLAB filter design skill (matlab-design-digital-filter), not this one."
+  - "You want numbers to feed a machine learning model: use the MATLAB signal feature skill (matlab-extract-signal-features)."
+  - "You need to clean the signal first, such as resampling or filling gaps: use the MATLAB signal prep skill (matlab-prepare-signal-data)."
 you_give:
-  - Your signal data and sample rate
-  - What you want to find
-  - MATLAB with signal and wavelet toolboxes
+  - Your signal as a list of numbers, such as a sensor reading
+  - Your sample rate
+  - What you want to find, such as a pitch shift or one part to pull out
+  - Your MATLAB version, with the Signal Processing and Wavelet Toolboxes
   - A second signal for comparison (optional)
 you_get:
   - Spectrogram or scalogram plots
@@ -29,8 +32,33 @@ you_get:
   - Frequency over time estimates
   - Working MATLAB code
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Wavelet Toolbox.
+  - Open an AI that can run MATLAB, or run the code it gives you in your own MATLAB. You need the Signal Processing and Wavelet Toolboxes.
+  - Paste the skill text into the chat, or attach the skill folder if your AI accepts files.
+  - Give your signal, your sample rate and what you want to find. Add a second signal if you want to compare two.
+  - Read the method choice first. If it does not fit your goal, say so and ask for another method.
+  - Run the MATLAB code it writes. Check the plot, then ask it to pull out parts or estimate frequency over time.
+  - Ask whether you need to rebuild the signal or only view it. Some methods can rebuild it and some cannot.
+output_sample:
+  input:
+    - Your signal as a list of numbers
+    - Your sample rate
+    - What you want to find, such as a pitch shift or one hidden part
+    - A second signal to compare (optional)
+  prerequisites:
+    - An AI that can run MATLAB code, or MATLAB open on your own computer
+    - MATLAB with the Signal Processing Toolbox and the Wavelet Toolbox
+  output:
+    - name: Signal check
+      contains: A short report on signal length, bandwidth, number of frequency peaks, whether it changes over time, and DC content.
+    - name: Method choice
+      contains: The method picked for your goal, such as STFT, CWT, synchrosqueezing, EMD or VMD, with the reasons.
+    - name: Time-frequency plot
+      contains: A spectrogram or scalogram showing when each frequency appears and fades.
+    - name: Extracted components
+      contains: Single parts pulled out of the signal and rebuilt, when you ask for them.
+    - name: Instantaneous frequency
+      contains: Estimates of how frequency moves over time, for one part or for the whole signal.
+    - name: Coherence or cross spectrogram
+      contains: How two signals relate over time, with phase arrows for coherence, when you give a second signal.
+    - name: MATLAB code
+      contains: Working code for each step, plus warnings about common mistakes for the chosen method.

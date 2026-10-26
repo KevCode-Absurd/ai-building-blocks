@@ -16,6 +16,13 @@ Create practical, implementation-ready guidance that can be directly used by eng
 ## Brand
 The agentic design style emphasizes conversational interactions, clear outcomes, and minimal controls, allowing users to delegate tasks to AI instead of manually managing complex workflows.
 
+Ask once, in a single message, for anything below that was not given:
+- What the product is and who uses it (required)
+- Platform: web, iOS, Android or several
+- Fonts or colors that must stay (if none, use the defaults in Style Foundations)
+- Screens or components to cover first
+If an answer is still missing, write MISSING next to it and use the defaults. Never invent a brand name, users, numbers or quotes.
+
 ## Style Foundations
 - Visual style: modern, bold
 - Typography scale: 14/16/18/24/32/40 | Fonts: primary=Playfair Display, display=Playfair Display, mono=JetBrains Mono | weights=100, 200, 300, 400, 500, 600, 700, 800, 900
@@ -69,6 +76,17 @@ When generating design-system guidance, use this structure:
 - Anti-patterns and prohibited implementations
 - QA checklist
 
+## Contrast and Font Checks
+- Test every text and background pair in the guide. Normal text needs 4.5:1. Large text (24px, or 18.5px bold) and meaningful borders or icons need 3:1. Show the ratio next to each pair in the token table. If you cannot work it out, write "unchecked".
+- The default text color passes easily: #111827 on white is about 17.7:1. The default primary #FF5701 does not pass as text on white or as a fill behind white text (about 3.2:1). Use dark text (#111827, about 5.6:1) on a primary fill, and use primary on white only for large text, icons and borders. Success #16A34A (about 3.3:1) and warning #D97706 (about 3.2:1) have the same limit. Danger #DC2626 passes (about 4.8:1).
+- Playfair Display is a serif with high contrast between thick and thin strokes. Keep it for headings and large text. If the person wants a sans-serif for message text, suggest it as an option and label it as a change from the default.
+- Use only font weights each font really comes in (Google Fonts lists them). The weight list in Style Foundations is a maximum, not a promise.
+
+## When Not to Use
+- A product with no conversation-first screen, such as a dashboard or a shop: use a general brand style guide.
+- A product that must keep its own brand fonts and colors: extend your own guide and use this one only as a pattern.
+- A reading-heavy or story-led page: use the magazine layout or story-led page guide.
+
 ## Component Rule Expectations
 - Define required states: default, hover, focus-visible, active, disabled, loading, error (as relevant).
 - Describe interaction behavior for keyboard, pointer, and touch.
@@ -87,3 +105,6 @@ When generating design-system guidance, use this structure:
 - If introducing a new pattern, include migration guidance for existing components.
 
 <!-- TYPEUI_SH_MANAGED_END -->
+
+## After the Guide
+End with a "Next step" line: hand the guide to your designer or developer, run the QA checklist in code review, or paste the guide into your coding AI's project instructions so new screens follow it.

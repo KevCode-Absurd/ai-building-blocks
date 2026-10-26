@@ -1,6 +1,6 @@
 new_slug: design-ten-principles-reviewer
 name: "Design ten-principles reviewer"
-summary: "Describe or attach your product or page. Get a ten-principle design review, what to remove and a score."
+summary: "Get a design review of your product, page or screen against ten principles, with a score out of 100 and a list of parts to cut."
 job: design-work
 thinking: medium
 thinking_why: "It judges ten separate points with reasons, but the criteria and scoring are fixed."
@@ -17,6 +17,10 @@ when:
   - Your product or page has grown cluttered and you cannot say why.
   - You want a reasoned review, not a matter of taste.
   - You need a list of what to remove before a redesign.
+not_for:
+  - "You need to choose between two finished designs: test them with real users, or ask a few people which one they understand faster."
+  - "You want to judge brand strategy or positioning: use a brand strategist or a brand workshop instead."
+  - "You want to plan how to remove features from a product: use the Feature cutting planner after this review."
 
 you_give:
   - What the product, page or piece is, in your words
@@ -34,6 +38,28 @@ how_to_use:
   - Read the list of parts and fix anything it missed.
   - Go through the cuts one at a time and decide which to make.
   - Run it again on the changed version and compare scores.
+output_sample:
+  input:
+    - What your product, page or piece is, and who uses it
+    - A screenshot, link or photos (optional)
+    - Product facts such as price, materials and how it is used (optional)
+  prerequisites:
+    - An AI that can read images, if you attach screenshots or photos
+  output:
+    - name: Purpose
+      contains: One sentence on what it is for, who uses it, and what the design is meant to say.
+    - name: Parts and jobs
+      contains: Every part, even small ones, with the job it does.
+    - name: Ten principles
+      contains: A score from 0 to 10 and a reason for each principle, with a fix for any score under 7.
+    - name: What to cut
+      contains: Parts with no purpose, the principle each one breaks, and what you lose by cutting it.
+    - name: Score
+      contains: A total out of 100, with the ten numbers behind it.
+    - name: Missing
+      contains: What could not be judged from what you showed.
+    - name: Checks missed
+      contains: One line for each self-check that failed, or none.
 
 how_it_works:
   - title: States purpose and user

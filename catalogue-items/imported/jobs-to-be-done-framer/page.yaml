@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It has to separate what customers say from the job they are really hiring for.
 new_slug: jobs-to-be-done-framer
 name: Jobs-to-be-done framer
-summary: Give it a product or customer problem. Get job statements, struggling
-  moments and hire and fire reasons that sharpen your choices.
+summary: Find the job your customers hire your product to do. Give it a problem. You get job statements, struggling moments and hire and fire reasons.
 job: understand-customers
 headline: Jobs-to-be-done framer
-subhead: A way to stop guessing what customers want by asking what job they
-  hired your product to do. Give it a product or customer problem.
+subhead: A way to stop guessing what customers want by asking what job they hired your product to do. Give it a product or customer problem.
 explain: |
   A way to stop guessing what customers want by asking what job they hired your product to do. Give it a product or customer problem. The skill separates three things teams often mix up: a list of feature requests, a decorative persona, and a real job.
 
@@ -17,6 +15,10 @@ when:
   - Your personas are cute but do not help you choose what to build.
   - You want to understand why customers switch away from you.
   - You need sharper positioning for a product.
+not_for:
+  - "You need a full customer profile with buying habits and demographics: use a customer research step or a short survey of your own buyers."
+  - "You want feature ideas or a build list: talk to your team and customers first, then bring the real decision here."
+  - "You have no product or customer problem yet and only a broad idea: start by talking to five people who have the problem."
 you_give:
   - A product or customer problem
   - Interview notes or research (optional)
@@ -29,7 +31,27 @@ you_get:
   - A test of the framing against your decision
   - Notes on how to use the jobs in priorities and positioning
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into a new chat.
+  - Paste your product or customer problem. Add interview notes, your customer type and the decision you are debating if you have them.
+  - Read the job statements first. Check that each one describes a real moment, not a feature request.
+  - Look at the decision test. Use the hire and fire reasons to shape your priorities and how you describe the product.
+output_sample:
+  input:
+    - A product or customer problem
+    - Interview notes or research (optional)
+    - A decision your team is debating (optional)
+    - Who your customers are (optional)
+  output:
+    - name: Job statements
+      contains: "Each job written as: when this happens, I want this, so I can get this."
+    - name: Struggling moments
+      contains: The points where people give up on what they use now and look for something new.
+    - name: Hire and fire criteria
+      contains: Why people pick a solution, and why they drop it, which are often different.
+    - name: Functional, emotional and social dimensions
+      contains: What each job means in practical, personal and public terms.
+    - name: Decision test
+      contains: A check of the job framing against the product decision your team is debating.
+    - name: Use in priorities and positioning
+      contains: Notes on how to use the jobs to rank work and to shape how you describe the product.

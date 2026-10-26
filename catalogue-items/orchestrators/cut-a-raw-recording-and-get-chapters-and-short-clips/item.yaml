@@ -15,8 +15,8 @@ steps:
   - {uses: noisy-audio-cleaner, note: "Gives you clean speech to work from."}
   - {uses: subtitle-and-transcript-maker, note: "Writes a timed transcript of the clean audio. Reads the audio from the step before."}
   - {uses: dead-air-and-retake-cutter, note: "Lists every cut with timecodes. Reads the timed transcript from the step before."}
-  - {uses: youtube-chapter-writer, note: "Writes the chapter list from the same transcript."}
-  - {uses: shorts-clip-finder, note: "Picks five clips from the transcript and rewrites each opening."}
+  - {uses: youtube-chapter-writer, note: "Writes the chapter list from step 2's transcript. Uses the transcript, not step 3's cut list; if you publish the cut version, move each chapter time by the cuts in step 3."}
+  - {uses: shorts-clip-finder, note: "Picks five clips from step 2's transcript and rewrites each opening. Uses the transcript, not step 3's cut list; check each clip's times against the cuts in step 3 so the clip is still in the cut version."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/cut-a-raw-recording-and-get-chapters-and-short-clips/skeleton.yaml

@@ -1,0 +1,160 @@
+name: Retail Customer Returns agent
+summary: Check a return against your policy, work out the refund and get a kind reply to the customer. Paste the request, the order and your return rules.
+headline: Retail Customer Returns agent
+subhead: Paste a return or refund request, the order details and your return policy. It checks the return window, the item's condition and any limits, works out the refund, and writes a reply that leads with what you can do. It also flags anything a manager must approve.
+job: help-customers
+thinking: high
+thinking_why: It checks dates, amounts and policy rules, and it must keep fraud concerns away from the customer's reply. Use a model that does careful sums and follows rules.
+explain: >-
+  A return is a small test of your store. If the answer is slow or cold, the
+  customer may not come back. If you bend your policy for one person and not
+  the next, you create bad precedents. This retail returns agent checks each
+  case against your written policy, so the answer is the same every time.
+
+
+  It works through the steps in the original profile. Is the item inside the
+  return window? What is its condition? Does a category rule apply, such as
+  final sale or opened hygiene items? What is the refund, and by which method?
+  It writes the reply with empathy first, and always offers at least one other
+  path when the answer is no, such as an exchange or store credit.
+
+
+  Fraud flags stay inside. If something looks wrong, the agent writes an
+  internal note for a manager and keeps it out of the customer reply. This is
+  a role profile from Agency Agents, shared under MIT. It drafts only and does
+  not know the consumer law where you sell. The return-rate figures in the
+  original are examples and not results from AI Blocks.
+when:
+  - A customer asks to return an online order after the window, and you need to know if you can say yes.
+  - A shopper wants a refund for a damaged or wrong item, and you want a reply that keeps them.
+  - A return has no receipt, or is a gift, and you are not sure of the refund method.
+  - You want to turn your return reason notes into a list of what to fix, such as sizing or damage in transit.
+not_for:
+  - The customer says they will take legal action or go to a regulator. Pass it to the person who handles disputes. Do not send an AI draft.
+  - A card payment is already disputed, and you must send proof of the order and delivery. Use the Chargeback evidence gatherer.
+  - You only need a quick refund reply for an online store. The Refund request reply writer is simpler.
+  - You want an angry customer calmed, with no return at issue. Use the Angry customer reply writer.
+  - You need a legal answer on the refund rights where you sell. Ask a local adviser. It cannot confirm consumer law.
+you_give:
+  - The customer's return or refund request, copied as written
+  - The order details, such as item, price paid, purchase date, how they paid and the item's condition
+  - Your written return policy, including the window, condition rules, final sale items and any restocking fee
+  - Your refund options, such as original payment, store credit or exchange, and which need a manager (optional)
+  - Your past return reasons in a list or sheet, if you want a pattern review (optional)
+you_get:
+  - A return check that shows the window, the condition, the category rules and the result, each with the reason
+  - The refund amount worked out, with any deduction and the method
+  - A reply to the customer that leads with what you can do
+  - A list of what needs a manager, and an internal note if anything looks wrong
+  - A suggested next step for the item, such as restock, open box, vendor return or hold
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste the customer's message, then the order details, then your full return policy. Use your own policy wording, not a summary.
+  - Say how the customer paid and what the customer asked for, such as a refund, an exchange or store credit.
+  - Check the sums and dates yourself. Make sure the days since purchase and the refund amount are right.
+  - If it lists a manager approval or an internal flag, send that to the manager. Never show the internal note to the customer.
+  - Check the reply against the consumer rules where you sell. A person sends it and does the refund in your system.
+how_it_works:
+  - title: Read the case
+    text: It pulls out the customer's ask, the item, the dates and how it was paid, and lists anything missing.
+  - title: Check the policy
+    text: It tests the window, the item's condition and any category rule, one at a time, and shows the result of each.
+  - title: Work out the refund
+    text: It starts from the price paid, takes off only the deductions your policy allows, and gives the method.
+  - title: Flag exceptions
+    text: It lists what needs a manager, such as a late return, no receipt or a high-value item. Fraud signs go in an internal note only.
+  - title: Write the reply
+    text: It starts with empathy, says what you can do, and gives another path if the answer is no. It never accuses the customer.
+  - title: Plan the item and the record
+    text: It suggests what happens to the item, a reason code, and a record of any exception.
+output_shape: |-
+  CASE
+    customer ask <refund | exchange | store credit> | item <name> | price <amount> | bought <date> | paid by <method> | condition <state>
+    MISSING: <list>
+
+  POLICY CHECK
+    window <inside | outside by N days> | condition <result> | category rule <none | which> | receipt <yes | no | gift>
+
+  DECISION AND REFUND
+    <eligible | eligible by exception | not eligible> | refund <amount> | deduction <amount and why> | method <original payment | store credit | exchange>
+
+  NEEDS A MANAGER
+    <item> | why <reason> | or "none"
+
+  INTERNAL NOTE (never shown to the customer)
+    <fraud signs seen, or "none">
+
+  REPLY TO THE CUSTOMER
+    <reply that leads with what you can do, with another path if the answer is no>
+
+  ITEM AND RECORD
+    next step <restock | open box | vendor return | salvage | hold> | reason code <code> | exception logged <yes | no>
+
+  CHECKS
+    <local consumer rules to confirm> | ASSUMED: <list>
+output_sample:
+  input:
+    - The customer's return or refund request
+    - The order details, such as price, date, payment method and condition
+    - Your written return policy
+    - Which refund options you offer (optional)
+  prerequisites:
+    - Your own return policy in writing, because it cannot guess your window or fees
+    - A person to check the refund in your store or order system
+  output:
+    - name: Case
+      contains: What the customer asks for, the item and dates, and any facts that are missing.
+    - name: Policy check
+      contains: The window, condition and category result, one line each, with the reason.
+    - name: Decision and refund
+      contains: Eligible or not, the refund amount with any deduction, and the method.
+    - name: Needs a manager
+      contains: Late, no-receipt or high-value cases that need approval before you reply.
+    - name: Internal note
+      contains: Any fraud signs, kept for a manager and never put in the customer reply.
+    - name: Reply to the customer
+      contains: A kind reply that says what you can do and offers another path if it is a no.
+    - name: Item and record
+      contains: What to do with the item, a reason code, and a log of any exception.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can run the checks. A stronger model does the date and refund sums with fewer slips.
+    - name: Your order system, such as Shopify or WooCommerce
+      why: The AI cannot read it. Copy the order lines in yourself, then do the refund there.
+  inputs:
+    - Your reason codes, so the record uses your own list
+    - A list of final sale and non-returnable categories
+    - Your restocking fee rules and any limit above which a manager signs off
+terms:
+  - term: Return window
+    meaning: The number of days after purchase that a return is allowed.
+  - term: Restocking fee
+    meaning: A fee taken from a refund to cover the cost of putting the item back on sale.
+  - term: Disposition
+    meaning: What happens to the item after the return, such as back to stock or to the supplier.
+  - term: Wardrobing
+    meaning: Wearing an item and then returning it as new.
+judge:
+  - The days since purchase and the refund amount are right when you check them by hand.
+  - Every no is matched to a line in your policy, and the reply offers another path.
+  - Fraud signs appear only in the internal note, never in the customer reply.
+  - It marks missing facts and does not guess a price, a date or a fee.
+  - It says to check local consumer rules and does not claim legal certainty.
+test:
+  - Run a return you already handled and see if it reaches the same decision and refund.
+  - Take your policy window and change the purchase date by two days either side. The result should change at the right point.
+  - Leave out the payment method. It should ask or mark it missing, and not choose one.
+tweaks:
+  - what: Policy wording
+    how: Paste the exact policy, not a summary. Small words such as "unopened" or "within" change the result.
+  - what: Fee and approval limits
+    how: Give the restocking fee and the amount above which a manager signs off. Otherwise it flags every high-value case.
+  - what: Store type
+    how: Say if you sell clothes, electronics, home goods, food or online only. The condition checks differ for each.
+  - what: Pattern review
+    how: Paste a month of return reasons. Ask for the top three reasons and one fix for each.
+improve:
+  - Put your real window, fees and final sale list in SKILL.md so you never paste them again.
+  - Add your reason codes and the approval limits for your staff.
+  - Save each logged exception in one file, and review it monthly for rules that need changing.

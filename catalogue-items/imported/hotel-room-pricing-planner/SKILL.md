@@ -7,6 +7,19 @@ description: When the user wants to optimize hotel room inventory, manage rate s
 
 You are an expert in hotel inventory management and revenue optimization. Your goal is to help maximize hotel revenue through optimal room allocation, dynamic pricing, distribution channel management, and capacity planning while balancing occupancy and average daily rate (ADR).
 
+## When not to use this skill
+
+- Tour or package planning: use tour-operations.
+- Buying for the hotel (linens, food, supplies): use hospitality-procurement.
+- No booking history at all (a property that has not opened): ask for a competitor rate sample and flag that every number is a rough guess.
+
+## How to run it
+
+- No code is needed. In a chat, work from the numbers the person gives you and show the maths step by step.
+- The Python examples below are for a person who wants to run them. They need Python 3 with numpy, pandas, scipy, pulp and scikit-learn installed.
+- Every price, rate, commission, probability and room count in the code examples and the output layout is a placeholder. Never present one as real market data. Use only numbers the person gave you.
+- If an input is missing, ask for it once. If it is still missing, mark it MISSING in the answer and say what it would change. Never fill the gap with a made-up figure.
+
 ## Initial Assessment
 
 Before optimizing hotel inventory, understand:
@@ -160,7 +173,7 @@ class HotelPricingOptimizer:
             'revpar': total_revenue / self.total_rooms
         }
 
-# Example usage
+# Example usage (all numbers below are placeholders: replace them with your own)
 optimizer = HotelPricingOptimizer(
     total_rooms=200,
     room_types={
@@ -222,6 +235,7 @@ def optimize_length_of_stay_pricing(arrival_date, room_inventory, demand_by_los,
 
     # Price for each LOS (decision variables or fixed)
     # For simplicity, use demand-based pricing
+    # Placeholder nightly rates by length of stay: replace with your own
     prices = {1: 150, 2: 140, 3: 135, 4: 130, 5: 125, 6: 120, 7: 115, 14: 100}
 
     # Objective: maximize revenue
@@ -280,7 +294,7 @@ def optimize_length_of_stay_pricing(arrival_date, room_inventory, demand_by_los,
 
 ```python
 def calculate_optimal_overbooking(no_show_probability, cancellation_probability,
-                                 walk_cost, revenue_per_room):
+                                 walk_cost, revenue_per_room, rooms_available=100):
     """
     Calculate optimal overbooking level to maximize expected profit
 
@@ -288,14 +302,18 @@ def calculate_optimal_overbooking(no_show_probability, cancellation_probability,
 
     Parameters:
     - no_show_probability: P(guest doesn't arrive)
-    - cancellation_probability: P(guest cancels)
+    - cancellation_probability: P(guest cancels before arrival)
     - walk_cost: cost of walking a guest (relocation + compensation)
     - revenue_per_room: revenue per room per night
+    - rooms_available: rooms you can sell that night
+
+    A booked guest turns up only if they neither cancel nor no-show.
     """
 
     from scipy.stats import binom
 
-    rooms_available = 100
+    # Chance that one booked guest actually arrives
+    show_probability = (1 - no_show_probability) * (1 - cancellation_probability)
 
     # Calculate expected profit for different overbooking levels
     results = []
@@ -309,7 +327,7 @@ def calculate_optimal_overbooking(no_show_probability, cancellation_probability,
         for shows_up in range(0, total_bookings + 1):
             # Probability of this many guests showing up
             prob_shows = binom.pmf(shows_up, total_bookings,
-                                  1 - no_show_probability)
+                                  show_probability)
 
             if shows_up <= rooms_available:
                 # All guests accommodated
@@ -322,10 +340,16 @@ def calculate_optimal_overbooking(no_show_probability, cancellation_probability,
 
             expected_profit += prob_shows * profit
 
+        # Expected walked guests: sum of (shows_up - rooms) x probability
+        expected_walks = sum(
+            binom.pmf(k, total_bookings, show_probability) * (k - rooms_available)
+            for k in range(rooms_available + 1, total_bookings + 1)
+        )
+
         results.append({
             'overbook_level': overbook,
             'expected_profit': expected_profit,
-            'expected_walks': max(0, overbook * (1 - no_show_probability) - 0)
+            'expected_walks': expected_walks
         })
 
     results_df = pd.DataFrame(results)
@@ -339,12 +363,13 @@ def calculate_optimal_overbooking(no_show_probability, cancellation_probability,
         'all_results': results_df
     }
 
-# Example
+# Example (placeholder numbers: use your own no-show and cancellation rates)
 result = calculate_optimal_overbooking(
-    no_show_probability=0.05,  # 5% no-show rate
-    cancellation_probability=0.03,
-    walk_cost=250,  # Cost to relocate + compensate
-    revenue_per_room=150
+    no_show_probability=0.05,  # placeholder: your no-show rate
+    cancellation_probability=0.03,  # placeholder: your late-cancellation rate
+    walk_cost=250,  # placeholder: relocation + compensation for one walked guest
+    revenue_per_room=150,  # placeholder: your rate for that room
+    rooms_available=100  # placeholder: rooms you can sell
 )
 
 print(f"Optimal overbooking: {result['optimal_overbook_level']} rooms")
@@ -381,6 +406,7 @@ def optimize_channel_mix(channels, demand_by_channel, commission_rates,
                                         upBound=total_rooms)
 
     # Prices by channel (BAR - Best Available Rate variations)
+    # Placeholder rates: replace with your own rate by channel
     prices = {
         'Direct': 180,
         'OTA_A': 180,
@@ -442,7 +468,7 @@ def optimize_channel_mix(channels, demand_by_channel, commission_rates,
                            for alloc in channel_allocation.values()]) / total_rooms
     }
 
-# Example
+# Example (placeholder demand and commission figures: use your own contracts)
 channels = ['Direct', 'OTA_A', 'OTA_B', 'GDS', 'Corporate', 'Group']
 
 demand_by_channel = {
@@ -749,62 +775,52 @@ def optimize_group_transient_mix(group_requests, transient_forecast,
 
 ## Output Format
 
+Return one report with these sections, in this order. Fill each `<placeholder>` from the person's own numbers. Never invent a figure. If a number is missing, write MISSING and say what it would change. Keep the report to about two pages.
+
 ### Hotel Revenue Management Report
 
-**Executive Summary:**
-- Property performance overview
-- Key optimization opportunities
-- Revenue improvement potential
-- Strategic recommendations
+**Summary** (5 lines at most)
+- How the property is doing now: `<occupancy>`, `<ADR>`, `<RevPAR>`
+- The two or three biggest chances to earn more
+- What to do first
 
-**Performance Metrics (Month-to-Date):**
+**Performance Metrics**
 
 | Metric | Current | Last Year | Variance | Target |
 |--------|---------|-----------|----------|--------|
-| Occupancy | 78.5% | 75.2% | +3.3 pts | 80% |
-| ADR | $185.50 | $178.20 | +4.1% | $190 |
-| RevPAR | $145.62 | $134.01 | +8.7% | $152 |
-| TRevPAR | $198.25 | $185.50 | +6.9% | $205 |
+| Occupancy | `<%>` | `<%>` | `<pts>` | `<%>` |
+| ADR | `<amount>` | `<amount>` | `<%>` | `<amount>` |
+| RevPAR | `<amount>` | `<amount>` | `<%>` | `<amount>` |
 
-**Booking Pace (Next 30 Days):**
+**Rate plan by date and room type**
 
-| Date | Rooms Sold | Occupancy | ADR | Status | Recommendation |
-|------|------------|-----------|-----|--------|----------------|
-| 2026-03-15 | 165 | 82.5% | $195 | Good | Hold rate |
-| 2026-03-16 | 192 | 96.0% | $210 | Strong | Increase rate +$10 |
-| 2026-03-17 | 145 | 72.5% | $175 | Soft | Promotional push |
+| Date | Room type | Rooms sold | Occupancy | Current rate | Recommended rate | Action |
+|------|-----------|------------|-----------|--------------|------------------|--------|
+| `<date>` | `<type>` | `<n>` | `<%>` | `<amount>` | `<amount>` | Hold, raise, or promote |
 
-**Channel Performance:**
+**Overbooking limits**
 
-| Channel | Rooms Sold | Mix % | Gross Revenue | Commission | Net Revenue | Net ADR |
-|---------|------------|-------|---------------|------------|-------------|---------|
-| Direct (brand.com) | 850 | 28% | $165,750 | $0 | $165,750 | $195 |
-| OTA A | 980 | 33% | $176,400 | $31,752 | $144,648 | $148 |
-| OTA B | 620 | 21% | $108,500 | $16,275 | $92,225 | $149 |
-| GDS | 420 | 14% | $84,000 | $8,400 | $75,600 | $180 |
-| Other | 130 | 4% | $19,500 | $0 | $19,500 | $150 |
-| **Total** | **3,000** | **100%** | **$554,150** | **$56,427** | **$497,723** | **$166** |
+| Room type | Rooms | No-show rate | Cancellation rate | Walk cost | Extra bookings to accept |
+|-----------|-------|--------------|-------------------|-----------|--------------------------|
+| `<type>` | `<n>` | `<%>` | `<%>` | `<amount>` | `<n>` |
 
-**Pricing Recommendations:**
+**Channel mix**
 
-| Room Type | Current Rate | Recommended Rate | Expected Impact |
-|-----------|--------------|------------------|-----------------|
-| Standard | $175 | $185 | +$1,200/day revenue |
-| Deluxe | $225 | $235 | +$600/day revenue |
-| Suite | $350 | $365 | +$300/day revenue |
+| Channel | Share of rooms | Commission | Net rate | Recommended share |
+|---------|----------------|------------|----------|-------------------|
+| `<Direct / OTA / GDS / Corporate / Group>` | `<%>` | `<%>` | `<amount>` | `<%>` |
 
-**Strategic Actions:**
-1. Increase direct booking share from 28% to 35% (save $45K/month in commissions)
-2. Implement dynamic pricing updates every 4 hours (vs. daily)
-3. Launch spring promotion: Book 3 nights, get 20% off 4th night
-4. Renegotiate OTA contracts for improved commission rates
-5. Optimize group strategy: Accept corporate groups at $165+ only
+**Revenue under different prices** (two or three price scenarios, each with expected occupancy and revenue, and the assumption behind it)
+
+**Strategic Actions** (3 to 5, in order, each one line)
+
+**Assumptions and gaps** (every input marked MISSING, every placeholder you used, and how the price-elasticity figure was chosen)
 
 ---
 
 ## Questions to Ask
 
-If you need more context:
+If you need more context, ask these once, together:
 1. What type of hotel property? (luxury, midscale, limited service, resort)
 2. How many rooms and what room types?
 3. What's the current occupancy, ADR, and RevPAR?

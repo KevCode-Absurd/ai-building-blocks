@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must weigh each model against your audience.
 new_slug: revenue-model-picker
 name: Revenue model picker
-summary: Describe your product and users. Get three to five ways to earn from
-  it, with risks and tests.
+summary: Find the best revenue model for your product. Give it your product and buyers. You get 3 to 5 ways to earn, with risks and a cheap test.
 job: set-prices
 headline: Revenue model picker
-subhead: Three to five different ways your product could earn money, each with
-  who pays, the risks and a cheap test to run first. You choose with evidence
-  instead of gut feel.
+subhead: Three to five different ways your product could earn money, each with who pays, the risks and a cheap test to run first. You choose with evidence instead of gut feel.
 explain: |
   Three to five different ways your product could earn money, each with who pays, the risks and a cheap test to run first. You choose with evidence instead of gut feel.
 
@@ -18,6 +15,10 @@ when:
   - You are choosing between subscription, one-off sales and ads.
   - Investors ask how you will make money.
   - You want a cheap way to test pricing before launch.
+not_for:
+  - "You have no users and no product idea yet: talk to 5 to 10 likely buyers first, then come back."
+  - "You already chose a model and only need a price: run a simple price test with a small group of real customers."
+  - "You need a full financial forecast: ask an accountant or build it in a spreadsheet with your own figures."
 you_give:
   - A description of the product
   - Your target customers
@@ -30,7 +31,32 @@ you_get:
   - Risks and competitor comparison
   - A validation experiment for each model
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. It needs no code, files or paid tools.
+  - Replace $ARGUMENTS with a short description of your product.
+  - Add your buyers, what they can pay and how rivals charge. Say if your priority is revenue, users or profit.
+  - Read the CAC and LTV figures as rough estimates. Swap in your own numbers where you have them.
+  - Pick the one or two models it recommends and run their cheap tests before you build.
+output_sample:
+  input:
+    - A description of your product or feature
+    - Your target customers
+    - What people pay now or can afford (optional)
+    - How competitors earn money (optional)
+    - "Your top priority: revenue, user growth or profit (optional)"
+  output:
+    - name: Strategy name and description
+      contains: What the model is, who pays, and what they get, for each of the 3 to 5 options.
+    - name: How it works
+      contains: The pricing mechanics, how often people pay, and what keeps them paying.
+    - name: Audience fit
+      contains: Why this model suits your buyers and how big the market might be.
+    - name: Unit economics
+      contains: Estimated cost to win a customer, customer value, break-even time and target margin.
+    - name: Risks and challenges
+      contains: What could go wrong, such as weak adoption, churn, price pushback or hard setup.
+    - name: Competitive position
+      contains: How rivals charge, what makes your approach different, and how hard it is to switch.
+    - name: Validation experiment
+      contains: A cheap test of willingness to pay, with a success measure, timeline and effort.
+    - name: Recommendation and testing roadmap
+      contains: The one or two models to test first, with success criteria.

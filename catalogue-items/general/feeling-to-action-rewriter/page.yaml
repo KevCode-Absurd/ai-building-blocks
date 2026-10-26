@@ -1,6 +1,6 @@
 new_slug: feeling-to-action-rewriter
 name: "Feeling-to-action rewriter"
-summary: "Paste a paragraph that names the feeling. Get it rewritten in short sentences with things and actions."
+summary: "Rewrite a paragraph that names feelings so plain facts and actions carry them. Paste your text, get a feeling-to-action rewrite in short sentences."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It rewrites a short paragraph with clear rules."
@@ -17,6 +17,10 @@ when:
   - "Your draft keeps saying \"amazing\", \"devastating\" or \"perfect\"."
   - "A customer story reads flat."
   - "You want your writing to feel more real without adding fluff."
+not_for:
+  - "You need a factual report or notice where the reader must be told the feeling: keep it as written, or ask a colleague to check the tone."
+  - "You want every scene check, such as point of view and pacing: use the Show-don't-tell scene rewriter."
+  - "You have no real events to show, only opinions or claims: write down what happened first, then come back."
 
 you_give:
   - "The paragraph"
@@ -32,6 +36,20 @@ how_to_use:
   - "Paste your paragraph under the prompt."
   - "Add any real details you left out, such as what was said."
   - "Read the rewrite aloud and fix any place you trip."
+output_sample:
+  input:
+    - The paragraph that names its feelings
+    - What really happened, such as what was said or done (optional)
+    - "The voice: who is telling it and how formal (optional)"
+  output:
+    - name: REWRITE
+      contains: Your paragraph in short sentences, with plain facts and actions in place of feeling words, ending on an act.
+    - name: WORDS CUT
+      contains: Each feeling word you had and the cause that replaced it.
+    - name: DETAIL USED
+      contains: The one exact detail the rewrite relies on, and where it came from in your facts.
+    - name: MISSING
+      contains: Any detail it needed and did not have, so you can add it.
 
 how_it_works:
   - title: "List what happened"

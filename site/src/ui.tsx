@@ -3,6 +3,7 @@ import { B8, ICONS } from "./lib/pixel";
 import { type Block, kindInfo, loadPage, paidService, pathOf, taskOf } from "./lib/data";
 import { TASK_STARTERS } from "./lib/task-discovery";
 import { trackUxEvent } from "./lib/ux-events";
+import { trustLabel } from "./lib/verification";
 import { Link } from "./lib/router";
 import PixelFace from "./PixelFace";
 import { kits, useStore } from "./lib/store";
@@ -101,6 +102,7 @@ export const BlockCard = memo(function BlockCard({ b, workflowBuilder = false }:
   const view = kind.id === "workflow" && b.steps.length ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
   const requirements = [paidService(b) ? `Needs a paid ${paidService(b)} account` : "", b.hasFiles ? "Uses supporting files" : "", b.warnings?.includes("scrapes") ? "Collects data from websites" : ""].filter(Boolean);
   const opensBuilder = workflowBuilder && kind.id === "workflow";
+  const trust = trustLabel(b);
   return (
     <Link to={opensBuilder ? `/?workflow=${encodeURIComponent(b.slug)}#build` : pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake} onClick={() => trackUxEvent("task_started")}
       style={{ "--pat": `var(--pat-${taskOf(b).id})` } as CSSProperties}>
@@ -108,7 +110,7 @@ export const BlockCard = memo(function BlockCard({ b, workflowBuilder = false }:
         <Peek text={starter ? `Give it ${starter.give.toLowerCase()}. Get ${starter.get.toLowerCase()}.` : b.summary} />
       <span className="card-footer">
         {requirements.length > 0 && <span className="requirement">{requirements.join(" · ")}</span>}
-        <span className="meta secondary-meta"><span className="kind">{kind.name}</span>{b.origin === "imported" && <span className="from" data-testid="from-label">{fromLabel(b)}</span>}</span>
+        <span className="meta secondary-meta"><span className="kind">{kind.name}</span>{b.origin === "imported" && <span className="from" data-testid="from-label">{fromLabel(b)}</span>}{trust && <span className="from trust tested" data-testid="trust-badge">{trust}</span>}</span>
         <span className="view">{opensBuilder ? "Open in builder" : starter ? "Start this task" : view}<ArrowIcon size={12} /></span>
       </span>
     </Link>

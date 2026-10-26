@@ -1,6 +1,6 @@
 new_slug: ai-tool-list-drafter
 name: "AI tool list drafter"
-summary: "Paste what your AI should do with your systems. Get a short list of clearly named tools it can pick from."
+summary: "Draft an AI tool list from your jobs and limits. You get a few clearly named tools, with inputs, approvals and a never-do list for your AI."
 job: connect-tools
 thinking: medium
 thinking_why: "Naming and grouping tools clearly takes careful judgement."
@@ -17,6 +17,10 @@ when:
   - "You are about to connect an AI to your app or data."
   - "Your AI keeps picking the wrong tool."
   - "You want a clear brief before a developer builds anything."
+not_for:
+  - "You need the full set of checks before a developer builds it: use the MCP tool set designer."
+  - "You want the server code written: ask a developer, and hand them this tool list as the brief."
+  - "You only have one simple job for your AI: write a plain prompt instead of a tool list."
 
 you_give:
   - "The jobs the AI should do"
@@ -33,6 +37,23 @@ how_to_use:
   - "Under it, paste your details, one item for each line in What you need."
   - "Send it and read the reply against the checks at the end of the prompt."
   - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+output_sample:
+  input:
+    - The jobs you want your AI to do, in plain words
+    - The app, data or service it connects to
+    - What it must never do, such as delete, spend or send
+    - Who it works for (optional)
+  output:
+    - name: Tool list
+      contains: Each tool with a short name, when to use it, when not to, its inputs, what it returns, and read or change.
+    - name: Approvals needed
+      contains: Which change tools need a person to approve before they run, and who approves.
+    - name: Never given a tool for
+      contains: Actions your AI will have no tool for, based on your never-do list.
+    - name: Mix-up risks
+      contains: Pairs of tools an AI might confuse, with a fix to the names or descriptions.
+    - name: Missing
+      contains: Facts you did not give that would change the list.
 
 how_it_works:
   - title: "List the jobs"
@@ -92,8 +113,8 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
   inputs:
-  - "The words your team uses for orders, customers and so on"
-  - "A list of actions that must never happen"
+    - "The words your team uses for orders, customers and so on"
+    - "A list of actions that must never happen"
 
 terms:
   - term: "Tool"

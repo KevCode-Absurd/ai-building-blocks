@@ -1,51 +1,94 @@
 new_slug: compare-transport-cash-and-fleet-replacement
 name: Compare transport cash and fleet replacement
 headline: Compare transport cash and fleet replacement
-summary: A trip contribution baseline and incremental replacement cash comparison
+summary: Find what a loaded trip earns in cash, then compare keeping a truck with replacing it, using your trip, fuel and sale figures.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A trip contribution baseline and incremental replacement cash comparison. Share actual comparable loaded/empty trips, fuel and maintenance cash, replacement quote, old sale evidence, annual workload, downtime and incremental terminal cash assumptions. Source both replacement and retained-vehicle terminal proceeds at the same horizon.
+subhead: Give it your trip logs, fuel and maintenance costs, the replacement quote and what the old vehicle would sell for. Step 1 works out the cash a loaded trip earns. Step 2 compares keeping the vehicle with replacing it on the same workload. You get a trip cash baseline and a replacement comparison.
 explain: |-
-  A trip contribution baseline and incremental replacement cash comparison.
+  Fleet owners often judge a replacement from a quote and a feeling. The better question is what changes in cash. This fleet replacement cash comparison starts with the trip. Step 1 takes the kilometers driven loaded and empty, the measured fuel, the driver, tolls and maintenance, and shows what a loaded trip earns after its own cash costs.
 
-  Transport capital planning. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 2 then compares two futures on the same yearly workload: keep the old vehicle, or buy the new one. It counts only the cash that differs. That is the purchase price less the old vehicle's sale now, the yearly savings, and the gap between what each choice is worth at the end of the horizon. Trip contribution is not used as a saving, and the vehicle's cost is never taken twice.
+
+  It does not price downtime, tax or financing unless you give sourced figures. It lists them as gaps. It gives no route, driver-hours or vehicle safety advice.
 when:
-  - You need a trip contribution baseline and incremental replacement cash comparison.
-  - You work on transport capital planning and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A dealer quote for a new truck lands and you want to know if replacing beats keeping the old one.
+  - You want to know what one loaded trip earns after fuel, driver, tolls and maintenance.
+  - Your lender or partner asks for the cash case behind a fleet replacement.
+  - Fuel use on the old vehicle looks high and you want to put a number on what it costs per year.
+not_for:
+  - You only want to know if one route or trip pays. Use the Freight trip contribution builder on its own.
+  - You are choosing between purchases against a cash limit. Use the Plan a purchase around your real budget workflow.
+  - You have no trip logs, or no sale value for the old vehicle at the end of the horizon. Gather those first, because the comparison cannot run on a guess.
+  - You want advice on routes, driver hours, safety or carrier licensing. None of that is covered.
 you_give:
-  - Actual comparable loaded/empty trips, fuel and maintenance cash, replacement quote, old sale evidence, annual workload, downtime and incremental terminal cash assumptions. Source both replacement and retained-vehicle terminal proceeds at the same horizon.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Loaded and empty kilometers for comparable trips (from trip logs)
+  - Measured fuel use per kilometer, diesel price, driver pay, tolls and maintenance cash (from fuel cards, payroll and invoices)
+  - The earned receipts for those trips, and the yearly trip count (from invoices and your records)
+  - The replacement quote and the old vehicle's sale evidence today (from dealer quotes or listings)
+  - "The value of each choice at the end of the horizon: sale of the new vehicle, and sale of the old one if kept (from dealer quotes)"
+  - The yearly operating savings you expect from replacing, with their source, and the discount rate your finance approver uses
 you_get:
-  - A trip contribution baseline and incremental replacement cash comparison.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Cash earned per loaded trip after fuel, driver, tolls and maintenance
+  - Yearly trip cash cost at the same workload, using your documented trip count
+  - "Replacement cash by year: purchase less old sale, yearly differences and end-of-horizon difference"
+  - Totals with and without discounting, kept apart
+  - Gaps for downtime, tax and financing, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach your trip logs, fuel and maintenance records, the replacement quote and the old vehicle's sale evidence. Say the yearly trip count and the horizon in years.
+  - After step 1, check the loaded and empty kilometers match your logs and that each cost appears once.
+  - After step 2, check both cases carry the same workload, the old vehicle's end-of-horizon sale is not left out, and no vehicle cost is taken twice.
+  - Fill every MISSING line before anyone relies on the result. Nothing is bought, sold or signed. A person who knows your fleet should review the savings figures.
 how_it_works:
   - title: Freight trip contribution builder
-    text: Build current trip cash contribution from actual loaded and empty kilometers. Preserve measured fuel and maintenance amounts and derive same-workload annual cost only with documented annual trip counts.
+    text: "Reconciles loaded and empty distance from trip records, prices measured fuel and maintenance, adds driver and toll cash once, and compares with earned receipts. Hands step 2 cash per trip and the annual trip count. Check before moving on: each cost appears once."
   - title: Fleet replacement cash comparer
-    text: Use sourced incremental annual operating differences, actual purchase/sale timing and terminal value to compare replacement cash. Do not substitute trip contribution for savings; disclose workload, downtime, tax and financing gaps. Carry the signed new-minus-keep terminal proceeds difference, not new-vehicle sale proceeds alone.
+    text: Puts replacement purchase less the old vehicle's sale at time zero. Adds yearly differences and, at the horizon, new-vehicle sale minus the old vehicle's foregone sale. Discounts at your approved rate. Never uses trip contribution as a saving.
 output_shape: |-
-  A trip contribution baseline and incremental replacement cash comparison.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  TRIP BASELINE   loaded km <n>, empty km <n>, fuel <n>, driver <n>, tolls <n>, maintenance <n>
+                  receipts <n> - trip cash <n> = contribution per loaded trip <n>
+                  x yearly trips <n> = yearly trip cash cost <n>
+
+  REPLACEMENT     year 0: purchase <n> - old sale <n> = <n>
+                  years 1-3: yearly operating difference <n>
+                  horizon: new sale <n> - old (kept) sale <n> = <n>
+                  total <n> undiscounted | <n> discounted at <rate>
+
+  SOURCES         <each input, its source, date, currency and scale>
+  GAPS            <downtime, tax, financing, or none>
+  MISSING         <each gap, and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - Trip logs with loaded and empty kilometers, plus fuel, driver, toll and maintenance cash
+    - The replacement quote and the old vehicle's sale evidence
+    - Yearly trip count, expected yearly savings and the approved discount rate
+    - End-of-horizon sale values for the new and the old vehicle
+  prerequisites:
+    - Fuel, payroll and invoice records for comparable trips
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: TRIP BASELINE
+      contains: Cash earned per loaded trip after fuel, driver, tolls and maintenance, and the yearly trip cash cost.
+    - name: REPLACEMENT
+      contains: Year-by-year cash of replacing against keeping, with totals before and after discounting.
+    - name: SOURCES
+      contains: Each input with its source, date, currency and scale.
+    - name: GAPS
+      contains: Downtime, tax and financing items you did not give, listed rather than guessed.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Both vehicle cases carry the same workload; actual trip cost changes support annual savings; vehicle capital is not deducted twice. The terminal cash difference is replacement minus keep; the foregone old-vehicle terminal sale is not omitted.
+  - what: The end-of-horizon value
+    how: Raise the retained old vehicle's sale value. The case for replacing weakens, because that sale is foregone if you replace.
+  - what: The yearly trip count
+    how: Change the number of trips. Yearly trip cash and the annual savings you can support both move.
+  - what: The discount rate
+    how: Use the rate your approver sets. Undiscounted and discounted totals stay on separate lines.
+  - what: Fuel price
+    how: Change the diesel price. Contribution per trip moves, and so does any saving that relies on lower fuel use.
 judge:
   - Both vehicle cases carry the same workload; actual trip cost changes support annual savings; vehicle capital is not deducted twice. The terminal cash difference is replacement minus keep; the foregone old-vehicle terminal sale is not omitted.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +99,30 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep one month of trip logs in a standard sheet and attach it each run, so step 1 starts from clean kilometers.
+  - Log the dealer quote date next to each price, so you know when a figure is stale.
+  - Add your own approved discount rate to your copy of the skill, so each run uses it.
+  - Run the Plan a purchase around your real budget workflow next if the cash limit decides the choice.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and a checks tab you can click into. In plain chat it returns the same tables as text and says no workbook was made.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Fuel-card exports for the same trips as your logs.
+    - A written dealer quote and a second used-vehicle valuation for the old vehicle.
+    - A named reviewer who knows how the fleet is used.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Trip contribution
+    meaning: The cash a trip earns after the cash costs that belong to that trip.
+  - term: Loaded and empty kilometers
+    meaning: Distance driven with cargo, and distance driven without it.
+  - term: Same workload
+    meaning: Both cases carry the same number of trips a year, so the comparison is fair.
+  - term: Terminal value
+    meaning: What the vehicle sells for at the end of the horizon.
+  - term: Discount rate
+    meaning: The rate used to say what future cash is worth today.
+before: []
+next:
+  - plan-a-purchase-around-your-real-budget
+  - review-maturity-funding-and-credit-limits

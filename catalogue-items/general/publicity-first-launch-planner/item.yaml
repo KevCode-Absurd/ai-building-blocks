@@ -1,15 +1,15 @@
 slug: publicity-first-launch-planner
 name: "Publicity-first launch planner"
-summary: "Paste your new product and its category. Get a launch that starts with press coverage, then ads once people believe it."
+summary: "Plan a product launch that wins press before you spend on ads. Get your category claim, one idea to own and when ads should start."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - {type: plan, required: true}
-  - {type: brand_brain, required: true}
   - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: plan, required: false}
 outputs:
   - {type: plan}
 origin: rebuilt
@@ -20,3 +20,5 @@ credits:
   - {title: "The Positioning Era Cometh, Advertising Age articles, 1972", by: "Al Ries and Jack Trout", used: "Owning one idea in the buyer's mind and finding a category you can lead"}
   - {title: "Al Ries", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Al_Ries", used: "Being first in a category and looking different from rivals"}
   - {title: "Al Ries mind knowledge file", by: "Notes citing the 1972 articles, a 2006 interview and a 2009 article", used: "Ordering publicity before ads and the point at which ads begin"}
+next: [positioning-statement-writer, launch-stunt-planner, network-launch-plan, go-or-no-go-launch-checker]
+needs_mode: manual

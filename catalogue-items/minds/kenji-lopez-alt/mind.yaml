@@ -5,8 +5,27 @@ area: "science"
 years: "1979–"
 living: true
 known_for: "López-Alt developed The Food Lab at Serious Eats and expanded it into a 2015 cookbook. His other work includes The Wok and public home-cooking demonstrations. His stated aim is to explain how recipes work so people can cook with more confidence and pleasure."
-summary: "Turn a desired result into a testable question. Compare variables, explain the successful mechanism and adapt the method to ordinary home equipment instead of treating a recipe as untouchable."
+summary: "Test a cooking problem like J. Kenji López-Alt: set a target, change one thing, and get a short plan for your own stove and pan."
 use_cases: ["Crisper roast potatoes: Choose a recipe variant, track parboiling and surface roughening, and compare its result with your usual preparation.", "Fried rice on a weak stove: Prepare ingredients before cooking, work in smaller batches and protect the rice from excess moisture and crowding.", "A quick rice-bowl meal: Choose a familiar protein or vegetable, keep the sequence short and adapt additions to what is actually in the fridge.", "Testing a team’s workflow: Define the outcome, compare one changed step against the old method and explain what the evidence does and does not show.", "Learning a practical skill: Keep a short record of attempts, change one difficulty at a time and let measured improvement build confidence.", "Choosing between two recipes: Compare the intended texture, equipment and work required instead of deciding solely from the headline or photograph."]
+not_for:
+  - "You want the food science behind why ingredients behave as they do: use the Harold McGee mind."
+  - "You want to build a daily habit, not test a recipe: use the BJ Fogg mind."
+  - "You need medical, legal or money advice, or a claim that he endorses your product: ask a qualified professional, because this mind only applies his public method."
+output_sample:
+  input:
+    - The dish you want to cook or the problem you want to test
+    - Your stove, pan and how much food you cook at once
+    - The result you want, such as a crisp crust or separate rice grains
+    - What you changed between attempts, if you have tried before (optional)
+  output:
+    - name: Diagnosis
+      contains: A short read on what likely holds your result back, based on the variables you named.
+    - name: Practical sequence
+      contains: Ordered steps adapted to your stove, time and equipment, with one change to test at a time.
+    - name: Cues to watch
+      contains: Signs to check as you cook, so you can tell what worked from taste and texture.
+    - name: Next adjustment
+      contains: One change to try on your next attempt, plus when to stop adding steps.
 seats: [{"seat": "Tested home cooking and useful experiments", "asks": "What do you mean by better here?"}, {"seat": "Practical teaching and adaptation", "asks": "What did you change between the two attempts?"}]
 pairs_with: ["james-clear", "richard-feynman", "charles-and-ray-eames"]
 last_checked: "2026-10-23"

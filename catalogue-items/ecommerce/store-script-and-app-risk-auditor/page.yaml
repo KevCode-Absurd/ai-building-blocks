@@ -1,6 +1,6 @@
 new_slug: store-script-and-app-risk-auditor
 name: "Store script and app risk auditor"
-summary: "List the scripts, apps and packages your store loads. Get risky ones ranked, a score out of 100 and what to remove."
+summary: "Check the scripts, apps and pixels on your store for risk. Get each one ranked, a score out of 100 and a list of what to remove and revoke."
 job: protect-your-store
 thinking: high
 thinking_why: "It judges risk for each script from partial facts, so a stronger model is less likely to pass a bad one."
@@ -17,6 +17,10 @@ when:
   - You have added apps and pixels for years and cannot say what each one does.
   - A vendor or extension you rely on was sold, or changed hands, and you want to know if it is still safe.
   - You are about to hire a developer for custom code and want a clean starting list.
+not_for:
+  - "You only want a quarterly review of app permissions: use the Store security checkup."
+  - "You want to check a live site yourself or have a fix applied: ask a developer, because this skill only reads the lists you paste."
+  - "You want to know if your ad copy will be accepted: this checks store code, so use an ad review step instead."
 
 you_give:
   - Every script seen on your home, product, cart, checkout and account pages (from the browser's network tab or page source)
@@ -35,6 +39,23 @@ how_to_use:
   - Paste your installed apps and staff extensions, with the vendor for each.
   - Note which pages hold card, address or login fields.
   - Remove the high-risk items first, then revoke their keys and access.
+output_sample:
+  input:
+    - Every script seen on your home, product, cart, checkout and account pages
+    - Your installed apps and staff browser extensions, with the vendor for each
+    - Which pages have card, address or login fields
+    - Your package list or lock file (optional, custom builds only)
+  output:
+    - name: INVENTORY
+      contains: One row per script or app with owner, purpose, HTTPS, checkout use, what it can see, risk level and action.
+    - name: SCORE
+      contains: A score out of 100 with the sum shown, doubled for pages with card or login fields, then the score after actions.
+    - name: CLEAN-UP LIST
+      contains: What to remove, which keys, webhooks and staff seats to revoke, and which widgets to move off key pages.
+    - name: FOR A DEVELOPER
+      contains: "For custom builds only: pin versions, a throwaway install space and a content security policy."
+    - name: NOT RUN
+      contains: Checks it could not do, what is needed to do them, and any MISSING inputs.
 
 how_it_works:
   - title: Builds the inventory

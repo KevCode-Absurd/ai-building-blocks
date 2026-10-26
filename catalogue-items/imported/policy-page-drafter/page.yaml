@@ -2,33 +2,58 @@ thinking: medium
 thinking_why: It must match each clause to your real data practices.
 new_slug: policy-page-drafter
 name: Policy page drafter
-summary: Give your business facts and country. Get a draft privacy policy, terms
-  or cookie notice to send to a lawyer.
+summary: Draft a privacy policy, terms of service or cookie notice from your real business facts and country, ready to send to a lawyer for review.
 job: check-contracts
 headline: Policy page drafter
-subhead: Give your business facts and country. Get a draft privacy policy, terms
-  or cookie notice to send to a lawyer. Bring business description and country.
-  Use the result to plan your next step.
+subhead: Give your AI the facts about your business, your country and the data you collect. It writes a first draft of your privacy policy, terms or cookie notice. It also lists what a lawyer must check.
 explain: |
   A first draft of your privacy policy, terms of service or cookie notice, built from the facts of your actual business and ready to hand to a lawyer. The draft matches what you really collect, not a generic template.
 
   The skill asks for your country, who your users are, what data you gather, why, who receives it, how long you keep it and how people can contact you. It then writes each page to fit the laws that apply, such as GDPR, CCPA or COPPA, and marks gaps it cannot fill. It never claims to certify compliance, so a qualified person must review the result.
 when:
   - You are launching a site and need a privacy policy before going live.
-  - You added analytics or ads and your cookie notice is missing.
-  - You sell to children or to EU visitors and need extra wording.
-  - Your terms of service are copied from another company and don't fit.
+  - You added analytics or ads and have no cookie notice yet.
+  - You sell to children or to visitors in the EU and need extra wording.
+  - Your terms of service were copied from another company and don't fit.
+not_for:
+  - "You run a health or finance business with strict rules: go straight to a lawyer who knows your sector."
+  - "Your site is already live and you don't know what data it collects: find out first, or ask a lawyer to audit it."
+  - "You need a policy that is certified as legal: this draft is not legal advice, so ask a qualified attorney to sign it off."
 you_give:
-  - Business description and country
-  - List of data you collect and why
-  - Tools and vendors that receive data
-  - Whether you serve children or EU users
+  - Your business description and country
+  - The data you collect and why you collect it
+  - The tools and vendors that receive that data
+  - Whether you serve children or EU visitors
+  - How long you keep the data (optional)
+  - Your contact details for data questions (optional)
 you_get:
-  - Draft privacy policy
-  - Draft terms of service or cookie notice
-  - List of open questions for your lawyer
+  - A draft privacy policy, terms of service or cookie notice
+  - Notes on the laws that apply to you
+  - A checklist for each law
+  - A list of open questions for your lawyer
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down the facts in the list above. Be exact about the tools you use.
+  - Open Claude, ChatGPT or Gemini. Paste the skill instructions, then your facts. No code or paid tools are needed.
+  - "Say which document you want: privacy policy, terms or cookie notice."
+  - Check each open question against your real tools and settings. Fix anything the draft got wrong.
+  - Send the draft and the open questions to a qualified lawyer before you publish.
+output_sample:
+  input:
+    - Your business description and country
+    - What data you collect and why
+    - The tools and vendors that receive data, such as analytics or ad tools
+    - Whether you serve children or visitors from the EU
+    - How people can contact you about their data (optional)
+  output:
+    - name: Draft document
+      contains: A privacy policy, terms of service, cookie notice or similar page, with clear sections and headers.
+    - name: Placeholder sections
+      contains: Spots marked for company details your AI could not fill in from what you gave it.
+    - name: Jurisdiction notes
+      contains: Wording changes for the laws that apply to you, such as GDPR, CCPA or COPPA.
+    - name: Implementation notes
+      contains: Technical steps your site needs, since a notice alone does not set up consent or deletion.
+    - name: Compliance checklist
+      contains: A checklist for each law that applies, so you can see what is still open.
+    - name: Open questions and disclaimer
+      contains: Gaps to raise with your lawyer, plus a note that this is a template and not legal advice.

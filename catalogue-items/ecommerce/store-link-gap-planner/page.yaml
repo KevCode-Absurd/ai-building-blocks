@@ -1,6 +1,6 @@
 new_slug: store-link-gap-planner
 name: "Store link gap planner"
-summary: "Give it your site and rivals. Get a link gap, monthly quota, earned-link targets and pitch emails."
+summary: "Plan a link building strategy for your online store. Find your link gap against rivals, set a monthly quota and get pitch emails for earned links."
 job: get-found-in-search
 thinking: high
 thinking_why: "It does maths, vets sites and writes outreach, and mistakes here can cost rankings, so a stronger model is safer."
@@ -17,6 +17,10 @@ when:
   - Your collections sit around positions 4 to 10 and rivals have many more linking sites.
   - You want a monthly link target based on numbers, not a guess.
   - Someone has offered you cheap links and you want a safe plan instead.
+not_for:
+  - "Your store has no live collection or product pages yet: build those first, because links need a page to point to."
+  - "You have under about $1,000 a month for tools and time: start with the free routes in the skill, such as journalist requests and a useful free tool."
+  - "You want to buy links or get them for a fee: this plan will not help, and paid links can cost you rankings. Use the Journalist query answer writer to earn quotes instead."
 
 you_give:
   - Your list of linking sites (follow links, authority 30 or more)
@@ -36,6 +40,32 @@ how_to_use:
   - Name the collections you want to rank, and say how many hours and dollars a month you can spend.
   - Vet each site on its list yourself before you send anything.
   - Send in small batches, track replies, and rerun the gap every few months.
+output_sample:
+  input:
+    - Your list of linking sites (follow links, authority 30 or more)
+    - Three to five rivals who win the searches you want
+    - The pages you most want to push (optional)
+    - Your monthly time and budget (optional)
+    - Expertise or data you can share (optional)
+  prerequisites:
+    - A link tool such as Semrush or Ahrefs to count linking sites (a free rival link checker gives a rough count)
+  output:
+    - name: GAP
+      contains: Your linking sites against the rival average, the gap, and the monthly quota with its sums.
+    - name: TARGET SPLIT
+      contains: How links divide between your homepage and your collections in the first 3 months.
+    - name: VETTING CHECKLIST
+      contains: Tests each site must pass before you approach it, such as real, relevant and not a link seller.
+    - name: TARGET LIST
+      contains: Sites worth approaching, with authority, visits, an earned angle, a contact and status.
+    - name: PITCH EMAILS
+      contains: Short pitch emails with a subject line, written for a named person.
+    - name: SEND PLAN
+      contains: How to warm up mailboxes and raise daily sends over several weeks.
+    - name: ANCHOR MIX
+      contains: The mix of link wording to aim for, compared with your top three rivals.
+    - name: DO NOT DO
+      contains: Risky moves to avoid, such as paid links, link farms and mass guest posts.
 
 how_it_works:
   - title: Checks readiness

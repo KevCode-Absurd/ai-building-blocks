@@ -1,0 +1,138 @@
+name: Programmatic & Display Buyer agent
+summary: Plan display and programmatic ad buying. Get a media plan with channels, audiences, placement rules, brand safety checks and a budget split.
+headline: Programmatic & Display Buyer agent
+subhead: Give it your goal, budget, target audience and any display results you have. It plans where banner, video and partner ads should run, who they should reach and how often. You get a display media plan with placement rules, brand safety checks and a way to measure it.
+job: plan-ad-tests
+thinking: high
+thinking_why: It weighs channels, audiences and quality rules, and must not invent prices or site names. Use a model that reasons well and marks guesses as guesses.
+explain: |-
+  Display advertising is the banner, video and native ads you see on websites and apps. Buying it well is not like search. People are not looking for you, so the plan has to decide who sees the ad, in what setting and how often. This agent builds a display and programmatic media plan around reach, frequency and ad quality, not only last-click sales.
+
+  It looks across the ways you can buy: Google Display Network, ad platforms such as DV360 or The Trade Desk, deals with named publishers, and sponsored spots in newsletters and partner media. For each, it sets the audience, format, budget and what a good placement looks like. For account-based marketing, it plans ads aimed at a list of target companies.
+
+  It does not invent site names, prices or rates. It sets rules for choosing placements and tells you to pull your own placement report first, because finding waste comes before buying more. Targets in the original profile, such as view rates and invalid traffic limits, are the author's goals. Check them with your platform or vendor before you rely on them.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You plan a banner or video campaign and need to know where to buy, who to reach and how much to spend.
+  - You run Google Display and want a clear way to choose placements and exclude poor ones.
+  - You sell to other companies and want display ads aimed at a list of target accounts.
+  - You are weighing newsletter or sponsored content deals from partners and need a way to compare them.
+not_for:
+  - You want search ads. Use the PPC Campaign Strategist agent.
+  - You want social ads on Meta, LinkedIn or TikTok. Use the Paid Social Strategist agent.
+  - You want an audit of an ad account that already runs. Use the Paid Media Auditor agent, or the Online media buy auditor for a plan and reports you paste.
+  - You need live changes made in DV360 or Google Ads. Do those in the platform. This agent writes the plan.
+you_give:
+  - Your goal, such as awareness, leads or sales, and your product or offer
+  - Your budget for the campaign and its dates
+  - Your target audience, or the list of companies you want to reach
+  - Past display or video results, or a placement report from your ad platform (optional)
+  - Platforms you use or can use, such as Google Ads, DV360 or a partner media list (optional)
+  - Brand rules, such as topics or sites you will not appear next to (optional)
+you_get:
+  - A media plan table with channel, audience, format, budget and goal for each line
+  - Rules for choosing and excluding placements, and a list to pull from your own data
+  - An audience and frequency plan, so people see the ad enough but not too often
+  - Brand safety and ad quality rules, with what to ask each vendor
+  - A way to measure display, including view-through and lift tests
+  - Facts still missing and prices to confirm
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Give your goal, budget, dates and audience. Say which platforms and partner deals you can use. No code is needed.
+  - If you already run display, export a placement report from your ad platform and attach it. The plan checks it before it suggests new placements.
+  - Read the "Facts still missing" and "Prices to confirm" lists first. Ask each vendor for the numbers and paste them back.
+  - Confirm formats, sizes and limits in the platform before you build ads. Specs change often.
+  - Launch in your own ad platform. This agent does not make changes in your account.
+how_it_works:
+  - title: Set the goal and limits
+    text: It confirms goal, budget, dates, audience, platforms and past results. Gaps are asked once, then marked MISSING.
+  - title: Check for waste first
+    text: If you gave a placement report, it flags placements with high spend and no results before it plans new ones.
+  - title: Choose channels
+    text: It sets how to split budget across Google Display, ad platforms, direct deals, partner media and account-based tools.
+  - title: Set audiences and frequency
+    text: It picks who to reach, with exclusions and a limit on how often one person sees the ad.
+  - title: Set quality and safety rules
+    text: It sets rules for viewability, invalid traffic and brand safety, and the block and allow lists to keep.
+  - title: Plan the measurement
+    text: It sets how you will judge results beyond clicks, such as view-through conversions and a lift test.
+output_shape: |-
+  DISPLAY MEDIA PLAN
+    Goal <goal> | Budget <total> | Dates <start to end> | Audience <who>
+
+  MEDIA PLAN TABLE
+    <channel> | <audience> | <format> | <budget share> | <goal> | <price to confirm>
+
+  PLACEMENT RULES
+    <how to choose placements> | <what to exclude> | <what to pull from your own report>
+
+  AUDIENCE AND FREQUENCY
+    <audience> | <frequency limit to set> | <overlap to avoid>
+
+  BRAND SAFETY AND QUALITY
+    <rule> | <what to ask the vendor> | <profile target to check>
+
+  MEASUREMENT
+    <result> | <how it is counted> | <test to run>
+
+  FACTS STILL MISSING AND PRICES TO CONFIRM
+    <fact or price> | <who can confirm it>
+output_sample:
+  input:
+    - Your goal, budget, dates and product
+    - Your target audience, or a list of target companies
+    - A placement report from your ad platform (optional)
+    - Your brand rules for where ads may appear (optional)
+  output:
+    - name: Display media plan
+      contains: Your goal, budget, dates and audience, with the channels chosen and why.
+    - name: Media plan table
+      contains: One row per channel with audience, format, budget share, goal and price to confirm.
+    - name: Placement rules
+      contains: How to choose placements, what to exclude and which reports to pull from your own account.
+    - name: Audience and frequency
+      contains: Who to reach, how often one person should see the ad and which audiences overlap.
+    - name: Brand safety and quality
+      contains: Rules for viewability, invalid traffic and brand safety, with questions for each vendor.
+    - name: Measurement
+      contains: Results to judge beyond clicks, and the tests to run to prove the ads worked.
+    - name: Facts still missing and prices to confirm
+      contains: Gaps in the plan and who can confirm each price or fact.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a placement report or a partner media sheet next to your goal, and flag waste or gaps in it.
+  inputs:
+    - A placement report from Google Ads or your DSP, with spend and results.
+    - A media kit or rate card from each partner you are weighing.
+    - Your list of target accounts, if you run account-based ads.
+terms:
+  - term: Programmatic buying
+    meaning: Buying ad space through software, in real time, instead of calling each site by phone.
+  - term: DSP
+    meaning: Demand-side platform. The tool an advertiser uses to buy programmatic ads. DV360 and The Trade Desk are examples.
+  - term: Viewability
+    meaning: Whether an ad was on screen long enough to count as seen.
+  - term: Invalid traffic
+    meaning: Fake or bot views of an ad that waste your budget.
+  - term: Account-based marketing
+    meaning: Aiming your ads at a named list of target companies, not a broad audience.
+tweaks:
+  - what: Goal
+    how: Pick one goal. Awareness, leads and sales each need a different mix of channels.
+  - what: Existing data
+    how: Attach your placement report if you have one. The plan will start from your waste, not from a guess.
+  - what: Brand rules
+    how: List topics and sites to avoid, so the quality rules fit your brand.
+improve:
+  - Each month, paste a fresh placement report and ask it to find new waste and rank what to cut.
+  - Keep the block and allow lists in a shared file and update them after each review.
+  - Use the Tracking & Measurement Specialist agent if the measurement section shows weak spots.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

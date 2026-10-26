@@ -1,6 +1,6 @@
 new_slug: ad-performance-early-warning-reviewer
 name: Ad performance early-warning reviewer
-summary: Compare ad costs, frequency, clicks and view rates with past results. Flag signals to check without predicting a sales drop.
+summary: Check your ad costs, frequency, clicks and view rates against past results. Get early warning signs to check, not a forecast of lower sales.
 job: read-ad-results
 headline: Ad performance early-warning reviewer
 subhead: Share matched daily results, account baselines, campaign age and alert rules. Get a five-signal warning report with next checks and review times.
@@ -12,6 +12,10 @@ when:
   - You need a five-signal warning report with next checks and review times.
   - You need ad performance early-warning reviewer for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - Your campaign has under 14 days of data. Wait until you have two weeks of daily results, then run it.
+  - You want to decide whether to pause an ad. Check profit and sales in your ad account, or ask a media buyer.
+  - You need new ad ideas or hooks. Ask your AI to write fresh ad openings from your product facts.
 you_give:
   - Matched daily results
   - Account baselines
@@ -20,9 +24,30 @@ you_get:
   - A five-signal warning report with next checks and review times
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions.
+  - Paste 14 to 28 days of daily results for one campaign. Add hook rate if it is a video ad.
+  - Add your campaign age and any alert rules you use.
+  - Ask your AI to return the five-signal warning report.
+  - Check the numbers against your ad account. Treat lead times and thresholds as starting points, and compare them with your own history.
+output_sample:
+  input:
+    - Daily results for one campaign for the last 14 to 28 days (cost per 1,000 views, frequency, clicks, reach, spend)
+    - Daily video hook rate (optional, for video ads)
+    - Your account baselines, if you have them
+    - How old the campaign is and any alert rules you use
+  output:
+    - name: Leading Indicator Report
+      contains: The campaign name, the period checked and an overall risk rating of green, yellow or red.
+    - name: Signals Active
+      contains: A five-row table of baseline, current value, change and status for cost, frequency, clicks, hook rate and reach.
+    - name: Diagnosis
+      contains: Early fatigue, active fatigue, audience saturation or thumbnail fatigue, based on how the signals match.
+    - name: Evidence and next review time
+      contains: The data behind the diagnosis and when to look again. It is a check date, not a forecast.
+    - name: Actions
+      contains: Next steps in priority order, starting with the most urgent.
+    - name: Monitoring
+      contains: Which numbers to watch daily, when to re-run the check and when to escalate.
 how_it_works:
   - title: Check the inputs
     text: Confirm matched daily results, account baselines, campaign age and alert rules. Mark facts that are missing.

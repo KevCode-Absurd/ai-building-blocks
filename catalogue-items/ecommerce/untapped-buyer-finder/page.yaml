@@ -1,6 +1,6 @@
 new_slug: untapped-buyer-finder
 name: "Untapped buyer finder"
-summary: "Give it a crowded product. Get the buyer groups nobody targets, ranked, with a test for each."
+summary: "Find buyer groups your rivals miss for a crowded product. Give it rival ads. You get ranked groups and a small test for each."
 job: find-products
 thinking: medium
 thinking_why: "It compares what rivals show with who could buy, so it needs some judgment, but the steps are clear."
@@ -17,6 +17,10 @@ when:
   - Your product has strong rivals and your ads sound like theirs.
   - You sell one product that could help several kinds of people, and you don't know which to lead with.
   - You want a new angle for a store that is flat, without changing the product.
+not_for:
+  - Your product has only one use or one kind of buyer. Test a new ad angle or price on your current buyers instead.
+  - You have no rival ads to look at. Gather some from the Meta Ad Library and TikTok first, or the map is only a guess.
+  - Your budget cannot fund even one test. Wait, or ask a few people in each group before you spend.
 
 you_give:
   - Your product and what it does
@@ -35,6 +39,27 @@ how_to_use:
   - Search the product on TikTok and in the Meta Ad Library. Paste or attach what rivals show. Note who is in each ad and what it promises.
   - Read the map and the ranked groups. Check the ones you like by searching them yourself.
   - Pick up to three groups for a first test, or fewer if your budget is small. Run one ad per group and see which one takes off.
+output_sample:
+  input:
+    - Your product and what it does
+    - Rival ads or short video clips, with who they show and what they promise
+    - Your test budget (optional)
+    - What you know about your current buyers (optional)
+  prerequisites:
+    - Rival ads found by searching your product in the Meta Ad Library and on TikTok
+  output:
+    - name: WHO RIVALS TARGET
+      contains: Each buyer group rivals show, how many ads show it, and the problem those ads name.
+    - name: WHO THEY MISS
+      contains: Three to five groups rivals leave out, each checked against the rival search, with its problem and size signal.
+    - name: TEST PLAN
+      contains: "For each group: a hook, a creative idea, a landing page line and a rule for when to stop."
+    - name: START WITH
+      contains: Up to three groups to test first, with the reason based on your budget.
+    - name: CHECKS MISSED
+      contains: Any check the AI could not run, or none.
+    - name: MISSING
+      contains: Any gap in rival ads, product facts or budget that it marked instead of guessing.
 
 how_it_works:
   - title: Reads the rival ads

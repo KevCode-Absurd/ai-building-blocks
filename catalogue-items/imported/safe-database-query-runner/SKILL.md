@@ -24,6 +24,17 @@ license_source: "https://github.com/sanjay3290/ai-skills/blob/main/LICENSE"
 
 Execute safe, read-only queries against configured PostgreSQL databases.
 
+## The real safety control
+
+The script blocks writes, but the database login is the real control. Always connect with a login that has read-only rights (a read-only role on the server). The script's checks are a second layer. They cannot stop an over-privileged account or a database trigger. Do not say a query "cannot change anything". Say the session is read-only and the login should be too.
+
+## If something is missing
+
+- No `connections.json`: tell the user how to create it (see Setup). Do not ask them to paste a password into the chat, and never print the contents of the file.
+- The user has not said which database or what they want to know: run `--list` and ask. Do not guess a database.
+- You cannot run Python or reach the database: say so. Offer to write the SQL for the user to run in their own tool, and mark it as not run.
+- Table or column names are unknown: run `--tables` or `--schema` first. Do not invent names.
+
 ## Requirements
 
 - Python 3.8+
@@ -140,6 +151,15 @@ If unclear, run `--list` and ask user which database.
 2. Match user intent to database description
 3. Run `--tables` or `--schema` to explore structure
 4. Execute query with appropriate LIMIT
+
+## What you hand back
+
+- The database used, and why you chose it.
+- The SQL you ran, in a code block, with the row limit used.
+- The results as a small table (first rows only if long), with the row count and whether the 10,000-row cap was hit.
+- A one or two sentence plain answer to the question, stating any assumption (for example, which column you took as the order date).
+- If a query was refused: the reason in plain words and a read-only way to get the answer.
+- A reminder, when rows hold personal data, not to share them without permission.
 
 ## Limitations
 

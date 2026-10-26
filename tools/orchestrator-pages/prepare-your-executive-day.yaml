@@ -55,3 +55,22 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+not_for:
+  - "You only need to prepare for one meeting: use the Executive meeting brief writer."
+  - "You want a review of the whole week, not one day: use Prepare your weekly executive review."
+  - "You need to answer one email or request: use Write a clear executive reply."
+output_sample:
+  input:
+    - Your calendar for the day, as an export or pasted list
+    - Meeting notes or email threads with open requests
+    - Your goals and any limits on your time
+    - Earlier action list (optional)
+  output:
+    - name: Meeting briefs
+      contains: One brief per meeting with the goal, decisions due, an agenda, questions and gaps.
+    - name: Action register
+      contains: One action list with owner, due date, status and source link for each item.
+    - name: Daily brief
+      contains: Top three priorities, clashes, decisions, work waiting on others and one next action.
+    - name: Source coverage and missing facts
+      contains: What was checked, what is unknown, and which external actions are only proposed.

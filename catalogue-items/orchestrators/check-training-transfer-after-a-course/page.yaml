@@ -1,50 +1,115 @@
 new_slug: check-training-transfer-after-a-course
-name: Check training transfer after a course
-headline: Check training transfer after a course
-summary: Share the source files. Get a skill evidence comparison, transfer barriers and focused development plan.
 job: teach-and-train
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A skill evidence comparison, transfer barriers and focused development plan. Share the original learning objectives, actual post-course work samples, role expectations, consented feedback and agreed follow up period. Your AI prepares the work and marks any facts it cannot verify.
+name: Check training transfer after a course
+headline: Check training transfer after a course
+summary: See whether a course changed the work. Compare real post-course work with the skills taught, then get the gaps and a practice plan.
+subhead: Give it the course's learning goals, samples of work done after the course and what the role expects. Your AI sets the evidence beside each skill, names what blocks use and plans targeted practice. You get a plan built on what people did, not on what they said.
 explain: |-
-  A skill evidence comparison, transfer barriers and focused development plan.
+  A course can finish well and change nothing at work. This training transfer check compares what the course set out to teach with what people did on the job afterward.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Self reports and completion certificates are separate from demonstrated workplace performance. Missing tools or evidence stay visible in the final summary.
+  Certificates and "I learned a lot" replies do not count as proof. They are listed apart as self-reports. Only work samples, observations and feedback that people agreed to share count as evidence. Each skill gets one mark: shown, partly shown, not shown or no evidence yet.
+
+  Then it looks at what blocks use: no chance to practice, no support from a supervisor or an unclear expectation. The last step plans practice, supervisor support and a date to look again. It never claims the plan has already worked.
 when:
-  - You need a skill evidence comparison, transfer barriers and focused development plan.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A team finished a course some weeks ago and you want to know if anything changed.
+  - A manager says "they all went on the course, but nothing is different".
+  - You must report on training spend and have work samples, not only survey scores.
+  - You are choosing what follow-up help to give after a workshop.
+not_for:
+  - The course has not run yet. Plan it with the Build a practical manager training session workflow or the Staff training session planner.
+  - You only have survey scores and certificates. Collect work samples first, because scores cannot show use at work.
+  - You want to judge one person's performance for pay or discipline. This is not built for that. Use your HR process.
+  - You are planning an internship or placement. Use the Plan an internship learning review workflow.
 you_give:
-  - The original learning objectives, actual post-course work samples, role expectations, consented feedback and agreed follow up period.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The course's learning objectives, as written before it ran
+  - Samples of real work from after the course, with dates and names removed
+  - What the role expects at work, such as a job description or standards
+  - The follow-up window you agreed, with start and end dates
+  - Feedback from managers or colleagues, only where people agreed to share it (optional)
+  - Notes on what else changed at work in that time, such as new tools or staff changes (optional)
 you_get:
-  - A skill evidence comparison, transfer barriers and focused development plan.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A skill table with the course goal, the role expectation, the evidence found and a mark for each skill
+  - Self-reports and certificates listed apart, so they do not pass as proof
+  - A list of what gets in the way of using the skills, tied to evidence
+  - A practice plan with supervisor support and a date to check again
+  - A summary of missing evidence and one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste the learning goals, the role expectations and the work samples with their dates. Say what the follow-up window is.
+  - Ask to see the skill table before the plan is written. Check each mark against the sample it cites and fix any you disagree with.
+  - Share the plan with the supervisor. Run the check again after the follow-up window.
 how_it_works:
   - title: Role skills framework builder
-    text: Map real post-course work evidence to the role behavioral expectations, with missing or conflicting evidence explicitly labeled.
+    text: Sets out the skills the course aimed at and what each looks like at work, then matches each to your work samples. It labels missing or clashing evidence and hands the table to the plan step.
   - title: Training program builder
-    text: Use the demonstrated gaps to plan targeted practice, supervisor support and a later work evidence check; do not claim the intervention already improved performance.
+    text: Turns the gaps into practice on real work, supervisor support and a later evidence check. It does not claim the plan has worked.
+  - title: Check and hand back
+    text: Checks that every mark cites a sample and that self-reports are kept apart. It lists what is missing and gives one next step.
 output_shape: |-
-  Scope and source coverage
-  A skill evidence comparison, transfer barriers and focused development plan.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SKILL EVIDENCE TABLE
+    Skill | Course goal | Role expectation | Evidence (sample, date) | Mark: shown, partly shown, not shown or no evidence yet
+
+  SELF-REPORTS (not counted as proof)
+    <certificate or comment> | what it can and cannot show
+
+  WHAT GETS IN THE WAY
+    <barrier> | evidence for it | who can change it
+
+  PRACTICE PLAN
+    Skill | practice on real work | supervisor support | evidence to collect | check date
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - The course's learning objectives, as written before it ran
+    - Samples of real work from after the course, with dates
+    - What the role expects at work
+    - The follow-up window, with start and end dates
+  prerequisites:
+    - Agreement from anyone whose work or feedback you share, with names removed
+  output:
+    - name: Skill evidence table
+      contains: Each skill with the course goal, role expectation, evidence found and a mark.
+    - name: Self-reports list
+      contains: Certificates and comments kept apart, with what each can and cannot show.
+    - name: Transfer barriers
+      contains: What gets in the way of using the skills, with the evidence and who can change it.
+    - name: Practice plan
+      contains: Practice on real work, supervisor support, evidence to collect and a date to check again.
+    - name: Hand-back summary
+      contains: Files saved, evidence missing, checks not done and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file support
+      why: They can read work samples and documents you paste. None of them can watch anyone work.
+  inputs:
+    - Dated work samples from before the course, so change can be seen.
+    - A named supervisor who can confirm what the samples show.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Pick one course and one group of people. Mixed groups give mixed evidence.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Paste the real samples with dates. A summary from memory counts as a self-report.
   - what: Acceptance
-    how: Self reports and completion certificates are separate from demonstrated workplace performance.
+    how: Say what counts as "shown" for each skill before the AI marks anything.
+improve:
+  - Save the table and run it again after the follow-up window to see what moved.
+  - Add before-course samples so the next run can compare.
+  - Note which barriers turned out to be real, and fix those first.
+next:
+  - build-a-practical-manager-training-session
+  - training-handout-writer
+terms:
+  - term: Training transfer
+    meaning: Using what you learned on a course in your real work.
+  - term: Self-report
+    meaning: What people say about their own skills, not what they did.
+  - term: Learning objective
+    meaning: What the course says people will be able to do when it ends.
 judge:
   - Self reports and completion certificates are separate from demonstrated workplace performance.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -56,17 +121,3 @@ test:
   - Remove one necessary input. The AI should identify the gap without inventing a replacement.
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
-terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.

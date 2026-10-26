@@ -1,6 +1,6 @@
 new_slug: organic-format-tester
 name: "Organic format tester"
-summary: "Give it 20 posts and their numbers. Get a score out of 100, winning formats and a test."
+summary: "Find which post formats win for your store. Give it 20 posts and their numbers. Get keep, change or drop calls, a test and a score out of 100."
 job: grow-social
 thinking: high
 thinking_why: "It reads a table of numbers, groups it two ways and makes keep or drop calls. A stronger model makes fewer mistakes with the sums and groups."
@@ -17,6 +17,10 @@ when:
   - You have posted for a few weeks and cannot tell which kind of post works.
   - One post did well and you do not know how to repeat it.
   - You are about to change your plan and want data behind the change.
+not_for:
+  - "You have fewer than 20 posts or no numbers yet: keep posting for a few more weeks, then come back."
+  - "You want to judge paid ad campaigns: use the Meta Ads Manager or Google Ads reports, or write new paid copy with the Story image ad writer."
+  - "You only want new hook lines: use a hook writing step in your AI chat, then bring the best ones back here as your test."
 
 you_give:
   - Your last 20 or more posts, each with format, hook, topic and date
@@ -35,6 +39,27 @@ how_to_use:
   - Say your goal this month, growth or sales.
   - Read the three lists first, then the flops, then the keep, change or drop calls.
   - Post the test it sets up, all close together, and run this skill again next month.
+output_sample:
+  input:
+    - Your last 20 or more posts, with format, hook, topic and date
+    - Numbers for each post, such as views, 3-second hold, shares, comments, follows and clicks
+    - Your goal this month, growth or sales
+    - Your platform (optional)
+  prerequisites:
+    - Analytics exports from Instagram Insights or TikTok analytics, or a table you typed by hand
+  output:
+    - name: Three lists and flops
+      contains: Top posts by views, by followers gained and by deep comments, plus what the weakest posts share.
+    - name: By format
+      contains: Each format with its post count, average on your goal metric, 3-second hold and a keep, change, drop or too early call.
+    - name: By hook type
+      contains: Each hook style with its post count, average on your goal metric and a short note.
+    - name: Metric to chase
+      contains: The one number to watch for your goal, with the reason.
+    - name: Next test
+      contains: One strong idea, how many versions to post, how to measure them and where to scale the winner.
+    - name: Score and testing checks
+      contains: A score out of 100 with the sum, ten pass or fix checks, and any gaps marked missing.
 
 how_it_works:
   - title: Groups, not single posts

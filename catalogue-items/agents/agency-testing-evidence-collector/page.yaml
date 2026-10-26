@@ -1,0 +1,133 @@
+name: Evidence Collector agent
+summary: Check a website against its spec and get a QA report with screenshots, pass or fail results and a clear FAILED, NOT DETERMINED or READY call.
+headline: Evidence Collector agent
+subhead: Give it the spec and a link to your site, or screenshots you took. It checks each requirement and each button, form and menu against what the screenshots show. You get a website QA report where every issue has proof and steps to repeat it.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A developer says "the site is done". Then the menu does not open on a phone, or the form never sends. This website QA agent checks that claim against proof. It does not take anyone's word for it, including its own.
+
+  It starts from your spec and quotes the exact line it is testing. Then it looks at screenshots of the page on desktop, tablet and phone. For anything you click, it needs a before and after pair. A screenshot of a filled-in form does not show that the form sent, so it also looks for the reply or the saved result.
+
+  It reports only problems it can repeat and that break the spec. It does not add wishes the spec never had. If it could not test something, it writes NOT TESTED and never turns that gap into a bug. Zero issues is a fine answer when the tested scope is clear and the list of skipped checks is short and honest.
+
+  The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The original uses a Playwright screenshot script that lives in its author's project, and this pack does not include it. Its memory and success claims are role language, not results measured by AI Blocks.
+when:
+  - A developer or agency says a site, landing page or app is done, and you want proof before you pay or launch.
+  - You need a bug list with screenshots and steps your developer can repeat.
+  - You changed a page and want to know if the menu, form or accordion still works on a phone.
+  - You have a written spec and want to see which lines the build misses.
+not_for:
+  - "You want a final go or no-go call that also checks earlier QA claims: use the Reality Checker agent. Bring this agent's report to it."
+  - "You want to check the site for screen readers and keyboard use: use the Accessibility Auditor agent."
+  - "You want test code that runs on every release: use the Test Automation Engineer agent."
+  - "You want to know how fast the site loads under traffic: use the Performance Benchmarker agent."
+  - "You have an online store and want a launch checklist: use the Pre-launch store checker."
+you_give:
+  - The spec, brief or feature list the site must match. Paste the text.
+  - The site. Give a link your AI can open, or screenshots you took on desktop, tablet and phone.
+  - The pages and actions to check, such as the menu, a form, an accordion or dark mode.
+  - Your own pass rules, such as "the form must show a thank-you message" (optional).
+  - An earlier bug list or QA report, so it can check what was fixed (optional).
+you_get:
+  - A table that sets each spec line next to what the screenshot shows, marked pass or fail.
+  - A result for each button, form, menu and toggle (PASS, FAIL or NOT TESTED).
+  - A numbered list of issues that can be repeated. Each has a screenshot name and a priority.
+  - A plain rating of the design (Basic, Good or Excellent) and a status of FAILED, NOT DETERMINED or READY.
+  - The fixes owed and what to re-test.
+how_to_use:
+  - Download the pack. Add it to your AI as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - "Paste your spec. Then say how your AI will see the site. In Claude Code, Codex or a browser agent, give the link and let it take screenshots. In a plain chat, upload screenshots you took and name each one."
+  - "Say: Check this site against the spec. Do not add requirements. Mark anything you cannot see as NOT TESTED."
+  - Read the table of spec lines first. Fix any line it misread before you trust the issue list.
+  - Send the issue list to your developer. After the fixes, run it again with new screenshots and your old report.
+  - Save the report. Your AI does not remember it in the next chat, so paste it back for the re-test.
+how_it_works:
+  - title: Check what it can do
+    text: It says whether it can open the site and take screenshots, or only look at the ones you gave it. Anything beyond that is NOT TESTED.
+  - title: Quote the spec
+    text: It lists each requirement and quotes the exact words, so no later check drifts from what was agreed.
+  - title: Read the evidence
+    text: It looks at the screenshots at three sizes and in dark mode. It describes what it sees, not what it expects to see.
+  - title: Test each action
+    text: For an accordion, form, menu or toggle it compares a before and after pair. For a form it also looks for the reply or the saved result.
+  - title: Write up what repeats
+    text: It lists only problems that break the spec and can be repeated. It gives each one a screenshot and a priority.
+  - title: Give the status
+    text: It sets FAILED for proven blockers, NOT DETERMINED when needed proof is missing, and READY only when the agreed checks pass.
+output_shape: |-
+  REALITY CHECK
+    Tools I could use <browser, Playwright, none> | Screenshots reviewed <file names>
+
+  SPEC VS SCREENSHOT
+    Spec says "<quote>" | Screenshot shows <what is visible> | PASS or FAIL
+
+  INTERACTIVE TESTS
+    <accordion, form, nav, mobile menu, theme toggle> | <before file> and <after file> | PASS, FAIL or NOT TESTED
+
+  REPEATABLE ISSUES
+    1. <problem> | Evidence <file name> | Priority <Critical, Medium or Low> | Steps <how to repeat it>
+
+  QUALITY AND STATUS
+    Design level <Basic, Good or Excellent> | Status <FAILED, NOT DETERMINED or READY>
+
+  NEXT STEPS
+    Fix <list> | Re-test <yes or no, what> | NOT TESTED <list>
+output_sample:
+  input:
+    - Your spec or brief, pasted as text
+    - A link to the site, or screenshots on desktop, tablet and phone
+    - The pages and actions to check (menu, form, accordion, dark mode)
+    - Your own pass rules, if you have them (optional)
+  prerequisites:
+    - A browser or screenshot tool for your AI, such as Claude Code with Playwright, or screenshots you took yourself
+  output:
+    - name: Reality check
+      contains: The tools it could use and the screenshots it reviewed, so you know the scope of the test.
+    - name: Spec vs screenshot
+      contains: Each spec line quoted, what the screenshot shows, and a pass or fail mark.
+    - name: Interactive tests
+      contains: A result for each accordion, form, menu and toggle, with the before and after file names.
+    - name: Repeatable issues
+      contains: A numbered list of problems with a screenshot, steps to repeat and a priority.
+    - name: Quality and status
+      contains: A design level and a status of FAILED, NOT DETERMINED or READY.
+    - name: Next steps
+      contains: Fixes owed, what to re-test and a list of everything marked NOT TESTED.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Scope
+    how: Name the pages and actions to test, such as "the contact form and the phone menu only".
+  - what: Devices
+    how: Add the sizes you care about. The original checks desktop (1920 by 1080), tablet (768 by 1024) and phone (375 by 667).
+  - what: Pass rules
+    how: Paste your own rules, such as "the form must show a thank-you message", so it tests those first.
+improve:
+  - Keep each report with your project notes. Paste it back for the re-test so the agent checks what was fixed.
+terms:
+  - term: Spec
+    meaning: The written list of what the site must do and look like.
+  - term: Playwright
+    meaning: A free tool that opens a site in a browser and takes screenshots by script.
+  - term: NOT TESTED
+    meaning: A check the agent could not do. It is a gap in testing, not a bug in your site.
+  - term: Before and after pair
+    meaning: Two screenshots of the same page, one before a click and one after.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can open a local or staging site, run Playwright and save the screenshots for you.
+    - name: Claude, ChatGPT or Gemini
+      why: In a plain chat they can read screenshots you upload, but they cannot click for you.
+  inputs:
+    - Screenshots at three widths and one in dark mode, with clear file names.
+    - The staging link, if your AI can open it.

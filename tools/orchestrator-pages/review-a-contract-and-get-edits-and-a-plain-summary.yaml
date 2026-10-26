@@ -1,6 +1,6 @@
 new_slug: review-a-contract-and-get-edits-and-a-plain-summary
 name: Review a contract and get edits and a plain summary
-summary: Give it a contract. Get risky clauses flagged, edits to ask for and a summary to take to a lawyer.
+summary: Review a contract before you sign. Get risky clauses flagged, edits with fallbacks and a two-minute summary to take to your lawyer.
 job: check-contracts
 thinking: high
 thinking_why: Contract wording is easy to misread, and the later steps build on the first review. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You were sent a contract and the deadline is close.
   - You want to know which clauses to push back on before you talk to the other side.
   - Someone else must approve the deal and needs a short summary, not 30 pages.
+not_for:
+  - "You have a large, unusual or cross-border deal: see a qualified lawyer first, then use this to prepare your questions."
+  - "You only need to know if an AI vendor's terms are safe: use the AI vendor terms checker."
+  - "You need legal advice or a final sign-off: ask a qualified lawyer, because this is only a first check."
 you_give:
   - The contract, as a file or pasted text
   - Which side you are on, such as buyer, seller or partner
@@ -29,6 +33,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste the contract and say which side you are on. Add any rules you always use.
   - When it finishes, take the summary and the flagged clauses to a qualified lawyer before you sign.
+output_sample:
+  input:
+    - Your contract, as a file or pasted text
+    - Which side you are on, such as buyer or seller
+    - Your deadline and the points that worry you
+    - Your usual contract rules (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude in Claude Code or a Claude Project
+    - The handoff pack with HANDOFF.md and the skill files
+  output:
+    - name: "Step 1: Contract review"
+      contains: Contract type, clauses ranked by risk, suggested edits with fallbacks and the points to raise first.
+    - name: "Step 2: IP check"
+      contains: Who owns what, licence scope, warranties, indemnities, clashes between clauses and a risk ranking.
+    - name: "Step 3: Plain summary"
+      contains: Two short paragraphs saying if you can sign, what the catch is and what to do first.
+    - name: Pause for a lawyer
+      contains: A reminder to take the summary, edits and flagged clauses to a qualified lawyer before signing.
+    - name: Hand-back summary
+      contains: Each step's file and one list of every MISSING line.
 how_it_works:
   - title: Review the contract clause by clause
     text: Reads the whole contract, compares each clause with your rules or common market terms, rates each gap and suggests an edit with a fallback.

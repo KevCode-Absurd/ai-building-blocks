@@ -9,6 +9,7 @@ level: beginner
 inputs:
   - {type: question, required: true}
   - {type: plan, required: false}
+  - {type: audit_report, required: false}
 outputs:
   - {type: spreadsheet}
 uses: []

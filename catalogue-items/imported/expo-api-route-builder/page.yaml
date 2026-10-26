@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It writes routes from a documented pattern.
 new_slug: expo-api-route-builder
 name: Expo API route builder
-summary: Say what your mobile app needs from a server. Get API routes built in
-  Expo Router and set up to host.
+summary: Build Expo API routes that keep your secret keys on the server. Say what your app needs and get route files and deploy steps for EAS Hosting.
 job: build-software
 headline: Expo API route builder
-subhead: Server routes for your mobile app, built inside Expo Router and ready
-  to host with EAS Hosting. They keep your secret keys on the server, away from
-  the phone.
+subhead: Server routes for your mobile app, built inside Expo Router and ready to host with EAS Hosting. They keep your secret keys on the server, away from the phone.
 explain: |
   Server routes for your mobile app, built inside Expo Router and ready to host with EAS Hosting. They keep your secret keys on the server, away from the phone.
 
@@ -18,19 +15,48 @@ when:
   - You need an endpoint that receives Stripe or GitHub webhooks.
   - You want to check data on a server before saving it.
   - You are unsure whether you need your own backend or a managed service.
+not_for:
+  - "You only need sign-in: use a service like Clerk, Auth0 or Firebase Auth instead of writing your own routes."
+  - "You want simple saving and loading of data: use a managed backend like Supabase, Firebase or Convex."
+  - "You want file uploads: send files straight to storage, such as S3 or Cloudflare R2, with a signed link."
 you_give:
-  - What the app needs from a server
-  - Services you call, such as Stripe or a database
-  - Existing Expo project
-  - Hosting set up with EAS (optional)
+  - What your app needs from a server
+  - The services you call, such as Stripe, OpenAI or a database
+  - Your existing Expo project
+  - The API keys for those services, gathered first (optional)
+  - An Expo account for EAS Hosting (optional, only to deploy)
 you_get:
   - Route files in Expo Router
   - Secret handling on the server
   - Deploy steps for EAS Hosting
   - Advice if a managed backend fits better
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool and paste the skill, or load the skill folder if your tool takes files.
+  - Say what your app needs from a server and which services you call.
+  - Share your Expo project files. This works best when your AI can read files and run commands.
+  - Check the routes it writes. Make sure each one checks who is calling and limits use before it calls a paid service.
+  - Test locally with npx expo serve and curl.
+  - To go live, log in to EAS, set your secrets, then run eas deploy. Stripe, OpenAI and hosting use can cost money.
+output_sample:
+  input:
+    - What your app needs from a server
+    - The services you call, such as Stripe, OpenAI or a database
+    - Your Expo project
+    - Your API keys, kept ready but not pasted into the app (optional)
+  prerequisites:
+    - An existing Expo project that uses Expo Router
+    - An Expo account to deploy with EAS Hosting
+    - An AI that can read and edit your project files and run commands
+  output:
+    - name: Route files
+      contains: One file per endpoint in app/api, ending in +api.ts, with the methods your app needs.
+    - name: Input checks and errors
+      contains: Checks on what the app sends, plus clear status codes and safe error messages.
+    - name: Environment variable list
+      contains: The names of the secret keys the server needs, set locally in .env and in EAS.
+    - name: Local test commands
+      contains: How to start the server with npx expo serve and try each route with curl.
+    - name: Deploy steps
+      contains: The eas deploy command and how to set production secrets before you run it.
+    - name: Backend advice
+      contains: A short note on a managed backend or other option when your own route is not the best fit.

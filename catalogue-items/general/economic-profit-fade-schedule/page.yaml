@@ -1,7 +1,7 @@
 new_slug: economic-profit-fade-schedule
 name: Economic profit fade schedule
 headline: Economic profit fade schedule
-summary: Show two excess-return years followed by an explicit zero-excess-return terminal state.
+summary: "Build an economic profit schedule: two years of excess returns, then zero. You get the present value added to your invested capital."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a two-period economic-profit schedule and PV contribution over invested capital.
   - You work on public equity valuation and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "Your capital, tax or write-offs change each year: build a larger schedule with a finance person, since this one holds capital flat."
+  - "Excess returns last longer than two years: use a longer multi-year valuation model in your own spreadsheet instead."
+  - "You need a full investment view or advice: ask a qualified analyst, because this only shows one narrow calculation."
 you_give:
   - Opening invested capital, two annual NOPAT forecasts, WACC and evidence supporting constant capital and zero later excess returns.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,27 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Your opening invested capital
+    - Two years of forecast NOPAT (operating profit after tax)
+    - Your WACC (cost of capital)
+    - Evidence that capital stays flat and later excess returns are zero
+    - Reporting date, currency and scale
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, if you want to run the bundled calculation (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The mandate, valuation date, currency, scale and each source with its date.
+    - name: Inputs and assumptions
+      contains: Every input and assumption, kept apart from reported facts and marked MISSING where unknown.
+    - name: Model calculations and reconciliations
+      contains: The yearly capital charge, each year's economic profit, its present value and the total added to capital.
+    - name: Actual file verification
+      contains: What was recalculated, reopened and rendered in the workbook, and what could not run.
+    - name: MISSING and CHECKS MISSED
+      contains: Open inputs and any checks that failed or did not run, or the word none.
 how_it_works:
   - title: 1. Use operating invested capital excluding nonoperating assets and a WACC matching NOPAT
     text: Use operating invested capital excluding nonoperating assets and a WACC matching NOPAT.

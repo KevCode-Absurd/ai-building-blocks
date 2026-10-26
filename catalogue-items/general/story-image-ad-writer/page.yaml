@@ -1,6 +1,6 @@
 new_slug: story-image-ad-writer
 name: "Story image ad writer"
-summary: "Paste customer quotes. Get a story ad, a picture plan, two other openings and a test plan."
+summary: "Write a story image ad from your customers' own words. You get the story, a picture plan, two other openings and two tests to run."
 job: write-ad-copy
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You want to reach people who have never heard of you, and your product ads only reach people who already know you.
   - Your reviews keep describing the same moment, and you want an ad built on it.
   - You want a long post-style ad, but nobody real has agreed to tell their story.
+not_for:
+  - "You want a plain product ad for people who already know you: write a direct ad with your offer and price in the first line."
+  - "Nobody has described the problem in their own words yet: collect reviews, emails or call notes first, then come back."
+  - "You need a rule check on a finished ad: run it through the Facebook ad rules check instead."
 
 you_give:
   - Customer words about the problem (reviews, emails, call notes), with where each came from
@@ -37,6 +41,35 @@ how_to_use:
   - Say who may narrate and where the click goes. If nobody has agreed, leave it out and the brand tells the story.
   - Ask for short, standard or long. Short is the default for strangers in a feed.
   - Read the page line. If it says the page is missing, build that page before you spend on the ad.
+output_sample:
+  input:
+    - Customer words about the problem, with where each came from
+    - Your product facts, proof, approved claims and what you never say
+    - Who may tell the story (optional)
+    - The page the click opens, and the length you want (optional)
+  output:
+    - name: PUSH
+      contains: A pass or fail on whether the problem can carry a story ad, with the buyer's words and source.
+    - name: NARRATOR
+      contains: Who tells the story and why they may honestly tell it.
+    - name: SHAPE
+      contains: The story shape and the customer quotes it rests on.
+    - name: PICTURE
+      contains: Where the problem leaves a trace, the scene, what it makes people ask, and a starter image prompt.
+    - name: STORY
+      contains: The ad text with its opener type, length and exact word count.
+    - name: LINE UNDER THE PICTURE
+      contains: The short line under the picture, with its character count.
+    - name: OTHER OPENINGS
+      contains: Two other first lines, each with its own line under the picture.
+    - name: PAGE
+      contains: What the first screen of the click page must say, or a note that it is missing.
+    - name: FLAGS
+      contains: Permissions needed, lines it inferred, claims used and claims left out.
+    - name: TESTS
+      contains: "Two tests: two pictures against one story, then a second opening on the winner."
+    - name: CHECKS MISSED
+      contains: Any of its own checks the ad still fails, one per line, or none.
 
 how_it_works:
   - title: Finds the push

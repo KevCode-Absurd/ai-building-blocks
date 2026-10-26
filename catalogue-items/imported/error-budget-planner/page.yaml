@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It turns user needs into numbers and alert rules.
 new_slug: error-budget-planner
 name: Error budget planner
-summary: Name your service. Get service level targets, error budgets and alert
-  rules that match what users feel.
+summary: Plan your service level targets, monthly error budget and alert rules from what users feel. Give it your service name and purpose.
 job: ship-and-host
 headline: Error budget planner
-subhead: Name your service. Get service level targets, error budgets and alert
-  rules that match what users feel. Bring name and purpose of the service. Use
-  the result to plan your next step.
+subhead: Name your service. Get service level targets, error budgets and alert rules that match what users feel. Bring name and purpose of the service. Use the result to plan your next step.
 explain: |
   Reliability targets for your service, written as numbers a team can act on: how much downtime users will put up with, how much of it you can spend, and when to raise an alarm.
 
@@ -18,6 +15,10 @@ when:
   - Your alerts fire constantly and nobody trusts them.
   - Your team argues about shipping features versus fixing stability.
   - You need a dashboard that shows reliability against a target.
+not_for:
+  - "You only want basic uptime checks with no reliability target: set up a simple ping monitor in your hosting tool instead."
+  - "You have no access to service numbers like success rate or response time: collect a few weeks of data first, or ask your engineer."
+  - "You need a legal uptime promise for a customer contract: ask a lawyer and your team lead to agree the terms."
 you_give:
   - Name and purpose of the service
   - Current uptime and speed numbers (optional)
@@ -30,7 +31,28 @@ you_get:
   - Dashboard outline
   - Reporting routine
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
+  - Paste the skill instructions into the chat.
+  - Add your service name, what it does and what users care about most.
+  - Add your current uptime and speed numbers, if you have them.
+  - Check each target against real data before you share it. Ask your team to agree on the targets.
+  - Turn the alert rules into your monitoring tool's format and build the dashboard.
+output_sample:
+  input:
+    - Your service name and what it does
+    - What users care about most
+    - Your current uptime and speed numbers (optional)
+    - The monitoring tools you use (optional)
+  prerequisites:
+    - Access to service numbers such as success rate and response time, so targets can be checked against real data
+  output:
+    - name: SLIs and targets
+      contains: The measures that match what users feel, such as success rate and response time, each with a target.
+    - name: Error budget per month
+      contains: How much failure you can afford each month, worked out from each target.
+    - name: Alert rules
+      contains: Rules that fire when the budget burns fast or slow, so alerts point to real problems.
+    - name: Dashboard outline
+      contains: A suggested layout showing each measure against its target.
+    - name: Review routine
+      contains: How and when your team checks the targets and budget together.

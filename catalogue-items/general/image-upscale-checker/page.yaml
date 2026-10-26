@@ -1,6 +1,6 @@
 new_slug: image-upscale-checker
 name: "Image upscale checker"
-summary: "Attach your image and size needed. Get upscale settings, a change check and a score out of 100."
+summary: "Check an image upscale before it goes to print. Give it your approved image and target size. You get safe settings, a change check and a score."
 job: make-image-ads
 thinking: high
 thinking_why: "It has to keep the product, its label and every word on the picture exact."
@@ -17,6 +17,10 @@ when:
   - You need a larger version of an approved image for print, a big banner or a high-resolution export.
   - You want a sharper first frame to start an AI video from.
   - A past upscale changed a face, a hand or your label, and you want to catch it next time.
+not_for:
+  - "You only need a small bump under 1.5 times and nothing must be exact: use a basic resize in any photo editor."
+  - "The original has a wrong word, a broken hand or an unapproved face: fix the image first, then come back."
+  - "You want a new picture or a changed scene: use your image tool to make a new one, since this keeps the picture the same."
 
 you_give:
   - The approved image, the original file, attached (your AI can see pictures)
@@ -37,6 +41,33 @@ how_to_use:
   - Name your upscaler and its models. Set the size and settings there, as the skill says.
   - Attach the returned file to the same chat for the checks.
   - Use the result only if every row passes. Keep the original untouched either way.
+output_sample:
+  input:
+    - Your approved image, the original file, attached
+    - The size you need and what it is for
+    - Your upscaler and the models and settings it has
+    - How many tries you allow (optional)
+  prerequisites:
+    - An AI that can see attached pictures
+    - Your upscaler tool, since the AI plans the upscale but you run it
+    - An image editor with layers, such as GIMP, for the difference check
+  output:
+    - name: Source and target
+      contains: Your file's pixel size and ratio, and the real size in pixels your use needs.
+    - name: Upscaler and settings
+      contains: The kind of upscaler to use, its faithful settings, and why that kind fits.
+    - name: Text and logo plan
+      contains: How your words and logo stay exact, by putting them back from the design file or artwork.
+    - name: Prompt
+      contains: A keep-everything prompt for tools that take one, with what is allowed and not allowed.
+    - name: Result and difference check
+      contains: The returned file's real size, and what showed up bright when laid over the original.
+    - name: Review
+      contains: A pass, fail or needs-a-person mark for words, faces, hands, product, and texture and edges.
+    - name: Fidelity score
+      contains: Checks passed out of checks counted, shown as a score out of 100 for each try.
+    - name: Verdict
+      contains: Tries used, and whether the file is accepted or the original is returned with the reason.
 
 how_it_works:
   - title: Checks the original

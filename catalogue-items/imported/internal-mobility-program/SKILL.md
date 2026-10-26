@@ -10,6 +10,57 @@ metadata:
 
 Design and operate internal mobility programs that move talent across roles, teams, and projects — reducing regrettable attrition, developing employee careers, and creating a culture where growth happens within the organization.
 
+## When to use it
+
+Use it to set up how your staff move into new roles, teams or projects.
+
+Skip it when:
+
+- You need to end a job, run a layoff or restructure the company. Use your HR policy and employment advice.
+- You want a plan for who replaces key leaders. Use the Succession plan builder.
+- You need career levels for one job family. Use the Career ladder and growth plan writer.
+
+## What to gather first
+
+Ask for anything missing once, in one message. Mark what you still lack as MISSING. Never invent company numbers or benchmark rates.
+
+1. Company size and how it is organised (teams, locations).
+2. How people move or apply for other roles today.
+3. Your goal, such as keeping people longer or filling more roles inside (optional).
+4. Your own numbers for internal moves and exits, if you track them (optional).
+
+## Steps
+
+1. Describe today's practice in 3 or 4 lines and name the main gap.
+2. Choose the move types you will support: lateral, promotion, cross-team, short project, rotation. Keep to those that fit the company size.
+3. Write the policy: who can apply, minimum time in role, how roles are posted inside, how long each stage takes, what managers must do.
+4. Write the transfer request form, the manager approval form and a short guide for managers on releasing people.
+5. Add the conversation guides: how HR partners and managers talk about internal moves.
+6. Set the measures and how to collect them.
+7. Write a rollout plan with a small first pilot.
+
+## Output format
+
+Return these parts in order:
+
+1. Policy summary (one page, plain words)
+2. Move types and who they suit
+3. Transfer request form
+4. Manager approval form and manager guide
+5. Career conversation guide for HR partners
+6. Measures table (measure, how to collect it, your starting value or MISSING)
+7. Rollout plan (pilot, review date, full launch)
+
+## Rules
+
+- A common minimum time in role is 12 to 18 months. Present it as an option the company can change, not a rule.
+- Compare only with your own data: internal moves against outside hires, and the exits of people who moved against those who did not. Do not state industry benchmark rates unless the user gives a named source.
+- Check the policy with HR or an employment adviser before you publish it.
+
+## After you run it
+
+Pilot with one team for a quarter. Then use the Succession plan builder and the HR metrics and report builder to track results.
+
 ## Supported tasks
 
 - Designing internal mobility frameworks and policies
@@ -19,7 +70,7 @@ Design and operate internal mobility programs that move talent across roles, tea
 - Writing internal transfer request and approval workflows
 - Creating career lattice maps for non-linear growth paths
 - Designing rotation programs for high-potential employees
-- Measuring internal mobility rates and benchmarking against industry
+- Measuring internal mobility rates and comparing them with your own past data
 - Training HR business partners to facilitate internal placement conversations
 - Aligning internal mobility with succession planning and retention strategy
 
@@ -53,12 +104,12 @@ Design and operate internal mobility programs that move talent across roles, tea
 
 1. "Build an internal mobility metrics dashboard with fill rate, time-to-fill, and retention impact."
 2. "Design a cohort analysis comparing retention of internally mobile vs. non-mobile employees."
-3. "Create a benchmark report template for internal vs. external hire performance."
+3. "Create a report template comparing internal and external hire performance, using the company's own data."
 4. "Develop a mobility health index for tracking program effectiveness."
 
 ## Tips
 
-- Establish a minimum tenure policy (typically 12-18 months) before employees can apply internally, but make exceptions for critical business needs.
+- Establish a minimum tenure policy (12 to 18 months is common; set your own) before employees can apply internally, but make exceptions for critical business needs.
 - Train managers to be talent multipliers, not talent hoarders—their willingness to release people drives program success.
 - Make internal roles visible before external posting to signal commitment to internal growth.
 - Track internal mobility rates by function and level to identify where the program is underutilized.

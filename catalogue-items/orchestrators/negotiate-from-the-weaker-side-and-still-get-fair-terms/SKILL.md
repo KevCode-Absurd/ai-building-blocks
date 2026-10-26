@@ -36,9 +36,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Map their side.** Use the skill `other-person-view-mapper`. Their side only: what they want, why they act as they do, what they fear losing and how they would describe this deal to their boss.
-2. **Set your terms.** Use the skill `weak-position-negotiation`. Give it their view and your needs. Your terms, your walk-away point, the two or three things you will not give, and what you can give freely, planned for the side with less power.
-3. **Plan the call.** Use the skill `negotiation-call-prep-planner`. Give it their view and your terms. The opening, the feeling labels to use, the calibrated how and what questions, and the question that tests whether the deal is real.
+1. **Map their side.** Use the skill `other-person-view-mapper`. Their side only: what they want, why they act as they do, what they fear losing and how they would describe this deal to their boss. Hands their view to steps 2 and 3.
+2. **Set your terms.** Use the skill `weak-position-negotiation`. Give it their view and your needs. Your terms, your walk-away point, the two or three things you will not give, and what you can give freely, planned for the side with less power. Hands your terms to the call plan.
+3. **Plan the call.** Use the skill `negotiation-call-prep-planner`. Give it their view and your terms. The opening, the feeling labels to use, the calibrated how and what questions, and the question that tests whether the deal is real. Hands the call plan to the calming lines.
 4. **Write the calming lines.** Use the skill `disagreement-calming-line-writer`. Give it the call plan and the points you expect them to dispute. Short lines for each point of dispute that lower the heat without giving ground, in the manner of Dale Carnegie and Benjamin Franklin.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

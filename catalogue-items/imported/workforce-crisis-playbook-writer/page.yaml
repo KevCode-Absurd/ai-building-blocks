@@ -2,35 +2,84 @@ thinking: medium
 thinking_why: Speed and accuracy both matter in the first hours.
 new_slug: workforce-crisis-playbook-writer
 name: Workforce crisis playbook writer
-summary: Name the crisis type. Get roles, a first-hour staff message, a 24-hour
-  action list and a review plan for your people.
+summary: "Write an HR crisis plan for your staff: who does what, a first-hour message to employees, a 24-hour action list and a review plan."
 job: hire-people
 headline: Workforce crisis playbook writer
-subhead: A crisis playbook for your people, written before you need it or while
-  you are in it. You get who does what, what to tell staff in the first hour,
-  and what to do in the first day.
+subhead: Name the crisis and tell it your company size. Your AI sets who decides what, drafts the first message to staff, and lists what to do in the first day. You also get manager talking points and a review plan. Not legal advice.
 explain: |
-  A crisis playbook for your people, written before you need it or while you are in it. You get who does what, what to tell staff in the first hour, and what to do in the first day.
+  When something goes wrong at work, staff want to hear from you fast, and managers need to know their part. This skill writes an HR crisis response plan, either ahead of time or while the crisis is happening.
 
-  You name the type of crisis, such as a safety incident, natural disaster, sudden leadership departure or public scandal. The skill sets roles and decision rights for HR, legal, security and communications, drafts a first message to employees, and lists actions for the first 24 hours. It covers staff wellbeing and manager briefings. After the event it gives you a review plan to find what to improve. Not legal advice.
+  You name the type of crisis, such as a safety incident, a natural disaster, a sudden leader exit or a public scandal. Your AI sets roles and decision rights for HR, legal, security and communications. It drafts a first message to employees that is honest about what is not yet known. It lists actions for the first 24 hours and covers staff wellbeing.
+
+  It then gives managers talking points and sets up a review after the event, so the plan gets better. Anything legal goes to your own lawyer before you send it.
 when:
-  - You have no written plan for a workplace emergency.
-  - A crisis has just started and you need staff messages now.
-  - A senior leader left suddenly and people are worried.
-  - You want to train managers on their role in a crisis.
+  - You have no written plan for a workplace emergency, such as a fire, injury or flood.
+  - A crisis started an hour ago and you need a message to staff now.
+  - A senior leader left suddenly and people are worried about their jobs.
+  - You want managers to know their role before a crisis, not during one.
+not_for:
+  - "You must cut jobs: use the layoff plan writer, which has a decision check and a manager script for that."
+  - "The crisis is a product defect or a customer complaint: use the crisis response planner."
+  - "A server or app is down: use the outage incident leader."
+  - "One employee has a dispute or conduct issue: follow your HR policy and ask an employment lawyer."
 you_give:
-  - Crisis type
-  - Company size and sites
-  - Existing contacts for legal and security (optional)
-  - Facts known so far (optional)
+  - The type of crisis
+  - Your company size and number of sites
+  - Names and contact roles for legal and security (optional)
+  - Facts you know so far, if the crisis is live (optional)
 you_get:
-  - Roles and decision authority
-  - First-hour staff message
-  - 24-hour action list
-  - Manager briefing points
-  - Post-crisis review plan
+  - Roles and decision rights for HR, legal, security and communications
+  - A first-hour message to staff
+  - A 24-hour action list
+  - Talking points for managers
+  - A plan to review what happened afterward
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the SKILL.md text from this item, or upload the file. No code or paid tools are needed.
+  - Say whether the crisis is live or you are planning ahead. Name the crisis type and give your company size and sites.
+  - If it is live, list only the facts you are sure of. Tell your AI what is still unknown.
+  - Read the staff message first. Check every fact, and remove anything you cannot confirm.
+  - Have your lawyer or legal contact read any message before it goes out, then send it.
+  - Run the review plan within a few weeks of the event.
+how_it_works:
+  - title: Ask what is known
+    text: It asks for the crisis type, your size and what you know, and marks the gaps instead of guessing.
+  - title: Set roles
+    text: It names who decides what across HR, legal, security and communications.
+  - title: Draft the first message
+    text: It writes a short staff message that says what is known, what is not, and when you will update.
+  - title: List the first 24 hours
+    text: It orders the actions, including staff safety and support.
+  - title: Brief managers
+    text: It writes talking points so managers give the same answers.
+  - title: Plan the review
+    text: It sets up a review after the event to learn what to change in the playbook.
+output_sample:
+  input:
+    - The type of crisis
+    - Your company size and number of sites
+    - Facts known so far, if it is live (optional)
+    - Legal and security contacts (optional)
+  output:
+    - name: Roles and decision rights
+      contains: A table of who decides, who acts and who must be told across HR, legal, security and communications.
+    - name: First-hour message to staff
+      contains: A short, honest message with what is known, what is not, and when the next update comes.
+    - name: 24-hour action list
+      contains: Ordered actions with an owner for each, including staff safety and wellbeing support.
+    - name: Manager talking points
+      contains: Plain answers managers can give their teams, and what to pass up instead of guessing.
+    - name: Post-crisis review plan
+      contains: Questions and steps to find what worked, what failed and what to change.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This runs as text in Claude, ChatGPT or Gemini. A fast reply matters more than any special tool.
+  inputs:
+    - Your staff handbook or emergency procedures
+    - A list of your sites and shifts
+    - Your employee assistance or counselling contact
+terms:
+  - term: decision rights
+    meaning: Who has the final say on each type of choice, so nobody waits or argues during a crisis.
+  - term: tabletop exercise
+    meaning: A practice run where your team talks through a made-up crisis step by step.

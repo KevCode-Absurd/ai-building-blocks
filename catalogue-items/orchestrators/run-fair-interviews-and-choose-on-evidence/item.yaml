@@ -15,11 +15,11 @@ outputs:
   - {type: copy_draft}
 uses: [interview-process-planner, interview-scorecard-builder, work-sample-test-designer, fair-candidate-comparer, candidate-message-drafter]
 steps:
-  - {uses: interview-process-planner, note: "The stages for this role and level, who runs each one and what it checks, so no stage repeats another."}
-  - {uses: interview-scorecard-builder, note: "One scorecard per stage: the set questions, what a strong and a weak answer sound like, and a rating guide every interviewer uses."}
-  - {uses: work-sample-test-designer, note: "A short task taken from the real job, a scoring guide and fairness checks, so candidates are judged on work."}
-  - {uses: fair-candidate-comparer, note: "Candidates compared on the scorecards alone, with a flag on any note that rests on feel or on something unrelated to the job. You make the call."}
-  - {uses: candidate-message-drafter, note: "The offer call for the person you chose and a clear, kind reply for everyone else, with the real reason where you can give one. Nothing is sent until you say so."}
+  - {uses: interview-process-planner, note: "The stages for this role and level, who runs each one and what it checks, so no stage repeats another. Hands steps 2 and 3 the stage plan."}
+  - {uses: interview-scorecard-builder, note: "One scorecard per stage: the set questions, what a strong and a weak answer sound like, and a rating guide every interviewer uses. Takes step 1's stage plan. Hands step 4 the scorecards to rate against."}
+  - {uses: work-sample-test-designer, note: "A short task taken from the real job, a scoring guide and fairness checks, so candidates are judged on work. Uses your role brief and step 1's stage plan, plus step 2's scorecards so the test score combines with the interview scores. Hands step 4 the test and its scoring guide."}
+  - {uses: fair-candidate-comparer, note: "Candidates compared on the scorecards alone, with a flag on any note that rests on feel or on something unrelated to the job. You make the call. Uses the filled-in scorecards and test results you bring after the pause, rated against step 2's scorecards and step 3's scoring guide. Hands step 5 the comparison."}
+  - {uses: candidate-message-drafter, note: "The offer call for the person you chose and a clear, kind reply for everyone else, with the real reason where you can give one. Nothing is sent until you say so. Uses your hiring decision and step 4's comparison for the real reasons. Hands you the drafts to send."}
 origin: own
 version: 1.0.0
 example_pending: true

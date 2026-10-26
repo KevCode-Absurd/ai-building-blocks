@@ -1,48 +1,116 @@
 new_slug: water-utility-collections-reconciler
 name: Water utility collections reconciler
 headline: Water utility collections reconciler
-summary: A water billing, collection and receivables bridge
+summary: Turn water produced, water billed, your rate and your receipts into closing receivables. See what you billed, collected and still need to collect.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A water billing, collection and receivables bridge. Share same-period produced and billed cubic meters, approved average realized billed rate, opening receivables, current and arrears receipts, authorized adjustments and operating cash.
-explain: |-
-  A water billing, collection and receivables bridge.
+subhead: Give it water produced and billed, your billed rate, opening receivables, what customers paid and any approved adjustments. It works out new billings, total receipts and closing receivables, and keeps old arrears apart from current bills.
 
-  Utility collections finance. Illustrative figures only in USD unless labelled otherwise. This focused operating schedule does not establish a complete business forecast, accounting treatment, market price or approval.
+explain: |-
+  A water utility sends bills, customers pay some of them, and the rest sits as money owed. A water utility collections reconciliation shows how that balance moved in one period. A number like "we collected 1,400" gets tied back to what was billed.
+
+  This skill rolls receivables forward in one line. Opening receivables, plus new billings, less approved adjustments, less total receipts, equals closing receivables. New billings are billed cubic meters times your average realized rate. Receipts are split into payment of current bills and payment of old arrears. Catching up on old debt is never reported as good collection of current bills.
+
+  It also compares water produced with water billed. The gap is unbilled volume. The skill does not call that gap physical leakage, because meter errors, free supply and timing also cause it. Where a figure is missing, it says so and stops that calculation. It does not use zero.
+
 when:
-  - You need a water billing, collection and receivables bridge.
-  - You work on utility collections finance and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A board or lender asks how much of the water you billed was actually collected.
+  - Your receipts went up, and you need to know if that is current bills or old arrears.
+  - Produced and billed volumes do not match, and you want the billing side of the gap in money.
+  - You close a month and need opening receivables to tie to closing receivables.
+
+not_for:
+  - "You need tariff approval, a regulator filing or an accounting treatment. This is a cash and receivables schedule built from numbers you supply, and a finance lead or accountant should review it."
+  - "You want to know where water is physically lost. Unbilled volume is a billing gap, not proof of leakage."
+  - "You want to set aside credit-loss expense and write-offs against receivables. Use the Receivables allowance roll-forward."
+  - "You work in health claims, not water bills. Use the Clinic claims collections bridge."
+
 you_give:
-  - Same-period produced and billed cubic meters, approved average realized billed rate, opening receivables, current and arrears receipts, authorized adjustments and operating cash.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "Cubic meters produced and cubic meters billed for the same period, from your meter and billing records"
+  - "Your approved average realized billed rate, per billed cubic meter"
+  - "Opening receivables, from your ledger at the start of the period"
+  - "Receipts on current bills and receipts on old arrears, from the bank or cash book"
+  - "Approved adjustments, such as credits or write-offs someone has signed off"
+  - "Operating cash for the period"
+  - "Reporting dates, currency and scale"
+
 you_get:
-  - A water billing, collection and receivables bridge.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "New billings: billed cubic meters times your rate"
+  - "Unbilled cubic meters: produced less billed"
+  - "Total receipts, split into current bills and old arrears"
+  - "Closing receivables, with a check that the roll-forward adds up"
+  - "A list of anything missing and what it blocked"
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Add the skill to your AI, or copy it into a new chat in Claude, ChatGPT or Gemini. Attach your billing and receipts sheets if your AI reads files."
+  - "Give the figures for one period. Say which receipts paid current bills and which paid old arrears."
+  - "Check the input table first. Produced and billed volumes must cover the same dates as the receipts."
+  - "Read new billings, total receipts and closing receivables, then the check that opening plus billings less adjustments less receipts equals closing."
+  - "If a figure is missing, the skill names it and stops that part. Add it and run again."
+  - "Have a finance lead review the result before it goes to a board, lender or regulator."
+
 how_it_works:
-  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
-    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
-  - title: 2. Reconcile metered produced and billed volumes without treating unbilled volume as proven physical leakage
-    text: Reconcile metered produced and billed volumes without treating unbilled volume as proven physical leakage.
-  - title: 3. Compute billed value on the stated realized rate; separate current-period receipts from collection of prior-period arrears
-    text: Compute billed value on the stated realized rate; separate current-period receipts from collection of prior-period arrears.
-  - title: 4. Roll opening receivables through billings, approved adjustments and total receipts; reconcile bank cash separately from revenue
-    text: Roll opening receivables through billings, approved adjustments and total receipts; reconcile bank cash separately from revenue.
+  - title: Maps your sources
+    text: Lists each figure with its date, unit, currency and where it came from, and flags anything missing.
+  - title: Compares volumes
+    text: Subtracts billed from produced cubic meters. It reports the gap as unbilled volume, not as leakage.
+  - title: Values the billing
+    text: Multiplies billed cubic meters by your stated realized rate to get new billings.
+  - title: Splits receipts
+    text: Keeps payment of current bills apart from payment of old arrears.
+  - title: Rolls receivables
+    text: Opening receivables plus new billings, less approved adjustments and total receipts, gives closing receivables.
+  - title: Checks and hands back
+    text: Treats bank cash as its own check, lists missing figures and ends with CHECKS MISSED.
+
 output_shape: |-
-  A water billing, collection and receivables bridge.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES
+  <figure> | <source> | <date> | <unit, currency, scale, period>
+
+  INPUTS AND ASSUMPTIONS
+  Produced <m3> | Billed <m3> | Rate <per m3> | Opening receivables <amount> | Receipts: current <amount>, arrears <amount> | Adjustments <amount>
+
+  CALCULATIONS AND RECONCILIATIONS
+  Unbilled volume: <produced - billed>
+  New billings: <billed x rate>
+  Total receipts: <current + arrears>
+  Closing receivables: <opening + new billings - adjustments - receipts>
+
+  ACTUAL FILE VERIFICATION
+  <file or sum checked> | <result>
+
+  MISSING
+  <figure and what it blocked>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+
+output_sample:
+  input:
+    - "Cubic meters produced and billed for one period"
+    - "Your average billed rate and opening receivables"
+    - "Receipts on current bills and on old arrears, plus approved adjustments"
+    - "Operating cash, reporting dates and currency"
+  prerequisites:
+    - "Billing records and a bank or cash book for the same period"
+    - "A named person who approved the adjustments"
+  output:
+    - name: "SCOPE AND DATED SOURCES"
+      contains: "Each figure with its source, date, unit, currency, scale and the period it covers."
+    - name: "INPUTS AND ASSUMPTIONS"
+      contains: "The volumes, rate, opening receivables, receipts and adjustments you gave."
+    - name: "CALCULATIONS AND RECONCILIATIONS"
+      contains: "Unbilled volume, new billings, total receipts and closing receivables, each shown as a short sum."
+    - name: "ACTUAL FILE VERIFICATION"
+      contains: "Which sums or workbook checks ran, and whether each passed."
+    - name: "MISSING"
+      contains: "Any figure it could not find, and which calculation that stopped."
+    - name: "CHECKS MISSED"
+      contains: "Every check that failed or could not run, or none."
+
+next: [receivables-allowance-movement-bridge, cash-versus-earnings-checker]
+
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -50,29 +118,40 @@ tweaks:
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
     how: Every material driver traces to a dated source; actuals and scenarios remain separate.
+
 judge:
   - Every material driver traces to a dated source; actuals and scenarios remain separate.
   - Missing evidence blocks the affected calculation instead of becoming a zero.
   - Collection of old arrears must not be labeled current-bill collection performance.
   - Opening receivables plus new billings minus authorized adjustments minus total receipts equals closing receivables.
+
 test:
   - Run the included baseline and changed-input fixtures, then compare with the stated expected results.
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
+
 improve:
   - Add a dated approved example and your actual acceptance rules.
   - Record corrections with the affected source and model version.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
       why: Create, recalculate, render and reopen the requested native workbook.
     - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+      why: Run the bundled dependency-free reference calculation against explicit numeric inputs. Without it, the AI does the sums in chat.
   inputs:
     - Dated primary financial records and the applicable contractual definitions.
     - A named reviewer and an explicit financial question.
+
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Receivables
+    meaning: Money customers owe you for water already billed and not yet paid.
+  - term: Arrears
+    meaning: Old bills from earlier periods that are still unpaid.
+  - term: Realized billed rate
+    meaning: What you actually bill per cubic meter on average, after discounts and free allowances.
+  - term: Unbilled volume
+    meaning: Water you produced that did not appear on a bill. Not the same as leakage.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A second check that compares two records or totals and explains any gap.

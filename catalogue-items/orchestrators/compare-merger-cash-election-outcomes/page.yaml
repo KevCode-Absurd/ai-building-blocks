@@ -1,51 +1,92 @@
 new_slug: compare-merger-cash-election-outcomes
 name: Compare merger cash election outcomes
 headline: Compare merger cash election outcomes
-summary: Compare fixed-ratio market value with the documented cash-election proration branch.
+summary: Compare a fixed-ratio merger offer with the cash election, and see what one holder gets when cash requests exceed the cash pool.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A baseline value comparison and one cash-election holder allocation. Share actual base fixed-ratio consideration, eligible target shares, dated acquirer price, post-reservation cash-election pool, separate election ratios and holder election shares.
+subhead: Give it the signed deal terms, the acquirer's share price on a set date, the cash left in the pool and one holder's election shares. Step 1 values the base offer in shares and cash. Step 2 shows what that holder gets if they elect cash and the pool runs short. You get both outcomes side by side.
 explain: |-
-  A baseline value comparison and one cash-election holder allocation.
+  A merger can pay target holders a fixed number of acquirer shares plus some cash. Many deals also let a holder elect cash instead. If holders ask for more cash than the pool holds, each request is cut back, and the rest is paid in acquirer shares at a replacement ratio. A merger cash election calculator has to keep those two outcomes apart.
 
-  Merger consideration. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 values the base offer at the acquirer's dated price and never resets the ratio to match a headline value. Step 2 uses the cash pool left after other reservations and the separate replacement ratio for cash electors. It does not reuse the base ratio, and it never adds the base value to the election result, because a holder gets one or the other.
+
+  It covers one holder and cash oversubscription only. It does not solve every holder's election at once, apply the exchange agent's rounding, or read the agreement for you. A person who has read the agreement signs off.
 when:
-  - You need a baseline value comparison and one cash-election holder allocation.
-  - You work on merger consideration and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A merger agreement pays a fixed share ratio plus cash and lets holders elect cash.
+  - Cash elections look larger than the cash pool and you need to know what one holder would receive.
+  - You want the base offer's value at a stated acquirer price next to the cash election result.
+  - A reviewer asks where each share and each dollar in the holder's result came from.
+not_for:
+  - The ratio floats or has a collar. This workflow assumes a fixed ratio, so ask a deal adviser for floating terms.
+  - You need every holder's election solved together, or the stock pool oversubscribed as well. Neither is covered here.
+  - You want the exchange agent's rounding or the legal meaning of the election terms. A person who has read the agreement does that.
+  - You only want the value of the base offer. Use the Fixed exchange consideration checker on its own.
 you_give:
-  - Actual base fixed-ratio consideration, eligible target shares, dated acquirer price, post-reservation cash-election pool, separate election ratios and holder election shares.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The signed base terms: acquirer shares and cash paid per target share (from the merger agreement)"
+  - Eligible target shares, and the acquirer's share price with its date (from the agreement and a dated price record)
+  - The cash left in the pool after other election reservations (from the agreement or the election materials)
+  - The cash price per target share and the replacement ratio for cash electors (from the agreement)
+  - Total target shares electing cash, and the shares the holder elected (from election results or your own notes)
+  - The reporting date, currency and scale, such as USD thousands
 you_get:
-  - A baseline value comparison and one cash-election holder allocation.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The base offer: shares issued, cash paid and total value at the dated price"
+  - The share of cash requests the pool can pay, capped at 100%
+  - The holder's cash and replacement acquirer shares under the cash election
+  - Both outcomes side by side, never added together
+  - Missing facts, and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. Use one that can make spreadsheets if you want a workbook.
+  - Attach the deal terms from the merger agreement and the election pages from the filed prospectus. Add the acquirer price with its date, the cash pool and the holder's election shares.
+  - After step 1, check that shares issued times the dated price, plus the cash leg, equals the base value. Check the ratio was not reset to match a headline figure.
+  - After step 2, check that the holder's shares are part of the total election shares and that other reservations came off the pool first.
+  - Fill every MISSING line before anyone relies on the result. Nothing is sent, filed or traded. A person who has read the agreement should confirm the terms.
 how_it_works:
   - title: Fixed exchange consideration checker
-    text: Value the signed base fixed-ratio stock and cash legs at the dated acquirer price, preserving issued share count and ratio.
+    text: "Confirms the ratio is fixed, then multiplies eligible target shares by it and prices the same issued shares at the dated acquirer price. Adds the cash leg. Hands step 2 the base value, the eligible shares and the price date. Check before moving on: stock plus cash ties to the base total."
   - title: Cash stock election checker
-    text: Use the distinct cash-election replacement ratio and actual post-reservation cash pool, not a presumed reuse of the base ratio. Compare the holder allocation with base value without summing mutually exclusive outcomes.
+    text: "Divides the cash pool left after other reservations by total cash requests, capped at 100%. Pays the holder that share in cash and turns the unpaid share into acquirer shares at the replacement ratio. Compares the result with the base value without adding the two. Check: the holder's shares sit inside the total election shares."
 output_shape: |-
-  A baseline value comparison and one cash-election holder allocation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  BASE OFFER      <eligible target shares> x <ratio> = <acquirer shares issued>
+                  at <price> on <date> = <stock value>
+                  + cash leg <n> = <base total>
+
+  CASH ELECTION   pool <n> / total cash requests <n> = <fraction paid, max 100%>
+                  holder cash <n>, replacement shares <n> at <replacement ratio>
+
+  SIDE BY SIDE    base value <n> | cash election value at <price> <n> (not added)
+  SOURCES         <each input, its source, date, currency and scale>
+  MISSING         <each gap, and the line it stops>
+  CHECKS MISSED   <one line each, or none>
+output_sample:
+  input:
+    - The base share ratio and cash per target share from the merger agreement
+    - The acquirer's share price and the date it applies to
+    - The cash pool after other reservations, and total shares electing cash
+    - The holder's election shares and the replacement ratio
+  prerequisites:
+    - The merger agreement or the filed prospectus election pages
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: BASE OFFER
+      contains: Acquirer shares issued, the cash leg and the total value at the dated acquirer price.
+    - name: CASH ELECTION
+      contains: The share of cash requests the pool can pay, the holder's cash and the replacement shares.
+    - name: SIDE BY SIDE
+      contains: The base value next to the cash election result, kept separate and never added.
+    - name: SOURCES
+      contains: Each input with its source, date, currency and scale.
+    - name: MISSING and CHECKS MISSED
+      contains: Each gap and the line it stops, and every check that failed or could not run.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Base consideration and cash-election alternatives remain separate; neither is a complete all-holder election solver.
+  - what: The price date
+    how: Move the acquirer price to another date. The base value changes. The holder's replacement shares do not, because they depend on the ratio.
+  - what: The cash pool
+    how: Shrink the pool. The share of cash paid falls and more of the holder's result moves into replacement shares.
+  - what: The holder's size
+    how: Change the holder's election shares. Cash and shares scale in proportion, and the check on total election shares can fail.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and checks, and tells you what it could not verify.
 judge:
   - Base consideration and cash-election alternatives remain separate; neither is a complete all-holder election solver.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +97,32 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Save the signed deal terms in one note and paste it in each time, so every run uses the same ratio and cash price.
+  - Log each price date and election count you used, so you can rerun when new results come out.
+  - Add the exchange agent's rounding rule to your own copy of the skill file, if you need whole-share results.
+  - Run the Check adviser fees in seller proceeds workflow next if you need what the seller keeps after fees.
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs, formulas and a checks tab you can click into. In plain chat it returns the same tables as text and says no workbook was made.
+    - name: The filed prospectus
+      why: It sets out the election pools, reservations and replacement terms in the deal's own words.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - A dated acquirer price from a market record, not a rounded figure from memory.
+    - The election results or notice, if the deal has published them.
+    - A named reviewer who has read the merger agreement.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Fixed exchange ratio
+    meaning: A set number of acquirer shares paid for each target share, whatever the acquirer's price does.
+  - term: Cash election
+    meaning: A holder's choice to take cash instead of shares, up to a limited cash pool.
+  - term: Oversubscribed
+    meaning: More cash was asked for than the pool holds, so each request is cut back.
+  - term: Replacement ratio
+    meaning: The acquirer shares paid for each target share that could not be paid in cash.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two matching records.
+before: []
+next:
+  - check-adviser-fees-in-seller-proceeds
+  - reconcile-basic-and-diluted-issuer-eps

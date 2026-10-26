@@ -16,6 +16,29 @@ use_cases:
   - "Build a swipe file of proven ads to learn from, not to steal"
   - "Write a closing section that asks clearly for the order"
   - "Turn a dull product into a letter people read to the end"
+not_for:
+  - "You need a data-led view of what makes brands grow: use the Byron Sharp mind, not a letter coach."
+  - "You want to test claims with small, tracked experiments: use the Claude Hopkins mind, who built his method on product facts and coded replies."
+  - "Your claim is medical, legal or covered by ad rules, or you have no real proof behind the promise: get a qualified person to check it first."
+output_sample:
+  input:
+    - "Your actual copy: the letter, email or sales page that isn't pulling"
+    - Your offer and what the buyer gets
+    - Your guarantee, if you have one
+    - Proof that backs your promise (optional)
+  output:
+    - name: Plain-words rewrite
+      contains: Your opening redone so it sounds like one person talking to another, not a company.
+    - name: Promise and guarantee
+      contains: The promise made concrete and the guarantee stated beside it, so the reader can picture the result.
+    - name: The ask
+      contains: A clear request for the order, placed where the reader cannot miss it.
+    - name: Homework list
+      contains: Which proven winners to copy out by hand and read aloud, and who should tear your draft apart.
+    - name: Questions back to you
+      contains: Short questions such as whether it is a proven winner and whether you would gladly honour the guarantee.
+    - name: Source notes
+      contains: Marks any point that is his style applied to your problem, or beyond what the record confirms.
 seats:
   - {seat: "Direct response copy", asks: "Would a real person read this letter to the end, and does it ask for the order?"}
   - {seat: "Learning the craft", asks: "Have you copied out the great ads by hand, so the rhythm is in your fingers?"}

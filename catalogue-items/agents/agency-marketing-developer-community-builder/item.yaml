@@ -1,0 +1,44 @@
+slug: agency-marketing-developer-community-builder
+name: Developer Community Builder agent
+summary: Get a developer community plan with participation and trust measures.
+  Bring your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-developer-community-builder.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-developer-community-builder.md
+  licence: MIT
+  original_name: Developer Community Builder
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: f1d87ae21d21ee90f73cd94754b2a99e4af7fec64b23290fea59fb2b4637db11
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Developer Community Builder
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Developer Community Builder
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-developer-community-builder.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

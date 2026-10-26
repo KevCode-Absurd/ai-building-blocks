@@ -1,6 +1,6 @@
 new_slug: ending-first-story-planner
 name: "Ending-first story planner"
-summary: "Tell it the one feeling you want. Get a story or talk plan built backward from the last line."
+summary: "Plan a short story or talk from the last line back. Name the one feeling you want and get an ending, ranked beats and an opening."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It has to choose one feeling and rank every beat against it."
@@ -17,6 +17,10 @@ when:
   - "You are writing a short story, speech, ad or film and it has no single feeling."
   - "You know how you want people to feel at the end and need a way to get there."
   - "Your piece peaks in the middle and the ending feels like an afterthought."
+not_for:
+  - "You have a draft and want to test it against one feeling: use the Single-effect draft checker."
+  - "You are writing a factual report or a piece with several equal messages: use a plain outline instead."
+  - "You want a long book or series plan: this suits short pieces read or heard in one sitting, so ask a person or a longer plot tool."
 
 you_give:
   - "The feeling you want, and the form"
@@ -34,6 +38,28 @@ how_to_use:
   - "Paste the material you want to use, if any."
   - "Give the length, such as 600 words or two minutes."
   - "Read the ending aloud first. If it does not give the feeling, fix it before the rest."
+output_sample:
+  input:
+    - The one feeling you want, and the form (story, talk, film, ad or poem)
+    - The facts, people or setting you want to use (optional)
+    - Your length and where it is read or heard (optional)
+  output:
+    - name: Effect
+      contains: One sentence saying what the audience feels at the end and why.
+    - name: Length and tone
+      contains: The size that fits one sitting, and the tone at the peak.
+    - name: Repeating device
+      contains: A phrase or image that returns three or four times, with its new meaning each time.
+    - name: Ending
+      contains: The last line or moment written out in full, with the beats just before it.
+    - name: Beats, mild to strong
+      contains: Everything that happens before the ending, ranked so each beat steps up toward it.
+    - name: Opening
+      contains: A first line that already leans toward the feeling.
+    - name: Setting
+      contains: What stays inside the frame, and what is left outside.
+    - name: Missing and checks missed
+      contains: Gaps marked MISSING, and one line for each check the plan still fails, or none.
 
 how_it_works:
   - title: "Picks the effect"

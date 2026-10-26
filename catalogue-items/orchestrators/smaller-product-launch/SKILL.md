@@ -52,8 +52,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Launch scope cutter.** Use the skill `launch-scope-cutter`. The same date with half the scope, the core first and the rest parked
-2. **Feature request screener.** Use the skill `feature-request-screener`. Give it the plan from the steps before. A yes, later or no on each, with the full cost of every yes. Reads the plan from the step before
-3. **Launch teaser to preview planner.** Use the skill `launch-teaser-to-preview-planner`. Give it the plan from the steps before. A teaser, preview and launch plan with a sign-up page and free sample. Reads the plan from the step before
+2. **Feature request screener.** Use the skill `feature-request-screener`. Give it the smaller launch plan from step 1. A yes, later or no on each, with the full cost of every yes. It hands you the request list to act on; step 3 does not need it.
+3. **Launch teaser to preview planner.** Use the skill `launch-teaser-to-preview-planner`. Give it the smaller launch plan from step 1, not step 2's list, so no stage shows a cut feature. A teaser, preview and launch plan with a sign-up page and free sample.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

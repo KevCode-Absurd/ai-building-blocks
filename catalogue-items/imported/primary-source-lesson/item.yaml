@@ -11,6 +11,8 @@ level: intermediate
 inputs:
   - type: brief
     required: true
+  - type: source_text
+    required: false
 outputs:
   - type: plan
 uses: []

@@ -1,7 +1,7 @@
 new_slug: terminal-growth-reinvestment-consistency
 name: Terminal growth reinvestment check
 headline: Terminal growth reinvestment check
-summary: Expose the reinvestment required by a stable-growth terminal-value assumption.
+summary: Check the reinvestment a stable-growth terminal value needs. Give NOPAT, growth, ROC and WACC. You get an FCFF schedule and a return-spread test.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a terminal reinvestment and FCFF schedule with a return-spread sensitivity.
   - You work on public equity valuation and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need a full company valuation: build a full discounted cash flow model, since this checks only the terminal value part."
+  - "You value a bank or insurer: use a method made for financial firms, because this covers one operating business."
+  - "Your discount rate is not above your growth rate: fix those inputs first, because the terminal value cannot be worked out."
 you_give:
   - First stable-year NOPAT, stable growth, stable ROC and matching WACC.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,27 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - First stable-year NOPAT (after-tax operating profit)
+    - Stable growth rate
+    - Stable return on capital (ROC)
+    - WACC that matches your cash flows
+    - Reporting date, currency and scale
+  prerequisites:
+    - An AI that can work with spreadsheet files
+    - Node.js 20 or later, only if you want to run the bundled calculation (optional)
+  output:
+    - name: Scope and dated sources
+      contains: What was valued, the valuation date, currency and scale, and where each input came from.
+    - name: Inputs and assumptions
+      contains: Each input with its source and date, kept apart from assumptions and scenarios.
+    - name: Model calculations and reconciliations
+      contains: The reinvestment rate, reinvestment, FCFF and terminal value, with a return-spread sensitivity and tie-outs.
+    - name: Actual file verification
+      contains: "Which workbook checks ran: recalculation, changed input test, rendering and reopening the saved file."
+    - name: "MISSING: and CHECKS MISSED"
+      contains: Inputs that were not supplied and checks that failed or could not run, or the word none.
 how_it_works:
   - title: 1. Use first stable-year NOPAT and a WACC matching unlevered operating cash flows, currency and inflation
     text: Use first stable-year NOPAT and a WACC matching unlevered operating cash flows, currency and inflation.

@@ -2,36 +2,66 @@ thinking: medium
 thinking_why: It follows a set build with some choices.
 new_slug: saas-starter-builder
 name: SaaS starter builder
-summary: Describe your app. Get a Next.js project with sign-in, database,
-  billing, API routes and a dashboard.
+summary: Build a SaaS starter app in Next.js. Describe your product and get sign-in, database, Stripe billing, API routes and a dashboard.
 job: build-software
 headline: SaaS starter builder
-subhead: A working Next.js project for your software product with sign-in,
-  database, payments, API routes and a dashboard already in place. You describe
-  the app, pick your tools, and get the whole file tree.
+subhead: Describe your software product and pick your tools. You get a Next.js project with sign-in, a database, Stripe billing, API routes and a dashboard. It also comes with a checklist to test each stage.
 explain: |
   A working Next.js project for your software product with sign-in, database, payments, API routes and a dashboard already in place. You describe the app, pick your tools, and get the whole file tree.
 
   You fill in a short form: product name, a few lines about it, sign-in service (NextAuth, Clerk or Supabase), database (Neon, Supabase or PlanetScale), payments (Stripe, Lemon Squeezy or none) and a feature list. The output follows a set layout with three areas: marketing pages with pricing, auth pages, and a dashboard with settings and billing. It adds webhook and checkout routes, shared components, and helper files for auth, database and payments. You need Node tooling, and accounts with the services you choose.
 when:
-  - You want a launch-ready base for a new web product instead of starting blank.
-  - You have chosen Stripe and need checkout and webhook routes wired up.
+  - You are starting a new web product and do not want to begin from a blank folder.
+  - You plan to charge a monthly fee and need Stripe checkout and webhooks set up.
   - You want a dashboard with billing and settings pages from day one.
-  - You need a pricing and marketing page in the same project.
+  - You need a home page and a pricing page in the same project.
+not_for:
+  - You already have an app. Add the new parts by hand or ask your AI to change one file at a time.
+  - You use a stack other than Next.js. Ask a developer to set up a starter for your own stack.
+  - You want Lemon Squeezy only. The billing code here is written for Stripe, so a developer must adapt it.
 you_give:
-  - Product name and short description
-  - Sign-in service choice
-  - Database choice
-  - Payment provider choice
-  - List of features
+  - Your product name
+  - Two or three sentences about your product
+  - "Your sign-in choice: NextAuth, Clerk or Supabase"
+  - "Your database choice: Neon, Supabase or PlanetScale"
+  - "Your payment choice: Stripe or none"
+  - Your list of features
 you_get:
-  - A full Next.js file tree
-  - Sign-in, billing and webhook routes
-  - Dashboard and marketing pages
-  - Shared components and helper files
+  - A full Next.js project with its file tree
+  - Sign-in, checkout, billing portal and Stripe webhook routes
+  - Dashboard, settings, billing and marketing pages
+  - Database tables and helper files
+  - An .env.example file listing every key you need
+  - A checklist that tells you how to test each stage
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Use an AI that can run code and save files, and install Node on your computer first.
+  - Open accounts for the services you pick. Stripe and your database host need keys. A rate limit tool such as Upstash Redis is optional and also needs a key.
+  - Paste the skill into your AI. Then give your product name, description, sign-in, database, payment choice and features.
+  - Let your AI build the project one phase at a time. After each phase, run the check it names.
+  - Fill in .env.example with your own keys and copy it to a .env file.
+  - Test a Stripe checkout with the test card before you go live.
+output_sample:
+  input:
+    - Your product name
+    - Two or three sentences about what your product does
+    - Your choice of sign-in service, database and payment provider
+    - A list of features you want
+  prerequisites:
+    - An AI that can run code and save files
+    - Node installed on your computer
+    - Free or paid accounts for the services you pick, such as a database host and Stripe
+  output:
+    - name: app/ (auth, dashboard, marketing)
+      contains: Login and register pages, a dashboard with settings and billing, and a home page with pricing.
+    - name: app/api/ routes
+      contains: Sign-in, Stripe webhook, checkout and billing portal routes.
+    - name: components/
+      contains: Shared pieces for sign-in forms, the dashboard, marketing sections and billing plan cards.
+    - name: lib/ and db/
+      contains: Helper files for sign-in, database, Stripe and checks, plus the database tables and migrations.
+    - name: middleware.ts
+      contains: A guard that sends signed-out visitors from dashboard pages to the login page.
+    - name: .env.example
+      contains: A list of the keys and settings you must fill in before the app runs.
+    - name: CUSTOMIZATION.md, PITFALLS.md, BEST_PRACTICES.md
+      contains: Notes on other options, common mistakes and good habits for your new project.

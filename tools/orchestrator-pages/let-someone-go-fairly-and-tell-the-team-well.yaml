@@ -1,6 +1,6 @@
 new_slug: let-someone-go-fairly-and-tell-the-team-well
 name: Let someone go fairly and tell the team well
-summary: Give it the situation. Get a fair exit plan, risk flags, a handover checklist and the announcement.
+summary: Plan how to let someone go fairly. Get an exit plan, legal risk flags, a handover checklist and a team announcement to send once you say so.
 job: hire-people
 thinking: high
 thinking_why: It handles a decision about a person's livelihood, with legal risk and a team watching. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Money has run short and you have to cut one or more roles.
   - Someone has not met a clear standard after real feedback and a fair chance, and it is time.
   - You have never let anyone go and do not want to learn by making the mistakes.
+not_for:
+  - "You have no feedback on file for a dismissal: run a fair performance process first, with written feedback and a chance to improve, then come back."
+  - "You have not decided whether to cut a role: review the restructure with your team or an adviser first, then use this once the decision is made."
+  - "You need legal advice on a real claim or contract dispute: talk to an employment lawyer or HR adviser, because the risk flags here are a first check only."
 you_give:
   - "The situation: who, why, and whether it is a layoff or a dismissal"
   - Where they work (country and state), their contract type and start date
@@ -30,6 +34,26 @@ how_to_use:
   - Paste the situation, the location and what you can offer. It plans the exit and flags the risks.
   - Have a lawyer or HR check the plan and the flags. Then hold the conversation yourself, in person.
   - Come back for the announcement. Read it, change what needs changing, then send it.
+output_sample:
+  input:
+    - "The situation: who, why, and whether it is a layoff or a dismissal"
+    - Where they work (country and state), their contract type and start date
+    - "What you can offer: notice, severance, references, help finding work"
+    - Any plan or notes you already have (optional)
+  prerequisites:
+    - A chat AI that can read the handoff files
+    - A lawyer or HR adviser to check the plan before the conversation
+  output:
+    - name: "Step 1: Exit plan"
+      contains: Who decides, the order of events, the offer, where and when they hear it, and the words to use.
+    - name: "Step 2: Risk flags"
+      contains: Notice, final pay timing, severance and release points, and reasons that could read as unfair, for a lawyer to check.
+    - name: "Step 3: Handover"
+      contains: A handover checklist, an access and kit list with dates, and exit interview questions.
+    - name: "Step 4: Announcement"
+      contains: The team message, who hears first, and honest answers to the questions people will ask.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the exit
     text: Sets who decides, the order of events, the offer, and the plain words to use, following Horowitz and Chesky.

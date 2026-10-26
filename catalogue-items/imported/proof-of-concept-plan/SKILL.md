@@ -5,6 +5,43 @@ description: Analyzes RFP/RFI responses for coverage gaps, builds competitive fe
 
 # Sales Engineer Skill
 
+## Before you start
+
+Ask once for any of these that are missing. If the user cannot give one, write MISSING and carry on. Never invent requirements, product features or competitor facts.
+
+1. The buyer's request: the requirements list or RFP text.
+2. Your product's features and gaps, as the user states them.
+3. Known competitors, if any.
+4. Optional: the buyer's technical setup, and the trial length.
+
+**With code or without.** The scripts below can score the coverage and build the tables if your AI can run Python and you have the folder. In a plain chat, do the same sums by hand. For each requirement mark Full (100%), Partial (50%), Planned (25%) or Gap (0%). Weight Must-Have 3, Should-Have 2, Nice-to-Have 1. Coverage is the weighted sum divided by the weighted total. Count the Must-Have gaps. Say in the answer which way you did it.
+
+**Input files for the scripts.** `rfp_response_analyzer.py` reads a file shaped like `assets/sample_rfp_data.json`. `competitive_matrix_builder.py` reads `competitive_data.json` and `poc_planner.py` reads `poc_data.json`. The two last files are not in this folder. Build them from the user's facts, using the field names in each script's `--help` and its `load_` function. The sample file is a layout guide only. Never reuse its sample company or numbers as the user's data.
+
+## The one bid rule
+
+Use this rule everywhere in this skill, including the Phase 1 checkpoint. It matches `rfp_response_analyzer.py`.
+
+- **Bid:** coverage 70% or more and 3 or fewer must-have gaps. Go on to Phase 2.
+- **Conditional bid:** coverage from 50% to 70%, or from 40% to 50% with 3 or fewer must-have gaps. Go on only with a written plan to close each must-have gap. If the deal has low strategic value, treat it as No-bid.
+- **No-bid:** anything else. Stop and tell the user why.
+
+These cut-offs are the original author's defaults. Tell the user they can change them.
+
+## Output format
+
+Return these parts in order. Mark each one MISSING if the input was not given.
+
+1. Coverage score: the overall percent, the count of must-have gaps, and the bid, conditional bid or no-bid result with the reason.
+2. Gap list: each Gap or Partial must-have, with a way to close it (build, partner or no-bid).
+3. Competitor feature table: your product and each rival, scored Full, Partial, Limited or None, with the differentiators and vulnerabilities.
+4. Trial plan: the phases (set-up, core testing, advanced testing, evaluation), the success measures for each, and the check before moving on.
+5. Trial scorecard: the dimensions (functionality, performance, integration, usability, support) with a weight for each, to fill in as the trial runs.
+6. Next steps: three actions with owners.
+
+Next: use the trial plan in the customer meeting. For the written bid itself, the RFP response builder helps.
+
+
 ## 5-Phase Workflow
 
 ### Phase 1: Discovery & Research
@@ -26,10 +63,11 @@ python scripts/rfp_response_analyzer.py assets/sample_rfp_data.json --format jso
 
 **Output:** Technical discovery document, requirement map, initial coverage assessment.
 
-**Validation checkpoint:** Coverage score must be >50% and must-have gaps ≤3 before proceeding to Phase 2. Check with:
+**Validation checkpoint:** Apply the one bid rule above. On Bid, proceed to Phase 2. On Conditional bid, proceed only with a written plan for each must-have gap. On No-bid, stop and tell the user. To check with the script:
 ```bash
-python scripts/rfp_response_analyzer.py assets/sample_rfp_data.json --format json | python -c "import sys,json; r=json.load(sys.stdin); print('PROCEED' if r['coverage_score']>50 and r['must_have_gaps']<=3 else 'REVIEW')"
+python scripts/rfp_response_analyzer.py assets/sample_rfp_data.json --format json | python -c "import sys,json; r=json.load(sys.stdin); print(r['bid_recommendation']['decision'])"
 ```
+(Use the user's own data file in place of the sample.)
 
 ---
 
@@ -135,10 +173,7 @@ python -c "import json; p=json.load(open('phase4_poc_plan.json')); print('Go/No-
 **Coverage Categories:** Full (100%), Partial (50%), Planned (25%), Gap (0%).  
 **Priority Weighting:** Must-Have 3×, Should-Have 2×, Nice-to-Have 1×.
 
-**Bid/No-Bid Logic:**
-- **Bid:** Coverage >70% AND must-have gaps ≤3
-- **Conditional Bid:** Coverage 50–70% OR must-have gaps 2–3
-- **No-Bid:** Coverage <50% OR must-have gaps >3
+**Bid/No-Bid Logic:** see "The one bid rule" near the top of this file.
 
 **Usage:**
 ```bash
@@ -209,7 +244,9 @@ python scripts/poc_planner.py poc_data.json --format json  # JSON output
 | `assets/sample_rfp_data.json` | Sample RFP data for testing the analyzer |
 | `assets/expected_output.json` | Expected output from rfp_response_analyzer.py |
 
-## Integration Points
+## Integration Points (optional)
+
+These point to other skill folders that are not part of this item. Ignore them if you do not have them.
 
 - **Marketing Skills** - Leverage competitive intelligence and messaging frameworks from `marketing-skill/`
 - **Product Team** - Coordinate on roadmap items flagged as "Planned" in RFP analysis from `product-team/`

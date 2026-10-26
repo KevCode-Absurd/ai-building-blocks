@@ -1,38 +1,141 @@
 new_slug: the-proposal-engine-agents-ask-permission-implementation-planner
 name: Agent action approval builder
-summary: Build a timed approval record with validated callbacks and audit events.
+summary: "Plan how an AI agent asks a person to approve an action: risk tiers, expiring requests, checked buttons and an audit log. Draft only."
 job: build-software
 headline: Agent action approval builder
-subhead: Share the inputs listed below. Get a timed approval record with validated callbacks and audit events. Check the gaps before you use the result.
+subhead: "Give it the actions your AI agent may propose, what each costs, how hard it is to undo and who sees it. It plans the risk tiers, the expiring request and the checks on each button click. You get a risk table, a request record, an audit log and tests. Nothing is run."
 explain: |-
-  Share proposed action, cost, reversibility, audience and policy matrix. Get a timed approval record with validated callbacks and audit events.
+  An AI agent that can act on its own will one day do the wrong thing. The fix is not to stop it acting. It is to make it ask first for anything that costs money, is hard to undo or reaches a customer. The rest it may do alone.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill plans an AI agent approval flow. It sorts each action into a risk tier from three things: money touched, how hard it is to undo and who sees it. Only a short list of safe actions may skip a person, such as drafts and read-only refreshes. Everything else waits for a named approver. A request that mixes a safe action with a risky one is split in two. Each request carries the exact action, an expiry time and the evidence.
+
+  The most important part is the click. When someone presses Approve, the system must check who clicked, that the request is still open, and that nothing has changed since it was written. Only then does it act. It records the choice and the reason. A rejection is feedback for the agent.
+
+  It reads a starter table and a Slack message builder, and lists what they leave out. Their button handlers are empty stubs. Nothing here is tested or ready for live use. It does not run code or send a message.
 when:
-  - You need a timed approval record with validated callbacks and audit events.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - "Your agent wants to pause an ad, send an email or change a price, and you want a person to say yes first."
+  - "You need to decide which actions the agent may do alone and which must wait for a person."
+  - "A request sat for days and then someone approved it when it was no longer true."
+  - "You have starter code for Slack approve and reject buttons and need to know what is missing."
+not_for:
+  - "Your agent only reads and drafts and never acts. There is nothing to approve."
+  - "You want a hard limit on what an agent can spend. Use the Agent spending cap builder. A cap stops spend. An approval asks a person."
+  - "You want the agent to learn from the answers people give. Use the Agent feedback learning builder."
+  - "You want to plan how Slack messages reach the right agent. Use the Scoped Slack agent router builder."
+  - "You want it to post the request or approve it for you. It drafts the rules and the code. A person approves."
 you_give:
-  - Proposed action, cost, reversibility, audience and policy matrix
+  - "The actions your agent may propose, in one line each"
+  - "For each action, the money it touches, how hard it is to undo and who sees it"
+  - "Who may approve each kind of action, and which ones need two people"
+  - "How long a request stays open before it expires"
+  - "Where people answer, such as Slack or email"
+  - "Your starter table and Slack code (optional)"
 you_get:
-  - A timed approval record with validated callbacks and audit events
-  - A failure checklist and synthetic test cases
+  - "A risk table: tier, approver and expiry for each action"
+  - "A short list of actions that may skip approval, with the rest denied by default"
+  - "The fields of an approval request, and its states from draft to expired"
+  - "The checks to run on every click, in order"
+  - "An audit log of each step, and a list of gaps in the starter files"
+  - "Test cases, including a double click and a stale approval"
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - "Open the skill in an AI that can read your code, such as Claude Code or Codex. A chat AI works if you paste the files in."
+  - "Paste your action list, who may approve and how long requests stay open. Never paste a Slack token or a key."
+  - "Read GAPS IN THE STARTERS first. The button handlers there are empty."
+  - "Check the RISK TABLE against your own sense of what could go wrong. Move any action you doubt up a tier."
+  - "Check the CLICK CHECKS list. Each one stops a different mistake, such as a stale click or the wrong person."
+  - "Run the draft code and test cases on a copy of your system. Do not connect the buttons to anything live until they pass."
 how_it_works:
-  - title: Step 1
-    text: Calculate the risk tier from cost, reversibility and blast radius.
-  - title: Step 2
-    text: Default to review if policy is missing.
-  - title: Step 3
-    text: Create an expiring proposal with exact action parameters.
-  - title: Step 4
-    text: Authenticate approve or reject callbacks.
-  - title: Step 5
-    text: Recheck scope, expiry and current state before execution.
-  - title: Step 6
-    text: Record the decision and reject stale approvals.
+  - title: Sets the risk tier
+    text: Scores each action on money touched, how hard it is to undo and who sees it. If your policy is missing, it defaults to human review.
+  - title: Keeps auto-approve tiny
+    text: Allows only safe actions, such as drafts and read-only refreshes. Anything not on the list needs a person.
+  - title: Splits mixed requests
+    text: Puts a low-risk action and a high-risk action in separate requests, so one answer cannot cover both.
+  - title: Builds the request
+    text: Saves the exact action, the evidence, the expected effect and an expiry time.
+  - title: Checks every click
+    text: Verifies the sender, the clicking person's right to approve, that the request is still open and in date, and that nothing changed since.
+  - title: Records the decision
+    text: Saves who decided, when and why. Stale or repeat clicks are refused and logged.
+  - title: Lists gaps and tests
+    text: Reads the starter table and Slack code, names what is missing, and writes test cases.
+output_shape: |-
+  BASIS
+  <what was read; nothing was run>
+  MISSING: <inputs and what each stops>
+
+  RISK TABLE
+  <action> | <money> | <undo> | <who sees it> | <tier> | <who approves> | <expires after>
+
+  AUTO-APPROVE LIST
+  <action> | <why it is safe>
+
+  APPROVAL REQUEST
+  <field> | <meaning>
+
+  STATES
+  <state> | <how it starts> | <how it ends>
+
+  CLICK CHECKS
+  <order> | <check> | <if it fails>
+
+  AUDIT LOG
+  <event> | <what is saved>
+
+  GAPS IN THE STARTERS
+  <#> | <what it does> | <why it matters> | <fix>
+
+  TEST CASES
+  <name> | <set-up> | <expected result>
+
+  NEXT STEP
+  <one smallest useful step>
+output_sample:
+  input:
+    - "The actions your agent may propose"
+    - "Money, undo effort and who sees each action"
+    - "Who may approve, and how long a request stays open"
+    - "Your starter table and Slack code (optional)"
+  prerequisites:
+    - "A place to save requests, such as a database table"
+    - "A chat tool where approvers answer, such as Slack"
+  output:
+    - name: "Risk table"
+      contains: "Each action with its tier, who approves it and when the request expires."
+    - name: "Auto-approve list"
+      contains: "The few actions that may skip a person, and why each one is safe."
+    - name: "Approval request"
+      contains: "The fields saved for each request, from the exact action to the expiry time."
+    - name: "States"
+      contains: "Draft, posted, elaborating, approved, rejected and expired, and how each one starts and ends."
+    - name: "Click checks"
+      contains: "The checks run on every Approve or Reject click, in order, and what happens if one fails."
+    - name: "Audit log"
+      contains: "Each event saved, such as posted, approved, rejected, expired and refused."
+    - name: "Gaps in the starters"
+      contains: "What the starter table and Slack code leave out or get wrong, with a fix for each."
+    - name: "Test cases"
+      contains: "Cases such as a double click, an expired request and an approver who is not allowed."
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your table, your Slack code and your agent code together and proposes exact edits.
+    - name: Slack
+      why: The starter shows Approve, Reject and Elaborate buttons in Slack messages.
+  inputs:
+    - "A list of past actions an agent took that you wish you had checked first"
+    - "The names of the people or roles who answer approvals"
+    - "Your own cost bands, for what counts as small, medium and large"
+terms:
+  - term: Risk tier
+    meaning: A level for an action, from low to high, that decides who must approve it.
+  - term: Blast radius
+    meaning: Who is affected if the action goes wrong, such as only your team or your customers.
+  - term: Callback
+    meaning: What the system does when someone presses a button, such as Approve.
+  - term: Audit log
+    meaning: A saved record of each step, kept so you can see who decided what and when.
+  - term: Stale approval
+    meaning: A yes given after the request expired or after the facts changed.
 thinking: medium
-thinking_why: It compares supplied evidence and follows a specific method.
+thinking_why: It compares supplied evidence and follows a set method, so it needs care but not deep reasoning.

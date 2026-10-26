@@ -1,6 +1,6 @@
 new_slug: factory-price-break-negotiator
 name: "Factory price-break negotiator"
-summary: "Give it your bill of materials and volume plan. Get asks, give-backs and a fallback."
+summary: "Plan a factory price negotiation from your bill of materials. Get a call script, line-by-line asks, what to give back and a fallback factory."
 job: plan-supply-chain
 thinking: high
 thinking_why: "It weighs what you can offer against what the factory can give, and plans a fallback. A stronger model keeps the trade-offs straight."
@@ -17,6 +17,10 @@ when:
   - You have a bill of materials and want lower unit costs at your next order.
   - Your volume is growing and you want the factory to share the gain.
   - A factory raised prices, or tariffs changed, and you need to see who can carry what.
+not_for:
+  - You have no cost sheet yet, such as a first order. Get quotes from two or three factories and compare them side by side first.
+  - You cannot replace the factory. With no fallback you have little to bargain with, so line up a second supplier first.
+  - You only need to compare quotes. Use a simple spreadsheet or ask your AI to line the quotes up by cost.
 
 you_give:
   - Your bill of materials and landed cost
@@ -35,6 +39,29 @@ how_to_use:
   - Say how much you buy a year. If it is a small number, the skill leans on the second supplier and your tech pack instead.
   - Read the script and the ask list. Change anything you cannot offer.
   - Hold the call, then paste the answers back for a revised plan.
+output_sample:
+  input:
+    - Your bill of materials and landed cost
+    - This year's units and your plan for the next 12 months
+    - Quotes from other factories (optional)
+    - Your profit and loss in rough shares (optional)
+  output:
+    - name: Opening call script
+      contains: Your growth plan in units, what you will do with the savings, and what you want to build together.
+    - name: Asks by line
+      contains: "For each part, labor and overhead: today's cost, the volume for a break, the target cost and what you give back."
+    - name: What you offer back
+      contains: Forecast sharing, on-time payment or a longer commitment, limited to what you can really deliver.
+    - name: Factory margin range
+      contains: The usual margin for your category, where it came from, and a note to aim inside it.
+    - name: Early-run rule
+      contains: How much more per unit you accept now while you learn sell-through, quality and delays.
+    - name: Fallback
+      contains: Other factories, what to ask each, how to open the talk, and steps if the factory will not move or tariffs change.
+    - name: Option with risk
+      contains: Prefunded stock from a backer, shown with its warning, or left out.
+    - name: Checks missed and missing
+      contains: Any check that failed and any input you did not give.
 
 how_it_works:
   - title: Opens as a partner

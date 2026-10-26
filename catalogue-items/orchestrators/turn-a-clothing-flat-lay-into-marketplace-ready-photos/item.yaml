@@ -12,11 +12,11 @@ outputs:
   - {type: audit_report}
 uses: [product-photo-retoucher, ghost-mannequin-photo-maker, fabric-close-up-maker, ai-product-photo-inspector, marketplace-photo-rule-checker]
 steps:
-  - {uses: product-photo-retoucher, note: "Starts the chain: a cleaner flat-lay photo."}
-  - {uses: ghost-mannequin-photo-maker, note: "Reads the retouched photo you chose and shapes it as if worn."}
-  - {uses: fabric-close-up-maker, note: "Zooms into the fabric of the worn-shape photo you saved."}
-  - {uses: ai-product-photo-inspector, note: "Looks over the pictures you gathered for AI faults."}
-  - {uses: marketplace-photo-rule-checker, note: "Checks the pictures that passed the last step against marketplace rules."}
+  - {uses: product-photo-retoucher, note: "Starts the chain from your phone photo and hands a cleaner flat-lay photo to step 2."}
+  - {uses: ghost-mannequin-photo-maker, note: "Reads the retouched photo from step 1 that you chose, shapes it as if worn, and hands that worn-shape photo to step 3."}
+  - {uses: fabric-close-up-maker, note: "Zooms into the fabric of the worn-shape photo from step 2 and hands the close-ups on with the other photos."}
+  - {uses: ai-product-photo-inspector, note: "Looks over the pictures from steps 1 to 3 for AI faults and hands a list of which ones to keep to step 5."}
+  - {uses: marketplace-photo-rule-checker, note: "Uses the pictures that passed step 4's check, with step 4's report, and checks them against marketplace rules."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-clothing-photos-for-a-listing/skeleton.yaml

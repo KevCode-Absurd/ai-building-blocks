@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It reads code widely and writes for two audiences.
 new_slug: codebase-onboarding-guide-writer
 name: Codebase onboarding guide writer
-summary: Point it at a codebase. Get two guides that take a new engineer from
-  first day to deep knowledge.
+summary: Point it at your codebase. Get a codebase onboarding guide for senior engineers and a getting-started guide for new contributors.
 job: build-software
 headline: Codebase onboarding guide writer
-subhead: Two guides that take a new engineer from day one to deep knowledge of
-  your codebase. One is for senior people who need the reasons behind choices;
-  the other is for those who need to get started now.
+subhead: Two guides that take a new engineer from day one to deep knowledge of your codebase. One is for senior people who need the reasons behind choices; the other is for those who need to get started now.
 explain: |
   Two guides that take a new engineer from day one to deep knowledge of your codebase. One is for senior people who need the reasons behind choices; the other is for those who need to get started now.
 
@@ -18,6 +15,10 @@ when:
   - Only one person understands how the system fits together.
   - You are open-sourcing a project and need contributor guides.
   - Your team keeps answering the same setup questions.
+not_for:
+  - Your repo has no code yet. Write a README by hand instead.
+  - You need a one-off answer about one file. Ask your AI that question in chat instead.
+  - You want the guides to be final without a check. Have a senior engineer review them before they go into the repo.
 you_give:
   - Your repository
   - Your audience level (optional)
@@ -28,8 +29,28 @@ you_get:
   - An architecture diagram
   - A log of key decisions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI tool and give it access to your repository files. It works best when it can read them.
+  - Paste the skill instructions into the chat, or upload the skill file.
+  - Ask it to write both onboarding guides. Add your audience level and notes on past decisions if you have them (optional).
+  - Check the results. Any part marked unverified has no proof in the code, so confirm it yourself.
+  - Ask a senior engineer to review both guides, then commit them into the repo.
+output_sample:
+  input:
+    - Your repository (the code and build files)
+    - Your audience level (optional)
+    - Notes on past decisions (optional)
+  prerequisites:
+    - An AI that can read your project files
+  output:
+    - name: Principal-Level Onboarding guide
+      contains: Twelve sections for senior engineers, from design principles and architecture to failure modes, security and known technical debt.
+    - name: Architecture Overview
+      contains: A component map with a diagram showing what owns what and how the parts talk.
+    - name: Decision Log
+      contains: Major design choices with context, the options considered and the trade-offs.
+    - name: Zero-to-Hero Contributor Guide
+      contains: Fourteen sections for new contributors, from prerequisites and setup to pitfalls, glossary and a quick reference card.
+    - name: Environment Setup
+      contains: Step-by-step commands you can copy, with the output you should see at each step.
+    - name: Your First Task
+      contains: A walkthrough of adding a simple feature from start to finish.

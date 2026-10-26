@@ -1,0 +1,155 @@
+name: DX Engineer agent
+summary: Get a developer onboarding friction report. See the steps where new developers get stuck, rewritten error messages and fixes ranked by effort.
+headline: DX Engineer agent
+subhead: Paste your getting-started guide, sample code and common error messages. It walks the path as a new developer would, lists each place they get stuck with a fix, rewrites weak error messages, and says what to measure.
+job: build-product
+thinking: high
+thinking_why: It follows a developer's path step by step, spots where docs, code and errors disagree, and ranks the fixes. Use a model that can read code and docs closely.
+explain: >-
+  Developers give up quietly. They hit a vague error, open a new tab and never
+  come back. This DX engineer agent reads your docs the way a new developer
+  would and finds the spots where they stall. DX means developer experience: how
+  it feels to use your API, SDK or docs for the first time.
+
+
+  It reads your getting-started path, your sample code and your errors. It
+  looks for steps that need an account before they show any value, examples
+  that do more than they say, errors that say what failed but not what to do,
+  and methods whose correct use is not obvious. Every problem comes with a fix
+  you can build. A report with no fix does not count.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It reads what you
+  paste. It does not watch real developers, run your product or see your
+  analytics. The numbers in the original, such as drop-off rates and time to
+  first call, are examples and targets, not results from AI Blocks.
+when:
+  - New developers sign up for your API or SDK and few of them make a first working call.
+  - Your support inbox is full of the same setup questions.
+  - Your error messages say "invalid input" or "401" and nothing else.
+  - You are about to launch a new SDK or docs site and want a fresh read first.
+not_for:
+  - You have no docs, SDK or API yet. Use the Product requirements writer first to plan it.
+  - You only want a few error messages rewritten. Use the Plain error message writer.
+  - You want a plan to cut the time to a first API call from a sign-up path. Use the Developer onboarding improver.
+  - You want a guide for new teammates joining a codebase. Use the Codebase onboarding guide writer.
+  - You want proof from real developers. Watch five or more people try the guide and take notes. This agent reads, it does not observe.
+you_give:
+  - Your getting-started guide or onboarding steps, pasted or linked
+  - Your sample code and SDK method names or signatures
+  - The error messages new developers see most, with the status codes
+  - Support tickets, forum posts or GitHub issues from new developers (optional)
+  - Numbers you track now, such as time to first call (optional)
+you_get:
+  - A ranked friction report with where, what goes wrong, a fix, effort and impact for each item
+  - Rewritten error messages that say what happened, why and what to do next
+  - Notes on sample code and method names that hide the correct use
+  - A first 30 minutes path for a new developer, with the shortest route to a real result
+  - A plan to measure the change, with what to record before you start
+  - A way to sort support tickets into feedback for the right team
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your getting-started guide, a few code samples and your most common error messages. Add support tickets if you have them.
+  - Your AI asks once for anything missing. Anything still unknown is marked as an assumption you can change.
+  - Read the top friction items first. Check each against the real product, since the AI has only seen what you pasted.
+  - Ship the error message rewrites and the small doc fixes first. Test each one yourself in a fresh account or a clean machine.
+  - Record the baseline numbers before you change anything, then watch new developers or your analytics to see if the fixes help.
+how_it_works:
+  - title: Map the path
+    text: It lists every step from first visit to a working call, and marks steps that need sign-up, keys or setup before any result shows.
+  - title: Find the friction
+    text: It looks for confusing auth steps, examples that do more than they say, and gaps between docs and code. It rates each by how bad and how often.
+  - title: Rewrite the errors
+    text: It turns each weak error into what happened, why, and what to do next, with a link to the fix when you give one.
+  - title: Review the samples
+    text: It checks that the correct way to use each method is obvious, and that examples cover real use and the failure case, not just a hello world.
+  - title: Propose a fix for each item
+    text: Every problem gets a fix that can be built, with the effort and the expected effect.
+  - title: Plan the measuring
+    text: It names the numbers to take before and after, and how to sort support tickets so the right team sees them.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <product, audience> | evidence seen: <guide, code, errors, tickets> | ASSUMED: <list> | MISSING: <list>
+
+  FIRST 30 MINUTES PATH
+    <step> | needs before result: <account, key, setup> | friction: <none or note>
+
+  FRICTION REPORT (ranked)
+    <ID> | <title> | severity <blocking, high, medium or low> | where <step> | what goes wrong <observation from the pasted material> | fix <change> | effort <low, medium or high> | impact <expected effect>
+
+  ERROR MESSAGE REWRITES
+    <before> -> <after: what happened, why, what to do next> | link: <doc, if given>
+
+  SAMPLE CODE AND METHOD NOTES
+    <method or sample> | issue <hidden required field, no failure example> | fix <change>
+
+  FEEDBACK SORTING
+    <ticket theme> | goes to <team> | priority <level>
+
+  MEASURING PLAN
+    <metric> | baseline <value or MISSING> | how to record it | target <set by you>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it, such as test with a new developer>
+output_sample:
+  input:
+    - Your getting-started guide and sample code
+    - Your most common error messages
+    - Support tickets or issues from new developers (optional)
+    - Numbers you track now, such as time to first call (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - A fresh account or clean machine, so you can test each fix yourself
+  output:
+    - name: First 30 minutes path
+      contains: Each step from first visit to a working call, marking steps that need setup before any result.
+    - name: Friction report
+      contains: Ranked problems, each with where it happens, a fix, the effort and the expected effect.
+    - name: Error message rewrites
+      contains: Each weak error rewritten to say what happened, why and what to do next.
+    - name: Sample code and method notes
+      contains: Where the correct way to use a method is unclear, and how to make it obvious.
+    - name: Feedback sorting
+      contains: Support ticket themes sorted to the team that can fix each one.
+    - name: Measuring plan
+      contains: The numbers to record before and after, and how to record them.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach the docs export and the SDK source so it checks docs against real code.
+    - name: Claude Code or another AI that can read your repo
+      why: It can read the SDK and test the sample code instead of relying on pasted snippets.
+  inputs:
+    - A recording or notes from someone new trying your guide.
+    - Your analytics for each sign-up step.
+    - The questions your support team answers most.
+terms:
+  - term: DX
+    meaning: Developer experience. How it feels for a developer to learn and use your product.
+  - term: Time to first call
+    meaning: How long it takes a new developer to make their first working API request.
+  - term: Friction
+    meaning: Anything that slows a developer down or makes them guess.
+  - term: SDK
+    meaning: A code library that makes it easier to use an API from a programming language.
+  - term: Error message
+    meaning: The text a developer sees when a request fails.
+  - term: Baseline
+    meaning: The number you measure before a change, so you can tell if the change helped.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Focus area
+    how: Ask for onboarding only, error messages only, or sample code only, if you want a short result.
+  - what: Language and tools
+    how: Say which programming languages and editors your developers use, so samples and autocomplete notes fit.
+  - what: Severity bar
+    how: Say what counts as blocking for you, such as "cannot make a first call", so the ranking matches your view.
+improve:
+  - After each fix ships, give the agent the new guide and run it again to see which items are gone.
+  - Keep a list of the errors your support team sees, and add it to the next run.

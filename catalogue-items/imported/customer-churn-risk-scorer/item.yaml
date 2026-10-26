@@ -1,6 +1,6 @@
 slug: customer-churn-risk-scorer
 name: Customer churn risk scorer
-summary: Run it on your customers. Get each one scored for churn risk from how often they buy and how long since.
+summary: "Find Shopify customers who are drifting away. Score each repeat buyer 0 to 100 by how overdue their next order is against their own buying rhythm."
 category: general
 boards: []
 type: skill

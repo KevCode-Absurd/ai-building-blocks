@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It runs searches and lists the results.
 new_slug: youtube-video-finder
 name: YouTube video finder
-summary: Say a topic. Get matching videos and channels, with transcripts for the
-  ones you pick. Collects data from websites.
+summary: Find YouTube videos and channels on any topic, sorted by views or date, then pull transcripts for the ones you pick. Needs a free TranscriptAPI key.
 job: grow-social
 headline: YouTube video finder
-subhead: Say a topic. Get matching videos and channels, with transcripts for the
-  ones you pick. Collects data from websites. Bring a topic or search phrase.
-  Use the result to plan your next step.
+subhead: Give it a topic and any filters you want. It searches YouTube and lists matching videos, channels or playlists. Pick the ones you like and it pulls their transcripts so you can read instead of watch.
 explain: |
   Name a topic and get matching YouTube videos, channels or playlists, then pull transcripts for the ones you pick.
 
@@ -17,18 +14,43 @@ when:
   - You are researching a topic and want the best recent videos on it.
   - You need to find channels that cover a niche.
   - You want long tutorials from the past month, sorted by views.
-  - You want to read what an expert said instead of watching it.
+  - You want to read what an expert said instead of watching the whole video.
+not_for:
+  - "You want to manage a YouTube account, post videos or reply to comments: use YouTube Studio itself, since this only searches."
+  - "You want research from written sources only: use a normal web search or Google Scholar."
+  - "Your AI cannot run code or reach the internet: ask a person to search YouTube by hand, or paste the video text into your chat."
 you_give:
   - A topic or search phrase
   - Filters such as date, length and sort order (optional)
+  - A channel name or handle (optional)
   - Your TranscriptAPI key
 you_get:
-  - A ranked list of videos, channels or playlists
-  - Transcripts for the ones you pick
-  - A count of credits used
+  - A list of videos, channels or playlists, with title, channel, views, age, length and link
+  - Transcripts for the videos you pick
+  - A count of the credits used
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your TranscriptAPI key.
+  - Make a free account at transcriptapi.com. It gives you 100 credits and needs no card. Copy your key.
+  - Save the key as TRANSCRIPT_API_KEY in your AI tool. Use an AI that can run code and reach the internet.
+  - "Paste this skill into your AI, then say: Search YouTube for your topic, sort by views, past month, top 10."
+  - Check the list. Each search page costs 1 credit.
+  - Tell your AI which videos you want, and ask for their transcripts.
+output_sample:
+  input:
+    - A topic or search phrase
+    - Filters such as date, length, sort order or result type (optional)
+    - A channel name or handle, to search inside one channel (optional)
+    - Your TranscriptAPI key
+  prerequisites:
+    - An AI that can run code and reach the internet
+    - A free TranscriptAPI account and key, saved as TRANSCRIPT_API_KEY
+  output:
+    - name: Search results
+      contains: A list of matching videos, channels, playlists or movies, with title, channel, views, age, length and link.
+    - name: Channel results
+      contains: Channels that cover your topic, with handle, subscriber count and link, when you search for channels.
+    - name: Channel search
+      contains: Videos from one channel that match your phrase, when you name a channel.
+    - name: Transcripts
+      contains: The spoken text of the videos you pick, with timestamps.
+    - name: Credits used
+      contains: A count of the credits the searches and transcripts cost.

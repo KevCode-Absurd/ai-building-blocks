@@ -2,17 +2,111 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-qdrant-performance-optimization
 name: Qdrant search speed tuner
-summary: Share your search workload. Get index, query and hardware changes to
-  test against a clear baseline.
+summary: "Get a ranked list of Qdrant settings to change for faster search, faster uploads or lower memory, each with a test to run first."
 job: ship-and-host
 headline: Qdrant search speed tuner
-subhead: Share your search workload. Get index, query and hardware changes to
-  test against a clear baseline. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Tell it what is slow in Qdrant, the database behind search by meaning. Your goal can be slow searches, slow uploads or too much memory. It picks the likely cause and gives you settings to change, one at a time, with a test for each.
+explain: |
+  Qdrant is a database that stores data so apps can search by meaning. When search is slow, people often change settings at random. That can make things worse, because speed has several parts that pull in different directions.
+
+  This tuner starts by asking what "slow" means for you. It splits the job into three paths. Search speed covers how long one search takes and how many searches run at once. Indexing speed covers how fast new data gets uploaded and made searchable. Memory covers how much RAM the database needs and what can move to disk.
+
+  For each path it checks the usual causes in order, such as background work still running, too little RAM or a filter with no index. You get changes ranked by the evidence, and a test to run before and after each one.
+when:
+  - Searches that were fast are now slow after your data grew.
+  - Searches with filters are much slower than searches without them.
+  - Bulk uploads take hours, or search is poor right after an upload.
+  - Qdrant runs out of memory, and you want to cut RAM without losing speed.
+not_for:
+  - "You want to see what is going wrong with graphs and alerts first: use the Qdrant health monitoring planner."
+  - "You need to add servers or work out how big a cluster must be: use the Qdrant cluster capacity planner."
+  - "Search is fast but results are wrong: use the Qdrant search relevance investigator."
+you_give:
+  - What is slow, such as one search, many searches at once, uploads or memory
+  - Your Qdrant version and how many records you store
+  - Your hardware, such as RAM, CPU and disk type (optional)
+  - Your current settings or config file (optional)
+  - Numbers from today, such as search time or upload time (optional)
+you_get:
+  - A short list of likely causes, most likely first
+  - Settings to change, each with why and what it might cost
+  - A test for each change, compared with your starting numbers
+  - A list of changes to avoid for your case
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Upload the whole skill folder so your AI can open the search, indexing and memory files. Or paste the main file plus the one you need.
+  - Say what is slow and give your Qdrant version and data size. Add any numbers you have now, such as how long a search takes.
+  - Read the likely causes first. Run the quick checks, and tell your AI what you see.
+  - Change one setting at a time. After each change, measure again and compare with your starting numbers.
+  - Without starting numbers, ask the plan to start with the measuring steps. Do not change settings yet.
+  - If your AI can open web links, it can read the linked Qdrant docs. If not, it says so and uses the skill file only.
+how_it_works:
+  - title: Pick the goal
+    text: It sorts your problem into search speed, indexing speed or memory, and asks for the numbers it needs.
+  - title: Set a baseline
+    text: It asks for your starting numbers, so every change can be compared with them.
+  - title: Check the usual causes
+    text: It checks background optimizer work, memory pressure, heavy requests and missing payload indexes in turn.
+  - title: Rank the changes
+    text: It lists settings for your case, such as segment count, quantization and index settings, with the cost of each.
+  - title: Plan the tests
+    text: It writes a before and after test for each change, and says what result means you should undo it.
+  - title: Name what to avoid
+    text: It lists the changes that look helpful but usually backfire, such as putting the index on disk for fast searches.
+output_shape: |
+  GOAL: <search latency, search volume, uploads or memory>
+  STARTING POINT: <version, data size, hardware, numbers or MISSING>
+
+  LIKELY CAUSES
+  1. <cause> : <how to check>
+
+  CHANGES, IN ORDER
+  1. <setting> to <value> : <why> : <cost or risk>
+
+  TESTS
+  - <before and after measure> : <result that means keep or undo>
+
+  AVOID
+  - <change and the reason>
+
+  NEXT: <first change to try>
+output_sample:
+  input:
+    - What is slow, and when it started
+    - Your Qdrant version and data size
+    - Your hardware and current settings (optional)
+    - Your starting numbers (optional)
+  prerequisites:
+    - Access to your Qdrant settings, or someone who has it
+    - An AI that can open web links (optional, for the Qdrant docs)
+  output:
+    - name: Likely causes
+      contains: The usual suspects for your problem, most likely first, each with a quick check.
+    - name: Ranked changes
+      contains: Settings to change in order, with why and what each might cost.
+    - name: Tests
+      contains: A before and after measure for each change, and the result that means undo.
+    - name: Changes to avoid
+      contains: Moves that look helpful for your case but usually backfire.
+    - name: Next step
+      contains: The first change to try today.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT with web access
+      why: They can open the linked Qdrant docs for exact setting names.
+    - name: Grafana or Prometheus
+      why: They give you the starting numbers that make each test fair.
+  inputs:
+    - Your collection settings copied from Qdrant
+    - A few slow example searches
+    - Your RAM and disk type
+terms:
+  - term: Qdrant
+    meaning: A database that stores data so apps can search by meaning.
+  - term: Latency
+    meaning: How long one search takes.
+  - term: Throughput
+    meaning: How many searches run each second.
+  - term: Optimizer
+    meaning: Qdrant's background work that merges and indexes data.
+  - term: Quantization
+    meaning: Storing data in a smaller form to use less memory, with a small loss of detail.

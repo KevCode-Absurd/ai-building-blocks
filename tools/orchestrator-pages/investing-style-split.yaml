@@ -1,6 +1,6 @@
 new_slug: investing-style-split
 name: Choose your investing style and your stock and bond split
-summary: Tell it your time, skill and nerve. Get your investor type, a stock and bond split with rules, and a one-page policy.
+summary: Find your investor type and set a stock and bond split with a rebalancing rule. You get a one-page investing policy you can reread in a panic.
 job: money-and-investing
 thinking: medium
 thinking_why: It runs four short skills in a row. The sums are small, and the care is in matching the plan to the person. A mid-level model is enough.
@@ -14,6 +14,10 @@ when:
   - You are starting to invest and want a plan before you put money in.
   - You keep changing your approach every time prices move.
   - You hold some stocks and bonds and have never written down why.
+not_for:
+  - "You need personal financial advice, have a large sum, face a tax decision, or need money within five years: see a regulated financial adviser."
+  - "You want to pick single stocks: use the Defensive investor stock screener, or a person you trust, once your split is set."
+  - "You want a named fund or security to buy: this plan names none, so ask a regulated adviser."
 you_give:
   - Hours a month you can give to money, and what you do with them
   - Your skill at reading a company's accounts, and your tax rate
@@ -29,6 +33,23 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Answer with what you actually did, not what you wish you had done. It works step by step and saves each result.
   - Print the last page and read it again on the review date.
+output_sample:
+  input:
+    - Hours a month you can give to money, and what you do with them
+    - Your skill at reading a company's accounts, and your tax rate
+    - What you did in the last big fall in prices
+    - How much you plan to invest, and money you need within five years (optional)
+  output:
+    - name: "STEP 1: YOUR TYPE"
+      contains: Your type as defensive, enterprising or neither yet, with ranked reasons and the paths to skip.
+    - name: "STEP 2: YOUR SPLIT"
+      contains: Your stock and bond percentages, a range, and a rebalancing trigger with the move to make.
+    - name: "STEP 3: YOUR BONDS"
+      contains: Your tax pick, length pick, ranked bond kinds, and the kinds kept out.
+    - name: "STEP 4: YOUR POLICY"
+      contains: One page on what you hold, how you keep it, what you expect, what you will not do, and your review date.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 how_it_works:
   - title: Sorts you
     text: Counts your real hours, tests your skill and your nerve, and places you on the defensive or enterprising path.

@@ -16,6 +16,27 @@ use_cases:
   - "Cut stale, clichéd phrases from a piece of writing"
   - "Write a witty opening line that sets up the whole story"
   - "Show a character's thoughts inside the narration, without quote marks"
+not_for:
+  - "You want sharp one-liners and epigrams: use the Oscar Wilde mind instead."
+  - "You need a crime plot with clues and a twist: use the Agatha Christie mind instead."
+  - "You need plain, direct prose on politics or power: use the George Orwell mind instead."
+output_sample:
+  input:
+    - Your scene or chapter, pasted in
+    - A short list of the characters and what each one wants
+    - Who holds the money or power in the scene (optional)
+    - Any advice you have been given that you are unsure about (optional)
+  output:
+    - name: What works
+      contains: Praise for the parts that feel natural, named first and kept short.
+    - name: Character check
+      contains: Places where a person acts against their nature, or is too perfect to feel real.
+    - name: Dialogue and irony notes
+      contains: Where voices sound alike and where the reader could see more than the character does.
+    - name: Cuts
+      contains: Scenes, stock phrases and over-detailed description that add nothing and can go.
+    - name: Keep list
+      contains: A short list of what to keep, ending with a request to see the next pages.
 seats:
   - {seat: "Character and irony", asks: "What does this person believe about themselves, and what do we see that they don't?"}
   - {seat: "Social observer", asks: "Who has the money and the power in this room, and how does everyone behave because of it?"}

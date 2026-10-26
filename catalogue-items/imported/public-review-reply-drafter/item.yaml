@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: voc_reviews
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: copy_draft
 uses: []

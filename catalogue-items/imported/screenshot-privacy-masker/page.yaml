@@ -2,36 +2,52 @@ thinking: low
 thinking_why: It runs a tool that finds and covers text.
 new_slug: screenshot-privacy-masker
 name: Screenshot privacy masker
-summary: Give it a screenshot. Get phone numbers, emails, keys and IDs masked on
-  your own computer before you share it.
+summary: Mask phone numbers, emails, keys and IDs in a screenshot on your own computer. Check the masked copy before you share it.
 job: work-with-files
 headline: Screenshot privacy masker
-subhead: A copy of your screenshot with phone numbers, emails, API keys and ID
-  numbers covered, ready to share or paste into a chat. The work happens on your
-  own computer, so the original image is never uploaded anywhere.
+subhead: Give it a screenshot. It finds phone numbers, emails, API keys and ID numbers in the picture and covers them. It runs on your own computer, so the original image is not uploaded.
 explain: |
   A copy of your screenshot with phone numbers, emails, API keys and ID numbers covered, ready to share or paste into a chat. The work happens on your own computer, so the original image is never uploaded anywhere.
 
   A command line tool reads the text in the picture using OCR, then matches it against patterns for personal and secret data. A test run first lists what it found without changing the file, so you can see what would be hidden. Then it masks those regions and saves a new file with _masked in the name. You can edit the config to add your own patterns. It needs the privacy-mask package and Tesseract installed.
 when:
-  - You want to post an error screenshot in a forum without showing your email
-    or keys.
-  - Claude needs to read an image of your dashboard but you want private details
-    hidden first.
-  - You share screenshots with clients and must remove names and phone numbers.
-  - You want to check what private data is in an image before sending it.
+  - You want to post an error screenshot in a forum without showing your email or keys.
+  - You want your AI to read a screenshot of your dashboard, but with private details hidden first.
+  - You send screenshots to clients and need to remove names, emails and phone numbers.
+  - You want to check what private data is in an image before you send it.
+not_for:
+  - "You need to hide a face or a photo of a person: blur it by hand in a photo editor, because this tool only finds text."
+  - "You can't install tools or run commands on your computer: crop or black out the private parts yourself in your phone or computer's image editor."
+  - "You need to clean a PDF or a Word file: remove the private text in the file itself before you share it."
 you_give:
   - A screenshot or image file
-  - The privacy-mask tool and Tesseract installed
-  - Custom patterns to hide (optional)
+  - Your own patterns to hide (optional)
 you_get:
-  - A masked copy of the image
-  - A list of what was detected and where
-  - A dry-run report before any change
-  - A short summary of regions masked
+  - A masked copy of your image, saved as a new file
+  - A list of what was found and where
+  - A test report you can read before anything is changed
+  - A short summary of how many regions were masked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run a local command line tool.
+  - "Install the tool once. Run pip install privacy-mask, then install Tesseract: brew install tesseract on a Mac, or apt install tesseract-ocr on Linux."
+  - Check the install. Run privacy-mask --version. This skill needs an AI that can run commands, or you can run them yourself.
+  - Test first. Run privacy-mask mask your-file.png --dry-run. It lists what it found and changes nothing.
+  - Mask the image. Run privacy-mask mask your-file.png. It saves a new file named your-file_masked.png and keeps the original.
+  - Open the masked copy and check it by eye. The tool reads text with OCR and can miss some. Fix any gap by hand.
+  - Share the masked file or paste it into your chat. Never share the original.
+output_sample:
+  input:
+    - Your screenshot or image file (.png, .jpg, .jpeg, .bmp or .tiff)
+    - Your own patterns to hide, in a config file (optional)
+  prerequisites:
+    - An AI that can run commands on your computer, or a terminal you use yourself
+    - The privacy-mask tool installed with pip
+    - Tesseract OCR installed on your computer
+  output:
+    - name: Dry-run report
+      contains: A list of the private text found and where it sits in the image, with no change to the file.
+    - name: Masked image
+      contains: A new copy of your image with the found text covered, saved with _masked added to the file name.
+    - name: Detections list
+      contains: Each hidden item with its type, such as phone or email, and its position in the image.
+    - name: Summary line
+      contains: One short line that says how many regions were masked and of which types.

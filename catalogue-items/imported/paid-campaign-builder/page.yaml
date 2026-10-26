@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Budget and targeting choices depend on many linked numbers.
 new_slug: paid-campaign-builder
 name: Paid campaign builder
-summary: Name your goal and budget. Get campaign structure, targeting, bids and
-  a plan to scale across Google, Meta and LinkedIn.
+summary: Plan your paid ad campaigns on Google, Meta or LinkedIn. Give your goal and budget. Get structure, audiences, bids and scale or stop rules.
 job: plan-ad-tests
 headline: Paid campaign builder
-subhead: "A paid ads plan that tells you what to launch first: campaign
-  structure, audiences, bids, budget split and how to scale if it works. It
-  covers Google, Meta and LinkedIn."
+subhead: "A paid ads plan that tells you what to launch first: campaign structure, audiences, bids, budget split and how to scale if it works. It covers Google, Meta and LinkedIn."
 explain: |
   A paid ads plan that tells you what to launch first: campaign structure, audiences, bids, budget split and how to scale if it works. It covers Google, Meta and LinkedIn.
 
@@ -18,6 +15,10 @@ when:
   - Your current ads burn budget with few sales.
   - You need to decide between Google, Meta and LinkedIn.
   - You want a test plan with clear stop and scale numbers.
+not_for:
+  - You have no offer or landing page yet. Fix those first, or ask a person who knows your product to help you write them.
+  - You only want to write many ad versions. Use your AI to draft the ad copy instead, then come back for the plan.
+  - You need a daily check of one live ad account. Use your ad platform's own reports, or ask a person who runs it.
 you_give:
   - Goal and target cost per result
   - Monthly budget
@@ -29,8 +30,34 @@ you_get:
   - Bid and budget plan
   - Test list and scaling rules
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your ad account exports.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Paste your goal, target cost per result, monthly budget, offer and landing page link.
+  - Add past ad results if you have them. Export them as text or a table and paste them in.
+  - Answer any questions it asks. If you do not know something, say so and it will mark it MISSING.
+  - Read the plan. Check that the budget split and the scale or stop numbers match your real limits.
+  - Launch the first test only. Come back with results before you scale.
+output_sample:
+  input:
+    - Your goal, such as leads or sales
+    - Your target cost per result
+    - Your monthly budget
+    - Your offer and landing page link
+    - Your past ad results (optional)
+  prerequisites:
+    - An AI chat that can read pasted text
+    - Your product marketing notes, if you have them (optional)
+  output:
+    - name: Platform choice
+      contains: Which of Google, Meta or LinkedIn fits your buyer and budget, and why.
+    - name: Campaign structure
+      contains: Campaigns and ad groups, named in a clear pattern, with what each one is for.
+    - name: Audiences and keywords
+      contains: Who or what to target on each platform, plus negative keywords to leave out.
+    - name: Bids and budget split
+      contains: Starting bid approach and how your monthly budget is shared across campaigns.
+    - name: Test list
+      contains: The ad angles, audiences and offers to test first, in order.
+    - name: Scale or stop rules
+      contains: The numbers that tell you to raise spend, hold, or turn an ad off.
+    - name: Facts, hypotheses and missing data
+      contains: What is known, what is a guess, and any input marked MISSING.

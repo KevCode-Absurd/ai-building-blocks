@@ -1,6 +1,6 @@
 new_slug: writing-log-reviewer
 name: "Writing log reviewer"
-summary: "Paste your plan and your daily log. Get days hit, pace, finish date, a score out of 100 and one change."
+summary: "Check your writing log against your plan. Get days hit, pace, finish date, a score out of 100 and one change to make next week."
 job: write-and-tell-stories
 thinking: low
 thinking_why: "It is sums over a log and a fixed rule for the call."
@@ -17,6 +17,10 @@ when:
   - "You have written to a count for a week or two."
   - "You missed some days and do not know if it matters."
   - "You want to know if you will make your date."
+not_for:
+  - You have less than a week of log. Keep writing first, then run it again once you have a week or two of days.
+  - You have no plan or daily count yet. Use the daily word quota planner first, then bring its plan here.
+  - You want notes on the quality of your writing. Ask an editor or a trusted reader, as this only counts days and words.
 
 you_give:
   - "Your plan with the daily count, days a week and finish date"
@@ -35,6 +39,29 @@ how_to_use:
   - "Paste your log, one line a day: date, start time, words."
   - "Include the days you wrote nothing."
   - "Make the change it names and run it again in a week."
+output_sample:
+  input:
+    - Your plan with the daily count, writing days a week and finish date
+    - Your log with date, start time and words for each day, including zeros
+    - Anything that got in the way (optional)
+    - Your target length (optional)
+  prerequisites:
+    - A plan with a daily count, such as the one from the daily word quota planner
+  output:
+    - name: The sums
+      contains: Planned days, days hit, partial and missed, words written, average per day written, words left and the projected finish date.
+    - name: The pattern
+      contains: One line on what the missed days share, or a note that no pattern shows.
+    - name: Score
+      contains: Days hit over planned days as a score out of 100, with the sum shown.
+    - name: The call
+      contains: Keep, lower or raise the count, with the named rule used.
+    - name: The one change
+      contains: A single change for next week, tied to the pattern.
+    - name: Updated plan
+      contains: The new count, new finish date and one line of routine.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: "Reads the plan"

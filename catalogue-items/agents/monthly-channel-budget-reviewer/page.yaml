@@ -1,6 +1,6 @@
 new_slug: monthly-channel-budget-reviewer
 name: Monthly channel budget reviewer
-summary: Give it each channel's results and your store totals. Get the true return, fading channels and where the next dollar goes.
+summary: Check each ad channel's monthly results against your store totals. Find fading channels and see where the next budget goes, or which test to run first.
 job: read-ad-results
 thinking: high
 thinking_why: It runs up to six skills, chooses between moving budget and testing first from a trust score, and compares months. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You spend on more than one channel and the platform numbers add up to more than your store sold.
   - You want one calm monthly look at where the budget goes, not weekly tweaks.
   - You think a channel is fading but can't tell if it is real.
+not_for:
+  - "You spend on only one channel: use the per-channel account keeper, or read that channel's own report."
+  - "You want to judge single ads or creative: use the Campaign performance reviewer."
+  - "You have no store totals for the month: first pull orders and revenue from your store, then come back."
 you_give:
   - Each channel's spend, reported purchases and purchase value for the month
   - Your store's orders, revenue, new-customer orders and refunds for the same month
@@ -31,6 +35,29 @@ how_to_use:
   - The first time, give it your price and costs. It saves the break-even numbers.
   - Read the proposal. Move budget yourself, or say yes to each move.
   - Run it again next month. It reads the saved months and compares.
+output_sample:
+  input:
+    - Each channel's spend, reported purchases and purchase value for the month
+    - Your store's orders, revenue, new-customer orders and refunds for the same month
+    - Your price, landed cost, shipping and fees (first run only)
+    - A post-purchase "how did you hear about us" answer set (optional)
+    - A note of launches, sales or tracking changes (optional)
+  prerequisites:
+    - An AI that can keep files between months, such as Claude Code, so it can compare months
+    - Your brand brain from the Brand profile builder (recommended)
+  output:
+    - name: This month
+      contains: One line with total spend, store revenue, blended return and the gap between platform claims and the store.
+    - name: Channels
+      contains: "For each channel: spend, reported return, supported return or unknown, break-even, new-customer cost, payback and trust level."
+    - name: Fading
+      contains: Channels whose return fell two months in a row, with the months and the likely cause.
+    - name: Budget proposal
+      contains: A split with the size and reason of each move, or a hold and the test to run first.
+    - name: Watch next month
+      contains: One to three numbers that decide the next review.
+    - name: Files and missing
+      contains: Each step's file, the updated months.md, and every MISSING line in one list.
 how_it_works:
   - title: Get the base numbers
     text: Works out break-even return and cost per customer once, then measures every channel against them.

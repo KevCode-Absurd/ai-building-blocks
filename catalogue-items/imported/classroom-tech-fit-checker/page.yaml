@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It weighs the tool against the teaching goal.
 new_slug: classroom-tech-fit-checker
 name: Classroom tech fit checker
-summary: Give it a tool or AI app and a subject. Get a check of how well it fits
-  your teaching, with changes.
+summary: Check if an app or AI tool fits your lesson before you use it. Get a plain verdict, lesson changes and a small trial plan.
 job: teach-and-train
 headline: Classroom tech fit checker
-subhead: Before you bring an app or AI tool into a lesson, check whether it fits
-  what you teach and how. You name the tool, the topic and your students, and
-  you get a plain verdict with changes to make it work.
+subhead: Before you bring an app or AI tool into a lesson, check whether it fits what you teach and how. You name the tool, the topic and your students, and you get a plain verdict with changes to make it work.
 explain: |
   Before you bring an app or AI tool into a lesson, check whether it fits what you teach and how. You name the tool, the topic and your students, and you get a plain verdict with changes to make it work.
 
@@ -18,6 +15,10 @@ when:
   - You want to try an AI tutor but are unsure it helps learning.
   - A tool looks fun and you worry it will distract.
   - You need to explain to a colleague why a tool does or does not fit.
+not_for:
+  - "The tool is already approved and you have a set lesson plan: just teach it, no check needed."
+  - "You have not yet found your own gaps in teaching the topic: run the Pedagogical content knowledge developer first."
+  - "You need a school-wide tool buying decision: ask your IT lead or head of department, as this checks one topic and one tool."
 you_give:
   - The subject, topic or unit
   - The tool or AI app
@@ -31,7 +32,31 @@ you_get:
   - Warning signs to watch
   - Skills you need to build
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text from this page into a new chat.
+  - "Fill in the four required details: your subject and topic, the tool, your students' age, and your teaching background and tech confidence."
+  - Add your learning goal if you have one.
+  - Read the seven sections in order, starting with the diagnosis.
+  - Run the small trial plan with one class before you use the tool more widely.
+output_sample:
+  input:
+    - The subject, topic or unit you teach
+    - The tool or AI app you are thinking of using
+    - The age or year group of your students
+    - Your teaching experience and how confident you feel with tech
+    - The learning goal for the lesson (optional)
+  output:
+    - name: TPACK Diagnosis
+      contains: Where your knowledge of the tool, the teaching method and the topic is strong, and where it has gaps.
+    - name: Technology-Content Analysis
+      contains: How well the tool fits this topic, and where it helps or gets in the way.
+    - name: Pedagogy-Technology Alignment
+      contains: Whether the tool supports the way you teach, with changes to make it fit.
+    - name: AI-Specific Guidance
+      contains: Advice on using an AI tool well, including what students should check for themselves.
+    - name: Equity and Ethics
+      contains: Fairness, access and safety points to think about before students use the tool.
+    - name: Dispositional TPACK
+      contains: How your attitude and confidence with tech may shape the lesson.
+    - name: TPACK Development Plan
+      contains: A small trial plan, warning signs to watch and skills to build.

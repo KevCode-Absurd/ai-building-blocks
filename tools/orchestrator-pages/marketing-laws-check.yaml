@@ -1,6 +1,6 @@
 new_slug: marketing-laws-check
 name: Check your plan against the laws that decide who wins
-summary: Paste your marketing plan. Get the laws it breaks, a name check, a short versus long-term check and one move to make.
+summary: Check your marketing plan against 13 laws of marketing. Find where it breaks, test the name, spot costly tactics and pick one move to back.
 job: plan-strategy
 thinking: high
 thinking_why: It tests a plan against many rules, then picks one move, so it needs your strongest model.
@@ -14,6 +14,10 @@ when:
   - You have a marketing plan or launch idea and want it attacked before you spend on it.
   - Your plan has many small moves and no clear lead.
   - You plan to put your name on a new product or a new group of customers.
+not_for:
+  - "You have no plan yet: write a rough draft first, or talk the idea through with a colleague, then come back."
+  - "You want to judge only a new product name: use the Brand name stretch checker on its own."
+  - "You want to know if past tactics hurt you later: use the Long-run effects checker on its own."
 you_give:
   - Your marketing plan, as rough as it is
   - Your brand facts, such as name, buyers and budget
@@ -30,6 +34,26 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste your plan first. Add your rivals and last year's discount figures if you have them. It works step by step and saves each result.
   - Read the fails before you read the fixes. Check each quoted plan line is the one the verdict means.
+output_sample:
+  input:
+    - Your marketing plan, as rough as it is
+    - Your brand facts, such as name, buyers, offers and budget
+    - Facts for any new product in the plan
+    - Your main rivals and what each is known for (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack
+    - A brand brain from the Website brand brain builder (optional)
+  output:
+    - name: step-01-marketing-plan-law-checker.md
+      contains: A pass, warn or fail on each of 13 laws, the plan line behind each, a score out of 100 and a fix list.
+    - name: step-02-brand-name-stretch-checker.md
+      contains: What your name means now, a stretch score for any new product and a call on whether to use the name.
+    - name: step-03-long-run-effects-checker.md
+      contains: Each tactic's effect now and in two years, the sum for any discount and a fad or trend call.
+    - name: step-04-one-bold-move-picker.md
+      contains: One move to back, a stop list, the money it needs, an owner and a dated test.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Checks the plan against the laws
     text: Says what the plan is first in and which rung it holds, then marks each of thirteen tests pass, warn or fail with the plan line behind it.

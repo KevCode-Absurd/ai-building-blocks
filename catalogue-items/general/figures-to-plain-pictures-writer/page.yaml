@@ -1,6 +1,6 @@
 new_slug: figures-to-plain-pictures-writer
 name: "Figures to plain pictures writer"
-summary: "Paste your key figures and who will hear them. Get each one as a comparison the room can picture."
+summary: "Turn the key figures in your talk into comparisons and counts of people your room can picture. Paste your figures and who will hear them."
 job: speak-and-persuade
 thinking: low
 thinking_why: "It translates a few numbers into short comparisons."
@@ -17,6 +17,10 @@ when:
   - "You are presenting numbers to people who do not work with them."
   - "Your slide has ten figures and no point."
   - "A board member always asks \"what does that mean?\""
+not_for:
+  - "You need every check shown for a high-stakes talk: use the Number-to-picture translator, the full version of this prompt."
+  - "Your rates come with no totals: get the total first, or the prompt will mark the people count as MISSING."
+  - "You need a chart or a full slide deck: build those yourself, then use this for the lines you say aloud."
 
 you_give:
   - "The figures, with what they measure, the period and source"
@@ -32,6 +36,30 @@ how_to_use:
   - "Paste the figures and who will hear them under the prompt."
   - "Say where you will use them, so the lines fit."
   - "Try one line on a person outside your field."
+output_sample:
+  input:
+    - Your key figures, with what each measures, the period and the source
+    - Who will hear them, and what they already know
+    - Where you will use them, such as a slide or a speech (optional)
+  output:
+    - name: KEPT and SET ASIDE
+      contains: The two to five figures worth keeping, and the rest with a reason for leaving them out.
+    - name: Original
+      contains: The exact figure, unit and period, kept beside each new version.
+    - name: Comparison
+      contains: A size, span of time or place your audience knows, with the sum shown.
+    - name: People
+      contains: The rate as a count of people, only when you gave the total.
+    - name: Who gains or loses
+      contains: One short line using only what the data shows.
+    - name: Say it
+      contains: A short line you can read out or put on a slide.
+    - name: IMAGE
+      contains: One picture idea, marked as an illustration and not a fact.
+    - name: TEST QUESTION
+      contains: A question for a non-expert, and what a good answer repeats.
+    - name: MISSING
+      contains: Any fact or total the prompt needed and did not get.
 
 how_it_works:
   - title: "Keep the few that matter"

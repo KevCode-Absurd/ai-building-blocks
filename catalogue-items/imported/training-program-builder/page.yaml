@@ -2,34 +2,89 @@ thinking: low
 thinking_why: Learning plans follow a familiar pattern.
 new_slug: training-program-builder
 name: Training program builder
-summary: Give it a skills gap. Get a learning plan, a training outline and
-  coaching steps.
+summary: "Turn a skills gap into a training plan: ranked gaps, clear learning objectives, a session outline and a coaching plan for after."
 job: hire-people
 headline: Training program builder
-subhead: "A learning plan for a real skills gap: what people need to learn, how
-  to teach it, and how to coach it afterwards. It saves you from guessing which
-  training to buy or build."
+subhead: "Name the skills gap, your audience and your time limits. You get ranked gaps, learning objectives, a session outline with practice tasks, and a coaching plan for the weeks after."
 explain: |
-  A learning plan for a real skills gap: what people need to learn, how to teach it, and how to coach it afterwards. It saves you from guessing which training to buy or build.
+  Teams often buy or build training before they know which skill is missing. This training program builder starts with the gap. It ranks the gaps from the evidence you give, then builds the plan from the top one.
 
-  You start with a needs assessment, using survey questions, performance data and manager input to rank the gaps. Then the skill writes learning objectives using Bloom's levels and builds a training outline for the audience. It can add e-learning modules, microlearning, games, on-the-job tasks, mentoring plans, competency models and career paths. It also writes assessments to check what stuck. It is aimed at HR and team leads, but any manager can use it.
+  The plan has four parts. First, a needs table. Next, three to five learning objectives written as what a learner can do by the end. Then a session outline with a hands-on task in each session. Last, a coaching plan for what managers do at about two, four and eight weeks.
+
+  It never invents survey results or performance numbers. With no data, it marks priorities as provisional and gives you questions to ask managers and learners.
 when:
   - Your team has a skills gap and you do not know where to begin.
   - You need a training outline for new managers or new hires.
-  - You want a coaching or mentoring plan to follow a workshop.
+  - You want a coaching plan to follow a workshop so the learning sticks.
   - You must write clear learning objectives for a course.
+not_for:
+  - "You need a first-week plan for one new hire: use the 30-60-90 day onboarding planner."
+  - "One person is falling behind: use the Review cycle form builder for an improvement plan."
+  - "You need a legal or safety course the law requires: follow the rule's own guidance and ask your HR lead."
 you_give:
-  - The skills gap or role
+  - The skills gap or the role, such as "reps lose upsell conversations"
   - Your audience and their level
-  - Time and budget limits (optional)
-  - Performance data or survey results (optional)
+  - Limits on time and budget (optional)
+  - Performance data, survey results or manager notes (optional)
 you_get:
-  - A needs assessment with priorities
-  - Learning objectives
-  - A training outline
-  - A coaching and follow-up plan
+  - A needs table with the top gaps ranked by priority
+  - Three to five learning objectives
+  - A session outline with a practice task in each session
+  - A coaching and follow-up plan for managers
+  - Questions to check what stuck
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. Paste the skill text into the chat.
+  - Paste the gap, the audience and any limits. Add numbers or manager notes if you have them.
+  - Read the needs table first. If the top gap is wrong, say so and ask for a new ranking.
+  - Check each learning objective. Each should say what a learner can do, not what they will hear.
+  - Ask for changes to the outline until it fits your time and budget.
+  - Send the coaching plan to the learners' managers before the training starts.
+output_sample:
+  input:
+    - The skills gap or the role
+    - Your audience and their level
+    - Limits on time and budget (optional)
+    - Performance data, survey results or manager notes (optional)
+  output:
+    - name: Needs table
+      contains: Each gap with its evidence and a priority of high, medium or low. Provisional if you gave no data.
+    - name: Learning objectives
+      contains: Three to five lines that say what a learner can do by the end, and how well.
+    - name: Training outline
+      contains: A table of sessions with time, topic, activity and a practice task.
+    - name: Coaching and follow-up plan
+      contains: What the manager does at two, four and eight weeks, plus one on-the-job task per learner.
+    - name: Check questions
+      contains: Four to six questions or tasks that test the objectives, and what to measure after one to three months.
+how_it_works:
+  - title: Collect the gap
+    text: It asks once for the gap, audience and limits. Missing items are marked, not guessed.
+  - title: Rank the gaps
+    text: It builds a needs table from your evidence and keeps the top three.
+  - title: Write objectives
+    text: It writes what a learner can do by the end, using verbs that match their level.
+  - title: Build the outline
+    text: It sets sessions, time and a practice task to fit your limits.
+  - title: Plan the follow-up
+    text: It gives manager check-ins and on-the-job tasks so the skill is used.
+output_shape: |
+  Needs table: <gap> | <evidence> | <priority>
+  Objectives: By the end, learners can <verb> <what> <how well>
+  Outline: <session> | <time> | <topic> | <activity> | <practice task>
+  Coaching plan: <week 2>, <week 4>, <week 8> actions + <on-the-job task>
+  Check questions: <4 to 6 questions> + <what to measure and when>
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a planning and writing job. Claude, ChatGPT and Gemini all do it well.
+  inputs:
+    - Sales, support or quality numbers that show the gap
+    - Two or three comments from managers about what is going wrong
+    - A short survey of the learners (the skill can write one)
+terms:
+  - term: Learning objective
+    meaning: A line that says what a learner can do after the training.
+  - term: Needs assessment
+    meaning: A check of which skills are missing, before you design any training.
+  - term: Bloom's levels
+    meaning: A scale of thinking skills, from remembering facts up to creating something new.

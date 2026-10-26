@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows library patterns to draw the chart.
 new_slug: python-chart-maker
 name: Python chart maker
-summary: Give it your data. Get a clean Matplotlib chart, static, animated or
-  interactive, ready to save as an image.
+summary: Turn your data into a clean Python chart. Get Matplotlib code and a saved image, or an animated or interactive plot, ready for a report.
 job: work-with-files
 headline: Python chart maker
-subhead: A clean chart from your data, saved as an image or built as an animated
-  or interactive plot. You get tidy labels, sensible colours and the right chart
-  for the numbers.
+subhead: A clean chart from your data, saved as an image or built as an animated or interactive plot. You get tidy labels, sensible colours and the right chart for the numbers.
 explain: |
   A clean chart from your data, saved as an image or built as an animated or interactive plot. You get tidy labels, sensible colours and the right chart for the numbers.
 
@@ -18,6 +15,10 @@ when:
   - You want several related charts in one tidy grid.
   - A default plot looks messy and needs cleaning up.
   - You need a vector file for print or slides.
+not_for:
+  - "You need a live dashboard or web app: use a tool built for dashboards, since this makes still images and plots from Python code."
+  - "You cannot run Python: use the chart tools built into Excel or Google Sheets."
+  - "You only have a few numbers and want a quick bar chart: a spreadsheet's chart button is faster."
 you_give:
   - Your data (CSV, table or numbers)
   - The chart type you want, or the question it should answer
@@ -29,8 +30,29 @@ you_get:
   - Styled labels and legend
   - Multi-panel layout if needed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Open your AI tool. Pick one that can run Python code and save files, such as Claude with code running turned on.
+  - Paste the skill text into the chat, or upload the skill folder if your tool takes files.
+  - Add your data as a CSV file or pasted table. Say which chart you want, or what question it should answer.
+  - "Say which file type you want: PNG for slides, PDF or SVG for print."
+  - Open the saved chart and check the labels, colours and numbers. Ask for changes until it looks right.
+  - If your AI cannot run code, ask it for the Python script. Then run the script on your own computer.
+output_sample:
+  input:
+    - Your data as a CSV file, a table or pasted numbers
+    - The chart type you want, or the question the chart should answer
+    - Size, colours or style needs (optional)
+    - The file type you want to save, such as PNG, PDF or SVG
+  prerequisites:
+    - An AI that can run Python code and save files
+    - Python with Matplotlib installed
+  output:
+    - name: Plotting code
+      contains: A Python script using the Figure and Axes style that draws your chart from your data.
+    - name: Saved chart file
+      contains: Your chart saved as a PNG, PDF or SVG, with tight margins and a white background.
+    - name: Styled labels and legend
+      contains: Axis labels, title, legend and colours set so the chart reads clearly.
+    - name: Multi-panel layout
+      contains: A grid of several charts in one figure, made only when you ask for more than one.
+    - name: Style sheet (optional)
+      contains: A reusable style file from the style helper, so later charts match.

@@ -1,31 +1,26 @@
 new_slug: traction-social-and-display-ads
 name: Social ads experiment planner
-summary: Paste your product link. Get a focused growth test, its costs, measures
-  and decision rules.
+summary: Plan a social and display ads test for your product. Paste your product link and get a capped pilot, tracking plan and a stop rule.
 job: launch-and-scale-ads
 thinking: high
-thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
-  strongest model.
+thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Social ads experiment planner
-subhead: Paste your product link and add your goal, budget and time limits if
-  you have them. Get advice tied to your business, a small test with clear
-  limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused social and display ads plan for your product. It reads the buyer and
-  offer, checks why this channel might work and writes a small test. The default
-  is SaaS; you can ask for general-business mode.
+  A focused social and display ads plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
-  Prepare a capped test of a small number of audience and message combinations.
-  Use a working product demonstration and track through activation or qualified
-  pipeline.
+  Prepare a capped test of a small number of audience and message combinations. Use a working product demonstration and track through activation or qualified pipeline.
 
 
-  Click-through rate can improve while customer quality falls. A retargeting
-  conversion may have happened without the ad.
+  Click-through rate can improve while customer quality falls. A retargeting conversion may have happened without the ad.
 when:
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
+not_for:
+  - "You want to compare every growth channel: use the Traction workflow, which looks at all 19 channels."
+  - "Your sales cycle is very long or you have no working product demo: pick a slower channel or build a demo first."
+  - "You want ads built and published for you: this plan sends nothing and spends nothing, so a person must set up the ads."
 you_give:
   - A public product link or pasted product and pricing text
   - Your growth goal, stage and buyer, if known
@@ -35,23 +30,47 @@ you_get:
   - A small test with an owner, cost cap and decision rule
   - The next action and what needs approval
 how_to_use:
-  - Add the skill or whole workflow pack to your AI.
-  - Paste your product URL and any facts you already know.
-  - Ask it to follow the skill and cite what it can verify.
-  - Review the plan and approve any external action separately.
+  - Open Claude, ChatGPT or Gemini and paste in the skill.
+  - Paste your product link. Add your goal, budget and hours if you know them.
+  - If your AI cannot browse the web, paste your product and pricing text instead.
+  - Read the Recommendation and MISSING sections first, then check the Limits.
+  - Approve the test yourself before anyone spends money or publishes an ad.
+output_sample:
+  input:
+    - Your product link, or pasted product and pricing text
+    - Your growth goal, stage and buyer (optional)
+    - Your cash cap and hours available (optional)
+    - Past tests and their results (optional)
+  prerequisites:
+    - An AI that can browse the web helps. Without it, paste your page text.
+  output:
+    - name: Recommendation
+      contains: Whether to test now, later or skip, with the reason.
+    - name: Evidence
+      contains: Each fact used, with its source link and the date it was read.
+    - name: Buyer and useful action
+      contains: Who buys and the first useful thing they do in your product.
+    - name: Channel mechanism
+      contains: How a buyer sees the ad and reaches real value.
+    - name: Pilot
+      contains: The idea to test, audience, offer, what you make, and who owns it.
+    - name: Limits
+      contains: Cash cap, hours and end date, marked as proposed or approved.
+    - name: Measurement
+      contains: Events to track, the customer group, the counts used and how credit is given.
+    - name: Decision
+      contains: Clear rules for when to continue, revise or stop.
+    - name: Risks and next action
+      contains: What could go wrong, the next step and what needs your approval.
+    - name: MISSING
+      contains: The facts the AI could not find and you still need to supply.
 how_it_works:
   - title: Check 1
-    text: Choose the audience based on a buyer role, observed problem or relevant
-      publication. Compare social feeds with direct placements on specialist
-      sites.
+    text: Choose the audience based on a buyer role, observed problem or relevant publication. Compare social feeds with direct placements on specialist sites.
   - title: Check 2
-    text: Draft a few distinct reasons to buy, with a product demonstration and a
-      suitable next step. Keep a cold audience separate from people who already
-      visited.
+    text: Draft a few distinct reasons to buy, with a product demonstration and a suitable next step. Keep a cold audience separate from people who already visited.
   - title: Check 3
-    text: Design a small audience-by-message matrix with one primary conversion
-      event and a consistent attribution window. Check current platform
-      requirements from official sources when execution is requested.
+    text: Design a small audience-by-message matrix with one primary conversion event and a consistent attribution window. Check current platform requirements from official sources when execution is requested.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>
@@ -65,21 +84,17 @@ output_shape: |
   MISSING: <unknowns>
 tweaks:
   - what: Your growth goal
-    how: Give a target and deadline so the advice has something concrete to work
-      towards.
+    how: Give a target and deadline so the advice has something concrete to work towards.
   - what: Your real limits
-    how: State your cash cap and available hours. Missing limits remain proposed
-      assumptions.
+    how: State your cash cap and available hours. Missing limits remain proposed assumptions.
 judge:
   - Facts link to evidence, and guesses are marked.
   - The proposed action fits the buyer, budget and stage.
   - A lead or trial is never counted as a paid customer.
   - The result gives a clear next step and missing inputs.
 test:
-  - One ad has more clicks and fewer retained customers. Prefer evidence about
-    customer quality over a click-only winner.
-  - Give no budget or results. The output must mark limits as proposed and
-    withhold a success claim.
+  - One ad has more clicks and fewer retained customers. Prefer evidence about customer quality over a click-only winner.
+  - Give no budget or results. The output must mark limits as proposed and withhold a success claim.
 improve:
   - Save results with the cohort and date window, then rerun the review.
   - Replace assumptions with your own observed numbers.

@@ -14,6 +14,27 @@ use_cases:
   - Plan who maintains a household or volunteer security arrangement
   - Separate a frightening story from evidence about an actual risk
   - Write practical questions about a provider's security claim
+not_for:
+  - "You need a compliance certificate, live incident help or legal advice: call an authorized security professional or read the provider's current documentation."
+  - "You want to judge how fear and bias shape a choice, not the security claim itself: use Annie Duke for decision quality."
+  - "You need a plan for family money or saving, not digital safety: use Beth Kobliner."
+output_sample:
+  input:
+    - The activity you want to keep safe, such as sharing a photo collection or a folder
+    - Who takes part and who can see it
+    - What the provider says about the safeguard (optional)
+    - What changed since you last set it up (optional)
+  output:
+    - name: Aim and threat note
+      contains: The activity, what must stay private, available or correct, and the events that fit your situation, with unknowns marked.
+    - name: Mechanism and cost comparison
+      contains: What the proposed safeguard prevents, reduces or helps recover from, and what it costs in time, access and privacy.
+    - name: Owner and review trigger
+      contains: Who maintains and recovers the arrangement, and what change in purpose or people should prompt a new look.
+    - name: Open questions
+      contains: Plain questions for the provider or a qualified expert, so claims can be checked instead of trusted.
+    - name: Next inquiry
+      contains: The single most useful question to answer next, with who is best placed to answer it.
 seats:
   - seat: Security tradeoffs for the actual situation
     asks: What are you protecting, against which threat, and what does the safeguard cost or change?

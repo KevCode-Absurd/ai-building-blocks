@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It repeats one clear change across files.
 new_slug: test-type-fixer
 name: Test type fixer
-summary: Point it at your tests. Get unsafe type casts swapped for shoehorn so
-  test data stays typed.
+summary: Replace unsafe "as" casts in your TypeScript tests with shoehorn, so test data stays type checked and you skip faking every field.
 job: test-and-fix-code
 headline: Test type fixer
-subhead: Test files full of "as" casts hide type mistakes and force you to fake
-  every field of a big object. This skill swaps those casts for the shoehorn
-  library, so your tests pass only the data they care about and TypeScript still
-  checks it.
+subhead: Test files full of "as" casts hide type mistakes and force you to fake every field of a big object. This skill swaps those casts for the shoehorn library, so your tests pass only the data they care about and TypeScript still checks it.
 explain: |
   Test files full of "as" casts hide type mistakes and force you to fake every field of a big object. This skill swaps those casts for the shoehorn library, so your tests pass only the data they care about and TypeScript still checks it.
 
@@ -19,6 +15,10 @@ when:
   - You fake a 20-field request object just to test one field.
   - You want test data that stays checked by TypeScript.
   - A code review asked you to remove type assertions from tests.
+not_for:
+  - "You need to change production code: shoehorn is for test code only, so fix the types in the real code or ask a developer."
+  - "Your test needs a fully real object: use a typed factory or the real type instead."
+  - "Your project is not TypeScript: leave it alone, because casts and type checks do not apply."
 you_give:
   - Your test files or folder
   - Your TypeScript project
@@ -29,8 +29,30 @@ you_get:
   - A passing type check
   - A note on any case left as is
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool in your project. It needs to read your files and run commands, so use a coding tool such as Claude Code.
+  - Paste the skill and say which test files or folder to fix.
+  - Let it install the package with npm i @total-typescript/shoehorn.
+  - Let it search your test files for "as" casts, then swap each one for fromPartial or fromAny.
+  - Check that it added the shoehorn imports, then run the type check and your tests.
+  - Read its note on any case it left as is, and decide if you want to fix those by hand.
+output_sample:
+  input:
+    - Your test files or test folder
+    - Your TypeScript project
+    - Which tests use "as" casts and cause trouble (optional)
+  prerequisites:
+    - An AI that can read your project files and run commands
+    - Permission to install one package with npm
+  output:
+    - name: Install
+      contains: The @total-typescript/shoehorn package added to your project with npm.
+    - name: Cast search
+      contains: A list of test files that use "as" casts, found with a search of your test and spec files.
+    - name: fromPartial swaps
+      contains: Each "as Type" cast replaced with fromPartial, so tests pass only the fields they need.
+    - name: fromAny swaps
+      contains: Each "as unknown as Type" cast replaced with fromAny, for data that is wrong on purpose.
+    - name: Imports
+      contains: The shoehorn imports added to each changed test file.
+    - name: Type check result
+      contains: The result of running the type check to confirm nothing broke.

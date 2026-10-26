@@ -1,6 +1,6 @@
 slug: copilot-react18-legacy-context
 name: React legacy context migrator
-summary: Share old React context code. Get a migration to modern context with the affected consumers checked.
+summary: Move React legacy context (contextTypes, getChildContext) to createContext. Get the provider and every consumer updated together.
 category: general
 boards: []
 type: skill
@@ -11,7 +11,7 @@ inputs:
   - type: codebase
     required: true
 outputs:
-  - type: test_report
+  - type: code_change
 uses: []
 origin: imported
 source:

@@ -1,44 +1,117 @@
 new_slug: eight-lever-ad-visual-planner
 name: Eight-lever ad visual planner
-summary: Set eight visual controls for an ad. Choose what stays fixed and what changes across the image tests.
+summary: "Set eight visual choices for an ad image, lock the ones that must stay and get three version previews that differ enough to test."
 job: make-image-ads
 headline: Eight-lever ad visual planner
-subhead: Share product photos, brand colors, ad theme and reference images. Get eight visual settings and fixed versus flexible choices.
+subhead: "Give it your product, your ad theme and any brand colours that can't change. It sets eight visual choices for the ad image: mood, colour, lighting, product placement, composition, background, style and camera angle. You get a spec that says which choices are locked and which can change, with three version previews."
 explain: |-
-  Set eight visual controls for an ad. Choose what stays fixed and what changes across the image tests.
+  An ad image brief like "make it look premium" gives an image tool too little to work with. Three versions then come back looking the same, and you learn nothing from the test. The eight visual settings, called levers here, are the choices that shape how an ad picture looks.
 
-  Share product photos, brand colors, ad theme and reference images. Get eight visual settings and fixed versus flexible choices.
+  This skill walks through all eight for your product and theme. For each one it explains what it controls, gives 3 to 5 options and recommends a default. You lock the settings that must not change, such as your brand colour. The rest stay flexible, so each version can change two or more settings and look different.
+
+  The result is a visual direction spec you can hand to an image tool or a designer. It has no image prompts and no ad words. It does not draw. For ready-to-paste prompts, take the spec to the Ad image generation and edit planner.
 when:
-  - You need eight visual settings and fixed versus flexible choices.
-  - You need eight-lever ad visual planner for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are about to make image ads and only have a vague look in mind, like "clean and premium".
+  - Your last three ad image versions all looked the same and the test taught you nothing.
+  - A designer or an image tool needs clear direction, and you need to say what stays fixed.
+  - You want to test one theme, such as lifestyle or social proof, in three different looks.
+not_for:
+  - "You want ready-to-paste image prompts for each version: use the Ad image generation and edit planner. It takes this spec."
+  - "You want a visual brief with conflicting choices flagged, from a few picks: use the Image ad visual brief writer."
+  - "You want the layout of text and product on the picture: use the Themed ad layout planner."
+  - "You want to choose a photo style, such as flat lay or editorial, from twelve: use the Ad photography style chooser."
+  - You need finished ad images or final brand design. This skill plans the look and draws nothing.
 you_give:
-  - Product photos
-  - Brand colors
-  - Ad theme and reference images
+  - Your product or brand (required)
+  - The ad theme, such as lifestyle, urgency, social proof or problem and solution (required)
+  - Who the ad is for (optional, but it shapes mood and style)
+  - Brand colours or other choices that can't change (optional)
+  - Reference images or ads you like, and what to avoid (optional)
 you_get:
-  - Eight visual settings and fixed versus flexible choices
-  - The sources used, missing inputs and assumptions
+  - A value for each of the eight visual settings, with none left blank
+  - A list of locked settings and flexible settings
+  - Three version previews that name which settings change in each
+  - A short note on why each choice fits your theme and buyer
+  - A next step for turning the spec into pictures
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - Tell it your product, your ad theme and who the ad is for. Add brand colours that can't change, reference ads you like and what to avoid.
+  - Read its suggestion for each of the eight settings. Change any you disagree with, and say which ones to lock.
+  - Check that the three version previews differ on at least two settings. If they don't, ask for more spread.
+  - Take the finished spec to the Ad image generation and edit planner to get prompts, then make the pictures in ChatGPT, Gemini or Higgsfield. Compare the versions against your locked brand colour.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm product photos, brand colors, ad theme and reference images. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Context
-    text: Follow the collect context section in the full method and keep its required fields and decision rules.
-  - title: The 8 Levers
-    text: Follow the the 8 levers section in the full method and keep its required fields and decision rules.
-  - title: Priority Hierarchy
-    text: Follow the priority hierarchy section in the full method and keep its required fields and decision rules.
-  - title: Variation Strategies
-    text: Follow the variation strategies section in the full method and keep its required fields and decision rules.
-  - title: Deliver Configuration
-    text: Follow the deliver configuration section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return eight visual settings and fixed versus flexible choices. Check facts, math and the decisions before any action.
+  - title: Collects the context
+    text: Product or brand and theme, plus audience, reference images and what to avoid. It asks once for what is missing and uses theme defaults for the rest.
+  - title: Walks through the eight settings
+    text: "Mood and emotion, colour palette, lighting, product placement, composition, background, style and camera angle. Each has 3 to 5 options and a default based on your theme."
+  - title: Sets the order of authority
+    text: Your explicit picks win over the eight settings. Those win over your brand look. That wins over the theme's defaults.
+  - title: Locks and frees
+    text: Locks brand non-negotiables, such as colour. Keeps 3 or 4 settings flexible so the versions have room to differ.
+  - title: Plans the versions
+    text: Gives three versions for your theme and names the settings each one changes. They must differ on at least two settings or they will look the same.
+  - title: Hands back the spec
+    text: One structured visual direction spec, ready for a designer or an image tool, with a note on what to do next.
+output_shape: |
+  VISUAL DIRECTION SPEC
+  Theme <theme> | Product <name> | Audience <who or MISSING>
+
+  Setting 1 Mood and emotion: <choice>
+  Setting 2 Colour palette: <choice>
+  Setting 3 Lighting style: <choice>
+  Setting 4 Product placement: <choice>
+  Setting 5 Composition layout: <choice>
+  Setting 6 Background environment: <choice>
+  Setting 7 Style approach: <choice>
+  Setting 8 Product angle: <choice>
+
+  LOCKED (will not change): <list>
+  FLEXIBLE (versions may change): <list>
+
+  VERSION PREVIEW
+  Version 1 <name>: changes settings <x, y, z> to <values>
+  Version 2 <name>: changes settings <x, y, z> to <values>
+  Version 3 <name>: changes settings <x, y, z> to <values>
+
+  NEXT  <where to take the spec>
+  CHECKS MISSED: <none | list>
+  MISSING: <what was not given>
+output_sample:
+  input:
+    - Your product or brand
+    - The ad theme, such as lifestyle or social proof
+    - Who the ad is for (optional)
+    - Brand colours that can't change, reference ads and what to avoid (optional)
+  prerequisites:
+    - An idea of the ad's selling theme, even a rough one
+  output:
+    - name: Eight visual settings
+      contains: A choice for mood, colour, lighting, product placement, composition, background, style and angle, none left blank.
+    - name: LOCKED
+      contains: The settings that stay fixed in every version, such as brand colour.
+    - name: FLEXIBLE
+      contains: The three or four settings that versions may change so the tests look different.
+    - name: VERSION PREVIEW
+      contains: Three named versions, each listing which settings change and to what.
+    - name: NEXT
+      contains: Where to take the spec, such as the Ad image generation and edit planner, and what to compare.
+    - name: CHECKS MISSED and MISSING
+      contains: Any check that failed and any input you did not give.
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Walks through the eight settings and writes the spec from your answers."}
+    - {name: "ChatGPT, Gemini or Higgsfield", why: "Where you make the pictures from the spec. Claude can't draw."}
+  inputs:
+    - "Two or three ads whose look you like, as screenshots"
+    - "Your brand colours and fonts, from your brand profile"
+terms:
+  - term: Lever
+    meaning: One of the eight visual choices that shape how an ad picture looks.
+  - term: Locked setting
+    meaning: A choice that stays the same in every version, such as your brand colour.
+  - term: Flexible setting
+    meaning: A choice a version may change, so the versions can look different from each other.
+  - term: Composition
+    meaning: How the things in the picture are arranged in the frame.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

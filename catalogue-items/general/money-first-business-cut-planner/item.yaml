@@ -1,19 +1,24 @@
 slug: money-first-business-cut-planner
 name: "Money-first business cut planner"
-summary: "List your weekly tasks and what each earns. Get what to keep, hand off, drop or park."
+summary: List your weekly tasks and what each earns. Get what to keep, hand off, drop or park, a three-price offer and a 90-day plan.
 category: general
 type: skill
 role: make
 job: ops
 level: beginner
 inputs:
-  - {type: question, required: true}
-  - {type: performance_sheet, required: false}
-  - {type: plan, required: false}
+  - type: question
+    required: true
 outputs:
-  - {type: plan}
+  - { type: plan }
 origin: rebuilt
 version: 1.0.0
-minds: [john-carlton]
+minds: [ john-carlton ]
 credits:
-  - {title: "Really Stupid Blunders You're Making With Your Biz & Career", by: "John Carlton, 2023", used: "Sorting work into what earns and what does not, handing off the rest, checking side projects against real numbers, parking ideas, and a simple good, better, best offer at three prices"}
+  - { title: "Really Stupid Blunders You're Making With Your Biz & Career", by: "John Carlton, 2023", used: "Sorting work into what earns and what does not, handing off the rest, checking side projects against real numbers, parking ideas, and a simple good, better, best offer at three prices" }
+before:
+  - weekly-time-audit-planner
+next:
+  - values-to-week-planner
+  - cash-forecast-builder
+needs_mode: manual

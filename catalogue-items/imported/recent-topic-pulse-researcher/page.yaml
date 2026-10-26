@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must weigh many sources and keep claims tied to links.
 new_slug: recent-topic-pulse-researcher
 name: Recent topic pulse researcher
-summary: Give it a topic. Get a cited briefing of what Reddit, Hacker News and
-  the web say lately. Collects data from websites.
+summary: Find out what people are saying about a topic right now. Get a cited briefing from Reddit, Hacker News and the web, with a link behind every claim.
 job: understand-customers
 headline: Recent topic pulse researcher
-subhead: A cited briefing on what people have said lately about a topic, drawn
-  from Reddit, Hacker News and the open web. X is an option if you supply an
-  export.
+subhead: A cited briefing on what people have said lately about a topic, drawn from Reddit, Hacker News and the open web. X is an option if you supply an export.
 explain: |
   A cited briefing on what people have said lately about a topic, drawn from Reddit, Hacker News and the open web. X is an option if you supply an export. You see the main themes, the arguments, and where to read more.
 
@@ -18,6 +15,10 @@ when:
   - You want real user opinions before choosing a tool.
   - You are researching a competitor and need recent chatter.
   - You want links to the threads behind each point.
+not_for:
+  - "You need private customer data or sites that ban scraping: ask your customers directly with a short survey instead."
+  - "You want the lasting facts on a topic, not recent talk: read the main sources or ask an expert."
+  - "You need steady tracking over months: use a paid social listening tool."
 you_give:
   - Topic to research
   - Time window
@@ -29,8 +30,36 @@ you_get:
   - Links for every claim
   - Suggested threads to read
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini with web search turned on. Paste in the skill instructions.
+  - Say "pulse on" and then your topic. For example, "pulse on your product category".
+  - "Answer the 2 to 4 short questions it asks: topic detail, angle, time window and sources."
+  - If you want X results, attach your X search export file when asked. Skip this if you have none.
+  - Read the TL;DR first. Then open the links behind any claim you plan to rely on.
+  - Check each site's rules before you reuse what you find. The skill saves the briefing as a file and also pastes it in chat.
+output_sample:
+  input:
+    - Your topic, as specific as you can make it
+    - "What you want to learn: trends, opinions, problems, opportunities or a comparison"
+    - Your time window (30 days if you skip it)
+    - Which sources to search (optional)
+    - An X search export file (optional)
+  prerequisites:
+    - An AI that can search the web
+    - An X export file or a paid X API key, only if you want X results
+  output:
+    - name: TL;DR
+      contains: A short summary of the main findings on your topic for the time window.
+    - name: Reddit
+      contains: Top posts with engagement signals, plus a summary of what Reddit users are saying.
+    - name: Hacker News
+      contains: Notable stories with engagement signals, plus a summary of what HN commenters are saying.
+    - name: Web
+      contains: Key sources from the open web, plus a summary of what they say.
+    - name: X/Twitter (if available)
+      contains: Posts from your export or the X API, shown only when you supplied one.
+    - name: Cross-Platform Patterns
+      contains: Themes that show up on more than one site, and where people disagree.
+    - name: Key Takeaways
+      contains: The points most worth acting on, each tied to a link.
+    - name: Content Angles (if applicable)
+      contains: Ideas for content that the research points to, when they fit your topic.

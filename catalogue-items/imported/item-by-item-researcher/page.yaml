@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It runs many searches and marks what it could not confirm.
 new_slug: item-by-item-researcher
 name: Item-by-item researcher
-summary: Give it your research outline. Get a checked file for every item, with
-  each answer filled in or marked unsure. Scrapes sites.
+summary: Turn your research outline into a checked file for each item. Every answer is filled in or marked unsure, so you can trust the gaps.
 job: research-topics
 headline: Item-by-item researcher
-subhead: A research list turned into a folder of checked answers, one file for
-  each item. You supply an outline of items to study and the fields to fill for
-  each.
+subhead: A research list turned into a folder of checked answers, one file for each item. You supply an outline of items to study and the fields to fill for each.
 explain: |
   A research list turned into a folder of checked answers, one file for each item. You supply an outline of items to study and the fields to fill for each. The skill finds the outline, skips items already done, and works in batches. Each batch goes to search agents that look things up on the web and write a JSON file per item.
 
@@ -18,6 +15,10 @@ when:
   - You started a big research list and want to resume where it stopped.
   - You want sources and gaps shown, not guesses.
   - You need structured files you can load into a spreadsheet.
+not_for:
+  - "You have only a handful of items: ask your AI one question in a normal chat, which is faster."
+  - "You need a quick answer to one question: use a plain web search or ask your AI directly."
+  - "You plan to copy pages from sites that forbid it: check each site's terms and robots.txt first, or ask the site owner."
 you_give:
   - An outline file listing the items to research
   - A list of fields to fill for each item
@@ -29,8 +30,29 @@ you_get:
   - A record of finished items for resuming
   - Batch-by-batch progress
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web, run code and save files.
+  - Make a folder with an outline.yaml that lists your topic and items, and a fields.yaml that lists what to fill in for each one.
+  - Open an AI tool that can search the web, save files and run helpers in parallel, such as Claude Code. A plain chat window cannot do this.
+  - Add the skill to your AI tool, then type /research-deep in the folder.
+  - Check the first batch of files. Look at the fields marked [uncertain] before you say yes to the next batch.
+  - If the run stops, start it again. It skips items that already have a file.
+  - Check each site's terms before you rely on what it scraped.
+output_sample:
+  input:
+    - An outline file (outline.yaml) with your topic, the list of items and the run settings
+    - A fields file (fields.yaml) listing what to fill in for each item
+    - Batch size and items per agent, set in the outline (optional)
+    - Your yes before each new batch
+  prerequisites:
+    - An AI tool that can search the web, save files and run several helpers at once, such as Claude Code
+    - The validation script validate_json.py, which the skill calls but does not yet include
+  output:
+    - name: One JSON file per item
+      contains: Every field from your fields file, filled in English, saved in your results folder under the item's name.
+    - name: "[uncertain] marks"
+      contains: Any field value the helper could not confirm is tagged so you can see it was not guessed.
+    - name: uncertain array
+      contains: A list at the end of each file naming every field that was marked uncertain.
+    - name: Batch progress
+      contains: A running update after each batch, then you approve before the next one starts.
+    - name: Summary report
+      contains: How many items finished, which failed or have uncertain fields, and where the output folder is.

@@ -1,6 +1,6 @@
 slug: skill-writer-and-reviewer
 name: Skill writer and reviewer
-summary: Describe a skill or paste one. Get a well-built version with clear triggers and safety notes.
+summary: "Write an AI skill from a job description, or review one you have. Get a clear trigger line, safety notes and a cleaner SKILL.md."
 category: general
 boards: []
 type: skill
@@ -12,6 +12,10 @@ inputs:
     required: false
   - type: brief
     required: true
+  - type: feedback_notes
+    required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: skill_files
 uses: []

@@ -1,14 +1,13 @@
 slug: code-walkthrough-writer
 name: "Code walkthrough writer"
-summary: "Paste working code. Get it rewritten as an explanation for people, with the code placed in the order a reader needs."
+summary: "Turn working code into a code walkthrough anyone can follow, with each piece of code beside the reason it exists, in reading order."
 category: general
 type: skill
 role: make
 job: copy
 level: intermediate
 inputs:
-  - {type: question, required: true}
-  - {type: copy_draft, required: false}
+  - {type: codebase, required: true}
 outputs:
   - {type: copy_draft}
 origin: rebuilt

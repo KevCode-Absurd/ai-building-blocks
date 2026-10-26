@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must foresee drift and write guard rules.
 new_slug: agent-goal-writer
 name: Agent goal writer
-summary: Give it a vague job. Get a goal an AI agent can finish, with proof of
-  done, limits and stop rules.
+summary: Turn a vague job into an agent goal you can run. You get proof of done, limits and stop rules, so your AI agent knows when to finish.
 job: set-up-ai
 headline: Agent goal writer
-subhead: A vague job turned into a goal an AI agent can actually finish. The
-  goal says what done looks like, what proof counts, what is off limits, and
-  when the agent must stop and ask you.
+subhead: A vague job turned into a goal an AI agent can actually finish. The goal says what done looks like, what proof counts, what is off limits, and when the agent must stop and ask you.
 explain: |
   A vague job turned into a goal an AI agent can actually finish. The goal says what done looks like, what proof counts, what is off limits, and when the agent must stop and ask you.
 
@@ -18,6 +15,10 @@ when:
   - You have a checklist or ticket and want it turned into a clear goal.
   - You want to see how an agent would loop through a task before you let it run.
   - A long job keeps drifting from what you first wanted.
+not_for:
+  - "You have a simple one-step request: just type it to your AI as a normal prompt."
+  - "You want the agent to do the job itself: run the goal in your agent tool, since this only writes the goal."
+  - "You want to run a goal loop inside an agent tool that has its own goal feature: use that tool's own goal loop. This skill only writes the text."
 you_give:
   - A rough description of the job
   - What you want to end up with
@@ -29,7 +30,30 @@ you_get:
   - Stop rules and limits
   - A list of holes found in an existing goal
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill text. No code, files or paid tools are needed.
+  - "Pick a mode in your first message: draft, refine, audit, convert or preview. Draft builds a new goal. Refine fixes one you have. Audit lists the holes. Convert turns a checklist or ticket into a goal. Preview shows how the loop would run first."
+  - 'Paste your brief. For example: "Draft a goal. Job: update every product description on my shop to match our new brand voice. Do not change prices. Stop and ask me if a product has no photo."'
+  - Read the goal you get back. Check that proof of done is something you could really check, and that the limits match what you want.
+  - Fix anything unclear and paste it back with the mode set to refine. Then give the final goal to your agent tool.
+  - This page's credit says the skill was copied as it is, but the source file says it was adapted from the original with new notes and examples. Treat it as an adapted copy.
+output_sample:
+  input:
+    - A rough description of the job
+    - What you want to end up with
+    - Limits on what the agent may touch (optional)
+    - An existing goal, checklist or ticket to fix or convert (optional)
+  prerequisites:
+    - "Choose one mode: draft, refine, audit, convert or preview"
+  output:
+    - name: Goal
+      contains: The outcome in plain words, with proof of done and the limits on what the agent may touch.
+    - name: Loop
+      contains: How the agent makes progress, how it checks its work, and how often it checks.
+    - name: Drift controls
+      contains: Guard rules that pull a long job back to what you first asked for.
+    - name: Termination
+      contains: The ways the job may end, including when the agent must stop and ask you.
+    - name: Waiting limits
+      contains: How long the agent waits on slow outside things before it stops.
+    - name: Holes found
+      contains: For an existing goal, the gaps and unclear parts, with the smallest fixes.

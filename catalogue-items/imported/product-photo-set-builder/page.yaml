@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans the set, then checks that the product stays the same.
 new_slug: product-photo-set-builder
 name: Product photo set builder
-summary: Give it one product photo. Get a full set of new angles and scenes.
-  Your image model draws them.
+summary: "Turn one product photo into a full set of product photos: new angles, scenes and close-ups. Your AI writes one prompt per shot."
 job: product-photos
 headline: Product photo set builder
-subhead: A full set of product images from a single photo, with new angles,
-  scenes and framing that still look like the same item. Marketplace listings
-  often need five or more images, and detail pages need many more.
+subhead: A full set of product images from a single photo, with new angles, scenes and framing that still look like the same item. Marketplace listings often need five or more images, and detail pages need many more.
 explain: |
   A full set of product images from a single photo, with new angles, scenes and framing that still look like the same item. Marketplace listings often need five or more images, and detail pages need many more.
 
@@ -18,6 +15,10 @@ when:
   - Your detail page looks sparse.
   - You want lifestyle and close-up shots of the same product.
   - You need a matching set without a new photo shoot.
+not_for:
+  - Your product's key features are hidden in the photo. Reshoot it so they show, or add a clearer photo first.
+  - Your listing needs exact claims about size, color or material. Use a real photo shoot, because AI images can drift from the real item.
+  - You want an AI that draws the images by itself in one chat. Use ChatGPT or Gemini image tools with the prompts, or a person who edits photos.
 you_give:
   - One product photo
   - Key selling points
@@ -29,9 +30,30 @@ you_get:
   - Angle and scene variations
   - Tips to spot drift in the product
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own image model key
-    (OpenAI, Gemini, fal or Replicate).
+  - Pick a photo with the whole product in view and a clean background. Remove any text or watermark first.
+  - Paste this skill into Claude, ChatGPT or Gemini. Add the photo, the product name and your selling points.
+  - Ask for the shot list and one prompt per shot. Check that the product description is identical in every prompt.
+  - Draw the images. In ChatGPT or Gemini, upload your photo with each prompt. The example commands in this skill use the paid dlazy gpt-image-2 tool, which needs a dlazy account and a way to run commands.
+  - Put all images side by side. Check that it is the same item in each one, then rerun only the shots that drift.
+output_sample:
+  input:
+    - One product photo with a clean background
+    - Your product name
+    - Your key selling points
+    - A shot list, such as five main image slots (optional)
+  prerequisites:
+    - An image model, such as ChatGPT or Gemini image tools, or an account with the paid dlazy gpt-image-2 command line tool
+    - A way to run commands if you use dlazy
+  output:
+    - name: Product fidelity paragraph
+      contains: One product description that lists shape, color, material and details, reused word for word in every prompt.
+    - name: Mood paragraph
+      contains: The scene and color style taken from your selling points, reused in every prompt.
+    - name: Shot list
+      contains: "Five shots: front hero, 45-degree angle, in-use scene, detail close-up, and size or inside view."
+    - name: One prompt per shot
+      contains: Each prompt joins the same two paragraphs with one new camera position and setting.
+    - name: Fix lines
+      contains: Extra sentences to add when the product drifts, the scene is too busy, colors differ or details look soft.
+    - name: Set check
+      contains: A side-by-side review of all images, so you rerun only the shots that fail.

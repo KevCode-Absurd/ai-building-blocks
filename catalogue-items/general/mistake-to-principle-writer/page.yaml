@@ -1,6 +1,6 @@
 new_slug: mistake-to-principle-writer
 name: "Mistake-to-principle writer"
-summary: "Describe a mistake and what happened. Get the root cause and a rule you can check next time."
+summary: "Turn a mistake into a rule you can check. Give it what happened and your goal. You get the root cause, a rule and a check date."
 job: think-and-decide
 thinking: medium
 thinking_why: "It traces cause back to a choice or habit, which needs care, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "A launch, hire or campaign went wrong and you want to avoid repeating it."
   - "The same kind of mistake has happened twice."
   - "You want a team habit of writing down what was learned."
+not_for:
+  - "You made one small slip with no pattern: fix it and move on, no rule needed."
+  - "The mistake came from a forecast or estimate: use the Estimate gap auditor first, then bring the result here."
+  - "You need to choose between options now: use the Decision checklist builder."
 
 you_give:
   - "What happened, in plain order"
@@ -35,6 +39,29 @@ how_to_use:
   - "Add any older cases that feel the same."
   - "Read the root cause. If it only blames bad luck, ask for another pass."
   - "Save the rule in your lessons file and check it on the date given."
+output_sample:
+  input:
+    - What happened, in plain order
+    - The goal it got in the way of
+    - Two or three similar past cases (optional)
+    - Who knows this area best (optional)
+  output:
+    - name: GOAL
+      contains: The goal the mistake blocked, with a measure if you have one.
+    - name: WHAT WENT WRONG
+      contains: The problems in plain lines, each marked known or guessed.
+    - name: ROOT CAUSE
+      contains: The choice or habit behind the biggest problem, with the chain of whys.
+    - name: THE RULE
+      contains: "One rule: when a situation comes up, do this action, because of this reason."
+    - name: TESTED AGAINST
+      contains: Two past cases checked against the rule, with any change made to it.
+    - name: BEST CRITIC
+      contains: The kind of person whose objection counts most, their likely objection and the answer.
+    - name: CHECK ON
+      contains: A date or event to check the rule, and what to look at.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts that would sharpen the rule, and any checks the skill failed.
 
 how_it_works:
   - title: "State the goal"

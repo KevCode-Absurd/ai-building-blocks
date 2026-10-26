@@ -1,6 +1,6 @@
 new_slug: market-boundary-checker
 name: "Market boundary checker"
-summary: "Paste what you sell and who buys. Get your true market share and an own, reach or sliver verdict."
+summary: "Check your real market share. Give it what you sell and who buys. You get your share at four market sizes and a verdict: own, reach or sliver."
 job: test-an-idea
 thinking: medium
 thinking_why: "It needs careful sums across several versions of the market, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "You say you have no competitors and want to test it."
   - "Your plan says you need a small share of a very large market."
   - "You are choosing between two ways to describe your market and can't tell which is honest."
+not_for:
+  - "You have no sales and no buyer evidence yet: pick a starting market first, or talk to ten likely buyers."
+  - "You want to size a market for a bank or investor report: use a paid industry report and cite it."
+  - "You want to know if people will pay for the idea: run a small test with real buyers instead."
 
 you_give:
   - "What you sell and who buys it"
@@ -33,6 +37,29 @@ how_to_use:
   - "Paste what you sell, who buys, and your numbers. Mark any figure you are guessing."
   - "Add what buyers do when they say no, from lost deals, reviews or calls."
   - "Use the share it finds, not the one in your slide, in your next pitch or plan."
+output_sample:
+  input:
+    - What you sell and who buys it
+    - Your customer, sales or user numbers (optional)
+    - What buyers pick when they say no to you (optional)
+    - A market or plan you chose earlier (optional)
+  output:
+    - name: Your claim
+      contains: Your market claim in one sentence, with each word that narrows the market listed.
+    - name: Narrow market
+      contains: The buyers who match every narrowing word, and how many reachable ones you can name.
+    - name: Share ladder
+      contains: Your share at four market sizes, each with its number and source.
+    - name: The market that counts
+      contains: The set of choices a buyer weighs when they say no to you, and the evidence.
+    - name: The call
+      contains: Own, reach, sliver or fiction, with the reason and a note that cut-offs are rules of thumb.
+    - name: What to change
+      contains: One move to fix a weak position, without renaming the market.
+    - name: MISSING
+      contains: Facts that would firm up the sums.
+    - name: CHECKS MISSED
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: "Reads your claim"

@@ -16,6 +16,30 @@ use_cases:
   - "Write a short set of values your team can hold each other to"
   - "Plan how to share success with your team and your community"
   - "Use a setback or turning point to rethink your direction"
+not_for:
+  - "You need legal, tax or personal-finance advice: use a local adviser or an accountant."
+  - "You want to value a company with numbers and a spreadsheet: use the Aswath Damodaran mind."
+  - "You want a check on incentives and how a plan could fail: use the Charlie Munger mind."
+output_sample:
+  input:
+    - The decision or problem you face, in a few plain sentences
+    - How your revenue splits across clients, products or people
+    - A recent win or setback you want to review (optional)
+    - Your current terms, pay or reward rules (optional)
+    - The people your choice affects, such as staff, customers and partners
+  output:
+    - name: Opening story
+      contains: A short story from his recorded life that fits your problem, with the lesson in one line.
+    - name: Long-term risk
+      contains: How your plan could affect the health of the business in ten years.
+    - name: Dependence map
+      contains: Where you rely too much on one client, product, market or person, and a rule to limit it.
+    - name: Success review
+      contains: What caused your result, what was luck, and what would show you were wrong.
+    - name: Key questions
+      contains: The questions that matter most, such as who must respect you and whether rewards follow performance.
+    - name: Closing duty
+      contains: What to learn, share and leave for those who come next, with views beyond his record marked.
 seats:
   - {seat: "Integrity and discipline", asks: "Would we be comfortable if every detail of this decision were made public tomorrow?"}
   - {seat: "Long-term builder", asks: "Does this serve the company's health in ten years, or just this quarter's numbers?"}

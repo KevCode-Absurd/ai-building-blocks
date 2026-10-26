@@ -38,7 +38,7 @@ How to start:
 9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
-The rewritten paragraph. A list of feeling words cut, each with the thing that replaced it. The one true detail used and where it came from. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
+The rewritten paragraph. What happened, in order. A list of feeling words cut, each with the thing that replaced it. The one true detail used and where it came from. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none". If no paragraph is given, still print every heading of the output shape in order (REWRITE, WHAT HAPPENED, IN ORDER, FEELING WORDS CUT, THE DETAIL, MISSING, CHECKS MISSED) with a `MISSING:` line under each, then ask for the paragraph.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

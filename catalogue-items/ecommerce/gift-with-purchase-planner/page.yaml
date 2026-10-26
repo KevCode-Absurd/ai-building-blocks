@@ -1,6 +1,6 @@
 new_slug: gift-with-purchase-planner
 name: "Gift-with-purchase planner"
-summary: "Give it your catalogue, AOV and margins. Get spend-to-earn gift tiers with a margin check."
+summary: "Plan a gift with purchase that lifts order value without a discount. Give it your products, costs and average order. Get spend tiers and a margin check."
 job: make-offer
 thinking: medium
 thinking_why: "It picks gifts and sets thresholds from your numbers, then checks margin. A mid-size model does this well."
@@ -17,6 +17,10 @@ when:
   - You want a bigger average order without cutting prices.
   - You have a product that shoppers want and could use as a gift to move them into another category.
   - You run a free shipping threshold and want a second reason to add to the cart.
+not_for:
+  - "You sell one product only: use a bundle or quantity-break offer instead, since there is no second category to try."
+  - "You have no spare stock to give away: wait until the gift is on the shelf, or use a plain free shipping threshold."
+  - "You want to cut prices or run a sale: set the discount in your store and check the margin by hand."
 
 you_give:
   - Your products with price, cost per unit and sales share
@@ -37,6 +41,30 @@ how_to_use:
   - Add the gifts you are thinking of, with cost and price.
   - Agree the stop rule it writes before you launch, then change one thing at a time.
   - Check that you have enough stock of every gift.
+output_sample:
+  input:
+    - Your products with price, cost per unit and sales share
+    - Your average order value and how order sizes spread
+    - Your shipping cost per order
+    - Gifts you are thinking of, with cost and price
+    - The category you want shoppers to try next (optional)
+  output:
+    - name: GIFT
+      contains: The gift chosen, what it costs you and the normal price it sells for as a gift-only item.
+    - name: TIERS
+      contains: Two to four spend levels, each with its reward, reward cost as a share of order value, and margin after.
+    - name: BREAK-EVEN
+      contains: A check for each tier that the gift costs less than the extra order value it earns.
+    - name: ZERO-COST BONUSES
+      contains: Videos, guides or checklists that answer a worry shoppers have right after buying.
+    - name: FREE SHIPPING
+      contains: Where to place free shipping so it gives a reason to add more to the cart.
+    - name: COPY LINES
+      contains: Text for the banner, the product page and the cart progress bar.
+    - name: MARGIN MODEL
+      contains: Profit per order before and after the gift offer.
+    - name: STOP RULE
+      contains: What to compare, over how long, and the line that ends the test.
 
 how_it_works:
   - title: Picks the gift first

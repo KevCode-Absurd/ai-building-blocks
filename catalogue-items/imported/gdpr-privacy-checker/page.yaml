@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It scans for set risks and then writes them up.
 new_slug: gdpr-privacy-checker
 name: GDPR privacy checker
-summary: Point it at your code and data use. Get privacy risks, an impact
-  assessment and a tracker for data requests.
+summary: Scan your code for GDPR privacy risks, draft an impact assessment and track data requests against the one-month legal deadline.
 job: secure-code
 headline: GDPR privacy checker
-subhead: Find privacy problems in your code before a regulator or a customer
-  does. Point it at a project folder and it scans for personal data like emails,
-  phone numbers, IP addresses, health data and card numbers.
+subhead: Find privacy problems in your code before a regulator or a customer does. Point it at a project folder and it scans for personal data like emails, phone numbers, IP addresses, health data and card numbers.
 explain: |
   Find privacy problems in your code before a regulator or a customer does. Point it at a project folder and it scans for personal data like emails, phone numbers, IP addresses, health data and card numbers. It also flags risky habits such as logging personal data, missing consent and keeping data forever.
 
   Two more tools sit beside the scanner. One builds a data protection impact assessment for a processing activity. The other tracks data subject requests, such as access or deletion, against the legal deadline. It covers EU rules and the German federal law. The scanner needs Python, and its output can feed a build check.
 when:
-  - You are shipping a feature that stores user data and want a privacy check
-    first.
+  - You are shipping a feature that stores user data and want a privacy check first.
   - A customer asks for proof you handle personal data properly.
   - You need an impact assessment for a high-risk activity.
-  - People are sending deletion or access requests and you need to track
-    deadlines.
+  - People are sending deletion or access requests and you need to track deadlines.
+not_for:
+  - "You need a legal ruling on whether you comply: ask your data protection officer or a privacy lawyer, because this scan is not a compliance certificate."
+  - "You have no code to scan and only want a privacy policy or cookie banner: use a privacy policy generator or ask a lawyer."
+  - "You need to find security holes such as weak passwords or open ports: use a security scanner, because this checks privacy habits only."
 you_give:
   - Your project folder
   - A description of the data you process
@@ -31,8 +30,33 @@ you_get:
   - A tracker for data subject requests
   - Fixes ranked by risk
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Use an AI that can run Python and read files, such as Claude with code tools. A plain chat cannot run the scan.
+  - Upload the skill folder and your project folder. Ask your AI to scan the project with scripts/gdpr_compliance_checker.py.
+  - Read the report. It gives a score out of 100, critical, high and medium risks, and fixes ranked by risk. Fix the critical ones first.
+  - If the activity is high risk, ask for a DPIA. Your AI makes an input template, you fill in the processing details, then it writes the report.
+  - To track a data request, give your AI the request type and the person's details. It logs the request and shows the deadline.
+  - Send the results to your data protection officer or legal counsel before you rely on them.
+output_sample:
+  input:
+    - Your project folder
+    - A description of the data you process
+    - Details of the processing activity, for the impact assessment (optional)
+    - Your data request details, for the tracker (optional)
+  prerequisites:
+    - An AI that can run Python code and read your project files
+    - Your final results go to your data protection officer or legal counsel for sign-off
+  output:
+    - name: Compliance report
+      contains: A score from 0 to 100 and each risk marked critical, high or medium, with the GDPR article it relates to.
+    - name: Personal data findings
+      contains: Where the scan found emails, phone numbers, IP addresses, health data, card numbers and IBANs in your code.
+    - name: Risky code patterns
+      contains: Spots that log personal data, lack consent, keep data forever, skip encryption or switch off deletion.
+    - name: Prioritized recommendations
+      contains: Fixes ranked by risk, each tied to a GDPR article.
+    - name: DPIA report (dpia_report.md)
+      contains: A draft impact assessment with a threshold check, risks, legal basis notes and ways to reduce each risk.
+    - name: Data request tracker
+      contains: Each access, deletion or other request with its status, one-month deadline and overdue alerts.
+    - name: Response template
+      contains: A draft reply for a logged data request, ready for you to review and send.

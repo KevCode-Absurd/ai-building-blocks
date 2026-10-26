@@ -1,6 +1,6 @@
 new_slug: story-ads-carousel
 name: "Get story ads and a carousel from your buyer's problem"
-summary: "Give it customer reviews and product facts. Get a problem story, a card-by-card carousel and a story image ad."
+summary: "Turn customer reviews into story ads: a problem story, a card-by-card carousel and a story image ad that brings your product in last."
 job: write-ad-copy
 
 headline: "Story ads that start with your buyer's problem and bring the product in last"
@@ -9,12 +9,16 @@ subhead: Give it customer reviews and product facts. It writes a brief on your b
 explain: |
   A buyer who has never heard of you will not read an ad that opens on your product. They will read one that opens on their own bad week. Story ads work because the reader sees themselves first and meets the product only after the problem is clear.
 
-  This workflow starts with a short brief on one buyer, taken from your reviews. It lists your selling points in the order this buyer asks about them and flags the claims that need proof. Then it writes a long problem story with the product arriving last, splits the same story into carousel cards, each with a picture, words and headline, and ends with a story ad for one image, with a picture plan and two tests.
+  This workflow starts with a short brief on one buyer, taken from your reviews. It lists your selling points in the order this buyer asks about them and flags the claims that need proof. Then it writes a long problem story with the product arriving last, writes carousel cards for the same buyer, each with a picture, words and headline, and ends with a story ad for one image, with a picture plan and two tests.
 
 when:
   - Your ads open on features and strangers don't stop to read them.
   - You have a lot of customer stories in your reviews and want to use them.
   - You want one buyer's story told as a long post, a carousel and a single image ad.
+not_for:
+  - "Your product has no customer reviews yet: collect a few real customer words first, or talk to five buyers."
+  - "You only need the buyer brief: use the Buyer brief writer on its own."
+  - "You want short ad openings, not a story: use the Ad hook writer."
 
 you_give:
   - Customer reviews, copied as written
@@ -34,6 +38,27 @@ how_to_use:
   - Have your inputs ready. Paste real reviews, including the ones that tell a story, and your product facts.
   - It works step by step and saves each result. Read the buyer brief first, then the story. If the story doesn't sound like your buyers, change the brief and run again.
   - Hand the carousel and image plan to whoever makes your pictures.
+output_sample:
+  input:
+    - Customer reviews, copied as written, with source and date
+    - Facts about one product, such as price, variants, ingredients or materials, and how it is used
+    - Your brand facts, voice and look (optional)
+  prerequisites:
+    - An AI that can read the handoff pack files, such as Claude Code or a Claude Project
+    - A brand brain from the Website brand brain builder (optional)
+  output:
+    - name: Buyer brief
+      contains: One buyer, the moment they started looking, and the fear or habit the story must move.
+    - name: Selling points
+      contains: Your product facts in the order this buyer asks about them, with claims that need proof flagged.
+    - name: Problem story
+      contains: A long story with the scene, the low point and the turn, and the product arriving last.
+    - name: Carousel
+      contains: Each card with its picture, words and headline, plus the main ad text.
+    - name: Story image ad
+      contains: One story for a single picture, a picture plan, two other openings and two tests.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Writes the buyer brief
@@ -42,8 +67,8 @@ how_it_works:
     text: Uses the selling points skill to order your facts as this buyer asks about them and flag claims that need proof.
   - title: Writes the problem story
     text: Uses the problem story skill to set the scene, map the fall, write the turn and bring the product in last.
-  - title: Splits it into a carousel
-    text: Uses the carousel skill to give each card one idea, a picture and a headline, with the first card able to stand alone.
+  - title: Writes the carousel
+    text: Uses the carousel skill, with the brief and the selling points, to give each card one idea, a picture and a headline, with the first card able to stand alone.
   - title: Writes the story image ad
     text: Uses the story image ad skill to write one story for a single picture, with a picture plan and two tests.
 
@@ -78,13 +103,13 @@ example:
   output: |
     BUYER BRIEF
     Moment: the third tub of greens powder went stale | Stops them: habit
-    
+
     PROBLEM STORY
     Scene: a shaker bottle at the back of the cupboard ... Low point: the powder is clumped again ... Turn: a friend hands over a torn pack ... Product: named in the last two lines.
-    
+
     CAROUSEL (card 1)
     Picture: a full shaker, untouched | Words: "Day 9. Still full." | Headline: The tub you never finish
-    
+
     MISSING: grams of sugar per pack
 
 tweaks:

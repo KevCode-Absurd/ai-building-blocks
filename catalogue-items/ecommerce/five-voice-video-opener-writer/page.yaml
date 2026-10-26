@@ -1,43 +1,105 @@
 new_slug: five-voice-video-opener-writer
 name: Five-voice video opener writer
-summary: Write eighteen video openers in five voice styles. Add pace, emphasis and delivery notes for the chosen speaker.
+summary: "Write eighteen spoken video ad openers in five voices, with exact words and delivery notes, built only from your approved claims."
 job: make-video-ads
 headline: Five-voice video opener writer
-subhead: Share product facts, target buyer, angle, speaker and approved claims. Get eighteen grouped openers with voice and delivery notes.
+subhead: "Give it your product, buyer, angle and approved claims. It writes eighteen spoken openers for a video ad, grouped into five voices, so you can test which voice wins. Each one has its exact words, a time estimate and delivery notes."
 explain: |-
-  Write eighteen video openers in five voice styles. Add pace, emphasis and delivery notes for the chosen speaker.
+  The first two or three seconds of a video ad are voice. A real customer, a founder and a calm expert each sound different, and each suits a different buyer. If you test only the words, you never learn which voice works.
 
-  Share product facts, target buyer, angle, speaker and approved claims. Get eighteen grouped openers with voice and delivery notes.
+  This writer produces eighteen video ad openers in five voices: real customer, founder, educator, narrator and casual friend. Each is a short spoken line with the voice tag, a time estimate and notes on pace, stress, pauses and background sound.
+
+  It uses only your product facts and approved claims. A personal story, a time on the product, a number or a health effect stays in brackets until the speaker confirms it is true. You get words to film, not a script to publish untouched.
 when:
-  - You need eighteen grouped openers with voice and delivery notes.
-  - You need five-voice video opener writer for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are about to brief a creator or founder and need first lines to choose from.
+  - Your video ads hook badly and you suspect the voice is wrong, not the offer.
+  - You want to test a customer voice against a founder voice on the same product.
+  - A voice actor needs a clear line with pace and stress marked.
+not_for:
+  - "You need the full ad script, not just the first line: use the Five-part creator ad script writer or the Founder ad script builder."
+  - "Your video has no spoken words: use the Wordless video ad opening writer."
+  - "You want openers with an AI presenter, a storyboard and clip prompts: use the Spoken video ad opening writer."
+  - "You have no approved claims or product facts yet: write those first, since this writer will not invent them."
 you_give:
-  - Product facts
-  - Target buyer
-  - Angle
-  - Speaker and approved claims
+  - Your product and a one-sentence description
+  - Your target buyer and the moment they are in
+  - Your approved claims, the exact things the ad may say
+  - Your angle, the main reason to buy or doubt to beat
+  - Your speaker, tone and video length (optional)
 you_get:
-  - Eighteen grouped openers with voice and delivery notes
-  - The sources used, missing inputs and assumptions
+  - Eighteen spoken openers, grouped into five voices
+  - Exact words, a voice tag and a time estimate for each
+  - Delivery notes with pace, word to stress, pauses and background sound
+  - A list of every detail to confirm before filming
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Write your approved claims in a short list. Include only what you can back up.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product, buyer, angle, approved claims and who will speak.
+  - Read the "confirm before filming" list first. Fill every bracket with a true detail or cut that opener.
+  - Read each kept opener aloud and time it. Cut words if it runs over about four seconds.
+  - Film two or three voices as separate ads, and compare them.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm product facts, target buyer, angle, speaker and approved claims. Mark facts that are missing.
-  - title: Collect Inputs
-    text: Follow the collect inputs section in the full method and keep its required fields and decision rules.
-  - title: The 5 Voice Styles
-    text: Follow the the 5 voice styles section in the full method and keep its required fields and decision rules.
-  - title: Generate 18 Voiceover Hooks
-    text: Follow the generate 18 voiceover hooks section in the full method and keep its required fields and decision rules.
-  - title: Delivery Notes
-    text: Follow the delivery notes section in the full method and keep its required fields and decision rules.
-  - title: Rules
-    text: Follow the rules section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return eighteen grouped openers with voice and delivery notes. Check facts, math and the decisions before any action.
+  - title: Collects your inputs
+    text: "Notes your product, buyer, claims and angle, and marks anything missing."
+  - title: Matches voices to the buyer
+    text: "Uses rules of thumb for which voices suit doubtful, trust-first or premium buyers. These are starting points to test."
+  - title: Writes eighteen openers
+    text: "Four customer, four founder, four educator, three narrator and three casual friend, each five to ten words."
+  - title: Marks unconfirmed details
+    text: "Puts any story, time, number or result in brackets until the speaker confirms it is true."
+  - title: Estimates timing
+    text: "Gives a time estimate for each opener and trims any that run long."
+  - title: Adds delivery notes
+    text: "Notes pace, stress, pauses and background sound so the speaker can record it."
+output_shape: |-
+  ## Opener set: <product> | buyer: <who> | angle: <angle>
+  Claims used: <approved claims, or none given>
+
+  ### <Voice style> (<n> openers)
+  Opener <n>: "<exact words>"
+    Voice: <tag> | Tone: <tone> | Time: <n>s (estimate)
+    Pace | Stress | Pause | Sound
+
+  CONFIRM BEFORE FILMING: <each placeholder and who confirms it>
+  SPEAKER FIT: <which voice suits the speaker>
+  MISSING: <input, or none>
+  CHECKS MISSED: <check, or none>
+output_sample:
+  input:
+    - Your product and what it does
+    - Your target buyer and the angle
+    - Your approved claims
+    - Your speaker, tone and video length (optional)
+  output:
+    - name: Customer openers
+      contains: Four conversational lines in a real-customer voice, with placeholders for any personal detail.
+    - name: Founder openers
+      contains: Four first-person lines on why the product exists, with the founder's real story left in brackets.
+    - name: Educator openers
+      contains: Four calm lines built on a fact or cause that your approved claims support.
+    - name: Narrator and friend openers
+      contains: Three third-person story lines and three warm, direct lines.
+    - name: Delivery notes
+      contains: For each opener, a time estimate, pace, the word to stress, pauses and background sound.
+    - name: Confirm before filming
+      contains: Every bracketed detail and who must confirm it is true.
+tweaks:
+  - what: Your approved claims
+    how: List only claims you can back up. The openers stay inside them.
+  - what: Your speaker
+    how: Say who will speak. A real customer, a founder and a voice actor each suit different voices.
+  - what: Your angle
+    how: Name one reason to buy or one doubt to beat. Eighteen openers on one angle test the voice, not the idea.
+  - what: Your buyer
+    how: Say how much they trust ads like yours. It decides which voices to try first.
+terms:
+  - term: Opener
+    meaning: The first spoken line of a video ad, heard in the first two to four seconds.
+  - term: UGC
+    meaning: Short for user-made content. A phone-made look, said by a real customer or creator.
+  - term: Approved claim
+    meaning: A statement about the product that the owner can back up and is allowed to say in an ad.
+  - term: Delivery notes
+    meaning: Directions for the speaker, such as how fast to talk and which word to stress.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

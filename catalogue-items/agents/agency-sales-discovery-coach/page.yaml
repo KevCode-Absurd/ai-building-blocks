@@ -1,0 +1,173 @@
+name: Discovery Coach agent
+summary: Plan a 30-minute sales discovery call with an opening, questions by theme, objection answers and a next-step close. Or review a call you just had.
+headline: Discovery Coach agent
+subhead: Tell it who you are calling, what you sell and what you already know. It plans the 30 minutes, writes the questions that find the problem, its cost and the reason to act now, drafts answers to the doubts you will hear and sets up a clear next step. Or paste notes from a call that just ended and get a review.
+job: sell-and-negotiate
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Most sales calls are lost before the pitch. The seller jumps to the demo
+  before they know why the buyer is on the call, what the problem costs or who
+  else must say yes. This discovery coach agent plans a sales discovery call
+  that stays on the buyer's problem longer. Most of the 30 minutes goes to
+  their current state and pain, a short part to a pitch that matches only what
+  they said, and the last minutes to a clear next step.
+
+
+  It draws on three well-known methods. SPIN Selling asks about the situation,
+  the problem, what it leads to and what a fix is worth. Gap Selling maps where
+  the buyer is, where they want to be and what causes the gap. The Sandler pain
+  funnel goes from the surface symptom to the business cost and then to what is
+  at stake personally. It limits questions you could have researched, asks for
+  the root cause and asks why now.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It works from
+  what you paste and cannot research the prospect or listen to a call. The
+  objection shares in the profile (for example 48% about budget) have no source
+  in the original, so do not quote them. The call lengths and the 60/40 talk
+  ratio are the author's rules of thumb, not tested results.
+when:
+  - You have a first call with a prospect tomorrow and want a plan for the 30 minutes.
+  - You keep reaching the demo with no clear idea of the buyer's problem or who decides.
+  - A call just ended, you left unsure what happens next, and you want to see what you missed.
+  - You are training a new seller and want a call structure and a set of questions they can use.
+not_for:
+  - You want to write a cold message to get a first meeting. Use the Outbound Strategist agent or the Sales Outreach agent.
+  - You want only the order of questions, with no call structure or objections. Use the Sales call question planner.
+  - You want a whole deal scored after the call. Use the Deal Strategist agent.
+  - You want a proposal after the call. Use the Proposal Strategist agent.
+  - You are interviewing people to test a business idea, not selling. Use the Customer discovery interview planner.
+you_give:
+  - Who you are calling, their company and their role
+  - What you sell, in a few lines
+  - Why they are on the call, such as an inbound request or your outreach, and any signal you saw
+  - What you already know about them from research or past contact
+  - The length of the call, if it is not 30 minutes (optional)
+  - Notes or a transcript from a call you just had, if you want a review (optional)
+you_get:
+  - A call plan with timed parts, from the opening to the next step
+  - A set of questions by theme, built on your research so none are ones you could have looked up
+  - A short pitch bridge that links two or three things you offer to what the buyer says
+  - Answers to the doubts you are likely to hear, in four steps
+  - A plain list of signs the call went well and signs you rushed it
+  - A review of a finished call and a follow-up list (when you paste notes)
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste what you know about the prospect and your product. Say if you want a plan before a call or a review after one.
+  - Do your own research first. Paste in the facts you found, so the AI does not ask questions you could have looked up.
+  - Read the opening and the questions out loud once. Change any line that does not sound like you.
+  - Take the plan into the call as notes, not a script. Listen more than you talk.
+  - After the call, paste your notes back in and ask for a review and a list of follow-ups.
+how_it_works:
+  - title: Set the aim
+    text: It confirms who you are calling, why they are on the call and what a good result is.
+  - title: Open with an agreement
+    text: It writes a short opening that sets the agenda, asks permission to ask hard questions and says "no" is an acceptable result.
+  - title: Plan the questions
+    text: It writes questions by theme, such as what is broken, why, what it costs, who else cares, why now and what happens if nothing changes.
+  - title: Bridge to the pitch
+    text: It picks two or three things you offer that match the pain the buyer names, and no more.
+  - title: Prepare for doubts
+    text: It drafts answers that acknowledge, show you understand, ask what lies behind the doubt and offer a new view.
+  - title: Close with a next step
+    text: It writes the close so both sides leave knowing who does what and by when.
+  - title: Review the call
+    text: If you paste notes, it marks what went well, what you rushed and what to do before the next call.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <prospect and role> | reason for call <inbound or outbound and signal> | length <minutes> | ASSUMED: <list> | MISSING: <list>
+
+  CALL PLAN
+    opening <minutes> | discovery <minutes> | pitch <minutes> | next steps <minutes>
+
+  OPENING
+    <opening agreement in your voice, with agenda, time check and the three possible outcomes>
+
+  QUESTIONS BY THEME
+    theme <what is broken, why it is broken, what it costs, who else cares, why now, what if nothing changes> | <questions> | follow-ups <questions> | listen for <answer that matters>
+
+  PITCH BRIDGE
+    "Based on <their words>" | <capability 1> | <capability 2> | MISSING: <proof you must supply>
+
+  NEXT STEPS CLOSE
+    <what happens next> | who | by when | who else to include | what "no" looks like
+
+  LIKELY DOUBTS
+    <doubt> | acknowledge | show you understand | clarify with <question> | new view
+
+  CHECKLIST
+    went well if <signs> | rushed if <signs>
+
+  CALL REVIEW (if you pasted notes)
+    <moment> | what happened | what to try instead | follow-ups before next call
+
+  STILL TO CHECK
+    <item> | who or what confirms it
+output_sample:
+  input:
+    - Who you are calling, their company and role
+    - What you sell and why they are on the call
+    - What you already know about them from your research
+    - Notes or a transcript from a finished call (optional, for a review)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Time to research the prospect first, so the plan skips what you could have looked up
+  output:
+    - name: Call plan
+      contains: A timed outline of the opening, the discovery part, a short pitch and the next step.
+    - name: Opening
+      contains: A short agreement that sets the agenda and makes a "no" an acceptable result.
+    - name: Questions by theme
+      contains: Questions on the problem, its cause, its cost, who else cares, why now and doing nothing.
+    - name: Pitch bridge
+      contains: Two or three of your strengths tied to the pain the buyer names.
+    - name: Next steps close
+      contains: What happens next, who does it, by when, and who else should join.
+    - name: Likely doubts
+      contains: Four-step answers to the doubts you may hear, such as budget, timing or a rival.
+    - name: Call review
+      contains: What went well, what you rushed and what to do before the next call.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: You paste in your research and get a plan, questions and doubt answers. You can paste notes back for a review.
+    - name: A call recording tool with transcripts
+      why: A transcript lets the review point to the exact moments you rushed or missed a signal.
+  inputs:
+    - The prospect's role, company size and anything they said when they booked the call.
+    - Your last three lost deals and the reason each was lost.
+    - Notes from your last call with the same company.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Call length
+    how: Say if your call is 15, 45 or 60 minutes. The parts are rescaled and the number of questions changes.
+  - what: Method
+    how: Ask for one method only, such as SPIN or Sandler, if your team trains on it.
+  - what: Buyer level
+    how: Say if you talk to a manager, an executive or a user. The questions on cost and the personal stake change with the level.
+improve:
+  - After each call, paste your notes and ask which question got the best answer. Use it again.
+  - Keep a list of the doubts you hear most and ask for sharper answers every month.
+terms:
+  - term: Discovery call
+    meaning: An early sales call where you learn the buyer's problem before you pitch.
+  - term: SPIN Selling
+    meaning: A method that asks about the situation, the problem, what it leads to and what a fix is worth.
+  - term: Gap Selling
+    meaning: A method that compares where the buyer is now with where they want to be and why the gap exists.
+  - term: Sandler pain funnel
+    meaning: A line of questions that goes from the surface problem to its business cost and then to personal stakes.
+  - term: Upfront contract
+    meaning: A short agreement at the start of a call about the agenda and the possible outcomes.
+  - term: Root cause
+    meaning: The real reason a problem exists, not just the symptom you can see.

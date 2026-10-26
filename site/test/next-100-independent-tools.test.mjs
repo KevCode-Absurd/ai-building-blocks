@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { NEXT_TOOLS, runNextTool as run } from '../src/tools/next-100-tools.mjs';
 import { BROWSER_TOOLS, parseCsv } from '../src/tools/browser-tools.mjs';
+import { LIBRARY_COVERAGE_TOOLS } from '../src/tools/library-coverage-tools.mjs';
 import { TOOLS as CALCULATORS } from '../../mini-tools/index.mjs';
 
 const json = (slug, input) => JSON.parse(run(slug, typeof input === 'string' ? input : JSON.stringify(input)));
@@ -19,9 +20,10 @@ const expectExactNumberOrRefusal = (slug, input, digits) => {
 test('25 new utility routes are distinct from prior browser tools and calculators', () => {
   assert.equal(NEXT_TOOLS.length, 25);
   const prior = new Set([...ORIGINAL_BROWSER_SLUGS, ...CALCULATORS.map(t => t.slug)]);
-  assert.equal(BROWSER_TOOLS.length, 32, 'Seven original browser tools plus 25 additions must be integrated');
-  assert.equal(new Set(BROWSER_TOOLS.map(t => t.slug)).size, 32);
-  assert.deepEqual(new Set(BROWSER_TOOLS.map(t => t.slug)), new Set([...ORIGINAL_BROWSER_SLUGS, ...NEXT_TOOLS.map(t => t.slug)]));
+  const expected = [...ORIGINAL_BROWSER_SLUGS, ...NEXT_TOOLS.map(t => t.slug), ...LIBRARY_COVERAGE_TOOLS.map(t => t.slug)];
+  assert.equal(BROWSER_TOOLS.length, expected.length, 'Existing tools and reviewed library utilities must be integrated');
+  assert.equal(new Set(BROWSER_TOOLS.map(t => t.slug)).size, expected.length);
+  assert.deepEqual(new Set(BROWSER_TOOLS.map(t => t.slug)), new Set(expected));
   assert.equal(new Set(NEXT_TOOLS.map(t => t.slug)).size, 25);
   for (const t of NEXT_TOOLS) {
     assert.ok(!prior.has(t.slug), `Existing route reused: ${t.slug}`);

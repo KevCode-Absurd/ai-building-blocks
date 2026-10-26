@@ -14,12 +14,18 @@ outputs:
   - {type: plan}
 uses: [daily-fulfillment-digest-writer, where-is-my-order-risk-finder, risky-order-flagger, order-hold-manager, carrier-performance-comparer, tracking-number-fixer]
 steps:
-  - {uses: daily-fulfillment-digest-writer, note: "Every morning: open orders grouped by age, with holds and exceptions, set against yesterday's list."}
-  - {uses: where-is-my-order-risk-finder, note: "Every morning: shipped orders with stale tracking and unshipped orders past your limit, before customers ask."}
-  - {uses: risky-order-flagger, note: "Only when Shopify marked new orders as risky: lists them, then tags and holds them only after your yes."}
-  - {uses: order-hold-manager, note: "Only after you have reviewed held orders and said which to release or keep held."}
-  - {uses: carrier-performance-comparer, note: "Only when most of the stale tracking sits with one carrier: whether that carrier is slower than the others."}
-  - {uses: tracking-number-fixer, note: "Only when you supply corrected tracking numbers and say yes: updates them on orders already shipped."}
+  - uses: daily-fulfillment-digest-writer
+    note: "Every morning: open orders grouped by age, with holds and exceptions, set against yesterday's list. Uses your store connection. Hands the open-order list and the holds to your action list."
+  - uses: where-is-my-order-risk-finder
+    note: "Every morning: shipped orders with stale tracking and unshipped orders past your limit, before customers ask. Uses your store connection again, not step 1's list. Hands the late and stuck orders, compared with yesterday, to your action list and to step 5."
+  - uses: risky-order-flagger
+    note: "Only when Shopify marked new orders as risky: lists them, then tags and holds them only after your yes. Uses your store connection, not step 2's list. Hands the held orders to you to review."
+  - uses: order-hold-manager
+    note: "Only after you have reviewed held orders and said which to release or keep held. Uses your store connection and your release choices on step 3's holds. Hands the released and still-held orders to your action list."
+  - uses: carrier-performance-comparer
+    note: "Only when most of the stale tracking sits with one carrier: whether that carrier is slower than the others. Uses your store connection; step 2's stale-tracking count decides when it runs. Hands a keep or review call on the carrier to your action list."
+  - uses: tracking-number-fixer
+    note: "Only when you supply corrected tracking numbers and say yes: updates them on orders already shipped. Uses your corrected numbers and your store connection. Hands the updated orders to the day's log."
 schedule: "Every weekday morning, before support opens"
 asks_before: [tagging or holding any order, releasing a held order, cancelling or changing an order, changing tracking numbers, emailing any customer]
 origin: own

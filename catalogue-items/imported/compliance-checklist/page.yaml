@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps rules to evidence and ranks the gaps.
 new_slug: compliance-checklist
 name: Compliance readiness checklist builder
-summary: Name the framework, such as SOC 2 or GDPR. Get an evidence checklist
-  with gaps ranked by priority.
+summary: Build a compliance readiness checklist for SOC 2, HIPAA, PCI DSS or GDPR. See what you have, what is missing, and which gaps to fix first.
 job: secure-code
 headline: Compliance readiness checklist builder
-subhead: Name the framework, such as SOC 2 or GDPR. Get an evidence checklist
-  with gaps ranked by priority. Bring the framework or frameworks. Use the
-  result to plan your next step.
+subhead: Name the framework, such as SOC 2 or GDPR. Get an evidence checklist with gaps ranked by priority. Bring the framework or frameworks. Use the result to plan your next step.
 explain: |
   An evidence checklist for a standard such as SOC 2, HIPAA, PCI-DSS or GDPR, showing what you already have in place and what is missing, ranked so you fix the right things first.
 
@@ -18,6 +15,10 @@ when:
   - You handle health or card data and need to know your gaps.
   - You want one plan that covers two frameworks at once.
   - An audit date is set and you need a punch list.
+not_for:
+  - "You need a certification or a pass or fail verdict: ask a qualified auditor, because this checklist cannot certify anything."
+  - "You need legal advice on what a law means for you: ask a lawyer who knows your region and field."
+  - "You only want to check one contract or policy line: read it with a lawyer or your privacy officer instead."
 you_give:
   - The framework or frameworks
   - Business type and tools you use
@@ -29,7 +30,23 @@ you_get:
   - Gaps ranked by priority
   - A readiness summary
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or files are needed.
+  - Name the framework or frameworks, such as SOC 2 Type II or GDPR.
+  - Describe your business, the tools you use and the controls you already have. Add your audit date if you have one.
+  - Read the readiness summary first. Then check the status of each item against what you really have.
+  - Take the top ranked gaps into a fix plan. Ask an auditor or lawyer to confirm your scope before you act on it.
+output_sample:
+  input:
+    - The framework or frameworks you want, such as SOC 2 or GDPR
+    - Your business type and the tools you use
+    - What security controls you have today
+    - Your audit date (optional)
+  output:
+    - name: Readiness summary
+      contains: An estimated readiness percentage for each control category, with counts of done, partly done and missing items.
+    - name: Checklist by control area
+      contains: Each requirement with its status, the evidence an auditor would want, and the gap if there is one.
+    - name: Gap and action notes
+      contains: What is missing for each gap, what to do about it, and a rough effort estimate.
+    - name: Priority remediation plan
+      contains: Gaps ranked by risk, audit impact, effort and shared coverage, with quick wins first and related fixes grouped.

@@ -16,6 +16,32 @@ use_cases:
   - "Map the growth limits and growth drivers of a business on one page"
   - "Keep one culture across a team spread over several cities"
   - "Use your network of contacts to open the first doors for a new idea"
+not_for:
+  - "You run one local service with no network effect: use a plain business plan or a local adviser, since this mind says that kind of business will not blitzscale."
+  - "You want a plan built on costs, reinvestment and giving back: use the Andrew Carnegie mind instead."
+  - "You want his latest views on politics or which AI startups he backs now: he has no record on that, and this mind gives no investment calls."
+output_sample:
+  input:
+    - Your business or product in a few lines
+    - Who your users are and how they find you today
+    - Your market, your rivals and how fast they are moving
+    - What you have launched so far, and how rough it is (optional)
+    - The risks that worry you most (optional)
+  output:
+    - name: Recommendation
+      contains: A view on whether to grow fast or grow carefully, based on your market and your stage.
+    - name: Network type
+      contains: Which network effect you have, or how to design one in, if any.
+    - name: Conditions for speed
+      contains: Checks on market size, product-market fit and whether the business can scale.
+    - name: Growth limits and drivers
+      contains: Two limits to shrink and four factors to grow, mapped to your case.
+    - name: Distribution plan
+      contains: How people will find you, and which existing network you could borrow.
+    - name: Roughest launch version
+      contains: The earliest version you could put in front of real users, and what harm to avoid.
+    - name: Fire and smoke risks
+      contains: Risks sorted into critical and minor, with the critical ones given to a named person.
 seats:
   - {seat: "Networks and blitzscaling", asks: "Does this get more valuable as more people join, and are we moving fast enough to win the market?"}
   - {seat: "Distribution first", asks: "Great product, fine. How will people actually find it?"}

@@ -49,11 +49,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Open the admin and do the base settings from the plan: business details, plan, domain and payments.
 
-2. **Product and variant setup planner.** Use the skill `product-and-variant-setup-planner`. Turns the products you list into set-up sheets that the rest of the store uses.
-3. **Collections and menu planner.** Use the skill `collections-and-menu-planner`. Give it the product data from the steps before. Groups the finished products into collections, filters and a menu.
-4. **Shipping rate planner.** Use the skill `shipping-rate-planner`. Give it the product data from the steps before. Uses product weights and sizes from the setup sheets to set zones, rates and a free-shipping line.
-5. **Store tax setup planner.** Use the skill `store-tax-setup-planner`. Give it the product data from the steps before. Sets the tax status and class for each product from the setup sheets, then gives test carts.
-6. **Store go-live checker.** Use the skill `store-go-live-checker`. Give it the product data from the steps before. Checks the finished store against the earlier plans and ends with a score, blockers and a test-order plan.
+2. **Product and variant setup planner.** Use the skill `product-and-variant-setup-planner`. Uses your own product list, not step 1's plan. Hands the finished product sheets to every step after it.
+3. **Collections and menu planner.** Use the skill `collections-and-menu-planner`. Give it the product data from the steps before. Takes the product sheets from step 2. Hands a collections and menu plan to the store you build.
+4. **Shipping rate planner.** Use the skill `shipping-rate-planner`. Give it the product data from the steps before. Uses your own countries and carrier costs (not step 3's menu plan) plus weights and sizes from the step 2 sheets. Hands the next step the zones, rates and free-shipping line.
+5. **Store tax setup planner.** Use the skill `store-tax-setup-planner`. Give it the product data and the plan from the steps before. Takes the shipping zones from step 4 as where you ship, and the product sheets from step 2. Hands the next step the tax settings and test carts.
+6. **Store go-live checker.** Use the skill `store-go-live-checker`. Give it the product data and the plan from the steps before. Checks the finished store against the tax, shipping and setup plans before it. Ends with a score, blockers and a test-order plan.
 7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

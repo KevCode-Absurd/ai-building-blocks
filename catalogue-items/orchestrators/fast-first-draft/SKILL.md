@@ -39,9 +39,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Find the situation.** Use the skill `what-if-situation-finder`. One what-if situation, with the people stuck in it and no plot.
-2. **Set the daily word quota.** Use the skill `daily-word-quota-planner`. Give it the brief from the steps before. A word count, a finish date and a closed-door routine you can keep.
-3. **Pick the scene details.** Use the skill `scene-detail-picker`. Give it the brief from the steps before. A short detail sheet for each place, so the draft stays in the story.
+1. **Find the situation.** Use the skill `what-if-situation-finder`. One what-if situation, with the people stuck in it and no plot. Steps 2, 3 and 4 all read this situation.
+2. **Set the daily word quota.** Use the skill `daily-word-quota-planner`. Give it the brief from the steps before. A word count, a finish date and a closed-door routine you can keep. Step 4 reads this plan; step 3 does not.
+3. **Pick the scene details.** Use the skill `scene-detail-picker`. Give it the brief from the steps before. A short detail sheet for each place, built from step 1's situation (not step 2's plan), so the draft stays in the story.
 4. **Write the draft without an outline.** Use the skill `unplotted-first-draft-writer`. Give it the brief and the plan from the steps before. Today's pages in order, plus the facts sheet to carry into tomorrow.
 
 Pause here: Repeat the draft step each day with your facts sheet until the draft is done. Keep the door shut and show nobody. Then put it in a drawer for six weeks and run the revise workflow.

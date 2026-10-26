@@ -2,15 +2,15 @@ slug: heygen
 name: HeyGen
 maker: HeyGen
 url: https://www.heygen.com
-promise: "Turn scripts into videos with AI presenters and versions in other languages."
+promise: "Turn a typed script into a video with an AI presenter, then translate it."
 use_cases: [make-video]
 categories: [video]
 what_it_does:
-  - Turns a typed script into a video with an AI presenter.
-  - Makes a custom avatar of you, with your own voice, on paid plans.
-  - Offers over 500 stock presenters in more than 30 languages.
-  - Translates a video into other languages.
-  - Exports in 1080p, or 4K on the Pro plan.
+  - "Turns a typed script into a video with an AI presenter and a voice-over (checked 26 Oct 2026)."
+  - "Also starts from an image, an audio file, or slides from a PPT or PDF deck (checked 26 Oct 2026)."
+  - "Makes a custom avatar of you with your own voice. The person shown must verify their identity on camera (checked 26 Oct 2026)."
+  - "Translates a video into other languages, with voice cloning and lip-sync. It lists 175 or more languages and dialects (checked 26 Oct 2026)."
+  - "Edits with a text editor, a brand kit and automatic captions (checked 26 Oct 2026)."
 benefits:
   - "Make presenter videos from scripts instead of filming every update."
   - Put your sales or support video into other languages.
@@ -20,12 +20,13 @@ best_for:
   - "Teams making presenter videos that need updates without a new shoot."
   - Teams that need videos in many languages.
 not_for:
-  - Cinematic ads or story-led clips.
-  - Free use at scale, since the free plan has watermarks and only 3 short videos a month.
+  - "Cinematic ads or story-led clips. Try Kling, Veo or Higgsfield."
+  - "Free use at scale, since the free plan adds a watermark and gives 3 videos a month."
+  - "Cutting footage you already filmed. Use CapCut or Descript."
 pricing:
   model: freemium
-  from: "US$29 per month"
-  note: Free plan gives 3 watermarked videos a month, up to 1 minute each. Creator includes 600 credits and removes the watermark. Pro is US$49 per month.
+  from: "Free, then US$29 per month"
+  note: "Checked 26 Oct 2026. Free: 3 watermarked videos a month, up to 1 minute each. Creator: US$29 a month, or US$24 a month on its yearly price, with 600 credits and up to 1080p. Pro: from US$49 a month with 1,000 credits and up to 4K. Business: US$149 a month with 1,500 credits, and extra seats at US$20 a month each. Enterprise is custom. Higher Pro tiers add credits at higher prices. The page also shows 2 months free on yearly billing."
 works_with:
   - elevenlabs
   - canva
@@ -33,6 +34,26 @@ runs_in: [web, api]
 blocks:
   - marketing-video-producer
 alternatives: [synthesia, veed, descript, capcut]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Sign up free at heygen.com."
+  - "Pick a presenter from the stock list."
+  - "Paste your finished script, then choose a voice and a language."
+  - "Generate the video and watch it all the way through. Check names, numbers and how words sound."
+  - "Edit the script and generate again, then export. The free plan puts a watermark on it."
+needs:
+  - "A finished script. For a 1-minute video, write about 130 words and read it aloud once."
+  - "A free account. Whether the free plan asks for a card is not stated."
+  - "A short clip or photo of yourself, only if you want a custom avatar. HeyGen asks the person shown to verify on camera."
+example:
+  task: "A 1-minute script that explains one product feature to new customers, read by a stock presenter."
+  cost: "Free plan: no charge, but a watermark and 3 videos a month. Creator removes the watermark and includes 600 credits a month."
+  reply: "A video of up to 1 minute with the presenter speaking your script. The free plan does not state a resolution. Creator goes up to 1080p."
+not_verified:
+  - "Credits used per video. The pricing page gives monthly credit totals but not a cost per minute of video."
+  - "The free plan's export resolution, and its credit total."
+  - "Which languages the free plan covers. Our earlier note said more than 30, and the home page says 175 or more."
 sources:
   - https://www.heygen.com/pricing
+  - https://www.heygen.com

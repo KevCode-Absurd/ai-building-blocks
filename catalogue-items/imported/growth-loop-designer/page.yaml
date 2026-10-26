@@ -2,24 +2,23 @@ thinking: medium
 thinking_why: It must match five loop types to your product.
 new_slug: growth-loop-designer
 name: Growth loop designer
-summary: Describe your product and users. Get the growth loops that fit, ranked,
-  and how to start the first.
+summary: Find the growth loops that fit your product, ranked, with a 30-60-90 day plan to start the first one. Cut reliance on paid ads.
 job: plan-strategy
 headline: Growth loop designer
-subhead: Describe your product, who uses it and where growth comes from today.
-  It checks the product against five loop types, where sharing, usage,
-  teammates, posted content or referrals bring the next users in. You get the
-  loops that fit, ranked, how each one works, its strengths and weak points, and
-  how to start the first.
+subhead: Describe your product, who uses it and where growth comes from today. It checks the product against five loop types, where sharing, usage, teammates, posted content or referrals bring the next users in. You get the loops that fit, ranked, how each one works, its strengths and weak points, and how to start the first.
 explain: |
   Growth that feeds itself, matched to your product. Describe the product and who uses it, and you get the loops that fit, ranked, with the first one worth starting.
 
   It checks your product against five types. In a viral loop, shared content brings new people in. A usage loop grows as people use the product. A collaboration loop pulls in teammates. A user-generated loop builds on content people post. A referral loop rewards invites. For each, it names the mechanism, the strength, the main challenge and a known example. The aim is less spend on paid ads and more product-led growth.
 when:
-  - Paid ads cost too much and you want growth that compounds.
+  - Paid ads cost too much and you want growth that builds on itself.
   - You are not sure if referrals or sharing fit your product.
-  - You are comparing how rivals grow.
-  - You need a plan for the first loop to test.
+  - You want to study how rival products grow.
+  - You need a first loop to test in the next 90 days.
+not_for:
+  - Your product has no repeat use and no sharing, so loops will not fit. Test paid ads or direct sales first.
+  - You need exact growth numbers. The loop coefficient is an estimate, so check it with real data from a small test.
+  - You want a fix for a leaky signup or a weak first-use step. Fix that with a person on your team before you add loops.
 you_give:
   - Your product description
   - Who uses it and how
@@ -31,7 +30,29 @@ you_get:
   - Strengths and challenges
   - How to start the first loop
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Add your product description, who uses it, and how you grow today. Add your sharing features and team limits if you have them.
+  - Read the ranked list first. Check that the top loop fits how your users really behave.
+  - Run the first loop as a small test. Track the metrics it gives you each week.
+  - Treat the coefficient and the 30-60-90 plan as estimates. Update them with real results.
+output_sample:
+  input:
+    - Your product description and the main thing users do in it
+    - Who uses it and how they behave
+    - Sharing or invite features you already have (optional)
+    - Your current growth channels and numbers (optional)
+    - Limits on time, budget or team (optional)
+  output:
+    - name: Ranked loop evaluation
+      contains: All five loop types scored for how well they fit your product, from best fit to worst.
+    - name: Recommended primary loop
+      contains: The one loop to build first, with how it works and a plan to put it in place.
+    - name: Secondary loops
+      contains: Other loops you can add later, once the first one works.
+    - name: Metrics framework
+      contains: The numbers to track to see if the loop is healthy.
+    - name: 30-60-90 day roadmap
+      contains: What to do in the first 30, 60 and 90 days.
+    - name: Loop coefficient and growth projection
+      contains: An estimate of how many new users each user brings, and how fast that could grow.

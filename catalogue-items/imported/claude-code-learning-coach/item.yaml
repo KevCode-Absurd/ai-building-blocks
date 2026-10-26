@@ -1,0 +1,40 @@
+slug: claude-code-learning-coach
+name: Claude Code learning coach
+summary: Check your Claude Code experience. Get a clear view of your gaps and a
+  short practice plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+package_files: all
+source:
+  by: Luong NGUYEN
+  repo: luongnv89/claude-howto
+  path: .claude/skills/self-assessment
+  url: https://github.com/luongnv89/claude-howto/tree/188f468893231cbe4525f45e657d554746232072/.claude/skills/self-assessment
+  licence: MIT
+  licence_file: LICENSE
+  commit: 188f468893231cbe4525f45e657d554746232072
+  original_name: self-assessment
+  author: luongnv89
+  imported: 2026-10-25
+  sha256: 1bb74319fcebfe10cfc9571ecc23390117b2f30e617ee3805d9bfc99c833bd99
+  adapted: true
+version: 1.0.0
+example_pending: true
+credits:
+  - title: self-assessment learning skill
+    by: Luong NGUYEN (luongnv89)
+    url: https://github.com/luongnv89/claude-howto/tree/188f468893231cbe4525f45e657d554746232072/.claude/skills/self-assessment
+    used: Adapted primary instructions with self-contained lesson paths and scoring
+      limits. Original instructions, selected references, ten lessons and MIT
+      license retained as byte-exact source files.

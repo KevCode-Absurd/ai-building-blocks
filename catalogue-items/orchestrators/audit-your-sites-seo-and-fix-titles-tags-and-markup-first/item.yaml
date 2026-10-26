@@ -16,11 +16,11 @@ outputs:
   - {type: code_change}
 uses: [seo-site-auditor, technical-seo-auditor, on-page-seo-tuner, title-and-meta-tag-writer, schema-markup-writer]
 steps:
-  - {uses: seo-site-auditor, note: "The site as a whole: structure, what is indexed, duplicate pages, what ranks today and the problems ranked by how much they block ranking."}
-  - {uses: technical-seo-auditor, note: "Speed, crawl errors, mobile, redirects, sitemaps and robots rules, with each fix in the order that pays."}
-  - {uses: on-page-seo-tuner, note: "Each key page's headings, content, images and links reviewed against its target search, with the fixes written out."}
-  - {uses: title-and-meta-tag-writer, note: "A title and meta description for each key page, in your voice, within the length limits, each saying what the page gives the searcher."}
-  - {uses: schema-markup-writer, note: "Schema markup for your main page types (product, article, organisation, FAQ) as code ready to paste, with what each piece tells search engines. You approve before it goes live."}
+  - {uses: seo-site-auditor, note: "The site as a whole: structure, what is indexed, duplicate pages, what ranks today and the problems ranked by how much they block ranking. Hands steps 2 and 3 the ranked problems."}
+  - {uses: technical-seo-auditor, note: "Speed, crawl errors, mobile, redirects, sitemaps and robots rules, with each fix in the order that pays. Uses your site and step 1's ranked problems as the starting list. Hands step 3 the technical fixes."}
+  - {uses: on-page-seo-tuner, note: "Each key page's headings, content, images and links reviewed against its target search, with the fixes written out. Uses both audits and your key pages. Hands step 4 the target search and the page fixes for each page."}
+  - {uses: title-and-meta-tag-writer, note: "A title and meta description for each key page, in your voice, within the length limits, each saying what the page gives the searcher. Uses step 3's page fixes and target searches. Hands step 5 the final title for each page."}
+  - {uses: schema-markup-writer, note: "Schema markup for your main page types (product, article, organisation, FAQ) as code ready to paste, with what each piece tells search engines. Uses your key pages and the markup gaps found in steps 1 to 3. You approve before it goes live."}
 origin: own
 version: 1.0.0
 example_pending: true

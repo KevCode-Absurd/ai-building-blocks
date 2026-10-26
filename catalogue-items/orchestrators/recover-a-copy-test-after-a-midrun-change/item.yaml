@@ -30,15 +30,15 @@ uses:
   - one-change-experiment-planner
 steps:
   - uses: campaign-change-impact-mapper
-    note: A dated change/impact timeline and an explicit version identity for each test period.
+    note: "A dated change/impact timeline and an explicit version identity for each test period. Starts from your change log and the original copy; hands the timeline to step 2."
   - uses: ad-variant-change-auditor
-    note: A comparability matrix with clean candidates, confounded groups and evidence gaps.
+    note: "A comparability matrix with clean candidates, confounded groups and evidence gaps. Uses step 1's timeline with your control and variant copy; hands the matrix to step 3."
   - uses: ad-results-report-writer
-    note: An observed result table, data-quality notes and a supported, inconclusive or unusable decision for each comparison.
+    note: "An observed result table, data-quality notes and a supported, inconclusive or unusable decision for each comparison. Uses your results export and reads only the groups step 2's matrix marks clean; hands the decision to step 5."
   - uses: claim-and-proof-matcher
-    note: A minimal copy patch or no-change record linked to the approved fact and affected version.
+    note: "A minimal copy patch or no-change record linked to the approved fact and affected version. Uses your current copy and approved facts, not step 3's result table, so a factual fix never waits on the test verdict; hands the checked copy to step 5."
   - uses: one-change-experiment-planner
-    note: A recovery pack and exact next-test/stop contract with planned versus actual actions.
+    note: "A recovery pack and exact next-test/stop contract with planned versus actual actions. Takes step 3's decision and step 4's checked copy as what is known; hands the next-test or stop contract back to you."
 execution: coordinator
 package_files: all
 needs_mode: manual

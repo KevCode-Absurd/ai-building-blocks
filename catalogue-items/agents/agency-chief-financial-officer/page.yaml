@@ -1,0 +1,145 @@
+name: Chief Financial Officer agent
+summary: "Get a CFO-style decision brief for one money choice, with options, cash impact, a downside case and the numbers to check first."
+headline: Chief Financial Officer agent
+subhead: "Describe one money decision, such as a hire, a big purchase, a loan or a price change. Add your cash and recent income and costs. You get a brief with a recommendation, the options, what each does to your cash, a downside case and the numbers to check before you act."
+job: money-and-investing
+thinking: high
+thinking_why: It weighs cash, risk and return against each other and must not present one forecast as certain. Use a model that reasons well and shows its working.
+explain: |-
+  A CFO decision brief answers one question: can we afford this, and is it the best use of the money? Most owners check the price and skip the rest. They do not ask how many months of cash are left after the spend, what happens if sales dip, or what else the same money could do.
+
+  This agent starts with cash. It shows your runway (months of cash at your current spending) before and after the decision, and flags any loan limit or minimum cash level you would break. Then it lays out two to four options, including "wait" and a smaller version, and what each one costs you and gives up.
+
+  It then tests the plan against a weaker case, lists every assumption with where it came from, and names the figures you must tie to a bank or lender statement before relying on the brief. It gives a clear recommendation and says what would change it. It is an AI reading of your numbers, not an audit, tax opinion or legal advice.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are about to hire, buy equipment, sign a lease or take a loan and want to know if your cash can take it.
+  - A partner or investor says "we should spend on this" and you want the options and the downside side by side.
+  - You have a plan with a rosy forecast and want to see what happens if sales come in lower.
+  - You need to explain a money decision to a board, a bank or a business partner and want the logic written down.
+not_for:
+  - You want a month of bank and ledger entries checked. Use the Bookkeeper & Controller agent.
+  - You want a budget against actuals review for a team. Use the FP&A Analyst agent.
+  - You only want to know how long your cash lasts. Use the Startup runway forecaster.
+  - You need a tax ruling, an audit sign-off or legal advice. Take the questions in the brief to a qualified accountant or lawyer.
+you_give:
+  - The decision in one line, with the amount and the date. For example, hire one salesperson in March.
+  - Your cash today, from your bank balance or latest statement.
+  - Your income and costs for the last 3 to 12 months, from your P&L or a bank summary.
+  - Money already promised, such as loan payments, leases, payroll and tax bills.
+  - Loan terms, your minimum cash level or the return you need before spending (optional)
+you_get:
+  - A recommendation of go, go smaller, wait or no, with the reason and what would change it
+  - Your runway before and after the decision, and any limit you would break
+  - Two to four options with cash out, what each returns and what you give up
+  - A downside case that shows if you still stay safe when sales are lower
+  - A list of assumptions and the figures to tie to a statement
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Describe the decision in one line. Paste your cash balance and your last few months of income and costs. No code or web access is needed.
+  - Add what you already owe each month. If you have a loan limit or a minimum cash level, say so.
+  - Type "Review this decision. Show your working. Do not guess any number I did not give you."
+  - Read the cash and runway section first. If a number looks wrong, fix it and ask for the brief again.
+  - Tie the listed figures to your bank or lender statements. Then take the advisor questions to your accountant before you sign anything.
+how_it_works:
+  - title: Pin the decision
+    text: It restates the decision, the amount and the date. Anything missing is asked once, then marked MISSING.
+  - title: Check the cash
+    text: It works out runway before and after the spend. It flags any loan limit or minimum cash level you would break.
+  - title: Compare the options
+    text: It lists two to four choices, including wait and a smaller version, with cash out, return and what you give up.
+  - title: Test the return
+    text: It works out payback. It adds NPV or IRR only if you gave multi-year cash flows and a discount rate.
+  - title: Run the downside
+    text: It re-runs the plan with lower sales, using your downside if you gave one, or labelled test cases if not.
+  - title: List the assumptions
+    text: Each number is marked as yours, from a document or an estimate, with how far the answer moves if it is wrong.
+  - title: Recommend and hand over
+    text: It gives a clear recommendation, the figures to tie out and the points for your accountant or advisor.
+output_shape: |-
+  DECISION
+    <what is being decided> | <amount> | <date>
+
+  RECOMMENDATION
+    <go, go smaller, wait or no> | <one-line reason> | <what would change it>
+
+  CASH AND RUNWAY CHECK
+    Cash today <amount> | Monthly net cash flow <amount> | Runway before <months> | Runway after <months> | Limit at risk <loan limit or minimum cash>
+
+  OPTIONS AND TRADE-OFFS
+    <option> | <cash out and timing> | <what it returns> | <what you give up>
+
+  DOWNSIDE CASE
+    <test case> | <effect on cash> | <effect on runway> | <still safe: yes or no>
+
+  ASSUMPTIONS
+    <assumption> | <source: you, document or estimate> | <how far the answer moves if wrong>
+
+  NUMBERS TO TIE OUT
+    <figure> | <source to match> | <Tied, Not tied or Not supplied>
+
+  QUESTIONS FOR YOUR ACCOUNTANT OR ADVISOR
+    <point> | <what to confirm>
+output_sample:
+  input:
+    - One money decision, with the amount and the date
+    - Your cash today and your income and costs for the last 3 to 12 months
+    - Money you already owe each month, such as loans, leases and payroll
+    - Loan terms, your minimum cash level or the return you need (optional)
+  prerequisites:
+    - An AI that can read pasted tables or a spreadsheet, if you attach one
+  output:
+    - name: Decision
+      contains: The one choice under review, the amount and the date.
+    - name: Recommendation
+      contains: Go, go smaller, wait or no, with the reason and what would change it.
+    - name: Cash and runway check
+      contains: Cash today, monthly net cash flow, runway before and after, and any limit at risk.
+    - name: Options and trade-offs
+      contains: Two to four choices with cash out, return and what you give up.
+    - name: Downside case
+      contains: The plan re-run with lower sales, and whether you stay safe.
+    - name: Assumptions
+      contains: Each number, where it came from and how far the answer moves if it is wrong.
+    - name: Numbers to tie out
+      contains: Figures to match to a statement before you rely on the brief.
+    - name: Questions for your accountant or advisor
+      contains: Points the AI cannot settle, with what to confirm.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads your P&L or bank summary as a file and builds the runway and downside tables from it.
+  inputs:
+    - A 12-month cash forecast, if you have one. It lets the brief test your own plan, not only past months.
+    - The quotes or contracts behind the spend, such as a lease or a loan offer.
+    - Your last two bank statements, so the cash figure can be tied out.
+terms:
+  - term: Runway
+    meaning: How many months your cash lasts at your current spending.
+  - term: Hurdle rate
+    meaning: The return you need from a spend before it is worth doing.
+  - term: Covenant
+    meaning: A rule in a loan deal, such as a minimum cash level, that you must keep to.
+  - term: Payback
+    meaning: How long it takes for the spend to earn back what it cost.
+  - term: NPV
+    meaning: Net present value. Future cash is counted as worth a little less than cash today.
+tweaks:
+  - what: Decision size
+    how: Review one decision at a time, such as "hire in March". A whole year plan in one go gives vague answers.
+  - what: Downside
+    how: Give your own bad case, such as your biggest client leaving. It is more useful than a test case.
+  - what: Minimum cash
+    how: Tell it the lowest balance you can stand. It then flags that line instead of zero.
+improve:
+  - Keep each brief with your decision notes. Next time, ask whether the first brief's downside came true.
+  - Add your usual monthly costs to the pack, so you do not retype them.
+  - Pair it with the FP&A Analyst agent once the decision is made, to track the spend against plan.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -1,6 +1,6 @@
 new_slug: proven-product-scout
 name: "Proven product scout"
-summary: "Name your market. Get ad spy filters, a reading routine and a short list of proven products."
+summary: "Find proven products to sell. Name your market and get ad spy filters, an ad reading routine and a short list of five to ten products marked winner or fluke."
 job: find-products
 thinking: medium
 thinking_why: "It reads ads and pages you give it and judges proof, so a mid-size model is a good fit."
@@ -17,6 +17,10 @@ when:
   - You have a market in mind and need products that others already sell with ads.
   - You found a viral product video and want to know if it is a winner or a one-off.
   - You have no ad spy tool and want to use the free Ad Library.
+not_for:
+  - "You have no ad data at all and want ideas from search demand: use a supplier site or a search volume tool, such as Google Trends."
+  - "You already have a shortlist and need to judge how crowded it is: use the Competitor saturation checker or the Winning product scorer."
+  - "You plan to sell brand-name or regulated health products: talk to a qualified person and read the ad policy first, because this skill only checks ad proof."
 
 you_give:
   - Your market or buyer, such as adults over 50 or new parents
@@ -36,6 +40,28 @@ how_to_use:
   - For a viral video, paste the seller's profile and store link, and a photo of the product.
   - Read the winner or fluke calls. Look at the supplier listing yourself and confirm the cost.
   - Run the short list through the saturation checker, the revenue estimator and the winning product scorer.
+output_sample:
+  input:
+    - Your market or buyer
+    - "Which tool you have: the free Ad Library or a paid ad spy tool"
+    - Your price and margin rules (optional)
+    - Links to viral product clips, the seller's profile or the store (optional)
+    - Your country (optional)
+  prerequisites:
+    - Ads, screenshots or search results you find with your tool, pasted or attached for it to read
+  output:
+    - name: Filter settings
+      contains: One plain setting per line for your tool, or the free Ad Library searches to run.
+    - name: Candidates
+      contains: Five to ten products with advertiser, ad age, active ads, price, angle, page type and a winner or fluke call.
+    - name: Longest-running ad to study
+      contains: For each product, who the ad speaks to, its angle and what to change so you are not a clone.
+    - name: Supplier check
+      contains: The supplier link you found, cost, margin at your price and rivals with rough sales.
+    - name: Policy note
+      contains: A warning to check ad rules when a product makes health, pain or body claims.
+    - name: Next, checks missed and missing
+      contains: Which items to run next, any check that failed and anything it could not see.
 
 how_it_works:
   - title: Gives the filter settings

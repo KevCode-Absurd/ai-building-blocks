@@ -1,6 +1,6 @@
 new_slug: short-film-ad-script
 name: "Short film video ad script writer"
-summary: "Paste your idea and brand file. Get a twist short-film script, timed shot table and cast note."
+summary: "Write a short film video ad script with a twist your product causes. You get a timed shot table, edit notes and a cast note."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - You want a story-led video ad with people, without filming real customers.
   - You have a headline or idea with a small story in it, such as a mix-up, a kindness or a callback.
   - Your current video ads end with the product tacked on after the story.
+not_for:
+  - "You want proof from a real customer or founder: ask a real person to film a short testimonial, because this makes only made-up scenes."
+  - "You want a cartoon look, a selfie-style video or a podcast set-up: write those with a different script tool, not this one."
+  - "You have no brand facts or buyer details yet: write down who buys and how the product is used first, then come back."
 
 you_give:
   - Your selling idea, a headline or an existing script
@@ -36,6 +40,29 @@ how_to_use:
   - Give the total and your tool's clip length, for example "20 seconds, 10-second clips".
   - Check the turn line. If the product isn't in the "therefore", ask for another version.
   - Take the script and cast note to "Short film video clip prompt writer". It takes it from there, with the avatars, sheets, storyboard and clips.
+output_sample:
+  input:
+    - Your selling idea, a headline or an existing script
+    - Your brand file with the buyer's moment, how the product is used and approved claims
+    - Total length, your video tool's clip length and sound choices (optional)
+  prerequisites:
+    - Your brand brain from the Brand profile builder, or your brand facts pasted in
+    - A video tool that makes clips, if you plan to film the script (optional)
+  output:
+    - name: Turn line
+      contains: "One sentence: the setup, the snag, and what the product changes."
+    - name: Plant and payoff
+      contains: The detail shown early and how the ending gives it new meaning.
+    - name: Cast
+      contains: Each made-up adult described once, with clothes and one accessory.
+    - name: Shot table
+      contains: Each shot with length, event, camera, move, line and sound, with clip joins marked.
+    - name: Notes
+      contains: What was inferred, how the clips split and the text to add in editing.
+    - name: Cast note
+      contains: Who carries the ad, how each person sounds and what must never change.
+    - name: Checks missed
+      contains: One line for each of its own checks the script did not pass, or none.
 
 how_it_works:
   - title: Checks the fit

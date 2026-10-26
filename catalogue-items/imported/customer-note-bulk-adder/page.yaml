@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It repeats one fixed step.
 new_slug: customer-note-bulk-adder
 name: Customer note bulk adder
-summary: Give it a customer list and a note. Get the note added to each record
-  in one go. Changes live customer data.
+summary: Add the same note to many Shopify customer records at once. Preview the list first, then add the note to each match. This changes live data.
 job: run-your-store
 headline: Customer note bulk adder
-subhead: Adding the same note to fifty customer records by hand is slow and easy
-  to get wrong. Give it a customer filter and a note and it adds the note to
-  every matching Shopify customer in one go.
+subhead: Adding the same note to fifty customer records by hand is slow and easy to get wrong. Give it a customer filter and a note and it adds the note to every matching Shopify customer in one go.
 explain: |
   Adding the same note to fifty customer records by hand is slow and easy to get wrong. Give it a customer filter and a note and it adds the note to every matching Shopify customer in one go.
 
@@ -18,6 +15,10 @@ when:
   - You imported customers and want to record where they came from.
   - You want a VIP note on every customer above a spend level.
   - Support needs context added to a group of accounts.
+not_for:
+  - "You want to remove or overwrite notes across many customers: keep append on, or edit those records by hand in Shopify admin."
+  - "You only want to group customers: add a customer tag in Shopify admin instead, because tags are built for segments."
+  - "You do not have write access to the store: ask the store owner to run it or to give you access first."
 you_give:
   - Your Shopify store with write access
   - A filter such as a tag or spend level
@@ -29,8 +30,28 @@ you_get:
   - A time stamp on each note
   - A result report with any failures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Use an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot change your store.
+  - "Sign in first. Run the Shopify CLI command: shopify store auth --store your-store.myshopify.com --scopes read_customers,write_customers."
+  - "Give your AI the SKILL.md file and say: follow this skill. Add your store, your filter, such as tag:vip, and your note, such as 2026-04-11: VIP spend tier."
+  - Leave dry run on for the first pass. Check the list of matching customers and the notes they would get.
+  - Run it again with dry run off. Keep append on unless you mean to wipe old notes.
+  - Open the annotation log CSV and check the results and any errors.
+output_sample:
+  input:
+    - Your store address, such as mystore.myshopify.com
+    - A customer filter, such as a tag or a minimum spend
+    - The note text to add
+    - Append or replace choice (optional)
+    - Dry run on or off (optional)
+  prerequisites:
+    - An AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify CLI signed in to your store with customer read and write access
+  output:
+    - name: Dry-run preview
+      contains: The customers that match your filter and the note each one would get, with nothing changed yet.
+    - name: Start banner and step lines
+      contains: The store name, start time, and one line per step showing the settings used and the result.
+    - name: Outcome summary
+      contains: How many customers matched, how many notes were updated, and how many errors came up.
+    - name: annotation_log CSV
+      contains: One row per customer with ID, name, email, the old note and the new note.

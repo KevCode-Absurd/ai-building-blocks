@@ -1,0 +1,149 @@
+name: PR & Communications Manager agent
+summary: Plan an announcement for the press. Get three key messages, a press release outline, media pitch angles and spokesperson answers to review.
+headline: PR & Communications Manager agent
+subhead: Tell it your news, who needs to hear it and what you can prove. It builds a communications plan with three key messages, a press release outline, pitch angles and tough questions with draft answers. Staff are told before the press.
+job: speak-and-persuade
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A PR plan (also called a communications plan or press plan) fails when the news is buried, the story is about the company and not the reader, or nobody has prepared for the hard questions. This agent starts with your facts. What is the news? Who should care? What can you prove? From that it picks no more than three key messages, because people remember three things at most.
+
+  Then it works outward in a fixed order. Staff hear first, so no one learns your news from a press release. Next, the press release, with the news in the first lines and a quote for you to approve. Then the pitch: it finds the story angle a reporter would want, such as a trend, a number or a person, and writes a short subject line and a pitch. Last, it lists the hard questions and drafts honest answers for your spokesperson.
+
+  It never invents a reporter, a quote, a coverage result or a statistic. Names and quotes are placeholders for you to fill in or approve. It does not send anything. Legal, and your own judgment, decide what goes out.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You are about to launch a product, hire a key person, raise money or win an award, and want press coverage.
+  - You have news but no clear story, and each version you write sounds like an ad.
+  - A leader has an interview coming and needs the hard questions with prepared answers.
+  - You want one plan that covers staff, customers, the press and your own social posts.
+not_for:
+  - A crisis is happening now, or lawyers are involved. Use the Crisis response planner, and talk to a lawyer before anything goes public.
+  - You need to tell customers about a setback. Use the Bad news update writer.
+  - You want to test press outreach in small steps before you commit. Use the Press outreach experiment planner.
+you_give:
+  - Your news in a few lines, and the date it can go public
+  - Who should care, such as customers, staff, investors or a trade audience
+  - Facts you can prove, such as numbers, customer stories or outside praise
+  - Limits, such as what you cannot say yet and who must approve the text
+  - Your brand voice notes and any past press coverage (optional)
+you_get:
+  - Three key messages, each with its proof
+  - A press release outline with the news first and a quote for you to approve
+  - Pitch angles with short subject lines
+  - Hard questions with draft answers for your spokesperson
+  - A timeline that puts staff first and lists each approval
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Write your news in a few lines. Add who should care, what you can prove and the date it can go public.
+  - Say what you cannot share and who must approve. Add your voice notes or past coverage if you have them. No code running or web access is needed.
+  - Type "Make the communications plan. Do not invent quotes, names or results. Mark them as placeholders."
+  - Read the three key messages first. If one is not backed by proof, cut it or find the proof, then ask it to run again.
+  - Send the draft to whoever must approve it. Fill in the real quote and contact details yourself. Pick the reporters and send the pitches yourself.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the news, the date, the audience and the limits. Anything missing is asked once, then marked MISSING.
+  - title: Build the message core
+    text: It picks up to three key messages and matches each to proof you gave it.
+  - title: Map who hears what
+    text: It lists staff, customers, press and others, with the order they are told. Staff come first.
+  - title: Outline the release and pitch
+    text: It puts the news first in the release, then finds the angle a reporter would want and writes a short subject line.
+  - title: Prepare the spokesperson
+    text: It lists the hardest questions and drafts honest answers. It never writes "no comment".
+  - title: Set the timeline and the measures
+    text: It orders the steps, names each approval and says what to track afterwards.
+output_shape: |-
+  GOAL AND AUDIENCE
+    News <one line> | Goal <what you want> | Date <when> | Audiences <list>
+
+  KEY MESSAGES (3 at most)
+    <message> | <proof you gave> | <what is still missing>
+
+  WHO HEARS WHAT, IN ORDER
+    <audience> | <what they hear> | <channel> | <when>
+
+  PRESS RELEASE OUTLINE
+    Headline <draft> | First lines <the news> | Detail <list> | Quote <placeholder for approval> | Contact <placeholder>
+
+  PITCH ANGLES
+    <story angle> | <subject line, under 8 words> | <type of outlet that fits> | <proof to lead with>
+
+  HARD QUESTIONS
+    <question> | <draft answer> | <facts to confirm>
+
+  TIMELINE AND APPROVALS
+    <step> | <owner> | <date> | <approval needed>
+
+  HOW TO MEASURE
+    <measure> | <how to track it>
+
+  ASSUMPTIONS AND CHECKS MISSED
+    <assumption> | <check that could not run>
+output_sample:
+  input:
+    - Your news in a few lines, and the date it can go public
+    - Who should care about it
+    - Facts you can prove, and what you cannot say yet
+    - Your brand voice notes and past coverage (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - A person to approve the text and send it
+  output:
+    - name: Goal and audience
+      contains: The news in one line, the goal, the date and who needs to hear it.
+    - name: Key messages
+      contains: Up to three messages, each with the proof you gave and what is missing.
+    - name: Who hears what, in order
+      contains: Each audience, what they hear, the channel and the timing. Staff first.
+    - name: Press release outline
+      contains: Headline, the news in the first lines, details, and a quote and contact left as placeholders.
+    - name: Pitch angles
+      contains: Story angles with short subject lines and the type of outlet that fits.
+    - name: Hard questions
+      contains: The toughest questions with draft answers and the facts to confirm.
+    - name: Timeline and approvals
+      contains: Each step with an owner, a date and the approval it needs.
+    - name: How to measure
+      contains: What to track after the news goes out, and how.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a fact sheet, past press coverage or a brand voice file next to your news.
+  inputs:
+    - A one-page fact sheet with the numbers you can share.
+    - Two or three past articles about you, so the angle fits what has been covered.
+    - A list of what is still under embargo or not yet approved.
+terms:
+  - term: Key messages
+    meaning: The two or three points you want people to remember after they read or hear your news.
+  - term: Pitch
+    meaning: A short note to a reporter that offers a story and says why their readers would care.
+  - term: Embargo
+    meaning: An agreement that a reporter will not publish until a set date and time.
+  - term: Holding statement
+    meaning: A short, true statement you give while you gather the full facts.
+  - term: Earned media
+    meaning: Coverage you get because a reporter chose to write about you, not because you paid.
+tweaks:
+  - what: Audience
+    how: Name the one group you most need to reach. A plan for everyone at once gets vague.
+  - what: Tone
+    how: Say if your voice is formal, plain or playful, and paste two lines you like.
+  - what: Size of the plan
+    how: Ask for the press release and pitch only, if you do not need staff and customer steps.
+improve:
+  - Keep each plan and the coverage it got. Share the coverage with the AI next time so the angles improve.
+  - Add your approved facts and quotes to the pack, so every release starts from the same truth.
+  - Pair it with the Honest persuasion editor to check the final text does not overreach.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It turns one decision into a set plan format.
 new_slug: 90-day-plan-builder
 name: 90-day plan builder
-summary: Give it a decision you made. Get a 12-week plan with owners, check-ins
-  and risks.
+summary: Turn an approved decision into a 90-day plan with weekly milestones, a named owner for each part, and check-ins. Built for your team.
 job: plan-strategy
 headline: 90-day plan builder
-subhead: Give it a decision, with its success and stop rules, the people who can
-  own each part and your start date. It splits the work into streams, each with
-  one owner and one number to hit. You get a 12-week milestone table, a check-in
-  schedule, dependencies and a risk list with fixes.
+subhead: Give it a decision, with its success and stop rules, the people who can own each part and your start date. It splits the work into streams, each with one owner and one number to hit. You get a 12-week milestone table, a check-in schedule, dependencies and a risk list with fixes.
 explain: |
   A decision only matters once it turns into Monday-morning work, and this skill turns it into a 90-day plan with weekly milestones, a named owner for each, and what done looks like.
 
@@ -19,6 +15,10 @@ when:
   - You need weekly milestones for a market entry or price change.
   - A project keeps slipping because owners are unclear.
   - You want a clear day 30, 60 and 90 checkpoint to report to your boss.
+not_for:
+  - "Your decision is not approved or written down yet: settle it first with your team or a decision record, then come back."
+  - "You need a plan for a task of a few days: a short to-do list with names and dates is enough."
+  - "You want to judge whether the decision is right: ask a trusted advisor or run a decision review first, then build the plan."
 you_give:
   - The decision, with its success and stop criteria
   - The people who can own each part
@@ -31,7 +31,33 @@ you_get:
   - A dependency list
   - A risk list with fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Paste your approved decision, with its success and stop rules.
+  - Add the names of the people who can own each part, and your start date.
+  - Add any hard deadlines (optional).
+  - Read the plan. Check that each week has a finish line you can see, and each stream has one owner.
+  - Share the plan with each owner and book the day 30, 60 and 90 checkpoints.
+output_sample:
+  input:
+    - Your approved decision record
+    - The success and stop rules from that decision
+    - The people who can own each part of the work
+    - Your start date
+    - Hard deadlines or limits (optional)
+  prerequisites:
+    - A decision that is already approved and written down, with success and stop rules
+  output:
+    - name: Outcome (binding)
+      contains: The success and stop rules copied from your decision, so the goal stays fixed.
+    - name: Workstreams
+      contains: A table of 3 to 6 streams, each with one owner, one success number and a status.
+    - name: Weekly Milestones
+      contains: A 12-week table with a milestone, an owner and an observable finish line for each week.
+    - name: Cadence
+      contains: The weekly review, the bi-weekly team sync and the day 30, 60 and 90 checkpoints.
+    - name: Dependencies
+      contains: What you need from inside your team and from outside, such as vendors or customers.
+    - name: Risk Register
+      contains: Each risk with likelihood, impact, an owner and a fix.
+    - name: Kill Criteria Watch
+      contains: The stop rules from your decision, to review at every checkpoint.

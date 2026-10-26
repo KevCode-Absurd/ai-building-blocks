@@ -1,6 +1,6 @@
 new_slug: build-google-remarketing-lists-and-campaigns-then-read-the-results
 name: Build Google remarketing lists and campaigns, then read the results
-summary: Give it your traffic, customer list and offer. Get lists to build, remarketing campaigns and a read of results.
+summary: Plan Google remarketing lists and campaigns that skip buyers, then read your first results. Give it your traffic, customer list and offer.
 job: run-google-ads
 thinking: medium
 thinking_why: Three skills run in a row, but each is a plan or a report. A mid-size model is enough.
@@ -14,6 +14,10 @@ when:
   - Visitors add to cart and leave and you want to bring them back.
   - You see ads on Google for products you already bought, or suspect your own do the same.
   - You have an offer for returning visitors and no plan for who sees it.
+not_for:
+  - "You get few new visitors each month: build traffic first, since lists under about 1,000 people will not run."
+  - "Your lists are tiny and you want a cheap first step: send email to past visitors and customers instead."
+  - "You only want to read a Google Ads export you already have: use the Google Ads report auditor."
 you_give:
   - Monthly visitors, add to cart numbers and purchases
   - Customer list details and how customers agreed to ads (before any upload)
@@ -31,6 +35,25 @@ how_to_use:
   - Tell it how customers agreed to their data being used for ads before you upload any list.
   - When it pauses, build the lists and campaigns, run them three to four weeks and export the report by campaign and ad.
   - Keep the ad that wins and drop the weak ones as it ranks them.
+output_sample:
+  input:
+    - Your monthly visitors, add to cart numbers and purchases
+    - Your customer list details and how customers agreed to ads
+    - Your offer for returning visitors, with shipping and returns terms
+    - Your daily budget (optional)
+    - After the pause, your Google Ads report by campaign and ad
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+    - A Google Ads account to build and run the campaigns during the pause
+  output:
+    - name: Audience plan
+      contains: A size check of each list, cart abandoner and customer lists, exclusions so buyers are left out, and custom segments.
+    - name: Remarketing campaigns
+      contains: Campaign setup with budgets, frequency caps and audiences, plus five ad concepts, one for each doubt.
+    - name: Google Ads audit report
+      contains: Findings ranked by money at stake, changes worth making and a score against your target.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the audiences
     text: Checks each list is big enough to use, plans cart abandoner and customer lists, sets exclusions so buyers are left out and defines custom segments from search terms.

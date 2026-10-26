@@ -15,7 +15,7 @@ const PRICING_MODELS = ["free", "freemium", "subscription", "usage", "enterprise
 const RUNS_IN = ["web", "desktop", "mobile", "api", "browser-extension", "slack", "chrome"];
 const REQUIRED = ["slug", "name", "maker", "url", "promise", "use_cases", "categories", "what_it_does", "benefits", "best_for", "not_for", "pricing", "works_with", "runs_in", "blocks", "alternatives", "last_checked", "sources"];
 // Words that are fine inside a product name even though the list bans them as filler.
-const NAME_EXEMPT = [/\bShopify Magic\b/g, /\bshopify-magic\b/g];
+const NAME_EXEMPT = [/\bShopify Magic\b/g, /\bshopify-magic\b/g, /\bMagic (Media|Studio|Write|Eraser|Expand|Resize)\b/g];
 
 const problems = [];
 const fail = (msg) => problems.push(msg);
@@ -112,6 +112,22 @@ if (problems.length) {
   process.exit(1);
 }
 
+// Optional page fields: first_result (steps per way in, or one list), needs, example and not_verified. Absent or empty ones are left out.
+const strs = (v) => (Array.isArray(v) ? v.filter((x) => typeof x === "string" && x.trim()) : []);
+const GROUP_NAMES = { api: "API", chat: "Chat" };
+function optionalFields(t) {
+  const o = {};
+  const groups = Array.isArray(t.first_result) ? [{ name: "", steps: strs(t.first_result) }]
+    : t.first_result && typeof t.first_result === "object" ? Object.entries(t.first_result).map(([k, v]) => ({ name: GROUP_NAMES[k] ?? k.replace(/[-_]/g, " ").replace(/^./, (c) => c.toUpperCase()), steps: strs(v) })) : [];
+  const firstResult = groups.filter((g) => g.steps.length);
+  if (firstResult.length) o.firstResult = firstResult;
+  if (strs(t.needs).length) o.needs = strs(t.needs);
+  const e = t.example;
+  if (e && typeof e === "object" && ["task", "cost", "reply"].some((k) => typeof e[k] === "string" && e[k].trim())) o.example = Object.fromEntries(["task", "cost", "reply"].filter((k) => typeof e[k] === "string" && e[k].trim()).map((k) => [k, e[k]]));
+  if (strs(t.not_verified).length) o.notVerified = strs(t.not_verified);
+  return o;
+}
+
 // What the site needs, and nothing else: works_with keeps a slug when it names a product here, else the plain name.
 const out = {
   built: new Date().toISOString().slice(0, 10),
@@ -128,6 +144,7 @@ const out = {
     alternatives: t.alternatives,
     lastChecked: String(t.last_checked instanceof Date ? t.last_checked.toISOString().slice(0, 10) : t.last_checked),
     sources: t.sources,
+    ...optionalFields(t),
   })),
 };
 fs.mkdirSync(path.dirname(OUT), { recursive: true });

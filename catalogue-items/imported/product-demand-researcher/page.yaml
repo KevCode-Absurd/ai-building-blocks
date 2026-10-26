@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It gathers posts, then judges how strong demand is.
 new_slug: product-demand-researcher
 name: Product demand researcher
-summary: Give it a product idea. Get the pain points, objections and buying
-  signals people post, with links. Collects data from websites.
+summary: Check product demand before you build. Give it your idea and get pain points, objections and buying signals from public posts, with links.
 job: test-an-idea
 headline: Product demand researcher
-subhead: Proof of whether people want what you plan to build, in their own
-  words, with links. You see the complaints, workarounds, objections and "is
-  there a tool for this" posts that repeat across Reddit, TikTok and YouTube
-  comments.
+subhead: Proof of whether people want what you plan to build, in their own words, with links. You see the complaints, workarounds, objections and "is there a tool for this" posts that repeat across Reddit, TikTok and YouTube comments.
 explain: |
   Proof of whether people want what you plan to build, in their own words, with links. You see the complaints, workarounds, objections and "is there a tool for this" posts that repeat across Reddit, TikTok and YouTube comments.
 
@@ -19,6 +15,10 @@ when:
   - You need real customer language for ad copy or a landing page.
   - You want to know why people dislike the current options.
   - You are choosing between niches and need demand signals.
+not_for:
+  - "Your product is for businesses or a tiny niche with few public posts: talk to customers in short interviews, or send a short survey."
+  - "You have no ScrapeCreators API key or do not want to pay for one: ask 5 to 10 likely buyers the same questions by hand."
+  - "You want proof that people will pay: a handful of comments cannot show that, so run a small ad test or a pre-order page."
 you_give:
   - Your product idea or niche
   - Platforms to search, such as Reddit or TikTok (optional)
@@ -30,8 +30,31 @@ you_get:
   - Objections to existing solutions
   - Buying signals and alternatives people use
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your ScrapeCreators key.
+  - Get a ScrapeCreators API key from scrapecreators.com. It is a paid service.
+  - Open an AI that can run code, such as Claude with code tools turned on, and add the skill instructions.
+  - Add your API key where your AI tool keeps secret settings. Do not paste it into a shared chat.
+  - Type your product idea or niche. Add platforms and competitor names if you have them.
+  - Read the Verdict first, then check a few source links yourself.
+  - Next, take the top two buyer phrases into an ad or landing page test. Or turn the objections into questions for customer interviews.
+output_sample:
+  input:
+    - Your product idea or niche
+    - Platforms to search, such as Reddit, TikTok or YouTube (optional)
+    - Competitor names (optional)
+    - Your ScrapeCreators API key
+  prerequisites:
+    - An AI that can run code and make web requests
+    - A ScrapeCreators account and API key (a paid service)
+  output:
+    - name: Verdict
+      contains: A rating of demand as strong, medium or weak, a confidence level, and the reasons behind both.
+    - name: Pain Points
+      contains: A table of each pain, the evidence for it, the exact words people used, and a source link.
+    - name: Existing Alternatives / Workarounds
+      contains: The tools, spreadsheets and manual steps people use today instead of your idea.
+    - name: Objections and Barriers
+      contains: The reasons people reject or avoid current options.
+    - name: Messaging Angles
+      contains: Short lines in customer language that you can test in ads or on a landing page.
+    - name: Product Ideas / Tests
+      contains: A numbered list of product ideas and small tests to try next.

@@ -1,6 +1,6 @@
 new_slug: lead-offer-planner
 name: "Information-led lead offer planner"
-summary: "Paste your product and who has the costly problem. Get a useful-information offer, a reply step and a plan to route replies."
+summary: "Plan a lead offer built on useful information. Get the offer, a countable reply step, a short ad or letter, and who follows up on each reply."
 job: make-offer
 thinking: medium
 thinking_why: "It picks one offer from several options and sets rules for follow-up, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - Your ads talk about you and nobody replies.
   - Leads arrive but nobody follows up on a set day.
   - You sell something costly or slow to decide, and buyers research first.
+not_for:
+  - "You have not yet chosen between a premium, free or discount first step: use the Front-end offer picker."
+  - "You sell a low-cost impulse item where buyers do not research first: write a direct offer with a price and a buy button instead."
+  - "People already reply but do not buy: use the Almost-buyer follow-up writer to bring them back."
 
 you_give:
   - Your product or service, what it costs and what it does
@@ -34,6 +38,28 @@ how_to_use:
   - Tell it who will handle replies and how fast they can.
   - Check that the offer is something your buyer would ask for. Send the ad or letter to one small group first.
   - After two weeks, bring the reply counts back and ask it to compare sources.
+output_sample:
+  input:
+    - Your product or service, what it costs and what it does
+    - Who has the costly problem and what it costs them (optional)
+    - Who will handle replies and how fast (optional)
+  output:
+    - name: The costly problem
+      contains: Who has the problem and what it costs them in money, time or risk.
+    - name: The offer
+      contains: The name, format and reason for one piece of information your buyer would ask for.
+    - name: What counts as a reply
+      contains: One action you can count and where each reply is written down.
+    - name: The short ad or letter
+      contains: A short text that names the problem, offers the information and asks for one step.
+    - name: Routing table
+      contains: Each kind of reply with a named owner and a time for the next contact.
+    - name: Counting plan
+      contains: Where the ask runs, what is counted for each place, and a review date.
+    - name: MISSING lines
+      contains: Facts that would sharpen the offer, such as the cost of the problem.
+    - name: CHECKS MISSED
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: Names the costly problem

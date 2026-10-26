@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It writes code that builds exact shapes and checks fit.
 new_slug: lab-hardware-designer
 name: Lab hardware designer
-summary: Describe a lab part, like a mount or chip mold. Get a parametric design
-  and STEP, STL or DXF files.
+summary: Design a lab part like a mount, chip mold or plate holder. Get a parametric CAD model with STEP, STL or DXF files, checked against fixed sizes.
 job: build-software
 headline: Lab hardware designer
-subhead: A lab part you can fabricate, built as code so you can change one
-  number and rebuild. Describe the mount, chip mold, holder or fixture.
+subhead: A lab part you can fabricate, built as code so you can change one number and rebuild. Describe the mount, chip mold, holder or fixture.
 explain: |
   A lab part you can fabricate, built as code so you can change one number and rebuild. Describe the mount, chip mold, holder or fixture. The skill sorts it into a device family, such as microfluidics or optomechanics, and loads the matching standards, because the hard part is fitting equipment with fixed sizes. A holder 0.5 mm too wide will not fit the plate reader.
 
@@ -17,6 +15,10 @@ when:
   - You want a microfluidic chip mold with the right channel sizes.
   - You need a plate holder that matches a vendor's published dimensions.
   - You want to change one dimension on a part and get new files fast.
+not_for:
+  - "You need stress, heat or fluid flow analysis on a part: use a simulation tool or an engineer, since this skill only builds and checks shapes."
+  - "You want a molecular structure or a scientific chart: use a plotting or chemistry tool, not this skill."
+  - "You need a part made for you without any checking of vendor drawings: ask a machinist or a fabrication shop to review the files first."
 you_give:
   - What the part does and what it mates with
   - Key dimensions or the vendor drawing
@@ -28,8 +30,31 @@ you_get:
   - Dimension checks against the standard
   - A preview image to inspect
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run Python code and save files.
+output_sample:
+  input:
+    - What the part does and what it mates with
+    - Key dimensions or the vendor drawing
+    - Material and how you will make it, such as 3D printing, CNC or laser
+    - An existing STEP file to change (optional)
+  prerequisites:
+    - An AI that can run Python code and save files
+    - Python with the build123d and matplotlib packages installed
+    - Internet to install the packages and fetch current vendor drawings (optional)
+  output:
+    - name: Device family and process
+      contains: The type of part, such as microfluidics or optomechanics, and the material and making method chosen for it.
+    - name: Interface dimensions
+      contains: Each fixed size the part must match, with its source and tolerance.
+    - name: Parametric model file
+      contains: Python source in build123d where fixed interface sizes are kept apart from the free design sizes.
+    - name: STEP, STL or DXF files
+      contains: The exported part, with STEP as the master file and STL or DXF for printing or cutting.
+    - name: Check results
+      contains: Number checks of the model against the standard, and any check that did not pass.
+    - name: Preview image
+      contains: A rendered picture of the part for you to look at before anything is made.
+    - name: Report before fabrication
+      contains: Process, material, clearances, what the preview showed, and every size nobody could check.

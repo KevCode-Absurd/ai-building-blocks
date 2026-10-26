@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It weighs costs, rival offers and brand position before it picks a price.
 new_slug: price-position-planner
 name: Price position planner
-summary: Give it your costs and rival offers. Get a price for each product,
-  response rules for rival discounts, and a rollout plan.
+summary: Set a competitive price for each product from your costs and rival offers. Get price floors, rules for rival discounts, and a rollout plan.
 job: set-prices
 headline: Price position planner
-subhead: Give it your costs and rival offers. Get a price for each product,
-  response rules for rival discounts, and a rollout plan. Bring product costs
-  and fees. Use the result to plan your next step.
+subhead: Give it your costs and rival offers. Get a price for each product, response rules for rival discounts, and a rollout plan. Bring product costs and fees. Use the result to plan your next step.
 explain: |
   A price for each product, rules for how to respond when rivals cut theirs, and a rollout plan, all built from your costs and the competitor offers you can see.
 
@@ -18,6 +15,10 @@ when:
   - You are launching on Amazon and your own store.
   - You don't know your lowest safe price.
   - You need rules so your team stops reacting at random.
+not_for:
+  - "You want a tool that changes live prices for you: this only plans prices, so use your marketplace's own repricing tool."
+  - "You need a call on minimum advertised price or other legal limits: ask a lawyer who knows your market."
+  - "You have no sales data and want proof of the best price: this gives a plan to test, not a proven price."
 you_give:
   - Product costs and fees
   - Competitor offers
@@ -29,7 +30,33 @@ you_get:
   - Competitor response rules
   - Rollout and monitoring plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Paste your product costs, fees and sales channels. Add rival offers with links, pack sizes, shipping and discounts.
+  - "Say how you want to be seen: budget, value, parity or premium. Add your margin goal if you have one."
+  - Answer any one round of follow-up questions. Blocked items are marked, not guessed.
+  - Check the price floors first. Then test one product or one channel before you change every price.
+  - Check current platform rules and legal limits before you publish any price. No code or special tools are needed.
+output_sample:
+  input:
+    - Your product costs and fees
+    - Competitor offers with links, pack sizes, shipping and visible discounts
+    - Your brand position and sales channels
+    - Your margin goal and stock limits (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - "Optional: the paid Nexscope Data APIs for more market data. The plan works without it."
+  output:
+    - name: Scope and Evidence
+      contains: The channels, products, sources and dates used, and which inputs are confirmed, assumed or unknown.
+    - name: Executive Recommendation
+      contains: Your recommended price position, why, how sure the AI is, and which decisions are still blocked.
+    - name: Comparable Offer Map
+      contains: Rival offers side by side with delivered price, unit price, source, date and confidence.
+    - name: Unit Economics and Guardrails
+      contains: Net revenue, profit per sale, price floor and a downside case for each product and channel.
+    - name: Price Architecture
+      contains: Regular, launch, promo, bundle and tier prices for each product and channel, with the reason for each.
+    - name: Competitor-Response Rules
+      contains: What to check and do when a rival cuts price, runs out of stock or a new seller enters, with limits.
+    - name: Rollout and Measurement
+      contains: A small test scope, the numbers to track, and when to keep, change or undo a price.

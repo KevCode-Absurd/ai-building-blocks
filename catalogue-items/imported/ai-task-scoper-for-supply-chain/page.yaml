@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It walks through gates that decide if AI is safe to use.
 new_slug: ai-task-scoper-for-supply-chain
 name: AI task scoper for supply chain
-summary: Describe a messy planning problem. Get one clear decision, an AI fit
-  check and a safe hand-off plan.
+summary: Scope an AI supply chain use case from one real event. Get a clear decision, an AI fit check and a safe hand-off plan, or a not-ready note.
 job: plan-supply-chain
 headline: AI task scoper for supply chain
-subhead: Turn a messy supply chain headache into one decision that your team can
-  name, measure and safely hand to AI. It starts from a real event, such as a
-  late shipment or a stockout, not from a technology wish.
+subhead: Turn a messy supply chain headache into one decision that your team can name, measure and safely hand to AI. It starts from a real event, such as a late shipment or a stockout, not from a technology wish.
 explain: |
   Turn a messy supply chain headache into one decision that your team can name, measure and safely hand to AI. It starts from a real event, such as a late shipment or a stockout, not from a technology wish.
 
@@ -18,6 +15,10 @@ when:
   - Leadership wants to use AI but nobody can name the decision.
   - You have several AI ideas and need one safe place to start.
   - You are running a workshop and need an agreed brief at the end.
+not_for:
+  - "You want to automate one small task, like sorting emails or filling a sheet: set up that task directly in your AI tool."
+  - "You are picking a software vendor or AI product: use a vendor comparison with your buyers and IT lead."
+  - "You already have an approved pilot and need to build it: work with your tech team or an AI developer."
 you_give:
   - A recent example of the problem
   - Who owns the decision today
@@ -29,7 +30,27 @@ you_get:
   - The human owner and approval limits
   - A hand-off brief, or a not-ready note
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Describe one recent scramble, such as a late shipment or a stockout. Say who decided and what the delay cost.
+  - "Answer the follow-up questions. Your AI will tell you which mode it is using: quick framing, deep diagnosis, shortlist or workshop."
+  - Check the decision statement, owner and approval limits in the result. Correct anything that does not match how your team works.
+  - Use the hand-off brief to start a small test. If you get a not-ready note, fix the gaps it lists first.
+output_sample:
+  input:
+    - A recent example of the scramble, delay, shortage or repeat decision
+    - Who owns the decision today
+    - The data and documents the team uses
+    - What a late or wrong decision costs
+  output:
+    - name: Problem statement canvas
+      contains: One pain point written as a single decision with its trigger, owner, evidence, time window and stakes.
+    - name: Decision-to-delegation brief
+      contains: The full diagnosis, readiness gate results, chosen use case, rejected options, delegation model and human checkpoint.
+    - name: Use-case shortlist
+      contains: Several candidate decisions compared, with one bounded starting point recommended.
+    - name: Not-ready report
+      contains: What must be fixed first, such as ownership, data or policy, when the readiness gates fail.
+    - name: Workshop summary
+      contains: The agreed brief and open questions from a leadership session.
+    - name: Bounded pilot charter
+      contains: The limits, success measures and evaluation method for an approved small experiment.

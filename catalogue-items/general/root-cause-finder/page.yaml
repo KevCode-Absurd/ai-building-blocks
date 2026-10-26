@@ -1,54 +1,63 @@
 new_slug: root-cause-finder
 name: "Root cause finder"
-summary: "Paste a problem that keeps coming back. Get a chain of whys checked against facts, the fixable cause and a prevention check."
+summary: Find the root cause of a problem that keeps coming back. Get a chain of whys checked against facts, a fix and a prevention check.
 job: think-and-decide
 thinking: high
 thinking_why: "It reasons through chains of cause, checks each against evidence and must not guess."
 
 headline: "Root cause finder"
-subhead: "Paste a problem that keeps coming back and any records you have. It asks why down a chain, accepts only answers backed by something seen, tries a second branch and stops at a cause your team can change. You get the cause, a fix and a prevention check."
+subhead: Paste a problem that keeps coming back and any records you have, such as logs, tickets or photos. The skill asks why down a chain and keeps only answers backed by something seen. It tries a second branch and stops at a cause your team can change. You get the cause, a fix and a check that it stays fixed.
 
-explain: |
-  When a problem comes back, the usual fix patches the surface. A late order is blamed on a person, a bug on a rushed release, and the same thing happens next month.
+explain: |-
+  When a problem comes back, the fix usually patches the surface. A late order is blamed on a person. A bug is blamed on a rushed release. Next month the same thing happens again.
 
-  This skill asks why several times in a row, and each answer must come with evidence: a log line, a photo, a person who was there. If there is none, the answer is marked unconfirmed. It tries a second branch in case there is more than one cause and keeps the chain about the process, not the person. It ends with a fix that removes the cause and a check to prove the problem stays away.
+  This root cause analysis asks why several times in a row. Each answer must come with proof: a log line, a photo or a person who was there. With no proof, the answer is marked unconfirmed and the skill says what would confirm it. It also tries a second branch, in case more than one cause is at work.
+
+  It keeps the chain about the process, not the person. If someone made a choice, it asks why the process let that choice do harm. It ends with a fix that removes the cause, a prevention check and a note on whether five whys is deep enough for your case. The method follows Taiichi Ohno's five whys. This version is ours.
 
 when:
-  - "The same problem returns after you fixed it."
-  - "A failure needs a report that goes past \"someone made a mistake\"."
-  - "You must decide where to spend effort after an incident."
+  - The same problem returns after you fixed it.
+  - A report on a failure needs to go past "someone made a mistake".
+  - You must decide where to spend effort after a late delivery, a bug, a refund spike or a lost customer.
+  - A fix did not hold and you want to see why.
+not_for:
+  - You already know the cause and the fix is quick. Fix it and write it down.
+  - You need to plan the team meeting where the review happens. Use the Five whys session planner.
+  - You want every step of a process checked for waste. Use the Process waste finder. For harm to people or many linked causes, five whys is too shallow, so use a formal investigation.
 
 you_give:
   - "The problem: what happened, where and when"
-  - "Logs, tickets, photos or notes (optional)"
-  - "What was tried before (optional)"
+  - Logs, tickets, photos or notes from people who were there (optional)
+  - What you tried before, and why it did not hold (optional)
 you_get:
-  - "A chain of whys with evidence at each level"
-  - "A second branch"
-  - "The root cause your team can change"
-  - "A fix and a prevention check"
+  - The problem written as something seen, not a guess
+  - A chain of whys, each answer with its proof or marked unconfirmed
+  - A second chain, in case there is another cause
+  - The root cause your team can change
+  - A fix that removes it, and a prevention check
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Describe the problem with the place and date, and paste any records."
-  - "Check each answer against the real record. Fix any that are wrong."
-  - "Run the prevention check after the fix."
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the problem with the place and date. Paste any logs, tickets or notes. Leave out customer names and private details.
+  - "If you only have a summary, expect it to ask for the real record: the log, the file or the person who saw it."
+  - Check each answer against the real record. Fix any that are wrong and ask it to redo the chain from that level.
+  - Make the fix, then run the prevention check at the time it names.
 
 how_it_works:
-  - title: "States the problem"
-    text: "What was seen, with place and date."
-  - title: "Looks at the record"
-    text: "Real logs and places, not summaries."
-  - title: "Asks why"
-    text: "Each answer with evidence."
-  - title: "Goes down"
-    text: "Until a cause the team can change."
-  - title: "Tries a second branch"
-    text: "In case there is another cause."
-  - title: "Keeps it about process"
-    text: "Not about blame."
-  - title: "Writes fix and check"
-    text: "Removes the cause and proves it."
+  - title: States the problem as something seen
+    text: One sentence with the place and date. Any cause you suggested goes on a list to check.
+  - title: Looks at the real record
+    text: Lists each record, what it shows and what is missing. A summary is marked second-hand.
+  - title: Asks why, with proof
+    text: Each answer sits next to its evidence. With no evidence it is marked unconfirmed.
+  - title: Goes down to a cause you can change
+    text: A missing step, an unclear rule, a failing tool or a gap in training. Usually about five levels, but the evidence decides.
+  - title: Tries a second branch
+    text: Goes back to the first level and follows any other answer down, so two chains sit side by side.
+  - title: Keeps it about the process
+    text: Rewrites any answer that blames a person so it names the process that allowed the error.
+  - title: Writes the fix and the check
+    text: A fix that removes the cause, a prevention check, and a note on whether five whys is enough.
 
 output_shape: |
   PROBLEM
@@ -111,16 +120,40 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Building and checking a chain from records is text work."}
-    - {name: "Your ticket or incident system", why: "Holds the records the chain needs as evidence."}
+    - name: Any good chat AI
+      why: Building and checking a chain from records is text work. Claude, ChatGPT and Gemini all do it with this skill.
+    - name: Your ticket or incident system
+      why: Holds the logs and tickets the chain needs as proof. Copy in the lines that matter.
   inputs:
-    - "Logs or tickets"
-    - "Photos of the place"
-    - "Notes from the people there"
-    - "Past fixes"
+    - Logs or tickets
+    - Photos of the place
+    - Notes from the people who were there
+    - Past fixes and why they did not hold
 
 terms:
   - term: "Root cause"
     meaning: "The deepest cause your team can change to stop the problem returning."
   - term: "Five whys"
     meaning: "Asking \"why\" about five times in a row, each time about the last answer."
+output_sample:
+  input:
+    - "The problem: what happened, where and when"
+    - Logs, tickets, photos or notes (optional)
+    - What was tried before (optional)
+  output:
+    - name: PROBLEM
+      contains: One sentence on what was seen, with the place and date. No guess at why.
+    - name: RECORDS
+      contains: What each record shows and what is missing. Summaries are marked second-hand.
+    - name: CHAIN A
+      contains: Each why with its proof, down to a cause your team can change.
+    - name: CHAIN B
+      contains: A second branch, or a note that there is no second cause and the check that shows it.
+    - name: FIX
+      contains: A change that removes the root cause, not one that hides the symptom.
+    - name: PREVENTION CHECK
+      contains: What to look at, how often, and what result means it worked.
+    - name: IS FIVE WHYS ENOUGH?
+      contains: A note on whether this problem needs a deeper method.
+    - name: MISSING and CHECKS MISSED
+      contains: Facts you did not give, and any of its own checks it could not pass, or none.

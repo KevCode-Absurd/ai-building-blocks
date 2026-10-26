@@ -16,6 +16,27 @@ use_cases:
   - "Find time for a project you keep saying you're too busy for"
   - "Explain to a team why brands are about belonging, not just selling"
   - "Push past fear of rejection when you're starting something new"
+not_for:
+  - "You want bold logo craft from a small studio: use the Aaron Draplin mind, since Millman asks about meaning more than drawing."
+  - "You want to test life and career options with small experiments: use the Bill Burnett mind or the Dave Evans mind."
+  - "You need legal, money, pricing or supply advice: ask a specialist, because Millman has not spoken on these."
+output_sample:
+  input:
+    - The brand, name, mascot or ad you want reviewed, described in your own words
+    - The creative project or career choice you keep putting off (optional)
+    - Why you want to change or start now
+    - Who buys from you, or who the work is for
+  output:
+    - name: Meaning check
+      contains: Where the brand or idea came from, what it means to people, and who it leaves out.
+    - name: Defaults review
+      contains: The stereotypes and lazy choices in your images, characters or packaging, from the obvious case to the quiet pattern.
+    - name: The change to make
+      contains: Whether a new look is enough or the thinking behind the brand has to change.
+    - name: Questions for you
+      contains: Open questions such as what you would do if you did not wait to feel ready.
+    - name: First step
+      contains: One small, bold action to start this week, with a date.
 seats:
   - {seat: "Brands and meaning", asks: "What does this brand mean to people, and who does it leave out?"}
   - {seat: "Courage over confidence", asks: "What would you do if you didn't wait to feel ready?"}

@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It analyses usage and weighs savings against quality.
 new_slug: ai-cost-cutter
 name: AI cost cutter
-summary: Describe your AI app. Get where the tokens go and changes that cut the
-  bill without hurting quality.
+summary: Find where your AI app's tokens go and get ranked changes that cut your AI API costs without hurting answer quality.
 job: build-software
 headline: AI cost cutter
-subhead: A clear view of where your AI app's tokens go, and a list of changes
-  that cut the bill without hurting quality. The aim is often 40 to 80 percent
-  less, and you measure first so you know which change worked.
+subhead: A clear view of where your AI app's tokens go, and a list of changes that cut the bill without hurting quality. The aim is often 40 to 80 percent less, and you measure first so you know which change worked.
 explain: |
   A clear view of where your AI app's tokens go, and a list of changes that cut the bill without hurting quality. The aim is often 40 to 80 percent less, and you measure first so you know which change worked.
 
   Changes come in order of payoff. Routing sends easy tasks like tagging and short answers to a small cheap model and keeps big models for hard reasoning. Caching reuses the repeated parts of prompts, such as system text and examples; aim for a hit rate above 40 or 60 percent depending on the app. Prompts are trimmed. Logging per request shows which features cost most. You set a quality floor and check after each step that it still holds.
 when:
-  - Your AI bill climbed and you do not know which feature is causing it.
-  - Most of your requests are simple but all go to the biggest model.
-  - You repeat the same long instructions on every call.
-  - You need to hit a monthly budget without making answers worse.
+  - Your AI bill went up and you do not know which feature caused it.
+  - Most of your requests are simple, but all of them go to the biggest model.
+  - You send the same long instructions on every call.
+  - You plan to launch an AI feature and want cost limits in place first.
+not_for:
+  - "You want to design how your app finds and pulls in documents: ask a developer or a RAG design guide, since this page only covers cost."
+  - "You want better or clearer answers from your prompts: work on the prompt wording itself, because cutting cost will not fix quality."
+  - "You have no usage data and no AI app yet: first note which models you plan to use, then run this as a design check."
 you_give:
   - Which models and providers you use
   - Monthly spend and the busiest features
@@ -30,8 +31,28 @@ you_get:
   - A caching plan with target hit rates
   - A way to track cost per request
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell it which models you use, your monthly spend and which features cost most.
+  - Paste a few sample prompts with rough token counts. If you have no logs, say so. You will get a logging plan first.
+  - Set your quality floor, such as answers that must stay as good as today.
+  - Read the ranked list and try one change at a time. Measure your own baseline first, then check cost and quality after each change.
+  - Savings ranges in the skill are rough industry figures, not promises. Quote only what you measure yourself. No code is needed to run it, but your own logs make the result better.
+output_sample:
+  input:
+    - Which AI models and providers you use
+    - Your monthly spend and the features that cost most (optional)
+    - Sample prompts and rough token counts (optional)
+    - Your quality floor and any speed limits (optional)
+  prerequisites:
+    - Request logs with tokens per call, or willingness to add logging first
+  output:
+    - name: Cost audit
+      contains: Spend broken down by feature, the top three places to save, and the projected savings.
+    - name: Model routing design
+      contains: A decision tree that sends each task type to the cheapest model that can handle it.
+    - name: Caching strategy
+      contains: What to cache, how to key it, the hit rate to aim for, and how to build it.
+    - name: Prompt optimization
+      contains: A token audit of your prompts with trims suggested and before and after token counts.
+    - name: Architecture review
+      contains: A cost score from 0 to 100 with ranked fixes and projected monthly savings.

@@ -16,6 +16,29 @@ use_cases:
   - "Set rules for email and meetings so you stop reacting all day"
   - "Plan an interview that draws out how an expert really works"
   - "Plan a long break from work and what would need to run without you"
+not_for:
+  - "You need medical, legal or investment advice: see a qualified doctor, lawyer or financial adviser, since this AI will not pick stocks or startups."
+  - "You need an answer today: a fear-setting worksheet takes time on paper, so talk to a trusted colleague or friend first."
+  - "You want a way to value a business or read its numbers: use the Aswath Damodaran mind instead."
+output_sample:
+  input:
+    - The decision, problem or week you are stuck on
+    - Your duties, deadlines and limits that cannot change
+    - Your to-do list or calendar for the week (optional)
+    - What you have already tried (optional)
+  output:
+    - name: Stuck-point question
+      contains: "A first question on what is stopping you, and which tool fits: fear-setting, subtraction or the 80/20 check."
+    - name: Fear-setting worksheet
+      contains: The worst realistic outcome, its lasting harm from 1 to 10, how likely it is, and how you would repair it.
+    - name: Cost of waiting
+      contains: What doing nothing costs you over one, five and ten years, next to the likely gains of trying.
+    - name: Not-to-do list
+      contains: Habits and tasks to stop, plus an 80/20 check on which customers or tasks drive most results or stress.
+    - name: Antelope or field mouse sort
+      contains: Your tasks marked as big or small, with the one task that would make the others easier or unneeded.
+    - name: One-week test
+      contains: One small step to try this week, framed as an experiment, and a short pep-talk.
 seats:
   - {seat: "Doing less, better", asks: "Which 20% of the work gives 80% of the result, and what can we stop doing?"}
   - {seat: "Fear-setting", asks: "What's the worst that could really happen, how would you repair it, and what does waiting cost?"}

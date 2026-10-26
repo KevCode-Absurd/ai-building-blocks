@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It groups data, then explains what changed.
 new_slug: customer-cohort-reader
 name: Customer cohort reader
-summary: Run it on your customers. Get repeat-purchase rate and revenue for each
-  first-purchase month.
+summary: Run a customer cohort analysis on your Shopify store. See repeat-purchase rate and revenue for each first-purchase month, in a CSV file.
 job: run-your-store
 headline: Customer cohort reader
-subhead: Do customers you win in March come back more than the ones from
-  January? This groups your Shopify customers by the month of their first order
-  and shows how each group behaves afterwards.
+subhead: Do customers you win in March come back more than the ones from January? This groups your Shopify customers by the month of their first order and shows how each group behaves afterwards.
 explain: |
   Do customers you win in March come back more than the ones from January? This groups your Shopify customers by the month of their first order and shows how each group behaves afterwards.
 
@@ -18,6 +15,10 @@ when:
   - You ran a big sale and need to see if those customers stayed.
   - An investor or partner asks about retention.
   - You want to compare months before planning ad spend.
+not_for:
+  - "Your store has under a few months of order history: wait until you have more orders, then run it."
+  - "Most of your sales are guest checkouts: they have no customer record, so use your Shopify Analytics reports instead."
+  - "You want to change customers, such as adding tags: this only reads data, so use a Shopify tagging step or do it by hand."
 you_give:
   - Your Shopify store and read access
   - Number of cohort months (optional)
@@ -28,8 +29,26 @@ you_get:
   - Revenue per cohort by month
   - A plain summary of the best and weakest cohorts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Open Claude Code, Cursor, Codex or Gemini CLI. This skill needs a tool that can run commands, not a plain chat window.
+  - Sign in to your store with the Shopify CLI, giving read access to customers and orders.
+  - Paste the skill, then add your store domain. Add the number of cohort months and follow months if you want to change the defaults of 6 and 3.
+  - Check the cohort table first. Look for months where the repeat rate is clearly higher or lower than the rest.
+  - Open the CSV file to sort or chart the results in Google Sheets or Excel.
+output_sample:
+  input:
+    - Your Shopify store domain
+    - Number of cohort months to review (optional)
+    - How many months to follow each cohort (optional)
+    - Output format, readable text or JSON (optional)
+  prerequisites:
+    - An AI that can run Shopify CLI commands and read your store
+    - A signed-in Shopify session with permission to read customers and orders
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step showing what was asked of Shopify and how many records came back.
+    - name: Cohort summary
+      contains: A table of each first-purchase month with customers acquired and repeat rates at months 1, 2 and 3.
+    - name: cohort_analysis CSV file
+      contains: One row per cohort and month offset with customers, repeat buyers, repeat rate, total revenue and revenue per customer.

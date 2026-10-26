@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Finding why a loop fails needs careful reasoning about variables.
 new_slug: parfor-error-fixer
 name: Parfor error fixer
-summary: Paste a failing parfor loop. Get the cause of the error and a fixed
-  loop that runs in parallel.
+summary: Fix a parfor loop that MATLAB won't run. Paste the loop or error and get the cause plus a fixed parfor loop, checked with MATLAB's code checker.
 job: test-and-fix-code
 headline: Parfor error fixer
-subhead: A parfor loop that runs, with the exact reason the old one failed.
-  Paste the loop or the error, and it uses MATLAB's own code checker rather than
-  guessing the rules.
+subhead: A parfor loop that runs, with the exact reason the old one failed. Paste the loop or the error, and it uses MATLAB's own code checker rather than guessing the rules.
 explain: |
   A parfor loop that runs, with the exact reason the old one failed. Paste the loop or the error, and it uses MATLAB's own code checker rather than guessing the rules.
 
@@ -18,6 +15,10 @@ when:
   - You want to turn a slow for loop into a parallel one.
   - A sliced or reduction variable behaves oddly.
   - You are reviewing a script that uses parfor and want it checked.
+not_for:
+  - "Your parfor runs but is slow: this tool does not tune speed, so time the loop and ask about pool choice or worker setup instead."
+  - "Your workers need paths, toolboxes or other setup: fix the worker environment first, because this is not a variable problem."
+  - "You have no MATLAB access: ask a colleague who has MATLAB to run the code checker, since this tool relies on it."
 you_give:
   - The parfor loop or whole .m file
   - The error text (optional)
@@ -28,8 +29,27 @@ you_get:
   - Fixed loop
   - Notes on variable types
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open an AI that can run MATLAB code checks. Add this skill, or paste its text into the chat.
+  - Paste your parfor loop or whole .m file. Add the error text if you have it.
+  - Ask your AI to diagnose and fix the parfor. It runs the MATLAB code checker first.
+  - Read the cause and the fixed loop. Check that the fix keeps the same results as your original loop.
+  - Make sure the checker was run again on the fix and shows no parfor errors.
+  - Then time the new loop against the old one. Ask a separate question if you need more speed.
+output_sample:
+  input:
+    - Your parfor loop or whole .m file
+    - The error text (optional)
+  prerequisites:
+    - An AI that can run MATLAB's code checker, such as through the MATLAB MCP tool
+    - MATLAB installed
+  output:
+    - name: Error cause
+      contains: The exact checker message and a plain reason for it, such as which variable breaks which rule.
+    - name: Analyser findings
+      contains: What MATLAB's code checker reported on your original loop, read before any fix is suggested.
+    - name: Fixed loop
+      contains: Your loop rewritten so each variable fits one type, with the same results as the original for loop.
+    - name: Variable types
+      contains: Notes on whether each variable is sliced, reduction, broadcast or temporary, and why it changed.
+    - name: Verification result
+      contains: The code checker run again on the fixed loop, confirming no parfor errors remain.

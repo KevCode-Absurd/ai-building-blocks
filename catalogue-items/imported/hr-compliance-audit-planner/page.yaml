@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans checks and ranks gaps by risk.
 new_slug: hr-compliance-audit-planner
 name: HR compliance audit planner
-summary: Pick what to audit. Get a checklist, a file sampling plan, a findings
-  report and a fix plan. Not legal advice.
+summary: "Plan an HR compliance audit: get a checklist, a file sampling plan, a findings report ranked by risk and a fix plan. Not legal advice."
 job: hire-people
 headline: HR compliance audit planner
-subhead: A full plan to check whether your HR practices meet the rules, from
-  first checklist to fix list. Choose what to audit and get the checklist, a
-  sampling plan, a findings report and a corrective plan.
+subhead: A full plan to check whether your HR practices meet the rules, from first checklist to fix list. Choose what to audit and get the checklist, a sampling plan, a findings report and a corrective plan.
 explain: |
   A full plan to check whether your HR practices meet the rules, from first checklist to fix list. Choose what to audit and get the checklist, a sampling plan, a findings report and a corrective plan. It is not legal advice.
 
@@ -18,6 +15,10 @@ when:
   - You have hundreds of personnel files and cannot check them all.
   - You suspect some roles are classified wrongly for overtime.
   - You want a yearly schedule of HR checks instead of one-off reviews.
+not_for:
+  - "You need a legal opinion on a rule in your state or country: ask an employment lawyer."
+  - "Your findings point to a possible violation: bring in employment counsel before you act."
+  - "You want to write or update a single HR policy: draft it with your HR lead or a lawyer, not an audit plan."
 you_give:
   - The area to audit
   - Workforce size and locations
@@ -29,7 +30,28 @@ you_get:
   - A findings report ranked by risk
   - A corrective action plan with a timeline
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Tell your AI the area to audit, your workforce size, your locations and your country or state.
+  - Ask for the scope document and checklist first. Read them and fix anything that does not match how you work.
+  - Ask for a sampling plan. Then check your files by hand against the checklist and note each gap you find.
+  - Paste your notes back and ask for a findings report ranked by risk, then a corrective action plan with dates.
+  - Share serious findings with employment counsel before you act. Ask for the follow-up checklist to confirm fixes.
+output_sample:
+  input:
+    - The area you want to audit, such as hiring, pay or leave
+    - Your workforce size and locations
+    - Your country or state
+    - Your current policies and file formats (optional)
+  output:
+    - name: Audit scope document
+      contains: What the audit covers, its goals, the sample size and the timeline, so coverage stays the same each time.
+    - name: Audit checklist
+      contains: The items to check for your chosen area, such as personnel files, job classes, pay equity, leave or onboarding.
+    - name: Sampling method
+      contains: How to pick a set of files to review when your workforce is too large to check every file.
+    - name: Findings report
+      contains: The gaps you found, each with a risk level based on legal exposure, how often it occurs and how serious it is.
+    - name: Corrective action plan
+      contains: Fixes for each gap, with owners and dates.
+    - name: Follow-up checklist and audit calendar
+      contains: Checks to confirm fixes were done, and a yearly schedule of repeat HR reviews.

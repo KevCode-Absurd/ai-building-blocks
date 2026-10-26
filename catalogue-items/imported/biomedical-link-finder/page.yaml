@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It builds exact queries and traces each result.
 new_slug: biomedical-link-finder
 name: Biomedical link finder
-summary: Name a disease, gene or drug. Get linked facts from a biomedical
-  knowledge graph, each with its source.
+summary: Find linked facts about a gene, drug or disease in a public biomedical knowledge graph, with the source and papers behind each link.
 job: research-topics
 headline: Biomedical link finder
-subhead: Name a disease, gene or drug and get back linked facts from a public
-  biomedical knowledge graph, each tied to its source. You see what is
-  documented, with publications and provider details, so you can check it
-  yourself.
+subhead: Name a disease, gene or drug and get back linked facts from a public biomedical knowledge graph, each tied to its source. You see what is documented, with publications and provider details, so you can check it yourself.
 explain: |
   Name a disease, gene or drug and get back linked facts from a public biomedical knowledge graph, each tied to its source. You see what is documented, with publications and provider details, so you can check it yourself.
 
@@ -19,6 +15,10 @@ when:
   - You need citations behind a claimed drug-disease link.
   - You are building a list of leads to check by hand.
   - You want to see which sources back each relationship.
+not_for:
+  - "You need a clinical decision or advice on a patient: ask a clinician, not this skill."
+  - "You have patient details or private research ideas: do not send them. Queries may be visible to the service, so search a literature database such as PubMed by hand."
+  - "You want a ranked answer, a prediction or a proven mechanism: this only looks up links. Read the papers and check an authoritative database."
 you_give:
   - A disease, gene or drug name
   - The type of link you care about
@@ -30,8 +30,29 @@ you_get:
   - The saved query and raw response
   - Warnings about partial or weak results
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach the NCATS Translator service.
+  - Use an AI that can run Python 3.10 or newer and reach the internet. A plain chat window cannot run this skill.
+  - Make sure your question is public. Do not include patient details or private research ideas.
+  - Ask your AI to run the preflight check. It tests that the ARAX service is online without sending your question.
+  - Ask it to look up your term and show you the proposed identifier. Check that the name and category are right.
+  - Ask it to run one one-hop query with that identifier and the link type you want.
+  - Open summary.json to see each link, its sources and papers. Open response.json if you need the full detail.
+output_sample:
+  input:
+    - A disease, gene or drug name
+    - The type of link you care about, such as a drug that affects a gene
+    - Reviewed identifiers for each end of the link
+    - A limit on how many results to return (optional)
+  prerequisites:
+    - An AI that can run Python 3.10 or newer and reach the internet
+    - Public, non-sensitive questions only
+  output:
+    - name: Entity check
+      contains: The proposed identifier, name, category and synonyms for your term, so you can review them before any query.
+    - name: request.json
+      contains: The exact query that was sent to the ARAX service.
+    - name: response.json
+      contains: The full raw answer from the service, kept so you can check it.
+    - name: summary.json
+      contains: A short list of linked facts, each with its link type, sources and papers.
+    - name: Warnings
+      contains: Notes on partial results, provider errors, missing paper details or empty results.

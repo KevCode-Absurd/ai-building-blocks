@@ -45,7 +45,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Map where each rival sits.** Use the skill `positioning-grid-builder`. Starts the chain: writes the rival set with where each one sits and which corners are open.
 2. **Find the words nobody owns.** Use the skill `owned-word-mapper`. Give it the competitor set from the steps before. Reads the mapped rivals from the step before and marks which words are taken and which are open.
-3. **Turn a rival weakness into a message.** Use the skill `rival-weakness-message-finder`. Give it the competitor set from the steps before. Takes the map and picks the one strength of yours that is also a rival's weakness.
+3. **Turn a rival weakness into a message.** Use the skill `rival-weakness-message-finder`. Give it the competitor set from step 1 and the word map from step 2. Takes the map and picks the one strength of yours that is also a rival's weakness.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -39,8 +39,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Have the meeting. Write down the name as spelled, what they said they care about, and anything you promised.
 
-3. **Write the memory card.** Use the skill `contact-memory-card-writer`. Give it the persona from the steps before. A card for remembering them: name, facts, promises and the date of the next contact.
-4. **Write the thank-you note.** Use the skill `honest-appreciation-note-writer`. Give it the plan and the persona from the steps before. A short note with one specific, honest appreciation and no ask.
+3. **Write the memory card.** Use the skill `contact-memory-card-writer`. Use your own notes from the meeting, not step 2's plan, plus the persona from step 1. A card for remembering them: name, facts, promises and the date of the next contact.
+4. **Write the thank-you note.** Use the skill `honest-appreciation-note-writer`. Give it the plan from steps 2 and 3 and the persona from step 1. A short note with one specific, honest appreciation and no ask.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It forms ideas, then tests them against sources.
 new_slug: organization-dossier-researcher
 name: Organization dossier researcher
-summary: Name a company, person or group. Get a tested research file with
-  sources. Collects data from websites.
+summary: Test what you believe about a company, person or group. Get a sourced dossier with a verdict, red flags and talking points in a Word file.
 job: think-and-decide
 headline: Organization dossier researcher
-subhead: A research file on a company, person or group that tests what you
-  believe instead of repeating what everyone knows. Every claim carries a
-  source.
+subhead: A research file on a company, person or group that tests what you believe instead of repeating what everyone knows. Every claim carries a source.
 explain: |
   A research file on a company, person or group that tests what you believe instead of repeating what everyone knows. Every claim carries a source.
 
@@ -18,6 +15,10 @@ when:
   - You are checking out a possible partner or investor.
   - You want to test a theory about a competitor's strategy.
   - You need a sourced brief before an important meeting.
+not_for:
+  - "You need to vet a private person for hiring or renting: use a licensed background-check provider, and only with a lawful purpose or consent."
+  - "You only want a quick company overview with no theory to test: read their website, or ask your AI for a plain summary."
+  - "You need data from LinkedIn or Glassdoor pages: they may block automated collection, so check each site's terms first."
 you_give:
   - The company, person or group
   - Your hypothesis
@@ -29,8 +30,33 @@ you_get:
   - Conversation hooks
   - A Word document
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Use an AI that can search the web, and has Node.js to make the Word file. Claude Code works.
+  - Paste the skill into your chat, or add the skill folder.
+  - Answer the questions one at a time. Say what you expect to find. This is the key step.
+  - Wait while it searches, then read the verdict and the red flags first.
+  - Open the Word file. Check the sources behind any claim you plan to use.
+output_sample:
+  input:
+    - The company, person or group you want researched
+    - What you already believe about them (your hypothesis)
+    - Why you need it, such as a sales call or partner check
+    - How deep to go
+    - Paid data access (optional)
+  prerequisites:
+    - An AI that can search the web and read web pages
+    - Node.js, to build the Word file
+  output:
+    - name: Verdict on your hypothesis
+      contains: Whether the evidence supports or disproves what you believed, with the points for and against.
+    - name: Identity facts
+      contains: Who the subject is, confirmed from sources, so you know you have the right one.
+    - name: 12-month activity timeline
+      contains: Key moves and news from the past year, in date order.
+    - name: Network and reputation signals
+      contains: Who they work with and what others say about them.
+    - name: Red flags
+      contains: Risks and warning signs found during the search.
+    - name: Conversation hooks
+      contains: Talking points for your meeting, each tied to a specific finding.
+    - name: Source audit log
+      contains: Searches run, sources found and sources cited, with unverified claims labeled.

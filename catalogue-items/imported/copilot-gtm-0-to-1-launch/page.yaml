@@ -2,18 +2,103 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-gtm-0-to-1-launch
 name: First customer launch planner
-summary: Describe your new product. Get early buyer targets, a launch sequence
-  and tests for reaching first customers.
+summary: "Get a plan to reach your first customers: who to contact, a week-by-week launch sequence and two-week tests with clear success and stop rules."
 job: plan-strategy
 headline: First customer launch planner
-subhead: Describe your new product. Get early buyer targets, a launch sequence
-  and tests for reaching first customers. Share your goal and the files you
-  already have. The skill file sets out the steps and the tools needed for this
-  job.
+subhead: Describe your new product and who it is for. It checks where a launch is stuck, lists who to contact first and plans two-week tests. You get a buyer target table, a launch sequence and a test list with stop rules.
+explain: |-
+  The first customers rarely come from press. They come from people you reach one by one. This first customer launch planner helps you find those people, contact them and learn from them.
+
+  It starts with where you are: not launched, launched with no traction, or launched with sign-ups but weak use. If the launch has stalled, it checks three layers in turn: your positioning, the new-user experience and team alignment. That way you fix the real problem. Then it builds a target list, a week-by-week sequence and short tests, each with a success measure and a rule for when to stop.
+
+  The source skill holds the author's own stories and some rules of thumb. We label these as the author's account, not proof. The plan uses only the numbers you give it.
+when:
+  - You are about to launch a new product and need your first 10 customers.
+  - You launched but nobody is using it.
+  - You have awareness or sign-ups but few paying customers.
+  - You are deciding between a press launch and direct outreach.
+not_for:
+  - "Your product already has steady customers and you want to scale: use the Self serve product growth planner."
+  - "You need a market position first: use the SaaS market position adviser or the Positioning statement writer."
+  - "You sell large deals to big companies: use the Enterprise account deal planner."
+you_give:
+  - Your product, in a sentence or two
+  - "Who has the problem: a role or type of person"
+  - Your price or plan (optional)
+  - Users, waitlist or results so far (optional)
+  - Channels you can use, such as your network, email or communities (optional)
+  - Hours per week your team can give (optional)
+you_get:
+  - A check of where your launch is stuck, if it has launched
+  - A table of buyer targets with channel and reason
+  - A week-by-week launch sequence
+  - Two-week tests with success criteria and stop rules
+  - Signals to watch, with your own targets
+  - A list of missing facts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Write what the product does, who has the problem and what has happened so far. Zero users is a fine answer.
+  - Open Claude, ChatGPT or Gemini and paste the skill. No code or paid tools are needed.
+  - Paste your notes. Say if you are before launch, after launch with no traction, or stuck on use.
+  - Check the buyer targets against people you can really reach this month.
+  - Run one test at a time for two weeks, and write down what you learned.
+  - Replace any example figure in the plan with your own results.
+how_it_works:
+  - title: Find where you are
+    text: It asks if you have launched, and what has happened so far. It uses only the numbers you give.
+  - title: Diagnose a stall
+    text: If the launch stalled, it checks positioning, then the new-user experience, then team alignment, and names the layer to fix.
+  - title: Build the target list
+    text: It sets who to contact first, through your network, direct outreach, people who outgrew another tool, or communities.
+  - title: Write the sequence
+    text: It plans the weeks, with direct outreach before press.
+  - title: Set two-week tests
+    text: Each test changes one thing and has success criteria and a rule for when to stop.
+  - title: Name the signals
+    text: It lists the signs of fit to watch, with targets you set yourself, and what to do if they are missing.
+output_shape: |-
+  First-customer launch plan: <product>
+  Where you are: <not launched / no traction / weak use>   Main bet: <one sentence>
+  Diagnosis (if launched)
+  | Layer | Evidence from you | Verdict |
+  Buyer targets
+  | Segment | Pain | Channel | Contacts to reach | Why first |
+  Launch sequence
+  | Week | Action | Owner | Done when |
+  Experiments (two weeks each)
+  | # | Test | One thing changed | Success criteria | Kill rule |
+  Signals to watch: <metric, your target>
+  Missing or unverified: <list>
+output_sample:
+  input:
+    - Your product and who has the problem
+    - Your price or plan (optional)
+    - Your users, waitlist or results so far (optional)
+    - Channels you can use (optional)
+  output:
+    - name: Diagnosis
+      contains: Which of positioning, experience or alignment is holding the launch back, with your evidence.
+    - name: Buyer targets
+      contains: Who to contact first, their pain, the channel to use and why they come first.
+    - name: Launch sequence
+      contains: A week-by-week plan with an owner and a done-when line for each action.
+    - name: Experiments
+      contains: Two-week tests that change one thing, each with success criteria and a kill rule.
+    - name: Signals to watch
+      contains: The signs of fit to track, with targets you set.
+    - name: Missing or unverified
+      contains: Facts you still need to supply and any figure to check.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: It plans from your notes. No code or files are needed.
+  inputs:
+    - A list of 20 to 100 people or companies who may have the problem
+    - Replies or notes from early conversations
+    - Your sign-up or activation numbers, if you have launched
+terms:
+  - term: Activation
+    meaning: A new user finishing the first task that shows them the value.
+  - term: Product-market fit
+    meaning: When customers pull the product forward, by coming back and telling others.
+  - term: Outreach
+    meaning: Contacting people one by one, for example by email or message.

@@ -2,35 +2,61 @@ thinking: medium
 thinking_why: It matches roles and prompts to the problem you name.
 new_slug: group-work-task-planner
 name: Group work task planner
-summary: Tell it where group work goes wrong. Get a task with roles and prompts
-  that share the work.
+summary: Plan a group task that fixes uneven group work. Give it the problem and the task. You get roles, AI prompts and checkpoints for your class.
 job: teach-and-train
 headline: Group work task planner
-subhead: Tell it the participation problem you see, your class level and size,
-  and the task topic. It designs a group task around that problem, with rotating
-  roles and AI prompts that nudge quiet members to contribute. You get the task,
-  the prompts, progress checkpoints and tips for running it.
+subhead: Tell it the group task and what goes wrong when students do it together. It designs the task around that problem. You get roles, AI prompts that draw in quiet members, and checkpoints that show progress.
 explain: |
   A group task that stops one student doing everything while others watch. Tell it where group work goes wrong in your class and you get a task with set roles and AI prompts that spread participation.
 
   The design starts with the specific problem, such as quiet members, dominant voices or free riders. It assigns rotating roles, adds AI prompts that nudge members to contribute, and builds checkpoints where the group must show progress. Prompts can also ask follow-up questions that deepen the talk. The evidence base is rated moderate, and the skill says so. It is made for teachers, tutors and course leads.
 when:
   - The same two students do all the group work.
+  - Your groups split the task into parts and never talk.
   - Some students never speak in group tasks.
-  - You want AI to prompt discussion without taking it over.
-  - You need a group activity with clear roles.
+  - You want an AI to prompt discussion without taking it over.
+not_for:
+  - "You have a task one student can finish alone: set it as individual work, since group work only adds cost there."
+  - "You want your AI to tutor one student through a topic: use a one-to-one tutoring chat, not a group plan."
+  - "You want feedback on finished student work: ask your AI for marking comments instead."
 you_give:
-  - The participation problem you see
-  - Class level and size
-  - The task topic
+  - The group task students will do together
+  - What goes wrong when they work as a group
+  - Class level and subject (optional)
+  - Group size (optional)
   - Time available (optional)
 you_get:
-  - A group task with roles
-  - AI prompts to spread participation
-  - Checkpoints for progress
-  - Tips for facilitating
+  - A group task with clear roles
+  - AI prompts that spread participation
+  - Checkpoints where groups show progress
+  - A list of what your AI should not do
+  - Tips for running it in class
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the full skill text.
+  - "Add the two required inputs: the group task, and what goes wrong when students work together."
+  - Add your class level, group size and time if you know them (optional).
+  - Read the Task Complexity Check first. If one student could finish the task alone, change the task.
+  - Run the task in class. Use the AI prompts at the points the plan lists.
+  - Use the checkpoint results to see who has taken part. This needs no code or paid tools, unless you want your AI to message groups live.
+output_sample:
+  input:
+    - The group task students will do together
+    - What goes wrong when they work as a group
+    - Class level and subject (optional)
+    - Group size (optional)
+    - Time available (optional)
+  prerequisites:
+    - A chat AI that can message your groups during the task, such as a chatbot (optional)
+  output:
+    - name: Task Complexity Check
+      contains: A check that the task is hard enough to need a group, so teamwork is worth the effort.
+    - name: Collaboration Structure
+      contains: The roles, the phases of the task and the points where the group must work together.
+    - name: AI Facilitation Moves
+      contains: The prompts and checks your AI uses during the task to draw in quiet members and deepen talk.
+    - name: Regulation Scaffolds
+      contains: Checkpoints where the group plans, checks its progress and shows what it has done.
+    - name: Equity Mechanisms
+      contains: Ways to share the work fairly so no one dominates and no one sits out.
+    - name: What the AI Does NOT Do
+      contains: The limits on your AI, so it prompts talk and does not do the thinking for students.

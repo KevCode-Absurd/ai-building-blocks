@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans the list of items and fields, then checks them online.
 new_slug: research-outline-builder
 name: Research outline builder
-summary: Give it a topic. Get a list of items to compare and questions to answer
-  for each, found online. Scrapes sites.
+summary: Plan a research outline for any topic. Get a list of items to compare and questions to answer for each, checked with a web search.
 job: research-topics
 headline: Research outline builder
-subhead: Give it a topic. Get a list of items to compare and questions to answer
-  for each, found online. Scrapes sites. Bring research topic. Use the result to
-  plan your next step.
+subhead: Give it a topic. It first drafts a list of items and fields from what your AI knows, then you confirm or change it. A web search adds missing items and fields, and you get two outline files.
 explain: |
   A research outline for any topic: the list of things to compare and the questions to answer about each one, filled in with results found online. You get a clear frame before the real research starts.
 
@@ -18,6 +15,10 @@ when:
   - You are starting a survey of a new field.
   - You need a list of the main options and what to check on each.
   - Your topic is too big and you need a frame first.
+not_for:
+  - "You want to check one claim: search for the source yourself, or ask your AI to find the original study."
+  - "Your topic has no public web sources: ask a subject expert or read the books and papers you already have."
+  - "You want the full research done now: this only builds the plan, so run the deep research step that follows it."
 you_give:
   - Research topic
   - Time range for sources
@@ -29,8 +30,30 @@ you_get:
   - Web-sourced additions
   - Outline file for later steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web and save files.
+  - Open your AI tool and add the skill, or paste its instructions into a chat. It needs web search and file saving to run in full.
+  - Type /research followed by your topic.
+  - Check the first list of items and fields. Say what to add or remove.
+  - Pick a time range for the web search, and share your own field file if you have one.
+  - Read the new items, fields and sources. Check that each source link is real before you trust it.
+  - Review outline.yaml and fields.yaml, then move on to the deep research step.
+output_sample:
+  input:
+    - Your research topic
+    - A time range for sources, such as last 6 months or since 2024
+    - Your own list of fields (optional)
+    - Changes to the item list when your AI asks
+  prerequisites:
+    - An AI that can search the web and save files
+  output:
+    - name: Initial framework
+      contains: A first list of items to research and a set of fields, written from what your AI already knows.
+    - name: Supplementary items
+      contains: New items found by a web search, each with a short reason it was added.
+    - name: Recommended supplementary fields
+      contains: New questions to answer for each item, each with a note on why it matters.
+    - name: Sources
+      contains: The links the web search used for its additions.
+    - name: outline.yaml
+      contains: Your topic, the final item list, and run settings such as how many items each agent takes.
+    - name: fields.yaml
+      contains: Each field with a description and a detail level, plus a list of uncertain fields for later.

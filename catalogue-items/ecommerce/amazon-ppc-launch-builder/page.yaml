@@ -1,6 +1,6 @@
 new_slug: amazon-ppc-launch-builder
 name: "Amazon PPC launch builder"
-summary: "Give it your product, keywords and daily budget. Get auto, keyword and competitor campaigns with bids and negatives."
+summary: "Plan your Amazon PPC launch from your unit profit. Get auto, keyword and competitor campaigns with bids, negatives and a stop rule."
 job: sell-on-amazon
 thinking: medium
 thinking_why: "It follows a fixed campaign structure, but it must tie every budget to your unit profit."
@@ -17,6 +17,10 @@ when:
   - You are about to launch a product on Amazon and need a first ad plan.
   - Your ads spend more than your sales make and you want a tighter structure.
   - You have a keyword list from the keyword picker and need to turn it into campaigns.
+not_for:
+  - "You don't know your unit profit yet: work it out with the Amazon fee and margin checker first, then come back."
+  - "You have no keyword list yet: build one with the Amazon keyword picker before you plan campaigns."
+  - "You want ad copy or listing text: ask a copywriter or write it by hand, as this plans campaigns only."
 
 you_give:
   - Your product, price and unit profit after fees
@@ -33,7 +37,32 @@ how_to_use:
   - Work out your unit profit after fees first, and paste it in. Do not set a budget before you know it.
   - Paste your keyword list and two or three competitor ASINs.
   - Read Amazon's live suggested bids in the campaign builder and paste them in. The plan uses those, not old numbers.
-  - Start with a small budget, review the reports about monthly, and stop or cut any campaign that spends more than it earns.
+  - Start with a small budget. Check spend against sales every week in the first weeks, then about monthly.
+  - Stop or cut any campaign that spends more than it earns.
+output_sample:
+  input:
+    - Your product, price and unit profit after Amazon fees
+    - A daily budget you can afford to lose
+    - Your keyword list from the Amazon keyword picker (optional)
+    - Competitor brands and ASINs (optional)
+    - Amazon's live suggested bids (optional)
+  prerequisites:
+    - Your unit profit, worked out before you start
+  output:
+    - name: BUDGET
+      contains: Your unit profit, a daily budget you can lose, and whether bids move up and down or stay fixed.
+    - name: "CAMPAIGN 1: AUTOMATIC"
+      contains: Four ad groups (close, loose, substitutes, compliments), each with a starting bid from the live suggested bids.
+    - name: "CAMPAIGN 2: MANUAL KEYWORDS"
+      contains: Your phrases grouped by topic, each as broad, phrase and exact, with starting bids.
+    - name: "CAMPAIGN 3: PRODUCT TARGETING"
+      contains: One ad group per competitor brand with its ASINs and a starting bid.
+    - name: NEGATIVE KEYWORDS
+      contains: Phrases you do not want, and which campaigns each one applies to.
+    - name: REVIEW RULES
+      contains: When to check reports, what to cut, and when to stop a campaign.
+    - name: MISSING and CHECKS MISSED
+      contains: Any input you did not give, and any check the plan failed.
 
 how_it_works:
   - title: Sets the budget from profit

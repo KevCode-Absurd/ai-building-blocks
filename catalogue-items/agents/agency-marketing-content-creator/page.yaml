@@ -1,0 +1,116 @@
+name: Content Creator agent
+summary: "Get a content plan and channel drafts from one idea: blog, video and social posts, each with its audience goal and facts to check. Bring your topic."
+headline: Content Creator agent
+subhead: Give it your business, one idea or announcement, and the channels you use. It plans a few content themes, then writes a draft for each channel. You get a content plan, the drafts, and a list of facts to check before you publish.
+job: grow-social
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Most content stalls because every channel starts from a blank page. This agent starts from one idea and one reader, then adapts it. A blog post, a video script and a social post each get their own shape and their own goal, such as to teach, to get a reply or to get a click.
+
+  It plans first. You get three or four content themes tied to what your customers care about, and a short calendar sized to the time you have. Then it drafts. Each draft says who it is for, what the reader should do next and which claims need a fact check.
+
+  It only knows what you give it. It has no view of your analytics, your past posts or your market, and its drafts are starting points, not copy to publish untouched. The success targets in the original profile are goals, not results it has measured.
+when:
+  - You have one idea or announcement and need drafts for several channels.
+  - You need a month of content built on three or four topics your customers care about.
+  - You have a long piece and want it turned into posts and a video script.
+  - You want your brand voice to stay steady from blog to social.
+not_for:
+  - You want posts for one platform only. Use the LinkedIn Content Creator agent or the TikTok Strategist agent.
+  - You want to write from a search keyword. Use the Keyword to post outline writer.
+  - You need ad or sales page copy. Use the Fact-based ad copy writer.
+you_give:
+  - What your business does and who you write for
+  - The one idea, announcement or topic list to build on
+  - The channels you use and the time you have each week
+  - Two or three of your own posts, so it can match your voice (optional)
+  - Facts, quotes or numbers it may use
+you_get:
+  - Three or four content themes, each with the reader it serves
+  - A short content calendar sized to your time
+  - "A draft for each channel: blog, video script or social post"
+  - The audience goal and next step for every draft
+  - A list of facts to check before you publish
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you can't, paste SKILL.md, then references/source-agent.md, into a new chat. Claude, ChatGPT and Gemini all work.
+  - Paste what your business does, who you write for and the idea you want to build on.
+  - List your channels and your weekly time. Paste two or three of your own posts so it can match your voice.
+  - 'Say: "Make a content plan and one draft per channel. Use only the facts I gave you. List what to check."'
+  - Read the themes first. If a theme isn't something your customers ask about, say so and ask for new ones.
+  - Edit each draft in your own words, check every fact on its list, then publish it yourself.
+how_it_works:
+  - title: Set the brief
+    text: It confirms the business, the reader, the idea, the channels and your time. Missing items are asked for once, then marked MISSING.
+  - title: Pick the themes
+    text: It turns the idea into three or four themes and says which reader and goal each one serves.
+  - title: Plan the calendar
+    text: It spreads the work over the weeks you have, with one core piece and the posts that come from it.
+  - title: Draft per channel
+    text: It writes each draft in the shape that suits the channel, in the voice from your samples.
+  - title: Mark the claims
+    text: It lists every number, name and promise that you must verify, and marks examples as examples.
+  - title: Suggest what next
+    text: It suggests what to measure after publishing, without promising results.
+output_shape: |-
+  CONTENT THEMES
+    <theme> | <reader it serves> | <goal: teach, reply, click> | <proof you have>
+
+  CALENDAR
+    <week> | <channel> | <piece> | <theme> | <time it needs>
+
+  DRAFTS
+    <channel> | <audience goal> | <next step for the reader> | <draft text>
+
+  FACTS TO CHECK
+    <claim in the draft> | <where the proof should come from>
+
+  ASSUMPTIONS AND MISSING
+    <what the AI had to guess or could not see>
+output_sample:
+  input:
+    - What your business does and who you write for
+    - One idea, announcement or topic list
+    - The channels you use and your weekly time
+    - Two or three of your own posts (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Your brand brain from the Brand profile builder, if you have one (optional)
+  output:
+    - name: Content themes
+      contains: Three or four themes, each with the reader it serves and its goal.
+    - name: Calendar
+      contains: A short plan by week, with one core piece and the posts that come from it.
+    - name: Drafts
+      contains: A draft for each channel, with its audience goal and the reader's next step.
+    - name: Facts to check
+      contains: Every claim in the drafts that you must verify before publishing.
+    - name: Assumptions and missing
+      contains: What the AI guessed or could not see, so you can fill the gaps.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Content theme
+    meaning: A topic you return to often because your customers care about it.
+  - term: Repurposing
+    meaning: Turning one piece, such as a blog post, into several posts and a script.
+  - term: Audience goal
+    meaning: What you want the reader to do or feel after reading one piece.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: All three write and adapt drafts well. Paste your own posts so the voice matches yours.
+  inputs:
+    - Your brand brain, if you have built one.
+    - Customer questions you hear often.
+    - Past posts that did well, with a note on why.

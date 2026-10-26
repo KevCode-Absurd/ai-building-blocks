@@ -1,6 +1,6 @@
 new_slug: mistakes-letter-partners
 name: "Mistakes letter to partners writer"
-summary: "Paste your year's results and slip-ups. Get an owners' letter naming each mistake, its cost and the change."
+summary: "Write a mistakes letter to partners after a bad year. Give it your results and what went wrong. You get a plain letter with each cost."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It puts numbers on each mistake and chooses what to say first, but follows a set letter shape."
@@ -17,6 +17,10 @@ when:
   - You must write to owners, partners, members or backers after a poor year.
   - You made a costly mistake and want to say so before someone else does.
   - Your yearly letter reads like a press release and you want it honest.
+not_for:
+  - "You need a routine monthly or quarterly update: write a short note yourself, or reuse last period's update."
+  - "You must file formal reports for investors or lenders: check what you owe them with an accountant or lawyer first."
+  - "You want to say the mistakes were someone else's fault: ask a trusted person to read it first, because this letter names your own choices."
 
 you_give:
   - Your year's results as numbers (a performance sheet)
@@ -34,6 +38,29 @@ how_to_use:
   - Give the cost of each mistake if you know it. Say so if you do not.
   - Read the letter once as an owner. Mark any line you would not believe.
   - Send it only after you have checked every figure against your records.
+output_sample:
+  input:
+    - Your year's results as numbers
+    - A list of what went wrong or what you missed
+    - The cost of each mistake, if you know it (optional)
+    - Your plan for next year (optional)
+  output:
+    - name: Results
+      contains: The year in plain numbers, bad news first, with the period and what you compare against.
+    - name: What happened around us
+      contains: One short, plain picture of the wider world, split into outside causes and your own choices.
+    - name: Our mistakes
+      contains: Each mistake of doing or not doing, with its cost, why it happened and a stated change.
+    - name: What we learned and what changes
+      contains: The lesson from each mistake and one concrete change, with a date or owner if you have one.
+    - name: Cash and risk
+      contains: Your cash, what you owe and what a worst realistic month looks like.
+    - name: Closing line
+      contains: One short lesson in plain words to end the letter.
+    - name: Missing
+      contains: Each figure or fact you still need to supply, marked clearly.
+    - name: Checks missed
+      contains: One line for each self-check that failed and why, or none.
 
 how_it_works:
   - title: Leads with the numbers

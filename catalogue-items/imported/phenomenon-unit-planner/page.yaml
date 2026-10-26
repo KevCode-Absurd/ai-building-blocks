@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It links subjects around one real-world question.
 new_slug: phenomenon-unit-planner
 name: Real-world phenomenon unit planner
-summary: Name a real event or puzzle. Get a unit plan that uses several subjects
-  to explain it.
+summary: Plan a phenomenon-based unit from one real event or puzzle. Get a cross-subject plan with each subject's part and an assessment.
 job: teach-and-train
 headline: Real-world phenomenon unit planner
-subhead: Name a real event or puzzle. Get a unit plan that uses several subjects
-  to explain it. Bring a real-world phenomenon or puzzle. Use the result to plan
-  your next step.
+subhead: Name a real event or puzzle. Get a unit plan that uses several subjects to explain it. Bring a real-world phenomenon or puzzle. Use the result to plan your next step.
 explain: |
   A unit plan built around one real event or puzzle that no single subject can explain alone, so each subject has to contribute. It follows the phenomenon approach from the Finnish national curriculum.
 
@@ -18,10 +15,15 @@ when:
   - A local event is in the news and you want to teach from it.
   - You need to show how each subject's goals are covered.
   - Your team plans together across departments.
+not_for:
+  - "You only teach one subject or one topic: use a normal lesson plan or a single-subject unit planner."
+  - "You want a project with a client, a product or a final deliverable: use the Project brief designer."
+  - "You want a unit rooted in your own town or a local site: use the Place-based inquiry anchor."
 you_give:
-  - A real-world phenomenon or puzzle
-  - Subjects and year level
-  - Curriculum goals to cover
+  - A real-world event or puzzle that needs more than one subject to explain
+  - The subjects it draws on
+  - Year level (optional)
+  - Curriculum goals the unit must cover (optional)
   - Unit length (optional)
 you_get:
   - A unit design
@@ -30,7 +32,29 @@ you_get:
   - A student inquiry pathway
   - An assessment for combined understanding
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code, files or paid tools are needed.
+  - Add your event or puzzle and the subjects it draws on.
+  - Add your year level, curriculum goals and unit length if you have them.
+  - Read the Integration Map first. Check that each link between subjects is real and not forced.
+  - Check any figures in the result against a trusted source before you give them to students.
+  - Adjust the Practical Considerations to fit your timetable and team.
+output_sample:
+  input:
+    - A real-world event or puzzle that needs more than one subject to explain
+    - The subjects it draws on
+    - Year level (optional)
+    - Curriculum goals to cover (optional)
+    - Unit length (optional)
+  output:
+    - name: Unit Overview
+      contains: The phenomenon, the driving questions and how the unit fits your year level and length.
+    - name: Subject Contributions
+      contains: What each subject adds to understanding the phenomenon, with the knowledge and skills it brings.
+    - name: Integration Map
+      contains: The points where subjects must connect for students to make sense of the phenomenon.
+    - name: Student Inquiry Pathway
+      contains: The steps students follow as they ask and answer their own questions.
+    - name: Assessment Design
+      contains: A way to test combined understanding across subjects, not each subject on its own.
+    - name: Practical Considerations
+      contains: Notes on timetable, team teaching and school setup that affect how you run the unit.

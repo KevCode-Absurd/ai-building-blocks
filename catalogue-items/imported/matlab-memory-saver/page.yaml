@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It profiles, changes and measures in a set loop.
 new_slug: matlab-memory-saver
 name: MATLAB memory saver
-summary: Give it code that runs out of memory. Get the cause found, fixed and
-  measured, with a short report.
+summary: Fix MATLAB out of memory errors. Give it your slow or crashing code and get the memory hot spots found, fixed and measured, with a short report.
 job: test-and-fix-code
 headline: MATLAB memory saver
-subhead: A MATLAB script that no longer runs out of memory, with proof of how
-  much it saved. You give it the code that crashes or crawls, and it finds what
-  is eating the memory, changes it and measures again.
+subhead: A MATLAB script that no longer runs out of memory, with proof of how much it saved. You give it the code that crashes or crawls, and it finds what is eating the memory, changes it and measures again.
 explain: |
   A MATLAB script that no longer runs out of memory, with proof of how much it saved. You give it the code that crashes or crawls, and it finds what is eating the memory, changes it and measures again.
 
@@ -18,11 +15,15 @@ when:
   - MATLAB slows down after a long run and you do not know why.
   - You need the same results with a smaller memory footprint.
   - You want a before and after figure to show your team.
+not_for:
+  - "Your code is slow, not short on memory: use the MATLAB performance skill, or profile run time first."
+  - "The memory is used by compiled C or MEX code you cannot change: ask the person who wrote that code."
+  - "The memory goes to file buffers or database connections: change how you read the data, not the MATLAB code."
 you_give:
-  - The code that uses too much memory
-  - Typical data size
-  - Your operating system
-  - A sample run command
+  - The MATLAB code that uses too much memory
+  - Typical size of your data
+  - Your operating system (Windows, Mac or Linux)
+  - The command you use to run it
 you_get:
   - The memory hot spots found
   - Optimised code
@@ -30,8 +31,32 @@ you_get:
   - A proof that results match
   - A short report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Check that MATLAB is installed and that your AI can run it. Without that, the AI can only suggest changes, not measure them.
+  - Paste the skill into your AI chat, or upload the skill folder.
+  - Paste your code. Add your data size, your operating system and the command that runs it.
+  - Ask your AI to follow the skill and measure before it changes anything.
+  - Read the report. Check that the results match and the memory saved is enough.
+  - Run the optimized code on your real data before you rely on it.
+output_sample:
+  input:
+    - The MATLAB code that runs out of memory
+    - Typical size of your data
+    - Your operating system (Windows, Mac or Linux)
+    - The command you use to run it
+  prerequisites:
+    - An AI that can run MATLAB code, with MATLAB installed on your computer
+  output:
+    - name: Baseline
+      contains: How much memory your code uses before any change, measured with the same method used later.
+    - name: Memory profile
+      contains: The functions that allocate the most memory, ranked, so you see where the cost is.
+    - name: Optimization list
+      contains: The memory patterns found at those hot spots, such as arrays that grow in a loop.
+    - name: Optimized code
+      contains: Your code changed only at the hot spots, using the fixes chosen.
+    - name: Optimized measurement
+      contains: Memory use after the change, measured the same way as the baseline, with the percent saved.
+    - name: Correctness check
+      contains: The largest difference between old and new results, to show they match.
+    - name: Report
+      contains: Baseline, optimized figure, percent reduction, correctness check and the patterns applied.

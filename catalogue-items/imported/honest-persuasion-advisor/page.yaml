@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It applies seven known principles and must keep the tone honest.
 new_slug: honest-persuasion-advisor
 name: Honest persuasion advisor
-summary: Give it a page or pitch. Get where to add proof, scarcity or
-  reciprocity, using Cialdini's seven principles, without trickery.
+summary: Check your sales page or pitch against Cialdini's seven principles. See where proof or scarcity fits and which tactics would cross an honest line.
 job: speak-and-persuade
 headline: Honest persuasion advisor
-subhead: A review of your page, pitch or product flow that shows where each of
-  the seven persuasion principles could help and where it would cross a line.
+subhead: A review of your page, pitch or product flow that shows where each of the seven persuasion principles could help and where it would cross a line.
 explain: |
   A review of your page, pitch or product flow that shows where each of the seven persuasion principles could help and where it would cross a line. The seven are reciprocity, commitment, social proof, authority, liking, scarcity and unity, from Robert Cialdini's work.
 
@@ -17,6 +15,10 @@ when:
   - You want to add proof or urgency without lying.
   - You are writing a sales pitch and want to know what is missing.
   - You suspect a tactic you use might feel manipulative.
+not_for:
+  - "You need tactics for a price or contract talk: use a negotiation guide or a trusted advisor, as this checks pages and pitches."
+  - "You want fake urgency or invented reviews: this skill flags them and caps the score, so it will not help."
+  - "You need new ad copy written from scratch: ask your AI to draft first, then bring the draft here to check."
 you_give:
   - Your page, pitch or product flow
   - Who you are trying to persuade
@@ -28,7 +30,26 @@ you_get:
   - Specific changes to try
   - Warnings where a tactic would be deceptive
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. It needs no code, files or paid tools.
+  - Paste your page copy, pitch or product flow. A headline and button text is enough to start.
+  - Say who you are trying to persuade and what you want them to do.
+  - Add real proof you have, such as reviews or numbers (optional).
+  - Ask your AI to run the Quick Diagnostic, then give a score for each of the seven principles with one change each.
+  - Read the warnings first. Fix anything flagged as deceptive before you use the other changes.
+output_sample:
+  input:
+    - Your page, pitch or product flow, pasted as text
+    - Who you are trying to persuade
+    - What you want them to do
+    - Real proof you have, such as reviews or numbers (optional)
+  output:
+    - name: Quick Diagnostic
+      contains: Which of the seven principles you already use, which are missing, and which are misused.
+    - name: Principle scores
+      contains: A check of reciprocity, commitment, social proof, authority, liking, scarcity and unity, each with how well it is used.
+    - name: Overall score
+      contains: A score out of 10, using the skill's bands, with the change needed to reach 10.
+    - name: Suggested changes
+      contains: One specific, honest change to try for each gap, such as where to place real proof.
+    - name: Ethical line warnings
+      contains: Flags on any tactic that is deceptive, such as fake scarcity or invented proof.

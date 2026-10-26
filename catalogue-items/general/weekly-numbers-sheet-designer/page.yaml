@@ -1,6 +1,6 @@
 new_slug: weekly-numbers-sheet-designer
 name: "Weekly numbers sheet designer"
-summary: "Paste what your business does and what you can measure. Get a one-page weekly sheet of seven numbers."
+summary: "Design a weekly numbers sheet for your small business: seven numbers at most, each with a clear definition, owner and a plain reading line."
 job: track-numbers
 thinking: medium
 thinking_why: "It chooses seven numbers from many and has to justify each against the flow of the business."
@@ -17,6 +17,10 @@ when:
   - "You run a small business and check your bank balance instead of your numbers."
   - "Your dashboard has forty tiles and you look at none of them."
   - "You are about to hire someone to run operations and want them to report on the same seven things."
+not_for:
+  - "Your business has no repeat numbers yet: check your bank balance each week and write down what came in and went out."
+  - "A number just fell and you want to know why: use the Numbers drop explainer."
+  - "You need a live dashboard that updates itself: set that up in your spreadsheet or reporting tool, then bring the seven numbers here first."
 
 you_give:
   - "What you sell, to whom, and how money comes in"
@@ -34,6 +38,27 @@ how_to_use:
   - "List the numbers you can already get and from which tool."
   - "Build the sheet from THE SHEET and COLUMNS. Fill four weeks before you judge any number."
   - "Do the MONDAY READ every week at the same time."
+output_sample:
+  input:
+    - What you sell, to whom, and how money comes in
+    - The numbers you can already pull, and from which tool
+    - What matters this quarter (advised)
+    - Problems you wish you had seen coming (optional)
+  output:
+    - name: THE FLOW
+      contains: Your business as five boxes or fewer, from stranger to money in the bank and what happens after.
+    - name: THE SHEET
+      contains: Up to seven numbers, each with a definition, source, owner, day, unit and what up and down mean.
+    - name: COLUMNS
+      contains: "The compare columns: this week, last week, same week last year if seasonal, and a target if you gave one."
+    - name: NOT YET MEASURED
+      contains: Each stage with no number yet, and the smallest way to start measuring it.
+    - name: MONDAY READ
+      contains: The order to read the numbers in and the one question to ask at each.
+    - name: MISSING
+      contains: Business facts or sources you did not give.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: "Maps the flow"

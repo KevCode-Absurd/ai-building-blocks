@@ -1,0 +1,165 @@
+name: Knowledge Graph Engineer agent
+summary: "Turn your documents into a knowledge graph design with linked facts, source tracking and test queries. Bring your files and your questions."
+headline: Knowledge Graph Engineer agent
+subhead: Give it sample documents and the questions you want answered. It designs a knowledge graph, a map of things and how they link, with every fact tied to the file it came from. You get the types of things, the links, starter Neo4j queries and checks.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Your documents hold facts, but an AI reads them as loose text. It can't tell
+  where a claim came from, or that two files disagree. This agent plans a
+  knowledge graph instead. Each thing in your documents becomes a point on a
+  map, each link becomes a line between points, and each fact points back to
+  its source file.
+
+
+  It follows the Knowledge Graph Engineer profile. A fact with one source waits
+  for a second source before it counts as trusted. Two sources that disagree are
+  both kept and flagged, never overwritten. When a source file changes, you get
+  a list of the facts to re-check. If the graph has no answer, it says so
+  instead of guessing.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. Its targets,
+  such as speed and accuracy goals, describe the intended work. They are not
+  measured results from AI Blocks. Your AI can write the design and draft the
+  queries. It can't run them unless it has a database tool.
+when:
+  - Your AI answers from many documents but can't say which file a claim came from.
+  - Two documents disagree and nobody tracks which one is right.
+  - You plan to use Neo4j and want the design before you load any data.
+  - A source file changed and you need to know which facts it touches.
+not_for:
+  - You only want a table layout for an app. Use the Backend Architect agent.
+  - You want an AI to answer questions from documents by search, with no graph. Use the RAG Pipeline Engineer agent.
+  - Your data is messy and needs cleaning first. Use the AI Data Remediation Engineer agent.
+you_give:
+  - Three to five sample documents, pasted or attached
+  - The questions the graph must answer, such as "which services depend on billing?"
+  - The kinds of things to track, such as people, products or contracts (optional)
+  - The database you plan to use, such as Neo4j (optional)
+  - Any two documents you know disagree (optional)
+you_get:
+  - A list of entity types and relationship types, each with a short meaning
+  - A rule that links every fact to its source document
+  - Rules for conflicts, and for facts that have only one source
+  - Starter queries for your questions, written for Neo4j and marked untested
+  - Health checks to run after you load data, and a check for source changes
+  - A list of assumptions and missing facts
+how_to_use:
+  - Download the pack and add it to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Paste three to five sample documents, or attach them. Add the questions you want the graph to answer.
+  - Say if you use Neo4j. If you don't, ask for the design and plain-language queries only.
+  - Read "Assumptions and gaps" first. Rename any type that doesn't match how your team talks.
+  - Copy the draft queries into Neo4j and try them on a small test set. Your chat AI can't run them for you.
+  - When you add more documents, paste them with the earlier design and ask for a conflict and change check.
+how_it_works:
+  - title: Set the scope
+    text: It confirms your goal, your documents and what is out of scope. Anything missing is asked once, then marked MISSING.
+  - title: Pull out things and links
+    text: It lists each thing and link the text states outright, with a type, a confidence from 0 to 1 and the claim. It does not guess.
+  - title: Tie each fact to its source
+    text: Every item points to its document, with date and path. A fact with no source stays out of the graph.
+  - title: Keep conflicts and thin facts apart
+    text: Sources that disagree are both kept and flagged. A fact with one source waits for a second one before it is trusted.
+  - title: Plan the checks
+    text: It lists checks for broken links, items with no source, items with no links and flags that don't match.
+  - title: Draft queries and change impact
+    text: It writes starter queries that cite their sources. It also sets out how to find the facts to re-check when a file changes.
+output_shape: |-
+  GOAL AND SCOPE
+    Questions the graph answers: <list> | In scope: <list> | Out of scope: <list>
+
+  ENTITY TYPES
+    <type> | <what counts as one> | <example from your documents>
+
+  RELATIONSHIP TYPES
+    <from type> -[<link>]-> <to type> | <meaning> | <how clearly the text must say it>
+
+  SOURCE RULES
+    <document title> | <path or link> | <date> | <hash or version, if known>
+
+  CONFLICT AND REVIEW RULES
+    One-source facts held until <number> sources agree
+    Conflicts kept as <claim A and source> against <claim B and source>
+
+  STARTER QUERIES
+    <question> | <draft Cypher> | <sources the answer must cite>
+
+  HEALTH CHECKS
+    <check> | <how to run it> | <what to do if it fails>
+
+  CHANGE CHECK
+    If <source> changes: re-check <things within N links> | <how to mark them> | <how to clear them>
+
+  ASSUMPTIONS AND GAPS
+    MISSING: <what> | Not run: <what>
+output_sample:
+  input:
+    - Three to five sample documents, or a description of them
+    - The questions your graph must answer
+    - The kinds of things to track, such as services, people or contracts (optional)
+    - The database you plan to use, such as Neo4j (optional)
+  prerequisites:
+    - An AI that can read pasted text or files, such as Claude, ChatGPT or Gemini
+    - A Neo4j database, only if you want to run the draft queries (optional)
+  output:
+    - name: Entity types
+      contains: Each kind of thing in your documents, what counts as one, and an example.
+    - name: Relationship types
+      contains: Each link between things, its direction, its meaning and how clearly the text must state it.
+    - name: Source and conflict rules
+      contains: How each fact points to its source, how disagreements are kept, and when a one-source fact is held back.
+    - name: Starter queries
+      contains: Draft Cypher for each of your questions, with the sources each answer must cite.
+    - name: Health checks
+      contains: Checks for broken links, facts with no source and flags that don't match.
+    - name: Change check
+      contains: How to find the facts to re-check when a source file changes.
+    - name: Assumptions and gaps
+      contains: What was assumed, what is MISSING and which queries were not run.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Questions the graph must answer
+    how: Name five to ten real questions. Anything that helps none of them is left out.
+  - what: Types of things to track
+    how: List your own types up front, such as service, owner and contract, so it doesn't invent its own.
+  - what: How many sources make a fact trusted
+    how: The profile holds a fact until two independent sources agree. Change the number if your documents are few.
+improve:
+  - Keep the entity and relationship types you approve, and paste them in at the start of every later run.
+  - Save each conflict you settle with the reason, so the next run can apply it.
+  - Pair it with the RAG Pipeline Engineer agent when you also want search over the same documents.
+terms:
+  - term: Knowledge graph
+    meaning: A map of things and the links between them, with each fact tied to its source.
+  - term: Entity
+    meaning: One thing on the map, such as a person, product or service.
+  - term: Relationship
+    meaning: A named link between two things, such as "depends on".
+  - term: Provenance
+    meaning: The record of which document a fact came from.
+  - term: Neo4j
+    meaning: A database built to store and search graphs.
+  - term: Cypher
+    meaning: The language you use to ask Neo4j questions.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can read several of your documents at once and draft the design.
+    - name: Neo4j
+      why: The profile writes its queries in Cypher, so you can test them there.
+  inputs:
+    - A list of 10 to 20 questions your team really asks.
+    - A short glossary of your own names for things.
+    - Two documents you know disagree, to test the conflict rules.

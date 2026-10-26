@@ -1,6 +1,6 @@
 new_slug: value-equation-scorer
 name: Value equation scorer
-summary: Paste your offer. Get a 1 to 10 score on outcome, likelihood, delay and effort, the weakest driver and the cheapest fix.
+summary: Score your offer as a buyer sees it. Get 1 to 10 scores for outcome, likelihood, delay and effort, plus the weakest part and the cheapest fixes.
 job: make-offer
 thinking: medium
 thinking_why: It judges an offer from the buyer's side with a fixed rubric. Evidence in the buyer's words keeps it honest.
@@ -14,6 +14,10 @@ when:
   - Your offer is fine but not selling and you cannot say why.
   - You have three ways to improve an offer and want to know which first.
   - You are about to raise the price and want to know what to add.
+not_for:
+  - "You want a new offer built around buyer doubts: use the Offer builder that answers buyer doubts."
+  - "You want your offer checked against a tested checklist: use the Offer checklist reviewer."
+  - "You want a sales forecast or a price test: run a small real test with buyers, because the index only compares versions."
 you_give:
   - "Your offer: what is included, price, terms, how it is sold"
   - Your buyer (optional)
@@ -28,6 +32,28 @@ how_to_use:
   - Paste the offer exactly as a buyer would see it on your page or in your pitch.
   - Add reviews so scores rest on real words.
   - Pick the fix with the best gain for its cost, then rescore after you change the offer.
+output_sample:
+  input:
+    - "Your offer: what is included, price, terms and how it is sold"
+    - Your buyer, who they are and what they have tried (optional)
+    - Reviews or call notes in the buyer's words (optional)
+  output:
+    - name: The claim
+      contains: One sentence a buyer would repeat to a friend.
+    - name: Scores
+      contains: Outcome, likelihood, delay and effort, each 1 to 10, with a reason and evidence or an estimate label.
+    - name: Index
+      contains: Outcome times likelihood, divided by delay times effort, for comparing versions of the offer.
+    - name: Weakest part
+      contains: The part pulling the index down, and why it matters most.
+    - name: Cheapest fixes
+      contains: Three fixes for that part, each with a cost and a new score.
+    - name: After the best fix
+      contains: The new index and where in the pitch or page the buyer will see the fix.
+    - name: Missing
+      contains: Gaps in what you gave, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 how_it_works:
   - title: Restates the claim
     text: Writes the offer as one sentence the buyer would repeat.

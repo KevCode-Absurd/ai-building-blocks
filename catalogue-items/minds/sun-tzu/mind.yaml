@@ -17,6 +17,27 @@ use_cases:
   - "Check a plan for the five faults that sink leaders: rashness, timidity, temper, pride and softness"
   - "Make your own position safe before you go after a big win"
   - "Adapt a plan that stopped working because the ground has shifted"
+not_for:
+  - "You need a plan for building lasting business advantage over years: hire the Hamilton Helmer mind, who tests what keeps rivals from copying you."
+  - "You need to give or take hard feedback with a teammate or boss: hire the Kim Scott mind, who covers clear, caring feedback."
+  - "You need to hold a tense talk with someone about credit or a broken promise: hire the Joseph Grenny mind, who covers crucial conversations."
+output_sample:
+  input:
+    - The goal you want to reach, and who or what stands in the way
+    - What you know about the other side, and who told you
+    - What a long fight would cost you in time, money and people
+    - "Your own position: strengths, weak points and any reserves you have"
+  output:
+    - name: Factors
+      contains: The five factors and seven questions, with you and the other side compared point by point.
+    - name: Options ranked
+      contains: Your choices from best to worst, starting with winning without a fight.
+    - name: Cost of a long fight
+      contains: What time, money and people a drawn-out contest would use up, and who pays.
+    - name: Rule
+      contains: A clear call to wait, go or avoid the fight.
+    - name: Open unknowns
+      contains: What the sums cannot tell, and what you must find out and from whom.
 seats:
   - {seat: "Competitive strategy", asks: "Have we done the sums? Do we know them, and do we know ourselves?"}
   - {seat: "Cost of conflict", asks: "Is there a way to win this without the fight, and what does a long fight cost us?"}

@@ -10,6 +10,8 @@ inputs:
   - { type: offer, required: true }
   - { type: voc_reviews, required: false }
   - { type: performance_sheet, required: false }
+  - { type: plan, required: false }
+  - {type: audit_report, required: false}
 outputs:
   - { type: plan }
 uses: []

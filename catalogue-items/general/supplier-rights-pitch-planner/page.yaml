@@ -1,40 +1,61 @@
 new_slug: supplier-rights-pitch-planner
-name: "Supplier rights pitch planner"
-summary: "Paste the product you want to sell and the maker you want. Get a pitch to win local selling rights."
+name: Supplier rights pitch planner
+summary: Plan a pitch to win local selling rights from a maker. Give it product and area. Get a gap paper, meeting plan and cash plan.
 job: sell-and-negotiate
 thinking: medium
-thinking_why: "It builds a pitch and a cash plan from facts you give it, with fixed steps."
-
-headline: "Supplier rights pitch planner"
+thinking_why: It builds a pitch and a cash plan from facts you give it, with fixed steps.
+headline: Supplier rights pitch planner
 subhead: Tell it the product you want to sell, the maker you want to buy from and your area. It writes the gap paper, the in-person ask, the terms to agree and a first-week sales and cash plan. You get a pitch plan you can use in the meeting.
-
 explain: |
   A maker with a good product often has no one selling it in your area. You could be that seller, but a vague email asking for "a partnership" gets ignored. The maker wants to know who you are, what area you cover, how many you will buy and whether you will pay.
 
   This skill plans the ask in the order that answers those worries. It writes a short paper on the gap in your market, picks the maker, plans the meeting, and sets the terms for your area and your first order. It then plans your first sales that week with no outside help and the cash to pay the supplier on time, including what happens if shipments run late.
-
 when:
-  - You found a maker whose product beats what is sold near you and want exclusive selling rights.
+  - You found a maker whose product beats what is sold near you and you want exclusive selling rights.
   - You want to become a distributor or reseller and have never pitched a supplier.
   - A supplier has said "send me a proposal" and you do not know what it should hold.
-
+  - You have a meeting with a maker soon and want the ask, the terms and the cash plan on one page.
+not_for:
+  - "You already hold the rights and want better terms: use the Supplier partner terms planner, or the Negotiation prep planner for the weaker side."
+  - "You are the maker and want to recruit sellers: use the Franchise and reseller terms writer."
+  - "You want to compare quotes from several makers before you choose: use the Supplier quote comparison planner."
 you_give:
   - The product you want to sell and the maker you have in mind
   - Your area and who you would sell to
-  - The rival products there, with their prices (optional)
+  - Rival products in your area, with their prices (optional)
+  - Your company name and one line on who you are (optional)
+  - Your savings, credit and the cost of a first order (optional)
 you_get:
   - A one-page gap paper outline built from your facts
   - A meeting plan with who you are in one line, the ask and the terms
   - A first-week sales plan that needs no one but you
   - A cash plan for paying the supplier, with a late shipment case
-
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the product, the maker and the area. Add any rival products and prices you know.
-  - Give your company name and one line on who you are, or let it mark them MISSING.
-  - Put real figures in the cash plan, such as your savings, credit and the cost of a first order.
-  - Take the meeting plan with you and bring the paper in print.
-
+  - Add your company name and one line on who you are. If you skip them, the plan marks them MISSING.
+  - "Give real figures for the cash plan: your savings, your credit and the cost of a first order. Without them it shows the shape of the plan and marks every number MISSING."
+  - Take the meeting plan with you and bring the gap paper in print. Fix any line marked MISSING first.
+output_sample:
+  input:
+    - The product you want to sell and the maker you have in mind
+    - Your area and who you would sell to
+    - Rival products in your area, with their prices (optional)
+    - Your company name and one line on who you are (optional)
+    - Your savings, credit and the cost of a first order (optional)
+  output:
+    - name: The gap
+      contains: One page on your area, who buys, the rival product and why this product could beat it.
+    - name: The maker
+      contains: What the maker makes, who it sells to now and what it may want, marked as known or guessed.
+    - name: The meeting
+      contains: Who you are in one line, the ask for rights in a named area and the terms to agree.
+    - name: First week
+      contains: Who you will contact first, why them and what you will say.
+    - name: Cash
+      contains: The cost of the first order, where the money comes from and what happens if shipments run late.
+    - name: Missing and checks missed
+      contains: Facts that would sharpen the pitch, and any of its own checks the plan still fails.
 how_it_works:
   - title: Writes the gap paper
     text: Sets out how this maker's product could beat the known brands in your area, using only facts you gave.
@@ -52,7 +73,6 @@ how_it_works:
     text: Works out how you will pay on time and what you do if shipments run late.
   - title: Checks the set
     text: Runs its own checks and names any it missed.
-
 output_shape: |
   THE GAP (one page)
   Area: <where>  Who buys: <who>
@@ -77,7 +97,6 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
-
 tweaks:
   - what: Named rival
     how: Name one product the maker's item should beat. The gap paper gets sharper when it has a target.
@@ -87,35 +106,32 @@ tweaks:
     how: Be exact. A named city or region reads as a clear ask, and "everywhere" does not.
   - what: Who you sell to first
     how: Name the first ten people you could call. The first-week plan uses them.
-
 judge:
   - The area, product and terms are written down.
   - The first-week sales need no one but you.
   - The cash to pay the supplier is planned before the first order.
   - The gap paper names the rival it is aimed at.
   - Nothing about the maker's product is claimed without a source you gave.
-
 test:
   - Read the meeting plan to a friend and ask them to say back what you want.
   - Check each figure in the cash plan against a bank statement or quote.
   - Run it twice. The ask and terms should stay close.
   - Send the gap paper to someone in your market and ask what is missing.
-
 improve:
   - Add your minimum order and credit limit to the cash step so it never plans beyond them.
   - Add the maker's catalogue and prices to the pasted facts.
   - Save the supplier's replies and paste them back in for the next round.
   - Pair it with "Negotiation prep planner for the weaker side" if the maker holds the power.
-
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Drafting the paper and the plan is text work any strong chat AI does well with this skill."}
-    - {name: "A spreadsheet", why: "Easiest place to check the cash plan with your real figures."}
+    - name: Any good chat AI
+      why: Drafting the paper and the plan is text work any strong chat AI does well with this skill.
+    - name: A spreadsheet
+      why: Easiest place to check the cash plan with your real figures.
   inputs:
-    - "The maker's catalogue and price list"
-    - "Prices of rival products in your area"
-    - "Your bank balance and credit available"
-
+    - The maker's catalogue and price list
+    - Prices of rival products in your area
+    - Your bank balance and credit available
 terms:
   - term: Selling rights
     meaning: Permission from the maker for you to sell its product in a named area.

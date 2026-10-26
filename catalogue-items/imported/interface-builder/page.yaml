@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans a system first, then builds it.
 new_slug: interface-builder
 name: Interface builder
-summary: Describe the screens. Get responsive, accessible components with a
-  design system and dark mode.
+summary: Describe your screens and get responsive interface components with a design system, accessible markup and dark mode in React, Vue or plain HTML.
 job: build-websites
 headline: Interface builder
-subhead: Responsive, accessible interface components with a design system behind
-  them and dark mode that works, built from your description of the screens.
-  Output is code in the framework you use, such as React with Tailwind.
+subhead: Responsive, accessible interface components with a design system behind them and dark mode that works, built from your description of the screens. Output is code in the framework you use, such as React with Tailwind.
 explain: |
   Responsive, accessible interface components with a design system behind them and dark mode that works, built from your description of the screens. Output is code in the framework you use, such as React with Tailwind.
 
@@ -19,6 +16,10 @@ when:
   - You must support phones and desktops from one codebase.
   - You want dark mode added without redoing styles.
   - You need components that work with a keyboard and screen reader.
+not_for:
+  - "You only need server or database work: use a backend developer or a coding tool built for that, since this skill makes screens only."
+  - "You must keep your current design system exactly as it is: ask your design team to extend it, because this skill sets new tokens."
+  - "You want a visual mockup to review, not code: use a design tool such as Figma, then bring the result here."
 you_give:
   - A description of the screens
   - Your framework and styling tool
@@ -30,8 +31,30 @@ you_get:
   - Accessible markup
   - Dark mode styles
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Describe your screens. Add your framework, such as React with Tailwind, and the devices you must support.
+  - Paste your existing colours or brand rules if you have them (optional). If you have none, it uses a neutral set.
+  - Read the tokens first, then the components. Ask for changes before you copy the code.
+  - Test with the Tab key only, then run an accessibility checker and a contrast check. Fix any failures before release.
+  - Running the code and viewing it in a browser needs your own project or a tool that can run code.
+output_sample:
+  input:
+    - A description of the screens or components you need
+    - Your framework and styling tool, such as React with Tailwind
+    - Your existing colours, fonts or brand rules (optional)
+    - The devices you must support (optional)
+  prerequisites:
+    - An AI that can run code and open a browser helps you check the result, but is not required
+  output:
+    - name: Design tokens
+      contains: Spacing, type sizes, colours, radius and shadow values, with light and dark versions of each colour.
+    - name: Components with variants
+      contains: Reusable parts such as a card, with size, colour and state options, including hover, focus and disabled.
+    - name: Responsive layouts
+      contains: Grid and flexbox layouts that start with phones and add changes at larger screen widths.
+    - name: Accessible markup
+      contains: Proper HTML elements, visible focus rings and ARIA labels only where plain HTML is not enough.
+    - name: Dark mode styles
+      contains: Swapped colour values for dark screens, using dark grey instead of pure black.
+    - name: Usage example
+      contains: A short snippet showing how to place the component in your page.

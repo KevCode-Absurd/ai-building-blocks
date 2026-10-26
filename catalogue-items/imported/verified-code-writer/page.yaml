@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It maps, plans and verifies before and after coding.
 new_slug: verified-code-writer
 name: Verified code writer
-summary: Describe the change. Get code grounded in your real files, with each
-  step checked before it counts.
+summary: Plan and write verified code for risky changes. Your AI maps your real files, builds in small steps and checks each one before moving on.
 job: build-software
 headline: Verified code writer
-subhead: "Code that matches what is actually in your project: no made-up
-  functions, no guessed imports, no placeholders. Each step is checked before it
-  counts as done."
+subhead: "Code that matches what is actually in your project: no made-up functions, no guessed imports, no placeholders. Each step is checked before it counts as done."
 explain: |
   Code that matches what is actually in your project: no made-up functions, no guessed imports, no placeholders. Each step is checked before it counts as done.
 
@@ -18,6 +15,10 @@ when:
   - The task touches many files and you want it grounded in what exists.
   - Earlier AI code used functions that do not exist.
   - You want small, checked steps rather than one large rewrite.
+not_for:
+  - "You only need a typo fix, a reformat or a throwaway script: ask your AI to make the edit directly."
+  - "You want design advice with no code written yet: ask a senior engineer, or talk it through with your AI first."
+  - "You want tests for a browser app: use a test-writing tool such as Playwright, then come back to check the code."
 you_give:
   - A clear description of the change
   - Access to the existing code
@@ -29,8 +30,32 @@ you_get:
   - Small steps, each with a check
   - Verified code with results shown
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - "Collect your details first: language, libraries and versions, how you run tests, and how your AI can see the files."
+  - Paste the skill into a chat, or add it to your AI tool. Then describe the change and what done looks like.
+  - Answer the five opening questions. Check the summary and the map, and fix anything wrong.
+  - Approve the story list. Test each story with the steps given before you ask for the next one.
+  - Read the Verification Report. Run your own tests, then merge the change or hand the notes to a reviewer.
+  - It works best when your AI can read your project files and run code. A chat with pasted files works too.
+output_sample:
+  input:
+    - A clear description of the change and what done looks like
+    - Your language, libraries and their versions
+    - The files the change touches
+    - How you run your tests (optional)
+    - Things that must not change (optional)
+  prerequisites:
+    - An AI that can read your project files, or a chat where you can paste them
+    - An AI that can run code, if you want it to run your tests
+  output:
+    - name: Situation Summary
+      contains: One paragraph on what is being built, which you confirm before any planning starts.
+    - name: Codebase Map
+      contains: Each link between files tagged known, inferred or unknown, with open questions listed to resolve before coding.
+    - name: Implementation Plan
+      contains: A numbered list of small stories, each with what gets built, how to check it, risks and size.
+    - name: Ponytail check
+      contains: A short note per story on whether the code can be skipped, reused or kept minimal.
+    - name: Story code with self-review and handoff
+      contains: Complete code for one story, a review checklist, and exact steps to test it.
+    - name: Verification Report
+      contains: Each story compared with its planned check, any gaps, and an overall complete or needs work verdict.

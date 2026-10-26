@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It designs a program from set steps.
 new_slug: tiktok-shop-affiliate-planner
 name: TikTok Shop affiliate planner
-summary: Tell it your products and margins. Get a commission setup, creator
-  outreach plan and sample process.
+summary: "Plan your TikTok Shop affiliate program: set commission tiers, recruit creators and run a sample process built around your product margins."
 job: grow-social
 headline: TikTok Shop affiliate planner
-subhead: Tell it your products and margins. Get a commission setup, creator
-  outreach plan and sample process. Bring your products and margins. Use the
-  result to plan your next step.
+subhead: Give it your products, margins and sample budget. It builds a TikTok Shop affiliate program with commission tiers, a creator plan and a sample process. Figures such as sales goals are starting guesses. Swap in your own numbers.
 explain: |
   A working affiliate program for your TikTok Shop: what commission to pay, who to recruit, how to send samples, and how to keep strong sellers happy. The numbers are built around your margins so you do not pay away the profit.
 
@@ -16,20 +13,50 @@ explain: |
 when:
   - You want creators to sell your products for a commission.
   - Your program has 20 creators but few sales.
-  - You are unsure how high a commission can go before it hurts margin.
+  - You are unsure how high a commission can go before it hurts your margin.
   - You need a sample process that does not drain your stock.
+not_for:
+  - "You want a single paid creator post: brief one creator directly, or use the TikTok Creator Marketplace."
+  - "You have no margin figure for your products: work out your cost and price first, then come back."
+  - "You need live creator search, payouts or tracking: this plan is a written guide, so use a creator tool or a spreadsheet."
 you_give:
-  - Your products and margins
-  - Creator types you want
-  - Sample budget
-  - Current program results (optional)
+  - Your products and their margins
+  - The kinds of creators you want
+  - Your sample budget
+  - Your current program results (optional)
 you_get:
-  - A commission and tier structure
-  - Outreach message drafts
+  - A commission plan with tiers that pay more as creators sell more
+  - A creator profile and ways to find and vet creators
+  - Outreach message ideas
   - A sample sending process
-  - A creator tracking sheet outline
+  - A tracking table and a month-by-month growth plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text, then list each product with its price and margin.
+  - Add your sample budget and the creator types you want. Add current results if you have them.
+  - Ask for your TikTok Shop affiliate program plan.
+  - Check each commission rate against your margin. Replace the sales and ROI goals with your own numbers.
+  - Use the Next Actions list to set up terms and tracking, then start with a small group of creators.
+output_sample:
+  input:
+    - Your products and their margins
+    - The kinds of creators you want
+    - Your sample budget
+    - Your current program results (optional)
+  output:
+    - name: Program Structure & Commission Framework
+      contains: Commission tiers by monthly sales, plus bonuses, seasonal boosts and early access for top sellers.
+    - name: Creator Recruitment Strategy
+      contains: The creator profile to look for and the channels to find them.
+    - name: Creator Onboarding Process
+      contains: A three-phase checklist from application and approval to the first sponsored post.
+    - name: Sample Product Management
+      contains: Which creators get which samples, and a simple request and shipping process.
+    - name: Performance Tracking & KPIs
+      contains: A creator table with clicks, sales and revenue, plus program goals to track.
+    - name: Creator Communication Strategy
+      contains: How often to contact creators and what support to give them.
+    - name: Scaling & Optimization Plan
+      contains: A month-by-month plan to grow the creator group, plus 6-month targets to replace with your own.
+    - name: Next Actions
+      contains: A checklist to finish terms, set up tracking and launch with your first creators.

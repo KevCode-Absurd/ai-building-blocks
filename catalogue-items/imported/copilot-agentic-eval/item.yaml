@@ -8,10 +8,12 @@ role: make
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: brief
     required: true
-outputs:
   - type: audit_report
+    required: false
+outputs:
+  - type: plan
 uses: []
 origin: imported
 source:

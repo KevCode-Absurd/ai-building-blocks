@@ -1,25 +1,20 @@
-{
-  "slug": "request-deliverable-drafter",
-  "name": "Request deliverable drafter",
-  "summary": "Use an agreed request brief to create its named files, with source evidence and explicit gaps.",
-  "category": "general",
-  "type": "skill",
-  "role": "make",
-  "job": "ops",
-  "level": "beginner",
-  "inputs": [
-    {
-      "type": "plan",
-      "required": true
-    }
-  ],
-  "outputs": [
-    {
-      "type": "document"
-    }
-  ],
-  "uses": [],
-  "origin": "own",
-  "version": "1.0.0",
-  "example_pending": true
-}
+slug: request-deliverable-drafter
+name: "Request deliverable drafter"
+summary: "Turn a request brief into the named files, each tied to a requirement number, with sources shown and gaps marked MISSING."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+before: [request-acceptance-brief]
+next: [request-acceptance-checker]
+needs_mode: manual

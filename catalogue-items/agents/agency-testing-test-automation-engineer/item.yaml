@@ -1,0 +1,42 @@
+slug: agency-testing-test-automation-engineer
+name: Test Automation Engineer agent
+summary: "Get stable Playwright or Cypress browser tests, a CI setup and a fix for each flaky test, so failures mean real bugs and not bad timing."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+  - type: code_change
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: testing/testing-test-automation-engineer.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-test-automation-engineer.md
+  licence: MIT
+  original_name: Test Automation Engineer
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 4299d038e88387546d645ccbe767b1dfdb7de10da55eba1ab103149972cd2b9b
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Test Automation Engineer
+  - Agency Agents
+  - Testing
+credits:
+  - title: Test Automation Engineer
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/testing/testing-test-automation-engineer.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

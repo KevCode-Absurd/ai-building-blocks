@@ -2,30 +2,33 @@ slug: hubspot-breeze
 name: HubSpot Breeze
 maker: HubSpot
 url: https://www.hubspot.com/products/artificial-intelligence
-promise: "Research leads, draft content and answer customers using AI inside HubSpot."
+promise: "Use ready-made AI agents in HubSpot to research leads, draft content and answer customers."
 use_cases: [sell-and-support, find-leads, write-copy]
 categories: [sales-and-support, marketing]
 what_it_does:
-  - Gives you an assistant inside HubSpot to answer questions and draft content.
-  - Runs a Prospecting Agent that researches companies and suggests leads.
-  - Runs a Customer Agent that answers support questions across channels.
-  - "Answers questions about contacts and companies with a Data Agent."
-  - "Builds agents from your instructions and HubSpot customer data, without code."
+  - "Keeps its ready-made agents in one place, called Agent Hub. You switch an agent on in one click and ready-made agents need no setup (checked 26 Oct 2026)."
+  - "Runs a Prospecting Agent that watches for buying signals and starts personalised outreach (checked 26 Oct 2026)."
+  - "Runs a Customer Agent that resolves customer questions across channels (checked 26 Oct 2026)."
+  - "Answers questions about contacts and companies with a Data Agent, using CRM data, calls and documents (checked 26 Oct 2026)."
+  - "Drafts blog posts, social posts and landing pages in your brand voice with a Content Agent. A Campaign Agent builds a multi-channel campaign from one goal (checked 26 Oct 2026)."
+  - "Lets you build your own agents and workflows on one canvas in Agent Builder (checked 26 Oct 2026)."
 benefits:
   - Spend less time on research before each sales call.
   - "Set the Customer Agent to handle common first replies."
   - Draft campaign and content ideas from your own contact data.
+  - "Hand invoice follow-ups to a Revenue Agent (checked 26 Oct 2026)."
 best_for:
   - Teams that already run their sales and service in HubSpot.
   - Small sales teams that need lead research done for them.
   - Service teams with many repeat questions.
 not_for:
-  - Teams on another CRM, since the agents work on HubSpot data.
-  - Anyone who needs a fixed monthly bill, since agent use runs on credits.
+  - "Teams on another CRM, since the agents work on HubSpot data. Apollo or Clay find leads without HubSpot."
+  - "Anyone who needs a fixed monthly bill, since many agents run on credits."
+  - "Live chat on a store you run outside HubSpot. Intercom Fin or Gorgias may fit better."
 pricing:
   model: subscription
   from: Check the maker's site
-  note: Agent Hub is included in Starter, Professional and Enterprise editions. Many agents run on HubSpot credits, bought in packs or pay as you go. Third-party pages from 2026 list the Customer Agent at about US$0.50 per resolved chat, so confirm on HubSpot's site.
+  note: "Checked 26 Oct 2026. Agent Hub is included in the Starter, Professional and Enterprise editions. Many agents run on HubSpot credits. You buy credits in packs in advance, or pay as you go. The page does not give a credit cost per agent. Custom agents built in Agent Builder also use credits. Edition prices are on HubSpot's pricing pages, which we did not read."
 works_with:
   - HubSpot
   - claude
@@ -43,7 +46,26 @@ blocks:
   - lead-handoff-designer
   - marketing-results-reporter
 alternatives: [apollo, clay, intercom-fin, zendesk-ai]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Log in to HubSpot and open Agent Hub. It lists the agents your edition includes."
+  - "Pick the Prospecting Agent. Switch it on, or open its settings if it is already on."
+  - "Check what data it uses. It works from your HubSpot records, so clean contact and company records give better results."
+  - "Run it on one small set of companies first. Read each lead it suggests and the reason it gives."
+  - "Check your credit balance after the first run, then decide whether to widen it."
+needs:
+  - "A HubSpot account on the Starter, Professional or Enterprise edition."
+  - "Contact and company records in HubSpot for the agent to work from."
+  - "HubSpot credits, bought in a pack or on pay as you go, for agents that use them."
+example:
+  task: "Find 10 companies in your HubSpot list that look ready to buy and suggest who to contact first."
+  cost: "Not known. The page does not give a credit cost per agent run. Run it once on a small list, then read your credit use in HubSpot."
+  reply: "A short list of companies with a reason for each and a suggested first contact. The exact layout depends on the agent and your records, so check each name against your own notes."
+not_verified:
+  - "What Breeze Assistant does. Agent Hub lists it, but the page gives no description."
+  - "Credit cost per agent. An earlier note quoted about US$0.50 per resolved chat from a third-party blog. We could not confirm it on HubSpot's own site, so we removed it."
+  - "Which edition each single agent needs. The page says Agent Hub is in Starter, Professional and Enterprise, but not each agent."
+  - "That HubSpot works with Claude, ChatGPT and Zapier, and that it has a mobile app for agents. We did not check these on this pass."
 sources:
   - https://www.hubspot.com/products/artificial-intelligence
-  - https://resolve247.ai/blog/hubspot-breeze-pricing-change

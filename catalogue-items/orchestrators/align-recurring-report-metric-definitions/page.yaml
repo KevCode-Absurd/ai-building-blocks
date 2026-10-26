@@ -1,51 +1,91 @@
 new_slug: align-recurring-report-metric-definitions
 name: Align recurring report metric definitions
 headline: Align recurring report metric definitions
-summary: Share the source files. Get a metric difference table, reconciled examples and reporting procedure.
+summary: Find why two reports show different numbers for the same metric. You get a difference table, worked examples and a written reporting procedure.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A metric difference table, reconciled examples and reporting procedure. Share actual recurring reports, source tables, metric definitions, periods, owners and conflicting calculation examples. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it two or more reports that disagree on a number such as revenue or customers, plus the tables behind them. It traces each gap to a definition, a date range or an exclusion. You get a table of differences, a worked example for each gap and a procedure with an owner for each definition.
 explain: |-
-  A metric difference table, reconciled examples and reporting procedure.
+  Two reports can both say "monthly revenue" and show different numbers. The label is the same. One report may count refunds and the other may not, or one may end on the 28th and the other on the 31st. This workflow aligns report metric definitions by finding exactly where each number comes from.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. A shared label does not imply a shared denominator; definition changes need the metric owner approval. Missing tools or evidence stay visible in the final summary.
+  First it traces each gap to its cause: what is counted, which dates, what is left out and which version of the file. It never edits either source. Then it writes a reporting procedure: how each number is pulled, who owns the definition and which conflicts are still open.
+
+  It cannot decide which definition is right. That call belongs to the person who owns the metric. Until they approve, any change stays marked as proposed.
 when:
-  - You need a metric difference table, reconciled examples and reporting procedure.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Finance says revenue was one number and the sales dashboard says another.
+  - A monthly report changed after someone edited a formula, and nobody can say what moved.
+  - Two teams both report "customers" or "active users" and the counts never match.
+  - You are handing a recurring report to a new person and want the rules written down.
+not_for:
+  - You have one report and no conflict. Use the Spreadsheet checker to test its formulas.
+  - You need a clear definition for one new metric. Use the Metric definition writer.
+  - You want a new weekly report built from scratch. Use the Build a weekly KPI report with a forecast and dashboard workflow.
+  - No one owns the metric. The AI can propose a definition, but a person must approve it.
 you_give:
-  - Actual recurring reports, source tables, metric definitions, periods, owners and conflicting calculation examples.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - Two or more recurring reports that show different numbers for the same metric
+  - The source tables or exports behind each report
+  - The period you are comparing, such as March
+  - Your written definition of the metric and who owns it (optional)
+  - One calculation that disagrees, such as the same month in both reports (optional)
 you_get:
-  - A metric difference table, reconciled examples and reporting procedure.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A metric difference table: each number in each report, the gap and the cause"
+  - A worked example for each gap, using your own rows
+  - "A reporting procedure: how each number is pulled, checked and signed off"
+  - A list of open conflicts for the metric owner to decide
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach the reports and the tables behind them. Name the metric that disagrees and the period.
+  - Read the difference table first. Check that each cause matches what you know about the report.
+  - Send the open conflicts to the metric owner. Do not change a definition until they approve it.
 how_it_works:
   - title: Spreadsheet checker
-    text: Trace conflicting report totals to grain, formulas, time windows, exclusions and source versions. Show why the same named metric differs without silently rewriting either source.
+    text: Compares the reports line by line. Finds the grain, formula, date range, exclusions and file version behind each gap. Hands the difference table and your source references to the next step.
   - title: Process and SOP writer
-    text: Document the agreed or proposed extraction, transformation, reconciliation and review procedure with a versioned definition owner and unresolved conflicts.
+    text: "Writes the reporting procedure from that table: how to pull and check each number, who owns the definition and what is still unsettled."
 output_shape: |-
-  Scope and source coverage
-  A metric difference table, reconciled examples and reporting procedure.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  METRIC DIFFERENCE TABLE
+    Metric | <Report A value> | <Report B value> | <Gap> | <Grain> | <Date range> | <Exclusions> | <Source version> | <Cause> | <Gap status>
+
+  WORKED EXAMPLES
+    One per gap: <rows used> | <steps from Report A to Report B> | <amount left unexplained>
+
+  REPORTING PROCEDURE
+    Metric | <Agreed or proposed definition> | <Owner> | <How to pull it> | <How to check it> | <Open conflicts>
+
+  MISSING
+  CHECKS MISSED
+  HAND-BACK SUMMARY
+output_sample:
+  input:
+    - Two or more reports that show different numbers for the same metric
+    - The source tables or exports behind each report
+    - The period you are comparing
+    - Your written metric definition and its owner (optional)
+  prerequisites:
+    - An AI that can open spreadsheet and CSV files
+  output:
+    - name: Metric difference table
+      contains: Each number in each report, the gap and its cause, such as a different date range or exclusion.
+    - name: Worked examples
+      contains: One walk from the first number to the second for each gap, using your own rows.
+    - name: Reporting procedure
+      contains: How each number is pulled and checked, who owns the definition and which conflicts are open.
+    - name: MISSING lines and open conflicts
+      contains: Facts the AI could not confirm and decisions only the metric owner can make.
+    - name: Hand-back summary
+      contains: Files saved, steps run, checks missed and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+  - what: Metric
+    how: Start with one metric that disagrees, such as monthly revenue. Add others after the first run.
+  - what: Period
+    how: Pick one month or quarter that both reports cover, so the numbers can be compared.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Attach the real exports and the formulas behind them, not a summary typed from memory.
   - what: Acceptance
-    how: A shared label does not imply a shared denominator; definition changes need the metric owner approval.
+    how: Name who may approve a new definition. Until they do, the procedure stays marked as proposed.
 judge:
   - A shared label does not imply a shared denominator; definition changes need the metric owner approval.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -58,16 +98,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the approved definitions file and attach it next time, so the next run starts from agreed rules.
+  - Add a short note on who approved each definition and on what date.
+  - Finish any check that needs a person or a spreadsheet tool before you rely on the result.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A spreadsheet tool such as Excel or Google Sheets
+      why: Lets you open the difference table and re-check a formula. The AI cannot recalculate a workbook without one.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Definitions that were approved earlier.
+    - A named reviewer who can approve a change.
 terms:
+  - term: Grain
+    meaning: What one row stands for, such as one order or one customer per month.
+  - term: Denominator
+    meaning: The number you divide by, such as all orders or only paid orders.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

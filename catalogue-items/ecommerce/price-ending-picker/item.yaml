@@ -9,6 +9,8 @@ level: beginner
 inputs:
   - type: product_data
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: audit_report
 uses: []

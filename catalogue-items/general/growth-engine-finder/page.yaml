@@ -1,6 +1,6 @@
 new_slug: growth-engine-finder
 name: Growth engine finder
-summary: Describe how customers arrive and stay. Compare repeat use, referrals and paid growth, with clear sums and the missing facts to check.
+summary: "Find which growth engine drives your business: repeat use, referrals or paid. Get the sums, one metric to watch and the facts you still lack."
 job: plan-strategy
 thinking: medium
 thinking_why: It picks one of three models and does short sums, but needs care with missing figures.
@@ -14,6 +14,10 @@ when:
   - Growth has stalled and the team disagrees about why.
   - You are about to spend on ads, features or referrals and want to know which would matter.
   - Your weekly report has twenty numbers and no one acts on them.
+not_for:
+  - "You have no customer records yet: first collect data or run a small test with a few real buyers, then come back."
+  - "You want to know if one idea is worth building: use the Smallest test picker."
+  - "You want a case against a plan you already like: use the Case-against writer."
 you_give:
   - How your recent customers arrived and whether they stayed
   - Your rates, if you have them (optional)
@@ -28,6 +32,26 @@ how_to_use:
   - Describe where your last twenty customers came from and whether they stayed.
   - Paste your monthly figures if you have them.
   - Review the primary metric with its units and supporting counts, costs and cash timing.
+output_sample:
+  input:
+    - How your last twenty customers arrived and whether they stayed
+    - Your monthly rates, such as customers gained and lost (optional)
+    - Your plan or earlier guesses (optional)
+  output:
+    - name: Main model
+      contains: Which engine drives growth (repeat use, referrals or paid), or that it is unresolved, with the evidence used.
+    - name: Supported sum
+      contains: The formula with your figures and units, and what it does and does not show.
+    - name: Watch
+      contains: One main metric with how it is counted, who owns it and when to review it.
+    - name: Drop list
+      contains: Figures in your current report that do not matter for this engine.
+    - name: Value check
+      contains: What shows that people get a real benefit from the product.
+    - name: Next test and limits
+      contains: The lever to test as a guess, the signs the engine is tiring and a date to look again.
+    - name: Missing and checks missed
+      contains: Facts you did not give, and any check the answer failed.
 how_it_works:
   - title: Picks the engine
     text: Sticky, viral or paid, from how customers arrive.

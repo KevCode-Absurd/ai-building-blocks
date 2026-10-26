@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tests against a fixed list of success criteria.
 new_slug: federal-accessibility-checker
 name: Federal accessibility checker
-summary: Describe your site, app or documents. Get Section 508 gaps, a fix plan
-  and notes for an accessibility report.
+summary: Check your site, app or documents against Section 508. Get a list of accessibility gaps, a fix plan and notes for your conformance report.
 job: check-contracts
 headline: Federal accessibility checker
-subhead: Describe your site, app or documents. Get Section 508 gaps, a fix plan
-  and notes for an accessibility report. Bring a description or URL of the site,
-  app or document. Use the result to plan your next step.
+subhead: Describe your site, app or documents. Your AI checks them against Section 508 and WCAG 2.0 AA. You get gaps, a fix plan and draft report notes.
 explain: |
   A list of where your website, app or documents fall short of Section 508, what to fix first, and notes you can use in an accessibility conformance report. It is built for US federal work and for vendors who sell to agencies.
 
@@ -18,6 +15,10 @@ when:
   - A buyer asks whether your site meets Section 508.
   - You want a phased plan to fix accessibility issues.
   - You need accessibility language for a purchase request.
+not_for:
+  - "You need a legal ruling or formal certification: hire a qualified accessibility auditor or counsel."
+  - "Your work is not for a US federal agency: check first whether Section 508 applies, as ADA or other rules may fit better."
+  - "You need your site tested by real tools and screen readers: run a scan like axe or WAVE yourself, or hire a tester."
 you_give:
   - A description or URL of the site, app or document
   - Who uses it and who buys it
@@ -29,7 +30,26 @@ you_get:
   - Draft conformance report remarks
   - Procurement wording if needed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Describe your site, app or document. Say who uses it and who buys it.
+  - Add any earlier audit results and your deadline if you have them.
+  - "Say what you want: a gap list, an audit table, a fix plan, VPAT notes or purchase wording."
+  - Read the result and check each criterion against your real product. Your AI works from your description and does not run tests.
+  - Treat any suggested fix deadlines as examples. Agree the real ones with the agency.
+output_sample:
+  input:
+    - A description or link for your site, app or document
+    - Who uses it and who buys it
+    - Known issues or earlier audit results (optional)
+    - Your deadline (optional)
+  output:
+    - name: Gap table
+      contains: Each WCAG 2.0 criterion with a red, yellow or green status, gap notes and a priority.
+    - name: Issue table
+      contains: "For audits: the criterion, the problem, the element affected and how to fix it."
+    - name: Remediation plan
+      contains: Phased fixes with an owner, effort and timeline for each issue.
+    - name: VPAT remarks
+      contains: Draft conformance level and remarks for each criterion, ready to paste into your report.
+    - name: Procurement clauses
+      contains: Draft purchasing language that cites Section 508 and WCAG 2.0 AA, if you need it.

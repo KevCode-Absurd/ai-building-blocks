@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It follows one fixed report layout from work already done.
 new_slug: dev-work-report-writer
 name: Dev work report writer
-summary: Finish a coding task. Get a clear write-up of what changed, why, and
-  proof that it works.
+summary: "Write a dev work report after a coding task: what changed, why, and proof it builds and passes tests. Ready for a reviewer or teammate."
 job: build-software
 headline: Dev work report writer
-subhead: "A written record of a coding task that someone else can read cold:
-  what you changed, why, and proof that it works. It turns a finished piece of
-  work into something you can hand to a teammate, a client or your future self."
+subhead: "A written record of a coding task that someone else can read cold: what you changed, why, and proof that it works. It turns a finished piece of work into something you can hand to a teammate, a client or your future self."
 explain: |
   A written record of a coding task that someone else can read cold: what you changed, why, and proof that it works. It turns a finished piece of work into something you can hand to a teammate, a client or your future self.
 
@@ -18,6 +15,10 @@ when:
   - A teammate has to pick up your work and needs to know what changed.
   - You want a record of why you chose one approach over another.
   - A client wants evidence that a fix builds and passes tests.
+not_for:
+  - "You fixed a small typo or made no code change: write a short commit message or a changelog entry instead."
+  - "You need a record of work that is not finished yet: wait until the build and tests have run, or write a plain to-do note."
+  - "You want a list of release changes for customers: write a changelog entry in plain words instead."
 you_give:
   - The task you completed
   - The files or diff that changed
@@ -29,7 +30,32 @@ you_get:
   - Before and after code snippets
   - A verification section with build and test results
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Finish your coding task first. Run your build and your tests.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste the task, the changed files or diff, and the real build and test output. Add your reasons for key choices if you have them.
+  - Ask your AI to write the report. Tell it to write 'not run' for any check you skipped.
+  - Read the report. Check each file path and each test result against your own work.
+  - Attach the report to your pull request, send it to your reviewer, or save it in your project's workthrough folder.
+output_sample:
+  input:
+    - The task you finished, in a sentence or two
+    - The files or diff that changed
+    - Your build and test output
+    - Why you chose this approach (optional)
+  prerequisites:
+    - An AI that can save files, if you want the report saved in a workthrough folder. In a plain chat, copy the text yourself.
+  output:
+    - name: Title
+      contains: A clear, descriptive title for the work you completed.
+    - name: Overview
+      contains: A short summary of what was done and why.
+    - name: Context
+      contains: The problem, the errors that existed, the approach taken and the reasons for key choices.
+    - name: Changes Made
+      contains: Each changed file with its full path, what changed in it, and any dependencies or config updates.
+    - name: Code Examples
+      contains: Key code snippets that show the important changes, before and after.
+    - name: Verification Results
+      contains: Build output, test results, exit codes and any errors that remain.
+    - name: Next Steps
+      contains: Follow-up tasks, known limits and ideas for later.

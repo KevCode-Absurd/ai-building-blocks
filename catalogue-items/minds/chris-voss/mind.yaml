@@ -16,6 +16,30 @@ use_cases:
   - "Find out early whether a prospect is serious or just shopping around"
   - "Practise one negotiation skill at a time before a big meeting"
   - "Rewrite an email so it asks a no-oriented question instead of pushing for yes"
+not_for:
+  - "You need to sell by asking buyers about their problems step by step: use the Neil Rackham mind."
+  - "You want to know why people say yes to requests, such as social proof or real scarcity: use the Robert Cialdini mind."
+  - "You want to win people over in everyday talk and handle disagreement kindly: use the Dale Carnegie mind. For legal, medical or personal money choices, ask a lawyer, doctor or adviser."
+output_sample:
+  input:
+    - The situation and who you are talking to
+    - What the other side has said or written so far
+    - What you want and your fallback
+    - Your deadline (optional)
+    - What you think the other side fears losing (optional)
+  output:
+    - name: The one or two tools that fit
+      contains: A short pick from his approach, such as a label, an accusation audit or a calibrated question, matched to your problem.
+    - name: The exact line
+      contains: Words you can say, how to say them slowly as a statement, and where to go quiet.
+    - name: What you might hear back
+      contains: Likely replies and how to label what you hear, so you learn what the other side feels.
+    - name: Real yes check
+      contains: Questions that test whether a yes will turn into action, including how it will get done and by whom.
+    - name: Practice task
+      contains: One small task to try this week, to build a single negotiation skill.
+    - name: Beyond the record flag
+      contains: A one-line note when your question goes past his published work.
 seats:
   - {seat: "Negotiation", asks: "What is the other side afraid of losing here, and have we said it out loud for them?"}
   - {seat: "Tactical empathy", asks: "Do they feel understood yet? Would they say 'that's right' to our summary of their view?"}

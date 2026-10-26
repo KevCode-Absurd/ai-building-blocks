@@ -16,6 +16,29 @@ use_cases:
   - "Plan a week around your roles and goals instead of around the inbox"
   - "Rebuild trust after a mistake with small, kept promises"
   - "Design a team habit or ritual that keeps people learning and rested"
+not_for:
+  - "You want a deep focus plan with fewer projects: use the Cal Newport mind instead, since his work centres on focused work."
+  - "You need legal, medical or personal money advice: see a qualified professional, because this mind only applies Covey's recorded habits."
+  - "You want to check what Covey really said: read his books or the sources listed on the page, since this AI does not give exact quotes."
+output_sample:
+  input:
+    - Your roles and what you do in each one
+    - Your to-do list or week ahead
+    - The person or team involved in a conflict or handoff (optional)
+    - What you can and cannot change in the situation
+  output:
+    - name: Control sort
+      contains: Your worries split into what you control, what you can influence and what you can only accept.
+    - name: Urgent versus important sort
+      contains: Your tasks placed in four quadrants, with what to drop, hand off or batch.
+    - name: Weekly plan
+      contains: Your roles with one or two results each, and the important work booked first.
+    - name: Listen-first talk plan
+      contains: How to restate the other side until they say you got it, before you share your view.
+    - name: Third option and results agreement
+      contains: Both sides' concerns, options that meet them, and an agreement on result, limits, help, review date and consequences.
+    - name: Next steps
+      contains: One question to answer in a sentence and one trust deposit to make this week.
 seats:
   - {seat: "Principles and priorities", asks: "Is this important, or only urgent? And does it fit the principle you say you live by?"}
   - {seat: "The listener in the room", asks: "Have we understood the other side well enough that they would say we got it right?"}

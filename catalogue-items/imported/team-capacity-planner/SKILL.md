@@ -6,9 +6,7 @@ argument-hint: "<team or project scope>"
 
 # /capacity-plan
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
-Analyze team capacity and plan resource allocation.
+Compare your team's available hours with the work they hold and the work coming, then show what to do about the gap. Based on the capacity-plan skill from Anthropic's knowledge-work-plugins (Apache-2.0).
 
 ## Usage
 
@@ -16,98 +14,84 @@ Analyze team capacity and plan resource allocation.
 /capacity-plan $ARGUMENTS
 ```
 
-## What I Need From You
+## What I need from you
 
-- **Team size and roles**: Who do you have?
-- **Current workload**: What are they working on? (Upload from project tracker or describe)
-- **Upcoming work**: What's coming next quarter?
-- **Constraints**: Budget, hiring timeline, skill requirements
+1. **Team and roles** (required): each person or role, and their hours per week. If hours are missing, ask once. If they still are not given, write `MISSING: hours` and do not assume 40.
+2. **Current work** (required): what each person is on, and about how many hours per week it takes. Paste a list, a tracker export or a plain description.
+3. **Time off and fixed load** (optional): holidays, leave, recurring meetings, support or on-call duty. If none is given, say the plan assumes none.
+4. **Upcoming work** (required for the gap): projects or requests in the planning period, with start and end dates and the effort or people needed. This can be a document, such as a contract summary or scope list: size each item it marks out of scope or unclear as a request.
+5. **Constraints** (optional): budget, hiring timeline, skills a project needs.
 
-## Planning Dimensions
+If your AI is connected to a project tracker or calendar, read workloads, leave and meeting load from there and show the user what you found before you use it.
 
-### People
-- Available headcount and skills
-- Current allocation and utilization
-- Planned hires and timeline
-- Contractor and vendor capacity
+## Steps
 
-### Budget
-- Operating budget by category
-- Project-specific budgets
-- Variance tracking
-- Forecast vs. actual
+1. **Set the period and list the facts.** State the date range. Build the table of people, hours available and hours allocated. Subtract time off and fixed load from hours available before you work out utilization.
+2. **Work out utilization.** Utilization is allocated hours divided by available hours. Compare it with the targets below. Flag anyone over 100% and anyone far above target.
+3. **Add the demand.** For each upcoming project, put its hours or people needed against the free hours in its dates. Mark each one Covered or Gap, and name the weeks that crunch.
+4. **Find the bottlenecks.** Name the role or time period that is oversubscribed. Only name a skill gap if the user gave skills or roles. Do not assume what a person can or can't do beyond their stated role and current work.
+5. **Write options.** Give three to five: do nothing, delay, reprioritize, hire, use contractors, or cut a recurring load. For each, say what it frees up or costs in hours, using the user's numbers. Check any conversion between hours and full-time people (FTE) against the weekly hours the user gave. Don't claim a saving the numbers do not support. For example, cutting a meeting only frees the hours that meeting really uses.
+6. **Recommend.** Pick one option, say why, and say what would change your mind. If the choice depends on facts you lack, say so.
+7. **Check before you answer.** Every number comes from the user's input or from arithmetic on it. Totals add up. Any assumption is listed under "Assumptions". Show your arithmetic for any figure the user may question.
 
-### Time
-- Project timelines and dependencies
-- Critical path analysis
-- Buffer and contingency planning
-- Deadline management
+## Utilization targets
 
-## Utilization Targets
+These are common rules of thumb, not laws. Say the user can change them.
 
-| Role Type | Target Utilization | Notes |
-|-----------|-------------------|-------|
-| IC / Specialist | 75-80% | Leave room for reactive work and growth |
-| Manager | 60-70% | Management overhead, meetings, 1:1s |
-| On-call / Support | 50-60% | Interrupt-driven work is unpredictable |
+| Role type | Target utilization | Notes |
+|---|---|---|
+| Individual contributor or specialist | 75 to 80% | Leaves room for reactive work and growth |
+| Manager | 60 to 70% | Meetings, 1:1s and team overhead |
+| On-call or support | 50 to 60% | Interrupt-driven work is hard to predict |
 
-## Common Pitfalls
+## Common mistakes
 
-- Planning to 100% utilization (no buffer for surprises)
-- Ignoring meeting load and context-switching costs
-- Not accounting for vacation, holidays, and sick time
-- Treating all hours as equal (creative work ≠ admin work)
+- Planning to 100% utilization, with no buffer for surprises.
+- Ignoring meeting load and the cost of switching between tasks.
+- Forgetting vacation, holidays and sick time.
+- Treating all hours as equal. Deep creative work is not the same as admin.
 
-## Output
+## Output format
 
 ```markdown
-## Capacity Plan: [Team/Project]
-**Period:** [Date range] | **Team Size:** [X]
+## Capacity plan: <team or project>
+**Period:** <date range> | **Team size:** <number>
 
-### Current Utilization
-| Person/Role | Capacity | Allocated | Available | Utilization |
-|-------------|----------|-----------|-----------|-------------|
-| [Name/Role] | [hrs/wk] | [hrs/wk] | [hrs/wk] | [X]% |
+### Current utilization
+| Person or role | Hours available per week | Allocated | Free | Utilization |
+|---|---|---|---|---|
+| <name or role> | <hrs> | <hrs> | <hrs> | <percent> |
 
-### Capacity Summary
-- **Total capacity**: [X] hours/week
-- **Currently allocated**: [X] hours/week ([X]%)
-- **Available**: [X] hours/week ([X]%)
-- **Overallocated**: [X people above 100%]
+### Capacity summary
+- **Total available:** <hours per week>
+- **Allocated:** <hours per week> (<percent>)
+- **Free:** <hours per week> (<percent>)
+- **Over 100%:** <names or roles>
 
-### Upcoming Demand
-| Project/Initiative | Start | End | Resources Needed | Gap |
-|--------------------|-------|-----|-----------------|-----|
-| [Project] | [Date] | [Date] | [X FTEs] | [Covered/Gap] |
+### Upcoming demand
+| Project | Start | End | Hours or people needed | Covered or gap |
+|---|---|---|---|---|
 
 ### Bottlenecks
-- [Skill or role that's oversubscribed]
-- [Time period with a crunch]
+- <role or period that is oversubscribed, and why>
 
-### Recommendations
-1. [Hire / Contract / Reprioritize / Delay]
-2. [Specific action]
+### Options
+| Option | What changes | Cost or trade-off |
+|---|---|---|
+| Do nothing | <what happens> | |
+| <Hire, contract, delay, reprioritize> | <hours freed or added> | <cost or risk> |
 
-### Scenarios
-| Scenario | Outcome |
-|----------|---------|
-| Do nothing | [What happens] |
-| Hire [X] | [What changes] |
-| Deprioritize [Y] | [What frees up] |
+### Recommendation
+<one option, why, and what would change it>
+
+### Assumptions and missing facts
+- <each assumption, and each MISSING item>
 ```
 
-## If Connectors Available
-
-If **~~project tracker** is connected:
-- Pull current workload and ticket assignments automatically
-- Show upcoming sprint or quarter commitments per person
-
-If **~~calendar** is connected:
-- Factor in PTO, holidays, and recurring meeting load
-- Calculate actual available hours per person
+End with one line for leadership that states the gap in hours and the chosen option.
 
 ## Tips
 
-1. **Include all work** — BAU, projects, support, meetings. People aren't 100% available for project work.
-2. **Plan for buffer** — Target 80% utilization. 100% means no room for surprises.
-3. **Update regularly** — Capacity plans go stale fast. Review monthly.
+1. Include all work: routine work, projects, support and meetings. People are never 100% free for project work.
+2. Plan for buffer. About 80% utilization leaves room for surprises.
+3. Capacity plans go stale. Review monthly, and again when a person joins, leaves or a big request lands.

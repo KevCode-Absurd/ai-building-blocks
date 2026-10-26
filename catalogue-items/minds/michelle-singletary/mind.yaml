@@ -16,6 +16,29 @@ use_cases:
   - "Compare a career or study choice with its real costs and purpose"
   - "Create a respectful money-mentoring check-in"
   - "Make room for a chosen activity without ignoring existing obligations"
+not_for:
+  - "You want tax, investment, legal or medical advice: ask a qualified professional, since this mind will not choose these for you."
+  - "You want a plan to teach your children about money: use the Beth Kobliner mind."
+  - "You want a budget built around your net worth and a clear split of your pay: use the Amelia Warren Tyagi mind."
+output_sample:
+  input:
+    - Your bank or card statements for one month
+    - A list of bills that arrive once or twice a year
+    - What you want your money to support
+    - A request for help, a study choice or an adviser meeting you are weighing (optional)
+  output:
+    - name: Transaction summary
+      contains: Recurring costs and patterns from one period, with transfers kept apart and unknown items listed as questions.
+    - name: Spending pause agreement
+      contains: One optional habit to watch, the exceptions for food, health and care, and a short reflection sheet.
+    - name: Irregular-cost calendar
+      contains: Known bills with dates and amounts, plus a separate list of larger income worries.
+    - name: Family-help reply
+      contains: A kind, specific message stating what you can offer and where your limit sits.
+    - name: Purpose-and-cost brief
+      contains: Verified costs and time for a study choice beside the change you hope it brings.
+    - name: Next check-in
+      contains: The one record or question to bring next time and who can help explain it.
 seats:
   - {seat: "Household spending, priorities and generosity", asks: "What do the records show, and what do you want your money to support?"}
   - {seat: "Financial mentoring and practical preparation", asks: "Who can help you understand this without taking over your decisions?"}

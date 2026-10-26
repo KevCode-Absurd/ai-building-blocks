@@ -1,0 +1,142 @@
+name: Roblox Avatar Creator agent
+summary: Plan a Roblox avatar item, such as a hat or jacket, and get a checklist for mesh, texture, rigging and Marketplace review before you submit.
+headline: Roblox Avatar Creator agent
+subhead: Tell it what Roblox item you are making, such as a hat or a jacket. It checks your numbers against the profile's rules and plans the rigging. You get a submission checklist and a list of tests to run in Studio.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Roblox rejects avatar items for small, avoidable reasons. A mesh has too many
+  triangles. A texture is the wrong size. The attachment point has the wrong
+  name. A layered jacket has no inner cage, so it clips through the body. This
+  agent checks your item against those rules before you submit it. You find
+  the problems in your own tool, not in a rejection message.
+
+
+  It works from the Roblox Avatar Creator profile by Agency Agents. The profile
+  covers accessories, Classic Clothing, Layered Clothing and in-game outfit
+  changes with HumanoidDescription. Your AI picks the part that fits your item.
+  It marks every limit as "from the profile", because Roblox changes its rules.
+  Check each one on the Roblox Creator Documentation page before you submit.
+
+
+  Your AI cannot open Blender or Roblox Studio, and it cannot submit anything.
+  It plans, checks what you tell it and writes the checklist. You do the
+  building and the testing.
+when:
+  - You are making a hat, face item or other accessory and want to know it will pass before you upload it.
+  - A layered clothing item clips through the avatar and you need to know if the cage meshes are the cause.
+  - Roblox rejected an item and you want to work out what to fix.
+  - You are adding an outfit or avatar shop to your own experience and want the HumanoidDescription steps.
+not_for:
+  - You want the game itself designed, with goals and rewards. Use the Roblox Experience Designer agent.
+  - You want server scripts for saving, combat or security. Use the Roblox Systems Scripter agent.
+  - You want a final yes or no on moderation. Only Roblox can give that.
+you_give:
+  - What the item is and where it will be used, such as a hat for sale or an outfit shop in your game
+  - Your item's numbers, such as triangle count, texture size and file type
+  - The tool you build in, such as Blender, and how far you have got
+  - The attachment names and the body types you have tested (optional)
+  - The rejection message, if Roblox rejected it (optional)
+you_get:
+  - A spec check that marks each rule as pass, fail or missing
+  - A rigging plan, with the cage meshes if it is layered clothing
+  - A list of Studio tests, by body type and animation
+  - A submission package with name, description, category and thumbnail notes
+  - A list of moderation risks and the checks still open
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md and then references/source-agent.md into a new chat.
+  - Describe your item. Say what type it is, where it will be used, and your numbers so far. Say "MISSING" for what you do not know yet.
+  - Ask for the plan. Tell your AI not to invent limits. It will ask once for anything it needs.
+  - Read the spec check first. Look up each limit on the Roblox Creator Documentation page for your item type.
+  - Fix what failed in your own tool, then run the Studio tests on the list. Your AI cannot run them for you.
+  - Paste your results back and ask for a re-check before you submit in Creator Dashboard.
+how_it_works:
+  - title: Sort the item
+    text: It decides if this is an accessory, Classic Clothing, Layered Clothing or an in-game outfit system, and where it will be used.
+  - title: Check the specs
+    text: It compares your numbers with the profile's rules for that type and marks each pass, fail or missing.
+  - title: Plan the rig
+    text: It names the attachment points, or the inner and outer cage meshes and bone weights for layered clothing.
+  - title: Plan the tests
+    text: It lists the body types and animations to try in Studio, and what clipping to look for.
+  - title: Prepare the submission
+    text: It drafts the item name, description, category and thumbnail notes, and flags what moderation may question.
+  - title: Name the gaps
+    text: It lists what it could not verify, so you know what to look up before you submit.
+output_shape: |-
+  ITEM SUMMARY
+    <item type> | <where it will be used> | <what you supplied>
+
+  SPEC CHECK
+    <rule> | <limit and where it came from> | <your item> | <pass, fail or missing>
+
+  RIGGING PLAN
+    <attachment names, or outer mesh, inner cage, outer cage and bone weights>
+
+  STUDIO TEST LIST
+    <body type> | <animation> | <what to look for>
+
+  SUBMISSION PACKAGE
+    <name> | <description> | <category> | <files> | <thumbnail notes>
+
+  MODERATION RISKS
+    <risk> | <why it matters> | <fix>
+
+  OPEN CHECKS
+    <what to verify on the Roblox docs or in Studio>
+output_sample:
+  input:
+    - Your item type and where it will be used
+    - Your mesh and texture numbers so far
+    - Your attachment names and tests so far (optional)
+    - The rejection message from Roblox (optional)
+  prerequisites:
+    - The item built or sketched in a tool such as Blender
+    - Roblox Studio, to run the tests the agent lists
+  output:
+    - name: Item summary
+      contains: The item type, where it will be used and what you have told the agent so far.
+    - name: Spec check
+      contains: Each mesh, texture and attachment rule marked pass, fail or missing, with its source.
+    - name: Rigging plan
+      contains: Attachment points, or cage meshes and bone weights for layered clothing.
+    - name: Studio test list
+      contains: Body types and animations to try, and the clipping to look for.
+    - name: Submission package
+      contains: Item name, description, category, files and thumbnail notes ready to enter in Creator Dashboard.
+    - name: Moderation risks
+      contains: Text, logos, face coverings or weapon shapes that may be flagged, with a fix for each.
+    - name: Open checks
+      contains: What to confirm on Roblox's pages or in Studio before you submit.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: UGC
+    meaning: User-generated content. Items that players make and sell on Roblox.
+  - term: Layered Clothing
+    meaning: Clothing that wraps around the avatar's body and stacks with other clothing, using cage meshes.
+  - term: Cage mesh
+    meaning: A hidden shape that tells layered clothing how to bend around the body.
+  - term: HumanoidDescription
+    meaning: The Roblox setting that holds an avatar's outfit, so a game can change it.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can read the profile and check your numbers. One that can browse can also look up current Roblox rules.
+  inputs:
+    - Screenshots of your item in Studio on different body types.
+    - The Roblox Creator Documentation page for your item type, pasted in.

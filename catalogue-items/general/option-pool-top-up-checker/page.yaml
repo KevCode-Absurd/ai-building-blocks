@@ -1,53 +1,122 @@
 new_slug: option-pool-top-up-checker
 name: Option pool top-up checker
 headline: Option pool top-up checker
-summary: Solve added reserved shares under an agreed pre-financing pool target.
+summary: Work out how many shares to add to your option pool to hit the target percent before new money, and how much that dilutes holders.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A reserve top-up and reconciled capitalization denominator. Share fully diluted shares including existing unissued reserve, existing reserve and target fraction immediately after top-up before new cash.
+subhead: Give it your fully diluted share count, the shares already reserved in the option pool and the pool target in your term sheet. It solves for the new shares needed to hit the target right after the top-up, before any new money. You get the added shares, the new total and how much each holder is diluted.
 explain: |-
-  A reserve top-up and reconciled capitalization denominator.
+  An option pool is a block of shares set aside for employee options. In a funding round, investors often ask for the pool to be a set share of the company, such as 20 percent, right after it is topped up and before their money comes in. This option pool top-up check tells you how many shares that takes.
 
-  Venture financing. Illustrative figures only. Reserve100 in1000 shares needs125 added for20%, or200 for25%.
+  The common mistake is to multiply the target by today's share count and subtract what is reserved. That undercounts, because the new pool shares also raise the total. The skill solves it properly: new shares = (target x current total - existing reserve) / (1 - target). It then rebuilds the pool and the total and shows that the new pool really is the target share. The target must be under 100 percent, and the existing reserve cannot be larger than the total.
+
+  Which shares count toward the target depends on your term sheet. Some count only unissued options, not options already granted. The skill asks, and it marks that point as something to confirm. It counts shares only. It does not value options or read your deal.
 when:
-  - You need a reserve top-up and reconciled capitalization denominator.
-  - You work on venture financing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - Your term sheet says the option pool must be a set percent of the company right after the top-up and before the new money.
+  - You are a founder and want to know how many new shares the top-up creates and what it does to your percentage.
+  - An investor's lawyer sent a cap table and you want to check the pool maths yourself.
+  - You want to compare two pool targets, such as 15 and 20 percent, before you negotiate.
+not_for:
+  - You want the value of options, vesting or strike prices. This counts shares only.
+  - You want the effect of options on earnings per share for a listed company. Use the Employee option dilution calculator.
+  - You want your ownership after a SAFE converts. Use the Post-money SAFE ownership calculator or the SAFE ownership and funding checker.
+  - Your term sheet sets the pool after the new money comes in. That uses a different formula, so do not use this result.
+  - You want legal advice on the term sheet. Use the Contract and term sheet reviewer, then ask a lawyer.
 you_give:
-  - Fully diluted shares including existing unissued reserve, existing reserve and target fraction immediately after top-up before new cash.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Your fully diluted share count before the top-up, including all options and the unissued reserve
+  - The existing reserve, meaning the unissued pool shares your term sheet counts toward the target
+  - The target pool size as a percent of the total right after the top-up and before new money
+  - The term sheet or cap table page that sets the target (optional, but it settles which shares count)
+  - The date of the cap table
 you_get:
-  - A reserve top-up and reconciled capitalization denominator.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The number of reserve shares to add, never below zero
+  - The new pool size and the new fully diluted total
+  - A proof that the new pool equals the target percent of the new total
+  - How much each existing holder's percentage falls, before any investor shares
+  - A list of every input marked MISSING and every check that could not run
+  - A workbook version of the same lines, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste the text of SKILL.md into a new chat.
+  - Paste the fully diluted share count, the existing reserve and the target percent. Add the cap table date.
+  - Paste the term sheet wording on the pool, if you have it. Say whether granted options count toward the target.
+  - Check the proof line. The new pool divided by the new total should equal your target.
+  - Read MISSING and CHECKS MISSED before you use the number in a negotiation.
+  - Confirm the result against the term sheet and your cap table before anyone signs.
 how_it_works:
-  - title: 1. Freeze the pre-financing fully diluted denominator; distinguish issued awards from unissued reserve under the actual term sheet
-    text: Freeze the pre-financing fully diluted denominator; distinguish issued awards from unissued reserve under the actual term sheet.
-  - title: 2. Solve added reserve as max(0,(target times initial shares minus existing reserve)/(1 minus target))
-    text: Solve added reserve as max(0,(target times initial shares minus existing reserve)/(1 minus target)).
-  - title: 3. Rebuild reserve and total shares after top-up; show dilution of existing holders before any investment shares
-    text: Rebuild reserve and total shares after top-up; show dilution of existing holders before any investment shares.
+  - title: 1. Freeze the starting count
+    text: Fixes the fully diluted total before the top-up. Separates granted options from the unissued reserve, as the term sheet does.
+  - title: 2. Check the inputs
+    text: Confirms the target is under 100 percent and the existing reserve is not larger than the total.
+  - title: 3. Solve for the added shares
+    text: Uses new shares = (target x total - existing reserve) / (1 - target), and not below zero.
+  - title: 4. Rebuild and prove it
+    text: Adds the new shares to the pool and the total, then shows that the pool is the target share of the new total.
+  - title: 5. Show the dilution
+    text: Shows how much each existing holder's percentage falls, before any shares for the new investor.
+  - title: 6. Report gaps
+    text: Lists missing inputs and checks that could not run, including which shares the term sheet counts.
 output_shape: |-
-  A reserve top-up and reconciled capitalization denominator.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Added reserve shares: <number> | New pool: <number> (<percent> of the new total) | New fully diluted total: <number>
+
+  SCOPE AND DATED SOURCES
+  <cap table date; each figure with its source and the term sheet wording used>
+
+  INPUTS AND ASSUMPTIONS
+  <figures given, which shares count toward the target, each assumption>
+
+  TOP-UP CALCULATION
+  Fully diluted shares before: <number> | Existing reserve: <number> | Target: <percent>
+  Target pool before top-up (target x total): <number> | Gap to existing reserve: <number>
+  Added reserve = gap / (1 - target): <number, not below zero>
+
+  AFTER THE TOP-UP
+  New pool: <existing + added> | New total: <total + added> | Pool share: <new pool / new total> (should equal the target)
+
+  DILUTION OF EXISTING HOLDERS
+  Each existing holder's percentage is multiplied by <old total / new total>, before any investor shares.
+
+  RECONCILIATIONS
+  <share counts tied to the cap table, with differences explained>
+
+  FILE CHECK
+  <what was checked in the workbook or calculator, or that none was made>
+
+  MISSING
+  <inputs not given>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
+output_sample:
+  input:
+    - Your fully diluted share count before the top-up
+    - The existing unissued reserve in the option pool
+    - The pool target from your term sheet, as a percent right after the top-up
+    - The term sheet wording on the pool (optional)
+  prerequisites:
+    - A dated cap table that separates granted options from the unissued reserve
+    - An AI that can make files, if you want the workbook (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The cap table date, the source of each figure and the term sheet wording used.
+    - name: Top-up calculation
+      contains: The gap to the target and the added reserve shares, worked step by step.
+    - name: After the top-up
+      contains: The new pool, the new fully diluted total and the proof that the pool equals the target.
+    - name: Dilution of existing holders
+      contains: How much each existing holder's percentage falls, before any investor shares.
+    - name: Reconciliations
+      contains: Share counts tied to the cap table, with any difference explained.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs not given, and every check that failed or could not run, or "none".
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
   - what: Assumptions
     how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
   - what: Acceptance
-    how: Target is below100%; existing reserve cannot exceed total shares.
+    how: Target is below 100 percent and existing reserve cannot exceed total shares.
 judge:
   - Target is below100%; existing reserve cannot exceed total shares.
   - When positive top-up is needed, revised reserve divided by revised denominator equals target.
@@ -62,15 +131,23 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: It does the arithmetic and shows each line, so you can check it against your cap table.
+    - name: A spreadsheet app and an AI that can make files
+      why: Builds, recalculates and reopens the workbook version of the calculation.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small calculator in the pack on your own share counts.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your latest cap table and the term sheet page that sets the pool.
+    - The name of your lawyer or adviser, who should confirm which shares count.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Option pool
+    meaning: Shares set aside so the company can give stock options to employees later.
+  - term: Fully diluted shares
+    meaning: All shares that exist or could exist, counting options, the unissued pool and anything that converts into shares.
+  - term: Top-up
+    meaning: New shares added to the option pool so it reaches a target size.
+  - term: Pre-money pool
+    meaning: A pool sized before new investment comes in, so the dilution falls on existing holders.
+  - term: Dilution
+    meaning: The drop in each holder's percentage when new shares are created.

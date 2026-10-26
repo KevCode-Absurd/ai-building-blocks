@@ -1,0 +1,144 @@
+name: Spanish and English translator agent
+summary: Translate between English and Spanish in the right tone, with local words, pronunciation and cultural notes. Get natural phrases, not word swaps.
+headline: Spanish and English translator agent
+subhead: Give it a phrase, message or short document and say who it is for and where. It translates between English and Spanish in the right register for the country, adds how to say it, and flags what could cause offence or confusion.
+job: write-and-tell-stories
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  A word-for-word translation can be correct and still wrong. "It's raining
+  cats and dogs" does not become "gatos y perros". This Spanish and English
+  translator agent moves the meaning across, in the tone and register the
+  moment needs, so the other person understands what you meant.
+
+  Spanish changes by country. A car is "coche" in Spain, "carro" in Mexico and
+  "auto" in Argentina. It also has formal and informal "you", and the wrong one
+  can sound cold or rude. So the agent asks where you are and who you are
+  speaking to, then says which form it used and when to switch. For spoken
+  phrases it adds a simple pronunciation guide in English letters, and for
+  risky phrases it adds a note on culture.
+
+  It works between English and Spanish only. It is a writing and phrasebook
+  tool, not a live interpreter, and it cannot hear you speak. For medical,
+  legal or emergency use, it gives a translation and then says when a qualified
+  interpreter or certified translator is needed. The profile's success table is
+  a set of goals from its author, not results measured by AI Blocks.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide.
+when:
+  - You travel to a Spanish-speaking country and need phrases for a hotel, a restaurant or a pharmacy.
+  - You write an email or message to a Spanish-speaking client, supplier or colleague.
+  - You are not sure if you should use "tú" or "usted" with someone.
+  - You read a sign, menu or short note in Spanish and want it explained, not only converted.
+not_for:
+  - You need another language pair. Use the Translator.
+  - You have a long article to translate with consistent terms. Use the Article translator.
+  - You got a customer message in another language and need a reply. Use the Customer support message translator.
+  - You need a certified translation of a legal, immigration or medical document, or a live interpreter. Hire a qualified professional.
+  - You want to learn to write Spanish with corrections. Use the Spanish and Turkish writing tutor.
+you_give:
+  - The text or phrase to translate, and the direction, English to Spanish or Spanish to English
+  - Where it will be used, such as Mexico, Spain or Argentina
+  - Who it is for and the setting, such as a hotel clerk, a client, a doctor or a friend
+  - Spoken or written
+  - Words or names that must stay as they are (optional)
+you_get:
+  - The translation, in the tone and country you chose
+  - Whether it uses "tú", "usted" or "vos", and when to switch
+  - A pronunciation guide in English letters for spoken phrases
+  - A more natural spoken version beside the textbook version
+  - Notes on local words, false friends and culture
+  - A flag when a professional interpreter or certified translator is needed
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste your text. Say the direction, the country, who it is for and if it is spoken or written.
+  - Type "Translate this for a hotel clerk in Mexico" or "Give me ten restaurant phrases for Spain".
+  - Read the register note and the cultural note before you use the phrase. Ask for the reverse translation if you need to understand a reply.
+  - For anything medical, legal or urgent, check with a qualified interpreter. In an emergency, lead with the phrase and call local emergency services.
+how_it_works:
+  - title: Confirm the request
+    text: It checks direction, setting, formality and country, and asks one short question if the meaning is unclear.
+  - title: Translate the meaning
+    text: It renders idioms and tone by meaning, picks the right verb form and checks gender agreement.
+  - title: Add how to say it
+    text: It adds a pronunciation guide in simple English letters for spoken phrases.
+  - title: Flag risks
+    text: It flags regional words, false friends, formal or informal forms and anything that could offend.
+  - title: Handle special cases
+    text: It gives emergency phrases first, then context, and says when a medical or legal text needs a professional.
+  - title: Offer the follow-up
+    text: It offers the reverse translation and a phrase set for your trip or task.
+output_shape: |-
+  TRANSLATION
+    Input (<English or Spanish>): <your text>
+    Output (<Spanish or English>): <translation>
+    Pronunciation: <respelling in English letters, for spoken phrases>
+
+  REGISTER AND REGION
+    Register: <formal usted, informal tú or vos, or neutral> | Region: <country>
+    Alternate phrasing: <the natural spoken version>
+    Regional note: <local words that differ>
+
+  CULTURAL NOTE
+    <phrase or situation> | <what is polite or risky> | <tip>
+
+  PROFESSIONAL HELP NEEDED
+    <medical, legal or other flag> | <who to ask>
+
+  REVERSE PHRASES
+    <reply you might hear> | <meaning> | <how to answer>
+output_sample:
+  input:
+    - The text or phrase, and the direction
+    - The country where it will be used
+    - Who it is for and the setting
+    - Spoken or written
+    - Names or words that must stay as they are (optional)
+  prerequisites:
+    - Claude, ChatGPT or Gemini
+  output:
+    - name: Translation
+      contains: Your text in the other language, with a pronunciation guide for spoken phrases.
+    - name: Register and region
+      contains: The form of "you" used, the country it fits and a more natural spoken version.
+    - name: Cultural note
+      contains: What is polite or risky in that country, with a tip.
+    - name: Professional help needed
+      contains: A flag when a medical, legal or urgent text needs a qualified interpreter.
+    - name: Reverse phrases
+      contains: Replies you might hear, what they mean and how to answer.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A long chat remembers your country, your tone and the phrases already covered, so each answer builds on the last.
+  inputs:
+    - The country and city, not just "Spanish".
+    - The person you are speaking to and how well you know them.
+    - Any name, brand or word that must not change.
+terms:
+  - term: Register
+    meaning: How formal or casual a phrase sounds.
+  - term: Usted and tú
+    meaning: The formal and informal Spanish words for "you". Some places use "vos" instead of "tú".
+  - term: Regional variant
+    meaning: A word or phrase used in one country or area but not elsewhere.
+  - term: False friend
+    meaning: A word that looks like an English word but means something else, such as "embarazada".
+  - term: Pronunciation guide
+    meaning: The sound of a phrase written in English letters, so you can say it out loud.
+tweaks:
+  - what: Country
+    how: Name the country first so it uses the right local words and the right "you".
+  - what: Formality
+    how: Say "formal", "informal" or "same as the other person", or ask it to explain which one to pick.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

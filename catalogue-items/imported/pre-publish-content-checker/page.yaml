@@ -2,34 +2,58 @@ thinking: medium
 thinking_why: It reviews a draft against many fixed checks.
 new_slug: pre-publish-content-checker
 name: Pre-publish content checker
-summary: Give it a draft and its brief. Get checks on facts, voice, structure,
-  AI sound and search readiness.
+summary: Check your draft before you publish. Give it the draft and brief. You get flagged problems with fixes and a publish or hold call.
 job: write-and-tell-stories
 headline: Pre-publish content checker
-subhead: A final check on a draft before it goes live, so errors are caught
-  before readers see them. Give it the draft and the brief and get a marked list
-  of problems with fixes.
+subhead: "Give it your draft and its brief. It checks the draft six ways and marks each problem with where it is and how to fix it. You end with a clear call: publish or hold."
 explain: |
   A final check on a draft before it goes live, so errors are caught before readers see them. Give it the draft and the brief and get a marked list of problems with fixes.
 
   It works through six checks: does the draft match the brief, does the voice stay consistent, are the facts right, is the structure clear, does it sound written by AI, and is it ready for search and answer engines. Each check looks for a specific kind of failure rather than ticking a box. It handles single articles and AI-written drafts, and can set up a repeatable review process for a team.
 when:
-  - A writer hands you a draft and you must approve it today.
-  - An AI-written article needs a human-sounding pass.
-  - Your team publishes errors and wants a standard review.
-  - You want the page checked for search before it ships.
+  - A writer sends a draft and you must approve it today.
+  - An AI-written article needs a pass to sound human before it goes live.
+  - Your team keeps publishing errors and needs one standard review.
+  - You want a page checked for search before it ships.
+not_for:
+  - "You need to define your brand voice from scratch: write your voice guide first, then bring the draft back here."
+  - "You want to check a huge set of programmatic pages one by one: check a small sample instead, not every page."
+  - "You want a full rewrite of a weak draft: ask a writer or your AI to redraft it, then run this check."
 you_give:
-  - The draft
-  - The content brief
-  - Brand voice notes (optional)
-  - Target keyword (optional)
+  - Your draft
+  - Your content brief
+  - Your brand voice notes (optional)
+  - Your target keyword (optional)
 you_get:
-  - Issue list by check type
-  - Facts to verify
-  - Voice and structure edits
-  - Publish or hold verdict
+  - "A list of problems under six checks: brief, voice, facts, structure, AI sound and search readiness."
+  - For each problem, where it is, what is wrong and how to fix it.
+  - A list of facts and sources you need to verify.
+  - A publish or hold verdict.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Paste your content brief, then your draft.
+  - Add your voice notes and target keyword if you have them.
+  - Ask your AI to run the full check and give a verdict.
+  - Fix the flagged issues, starting with facts to verify.
+  - Run the check again on the new draft if the verdict was hold.
+output_sample:
+  input:
+    - Your draft
+    - Your content brief
+    - Your brand voice notes (optional)
+    - Your target keyword (optional)
+  output:
+    - name: Brief check
+      contains: Where the draft misses or drifts from the brief, with the spot and a fix.
+    - name: Voice check
+      contains: Places where tone, word choice or rhythm shift away from your voice, with fixes.
+    - name: Fact check
+      contains: Claims, numbers and sources to verify, and any that look made up or lack a source.
+    - name: Structure check
+      contains: Problems with the opening, sections and ending, and how to fix each.
+    - name: AI sound check
+      contains: Phrases and patterns that read as written by AI, with plainer rewrites.
+    - name: Search readiness check
+      contains: Gaps in keyword use, answer-style content, internal links and schema, with fixes.
+    - name: Verdict
+      contains: A publish or hold call, and the issues to fix first.

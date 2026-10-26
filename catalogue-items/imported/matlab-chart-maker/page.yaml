@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It follows common plotting patterns.
 new_slug: matlab-chart-maker
 name: MATLAB chart maker
-summary: Describe the chart. Get working code for line, bar, heatmap or surface
-  plots, with labels and layout.
+summary: Describe your data and the point of the chart. Get working MATLAB chart code for line, bar, heatmap or surface plots, with labels and layout.
 job: build-software
 headline: MATLAB chart maker
-subhead: Give it your data or its column names and the point the chart should
-  make. It sorts the request by what you want to show, such as a trend or a
-  comparison, then picks the plotting function. You get working MATLAB code with
-  labels and legends, plus multi-chart layout.
+subhead: Give it your data or its column names and the point the chart should make. It sorts the request by what you want to show, such as a trend or a comparison, then picks the plotting function. You get working MATLAB code with labels and legends, plus multi-chart layout.
 explain: |
   A chart in MATLAB that fits the question your data answers, with labels, layout and colours done. Describe the chart you want and get working code for lines, bars, heatmaps, surfaces and more.
 
@@ -19,6 +15,10 @@ when:
   - You need a correlation heatmap with clear labels for a paper.
   - Your plot looks cluttered and you want a tidy multi-chart layout.
   - You want a financial waterfall chart and keep getting a 3D plot.
+not_for:
+  - "You want a full app with buttons and charts: use the MATLAB app builder skill, matlab-build-app, which calls this skill for the chart parts."
+  - "You want dark mode or brand colours on your chart: use matlab-apply-theme after you have the chart code."
+  - "You work in Simulink scopes or Simscape plots: use the plotting tools built into those products."
 you_give:
   - Your data or its column names
   - The point the chart should make
@@ -30,8 +30,27 @@ you_get:
   - Labels, titles and legends
   - Layout code for multiple charts
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your data, or list your column names. Say what point the chart should make and where it will be shown.
+  - For a big chart, such as several panels or animation, your AI shows a short plan first. Read it and say yes or ask for changes.
+  - Copy the code into MATLAB and run it. MATLAB must be installed and licensed (it is a paid product). Without it the code cannot run.
+  - "Next steps: pair the result with matlab-apply-theme for brand colours, and save the chart with exportgraphics() for reports."
+output_sample:
+  input:
+    - Your data, or the names of its columns
+    - The point the chart should make
+    - "Where the chart will be shown: a figure window, a Live Script or an app (optional)"
+    - Style needs, such as colours or a paper layout (optional)
+  prerequisites:
+    - MATLAB installed and licensed (a paid product) to run the code. Your AI can write the code without it.
+  output:
+    - name: Chart plan
+      contains: "For complex requests only: the chart goal, chosen plotting function, layout and key choices, for you to approve first."
+    - name: MATLAB plotting code
+      contains: A working script that draws your chart, with axes passed to each plot call.
+    - name: Labels, titles and legends
+      contains: Axis labels, a title, a legend and a grid, set in the code.
+    - name: Multi-chart layout
+      contains: Tiled layout code when you ask for several charts in one figure.
+    - name: Export line
+      contains: A call that saves the chart as an image for reports or papers.

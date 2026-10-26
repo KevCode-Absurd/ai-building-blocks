@@ -1,6 +1,6 @@
 new_slug: interview-question-set-maker
 name: Interview question set maker
-summary: Paste the role and what it needs. Get set questions, answer signs and a scorecard.
+summary: Make an interview question set for any role. Paste the job and its skills. You get fair questions, answer signs and a scorecard.
 job: hire-people
 thinking: medium
 thinking_why: It ties each question to a job need, which takes some judgement.
@@ -11,6 +11,10 @@ when:
   - You interview by feel and want it fairer.
   - Two people interview and compare notes later.
   - You need questions for a role you have not hired before.
+not_for:
+  - "You need a full interview plan with many stages or a whole panel: use the Structured interview guide builder."
+  - "You need to rank a pile of applicants: use the Applicant shortlist builder."
+  - "You have no job duties yet: write a short list of what the role does first, then come back."
 you_give:
   - The role and level
   - The three to five skills that matter most
@@ -24,6 +28,20 @@ how_to_use:
   - Under it, paste the role, its level and the skills it needs.
   - Send it and read the result.
   - Share the scorecard with everyone who interviews, before the first interview.
+output_sample:
+  input:
+    - The role and level
+    - The three to five skills or duties that matter most
+    - Time per interview (optional)
+  output:
+    - name: Skill blocks
+      contains: "For each skill: a past-experience question, a scenario, two follow-ups, and a strong and a weak answer sign."
+    - name: SCORECARD
+      contains: "A table with one row per skill: evidence heard, a rating from 1 to 5, and a note."
+    - name: HOW TO USE IT
+      contains: One line on scoring alone before any group talk.
+    - name: MISSING
+      contains: Any detail you did not give, such as time per interview.
 how_it_works:
   - title: Pick the skills
     text: Four or five that the job truly needs.

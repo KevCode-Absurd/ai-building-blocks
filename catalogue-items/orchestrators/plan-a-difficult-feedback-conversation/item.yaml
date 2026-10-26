@@ -1,6 +1,6 @@
 slug: plan-a-difficult-feedback-conversation
 name: Plan a difficult feedback conversation
-summary: Share the source files. Get a feedback conversation plan, opening lines and listening prompts.
+summary: Plan a hard feedback talk. Get what to say, an opening built on facts, listening questions and one clear request for the change.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -16,8 +16,6 @@ inputs:
     required: false
   - type: feedback_notes
     required: false
-  - type: brand_brain
-    required: false
 outputs:
   - type: plan
   - type: copy_draft
@@ -29,11 +27,11 @@ uses:
   - plain-english-editor
 steps:
   - uses: feedback-conversation-planner
-    note: Clarify the specific behavior or issue and the outcome you want from the conversation.
+    note: "Names the one behavior and its effect, places the talk and sets out the praise, the statement and the questions. Hands the facts and the request to the opening step."
   - uses: hard-feedback-message-writer
-    note: Draft a direct opening grounded in evidence and a clear, fair request.
+    note: "Drafts the opening from the facts, with the praise joined to the change, one plain statement and a way for the other person to save face. Hands the draft to the editor."
   - uses: plain-english-editor
-    note: Edit the opening and listening prompts for clarity, preserving supported observations and room for the other person to disagree.
+    note: "Edits the opening and the questions into plain words and explains each change. Keeps what the facts support and leaves room to disagree."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

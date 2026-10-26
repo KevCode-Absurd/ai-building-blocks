@@ -1,0 +1,93 @@
+name: Website design analyst
+headline: Website design analyst
+summary: Paste a public website link and get its colours, fonts, spacing and layout rules in a design guide. Use it to analyze a website's design.
+job: design-work
+thinking: high
+thinking_why: It compares what the browser measures with screenshots, then checks the reasons given for each design choice.
+subhead: Give your AI a public website link and a connected browser. Get a written guide and a JSON file with its colours, fonts, spacing and layout rules.
+explain: |
+  Your AI opens the page in an isolated browser and captures screenshots and measured styles. It records the values, finds repeated patterns and explains the choices that make the design work.
+
+  Each design rule connects a situation, a choice, a reason and visible evidence. It also names a reasonable alternative the designer could have chosen. A final review removes claims the measurements do not support.
+
+  The result is a Markdown guide and a JSON file named after the website. You can also request a draft for your coding tool. This skill reads public pages through Playwright MCP. It does not build a website or read pages behind a login.
+when:
+  - You want to understand the design of a website you admire.
+  - You need measured colours, type sizes, spacing and layout rules for a design brief.
+  - You want to separate a site's repeated rules from choices used on one page.
+not_for:
+  - "You want the text or data from a page: copy it by hand or use a scraping tool, since this skill only studies the look."
+  - "The site needs a login: save screenshots yourself and ask your AI to describe them, because this skill reads public pages only."
+  - "You want a finished website built for you: hire a web designer or use a site builder, since this skill only writes a guide."
+you_give:
+  - A public website URL that opens without signing in.
+  - An AI with Playwright MCP already connected and permission to use an isolated browser.
+  - Whether to read the supplied page alone or also up to two linked public pages.
+  - Where to save the guide and whether you want a draft for a coding tool.
+you_get:
+  - A Markdown guide with measured design values and evidence for the design rules.
+  - A JSON file with the same values and rules.
+  - Screenshots and notes about missing or approximate measurements.
+  - A coding-tool rules draft when requested.
+how_to_use:
+  - Download the complete skill folder and give it to your AI. Keep its references beside SKILL.md.
+  - Read AI-BLOCKS-USAGE.md, then ask your AI to follow SKILL.md for the public URL you supply.
+  - Choose the page scope and output location. The basic output is the Markdown guide and JSON file.
+  - Review the measured evidence and any proposed coding-tool configuration changes before applying them.
+output_sample:
+  input:
+    - A public website link that opens without signing in
+    - Whether to read one page or also up to two linked public pages (optional)
+    - Whether you want rules for a coding tool (optional)
+  prerequisites:
+    - An AI that can run Playwright MCP, a browser tool, in an isolated browser
+    - A folder where your AI can save files
+  output:
+    - name: "{domain}.md"
+      contains: The human-readable guide with the Design Map and the Taste DNA sections.
+    - name: Design Map
+      contains: Measured colours, type scale, spacing, corner radii, shadows and grid taken from the page.
+    - name: Taste DNA
+      contains: Three or four design choices, each with the trigger, the decision, the reason and the evidence.
+    - name: "{domain}.json"
+      contains: The same values and rules in a structured file that other tools can read.
+    - name: Coding-tool export
+      contains: A draft of design rules for your build tool, written only when you ask for it.
+    - name: Report
+      contains: A short note on the files saved and the strongest design principle found.
+how_it_works:
+  - title: Capture the page
+    text: The connected browser takes screenshots and reads visible styles. A login or access block stops the analysis.
+  - title: Find the rules
+    text: The AI separates measurements, repeated patterns and design choices. Multiple pages help show which rules repeat.
+  - title: Check the evidence
+    text: A review removes unsupported claims and vague descriptions. Approximate measurements stay labelled.
+  - title: Save the guide
+    text: The AI saves Markdown and JSON files. Optional coding-tool exports use the same evidence.
+output_shape: A website-named Markdown file and JSON file containing measured design values and supported design choices, with capture limitations stated.
+judge:
+  - Each measurement comes from the captured page or is marked as approximate.
+  - Each design choice cites visible evidence and names a reasonable alternative.
+  - The JSON parses and agrees with the written guide.
+  - Login screens, blocked access and incomplete captures are reported honestly.
+  - Existing project instructions change only within the user's authorization.
+test:
+  - Try a public page whose fonts and colours you can inspect yourself.
+  - Compare a claimed measurement with the screenshot and browser data.
+  - Check that an unreachable or login-only URL produces a clear limit instead of a fabricated guide.
+improve:
+  - Correct unsupported rules and keep the supporting capture with the guide.
+tweaks:
+  - what: Page scope
+    how: Use one page for a focused guide, or include up to two linked pages to check which rules repeat.
+  - what: Export target
+    how: Keep the Markdown and JSON first. Request a coding-tool draft only for the destination you use.
+terms:
+  - term: JSON
+    meaning: A structured text file that another tool can read.
+works_best_with:
+  tools:
+    - name: Playwright MCP
+      why: Captures the public page and its visible styles in an isolated browser.
+    - name: An AI that can read local files
+      why: Reads the full reference files and saves the guide in your chosen folder.

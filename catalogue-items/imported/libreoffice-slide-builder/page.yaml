@@ -2,34 +2,89 @@ thinking: low
 thinking_why: It follows known file steps.
 new_slug: libreoffice-slide-builder
 name: LibreOffice slide builder
-summary: Describe the slides. Get an ODP deck, or a conversion to PowerPoint or PDF.
+summary: Build plain slides from an outline with LibreOffice, then convert the deck to PowerPoint or PDF. Handle a whole folder of decks in one run.
 job: work-with-files
 headline: LibreOffice slide builder
-subhead: Describe a presentation and get a finished deck file, then turn it into
-  PowerPoint or PDF for whoever needs it. No slide editor needed on your side.
+subhead: Give it your slide titles and text, or a deck you already have. It uses LibreOffice Impress on your computer to make an ODP deck, then saves copies as PowerPoint or PDF. You get the files and the commands it ran.
 explain: |
-  Describe a presentation and get a finished deck file, then turn it into PowerPoint or PDF for whoever needs it. No slide editor needed on your side.
+  LibreOffice Impress is a free slide program. It can also run from the command line with no window open. This skill uses that to make a simple deck from your outline, fill a template deck with new text, or convert decks between ODP, PPTX and PDF.
 
-  The skill uses LibreOffice Impress from the command line. It creates slides in ODP format, fills a deck from a template, and converts between ODP, PPTX and PDF. It can handle a whole folder of decks in one run, and Python scripts can adjust slide content. You must have LibreOffice installed. If a conversion refuses to start, it looks for a leftover background process first, since that is the usual cause.
+  It makes plain slides: a title and some text on each. It does not design for you. If you want a branded or styled deck, start from a template of your own or use a design tool, then use this skill to convert it.
+
+  It needs LibreOffice installed and an AI that can run commands. Charts, animations and speaker notes are not covered by its steps, so it will tell you instead of guessing. If a conversion hangs, it checks for a stuck LibreOffice process first.
 when:
-  - You want a deck built from an outline without clicking through a slide
-    editor.
-  - A colleague needs your slides as PowerPoint and you work in LibreOffice.
-  - You must send a PDF of twenty decks by tonight.
-  - You repeat the same deck with new numbers each month.
+  - You want a plain deck built from an outline without clicking through a slide editor.
+  - A colleague needs your LibreOffice slides as PowerPoint.
+  - You must send PDFs of twenty decks by tonight.
+  - You repeat the same deck with new numbers each month and keep a template.
+not_for:
+  - "You want a designed, branded deck with animation: use the HTML slide deck maker or the editable slide deck builder."
+  - "You want to edit one slide inside an existing deck: open it in LibreOffice Impress or PowerPoint and edit by hand."
+  - "You need a document or a spreadsheet: use the LibreOffice document builder or the LibreOffice spreadsheet builder."
 you_give:
-  - The slide topics and outline
-  - A template deck (optional)
-  - The format you need back
-  - LibreOffice installed
+  - Your slide titles and the text for each slide
+  - The format you need back (ODP, PPTX or PDF)
+  - A template deck with markers such as ${title} (optional)
+  - A folder of decks to convert (optional)
 you_get:
-  - An ODP presentation
+  - A new ODP deck with one title and text block per slide
   - PPTX or PDF copies
-  - Decks filled from a template
-  - A batch conversion command
+  - Decks filled from your template
+  - A batch conversion for a folder, with a list of any that failed
+  - The commands it ran, so you can repeat the job
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and save files.
+  - Install LibreOffice and check it opens. Use an AI that can run commands and save files, such as Claude Code, or ask for the commands and run them yourself.
+  - Start a chat and add the skill. Paste your outline, one slide per line or short block, and say the format you want back.
+  - For a template, attach the deck and name the markers in it. Make sure each marker in the deck has text to match.
+  - Open the deck it made. Check the slide count, that the text fits, and that no ${...} markers are left.
+  - For a folder, convert two or three decks first. Then run the whole folder.
+  - If a conversion hangs, close LibreOffice, then ask your AI to find and stop any leftover LibreOffice process and try again.
+output_sample:
+  input:
+    - Your slide titles and the text for each slide
+    - The format you need back (ODP, PPTX or PDF)
+    - A template deck with markers such as ${title} (optional)
+    - A folder of decks to convert (optional)
+  prerequisites:
+    - LibreOffice installed on your computer
+    - An AI that can run commands and save files
+    - Python, for the slide-building and template steps (optional)
+  output:
+    - name: ODP deck
+      contains: A new LibreOffice deck with a title and a text block on each slide, built from your outline.
+    - name: PPTX or PDF copies
+      contains: The same deck saved for PowerPoint or as a PDF, as you asked.
+    - name: Template-filled deck
+      contains: Your template with each marker swapped for your text, saved as a new file.
+    - name: Batch conversion
+      contains: Every deck in a folder saved in one format, with the count made and any that failed.
+    - name: Commands used
+      contains: The exact commands it ran and any checks it did not run, so you can repeat the job.
+how_it_works:
+  - title: Check the setup
+    text: It confirms LibreOffice is installed and that it can run commands. If not, it stops and says so.
+  - title: Confirm what you asked for
+    text: It asks for any missing outline, template or format. It never makes up slide text.
+  - title: Build the deck
+    text: It starts LibreOffice in listening mode, then a Python script adds one slide per outline entry. Or it fills your template.
+  - title: Convert
+    text: It runs LibreOffice in the background to save PPTX or PDF copies, for one deck or a folder.
+  - title: Check and report
+    text: It lists the paths, the slide count, anything that failed and what it did not check.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run LibreOffice commands and Python scripts and save the files on your computer.
+    - name: Any chat AI
+      why: It can write your outline and the commands, but you run them yourself.
+  inputs:
+    - A template deck in your brand colors and fonts
+    - Your outline with the exact text for each slide
+    - A past deck you liked, to copy its structure
+terms:
+  - term: ODP
+    meaning: The file format LibreOffice Impress uses. PowerPoint can open it.
+  - term: Template marker
+    meaning: A placeholder such as ${title} in a deck that the skill swaps for your text.
+  - term: Headless
+    meaning: Running LibreOffice with no window, from a command.

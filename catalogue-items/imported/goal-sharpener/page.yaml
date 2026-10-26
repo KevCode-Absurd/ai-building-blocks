@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It asks a few questions and writes the goal.
 new_slug: goal-sharpener
 name: Goal sharpener
-summary: Give it a fuzzy aim. Get a clear goal with a number to hit and a finish line.
+summary: Turn a fuzzy aim into a clear goal with a number to hit, proof it is done, and a limit on scope. Use it before you start a long AI task.
 job: plan-strategy
 headline: Goal sharpener
-subhead: A vague aim becomes a goal you can actually finish. Tell it what you
-  want and you get back one clear goal with a number to hit, proof you will
-  accept, and a limit on scope.
+subhead: A vague aim becomes a goal you can actually finish. Tell it what you want and you get back one clear goal with a number to hit, proof you will accept, and a limit on scope.
 explain: |
   A vague aim becomes a goal you can actually finish. Tell it what you want and you get back one clear goal with a number to hit, proof you will accept, and a limit on scope.
 
@@ -17,6 +15,10 @@ when:
   - You are about to start a long AI task and want a clear target.
   - A team goal has no number attached.
   - You are not sure if your goal is too big to finish.
+not_for:
+  - You just want the work done, like a bug fix or a draft. Ask your AI to do it directly, with no goal step.
+  - You need a full plan, task list or progress log. This writes one goal only, so use a project plan or a simple task list instead.
+  - You already have a goal with a number and a finish line. Skip this and start the work.
 you_give:
   - Your rough aim
   - Context on why it matters (optional)
@@ -28,7 +30,29 @@ you_get:
   - A finish line
   - Notes on what was weak and fixed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Type your rough aim in one or two lines. Add your deadline, limits or current numbers if you have them.
+  - Answer the one short question it may ask. It only asks when a wrong guess would change the goal.
+  - Check the goal. Is there a number or clear check, a finish line and a limit on scope? Ask for changes if not.
+  - Paste the goal into your AI task. If your tool has a goal feature, set it there. If not, the pasted text works the same.
+output_sample:
+  input:
+    - Your rough aim, in your own words
+    - Why it matters (optional)
+    - Any deadline or limits (optional)
+    - Your current numbers (optional)
+  prerequisites:
+    - A goal tool in your AI app is optional. Without one, you copy the goal text and paste it where you need it.
+  output:
+    - name: Goal statement
+      contains: One sentence that says what will be true when the work is done.
+    - name: Measure and target
+      contains: The number or pass/fail check that shows success, and how it will be measured.
+    - name: Proof of done
+      contains: The evidence you will accept before calling the goal finished, such as a test, a count or a review.
+    - name: Scope
+      contains: What is in and what is out, so the work stays inside clear limits.
+    - name: Stop condition
+      contains: When your AI should stop and ask you instead of carrying on.
+    - name: Weak spots fixed
+      contains: Notes on vague words in your aim and how each was made concrete.

@@ -14,9 +14,9 @@ outputs:
   - {type: audit_report}
 uses: [sale-break-even-and-cac-allowance-modeler, sale-offer-ladder-planner, sale-season-pacing-sheet-builder, weekly-store-ad-pulse-checker]
 steps:
-  - {uses: sale-break-even-and-cac-allowance-modeler, note: "Starts with what the discount leaves, so every later choice stays inside a CAC limit."}
-  - {uses: sale-offer-ladder-planner, note: "With the discount and CAC limit agreed, plans the main offer, the backups and when to switch."}
-  - {uses: sale-season-pacing-sheet-builder, note: "Reads the offer ladder to set spend by day, with scale, hold and cut rules."}
+  - {uses: sale-break-even-and-cac-allowance-modeler, note: "Starts with what the discount leaves. Hands the break-even ROAS and CAC limit to the next two steps, so every later choice stays inside it."}
+  - {uses: sale-offer-ladder-planner, note: "Takes the break-even and CAC limit from step 1 and only discounts what that limit can carry. Plans the main offer, the backups and when to switch, and hands that plan to step 3."}
+  - {uses: sale-season-pacing-sheet-builder, note: "Reads the offer ladder from step 2 and the CAC limit from step 1 to set spend by day, with scale, hold and cut rules."}
   - {uses: weekly-store-ad-pulse-checker, note: "Reads the week against the pacing sheet to say what to pull or push next."}
 origin: rebuilt
 version: 1.0.0

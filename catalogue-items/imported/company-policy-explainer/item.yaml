@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: question
     required: true
+  - type: document
+    required: false
 outputs:
   - type: document
 uses: []

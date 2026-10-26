@@ -2,33 +2,112 @@ thinking: high
 thinking_why: The rules are dense and tie to many linked controls.
 new_slug: defense-contractor-security
 name: Defense contractor security checker
-summary: Share your contract and system details. Check current CMMC sources,
-  identify gaps and flag missing evidence.
+summary: Check your CMMC readiness as a US defense contractor. Get a gap table, evidence list and security plan draft to take to your assessor.
 job: check-contracts
 headline: Defense contractor security checker
-subhead: Share your contract, data and system details; get a current CMMC
-  check, evidence gaps, and open questions.
+subhead: Paste your contract clauses and describe your data and systems. You get the CMMC level your contract states, a gap table by practice, draft security plan sections and a list of open questions. It does not replace an assessor.
 explain: |
-  Share the contract clauses and system boundary. The skill checks current DoD sources, maps evidence to practices and marks unknowns.
+  CMMC is the US Department of Defense's security program for companies that handle government contract information. If you won a defense subcontract, your prime may now ask for proof of CMMC. This defense contractor security checker helps you see where you stand before an assessment.
 
-  It checks current DoD sources and the contract before mapping CMMC requirements to your system boundary. You get evidence gaps and draft planning notes for your security plan and milestones. It can help scope controlled unclassified information and review subcontract terms. Have a qualified assessor confirm decisions.
+  The contract decides your level, so the skill starts there. It reads your DFARS clauses, asks whether you handle only contract information (FCI) or also controlled unclassified information (CUI), and sets the boundary of the systems in scope. If the contract is missing, it leaves the level undetermined and lists what it needs. It never picks one for you.
+
+  It then maps your controls to the 110 practices, shows the gaps and drafts security plan text that describes only what you really do. It cannot browse DoD sites on its own. Program rules change, so confirm the current notice and your clauses with an assessor.
 when:
   - You won a subcontract and the prime says you need CMMC.
   - You must decide what counts as controlled information in your systems.
   - An assessment is coming and you have no security plan written.
-  - You need a list of gaps with owners before you spend on fixes.
+  - You need a list of gaps with owners before you spend money on fixes.
+not_for:
+  - "Your work involves classified information: CMMC covers unclassified information only, so follow your security officer and the government's rules."
+  - "You need a final compliance decision, a certificate or a score to submit: only a qualified assessor and your own senior official can give those."
+  - "You want to know if a product or data is export controlled: use the Defense export rules checker."
+  - "You want to plan a FedRAMP route for a cloud service you sell: use the Federal cloud approval planner."
 you_give:
-  - Contract type and data you handle
-  - Description of your systems and network
-  - Current security controls
-  - Target CMMC level (optional)
+  - Your contract clauses, especially DFARS 252.204-7012, 7019, 7020 and 7021
+  - The kind of data you handle, such as contract information only or controlled information too
+  - A description of your systems, network and cloud services
+  - Your current security controls, such as MFA and logging (optional)
 you_get:
-  - A supported level assessment or a list of missing evidence
-  - Gap table by practice
-  - System security plan sections
-  - Action and milestone plan
+  - The level your contract states, or a note that it is undetermined and what is missing
+  - A gap table by practice, with the evidence each one needs
+  - Draft security plan sections that describe only what you really do
+  - An action and milestone plan with owners and dates
+  - A list of open questions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. Use an AI with web access if you can, so it can read the current DoD notice. Without it, paste the notice yourself.
+  - Paste your contract clauses and the section that names the CMMC level. Say what data you handle.
+  - Describe your systems in plain words. List the controls you already have. If you have none to list, say so.
+  - Read the level determination first. If it says undetermined, get the missing documents before you go on.
+  - Take the gap table and open questions to an accredited assessor or your counsel before you spend money on fixes.
+output_sample:
+  input:
+    - Your contract clauses and the CMMC level the contract states
+    - The kind of data you handle
+    - A description of your systems and network
+    - Your current security controls (optional)
+  prerequisites:
+    - Web access for your AI, or the current DoD notice pasted in (optional)
+  output:
+    - name: Level determination
+      contains: The level and assessment type from your contract, the sources checked and their dates, or undetermined.
+    - name: Scope
+      contains: Which systems and assets fall inside the boundary that holds controlled information.
+    - name: Gap table
+      contains: Each practice marked met, partly met, not met or evidence needed, with notes.
+    - name: SPRS score estimate
+      contains: A rough score with deductions, only if you gave enough detail. Not a score to submit.
+    - name: Security plan sections
+      contains: Draft text describing only what you really do, with gaps sent to the action plan.
+    - name: Action and milestone plan
+      contains: Each fix with a milestone, owner and due date, and a flag on any item that cannot stay open.
+    - name: Open questions
+      contains: Every missing document or fact the AI needs from you.
+how_it_works:
+  - title: Read the contract
+    text: Finds the CMMC level and assessment type written in your clauses. If none, it leaves the level undetermined.
+  - title: Classify the data
+    text: Separates contract information from controlled unclassified information, which sets the minimum level.
+  - title: Set the scope
+    text: Sorts each system into a category and draws the boundary around those that hold controlled data.
+  - title: Find the gaps
+    text: Checks your controls against each practice and lists the evidence an assessor would ask for.
+  - title: Draft the plan
+    text: Writes security plan sections and an action plan, saying plainly where something is partial or missing.
+  - title: Flag what to confirm
+    text: Lists what it could not check, including the current program status, for an assessor to confirm.
+output_shape: |-
+  LEVEL DETERMINATION
+    Level: <1 | 2 self | 2 C3PAO | 3 | undetermined> | from: <clause or section> | sources checked: <url, date | not confirmed>
+
+  SCOPE
+    <asset category>: <systems>
+
+  GAP TABLE
+    <practice id> | <domain> | <practice> | <met | partial | not met | evidence needed> | <evidence needed> | <notes>
+
+  ACTION AND MILESTONE PLAN
+    <finding> | <fix> | <milestone> | <owner> | <due date>
+
+  OPEN QUESTIONS
+    <missing document or fact>
+works_best_with:
+  tools:
+    - name: Claude
+      why: Handles long rulebooks and keeps the gap table consistent across a big system description.
+    - name: Any AI with web access
+      why: Can read the current DoD notice and clauses so the program status is not left unconfirmed.
+  inputs:
+    - A network diagram or a list of your systems
+    - Your existing security policies
+    - The name of your prime contractor's contact for CMMC questions
+terms:
+  - term: CMMC
+    meaning: The US Department of Defense's security rules for contractors.
+  - term: CUI
+    meaning: Controlled unclassified information. Sensitive government information that is not classified.
+  - term: FCI
+    meaning: Federal contract information. Contract details not meant for the public.
+  - term: C3PAO
+    meaning: An approved third-party firm that carries out CMMC Level 2 assessments.
+  - term: SPRS
+    meaning: The DoD system where contractors post their security self-assessment score.

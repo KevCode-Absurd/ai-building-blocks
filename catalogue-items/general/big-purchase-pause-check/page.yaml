@@ -1,6 +1,6 @@
 new_slug: big-purchase-pause-check
 name: Big purchase pause check
-summary: Paste what you want to buy and why. Get the real cost, what drives it and a small test.
+summary: Check a big purchase before you buy. Paste what you want and why. You get the full cost over the years, where the pull comes from and a small test.
 job: money-and-investing
 thinking: medium
 thinking_why: It looks at feelings behind a purchase, which needs a careful, kind tone.
@@ -11,6 +11,10 @@ when:
   - You are about to make a big purchase and feel a pull.
   - You want to know what it really costs over the years.
   - You want a cheap way to test the want first.
+not_for:
+  - "You already decided and just need a price comparison: use a shopping site or ask a friend who owns one."
+  - "You buy on impulse again and again: use the Spending story reviewer, which looks at your habits over time."
+  - "You need advice on whether to borrow or invest: talk to a licensed financial adviser."
 you_give:
   - What you want and its price
   - The feeling behind it
@@ -26,6 +30,27 @@ how_to_use:
   - Under it, paste what you want to buy and the feeling behind it.
   - Send it and read the result.
   - Wait a day before you act on the result.
+output_sample:
+  input:
+    - What you want to buy and its price
+    - The feeling behind it, in your own words
+    - Your monthly money picture (optional)
+    - What you own that does the same job (optional)
+  output:
+    - name: THE WISH
+      contains: The purchase in one line, with its price and your word for the feeling.
+    - name: WHERE IT MAY COME FROM
+      contains: Gentle guesses on what drives the pull, worded as "this may be", never as fact.
+    - name: FULL COST WITH TOTAL
+      contains: Upkeep, insurance, fees, interest, storage and time, added up over the years you would keep it.
+    - name: WHO IS WATCHING
+      contains: Who you picture noticing the purchase, and how much they likely would.
+    - name: FADE CHECK AND SMALLER VERSION
+      contains: How fast the joy may level off, and a cheaper option with the same core feeling.
+    - name: SMALL TEST
+      contains: A cheap trial, its cost, the one question it answers and what result would change your mind.
+    - name: MISSING
+      contains: Costs or facts you did not give, marked so nothing is guessed.
 how_it_works:
   - title: Name the pull
     text: The wish and where the feeling may come from.

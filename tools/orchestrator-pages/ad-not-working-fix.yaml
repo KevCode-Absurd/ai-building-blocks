@@ -1,6 +1,6 @@
 new_slug: ad-not-working-fix
 name: "Find why an ad is not pulling and fix it"
-summary: "Give it an ad that gets no replies. Get likely causes in order, a fixed version and a test to prove it."
+summary: "Find why your ad gets no replies. Get ranked likely causes, a fixed version that changes only what matters, and a test plan to prove it works."
 job: check-ads
 thinking: high
 thinking_why: "It weighs causes on thin evidence, rewrites to them and plans a fair test. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - An ad, email or page is seen but not answered and you want to know what to change first.
   - You have a list of ideas for what is wrong and no order to try them in.
   - You want to fix the cheapest likely cause before you redesign anything.
+not_for:
+  - "You have no ad yet: write one first with the Fact-based ad copy writer, then come back to fix it."
+  - "You want to know why sales dropped overall, not why one ad gets no replies: use the Ad sales drop analyst."
+  - "You only want a quick read on one ad's response problem, with no rewrite or test: use the Ad response troubleshooter."
 
 you_give:
   - The ad as the reader sees it, including the reply path
@@ -35,6 +39,26 @@ how_to_use:
   - Give it the ad and your results. Add the results for your other ads if you have them.
   - It works step by step and saves each result. Read the ranked causes before the fixed ad.
   - Run the test it plans, then read the result with "Test two ads head to head and read the winner".
+output_sample:
+  input:
+    - Your ad as the reader sees it, with the reply path
+    - Results for the ad, and for your other ads if you have them (optional)
+    - Your offer and what counts as a reply (optional)
+  prerequisites:
+    - A good chat AI that can read files, or a Claude Project with the handoff pack
+  output:
+    - name: "Step 1: Likely causes"
+      contains: A finding on each check, with evidence, and causes ranked by how likely and how cheap to fix.
+    - name: "Step 2: Winners and losers"
+      contains: What your better ads share that your weaker ads lack, and a rule to test.
+    - name: "Step 3: Fixed ad"
+      contains: The full fixed ad, a change list beside each cause, what was left alone, and a new key.
+    - name: "Step 4: Ready check"
+      contains: A ship, fix or rewrite call, a score, and the three fixes that matter most.
+    - name: "Step 5: Test plan"
+      contains: One difference between old and new, a code on each, a winner rule and a read date.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every missing item in one list.
 
 how_it_works:
   - title: Find the likely cause

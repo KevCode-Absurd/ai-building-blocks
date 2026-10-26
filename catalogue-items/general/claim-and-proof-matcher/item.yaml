@@ -15,6 +15,12 @@ inputs:
     required: false
   - type: voc_reviews
     required: false
+  - type: ad_copy
+    required: false
+  - type: audit_report
+    required: false
+  - type: plan
+    required: false
 outputs:
   - type: audit_report
     required: true

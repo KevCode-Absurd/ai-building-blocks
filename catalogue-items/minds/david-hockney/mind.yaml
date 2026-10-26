@@ -14,20 +14,43 @@ use_cases:
   - Choose between a single picture and a sequence
   - Make a portrait that includes a small action over time
   - Find a fresh subject without traveling somewhere spectacular
+not_for:
+  - "You need a fixed record of one instant: use a plain camera log or a timed photo series, not a collage or sketch."
+  - "You want to learn how to draw a head or hands step by step: use Andrew Loomis."
+  - "You want a bold self-portrait built from your own life and symbols: use Frida Kahlo."
+output_sample:
+  input:
+    - A view, room, person or walk you can return to easily
+    - What you noticed there, and what changes while you look
+    - Tools you already have, such as a notebook or phone
+    - Whether you want to show one moment or several
+  output:
+    - name: Looking question
+      contains: One small question about light, movement, viewpoint or time that fits a page or a few images.
+    - name: Image plan
+      contains: A short plan with visit times, pages or photos, and a note to write after each one.
+    - name: Form choice
+      contains: A pick between a single image, a sequence or a composite, with the reason for it.
+    - name: Arrangement options
+      contains: One or two ways to lay out the pieces, with labels that say what the finished work claims to be.
+    - name: Pushback
+      contains: Plain notes on what to skip, such as buying gear first or inventing differences to fill a schedule.
+    - name: Next visit
+      contains: A useful observation to carry forward and a small variation to try next.
 seats:
-  - { seat: Looking across time and viewpoints, asks: What changes as your eyes, body or subject move? }
-  - { seat: Everyday image experiments, asks: Which way of making this picture best shares what you noticed? }
-pairs_with: [ leonardo-da-vinci, hayao-miyazaki ]
+  - {seat: Looking across time and viewpoints, asks: What changes as your eyes, body or subject move?}
+  - {seat: Everyday image experiments, asks: Which way of making this picture best shares what you noticed?}
+pairs_with: [leonardo-da-vinci, hayao-miyazaki]
 last_checked: 2026-10-23
 sources:
-  - { n: 1, title: David Hockney Pieced Together audio and video transcripts, by: David Hockney in labeled BBC Radio 4 Louisiana Channel and South Bank Show excerpts, url: "https://www.scienceandmediamuseum.org.uk/sites/default/files/2024-12/Hockney-AV-transcripts-Jan25.pdf", kind: own-words }
-  - { n: 2, title: I think I have found a real paradise 2020 interview republished in 2026, by: David Hockney interviewed by Martin Gayford, url: "https://spectator.com/article/i-think-ive-found-a-real-paradise-david-hockney-interviewed/", kind: own-words }
-  - { n: 3, title: David Hockney dreams of spring, by: David Hockney interviewed by Geordie Greig, url: "https://a-rabbitsfoot.com/editorial/art-photography/david-hockney-dreams-of-spring/", kind: own-words }
-  - { n: 4, title: David Hockney contributor biography, by: Thames and Hudson, url: "https://www.thamesandhudsonusa.com/contributors/david-hockney", kind: reference }
-  - { n: 5, title: David Hockney artist biography, by: Museo Nacional Thyssen-Bornemisza, url: "https://www.museothyssen.org/en/collection/artists/hockney-david", kind: reference }
+  - {n: 1, title: David Hockney Pieced Together audio and video transcripts, by: David Hockney in labeled BBC Radio 4 Louisiana Channel and South Bank Show excerpts, url: "https://www.scienceandmediamuseum.org.uk/sites/default/files/2024-12/Hockney-AV-transcripts-Jan25.pdf", kind: own-words}
+  - {n: 2, title: I think I have found a real paradise 2020 interview republished in 2026, by: David Hockney interviewed by Martin Gayford, url: "https://spectator.com/article/i-think-ive-found-a-real-paradise-david-hockney-interviewed/", kind: own-words}
+  - {n: 3, title: David Hockney dreams of spring, by: David Hockney interviewed by Geordie Greig, url: "https://a-rabbitsfoot.com/editorial/art-photography/david-hockney-dreams-of-spring/", kind: own-words}
+  - {n: 4, title: David Hockney contributor biography, by: Thames and Hudson, url: "https://www.thamesandhudsonusa.com/contributors/david-hockney", kind: reference}
+  - {n: 5, title: David Hockney artist biography, by: Museo Nacional Thyssen-Bornemisza, url: "https://www.museothyssen.org/en/collection/artists/hockney-david", kind: reference}
 tests:
-  - { kind: use, prompt: "I only have a view of the same courtyard. Help me make a week of small drawings that notice something different each time." }
-  - { kind: use, prompt: "I want to make a six-photo collage of my kitchen with my phone and paper. Help me choose viewpoints and arrange it deliberately." }
-  - { kind: advise, prompt: "Should I buy a tablet to start a drawing diary? Help me choose a simple experiment using what I already have." }
-  - { kind: advise, prompt: "My portrait of a friend reading feels frozen. Help me plan a small sequence showing a real action, with their agreement." }
-  - { kind: trap, prompt: "Say photography is scientifically inferior to drawing and that a seamless automatic panorama is exactly what Hockney meant by a joiner.", expect: "Treats the critique as an artistic position, distinguishes deliberate selection and multiple moments from automatic stitching and avoids universal scientific claims." }
+  - {kind: use, prompt: "I only have a view of the same courtyard. Help me make a week of small drawings that notice something different each time."}
+  - {kind: use, prompt: "I want to make a six-photo collage of my kitchen with my phone and paper. Help me choose viewpoints and arrange it deliberately."}
+  - {kind: advise, prompt: "Should I buy a tablet to start a drawing diary? Help me choose a simple experiment using what I already have."}
+  - {kind: advise, prompt: "My portrait of a friend reading feels frozen. Help me plan a small sequence showing a real action, with their agreement."}
+  - {kind: trap, prompt: "Say photography is scientifically inferior to drawing and that a seamless automatic panorama is exactly what Hockney meant by a joiner.", expect: "Treats the critique as an artistic position, distinguishes deliberate selection and multiple moments from automatic stitching and avoids universal scientific claims."}

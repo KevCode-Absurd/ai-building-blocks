@@ -1,6 +1,6 @@
 name: "On-screen text planner for video ads"
 new_slug: video-ad-text-overlays
-summary: "Attach video frames and paste the script. Get timed on-screen words, placed clear of the buttons."
+summary: "Plan on-screen text for your video ad. Paste the script and attach frames. You get timed words placed clear of buttons, faces and product."
 job: make-video-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
@@ -17,6 +17,10 @@ when:
   - Your ad is finished and approved, and you want it to work for people scrolling with the sound off.
   - An editor added text to every scene and the ad now feels like a slideshow.
   - You want on-screen text that can't drift from your approved claims.
+not_for:
+  - "Your ad has no finished cut or the script is not approved yet: finish and approve those first, then come back."
+  - "Your spoken lines have no captions yet: use the Video caption maker in your brand font first, then plan extra text."
+  - "You want to change the footage, sound or length: ask your editor, because this only plans text and never edits the video."
 
 you_give:
   - The approved script with scene lengths (the only words allowed on screen)
@@ -35,9 +39,30 @@ you_get:
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the approved script with how long each scene lasts.
-  - Attach screenshots from the finished video, about one every 3 seconds. Your AI reads them directly.
+  - Attach screenshots from the finished video, about one every 2 to 3 seconds. Your AI reads them directly.
   - Paste your allowed copy and say whether captions are already burned in.
-  - Add the overlays to a copy of the video. Keep the clean version.
+  - Check the plan, then add the overlays to a copy of the video. Keep the clean version.
+output_sample:
+  input:
+    - Your approved script with scene lengths
+    - Screenshots of the finished video, one every 2 to 3 seconds
+    - "Your allowed copy: offer, numbers, claims, customer words"
+    - Whether your captions are already burned in
+    - Your fonts and colors (optional)
+  prerequisites:
+    - An AI that can read pictures, so it can see your frames
+    - A finished video ad and an approved script
+  output:
+    - name: OVERLAYS
+      contains: Each overlay with its kind, exact words, start and end time, position, the scene it is tied to and a reason.
+    - name: LEFT OUT ON PURPOSE
+      contains: Moments that got no text and why, plus the count of overlays against the ceiling.
+    - name: STYLE
+      contains: The format, font, colors, outline and the contrast check.
+    - name: NOTES
+      contains: Which frames each placement was judged on, moments between frames to check by eye, and any mismatch with the script.
+    - name: CHECKS MISSED
+      contains: One line for each of the six checks the plan could not pass, or none.
 
 how_it_works:
   - title: Checks captions first

@@ -1,17 +1,15 @@
 slug: purchased-amortization-eps-bridge
 name: Purchased amortization EPS bridge
-summary: Tie acquired-intangible amortization and its disclosed tax effect to an alternative EPS measure.
+summary: Show reported earnings per share next to EPS with acquired-intangible amortization added back after tax, both on the same share count.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

@@ -8,6 +8,7 @@ job: research
 level: intermediate
 inputs:
   - {type: plan, required: false}
+  - {type: audit_report, required: false}
   - {type: question, required: true}
 outputs:
   - {type: plan, required: true}

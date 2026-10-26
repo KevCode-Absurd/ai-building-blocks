@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It matches actions to the situation.
 new_slug: classroom-belonging-planner
 name: Classroom belonging planner
-summary: Describe a class dynamic like cliques or new students. Get actions that
-  help everyone feel part of the group.
+summary: Plan classroom belonging for cliques, isolated students or new arrivals. Describe your class and get routines you can start this week.
 job: teach-and-train
 headline: Classroom belonging planner
-subhead: Practical steps to make every student feel part of your class, aimed at
-  the exact problem you face. Describe the group, such as cliques, an isolated
-  child or new arrivals, and you get actions you can start this week.
+subhead: Practical steps to make every student feel part of your class, aimed at the exact problem you face. Describe the group, such as cliques, an isolated child or new arrivals, and you get actions you can start this week.
 explain: |
   Practical steps to make every student feel part of your class, aimed at the exact problem you face. Describe the group, such as cliques, an isolated child or new arrivals, and you get actions you can start this week.
 
@@ -18,6 +15,10 @@ when:
   - Two friendship groups split the class in half.
   - A new student joined mid-term and has not settled.
   - The class feels tense after a move up to a new school year.
+not_for:
+  - "You need to handle a single behaviour incident: talk to your pastoral lead, or use a restorative conversation with the students involved."
+  - "You have a safeguarding worry about a child: follow your school's safeguarding process and tell your safeguarding lead the same day."
+  - "You want to redesign lesson tasks to lift motivation: use a task redesign step instead, as this plan is about the group, not the lesson."
 you_give:
   - A description of your class
   - The belonging concern
@@ -30,7 +31,25 @@ you_get:
   - A welcome plan for new students
   - Signs to watch for progress
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Describe your class: subject, year group and how the group behaves."
+  - Say what the belonging concern is, such as a student who sits alone, cliques or new arrivals.
+  - Add what you already do and how much time you have (optional), so you do not get repeats.
+  - "Read the four sections you get back: practices, language, routines and signs to watch. Pick two or three to start this week."
+  - After two weeks, check the signs to watch. Keep what works and ask your AI to adjust the rest.
+output_sample:
+  input:
+    - "Your class: subject, year group and how the group behaves"
+    - The belonging concern, such as isolated students, cliques or new students
+    - What you already do to build belonging (optional)
+    - How much time you can give (optional)
+    - Age or year group and subject (optional)
+  output:
+    - name: Recommended Practices
+      contains: Named classroom actions aimed at your concern, each one something you can do in your next lessons.
+    - name: Language Guide
+      contains: Wording to use with students so the changes feel welcoming and not singling anyone out.
+    - name: Routine Integration
+      contains: How to fit each practice into your lesson routines and the time you have.
+    - name: Monitoring Indicators
+      contains: Quiet signs to watch for that show whether students are starting to feel part of the class.

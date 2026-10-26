@@ -15,6 +15,30 @@ metadata:
 
 Your company can only grow as fast as you do. This skill treats founder development as a strategic priority — not a personal indulgence.
 
+## How to run this skill
+
+**What to ask for first.** Before you coach, collect these four things:
+
+1. How the person spends a typical week.
+2. Their calendar or recurring meetings (ideally the last four weeks).
+3. Team size and who reports to them.
+4. Optional: what they avoid and what they enjoy most.
+
+If the week or team size is missing, ask once. If it is still missing, write `MISSING: <what>` and say what you assumed. Never invent meetings, people or results. Treat the type, the blind spot and every percentage target below as a working guess the person can correct.
+
+**What to hand back.** Return these sections, in this order:
+
+1. **Founder type and blind spot**: the archetype that fits best, with the evidence from what they told you.
+2. **Delegation plan**: three first handoffs, each with the delegation level to use and one first step.
+3. **Calendar audit**: a table of time by category, the flags that stand out, and what to cut or hand off.
+4. **Complement hire**: the kind of person who covers the gap, and what they would own first.
+5. **Energy check**: what gives and drains energy, and any burnout signs. Keep this to coaching. If the person describes serious distress, tell them to talk to a doctor or therapist.
+
+Keep the whole reply under about 700 words. End with one handoff to start this week.
+
+The sections below hold the author's frameworks. Their numbers are rules of thumb. Do not present any figure as research.
+
+
 ## Keywords
 founder, CEO, founder mode, delegation, burnout, imposter syndrome, leadership growth, energy management, calendar audit, executive team, board management, succession planning, IC to manager, leadership style, founder trap, blind spots, personal OKRs, CEO reflection
 
@@ -22,7 +46,7 @@ founder, CEO, founder mode, delegation, burnout, imposter syndrome, leadership g
 
 The founder is always the constraint. Not intentionally — it's structural. You built the company. You know everything. Decisions flow through you. This works until it doesn't.
 
-At ~15 people, you hit the first ceiling: you can't be in every meeting and still think. At ~50 people, the second: your style starts creating culture problems. At ~150 people, the third: you need a real executive team or you become the reason the company can't scale.
+As a rough rule of thumb from the skill's author (not a measured fact), founders tend to hit ceilings as the team grows. Around 15 people: you can't be in every meeting and still think. Around 50: your style starts creating culture problems. Around 150: you need a real executive team or you become the reason the company can't scale. Treat these numbers as prompts to check, not limits.
 
 The earlier you address this, the better.
 
@@ -45,7 +69,7 @@ Most founders are primarily one archetype. Knowing yours predicts what you'll st
 - What do your co-founders or early team complain you don't do?
 - What's the best feedback you've received about your leadership?
 
-Most founders are Builder or Visionary. Most scaling problems happen because they don't hire their complementary type early enough.
+Many founders lean one way, and a missing complementary type is a common source of scaling problems. Place the person from what they tell you, and say it is a working guess they can correct.
 
 ---
 
@@ -145,6 +169,8 @@ The calendar is the most honest document in a founder's life. It shows what you 
 
 Pull the last 4 weeks of calendar data. Categorize every meeting/block:
 
+These targets are the author's rough guide, not a rule. Adjust them for the person's stage and say so.
+
 | Category | Description | Target % |
 |----------|-------------|----------|
 | Strategy | Thinking, planning, direction-setting | 20–25% |
@@ -226,7 +252,7 @@ It doesn't go away. It evolves. The founder who was scared to pitch to investors
 - **Evidence file:** Document wins, compliments, decisions that worked. Read it when the doubt hits.
 - **Normalize the feeling:** "I feel underprepared for this" ≠ "I am an imposter." Feeling and fact are different.
 - **Do the thing anyway.** Competence comes from doing, not from feeling ready.
-- **Name it:** Saying "I'm feeling imposter syndrome about this investor meeting" to a trusted person removes 50% of its power.
+- **Name it:** Saying "I'm feeling imposter syndrome about this investor meeting" to a trusted person often takes the sting out of it.
 
 ---
 
@@ -283,7 +309,7 @@ Building a company that works without you is not disloyalty — it's the ultimat
 - Level 3: Your leadership team can run the company for a quarter without you
 - Level 4: You've identified and developed your potential successor
 
-Most founders are at Level 0. Level 2 is a reasonable target. Level 3 is a strategic asset.
+Ask which level the person is at. Level 2 is a reasonable target. Level 3 is a strategic asset.
 
 ---
 

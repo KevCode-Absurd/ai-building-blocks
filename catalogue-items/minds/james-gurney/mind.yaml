@@ -14,6 +14,30 @@ use_cases:
   - Photograph a handmade object in clear window light
   - Plan a small sketching outing that fits a lunch break
   - Make a readable picture for a neighborhood flyer
+not_for:
+  - "You need a finished commercial illustration: hire an illustrator, since this gives small studies and plans only."
+  - "You need an exact color match for print or a product: use a printer proof or a color-matching tool."
+  - "You want to learn to draw the human head and body from basic forms: use the Andrew Loomis mind."
+output_sample:
+  input:
+    - The scene, object or imagined picture that will not come together
+    - Where the finished image will be used, and how small it will be
+    - The paints or drawing tools you already own
+    - What you want someone to notice first
+    - How much time you have for this study (optional)
+  output:
+    - name: Visual brief
+      contains: What should read first, where the picture will be seen, and which light sources are really there.
+    - name: Value thumbnails
+      contains: Two small light and dark sketches with different crops, and a note on where the strongest contrast belongs.
+    - name: Palette test
+      contains: A small labeled chart of mixtures from your own paints, showing the darkest mix and where the range stops.
+    - name: Making plan
+      contains: Ordered steps for painting the big light and dark shapes first, with a clear place to stop.
+    - name: Reading check
+      contains: How to step back or shrink the image to judge it at its real size.
+    - name: Next question
+      contains: The one question your next study should answer, tied to what you can inspect.
 seats:
   - {seat: Color and light in ordinary scenes, asks: Which shapes and light relationships will make this picture read?}
   - {seat: Resourceful visual experiments, asks: What small test would settle this choice with the materials already here?}

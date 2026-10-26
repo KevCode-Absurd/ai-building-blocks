@@ -11,6 +11,8 @@ inputs:
     required: true
   - type: offer
     required: false
+  - type: plan
+    required: false
 outputs:
   - type: ad_copy
 origin: rebuilt

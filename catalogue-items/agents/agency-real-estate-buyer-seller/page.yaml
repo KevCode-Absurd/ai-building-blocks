@@ -1,0 +1,137 @@
+name: Real Estate Buyer & Seller agent
+summary: Buying or selling a home? Get a dated checklist of documents, deadlines and decisions from offer to closing, plus questions for your agent.
+headline: Real Estate Buyer & Seller agent
+subhead: Tell it if you are buying or selling, where the home is and what stage you are at. Add your contract dates if you have them. It builds a home buying or selling checklist with the documents to collect, the deadlines to hit and the choices ahead of you.
+job: organise-work
+thinking: high
+thinking_why: Deadlines and money are at stake, so it must work only from your facts and say what it cannot know. Use a model that reasons well and flags gaps.
+explain: |-
+  A home sale is one of the biggest money choices most people make, and it runs on dates. Miss the day to deliver earnest money or end the inspection period, and you can lose the deposit or the deal. This agent builds a real estate transaction checklist around those dates, so nothing sits in an email thread.
+
+  It works for buyers and for sellers. A buyer gets a needs list, an offer worksheet, a deadline tracker and a wire fraud warning before closing. A seller gets a listing prep list, an offer comparison and the same tracker. Every item shows who provides it and by when.
+
+  It never invents a price or a rule. It will not name a home's value without sold prices you give it, and it says "ask your agent" or "ask a real estate lawyer" for contract wording, title and local law. The source profile is built around United States home sales. Words like escrow and earnest money differ elsewhere, so tell it where the home is.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have decided to buy a home and want a plan from first search to closing day.
+  - You are about to list your home and want a prep list and a clear view of the sale steps.
+  - An offer was accepted and you need every deadline in one place, such as inspection, loan and closing dates.
+  - You are a new agent and want a transaction checklist you can adapt for your clients.
+not_for:
+  - You need a lawyer's view on contract wording, a title problem or a dispute. Take it to a real estate attorney.
+  - You want to check closing cash, escrow and fees on a sale of a business. Use the Seller closing cash and escrow reviewer.
+  - You want your home priced without sold prices to work from. Ask your agent for recent sold homes first, then bring them here.
+  - You want your mortgage papers checked. Your lender or loan officer must do that.
+you_give:
+  - If you are buying or selling, and your stage, such as searching, offer made, under contract or closing
+  - The country and state or region where the home is, and the type of home
+  - Your contract and its key dates, such as offer, inspection, loan and closing (optional)
+  - For buyers, your budget, must-haves and deal-breakers. For sellers, your target price and any repairs you know of (optional)
+  - Recent sold prices of similar homes nearby (optional)
+you_get:
+  - A checklist of documents with who provides each one and by when
+  - A dated deadline list, from earnest money to closing day
+  - A short list of choices ahead, each with options and what to ask
+  - A worksheet for your offer, or for listing prep, if you are at that stage
+  - Questions to take to your agent or a real estate attorney
+how_to_use:
+  - Download the pack and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Say if you are buying or selling, where the home is and what stage you are at. Paste your contract or its key dates if you have them.
+  - Add your budget and must-haves if you are buying. Add recent sold prices if you want a price worksheet.
+  - Check the dates first. Match each one to your signed contract, because the AI can only read what you give it.
+  - Take the question list to your agent or a real estate attorney before you sign or waive anything.
+  - Before you send closing funds, call your title company on a number you found yourself.
+how_it_works:
+  - title: Set your role and stage
+    text: It confirms if you buy or sell, the place, the stage and the dates you hold. Anything missing is asked once, then marked MISSING.
+  - title: Build the document list
+    text: It lists the papers for your stage, such as loan approval, disclosures, inspection reports and closing papers, with who provides each.
+  - title: Lay out the deadlines
+    text: It puts your dates in order and works out the days between them. Dates you did not give stay blank.
+  - title: Mark the decision points
+    text: It names the choices ahead, such as offer terms, inspection requests and price changes, with the options for each.
+  - title: Add the worksheets
+    text: If you are at the offer or listing stage, it fills a worksheet from your own numbers and sold prices only.
+  - title: Hand back the questions
+    text: It adds the wire fraud warning and the points your agent or attorney must settle.
+output_shape: |-
+  YOUR SITUATION
+    Role <buyer or seller> | Place <country, state> | Stage <stage> | Home <type>
+
+  DOCUMENT CHECKLIST
+    <document> | <who provides it> | <needed by> | <status: have, need or MISSING>
+
+  DEADLINES
+    <date or MISSING> | <event: earnest money, inspection ends, loan, appraisal, walkthrough, closing> | <what must be done>
+
+  DECISION POINTS
+    <choice> | <options> | <what to ask before you decide>
+
+  WORKSHEET
+    <offer terms or listing prep, filled from your numbers only>
+
+  QUESTIONS FOR YOUR AGENT OR ATTORNEY
+    <question> | <why it matters>
+
+  WIRE FRAUD WARNING
+    <the steps to confirm wire details by phone before you send money>
+output_sample:
+  input:
+    - If you are buying or selling, and your stage
+    - Where the home is, and the type of home
+    - Your contract and key dates (optional)
+    - Your budget, must-haves or target price (optional)
+    - Recent sold prices nearby (optional)
+  output:
+    - name: Your situation
+      contains: Your role, the place, your stage and the type of home, as the AI understood them.
+    - name: Document checklist
+      contains: Each paper you need, who provides it, when, and whether you have it.
+    - name: Deadlines
+      contains: Your dates in order, from earnest money to closing, with what must be done by each.
+    - name: Decision points
+      contains: The choices ahead, with your options and what to ask before you decide.
+    - name: Worksheet
+      contains: An offer or listing prep sheet filled only from your numbers and sold prices.
+    - name: Questions for your agent or attorney
+      contains: Points the AI cannot settle, with why each one matters.
+    - name: Wire fraud warning
+      contains: Steps to confirm wire details by phone before you send closing funds.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read your signed contract or listing sheet and pull the dates from it, so you do not retype them.
+  inputs:
+    - Your signed purchase contract and any addenda.
+    - Your loan approval letter, if you are buying.
+    - Inspection report and repair requests, once you have them.
+terms:
+  - term: Earnest money
+    meaning: A deposit a buyer pays after an offer is accepted, to show good faith. It is held until closing.
+  - term: Contingency
+    meaning: A condition in the contract, such as a good inspection or loan approval. If it fails, the buyer can usually leave the deal.
+  - term: Escrow
+    meaning: A neutral third party that holds the money and papers until both sides have done their part.
+  - term: Comps
+    meaning: Recent sold prices of similar homes nearby. Also called comparables. They are used to judge a fair price.
+  - term: Closing
+    meaning: The final step where papers are signed, money moves and the keys change hands.
+tweaks:
+  - what: Role and stage
+    how: Say exactly where you are, such as "offer accepted, inspection in 5 days". A narrow stage gives a sharper list.
+  - what: Place
+    how: Name the country and state. Rules and terms differ, and the AI should say where it is unsure.
+  - what: Price work
+    how: Paste at least 3 recent sold prices of similar homes. Without them it will not suggest a price.
+improve:
+  - Keep the deadline list and update it each time a date moves, then ask the AI to recheck the days between dates.
+  - Save your must-haves and deal-breakers as a note you can paste into your next search.
+  - After closing, ask for a short list of papers to keep and tasks for the first month in the home.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

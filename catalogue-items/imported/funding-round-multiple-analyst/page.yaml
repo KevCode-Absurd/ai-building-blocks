@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It researches several rounds and weighs many possible causes.
 new_slug: funding-round-multiple-analyst
 name: Funding round multiple analyst
-summary: Give it a software company. Get how its value multiple changed across
-  funding rounds and what drove the shift.
+summary: Find out why a software company's funding round multiple fell or rose. Give it a company name. You get each round's ARR multiple and the causes.
 job: money-and-investing
 headline: Funding round multiple analyst
-subhead: A look at how a software company's valuation multiple changed from
-  round to round, and why. You see if the drop or rise came from the market,
-  slower growth, a new story or the competition.
+subhead: A look at how a software company's valuation multiple changed from round to round, and why. You see if the drop or rise came from the market, slower growth, a new story or the competition.
 explain: |
   A look at how a software company's valuation multiple changed from round to round, and why. You see if the drop or rise came from the market, slower growth, a new story or the competition.
 
@@ -18,6 +15,10 @@ when:
   - You are comparing a startup to peers at the same stage.
   - You are checking whether a down round was market or company driven.
   - You need a short valuation story for a memo.
+not_for:
+  - The company is public. Use a public comps analysis, or ask a finance person for a stock multiple review.
+  - The company has no revenue yet. A revenue multiple does not fit, so use a simpler check of the team, market and cash needs.
+  - You have only one funding round. You can compare it to the market median, but you cannot see a change between rounds.
 you_give:
   - Company name
   - Rounds to include (optional)
@@ -30,8 +31,30 @@ you_get:
   - Chart and short explanation
   - Notes on estimated figures
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web.
+  - Open Claude, ChatGPT or Gemini with web search turned on. Paste in the skill text.
+  - Type the company name. Add rounds, peers or revenue figures you trust if you have them (optional).
+  - Let your AI search for each round and its revenue. Charts need a chat that can draw them.
+  - Check which revenue figures are marked as estimates. Replace any you know are wrong and ask it to run again.
+  - Read the cause table and the short summary. Copy the parts you need into your memo.
+output_sample:
+  input:
+    - Your company name
+    - Rounds to include (optional)
+    - Peers to compare (optional)
+    - Revenue figures you trust (optional)
+  prerequisites:
+    - An AI that can search the web
+    - An AI that can draw charts in chat (optional, for the visuals)
+  output:
+    - name: Round data
+      contains: Date, amount raised, valuation and lead investor for each funding round, with estimated figures marked.
+    - name: ARR multiple per round
+      contains: Valuation divided by annual recurring revenue at each round, plus the change from one round to the next.
+    - name: Market comparison
+      contains: How each round's multiple sits against typical private software multiples for the same date.
+    - name: Cause table
+      contains: "Each cause rated as primary, contributing or not applicable: rates, slower growth, story, rivals and investor demand."
+    - name: Charts
+      contains: Metric cards, a multiple line chart, a bar chart of valuation, ARR and multiple change, and a peer comparison.
+    - name: Written summary
+      contains: A one-line verdict, the main cause, the story premium or discount, peer context and what must be true for the multiple to rise.

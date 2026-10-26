@@ -1,6 +1,6 @@
 slug: explain-a-warehouse-stock-count-variance
 name: Explain a warehouse stock count variance
-summary: Share the source files. Get a reconciled stock variance table, evidence gaps and review brief.
+summary: "Explain why a warehouse stock count differs from the system. Get a variance table that keeps timing, units and count errors apart, plus an owner brief."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,9 +8,9 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
   - type: spreadsheet
+    required: true
+  - type: brief
     required: false
   - type: question
     required: false
@@ -22,9 +22,9 @@ uses:
   - stakeholder-update-writer
 steps:
   - uses: spreadsheet-checker
-    note: Reconcile count quantities to the snapshot and supplied intervening movements; inspect duplicate locations, item IDs and unit mismatches. Preserve original counts.
+    note: "Work out expected quantity from the snapshot and movements, flag duplicate locations, duplicate item IDs and unit mismatches, and class each gap. Keep the originals. Pass the variance table and evidence gaps to step 2."
   - uses: stakeholder-update-writer
-    note: Draft a warehouse owner review brief of verified variances, alternative explanations and missing evidence; no inventory adjustment is performed.
+    note: "Take step 1's findings report and variance table, plus any explanations you were given, and write a brief for the warehouse owner with verified gaps, other possible explanations, missing evidence and decisions needed. State that no stock adjustment was made."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

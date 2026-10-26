@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans a campaign from set frameworks.
 new_slug: tiktok-shop-ad-planner
 name: TikTok Shop ad planner
-summary: Tell it your products and budget. Get a plan for shopping ads, video
-  ads, bids and tracking.
+summary: "Plan your TikTok Shop ads: give it your products, margins and budget. You get ad types, bids, audiences and tracking in one plan."
 job: plan-ad-tests
 headline: TikTok Shop ad planner
-subhead: A plan for advertising your products on TikTok Shop with a budget you
-  can defend. You get which ad types to run, how to set bids, and how to measure
-  what works.
+subhead: A plan for advertising your products on TikTok Shop with a budget you can defend. You get which ad types to run, how to set bids, and how to measure what works.
 explain: |
   A plan for advertising your products on TikTok Shop with a budget you can defend. You get which ad types to run, how to set bids, and how to measure what works.
 
@@ -18,6 +15,10 @@ when:
   - Your return on ad spend is low and you do not know which lever to pull.
   - A winning campaign needs to go from $500 to $2,000 a day.
   - You want to compare video ads with live shopping ads.
+not_for:
+  - "You have no TikTok Shop listings yet: set up your shop first, then come back for a TikTok Shop ad plan."
+  - "You have no margin or cost data: work out your profit per sale first, with a simple spreadsheet or your accountant."
+  - "You want the ads built and run for you: this plan is advice only, so hire a TikTok ads specialist or use the Nexscope paid platform."
 you_give:
   - Your products and prices
   - Margins and target return
@@ -30,7 +31,37 @@ you_get:
   - A tracking list
   - A scaling schedule
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Add your products and prices, your margins, and your daily or monthly budget.
+  - Paste your current ad results if you have them (optional).
+  - Ask for a TikTok Shop ad plan.
+  - Check the budget and return figures. They are starting points, so compare them with your own numbers before you spend.
+  - Set up the campaigns in TikTok Shop Ads Manager and follow the weekly review list.
+output_sample:
+  input:
+    - Your products and prices
+    - Your margins and target return on ad spend
+    - Your daily or monthly ad budget
+    - Your current ad results (optional)
+  prerequisites:
+    - A TikTok Shop with products listed
+    - Your cost and margin figures
+  output:
+    - name: TikTok Shop Advertising Strategy
+      contains: Your campaign goal, daily budget and target return, shown as a header for the whole plan.
+    - name: Campaign Structure & Strategy
+      contains: A table of product, video and live shopping campaigns with goal, budget, audience and bid method.
+    - name: Ad Creative Strategy
+      contains: What to show in each ad type, how to open the video, and what to test.
+    - name: Targeting Strategy
+      contains: Who to reach first, and the order to widen your audiences.
+    - name: Bidding & Budget Strategy
+      contains: How to start bids, set budgets and raise spend in steps.
+    - name: Performance Tracking
+      contains: The numbers to watch and how often to check and adjust.
+    - name: Creative Testing Plan
+      contains: A month by month checklist of ad tests to run.
+    - name: Success Metrics & Goals
+      contains: 30 day targets and scaling milestones for the months after.
+    - name: Next Actions
+      contains: A short checklist to set up your account, build ads and start reviews.

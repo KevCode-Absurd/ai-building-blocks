@@ -1,0 +1,43 @@
+slug: agency-real-estate-buyer-seller
+name: Real Estate Buyer & Seller agent
+summary: "Buying or selling a home? Get a dated checklist of documents, deadlines and decisions from offer to closing, plus questions for your agent."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+  - type: document
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/real-estate-buyer-seller.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/real-estate-buyer-seller.md
+  licence: MIT
+  original_name: Real Estate Buyer & Seller
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 00e2f54e76be38c85c4eb406135a0944a3f610d287e6747fbfac37a12c82920a
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Real Estate Buyer & Seller
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Real Estate Buyer & Seller
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/real-estate-buyer-seller.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

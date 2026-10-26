@@ -1,19 +1,26 @@
 new_slug: weekly-product-feedback-triager
 name: Weekly product feedback triager
-summary: Give it each week's feedback. Get every request counted, ruled yes, later or no, and a roadmap change to approve.
+summary: "Triage product feedback every week. Each request is counted by different people and ruled yes, later or no, with a roadmap change for you to approve."
 job: build-product
 thinking: medium
 thinking_why: It runs up to five skills and counts requests across weeks, but each step is plain reading and sorting. A mid-range model is enough.
 headline: Weekly product feedback triager
 subhead: Give it this week's feedback and your roadmap. It adds each request to a running tally, rules yes, later or no, looks into lost new users before adding anything, and hands back a roadmap change and reply drafts for you to approve.
 explain: |
-  Feedback piles up fast, and the loudest voice wins. A request that came from five people over three months looks like five small asks. A feature that is easy to build gets a yes, and the roadmap fills with things that cost more than anyone counted.
+  Product feedback piles up fast, and the loudest voice wins. A request that came from five people over three months looks like five small asks. A feature that is easy to build gets a yes, and the roadmap fills with things that cost more than anyone counted.
 
   This agent keeps the count for you. Each week it adds new feedback to a running tally, counts different people instead of messages, and rules each request yes, later or no against your product aim. If new users are dropping off, it looks into that first, because a new feature rarely helps people who leave early. If the yes list is too long for one cycle, it scores and ranks it. It never edits your roadmap or replies to anyone on its own. You get one proposed change and short reply drafts to approve.
 when:
   - Feedback, support notes and requests pile up and you want the same fair sort every week.
   - The same request keeps coming back and you want to know how many different people asked.
   - Sign-ups look fine but fewer new people stay, and you want that checked before you build more.
+  - A big customer asks for a feature and you need a fair, written reason to say yes, later or no.
+not_for:
+  - You have one feature decision to make. Use the Feature request screener on its own.
+  - You have no written product aim and don't want to write one. Every ruling depends on it.
+  - You only want to know why new users leave. Use the New user drop-off finder.
+  - You need a polished roadmap story for your team or customers. Use the Roadmap update writer after you approve the change.
+  - You get a handful of messages a month. A weekly tally adds more work than it saves.
 you_give:
   - This week's feedback, with who said it and the date
   - Your current roadmap and how much room the next cycle has
@@ -27,9 +34,34 @@ you_get:
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to triage this week's feedback.
   - Put the week's feedback and your roadmap in one folder, or attach them in the chat.
-  - The first time, give it your product aim. It saves that and keeps the tally in a feedback folder.
+  - The first time, give it your product aim. It saves that and keeps the tally in a feedback folder. In a plain chat with no files, paste the tally it gave you last week.
+  - Starting from nothing? Paste your last few months of feedback to seed the tally. If you have none, it starts a new tally this week.
   - Read the rulings and the roadmap change. Say yes to the lines you agree with, and send the replies yourself or ask it to prepare them.
   - Run it again next Monday. It adds to the same tally.
+output_sample:
+  input:
+    - This week's feedback, with who said it and the date
+    - Your current roadmap and the room in the next cycle
+    - Your product aim, the first time only
+    - This week's product numbers (optional)
+  prerequisites:
+    - An AI that can save files in a folder, such as Claude Code, to keep the tally between weeks
+    - "Your product aim written down: what the product is for and who it is not for"
+  output:
+    - name: This week
+      contains: One line with new items, repeats and how many rulings changed.
+    - name: Path taken
+      contains: Whether it only screened requests or looked into lost new users first, and why.
+    - name: Rulings
+      contains: Each request with yes, later or no, how many different people asked and one reason.
+    - name: Roadmap change to approve
+      contains: Each add, move or cut, with its reason and the step that proposed it.
+    - name: Reply drafts
+      contains: A short reply for each request that earned one, with no promised date.
+    - name: Watch next week
+      contains: One to three requests or numbers that decide next week's path.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Load the memory
     text: Reads the tally, your product aim, last week's numbers and every earlier ruling from the feedback folder.
@@ -97,3 +129,10 @@ works_best_with:
   inputs:
     - Your last three months of requests, to start the tally
     - The commitments already made to customers
+terms:
+  - term: Tally
+    meaning: A running list of every request, with how many different people asked and when.
+  - term: Product aim
+    meaning: One short note on what the product is for and who it is not for. Every ruling is checked against it.
+  - term: Ruling
+    meaning: The decision on one request. Yes means it goes on the roadmap, later means it waits, no means it is not for this product.

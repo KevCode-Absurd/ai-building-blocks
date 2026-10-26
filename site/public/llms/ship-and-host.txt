@@ -1,96 +1,97 @@
 # Ship and host your app: AI Blocks
 
-> 92 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 93 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [App update health checker](https://useaiblocks.com/skills/app-update-health-checker): Name your Expo app. Get crash rates, installs and update sizes for each published update.
-- [AWS architecture designer](https://useaiblocks.com/skills/aws-architecture-designer): Describe your app. Get an AWS design with serverless parts, setup templates and cost cuts.
-- [AWS architecture review](https://useaiblocks.com/skills/copilot-aws-well-architected-review): Share your AWS design. Get architecture gaps and proposed fixes against AWS workload guidance.
-- [AWS resource cost reviewer](https://useaiblocks.com/skills/copilot-aws-cost-optimize): Share your AWS setup. Get cost findings and proposed fixes tied to the resources your app uses.
-- [AWS service health investigator](https://useaiblocks.com/skills/copilot-aws-resource-health-diagnose): Share your AWS resources and symptoms. Get health findings, log evidence and a recovery plan.
-- [Azure architecture designer](https://useaiblocks.com/skills/azure-architecture-designer): Describe your app. Get an Azure design with setup templates, a pipeline and cost cuts.
-- [Azure architecture review](https://useaiblocks.com/skills/copilot-azure-well-architected-review): Share your Azure design. Get architecture gaps and proposed fixes against Azure workload guidance.
-- [Azure least access role picker](https://useaiblocks.com/skills/copilot-azure-role-selector): Describe what an identity must do. Get the narrow Azure role that fits, with reasons.
+- [AWS architecture designer](https://useaiblocks.com/skills/aws-architecture-designer): Describe your app, scale and budget. Get an AWS design, setup code, cost estimates and a path to test and deploy.
+- [AWS architecture reviewer](https://useaiblocks.com/skills/copilot-aws-well-architected-review): Review your AWS setup for gaps in security, reliability and cost. Get an AWS Well-Architected review with fixes, then GitHub issues to track them.
+- [AWS cost and resilience reviewer](https://useaiblocks.com/workflows/review-aws-cost-and-resilience): Share AWS resource details, bills and architecture. Get savings options, workload risks, change priorities and a rollback plan.
+- [AWS cost waste finder](https://useaiblocks.com/skills/cloud-bill-waste-finder): Find idle servers, loose disks and other AWS waste, with a ranked list of fixes and what each could save you every month.
+- [AWS incident investigation planner](https://useaiblocks.com/workflows/investigate-an-aws-service-incident): Share the incident time, AWS resources and logs or access. Get findings tied to evidence, a recovery plan and an incident report.
+- [AWS resource cost reviewer](https://useaiblocks.com/skills/copilot-aws-cost-optimize): Find where your AWS setup wastes money. Get an AWS cost optimization review with fixes, saved as GitHub issues you can track.
+- [AWS service health investigator](https://useaiblocks.com/skills/copilot-aws-resource-health-diagnose): Check an AWS resource's health from its CloudWatch logs and metrics. Get the issues found, their causes and a step-by-step fix plan.
+- [Azure access role picker](https://useaiblocks.com/skills/copilot-azure-role-selector): Pick the narrowest Azure role for a person, group or app. Get the role, the scope, the CLI command and a Bicep snippet to assign it.
+- [Azure architecture reviewer](https://useaiblocks.com/skills/copilot-azure-well-architected-review): Review your Azure setup against the five Well-Architected pillars. Get risk-ranked findings, fixes, and GitHub issues you can track.
+- [Azure deployment access reviewer](https://useaiblocks.com/workflows/check-azure-access-before-deploy): Match Azure access to the task, check a proposed Bicep deployment and plan rollout and rollback before release.
 - [Azure price estimate researcher](https://useaiblocks.com/skills/copilot-azure-pricing): Name the Azure services you need. Get current retail prices and an estimate with its assumptions shown.
-- [Azure resource cost reviewer](https://useaiblocks.com/skills/copilot-az-cost-optimize): Share your Azure setup. Get waste findings and proposed fixes tied to your app's resources.
-- [Azure resource relationship mapper](https://useaiblocks.com/skills/copilot-azure-resource-visualizer): Share your Azure resource group. Get a diagram of the resources and how they connect.
-- [Azure service health investigator](https://useaiblocks.com/skills/copilot-azure-resource-health-diagnose): Share your Azure resources and symptoms. Get health findings, log evidence and a recovery plan.
-- [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight): Share your Bicep deployment. Get syntax, permission and proposed-change checks before it goes live.
-- [BigQuery pipeline cost and reliability review](https://useaiblocks.com/skills/copilot-bigquery-pipeline-audit): Share your Python data pipeline. Get costly queries, repeat-run risks and failure cases with code references.
-- [Build and release pipeline setter](https://useaiblocks.com/skills/ci-cd-pipeline-setup): Describe your project. Get a CI/CD pipeline that builds, tests and ships across environments.
-- [Build pipeline setter](https://useaiblocks.com/skills/build-pipeline-setter): Describe how you ship. Get automatic checks and a deploy pipeline so bad changes never reach users.
-- [Build pipeline writer](https://useaiblocks.com/skills/build-pipeline-writer): Point it at your project. Get a CI/CD pipeline file for your stack with test and deploy stages.
-- [Changelog entry writer](https://useaiblocks.com/skills/changelog-entry-writer): Give it a commit range or pull request. Get a clean changelog entry grouped into added, changed and fixed.
-- [Check a release and its docs](https://useaiblocks.com/workflows/check-a-release-and-its-docs): Share your change and release plan. Get test gaps, stale docs and a rollout plan with rollback checks.
-- [Check Azure access before deploy](https://useaiblocks.com/workflows/check-azure-access-before-deploy): Share a Bicep change and access needs. Get least-access role choices and checks of the proposed deployment.
-- [Cloud bill waste finder](https://useaiblocks.com/skills/cloud-bill-waste-finder): Point it at your AWS account. Get idle and unused resources listed, with the savings for each fix.
-- [Cloud GPU job runner](https://useaiblocks.com/skills/cloud-gpu-job-runner): Give it your Python code. Get it running on rented GPUs, or live as a web API, with no server to manage.
-- [Cloud monitoring setter](https://useaiblocks.com/skills/cloud-monitoring-setter): Name your app and cloud. Get metrics, logs, traces and alerts set up to see health in real time.
-- [Cloud setup coder](https://useaiblocks.com/skills/cloud-setup-coder): Describe the cloud setup you need. Get Terraform, Pulumi or CloudFormation code that builds it the same way every time.
-- [Cloudflare publisher](https://useaiblocks.com/skills/cloudflare-publisher): Point it at your project. Get it live on Cloudflare, with the link to open.
-- [CloudWatch incident evidence collector](https://useaiblocks.com/skills/copilot-aws-cloudwatch-investigation): Share an AWS incident and time window. Get useful log queries, deployment links and the likely affected services.
-- [Codespaces startup and cost reviewer](https://useaiblocks.com/skills/copilot-github-codespaces-efficiency): Share your dev container setup. Get faster startup and ways to reduce idle costs and repeated setup.
-- [Commit and pull request sender](https://useaiblocks.com/skills/commit-and-pull-request-sender): Say the word. Get your changes committed, pushed and opened as a GitHub pull request in one go.
-- [Cut CI cost without weakening checks](https://useaiblocks.com/workflows/cut-ci-cost-without-weakening-checks): Share your GitHub workflows. Get cost savings, permission fixes and runtime upgrades that preserve the build checks.
-- [Database backup setter](https://useaiblocks.com/skills/database-backup-setter): Name your database. Get full, incremental and point-in-time backups set up and tested.
-- [Deploy verifier](https://useaiblocks.com/skills/deploy-verifier): Run it before you deploy. Get silent failure modes checked, then proof that the live version is the new one.
-- [Docker Compose setter](https://useaiblocks.com/skills/docker-compose-setter): Describe your app services. Get a Docker Compose setup with networks, volumes and settings.
-- [Docker setup builder](https://useaiblocks.com/skills/docker-setup-builder): Point it at your app. Get a lean, safe Dockerfile and compose file that run your project.
-- [Domain and DNS planner](https://useaiblocks.com/skills/domain-and-dns-planner): List your domains and sites. Get a DNS layout, redirect rules and a plan for unused names.
-- [Domain and redirect layout planner](https://useaiblocks.com/prompts/domain-redirect-layout-planner): Paste your domains and what each is for. Get the main address, redirects and a plan for names you do not use.
-- [Error budget planner](https://useaiblocks.com/skills/error-budget-planner): Name your service. Get service level targets, error budgets and alert rules that match what users feel.
-- [Expo build workflow writer](https://useaiblocks.com/skills/expo-build-workflow-writer): Say how you want your app built and released. Get a working EAS workflow file that does it.
-- [Feature flag planner](https://useaiblocks.com/skills/feature-flag-planner): Say what you ship. Get flags with rollout steps, kill switches and a plan to remove them later.
-- [GitHub Actions runtime upgrade helper](https://useaiblocks.com/skills/copilot-github-actions-runtime-upgrade-conventions): Share your Actions workflows. Get supported action versions while keeping the build's behavior intact.
-- [GitHub build cost reviewer](https://useaiblocks.com/skills/copilot-github-actions-efficiency): Share your Actions workflows. Get wasted build minutes, slow jobs and ways to cut repeat work.
-- [Google Cloud architect](https://useaiblocks.com/skills/google-cloud-architect): Describe your app. Get a Google Cloud design with services, cost estimate and deploy steps.
-- [Helm chart builder](https://useaiblocks.com/skills/helm-chart-builder): Describe your service. Get a Helm chart for Kubernetes with sensible values, checks and safe defaults.
-- [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem): Share an outage timeline and evidence. Get a blameless report with causes, follow-up owners and unresolved facts.
-- [Investigate an AWS service incident](https://useaiblocks.com/workflows/investigate-an-aws-service-incident): Share an incident window and AWS resources. Get log evidence, a recovery plan and a learning report.
+- [Azure resource cost reviewer](https://useaiblocks.com/skills/copilot-az-cost-optimize): Share Azure files and resources. Get cost findings and proposed fixes ranked by score. GitHub issues are optional and need approval.
+- [Azure resource costs and resilience reviewer](https://useaiblocks.com/workflows/review-azure-cost-and-resilience): Share Azure resources, bills and workload needs. Get a resource map, current price estimates, savings options and design risks.
+- [Azure resource relationship mapper](https://useaiblocks.com/skills/copilot-azure-resource-visualizer): Get an Azure architecture diagram of your resource group, with each resource and how they connect. Needs read access to Azure.
+- [Azure service health investigator](https://useaiblocks.com/skills/copilot-azure-resource-health-diagnose): Find out why an Azure resource is unhealthy. Give it the resource name and symptoms. You get log findings and a fix plan by priority.
+- [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight): Check your Bicep files before you deploy to Azure. Get syntax checks, a preview of changes and a permission check in one report.
+- [BigQuery cost and reliability reviewer](https://useaiblocks.com/skills/copilot-bigquery-pipeline-audit): Check your BigQuery pipeline for cost risks before you run it. Get a pass or fail report with the exact functions to fix.
+- [Build pipeline writer](https://useaiblocks.com/skills/build-pipeline-writer): Turn project files into starter build steps for GitHub Actions or GitLab CI, with checks to review.
+- [Changelog entry writer](https://useaiblocks.com/skills/changelog-entry-writer): Share a commit range or pull request. Get a release entry grouped by what changed.
+- [CI/CD pipeline builder](https://useaiblocks.com/skills/ci-cd-pipeline-setup): Describe your project. Get a CI/CD pipeline that builds, tests and ships across environments.
+- [Cloud cost analyst](https://useaiblocks.com/agents/agency-engineering-finops-engineer): Find where your cloud bill goes and what to cut safely. Get spend by owner, ranked savings with their risk, and what to commit to last.
+- [Cloud GPU job runner](https://useaiblocks.com/skills/cloud-gpu-job-runner): Run your Python code on rented GPUs or put it online as a web API, with no server to manage. Pay by the second and scale to zero.
+- [Cloud infrastructure code writer](https://useaiblocks.com/skills/cloud-setup-coder): Describe cloud resources and limits. Get Terraform, Pulumi or CloudFormation code, a review and state plan.
+- [Cloud monitoring planner](https://useaiblocks.com/skills/cloud-monitoring-setter): Share your app and cloud setup. Get a plan, dashboards and alert settings to track service health.
+- [Cloudflare deploy planner](https://useaiblocks.com/skills/cloudflare-publisher): Use your project to choose Cloudflare hosting and prepare deployment steps that require account access.
+- [CloudWatch incident evidence collector](https://useaiblocks.com/skills/copilot-aws-cloudwatch-investigation): Find out what broke and when. Get an AWS incident timeline, ready-to-run CloudWatch log queries and the deploy that may have caused it.
+- [Code release readiness checker](https://useaiblocks.com/skills/ship-readiness-gate): Run code checks before release. Get pass, fail and manual items, with blockers grouped by severity.
+- [Codespaces startup and cost reviewer](https://useaiblocks.com/skills/copilot-github-codespaces-efficiency): Find what slows your Codespaces startup and drives up spend. Get the top 3 fixes for your dev container, machine size, prebuilds and idle timeout.
+- [Commit and pull request sender](https://useaiblocks.com/skills/commit-and-pull-request-sender): With your explicit approval, turn git changes into a pushed commit and GitHub pull request.
+- [Database backup setup helper](https://useaiblocks.com/skills/database-backup-setter): Get database backup scripts, a schedule, a retention rule and a restore test for PostgreSQL, MySQL or MongoDB. Know your backups work before you need them.
+- [Database recovery planner](https://useaiblocks.com/agents/agency-engineering-database-reliability-engineer): Check that your database can be restored and will fail over safely. Get a backup test plan, a failover drill and a safe way to change tables.
+- [Deployment pipeline designer](https://useaiblocks.com/agents/agency-engineering-devops-automator): Turn manual deploys into an automated pipeline that tests, ships and rolls back, with alerts and a rollout order. Bring your stack and current steps.
+- [Docker Compose file writer](https://useaiblocks.com/skills/docker-compose-setter): Describe your app services and data needs. Get Compose files with networks, volumes, and health checks.
+- [Domain and redirect layout planner](https://useaiblocks.com/prompts/domain-redirect-layout-planner): Paste your domains and what each is for. Get a domain redirect plan: the main address, where each other name points, and what to do with spares.
+- [Expo app deployment engineer](https://useaiblocks.com/skills/mobile-app-release-shipper): Share your Expo app and release target. Configure builds, store submissions or web deployment, with version and status checks.
+- [Expo build workflow writer](https://useaiblocks.com/skills/expo-build-workflow-writer): Describe your Expo build and release steps. Get an EAS workflow YAML file to review and run.
+- [Expo update health checker](https://useaiblocks.com/skills/app-update-health-checker): Name an Expo update or channel. Get aggregate launch-failure, adoption and payload metrics through the signed-in EAS tools.
+- [Feature flag planner](https://useaiblocks.com/skills/feature-flag-planner): Plan a feature flag rollout in safe steps. Get flag types, a kill switch check, a ramp schedule and a clean-up plan for old flags.
+- [Firmware update recovery test planner](https://useaiblocks.com/workflows/firmware-update-recovery-rehearsal): Share your device and update design. Plan failure tests, review recovery evidence and prepare a gated rollout proposal.
+- [GitHub Actions runtime updater](https://useaiblocks.com/skills/copilot-github-actions-runtime-upgrade-conventions): Fix GitHub Actions runtime deprecation warnings. Give it your workflow files and get safe, pinned action versions that keep your build working.
+- [GitHub Actions workflow reviewer](https://useaiblocks.com/workflows/cut-ci-cost-without-weakening-checks): Review wasted build work, risky permissions and outdated action runtimes. Get proposed changes that keep the required checks intact.
+- [GitHub build cost reviewer](https://useaiblocks.com/skills/copilot-github-actions-efficiency): Find wasted build minutes in your GitHub Actions workflows. Get the top 3 fixes to cut repeat work, slow jobs and CI cost.
+- [Google Cloud architecture planner](https://useaiblocks.com/skills/google-cloud-architect): Share app needs, traffic, budget and constraints. It proposes services, estimates costs from stated assumptions and drafts deployment steps.
+- [Incident learning report writer](https://useaiblocks.com/skills/copilot-incident-postmortem): Write a blameless incident post-mortem from your outage timeline and evidence. Get root causes, action items with owners and open questions.
+- [Incident response coordinator](https://useaiblocks.com/agents/agency-engineering-incident-response-commander): Get a clear severity call, roles, update messages and a blameless post-mortem for a tech outage. Bring the timeline, alerts and who is on call.
+- [Infrastructure maintenance planner](https://useaiblocks.com/agents/agency-support-infrastructure-maintainer): Check your servers and cloud setup for gaps. Get alerts to set, backup and restore checks, patch and access fixes and a ranked to-do list.
 - [Kubernetes deployer](https://useaiblocks.com/skills/kubernetes-deployer): Give it your app. Get manifests, Helm charts and autoscaling so it runs on Kubernetes.
-- [Launch checklist runner](https://useaiblocks.com/skills/launch-checklist-runner): Say what you are releasing. Get a pre-launch checklist, a staged rollout and a rollback plan.
-- [Live release verification review](https://useaiblocks.com/skills/release-proof-checker): Share a deployed service. Check code, build results, database behavior and live routes before calling the release ready.
-- [MATLAB code sharer](https://useaiblocks.com/skills/matlab-code-sharer): Give it your MATLAB files. Get them uploaded to GitHub or MATLAB Drive, plus an Open in MATLAB Online link.
-- [MCP server publisher](https://useaiblocks.com/skills/mcp-server-publisher): Point it at your MCP server. Get it hosted, scaled and packaged so others can install it.
-- [Microcontroller code deployer](https://useaiblocks.com/skills/microcontroller-code-deployer): Give it MATLAB code and a chip. Get embedded code set up and tested on that hardware.
-- [Mobile app release shipper](https://useaiblocks.com/skills/mobile-app-release-shipper): Point it at your Expo app. Get iOS and Android builds made and sent to the app stores.
-- [Model launch engineer](https://useaiblocks.com/skills/model-launch-engineer): Give it a trained model. Get it running as a live service with an API and container.
-- [Monitoring planner](https://useaiblocks.com/skills/monitoring-planner): Describe your service. Get metrics, logs, traces, alerts and service targets that tell you when it hurts.
-- [Monitoring system planner](https://useaiblocks.com/skills/monitoring-system-planner): Describe your service. Get a plan for metrics, logs, traces, SLOs and alerts that you can build step by step.
-- [Monthly cloud and AI cost review](https://useaiblocks.com/agents/monthly-cloud-and-ai-bill-keeper): Share monthly cloud and AI bills. Find growing costs and waste, with spending limits to consider.
-- [Netlify publisher](https://useaiblocks.com/skills/netlify-publisher): Point it at your site. Get it live on Netlify as a preview or production deploy, with the link.
-- [Outage incident leader](https://useaiblocks.com/skills/outage-incident-leader): Give it an outage. Get severity, a timeline, roles and a blame-free review once it is fixed.
-- [Page speed gate builder](https://useaiblocks.com/skills/page-speed-gate-builder): Point it at your web app. Get a Lighthouse check in CI that blocks slow or weak pages.
-- [Plan a Qdrant model change](https://useaiblocks.com/workflows/plan-a-qdrant-model-change): Share your search setup and new model. Get a migration plan, relevance tests and monitoring before switching traffic.
-- [Pre-push repo cleaner](https://useaiblocks.com/skills/pre-push-repo-cleaner): Point it at your project. Get junk files, dead code and leaked secrets found and fixed before you publish.
-- [Production stability reviewer](https://useaiblocks.com/skills/production-stability-reviewer): Give it a service. Get weak spots found and fixes like timeouts, retries and circuit breakers, so outages stay small.
-- [Qdrant cluster capacity planner](https://useaiblocks.com/skills/copilot-qdrant-scaling): Share your data size and traffic. Get a scaling plan and the evidence needed before adding nodes.
-- [Qdrant embedding migration planner](https://useaiblocks.com/skills/copilot-qdrant-model-migration): Share your current and new models. Get a search migration plan with validation and rollback steps.
-- [Qdrant health monitoring planner](https://useaiblocks.com/skills/copilot-qdrant-monitoring): Share your Qdrant setup. Get useful health metrics, alerts and checks for slow or unhealthy search.
-- [Qdrant hosting option adviser](https://useaiblocks.com/skills/copilot-qdrant-deployment-options): Share your search workload. Get a comparison of local, Docker and cloud hosting that fits your needs.
-- [Qdrant search relevance investigator](https://useaiblocks.com/skills/copilot-qdrant-search-quality): Share queries and weak results. Get likely relevance problems and tests to compare proposed fixes.
-- [Qdrant search speed tuner](https://useaiblocks.com/skills/copilot-qdrant-performance-optimization): Share your search workload. Get index, query and hardware changes to test against a clear baseline.
-- [Qdrant version upgrade planner](https://useaiblocks.com/skills/copilot-qdrant-version-upgrade): Share your Qdrant version and setup. Get upgrade, backup and validation steps that protect availability.
-- [Release a new version and prove it is live](https://useaiblocks.com/workflows/release-a-new-version-and-prove-it-is-live): Give it your project. Get a version, changelog, go or no-go call and proof it is live.
-- [Release day rollback planner](https://useaiblocks.com/prompts/release-day-rollback-planner): Paste what you are releasing and where it runs. Get checks, a rollback plan and how to know it worked.
-- [Release manager](https://useaiblocks.com/agents/release-manager): Run it before each release. Get a go or no-go, version, changelog, rollback plan and a live check.
-- [Release preparer](https://useaiblocks.com/skills/release-preparer): Point it at your project. Get the version bumped, a changelog written and a tagged release ready to publish.
-- [Release readiness reviewer](https://useaiblocks.com/skills/release-readiness-reviewer): Point it at a release. Get a read-only report of real deploy risks: migrations, config, order and rollback.
-- [Reliability target setter](https://useaiblocks.com/skills/reliability-target-setter): Name your service. Get service level targets, error budgets and alerts to track them.
-- [Render publisher](https://useaiblocks.com/skills/render-publisher): Point it at your project. Get it deployed on Render, with a setup file and the link.
-- [Review AWS cost and resilience](https://useaiblocks.com/workflows/review-aws-cost-and-resilience): Share your AWS design and bills. Get resource savings weighed against workload risks before you change anything.
-- [Review Azure cost and resilience](https://useaiblocks.com/workflows/review-azure-cost-and-resilience): Share your Azure resources. Get a resource map, current price estimates and a risk-aware savings plan.
-- [Runbook writer](https://useaiblocks.com/skills/runbook-writer): Name a service. Get runbooks for deploy, incidents, maintenance and rollback, ready to edit.
-- [Safe release planner](https://useaiblocks.com/skills/safe-release-planner): Describe your release. Get a deploy plan with checks, rollback steps and how to know it worked.
-- [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan): Share a release or infrastructure change. Get preflight checks, rollout stages, health signals and a rollback plan.
-- [Service target planner](https://useaiblocks.com/skills/service-target-planner): Describe your service. Get service level targets, error budgets and alert rules that fit.
-- [Ship readiness gate](https://useaiblocks.com/skills/ship-readiness-gate): Before you release. Get a go or no-go from set checks, with the blockers listed.
-- [Site go-live runbook writer](https://useaiblocks.com/skills/site-go-live-runbook-writer): Tell it what you are launching. Get a go-live runbook with checks, DNS cutover steps, post-launch watching and a rollback plan.
-- [Terraform best-practice guide](https://useaiblocks.com/skills/terraform-best-practice-guide): Describe the cloud setup you need. Get Terraform or OpenTofu code with tested modules and CI steps.
-- [Terraform setup builder](https://useaiblocks.com/skills/terraform-setup-builder): Describe your cloud. Get Terraform modules with safe state, security checks and clean structure.
-- [Toolbox packager](https://useaiblocks.com/skills/toolbox-packager): Give it MATLAB code. Get a published toolbox file, built in checked stages from scope to release.
-- [Uptime and alert setup planner](https://useaiblocks.com/skills/uptime-and-alert-setup-planner): Describe your site. Get uptime checks, error tracking, targets, alert rules and an on-call plan that avoids alert fatigue.
-- [Vercel cost and speed auditor](https://useaiblocks.com/skills/vercel-cost-and-speed-auditor): Point it at a Vercel app. Get cost and speed problems found from real production metrics, with fixes.
-- [Vercel deployer](https://useaiblocks.com/skills/vercel-deployer): Say "deploy my app". Get it live on Vercel and a link you can share.
+- [Launch checklist runner](https://useaiblocks.com/skills/launch-checklist-runner): Use this launch checklist to get a pre-launch checklist, a staged rollout plan and a rollback plan for your release before you ship to production.
+- [Live software release reviewer](https://useaiblocks.com/skills/release-proof-checker): Share a deployed service. Check code, build results, database behavior and live routes before calling the release ready.
+- [MATLAB code sharer](https://useaiblocks.com/skills/matlab-code-sharer): Share MATLAB files through GitHub, MATLAB Drive or File Exchange. Get upload help and an Open in MATLAB Online link.
+- [MATLAB embedded code deployer](https://useaiblocks.com/skills/microcontroller-code-deployer): Share MATLAB code, a target board and limits. Configure embedded C or C++, then verify on host and hardware when available.
+- [MATLAB toolbox packager](https://useaiblocks.com/skills/toolbox-packager): Turn your MATLAB code into an installable toolbox file. Your AI guides you through eight checked stages, from scope to release.
+- [MCP server publisher](https://useaiblocks.com/skills/mcp-server-publisher): Share your server and release target. Deploy or package it with rollout checks, install instructions and version notes.
+- [Mobile app release planner](https://useaiblocks.com/agents/agency-engineering-mobile-release-engineer): Plan your iOS or Android app release. Get a signing check, a go or no-go list, a staged rollout and a recovery plan before you submit to the store.
+- [Model launch engineer](https://useaiblocks.com/skills/model-launch-engineer): Build API code, Docker files, and launch steps from your trained model and hosting choice.
+- [Monitoring dashboard and alert designer](https://useaiblocks.com/skills/monitoring-planner): Share your service and alert rules. Build dashboard specifications, review noisy alerts and draft monitoring settings to test.
+- [Monitoring system planner](https://useaiblocks.com/skills/monitoring-system-planner): Describe your service. Get a plan for metrics, logs, traces, SLOs and alerts to build step by step.
+- [Netlify publisher](https://useaiblocks.com/skills/netlify-publisher): Share the web project and target Netlify site. Check build settings, deploy a preview or production version and return the verified link.
+- [Outage incident leader](https://useaiblocks.com/skills/outage-incident-leader): Run your outage with a clear plan: score how bad it is, get update templates, build a timeline, and write a blame-free incident review.
+- [Production stability reviewer](https://useaiblocks.com/skills/production-stability-reviewer): Review a service with stability patterns. Get risks to investigate and options such as timeouts or health checks.
+- [Qdrant cluster capacity planner](https://useaiblocks.com/skills/copilot-qdrant-scaling): Get a Qdrant scaling plan: how much RAM or how many nodes you need, in what order to add them, and what to measure first.
+- [Qdrant embedding migration planner](https://useaiblocks.com/skills/copilot-qdrant-model-migration): Switch your Qdrant search to a new embedding model with no downtime. Get a step-by-step migration plan with checks and a rollback.
+- [Qdrant health monitoring planner](https://useaiblocks.com/skills/copilot-qdrant-monitoring): Get a Qdrant monitoring plan: what to watch, which alerts to set, and how to find why search is slow or memory keeps growing.
+- [Qdrant hosting option adviser](https://useaiblocks.com/skills/copilot-qdrant-deployment-options): Choose where to run Qdrant. Get a pick between local mode, Docker, Qdrant Cloud or EDGE, with a comparison table and the main risk.
+- [Qdrant model migration and search-test planner](https://useaiblocks.com/workflows/plan-a-qdrant-model-change): Share your current search setup, new model and query examples. Get a migration plan, relevance checks, monitoring and rollback gates.
+- [Qdrant search relevance investigator](https://useaiblocks.com/skills/copilot-qdrant-search-quality): Find why Qdrant search returns wrong or missing results. Get ranked causes, one test for each and the fixes to try in order.
+- [Qdrant search speed tuner](https://useaiblocks.com/skills/copilot-qdrant-performance-optimization): Get a ranked list of Qdrant settings to change for faster search, faster uploads or lower memory, each with a test to run first.
+- [Qdrant version upgrade planner](https://useaiblocks.com/skills/copilot-qdrant-version-upgrade): Share your Qdrant version and setup. Get a staged upgrade, backup and validation plan, with availability risks noted.
+- [Quarkus native build troubleshooter](https://useaiblocks.com/skills/prepare-a-quarkus-native-build): Share your Quarkus version, target and build log. Get compatible fixes and artifact checks.
+- [Release day rollback planner](https://useaiblocks.com/prompts/release-day-rollback-planner): Plan a safe release before you ship. Paste what you are releasing and where it runs. Get checks, steps, a rollback plan and a way to confirm it worked.
+- [Release readiness and live version checker](https://useaiblocks.com/skills/deploy-verifier): Check common blockers before a release. Then compare the live version with the one you meant to ship.
+- [Release readiness reviewer](https://useaiblocks.com/skills/release-readiness-reviewer): Share a release or diff. Get a read-only report of migration, config, order and rollback risks to check.
+- [Release safety planner](https://useaiblocks.com/skills/safe-release-planner): Get a safe deploy plan for your app: what to check first, the steps in order, how to roll back and how to know the release worked.
+- [Render publisher](https://useaiblocks.com/skills/render-publisher): Deploy your app to Render from a Git repo. Get a render.yaml setup file, a Blueprint link and a list of settings left to fill in.
+- [Runbook writer](https://useaiblocks.com/skills/runbook-writer): Build a runbook for your service with deploy, incident, maintenance and rollback sections. Name the service and get a markdown file to fill in.
+- [Service error budget planner](https://useaiblocks.com/skills/service-target-planner): Describe your service. Get targets from measured results, error budgets and alert rules.
+- [Service reliability target planner](https://useaiblocks.com/skills/reliability-target-setter): Use service goals and data to set targets, allowed failure shares, and draft alert rules.
+- [Service rollout and rollback planner](https://useaiblocks.com/skills/copilot-devops-rollout-plan): Plan a safe service rollout and rollback. Share your release or infrastructure change and get preflight checks, stages, health signals and a rollback plan.
+- [Site go-live runbook writer](https://useaiblocks.com/skills/site-go-live-runbook-writer): Write a site go-live runbook with launch checks, DNS cutover steps, post-launch watching and a rollback plan. Give it your scope, window and team.
+- [Site reliability engineer](https://useaiblocks.com/agents/agency-engineering-sre): Turn how your service fails into reliability goals, alert rules and recovery checks. Give it your service details and get a plan to review.
+- [Software release preparer](https://useaiblocks.com/skills/release-preparer): Share your project. Review a version and changelog proposal, then confirm file updates and a release tag.
+- [Software release readiness reviewer](https://useaiblocks.com/workflows/check-a-release-and-its-docs): Review missing tests and outdated docs, then plan release checks, rollout stages and a way to roll back.
+- [Software release verification coordinator](https://useaiblocks.com/agents/release-manager): Prepare a release and rollback plan, then check the actual live build. Keep blockers and deployment approval separate.
+- [System migration and rollback planner](https://useaiblocks.com/skills/zero-downtime-migration-planner): Turn system move details into phased plans, checks for breaking changes, and steps to undo each phase.
+- [Terraform code and test planner](https://useaiblocks.com/skills/terraform-best-practice-guide): Turn Terraform or OpenTofu project needs into code guidance, test plans, and automated check steps.
+- [Terraform setup builder](https://useaiblocks.com/skills/terraform-setup-builder): Describe your cloud setup. Get module, state and security review steps.
+- [Uptime and alert setup planner](https://useaiblocks.com/skills/uptime-and-alert-setup-planner): Share your system, service goals and on-call owners. Get a monitoring and alert plan to configure and verify.
+- [Vercel cost and speed auditor](https://useaiblocks.com/skills/vercel-cost-and-speed-auditor): Find what makes your Vercel app cost too much or load slowly, using real production numbers. Get a ranked list of issues with a fix for each.
+- [Vercel deployer](https://useaiblocks.com/skills/vercel-deployer): Deploy to Vercel with the target checked before a push, and see whether the result is preview or production.
 - [Vercel publisher](https://useaiblocks.com/skills/vercel-publisher): Say "deploy my app". Get it live on Vercel as a preview or production site, with the link.
-- [Version and changelog automator](https://useaiblocks.com/skills/version-and-changelog-automator): Point it at your repo. Get release numbers and a changelog worked out from your commits.
-- [Zero-downtime migration planner](https://useaiblocks.com/skills/zero-downtime-migration-planner): Name what you are moving. Get a zero-downtime plan with checks and a rollback for each step.
+- [Vercel release and deployment checker](https://useaiblocks.com/workflows/release-a-new-version-and-prove-it-is-live): Share your project, release access and approvals. Get a version, changelog, readiness decision and verified Vercel deployment when all gates pass.
+- [Version and release notes planner](https://useaiblocks.com/skills/version-and-changelog-automator): Use Git history and release rules to draft version changes, changelogs, and release tool settings.
+- [Website speed check builder](https://useaiblocks.com/skills/page-speed-gate-builder): Share your web app and speed targets. Add Lighthouse checks to your build, with reports for pages that miss the limits.

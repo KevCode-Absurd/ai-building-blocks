@@ -1,6 +1,6 @@
 new_slug: find-a-buyer-group-your-rivals-miss-and-brief-ads-for-it
 name: "Find a buyer group rivals miss and brief ads"
-summary: Give it your product and rivals. Get a buyer group they ignore, their own words and ad angles to test.
+summary: Find a buyer group your rivals miss. Give it your product and rivals. You get their own words, a half-page brief and ad angles to test.
 job: understand-customers
 thinking: high
 thinking_why: It runs four skills in a row and reads your pasted quotes for patterns. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your product looks like everyone else's and you need a group of buyers of your own before you write ads.
   - You sell in a crowded category and every rival's ad sounds the same.
   - You want a new market for an existing product, but have no proof it works for them.
+not_for:
+  - "You only want a map of who your rivals sell to: use the Job rival mapper."
+  - "You already know your buyer and only want the ad copy: use the Fact-based ad copy writer."
+  - "You have no product yet or no proof it helps anyone: talk to a few real buyers first, then come back."
 you_give:
   - Your product and the problem it solves
   - Three to five rivals, as names or Meta Ad Library links
@@ -32,6 +36,27 @@ how_to_use:
   - Paste ad notes, review stories and forum threads when it asks. It uses only what you paste, and says where each claim comes from.
   - When it pauses, spend an hour in the forums and review threads where the chosen group talks, and save the posts. Leave out usernames and links.
   - Check the group is one your product can truly help before you write ads.
+output_sample:
+  input:
+    - Your product and the problem it solves
+    - Three to five rivals, as names or Meta Ad Library links
+    - Amazon links to the top-reviewed rival product
+    - Who buys from you now, and their order values (optional)
+    - The posts and reviews you save in the forum hour
+  prerequisites:
+    - An AI that can read files, such as Claude Code or a Claude Project
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: "Step 1: Untapped avatar finder"
+      contains: Three or four overlooked buyer groups, a size check on each, the one picked and layers to test.
+    - name: "Step 2: Forum and review avatar digger"
+      contains: Search phrases, marked-up quotes and a one-page sketch of the group in their own words.
+    - name: "Step 3: Buyer brief writer"
+      contains: A half-page brief on how aware the group is and which force to work on.
+    - name: "Step 4: Ad angle planner"
+      contains: Angles to test, each with first words, when the product enters, the ask, length and how to argue.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Find the overlooked group
     text: Maps who your rivals sell to, finds groups nobody serves from review stories, checks their size on Reddit and picks one to sharpen.

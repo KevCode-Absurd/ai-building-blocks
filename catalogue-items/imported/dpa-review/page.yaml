@@ -2,39 +2,61 @@ thinking: high
 thinking_why: Reviewing from the wrong side flips every call.
 new_slug: dpa-review
 name: Data processing agreement reviewer
-summary: Give it a data processing agreement. Get each term checked, with edits
-  to ask for. First check, not legal advice.
+summary: Check a data processing agreement term by term. Get a memo with edits to ask for, matched to your playbook and privacy policy. A first check only.
 job: check-contracts
 headline: Data processing agreement reviewer
-subhead: Give it a data processing agreement. Get each term checked, with edits
-  to ask for. First check, not legal advice. Bring the DPA as a file, link or
-  pasted text. Use the result to plan your next step.
+subhead: Give it a data processing agreement, which is the contract that sets how one company handles personal data for another. It checks each term against your own playbook and your privacy policy. You get a memo with edits to ask for. It is a first check, not legal advice.
 explain: |
   A term-by-term review of a data processing agreement, with the edits to ask for. It is a first check and not legal advice.
 
   The first question is direction: are you the processor (reviewing a customer's DPA) or the controller (reviewing a vendor's)? The advice is nearly opposite for each, so the skill asks if it is unclear. It then compares each clause with your own playbook, which you set up in advance, and checks that the DPA matches what your privacy policy says. It looks at prior work on the same counterparty for risks already flagged. The output is a memo with suggested redlines. Jurisdiction rules depend on your setup.
 when:
-  - A customer sent their own DPA and you need to know what to push back on.
-  - You are about to sign a vendor's DPA.
-  - You want to check a DPA against your privacy policy.
-  - A legal team needs a first-pass memo before a deeper review.
+  - A customer sent you their own agreement and you need to know what to push back on.
+  - You are about to sign a vendor's agreement for handling personal data.
+  - You want to check an agreement against what your privacy policy says.
+  - A legal team wants a first-pass memo before a deeper review.
+not_for:
+  - "You need to review a contract that is not a data processing agreement: ask a lawyer, or use a general contract review step."
+  - "Your data subjects sit outside the places set in your playbook: ask a privacy lawyer for those rules."
+  - "You need legal advice or a final sign-off: have a qualified lawyer read the agreement before you sign."
 you_give:
-  - The DPA as a file, link or pasted text
-  - Whether you are the processor or controller
-  - Your DPA playbook set up in the plugin
+  - The data processing agreement, as a file, link or pasted text
+  - Whether you are the processor (you handle data for a customer) or the controller (you hire a vendor)
+  - Your saved DPA playbook, made with the setup-interview folder in this skill
   - Earlier reviews of the same party (optional)
 you_get:
-  - A term-by-term review memo
-  - Suggested redlines
-  - A consistency check with your privacy policy
+  - A memo that checks each term against your playbook
+  - Suggested redlines, which are wording changes to ask for
+  - A check that the agreement matches your privacy policy
   - Open points to raise with the other side
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your saved privacy setup notes and your
-    files.
-  - Where the skill points to /privacy-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Set up your DPA playbook first. Run the setup-interview folder in this skill so your positions are saved.
+  - Open your AI tool. It works best where it can read your saved setup notes and files.
+  - Paste the skill, then add the agreement as a file, link or pasted text.
+  - Say whether you are the processor or the controller. If you skip this, your AI will ask.
+  - Read the bottom line, then the term-by-term table and the redlines.
+  - Send the redlines to the other side only after a lawyer has looked at them.
+output_sample:
+  input:
+    - The data processing agreement, as a file, link or pasted text
+    - Whether you are the processor or the controller
+    - Your saved DPA playbook
+    - Earlier reviews of the same party (optional)
+  prerequisites:
+    - Your DPA playbook, saved through the setup interview
+    - An AI that can read your saved setup notes and files
+  output:
+    - name: Bottom line
+      contains: A short verdict on whether to sign, push back or escalate, based on your playbook.
+    - name: Term-by-term
+      contains: Each clause compared with your playbook position, with a rating and a note.
+    - name: Privacy policy consistency
+      contains: Where the agreement and your privacy policy say different things.
+    - name: Recommended redlines
+      contains: Suggested wording changes to ask the other side for.
+    - name: If they won't move
+      contains: Fallback positions and which points matter most if the other side refuses.
+    - name: International transfers note
+      contains: What to check on moving data across borders.
+    - name: Next steps
+      contains: A short list of choices for what to do with the review.

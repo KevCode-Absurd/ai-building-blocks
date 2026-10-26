@@ -1,6 +1,6 @@
 new_slug: dominant-emotion-finder
 name: "Dominant emotion finder"
-summary: "Paste your product and what you know of your buyer. Get the strongest feeling to write to and where it comes from."
+summary: "Find the dominant emotion your buyer already feels, so you know which feeling to write to. Give it your angle library and product facts."
 job: understand-customers
 thinking: medium
 thinking_why: "It weighs evidence for each feeling and chooses one, but the steps are fixed."
@@ -17,6 +17,10 @@ when:
   - "You are about to write a sales page, email series or ad set and do not know which feeling to lead with."
   - "Your copy lists benefits but does not seem to land."
   - "You have lots of customer words and need to know which feeling runs through them."
+not_for:
+  - "You have no customer words or research yet: build your research first with the Copy research file builder."
+  - "You already know the feeling and need a page plan: use the Sales letter outline planner."
+  - "You want to find ad angles from customer quotes, not one feeling: use the Shared want hook mapper."
 
 you_give:
   - "An angle library or a research file with its sources"
@@ -30,11 +34,34 @@ you_get:
   - "A persona update and a ranked angle list"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Say who the buyer is and what you sell in two lines."
-  - "Paste your angle library, plus any customer words with their dates."
-  - "Read the dominant emotion and check it against what you hear from real customers."
-  - "Ask the three questions it writes to a customer or a colleague before you lock the theme."
+  - Start a chat with your AI and paste in the skill, or open it if you added it.
+  - Say who your buyer is and what you sell, in two lines.
+  - Paste your angle library, plus any customer words with their dates.
+  - Read the dominant emotion. Check it against what real customers say.
+  - Ask the three test questions to a customer or colleague before you lock the theme.
+output_sample:
+  input:
+    - Your angle library or research file, with sources
+    - Your product facts (optional)
+    - A buyer persona (optional)
+    - Reviews, emails or call notes with dates (optional)
+  output:
+    - name: Dominant emotion
+      contains: One sentence naming what the buyer feels, about what, and the event behind it.
+    - name: Lived events
+      contains: A list of recent events in the buyer's life, each with a source, a feeling, a strength score and evidence.
+    - name: Product link
+      contains: Each product fact, why it matters, and what changes for the buyer.
+    - name: Runner-up
+      contains: The next strongest feeling and the reason it lost.
+    - name: Proposed theme
+      contains: One line theme plus three questions to test it on a customer or colleague.
+    - name: Persona update
+      contains: The feeling, what triggers it, and the words your buyer uses.
+    - name: Ranked angles
+      contains: Angles in order, each with its evidence and product link.
+    - name: Missing and checks missed
+      contains: Gaps in your inputs, and any checks the skill could not pass.
 
 how_it_works:
   - title: "Starts with the buyer"

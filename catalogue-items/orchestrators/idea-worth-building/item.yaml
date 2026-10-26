@@ -16,10 +16,10 @@ outputs:
 uses: [first-customer-group-picker, customer-interview-questions, customer-interview-request, customer-interview-notes, commitment-ask-planner, idea-evidence-review]
 steps:
   - {uses: first-customer-group-picker, note: "Slice the market until you have a who and a where you could reach this week. Pick the group to start with and say why."}
-  - {uses: customer-interview-questions, note: "For that group, write questions about their life and the last time the problem happened, never about the idea. Pick the big three unknowns and plan the scary question."}
-  - {uses: customer-interview-request, note: "Write the messages that get the first five to ten talks: warm intros first, then cold, kept casual, asking for help, not a sale."}
-  - {uses: customer-interview-notes, note: "After the talks, sort each set of notes into what they did, what it cost them and what they committed to. Flag compliments, vague claims and feature ideas as weak, with the follow-up you should have asked."}
-  - {uses: commitment-ask-planner, note: "For each person, plan the next step to ask for, in time, reputation or money, and mark anyone who is all praise and no commitment."}
+  - {uses: customer-interview-questions, note: "For that group, write questions about their life and the last time the problem happened, never about the idea. Pick the big three unknowns and plan the scary question. Hands on the question plan; step 4 checks what the talks answered against it."}
+  - {uses: customer-interview-request, note: "Write the messages that get the first five to ten talks: warm intros first, then cold, kept casual, asking for help, not a sale. Uses the group from step 1, not step 2's questions, and hands you messages to send before the talks."}
+  - {uses: customer-interview-notes, note: "Uses your own notes from the talks, not step 3's messages, and step 2's big three questions. Sort each set of notes into what they did, what it cost them and what they committed to. Flag compliments, vague claims and feature ideas as weak, with the follow-up you should have asked. Hands on the sorted notes."}
+  - {uses: commitment-ask-planner, note: "For each person, plan the next step to ask for, in time, reputation or money, and mark anyone who is all praise and no commitment. Hands on the ask plan, which step 6 reads as what people committed to."}
   - {uses: idea-evidence-review, note: "Set what you believed against what people did. End with keep going, change or stop, the reason, and the next three talks. Then close the run with a HAND-BACK SUMMARY: each step's file, any step not run and why, and every MISSING: line in one list."}
 origin: own
 version: 1.0.0

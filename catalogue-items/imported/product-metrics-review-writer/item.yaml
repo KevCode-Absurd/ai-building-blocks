@@ -10,6 +10,8 @@ level: intermediate
 inputs:
   - type: performance_sheet
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: audit_report
 uses: []

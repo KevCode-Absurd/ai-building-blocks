@@ -2,40 +2,64 @@ slug: copy-ai
 name: Copy.ai
 maker: Copy.ai
 url: https://www.copy.ai
-promise: "Set up repeat sales and marketing tasks for research, writing and record updates."
+promise: "Build repeatable sales and marketing workflows that research, write and update records."
 use_cases: [write-copy, automate]
 categories: [writing, marketing, automation]
 what_it_does:
-  - Chains AI steps into workflows for research, writing and updating records.
-  - Saves your brand voice and company facts so every draft starts informed.
-  - Keeps account and lead data in tables the workflows can read.
-  - Lets you chat with several AI models from one account.
-  - Connects to sales and marketing apps your team already uses.
+  - "Links AI steps into a workflow for a repeat job, such as an account plan or an SEO article (both named on copy.ai, checked 26 Oct 2026)."
+  - "Holds a Brand Voice, so drafts can follow your tone (checked 26 Oct 2026)."
+  - "Keeps account and lead data in Tables that workflows can read (checked 26 Oct 2026)."
+  - "Gives you a chat box for one-off tasks, with OpenAI, Anthropic and Gemini models on the Chat plan (checked 26 Oct 2026)."
+  - "Connects to sales and marketing apps. The site lists Salesforce, HubSpot, Gong, Zapier, Outreach and Salesloft (checked 26 Oct 2026)."
 benefits:
-  - "Reuse the same steps for a repeat sales or content process."
-  - Write outreach and content that already uses your company facts.
-  - Fill in lead and account details without copying between apps.
-  - Let people who are not technical run an AI workflow.
+  - "Run the same steps every time for a sales or content process you repeat."
+  - "Start each draft from your Brand Voice and your record data, with less copying between apps."
+  - "See the credits each run used in a side panel, so you can watch the cost."
+  - "Let people who do not code run an AI workflow."
 best_for:
-  - Sales and marketing teams with a process they repeat daily.
-  - "People who keep lead and customer records up to date."
+  - Sales and marketing teams with a process they repeat every day.
+  - People who keep lead and customer records up to date by hand.
   - Teams that want one place to try several AI models.
 not_for:
-  - Solo writers who want a quick draft. A chat assistant is simpler.
-  - Small teams, since the workflow plans start at US$1,000 a month.
+  - "Solo writers who want a quick draft. ChatGPT or Claude is simpler and does not need a workflow plan."
+  - "Small teams on a tight budget. Workflow plans start at US$1,000 a month billed yearly. Jasper is another writing tool to compare."
 pricing:
   model: subscription
   from: US$24 per month
-  note: The Chat plan is US$24 a month billed yearly, or US$29 billed monthly, for 5 seats. Workflow plans start at US$1,000 a month billed yearly. Enterprise is priced on request.
+  note: "Checked 26 Oct 2026. Chat is US$24 a month billed yearly (US$288), or US$29 billed monthly, for 5 seats. Workflow plans are billed yearly. Growth is US$1,000 a month for 75 seats and 20K workflow credits a month. Expansion is US$2,000 for 150 seats and 45K credits. Scale is US$3,000 for 200 seats and 75K credits. Enterprise has no listed price. Credits measure what a workflow run uses, and the cost per run depends on its steps."
 works_with:
   - Salesforce
   - HubSpot
   - Gong
   - zapier
+  - Outreach
+  - Salesloft
 runs_in: [web, api]
 blocks: []
 alternatives: [jasper, clay, gumloop, chatgpt]
-last_checked: 2026-10-21
+last_checked: 2026-10-26
+checked: 26 Oct 2026
+first_result:
+  - "Go to copy.ai and choose Try for free. The page does not say how long the trial lasts or if you need a card, so check before you sign up."
+  - "Pick a plan. Chat suits one-off writing. A workflow plan (Growth and up) suits a job you repeat."
+  - "On a workflow plan, connect the app that holds your records, such as HubSpot or Salesforce, and set up your Brand Voice."
+  - "Choose one repeat job, such as an account plan, and build it as a workflow of linked steps."
+  - "Run it on one record. Read the Credits used in the side panel and fix any weak step before you run a whole list."
+needs:
+  - "A Copy.ai account and a plan: Chat, Growth, Expansion, Scale or Enterprise."
+  - "One repeat job you can write as steps, with the input for each run, such as a lead record."
+  - "The app that holds your records, if you want the workflow to read or update them."
+  - "A short note on how your brand sounds, for the Brand Voice (optional)."
+example:
+  task: "One repeat job you now do by hand, such as an account plan or an SEO article."
+  cost: "Each run uses workflow credits. Growth includes 20K a month, Expansion 45K and Scale 75K. The cost of one run depends on its steps, and the side panel shows Credits used after each run. We did not find a price per run."
+  reply: "The result of the steps you built, such as research notes and a finished draft, or fields filled on a record. The pages we read show no sample run, so test with one record first."
+not_verified:
+  - "How long the free trial lasts, what it includes, and whether a card is needed."
+  - "Monthly billing for Growth, Expansion and Scale. The page shows yearly billing only."
+  - "What the Advanced features are, and what Enterprise adds beyond the list on the page."
+  - "Whether Brand Voice and Tables come with the Chat plan."
+  - "That you can save company facts for drafts. An earlier note here said so, but only Brand Voice is described on the page."
 sources:
   - https://www.copy.ai
   - https://www.copy.ai/prices

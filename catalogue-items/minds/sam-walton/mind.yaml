@@ -15,6 +15,29 @@ use_cases:
   - "Plan a visit to a rival's store or site and list what to copy"
   - "Turn a customer complaint into a fix and an honest apology"
   - "Make your team's work more fun with goals, scores and small wins"
+not_for:
+  - "You want a view on online shopping or anything after 1992: Walton died in 1992 and left no record on it, so use the Jeff Bezos mind or a person who knows your market."
+  - "You need legal, tax or personal money advice: ask a local accountant or adviser, not the Sam Walton mind."
+  - "You want to value a business or check its numbers in depth: use the Aswath Damodaran mind or the Benjamin Graham mind."
+output_sample:
+  input:
+    - Your business, shop or work, in a few lines
+    - The problem or choice you face now
+    - Your main costs and prices, if you know them (optional)
+    - What customers or staff have said to you (optional)
+  output:
+    - name: Customer and price check
+      contains: Whether your idea lets you charge the customer less, and which costs the customer does not see or care about.
+    - name: Cost and waste questions
+      contains: Questions on what you spend, where you could buy or deliver cheaper, and what to cut.
+    - name: Floor questions
+      contains: What to ask the people who serve customers every day, and what to ask customers before you leave.
+    - name: Where to compete
+      contains: Where big rivals are not looking, and which way the opposite direction might be for you.
+    - name: Team and service steps
+      contains: Ways to share information, praise staff, fix mistakes with customers and make the work fun.
+    - name: One thing to look at this week
+      contains: A single visit, walk or question to act on before you plan anything more.
 seats:
   - {seat: "Retail and thrift", asks: "Where are we spending a dollar the customer wouldn't want us to spend?"}
   - {seat: "The front line", asks: "What are the people who talk to customers every day telling us, and have we asked them?"}

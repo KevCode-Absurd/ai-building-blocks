@@ -1,6 +1,6 @@
 new_slug: make-a-marketing-image-and-shrink-it-for-the-web
 name: Make a marketing image and shrink it for the web
-summary: Say what the image is for. Get a prompt, the picture and a smaller file.
+summary: Make a marketing image and shrink it for the web. Say what it is for and get a prompt, the finished picture and a smaller file that loads fast.
 job: make-images
 thinking: low
 thinking_why: Three short, defined steps. A fast model is enough.
@@ -16,6 +16,10 @@ when:
   - You need a header image for a blog post or page.
   - You want a social graphic in the right size on the first try.
   - Your images are big and your page is slow.
+not_for:
+  - "You need final print artwork: use a designer, because this makes web images only."
+  - "You need an image full of text, like a poster or a price list: use a design tool that handles type well."
+  - "You only have a finished image to shrink: use the Image compressor on its own."
 you_give:
   - What the image is for and where it will appear
   - Your brand colours, style or logo (optional)
@@ -30,6 +34,24 @@ how_to_use:
   - Say what the image is for and where it goes. Add your brand style if you have one.
   - Pick the image service you have a key for.
   - Check the picture. Ask for a new one before you compress it.
+output_sample:
+  input:
+    - What the image is for and where it will appear
+    - Your brand colours, style or logo (optional)
+    - A creative brief with your goal, buyer and offer
+    - An image service you choose, with its API key
+  prerequisites:
+    - An API key for an image service, or a chat AI that can draw. This may cost money.
+    - An AI that can save files and run code to shrink the picture
+  output:
+    - name: Image plan (step-01-marketing-image-maker.md)
+      contains: The image prompt, the size and shape, and the file names.
+    - name: The picture (step-02-multi-provider-image-maker.md)
+      contains: The saved image, the service used and its size.
+    - name: Smaller file (step-03-image-compressor.md)
+      contains: The compressed WebP or PNG, the quality used, and the size before and after.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the image
     text: Says what the image is for and where it goes, picks how to make it, and writes the prompt with style, size and file names.

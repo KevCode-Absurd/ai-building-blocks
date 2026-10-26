@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sorts commits into a fixed format.
 new_slug: changelog-entry-writer
 name: Changelog entry writer
-summary: Give it a commit range or pull request. Get a clean changelog entry
-  grouped into added, changed and fixed.
+summary: Turn a commit range or pull request into a changelog entry grouped as added, changed and fixed, ready to paste into CHANGELOG.md.
 job: ship-and-host
 headline: Changelog entry writer
-subhead: A clean changelog entry you can paste into your file, grouped into
-  added, changed and fixed. Give it a commit range or a pull request and it
-  turns the raw history into what users and maintainers need to know.
+subhead: A clean changelog entry you can paste into your file, grouped into added, changed and fixed. Give it a commit range or a pull request and it turns the raw history into what users and maintainers need to know.
 explain: |
   A clean changelog entry you can paste into your file, grouped into added, changed and fixed. Give it a commit range or a pull request and it turns the raw history into what users and maintainers need to know.
 
@@ -18,6 +15,10 @@ when:
   - A pull request merged and users should hear about it.
   - You want release notes written from what actually changed.
   - Commit messages are messy and need turning into readable lines.
+not_for:
+  - "You only want a pull request description: write it by hand or ask your AI for a plain PR summary."
+  - "You only want one commit message: ask your AI to write that single line from the diff."
+  - "Your code is not in a git repository: write the notes by hand from your own list of changes."
 you_give:
   - A git repository
   - A commit range, branch or pull request number
@@ -28,8 +29,25 @@ you_get:
   - Short plain-language lines per change
   - Flags for anything odd in the history
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your git history.
+  - Open your AI in a tool that can read your git repository, such as Claude Code, Cursor, Gemini CLI or Codex CLI.
+  - Paste the skill, or tell your AI to follow it.
+  - Give it the commit range, branch or pull request number. If you give none, it uses the commits since the last version tag.
+  - Add the version number and date if you want a dated heading. Otherwise the heading says Unreleased.
+  - Check each line against the real changes. The skill does not write to your file.
+  - Paste the entry into CHANGELOG.md.
+output_sample:
+  input:
+    - Your git repository, with your AI able to read its history
+    - A commit range, branch or pull request number (optional, the last version tag is the default)
+    - The version number and date (optional, for a dated heading)
+  prerequisites:
+    - An AI that can run git commands and read your repository, such as Claude Code, Cursor, Gemini CLI or Codex CLI
+  output:
+    - name: Changelog entry
+      contains: One block in Keep a Changelog format, ready to paste into CHANGELOG.md after you check it.
+    - name: Added, Changed, Deprecated, Removed, Fixed, Security
+      contains: Short past-tense lines grouped by type of change, with empty groups left out.
+    - name: Heading
+      contains: Either Unreleased or the version and date you gave.
+    - name: Flags
+      contains: Suspicious commit text is quoted as data, and an unclear version, date or range is raised as a question.

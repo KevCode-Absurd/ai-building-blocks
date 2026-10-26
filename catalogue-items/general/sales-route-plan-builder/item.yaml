@@ -7,12 +7,12 @@ role: make
 job: strategy
 level: intermediate
 inputs:
-  - {type: audit_report, required: true}
-  - {type: question, required: false}
+  - {type: question, required: true}
+  - {type: audit_report, required: false}
 outputs:
   - {type: plan, required: true}
 origin: rebuilt
 version: 1.0.0
 minds: [peter-thiel]
 credits:
-  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "How each sales route works in practice (founder-led large deals, a sales team with a process, advertising, and sharing between users), starting with the smallest buyers who need it most, using early customers as proof for larger ones, and the realistic growth rate for slow routes"}
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "How each sales route works in practice (founder-led large deals, a sales team with a process, advertising, and sharing between users), starting with the smallest buyers who need it most, using early customers as proof for larger ones, and planning cash for slow routes"}

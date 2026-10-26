@@ -1,33 +1,26 @@
 slug: production-contribution-evidence-reviewer
 name: Production contribution evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+summary: See each product's profit per good unit after scrap, and whether your planned mix fits the bottleneck hours. Redone when yield or input price changes.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
-    required: true
+    required: false
+outputs: []
+needs_mode: manual
 uses:
   - connect-production-yield-to-mix-contribution
   - commodity-pass-through-cost-bridge
 steps:
   - uses: connect-production-yield-to-mix-contribution
-    note: Run the governing workflow when A measured yield, scrap recovery, input price or proposed product quantity changes.
+    note: Run the governing workflow when a measured yield, a scrap recovery, an input price or a planned product quantity changes. It hands back cost per good unit, product contribution and a capacity check.
   - uses: commodity-pass-through-cost-bridge
-    note: If an input invoice price changes, bridge commodity intensity and only the approved customer pass-through assumption before rebuilding product contribution. Preserve the original stock cost vintage and do not infer demand or production feasibility.
+    note: If an input invoice price changes, bridge the extra input cost and apply only the approved customer pass-through share before rebuilding contribution. Keep the original stock cost date. Do not infer demand or whether the plant can make the plan.
 origin: own
 version: 1.0.0
 added: 2026-10-22
@@ -35,6 +28,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This reviews and reports. It does not choose the best mix, forecast demand or change a plan. The capacity step covers two products at a time.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

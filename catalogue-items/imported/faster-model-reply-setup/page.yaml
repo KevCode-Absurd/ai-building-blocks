@@ -2,35 +2,111 @@ thinking: high
 thinking_why: Speed tricks need careful testing against quality.
 new_slug: faster-model-reply-setup
 name: Faster model reply setup
-summary: Name your model. Get a setup that makes replies 1.5 to 3.6 times faster
-  without changing the answers.
+summary: Name your self-hosted model and GPU. Get the best speed-up method, install steps, code to check and a before and after speed test.
 job: build-software
 headline: Faster model reply setup
-subhead: A setup that makes your language model reply about 1.5 to 3.6 times
-  faster, with the same answers. It suits chat tools and code generation where
-  waiting hurts.
+subhead: Tell it which language model you run and on what GPU. It picks a speed-up method, gives install steps and starter code, and tells you how to measure tokens per second before and after. Your answers should stay the same.
 explain: |
-  A setup that makes your language model reply about 1.5 to 3.6 times faster, with the same answers. It suits chat tools and code generation where waiting hurts.
+  If a chatbot or code helper you host yourself feels slow, this faster model reply setup shows you how to speed it up. It uses a method called speculative decoding. A small helper model guesses the next few words, and the big model checks all the guesses at once and keeps the right ones.
 
-  The skill is based on speculative decoding. A small draft model guesses several words ahead and the big model checks them all at once, keeping the right ones. It covers three routes: a separate draft model, Medusa, which adds extra prediction heads, and lookahead decoding, which needs no second model. It lists install steps, sample code for the transformers library, and how to pick draft size and guess length. It needs Python, a GPU and a model you can run yourself.
+  It covers three routes. A separate small draft model is the simplest if one exists for your model family. Medusa adds extra prediction heads to your model, which means a short training run. Lookahead decoding needs no second model and no training. It helps you choose by your hardware and your goal, which is less waiting per reply or more replies from the same GPU.
+
+  What sets it apart is the check. It asks for a speed test and a match test on a fixed set of prompts, so you know the gain is real and the answers did not change.
+
+  The numbers in the original papers are best cases. Yours will differ. It needs a CUDA GPU, Python and a model you can run yourself.
 when:
   - Your self-hosted chatbot feels slow to answer.
-  - You run a code assistant and want lower delay per request.
-  - You want more throughput from the same GPU.
-  - You need to choose between a draft model and Medusa.
+  - You run a code assistant and want less delay for each request.
+  - You want more replies per minute from the same GPU.
+  - You need to choose between a draft model, Medusa and lookahead decoding.
+not_for:
+  - You use a hosted model through an API, such as ChatGPT or Claude. You cannot change how they reply.
+  - You have no NVIDIA GPU. Use the Local model runner for laptops.
+  - Your model is too big for your GPU. Use the Model size reducer first.
+  - You want to train a model on your own data. Use the Language model trainer.
 you_give:
-  - The model you serve
-  - Your hardware
-  - "Your main goal: lower delay or higher throughput"
+  - The model you run, such as Llama 2 70B
+  - Your hardware, such as the GPU model and how much memory it has
+  - Your main goal, either less delay per reply or more replies per minute
   - A smaller model from the same family (optional)
+  - A set of 10 to 20 real prompts to test with (optional)
 you_get:
-  - A recommended speed-up method
-  - Install and setup steps
-  - Sample code
-  - Tuning settings to try
+  - The method that fits your model and GPU, with the reason
+  - Install commands for that method
+  - Starter code to check against the current docs
+  - Settings to try, such as how many words to guess ahead
+  - A speed test plan with before and after tokens per second
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Open an AI that can run Python on a computer with a CUDA GPU, such as Claude Code, and paste in this skill. Add the whole folder so it can read the Medusa and lookahead notes.
+  - Tell it your model, your GPU and your main goal. Check that you can download the model. Some Llama models need you to accept a licence on Hugging Face first.
+  - Read the method it picks and why. Ask it to check the code against the current README of the library before it runs anything.
+  - Run the before test, then the after test, on the same prompts. Compare tokens per second.
+  - Compare the answers from both runs. If they differ, lower the settings or switch method.
+how_it_works:
+  - title: Asks about your setup
+    text: Checks your model, GPU memory, goal and whether a small model from the same family exists.
+  - title: Picks a method
+    text: Chooses between a draft model, Medusa and lookahead decoding, using the comparison in the skill.
+  - title: Gives install steps
+    text: Lists the install commands for the chosen method, including the extra code you clone for Medusa and lookahead.
+  - title: Writes starter code
+    text: Shows code for the transformers library or vLLM. The pseudocode in the skill is for learning, not for running.
+  - title: Suggests settings
+    text: Sets starting values such as how many tokens to guess ahead, then tells you what to change.
+  - title: Plans the test
+    text: Sets up a speed test and an answer match test so you can see the real gain.
+output_shape: |
+  METHOD
+  <draft model / Medusa / lookahead> because <reason for your model and GPU>
+  BEFORE YOU START
+  GPU: <needed> | Access: <licences or tokens needed> | Python packages: <list>
+  INSTALL
+  <commands>
+  CODE
+  <file name>: <what it does> (check against <library> docs before running)
+  SETTINGS TO TRY
+  <setting>: <start value> | <what to change if slow or wrong>
+  TEST PLAN
+  <prompts used> | tokens per second before: <x> | after: <y> | answers match: <yes or no>
+  OPEN QUESTIONS
+  <anything you did not give>
+output_sample:
+  input:
+    - The model you run
+    - Your GPU and its memory
+    - Your main goal, less delay or more throughput
+    - A smaller model from the same family (optional)
+  prerequisites:
+    - A computer with a CUDA GPU and Python
+    - The torch and transformers packages
+    - Hugging Face access if your model is gated
+  output:
+    - name: Method choice
+      contains: Which method fits your model and GPU, with the reason and the trade-off.
+    - name: Install steps
+      contains: The commands to install the library, plus any code to clone first.
+    - name: Starter code
+      contains: Code to load the models and generate with the speed-up on, marked to check against current docs.
+    - name: Settings to try
+      contains: Starting values, such as guess length, and what to change next.
+    - name: Speed and match test
+      contains: A test plan that records tokens per second and checks the answers stay the same.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can run Python on your GPU machine and record the speed test.
+    - name: vLLM
+      why: It is a serving tool that supports speculative decoding for production use.
+  inputs:
+    - The exact model name and version
+    - Your GPU memory in gigabytes
+    - Typical prompt and reply length
+terms:
+  - term: Speculative decoding
+    meaning: A small model guesses several words ahead and the big model checks them all at once.
+  - term: Draft model
+    meaning: The small, fast model that makes the guesses.
+  - term: Tokens per second
+    meaning: How many word pieces the model writes each second. It is the usual speed measure.
+  - term: Medusa
+    meaning: A method that adds extra prediction heads to your model so it can guess ahead without a second model.

@@ -1,53 +1,85 @@
 new_slug: check-a-prototype-before-user-testing
 name: Check a prototype before user testing
 headline: Check a prototype before user testing
-summary: Share the source files. Get a review of test blockers, neutral tasks and a session plan.
+summary: "Check a prototype before user testing: get a list of test blockers, neutral task wording and a session plan so results are about your design."
 job: design-work
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A review of test blockers, neutral tasks and a session plan. Share the prototype, research question, target users and tasks to test. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the prototype, your research question, who you will test and the tasks. It walks the tasks, checks accessibility and plans neutral sessions. You get a list of test blockers, task wording that does not hint at the answer and a session plan.
 explain: |-
-  A review of test blockers, neutral tasks and a session plan.
+  A test goes wrong before it starts when the prototype breaks mid-task. People then talk about the broken link, not your design. This workflow helps you check a prototype before user testing so the sessions show what you meant to learn.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The prototype supports each test task; the plan separates product failures from prototype limitations. Missing tools or evidence stay visible in the final summary.
+  The Everyday usability reviewer walks your key tasks and notes confusing controls, wording and missing states, such as an empty screen or an error. The Accessibility checker looks for barriers that could spoil a session, such as unreadable text or a keyboard trap. The Usability test runner then plans neutral tasks and sessions around your question.
+
+  The plan keeps product problems and prototype limits apart. A dead button in a mockup is a limit, not a finding. It does not invent participants or answers. With no participants and no consent, you get a plan and no results.
 when:
-  - You need a review of test blockers, neutral tasks and a session plan.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - A designer says the prototype is ready and testing is booked for next week.
+  - You are about to recruit five people and want to avoid wasted sessions.
+  - Your tasks read "click the Save button", which gives the answer away.
+  - Someone who uses a screen reader or only a keyboard will join the test.
+not_for:
+  - The product is already live and you want it reviewed. Use the Usability heuristic reviewer.
+  - You need a quick plan for a simple page. Use the Small usability test planner.
+  - You have an idea and no prototype yet. Use the Throwaway prototype builder.
 you_give:
-  - The prototype, research question, target users and tasks to test.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
-  - "Available tools for the finished output: A browser or inspectable page source."
+  - "The prototype: a link, screenshots or a design file"
+  - Your research question, such as "Can people find where to change their plan?"
+  - "Who you will test: the type of user and how many"
+  - The 3 to 5 tasks you want them to try
+  - Your consent form or test notes (optional)
 you_get:
-  - A review of test blockers, neutral tasks and a session plan.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A blocker list: dead ends, missing screens and confusing controls, each with where it is"
+  - Accessibility barriers that would stop some people finishing a task
+  - Neutral task wording for each task, with a success measure
+  - "A session plan: order, timing, script and what to record"
+  - A note that separates product problems from prototype limits
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give the whole folder to Claude, ChatGPT or Gemini. For accessibility checks, give it a prototype link or exported HTML. With screenshots only, coverage is limited and it says so.
+  - Attach the prototype, state your research question and list the tasks.
+  - Fix every blocker marked must fix before you recruit anyone.
+  - Read each task wording aloud. If it hints at where to click, rewrite it.
+  - Run the sessions with real people and bring back your notes. The pack plans sessions. It cannot create participant results.
 how_it_works:
   - title: Everyday usability reviewer
-    text: Walk through the key tasks and record confusing controls, wording and missing states.
+    text: "Walks each task from start to finish. Records confusing controls, unclear wording and missing states such as empty, error and loading. Hands step 2 the task paths and screens. Check before moving on: each blocker names a screen and a task."
   - title: Accessibility checker
-    text: Check available accessibility evidence and identify barriers that could invalidate the test.
+    text: "Checks the prototype page or file for barriers such as low contrast, missing labels and keyboard traps. Marks which could spoil a session. Hands step 3 the barriers and its coverage limits. Check before moving on: it says what it could not check."
   - title: Usability test runner
-    text: Prepare and, when participants and consent are available, run neutral sessions around the research question.
+    text: "Writes neutral task scripts, success measures and a session plan around your question. Runs sessions only with real participants and consent. Hands back the plan. Check before moving on: no task names the control to click."
 output_shape: |-
-  Scope and source coverage
-  A review of test blockers, neutral tasks and a session plan.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE          <prototype version, research question, users, tasks>
+  BLOCKERS       <screen> | <task> | <problem> | <must fix or note> | <who fixes>
+  ACCESSIBILITY  <barrier> | <where> | <who it affects> | <how it was checked>
+  TASKS          <task> | <neutral wording> | <success measure> | <time limit>
+  SESSION PLAN   <order> | <timing> | <script> | <what to record> | <consent>
+  LIMITS         <prototype limits to tell participants about>
+  SOURCES / MISSING / CHECKS MISSED
+output_sample:
+  input:
+    - "The prototype: a link, screenshots or a design file"
+    - Your research question
+    - Who you will test and how many
+    - The 3 to 5 tasks to try
+  prerequisites:
+    - A prototype link that works without a login, for the accessibility check
+  output:
+    - name: Blocker list
+      contains: Dead ends, missing screens and confusing controls that could spoil a session, with where each is.
+    - name: Accessibility barriers
+      contains: Problems that would stop some people finishing a task, and what could not be checked.
+    - name: Neutral tasks
+      contains: Each task reworded so it hints at nothing, with a success measure.
+    - name: Session plan
+      contains: Order, timing, script and what to record, with consent steps.
+    - name: Hand-back note
+      contains: Saved files, prototype limits, MISSING lines and checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: The prototype supports each test task; the plan separates product failures from prototype limitations.
+  - what: A keyboard user
+    how: Say one participant will use only a keyboard. The checks focus on focus order and keyboard traps.
+  - what: A mobile test
+    how: Name the phone and screen size. The task walk uses that view.
+  - what: Remote sessions
+    how: Say sessions are remote. The plan adds how to share the screen and record with consent.
 judge:
   - The prototype supports each test task; the plan separates product failures from prototype limitations.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -60,16 +92,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep a short list of prototype limits and tell each participant before they start.
+  - Save the neutral task wording. Reuse the same words in the next round so results compare.
+  - Record any check that needs a person, such as a screen reader run, and finish it before sessions.
 works_best_with:
   tools:
     - name: A browser or inspectable page source
-      why: Check actual DOM or HTML evidence and report coverage limits when live inspection is unavailable.
+      why: It lets the accessibility check read the real page structure. With screenshots only, it reports what it could not check.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A prototype link that works without a login.
+    - Your target user description in one or two lines.
 terms:
+  - term: Prototype
+    meaning: A test version of a product that shows the design but may not work fully.
+  - term: Neutral task
+    meaning: A task written so it does not hint where to click or how to finish.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result of one step, passed to the next.

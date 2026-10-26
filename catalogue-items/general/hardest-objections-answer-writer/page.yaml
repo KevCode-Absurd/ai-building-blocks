@@ -1,57 +1,68 @@
 new_slug: hardest-objections-answer-writer
 name: "Hardest objections answer writer"
-summary: "Paste your argument or pitch. Get the hardest objections, your answers, and a plain note on what your evidence cannot show."
+summary: "Find the toughest objections to your pitch or argument. Paste it and your evidence, get fair answers, open gaps and a rewrite that admits its limits."
 job: speak-and-persuade
 thinking: high
 thinking_why: "It must argue against your case fairly and spot what would disprove it, which needs careful reasoning."
 
 headline: "Hardest objections answer writer"
-subhead: Give it your argument, pitch or proposal. It lists the hardest objections a doubtful reader would raise, answers each fairly, names the fact that would sink your case, and says what your evidence cannot show. You get a stronger text and a report.
+subhead: "Paste your argument, pitch or proposal and the evidence you have. It lists the hardest objections a doubtful reader would raise and answers each from your evidence. You get a fact that would sink your case, a note on what your evidence cannot show, and a stronger rewrite."
 
 explain: |
-  Most arguments are written as if nobody will object. Then the reader raises the one objection you did not answer and trusts the rest less. Hiding weak spots makes them worse.
+  Most pitches are written as if nobody will object. Then the reader raises the one doubt you did not answer, and trusts the rest less. Hiding a weak spot only makes it bigger.
 
-  This skill does the reverse. It starts from something your reader already accepts. It lists the strongest objections, including silly ones, and answers each in its own terms. It names one fact that would prove your case wrong, and says plainly where your evidence stops. Then it weaves the objections and answers into the main text, rather than a footnote, so the case reads as fair and sturdy.
+  This pitch objection writer does the reverse. It opens on something your reader already accepts. It lists at least eight objections, silly-sounding ones too, and states each one fairly before it answers. Each answer is rated solid, partial or open, using only the evidence you gave it. Where you have no answer, it says so.
+
+  It also names one fact that would prove your case wrong, and lists what your evidence cannot show. Then it works the objections and answers into the main text, not a footnote, so the case reads as fair.
 
 when:
-  - You are about to present a proposal to people who may say no.
-  - You wrote a persuasive piece and want to know where it is weakest.
-  - You are asking for money, support or a big change and need to meet the doubts first.
+  - "You are about to present a proposal to people who may say no."
+  - "You asked a board, a bank or a boss for money, and want to meet their doubts first."
+  - "You wrote a persuasive piece and want to know where it is weakest before it goes out."
+  - "A colleague keeps saying 'yes, but' and you need the full list of buts."
+
+not_for:
+  - "You want a list of buyer doubts with proof for each, to use on sales calls: use the Objection answer sheet writer."
+  - "You will plan the questions you ask on a sales call: use the Sales call question planner."
+  - "You will speak to a room that disagrees: use the Tough audience speech planner for the talk."
+  - "You have no evidence yet. Gather figures and sources first, or most answers will come back open."
 
 you_give:
-  - Your argument, pitch or proposal as text
-  - Who will read it and what they already believe (optional)
-  - Objections you have already heard (optional)
+  - "Your argument, pitch or proposal as text (paste it from your document or slides)"
+  - "The evidence you have: figures, sources, past results (optional)"
+  - "Who will read it and what they already believe (optional)"
+  - "Objections you have already heard, in the speaker's words (optional)"
 you_get:
-  - A list of the hardest objections, each answered or marked as an open gap
-  - The one fact that would sink your case
-  - A plain note on what your evidence cannot show
-  - A rewritten text with objections built in
+  - "A list of the hardest objections, each answered or marked as an open gap"
+  - "A rating on each answer: solid, partial or open"
+  - "The one fact that would sink your case"
+  - "A plain note on what your evidence cannot show"
+  - "A rewritten text with the objections built in"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your argument, and say who will read it.
-  - Add any objections you have heard so far.
-  - Read the "what sinks it" fact and the gaps list first. Decide if you can live with them.
-  - Use the rewritten text, or move the answers into your own words.
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools."
+  - "Paste your argument. Add your figures and sources, and say who will read it."
+  - "Add any objections you have heard so far, word for word."
+  - "Read the sinking fact and the gaps first. Decide if you can live with them."
+  - "Check that every answer rests on evidence you gave. Then use the rewrite, or move the answers into your own words."
 
 how_it_works:
-  - title: Finds common ground
-    text: Names something your reader already accepts and starts the case there.
-  - title: States the claim
-    text: Writes your plan or claim in one line, so every objection has a target.
-  - title: Lists every objection
-    text: Writes the strongest objections a doubtful reader would raise, including silly-sounding ones.
-  - title: Answers each fairly
-    text: Answers each in its own terms, and where no answer holds, says so.
-  - title: Names the sinking fact
-    text: States one fact that, if true, would disprove the case.
-  - title: Marks the gaps
-    text: Says what your record cannot show and why.
-  - title: Rebuilds the text
-    text: Puts objections and answers inside the main argument, not in a footnote.
-  - title: Checks the set
-    text: Runs its own checks and names any it missed.
+  - title: "Finds common ground"
+    text: "Names something your reader already accepts, and opens the case there."
+  - title: "States the claim"
+    text: "Writes your main claim in one line, so every objection has a target."
+  - title: "Lists every objection"
+    text: "Writes at least eight, including the ones you gave it and the silly-sounding ones. It covers cost, risk, timing and other explanations."
+  - title: "Ranks them"
+    text: "Marks the three that would shake a doubtful reader most if left unanswered."
+  - title: "Answers each fairly"
+    text: "States the objection in a form its holder would accept, then answers from your evidence only. Rates it solid, partial or open."
+  - title: "Names the sinking fact"
+    text: "Writes one fact that, if true, would disprove the case."
+  - title: "Marks the gaps"
+    text: "Lists what your evidence cannot show and why, in one plain line each."
+  - title: "Rebuilds the text"
+    text: "Weaves objections and answers into the argument, keeping your voice and naming the gaps."
 
 output_shape: |
   COMMON GROUND
@@ -62,7 +73,7 @@ output_shape: |
 
   OBJECTIONS AND ANSWERS
   1. Objection: <fairly stated>
-     Answer: <answer> | Strength: <solid, partial, open>
+     Answer: <answer from your evidence> | Strength: <solid, partial or open>
 
   WHAT WOULD SINK THE CASE
   <one fact>
@@ -79,34 +90,54 @@ output_shape: |
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "Your argument, pitch or proposal as text"
+    - "The evidence you have, with sources (optional)"
+    - "Who will read it and what they believe (optional)"
+    - "Objections you have already heard (optional)"
+  output:
+    - name: "COMMON GROUND and THE CLAIM"
+      contains: "Something your reader already accepts, then your main claim in one line."
+    - name: "OBJECTIONS AND ANSWERS"
+      contains: "At least eight objections stated fairly, each with an answer rated solid, partial or open."
+    - name: "WHAT WOULD SINK THE CASE"
+      contains: "One fact that, if true, would prove your case wrong."
+    - name: "WHAT THE EVIDENCE CANNOT SHOW"
+      contains: "Each gap in your evidence, with the reason it exists."
+    - name: "REWRITTEN TEXT"
+      contains: "Your argument rebuilt so the strongest objections and answers sit inside it, in your voice."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Evidence that would close a gap, and any check the answer still fails."
+
 tweaks:
-  - what: Who the reader is
-    how: A hostile reader raises different objections from a friendly one. Describe them.
-  - what: Objections you have heard
-    how: Paste them as they were said. They go in first, in the speaker's words.
-  - what: How much evidence you have
-    how: Paste figures and sources. Answers use only what you give.
-  - what: Length
-    how: Say how long the final text may be. Answers are shortened to fit.
+  - what: "Who the reader is"
+    how: "A hostile reader raises different objections from a friendly one. Describe them."
+  - what: "Objections you have heard"
+    how: "Paste them as they were said. They go in first, in the speaker's words."
+  - what: "How much evidence you have"
+    how: "Paste figures and sources. Answers use only what you give."
+  - what: "Length"
+    how: "Say how long the final text may be. Answers are shortened to fit."
 
 judge:
-  - The strongest objection is stated fairly before it is answered.
-  - One fact that would disprove the case is named.
-  - Gaps in the evidence are stated plainly.
-  - The text starts from something the reader already accepts.
-  - Every objection has an answer or an admitted gap.
+  - "The strongest objection is stated fairly before it is answered."
+  - "One fact that would disprove the case is named."
+  - "Gaps in the evidence are stated plainly."
+  - "The text starts from something the reader already accepts."
+  - "Every objection has an answer or an admitted gap."
 
 test:
-  - Show the objection list to someone who disagrees with you and ask what is missing.
-  - Check each answer against the evidence you gave. None should rest on a fact you did not provide.
-  - Run it twice. The top three objections should stay close.
-  - Read the rewrite aloud to see if it still sounds like you.
+  - "Show the objection list to someone who disagrees with you and ask what is missing."
+  - "Check each answer against the evidence you gave. None should rest on a fact you did not provide."
+  - "Run it twice. The top three objections should stay close."
+  - "Read the rewrite aloud to see if it still sounds like you."
 
 improve:
-  - Add your field's usual objections to the pasted facts so they are checked every time.
-  - Add your evidence list with sources, so answers cite it.
-  - Keep a log of new objections you meet and paste it in next time.
-  - Pair it with "Honest persuasion editor" to check the final text for fake pressure.
+  - "Add your field's usual objections to the pasted facts so they are checked every time."
+  - "Add your evidence list with sources, so answers cite it."
+  - "Keep a log of new objections you meet and paste it in next time."
+  - "Pair it with \"Persuasion and claim editor\" to check the final text for fake pressure."
 
 works_best_with:
   tools:
@@ -118,7 +149,7 @@ works_best_with:
     - "Who the readers are and what they already believe"
 
 terms:
-  - term: Objection
-    meaning: A reason a reader gives for doubting or refusing your case.
-  - term: Open gap
-    meaning: An objection you cannot fully answer yet, marked as such in the text.
+  - term: "Objection"
+    meaning: "A reason a reader gives for doubting or refusing your case."
+  - term: "Open gap"
+    meaning: "An objection you cannot fully answer yet, marked as such in the text."

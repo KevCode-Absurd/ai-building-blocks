@@ -1,0 +1,143 @@
+name: ATS resume checker agent
+summary: Check your resume for what hiring software may miss. Get a score out of 100, layout and keyword gaps and bullet fixes. Paste your resume.
+headline: ATS resume checker agent
+subhead: Paste your resume and the job post. The agent scores the resume out of 100 in four parts. These are keywords, results in your bullets, layout and length. It lists each gap and rewrites weak bullets using only facts you gave it.
+job: find-a-job
+thinking: high
+thinking_why: It scores with fixed rules, and it has to separate what it can check in text from what needs your file.
+explain: >-
+  Many employers use applicant tracking software (ATS) to sort resumes. It
+  reads your file as plain text. A two-column design, a table or a broken font
+  can scramble that text. Bullets that only list duties are easy to skip.
+  This ATS resume checker finds those problems before you apply.
+
+
+  The score is out of 100 and shows its sums. Keywords count for 40 percent,
+  results in your bullets for 30, layout for 15 and length for 15. Every lost
+  point links to a rule. Bullets are judged on one formula: you did X, measured
+  by Y, by doing Z. It never adds a metric, tool or job you did not give it.
+  When a keyword is missing, it tells you to add it only if it is true.
+
+
+  In a chat it reads the text you paste. It cannot see your layout unless you
+  attach the file and your AI can open it, so those checks are marked Not
+  checked. The score is a guide from fixed rules. It is not what any real hiring
+  system will give you. This is a role profile from Agency Agents, shared under
+  MIT. Its success targets describe the intended work, not measured results from
+  AI Blocks.
+when:
+  - You apply to many jobs and hear nothing back.
+  - You use a two-column or designer resume template and worry it will not read properly.
+  - You want to know which words in the job post your resume lacks, and which you can truthfully add.
+  - Your bullets say "Responsible for" and you want them to show results.
+not_for:
+  - You want the whole resume rewritten for one job. Use the Resume Tailor agent.
+  - You want a cover letter as well. Use the Resume and job application builder.
+  - You want the look of your resume fixed, such as fonts and spacing. Use the Resume layout editor.
+  - You are building or buying hiring software and need a bias audit. This check is not a legal or independent audit.
+you_give:
+  - Your resume. Paste the text, or attach the PDF or Word file.
+  - The job post you are applying to (optional, but keywords are checked against it).
+  - Your level, such as junior, mid, senior or executive, or your years of experience.
+  - The job title you are aiming for (optional).
+you_get:
+  - A score out of 100 with its four-part split and a grade from A to D.
+  - Layout checks marked Pass, Warn, Fail or Not checked, each with a fix.
+  - Keywords found, keywords missing that you can add if true, and keywords not to claim yet.
+  - A table of weak bullets with rewrites that use only your facts.
+  - A short prompt you can paste into another AI to rewrite the weak bullets.
+how_to_use:
+  - Add the pack to your AI as a skill. In a plain chat, paste SKILL.md first.
+  - Paste your resume text and the job post. Say your level.
+  - For layout and font checks, attach the PDF and use an AI that can open files. Without it those checks say Not checked.
+  - Say "Run the ATS check." Your AI asks once for anything missing.
+  - Fix layout failures first. Then add missing keywords you can honestly claim. Then rewrite the weak bullets.
+  - Run it again on the new version to see the score move. Save the final file as Firstname_Lastname_Resume_Year.pdf.
+how_it_works:
+  - title: Check the text
+    text: It confirms your file holds real text, not a picture, and looks for broken characters that make words unsearchable.
+  - title: Check the layout
+    text: It looks for a single reading order, standard headings, no tables or floating text boxes, and clean contact details.
+  - title: Map the keywords
+    text: It lists the skills and tools in the job post, marks which your resume has, and marks the rest as gaps you must verify.
+  - title: Score each bullet
+    text: Each bullet scores on action and scope, a measured result and the method used. Duty wording and vanity numbers lose points.
+  - title: Add up the score
+    text: It combines the four parts, shows every deduction and writes a hand-off prompt for the rewrite.
+output_shape: |-
+  ATS CHECK: <target role> | <level>
+  Score <n>/100 (Grade <A to D>)
+  | Part | Weight | Score | Key finding |
+  | Keywords and hard skills | 40% | <n> | <X of Y found> |
+  | Results in bullets | 30% | <n> | <share of bullets with a result vs your level's target> |
+  | Layout and reading order | 15% | <n> | <finding> |
+  | Length and density | 15% | <n> | <word count vs window> |
+
+  LAYOUT CHECKS
+  | Check | Status | Risk | Fix |
+
+  KEYWORDS
+  Found: <term> in <section>
+  Missing (add only if true): <term> | <times in job post> | <what evidence would back it>
+  Do not claim yet: <term> | <why>
+
+  BULLET FIXES
+  | Original | Problem | Missing | Rewrite (only your facts) |
+
+  HAND-OFF PROMPT
+  <paste-ready prompt with the job post, gaps and weak bullets>
+output_sample:
+  input:
+    - Your resume as pasted text or a PDF or Word file
+    - The job post you are applying to (optional)
+    - Your level or years of experience
+  prerequisites:
+    - An AI that can open files, if you want layout and font checks (optional)
+  output:
+    - name: Score card
+      contains: Your score out of 100, the four-part split, a grade and the main finding for each part.
+    - name: Layout checks
+      contains: Text layer, characters, reading order, headings, contact details and tables, each marked Pass, Warn, Fail or Not checked.
+    - name: Keyword gap list
+      contains: Terms found, terms missing that you can add if true, and terms not to claim without proof.
+    - name: Bullet fixes
+      contains: Each weak bullet, what is missing from it and a rewrite built only from your facts.
+    - name: Hand-off prompt
+      contains: A paste-ready prompt for another AI to rewrite your weak bullets without inventing results.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: They can open your PDF, so layout and font checks run instead of saying Not checked.
+  inputs:
+    - The full job post, not a summary, so keywords are exact.
+    - Real numbers behind your work, such as sales, time saved or users.
+    - The Word version of your resume as well as the PDF.
+terms:
+  - term: ATS
+    meaning: Applicant tracking system. Software employers use to collect and sort job applications.
+  - term: Keyword gap
+    meaning: A skill or tool the job post names that your resume does not show.
+  - term: X-Y-Z bullet
+    meaning: A bullet that says what you did (X), how it was measured (Y) and how you did it (Z).
+  - term: Reading order
+    meaning: The order software reads your text in. Columns and tables can mix it up.
+  - term: Verifiable gap
+    meaning: A missing keyword you may add only if you can back it with real experience.
+tweaks:
+  - what: The job post
+    how: Paste the whole post. Without it you get a general check for the role, not a match.
+  - what: Your level
+    how: Say your years of experience. The share of results-style bullets it expects changes with level.
+  - what: File or text
+    how: Attach the PDF for layout checks. Pasted text can only be checked for words, bullets and length.
+improve:
+  - Keep the numbers behind your work in a notes file and paste them in, so bullets can show real results.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

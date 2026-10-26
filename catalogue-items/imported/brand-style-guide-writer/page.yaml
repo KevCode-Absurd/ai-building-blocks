@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It organises a finished identity into a reference.
 new_slug: brand-style-guide-writer
 name: Brand style guide writer
-summary: Give it your logo, colours and fonts. Get a full style guide others can
-  follow without guessing.
+summary: Write a brand style guide from your logo, colours, fonts and voice notes. You get eight sections other people can follow without guessing.
 job: brand-file
 headline: Brand style guide writer
-subhead: Hand your brand over to a designer, agency or new hire and have them
-  get it right the first time. This builds the reference document that settles
-  every "is this allowed?" question.
+subhead: Hand your brand over to a designer, agency or new hire and have them get it right the first time. This builds the reference document that settles every "is this allowed?" question.
 explain: |
   Hand your brand over to a designer, agency or new hire and have them get it right the first time. This builds the reference document that settles every "is this allowed?" question.
 
@@ -18,6 +15,10 @@ when:
   - Your brand exists but nothing is written down, so every freelancer guesses.
   - A new team member keeps asking which blue and which font to use.
   - Your current style guide has gaps and you want to find them.
+not_for:
+  - Your brand look is not designed yet. Finish the logo, colours and fonts first, then come back to write the guide.
+  - You only need a guide to how your brand sounds. Write a short voice document instead, then add it here later.
+  - You want ready-made buttons and page parts for a website or app. Ask a developer or designer to build a design system.
 you_give:
   - Your logo files and variants
   - Colours and fonts in use
@@ -31,7 +32,35 @@ you_get:
   - Voice and imagery guidance
   - A list of gaps if you asked for an audit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste the full skill instructions.
+  - Attach your logo files, or paste your colour codes, font names and voice notes. Add any examples of the brand in use.
+  - Say if you want a new guide built or an old guide audited for gaps. For an audit, attach the old guide.
+  - "Tell your AI which format you need: a document, a web page or a Notion page."
+  - Read the result and fill any gaps it marks. Add real examples to each rule, then share the guide with your team.
+output_sample:
+  input:
+    - Your logo files and variants
+    - Your colours and fonts
+    - Your voice and tone notes
+    - Examples of your brand in real use (optional)
+    - Your rules on what is required, flexible or banned (optional)
+  prerequisites:
+    - "A finished brand look: logo, colours, fonts and image style"
+    - An AI that can read your attached files (optional, you can paste text instead)
+  output:
+    - name: Story
+      contains: Why the brand exists, its mission, values, audience and what it rejects.
+    - name: Logo system
+      contains: Every logo version with clear space, minimum sizes, allowed colour uses and banned uses.
+    - name: Color
+      contains: Main, second and neutral colours with codes, allowed and banned pairings, and contrast notes.
+    - name: Typography
+      contains: Fonts, sizes, weights, line spacing, fallback fonts and banned type treatments.
+    - name: Imagery and illustration
+      contains: Photo and illustration style, icon rules and the kinds of images never to use.
+    - name: Voice and tone
+      contains: How the brand sounds, how tone shifts by context, words to use and avoid, with good and bad examples.
+    - name: Applications
+      contains: How the brand looks on web, email, social, print, packaging, signs and internal documents.
+    - name: Dos and don'ts
+      contains: Quick, scannable right and wrong examples for logo, colour, type, layout and voice.

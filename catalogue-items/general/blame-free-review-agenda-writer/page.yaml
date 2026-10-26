@@ -1,39 +1,52 @@
 new_slug: blame-free-review-agenda-writer
 name: "Blame-free review agenda writer"
-summary: "Paste your review themes. Get a timed agenda with no-blame wording rules, a slot for old hurts and next-time questions."
+summary: "Turn your project review themes into a timed agenda with no-blame wording rules, a slot for old hurts and questions for next time."
 job: lead-people
 thinking: medium
 thinking_why: "It follows a set agenda shape, but it must fit the themes, the room and the time."
 
-headline: "Run a review where people say what happened and no one is blamed"
-subhead: Paste the themes from your project review. It orders them for energy and trust, gives each a time limit and an owner who tells it in the first person, writes wording rules and facilitator lines, adds a short slot for old hurts and ends on questions for next time.
+headline: "Blame-free review agenda writer"
+subhead: "Paste the themes from your project review and the meeting length. It orders the themes for energy and trust and gives each a time limit and a first-person owner. You get wording rules, lines for the facilitator, a short slot for old hurts and questions for next time."
 
 explain: |
-  The question "whose fault was this?" ends honesty in a room. Once it is asked, people protect themselves and the real causes go unsaid. A good review makes it safe to say what happened, and keeps the focus on what made it possible.
+  Asking whose fault something was ends honesty in a room. People protect themselves and the real causes go unsaid. A good project review makes it safe to say what happened and looks at what made it possible.
 
-  This skill writes the agenda for that. It puts the contested themes up front when energy is high, limits each topic, and has the person closest to an event tell it in the first person. It gives the room wording rules, gives the facilitator three lines for when blame appears and sets aside ten minutes for old hurts. It ends with questions for the next project, each with an owner.
+  This blame-free review agenda writer builds the agenda for that. It puts the contested themes up front while energy is high, and limits each topic. The person closest to each event tells it in the first person. The room gets wording rules, and the facilitator gets lines for when blame appears.
+
+  It sets aside ten minutes for old hurts and ends on questions for the next project, each with an owner. The approach draws on Ed Catmull's account of how Pixar reviews its mistakes. It is built for a finished project with many themes, not for one failure.
 
 when:
-  - You are about to run a review of a finished project and want an honest one.
-  - Past reviews turned into blame or into polite thanks.
-  - A senior person's presence changes how people speak, and you need rules for the room.
+  - "You are about to run a review of a finished project and want an honest one."
+  - "Past reviews turned into blame, or into polite thanks."
+  - "A senior person's presence changes how people speak, and you need rules for the room."
+  - "You have a pile of do-again and never-again notes and need one meeting out of them."
+
+not_for:
+  - "You have not collected people's lists yet. Use the Project review prep planner, then the Review lists sorter."
+  - "You are looking into one failure, not a whole project. Use the Five whys session planner."
+  - "The project is still running. Wait until it is finished."
+  - "You need a one-to-one talk about a person's work. Use the Feedback conversation planner."
 
 you_give:
-  - The themes from "Review lists sorter"
-  - The prep plan, for the meeting length and facilitator (optional)
-  - Who will be in the room, by role (optional)
+  - "The themes from the Review lists sorter, or your own list of themes with the contested ones marked"
+  - "How long the meeting is (optional)"
+  - "Who will be in the room, by role (optional)"
+  - "The facilitator, if you have chosen one (optional)"
 you_get:
-  - A timed agenda that fits your meeting length
-  - A first-person owner and a time limit for each theme
-  - Wording rules and three facilitator lines
-  - A slot for old hurts with a rule for replies
-  - Three to five questions for the next project, each with an owner
+  - "A timed agenda that fits your meeting length"
+  - "A first-person owner and a time limit for each theme"
+  - "Wording rules and facilitator lines"
+  - "A ten-minute slot for old hurts, with a rule for replies"
+  - "Three to five questions for the next project, each with an owner"
+  - "A plan for who keeps the record"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the themes and say how long the meeting is and who attends.
-  - Give the wording rules and facilitator lines to the facilitator a day before.
-  - After the meeting, bring the notes to "Mistake-to-principle writer".
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no tools."
+  - "Paste the themes. Add the meeting length and who attends. If you paste no themes, it asks for them and stops."
+  - "Check the speaking rule for the most senior person. Change it if it does not suit your team."
+  - "Give the wording rules and facilitator lines to the facilitator a day early. Pick someone other than the project lead."
+  - "Put a timer where everyone can see it."
+  - "After the meeting, take each lesson to the Mistake-to-principle writer."
 
 how_it_works:
   - title: Checks the room
@@ -44,10 +57,8 @@ how_it_works:
     text: Gives each theme a limit and checks the total against the meeting length.
   - title: Starts in the first person
     text: Has the person closest to each event tell it in three short lines.
-  - title: Sets the wording
-    text: Rules that replace whose fault with what caused it.
-  - title: Equips the facilitator
-    text: Three short lines for when blame appears or time runs over.
+  - title: Sets the wording and the lines
+    text: Rules that replace whose fault with what caused it, and short lines for the facilitator when blame appears or time runs over.
   - title: Closes forward
     text: Questions for the next project, each with an owner and a place to record them.
   - title: Checks itself
@@ -80,6 +91,31 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "The themes from the Review lists sorter, with contested ones marked"
+    - "How long the meeting is (optional)"
+    - "Who will be in the room, by role (optional)"
+  prerequisites:
+    - "Everyone's do-again and never-again lists, sorted into themes with the Review lists sorter"
+  output:
+    - name: "THE ROOM"
+      contains: "Who attends by role, and a speaking rule for the most senior voice."
+    - name: "AGENDA"
+      contains: "A timed table: each theme with its minutes, a first-person owner and a limit."
+    - name: "WORDING RULES"
+      contains: "Five rules that swap whose fault it was for what caused it."
+    - name: "FACILITATOR LINES"
+      contains: "Short lines for when blame appears, a rebuttal starts, someone names a hard thing, or time runs over."
+    - name: "OLD HURTS"
+      contains: "A ten-minute slot with a fixed way to say it and a fixed reply."
+    - name: "QUESTIONS FOR THE NEXT PROJECT"
+      contains: "Three to five questions, each with who asks it and where it is recorded."
+    - name: "THE RECORD"
+      contains: "Who writes it down, where it is kept, who reads it and what stays in the room."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "What you did not give, and any of its own checks it missed."
 
 tweaks:
   - what: Meeting length

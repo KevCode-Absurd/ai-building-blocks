@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It traces how each change affects code that was already safe.
 new_slug: security-focused-change-reviewer
 name: Security-focused change reviewer
-summary: Give it a pull request or commit. Get a security review of only what
-  changed, with risks ranked.
+summary: Run a security review of a pull request or diff. You get ranked risks with line numbers and attack stories, covering only what changed.
 job: secure-code
 headline: Security-focused change reviewer
-subhead: Give it a pull request or commit. Get a security review of only what
-  changed, with risks ranked. Bring a pull request, commit range or diff. Use
-  the result to plan your next step.
+subhead: Give it a pull request or commit. Get a security review of only what changed, with risks ranked. Bring a pull request, commit range or diff. Use the result to plan your next step.
 explain: |
   A security review of just what changed in a pull request, commit range or diff, with each risk backed by line numbers, history and a realistic attack story. It scales to the size of the codebase: deep reading for small ones, focused for mid-size, and only critical paths for large ones.
 
@@ -18,6 +15,10 @@ when:
   - A small change removed a validation check and you want it assessed.
   - You want a written report you can attach to a review.
   - Your team reviews many changes and needs risk ranked first.
+not_for:
+  - "You are reviewing brand new code with nothing to compare against: use a standard code review from a teammate."
+  - "The change only touches docs, comments or formatting: skip it, there is no security risk to rank."
+  - "You want a full audit of the whole codebase: hire a security auditor, since this reads only the changes."
 you_give:
   - A pull request, commit range or diff
   - Access to the repository and its history
@@ -29,8 +30,29 @@ you_get:
   - Test coverage gaps
   - A markdown report with confidence level
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Download the skill folder. It needs your AI to read files and run git commands, so use a coding tool or an AI with file access.
+  - Open your AI in the project folder and add the skill files, including methodology.md, adversarial.md and reporting.md.
+  - Tell your AI which pull request, commit range or diff to review. Add a note on what the change should do (optional).
+  - Check the ranked findings and the coverage limits in the report. Test any attack story it gives before you trust it.
+  - "To turn the report into a formal audit report, use the issue-writer skill with: issue-writer --input DIFFERENTIAL_REVIEW_REPORT.md --format audit-report."
+output_sample:
+  input:
+    - A pull request, commit range or diff
+    - Access to the repository and its git history
+    - A note on what the change should do (optional)
+  prerequisites:
+    - An AI that can read your project files and run git commands
+    - The supporting files methodology.md, adversarial.md, reporting.md and patterns.md from the skill folder
+  output:
+    - name: Triage
+      contains: Each changed file rated high, medium or low risk, based on what it does and not on its size.
+    - name: Code analysis
+      contains: What changed in each risky file, with line numbers and git history for any removed security code.
+    - name: Test coverage
+      contains: Which changes have tests and which do not, with higher severity where tests are missing.
+    - name: Blast radius
+      contains: How many callers rely on each high risk change, so you see what else could break.
+    - name: Adversarial analysis
+      contains: A realistic attack story for each high risk change, with how easy it would be to exploit.
+    - name: DIFFERENTIAL_REVIEW_REPORT.md
+      contains: The full markdown report with ranked findings, coverage limits and a confidence level.

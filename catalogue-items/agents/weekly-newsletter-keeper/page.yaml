@@ -1,6 +1,6 @@
 new_slug: weekly-newsletter-keeper
 name: Weekly newsletter keeper
-summary: Give it your notes each week. Get this issue drafted, edited, checked against your voice and scored before it goes out.
+summary: Turn your weekly notes into a newsletter issue for one reader, edited in plain words, checked for your voice and scored before you send.
 job: write-emails
 thinking: high
 thinking_why: It drafts for one reader, edits for voice, judges a readiness score and loops on its own work until it passes. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You send a weekly newsletter and the writing eats the day before it goes out.
   - Your issues have started to sound generic and replies have dried up.
   - You have good notes every week and no time to shape them.
+not_for:
+  - "You send one-off campaigns or have no regular send: use the Marketing content drafter to write the email."
+  - "You only want subject lines for an issue you already wrote: use the Subject line writer."
+  - "You want it to send or schedule the issue: it never does, so use your email tool and send it yourself."
 you_give:
   - This week's notes, the moment you noticed and the one reader it is for
   - Your brand brain, for the voice check (advised)
@@ -32,6 +36,34 @@ how_to_use:
   - On the first run, approve the 12-issue topic plan. It saves it.
   - Read the issue. Change anything that is not you, then paste it into your email tool and send it yourself.
   - Next week, paste the replies and the open and click numbers. The plan learns from them.
+output_sample:
+  input:
+    - This week's notes and the moment you noticed
+    - The one reader the issue is for
+    - Your brand brain (advised)
+    - Opens, clicks and replies from past issues (optional)
+    - Reader replies from last week (optional)
+  prerequisites:
+    - A buyer brief, from the Buyer brief writer
+    - A brand brain, from the Brand profile builder (advised)
+    - Claude Code to keep the topic and issue files between weeks (optional)
+  output:
+    - name: The issue
+      contains: The newsletter ready to paste, with the chosen subject line and the other options under it.
+    - name: Who it is for
+      contains: The one reader and their worry in a single line.
+    - name: Score
+      contains: A score out of 100, what it measured, and the ship or fix call.
+    - name: What changed
+      contains: The main cuts from the editor and the voice check, with the reason for each.
+    - name: Topics left
+      contains: How many planned issues remain and which topic is next.
+    - name: Replies to read
+      contains: Reader replies that could shape a future issue.
+    - name: Files and MISSING lines
+      contains: Each step's saved file and every gap marked MISSING.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or the word none.
 how_it_works:
   - title: Check the topic plan
     text: Keeps 12 issues ahead, each with one reader and one worry, and refills the list when it runs low.

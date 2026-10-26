@@ -1,6 +1,6 @@
 new_slug: weekly-store-ad-pulse-checker
 name: "Weekly store ad pulse checker"
-summary: "Give weekly spend, sales, emails and discounts. Get a health score out of 100 and what to pull."
+summary: "Check your store's weekly ad and email numbers in one pass. Get a health score out of 100 and which lever to pull first, emails before discounts."
 job: track-numbers
 thinking: low
 thinking_why: "It compares this week's numbers to last week's in a fixed order, so a fast model works."
@@ -17,6 +17,10 @@ when:
   - You want one weekly check of your store's marketing instead of checking numbers all day.
   - Blended ROAS dropped and you're tempted to run a discount.
   - Your sales are up but you suspect discounts are doing the work.
+not_for:
+  - "You only have one day of numbers, or half a day: wait for a full week, then run this check."
+  - "Your store is brand new with no past weeks: there is nothing to compare, so track a few weeks by hand first."
+  - "You want to know if one campaign pays back its cost: use a CAC payback checker or a simple spreadsheet, as this page does not have one listed."
 
 you_give:
   - This week's and last week's blended ROAS, new-customer ROAS, CAC, CPM and spend by channel
@@ -31,10 +35,31 @@ you_get:
   - A bull case, bear case and daily pace
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste this week's and last week's numbers, and say what your goals are.
-  - Say whether the numbers were pulled mid-day or at the end of the week.
-  - Pull the first lever it lists, then give it a week before judging the change.
+  - Open your AI and paste the skill, or add it if your AI lets you. It needs no code, files or web access.
+  - Paste this week's and last week's numbers from your store, ad accounts and email tool. Add your goals if you have them.
+  - Say if the numbers were pulled mid-day or at the end of the week.
+  - Check that each flag points to a real number, then pull the first lever on the list.
+  - Wait a full week before you judge the change. Shopify, Klaviyo and Triple Whale may need a paid account to pull the numbers.
+output_sample:
+  input:
+    - This week's and last week's blended ROAS, new-customer ROAS, CAC and CPM
+    - Spend by channel for both weeks
+    - Emails and texts sent, product drops and sign-ups captured
+    - Discount as a percent of sales and large orders per day
+    - Your goals for ROAS and CAC (optional)
+  prerequisites:
+    - Numbers pulled from your store, ad accounts and email tool, since the AI cannot connect to them
+  output:
+    - name: Pulse table
+      contains: Last week, this week, the change and an ok, watch or act flag for each number.
+    - name: Health score
+      contains: A score out of 100 in four parts of 25, with the sum shown.
+    - name: Levers to pull
+      contains: Actions in order, emails and drops first, each with the number behind it and a day.
+    - name: Pace
+      contains: A bull case, a bear case, a daily pace and how much to pull back ad spend on email drop days.
+    - name: Missing list
+      contains: Any email data, discount data or goals you did not give, so those parts are left unscored.
 
 how_it_works:
   - title: Reads in order

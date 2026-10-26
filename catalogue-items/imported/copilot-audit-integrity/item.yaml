@@ -8,10 +8,12 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: codebase
+  - type: audit_report
     required: true
+  - type: codebase
+    required: false
 outputs:
-  - type: security_report
+  - type: audit_report
 uses: []
 origin: imported
 source:

@@ -1,6 +1,6 @@
 new_slug: crisis-response-planner
 name: "Crisis response planner"
-summary: "Describe the defect, complaint or failure. Get a first-30-days plan: who to tell, who investigates, what to fix and what to promise."
+summary: "Plan the first 30 days after a defect, complaint or failure. Get who to tell, who investigates, what to fix and what to promise."
 job: lead-people
 thinking: high
 thinking_why: "People could be hurt, so it needs careful checks on what is known and what is not."
@@ -17,6 +17,10 @@ when:
   - A defect, safety issue or serious complaint has just come to your attention.
   - You are not sure who should hear first, and what to say before you know everything.
   - You found the problem was known lower down for a long time and want to fix why.
+not_for:
+  - "You have one routine customer complaint: reply to it directly or use your normal customer service steps."
+  - "A legal duty has already started, such as a required report to a regulator: call a lawyer first, then use this to plan the rest."
+  - "You want a marketing or brand message with no real problem behind it: ask a copywriter or write the message yourself."
 
 you_give:
   - What went wrong, who is affected and what you know so far
@@ -35,6 +39,31 @@ how_to_use:
   - Add any legal limits or promises already made.
   - Check each date with the people who must meet it before you share the plan.
   - Have a lawyer or adviser read anything that goes to the public.
+output_sample:
+  input:
+    - What went wrong, who is affected and what you know so far
+    - What you do not know yet
+    - Who inside knew and when (optional)
+    - Legal limits and promises already made (optional)
+  output:
+    - name: Who is affected
+      contains: Each group that could be hurt or let down, and what each needs from you now.
+    - name: Known and not known
+      contains: Confirmed facts with sources, open questions, who can answer them and a date to report back.
+    - name: First message
+      contains: A plain note that puts the affected people first and says what is not yet known.
+    - name: Who hears and when
+      contains: The order of who is told, how they are told and on what date.
+    - name: Outside check
+      contains: The kind of independent investigator, who appoints them and who sees the findings.
+    - name: Fixes with owners and dates
+      contains: Each fix, the role that owns it and the date it is due.
+    - name: Why it did not travel up
+      contains: Where the news stopped and one change to how information moves.
+    - name: Help for those affected
+      contains: What fair help looks like, who runs it, and how those who raised the issue are protected.
+    - name: Checks missed
+      contains: One line for each check the plan failed, or none.
 
 how_it_works:
   - title: Puts people first

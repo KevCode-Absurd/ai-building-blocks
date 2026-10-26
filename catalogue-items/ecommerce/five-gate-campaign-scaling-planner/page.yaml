@@ -1,6 +1,6 @@
 new_slug: five-gate-campaign-scaling-planner
 name: Five-gate campaign scaling planner
-summary: Check five gates before scaling Meta campaigns. Compare pacing, methods and stop rules using your targets and risk limits.
+summary: Check which Meta campaigns are ready to scale. Give it your results and targets. You get a five-gate review, a scaling plan and stop rules.
 job: launch-and-scale-ads
 headline: Five-gate campaign scaling planner
 subhead: Share campaign results, targets, budget, pacing dates and saturation signals. Get a five-gate scaling review with method, timing and stop rules.
@@ -12,6 +12,10 @@ when:
   - You need a five-gate scaling review with method, timing and stop rules.
   - You need five-gate campaign scaling planner for a specific task.
   - You want the method's decisions and assumptions written down before acting.
+not_for:
+  - Your campaign has under 14 days of data, or your ad account is new. Wait and collect more results first.
+  - No campaign passes all five checks. Run a creative test first, then come back, because the plan will say fix creative before scaling.
+  - You want to write new ads or check them before launch. Use a copywriter or your ad platform's review tools instead.
 you_give:
   - Campaign results
   - Targets
@@ -21,9 +25,31 @@ you_get:
   - A five-gate scaling review with method, timing and stop rules
   - The sources used, missing inputs and assumptions
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Paste your results for each campaign from the last 14 to 30 days, plus your targets, budget cap and growth goal.
+  - Answer any question about missing numbers. The AI marks gaps and does not guess.
+  - Check the five-check table first. A campaign must pass all five to scale.
+  - Check the maths and dates against your ad account before you change any budget.
+  - Scale in steps of 15 to 20 percent, and wait at least 7 days between steps.
+output_sample:
+  input:
+    - Your results for each campaign over the last 14 to 30 days
+    - Your target cost per sale and target return on ad spend
+    - Your monthly budget cap and growth goal
+    - Days at current budget and number of live ads (optional)
+  output:
+    - name: Scale-Readiness Summary
+      contains: A table showing each campaign's result on the five checks, whether it is ready to scale, and what blocks it.
+    - name: Budget Pacing Status
+      contains: Whether spend is on pace, under or over for the month, with the action to take.
+    - name: Scaling Recommendations
+      contains: For each ready campaign, the scaling method, new daily budget, timeline, week-by-week plan and risk level.
+    - name: Budget Reallocation
+      contains: Where to move budget from and where to move it to.
+    - name: Saturation Watchlist
+      contains: Signals such as frequency, cost per thousand views and click rate to watch, with the stop rules.
+    - name: 30-Day Projection
+      contains: Expected spend and revenue for the next 30 days based on the plan.
 how_it_works:
   - title: Check the inputs
     text: Confirm campaign results, targets, budget, pacing dates and saturation signals. Mark facts that are missing.

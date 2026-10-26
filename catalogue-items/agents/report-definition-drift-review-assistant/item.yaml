@@ -1,6 +1,6 @@
 slug: report-definition-drift-review-assistant
 name: Report definition drift review assistant
-summary: A metric difference table, reconciled examples and reporting procedure.
+summary: "Find where a recurring report's metric definition changed. Get a difference table, worked examples and a reporting procedure."
 category: agent
 type: agent
 role: orchestrate
@@ -19,13 +19,13 @@ outputs:
   - type: spreadsheet
   - type: document
 uses:
-  - align-recurring-report-metric-definitions
   - source-note-summariser
+  - align-recurring-report-metric-definitions
 steps:
-  - uses: align-recurring-report-metric-definitions
-    note: "Run when: A recurring report changes its formula, source grain, time window or exclusions."
   - uses: source-note-summariser
-    note: Run align-recurring-report-metric-definitions for changed evidence or a due review. If metric ownership or meaning is unclear, extract the conflicting definition records and stop the affected comparison before publishing a trend.
+    note: "Only when a metric definition lives in a long memo, email thread or meeting note: pulls out the definition as written, with the quotes. It hands over a summary of the definition, so the next step compares what the definition says and not a guess. If the owner or meaning is unclear, the affected comparison stops here and nothing is published as a trend."
+  - uses: align-recurring-report-metric-definitions
+    note: "Run when a recurring report changes its formula, source grain, time window or exclusions, or a review is due. It uses your reports and source tables, plus the definition summary from step 1 when there is one. It hands over the difference table, the worked examples and the reporting procedure."
 schedule: At each user-requested reporting definition review. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

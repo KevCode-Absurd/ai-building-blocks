@@ -1,6 +1,6 @@
 new_slug: proof-backed-sales-copy-writer
 name: Evidence-based sales copy writer
-summary: Paste your opening and proof. Get the body and close, with proof beside every claim.
+summary: Write the body and close of your sales page, email or long ad, with proof beside every claim. Give it your opening, buyer notes and facts.
 job: write-landing-page
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You have a strong opening for a page, email or long ad and need the rest written.
   - Your page makes claims but the proof is buried or missing.
   - Your close is a pile of buttons, offers and timers, and you want one clear ask.
+not_for:
+  - "You only need a headline or a short ad: write that first line yourself or with your AI, then bring the opening back here."
+  - "You have no opening yet: use the Sales copy opening writer first, then come back for the body and close."
+  - "You have no real proof or guarantee to show: gather your reviews, test results and refund terms first, because this skill will not invent them."
 you_give:
   - The opening lines you already have, or the kind of opening
   - A note on the buyer, how much they know, their doubts and their words
@@ -25,9 +29,29 @@ you_get:
   - A list of each claim and the proof placed beside it
   - What it assumed, any placeholders left for missing figures, and any check it couldn't meet
 how_to_use:
-  - Supply the relevant brief and material, or name files in the authorized project.
-  - Ask for the stated result. Keep supplied facts, assumptions and missing evidence distinct.
-  - Review the result before authorizing repairs or external changes. Save the returned packet or authorize a file destination.
+  - Open Claude, ChatGPT or Gemini and paste in the skill. It needs no code, web access or paid tool.
+  - Paste your opening lines, a note on your buyer, and your facts, proof, offer and guarantee. Add the length you want.
+  - Include your guarantee with every condition, and the one doubt that stops most buyers.
+  - Read the proof list. Check that each claim has real proof beside it.
+  - Fill any bracketed placeholders with your real figures, then check the whole text once more before you publish.
+output_sample:
+  input:
+    - The opening lines you already have, or the kind of opening
+    - "A note on your buyer: what they know, their doubts and their words"
+    - Your facts, proof, offer and guarantee
+    - How long the copy should be
+    - Your voice notes and claims you must never make (optional)
+  output:
+    - name: Body and close
+      contains: The finished sales text that follows your opening, within your length, ending on one clear action.
+    - name: Proof placed
+      contains: Each claim in the copy, with the proof beside it and where that proof comes from.
+    - name: Assumed
+      contains: Anything the AI inferred because you did not state it.
+    - name: Placeholders
+      contains: Bracketed gaps left for figures or facts you did not supply.
+    - name: CHECKS MISSED
+      contains: One line for each check the copy still fails, or none.
 how_it_works:
   - title: Finds the true detail
     text: Looks for the one interesting fact a rival couldn't say, such as how it's made or an odd detail a customer noticed, and builds around it.

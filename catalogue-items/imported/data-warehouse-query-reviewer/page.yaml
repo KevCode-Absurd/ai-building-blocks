@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Data mistakes are subtle, so it checks each step.
 new_slug: data-warehouse-query-reviewer
 name: Data warehouse query reviewer
-summary: Share your business question or SQL. Get a safe, read-only analysis
-  plan and a check for join and privacy errors.
+summary: Check your data warehouse query before you share results. Get a read-only plan and a review for join, grain and privacy errors.
 job: read-ad-results
 headline: Data warehouse query reviewer
-subhead: A careful, read-only plan for answering a business question from your
-  warehouse, or a review of SQL you already wrote. It catches wrong joins and
-  privacy slips before they reach a report.
+subhead: A careful, read-only plan for answering a business question from your warehouse, or a review of SQL you already wrote. It catches wrong joins and privacy slips before they reach a report.
 explain: |
   A careful, read-only plan for answering a business question from your warehouse, or a review of SQL you already wrote. It catches wrong joins and privacy slips before they reach a report.
 
@@ -18,6 +15,10 @@ when:
   - You want a second look at SQL before sharing results.
   - A question needs an analysis plan before anyone writes queries.
   - You must keep small customer groups private in a report.
+not_for:
+  - "You need to fix a broken data pipeline or change warehouse access: ask your data owner or admin."
+  - "You want to change or delete data: this skill is read-only, so use your normal change process with your data team."
+  - "You have no table or column notes yet: get the schema from your data owner first, because the skill will not guess names."
 you_give:
   - The business question or SQL
   - Table and schema notes
@@ -29,7 +30,30 @@ you_get:
   - Privacy check
   - Record of scope and assumptions
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - Paste your business question or your SQL.
+  - Add your table and column notes, the time window, and any privacy limits.
+  - Answer any questions it asks. It will not guess table names or meanings.
+  - Read the review and fix any failed check before you run the query.
+  - Run the query yourself in your warehouse, or let your AI run it only if it has read-only access you approved. Then paste the results back for the checks and report.
+output_sample:
+  input:
+    - Your business question or your SQL query
+    - Notes on your tables and columns
+    - Your privacy limits, such as a smallest group size (optional)
+    - The time window and who is included
+  prerequisites:
+    - Read-only access to your warehouse, if you want the query run (optional, you can run it yourself)
+  output:
+    - name: Analytical contract
+      contains: Your question, who is included, the metric, the dates and how you will use the result.
+    - name: Source list
+      contains: Each table or model with its grain, key, freshness, owner and known quality warnings.
+    - name: Read-only query
+      contains: A query using only the real schema, with clear date filters, safe division and a row limit.
+    - name: Pre-run review
+      contains: Checks for join grain, duplicated counts, test records, time zones and small groups.
+    - name: Result checks
+      contains: Row counts, totals, nulls and duplicates compared with a trusted source, and how stable the finding is.
+    - name: Report
+      contains: Finding, scope, method, confidence, caveats and next step, with the query or a summary of it.

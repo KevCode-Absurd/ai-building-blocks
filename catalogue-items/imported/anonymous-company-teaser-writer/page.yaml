@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must hide identity while keeping the pitch strong.
 new_slug: anonymous-company-teaser-writer
 name: Anonymous company teaser writer
-summary: Give it company facts. Get a one-page teaser that sells the business
-  without naming it.
+summary: Write an anonymous company teaser for a sell-side deal. Give it your company facts. You get a one-page blind teaser that hides the name.
 job: money-and-investing
 headline: Anonymous company teaser writer
-subhead: When you sell a company, you need to spark buyer interest without
-  giving away whose it is. This skill writes a one-page anonymous teaser that
-  sells the business and keeps the name hidden until a buyer signs an NDA.
+subhead: When you sell a company, you need to spark buyer interest without giving away whose it is. This skill writes a one-page anonymous teaser that sells the business and keeps the name hidden until a buyer signs an NDA.
 explain: |
   When you sell a company, you need to spark buyer interest without giving away whose it is. This skill writes a one-page anonymous teaser that sells the business and keeps the name hidden until a buyer signs an NDA.
 
@@ -18,6 +15,10 @@ when:
   - An adviser asks for a blind teaser before NDAs go out.
   - You need to describe a strong business without naming customers or the town.
   - You are preparing a sell-side pack for Indian buyers.
+not_for:
+  - "You need a public listing or an ad for a company that can be named: write that with a banker or a plain marketing page."
+  - "A buyer has already signed an NDA: share the full information memorandum, which your adviser or a person on your deal team prepares."
+  - "You are buying a company, not selling one: ask your adviser for a buyer screening note, since this tool only writes the seller side."
 you_give:
   - What the company does and how it earns
   - Revenue, profit and growth numbers
@@ -30,7 +31,34 @@ you_get:
   - Investment highlights
   - A short financial summary table
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - "Add your company facts: what it does, key numbers, region, selling points and what must stay hidden."
+  - Say the figures are for the Indian fiscal year, April to March, and give sums in lakh or crore.
+  - Read the draft and the anonymization check. Remove anything that could name the company.
+  - Ask for a Word or PDF file. If your AI cannot make files, copy the text into Word yourself.
+  - Have your adviser and lawyer review it before you send it to anyone.
+output_sample:
+  input:
+    - What the company does and how it makes money
+    - Revenue, profit and growth numbers
+    - Three to five selling points
+    - Region and what must stay hidden
+    - Likely buyer type (optional)
+  prerequisites:
+    - An AI that can create Word and PDF files, or paste the text out of the chat yourself
+    - Your own figures. The skill does not look up market data, so check any outside source yourself before use
+  output:
+    - name: Header
+      contains: A deal code name, a sector line and a confidential note.
+    - name: Company Description
+      contains: Two or three sentences on what the company does, its market position and its region.
+    - name: Investment Highlights
+      contains: Four to six bullets on market position, revenue quality, growth, margins, management and strategic value.
+    - name: Financial Summary
+      contains: A small table of revenue, growth, EBITDA, margin and staff, with Indian fiscal years and lakh or crore units.
+    - name: Transaction Overview
+      contains: What is for sale, the rough timeline and who to contact to show interest.
+    - name: Anonymization check
+      contains: A pass over the draft for names, cities, customers and figures that could reveal the company.
+    - name: Word and PDF files
+      contains: The one-page teaser in Word and PDF, with an optional single slide.

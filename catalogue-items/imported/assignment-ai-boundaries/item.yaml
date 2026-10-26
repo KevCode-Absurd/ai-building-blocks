@@ -11,6 +11,8 @@ level: intermediate
 inputs:
   - type: document
     required: true
+  - type: plan
+    required: false
 outputs:
   - type: audit_report
     required: true

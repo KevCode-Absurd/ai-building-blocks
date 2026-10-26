@@ -14,6 +14,28 @@ use_cases:
   - Try a short drawing exercise after years away
   - Give a beginner useful feedback on one visible skill
   - Inspect the empty space in a crowded poster
+not_for:
+  - "You want to draw a head or body from simple building shapes: use the Andrew Loomis mind, not this one."
+  - "You want to learn from sustained looking and changing viewpoints in portraits and landscapes: use the David Hockney mind."
+  - "You want a verdict on your talent or brain type: this mind will not give one, so ask a drawing teacher or join a class for a graded critique."
+output_sample:
+  input:
+    - The subject you are drawing, such as a chair, a mug or a plant
+    - Your current drawing, or a clear description of it
+    - What you want the drawing to do
+    - Your tools, such as pencil and paper
+    - The part that keeps turning into the same symbol (optional)
+  output:
+    - name: Session card
+      contains: A short exercise that targets one skill, such as edges, spaces, proportion or light, with steps in order.
+    - name: Negative-space prompt
+      contains: A question about the shape of the gap next to the part you keep drawing from memory.
+    - name: Relationship map
+      contains: A few width, height and angle comparisons to check from one fixed viewpoint.
+    - name: Feedback on what is visible
+      contains: One clear mismatch between your reference and your drawing, and what cannot be judged yet.
+    - name: Next study
+      contains: One small restudy to do next, with a comparison at the end to check it.
 seats:
   - {seat: Learning to see through drawing, asks: Which visible relationship are you replacing with what you already know?}
   - {seat: Perceptual skill diagnosis, asks: Is the difficulty in edges, spaces, proportion, light or the whole?}

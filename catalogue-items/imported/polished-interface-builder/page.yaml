@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows style rules while making design choices.
 new_slug: polished-interface-builder
 name: Polished interface builder
-summary: Describe the interface. Get a built page with careful colour, layout
-  and motion, not a stock template look.
+summary: Build a polished interface from a short description, or review one you have. Get working React and Tailwind code with a clear look, not a stock template.
 job: build-websites
 headline: Polished interface builder
-subhead: Describe the interface. Get a built page with careful colour, layout
-  and motion, not a stock template look. Bring description of the page or app.
-  Use the result to plan your next step.
+subhead: Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look. Bring description of the page or app. Use the result to plan your next step.
 explain: |
   Ask for a page or app screen and get working front-end code with a deliberate look, not the stock template feel of centred heroes, purple gradients and rows of identical cards.
 
@@ -18,6 +15,10 @@ when:
   - You need a dashboard that works on phone and desktop.
   - You want a review of a screen with the biggest design faults ranked.
   - You are building a React page and want motion that is not distracting.
+not_for:
+  - "Your brand already has a style guide or design system: give your AI that guide and follow it, or ask your designer, because this skill's look rules can clash with it."
+  - "You need a finished, tested product: have a developer check the build, accessibility and real users before launch."
+  - "You only want words for a page: write the copy with your AI in a plain chat, then add it here."
 you_give:
   - Description of the page or app
   - Brand colours or style rules (optional)
@@ -29,8 +30,28 @@ you_get:
   - Loading, empty and error states
   - Ranked list of design fixes for a review
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from the skill folder.
+  - Describe the page or app you want. Add your brand colours, stack and look (calm or bold) if you have them.
+  - To review a screen, paste its code or describe it. Ask for the biggest problems first, with a fix.
+  - Read the result. Check the code runs in your project and works on phone and desktop.
+  - Code running and file access help a lot. Without them, copy the code into your project yourself.
+output_sample:
+  input:
+    - Your description of the page or app
+    - Your brand colours or style rules (optional)
+    - Your tech stack (optional)
+    - An existing screen to review (optional)
+  prerequisites:
+    - An AI that can run code and read your project files works best
+    - A React project if you want to drop the code straight in
+  output:
+    - name: Interface code
+      contains: Working front-end code for the page or screen, built to your description and the chosen look.
+    - name: Install commands
+      contains: Commands for any new packages the code needs, after your AI checks what your project already has.
+    - name: State list
+      contains: The loading, empty and error states built into the screen, so it does not break when data is missing.
+    - name: Design choices
+      contains: Short notes on the type, colour, spacing and motion picked, and why.
+    - name: Ranked design fixes
+      contains: "For a review: the biggest design problems in order, with an improvement you can build."

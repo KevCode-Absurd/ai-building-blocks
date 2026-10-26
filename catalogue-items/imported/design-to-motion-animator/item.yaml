@@ -1,0 +1,59 @@
+slug: design-to-motion-animator
+name: Design animator
+summary: Share a static design. Get an animated HTML version, fidelity checks
+  and the video or GIF exports you request.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: design_file
+    required: false
+  - type: image
+    required: false
+outputs:
+  - type: web_page
+  - type: image
+  - type: document
+uses: []
+origin: imported
+package_files: all
+source:
+  by: Elaya
+  repo: elayadesign/ai-design-skills
+  path: skills/design-to-motion
+  url: https://github.com/elayadesign/ai-design-skills/tree/38bbe5765600b9178b5395a823c9f6c8d2b8e730/skills/design-to-motion
+  licence: MIT
+  licence_file: LICENSE
+  commit: 38bbe5765600b9178b5395a823c9f6c8d2b8e730
+  original_name: design-to-motion
+  author: Elaya Design
+  imported: 2026-10-25
+  sha256: 12240f8065147f3623424cf38bc198a94857441446736bb449429451d87a3d55
+version: 1.0.0
+example_pending: true
+credits:
+  - title: Design to Motion skill
+    by: Elaya
+    url: https://github.com/elayadesign/ai-design-skills/tree/38bbe5765600b9178b5395a823c9f6c8d2b8e730/skills/design-to-motion
+    used: Original instructions and MIT license copied without changes. AI Blocks
+      added plain display metadata, provenance and usage notes.
+  - title: emilkowalski/skills
+    by: emilkowalski
+    url: https://github.com/emilkowalski/skills
+    used: Credited by Elaya for general motion rules adapted, not copied. Original
+      attribution retained in SKILL.md.
+  - title: Owl-Listener/designer-skills
+    by: Owl-Listener
+    url: https://github.com/Owl-Listener/designer-skills
+    used: Credited by Elaya for general motion rules adapted, not copied. Original
+      attribution retained in SKILL.md.
+  - title: dylantarre/animation-principles
+    by: dylantarre
+    url: https://github.com/dylantarre/animation-principles
+    used: Credited by Elaya for general motion rules adapted, not copied. Original
+      attribution retained in SKILL.md.

@@ -1,44 +1,129 @@
 new_slug: ad-image-generation-and-edit-planner
 name: Ad image generation and edit planner
-summary: Plan an ad image batch, choose edits by intent and keep each version tied to its source and approved facts.
+summary: "Plan a batch of ad images from your product photo: get the settings, a prompt for each version, edit requests and a log of every change."
 job: make-image-ads
 headline: Ad image generation and edit planner
-subhead: Share product photos, image brief, brand rules and available image tool. Get a generation plan, edit requests and version log.
+subhead: "Give it your product photo, an ad theme and a picture shape. It sets the look, writes one image prompt for each version and tells you what to check in every picture. Then it writes the edit requests for the one you like and keeps a log of which version came from which."
 explain: |-
-  Plan an ad image batch, choose edits by intent and keep each version tied to its source and approved facts.
+  Making ad images with AI goes wrong in two ways. The first pictures drift away from your real product, and every fix after that is a fresh guess. Nobody remembers which version came from which, so a good image can't be rebuilt.
 
-  Share product photos, image brief, brand rules and available image tool. Get a generation plan, edit requests and version log.
+  This skill plans an AI ad image batch before you draw anything. It turns your product photo and theme into a full set of choices: shape, style, background, lighting, type and eight visual settings. It then writes a ready-to-paste prompt for each of 1 to 6 versions, and a review list that checks each picture against your photo and your approved words.
+
+  When you like a picture, it helps you edit it by intent. A text change, like a new headline, is one kind of request. A style change, like a new background or lighting, is another. Each edit changes one thing and says what must stay the same. A version log keeps every image tied to its source and its parent. Claude writes the prompts but can't draw, so you make the pictures in an image tool.
 when:
-  - You need a generation plan, edit requests and version log.
-  - You need ad image generation and edit planner for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You have a product photo and want 3 to 6 ad image versions to test.
+  - You want to try one product under different themes, such as lifestyle, urgency or social proof.
+  - A good image needs one change, such as new headline text or a new background, and you want the right edit request.
+  - You want a record of which image came from which, so you can go back to any version.
+not_for:
+  - "You need real people holding your product, or one specific model: AI images still handle this badly. Use real photos or a creator video."
+  - "The text on the image must be exact for legal reasons: have a designer set it, or lock the words with the Exact-text image ad prompt writer."
+  - "You only want the visual look worked out, with no prompts: use the Eight-lever ad visual planner."
+  - "You have no approved ad words or brand rules yet: write them first with the Fact-based ad copy writer and the Brand profile builder."
+  - You only need a crop or a resize. A plain photo editor is faster.
 you_give:
-  - Product photos
-  - Image brief
-  - Brand rules and available image tool
+  - Your product photos, at least 512 pixels on the short side (required)
+  - The ad theme, such as lifestyle, urgency or social proof, and the shape you want: square, tall or wide (required)
+  - Your brand colours and rules, and any words that must appear on the image (optional)
+  - The image tool you will use, such as ChatGPT or Gemini (optional)
+  - How many versions you want, 1 to 6 (optional, 3 if you don't say)
 you_get:
-  - A generation plan, edit requests and version log
-  - The sources used, missing inputs and assumptions
+  - A setup for the batch: theme, shape, style, background, lighting, type and eight visual settings
+  - One ready-to-paste image prompt for each version
+  - A review list to check every picture against your photo and your approved words
+  - Edit requests for the changes you want, split into text edits and style edits
+  - A version log that ties every image to its source and parent
+  - A cost note that says to check current prices, with no made-up numbers
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in Claude, ChatGPT or Gemini. Claude writes the prompts but can't draw, so you finish the pictures in ChatGPT, Gemini, Higgsfield or another image tool.
+  - Attach your product photo. Say the theme, the shape, your brand colours and any exact words for the image. Say which image tool you will use.
+  - Take the prompts one at a time into your image tool, with the product photo attached.
+  - Check each picture against the review list. Pick your best one or two and ask the skill for edit requests.
+  - Paste the edit requests into your image tool and record each new picture in the version log. Check current prices in your tool before you make many versions.
 how_it_works:
-  - title: Check the inputs
-    text: Confirm product photos, image brief, brand rules and available image tool. Mark facts that are missing.
-  - title: How This Works
-    text: Follow the how this works section in the full method and keep its required fields and decision rules.
-  - title: Collect Generation Inputs
-    text: Follow the collect generation inputs section in the full method and keep its required fields and decision rules.
-  - title: Generation Pipeline
-    text: Follow the generation pipeline section in the full method and keep its required fields and decision rules.
-  - title: Model Routing & Costs
-    text: Follow the model routing & costs section in the full method and keep its required fields and decision rules.
-  - title: Editing Workflow
-    text: Follow the editing workflow section in the full method and keep its required fields and decision rules.
-  - title: Configuration Output
-    text: Follow the configuration output section in the full method and keep its required fields and decision rules.
-  - title: Review the result
-    text: Return a generation plan, edit requests and version log. Check facts, math and the decisions before any action.
+  - title: Collects the inputs
+    text: Product photo, theme, shape, style, background, lighting, type and number of versions. Required items are asked for once. Optional ones get defaults. A small photo is sent back for a larger one.
+  - title: Sets the visual direction
+    text: Fills all eight settings (mood, colour, lighting, product placement, composition, background, style and angle). Anything you lock stays fixed. The versions differ on at least two settings.
+  - title: Writes a prompt per version
+    text: Each prompt names the product photo as the reference, the exact words allowed on the image, the colours and what must not change, such as the product shape and label text.
+  - title: Plans the tool and cost
+    text: Asks which image tool you use and says whether it needs a paid plan or credits. It quotes no prices. You check current pricing in your tool.
+  - title: Reviews each picture
+    text: A review list checks the product against your photo, the spelling of any words, invented claims or badges, brand colours and cropping.
+  - title: Writes edit requests
+    text: Text edits (headline, spelling) and style edits (background, colour, lighting, add or remove an object) are written as separate requests. Each changes one thing.
+  - title: Keeps the version log
+    text: Every image gets a number, its source photo, its parent version, the tool, what changed and whether you approved it.
+output_shape: |
+  GENERATION CONFIG
+  Product <name> | Theme <theme > variation> | Shape <1:1 | 9:16 | 16:9> | Style <style> | Background <...> | Lighting <...> | Type <...> | Versions <n> | Image tool <tool or MISSING>
+
+  VISUAL DIRECTION (8 settings)
+  1 Mood <...> 2 Colour <...> 3 Lighting <...> 4 Product placement <...> 5 Composition <...> 6 Background <...> 7 Style <...> 8 Angle <...>
+  LOCKED <list> | FLEXIBLE <list>
+
+  WORDS ON THE IMAGE  headline <exact text or none> | button <exact text or none>
+
+  PROMPT 1 .. N  <ready to paste, with the product photo as reference>
+
+  REVIEW LIST  <checks to run on every picture>
+
+  EDIT REQUESTS (after you pick a favourite)
+  TEXT EDIT <one change> keep <what stays> | STYLE EDIT <one change> keep <what stays>
+
+  VERSION LOG
+  v<n> | source photo | parent | tool | what changed | approved? yes/no
+
+  COST NOTE  check the current price for <tool> before making many versions
+  NEXT  <shapes to expand, A/B pair>
+  CHECKS MISSED: <none | list>
+  MISSING: <what>
+output_sample:
+  input:
+    - Your product photos
+    - The ad theme and the shape you want
+    - Your brand colours and the exact words for the image (optional)
+    - The image tool you will use (optional)
+  prerequisites:
+    - An image tool that can draw, such as ChatGPT, Gemini or Higgsfield. Some need a paid plan or credits.
+    - Approved ad words and brand rules, if you want text on the image
+  output:
+    - name: GENERATION CONFIG
+      contains: Theme, shape, style, background, lighting, type, number of versions and the image tool.
+    - name: VISUAL DIRECTION
+      contains: The eight visual settings, with which are locked and which can change between versions.
+    - name: WORDS ON THE IMAGE
+      contains: The exact headline and button text allowed on the picture, or none.
+    - name: PROMPT 1 to N
+      contains: One ready-to-paste image prompt per version, with the product photo as the reference.
+    - name: REVIEW LIST
+      contains: What to check on every picture, such as product accuracy, spelling, claims and colours.
+    - name: EDIT REQUESTS
+      contains: One-change text edits and style edits for your favourite pictures, each saying what to keep.
+    - name: VERSION LOG
+      contains: Each image with its source, parent, tool, change and approval.
+    - name: COST NOTE and NEXT
+      contains: A reminder to check current prices, and the shapes or A/B pairs to try next.
+works_best_with:
+  tools:
+    - {name: "ChatGPT or Gemini", why: "Both can draw the picture from the prompt and your product photo in the same chat. Free plans have tight daily limits."}
+    - {name: "Higgsfield", why: "An image and video tool you can paste prompts into. It runs on paid credits."}
+    - {name: "Any good chat AI", why: "Writes the config, prompts, edit requests and log from what you paste."}
+  inputs:
+    - "Your brand colours and fonts, from your brand profile"
+    - "The ad words you have approved"
+    - "A second photo of the product from another angle"
+terms:
+  - term: Theme
+    meaning: The selling idea of the ad, such as lifestyle, urgency, social proof or problem and solution.
+  - term: Visual settings
+    meaning: Eight choices that shape a picture. They are mood, colour, lighting, product placement, composition, background, style and angle.
+  - term: Text edit
+    meaning: A change to the words on the image, such as a new headline or a spelling fix.
+  - term: Style edit
+    meaning: A change to the look, such as the background, colour or lighting.
+  - term: Version log
+    meaning: A list that records which image came from which, so you can go back to any version.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

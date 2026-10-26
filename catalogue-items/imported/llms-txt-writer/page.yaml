@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It studies the site, then fills a set file format.
 new_slug: llms-txt-writer
 name: llms.txt writer
-summary: Give it your site. Get an llms.txt file that tells AI tools which pages
-  and facts matter most.
+summary: Write an llms.txt file for your website. It tells AI tools which pages and facts matter most, so they cite the right page.
 job: get-found-in-search
 headline: llms.txt writer
-subhead: An llms.txt file for your site, a plain list that tells AI tools which
-  pages and facts matter most. You choose what they see first instead of letting
-  them guess.
+subhead: An llms.txt file for your site, a plain list that tells AI tools which pages and facts matter most. You choose what they see first instead of letting them guess.
 explain: |
   An llms.txt file for your site, a plain list that tells AI tools which pages and facts matter most. You choose what they see first instead of letting them guess.
 
@@ -18,6 +15,10 @@ when:
   - You want AI answers to cite your best page.
   - You launched a docs site and want it easy for AI to read.
   - You already have an llms.txt and want it checked.
+not_for:
+  - "Your site has no public pages yet: wait until it does, since the file only lists pages that already exist."
+  - "You want to stop crawlers from reading parts of your site: review your robots.txt file or sitemap instead."
+  - "You need your site to rank in Google: use a normal SEO check, as llms.txt is for AI tools and is not a ranking tool."
 you_give:
   - Your website address
   - Your most important pages
@@ -30,8 +31,31 @@ you_get:
   - Placement steps for your site
   - A check of an existing file
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can open web pages.
+  - Open Claude, ChatGPT or Gemini. Pick one that can open web pages, so it can read your site.
+  - Paste the skill text into the chat.
+  - Add your website address. Add your key pages and facts if you have them.
+  - If you already have an llms.txt, paste it in and ask for a check first.
+  - Read the result. Make sure every fact in Key Facts is true and comes from your site.
+  - Save the file as llms.txt and upload it to the root of your site, so it loads at yourdomain.com/llms.txt.
+output_sample:
+  input:
+    - Your website address
+    - Your most important pages (optional)
+    - Facts that must be right, like pricing or locations (optional)
+    - Your current llms.txt file (optional)
+  prerequisites:
+    - An AI that can open web pages, so it can read your site
+    - A way to upload a file to the root of your site
+  output:
+    - name: llms.txt
+      contains: A title, a short summary, and sections of links with a short note on each page.
+    - name: Key Facts
+      contains: Plain lines on pricing, features and locations, taken only from pages on your site.
+    - name: Contact
+      contains: How to reach the business, such as an email address found on the site.
+    - name: Optional section
+      contains: Lower priority pages that AI tools can skip when they are short on space.
+    - name: Placement steps
+      contains: "Where the file must go: the root of your domain, at /llms.txt."
+    - name: Analysis report
+      contains: "For an existing file: a score out of 100, format checks, missing pages and a better version."

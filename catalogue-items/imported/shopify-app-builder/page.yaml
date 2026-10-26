@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Apps mix sign-in, screens and store data, so choices ripple.
 new_slug: shopify-app-builder
 name: Shopify app builder
-summary: Say what your Shopify app should do. Get a working app with admin
-  screens, sign-in and extensions.
+summary: Describe what your Shopify app should do. Get a Shopify app builder project with admin pages, sign-in, webhooks and extensions, plus deploy steps.
 job: build-software
 headline: Shopify app builder
-subhead: A working Shopify app with admin screens, sign-in and extensions, built
-  from a plain description of what it should do. You can skip the long setup
-  reading.
+subhead: A working Shopify app with admin screens, sign-in and extensions, built from a plain description of what it should do. You can skip the long setup reading.
 explain: |
   A working Shopify app with admin screens, sign-in and extensions, built from a plain description of what it should do. You can skip the long setup reading.
 
@@ -18,6 +15,10 @@ when:
   - You need to react to store events such as new orders.
   - You plan to list an app on the Shopify App Store.
   - You want a private tool for one store and no review process.
+not_for:
+  - "You only want to change your store's look or settings: use the Shopify admin theme editor or a ready-made app from the App Store."
+  - "You need discount or shipping logic only: a Shopify Function is a smaller job than a full app, so ask a developer or scope that part alone."
+  - "You cannot run code or install tools: ask a Shopify developer or agency to build it for you."
 you_give:
   - What the app should do
   - "App type: public, custom or sales channel"
@@ -30,8 +31,34 @@ you_get:
   - Extension code where needed
   - Deploy steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use the Shopify CLI.
+  - Open an AI that can run code and use the Shopify CLI. Check that Node.js 18 or newer is installed.
+  - Paste the skill into the chat, or upload the skill folder.
+  - Describe what your app should do, and say if it is public, custom or a sales channel.
+  - "Let your AI run the first commands: shopify app init, then shopify app dev. Sign in to your Partner account when asked."
+  - Check the admin pages and webhook handler on a development store before you go further.
+  - When it works, run shopify app deploy. For a public app, then send it for App Store review.
+output_sample:
+  input:
+    - What your app should do, in plain words
+    - "App type: public, custom or sales channel"
+    - Your Shopify Partner account details
+    - Which store events it should react to, such as new orders (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - Node.js 18 or newer installed
+    - A Shopify Partner account
+  output:
+    - name: App project folder
+      contains: The Remix project made by the Shopify CLI, with app routes, extensions and a database folder.
+    - name: shopify.app.toml
+      contains: Your app name, permission scopes, webhook topics and optional app proxy settings.
+    - name: shopify.server.js
+      contains: The sign-in setup using session tokens, plus the Shopify API settings.
+    - name: Admin pages
+      contains: Screens in the Shopify admin built with Polaris, such as a product list or form.
+    - name: webhooks.jsx
+      contains: A handler that reacts to store events like new products or new orders.
+    - name: Extensions
+      contains: Code for admin blocks, theme blocks or other extension types your app needs.
+    - name: Deploy steps
+      contains: The commands to deploy, and the App Store submission steps if your app is public.

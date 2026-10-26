@@ -1,6 +1,6 @@
 new_slug: weekly-dependency-and-security-sweep
 name: Weekly dependency and security sweep
-summary: Run it weekly on your project. Get what is new, open or fixed since last week, plus an upgrade order.
+summary: Run a weekly dependency and security sweep on your project. See what is new, still open or fixed, plus a safe upgrade order.
 job: secure-code
 thinking: high
 thinking_why: It runs up to eight checks, picks which ones this week needs and compares with last week's findings. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You ship software and want the same security checks every week.
   - You heard of a package breach and want to know if you are hit.
   - You want to know what changed since the last scan, not another long list.
+not_for:
+  - "You want a one-off deep review of a system that holds money, health or personal data: hire a qualified security professional."
+  - "You want to scan a site, server or account you do not own: don't. Ask the owner to run it or to give written permission."
+  - "You have no package files or code to give it: start with a plain check of your accounts and passwords, or ask a developer to set up the project files first."
 you_give:
   - Your project folder with its package files and lock files
   - A link to a live site you own (optional)
@@ -30,6 +34,30 @@ how_to_use:
   - Read the Do first section. If it says to replace a key, do that before anything else.
   - Approve the upgrades you want. It makes only those, on a branch, and runs your tests.
   - Run it again next week. It compares with the saved list.
+output_sample:
+  input:
+    - Your project folder with its package files and lock files
+    - A link to a live site you own (optional)
+    - The name of a breach or package warning you heard about (optional)
+    - Findings you have decided to accept, and why (optional)
+  prerequisites:
+    - An AI that can read your project files, such as Claude Code
+    - Last week's saved list, if this is not your first sweep (the agent keeps it in a sweep folder)
+  output:
+    - name: This week
+      contains: One line with counts of new, still open and fixed findings, split by severity.
+    - name: Do first
+      contains: Anything urgent, such as a live key to replace now, or a note that nothing is urgent.
+    - name: New findings
+      contains: Each new finding with its package or file, severity, fix and risk of breaking things.
+    - name: Still open
+      contains: Findings from earlier weeks, with how many weeks each has been open.
+    - name: Upgrade order
+      contains: A safe order to upgrade packages, grouped so related upgrades go together.
+    - name: Accepted risks due for review
+      contains: Risks you chose to accept that are old enough to confirm again.
+    - name: Skipped and missing
+      contains: Checks that were skipped and why, then every MISSING line in one list.
 how_it_works:
   - title: Read its memory
     text: Opens last week's findings and the risks you decided to accept.

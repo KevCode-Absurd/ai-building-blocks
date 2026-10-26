@@ -1,6 +1,6 @@
 new_slug: ai-traffic-tracking-setup
 name: "AI traffic tracking set-up"
-summary: "Give it your analytics and checkout. Get an AI traffic channel, a post-purchase question and a redirect list."
+summary: "Set up AI traffic tracking for your store: a GA4 channel, a post-purchase survey question, a tracking sheet and a redirect list for 404s."
 job: get-found-in-search
 thinking: low
 thinking_why: "It follows fixed set-up steps for your tools, so a fast model is enough."
@@ -17,6 +17,10 @@ when:
   - You think AI assistants send you buyers and you cannot see them.
   - You want to know if AI visitors buy more than organic visitors.
   - AI tools send people to pages that no longer exist.
+not_for:
+  - "You only sell in a physical shop with no online orders: use your till reports or ask customers at the counter."
+  - "You want general purchase and conversion tracking: set up your store's built-in GA4 events first, then come back."
+  - "You want to judge results in the first few weeks: wait 2 to 3 months, as AI traffic is small and the count is low."
 
 you_give:
   - Access to GA4 or your analytics tool
@@ -35,6 +39,32 @@ how_to_use:
   - Follow the GA4 steps, then add the survey question to checkout or the order page.
   - Paste the landing pages that return 404 and get the redirect list.
   - Check the sheet at 2 to 3 months, not before.
+output_sample:
+  input:
+    - Your analytics tool, such as GA4
+    - Your store platform and the page where orders are confirmed
+    - Your current channel group settings (optional)
+    - A list of AI landing pages that show 404 (optional)
+    - Your server or CDN logs (optional)
+  prerequisites:
+    - Edit access to your analytics
+    - Access to change your checkout or order page
+    - A test order to check the survey works
+  output:
+    - name: GA4 channel
+      contains: The channel name, the source rule that matches AI assistants, and numbered steps for your set-up.
+    - name: Survey
+      contains: The question, the answer options with an AI assistant choice, and where to place it.
+    - name: Tracking sheet
+      contains: A monthly row for AI sessions, orders, revenue, survey answers and pages hit.
+    - name: Log check
+      contains: Bot hits by page, if you have logs, to show which pages AI tools use.
+    - name: Redirects
+      contains: Each old AI landing URL paired with the closest real page.
+    - name: Compare after 2 to 3 months
+      contains: Conversion rate and order value for AI visitors against organic visitors, from your own data.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any details you did not give.
 
 how_it_works:
   - title: Adds an AI channel

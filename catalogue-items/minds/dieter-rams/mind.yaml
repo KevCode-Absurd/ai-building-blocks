@@ -16,6 +16,29 @@ use_cases:
   - "Choose materials, colours or details that will still look right in ten years"
   - "Check a design for waste: of materials, of attention, of the user's time"
   - "Explain to a team why a quieter, simpler option is the stronger one"
+not_for:
+  - "You need a brand name, brand strategy or sales copy: use a copywriting or brand strategy skill, or a person who writes for a living."
+  - "You want bold, expressive or rule-breaking type and layout: use the David Carson mind instead."
+  - "You need a chart or graph that tells the truth about numbers: use the Alberto Cairo mind or the Cole Nussbaumer Knaflic mind."
+output_sample:
+  input:
+    - The product, page, space or piece of work you want reviewed, or a drawing or detailed description of it
+    - One sentence on what it is for
+    - Who uses it
+    - Anything you already plan to cut or keep (optional)
+  output:
+    - name: Purpose
+      contains: The purpose of your work in one sentence, and who uses it.
+    - name: What to remove
+      contains: A list of parts that do not serve the purpose, with the reason for each.
+    - name: What to keep
+      contains: The parts that already do their job and should be left alone.
+    - name: Ten principles notes
+      contains: A short note for each of the ten principles of good design that applies to your work.
+    - name: What could be better still
+      contains: Open points, plus what he cannot judge from here.
+    - name: Next step
+      contains: A request to try the cuts, live with them for a while and report back.
 seats:
   - {seat: "Design critique (less but better)", asks: "What can we take away, so that what is left works better?"}
   - {seat: "Honesty and durability", asks: "Will this still be useful and honest in ten years, or is it just fashion?"}

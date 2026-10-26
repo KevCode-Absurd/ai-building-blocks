@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It converts descriptions into a fixed file format.
 new_slug: postman-collection-maker
 name: Postman collection maker
-summary: Describe your API or paste cURL commands. Get a Postman collection file
-  that imports and runs straight away.
+summary: Turn your API description or cURL commands into a Postman collection file you can import in one step, with folders and a host variable.
 job: build-software
 headline: Postman collection maker
-subhead: Describe your API or paste cURL commands. Get a Postman collection file
-  that imports and runs straight away. Bring aPI description or cURL commands.
-  Use the result to plan your next step.
+subhead: Describe your API or paste cURL commands. Get a Postman collection file that imports and runs straight away. Bring aPI description or cURL commands. Use the result to plan your next step.
 explain: |
   A Postman collection file that imports in one click, built from a plain description of your API or from cURL commands you paste in.
 
@@ -18,6 +15,10 @@ when:
   - A new teammate needs a way to try your API.
   - You are documenting an API for testers.
   - You want to switch between dev and live hosts quickly.
+not_for:
+  - "Your API already has an OpenAPI file: import that file into Postman directly."
+  - "Your API uses GraphQL or SOAP: build those requests by hand in Postman, as this skill follows REST habits."
+  - "You want automated tests or a live run of your API: write tests in Postman after you import the collection."
 you_give:
   - API description or cURL commands
   - Base URL
@@ -29,7 +30,24 @@ you_get:
   - Variables for host and tokens
   - List of assumptions made
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
+  - Paste the skill text into the chat.
+  - Paste your cURL commands or describe your API. Add your base URL and sign-in type.
+  - Copy the collection.json and environment.json blocks into two files.
+  - In Postman, choose File, then Import, and add both files.
+  - Read the assumptions list and fix anything the AI guessed wrong.
+output_sample:
+  input:
+    - A plain description of your API, or one or more cURL commands
+    - Your base URL (optional)
+    - Your sign-in type, such as bearer token, basic or API key (optional)
+    - Sample request bodies (optional)
+  output:
+    - name: collection.json
+      contains: The Postman collection with your requests in folders, using a base_url variable and token variables.
+    - name: environment.json
+      contains: A Postman environment file with base_url and any tokens or keys, ready for you to fill in.
+    - name: Assumptions
+      contains: A list of guesses made, such as inferred methods or placeholder values, so you can correct them.
+    - name: Import instructions
+      contains: A short note on how to bring the files into Postman with File, then Import.

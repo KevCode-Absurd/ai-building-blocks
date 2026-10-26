@@ -2,38 +2,61 @@ thinking: medium
 thinking_why: It follows a set hub pattern but must pick topics that fit you.
 new_slug: content-hub-planner
 name: Content hub planner
-summary: Give it your topic area. Get pillar pages, supporting cluster pages,
-  URL structure and an internal link map.
+summary: "Plan a content hub for your topic: pillar page, cluster pages, URL pattern and internal link map, so your pages support each other in search."
 job: get-found-in-search
 headline: Content hub planner
-subhead: Give it your topic area. Get pillar pages, supporting cluster pages,
-  URL structure and an internal link map. Bring your main topic area. Use the
-  result to plan your next step.
+subhead: Give it your topic area, your audience and any pages you already have. It picks a pillar topic, splits it into cluster pages and plans the URLs and links. You get a hub plan you can hand to a writer.
 explain: |
   A plan for a content hub where every page has a job: one pillar page on your main topic, a set of cluster pages that go deep on its parts, and a clear map of which page links to which. Hubs built page by page end up as a pile of overlapping posts. This one is planned first.
 
   It starts by choosing pillar topics you can actually own, then splits each into cluster pages with no overlap. It sets the URL pattern, describes what a pillar page and a cluster page should contain, and draws the internal links in both directions. It also flags orphan pages and sets a schedule for refreshing old pieces so the hub keeps its authority.
 when:
-  - You have a topic you want to be known for and no plan for the pages that
-    prove it.
+  - You want to be known for one topic and have no plan for the pages that prove it.
   - Your blog has many posts on similar themes that compete with each other.
-  - You want search engines and AI answer tools to treat your site as an expert
-    on one subject.
-  - You are about to commission a batch of articles and need them to fit
-    together.
+  - You are about to order a batch of articles and need them to fit together.
+  - A pillar page went live with no supporting pages around it.
+not_for:
+  - "You need one article written: use a content brief or a writer, since this plans the structure and does not write pieces."
+  - "You have not picked a topic area yet: choose it first with a content strategy step, then come back here."
+  - "You need keyword research or search volumes: use a keyword tool first, then bring the results here."
 you_give:
   - Your main topic area
-  - Your audience and what they ask
+  - Your audience and the questions they ask
   - Your existing pages or URLs (optional)
-  - Keyword data (optional)
+  - Your keyword data (optional)
 you_get:
-  - Pillar and cluster page list
-  - URL structure
-  - Internal link map
-  - Page outlines for pillar and cluster
-  - Refresh schedule
+  - A pillar topic and a list of cluster pages, each with one focused question
+  - A URL pattern for the hub, with a slug for every page
+  - An internal link map showing links in and out for each page
+  - Outlines of what the pillar page and each cluster page should contain
+  - A schedule for refreshing old pages
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather your main topic, the questions your audience asks and the URLs of any pages you already have.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Paste your topic, audience questions and URLs. Add keyword data if you have it.
+  - "Check the result: one clear pillar, cluster pages that do not overlap, a URL for every page and links in both directions."
+  - Ask your AI to put the plan in a table with page, slug, target length, links in, links out and anchor text.
+  - Treat the advice on AI answer tools as opinion, not proven fact. Test it on your own site.
+output_sample:
+  input:
+    - Your main topic area
+    - Your audience and the questions they ask
+    - Your existing pages or URLs (optional)
+    - Your keyword data (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+  output:
+    - name: Pillar topic choice
+      contains: The main topic your site can own, with the reasons it fits your audience and business.
+    - name: Cluster plan
+      contains: A list of supporting pages that each answer one focused question, with no overlap between them.
+    - name: URL structure
+      contains: A folder and slug pattern that groups the pillar and cluster pages under one hub address.
+    - name: Pillar page anatomy
+      contains: The sections a pillar page should have, from summary to FAQ and links to each cluster page.
+    - name: Cluster piece anatomy
+      contains: What a cluster page should cover, and where it links back to the pillar and to its neighbors.
+    - name: Internal linking map
+      contains: Which page links to which, in both directions, with notes on anchor text and orphan pages.
+    - name: Refresh schedule
+      contains: When to update the pillar and cluster pages, and when to add or prune pages.

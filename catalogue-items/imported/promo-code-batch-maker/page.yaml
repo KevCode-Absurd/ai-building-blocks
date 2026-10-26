@@ -2,23 +2,23 @@ thinking: low
 thinking_why: It repeats one code recipe many times.
 new_slug: promo-code-batch-maker
 name: Promo code batch maker
-summary: Say how many codes you need and what they give. Get unique single-use
-  discount codes made live in your store.
+summary: Make hundreds of single-use discount codes in your Shopify store in one run. Preview first, then create. Good for giveaways and partner codes.
 job: make-offer
 headline: Promo code batch maker
-subhead: Hundreds of unique discount codes, created live in your Shopify store
-  in one run. Each code works once, so you can hand one to each person and know
-  who used it.
+subhead: Hundreds of unique discount codes, created live in your Shopify store in one run. Each code works once, so you can hand one to each person and know who used it.
 explain: |
   Hundreds of unique discount codes, created live in your Shopify store in one run. Each code works once, so you can hand one to each person and know who used it.
 
   You give the store, a prefix such as GIVEAWAY, how many codes you need (up to 1000 per run), the discount type and value, and a validity window. Each code becomes its own discount, so you can track or cancel any one that leaks. It defaults to a dry run that previews the codes first, then creates them once you confirm. You need a signed-in Shopify CLI session with discount write access.
 when:
   - You are running an influencer giveaway and every winner needs their own code.
-  - A partner will share codes with their audience and you want to track each
-    one.
+  - A partner will share codes with their audience and you want to track each one.
   - You need 500 single-use codes for an event and do not want to type them.
   - You want to preview the codes before anything goes live.
+not_for:
+  - You want one shared public code for everyone. Make a single code with a high use limit in Shopify admin instead, it is simpler.
+  - You do not need to know who used each code. One code with a use limit does the job.
+  - You need more than 1000 codes at once. Run it in several batches, or use a person who knows your Shopify setup.
 you_give:
   - Store address
   - Code prefix
@@ -31,9 +31,28 @@ you_get:
   - List of codes to share
   - Report of any that failed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change live
-    store data.
+  - Use an AI that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot create the codes.
+  - "Sign in to your store first. Run: shopify store auth --store mystore.myshopify.com --scopes write_discounts"
+  - Give your AI this skill. Tell it your store, prefix, number of codes, discount type and value. Add start and end dates if you have them.
+  - "Example: prefix GIVEAWAY, 100 codes, 10% off. Ask for a dry run first."
+  - Check the preview. Look at the prefix, count, value and end date. Codes cannot be deleted in bulk, so check well.
+  - Say yes to create the codes. Then open the CSV file and share one code per person.
+output_sample:
+  input:
+    - Your store address, such as mystore.myshopify.com
+    - A code prefix, such as GIVEAWAY
+    - How many codes you need (up to 1000)
+    - "The discount type and value: percentage, fixed amount or free shipping"
+    - Start and end dates, and uses per code (optional)
+  prerequisites:
+    - An AI that can run code on your computer, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify CLI signed in to your store with permission to write discounts
+  output:
+    - name: Dry run preview
+      contains: The codes that would be made, with the prefix, value and dates, so you can check them before anything goes live.
+    - name: Start banner and step log
+      contains: A short note for each step showing what was sent and what came back.
+    - name: Summary report
+      contains: Codes asked for, codes made, discount type and value, uses per code, dates and number of errors.
+    - name: promo_codes_<prefix>_<date>.csv
+      contains: One row per code with its code, Shopify ID, value, limits, dates, created time and status.

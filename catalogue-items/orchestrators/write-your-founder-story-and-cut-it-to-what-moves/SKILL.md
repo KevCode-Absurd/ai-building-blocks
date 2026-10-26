@@ -46,8 +46,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Make the one change it suggests and rewrite the flat spots. Keep the facts true.
 
-3. **Ten percent cutter.** Use the skill `ten-percent-cutter`. Give it the copy draft and the plan from the steps before. Cuts your reworked draft by a tenth and keeps a log of what went. It can use the story map from step one.
-4. **Plain English editor.** Use the skill `plain-english-editor`. Give it the copy draft from the steps before. Takes the cut draft and puts it in words you would say out loud.
+3. **Ten percent cutter.** Use the skill `ten-percent-cutter`. Give it your reworked draft (step 1's story with your step 2 fixes made) and the plan from step 1. Cuts your reworked draft by a tenth and keeps a log of what went. It can use the story map from step one.
+4. **Plain English editor.** Use the skill `plain-english-editor`. Give it the cut draft from step 3. Takes the cut draft and puts it in words you would say out loud.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

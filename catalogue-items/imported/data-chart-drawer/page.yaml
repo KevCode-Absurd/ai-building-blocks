@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It picks a chart and draws it.
 new_slug: data-chart-drawer
 name: Data chart drawer
-summary: Give it your data. Get a clean chart with the right chart type, as an
-  image or an interactive plot.
+summary: Turn your data into a clean chart. Give it a file or pasted rows and get a chart image or interactive plot, with the right chart type picked for you.
 job: track-numbers
 headline: Data chart drawer
-subhead: A clear chart that fits your data and your reader, saved as an image or
-  an interactive plot. It picks the chart type for you if you are not sure which
-  fits.
+subhead: A clear chart that fits your data and your reader, saved as an image or an interactive plot. It picks the chart type for you if you are not sure which fits.
 explain: |
   A clear chart that fits your data and your reader, saved as an image or an interactive plot. It picks the chart type for you if you are not sure which fits.
 
@@ -18,6 +15,10 @@ when:
   - You do not know whether a line or bar chart fits your data.
   - You want an interactive plot someone can hover over.
   - Your current chart looks cluttered and needs to be cleaner.
+not_for:
+  - "You need a live dashboard that updates by itself: use a dashboard tool such as Looker Studio or Power BI."
+  - "Your data is huge, with millions of rows: use a BI tool, or ask a data person to prepare a smaller summary first."
+  - "You want a quick table of totals, not a picture: use a spreadsheet such as Google Sheets or Excel."
 you_give:
   - Your data, file or pasted rows
   - What you want to show
@@ -29,8 +30,28 @@ you_get:
   - The code that made it
   - Edits on request
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open an AI that can run Python code, such as Claude or ChatGPT with code tools on.
+  - Paste the skill, then upload your file or paste your rows.
+  - Say what the chart should show and who will see it. Add a chart type only if you have one in mind.
+  - Check the chart type it picks and read the title and axes. Ask for changes in plain words.
+  - Save the PNG and the code. Say "interactive" if you want a plot you can hover over.
+output_sample:
+  input:
+    - Your data as a file (CSV or Excel), pasted rows, or a question for your data source
+    - What you want the chart to show
+    - Chart type, if you have one in mind (optional)
+    - Who will see it, such as your team, a boss or clients (optional)
+  prerequisites:
+    - An AI that can run Python code and has a plotting library
+    - Say "interactive" if you want a chart you can hover and zoom
+  output:
+    - name: Chart type recommendation
+      contains: A short reason why the chosen chart fits your data, given only if you did not pick a type.
+    - name: Chart PNG
+      contains: One chart saved as an image at 150 dpi, with a clear title, labeled axes and readable numbers.
+    - name: Interactive plot
+      contains: A chart you can hover over and zoom, made with plotly when you ask for interactive.
+    - name: Python code
+      contains: The code that drew the chart, so you or your AI can change it.
+    - name: Suggested variations
+      contains: Ideas for other chart types, groupings or date ranges to try next.

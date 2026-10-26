@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It edits one file with a fixed list of bots.
 new_slug: ai-crawler-access-editor
 name: AI crawler access editor
-summary: Say which AI crawlers to allow. Get your robots.txt updated so AI
-  assistants can read your catalog. Changes your live theme.
+summary: Edit your Shopify robots.txt so AI crawlers like GPTBot and ClaudeBot can read your catalog. Previews first, then updates your live theme.
 job: build-websites
 headline: AI crawler access editor
-subhead: Your Shopify store's robots.txt updated so AI assistants such as
-  ChatGPT, Claude and Perplexity can read your catalog. If the file blocks them
-  or says nothing, people shopping through AI may never see you.
+subhead: Your Shopify store's robots.txt updated so AI assistants such as ChatGPT, Claude and Perplexity can read your catalog. If the file blocks them or says nothing, people shopping through AI may never see you.
 explain: |
   Your Shopify store's robots.txt updated so AI assistants such as ChatGPT, Claude and Perplexity can read your catalog. If the file blocks them or says nothing, people shopping through AI may never see you.
 
@@ -18,6 +15,10 @@ when:
   - You do not know whether your robots.txt blocks AI crawlers.
   - A site report flagged a missing AI crawler rule.
   - You want a preview of the change before it goes live.
+not_for:
+  - "You do not want AI assistants reading your products: leave robots.txt as it is, or ask a developer to block named bots."
+  - "Your store runs headless with no theme robots template: ask your developer to edit the robots file where your site is hosted."
+  - "You want a short guide to your store for AI tools: use a llms.txt file, which is a separate skill and not yet on this site."
 you_give:
   - Your store address
   - A signed-in Shopify CLI
@@ -29,8 +30,28 @@ you_get:
   - A marked, safe-to-rerun block of rules
   - The live theme updated once you approve
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin and change it.
+  - Duplicate your live theme first in Online Store, Themes, so you can roll back.
+  - "Sign in with the Shopify CLI: run shopify auth login --store your-store.myshopify.com. This needs a computer where your AI can run commands."
+  - Ask your AI to run this skill in audit mode first. It reports your current crawler rules and changes nothing.
+  - Run it again with the preview on. Read the whole proposed file before you say yes.
+  - Approve the write. Your AI updates the live theme, and running it again only replaces its own marked block.
+  - Open yourstore.com/robots.txt and check the new rules show up.
+output_sample:
+  input:
+    - Your store address, like mystore.myshopify.com
+    - Which AI crawlers to allow (optional)
+    - Which theme to edit (optional, defaults to your live theme)
+    - Audit only or allow mode (optional)
+  prerequisites:
+    - An AI that can run commands on your computer
+    - Shopify CLI signed in to your store
+    - Permission to read and write themes
+  output:
+    - name: Current robots.txt.liquid
+      contains: The robots template now in your theme, or a note that Shopify uses its default.
+    - name: Proposed robots.txt.liquid
+      contains: The full new file, with a marked block of allow rules added after the default rules.
+    - name: Agents allowed
+      contains: The list of AI crawlers the block now allows, such as GPTBot, ClaudeBot and PerplexityBot.
+    - name: Write result
+      contains: Whether the theme file was updated, plus any errors Shopify returned.

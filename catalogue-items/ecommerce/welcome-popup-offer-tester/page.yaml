@@ -1,6 +1,6 @@
 new_slug: welcome-popup-offer-tester
 name: "Welcome pop-up offer tester"
-summary: "Give it AOV, margin and site offers. Get four to eight pop-up offers to test, ranked by cost."
+summary: "Test your welcome pop-up offer. Give it order value, margin and site discounts. You get four to eight offers ranked by cost, plus a fair test plan."
 job: make-offer
 thinking: medium
 thinking_why: "It does cost sums and ranks options from your numbers. A mid-size model is enough."
@@ -17,6 +17,10 @@ when:
   - Your pop-up has said "10% off" for a year and you have never tested another offer.
   - You get sign-ups but few of them place an order.
   - Your site already runs a sale, and you are not sure how to add a welcome offer on top.
+not_for:
+  - "You have no pop-up tool yet: set one up first, then come back to plan the offer."
+  - "You get under about 1,000 weekly visits: test two offers at a time, or compare one offer to your current one by hand."
+  - "You want to change when the pop-up shows or what the box says: that needs a pop-up timing and wording step, which is not in the library yet."
 
 you_give:
   - Your average order value and gross margin
@@ -37,6 +41,26 @@ how_to_use:
   - List any gifts you could give and what each costs you.
   - Build the top offers in your pop-up tool and send equal traffic to each at the same time.
   - Record the numbers it lists, then check repeat orders at 90 days before you pick the winner.
+output_sample:
+  input:
+    - Your average order value and gross margin
+    - Your current pop-up offer and its results (optional)
+    - Discounts or sales always on your site (optional)
+    - Gifts you could give, with what each costs you (optional)
+    - Your pop-up tool and weekly traffic
+  output:
+    - name: Header and baseline
+      contains: Your store, order value and margin, plus your current sign-up and order rates, or a note that none were given.
+    - name: Site offers and stacked saving
+      contains: The discounts already live and one clear combined saving you can advertise, if it really works at checkout.
+    - name: Ranked offers
+      contains: Four to eight offers from cheapest to run, each with cost per redemption, cost per sign-up and why to test it.
+    - name: Test plan
+      contains: Run every offer at once on equal traffic, with the numbers to record for each.
+    - name: Winner rule and 90-day check
+      contains: Pick the offer with the most gross profit per visitor, as long as repeat orders do not drop.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any facts you did not give.
 
 how_it_works:
   - title: Sets the baseline

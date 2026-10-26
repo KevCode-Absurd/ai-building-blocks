@@ -13,9 +13,9 @@ outputs:
   - {type: copy_draft}
 uses: [search-page-brief-writer, search-blog-post-writer, on-page-seo-tuner]
 steps:
-  - {uses: search-page-brief-writer, note: "Starts the chain: reads the top pages for your keyword and writes a brief with the gaps to fill."}
-  - {uses: search-blog-post-writer, note: "Writes the full post from the brief's outline, questions and gaps."}
-  - {uses: on-page-seo-tuner, note: "Checks the published draft against the keyword and gives the last fixes before it goes live."}
+  - {uses: search-page-brief-writer, note: "Starts the chain: reads the top pages for your keyword and writes a brief with the gaps to fill. Hands step 2 the brief."}
+  - {uses: search-blog-post-writer, note: "Writes the full post from the brief's outline, questions and gaps. Hands you the post to edit and publish as a draft page for step 3."}
+  - {uses: on-page-seo-tuner, note: "Checks the published draft against the keyword and gives the last fixes before it goes live. Takes the draft page you published from step 2's post (or the draft text) and your keyword; hands back the last fixes."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-a-post-that-beats-the-pages-ranking-today/skeleton.yaml

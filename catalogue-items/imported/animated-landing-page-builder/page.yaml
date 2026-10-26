@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It asks set questions, then builds with a fixed method.
 new_slug: animated-landing-page-builder
 name: Animated landing page builder
-summary: Answer a few questions about your product. Get a one-page site with 3D
-  motion and scroll effects.
+summary: Answer four questions about your product and get an animated landing page in one HTML file, with 3D motion and scroll effects. No designer needed.
 job: write-landing-page
 headline: Animated landing page builder
-subhead: One self-contained web page for your product, with 3D motion, scroll
-  effects and depth that follows the mouse. You can open it in a browser right
-  away.
+subhead: One self-contained web page for your product, with 3D motion, scroll effects and depth that follows the mouse. You can open it in a browser right away.
 explain: |
   One self-contained web page for your product, with 3D motion, scroll effects and depth that follows the mouse. You can open it in a browser right away.
 
@@ -18,6 +15,10 @@ when:
   - Your product page looks flat and you want motion that grabs attention.
   - You want a quick demo page to show investors or early users.
   - You have a clear pitch and want it turned into a finished page today.
+not_for:
+  - "You need a site with a blog, a shop or live product pages: use a site builder such as Shopify or WordPress."
+  - "You want a page that is built only to collect leads or sell: ask your AI for a landing page in a web framework, not one HTML file."
+  - "You need a quick edit to a page you already have: ask your AI to change that page's code."
 you_give:
   - Product name and a short pitch
   - Who the page is for
@@ -29,8 +30,29 @@ you_get:
   - Copy based on your answers
   - Colours you can change in a few lines
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Paste the skill into Claude, ChatGPT or Gemini. Claude can show the page as an HTML artifact. Other tools may give you code to save as a file.
+  - Say you want a landing page for your product. Your AI asks four questions, one at a time.
+  - "Answer each one: product and pitch, your audience, brand colours, and tone. Say so if you have no brand colours."
+  - Open the page in your browser, or in the preview. Check the look and the motion.
+  - Before you publish, replace any copy your AI guessed with real claims. Check every number and quote.
+  - Save the file and host it on any web host that takes a single HTML file. The page needs an internet connection to load fonts and animation.
+output_sample:
+  input:
+    - Your product name and a one or two sentence pitch
+    - Who the page is for and how they talk
+    - Your brand colours (optional)
+    - The tone you want
+  prerequisites:
+    - An AI that can make an HTML file or an HTML artifact, such as Claude
+    - A web browser to open the page
+  output:
+    - name: Hero section
+      contains: The headline, short text and button at the top, with 3D motion and depth that follows the mouse.
+    - name: Features section
+      contains: Feature cards that animate in as you scroll, written from your product answers.
+    - name: Closing call to action
+      contains: A final prompt and button that asks the visitor to take the next step.
+    - name: Brand colours
+      contains: Colour settings near the top of the file that you can swap in a few lines.
+    - name: Product HTML file
+      contains: One file with all styles and scripts inside, named after your product. It loads fonts and the GSAP animation library online.

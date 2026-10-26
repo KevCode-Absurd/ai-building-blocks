@@ -1,6 +1,6 @@
 new_slug: recognition-plan-designer
 name: "Recognition plan designer"
-summary: "Describe your team and goals. Get a reward plan where anyone who reaches a set level wins, with a public moment."
+summary: "Plan a team recognition and reward program where anyone who reaches a goal level wins, with prizes people want and a public moment."
 job: lead-people
 thinking: medium
 thinking_why: "It balances fairness, budget and goals, but the plan shape is fixed."
@@ -17,6 +17,10 @@ when:
   - The same few people win every contest and the rest have gone quiet.
   - You want to thank people for work and do not know how.
   - You are running a sales push, a project or a season and want a plan that keeps people trying.
+not_for:
+  - "You need to decide one person's pay or review their performance: use a pay review with your manager or HR, not this plan."
+  - "You want a single top-performer contest: this plan sets levels anyone can reach, so it will not rank people against each other."
+  - "You only want to thank one person once: write a short note yourself, or ask a friend to read it first."
 
 you_give:
   - Your team, its size and its goals
@@ -35,6 +39,30 @@ how_to_use:
   - State the real budget and the dates the plan covers.
   - Ask people on the team what they would like as a prize and add the answers.
   - Share the levels and prizes with the team at the start, not at the end.
+output_sample:
+  input:
+    - Your team, its size and its goals
+    - What you reward now and who won in the last year
+    - Your budget for prizes and your dates
+    - What your team says it would like as prizes (optional)
+    - Pay figures for your team (optional)
+  output:
+    - name: Who wins now
+      contains: A short review of who has won, who never has, and what that teaches the rest of the team.
+    - name: Pay check
+      contains: A check that pay is fair first, with a Fix first note if it is not.
+    - name: Levels
+      contains: Three to five goal levels with a prize each, which anyone can reach on their own.
+    - name: Public moments
+      contains: Where each win is announced and which role announces it, including the lowest level.
+    - name: Praise lines
+      contains: Specific words of praise for each level, with a slot for the name and what they did.
+    - name: Budget
+      contains: The cost if everyone reaches each level and if half do, compared with your budget.
+    - name: Calendar
+      contains: Dates for the start, the check-ins and the final announcement.
+    - name: Missing and checks missed
+      contains: What you did not give, and any check the plan did not pass.
 
 how_it_works:
   - title: Reviews the current plan

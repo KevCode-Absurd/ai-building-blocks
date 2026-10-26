@@ -1,6 +1,6 @@
 new_slug: hiring-pipeline-runner
 name: Hiring pipeline runner
-summary: Give it a role and each batch of resumes. Get a fair ranked shortlist and draft replies. You decide on every person.
+summary: Run your hiring pipeline with AI. Give it a role and each resume batch. Get a fair ranked shortlist and draft replies. You make every call.
 job: hire-people
 thinking: high
 thinking_why: It scores people, picks its own path from the results and drafts messages about them. Give it your strongest model and read every score.
@@ -14,6 +14,10 @@ when:
   - You have an open role and applications keep arriving in batches.
   - You want every applicant scored the same way, with the reason shown.
   - You want a short update each Friday without building it by hand.
+not_for:
+  - "You need to decide who to hire or make an offer: that stays with you, with a qualified HR adviser or employment lawyer for the rules."
+  - "You only want one job post and scoring guide before any resumes arrive: use the Hiring packet builder."
+  - "You only have one small pile of resumes to rank once: use the Applicant shortlist builder."
 you_give:
   - A short brief of the role and what the team needs
   - Each new batch of resumes or application forms
@@ -31,6 +35,30 @@ how_to_use:
   - Each time new resumes arrive, put them in the folder or attach them and ask it to run the new batch.
   - Read the ranking and the drafts. Send, book or reject yourself, or say yes to one named action.
   - After interviews, give it your notes and ask for the comparison. Run it again on Friday for the update.
+output_sample:
+  input:
+    - A short brief of the role and what the team needs
+    - Each new batch of resumes or application forms
+    - Your interview notes, added later (optional)
+    - Your country, so drafts and checks fit local rules
+  prerequisites:
+    - An AI that can keep files in a folder, such as Claude Code, to remember who was scored
+    - A qualified person to check your process and scoring guide
+  output:
+    - name: post.md
+      contains: The job post for the role, made once and reused.
+    - name: scoring-guide.md
+      contains: The must-haves and nice-to-haves. Only these are scored. You approve it before anyone is scored.
+    - name: ranking.md
+      contains: A running ranking of applicants, with the quoted resume line behind each score.
+    - name: seen.md
+      contains: The applicants already scored, by ID, so no one is scored twice.
+    - name: drafts/
+      contains: Draft invites, replies and holding notes, each marked not sent.
+    - name: Path taken
+      contains: Whether to go on to replies or widen the search, and why.
+    - name: Friday update
+      contains: A one-page count of people by stage, what is stuck and next steps.
 how_it_works:
   - title: Get the job post and scoring guide
     text: Builds them once for the role and shows them to you before anyone is scored. Only what is in the guide counts.

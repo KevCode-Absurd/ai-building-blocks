@@ -1,52 +1,102 @@
 new_slug: choose-a-study-plan-you-can-keep
 name: Choose a study plan you can keep
 headline: Choose a study plan you can keep
-summary: Share the source files. Get a study roadmap, weekly sessions and a recall check.
+summary: Turn your goal, deadline and weekly hours into a study roadmap, the right methods for each topic and session plans you can keep up.
 job: study-and-practice
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A study roadmap, weekly sessions and a recall check. Share your learning goal, exam or deadline, current level, available hours and practice material. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Tell your AI your goal, your date, your level and the hours you really have. It maps the topics in order, picks study methods that suit them and plans each session, with questions to answer from memory.
 explain: |-
-  A study roadmap, weekly sessions and a recall check.
+  Most study plans fail because they assume more time than you have, or rely on rereading, which feels useful but helps little. This workflow builds a study plan you can keep: it starts from your real hours and your real level, and it picks methods that make you recall things rather than reread them.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Sessions fit available time and check understanding through retrieval rather than rereading alone. Missing tools or evidence stay visible in the final summary.
+  First it maps the topic: what you need to know first, what comes next and a checkpoint for each stage. It does not promise a score. Then it picks a study method for each part of the material and names the habits to drop. Last, it plans each session with an opening goal, a method check halfway and a short reflection at the end.
+
+  The session reviews are prompts. You answer them as you study. The AI does not guess how a session went.
 when:
-  - You need a study roadmap, weekly sessions and a recall check.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - You are starting a new subject and have a date to hit, such as an exam or a certificate
+  - Your last study plan fell apart after the first week
+  - You are fitting study around a job or children and have only a few hours a week
+  - You are helping a child plan revision and want it to fit their real time
+not_for:
+  - The exam is a few days away. Use the Exam study roadmap builder to rank topics by marks.
+  - You already have a plan and want to see how it is going. Use the Study plan progress review assistant.
+  - You want notes made from your reading. Use Turn saved reading into notes you can use.
+  - You cannot check your own answers yet. Add a teacher or tutor. This plan assumes you can.
 you_give:
-  - Your learning goal, exam or deadline, current level, available hours and practice material.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - Your learning goal, such as pass a named exam or learn a skill
+  - Your date, such as an exam day or a deadline
+  - "Your level now: what you can already do, or your last result"
+  - The hours you can study each week, and on which days
+  - The material you have, such as course notes, a textbook or past papers
+  - A syllabus or topic list (optional)
+  - Study methods that did not work for you before (optional)
 you_get:
-  - A study roadmap, weekly sessions and a recall check.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A roadmap of topics in order, with what to know first and a checkpoint for each
+  - A study method for each part of the material, and the habits to drop
+  - Weekly sessions with minutes, tasks and questions to answer from memory
+  - An opening goal, a method check and a closing reflection for each type of session
+  - A summary of anything missing, such as readings that could not be confirmed
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Paste your goal, date, level, weekly hours and the material you have. Say what did not work before.
+  - Read the roadmap first. If a topic is missing or in the wrong order, fix that before the sessions are planned.
+  - Do the first week. Answer the opening, halfway and closing prompts as you go, then bring your answers back to adjust the plan.
 how_it_works:
   - title: Topic learning roadmap
-    text: Map the topic boundaries, prerequisites, deadline, current gaps and available hours without assuming a score improvement.
+    text: Maps the topic, what comes first, the gaps you have now and the hours you can give. It makes no promise about your score and hands the ordered topic list on.
   - title: Study strategy picker
-    text: Choose suitable practice methods for the topics and available materials.
+    text: Matches study methods to each part of the material and your time, and lists habits to stop. It hands the chosen methods to the session planner.
   - title: Study session planner and review
-    text: Prepare opening, middle and closing review prompts for the planned sessions. Run them only with learner responses and mark unrun phases not yet observed.
+    text: Writes an opening goal, a halfway method check and a closing reflection for the planned sessions. They run only with your answers, so unanswered phases stay marked not yet observed.
 output_shape: |-
-  Scope and source coverage
-  A study roadmap, weekly sessions and a recall check.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  ROADMAP
+    Topic | Needs first | Checkpoint (what you can do) | Hours planned
+
+  METHODS
+    Topic or material | Method | Why it fits | Habits to drop
+
+  WEEKLY SESSIONS
+    Week | Session | Topic | Minutes | Task | Questions to answer from memory
+
+  SESSION PROMPTS
+    Opening goal | Halfway method check | Closing reflection | Status: not yet observed
+
+  HAND-BACK SUMMARY
+    Files | MISSING lines | checks not done | one next step
+output_sample:
+  input:
+    - Your goal and your date
+    - Your level now, and the hours you can study each week
+    - The material you have, such as notes, a textbook or past papers
+    - Study methods that failed before (optional)
+  prerequisites:
+    - An AI that can search the web, so reading suggestions can be confirmed. Without it they are marked unverified.
+  output:
+    - name: Roadmap
+      contains: Topics in dependency order, what you need first and a checkpoint for each stage.
+    - name: Methods and habits to drop
+      contains: A study method for each part of the material, and habits that feel useful but help little.
+    - name: Weekly sessions
+      contains: Each session with its topic, minutes, task and questions to answer from memory.
+    - name: Session prompts
+      contains: An opening goal, a halfway method check and a closing reflection, for you to answer as you study.
+    - name: Hand-back summary
+      contains: Files saved, unconfirmed readings, facts that were missing and one next step.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with web access
+      why: Web access lets the AI confirm that suggested readings exist. Without it, readings are marked unverified. They read the pasted text or files and keep each step's result as a file. None of them can run a lesson, a class or a check for you.
+  inputs:
+    - A past paper or sample questions, so the plan can match the real test.
+    - A syllabus or the exam board's topic list.
 tweaks:
   - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
+    how: Plan one subject or one exam at a time. Two subjects in one plan split your hours and blur the checkpoints.
   - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
+    how: Give your real hours from last week, not the hours you hope to have.
   - what: Acceptance
-    how: Sessions fit available time and check understanding through retrieval rather than rereading alone.
+    how: Say how many minutes a session can be at most. Each session must fit inside that.
 judge:
   - Sessions fit available time and check understanding through retrieval rather than rereading alone.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +109,15 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+  - After two weeks, bring back your closing reflections and ask for the plan to be adjusted.
+  - Swap a method that did not work for you and ask for the sessions to be redone.
+  - Add a past paper once you have one and ask for it to be built into the checkpoints.
+next:
+  - study-plan-progress-review-assistant
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Roadmap
+    meaning: The topics in the order to learn them, with a checkpoint for each stage.
+  - term: Retrieval
+    meaning: Answering a question from memory instead of rereading the answer.
+  - term: Checkpoint
+    meaning: Something you can do, such as solve a type of question, that shows you are ready for the next stage.

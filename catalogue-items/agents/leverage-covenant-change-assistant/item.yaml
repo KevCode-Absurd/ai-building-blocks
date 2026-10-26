@@ -1,33 +1,26 @@
 slug: leverage-covenant-change-assistant
 name: Leverage covenant change assistant
-summary: Review supplied changes, preserve the last evidence baseline and return only affected calculations and unresolved approval questions.
+summary: Recheck a loan's net debt limit when earnings, cash or debt change. Get covenant EBITDA, headroom and a cure test. Not proof of compliance.
 category: agent
 type: agent
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - review-leverage-headroom-and-cure
   - debt-cash-sweep-checker
 steps:
   - uses: review-leverage-headroom-and-cure
-    note: Run the governing workflow when A new covenant certificate, supported addback, eligible cash balance, cure receipt or debt prepayment record is supplied.
+    note: Run this when a new covenant certificate, supported add-back, eligible cash balance, cure payment or prepayment record arrives. Rebuild covenant EBITDA, net debt and headroom for the test date, and run the cure only if headroom is negative. It hands step 2 the verified debt and cash figures.
   - uses: debt-cash-sweep-checker
-    note: If a sweep is proposed, calculate the bounded cash-floor scenario but preserve the actual debt baseline. If it is evidenced as paid, update only the dated debt and cash components and rerun leverage. Cure eligibility and timing still require the actual agreement; scenario cash never becomes compliance evidence.
+    note: Run this only when a sweep is proposed or paid. A proposed sweep gives a scenario and leaves the actual debt unchanged. A paid sweep updates only the dated debt and cash, and leverage is run again. Scenario cash is never proof the covenant was met.
 origin: own
 version: 1.0.0
 added: 2026-10-22

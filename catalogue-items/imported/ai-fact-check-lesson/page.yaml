@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It adapts a source-checking method to AI errors.
 new_slug: ai-fact-check-lesson
 name: AI claim fact-check lesson builder
-summary: Give it a topic. Get a step-by-step way for students to check AI claims
-  and citations before they trust them.
+summary: Build an AI fact-check lesson for your class. Give it a topic. You get a way for students to check AI claims and citations before they trust them.
 job: research-topics
 headline: AI claim fact-check lesson builder
-subhead: A class activity that teaches students to check an AI's claims and
-  citations before they trust them. AI makes errors that old fact-check rules
-  miss, because there is no author or funder to look up.
+subhead: A class activity that teaches students to check an AI's claims and citations before they trust them. AI makes errors that old fact-check rules miss, because there is no author or funder to look up.
 explain: |
   A class activity that teaches students to check an AI's claims and citations before they trust them. AI makes errors that old fact-check rules miss, because there is no author or funder to look up.
 
@@ -18,6 +15,10 @@ when:
   - You want a hands-on activity on spotting made-up sources.
   - You need a short method students can remember and use.
   - You want a script to model checking a citation in front of the class.
+not_for:
+  - "Your class has no AI text to check: use a general source-evaluation lesson, or ask a librarian for one."
+  - "You want to check one claim yourself right now: search the claim in Google Scholar or ask your school librarian."
+  - "You need a lesson on judging websites and authors: use a general source-evaluation lesson instead."
 you_give:
   - Your subject and year level
   - A topic for the lesson
@@ -29,7 +30,26 @@ you_get:
   - A Hallucination Hunt activity
   - A teacher script with a real and a fake citation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full text of SKILL.md into the chat.
+  - "Send your details: the AI text students will check, such as an AI summary with named studies, plus your subject, year level and the tools students can use to check. Add the AI tool they use if you know it."
+  - Read the error types first. Remove any that do not fit your class.
+  - Run the Hallucination Hunt with a real AI answer from your subject, then use the teacher script to show one check aloud.
+  - Check every real citation in the script yourself before class.
+output_sample:
+  input:
+    - Your subject and year level
+    - The kind of AI text students will check, such as an AI summary with named studies
+    - The tools students can use to check, such as Google Scholar or a library database (optional)
+    - The AI tool students use (optional)
+  output:
+    - name: Hallucination Taxonomy
+      contains: The kinds of AI error most likely in your subject, with what each one looks like.
+    - name: AI-Adapted SIFT Protocol
+      contains: The four SIFT moves (stop, investigate, find better coverage, trace claims), changed to suit AI text.
+    - name: Verification Moves
+      contains: Specific checks students run on a claim or citation, using the tools they have.
+    - name: Hallucination Hunt Activity
+      contains: A class game where students find and prove the false claims in an AI answer.
+    - name: Teacher Modelling Script
+      contains: A script that shows you checking a real citation and a fake one in front of the class.

@@ -1,0 +1,138 @@
+name: GaussDB Expert Engineer agent
+summary: "Get a GaussDB query and schema review: distribution keys, slow plans, indexes and storage choices. Bring your SQL, tables and plan output."
+headline: GaussDB Expert Engineer agent
+subhead: Share your table designs, a slow query and its plan output, and say which GaussDB you run. It reads the plan, checks distribution keys, indexes and storage choices, and finds what costs the most. You get a ranked list of fixes with checks to run before and after.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  GaussDB is Huawei's database for busy transaction systems. In its distributed edition, a table's distribution key decides which server holds each row. A poor choice means rows are copied between servers on every join. Most slow queries trace back to that choice, a missing index or out-of-date statistics.
+
+  This agent reads the plan the way GaussDB shows it. It looks for Broadcast and Redistribute steps, which move data between nodes, and for joins that need no move at all. It checks the distribution key, partitions, the Ustore or Astore storage choice and whether foreign keys have indexes. It asks which GaussDB you run before it answers, because products with similar names behave differently.
+
+  It does not connect to your database. Run every suggested change on a copy first. This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - A query is slow on GaussDB and you have its EXPLAIN ANALYZE output.
+  - You are designing tables for a new GaussDB system and need to pick distribution keys.
+  - Your plan shows Broadcast steps on large tables.
+  - Updates and deletes make tables swell, and you are choosing between Ustore and Astore.
+not_for:
+  - Your database is PostgreSQL, MySQL or Oracle. Use the Database performance analyst.
+  - Your product is GaussDB(DWS), openGauss or GaussDB(for MySQL). This agent covers GaussDB OLTP only.
+  - You need backup, restore or failover plans. Use the Database recovery planner.
+you_give:
+  - "Which GaussDB you run: distributed or centralized, and the version"
+  - The CREATE TABLE statements, with distribution, partition and storage settings
+  - The slow query and its EXPLAIN ANALYZE output
+  - Table row counts and sizes, and your current indexes
+  - What the app does with the data, such as many small updates or large reports (optional)
+you_get:
+  - "A ranked table of findings: what is wrong, how serious, the evidence and the change"
+  - A review of each distribution key and whether joins must move data
+  - Index and storage engine advice
+  - A rewritten query or table design where one helps
+  - Notes on making each change safely, with a way to undo it
+  - Checks to run before and after
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Say which GaussDB product you run. If you are not sure, your AI asks before it answers.
+  - Paste your table statements, the slow query and the EXPLAIN ANALYZE output. Add row counts if you have them.
+  - Say "Review this. Ask once if anything is missing. Point each finding to a line in my plan."
+  - Read the findings table from the top. Each finding must point to evidence in your own plan. Ask again if one does not.
+  - Try each change on a copy, run EXPLAIN ANALYZE again, then compare. Check unfamiliar syntax in Huawei's GaussDB docs.
+how_it_works:
+  - title: Pin down the product
+    text: It confirms GaussDB OLTP, distributed or centralized, and the version. It asks if this is unclear.
+  - title: Read the tables
+    text: It checks each distribution key, partition, storage type and index against how the tables are joined.
+  - title: Read the plan
+    text: It finds scans of large tables, Broadcast and Redistribute steps, and gaps between estimated and actual rows.
+  - title: Rank the findings
+    text: It orders findings by cost, with the evidence line and how sure it is.
+  - title: Draft the fixes
+    text: It writes a changed query or table design where one helps, and says what to check after.
+  - title: Plan a safe change
+    text: It notes the cost of changing a large table across nodes, a quiet time to do it and a way to undo it.
+output_shape: |-
+  PRODUCT AND SETUP
+    <GaussDB edition and version> | <distributed or centralized> | MISSING: <list>
+
+  FINDINGS (ranked by cost)
+    <rank> | <finding> | <severity> | <evidence from your plan> | <suggested change> | <check still needed>
+
+  DISTRIBUTION KEYS
+    <table> | <current key> | <joins it serves> | <data move needed> | <keep or change, with reason>
+
+  INDEXES AND STORAGE
+    <table> | <index or storage change> | <why>
+
+  REWRITES
+    <query or table> | <before> | <after>
+
+  SAFE CHANGE NOTES
+    <change> | <cost on a large table> | <undo step>
+
+  CHECKS BEFORE AND AFTER
+    <check> | <how to run it> | <pass means>
+output_sample:
+  input:
+    - Your GaussDB edition and version
+    - Your CREATE TABLE statements
+    - The slow query and its EXPLAIN ANALYZE output
+    - Row counts, sizes and current indexes (optional)
+  prerequisites:
+    - Read access to your GaussDB, to run EXPLAIN ANALYZE and copy the output
+    - A copy of the database for testing changes
+  output:
+    - name: Product and setup
+      contains: The GaussDB edition and version it assumed, and anything marked MISSING.
+    - name: Findings
+      contains: Ranked problems, each with severity, evidence from your plan, a change and a check.
+    - name: Distribution keys
+      contains: Each table's key, the joins it serves and whether data must move.
+    - name: Indexes and storage
+      contains: Index and Ustore or Astore advice with the reason.
+    - name: Rewrites
+      contains: A before and after for each changed query or table.
+    - name: Safe change notes
+      contains: What each change costs on a large table and how to undo it.
+    - name: Checks before and after
+      contains: What to run to confirm each fix worked.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Edition
+    how: Say distributed or centralized up front. The advice on keys and plans differs.
+  - what: Workload
+    how: Say whether the table gets many updates or mostly appends. It changes the storage advice.
+  - what: Scope
+    how: Give one slow query at a time for the sharpest answer.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: GaussDB
+    meaning: Huawei's database for transaction systems. This agent covers GaussDB OLTP only.
+  - term: Distribution key
+    meaning: The column that decides which server stores each row in the distributed edition.
+  - term: Coordinator and data nodes
+    meaning: Coordinators plan and gather results. Data nodes store the rows and do the work.
+  - term: Broadcast and Redistribute
+    meaning: Plan steps that copy or reshuffle data between nodes. They cost time.
+  - term: EXPLAIN ANALYZE
+    meaning: A command that runs a query and shows how the database did it.
+  - term: Ustore and Astore
+    meaning: Two storage types. Ustore updates rows in place. Astore appends new row versions.
+  - term: Statistics (ANALYZE)
+    meaning: Counts the database keeps to plan queries. Stale counts lead to bad plans.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: Plans and table statements are long, and file upload keeps them whole.
+  inputs:
+    - The slow query log entry for the query, with its run time.
+    - The Huawei GaussDB documentation page for your version, to confirm syntax.

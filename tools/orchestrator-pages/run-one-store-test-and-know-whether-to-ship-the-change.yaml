@@ -1,6 +1,6 @@
 new_slug: run-one-store-test-and-know-whether-to-ship-the-change
 name: "Run one store test and know whether to ship"
-summary: Give it your orders and traffic. Get a test sized to your store and a clear ship call.
+summary: Run one store test and know whether to ship the change. Give it your orders and visits. You get a test sized to your store and a clear ship call.
 job: test-store-changes
 thinking: high
 thinking_why: It runs five skills in a row, and the last one does the maths on your results. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You want to change a product page or checkout and need to know if the change really helps.
   - You have a test result and are not sure it can be trusted.
   - You have low traffic and want to know what you can prove, and what to skip.
+not_for:
+  - "You have under about 30 orders a month: fix the page or talk to customers first, then use the Test idea ranker to pick what to change."
+  - "You only want to know if your traffic can prove a test: use the A/B test traffic checker."
+  - "You want to plan ad tests, not store page tests: use the Ad test brief writer."
 you_give:
   - Orders per month, visits per month and conversion rate for the page
   - The change you want to test and why you think it will help
@@ -32,6 +36,29 @@ how_to_use:
   - Paste your orders, visits and the page you want to test. Say if anything on that page is broken today.
   - Choose the one test to run first. Build it, then run it to the planned sample and dates. Do not stop early.
   - Export the numbers for each version and bring them back, with a note of any sale or email send during the run.
+output_sample:
+  input:
+    - Your orders per month, visits per month and conversion rate for the page
+    - The change you want to test and why you think it will help
+    - Your Shopify plan and who will build the change
+    - Where your ads send traffic (optional)
+    - "After the test: the numbers for each version and any sale or email send during the run"
+  prerequisites:
+    - An AI that can work with a folder of files, such as Claude Code or a Claude Project
+    - A way to run a test on your store and export the numbers for each version
+  output:
+    - name: "STEP 1: READINESS"
+      contains: Your verdict, stage, smallest lift worth shipping, visitors and weeks needed, main number and guardrails, and a score out of 100.
+    - name: "STEP 2: FIVE BOLD TESTS"
+      contains: Five big tests your traffic can prove, each with a reason, main number and risk, plus what not to test.
+    - name: "STEP 3: SHOPIFY SETUP"
+      contains: What your plan lets you test, the route that fits, flicker and speed notes, and questions to ask any tool.
+    - name: "STEP 4: ONE-CHANGE PLAN"
+      contains: The question, the one change, what stays fixed, a second check, the no-effect result and what each result means.
+    - name: "STEP 5: VERDICT"
+      contains: A ship call, a trust score, split and length checks, the result as a money range and a log entry.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check you can test
     text: Decides whether to repair or test, places you by orders per month, sets the smallest lift worth shipping and works out the visitors and weeks needed.

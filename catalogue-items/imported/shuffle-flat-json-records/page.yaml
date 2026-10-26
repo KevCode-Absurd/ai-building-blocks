@@ -1,20 +1,46 @@
 new_slug: shuffle-flat-json-records
 name: Shuffle flat JSON records
-summary: Shuffle flat JSON records. Check that each record and value stays intact.
+summary: Shuffle flat JSON records into a random order. Your AI checks the shape first, so no record or value is lost or broken.
 job: work-with-files
 headline: Shuffle flat JSON records
 subhead: Share a flat JSON array and any rule changes. Check its shape before the shuffle. Get the reordered records and checks.
 explain: Share a flat JSON array and any rule changes. Check its shape before the shuffle. Get the reordered records and checks.
 when:
-  - You want to shuffle flat JSON records.
+  - You need a random order for quiz questions, fun facts or test data stored as JSON.
+  - You want to remove ordering bias from a list of records before you use it.
+  - You have a JSON file and want to be sure the shuffle does not break it.
+not_for:
+  - "Your records have nested objects or different keys and you have no override rules: fix the structure first in a JSON editor or schema tool."
+  - "You want to sort, filter or edit values: use a spreadsheet or a JSON editor, since this only changes record order."
+  - "You have no JSON file yet: get the data from its source first, because your AI will ask for one and stop."
 you_give:
   - A JSON array of flat records and any explicit schema or nesting overrides.
 you_get:
-  - A reordered array plus validation notes, or a precise explanation of the input issue.
+  - Your records in a new random order, as valid JSON.
+  - A check that every record has the same keys before the shuffle.
+  - A clear note on the problem if the data cannot be shuffled safely.
+  - A count and content comparison against your original data.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions, or add the skill folder if your tool takes files.
+  - Paste your JSON array, or attach the file. No code running is needed for small files.
+  - Add rules if you need them, such as fields to ignore, fields that are required, or whether nesting is allowed.
+  - Read the validation notes first. If a check fails, fix the data and run it again.
+  - Before you use the result, compare the record count and keys against your original.
+output_sample:
+  input:
+    - Your JSON file or pasted array of flat records
+    - Which fields to ignore when comparing keys (optional)
+    - Which fields every record must have (optional)
+    - A nesting override if your records have nested objects (optional)
+  output:
+    - name: Validation check
+      contains: A pass or fail on valid JSON, matching keys in every record, and no nested objects in the default mode.
+    - name: Problem report
+      contains: If a check fails, a plain note on what is wrong. Your data is left unchanged.
+    - name: Shuffled array
+      contains: The same records in a new random order, with every record and value kept whole.
+    - name: Closing checks
+      contains: A comparison of record count and record contents before and after the shuffle.
 how_it_works:
   - title: Confirm configuration
     text: Identify the supplied array and any explicit structural overrides.

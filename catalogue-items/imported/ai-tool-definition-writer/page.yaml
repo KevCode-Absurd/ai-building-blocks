@@ -2,22 +2,23 @@ thinking: medium
 thinking_why: It follows schema rules but judges each side effect.
 new_slug: ai-tool-definition-writer
 name: AI tool definition writer
-summary: Describe what a tool does. Get a clear, safe definition your AI can
-  call without guessing.
+summary: Write an AI tool definition your agent can call safely. Give it what the tool does. You get a name, a checked schema, safety rules and tests.
 job: connect-tools
 headline: AI tool definition writer
-subhead: A tool definition that your AI can call correctly the first time, with
-  fewer wrong picks and invented inputs. The goal is to make the safe, intended
-  call easier to choose than a risky one.
+subhead: Describe what your tool does. Your AI writes a clear name, a tight input list and safety rules. It also writes tests, so the safe call is the easy one to pick.
 explain: |
   A tool definition that your AI can call correctly the first time, with fewer wrong picks and invented inputs. The goal is to make the safe, intended call easier to choose than a risky one.
 
   You describe what the tool does. It decides whether this is one tool or several, then writes a verb-led name and a description that says when to use it and when not to. It builds the parameter list from user intent, with limits, closed choices and examples, and rejects unknown fields. It also defines confirmation, access rules, retry safety and error codes. Tests cover good, edge and hostile inputs. A script checks the schema.
 when:
   - You are adding a function-calling, MCP or plugin tool to an AI agent.
-  - Your agent keeps picking the wrong tool or inventing arguments.
-  - One API action is too big and needs splitting up.
+  - Your agent keeps picking the wrong tool or making up inputs.
+  - One API action is too big and needs to be split into smaller tools.
   - A tool can delete or send things and needs a confirmation step.
+not_for:
+  - "You have one fixed API call and your AI never has to choose: call the vendor's SDK directly."
+  - "You need proof that a tool is safe to run: check the permissions in your own code, because this page's script is not a safety check."
+  - "You want to write the agent's main instructions: write those by hand, since this item covers one tool at a time."
 you_give:
   - What the tool should do
   - The backend action behind it
@@ -29,7 +30,31 @@ you_get:
   - Confirmation, retry and error rules
   - Test cases for tool choice and inputs
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat with your AI. Paste the SKILL.md text from this skill.
+  - Describe the tool in plain words. Add the backend action behind it, who may use it, and what it can change.
+  - List any nearby tools it could be mixed up with (optional). Paste a few good and bad example requests too.
+  - Read the result. Check that the name, the not-to-use rule and the confirmation rule match what you want.
+  - To check the schema, save it as tool.json. Use an AI that can run code, or your own computer. Run python3 scripts/validate_tool_schema.py tool.json --strict.
+  - Before release, test the schema with your AI provider. Run the tool-choice tests too. The script checks structure only. It does not prove the tool is safe.
+output_sample:
+  input:
+    - What the tool should do, in plain words
+    - The backend action behind it
+    - Who may use it and what it can change
+    - Neighbouring tools it could be confused with (optional)
+    - Examples of good and bad requests (optional)
+  prerequisites:
+    - An AI that can run code, if you want to run the check script (optional)
+  output:
+    - name: Tool boundary decision
+      contains: Whether this is one tool or several, and how it differs from nearby tools.
+    - name: Name and description
+      contains: A verb-led name, plus when to use the tool, when not to, and what it changes.
+    - name: Parameter schema
+      contains: The inputs the tool accepts, with limits, closed choices, examples, and a rule to reject unknown fields.
+    - name: Side-effect and safety rules
+      contains: Confirmation, access, retry safety, timeout and error codes for each way a call can fail.
+    - name: Tests
+      contains: Good, edge, hostile and tool-choice cases, including prompts that should pick a nearby tool or none.
+    - name: Validation results
+      contains: What the check script found, plus any limits of your AI provider.

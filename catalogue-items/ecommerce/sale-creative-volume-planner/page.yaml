@@ -1,6 +1,6 @@
 new_slug: sale-creative-volume-planner
 name: "Sale creative volume planner"
-summary: "Give it last year's top ads and your sale target. Get winners needed, ad count and phases."
+summary: "Plan your sale ad volume: give it last year's spend by ad and your peak spend target. You get winners needed, total ads and a phase plan."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It does back-of-envelope sums and builds a phased plan, which a mid-size model handles well."
@@ -17,6 +17,10 @@ when:
   - A big sale is coming and you need to know how many ads to make before it starts.
   - Last year you ran out of fresh ads halfway through the sale.
   - You are raising your spend target and want to know if your ad count can carry it.
+not_for:
+  - "You want a normal-month ad plan with no sale: use a creative volume planner, since this one is built around a peak spend target."
+  - "Your ads are tired but no sale is coming: use a fatigued ad reviver to refresh them."
+  - "You are a solo founder who cannot make many ads: skip the full plan, set a lower spend target, and make fewer ads you can finish."
 
 you_give:
   - Your peak daily spend target for the sale
@@ -37,6 +41,30 @@ how_to_use:
   - Give your peak daily spend target and your offer dates. Make sure the end date is real.
   - List the ad types you can make. Be honest about your capacity.
   - Use the phase list as a production calendar, and set up spare pages before you ramp.
+output_sample:
+  input:
+    - Your peak daily spend target for the sale
+    - Last year's spend by ad, top 50, with each ad type
+    - The ad formats you can make
+    - Your offer and its real end date
+    - Your Meta page setup and your share of ads that win (optional)
+  output:
+    - name: What one ad can carry
+      contains: Your top ad, a typical evergreen ad and the daily spend figure used to plan each winner.
+    - name: Winners needed
+      contains: Your peak target divided by spend per winner, plus the total ads to make and a capacity check.
+    - name: Mix by share of spend
+      contains: A split across evergreen ads, offer statics, badged winners, catalog ads, video and creator content.
+    - name: Offer ad rules
+      contains: Simple rules so the discount, end date and brand are clear and the offer shows in the first line.
+    - name: Phases
+      contains: What to make for teaser, launch, mid-sale refresh and the last 24 to 48 hours.
+    - name: Limits to fix
+      contains: Meta page limits to check and backup offers to have ready before you ramp up.
+    - name: How to read results
+      contains: How to judge sale ads at ad set level and what to check before reusing a sale winner.
+    - name: Checks missed and Missing
+      contains: Any checks that failed and any inputs you did not give.
 
 how_it_works:
   - title: Finds what one ad can carry

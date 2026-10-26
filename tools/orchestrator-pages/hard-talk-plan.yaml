@@ -1,6 +1,6 @@
 new_slug: hard-talk-plan
 name: Plan a hard talk so they end up agreeing
-summary: Describe the talk you dread. Get their side, a plan, easy yeses in order and lines for pushback.
+summary: Plan a hard conversation before you have it. Get their side, a friendly plan, a ladder of easy yeses and calm lines for pushback.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It runs several skills in a row. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You must ask a boss, client or partner for something and expect resistance.
   - You are heading into a dispute and want to keep the relationship.
   - You keep winning arguments and losing the person.
+not_for:
+  - "You face legal, medical or money risks: talk to a lawyer, doctor or adviser, and keep a written record."
+  - "The other person has no room to change their answer: use a mediator, or put your request in writing."
+  - "You already had the talk and it turned angry: use the Difficult conversation repair planner."
 you_give:
   - Who you must talk to, and how you know them
   - What you want from them, and what you could give or change
@@ -29,6 +33,25 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the person, the matter and what you want. It works step by step and saves each result.
   - Have the conversation. Then note what they agreed to and what they still doubt, and run it again from the plan step if you need a second talk.
+output_sample:
+  input:
+    - Who you must talk to, and how you know them
+    - What you want from them, and what you could give or change
+    - What has happened so far, with facts, dates or quotes
+    - Anything they have said that shows what they care about (optional)
+  prerequisites:
+    - An AI that can work through a set of files, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Their side"
+      contains: What they want, why they act as they do, where they are right and how they keep their pride.
+    - name: "Step 2: The conversation plan"
+      contains: A friendly opening, their likely doubts with replies, questions that let them talk and mistakes you should own.
+    - name: "Step 3: The ladder of yeses"
+      contains: Four to seven questions, each with an honest yes, ending at your request, plus what to do on a no.
+    - name: "Step 4: Lines for pushback"
+      contains: Short true lines for a flat no, a doubt, anger or a charge that you are wrong.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and every missing item in one list.
 how_it_works:
   - title: Sees it from their side
     text: Writes what they want, the fair reason they act as they do, where they are right and how they can keep their pride, with each line marked known or guess.

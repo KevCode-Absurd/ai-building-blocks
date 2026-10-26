@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows set block patterns for large data.
 new_slug: huge-image-processor
 name: Huge image processor
-summary: Give it a very large image. Get it processed in blocks and in parallel
-  without running out of memory.
+summary: Process huge images in MATLAB without running out of memory. Get blockedImage code that reads, processes and saves your scan or map in small parallel blocks.
 job: build-software
 headline: Huge image processor
-subhead: A way to work with images too big to open at once, in MATLAB, without
-  running out of memory. Whole-slide microscope scans, satellite maps and 3D
-  volumes get read, processed and saved in small blocks, even across many
-  processor cores.
+subhead: A way to work with images too big to open at once, in MATLAB, without running out of memory. Whole-slide microscope scans, satellite maps and 3D volumes get read, processed and saved in small blocks, even across many processor cores.
 explain: |
   A way to work with images too big to open at once, in MATLAB, without running out of memory. Whole-slide microscope scans, satellite maps and 3D volumes get read, processed and saved in small blocks, even across many processor cores.
 
@@ -19,6 +15,10 @@ when:
   - You process whole-slide pathology images or satellite rasters.
   - Your image-processing loop is slow and you want it to run in parallel.
   - You need training data cut from huge images for a deep learning model.
+not_for:
+  - "Your image fits in memory and needs no parallel work: use plain imread and imwrite in MATLAB."
+  - "You only want to show a normal image on screen: use MATLAB's standard image display tools."
+  - "You want to design a deep learning network or its training loop: ask your AI for network help, since this only prepares the data."
 you_give:
   - The large image file or folder
   - What you want to do with it
@@ -30,8 +30,31 @@ you_get:
   - Parallel processing setup
   - Viewing or training data preparation steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with the Image Processing Toolbox.
+  - Open your AI chat and paste the skill text, or add the skill folder if your AI tool supports files.
+  - "Tell it the path to your image or folder and what you want: view, process, train a model or archive."
+  - Say if you have the Parallel Computing Toolbox and want parallel runs.
+  - Run the MATLAB code it gives you. It needs MATLAB with the Image Processing Toolbox.
+  - Test on a small region or a coarse level first. Then run the full image.
+  - Use gather, a viewer or write to look at, check or convert the saved result.
+output_sample:
+  input:
+    - The path to your large image file or folder
+    - "What you want to do: view, process, train a model or archive"
+    - File format or coordinate details (optional)
+    - Whether you want to use parallel processing (optional)
+  prerequisites:
+    - MATLAB with the Image Processing Toolbox
+    - The Parallel Computing Toolbox, if you want parallel runs
+  output:
+    - name: blockedImage setup
+      contains: Code that wraps your file as a blockedImage so only the tiles you need are read.
+    - name: Block processing code
+      contains: An apply call that runs your function on each block, with border size and level set to suit the job.
+    - name: Saved result
+      contains: A blockedImage written to your output folder, or a set of structs for counts and detections.
+    - name: Parallel setup
+      contains: The same call set to run on many workers when the Parallel Computing Toolbox is present.
+    - name: Viewing or training steps
+      contains: Code to view results with overlays, or to cut training data from the large image.
+    - name: Data discovery notes
+      contains: For a folder of files, a review of layout, naming and gaps before any code is written.

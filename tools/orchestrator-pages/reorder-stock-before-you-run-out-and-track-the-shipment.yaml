@@ -1,6 +1,6 @@
 new_slug: reorder-stock-before-you-run-out-and-track-the-shipment
 name: Reorder stock before you run out and track the shipment
-summary: Connect your store. Get days of stock left, restock rules, draft purchase orders and a shipment tracker.
+summary: Reorder stock before you run out. Connect your store to see days of stock left, set restock rules, draft purchase orders and track each shipment.
 job: run-your-store
 thinking: high
 thinking_why: It runs four skills in a row and works on live store data. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You reorder when you notice a gap on the shelf, not before.
   - A best seller sold out and you found out from a customer.
   - Orders are on the water and marketing, support and the warehouse each hold a different arrival date.
+not_for:
+  - "You sell made-to-order or dropshipped products, which have no stock to run out of: use your supplier's own order system instead."
+  - "You only want to know how long stock will last: use a simple stock sheet, since this workflow also drafts orders and builds a tracker."
+  - "You can't connect your store or give it read access: export your stock and sales to a spreadsheet and ask a person who knows your supplier terms to set the rules."
 you_give:
   - Your store connected, so it can read stock and sales
   - Supplier lead times and minimum orders
@@ -30,6 +34,28 @@ how_to_use:
   - Connect your store with read access first. Steps 1 to 3 only read. Nothing is ordered for you.
   - After step 3, check the drafts with each supplier and place the orders yourself.
   - Come back with the purchase order numbers and freight details to build the tracker.
+output_sample:
+  input:
+    - Your store, connected so it can read stock and sales
+    - Supplier lead times and minimum orders
+    - How many days of spare stock you want to keep
+    - "After the pause: purchase order numbers, freight details and ship dates"
+  prerequisites:
+    - An AI that can connect to your store, for example through an MCP server
+    - Read access to your store, which is all steps 1 to 3 need
+  output:
+    - name: Days of stock
+      contains: Each product and location with sales per day and days left, lowest first.
+    - name: Restock rules
+      contains: A rule for each product group with trigger level, order size, check rhythm and owner.
+    - name: Draft purchase orders
+      contains: Orders by supplier with quantity and run-out date, plus a list of slow movers to clear.
+    - name: Pause
+      contains: You place the orders yourself and note the purchase order numbers, freight details and ship dates.
+    - name: Shipment tracker
+      contains: A shared sheet with a row for each order, an update rule and owner, a warehouse notice and a short-ship check.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run, and every missing item in one list.
 how_it_works:
   - title: See how long each product will last
     text: Reads stock and sales for each product and location, works out how fast each sells and how many days are left, and lists the low ones first.

@@ -1,17 +1,21 @@
 slug: the-10-step-heartbeat-protocol-implementation-planner
 name: Single-task agent heartbeat builder
-summary: Build a bounded one-task heartbeat with run and cost records.
+summary: "Plan a safe AI agent run loop: one task per run, no overlapping runs, time and cost limits, and a run record. Draft code only."
 category: general
 type: skill
 role: make
 job: ops
 level: intermediate
 inputs:
+  - type: brief
+    required: true
   - type: codebase
-    required: true
+    required: false
 outputs:
-  - type: code_change
+  - type: plan
     required: true
+  - type: code_change
+    required: false
 uses: []
 package_files: all
 origin: own

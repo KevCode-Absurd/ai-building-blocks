@@ -1,53 +1,109 @@
 new_slug: one-period-residual-income-bridge
 name: One-period residual income bridge
 headline: One-period residual income bridge
-summary: Measure one period’s earnings above the required return on opening common equity.
+summary: Find how much a company earned above the return its owners require in one year. Get the equity charge, residual income and closing book value.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A one-period equity-charge schedule with a clean-surplus cross-check. Share opening common book equity, ordinary net income, common dividends and a dated cost-of-equity assumption.
+subhead: Give it opening common equity, net income, dividends and the return owners require. It charges the opening equity at that return, takes the charge off net income, and rolls the book value forward one year. You see what was earned above the charge.
 explain: |-
-  A one-period equity-charge schedule with a clean-surplus cross-check.
+  Net income does not say whether owners earned enough. Their money has a cost. Residual income asks what is left after paying owners the return they require on the equity they had at the start of the year. This residual income bridge does that sum for one year and shows each step.
 
-  Public equity valuation. Illustrative figures.100×10%=10 charge;15-10=5 residual. Closing book100+15-4=111. PV5/1.1=4.545455 is a single contribution, not full valuation.
+  The charge is opening book equity times the required return. Residual income is net income less that charge. A positive number means the company earned more than owners required. Zero means it just met the bar. The skill then rolls book equity forward: opening equity plus net income, less dividends. That only works when no other items touch equity, so the skill asks about them first.
+
+  Practice numbers, not a real company: opening equity 100, required return 10%, net income 15 and dividends 4. The charge is 100 x 10% = 10. Residual income is 15 - 10 = 5. Closing equity is 100 + 15 - 4 = 111. The skill also shows 5 / 1.10 = about 4.5 as the value of this one year's residual. That is one piece of value, not what the company is worth.
 when:
-  - You need a one-period equity-charge schedule with a clean-surplus cross-check.
-  - You work on public equity valuation and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You want to know if a business earned more this year than its owners require, not just a profit.
+  - You are learning or teaching residual income valuation and want one clean year first.
+  - A reviewer asks why a profit of 15 on equity of 100 is not the same as value added.
+  - You need next year's opening book equity for a model, and want it tied to this year's earnings and dividends.
+not_for:
+  - You want what the whole company is worth. One year does not price it. Use the Justified price-to-book scenario, or a full residual income model.
+  - You work from total capital and a cost of capital, not equity alone. Use the Economic profit fade schedule.
+  - You only want book value per share from a filing. Use the Book value per share roll-forward.
 you_give:
-  - Opening common book equity, ordinary net income, common dividends and a dated cost-of-equity assumption.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Opening common book equity, from the balance sheet at the start of the year
+  - Net income for common owners for the year, from the income statement
+  - Common dividends paid in the year
+  - The return owners require, as a yearly rate, and where it came from, with the date
+  - Your own model spreadsheet (optional)
 you_get:
-  - A one-period equity-charge schedule with a clean-surplus cross-check.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The equity charge for the year
+  - Residual income, which is net income less the charge
+  - Closing book equity after earnings and dividends
+  - A one-year discounted figure, labelled as one piece of value only
+  - A list of missing facts and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste opening equity, net income, dividends and the required return. Say the currency, the units and the year. Mention any share sales, buybacks or other items that touched equity.
+  - Ask in plain words, such as did we earn more than our owners require this year?
+  - Check one line yourself. The charge is opening equity times the required return. Residual income is net income less the charge.
+  - Read MISSING and CHECKS MISSED before you use any figure. Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Use beginning common book equity and matching ordinary earnings; identify OCI, new capital and repurchases before asserting clean surplus
-    text: Use beginning common book equity and matching ordinary earnings; identify OCI, new capital and repurchases before asserting clean surplus.
-  - title: 2. Multiply opening book equity by required equity return and subtract the charge from ordinary earnings
-    text: Multiply opening book equity by required equity return and subtract the charge from ordinary earnings.
-  - title: 3. Roll book value through earnings and distributions, reconcile other equity movements and label the one-period discounted contribution separately from complete value
-    text: Roll book value through earnings and distributions, reconcile other equity movements and label the one-period discounted contribution separately from complete value.
+  - title: Starts from opening equity
+    text: Uses equity at the start of the year with matching net income. It asks about other equity changes before it assumes none.
+  - title: Charges the owners
+    text: Multiplies opening equity by the required return, then subtracts that charge from net income.
+  - title: Rolls the book value forward
+    text: Adds net income to opening equity and takes off dividends. Other movements are listed, not hidden.
+  - title: Discounts one year
+    text: Shows the residual at its value today, labelled as one year only and not as company value.
+  - title: Marks the gaps
+    text: Writes MISSING for any number it was not given. It never fills a gap with zero.
 output_shape: |-
-  A one-period equity-charge schedule with a clean-surplus cross-check.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Equity charge <amount> | Residual income <amount> | Closing book equity <amount> | One-year discounted residual <amount>
+
+  SCOPE AND SOURCES
+  <year, currency and units; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <opening equity, net income, dividends, required return and its source>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures; closing equity tied to opening plus income less dividends and other items>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - Opening common book equity
+    - Net income for common owners for the year
+    - Common dividends paid in the year
+    - The return owners require, as a yearly rate
+    - Your own model spreadsheet (optional)
+  prerequisites:
+    - The balance sheet and income statement for the year
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The equity charge, residual income, closing book equity and the one-year discounted residual.
+    - name: SCOPE AND SOURCES
+      contains: The year, currency and units, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it, and where the required return came from.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and a check that closing equity ties to the roll-forward.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Charge uses beginning book equity rather than market capitalization or closing equity.
+  - what: A higher required return
+    how: Raise the rate. The charge grows, and residual income can fall to zero or below.
+  - what: Earnings just meet the bar
+    how: Set net income equal to the charge. Residual income is zero, and so is its discounted value.
+  - what: Other equity movements
+    how: Tell it about share sales, buybacks or other items. They go in as extra rows in the roll-forward.
 judge:
   - Charge uses beginning book equity rather than market capitalization or closing equity.
   - Cost of equity matches equity earnings and is not replaced with WACC.
@@ -62,15 +118,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The balance sheet at the start of the year and the income statement for the year
+    - A note on where the required return came from, and its date
+    - A named reviewer and the question you want answered
 terms:
+  - term: Residual income
+    meaning: Net income left after charging the owners their required return on opening equity.
+  - term: Equity charge
+    meaning: Opening book equity times the return owners require.
+  - term: Book equity
+    meaning: The owners' share of the balance sheet, as the accounts show it.
+  - term: Cost of equity
+    meaning: The yearly return owners require for the risk they take. Here it is the required return.
+  - term: Clean surplus
+    meaning: Equity changes only through net income and dividends, with no other items.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real company.

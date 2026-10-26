@@ -1,6 +1,6 @@
 slug: prepare-a-partner-launch-announcement-pack
 name: Prepare a partner launch announcement pack
-summary: Share the source files. Get a shared message brief, announcement drafts and an approval tracker.
+summary: Get a shared message brief, announcement drafts for each audience and an approval tracker for a partner launch, so both brands say the same thing.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -10,29 +10,25 @@ level: intermediate
 inputs:
   - type: brief
     required: true
-  - type: question
-    required: false
-  - type: script
-    required: false
-  - type: ad_copy
+  - type: source_text
     required: false
   - type: brand_brain
     required: false
 outputs:
   - type: plan
+  - type: copy_draft
   - type: document
-  - type: audit_report
 uses:
   - stakeholder-map-builder
   - stakeholder-update-writer
   - brand-voice-editor
 steps:
   - uses: stakeholder-map-builder
-    note: Map the audiences and the people who must check the announcement.
+    note: List the audiences you will tell and the people on each side who must approve the announcement. Hand step 2 the audiences, the approvers and the agreed facts.
   - uses: stakeholder-update-writer
-    note: Draft the core announcement and audience variants using the agreed facts.
+    note: "Write a one-page shared message brief from the agreed facts and step 1's audiences, then a core announcement and one version per audience. Hand step 3 every draft and the brief."
   - uses: brand-voice-editor
-    note: Check each version against the appropriate voice while keeping joint claims consistent.
+    note: "Check each version against the right brand's voice, using your voice examples for each brand, and keep the joint claims the same in every draft. Hand back the drafts and the approval tracker, with every draft marked unpublished until approved."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

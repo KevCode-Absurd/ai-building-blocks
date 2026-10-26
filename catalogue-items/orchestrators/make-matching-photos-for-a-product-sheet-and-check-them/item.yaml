@@ -13,9 +13,9 @@ outputs:
   - {type: audit_report}
 uses: [product-photo-batch-maker, ai-product-photo-inspector, marketplace-photo-rule-checker]
 steps:
-  - {uses: product-photo-batch-maker, note: "Starts the chain: one matching photo per row of your sheet."}
-  - {uses: ai-product-photo-inspector, note: "Checks the saved batch for AI faults and says which to redo."}
-  - {uses: marketplace-photo-rule-checker, note: "Checks the photos that passed against the rules of the shop you list on."}
+  - {uses: product-photo-batch-maker, note: "Starts the chain: one matching photo per row of your sheet. Hands the saved batch of photos to step 2."}
+  - {uses: ai-product-photo-inspector, note: "Checks the saved batch from step 1 for AI faults and says which to redo, with a fix line for each. Hands the redone set to step 3."}
+  - {uses: marketplace-photo-rule-checker, note: "Checks the final photos, after you redo the flagged ones, against the rules of the shop you list on. Uses your final photo set, not step 2's report."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-photos-for-every-product-in-a-sheet/skeleton.yaml

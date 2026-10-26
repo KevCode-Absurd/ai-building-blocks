@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It runs a set checklist and rewrites what falls short.
 new_slug: on-page-seo-tuner
 name: On-page SEO tuner
-summary: Give it a page. Get fixes for titles, descriptions, headings, content,
-  internal links, images, URLs and schema.
+summary: Fix the title, description, headings, links, images, URL and schema on one web page. Get an on-page SEO audit with rewrites you can paste in.
 job: get-found-in-search
 headline: On-page SEO tuner
-subhead: Concrete fixes for a single web page so it ranks better and gets more
-  clicks. You give it a page and it works through eight areas, one by one.
+subhead: Concrete fixes for a single web page so it ranks better and gets more clicks. You give it a page and it works through eight areas, one by one.
 explain: |
   Concrete fixes for a single web page so it ranks better and gets more clicks. You give it a page and it works through eight areas, one by one.
 
@@ -17,6 +15,10 @@ when:
   - You wrote a new article and want it tuned before you publish.
   - Your headings are out of order and you are not sure how to fix them.
   - Images have no descriptions and the page has no structured data.
+not_for:
+  - "You need site-wide speed, crawl or indexing fixes: ask a developer or use a site audit tool, since this works on one page only."
+  - "You need to pick a keyword first: do keyword research with a free keyword tool, then come back with your chosen phrase."
+  - "You want to compare your page with rivals or review many pages at once: use a competitor study or a content audit instead."
 you_give:
   - The page address or its content
   - The main keyword or topic
@@ -28,7 +30,30 @@ you_get:
   - Internal link suggestions
   - Image, URL and structured data fixes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Paste your page address. If your AI cannot open links, paste the page text instead. For the title and description check, also paste the page HTML (in your browser, right-click the page and choose View page source).
+  - Add the one search phrase the page should rank for, and say what the page is for.
+  - Read the scores first, then fix the critical items before the rest.
+  - Ask your AI to write the new title, meta description and headings, then paste them into your site.
+output_sample:
+  input:
+    - Your page address, or the draft text if it is not live yet
+    - The one search phrase the page should rank for
+    - "What the page is for: selling, teaching or helping people find something"
+    - The page HTML, if your AI cannot open the link (optional)
+  prerequisites:
+    - A page that search engines can find and index
+    - An AI that can open web links, or the page text pasted into the chat
+  output:
+    - name: Page summary
+      contains: Your page address, target search phrase and the role the page plays on your site.
+    - name: Scores across 8 areas
+      contains: A pass, needs work or fail mark for title, description, headings, content, links, images, URL and schema.
+    - name: Critical fixes
+      contains: Things that are broken or missing, each with the exact fix.
+    - name: Important fixes
+      contains: Things that work but could do better, each with a clear change.
+    - name: Nice-to-have polish
+      contains: Small tweaks to make after the bigger fixes are done.
+    - name: Drafted replacements
+      contains: New title, meta description, headings or copy, written for you if you ask.

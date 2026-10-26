@@ -10,6 +10,8 @@ level: advanced
 inputs:
   - type: codebase
     required: true
+  - type: code_change
+    required: false
 outputs:
   - type: code_change
 uses: []

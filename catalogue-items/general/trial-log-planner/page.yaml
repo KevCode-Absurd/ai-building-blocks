@@ -1,6 +1,6 @@
 new_slug: trial-log-planner
 name: "Trial log planner"
-summary: "Paste what you want to get working. Get many cheap trials, a log for each and what each failure ruled out."
+summary: "Plan many cheap trials for something that is not working yet. Get a trial log that shows what each failed try ruled out."
 job: test-an-idea
 thinking: medium
 thinking_why: "It must list options and design a log, with some judgment on which trials are cheap and informative."
@@ -17,6 +17,11 @@ when:
   - Something you built doesn't work and you aren't sure what to try next.
   - You've tried a few fixes, they failed, and you want to know if it's worth carrying on.
   - You want a record of what you tried so nobody repeats it.
+  - You are about to spend weeks on one fix and want a cheaper way to find what works.
+not_for:
+  - "You have one choice to make with a clear answer: use the Reversible decision sorter or the Pros and cons decision planner."
+  - "You want to test one change on a live page or ad: use the One-change experiment planner."
+  - "You want to test a business guess with real people: use the Smallest test picker."
 
 you_give:
   - The result you want to get working, and who would pay for it
@@ -29,11 +34,12 @@ you_get:
   - A "what it ruled out" line for each failed trial, and what else the whole system needs
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Describe the result you want and who would pay for it.
-  - List what you have already tried, even failures.
-  - Run the trials in the order it gives and fill in the log as you go.
-  - Bring the log back to see what is ruled out and what is left.
+  - Open the skill in your AI, or copy it and paste it into Claude, ChatGPT or Gemini. It needs no files or tools.
+  - Describe the result you want and who would pay for it. It will not plan trials without a buyer.
+  - List what you have already tried, even the failures, with what you saw.
+  - Run the trials in the order it gives, cheapest first. Fill in the log after each one.
+  - Bring the log back after a few trials. Ask what is ruled out and what is left.
+  - Paste the log into a spreadsheet to keep it. Use the One-change experiment planner when one trial needs a cleaner design.
 
 how_it_works:
   - title: Picks one result
@@ -125,3 +131,24 @@ terms:
     meaning: One cheap attempt at getting the result, run and written down on its own.
   - term: Ruled out
     meaning: An option that a failed trial showed does not work, so you can drop it.
+
+output_sample:
+  input:
+    - "The result you want to get working, and who would pay for it"
+    - "What you have tried so far, with what you saw (optional)"
+    - "Numbers from earlier trials (optional)"
+  output:
+    - name: "THE RESULT WORTH GETTING"
+      contains: "The one result, who would pay for it and why."
+    - name: "EVERYTHING WE COULD TRY"
+      contains: "At least ten options, grouped by type, with the ones you already tried marked."
+    - name: "THE ROUGHEST VERSION"
+      contains: "The quickest version that could work at all, and what you leave out on purpose."
+    - name: "CHECK THE TOOL FIRST"
+      contains: "Your measuring tool tested on a case where you know the answer."
+    - name: "TRIAL LOG"
+      contains: "One row per trial: date, what you tried, what you saw, whether it worked and what it ruled out."
+    - name: "WHAT ELSE THE WHOLE SYSTEM NEEDS"
+      contains: "The other parts the result needs to work in real life, such as supply or delivery."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check the answer failed, or none."

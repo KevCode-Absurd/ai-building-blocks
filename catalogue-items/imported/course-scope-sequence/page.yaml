@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It balances order across subjects and years.
 new_slug: course-scope-sequence
 name: Course scope and sequence planner
-summary: Describe your course or year. Get what to teach and in what order, so
-  each year builds on the last.
+summary: Plan a course scope and sequence that shows what to teach and in what order, so each year builds on the last. Flags gaps before students hit them.
 job: teach-and-train
 headline: Course scope and sequence planner
-subhead: A scope and sequence that shows what to teach and in what order across
-  a year or programme, so each topic builds on what came before.
+subhead: A scope and sequence that shows what to teach and in what order across a year or programme, so each topic builds on what came before.
 explain: |
   A scope and sequence that shows what to teach and in what order across a year or programme, so each topic builds on what came before. Gaps and jumps in difficulty show up before students hit them.
 
@@ -17,6 +15,10 @@ when:
   - Students arrive in year two missing key ideas.
   - You are rebuilding a subject and want to check progression.
   - You want to show colleagues why topics appear where they do.
+not_for:
+  - "You plan one lesson or a single unit: use the Backwards design unit planner, or ask your AI to draft the lesson directly."
+  - "You need a dated timetable with room and staff slots: use your school's timetable tool, as this gives an order, not a calendar."
+  - "You want to write tests or marking guides for a course: ask your AI to draft the assessment once you have your order."
 you_give:
   - Subject and year levels
   - Learning goals
@@ -29,7 +31,36 @@ you_get:
   - Coherence checks
   - Questions for teacher judgment
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Paste your subject, your year groups or bands, and the goals students should reach.
+  - Add your current topic list if you have one (optional), and the time you have per unit.
+  - Ask for the sections in order, from the prerequisite map to the design flags.
+  - Read the prerequisite violations first, then answer the teacher-decision questions.
+  - Ask your AI to redo the order with your answers, then check it with your colleagues.
+output_sample:
+  input:
+    - Your subject or programme name and a short description
+    - Your year groups or bands (for example Years 1 to 13)
+    - The goals students should reach by the end
+    - Your current units or skills (optional)
+  output:
+    - name: Confidence Level
+      contains: A short note on how sure the plan is, based on what you gave it.
+    - name: Prerequisite Map
+      contains: Which ideas must be learned before others, shown as a chain.
+    - name: Knowledge Architecture Diagnosis
+      contains: How the subject's knowledge builds, such as step by step or in separate strands.
+    - name: Sequencing Constraints
+      contains: The limits that fix the order, such as what must come first.
+    - name: Recommended Sequence with Rationale
+      contains: The proposed order of topics across bands, with a reason for each placement.
+    - name: Prerequisite Violations
+      contains: Places where a topic appears before the ideas it needs.
+    - name: Coherence Checks
+      contains: Checks that learning builds up through the years and links across strands.
+    - name: Sequencing Principles
+      contains: The ideas used to set the order.
+    - name: Teacher Discretion Flags and Questions
+      contains: Points where a teacher should decide, with questions to help.
+    - name: Design Flags and Recommendations
+      contains: Gaps and fixes to consider before you adopt the plan.

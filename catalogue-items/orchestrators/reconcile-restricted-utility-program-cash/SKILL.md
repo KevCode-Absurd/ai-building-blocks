@@ -1,46 +1,29 @@
 ---
 name: reconcile-restricted-utility-program-cash
-description: "A utility collections, restricted fund and usable cash reconciliation"
+description: "Use when a utility program mixes customer payments and grant money in one bank account and you need usable cash. Runs three checkers in order. Not for grant eligibility or future cash ladders."
 ---
 
 # Reconcile restricted utility program cash
 
-A utility collections, restricted fund and usable cash reconciliation.
-
-<!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Check the money** with the [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker). It takes the document and spreadsheet.
-- The [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer). It takes the audit report and document.
-- The [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer). It takes the document and spreadsheet.
-- The [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor). It takes the spreadsheet and document.
-- The [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker). It takes the spreadsheet and document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+Work out how much of a utility program's bank cash you can use. Three steps run in order: collections, then restricted cash, then usable cash. Each hands the next its figure and period.
 
 ## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never replace a missing figure with zero.
 
-**What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+**What you need** (all as of the period end date):
+- **Billing and collection records** (yours): billings, current and arrears receipts and receivables for the period.
+- **Program bank cash** (yours): the bank statement balance.
+- **Grant restrictions** (yours): the rules, and which receipts are restricted.
+- **Approved eligible program payments** (yours): from the grant approvals.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+**Makes it better (optional):** the prior fund bridge, so the final cash can be tied to it.
 
 **Tools that do this best:**
-- **A spreadsheet engine and file-capable AI:** Create, recalculate, render and reopen the requested native workbook.
-<!-- /needs -->
+- **A spreadsheet engine and file-capable AI:** builds, recalculates and reopens the workbook. In plain chat, return the same tables as text and say no workbook was made.
 
 ## What you need
 
-Utility billing/collection records, program bank cash, actual grant restrictions, approved eligible program payments, restricted/unrestricted receipts and source allocation rules.
+The items under "Before you start", all as of the period end date, with the currency and scale stated once. Ask once, in one short message, for only what you cannot work without.
 
 ## Governing scope
 
@@ -50,11 +33,11 @@ Read this governing file and every component SKILL.md in full. The component wor
 
 ## Steps
 
-1. **Water utility collections reconciler** (`water-utility-collections-reconciler`). Reconcile consumer water billings, current/arrears receipts and receivables on the actual period. Pass only actual collected cash to the program bank map and preserve billing balances outside cash. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-water-utility-collections-reconciler.md` and any actual native file. Stop the affected step on missing tools or inputs.
+1. **Water utility collections reconciler** (`water-utility-collections-reconciler`). Reconcile consumer water billings, current/arrears receipts and receivables on the actual period. Pass only actual collected cash to the program bank map and preserve billing balances outside cash. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-1-water-utility-collections-reconciler.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 2:** only actually collected cash is passed on, and billed less collected equals closing receivables. If not, stop and say which line is off.
 
-2. **Grant restrictions cash reconciler** (`grant-restrictions-cash-reconciler`). Map the award-funded program with consumer collections classified only by the supplied restriction rules. Roll restricted and total bank cash separately; do not describe consumer receipts as grant revenue or assume award spending eligibility. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-grant-restrictions-cash-reconciler.md` and any actual native file. Stop the affected step on missing tools or inputs.
+2. **Grant restrictions cash reconciler** (`grant-restrictions-cash-reconciler`). Map the award-funded program with consumer collections classified only by the supplied restriction rules. Roll restricted and total bank cash separately; do not describe consumer receipts as grant revenue or assume award spending eligibility. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-2-grant-restrictions-cash-reconciler.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before step 3:** restricted and total bank cash both roll forward and tie to the bank. Customer receipts are not described as grant revenue and no spend is assumed eligible.
 
-3. **Restricted cash availability checker** (`restricted-cash-availability-checker`). Use the reconciled bank and restriction balances to calculate accessible cash after any additional nonoverlapping collateral or pending debit blocks. Tie final general cash to the prior fund bridge before concluding available funding. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-restricted-cash-availability-checker.md` and any actual native file. Stop the affected step on missing tools or inputs.
+3. **Restricted cash availability checker** (`restricted-cash-availability-checker`). Use the reconciled bank and restriction balances to calculate accessible cash after any additional nonoverlapping collateral or pending debit blocks. Tie final general cash to the prior fund bridge before concluding available funding. Preserve original sources and verify the meaning, units and period of each input before using prior work. Save `outputs/step-3-restricted-cash-availability-checker.md` and any actual native file. Stop the affected step on missing tools or inputs. **Gate before the hand back:** final general cash ties to the prior fund bridge, restricted releases have evidence, and no cash is counted twice.
 
 ## Workbook checks
 
@@ -71,4 +54,10 @@ For a requested workbook, use the available spreadsheet tool and the supplied te
 
 ## Hand back
 
-Return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+Lead with usable cash and how it is built from the three steps. State plainly that no spend was approved, and that a person who knows the grant terms must check the restrictions before anyone acts. Then return a HAND-BACK SUMMARY with the saved files, source coverage, actual component checks, assumptions, unresolved MISSING: lines and CHECKS MISSED. Distinguish illustrative examples, supplied actuals, forecasts and valuation scenarios. A proposed financing or investment is not an executed transaction.
+
+## After this
+Suggest one next step in a short question, and say they can type their own:
+- The [Prepare a grant spending evidence pack](https://useaiblocks.com/workflows/prepare-a-grant-spending-evidence-pack) workflow, when you must show grant spending followed the agreement.
+- The [Reconcile treasury settlement liquidity](https://useaiblocks.com/workflows/reconcile-treasury-settlement-liquidity) workflow, when you need a dated cash ladder of coming payments.
+Nothing here pays anyone. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

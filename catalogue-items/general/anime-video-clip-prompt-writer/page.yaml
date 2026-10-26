@@ -1,6 +1,6 @@
 new_slug: anime-video-clip-prompt-writer
 name: "Anime video clip prompt writer"
-summary: "Paste your anime script and attach product photos. Get hand-drawn clip prompts and an edit list."
+summary: "Turn an approved anime ad script and your product photos into hand-drawn style clip prompts and an edit list, with three stops for your OK."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You have an approved anime-style script and want to make it with AI image and video tools.
   - Your animated clips keep changing the hero or the product between shots.
   - Your clips look like smooth 3D instead of hand-drawn animation.
+not_for:
+  - "You want a live-action ad: write the script and shot list yourself, or ask a video editor, because this skill only plans hand-drawn 2D anime."
+  - "You need one still picture: use your image tool directly, because this skill plans a full video with clips."
+  - "You have no script yet: write one first with the Video ad script writer from customer quotes, then come back."
 
 you_give:
   - The approved script with its shots, and its cast note if it has one
@@ -37,6 +41,31 @@ how_to_use:
   - Approve or change the avatar card. Then make the reference images and tell it which one you picked.
   - Make the sheets and approve them with the lock lines, then make the storyboard frames and approve the board.
   - Make the clips from the approved frames. If a take fails, attach a screenshot, say what went wrong and ask for the fix.
+output_sample:
+  input:
+    - Your approved anime-style ad script, with its shots
+    - Real photos of your product and every word on its label
+    - How your product is opened and used
+    - Your tone, colours and approved claims (optional)
+    - Your video tool's clip lengths and reference image limit (optional)
+  prerequisites:
+    - An AI that can read images, to look at your product photos
+    - An AI image tool and an AI video tool to make the pictures and clips from the prompts
+  output:
+    - name: Avatar card
+      contains: The hero's role, age, look, outline, clothes, voice and what never changes, held for your approval.
+    - name: Reference images
+      contains: Three or four image prompts of the hero in the chosen look, so you can pick one.
+    - name: Sheets and lock lines
+      contains: A character sheet, a product sheet and a set sheet, plus short lines pasted into every prompt.
+    - name: Storyboard
+      contains: One shot card per shot with two key poses, a hold, what moves, what holds and continuity notes.
+    - name: Clip prompts
+      contains: One prompt per clip with its start frame, end pose, the motion only, and how it cuts out.
+    - name: Edit list
+      contains: Clip order, captions, music, end card, safe zones and retakes.
+    - name: Checks missed
+      contains: One line for each check the prompts still miss, or none.
 
 how_it_works:
   - title: Reads the script

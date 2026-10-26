@@ -1,6 +1,6 @@
 new_slug: amazon-monthly-account-keeper
 name: Amazon monthly account keeper
-summary: Give it your Amazon fee, stock and sales reports. Get margins checked, restock sized and refund claims found.
+summary: Check your Amazon account every month. Give it fee, stock, returns and sales reports. Get margins checked, restocks sized and refund claims found.
 job: sell-on-amazon
 thinking: high
 thinking_why: It runs up to seven skills, picks a path for each product from margin and sales, and does fee and stock sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You sell on Amazon and want the same checks every month.
   - A product's sales or margin slipped and you don't know why.
   - You've never checked your shipment, fee and returns reports for money owed.
+not_for:
+  - "You have one product and only a few sales a month: run the Amazon fee and margin checker alone."
+  - "You want it to read your live Seller Central account or live ad reports: it only works from reports you give it."
+  - "You resell with no margin to check: ask your accountant or use a simple spreadsheet instead."
 you_give:
   - Price, landed cost, size and weight for each product, the first time
   - The month's fee, sales, ad and returns reports
@@ -30,6 +34,31 @@ how_to_use:
   - Each month, download the fee, returns, shipment and sales reports for the same dates and put them in the folder.
   - Read the list. Make the changes you agree with in Seller Central yourself, and file claims with the proof it names.
   - Run it again on the 3rd of next month. It compares against last month's files.
+output_sample:
+  input:
+    - Price, landed cost, size and weight for each product (first run only)
+    - This month's fee, sales, ad and returns reports
+    - Stock in Amazon, stock on the way and your maker's lead time
+    - Shipment records and receipts (optional)
+    - A keyword export for any product whose sales fell (optional)
+  prerequisites:
+    - An AI that can read your report files and keep an amazon folder, such as Claude Code
+    - Your current Amazon fee figures, from your fee report or Amazon's revenue calculator
+  output:
+    - name: The month
+      contains: Units, net margin after ads and ad cost per sale for each product, against last month.
+    - name: Path per product
+      contains: "One choice per product: margin fix, listing refresh, ad rebuild or hold, with the reason."
+    - name: Actions to approve
+      contains: Up to ten actions ranked by money, each with its product, size, source step and reason.
+    - name: Restock
+      contains: Units to send, send-by date and cash tied up for each low-stock product.
+    - name: Claims to file
+      contains: Each refund claim with its type, amount and the proof you have.
+    - name: Watch next month
+      contains: One to three numbers that decide next month's path.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Check each margin
     text: Works out profit per unit with this month's fees, and the most each product can pay for ads per sale.

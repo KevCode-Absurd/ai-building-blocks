@@ -1,6 +1,6 @@
 new_slug: launch-performance-max-keep-it-clean-and-know-when-to-scale
 name: Launch Performance Max, keep it clean, know when to scale
-summary: Give it your catalogue and break-even numbers. Get a Performance Max build, a clean-up list and a scaling call.
+summary: Plan a Performance Max launch, find what wastes budget, and learn if it is safe to raise spend. Give it your products, budget and break-even numbers.
 job: run-google-ads
 thinking: high
 thinking_why: It runs three skills in a row and does budget and break-even sums. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You run steady Shopping and Search and want to add Performance Max without handing it the whole budget.
   - Performance Max looks great in Google but your store sales are flat.
   - You want a rule for when to raise the budget and by how much.
+not_for:
+  - "You are under the budget floor or your tracking is not working: run Shopping and Search first, and fix your feed and purchase tracking before you try this."
+  - "You want to read a drop in sales across all your ads: use the Ad sales drop analyst."
+  - "You only want a report on how your ads did last month: use the Ad results report writer."
 you_give:
   - Your products with prices and margins, and which ones sell best
   - Your daily budget, conversions per month and average cost per sale on non-brand search
@@ -30,6 +34,26 @@ how_to_use:
   - Give it your real break-even numbers. If you do not have them, say so and it will mark the gap.
   - When it pauses, build the campaign, leave the big settings alone for three to four weeks, then export the reports.
   - Raise the budget only in the steps it gives you.
+output_sample:
+  input:
+    - Your products with prices and margins, and which ones sell best
+    - Your daily budget, conversions per month and cost per sale on non-brand search
+    - Whether your feed and purchase tracking work
+    - After the pause, your asset group, product, search term and placement reports
+    - Your brand brain (optional)
+  prerequisites:
+    - Live Shopping and Search campaigns that are steady
+    - A Google Ads account you can export reports from
+    - Three to four weeks to run the campaign before steps 2 and 3
+  output:
+    - name: "Step 1: Launch plan"
+      contains: A go or wait verdict, the budget floor, asset groups, brand exclusions, bidding and a review rhythm.
+    - name: "Step 2: Clean-up"
+      contains: Findings by day, week and month, an exclude or replace list, a reality check and a waste score.
+    - name: "Step 3: Scale check"
+      contains: A pass or fail on five gates, your return against break-even, a step size and a go or wait call.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Check the fit and plan the build
     text: Works out the budget floor from two rules, says go or wait, then plans asset groups, brand exclusions, signals and bidding. If the answer is wait, it names what to build first.

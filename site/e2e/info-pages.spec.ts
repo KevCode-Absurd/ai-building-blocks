@@ -17,7 +17,8 @@ test("support and policies navigate without the catalogue and update page metada
   for (const [path, title] of pages) {
     if (path !== "/support") await page.getByRole("navigation", { name: "Help and policies", exact: true }).locator(`a[href="${path}"]`).click();
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
-    await expect(page).toHaveTitle(`${title} · AI Blocks`);
+    await expect(page).toHaveTitle(/ \| AI Blocks$/);
+    await expect(page).toHaveTitle(/^.{50,60}$/);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", `https://useaiblocks.com${path}`);
     await expect(page.getByRole("navigation", { name: "Help and policies", exact: true }).locator('[aria-current="page"]')).toHaveAttribute("href", path);
   }

@@ -2,16 +2,95 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-react19-source-patterns
 name: React 19 source migration helper
-summary: Share your React code. Get source changes for React 19 APIs, refs and context.
+summary: Update React app code for React 19, from createRoot and hydrateRoot to default props, refs and context. Get before and after fixes per file.
 job: test-and-fix-code
 headline: React 19 source migration helper
-subhead: Share your React code. Get source changes for React 19 APIs, refs and
-  context. Share your goal and the files you already have. The skill file sets
-  out the steps and the tools needed for this job.
+subhead: Paste your React source files before you upgrade to React 19. Your AI finds the removed APIs, such as ReactDOM.render and findDOMNode, and rewrites each one with the new pattern. Tests are covered by the test migration helper.
+explain: |
+  React 19 removes several old APIs. ReactDOM.render, ReactDOM.hydrate, unmountComponentAtNode and findDOMNode are gone. Function components lose defaultProps. Legacy context and string refs are removed. Code that still uses them fails when you upgrade.
+
+  This skill is a checklist of those changes with a rule for each. ReactDOM.render becomes createRoot().render(). hydrate becomes hydrateRoot. defaultProps on a function component becomes default parameters. useRef() gets a null argument. Old context moves to createContext. String refs move to createRef.
+
+  It also makes two calls that save you work. It keeps propTypes in place with a note, because the prop-types package still works and only the built-in React check is removed. It treats the forwardRef change as optional, since you can move to ref as a prop on your own schedule.
+when:
+  - You are about to move from React 18 to React 19 and want a list of what breaks in your source code.
+  - Your app still starts with ReactDOM.render or ReactDOM.hydrate.
+  - You use findDOMNode, unmountComponentAtNode or defaultProps on function components.
+  - A search for useRef() with no argument returns hits in many files.
+not_for:
+  - "You need to fix test files, such as act imports or Simulate: use the React 19 test migration helper."
+  - "You want deep help on one old API: use the React legacy context migrator or the React string ref migrator, which cover those two in full."
+  - "You have not reached React 18.3.1 yet: move to 18.3.1 first, so React shows you the warnings."
+you_give:
+  - Your React source files, starting with the entry file that calls ReactDOM
+  - Your current React version
+  - Search results for the old APIs in your src folder (optional)
+  - Your list of third-party packages that use React (optional)
+you_get:
+  - A list of every removed or changed API found, file by file
+  - Before and after code for each one
+  - A note on where propTypes were kept
+  - A list of spots your AI could not decide
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page. If your AI takes file uploads, upload the whole skill folder so it can read the api-migrations file.
+  - Paste your entry file first, then other files in small groups. Say your React version.
+  - Ask your AI to list every old API it finds before it rewrites anything. Check the list.
+  - Ask for the rewrites. Read each change to your root, ref and defaultProps code with care.
+  - Run your app and tests on your own machine. Then use the React 19 test migration helper for the test files.
+how_it_works:
+  - title: Scan for old APIs
+    text: It looks for each pattern in the quick reference table, from ReactDOM.render to unused React imports.
+  - title: Fix the root
+    text: It moves ReactDOM.render to createRoot and ReactDOM.hydrate to hydrateRoot, and unmount calls to root.unmount.
+  - title: Fix refs
+    text: It replaces findDOMNode and string refs with direct refs, and gives useRef an initial null.
+  - title: Fix default props
+    text: It moves function component defaultProps to default parameters and keeps class defaultProps.
+  - title: Fix context
+    text: It moves contextTypes code to createContext, with provider and consumers together.
+  - title: Keep propTypes
+    text: It leaves propTypes in place and adds a note that React 19 no longer runs the check.
+output_shape: |
+  Old APIs found
+  - <file>: <old API>, fix <new pattern>
+  Rewritten code
+  - <file>: <before code> then <after code>
+  propTypes kept
+  - <file list>
+  Check by hand
+  - <anything unclear>
+output_sample:
+  input:
+    - Your React source files, starting with the entry file
+    - Your current React version
+    - Search results for the old APIs (optional)
+    - Third-party packages that use React (optional)
+  prerequisites:
+    - Your code kept in version control, so you can undo the change
+    - React 18.3.1 installed, so warnings show before you upgrade
+  output:
+    - name: Old APIs found
+      contains: Each removed or changed API, with the file where it appears.
+    - name: Rewritten code
+      contains: Before and after code for roots, refs, default props, context and imports.
+    - name: propTypes kept
+      contains: Files where propTypes stay, with a note that React 19 skips the check.
+    - name: Check by hand
+      contains: Cases such as a package that may still use an old API.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can read source files and apply a known list of changes. Upload the skill folder if it accepts files.
+    - name: An AI coding tool in your project
+      why: It can run the scan searches in the reference and change many files at once.
+  inputs:
+    - The scan results from the reference checklist
+    - Your build or test output after each batch of changes
+    - The React 19 test migration helper's results for tests
+terms:
+  - term: createRoot
+    meaning: The new way to start a React app in the browser, replacing ReactDOM.render.
+  - term: hydrateRoot
+    meaning: The new way to attach React to server-made HTML, replacing ReactDOM.hydrate.
+  - term: defaultProps
+    meaning: A way to set fallback values for props. Function components lose it in React 19.

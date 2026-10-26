@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It walks five fixed control themes.
 new_slug: uk-cyber-essentials-checker
 name: UK Cyber Essentials checker
-summary: Describe your devices and cloud services. Get gaps against Cyber
-  Essentials and what to fix before you apply.
+summary: Check your devices and cloud tools against UK Cyber Essentials. Find gaps and auto-fail risks before you pay for the test.
 job: secure-code
 headline: UK Cyber Essentials checker
-subhead: A list of gaps between your setup and the UK Cyber Essentials standard,
-  plus what to fix before you apply. You find out about a failure before you pay
-  for the test.
+subhead: A list of gaps between your setup and the UK Cyber Essentials standard, plus what to fix before you apply. You find out about a failure before you pay for the test.
 explain: |
   A list of gaps between your setup and the UK Cyber Essentials standard, plus what to fix before you apply. You find out about a failure before you pay for the test.
 
@@ -18,6 +15,10 @@ when:
   - You are unsure which devices and cloud tools count in scope.
   - You want to prepare before the assessor sees your answers.
   - You are planning the extra technical test for Plus.
+not_for:
+  - "You need a formal certificate: book an IASME-licensed Certification Body, because this only helps you prepare."
+  - "You need legal advice on a contract or insurance cover: ask a qualified lawyer or an accredited assessor."
+  - "You need current prices or deadlines: check the NCSC or IASME sites, as the figures in this skill can go out of date."
 you_give:
   - Your device types and operating systems
   - Cloud services you use
@@ -29,7 +30,28 @@ you_get:
   - Scope notes for your setup
   - A fix list in priority order
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the instructions from this skill into the chat.
+  - List your devices and operating systems, your cloud services, how staff work remotely and your company size.
+  - Ask for the readiness gap table and the scope statement.
+  - Fix any auto-fail flags first, then work down the fix list.
+  - Check prices and deadlines on the NCSC or IASME sites before you decide, then book an IASME-licensed assessor.
+output_sample:
+  input:
+    - Your device types and operating systems
+    - The cloud services your team uses
+    - How staff work from home or on their own devices
+    - Your company size and when your assessment account was created (optional)
+  output:
+    - name: Version status
+      contains: Which question set applies to you, and whether the older one still counts for your account.
+    - name: Readiness gap table
+      contains: "For each of the five control themes: the requirement, your current state, the gap, the fix and an auto-fail flag."
+    - name: Auto-fail warnings
+      contains: Flags for missing multi-factor login on cloud services and for updates older than 14 days.
+    - name: Scope statement
+      contains: What is in scope, including cloud services, personal devices and home working, with any exclusions and reasons.
+    - name: Fix list
+      contains: The gaps in priority order, with the fix for each one.
+    - name: Plus preparation notes
+      contains: What the extra technical test checks and how to get ready for it (if you ask).

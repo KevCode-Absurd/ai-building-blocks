@@ -1,6 +1,6 @@
 new_slug: hire-mistake-checklist-builder
 name: "Hiring mistake checklist builder"
-summary: "Paste the role and your past hiring misses. Get a checklist of mistakes to rule out before you offer."
+summary: "Build a hiring mistake checklist before you make an offer. Paste the role and past hiring misses. You get the ways this hire fails and proof to rule each out."
 job: hire-people
 thinking: medium
 thinking_why: "It has to reason about failure modes, incentives and your own biases, not just list traits."
@@ -17,6 +17,10 @@ when:
   - "The last two hires for this role did not work out and you are about to make a third."
   - "You have a favourite candidate and want to check yourself before the offer."
   - "The seat has been empty for months and you can feel the hurry."
+not_for:
+  - "You are making your first hire for this role and have no past misses: the checklist still works from the role alone, but a structured interview scorecard from a trusted source may help more."
+  - "You are deciding whether to let someone go: talk to an employment lawyer or HR adviser, not this checklist."
+  - "You need to compare several candidates side by side: use a simple scoring table in a spreadsheet, then bring the winner here."
 
 you_give:
   - "The role and the problem it solves"
@@ -34,6 +38,25 @@ how_to_use:
   - "Describe past misses plainly. The patterns are the point."
   - "Add the pay plan and what you know about the candidate."
   - "Gather the evidence for each open or risk line before you make the offer."
+output_sample:
+  input:
+    - The role and the problem it must solve
+    - Past hires that went wrong and why (advised)
+    - What you know about the candidate (optional)
+    - How the hire is paid and measured (optional)
+  output:
+    - name: THIS HIRE FAILS IF
+      contains: Eight to twelve ways the hire fails in a year, grouped by person, fit and incentive, with past misses marked FROM HISTORY.
+    - name: INCENTIVE CHECK
+      contains: What the hire is paid for, set against the problem they must solve, and whether the two match.
+    - name: OUR BIASES
+      contains: The three biases most likely in this search, with one line on how each would show up.
+    - name: CHECKLIST
+      contains: One line per mistake, with the evidence that rules it out and who checks it.
+    - name: RUN
+      contains: Each line marked ruled out, open or risk, with the fact behind it. Only if you name a candidate.
+    - name: MISSING
+      contains: Facts you did not give, so nothing is made up.
 
 how_it_works:
   - title: "Inverts the question"

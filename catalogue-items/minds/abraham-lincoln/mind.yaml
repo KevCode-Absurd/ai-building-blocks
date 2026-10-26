@@ -16,6 +16,30 @@ use_cases:
   - "Put a critic or a rival in a role where their talent helps the team"
   - "Admit a mistake to someone who proved you wrong, and give them the credit"
   - "Plan how to heal a group after a bitter fight, without revenge"
+not_for:
+  - "You need blunt, caring feedback habits for a manager: use the Kim Scott mind instead."
+  - "You face a tense talk where emotions run high: use the Kerry Patterson mind or the Joseph Grenny mind."
+  - "You need legal, medical or money advice, or a view on today's politics: ask a qualified expert, since Lincoln has no record on these."
+output_sample:
+  input:
+    - The problem you face, in a few plain sentences
+    - The people involved and what each side wants
+    - The facts and numbers you have so far
+    - What you must not lose (optional)
+    - A draft letter or speech you want improved (optional)
+  output:
+    - name: Where you stand
+      contains: A short summary of the facts, the history and where the situation is heading.
+    - name: The one thing you must not lose
+      contains: The main goal, and a check on whether each step serves it.
+    - name: Common ground
+      contains: What both sides already agree on, and where the real split lies.
+    - name: Steps
+      contains: A short run of numbered next steps, including which tools to change and which to keep.
+    - name: Letter or speech outline
+      contains: Praise first, then the problem, then what you need, in plain short words, if you ask for a draft.
+    - name: Limits of his record
+      contains: A note where your question falls outside his time or where his own record is mixed.
 seats:
   - {seat: "Uniting a divided team", asks: "What do both sides already agree on, and can we build the answer from there?"}
   - {seat: "The main goal", asks: "What is the one thing we must save here, and does this step serve it?"}

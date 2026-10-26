@@ -1,35 +1,83 @@
 thinking: medium
-thinking_why: It weighs cash, stock and cost against benchmarks.
+thinking_why: It weighs cash, stock and cost against rough rules of thumb.
 new_slug: online-store-bottleneck-finder
 name: Online store bottleneck finder
-summary: Give it your cash, stock and shipping numbers. Get the bottleneck
-  holding your store back and fixes ranked by payoff.
+summary: Find what holds your Shopify store back. Give it your cash, stock, shipping and ad numbers and get the main bottleneck and fixes ranked by payoff.
 job: run-your-store
 headline: Online store bottleneck finder
-subhead: The one thing holding your store back, named, with fixes ranked by
-  payoff. You give it your numbers on cash, stock, shipping and customer cost,
-  and it shows where money is stuck or leaking.
+subhead: Give it your selling price, product cost, shipping, stock and ad numbers. It checks cash flow, stock, shipping cost and cost per customer. You get the main bottleneck named, with fixes ranked by payoff.
 explain: |
-  The one thing holding your store back, named, with fixes ranked by payoff. You give it your numbers on cash, stock, shipping and customer cost, and it shows where money is stuck or leaking.
+  A store can sell well and still feel broke. The cause is usually one area: cash tied up in stock, shipping that costs too much, or ads that cost more than a customer is worth. This online store bottleneck finder finds which one, so you fix it first.
 
-  The skill is built for Shopify and direct-to-consumer shops. It sets out your cost structure, such as payment fees, advertising share, warehouse fees and returns. It then checks four areas: cash flow, inventory, shipping costs and what it costs to win a customer compared with what a customer is worth. It compares the results with healthy ranges for stores like yours, picks the biggest bottleneck, and lists fixes in order of impact, starting with the easiest.
+  Your AI works out your cost per order. It then checks four areas: cash flow, stock, shipping and logistics, and what it costs to win a customer against what that customer is worth. Each area is rated against rough rules of thumb, which you can change.
+
+  Those rules of thumb come from the original skill and are not facts for every store. Anything you do not give is marked NOT CHECKED. Nothing is guessed.
 when:
   - Sales are fine but you never seem to have cash.
   - Too much money sits in stock that moves slowly.
-  - Shipping costs are higher than you expected.
-  - Ads cost more per customer than customers are worth.
+  - Shipping and warehouse fees are higher than you expected.
+  - Ads cost more per customer than the customer is worth.
+not_for:
+  - Your store has no sales yet. There are no numbers to check.
+  - You sell only on Amazon or Walmart. The fees and checks here are built for Shopify and direct-to-consumer stores.
+  - Your problem is inside one warehouse, such as slow picking. Use the Pick, pack and ship improver.
+  - You want profit for each product. Use the Store profit margin calculator.
 you_give:
-  - Monthly revenue and cash position
-  - Inventory levels and turnover
-  - Shipping and fulfillment costs
-  - Ad spend and customers won
+  - Average selling price and average order value
+  - Product cost per unit
+  - Shipping and fulfillment cost per order, and any 3PL fees
+  - Ad spend, and what it costs you to win a customer (if you know it)
+  - Days of stock on hand and days to get paid (optional)
 you_get:
-  - The main bottleneck
-  - A cash, stock, shipping and acquisition check
-  - Fixes ranked by payoff
-  - Healthy ranges to compare against
+  - The one bottleneck named, with the numbers behind it
+  - Your cost per order, line by line
+  - A rating for cash, stock, shipping and customer cost
+  - Fixes ranked by payoff, with the number to watch for each
+  - A list of what could not be checked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Pull your numbers together. Your Shopify reports, ad accounts and shipping invoices have most of them. A rough figure is fine if you say it is rough.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Paste your numbers. You do not need an API key or any code.
+  - Answer the one round of questions it asks. Say "unknown" for anything you cannot find. It will not guess.
+  - Check that the numbers in the report match yours. Then read the rules of thumb, and tell your AI to change any that do not fit your category.
+  - Do the first fix on the list, and write down the number to watch for it. Run the skill again next month with fresh figures.
+output_sample:
+  input:
+    - Your average selling price and product cost
+    - Shipping, 3PL and payment fees per order
+    - Ad spend and customer acquisition cost
+    - Days of stock and days to get paid (optional)
+  prerequisites:
+    - Your own figures. Anything you leave out is marked NOT CHECKED
+    - An API key only if you want your AI to read Shopify or a 3PL directly
+  output:
+    - name: The bottleneck
+      contains: The one area hurting you most, with the numbers that show it.
+    - name: Numbers behind it
+      contains: Each measure against its rule of thumb, rated healthy, warning, danger or not checked.
+    - name: Cost per order
+      contains: Product, shipping, fees, ads and net profit, each in money and as a share of price.
+    - name: Fixes, ranked by payoff
+      contains: Each fix with what it should change, the number to watch and an estimate.
+    - name: What I could not check
+      contains: The missing figures and what to bring next time.
+    - name: Next step
+      contains: One action for this week.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This skill works from numbers you paste, so no special tool is needed.
+    - name: A spreadsheet
+      why: Lets you check cost per order and try what-if changes.
+  inputs:
+    - A Shopify sales export for the last 90 days
+    - Your 3PL invoice or fee sheet
+    - Your ad platform's cost per purchase
+terms:
+  - term: 3PL
+    meaning: A third-party logistics company that stores, packs and ships orders for you.
+  - term: CAC
+    meaning: Customer acquisition cost. What you spend to win one new customer.
+  - term: LTV
+    meaning: Customer lifetime value. What a customer spends with you over time.
+  - term: DTC
+    meaning: Direct-to-consumer. You sell straight to buyers, not through shops or marketplaces.

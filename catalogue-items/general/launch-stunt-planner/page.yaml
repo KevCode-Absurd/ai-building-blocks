@@ -1,6 +1,6 @@
 new_slug: launch-stunt-planner
 name: Launch stunt planner
-summary: Paste your launch and the big rival. Get three stunt ideas the press may cover, each with a worst-case limit.
+summary: Plan a launch stunt against a big rival. Get three ideas with one-line headlines, a worst case and a money cap for each.
 job: grow-social
 thinking: medium
 thinking_why: It judges what a reporter would cover and sets safe limits.
@@ -14,6 +14,10 @@ when:
   - You are launching against a big, comfortable rival.
   - You have a small budget and need attention.
   - You want a bold idea but fear it could go wrong.
+not_for:
+  - Your launch has no real contrast to the rival. Fix the offer first, or talk to a few customers about why they would pick you.
+  - Nobody is willing to be in the picture. Use a plain press note, written by you or a freelance writer.
+  - You need ad copy, not a public stunt. Use the Story image ad writer.
 you_give:
   - "Your launch: what, when and where"
   - The big rival and what it does badly
@@ -30,6 +34,27 @@ how_to_use:
   - Pick the stunt whose worst case you can accept.
   - Check permits and safety sign-offs before you say yes.
   - Review the stunt the same week and write down what you would change.
+output_sample:
+  input:
+    - "Your launch: what, when and where"
+    - The big rival and what it does badly
+    - Your budget and limits (optional)
+    - A buyer brief (optional)
+  output:
+    - name: The rival
+      contains: Who the big rival is, what it does badly, and why the contrast helps you.
+    - name: Your contrast
+      contains: What you do that is more fun, more human or better value.
+    - name: Stunts 1 to 3
+      contains: Each has a one-line headline, what happens, who is in the picture, a worst case, a money cap and any sign-off.
+    - name: Pick
+      contains: The stunt to run and why.
+    - name: Same-week review
+      contains: Questions to answer after the stunt and a line on what to change.
+    - name: MISSING
+      contains: Any fact you did not give, marked so nothing is made up.
+    - name: Checks missed
+      contains: One line for each of its own checks that failed, or none.
 how_it_works:
   - title: Names the rival
     text: Says who the big rival is and what it does badly.

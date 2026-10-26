@@ -1,6 +1,6 @@
 new_slug: launch-a-feature-through-a-beta-and-read-the-numbers
 name: Launch a feature through a beta and read the numbers
-summary: Give it the feature. Get a launch plan, a beta, pre-set metrics, release notes and a results read.
+summary: Plan a feature launch and beta, set success metrics before release, write release notes, then read the results honestly. Give it your feature.
 job: build-product
 thinking: high
 thinking_why: It decides what to measure before launch and then judges the result without flattering it. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A feature is two weeks from done and nobody has planned the launch.
   - Your last launch went to everyone and broke something.
   - Your team argues after launch about whether it worked.
+not_for:
+  - "You are fixing a bug or making a tiny change you cannot roll out to a subset: write a standard changelog line instead."
+  - "Your feature targets onboarding drop-off: pair it with the Find where new users leave and prove the fix works workflow."
+  - "You want to judge whether to build a feature at all: use the Feature request screener first."
 you_give:
   - "The feature: what it does and who it is for"
   - How you can reach users and roll out to a subset
@@ -30,6 +34,29 @@ how_to_use:
   - Paste the feature and who it is for. It plans the launch, the beta and the metrics.
   - Run the beta. Collect the feedback it asks for.
   - Approve and publish the release notes. After two to four weeks, paste the numbers for the results read.
+output_sample:
+  input:
+    - "The feature: what it does and who it is for"
+    - How you can reach users and roll out to a subset
+    - What the business needs from this feature
+    - After launch, your numbers and beta feedback
+  prerequisites:
+    - An AI that can save each step as a file, such as Claude Code or a Claude Project
+    - A buyer brief from the Buyer brief writer (recommended)
+    - Your analytics numbers, ready two to four weeks after launch
+  output:
+    - name: Launch plan
+      contains: Who gets the feature first, what could go wrong, the rollback and the dates.
+    - name: Beta plan
+      contains: Who joins the beta, how many, how to invite them, weekly questions and when to close it.
+    - name: Metrics plan
+      contains: Success targets, guardrail metrics that must not fall, and the number that would make you pull the feature.
+    - name: Release notes
+      contains: Plain words on what changed for the user, why, and what to do if something looks different.
+    - name: Results read
+      contains: Each metric against its target, what it means, what it cannot yet say, and keep, change or pull.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Plan the launch
     text: Plans who gets the feature first, what could go wrong, the rollback and the dates.

@@ -1,40 +1,51 @@
 new_slug: smallest-audience-picker
 name: "Smallest audience picker"
-summary: "Paste who you serve now and who you could serve. Get the smallest group worth serving and what would delight them."
+summary: "Pick the smallest group that can keep your work going, say who you are not for, and get what would delight them and your first ten people."
 job: understand-customers
 thinking: medium
 thinking_why: "It weighs groups against the money needed and chooses one, within fixed steps."
 
 headline: "Smallest audience picker"
-subhead: "Give it who you serve now, who you could serve and the income the work needs. It lists the groups, picks the smallest that could keep you going, and says who you are not for. You get a one-line group, what would delight them and the first ten people."
+subhead: "Give it what you make, who you serve now, who you could serve and the income the work needs. It lists the groups, picks the smallest one that could keep you going, and says who you are not for. You get a one-line group, what would delight them and your first ten people."
 
 explain: |
-  A message made for everyone fits no one. When you water it down to suit the average buyer, no one feels it was made for them, so no one repeats it to a friend. Many small businesses stay stuck because they are afraid to say who they are not for.
+  A message made for everyone fits no one. When you water it down for the average buyer, nobody feels it was made for them, so nobody tells a friend. Many small businesses stay stuck because they are afraid to say who they are not for.
 
-  This skill lists the groups you could serve, and what people like them do and believe. It works out how many customers you need, and picks the smallest group that could supply them. It writes who you are not for, what would delight the group in specific terms, and the standard you will hold. It then names the first ten people and plans how word of mouth would carry the work to people like them.
+  This smallest audience picker lists the groups you could serve and what people like them do and believe. It works out how many customers you need from your income and your price, then picks the smallest group that could supply them. It will not pick the biggest group because it looks safe.
+
+  A persona exercise describes an ideal customer. This one does the sums, writes who you are not for, and sets a standard you can keep. It then names your first ten people and how word of mouth would carry the work to people like them.
 
 when:
   - "Your offer, website or ads speak to everyone and get little response."
   - "You are about to launch and cannot say who it is for in one sentence."
-  - "You are choosing between two audiences."
+  - "You are choosing between two audiences, such as local shops and online brands."
+  - "Sales are slow and you are tempted to widen your message."
+
+not_for:
+  - "You want to know which groups are hungriest to buy: use the Hungry audience ranker."
+  - "You do not yet know what buyers say or want: plan talks first with the Customer discovery interview planner."
+  - "You already picked your group and want to know where they spend time online: use the Audience hangout finder."
+  - "You want a copy brief for one ad, not a choice for the whole business: use the Buyer brief writer."
 
 you_give:
   - "What you make, who you serve now and who you could serve"
-  - "The income the work needs and the yearly price per customer (optional)"
-  - "Reviews, emails or call notes (optional)"
-  - "A buyer persona (optional)"
+  - "The yearly income the work needs and the yearly price per customer (optional, but the pick rests on these)"
+  - "Reviews, emails or call notes from customers (optional)"
+  - "A buyer description, if you have one (optional)"
 you_get:
-  - "The groups and what people like them do and believe"
-  - "The smallest group worth serving, in one line, with the numbers"
-  - "Who you are not for"
-  - "What would delight them, the standard you will hold and the first ten people"
+  - "Four to eight groups, each with what marks them and what people like them do and believe"
+  - "The smallest group worth serving, in one line, with the numbers behind it"
+  - "A line on who you are not for, with three reasons"
+  - "Three specific things that would delight them, one thing to stop doing and a standard you will hold"
+  - "Your first ten people, where to find them, and a word of mouth plan with the next group"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Describe what you make and the groups you serve or could serve."
-  - "Add the income you need and the price per customer."
-  - "Read the chosen group and the not-for line out loud. Check they feel true."
-  - "Start with the first ten and tell them what you are for."
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat."
+  - "Describe what you make and the groups you serve or could serve. If you have no groups yet, say so."
+  - "Add the yearly income you need and the price per customer. Without them it picks on fit alone and says so."
+  - "Read the chosen group and the not-for line out loud. If they do not feel true, say why and run it again."
+  - "Check the sums in a spreadsheet if you like. Then contact the first ten people and tell them who you are for."
+  - "It needs no code, files or paid tools."
 
 how_it_works:
   - title: "Lists the groups"
@@ -115,6 +126,36 @@ improve:
   - "Save the chosen group and the standard to your brand file."
   - "Pair it with Hungry audience ranker to rank where to reach them."
 
+output_sample:
+  input:
+    - "What you make, and who you serve now and could serve"
+    - "The yearly income the work needs (optional)"
+    - "The yearly price per customer (optional)"
+    - "Customer reviews, emails or call notes (optional)"
+  prerequisites:
+    - "A chat AI such as Claude, ChatGPT or Gemini"
+    - "A spreadsheet to check the sums (optional)"
+  output:
+    - name: "Groups"
+      contains: "Four to eight groups you could serve, with what marks them, a rough size and what people like them do and believe."
+    - name: "The one to serve"
+      contains: "The smallest group that could keep you going, in one line, with income, price, customers needed and group size."
+    - name: "Not for"
+      contains: "One line on who you are not for, with three short reasons a stranger could repeat."
+    - name: "What would delight them"
+      contains: "Three specific, checkable things that would make this group tell others, and one thing to stop doing."
+    - name: "Standard"
+      contains: "One promise you can keep every time."
+    - name: "First ten"
+      contains: "Ten people, or types of people, to reach this month, and where to find them."
+    - name: "Word of mouth"
+      contains: "What the group would say, where they gather, what you will not change, and the next group to serve."
+    - name: "Persona update"
+      contains: "The chosen group written up, ready to save to your brand file."
+    - name: "Missing"
+      contains: "Any size, price or income figure you did not give."
+    - name: "Checks missed"
+      contains: "Any of its own checks that failed, or none."
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Weighing groups and writing a clear one-line choice is text work any strong chat AI does well with this skill."}

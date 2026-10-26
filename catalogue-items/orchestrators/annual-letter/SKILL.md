@@ -42,8 +42,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Write the long-term principles.** Use the skill `long-term-principles-writer`. A short list of promises that explain how you will choose.
 2. **Pick the input metrics that matter.** Use the skill `input-metric-picker`. Give it the copy draft from the steps before. Controllable inputs, one check output and a proxy test for each.
-3. **Check the cash behind the earnings.** Use the skill `cash-versus-earnings-checker`. Give it the plan from the steps before. Free cash flow next to earnings, with what growth costs.
-4. **Tally the value you create.** Use the skill `value-created-tally-builder`. Give it the plan from the steps before. A value figure for each group, with assumptions and the weakest link.
+3. **Check the cash behind the earnings.** Use the skill `cash-versus-earnings-checker`. Give it the plan from the steps before. Free cash flow next to earnings, with what growth costs. Hands step 5 the cash view.
+4. **Tally the value you create.** Use the skill `value-created-tally-builder`. Give it the plan from the steps before. A value figure for each group, with assumptions and the weakest link. Uses your figures and step 2's input metrics, not step 3's cash view. Hands step 5 the tally.
 5. **Write the letter.** Use the skill `annual-letter-writer`. Give it the copy draft and the plan and the audit report from the steps before. A letter that carries the principles, metrics, cash view and tally.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

@@ -1,15 +1,13 @@
 slug: check-a-convertible-note-conversion
 name: Check a convertible note conversion
-summary: Carry the approved interest balance into the actual lower-of conversion election.
+summary: "Check how many shares a convertible note turns into: accrued interest first, then the cap or discount price, whichever is lower."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - convertible-note-interest-checker
   - cap-and-discount-conversion-checker
@@ -36,6 +35,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - "This checks arithmetic against the terms you give it. It does not read the note or give legal advice. The issuer's counsel must confirm the agreement before anyone relies on the share count."
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

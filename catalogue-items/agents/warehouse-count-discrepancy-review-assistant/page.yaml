@@ -1,56 +1,115 @@
 new_slug: warehouse-count-discrepancy-review-assistant
 name: Warehouse count discrepancy review assistant
 headline: Warehouse count discrepancy review assistant
-summary: A reconciled stock variance table, evidence gaps and review brief.
+summary: Reconcile a warehouse stock count against its snapshot and movements. Get a variance table that splits timing, unit and count errors.
 job: plan-supply-chain
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A reconciled stock variance table, evidence gaps and review brief. Share actual count sheets, inventory snapshot time, recorded movements, item units, count scope and existing discrepancy explanations. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your count sheets, the inventory snapshot time, the stock movements recorded since, and the unit for each item. It builds a warehouse stock count variance table that separates timing gaps, unit mix-ups and count errors, and lists what is still unexplained. It posts nothing and never assumes loss or fraud.
 explain: |-
-  A reconciled stock variance table, evidence gaps and review brief.
+  A count says 118 and the system says 120. The gap may be a delivery that arrived after the snapshot, a count in cases against a system in single units, or a location counted twice. Each has a different fix. Mixed together, they all look like missing stock.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Timing movements, unit differences and count errors stay separate; no loss, fraud or write off is inferred. Missing tools or evidence stay visible in the final summary.
+  This agent works out the expected quantity for each item and location: the system quantity at the snapshot time, plus or minus the movements recorded between the snapshot and the count. It compares that with the counted quantity, then labels each difference as timing, unit, count error or unexplained. A recount that differs from the first count is shown beside it. Your original counts are never changed.
+
+  What is left goes to the warehouse owner as a review brief, with the evidence still missing and other ways to explain each item. The agent never posts a stock adjustment, writes anything off or says anyone took stock. Tolerances come from your own count rules, not from the agent.
 when:
-  - You need a reconciled stock variance table, evidence gaps and review brief.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A cycle count or full count shows differences and nobody knows which are real.
+  - A recount was done and you need to compare it with the first count.
+  - Goods moved in or out between the system snapshot and the count.
+  - The owner wants a review brief before anything is adjusted.
+not_for:
+  - You want to adjust stock in your system. This agent reads and explains. You make the adjustment.
+  - You suspect theft or fraud. Take it to the person who handles loss investigations. This agent does not infer it.
+  - Your count sheet is messy and has no snapshot time. Clean it first with the Spreadsheet checker.
+  - You only want a status note for the owner. Use the Stakeholder update writer.
 you_give:
-  - Actual count sheets, inventory snapshot time, recorded movements, item units, count scope and existing discrepancy explanations. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
-  - "Available tools for the finished output: A compatible spreadsheet engine."
+  - Count sheets with item ID, location, unit and counted quantity (from your count app or paper sheets)
+  - "The inventory snapshot: system quantity for each item, and the exact time it was taken (from your warehouse or stock system)"
+  - Movements recorded between the snapshot and the count, such as receipts, picks and transfers, with document IDs (from a system export)
+  - "The count scope: which locations and items were counted"
+  - Your tolerance for a difference, meaning the size that counts as a variance (optional)
+  - Earlier explanations for known differences, a recount sheet and last review's record (optional)
 you_get:
-  - A reconciled stock variance table, evidence gaps and review brief.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - "A variance table (variance-table.csv): one row per item and location with expected, counted, difference and a label"
+  - "A review brief for the warehouse owner: verified differences, other ways to explain each and the evidence still missing"
+  - A short list of investigation actions, built only from commitments the owner made
+  - A comparison of the first count and the recount, when both exist
+  - MISSING lines for gaps, and a record to start the next review from
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Add the agent to Claude, ChatGPT or Gemini with its helpers, the Explain a warehouse stock count variance workflow and the Executive action register keeper. Or download the pack and attach it.
+  - Paste your count sheets, the snapshot with its time, and the movements since. Paste them as CSV or a table. Say the count scope. From the second review, paste last review's record.
+  - Read the variance table. Check that each timing label shows the movement record behind it.
+  - Fill in each MISSING line. A missing snapshot time or unit cannot be guessed.
+  - Make any stock adjustment in your own system. The agent never does.
+  - In a chat-only tool, copy the record it gives you and paste it in next time. Installing sets up no schedule, so you start each run.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep snapshot cutoff, count version, item-unit variance, movement sources and unresolved commitments. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A revised count or intervening movement record is supplied for the same snapshot.
-  - title: Choose the next step
-    text: Run explain-a-warehouse-stock-count-variance for changed evidence or a due review. If a variance persists after reconciliation, prepare investigation actions from explicit owner commitments; never post a stock adjustment or infer fraud.
-  - title: Check and save evidence
-    text: Timing movements, unit differences and count errors stay separate; no loss, fraud or write off is inferred. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read the last review
+    text: Loads the snapshot cutoff, count version, difference by item and unit, movement sources and open commitments. A first run builds a baseline with you.
+  - title: Check the sheets
+    text: The Spreadsheet checker looks for duplicate locations, repeated item IDs and unit mismatches. It keeps your original counts.
+  - title: Work out what to expect
+    text: For each item and location, takes the snapshot quantity and adds or subtracts the movements recorded since, in the same unit.
+  - title: Label each difference
+    text: Marks it timing, unit, count error or unexplained. A recount that differs from the first count is shown beside it, as evidence and not as proof.
+  - title: Write the owner brief
+    text: The Stakeholder update writer drafts a brief of verified differences, other explanations and missing evidence. No stock adjustment is made.
+  - title: Plan the follow-up
+    text: The Executive action register keeper lists investigation actions from commitments the owner has made. Then it checks and saves the files and the new record.
 output_shape: |-
-  Scope and source coverage
-  A reconciled stock variance table, evidence gaps and review brief.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  COUNT REVIEW <date>, scope <locations and items>
+  SNAPSHOT <time> | COUNT <version, time> | <first review, or compared with <last review date>>
+
+  VARIANCE TABLE
+  <item ID> | <location> | <unit> | snapshot <qty> | movements <+/- qty, document IDs> | expected <qty> | counted <qty> | difference | label <timing | unit | count error | unexplained>
+
+  RECOUNT COMPARISON
+  <item ID> | <location> | first count <qty> | recount <qty> | matches expected <yes | no>
+
+  OWNER BRIEF
+  <verified differences> | <other ways to explain each> | <evidence still missing>
+
+  INVESTIGATION ACTIONS (from owner commitments only)
+  <ID> | <item or location> | owner <name or MISSING> | due <date or MISSING>
+
+  MISSING  <each gap>
+  CHECKS MISSED  <one line each, or none>
+  RECORD FOR NEXT REVIEW  <snapshot cutoff | count version | difference by item and unit | movement sources | open commitments>
+output_sample:
+  input:
+    - Count sheets, with item ID, location, unit and counted quantity
+    - The inventory snapshot and the exact time it was taken
+    - Movements recorded between the snapshot and the count
+    - The count scope
+    - Your tolerance for a difference (optional)
+    - A recount sheet, earlier explanations and last review's record (optional)
+  prerequisites:
+    - An AI that can read pasted tables or files, such as Claude, ChatGPT or Gemini
+    - The helper skills added, or the pack attached
+    - A snapshot with a time. Without it the agent can list differences but not explain them.
+  output:
+    - name: variance-table.csv
+      contains: "One row per item and location: snapshot, movements, expected, counted, difference and a label of timing, unit, count error or unexplained."
+    - name: Recount comparison
+      contains: The first count and the recount side by side, and whether each matches the expected quantity.
+    - name: Owner review brief
+      contains: Verified differences, other ways to explain each, and the evidence still missing. No loss or fraud is stated.
+    - name: Investigation actions
+      contains: Follow-up actions built only from commitments the owner made, with owners and due dates, or MISSING.
+    - name: Sheet check notes
+      contains: Duplicate locations, repeated item IDs and unit mismatches found in the count sheets.
+    - name: MISSING lines and CHECKS MISSED
+      contains: Every unit, time or movement the sources did not give, and every check that could not run.
+    - name: Record for the next review
+      contains: Snapshot cutoff, count version, difference by item and unit, movement sources and open commitments.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Timing movements, unit differences and count errors stay separate; no loss, fraud or write off is inferred.
+  - what: Snapshot time
+    how: Give the exact time the system quantity was taken. Every timing label depends on it.
+  - what: Units
+    how: State the unit for each item, such as cases or single units, and the pack size where it differs.
+  - what: Tolerance
+    how: Tell the agent the size of difference that counts as a variance. It will not pick one for you.
+  - what: Count scope
+    how: Name the locations and items counted, so uncounted stock is not read as missing.
 judge:
   - Timing movements, unit differences and count errors stay separate; no loss, fraud or write off is inferred.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -63,16 +122,26 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep one record per warehouse, with item IDs and location codes that never change.
+  - Write down your units and pack sizes once, and paste them in every run.
+  - Save your count rules, including your tolerance, so every review uses the same one.
+  - Record checks that need a person, such as a physical recount of a location, and finish them before you rely on the table.
 works_best_with:
   tools:
-    - name: A compatible spreadsheet engine
-      why: Formula recalculation and workbook inspection need an actual compatible engine; static table checks can use supported scripts.
+    - name: A capable chat AI with file support
+      why: Reads count files and keeps the record between reviews. In a plain chat tool, paste tables as CSV.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - A stock system export with the snapshot time in it.
+    - Receipts, picks and transfer documents for the period.
+    - Your count procedure and tolerance rules.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Variance
+    meaning: The difference between the counted quantity and the expected quantity.
+  - term: Snapshot
+    meaning: The system's stock quantities at one exact time.
+  - term: Timing difference
+    meaning: A gap caused by stock that moved after the snapshot but before the count.
+  - term: Count error
+    meaning: A gap caused by the count itself, such as a location counted twice.
+  - term: Unit mismatch
+    meaning: A gap caused by counting in one unit while the system uses another.

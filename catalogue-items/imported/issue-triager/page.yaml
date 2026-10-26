@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It moves each issue through set steps.
 new_slug: issue-triager
 name: Issue triager
-summary: Point it at open issues and outside pull requests. Get each one sorted,
-  checked and written up as a clear brief.
+summary: Sort your open issues and outside pull requests. Each gets a category, a state and a clear brief, so your issue triage backlog is ready to act on.
 job: build-software
 headline: Issue triager
-subhead: A backlog where every open issue and outside pull request has a clear
-  status and a brief someone can act on. Point it at your tracker.
+subhead: A backlog where every open issue and outside pull request has a clear status and a brief someone can act on. Point it at your tracker.
 explain: |
   A backlog where every open issue and outside pull request has a clear status and a brief someone can act on. Point it at your tracker. It gives each item one category, bug or enhancement, and one state: needs triage, needs info, ready for an agent, ready for a human, or will not fix.
 
@@ -17,6 +15,10 @@ when:
   - Outside contributors sent pull requests and you need to sort them.
   - You want to hand clear tasks to a coding agent.
   - You keep rejecting the same kinds of requests and want a record of why.
+not_for:
+  - You have no issue tracker. Review your backlog by hand in a spreadsheet or a plain list instead.
+  - You want to write code or fix a bug now. Ask your coding AI directly, or hand it a brief this page already made.
+  - You only need one quick label change on a single issue. Change the label yourself in your tracker.
 you_give:
   - Access to your issue tracker
   - Your label names for each role
@@ -28,8 +30,31 @@ you_get:
   - Agent-ready task briefs
   - An out-of-scope record for rejected ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach your issue tracker.
+  - Open your AI in a tool that can reach your issue tracker. Paste in this skill.
+  - Tell it your label names for each role, such as bug, enhancement and needs-info. Add your out-of-scope notes if you have them.
+  - "Ask what needs attention, or name one issue or pull request, like \"Let's look at #42\"."
+  - Read its suggested category and state. Say yes, or tell it to change them.
+  - Check the result. Fix any brief or comment before it posts. Every comment starts with a note that AI wrote it.
+  - If labels clash on an item, it asks you first. Answer before it goes on.
+output_sample:
+  input:
+    - Access to your issue tracker
+    - Your label names for each role
+    - Your out-of-scope notes (optional)
+    - The issue or pull request number, or a request like "show me what needs attention"
+  prerequisites:
+    - An AI that can read your issue tracker and your code
+    - Permission to post comments and change labels in your tracker
+  output:
+    - name: Needs-attention list
+      contains: Unlabeled, needs-triage and needs-info items with new replies, oldest first, each tagged as issue or pull request.
+    - name: Recommendation
+      contains: A suggested category and state with reasons, plus a short note on whether the code already does it.
+    - name: Verification report
+      contains: Whether the bug was reproduced or the pull request does what it claims, or whether details are missing.
+    - name: Triage Notes comment
+      contains: What is settled so far and the specific questions the reporter still needs to answer.
+    - name: Agent brief comment
+      contains: A lasting description of what to do and what done looks like, posted on issues ready for an agent.
+    - name: Out-of-scope record
+      contains: A note on why a rejected feature request will not be built, linked from the closing comment.

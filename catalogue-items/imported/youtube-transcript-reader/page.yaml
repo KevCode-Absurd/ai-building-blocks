@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It fetches public data and lists it.
 new_slug: youtube-transcript-reader
 name: YouTube transcript and channel reader
-summary: Give it a video or channel. Get transcripts, video lists and new
-  uploads. Collects data from websites.
+summary: Get a YouTube transcript, a channel's latest uploads or a topic search as text you can quote. Works as a YouTube transcript reader with your own key.
 job: grow-social
 headline: YouTube transcript and channel reader
-subhead: Give it a YouTube video or a channel and get transcripts, video lists
-  and a check for new uploads, all as text you can read, search and quote.
+subhead: Give it a YouTube video or a channel and get transcripts, video lists and a check for new uploads, all as text you can read, search and quote.
 explain: |
   Give it a YouTube video or a channel and get transcripts, video lists and a check for new uploads, all as text you can read, search and quote.
 
@@ -17,6 +15,10 @@ when:
   - You track a creator and want to know if they posted something new.
   - You want to find videos on a topic and read them quickly.
   - You want to search one channel's library for a phrase.
+not_for:
+  - "You want to download the video or audio file: use yt-dlp, a free tool you install on your computer."
+  - "You want likes, comments or other engagement numbers: use YouTube's own analytics or the official YouTube API."
+  - "The video is private or age-restricted, or has no captions: ask the owner for the script, or write notes by hand."
 you_give:
   - A video link, a topic, or a channel @handle
   - Your TranscriptAPI key
@@ -27,8 +29,30 @@ you_get:
   - The latest uploads with views and dates
   - Search hits inside a channel
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your TranscriptAPI key.
+  - Get a free key at transcriptapi.com. No card is needed. Save it as TRANSCRIPT_API_KEY.
+  - Open an AI that can run code, such as Claude with code tools. Paste in this skill.
+  - "Say what you have: a video link, a topic, a playlist or a channel @handle. Say what you want from it."
+  - To watch a channel, ask for the latest uploads first. This is free. Fetch transcripts only for new videos.
+  - Check the result. If a video has no captions, you get a not-found message and no credit is used.
+  - Ask before fetching a whole channel. Each transcript costs one credit.
+output_sample:
+  input:
+    - A video link, a topic, a playlist link or a channel @handle
+    - Your TranscriptAPI key (a free starter key is available)
+    - What you want from the text, such as a summary or quotes (optional)
+  prerequisites:
+    - An AI that can run code and make web requests
+    - A TranscriptAPI key saved as TRANSCRIPT_API_KEY
+  output:
+    - name: Transcript
+      contains: The spoken words of one video as text, with timestamps and video details such as title and channel.
+    - name: Search results
+      contains: A list of YouTube videos that match your topic, ready to pick from before you fetch transcripts.
+    - name: Latest uploads
+      contains: A channel's 15 newest videos with view counts and publish times. This check is free.
+    - name: Channel video list
+      contains: Videos from a channel, one page at a time, with a token to get the next page.
+    - name: In-channel search hits
+      contains: Videos from one channel that match a phrase you give.
+    - name: Playlist videos
+      contains: Every video in a playlist, so you can fetch transcripts for the ones you want.

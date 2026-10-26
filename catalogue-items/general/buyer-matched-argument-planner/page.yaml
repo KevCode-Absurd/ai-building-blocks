@@ -1,6 +1,6 @@
 new_slug: buyer-matched-argument-planner
 name: "Buyer-matched argument planner"
-summary: "List your selling points and the buyer types you meet. Get which argument leads for each and what to ask first."
+summary: "Plan which selling argument leads for each buyer type, with a first question to ask. Give it your product facts and get a buyer-matched pitch plan."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It matches arguments to buyer types, which needs judgement, but the structure is fixed."
@@ -17,6 +17,10 @@ when:
   - "You give the same pitch to every buyer."
   - "You meet very different buyers, such as owners, users and finance."
   - "You are about to start calling and want a first question per buyer type."
+not_for:
+  - "You only need one first line to say out loud: use the Ten-second opener writer."
+  - "You know one buyer very well already: a short chat with them or your own notes will do."
+  - "You have no product facts yet: write down what it does, costs and proves first, then come back."
 
 you_give:
   - "Your product or service facts"
@@ -34,6 +38,28 @@ how_to_use:
   - "Describe two to four buyer types, even loosely."
   - "Look up one real buyer using the research list before your next call."
   - "Tell the skill which argument worked and ask it to re-rank."
+output_sample:
+  input:
+    - Your product or service facts
+    - The buyer types you meet (optional)
+    - Where you can look up a buyer before a call (optional)
+  output:
+    - name: Arguments
+      contains: Every true selling argument in one line, with the proof for each or a mark that it is unproven.
+    - name: Buyer types
+      contains: Three to five types, with what each pays for, worries about and who else has a say.
+    - name: Research before a call
+      contains: What to look up for each type, and where to record it.
+    - name: Honest reason you came
+      contains: One or two plain sentences on why you are there.
+    - name: Lead argument by buyer type
+      contains: A lead and a backup for each type, the reason, a first question and what to listen for.
+    - name: Stop rule
+      contains: How to tell a buyer is losing interest and how to end the talk well.
+    - name: Unproven arguments
+      contains: Arguments you cannot back yet and the proof each one needs.
+    - name: Missing and checks missed
+      contains: Gaps in what you gave, and any checks the skill could not pass.
 
 how_it_works:
   - title: "Lists every argument"

@@ -1,6 +1,6 @@
 new_slug: find-what-is-slow-fix-it-and-show-the-numbers
 name: Find what is slow, fix it and show the numbers
-summary: Give it what feels slow. Get the cause ranked by cost, a fix, and before and after timings.
+summary: Find what makes your code slow, fix the biggest cause and get before and after timings in a pull request. Works for pages, jobs and queries.
 job: test-and-fix-code
 thinking: medium
 thinking_why: Ranking from timings and fixing one bottleneck is bounded work. A mid-tier model is enough.
@@ -14,6 +14,10 @@ when:
   - A page, report, job or query feels slow and the team is guessing why.
   - A speed fix was tried and nobody can say if it worked.
   - You need numbers to show a reviewer or a client.
+not_for:
+  - "The slowness is a one-off cost, such as a first load: run a profiler on a single run instead."
+  - "You need a general code review, not a speed fix: ask a developer on your team to review the code."
+  - "You have no access to the code: send your timings and notes to the developer who owns it."
 you_give:
   - What is slow, when it happens and about how long it takes
   - Access to your project code
@@ -30,6 +34,24 @@ how_to_use:
   - Describe what is slow and how long it takes. Add any logs you have.
   - Run the timings the first step plans. Tell it the numbers for the top stage.
   - Check the before and after figures in the pull request on a run of your own.
+output_sample:
+  input:
+    - What is slow, when it happens and about how long it takes
+    - Your project code, in a folder your AI can open
+    - Logs, timings or a slow-query list (optional)
+    - Your target speed (optional)
+  prerequisites:
+    - An AI that can open your project folder and run code, such as Claude Code
+    - A way to run the timings the first step plans, on your own machine or server
+  output:
+    - name: Slow parts ranking
+      contains: The slow moment in one line, a timing plan, stages ranked by cost and ideas the numbers rule out.
+    - name: Fix and measure
+      contains: The before number, the cause found, the code change and the after number.
+    - name: Pull request
+      contains: A short summary of the change, the timings before and after, and how risky it is to merge.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Rank the slow parts by cost
     text: Writes the slow moment in one line, plans real timings, looks at the worst runs and ranks the fixes by the time they save.

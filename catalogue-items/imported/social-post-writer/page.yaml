@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It writes short posts to a set format.
 new_slug: social-post-writer
 name: Social post writer
-summary: Give a topic. Get clear posts for Instagram, LinkedIn and more that
-  also help search.
+summary: Write a social media post for Instagram, LinkedIn or Facebook from a topic and keyword. You get a hook, value, call to action and hashtags.
 job: get-found-in-search
 headline: Social post writer
-subhead: A clear social post that reads well and also helps people find you in
-  search. You give a topic, a main keyword, your audience and the platform, and
-  get a post sized for that site.
+subhead: A clear social post that reads well and also helps people find you in search. You give a topic, a main keyword, your audience and the platform, and get a post sized for that site.
 explain: |
   A clear social post that reads well and also helps people find you in search. You give a topic, a main keyword, your audience and the platform, and get a post sized for that site.
 
@@ -18,6 +15,10 @@ when:
   - You want a LinkedIn post that sounds professional but not stiff.
   - You need your keyword in a post without stuffing it.
   - You write for readers who speak English as a second language.
+not_for:
+  - "You need a paid ad: use an ad writer or a person who runs your ads, since this skill writes organic posts only."
+  - "You need a long sales page or email: write it as longer copy with your AI, because this skill makes short posts."
+  - "You want it to post or schedule for you: use your social media app, because this skill only writes text."
 you_give:
   - The topic
   - A main keyword
@@ -29,7 +30,27 @@ you_get:
   - Natural keyword use
   - Emoji and tone matched to the site
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the full text of the skill's SKILL.md into the chat.
+  - Fill in the topic, main keyword, audience and platform. Add tone, region or brand if you want.
+  - Read the post. Check every fact and any link before you use it.
+  - Copy it into your social app yourself. The skill cannot post for you.
+  - Run the same topic again for each platform and compare the versions.
+output_sample:
+  input:
+    - Your topic
+    - Your main keyword
+    - Your audience
+    - "The platform: Instagram, LinkedIn or Facebook"
+    - Your tone, region or brand name (optional)
+  output:
+    - name: Hook
+      contains: One strong opening line meant to earn the next line.
+    - name: Main context
+      contains: A short, clear setup that explains what the post is about.
+    - name: Value or insight
+      contains: Useful information for the reader, kept to general or provided facts.
+    - name: Call to action
+      contains: A closing line that asks readers to comment, follow or click.
+    - name: Hashtags
+      contains: Five to eight tags that fit the topic and platform.

@@ -1,38 +1,119 @@
 new_slug: your-agent-s-first-ai-call-implementation-planner
 name: Agent AI call cost tracker builder
-summary: Build a bounded ai call wrapper with token and cost records.
+summary: Plan a wrapper for your agent's AI calls that checks the budget first, then records tokens and cost on every call, so spend is never a surprise.
 job: build-software
 headline: Agent AI call cost tracker builder
-subhead: Share selected model, allowed operation tags, token estimates and budget. Get a bounded ai call wrapper with token and cost records.
+subhead: Give it the AI models you plan to use, the job labels each call may carry, a typical call size and your budget. It plans one wrapper that every agent calls. You get the wrapper changes, a cost record and test cases, not a live system.
 explain: |-
-  Share selected model, allowed operation tags, token estimates and budget. Get a bounded ai call wrapper with token and cost records.
+  When each agent calls an AI model on its own, nobody can say who spent what. One loop or one long prompt can burn the month's budget in an afternoon, and you find out from the invoice.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This skill plans a single door for every call. Before the call, it checks the agent is allowed to do that job and reserves the worst-case cost against its budget. After the call, it saves the tokens, the model, the job label and the real cost, and settles the reserve. A refused call returns a clear error. It never makes up an answer.
+
+  It starts from a short note on this pattern and a starter database layout. It adapts them to your models and budget, and it flags what the starter gets wrong, such as an invalid policy line. It never calls a model or reads your database.
 when:
-  - You need a bounded AI call wrapper with token and cost records.
-  - You are adding this function to an agent system.
-  - You need to compare an existing version with the supplied starter.
+  - You have more than one agent calling AI models and no single place that shows their spend.
+  - You want a hard daily or monthly limit that a runaway loop cannot get past.
+  - You want to see spend split by job, such as chat, audits or monitoring.
+  - You are about to add a tool-using agent and want its total cost counted as one.
+not_for:
+  - You want a limit set by rules per agent and per day. Use the Agent spending cap builder, which covers the policy side.
+  - You want to bill clients to the cent. This records costs for your own control, so reconcile against the provider's invoice first.
+  - You are not building code. For cutting AI costs in a normal chat, ask your AI to shorten your prompts instead.
+  - You want to run the jobs in the background. Use the Recoverable agent job queue builder.
 you_give:
-  - Selected model, allowed operation tags, token estimates and budget
+  - The AI model or models you plan to use, and the provider
+  - The job labels each call may carry, such as chat or audit
+  - A typical call size, meaning input and output tokens (optional)
+  - Your daily and monthly budget per agent
+  - Your current database layout (optional)
 you_get:
-  - A bounded AI call wrapper with token and cost records
-  - A failure checklist and synthetic test cases
+  - A step-by-step wrapper plan with the error each step returns
+  - A cost record layout, with columns to add to the starter
+  - Budget rules for each cap, including who can raise it
+  - A failure checklist and test cases
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in an AI that can read your code, such as Claude Code or Codex. A plain chat works if you paste the files in.
+  - Paste your model list, your job labels and your budget. Get the model prices from the provider's price page and paste them too. Never paste an API key.
+  - Add your database layout if you have one. If you don't, the skill uses its starter layout and says so.
+  - Read BUDGET RULES first. Check each cap, who can raise it and what happens at the limit.
+  - Check COST RECORD against your provider's invoice for one real day before trusting any total.
+  - Run the test cases in your own project. This skill never runs code.
 how_it_works:
-  - title: Step 1
-    text: Read the role and operation policy.
-  - title: Step 2
-    text: Check and reserve budget before the model call.
-  - title: Step 3
-    text: Pass scoped context and the selected model.
-  - title: Step 4
-    text: Record input and output tokens, provider status and actual price inputs.
-  - title: Step 5
-    text: Reconcile failed or cancelled calls.
-  - title: Step 6
-    text: Return an explicit error instead of inventing a model response.
+  - title: Reads the agent's rules
+    text: Checks the job label is on the agent's allowed list and refuses it if not.
+  - title: Reserves the worst case
+    text: Works out the most the call could cost and holds that amount in one step, so two calls at once can't both pass.
+  - title: Sends only scoped context
+    text: Passes the agent's role text, the task and the chosen model, with nothing from another client.
+  - title: Records every call
+    text: Saves agent, job, label, model, tokens, provider status, time taken and the price numbers used.
+  - title: Settles the reserve
+    text: Swaps the held amount for the real cost, and marks failed calls UNKNOWN until the invoice confirms.
+  - title: Returns a clear error
+    text: A refused, failed or timed-out call returns a named error and never a made-up reply.
+output_shape: |-
+  BASIS
+  <what was read>
+  MISSING: <each missing input and what it stops>
+
+  WRAPPER PLAN
+  <step> | <what happens> | <where in your code> | <error returned>
+
+  COST RECORD
+  <column> | <meaning> | <source>
+
+  BUDGET RULES
+  <cap> | <scope> | <what happens at the limit> | <who can raise it>
+
+  FAILURE CHECKLIST
+  <failure> | <what is recorded> | <what the caller sees> | <who checks it>
+
+  TEST CASES
+  <name> | <set-up> | <expected result>
+
+  NEXT STEP
+  <the smallest useful thing to do now>
+output_sample:
+  input:
+    - The AI models you plan to use, and the provider's current prices
+    - The job labels each call may carry
+    - A typical call size in tokens (optional)
+    - Your daily and monthly budget per agent
+  prerequisites:
+    - An AI that can read your code files, or code pasted into the chat
+    - A database where call records can be saved
+  output:
+    - name: BASIS
+      contains: What was read, what was left out and every missing input, with what each gap stops.
+    - name: WRAPPER PLAN
+      contains: The steps of one AI call, from the budget check to the saved record, with the error each returns.
+    - name: COST RECORD
+      contains: The columns saved for each call, including the ones to add to the starter layout.
+    - name: BUDGET RULES
+      contains: Each cap, who it covers, what happens at the limit and who may raise it.
+    - name: FAILURE CHECKLIST
+      contains: Refused, failed, timed-out and cancelled calls, with what is recorded for each.
+    - name: TEST CASES
+      contains: Cases such as a call just over the cap, an unknown label and two calls at the same moment.
+    - name: NEXT STEP
+      contains: The one smallest step to take next, such as adding the reserve step before the call.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your wrapper and the starter layout together and proposes exact edits.
+    - name: Supabase
+      why: The starter layout is written for Postgres, which Supabase uses.
+  inputs:
+    - A day of real call logs, so the token estimates come from your own use
+    - The provider's invoice for one day, to check the totals
+terms:
+  - term: Token
+    meaning: A small piece of text an AI model reads or writes. Providers charge by the token.
+  - term: Operation tag
+    meaning: A short label on each AI call, such as audit, used to split spend by job.
+  - term: Reserve
+    meaning: Setting aside the most a call could cost before it runs, so the budget can't be passed.
+  - term: Reconcile
+    meaning: Compare your own records with the provider's invoice and fix the gaps.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

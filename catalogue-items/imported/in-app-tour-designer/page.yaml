@@ -2,35 +2,98 @@ thinking: medium
 thinking_why: It weighs where help helps and where it just gets in the way.
 new_slug: in-app-tour-designer
 name: In-app tour designer
-summary: Describe your product and what new users must learn. Get a short tour
-  plan with triggers, tips and completion tracking.
+summary: Plan an in-app product tour that shows each tip only when a user needs it. Get a build or skip verdict, a tip plan and a way to track feature use.
 job: build-product
 headline: In-app tour designer
-subhead: A short tour plan for your product that teaches new users at the moment
-  they need help, instead of burying them in pop-ups. It also tells you plainly
-  when a tour is the wrong tool and a help page would do.
+subhead: Tell it about your product and the features new users must learn. It first decides if a tour is worth building. If it is, you get a tip plan with triggers, placement and tracking, so tips appear only when a user needs them.
 explain: |
-  A short tour plan for your product that teaches new users at the moment they need help, instead of burying them in pop-ups. It also tells you plainly when a tour is the wrong tool and a help page would do.
+  Most product tours fail in one of two ways. Some put a "click for a tour" dot on every button until users stop seeing them. Others show one tour at first login that people skip and forget. This skill plans an in-app tour that avoids both.
 
-  The skill starts with a decision: does your product have buried features, an audience that wants guidance, and a team that can keep tours current? If so, it designs the triggers (when a tip shows), where each hint sits, and how to stay quiet when the user is fine. It sets how you track completion and adoption, so you can tell if a tour worked or only got clicked. It stays separate from first-run wizards and chat help.
+  It starts with a plain question: is a tour the right tool for your product? Small products, fast-changing screens and teams that cannot keep tips current often do better with clear menus or a help page. If a tour does earn its place, the skill plans each tip around the moment a user hits friction, such as opening a section for the first time.
+
+  For every tip you get the trigger, where it sits, how it is dismissed, when it shows again and which measure shows it worked. It judges a tour by feature use, not by how many people clicked through it.
 when:
   - Users miss a key feature that is hidden in a menu.
-  - Your current tour gets clicks but no change in feature use.
-  - You need a plan for tips that appear only when someone struggles.
-  - You are unsure if you need a tour or better help docs.
-  - You want a way to measure whether tips lead to adoption.
+  - Your current tour gets clicks but feature use does not change.
+  - You need tips that show up only when someone is stuck.
+  - You are not sure if you need a product tour or better help pages.
+not_for:
+  - "You need a step-by-step setup flow for new accounts: use the First-run wizard designer."
+  - "You need chat-style help inside the product: use the Chatbot conversation designer."
+  - "You need to write the help pages themselves: use the Help article writer from support tickets."
 you_give:
-  - A description of your product
-  - The features new users must learn
-  - Your current tour or help setup (optional)
-  - Your main success measure
+  - What your product is and who uses it
+  - The 3 to 7 features new users must learn, and where each one sits in the app
+  - How users learn today, such as a current tour, help pages or support questions (optional)
+  - The measure that counts as success, such as use of one feature
+  - Your tour tool, if you have one (optional)
 you_get:
-  - A go or no-go call on building a tour
-  - Trigger rules for each tip
-  - Placement and wording guidance
-  - Completion and adoption tracking plan
+  - A verdict: build a tour, build a small one, or do not build one
+  - A tip plan with the trigger, placement, dismissal and re-show rule for each tip
+  - A draft line of tip text for each row
+  - A tracking plan that shows if a tip led to real feature use
+  - A simple upkeep plan so tips do not go stale
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Write down the features new users miss. For each, note where it sits in your app and how you know people miss it.
+  - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code or paid tool is needed.
+  - Paste your notes and your success measure. Answer any question your AI asks. Skipped inputs are marked MISSING.
+  - Read the verdict first. If it says do not build a tour, try the fix it suggests before you build anything.
+  - Check each trigger against how your users really move through the app. Cut any tip you cannot tie to a real moment.
+  - Give the tip plan to whoever builds the tour. Review feature use after a few weeks, not just tip clicks.
+output_shape: |
+  Verdict: <build / build small / do not build> and <2 to 3 reasons>
+  Tip plan (one row per tip, up to 7):
+    <feature> | <who sees it> | <trigger> | <placement> | <dismissal> | <re-show rule> | <success measure>
+  Wording: <one draft line per tip>
+  Tracking plan: <events to record and the feature-use event>
+  Upkeep: <who reviews tips and how often>
+  Missing: <inputs not given>
+output_sample:
+  input:
+    - What your product is and who uses it
+    - The features new users must learn and where each one sits
+    - How users learn today (optional)
+    - Your success measure
+  output:
+    - name: Verdict
+      contains: Build a tour, build a small one, or do not build one, with two or three reasons.
+    - name: Tip plan
+      contains: A table with up to seven tips, each with trigger, placement, dismissal, re-show rule and measure.
+    - name: Wording
+      contains: One short draft line of tip text for each tip.
+    - name: Tracking plan
+      contains: What to record for each tip, and the event that shows a user adopted the feature.
+    - name: Upkeep
+      contains: Who reviews the tips and how often, so they do not point at old screens.
+    - name: Missing
+      contains: Inputs you did not give and how that limits the plan.
+how_it_works:
+  - title: Decide if a tour fits
+    text: It checks for missed features, a product that holds still and a team that can keep tips current.
+  - title: Pick what triggers a tip
+    text: It prefers events, such as a first visit to a section, and uses time and user state only to adjust.
+  - title: Choose the shape
+    text: It plans small tours tied to single features, not one long tour for the whole product.
+  - title: Set placement and dismissal
+    text: Each tip gets a spot and a way to close it, so help is easy to find and easy to ignore.
+  - title: Plan the tracking
+    text: It records who saw, closed or finished each tip, and when to show a tip again.
+  - title: Plan the upkeep
+    text: It sets a review rhythm so tips follow product changes, and separates new users from experts.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT
+      why: Either can weigh the trade-offs and write the plan. No tool or files are needed.
+    - name: Your product analytics
+      why: Feature-use numbers make the success measure real. Without them you can only track tip clicks.
+  inputs:
+    - Support questions about the features new users miss
+    - Which features power users already know
+    - Your tour tool's limits on triggers and placement
+terms:
+  - term: Trigger
+    meaning: The event or condition that makes a tip appear.
+  - term: Micro-tour
+    meaning: A short tour tied to one feature, not the whole product.
+  - term: Feature adoption
+    meaning: The share of users who use a feature after they learn about it.

@@ -1,55 +1,128 @@
 new_slug: monthly-subscription-renewal-decision-assistant
 name: Monthly subscription renewal decision assistant
 headline: Monthly subscription renewal decision assistant
-summary: A changed-only renewal brief with notice deadlines, options and proposed owner actions.
+summary: Find which business subscriptions renew soon and the last day to cancel each. Get a changed-only renewal brief, options and owner actions.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A changed-only renewal brief with notice deadlines, options and proposed owner actions. Share subscription bills, usage evidence, contract dates and the prior renewal register. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it your subscription bills, contract dates, usage evidence and last month's register. It shows only what changed, works out each notice deadline and lays out keep, switch or cancel options. You get a renewal brief, a deadline table and an updated register.
 explain: |-
-  A changed-only renewal brief with notice deadlines, options and proposed owner actions.
+  Most software and service subscriptions renew on their own. The last day to cancel is usually earlier than the renewal date, and nobody checks it. This agent compares this month's bills, contracts and usage with last month's register. It reports only what changed.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Dates and savings respect contract terms; missing usage never means unused. Missing tools or evidence stay visible in the final summary.
+  It works out each notice deadline from the renewal date and the notice period, and it shows the sum. If either one is missing, the deadline says MISSING and you get an evidence request, not a guess. Missing usage data is never treated as proof that a service is unused. It suggests cancelling only when the contract terms and the usage both support it.
+
+  It proposes actions for each owner. It cancels nothing and emails no vendor.
 when:
-  - You need a changed-only renewal brief with notice deadlines, options and proposed owner actions.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - A renewal is coming up and you need to know the last day to cancel.
+  - A vendor sends a new quote or raises the price.
+  - A team's use of a tool has dropped or jumped.
+  - You review software costs every month and want to see only the changes.
+not_for:
+  - You want a first sweep of every subscription for duplicates. Use the Find duplicate and unused business subscriptions workflow.
+  - You need one contract checked in depth. Use the Vendor agreement status checker.
+  - You sell subscriptions and want to know why customers cancel. Use the Subscription churn watcher.
 you_give:
-  - Subscription bills, usage evidence, contract dates and the prior renewal register.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - Your subscription bills or card statement lines for the month
+  - Renewal dates and notice periods from your contracts or vendor accounts
+  - Usage evidence, such as seats in use or last login dates
+  - The owner of each subscription, and how many days before renewal you want to decide
+  - Last month's renewal register (optional on the first run)
+  - Any new quote or price change from a vendor (optional)
 you_get:
-  - A changed-only renewal brief with notice deadlines, options and proposed owner actions.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A renewal brief that covers only what changed since last month
+  - A deadline table with the last day to cancel for each renewal and the sum behind it
+  - Keep, switch or cancel options, with the yearly cost and the effort to switch
+  - Evidence requests for anything missing before you decide
+  - An updated renewal register for next month
+  - Proposed actions for each owner, none sent
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack from this page and add it to your AI. If you cannot add it, paste SKILL.md into a new chat.
+  - Attach this month's bills or card lines, your contract dates and notice periods, and any usage exports. Attach last month's register if you have one.
+  - Say how many days before a renewal you want to decide, and who owns each subscription.
+  - Say "Find what changed and work out each cancel-by date. Do not recommend cancelling without contract and usage evidence." Your AI asks once for anything missing.
+  - Open notice-deadlines.md first. Check each date against the contract wording yourself.
+  - Send the evidence requests and owner actions yourself. Keep renewal-register.csv for next month.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep subscription ID, term, notice date, owner, usage evidence date, decision and source references. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: A renewal enters the owner chosen decision window, a quote changes or usage materially changes.
-  - title: Choose the next step
-    text: Run the renewal workflow for affected subscriptions. If notice terms or usage are missing, run vendor-agreement-status-checker and produce evidence requests before recommending cancellation.
-  - title: Check and save evidence
-    text: Dates and savings respect contract terms; missing usage never means unused. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read last month's register
+    text: It keeps each subscription's ID, term, notice date, owner, usage date, decision and source. The first run builds the register.
+  - title: Find what changed
+    text: A renewal entering your decision window, a new quote or a big change in usage puts a subscription in scope. Unchanged ones are left alone.
+  - title: Work out the deadlines
+    text: It subtracts the notice period from the renewal date and shows the sum. It follows the contract's own wording on how days are counted.
+  - title: Fill the gaps first
+    text: If notice terms or usage are missing, it checks the contract and writes an evidence request before any advice to cancel.
+  - title: Compare the options
+    text: For each changed subscription it sets keep, consolidate, switch and cancel side by side, using only prices and fees you supplied.
+  - title: Propose actions and save
+    text: It lists one proposed action per owner, then updates the register. Nothing is sent or cancelled.
 output_shape: |-
-  Scope and source coverage
-  A changed-only renewal brief with notice deadlines, options and proposed owner actions.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  RENEWAL BRIEF (<month>)
+    New or changed: <count> | Unchanged and left alone: <count>
+    <subscription> | <what changed> | <decision window opens or closes on> | <recommended path>
+
+  NOTICE DEADLINES
+    <subscription> | <renewal date> | <notice period and wording> | <cancel by date, with the sum> | <days left> | <source>
+
+  OPTIONS
+    <subscription> | <keep, consolidate, switch or cancel> | <yearly cost now> | <yearly cost after> | <fees or minimum term> | <effort to switch>
+
+  EVIDENCE REQUESTS
+    <subscription> | <what is missing> | <who could supply it> | <needed by>
+
+  OWNER ACTIONS (proposed, none sent)
+    <owner> | <action> | <by when> | <needs approval>
+output_sample:
+  input:
+    - Your subscription bills or card statement lines for the month
+    - Contract renewal dates and notice periods
+    - Usage evidence, such as seats in use or last logins
+    - Last month's renewal register (optional on the first run)
+  prerequisites:
+    - A named owner for each subscription
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+  output:
+    - name: renewal-brief.md
+      contains: Only what changed this month, with the decision window and a recommended path for each.
+    - name: notice-deadlines.md
+      contains: The last day to cancel each renewal, the sum behind it and the contract wording it came from.
+    - name: options.md
+      contains: Keep, consolidate, switch and cancel side by side, using prices and fees you supplied.
+    - name: evidence-requests.md
+      contains: What is missing before a decision, who could supply it and by when.
+    - name: renewal-register.csv
+      contains: The updated register of every subscription, term, notice date, owner, usage date and decision.
+    - name: owner-actions.md
+      contains: One proposed action per owner. Drafts only, nothing sent or cancelled.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Dates and savings respect contract terms; missing usage never means unused.
+  - what: Notice wording
+    how: Paste the exact contract line on notice and renewal. The cancel-by date depends on how the days are counted.
+  - what: Decision window
+    how: Say how many days before notice you need to decide. A longer window gives owners more time to answer.
+  - what: Usage evidence
+    how: Attach the vendor's own admin report, with its date. Guesses about who uses a tool count as missing.
+improve:
+  - Add your own rule for who may approve a cancel or a new purchase, so owner actions name the right person.
+  - Keep each register with your finance records. Next month's run then compares against real history.
+  - Add the cost of switching you have seen before, such as set-up time, so options reflect your own effort.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads bills, contract text and usage exports together and does the date sums.
+    - name: A spreadsheet tool such as Excel or Google Sheets
+      why: Your register lives in a file you can sort by cancel-by date.
+  inputs:
+    - A calendar export of known renewal dates.
+    - The vendor's admin usage report.
+    - Any past decision notes on why you kept a tool.
+terms:
+  - term: Notice period
+    meaning: How many days before the renewal date you must tell the vendor you are cancelling.
+  - term: Renewal register
+    meaning: A list of every subscription with its term, owner, dates and decision.
+  - term: Consolidate
+    meaning: Move two or more tools that do the same job into one.
+  - term: Cancel-by date
+    meaning: The last day you can cancel without being charged for the next term.
 judge:
   - Dates and savings respect contract terms; missing usage never means unused.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -61,17 +134,3 @@ test:
   - Remove one necessary input. The AI should identify the gap without inventing a replacement.
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
-improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
-works_best_with:
-  tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
-  inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
-terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.

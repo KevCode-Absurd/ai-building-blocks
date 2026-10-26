@@ -1,41 +1,51 @@
 new_slug: power-and-fear-map-builder
 name: "Power and fear map builder"
-summary: "Describe a team, deal or dispute. Get who really holds power, what each person wants and fears, and your safest first move."
+summary: Map who really holds power in a team, deal or dispute and what each person wants and fears. Get your safest, fair first move.
 job: plan-strategy
 thinking: high
 thinking_why: "It reads motives and guesses at moves from thin facts, so it needs careful reasoning and honest marking of what it does not know."
 
 headline: "Power and fear map builder"
-subhead: Describe a team, a deal or a dispute and who is in it. It maps who really holds power, what each person wants and fears, where you lean on other people's strength, and gives you a safest first move.
+subhead: Describe a team, a deal or a dispute and who is in it. It maps who really holds power, what each person wants and fears, and where you lean on other people's strength. You get a fair, safest first move and a guess at the other side's next move.
 
 explain: |
   Org charts show titles, not power. The person who decides may be a quiet adviser, a lender, a client or a founder's partner who never appears in the meeting. If you plan around the chart, you get surprised.
 
-  This skill lists everyone who matters, on the chart and off it. For each person it records what they want, what they fear and whether they can help, block or hurt you. It checks whether your position rests on your own strength or on someone else's, finds where you could earn lasting anger and how to avoid it, and plans any hard step as one clean move. It also guesses what the other side will do next.
+  This skill lists everyone who matters, on the chart and off it. For each person it records what they want, what they fear and whether they can help, block or hurt you. It checks whether your position rests on your own strength or on someone else's. It finds steps that could earn lasting anger and how to avoid them. Any hard step is planned as one clear move, and it must be fair, honest and lawful.
+
+  It works from facts you give it and marks every guess as a guess. The map holds opinions about real people, so keep it private. The ideas draw on Machiavelli's The Prince and Discourses, read for how people really act, not for tricks.
 
 when:
   - You are about to enter a negotiation, a reorganisation or a tense dispute.
-  - You keep being blocked by someone who does not appear on the chart.
-  - You need to take a hard step and want to do it once, well.
+  - Someone who is not on the chart keeps blocking you.
+  - You need to take a hard step and want to do it once, fairly and well.
+  - You rely on a lender, client or partner and want to know how far you can lean on them.
+not_for:
+  - "A legal, HR or discipline process decides the outcome: use a lawyer, an HR adviser or a mediator, not a map of motives."
+  - "No one else is affected by your choice: use the Pros and cons decision planner."
+  - "You want to prepare the talk itself, not map the people: use the Negotiation call prep planner."
+  - "You want a plain list of people affected by a project and how to update them: use the Stakeholder map builder."
 
 you_give:
-  - "A plain description of the team, deal or dispute"
-  - "Who is involved and what you know about each person"
-  - "What you want out of it"
-  - "A brief with the facts and dates (optional)"
+  - A plain description of the team, deal or dispute, and the date that matters
+  - The people involved, on and off the chart, and what you have seen each of them do
+  - What you want out of it, and what you will not do
+  - Notes, emails or documents with facts and dates (optional)
 
 you_get:
-  - "A map of every player with what they want, what they fear and what they can do to you"
-  - "A note on where you rely on your own strength and where on borrowed strength"
-  - "Where you could be resented, and how to avoid it"
-  - "Your safest first move, and a guess at the rival's next one"
+  - "A map of each person: what they want, what they fear and whether they can help, block or hurt you"
+  - Which strength is yours and which is borrowed
+  - Steps that could cause lasting anger, with a fairer way round
+  - Your safest first move, in order, with dates
+  - A guess at the other side's next move, and the sign to watch for
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Describe the situation and list the people. Add anyone who is not in the room but could matter."
-  - "Say what outcome you need, and what you would not give up."
-  - "Read the map and mark anything it got wrong. It marks guesses, so correct those first."
-  - "Take the first move and the rival forecast into your next conversation."
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it into a new chat. It needs no files, web access or paid tools.
+  - Describe the situation and list the people. Add anyone who is not in the room but could matter.
+  - Say what outcome you need, and what you would not do.
+  - Check the map. Guesses are marked, so correct those first.
+  - Keep the map private. It holds opinions about real people.
+  - Take the first move and the forecast into your next conversation.
 
 how_it_works:
   - title: Lists every player
@@ -78,6 +88,27 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+output_sample:
+  input:
+    - A plain description of the team, deal or dispute
+    - The people involved and what you have seen each do
+    - What you want, and what you will not do
+    - Notes or documents with facts and dates (optional)
+  output:
+    - name: THE SITUATION
+      contains: "Two lines: what is at stake and the date that matters."
+    - name: PLAYER MAP
+      contains: Each person, on or off the chart, with what they want and fear, whether they help, block or hurt, and their power.
+    - name: WHOSE STRENGTH
+      contains: What is yours and what is borrowed, and the risk of each borrowed item.
+    - name: WHERE YOU COULD BE HATED
+      contains: Steps that take something people value, who they hurt and a fairer way round.
+    - name: YOUR SAFEST FIRST MOVE
+      contains: The move done in one go, and the order of any kind steps, all fair and lawful.
+    - name: THE RIVAL'S LIKELY NEXT MOVE
+      contains: The likely step, the early sign and your reply, marked as a guess.
+    - name: MISSING and CHECKS MISSED
+      contains: What you do not know, and any check still failing.
 
 tweaks:
   - what: How well you know each person
@@ -109,8 +140,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Reasoning about people and writing a map is text work any strong chat AI does well."}
-    - {name: "A whiteboard or paper", why: "Drawing lines between players can show a gap that a table hides."}
+    - { name: "Any good chat AI", why: "Reasoning about people and writing a map is text work any strong chat AI does well." }
+    - { name: "A whiteboard or paper", why: "Drawing lines between players can show a gap that a table hides." }
   inputs:
     - "Meeting notes or emails showing how each person acted before"
     - "The org chart and any known side agreements"
@@ -121,3 +152,5 @@ terms:
     meaning: Power that rests on someone else's money, support or goodwill, which they can take back.
   - term: Off the chart
     meaning: A person with real influence who has no title in the group you are dealing with.
+  - term: Hard step
+    meaning: A step that costs someone something they value, such as a post, money or a say.

@@ -2,35 +2,98 @@ thinking: low
 thinking_why: It fills set formats from the facts you give.
 new_slug: mentoring-program-builder
 name: Mentoring program builder
-summary: Say who the program is for. Get matching rules, a six-month plan and
-  coaching talk guides for managers.
+summary: "Build a six-month mentoring program: matching rules, mentor and mentee guides, a relationship charter and a manager coaching guide."
 job: hire-people
 headline: Mentoring program builder
-subhead: A mentoring or coaching program you can launch, with the rules, the
-  schedule and the guides your people need. Say who it is for and you get a plan
-  that runs six months.
+subhead: Say who the program is for, how many people join and what you want from it. It builds a mentoring program you can launch. You get matching rules, guides for mentors and mentees, check-in questions and a coaching guide for managers.
 explain: |
-  A mentoring or coaching program you can launch, with the rules, the schedule and the guides your people need. Say who it is for and you get a plan that runs six months.
+  A mentoring program fails when pairs have no rules and no rhythm. This skill builds a mentoring program, or a coaching or peer coaching program, with the rules, the schedule and the guides your people need.
 
-  It covers how to match mentors and mentees by goals and development needs, not just rank. It adds onboarding guides for mentors and mentees, a relationship charter and check-in questions. For managers it provides conversation guides using models like GROW, practice scenarios and a skills check. It keeps coaching, which draws out answers, apart from mentoring, which shares experience. It also suggests how to track program quality through check-ins instead of only completion counts.
+  It matches mentors and mentees by goals and development needs, not just rank. It plans six months with check-ins and a mid-point review. It keeps coaching, which draws out answers, apart from mentoring, which shares experience. For managers it writes a conversation guide using the GROW model, with practice scenarios.
+
+  For a full leadership course, use the Leadership program designer. For a single performance problem, talk to the manager and HR instead.
 when:
   - You want a mentoring program for new managers or early-career staff.
-  - Managers in your team give orders and you want them to coach.
+  - Managers on your team give orders and you want them to coach.
   - You need a peer coaching setup for one team.
   - You want a way to show the program is working.
+not_for:
+  - "You are dealing with one person's performance problem or a formal disciplinary case: use a manager 1:1 and your HR case process."
+  - "You want a full leadership curriculum: use the Leadership program designer."
+  - "You want career levels and growth paths: use the Career ladder and growth plan writer."
 you_give:
-  - Who the program is for
-  - Program length and size
-  - Your goals for it
-  - Current coaching habits (optional)
+  - Who the program is for, such as new managers
+  - How many people join and how long it runs
+  - What you want the program to achieve
+  - How managers and mentors coach today (optional)
 you_get:
-  - A six-month program plan
+  - A six-month plan, month by month
   - Matching rules for pairs
-  - Mentor and mentee onboarding guides
-  - Coaching conversation guides for managers
-  - Measures to track results
+  - A mentor guide and a mentee guide
+  - A relationship charter and check-in questions
+  - A manager coaching guide and a measures table
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in this skill, or upload the skill folder if your tool allows it.
+  - Say who the program is for, how many people join and what you want from it.
+  - Add how long it runs. The default is six months.
+  - Read the matching rules and change them to fit your people.
+  - Start with six to ten pairs. Ask them the check-in questions each month.
+  - Send anything about a formal complaint or a legal or medical question to HR, not to a mentor.
+how_it_works:
+  - title: Set the goal
+    text: It states who joins, and whether the program is coaching or mentoring.
+  - title: Write matching rules
+    text: It matches on goals and development needs, and says how to change a pair.
+  - title: Plan six months
+    text: It plans the kickoff, monthly check-ins, a mid-point review and the close.
+  - title: Write the guides
+    text: It writes guides for mentors and mentees, with expectations and limits.
+  - title: Add charter and check-ins
+    text: It writes a relationship charter and five check-in questions.
+  - title: Write the coaching guide
+    text: It writes a GROW guide for managers with three practice scenarios and a measures table.
+output_shape: |-
+  Program plan: <goal | audience | month | activity>
+  Matching rules: <match on | how pairs are chosen | how to change a pair>
+  Mentor guide: <expectations | limits>
+  Mentee guide: <how to prepare | what to bring>
+  Relationship charter: <how we will work together>
+  Check-in questions: <5 questions>
+  Manager coaching guide: <GROW steps | 3 practice scenarios>
+  Measures: <measure | how to collect>
+output_sample:
+  input:
+    - Who the program is for
+    - How many people join and how long it runs
+    - What you want the program to achieve
+    - How managers and mentors coach today (optional)
+  output:
+    - name: Program plan
+      contains: Goal, audience and a month-by-month table from kickoff to close.
+    - name: Matching rules
+      contains: What pairs are matched on, how to choose them and how to change one.
+    - name: Mentor and mentee guides
+      contains: Expectations, limits and how to prepare for each meeting.
+    - name: Relationship charter
+      contains: A short agreement on how each pair will work together.
+    - name: Check-in questions
+      contains: Five questions to ask pairs each month.
+    - name: Manager coaching guide
+      contains: GROW steps for coaching talks, with three practice scenarios.
+    - name: Measures table
+      contains: How to track quality through check-ins, not only who finished.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A chat AI can write the whole program. You choose the pairs and run the check-ins.
+  inputs:
+    - A list of possible mentors with their strengths
+    - Short goals from each mentee
+    - Your company values
+terms:
+  - term: Coaching
+    meaning: Helping a person find their own answers by asking questions.
+  - term: Mentoring
+    meaning: Sharing your own experience and advice with a less experienced person.
+  - term: GROW model
+    meaning: "A four-step coaching talk: Goal, Reality, Options, Will."

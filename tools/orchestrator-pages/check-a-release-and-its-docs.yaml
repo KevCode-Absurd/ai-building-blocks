@@ -28,11 +28,11 @@ how_to_use:
   - Review the result before approving external actions.
 how_it_works:
   - title: Test coverage gap investigator
-    text: Share your repo or change. Get missing, weak and stale tests ranked by the behavior at risk.
+    text: Share your repo or change. Get missing, weak and stale tests ranked by the behavior at risk. Hands the rollout step those gaps as known risks.
   - title: Code and docs drift checker
-    text: Share a feature or code change. Get outdated docs and missing instructions traced to the changed behavior.
+    text: Works from your code change and your docs. Get outdated docs and missing instructions traced to the changed behavior. Hands the rollout step the list of docs to fix.
   - title: Service rollout and rollback planner
-    text: Share a release or infrastructure change. Get preflight checks, rollout stages, health signals and a rollback plan.
+    text: Share a release or infrastructure change. Uses the test gaps and stale docs from steps 1 and 2 as risks and tasks. Get preflight checks, rollout stages, health signals and a rollback plan.
 output_shape: |-
   Coverage gaps
   Documentation drift
@@ -55,3 +55,24 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+not_for:
+  - You want a go or no-go verdict on your code and a list of blockers. Use the Ship readiness gate.
+  - You only need a read-only report on migrations, config, secrets and rollout order. Use the Release readiness reviewer.
+  - You only need the missing tests for one code change. Use the Test gap finder.
+output_sample:
+  input:
+    - Your repo or the code change you plan to release
+    - Your docs, such as README, setup guide, API docs and changelog
+    - Your release plan, with the target environment and any downtime limits
+    - Your goal and deadline
+  prerequisites:
+    - An AI that can read your code and docs (a code tool or uploaded files)
+  output:
+    - name: Coverage gaps
+      contains: Missing, weak and stale tests, ranked by the behaviour at risk, from the Test coverage gap investigator.
+    - name: Documentation drift
+      contains: Docs that no longer match the code, each tied to the change that broke it, from the Code and docs drift checker.
+    - name: Rollout and rollback plan
+      contains: Preflight checks, rollout stages, health signals and rollback steps, from the Service rollout and rollback planner.
+    - name: Final summary
+      contains: Source coverage, unresolved findings, missing facts and one next action.

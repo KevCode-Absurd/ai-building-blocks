@@ -1,6 +1,6 @@
 new_slug: define-your-metrics-once-and-write-a-weekly-update-anyone-gets
 name: Define your metrics once and write a weekly update
-summary: Give it your numbers. Get metric definitions, an assumptions log, the weekly update and plain pictures.
+summary: Define your metrics once and write a weekly update people read. Get metric definitions, an assumptions log, the update and plain pictures.
 job: document-work
 thinking: high
 thinking_why: It must get definitions exact and then explain numbers without losing the truth. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Two reports show different numbers for the same thing.
   - Your weekly update is sent and not read.
   - A leader asked "so what does that mean" after your last report.
+not_for:
+  - "You need one figure explained once, with no weekly update: ask your AI for a short summary instead."
+  - "You want the numbers charted with a forecast: use the Build a weekly KPI report with a forecast and dashboard workflow."
+  - "You have no numbers yet and only a rough idea of what to track: write a short list of goals with your team first."
 you_give:
   - The metrics you track and where each comes from
   - This week's numbers and last week's
@@ -30,6 +34,26 @@ how_to_use:
   - Paste the metrics and where they come from. It writes the definitions and the assumptions log.
   - Paste this week's and last week's numbers. It writes the update and the plain pictures.
   - Read the update once as the reader. Send it, and reuse the definitions every week.
+output_sample:
+  input:
+    - The metrics you track and where each one comes from
+    - This week's numbers and last week's numbers
+    - Who reads the update and what they decide with it
+    - Your current update (optional)
+  prerequisites:
+    - A chat AI that can read pasted text or files
+    - Claude Code or a Claude Project if you use the handoff pack
+  output:
+    - name: "Step 1: Metric definitions"
+      contains: For each metric, what it counts, what it excludes, its source, how often it updates and who owns it.
+    - name: "Step 2: Assumptions log"
+      contains: Every assumption behind this week's analysis, such as time windows, exclusions and estimates, and which metric each affects.
+    - name: "Step 3: Weekly update"
+      contains: What changed, why, what we do and what we are watching, with each number tied to its definition.
+    - name: "Step 4: Plain pictures"
+      contains: The two or three key figures turned into pictures a reader can hold, placed at the top of the update.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Define each metric
     text: Writes what each metric counts, excludes, where it comes from and who owns it.

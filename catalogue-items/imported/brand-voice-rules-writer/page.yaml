@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It turns your brand traits into clear rules and examples.
 new_slug: brand-voice-rules-writer
 name: Brand voice rules writer
-summary: Describe your brand and who you write for. Get tone, word choices and
-  writing rules any writer can follow.
+summary: Write brand voice guidelines your team can follow. Give it your brand and audience. You get tone settings, word lists and writing rules.
 job: brand-file
 headline: Brand voice rules writer
-subhead: Describe your brand and who you write for. Get tone, word choices and
-  writing rules any writer can follow. Bring brand name and what you sell. Use
-  the result to plan your next step.
+subhead: Describe your brand and who you write for. Get tone, word choices and writing rules any writer can follow. Bring brand name and what you sell. Use the result to plan your next step.
 explain: |
   A voice guide short enough to use and clear enough that two different writers produce text that sounds alike.
 
@@ -18,6 +15,10 @@ when:
   - Your website, emails and ads all sound like different companies.
   - You are naming your tone for the first time and need words for it.
   - You want a do and don't list your team can check drafts against.
+not_for:
+  - You need one slogan or tagline. Ask your AI to write a few taglines, or work with a copywriter.
+  - You need logos, colors or fonts. This guide covers words only. Use a designer for the look of your brand.
+  - You need to rewrite one email or ad today. Edit that draft directly, or use your finished voice guide to check it.
 you_give:
   - Brand name and what you sell
   - Who you write for
@@ -25,12 +26,42 @@ you_give:
   - Brands you admire (optional)
   - Things you never want to sound like (optional)
 you_get:
-  - A one-line voice summary
-  - Tone settings with examples
+  - A voice overview and one-line voice essence
+  - Tone settings with an example sentence for each
   - Five or six voice traits with do and don't lines
-  - Preferred and avoided words
+  - Words to use and words to avoid
+  - Writing style rules and channel tips
+  - Before and after rewrites and a never-say list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - If you have a saved brand context file, attach it or paste it in. The skill reads it first.
+  - "Answer the questions it asks: brand name, personality, audience, position, tone scales, brands you admire and what to avoid."
+  - Read the guide. Check that the tone settings and voice traits sound like your brand.
+  - Take one real draft, such as a web page or email. Check it against the do and don't lines and the never-say list.
+  - Fix any line that feels wrong, then share the guide with your writers.
+output_sample:
+  input:
+    - Your brand name and what you sell
+    - Who you write for and how they talk
+    - Where your brand sits on four tone scales
+    - Brands whose voice you admire (optional)
+    - What your brand should never sound like (optional)
+  prerequisites:
+    - A saved brand context file, if you have one (optional). The skill reads it first and asks only for what is missing.
+  output:
+    - name: 01 Voice overview
+      contains: A short paragraph on how your brand communicates, plus a one-line voice essence statement.
+    - name: 02 Tone dimensions
+      contains: Your place on four or five tone scales, with what it means and an example sentence for each.
+    - name: 03 Voice qualities
+      contains: Five or six core traits, each with a short meaning, a do and a don't.
+    - name: 04 Vocabulary
+      contains: Words you use, words you avoid, and any special terms for your products or customers.
+    - name: 05 Writing style rules
+      contains: Rules on sentence length, punctuation, capital letters, numbers, contractions, active voice and humor.
+    - name: 06 Channel adaptations
+      contains: A table showing how the tone shifts on your website, social media, email, support and error messages.
+    - name: 07 Before and after examples
+      contains: Four or five off-brand lines rewritten on-brand, each with a one-line reason.
+    - name: 08 Things we never say
+      contains: Phrases and habits your brand avoids, such as empty hype or false urgency.

@@ -35,6 +35,18 @@ Behavioral guidelines to reduce common LLM coding mistakes, derived from [Andrej
 - Use when assumptions, tradeoffs, and verification criteria should be made explicit.
 - Use when code has become overcomplicated and needs to be simplified.
 
+## How to Reply
+
+Use this order on any task that is more than a trivial edit:
+
+1. **Assumptions and questions**: what you are assuming, and anything you need confirmed. If a question blocks the work, stop and ask it.
+2. **Plan**: numbered steps, each with how you will check it.
+3. **Changes**: the smallest change that works. Every changed line traces to the request.
+4. **Result**: the check you ran and whether it passed.
+5. **Noticed, not changed**: unrelated problems you saw and left alone.
+
+If the person gave no test or success check, propose one before you write code.
+
 ## 1. Think Before Coding
 
 **Don't assume. Don't hide confusion. Surface tradeoffs.**
@@ -111,6 +123,11 @@ Better response:
 2. Identify a concrete smell, such as duplicated parsing logic.
 3. Make the smallest refactor and run the existing service tests.
 ```
+
+## When Not to Use
+
+- One-line fixes and emergency hotfixes: make the smallest verified correction first.
+- Throwaway prototypes: relax the caution, but still state assumptions and how you will verify.
 
 ## Limitations
 

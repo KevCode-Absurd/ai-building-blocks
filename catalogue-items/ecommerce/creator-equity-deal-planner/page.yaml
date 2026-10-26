@@ -1,6 +1,6 @@
 new_slug: creator-equity-deal-planner
 name: "Creator equity deal planner"
-summary: "Describe the creator or athlete and your stage. Get a deal outline and questions for your lawyer."
+summary: "Plan a creator equity deal for your store. Give it the creator and your stage. You get a deal outline and questions to take to your lawyer."
 job: grow-social
 thinking: high
 thinking_why: "It handles money and legal-style terms where mistakes cost a lot, so a stronger model is safer."
@@ -17,6 +17,10 @@ when:
   - A creator or athlete already uses your product and you want to make a long deal.
   - You are weighing equity against cash for a person with a big audience.
   - You want a plan to start with sponsorships and move to deeper deals.
+not_for:
+  - "The creator has never used your product: start with a gifted product or a small sponsorship, then plan equity later."
+  - "You need a signed contract or tax advice: take the outline to a business lawyer and an accountant."
+  - "Your store has no valuation and no clean list of owners: use cash sponsorships until you do."
 
 you_give:
   - The creator or athlete, their audience, and how they use your product
@@ -34,6 +38,26 @@ how_to_use:
   - Give your last valuation or share price, or say you do not have one, and the cash you can spend.
   - Read the questions for your lawyer first and book that meeting before you talk to the creator about equity.
   - Do not send the deal outline as a contract. Send it to your lawyer.
+output_sample:
+  input:
+    - The creator or athlete, their audience, and how they use your product
+    - Your latest valuation or share price, and the cash you can spend
+    - What you want from them, such as ad rights or appearances
+    - Who owns your business today (optional)
+    - The country you and the creator are based in (optional)
+  output:
+    - name: Lawyer and accountant line
+      contains: A first line saying to check with a lawyer and an accountant before any offer, and that this is not advice.
+    - name: Person
+      contains: Who the creator is, how they use your product, and the size and fit of their audience.
+    - name: Deal outline
+      contains: Term, yearly cash, equity type, countable deliverables, ad and image rights, exit terms and how posts disclose the deal.
+    - name: Sponsorship order
+      contains: A plan to start with many small sponsors, learn what works, then move to fewer and deeper deals.
+    - name: Questions for your lawyer
+      contains: Questions on award type, tax, filings, existing owners, vesting, exit, disclosure and which country's rules apply.
+    - name: Checks missed and missing
+      contains: Any checks that failed and any facts you did not give, marked MISSING.
 
 how_it_works:
   - title: Picks power users

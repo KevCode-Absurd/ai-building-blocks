@@ -1,0 +1,143 @@
+name: Research Synthesist agent
+summary: Turn a pile of articles, papers or reports into one honest summary. See what is well backed, what is disputed and what is missing.
+headline: Research Synthesist agent
+subhead: Give it a question and the sources you have, such as papers, articles, reports or links. It grades each source and finds claims that only repeat each other. You get a summary of what the evidence supports, with a source table and the gaps.
+job: research-topics
+thinking: high
+thinking_why: It traces claims back to their origin and must not count repeats as proof. Use a model that reasons well, and one that can read long documents.
+explain: |-
+  A literature review (also called an evidence summary or research synthesis) is easy to get wrong. Ten articles can agree because they all quote the same study. Ten weak sources do not add up to one strong one. This agent is built to catch both problems.
+
+  It starts by turning your question into a searchable one: who or what, compared with what, and which outcome matters. It also decides what would count as enough proof before it looks at any source, so it cannot pick only the sources that suit the answer.
+
+  Then it grades each source. Is it a controlled study, a review, a report or an opinion post? How big and well run was it? Who paid for it? It traces repeated claims back to the original, and counts them once. It then sorts what it found into well established, contested and one-study-only, and says plainly what it did not find.
+
+  The confidence it reports is only as strong as its weakest key source. If the sources disagree, you see both sides and how strong each is.
+
+  It works from the sources you give it, and from the web only if your AI can search. It cannot read paywalled papers it was not given. Say so if you want it to stay within your pile.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You have a folder of papers, reports or articles on a topic and need one summary you can trust.
+  - Everyone repeats the same statistic and you want to know where it first came from.
+  - You must tell your team or a client what the research says, including where the experts disagree.
+  - You are starting a new project and want to know what is already known before you spend money on your own study.
+not_for:
+  - You want to know whether a trend is rising and worth acting on. Use the Trend Researcher agent.
+  - You want a health or outcome claim in your own document checked. Use the Clinical Evidence agent.
+  - You want to compare software or tools you could buy. Use the Tool Evaluator agent.
+  - You need a single fact checked right now. Open the original source, or ask your AI to search for it.
+you_give:
+  - The question you want the research to answer, in one or two sentences
+  - The sources you have, pasted or attached, such as papers, reports, articles or links
+  - How wide to look, such as the years and the places to cover (optional)
+  - What would be enough proof for you to act (optional)
+you_get:
+  - A summary sorted into well established, contested and single-study findings
+  - A source table with each source's type, quality and how much weight it gets
+  - A list of claims that only repeat one original source
+  - The gaps, meaning what was searched for and not found
+  - A confidence level with the reason for it
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - State your question. Say who or what it covers, what you compare, and which result matters.
+  - Paste or attach your sources. If your AI can search the web, say whether you want it to add sources or stay within your pile.
+  - Type "Make the evidence summary. Trace repeated claims to their origin. Say what you did not find."
+  - Read the source table first. Check that the sources it marked strong are the ones you would trust.
+  - Open the original source for any claim you plan to quote.
+how_it_works:
+  - title: Frame the question
+    text: It turns your question into a searchable one and says what would count as enough proof.
+  - title: Set the search limits
+    text: It records what was searched, the date range and what was left out, so you can see the coverage.
+  - title: Grade each source
+    text: Each source gets a type, a quality note and a weight. Opinion posts and copies of other sources get little or none.
+  - title: Trace repeated claims
+    text: It follows repeated numbers and claims back to their origin and counts them once.
+  - title: Sort the findings
+    text: It groups findings by theme into well established, contested and single-study, with both sides when sources disagree.
+  - title: State the gaps and confidence
+    text: It lists what was not found and sets confidence by the weakest key source, not the most quotable one.
+output_shape: |-
+  QUESTION
+    Subject <who or what> | Compared with <what> | Outcome <what matters> | Enough proof means <rule>
+
+  SEARCH LIMITS
+    Sources searched <list> | Terms <list> | Date range <dates> | Left out and why <list> | Count <found, kept, used>
+
+  SOURCE TABLE
+    <source> | <type> | <quality note> | <independent of the others? yes or no> | <weight: high, medium, low or none>
+
+  EVIDENCE SUMMARY
+    Well established <claims and the sources behind them>
+    Contested <both sides and how strong each is>
+    Single study only <claims resting on one source>
+
+  REPEATED CLAIMS
+    <claim> | <how many places repeat it> | <original source>
+
+  GAPS
+    <question searched and not found>
+
+  CONFIDENCE
+    <low, moderate or high> | <reason, tied to the weakest key source>
+
+  ASSUMPTIONS AND CHECKS STILL NEEDED
+    <item>
+output_sample:
+  input:
+    - Your question in one or two sentences
+    - The sources you have, pasted, attached or linked
+    - The years and places to cover (optional)
+    - What would be enough proof for you to act (optional)
+  prerequisites:
+    - An AI that can read long documents or search the web
+  output:
+    - name: Question and search limits
+      contains: Your question in a searchable form, what was searched, the date range and what was left out.
+    - name: Source table
+      contains: Each source with its type, quality, whether it stands alone and the weight it gets.
+    - name: Evidence summary
+      contains: Findings sorted into well established, contested and single-study, with the sources for each.
+    - name: Repeated claims
+      contains: Claims that many places repeat but that trace to one original source.
+    - name: Gaps
+      contains: What was searched for and not found, so silence is not read as an answer.
+    - name: Confidence
+      contains: A low, moderate or high rating with the reason, tied to the weakest key source.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a stack of papers at once and quote the page a claim comes from. Web search lets it add sources.
+  inputs:
+    - The full text of each paper, not only the abstract.
+    - A line on who will use the summary and what they will decide.
+terms:
+  - term: Evidence synthesis
+    meaning: A summary that combines many sources and weighs them by quality.
+  - term: Primary source
+    meaning: The original study or data, not a report about it.
+  - term: Circular citation
+    meaning: Sources that look separate but all rest on one original claim.
+  - term: Grey literature
+    meaning: Reports and papers not published through journals, such as agency reports and white papers.
+tweaks:
+  - what: Question
+    how: Keep it narrow. "Does X lower Y in adults?" gives a sharper summary than "What is known about X?".
+  - what: Search limits
+    how: Tell it the years and languages to cover, and which kinds of source to skip.
+  - what: Strictness
+    how: Ask it to count only controlled studies and reviews if the decision is a costly one.
+improve:
+  - Keep the source table and add new sources to it, so each new run starts from the last one.
+  - Note which sources you overrode and why, then add that rule to your next brief.
+  - Use the gaps list to plan your own study or a call to an expert.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

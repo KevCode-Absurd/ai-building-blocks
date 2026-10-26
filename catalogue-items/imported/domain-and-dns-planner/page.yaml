@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sets a layout where small mistakes break sites.
 new_slug: domain-and-dns-planner
 name: Domain and DNS planner
-summary: List your domains and sites. Get a DNS layout, redirect rules and a
-  plan for unused names.
+summary: "Plan your domain and DNS setup: which address is main, what redirects where, and what to do with names you don't use. Give it your domain list."
 job: ship-and-host
 headline: Domain and DNS planner
-subhead: List your domains and sites. Get a DNS layout, redirect rules and a
-  plan for unused names. Bring a list of all your domains and their status. Use
-  the result to plan your next step.
+subhead: "Give it every domain you own, with its status and role. It works through five decisions in order: main address, subdomain or subfolder, registrar, DNS provider and unused names. You get a written plan you can enter in your DNS panel."
 explain: |
   A clear layout for how your domains, subdomains and DNS records fit together, including redirects and what to do with the names you do not use. It works for one site or a hundred.
 
@@ -18,6 +15,10 @@ when:
   - You are launching a new site and need to pick apex or www.
   - You are merging two sites and need redirects planned.
   - You must decide between a subdomain and a subfolder for a new product.
+not_for:
+  - "You are moving pages to a new platform and URLs will change: plan that move with content-migration first, then come back here for the DNS side."
+  - "You only need to set up email sign-in records such as SPF: use a email setup guide from your mail provider, or email-deliverability."
+  - "You want to add security headers or force HTTPS on your server: ask your host or developer, or use security-baseline."
 you_give:
   - A list of all your domains and their status
   - The role of each domain
@@ -30,7 +31,32 @@ you_get:
   - A plan for parked and unused names
   - A list of records to set
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Make a list of every domain you own. Add the status, role, registrar and DNS provider for each.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed.
+  - Paste your domain list and note any email or outside services that use these domains.
+  - Check the main address choice and the redirect map first. Fix anything that looks wrong for your sites.
+  - Enter the records in your DNS panel, then test each address with a browser or the curl command the plan gives you.
+  - Next, use monitoring-and-alerting to watch renewals and certificates.
+output_sample:
+  input:
+    - Your list of domains, with each one's status (live, parked, redirected or retired)
+    - The role of each domain (main brand, sub-brand, defensive, campaign)
+    - Your DNS provider and registrar for each domain
+    - Email and outside services that depend on your domains (optional)
+  output:
+    - name: Inventory
+      contains: One table of every domain with registrar, DNS provider, status, role, renewal date and notes.
+    - name: Classification
+      contains: Each domain marked as primary, alias, defensive, campaign or retired.
+    - name: Canonical decisions
+      contains: Whether the apex or the www address is the main one, and that the other redirects to it.
+    - name: Redirect map
+      contains: Every redirect with its source, destination, type, reason and date set.
+    - name: DNS standards
+      contains: The default records each domain needs, including address, mail, text and CAA records.
+    - name: Registrar standards
+      contains: Rules for lock, two-step sign-in, auto-renew and privacy on every domain.
+    - name: Monitoring
+      contains: What to watch for DNS, certificates, redirects and renewals, and where alerts go.
+    - name: Renewal calendar and review cadence
+      contains: Renewal dates for the next 12 months and when to review this plan again.

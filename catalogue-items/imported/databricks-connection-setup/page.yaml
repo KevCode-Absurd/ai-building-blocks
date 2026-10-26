@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Several sign-in options need the right match.
 new_slug: databricks-connection-setup
 name: Databricks connection setup helper
-summary: Say you want MATLAB linked to Databricks. Get sign-in, Spark or JDBC
-  set up and tested.
+summary: Connect MATLAB to Databricks with Spark or JDBC. Get your sign-in file set up and a test table read, so your link works the first time.
 job: build-software
 headline: Databricks connection setup helper
-subhead: MATLAB gets connected to Databricks and proven to work, whether you use
-  Spark or JDBC. First time setup of this link is fiddly, and this walks through
-  each piece.
+subhead: MATLAB gets connected to Databricks and proven to work, whether you use Spark or JDBC. First time setup of this link is fiddly, and this walks through each piece.
 explain: |
   MATLAB gets connected to Databricks and proven to work, whether you use Spark or JDBC. First time setup of this link is fiddly, and this walks through each piece.
 
@@ -18,6 +15,10 @@ when:
   - You need to read a huge table without loading all of it.
   - Your sign in keeps failing and you do not know why.
   - You want to write MATLAB results back to Databricks.
+not_for:
+  - "You want to run normal Database Toolbox queries after you are connected: use the matlab-use-database skill."
+  - "You need ODBC, the Databricks REST APIs or MLflow from MATLAB: use the Databricks docs or ask your Databricks admin."
+  - "You work in a Databricks notebook or in plain Python with no MATLAB: use the Databricks CLI or the Databricks docs."
 you_give:
   - Your Databricks workspace address
   - Sign in method you use
@@ -29,8 +30,35 @@ you_get:
   - A tested table read
   - Steps to write data back
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with a Databricks account.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page into the chat.
+  - Tell your AI your workspace address, how you sign in, and whether you use a cluster or a SQL Warehouse.
+  - Say how big your data is, so your AI can pick Spark or JDBC for you.
+  - Run the MATLAB code your AI gives you on your own computer. Your AI cannot run MATLAB in a chat, so paste back any error you see.
+  - Check that the test read works before you build on it. Never paste your token into the chat.
+  - You need a paid Databricks workspace, a MATLAB licence and Database Toolbox. The Spark route also needs the MATLAB Interface for Databricks package.
+output_sample:
+  input:
+    - Your Databricks workspace address
+    - "How you sign in: browser login, machine credentials or a personal access token"
+    - Your cluster ID or SQL Warehouse ID
+    - Whether your data is large or small, and if you want Spark or JDBC (optional)
+  prerequisites:
+    - MATLAB installed on your computer
+    - A Databricks workspace and your own credentials
+    - The MATLAB Interface for Databricks package, or Database Toolbox and a driver file for the standalone JDBC route
+    - Python 3.10 to 3.12 for the Spark route
+  output:
+    - name: Setup and startup
+      contains: Steps to run the package setup and startup so your settings and paths are ready in MATLAB.
+    - name: .databrickscfg
+      contains: Your sign-in file with the workspace address, sign-in method and cluster details.
+    - name: Path choice
+      contains: A pick between Spark and JDBC, with the reason based on your data size and work.
+    - name: Spark session or JDBC connection
+      contains: MATLAB code that opens your connection with the sign-in method named, plus the close step.
+    - name: Verify check
+      contains: "A quick test that the connection works: a one-row Spark test, or an empty JDBC message."
+    - name: Table read
+      contains: Code that filters a Unity Catalog table on the server, then pulls the result into a MATLAB table.
+    - name: Write-back steps
+      contains: Code to save a MATLAB table back to Databricks with Spark or JDBC.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans a calendar from audience and goals.
 new_slug: content-strategy-planner
 name: Content strategy planner
-summary: Describe your audience and goals. Get an editorial plan that maps
-  content to funnel stages.
+summary: Plan your content calendar from your audience and goals. Get topics matched to buyer stages, plus a keep, update or cut call on old posts.
 job: plan-strategy
 headline: Content strategy planner
-subhead: Describe your audience and goals. Get an editorial plan that maps
-  content to funnel stages. Bring your audience and their questions. Use the
-  result to plan your next step.
+subhead: Describe your audience and goals. Get an editorial plan that maps content to funnel stages. Bring your audience and their questions. Use the result to plan your next step.
 explain: |
   An editorial plan that matches each piece of content to a buyer stage and a business goal, so every article has a reason to exist. You can see what to publish, in what order, and what each piece should achieve.
 
@@ -18,6 +15,10 @@ when:
   - You need a three month calendar for your team or a client.
   - You want to audit old content and decide what to update or remove.
   - You must show your boss how content connects to goals.
+not_for:
+  - "You run a brand-new site with no content: skip the audit and ask for pillar pages and 10 to 15 supporting posts first."
+  - "You need one blog post: write a content brief for that post instead of a full plan."
+  - "You want ad copy or social captions only: ask your AI for those directly, since this plan does not write the pieces."
 you_give:
   - Your audience and their questions
   - Business goals
@@ -29,7 +30,31 @@ you_get:
   - Content audit with keep, update or cut calls
   - Success measures per piece
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Describe your business, your audience, your goals and how often you can publish.
+  - Paste your list of current content if you have one. Skip this if your site is new.
+  - Check that the calendar fits your team size. Ask your AI to cut pieces if it is too full.
+  - Review the plan every month and update it when your numbers change.
+output_sample:
+  input:
+    - Your business type
+    - Your audience and their questions
+    - Your goals
+    - Your current content list (optional)
+    - Your team size and how often you can publish
+  output:
+    - name: Goals
+      contains: Two or three goals you can measure, set before any topics are chosen.
+    - name: Personas and buyer stages
+      contains: Two to four buyer profiles, each linked to awareness, consideration and decision stages.
+    - name: Content pillars and topic clusters
+      contains: Three to five broad themes, each with a cluster of supporting pieces.
+    - name: Editorial calendar
+      contains: A three month table with topic, keyword, format, stage, persona, channel, author and publish date per piece.
+    - name: Content audit
+      contains: Each existing piece sorted into keep, update, merge or cut, with a reason.
+    - name: Distribution and repurposing plan
+      contains: Where each piece is shared and how it turns into other formats.
+    - name: KPIs and review rhythm
+      contains: Success measures for each stage and when to review and refresh the plan.

@@ -22,11 +22,11 @@ uses:
   - lesson-understanding-check
 steps:
   - uses: accessible-lesson-auditor
-    note: Identify barriers in the supplied materials and tasks using the stated access needs.
+    note: "Identify barriers in the supplied materials and tasks using the stated access needs. Hands step 2 the priority barriers and the unchanged learning goal."
   - uses: learning-options-designer
-    note: Offer different ways to access, practice and demonstrate the same learning.
+    note: "Offer different ways to access, practice and demonstrate the same learning. Uses step 1's priority barriers as the learner context. Hands step 3 the options and the goal."
   - uses: lesson-understanding-check
-    note: Create checks that measure the learning goal without the identified access barrier.
+    note: "Create checks that measure the learning goal without the identified access barrier. Uses the lesson stages from your lesson plan, with step 2's options and the goal alongside."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -1,15 +1,13 @@
 slug: bridge-floating-rate-changes-to-revolver-cost
 name: Bridge rate changes to revolver cost
-summary: A rate repricing scenario and revolving charge reconciliation
+summary: "Work out what a floating-rate rise adds to your revolving credit line, then reconcile the new interest and fees to the lender's statement."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -20,6 +18,7 @@ outputs:
     required: true
   - type: document
     required: true
+needs_mode: manual
 uses:
   - floating-rate-repricing-planner
   - revolver-interest-fee-checker

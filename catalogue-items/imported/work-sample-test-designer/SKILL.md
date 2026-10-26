@@ -10,6 +10,32 @@ metadata:
 
 Design and run structured assessments — skills tests, work samples, simulations, and assessment centers — that predict on-the-job performance more reliably than unstructured interviews alone.
 
+## What to ask for first
+
+When someone asks for a work sample test, collect these before you write anything:
+
+1. The role and level.
+2. The main tasks of the person's first 90 days.
+3. How much time a candidate can spend.
+4. Optional: the current hiring steps and how past hires turned out.
+
+If the role, level or time limit is missing, ask once. If it is still missing, write `MISSING: <what>` and design for a stated assumption the person can correct. Never invent job tasks, company facts or past results.
+
+## What to hand back
+
+Return these sections, in this order:
+
+1. **Test type and reason**: skills test, work sample, simulation or assessment centre, and why it fits the role and level.
+2. **Task brief**: the exercise, time limit, what to hand in, and a scenario taken from the first-90-days tasks. Keep it short enough to fit the time limit.
+3. **Scoring guide**: three to five criteria, with plain examples at each rating level.
+4. **Marker calibration plan**: how markers score a sample answer together before live candidates, and what to do when two calibrated markers disagree.
+5. **Fairness and bias checks**: steps that could block people for reasons unrelated to the job, with a fix for each.
+6. **Combining scores**: how to weigh the test and interview notes into one recommendation.
+
+End with: "You make the hiring decision. Try the test on a colleague first." Do not claim a test predicts performance for this role. Do not name studies or percentages.
+
+If the person asks only for part of this (a rubric, a fairness review, candidate instructions), do that part with the same rules.
+
 ## Supported tasks
 
 - Selecting the right assessment method for a given role and level

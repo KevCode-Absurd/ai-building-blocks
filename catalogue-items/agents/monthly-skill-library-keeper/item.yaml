@@ -12,15 +12,15 @@ inputs:
 outputs:
   - { type: audit_report }
   - { type: plan }
-uses: [ skill-trigger-auditor, skill-file-validator, skill-quality-tester, skill-safety-checker, skill-portability-checker, project-skill-finder, repeated-work-skill-finder ]
+uses: [ skill-trigger-auditor, skill-file-validator, skill-safety-checker, skill-quality-tester, skill-portability-checker, project-skill-finder, repeated-work-skill-finder ]
 steps:
-  - { uses: skill-trigger-auditor, note: "Every month: when each skill fires, and which skills block or copy each other." }
-  - { uses: skill-file-validator, note: "Every month, on each skill added or changed since last month: structure, wording and naming problems." }
-  - { uses: skill-quality-tester, note: "Only on skills that are new, changed, or flagged by the trigger audit: structure, scripts run and a score." }
-  - { uses: skill-safety-checker, note: "Only on skills that came from outside, or have new scripts since last month: risky code, data leaks and hidden commands." }
-  - { uses: skill-portability-checker, note: "Only when the skills are used in more than one AI tool: mistakes that stop them loading elsewhere." }
-  - { uses: project-skill-finder, note: "Only when nothing unsafe was found, and you gave a project: skills worth adding or updating." }
-  - { uses: repeated-work-skill-finder, note: "Only when you gave screen or session history: tasks you repeat that could become skills." }
+  - { uses: skill-trigger-auditor, note: "Every month: when each skill fires, and which skills block or copy each other. Uses your whole skills folder. Hands the list of skills that fire badly or clash on to the test choice." }
+  - { uses: skill-file-validator, note: "Every month, on each skill added or changed since last month: structure, wording and naming problems. Uses those skill files, not step 1's grades. Hands the problem list to the final fix list." }
+  - { uses: skill-safety-checker, note: "Only on skills that came from outside, or have new scripts since last month: risky code, data leaks and hidden commands. Runs before any test and never runs the skill's code. Hands a do-not-run list to the test and portability steps." }
+  - { uses: skill-quality-tester, note: "Only on skills that are new, changed or flagged by the trigger audit, and that passed step 3: structure, scripts run and a score. Uses those skill files, minus any marked do not run. Hands the scores to the fix list." }
+  - { uses: skill-portability-checker, note: "Only when the skills are used in more than one AI tool, and only on skills that passed step 3: mistakes that stop them loading elsewhere. Uses the same skill files. Hands the fixes to the fix list." }
+  - { uses: project-skill-finder, note: "Only when nothing unsafe was found, and you gave a project: skills worth adding or updating. Uses your project folder, not the portability fixes. Hands the skill ideas to the fix list." }
+  - { uses: repeated-work-skill-finder, note: "Only when nothing unsafe was found, and you gave screen or session history: tasks you repeat that could become skills. Uses your history, not step 6's list. Hands draft skills to add to next month's folder." }
 schedule: "First Monday of each month"
 asks_before: [ editing, deleting or renaming any skill, installing a skill from outside, running a script that came with a skill, sharing or publishing a skill ]
 origin: own

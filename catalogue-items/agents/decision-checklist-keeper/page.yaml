@@ -1,6 +1,6 @@
 new_slug: decision-checklist-keeper
 name: Decision checklist keeper
-summary: Give it each big decision and, later, how it turned out. Get a checked call now and a sharper checklist over time.
+summary: Check a big decision before you make it. Give it the choice and the facts. You get a checked call, a review date and a sharper checklist.
 job: think-and-decide
 thinking: high
 thinking_why: It picks its path from how hard the choice is to undo, loops on a failed check and judges old decisions by process. Use your strongest model.
@@ -14,6 +14,10 @@ when:
   - You face a decision that is hard to undo and want it checked the same way each time.
   - You keep making the same kind of mistake and want a list that catches it.
   - A past decision has played out and you want to learn from it fairly.
+not_for:
+  - "You face a small choice that is easy to undo: just decide, and check it later if it matters."
+  - "You need money, legal or health advice: ask a qualified person, since this agent only gives a way to think."
+  - "You do not yet have the facts: gather them first, because this agent will only send you back to find them."
 you_give:
   - The decision, who it touches and when it is due
   - What you know and what you wish you knew
@@ -30,6 +34,32 @@ how_to_use:
   - Make the call yourself. It saves the decision with a review date.
   - On the review date, give it what happened. Say yes or no to each change it proposes for your checklist.
   - The first time you have no checklist. After three decisions on file, it offers to build one.
+output_sample:
+  input:
+    - The decision, who it touches and the date it is due
+    - What you know and what you wish you knew
+    - What is at stake, such as money, time or your name
+    - Your checklist and past decisions (optional)
+  prerequisites:
+    - An AI that can save files in a decisions folder, such as Claude Code
+    - Your decision log and notes on how past choices turned out (optional)
+  output:
+    - name: Decision and door
+      contains: One line on the choice, whether it is easy or hard to undo, and what undoing would cost.
+    - name: Evidence bar
+      contains: How much evidence is enough, how much you have, what to get first and the date to decide.
+    - name: Pressures and the case against
+      contains: The strongest pressures and the best argument against the choice, for hard-to-undo decisions only.
+    - name: Ruin check
+      contains: The outcome you could not recover from and a capped version, when money, time or your name is at stake.
+    - name: Checklist result
+      contains: Each checklist item marked pass, fail or unknown, with evidence and the number of rounds it took.
+    - name: The call
+      contains: Go, change, wait or not ready, with the reason, what would prove it wrong and a review date.
+    - name: Review
+      contains: What you expected against what happened, a verdict on the process and proposed checklist changes for your yes.
+    - name: Files and missing
+      contains: Each step's saved file and every MISSING line in one list.
 how_it_works:
   - title: Sort the door
     text: Asks how hard the choice is to undo and what undoing would cost. That sets how much checking it gets.

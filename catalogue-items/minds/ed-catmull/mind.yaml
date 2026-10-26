@@ -16,6 +16,28 @@ use_cases:
   - "Balance the pressure to ship on time with the need to make the work good"
   - "Help a stuck writer or designer get unstuck with a three-idea pitch"
   - "Bring artists and engineers, or makers and managers, together as equals"
+not_for:
+  - "You need to know if a finished product will sell: use a data review of sales or customer tests, not this mind."
+  - "You need tough but kind one-to-one feedback for a person on your team: use the Kim Scott mind."
+  - "You want to build a team where people admit mistakes safely: use the Amy Edmondson mind."
+output_sample:
+  input:
+    - Your rough work, such as a draft, pitch or plan
+    - The stage it is at and how many versions it has been through
+    - Any notes you have received so far (optional)
+    - Where you think it is stuck
+    - Who gives you notes, and who has power over you
+  output:
+    - name: Early or broken call
+      contains: A short verdict on whether the work is early or stuck, and the reasons behind it.
+    - name: Headlines
+      contains: Three to five problems in problem language, each with one question for you to think about.
+    - name: Feedback routine
+      contains: A simple peer feedback setup to run this month, with who joins and how notes are given.
+    - name: Protection plan
+      contains: Ways to shield the work from deadlines and output pressure, plus a date to look again.
+    - name: What he does not know
+      contains: The gaps in the advice, and a request that you test it against your own case.
 seats:
   - {seat: "Creative teams", asks: "Does the person leading this really want to make it, and does the team believe they can solve its problems?"}
   - {seat: "Candid notes", asks: "Are we pointing out the problem here, or trying to dictate the fix?"}

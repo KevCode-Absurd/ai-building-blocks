@@ -1,6 +1,6 @@
 new_slug: lender-safety-verdict-writer
 name: "Lender safety verdict writer"
-summary: "Paste your coverage and cushion results. Get a meets-the-bar, speculative or reject call, with reasons and what would change it."
+summary: "Get a clear call on loan safety: meets the bar, speculative or reject. Paste your test results and loan terms to see the reasons and what would change it."
 job: money-and-investing
 thinking: high
 thinking_why: "It weighs several tests, resists a persuasive story and has to say what would change its mind. That needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You have run the safety tests and want one call you can defend.
   - A borrower is offering a high rate, a short term or collateral to make up for thin numbers.
   - You want to write down why you said yes or no before you commit.
+not_for:
+  - "You want to judge a share, not a loan or bond: this skill only tests debt, so ask a licensed financial adviser."
+  - "You have not run the earnings cover and cushion tests yet: run the Average earnings coverage tester and the Equity cushion ratio tester first."
+  - "The decision is large or personal, or you cannot afford to lose the money: talk to a licensed financial adviser, because this is a method, not advice."
 
 you_give:
   - The results from "Average earnings coverage tester" and "Equity cushion ratio tester"
@@ -35,6 +39,29 @@ how_to_use:
   - Add anything you know about the borrower's past.
   - Read the ranked reasons, then the facts that would change the call.
   - Put the borrower question to them in writing.
+output_sample:
+  input:
+    - The result from the Average earnings coverage tester
+    - The result from the Equity cushion ratio tester
+    - "The loan terms: amount, rate, due date, early repayment terms, security and your price"
+    - What you know about the borrower's age, size and record (optional)
+  prerequisites:
+    - Results from the Average earnings coverage tester and the Equity cushion ratio tester
+  output:
+    - name: The results
+      contains: "Three lines: the label, the earnings cover against its bar, and the cushion against its bar."
+    - name: Exclusion checks
+      contains: A yes or no on size, record, the whole borrower and the honesty of the accounts.
+    - name: Terms notes
+      contains: Short notes on the due date, rate, pledge, rate risk and your price against the repayment price.
+    - name: Call
+      contains: "One of three calls: meets the bar, speculative at these terms, or reject."
+    - name: Why, ranked
+      contains: The reasons for the call, biggest first, then the facts that would change it and a question for the borrower.
+    - name: Test again
+      contains: A date to run the tests again and the events that should trigger it.
+    - name: Missing and checks missed
+      contains: Facts you did not give, and any checks the skill still missed.
 
 how_it_works:
   - title: Starts from refusal

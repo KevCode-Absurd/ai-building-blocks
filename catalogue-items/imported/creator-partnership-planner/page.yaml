@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It plans each stage of a partnership.
 new_slug: creator-partnership-planner
 name: Creator partnership planner
-summary: Say what you sell. Get a plan to find creators, set deals, brief them
-  and track results.
+summary: "Plan your creator partnership: find and vet creators, set fair deals, write the brief and track results. Give it your product, price and budget."
 job: grow-social
 headline: Creator partnership planner
-subhead: A plan to find creators, agree deals, brief them and measure what the
-  partnership earns. You get a repeatable way to run influencer, ambassador and
-  sponsorship work.
+subhead: A plan to find creators, agree deals, brief them and measure what the partnership earns. You get a repeatable way to run influencer, ambassador and sponsorship work.
 explain: |
   A plan to find creators, agree deals, brief them and measure what the partnership earns. You get a repeatable way to run influencer, ambassador and sponsorship work.
 
@@ -18,6 +15,10 @@ when:
   - You paid an influencer and can't tell if it worked.
   - You need a brief to send to a creator.
   - You want to start an ambassador program.
+not_for:
+  - "You want one organic post and have no budget: post it yourself, or ask a friend to share it."
+  - "You need to set up affiliate or referral payouts: use a referral program tool or set the payout rules in your own store."
+  - "You want to build advocacy inside an online community: use a community marketing plan, not a paid creator plan."
 you_give:
   - Your product and price
   - Your audience
@@ -30,7 +31,34 @@ you_get:
   - Creative brief
   - Measurement plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Tell your AI what you sell, your price, your audience and your budget.
+  - Say which platforms you want, or leave this out and let it suggest some.
+  - Read the plan. Check the creator vetting steps and the disclosure rules first.
+  - Send the brief and outreach messages to your shortlist, then follow the checklist through to the review.
+output_sample:
+  input:
+    - What you sell and its price
+    - Your audience
+    - Your budget, and whether it is cash or free product
+    - The platforms you care about (optional)
+    - Your product marketing notes, if you have them (optional)
+  prerequisites:
+    - A chat AI such as Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  output:
+    - name: Finding and vetting partners
+      contains: Where to look for creators and the checks to run before you reach out.
+    - name: Outreach
+      contains: Message ideas for first contact with a creator.
+    - name: Structuring the deal
+      contains: How to choose between a flat fee, commission or free product, with pay guides.
+    - name: Disclosure and compliance
+      contains: The rules for labelling paid posts so the partnership stays legal.
+    - name: The creative brief
+      contains: A template you send to the creator so they know what to make.
+    - name: Measurement and ROI
+      contains: How to track results and judge what the partnership earned.
+    - name: Ambassador program design
+      contains: How to set up a longer-term ambassador program, if you want one.
+    - name: Run-of-show checklist
+      contains: Steps from sourcing and outreach to execution and the post-campaign review.

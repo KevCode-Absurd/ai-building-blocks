@@ -1,53 +1,96 @@
 new_slug: stock-split-eps-restatement
 name: Stock-split EPS restatement
 headline: Stock-split EPS restatement
-summary: Restate historical shares and EPS onto a consistent post-split basis.
+summary: "Restate past EPS and share counts after a stock split or reverse split so every year compares on one basis, with earnings unchanged."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A comparative EPS restatement schedule that preserves total earnings. Share confirmed split or reverse-split terms, affected comparative EPS, weighted shares and event dates.
+subhead: "Give it the split terms and dates, plus each past year's reported EPS and weighted average shares. It restates every earlier year onto the new share basis and checks that earnings did not change. You get a before and after table and a list of terms to confirm."
 explain: |-
-  A comparative EPS restatement schedule that preserves total earnings.
+  When a company splits its stock, each share becomes more shares. The company did not earn more, so earnings per share (EPS) drops by the same factor. Past years must be restated, or the trend line breaks at the split. This stock split EPS calculator restates the past years for you.
 
-  Public equity and share counts. Illustrative figures. A two-for-one split changes $2 EPS and 100 million shares into $1 EPS and 200 million shares; earnings remain $200 million. A 0.5 reverse factor yields $4 and 50 million.
+  The skill works in new shares per old share. A two-for-one split is 2. A one-for-two reverse split is 0.5. Getting this upside down is the most common slip, so it repeats the factor back to you before it calculates. Shares are multiplied by the factor and EPS is divided by it. With more than one split, it multiplies the factors together.
+
+  Then it checks its own answer. Restated EPS times restated shares must equal the original EPS times the original shares. That is the same earnings. If the company also sold shares for cash in a year, that is a separate effect, and the skill keeps it apart from the split.
 when:
-  - You need a comparative EPS restatement schedule that preserves total earnings.
-  - You work on public equity and share counts and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - "A company you follow has just split its stock, and old EPS no longer compares with new EPS."
+  - "You are charting EPS over several years and need one share basis for all of them."
+  - "A split took place after the year end, and you need that year's EPS on the new basis."
+  - "You are checking the restated EPS in an annual report against the originals."
+not_for:
+  - "The company sold shares at a discount to market, such as in a rights issue: use the Rights-issue EPS adjustment."
+  - "You want weighted average shares from dated share issues and buybacks: use the Weighted-average share schedule."
+  - "You want diluted EPS from options or convertible notes: use the Treasury-stock option dilution or the Convertible EPS inclusion test."
+  - "The split is only announced and its terms are not confirmed. Wait for the confirmed terms."
 you_give:
-  - Confirmed split or reverse-split terms, affected comparative EPS, weighted shares and event dates.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The split terms: new shares for each old share, such as 2 for 1, or 1 for 2 for a reverse split"
+  - "The announcement date and the effective date"
+  - "Each past year's reported EPS and weighted average shares, from the annual report"
+  - "The currency and the scale, such as USD and millions of shares"
+  - "Earnings for each year, to cross-check (optional)"
 you_get:
-  - A comparative EPS restatement schedule that preserves total earnings.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The split factor, in new shares per old share"
+  - "Restated weighted shares and restated EPS for each year, beside the originals"
+  - "A check that earnings are the same before and after"
+  - "Notes on any year where the split falls before or after the period"
+  - "A list of missing figures and terms to confirm"
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Open the skill in Claude, ChatGPT or Gemini, or paste it in as your first message. Add it to your AI if you want to reuse it."
+  - "Paste the split terms and the table of past EPS and weighted shares. Say the currency and the scale. Attach the annual report page if you can."
+  - "Confirm the direction in plain words, such as 2 new shares for each old share. The AI repeats the factor back before it calculates."
+  - "Check that the restated table sits beside the original, and that earnings match in every year."
+  - "Use the restated column in your chart or comparison. Keep the original column on file."
 how_it_works:
-  - title: 1. Read the announced and effective split terms; express the factor as new shares per old share, including subsequent comparative-period events where required
-    text: Read the announced and effective split terms; express the factor as new shares per old share, including subsequent comparative-period events where required.
-  - title: 2. Multiply historical weighted shares by the cumulative factor and divide historical EPS by it; preserve the original reported columns
-    text: Multiply historical weighted shares by the cumulative factor and divide historical EPS by it; preserve the original reported columns.
-  - title: 3. Multiply restated EPS by restated weighted shares and reconcile to the same ordinary earnings; separate split effects from issuance proceeds
-    text: Multiply restated EPS by restated weighted shares and reconcile to the same ordinary earnings; separate split effects from issuance proceeds.
+  - title: 1. Reads the terms
+    text: Writes the factor as new shares per old share, with the announced and effective dates, and repeats it back to you.
+  - title: 2. Restates each year
+    text: Multiplies each year's weighted shares by the cumulative factor and divides its EPS by the same factor.
+  - title: 3. Keeps the original
+    text: The reported columns stay in the table, so a reader can see both bases.
+  - title: 4. Checks earnings
+    text: Restated EPS times restated shares must equal the original. Share sales for cash are kept apart from the split.
 output_shape: |-
-  A comparative EPS restatement schedule that preserves total earnings.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SPLIT TERMS
+  <new shares> for <old shares> | Factor: <new per old> | Announced: <date> | Effective: <date>
+
+  RESTATED TABLE
+  <year> | Reported EPS: <amount> | Reported shares: <amount> | Restated EPS: <amount> | Restated shares: <amount> | Earnings: <amount>
+
+  CHECK
+  Earnings before: <EPS x shares> | After: <EPS x shares> | Same: <yes or no>
+
+  NOTES
+  <years affected, later splits, cash issues kept apart>
+
+  MISSING
+  <figures not supplied>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+output_sample:
+  input:
+    - "The split terms and dates, such as 2 new shares for each old share"
+    - "Each past year's reported EPS and weighted average shares"
+    - "The currency and the scale of the share counts"
+  prerequisites:
+    - "The annual report pages that show EPS and weighted average shares"
+    - "An AI that can make files, only if you want a spreadsheet (optional)"
+  output:
+    - {name: "Split terms", contains: "The factor in new shares per old share, with announced and effective dates."}
+    - {name: "Restated table", contains: "Each year's reported and restated EPS and shares, side by side, with earnings."}
+    - {name: "Check", contains: "Earnings before and after the restatement, and whether they match."}
+    - {name: "Notes", contains: "Years where the split falls before or after the period, and any cash issue kept apart."}
+    - {name: "Workbook (optional)", contains: "An editable spreadsheet with inputs, formulas and a checks tab, if your AI can make files."}
+    - {name: "MISSING and CHECKS MISSED", contains: "What you did not supply, and every check that failed or could not run."}
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
+  - what: Reverse split
+    how: Give the factor as a fraction, such as 0.5 for one new share for two old ones. Shares fall and EPS rises.
+  - what: More than one split
+    how: List each split with its date. The skill multiplies the factors for years before both.
+  - what: Many years
+    how: Paste the whole table at once. Each year is restated and checked on its own line.
   - what: Acceptance
-    how: Share factor orientation is new-for-old rather than its inverse.
+    how: Factor direction is new for old, and restated and original EPS times shares give the same earnings.
 judge:
   - Share factor orientation is new-for-old rather than its inverse.
   - Restated and original EPS times shares give the same numerator.
@@ -58,19 +101,25 @@ test:
   - Remove a required input and confirm the affected calculation refuses to invent a zero.
   - Recalculate the workbook after changing an input and inspect the saved output.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - "Save the company's split history once, so each new report only adds the new year."
+  - "Keep the original and restated tables together, and note the filing page for each."
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Any good chat AI
+      why: The sums are short, so the AI can show the table in the chat.
+    - name: A file-capable AI or a spreadsheet app
+      why: Needed only if you want an editable workbook with a checks tab.
+    - name: Node.js 20 or later (optional)
+      why: Runs the bundled script that repeats the sums, as a second check.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The company's split announcement or filing
+    - The annual report pages with EPS and weighted average shares
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: EPS
+    meaning: Earnings per share. Profit for ordinary shareholders divided by the weighted average number of shares.
+  - term: Weighted average shares
+    meaning: The number of shares outstanding, averaged over the year by how long each share existed.
+  - term: Split factor
+    meaning: New shares for each old share. A 2-for-1 split is 2. A 1-for-2 reverse split is 0.5.
+  - term: Restatement
+    meaning: Changing past figures so they match the new share basis. The earnings themselves do not change.

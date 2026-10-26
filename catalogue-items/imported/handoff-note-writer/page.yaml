@@ -2,34 +2,102 @@ thinking: low
 thinking_why: It sums up a chat in a set format.
 new_slug: handoff-note-writer
 name: Handoff note writer
-summary: Finish or pause a chat. Get a short handoff note that another AI can
-  carry on from.
+summary: Write a handoff note from a long AI chat. A fresh AI can pick up with what is done, what is open and the next step, no re-explaining.
 job: organise-work
 headline: Handoff note writer
-subhead: Ask for a handoff when a long chat is done. It boils the work down to
-  what is done, what is open and what comes next, pointing to files by path
-  instead of copying them. You get a short note, the open items and the skills
-  the next session should use.
+subhead: "Ask for a handoff when a long chat is done or paused. It boils the work down to what is done, what is open and what comes next, and points to files by path instead of copying them. You get a short note to paste into a new AI chat."
 explain: |
-  A short note that lets a fresh AI chat carry on exactly where this one stopped. Long chats get slow and messy. Instead of pasting it all into a new one, ask for a handoff.
+  Long AI chats get slow and start to lose track. A handoff note lets you start a fresh chat without re-explaining the whole job. You paste the note in, and the new AI knows the goal, what is finished and what to do first.
 
-  The note sums up the state of the work, what is done, what is open, and what to do next. It points to plans, issues or files by path or link instead of copying them. It lists which skills the next assistant should call. It strips out passwords, keys and personal details. If you say what the next session is for, the note is tuned to that. It saves to a temp folder, not your project.
+  The note stays short. It points to plans, tickets and files by path or link instead of copying them in. It names the skills the next chat should use. It strips out keys, passwords and personal details.
+
+  This note is written for another AI, not for a colleague. If you say what the next chat is for, the note is tuned to that job.
 when:
-  - Your chat is long and the AI has started losing track.
-  - You want to switch to a new session without re-explaining everything.
-  - You are passing a half-finished task to another AI or teammate.
-  - You need to stop for the day and pick up cleanly tomorrow.
+  - Your chat is long and the AI has started to forget or repeat itself.
+  - You want a new chat for the next stage without re-explaining everything.
+  - You stop for the day and want to pick up cleanly tomorrow.
+  - You move the work from one AI tool to another, for example from Claude to ChatGPT.
+not_for:
+  - "The next reader is a coding agent that will run alone: use the Coding agent handoff writer or the Task handoff writer."
+  - "You are handing a shift to an engineer: use the On-call handoff writer."
+  - "You want to pass the work to a person with a clear status: use the Status report writer."
+  - "The chat is short, or you can still copy the answer by hand: skip the note."
 you_give:
-  - The finished or paused chat
-  - What the next session will be used for (optional)
+  - The chat you want to hand off (stay in it and ask)
+  - What the next chat will be used for (optional)
   - Links or file paths for related plans and tickets (optional)
 you_get:
-  - A compact handoff note
-  - A list of open items and next steps
-  - Pointers to related files instead of copied text
-  - Skills the next session should use
+  - A one-page note with the goal, what is done and what is open
+  - The first step for the next chat
+  - Pointers to files and links, not copied text
+  - A list of skills the next chat should use
+  - A line confirming keys, passwords and personal details were left out
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini in the chat you want to hand off. Paste the skill text at the end of it.
+  - Say what the next chat is for, for example "Edit the draft and publish it."
+  - Read the note. Check that the goal, the open items and the file names are right, and that no secret is in it.
+  - If your AI cannot save files, it shows the note in the chat. Copy it.
+  - Open a new chat and paste the note first. Then say "Carry on from this note."
+  - If your tool lets you save files, ask for the note as a file, and attach it to the new chat.
+how_it_works:
+  - title: Read the whole chat
+    text: Finds the goal, the decisions made and the work still open.
+  - title: Point, do not copy
+    text: Links to specs, plans, issues and files by path or link instead of pasting them.
+  - title: Name the next skills
+    text: Lists which skills the next session should call.
+  - title: Remove secrets
+    text: Takes out keys, passwords and personal details.
+  - title: Tune to the next job
+    text: If you said what comes next, it shapes the note around that.
+output_shape: |
+  GOAL
+  <what the work is for>
+
+  DONE
+  - <finished item>
+
+  OPEN
+  - <unfinished item or open choice>
+
+  NEXT STEP
+  <the first thing to do>
+
+  WHERE THINGS ARE
+  - <path or link>
+
+  SUGGESTED SKILLS
+  - <skill name>
+
+  LEFT OUT
+  Keys, passwords and personal details.
+output_sample:
+  input:
+    - The chat you want to hand off
+    - What the next chat is for (optional)
+    - Links or paths for plans and tickets (optional)
+  output:
+    - name: Goal
+      contains: One or two lines on what the work is for.
+    - name: Done and open
+      contains: What is finished, and what is still undecided or unfinished.
+    - name: Next step
+      contains: The first thing the new chat should do.
+    - name: Where things are
+      contains: Paths and links to plans, issues and files, not copies.
+    - name: Suggested skills
+      contains: The skills the next chat should use for the job.
+works_best_with:
+  tools:
+    - name: Claude Code or an AI that can save files
+      why: It can save the note as a file in a temporary folder, not your project.
+    - name: Any chat AI
+      why: It shows the note in the chat and you copy it into the next one.
+  inputs:
+    - A line on what the next chat is for
+    - Paths to the files the work touches
+terms:
+  - term: Handoff note
+    meaning: A short summary one AI session writes so the next one can carry on.
+  - term: Skill
+    meaning: A saved set of instructions your AI can reuse for one job.

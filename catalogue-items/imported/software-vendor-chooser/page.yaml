@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Choosing a vendor means weighing cost, risk and fit.
 new_slug: software-vendor-chooser
 name: Software vendor chooser
-summary: Give it your needs and options. Get vendors scored against your
-  criteria, RFP questions, risk notes and a contract checklist.
+summary: Choose a software vendor with a weighted scorecard. Give it your need and options. You get scores, risk notes and a contract checklist.
 job: think-and-decide
 headline: Software vendor chooser
-subhead: A clear pick between software tools or suppliers, backed by scores you
-  can show your team. Tell it the need, budget, timeline and who will use the
-  tool.
+subhead: A clear pick between software tools or suppliers, backed by scores you can show your team. Tell it the need, budget, timeline and who will use the tool.
 explain: |
   A clear pick between software tools or suppliers, backed by scores you can show your team. Tell it the need, budget, timeline and who will use the tool. It works in five phases. First it defines the real problem before any demos. Then it asks whether you should build instead of buy.
 
@@ -18,6 +15,10 @@ when:
   - A renewal is coming and you need to know whether to stay or switch.
   - You need to write an RFP and do not know what to ask.
   - You want to check how risky a supplier is before signing.
+not_for:
+  - "You only want to cut costs across the board: use a cost review with your finance lead, not this vendor choice process."
+  - "You are hiring an agency for one small project: a short quote comparison is enough."
+  - "Your current vendor has a problem that may be fixable: raise it with them first, then come back if it fails."
 you_give:
   - The problem you want solved
   - Your budget and timeline
@@ -30,7 +31,32 @@ you_get:
   - A contract negotiation checklist
   - A build versus buy view
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Tell your AI the problem, your budget, your timeline and who will use the tool.
+  - List the vendors you are comparing. If you have none, ask your AI to suggest a shortlist.
+  - Share what you learned from demos, trials and reference calls so the scores use real facts.
+  - Check the scorecard with your team. Where scores differ, talk about why before you decide.
+  - Use the contract checklist before you sign, and have legal review the contract.
+output_sample:
+  input:
+    - The problem you want solved and what success looks like
+    - Your budget, timeline and who will use the tool
+    - The vendors you are comparing, or none yet
+    - Must-have integrations or compliance rules (optional)
+  output:
+    - name: Need brief
+      contains: The problem, success goals, limits and the people involved.
+    - name: Build vs buy decision
+      contains: Whether to make the tool yourself or buy one, with the reasons.
+    - name: Shortlist
+      contains: Two to four finalists, each with a short description.
+    - name: Scorecard
+      contains: Each finalist scored 1 to 5 on weighted areas such as fit, security, cost and lock-in.
+    - name: Security and compliance summary
+      contains: What was found for each finalist, with any gaps stated plainly.
+    - name: Recommendation
+      contains: Which vendor to pick and why.
+    - name: Negotiated terms
+      contains: Terms to ask for, such as price, renewal notice, support promises and exit rights.
+    - name: Rollout plan and renewal calendar
+      contains: Onboarding, training and migration steps, plus renewal and notice dates.

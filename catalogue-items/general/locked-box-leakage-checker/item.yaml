@@ -1,15 +1,13 @@
 slug: locked-box-leakage-checker
 name: Locked-box leakage checker
-summary: Find unrecovered nonpermitted leakage still reducing the locked-box equity price.
+summary: "Find money that left the company for the seller after the locked-box date, and see how much it cuts the equity price at closing."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - deal-ticking-fee-checker
+  - closing-equity-proceeds-checker
+  - reconcile-a-locked-box-closing-price
 origin: own
 version: 1.0.0
 added: 2026-10-22

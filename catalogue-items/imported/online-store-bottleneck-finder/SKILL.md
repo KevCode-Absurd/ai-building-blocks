@@ -5,212 +5,138 @@ description: "Supply Chain Bottleneck Analyzer for Shopify/DTC stores. Diagnose 
 metadata: {"nexscope":{"emoji":"📦","category":"ecommerce"}}
 ---
 
-# Supply Chain Optimization — Shopify/DTC 📦
+# Online store bottleneck finder (Shopify and direct-to-consumer)
 
-Supply chain bottleneck analyzer for Shopify and Direct-to-Consumer stores. Diagnose cash flow, inventory, shipping, and customer acquisition costs.
+Find the one thing holding a Shopify or direct-to-consumer (DTC) store back. Check four areas: cash flow, stock, shipping and logistics cost, and customer acquisition cost against customer value. Name the biggest bottleneck and rank the fixes.
 
-## Installation
+## When to use it and when not to
 
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill supply-chain-optimization-shopify -g
-```
+Use it for a store that already sells and has real numbers: revenue, product cost, shipping, ad spend, stock.
 
-## Platform Characteristics
+Do not use it for:
+- A store with no sales yet. There are no numbers to diagnose.
+- A marketplace-only seller (Amazon, Walmart). The fee structure here does not fit.
+- A problem inside one warehouse, such as picking methods. Use the Pick, pack and ship improver.
+- A full profit-by-product view. Use the Store profit margin calculator.
 
-| Feature | Shopify/DTC | vs Amazon |
-|---------|-------------|-----------|
-| Fulfillment | Self-select (ShipBob/self) | FBA |
-| Platform fee | None | 8-15% |
-| Payment fee | 2.9% + $0.30 | Included in fee |
-| Payment cycle | 2-3 days | 14 days |
-| Traffic cost | High (self-built) | Low (platform) |
-| Data ownership | Full | Limited |
+## What you hand back
 
-## Cost Structure (Shopify/DTC)
+One report in the layout under "Output Format". It names the bottleneck, shows the numbers behind it, and ranks the fixes.
 
-```
-Selling Price $XX
-├── Product Cost
-├── Inbound Shipping (to warehouse)
-├── 3PL Storage Fee (e.g., ShipBob)
-├── 3PL Fulfillment Fee
-├── Payment Processing (2.9% + $0.30)
-├── Shopify Subscription (allocated)
-├── Advertising (Meta/Google/TikTok) ← Key Cost
-└── Net Profit
-```
+## Steps
 
-## Benchmark Configuration
+1. **Collect the inputs.** Use the list under "Input data". Ask once, in one message, for anything missing. The must-haves are selling price (or average order value), product cost, shipping and fulfillment cost per order, and ad spend. Mark every other gap MISSING. Never invent a figure. If the user pastes a Shopify export or a spreadsheet, read the figures from it and say which file each came from.
+2. **Work out the cost per order.** Use the cost structure below. Show each line as money per order and as a share of the selling price. Payment fees are the percent plus the fixed amount the user's own payment provider charges. Ask if unsure.
+3. **Check the four areas.** For each, work out the figure from the user's data and compare it with the rule of thumb in the table below. Say clearly that these are rough rules of thumb, not facts for every store.
+   - Cash flow: how many days from paying for stock to getting paid back.
+   - Stock: days of stock on hand, and how much cash it holds.
+   - Shipping and logistics: cost per order as a share of the selling price.
+   - Customer acquisition: cost to win a customer (CAC), customer lifetime value (LTV), and LTV divided by CAC.
+4. **Rate each area** healthy, warning or danger against the rule of thumb. If an area has no data, rate it NOT CHECKED. Do not guess a rating.
+5. **Name the one bottleneck.** Pick the area that does the most damage to profit or cash, using the diagnosis list below. Say why in two or three plain sentences, with the numbers.
+6. **Rank the fixes.** List 3 to 6 fixes. Order them by likely payoff, with the easiest first when payoff is close. For each, say what to do, what it should change, and what number to watch. Label any gain as an estimate and show the inputs behind it.
+7. **Say what you could not check** and what the user could bring next time to close the gaps.
 
-```python
-BENCHMARKS = {
-    "shopify": {
-        "gross_margin": {
-            "healthy": 0.60,    # DTC needs high margin for ads
-            "warning": 0.50,
-            "danger": 0.40
-        },
-        "shipping_ratio": {
-            "healthy": 0.08,    # 3PL fees
-            "warning": 0.12,
-            "danger": 0.18
-        },
-        "inventory_days": {
-            "healthy": 45,
-            "warning": 60,
-            "danger": 90
-        },
-        "cash_cycle": {
-            "healthy": 45,      # Fast payment
-            "warning": 70,
-            "danger": 100
-        },
-        "net_margin": {
-            "healthy": 0.20,
-            "warning": 0.12,
-            "danger": 0.05
-        },
-        # DTC-specific metrics
-        "cac": {               # Customer Acquisition Cost
-            "healthy": 0.25,   # CAC < 25% of price
-            "warning": 0.35,
-            "danger": 0.50
-        },
-        "ltv_cac_ratio": {     # LTV/CAC
-            "healthy": 3.0,    # LTV > 3x CAC
-            "warning": 2.0,
-            "danger": 1.0
-        },
-        "ad_spend_ratio": {    # Ad spend ratio
-            "healthy": 0.25,
-            "warning": 0.35,
-            "danger": 0.45
-        }
-    }
-}
-```
-
-## DTC-Specific Costs
-
-### Advertising Costs (Critical!)
+## Input data
 
 ```
-Meta Ads (Facebook/Instagram): CPM $10-30
-Google Ads: CPC $1-5
-TikTok Ads: CPM $5-15
-Influencer Marketing: Variable
+Sales
+- Average selling price: ___
+- Average order value (AOV): ___
+- Payment fee: ___% + ___ per order
 
-DTC ad spend typically 20-40% of revenue
+Logistics (your own shipping or a 3PL)
+- Fulfillment fee per order: ___
+- Storage fee per unit per month: ___
+- Receiving fee per case: ___
+- Inbound shipping to the warehouse: ___
+
+Stock and cash
+- Product cost per unit: ___
+- Days of stock on hand: ___
+- Days to pay your supplier, and days until you receive sales money: ___
+
+Marketing
+- Ad spend as a share of revenue: ___%
+- Customer acquisition cost (CAC): ___
+- Customer lifetime value (LTV): ___
+- Repeat purchase rate: ___%
 ```
 
-### 3PL Logistics Costs
+## Cost structure
 
 ```
-Common 3PL Options:
-├── ShipBob
-├── Deliverr
-├── ShipMonk
-└── Red Stag
-
-Fee Structure:
-├── Receiving: $2-5/case
-├── Storage: $0.5-1/cubic ft/month
-├── Pick & Pack: $2-4/order
-└── Shipping: By weight/zone
+Selling price
+- Product cost
+- Inbound shipping (to the warehouse)
+- 3PL storage fee (for example ShipBob, if you use one)
+- 3PL fulfillment fee
+- Payment processing (percent plus fixed amount)
+- Shopify subscription (spread across orders)
+- Advertising (Meta, Google, TikTok): usually the key cost
+= Net profit
 ```
 
-### Payment Processing Fees
+Net profit = price - product cost - shipping - payment fee - ad spend - operating cost.
 
-```
-Shopify Payments: 2.9% + $0.30
-PayPal: 2.9% + $0.30
-Stripe: 2.9% + $0.30
+## Rules of thumb (rough defaults from the original skill, not sourced)
 
-High AOV: Ratio acceptable
-Low AOV: Erodes profit
-```
+Tell the user these are starting points to check against their own category and margins. Let them replace any of them.
 
-## Input Data
+| Measure | Healthy | Warning | Danger |
+|---|---|---|---|
+| Gross margin | 60% or more | 50% | 40% or less |
+| Shipping and 3PL cost as a share of price | 8% or less | 12% | 18% or more |
+| Days of stock | 45 or fewer | 60 | 90 or more |
+| Cash cycle in days | 45 or fewer | 70 | 100 or more |
+| Net margin | 20% or more | 12% | 5% or less |
+| CAC as a share of price | 25% or less | 35% | 50% or more |
+| LTV divided by CAC | 3 or more | 2 | 1 or less |
+| Ad spend as a share of revenue | 25% or less | 35% | 45% or more |
 
-```
-**Sales (Shopify-specific)**
-• Average Selling Price: $___
-• Average Order Value (AOV): $___
-• Payment Fee: 2.9% + $0.30
+The original skill also says DTC ad spend is often 20 to 40 percent of revenue, and that gross margin needs to be high to pay for ads. Treat these as general ideas to test against the user's own figures. Do not present any ad price (CPM, CPC) or 3PL fee as current. Ask the user for their own.
 
-**Logistics (3PL)**
-• 3PL Fulfillment Fee: $___/order
-• 3PL Storage Fee: $___/unit/month
-• Receiving Fee: $___/case
+## Diagnosis list
 
-**Marketing (Critical!)**
-• Ad Spend Ratio: ___%
-• Customer Acquisition Cost (CAC): $___
-• Customer Lifetime Value (LTV): $___
-• Repeat Purchase Rate: ___%
-```
+Common DTC bottlenecks, in the order to check:
 
-## API Integration
+1. High CAC: ads cost too much for each customer won.
+2. LTV divided by CAC below 3: a customer is not worth enough to cover the cost of winning them.
+3. High 3PL or shipping cost: poor logistics choice or rates.
+4. Low repeat rate: relying on new customers, which costs more.
+5. Low gross margin: not enough room to pay for ads.
 
-### Shopify Admin API
+## Output Format
 
-```bash
-export SHOPIFY_STORE_URL="xxx.myshopify.com"
-export SHOPIFY_ACCESS_TOKEN="xxx"
-```
+### Bottleneck report for <store>
 
-### Available Data
+**The bottleneck:** <one area> because <one or two sentences with the user's numbers>.
 
-| Data | API |
-|------|-----|
-| Orders | Orders API |
-| Products | Products API |
-| Inventory | Inventory API |
-| Customers | Customers API |
+**Numbers behind it**
+| Measure | Your figure | Rule of thumb | Rating |
+|---|---|---|---|
+| <measure> | <figure or MISSING> | <healthy value> | <healthy / warning / danger / NOT CHECKED> |
 
-### 3PL API (e.g., ShipBob)
+**Cost per order**
+| Line | Per order | Share of price |
+|---|---|---|
+| <product cost, shipping, fees, ads, other> | <amount> | <percent> |
+| Net profit | <amount> | <percent> |
 
-```bash
-export SHIPBOB_API_TOKEN="xxx"
-```
+**Fixes, ranked by payoff**
+| Rank | Fix | What it should change | Number to watch | Estimate and inputs |
+|---|---|---|---|---|
 
-## Bottleneck Diagnosis Focus
+**What I could not check:** <list of MISSING items>
 
-DTC-specific bottlenecks:
+**Next step:** <one action for this week>
 
-1. **High CAC** → Low ad efficiency, acquisition cost eating profit
-2. **LTV/CAC < 3** → Customer value insufficient to support CAC
-3. **High 3PL costs** → Poor logistics choice
-4. **Low repeat rate** → Reliant on new customers, high cost
-5. **Low gross margin** → Cannot support ad spend
+## Data access
 
-## DTC Health Formula
+No API key is needed. Plain numbers from the user are enough. Reading orders, products and stock straight from a Shopify store, or fees from a 3PL such as ShipBob, needs that account's API access. Offer it only if the user has it and wants it. Otherwise ask for an export or the figures.
 
-```
-Net Profit = Price - Product Cost - Shipping - Payment Fee - Ad Spend - Ops Cost
-
-DTC Golden Ratios:
-├── Gross Margin > 60%
-├── Ad Spend < 30%
-├── Shipping < 15%
-├── Net Margin > 15%
-└── LTV/CAC > 3
-```
-
-## vs Amazon Comparison
-
-| Item | Amazon | Shopify/DTC |
-|------|--------|-------------|
-| Platform fee | 8-15% | 0% |
-| Payment fee | Included | 2.9% + $0.30 |
-| Payment cycle | 14 days | 2-3 days |
-| Ad spend | 10-20% | 20-40% |
-| Traffic | Platform | Self-built |
-| Margin need | 40%+ | 60%+ |
-| Data | Limited | Full ownership |
+The `scripts` folder holds an optional Python calculator and report writers. Use them only if code can run. Run with no input, the calculator uses built-in sample figures, so never report its output unless you passed the user's own figures. If you cannot run code, do the sums in the chat.
 
 ---
 
-**Part of [Nexscope AI](https://www.nexscope.ai/?co-from=skill) — AI tools for e-commerce sellers.**
-
-
+Method and benchmark defaults from the Nexscope AI skill `supply-chain-optimization-shopify` (MIT licence). See LICENSE.

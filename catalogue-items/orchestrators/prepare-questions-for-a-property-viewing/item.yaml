@@ -1,6 +1,7 @@
 slug: prepare-questions-for-a-property-viewing
 name: Prepare questions for a property viewing
-summary: Share the source files. Get a source-linked viewing brief and questions to verify in person.
+summary: Prepare for a property viewing. Get a brief that separates listing
+  claims from facts, plus questions to ask and checks to make in person.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -22,9 +23,14 @@ uses:
   - unsupported-claim-spotter
 steps:
   - uses: source-note-summariser
-    note: Extract actual supplied price, area, access, condition statements and terms with their source and date; separate facts from listing assertions.
+    note: Extracts the supplied price, area, access, condition statements and terms
+      with their source and date, and separates facts from listing assertions.
+      Hands step 2 the viewing brief.
   - uses: unsupported-claim-spotter
-    note: Check listing assertions and the existing viewing notes for unsupported guarantees, missing measurements and claims needing official or qualified evidence.
+    note: Reads step 1's brief together with your listing text and viewing notes.
+      Checks listing assertions for unsupported guarantees, missing measurements
+      and claims needing official or qualified evidence. Hands back the ranked
+      claims to verify.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22
@@ -34,9 +40,13 @@ credits:
   - title: Source note summariser
     by: AI Blocks
     url: https://useaiblocks.com/skills/source-note-summariser
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
   - title: Unsupported claim spotter
     by: Pro Skill Packs
     url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
-    used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+    used: Component skill used as a separate, attributed dependency. This recipe
+      adds original sequencing, handoff rules and acceptance checks. The
+      component's own licence and source remain in its pack.
 warnings: []

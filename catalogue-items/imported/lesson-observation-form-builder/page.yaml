@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It must pick look-fors that match the goal.
 new_slug: lesson-observation-form-builder
 name: Lesson observation form builder
-summary: Give it what you want to learn from a visit. Get look-fors and a way to
-  record evidence.
+summary: Build a lesson observation form with clear look-fors and a sheet to record evidence, so peer and coaching visits stay focused.
 job: teach-and-train
 headline: Lesson observation form builder
-subhead: "A focused observation form for classroom visits, with the specific
-  things to look for and a way to record what you see as evidence. Say what you
-  want to learn from the visit and why it is happening: coaching, peer learning,
-  quality checks or research."
+subhead: "A focused observation form for classroom visits, with the specific things to look for and a way to record what you see as evidence. Say what you want to learn from the visit and why it is happening: coaching, peer learning, quality checks or research."
 explain: |
   A focused observation form for classroom visits, with the specific things to look for and a way to record what you see as evidence. Say what you want to learn from the visit and why it is happening: coaching, peer learning, quality checks or research. The skill insists on one narrow lens, not everything.
 
@@ -19,6 +15,10 @@ when:
   - A coach is observing questioning and needs a clear form.
   - You want observation notes that stick to what happened.
   - You need to prepare a feedback talk after a visit.
+not_for:
+  - "You need to decide a teacher's pay, rank or formal performance rating: use your school's own appraisal process, as this form is built for coaching and learning."
+  - "You want to talk with a teacher but have not seen a lesson: use a plain list of open questions from a coach or mentor."
+  - "You want to watch everything in a lesson: pick one narrow focus first, because a broad form gives vague notes."
 you_give:
   - The teaching practice to observe
   - Purpose of the observation
@@ -30,7 +30,27 @@ you_get:
   - A way to separate facts from opinion
   - Questions for the follow-up talk
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the full skill text. No code, files or paid tools are needed.
+  - Write the one teaching practice you want to observe. Keep it narrow, not everything.
+  - "Say why the visit is happening: coaching, peer learning, a quality check or research."
+  - Add what you have from the optional list, such as subject, class age, visit length and school mood.
+  - Read the look-fors. Cut any that you cannot see or hear in a lesson.
+  - Print the recording template and use it in the visit. Then use the feedback plan for your talk.
+output_sample:
+  input:
+    - The teaching practice you want to observe
+    - Why the visit is happening (coaching, peer learning, quality check or research)
+    - The teacher's experience, subject and class age (optional)
+    - How long the visit lasts (optional)
+    - The mood about observation in your school (optional)
+  output:
+    - name: Before the Observation
+      contains: Steps to agree the focus with the teacher and prepare the observer before the visit.
+    - name: Look-Fors
+      contains: Specific, visible behaviours linked to your focus that show what good looks like in practice.
+    - name: Recording Template
+      contains: A table for the observer to note timed evidence, with exact quotes, during the visit.
+    - name: Post-Observation Feedback Framework
+      contains: A plan and questions for a useful talk with the teacher after the visit.
+    - name: What NOT to Look For
+      contains: Things the observer should leave out so the visit stays on one lens.

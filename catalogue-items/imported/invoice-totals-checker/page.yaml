@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It recomputes sums and checks a short list of fields.
 new_slug: invoice-totals-checker
 name: Invoice totals checker
-summary: Give it an invoice. Get every line and total recalculated, and any
-  missing fields or date problems listed.
+summary: Check invoice totals before you pay or send. Give it the invoice. You get every line, discount, tax and total recalculated, plus missing fields.
 job: track-numbers
 headline: Invoice totals checker
-subhead: Every number on an invoice rechecked, so you pay or send the right
-  amount. Paste the invoice text, a table or a CSV. The skill pulls out each
-  line, the discounts, the tax and the stated totals.
+subhead: Every number on an invoice rechecked, so you pay or send the right amount. Paste the invoice text, a table or a CSV. The skill pulls out each line, the discounts, the tax and the stated totals.
 explain: |
   Every number on an invoice rechecked, so you pay or send the right amount. Paste the invoice text, a table or a CSV. The skill pulls out each line, the discounts, the tax and the stated totals. Then it recomputes them, using a small Python script if it can run one, and compares the results with what the invoice says.
 
@@ -18,6 +15,10 @@ when:
   - You are about to send an invoice and want to catch mistakes first.
   - You suspect a discount or tax line was applied wrongly.
   - You need a list of what to ask the sender to fix.
+not_for:
+  - "You need to know which tax rate applies or what an invoice must legally include: ask an accountant or your tax authority."
+  - "You only have a photo or a scanned PDF it cannot read: type the figures into text first, or ask the sender for a text copy."
+  - "You want to match many invoices against bank payments: use a spreadsheet or ask your bookkeeper."
 you_give:
   - The invoice as text, a table or a CSV
   - Whether you are sending or receiving it (optional)
@@ -29,7 +30,27 @@ you_get:
   - Date and consistency flags
   - Questions to send to the other party
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - Paste your invoice as text, a table or a CSV. If it is a PDF, copy the text out of it first.
+  - Say if you are sending or receiving it, and name the currency (both optional).
+  - Read the result line first, then the differences table.
+  - If your AI could not run code, check the hand-worked sums yourself.
+  - Send the questions list to the other party, or fix your own invoice before it goes out.
+output_sample:
+  input:
+    - Your invoice as pasted text, a table or a CSV
+    - Whether you are sending or receiving it (optional)
+    - The currency (optional)
+  prerequisites:
+    - An AI that can run Python is best, but not needed. Without it, the sums are worked by hand and shown for you to check.
+  output:
+    - name: Result line
+      contains: One line saying all lines and totals match, or how many differences were found.
+    - name: Differences
+      contains: A table of each item with the stated figure, the recomputed figure and the gap.
+    - name: Missing or unclear fields
+      contains: Which common invoice fields are present or absent, with a reminder to check your own local rules.
+    - name: Consistency flags
+      contains: Problems such as a due date before the invoice date, mixed currencies, possible duplicate lines or odd rounding.
+    - name: Questions
+      contains: What to ask the sender or yourself to fix, plus a note on whether a script or hand arithmetic was used.

@@ -1,0 +1,155 @@
+name: HTML to PDF layout architect agent
+summary: Fix HTML to PDF layout for A4, Letter or custom pages. Get print CSS, page-break rules and checks that catch blank pages and blurry text.
+headline: HTML to PDF layout architect agent
+subhead: Tell it the document you print and the page size. It plans the page size, margins and print styles, then the checks that catch blank pages and blurry text. Built for developers who turn web pages into PDFs.
+job: work-with-files
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  PDFs made from web pages go wrong in small, annoying ways. The last page
+  comes out blank. Text turns blurry after one shadow effect. The PDF no longer
+  matches the page on screen. This HTML to PDF layout architect agent treats
+  the paper as fixed geometry. A print-ready PDF then comes out the same every
+  time.
+
+
+  It starts from the page size in millimetres and works down. It sets the page
+  size when the page loads. It adds a tiny height buffer so rounding cannot push
+  content onto a second page. It removes effects such as blur and drop shadow,
+  which make a browser turn sharp text into a picture. It prints from a
+  snapshot of the live page, so the PDF and the screen share one template. It
+  also covers tagged PDFs for screen readers and the PDF/A archive format.
+
+
+  It writes designs and code. It cannot run a browser or open a PDF in a chat,
+  so every check it lists is still yours to run. The speed and accuracy targets
+  in the profile are goals from its author, not results measured by AI Blocks.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide.
+when:
+  - Your app exports invoices, statements or resumes to PDF and the last page often comes out blank.
+  - Text or logos in your PDF look blurry because a shadow or blur effect turned them into pictures.
+  - One page must print on A4, US Letter and a custom size without breaking.
+  - You need tagged PDFs for accessibility and want a plan to check them.
+not_for:
+  - You want to make one PDF from text or a sheet and have no code. Use the PDF maker and reader or the Document file generator.
+  - You want to read, merge, split or fill PDFs you already have. Use the PDF toolkit.
+  - You need a Word, slide or Excel file. Use the Document generator agent for PDF, Word, slides and Excel.
+  - You want an Excel sheet to print well. Use the Excel print layout fixer.
+  - You need a designer to judge how the page looks or a print proof. Ask a person.
+you_give:
+  - What the document is and who reads or prints it, such as an invoice or a resume
+  - The page size or sizes, such as A4, US Letter or a custom width and height
+  - How your code makes the PDF today, such as React with Puppeteer (optional)
+  - The bug, plus a snippet of the page HTML and CSS if you have it (optional)
+  - Must-haves such as a tagged PDF, PDF/A or how many PDFs you make per minute (optional)
+you_get:
+  - The page size in mm, pt and px, with margins and the page style block to inject
+  - A list of CSS in your page that forces blurry pictures, each with a safe swap
+  - A plan for page breaks, fonts and blank-page protection
+  - A plan to make the PDF in a reused headless browser, with code to adapt
+  - Pass or fail checks to run on the finished PDF, and the guesses you must confirm
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Say what the document is, the page size and what goes wrong. Paste the page HTML and CSS if you can.
+  - Type "Design the PDF layout for this page" or "Find what causes the blank last page".
+  - Read the checks list first. Run each check on a real PDF from your own code. The AI cannot render one for you.
+  - Ask a developer to review any code before it goes near live systems. For a Claude Code agent, copy references/source-agent.md into .claude/agents/.
+how_it_works:
+  - title: Fix the page size
+    text: It turns your paper size into mm, pt and px and sets margins, with the page size injected when the page loads.
+  - title: Snapshot the page
+    text: It plans to print from a copy of the live page, so the PDF cannot drift from what users see on screen.
+  - title: Keep text sharp
+    text: It lists blur and shadow effects that force pictures of text, and swaps in flat styles.
+  - title: Guard the page edge
+    text: It adds a half-pixel height buffer and break rules so rounding cannot create a blank page.
+  - title: Compile the PDF
+    text: It plans a reused headless browser that waits for fonts, then saves with tags and backgrounds on.
+  - title: Check the file
+    text: It lists tests for selectable text, no text-as-picture and the PDF/A and accessibility steps, to run with a real validator.
+output_shape: |-
+  PAGE GEOMETRY
+    Size: <name> | <mm> | <pt> | <px at 96 DPI>
+    Margins: <top> <right> <bottom> <left>
+    Page style block: <code to inject at load>
+
+  PRINT STYLE RULES
+    <rule> | <why it keeps text sharp> | <what to remove or swap>
+
+  BREAK AND BLANK-PAGE PLAN
+    <element> | <break rule> | <buffer or fix>
+
+  COMPILE PLAN
+    <step> | <setting or code> | <who runs it>
+
+  ACCESSIBILITY AND PDF/A
+    <step> | <tool to confirm it>
+
+  CHECKS
+    <check> | <how to run it> | <pass or fail, or NOT RUN>
+
+  OPEN ASSUMPTIONS
+    <guess> | <what to confirm>
+output_sample:
+  input:
+    - The document and who prints it, such as an invoice
+    - The page size, such as A4 or US Letter
+    - How you make the PDF today, and the bug (optional)
+    - A snippet of your page HTML and CSS (optional)
+  prerequisites:
+    - A developer who can run code and test a PDF
+    - Claude, ChatGPT or Gemini, or an agent such as Claude Code that can read your code
+  output:
+    - name: Page geometry
+      contains: Page size in mm, pt and px, margins, and the page style block to inject at load.
+    - name: Print style rules
+      contains: CSS to remove or swap so text and shapes stay sharp, such as blur and drop shadow.
+    - name: Break and blank-page plan
+      contains: Where pages may break and the small buffer that stops a blank last page.
+    - name: Compile plan
+      contains: How the PDF is saved in a reused headless browser, with font waiting and settings.
+    - name: Accessibility and PDF/A
+      contains: Steps to tag the PDF and save it as PDF/A, and the validator to confirm each.
+    - name: Checks
+      contains: Pass or fail tests for the finished PDF, each marked NOT RUN until you run it.
+    - name: Open assumptions
+      contains: What the AI guessed and what you must confirm.
+works_best_with:
+  tools:
+    - name: Claude Code or another agent with access to your code
+      why: It can read your templates and CSS and point to the exact lines that cause blank pages or blurry text.
+    - name: Claude, ChatGPT or Gemini in a chat
+      why: Good for the design and the plan. You paste code in and copy changes out yourself.
+  inputs:
+    - A real PDF that shows the bug, opened next to the page on screen.
+    - Your paper sizes and any rule that fixes them, such as a printer or form requirement.
+terms:
+  - term: Print CSS
+    meaning: Styles used only when a page is printed or saved as a PDF.
+  - term: Headless browser
+    meaning: A browser that runs without a window, so code can open pages and save PDFs.
+  - term: Tagged PDF
+    meaning: A PDF with a hidden structure of headings and paragraphs that screen readers use.
+  - term: PDF/A
+    meaning: A PDF format made for long-term archiving.
+  - term: Vector
+    meaning: Text and shapes stored as drawing instructions, so they stay sharp at any zoom.
+  - term: Playwright
+    meaning: A code tool that drives a browser, used here to save pages as PDFs.
+tweaks:
+  - what: Scope
+    how: Ask for one thing at a time, such as only the blank-page fix or only the accessibility plan.
+  - what: Language
+    how: Name your stack, such as React with Puppeteer or Python with WeasyPrint, so the code fits it. The profile favours Playwright.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

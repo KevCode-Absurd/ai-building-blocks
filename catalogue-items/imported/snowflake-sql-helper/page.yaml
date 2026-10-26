@@ -2,35 +2,107 @@ thinking: medium
 thinking_why: It follows platform rules and writes the SQL.
 new_slug: snowflake-sql-helper
 name: Snowflake SQL helper
-summary: Describe your data job. Get Snowflake SQL, pipelines and AI function
-  calls that follow its rules.
+summary: Write Snowflake SQL for upserts, live tables and access grants. Get ready-to-test statements that avoid the usual Snowflake traps.
 job: build-software
 headline: Snowflake SQL helper
-subhead: Snowflake SQL, pipelines and AI function calls written to match
-  Snowflake's own rules. Describe the data job, and the helper returns code that
-  avoids the usual traps.
+subhead: Describe your Snowflake data job and name your tables. Your AI writes the SQL for it, such as a MERGE upsert, a Dynamic Table that stays fresh, or role grants. You also get a list of things to review before you run it.
 explain: |
-  Snowflake SQL, pipelines and AI function calls written to match Snowflake's own rules. Describe the data job, and the helper returns code that avoids the usual traps.
+  Snowflake has its own rules, and small slips cost time. A variable without a colon in a stored procedure fails with "invalid identifier". A task you forget to resume never runs. This Snowflake SQL helper writes the code with those rules built in. It also checks its own result against a list of common errors before it hands it back.
 
-  A small Python script generates ready templates: a MERGE upsert from a staging table, a Dynamic Table with a lag, and role grants with the right privileges. Around that, the skill covers semi-structured JSON, the colon rule in procedures, Streams with Tasks, Cortex AI functions, agent specs, Snowpark Python and dbt settings. It also gives tuning notes. The script runs with Python, and the SQL needs a Snowflake account. Check grants before running them on shared data.
+  It comes with a small Python script that prints three ready templates: a MERGE statement that upserts rows from a staging table, a Dynamic Table with a refresh lag, and grants for a role. Around that, the skill covers JSON in VARIANT columns, Streams with Tasks, Cortex AI function calls, Snowpark Python, dbt settings and tuning notes.
+
+  The SQL needs a Snowflake account to run, and some features are billed. Test in a dev schema and check grants before you use it on shared data.
 when:
-  - You need to upsert new rows into a customer table.
-  - You want a table that stays fresh within five minutes of its source.
+  - You need to upsert new rows into a customer table from a staging table.
+  - You want a table that stays within five minutes of its source.
   - You must give an analyst role read access to a few schemas.
   - You are setting up dbt to run on Snowflake.
+not_for:
+  - "Your database is not Snowflake: use the SQL query helper."
+  - "You only want to design tables, with no Snowflake code yet: use the Database schema designer."
+  - "You need the code checked against your live account: ask a Snowflake admin or an engineer to review it first."
 you_give:
   - The data job in plain words
-  - Source and target table names
-  - Key columns and refresh timing
-  - A Snowflake account to run the output
+  - The source and target table names
+  - The key column that identifies a row
+  - How fresh the data must be, such as every 5 minutes (optional)
+  - Which roles need access to which schemas (optional)
 you_get:
   - A MERGE upsert statement
-  - A Dynamic Table definition
+  - A Dynamic Table definition with its refresh lag
   - Role and grant statements
-  - Cortex or Snowpark code when needed
+  - Cortex AI or Snowpark code when your job needs it
+  - A list of things to review before you run it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Write down the job in plain words. Collect the table names and the key column. Note how fresh the data must be.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text. Then paste your description and table details.
+  - Read the plan first. It names the Snowflake feature it chose and why. Ask for a different one if it does not fit.
+  - Read the review list before you run anything. Look at grants, warehouse size and any task that needs to be resumed.
+  - Run the SQL in a dev schema in your own Snowflake account. Your AI cannot run it for you in a chat.
+  - Check row counts and a few sample rows against the source. Then move it to production.
+how_it_works:
+  - title: Name the feature
+    text: It picks Dynamic Tables, Streams with Tasks, Snowpipe or a plain query, and says why.
+  - title: Write the SQL
+    text: It follows Snowflake style, with snake_case names, CTEs and explicit column lists.
+  - title: Use the templates
+    text: For upserts, Dynamic Tables and grants, it uses the helper script or the same templates by hand.
+  - title: Check for known traps
+    text: It checks for a missing colon, SELECT star in a Dynamic Table, old AI function names and hardcoded credentials.
+  - title: Handle AI functions
+    text: For Cortex calls it uses the current function names and tells you to test on a small sample first, since they are billed.
+  - title: Hand over a review list
+    text: It lists the grants, costs and data changes to check before you run the code.
+output_shape: |
+  Plan: <the job, the Snowflake feature chosen, why>
+  SQL:
+  -- <what this statement does>
+  <statement>
+  Why these choices: <note per choice, such as the lag or key column>
+  Review before running: <grants, warehouse size and cost, tasks to resume>
+  Test steps: <dev schema, row counts, sample check>
+  Not checked: <anything it could not confirm>
+output_sample:
+  input:
+    - The data job in plain words
+    - Source and target table names, and the key column
+    - How fresh the data must be (optional)
+    - Which roles need access to which schemas (optional)
+  prerequisites:
+    - A Snowflake account to run the SQL
+    - A dev schema to test in first
+    - Python 3 to run the helper script (optional)
+  output:
+    - name: Plan
+      contains: The job in one sentence and the Snowflake feature chosen for it.
+    - name: SQL statements
+      contains: A MERGE upsert, a Dynamic Table or grants, in run order, each with a comment.
+    - name: Why these choices
+      contains: Short notes on the lag, key column, warehouse and any other non-obvious choice.
+    - name: Review list
+      contains: Grants, costs, tasks to resume and data changes to check before you run it.
+    - name: Test steps
+      contains: How to try it in a dev schema and check it against the source.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can run the helper script and save the SQL into your project.
+    - name: Any good chat AI
+      why: It writes the SQL by hand from the same templates. You run it in Snowflake yourself.
+    - name: Snowflake worksheets or SnowSQL
+      why: This is where you run and test the SQL in your own account.
+  inputs:
+    - Your table definitions
+    - A few sample rows, with private data removed
+    - The warehouse names you use
+terms:
+  - term: MERGE
+    meaning: A statement that updates rows that exist and inserts rows that do not, in one go.
+  - term: Dynamic Table
+    meaning: A table defined by a query that Snowflake keeps up to date on its own.
+  - term: Stream and Task
+    meaning: A stream tracks changes to a table. A task is a job that runs on a schedule, often when a stream has new data.
+  - term: VARIANT
+    meaning: A Snowflake column type that holds JSON.
+  - term: Cortex
+    meaning: Snowflake's built-in AI functions, such as classify and extract. They are billed by use.

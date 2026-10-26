@@ -2,34 +2,82 @@ thinking: medium
 thinking_why: It reads many reviews and sorts them into themes.
 new_slug: review-insight-finder
 name: Review insight finder
-summary: Give it your product reviews. Get the pain points, praise and feature
-  requests, ranked by how often they come up.
+summary: Paste your product reviews. Get complaints, praise and feature requests ranked by how often they come up, with real customer quotes and fixes to try.
 job: run-your-store
 headline: Review insight finder
-subhead: Your customer reviews boiled down to what people complain about, what
-  they love and what they ask for, ranked by how often each comes up.
+subhead: Paste 30 or more reviews of one product. Your AI tags each one, counts the themes and ranks complaints, praise and requests. You get real quotes, fixes to consider and customer wording for your page.
 explain: |
-  Your customer reviews boiled down to what people complain about, what they love and what they ask for, ranked by how often each comes up. You see the biggest fixes at the top of the list.
+  A pile of reviews holds your next product fix and your best page copy. The trouble is reading hundreds of them. This review insight finder sorts them into themes and counts how often each one comes up, so the biggest problems and strengths sit at the top.
 
-  Paste or upload reviews from any platform. The skill scores the overall mood, separates praise and pain points into themes, and counts how often each theme appears. It filters out reviews that look fake or empty, and watches for change over time. Requests for features are pulled out and ranked, with gaps no one fills noted as chances. If you add competitor reviews, it compares what customers say about each.
+  Your AI tags every review you paste, counts each theme and ranks the lists. It also checks the star spread and the mood over time, if you gave dates. Quotes are copied word for word from your reviews. If you paste competitor reviews, it compares what customers say about each brand.
+
+  It uses only your reviews. It does not guess at market size, revenue or fake reviews. A theme in a few reviews is called a hint, not a pattern.
 when:
   - You have hundreds of reviews and no time to read them.
   - You are deciding which product fix to make next.
-  - You want customer wording for your product page.
+  - You want customer wording for your product page or ads.
   - You want to compare your reviews with a rival's.
+not_for:
+  - You have fewer than about 30 reviews. Read them yourself. The counts will not mean much.
+  - You want the reasons people buy. Use the Review reason spotter.
+  - You need to know if reviews are real. Use the Fake review spotter.
+  - You want a reply to one review. Use the Customer review reply writer.
 you_give:
-  - Customer reviews, pasted or as a file
+  - Customer reviews, pasted or as a file, with star rating and date if you have them
   - The product name
-  - Competitor reviews (optional)
-  - The platform they come from (optional)
+  - Competitor reviews that you paste in (optional)
+  - Where the reviews came from (optional)
 you_get:
-  - Pain points ranked by how often they appear
-  - Praise themes to use in marketing
+  - Complaints ranked by how many reviews raise them
+  - Praise themes ranked the same way
   - Feature requests ranked
-  - Mood over time
-  - A comparison with competitors if provided
+  - Word-for-word customer quotes for each top theme
+  - Fixes to consider and customer wording for your page
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Copy your reviews from your store, Amazon or another site into one file or message. Keep the star rating and date with each review if you can. The skill does not fetch reviews, so you paste them.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it in. Paste the reviews and the product name. Add competitor reviews if you want a comparison.
+  - Check the first line of the report. It says how many reviews were used and how many were set aside.
+  - Spot-check two themes. Search your reviews for the theme and see that the count looks right.
+  - Pick the top complaint and fix it first. Use the quotes in your page copy.
+output_sample:
+  input:
+    - Your product reviews, pasted or as a file
+    - The product name
+    - Star rating and date for each review (optional)
+    - Competitor reviews that you paste in (optional)
+  prerequisites:
+    - At least about 30 reviews, or the report gives themes without percents
+  output:
+    - name: What I used
+      contains: How many reviews were read, from where and when, and how many were set aside.
+    - name: Star spread and mood
+      contains: Reviews at each star level, the average, the mood and whether it is improving or falling.
+    - name: Complaints, ranked
+      contains: Each theme with review count, share and a word-for-word quote.
+    - name: Praise, ranked
+      contains: The strengths customers mention most, with counts and quotes.
+    - name: Requests, ranked
+      contains: Features customers ask for, with how many reviews asked.
+    - name: Against competitors
+      contains: Top praise and top complaint for each brand, if you pasted their reviews.
+    - name: Fixes and customer words
+      contains: Up to five fixes to consider and phrases customers use, for your page or ads.
+    - name: What this cannot tell you
+      contains: The limits of review data, such as who did not write a review.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Pick one that takes long pastes or file uploads, since review sets are big.
+    - name: A spreadsheet
+      why: Helps you export reviews and check a count.
+  inputs:
+    - Reviews from every place you sell, not just one
+    - The last 6 to 12 months, so the mood trend means something
+    - A rival's reviews, pasted in, for the comparison
+terms:
+  - term: Theme
+    meaning: A short label for what a review is mostly about, such as "arrives damaged".
+  - term: Sentiment
+    meaning: Whether the feeling in a review is positive, mixed or negative.
+  - term: Share
+    meaning: The percent of all reviews used that carry a theme.

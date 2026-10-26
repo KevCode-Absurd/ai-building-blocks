@@ -2,36 +2,62 @@ thinking: high
 thinking_why: Automatic tuning needs good metrics and judgement.
 new_slug: dspy-prompt-optimizer
 name: DSPy prompt optimizer
-summary: Describe your AI task and a few examples. Get a program that tunes its
-  own prompts to score better.
+summary: Tune your AI prompts with data, not guesswork. Give a task and examples, and get DSPy code that scores your prompts before and after.
 job: build-software
 headline: DSPy prompt optimizer
-subhead: A small program that tunes its own prompts, so you stop hand-editing
-  wording and start measuring scores. You describe an AI task and give a few
-  examples, and you get working DSPy code plus an optimiser run that improves
-  it.
+subhead: Give your AI a task, a few examples and a scoring rule. It writes DSPy code, tests your prompt, and tunes it using your examples. You get the code and a before and after score.
 explain: |
   A small program that tunes its own prompts, so you stop hand-editing wording and start measuring scores. You describe an AI task and give a few examples, and you get working DSPy code plus an optimiser run that improves it.
 
   DSPy, from Stanford, lets you declare what goes in and what comes out, then builds the prompt for you. The skill covers installing it, writing the signature for your task, wrapping it in modules for steps like reasoning or retrieval, and choosing a metric. An optimiser then tests prompt and example variations against your data and keeps the best. It suits question answering, classifiers, RAG pipelines and agents. You need Python and a model API key.
 when:
   - Your prompt works on some inputs and fails on others.
-  - You want a repeatable score instead of guessing at wording.
-  - You are building a RAG or classifier and want it tuned.
-  - You want to swap models without rewriting prompts.
+  - You want a score you can track instead of guessing at wording.
+  - You are building a question answering tool, a classifier or a search-based answer tool and want it tuned.
+  - You want to switch AI models without rewriting your prompts.
+not_for:
+  - "You need one prompt for a one-off task: write it by hand and test it in your AI chat."
+  - "You have no labelled examples yet: collect 20 or more first, or use plain prompting until you do."
+  - "You have no Python or no model API key: ask a developer to set it up first."
 you_give:
-  - A description of the AI task
-  - A handful of example inputs and answers
-  - A scoring rule for good output
-  - Python and a model API key
+  - A plain description of your AI task
+  - 20 or more example inputs with the right answers
+  - A rule for what counts as a good answer
+  - A model API key
 you_get:
   - DSPy code for your task
-  - A metric to score outputs
-  - An optimised program
-  - A comparison of before and after scores
+  - A metric that scores each answer
+  - A tuned program saved to a file
+  - A table of before and after scores
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code and call an AI model.
+  - Open a chat with an AI that can run Python code. You also need Python and a model API key.
+  - Paste this skill and describe your task in plain words.
+  - Add 20 or more examples with the right answers, and say what a good answer looks like.
+  - Ask your AI to write the metric, then run a baseline score before any tuning.
+  - Ask it to run the optimiser on your examples, then compare the new score with the baseline.
+  - Check the tuned program on a few new inputs before you use it.
+output_sample:
+  input:
+    - A plain description of your AI task
+    - 20 or more example inputs with the right answers
+    - A rule for what counts as a good answer
+    - Your model API key
+  prerequisites:
+    - An AI that can run Python code
+    - Python installed, with DSPy added
+    - A key for an AI model such as Claude or OpenAI
+  output:
+    - name: Signature
+      contains: The inputs and outputs of your task, written as a DSPy class with a short description.
+    - name: Module
+      contains: The step that runs your task, such as plain prediction, step-by-step reasoning or a search step.
+    - name: Metric
+      contains: A function that scores each answer against the right one.
+    - name: Baseline evaluation
+      contains: The score of your program before any tuning.
+    - name: Optimised program
+      contains: Your program after an optimiser tests prompt and example changes and keeps the best.
+    - name: Before and after comparison
+      contains: The baseline score next to the tuned score on the same examples.
+    - name: Saved program file
+      contains: The tuned program saved so you can load it again later.

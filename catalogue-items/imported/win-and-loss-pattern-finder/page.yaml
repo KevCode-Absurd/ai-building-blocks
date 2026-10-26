@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must find patterns across many deals.
 new_slug: win-and-loss-pattern-finder
 name: Win and loss pattern finder
-summary: "Ask why you win and lose. Get patterns from closed deals: loss stage,
-  common objections and deal traits."
+summary: "Find why you win and lose deals. Give it closed deals from your CRM or a file. You get win rates, where losses die and common objections."
 job: sell-and-negotiate
 headline: Win and loss pattern finder
-subhead: "The patterns behind your closed deals: where you lose, what buyers
-  object to and what wins have in common. A leader can act on this instead of
-  trusting hunches from the last painful loss."
+subhead: "The patterns behind your closed deals: where you lose, what buyers object to and what wins have in common. A leader can act on this instead of trusting hunches from the last painful loss."
 explain: |
   The patterns behind your closed deals: where you lose, what buyers object to and what wins have in common. A leader can act on this instead of trusting hunches from the last painful loss.
 
@@ -18,6 +15,10 @@ when:
   - You need evidence for a pricing or product change.
   - You are preparing a quarterly sales review.
   - You want to coach reps on the stage where deals die.
+not_for:
+  - You have fewer than about 20 closed deals. Review each deal by hand with your sales lead instead.
+  - You want to forecast future sales. Use a forecasting tool or your CRM's own forecast view.
+  - You want to review deals still open. Do a pipeline review with your team instead.
 you_give:
   - CRM access or closed-deal export
   - Period to review
@@ -31,8 +32,34 @@ you_get:
   - Notes on biggest deals
   - Actions for leaders
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM, email and calendar.
+  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Connect your CRM if your AI can. If not, upload an export of closed deals with stage history.
+  - Say which period, team or rep you want. Say if you want wins, losses or both.
+  - Add call transcripts or late-stage emails for your biggest deals (optional).
+  - Check the headline and the sample sizes first. Small groups mean weak patterns.
+  - Use the actions to plan coaching or a process change. The skill only reads your CRM and changes nothing.
+output_sample:
+  input:
+    - Closed deals from your CRM, or an uploaded export file
+    - The period to review (optional, defaults to the last 90 days)
+    - Team or one rep to focus on (optional, defaults to the whole team)
+    - Wins, losses or both (optional, defaults to both)
+    - Call transcripts or late-stage emails (optional)
+  prerequisites:
+    - A CRM your AI can read, or a closed-deals export you can upload
+    - Stage history in the CRM or file, to see where losses died
+  output:
+    - name: Headline
+      contains: Two sentences on the one pattern that matters most in your wins and losses.
+    - name: Win rate table
+      contains: Win rate by rep, lead source, deal size, industry and new versus expansion, with sample sizes.
+    - name: Where losses die
+      contains: Each stage, its share of losses and the median days deals spent there.
+    - name: Loss reasons
+      contains: Reasons from the CRM and transcripts, with examples from real deals.
+    - name: What wins have in common
+      contains: Traits shared by wins, shown as how many of the wins had each one.
+    - name: Largest losses
+      contains: One evidenced line on what happened in each of the biggest losses.
+    - name: Recommended actions
+      contains: Process changes, coaching points by rep and data you should start recording.

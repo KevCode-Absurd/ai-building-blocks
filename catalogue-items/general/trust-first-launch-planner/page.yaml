@@ -1,6 +1,6 @@
 new_slug: trust-first-launch-planner
 name: Trust-first launch planner
-summary: Describe a product people are wary of. Get the number who must hear about it, cheap trust tactics and a proof sequence.
+summary: Plan a trust-first product launch. Give it a product people are wary of. You get the doubt, an audience number and a proof sequence.
 job: grow-social
 thinking: medium
 thinking_why: It estimates audience size and sequences proof, which needs judgement.
@@ -14,6 +14,10 @@ when:
   - People like the idea of your product but hold back from trying it.
   - You are launching somewhere that has seen products fail or cheat people.
   - You have little money and need trust, not reach.
+not_for:
+  - "You have no proof at all yet: first get one real customer or a small test, then come back."
+  - "You just want to test paid ads: run a small paid test, or use a plain launch checklist."
+  - "You need the launch message written for you: use the Sales copy editor on your draft."
 you_give:
   - The product and what it promises
   - The people you want and what makes them wary
@@ -30,6 +34,28 @@ how_to_use:
   - List the proof you have, even small.
   - Run the first tactic in the plan.
   - Count sign-ups after the first weeks and bring the numbers back.
+output_sample:
+  input:
+    - Your product and what it promises
+    - The people you want and what makes them wary
+    - The proof you already have, even small
+    - A buyer description (optional)
+    - The size of your area or group (optional)
+  output:
+    - name: The doubt
+      contains: What stops people from trying, in the buyer's own words, or a MISSING line if none were given.
+    - name: How many must hear
+      contains: The number of people who must hear for talk to spread, with the sums and the basis shown.
+    - name: Trust tactics
+      contains: Two to four cheap, public ways to show it is safe, each with cost and why it is honest.
+    - name: First message
+      contains: The overlooked group to reach first and a plain message that answers their doubt.
+    - name: Proof sequence
+      contains: Proofs from smallest to biggest, each marked as held or missing.
+    - name: Tracking
+      contains: Weekly sign-up counts with a rule to keep or drop each tactic.
+    - name: Checks missed
+      contains: One line for each check that failed and why, or none.
 how_it_works:
   - title: Names the doubt
     text: States what stops people from trying, in their own words.

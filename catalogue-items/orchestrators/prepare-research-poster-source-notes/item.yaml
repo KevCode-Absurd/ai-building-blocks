@@ -1,6 +1,6 @@
 slug: prepare-research-poster-source-notes
 name: Prepare research poster source notes
-summary: Share the source files. Get a poster content hierarchy, figure source index and wording review.
+summary: Turn a finished study into a poster outline, a figure source list and a claim check, so every caption on your research poster traces to your results.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -16,7 +16,6 @@ inputs:
     required: false
 outputs:
   - type: document
-  - type: slide_deck
   - type: audit_report
 uses:
   - source-note-summariser
@@ -24,11 +23,11 @@ uses:
   - unsupported-claim-spotter
 steps:
   - uses: source-note-summariser
-    note: Extract only the completed study facts relevant to the poster question, preserving the source locations and limitations.
+    note: Pull out only the facts the poster needs from the finished study, each with where it sits in your files and what limits it. Hand these to step 2 as the only source for poster text.
   - uses: presentation-builder
-    note: Use visual narrative planning to propose a short poster reading order and figure briefs. Return a content outline; do not claim a rendered poster.
+    note: Plan a short reading order and a brief for each figure from step 1's facts. Return an outline, not a rendered poster. Hand step 3 the headings, captions and figure briefs.
   - uses: unsupported-claim-spotter
-    note: Check the proposed headings and captions against the completed study, flagging unmeasured outcomes and unsupported novelty.
+    note: Check each heading and caption against the study. Flag outcomes that were not measured and novelty claims with no support, and give safer wording.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

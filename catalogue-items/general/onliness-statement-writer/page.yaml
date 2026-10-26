@@ -1,6 +1,6 @@
 new_slug: onliness-statement-writer
 name: "Onliness statement writer"
-summary: "Paste your brand file and rivals. Get one sentence on what only you do, with a rival swap test."
+summary: "Write an onliness statement: one sentence on what only your business does, tested against each rival so none can claim it."
 job: plan-strategy
 thinking: medium
 thinking_why: "It drafts and narrows a short sentence against real rivals, which needs care but follows a fixed test."
@@ -17,6 +17,10 @@ when:
   - Your brand line could belong to any of your rivals.
   - You are writing an about page, pitch or ad and need one sharp sentence first.
   - You have just finished work on the market and need to state your place in it.
+not_for:
+  - "You have no rivals to test against: write the six prompt answers yourself, or ask a few customers who else they looked at first."
+  - "You have not chosen where to stand in your market yet: map the gaps first with the Competitor white space mapper."
+  - "You want a short company motto or tagline: use the Company mantra writer."
 
 you_give:
   - Your brand file with what you offer, who for and what you can prove
@@ -34,6 +38,29 @@ how_to_use:
   - Paste your brand file and the market work. Add the names of your rivals.
   - Read the swap test first. A version that fails on any rival goes back for narrowing.
   - Say the winning sentence aloud. If it needs breath, shorten it.
+output_sample:
+  input:
+    - "Your brand file: what you offer, who for and what you can prove"
+    - Your audit report or notes on your market
+    - The rivals buyers compare you with (optional)
+    - Customer reviews or quotes (optional)
+  prerequisites:
+    - A brand file with your offer, buyers and proof, such as the brand brain from the Website brand brain builder
+  output:
+    - name: The six prompts
+      contains: One or two lines each on what, how, who, where, why and when, with MISSING marked where the brand file is silent.
+    - name: Versions
+      contains: Three drafts of the sentence, each narrowing the category, the buyer or the place in a different way.
+    - name: Rival swap test
+      contains: For each rival and version, whether they could say it truthfully, and why.
+    - name: Chosen sentence
+      contains: The version that passes the test, with the proof from your brand file that backs each part.
+    - name: Focus check
+      contains: Whether the sentence says who you are, what you do and why it matters, and which part is weakest.
+    - name: Brief
+      contains: The sentence, who it is for, what you will and will not claim, and the proof you may cite.
+    - name: Checks missed
+      contains: One line for each check still failing and why, or none.
 
 how_it_works:
   - title: Answers six prompts

@@ -2,34 +2,104 @@ thinking: medium
 thinking_why: It plans steps for a new user and writes them.
 new_slug: developer-quickstart-writer
 name: Developer quickstart writer
-summary: Describe your product. Get a quickstart, tutorial and sample app plan
-  that gets a developer to Hello World fast.
+summary: Write a developer quickstart that gets new users to a first working result. Get a quickstart, a tutorial outline and a sample app plan for your product.
 job: build-product
 headline: Developer quickstart writer
-subhead: A quickstart, a tutorial and a sample app plan that take a new
-  developer from sign-up to working code in minutes. The first win matters most,
-  so everything is built around reaching it fast.
+subhead: Tell it about your API, SDK or developer tool. It writes a short quickstart that ends in a working result, plus a tutorial outline and a sample app plan. Anything it cannot know is marked, not guessed.
 explain: |
-  A quickstart, a tutorial and a sample app plan that take a new developer from sign-up to working code in minutes. The first win matters most, so everything is built around reaching it fast.
+  A good developer quickstart gets a new user to one working result before they lose interest. This skill writes that quickstart (some teams call it a getting started guide) around the single moment when your product first does something useful for them.
 
-  The skill draws on patterns from products known for good onboarding: test keys visible right away, one-click templates, code in the reader's language, and error messages that say how to fix the problem. It also lists patterns to avoid, such as wizards that cannot be skipped. You get a Hello World path, then a longer tutorial that leads the reader on to deeper features. It reads a detailed guide first, so give it your real product details.
+  It starts by naming that moment for your product: a response with real data, a live preview link or a test payment. Then it writes the shortest path to it. Prerequisites come first, each step has one action, and the page shows what the reader should see at the end.
+
+  After the quickstart you get a tutorial outline for the second visit and a plan for a sample app that developers can copy. It also flags the onboarding mistakes your product is most likely to make, such as hidden keys or sign-up wizards that cannot be skipped.
 when:
-  - You are launching an API or SDK and need a first-run guide.
-  - Your current quickstart takes thirty steps to show any result.
-  - You want a sample app that new developers can copy and run.
-  - Developers read your docs but do not come back after day one.
+  - You are launching an API or SDK and need a getting started guide.
+  - Your quickstart has many steps before anything works.
+  - You want a sample app that developers can copy and run.
+  - Developers read your docs once and never come back.
+not_for:
+  - "You want to find out why developers drop off before a first call: use the Developer onboarding improver."
+  - "You need reference pages for every endpoint: use the Developer docs writer."
+  - "You need a setup wizard inside your app: use the First-run wizard designer."
 you_give:
-  - A description of your product
-  - The language or frameworks your developers use
-  - How sign-up and keys work
-  - Your existing docs (optional)
+  - What your product is and what a developer does with it
+  - The language or framework your developers use
+  - How sign-up and API keys work today
+  - Your real install command and a real example request and response (optional, but without them every code line is a placeholder)
+  - Your current quickstart or docs (optional)
 you_get:
-  - A quickstart that reaches Hello World fast
-  - A longer tutorial for the next step
-  - A sample app plan
-  - A list of onboarding patterns to avoid
+  - A one-line description of the first working result
+  - A quickstart with prerequisites, 3 to 5 steps and the expected output
+  - A tutorial outline for the second visit
+  - A sample app plan with a minimal, starter and production version
+  - The onboarding mistakes your product is most at risk of, with fixes
+  - A list of what you still have to fill in
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather what you have. Write two lines on your product, note how a developer gets a key, and copy any real install command and sample request.
+  - Open Claude, ChatGPT or Gemini. Paste the skill instructions first, then the detailed guide if your AI allows files. No code is run and no paid tool is needed.
+  - Paste your product details. Answer any question your AI asks. Anything you skip is marked MISSING.
+  - Run the quickstart yourself in a fresh folder. Every code line is unrun until you do this.
+  - Replace each placeholder with a real value. Then ask your AI to tighten any step that took you more than a minute.
+  - Publish the quickstart. Then run the Developer onboarding improver to find where people still get stuck.
+output_shape: |
+  First working result: <what the developer sees>
+  Quickstart: <title>
+    Prerequisites: <list with check commands>
+    Steps 1 to 5: <one action each, with code>
+    Expected output: <what success looks like>
+    Next steps: <two links>
+  Tutorial outline: <3 to 5 sections, each with a goal>
+  Sample app plan: <minimal, starter, production: files and run time>
+  Patterns to avoid: <3 to 5, with fixes>
+  Missing: <inputs and placeholders still open>
+output_sample:
+  input:
+    - What your product is and what developers do with it
+    - The language or framework your developers use
+    - How sign-up and keys work today
+    - Your install command and a real example request (optional)
+  prerequisites:
+    - An AI chat. It cannot run your code, so you test the result yourself.
+  output:
+    - name: First working result
+      contains: One sentence on what the developer sees when your product works for them.
+    - name: Quickstart
+      contains: Prerequisites, three to five steps with code, the expected output and two next-step links.
+    - name: Tutorial outline
+      contains: Three to five sections for the second visit, each with a goal and what the reader builds.
+    - name: Sample app plan
+      contains: A minimal, a starter and a production version, with files and time to run for each.
+    - name: Patterns to avoid
+      contains: The three to five onboarding mistakes your product is most at risk of, each with a fix.
+    - name: Missing
+      contains: Every input you did not give and every placeholder you must replace before publishing.
+how_it_works:
+  - title: Name the first win
+    text: It picks the moment your product first does something useful for the developer.
+  - title: Check the starting point
+    text: It asks about your language, sign-up and keys, and marks anything you cannot answer.
+  - title: Write the quickstart
+    text: It puts prerequisites first, then one action per step, then the result the reader should see.
+  - title: Outline the tutorial
+    text: It plans a second session that leads from the first win to deeper features.
+  - title: Plan the sample app
+    text: It sets out a one-file example, a starter template and a fuller production template.
+  - title: Flag the traps
+    text: It names the mistakes your setup is most likely to make and how to fix each.
+works_best_with:
+  tools:
+    - name: Claude or ChatGPT
+      why: Either can write the steps and outline. Neither can run your code, so test it yourself.
+    - name: Your own terminal
+      why: Running the quickstart on a clean machine is the only real test of it.
+  inputs:
+    - A real install command and a working example request
+    - The response your API returns for that request
+    - Any error a new developer hits on the first call
+terms:
+  - term: Quickstart
+    meaning: A short guide that gets a new developer to a working result.
+  - term: SDK
+    meaning: A code library that makes your API easier to use.
+  - term: Sample app
+    meaning: A small working project developers can copy and change.

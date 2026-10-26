@@ -2,18 +2,26 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: creative-resume-layout-planner
 name: Creative resume layout planner
-summary: Share your creative role and portfolio. Get separate resume layouts for job portals and direct sharing.
+summary: Plan a creative resume that passes job portals and still looks designed. Get two layouts, type and colour choices, and links to your work.
 job: find-a-job
 headline: Creative resume layout planner
-subhead: Share your creative field, resume and portfolio style. It plans a plain version for job portals and a designed version for direct sharing. You get layout, type and colour choices, plus clear links between your resume and your work samples.
+subhead: Give it your resume, your creative field and your portfolio link. It plans a plain version for job portals and a designed version for direct sharing. You get type, colour and layout choices, and links to your best work.
+not_for:
+  - "You need your resume text rewritten or scored for one job: ask your AI to edit your bullets directly, since this plan covers layout only."
+  - "You have no resume yet and no portfolio: write the plain content first in a simple document, then come back."
+  - "You want a finished file made for you: ask a designer, or build it in Canva, Figma or Word using the plan."
 explain: Share your creative field, resume and portfolio style. It plans a plain version for job portals and a designed version for direct sharing. You get layout, type and colour choices, plus clear links between your resume and your work samples.
 you_give:
-  - Your resume, creative field and target application route.
-  - Your portfolio link and existing style choices.
+  - Your current resume, pasted or attached.
+  - Your creative field, such as design, writing, marketing or video.
+  - Where you plan to send it, such as job portals or direct email.
+  - Your portfolio link.
+  - Two or three work samples you want to link (optional).
 you_get:
-  - A plan for plain and designed resume versions.
-  - Type, colour and layout specifications.
-  - Portfolio-link guidance and a readability checklist.
+  - A plan for a plain version and a designed version, with when to use each.
+  - Font, colour and layout choices for both versions.
+  - Advice on which work samples to link and how to word the links.
+  - A checklist to run before you send the resume.
 how_it_works:
   - title: Step 1
     text: Choose when a plain or designed resume is appropriate.
@@ -22,6 +30,38 @@ how_it_works:
   - title: Step 3
     text: Link the resume to relevant work samples and check readability.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied notes and ask follow-up questions.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
+  - Paste your resume text and tell it your creative field and where you will apply.
+  - Add your portfolio link and the two or three work samples you want to show.
+  - Read the plan. Check that the plain version has one column, no images and simple fonts.
+  - Build both versions in Word, Google Docs, Canva or Figma. Where a result sits in your resume, only add a number if you measured it.
+  - Run the checklist, then send the plain version to portals and the designed version to people.
+output_sample:
+  input:
+    - Your current resume (paste the text or attach the file)
+    - Your creative field, such as design, writing, marketing or video
+    - Where you will send it, such as job portals or direct email
+    - Your portfolio link
+    - Two or three work samples to link (optional)
+  output:
+    - name: Role type and industry
+      contains: Your creative field and whether you aim at agencies, in-house teams or freelance work.
+    - name: Version strategy
+      contains: When to send the plain version and when to send the designed one, with file formats for each.
+    - name: "Design specifications: typography"
+      contains: Headline, body and accent font choices with weight and size.
+    - name: "Design specifications: colors"
+      contains: Primary, secondary and text colours with a use for each.
+    - name: "Design specifications: layout"
+      contains: Single or two columns, margins and grid notes for each version.
+    - name: Portfolio integration
+      contains: Your main portfolio link, which case studies to link, and whether to add a resume page to your site.
+    - name: Content adjustments for your field
+      contains: Specific changes to your resume content that suit your creative role.
+    - name: Creative resume checklist
+      contains: A final check of type, layout, colour and links before you send.
+when:
+  - You apply to creative jobs through online portals and worry the resume will not read well.
+  - A hiring manager asks for your resume and you want it to show your design eye.
+  - You are updating your portfolio site and want the resume to match it.
+  - You are not sure which resume version to send to an agency.

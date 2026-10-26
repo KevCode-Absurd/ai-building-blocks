@@ -2,17 +2,53 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-api-breaking-change-detector
 name: C# API consumer drift checker
-summary: Share your C# API and web client. Get mismatched fields and breaking
-  changes traced to their consumers.
+summary: Find API breaking changes before you merge. Give it your C# controllers and web client code. You get the fields and status codes that no longer match.
 job: test-and-fix-code
 headline: C# API consumer drift checker
-subhead: Share your C# API and web client. Get mismatched fields and breaking
-  changes traced to their consumers. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: Give it your C# API code and the web client code that calls it. It finds fields, routes and status codes that no longer match, in both directions. You get a report and no code is changed.
+not_for:
+  - "You want new client code made from an OpenAPI file: use the openapi-to-application-code skill."
+  - "You want to add new endpoints with OpenAPI docs: use the aspnet-minimal-api-openapi skill."
+  - "You only have two exported OpenAPI spec files to compare: use a spec diff tool, because this skill reads source code only."
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Gather your controllers, DTOs, Program.cs and the client files that call your API.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. Your AI needs to read your files, so paste them or upload them.
+  - Say which endpoint changed, or ask for a check of the whole API.
+  - Read the Backend → Client Breaks section first and fix those before you merge.
+  - Check the No Consumer Found list by hand. A missing match does not mean the endpoint is unused.
+  - If you need a new client made from a spec, use the openapi-to-application-code skill.
+output_sample:
+  input:
+    - Your C# controllers and DTO files
+    - Your Program.cs or Startup.cs file
+    - The TypeScript or JavaScript files that call your API
+    - The endpoint or change you want checked (optional)
+  prerequisites:
+    - An AI that can read your code files, or code pasted into the chat
+  output:
+    - name: Scope Audited
+      contains: The controllers, DTOs and client files checked, plus the JSON naming rule found in your setup.
+    - name: Backend → Client Breaks
+      contains: Each endpoint where a backend change breaks the client, how the client was matched, the impact and how severe it is.
+    - name: Client → Backend Drift
+      contains: Fields the client sends or reads that the backend no longer uses, split into harmless and truly broken.
+    - name: No Consumer Found
+      contains: Backend endpoints and DTOs with no client match, which you need to check by hand.
+    - name: Match Confidence Summary
+      contains: How many findings came from generated clients, hand-written calls, or had no match.
+when:
+  - You renamed or removed a DTO property and want to know what it breaks.
+  - You are about to merge an API change and want to check the web client first.
+  - You suspect your front end reads a field the backend no longer sends.
+  - You want a full check of how your API and client line up before a release.
+you_give:
+  - Your C# controller files
+  - Your DTO or model files
+  - Your Program.cs or Startup.cs file
+  - The TypeScript or JavaScript files that call your API
+  - The names of changed endpoints (optional)
+you_get:
+  - A list of backend changes that break your client, by endpoint.
+  - Client fields the backend no longer reads or returns, marked harmless or broken.
+  - The way each client call was matched to its endpoint.
+  - A list of endpoints with no client match, to check by hand.

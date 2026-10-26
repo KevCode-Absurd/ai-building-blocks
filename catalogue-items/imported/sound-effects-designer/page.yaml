@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It turns a short description into a clip with a set tool.
 new_slug: sound-effects-designer
 name: Sound effects designer
-summary: Describe a sound. Get a clip such as rain, an impact or a button click,
-  with the length you set.
+summary: Make a sound effects clip from a short description, like rain, an impact or a button click. Set the length from half a second to 30 seconds.
 job: work-with-audio
 headline: Sound effects designer
-subhead: A sound clip made from a short description, such as thunder with light
-  rain, a cinematic impact or a button click. You pick the length from half a
-  second to 30 seconds.
+subhead: A sound clip made from a short description, such as thunder with light rain, a cinematic impact or a button click. You pick the length from half a second to 30 seconds.
 explain: |
   A sound clip made from a short description, such as thunder with light rain, a cinematic impact or a button click. You pick the length from half a second to 30 seconds. You can also ask for a clip that loops cleanly, which suits background ambience.
 
@@ -18,6 +15,10 @@ when:
   - You want a short click or whoosh for an app button.
   - You need a loop for background ambience.
   - You want several takes of the same sound to compare.
+not_for:
+  - "You need speech or a voice: use a text to speech tool, or record a person."
+  - "You need a recorded sound with known rights: use a licensed sound library."
+  - "You cannot run code or get an ElevenLabs API key: ask a sound designer, or pick a clip from a sound library."
 you_give:
   - A description of the sound
   - The length you want (optional)
@@ -28,8 +29,29 @@ you_get:
   - Code that makes the clip
   - Settings to tune length and prompt match
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and use your own ElevenLabs API key.
+  - Get an ElevenLabs API key from your ElevenLabs account. Check the price before you start.
+  - Open an AI that can run code, or a terminal on your computer. Add your key as ELEVENLABS_API_KEY. Or run npx -y @elevenlabs/cli@latest onboard init in your project folder and follow what it prints.
+  - Paste this skill into your AI. Describe the sound in detail, such as heavy rain on a tin roof. Add a length, and ask for a loop if you want one.
+  - Your AI should give you code and run it. You should end with an MP3 file, such as thunder.mp3, saved in your folder.
+  - Play the clip. If it is off, make the description more specific or change how closely it follows your words, then make another take.
+  - Next, add the MP3 to your video editor or game. If you asked for a loop, play it twice in a row to check for a seam.
+output_sample:
+  input:
+    - A short description of the sound
+    - The length you want, from 0.5 to 30 seconds (optional)
+    - A request for a clean loop (optional)
+    - How closely to follow your words, from loose to strict (optional)
+    - Your ElevenLabs API key
+  prerequisites:
+    - An AI that can run code, or a computer where you can run Python, JavaScript or a command
+    - An ElevenLabs account and API key, which may cost money
+    - An internet connection
+  output:
+    - name: Sound clip
+      contains: An MP3 file of your sound, such as thunder, an impact or a click, at the length you set.
+    - name: Code to make the clip
+      contains: A short script in Python, JavaScript or the command line that saves the clip to your computer.
+    - name: Settings
+      contains: The length, loop and prompt match values used, so you can change them and make another take.
+    - name: Error help
+      contains: What the common errors mean, such as a bad key, a value out of range or too many requests.

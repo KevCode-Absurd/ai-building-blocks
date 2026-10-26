@@ -2,12 +2,10 @@ thinking: high
 thinking_why: It must trace real use of the code, then prove one claim.
 new_slug: change-impact-checker
 name: Change impact checker
-summary: Describe a code change. Get what it could break outside its own diff,
-  and one proof it is safe.
+summary: Check what a code change could break outside its own diff. You get a list of risks and one proof that the change is safe.
 job: test-and-fix-code
 headline: Change impact checker
-subhead: Before you ship a change, you learn what it could break outside its own
-  diff, and you get one piece of proof that it is safe.
+subhead: Before you ship a change, you learn what it could break outside its own diff, and you get one piece of proof that it is safe.
 explain: |
   Before you ship a change, you learn what it could break outside its own diff, and you get one piece of proof that it is safe. Describe the change and the skill goes past listing callers, which a search does in a second.
 
@@ -17,6 +15,10 @@ when:
   - A small diff feels risky and you cannot say why.
   - A ticket says the code already does X and you plan around that.
   - You want a blast radius before a multi-file change.
+not_for:
+  - "You only changed docs, comments or styling: skip the check and just review the diff with a teammate."
+  - "You need a full test run in a live setup: use your own test environment, because this skill only checks the change you describe."
+  - "You have no access to the code or the diff: ask a developer who knows the project to look first."
 you_give:
   - The change or planned change
   - Access to the code
@@ -27,8 +29,26 @@ you_get:
   - One proof that the change is safe
   - A note on where checking stopped
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool. Use one that can read your project files, and run code if you want the proof step.
+  - Paste the skill text, or upload the skill folder.
+  - Describe the change, or paste the diff. Add the claim it depends on, if you have one.
+  - Let your AI list the risks and rate each key fact. Check that every risk names a real file and line.
+  - Run the proof script in a local or test setup, never on live data. Then fix what it found and run the proof again on the final change.
+output_sample:
+  input:
+    - A short description of the change, or the diff itself
+    - Access to your code files
+    - The claim the change depends on (optional)
+  prerequisites:
+    - An AI that can read your project files and run code, for the proof step
+  output:
+    - name: Facts the change depends on
+      contains: The one or two facts that make the change safe, each rated on the five-step ladder from said so to seen live.
+    - name: Confirmed risks
+      contains: Things that could break outside the diff, each with a real file and line.
+    - name: Cleared risks
+      contains: Risks you can rule out, each with the search that was run.
+    - name: Proof script
+      contains: A small script or test that runs the real code, plus what happened when it ran.
+    - name: Where checking stopped
+      contains: Any fact marked unproven, and what was not checked.

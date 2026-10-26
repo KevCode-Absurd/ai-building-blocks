@@ -2,34 +2,56 @@ thinking: medium
 thinking_why: It adds language support without making the task easier.
 new_slug: ell-task-scaffolds
 name: Task scaffold adder for language learners
-summary: Give it a task. Get a version with language help added that keeps the
-  thinking just as hard.
+summary: Add language support to a classroom task for students learning English, with the thinking kept just as hard. Get a scaffolded task and a removal plan.
 job: teach-and-train
 headline: Task scaffold adder for language learners
-subhead: Your task, changed so a student still learning English can do it,
-  without making the thinking easier. Give the task and the target level, and
-  you get a version with language support built in.
+subhead: Give it your task, your subject and the English level of your students. It adds language help such as word banks and sentence starters. The thinking stays as hard as in your original.
 explain: |
   Your task, changed so a student still learning English can do it, without making the thinking easier. Give the task and the target level, and you get a version with language support built in.
 
   The skill follows Gibbons' rule that scaffolding should challenge, not water down. It first states the learning goal, from you or inferred from the task. It then adds supports such as word banks, sentence starters, visuals, models, partner talk and chunked steps at the level you name. The thinking stays as hard as in the original. You add the subject and, if you can, the year group and the materials used.
 when:
-  - You set an essay and a new-to-English student cannot start.
-  - You do not want to give some students an easier task.
-  - You need supports for one level, such as early acquisition.
-  - You want a model answer or word bank for a task.
+  - You set an essay and a student new to English cannot start.
+  - You do not want to hand some students an easier task.
+  - You need supports for one English level, such as Early Acquisition.
+  - You want a word bank, model or sentence starters for a task you already have.
+not_for:
+  - Your task already works without much language, such as a hands-on or visual task. Keep it as it is.
+  - You are not sure where the language barriers are. Run a language demand analyser first, then come back here.
+  - You need a full lesson plan or a new task. Ask your AI to write one from scratch, or ask a colleague who teaches EAL.
 you_give:
-  - The original task
-  - Target English level
-  - Subject
-  - Learning goal and materials (optional)
+  - Your original task
+  - The English level of your students
+  - Your subject
+  - Year group (optional)
+  - Learning objective (optional)
+  - Texts or worksheets used in the task (optional)
 you_get:
-  - A scaffolded version of the task
-  - Word banks and sentence starters
-  - Chunked steps
-  - A note on what thinking is kept
+  - A scaffolded version of your task
+  - Word banks, sentence starters and chunked steps where they fit
+  - A check that the thinking is still as hard
+  - A list of the supports used
+  - A plan to remove the supports over time
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the instructions from the skill file into the chat.
+  - Add your original task, the English level of your students and your subject. Add year group and learning objective if you have them.
+  - "Ask for all four sections: the modified task, the cognitive demand check, the scaffold types and the removal plan."
+  - Read the cognitive demand check first. If the task looks easier, ask your AI to raise the challenge again.
+  - Use the removal plan to cut back the supports over the next few lessons.
+output_sample:
+  input:
+    - Your original task, as you set it for the class
+    - The English level of the students, such as New to English, Early Acquisition, Developing or Consolidating
+    - Your subject
+    - Year group, learning objective and task materials (optional)
+    - Notes on your students, such as first languages (optional)
+  output:
+    - name: Modified Task
+      contains: Your task rewritten with language supports added, such as word banks, sentence starters, models and chunked steps.
+    - name: Cognitive Demand Check
+      contains: A check that the new version still asks students to think as hard as the original.
+    - name: Scaffold Types Used
+      contains: A list of each support added and why it suits the chosen English level.
+    - name: Scaffold Removal Plan
+      contains: Steps for taking the supports away over time as students gain confidence.

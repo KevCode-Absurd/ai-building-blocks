@@ -1,15 +1,13 @@
 slug: floating-rate-repricing-planner
 name: Floating rate repricing planner
-summary: A repricing ladder and incremental interest bridge
+summary: "Work out the extra interest a rate rise adds to each floating-rate loan, then see your new total interest for the period, loan by loan."
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
@@ -18,9 +16,13 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
 uses: []
+needs_mode: manual
+before: []
+next:
+  - revolver-interest-fee-checker
+  - debt-service-covenant-headroom-checker
+  - bridge-floating-rate-changes-to-revolver-cost
 origin: own
 version: 1.0.0
 added: 2026-10-22

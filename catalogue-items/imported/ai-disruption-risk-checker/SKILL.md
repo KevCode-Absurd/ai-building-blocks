@@ -6,85 +6,128 @@ source: community
 date_added: "2026-05-31"
 ---
 
-# MoatMRI — AI Disruption Pressure Analysis
+# MoatMRI: AI Disruption Pressure Analysis
 
 *Where does intelligence pressure break this system first?*
 
-## When to Use This Skill
+Score how much pressure AI puts on a business, picture how an AI-native rival would take its customers, and set a 90-day defence plan. Based on the moatmri skill by IntuiTek (thebrierfox/moatmri-skill), shared in the sickn33 collection. The text of this skill is licensed CC BY 4.0 (see LICENSE-CONTENT). The original author's code is MIT.
+
+## When to use
 
 - "Is my business at risk from AI? Where am I most exposed?"
 - "How would an AI-native startup take over my market?"
 - "What should I do in the next 90 days to defend against AI disruption?"
-- "I'm doing due diligence on [company] — what's their AI displacement risk?"
-- "Where does my competitive moat actually hold against AI pressure?"
+- "Where does my competitive moat actually hold?"
+- A first look at a named company before deeper research.
 
-## How It Works
+## When not to use
 
-### Step 1 — Gather Inputs
+- Investment, lending or partner decisions that need audited research. This is a planning tool, not financial advice. Use a qualified analyst.
+- A cheaper rival has already appeared and you want to judge that rival. Use the Disruption risk checker.
+- You want market research with sources and figures. This skill gives reasoned scores, not data.
 
-Ask if not provided:
-- **Industry** (e.g., "real estate", "community banking", "retail pharmacy", "law firm")
-- **Entity type** (e.g., "independent broker", "solo practitioner", "regional franchise")
-- **Target name** (optional — specific organization for named analysis)
+## Inputs
 
-## Example
+Ask once for what is missing. If the user can't say, write `ASSUMED:` and the assumption next to it, and keep going.
 
-**User request:**
+1. **Industry** (required), for example "real estate", "community banking", "law firm".
+2. **Entity type** (required), for example "independent broker", "solo practitioner", "regional franchise".
+3. **Target name** (optional). A named organisation for a named analysis.
+4. **What the user thinks protects them today** (optional), such as proprietary data, long customer relationships, licences or local presence.
 
-> Assess where this business is most exposed to AI disruption and produce a prioritized 90-day defensive plan.
+Use only what the user provides, plus public facts you can check if your AI can browse the web. Without web access, say so, and base the analysis on the user's description. For a named company, never state a fact about it (revenue, products, customers, events) unless the user gave it or you can cite where you found it. Mark each such fact "Source: <where>" or "Unverified".
 
-## Limitations
+## Step 1: Score the 10 pressure vectors
 
-- Produces strategic risk analysis, not audited market research or investment advice.
-- Depends on current company, market, regulatory, and competitive context supplied by the user or gathered from reliable sources.
-- Treats disruption scenarios as planning tools; scores should be revisited as new evidence appears.
+Score each vector from 0 to 10, where **10 means the most pressure**. For the two moat vectors (6 and 7), a strong moat means low pressure, so a strong moat scores low. Score all ten before you add anything up. Don't stop at the obvious ones.
 
-### Step 2 — 10-Vector Pressure Map
+| # | Vector | What to measure |
+|---|---|---|
+| 1 | labor_substitution | Which roles or functions AI can do directly |
+| 2 | customer_interface | How AI changes the way customers reach this entity |
+| 3 | knowledge_commoditization | Whether AI turns the expertise this entity sells into a cheap commodity |
+| 4 | pricing_pressure | Whether AI lets lower-cost rivals undercut |
+| 5 | supply_chain_automation | Whether AI changes input costs or supplier relationships |
+| 6 | data_moat | Whether this entity holds proprietary data that AI can't copy (strong data = low score) |
+| 7 | trust_relationship_moat | How far customer loyalty protects against switching (strong loyalty = low score) |
+| 8 | distribution_channel_disruption | Whether AI opens new channels that bypass this entity |
+| 9 | regulatory_compliance_exposure | Whether AI changes the rules or liability this entity faces |
+| 10 | decision_speed_gap | Whether AI speeds up decisions in ways that leave this entity behind |
 
-Score AI disruption pressure across exactly these 10 vectors (0–10):
+For each vector give:
+- **Score** (0 to 10)
+- **Headline**, one plain sentence
+- **Near term**, what happens in 12 months
+- **Far term**, what happens in 3 years
+- **Basis**, the fact or assumption behind the score. Say "ASSUMED" if it came from you, not the user.
 
-| # | Vector | What to Measure |
-|---|--------|----------------|
-| 1 | **labor_substitution** | Which roles/functions are directly automatable |
-| 2 | **customer_interface** | How AI changes how customers reach this entity |
-| 3 | **knowledge_commoditization** | Does AI commoditize the expertise this entity sells |
-| 4 | **pricing_pressure** | Does AI enable lower-cost competitors to undercut |
-| 5 | **supply_chain_automation** | Does AI change input costs or supplier relationships |
-| 6 | **data_moat** | Does this entity have proprietary data AI can't replicate |
-| 7 | **trust_relationship_moat** | How much does customer loyalty protect against displacement |
-| 8 | **distribution_channel_disruption** | Does AI create new channels that bypass this entity |
-| 9 | **regulatory_compliance_exposure** | Does AI alter the regulatory or liability landscape |
-| 10 | **decision_speed_gap** | Does AI accelerate decisions in ways that disadvantage this entity |
+Do not mix up data_moat and trust_relationship_moat. They protect in different ways.
 
-For each vector produce: **score**, **headline**, **near_term** (12 months), **far_term** (3 years).
+**Overall score:** the average of the ten scores. Flag any vector at 7 or above as **critical**. Say plainly that the scores are informed judgments for planning, not measurements, and should be revisited as new evidence appears.
 
-**Aggregate risk score:** mean of all 10 vectors. Flag any vector ≥ 7 as critical.
+## Step 2: The AI front-door takeover storyboard
 
-### Step 3 — AI Front-Door Takeover Storyboard
+Write six short steps showing how an AI-native competitor takes this entity's customers. Keep it specific to the industry and entity, not a generic disruption story.
 
-6-step narrative of how an AI-native competitor displaces this entity:
 1. The entry point
-2. The wedge (first 10% of market)
+2. The wedge (the first 10% of the market it wins)
 3. The acceleration (what makes it compound)
-4. The tipping point (when incumbent can't recover)
+4. The tipping point (when the incumbent can no longer recover)
 5. The aftermath
-6. The survivor profile
+6. The survivor profile (what the entities that survive have in common)
 
-### Step 4 — 90-Day Counterstrike Plan
+Label the storyboard as a scenario, not a forecast.
 
-- **Track A (Days 0–30):** Immediate defense — what to stop, what to protect
-- **Track B (Days 31–60):** Intelligence-layer build — data/relationships to fortify
-- **Track C (Days 61–90):** Offensive positioning — use AI pressure as competitive weapon
+## Step 3: The 90-day counterstrike plan
 
-## Best Practices
+- **Track A, days 0 to 30:** immediate defence. What to stop, what to protect.
+- **Track B, days 31 to 60:** build the intelligence layer. Which data and relationships to strengthen.
+- **Track C, days 61 to 90:** offensive positioning. Use AI pressure as a competitive tool.
 
-- ✅ Score all 10 vectors before calculating aggregate — resist stopping at obvious ones
-- ✅ Keep the storyboard specific to industry/entity, not generic disruption narrative
-- ✅ Track C should be actionable within 90 days, not aspirational 3-year strategy
-- ❌ Don't conflate data_moat with trust_relationship_moat — they protect differently
+Every action must be doable within 90 days by a business of this size. Tie each action to a critical vector from Step 1. Track C is concrete action, not a three-year strategy.
 
-## Additional Resources
+## Output format
 
-- Repository: [thebrierfox/moatmri-skill](https://github.com/thebrierfox/moatmri-skill)
-- Full BYOK tool: [ace-license-server-production.up.railway.app/byok/moatmri](https://ace-license-server-production.up.railway.app/byok/moatmri)
-- Built by [IntuiTek¹](https://intuitek.ai) (~K¹) — MIT License
+```markdown
+# AI disruption pressure: <entity or industry>
+
+**Overall pressure score:** <average> / 10  |  **Critical vectors (7+):** <list or none>
+**What this is based on:** <user's description / public sources / assumptions>
+
+## Pressure map
+| # | Vector | Score | Headline | Next 12 months | Next 3 years | Basis |
+|---|---|---|---|---|---|---|
+
+## Top weak spots
+1. <vector>: <why it breaks first>
+2. <vector>: <why>
+3. <vector>: <why>
+
+## Where your moat holds
+- <vector>: <why protection is real, and how long it may last>
+
+## How an AI-native rival would take your customers
+1. Entry point: ...
+(six steps)
+
+## 90-day plan
+**Days 0 to 30:** <actions>
+**Days 31 to 60:** <actions>
+**Days 61 to 90:** <actions>
+
+## Limits of this analysis
+- <assumptions, unverified facts, what to check next>
+```
+
+## Best practices
+
+- Score all ten vectors before you work out the average.
+- Keep the storyboard about this industry and entity.
+- Make Track C actionable within 90 days.
+- Keep the overall score honest. If a vector is a guess, say so.
+
+## Additional resources
+
+- Original repository: [thebrierfox/moatmri-skill](https://github.com/thebrierfox/moatmri-skill)
+- The original author also lists a hosted "bring your own key" tool in that repository. This skill does not need it. We have not checked what it costs or what terms apply, so check before you use it.
+- Built by [IntuiTek](https://intuitek.ai).

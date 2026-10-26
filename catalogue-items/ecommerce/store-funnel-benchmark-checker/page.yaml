@@ -1,6 +1,6 @@
 new_slug: store-funnel-benchmark-checker
 name: "Store funnel benchmark checker"
-summary: "Paste your GA4 funnel and device numbers. Get the step that leaks most, why, and what to test."
+summary: "Check your store funnel against benchmarks. Paste your GA4 step rates and find the one step that leaks most, with a likely cause and a score."
 job: track-numbers
 thinking: medium
 thinking_why: "Most of the work is sums and a fixed reading guide, so a mid-size model works if you check the sums."
@@ -13,6 +13,10 @@ when:
   - Your conversion rate is lower than you want and you do not know which step to work on first.
   - You are about to redesign a page and want to know whether discovery, the product page or checkout is the weak spot.
   - You want a baseline table to compare against after every big change.
+not_for:
+  - "Your store gets under about 50,000 visitors a month: pair the numbers with a survey of shoppers and watch session recordings instead."
+  - "Your GA4 purchases do not match your store orders: fix your tracking first, because the skill stops and gives no score."
+  - "You want to change checkout steps your platform locks, such as standard Shopify checkout: look at what shoppers see before checkout instead."
 you_give:
   - GA4 purchase funnel figures for the last 12 months (view product, add to cart, begin checkout, purchase)
   - Tech overview by device, with conversion rate, bounce, engagement time and revenue per active user
@@ -29,6 +33,32 @@ how_to_use:
   - Paste the tech overview by device and the landing pages report. Add path exploration counts if you have them.
   - Fix only the step it names first. Keep the table as your baseline.
   - Pull the same numbers again after each major change and run the skill again.
+output_sample:
+  input:
+    - Your GA4 purchase funnel rates for the last 12 months
+    - Your tech overview by device
+    - Your landing pages report for the top 5 to 10 pages
+    - Your store order count for the same dates
+    - Path exploration counts from the homepage (optional)
+  prerequisites:
+    - GA4 ecommerce events set up so purchase counts match your store orders
+  output:
+    - name: TRACKING CHECK
+      contains: Whether your GA4 purchases match your store orders for the same dates.
+    - name: FUNNEL table
+      contains: Each of the four steps with your rate, the benchmark range, over, inside or under, and points out of 25.
+    - name: SCORE
+      contains: A score out of 100 with the sum shown, based on how close each step is to its range.
+    - name: FIX FIRST
+      contains: The one step to work on first and the likely cause in plain words.
+    - name: NAVIGATION LOOPS and QUICK ADD
+      contains: Whether shoppers loop from the homepage to a collection and back, and whether quick add is worth testing.
+    - name: DEVICE GAPS
+      contains: Mobile and desktop differences written as test ideas.
+    - name: ODD SPOTS FOR HEATMAPS
+      contains: Strange landing page rows, each with a question for your heatmaps and recordings.
+    - name: NOT CHECKED
+      contains: Anything missing from what you gave, so you know what was skipped.
 how_it_works:
   - title: Checks your tracking
     text: GA4 purchase counts must match your store orders. If they do not, it stops and tells you to fix tracking first.

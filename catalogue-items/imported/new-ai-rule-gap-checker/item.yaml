@@ -12,6 +12,8 @@ inputs:
     required: true
   - type: question
     required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: audit_report
   - type: plan

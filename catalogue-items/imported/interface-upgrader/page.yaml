@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It audits the look first, then applies targeted fixes.
 new_slug: interface-upgrader
 name: Interface upgrader
-summary: Point it at an existing site or app. Get generic design patterns found
-  and fixed, without a rewrite.
+summary: Upgrade a generic-looking website or app without a rewrite. It finds stock design patterns and weak spots in your code, then fixes them in place.
 job: build-websites
 headline: Interface upgrader
-subhead: An existing site or app improved where it looks generic, without a
-  rewrite or a change to how it works. It finds the stock patterns and weak
-  spots and fixes them in place.
+subhead: An existing site or app improved where it looks generic, without a rewrite or a change to how it works. It finds the stock patterns and weak spots and fixes them in place.
 explain: |
   An existing site or app improved where it looks generic, without a rewrite or a change to how it works. It finds the stock patterns and weak spots and fixes them in place.
 
@@ -19,6 +16,10 @@ when:
   - You want a visual refresh without touching the architecture.
   - Spacing and hierarchy are uneven across screens.
   - You need to modernise the look before a demo.
+not_for:
+  - "You are starting a new site or app from nothing: build it fresh with your AI or a designer, then use this to polish it."
+  - "You want to move to a new framework or change how pages are laid out: hire a developer, because this skill keeps your structure."
+  - "You only have a screenshot and no code: ask a designer for feedback, since this skill works on project files."
 you_give:
   - Access to your site or app code
   - Pages or screens to focus on
@@ -29,8 +30,26 @@ you_get:
   - Added loading, empty and error states
   - Better spacing and hierarchy
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open your AI tool where it can read your project files, such as Claude Code or Cursor. A plain chat works if you paste the code.
+  - Add the skill instructions from this page to the chat.
+  - Tell your AI which pages to improve, and what must not change.
+  - Let it scan and list the generic patterns it found. Read the list before it changes anything.
+  - Check the result in your real app on a phone, a laptop and more than one browser.
+output_sample:
+  input:
+    - Your site or app code
+    - The pages or screens to focus on
+    - Anything that must not change (optional)
+  prerequisites:
+    - An AI that can read and edit your project files
+  output:
+    - name: Scan
+      contains: The framework and styling method your project uses, and the design patterns already in place.
+    - name: Diagnosis
+      contains: A list of generic patterns, weak points and missing states found in type, color, layout, content and icons.
+    - name: Targeted fixes
+      contains: Code changes made in your existing stack to improve type, layout, motion and surfaces.
+    - name: Added states
+      contains: Loading, empty and error states for screens that lacked them.
+    - name: Fix priority order
+      contains: The changes applied in order, so the biggest visual gains come first.

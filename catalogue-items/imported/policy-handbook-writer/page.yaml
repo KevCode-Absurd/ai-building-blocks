@@ -2,34 +2,95 @@ thinking: medium
 thinking_why: Policies need care and local checks by a lawyer.
 new_slug: policy-handbook-writer
 name: Workplace policy and handbook writer
-summary: Name your country and company size. Get handbook sections, a harassment
-  policy and a privacy policy. Not legal advice.
+summary: "Draft handbook sections and a harassment or privacy policy for your country and company size, with a list of points for a lawyer. Not legal advice."
 job: hire-people
 headline: Workplace policy and handbook writer
-subhead: Name your country and company size. Get handbook sections, a harassment
-  policy and a privacy policy. Not legal advice. Bring country or region. Use
-  the result to plan your next step.
+subhead: "Tell it your country, company size and which policy you need. It writes a first draft of a handbook section or a policy in plain words. It ends with a list of points to check with a lawyer."
 explain: |
-  Draft workplace policies that fit your country and company size, ready for a lawyer to check. You get handbook sections, a harassment prevention policy, a privacy policy and similar documents, written in plain language.
+  If you need an employee handbook or a workplace policy, a blank page is the hard part. This employee handbook and policy writer gives you a first draft in plain words, in the same set layout every time: purpose, who it covers, the rule, how to report, and what happens next.
 
-  You start by naming where you operate and how many people you employ. The skill then picks the rules that apply, such as equal opportunity, safety, leave, background checks and whistleblower protection. It writes each policy section, flags points that vary by location, and lists questions to settle with counsel. It can also run a compliance audit checklist. It does not give legal advice.
+  It writes from general knowledge. It has no live lookup of your country's law. The examples in the skill come from US rules and one Vietnam note, so for anywhere else it marks local points for you to check instead of citing rules it cannot confirm.
+
+  Every draft ends with two lists. One shows what the AI assumed. The other shows the points a lawyer in your country should confirm before you publish.
 when:
   - You are hiring your first employees and have no handbook.
-  - A regulator or client asks to see your harassment policy.
-  - You expanded to a new country and need local workplace rules.
-  - Your old handbook is out of date and needs a rewrite.
+  - A client or regulator asks to see your harassment or whistleblower policy.
+  - You opened an office in a new country and need local workplace rules.
+  - Your old handbook is out of date and you need a first draft to start a rewrite.
+not_for:
+  - "You need final policy text you can publish today: take the draft to an employment lawyer in your country first."
+  - "You only need one policy, such as remote work or leave: use the HR policy drafter, which adds a manager guide and rollout plan."
+  - "You want to check your current HR practices against the rules: use the HR compliance audit planner."
 you_give:
-  - Country or region
+  - Your country or region, and state if it matters
   - Company size and industry
-  - Policies you already have (optional)
-  - Any recent complaint or audit request (optional)
+  - Which policy or handbook section you need
+  - Your current policies (optional)
+  - A recent complaint or audit request (optional)
 you_get:
   - Handbook sections in plain language
-  - Harassment and whistleblower policies
-  - Privacy policy for staff data
-  - List of points to check with a lawyer
+  - A harassment prevention or whistleblower policy
+  - A privacy policy for staff data
+  - A list of assumptions the AI made
+  - A "check with a lawyer" list of points that differ by place
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. Paste the skill text into the chat.
+  - Paste your country, company size, industry and the policy you want. If you want a whole handbook, say so.
+  - Add your current policies if you have them. If not, say so. The AI will write from scratch.
+  - Read the Assumptions list first. Fix anything that is wrong and ask for a new draft.
+  - Send the draft and the "check with a lawyer" list to an employment lawyer or HR adviser in your country before you publish.
+  - Ask for the next policy on your list, or run the HR compliance audit planner on what you have.
+output_sample:
+  input:
+    - Your country or region
+    - Company size and industry
+    - The policy or handbook section you need
+    - Your current policies (optional)
+    - A recent complaint or audit request (optional)
+  prerequisites:
+    - A lawyer or HR adviser who knows your country's rules, to review the draft
+  output:
+    - name: Policy draft
+      contains: Purpose, who it covers, the rule, how to report, what happens next, owner and review date.
+    - name: Handbook sections
+      contains: Plain-language sections such as conduct, leave, safety, background checks and privacy of staff data.
+    - name: Harassment and whistleblower policies
+      contains: What counts as harassment, how to report it, and protection from payback for people who report.
+    - name: Assumptions
+      contains: What the AI took for granted about your company, so you can correct it.
+    - name: Check with a lawyer
+      contains: Every point that varies by country or state, such as leave, notice and staff data rules.
+how_it_works:
+  - title: Ask what is missing
+    text: It asks once for your country, company size and policy topic. It does not guess a country.
+  - title: Draft in a set layout
+    text: Each policy gets the same parts, so staff know where to look.
+  - title: Mark local points
+    text: It names a law only when sure. Otherwise it flags the point for you to check.
+  - title: List assumptions
+    text: It shows what it took for granted about your company.
+  - title: Hand over a lawyer list
+    text: It lists each point that differs by place for review before you publish.
+output_shape: |
+  <Policy name>
+  Purpose: <why this policy exists>
+  Who it covers: <staff, contractors, managers>
+  The rule: <what is and is not allowed>
+  How to ask or report: <person, channel, time limit>
+  What happens next: <steps after a report>
+  Owner and review date: <who, when>
+  Assumptions: <what was taken for granted>
+  Check with a lawyer: <points that vary by place>
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is a writing job, and any strong chat AI can do it. Local legal review is still needed.
+  inputs:
+    - Your existing handbook or contract templates, so the new text matches
+    - The name of a lawyer or HR adviser who will review it
+    - Your headcount in each country
+terms:
+  - term: Whistleblower policy
+    meaning: A rule that protects staff who report wrongdoing from payback.
+  - term: Harassment prevention policy
+    meaning: A rule that says what is not allowed and how to report it.

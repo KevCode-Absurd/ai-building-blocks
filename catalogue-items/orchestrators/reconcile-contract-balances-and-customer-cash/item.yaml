@@ -1,14 +1,12 @@
 slug: reconcile-contract-balances-and-customer-cash
-name: Reconcile contract balances and customer cash
-summary: Link deferred revenue, unbilled assets, receivables and allowance movements before judging customer cash conversion.
+name: Contract revenue and cash checker
+summary: Share contract balances, invoices, receipts and loss records. Get a linked workbook showing revenue, billing, cash received and unexplained gaps.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
   - type: source_text
     required: true
   - type: spreadsheet
@@ -18,8 +16,9 @@ outputs:
     required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+next:
+  - reconcile-revenue-presentation-and-perimeter
+  - reconcile-working-capital-and-tax-cash
 uses:
   - contract-liability-release-bridge
   - contract-asset-billing-cash-bridge

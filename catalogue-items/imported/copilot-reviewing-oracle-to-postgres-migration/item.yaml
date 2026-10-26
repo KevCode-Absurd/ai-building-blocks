@@ -10,8 +10,12 @@ level: advanced
 inputs:
   - type: codebase
     required: true
-outputs:
   - type: code_change
+    required: false
+  - type: plan
+    required: false
+outputs:
+  - type: audit_report
 uses: []
 origin: imported
 source:

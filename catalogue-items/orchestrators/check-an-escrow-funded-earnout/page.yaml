@@ -1,44 +1,56 @@
 new_slug: check-an-escrow-funded-earnout
 name: Check an escrow-funded earnout
 headline: Check an escrow-funded earnout
-summary: Compare a signed linear earnout reserve with its dedicated escrow coverage.
+summary: Check what a single linear earnout pays on the agreed result, then see if the dedicated escrow covers it and what can be released.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: An earnout payout scenario, dedicated reserve coverage and releasable escrow balance. Share single linear earnout clause, agreed metric result and period, dedicated earnout escrow deposit, actual disbursements and approved pending reserve policy.
+subhead: Give it the earnout clause, the agreed result and the escrow records. Your AI works out the payout from the formula, compares it with the escrow balance, and shows what can be released or is left uncovered.
 explain: |-
-  An earnout payout scenario, dedicated reserve coverage and releasable escrow balance.
+  An earnout pays the seller more after a sale if the business hits a target. Some deals put cash in a dedicated escrow account to fund it. The buyer and seller then ask two questions: what does the formula pay, and does the escrow cover it? This workflow answers both for one earnout with a straight-line payout.
 
-  Acquisition earnouts. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  Step 1 applies the formula to the agreed result, keeps the threshold and cap in order, and flags any dispute. It is a payout scenario, not a fair value. Step 2 only treats a reserve as approved if the contract says so. It then compares that reserve with the deposit and payments out, and shows the release and any uncovered amount.
+
+  It never tells anyone to pay. Money in other escrows, such as for indemnity or working capital, stays out of this check.
 when:
-  - You need an earnout payout scenario, dedicated reserve coverage and releasable escrow balance.
-  - You work on acquisition earnouts and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - The earnout period has ended and the result is agreed.
+  - A seller asks how much of the earnout is due.
+  - A buyer needs to know if the escrow covers a likely payout.
+  - You need to know how much escrow cash can be released.
+not_for:
+  - "Your earnout has steps, cliffs or several metrics: this covers one straight-line clause only."
+  - "The escrow secures other claims, such as indemnity or working capital: use the Escrow release checker on its own."
+  - "You need the earnout's fair value for accounts: this checks a payout scenario and escrow cover, not valuation."
 you_give:
-  - Single linear earnout clause, agreed metric result and period, dedicated earnout escrow deposit, actual disbursements and approved pending reserve policy.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - "The earnout clause: threshold, cap and the payout rate or formula"
+  - The agreed result for the metric and the period it covers (from the signed statement)
+  - Notes on any dispute over the result
+  - Proof of the earnout escrow deposit and every payment out of it (from the escrow agent's statement)
+  - The contract wording on any pending reserve the buyer may hold back
 you_get:
-  - An earnout payout scenario, dedicated reserve coverage and releasable escrow balance.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The payout the formula gives for the agreed result
+  - The escrow balance after the deposit and payments out
+  - The cash that can be released, and the amount held for an approved reserve
+  - Any exposure the escrow does not cover
+  - A list of missing facts and checks that could not run
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the earnout clause, the agreed result and the escrow statements. Say the currency and the date of the check.
+  - Ask your AI to follow the pack and save each step's file.
+  - After step 1, check the threshold, cap and result against the clause. A disputed result stays flagged.
+  - After step 2, check the escrow records tie to the statement and the reserve is in the contract. Give the result to your lawyer or escrow agent. It is not a payment instruction.
 how_it_works:
   - title: Earnout payout checker
-    text: Calculate the single contractual linear payout from the agreed metric, preserving threshold ordering and disputes. This is a payout scenario, not fair value.
+    text: Applies the one straight-line clause to the agreed result, keeping threshold and cap in order. Flags disputes. Labels the result a payout scenario, not a fair value. Hands step 2 the payout and any approved reserve.
   - title: Escrow release checker
-    text: Pass only a contractually approved pending earnout reserve into claims; a scenario alone does not approve it. Use actual dedicated deposit and disbursement records, then show release and uncovered exposure without a payment instruction.
+    text: Passes on a reserve only if the contract approves it. Uses the actual deposit and payments out. Shows the release and any uncovered exposure, with no payment instruction.
 output_shape: |-
-  An earnout payout scenario, dedicated reserve coverage and releasable escrow balance.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES       <earnout clause, agreed result, escrow statements and dates>
+  EARNOUT PAYOUT          <result | threshold | cap | payout scenario | dispute notes>
+  ESCROW COVER            <deposit | payments out | balance | approved reserve>
+  RELEASE AND EXPOSURE    <releasable now | held back | uncovered>
+  MISSING                 <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -60,13 +72,38 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A spreadsheet tool and an AI that reads files
+      why: The payout formula and the escrow balance are short calculations that must be recalculated and traceable.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The escrow agent's latest statement.
+    - The signed statement that fixes the earnout metric.
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Earnout
+    meaning: Extra money paid to the seller after a sale if the business meets a target.
+  - term: Escrow
+    meaning: Cash held by a third party until the contract says who gets it.
+  - term: Linear payout
+    meaning: A payout that rises in a straight line between a threshold and a cap.
+  - term: Pending reserve
+    meaning: Cash kept in escrow for a claim that has not been settled.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A comparison that explains any difference between two sets of figures that should match.
+output_sample:
+  input:
+    - The earnout clause and the agreed result
+    - The escrow deposit and payment records
+    - The contract wording on any pending reserve
+  prerequisites:
+    - An AI that can read files
+  output:
+    - name: outputs/step-1-earnout-payout-checker.md
+      contains: The payout the formula gives for the agreed result, with any dispute flagged.
+    - name: outputs/step-2-escrow-release-checker.md
+      contains: Escrow balance, releasable cash, approved reserve and any uncovered amount.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, assumptions, MISSING lines, checks missed and one suggested next step.
+next:
+  - reconcile-seller-closing-cash
+  - reconcile-a-locked-box-closing-price
+  - check-adviser-fees-in-seller-proceeds
+before: []

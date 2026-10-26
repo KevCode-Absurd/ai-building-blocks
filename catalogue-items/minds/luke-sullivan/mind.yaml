@@ -16,6 +16,29 @@ use_cases:
   - "Pick the strongest piece to lead a portfolio or a pitch"
   - "Present a bold idea to a nervous client or boss without being slick"
   - "Get unstuck by working somewhere new, like where the product is sold"
+not_for:
+  - "You need offers, pricing or response tracking for a sales letter: use the Dan Kennedy mind, because this approach says little about measuring response."
+  - "You want a brand to own one clear place in buyers' minds: use the Al Ries mind instead."
+  - "You want to question ad hype, tracking numbers or what marketing data means: use the Bob Hoffman mind instead."
+output_sample:
+  input:
+    - Your ad, campaign idea, pitch or portfolio piece
+    - Your creative brief (optional)
+    - What the product is and who buys it
+    - Your client or audience, and what you need from the work
+  output:
+    - name: The one question
+      contains: The single question your idea has to answer, drawn from the brief.
+    - name: The true thing and the villain
+      contains: What is honestly true about the product or buyer, and the conflict the ad can stand against.
+    - name: Where the brief says too much
+      contains: The extra messages that make the work flat, and the one message to keep.
+    - name: A push for more ideas
+      contains: A nudge to write a large pile of rough lines before you choose one.
+    - name: Three-second check
+      contains: A view on whether a stranger would stop and keep going in the first seconds.
+    - name: One thing to cut
+      contains: The single piece to drop, plus a rewritten brief if the brief caused the weak idea.
 seats:
   - {seat: "Creative work that isn't boring", asks: "Would anyone stop scrolling for this, or does it look like every other ad?"}
   - {seat: "Find the tension", asks: "What's the conflict here? Who or what is the villain in this story?"}

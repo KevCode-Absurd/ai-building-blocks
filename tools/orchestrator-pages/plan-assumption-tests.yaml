@@ -1,6 +1,6 @@
 new_slug: plan-assumption-tests
 name: "Turn your plan into guesses and test them with customers"
-summary: "Give it your business plan. Get testable guesses, an interview plan and the smallest test of the riskiest guess."
+summary: "Turn your business plan into testable guesses, a customer interview plan and the smallest test of the riskiest guess, in three steps."
 job: test-an-idea
 thinking: high
 thinking_why: "It turns a plan into guesses and then plans real conversations. Give it your strongest model."
@@ -17,12 +17,15 @@ when:
   - You have a business plan on paper and haven't yet tested any of it on real customers.
   - You are about to hire sales or marketing staff before you know who buys and why.
   - You have talked to a few people but never wrote down what you were trying to learn.
+not_for:
+  - "Your plan has already been proven with paying customers: use the Smallest test picker to choose your next test."
+  - "You only want to plan the customer talks and already have your guesses: use the Customer discovery interview planner."
+  - "You want a market size or competitor study from public data: use the Community evidence researcher or a paid research report."
 
 you_give:
   - Your business plan or a short brief on the idea
   - Who you think the customers are and how you plan to reach them
   - Notes from your customer talks, for the last step
-  - A week or two for the talks
 
 you_get:
   - A one-page version of the plan with every box turned into a guess, ordered by risk, each with a cheap test and a pass line
@@ -35,6 +38,23 @@ how_to_use:
   - Give it your plan or brief. It runs steps 1 and 2 and stops.
   - Talk to customers about each guess, and write notes straight after each talk.
   - Bring the notes back and say "carry on from step 3".
+output_sample:
+  input:
+    - Your business plan or a short brief on the idea
+    - Who you think your customers are and how you plan to reach them
+    - Notes from your customer talks (needed for the last step)
+  prerequisites:
+    - An AI that can read the files in the handoff pack
+    - A week or two to talk to customers between step 2 and step 3
+  output:
+    - name: "Step 1: Guesses on one page"
+      contains: Each box of your plan turned into a guess, ordered by risk, with a cheap test and a pass line.
+    - name: "Step 2: Customer talk plan"
+      contains: Who to talk to for each guess, questions about what people do now, and a way to record answers.
+    - name: "Step 3: Smallest test"
+      contains: The riskiest guess left, the smallest test, pass numbers set before you run it, and a rule to change direction or carry on.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Turn the plan into guesses

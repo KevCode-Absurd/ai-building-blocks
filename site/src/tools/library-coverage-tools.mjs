@@ -1,4 +1,5 @@
 // Original browser-only utilities. Inputs stay data; no network or file operations.
+import { AGENCY_CURATED_TOOLS } from './agency-curated-tools.mjs';
 const define = (slug, short, category, summary, help, example, run) => ({ slug, short, category, summary, help, example: JSON.stringify(example, null, 2), run, extension: 'json' });
 const fail = message => { throw Error(message); };
 const object = text => {
@@ -123,6 +124,7 @@ function planFilenames(input) {
 }
 
 export const LIBRARY_COVERAGE_TOOLS = [
+  ...AGENCY_CURATED_TOOLS,
   define('source-id-cross-checker', 'Source ID cross-checker', 'work', 'Paste source IDs and citations. Find unresolved references and sources your draft never cites.', 'Enter sources as objects with id and title; citations need location and sourceIds. IDs match exactly, including case and spaces. An empty citations array is allowed. Checks stay on this device.', { sources: [{ id: 'S1', title: 'Fictional workshop notes' }, { id: 'S2', title: 'Fictional interview notes' }], citations: [{ location: 'Paragraph 2', sourceIds: ['S1', 'S3'] }] }, checkSources),
   define('task-dependency-planner', 'Task dependency planner', 'work', 'Paste tasks, durations and dependencies. Get a valid task order and earliest completion times.', 'Enter tasks with unique id, title, whole minutes and dependsOn arrays of task IDs. Use [] for tasks that can start first. Cycles and unknown dependencies stop the plan. Times assume unlimited parallel capacity.', { tasks: [{ id: 'notes', title: 'Read notes', minutes: 30, dependsOn: [] }, { id: 'draft', title: 'Write draft', minutes: 45, dependsOn: ['notes'] }, { id: 'review', title: 'Review draft', minutes: 20, dependsOn: ['draft'] }] }, planDependencies),
   define('study-review-date-planner', 'Study review date planner', 'personal', 'Paste study dates and your chosen review intervals. Get a dated review list for each topic.', 'Enter increasing intervalsDays such as [1,3,7] and items with title and studiedOn in YYYY-MM-DD form. Every interval is measured from the original study date. Dates are calendar dates, independent of timezone. This creates a list for manual use.', { intervalsDays: [1, 3, 7], items: [{ title: 'Practice topic', studiedOn: '2026-10-24' }] }, planStudyReviews),

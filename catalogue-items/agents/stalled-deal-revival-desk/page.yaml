@@ -1,6 +1,6 @@
 new_slug: stalled-deal-revival-desk
 name: Stalled deal revival desk
-summary: Give it a deal that went quiet. Get the real reason it stalled, a firm recommendation and the follow-up to send.
+summary: Find out why a quiet deal stalled and what to send next. Give it your deal notes. You get the cause, a firm advice line and a follow-up.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It must read a buyer's silence from notes, tell doubt from fear of a mistake and pick a follow-up that does not push. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A deal you felt good about has gone quiet after the proposal.
   - You keep chasing stalled deals the same way and it keeps not working.
   - You want to know, before you discount, whether price is really the block.
+not_for:
+  - "You have not sent a proposal yet, or the lead is new and unqualified: use the deal health check, or ask the buyer about budget, need and who decides."
+  - "You want a list of which deals have gone quiet: use the Weekly sales pipeline reviewer, then bring each quiet deal here."
+  - "The buyer has told you they chose someone else: close the deal yourself and ask them what made the difference."
 you_give:
   - The deal notes with every meeting and message dated, and the last thing the buyer said
   - Your proposal or quote with price, scope and terms (advised)
@@ -33,6 +37,33 @@ how_to_use:
   - Read the cause first. If the deal was never qualified, do what it says to learn before any follow-up.
   - Send the follow-up yourself, in your own words if you like, and tell the agent the date.
   - If there is no reply by day 30, run it again. It writes one last message and a clean break.
+output_sample:
+  input:
+    - Your deal notes, with every meeting and message dated
+    - The last thing the buyer said
+    - Your proposal or quote (advised)
+    - Your limits on price, scope and terms (advised)
+    - Your objection map from past deals (optional)
+  prerequisites:
+    - An AI that can keep files, such as Claude Code, if you want one file per deal and a patterns file
+    - A read-only link to your CRM (optional)
+  output:
+    - name: The deal
+      contains: One line with the buyer, days quiet, health score and the cause called.
+    - name: Timeline
+      contains: Each contact, meeting, proposal and reply in dates, with the last thing the buyer said.
+    - name: The call
+      contains: What the buyer is stuck on, two lines of evidence and one firm recommendation.
+    - name: Money
+      contains: The range the buyer can pay, the sum to propose and whether a smaller option fits.
+    - name: The follow-up
+      contains: A short message series or closing questions with send dates, or what to learn first.
+    - name: Day 30
+      contains: One last message and a clean break if there is still no reply.
+    - name: Pattern
+      contains: Why deals at your company stall most, shown once five deals have been through.
+    - name: Files and missing
+      contains: The deal file and every line marked MISSING.
 how_it_works:
   - title: Read the deal
     text: Writes the dated timeline, counts the days quiet and notes whether the deal was ever qualified.

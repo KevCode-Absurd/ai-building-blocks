@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills a standard plan with your details.
 new_slug: new-hire-plan-builder
 name: New hire plan builder
-summary: Give it a name, role and start date. Get a pre-start checklist, a first
-  week plan, and 30/60/90 day goals.
+summary: Build a new hire onboarding plan from a name, role and start date. Get a pre-start checklist, a Day 1 schedule and 30/60/90 day goals.
 job: hire-people
 headline: New hire plan builder
-subhead: A ready onboarding plan for someone starting soon, from the week before
-  they arrive to their first three months. You give a name, role, team, manager
-  and start date.
+subhead: A ready onboarding plan for someone starting soon, from the week before they arrive to their first three months. You give a name, role, team, manager and start date.
 explain: |
   A ready onboarding plan for someone starting soon, from the week before they arrive to their first three months. You give a name, role, team, manager and start date.
 
@@ -18,6 +15,10 @@ when:
   - You manage your first hire and want to get day one right.
   - Your team's onboarding differs for each new person.
   - You want clear 30, 60 and 90 day goals for a new role.
+not_for:
+  - "You hire a contractor or move someone inside your company: write a short scope note or a handover by hand instead."
+  - "Your HR system already has its own onboarding flow: use that flow, and use this plan only to fill gaps."
+  - "You need a job post or interview questions: this plan starts after the person says yes, so use a person in HR or write them by hand."
 you_give:
   - The new hire's name and role
   - Their team and manager
@@ -30,7 +31,30 @@ you_get:
   - 30, 60 and 90 day goals
   - A key contacts table
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Gather the new hire's name, role, team, manager and start date. Add the tools they need if you know them.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then paste those details under it.
+  - Read the plan. Check that the Day 1 times and the 30, 60 and 90 day goals fit the role.
+  - Swap the placeholder names for your real buddy, IT and HR contacts. Delete any step you don't need.
+  - Share the checklist with the manager before the first day.
+output_sample:
+  input:
+    - The new hire's name and role
+    - Their team
+    - Their manager
+    - Their start date
+    - Tools they will need (optional)
+  output:
+    - name: Pre-Start (Before Day 1)
+      contains: A checklist for the welcome email, accounts, equipment, calendar invites, an onboarding buddy and desk or remote setup.
+    - name: Day 1
+      contains: A table of times, activities and who the new hire is with, from welcome to free time to explore.
+    - name: Week 1
+      contains: A checklist with compliance training, key reading, one-to-ones, shadowing, a first small task and a check-in.
+    - name: 30-Day Goals
+      contains: Three goals that match the role.
+    - name: 60-Day and 90-Day Goals
+      contains: Two goals for each stage, building on the first month.
+    - name: Key Contacts
+      contains: A table of the manager, buddy, IT and HR contacts and what to ask each one.
+    - name: Tools Access Needed
+      contains: A table of each tool, the access level needed and a box to tick once requested.

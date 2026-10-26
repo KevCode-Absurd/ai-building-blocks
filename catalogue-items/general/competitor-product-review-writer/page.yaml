@@ -1,6 +1,6 @@
 new_slug: competitor-product-review-writer
 name: "Competitor product review writer"
-summary: "Paste a rival product and its market. Get a short, hard review: what it does well, what it misses, where trends head."
+summary: "Write a competitor product review: give it a rival product and its market, and get strengths, weak points, missed chances and trends."
 job: study-competitors
 thinking: medium
 thinking_why: "It forms a critical judgement from what is seen, within fixed steps."
@@ -17,6 +17,10 @@ when:
   - "You are about to launch against a rival and want an honest read on it."
   - "Your team keeps comparing feature lists and learning nothing."
   - "You need to brief a designer or maker on what the market has missed."
+not_for:
+  - "You want to study the rival's ads: use a competitor ad skill, not this review."
+  - "You have no photos, reviews, prices or market notes for the rival: gather a few first, or ask a customer who owns it."
+  - "You want a quick feature table to paste into a sheet: build it by hand in Google Sheets."
 
 you_give:
   - "The rival product or range and its market"
@@ -34,6 +38,28 @@ how_to_use:
   - "Attach photos, reviews or a spec sheet if you have them."
   - "Read the weak points and check each against the product."
   - "Use the list of chances in your next product or brief."
+output_sample:
+  input:
+    - The rival product or range, its price and its market
+    - Your own product facts (optional)
+    - Reviews, photos or spec sheets of the rival (optional)
+  output:
+    - name: The range
+      contains: Each rival product with its price, features, form and what a buyer sees first.
+    - name: Done well
+      contains: Three to five strengths, each with visible evidence and who made the choice.
+    - name: Clever and unclever
+      contains: Each choice marked clever or unclever, with a reason and who made it.
+    - name: Weak points
+      contains: Each weak point with its cost to the buyer and the evidence for it.
+    - name: Missed chances
+      contains: What buyers want that the product ignores, marked as seen or inferred.
+    - name: Trends
+      contains: Two to four market shifts, each marked as a trend with a source and date.
+    - name: Chances for us
+      contains: Three to five chances for your side, with what each needs and its evidence.
+    - name: Missing and checks missed
+      contains: Gaps in your input, and any checks the review still failed.
 
 how_it_works:
   - title: "Surveys the range"

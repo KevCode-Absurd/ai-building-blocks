@@ -46,8 +46,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Static ad critic.** Use the skill `static-ad-critic`. Starts with your ad and gives back a checked version with its copy.
-2. **Ad awareness stage checker.** Use the skill `ad-awareness-stage-checker`. Give it the ad copy from the steps before. Reads the fixed ad copy and says how much the buyer already knows when the ad starts.
-3. **Ad-matched landing page writer.** Use the skill `ad-matched-landing-page-writer`. Give it the ad copy from the steps before. Writes the landing page from the ad copy so the page repeats the ad's promise.
+2. **Ad awareness stage checker.** Use the skill `ad-awareness-stage-checker`. Give it the ad copy from the steps before. Reads the fixed ad copy and says how much the buyer already knows when the ad starts. Hands the ad copy, rewritten to fit that stage, to step 3.
+3. **Ad-matched landing page writer.** Use the skill `ad-matched-landing-page-writer`. Give it the ad copy from the steps before. Writes the landing page from the ad copy so the page repeats the ad's promise. Also uses your brand brain and offer, and hands the page to step 4.
 4. **Meta ads compliance checker.** Use the skill `meta-ads-compliance-checker`. Give it the ad copy and the landing page from the steps before. Checks the final ad and page together before they go live.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

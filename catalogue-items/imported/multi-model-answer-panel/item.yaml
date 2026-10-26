@@ -1,6 +1,6 @@
 slug: multi-model-answer-panel
 name: Multi-model answer panel
-summary: Ask one question. Get answers from several open AI models, ranked, plus one final answer.
+summary: "Get a second opinion on a hard question. Several AI models answer, rank each other, and one chairman writes the final answer."
 category: general
 boards: []
 type: skill

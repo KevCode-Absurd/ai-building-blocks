@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It sets up a test with a few number checks.
 new_slug: experiment-designer
 name: Experiment designer
-summary: Describe the change you want to test. Get a clear hypothesis, test
-  plan, sample size and a way to read the result.
+summary: Plan an A/B test that gives a result you can trust. Give it your change, traffic and conversion rate. You get a hypothesis, sample size and rules.
 job: plan-ad-tests
 headline: Experiment designer
-subhead: Describe the change you want to test. Get a clear hypothesis, test
-  plan, sample size and a way to read the result. Bring the change you want to
-  test. Use the result to plan your next step.
+subhead: Describe the change you want to test. Get a clear hypothesis, test plan, sample size and a way to read the result. Bring the change you want to test. Use the result to plan your next step.
 explain: |
   A test plan you can run without fooling yourself: one clear hypothesis, the right sample size, the metric to judge it and rules for reading the result.
 
@@ -18,6 +15,10 @@ when:
   - Past tests gave results nobody trusted.
   - You do not know how much traffic a test needs.
   - You want a simple routine for running experiments each month.
+not_for:
+  - "You get fewer than about 1,000 visitors a week, or need a fast answer: ask a few customers directly or compare before and after instead."
+  - "You only want to set up tracking for a test: ask your AI for help with analytics setup, or ask a developer."
+  - "You want ideas for what to test, not a plan: list your own ideas first, then bring the best one here."
 you_give:
   - The change you want to test
   - Current conversion rate
@@ -30,7 +31,30 @@ you_get:
   - Main and side metrics
   - Rules for reading the result
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Tell your AI the change you want to test and why you think it will help.
+  - Add your current conversion rate and your weekly visitors. Say which testing tools you have, if any.
+  - Answer any questions it asks. It can run in plain chat with no code or files.
+  - Check the sample size and run time. If the run time is too long, pick a bigger change.
+  - Do not stop the test early, even if early numbers look good.
+output_sample:
+  input:
+    - The change you want to test
+    - Your current conversion rate
+    - Your weekly visitors to that page
+    - The tools you have and your deadline (optional)
+  output:
+    - name: Hypothesis
+      contains: One written prediction with the reason, the change, the expected result, the audience and how you will know.
+    - name: Test design
+      contains: The one thing to change, the test type and how to split traffic between versions.
+    - name: Sample size and run time
+      contains: How many visitors each version needs and roughly how many weeks that takes at your traffic.
+    - name: Metrics
+      contains: One main metric tied to money, side metrics for context and guardrail metrics that must not get worse.
+    - name: Pre-launch checklist
+      contains: Checks to finish before you start, such as tracking and testing every version.
+    - name: Rules for reading the result
+      contains: How to judge the result, why not to stop early and what to do if nothing changes.
+    - name: Experiment playbook entry
+      contains: A template to record each test, what you learned and where else to use it.

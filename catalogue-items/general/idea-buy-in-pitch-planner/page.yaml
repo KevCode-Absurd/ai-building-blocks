@@ -1,6 +1,6 @@
 new_slug: idea-buy-in-pitch-planner
 name: "Idea buy-in pitch planner"
-summary: "Paste your idea and the people who must say yes. Get a story, a vision picture and a plan through four stages."
+summary: "Plan how to get buy-in for your idea. Give it your idea and the people who decide. You get a story, a vision picture and an order to approach them."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It needs a good read of each person's needs, but the structure is fixed."
@@ -17,6 +17,10 @@ when:
   - You have an idea that needs approval from people who do not yet see it.
   - Your last pitch got a polite no and you do not know what to change.
   - You are about to pitch to several people with different worries.
+not_for:
+  - You can decide alone. Skip the pitch and write a plain one-page brief for yourself.
+  - The person has already said yes. Send a short thank-you and next steps instead.
+  - You only need one sharp line for the idea. Use the Onliness statement writer.
 
 you_give:
   - Your idea, in a few lines
@@ -34,6 +38,29 @@ how_to_use:
   - Describe the idea and list the people. Say what you know about their worries.
   - Read the plan for the first stage and the ally order.
   - Tell the story aloud to a friend before you pitch.
+output_sample:
+  input:
+    - Your idea, in a few lines
+    - What you want them to do next, as one action
+    - The people who can say yes or no, and what you know about each
+    - A buyer or user persona (optional)
+  output:
+    - name: The idea
+      contains: Your idea in one line, and the one action you want from them.
+    - name: The four stages
+      contains: How people will react at each stage, who, and a planned answer for each.
+    - name: Story
+      contains: A short story you can tell in under two minutes that carries the idea.
+    - name: Vision picture
+      contains: Plain scenes of life after the change, with no target numbers.
+    - name: Rough measures
+      contains: Two or three small measures, what each tells you, and what you would do with it.
+    - name: People
+      contains: Each person who can say yes or no, why they need it, and a pitch line.
+    - name: Order
+      contains: Who to approach first, with allies before doubters, and the sponsor named.
+    - name: Missing and checks missed
+      contains: Gaps in what you gave, and any quality checks the plan still fails.
 
 how_it_works:
   - title: Names the stages

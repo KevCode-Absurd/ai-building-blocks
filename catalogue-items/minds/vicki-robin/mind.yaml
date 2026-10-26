@@ -16,6 +16,30 @@ use_cases:
   - "Draft a fair agreement for borrowing a neighbour's tool"
   - "Plan a holiday around the experience rather than buying more"
   - "Recognise when an income gap needs support instead of further cuts"
+not_for:
+  - "You want a retirement date or investment advice: use a qualified financial adviser, as this mind only gives educational comparisons."
+  - "You want help with the habits behind spending choices and bias: use the Annie Duke mind for decision quality, or Aristotle for what a thing is for."
+  - "You want simple family money lessons for children: use the Beth Kobliner mind."
+output_sample:
+  input:
+    - The choice you face, such as two jobs, a purchase or a shorter working week
+    - Your pay, work costs and travel time, as far as you know them
+    - A month of spending or income and expenses (optional)
+    - What you would like more room for in your life
+    - Who else the change would affect
+  output:
+    - name: Comparison with calculation shown
+      contains: Two weekly pictures side by side with pay, costs and time, and any uncertain items kept in an unknown column.
+    - name: Unpriced benefits and obligations
+      contains: What the numbers leave out, such as care, support networks, shift risk and the work other people carry.
+    - name: Fulfilment and enough review
+      contains: What each spend or hour gave back, and what a sufficient version of the activity would look like.
+    - name: Keep, use, borrow, investigate list
+      contains: Purchases sorted around the activity you want to do, without an order to discard anything.
+    - name: Discussion document or small agreement
+      contains: A draft for your household, employer or neighbours, such as a borrowing note, with assumptions visible.
+    - name: Three questions and open conditions
+      contains: What to ask before deciding and which points need a qualified adviser to check.
 seats:
   - {seat: "Life energy and enough", asks: "What did this exchange give back to your life?"}
   - {seat: "Sufficiency and community", asks: "Who makes this choice possible, and who carries its work?"}

@@ -1,6 +1,6 @@
 new_slug: website-quality-keeper
 name: Website quality keeper
-summary: Check your site each week. See what got slower or harder to find since last time, with a ranked fix list.
+summary: Check your website quality each week. See what got slower or harder to find since last time, and get one ranked list of fixes.
 job: build-websites
 thinking: medium
 thinking_why: It runs up to six checks and compares them with last time, but each check is a read-and-report job. A mid-range model is enough.
@@ -14,6 +14,10 @@ when:
   - You run a site that changes often and want the same quality checks every week.
   - You just released something and want to know what it broke.
   - Search traffic or page speed dipped and you want the likely cause ranked.
+not_for:
+  - "You want a one-off check of a single page: run the wcag-accessibility-fixer or the page-metadata-fixer on its own, which is faster."
+  - "You want the agent to change your live site by itself: it never does, so ask a developer or approve each fix first."
+  - "You have no key pages or speed reports to share: start by running PageSpeed Insights on your home page, then come back."
 you_give:
   - The addresses of your home page and 3 to 8 pages that matter most
   - A PageSpeed Insights or Lighthouse report for each of them (best)
@@ -30,6 +34,29 @@ how_to_use:
   - The first run sets the base. From the second run on it says what changed.
   - Read the fix list. Say yes to the fixes you want, and it makes only those, then rechecks them up to two times.
   - Run it again next Monday and after each release.
+output_sample:
+  input:
+    - The addresses of your home page and 3 to 8 key pages
+    - A PageSpeed Insights or Lighthouse report for each page (optional, but best)
+    - Your site code (optional)
+    - A Search Console Pages export (optional)
+    - What changed since last run, such as a new app or theme (optional)
+  prerequisites:
+    - An AI that can keep a folder of files, such as Claude Code, for the memory between runs
+    - The speed, access, page tag and search indexing skills it runs, which it can read from the library
+  output:
+    - name: This run
+      contains: Speed, access, indexing and broken link scores against last run, with counts of new, old and fixed problems.
+    - name: Alarm
+      contains: What got clearly worse, such as speed, a new critical access problem or a lost page, or none.
+    - name: Fix list to approve
+      contains: Each fix with its page, bucket, gain, effort and the check that found it, most important first.
+    - name: Not measured
+      contains: Each check it could not run and what you can give it to run it.
+    - name: Watch next run
+      contains: The one to three numbers that decide what the next run looks at first.
+    - name: Files and missing
+      contains: Each step's saved file, then every MISSING line in one list.
 how_it_works:
   - title: Load the memory
     text: Reads last run's scores, the open problems with their dates and the problems you chose to leave.

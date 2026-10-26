@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows test patterns but must understand your code.
 new_slug: test-suite-writer
 name: Test suite writer
-summary: Share your code. Get tests for units, linked parts and full user tasks,
-  plus a coverage report.
+summary: Write tests for your code and check what they miss. Give it a module and get unit, integration and end-to-end tests plus a coverage report.
 job: test-and-fix-code
 headline: Test suite writer
-subhead: Unit, integration and end-to-end tests written for your code, run for
-  real, and followed by a coverage report that shows what is still unchecked.
-  You finish with tests that pass and a clear view of the remaining holes.
+subhead: Unit, integration and end-to-end tests written for your code, run for real, and followed by a coverage report that shows what is still unchecked. You finish with tests that pass and a clear view of the remaining holes.
 explain: |
   Unit, integration and end-to-end tests written for your code, run for real, and followed by a coverage report that shows what is still unchecked. You finish with tests that pass and a clear view of the remaining holes.
 
@@ -19,6 +16,10 @@ when:
   - Your coverage is low in a few critical files.
   - You want edge cases you have not thought of.
   - A new teammate needs tests that explain how a module behaves.
+not_for:
+  - Your code cannot run anywhere, so tests cannot be checked. Ask a developer to set up a test environment first.
+  - You need to check security-critical code. Use a manual code review or a dedicated security scanning tool.
+  - You only want a bug fixed. Ask your AI to debug the error directly instead.
 you_give:
   - The code or module to test
   - Your language and test framework
@@ -30,8 +31,28 @@ you_get:
   - A coverage report
   - Suggestions for remaining gaps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open your AI tool and paste this skill into the chat, or upload it with your project files.
+  - Add the code you want tested. Say which language and test framework you use.
+  - Add a coverage target and the behaviours that matter most, if you have them (optional).
+  - Let your AI run the tests. This step needs a tool that can run code. Without one, you get test files to run yourself.
+  - Read the failures and the coverage gaps. Ask for the extra tests it suggests, then run again.
+  - Add the test command to your build checks so tests run on every change.
+output_sample:
+  input:
+    - The file or folder of code to test
+    - Your language and test framework (optional if your project already has one)
+    - Your existing test file, if you want it extended (optional)
+    - A coverage target, such as a percentage (optional)
+  prerequisites:
+    - An AI that can run code and read your project files, so the tests can really be run
+  output:
+    - name: Test files
+      contains: New tests in your own framework, named after each scenario, using set up, act and check steps.
+    - name: Test run results
+      contains: Which tests passed or failed, and whether each failure points to a bug in the code or in the test.
+    - name: Coverage report
+      contains: Which lines, branches and functions the tests reach, with weak spots in error handling and checks flagged.
+    - name: Gap suggestions
+      contains: Extra test cases to add, ranked by risk, based on the uncovered code.
+    - name: Testability notes
+      contains: Ideas to restructure code that is hard to test, such as splitting out pure functions.

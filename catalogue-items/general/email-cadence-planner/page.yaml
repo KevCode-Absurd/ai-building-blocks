@@ -1,6 +1,6 @@
 new_slug: email-cadence-planner
 name: "Email cadence planner"
-summary: "Paste your list size, send history and offers. Get a weekly email plan, a story for each, the offer in the P.S."
+summary: "Plan a weekly email schedule you can keep. Give it your list size and offers. You get a point and subject line for each email, and the offer in the P.S."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It must fit a pace to what the owner can keep and judge what each email should teach."
@@ -17,6 +17,10 @@ when:
   - You email your list once a month or only when you have a sale.
   - Your emails are all offer, and open and reply rates are falling.
   - You want a weekly plan you can keep without running out of ideas.
+not_for:
+  - "You want the content of a teaching email: use the Product how-to guide writer."
+  - "You already email weekly and only need a check on your emails: use the Email sequence auditor."
+  - "You have no offers and no stories to share yet: first write down one offer and two customer stories, then come back."
 
 you_give:
   - Your list size and how often you email now
@@ -35,6 +39,27 @@ how_to_use:
   - Say how many emails per week you can really write and send.
   - Write the first two from the plan and send them.
   - Check opens, replies, sales and unsubscribes after each send.
+output_sample:
+  input:
+    - Your list size and how often you email now
+    - What sells when you send, and your offers with prices and end dates
+    - Past emails or a buyer description (optional)
+    - Your brand brain or brand file (optional)
+  output:
+    - name: Starting point
+      contains: Your list size, current pace, and which past emails sold or got replies.
+    - name: The pace
+      contains: How many emails per week, on which days, and why you can keep it.
+    - name: Weekly plan
+      contains: Four weeks of emails, each with a subject line, one story or tip, and a P.S. offer.
+    - name: Unsubscribes
+      contains: What level of people leaving is normal for your list and what level means a problem.
+    - name: What to track
+      contains: Opens, replies, clicks, sales and unsubscribes per send, and what to change after two weeks.
+    - name: MISSING
+      contains: Any facts the plan needed and did not get, such as send history.
+    - name: Checks missed
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: Notes the starting point

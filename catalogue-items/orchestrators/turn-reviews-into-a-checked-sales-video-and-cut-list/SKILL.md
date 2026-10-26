@@ -47,14 +47,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **VSL ad scripter.** Use the skill `vsl-ad-scripter`. Starts the chain: turns your facts and review words into the seven-part script.
-2. **Video ad script line checker.** Use the skill `video-ad-script-line-checker`. Give it the script from the steps before. Checks the script from the step before and lists each weak line with a fix.
-3. **Ad script read-aloud editor.** Use the skill `ad-script-read-aloud-editor`. Give it the script from the steps before. Applies the fixes to the script so it can be said cleanly.
-4. **Video ad shot list maker.** Use the skill `video-ad-shot-list-maker`. Give it the script from the steps before. Turns the edited script into timed shots and clip prompts.
+1. **VSL ad scripter.** Use the skill `vsl-ad-scripter`. Starts the chain: turns your facts and review words into the seven-part script. Hands step 2 the script.
+2. **Video ad script line checker.** Use the skill `video-ad-script-line-checker`. Give it the script from the steps before. Checks step 1's script and lists each weak line with a fix. Hands step 3 that list, with the script.
+3. **Ad script read-aloud editor.** Use the skill `ad-script-read-aloud-editor`. Give it the script from the steps before. Applies step 2's fixes to step 1's script and fixes lines that trip when spoken. Hands step 4 the script to film.
+4. **Video ad shot list maker.** Use the skill `video-ad-shot-list-maker`. Give it the script from the steps before. Turns the edited script into timed shots and clip prompts. Hands you the shot list to film or generate from, and step 5 the shot list.
 
 Pause here: Film or generate the clips from the shot list and save every take in one folder.
 
-5. **Video ad edit planner.** Use the skill `video-ad-edit-planner`. Give it the script from the steps before. Reads your finished clips and the script, and gives the timed cut list.
+5. **Video ad edit planner.** Use the skill `video-ad-edit-planner`. Give it the script from the steps before. Uses your finished clips (saved after the pause), step 3's script and step 4's shot list, and gives the timed cut list. This is the final step.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -193,6 +193,21 @@ Machine vision inspections compose tools in sequence:
 | Smart camera with vendor SDK | ONNX export |
 | Beckhoff industrial PLC | MATLAB Coder → TwinCAT |
 
+## Output Format and Missing Inputs
+
+This skill needs MATLAB and the Visual Inspection Toolbox. Both are paid, licensed products. Say so first if the user has not confirmed they have them.
+
+Reply with these sections, in order:
+
+1. **Approach**: rule-based, AI-based or hybrid, and why it fits.
+2. **Pipeline**: the steps, from fixture to pass or fail decision.
+3. **MATLAB code**: code per step, taken from the matching reference file.
+4. **Training data**: what to collect or generate.
+5. **Deploy**: steps for the target device.
+6. **Open questions**: missing inputs.
+
+If the task, sample images, tolerances or deployment target are missing, ask once. If still missing, write MISSING in Open questions and state the assumption. Never invent image sizes, tolerances or results. Code does not run in chat: tell the user to run it in MATLAB and report any error back.
+
 ## Patterns
 
 Each reference file contains executable code patterns, API calling conventions, and

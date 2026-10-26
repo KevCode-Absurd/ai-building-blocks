@@ -1,6 +1,6 @@
 new_slug: brand-and-non-brand-splitter
 name: Brand and non-brand splitter
-summary: Share Google Ads reports and brand terms. Compare visible brand and non-brand results, check missing data and plan supported campaign exclusions.
+summary: Split your Google Ads results into brand and non-brand, see what the reports miss, and plan campaign exclusions. Give it your exports and brand names.
 job: run-google-ads
 thinking: medium
 thinking_why: The sums are simple but the campaign map needs care, so a mid-size model is the right fit.
@@ -14,6 +14,10 @@ when:
   - Your Performance Max or Shopping ROAS looks strong but new customers are not growing.
   - You want to compare reported non-brand returns with a clearly stated cost threshold.
   - You need a supported campaign separation plan and query checks before changing settings.
+not_for:
+  - "Your account has no brand search volume or no matching campaign totals: start with a plain review of your search terms export."
+  - "You want proof that ads created sales: run a lift test or holdout test instead, because this split cannot show cause."
+  - "You want to change live campaign settings: make the change yourself in Google Ads, or ask the person who manages your account."
 you_give:
   - Dated matching campaign totals with spend, conversions, value, currency and attribution basis
   - Search terms or categories by campaign, with known report omissions
@@ -26,11 +30,39 @@ you_get:
   - Observed branded queries and proposed exclusions with match types and test cases
   - A campaign plan and custom rubric showing applicable points and unchecked items
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Attach matching dated campaign totals and search reports. Include value, currency and attribution definitions.
-  - Add brand names and variants, plus the cost basis for any break-even comparison.
-  - Review supported controls and expected blocked/allowed queries. Any live change needs separate approval and result checks.
-  - Recheck on a date suited to volume and conversion lag. Compare coverage and known results, keeping gaps visible.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste the skill, or open it if you added it.
+  - Paste your campaign totals and your search terms report from Google Ads. Say the dates, currency and how value is counted.
+  - Add your brand names, misspellings and product lines. Add your margin if you want a cost check.
+  - Read the coverage line first. It shows how much spend the reports leave out.
+  - Check the proposed exclusions and test queries. Make any change in Google Ads yourself, then review on the date it gives.
+output_sample:
+  input:
+    - Dated campaign totals with spend, conversions, value and currency
+    - Search terms report by campaign
+    - Your brand names, spellings and product lines
+    - Contribution margin before ads (optional)
+    - Current campaign settings and competitor notes (optional)
+  output:
+    - name: DATA BASIS
+      contains: The period, retrieval date, currency, attribution and how value is defined.
+    - name: REPORT COVERAGE
+      contains: Visible spend and value against matching campaign totals, with omitted amounts marked unknown.
+    - name: VISIBLE QUERY SPLIT
+      contains: The share of visible spend from brand, non-brand and ambiguous queries.
+    - name: OBSERVED NON-BRAND ATTRIBUTED ROAS
+      contains: Reported value divided by spend for non-brand queries, or unresolved if data is missing.
+    - name: COST THRESHOLD
+      contains: The cost basis you gave and whether non-brand returns pass it.
+    - name: OBSERVED LEAKS
+      contains: Branded queries seen in each campaign, with spend and evidence date.
+    - name: PROPOSED EXCLUSIONS
+      contains: Terms to exclude, with match type, level and queries that should be blocked or allowed.
+    - name: CAMPAIGN PLAN
+      contains: A role for each campaign, supported settings, and budget or eligibility risks.
+    - name: CUSTOM COVERAGE RUBRIC
+      contains: Points earned out of the applicable maximum, with unchecked items listed.
+    - name: REVIEW ON
+      contains: A review date, with the reason based on volume and conversion lag.
 how_it_works:
   - title: Checks report coverage
     text: Matches periods and definitions, then shows covered spend and value against comparable campaign totals. Hidden queries stay unknown.

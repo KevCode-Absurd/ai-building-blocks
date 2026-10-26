@@ -1,51 +1,119 @@
-{
-  "headline": "Request deliverable drafter",
-  "subhead": "Use an agreed request brief to create its named files, with source evidence and explicit gaps.",
-  "job": "set-up-ai",
-  "thinking": "medium",
-  "thinking_why": "Requires following the supplied scope and checking evidence; domain expertise is not assumed.",
-  "explain": "Use an agreed request brief to create its named files, with source evidence and explicit gaps. This is a general method for tasks without a reliable specialist match. Planning is deterministic; executing these instructions requires your own compatible AI runner.",
-  "when": [
-    "You have a concrete deliverable without a matching specialist workflow."
-  ],
-  "you_give": [
-    "The original request, constraints and available evidence."
-  ],
-  "you_get": [
-    "Editable named files, requirements and honest check status."
-  ],
-  "how_to_use": [
-    "Include the full request and complete required inputs.",
-    "Run the workflow in a compatible AI runner.",
-    "Review unresolved checks before using the result."
-  ],
-  "how_it_works": [
-    {
-      "title": "Follow the brief",
-      "text": "Read request-brief.md and the original request. Produce each named deliverable with the supplied facts, files and tools. Work through requirement IDs in order and maintain a requirement-to-file map. For a schedule require availability, roles and dates; for budgets require amounts, units, currency and assumptions; for research require sources; for comparisons use the same criteria across options. These are examples of input checks, not permission to change the requested task. Never substitute an unrelated specialist skill. Do not fabricate missing facts. Ask only for inputs that block the requested result; label optional assumptions. Use the requested file format if a compatible runner is available. Otherwise provide editable source and explicit conversion instructions, marking conversion not run. Save deliverables/ and artifact-index.md with paths, version and requirement IDs. For high-stakes or regulated work produce a review draft and state the qualified review still needed. Do not send, publish, book, spend or schedule external actions. Creating this workflow pack has not executed this skill."
-    }
-  ],
-  "output_shape": "Requirement ID | Artifact path | Evidence | Status | Missing input",
-  "tweaks": [
-    {
-      "what": "Domain",
-      "how": "Supply your own standards and review rubric."
-    }
-  ],
-  "judge": [
-    "Every requested result is covered or explicitly unresolved.",
-    "No unsupported execution or specialist-validation claim."
-  ],
-  "test": [
-    "Try missing inputs and verify that no facts are invented."
-  ],
-  "improve": [
-    "Replace a general stage with a suitable specialist skill."
-  ],
-  "terms": [
-    {
-      "term": "Not run",
-      "meaning": "A check could not be executed with the available tools."
-    }
-  ]
-}
+new_slug: request-deliverable-drafter
+name: Request deliverable drafter
+summary: Turn a request brief into the named files, each tied to a requirement number, with sources shown and gaps marked MISSING.
+job: set-up-ai
+thinking: medium
+thinking_why: Requires following the supplied scope and checking evidence; domain expertise is not assumed.
+headline: Request deliverable drafter
+subhead: Give it request-brief.md, or just your request. It makes each file the brief names, in the format you asked for, and keeps an index that links every file to a requirement. You get the files, with sources shown and gaps marked, never filled in.
+explain: |-
+  Many AI answers look finished but quietly skip a count, a language or a format. This deliverable drafter works from a numbered brief instead. It takes the requirements in order and makes one named file for each, so nothing is left to memory.
+
+  It will not invent facts to fill a hole. A schedule needs dates, roles and availability. A budget needs amounts, units, currency and assumptions. Research needs sources. A comparison uses the same criteria for every option. When something is missing, the file says MISSING and the index shows which requirement it blocks.
+
+  If it cannot save a file in the format you asked for, it gives editable text and the steps to convert it, marked "conversion not run". For legal, tax, medical or other high-stakes work it makes a review draft and names the review still needed. It never sends, publishes or books anything.
+when:
+  - You have a brief, or a clear request, and want the files made in one pass.
+  - You asked for several files in set formats and want to see which requirement each one meets.
+  - You need a first draft that is honest about what it does not know.
+  - You plan to run the result through a checker before you send it on.
+not_for:
+  - "You have no brief and the request is loose: use the Request brief builder first."
+  - "You already have the files and want them checked against the request: use the Deliverable requirements checker."
+  - The job has its own specialist skill, such as ad copy or a finance bridge. Use that skill, because this one is a general method.
+you_give:
+  - request-brief.md, from the Request brief builder (or just your request, and it builds a short brief first)
+  - Your original request, in your own words
+  - The facts and files the work must use, such as dates, amounts, sources or data
+  - The file formats you want (optional)
+you_get:
+  - One named file for each deliverable in the brief
+  - artifact-index.md, linking each file to its requirement with version, evidence and status
+  - MISSING lines for anything it could not do without your input
+  - Editable source and conversion steps, if a format could not be made
+  - A note on any qualified review the job still needs
+how_to_use:
+  - Open Claude, ChatGPT or Gemini and add the skill, or paste SKILL.md into a new chat. Pick an AI that can save files if you want real files.
+  - Paste request-brief.md and your original request. With no brief, paste the request and it builds a short one first.
+  - Add the facts and files the work needs. For a budget, give amounts, units and currency. For a schedule, give dates and roles. For research, give sources.
+  - Read artifact-index.md first. Look at every row marked partial or blocked, and answer those before you use the files.
+  - Run the files through the Deliverable requirements checker before you send them on.
+output_sample:
+  input:
+    - request-brief.md from the Request brief builder (optional)
+    - Your original request, in your own words
+    - The facts and files the work must use
+    - The file formats you want (optional)
+  prerequisites:
+    - An AI that can save files (only if you want real files, not text in the chat)
+  output:
+    - name: deliverables/
+      contains: One file for each deliverable, in the format asked, or editable source with conversion steps.
+    - name: artifact-index.md
+      contains: Each file's path, version, requirement IDs, evidence, status and missing input.
+    - name: MISSING
+      contains: Inputs it needed and did not get, and which requirement each one blocks.
+    - name: Review needed
+      contains: Any qualified review the job needs before the files are relied on, or none.
+    - name: Checks missed
+      contains: Any of its own checks that failed or could not run, or none.
+how_it_works:
+  - title: Reads the brief and the request
+    text: It uses request-brief.md and your own words. With no brief, it writes a short one first and says so.
+  - title: Works through the IDs
+    text: It takes each requirement in order and keeps a map from requirement to file.
+  - title: Checks the inputs
+    text: Schedules need dates and roles, budgets need amounts and currency, research needs sources.
+  - title: Makes the files
+    text: It uses the format you asked for, or gives editable source with steps to convert, marked not run.
+  - title: Marks every gap
+    text: Missing facts are never made up. They show as MISSING in the file and in the index.
+  - title: Stops at the edge
+    text: It sends, publishes, books and spends nothing. High-stakes work becomes a review draft.
+output_shape: |-
+  deliverables/
+    <file name>.<format>      one file for each deliverable in the brief
+
+  artifact-index.md
+  Requirement ID | Artifact path | Version | Evidence | Status | Missing input
+  R1 | deliverables/<file> | v1 | <source or file section> | done, partial or blocked | <none or what>
+
+  MISSING:
+  <each missing input and the requirement it blocks>
+
+  REVIEW NEEDED:
+  <qualified review, or none>
+
+  CHECKS MISSED:
+  <one line per check that failed or could not run, or none>
+tweaks:
+  - what: File formats
+    how: Name the format for each file. If your AI cannot save it, you get editable text and conversion steps.
+  - what: Source facts
+    how: Paste the dates, amounts and sources the work needs. Each missing one becomes a MISSING line.
+  - what: Your own standards
+    how: Add a house style or review rubric to the request so each file is drafted to it.
+judge:
+  - Every requested result is covered or explicitly unresolved.
+  - No unsupported execution or specialist-validation claim.
+test:
+  - Try missing inputs and verify that no facts are invented.
+improve:
+  - Add your own standards or review rubric to the request, so every draft follows them.
+  - Run each draft through the Deliverable requirements checker before it leaves your hands.
+  - Replace a general draft with a specialist skill when one fits your field.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini that can save files
+      why: You get real files in the formats you asked for. Without that, you get editable text and conversion steps.
+  inputs:
+    - request-brief.md from the Request brief builder
+    - Dates, amounts and sources the work must use
+    - Any house style or review rubric
+terms:
+  - term: Requirement ID
+    meaning: A short label, such as R3, for one thing the request asked for.
+  - term: Conversion not run
+    meaning: The file could not be saved in the format asked, so you get editable text and steps to convert it.
+  - term: Review draft
+    meaning: A first version for a qualified person to check before anyone relies on it.

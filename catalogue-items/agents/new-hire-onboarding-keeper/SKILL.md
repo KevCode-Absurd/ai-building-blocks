@@ -43,7 +43,7 @@ Keep one folder, `onboarding/<person>/`. Save each result as `onboarding/<person
 
 1. **Build the plan once.** If `plan.md` does not exist, run `new-hire-plan-builder` with the hire's details for the pre-start list, day one and week one. Then run `30-60-90-day-onboarding-planner` for the goals at days 30, 60 and 90. Save both in `plan.md`. Show it to the manager and stop until they have approved it.
 2. **Set the check-in questions once.** If `checkin-questions.md` does not exist, run `employee-survey-designer` for five short questions the manager asks each week: what is clear, what is not, what is blocking, who helped, what would help most. Save them.
-3. **Read this week.** Run `task-list-keeper` on `tasks.md` with the manager's notes. Mark each item done, late or blocked. Work out the share of this week's planned items that are done.
+3. **Read this week.** Run `task-list-keeper` on `tasks.md` with the manager's notes. On the first run, build `tasks.md` from the pre-start list, the first week and the 30, 60 and 90 day goals in `plan.md`. Mark each item done, late or blocked. Work out the share of this week's planned items that are done.
 4. **Choose the path.**
    - **On track** (this agent's own starting point: at least four in five planned items done, and no blocker named): confirm, name what comes next week, and keep the hand-back short.
    - **Behind** (fewer than four in five done, or any item late two weeks running): look first at what is on the company's side. Missing access, no buddy time, unclear priorities, a missing doc. List each cause that matches the notes. Only after that, note what the manager may talk through with the person. Do not say the person is slow.

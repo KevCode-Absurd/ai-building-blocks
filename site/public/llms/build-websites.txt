@@ -1,66 +1,67 @@
 # Build websites and web apps: AI Blocks
 
-> 62 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 63 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [3D web scene builder](https://useaiblocks.com/skills/3d-web-scene-builder): Describe the scene or product viewer. Get working 3D page code with fast loading and a fallback.
-- [3D website builder](https://useaiblocks.com/skills/3d-website-builder): Describe the site and its mood. Get 3D page code with shaders, motion, a preloader and phone tuning.
-- [Accessible UI builder](https://useaiblocks.com/skills/accessible-ui-builder): Describe the screen. Get accessible, responsive component code that follows your design system.
-- [AI crawler access editor](https://useaiblocks.com/skills/ai-crawler-access-editor): Say which AI crawlers to allow. Get your robots.txt updated so AI assistants can read your catalog. Changes your live theme.
-- [AI shopping readiness checker](https://useaiblocks.com/skills/ai-shopping-readiness-checker): Run it on your store. Get a score for how easily AI shoppers find your products, plus the fix for each gap.
-- [Animation speed fixer](https://useaiblocks.com/skills/animation-speed-fixer): Point it at stuttering animations. Get each slow spot found and a small fix that smooths it.
-- [App translation setup helper](https://useaiblocks.com/skills/app-translation-setup-helper): Point it at your app. Get hardcoded text found and a plan for translations, locale files and right-to-left support.
-- [ASP.NET web app builder](https://useaiblocks.com/skills/asp-net-web-app-builder): Describe the web app or API. Get ASP.NET Core code that follows current official guidance.
-- [Brand identity markup adder](https://useaiblocks.com/skills/brand-identity-markup-adder): Give it your brand details. Get markup added so AI can confirm your store is a real brand. Changes your live theme.
-- [Build a page on a clear grid and test it](https://useaiblocks.com/workflows/build-and-test-a-page-on-a-clear-type-and-grid): Describe your site. Get fonts and a grid, a page that follows them and a browser test.
-- [Comparison table designer](https://useaiblocks.com/skills/comparison-table-designer): Give it your products or plans. Get a comparison page that helps people choose, with a fair default pick.
-- [Editorial web designer](https://useaiblocks.com/skills/editorial-web-designer): Describe the interface. Get a calm, document-style design with warm greys, crisp borders and quiet motion.
-- [Favicon maker](https://useaiblocks.com/skills/favicon-maker): Give it a logo image. Get a full set of favicons and the link tags added to your site.
-- [Font pair shortlist maker](https://useaiblocks.com/prompts/font-pair-shortlist-maker): Paste your brand feel and who reads the site. Get three font pairs with sizes and line spacing that read well.
-- [Full-page screenshot taker](https://useaiblocks.com/skills/full-page-screenshot-taker): Give it a page address. Get one long image of the whole page, even with scroll areas and lazy images.
-- [GLSL shader writer](https://useaiblocks.com/skills/glsl-shader-writer): Describe the visual effect. Get an efficient vertex and fragment shader for the web or a game.
-- [Headless store builder](https://useaiblocks.com/skills/headless-store-builder): Describe the store you want. Get a fast custom Shopify storefront built on Hydrogen, with deploy steps.
-- [Image and video pipeline planner](https://useaiblocks.com/skills/image-and-video-pipeline-planner): Tell it your site's media. Get a plan for formats, responsive images, video hosting and a tidy brand asset library.
-- [Industry-look site composer](https://useaiblocks.com/skills/industry-look-site-composer): Name your industry, such as store, restaurant or manufacturer. Get page layouts that look like that kind of site.
-- [Interface builder](https://useaiblocks.com/skills/interface-builder): Describe the screens. Get responsive, accessible components with a design system and dark mode.
-- [Interface designer](https://useaiblocks.com/skills/interface-designer): Describe the page or app. Get a built interface with a clear look that does not feel like a template.
-- [Interface polish checker](https://useaiblocks.com/skills/interface-polish-checker): Give it your page or component code. Get a list of spacing, type and layout slips with a fix for each.
-- [Interface upgrader](https://useaiblocks.com/skills/interface-upgrader): Point it at an existing site or app. Get generic design patterns found and fixed, without a rewrite.
-- [Link preview fixer](https://useaiblocks.com/skills/link-preview-fixer): Share a link that looks wrong. Get the tags and image fixes so it shows a rich card everywhere.
-- [Mini-course builder](https://useaiblocks.com/skills/mini-course-builder): Name a topic. Get a web mini-course with lessons, flashcards and quizzes in one page.
-- [Missing product details updater](https://useaiblocks.com/skills/product-data-gap-filler): Find missing product details such as barcodes and weight. Fill available fields in your live store. Updates live products.
-- [Multi-language site planner](https://useaiblocks.com/skills/multi-language-site-planner): Tell it your site and target markets. Get a plan for language URLs, hreflang, translation steps, currencies and right-to-left layouts.
-- [Multi-step form designer](https://useaiblocks.com/skills/multi-step-form-designer): Describe the data you must collect. Get a staged form plan with progress cues, conditional questions and save-and-resume.
-- [Online calculator designer](https://useaiblocks.com/skills/online-calculator-designer): Name what your visitors want to work out. Get a calculator design that gives a real answer and gathers leads fairly.
-- [Page design gate](https://useaiblocks.com/skills/page-design-gate): Describe your page. Get one that looks designed, checked in a real browser at phone and desktop width.
-- [Page metadata fixer](https://useaiblocks.com/skills/page-metadata-fixer): Point it at your pages. Get missing titles, share cards, canonical links and page data found and fixed.
-- [Page speed fixer](https://useaiblocks.com/skills/page-speed-fixer): Paste your PageSpeed report. Get fixes for speed, access, best practice and SEO scores, in ordered batches.
-- [Page transition animator](https://useaiblocks.com/skills/page-transition-animator): Describe the motion you want. Get smooth React page and element transitions that respect reduced-motion settings.
-- [Photopea editor embedder](https://useaiblocks.com/skills/photopea-editor-embedder): Say what image editing your app needs. Get Photopea embedded and scripted to open, edit and export files.
-- [Polished interface builder](https://useaiblocks.com/skills/polished-interface-builder): Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look.
-- [Product attribute field setter](https://useaiblocks.com/skills/product-attribute-field-setter): Say which product facts matter. Get fields for material, specs and sizing filled in, so AI can match products. Changes live data.
-- [Product category assigner](https://useaiblocks.com/skills/product-category-assigner): Give it your catalog. Get every product matched to a standard Shopify category, so AI can place it. Updates live products.
-- [Product description enricher](https://useaiblocks.com/skills/product-description-enricher): Point it at thin product descriptions. Get fact-rich rewrites with materials, uses and shopper words. Updates live product pages.
-- [Product image alt text writer](https://useaiblocks.com/skills/product-image-alt-text-writer): Point it at your product images. Get alt text set on each, so AI knows what they show. Changes live files.
-- [React and Next.js builder](https://useaiblocks.com/skills/react-and-next-js-builder): Describe the screen. Get React and Next.js components with fast loading, Tailwind styling and bundle checks.
-- [Screen states designer](https://useaiblocks.com/skills/screen-states-designer): Give it a screen. Get the states people hit first: empty, loading, error, offline, no results and success.
-- [Screenshot to interface builder](https://useaiblocks.com/skills/screenshot-to-interface-builder): Give it a screenshot or mockup. Get matching UI built with your own parts, compared side by side with the image.
-- [Scroll animation site builder](https://useaiblocks.com/skills/scroll-animation-site-builder): Describe the site. Get a scroll-driven page with layered depth, motion and smooth reveals, built in code.
-- [Search indexing auditor](https://useaiblocks.com/skills/search-indexing-auditor): Give it your site, folder or Search Console export. Get why pages are not indexed and a fix list.
-- [Shareable tool builder](https://useaiblocks.com/skills/shareable-tool-builder): Say what to build. Get a quiz, name generator or calculator designed so people share it.
+- [3D web scene builder](https://useaiblocks.com/skills/3d-web-scene-builder): Share a scene brief, web framework, model files and target devices to get 3D scene code with a loading state and a fallback.
+- [3D website builder](https://useaiblocks.com/skills/3d-website-builder): Give a site brief, colours and models. Get 3D scene code with shader effects, motion, a preloader and phone performance guidance.
+- [Accessible UI builder](https://useaiblocks.com/skills/accessible-ui-builder): Describe your screen and get accessible UI component code that works on phone and desktop and follows your design system.
+- [Animation performance fixer](https://useaiblocks.com/skills/animation-speed-fixer): Share stuttering animation code. Get likely causes, quoted problem lines and small fixes to test in your current setup.
+- [App translation setup helper](https://useaiblocks.com/skills/app-translation-setup-helper): Share your app. Get hardcoded text found and a plan for translations, locale files and right-to-left support.
+- [ASP.NET Core web app builder](https://useaiblocks.com/skills/asp-net-web-app-builder): Share a web app, API or codebase. Get ASP.NET Core code, design or review matched to its framework and app style.
+- [Bundled React app builder](https://useaiblocks.com/skills/single-file-app-builder): Describe a React app. Get project code bundled into one HTML file after setup and build.
+- [Favicon maker](https://useaiblocks.com/skills/favicon-maker): Share a logo image. Get favicon files and HTML link tags for your site.
+- [Font pair shortlist maker](https://useaiblocks.com/prompts/font-pair-shortlist-maker): Get a font pair shortlist for your website: three headline and body pairs with sizes and line spacing, plus one pick for your readers.
+- [Frontend developer](https://useaiblocks.com/agents/agency-engineering-frontend-developer): Plan a React, Vue, Angular or Svelte front end. Get the component list, accessibility and speed plan, and tests to run before launch.
+- [Full-page screenshot taker](https://useaiblocks.com/skills/full-page-screenshot-taker): Share a page address or open browser tab. Get a full-page capture with scroll and late-loading content checks.
+- [GLSL shader writer](https://useaiblocks.com/skills/glsl-shader-writer): Describe the visual effect and target runtime. Get GLSL shader code with uniforms and performance checks to run.
+- [Image and video pipeline planner](https://useaiblocks.com/skills/image-and-video-pipeline-planner): Plan your image and video pipeline: formats, sizes, video hosting and a tidy asset library, so your site loads fast and stays organized.
+- [Industry site layout planner](https://useaiblocks.com/skills/industry-look-site-composer): Turn your site type and brand brief into page layout notes, navigation guidance, and checklists.
+- [Interface builder](https://useaiblocks.com/skills/interface-builder): Describe your screens and get responsive interface components with a design system, accessible markup and dark mode in React, Vue or plain HTML.
+- [Interface code builder](https://useaiblocks.com/skills/polished-interface-builder): Turn a page brief and style rules into interface code with layouts, motion, and interaction states.
+- [Interface designer](https://useaiblocks.com/skills/interface-designer): Describe your page or app and get a built interface with its own look, picked for your subject and audience, not a stock template.
+- [Interface improvement reviewer](https://useaiblocks.com/skills/interface-upgrader): Share an existing app and the files it may change. It finds visual weak spots and suggests focused UI fixes.
+- [Interface polish checker](https://useaiblocks.com/skills/interface-polish-checker): Share your page or component code. Get spacing, type and layout slips with a fix for each.
+- [Link preview fixer](https://useaiblocks.com/skills/link-preview-fixer): Fix a link preview that shows a bare URL or the wrong picture. Get the sharing tags and image fixes so your link preview shows a rich card.
+- [Mini-course builder](https://useaiblocks.com/skills/mini-course-builder): Name a topic and get a mini-course web page with 6 to 8 lessons, flashcards and quiz questions. Open it in a browser or host it free.
+- [Minimal editorial interface designer](https://useaiblocks.com/skills/editorial-web-designer): Design a restrained, document-style interface. Get warm neutral colors, clear type, crisp borders and implementation code suited to the screen.
+- [Multi-language site planner](https://useaiblocks.com/skills/multi-language-site-planner): Plan a multi-language website: language URLs, hreflang tags, translation steps, currencies and right-to-left layouts, all in one plan for your markets.
+- [Multi-step form designer](https://useaiblocks.com/skills/multi-step-form-designer): Share the fields and audience. Choose a single page or staged form, with progress cues, relevant questions, validation and resume rules.
+- [Online calculator designer](https://useaiblocks.com/skills/online-calculator-designer): Describe what visitors need to work out. Plan clear inputs, visible sums, useful results and optional extras for an email signup.
+- [Page indexing checker](https://useaiblocks.com/skills/search-indexing-auditor): Share your site, folder or Search Console export. Get why pages are not indexed and a fix list.
+- [Page metadata fixer](https://useaiblocks.com/skills/page-metadata-fixer): Share page code and preferred URLs. Get metadata fixes and a list of checks, including live social preview checks when available.
+- [Page speed fixer](https://useaiblocks.com/skills/page-speed-fixer): Share PageSpeed or Lighthouse results and project access. Get ordered fixes, risk notes and a checklist for fresh test results.
+- [Page transition animator](https://useaiblocks.com/skills/page-transition-animator): Share React or Next.js code. Get transition code for navigation, lists, and reduced-motion settings.
+- [Product comparison page designer](https://useaiblocks.com/skills/comparison-table-designer): Share options and buyer needs. Get a fair comparison page with a clear pick for each buyer.
+- [Product description enricher](https://useaiblocks.com/skills/product-description-enricher): Find thin product descriptions in your Shopify store and rewrite them with real facts. Review every product description rewrite before it goes live.
+- [React and Next.js UI builder](https://useaiblocks.com/skills/react-and-next-js-builder): Describe a screen. Get React components, a project scaffold and size checks.
+- [Screen states designer](https://useaiblocks.com/skills/screen-states-designer): Find the empty, loading, error and offline states your screen is missing, then build each one. Use it as a screen states checklist and builder.
+- [Screenshot to interface builder](https://useaiblocks.com/skills/screenshot-to-interface-builder): Turn a screenshot into a working screen. Give it your mockup and get matching UI built from your own parts, checked side by side.
+- [Scroll animation site builder](https://useaiblocks.com/skills/scroll-animation-site-builder): Turn a site brief and images into an HTML page with layered, scroll-driven motion.
+- [Shareable tool builder](https://useaiblocks.com/skills/shareable-tool-builder): Turn a quiz or small tool idea into input rules, result steps, and share card designs.
+- [Shopify AI crawler access editor](https://useaiblocks.com/skills/ai-crawler-access-editor): Choose AI crawlers for your Shopify store. Preview robots.txt theme changes, then apply them with approved access. Live edits require review.
+- [Shopify AI search attribute updater](https://useaiblocks.com/skills/product-attribute-field-setter): Use Shopify access to map product facts into AI-search fields. Preview values before live catalog updates.
+- [Shopify AI shopping readiness checker](https://useaiblocks.com/skills/ai-shopping-readiness-checker): Connect Shopify Admin. Get a read-only scorecard across five areas, with gaps linked to the skills that can fix them.
+- [Shopify missing product detail updater](https://useaiblocks.com/skills/product-data-gap-filler): Select Shopify products. Get blank barcodes, SKUs, types and weights filled from supplied sources after a dry-run review.
+- [Shopify product categorizer](https://useaiblocks.com/skills/product-category-assigner): Share a product and its details. Get a suggested Shopify category to review and apply.
+- [Shopify product image alt text writer](https://useaiblocks.com/skills/product-image-alt-text-writer): Select Shopify product images. Get concise alt text from product facts and preview it before live file changes.
 - [Shopify theme developer](https://useaiblocks.com/skills/shopify-theme-developer): Say how your store should look. Get a built or edited theme with sections, templates and speed fixes.
-- [Single-file app builder](https://useaiblocks.com/skills/single-file-app-builder): Describe the app. Get a working React web app bundled into one HTML file you can open or share.
-- [Site map planner](https://useaiblocks.com/skills/site-map-planner): Describe your site. Get a page hierarchy, navigation, URL plan and internal linking map.
-- [Store policy cleaner](https://useaiblocks.com/skills/store-policy-cleaner): Check your shipping, returns and privacy policies. Get clean, plain text versions AI can quote to shoppers. Can update live policies.
-- [Structured data writer](https://useaiblocks.com/skills/structured-data-writer): Give it a page. Get working JSON-LD markup for rich results, tested and ready to paste.
-- [UI component adder](https://useaiblocks.com/skills/ui-component-adder): Say which components you need. Get them added to your project with the right setup and usage.
-- [WCAG accessibility fixer](https://useaiblocks.com/skills/wcag-accessibility-fixer): Point it at your site code. Get WCAG 2.2 problems found, fixed and checked again.
-- [Web animation builder](https://useaiblocks.com/skills/web-animation-builder): Describe the motion. Get staggered, timed and SVG animations built with Anime.js.
+- [Site map planner](https://useaiblocks.com/skills/site-map-planner): Plan your site map: get a page tree, menu plan, URL list and internal link map from a short brief about your business and goals.
+- [Store policy editor](https://useaiblocks.com/skills/store-policy-cleaner): Share approved store policies. Get readability gaps and plain-text drafts; applying changes updates live policies.
+- [Structured data writer](https://useaiblocks.com/skills/structured-data-writer): Give it visible page facts and page type. Get matching JSON-LD to validate; markup does not promise a rich result.
+- [UI component developer](https://useaiblocks.com/skills/ui-component-adder): Add buttons, forms, tables and sidebars to your project with the UI component adder. It sets up each part and shows you how to use it.
+- [USWDS developer agent](https://useaiblocks.com/agents/agency-engineering-uswds-developer): Plan a government website on the U.S. Web Design System (USWDS): theme settings, official components, required .gov elements and access checks.
+- [WCAG accessibility reviewer](https://useaiblocks.com/skills/wcag-accessibility-fixer): Share site code or pages and target WCAG level. It checks selected issues and suggests fixes; retest results depend on tools and manual review.
+- [Web animation builder](https://useaiblocks.com/skills/web-animation-builder): Describe the motion you want and get Anime.js web animation code: staggered grids, timed sequences and SVG line drawing for your page.
 - [Web font pairing picker](https://useaiblocks.com/skills/web-font-pairing-picker): Describe your site. Get font pairs, sizes and line spacing that read well on every screen.
-- [Web form designer](https://useaiblocks.com/skills/web-form-designer): Name your form. Get fields, error messages, spam protection and a plan to raise completions.
-- [Web page speed tuner](https://useaiblocks.com/skills/web-page-speed-tuner): Give it a slow site. Get fixes for network, loading and rendering, ranked by gain. Uses High Performance Browser Networking.
-- [Website art director](https://useaiblocks.com/skills/website-art-director): Describe your site or app screen. Get a built page with a chosen look, checked in a browser, not a template.
-- [Website content mover](https://useaiblocks.com/skills/website-content-mover): Name your old and new site. Get a move plan that keeps search rank, links and bookmarks working.
-- [Website page structure planner](https://useaiblocks.com/prompts/page-tree-url-sketcher): Paste what your site does and who it is for. Get a page tree, menu and web addresses.
-- [Website quality review agent](https://useaiblocks.com/agents/website-quality-keeper): Check your site each week. See what got slower or harder to find since last time, with a ranked fix list.
-- [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner): Point it at a slow site. Get Core Web Vitals, bundle size and caching problems fixed.
-- [WordPress health fixer](https://useaiblocks.com/skills/wordpress-health-fixer): Paste your WordPress Site Health report. Get a ranked, backup-first fix plan with exact commands.
+- [Web form designer](https://useaiblocks.com/skills/web-form-designer): Describe your form and goal. Get field, error and spam tips.
+- [Web GIS developer agent](https://useaiblocks.com/agents/agency-gis-web-gis-developer): Plan an interactive web map. Get the mapping library choice, data and tile plan, and mobile and speed checks for MapLibre, Leaflet or ArcGIS.
+- [Web page designer](https://useaiblocks.com/skills/page-design-gate): Share a page brief or code. Get design changes and browser findings at two screen sizes.
+- [Web performance checker](https://useaiblocks.com/skills/web-page-speed-tuner): Share a slow page. Get ranked fixes for network, loading and rendering, with a score.
+- [Website content migration planner](https://useaiblocks.com/skills/website-content-mover): Share your current site, destination and content list. Get a migration plan for URLs, redirects, tests and post-launch checks.
+- [Website designer](https://useaiblocks.com/skills/website-art-director): Build a website or app screen with a real design idea, not a template. Your AI picks a look, builds the page and checks it in a browser.
+- [Website layout designer and tester](https://useaiblocks.com/workflows/build-and-test-a-page-on-a-clear-type-and-grid): Choose fonts and layout, build the page from that design and check the actual page in a browser.
+- [Website page structure planner](https://useaiblocks.com/prompts/page-tree-url-sketcher): Plan your website page tree and URL structure before you build. Give it what your site does and who visits. You get a menu and short web addresses.
+- [Website quality improvement reviewer](https://useaiblocks.com/agents/website-quality-keeper): Review key pages for speed, access and search issues. Compare the last check and get ranked fixes with untested areas named.
+- [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner): Give it a page or site code and target pages. Get a measured baseline, ranked fixes and a retest plan.
+- [WordPress and Drupal developer](https://useaiblocks.com/agents/agency-engineering-cms-developer): Plan a WordPress or Drupal build: content model, theme, custom plugin or module, and a pre-launch checklist to run before go-live.
+- [WordPress health fixer](https://useaiblocks.com/skills/wordpress-health-fixer): Turn your WordPress Site Health report into a ranked fix plan. Backups come first, and each fix has exact commands. Fix site health warnings safely.

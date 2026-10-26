@@ -1,0 +1,153 @@
+name: Hospitality Guest Services agent
+summary: Turn a hotel or restaurant guest complaint into a warm reply, a fair fix and a note for who to tell. Paste the message and what you may offer.
+headline: Hospitality Guest Services agent
+subhead: Paste a guest message, review or request, plus your house rules. It writes a warm guest reply, picks a fix that fits how serious the problem is, says who must be told, and gives you a follow-up note. It works for hotels, restaurants and event venues.
+job: help-customers
+thinking: high
+thinking_why: A guest message can hide an allergy, an injury or a privacy problem. Use a model that reads closely, flags these first and keeps to the limits you set.
+explain: >-
+  A guest complaint is easy to get wrong. A late reply makes it worse. A stiff
+  apology sounds like a script. An offer you cannot afford leaves your team
+  to pick up the bill. This hotel guest services agent writes the reply with
+  the facts you give it, and checks the risky parts before you send.
+
+
+  It follows the HEARD steps from the original profile. Hear the guest out,
+  empathize, apologize for the exact problem, resolve it fast, then add
+  something small and extra. It sizes the fix to how serious the problem is,
+  from a minor note to a severe case that needs the general manager. It names
+  allergies, injuries and privacy first, because those come before any
+  wording.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It drafts only.
+  It cannot read your booking system, send a message or change a bill. The
+  targets in the original, such as reply times and review scores, are goals
+  and not results from AI Blocks.
+when:
+  - A guest emails or messages a complaint about noise, a dirty room, a late meal or a wrong bill, and you need a reply today.
+  - A one-star review on Google, TripAdvisor or Booking.com needs a calm answer that does not argue.
+  - A booking has a special request, an allergy or an anniversary, and you want a pre-arrival message that shows you noticed.
+  - A guest left unhappy and you want a thank-you and a win-back note that fits what went wrong.
+not_for:
+  - A guest is hurt, ill or in danger. Call your manager, security or emergency services first. Use this agent only afterwards, to write the record.
+  - You want replies sent for you. It drafts only. A staff member must check and send each one.
+  - The customer is not a guest on a stay, such as an online shopper. Use the Customer Service agent or the Refund request reply writer.
+  - You have a pile of public reviews to answer. Use the Public review reply desk.
+  - You have not decided what staff may give away. It cannot set your compensation limits. Your manager decides that.
+you_give:
+  - The guest's message, review or request, copied as it was written
+  - The stay details for that guest, such as dates, room type, special requests and loyalty level (optional)
+  - What your staff may offer, who must approve it, and your check-in and check-out times
+  - What you want back, such as a reply, a review response, a pre-arrival message or a follow-up
+  - Your type of place and the tone you use, such as a family restaurant or a boutique hotel (optional)
+you_get:
+  - A reply to the guest that you can send once you check it
+  - A fix sized to the problem, kept inside the limits you gave
+  - Who must be told and by when, such as the manager, security or the kitchen
+  - A short record note of what happened, what was offered and when to follow up
+  - A list of checks to run before you send
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Paste the guest's message. Add the stay details and what your staff may offer. Remove any detail you do not want to share.
+  - Say what you need, such as a reply, a review response, a pre-arrival note or a post-stay follow-up.
+  - Read the safety flags first. If it flags an injury, an allergy or a privacy problem, deal with that before you send any words.
+  - Check the offer is one your manager has approved. Fix names, times and amounts so each one is true.
+  - A staff member sends the reply. Do the follow-up it lists, then file the record note.
+how_it_works:
+  - title: Read the message
+    text: It sorts the message into a request, a complaint, a review or a safety issue. It flags allergies, injuries and privacy first.
+  - title: Rate how serious it is
+    text: It picks minor, moderate, major or severe, and says who must know at that level.
+  - title: Write the reply
+    text: It hears the guest out, apologizes for the exact problem, owns the fix and avoids stock lines such as "any inconvenience".
+  - title: Choose the fix
+    text: It picks a fix and a small extra only from what you said staff may offer. It never promises more.
+  - title: Set the follow-up
+    text: It names who calls back, when, and what goes in the record note.
+  - title: List the checks
+    text: It lists what it assumed, what is missing and what a person must confirm before sending.
+output_shape: |-
+  FLAGS FIRST
+    <safety, allergy, privacy or none> | act before replying: <yes or no>
+
+  SEVERITY AND FIX
+    <minor | moderate | major | severe> | fix <what happens now> | extra <small gesture within your limits> | approval needed from <role>
+
+  REPLY TO THE GUEST
+    <subject line, if email>
+    <reply in your tone, using the guest's name, naming the exact problem>
+
+  WHO TO TELL
+    <role> | by when <time> | why <reason>
+
+  FOLLOW-UP AND RECORD NOTE
+    guest <name> | issue <what> | reported <time> | resolved <time or open> | offered <what> | follow-up due <when>
+
+  CHECKS BEFORE SENDING
+    <item> | <how to check>
+
+  ASSUMED AND MISSING
+    ASSUMED: <list> | MISSING: <list>
+output_sample:
+  input:
+    - The guest's message, review or request
+    - Stay details and any special requests (optional)
+    - What your staff may offer and who approves it
+    - Whether you need a reply, a review response or a follow-up
+  prerequisites:
+    - Your own offer limits, because the AI cannot know what you can give away
+    - An AI chat. It does not need access to your booking system.
+  output:
+    - name: Flags first
+      contains: Any safety, allergy or privacy issue to act on before you reply.
+    - name: Severity and fix
+      contains: How serious it is, the fix, a small extra within your limits, and who approves.
+    - name: Reply to the guest
+      contains: A warm reply that uses the guest's name and names the exact problem.
+    - name: Who to tell
+      contains: Each person to notify, by when, and why.
+    - name: Follow-up and record note
+      contains: What happened, what was offered, and when you will call back.
+    - name: Checks before sending
+      contains: What a person must confirm, plus anything assumed or missing.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: Any chat AI can draft the reply. A model that reads closely is better at spotting an allergy or a privacy problem in a long message.
+    - name: Your booking or property system
+      why: The AI cannot read it. Copy the stay record in yourself, and leave out what the reply does not need.
+  inputs:
+    - Your written compensation limits, such as what a front desk can give without asking
+    - Past replies you were proud of, so the tone sounds like you
+    - The names and roles of your on-duty manager and security contact
+terms:
+  - term: Service recovery
+    meaning: What you do to fix a problem and win the guest back.
+  - term: HEARD
+    meaning: Hear, empathize, apologize, resolve, delight. A five-step way to answer a complaint.
+  - term: Walking a guest
+    meaning: Sending a guest to another hotel because you are overbooked. It needs a manager's approval.
+judge:
+  - Any allergy, injury or privacy problem is flagged before the reply, not buried in it.
+  - The apology names the exact problem and does not use a stock line.
+  - The fix and the extra stay inside the limits you gave.
+  - A review reply offers no compensation in public and invites the guest to talk offline.
+  - Nothing is claimed as done, such as a refund or a call, that only a person can do.
+test:
+  - Use a past complaint you already solved. Compare its fix with the one you chose.
+  - Remove your offer limits and run it again. It should mark them missing, not invent an offer.
+  - Add a line about a food allergy to a dining complaint. It should flag it before anything else.
+tweaks:
+  - what: Offer limits
+    how: Give amounts or items staff may give without approval. Without them it offers only an apology and a follow-up.
+  - what: Channel
+    how: Say email, text, in person or a public review reply. Each one changes the length and what you may say.
+  - what: Tone
+    how: Paste two replies you liked. The new one will match their length and warmth.
+  - what: Language
+    how: Name the guest's language. Have a fluent staff member read the reply before it goes out.
+improve:
+  - Put your real offer ladder in SKILL.md, from small gestures up to what needs the general manager.
+  - Add your property facts, such as breakfast hours, check-out time and shuttle times, so replies stay accurate.
+  - Save each record note in one file, and ask for the repeat problems every month.

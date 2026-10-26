@@ -1,51 +1,119 @@
-{
-  "headline": "Request acceptance checker",
-  "subhead": "Check generated files against every requirement, repair bounded failures and package an honest handoff.",
-  "job": "set-up-ai",
-  "thinking": "medium",
-  "thinking_why": "Requires following the supplied scope and checking evidence; domain expertise is not assumed.",
-  "explain": "Check generated files against every requirement, repair bounded failures and package an honest handoff. This is a general method for tasks without a reliable specialist match. Planning is deterministic; executing these instructions requires your own compatible AI runner.",
-  "when": [
-    "You have a concrete deliverable without a matching specialist workflow."
-  ],
-  "you_give": [
-    "The original request, constraints and available evidence."
-  ],
-  "you_get": [
-    "Editable named files, requirements and honest check status."
-  ],
-  "how_to_use": [
-    "Include the full request and complete required inputs.",
-    "Run the workflow in a compatible AI runner.",
-    "Review unresolved checks before using the result."
-  ],
-  "how_it_works": [
-    {
-      "title": "Follow the brief",
-      "text": "Read request-brief.md, artifact-index.md, all generated deliverables and the original request. Create acceptance-report.md with one row per requirement ID: file or section, check method, actual evidence, pass/fail/not run and needed repair. Check requested counts, language coverage, exclusions, file formats, source attribution and internal consistency. For numbers independently recalculate totals using a tool where available. Verify actual files and links; a plan or an output declaration is not evidence that work ran. Repair failures in the editable deliverables and recheck at most twice, then stop and report unresolved findings. If the checker lacks a required domain/tool, mark that check not run and name the missing review. Deliver the editable files plus README.md explaining setup, inputs still needed, how to run checks, limitations and actions awaiting concrete authorization. Never label a general template as specialist-verified. Do not publish, send or execute untrusted attachments."
-    }
-  ],
-  "output_shape": "Requirement ID | Artifact path | Evidence | Status | Missing input",
-  "tweaks": [
-    {
-      "what": "Domain",
-      "how": "Supply your own standards and review rubric."
-    }
-  ],
-  "judge": [
-    "Every requested result is covered or explicitly unresolved.",
-    "No unsupported execution or specialist-validation claim."
-  ],
-  "test": [
-    "Try missing inputs and verify that no facts are invented."
-  ],
-  "improve": [
-    "Replace a general stage with a suitable specialist skill."
-  ],
-  "terms": [
-    {
-      "term": "Not run",
-      "meaning": "A check could not be executed with the available tools."
-    }
-  ]
-}
+new_slug: request-acceptance-checker
+name: "Request acceptance checker"
+summary: "Check finished files against your original request. Get a pass or fail line for every requirement, fixes for small gaps and a README of what is left."
+job: set-up-ai
+thinking: medium
+thinking_why: "It follows your request line by line and checks evidence in the files; no deep domain knowledge is assumed."
+
+headline: "Request acceptance checker"
+subhead: "Give it your original request and the finished files. It lists every requirement, checks each against the files, fixes small gaps and tells you what it could not check. You get an acceptance report, repaired files and a README."
+
+explain: |
+  AI often hands back files that look done but miss part of what you asked for. A count is off, a language is skipped, something you excluded crept in, or a total does not add up. This deliverable checker reads your request first, then checks the files against it, line by line.
+
+  Each requirement gets one row in a report: where it was checked, how, what was found, and pass, fail or not run. It checks counts, languages, exclusions, file types, sources and internal consistency. It recalculates totals itself. It counts only what it can see in the files, never a claim that work was done.
+
+  Where a file fails, it repairs the file, then checks again, up to two times. Then it stops and tells you what is still wrong. It never calls a general check an expert review.
+
+when:
+  - "A teammate or an AI sends back files and you must confirm they match your request before you use them."
+  - "You asked for exact counts, languages or formats and want proof each was met."
+  - "A file holds totals or figures you want recalculated and checked."
+  - "You are about to send a deliverable to a client and want one last pass against the brief."
+
+not_for:
+  - "You have no finished files yet: use the Request brief builder to set the requirements, then the Editable deliverable file writer to make the files."
+  - "You need an expert review of law, medical, tax or safety content. This is a general check, not a specialist sign-off. Take it to a qualified person."
+  - "You want an ad or a landing page checked against platform rules: use the Meta ad policy checker or the 30-point landing page checker."
+ 
+
+you_give:
+  - "Your original request, word for word, with any limits (your message or brief)"
+  - "The finished files to check, attached or pasted"
+  - "A request-brief.md with numbered requirements, from the Request brief builder (optional)"
+  - "An artifact-index.md listing each file and its requirement IDs, from the Editable deliverable file writer (optional)"
+you_get:
+  - "An acceptance report with one row for every requirement"
+  - "The status of each: pass, fail or not run"
+  - "Repaired files for small gaps, checked again up to two times"
+  - "A README with what is still open, what to run yourself and what needs your yes"
+
+how_to_use:
+  - "Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. Attach the files, or paste their text. A chat AI can read files and check counts and totals by hand. It cannot run code unless your tool allows it."
+  - "Paste your original request. If you have a request-brief.md and artifact-index.md, attach them too. If not, it builds a numbered list of requirements from your request."
+  - "Read the report first. Look at every row marked fail or not run before you open the files."
+  - "Check the repairs it made against your own judgement. It fixes small gaps only."
+  - "Do the steps in the README that are marked for you, such as a review by a qualified person. Then use the files."
+
+how_it_works:
+  - title: "Reads the request and files"
+    text: "Reads the original request, the brief if you have one, the file index and every finished file."
+  - title: "Numbers the requirements"
+    text: "Uses the brief's requirement IDs. With no brief, it writes its own list from your request."
+  - title: "Checks each one"
+    text: "Looks at counts, language coverage, exclusions, file formats, source credits and consistency. Totals are recalculated, with a tool if one is available."
+  - title: "Needs real evidence"
+    text: "A plan, or a note that work was done, is not evidence. It checks the actual files and links."
+  - title: "Repairs small gaps"
+    text: "Fixes failing files, then rechecks, up to two times. After that it stops and reports what is left."
+  - title: "Marks what it cannot check"
+    text: "If a check needs a tool or a skill it lacks, it writes not run and names the review that is missing."
+  - title: "Writes the handoff"
+    text: "Gives you acceptance-report.md and README.md with the editable files, never calling a general check an expert one."
+
+output_shape: |
+  acceptance-report.md
+  Requirement ID | File or section | Check method | Evidence found | Status (pass, fail or not run) | Repair needed
+
+  README.md
+  Setup | Inputs still needed | How to run the checks yourself | Limits | Actions waiting for your yes
+
+  Repaired files
+  <each edited file, same name as before>
+
+output_sample:
+  input:
+    - "Your original request, with its limits"
+    - "The finished files to check"
+    - "request-brief.md with numbered requirements (optional)"
+    - "artifact-index.md listing each file (optional)"
+  prerequisites:
+    - "Files you can attach or paste, so the AI can read what was made"
+    - "A code tool if you want totals recalculated by script (optional)"
+  output:
+    - name: "acceptance-report.md"
+      contains: "One row per requirement: where it was checked, how, the evidence found, pass, fail or not run, and the repair needed."
+    - name: "Repaired files"
+      contains: "Your editable files with small gaps fixed, rechecked at most twice, then marked as still open if they fail."
+    - name: "README.md"
+      contains: "Setup notes, inputs still needed, how to run the checks again, limits and actions awaiting your clear yes."
+
+tweaks:
+  - what: "Numbered requirements"
+    how: "A brief with a number for each requirement gives a row per requirement, with fewer guesses."
+  - what: "Your own standards"
+    how: "Paste a rubric or house rules. The checker uses them in place of general checks."
+  - what: "A code tool"
+    how: "With one, totals and file formats are checked by running them, and fewer rows say not run."
+  - what: "What counts as small"
+    how: "Say which fixes it may make alone and which it must only report."
+
+improve:
+  - Add your own standards or review rubric as extra requirements, so every run checks them.
+  - Add the file formats and counts you always ask for to every request you send.
+  - Replace a general check with a specialist skill when one fits your field.
+  - Pair it with the "Request brief builder" so every requirement has an ID before the files are made.
+works_best_with:
+  tools:
+    - {name: "Claude, ChatGPT or Gemini with file upload", why: "It must read the real files, not a description of them. Pick one that lets you attach them."}
+    - {name: "A code tool in your AI (optional)", why: "It lets the checker recalculate totals and open file types, so fewer checks are marked not run."}
+  inputs:
+    - "The agreed request brief"
+    - "Your house standards or review rubric"
+    - "A list of what must not appear"
+
+terms:
+  - term: "Requirement ID"
+    meaning: "A short label, such as R3, for one thing the request asked for, so each can be checked on its own row."
+  - term: "Not run"
+    meaning: "A check the AI could not carry out with the tools it had. It is listed instead of guessed."

@@ -16,9 +16,9 @@ outputs:
   - {type: plan}
 uses: [shopify-google-conversion-tracking-builder, google-ads-purchase-tracking-checker, merchant-center-feed-health-checker, google-ads-launch-planner]
 steps:
-  - {uses: shopify-google-conversion-tracking-builder, note: "Sets up the purchase tracking and a test plan to run before any spend."}
-  - {uses: google-ads-purchase-tracking-checker, note: "Checks the screenshots from your test order against the setup plan and lists what is still wrong."}
-  - {uses: merchant-center-feed-health-checker, note: "Ranks the feed problems so the products that earn most are fixed first."}
+  - {uses: shopify-google-conversion-tracking-builder, note: "Sets up the purchase tracking and a test plan to run before any spend. Hands step 2 the setup plan to check your test order against."}
+  - {uses: google-ads-purchase-tracking-checker, note: "Checks the screenshots from your test order against step 1's setup plan and lists what is still wrong. Hands step 4 the tracking audit and the primary purchase action."}
+  - {uses: merchant-center-feed-health-checker, note: "Uses your own Merchant Center products and issues export, not step 2's audit. Ranks the feed problems so the products that earn most are fixed first, and hands step 4 the feed audit."}
   - {uses: google-ads-launch-planner, note: "Uses the tracking and feed audits to set which campaigns go live first and when to add more. It does not take the step 1 plan as an input, so paste in the primary purchase action and test result from the passed tracking check."}
 origin: rebuilt
 version: 1.0.0

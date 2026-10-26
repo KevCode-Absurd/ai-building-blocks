@@ -1,6 +1,6 @@
 new_slug: small-test-and-rollout-planner
 name: "Small test and rollout planner"
-summary: "Paste your offer, price and costs. Get a small test, the numbers to hit and the rollout rule."
+summary: "Plan a small ad test you can afford to lose. Give it your offer, price and costs. You get the break-even response and a rule to roll out or stop."
 job: plan-ad-tests
 thinking: medium
 thinking_why: "It works sums and sets rules from them, but the method is fixed."
@@ -17,6 +17,10 @@ when:
   - "You are about to buy ads, a list or a mailing and want to test first."
   - "You do not know what response you need to break even."
   - "A test is over and you cannot decide whether to scale it."
+not_for:
+  - "You have no offer or price yet: build your offer first with the Hidden offer finder, then come back."
+  - "You need to pick who to test on: use the Hungry audience ranker first."
+  - "You want the ad copy itself: use the Story image ad writer."
 
 you_give:
   - "Your offer, price and terms"
@@ -36,6 +40,27 @@ how_to_use:
   - "Say which group you will test and how much you can lose."
   - "Run the test and fill the result table."
   - "Bring the results back to decide the next step."
+output_sample:
+  input:
+    - Your offer, with its price and terms
+    - What it costs to make and deliver each order, including fees and returns
+    - The group you will test and the most you can afford to lose
+    - Your past response numbers for similar offers (optional)
+  output:
+    - name: Group and offer
+      contains: Who you test and the offer with its price and terms.
+    - name: The sums
+      contains: Reach, cost per thousand, profit per order and break-even response, each marked as sourced or an assumption.
+    - name: The test
+      contains: Test size, money at risk, orders expected at break-even and the one thing you change.
+    - name: Result table
+      contains: A table to fill in after the test, with the break-even line beside the actual response.
+    - name: Rules
+      contains: Numbers that say when to run a larger test, change one thing, or stop.
+    - name: Fall-back
+      contains: The next idea to try if this one fails.
+    - name: Missing and Checks missed
+      contains: Gaps in your inputs, and any checks the skill could not pass.
 
 how_it_works:
   - title: "Names the group and offer"

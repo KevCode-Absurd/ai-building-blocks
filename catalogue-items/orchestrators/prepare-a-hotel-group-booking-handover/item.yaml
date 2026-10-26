@@ -1,6 +1,6 @@
 slug: prepare-a-hotel-group-booking-handover
 name: Prepare a hotel group booking handover
-summary: Share the source files. Get a booking handover, payment arithmetic check and outstanding requests.
+summary: Hand over a confirmed hotel group booking. Get a deposit and rate check, accepted and open requests, and key dates for the next person.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,9 +20,9 @@ uses:
   - handover-note-writer
 steps:
   - uses: invoice-totals-checker
-    note: Check the actual room-night counts, quoted rates, approved fees and deposits using the stated currency and dates. Do not infer local tax rules.
+    note: "Check the actual room-night counts, quoted rates, approved fees and deposits using the stated currency and dates. Do not infer local tax rules. Hands step 2 the payment table, with each stated figure beside the recomputed one."
   - uses: handover-note-writer
-    note: Prepare the incoming reservations or operations team handover with deadlines, accepted requests, open questions and authorized source locations, excluding credentials.
+    note: "Prepare the incoming reservations or operations team handover with deadlines, accepted requests, open questions and authorized source locations, excluding credentials. Uses step 1's payment table with your booking, request list and contacts."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It fills nine boxes from your description.
 new_slug: lean-canvas-builder
 name: Lean canvas builder
-summary: Describe your idea. Get a one-page lean canvas with problem, solution,
-  channels, costs and revenue.
+summary: Turn your business idea into a one-page lean canvas. Get nine boxes filled in, your riskiest guesses and tests to run first.
 job: test-an-idea
 headline: Lean canvas builder
-subhead: Your business idea on a single page, with every box filled in and the
-  riskiest guesses visible. Describe the product, the customer and what you know
-  about the market.
+subhead: Your business idea on a single page, with every box filled in and the riskiest guesses visible. Describe the product, the customer and what you know about the market.
 explain: |
   Your business idea on a single page, with every box filled in and the riskiest guesses visible. Describe the product, the customer and what you know about the market. The skill fills the nine lean canvas sections: problem, customer segments, unique value proposition, solution, channels, revenue streams, cost structure, key metrics and unfair advantage.
 
@@ -18,6 +15,10 @@ when:
   - You are pitching a new product inside your company.
   - Your team disagrees about who the customer is.
   - You want to find your riskiest assumption before spending money.
+not_for:
+  - "You run an established product in a mature market: use a normal business plan or talk to your finance lead."
+  - "You need strategy and a business model together for a new product: use the Startup Canvas by Pawel Huryn, named in the skill notes."
+  - "You need real market sizes or customer proof: do customer interviews first, because this skill only organizes your guesses."
 you_give:
   - A description of the idea
   - The customer group you have in mind
@@ -29,7 +30,36 @@ you_get:
   - A value proposition
   - Assumptions to test first
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions into a new chat.
+  - "Add your brief: your idea, your customer, any market notes, and any cost or revenue ideas."
+  - Ask for the nine-section canvas plus three validation experiments.
+  - Read the assumptions list first. Pick the riskiest guess and test it before you spend money.
+  - Update the canvas as you learn, and ask your AI to redo any box that feels vague.
+output_sample:
+  input:
+    - Your idea, described in a few lines
+    - The customer group you have in mind
+    - Market or competitor notes (optional)
+    - Known costs or revenue ideas (optional)
+  output:
+    - name: Problem
+      contains: The top three customer problems, their pains, and the poor fixes they use today.
+    - name: Solution
+      contains: The top three features and how each one answers a problem.
+    - name: Unique Value Proposition
+      contains: A short, memorable statement of why customers pick you over other options.
+    - name: Unfair Advantage
+      contains: What competitors cannot easily copy, such as brand, network effects or switching costs.
+    - name: Customer Segments
+      contains: Your target customer, your early adopters and a rough view of market size.
+    - name: Channels
+      contains: How you reach customers and how they find you.
+    - name: Revenue Streams
+      contains: How you make money, your pricing model and customer lifetime value.
+    - name: Cost Structure
+      contains: Fixed costs, variable costs, key cost drivers and the cost to win a customer.
+    - name: Key Metrics
+      contains: Three to five numbers to track, including activation, retention, revenue and a North Star metric.
+    - name: Assumptions and validation experiments
+      contains: Your riskiest guesses and ways to test them, such as a landing page, interviews or a simple first version.

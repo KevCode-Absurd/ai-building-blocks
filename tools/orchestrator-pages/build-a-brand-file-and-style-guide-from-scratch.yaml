@@ -1,6 +1,6 @@
 new_slug: build-a-brand-file-and-style-guide-from-scratch
 name: Build a brand file and style guide from scratch
-summary: Give it your product and buyers. Get a brand file, a visual direction and a style guide.
+summary: Build a brand file and style guide from scratch. Give it your product and buyers. Get messages, voice rules, a visual direction and a guide.
 job: brand-file
 thinking: medium
 thinking_why: It runs five skills in a row, and each adds to the same file. A mid-size model works. Read the messages and voice rules before the style guide step.
@@ -14,6 +14,10 @@ when:
   - You are starting a business or a project and have no website or brand file to read.
   - Your brand is only in your head and each new writer or designer asks you the same questions.
   - You want the message, voice and look decided together, so they do not fight each other.
+not_for:
+  - "You already have a brand guide and want to fill gaps: use the Brand guide builder."
+  - "You have a website and want your facts read from it: use the Website brand brain builder."
+  - "You only need a short brief on who you sell to: use the Buyer brief writer."
 you_give:
   - What you make and what it costs
   - Who it is for and what they want
@@ -32,6 +36,28 @@ how_to_use:
   - Answer step 1's questions. Say plainly what is not decided yet. It will mark those lines as missing.
   - Read the core message and the voice rules. Fix anything that does not sound like you before the look step.
   - If your logo or colours are fixed, say so before the visual step so it only changes the look around them.
+output_sample:
+  input:
+    - What you make and what it costs
+    - Who it is for and what they want
+    - Your rivals and how you differ (optional)
+    - Brands whose voice or look you like, and ones you do not (optional)
+    - Photos, logo or colours you must keep (optional)
+  prerequisites:
+    - An AI that can read the skill files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: outputs/step-01-product-context-builder.md
+      contains: One brand file with your product, buyers, rivals, proof and voice, with gaps marked MISSING.
+    - name: outputs/step-02-brand-messaging-builder.md
+      contains: Your core message, tagline options and proof points for each audience.
+    - name: outputs/step-03-brand-voice-rules-writer.md
+      contains: Tone, word choices and short writing rules any writer can follow.
+    - name: outputs/step-04-brand-stylescape-planner.md
+      contains: Three visual directions, how each fits your values and buyer, and one merged direction with photo rules.
+    - name: outputs/step-05-brand-style-guide-writer.md
+      contains: "The style guide: story, logo, colour, type, imagery, voice, and dos and don'ts."
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Build the brand file
     text: Asks about the product, buyer, rivals, proof and voice, shows a draft, and saves one file every later step reads.

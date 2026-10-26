@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It sorts words by type and ranks them for teaching.
 new_slug: vocabulary-tier-sorter
 name: Vocabulary tier sorter
-summary: Paste a text or topic. Get its words sorted into everyday, school and
-  subject words, with what to teach first.
+summary: Paste a text or topic and sort its words into everyday, school and subject words. Get a vocabulary tier list with what to teach first.
 job: teach-and-train
 headline: Vocabulary tier sorter
-subhead: The words in your text, sorted into everyday words, school words and
-  subject words, so you know what to teach first. It saves you from pre-teaching
-  the whole page.
+subhead: The words in your text, sorted into everyday words, school words and subject words, so you know what to teach first. It saves you from pre-teaching the whole page.
 explain: |
   The words in your text, sorted into everyday words, school words and subject words, so you know what to teach first. It saves you from pre-teaching the whole page.
 
@@ -18,6 +15,10 @@ when:
   - You plan a unit and need a short list of key words.
   - You teach students who speak another language at home.
   - You want to know which words matter most when time is short.
+not_for:
+  - "You want to check how hard a whole text is for students, not sort its words: use the language-demand-analyser."
+  - Your students already know the text well, so pre-teaching words adds little. Skip this and go straight to the reading.
+  - You need to grade or test student work. This skill plans teaching, so use your own assessment instead.
 you_give:
   - A text extract or a topic
   - Student age or year group
@@ -25,12 +26,32 @@ you_give:
   - English level of your students (optional)
   - A maximum number of words to pre-teach (optional)
 you_get:
-  - Words sorted into three groups
-  - A priority list of words to teach
-  - A suggested teaching order
-  - Support notes for language learners
+  - Your words sorted into everyday, school and subject groups
+  - A short list of the words to teach first
+  - A suggested order for teaching them
+  - A teaching card for each priority word, with a meaning and an example
+  - A quick activity to check the words stuck
+  - Support notes for students learning English
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill text into the chat.
+  - Paste your text extract. Keep it to a page or two so the answer stays focused.
+  - Add the student age or year group and the subject. Add English level and a word limit if you want them.
+  - Check the school words list first. Move any word you think students already know.
+  - Print the word teaching cards and use them as a starter activity. Then run the quick check at the end of the lesson. The language-demand-analyser pairs well when you want to check the whole text.
+output_sample:
+  input:
+    - A text extract or a topic
+    - Student age or year group
+    - The subject
+    - English level of your students (optional)
+    - A maximum number of words to pre-teach (optional)
+  output:
+    - name: Tiered Vocabulary
+      contains: Every word from your text placed in everyday, school or subject groups.
+    - name: Teaching Sequence
+      contains: The priority words in the order to teach them, with a teaching method for each.
+    - name: Word Teaching Cards
+      contains: "For each priority word: a meaning, an example in context, a visual cue and common mix-ups."
+    - name: Quick Check Activity
+      contains: A short activity to see if students understood the words.

@@ -15,6 +15,29 @@ use_cases:
   - "Get over fear of calling or meeting strangers"
   - "Prepare answers to a buyer's likely questions before you meet them"
   - "Find more prospects in everyday places, wherever you meet people"
+not_for:
+  - "You need cold outreach scripts and a daily calling habit: use the Jeb Blount mind."
+  - "You sell low-price or online-only products where personal notes cannot scale: use a volume email or customer tool instead."
+  - "You want to ask better questions to find a buyer's problem before a sale: use the Neil Rackham mind."
+output_sample:
+  input:
+    - The sale or product you handle and who buys it
+    - What you do for customers after they buy today
+    - A complaint or quiet customer you want to win back (optional)
+    - How many past customers you have and how you contact them (optional)
+  output:
+    - name: Opening story
+      contains: A short story from his days on the sales floor that frames your problem.
+    - name: One simple habit
+      contains: A habit such as the same-day written thank-you note, and how it brings back a buyer and their friends.
+    - name: Customer file fields
+      contains: What to record after each sale, such as family, hobbies, plans and trips, while respecting privacy.
+    - name: Rough worth of the habit
+      contains: A plain count of what the habit could bring back in repeat buyers and referrals.
+    - name: Where his method does not fit
+      contains: A note on low-price or online businesses where the personal touch needs to scale.
+    - name: Start-today challenge
+      contains: One action to take today, framed as a challenge.
 seats:
   - {seat: "Repeat customers and referrals", asks: "What happens after they buy? Who thanks them, who looks after them, and who will they tell?"}
   - {seat: "Personal service", asks: "Why would they pay a bit more to buy from you rather than the place down the road?"}

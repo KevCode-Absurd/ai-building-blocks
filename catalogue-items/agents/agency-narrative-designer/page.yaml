@@ -1,0 +1,160 @@
+name: Narrative Designer agent
+summary: "Turn a game idea into a story plan: character voices, branching dialogue with real consequences, and lore in layers. For game writers and indie teams."
+headline: Narrative Designer agent
+subhead: Tell it your game, its tone and the story beats you have. It maps the story and the choices, writes a voice guide for each character, sorts your lore into layers, and drafts dialogue in a format your game engine can read.
+job: write-and-tell-stories
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  A game story is not a film script dropped between levels. Players make
+  choices, and the story has to answer them. This narrative designer agent
+  helps you plan a game story where the choices matter, the characters sound
+  like themselves, and the lore never gets in the way.
+
+
+  It plans before it writes. It maps the story and every choice first, so no
+  line is written into a dead end. Each character gets a voice guide with
+  words they use, words they never say and sample lines. Lore goes in three
+  layers: what every player sees, what explorers find and what only the
+  keenest players dig up.
+
+
+  This is a role profile from Agency Agents, shared under MIT. It designs and
+  drafts. It cannot playtest. The success targets in the original, such as the
+  share of testers who spot a character's personality, are the author's goals,
+  not results from AI Blocks.
+when:
+  - You have a game idea and need a story plan before you write any lines.
+  - Your characters all sound the same and you need a clear voice for each one.
+  - A player choice in your game changes nothing, and you want choices with real consequences.
+  - You have lore notes in many places and need them sorted so the main story still works without them.
+not_for:
+  - You want the whole game designed, with loops, rules and numbers. Use the Game Designer agent.
+  - You want a novel, a screenplay or a blog story with no player choices. Use a general writing AI instead.
+  - You want ads, emails or a brand story. Use the writing items made for that job.
+  - You want finished game code or engine setup. This agent writes the story, not the game.
+you_give:
+  - Your game idea, genre and tone, in a few lines
+  - The main characters and what each one wants
+  - Story beats or lore you already have (optional)
+  - The tool you will write dialogue in, such as Ink, Yarn Spinner, Twine or plain text (optional)
+  - How much choice the player has in the rest of the game, such as combat only, or dialogue and quests
+you_get:
+  - A story map with the main acts and every branching choice
+  - A voice guide for each speaking character, with sample lines
+  - Dialogue for the scenes you pick, in a format an engine can read
+  - A lore map in three layers, with a short list of facts that must never change
+  - A table that links each story beat to what changes in play
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Write a short brief with your game idea, genre, tone and main characters. Paste any story notes under it.
+  - Say what you want first. Good starting points are the story map, one character's voice guide, or one scene of dialogue.
+  - Your AI asks once for anything missing. Anything it still does not know is marked as an assumption you can change.
+  - Read the story map before any dialogue. Walk every choice yourself. Check that each branch comes back together without a dead end.
+  - Playtest the dialogue with real players, then bring their notes back and ask for a revision.
+how_it_works:
+  - title: Find the big question
+    text: It names the question your game asks the player and the feeling you want them to end on, then checks both against how the game plays.
+  - title: Map the story and choices
+    text: It builds the acts and every branch before any line is written, and checks that each branch returns to the main path.
+  - title: Write a voice guide
+    text: Each speaking character gets a guide with how they talk, what they avoid, what they would never say and sample lines.
+  - title: Draft the dialogue
+    text: It writes in three passes, first for what the scene must do, then for voice, then for length, in the format you name.
+  - title: Layer the lore
+    text: It sorts facts into what everyone sees, what explorers find and what only the keenest players find, and lists the facts that cannot change.
+  - title: Link story to play
+    text: It matches each story beat to a change in the game, and flags any choice that has no result you can feel.
+  - title: List checks to run
+    text: It ends with gaps, assumptions and what to test with real players.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    <game idea> | <genre, tone, platform> | ASSUMED: <list> | MISSING: <list>
+
+  THEME AND EMOTIONAL ARC
+    question the game asks: <question> | player starts <feeling> | player ends <feeling>
+
+  STORY MAP
+    Act <n>: <turning point> | choices: <choice> -> <result> | rejoins at <node>
+
+  CHARACTER VOICE GUIDE (one per character)
+    <name> | wants <desire> | needs <need> | vocabulary <x> | rhythm <y> | avoids <topics>
+    would never say: <3 lines> | sample lines: <3 lines>
+
+  DIALOGUE DRAFT
+    <scene> | tone <x> | <speaker>: "<line>" -> <choice> -> <next node>
+
+  LORE MAP
+    Surface (all players): <list> | Engaged (explorers): <list> | Deep (lore hunters): <list>
+    Facts that must never change: <list>
+
+  STORY AND PLAY TABLE
+    <story beat> | <what changes in play> | <what the player feels>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your game idea, genre and tone
+    - Your main characters and what they want
+    - Story notes or lore you already have (optional)
+    - The tool you write dialogue in, such as Ink or Yarn Spinner (optional)
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Story map
+      contains: The acts, the turning points and every choice, with where each branch rejoins the main path.
+    - name: Character voice guide
+      contains: For each character, how they talk, what they avoid, what they would never say and sample lines.
+    - name: Dialogue draft
+      contains: The scenes you picked, written as speaker lines and choices in the format your engine reads.
+    - name: Lore map
+      contains: Facts in three layers, plus a short list of facts the story must never contradict.
+    - name: Story and play table
+      contains: Each story beat matched to a change in play and the feeling it should give.
+    - name: Open questions
+      contains: Gaps, assumptions and what to test with real players.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach your game design document or old story notes so the story fits the game.
+    - name: Ink, Yarn Spinner or Twine
+      why: These are free tools for writing branching dialogue. Paste the draft in and click through every path.
+  inputs:
+    - A game design document, or one page on how the game plays.
+    - Names and one-line notes for every speaking character.
+    - Games or stories whose tone you want to match, and what to borrow from each.
+terms:
+  - term: Branching dialogue
+    meaning: A conversation where the player picks a reply and the story goes a different way.
+  - term: Voice guide
+    meaning: A short sheet that says how one character talks, so every writer keeps them consistent.
+  - term: Lore
+    meaning: The history, places and rules of your game world.
+  - term: Dead end
+    meaning: A branch the story cannot leave, so the player gets stuck or the choice is lost.
+  - term: Ink, Yarn Spinner
+    meaning: Free scripting tools that games use to run branching dialogue.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Scope of the first request
+    how: Ask for the story map alone, one voice guide or one scene. Short requests give sharper work than "write the whole story".
+  - what: Format for dialogue
+    how: Name Ink, Yarn Spinner, Twine or plain text. The agent writes in that format so you do not have to convert it.
+  - what: How much choice players have
+    how: Say how much choice the rest of the game offers. Story choices should match play choices, so a game with no mechanical choices gets fewer story branches.
+  - what: Tone
+    how: Give two or three reference games or stories and say what to borrow, such as the dry humor or the slow reveals.
+improve:
+  - Keep the voice guides and the list of facts that must never change in one file. Paste it in at the start of every new session.
+  - After each playtest, write what players did apart from what you think it means, and ask for a revision of the affected branches.
+  - Edit SKILL.md to add your own house rules, such as words your world never uses, or a ratings limit.
+  - Pair it with the Game Designer agent, so the story and the play are planned together.

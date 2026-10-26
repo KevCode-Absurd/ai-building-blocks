@@ -1,55 +1,110 @@
 new_slug: reviewer-response-progress-assistant
 name: Reviewer response progress assistant
 headline: Reviewer response progress assistant
-summary: A response matrix, revision tasks and unresolved evidence requests.
+summary: Turn journal reviewer comments into a response matrix, revision tasks and a list of missing evidence. Nothing is marked done without proof.
 job: research-topics
 thinking: high
-thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A response matrix, revision tasks and unresolved evidence requests. Share actual reviewer comments, manuscript version, relevant analysis files, author decisions and existing response drafts when available. Include the previous review when available. Your AI prepares the work and marks any facts it cannot verify.
+thinking_why: It ties each reviewer comment to the manuscript and the evidence, keeps quotes exact and must not report planned work as finished.
+subhead: Give it the reviewer comments, your manuscript and what you have changed so far. It maps each comment to the section it concerns and the evidence you have. You get a response matrix, a task list with owners and dates, and the requests you still cannot answer.
 explain: |-
-  A response matrix, revision tasks and unresolved evidence requests.
+  A revise-and-resubmit can bury you in comments. Each one touches a different section. Some need new analysis. Some need only a sentence. By week three nobody is sure which comments are answered, which are only planned, and which have evidence behind them.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Reviewer requests stay quoted and attributed; planned experiments and proposed responses are never reported as completed. Missing tools or evidence stay visible in the final summary.
+  This agent keeps one response matrix. Each reviewer comment is quoted word for word, tied to the manuscript section it concerns and given a status. The statuses are strict. A task is Done only when it has seen the revised text or result. If you say it is done and give no proof, it stays "Done, not checked". A planned experiment stays planned. A proposed answer is never reported as finished.
+
+  It also separates what you have agreed to do from what is only a suggestion, and it keeps missing owners and dates visible. If you supply a response draft, it checks the numbering, the tone and the manuscript references. It never writes results you do not have, and it never contacts the journal.
 when:
-  - You need a response matrix, revision tasks and unresolved evidence requests.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You need to compare new evidence with the last review and choose the next action.
+  - You got a decision letter with reviewer comments and a deadline for your response.
+  - Co-authors are splitting the revision and you need one list of who does what.
+  - You revised part of the manuscript and need to know which comments are now answered.
+  - An editor asks where each reviewer request is addressed.
+not_for:
+  - You want the response letter written for you. This agent tracks and checks, and it never invents results. Use the Proofreader to polish a draft you wrote.
+  - You track tasks that are not tied to reviewer comments. Use the Executive action register keeper.
+  - You have no reviewer comments yet and want your reference list checked. Use the Bibliography revision review assistant.
+  - You need one pass and no record for later. Use the Map journal reviewer requests to evidence workflow.
 you_give:
-  - Actual reviewer comments, manuscript version, relevant analysis files, author decisions and existing response drafts when available. Include the previous review when available.
-  - The intended reader, deadline and limits on what may be changed.
-  - The last review and current evidence, if this is a repeat run.
+  - The reviewer comments, word for word as the journal sent them, with the response deadline
+  - Your manuscript, with its version or date
+  - Your decisions on each comment, such as accept, partly accept or rebut (optional)
+  - The revised sections or new results so far (optional)
+  - Who owns each task and its due date (optional)
+  - Your response draft (optional)
+  - The record from your last review (optional)
 you_get:
-  - A response matrix, revision tasks and unresolved evidence requests.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - The reason each branch ran or was skipped, plus a minimal record for the next review.
+  - A response matrix with each comment quoted, the section it concerns, the evidence you have and a strict status
+  - A task list that keeps what you accepted apart from what is only proposed, with owners and dates
+  - A list of evidence you still need, with planned work marked as planned
+  - A check of your response draft for tone, numbering and manuscript references, if you gave one
+  - A short record to start your next review from
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and add it to your AI, or paste SKILL.md into a new chat. Claude, ChatGPT and Gemini work if they can read your files. Without file access, paste the comments and the relevant sections.
+  - Attach the reviewer comments and your manuscript. Add your decisions, your revised sections and your response draft if you have them. Add your last record on a repeat run.
+  - Say "Run the review. Mark nothing done without proof." Your AI asks once for anything missing.
+  - Open response-matrix.md first. Check that every comment is quoted exactly and sits under the right reviewer.
+  - Fix each "Done, not checked" row by attaching the revised text, then run again. Give an owner and date to each task that lacks them.
+  - Keep next-review-record.md. Run the agent again each time you change the manuscript or the deadline moves.
 how_it_works:
-  - title: Read scope and prior state
-    text: Keep comment ID, source manuscript version, accepted task, owner, due date and actual response evidence. Establish a baseline on the first run.
-  - title: Check the trigger
-    text: An author supplies revised manuscript evidence, a reviewer comment or a response deadline.
-  - title: Choose the next step
-    text: Run map-journal-reviewer-requests-to-evidence for changed evidence or a due review. If a task is reported complete, compare the actual revised section or result to the reviewer request before changing its recorded status.
-  - title: Check and save evidence
-    text: Reviewer requests stay quoted and attributed; planned experiments and proposed responses are never reported as completed. Save source versions, branch reasons, outputs and unresolved checks.
+  - title: Read the last record
+    text: If you supply one, it loads the comment IDs, tasks, owners and statuses from last time. On a first run it sets a baseline.
+  - title: Find what changed
+    text: New reviewer comments, a revised section, a new result or a deadline starts a review. If nothing changed and no review is due, it says so and stops.
+  - title: Map comments to the manuscript
+    text: It quotes each comment, finds the section it concerns and lists the evidence you supplied for it. It claims no revision yet.
+  - title: Check reported progress
+    text: When you say a task is done, it compares the revised section or result with the reviewer's request before it changes the status.
+  - title: Build the task register
+    text: It turns your explicit decisions into tasks. Suggestions stay "Proposed" until you accept them. Missing owners and dates are shown as MISSING.
+  - title: Check the response draft
+    text: If you gave a draft, it checks respectful wording, consistent comment numbers and manuscript references. If not, it skips this step and says so.
+  - title: Save the record
+    text: It writes the comment IDs, statuses, owners, dates and evidence, so your next run starts from here.
 output_shape: |-
-  Scope and source coverage
-  A response matrix, revision tasks and unresolved evidence requests.
-  Step files and evidence references
-  Changes since the last review and branches taken
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE  <journal and manuscript ID if given> | <manuscript version> | <n> comments | response due <date or MISSING>
+  CHANGED SINCE LAST REVIEW  <what changed, or "first run">
+
+  RESPONSE MATRIX
+    <comment ID> | <reviewer> | "<comment quoted exactly>" | <manuscript section> | <evidence supplied> | <status> | <next step>
+
+  TASKS
+    <task> | <comment ID> | <Proposed or Accepted> | <owner or MISSING> | <due date or MISSING> | <status>
+
+  EVIDENCE REQUESTS
+    <what is needed> | <comment ID> | <planned, not done> | <who can supply it>
+
+  RESPONSE DRAFT CHECK (only if a draft was given)
+    <issue> | <where> | <suggested fix>
+
+  MISSING  <each gap and what it blocks>
+  CHECKS MISSED  <one line each, or none>
+output_sample:
+  input:
+    - The reviewer comments, as the journal sent them
+    - Your manuscript, with its version or date
+    - Your decisions on each comment (optional)
+    - Your revised sections or new results so far (optional)
+    - Your response draft (optional)
+    - The record from your last review (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The decision letter with the response deadline
+  output:
+    - name: response-matrix.md
+      contains: Each reviewer comment quoted exactly, the manuscript section it concerns, the evidence you supplied and a strict status such as Proposed or Done and seen.
+    - name: revision-tasks.md
+      contains: Each task with its comment ID, whether it is Proposed or Accepted, the owner and the due date, with gaps shown as MISSING.
+    - name: evidence-requests.md
+      contains: Each analysis, figure or data set the response still needs, marked as planned work, with the comment it answers.
+    - name: response-draft-check.md
+      contains: Tone, comment numbering and manuscript reference problems in your draft, with fixes. Written only when you give a draft.
+    - name: next-review-record.md
+      contains: Comment IDs, statuses, owners, dates, evidence references and the trigger for your next review.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Reviewer requests stay quoted and attributed; planned experiments and proposed responses are never reported as completed.
+  - what: Decisions
+    how: Write accept, partly accept or rebut beside each comment. Without a decision, a comment stays "Proposed".
+  - what: Owners
+    how: Name one owner and one date per task. A task with no owner shows as MISSING.
+  - what: Proof
+    how: Attach the revised paragraph or figure for each finished task. The status then moves to "Done and seen".
 judge:
   - Reviewer requests stay quoted and attributed; planned experiments and proposed responses are never reported as completed.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -62,16 +117,23 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Give each comment an ID such as R1.3 once and keep it. The matrix then lines up with your response letter.
+  - Keep each review's record in a dated folder so you can see when a task changed status.
+  - Add your journal's response format, such as point-by-point, so the draft check uses its rules.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It reads the comments, the manuscript and the revised sections together and keeps each status tied to a file.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The journal's response instructions.
+    - A named lead author who approves each decision.
+    - Your analysis outputs for any comment that needs new numbers.
 terms:
-  - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+  - term: Response matrix
+    meaning: A table with one row per reviewer comment, showing where and how it is answered.
+  - term: Proposed
+    meaning: A task the agent suggests, which you have not agreed to yet.
+  - term: Done and seen
+    meaning: A task whose revised text or result the agent has read and matched to the comment.
+  - term: Record
+    meaning: A short file that says where this review stopped, so the next review can start from it.

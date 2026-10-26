@@ -1,6 +1,6 @@
 slug: buying-habit-stack-designer
 name: "Buying habit stack designer"
-summary: "Describe what you sell and the buying you want repeated. Get the rewards, ties, reach and proof that make it a habit."
+summary: "Design a repeat purchase habit: get the cue, real rewards, true brand ties, rival gaps and a chain that makes buyers reach for you again."
 category: general
 type: skill
 role: make
@@ -15,3 +15,7 @@ version: 1.0.0
 minds: [charlie-munger]
 credits:
   - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)", by: "Charles T. Munger, edited by Peter D. Kaufman", used: "Treating a consumer brand as a set of repeated responses built by real rewards, pleasant associations, social proof and being available everywhere, and stacking many such forces so effects feed on each other"}
+
+next: [failure-first-plan-check, smallest-test-picker, brand-reach-audit]
+before: []
+needs_mode: manual

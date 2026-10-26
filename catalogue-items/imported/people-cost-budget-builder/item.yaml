@@ -12,6 +12,10 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
+  - type: plan
+    required: false
+  - type: document
+    required: false
 outputs:
   - type: spreadsheet
     required: true

@@ -2,23 +2,23 @@ thinking: high
 thinking_why: Handling censored data correctly needs careful choices.
 new_slug: time-to-event-model-builder
 name: Time-to-event model builder
-summary: Give it follow-up data with dropouts. Get survival models that avoid
-  data leaks, with scores and risk curves.
+summary: Build a survival model from follow-up data where some people have not had the event yet. Get leak-safe scores and risk curves.
 job: track-numbers
 headline: Time-to-event model builder
-subhead: Give it follow-up data with dropouts. Get survival models that avoid
-  data leaks, with scores and risk curves. Bring a table with time, event flag
-  and features. Use the result to plan your next step.
+subhead: Give it follow-up data with dropouts. Get survival models that avoid data leaks, with scores and risk curves. Bring a table with time, event flag and features. Use the result to plan your next step.
 explain: |
   Models that predict how long until something happens, such as a customer leaving or a patient relapsing, even when some people have not yet had the event. Those cases are cut off and must be handled with care, or the results mislead.
 
   The skill uses the scikit-survival library in Python. It sets up data in the right form, then fits Cox models, penalized Cox, survival trees, forests and boosting. It splits and tunes models in a way that prevents leaks from test data into training. Scores include concordance and time-based error, and it plots risk curves and cumulative incidence with competing risks. It will not present results as clinical advice. You need Python 3.11 or later.
 when:
-  - You have customer or patient follow-up data where many people have not yet
-    had the event.
+  - You have customer or patient follow-up data where many people have not yet had the event.
   - You want to compare several survival models fairly.
   - Your model looks too good and you fear data leakage.
   - You need risk curves to show a group over time.
+not_for:
+  - "You need clinical advice or proof that a treatment works: ask a qualified statistician or clinician, since this only shows patterns in your data."
+  - "You want Fine-Gray regression for competing risks: use a different statistics tool, because this skill only draws cumulative incidence curves for them."
+  - "You have no Python 3.11 or later and your AI cannot run code: ask a data analyst to fit the model for you."
 you_give:
   - A table with time, event flag and features
   - The question you are asking
@@ -31,8 +31,29 @@ you_get:
   - Risk and survival curves
   - A reproducible script
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run code.
+output_sample:
+  input:
+    - A table with a time column, an event flag (1 if the event happened, 0 if cut off) and your feature columns
+    - The question you want answered, such as who is likely to leave first
+    - Time points that matter to you (optional)
+  prerequisites:
+    - An AI that can run Python code
+    - Python 3.11 or later with scikit-survival installed in its own environment
+  output:
+    - name: Outcome set-up
+      contains: Your time and event columns turned into the form survival models need, with checks that the table is valid.
+    - name: Leak-safe pipeline
+      contains: Splits and tuning steps that keep test data out of training, so scores are not too good.
+    - name: Model comparison
+      contains: Cox, penalized Cox, survival tree, forest and boosting models fitted and compared on the same split.
+    - name: Scores
+      contains: Concordance and time-based error for each model, built to account for people who were cut off.
+    - name: Risk and survival curves
+      contains: Plots of how risk grows over time for a group or for individuals.
+    - name: Cumulative incidence curves
+      contains: Competing-risk curves when your data has more than one possible event.
+    - name: Reproducible script
+      contains: The code used, so you can rerun the same steps on new data.

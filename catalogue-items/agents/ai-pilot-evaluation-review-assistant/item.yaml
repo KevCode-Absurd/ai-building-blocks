@@ -1,6 +1,6 @@
 slug: ai-pilot-evaluation-review-assistant
 name: AI pilot evaluation review assistant
-summary: A pilot evidence brief, data quality gaps and go stop checklist result.
+summary: "Turn your AI pilot results into an evidence brief, data quality gaps and a go or stop checklist result. Missing baselines are flagged, not guessed."
 category: agent
 type: agent
 role: orchestrate
@@ -11,13 +11,9 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
-  - type: question
-    required: false
   - type: source_text
     required: false
 outputs:
-  - type: plan
-  - type: spreadsheet
   - type: audit_report
   - type: document
 uses:
@@ -25,9 +21,9 @@ uses:
   - source-note-summariser
 steps:
   - uses: prepare-an-ai-pilot-go-decision
-    note: "Run when: A bounded pilot receives new representative test results or an approved gate becomes due."
+    note: Tests the goal as a hypothesis, checks the results table and applies your ordered checklist. Runs when new representative results arrive or a gate is due.
   - uses: source-note-summariser
-    note: Run prepare-an-ai-pilot-go-decision for changed evidence or a due review. If the baseline or success definition changes, establish a new labeled evaluation version rather than claiming an improvement on the old basis.
+    note: "Only when the goal or baseline may have changed: pulls the baseline and success definition from the old and new sources, so a changed measure starts a new labeled version and no improvement is claimed across versions. Uses your old and new source texts, not step 1's output. Hands the next review the baseline and success definition."
 schedule: At an explicitly requested pilot gate review. Installation does not create a schedule.
 asks_before:
   - Sending or submitting any message or form

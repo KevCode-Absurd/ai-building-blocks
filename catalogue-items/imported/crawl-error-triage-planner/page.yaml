@@ -2,34 +2,61 @@ thinking: medium
 thinking_why: It ranks a long list by business effect using set rules.
 new_slug: crawl-error-triage-planner
 name: Crawl error triage planner
-summary: Give it your crawler's issue list. Get fixes ranked by effect on
-  rankings and traffic, not by raw severity.
+summary: Turn a long crawl error list into a short fix plan. Your AI ranks issues by effect on traffic and rankings, not by the label your crawler gave.
 job: get-found-in-search
 headline: Crawl error triage planner
-subhead: Your site audit issues ranked by how much they affect rankings and
-  traffic, not by the severity label the tool gave them. You fix the few things
-  that matter and leave the noise.
+subhead: Give it your crawler's issue list and your top pages by traffic. It sorts every issue by traffic, effect on search and effort. You get a ranked fix list your developer can act on.
 explain: |
   Your site audit issues ranked by how much they affect rankings and traffic, not by the severity label the tool gave them. You fix the few things that matter and leave the noise.
 
   You give it the crawler's list. Each issue is scored on three axes: how much traffic the affected pages get, how the problem harms search, and how much work the fix takes. These feed a matrix that sorts items into do now, schedule and skip. It looks for groups of related issues worth one fix, such as redirect chains or broken links on key pages. It also notes failure patterns and what to do if some data is missing.
 when:
-  - Your site audit shows 4,000 issues and you don't know where to begin.
+  - Your site audit shows thousands of issues and you do not know where to start.
   - You are planning a technical SEO sprint.
   - A developer asks which fixes are worth their time.
-  - You want to justify why you are ignoring certain warnings.
+  - You need to explain why you are skipping some warnings.
+not_for:
+  - "You want to find out why traffic dropped: use a traffic drop check on your Search Console data first, then come back here."
+  - "You want to audit one page: review that page's title, headings and links by hand."
+  - "You have not run a crawl yet: run one in a crawler first, such as Ahrefs Site Audit (paid) or Screaming Frog (free for small sites)."
 you_give:
-  - Crawler export of issues
-  - Traffic per page (optional)
-  - Developer capacity
-  - Priority pages (optional)
+  - Your crawler's issue list, exported as a spreadsheet
+  - Your top 10% of pages by organic traffic, from Search Console
+  - How much developer time you have
+  - Search Console coverage and Core Web Vitals data (optional)
 you_get:
-  - Ranked fix list
-  - Impact and effort scores
-  - Grouped fixes
-  - Sprint plan
+  - A backlog ranked P0 to P3, with a park list for fixes not worth doing
+  - Each issue graded high, medium or low for effect on search
+  - "An effort size for each fix: small, medium or large"
+  - Groups of issues that one fix can clear, such as redirect chains
+  - A measurement plan that shows what proves each fix worked
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - "Start here: export the issue list from your crawler as a spreadsheet. Then pull your top 10% of landing pages by organic traffic from Search Console."
+  - Open Claude, ChatGPT or Gemini. Paste the skill text, then upload or paste the spreadsheet. No code is needed.
+  - Add your page traffic list and say how much developer time you have. Without traffic data, your AI will say so and will not guess.
+  - Ask for the full triage document. Check that the top fixes sit on your best pages.
+  - Hand the P0 and P1 items to your developer. Re-crawl after the fixes ship to confirm they worked.
+output_sample:
+  input:
+    - Your crawler's issue list, exported as a spreadsheet
+    - Your top pages by organic traffic from Search Console
+    - How much developer time you have
+    - Search Console coverage and Core Web Vitals data
+  prerequisites:
+    - A finished site crawl from Ahrefs Site Audit or a similar crawler
+    - An AI that can read a pasted or uploaded spreadsheet
+  output:
+    - name: Summary
+      contains: Total issues, the top three fix groups, expected effect, and any data you did not supply.
+    - name: URL tiering
+      contains: How pages were sorted into three traffic tiers, with a count in each tier.
+    - name: Issue categorization
+      contains: Issue counts by effect on search, by tier and by priority band.
+    - name: Prioritized backlog
+      contains: Fixes ranked P0 to P3, each with affected pages, fix, effort, expected effect and owner.
+    - name: Fix clusters
+      contains: Groups of issues that one fix can solve, with the biggest group first.
+    - name: Measurement plan
+      contains: For each fix or group, the metric that shows it worked.
+    - name: Methodology
+      contains: The crawler used, the date, the scope and any caveats.

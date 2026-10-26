@@ -1,6 +1,6 @@
 slug: trace-why-work-keeps-missing-deadlines
 name: Trace why work keeps missing deadlines
-summary: Share the source files. Get a delay map, evidence-backed cause hypotheses and a small improvement test.
+summary: "Find where repeated work waits and why deadlines slip. Get a delay map, causes backed by your records and one small fix to test."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,27 +8,26 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: spreadsheet
     required: true
-  - type: plan
+  - type: brief
     required: false
-  - type: lessons_register
+  - type: document
     required: false
 outputs:
   - type: audit_report
   - type: plan
-  - type: document
 uses:
   - process-bottleneck-finder
   - outside-view-timeline-estimator
   - change-rollout-planner
 steps:
   - uses: process-bottleneck-finder
-    note: Map where the supplied work waited and which dependencies repeatedly delayed completion.
+    note: "Split each stage into working and waiting time, count rework and rank the bottlenecks. Pass the ranked list and the finished jobs with estimate and real finish to step 2 as the delay map."
   - uses: outside-view-timeline-estimator
-    note: Compare estimates with similar completed work and show the range and sample limits.
+    note: "Compare each finished job's estimate with its real time. Show the median overrun, the range and the number of jobs used, and pass them to step 3. Uses the finished jobs from step 1's delay map."
   - uses: change-rollout-planner
-    note: Plan adoption of one bounded process change with an owner, measured baseline, review date and success check.
+    note: "Plan one change aimed at the top repeated bottleneck, with an owner, a starting number, a review date and a success check. Uses step 1's top repeated bottleneck and step 2's typical overrun as its starting numbers."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

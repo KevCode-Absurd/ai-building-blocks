@@ -1,0 +1,142 @@
+name: Project Shepherd agent
+summary: Plan a project that spans several teams. Get a project charter, a plan with owners and dependencies, a risk list and a weekly status report.
+headline: Project Shepherd agent
+subhead: Describe a project that needs people from more than one team, with the goal, the people, the deadline and the budget if you have one. Your AI writes a project charter, a plan with owners and dependencies, a stakeholder update plan and a risk list. Later it turns your progress notes into a status report.
+job: organise-work
+thinking: high
+thinking_why: It weighs dates, owners and risks across teams and must not invent a budget or a deadline. Use a model that reasons well and says when it is guessing.
+explain: |-
+  Projects that cross teams rarely fail on the work itself. They fail because two teams assume the other one is doing a step, a sponsor hears bad news late, or a date was agreed to please someone. This project coordination agent starts with the plain things: what problem is this fixing, what is in and out of scope, who decides, and who needs to hear what and how often.
+
+  It builds a project charter first, one page that everyone can sign off. Then it turns the charter into a plan with milestones, one owner per milestone, the steps that depend on other steps and a time buffer for surprises. It will not set a date it cannot back up. If a deadline looks too tight for the work you described, it says so and shows the options: cut scope, add people or move the date.
+
+  When the project is running, give it your progress notes. It writes a status report with an honest colour, a clear timeline and budget line, the issues, the decisions needed from named people and a recommended fix with each problem, not just the problem.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Marketing, sales and a developer all need to finish pieces before a launch, and nobody owns the whole plan.
+  - A boss or client asks for a project charter or a plan before they approve the work.
+  - A project is slipping and you must report it to a sponsor without hiding the problem.
+  - You need a repeatable weekly status update that people actually read.
+not_for:
+  - You have one team and need a task list from a spec, with acceptance checks. Use the Senior Project Manager agent.
+  - You are planning a creative shoot or production with crew and budgets. Use the Studio Producer agent.
+  - The project is a merger or acquisition. Use the M&A Integration Manager agent.
+  - You only need to keep track of open actions from a weekly meeting. Use the Weekly meeting actions keeper.
+you_give:
+  - The project in a few lines, with the problem it fixes and what done looks like
+  - The teams and people involved, and who the sponsor is who can make the final call
+  - The deadline and any fixed dates, and the budget if you have one (optional)
+  - Known risks, blockers or other work that this project depends on (optional)
+  - For a status report, your progress notes since the last report, with what finished and what slipped (optional)
+you_get:
+  - A one-page project charter with goal, scope in and out, success measures and sign-off names
+  - A plan with milestones, one owner for each, dependencies and a time buffer
+  - A stakeholder plan showing who hears what, how often and in what form
+  - A risk list with a response and an owner for each risk
+  - A status report with a colour, timeline, budget, issues and decisions needed, when you give progress notes
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Say whether you want a new plan or a status report. Describe the project and name the teams, the sponsor and the dates in plain words.
+  - For a plan, say what must be true when the project is done. For a report, paste your progress notes and any budget figures you have.
+  - Read the charter first. Check that scope in and out and the success measures match what your sponsor expects.
+  - Ask each named owner to confirm their milestone and date before you share the plan.
+  - Send reports and messages yourself. This agent drafts them and does not contact anyone.
+how_it_works:
+  - title: Fix the scope
+    text: It asks once for the goal, the teams, the sponsor and the dates. Anything missing is marked MISSING and shown as a limit on the plan.
+  - title: Write the charter
+    text: It states the problem, the goal, what is in and out of scope, how success is measured and who signs off.
+  - title: Map stakeholders
+    text: It lists who is affected, who decides and who needs updates, with a message type and a cadence for each group.
+  - title: Build the plan
+    text: It sets milestones with one owner each, links the steps that depend on each other and holds a buffer. It flags dates the work cannot meet.
+  - title: List risks
+    text: It names the risks, rates each by chance and effect and gives each a response and an owner.
+  - title: Write the status report
+    text: With progress notes it writes a report with an honest colour and a recommended fix beside each issue.
+output_shape: |-
+  CHARTER
+    Problem <what is being fixed> | Goal <what done looks like> | In scope <list> | Out of scope <list>
+    Success measures <list, from your numbers> | Sponsor <name> | Sign-off <names>
+
+  STAKEHOLDERS AND UPDATES
+    <group> | <what they need to know> | <how often and in what form> | <who sends it>
+
+  PLAN
+    <milestone> | <owner> | <date: proposed> | <depends on> | <on the critical path: yes or no>
+    BUFFER: <time held back and where>
+    DATE CHECK: <can the dates be met? if not, options: cut scope, add people or move the date>
+
+  RISKS
+    <risk> | <chance, effect> | <response> | <owner>
+
+  STATUS REPORT (when you give progress notes)
+    Overall <green, yellow or red> because <reason>
+    Timeline <on track, at risk or late> | Budget <within, over or under, with the gap> | Next milestone <what and when>
+    Done this period: <list> | Planned next period: <list>
+    Issues and risks: <list with recommended fix>
+    Decisions needed: <decision> | <from whom> | <options> | <recommendation>
+
+  ASSUMPTIONS AND CHECKS NOT DONE
+output_sample:
+  input:
+    - The project in a few lines, with the problem and what done looks like
+    - The teams, the people and the sponsor
+    - The deadline, fixed dates and budget (optional)
+    - Known risks and dependencies (optional)
+    - Progress notes since the last report (optional)
+  prerequisites:
+    - A named sponsor who can make final decisions
+  output:
+    - name: Charter
+      contains: The problem, goal, scope in and out, success measures and the names that sign off.
+    - name: Stakeholders and updates
+      contains: Who needs what news, how often, in what form and who sends it.
+    - name: Plan
+      contains: Milestones with one owner each, dependencies, a time buffer and a check on whether the dates can be met.
+    - name: Risks
+      contains: Each risk with its chance and effect, a response and an owner.
+    - name: Status report
+      contains: An honest colour, timeline and budget, what is done, the issues and the decisions needed.
+    - name: Assumptions and checks not done
+      contains: What the AI assumed and what it could not check, such as a budget figure.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a brief, a spreadsheet of tasks or last week's report next to your notes, and keep dates and owners the same across sections.
+  inputs:
+    - The original brief or request from the sponsor.
+    - A list of each team's available people and time off during the project.
+    - Last period's status report, so the new one can show what changed.
+terms:
+  - term: Project charter
+    meaning: A one-page paper that says what the project is for, what is in it and who approves it.
+  - term: Stakeholder
+    meaning: Anyone who is affected by the project or can affect it, such as a sponsor, a team lead or a customer.
+  - term: Sponsor
+    meaning: The person who owns the goal and makes the final call when teams disagree.
+  - term: Critical path
+    meaning: The chain of steps where a delay in one step delays the whole project.
+  - term: Scope creep
+    meaning: New work added to a project without changing the time, people or budget.
+  - term: Buffer
+    meaning: Time held back for surprises, so one slip does not move the end date.
+tweaks:
+  - what: Project size
+    how: Say how many teams and people are involved. A three-person project needs a shorter plan than a twenty-person one.
+  - what: Report style
+    how: Ask for a short version for executives or a detailed one for the working team.
+  - what: Scope
+    how: Ask for the charter alone, if you only need approval before the work starts.
+improve:
+  - Keep each status report and paste the last one in next time, so changes in colour and risk are clear.
+  - Add your real stakeholder list and meeting rhythm to the pack so you do not retype them.
+  - When the project closes, paste what happened and ask the AI for a short lessons-learned list.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

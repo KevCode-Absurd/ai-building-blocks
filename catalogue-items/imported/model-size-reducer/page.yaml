@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: The steps are fixed, but you must check quality after.
 new_slug: model-size-reducer
 name: Model size reducer
-summary: Give it a large model. Get a 4-bit copy that is about 3 times faster
-  and fits on a smaller GPU.
+summary: Shrink a large language model to 4-bit with AWQ. Get a smaller copy that runs about 3 times faster on a smaller GPU. See the steps and checks.
 job: build-software
 headline: Model size reducer
-subhead: Give it a large model. Get a 4-bit copy that is about 3 times faster
-  and fits on a smaller GPU. Bring the model you want to shrink. Use the result
-  to plan your next step.
+subhead: Give it a large model. Get a 4-bit copy that is about 3 times faster and fits on a smaller GPU. Bring the model you want to shrink. Use the result to plan your next step.
 explain: |
   A large language model shrunk to 4-bit, running about three times faster and fitting on a smaller GPU, with only a small loss in answer quality.
 
@@ -18,6 +15,10 @@ when:
   - Answers are too slow for a chat product.
   - You want to serve a chat model cheaply with vLLM.
   - You need to decide between AWQ, GPTQ and bitsandbytes.
+not_for:
+  - "You have no GPU, or an older Nvidia GPU: use GPTQ, which works on older cards, or bitsandbytes, which needs no setup step."
+  - "You want to fine-tune the model afterwards: use bitsandbytes with QLoRA instead."
+  - "You start a new project and want a tool that is still maintained: use vLLM llm-compressor, or MLX-LM on a Mac with Apple Silicon."
 you_give:
   - The model you want to shrink
   - Your GPU type and memory
@@ -30,8 +31,32 @@ you_get:
   - Before and after speed and quality checks
   - A method comparison
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - Check you have an Nvidia GPU and an AI that can run Python code. Without code running, you only get the script and steps.
+  - Install autoawq and transformers, and note the versions you use.
+  - Test first on a small 7B model, or load a ready-made 4-bit model, to confirm your setup works.
+  - Ask your AI to make the 4-bit copy of your model with the script. Add your own sample text if your model has a special job.
+  - Compare speed and quality of the old and new model. Check the answers read well before you use it.
+  - Serve the result with vLLM if you want to use it in a chat product.
+output_sample:
+  input:
+    - The model you want to shrink
+    - Your GPU type and memory
+    - A small set of sample text from your own use case (optional)
+    - Your speed and quality targets (optional)
+  prerequisites:
+    - An AI that can run Python code on a computer with an Nvidia GPU
+    - The autoawq and transformers packages installed
+    - A recent Nvidia GPU for the fastest kernels
+  output:
+    - name: Install and load steps
+      contains: How to install autoawq and load a ready-made 4-bit model to test your setup.
+    - name: Quantize script
+      contains: A short Python script that shrinks your model to 4-bit and saves it to a folder.
+    - name: Saved model folder
+      contains: The 4-bit model and its tokenizer, ready to load or serve.
+    - name: Method comparison
+      contains: How AWQ, GPTQ and bitsandbytes differ in speed, accuracy and setup, and which to pick.
+    - name: vLLM serving steps
+      contains: How to serve the 4-bit model with vLLM for chat use.
+    - name: Before and after table
+      contains: Memory, speed in tokens per second and perplexity for the original and the 4-bit copy.

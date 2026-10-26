@@ -8,7 +8,38 @@ metadata:
 
 # HR risk management
 
-Identify, assess, and mitigate people-related risks across the organization — from compliance and conduct risks to workforce continuity, data privacy, and organizational health — with structured risk registers and mitigation frameworks.
+Identify, assess and reduce people-related risks across the organization (compliance, conduct, workforce continuity, data privacy and organizational health) with a risk register and mitigation plans.
+
+This is a planning aid. It is not legal advice. For live disputes, investigations or legal exposure, tell the user to involve employment counsel. Say so in the output.
+
+## Before you start
+
+You need the company size, industry and countries. Optional: any change under way (fast growth, restructuring, a merger), known problems or past incidents, existing policies, and names of people who could own each risk.
+
+If something required is missing, ask once. If it stays missing, write "MISSING: <item>" and carry on using a stated assumption. Never invent incidents, laws, fines or statistics. Where a legal duty depends on place, write "check local law" and name the area, instead of citing a rule you can't verify.
+
+## Steps
+
+1. **Restate the context.** Size, industry, countries, change under way, known issues.
+2. **List the risks.** Group them: compliance, employee conduct, key person dependence, workforce continuity, data privacy, workplace safety, and any extra that fits the context. Aim for the 10 to 15 that fit this company, not a full catalogue.
+3. **Score each risk.** Likelihood 1 to 5 and impact 1 to 5, with a one-line reason. Priority = likelihood x impact. Say the scale is a judgement, not a measurement.
+4. **Assign an owner and a response.** One named role per risk (use the names given, or a role title). One concrete response step and a review date or trigger.
+5. **Map key person risk.** List roles or people the business can't easily do without, why, and one step to reduce each.
+6. **Write escalation steps.** For serious incidents such as a conduct complaint: who is told, in what order, what is recorded, and when outside counsel is called.
+7. **Add a short audit checklist.** Five to eight questions to find gaps in hiring, contracts, policies and records.
+8. **Flag.** What was assumed, what needs counsel, and the next three actions.
+
+## Output
+
+```
+CONTEXT AND ASSUMPTIONS
+RISK REGISTER        # | category | risk | likelihood | impact | priority | owner | response | review by
+TOP 5                <the five highest priorities, one line each>
+KEY PERSON MAP       <role> | why it matters | step to reduce the risk
+ESCALATION STEPS     <incident type> | who is told | order | what is recorded | when to call counsel
+AUDIT CHECKLIST      <5 to 8 questions>
+FLAGS AND NEXT STEPS <assumptions> | MISSING: <items> | needs counsel: <items>
+```
 
 ## Supported tasks
 

@@ -1,6 +1,6 @@
 new_slug: speed-up-a-woocommerce-store-and-keep-it-fast
 name: Speed up a WooCommerce store and keep it fast
-summary: Give it your PageSpeed report and setup. Get speed fixes in order and a budget that keeps the store fast.
+summary: "Speed up your WooCommerce store: paste your PageSpeed report and setup, get fixes in the right order and a speed budget that keeps it fast."
 job: speed-up-store
 thinking: medium
 thinking_why: Three steps that read a report and write a plan. A mid-size model does the job.
@@ -14,6 +14,10 @@ when:
   - Your WooCommerce store feels slow and PageSpeed shows red.
   - You don't know which of a long list of speed warnings to fix first.
   - You have a sale coming and want the store to hold up.
+not_for:
+  - "Your store has no PageSpeed data yet: run PageSpeed on mobile for three pages first, then come back."
+  - "You need to move to a new host or rebuild the theme: hire a WooCommerce developer, because this plan only orders fixes."
+  - "Your store is not on WooCommerce: ask your platform's support or a developer, since these fixes are built for WooCommerce."
 you_give:
   - Your PageSpeed report for the homepage, a product page and a collection page, pasted as text
   - "Your setup: theme, plugins, hosting, caching and whether you use a CDN"
@@ -29,6 +33,25 @@ how_to_use:
   - Run PageSpeed on mobile for three pages, three times each, and paste the results. List your plugins and host.
   - Make the fixes on a staging copy first, and run the report again after each change.
   - Put the budget somewhere your team will see it, and test after every new plugin.
+output_sample:
+  input:
+    - Your PageSpeed mobile report for the homepage, a product page and a collection page, three runs each
+    - Your theme, plugins, host and plan, caching and CDN
+    - Your sale date (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+    - A way to run PageSpeed on mobile yourself and paste the results as text
+  output:
+    - name: "Step 1: Speed report"
+      contains: Real-user data apart from the lab test, each page read, what causes the slow parts, a score out of 100 and three fixes.
+    - name: "Step 2: Fix order"
+      contains: Baseline, images, plugins, extra scripts, fonts, compression and caching, CDN, then questions for your host.
+    - name: "Step 3: Speed budget"
+      contains: Limits for page weight, mobile score and outside scripts, plus a test routine and pages to test.
+    - name: Pre-sale checklist
+      contains: Steps counted back from your sale date, including a freeze on changes.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run, and every MISSING line in one list.
 how_it_works:
   - title: Read the speed report
     text: Splits real-user data from the lab test, compares each measure with its band starting with mobile, names what causes the slow parts and gives a score out of 100 and three fixes.

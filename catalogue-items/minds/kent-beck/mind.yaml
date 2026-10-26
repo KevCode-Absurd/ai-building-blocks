@@ -16,6 +16,29 @@ use_cases:
   - "Get honest feedback sooner on a draft, a plan or a product"
   - "Set up a way of working with an AI coding assistant that keeps quality high"
   - "Settle an argument about a process by asking what feedback it gives and what it costs"
+not_for:
+  - "You need a quote or endorsement from Kent Beck: use his own posts listed in the sources, since this AI cannot speak for him."
+  - "You need legal, medical or financial advice: ask a qualified person in that field."
+  - "You want to speed up slow code: use the John Carmack mind, or the Brendan Gregg mind for tracing where time goes."
+output_sample:
+  input:
+    - The change you want to make, in a few plain sentences
+    - What the code or plan does today
+    - Any tests you can already run (optional)
+    - Where you are stuck, or what your team disagrees on (optional)
+  output:
+    - name: Smallest first step
+      contains: The one small move that would teach you something fast, and how you will know it worked.
+    - name: Test list
+      contains: A written list of the cases the change should cover, with the smallest one first.
+    - name: Structure and behaviour split
+      contains: Which parts only rearrange code and which change what it does, kept as separate changes.
+    - name: Tidy first or not
+      contains: A call on whether to clean up before, after, later or never, with the cost of each.
+    - name: How soon you would know
+      contains: How long until you find out you are wrong, and ways to make that shorter.
+    - name: What is his taste, what is beyond the record
+      contains: Marks which advice is his habit and which topics fall after mid-2025, where the AI will not guess.
 seats:
   - {seat: "Tests and small steps", asks: "What's the smallest step we could take next, and how will we know it worked?"}
   - {seat: "Design and tidying", asks: "Would tidying this first make the next change easier, and is it worth it now?"}

@@ -1,6 +1,6 @@
 new_slug: amazon-brand-registry-planner
 name: "Amazon brand registry planner"
-summary: "Give it your brand name and listing. Get a trademark choice, a registry pack and tools to turn on."
+summary: "Plan your Amazon Brand Registry application: check your name, pick a trademark type, and get an application pack and tools to turn on."
 job: sell-on-amazon
 thinking: low
 thinking_why: "It follows a short, fixed order of steps, and the main risk is stale rules, which you check on Amazon's own pages."
@@ -17,6 +17,10 @@ when:
   - You have a brand name and are about to order stock, and want to protect the name from day one.
   - You have a listing live and want the tools that registry opens.
   - You are choosing between a word mark and a logo mark for a generic-sounding name.
+not_for:
+  - "Your brand is already in Amazon Brand Registry: use Amazon's own Brand Registry support for listing disputes and fakes."
+  - "You sell on another marketplace, like eBay or Etsy: use that marketplace's own brand program pages."
+  - "You need legal advice on a trademark: ask a qualified trademark attorney, since this plan is not legal advice."
 
 you_give:
   - Your brand name and logo
@@ -33,6 +37,28 @@ how_to_use:
   - Search the trademark database for your name and close spellings before you pay for anything. Paste what you find.
   - Follow the plan in order. Check each step on Amazon's registry page and the trademark office's page, since rules change.
   - Before you rely on a trademark, ask a qualified trademark professional.
+output_sample:
+  input:
+    - Your brand name and logo
+    - Your country and category
+    - Your listing ASIN (optional)
+    - Your trademark search results (optional)
+    - Where your product is made (optional)
+  prerequisites:
+    - A trademark search you run yourself on your national office site, then paste the results
+  output:
+    - name: NAME CHECK
+      contains: Your name set against close marks you found, with a risk of low or check further.
+    - name: TRADEMARK CHOICE
+      contains: Word mark, logo mark or both, why, your country and the filing steps.
+    - name: REGISTRY APPLICATION PACK
+      contains: Your ASIN, trademark number, product image with the brand, seller account, category, answers and website.
+    - name: TURN ON AFTER APPROVAL
+      contains: Each registry tool to switch on, with what it does for you.
+    - name: ALSO CONSIDER
+      contains: A provisional patent for a new invention, and a manufacturer agreement against copying.
+    - name: CHECK ON THE REGISTRY SITE
+      contains: Current rules and tools to confirm, a not legal advice note and any missing items.
 
 how_it_works:
   - title: Checks the name

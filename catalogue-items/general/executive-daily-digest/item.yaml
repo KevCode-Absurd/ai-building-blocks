@@ -12,6 +12,8 @@ level: intermediate
 inputs:
   - type: plan
     required: true
+  - type: copy_draft
+    required: false
 outputs:
   - type: document
 uses: []

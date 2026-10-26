@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It filters noise before it reads the signal.
 new_slug: options-flow-reader
 name: Options flow reader
-summary: Give it options data. Get real bets told apart from cheap lottery
-  calls, so the put-call ratio is not misleading.
+summary: Read an options flow report that splits real bets from cheap lottery calls, so your put-call ratio is not misleading. Needs a Polygon.io key.
 job: money-and-investing
 headline: Options flow reader
-subhead: A put-call ratio that tells the truth. Raw ratios can look bullish only
-  because of thousands of nearly worthless far out-of-the-money calls. This
-  skill splits those out so you see where real money went.
+subhead: A put-call ratio that tells the truth. Raw ratios can look bullish only because of thousands of nearly worthless far out-of-the-money calls. This skill splits those out so you see where real money went.
 explain: |
   A put-call ratio that tells the truth. Raw ratios can look bullish only because of thousands of nearly worthless far out-of-the-money calls. This skill splits those out so you see where real money went.
 
@@ -18,6 +15,10 @@ when:
   - You want to tell hedging from cheap speculation.
   - You track a watchlist and want alerts on unusual options activity.
   - You compare options flow across sectors before an event.
+not_for:
+  - You want to time a trade. Check price, news and volume first, and talk to a licensed adviser.
+  - You have no Polygon.io key. Look up the put-call ratio on your broker site, but know it may count cheap far out-of-the-money calls.
+  - You want advice on what to buy or sell. This tool reads options activity only and gives no financial advice.
 you_give:
   - Tickers or a watchlist
   - A Polygon.io API key
@@ -30,8 +31,28 @@ you_get:
   - Anomaly flags
   - Bullish, bearish or neutral label
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can reach the Polygon data service with your key.
+  - Open your AI tool. Check that it can reach Polygon.io data, or that you can paste in options chain data.
+  - Paste the skill text into the chat.
+  - Add your tickers and your Polygon.io key. Add a baseline window if you want one, such as 30 days.
+  - Read the adjusted ratio and the lottery share first. Then check the anomaly flags.
+  - Compare any flag with price moves and news before you act on it. This is analysis, not financial advice.
+output_sample:
+  input:
+    - Your tickers or watchlist
+    - Your Polygon.io API key
+    - A time window or baseline (optional)
+    - Sector funds or event names (optional)
+  prerequisites:
+    - An AI that can reach the Polygon.io data service with your key
+    - A Polygon.io plan that covers the options data you want
+  output:
+    - name: Options flow summary
+      contains: One line per ticker with the raw ratio, lottery share, adjusted ratio and a bullish, bearish or neutral label.
+    - name: Real versus raw put-call ratio
+      contains: The ratio before and after cheap lottery contracts are removed, so you see how much the signal changed.
+    - name: Lottery share of volume
+      contains: The share of contracts that are cheap, far out-of-the-money bets.
+    - name: Per-expiry breakdown
+      contains: How the ratio looks for weekly, monthly and long-dated options.
+    - name: Anomalies
+      contains: Flags for ratio shifts above 0.3, open interest jumps above 30 percent and volatility spikes above 20 percent.

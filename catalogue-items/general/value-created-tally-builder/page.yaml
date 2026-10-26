@@ -1,6 +1,6 @@
 new_slug: value-created-tally-builder
 name: Value created tally builder
-summary: List who you serve and your figures. Get a cautious value tally for each group and your weakest link.
+summary: Build a cautious value created tally for owners, staff, partners and customers. Each figure shows its assumption, and you see who you serve least.
 job: plan-strategy
 thinking: high
 thinking_why: It builds several estimates with stated assumptions and has to judge where the numbers are weak.
@@ -14,6 +14,10 @@ when:
   - You want to show a wider view than profit in your letter or review.
   - You suspect one group, such as staff or partners, is getting too little.
   - You are asked what good your business does.
+not_for:
+  - "You want a formal audit or sign-off on your numbers: ask an accountant instead."
+  - "You want to know if your money holds up in a bad year: use the Bad-year break-even tester."
+  - "You want to write the annual letter itself: use the Annual letter writer, then bring this tally to it."
 you_give:
   - The groups you deal with
   - "Figures for each: net income, pay, partner profit, customer savings or time (whatever you have)"
@@ -30,6 +34,28 @@ how_to_use:
   - Say what you think each group gains from dealing with you.
   - Read the assumptions first. Change any that are too generous.
   - Use the table and the weakest-link note in your letter.
+output_sample:
+  input:
+    - The groups you deal with, such as owners, staff, partners and customers
+    - Figures for each group, such as net income, pay, partner profit or customer savings
+    - Customer behaviour, such as time per purchase (optional)
+  output:
+    - name: Groups and measures
+      contains: One row per group with its bottom-line measure, a figure and the assumption beside it.
+    - name: Customer estimate
+      contains: The one customer benefit, the sum per person, the number of people and the total.
+    - name: Total
+      contains: The sum across groups and the share each group holds.
+    - name: Weakest numbers
+      contains: The two least certain figures, why they are weak and a reasonable range.
+    - name: Least well served
+      contains: The group you serve least well, the evidence and one change.
+    - name: Not an audit
+      contains: A one-line note that this is a rough tally.
+    - name: Missing
+      contains: Any figures you did not give, marked so nothing is invented.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 how_it_works:
   - title: Lists the groups
     text: Owners, staff, partners or sellers and customers.

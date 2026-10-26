@@ -1,6 +1,6 @@
 new_slug: fair-disagreement-test-planner
 name: "Fair disagreement test planner"
-summary: "Describe a dispute where each side thinks it is right. Get a test both accept in advance and written predictions."
+summary: "Plan a fair test for a team dispute where both sides think they are right. Get claims both accept, a test, and written predictions."
 job: think-and-decide
 thinking: medium
 thinking_why: "It follows fixed steps but must write each side fairly and design a test that could embarrass both."
@@ -17,6 +17,10 @@ when:
   - Two people on your team disagree on what is working, such as an ad, a hire or a price.
   - A partner or client holds a view you think is wrong, and talking has stalled.
   - You are about to test something and want the result to count.
+not_for:
+  - The dispute is about values or goals, not facts. A test cannot settle it, so talk it through with a neutral mediator.
+  - You only need to pick between options with no real disagreement. Use a simple pros and cons list or a decision rule.
+  - Only one side is in the room. Ask the other person for their view first, because the plan needs both claims.
 
 you_give:
   - The dispute, and the claim each side makes
@@ -34,6 +38,31 @@ how_to_use:
   - Check each restated claim with the person who holds it. Fix any wording they reject.
   - Both sides fill in the prediction card before the test runs. Hand the card to the neutral person.
   - Run the test, then use the review page to record results and what is still open.
+output_sample:
+  input:
+    - The dispute, in a few lines
+    - Each side's claim and the evidence it points to
+    - What you can measure or try, plus your time and budget (optional)
+    - A person who could stay neutral (optional)
+  output:
+    - name: The dispute
+      contains: The disagreement written as one plain line.
+    - name: Claims, in each side's terms
+      contains: Each claim reworded so the other side would say it is fair.
+    - name: What you both already agree on
+      contains: Facts, goals and good results that both sides accept, so the real gap is smaller.
+    - name: The test
+      contains: What to do, for how long, and what is measured, plus the result that would embarrass each side.
+    - name: Prediction card
+      contains: What each side expects and what result would change its view, signed before the test.
+    - name: Recorder
+      contains: A neutral person who keeps the card and runs the numbers.
+    - name: If it settles nothing
+      contains: A follow-up test, agreed in advance, in case the first result is unclear.
+    - name: Review page
+      contains: Blank spaces for results, who was closer, and what is still open.
+    - name: Missing and checks missed
+      contains: What is unknown, and any check the plan did not pass.
 
 how_it_works:
   - title: Restates both claims

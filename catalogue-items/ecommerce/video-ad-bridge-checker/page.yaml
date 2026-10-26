@@ -1,6 +1,6 @@
 new_slug: video-ad-bridge-checker
 name: "Video script bridge checker"
-summary: "Paste a video ad script. Get a bridge score out of 100, early-sell spots and a tighter script."
+summary: "Check a video ad script before you film it. Find where viewers feel sold to too soon, and get a bridge score out of 100 plus a tighter script."
 job: check-ads
 thinking: high
 thinking_why: "It reads a whole script line by line and judges how the viewer's awareness changes, so a stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - You wrote a video script with a strong hook, but viewers drop off right after it.
   - Your script names the product in the first few lines and you wonder if that is too soon.
   - You are about to film or send a script to a creator and want one more read for flow.
+not_for:
+  - "You only want the first lines of the ad scored: use a hook scorer, not this bridge check."
+  - "You have no product or script yet: write a first draft, or ask a copywriter, then come back."
+  - "You have a long brand film or a story with no sales pitch: the sold-to map does not fit, so ask an editor to review it."
 
 you_give:
   - The full script, with timestamps or line order
@@ -35,6 +39,27 @@ how_to_use:
   - Say who it is for, the product claim and the offer.
   - Fix the lines marked as early-sell spots first, then the end bridge.
   - Run it again on the fixed script, and test that the link goes to a page that continues the story.
+output_sample:
+  input:
+    - Your full video ad script, with timestamps or one line per beat
+    - "Who the ad is for: cold, warm or ready to buy"
+    - Your product claim and your offer
+    - A retention graph from a similar video (optional)
+  output:
+    - name: Awareness map
+      contains: Each line with a short summary, the viewer's awareness stage and how sold-to they feel, from 0 to 5.
+    - name: Sections and bridges
+      contains: Hook, bridge, body, proof and call to action marked pass or fix, with the two bridges called good or abrupt.
+    - name: Early-sell spots
+      contains: The exact lines where the script pitches too soon or jumps to the buy button.
+    - name: Checks
+      contains: Ten checks with points earned and points available, such as benefit before feature, proof and pacing.
+    - name: Score
+      contains: A bridge score out of 100 now and after the fixes, with the sum shown.
+    - name: Rewrites
+      contains: A tighter bridge with a teaching step before the product, benefit-first lines and edit notes.
+    - name: Not run and missing
+      contains: Any check it could not do, such as pacing without timings, and what it needs.
 
 how_it_works:
   - title: Maps the sections

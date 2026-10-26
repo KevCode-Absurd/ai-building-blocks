@@ -1,13 +1,12 @@
 slug: storyboard-first-story-builder
 name: "Storyboard-first story builder"
-summary: "Paste your places, memories and hero. Get a rough board that finds the story before you write."
+summary: "Turn the places, memories and person you keep thinking about into a 12 to 20 frame story board, with an ending that comes from the board."
 category: general
 type: skill
 role: make
 job: strategy
 level: beginner
-inputs:
-  - {type: brief, required: true}
+inputs: []
 outputs:
   - {type: plan}
 origin: rebuilt

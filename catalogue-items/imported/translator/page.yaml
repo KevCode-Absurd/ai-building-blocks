@@ -2,13 +2,10 @@ thinking: low
 thinking_why: Translation is a standard task.
 new_slug: translator
 name: Translator
-summary: Give it text and a language. Get a natural translation with local tone
-  and consistent terms.
+summary: Translate text into another language so it reads like a local wrote it. Keeps your terms, tone and formatting the same throughout.
 job: write-and-tell-stories
 headline: Translator
-subhead: Text in another language that reads as if a local wrote it, with the
-  same tone and the same terms every time. You do not get stiff word-for-word
-  output.
+subhead: Text in another language that reads as if a local wrote it, with the same tone and the same terms every time. You do not get stiff word-for-word output.
 explain: |
   Text in another language that reads as if a local wrote it, with the same tone and the same terms every time. You do not get stiff word-for-word output.
 
@@ -18,6 +15,10 @@ when:
   - You must translate app messages without breaking placeholders.
   - You want one term to stay the same across a long document.
   - You need dates and units changed for a different country.
+not_for:
+  - "You need a certified legal, medical or official document: use a qualified human translator and have them sign it off."
+  - "You are publishing live text to customers: ask a native speaker to read it first."
+  - "You only want to fix the grammar of text in the same language: use a plain proofread step in your AI chat."
 you_give:
   - The text to translate
   - The target language
@@ -29,7 +30,27 @@ you_get:
   - Local units and dates
   - Translator notes on tricky choices
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
+  - Paste the skill instructions into the chat.
+  - Paste your text. Say the language you want, and the formality if it matters.
+  - Add your list of required terms if you have one (optional).
+  - Read the translator notes first. They show where your AI had to make a choice.
+  - Ask a native speaker to check the result before you publish it. For a JSON file, load it into your app's language setup after the check.
+output_sample:
+  input:
+    - The text you want translated
+    - The language you want it in
+    - Formality and field, such as legal or casual (optional)
+    - A list of terms that must be translated a set way (optional)
+    - The language it is written in, if unclear (optional)
+  output:
+    - name: Translated text
+      contains: Your text in the new language, in the same format as the original, with tone and terms kept steady.
+    - name: Preserved formatting
+      contains: Markdown, HTML tags, code blocks, JSON keys and placeholders such as {username} left unchanged and placed correctly.
+    - name: Local units and dates
+      contains: Units, dates, currency and sayings changed to suit the place where the text will be read.
+    - name: Translator notes
+      contains: Short notes on tricky choices, such as terms kept in English or a formal or informal form picked.
+    - name: Variants (if asked)
+      contains: Each formality level or regional version, clearly labeled, when you ask for more than one.

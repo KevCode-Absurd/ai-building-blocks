@@ -23,8 +23,8 @@ steps:
   - {uses: winning-image-ad-style-finder, note: "Start from your ads and results. Keep the style traits and drop the old words and numbers."}
   - {uses: image-ad-settings-picker, note: "Turn the new ad plans into a brief with the settings locked, so every ad is made the same way."}
   - {uses: single-image-ad-planner, note: "Plan each ad from the locked brief: the argument, the words on the image and the feed copy."}
-  - {uses: accurate-product-image-ad-maker, note: "Turn each planned ad and its words into a prompt that keeps the real product."}
-  - {uses: image-upscale-checker, note: "Take the images you approved and set up a faithful upscale to the size each place needs."}
+  - {uses: accurate-product-image-ad-maker, note: "Turn each planned ad and its words into a prompt that keeps the real product. Hands you the prompts to paste into your image tool; you make the images and pick the ones to keep."}
+  - {uses: image-upscale-checker, note: "Takes the images you made from step 4's prompts and approved, not the prompts themselves, and sets up a faithful upscale to the size each place needs."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/lib-make-new-image-ads-in-the-style-your-best-ads-share/skeleton.yaml

@@ -19,6 +19,22 @@ The goal is not "extract the most text". The goal is:
 - choose the most faithful output shape
 - avoid noisy defaults when a better route exists
 
+## What you need first
+
+- The PDF file, and the format wanted (`markdown`, `markdown-with-html`, `html`, `text`, `json` or `docx`). If the format is not named, ask once. Suggest `markdown-with-html` when tables matter.
+- Optional: which pages to convert, and what matters most (tables, reading order, layout).
+- Tools this skill uses. Check each with a version or help command before you start, and list any that are missing:
+  - `opendataloader-pdf`, the main converter. It is a command line tool from the OpenDataLoader project. Install it from that project's own page, and only after the user approves. Do not guess install commands.
+  - `pdfinfo` and `pdftotext`, from the free Poppler tools, to look at the PDF and check text.
+  - An OCR tool, such as OCRmyPDF, only for scanned PDFs.
+- No command line, or a tool is missing: say what could not run. Fall back to reading the PDF with your own file reader, or `pdftotext -layout`, and say the result may lose tables and reading order. Never claim `opendataloader-pdf` ran when it did not.
+
+## Privacy and safety
+
+- PDFs may hold personal, medical, financial or client data. Before the user uploads one to an AI tool, remind them to check their own privacy rules. Where possible, run the tools on their own computer.
+- For lab or medical PDFs: the converted values are for reading and filing only. Check each value against the original page. Never use the copy for medical decisions without that check.
+- Keep the original PDF untouched. Write the output to a new folder.
+
 ## When to Use
 
 - The user wants a PDF converted into another format.
@@ -395,6 +411,14 @@ When reporting back, prefer saying:
 - whether cleanup or repair was applied
 - the recommended output file
 - the remaining limitations, if any
+
+## What you hand back
+
+- The converted file in the format asked for, with its full path, in a new output folder.
+- The PDF type found (digital, scanned, slide deck, table-heavy, medical, or mixed).
+- The route used (command and flags), whether a retry was needed, and whether a cleanup pass was applied.
+- Spot-check results: at least one early section, one hard section and one section that matters most to the user, each marked passed or failed.
+- Remaining problems that affect reading, and anything that could not run.
 
 ## Delivery Rule
 

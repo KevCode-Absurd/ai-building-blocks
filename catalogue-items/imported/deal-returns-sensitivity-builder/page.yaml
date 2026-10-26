@@ -36,3 +36,29 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - Your deal is outside India or your company uses calendar years. This skill assumes April to March years and lakh and crore.
+  - You only need to know whether a requested EBITDA addback fits your deal cap. Use the Deal EBITDA addback checker.
+  - You want a model that someone else built checked for errors. Use the Financial Analyst agent.
+output_sample:
+  input:
+    - Entry EBITDA and the entry multiple (EV to EBITDA)
+    - Net debt, senior debt and any other debt, with rates and paydown terms
+    - Revenue growth, EBITDA margin, capex and working capital assumptions
+    - Exit year and the range of exit multiples to test
+    - Fees and deal costs (optional)
+  prerequisites:
+    - A spreadsheet tool such as Excel to build the workbook in
+  output:
+    - name: Base-case returns
+      contains: Entry value, equity put in, exit value, exit equity, MOIC, IRR and cash-on-cash.
+    - name: Returns waterfall
+      contains: How much of the return comes from EBITDA growth, the multiple, debt paydown and fee drag.
+    - name: Sensitivity tables
+      contains: IRR and MOIC grids for entry against exit multiple, growth, debt level and hold period.
+    - name: Scenario analysis
+      contains: Bull, base and bear cases side by side.
+    - name: Excel workbook
+      contains: Assumptions, returns calculation, sensitivity tables and scenario summary, with live formulas.
+    - name: One-page returns summary
+      contains: The headline returns, set up for an investment committee deck.

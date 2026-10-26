@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores with set formulas, then recommends per vendor.
 new_slug: vendor-scorecard-builder
 name: Vendor scorecard builder
-summary: Give it your vendor list and uptime data. Get scorecards, missed-SLA
-  credits and keep, review or replace calls.
+summary: Score every vendor you pay with a vendor scorecard. Get keep, review or replace calls, missed-SLA credit flags and a risk rating for each one.
 job: organise-work
 headline: Vendor scorecard builder
-subhead: Give it your vendor list and uptime data. Get scorecards, missed-SLA
-  credits and keep, review or replace calls. Bring a list of vendors with cost
-  and renewal dates. Use the result to plan your next step.
+subhead: Give it your vendor list and uptime data. Get scorecards, missed-SLA credits and keep, review or replace calls. Bring a list of vendors with cost and renewal dates. Use the result to plan your next step.
 explain: |
   A scorecard for every software and service vendor you pay, with a clear keep, review or replace call, so you walk into renewal already knowing what to do. 
   You give a vendor list, contract values and uptime or incident data. The skill scores each vendor on several dimensions, tuned to your industry. It compares real uptime against the promised target and flags any breach where you are owed a service credit. It sorts third-party risk across four types and shows where your spend overlaps, which matters after a merger. A heavy vendor, like your login provider, gets its own deeper review. This is for ongoing performance checks, not for picking a first vendor or drafting contracts.
@@ -17,19 +14,45 @@ when:
   - A key vendor keeps going down and you want to put a number on it.
   - A renewal is 60 to 90 days away and you need a firm position.
   - You want to claim credits for missed uptime promises.
+not_for:
+  - "You want to write or negotiate contract terms: ask your lawyer or a general counsel, because this skill only checks how vendors perform."
+  - "You want to find duplicate software or sort your spend: use a spend review, since this skill scores vendors you already plan to keep."
+  - "You want uptime goals for your own systems: set those with your engineering team, because this checks vendors against contract targets."
 you_give:
-  - A list of vendors with cost and renewal dates
-  - Uptime and incident records
-  - Contract uptime targets (optional)
-  - Your industry
+  - Your vendor list with name, category, yearly cost and contract end date
+  - "How critical each vendor is: tier-1, tier-2 or tier-3"
+  - Uptime, incident count and support response time for the last 12 months
+  - Security certificates and renewal terms for each vendor
+  - SLA records with target and actual results (optional)
+  - "Your industry: SaaS, fintech, healthcare or enterprise"
 you_get:
   - A score for every vendor
   - SLA breaches with credit flags
   - A risk rating by type
   - A keep, review or replace recommendation
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Use an AI that can run Python and read files, such as Claude with file tools. A plain chat can follow the steps but cannot run the scripts.
+  - Put your vendors in a spreadsheet with one row each. Ask your AI to turn it into the JSON catalog the skill needs.
+  - Upload the skill folder and the catalog. Tell your AI your industry and ask it to follow the skill.
+  - Add your SLA records if you have them, so it can flag credits you can claim.
+  - Check the scorecard, SLA report and risk matrix. Pick your top replace and review vendors before renewal.
+  - Use the results to prepare for each vendor talk. Do not treat a score as the final call.
+output_sample:
+  input:
+    - Your vendor list with name, category, yearly cost and contract end date
+    - "How critical each vendor is: tier-1, tier-2 or tier-3"
+    - Uptime, incident count and support response time for the last 12 months
+    - Security certificates and renewal terms for each vendor
+    - SLA records with target and actual results (optional)
+  prerequisites:
+    - An AI that can run Python scripts and read files
+    - Your vendor list turned into a JSON file (a spreadsheet export can be converted by your AI)
+  output:
+    - name: scorecard.md
+      contains: A ranked list of vendors with a 0 to 100 score, a breakdown by dimension and a keep, review or replace verdict.
+    - name: sla_report.md
+      contains: Compliance against each target for the last month and quarter, a trend, and a flag where a service credit can be claimed.
+    - name: risk_matrix.md
+      contains: A Critical, High, Medium or Low rating for each vendor across four risk types, with a fix for each.
+    - name: Final digest
+      contains: Top 3 keep wins, top 3 review talks, top 3 replace picks, claimable credits and critical-risk vendors with no fix.

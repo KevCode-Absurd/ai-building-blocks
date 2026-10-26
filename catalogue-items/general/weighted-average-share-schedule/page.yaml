@@ -1,46 +1,88 @@
 new_slug: weighted-average-share-schedule
 name: Weighted-average share schedule
 headline: Weighted-average share schedule
-summary: Turn dated share changes into a checked EPS denominator and a timing sensitivity.
+summary: Work out weighted-average shares and basic EPS from your share issues and buybacks, with a timing check and a tie-out to the filing.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A dated share timeline, weighted-average denominator and basic EPS reconciliation. Share opening ordinary shares, issue or repurchase dates, daily share ledger, period length and profit attributable to ordinary holders.
+subhead: Give it your opening share count, the date of each share issue or buyback, and profit for ordinary holders. It builds a dated share timeline, finds the weighted-average share count and works out basic earnings per share (EPS). It also shows how EPS moves if a date shifts.
 explain: |-
-  A dated share timeline, weighted-average denominator and basic EPS reconciliation.
+  Basic EPS is profit divided by shares. The trouble is that shares change during the year. A share issued in November has been outstanding for weeks, so it cannot count as a full year. Dividing by the year-end count or the opening count gives the wrong EPS.
 
-  Public equity and share counts. Illustrative figures. 100 + 20 × 0.5 = 110 million weighted shares; 220 / 110 = $2.00. Full-period issuance gives 120 and $1.833333. The time fraction comes from an independently checked day ledger.
+  This skill splits the period into stretches where the share count does not change. It weights each stretch by its days, adds them up, and checks that the day fractions add to one. It then divides profit for ordinary holders by that weighted count. A practice case shows the idea: 100 million shares at the start and 20 million issued halfway give 100 + 20 x 0.5 = 110 million weighted shares. With profit of 220 million, basic EPS is 2.00. Those figures are made up.
+
+  It differs from a quick EPS sum in three ways. It ties every number to a source, period, currency and scale. It never turns a missing date or count into zero. And it tests the result: it moves the biggest transaction date earlier and later, and compares the closing share count and EPS with the filing.
 when:
-  - You need a dated share timeline, weighted-average denominator and basic EPS reconciliation.
-  - You work on public equity and share counts and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are writing or checking a basic EPS line for an annual or quarterly report.
+  - Shares were issued or bought back part-way through the period and you need the weighted count.
+  - A reviewer asks how you got the share count behind your EPS.
+  - You want to see how much EPS changes if a share issue fell a month earlier or later.
+not_for:
+  - "You need diluted EPS for share options: use the Treasury-stock option dilution."
+  - "You need diluted EPS for convertible notes: use the Convertible EPS inclusion test."
+  - "A rights issue changed the share count: use the Rights-issue EPS adjustment. For a stock split, use the Stock-split EPS restatement."
+  - "You want to know if a stock is worth buying. This is a calculation, not investment advice."
 you_give:
-  - Opening ordinary shares, issue or repurchase dates, daily share ledger, period length and profit attributable to ordinary holders.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Opening ordinary shares, from the balance sheet or filing
+  - Each share issue, buyback or cancellation, with its date and number of shares
+  - The period start and end dates
+  - Profit for ordinary holders, after preference dividends, with the currency and scale (for example, USD millions)
+  - The filing's closing share count and reported basic EPS, to check against (optional)
+  - Treasury share count (optional)
 you_get:
-  - A dated share timeline, weighted-average denominator and basic EPS reconciliation.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - A dated share timeline, one row for each stretch with the same share count
+  - The weighted-average share count, with the day fractions shown and checked to add to one
+  - Basic EPS with the working
+  - A timing test showing EPS if the biggest transaction date moves earlier or later
+  - A tie-out to the filing, and a list of what is missing
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill if you added it to your AI. Or copy it and paste it into Claude, ChatGPT or Gemini.
+  - Paste your opening shares, each share change with its date, the period dates and profit for ordinary holders. Say the currency and scale.
+  - Add the filing page with the closing share count and reported EPS if you have it.
+  - Check the day fractions first. They must add up to one.
+  - Read the tie-out and the MISSING list before you use the number.
+  - For an editable workbook, say so. Your AI needs to make files for that. If it cannot, it gives you a table to paste into Excel or Google Sheets.
 how_it_works:
-  - title: 1. Separate ordinary shares outstanding from treasury shares; collect opening balance and every issue or cancellation date
-    text: Separate ordinary shares outstanding from treasury shares; collect opening balance and every issue or cancellation date.
-  - title: 2. For each unchanged-share interval, multiply shares by days divided by total period days; sum the interval contributions and reconcile the closing ledger
-    text: For each unchanged-share interval, multiply shares by days divided by total period days; sum the interval contributions and reconcile the closing ledger.
-  - title: 3. Use profit attributable to ordinary holders after relevant preference distributions; divide by weighted shares, then test a changed transaction date
-    text: Use profit attributable to ordinary holders after relevant preference distributions; divide by weighted shares, then test a changed transaction date.
+  - title: 1. Fixes the period and units
+    text: Writes the start and end dates, the days in the period, the currency and the scale, and uses the same ones throughout.
+  - title: 2. Builds the share ledger
+    text: Takes out treasury shares, lists each issue or buyback with its date, and splits the period into stretches where the share count does not change.
+  - title: 3. Weights each stretch
+    text: Multiplies each stretch's shares by its days and divides by the days in the period. It adds the rows and checks the fractions add to one.
+  - title: 4. Works out basic EPS
+    text: Divides profit for ordinary holders, after preference dividends, by the weighted share count.
+  - title: 5. Runs the timing test
+    text: Moves the largest transaction date earlier and later by a gap it states, then shows the new count and EPS.
+  - title: 6. Ties out to the filing
+    text: Compares the closing shares and reported EPS with yours, explains any gap and leaves unresolved items marked MISSING.
 output_shape: |-
-  A dated share timeline, weighted-average denominator and basic EPS reconciliation.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND DATED SOURCES      <period, currency, scale, basis, source of each number>
+  INPUTS AND ASSUMPTIONS       <opening shares, dated changes, profit, day-count rule>
+  SHARE LEDGER                 <start | end | shares | days | day fraction | weighted shares>
+  WEIGHTED-AVERAGE SHARES      <sum of rows; fractions add to 1: yes or no>
+  BASIC EPS                    <profit / weighted shares = EPS, working shown>
+  TIMING TEST                  <date moved earlier | later: count, EPS>
+  RECONCILIATION               <closing shares and reported EPS against the filing, gaps explained>
+  MISSING                      <inputs not given>
+  CHECKS MISSED                <one line per check that failed or could not run, or none>
+output_sample:
+  input:
+    - "Opening ordinary shares and the period start and end dates"
+    - "Each share issue, buyback or cancellation, with its date and number of shares"
+    - "Profit for ordinary holders, with the currency and scale"
+    - "The filing's closing shares and reported EPS (optional)"
+  prerequisites:
+    - "Primary records, such as the filing or share register, with dates"
+    - "An AI that can make files, if you want an editable workbook"
+  output:
+    - {name: "Scope and dated sources", contains: "The period, currency, scale and accounting basis, and where each number came from."}
+    - {name: "Inputs and assumptions", contains: "Opening shares, each dated change, profit for ordinary holders and the day-count rule used."}
+    - {name: "Share ledger", contains: "One row for each stretch with the same share count: dates, shares, days, day fraction and weighted shares."}
+    - {name: "Weighted-average shares", contains: "The summed denominator, with a check that the day fractions add to one."}
+    - {name: "Basic EPS", contains: "Profit for ordinary holders divided by weighted shares, with the working shown."}
+    - {name: "Timing test", contains: "The count and EPS if the biggest transaction date moves earlier or later."}
+    - {name: "Reconciliation", contains: "Closing shares and reported EPS against the filing, with any gap explained."}
+    - {name: "MISSING and CHECKS MISSED", contains: "Inputs you did not give, and any check that failed or could not run."}
 tweaks:
   - what: Period and currency
     how: Use the same calendar, currency and scale throughout matching inputs and outputs.
@@ -62,15 +104,22 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Excel or Google Sheets
+      why: Holds the share ledger so you can check every row and rerun the sums with your own dates.
+    - name: An AI that can make files
+      why: Builds and reopens an editable workbook. Without it you get a table to paste into a sheet.
+    - name: Node.js 20 or later (optional)
+      why: Runs the bundled script as a cross-check on a case with one share issue.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The filing page that shows closing shares and reported basic EPS
+    - The share register or transaction list with dates
+    - The name of the person who will review the result
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Weighted-average shares
+    meaning: The average share count over the period, where each share counts for the days it was outstanding.
+  - term: Basic EPS
+    meaning: Profit for ordinary holders divided by the weighted-average shares. It is a per-share profit.
+  - term: Treasury shares
+    meaning: Shares the company bought back and holds. They are left out of the count.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that compares your figure with a matching record and explains any gap.

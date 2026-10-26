@@ -19,6 +19,26 @@ This skill is aligned with **SHAP 0.52.0** (released 2026-05-28). That release r
 
 The maintained examples were checked on Python 3.12.10 with SHAP 0.52.0, NumPy 2.5.3, pandas 3.0.6, scikit-learn 1.9.1, and matplotlib 3.11.2. Native tests cover small tree, exact, permutation, partition, linear, additive, kernel, text, and constant-image games; additional numeric XGBoost 3.4.1 smoke checks cover raw, probability, loss, and interaction outputs. Reference snippets that require a project model, framework, or data are adaptation templates; optional pretrained/deep, GPU, and distributed integrations remain illustrative and require their own runtime validation.
 
+## What you need first
+
+- A trained model the person owns or trusts, and the code that prepares its inputs. Never open a model file (pickle, joblib) from a source you do not trust, because it can run code.
+- A table of the rows to explain, and a table of training or reference rows for the background.
+- Which output to explain (for a classifier, which class and whether it is a probability or a raw score).
+- An environment that can run Python 3.12 or newer with `uv`. Without code running, explain the method, name the plots that would answer the question and do not state any attribution values.
+
+## If something is missing
+
+Ask once. If the model, the rows, the background or the output choice is still missing, write `MISSING: <what>` and stop. Never invent attributions, plot values or an additivity result. If the additivity check fails, stop and report the failure. Do not show the plots as if they were sound.
+
+## What you hand back
+
+1. **What was explained**: model and version, output and units, rows, background and its size, explainer and masker, SHAP and library versions.
+2. **Additivity check**: baseline plus the sum of attributions against the model output for the chosen output. A pass means the pieces add up to the model's prediction. It does not mean the model is right.
+3. **Global view**: bar and beeswarm plots, and `feature_importance.csv`.
+4. **Single predictions**: a waterfall plot per chosen row, with the rule used to choose rows, and `first_row_contributions.csv`.
+5. **Files**: `prediction_reconstruction.csv`, `metadata.json` and the plot images, when the bundled script is used.
+6. **Limits and next step**: SHAP describes how the model behaves. It does not show cause, fairness or why a person was treated a certain way. Pair it with performance, calibration and fairness checks before a model review.
+
 ## Operating Rules
 
 1. Explain a fixed, evaluated model; do not use SHAP as a substitute for predictive validation.

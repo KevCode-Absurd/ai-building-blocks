@@ -17,6 +17,29 @@ use_cases:
   - "Stop spending on delight and fix the basics that make people leave"
   - "Rewrite a support script so it uses positive words and heads off the next problem"
   - "Coach a team to push back on a buyer politely instead of agreeing with everything"
+not_for:
+  - "You need better questions to uncover a buyer's problem: use the Neil Rackham mind instead."
+  - "You are in a tense negotiation and need calm tactics to understand the other side: use the Chris Voss mind instead."
+  - "You need a daily outreach habit to fill an empty pipeline: use the Jeb Blount mind instead."
+output_sample:
+  input:
+    - The buyer's own words, such as emails or call notes from a stalled proposal
+    - What you sell, who the buyer is, and who else has a say
+    - The options you offered and any price or risk terms
+    - A support reply or customer steps you want to make easier (optional)
+  output:
+    - name: Problem type
+      contains: Names whether the buyer is unsure what to choose, wants more research, or fears the result will not come.
+    - name: What most people believe
+      contains: States the common belief about your situation and what the recorded research found instead.
+    - name: Recommendation draft
+      contains: Wording for a clear, firm recommendation that narrows the choices for the buyer.
+    - name: Safety nets
+      contains: Ideas to take risk off the first step, such as a small start or an opt-out.
+    - name: Effort check
+      contains: Points where the customer repeats themselves or works too hard, with the worst one to fix first.
+    - name: Change to test
+      contains: One or two changes to try on real conversations, and how to measure them.
 seats:
   - {seat: "Teach, tailor, take control", asks: "What will we teach this buyer that they don't already know about their own business?"}
   - {seat: "Customer effort", asks: "Where does the customer have to work too hard here, and what would make it easy?"}

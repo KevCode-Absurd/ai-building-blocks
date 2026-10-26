@@ -1,6 +1,6 @@
 new_slug: buyer-identity-segment-finder
 name: "Buyer identity segment finder"
-summary: "Paste reviews and survey answers. Get buyer groups by self-description, their size and who to build for."
+summary: "Find your buyer groups from reviews. Paste reviews and get counts of who buyers say they are, a size note and one group to build for."
 job: understand-customers
 thinking: medium
 thinking_why: "It sorts and counts text you paste, then ranks groups. A mid-size model does this well, as long as you check the counts."
@@ -17,6 +17,10 @@ when:
   - You have reviews and no idea which kind of buyer they come from.
   - You want a narrower group to speak to, so your ads stop sounding like everyone else's.
   - You are choosing between a few buyer groups and want a count behind the choice.
+not_for:
+  - "You have no reviews and no buyers yet: ask people in forums and reviews of similar products first, or run a small survey with a few possible buyers."
+  - "You want to check if your ad or page fits one buyer group: use the Avatar fit checker."
+  - "You need a plan to survey buyers and non-buyers with a reward: use the Buyer research plan with survey."
 
 you_give:
   - Your reviews, a rival's reviews, or reviews of similar products from larger brands
@@ -34,6 +38,27 @@ how_to_use:
   - If you have survey answers, paste them too. If you do not, ask for the three-question survey and send it to your buyers.
   - Read the counts first, then the size notes. Check a few counts against the reviews yourself.
   - Pick the group, then use the list of changes to edit one ad and one page.
+output_sample:
+  input:
+    - Your reviews, or a rival's, or reviews of similar products from larger brands
+    - Survey answers from your buyers (optional)
+    - Rising hobbies or trends in your niche (optional)
+    - Review dates (optional)
+  output:
+    - name: IDENTITIES FOUND
+      contains: Each buyer identity with its count, trend and example words, with no names, highest count first.
+    - name: NESTING MAP
+      contains: The market from broad to narrow, ending at the group.
+    - name: SEGMENT RANKING
+      contains: Groups ranked by repeats, size note and fit with the product, ending with one pick and why.
+    - name: WHAT CHANGES FOR THE PICK
+      contains: What to change in the ad, primary text, page and product photos for the chosen group.
+    - name: SURVEY (3 questions)
+      contains: Three open questions you can send to buyers to keep counting.
+    - name: NEXT
+      contains: One next step, such as the cheapest ad test for the pick.
+    - name: CHECKS MISSED
+      contains: Any checks that failed, or none.
 
 how_it_works:
   - title: Gathers reviews

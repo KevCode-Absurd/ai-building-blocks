@@ -11,6 +11,31 @@ explain: |-
 when:
   - Several ad briefs, comments or brand files disagree on facts, tone, offer or ad deliverables.
   - You want useful ad drafting to continue without guessing who approved a material change.
+not_for:
+  - "You have one clear brief and want ad copy: use Get ad copy for one buyer, built on one fact."
+  - "The clash is with a client over scope or fees: use Prepare a client scope change brief."
+  - "You only want to know if your ad claims have proof: use the Ad claim proof gap finder."
+  - "You are starting a brief from nothing: use the Creative brief writer."
+output_sample:
+  input:
+    - Your competing briefs, comments or brand files, each labelled with its source, owner and date
+    - Your current request, with the ad copy you want, how many, the language and any limits
+    - Product and offer facts you have checked
+    - Decisions or approvals already given (optional)
+  prerequisites:
+    - Someone with authority to settle the open questions the AI raises
+  output:
+    - name: Conflict register
+      contains: Each clash with both exact statements, sorted as fact, preference, constraint or permission, and what it affects.
+    - name: Authoritative brief
+      contains: One brief with the chosen decisions, fact sources and limits, and open items marked NEEDS_DECISION.
+    - name: Claim map
+      contains: Each claim the copy would use, matched to its source, with a safe drafting scope or a stop.
+    - name: Bounded ad draft
+      contains: Only the agreed copy, or one blocked decision with the exact question you need answered.
+    - name: Resume checkpoint
+      contains: Checked facts, decisions, version, finished work, open questions for owners and what restarts the work.
+
 you_give:
   - The competing ad briefs or comments with source labels and any known owners or dates
   - The current request, desired ad-copy deliverable, quantity, language and constraints

@@ -14,10 +14,10 @@ outputs:
   - {type: copy_draft}
 uses: [study-claim-checker, scholarly-work-reviewer, manuscript-peer-review-drafter, review-comment-humaniser]
 steps:
-  - {uses: study-claim-checker, note: "Every claim in the abstract and discussion read against the paper's own results and methods, with the claims that go further than the data flagged."}
-  - {uses: scholarly-work-reviewer, note: "Design, analysis, novelty, the literature it ignores and the writing, reviewed as a scholar in the field would, with what you said you cannot judge left out."}
-  - {uses: manuscript-peer-review-drafter, note: "The review in the standard shape: a summary in your words, major points, minor points and a recommendation, each point tied to a page or figure."}
-  - {uses: review-comment-humaniser, note: "Each comment rewritten so the author knows exactly what to change and why, in a tone you would use to a colleague. Nothing is submitted until you say so."}
+  - {uses: study-claim-checker, note: "Every claim in the abstract and discussion read against the paper's own results and methods, with the claims that go further than the data flagged. It hands over the claim check."}
+  - {uses: scholarly-work-reviewer, note: "Reads the manuscript, with the claim check from step 1 as a starting point. Design, analysis, novelty, the literature it ignores and the writing, reviewed as a scholar in the field would, with what you said you cannot judge left out. It hands over a review of the methods and writing."}
+  - {uses: manuscript-peer-review-drafter, note: "Reads the manuscript with the claim check from step 1 and the review from step 2. It hands over the review in the standard shape: a summary in your words, major points, minor points and a recommendation, each point tied to a page or figure."}
+  - {uses: review-comment-humaniser, note: "Takes the review text from step 3 and rewrites each comment so the author knows exactly what to change and why, in a tone you would use to a colleague. It hands over the review you submit. Nothing is submitted until you say so."}
 origin: own
 version: 1.0.0
 example_pending: true

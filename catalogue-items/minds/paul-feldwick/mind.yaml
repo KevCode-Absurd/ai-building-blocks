@@ -16,6 +16,29 @@ use_cases:
   - "Brief a creative team with a story instead of a form"
   - "Spot when a campaign is boring or rude to the people it interrupts"
   - "Balance data and process with room for creative risk"
+not_for:
+  - "You must sell this week and need a clear offer, a deadline and tracking: use the Dan Kennedy mind."
+  - "You want product facts, samples and small tests to prove what sells: use the Claude Hopkins mind."
+  - "You want broad reach and easy buying backed by sales data: use the Byron Sharp mind."
+output_sample:
+  input:
+    - Your campaign, launch plan or creative brief
+    - Who the work is for
+    - Your budget (optional)
+    - Your brand assets, like a character, tune, look or name (optional)
+  output:
+    - name: Theory behind your plan
+      contains: Which idea of how advertising works your plan assumes, and what that idea leaves out.
+    - name: Four conditions for fame
+      contains: Your work checked for satisfaction, mass reach, distinctive brand assets and a reason for people to take part.
+    - name: Distinctive assets
+      contains: The characters, tunes, looks or names you have or lack that tie the work to your brand.
+    - name: Where the show is
+      contains: A suggestion for a story, song, character or stunt that gives people a reason to watch.
+    - name: Better brief
+      contains: A story-led way to brief the people who make the work, in place of a form.
+    - name: Limits
+      contains: A short note where your question falls outside his recorded work, and what his four conditions would suggest.
 seats:
   - {seat: "Fame and showmanship", asks: "Would anyone talk about this, share it, or argue about it? If not, where's the show?"}
   - {seat: "Charming guest", asks: "We're walking into someone's living room. Are we entertaining them, or boring and insulting them?"}

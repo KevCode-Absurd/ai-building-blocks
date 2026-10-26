@@ -41,8 +41,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Seal the setting.** Use the skill `closed-setting-planner`. A small closed world where every exit is shut for a reason a reader accepts.
 2. **Map the mood swings.** Use the skill `volatile-antagonist-mood-mapper`. Give it the plan from the steps before. The person who holds the power gets a mood scale, so every calm scene carries a threat.
 3. **Build the cost ladder and the clock.** Use the skill `rising-cost-ladder-builder`. Give it the plan from the steps before. Every try gets more expensive, and a deadline sits over all of it.
-4. **Check every escape is fair.** Use the skill `fair-escape-checker`. Give it the plan from the steps before. Every escape uses something the reader has already seen.
-5. **Check every scene turns.** Use the skill `scene-turn-checker`. Give it the plan from the steps before. Reads the plan and marks any scene where nothing turns.
+4. **Check every escape is fair.** Use the skill `fair-escape-checker`. Give it the plan from the steps before. Every escape uses something the reader has already seen. Hands back a fair, weak or cheat verdict for each escape. Fix the cheats in your plan before step 5.
+5. **Check every scene turns.** Use the skill `scene-turn-checker`. Give it your scene list and the plan from steps 1 to 3 with step 4's fixes applied, not step 4's verdict list. Marks any scene where nothing turns.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

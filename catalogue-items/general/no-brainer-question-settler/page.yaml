@@ -1,6 +1,6 @@
 new_slug: no-brainer-question-settler
 name: No-brainer question settler
-summary: Describe a hard problem. Get the obvious questions settled, a rough target sum and a smaller problem left.
+summary: Settle the obvious questions in a big problem, check your target with a rough sum and cross off dead paths. You get a smaller question to solve.
 job: think-and-decide
 thinking: medium
 thinking_why: It has to tell which questions are truly obvious and do simple sums, but the steps are fixed.
@@ -14,6 +14,10 @@ when:
   - A problem feels too big and you do not know where to start.
   - You have a target (revenue, users, savings) and have not checked what it would take.
   - Several people argue about details while a basic question is still open.
+not_for:
+  - "You already have a framed choice with clear options: use the Decision checklist runner."
+  - "You have no numbers and no target at all, such as a pure matter of taste: talk it through with a trusted person instead."
+  - "You only need a task done, like writing or building something: do the task directly, no planning step needed."
 you_give:
   - The problem or goal, with the result you want and a date
   - What you already know or have decided (optional)
@@ -28,6 +32,28 @@ how_to_use:
   - Describe the problem, the result you want and any numbers you have.
   - Read the settled list first. Argue with any answer you think is not obvious.
   - Take the smaller question into the next step, such as the many-field model checklist.
+output_sample:
+  input:
+    - Your problem or goal, with the result you want and a date
+    - Numbers you have, such as prices, costs, audience size or hours (optional)
+    - Choices you have already made (optional)
+  output:
+    - name: TARGET
+      contains: Your goal in one line, with a number and a date.
+    - name: SETTLED
+      contains: Each obvious big question with its answer, reason, how sure the AI is and what would reverse it.
+    - name: THE SUM
+      contains: Your target worked backward in round numbers, each factor marked given or assumed, with a verdict.
+    - name: PATHS CROSSED OFF
+      contains: Each path the sum rules out, with the number that rules it out.
+    - name: WHAT IS LEFT
+      contains: The smaller problem, as one to three open questions.
+    - name: SOFT SPOTS
+      contains: Settled answers that rest on a guess, and a cheap way to check each.
+    - name: MISSING
+      contains: Facts you did not give, marked so nothing is made up.
+    - name: CHECKS MISSED
+      contains: One line for each self-check that failed, or none.
 how_it_works:
   - title: Write the target
     text: Puts the goal in one line with a number and a date.

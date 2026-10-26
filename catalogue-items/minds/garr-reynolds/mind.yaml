@@ -14,6 +14,30 @@ use_cases:
   - Rehearse a short community talk
   - Simplify a slide without removing necessary context
   - Prepare a presentation that works without decorative effects
+not_for:
+  - "You need charts that tell the truth about data: use the Alberto Cairo mind, or the Cole Nussbaumer Knaflic mind for choosing charts and explaining numbers."
+  - "You need legal, financial or medical wording checked: ask a subject expert or a lawyer, since this mind plans talks and does not check facts."
+  - "You want a talk written in your own voice from nothing: write a rough draft yourself first, then bring it here to shape and rehearse."
+output_sample:
+  input:
+    - Your talk, deck or rough explanation
+    - Who will listen and what they already know
+    - How much time you have, including questions
+    - What you want them to understand or decide
+    - Any tables or detail that must stay available
+  output:
+    - name: Audience brief
+      contains: Who is listening, what they know, the time available and the outcome you want.
+    - name: Clear message
+      contains: The central answer in plain words, with the few points that support it.
+    - name: Speaking sequence
+      contains: A timed outline with opening, transitions, pauses, questions and a real ending.
+    - name: Visual-purpose notes
+      contains: What each planned visual should show, with the labels and sources it needs to stay honest.
+    - name: Slide and document split
+      contains: What goes on screen, what goes in a separate record, and a check that figures match.
+    - name: Rehearsal questions
+      contains: What to practice, where listeners may lose the thread, and what still needs work.
 seats:
   - seat: Simple visuals and natural explanation
     asks: What must this audience understand, and what visual would actually help?

@@ -1,6 +1,6 @@
 new_slug: growth-cash-limit-checker
 name: Growth cash limit checker
-summary: Share stock, supplier terms and your growth plan. Check funding gaps, stock cover and missing cash assumptions before deciding what to change.
+summary: Check if cash will cap your growth. Give stock, supplier terms and your plan. Get a cash cycle, stock grades and a funding gap check.
 job: plan-supply-chain
 thinking: high
 thinking_why: It joins stock, terms, debt and ad numbers into one cash picture, and a small slip changes the verdict. A stronger model keeps the sums consistent.
@@ -14,6 +14,10 @@ when:
   - You plan to grow fast and want to know if cash will run out first.
   - Your profit looks good but your bank balance does not.
   - You have slow stock and want a plan to turn it into cash.
+not_for:
+  - "You have no stock or supplier data: ask your accountant or finance owner for it first, then come back."
+  - "You need a formal cash forecast or a loan decision: ask your accountant or lender, as this is a planning check only."
+  - "You want advice on one particular loan or lender: ask your accountant, as this tool does not judge lenders."
 you_give:
   - Stock by product, with days on hand
   - Supplier lead times and payment terms
@@ -31,6 +35,32 @@ how_to_use:
   - Add your growth plan and your current net margin.
   - Read the grades and the verdict. Tell your ad team the goal if slow stock needs to move.
   - Rerun it each month, or when terms, stock or the plan change.
+output_sample:
+  input:
+    - Your stock by product, with value and days on hand
+    - Your supplier lead times and payment terms
+    - Your debt and the interest you pay (optional)
+    - Your planned spend and growth for the next 12 months
+    - Your net margin and ad return today (optional)
+  output:
+    - name: Profit vs cash
+      contains: Your profit, stock values and a dated cash bridge, or a note that the cash effect is unresolved.
+    - name: Cash conversion cycle
+      contains: Days of stock plus days sales outstanding minus days payable, with each part and the total.
+    - name: Stock grades
+      contains: Each product with a custom A to D grade, days on hand, value and a plan, plus the share in C and D.
+    - name: Stockout test
+      contains: Lead time, upfront payment share and cover at reorder, with the stockout days per reorder and possible fixes.
+    - name: Growth test
+      contains: Stock the plan needs, cash and terms that cover it, the gap, and what interest does to net margin.
+    - name: Verdict
+      contains: Cash-limited, ad-limited, neither or both, based on the numbers shown.
+    - name: Slow stock plan
+      contains: How to sell slow stock with paid media, such as a separate funnel, whitelisted pages or a new country.
+    - name: Brief for your ad team
+      contains: The goal for your ad team in one line.
+    - name: Custom planning rubric
+      contains: A score with cash cover, stockout, slow stock and debt parts, plus checked coverage and missing items.
 how_it_works:
   - title: Separates profit from cash
     text: Uses dated receipts, payments and working-capital changes; closing stock alone is not a cash-flow adjustment.

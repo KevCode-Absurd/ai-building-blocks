@@ -1,52 +1,96 @@
 new_slug: explain-a-department-budget-overrun
 name: Explain a department budget overrun
 headline: Explain a department budget overrun
-summary: Share the source files. Get a reconciled variance report and options for the budget owner.
+summary: Explain why a department went over budget. You get a variance report by line with causes, and options for the budget owner to decide.
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A reconciled variance report and options for the budget owner. Share approved budget, actual spending, reporting period, currency and known business changes. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the approved budget and the actual spending for one period. It works out the gap on each line and traces the biggest ones to your records. You get a reconciled variance report, revised options and a short update the budget owner can act on.
 explain: |-
-  A reconciled variance report and options for the budget owner.
+  When a department is over budget, the first question is where. The second is whether it will happen again. This workflow explains a department budget overrun by comparing budget to actual line by line, then separating a cost that will keep coming from a one-off or a timing difference.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. The variance bridges budget to actual; recurring drivers and one-off timing differences stay separate. Missing tools or evidence stay visible in the final summary.
+  It traces the largest movements to the records you supply, such as an invoice, a hire or a price rise. A gap with no evidence is marked as a missing fact, not guessed. The totals must bridge from budget to actual with nothing left over.
+
+  Then it drafts options for the rest of the year. Each option shows its assumptions and what it costs the department. The last step writes a short update for the person who decides. It does not move money or change a budget.
 when:
-  - You need a reconciled variance report and options for the budget owner.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - The month-end report shows a department over budget and the owner wants to know why.
+  - You must explain a variance to your manager or finance lead by Friday.
+  - A department head asks what they can do about the rest of the year.
+  - You are not sure if an overrun is a one-off or a new monthly cost.
+not_for:
+  - One line looks odd and you only need a quick answer. Use the Budget variance explainer.
+  - You are building next year's budget. Use the Department budget planner.
+  - You need accounting adjustments or an audit of accruals. Ask your accountant.
+  - You are checking stock count differences. Use the Explain a warehouse stock count variance workflow.
 you_give:
-  - Approved budget, actual spending, reporting period, currency and known business changes.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The approved budget, line by line, for one period
+  - Actual spending for the same lines and period
+  - The reporting period and currency
+  - Known changes in the business, such as a new hire or a price rise (optional)
+  - Limits set by the budget owner on what can change, such as no job cuts (optional)
+  - Who the update is for and when they need it
 you_get:
-  - A reconciled variance report and options for the budget owner.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A variance report by line: budget, actual, gap and the evidence for each"
+  - A bridge from total budget to total actual, with recurring and one-off causes kept apart
+  - Two or three options for the rest of the year, each with its assumptions
+  - A short decision update for the budget owner
+  - A hand-back summary with one next step
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the handoff pack. It is a zip with HANDOFF.md and the skill files this workflow uses.
+  - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
+  - Attach the budget and the actuals. Name the period and the person who will read the update.
+  - Read the variance table first. Check that each cause matches what you know about the department.
+  - Fix any wrong assumption in the options, then send the update to the budget owner.
 how_it_works:
   - title: Budget variance explainer
-    text: Calculate the change by line and trace the largest movements to supplied evidence.
+    text: Works out the gap on every line and traces the largest to your records. Marks each cause as recurring, one-off or timing. Hands the variance table to the next step.
   - title: Department budget planner
-    text: Prepare revised scenarios using explicit assumptions and the owner constraints.
+    text: Builds revised options for the rest of the period from that table, using stated assumptions and the owner's limits. Hands the options to the last step.
   - title: Stakeholder update writer
-    text: Draft a decision update with the variance, choices, consequences and facts still missing.
+    text: Writes a short note with the variance, the choices, what each choice costs and the facts still missing.
 output_shape: |-
-  Scope and source coverage
-  A reconciled variance report and options for the budget owner.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  VARIANCE REPORT
+    Budget line | <Budget> | <Actual> | <Variance> | <Recurring, one-off or timing> | <Evidence> | <Missing fact>
+
+  BRIDGE
+    <Total budget> to <total actual>, split into recurring, one-off and timing
+
+  OPTIONS
+    Option | <Assumptions> | <Effect on rest of period> | <Trade-off>
+
+  DECISION UPDATE   <short note for the budget owner>
+
+  MISSING
+  CHECKS MISSED
+  HAND-BACK SUMMARY
+output_sample:
+  input:
+    - The approved budget by line for one period
+    - Actual spending for the same lines
+    - Known business changes and the owner's limits (optional)
+    - Who reads the update
+  prerequisites:
+    - An AI that can open spreadsheet and CSV files
+  output:
+    - name: Variance report
+      contains: Budget, actual and gap for each line, with the cause and the evidence for the biggest ones.
+    - name: Bridge
+      contains: A walk from total budget to total actual, with recurring, one-off and timing causes kept apart.
+    - name: Options
+      contains: Revised plans for the rest of the period, each with its assumptions and trade-off.
+    - name: Decision update
+      contains: A short note with the variance, the choices, their effects and the facts still missing.
+    - name: Hand-back summary
+      contains: Files saved, MISSING lines, checks missed and one next step.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: The variance bridges budget to actual; recurring drivers and one-off timing differences stay separate.
+  - what: Period
+    how: Use one period for both budget and actuals, such as one quarter, so the lines compare fairly.
+  - what: Detail
+    how: Give actuals at budget line level. A single total cannot be traced to a cause.
+  - what: Owner limits
+    how: State what cannot change. The options stay inside those limits.
+  - what: Reader
+    how: Say who gets the update. A finance lead and a department head need different detail.
 judge:
   - The variance bridges budget to actual; recurring drivers and one-off timing differences stay separate.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -59,16 +103,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep the variance report and the decision, then attach them next period to see if the cause came back.
+  - Add a note on any cost you now know is permanent, so next year's budget starts from it.
+  - Finish any check that needs a person or a spreadsheet tool before you share the update.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that opens spreadsheet files
+      why: It needs to read your budget and actuals. It also lets you check the bridge totals yourself.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - Invoices or notes behind the biggest lines.
+    - The budget owner's limits on what can change.
 terms:
+  - term: Variance
+    meaning: The gap between what you planned to spend and what you spent.
+  - term: Timing difference
+    meaning: A cost that landed in a different period than planned but is not extra in total.
   - term: Handoff
     meaning: The checked information and file passed from one step to the next.

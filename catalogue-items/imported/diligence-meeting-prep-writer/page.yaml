@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It tailors questions to the situation.
 new_slug: diligence-meeting-prep-writer
 name: Diligence meeting prep writer
-summary: Name the meeting and company. Get sharp questions, benchmarks and red
-  flags to probe.
+summary: "Prep for a diligence meeting: give the meeting type and company, and get ranked questions, benchmarks and red flags to probe on one page."
 job: money-and-investing
 headline: Diligence meeting prep writer
-subhead: A question list for a diligence meeting, ordered by priority, with the
-  red flags to probe. You walk in knowing what to ask and what a weak answer
-  sounds like.
+subhead: A question list for a diligence meeting, ordered by priority, with the red flags to probe. You walk in knowing what to ask and what a weak answer sounds like.
 explain: |
   A question list for a diligence meeting, ordered by priority, with the red flags to probe. You walk in knowing what to ask and what a weak answer sounds like.
 
@@ -18,6 +15,10 @@ when:
   - You are about to speak with a customer reference and need sharp questions.
   - The data room raised concerns and you want to test them live.
   - A teammate will lead the call and needs a briefing sheet.
+not_for:
+  - "You need a final investment decision: ask a senior advisor or write a full diligence memo."
+  - "You have no documents or data room access: first ask the company for its basic files, then come back."
+  - "You want a script to read word for word: use your own judgment, since this gives a guide, not a script."
 you_give:
   - The meeting type and attendees
   - The company and its sector
@@ -30,7 +31,29 @@ you_get:
   - Red flags to listen for
   - Follow-up probes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - "Say which meeting it is: management presentation, expert call, customer reference, advisor check-in or site visit."
+  - Add who attends, your focus area, what you know from the data room, and your main worries.
+  - Check the benchmarks. Ask your AI for the source of each one, and mark any number without a source as to verify.
+  - Pick your must-ask questions and print the one-page prep sheet.
+  - "End the meeting by asking: what haven't we asked that we should?"
+output_sample:
+  input:
+    - The meeting type, such as management presentation, expert call or customer reference
+    - Who attends from the company or a third party
+    - Your focus area, such as financial, commercial, operational or tech
+    - What you already know from the CIM or data room (optional)
+    - Your main concerns (optional)
+  output:
+    - name: Meeting logistics
+      contains: Who attends, when and where it happens, and how long it runs.
+    - name: Objectives
+      contains: The top three things you need to learn from this meeting.
+    - name: Question list
+      contains: Ranked questions grouped by topic, with the must-asks starred, kept to 15 to 20.
+    - name: Benchmarks
+      contains: Key numbers to compare answers against, such as growth rates and margins, with the source of each.
+    - name: Red flags
+      contains: Specific items to probe, like gaps in the CIM, customer concentration or team departures.
+    - name: Follow-up items
+      contains: What to ask the company to send after the meeting.

@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: Schema choices last, so it weighs trade-offs.
 new_slug: database-schema-planner
 name: Database schema planner
-summary: Describe your data. Get a clean schema, migration plan and query
-  advice, with SQL or NoSQL guidance.
+summary: Plan your database schema with a table check, index advice and a safe migration plan. Also helps you pick SQL or NoSQL.
 job: build-software
 headline: Database schema planner
-subhead: "A review and plan for your database design: what to fix in the tables,
-  which indexes to add, and how to roll out changes safely."
+subhead: "A review and plan for your database design: what to fix in the tables, which indexes to add, and how to roll out changes safely."
 explain: |
   A review and plan for your database design: what to fix in the tables, which indexes to add, and how to roll out changes safely. It also helps you decide between SQL and NoSQL.
 
@@ -17,6 +15,10 @@ when:
   - Queries are slow and you suspect missing indexes.
   - You need a safe plan to change several tables.
   - You are weighing SQL against NoSQL for a project.
+not_for:
+  - "You have one slow query to fix: ask a SQL helper or a developer to read that query, then check its plan."
+  - "You need to move data between two database engines: plan that with a database engineer first."
+  - "You only have a live database with no backup: take a backup first, then run the plan on a copy."
 you_give:
   - Your table definitions in SQL
   - Common queries (optional)
@@ -28,7 +30,28 @@ you_get:
   - Index recommendations
   - Step by step migration plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Save your table definitions as a schema.sql file. Use an AI that can run Python code and read files, or run the scripts yourself with Python 3.
+  - Open the skill folder and run the first command in the skill on schema.sql. Look at the issues list and the table diagram.
+  - If you have common queries, copy assets/sample_query_patterns.json and list your own queries in it. Then run the index step.
+  - Write your target schema, then run the migration step with the zero downtime option. Check it with the validate option first.
+  - Test the undo steps on a copy of your data before you run anything on your live database. Take a backup first.
+output_sample:
+  input:
+    - Your table definitions in SQL (a schema file)
+    - Your most common queries (optional)
+    - The changes you plan to make (optional)
+    - Your database type, such as PostgreSQL or MySQL
+  prerequisites:
+    - An AI that can run Python 3 code and read files
+    - Python 3 on your machine if you run the scripts yourself
+  output:
+    - name: analysis.json
+      contains: Issues with table design, missing keys and constraints, odd data types, and naming problems, plus a Mermaid diagram of your tables.
+    - name: ERD diagram
+      contains: A Mermaid table diagram that shows how your tables link, so you can check the design by eye.
+    - name: indexes.json
+      contains: A ranked list of CREATE INDEX advice, plus overlapping indexes you can remove.
+    - name: migration.sql
+      contains: Ordered migration steps in the expand-contract style, built to avoid downtime, with a way to undo them.
+    - name: Verification check
+      contains: A re-run of the analysis on the new schema to confirm the first issues are gone.

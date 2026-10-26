@@ -1,20 +1,66 @@
 new_slug: build-an-app-from-an-openapi-spec
 name: Build an app from an OpenAPI spec
-summary: Turn an OpenAPI spec into an app. Add routes, data types, checks and setup steps.
+summary: Turn your OpenAPI spec into a working app. You get routes, data types, tests and a README in the framework you pick, ready to run.
 job: build-software
 headline: Build an app from an OpenAPI spec
-subhead: Share your API spec and chosen stack. Check the contract, build the app and get code with tests and setup notes.
+subhead: Give your AI your API spec and the framework you want. It checks the spec, then writes the app code, tests and setup notes. It flags any gaps in the spec before it builds.
 explain: Share your API spec and chosen stack. Check the contract, build the app and get code with tests and setup notes.
 when:
-  - You want to build an app from an OpenAPI spec.
+  - You have an OpenAPI file and need a working server to start from.
+  - A team has agreed the API design and now needs the first version of the code.
+  - You want a fast mock server so front-end work can start.
+  - You want to test whether your spec is complete by seeing what gets built.
+not_for:
+  - "You have no spec and your API is hand-written: write the spec first in a spec design tool, or ask a developer to build it by hand."
+  - "Your spec is private and you cannot share it with an AI tool: ask a developer on your team to run a code generator locally."
+  - "You only need a client to call an API, not a server: use the client generator that comes with your framework."
 you_give:
-  - Your OpenAPI file, target framework and version, auth needs and any business rules the spec leaves open.
+  - Your OpenAPI spec as a link, a file or pasted text.
+  - Your target framework and version, such as Node with Express.
+  - Your login method, if the spec does not name one (optional).
+  - Business rules the spec leaves open (optional).
+  - Whether you want a database, Docker or pagination (optional).
 you_get:
-  - An app project with mapped routes and data types, scoped business logic, tests, setup notes and known gaps.
+  - A project folder layout for your chosen framework.
+  - Route handlers for every path and method in your spec.
+  - Data types built from your spec's schemas.
+  - Service code, tests and example requests.
+  - A README, .gitignore and .env.example.
+  - A list of gaps and unclear parts in your spec.
 how_to_use:
-  - Download the complete skill folder and add it to your AI tool, or copy the instructions into a chat.
-  - Provide the inputs listed here and ask your AI to follow the skill.
-  - Review the result and any missing facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill text, or add the skill folder if your tool takes files.
+  - Paste your OpenAPI spec, or give a link if your AI can open web pages.
+  - Say which framework and version you want. If you skip this, your AI should ask before it writes code.
+  - Answer its questions about database, login method, Docker and tests.
+  - Read the list of gaps in your spec, then check the routes against your spec.
+  - Copy the files into a folder. To install and run the tests, you need code running on your own computer.
+output_sample:
+  input:
+    - Your OpenAPI spec as a link, a file or pasted text
+    - Your target framework and version
+    - Your login method, such as API keys or JWT (optional)
+    - Business rules the spec leaves open (optional)
+    - Database and Docker choices (optional)
+  prerequisites:
+    - An AI that can write many files, or room in a chat to paste each file
+    - A way to run code on your computer if you want to run the tests
+  output:
+    - name: README.md
+      contains: How to set up, configure and run the app, and how to test the endpoints.
+    - name: Build config
+      contains: The framework's package or build file, such as package.json, pom.xml or build.gradle.
+    - name: Controllers
+      contains: Route handlers for each path and method in your spec, with validation and error handling.
+    - name: Services
+      contains: Business logic behind each route, kept apart from the HTTP layer.
+    - name: Models
+      contains: Data types built from the schemas in your spec.
+    - name: Repositories and config
+      contains: Data access code if you want a database, plus app settings and startup code.
+    - name: Tests
+      contains: Unit tests for controllers and services, plus example requests.
+    - name: .gitignore and .env.example
+      contains: Files that keep secrets out of git and list the settings the app needs.
 how_it_works:
   - title: Read the API contract
     text: Check paths, methods, schemas and auth rules. Ask about behavior that the contract leaves unclear.

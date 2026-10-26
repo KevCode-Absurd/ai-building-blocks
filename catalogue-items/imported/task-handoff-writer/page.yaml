@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It plans what to hand off and how to check it.
 new_slug: task-handoff-writer
 name: Task handoff writer
-summary: Describe work to pass on. Get a clear handoff to another AI agent, with
-  checks along the way.
+summary: "Write a task handoff brief for another AI agent: goal, files it owns, limits and a done check. Plus a plan to track its progress."
 job: set-up-ai
 headline: Task handoff writer
-subhead: Describe the work to pass on, which AI agent will take it and what it
-  may touch. It scopes the job and writes a brief with the goal, what it owns
-  and what counts as done. You get the brief, a success check, a progress-check
-  plan and a report of changes.
+subhead: Describe the work to pass on, which AI agent will take it and what it may touch. It scopes the job and writes a brief with the goal, what it owns and what counts as done. You get the brief, a success check, a progress-check plan and a report of changes.
 explain: |
   A clear brief that lets another AI agent take over a piece of work without losing context, plus a way to check its progress. Handoffs stop failing because the second agent knows what to do, what it owns and what counts as done.
 
@@ -20,6 +16,10 @@ when:
   - You need to track what the agent changed and what is left.
   - You worry two agents will edit the same files.
   - You want a handoff note a person could follow too.
+not_for:
+  - "You want one AI to do the whole job yourself: just ask your AI directly, no handoff needed."
+  - "You have not approved handing work to another agent: get your own sign-off first, because this skill only delegates when you allow it."
+  - "You need to give an AI access to a remote server: set that up with your IT person, since this skill will not assume access."
 you_give:
   - The work to pass on
   - Which agent or tool will take it
@@ -31,7 +31,30 @@ you_get:
   - A polling plan with sensible gaps
   - A report of changes and open issues
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI chat, such as Claude, ChatGPT or Gemini, and paste in the skill text.
+  - Describe the work to pass on and name the agent that will take it.
+  - List the files or areas the agent may touch, and say what is off limits.
+  - Tell your AI you approve the handoff, and say how you will know the work is done.
+  - Read the brief and the success check before you send anything to the agent.
+  - Sending the brief to a terminal agent needs that tool installed on your computer. Check its progress using the polling plan, then review the report yourself.
+output_sample:
+  input:
+    - The work you want to pass on
+    - Which AI agent or tool will take it
+    - The files or areas it may touch
+    - How you will know the work is done
+    - Your OK to hand the work off
+  prerequisites:
+    - An AI agent or tool you are allowed to use, such as Claude Code or Codex CLI
+    - Your clear approval to delegate the work
+  output:
+    - name: Handoff brief
+      contains: The goal, what the agent owns, what is off limits and what is not part of the job.
+    - name: Success check
+      contains: The test or check that proves the work is done.
+    - name: Prompt delivery
+      contains: A safe way to send a long prompt to a terminal agent so quotes and symbols do not break it.
+    - name: Polling plan
+      contains: How often to check on the agent, with gaps that grow while it works.
+    - name: Report
+      contains: Files changed, the checks you ran and any issues still open.

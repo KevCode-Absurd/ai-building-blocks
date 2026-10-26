@@ -1,6 +1,6 @@
 new_slug: story-idea-test
 name: "Test a story idea and make every scene turn"
-summary: "Paste your story idea. Get a premise verdict, every scene marked for what changes, and a line-by-line voice-over test."
+summary: "Test your story idea before you write it. Get a go, rework or drop verdict, each scene checked for what changes, and a voice-over line test."
 job: write-and-tell-stories
 thinking: high
 thinking_why: "It judges whether a story holds together, scene by scene. Give it your strongest model."
@@ -17,12 +17,16 @@ when:
   - You are writing a short film, an ad, a novel or a customer story and aren't sure the idea is strong enough to carry it.
   - A draft reads flat, with scenes that feel like they could be cut, and you can't say why.
   - Your video relies on a narrator to explain what is happening, and you want to know which lines it really needs.
+not_for:
+  - "You want to check an ad for Meta rules: use the Meta ads compliance checker, which looks at ad policy, not story."
+  - "You only want to know if a short idea has a strong core: use the Story premise tester on its own."
+  - "You want notes from real readers sorted into themes: use the Reader feedback sorter."
 
 you_give:
   - Your story idea in a few sentences, and who it is for
-  - The list of scenes in order, for the second step
-  - A script or draft written from the scenes, for the last step
-  - Time to write the script between step 2 and step 3
+  - Your scene list in order, one line per scene
+  - Your script or draft written from the scenes
+  - Your medium, such as an ad, short film or case study (optional)
 
 you_get:
   - A verdict on the idea (go, rework or drop), with the idea the story proves, the idea that argues back and the main turns
@@ -35,6 +39,23 @@ how_to_use:
   - Paste your story idea. It tests the idea and then asks for your scene list.
   - It stops after the scene check. Write the script from the scene list, fixing the flagged scenes first.
   - Bring the script back and say "carry on from step 3".
+output_sample:
+  input:
+    - Your story idea in a few sentences, and who it is for
+    - Your scene list, in order, for the second step
+    - Your script or draft, for the last step
+  prerequisites:
+    - An AI chat that can keep your idea, scene list and script in one conversation
+    - Time to write the script between step 2 and step 3
+  output:
+    - name: Story premise test
+      contains: The idea the story proves, the idea that argues back, and a go, rework or drop verdict.
+    - name: Scene turn check
+      contains: Each scene marked for what changes and which choice causes it, with weak scenes flagged.
+    - name: Voice-over stripping test
+      contains: "A verdict on each narration line: does the story work without it, or does the line add something new."
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Test the idea
@@ -42,7 +63,7 @@ how_it_works:
   - title: Check each scene turns
     text: "Goes through your scenes in order using the idea from step 1. Writes down what changes in each scene, which choice causes it and what it costs the character."
   - title: Strip the voice-over
-    text: "Takes your script and removes all narration. Judges whether the story still works, then sorts each line as telling or adding something new."
+    text: "Takes the script you wrote from the scene list, reads the scene list for what each scene should do, and removes all narration. Judges whether the story still works, then sorts each line as telling or adding something new."
 
 output_shape: |-
   STEP 1: IDEA TEST

@@ -10,6 +10,31 @@ metadata:
 
 Design and run effective career development programs — from building career path frameworks and competency ladders to facilitating individual development conversations and connecting employee growth ambitions to organizational talent strategy.
 
+## How to run this skill
+
+1. **Ask once for what is missing.** You need the job family, the skills that matter, and two or three real roles with what each person does. Useful extras: current titles, how many levels the user wants (suggest 3 to 5 if they do not know), company size. If the user cannot give something, write `MISSING: <what>` in the output. Never invent the company's levels, titles, pay or promotion rules.
+2. **Build the level table** from entry to senior. For each level give: scope (what the person owns), what is expected, and what a person shows to be ready for the next level. Base each level on the real roles the user gave. Use behaviours a manager could check, not words like "strong" or "good".
+3. **Set the tracks.** Offer a specialist track and a manager track. Add sideways moves (a lattice) if the user wants them. Say where a person can move without a promotion.
+4. **Write the growth plan template.** Fields: goal, skill gap, actions (use the 70-20-10 idea: most growth comes from hard work, then from other people, then from courses), support needed, check-in dates. Add a 90-day plan for someone just promoted and self-assessment questions for each level.
+5. **Write the manager career talk guide.** Include opening questions, how to listen, how to discuss promotion readiness, and how to say "not yet" with a plan. Managers help people think. The employee owns their career.
+6. **Suggest measures,** such as promotion rate, how long people stay, and how many people have a growth plan. State clearly that these are suggestions to track, not results.
+
+Do not set pay, bands or promotion decisions. Say the user must decide those, and point to the Pay band builder for pay ranges.
+
+### Output format
+
+```
+## Levels for <job family>
+| Level | Scope | What is expected | Shows readiness for the next level |
+## Tracks
+## Growth plan template
+## 90-day plan after a promotion
+## Self-assessment questions
+## Manager career talk guide
+## How to measure the program
+## MISSING (anything you could not fill)
+```
+
 ## Supported tasks
 
 - Designing career path frameworks and competency ladders

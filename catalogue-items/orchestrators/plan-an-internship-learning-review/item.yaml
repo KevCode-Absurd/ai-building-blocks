@@ -1,6 +1,6 @@
 slug: plan-an-internship-learning-review
 name: Plan an internship learning review
-summary: Share the source files. Get a role evidence map, learning plan and supervisor review guide.
+summary: Plan an internship around real learning. Get a skills evidence map, a supervised learning plan and review questions for the supervisor.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -20,9 +20,9 @@ uses:
   - training-program-builder
 steps:
   - uses: role-skills-framework-builder
-    note: Use role-specific behavioral evidence to define the internship skills and observable development milestones; do not infer aptitude from personal traits.
+    note: "Defines the internship skills from the role's own work as things a supervisor can see, with a milestone for each review date. Hands the skills and milestones to the plan step."
   - uses: training-program-builder
-    note: Build a supervised learning plan with real work practice and evidence checks, using the host constraints and agreed development time.
+    note: "Builds a supervised plan with real work practice, feedback points and evidence to collect, inside the host's limits and the weekly time set aside. Hands the plan to the review guide."
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

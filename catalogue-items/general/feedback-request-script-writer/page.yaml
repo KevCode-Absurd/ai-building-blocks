@@ -1,60 +1,74 @@
 new_slug: feedback-request-script-writer
 name: "Feedback request script writer"
-summary: "Say who you manage and what you want to learn. Get your go-to question and how to handle silence."
+summary: "Ask your team for honest feedback. You get a go-to question in your voice, a plan for the silence and lines for what you hear."
 job: lead-people
 thinking: low
 thinking_why: "It follows a fixed pattern and writes a few short lines in your voice."
 
 headline: "Feedback request script writer"
-subhead: Tell it who you work with and what you want to learn about how you lead or work. It writes a go-to question in your voice, a follow-up question, a plan for the silence and the lines to use after you hear the answer. You get a short script.
+subhead: Tell it who you will ask and what you want to learn about how you lead or work. It writes one question to ask the same way each time. It also plans the pause after it, adds a second question about a recent project and gives you lines for the answer.
 
 explain: |
-  Asking "Any feedback for me?" gets "No, it's all good" nearly every time. People answer to be polite, and criticising someone with power over them feels risky. You learn nothing and the problems stay hidden.
+  Ask "Any feedback for me?" and most people say "No, all good." They answer to be polite, and telling someone with power over them something hard feels risky. You learn nothing, and the problems stay hidden.
 
-  This skill writes a question that needs a specific answer, sounds like you and is asked at a set moment. It plans a pause of about six seconds after the question, because the silence is when people decide whether to speak. It adds a second question tied to a recent project, a line to repeat back what you heard, and a way to reward the honesty by fixing the issue or explaining why you will not. If you disagree, it writes a line that finds the part you agree with first.
+  This skill helps you ask for feedback in a way that gets a real answer. It follows the four steps in Kim Scott's Radical Candor for asking. You get a question that needs a specific answer and sounds like you. Then comes a pause of about six seconds, because that silence is when people decide whether to speak. A second question tied to a real project comes next. Last, you get lines to repeat back what you heard and to reward the honesty.
+
+  It writes the ask, not the review. It does not give feedback to the other person, and it does not run a survey. For those jobs, see the sibling pages named under "Not for".
 
 when:
-  - You want honest feedback from your team or a client and you only get polite answers.
-  - You are starting a new role and want to learn how you come across.
-  - You froze last time someone gave you criticism and want lines ready.
+  - You end every one-to-one with 'Any feedback for me?' and always hear 'No, all good.'
+  - You started a new role and want to know how you come across.
+  - Someone criticised you last time and you got defensive or froze, and you want your lines ready.
+  - You want your team to see that it is safe to tell you when you are wrong.
+
+not_for:
+  - "You have feedback to give someone else: use the feedback conversation planner, or the hard feedback message writer for a tough message."
+  - "You want to thank someone, not ask for anything: use the honest appreciation note writer."
+  - "You need an anonymous survey, a formal review or an exit interview. This plans one face-to-face ask between two people."
 
 you_give:
-  - Who you will ask and how they relate to you
-  - What you want to learn about, such as how you run meetings
-  - How you speak (a line or two you wrote, optional)
-  - A recent project you worked on together (optional)
+  - "Who you will ask and how they relate to you, such as your team, a client or your boss"
+  - "What you want to learn, such as how clear your instructions are"
+  - "A short message or note you wrote, so the question sounds like you (optional)"
+  - "A recent project you worked on together (optional)"
+  - "Where you will ask, such as a one-to-one, a call or a walk (optional)"
 you_get:
-  - A go-to question in your voice
-  - A second, more specific question tied to a project
-  - A plan for the silence after you ask
-  - Lines to repeat back, reward candour and handle disagreement
+  - "A go-to question in your voice, in two versions with one picked"
+  - "The best moment to ask, so it becomes a habit"
+  - "A plan for the silence after you ask, about six seconds"
+  - "A second question tied to your recent project"
+  - "Lines to repeat back what you heard, reward the honesty and handle a point you disagree with"
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Say who you will ask, what you want to learn and how you usually speak.
-  - Practise the lines out loud until they sound like you.
-  - Ask at the end of a regular one-to-one, then count to six in silence.
-  - Come back and tell the skill what you heard, to plan what to fix.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools.
+  - Say who you will ask, what you want to learn and where you will ask. Paste a short message you wrote so the question sounds like you.
+  - Add a recent project you shared. Without one, the second question is only a pattern with a MISSING line.
+  - Read the go-to question out loud. Change any word you would not say.
+  - Ask at the end of a regular one-to-one, then stay quiet for about six seconds.
+  - Come back and tell the skill what you heard. Use the feedback conversation planner when you have feedback to give back.
 
 how_it_works:
   - title: Writes the question
-    text: A go-to question that needs a specific answer and sounds like you.
+    text: One go-to question that needs a specific answer, with no yes or no and no 'any feedback?'. It uses the words and sentence length of your sample.
+  - title: Picks the moment
+    text: Chooses where it goes, such as the last five minutes of a one-to-one, so you ask on a schedule.
   - title: Plans the silence
-    text: Plans a pause of about six seconds after you ask, and what to do with your hands and eyes.
+    text: Plans a pause of about six seconds after you ask, and what to do with your eyes, breath and face while you wait.
   - title: Adds a second question
-    text: A more specific question about a recent project you shared.
+    text: A more specific question tied to a recent project, for when the first answer is thin.
   - title: Prepares the repeat back
-    text: A line to say what you heard in your own words before you answer.
-  - title: Plans the reward
-    text: A plan to fix the issue or explain why you will not, and when you will report back.
-  - title: Plans disagreement
-    text: A line to find the part you agree with first, if you disagree.
-  - title: Checks the script
-    text: Runs its own checks and names any it missed.
+    text: A line that says what you heard in your own words before you answer. It never defends.
+  - title: Plans the reward and the disagreement
+    text: Lines to fix the issue or say why you will not, plus a line that finds the part you agree with first.
+  - title: Reads it as the person asked
+    text: Checks the question would feel safe to answer, then runs its own checks and names any it missed.
 
 output_shape: |
   GO-TO QUESTION
   <the question, in your voice>
+
+  WHEN TO ASK
+  <the moment, such as the last five minutes of a one-to-one>
 
   THE SILENCE
   <how long to wait and what to do while you wait>
@@ -76,6 +90,30 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check missed, or none>
+
+output_sample:
+  input:
+    - "Who you will ask and how they relate to you"
+    - "What you want to learn about how you lead or work"
+    - "A short message you wrote, so it sounds like you (optional)"
+    - "A recent project you shared (optional)"
+  output:
+    - name: "GO-TO QUESTION"
+      contains: "One question that needs a specific answer, in your voice, ready to ask the same way each time."
+    - name: "WHEN TO ASK"
+      contains: "The moment that fits, such as the end of a one-to-one, so asking becomes a habit."
+    - name: "THE SILENCE"
+      contains: "How long to wait after you ask, about six seconds, and what to do while you wait."
+    - name: "SECOND QUESTION"
+      contains: "A follow-up tied to your recent project, or a pattern marked MISSING if you gave none."
+    - name: "REPEAT BACK"
+      contains: "A line that says what you heard in your own words before you reply."
+    - name: "REWARD THE CANDOUR"
+      contains: "What to say if you will fix the issue, and what to say if you will not."
+    - name: "IF YOU DISAGREE"
+      contains: "A line that starts with the part you agree with, and a time to reply."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Anything you did not give it, and any check it could not pass."
 
 tweaks:
   - what: Your own words
@@ -108,15 +146,17 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Writing a few lines in your voice is text work any strong chat AI does well."}
-    - {name: "A notebook", why: "Write down what you hear straight away, before you reply."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Writing a few lines in your voice is text work. No files, web access or paid tools needed."}
+    - {name: "Your calendar", why: "Put the ask on the last five minutes of each one-to-one so it happens every time."}
   inputs:
     - "A message you wrote that sounds like you"
     - "Notes on a recent project you shared"
-    - "Past feedback you got, if any"
+    - "Feedback you got before, if any, so the second question can build on it"
 
 terms:
   - term: Go-to question
     meaning: One question you ask the same way each time to invite honest feedback.
   - term: Candour
     meaning: Saying plainly what you think, even when it is hard to hear.
+  - term: Repeat back
+    meaning: Saying what you heard in your own words before you reply, so they know you listened.

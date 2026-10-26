@@ -1,6 +1,6 @@
 new_slug: candid-line-writer
 name: "Candid line writer"
-summary: "Paste the word you chose to own and a flaw buyers see. Get three short admit-then-turn lines that set up your word."
+summary: "Write candid line ideas: paste your chosen word and a flaw buyers see. Get three short lines that admit it, then turn to your word."
 job: write-ad-copy
 thinking: medium
 thinking_why: "It tests flaws against fixed rules and then writes short lines, which needs care with wording but not deep analysis."
@@ -20,6 +20,10 @@ when:
   - You are second, new or small and everyone knows it.
   - Your name, price, size or look is a known weak point.
   - You have picked a word and need a line that sets it up.
+not_for:
+  - "You have not picked your word yet: use the Ownable word picker first."
+  - "You want a full ad built on a product weakness: use Flaw-first ad writer."
+  - "The flaw touches safety, law or health: fix the problem, don't write a line about it."
 
 you_give:
   - The word you chose to own, such as the pick from "Ownable word picker"
@@ -37,6 +41,28 @@ how_to_use:
   - Paste your word and a few reviews, returns or rival jabs that show the flaw.
   - Read the three lines aloud to five buyers. They should nod at the flaw and accept the turn.
   - Use the best line as an opener on your homepage, deck or sales call.
+output_sample:
+  input:
+    - The word you chose to own
+    - Reviews, return reasons or rival jabs that show flaws (optional)
+    - Your brand facts, tone and limits (optional)
+  output:
+    - name: Flaws buyers already see
+      contains: Each flaw in the buyer's words, with its source and whether it passes the three tests.
+    - name: The flaw that leads to your word
+      contains: The one flaw that reaches your word in a single step, with the chain.
+    - name: Three lines
+      contains: A plain, a lighter and a smaller-brand line, each admitting the flaw first and then turning to your word.
+    - name: Where to use each
+      contains: The best place for every line, such as a headline, first sentence or sales opener.
+    - name: Test
+      contains: "A five-buyer check: pass if four nod at the flaw and accept the turn."
+    - name: Do not say
+      contains: Phrases that soften, deny or apologise for the flaw.
+    - name: Missing
+      contains: Flaws or proof you did not have, marked MISSING.
+    - name: Checks missed
+      contains: One line for each check still failed, or none.
 
 how_it_works:
   - title: Lists the flaws

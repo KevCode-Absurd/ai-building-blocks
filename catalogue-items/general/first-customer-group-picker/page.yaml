@@ -1,6 +1,6 @@
 new_slug: first-customer-group-picker
 name: "First customer group picker"
-summary: "Describe your idea and who might want it. Get who-and-where groups and the one to talk to first."
+summary: "Pick your first customer group from a broad market. Slice it into people you can find, then get the one group to talk to first."
 job: test-an-idea
 thinking: medium
 thinking_why: "It weighs several groups against each other, but each step is a short list."
@@ -17,6 +17,10 @@ when:
   - Your market feels huge and you don't know who to talk to first.
   - Your last few customer conversations all gave different answers.
   - You have an idea but no names, places or contacts yet.
+not_for:
+  - "You want to know if your idea is good: no skill can tell you, so talk to real people in a group you can reach, and use this once you have a group."
+  - "You already know your group and need questions to ask them: use the Customer interview question writer."
+  - "You need to ask for a conversation with a person you have found: use the Customer conversation request writer."
 
 you_give:
   - Your idea in a sentence or two, and the broad group you think wants it
@@ -35,6 +39,27 @@ how_to_use:
   - Answer its few questions about what people in the group already do about the problem.
   - Pick the group it recommends or swap it for your backup, then use the first-week plan.
   - After five or so conversations, come back with what you learned and slice again if answers still differ.
+output_sample:
+  input:
+    - Your idea in a sentence or two
+    - The broad group you think wants it
+    - Where you can reach people today (optional)
+    - People you have already talked to and what they did about the problem (optional)
+  output:
+    - name: Starting point
+      contains: Your idea and the broad group, in one line.
+    - name: Slices
+      contains: Numbered groups, each with why they want it, what they already do, where to find them, and pay, reach and fit scores.
+    - name: Start with
+      contains: The one group to talk to first, a backup, and the reason for each.
+    - name: Other sides to remember
+      contains: Buyers, users and partners to talk to later.
+    - name: Week one
+      contains: Where to go, who to approach, how many talks to have, and what to learn.
+    - name: Missing
+      contains: What you did not give that would sharpen the pick.
+    - name: Checks missed
+      contains: One line for each of its own checks that failed, or none.
 
 how_it_works:
   - title: Checks the ask

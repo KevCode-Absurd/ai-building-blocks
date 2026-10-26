@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It checks records against simple rules.
 new_slug: crm-hygiene-auditor
 name: CRM hygiene auditor
-summary: Give it your CRM deals. Get a fix list of missing fields, stale dates
-  and stage mismatches. Changes nothing.
+summary: Check your CRM hygiene before a forecast call. Give it your open deals and get a fix list of blank fields, stale dates and stage mismatches.
 job: sell-and-negotiate
 headline: CRM hygiene auditor
-subhead: A pipeline full of stale dates and empty fields makes forecasts
-  unreliable. Give this your open deals and you get a ranked fix list, with each
-  problem tied to the exact record.
+subhead: A pipeline full of stale dates and empty fields makes forecasts unreliable. Give this your open deals and you get a ranked fix list, with each problem tied to the exact record.
 explain: |
   A pipeline full of stale dates and empty fields makes forecasts unreliable. Give this your open deals and you get a ranked fix list, with each problem tied to the exact record. It changes nothing in your CRM.
 
@@ -18,6 +15,10 @@ when:
   - You inherited a set of accounts and need to know what is missing.
   - You suspect deals are sitting in the wrong stage.
   - You want a monthly clean-up list for your own opportunities.
+not_for:
+  - "You want to fix records in bulk right now: this audit only reads and lists fixes, so apply them by hand or ask your AI to update one deal at a time."
+  - "You need to clean contact lists, lead data or account records: ask your CRM admin or use your CRM's own duplicate and data tools."
+  - "You have no open deals to check, or no export from your CRM: pull your pipeline export first, because there is nothing to audit without it."
 you_give:
   - Your open deals from the CRM or an export
   - Your own stage names and required fields (optional)
@@ -28,8 +29,26 @@ you_get:
   - Stage mismatch notes with the evidence
   - Links to each record
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your CRM.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. If your CRM is connected, your AI can read it. If not, upload your pipeline export.
+  - "Say which deals to check: your own, one stage, or a close-date range. If you leave this out, your AI will ask."
+  - Add your own stage names and required fields if you have them (optional).
+  - Read the summary first, then the fix list. Check each suggested value against the record.
+  - Tell your AI which fixes to apply. It only writes after you approve, and only if your CRM allows writes. Otherwise, make the changes by hand.
+output_sample:
+  input:
+    - Your open deals, from a live CRM connection or an uploaded export
+    - The scope to check, such as your own deals, one stage or a close-date range
+    - Your own stage names and required fields (optional)
+  prerequisites:
+    - A CRM connected to your AI, or a pipeline export file you can upload
+  output:
+    - name: Summary
+      contains: Counts of critical issues, attention issues and clean deals, so you see how bad it is first.
+    - name: Critical flags
+      contains: Deals with a close date in the past or a blank or zero amount.
+    - name: Attention flags
+      contains: Deals with a stale next step, no activity in 14 days or more, or only one contact.
+    - name: Fix list per deal
+      contains: Each deal with a record link, stage and amount, its issues, and suggested values with their source.
+    - name: Bulk actions
+      contains: Totals such as how many deals need dates pushed and how many need contacts added.

@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: It follows a set method and adapts its questions or draft to your evidence.
 new_slug: spanish-and-turkish-writing-tutor
 name: Spanish and Turkish writing tutor
-summary: Share a paragraph or study goal. Get clear corrections, grammar practice and a record of recurring mistakes.
+summary: Get your Spanish or Turkish writing corrected, with the reason for each change and a log of repeat mistakes, for exam prep or daily practice.
 job: study-and-practice
 headline: Spanish and Turkish writing tutor
 subhead: Share a Spanish or Turkish text, or your study goal and deadline. It corrects your writing, explains each change and tags repeated errors. For ongoing study, it can keep a local mistake log and plan focused practice with your consent.
@@ -22,10 +22,40 @@ how_it_works:
   - title: Step 3
     text: For ongoing lessons, revisit open mistakes before teaching one new structure.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read the bundled Spanish or Turkish pack; local files are optional.
+  - Open Claude, ChatGPT or Gemini. Paste the skill instructions, or upload the skill folder if your AI accepts files.
+  - Paste your Spanish or Turkish text. Add your exam, deadline, target level and Spanish variety if you have them.
+  - Read the corrected text and the numbered reasons. Check anything that surprises you against your course or teacher.
+  - For ongoing study, say yes when it offers a mistake log. It saves files, so use an AI that can write files to your folder.
+  - Come back each session. It re-tests your open mistakes first, then teaches one new structure.
+output_sample:
+  input:
+    - A Spanish or Turkish paragraph, about 120 to 200 words, written without help
+    - Your exam name, deadline or target level (optional)
+    - Your Spanish variety, if you write Spanish (optional)
+    - Why you are learning the language
+  prerequisites:
+    - An AI that can read the skill's language guide files
+    - An AI that can save files, only if you want the mistake log and study plan
+  output:
+    - name: Corrected version
+      contains: Your whole text, rewritten cleanly to the standard of your target level.
+    - name: What changed
+      contains: A numbered list of each change, with the reason for it.
+    - name: Tags
+      contains: A label for each kind of error, with a count of how often it appeared.
+    - name: One rule
+      contains: The single most useful grammar rule from this batch of mistakes.
+    - name: PROFILE.md
+      contains: Your level for each skill, your goal, your deadline and an honest estimate of what you can reach.
+    - name: MISTAKES.md
+      contains: A log of every error with its tag, the rule and a status that shows whether you have fixed it.
+    - name: daily/day-NN.md
+      contains: A record of each full study session and one task to do before the next.
 when:
   - Use it for written Spanish or Turkish practice.
   - The bundled language guides have not had a native-speaker review. Check surprising corrections against your course or teacher.
   - Text alone cannot prove speaking or listening skill.
+not_for:
+  - "You want to practise speaking or listening: use a voice tutor or a language partner, because this tool only reads text."
+  - "You need a final check on exam-level writing: ask a teacher or a native speaker."
+  - "You want a language other than Spanish or Turkish: the skill can draft a new language guide, but it is unchecked, so confirm it with your course."

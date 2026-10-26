@@ -1,7 +1,7 @@
 new_slug: research-spend-cohort-adjustment
 name: Research spend cohort adjustment
 headline: Research spend cohort adjustment
-summary: Build an analyst research asset and amortization schedule from dated R&D expense cohorts.
+summary: Build a research asset and amortization schedule from your dated R&D expense cohorts, and see how it changes operating profit (EBIT).
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a cohort research-asset schedule and operating-profit adjustment, separate from statutory accounting.
   - You work on issuer accounting and earnings and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - "You need to recognize an asset under IAS 38 for your statutory accounts: use your accountant or auditor."
+  - "You want to forecast whether research will succeed: use a person who knows the product and market."
+  - "You only want a quick view of reported profit: read the income statement directly, with no adjustment."
 you_give:
   - Current and prior R&D expense cohorts, reported EBIT, chosen economic life and evidence for the amortization convention.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,27 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Your current and prior R&D expense by year
+    - Your reported EBIT
+    - The economic life you choose, with your reason
+    - Reporting date, currency and scale
+    - Your accounting basis and fiscal calendar
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, only to run the bundled reference calculation (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The question, the reporting date, currency and scale, and each source with its date.
+    - name: Inputs and assumptions
+      contains: Every input and the economic life you chose, with the amortization convention stated.
+    - name: Model calculations and reconciliations
+      contains: Each cohort's unamortized cost, current amortization, the research asset and adjusted EBIT, tied back to inputs.
+    - name: Actual file verification
+      contains: Which workbook checks ran, such as recalculation, changed-input test and reopening the saved file.
+    - name: "MISSING: and CHECKS MISSED"
+      contains: Inputs that could not be found and any check that failed or did not run.
 how_it_works:
   - title: 1. Choose and justify an economic life; retain statutory R&D treatment and previously capitalized development costs separately
     text: Choose and justify an economic life; retain statutory R&D treatment and previously capitalized development costs separately.

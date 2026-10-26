@@ -1,6 +1,6 @@
 new_slug: email-setup-health-checker
 name: "Email setup health checker"
-summary: "Paste your email settings and DNS records. Get a score out of 100 and the exact fixes."
+summary: "Check your email setup for spam risks. Paste your DNS records and settings. You get a score out of 100 and the exact fix for each fault."
 job: write-emails
 thinking: medium
 thinking_why: "It compares your settings with a fixed list of checks. A mid-size model is enough if you paste the real values."
@@ -17,6 +17,10 @@ when:
   - You have just set up Klaviyo or a similar email tool and want to know nothing is missed.
   - Your emails land in spam, or your email revenue numbers look too high.
   - You are changing email tool or sending domain.
+not_for:
+  - "Your store does not send email yet: set up your email tool first, then come back to check it."
+  - "Your emails are in spam but your set-up passes: ask your email tool's support, or check your list quality and content."
+  - "You want to write or fix your emails: this checks settings only, so use a person or your email tool's editor."
 
 you_give:
   - Your sending domain and its DNS records (type, host and value)
@@ -37,6 +41,27 @@ how_to_use:
   - Paste or attach the settings screens, or describe each setting in a line.
   - Fix the Stop items first, then run the skill again with the new records.
   - Check the exact setting names against your live screen, because tools rename them.
+output_sample:
+  input:
+    - Your sending domain and its DNS records
+    - Your DMARC record, or a note that you have none
+    - Screenshots or notes of smart sending, attribution and tracking settings
+    - Your opt-in type and list setup (optional)
+    - Your store platform (optional)
+  prerequisites:
+    - An account in your email tool, such as Klaviyo, so you can see your settings
+    - Access to your DNS host to add the fixes
+  output:
+    - name: Email setup score
+      contains: A score out of 100 with points for each area, and the checks that could not be seen.
+    - name: Failed checks
+      contains: Each failed check with how serious it is, what was found and the exact fix.
+    - name: DMARC
+      contains: The record to add, starting at policy none, and the plan to tighten it later.
+    - name: Settings table
+      contains: Each setting with its current value, the recommended value and why.
+    - name: Missing
+      contains: Anything you did not share, such as DNS records, screens, opt-in type or platform.
 
 how_it_works:
   - title: Checks the sending domain

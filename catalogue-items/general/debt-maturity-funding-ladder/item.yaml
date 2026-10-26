@@ -1,25 +1,21 @@
 slug: debt-maturity-funding-ladder
 name: Debt maturity funding ladder
-summary: A maturity funding ladder with cumulative shortfalls
+summary: Check whether cash covers three debt maturities and find the biggest gap below your minimum cash.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
 outputs:
-  - type: spreadsheet
-    required: true
   - type: audit_report
     required: true
-  - type: document
-    required: true
+  - type: spreadsheet
+    required: false
 uses: []
 origin: own
 version: 1.0.0

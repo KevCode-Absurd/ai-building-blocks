@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It plans cash and weighs risk options.
 new_slug: cash-and-currency-risk-planner
 name: Cash and currency risk planner
-summary: Give it your cash, debts and currency exposure. Get a liquidity plan
-  and ways to cut rate and exchange risk.
+summary: Plan your company cash and cut currency and rate risk. Give it balances, debts and foreign amounts. You get a cash plan and hedge ideas.
 job: money-and-investing
 headline: Cash and currency risk planner
-subhead: You get a plan to keep enough cash on hand, make idle money earn
-  something, and limit damage from rate and currency swings. Share your
-  balances, debts and foreign currency exposure, and the skill acts like a
-  company treasurer.
+subhead: You get a plan to keep enough cash on hand, make idle money earn something, and limit damage from rate and currency swings. Share your balances, debts and foreign currency exposure, and the skill acts like a company treasurer.
 explain: |
   You get a plan to keep enough cash on hand, make idle money earn something, and limit damage from rate and currency swings. Share your balances, debts and foreign currency exposure, and the skill acts like a company treasurer.
 
@@ -19,6 +15,10 @@ when:
   - You have floating-rate debt and want to know your exposure.
   - Cash sits in current accounts earning nothing.
   - You need to be sure payroll and loan payments are covered next quarter.
+not_for:
+  - "You need a licensed treasury service or regulated advice: ask a qualified adviser or your bank, and have them sign off on any hedge or investment move."
+  - "You only want to compare a single loan or investment: use a simple spreadsheet or ask your adviser."
+  - "You have one currency and no debt: a basic monthly cash forecast in a spreadsheet is enough."
 you_give:
   - Cash balances by account and entity
   - Upcoming large payments
@@ -30,7 +30,30 @@ you_get:
   - A list of idle balances to move
   - A treasury report
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
+  - List your cash balances by account and entity. Add the account, entity, currency, balance, due date and amount for each large payment.
+  - Add your foreign currency amounts and any floating-rate debt. Add your investment policy limits if you have them.
+  - Tell the AI the confidence level and time horizon you want for the currency risk estimate. If you do not know, ask it to suggest one and explain why.
+  - Read the 13-week forecast first and check every balance against your bank statements.
+  - Take the hedge and investment ideas to your bank or adviser before you act. Running the calculation script needs an AI that can run code.
+output_sample:
+  input:
+    - Cash balances by account and entity
+    - Upcoming large payments such as payroll, debt repayment and big purchases
+    - Foreign currency amounts you hold or expect, and any floating-rate debt
+    - Your investment policy limits (optional)
+  prerequisites:
+    - An AI that can run code, if you want the calculation script used (optional; the AI can also work the numbers in chat)
+  output:
+    - name: Executive Summary
+      contains: Your total cash position and your net currency exposure for each currency.
+    - name: Cash Flow Forecast
+      contains: A 13-week rolling cash table that marks any weeks where you may run short.
+    - name: Cash ladder
+      contains: Money in and out by day, week and month, to show dry spells.
+    - name: FX exposure and Value at Risk
+      contains: An estimate of what currency swings could cost you, with forward or option ideas.
+    - name: Investment sweep
+      contains: Balances sitting in accounts that pay nothing, and safer places to move them.
+    - name: Risk Management
+      contains: Suggested hedging actions and a check against your investment policy.

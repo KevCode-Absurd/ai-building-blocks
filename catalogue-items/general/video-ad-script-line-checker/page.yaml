@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: "It writes or plans with a handful of checks."
 new_slug: video-ad-script-line-checker
 name: "Video ad script line checker"
-summary: "Paste your video ad script. Get each weak line with a fix, and a score out of 100."
+summary: "Check your video ad script line by line. Get each weak line with a fix from your own facts, plus a score out of 100 before and after."
 job: make-video-ads
 
 headline: "Video ad script line checker"
@@ -19,6 +19,10 @@ when:
   - A script is about to be filmed and you want a second opinion before spending money.
   - An ad isn't working and you want to know which lines are to blame.
   - You're writing a script and want the checks for one part, such as the opening or the proof.
+not_for:
+  - "You have no script yet: use the Video ad script writer from customer quotes to write one first."
+  - "Your script has no spoken or on-screen lines, such as a silent product clip: a script check has nothing to mark up, so plan the shots with a person or a storyboard."
+  - "You want to read your ad results, not judge a script: use the Campaign keep-or-change checker."
 
 you_give:
   - The script you're writing or judging
@@ -39,6 +43,23 @@ how_to_use:
   - Add your product facts and allowed claims, so every fix uses only true facts.
   - Say whether your product is used up and reordered, or bought once and kept.
   - Fix the Truth problems first, then read the whole script aloud again.
+output_sample:
+  input:
+    - Your video ad script, one line per row
+    - Your product facts, allowed claims and brand voice (optional)
+    - Whether the product is reordered or kept (optional)
+    - The length and speaker, for the pace check (optional)
+  output:
+    - name: Weak line blocks
+      contains: Each weak line quoted, with its beat, the check it fails, what is wrong and a fix from your facts.
+    - name: Missing beats
+      contains: The parts of the script that never appear, each with what the script fails to do.
+    - name: Word count
+      contains: Spoken words counted against the budget for your script length and pace.
+    - name: MISSING facts
+      contains: The facts a fix would need that you did not give, so nothing is made up.
+    - name: Score
+      contains: A score out of 100 now and after the fixes, with the deductions shown.
 
 how_it_works:
   - title: Labels every line

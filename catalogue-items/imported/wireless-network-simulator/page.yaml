@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Setup choices change the results.
 new_slug: wireless-network-simulator
 name: Wireless network simulator
-summary: Describe nodes and traffic. Get a system-level wireless network run
-  with throughput results.
+summary: Set up a wireless network simulation in MATLAB and get throughput results for your nodes and traffic before you build or deploy anything.
 job: build-software
 headline: Wireless network simulator
-subhead: A system-level wireless simulation of your nodes and traffic, with
-  throughput results you can compare. You see how the network behaves under load
-  before building anything.
+subhead: A system-level wireless simulation of your nodes and traffic, with throughput results you can compare. You see how the network behaves under load before building anything.
 explain: |
   A system-level wireless simulation of your nodes and traffic, with throughput results you can compare. You see how the network behaves under load before building anything.
 
@@ -18,6 +15,10 @@ when:
   - You need to see how moving devices affect performance.
   - You want a packet capture from a simulated network.
   - You are testing how one setting changes results across many runs.
+not_for:
+  - "You only work with Bluetooth: use the Bluetooth network simulation skill (matlab-simulate-bluetooth-network) instead."
+  - "You need waveform, signal processing or link-level PHY work: use your own MATLAB code, since this skill covers system-level runs only."
+  - "You do not have MATLAB R2026a or later with the Wireless Network Toolbox: ask an engineer who does to run it."
 you_give:
   - Node list and positions
   - Traffic types and rates
@@ -31,8 +32,32 @@ you_get:
   - Traffic and network plots
   - Parameter sweep results
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Wireless Network Toolbox.
+  - Check that you have MATLAB R2026a or later with the Wireless Network Toolbox. Your AI needs to run MATLAB code.
+  - Open your AI tool and paste in the skill, or upload the skill folder.
+  - Describe your nodes, where they sit and what traffic each one sends. Add movement or sweep settings if you need them.
+  - Ask your AI to write and run the simulation, then check the throughput results per node and flow.
+  - Compare the sweep results with your target load, and change one setting at a time to see its effect.
+output_sample:
+  input:
+    - Your list of nodes and where they sit
+    - The traffic each node sends, such as voice, video, file transfer or on-off, and how fast
+    - How nodes move (optional)
+    - Settings you want to sweep across many runs (optional)
+  prerequisites:
+    - An AI that can run MATLAB code
+    - MATLAB R2026a or later with the Wireless Network Toolbox
+  output:
+    - name: Simulator setup
+      contains: A configured wireless network simulator with your nodes, positions and any custom node or channel choices.
+    - name: Traffic sources
+      contains: On-off, file transfer, voice or video conference traffic attached to your nodes, with per-flow statistics.
+    - name: Mobility and scheduled actions
+      contains: Random waypoint or custom node paths, plus actions timed during the run.
+    - name: Parametric sweeps
+      contains: Results across many runs as one setting changes, so you can compare them.
+    - name: Instrumentation
+      contains: Event logs and IQ samples from the run, plus traffic and network layout viewers.
+    - name: PCAP capture
+      contains: Packet capture files written from the simulated network.
+    - name: Event callbacks
+      contains: Code that reacts to events on wireless nodes and reads the event data fields.

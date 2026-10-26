@@ -2,10 +2,14 @@ thinking: medium
 thinking_why: It follows a process checklist and ties each step to your records.
 new_slug: business-tool-launch-checklist
 name: Business tool launch checklist
-summary: Share your rollout plan. Get launch checks, open blockers and a clear decision record for your team.
+summary: Check a business tool launch before go-live. Share your rollout plan and get a checklist, open blockers and a go or no-go record.
 job: organise-work
 headline: Business tool launch checklist
 subhead: Share the business tool you are launching, the people affected and your readiness notes. It checks data, access, training, connections and rollback plans. You get an open-issue checklist, a launch-day plan and a place to record the go or no-go decision.
+not_for:
+  - "You are still choosing between tools: compare them first with a fit-gap matrix, since this checklist starts once you have picked one."
+  - "Your team has over 100 people: use a larger go-live checklist built for mid-size or big companies."
+  - "The change is small and easy to undo: skip the checklist and just tell your team."
 explain: Share the business tool you are launching, the people affected and your readiness notes. It checks data, access, training, connections and rollback plans. You get an open-issue checklist, a launch-day plan and a place to record the go or no-go decision.
 you_give:
   - The new business tool, rollout date and affected teams.
@@ -22,6 +26,25 @@ how_it_works:
   - title: Step 3
     text: Prepare the decision record, launch-day checks and follow-up review.
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read your supplied records; changing live systems needs separate access and approval.
+  - "Gather first: the tool name, how many people use it, your launch date, where old data lives, named owners and who can order a rollback."
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code or files are needed.
+  - Paste your gathered notes under it. Say what is done and what is not.
+  - Read the open items. Mark each one as a blocker or a risk you accept.
+  - Hold the one-hour go or no-go meeting with your project lead and system owner. Record the decision.
+  - Use the launch-day plan on the day. Book the review for two weeks after launch.
+output_sample:
+  input:
+    - The name of the tool you are launching and the one it replaces
+    - Your launch date and how many people will use it
+    - Where your old data lives
+    - Who owns each part, and who can order a rollback
+    - What you have done so far on training, testing and messages (optional)
+  output:
+    - name: Completed checklist
+      contains: "Seven sections to tick off: data, users, connections, messages, rollback, process and monitoring, with open items marked."
+    - name: Go/no-go decision doc
+      contains: A one-page record of each open item as a blocker or an accepted risk, with the final decision.
+    - name: Launch-day runbook
+      contains: Timed checks from four hours before launch to one week after.
+    - name: 1-week retrospective
+      contains: A short review of what went wrong, what worked and what to change next time.

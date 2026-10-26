@@ -1,29 +1,62 @@
 new_slug: brand-to-image-prompt-compiler
 name: Brand-to-image prompt compiler
-summary: Combine brand, scene, product, text and avoid rules into one image prompt. Keep the chosen facts and controls clear.
+summary: Turn your brand, scene, product and copy into one image prompt for an AI image tool, with a negative prompt and a model pick.
 job: make-image-ads
 headline: Brand-to-image prompt compiler
-subhead: Share brand profile, layout, eight visual settings, approved copy and product facts. Get a compact image prompt, negative prompt and tool assumptions.
+subhead: Give it your brand details, layout, visual settings and approved copy. It builds one short prompt for an AI image tool. You also get a list of things to avoid and a model suggestion.
 explain: |-
   Combine brand, scene, product, text and avoid rules into one image prompt. Keep the chosen facts and controls clear.
 
   Share brand profile, layout, eight visual settings, approved copy and product facts. Get a compact image prompt, negative prompt and tool assumptions.
 when:
-  - You need a compact image prompt, negative prompt and tool assumptions.
-  - You need brand-to-image prompt compiler for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You have a brand, a layout and copy, and need one prompt for an image tool.
+  - Your image prompts keep coming out off-brand or with garbled text.
+  - You want to check which image model fits before you spend credits.
+  - A teammate asks you to make a new ad image in the same style.
+not_for:
+  - "You want a finished ad with real fonts and layout: use a design tool such as Canva or Figma."
+  - "You want a plain product photo with no text or brand rules: write a short prompt by hand or shoot the photo yourself."
+  - "You have no brand profile, layout or copy yet: write those first, then come back."
 you_give:
-  - Brand profile
-  - Layout
-  - Eight visual settings
-  - Approved copy and product facts
+  - "Your brand profile: name, product, 3 to 5 hex color codes and visual style"
+  - Your layout and aspect ratio
+  - Your eight visual settings, such as mood, lighting, setting, style and camera angle
+  - Your approved headline, sub line and button text (optional)
+  - Anything you want to override (optional)
 you_get:
-  - A compact image prompt, negative prompt and tool assumptions
-  - The sources used, missing inputs and assumptions
+  - One compact image prompt, kept under 500 tokens
+  - A list of things to avoid
+  - A model suggestion with a reason
+  - A token and cost estimate
+  - A note on anything missing or assumed
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed.
+  - Paste your brand profile, layout, aspect ratio and eight visual settings.
+  - Add your approved headline, sub line and button text, word for word.
+  - "If something is missing, answer when your AI asks: use a default or fill it in."
+  - Check that the hex codes and quoted text match what you gave.
+  - Paste the prompt into your image tool. Check cost and model on its current pricing page.
+output_sample:
+  input:
+    - "Your brand profile: name, product, 3 to 5 hex colors and visual style"
+    - Your layout choice and aspect ratio
+    - Your eight visual settings, such as mood, lighting and camera angle
+    - Your approved headline, sub line and button text (optional)
+  prerequisites:
+    - Your brand profile and layout from earlier steps, or details you type in yourself
+  output:
+    - name: Model
+      contains: The image model that suits the prompt, with a short reason.
+    - name: Token estimate
+      contains: A rough size of the prompt so you can keep it short.
+    - name: Cost estimate
+      contains: A rough cost per image, to check against current pricing.
+    - name: Prompt
+      contains: One compressed prompt with brand colors, scene, product, exact quoted text and aspect ratio.
+    - name: Negatives
+      contains: The list of things the image tool should not draw.
+    - name: Expected output
+      contains: A plain description of what the finished image should look like.
 how_it_works:
   - title: Check the inputs
     text: Confirm brand profile, layout, eight visual settings, approved copy and product facts. Mark facts that are missing.

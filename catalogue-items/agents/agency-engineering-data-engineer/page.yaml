@@ -1,0 +1,159 @@
+name: Data Engineer agent
+summary: "Get a data pipeline design with raw, cleaned and report-ready layers, quality checks, freshness targets, alerts and a plan for when loads fail."
+headline: Data Engineer agent
+subhead: "List your data sources, who uses the data and how fresh it must be. It designs the pipeline in layers, adds checks and alerts, and writes what to do when a load fails or a source changes."
+job: build-software
+thinking: high
+thinking_why: It weighs batch against streaming and full loads against changes-only loads, and checks that reruns never create duplicates. Use a model that can reason about data flow and state its assumptions.
+explain: >-
+  Bad data pipelines fail quietly. A source adds a column, a load runs twice,
+  or a field starts coming through empty. Nobody notices until a report is
+  wrong. This Data Engineer agent designs the pipeline so that failures are
+  loud and fixes are safe. Every step can be rerun without making duplicates,
+  and every change in a source is caught before it reaches a report.
+
+
+  It uses the three-layer pattern from the profile. Raw data is kept exactly as
+  it arrived. Cleaned data is deduplicated and consistent. Business-ready data
+  is shaped for the questions people ask. Each layer has its own rules, and
+  reports read only from the last one.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The method is
+  the original author's. AI Blocks adds an intake, a fixed answer layout and
+  review rules. The profile's targets, such as freshness and recovery times,
+  are examples. Your own needs replace them.
+when:
+  - You are moving data from several systems, such as a shop, a CRM and ad accounts, into one warehouse.
+  - A report is wrong or late and nobody knows which step broke.
+  - You must choose between a nightly batch and a near-live feed.
+  - You want a standard for quality checks and alerts before more teams depend on the data.
+not_for:
+  - You want working pipeline code for a smaller job. Use the Data pipeline builder.
+  - You need dashboards or charts. Use the Data Visualization Engineer agent.
+  - You are reviewing a business question or a SQL query on a warehouse. Use the Data warehouse query reviewer.
+  - One query is slow. Use the Database Optimizer agent.
+  - You have a single messy file to clean once. Ask your AI to clean it directly. A full pipeline design is more than you need.
+you_give:
+  - Your data sources, such as apps, databases, files or event feeds, and roughly how much data each holds.
+  - How often each source changes and whether it can tell you what changed.
+  - Who uses the data and the questions they need answered.
+  - How fresh the data must be, such as daily or within 15 minutes.
+  - Where the data will live and the tools you use now (optional).
+  - Anything private in the data, such as customer emails or card details.
+you_get:
+  - A source list with the expected shape of each source and who owns it.
+  - A choice between batch, changes-only and streaming loads, with the reason.
+  - A design for the raw, cleaned and business-ready layers.
+  - A set of quality checks, with what each does when it fails.
+  - A freshness target for each output and the alerts that guard it.
+  - A recovery plan for reruns, backfills and source changes, and a short runbook for each pipeline.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - List your sources and describe each in a line. Add the questions your team asks of the data and how fresh answers must be.
+  - Say "Design the pipeline" for a new setup, or "Review this pipeline" if you paste an existing design or code.
+  - Your AI asks once for anything missing. Unknown volumes stay marked as assumptions.
+  - Read the load choice and the quality checks first. Make sure each check matches a real way your data goes wrong.
+  - Hand the design to the engineer who will build it. Code in it is an example to adapt, and it needs testing on your data.
+how_it_works:
+  - title: Profile the sources
+    text: It lists each source with its volume, how often it changes, what is missing or empty, and who owns it.
+  - title: Set data contracts
+    text: It writes the expected fields and types for each source and each output. A change that breaks them raises an alert.
+  - title: Choose how to load
+    text: It picks full loads, changes-only loads or streaming for each source, weighing cost against freshness.
+  - title: Design the layers
+    text: Raw data is kept unchanged. Cleaned data is deduplicated and consistent. Business-ready data is shaped for reports and never read from the raw layer.
+  - title: Add quality checks
+    text: It adds checks for empty fields, duplicates, value ranges, links between tables and freshness, and says what stops a load.
+  - title: Plan monitoring and alerts
+    text: It sets alerts for failed loads, late data, odd row counts and changed schemas, and an owner for each alert.
+  - title: Plan recovery
+    text: It makes every step safe to rerun, plans backfills, and writes a runbook of what breaks and how to fix it.
+output_shape: |-
+  SOURCES AND CONTRACTS
+    <source> | <owner> | <volume and change rate> | <expected fields> | <private data>
+
+  LOAD CHOICE
+    <source> | <full, changes-only or streaming> | <why> | <cost note>
+
+  LAYER DESIGN
+    <raw, cleaned or business-ready> | <what it holds> | <rules> | <who may read it>
+
+  QUALITY CHECKS
+    <check> | <where it runs> | <on failure>
+
+  FRESHNESS AND ALERTS
+    <output> | <freshness target> | <alert> | <owner>
+
+  RECOVERY PLAN
+    <failure> | <safe rerun or backfill step> | <runbook note>
+
+  TOOL OPTIONS
+    <need> | <options, with a note to check current prices and features>
+
+  OPEN QUESTIONS AND CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your data sources and how much data each holds
+    - Who uses the data, the questions they ask and how fresh it must be
+    - Where the data will live and the tools you use (optional)
+    - Anything private in the data
+  prerequisites:
+    - An AI you can paste a long brief into, such as Claude, ChatGPT or Gemini
+    - An engineer to build and test the pipeline, because the agent designs it and runs nothing
+  output:
+    - name: Sources and contracts
+      contains: Each source with its owner, volume, change rate, expected fields and any private data.
+    - name: Load choice
+      contains: Full, changes-only or streaming for each source, with the reason and a cost note.
+    - name: Layer design
+      contains: What the raw, cleaned and business-ready layers hold, their rules and who may read them.
+    - name: Quality checks
+      contains: Each check, where it runs and what happens when it fails.
+    - name: Freshness and alerts
+      contains: A freshness target for each output, the alert that guards it and its owner.
+    - name: Recovery plan
+      contains: Safe reruns, backfills and the runbook note for each kind of failure.
+    - name: Tool options
+      contains: Options for storage, running jobs and checks, with a reminder to confirm current prices.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: You can attach a sample of each source with private details removed, and the design will match the real fields.
+    - name: Your warehouse or lakehouse docs
+      why: Tool names in the profile are examples, and your platform's own limits shape the design.
+  inputs:
+    - A small sample of each source, with private details removed.
+    - The list of reports that depend on the data.
+    - Your last incident, if a pipeline has failed before.
+terms:
+  - term: ETL and ELT
+    meaning: Moving data between systems. ETL cleans it on the way. ELT loads it first and cleans it later.
+  - term: Medallion layers
+    meaning: Three stages, called bronze, silver and gold. They run from raw data to cleaned data to business-ready data.
+  - term: Idempotent
+    meaning: Safe to rerun. Running the job twice gives the same result as once.
+  - term: Change data capture (CDC)
+    meaning: Loading only the rows that changed, instead of copying everything each time.
+  - term: Data contract
+    meaning: A written agreement on the fields, types and timing a source will deliver.
+  - term: Schema drift
+    meaning: A source quietly adds, removes or changes a field.
+  - term: Backfill
+    meaning: Reloading past data after a fix, without touching other dates.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Platform
+    how: Name your warehouse or cloud, such as BigQuery, Snowflake or a lakehouse on a cloud you use. The design then uses its terms.
+  - what: Freshness
+    how: Give a freshness target for each report. A daily report needs a much simpler design than a 15-minute one.
+improve:
+  - Keep your data contracts and runbooks with the pipeline, and paste them back at the start of the next run.

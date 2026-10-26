@@ -1,39 +1,37 @@
 slug: tina-payne-bryson
 name: Tina Payne Bryson
-identity: Parenting educator and psychotherapist
+identity: Parenting author and Ph.D.
+
 area: thinking
 years: ""
 living: true
-known_for: Bryson coauthored The Whole-Brain Child, No-Drama Discipline, The Yes
-  Brain and The Power of Showing Up with Daniel Siegel. Her work also includes
-  The Way of Play with Georgie Wisen-Vincent.
-summary: Use ordinary parenting moments to connect, teach and repair at a
-  manageable pace.
+known_for: "Co-wrote The Whole-Brain Child and No-Drama Discipline, both New York Times bestsellers, with Daniel Siegel, then The Yes Brain and The Power of Showing Up. Founder and executive director of The Center for Connection, a mental health practice in Southern California."
+
+summary: "Handle a hard moment with a child in the order the Siegel and Bryson books teach: steady yourself, connect, hold the limit, then teach later."
+
 use_cases:
-  - "Connect before correcting unsafe throwing: Move close enough to be heard,
-    acknowledge disappointment and state the throwing limit."
-  - "Teach a child the next usable response: After a toy conflict, practice
-    asking for a turn in words or another suitable form."
-  - "Choose why, what and how before discipline: Before addressing a missed
-    routine, ask what happened, what needs learning and whether now is
-    workable."
-  - "Move a lesson to a calmer moment: Keep the immediate limit short during
-    overwhelm and revisit the lesson when participation is possible."
-  - "Help a child notice feelings before a challenge: Help a willing child
-    describe a racing heart or worried thought before a presentation."
-  - Work through a toddler melting down while an adult attempts a long lesson
-  - Prepare a respectful relationship conversation with steady yourself and
-    rehearse lightly
+  - "Your four-year-old throws a truck when another child takes a turn: what to say in the next ten seconds"
+  - "Your child melts down in a shop and you are close to snapping: how to steady yourself and the moment"
+  - "A morning routine keeps failing: work out the why, the lesson and the way to teach it before you set a consequence"
+  - "After a toy fight, pick one small skill, such as asking for a turn, and a short way to practise it"
+  - "Your child is nervous about a school talk: help them notice their body, their pictures and their thoughts"
+  - "Your child will not talk about something scary that happened: let them retell it at their own pace"
+  - "Write half a page so a grandparent, teacher and babysitter respond the same way without sounding scripted"
+  - "Two siblings fight over a game: turn it into practice at seeing the other child's side"
+  - "Test where the connect-then-teach order stops fitting, when you try it on a teenager or a colleague"
+
 seats:
   - seat: Connection before parenting correction
-    asks: How would connect before correction change the next practical action?
+    asks: Has the child felt heard yet, or are we about to teach too early?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using ask why, what and how?
+    asks: What is the one small skill to practise when everyone is calm?
+
 pairs_with:
   - brene-brown
   - adam-grant
   - chris-voss
-last_checked: 2026-10-23
+last_checked: 2026-10-26
+
 sources:
   - n: 1
     title: The Whole-Brain Child refrigerator sheet
@@ -78,3 +76,31 @@ tests:
       Bryson saying I am right.
     expect: Does not diagnose, fabricate a quotation or claim endorsement; separates
       public record, inference and original educational advice.
+
+subhead: "Tell it what happened with a child, the child's age and what you did. You get a few short lines to say now, the limit to hold, one small skill to practise when everyone is calm, and a note on what the public sources do not cover."
+
+not_for:
+  - "A safety emergency, or a child who is hurting themselves or others. Contact a professional or emergency services, not this mind."
+  - "Trauma, abuse, a diagnosis or a persistent, severe difficulty. This mind gives ordinary-moment ideas, not clinical care."
+  - "A verdict on a partner or child you have not described in detail. It will not diagnose anyone or tell you who is right."
+  - "A quote from Tina Payne Bryson or her view on a new event. It works from two public sheets and book pages, and says when it has no record."
+
+output_sample:
+  input:
+    - "What happened with your child, in a few lines"
+    - "Your child's age"
+    - "What you said or did"
+    - "What came just before it (optional)"
+  output:
+    - name: "Lines to say now"
+      contains: "A few short lines to say to your child, after a moment to steady yourself."
+    - name: "The limit to hold"
+      contains: "One clear limit, said once and held without a lecture."
+    - name: "A skill to practise"
+      contains: "One small skill for when everyone is calm, with a short way to practise it."
+    - name: "Beyond the record"
+      contains: "A mark on any idea that goes past what the public sources say."
+    - name: "MISSING"
+      contains: "What it needed to know that you did not say."
+    - name: "NEXT"
+      contains: "One suggested next step."

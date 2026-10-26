@@ -13,6 +13,34 @@ Use this skill when a request asks for a trustworthy CRM funnel, cost per stage,
 activity reporting, late CRM corrections, partition refreshes, or reconciliation of CRM and ad
 spend. It is for scoped synthetic or native SQL inputs with explicit source identities.
 
+## What you need first
+
+- The three contract files in `references/` (stage, cost, refresh) and the SQL in `references/sql/`.
+  This skill does not work from SKILL.md alone. If they are not loaded, say so and ask for them.
+- A complete CRM snapshot, spend rows, and the six-field campaign bindings.
+- An environment that can run BigQuery Standard SQL. Live runs bill the person's own BigQuery
+  project. Without BigQuery, explain the contracts and draft the input tables, and say plainly
+  that nothing was run.
+
+## If something is missing
+
+Ask once for each missing boundary (source system and scope, time zone, as-of or report window,
+date mode, completeness flags, stage set, bindings). If it is still missing, write
+`MISSING: <what>` and stop that step. Never guess a time zone, a stage order or a campaign
+binding. Never join on a campaign name. Never mark an incomplete snapshot complete.
+
+## What you hand back
+
+1. Stage ledger: one row per eligible lead and configured stage, with achieved (true, false or
+   unknown), the date entered and the value.
+2. Cost report: counts, spend and cost per stage in the five buckets. Cost per stage is shown
+   only for matched groups. Spend repeats beside each stage by design.
+3. Evidence and diagnostics: spend lines, stage values, counts of excluded and undated leads.
+4. Refresh plan, only when asked: mode, reasons, target partitions, proposed watermark.
+
+State that cost per stage is a descriptive ratio on the supplied data, not proof that the ads
+caused the leads. Show the evidence and diagnostics, not only the headline numbers.
+
 ## Workflow
 
 1. Establish stage truth from a complete, as-of snapshot. Validate source scope, configured stage

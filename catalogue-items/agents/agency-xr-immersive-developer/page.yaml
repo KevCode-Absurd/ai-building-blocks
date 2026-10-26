@@ -1,0 +1,145 @@
+name: XR Immersive Developer agent
+summary: Plan a browser-based AR or VR app with WebXR. Get the library choice, input plan, device test list and fallbacks for browsers without XR.
+headline: XR Immersive Developer agent
+subhead: Describe the experience, the headsets or phones it must run on and the library you prefer. The agent plans a WebXR build with input, speed and fallback choices. You get a plan, code sketches and a device test list.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  A WebXR app runs in the browser, so one build can reach a Quest, a Vision Pro or a phone with no app install. But each device supports different features. Hand tracking works on some and not on others. This agent plans a browser-based AR and VR build, with fallbacks, before you commit to a library.
+
+  It covers A-Frame, Three.js and Babylon.js, and input such as hand tracking, pinch, gaze and controllers. It plans raycasting, hit testing and speed steps such as simpler models for far objects.
+
+  The profile has no device specs, so the agent does not state what each device supports as fact. It marks each device claim 'check on the vendor page' and puts it in the test list. It cannot run a headset, so every test is yours. The role comes from Agency Agents under the MIT licence. The download holds the original profile, its licence and a setup guide. The profile's targets are its own goals, not results measured by AI Blocks.
+when:
+  - You want a 3D product viewer or training scene that opens from a link with no app install.
+  - Your WebXR scene runs on one headset and fails on another.
+  - Hand tracking or controller input behaves differently across browsers.
+  - You need a fallback so people on a plain laptop browser still see something.
+not_for:
+  - "You are building a native Apple Vision Pro app: use the visionOS Spatial Engineer agent."
+  - "You want interface and interaction design before any code: use the XR Interface Architect agent."
+  - "You want cockpit or control-panel interaction in XR: use the XR Cockpit Interaction Specialist agent."
+  - "You want ordinary 2D web pages: use the Frontend Developer agent."
+you_give:
+  - What the experience is and what the person does in it, in a few sentences
+  - The devices and browsers it must run on, such as Meta Quest or a phone
+  - "The library you prefer: A-Frame, Three.js or Babylon.js, or 'no preference'"
+  - "The input you need: hand tracking, controllers, gaze or touch"
+  - Your existing code or repo link (optional)
+  - Your 3D model file sizes or polygon counts (optional)
+you_get:
+  - A library choice with the reason
+  - An input plan for each device type
+  - A speed plan, such as simpler models for far objects and what to cut
+  - A fallback plan for browsers with no XR
+  - "A test list: device, browser and what to check"
+  - Code sketches, marked as drafts you have not run
+  - Open risks
+how_to_use:
+  - Download the pack and add it as a skill in your AI. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - "Write your brief: the experience, target devices, preferred library and the input you need. Paste your code if you have any."
+  - Say 'Plan this WebXR build. Do not state device support as fact.' Your AI asks once for what is missing.
+  - Read the library choice and fallback plan first. Change them if a device you need is not covered.
+  - Run the sketches on a local page, then on each device in the test list. WebXR needs the page served over HTTPS on a real device.
+  - Check each device's feature support on the vendor's own page before you promise it to users.
+how_it_works:
+  - title: Collect the brief
+    text: It confirms the experience, target devices and browsers, library and input. It asks once for anything missing, then marks it MISSING.
+  - title: Choose the library
+    text: It compares A-Frame, Three.js and Babylon.js for your case and says why.
+  - title: Plan input
+    text: It plans hand tracking, pinch, gaze and controller input per device, with raycasting and hit testing where needed.
+  - title: Plan speed
+    text: It plans occlusion culling, shader tuning and level of detail, and says what to cut first.
+  - title: Plan fallbacks
+    text: It plans what a browser without XR shows, so the page still works.
+  - title: Build the test list
+    text: It lists each device and browser to test and what a pass looks like.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    Experience <what it is> | Devices <list> | Library <choice> | Input <list>
+    Assumed: <list> | MISSING: <list>
+
+  LIBRARY CHOICE
+    <library> | <reason> | <trade-off>
+
+  INPUT PLAN
+    <device type> | <input method> | <how it is handled in code>
+
+  SPEED PLAN
+    <area> | <step> | <what it costs or saves>
+
+  FALLBACKS
+    <situation, such as no XR browser> | <what the person sees>
+
+  TEST LIST
+    <device> | <browser> | <what to check> | <what a pass looks like>
+
+  CODE SKETCHES (drafts, not run)
+    <name> | <short code>
+
+  OPEN RISKS
+    <risk> | <what it affects> | <how to find out>
+output_sample:
+  input:
+    - The experience and what the person does in it
+    - The devices and browsers it must run on
+    - Your preferred library and the input you need
+    - Your existing code or model sizes (optional)
+  prerequisites:
+    - A way to test on a real headset or phone, since the AI cannot
+    - An AI that takes a pasted profile, such as Claude, ChatGPT or Gemini
+  output:
+    - name: Brief and assumptions
+      contains: The experience, devices, library and input as understood, with assumptions and MISSING items.
+    - name: Library choice
+      contains: A-Frame, Three.js or Babylon.js for your case, with the reason and the trade-off.
+    - name: Input plan
+      contains: How hand tracking, pinch, gaze and controllers are handled on each device type.
+    - name: Speed plan
+      contains: Steps such as simpler models for far objects, and what to cut first.
+    - name: Fallbacks
+      contains: What a person sees on a browser or device with no XR support.
+    - name: Test list
+      contains: Each device and browser to test, with what to check and what a pass looks like.
+    - name: Code sketches
+      contains: Short drafts for the scene and input, marked as not run.
+    - name: Open risks
+      contains: Device and browser unknowns, and how to find out.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Device list
+    how: Name the exact headsets and phones you must support, not just 'all of them'.
+  - what: Library
+    how: Say if you already use one, so the plan builds on it.
+  - what: Fallback
+    how: Say what a person with no headset should see, such as a 3D view on a laptop.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: WebXR
+    meaning: A browser standard for AR and VR. Pages run on headsets and phones with no app install.
+  - term: A-Frame, Three.js and Babylon.js
+    meaning: Three code libraries for building 3D scenes in the browser.
+  - term: Hit testing
+    meaning: Finding where a line from the device meets a real surface or a model.
+  - term: Raycasting
+    meaning: Sending a line out from a controller or gaze to see what it points at.
+  - term: Level of detail
+    meaning: Using simpler models for objects that are far away.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: The plan is reasoning plus short code, so a chat is enough.
+    - name: Claude Code
+      why: It can read your repo and see how your scene and input code are set up.
+  inputs:
+    - The browser console errors from the device that fails.
+    - A list of your 3D models with file sizes.

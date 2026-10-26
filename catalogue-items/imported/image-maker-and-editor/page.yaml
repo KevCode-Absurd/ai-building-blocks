@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It turns a clear description into one image request.
 new_slug: image-maker-and-editor
 name: Image maker and editor
-summary: Describe a picture or give one to change. Get new images, variants or
-  transparent cutouts.
+summary: "Make or edit images with your AI: website art, product shots, mockups or cutouts. Describe the picture and get files saved in your project."
 job: make-images
 headline: Image maker and editor
-subhead: New pictures or edits to a picture you already have, saved where your
-  project needs them. Describe what you want, or give a file to change, and get
-  website art, mockups, logos, product shots, variants or transparent-background
-  cutouts.
+subhead: New pictures or edits to a picture you already have, saved where your project needs them. Describe what you want, or give a file to change, and get website art, mockups, logos, product shots, variants or transparent-background cutouts.
 explain: |
   New pictures or edits to a picture you already have, saved where your project needs them. Describe what you want, or give a file to change, and get website art, mockups, logos, product shots, variants or transparent-background cutouts.
 
@@ -19,6 +15,10 @@ when:
   - You want three variations of one picture.
   - You need a product photo with the background removed.
   - You want to change part of an image and keep the rest.
+not_for:
+  - "You need to edit an existing SVG logo or icon set: change those files directly, so the style stays the same."
+  - "You want a chart, layout or page built from code: ask your AI to build it in HTML and CSS instead."
+  - "You need a real photo of your own product or team: use a photographer or your own camera."
 you_give:
   - A description of the picture
   - An image to edit (optional)
@@ -30,8 +30,29 @@ you_get:
   - Transparent cutouts
   - Files saved in your project without overwriting old ones
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can make images.
+  - Open your AI tool and check that it can make images. This skill needs that.
+  - Paste the skill, or say you want to use it.
+  - Write your brief. Say what the image is for (website hero, logo, cutout) and what must or must not appear.
+  - Add the image you want changed, if you have one. Say what to keep the same.
+  - Name the folder to save in. Your AI saves new files there and adds a version number instead of overwriting.
+  - Check any text or logo in the image before you publish it.
+output_sample:
+  input:
+    - A short description of the picture you want
+    - An image to change (optional)
+    - What it is for, such as a website hero, logo or cutout
+    - The folder to save it in (optional)
+  prerequisites:
+    - An AI tool that can make images
+    - An OpenAI API key, only if you ask for the backup command-line mode
+  output:
+    - name: Generated image
+      contains: A new picture made from your description, saved in your project folder.
+    - name: Edited image
+      contains: Your own picture with the change you asked for, and the rest left as it was.
+    - name: Variants
+      contains: Extra versions of the same idea, saved with new version numbers.
+    - name: Transparent cutout
+      contains: The subject with the background removed, ready to place on other pages.
+    - name: Saved files
+      contains: Each result copied to your project folder, with old files left untouched.

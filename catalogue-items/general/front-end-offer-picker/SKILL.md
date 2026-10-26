@@ -7,8 +7,15 @@ description: Use when too few people respond to your offer or the cost to win a 
 
 There are three ways to open a sale: sell the main offer at full price, give a first step away, or sell a piece at a deep discount. Each suits different facts. This skill scores the three on yours and picks one. It is a method for choosing a first step, not a promise of results.
 
-Use [Free sample offer planner](https://useaiblocks.com/skills/free-sample-offer-planner) instead when you have already chosen a free first step for a physical product and need the offer built.
-Use [Information-led lead offer planner](https://useaiblocks.com/skills/lead-offer-planner) instead when you have chosen to lead with useful information and need the offer and reply step built.
+## When not to use this
+
+- You have already chosen a free first step for a physical product: use the [Free sample offer planner](https://useaiblocks.com/skills/free-sample-offer-planner).
+- You have chosen to lead with useful information: use the [Information-led lead offer planner](https://useaiblocks.com/skills/lead-offer-planner).
+- You have no offer or price yet: use the [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder) first.
+
+## Ask first when there is no offer
+
+This rule beats the "go ahead" step in Before you start. The offer and its price are required. If the person gave neither, ask for them once, in one short message, and stop.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -45,17 +52,43 @@ How to start:
 
 1. **List the facts.** How many leads you can handle a week. Cost per lead and per sale. Cash you can spend and how long you can wait to break even. How much proof you hold (testimonials, results). How tight your sales process is. How well buyers already understand what you sell and its usual price. Any rules on free offers where you sell. Mark MISSING for anything unknown.
 2. **Describe premium.** The main offer at full price, alone. Pros: simple math, qualified buyers, no incentive to sift. Cons: the highest cost per lead, the slowest payback, needs strong copy and a strong sales process, reaches the fewest people, and needs a very strong offer. It fits when you have proof, a tight process and cash to learn.
-3. **Describe free.** A first step with no price. Pros: the most leads and the lowest cost per lead, and many large companies open this way. Cons: too many leads to handle, some who never buy, and it costs you to give away. The author reports four split tests in ten markets each where close rates matched premium but lead cost fell by about five times. Treat that as his claim and test your own. It fits a new market, a small local market, or when you need testimonials.
+3. **Describe free.** A first step with no price. Pros: the most leads and the lowest cost per lead. Cons: too many leads to handle, some who never buy, and it costs you to give away. The author's draft chapter says free first steps closed at a similar rate to premium while lead cost fell. It gives no source we can check, so treat that as his claim and test your own. It fits a new market, a small local market, or when you need testimonials.
 4. **Describe discount.** A deep cut (half or more) on one piece of the offer, not the core. Pros: lets you advertise where free is restricted, collects a little cash, buyers expect to pay, sets up a two-step sale, cuts no-shows, and puts a card on file. Cons: if you discount the core, buyers learn to wait for deals; bargain hunters. It fits services buyers already understand and know the price of.
-5. **Score each route.** For each fact, give 0 to 3 for how well the route fits. Add them up. Show the table.
-6. **Pick and set conditions.** Name the route, why, and what must be true for it to work (for example, you can answer all new leads within a day). Name the facts that would change the pick.
+5. **Score each route.** For each fact, give 0 to 3 for how well the route fits. Score a fact you don't know as an estimate and mark it `MISSING`. Add them up. Show the table.
+6. **Pick and set conditions.** Name the route with the highest total, why, and what must be true for it to work (for example, you can answer all new leads within a day). Name the facts that would change the pick. If two or more totals tie, or most facts are `MISSING`, make no pick. Say so, and list the facts that would break the tie.
 7. **Plan the move up.** Start free or discount to gather proof and testimonials, then move to premium as your reputation grows. Premium works well as the second offer after a first step that showed value. Say what result counts as ready to move.
 8. **Set two tests.** Each with a spend, a time and a win rule written first.
 9. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
 
-The facts, the score table, the pick with what must be true, what would change it, the plan to move up, two tests and `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
+Use this layout:
+
+```
+YOUR FACTS
+Volume | cost per lead | cost per sale | cash and time to break even | proof | how well buyers know this offer | rules on free
+
+SCORES
+Route | fact-by-fact scores | total
+
+THE PICK
+<route> | why | what must be true   (or "No pick: <facts that would break the tie>")
+
+WHAT WOULD CHANGE IT
+<facts that flip the pick>
+
+MOVING UP
+<when and how to go to premium>
+
+FIRST TESTS
+<two tests with a win rule>
+
+MISSING
+<gaps>
+
+CHECKS MISSED
+<one line per check missed, or none>
+```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -70,7 +103,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before you hand it back
 
-- The pick follows from the score table.
+- The pick follows from the score table, or there is no pick because of a tie.
 - Missing facts are marked MISSING.
 - The author's test result is labelled as his claim.
 - There is a plan to move to premium.

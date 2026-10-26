@@ -1,6 +1,6 @@
 new_slug: policy-removal-test-planner
 name: "Policy removal test planner"
-summary: "Name a policy you suspect is not working. Get a small, dated test to remove it and what to measure."
+summary: "Plan a small, dated test to remove a rule or approval that may not be worth it. Get what to measure and when to stop."
 job: lead-people
 thinking: medium
 thinking_why: "It weighs risk and legal limits, but the test shape is fixed."
@@ -17,6 +17,10 @@ when:
   - A rule slows people down and nobody remembers why it exists.
   - You want to remove an approval step but worry about what will go wrong.
   - Someone says "we have always done it this way" and you want to test it.
+not_for:
+  - "The rule is required by law, a contract or safety: keep it and take your questions to a qualified adviser."
+  - "The decision is already made and you only need to announce it: write a short note to your team yourself."
+  - "You want to test removing a rule across the whole company at once: pick one team first, or ask the owner to set the scope."
 
 you_give:
   - The policy and what it requires people to do
@@ -35,6 +39,27 @@ how_to_use:
   - Say what you fear will happen if it is removed.
   - Check any legal or safety point with an adviser before the test starts.
   - Run the test, record the measures and come back to decide.
+output_sample:
+  input:
+    - The policy and what it requires people to do
+    - What it costs in time or money
+    - What you fear will happen if it goes
+    - Any legal, contract or safety rules that touch it (optional)
+  output:
+    - name: The policy and the problem
+      contains: What the rule requires, who it affects, and the problem it was meant to solve.
+    - name: The fear
+      contains: What you think will happen without the rule, and how likely it seems.
+    - name: Law and safety check
+      contains: Whether the rule must stay, with questions to take to an adviser.
+    - name: The test
+      contains: One small team or period, with a start date, a mid-point check and an end date.
+    - name: Measures and stop rule
+      contains: Two or three numbers to track, their starting values, and the result that ends the test early.
+    - name: Review plan
+      contains: A decision date and what result leads to keep, change or drop.
+    - name: MISSING and CHECKS MISSED
+      contains: What you did not provide, and any check the plan failed.
 
 how_it_works:
   - title: Names the problem

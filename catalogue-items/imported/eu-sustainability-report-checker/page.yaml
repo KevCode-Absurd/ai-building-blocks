@@ -2,35 +2,111 @@ thinking: high
 thinking_why: Scope and materiality calls need careful reasoning.
 new_slug: eu-sustainability-report-checker
 name: EU sustainability report checker
-summary: Describe your company. Get whether EU sustainability reporting applies,
-  what to disclose and the gaps to close.
+summary: Find out if EU sustainability reporting (CSRD) applies to your company. Get a scope check, a gap table and draft disclosures to review.
 job: check-contracts
 headline: EU sustainability report checker
-subhead: Describe your company. Get whether EU sustainability reporting applies,
-  what to disclose and the gaps to close. Bring company size, sector and
-  countries. Use the result to plan your next step.
+subhead: Give it your headcount, turnover, country and any sustainability data you have. You get a scope check for the EU's CSRD rules, the steps for a double materiality assessment, a gap table and draft disclosures. Counsel confirms the result.
 explain: |
-  A straight answer on whether EU sustainability reporting rules apply to you, which topics you must disclose and where your current data falls short.
+  The EU's sustainability reporting law, called CSRD, tells larger companies to publish facts on climate, people and conduct. Many firms are not sure if it covers them. This EU sustainability report checker answers that first, then shows where your data falls short.
 
-  The skill first tests scope and sets your first reporting year, using the 2026 changes to company size limits. It then guides a double materiality assessment, which weighs your impact on the world against the world's financial impact on you. From there it maps the environmental, social and governance standards, checks value chain data, and produces a gap table with priorities. It cites the rule behind each point and can compare the rules with GRI, TCFD and SASB.
+  It starts with scope. The skill's rule is more than 1,000 employees and net turnover above €450 million. If either figure is missing, or you are a non-EU company, it says "undetermined". It does not guess. Dates and legal references in the skill came from its author, so the result marks them "to confirm" and puts a not-legal-advice note beside the scope verdict.
+
+  If you are in scope, it walks you through a double materiality assessment. That weighs your impact on people and the planet against the money risk to you. It then maps the reporting standards, checks value chain data and gives a gap table. It writes draft text only where your data supports it, and marks the rest MISSING.
 when:
-  - You need to know if you must report under the EU rules.
+  - You need to know whether you must report under the EU rules.
   - You are starting a double materiality assessment and have no method.
   - An auditor or customer asked for your sustainability data.
   - You report under GRI and want to see what the EU rules add.
+not_for:
+  - "Your company has 1,000 employees or fewer, or turnover of €450 million or less: it is outside the mandatory rule. Ask your counsel about the voluntary standard."
+  - "You need a legal opinion or a signed assurance statement: only counsel and an accredited assurance provider can give those."
+  - "You want to turn your raw energy and HR data into an ESG report draft: use the ESG report preparer."
+  - "You want to measure your supply chain emissions: use the Supply chain carbon tracker, then bring the numbers back here."
 you_give:
-  - Company size, sector and countries
-  - Existing sustainability data or reports
+  - Number of employees and net turnover for your last year
+  - Your country and legal form, and whether you are listed
+  - Existing sustainability data or reports (optional)
   - Main suppliers and customers (optional)
-  - Standards you already follow (optional)
+  - Standards you already follow, such as GRI (optional)
 you_get:
-  - Scope verdict and first reporting year
-  - Double materiality steps
-  - Gap table by topic
-  - Draft disclosures
-  - Comparison with GRI, TCFD and SASB
+  - A scope verdict with your figures and the first reporting year, marked to confirm
+  - The steps of a double materiality assessment
+  - A gap table by topic with priorities
+  - Draft disclosures only where your data supports them
+  - A comparison with GRI, TCFD and SASB, if you ask
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. Use an AI with web access if you can, so it can check the latest law.
+  - Give your employee count, net turnover and country. If you do not have a figure, say so. It will mark scope as undetermined.
+  - Say which standards version you want, the 2023 one or the revised one.
+  - Read the scope verdict first. Take it to counsel before you plan further.
+  - Collect the data marked MISSING. Have a sustainability lead or an assurance provider review any draft text.
+output_sample:
+  input:
+    - Your employee count and net turnover
+    - Your country, legal form and listing status
+    - Existing sustainability data or reports (optional)
+    - The standards you follow now (optional)
+  prerequisites:
+    - Counsel or an accredited assessor to confirm the dated legal points
+    - Web access for your AI, so it can check current rules (optional)
+  output:
+    - name: Scope verdict
+      contains: Your figures against the rule, the verdict, the first reporting year to confirm, and a not-legal-advice note.
+    - name: Double materiality steps
+      contains: The eight steps to find which topics matter, with what you must do at each.
+    - name: Gap table
+      contains: Each topic with current state, gap, priority and action, using none given where you gave no data.
+    - name: Draft disclosures
+      contains: Draft text for topics your data supports. Missing figures are marked MISSING.
+    - name: Framework comparison
+      contains: The EU rules set against GRI, TCFD and SASB, if you asked for it.
+how_it_works:
+  - title: Check scope
+    text: Tests your headcount and turnover against the scope rule. It marks scope undetermined if a figure is missing.
+  - title: Set the standards basis
+    text: Asks whether you report on the 2023 standards or the revised ones, then keeps to that basis.
+  - title: Run the materiality steps
+    text: Guides you through impact and financial materiality, topic by topic, and notes the proof to keep.
+  - title: Map the topics
+    text: Lists the climate, people and conduct disclosures that follow from the topics you found material.
+  - title: Check value chain data
+    text: Looks at supplier and customer data, and where estimates or sector averages would be needed.
+  - title: Write the gap table
+    text: Compares your current data with each required datapoint, ranked by priority.
+  - title: Mark what to confirm
+    text: Lists dates and legal points that counsel should confirm, and who must review the draft.
+output_shape: |-
+  SCOPE VERDICT
+    Employees: <n> | Net turnover: <€> | Verdict: <in scope | out of scope | undetermined> | First reporting year: <year | to confirm>
+    Not legal advice. Confirm with counsel.
+
+  DOUBLE MATERIALITY STEPS
+    <step>: <what to do>
+
+  GAP TABLE
+    <topic> | current state: <text | none given> | gap | priority | action
+
+  DRAFT DISCLOSURES
+    <topic>: <draft text | MISSING: datapoint>
+
+  CHECK BEFORE USE
+    <reviewer needed>
+works_best_with:
+  tools:
+    - name: Claude
+      why: Follows long legal rule chains and keeps a clear line between facts and guesses.
+    - name: Any AI with web access
+      why: Can check the latest law and dates, which this skill cannot confirm alone.
+  inputs:
+    - Your last annual report, to match current disclosures
+    - Your GRI or CDP report, if you have one
+    - A list of your top suppliers with their countries
+terms:
+  - term: CSRD
+    meaning: The EU law that makes larger companies publish sustainability reports.
+  - term: Double materiality
+    meaning: Weighing your impact on the world against the world's money risk to you.
+  - term: ESRS
+    meaning: The EU's reporting standards. They list what you must disclose on each topic.
+  - term: Value chain
+    meaning: Your suppliers upstream and your customers downstream.

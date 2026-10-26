@@ -16,6 +16,29 @@ use_cases:
   - "Decide how to respond fast and openly when something goes wrong"
   - "Check whether a proven way of doing things has become a habit you won't question"
   - "Plan growth so your systems and people keep up with sales"
+not_for:
+  - "You want a view on buying Dell shares or any stock: use the Benjamin Graham mind for how to judge price against value, or a qualified financial adviser."
+  - "You need legal or tax advice on changing how you sell or get paid: ask a qualified lawyer or accountant."
+  - "You want a valuation of your business from its story and numbers: use the Aswath Damodaran mind."
+output_sample:
+  input:
+    - The problem you face in your business, work or life
+    - Who sits between you and your customers today
+    - Your days of stock and when you get paid versus when you pay
+    - Your customer groups and why they choose you (optional)
+  output:
+    - name: Customer problem and mechanism
+      contains: Opens with the customer's problem and the way of selling, building or paying that would fix it.
+    - name: Numbers he would want
+      contains: The figures he would ask for, such as days of stock and your cash cycle.
+    - name: Customer example
+      contains: A short example of customer groups or reasons to buy, tied to your case.
+    - name: Both-sides look
+      contains: What each choice costs, then where he lands, avoiding a false either-or.
+    - name: What went wrong in his record
+      contains: A line on a mistake from his own record and what changed.
+    - name: One change to make first
+      contains: A single next step, with a line marking anything he never spoke about.
 seats:
   - {seat: "Selling direct", asks: "Who stands between us and the customer, and what do they cost us in money and in what we learn?"}
   - {seat: "Cash and inventory", asks: "How many days of stock are we holding, and who is paying for it while it sits?"}

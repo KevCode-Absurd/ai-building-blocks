@@ -2,34 +2,60 @@ thinking: medium
 thinking_why: It reads long sources and pulls out what matters.
 new_slug: research-paper-summarizer
 name: Research paper summarizer
-summary: Give it a paper, article or report. Get the key findings, plain
-  summaries and a comparison across sources.
+summary: Summarize a research paper in plain words. Give it a paper, article or report and get key findings, a source comparison and citations.
 job: think-and-decide
 headline: Research paper summarizer
-subhead: The key findings of a paper, article or report in plain language, plus
-  a comparison across several sources and correctly formatted citations. You
-  read less and still know what matters.
+subhead: Give it a paper, article or report. It pulls out the main findings, the method and the limits in plain words. With two or more sources, it compares them and formats your citations.
 explain: |
   The key findings of a paper, article or report in plain language, plus a comparison across several sources and correctly formatted citations. You read less and still know what matters.
 
   It works only on documents you give it and does no web search. For each source it extracts the main claims, method, results, limits and what it means for your question. When you give several, it builds a comparison that shows where they agree and disagree. It then formats citations in the style you ask for. The output is a short brief for decisions, not a generic summary. It suits product managers, analysts and founders who read a lot.
 when:
-  - You have ten papers to read before a meeting.
-  - A report is long and you need the findings and the catch.
+  - You have several papers to read before a meeting.
+  - A long report lands on your desk and you need the findings and the catch.
   - You want to compare three studies on one question.
-  - You need citations in a set style.
+  - You need a list of citations in a set style.
+not_for:
+  - You need to find papers on a topic first. Search a source like Google Scholar, then bring the papers back here.
+  - You want to work through numbers or product metrics. Use a spreadsheet or an analytics tool, since this only reads text.
+  - You need a legal, medical or safety decision. Ask a qualified person, because a summary can miss fine detail.
 you_give:
-  - Papers, articles or reports
-  - Question you are trying to answer (optional)
-  - Citation style (optional)
-  - Audience for the summary (optional)
+  - Your paper, article or report, pasted as text or attached
+  - The question you want answered (optional)
+  - The citation style you want (optional)
+  - Who the summary is for (optional)
 you_get:
-  - Key findings per source
-  - Plain language summary
-  - Side-by-side comparison
-  - Formatted citations
+  - The key findings of each source, with where each one appears
+  - A plain summary of the method and its limits
+  - A quality rating for each source
+  - A side-by-side comparison of two or more sources
+  - Citations in the style you ask for, APA 7 if you do not say
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open your AI chat and paste the skill text in first.
+  - Paste each source as text, or attach the file. Say what question you want answered.
+  - Add your citation style and who the summary is for, if you have them.
+  - For a comparison, give at least two sources.
+  - Check that each finding points to a place in the source. Fix anything marked not stated.
+  - The extractor scripts need code running. Without it, the AI still writes the summaries and citations by hand. Use the brief to write a decision memo or a first draft.
+output_sample:
+  input:
+    - Your paper, article or report, pasted as text or attached
+    - The question you want answered (optional)
+    - The citation style you want, such as APA 7 (optional)
+    - Two to five sources if you want a comparison (optional)
+  prerequisites:
+    - An AI chat that can read pasted text or attached files
+    - Code running is only needed for the optional citation extractor and summary template scripts
+  output:
+    - name: Source summary
+      contains: Title, authors, date, source type, main thesis, key findings with where each appears, method, limits and takeaways.
+    - name: Notable quotes
+      contains: Direct quotes from the source with page numbers.
+    - name: Quality rating
+      contains: A High, Medium or Low rating for credibility, evidence, recency and objectivity.
+    - name: Comparison matrix
+      contains: A table that sets each source side by side on thesis, method, finding, scope and credibility.
+    - name: Synthesis brief
+      contains: Consensus findings, contested points, gaps and a recommendation based on the weight of evidence.
+    - name: Bibliography
+      contains: Citations in your chosen style, sorted and tagged as primary, secondary or tertiary sources.

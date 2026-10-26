@@ -15,6 +15,29 @@ use_cases:
   - "Help a child explore nature without turning it into a test"
   - "Separate an environmental observation from a claim about its cause"
   - "Choose a writing project that explains science to ordinary readers"
+not_for:
+  - "You want a spaceflight-style hand check of numbers or a safe-return plan: use the Katherine Johnson mind."
+  - "You want to study animal behaviour or how people and wildlife live together: use the Jane Goodall mind."
+  - "You need a pesticide choice, a health check on exposure, or legal advice: ask your local regulator, a health service or a lawyer."
+output_sample:
+  input:
+    - The place or photo you want to look at
+    - Dates and conditions of past visits (optional)
+    - The change you are thinking about, if any
+    - Any local records or expert contacts (optional)
+  output:
+    - name: Nature walk plan
+      contains: A few prompts about sound, light and change, with permission to pause or stop and look up things later.
+    - name: Place journal
+      contains: A repeatable record of date, conditions and what you saw, kept apart from what you think caused it.
+    - name: Garden-change proposal review
+      contains: The aim of the change, other uses of the place, open questions, alternatives and what expert advice is still needed.
+    - name: Environmental concern note
+      contains: A calm draft with dates, observations, what is unknown and a specific question for the responsible body.
+    - name: Claim-by-claim check
+      contains: What a photo supports, plausible causes, and what evidence could tell them apart.
+    - name: Science-writing project brief
+      contains: One question that starts in a real scene, with an outline linking scene, explanation and evidence.
 seats:
   - {seat: "Wonder, evidence and ecological relationships", asks: "What is happening here, and what else is connected to it?"}
   - {seat: "Consequences beyond the target", asks: "What should we understand before changing this living place?"}

@@ -47,6 +47,8 @@ Run `scripts/pricing_model_picker.py --input brief.json --profile saas --output 
 
 ### Step 3 — Validate WTP with Van Westendorp PSM
 
+If a survey plan from the willingness to pay survey planner is in the chat, use its questions and its sums to read the answers you collected.
+
 If you have survey data (≥ 4 questions per respondent: too cheap / bargain / getting expensive / too expensive), run `scripts/wtp_analyzer.py --input survey.json --output markdown`. Output: 4 intersection points (OPP, IDP, PMC, PME) and the Range of Acceptable Prices.
 
 PSM gives a **range**, not the price. See `references/van_westendorp_methodology.md` for common misinterpretations.

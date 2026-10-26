@@ -1,6 +1,6 @@
 new_slug: weekly-priorities-plan
 name: Plan a week that puts what matters first
-summary: Paste your task list and roles. Get what to drop, hand off and protect, a role-based week and a Friday review.
+summary: Plan your week by putting the important work first. Paste your task list and roles. Get what to drop, a role-based week and a Friday review.
 job: plan-strategy
 thinking: high
 thinking_why: It runs four skills in a row and each one builds on the last. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - Your days fill with small urgent jobs and the big work never starts.
   - You are about to plan the week and want to know what to clear first.
   - You want to hand off more but past handoffs came back wrong.
+not_for:
+  - "You have one fixed deadline or a one-off project: use a plain to-do list or the project plan for that job."
+  - "You want to plan only a single day: write a short list of your top three jobs by hand."
+  - "You have no task list and no idea of your roles: write down your jobs and goals first, then come back."
 you_give:
   - Your task list or last week's calendar, with rough hours
   - Your roles, goals or values (optional but helps)
@@ -30,6 +34,25 @@ how_to_use:
   - Paste your task list and say what matters to you. Guess your own split before you read the answer.
   - Live the week with the plan in view. Note each time a loud job pulled you away.
   - On Friday, run the last step with those notes.
+output_sample:
+  input:
+    - Your task list or last week's calendar, with rough hours
+    - Your roles, goals or values (optional)
+    - A job you could hand to someone, and who (optional)
+    - Next week's fixed meetings and duties
+  prerequisites:
+    - Claude Code, or a Claude Project that can load files, to open the handoff pack
+  output:
+    - name: "Step 1: Urgent versus important sorter"
+      contains: Your tasks in four boxes, the real split of your hours, what to drop or hand off, and two polite refusals.
+    - name: "Step 2: Results agreement writer"
+      contains: "A one-page agreement for each handoff: the result, limits, help, review times and consequences."
+    - name: "Step 3: Values-to-week planner"
+      contains: A week built from your roles, with the important work booked first and open space left for people.
+    - name: "Step 4: Weekly time audit planner"
+      contains: What you chose against what took your time, and one hour won back for next week.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Urgent versus important sorter
     text: Sorts each task by two questions, counts the hours in each box, traces crises to missing prevention and marks what to drop, hand off or shrink.

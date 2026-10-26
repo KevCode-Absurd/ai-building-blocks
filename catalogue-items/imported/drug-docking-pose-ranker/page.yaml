@@ -2,36 +2,62 @@ thinking: high
 thinking_why: Reading docking confidence correctly takes expert judgement.
 new_slug: drug-docking-pose-ranker
 name: Drug docking pose ranker
-summary: Give it a protein and a molecule. Get predicted binding poses ranked by
-  confidence, with checks on each.
+summary: Rank predicted drug docking poses for a protein and a small molecule by model confidence, with checks to run on each pose before you trust it.
 job: research-topics
 headline: Drug docking pose ranker
-subhead: Predicted ways a small molecule could sit in a protein, ranked and
-  labelled with how far to trust them. Give it a protein and a molecule, and you
-  get candidate binding poses with confidence scores and checks on each.
+subhead: Give it a protein and a small molecule. It sets up DiffDock and ranks the likely ways the molecule could sit in the protein. You also get checks to run on each pose and a plain note on what the scores mean.
 explain: |
   Predicted ways a small molecule could sit in a protein, ranked and labelled with how far to trust them. Give it a protein and a molecule, and you get candidate binding poses with confidence scores and checks on each.
 
   The skill runs DiffDock, a published docking model, from its official code. It sets up the exact environment the model needs, runs one pair or a batch, and can try several protein shapes. It states plainly that confidence is not a measured probability and not binding strength. Sorting a large library by score is treated as rough triage, not finding hits. You need a GPU-ready setup, and some steps are untested recipes.
 when:
-  - You want likely binding poses for one protein and ligand pair.
+  - You want likely binding poses for one protein and one molecule.
   - You have a batch of molecules to dock against one target.
-  - You need a pose check before spending lab time.
-  - You want to know what the confidence score really means.
+  - You want a quick pose check before you spend lab time.
+  - You are unsure what a docking confidence score really means.
+not_for:
+  - "You want binding strength or potency: DiffDock does not predict affinity, so use a separate scoring step such as GNINA, then lab tests."
+  - "You want proof that a molecule does not bind: low confidence is not evidence of no binding, so check poses with PoseBusters and a chemist."
+  - "You want to dock large biomolecules, covalent bonds or metal binding: ask a computational chemist, because this skill covers small molecules only."
 you_give:
-  - A protein structure or sequence
-  - A ligand, such as a SMILES string
-  - A GPU environment with the DiffDock setup
-  - Alternate protein shapes (optional)
+  - Your protein as a PDB file or a full amino-acid sequence
+  - Your molecule as a SMILES string or a ligand file (SDF, MOL2, PDB or PDBQT)
+  - A computer with a GPU, or the DiffDock Docker image, and room for model downloads
+  - Extra protein shapes, one row each (optional)
 you_get:
-  - Ranked poses with confidence scores
-  - Per-pose checks
-  - Run commands for the DiffDock setup
-  - Notes on what the scores can and cannot show
+  - Ranked poses, each with a confidence score
+  - A high, moderate or low reading for each score
+  - Checks to run on every pose you plan to keep
+  - Commands to set up DiffDock and run one pair or a batch
+  - A plain note on what the scores cannot show
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run DiffDock on a computer with a strong
-    graphics card.
+  - Use an AI that can run code and read files, on a computer with a GPU. Or use the DiffDock Docker image.
+  - Give your AI the skill, your protein file or sequence, and your molecule.
+  - Ask it to set up DiffDock v1.1.3 and run one pair or a batch. Note that the pretrained docking run, Docker, GNINA and the hosted demo were not run in the skill's own review, so treat those commands as untested recipes.
+  - Check that every complex finished. Match the output names to your input list.
+  - Read the confidence bands, then run the pose checks on each pose you keep.
+  - Use independent validation before you act on a result.
+output_sample:
+  input:
+    - Your protein as a PDB file or a full amino-acid sequence
+    - Your small molecule as a SMILES string or an SDF, MOL2, PDB or PDBQT file
+    - A CSV of complexes, if you want to dock a batch (optional)
+    - Extra protein shapes, one row each (optional)
+  prerequisites:
+    - A computer with a strong graphics card (GPU) that can run DiffDock
+    - The DiffDock v1.1.3 code and its environment, or its Docker image
+    - Disk space and internet to download the model weights on first use
+    - An AI that can run code and read files
+  output:
+    - name: rank1.sdf
+      contains: A copy of the top-ranked pose for each complex.
+    - name: rank<N>_confidence<score>.sdf
+      contains: One file per predicted pose, ranked, with the model confidence score in the file name.
+    - name: Confidence reading
+      contains: Each score placed in a high, moderate or low band, with a reminder that it is not a probability.
+    - name: poses.csv
+      contains: Every parsed pose and its score in one table, made by the results helper.
+    - name: Pose checks
+      contains: A checklist for identity, stereochemistry, geometry, strain and clashes to run on each pose you keep.
+    - name: Run commands
+      contains: The setup, single pair, batch and config commands to run DiffDock.

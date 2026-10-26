@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It compares products to channels.
 new_slug: sales-channel-gap-finder
 name: Sales channel gap finder
-summary: Get live products that are not published to the sales channels you expect.
+summary: Find live Shopify products missing from Online Store, Google Shopping or Meta. Give it your store domain and get a list to fix. It only reads data.
 job: run-your-store
 headline: Sales channel gap finder
-subhead: A list of live products that are missing from the sales channels where
-  you expect them. A product that is active but absent from Google Shopping,
-  Meta or your online store earns nothing, and nobody notices the loss.
+subhead: A list of live products that are missing from the sales channels where you expect them. A product that is active but absent from Google Shopping, Meta or your online store earns nothing, and nobody notices the loss.
 explain: |
   A list of live products that are missing from the sales channels where you expect them. A product that is active but absent from Google Shopping, Meta or your online store earns nothing, and nobody notices the loss.
 
@@ -17,6 +15,10 @@ when:
   - You connected a new channel and want to confirm products are on it.
   - You suspect some active items were never published to the online store.
   - You want a regular check before a big sale.
+not_for:
+  - Some products are meant for one channel only, such as wholesale items. Review the flagged list before you publish anything.
+  - You want to change what is published. This only reads your store, so use your Shopify admin to publish.
+  - Your store is not on Shopify. Check each sales channel by hand, or export a product list from your own platform.
 you_give:
   - Your store domain
   - Channels every product must be on
@@ -28,8 +30,25 @@ you_get:
   - A report you can fix from
   - Assurance that nothing was changed
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
+  - Sign in to your store with the Shopify command line and allow read access to products and sales channels.
+  - Give your AI the skill text, your store domain and the channels every product must be on.
+  - Ask it to run the audit. It only reads data, so nothing in your store changes.
+  - Open the CSV and read the flagged list. Skip items that are left off a channel on purpose, then publish the rest in Shopify.
+output_sample:
+  input:
+    - Your store domain
+    - Channels every live product must be on (optional, Online Store is the default)
+    - "Report style: readable text or JSON (optional)"
+  prerequisites:
+    - An AI that can run code and use the Shopify command line
+    - A Shopify sign-in that allows read access to products and sales channels
+  output:
+    - name: Start banner
+      contains: The skill name, your store domain and the start time.
+    - name: Step log
+      contains: One line per step showing what was asked and how many results came back.
+    - name: Summary
+      contains: Counts of live products and sales channels, plus the products missing from each required channel.
+    - name: publication_audit CSV
+      contains: One row per product and channel with product id, title, handle, channel, published status, publish date and issue.

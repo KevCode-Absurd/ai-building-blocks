@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies a set law to your facts.
 new_slug: brazil-data-privacy-checker
 name: Brazil data privacy checker
-summary: Describe how you handle data about people in Brazil. Get your LGPD
-  duties, gaps and a plan to fix them.
+summary: Check your LGPD compliance for Brazil. Describe how you handle personal data and get a gap table, legal bases and a fix plan.
 job: check-contracts
 headline: Brazil data privacy checker
-subhead: A clear list of what Brazil's data protection law, the LGPD, asks of
-  you, where you fall short, and what to fix first. It matters because fines can
-  reach two percent of Brazilian revenue.
+subhead: A clear list of what Brazil's data protection law, the LGPD, asks of you, where you fall short, and what to fix first. It matters because fines can reach two percent of Brazilian revenue.
 explain: |
   A clear list of what Brazil's data protection law, the LGPD, asks of you, where you fall short, and what to fix first. It matters because fines can reach two percent of Brazilian revenue.
 
@@ -18,6 +15,10 @@ when:
   - You need to pick a legal basis for a new way of using customer data.
   - You had a data leak and need to know who to tell and when.
   - You must send data out of Brazil and need to know the rules.
+not_for:
+  - "You only deal with EU or Portugal customers and need GDPR advice: ask a privacy lawyer in that region."
+  - "You need rules for banking, health or other sector law: ask a lawyer who knows that sector."
+  - "You need legal advice you can rely on or a signed opinion: take the result to a Brazilian data protection lawyer."
 you_give:
   - A description of the personal data you hold
   - Why you collect it and who receives it
@@ -30,7 +31,27 @@ you_get:
   - Breach notification checklist
   - Penalty exposure notes
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. No code or paid tool is needed.
+  - Describe the personal data you hold, why you collect it, where it is stored and who receives it.
+  - "Say what you need: a gap check, a legal basis, a rights request plan, a breach plan or a transfer check."
+  - Read the gap table first. Fix the high priority rows first.
+  - Take the result to a Brazilian lawyer. Mark which items need their sign-off.
+output_sample:
+  input:
+    - A description of the personal data you collect and why
+    - Where the data is stored and who receives it
+    - Your current privacy policy (optional)
+    - Your question, such as a gap check, a breach or a data transfer
+  output:
+    - name: Gap assessment table
+      contains: Each LGPD requirement with your current state, the gap, a priority and a recommended action, with article citations.
+    - name: Legal basis analysis
+      contains: The legal basis that fits each way you use data, with extra checks for sensitive data.
+    - name: Data subject request workflow
+      contains: Step-by-step handling of rights requests from people, with timelines.
+    - name: Breach response checklist
+      contains: An incident timeline and a checklist for telling the data authority and affected people.
+    - name: Penalty exposure table
+      contains: The fines and other sanctions that could apply to your gaps, citing Art. 52.
+    - name: LGPD and GDPR notes
+      contains: Where Brazil's law is like GDPR and where it differs.

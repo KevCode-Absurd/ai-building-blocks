@@ -1,51 +1,124 @@
 new_slug: construction-funding-evidence-reviewer
-name: Construction funding evidence reviewer
-headline: Construction funding evidence reviewer
-summary: A dated evidence review with changed assumptions, reconciliations and unresolved source gaps.
+name: Construction completion funding reviewer
+headline: Construction completion funding reviewer
+summary: Review changed build costs and draw dates. Recheck interest and available funding, with any completion shortfall shown openly.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A construction funding, capitalized interest and completion gap schedule. Share certified annual costs and approved draw timing, usable equity/debt commitments, fixed construction interest terms, spent costs and current completion estimate/contingency. Include the previous dated review and source versions when available.
-explain: |-
-  A construction funding, capitalized interest and completion gap schedule.
+subhead: Give it your certified costs, the debt and equity you can still use, the loan's interest terms, the real draw dates and the latest cost to complete. It compares them with your last review, rebuilds the draw schedule and the interest added to the loan, and tests the final loan against its limit. You get the schedule, the funding gap, and a short record to start the next review from.
 
-  Project construction funding. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+explain: |
+  A construction loan grows while you build. Interest is often added to the loan each year instead of paid in cash. So when a draw is paid out a few months later than planned, the interest and the final loan balance both change. Many teams find out only when the loan reaches its limit and the last invoices have no money behind them.
+
+  This agent keeps a small record of the last review: the project, the cost version, the draw timing, the interest terms, the commitments left and the funding gap. Each time you run it, it compares new evidence with that record. A bank draw notice, a new certified cost or a revised cost to complete is enough to start a review. If nothing changed, it says so and stops. If something did, it plans the draws (equity first, if your contract says so), builds the interest schedule, and works out what is still unfunded.
+
+  When only a draw date changed, it reruns the interest step with the real timing and tests the final loan, interest included, against the commitment that is left. Interest the loan cannot cover stays on the page as a gap. It is never treated as paid by someone. The agent reviews and reports. It does not move money, contact the lender or start a schedule.
+
 when:
-  - You need a construction funding, capitalized interest and completion gap schedule.
-  - You work on project construction funding and need traceable calculations.
-  - New evidence needs comparison with the prior dated review.
+  - A bank notice shows a draw was paid out later than your plan assumed.
+  - The cost consultant certifies a new cost figure or a revised cost to complete.
+  - The lender lowers, or raises, the amount you can still draw.
+  - You need to show whether the loan, with its interest added, stays inside its limit.
+
+not_for:
+  - The project is finished and the loan is repaid. There is nothing left to fund, so a review adds nothing.
+  - You only want the interest schedule from a draw plan you already trust. Use the Construction loan interest calculator.
+  - You only want the gap between cost to complete and cash left. Use the Project completion funding checker.
+  - Your draw dates are plans, not bank records. It marks them MISSING and stops those lines, because it will not guess a date.
+
+output_sample:
+  input:
+    - Your certified yearly costs and the approved draw timing
+    - The debt and equity you can still use, and the loan limit with interest included
+    - The loan's fixed rate, and how interest is added to the loan
+    - The bank's real draw dates, and your cost to complete with its contingency
+    - The record from your last review (optional)
+  prerequisites:
+    - An AI that can read files, such as Claude, ChatGPT or Gemini
+    - The pack's two component files added to your AI
+    - A spreadsheet-capable AI if you want a workbook (optional)
+  output:
+    - name: Changed since last review
+      contains: Each cost, draw date or commitment that moved, with its old value, new value and source.
+    - name: Draw schedule
+      contains: Cost, equity, debt and unfunded amount for each year, with equity first if your contract says so.
+    - name: Interest schedule
+      contains: Opening loan, draws, share of year, interest and closing loan for each year, with an add-up check.
+    - name: Against limit
+      contains: The final loan with interest against what is left to draw, with any uncovered interest shown.
+    - name: Completion gap
+      contains: Cost to complete, contingency and interest to come, against usable cash and commitments left.
+    - name: Record for next review
+      contains: A short record to paste into your next run.
+    - name: Missing and checks missed
+      contains: Each gap, and each check that failed or could not run.
+
 you_give:
-  - Certified annual costs and approved draw timing, usable equity/debt commitments, fixed construction interest terms, spent costs and current completion estimate/contingency. Include the previous dated review and source versions when available.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Certified annual costs and the approved draw timing (from the cost consultant's certificates and the loan agreement)
+  - The equity and debt you can still use, by source (from the loan agreement and the equity commitment letter)
+  - The fixed interest rate and how interest is added to the loan (from the loan agreement)
+  - Costs already spent, and the current cost to complete with its contingency (from the latest cost report)
+  - The real draw dates (from the bank's draw notices)
+  - The last review's record and the earlier source versions (optional, needed to see what changed)
+  - The reporting date, the currency and the scale, such as thousands
+
 you_get:
-  - A construction funding, capitalized interest and completion gap schedule.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - What changed since the last review, source by source
+  - A draw schedule by year, equity first, with debt capped at what is left to draw
+  - An interest schedule: opening loan, draws, share of the year outstanding, interest and closing loan, year by year
+  - The final loan against its limit, with any interest the loan cannot cover shown as a funding gap
+  - A short record to paste into the next review, plus MISSING lines and any checks that could not run
+
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. The pack holds the Construction funding and interest checker workflow and the Construction loan interest calculator. In a chat-only tool it still works, but it cannot save files, so you keep the record it hands back.
+  - Say whether this is the first run. If not, paste the record from last time. Then attach the cost certificates, the loan terms, the bank's draw notices and the latest cost to complete.
+  - Read "changed since last review" first. Check each changed date or amount against the document it came from.
+  - Test the closing loan yourself. Opening loan plus draws plus interest should equal the closing loan, year by year.
+  - Fix every MISSING line. Run it again whenever a cost, a draw date or a commitment changes. Installing it sets up no schedule.
+
 how_it_works:
-  - title: Reconcile construction draws and completion funding
-    text: Run the governing workflow when A certified cost, actual debt draw date, completion estimate or usable commitment changes.
-  - title: Construction interest schedule builder
-    text: If actual draw timing differs from the prior assumption, recalculate capitalized interest with the evidenced timing fraction and test final debt against remaining commitment. Preserve uncovered interest as a funding gap.
-output_shape: |-
-  A construction funding, capitalized interest and completion gap schedule.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  - title: Compares with the last review
+    text: Reads the saved record if it belongs to this project, or sets a first baseline. Compares the cost version, draw timing, interest terms and commitments. If nothing changed and no review is due, it says so and stops.
+  - title: Plans the draws
+    text: Spreads certified costs across the years using your contract's funding order, equity first if that is the rule. Debt is capped at the commitment left. Hands the debt draws and the undrawn commitment by year to the next steps.
+  - title: Builds the interest
+    text: Works out each year's interest from the opening loan plus each draw weighted by the part of the year it was outstanding. Adds it to the loan at year end only if the contract says so. Keeps interest out of the cost-only draw schedule.
+  - title: Reruns on a new draw date
+    text: If the bank shows a draw on a different date from the earlier plan, it uses the real timing for that year and recalculates. Years with no new evidence keep their old inputs.
+  - title: Tests the loan against its limit
+    text: Compares the final loan, with interest, against the commitment. Interest above the limit is kept as a funding gap. It is never counted as financed.
+  - title: Finds the completion gap
+    text: Adds the unpaid cost to complete, with contingency, and the interest still to come. Compares the total with usable cash and the commitments left. Keeps a cost overrun apart from a funding gap.
+  - title: Saves the record
+    text: Writes the small record for next time and lists what is still MISSING. It proposes a state update and keeps the old one.
+
+output_shape: |
+  REVIEW DATE <date>, <currency>, <scale>   LAST REVIEW <date or first run>
+
+  CHANGED SINCE LAST REVIEW  <source, old value, new value>
+  DRAW SCHEDULE   year | cost | equity | debt | unfunded
+  INTEREST        rate <n>%, added at <when>
+                  year | opening | draw | share of year | interest | closing
+                  check: opening + draws + interest = closing
+  AGAINST LIMIT   final loan <n>, commitment <n>, uncovered interest <n or none>
+  COMPLETION GAP  cost to complete <n> + contingency <n> + interest to come <n>
+                  usable cash <n>, commitments left <n>, gap <n or none>
+
+  RECORD FOR NEXT REVIEW  project, cost version, draw timing, interest terms,
+                          commitments left, funding gap
+  MISSING  <each gap, and the line it stops>
+  CHECKS MISSED  <one line each, or none>
+
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Cost draws exclude separately capitalized interest; interest is checked against commitment capacity; no uncovered interest or cost is silently financed. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
+  - what: A later draw
+    how: Move one draw date later. Its share of the year falls, interest falls with it, and the closing loan drops by the same amount.
+  - what: A lower loan limit
+    how: Cut the commitment left and run it again. The interest the loan cannot cover shows up as a gap, and the earlier years do not change.
+  - what: A new cost to complete
+    how: Add a revised estimate with its contingency. The completion gap moves. The interest schedule stays the same, because it depends on draws, not on the estimate.
+  - what: A workbook
+    how: Say you want a native spreadsheet. It builds one with inputs, formulas and a checks tab, and tells you what it could not verify.
+
 judge:
   - Cost draws exclude separately capitalized interest; interest is checked against commitment capacity; no uncovered interest or cost is silently financed. Report changed evidence and actual recalculation; no external transaction or submission is authorized.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -56,17 +129,34 @@ test:
   - Remove one required source and confirm the affected step stops.
   - Change a currency, date or accounting definition and check the conflict stays visible.
 improve:
-  - Add a dated approved example and your actual acceptance rules.
-  - Record corrections with the affected source and model version.
+  - Keep the record from each review in one folder named by date, so the next run starts from the true earlier state.
+  - Write the loan's interest rule once in the agent's file: the rate, and whether interest is added each year or paid in cash.
+  - Keep every bank draw notice with its date. The interest depends on those dates, and an estimate hides the drift.
+  - Pair it with the Loan covenant cash cover reviewer once the project starts to repay, and with the Project completion funding checker when you only need the last step.
+
 works_best_with:
   tools:
     - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+      why: Builds a workbook with inputs and formulas you can click into, and can save the record file for next time. In plain chat it returns the same tables as text.
+    - name: Your bank's draw notices
+      why: Give the real draw dates, so the interest rests on facts and not on the plan.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The loan agreement pages that set the rate, the limit and how interest is added.
+    - The cost consultant's latest certificate and cost to complete, with their dates.
+    - A named person who owns the budget and will check the limit.
+
 terms:
+  - term: Capitalized interest
+    meaning: Interest added to the loan balance instead of being paid in cash. It then earns interest itself the next year.
+  - term: Draw
+    meaning: A payment the lender releases from the loan to pay project costs.
+  - term: Share of the year outstanding
+    meaning: How much of the year a draw was out. A draw paid on 1 October was out for 0.25 of the year.
+  - term: Commitment
+    meaning: The amount a lender or investor has agreed to provide and that you can still use.
+  - term: Cost to complete
+    meaning: The cost still to be paid before the project is done.
+  - term: Funding gap
+    meaning: Money the project needs that no usable cash or commitment covers.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the calculation works, with no claim about a real project.

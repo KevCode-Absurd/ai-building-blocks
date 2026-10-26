@@ -15,11 +15,11 @@ outputs:
   - {type: shortlist}
 uses: [five-forces-industry-checker, business-power-tester, counter-positioning-finder, first-market-picker, go-or-no-go-launch-checker]
 steps:
-  - {uses: five-forces-industry-checker, note: "Buyer power, supplier power, ease of entry, substitutes and rivalry, each scored with the evidence, and where the profit in the industry sits."}
-  - {uses: business-power-tester, note: "Which of Hamilton Helmer's seven powers you could build here, which you could not, and the one to aim for first."}
-  - {uses: counter-positioning-finder, note: "A way of operating that incumbents cannot copy without hurting their own business, or the honest finding that there is none here."}
-  - {uses: first-market-picker, note: "The first small market to win, in Peter Thiel's manner: small enough to dominate, with buyers who feel the problem most, and the markets after it."}
-  - {uses: go-or-no-go-launch-checker, note: "Go or no go, with the three facts the call rests on, the weak joints, and what would change the call, in Sun Tzu's manner of weighing the odds before the fight."}
+  - {uses: five-forces-industry-checker, note: "Buyer power, supplier power, ease of entry, substitutes and rivalry, each scored with the evidence, and where the profit in the industry sits. Hands the forces read to steps 2 and 3."}
+  - {uses: business-power-tester, note: "Which of Hamilton Helmer's seven powers you could build here, which you could not, and the one to aim for first. Takes the five forces read from step 1 and hands the powers read to step 3."}
+  - {uses: counter-positioning-finder, note: "A way of operating that incumbents cannot copy without hurting their own business, or the honest finding that there is none here. Takes the forces and the powers and hands the counter-position to step 4."}
+  - {uses: first-market-picker, note: "The first small market to win, in Peter Thiel's manner: small enough to dominate, with buyers who feel the problem most, and the markets after it. Takes the counter-position from step 3 and hands the shortlist to step 5."}
+  - {uses: go-or-no-go-launch-checker, note: "Go or no go, with the three facts the call rests on, the weak joints, and what would change the call, in Sun Tzu's manner of weighing the odds before the fight. Uses your launch plan if you have one, or the first market and counter-position as a thin plan, and marks what is missing."}
 origin: own
 version: 1.0.0
 minds: [michael-porter, hamilton-helmer, peter-thiel, sun-tzu]

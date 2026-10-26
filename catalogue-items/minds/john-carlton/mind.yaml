@@ -16,6 +16,27 @@ use_cases:
   - "Add a second offer for people who just bought"
   - "Prepare before you write, so you never stare at a blank page"
   - "Pitch your own services as if you were your first client"
+not_for:
+  - "You want long-term brand building over years: use the Byron Sharp mind, who works from buying data on brand growth and reach."
+  - "You need to explain why the right buyers should pick your product over others: use the April Dunford mind."
+  - "You want plain writing tips for blogs and newsletters, not hard-sell copy: use the Ann Handley mind."
+output_sample:
+  input:
+    - Your draft copy, such as a sales page, email or homepage intro
+    - Your offer and who you think the buyer is
+    - Questions your buyers or support team really send you
+    - Any sales or refund numbers you have (optional)
+  output:
+    - name: Rewritten passage
+      contains: Your draft redone so it sounds like a person talking to one reader who already wants what you sell.
+    - name: Cut lines
+      contains: The lines that fail the gun-to-the-head test, with a short reason each one goes.
+    - name: Research questions for staff
+      contains: Three questions to ask the people who answer your phones and sell for you, to learn why buyers really buy.
+    - name: One cheap test
+      contains: A small test of your offer with a stated budget and a deadline, so you know by the end of the week.
+    - name: Beyond his record flags
+      contains: A line that marks any answer outside his public work, so you know where it is our guess.
 seats:
   - {seat: "Sell like a person talks", asks: "If you said this out loud to one buyer across a table, would they lean in or look at their phone?"}
   - {seat: "Reality check", asks: "What do your buyers actually do, as opposed to what they tell you they'll do?"}

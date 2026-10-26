@@ -1,37 +1,125 @@
 new_slug: google-ads-developer-access-setup-planner
 name: Google Ads token and access check planner
-summary: Plan the final Google Ads access check. Keep tokens private and verify the selected manager and target account with a read probe.
+summary: Plan a safe read-only test of your Google Ads API access, covering developer token, OAuth login and manager account, with no secret shown.
 job: connect-tools
 headline: Google Ads token and access check planner
-subhead: Plan the final Google Ads access check. Keep tokens private and verify the selected manager and target account with a read probe.
+subhead: Give it your manager and target account IDs, your developer token's access level and the names of your settings. It plans one small read-only request that proves your Google Ads API access works. You get a settings check, an error map and a probe plan, with no secret exposed.
 explain: |-
-  Share the selected codebase, schemas and service setup. Get a concrete setup or code-change plan with required files.
+  Getting Google Ads API access to work has three parts that look the same when they fail. Your developer token must be approved. Your OAuth login must be valid. Your manager account must be linked to the account you want to read. When a call returns "permission denied", it's hard to know which part broke.
 
-  Follow the actual current account/project structure rather than source screenshots or fixed historical settings.
+  This skill separates the three. It checks each one by name, then plans one tiny read that returns only the account's own ID and name. It maps each kind of error to one cause. It keeps every secret out of chat, screenshots and reports. It never asks for write access to make a test pass.
+
+  Use it after your Google Cloud project, OAuth client and manager link exist. It plans the check. It does not sign in, call the API or store a secret. The owner runs the probe.
 when:
-  - You need a concrete setup or code-change plan with required files.
+  - You have a developer token and an OAuth client, and the first Google Ads API call fails with "permission denied" or "not authorized".
+  - You manage client accounts through a manager account and the target account does not show up.
+  - You are moving from a test account to a live one and want to know what access level you need.
+  - A teammate handed you a script that is not in the repository and you need a safe way to check access.
+not_for:
+  - You haven't made the Google Cloud project or OAuth client yet. Use the Google Ads Cloud and OAuth client planner first.
+  - You want to change campaigns, budgets or ads. This is read-only and changes nothing.
+  - You want to pull reports and analyse results. Get access working here, then use the Ad sales drop analyst on an export.
+  - You are connecting Meta, not Google. Use the Meta developer app setup planner.
 you_give:
-  - The selected codebase, schemas and service setup
-  - The exact change you want and actions you authorize
+  - Your manager account ID and the target account ID (redacted is fine)
+  - The access level your developer token shows in your manager account
+  - Your OAuth client type, such as desktop or web
+  - The names of your secret settings and where they are stored (not the values)
+  - The file in your code that loads these settings (optional)
 you_get:
-  - A concrete setup or code-change plan with required files
-  - Missing inputs and a bounded verification plan
+  - A map from manager account to target account
+  - A present, missing or unknown list for each setting, by name
+  - A plan for the OAuth step and where each secret is stored
+  - One small read-only test, with what a correct answer shows
+  - An error map and a list of checks that did not run, with reasons
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Open the skill in your AI. An AI that can read your code, such as Claude Code or Codex, is best. A plain chat works too.
+  - Paste your account IDs (redacted is fine), your token's access level and your setting names. Never paste a token, secret or refresh token. If you did, replace it.
+  - Read SETTINGS CHECK first. Fix every MISSING item in your own secure settings.
+  - Read the READ PROBE. Run that one request yourself, then send back the redacted result.
+  - If it fails, use the ERROR MAP to find which of the three parts broke.
+  - Keep your notes with the account IDs redacted before you share them.
 how_it_works:
-  - title: Step 1
-    text: Use this after the Cloud project, consent configuration, OAuth client and manager/account relationship are already established. Confirm the exact manager and target account and the intended read-only diagnostic use. The separate Cloud/client setup planner covers the earlier setup phase.
-  - title: Step 2
-    text: Check the current developer-token application and access level required for the intended test or production accounts. Distinguish token eligibility, account linkage and OAuth authorization. A developer token does not by itself grant access to every managed account.
-  - title: Step 3
-    text: Generate or refresh user authorization through the current official supported OAuth flow for the client type. Store client secret, refresh token and developer token only in the selected secure settings. Never paste token values into chat, screenshots or a public report.
-  - title: Step 4
-    text: Verify required configuration is present without printing secret contents. Treat numeric account IDs and the manager login context separately. If a source mentions a helper script, inspect the selected repository and confirm that script exists before proposing its use; otherwise give a self-contained read-only verification plan.
-  - title: Step 5
-    text: Plan or run only an authorized minimal account-information query. Validate returned identity and scope before any broad collection. Diagnose token, OAuth, manager-login, access-level and missing-account errors separately. Never request write authority merely to make a read-only probe succeed.
-  - title: Step 6
-    text: Return configuration-field names, missing setup, a redacted verification result or exact not-run reason, and next steps. No campaign settings are changed. An OAuth credential existing is not proof that a production account query succeeded.
+  - title: Confirms the stage
+    text: Checks that your Cloud project, OAuth client and manager link already exist. If not, it points you to the earlier planner.
+  - title: Names both accounts
+    text: Records the manager and the target account separately. A manager ID is not the target account ID.
+  - title: Checks token and access level
+    text: Notes that a developer token does not open every account, and what your level allows for test and live accounts.
+  - title: Plans the login step
+    text: Picks the current supported flow for your client type, asks for offline access and sends the refresh token to secure storage only.
+  - title: Plans one small read
+    text: Asks only for the account's own ID and name, with the manager login ID set when needed, and states a correct answer first.
+  - title: Maps errors to causes
+    text: Splits token, login, manager ID, link and mistyped ID errors so you fix one thing at a time.
+output_shape: |-
+  BASIS
+  <what was read>
+  MISSING: <each missing input and what it stops>
+
+  ACCESS MAP
+  <manager, redacted> -> <target, redacted> | <read-only use>
+
+  SETTINGS CHECK
+  <field name> | PRESENT / MISSING / UNKNOWN | <where stored>
+
+  TOKEN AND OAUTH PLAN
+  <step> | <who does it> | <what is stored where>
+
+  READ PROBE
+  <the one read> | <login ID used> | <correct answer> | <redacted result or NOT RUN>
+
+  ERROR MAP
+  <symptom> | <likely cause> | <first check>
+
+  NOT RUN
+  <check> | <exact reason>
+
+  NEXT STEP
+  <the smallest useful thing to do now>
+output_sample:
+  input:
+    - Your manager account ID and the target account ID (redacted is fine)
+    - The access level your developer token shows
+    - Your OAuth client type
+    - The names of your secret settings and where they are stored
+  prerequisites:
+    - A Google Cloud project and OAuth client, made with the Google Ads Cloud and OAuth client planner
+    - A manager account linked to the account you want to read
+  output:
+    - name: ACCESS MAP
+      contains: The manager account and the target account, redacted, and the read-only use.
+    - name: SETTINGS CHECK
+      contains: Each setting by name, marked present, missing or unknown, with where it is stored.
+    - name: TOKEN AND OAUTH PLAN
+      contains: Who does each login step and where each secret ends up.
+    - name: READ PROBE
+      contains: The one small read-only request, the login ID it uses and what a correct answer shows.
+    - name: ERROR MAP
+      contains: Each kind of failure matched to one likely cause and the first thing to check.
+    - name: NOT RUN
+      contains: Every check that did not run, with the exact reason.
+    - name: NEXT STEP
+      contains: The one smallest step to take next.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: Reads your settings loader and confirms any helper script exists before suggesting it.
+    - name: Google Ads
+      why: The API Center page in your manager account shows your developer token's access level.
+  inputs:
+    - A copy of the exact error message, with IDs redacted
+    - The name of the file that loads your settings
+terms:
+  - term: Developer token
+    meaning: A code from Google that identifies you as an API developer. It is private.
+  - term: Manager account
+    meaning: A Google Ads account that can view and run other accounts you link to it.
+  - term: OAuth
+    meaning: A way to let your code use your Google login without sharing your password.
+  - term: Refresh token
+    meaning: A private code your app keeps so it can sign in again without asking you every time.
+  - term: Read probe
+    meaning: One small request that only reads, used to prove access works.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

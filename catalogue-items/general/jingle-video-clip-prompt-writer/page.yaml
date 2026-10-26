@@ -1,6 +1,6 @@
 new_slug: jingle-video-clip-prompt-writer
 name: "Jingle video clip prompt writer"
-summary: "Paste your song script and attach product photos. Get the music prompt and clip prompts cut on the beat."
+summary: "Turn a song ad script into a music prompt and video clip prompts cut on the beat. Paste your script and product photos, then approve three checkpoints."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several stages and keeps many rules at once across a long output."
@@ -17,6 +17,10 @@ when:
   - You have a song ad script laid out in bars and need to make the music and the animated video.
   - Earlier tries gave you cuts that missed the beat, or a singer who looked different in every shot.
   - You want to approve each step before you spend credits on a music tool and a video tool.
+not_for:
+  - "You need live-action talent or a real product shoot: use the video ad shot list maker, or hire a videographer."
+  - "You don't have a song script in bars yet: write the script first, then come back here."
+  - "You want a spoken ad with no music: use a plain video ad script writer instead of a song tool."
 
 you_give:
   - The song script, with the lyric in bars, the sound brief, the pictures, who sings and the cast note
@@ -35,6 +39,32 @@ how_to_use:
   - Approve the avatar card, make the reference images and pick one, then approve the sheets.
   - Paste the music prompt into your music tool, make a few whole takes, and pick one. Tell the skill its tempo, or paste its word times if it drifted.
   - Approve the storyboard against the track, then make each clip and cut the edit on the bar lines.
+output_sample:
+  input:
+    - Your song script, with the lyric in bars, the sound brief and who sings
+    - "Photos of your product: front, side and top"
+    - Your brand colours (optional)
+    - Your music, image and video tools, and their clip lengths (optional)
+  prerequisites:
+    - An AI chat that can read your photos
+    - A music tool, an image tool and a video tool of your choice, to make the files from the prompts
+  output:
+    - name: Avatar card
+      contains: "A short description of the animated lead: role, look, clothes, item, voice tone and what never changes. You approve it."
+    - name: Reference images
+      contains: A prompt for three or four images of the lead, and a pick of the best one.
+    - name: Sheets and lock lines
+      contains: Character, product and set sheets, plus fixed lines that keep the lead and the look the same. You approve them.
+    - name: Music prompt and take rule
+      contains: A prompt that starts singing at 0 seconds and ends on your tag, with a rule to make whole takes and pick one.
+    - name: Bar grid and storyboard
+      contains: The timing of each bar from the chosen take, then shots of one or two bars that cut on a downbeat. You approve it.
+    - name: Clip prompts
+      contains: One prompt per clip, with motion timed to the beat and a hold line to keep the look steady.
+    - name: Lip-sync notes and edit list
+      contains: Which shots sing and how, then the cuts on the bar lines, with the offer over the tag.
+    - name: Checks missed
+      contains: One line for each check still missed, or none, plus any facts the skill needed and did not have.
 
 how_it_works:
   - title: Takes in the script

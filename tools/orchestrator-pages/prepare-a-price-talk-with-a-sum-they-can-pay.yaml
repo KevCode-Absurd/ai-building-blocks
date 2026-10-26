@@ -1,6 +1,6 @@
 new_slug: prepare-a-price-talk-with-a-sum-they-can-pay
 name: Prepare a price talk with a sum they can pay
-summary: Give it the deal. Get your stance, their side, a sum they can meet and your opening lines.
+summary: Prepare a price talk with a sum they can pay. Give it the deal and what you know of their money. You get your stance, their side and opening lines.
 job: sell-and-negotiate
 thinking: high
 thinking_why: It runs four skills in a row, and the sum step does real arithmetic on what the other side can pay. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are setting a price, fee, rent, debt or settlement and fear it is more than they can pay.
   - The other side has more power, or you will deal with them again.
   - You want a fair number you can defend, not a split in the middle.
+not_for:
+  - You are buying something small and the other side has no money to check. Skip this and just ask for a fair price.
+  - You only need the call lines and already know your stance and their side. Use the Negotiation call prep planner alone.
+  - You are upset and the talk is about a row, not a price. Use the Difficult conversation repair planner.
 you_give:
   - The deal, who is involved, what you want and what is at stake
   - Your terms, split into parts if you can (price, fees, dates)
@@ -30,15 +34,35 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Paste what you know of their money, even rough numbers. Without it the sum step has to guess, and it will say so.
   - Read the sum and the walk-away line before you open the talk. They are yours to change.
+output_sample:
+  input:
+    - The deal, who is involved, what you want and what is at stake
+    - Your terms, split into parts if you can (price, fees, dates)
+    - What you know of their money, even rough figures
+    - Your must-haves and your walk-away point (optional)
+    - What the other side has said so far, in their words (optional)
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Stance"
+      contains: Each side's likely stance, what a win means for each, and a kind way to say your walk-away line.
+    - name: "Step 2: Their side"
+      contains: What they want, the pressure on them, where they are right, and a way for them to save face.
+    - name: "Step 3: The sum"
+      contains: Your ask split into parts with ranges, what they can pay, the gap, and one proposed sum or set of terms.
+    - name: "Step 4: The call"
+      contains: Your opening lines, questions to ask, a safe-no question and what to listen for.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Set your stance and walk-away line
     text: Names the stance each side is likely to take, what a win means to each, and the point where you would rather have no deal.
   - title: Map their side
-    text: Writes what they want, why a fair person in their place would act as they do, and how they can change course without losing face.
+    text: Writes what they want, why a fair person in their place would act as they do, and how they can change course without losing face. Hands steps 3 and 4 that map.
   - title: Test the ask against what they can pay
-    text: Splits your ask into parts, gives each a low, middle and high figure, and works out what they can pay and still keep something to run on. It ends on one sum or set of terms.
+    text: Uses what step 2 found about their pressures. Splits your ask into parts, gives each a low, middle and high figure, and works out what they can pay and still keep something to run on. It ends on one sum or set of terms, which step 4 builds on.
   - title: Write the opening and the questions
-    text: Says their likely fears out loud first, adds how and what questions, a safe-no question and a plan for a fast yes.
+    text: Uses their side from step 2 and the sum from step 3. Says their likely fears out loud first, adds how and what questions, a safe-no question and a plan for a fast yes.
 output_shape: |-
   STEP 1: STANCE
     Stances | what a win is for each side | walk-away line

@@ -16,6 +16,30 @@ use_cases:
   - "Brief a small team so the parts a project can't do without get checked every day"
   - "Decide where a small budget will show most to the people watching"
   - "Turn a giveaway or a good cause into content people want to share"
+not_for:
+  - "You want a proven ad pitch built on research and product facts: use the David Ogilvy mind."
+  - "You need legal, medical or financial advice, or a view count forecast: ask a qualified professional or read your own analytics."
+  - "You want his views on recent news or his private life: his record here stops at 2024 and it does not cover either, so read his own recent public words."
+output_sample:
+  input:
+    - Your video idea, product or launch in a few lines
+    - Your draft title and a description of the thumbnail (optional)
+    - Your outline or opening minute (optional)
+    - Your budget and any limits on time or team
+    - Your view or drop-off data from past videos (optional)
+  output:
+    - name: Title options
+      contains: A short list of titles that make one clear promise the video can keep.
+    - name: Thumbnail description
+      contains: A clean picture idea with one clear face or object, and why it reads at a glance.
+    - name: First-minute beat
+      contains: What the opening must show so it delivers what the title and thumbnail promised.
+    - name: Critical-parts checklist
+      contains: The parts that could sink the project, who owns each, and when to check them.
+    - name: Who to call first
+      contains: The kind of expert to ask before you start, to save time.
+    - name: One change to test
+      contains: The single thing to improve in the next video, with a small-budget version if needed.
 seats:
   - {seat: "Video that holds attention", asks: "Would you click this, and is there a reason to keep watching every few seconds after you do?"}
   - {seat: "Packaging and the click", asks: "What's the title and thumbnail? If we can't picture them, is the idea ready?"}

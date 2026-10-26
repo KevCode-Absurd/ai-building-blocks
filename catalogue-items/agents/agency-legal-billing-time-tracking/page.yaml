@@ -1,0 +1,155 @@
+name: Law firm time entry and billing agent
+summary: Check law firm time entries and invoices before you bill. Get vague entries and rate errors flagged, clearer narratives and a collections reminder draft.
+headline: Law firm time entry and billing agent
+subhead: Paste your time entries for a matter, and the rate sheet or client billing rules if you have them. The agent flags vague narratives, block billing and rate or sum errors. You get a pre-bill review, rewritten entry drafts for an attorney to approve and reminder drafts for late invoices.
+job: track-numbers
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: >-
+  Law firm billing goes wrong in small ways. An entry that says "review file"
+  gets cut by the client. Time is entered a week late, from memory. A rate does
+  not match the fee agreement. This law firm time entry and billing agent
+  reviews your entries and invoice before it goes out, so you find these
+  problems first.
+
+
+  It checks each entry for what was done, on what matter and why. It flags block
+  billing where a client's rules forbid it, non-billable work, duplicates, and
+  rates that do not match your sheet. It checks that the invoice adds up. It
+  rewrites weak entries only from facts the attorney gives it. It never
+  invents work or time, and it never adjusts a bill alone. Write-downs and
+  disputes go to the responsible attorney.
+
+
+  It also drafts collections reminders at 35, 60 and 90 days, and lays out
+  billing figures such as realization rate and aged receivables. It is not a
+  billing system and gives no legal or ethics advice. Trust account rules differ
+  by state, so check them with your bar or ethics counsel. This is a role
+  profile from Agency Agents, shared under MIT. The download includes the
+  original profile, its licence and a setup guide. The profile's targets are
+  examples, not results measured by AI Blocks.
+when:
+  - You are about to send a monthly invoice and want a second check of every entry and total.
+  - An insurance or corporate client rejects block billing or vague entries, and you need to fix an invoice.
+  - You reconstruct time at the end of the week and want clear, honest narratives drafted from your own notes.
+  - An invoice is 35, 60 or 90 days late and you need a polite reminder in the right tone.
+not_for:
+  - "You want to match invoices against purchase orders: use the Invoice checker."
+  - "You want to chase all your open invoices each week, in any business: use the Weekly invoice and cash chaser."
+  - "You need medical claims, codes and denials reviewed: use the Medical Billing & Coding Specialist agent."
+  - "You need legal or ethics advice on trust accounts or fee agreements. Ask your bar association or ethics counsel."
+  - "You want software built to take payments: use the Payments & Billing Engineer agent."
+you_give:
+  - Your time entries for the period, with date, timekeeper, hours, matter and narrative
+  - The rate sheet or the rate in the fee agreement
+  - The client's billing rules, such as no block billing or a 0.1 hour minimum (optional)
+  - The invoice draft, with fees, expenses, trust credit and totals (optional)
+  - Your own notes on work done, for entries you need to rewrite (optional)
+  - Days late and the amount, for a reminder (optional)
+you_get:
+  - A review of each entry that marks it clear, vague, block billed or non-billable, with the reason
+  - A list of rate, duplicate and arithmetic errors on the invoice
+  - Rewritten entry drafts built only from your notes, marked for attorney approval
+  - A short list of possible write-downs, for the responsible attorney to decide
+  - A reminder email draft for the right stage of lateness
+  - A billing figures table, such as realization rate and aged receivables, when you give the data
+how_to_use:
+  - Add the pack to your AI as a skill. Or open a new chat and paste SKILL.md, then references/source-agent.md.
+  - Check your firm's rules first. Time entries hold client details. Replace client and matter names with codes if you may not share them.
+  - Paste the entries, the rates and the client's billing rules. Say what you need, such as "Review these entries before we invoice".
+  - Read the flagged entries and the rate errors. For each vague entry, give the agent your notes on what you did, then ask for a rewrite.
+  - Pass the rewrites and write-down list to the responsible attorney. Nothing goes on an invoice until the attorney agrees.
+  - For late invoices, give the days late and the amount, and ask for the reminder for that stage. Send it yourself.
+how_it_works:
+  - title: Collect the facts
+    text: It confirms the matter, the rates, the client's billing rules and what you want checked, and asks once for anything missing.
+  - title: Review each entry
+    text: It checks every narrative for what was done, on what matter and why, and flags block billing, non-billable work and duplicates.
+  - title: Check rates and totals
+    text: It matches rates to your sheet, checks the sums and finds items the invoice should not include.
+  - title: Rewrite from your notes
+    text: It drafts clearer entries from facts you gave it. If a fact is missing, it asks and does not guess.
+  - title: Pass to the attorney
+    text: It lists write-downs and disputes for the responsible attorney. It does not adjust or send anything itself.
+  - title: Draft the follow-up
+    text: It writes the reminder for 35, 60 or 90 days late, and sets out billing figures when you give it the data.
+output_shape: |-
+  ENTRY REVIEW
+    <date> | <hours> | <narrative as written> | <clear, vague, block billed or non-billable> | <reason> | <fix>
+
+  INVOICE CHECK
+    Rates <matched or mismatch, with the line> | Duplicates <list> | Totals <correct or the difference> | Items to remove <list>
+
+  REWRITE DRAFTS
+    <old entry> | <new entry using only your notes> | <MISSING: fact needed, if any>
+
+  FOR THE ATTORNEY
+    Possible write-downs <entry> | <hours> | <reason> | Disputes <summary>
+
+  REMINDER DRAFT
+    <stage, such as 60 days> | <subject line> | <body>
+
+  BILLING FIGURES
+    Realization rate <billed divided by worked> | Collection rate <collected divided by billed> | Aged receivables <by 30 day band>
+
+  OPEN CHECKS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your time entries for the period, with date, hours, matter and narrative
+    - The rate sheet or fee agreement rate
+    - The client's billing rules (optional)
+    - Your notes on work done, for entries to rewrite (optional)
+  prerequisites:
+    - Permission to share the entries with an AI tool, or client details swapped for codes
+    - An attorney who will approve any change before it reaches a client
+  output:
+    - name: Entry review
+      contains: Each entry marked clear, vague, block billed or non-billable, with the reason and a fix.
+    - name: Invoice check
+      contains: Rate mismatches, duplicates, sum errors and items that should not be billed.
+    - name: Rewrite drafts
+      contains: Clearer entries built only from your notes, with any missing fact marked.
+    - name: For the attorney
+      contains: Possible write-downs and disputes, for the responsible attorney to decide.
+    - name: Reminder draft
+      contains: A firm, polite email for the stage of lateness you gave.
+    - name: Billing figures
+      contains: Realization rate, collection rate and aged receivables, when you supply the data.
+    - name: Open checks
+      contains: Rules and totals to confirm in your billing system before you send.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A spreadsheet upload lets it check every row and total, not only the first few entries.
+  inputs:
+    - The client's billing guidelines, if the client has them.
+    - The engagement letter, so rates and fee terms are checked against it.
+    - A list of matter codes that stand in for client names.
+terms:
+  - term: Narrative
+    meaning: The text on a time entry that says what work was done.
+  - term: Block billing
+    meaning: Putting several tasks in one entry with one time total. Some clients ban it.
+  - term: Realization rate
+    meaning: Time billed divided by time worked, times 100. It shows how much work reaches the invoice.
+  - term: WIP
+    meaning: Work in progress. Time worked that is not yet billed.
+  - term: Trust account
+    meaning: A bank account that holds client money, kept apart from the firm's own money. Rules vary by state.
+tweaks:
+  - what: Client rules
+    how: Paste the client's billing guidelines and ask for a check against each rule by number.
+  - what: Tone
+    how: Say how formal the reminder should be, such as warm for a long-term client or firm for a repeat late payer.
+  - what: Scope
+    how: Ask for one task at a time, such as only the entry review, or only the reminder.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.

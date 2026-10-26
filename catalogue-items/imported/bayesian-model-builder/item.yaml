@@ -1,6 +1,6 @@
 slug: bayesian-model-builder
 name: Bayesian model builder
-summary: Give it your data and the question. Get a Python model that estimates what drove your results, with ranges, not guesses.
+summary: "Build a Bayesian model in Python from your data and one question. Get estimates with ranges, fit checks and a plain-words answer."
 category: general
 boards: []
 type: skill

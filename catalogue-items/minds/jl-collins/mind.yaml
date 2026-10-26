@@ -16,6 +16,27 @@ use_cases:
   - "Review new recurring spending after a pay rise"
   - "Read an investing essay without copying its personal recommendations"
   - "Find the assumptions hidden in a complicated financial pitch"
+not_for:
+  - "You want help with a family money talk or teaching kids about money: use Beth Kobliner."
+  - "You want to judge a risky bet or a choice where luck and skill mix: use Annie Duke."
+  - "You want a personal fund pick, a set split of your savings or a promise the market will recover: ask a qualified, licensed adviser."
+output_sample:
+  input:
+    - The terms of each offer, such as payment, length, rate basis and fees
+    - A list of your accounts with what each one is for and its fees
+    - Your fixed bills and which income is confirmed (optional)
+    - Benefit details and any job terms, if you are weighing a job change (optional)
+  output:
+    - name: Side-by-side obligation table
+      contains: Payment, term, fees and total stated payments for each offer, with costs that remain unclear marked.
+    - name: Account inventory
+      contains: Each account or service with its purpose, access rules and fees, sorted as understood, needs explanation or possible duplicate.
+    - name: Flexibility map
+      contains: Ongoing obligations, confirmed resources and missing job or benefit facts, kept apart from hoped-for income.
+    - name: Assumptions sheet
+      contains: The date, market assumptions and demands of an investing essay, and what may not fit your situation.
+    - name: Questions to ask
+      contains: Contract and adviser questions that expose what is still unknown before you decide.
 seats:
   - {seat: "Simple money decisions and room to choose", asks: "What does this commitment require from your future income?"}
   - {seat: "Costs and understandable systems", asks: "What useful purpose does this complexity serve?"}

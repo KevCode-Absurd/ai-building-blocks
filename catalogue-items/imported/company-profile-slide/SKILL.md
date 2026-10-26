@@ -1,25 +1,35 @@
 ---
-
-## India
-
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
-
-- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
-  Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
-  Never annualise a quarter without stating the fiscal offset.
-- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
-  formula and label the column `Total Revenue (₹ Cr)`.
-
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
 name: strip-profile
 description: |
   Creates professional investment banking strip profiles (company profiles) for pitch books, deal materials, and client presentations. Generates 1-4 information-dense slides with quadrant layouts, charts, and tables.
 ---
+
+# Company strip profile slide
+
+## Before you start
+
+You need:
+
+1. **The company name** (ticker if listed), and whether the user wants one slide or three to four.
+2. **Focus areas** the user wants stressed, such as growth or segments (optional).
+3. **A slide template** or brand guide (optional). Without one, use the clean default style below.
+
+Ask once for anything missing.
+
+**Where the numbers come from.** The best sources are the company's own filings and investor presentations. For a US company that is the annual report (10-K) on SEC EDGAR. For an Indian company it is the annual report and the results filings on the BSE and NSE websites. Market data such as market cap, enterprise value and consensus is usually from paid terminals (Bloomberg, FactSet, CapIQ) and BamSEC. If the user has none of these, use free sources: exchange filings, the company's investor page and a delayed price from a free quote page. Say which route you used.
+
+**Never invent a figure.** If a number cannot be sourced, write `n/a` in that cell and name the gap in the outline. Do not estimate. Do not use training memory for market caps, ownership or executives. Every figure carries a source and a date in the footer.
+
+**Scope.** The slide format below is written for listed companies with public filings. For a private company with no filings, say what is not available and offer a slide made from the facts the user gives you.
+
+**Tools.** The build step runs code (PptxGenJS for the slides, `officecli` to render an image). If you cannot run code, give the finished slide content as a table per quadrant that the user can paste into PowerPoint, and say you could not check the layout.
+
+**Currency and scale.** Use one currency and one scale on the slide. For Indian companies use ₹ crore, and follow these two rules:
+
+- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
+- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format `#,##0,," Cr"`: it shows lakh under a crore label (a 100× error). Divide by `10000000` and label the column `Revenue (₹ Cr)`.
+
+(The companion files this skill once pointed to, `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md`, are not in this folder. The rules above are the part that matters.)
 
 ## Workflow
 
@@ -31,8 +41,8 @@ description: |
 ### 2. Research & Planning
 **Data Sources:**
 - **Primary**: Company filings (BamSEC, SEC EDGAR - "Item 1. Business", MD&A), investor presentations, corporate website
-- **Market data**: Bloomberg, FactSet, CapIQ (price, shares, market cap, net debt, EV, ownership)
-- **Estimates**: FactSet/CapIQ consensus for NTM revenue, EBITDA, EPS
+- **Market data**: Bloomberg, FactSet, CapIQ if the user has them (price, shares, market cap, net debt, EV, ownership). Paid. Without them, use exchange filings and a delayed quote, and mark anything you cannot find as `n/a`.
+- **Estimates**: FactSet/CapIQ consensus for NTM revenue, EBITDA, EPS (paid). If unavailable, leave estimate rows out. Do not make them up.
 - **News**: Press releases from last 90 days, M&A activity, guidance changes
 
 **Required Metrics:**
@@ -90,7 +100,7 @@ description: |
 
 ### Information Density is Critical
 
-**The #1 goal is MAXIMUM information density.** A busy executive should understand the entire company story in 30 seconds. Fill every quadrant to capacity.
+**The #1 goal is MAXIMUM information density, using only sourced facts.** A busy executive should understand the entire company story in 30 seconds. Fill each quadrant as far as your sources allow. If a quadrant is thin, shorten it or mark rows `n/a`. Never pad it with estimates or guesses.
 
 **Per quadrant targets:**
 - **Company Overview**: 6-8 bullets minimum (HQ, founded, employees, CEO/CFO, market cap, ticker, industry, key stat)
@@ -99,13 +109,13 @@ description: |
 - **Fourth quadrant**: 5-7 bullets (ownership %, recent M&A, developments, catalysts)
 
 **Information packing techniques:**
-- Combine related facts: "HQ: Austin, TX; Founded: 2003; 140K employees"
+- Combine related facts: "HQ: <city>; Founded: <year>; <n> employees"
 - Always include numbers: "$50B revenue" not "large revenue"
-- Add context: "EBITDA margin: 25% (vs. 18% industry avg)"
+- Add context only when you have a sourced comparison: "EBITDA margin: <x>% (vs. <y>% industry average, <source>)"
 - Include YoY changes: "Revenue: $125M (+28% YoY)"
 - Use percentages: "Enterprise: 62% of revenue"
 
-**If a quadrant looks sparse, add more:**
+**If a quadrant looks sparse, add more from sources you have (never from guesses):**
 - Segment breakdowns with %
 - Geographic revenue splits
 - Customer concentration (top 10 = X%)
@@ -153,23 +163,23 @@ def add_section(slide, x, y, w, header_text, bullets, header_size=10, bullet_siz
   // Position in top-left quadrant (Company Overview) - after header with accent bar
   slide.addText(
     [
-      { text: 'Headquarters: Austin, Texas; Founded 2003', options: { bullet: { indent: 10 }, breakLine: true } },
-      { text: 'Employees: 140,000+ globally across 6 continents', options: { bullet: { indent: 10 }, breakLine: true } },
-      { text: 'CEO: Elon Musk; CFO: Vaibhav Taneja', options: { bullet: { indent: 10 }, breakLine: true } },
-      { text: 'Market Cap: $850B (#6 globally by market cap)', options: { bullet: { indent: 10 }, breakLine: true } },
-      { text: 'Segments: Automotive (85%), Energy (10%), Services (5%)', options: { bullet: { indent: 10 } } }
+      { text: 'Headquarters: <city, country>; Founded <year>', options: { bullet: { indent: 10 }, breakLine: true } },
+      { text: 'Employees: <number> (<source, year>)', options: { bullet: { indent: 10 }, breakLine: true } },
+      { text: 'CEO: <name>; CFO: <name> (from the latest filing)', options: { bullet: { indent: 10 }, breakLine: true } },
+      { text: 'Market Cap: <value> (as of <date>, <source>)', options: { bullet: { indent: 10 }, breakLine: true } },
+      { text: 'Segments: <segment> (<x>%), <segment> (<y>%)', options: { bullet: { indent: 10 } } }
     ],
     { x: 0.45, y: 0.95, w: 4.5, h: 2.6, fontSize: 11, fontFace: 'Arial', valign: 'top', paraSpaceAfter: 6 }
   );
 
   // WRONG: Multiple separate textboxes for each bullet - causes alignment issues
-  // slide.addText('Headquarters: Austin', { x: 0.5, y: 1.0, bullet: true });
+  // slide.addText('Headquarters: <city>', { x: 0.5, y: 1.0, bullet: true });
   ```
 
   **Bullet formatting tips:**
   - `bullet: { indent: 10 }` - controls bullet indentation (smaller = tighter)
   - `paraSpaceAfter: 6` - space after each paragraph in points
-  - Pack multiple related facts into each bullet (e.g., "HQ: Austin; Founded: 2003")
+  - Pack multiple related facts into each bullet (e.g., "HQ: <city>; Founded: <year>")
   - Include specific numbers and percentages for information density
 - **Title case** for titles (not ALL CAPS), left-aligned
 - **Consistent fonts** everywhere including tables
@@ -177,7 +187,7 @@ def add_section(slide, x, y, w, header_text, bullets, header_size=10, bullet_siz
 - **Follow brand guidelines if provided**
 
 ### Visual Reference
-See `examples/Nike_Strip_Profile_Example.pptx` for layout inspiration. Adapt colors to each company's brand.
+The example file `examples/Nike_Strip_Profile_Example.pptx` is not included in this folder. Use the layout described below and adapt colors to each company's brand.
 
 ---
 
@@ -215,9 +225,9 @@ PptxGenJS uses inches. 4:3 slide = **10" wide × 7.5" tall**.
 ```
 
 ### Title Section (y=0.2)
-**Company Name (Ticker)** - Example: `Tesla, Inc. (TSLA)`
+**Company Name (Ticker)** - format: `<Company name>, <suffix> (<TICKER>)`
 ```javascript
-slide.addText('Tesla, Inc. (TSLA)', { x: 0.3, y: 0.2, w: 9.4, h: 0.35, fontSize: 18, bold: true });
+slide.addText('<Company name> (<TICKER>)', { x: 0.3, y: 0.2, w: 9.4, h: 0.35, fontSize: 18, bold: true });
 ```
 
 ### 4-Quadrant Layout (y=0.6 to y=7.2)
@@ -403,3 +413,12 @@ For projections, use Bear/Base/Bull case scenarios in structured tables.
 **Note:** Reference the **PPTX skill** for PowerPoint file creation.
 
 - **Runbook:** [`references/runbook-one-pager.md`](references/runbook-one-pager.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+
+## Hand back
+
+After the last slide is approved, report:
+
+- The file name and where it is saved.
+- Every figure marked `n/a`, and why.
+- The sources and their dates.
+- A next step: check the numbers against the latest filing before the slide goes into a pitch pack, and pair it with the deck it will sit in.

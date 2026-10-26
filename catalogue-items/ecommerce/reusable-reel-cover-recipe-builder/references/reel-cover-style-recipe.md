@@ -1,6 +1,6 @@
 # Reel Cover Style Recipe
 
-Locked visual identity. Do not drift.
+Starting visual identity. Replace the colors with your own brand colors once, then keep them the same for every cover. Do not drift between covers.
 
 ---
 
@@ -14,9 +14,8 @@ Locked visual identity. Do not drift.
 
 ## Background
 - Base color: `#0B0D0E` (near-black charcoal)
-- Grain: 8-12% film grain overlay
-- Vignette: soft radial darkening from edges, 15% intensity
-- No gradients, no photos, no patterns beyond grain
+- Grain: light film grain overlay
+- Flat color. No gradients, no vignette, no photos, no patterns beyond grain
 
 **Rationale:** Dark background pushes headshot and text forward. Grain adds texture without noise. Consistent across batch = feed identity.
 

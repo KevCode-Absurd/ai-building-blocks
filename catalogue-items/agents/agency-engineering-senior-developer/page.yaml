@@ -1,0 +1,138 @@
+name: Senior Developer agent
+summary: Plan a polished Laravel and Livewire website build with FluxUI parts, light and dark themes, smooth motion and speed checks.
+headline: Senior Developer agent
+subhead: Give it your site spec or task list and your Laravel setup. It plans the build task by task, with the FluxUI parts, a light, dark and system theme toggle, and motion that stays fast. You get a build plan with quality checks.
+job: build-software
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  Most site builds ship the spec and nothing more. This agent builds toward a more refined result on one stack: Laravel, Livewire and FluxUI, with advanced CSS and, where it fits, Three.js for 3D. It reads your task list, builds only what the spec asks for, and adds a premium touch to each task, such as smooth hover motion or a glass-style card.
+
+  Two rules come from the Agency Agents profile. Every site gets a light, dark and system theme toggle, using the colors from your spec. And every touch has to keep the site fast: the profile aims for pages that load in under 1.5 seconds and animations at 60 frames a second.
+
+  This is an AI role profile shared under MIT. The profile points to files in its author's own project, such as ai/system/premium-style-guide.md. They are not in this pack. If you do not have them, the agent says so and uses your spec instead of guessing. It writes a plan and code outlines. It does not run your site, so the speed and accessibility checks are yours to run.
+when:
+  - You are building a marketing or product site on Laravel and want it to feel high-end.
+  - You have a spec or task list from a product manager and need it turned into build steps.
+  - You want a light and dark theme that switches smoothly across the whole site.
+  - You are weighing a 3D hero section or animations and need to know what they cost in speed.
+not_for:
+  - Your site is not on Laravel. Use the Frontend Developer agent.
+  - You want a quick test version to show users this week. Use the Rapid Prototyper agent.
+  - You need the overall system design or database layout. Use the Software Architect agent or the Backend Architect agent.
+  - You want a finished change checked for bugs. Use the Code Reviewer agent.
+you_give:
+  - Your spec or task list, with the pages and features you want
+  - Your colors, fonts and brand rules for the light and dark themes
+  - Your setup, such as Laravel, Livewire and FluxUI versions
+  - Links to sites whose feel you like (optional)
+  - Your style guide files, if you have them (optional)
+  - Speed and accessibility targets, if yours differ from the defaults (optional)
+you_get:
+  - A task by task build plan that stays within your spec
+  - A list of FluxUI and Livewire components for each page
+  - A theme plan with a light, dark and system toggle in your colors
+  - A motion plan, and a note on whether a 3D part is worth its cost
+  - Short code outlines for the key components, marked untested
+  - A quality check list for speed, motion, mobile and accessibility
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then references/source-agent.md.
+  - Paste your spec or task list, your brand colors and your Laravel setup.
+  - Say "Write the build plan. Ask me once if anything is missing. Do not add features I did not ask for."
+  - Check that every task in the plan matches a line in your spec. Remove any extra.
+  - Ask for code outlines one component at a time, then test each in your own project.
+  - Run the speed, motion and accessibility checks on your real pages. The agent cannot run them.
+how_it_works:
+  - title: Read the task list
+    text: It takes your spec and tasks as the limit. It does not add features you did not ask for.
+  - title: Choose the parts
+    text: It picks FluxUI components and Livewire components for each page. It does not add Alpine.js, because Livewire already includes it.
+  - title: Plan the theme
+    text: It sets up a light, dark and system toggle with your colors, and smooth switching.
+  - title: Add the polish
+    text: It adds a premium touch to each task, such as spacing, type scale, hover motion and glass-style cards.
+  - title: Weigh the 3D parts
+    text: It suggests Three.js only where it helps, with a plain fallback.
+  - title: Set the quality checks
+    text: It lists checks for load time, 60 frames a second, mobile layout and WCAG 2.1 AA accessibility.
+output_shape: |-
+  BUILD PLAN: <site name>
+
+  SETUP CHECK
+    <Laravel, Livewire and FluxUI versions> | <style guide files found or MISSING>
+
+  TASKS
+    <task from your spec> | <components used> | <premium touch> | <done when>
+
+  THEME PLAN
+    <light, dark, system> | <colors from your spec> | <how it switches>
+
+  MOTION AND 3D
+    <where> | <what it adds> | <cost in speed> | <fallback>
+
+  CODE OUTLINES (untested)
+    <component> | <short outline>
+
+  QUALITY CHECKS
+    <check> | <target> | <how you measure it>
+
+  ASSUMPTIONS AND OPEN QUESTIONS
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - Your spec or task list
+    - Your brand colors and fonts
+    - Your Laravel, Livewire and FluxUI setup
+    - Your style guide files (optional)
+  prerequisites:
+    - A Laravel project with Livewire and FluxUI, to test the code outlines
+  output:
+    - name: Setup check
+      contains: Your versions and which of the profile's style guide files you do or do not have.
+    - name: Tasks
+      contains: Each task from your spec with its components, premium touch and done-when line.
+    - name: Theme plan
+      contains: How the light, dark and system toggle works, using your colors.
+    - name: Motion and 3D
+      contains: Where motion or Three.js helps, what it costs in speed and the plain fallback.
+    - name: Code outlines
+      contains: Short outlines of the key Livewire and FluxUI components, marked untested.
+    - name: Quality checks
+      contains: Load time, 60 frames a second, mobile and accessibility checks, each with how to measure.
+    - name: Assumptions and open questions
+      contains: What the agent guessed and what you still need to confirm.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Task scope
+    how: Name the one result you need and the limits on time, cost and tools.
+  - what: Motion level
+    how: Say "subtle" or "bold" and name any pages where motion must stay minimal.
+improve:
+  - Keep useful corrections with your task notes and apply them on the next run.
+terms:
+  - term: Laravel
+    meaning: A popular PHP framework for building websites and web apps.
+  - term: Livewire
+    meaning: A Laravel tool that builds live page parts without writing much JavaScript.
+  - term: FluxUI
+    meaning: A ready-made set of page parts, such as cards, menus and forms, for Livewire.
+  - term: Three.js
+    meaning: A JavaScript library for 3D scenes in the browser.
+  - term: WCAG 2.1 AA
+    meaning: A common accessibility standard for people who use screen readers or have low vision.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: A chat can write the plan. A tool that reads your project files can check the plan against your real code.
+  inputs:
+    - Your brand colors as hex codes, for both light and dark themes.
+    - Screenshots of two or three sites with the feel you want.

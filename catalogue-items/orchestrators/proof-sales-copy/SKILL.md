@@ -50,9 +50,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Write the buyer brief.** Use the skill `buyer-brief-writer`. Turns the reviews into one buyer and the force the page must move.
-2. **Write two openings.** Use the skill `sales-copy-opening-writer`. Give it the brief from the steps before. Writes two openings from the brief, so you test two leads against each other.
-3. **Write the body and close.** Use the skill `proof-backed-sales-copy-writer`. Give it the brief from the steps before. Continues from the opening's promise with the body and close, proof beside each claim.
+1. **Write the buyer brief.** Use the skill `buyer-brief-writer`. Turns the reviews into one buyer and the force the page must move. Hands the brief to the opening step and the body step.
+2. **Write two openings.** Use the skill `sales-copy-opening-writer`. Give it the brief from the steps before. Writes two openings from the brief, so you test two leads against each other. Hands the two openings to step 3, and you pick one.
+3. **Write the body and close.** Use the skill `proof-backed-sales-copy-writer`. Give it the brief from the steps before. Continues from the opening's promise with the body and close, proof beside each claim. Uses the opening you pick from step 2, the brief and your product facts.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -11,6 +11,8 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
+  - type: document
+    required: false
   - type: question
     required: false
 outputs:
@@ -21,9 +23,9 @@ uses:
   - vendor-agreement-status-checker
 steps:
   - uses: find-duplicate-and-unused-business-subscriptions
-    note: "Run when: A renewal enters the owner chosen decision window, a quote changes or usage materially changes."
+    note: "Run when a renewal enters your decision window, a quote changes or usage changes a lot. Finds duplicate or unused candidates and sets out the savings options. Uses your bills, usage evidence and last register. Hands the register to step 2, marking each subscription that still lacks notice terms or usage evidence."
   - uses: vendor-agreement-status-checker
-    note: Run the renewal workflow for affected subscriptions. If notice terms or usage are missing, run vendor-agreement-status-checker and produce evidence requests before recommending cancellation.
+    note: "Run when notice terms or usage are missing for a renewing subscription. Check the contract and write an evidence request before any advice to cancel. Takes the vendor name of each subscription step 1 marked as missing terms, plus any contract you supply, not the savings options. Hands the dates and the evidence request to the renewal brief."
 schedule: Monthly, or when a dated renewal notice arrives; configure a schedule separately if requested.
 asks_before:
   - Sending or submitting any message or form
@@ -48,4 +50,8 @@ credits:
     by: Anthropic
     url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
     used: Component skill used as a separate, attributed dependency. This recipe adds original sequencing, handoff rules and acceptance checks. The component's own licence and source remain in its pack.
+  - title: Find duplicate and unused business subscriptions
+    by: AI Blocks
+    url: https://useaiblocks.com/workflows/find-duplicate-and-unused-business-subscriptions
+    used: The governing workflow this agent runs first. This recipe adds the monthly comparison, deadline sums and owner actions on top of it.
 warnings: []

@@ -1,6 +1,6 @@
 new_slug: brand-ladder-survey-builder
 name: "Brand ladder survey builder"
-summary: "Give it your category and rivals. Get a short buyer survey that shows where you rank."
+summary: "Build a brand ladder survey for your store. Give it your category and rivals. You get a short buyer survey, a scoring sheet and a read-out."
 job: understand-customers
 thinking: medium
 thinking_why: "It writes a survey, a scoring sheet and a read-out layout from a few facts. A mid-size model does this well, and you check the attributes yourself."
@@ -17,6 +17,10 @@ when:
   - You want to know where your store ranks against rivals before you choose a brand claim.
   - You are choosing between two ways to position the store and want evidence, not opinion.
   - You rebranded or changed your message and want to know if buyers noticed.
+not_for:
+  - "You have no way to reach at least 50 buyers: talk to five or ten customers one by one instead, or build your list first."
+  - "You want to learn why buyers chose you, not how you rank: use short customer interviews, as the Customer discovery interview planner is not yet a sibling here, so ask a few buyers by phone."
+  - "You need sales proof before a big spend: check real orders in your store reports, because ratings show opinion, not buying."
 
 you_give:
   - Your category and the three to seven rivals buyers would think of
@@ -32,9 +36,33 @@ you_get:
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Give it your category, your rivals and how you will reach buyers. If you have no attributes, ask it to propose six.
-  - Edit the survey so it sounds like you, and check the first question comes before any brand name.
-  - Send it to 50 to 200 buyers, then paste the answers back for the scoring sheet and read-out.
-  - Put the repeat date in your calendar so you can run the same survey again and see if your rank moved.
+  - Edit the survey so it sounds like you. Check the first question comes before any brand name.
+  - Build it in Google Forms, which is free, and send it to 50 to 200 buyers by email. Paid post-purchase survey apps and paid panels also work but are not needed.
+  - Paste the answers back into the chat to get the scoring sheet and read-out.
+  - Put the repeat date in your calendar. Next, use the read-out to write your positioning.
+output_sample:
+  input:
+    - Your category and the three to seven rivals buyers would think of
+    - A way to reach 50 to 200 buyers, such as an email list or post-purchase survey
+    - Six attributes buyers care about (optional)
+    - Two themes you want to compare (optional)
+    - Your brand brain from the Website brand brain builder (optional)
+  prerequisites:
+    - A way to send the survey, such as Google Forms, which is free
+    - Your answers pasted back into the chat once buyers have replied
+  output:
+    - name: Survey script
+      contains: A recall question first, then 1 to 10 ratings on six attributes, then a few questions about the buyer.
+    - name: Scoring sheet
+      contains: The ladder of brands named, plus your rank on each attribute rather than only an average.
+    - name: Read-out
+      contains: Where you rank, where you lead, what to claim with proof, what not to claim, and the sample size.
+    - name: Theme test
+      contains: A plan to compare two themes in matched audiences or one after the other, if you gave two.
+    - name: Repeat plan
+      contains: The same survey run again 12 to 15 months later to see if your rank moved.
+    - name: Checks missed
+      contains: Any checks the result failed, or the word none.
 
 how_it_works:
   - title: Sets the rival list

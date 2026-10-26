@@ -59,18 +59,19 @@ You never do these yourself. You list them for approval:
 - using a draft that the checker flagged for a legal or claim problem. Check with a qualified person first.
 
 ## What you hand back
-- **Result in one line:** passed or not passed, in how many rounds.
+- **Result in one line:** passed or not passed, in how many rounds, and whether the guide used was approved or a draft.
 - **Final draft:** the best round, with the changed lines marked.
 - **What changed:** each line changed, the slip it fixed and the round.
 - **Still open:** any flag left after round 3, and any claim or legal flag for a qualified person to check.
 - **Repeat slips:** slips seen in three or more drafts, and the guide rule you suggest.
 - **Files:** each round's file. Then every `MISSING:` line in one list.
+- **Checks missed:** each check that failed or could not run, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Check it before it goes live** with the [AI-style wording editor](https://useaiblocks.com/skills/anti-ai-slop-copy-editor). It takes the draft.
-- **Fill the gaps in your brand brain** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). It takes the draft.
+- **Fill the gaps in your brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website and the repeat slips from this review.
 - **Write the ad copy** with the [Sales copy editor](https://useaiblocks.com/skills/sales-copy-editor). It takes the draft.
 - **Read your ad results** with the [Ad test results tracker](https://useaiblocks.com/skills/keyed-ad-results-log-keeper). It takes the audit report and draft.
 - **Plan what to test** with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). It takes the audit report.
@@ -87,6 +88,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on with what you have. Without a voice guide, build one and say every check is against a draft. Without claims proof, mark each claim "proof not checked" and do not strengthen any claim.
+
+## When not to use
+Skip this agent when there is no brand file or voice guide yet (build one first with `website-brand-brain-builder` or `brand-voice-one-pager-writer`), when the person wants one check with no saved slip count (use `draft-brand-voice-checker`), and for a quick one-off polish (use `brand-voice-editor`). Without file access, keep the slip count in the chat and ask the owner to paste it back next time.
 
 ## Avoid
 - Rewriting the whole draft when only some lines failed.

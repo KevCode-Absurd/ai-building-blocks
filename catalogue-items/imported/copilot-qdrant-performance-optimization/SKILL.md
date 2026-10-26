@@ -12,6 +12,33 @@ allowed-tools:
 
 There are different aspects of Qdrant performance, this document serves as a navigation hub for different aspects of performance optimization in Qdrant.
 
+## What you need
+
+Ask once for anything not given:
+
+- The goal: slow single searches (latency), too few searches per second (throughput), slow filtered search, slow uploads, or high memory.
+- The Qdrant version, and how many points (records) and what vector size the collection has.
+- Hardware: RAM, CPU cores and disk type (optional).
+- Current collection and index settings (optional).
+- Baseline numbers: search time, searches per second, upload time or memory use (optional).
+
+Open the linked file for the goal. If you cannot open it, work from this file and say so.
+
+## What you hand back
+
+1. Goal and starting point (use `MISSING` for anything not given).
+2. Likely causes, most likely first, each with a quick check.
+3. Changes in order: the setting, the new value from the linked skill, why, and the cost or risk.
+4. Tests: a before and after measure for each change, and the result that means undo it.
+5. Avoid: the "What NOT to Do" items that apply to this case.
+6. Next: the first change to try.
+
+Change one setting at a time and measure again before the next one. Check the optimizer first, because background work is the most common cause of slow search. Wait for it to finish before changes that trigger re-optimization.
+
+## If something is missing
+
+Write `MISSING: <what>`. Never invent a number, version or setting value. With no baseline, give the measuring steps first and hold the changes back.
+
 
 ## Search Speed Optimization
 

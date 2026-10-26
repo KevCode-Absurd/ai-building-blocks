@@ -2,14 +2,10 @@ thinking: high
 thinking_why: Debugging missed detections takes careful technical reasoning.
 new_slug: radar-detection-simulator
 name: Radar detection simulator
-summary: Give it a radar datasheet. Get a simulated scene, fixes for missed
-  detections and result plots.
+summary: Turn a radar datasheet into a simulated radar scene in MATLAB. You get detections, plots and fixes for missed targets, checked by hand.
 job: build-software
 headline: Radar detection simulator
-subhead: A simulated radar scene built from your datasheet, with the detections
-  it produces, plots, and fixes if some targets are missed. You can trust the
-  result because it is checked against a hand calculation of what the radar
-  should see.
+subhead: A simulated radar scene built from your datasheet, with the detections it produces, plots, and fixes if some targets are missed. You can trust the result because it is checked against a hand calculation of what the radar should see.
 explain: |
   A simulated radar scene built from your datasheet, with the detections it produces, plots, and fixes if some targets are missed. You can trust the result because it is checked against a hand calculation of what the radar should see.
 
@@ -19,6 +15,10 @@ when:
   - Your simulation misses targets and you do not know why.
   - You are comparing mechanical and electronic scanning.
   - You need detections to feed a tracker or sensor fusion test.
+not_for:
+  - "You need raw signal-level work such as I/Q waveforms: use MATLAB's radarTransceiver with a pulse-Doppler chain instead."
+  - "You need CFAR detector design, beamforming or waveform design: use a signal-level radar tool instead of this one."
+  - "You need jamming, interference, or bistatic radar: this skill does not cover them, so ask a radar engineer or a signal-level tool."
 you_give:
   - Radar datasheet or performance needs
   - Target paths or scenario
@@ -30,8 +30,29 @@ you_get:
   - Fixes for missed detections
   - Check against expected range
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with Radar Toolbox.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from the skill folder. Use an AI that can run MATLAB code if you can.
+  - Paste your radar datasheet, or describe the range and coverage you need. Include power, gain, noise figure, bandwidth and scan mode.
+  - "Describe your targets: their paths and radar cross section. Paste your old code too if it misses detections."
+  - Answer the questions your AI asks about scan mode, targets and run time. Then read the requirements sheet it writes.
+  - Run the MATLAB script. You need MATLAB with Radar Toolbox. Check the detections against the hand calculation before you trust them.
+output_sample:
+  input:
+    - Your radar datasheet or performance needs (power, antenna gain, noise figure, bandwidth, scan mode)
+    - Your targets and their paths, with radar cross section (RCS) for each
+    - Existing radarDataGenerator code that misses detections (optional)
+    - Terrain or blocking objects (optional)
+  prerequisites:
+    - MATLAB with Radar Toolbox, and an AI that can run MATLAB code
+  output:
+    - name: Requirements sheet
+      contains: A standalone document listing the radar settings, where each value came from, and the target set.
+    - name: MATLAB script
+      contains: Runnable radar scene code with comments on why each choice was made, plus a table of linked settings.
+    - name: Reference range
+      contains: The range worked out from your hardware specs through a link budget.
+    - name: Detections and plots
+      contains: The detections the radar produces for your targets, with coverage and result plots.
+    - name: Validation
+      contains: A check of the simulated detections against what a hand calculation says the radar should see.
+    - name: Fixes for missed detections
+      contains: Configuration errors found one by one, with changes that bring the missed targets back.

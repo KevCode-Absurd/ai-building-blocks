@@ -1,17 +1,15 @@
 slug: hotel-channel-revenue-reconciler
 name: Hotel channel revenue reconciler
-summary: A room-night and net channel contribution bridge
+summary: Reconcile hotel room nights and revenue by booking channel. Get net revenue after agent commission, contribution after service cost, and occupancy.
 category: general
 type: skill
 role: make
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
+    required: true
+  - type: document
     required: false
 outputs:
   - type: spreadsheet

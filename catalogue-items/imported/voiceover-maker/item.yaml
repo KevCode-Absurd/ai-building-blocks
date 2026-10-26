@@ -10,6 +10,8 @@ level: beginner
 inputs:
   - type: copy_draft
     required: true
+  - type: script
+    required: false
 outputs:
   - type: audio
 uses: []

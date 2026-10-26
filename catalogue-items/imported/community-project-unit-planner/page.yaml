@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: It joins a real need to the learning goals.
 new_slug: community-project-unit-planner
 name: Community project unit planner
-summary: Name a community need. Get a project plan where students help and also
-  meet your curriculum goals.
+summary: Plan a community project unit where students meet a real local need and your curriculum goals. Name the need and topic. Get a full project plan.
 job: teach-and-train
 headline: Community project unit planner
-subhead: A project plan where students solve a real need in their community and
-  meet your curriculum goals at the same time. The help is not a side activity.
+subhead: A project plan where students solve a real need in their community and meet your curriculum goals at the same time. The help is not a side activity.
 explain: |
   A project plan where students solve a real need in their community and meet your curriculum goals at the same time. The help is not a side activity. The learning comes from doing it.
 
   You name the need and the topic. The plan starts from what the community partner actually asks for, not what the school assumes. It then ties each task to a direct curriculum skill, such as analysing food bank data in a maths unit. It builds in reflection before, during and after the work, because that is where the learning sticks. It also treats the partner as an equal, with a clear role for them and a way to show students' work back to them.
 when:
-  - You want a unit that serves a local group and still covers your set
-    curriculum.
-  - A community project at your school feels like a nice extra with no clear
-    learning in it.
+  - You want a unit that serves a local group and still covers your set curriculum.
+  - A community project at your school feels like a nice extra with no clear learning in it.
   - You need a plan that a local charity or care home can say yes to.
   - You are building a term-long project for one year group.
+not_for:
+  - "You want a one-off charity drive with no curriculum goal: use a plain community service plan or a simple volunteer sign-up sheet."
+  - "You have no community need yet: talk to a local charity, care home or council first, then come back with their request."
+  - "You want a lesson on a topic with no community link: plan it yourself or with a colleague."
 you_give:
   - A real community need
   - The curriculum topic or skill to cover
@@ -31,7 +31,27 @@ you_get:
   - Reflection prompts for before, during and after
   - Partner roles and a way to share results
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text. No code, files or paid tools are needed.
+  - Write down the community need in the partner's own words. Add your curriculum topic and year group.
+  - Add the partner, project length and whether students choose the project (all optional).
+  - Ask your AI to design the project. Read the Community Partnership section first and check it matches what the partner asked for.
+  - Check that each task links to a real curriculum skill. Ask your AI to fix any task that does not.
+  - Share the plan with your partner before you start. Next, pair it with the experiential-learning-cycle-designer or the interdisciplinary-real-world-connection-mapper.
+output_sample:
+  input:
+    - The community need, as the partner states it
+    - The curriculum topic or skill to cover
+    - Year group (optional)
+    - Community partner (optional)
+    - Project length (optional)
+  output:
+    - name: Community Partnership
+      contains: Who the partner is, what they asked for, their role, and how students share their work back.
+    - name: Curriculum Integration
+      contains: Which curriculum skills each project task builds, so the learning is part of the work.
+    - name: Project Design
+      contains: The service activities in order, week by week, for your project length.
+    - name: Reflection Structure
+      contains: Questions for students to answer before, during and after the project.
+    - name: Assessment Plan
+      contains: How you check both the curriculum learning and the quality of the service.

@@ -2,36 +2,113 @@ thinking: medium
 thinking_why: It traces package links to scope work.
 new_slug: monorepo-helper
 name: Monorepo helper
-summary: Point it at a monorepo. Get what a change affects and the tests to run,
-  in Turborepo, Nx or pnpm.
+summary: Find which packages a change affects and the exact Turborepo, Nx or pnpm command to test only those, so CI stops rebuilding everything.
 job: build-software
 headline: Monorepo helper
-subhead: Point it at a monorepo. Get what a change affects and the tests to run,
-  in Turborepo, Nx or pnpm. Bring your monorepo, or its package list. Use the
-  result to plan your next step.
+subhead: Give it your monorepo's package list and the change you plan to make. It maps how packages depend on each other, lists what the change affects and gives the command to build and test only those. It also covers caching and merging repos.
 explain: |
-  A clear answer to which parts of your monorepo a change touches and which tests to run, so you stop rebuilding everything for a one-line fix.
+  In a monorepo, one folder holds many apps and shared packages. A small edit in a shared package can break a dozen apps, yet most teams rebuild everything to be safe. This skill is a monorepo helper that scopes the work: what a change touches, and what to run.
 
-  The skill works with Turborepo, Nx, pnpm workspaces and Lerna. It maps how packages depend on each other, draws that as a diagram, and finds every app that breaks when a shared package changes. It then runs builds and tests only for the affected packages and sets up caching to skip repeated work. It also covers moving several repos into one without losing history, publishing with changesets, and writing a CLAUDE.md that knows each package.
+  It reads your workspace files and builds a map of which package needs which. It uses Turborepo, Nx, pnpm workspaces or Lerna, whichever you have. For your planned change it lists each affected package, draws the links as a diagram and writes the filter command that runs only those builds and tests.
+
+  It also covers caching, publishing with changesets, moving several repos into one without losing history, and writing a CLAUDE.md per package. It does not run your code. A Python script in the skill can read the repo and print the package map.
 when:
-  - CI takes forty minutes because everything rebuilds on every change.
-  - You edited a shared package and want to know what could break.
-  - You are merging several repos into one.
-  - You are choosing between Turborepo and Nx.
+  - CI takes a long time because every change rebuilds everything.
+  - You edited a shared package, such as a UI kit or types, and want to know what could break.
+  - You are merging several repos into one and want to keep each repo's history.
+  - You are choosing between Turborepo and Nx for a JavaScript or TypeScript repo.
+not_for:
+  - You have one app and no shared packages. A plain repo is fine, and there is nothing to scope.
+  - You want to set up a CI pipeline from nothing. Use the build and release pipeline setter, then come back for scoped runs.
+  - You want to retire an old system or feature. Use the migration planner.
+  - Your CI is failing for an unknown reason. Use the CI failure fixer first.
 you_give:
-  - Your monorepo, or its package list
-  - The change you are about to make
-  - The tool you use or are considering
-  - Your CI setup (optional)
+  - Your monorepo folder, or its list of packages and their dependencies
+  - The change you are about to make, such as the files or package you will edit
+  - The tool you use or are thinking about, such as Turborepo, Nx or pnpm
+  - Your CI setup, such as GitHub Actions (optional)
 you_get:
-  - A list of affected packages
-  - The commands to run only those tests
-  - A dependency diagram
-  - A caching setup
-  - A migration plan if merging repos
+  - The packages your change affects, direct first and then indirect
+  - The exact command to build and test only those packages
+  - A dependency diagram you can paste into Mermaid
+  - Caching and CI changes, with what each one needs
+  - A step-by-step plan if you are merging repos
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste this skill. If your AI can read your folder, point it at the monorepo root.
+  - If it cannot, run the analyzer script in the skill folder yourself with python3 scripts/monorepo_analyzer.py followed by your repo path. Paste what it prints.
+  - Say which package or file you plan to change, and which tool you use.
+  - Read the affected list. Check it against what you know. A package the list leaves out is a sign something is missing.
+  - Run the scoped command on your machine first, then put it in your CI job.
+  - Remote caching needs an account and tokens, usually from Vercel for Turborepo. Local caching does not.
+how_it_works:
+  - title: Detect the tool
+    text: It looks for turbo.json, nx.json, pnpm-workspace.yaml and lerna.json to find your setup.
+  - title: Map the packages
+    text: It lists each workspace and which of your own packages each one needs.
+  - title: Trace the change
+    text: It follows the links from your changed package to every app or package that depends on it.
+  - title: Write the commands
+    text: It writes the filter or affected command for your tool, so only those packages run.
+  - title: Tune caching and CI
+    text: It points out what makes the cache miss and what your CI must set up.
+  - title: Plan the extras
+    text: For repo merges or publishing, it gives ordered steps that keep history and versions in line.
+output_shape: |
+  ## Repo summary
+  <tool found, workspaces, packages>
+
+  ## Affected packages
+  <direct, then indirect>
+
+  ## Commands
+  <filter or affected command for your tool>
+
+  ## Dependency diagram
+  <Mermaid diagram>
+
+  ## Caching and CI notes
+  <changes and what each needs>
+
+  ## Next step
+  <run locally, then in CI>
+output_sample:
+  input:
+    - Your monorepo folder, or its package list
+    - The package or file you plan to change
+    - The tool you use, such as Turborepo, Nx or pnpm
+    - Your CI setup (optional)
+  prerequisites:
+    - Python 3 for the analyzer script, or an AI that can read your folder
+    - A Vercel account or your own cache server, only if you want remote caching
+  output:
+    - name: Repo summary
+      contains: The tool found, your workspaces and the list of packages.
+    - name: Affected packages
+      contains: Each package your change touches, direct first and then indirect.
+    - name: Commands
+      contains: The exact filter or affected command that runs only those builds and tests.
+    - name: Dependency diagram
+      contains: A Mermaid diagram of the packages involved and how they link.
+    - name: Caching and CI notes
+      contains: What to change to skip repeated work, and what each change needs.
+    - name: Next step
+      contains: Run the scoped command locally, then add it to your CI job.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your whole repo, run the analyzer script and test the command.
+    - name: Turborepo, Nx or pnpm
+      why: The commands in the skill are written for these tools.
+  inputs:
+    - Your turbo.json or nx.json
+    - Your CI workflow file
+    - A recent slow CI run, so it can see what rebuilds
+terms:
+  - term: Monorepo
+    meaning: One code repository that holds many apps and shared packages.
+  - term: Affected package
+    meaning: A package that depends on the one you changed, so it may break.
+  - term: Remote cache
+    meaning: A shared store of past build results so your team and CI skip repeated work.
+  - term: Changesets
+    meaning: A tool that sets each package's version and writes its changelog.

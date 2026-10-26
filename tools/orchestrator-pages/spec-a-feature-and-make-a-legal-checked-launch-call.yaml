@@ -1,6 +1,6 @@
 new_slug: spec-a-feature-and-make-a-legal-checked-launch-call
 name: Spec a feature and make a legal-checked launch call
-summary: Give it a feature idea and launch plan. Get a spec, a legal risk memo and a go call.
+summary: Check a feature for legal risk before you build it. Give it your idea and launch plan. Get a spec, a risk memo and a go, wait or no-go call.
 job: build-product
 thinking: high
 thinking_why: The legal step walks many risk areas and the last step weighs them against your plan. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - You are about to build a feature that uses personal data, new vendors, AI or public claims.
   - A launch date is set and nobody has read the spec for risk.
   - You need a clear go, wait or no-go before telling customers.
+not_for:
+  - "Your feature uses no personal data, claims, new vendors or AI: use the Feature spec writer on its own."
+  - "You need legal advice or a signed opinion: ask a lawyer. This memo is a first check only."
+  - "The feature is already live and you want to test the money side: use the Bad-year break-even tester."
 you_give:
   - The feature idea, who it is for and the problem it solves
   - Any limits you know, such as timing, rules and dependencies
@@ -29,6 +33,24 @@ how_to_use:
   - Describe the feature and answer the questions it asks about users and data.
   - Stop after step 2. Fix the flagged items or take the high ones to a lawyer.
   - Update your launch plan, then run step 3 for the call.
+output_sample:
+  input:
+    - Your feature idea, who it is for and the problem it solves
+    - Any limits you know, such as timing, rules and dependencies
+    - Your launch date and the countries or states you launch in
+    - Whether the feature uses AI, and who approves it (optional)
+    - Your updated launch plan, after you fix what the memo flags
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Feature spec"
+      contains: Problem, users, goals, non-goals, requirements with acceptance checks, success measures and open questions.
+    - name: "Step 2: Legal risk memo"
+      contains: What is launching, AI and data flags, risk rated by area, what to fix and who signs off.
+    - name: "Step 3: Launch call"
+      contains: Your plan quoted, six common faults, three readiness checks and a go, wait or no-go with the reason.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Write the spec
     text: Pins down the feature, the user problem and the success measures, then lists requirements with acceptance checks and open questions.

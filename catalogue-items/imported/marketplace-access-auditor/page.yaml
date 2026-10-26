@@ -2,38 +2,62 @@ thinking: high
 thinking_why: It traces roles, owners and order states across the whole codebase.
 new_slug: marketplace-access-auditor
 name: Marketplace access auditor
-summary: Point it at a marketplace app's code. Get a report of who can see or
-  change what.
+summary: Check who can see or change what in your marketplace app code. Get a role table, findings backed by code, and a fix list.
 job: secure-code
 headline: Marketplace access auditor
-subhead: Point it at the code of a marketplace app with several user roles. It
-  builds a table of rules per role, then walks every entry point to see what
-  each role can see or change. You get the permissions table, findings backed by
-  code, a severity ranking and fixes.
+subhead: Give your AI the code of a marketplace app with several user roles. It builds a table of who may do what. Then it checks each route and gives you findings with code proof and a fix list.
 explain: |
   A report on who can see or change what in a marketplace app, backed by lines of code as proof.
 
   The skill first builds a table of rules for each role. For every action it asks five things: the role, the link to the specific item, the scope, the state of the item and the fields involved. Then it walks the code in order. It lists every entry point, follows how identity and scope are passed, checks each object lookup, checks field limits, and tests state changes like refunds and shipping.
 when:
-  - You built a marketplace with buyers, vendors and admins and want to check
-    the walls between them.
-  - You are about to launch and need a security review of access rules.
+  - You built a marketplace with buyers, vendors and admins and want to check the walls between them.
+  - You are about to launch and need a review of your access rules.
   - A bug report says a user saw someone else's order.
   - You inherited code and do not know what each role can do.
+  - You changed a route, role or order step and want to recheck.
+not_for:
+  - "You only need to design how people sign in: ask a security engineer or use your login provider's docs."
+  - "You want to design how shops or tenants are kept apart: use a multi-tenant design guide, not this audit."
+  - "You want to probe a live site with guessed IDs: stop, and hire an authorized penetration tester."
 you_give:
   - The app's code or a repo link
   - The list of user roles
-  - Any rules you intended to enforce (optional)
+  - Any rules you meant to enforce (optional)
   - Test accounts or setup notes (optional)
 you_get:
-  - A table of role permissions
+  - A table of what each role may do
   - Findings with code evidence
-  - Severity ranking
-  - Tests that should be blocked
+  - A severity ranking
+  - A list of tests that should be blocked
   - A fix list
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your project files.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat as plain instructions. No install is needed.
+  - Add your code files, or paste the key routes and data lookups. The AI reads code well when it can open your project files.
+  - List your roles and any rules you meant to enforce. Say which are unclear.
+  - Read the policy table first. Fix any rule that is wrong, then ask for the findings.
+  - Check that each finding points to real code. Treat anything marked not verified as unproven.
+  - After you fix things, rerun the affected rows when a route or role changes. The skill only reads code. It will not test a live site unless you approve it.
+output_sample:
+  input:
+    - Your app's code or a repo link
+    - The list of user roles in your marketplace
+    - Rules you meant to enforce (optional)
+    - Notes on test setup (optional)
+  prerequisites:
+    - An AI that can read your code files, or code pasted into the chat
+  output:
+    - name: Policy matrix
+      contains: One row per role, item and action, with the expected allow or deny, and where the code enforces it.
+    - name: Audit scorecard
+      contains: A pass, fail or not verified result for ownership, shop isolation, state changes, fields and indirect paths.
+    - name: Findings
+      contains: Each problem with the role, item, action, code evidence and impact.
+    - name: Severity ranking
+      contains: Findings sorted from critical to low, based on reach and how sensitive the data is.
+    - name: Undefined policies
+      contains: Rules nobody has defined yet, listed so you can decide them.
+    - name: Untested paths
+      contains: Routes with no test, marked not verified instead of assumed safe.
+    - name: Negative tests
+      contains: Cases that should be blocked, such as the same role on another owner's order.

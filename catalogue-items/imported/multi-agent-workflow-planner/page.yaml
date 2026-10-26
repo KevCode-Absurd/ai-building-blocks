@@ -2,12 +2,10 @@ thinking: high
 thinking_why: Splitting work well means thinking through dependencies and failures.
 new_slug: multi-agent-workflow-planner
 name: Multi-agent workflow planner
-summary: Give it a big task. Get a plan that splits it among AI agents with
-  clear owners, handoffs and checks.
+summary: Plan a multi-agent workflow for a big task. You get a task graph with one owner per step, clear handoffs, approval points and checks.
 job: set-up-ai
 headline: Multi-agent workflow planner
-subhead: A plan that splits a big task among AI agents, with a clear owner for
-  each piece, defined handoffs and checks before anything is merged.
+subhead: A plan that splits a big task among AI agents, with a clear owner for each piece, defined handoffs and checks before anything is merged.
 explain: |
   A plan that splits a big task among AI agents, with a clear owner for each piece, defined handoffs and checks before anything is merged.
 
@@ -17,6 +15,10 @@ when:
   - Two agents edited the same file and overwrote each other.
   - A handoff lost key details between steps.
   - You need a human approval step before anything goes live.
+not_for:
+  - Your task is small or each step depends on the last. Keep it with one AI, or one person, and skip the split.
+  - You want the agents to run the plan for you. This gives you the plan. Your own agent tools must run it.
+  - You need to approve a single risky action, like a deploy or a purchase. Use a simple human sign-off step instead.
 you_give:
   - The goal and what done looks like
   - Agents and tools available
@@ -30,7 +32,31 @@ you_get:
   - A merge and check plan
   - A final report template
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text, or upload the skill folder if your AI takes files.
+  - Paste your goal, what done looks like, the agents and tools you have, and who makes the final call.
+  - Add the shared files or systems, and your deadline and budget if you have them.
+  - Read the task graph. Check that no two tasks that run together write to the same file.
+  - If your AI can run code, ask it to run validate_plan.py with --strict on the plan. Fix anything it flags.
+  - Give the plan to the person who makes the final call. Start the agents only after they approve.
+output_sample:
+  input:
+    - Your goal and what done looks like
+    - The agents and tools you have
+    - Shared files or systems the agents will touch
+    - Deadline and budget (optional)
+    - Who makes the final call
+  prerequisites:
+    - An AI that can run code, only if you want to check the plan with the included validate_plan.py script
+  output:
+    - name: Decomposition rationale
+      contains: Why the work is split this way, and what is out of scope.
+    - name: Task graph
+      contains: Each task with its owner, dependencies, inputs, output format, write scope and check.
+    - name: Handoff protocol and shared-state policy
+      contains: What each handoff must report, and how agents avoid editing the same file or record.
+    - name: Approvals, retries and stop rules
+      contains: Where a human signs off, how many retries are allowed, and when to stop.
+    - name: Synthesis plan
+      contains: How disagreements are settled and the combined result is checked against your goal.
+    - name: Completion report
+      contains: Evidence, remaining doubts, and any tasks that failed, were cancelled or went unused.

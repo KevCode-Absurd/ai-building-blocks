@@ -2,34 +2,113 @@ thinking: high
 thinking_why: It weighs cost, risk and local law across options.
 new_slug: new-country-hiring-planner
 name: New country hiring planner
-summary: Name the country. Get an own-entity or employer-of-record choice, a
-  local rules list and a hiring plan. Not legal advice.
+summary: Plan your first hires in a new country. Get an entity or employer of record choice, rules to check and a dated hiring plan.
 job: hire-people
 headline: New country hiring planner
-subhead: A plan for hiring your first people in a new country. The big early
-  choice is whether to set up your own local company or use an employer of
-  record, which hires on your behalf.
+subhead: Tell it the country, the roles and your timeline. It compares setting up your own company with using an employer of record, lists the local rules to check, and gives you a dated plan for your first hires.
 explain: |
-  A plan for hiring your first people in a new country. The big early choice is whether to set up your own local company or use an employer of record, which hires on your behalf. The skill lays out the cost, time and risk of each.
+  Hiring in a new country is hard to plan because the first choice shapes everything after it. You can set up your own local company, or use an employer of record (EOR), a provider that hires on your behalf. This new country hiring planner lays out cost, time and risk for each, and says which fits your headcount.
 
-  It also covers what to check before the first hire: local employment law, required benefits, contract terms, payroll and tax, and any works council or union rules. It adds ideas for finding talent, pay benchmarks, adapting your handbook, and preparing managers for cultural differences. It says when to move from an employer of record to your own entity. This is planning help, not legal advice.
+  It then lists what to check before a first hire: contract form, notice and severance, working time and leave, payroll and tax, and any works council or union rules. Where it can't confirm a rule, it says "check locally" instead of guessing.
+
+  Most hiring checklists stop at the legal list. This one goes on to sourcing, pay benchmarks, handbook changes and manager prep, then puts every step on a calendar. It also tells you when to move from an EOR to your own entity. It is planning help, not legal advice.
 when:
   - You want to hire two engineers in Germany and do not know where to begin.
   - You are comparing two countries for the same role and budget.
-  - You need to know when an employer of record stops making sense.
-  - Your manager asks what must be in place before a first hire.
+  - You use an employer of record and wonder when to set up your own entity.
+  - Your manager asks what must be in place before a first hire abroad.
+not_for:
+  - "You need a legal opinion on a contract or a firing: ask a local employment lawyer."
+  - "You are hiring a contractor, not an employee: use the Employee or contractor checker first."
+  - "You only want to know what to pay for one role: use the Pay band builder."
+  - "You already have a local team and want a headcount plan: use the Headcount plan builder."
 you_give:
-  - The country or countries
-  - Number and type of roles
-  - Your timeline
-  - Your company size and current setup (optional)
+  - The country, or the two countries you are comparing
+  - The number and type of roles
+  - Your target start date
+  - Your company size and any local setup you already have (optional)
+  - Your budget for the first hires (optional)
 you_get:
-  - Own entity versus employer of record comparison
-  - A list of local rules to check
-  - A hiring and pay plan
-  - A dated sequence for the first hires
+  - A table comparing your own entity with an employer of record
+  - A list of local rules to check, and who should confirm each one
+  - A hiring and pay plan for that market
+  - A dated sequence from decision to first start date
+  - A point at which to move off an employer of record
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill, or add its folder if your AI takes files.
+  - Say the country, the roles and your timeline. Add your company size if you can.
+  - Turn on web search if your AI has it, so the rules list is checked and not guessed.
+  - Read the rules list first. Anything marked "check locally" needs a lawyer or your EOR to confirm.
+  - Send the dated sequence to your manager or finance lead, with the open questions.
+output_sample:
+  input:
+    - The country, or two countries to compare
+    - The number and type of roles
+    - Your target start date
+    - Your company size and current setup (optional)
+  prerequisites:
+    - An AI with web search turned on, so local rules can be checked (optional)
+  output:
+    - name: Entity or EOR
+      contains: A table of set-up time, cost shape, control and risk for each route, with a recommendation.
+    - name: Local rules to check
+      contains: Contract, notice, leave, benefits, payroll, tax and works council points, each marked known or check locally.
+    - name: Hiring and pay plan
+      contains: Where to find talent, how to benchmark pay, handbook changes and manager prep.
+    - name: When to move to your own entity
+      contains: The headcount or spend at which an entity starts to make sense, and what to check first.
+    - name: Dated sequence
+      contains: Each step from decision to first start date, with a week or month and an owner.
+    - name: Next steps and missing
+      contains: Actions to take, who confirms the legal points, and every fact it could not find.
+how_it_works:
+  - title: Gather the brief
+    text: Collects country, roles, timeline and setup, asks once for anything missing, and states its assumptions.
+  - title: Compare the routes
+    text: Sets own entity against employer of record on time, cost shape, control, risk and ease of exit.
+  - title: List the rules
+    text: Names each area of local law to check and marks what it knows against what needs a local check.
+  - title: Plan hiring and pay
+    text: Covers sourcing, pay benchmark sources, handbook changes and manager preparation for the local culture.
+  - title: Set the switch point
+    text: Says when to move from an employer of record to your own entity.
+  - title: Date the plan
+    text: Works back from your start date to give every step a week or month and an owner.
+output_shape: |-
+  BRIEF
+    Country <country> | Roles <roles> | Timeline <date> | Assumptions <list>
+
+  ENTITY OR EOR
+    <table: set-up time, cost shape, control, risk, exit> | Recommendation: <route> because <reason>
+
+  LOCAL RULES TO CHECK
+    <rule area> | <known fact or "check locally"> | Who confirms: <lawyer, EOR, authority>
+
+  HIRING AND PAY PLAN
+    Sourcing: <plan> | Pay benchmark: <source> | Policy changes: <list> | Manager prep: <list>
+
+  WHEN TO MOVE TO YOUR OWN ENTITY
+    <trigger> | Check first: <list>
+
+  DATED SEQUENCE
+    <week or month> | <step> | <owner>
+
+  NEXT STEPS AND MISSING
+    <actions> | MISSING: <every gap>
+works_best_with:
+  tools:
+    - name: Any chat AI with web search
+      why: Local rules change, so the rules list is better when the AI can look them up.
+    - name: A local employment lawyer or your EOR provider
+      why: They confirm the points the plan marks "check locally".
+  inputs:
+    - A copy of your current offer letter or contract template
+    - Your handbook, so it can list what to change
+    - A rough pay range for each role
+terms:
+  - term: Employer of record (EOR)
+    meaning: A provider that is the legal employer in the country and runs payroll for people you hire there.
+  - term: Works council
+    meaning: A group elected by staff that must be consulted on some workplace decisions, in countries such as Germany.
+  - term: Statutory benefits
+    meaning: Benefits the law requires an employer to pay, such as health insurance, pension and paid leave.

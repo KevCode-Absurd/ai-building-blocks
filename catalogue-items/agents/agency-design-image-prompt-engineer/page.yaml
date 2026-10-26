@@ -1,0 +1,151 @@
+name: Image Prompt Engineer agent
+summary: Describe the photo you want. Get an image prompt that sets subject, light, camera and style, plus a leave-out list, for Midjourney, DALL-E or Flux.
+headline: Image Prompt Engineer agent
+subhead: Tell it what the picture is for and what it should show. It writes a photography-style image prompt in layers, covering subject, setting, light, camera and look. You get one main prompt, two variations and a list of what to leave out, in the format of your image tool.
+job: make-images
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: >-
+  Most AI image prompts fail for the same reason. They say "nice lighting" or
+  "professional photo" and leave the rest to chance. This image prompt engineer
+  agent writes the prompt the way a photographer would brief a shoot. It sets the
+  subject, the place, the light, the camera view and the finish, one layer at a
+  time, so each choice is on the page where you can change it.
+
+
+  You get one main prompt, two variations that each change one thing, and a list
+  of things to leave out. It uses the prompt style your tool expects. Portrait,
+  product, landscape and fashion prompts each start from a different layout. If
+  a result misses, the notes say which layer to change first.
+
+
+  This is a role profile from Agency Agents, shared under MIT. The download
+  includes the original profile, its licence and a setup guide. It writes the
+  prompt. It cannot draw the picture. The 90 percent match target in the profile
+  is the author's goal, not a measured result.
+when:
+  - You want a product photo for a store page or ad and your first prompts keep coming out flat.
+  - Your team needs one prompt layout, so pictures look alike across a campaign.
+  - You have a mood board or a photo you like and want its look put into words.
+  - You need the same scene in a different tool, such as moving from DALL-E to Midjourney.
+not_for:
+  - You want one quick prompt for an ad image, with a size and a file name. Use the Marketing image prompt writer.
+  - You use Midjourney and want four different directions to compare. Use the Midjourney image prompt writer.
+  - Your picture came out wrong and you want to fix the prompt. Use the Image and video prompt director.
+  - Faces, skin or hands look fake. Use the Skin realism image prompt checker.
+  - You want to change a photo you already have, or need final artwork. Use the Nano Banana image and edit prompt planner for edits, and a designer for final work.
+you_give:
+  - What the picture is for, such as a product page, an ad or a blog header.
+  - What it should show, in your words, with any must-have details.
+  - The image tool you will use, such as Midjourney, DALL-E, Flux or Stable Diffusion.
+  - The look you want, such as moody, bright or editorial, with the shape you need, like square or tall.
+  - Reference photos or links, and anything that must not appear (optional).
+you_get:
+  - One main prompt in layers, covering subject, setting, light, camera and look.
+  - Two variations, each changing one thing, such as the light or the angle.
+  - A list of what to leave out, in the form your tool uses.
+  - Notes on which layer to change if the result misses.
+  - Gaps and checks still needed before you use the picture.
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
+  - Describe the picture, its use and your image tool. Attach reference photos if your AI accepts images.
+  - Answer the questions it asks once. Anything you skip is marked MISSING or ASSUMED in the result.
+  - Copy the main prompt into your image tool first. Check the picture against your list of must-have details.
+  - If it misses, change the layer the notes name, or try a variation. Change one thing at a time.
+  - Check any real product, logo or text in the picture yourself before you publish.
+how_it_works:
+  - title: Take the brief
+    text: It asks for the use, the subject, the tool, the shape and the look, and marks what is missing.
+  - title: Read your references
+    text: If you share photos or links, it names the light, angle, colour and mood that make them work.
+  - title: Build the layers
+    text: It writes subject, setting, light, camera and look as separate parts, using plain photo terms.
+  - title: Fit your tool
+    text: It adjusts the wording and settings for Midjourney, DALL-E, Flux or Stable Diffusion, and says when it is unsure of the syntax.
+  - title: Add the leave-outs
+    text: It lists unwanted things and puts them in the negative field when the tool has one.
+  - title: Plan the next try
+    text: It gives two variations and tells you which layer to change if the first picture misses.
+output_shape: |-
+  BRIEF AND ASSUMPTIONS
+    use <where it will appear> | tool <name> | shape <ratio> | ASSUMED: <list> | MISSING: <list>
+
+  MAIN PROMPT
+    <one prompt, ready to paste>
+
+  LAYERS
+    subject <text> | setting <text> | light <text> | camera <text> | look <text>
+
+  LEAVE OUT
+    <negative prompt, or the leave-out phrase if the tool has no negative field>
+
+  VARIATIONS
+    A: <prompt> | changes <one thing>
+    B: <prompt> | changes <one thing>
+
+  IF IT MISSES
+    <problem in the picture> | change <layer> | try <wording>
+
+  CHECKS STILL NEEDED
+    <item> | <how to settle it>
+output_sample:
+  input:
+    - What the picture is for and what it should show
+    - The image tool you will use
+    - The look and the shape you want
+    - Reference photos or things to leave out (optional)
+  prerequisites:
+    - An AI you can paste a brief into, such as Claude, ChatGPT or Gemini
+    - An image tool such as Midjourney, DALL-E, Flux or Stable Diffusion, to make the picture
+  output:
+    - name: Brief and assumptions
+      contains: The use, tool and shape it understood, what it assumed and what is missing.
+    - name: Main prompt
+      contains: One prompt ready to paste into your image tool.
+    - name: Layers
+      contains: The subject, setting, light, camera and look broken out so you can change one at a time.
+    - name: Leave out
+      contains: The things to exclude, written for your tool's negative field.
+    - name: Variations
+      contains: Two more prompts that each change one thing, such as the light or the angle.
+    - name: If it misses
+      contains: Which layer to change for common problems, and wording to try.
+works_best_with:
+  tools:
+    - name: Midjourney, DALL-E, Flux or Stable Diffusion
+      why: The prompt layout is built for these tools. Tell the agent which one so it uses the right settings.
+    - name: Claude, ChatGPT or Gemini with image upload
+      why: You can attach reference photos, and the agent reads the light and angle from them.
+  inputs:
+    - A reference photo that has the light and mood you want.
+    - Your brand colours or a short style note.
+    - A list of things that must never appear, such as logos or text.
+terms:
+  - term: Negative prompt
+    meaning: A list of things you do not want in the picture. Some tools have a field for it.
+  - term: Depth of field
+    meaning: How much of the picture is sharp. A shallow depth blurs the background.
+  - term: Aspect ratio
+    meaning: The shape of the picture, written as width to height, such as 1:1 or 9:16.
+  - term: Key light
+    meaning: The main light on the subject. Its direction shapes the shadows.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.
+tweaks:
+  - what: Tool
+    how: Name your image tool. Settings and wording change a lot between Midjourney, DALL-E, Flux and Stable Diffusion.
+  - what: Shape
+    how: Give the shape and where it will appear, such as 9:16 for a story. The framing changes with it.
+  - what: Reference
+    how: Add one photo you like. A real reference beats a long description.
+improve:
+  - Keep the prompts that worked and the layer you changed to fix each miss. Paste them in next time as examples.
+  - Save a short list of things you always leave out, and paste it at the start of each run.

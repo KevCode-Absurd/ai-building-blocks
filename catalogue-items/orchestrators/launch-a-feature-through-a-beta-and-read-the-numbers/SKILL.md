@@ -51,11 +51,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Run the beta. Collect the weekly feedback and fix what it finds.
 
-4. **Write the release notes.** Use the skill `release-notes-writer`. Give it the feature and the beta feedback. Release notes in plain words: what changed for the user, why, and what to do if something looks different. You approve before they are published.
+4. **Write the release notes.** Use the skill `release-notes-writer`. Give it your code changes, the feature and what the beta made you fix, not the metrics plan. Release notes in plain words: what changed for the user, why, and what to do if something looks different. You approve before they are published.
 
 Pause here: Publish the release notes and roll out. After two to four weeks, paste the numbers.
 
-5. **Read the numbers.** Use the skill `product-metrics-review-writer`. Give it the metrics plan and the post-launch numbers. The numbers against the metrics you set: success, guardrails, the pull number, with what they mean and what they cannot yet say.
+5. **Read the numbers.** Use the skill `product-metrics-review-writer`. Give it your own post-launch numbers and the metrics plan from step 3, not the release notes. The numbers against the metrics you set: success, guardrails, the pull number, with what they mean and what they cannot yet say.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

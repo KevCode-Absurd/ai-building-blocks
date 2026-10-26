@@ -23,12 +23,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Store profit per visitor calculator.** Use the skill `store-profit-per-visitor-calculator`. Sets the baseline you will judge every change by.
+1. **Store profit per visitor calculator.** Use the skill `store-profit-per-visitor-calculator`. Sets the baseline you will judge every change by. Hands the profit-per-visitor baseline to step 2 and step 3.
 
 Pause here: Watch about 20 recordings each on the product page and cart, save heatmap screenshots, and note any survey answers.
 
-2. **Heatmap and recording reader.** Use the skill `heatmap-and-recording-reader`. Turns what you watched into a list of friction, each with a test idea.
-3. **Test idea ranker.** Use the skill `test-idea-ranker`. Give it the audit report from the steps before. Ranks the friction findings by evidence and profit, using the baseline to size the gain.
+2. **Heatmap and recording reader.** Use the skill `heatmap-and-recording-reader`. Turns what you watched into a list of friction, each with a test idea. Uses the baseline from step 1 for the money at stake, and hands the friction findings to step 3.
+3. **Test idea ranker.** Use the skill `test-idea-ranker`. Give it the audit report from the steps before. Ranks the friction findings from step 2 by evidence and profit, using the step 1 baseline to size the gain.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

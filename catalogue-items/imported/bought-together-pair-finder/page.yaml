@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs basket math on your order history.
 new_slug: bought-together-pair-finder
 name: Bought-together pair finder
-summary: Get the products customers most often buy together, ranked, to build
-  bundles and cross-sell offers.
+summary: Find which products your customers buy together. Give it your Shopify orders and get ranked pairs to build bundles and cross-sell offers.
 job: make-offer
 headline: Bought-together pair finder
-subhead: Find which products your customers really buy together, ranked by
-  strength, so you can build bundles and cross-sell offers on evidence. It reads
-  your Shopify order history for a date range you choose.
+subhead: Find which products your customers really buy together, ranked by strength, so you can build bundles and cross-sell offers on evidence. It reads your Shopify order history for a date range you choose.
 explain: |
   Find which products your customers really buy together, ranked by strength, so you can build bundles and cross-sell offers on evidence. It reads your Shopify order history for a date range you choose.
 
@@ -18,6 +15,10 @@ when:
   - You need a frequently-bought-together section on product pages.
   - You are planning cross-sell emails after a purchase.
   - You want to see which pairs are just popular items, not true links.
+not_for:
+  - Your store has under 90 days of orders or few multi-item orders. Wait for more orders, or look at which products shoppers view together in your store analytics.
+  - You do not use Shopify. Export your orders to a sheet and count pairs by hand, or ask a developer for help.
+  - You want to change prices or edit products. This only reads orders and never changes your store.
 you_give:
   - Your store domain
   - A start and end date
@@ -29,8 +30,29 @@ you_get:
   - A readable or JSON report
   - Bundle and cross-sell ideas
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Use an AI tool that can run code and has the Shopify CLI, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot run it.
+  - Log in to your store with the Shopify CLI. Your login needs read access to orders and products.
+  - Give your AI the skill and tell it your store domain, a start date and an end date. Use at least 90 days.
+  - Add your own limits and tags to leave out if you want. Tags such as gift-wrap are removed before pairs are counted.
+  - Check the ranked table first. Pairs with lift above 2 suit bundles. The rest suit cross-sell offers.
+  - Re-run it every quarter, as popular pairs change with the seasons.
+output_sample:
+  input:
+    - Your store domain
+    - A start date and an end date
+    - Minimum pair count, confidence and lift (optional)
+    - Product tags to leave out, such as gift wrap (optional)
+  prerequisites:
+    - An AI tool that can run code, such as Claude Code, Cursor, Codex or Gemini CLI
+    - A Shopify CLI session you are logged in to, with read access to orders and products
+  output:
+    - name: Start banner
+      contains: Your store domain and the time the run began.
+    - name: Step log
+      contains: One line per step showing what was asked and how many orders came back.
+    - name: Outcome summary
+      contains: Orders checked, unique products, pairs checked, pairs above your limits, date range and errors.
+    - name: Ranked pair table
+      contains: The top pairs with support, confidence in both directions and lift.
+    - name: product_affinity CSV file
+      contains: One row per pair with product names, order counts, the three scores and a bundle or cross-sell label.

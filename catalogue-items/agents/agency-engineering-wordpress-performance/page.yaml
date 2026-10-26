@@ -1,0 +1,149 @@
+name: WordPress Performance Engineer agent
+summary: Find why your WordPress site is slow. Get ranked fixes for plugins, caching, the database, images and hosting, each with a before and after check.
+headline: WordPress Performance Engineer agent
+subhead: Give it your plugin list, hosting details and speed test results. It finds which plugins, queries and caches slow your pages down. You get ranked fixes for your developer, with a check to prove each one worked and a warning for pages that must never be cached.
+job: speed-up-store
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A slow WordPress site (also called a WordPress speed audit or slow WordPress fix) is rarely slow because of WordPress itself. It is slow because of what was added. A page builder loads its files on every page. One plugin runs dozens of database queries. A "cache everything" plugin is set up to cache nothing useful. This agent works mostly by subtraction. It finds the real cost of each plugin and asks if you need it.
+
+  It follows a fixed order. First it records your speed scores and a Query Monitor reading, because a fix with no before and after is a guess. Then it looks at the database: queries with no limit, large amounts of data loaded on every page, and results that could be saved for a while. Next come plugins and theme files, then caching in layers, then images and scripts, then PHP and hosting.
+
+  One rule matters most for shops and member sites. The cart, checkout and account pages must never be cached for the public, or one visitor can see another's details. The plan lists these pages and how to check them. It writes for you or your developer, and it never logs in or changes your site.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - Your WordPress site scores badly on a mobile speed test and you do not know which plugin is to blame.
+  - You have installed a caching plugin and the site is still slow.
+  - Pages that list posts or products take seconds to load, or the admin area feels slow.
+  - A developer or host says "upgrade your plan" and you want proof of the real cause first.
+not_for:
+  - You run a WooCommerce shop and want plain fixes in order without code detail. Use the Self-hosted store speed fixer.
+  - Your site runs on Drupal. Use the Drupal Performance Engineer agent.
+  - You want a shop built or its checkout fixed. Use the WordPress Shopping Cart Engineer agent.
+you_give:
+  - Your WordPress and PHP versions, and the kind of hosting (shared, VPS or managed)
+  - The addresses of the slowest pages
+  - A mobile speed test for each (PageSpeed Insights or Lighthouse) with the main scores
+  - Your plugin list and theme or page builder name
+  - Query Monitor readings for a slow page, such as the number of queries and the slowest ones (optional)
+  - Your caching setup, such as a cache plugin, object cache or CDN (optional)
+you_get:
+  - A baseline of what is slow and what is already fine
+  - Findings ranked by gain, each with evidence, the fix, the risk and a check
+  - A plugin cost list with keep, replace or remove for each
+  - A caching plan by layer, with the pages that must never be cached
+  - Image, script and hosting fixes for your developer
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Run a free speed test on your slowest pages, such as PageSpeed Insights, on the mobile setting. Copy the main scores and the problems it names.
+  - Optional but very useful. On a copy of your site, install the free Query Monitor plugin, open a slow page and copy the number of queries, the total time and the slowest queries. Your developer can help. The AI does not need to run any code.
+  - Paste the scores, plugin list, theme, host and cache details into the AI. Type "Find the real causes. Rank them by gain. Mark anything I did not give you as MISSING."
+  - Check the plugin list findings first. Ask for the evidence line for any plugin it wants removed.
+  - Give the fix list to your developer. Test each fix on a copy of the site, run the speed test again, and check the cart and account pages still work.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms the versions, host and pages. Anything missing is asked once, then marked MISSING.
+  - title: Read the baseline
+    text: It records speed scores and query counts before any change, so each fix can be proved.
+  - title: Cut database waste
+    text: It finds queries with no limit, large settings loaded on every page, and results worth saving for a short time.
+  - title: Cost out the plugins
+    text: It ranks plugins and theme files by what they add to each page, and says keep, replace or remove.
+  - title: Layer the caching
+    text: It sets what to save at each level, from repeated queries to whole pages for visitors and files on a CDN. It lists the pages that must stay uncached.
+  - title: Trim the front end and prove it
+    text: It checks image sizes, formats, scripts and hosting settings, then lists the before and after check for each fix.
+output_shape: |-
+  SCOPE
+    Site <address> | WordPress <version> | PHP <version> | Host <type> | Pages <list>
+
+  BASELINE
+    <page> | LCP <value> | INP <value> | CLS <value> | Queries <count> | Query time <ms>
+
+  FINDINGS, RANKED BY GAIN
+    <number> | <problem> | <evidence you gave> | <fix> | <risk> | <check to prove it>
+
+  PLUGIN COST LIST
+    <plugin> | <what it adds to each page> | <keep, replace or remove> | <reason>
+
+  CACHING PLAN BY LAYER
+    <layer: object cache, page cache, CDN> | <what to save> | <what to leave out>
+
+  PAGES THAT MUST NEVER BE CACHED
+    <page> | <why> | <how to check>
+
+  IMAGE, SCRIPT AND HOSTING FIXES
+    <item> | <problem> | <fix or question for your host>
+
+  ASSUMPTIONS AND CHECKS MISSED
+    <assumption> | <check that could not run>
+output_sample:
+  input:
+    - Your WordPress and PHP versions, and your hosting
+    - The addresses of your slowest pages
+    - A mobile speed test for each page
+    - Your plugin list and theme
+    - Query Monitor readings for a slow page (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - A developer or host who can make and test the changes
+    - A copy of your site for testing (strongly advised)
+  output:
+    - name: Scope
+      contains: The site, versions, host and the pages being fixed.
+    - name: Baseline
+      contains: Speed scores and query counts per page, recorded before any change.
+    - name: Findings, ranked by gain
+      contains: Each problem with the evidence, the fix, the risk and the check that proves it.
+    - name: Plugin cost list
+      contains: Each plugin with what it adds to each page, and keep, replace or remove.
+    - name: Caching plan by layer
+      contains: What to save in the object cache, the page cache and the CDN, and what to leave out.
+    - name: Pages that must never be cached
+      contains: Cart, checkout, account and other personal pages, with how to check each.
+    - name: Image, script and hosting fixes
+      contains: Problems with images, scripts and server settings, and the fix or a question for your host.
+    - name: Assumptions and checks missed
+      contains: What the AI assumed and what it could not check.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a saved PageSpeed report, a plugin list export or a Query Monitor screenshot next to your description.
+  inputs:
+    - A saved PageSpeed report for each slow page.
+    - A screenshot of the slow queries and the queries by plugin in Query Monitor.
+    - Your host's PHP and cache settings page.
+terms:
+  - term: Plugin cost
+    meaning: The extra time and database work one plugin adds to each page load.
+  - term: Object cache
+    meaning: A fast store, often Redis, that keeps the results of repeated database queries.
+  - term: Page cache
+    meaning: A saved copy of a finished page, shown to visitors without rebuilding it.
+  - term: Autoloaded options
+    meaning: Settings that WordPress loads on every request. Too many large ones slow every page.
+  - term: Core Web Vitals
+    meaning: Google's three speed measures. LCP is when the main content shows, INP is how fast the page reacts and CLS is how much it jumps.
+tweaks:
+  - what: Pages
+    how: Start with two or three pages, such as the home page and one post list. One page at a time gives clearer causes.
+  - what: Logged-in visitors
+    how: Say if you run a shop, a members area or a course. These pages need stricter cache rules.
+  - what: Who makes the changes
+    how: Say if you have a developer, only a host, or no one. The fix list is written to match.
+improve:
+  - Keep the baseline and the plan. After the fixes, run the speed test again and add the new numbers for next time.
+  - Record each plugin you removed and why, so no one adds it back.
+  - Pair it with the Performance Benchmarker agent, to set up speed tests you can repeat after each update.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

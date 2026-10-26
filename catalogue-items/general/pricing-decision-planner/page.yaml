@@ -1,6 +1,6 @@
 new_slug: pricing-decision-planner
 name: "Pricing decision planner"
-summary: "Paste your product, costs and the buyer's gain. Get three test prices, your pick and a plan to raise it."
+summary: "Set a price from what your product is worth to the buyer. Get three test prices, total profit at each, the best pick and a plan to raise it."
 job: make-offer
 thinking: high
 thinking_why: "It estimates sales and total profit at several prices from thin data, so a bad guess changes the answer."
@@ -18,6 +18,10 @@ when:
   - Your price came from cost plus a margin, or from a rival, and you are unsure it is right.
   - You are thinking of a price rise or cut.
   - You discount to close and want a better way.
+not_for:
+  - "You want to choose how narrow a buyer to aim at, not what to charge one buyer: use the Niche price ladder builder."
+  - "You have no costs yet and cannot guess them: work them out first, because total profit cannot be found without them."
+  - "You need to write the reason for the price or the sales page: use a writing step after this one, not this planner."
 
 you_give:
   - Your product, your costs per unit and your fixed costs
@@ -37,6 +41,32 @@ how_to_use:
   - Paste what rivals charge and what buyers say, in their words.
   - Pick the price it recommends only after checking the guesses with real buyers.
   - Put the review date in your calendar.
+output_sample:
+  input:
+    - Your product and what it costs you per unit
+    - Your fixed costs for the period
+    - What rivals charge (optional)
+    - What buyers say about value and price (optional)
+    - Your sales so far at today's price (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini. No code or paid tool is needed.
+  output:
+    - name: Value to the buyer
+      contains: The sums for what the result is worth to the buyer, with the lowest sound figure chosen.
+    - name: Costs
+      contains: Your cost per unit and fixed costs, with any missing cost marked.
+    - name: Three prices
+      contains: A table of three prices with sales estimate, margin per unit and total profit at each.
+    - name: The pick
+      contains: The price with the highest total profit, the gap to worth, the multiple of cost and a buyer check.
+    - name: If a price is live
+      contains: What to add first, the dated notice, and what to offer instead of a discount.
+    - name: The number to watch
+      contains: One sales or margin figure to track, and the level that would change the price.
+    - name: Owner and review
+      contains: The person who owns the choice and a date to compare real sales with the estimates.
+    - name: Missing and checks missed
+      contains: Figures you did not give, and one line for each check the plan still fails.
 
 how_it_works:
   - title: Sums the buyer's value

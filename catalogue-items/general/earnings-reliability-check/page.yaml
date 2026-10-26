@@ -1,6 +1,6 @@
 new_slug: earnings-reliability-check
 name: "Earnings record reliability checker"
-summary: "Paste cleaned earnings by year and a note on the business. Get whether the record can guide the future, and how much."
+summary: "Check if a company's past earnings are a fair guide to the future. Paste cleaned yearly earnings and get a rating and how wide your range should be."
 job: money-and-investing
 thinking: high
 thinking_why: "It judges whether a history still describes the business, using numbers and facts about the industry. That needs careful reasoning."
@@ -17,6 +17,10 @@ when:
   - You have a company's earnings for several years and are about to average them.
   - A company's best years came during a boom in its product.
   - A company has had losses in some years and you do not know how to treat them.
+not_for:
+  - "You only want to strip one-off items from the numbers first: do that cleaning step before this one, then come back."
+  - "You want a buy or sell call on a stock: this is a method, not advice, so ask a licensed financial adviser."
+  - "You have fewer than five years of earnings: the best rating is a partial guide, so gather more years first."
 
 you_give:
   - Cleaned earnings by year, from the earlier steps
@@ -35,6 +39,28 @@ how_to_use:
   - Add output and price by year if you have them.
   - Read the rating, then the reasons ranked.
   - Take the result to "Normal earnings estimator".
+output_sample:
+  input:
+    - Your cleaned earnings by year, for five to ten years
+    - "A note on the business: what it sells, to whom, its costs, debts and place in its industry"
+    - Output, price or volume by year (optional)
+  prerequisites:
+    - Earnings already cleaned of one-off items and padding, from the earlier steps
+  output:
+    - name: The record
+      contains: Earnings by year with the average, high, low and how many years sit near the average.
+    - name: Tests
+      contains: A finding for scatter, the business, temporary profits, the company's place, loss years and trend.
+    - name: Rating
+      contains: Guide, partial guide or not a guide.
+    - name: Why, ranked
+      contains: The reasons for the rating, with the strongest first.
+    - name: For the next step
+      contains: How wide the next range should be and what facts would raise the rating.
+    - name: Missing
+      contains: Facts you did not give, each marked MISSING.
+    - name: Checks missed
+      contains: One line for each check that failed, or none.
 
 how_it_works:
   - title: Measures the scatter

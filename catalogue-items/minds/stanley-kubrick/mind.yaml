@@ -16,6 +16,30 @@ use_cases:
   - "Adapt a book, article or idea into a different form"
   - "Keep control of a creative project from first idea to how it's marketed"
   - "Learn a craft by making something small yourself, now"
+not_for:
+  - "You need a quick copy edit or have a tight deadline: ask a project manager to plan the work, or just edit the text yourself."
+  - "You want suspense, planned shots and audience tension: use the Alfred Hitchcock mind instead."
+  - "You want story order, time and real effects on screen: use the Christopher Nolan mind instead."
+output_sample:
+  input:
+    - Your draft, cut or project plan
+    - Your sources and research so far (optional)
+    - Your budget and deadline
+    - What you want people to feel when they see it
+    - Who has the final say on the work
+  output:
+    - name: First questions
+      contains: A calm set of questions about feeling, research, who made each choice and who controls the final cut.
+    - name: Research plan
+      contains: What to study before you start, so nothing in your project is guessed or faked.
+    - name: Cut notes
+      contains: What to trim, what to try again, and which line that explains too much to remove.
+    - name: Music and sound choices
+      contains: Ideas for existing music or sound that change how a scene or video feels.
+    - name: Control decisions
+      contains: Which calls to keep in one pair of hands, and where to hear your team first.
+    - name: Honest limits
+      contains: Where his method cost time, money or goodwill, and how to scale it down for fast jobs.
 seats:
   - {seat: "Control of every frame", asks: "Was every choice in this made on purpose, or did some of them just happen?"}
   - {seat: "Research first", asks: "Have you studied this world well enough that nothing in it is faked?"}

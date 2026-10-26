@@ -8,7 +8,40 @@ metadata:
 
 # People budgeting & financial planning
 
-Own the people budget end-to-end — cost-center headcount modeling, annual and rolling budget cycles, and variance tracking — so HR speaks the same financial language as finance instead of treating budget as someone else's spreadsheet.
+Own the people budget end to end (cost-center headcount modeling, annual and rolling budget cycles, and variance tracking) so HR speaks the same financial language as finance.
+
+This is planning help. It does not run payroll and it does not replace your finance team's planning model. Say so in the output.
+
+## Before you start
+
+You need the headcount plan (each role with team or cost center, start date, and whether it is approved or planned), the pay rate for each role, and the benefit and employer-cost rates. The assumptions are also needed: merit increase and its date, attrition, and backfill delay. Optional: actual spend to date, shared program costs, and last year's budget.
+
+If an input is missing, ask once for all of them in one message. If one stays missing, write "MISSING: <input>" on the line that needs it and use a clearly labelled placeholder the user can change. Never invent a pay rate, benefit rate, attrition figure or merit percent.
+
+## Steps
+
+1. **List the assumptions.** Write each one down with its source ("from user", "placeholder"). Ask the user to confirm the ones finance should sign off.
+2. **Cost each role.** For each role: monthly cost = base pay / 12 + benefits + employer costs, counted from its start month to the year end. Apply the merit increase from its effective month.
+3. **Keep approved and planned apart.** Show two totals for each team: approved roles, and planned but not yet approved. Never merge them.
+4. **Apply attrition and backfill.** Reduce cost for the months a seat is empty, using the user's attrition and backfill delay. Show it as its own line.
+5. **Share program costs.** Spread shared costs such as learning or recruiting across cost centers using the key the user gives (for example headcount share). State the key.
+6. **Build the month-by-month view.** One row per team, one column per month, with totals.
+7. **Compare with actuals, if given.** For each team and month show budget, actual and variance. Name the driver of each variance in words ("slower hiring in Q2"), not only a number. Flag risks early.
+8. **Run a scenario, if asked.** Change one thing (a freeze, faster hiring, a reorg) and show the new total next to the base case.
+9. **Write the finance note.** Half a page: totals, key assumptions, biggest risks, decisions needed.
+
+## Output
+
+```
+ASSUMPTIONS         <assumption> | <value> | <source> | MISSING if blank
+BUDGET BY TEAM      <team or cost center> | approved <n> | planned, not approved <n> | total <n>
+MONTH BY MONTH      <team> | <month 1> ... <month 12> | total
+ADJUSTMENTS         attrition and backfill savings <n> | shared costs allocated <n> (key used)
+VARIANCE (if actuals given)  <team> | budget <n> | actual <n> | variance <n> | driver <words>
+SCENARIO (if asked) <change> | new total <n> | difference <n>
+NOTE FOR FINANCE    <totals, assumptions, risks, decisions needed>
+MISSING AND NEXT    <inputs not given> | <next three actions>
+```
 
 ## Supported tasks
 

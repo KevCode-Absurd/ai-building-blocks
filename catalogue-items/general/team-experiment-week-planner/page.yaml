@@ -1,116 +1,151 @@
 new_slug: team-experiment-week-planner
 name: "Team experiment week planner"
-summary: "Paste your team size and work. Get a protected experiment week, a change of setting and a way to share results."
+summary: "Give a flat team a protected week to try new things. Get dates clear of client work, a new setting and rules for each experiment."
 job: lead-people
 thinking: low
 thinking_why: "It fits your facts into a fixed plan with simple choices."
 
 headline: "Team experiment week planner"
-subhead: "Paste your team size and the work you do. It names what has gone flat, books the week before client dates, picks a new setting and sets a rule for each experiment. You get a one-page plan with a way to share results."
+subhead: "Paste your team size and the work you do. It names what has gone flat, books a week clear of client dates and picks a new setting. It sets a rule for each experiment and a way to carry results into paid work. You get a one-page plan."
 
 explain: |
   Teams that never stop delivering also stop learning. A day for ideas gets swallowed by email, and loose experiments rarely finish or reach real work.
-  
-  This skill plans one protected week. It first names what is behind the flat patch: boredom, dull content or fear. It books the week before any client dates, picks a change of setting and gives every experiment a rule that keeps it small. No client work is taken in the week. At the end, results are shown and an owner and date carry the useful ones into paid work.
+
+  This skill plans one protected week, in the way Stefan Sagmeister takes time away from client work and Jessica Walsh sets rules for self-set projects. It first names what is behind the flat patch: boredom, dull content (the work itself is not interesting) or fear. It books the week before any client dates and picks a change of setting. Each experiment gets a rule that keeps it small, such as a time cap, a fixed material or a budget, and a state that means done.
+
+  No client work is taken in the week, and someone covers anything urgent. At the end, each person shows one result and one thing they learned. An owner and a date carry the useful ones into paid work. It works for a studio, a clinic, a sales team or a school department.
 
 when:
-  - "Your team feels flat and the work all looks the same."
-  - "You have wanted to try new things but never found the time."
-  - "You want to turn a quiet season into something useful."
+  - Your team feels flat and the work all looks the same.
+  - You have wanted to try new things but never found the time.
+  - You want to turn a quiet season into something useful.
+  - Your last 'innovation day' was eaten by email and produced nothing.
+
+not_for:
+  - "You want to free time by dropping routine first: use the process and meeting cull planner, then come back."
+  - "You want to test one change to one process, with a before and after: use the one-change experiment planner."
+  - "You want to test a new product idea with real customers: use the MVP experiment planner."
+  - "A live launch or a big client deadline falls in the only free week. Pick another week. The plan will not hide a clash."
 
 you_give:
-  - "Team size and the work you do"
-  - "Calendar or client dates (optional)"
-  - "An existing plan (optional)"
+  - "Team size and the work you do, and what feels flat"
+  - "Your calendar, client dates or busy seasons, so the week can be placed (optional but important)"
+  - "Ideas people already have, however rough (optional)"
+  - "A budget figure for the setting and materials (optional)"
+  - "An existing plan, pasted as it is (optional)"
 you_get:
-  - "A named reason for the week"
-  - "Dates, a setting and an experiments table with rules"
-  - "A show-and-keep plan and a hand-back list"
+  - "The block behind the flat patch: boredom, dull content or fear, with one sign you saw"
+  - "A week placed clear of client dates, and a change of setting with who books it"
+  - "An experiments table, each with a rule and a done-state"
+  - "A cover plan for urgent items and a show-and-keep plan"
+  - "A hand-back list with an owner and a date for each result that reaches paid work"
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Say how many people you have and what you deliver."
-  - "Paste your busy dates, or say when you are quietest."
-  - "Ask each person for one idea, however rough."
-  - "Book the week on the shared calendar the same day."
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it into a new chat. It needs no files, web access or paid tools.
+  - Say how many people you have, what you deliver and what feels flat. Paste your busy dates, or say when you are quietest.
+  - Ask each person for one idea, however rough, and paste them in.
+  - Check every client date against the proposed week before you book it.
+  - Book the week on the shared calendar the same day.
 
 how_it_works:
-  - title: "Name the block"
-    text: "Names the block: boredom, dull content or fear."
-  - title: "Put the week on the calendar first"
-    text: "Puts the experiment week on the calendar before client dates."
-  - title: "Pick a change of setting"
-    text: "Picks a change of setting for the week."
-  - title: "Set a rule for each experiment"
-    text: "Sets a rule or limit for each experiment."
-  - title: "Take no client work"
-    text: "Takes no client work in the week."
-  - title: "Choose what to show and keep"
-    text: "Chooses what to show and what to keep."
-  - title: "Hand results back to paid work"
-    text: "Decides where results feed paid work."
-  - title: "Checks its own work"
-    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+  - title: Names the block
+    text: Boredom, dull content or fear, with one sign you saw. It picks the main one and notes a second if it applies.
+  - title: Places the week
+    text: Marks every client date and busy period and puts the week where none clash. With no calendar it offers three weeks to check.
+  - title: Picks a change of setting
+    text: A place or setup unlike the usual desk, what it costs and who books it.
+  - title: Sets a rule for each experiment
+    text: A limit that keeps it small, such as a fixed material, a time cap or a budget, and what done looks like.
+  - title: Covers client work
+    text: Names who handles anything urgent and what is said to clients. No client work is booked in the week.
+  - title: Plans the show and keep
+    text: What is shown, to whom and what stays private, with one result and one lesson from each person.
+  - title: Hands results back to paid work
+    text: Where each useful result feeds later work, with an owner and a date.
 
 output_shape: |
   THE BLOCK
   <boredom / dull content / fear> | Sign: <what you saw>
-  
+
   THE WEEK
   <dates> | Clashes checked: <yes/no>
-  
+
   SETTING
   <place or setup>, booked by <who>
-  
+
   EXPERIMENTS
   <person> | <idea> | Rule: <limit> | Done when: <state>
-  
+
   COVER
   <who handles urgent items, what is said to clients>
-  
+
   SHOW AND KEEP
   <what is shown, to whom, what stays private>
-  
+
   HAND-BACK
   <result> -> <paid work> | Owner | Date
-  
+
   MISSING
   <gaps>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 
+output_sample:
+  input:
+    - "Team size and the work you do, and what feels flat"
+    - "Your calendar or client dates (optional but important)"
+    - "Ideas people already have (optional)"
+    - "A budget figure (optional)"
+  output:
+    - name: "THE BLOCK"
+      contains: "Whether the flat patch is boredom, dull content or fear, with one sign you saw."
+    - name: "THE WEEK"
+      contains: "The dates of the experiment week, checked against every client date you gave."
+    - name: "SETTING"
+      contains: "A place or setup unlike the daily desk, and who books it."
+    - name: "EXPERIMENTS"
+      contains: "One row per person or pair, each with a rule that keeps it small and a done-state."
+    - name: "COVER"
+      contains: "Who handles urgent items in the week and what clients are told."
+    - name: "SHOW AND KEEP"
+      contains: "What each person shows afterwards, to whom, and what stays private."
+    - name: "HAND-BACK"
+      contains: "Each result that moves into paid work, with an owner and a date."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, such as dates or budget, and any check it could not pass."
+
 tweaks:
-  - what: "Team size"
-    how: "A team of three needs one shared experiment. A team of twelve needs groups."
-  - what: "Season"
-    how: "Tell it when you are quietest. It aims the week there."
-  - what: "Budget"
-    how: "Give a number. The setting and materials depend on it."
-  - what: "The block"
-    how: "If you are unsure what is behind the flat patch, say what people complain about."
+  - what: Team size
+    how: A team of three needs one shared experiment. A team of twelve needs groups.
+  - what: Season
+    how: Tell it when you are quietest. It aims the week there.
+  - what: Budget
+    how: Give a number. The setting and materials depend on it.
+  - what: The block
+    how: If you are unsure what is behind the flat patch, say what people complain about.
 
 judge:
-  - "The dates are in the calendar and clear of client work."
-  - "Each experiment has a rule and a done-state."
-  - "A cover plan exists."
-  - "At least one result has an owner and a date to reach paid work."
-  - "The setting differs from the daily one."
+  - The dates are in the calendar and clear of client work.
+  - Each experiment has a rule and a done-state.
+  - A cover plan exists.
+  - At least one result has an owner and a date to reach paid work.
+  - The setting differs from the daily one.
 
 test:
-  - "Check every client date against the proposed week."
-  - "Ask a team member to say what their experiment is and where it stops."
-  - "Run it twice and see if the block named stays close."
+  - Check every client date against the proposed week.
+  - Ask a team member to say what their experiment is and where it stops.
+  - Run it twice and see if the block named stays close.
 
 improve:
-  - "Add your own list of limits to step 4, such as fixed time or one material."
-  - "Add a recurring quarter to the plan."
-  - "Keep a log of results that reached paid work."
-  - "Pair it with \"Process and meeting cull planner\" to free time."
+  - Add your own list of limits to step 4, such as fixed time or one material.
+  - Add a recurring quarter to the plan.
+  - Keep a log of results that reached paid work.
+  - Pair it with "Process and meeting cull planner" to free time.
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Planning and rewording are text work any strong chat AI does well with this skill."}
+    - {name: "Claude, ChatGPT or Gemini", why: "Planning and rewording are text work. No files, web access or paid tools needed."}
     - {name: "A shared calendar", why: "Blocking the week on a team calendar makes it hard to cancel."}
   inputs:
     - "Your client or busy-season calendar"
@@ -118,4 +153,9 @@ works_best_with:
     - "A budget figure"
 
 terms:
-
+  - term: Dull content
+    meaning: Work that is not interesting in itself, which is different from a team that is tired or afraid.
+  - term: Hand-back
+    meaning: The step that moves a useful experiment result into paid work, with an owner and a date.
+  - term: Done-state
+    meaning: A plain description of what the experiment looks like when it is finished.

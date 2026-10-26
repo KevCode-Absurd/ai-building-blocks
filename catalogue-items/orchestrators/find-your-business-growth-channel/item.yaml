@@ -1,7 +1,6 @@
 slug: find-your-business-growth-channel
 name: Find your business growth channel
-summary: Paste your product link. Get all 19 growth channels compared, a few
-  small tests and a review plan.
+summary: Find the best way to win customers for your shop or service. Paste your link and get 19 growth channels compared and three small tests.
 category: orchestrator
 boards: []
 type: workflow
@@ -11,8 +10,8 @@ job: strategy
 level: intermediate
 inputs:
   - type: web_page
-    required: false
-  - type: brief
+    required: true
+  - type: question
     required: false
   - type: experiment_results
     required: false
@@ -43,76 +42,54 @@ uses:
   - traction-experiment-reviewer
 steps:
   - uses: traction-business-profiler
-    note: "First: build the profile in general business mode, with one goal and a
-      source ledger."
+    note: "First: build the profile in general business mode, with one goal and a source ledger. Hands the profile to step 2 and to every channel planner."
   - uses: traction-channel-ranker
-    note: "Then: brainstorm all 19 channels and select up to three small pilots
-      within the combined limits."
+    note: "Then: brainstorm all 19 channels and select up to three small pilots within the combined limits. Hands the shortlist to the channel planners."
   - uses: traction-viral-marketing
-    note: "Only when Viral Marketing is selected in shortlist.md: prepare its pilot.
-      Otherwise record skipped; do not run it."
+    note: "Only when Viral Marketing is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-public-relations
-    note: "Only when Public Relations is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+    note: "Only when Public Relations is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-unconventional-pr
-    note: "Only when Unconventional PR is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+    note: "Only when Unconventional PR is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-search-engine-marketing
-    note: "Only when Search Engine Marketing is selected in shortlist.md: prepare
-      its pilot. Otherwise record skipped; do not run it."
+    note: "Only when Search Engine Marketing is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-social-and-display-ads
-    note: "Only when Social and Display Ads is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+    note: "Only when Social and Display Ads is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-offline-ads
-    note: "Only when Offline Ads is selected in shortlist.md: prepare its pilot.
-      Otherwise record skipped; do not run it."
+    note: "Only when Offline Ads is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-search-engine-optimization
-    note: "Only when Search Engine Optimization is selected in shortlist.md: prepare
-      its pilot. Otherwise record skipped; do not run it."
+    note: "Only when Search Engine Optimization is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-content-marketing
-    note: "Only when Content Marketing is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+    note: "Only when Content Marketing is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-email-marketing
-    note: "Only when Email Marketing is selected in shortlist.md: prepare its pilot.
-      Otherwise record skipped; do not run it."
+    note: "Only when Email Marketing is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-engineering-as-marketing
-    note: "Only when Engineering as Marketing is selected in shortlist.md: prepare
-      its pilot. Otherwise record skipped; do not run it."
+    note: "Only when Engineering as Marketing is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-targeting-blogs
-    note: "Only when Targeting Blogs is selected in shortlist.md: prepare its pilot.
-      Otherwise record skipped; do not run it."
+    note: "Only when Targeting Blogs is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-business-development
-    note: "Only when Business Development is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+    note: "Only when Business Development is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-sales
-    note: "Only when Sales is selected in shortlist.md: prepare its pilot. Otherwise
-      record skipped; do not run it."
+    note: "Only when Sales is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-affiliate-programs
-    note: "Only when Affiliate Programs is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+    note: "Only when Affiliate Programs is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-existing-platforms
-    note: "Only when Existing Platforms is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+    note: "Only when Existing Platforms is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-trade-shows
-    note: "Only when Trade Shows is selected in shortlist.md: prepare its pilot.
-      Otherwise record skipped; do not run it."
+    note: "Only when Trade Shows is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-offline-events
-    note: "Only when Offline Events is selected in shortlist.md: prepare its pilot.
-      Otherwise record skipped; do not run it."
+    note: "Only when Offline Events is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-speaking-engagements
-    note: "Only when Speaking Engagements is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+    note: "Only when Speaking Engagements is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-community-building
-    note: "Only when Community Building is selected in shortlist.md: prepare its
-      pilot. Otherwise record skipped; do not run it."
+    note: "Only when Community Building is selected in shortlist.md: prepare its pilot from the business profile (step 1) and the shortlist (step 2), not from the step before. Otherwise record skipped; do not run it. Its plan goes to the final review (step 22)."
   - uses: traction-experiment-reviewer
-    note: "After measured results exist: review evidence and focus, revise, stop or
-      wait. Without results, return the review template as pending."
+    note: "After measured results exist: review evidence and focus, revise, stop or wait. Without results, return the review template as pending."
 origin: rebuilt
 version: 1.0.0
 credits:
   - title: "Traction: A Startup Guide to Getting Customers (2014)"
     by: Gabriel Weinberg and Justin Mares
-    used: The 19 acquisition channels, Bullseye testing and a measurable traction
-      goal. Rebuilt in original words with SaaS-specific operating guidance.
+    used: The 19 acquisition channels, Bullseye testing and a measurable traction goal. Rebuilt in original words with SaaS-specific operating guidance.
 example_pending: true
+needs_mode: manual

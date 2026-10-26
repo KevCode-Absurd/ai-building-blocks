@@ -1,6 +1,6 @@
 new_slug: email-campaign-calendar-planner
 name: Monthly email campaign calendar planner
-summary: Plan a month of store emails around real dates and team capacity. Get audiences, angles, owners, content variety and a production schedule.
+summary: Plan a month of store emails around your real dates and team size. Get send dates, angles, owners and a content mix check.
 job: write-emails
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
@@ -14,6 +14,10 @@ when:
   - You send emails only around sales and want a steady monthly rhythm.
   - You have a launch coming and want the sends around it planned.
   - You are always writing the same day's email at the last minute.
+not_for:
+  - You have no email list or no consent to send. Build your list first, or use the engaged list expander if people stopped opening.
+  - You need one single email written. Ask a person or your AI to write that one email, as this plans a whole month.
+  - You want to send the same plan to your whole list every week. Start with engaged people only, and test before you raise the pace.
 you_give:
   - Your brand, products and target customer
   - "Fixed dates: launches, restocks and sale events"
@@ -31,6 +35,31 @@ how_to_use:
   - List the content you already have, such as blogs, videos and reviews.
   - Check the mix and the pace against your real team capacity before you commit.
   - Load the emails two weeks ahead and review the results at month end.
+output_sample:
+  input:
+    - Your brand, products and target customer
+    - Your fixed dates, such as launches, restocks and sales
+    - The month to plan
+    - Blogs, videos and reviews you can reuse (optional)
+    - Your monthly revenue, team size and segments (optional)
+  prerequisites:
+    - An AI chat such as Claude, ChatGPT or Gemini
+    - Your brand brain from the Website brand brain builder (optional)
+  output:
+    - name: PACE
+      contains: How many campaigns a week to send, and why that fits your revenue, team and list.
+    - name: CALENDAR
+      contains: One row per send with date, day, type, segment, status and owner, plus a two-line angle.
+    - name: MIX CHECK
+      contains: Counts of promotion, product, education, proof and brand sends, and the ratio of non-discount to discount.
+    - name: WEEKLY VARIETY
+      contains: Any two sends in a row of the same type, and the swap that fixes it.
+    - name: PRODUCTION SCHEDULE
+      contains: The dates to write, design and load each email so you stay two weeks ahead.
+    - name: MONTH-END REVIEW
+      contains: "What to check at month end: top sends by revenue, clicks without sales, and why some lagged."
+    - name: CHECKS MISSED and MISSING
+      contains: Any check that failed and any input you did not give, such as fixed dates or team size.
 how_it_works:
   - title: Picks the pace
     text: By monthly revenue and team size. Under $50,000 a month, 2 to 3 campaigns a week. Above that, 3 to 4. Rarely above 5. A small team starts at 2 a week.

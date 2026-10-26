@@ -38,6 +38,7 @@ How to start:
 This skill works with a customer list. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
 
 - **Customer list** with lifetime spend, order count and last order date (required).
+- **A VIP program plan** (optional): its top tier and club invite show who gets the biggest touch.
 - **Monthly budget and hours** the founder or team can give (required for the touch menu).
 - **Product category and any personal detail held**: a pet, a home, a hobby, a trip (advised).
 - **Brand voice notes** (optional; ask for a sample of how they write to customers).

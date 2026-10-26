@@ -1,6 +1,6 @@
 new_slug: billing-reminder-and-confirmation-writer
 name: "Billing reminder and confirmation writer"
-summary: "Give it your subscription products and gift schedule. Get billing reminder and order confirmation emails that cut cancels."
+summary: "Write a billing reminder email and order confirmation for each rebill, with a delay link first. Built to cut subscription cancels. Includes an A/B test plan."
 job: keep-customers
 thinking: medium
 thinking_why: "It writes several emails to a fixed layout from your facts, so a mid-size model is enough. Use a stronger one if you have many products and gift schedules."
@@ -17,6 +17,10 @@ when:
   - Your reminder and receipt are still the plain default from your subscription app or Shopify.
   - Cancels spike around the first rebill and you do not know why.
   - You are adding a free gift on certain orders and want the emails to say so.
+not_for:
+  - "Your cancels come from product fit or slow shipping: fix that first, because these emails will not change it. Ask a few cancelled customers why they left."
+  - "You need the flow for what happens after someone clicks cancel: use the Subscription cancel flow builder."
+  - "You need a gift plan for your subscribers: use the Subscriber retention calendar, then bring the gift schedule here."
 
 you_give:
   - Your subscription products and plans, and which order number each gift or perk lands on
@@ -35,6 +39,28 @@ how_to_use:
   - Say which email platform and subscription app you use, and your Shopify plan.
   - Check the draft for anything untrue about gifts or dates, then build it in your email platform.
   - Run the A/B test it gives you and compare cancels per 100 reminders sent.
+output_sample:
+  input:
+    - Your subscription products and plans, and which order number each gift lands on
+    - Real benefits, testimonials and usage tips
+    - Your email platform, subscription app and Shopify plan
+    - Your current cancel rate on the billing reminder (optional)
+  prerequisites:
+    - An email platform that can pull order data, such as Klaviyo (paid)
+    - A subscription app that gives one-click delay, skip, swap and manage links, such as Skio or Recharge (paid)
+  output:
+    - name: Billing reminder, rebill 1 to 6
+      contains: One reminder per rebill number with subject, preview, warm opening, next box, perks, delay link, cross-sell and manage link.
+    - name: Order confirmation
+      contains: Versions for a first order, a rebill and a one-time order, with order content, benefits and what comes next.
+    - name: Link setup
+      contains: Where to set up the delay, skip, swap, manage and cancel links.
+    - name: A/B test
+      contains: Your current email against the new one, measured in cancels per 100 reminders sent, by rebill number.
+    - name: Checks missed
+      contains: Any check the draft failed, or none.
+    - name: Missing
+      contains: Anything you did not give, such as a gift schedule or testimonials.
 
 how_it_works:
   - title: Checks the notice rules

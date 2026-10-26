@@ -1,16 +1,18 @@
 slug: go-or-no-go-launch-checker
 name: Go or no-go launch checker
-summary: Paste your plan. Get a go or no-go against the book's six faults and three halfway checks.
+summary: "Check a launch plan against six faults and three readiness checks. Get a go, wait or no verdict and a fix list before you spend."
 category: general
 type: skill
 role: check
 job: strategy
 level: intermediate
 inputs:
-  - type: audit_report
-    required: true
   - type: plan
     required: true
+  - type: audit_report
+    required: false
+  - type: shortlist
+    required: false
 outputs:
   - type: audit_report
 origin: rebuilt
@@ -22,3 +24,6 @@ credits:
     by: Sun Tzu
     url: https://www.gutenberg.org/ebooks/132
     used: The six faults that lose a contest and the three halfway checks before moving
+next: [failure-first-plan-check, work-backwards-plan-checker, smallest-test-picker]
+before: [rival-matchup-scorer]
+needs_mode: manual

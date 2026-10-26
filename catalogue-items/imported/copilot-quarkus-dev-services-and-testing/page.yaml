@@ -2,17 +2,81 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-quarkus-dev-services-and-testing
 name: Quarkus integration test builder
-summary: Share your Quarkus app. Get tests with local service containers and
-  checks for real API behavior.
+summary: Write Quarkus tests that run against real databases and services in containers. Get test classes for your endpoints and the commands to run them.
 job: test-and-fix-code
 headline: Quarkus integration test builder
-subhead: Share your Quarkus app. Get tests with local service containers and
-  checks for real API behavior. Share your goal and the files you already have.
-  The skill file sets out the steps and the tools needed for this job.
+subhead: Give it your Quarkus project and the endpoint or class to test. Your AI writes @QuarkusTest classes that use Dev Services, which starts a real database or message broker in a container, then gives you the commands to run them.
+explain: |
+  This Quarkus integration test builder writes tests that call your real app, not a fake one. Quarkus is a Java framework. Its Dev Services feature starts a real PostgreSQL, Kafka, Redis or similar service in a container when you run tests, with no setup. So your tests check real behaviour, such as a REST endpoint that reads from a database.
+
+  It first checks your Quarkus version in pom.xml, because the test annotations changed across versions. Then it picks the simplest tool that fits. Dev Services comes first. A custom test resource comes only when Dev Services does not cover the service you need.
+
+  It also covers mocking beans, running as a test user, test profiles and rolling back changes after each test. It knows the common trap: integration tests ending in IT are skipped by a plain test run, so you need one extra flag.
+when:
+  - You have a Quarkus endpoint with no tests and need a first test that hits a real database.
+  - Your tests mock the database and miss bugs that only show up in real use.
+  - A test fails because a container or port is not set up the way you expect.
+  - Your build runs tests but silently skips your IT classes.
+not_for:
+  - You want to build a new feature in your Quarkus app, with tests after. Use Build a Quarkus application feature.
+  - You want to compile a native binary. Use Prepare a Quarkus native build.
+  - Your app is Spring Boot or another framework. This skill is only for Quarkus.
+you_give:
+  - Your Quarkus project, or its pom.xml and the class to test
+  - Your Quarkus version, from pom.xml
+  - The endpoint, class or behaviour to test
+  - Confirmation that Docker or Podman is running
+  - Services your app uses, such as PostgreSQL or Kafka (optional)
+you_get:
+  - Test classes for the endpoints or classes you named
+  - The Dev Services settings your tests need
+  - A test resource, only if Dev Services does not cover a service
+  - The commands to run the tests, and what each one skips
+  - A short list of what you still need to check by hand
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Open an AI that can read your project files, such as Claude Code. Paste in the skill.
+  - Share your pom.xml and the class you want to test. Say your Quarkus version and which services the app uses.
+  - Start Docker or Podman before you run anything. Dev Services needs one of them to start containers.
+  - Read the test before you run it. Check that it asserts something real, such as a status code and a body.
+  - Run ./mvnw test for @QuarkusTest classes. Run ./mvnw verify -DskipITs=false to include the IT classes.
+  - Paste any failure back to your AI. It needs a running machine for this, so the AI cannot run the tests unless it has a shell.
+output_sample:
+  input:
+    - Your pom.xml and the class or endpoint to test
+    - Your Quarkus version
+    - The services your app uses, such as a database (optional)
+  prerequisites:
+    - Java and Maven, with a Quarkus project
+    - Docker or Podman running on your machine
+    - An AI that can read files and run commands, such as Claude Code (optional)
+  output:
+    - name: Test classes
+      contains: A @QuarkusTest class per endpoint with RestAssured calls and checks on status and body.
+    - name: Dev Services settings
+      contains: The application.properties lines for the service images, reuse and ports your tests need.
+    - name: Test resource
+      contains: A small class that starts a service Dev Services cannot, shown only when needed.
+    - name: Run commands
+      contains: The commands for unit tests and for IT classes, with a warning about the skipITs setting.
+    - name: Open items
+      contains: Anything not checked, such as native builds on macOS or Windows, or versions that differ.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read your project, write the tests and run them with Maven.
+    - name: Claude, ChatGPT or Gemini in a plain chat
+      why: Works if you paste your pom.xml and class. You run the Maven commands yourself.
+  inputs:
+    - Your pom.xml, which shows the Quarkus version and which extensions you use.
+    - The class or REST resource you want covered.
+terms:
+  - term: Quarkus
+    meaning: A Java framework for building web services and apps.
+  - term: Dev Services
+    meaning: A Quarkus feature that starts real databases and brokers in containers when you run or test your app.
+  - term: Container
+    meaning: A small packaged environment, run by Docker or Podman, that holds a service such as a database.
+  - term: Integration test
+    meaning: A test that runs your app together with the services it depends on.
+  - term: RestAssured
+    meaning: A Java library for calling a web endpoint in a test and checking the reply.

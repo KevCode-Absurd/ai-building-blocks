@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It must think through edge cases for each story.
 new_slug: qa-test-scenario-writer
 name: QA test scenario writer
-summary: Paste your user stories. Get test scenarios with starting state, steps
-  and the result to expect.
+summary: Paste your user stories and get QA test scenarios with starting state, numbered steps and the result to expect, plus edge cases to try.
 job: test-and-fix-code
 headline: QA test scenario writer
-subhead: A set of test scenarios you can hand straight to a tester, one per user
-  story. Each one says what is being checked, what must be true before you
-  start, who does it, the steps, and what you should see after each step.
+subhead: A set of test scenarios you can hand straight to a tester, one per user story. Each one says what is being checked, what must be true before you start, who does it, the steps, and what you should see after each step.
 explain: |
   A set of test scenarios you can hand straight to a tester, one per user story. Each one says what is being checked, what must be true before you start, who does it, the steps, and what you should see after each step.
 
@@ -18,6 +15,10 @@ when:
   - You are writing an acceptance test plan for a release.
   - A tester asks what exactly to click and what should happen.
   - You want edge cases listed that nobody has thought of yet.
+not_for:
+  - "You want to explore the product or test how easy it is to use: ask a person to run an exploratory or usability session."
+  - "You need automated regression tests that run on every release: use a test framework such as Playwright or Cypress."
+  - "You have no user story or acceptance criteria yet: write those first, then come back."
 you_give:
   - Product or system name
   - User story with acceptance criteria
@@ -28,7 +29,28 @@ you_get:
   - Numbered steps with expected results
   - List of edge cases to try
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. It needs no code, files or paid tools.
+  - Paste your product name and one user story with its acceptance criteria.
+  - Add limits, such as the test environment, test accounts with their roles, or seed data the tests assume (optional).
+  - Read each scenario. Check that the starting conditions match your real setup.
+  - Copy the scenarios into your test management tool or bug tracker, then turn the edge cases into regression tests.
+output_sample:
+  input:
+    - Your product or system name
+    - Your user story with its acceptance criteria
+    - Testing limits or context (optional)
+  output:
+    - name: Test Scenario
+      contains: A clear name for the scenario being checked.
+    - name: Test Objective
+      contains: The one behavior this test is meant to prove.
+    - name: Starting Conditions
+      contains: The system state, data setup and user permissions needed before the first step.
+    - name: User Role
+      contains: Who carries out the test.
+    - name: Test Steps
+      contains: Numbered actions, each with the result you should see after it.
+    - name: Expected Outcomes
+      contains: The final results you can check to pass or fail the test.
+    - name: Edge cases
+      contains: Bad input and limit values to try beyond the normal path.

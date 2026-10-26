@@ -35,3 +35,26 @@ how_to_use:
     the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on
     this page.
+not_for:
+  - "You want Prometheus rules and a dashboard layout as well. Use the Reliability target setter."
+  - "You want a full plan for metrics, logs and traces. Use the Monitoring system planner."
+  - "You need a customer contract with penalties. That is a legal document, so ask a lawyer. This tool sets engineering targets only."
+output_sample:
+  input:
+    - The service and the user task you want to protect
+    - About 30 days of how often it worked, such as the share of requests that succeeded
+    - The window to measure over, and who owns the target
+    - Existing targets and your alerting tool (optional)
+  prerequisites:
+    - An AI that can run Python 3 for the bundled scripts, or accept that it will work the steps by hand
+  output:
+    - name: Service level definition
+      contains: The chosen measure, how it is counted, the target, the window and the owner.
+    - name: Error budget
+      contains: How much failure the target allows in the window.
+    - name: Burn-rate alert thresholds
+      contains: A fast alert for sudden loss and slow alerts for steady leaks, across several time windows.
+    - name: Error budget policy
+      contains: What the team does when the budget is spent.
+    - name: Target review
+      contains: Checks for common mistakes, such as a target set too high or CPU used as the measure.

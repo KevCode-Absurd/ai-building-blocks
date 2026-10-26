@@ -1,0 +1,41 @@
+slug: agency-marketing-cross-border-ecommerce
+name: Cross-Border E-Commerce Specialist agent
+summary: "Get a cross-border ecommerce plan for Amazon, Shopee, Temu or TikTok Shop with margin per product, compliance to-dos and a launch order."
+category: agent
+boards: []
+type: agent
+role: make
+job: organic
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: product_data
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: marketing/marketing-cross-border-ecommerce.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-cross-border-ecommerce.md
+  licence: MIT
+  original_name: Cross-Border E-Commerce Specialist
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 073dba84e8159c763c073fcf16f14d57685611c50555a7cde346df85a25c6293
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Cross-Border E-Commerce Specialist
+  - Agency Agents
+  - Marketing
+credits:
+  - title: Cross-Border E-Commerce Specialist
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-cross-border-ecommerce.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

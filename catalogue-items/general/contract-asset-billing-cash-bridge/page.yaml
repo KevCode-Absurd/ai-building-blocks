@@ -1,7 +1,7 @@
 new_slug: contract-asset-billing-cash-bridge
 name: Contract asset billing cash bridge
 headline: Contract asset billing cash bridge
-summary: Separate recognized unbilled revenue, invoices and collections in a historical cash-conversion bridge.
+summary: "Build a contract asset billing cash bridge: see how unbilled revenue turns into invoices and collections, with every gap and adjustment flagged."
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
@@ -14,6 +14,10 @@ when:
   - You need a contract-asset-to-billings-to-collections schedule with explicit completeness gates.
   - You work on issuer revenue and cash-flow reconciliation and need traceable calculations.
   - A reviewer needs to trace the result back to inputs and assumptions.
+not_for:
+  - You have no conditional payment terms, so nothing sits as a contract asset. Use a simple receivables roll-forward in a spreadsheet.
+  - You want to forecast future cash. Use a cash-flow forecast, because this bridge only looks back at past periods.
+  - You need to decide if revenue was recognized correctly. Ask your accountant or auditor, because this tool does not test contract recognition.
 you_give:
   - Contract-asset and receivable opening/closing balances, new unbilled revenue, direct invoices and all noncash adjustments.
   - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
@@ -27,6 +31,29 @@ how_to_use:
   - Share the actual sources and the financial question you need answered.
   - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
   - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+output_sample:
+  input:
+    - Opening and closing contract asset balances
+    - Opening and closing receivable balances
+    - New unbilled revenue for the period
+    - Direct invoices raised in the period
+    - Write-offs, FX, factoring, tax and other noncash adjustments
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, to run the bundled calculation check (optional)
+  output:
+    - name: Scope and dated sources
+      contains: The period, currency, scale, accounting basis and the dated source for each balance.
+    - name: Inputs and assumptions
+      contains: Every balance and flow you supplied, kept apart from assumptions, with gaps marked MISSING.
+    - name: Model calculations and reconciliations
+      contains: Transfers from contract assets to receivables, then inferred collections, with each reconciliation shown.
+    - name: Editable workbook
+      contains: A native spreadsheet with live formulas, an input schema and test cases for the calculation.
+    - name: Actual file verification
+      contains: The checks that ran on the workbook, such as recalculation, changed-input test and reopening the file.
+    - name: "MISSING: and CHECKS MISSED"
+      contains: Unresolved inputs and any check that failed or could not run, or the word none.
 how_it_works:
   - title: 1. Read the conditional-payment terms and distinguish contract assets from unconditional receivables
     text: Read the conditional-payment terms and distinguish contract assets from unconditional receivables.

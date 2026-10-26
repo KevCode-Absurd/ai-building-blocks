@@ -30,6 +30,7 @@ How to start:
 
 ## What you need
 - **Ideas and findings** (required): a list of ideas or problems, each with the evidence behind it (a recording, a heatmap, a survey line, a funnel drop, a customer call). The heatmap and recording reader and the post-purchase survey builder make this input.
+- **A sorted issue plan** (optional): the page issue sorter's plan. Use its order and its fix-now, investigate and test groups to pick the ideas worth ranking as tests.
 - **Page numbers** (strongly advised): traffic, conversion rate and gross profit per order for the page each idea touches.
 - **Build effort** (strongly advised): hours, or low, medium or high, for each idea.
 - **Monthly orders** (strongly advised): to check the list suits your testing stage.

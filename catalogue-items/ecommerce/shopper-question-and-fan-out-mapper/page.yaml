@@ -1,61 +1,74 @@
 new_slug: shopper-question-and-fan-out-mapper
 name: "Shopper question and fan-out mapper"
-summary: "Give it your products and customer questions. Get the questions shoppers ask AI, the sub-questions it runs and your gaps."
+summary: "Get the questions shoppers ask AI about your products, grouped by topic, with follow-up searches and the pages your store still lacks."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It sorts and groups many questions and spots gaps against your pages. A mid-level model is enough."
 
 headline: "Shopper question and fan-out mapper"
-subhead: Give it your products, your best search terms and what customers ask. It turns them into the long questions shoppers type into AI assistants, groups them by topic, lists the sub-questions the AI runs behind the scenes, and marks the ones no page on your store answers.
+subhead: "Give it your products, your best search terms and what customers ask. It writes the long questions shoppers type into AI assistants and groups them by topic. It lists the smaller searches an AI runs behind each one, and marks the questions no page on your store answers."
 
 explain: |
-  People talk to AI assistants in long sentences. Chat prompts average about 25 words, against about 6 for a Google search, in one source's figure. They add detail: "I have dry skin and a small budget." So the questions a store must answer are longer and more specific than its keyword list.
+  People talk to AI assistants like ChatGPT in long sentences, with detail in them: "I have dry skin and a small budget." So the questions a store must answer are longer and more specific than its keyword list. Most keyword tools show nothing for them, because no one tracks search volume for chat questions.
 
-  This skill builds that list. It starts from your own money terms and your customers' real questions, grouped by topic. It also lists fan-out, the smaller searches an AI runs behind one prompt, which show the topics your page must cover. It then marks the gaps: questions with no answer on your store. Each topic gets one page that answers it and its follow-ups. Fan-out data comes mostly from English-language and US tools, so treat it as a guide in other markets.
+  This skill builds that list of shopper questions from what you already have. It starts from your own money terms (the searches you pay for or sell on) and your customers' real words in reviews and support emails. It groups the questions by topic and gives each topic one page that answers it, with its follow-ups.
+
+  It also lists the fan-out: the smaller searches an AI runs behind one question before it writes an answer. Those show what a page must cover. Then it marks the gaps, the questions with no answer on your store. Fan-out data comes mostly from English-language and US tools, so treat it as a guide in other markets.
 
 when:
-  - You are planning product page FAQs, buying guides or collection pages.
-  - You want a question list to feed an AI recommendation test.
-  - Your keyword tool shows nothing for the long, specific questions your customers ask.
+  - You are planning product page FAQs, buying guides or collection pages and don't know what shoppers ask.
+  - Your keyword tool shows nothing for the long, specific questions customers send you.
+  - You want a question list to test in an AI tool, such as "which brand should I buy".
+  - Your store is never named when you ask an AI about your category, and you want to see what your pages fail to answer.
+
+not_for:
+  - "You want search volume or keyword difficulty: use the Store keyword validator. Chat questions have no official volume, and this skill never makes numbers up."
+  - "You want to know if AI assistants name your store today: use the AI search visibility tester. This skill builds the questions. That one tests them."
+  - "You only want a FAQ written from customer emails you already have: use the Customer FAQ writer."
+  - You have no products or product pages yet. Without them the list would only be a guess.
 
 you_give:
-  - Your products and collections with price points
-  - Your top paid and organic search terms, and your rivals' if you have them
-  - Customer emails, review text, sales or chat questions
-  - Fan-out queries you saw in an AI tool (optional)
+  - Your products or collections, with price points (required)
+  - Your best paid and organic search terms, and your rivals' if you know them (optional)
+  - Customer reviews, support emails or sales-call questions (optional, but they make the best questions)
+  - A list of your store pages, so it can find real gaps (optional)
+  - Smaller searches you saw an AI tool run (optional)
 
 you_get:
-  - "A question list grouped by topic: best X, X vs Y, X for a use, does it fit, worth it"
-  - A fan-out list for each topic
-  - A gap list of questions no page answers
+  - About 30 questions in a shopper's own words, grouped by topic
+  - The follow-up searches an AI runs for each topic, marked seen or likely
+  - One store page assigned to answer each topic
+  - A gap list of questions no page answers, with the 5 to build first
+  - A plain note that chat questions have no official search volume
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your products, search terms and a sample of customer questions or reviews.
-  - Ask for 30 questions to start. That is enough for a solo owner.
-  - If you can, check the fan-out in Perplexity or your browser and paste what you find.
-  - Take the gap list to the AI-ready product page editor or the answer-first page rewriter.
+  - Open the skill in Claude, ChatGPT or Gemini. If you have not added it, copy it and paste it into a new chat.
+  - Paste your products and prices. Add your search terms, about 20 reviews or support emails, and your page list if you have them.
+  - Ask for 30 questions. That is plenty for one store to start.
+  - Optional: ask a few of the questions in Perplexity, which shows the searches it runs. Paste what you see so the follow-ups are real, not guessed.
+  - Check the gap list against your site. Then give the gaps to the Product page editor for AI search or the Answer-first page rewriter.
 
 how_it_works:
   - title: Starts from money terms
     text: Rewrites each paid or best-selling search term as a question. A best seller becomes "what is the best X for Y".
   - title: Adds the long tail
-    text: "Pulls questions from sales calls, tickets, reviews and Reddit: does it work with, will it fit, is it safe for."
+    text: "Pulls questions from the customer words you paste: does it work with, will it fit, is it safe for. Without customer words it marks the questions as guessed."
   - title: Adds shopper context
-    text: Makes some questions long, with a need or limit in them, because long prompts make AI run narrower searches.
-  - title: Shows the fan-out
-    text: Perplexity shows its searches. In ChatGPT the browser network response lists them. Run each question 3 times.
+    text: Makes some questions long, with a need or limit in them, because long prompts make an AI run narrower searches.
+  - title: Shows the follow-up searches
+    text: "Perplexity shows its searches. In ChatGPT the browser's network response lists them, for people comfortable with developer tools. Run each question 3 times, because they change each run."
   - title: Reads fan-out as topics
-    text: Uses fan-out as a view into topics, not as a keyword list.
+    text: Uses the follow-up searches to see which topics a page must cover. It does not treat them as a keyword list.
   - title: Groups into topics
-    text: One page answers a whole topic with its follow-ups. Adds People Also Ask questions and second-level ones.
+    text: One page answers a whole topic with its follow-ups. It adds People Also Ask questions from Google where you can paste them.
   - title: Applies the AI filter
-    text: A fully answered question, like a definition, will not bring a click, so aim to be named. A question that needs a tool still earns the click.
+    text: A fully answered question, like a definition, will not bring a click, so aim to be named in the answer. A question that needs a tool, like a size finder, still earns the click.
   - title: Marks gaps
     text: Lists questions with no answer on your store, and flags niche questions as easier wins than the head term.
 
 output_shape: |
   STORE  <products> | MARKET  <country, language>
+  NOTE  Chat questions have no official search volume. Nothing here is ranked by volume.
 
   TOPIC <n>: <topic name>
   Questions:
@@ -63,7 +76,7 @@ output_shape: |
   Fan-out (seen or likely):
     - <sub-question>
   AI filter: <aim to be named | a tool or page can earn the click>
-  Answered on your store: <page or NONE>
+  Answered on your store: <page | NONE | UNKNOWN, no page list given>
 
   (one block per topic)
 
@@ -74,6 +87,28 @@ output_shape: |
 
   CHECKS MISSED: <none or list>
   MISSING: <what was not given>
+
+output_sample:
+  input:
+    - Your products or collections, with prices
+    - Your best search terms, paid and organic (optional)
+    - Customer reviews or support emails (optional)
+    - A list of your store pages (optional)
+  prerequisites:
+    - Your brand brain from the Brand profile builder, if you have one (optional)
+  output:
+    - name: Store line and note
+      contains: Your products and market as it read them, plus a plain note that chat questions have no search volume.
+    - name: TOPIC blocks
+      contains: One per topic, with shopper questions, the follow-up searches (seen or likely) and the page that answers it.
+    - name: AI filter line
+      contains: For each topic, whether to aim to be named in the answer or to earn the click with a tool or page.
+    - name: GAP LIST
+      contains: Each question no page answers, its topic and the page to build or fix.
+    - name: START WITH
+      contains: The five gaps closest to a purchase, so you know what to write first.
+    - name: CHECKS MISSED and MISSING
+      contains: Any check that failed, and any input you did not give, so nothing is invented.
 
 tweaks:
   - what: Your money terms
@@ -102,7 +137,7 @@ improve:
   - Add your market's language and slang to the skill file.
   - Add the question types your customers ask most, such as sizing or compatibility.
   - Save the grouped topics in your brand file so every new page starts from the same list.
-  - Pair it with the AI recommendation panel runner, which tests these questions, and the AI-ready product page editor.
+  - Pair it with the AI search visibility tester, which tests these questions, and the Product page editor for AI search.
 
 works_best_with:
   tools:
@@ -121,3 +156,5 @@ terms:
     meaning: A box in Google results that lists questions related to your search.
   - term: Long tail
     meaning: Very specific questions that few people ask each, but many people ask in total.
+  - term: Money terms
+    meaning: The search terms closest to a sale, such as the ones you pay for in ads or that your best sellers rank for.

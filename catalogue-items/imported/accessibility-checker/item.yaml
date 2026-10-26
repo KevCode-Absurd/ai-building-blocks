@@ -12,6 +12,8 @@ inputs:
     required: false
   - type: codebase
     required: false
+  - type: audit_report
+    required: false
 outputs:
   - type: audit_report
   - type: code_change

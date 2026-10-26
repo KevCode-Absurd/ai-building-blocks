@@ -1,25 +1,18 @@
 slug: reconcile-a-private-fund-capital-call
 name: Reconcile a private fund capital call
-summary: Carry the actual callable commitment ledger into one eligible LP call allocation.
+summary: Check how much a fund investor can still be called, then split an approved capital call and show any shortfall. Get a balance check and call allocation.
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
+  - type: document
     required: true
   - type: spreadsheet
     required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
-    required: true
-  - type: document
-    required: true
+outputs: []
+needs_mode: manual
 uses:
   - unfunded-commitment-checker
   - capital-call-allocation-checker

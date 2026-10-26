@@ -14,6 +14,38 @@ metadata:
   type: skill
   scope: internal
 ---
+## How to run this skill in a chat
+
+AI Blocks added these notes. The original skill below is unchanged. Where a note here disagrees with it, follow the note.
+
+### What you need
+- The tools that hold the same kind of record (for example a shop, an email list and an accounting tool).
+- The record type to fix first: customers, products or suppliers.
+- A few example records that disagree. The person may blank out private details.
+- Optional: who edits each tool, and problems already known.
+
+### What this does and does not do
+- It writes a plan from what the person pastes. It does not read or change their live tools.
+- The original was written for a product called ERP•AI. Lines that name its modules (the MDM module, Data Quality module, Integration Hub, Steward workbench, Data Profiler, Analytics Designer) and the "Proto" section describe that product. Do not assume the person has them. Where a step says "Tool:", write the step for the person's own tools, or say what a tool would need to do.
+- Counts, rates and thresholds in the original (for example the 95 percent and 80 percent match levels, or "2 to 6 weeks") are examples. Do not present them as facts about this business. Use numbers only when the person gave data, and label any other number as an example to test.
+
+### If something is missing
+- Ask once for the tools and the record type. If you still do not have them, write `MISSING: <what>` and plan with what you have.
+- Never invent records, fields, owners, tools, duplicate counts or quality scores.
+- With only a few example records, say the duplicate and quality rules are untested on real data.
+
+### What you hand back
+Use this order, and keep it short for a small team. Start with one record type.
+1. Where the records live: each tool, who edits it, known problems.
+2. Scope: the record type to fix first, and what waits.
+3. Field ownership table: field, winning tool, reason, fallback rule.
+4. Duplicate rules: how to match, which matches go to a person, how to undo a merge.
+5. Quality checks: check, limit, owner, what happens on a fail.
+6. Updates and conflicts: how a change moves between tools, and which tool wins.
+7. Owners and exceptions: owner and steward per record type, who handles odd cases.
+8. Review rhythm: weekly, monthly, quarterly.
+9. `MISSING:` list, then `CHECKS MISSED:` (or "none").
+
 # Master Data Management
 
 ## Size-Tier Scope

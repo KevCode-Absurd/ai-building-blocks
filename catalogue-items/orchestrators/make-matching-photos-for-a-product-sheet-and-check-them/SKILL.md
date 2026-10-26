@@ -41,15 +41,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Product photo batch maker.** Use the skill `product-photo-batch-maker`. Starts the chain: one matching photo per row of your sheet.
+1. **Product photo batch maker.** Use the skill `product-photo-batch-maker`. Starts the chain: one matching photo per row of your sheet. Hands the saved batch of photos to step 2.
 
 Pause here: Look at the test batch and approve it before the full run, then save the finished photos.
 
-2. **AI product photo inspector.** Use the skill `ai-product-photo-inspector`. Checks the saved batch for AI faults and says which to redo.
+2. **AI product photo inspector.** Use the skill `ai-product-photo-inspector`. Checks the saved batch from step 1 for AI faults and says which to redo, with a fix line for each. Hands the redone set to step 3.
 
 Pause here: Redo the flagged photos with the fix lines, then save the final set.
 
-3. **Marketplace photo rule checker.** Use the skill `marketplace-photo-rule-checker`. Checks the photos that passed against the rules of the shop you list on.
+3. **Marketplace photo rule checker.** Use the skill `marketplace-photo-rule-checker`. Checks the final photos, after you redo the flagged ones, against the rules of the shop you list on. Uses your final photo set, not step 2's report.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

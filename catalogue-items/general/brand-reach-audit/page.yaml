@@ -1,6 +1,6 @@
 new_slug: brand-reach-audit
 name: "Brand reach audit"
-summary: "Paste your sales and what you know of your buyers. Get where you are hard to think of or hard to buy."
+summary: "Find where buyers forget you or can't buy from you. Give it your sales and buyer notes for a brand reach audit with three gaps and one fix."
 job: plan-strategy
 thinking: medium
 thinking_why: "It counts and sorts what you give it, then makes a judgement call on the three biggest gaps."
@@ -17,6 +17,10 @@ when:
   - Your plan to grow is mostly about keeping the customers you have.
   - You spend on marketing but cannot say who it is meant to reach.
   - Sales are flat and you suspect people simply do not think of you when they need what you sell.
+not_for:
+  - "You want to size each gain in money: use the Growth lever audit."
+  - "You have no sales history yet: ask ten likely buyers a few plain questions first, then come back."
+  - "You want ways to keep your current customers buying: this audit aims at new buyers, so ask a person who runs your customer email or loyalty plan."
 
 you_give:
   - Your brand file with what you sell, who buys and how (required)
@@ -34,6 +38,28 @@ how_to_use:
   - Add what you know about when and why people buy in your category, even if it is rough.
   - Read the three gaps first. Check anything marked MISSING by asking ten recent buyers.
   - Pick the fix and run it as a small test with a number to hit and a date.
+output_sample:
+  input:
+    - Your brand file with what you sell, who buys and how
+    - Sales data with buyers, orders and how often each buys (optional)
+    - Notes on your buyers or a buyer profile (optional)
+  output:
+    - name: BUYER COUNT
+      contains: How many people buy the category and your brand, with the share who buy once or only once or twice a year.
+    - name: BUYING MOMENTS
+      contains: Real situations when people buy, what brings a brand to mind in each, and whether you show up.
+    - name: EASY TO FIND AND BUY
+      contains: Where buyers can reach you now and where they would look and cannot find you.
+    - name: YOUR CUES
+      contains: The colours, shapes, sounds and names you use, and whether you use them the same way each time.
+    - name: THREE BIGGEST GAPS
+      contains: The three gaps with most buyers behind them, each with the evidence.
+    - name: THE FIX
+      contains: One fix that reaches new buyers, with a measure, a target and a date to test it.
+    - name: MISSING
+      contains: The facts that would sharpen the audit, marked instead of guessed.
+    - name: CHECKS MISSED
+      contains: One line for each of its own checks that still fails, or none.
 
 how_it_works:
   - title: Everyone who buys

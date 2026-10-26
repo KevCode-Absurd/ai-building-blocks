@@ -2,14 +2,10 @@ thinking: high
 thinking_why: It weighs each part of the task against what students must learn.
 new_slug: assignment-ai-boundaries
 name: Assignment AI-use boundary mapper
-summary: Give it an assignment. Get which parts AI can help with and which parts
-  it would ruin, plus a clear rule.
+summary: Map which parts of an assignment AI can help with and which it would ruin. You get a part-by-part rating and a clear AI rule for students.
 job: teach-and-train
 headline: Assignment AI-use boundary mapper
-subhead: A part-by-part map of an assignment showing where AI use helps students
-  learn and where it would wreck the point of the task. A history essay, for
-  example, might let students use AI to find sources but not to build the
-  argument they are meant to practise.
+subhead: A part-by-part map of an assignment showing where AI use helps students learn and where it would wreck the point of the task. A history essay, for example, might let students use AI to find sources but not to build the argument they are meant to practise.
 explain: |
   A part-by-part map of an assignment showing where AI use helps students learn and where it would wreck the point of the task. A history essay, for example, might let students use AI to find sources but not to build the argument they are meant to practise.
 
@@ -19,6 +15,10 @@ when:
   - You need an AI rule for one assignment, not a blanket ban.
   - A task feels too easy to fake and you want to redesign it.
   - You have to explain to parents or leaders why a rule exists.
+not_for:
+  - "You need one AI policy for a whole course or school: write a short school-wide policy with your leaders instead."
+  - "The task has no skill students must build themselves: a simple yes or no on AI use is enough, so skip the mapping."
+  - "You want to check finished student work for AI use: talk to the student about their process instead."
 you_give:
   - The assignment description
   - What students should learn from it
@@ -30,7 +30,27 @@ you_get:
   - Search versus AI guidance (optional)
   - Redesign ideas for weak spots
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. No code or paid tools are needed.
+  - Paste your full assignment brief and any marking criteria. The skill needs both to split the task into parts.
+  - Say what students should learn from the assignment. Add your current AI rule, year group and subject if you have them.
+  - Ask for the tool comparison if the task includes research or finding sources.
+  - Read the map and the student rule. Check any named authors or sources before you use them.
+  - Change the rule to fit your class, then share it with students.
+output_sample:
+  input:
+    - Your full assignment brief, with any marking criteria
+    - What students should learn from the assignment
+    - Your current AI rule for this task (optional)
+    - Year group and subject (optional)
+    - How it is marked, such as practice, final grade or portfolio (optional)
+  output:
+    - name: Objective Analysis
+      contains: For each learning goal, whether AI help supports it or gets in its way, with the reason.
+    - name: Component Boundary Map
+      contains: Each part of the assignment rated as AI-helpful, neutral or harmful, with suggested changes.
+    - name: AI Policy Recommendations
+      contains: A plain rule for this assignment that you can hand to students and explain to parents.
+    - name: Tool Comparison
+      contains: How a search engine and an AI chatbot differ for the research parts, if you ask for it.
+    - name: Redesign Suggestions
+      contains: Ways to change weak parts so students still have to do the real thinking.

@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It runs several research rounds and checks every claim against its quote.
 new_slug: cited-research-report-writer
 name: Cited research report writer
-summary: Ask a question. Get a cited report with each claim checked against its
-  source quote. Uses many tokens. Scrapes sites.
+summary: Get a cited research report where each claim is checked against its source quote. Ask one question and pick quick, standard or deep.
 job: research-topics
 headline: Cited research report writer
-subhead: Ask a question and get a written report where each important claim is
-  tied to a source and a quote you can check. It leaves a full run folder
-  behind, so you can see how the answer was reached.
+subhead: Ask a question and get a written report where each important claim is tied to a source and a quote you can check. It leaves a full run folder behind, so you can see how the answer was reached.
 explain: |
   Ask a question and get a written report where each important claim is tied to a source and a quote you can check. It leaves a full run folder behind, so you can see how the answer was reached. It uses many tokens and scrapes websites, so expect a longer wait and bigger usage.
 
@@ -18,6 +15,10 @@ when:
   - You want to compare options and see the evidence for each.
   - You care more about correct facts than a smooth essay.
   - You want an audit trail to show where each claim came from.
+not_for:
+  - "You ask about your own code or files: use a normal chat with your files attached."
+  - "You need a simple fact your AI already knows: ask it in a normal chat or run one web search."
+  - "You have no web search and cannot run code: use a normal chat and check the sources by hand."
 you_give:
   - Your research question
   - Scope such as time or place (optional)
@@ -29,8 +30,32 @@ you_get:
   - A run folder with the audit trail
   - Claims that failed checks removed or flagged
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web, run Python and save files.
+  - Use an AI that can search the web, run Python 3.10 or newer and save files. Check that curl is installed too.
+  - Download the skill folder and add it to your AI tool, or upload it to a chat that can run code.
+  - "Say: Follow the deep-research skill. Then give your question and, if you want, a preset and a mode."
+  - Read the plan your AI shows. Change the angles if needed, then approve it.
+  - Wait for the run to finish. It can take a while and use many tokens, so start with quick if unsure.
+  - Open report.md in the run folder. Use sources.md and verification.md to check any claim you plan to rely on.
+output_sample:
+  input:
+    - Your research question
+    - Scope such as time or place (optional)
+    - "Preset: quick, standard or deep (optional)"
+    - "Mode: brief or full report (optional)"
+  prerequisites:
+    - An AI that can search the web, run Python 3.10 or newer and save files
+    - curl installed on your computer
+    - Time and a large usage budget, since deep runs use many tokens
+  output:
+    - name: 00-brief.md
+      contains: Your question made clearer, the research angles, the preset and the plan you approve before work starts.
+    - name: angles/
+      contains: One notes file per research angle, with what was found, what is missing and new questions.
+    - name: sources.md
+      contains: The numbered list of sources used, each with a grade.
+    - name: verification.md
+      contains: Which claims were checked, what supports or contradicts them, and which stayed unverified.
+    - name: outline.md
+      contains: A table showing which claims answer each part of your question, and the plan for each section.
+    - name: report.md
+      contains: "The cited report: summary, key findings table, body, disagreements, gaps, method and sources."

@@ -1,82 +1,124 @@
 new_slug: sales-route-plan-builder
 name: "Sales route plan builder"
-summary: "Paste your chosen sales route. Get a ninety-day plan with who sells, who to start with and the number to watch."
+summary: "Turn your chosen sales route into a ninety-day plan: deals needed, who sells, five small buyers to start with and the one number to watch."
 job: sell-and-negotiate
 thinking: medium
 thinking_why: "It must turn a chosen route into a workable plan with sums, which takes some care."
 
-headline: "Get a ninety-day plan for the one way you will reach customers"
-subhead: "Give it the route you picked. It works out how many deals you need, who sells, which small buyers to start with, how early customers become proof for larger ones, and the one number to watch for ninety days."
+headline: "Sales route plan builder"
+subhead: "Give it the sales route you picked, such as a few large deals, a sales team, ads or sharing between users. It works out how many deals you need, who sells, and which small buyers to start with. You get a ninety-day sales plan with one number to watch."
 
 explain: |
-  A route on its own is only an idea. The plan is who sells, to whom, how many deals are needed and what tells you it works. Each route has its own moves. Large deals depend on a senior person and patience. A sales team depends on a set process. Ads depend on a cost ceiling. Sharing depends on how fast the invite spreads.
+  A route on its own is only an idea. A sales plan says who sells, to whom, how many deals are needed and what tells you it works. Each route has its own moves. Large deals depend on a senior person and patience. A sales team depends on a set process. Ads depend on a cost ceiling. Sharing depends on how fast one user brings in the next.
 
-  This skill takes your route and writes the plan for it. It starts with the smallest buyers who need the product most, and uses each early customer as proof for the next, larger one.
+  This skill takes your route and writes the plan for it. It turns your goal into a number of deals. It starts with the smallest buyers who need the product most, and uses each early customer as proof for the next, larger one.
+
+  It plans one route only. It sets one number to watch each week, and a stop rule for day ninety, so you know whether to keep going or change the route.
 
 when:
-  - "You picked a sales route and need to start."
-  - "You have a revenue goal and don't know how many deals it needs."
-  - "Your last plan tried several routes and none worked."
+  - You picked a sales route and need to start.
+  - You have a revenue goal and do not know how many deals it needs.
+  - Your last plan tried several routes at once and none worked.
+  - You are about to hire a salesperson and want to know what they should do in the first ninety days.
+
+not_for:
+  - "You have not picked a route yet. Use the sales route picker first, then bring its result here."
+  - "You want one plan that covers several routes. This plans one route; a plan that tries many gives results you cannot read."
+  - "You want roles, lead handoffs and outreach steps for a sales team. Use the outbound sales team planner."
+  - "You want a small, capped test of one channel before committing. Use the sales channel experiment planner."
 
 you_give:
-  - "The route you chose and its numbers"
-  - "Your goal and date (optional)"
-  - "Who can sell and how many hours (optional)"
+  - The route you chose and its numbers, such as the average deal size, or the route check from the sales route picker
+  - Your goal in revenue or customers, and the date (optional)
+  - Who can sell and how many hours each has (optional)
+  - Buyers you already know by name (optional)
+  - Your closing rate, if you know it (optional)
 you_get:
-  - "Your goal in number of deals"
-  - "Who sells and who to start with"
-  - "How early customers become proof"
-  - "A ninety-day plan with one number to watch"
+  - Your goal turned into a number of deals
+  - Who sells, and the five small buyers to start with
+  - How each early customer becomes proof for the next one
+  - A ninety-day plan in three blocks, with one number to watch and a stop rule
 
 how_to_use:
-  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-  - "Paste your route check or describe the route and the average deal. Add your goal and your team."
-  - "Name any buyers you already know. It uses them as the first five."
-  - "Put the ninety days in your calendar and look at the weekly number every week."
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your route and the average deal. If you used the sales route picker, paste its result. Without a chosen route, it will ask for one before it writes a plan.
+  - Add your goal, the date and who can sell. Name any buyers you already know. They become the first five.
+  - Check that the first buyers are small and named, and that only one route is planned.
+  - Put the three thirty-day blocks in your calendar. Look at the weekly number every week and apply the stop rule at day ninety.
 
 how_it_works:
-  - title: "Confirms the route"
-    text: "Large deals, a team, ads or sharing between users."
-  - title: "Turns the goal into deals"
-    text: "Revenue divided by the average deal."
-  - title: "Picks who sells"
-    text: "The right person for the route."
-  - title: "Picks the first buyers"
-    text: "Small, named and in sharp need."
-  - title: "Builds the proof ladder"
-    text: "Each customer lets you say something to the next."
-  - title: "Sets the number and stop rule"
-    text: "One number a week, and a ninety-day test."
+  - title: Confirms the route
+    text: Names the route and the average deal, or asks for the route if it was not chosen.
+  - title: Turns the goal into deals
+    text: Divides the revenue goal by the average deal and shows the sum.
+  - title: Picks who sells
+    text: Chooses the right person or team for the route.
+  - title: Picks the first buyers
+    text: Names five small buyers in sharp need and how to contact each this month.
+  - title: Builds the proof ladder
+    text: Shows what each customer lets you say to the next, larger one.
+  - title: Adds the route moves
+    text: Gives the moves that fit this route only.
+  - title: Sets the number and stop rule
+    text: One number a week, a level that means keep going and a level that means change the route.
+  - title: Writes the ninety days
+    text: Three thirty-day blocks, each with a task, an owner and a number due.
 
 output_shape: |
   ROUTE AND GOAL
   <route> | Goal: <deals> by <date> | Average deal: <amount>
 
   WHO SELLS
-  <person or team> | Hours: <>
+  <person or team> | Hours: <hours>
 
   FIRST FIVE BUYERS
   1. <buyer> | Contact: <how, when>
 
   PROOF LADDER
-  <customer> lets me say <> -> next buyer: <>
+  <customer> lets me say <proof> -> next buyer: <who>
 
   ROUTE MOVES
   <moves for this route>
 
   NUMBER TO WATCH
-  <number> | Keep going if <> | Change the route if <>
+  <number> | Keep going if <level> | Change the route if <level>
 
   NINETY DAYS
   Days 1-30: <task, owner, number>
-  Days 31-60: <>
-  Days 61-90: <>
+  Days 31-60: <task, owner, number>
+  Days 61-90: <task, owner, number>
 
   MISSING
   <facts that would firm up the plan>
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "The route you chose and its numbers, such as the average deal size"
+    - "Your goal in revenue or customers, and the date (optional)"
+    - "Who can sell and how many hours each has (optional)"
+    - "Buyers you already know by name (optional)"
+  prerequisites:
+    - "A chosen route, ideally from the sales route picker"
+  output:
+    - name: "ROUTE AND GOAL"
+      contains: "The route, your goal turned into a number of deals, and the average deal."
+    - name: "WHO SELLS"
+      contains: "The person or team that sells on this route, and their hours."
+    - name: "FIRST FIVE BUYERS"
+      contains: "Five small, named buyers in sharp need, each with how and when to contact."
+    - name: "PROOF LADDER"
+      contains: "What each early customer lets you say, and the next larger buyer it opens."
+    - name: "ROUTE MOVES"
+      contains: "The moves that fit this route only."
+    - name: "NUMBER TO WATCH"
+      contains: "One weekly number, with the level to keep going and the level to change route."
+    - name: "NINETY DAYS"
+      contains: "Three thirty-day blocks, each with a task, an owner and a number due."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check it could not pass."
 
 tweaks:
   - what: "Your goal"
@@ -102,9 +144,13 @@ improve:
   - "Add a list of buyers you can contact now."
   - "Pair it with \"Reason-to-join pitch writer\" when the plan needs hires."
 
+before: [sales-route-picker]
+next: [prospecting-block-planner, reason-to-join-pitch-writer]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Turning a chosen route into a plan with a few sums is text work that any strong chat AI does with this skill."}
+    - {name: "A calendar", why: "Holds the three thirty-day blocks and the weekly check of your one number."}
   inputs:
     - "Your closing rate and deal size"
     - "A list of buyers you can contact"
@@ -115,3 +161,5 @@ terms:
     meaning: "A series of customers where each one's result is used to win the next, larger one."
   - term: "Closing rate"
     meaning: "The share of sales conversations that end in a signed deal."
+  - term: "Sales route"
+    meaning: "The one main way you reach buyers, such as a few large deals, a sales team, ads or sharing between users."

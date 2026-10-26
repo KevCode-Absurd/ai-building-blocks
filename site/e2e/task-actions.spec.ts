@@ -31,9 +31,10 @@ for(const tag of ['', '@mobile ']){
     if(kind==='skill'||kind==='mind')expect(names.length).toBeGreaterThan(1);
    }
    await expect(primary.getByRole('link',{name:'How to use',exact:true})).toHaveAttribute('href','/how-it-works#use-in-ai');
-   const h=await page.locator('.bp-h1').boundingBox(),actions=await primary.boundingBox(),start=await page.getByTestId('task-start').boundingBox();
-   expect(Math.abs(h!.x-actions!.x)).toBeLessThanOrEqual(1);expect(Math.abs(h!.x-start!.x)).toBeLessThanOrEqual(1);
-   expect(actions!.y).toBeLessThan(start!.y);
+   const h=await page.locator('.bp-h1').boundingBox(),actions=await primary.boundingBox(),start=await page.getByTestId('task-start').count()?await page.getByTestId('task-start').boundingBox():null;
+   expect(Math.abs(h!.x-actions!.x)).toBeLessThanOrEqual(1);if(start)expect(Math.abs(h!.x-start.x)).toBeLessThanOrEqual(1);
+   // Fill it in comes before Run it, so the buttons sit below the inputs when a task has inputs.
+   if (start) expect(start.y).toBeLessThanOrEqual(actions!.y);
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
   }
  });

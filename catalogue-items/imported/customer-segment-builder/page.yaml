@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It scores by set rules and names the groups.
 new_slug: customer-segment-builder
 name: Customer segment builder
-summary: Run it on your customers. Get each one scored on recency, frequency and
-  spend, then grouped from Champions to Lost.
+summary: Score your Shopify customers on how recently, how often and how much they buy, then group them from Champions to Lost for email planning.
 job: run-your-store
 headline: Customer segment builder
-subhead: Not all customers deserve the same email. This scores each Shopify
-  customer on how recently they bought, how often, and how much they spent, then
-  sorts them into groups from Champions to Lost.
+subhead: Not all customers deserve the same email. This scores each Shopify customer on how recently they bought, how often, and how much they spent, then sorts them into groups from Champions to Lost.
 explain: |
   Not all customers deserve the same email. This scores each Shopify customer on how recently they bought, how often, and how much they spent, then sorts them into groups from Champions to Lost.
 
@@ -18,6 +15,10 @@ when:
   - You need to choose who gets a win-back email.
   - You plan different offers for new and loyal buyers.
   - You want to see how your customer base is shaped.
+not_for:
+  - Your store has very few orders, or only guest checkouts. Use a simple filter on order count or total spend in your Shopify admin.
+  - You want to message or tag customers by a segment right now. This only sorts and scores. Tagging needs extra write access and a dry run first.
+  - You need customer groups by when they first bought. Use a cohort report in Shopify Analytics instead.
 you_give:
   - Your Shopify store and read access
   - Look-back window (optional)
@@ -29,8 +30,32 @@ you_get:
   - Segment sizes and revenue
   - Optional tags added to customer records
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Use an AI that can run code and connect to your Shopify store, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot pull your orders.
+  - Sign in to your store with read access to orders and customers.
+  - Give your AI this skill and your store address. Add a look-back window or a minimum order count if you want them.
+  - Check the report. Look at the group sizes and the At Risk list first.
+  - Open the CSV file to pick who gets a VIP email or a win-back email.
+  - Only ask for tags if you have write access. Run a dry run first so you can see the changes before they happen.
+output_sample:
+  input:
+    - Your Shopify store address
+    - How far back to look, in days (optional)
+    - Minimum orders for a customer to be scored (optional)
+    - Whether to tag customers with their group (optional)
+  prerequisites:
+    - An AI that can run code and reach your Shopify admin
+    - Read access to your orders and customers
+    - Write access to customers, only if you want tags
+  output:
+    - name: Session start banner
+      contains: Shows the skill name, your store and the start time.
+    - name: Step log
+      contains: One line per step with what was asked and how many results came back.
+    - name: RFM segmentation report
+      contains: Customers scored, plus the count, share and average spend for each group.
+    - name: Top Champions and top At Risk lists
+      contains: Names and emails of your best customers and of past best customers to win back.
+    - name: rfm_segments CSV file
+      contains: One row per customer with email, name, days since last order, order count, spend, three scores and group.
+    - name: JSON summary (optional)
+      contains: The same group counts and average spend in a format other tools can read.

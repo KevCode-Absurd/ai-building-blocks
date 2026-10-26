@@ -1,20 +1,21 @@
 slug: write-a-thinking-task-english-learners-can-do
 name: "Write a thinking task English learners can do"
-summary: "Give it a subject and a thinking skill. Get a task, a language check and a version with language help."
+summary: "Give a subject and a thinking skill. Get a critical thinking task for English learners, a check of the hard language and a version with word help."
 category: orchestrator
 type: workflow
 role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: brief, required: true}
+  - {type: question, required: true}
 outputs:
-  - {type: copy_draft}
+  - {type: document}
 uses: [critical-thinking-task-writer, task-language-demand-checker, ell-task-scaffolds]
 steps:
-  - {uses: critical-thinking-task-writer, note: "Makes the task students will work on, which the next two steps check and adapt."}
-  - {uses: task-language-demand-checker, note: "Reads the task from the step before and finds the words and sentences that may block students still learning English."}
-  - {uses: ell-task-scaffolds, note: "Adds language help to the task from step one, aimed at the blocks the check found."}
+  - {uses: critical-thinking-task-writer, note: "Writes the task and its answer guide. Hands the task to the language check."}
+  - {uses: task-language-demand-checker, note: "Reads the task from step one and lists the words and sentences that may block students still learning English. Hands the list of blocks to step three."}
+  - {uses: ell-task-scaffolds, note: "Adds word banks, sentence starters or visuals to the task from step one, aimed at the blocks the check found, and keeps every thinking question as hard. Takes the task from step 1 and the list of blocks from step 2; hands you the supported task."}
+needs_mode: manual
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/write-a-thinking-task-english-learners-can-do/skeleton.yaml

@@ -22,6 +22,34 @@ competitively across the book. Battlecards live as a Page - a team
 reference refreshed on a cadence; the in-deal answer stays text (or a
 comparison artifact when it's a scan, not a read).
 
+## Before you start
+
+Ask once for any of these that are missing. If the user cannot give one, write MISSING and carry on. Never invent deals, quotes, win rates or rival facts.
+
+1. The rival's name.
+2. The deal: the buyer, the stage and what they care about (for the in-deal play).
+3. Optional: a closed-deals export with a rival column and loss reasons, and call notes or email excerpts that name the rival.
+
+Plain-chat use: pasted files and notes are a complete input. Web search is needed to read the rival's public pages. Those pages are read as public pages anyone could open. CRM, email, call-recording and data-provider connectors need the user's own access, and some are paid. This skill does not install them. If a connector is missing, say what you used and what you did not.
+
+Companion skills named below (customer-voice, handle-objection, draft-outreach, update-opportunity) may not be installed. If they are missing, do the step in plain text yourself, or tell the user it is the next step they can ask for. Never say you ran a skill you do not have.
+
+Do not state a win rate or trend unless the number of deals behind it is shown. When there are fewer than about five deals against a rival, say the sample is too small to call a pattern.
+
+## Output format
+
+For the in-deal play, return:
+
+1. Where they are strong (with source).
+2. Where this buyer's needs differ from that strength.
+3. The question that shows the difference.
+4. Proof points (with source).
+5. What not to do (from past deals or quotes).
+6. Win and loss patterns, with the deal count behind each.
+7. Not verified: claims you could not confirm.
+
+For a battlecard or weekly digest, use the layout in Mode B. End with one next step, such as handling a specific pushback or writing the reply to the buyer.
+
 ## Tools used
 
 | Tool type | Used for | Required? |

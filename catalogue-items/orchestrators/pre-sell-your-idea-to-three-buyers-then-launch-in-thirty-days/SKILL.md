@@ -44,13 +44,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan the three-buyer test.** Use the skill `three-buyer-idea-test-planner`. Who to ask first, in what order, what to say in one line, what counts as a real yes (money, not words), in Noah Kagan's manner.
-2. **Script the paid ask.** Use the skill `two-day-paid-ask-planner`. Give it the test plan. The two-day ask: the message, the price, how to take the money today, what you promise and when, and what to say to a no.
+1. **Plan the three-buyer test.** Use the skill `three-buyer-idea-test-planner`. Who to ask first, in what order, what to say in one line, what counts as a real yes (money, not words), in Noah Kagan's manner. Hands step 2 the buyer list and the rule for a real yes.
+2. **Script the paid ask.** Use the skill `two-day-paid-ask-planner`. Give it the test plan. The two-day ask: the message, the price, how to take the money today, what you promise and when, and what to say to a no. Uses the buyer list from step 1. Hands you the script to run; you bring back who paid.
 
 Pause here: Run the ask for two days. Record who said yes, who said no and why, and the money taken.
 
-3. **Plan the thirty-day launch.** Use the skill `thirty-day-launch-planner`. Give it the ask results. If three paid: the smallest version that works, built and shipped on a date thirty days out, in the manner of Pieter Levels and Sara Blakely. If not: what the log says to change, and whether to try once more.
-4. **Set up the trial log.** Use the skill `trial-log-planner`. Give it the whole run so far. A log for every attempt: what you expected, what happened, what it taught, in the manner of Edison and Galileo, so each no narrows the next try.
+3. **Plan the thirty-day launch.** Use the skill `thirty-day-launch-planner`. Give it the ask results. Uses the ask plan and the results you bring back. If three paid: the smallest version that works, built and shipped on a date thirty days out, in the manner of Pieter Levels and Sara Blakely. If not: what the log says to change, and whether to try once more.
+4. **Set up the trial log.** Use the skill `trial-log-planner`. Give it the whole run so far. Uses the test plan, the ask results and the launch plan as the first rows. A log for every attempt: what you expected, what happened, what it taught, in the manner of Edison and Galileo, so each no narrows the next try.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

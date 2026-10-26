@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It runs standard payoff maths.
 new_slug: debt-payoff-planner
 name: Debt payoff planner
-summary: List your debts and extra cash. Get snowball and avalanche timelines
-  with total interest for each.
+summary: Use this debt payoff planner to compare snowball and avalanche. Give it your debts and extra cash. You get timelines, total interest and a debt-free date.
 job: money-and-investing
 headline: Debt payoff planner
-subhead: List each debt with its balance, rate and minimum payment, and say how
-  much extra you can pay each month. It runs the snowball and the avalanche side
-  by side. You get a month-by-month timeline for each, the total interest, your
-  debt-free date and a pick that fits your habits.
+subhead: List each debt with its balance, rate and minimum payment, and say how much extra you can pay each month. It runs the snowball and the avalanche side by side. You get a month-by-month timeline for each, the total interest, your debt-free date and a pick that fits your habits.
 explain: |
   A payoff schedule that shows the day you become debt-free, and what each method costs you. You get a month-by-month timeline for the snowball and the avalanche, with total interest and finish date side by side.
 
@@ -19,6 +15,10 @@ when:
   - You got a bonus and want to know where it saves the most interest.
   - You keep losing motivation and want to see quick wins first.
   - You want a date to aim for and a reason to stick to it.
+not_for:
+  - "Your debts are in collections or a legal dispute: talk to a nonprofit credit counsellor first."
+  - "You do not yet know how much spare cash you have each month: work that out with a simple budget first, then come back."
+  - "You want tax advice on loan interest: ask a tax professional, since this plan only covers payoff maths."
 you_give:
   - List of debts with balance and rate
   - Minimum payments
@@ -31,7 +31,26 @@ you_get:
   - Debt-free date
   - Pick that fits your habits
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - "List each debt in a table: name, balance, yearly interest rate and minimum payment. Mention any 0 percent offer and its end date."
+  - Say how much extra you can pay each month, and whether you want the lowest cost or quick wins.
+  - Ask your AI to run both the snowball and the avalanche and compare them.
+  - Check the Strategy Comparison. Pick one method and note your debt-free date.
+  - If your AI can run code, ask it to use the script in the skill folder for exact numbers.
+output_sample:
+  input:
+    - Each debt with its name, balance, yearly interest rate and minimum payment
+    - How much extra you can pay each month
+    - Any 0 percent offer and the date it ends (optional)
+    - Whether you prefer the lowest cost or quick wins (optional)
+  prerequisites:
+    - An AI that can run code makes the maths exact, but a chat AI can still work it out step by step
+  output:
+    - name: Debt Inventory Table
+      contains: Each debt's balance, rate and minimum payment, plus the month it is paid off under each method.
+    - name: Strategy Comparison
+      contains: "Avalanche and snowball side by side: total interest, total paid and months until you are debt-free."
+    - name: Payoff Schedule
+      contains: Month-by-month balances for each debt under the method you choose.
+    - name: Acceleration Scenarios
+      contains: What changes if you pay $100 or $200 more each month.

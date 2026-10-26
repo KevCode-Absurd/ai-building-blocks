@@ -1,53 +1,68 @@
 new_slug: reconcile-conglomerate-valuation-perimeters
-name: Reconcile conglomerate valuation perimeters
-headline: Reconcile conglomerate valuation perimeters
-summary: Align segment earnings, consolidated minority interests and separately held equity stakes before valuation.
+name: Group company valuation checker
+headline: Group company valuation checker
+summary: Share segment accounts, ownership records and dated holding values. Get a linked scope ledger for earnings, enterprise value and separate investments.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A linked perimeter ledger for segment profit, consolidated EV and nonoperating holdings. Share segment reconciliations, consolidation perimeter, market equity, subsidiary ownership, parent-only balances and dated holding values.
+subhead: Share segment results, the consolidation list, outside ownership in each subsidiary, parent-only balances and dated values for separate holdings. Your AI ties segment profit to the group total and lines up ownership with the earnings you use. It also values stakes whose earnings are not in the group. You get one ledger of what enters the valuation.
 explain: |-
-  A linked perimeter ledger for segment profit, consolidated EV and nonoperating holdings.
+  Valuing a group of companies goes wrong at the edges. A subsidiary is in the earnings but its outside owners are left out of value. A listed stake is valued again after its profit is already in the group. Debt sits in the parent and never reaches the total.
 
-  Public-market financial modelling. The governing file preserves the component methods, input coverage and acceptance checks through each handoff.
+  This workflow gives every subsidiary and holding one treatment, then checks the scope in three steps. Segment profit is tied to group operating profit, with corporate costs and eliminations kept. Outside ownership of subsidiaries counted at 100% is then added to enterprise value on the same basis. Last, separately held stakes are valued only where their earnings were left out.
+
+  Where a scope difference is unresolved, the valuation it affects stops. The practice figures inside the step skills are not data from any company, and your AI must not use them. This checks what belongs in the valuation. It gives no view on what the group is worth.
 when:
-  - You need a linked perimeter ledger for segment profit, consolidated EV and nonoperating holdings.
-  - You work on public-market financial modelling and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You are valuing a holding company or a group with many listed and unlisted businesses.
+  - A valuation multiple looks too high or too low because ownership and earnings do not match.
+  - Two ways of valuing the group give different answers.
+  - A reviewer asks if a subsidiary or a stake is counted twice.
+not_for:
+  - "You only want to tie segment profit to the group total: use the Business unit profit reconciliation checker."
+  - "You only want value per share of a holding company's listed stakes: use the Holding company value calculator."
+  - "You want a price target or a buy or sell view: this checks scope and gives no investment advice."
+  - "You want to explain property NAV against book value: use the Property net asset value and book-value checker."
 you_give:
-  - Segment reconciliations, consolidation perimeter, market equity, subsidiary ownership, parent-only balances and dated holding values.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Segment results and the bridge to group operating profit, from the annual report notes
+  - The list of companies in the consolidation, with your ownership share in each
+  - Market value of the parent's equity, and outside owners' share in each subsidiary
+  - "Parent-only balances: cash, debt and other assets"
+  - Dated values for separately held stakes, such as listed shares
 you_get:
-  - A linked perimeter ledger for segment profit, consolidated EV and nonoperating holdings.
-  - Original step files, financial assumptions, source coverage and a governing handoff summary.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - Segment profit tied to group profit, with corporate costs and eliminations kept
+  - A map of every subsidiary and holding with one documented treatment
+  - Enterprise value and multiple with outside ownership counted on the same basis as the earnings
+  - A value for separate stakes, with additions and exclusions labelled so nothing is counted twice
+  - Open scope differences, and which valuation each one stops
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
+  - Attach the segment note, consolidation list, ownership records and parent-only balances. Say the reporting date, currency and scale.
+  - Tell your AI to follow the pack and save each step's file. A spreadsheet is best, since the ledger links its schedules.
+  - After step 1, check that segment profit plus corporate costs and eliminations equals group operating profit.
+  - After step 3, check that no stake is valued if its earnings are already in the group. Read every open scope difference before you use a number.
 how_it_works:
-  - title: Segment profit elimination bridge
-    text: Use actual sourced schedules in one linked native workbook; example values are illustrative and must not become issuer inputs. Tie segment measures to consolidated operating profit and preserve all corporate costs and profit eliminations before passing earnings into valuation.
-  - title: Minority-interest multiple reconciliation
-    text: Map subsidiaries included at 100% in the earnings denominator and include their outside ownership consistently in consolidated enterprise value. Keep book and estimated market minority values distinct.
-  - title: Listed holding look-through NAV
-    text: Value separately held equity stakes only where their operating earnings were excluded from the consolidated model. Reconcile parent-only liabilities and label all additions/exclusions to prevent double counting.
+  - title: Business unit profit reconciliation checker
+    text: "Ties segment measures to consolidated operating profit in one linked workbook, keeping all corporate costs and profit eliminations. Hands step 2 group earnings that tie. Check before moving on: the segments plus costs and eliminations equal the group figure, and no practice number is used as an input."
+  - title: Minority interest valuation checker
+    text: "Maps each subsidiary counted at 100% in earnings and adds its outside ownership to enterprise value on the same basis. Keeps book and estimated market minority values apart. Hands step 3 the list of what is already in group earnings. Check before moving on: each 100% subsidiary has its outside owners in value."
+  - title: Holding company value calculator
+    text: "Values separately held stakes only where their operating earnings were left out of the group model. Reconciles parent-only liabilities and labels each addition and exclusion. Check before you use it: no stake is valued twice and parent-only debt is counted once."
 output_shape: |-
-  A linked perimeter ledger for segment profit, consolidated EV and nonoperating holdings.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  SCOPE AND SOURCES      <files, dates, currency, scale, reporting date>
+  PERIMETER MAP          <company or holding | ownership | treatment | source>
+  SEGMENT BRIDGE         <segment profit | corporate costs | eliminations | group profit>
+  ENTERPRISE VALUE       <equity | debt | cash | outside ownership | multiple>
+  SEPARATE HOLDINGS      <holding | stake | dated value | included or excluded>
+  OPEN SCOPE DIFFERENCES <difference | valuation it stops>
+  MISSING                <each gap and what it stops>
+  CHECKS MISSED          <one line each, or none>
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Every subsidiary or holding has one documented treatment; group profit reconciles and assets, debt, cash and outside ownership enter once; unresolved perimeter differences stop the affected valuation.
+  - what: Reporting date
+    how: Give one date for market values and balances. Mixed dates are flagged as conflicts.
+  - what: Minority value
+    how: Say whether to use book or estimated market value for outside owners. The ledger shows both if you have them.
+  - what: Treatment of a stake
+    how: "Tell your AI how you want a listed stake treated if you have a rule. Otherwise it follows the earnings: in the group means no separate value."
 judge:
   - Every subsidiary or holding has one documented treatment; group profit reconciles and assets, debt, cash and outside ownership enter once; unresolved perimeter differences stop the affected valuation.
   - "Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines."
@@ -62,13 +77,36 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
+    - name: A chat AI that reads files and builds spreadsheets
+      why: The ledger links segment, ownership and holding schedules. A spreadsheet lets you trace each number. In a plain chat the schedules come back as tables.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The ownership chart from the annual report (optional).
+    - Notes on holdings that changed during the year (optional).
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Consolidation scope
+    meaning: Which companies the group's accounts include, and at what share.
+  - term: Outside ownership
+    meaning: The part of a subsidiary that other investors own. Also called minority interest.
+  - term: Enterprise value
+    meaning: The value of a business to everyone who funds it, owners and lenders.
+  - term: Look-through value
+    meaning: A holding's value worked out from the value of the stakes it owns.
+output_sample:
+  input:
+    - Segment results and the bridge to group profit
+    - The consolidation list and ownership records
+    - Parent-only balances and dated values for separate holdings
+  prerequisites:
+    - An AI that can read files
+    - A spreadsheet tool, if you want a workbook (optional)
+  output:
+    - name: outputs/step-1-segment-profit-elimination-bridge.md
+      contains: Segment profit tied to group operating profit, with corporate costs and eliminations.
+    - name: outputs/step-2-minority-interest-multiple-reconciliation.md
+      contains: Outside ownership added to enterprise value on the same basis as earnings.
+    - name: outputs/step-3-listed-holding-lookthrough-nav.md
+      contains: Separate stakes valued where earnings were left out, with parent-only debt.
+    - name: Perimeter map
+      contains: Each company and holding with one treatment, so nothing is counted twice.
+    - name: HAND-BACK SUMMARY
+      contains: Files saved, sources used, open scope differences, MISSING lines and checks missed.

@@ -1,6 +1,6 @@
 new_slug: week-plan-from-task-list-maker
 name: "Week plan maker from a task list"
-summary: "Paste your task list and your hours. Get a week plan with three big tasks placed and the rest parked."
+summary: "Turn your task list and real focus hours into a week plan that fits. Get your top three tasks placed in slots and the rest parked or dropped."
 job: organise-work
 thinking: low
 thinking_why: "It sizes and sorts a given list against given hours."
@@ -17,6 +17,10 @@ when:
   - "It is Sunday night and the list is longer than the week."
   - "You keep finishing the small things and never starting the big one."
   - "You want to tell your manager or your team what will and will not happen this week."
+not_for:
+  - "You have one big project with one deadline: use a project plan with dated steps instead."
+  - "You want to plan a single day by the hour: use a simple time-blocked calendar instead."
+  - "Your tasks belong to a team: sit down with your team and agree who owns what first."
 
 you_give:
   - "Your task list with any deadlines"
@@ -34,6 +38,33 @@ how_to_use:
   - "Be honest about your hours. Count focus time, not time at a desk."
   - "Read the BIG THREE. If one is wrong, say which should replace it and run again."
   - "Put the slots in your calendar and send the NEXT WEEK and ASK lines to whoever needs them."
+output_sample:
+  input:
+    - Your task list, with any deadlines
+    - The focused hours you really have this week
+    - The one or two results this week should move (advised)
+    - Your fixed meetings and their times (optional)
+  output:
+    - name: HOURS
+      contains: Your available hours, the estimated hours for all tasks, and the gap between them.
+    - name: BIG THREE
+      contains: The three tasks that matter most, with one line of why and a slot for each.
+    - name: THE WEEK
+      contains: A Monday to Friday plan with the hardest task early and a quarter of the time left open.
+    - name: SMALL BATCH
+      contains: Tasks under 30 minutes, grouped into one slot.
+    - name: NEXT WEEK
+      contains: Tasks that matter but do not fit, with the deadline risk for each.
+    - name: DROP
+      contains: Tasks you would not start today, with a reason for each.
+    - name: ASK
+      contains: Tasks someone else should do, with the person named.
+    - name: FRIDAY TEST
+      contains: One line that will be true on Friday if the week went to plan.
+    - name: MISSING
+      contains: Any hours, deadlines or results you did not give.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or none.
 
 how_it_works:
   - title: "Sizes every task"

@@ -1,6 +1,6 @@
 new_slug: holdout-test-planner
 name: "Holdout test planner"
-summary: "Name the channel or change you doubt. Get a holdout design, run time and how to read it."
+summary: "Plan a holdout test to see if retargeting, email or a channel adds sales. Get the split, run time, read-out table and budget rule."
 job: read-ad-results
 thinking: medium
 thinking_why: "It picks a design from clear rules and sets up a table, so a mid-size model works. Check the size sums."
@@ -17,6 +17,10 @@ when:
   - Your retargeting report shows a great return and you wonder how many buyers would have bought anyway.
   - You shipped a dozen test winners and sales did not rise by the same amount.
   - You want to cut or move ad spend and need proof of what a channel really adds.
+not_for:
+  - "Your store gets far less than about 100,000 visitors a month and you can't hold back a group: run the on/off test the skill offers, or ask a person who knows your numbers."
+  - "You only want to know if one page change won: use a normal A/B test in your testing tool."
+  - "You want a ready-made test read-out with no design work: the skill plans the test, so run the test first, then fill in the table."
 
 you_give:
   - The channel, campaign, change or program you want to test
@@ -36,6 +40,27 @@ how_to_use:
   - Say what you can pause, suppress or hold back, and what you can afford to give up.
   - Agree the decision rule it writes before you start.
   - Run the test, fill in the table, and save the log line.
+output_sample:
+  input:
+    - The channel, email, popup or program you doubt
+    - Your monthly visitors, list size and conversion rate
+    - What you can pause, suppress or hold back
+    - Your gross profit per first order (optional)
+  output:
+    - name: Question and design
+      contains: The one thing being tested, the holdout type, the split, the run time and why this design fits.
+    - name: Size check
+      contains: The holdout visitor count, the smallest gain it can show, and a plain verdict on whether it is enough.
+    - name: How to split
+      contains: How groups are picked at random and what is suppressed or paused.
+    - name: Cost
+      contains: The sales given up or spend paused while the test runs.
+    - name: Read-out table
+      contains: Blank rows for holdout rate, exposed rate, absolute lift, relative lift and incremental share, to fill after the run.
+    - name: Decision rule
+      contains: When to keep, cut or move, or repeat the spend, written before the test starts.
+    - name: Log
+      contains: A line for the question, method, result with range and budget decision.
 
 how_it_works:
   - title: Matches the question

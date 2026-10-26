@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It maps steps and finds where people struggle.
 new_slug: employee-experience-map-builder
 name: Employee experience map builder
-summary: Pick a stage, like first week or exit. Get a map of key moments, pain
-  points and fixes.
+summary: Build an employee experience map for one stage, like onboarding or exit. See key moments, pain points and a ranked list of fixes.
 job: hire-people
 headline: Employee experience map builder
-subhead: Pick a stage, like first week or exit. Get a map of key moments, pain
-  points and fixes. Bring the stage or persona. Use the result to plan your next
-  step.
+subhead: Pick a stage, like first week or exit. Get a map of key moments, pain points and fixes. Bring the stage or persona. Use the result to plan your next step.
 explain: |
   A map of one stage of working life, such as first week, promotion or exit, showing the moments that matter, the pain points and what to fix first. Pick the stage and you get something your team can act on.
 
@@ -18,18 +15,39 @@ when:
   - You want to know why people leave after promotion.
   - You need a workshop output for managers.
   - You must pick which people process to fix first.
+not_for:
+  - "You need one pay or leave policy for the whole company: write it with your HR lead or legal adviser."
+  - "You are dealing with one person's complaint or case: talk to that person and your HR contact directly."
+  - "You have no survey, interview or HR system data and no time to gather any: collect a few employee quotes first."
 you_give:
   - The stage or persona
   - Survey, interview or HR system data
   - The current process (optional)
   - Pain points already known (optional)
 you_get:
-  - A stage-by-stage experience map
-  - Moments that matter
-  - Friction points
-  - A ranked list of fixes
+  - A map of one stage, step by step, with touchpoints, systems and feelings
+  - A short list of the moments that matter most
+  - A list of friction points
+  - A ranked list of fixes by impact and ease
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
+  - Say which stage or persona you want to map, such as onboarding or a returning parent.
+  - Paste your survey results, interview notes or HR system data, such as dates for each step. Add your current process if you have one.
+  - Ask for the stage map, the moments that matter and the friction points.
+  - Ask your AI to rank the fixes by impact and ease, then check the list against what you know from your team.
+  - Share the map with managers in a workshop and pick the first fix to try.
+output_sample:
+  input:
+    - The stage or persona, such as onboarding, promotion, parental leave or a new graduate
+    - Survey, interview or HR system data for that stage
+    - Your current process for the stage (optional)
+    - Pain points you already know about (optional)
+  output:
+    - name: Stage map
+      contains: The steps people go through at this stage, with touchpoints, systems used and how people feel at each step.
+    - name: Moments that matter
+      contains: The few points that shape how employees feel about the company, and why they stand out.
+    - name: Friction points
+      contains: Where people struggle or wait, with the gap between your intended process and what employees report.
+    - name: Ranked fixes
+      contains: Changes to make, ordered by impact and how easy they are to do.

@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It applies a long rule set but each rule is checkable.
 new_slug: agent-friendly-cli-designer
 name: Agent-friendly CLI designer
-summary: Describe your command-line tool. Get rules and a check so AI agents can
-  run it safely with clean output.
+summary: Check your command-line tool against clear safety rules, so AI agents can run it with clean JSON output and clear errors. Get a fix plan.
 job: build-software
 headline: Agent-friendly CLI designer
-subhead: Your command-line tool, reshaped so an AI agent can run it without
-  breaking things. You get a clear rule set and a way to check each rule, so you
-  know what is already safe and what still needs work.
+subhead: Your command-line tool, reshaped so an AI agent can run it without breaking things. You get a clear rule set and a way to check each rule, so you know what is already safe and what still needs work.
 explain: |
   Your command-line tool, reshaped so an AI agent can run it without breaking things. You get a clear rule set and a way to check each rule, so you know what is already safe and what still needs work.
 
@@ -17,8 +14,11 @@ when:
   - You are building a command-line tool that scripts or AI agents will call.
   - An agent keeps misreading your tool's messy text output.
   - You want to check an existing tool against a clear list of safety rules.
-  - You need agents to be blocked from destructive commands unless a person
-    confirms.
+  - You need agents to be blocked from destructive commands unless a person confirms.
+not_for:
+  - "Your tool must keep its current output and flags exactly as they are: ask the AI for a small set of the Level 1 rules only, or leave the tool alone."
+  - "You are building a web service or API, not a command-line tool: use your framework's own API guidelines instead."
+  - "You want general advice on naming commands and writing help text for people: use a plain command-line style guide."
 you_give:
   - A description or the help text of your command-line tool
   - The commands that change or delete things
@@ -30,7 +30,31 @@ you_get:
   - Examples of clean JSON output and error messages
   - A pass or fail check you can run again later
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. No code needs to run.
+  - Paste your tool's help text and the list of commands that change or delete things.
+  - Add a sample of its current output and an error message. Say who or what will call it, such as a script or an AI agent.
+  - Ask your AI to check the 20 Level 1 rules first and list every failure.
+  - Fix the top priority failures from the plan, then paste your updated help text and output.
+  - Ask your AI to run the same check again and confirm each fix.
+output_sample:
+  input:
+    - The help text or a description of your command-line tool
+    - The list of commands that change or delete things
+    - A sample of its current output and error messages
+    - Who or what will call it (optional)
+    - Any interface rules you must keep (optional)
+  output:
+    - name: Level 1 audit
+      contains: Each of the 20 core rules marked pass or fail for your tool.
+    - name: Failure list
+      contains: The rules your tool breaks, sorted by priority so the most serious come first.
+    - name: Fix plan
+      contains: What to change in your tool for each failed rule, starting with the top priority items.
+    - name: JSON output example
+      contains: A clean JSON result shaped for your commands, with a plain-text option for people.
+    - name: Structured error example
+      contains: An error message with a code and a reason an agent can act on.
+    - name: Exit code table
+      contains: A list of exit codes and what each one means, kept the same every time.
+    - name: Re-check list
+      contains: The same rules in a form you can run again after you make the fixes.

@@ -16,6 +16,31 @@ use_cases:
   - "Design a training routine that builds body and mind together"
   - "Express yourself honestly in your work instead of performing a style"
   - "Respond to a rival's move as it starts, rather than after it lands"
+not_for:
+  - "You need legal, medical or personal money advice: see a lawyer, doctor or financial adviser, since this mind gives general principles only."
+  - "You want to make choices under uncertainty and weigh odds: hire Annie Duke instead, whose work is on decision quality and outcomes."
+  - "You want to build grit and stick with a long goal through dull stretches: hire Angela Duckworth instead."
+output_sample:
+  input:
+    - The process, plan or method you are stuck in
+    - Your aim, and the date you want it by
+    - What keeps changing around you (market, platform or team)
+    - Any critics of your work and what they say (optional)
+  output:
+    - name: Verdict
+      contains: A short, direct answer on whether your method works under real pressure.
+    - name: What to cut
+      contains: The steps or moves that waste motion, with a reason for each cut.
+    - name: What to test
+      contains: One clear test you can run this week to see what holds up.
+    - name: Critics sorted
+      contains: Your critics split into those who can teach you and those to leave unanswered.
+    - name: Written aim
+      contains: A one-page note with your goal, start date, a number to check and what you give in return.
+    - name: Daily habit
+      contains: One thing to do each day, with minutes on a clock.
+    - name: Beyond the record
+      contains: A line on where his recorded words are thin, and any borrowed ideas.
 seats:
   - {seat: "Adapt (be like water)", asks: "If the situation changes tomorrow, can this plan change shape and keep moving?"}
   - {seat: "Simplicity and directness", asks: "What is the shortest, cleanest path to the goal, and what can we cut?"}

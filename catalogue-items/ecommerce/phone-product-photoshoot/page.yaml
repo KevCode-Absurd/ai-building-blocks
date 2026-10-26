@@ -1,6 +1,6 @@
 new_slug: phone-product-photoshoot
 name: "A full product photoshoot from your phone photos"
-summary: "Give it your product photos and brand look. You get 8 to 12 photos, each with a job and its own light."
+summary: "Turn your phone photos into a product photoshoot plan: 8 to 12 shots, each with a light setup, made in every size you need and checked."
 job: product-photos
 thinking: high
 thinking_why: "It runs several skills in a row. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You need product photos for a product page, ads and email, and can't book a photoshoot.
   - Your AI product photos look nice but the product isn't quite right, or they all look the same.
   - Your product is shiny, clear or white, and the light keeps going wrong.
+not_for:
+  - "You only want one quick picture that borrows the look of a single photo: use the Product image spec writer, or ask your AI for one image."
+  - "You have no real photo of the exact variant: take one with your phone first, because the shoot can't draw a side it has never seen."
+  - "You need real photos of real people using the product: book a photographer, since this makes AI photos with an invented adult cast."
 
 you_give:
   - One product and variant, named as you name it
@@ -36,6 +40,30 @@ how_to_use:
   - Say where the photos go and which sizes you need. It makes only the sizes you name.
   - Approve the shot list, the light cards and the references. Nothing is made before you do.
   - Approve the test photo, then let it make and check the rest.
+output_sample:
+  input:
+    - Your product and variant, named as you name it
+    - Phone photos of that exact variant, including one in use
+    - "Your brand facts: colours, photo style, props, what you never show"
+    - Where the photos go and the sizes you need
+    - Reference photos you like (optional)
+  prerequisites:
+    - An AI that can make images (ChatGPT or Gemini), or an image tool to paste the prompts into if you use Claude
+  output:
+    - name: Truth sheet
+      contains: "What must stay true about the product: shape, colours, label words and how it opens, with MISSING where a photo is needed."
+    - name: Shot list
+      contains: Each shot with its job, distance, angle and where it is used, plus shots left out and why.
+    - name: Light card
+      contains: "For each shot: main light position and size, fill, time of day, and a fix for your product's surface."
+    - name: References
+      contains: Setups behind looks you like, with keep, swap or drop lines for each part.
+    - name: Plan per shot
+      contains: Each shot's job, who is in it, and decisions where a reference and your product disagree.
+    - name: Photos
+      contains: Every approved size, named by number, job and size, and marked as made with AI.
+    - name: Checks
+      contains: A pass or fail line per file, with what was asked and what came back.
 
 how_it_works:
   - title: Writes down the product

@@ -1,6 +1,6 @@
 new_slug: story-ad-picture-brief-writer
 name: Story ad picture brief writer
-summary: Paste your story ad. Get one picture brief, a ready image prompt and a short line to run under it.
+summary: "Paste your story ad and get a story ad picture brief: the moment to show, a ready image prompt, a runner-up to test and a short line."
 job: make-image-ads
 thinking: medium
 thinking_why: It has to find the right moment in the story and pick a picture that does not give the answer away.
@@ -14,6 +14,10 @@ when:
   - You have a story ad and no idea what picture goes with it.
   - Your pictures look like ads and get skipped.
   - You want two different pictures to test against the same story.
+not_for:
+  - "Your ad is a plain product or price ad with no story: use a direct product picture, or the Fact-based ad copy writer to fix the copy first."
+  - "You have no story ad yet: use the Fact-based ad copy writer to write the ad, then come back."
+  - "You want a full check of every picture rule: use the Image style picker for story ads."
 you_give:
   - Your story ad
   - Who the buyer is and what they tried (optional)
@@ -28,6 +32,31 @@ how_to_use:
   - Paste your story ad under the prompt.
   - Paste the image prompt into ChatGPT or Gemini to make the picture.
   - Run the picture and the runner-up on the same story and compare how many people read on.
+output_sample:
+  input:
+    - Your story ad
+    - Who the buyer is and what they tried (optional)
+    - Anything that must not be shown (optional)
+  prerequisites:
+    - Ad copy, for example from the Fact-based ad copy writer
+    - An image tool such as ChatGPT or Gemini to make the picture (Claude cannot draw)
+  output:
+    - name: PUSH
+      contains: The quoted line from your story where the old way stopped being bearable.
+    - name: TRACE
+      contains: "The kind of evidence that moment left: a place, a thing, words written or words between people."
+    - name: PICTURE
+      contains: What is in the frame, chosen from something actually in the story.
+    - name: RUNNER-UP
+      contains: A different kind of trace to test against the first picture.
+    - name: IMAGE PROMPT
+      contains: A ready prompt in a phone-photo style that you paste into an image tool.
+    - name: WHAT IT MAKES PEOPLE WONDER
+      contains: One line on the question the picture raises without answering it.
+    - name: LINE UNDER THE PICTURE
+      contains: A short caption of 27 characters or fewer, with its character count.
+    - name: CHECKS MISSED
+      contains: Any check that failed or could not run, or the word none.
 how_it_works:
   - title: Finds the push
     text: Quotes the line where the old way stopped working.

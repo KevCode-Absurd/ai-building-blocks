@@ -2,23 +2,23 @@ thinking: medium
 thinking_why: Types and arguments must match exactly.
 new_slug: ni-daqmx-call-translator
 name: NI-DAQmx call translator
-summary: Paste a DAQmx C call. Get the correct MATLAB calldaqlib call with
-  argument types fixed.
+summary: Turn a NI-DAQmx C function into a working MATLAB calldaqlib call, with the right argument types, so you skip the type-error guesswork.
 job: build-software
 headline: NI-DAQmx call translator
-subhead: A DAQmx C function turned into a correct calldaqlib call in MATLAB,
-  with the argument types fixed. Wrong types are the usual reason these calls
-  fail, so this saves a lot of trial and error.
+subhead: A DAQmx C function turned into a correct calldaqlib call in MATLAB, with the argument types fixed. Wrong types are the usual reason these calls fail, so this saves a lot of trial and error.
 explain: |
   A DAQmx C function turned into a correct calldaqlib call in MATLAB, with the argument types fixed. Wrong types are the usual reason these calls fail, so this saves a lot of trial and error.
 
   The skill follows a short decision tree. If you named calldaqlib or a specific DAQmx function, it writes that call without second-guessing you. If you only described a need, it first checks whether the normal daq object can do it. It then checks whether the function needs a task handle or works at the device level, since calldaqlib handles task creation itself and cannot call DAQmxCreateTask. It needs Data Acquisition Toolbox R2026a or newer and an NI device.
 when:
   - You have example C code from NI and need it in MATLAB.
-  - You need a driver feature the daq object does not expose, such as a
-    reference trigger.
+  - You need a driver feature the daq object does not expose, such as a reference trigger.
   - You are reading back what the NI driver actually holds.
   - A calldaqlib call gives a type error you cannot trace.
+not_for:
+  - "You can do the job with the daq object alone, such as setting a rate or adding a trigger: use the daq object in MATLAB directly."
+  - "You need DAQmxCreateTask or DAQmxLoadTask: calldaqlib makes the task itself, so these calls cannot work. Use the daq object to build the task."
+  - "You use the old Session-based DAQ interface: this skill does not cover it. Use the MATLAB documentation for that interface."
 you_give:
   - The DAQmx C function or signature
   - What you want it to do
@@ -29,8 +29,28 @@ you_get:
   - A note if the daq object can do it instead
   - Why DAQmxCreateTask will not work here
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with National Instruments drivers.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Paste the DAQmx C function or signature. Say what you want it to do.
+  - Add your device name and MATLAB release if you know them (optional).
+  - Copy the calldaqlib call into MATLAB. It only runs with Data Acquisition Toolbox R2026a or newer and an NI device.
+  - Check the returned dictionary key, and check the enum names against the NI DAQmx documentation for your driver.
+output_sample:
+  input:
+    - The DAQmx C function name or signature
+    - What you want the call to do
+    - Your device name, such as Dev1 (optional)
+    - Your MATLAB release (optional)
+  prerequisites:
+    - MATLAB R2026a or newer with Data Acquisition Toolbox
+    - An NI device with NI drivers installed, to run the call
+  output:
+    - name: calldaqlib call
+      contains: A MATLAB code block with the call, argument types fixed and enum names written as strings.
+    - name: Argument translation
+      contains: How each C argument maps to MATLAB, including the dropped task handle and output placeholders.
+    - name: Return value note
+      contains: How to read the result, which comes back as a dictionary keyed by device and channel name.
+    - name: daq object note
+      contains: A short note when the daq object can do the same job without calldaqlib.
+    - name: Multi-task warning
+      contains: A note that the call runs on every internal task, and what to do about the warning.

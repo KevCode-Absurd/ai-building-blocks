@@ -1,6 +1,6 @@
 new_slug: social-comment-and-reply-desk
 name: Social comment and reply desk
-summary: Give it the posts and comments worth a reply. Get replies that add something, in your voice, plus repeat questions.
+summary: Reply to posts and comments on X, LinkedIn and YouTube in your own voice. Get short replies worth sending and the questions people keep asking.
 job: grow-social
 thinking: low
 thinking_why: The skills it runs are short and well bounded. A small, fast model handles most days. Use a stronger one when the comments are heated.
@@ -14,6 +14,10 @@ when:
   - You post on X, LinkedIn or YouTube and want to grow by replying, without sounding generic.
   - Your comment section fills up and you do not know which comments to answer.
   - You keep answering the same question and want it to become a post.
+not_for:
+  - "You get fewer than a few posts or comments a week: reply by hand, it will be faster."
+  - "You need to answer customer complaints: use your support desk or a person on your team."
+  - "You want to post, like or follow for you: this agent only drafts, so you post the replies yourself."
 you_give:
   - The posts you might reply to, or the comments on your own posts, with the platform and how old each is
   - Three to five of your own posts or replies you liked, the first time
@@ -31,6 +35,30 @@ how_to_use:
   - Paste the posts or comments, with the platform and how long ago each was posted.
   - Read the replies. Post the ones you like, yourself.
   - Once a week, ask for the repeat-question list and use it to plan your next posts.
+output_sample:
+  input:
+    - The posts you might reply to, or the comments on your own posts
+    - The platform and how old each item is
+    - Three to five of your own posts or replies you liked (first run)
+    - Facts you may use, such as a result or a link (optional)
+    - Topics you will not touch (optional)
+  prerequisites:
+    - An AI that can keep files, such as Claude Code, if you want the replies folder and log saved between runs
+  output:
+    - name: The run
+      contains: One line with how many items were looked at, how many replies were written and how many were skipped.
+    - name: Replies to send
+      contains: Each reply with its platform and post, marked for reach or for the person, best ones first.
+    - name: Pin this comment
+      contains: One YouTube comment to pin and the reason, when your own comments were included.
+    - name: Skipped
+      contains: Each skipped item with the reason, such as nothing to add, bait or too sensitive.
+    - name: Questions people keep asking
+      contains: Each repeat question with its count, dates and best example, as a topic for your next post.
+    - name: Held for you
+      contains: Items about a dispute, health, money or the law, left with no reply drafted.
+    - name: Files and missing
+      contains: The run folder, plus every MISSING line in one list.
 how_it_works:
   - title: Read the folder
     text: Loads your voice file, reply log, skipped list and question counts. With no voice file, it builds one from your samples.

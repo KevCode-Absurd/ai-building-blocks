@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It makes one small, shown change.
 new_slug: crm-deal-updater
 name: CRM deal updater
-summary: Say what changed on a deal. Get a before and after, then the update
-  saved when you accept.
+summary: Update a deal in your CRM by saying what changed. See the before and after, accept it, and get the saved record link.
 job: sell-and-negotiate
 headline: CRM deal updater
-subhead: Changing a deal in your CRM stops being a guessing game. Tell it what
-  changed, like a new stage, a moved close date or fresh next steps, and it
-  shows the current value next to the proposed one before anything is written.
+subhead: Changing a deal in your CRM stops being a guessing game. Tell it what changed, like a new stage, a moved close date or fresh next steps, and it shows the current value next to the proposed one before anything is written.
 explain: |
   Changing a deal in your CRM stops being a guessing game. Tell it what changed, like a new stage, a moved close date or fresh next steps, and it shows the current value next to the proposed one before anything is written.
 
@@ -18,6 +15,10 @@ when:
   - A customer moved their start date and the close date needs to follow.
   - You want next steps on an opportunity updated without opening the CRM.
   - Another tool suggested a change and you want to review it before it is saved.
+not_for:
+  - "You want to create a new deal: add it in your CRM by hand, as this skill only updates deals that exist."
+  - "You want to sweep many deals for stale data first: run the crm-hygiene-check skill, then come back here to apply the fixes."
+  - "Your AI has no CRM connection with write rights: you get a paste-ready checklist, so apply it yourself in your CRM."
 you_give:
   - The deal or account name
   - What changed (stage, date, amount, next steps)
@@ -29,8 +30,27 @@ you_get:
   - A record link to check the result
   - A note on any blank or unclear values
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read and write to your CRM.
+  - Connect your CRM to your AI first, with permission to read and update deals. Without it, you get a checklist to apply by hand.
+  - Add this skill to your AI, or paste its instructions into a chat.
+  - "Say which deal and what changed, for example: move the close date on the Sprout deal to 15 Aug."
+  - Check the before and after table and any warnings. Say yes, edit or cancel if you did not ask for the change yourself.
+  - Open the record link it returns and check the saved values.
+output_sample:
+  input:
+    - The deal or account name
+    - What changed, such as stage, close date, amount, next step or forecast category
+    - Your CRM connection, or a pasted export
+    - Your own deals only, or a wider scope (optional)
+  prerequisites:
+    - A CRM connected to your AI with permission to update records, or the checklist fallback if not
+  output:
+    - name: Before and after table
+      contains: Only the fields that would change, with the current value from your CRM beside the new one.
+    - name: Warnings
+      contains: Notes on anything notable, like a stage that skips exit criteria, a close date in a closed period or a big amount change.
+    - name: Applied update
+      contains: The changed fields saved to the deal, only the ones you asked for or accepted.
+    - name: Verification and record link
+      contains: The record read back to confirm the values, with a link to the deal, or what came back if it differs.
+    - name: Paste-ready checklist
+      contains: If your CRM cannot be written to, the before and after for each field so you can apply it by hand.

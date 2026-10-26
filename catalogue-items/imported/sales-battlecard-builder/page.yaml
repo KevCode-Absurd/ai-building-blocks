@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It compares products and drafts replies.
 new_slug: sales-battlecard-builder
 name: Sales battlecard builder
-summary: Name your rival. Get a battlecard with comparisons, reply scripts,
-  positioning and win themes.
+summary: Build a sales battlecard against a named rival. Get a feature table, reply scripts, a positioning line and win themes your reps can use in live deals.
 job: sell-and-negotiate
 headline: Sales battlecard builder
-subhead: A one-page guide your sales team can use in a live deal against a named
-  rival. Give it the competitor and get comparisons, reply scripts and the
-  points that win deals.
+subhead: A one-page guide your sales team can use in a live deal against a named rival. Give it the competitor and get comparisons, reply scripts and the points that win deals.
 explain: |
   A one-page guide your sales team can use in a live deal against a named rival. Give it the competitor and get comparisons, reply scripts and the points that win deals.
 
@@ -18,6 +15,10 @@ when:
   - A competitor launched a feature and sellers are asking what to say.
   - New reps need to learn how to position against a key rival.
   - You want to prepare for a head-to-head evaluation.
+not_for:
+  - "You have never met this rival in a deal: skip the card and note them in a simple list until they show up."
+  - "You only need one reply to one email: write it by hand or ask your AI for a single draft."
+  - "You need a rival's private pricing or plans: ask your buyer or a person on your team, because the skill only uses public facts."
 you_give:
   - The competitor name
   - Your product and main strengths
@@ -29,7 +30,30 @@ you_get:
   - A positioning statement
   - Win themes with talk tracks
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. Use an AI that can search the web.
+  - Type the rival's name and what your product does best. Add your buyer and the objections you hear, if you know them.
+  - Read the result. Check every customer story, number and certification against a source with a date. Replace anything you cannot confirm.
+  - Fix the wording so it sounds like your reps talk, then share the card with your sales team.
+  - Next, log deals against the card in your CRM. Each quarter, add what you won and lost, and update the card.
+output_sample:
+  input:
+    - The rival's name
+    - Your product and its main strengths
+    - The rival's known strengths (optional)
+    - Your target buyer (optional)
+    - Objections your reps hear most (optional)
+  prerequisites:
+    - An AI that can search the web, so it can check the rival's site and review pages
+  output:
+    - name: Competitor snapshot
+      contains: "A short profile of the rival: product, pricing model, recent launches and what reviewers often say."
+    - name: Strengths and weaknesses
+      contains: What the rival does well and where it falls short, so reps can be fair and credible.
+    - name: Feature comparison table
+      contains: A side-by-side table that marks each row as strong lead, slight lead, even or behind.
+    - name: Objection handlers
+      contains: Five to eight common objections, each with a reply that acknowledges, reframes, proves and bridges.
+    - name: Win themes and talk tracks
+      contains: Three or four themes that link your strengths to buyer priorities, with lines reps can say.
+    - name: Landmine questions
+      contains: Questions reps can ask early in a deal to shape how the buyer judges both products.

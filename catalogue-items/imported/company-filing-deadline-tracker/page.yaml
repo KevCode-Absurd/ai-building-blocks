@@ -3,12 +3,10 @@ thinking: medium
 thinking_why: Deadlines depend on company type and place.
 new_slug: company-filing-deadline-tracker
 name: Company filing deadline tracker
-summary: List your entities and places of registration. Check official filing
-  sources and track confirmed dates or open questions.
+summary: Track company filing deadlines for every entity you run. Give it your entities and places of registration. You get dates checked against official sources.
 job: check-contracts
 headline: Company filing deadline tracker
-subhead: Share each entity type and filing place; get confirmed annual
-  deadlines, official sources, and unknowns in one tracker.
+subhead: Share each entity type and filing place; get confirmed annual deadlines, official sources, and unknowns in one tracker.
 explain: |
   Share each entity type and place of registration. The skill checks official filing sources and records confirmed dates, sources and unknowns.
 
@@ -18,6 +16,10 @@ when:
   - You want to know what is overdue before a lawyer or investor asks.
   - A new entity was formed and needs its first filing calendar.
   - You need a clean table of deadlines to send to your accountant.
+not_for:
+  - "You need a binding deadline: ask your registered agent for their compliance calendar, or check the Secretary of State site."
+  - "You want legal advice on whether a filing is needed: ask a lawyer or a qualified registered agent."
+  - "You only have one company and one filing: put the date in your own calendar after checking the official site."
 you_give:
   - A list of your companies
   - Where each is formed or registered
@@ -29,11 +31,31 @@ you_get:
   - A health check of the whole list
   - A CSV or table export
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can search the web to confirm current dates.
-  - Where the skill points to /corporate-legal:cold-start-interview, use the
-    setup-interview folder inside it. We copied it in so the skill works on its
-    own.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Turn on web search, because the skill needs it to check official pages.
+  - List each company with its type and where it is formed or registered. Add your registered agent if you have one (optional).
+  - 'Say: "Build my filing tracker." Your AI makes a tracker table. Save it as a file called compliance-tracker in your own folder.'
+  - Check every date. Each one needs an official source link and a date checked. If it has no checked source, it must say unknown.
+  - Say "Show what is due in the next 90 days" to get the report. Say "Update" with a new filing date to change a status, or "Export as CSV" for a table.
+  - Before you file anything, confirm the date with your registered agent or the official filing office. If you are not a lawyer, ask an attorney or agent first.
+output_sample:
+  input:
+    - Your list of companies
+    - Where each company is formed or registered
+    - The entity type for each, such as LLC or corporation
+    - A report from your registered agent (optional)
+  prerequisites:
+    - An AI that can search the web, so it can check official filing pages
+    - A place to save a tracker file, such as a folder on your computer
+  output:
+    - name: Tracker file
+      contains: One row per entity and filing, with the date, official source link, date checked, and the entity facts used.
+    - name: Unknown items
+      contains: Filings where no official source could be checked, marked unknown with the facts still missing.
+    - name: Deadline report
+      contains: Overdue items, items due in the next 30, 60 or 90 days, recently filed items, and unknowns.
+    - name: Agent-managed list
+      contains: Entities where a local agent handles filings, with a note to confirm status with that agent.
+    - name: Health audit
+      contains: A check of the whole list for missing facts, old checks and entities without confirmed good standing.
+    - name: CSV or table export
+      contains: The tracker as a CSV file or a plain table you can send to your accountant.

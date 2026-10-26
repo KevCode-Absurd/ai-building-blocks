@@ -296,6 +296,33 @@ PYTHONDONTWRITEBYTECODE=1 uv run --isolated --no-project \
 - `references/cli-guide.md` — schemas, bounds, outputs, and safe CLI examples
 - `references/sources.md` — dated official and primary-method sources
 
+## Before you run it (AI Blocks notes)
+
+Needs code running. The bundled scripts need Python 3.10+, uv and SimPy 4.1.2. If your AI cannot run code, write the model and the commands, say clearly that nothing was run, and report no numbers.
+
+Ask once for what the model needs: the decision or question, the steps in order, the arrival pattern, how long each step takes, how many staff or machines handle each step, any queue limit, and the time unit. Mark anything not given as `MISSING: <what>`. Never invent arrival rates or step times. If you must use a stand-in value to show the model working, label it as an assumption and do not present the results as findings.
+
+The bundled CLIs run one fixed model: exponential arrivals and service times, several servers and a queue limit. For any other process, write a SimPy model following the workflow above.
+
+## Report format
+
+Hand back these sections in order:
+
+1. **Question** and the decision it informs.
+2. **Model**: steps, resources, time unit, warm-up, run length and run end.
+3. **Assumptions** and what the model leaves out.
+4. **Runs**: number of independent runs and the seed list.
+5. **Results table**: average wait, queue length, resource use, throughput and jobs turned away. Give each as an average with a range across runs.
+6. **Checks and limits**: tests passed, jobs unfinished at the end, how far the model was validated.
+7. **What it means**: a plain reading, with no claim about cause.
+8. **Next test**: the one number to change next, such as adding a server.
+9. **MISSING**: inputs not given, or none.
+
+## About the citation step
+
+The citation step below is optional. Fetching the arXiv record is a step you do, not the bundled scripts, which make no network calls. If you cannot go online, cite from the text as written.
+
+
 ## Citing Scientific Agent Skills
 
 This skill is part of Scientific Agent Skills by K-Dense. If it materially contributed to a

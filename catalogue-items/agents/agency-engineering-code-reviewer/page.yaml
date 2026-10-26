@@ -1,0 +1,146 @@
+name: Code Reviewer agent
+summary: Paste a code change and get a review of bugs, security, tests and clarity. Each point has the reason and a fix, ranked blocker, suggestion or nit.
+headline: Code Reviewer agent
+subhead: Paste a code change and say what it is meant to do. It reviews for bugs, security holes, missing tests and unclear code. You get a ranked list where every point has the reason, the fix and what is done well.
+job: test-and-fix-code
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that
+  can reason through the task and verify its work.
+explain: |-
+  A code review (also called a pull request review or peer review) often fails in one of two ways. It nitpicks style and misses the bug. Or it says "this looks risky" and gives no reason, so the author learns nothing. This agent reviews for what matters first: does the code do what it should, is it safe, will someone understand it in six months, and are the important paths tested.
+
+  Every point has a rank. A blocker must be fixed before the change goes in, such as a security hole or a way to lose data. A suggestion should be fixed. A nit is optional. Every point also says where it is, why it matters and what to try instead, in the tone of "consider X because Y". It also names what is done well, because a review that only criticizes teaches less.
+
+  It reads the code you paste. It does not run it, run the tests or see the rest of your project, so it marks anything that depends on code it was not shown. It does not give you a final approval. A person who owns the code decides.
+
+  This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
+when:
+  - You wrote a change and want a second pair of eyes before a teammate sees it.
+  - You review a teammate's change and want help spotting what you might miss.
+  - You are a solo developer and have no one to review your code.
+  - Code came from a freelancer or a template and you want it checked before you use it.
+not_for:
+  - You want a security check only. Use the Diff security skimmer. For a full audit, use the Application Security Engineer agent and a human reviewer.
+  - You want every new pull request reviewed on a schedule, with history and drafted comments. Use the Pull request reviewer.
+  - The code was written by an AI tool and you want it checked for typical AI mistakes. Use the AI-written code reviewer.
+you_give:
+  - The code change, pasted as a diff or as the changed files. Keep it to what one person could review in one sitting.
+  - What the change is meant to do, in a line or two
+  - The language and framework, such as Python with Django or TypeScript with React
+  - What to focus on, such as bugs, security, speed or tests (optional)
+  - Test results or the failing error message (optional)
+you_get:
+  - A summary with the main concerns and what is good
+  - Blockers, each with where it is, why it matters and a fix to try
+  - Suggestions and nits, ranked
+  - A list of missing tests for the paths that matter
+  - Questions where the intent is unclear, and next steps
+how_to_use:
+  - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
+  - Paste the code change. A diff is best. Add the file names, and line numbers if you have them.
+  - Say what the change should do, the language and framework, and what to focus on. Remove passwords, keys and customer data first. No code running or web access is needed.
+  - Type "Review this change. Rank every point. Say where it is and why. Mark anything you cannot judge because you did not see the code."
+  - Read the blockers first. Check each one against your code. Ask for a deeper look at any you do not follow.
+  - Fix the blockers, then run your own tests. The AI has not run the code, so a review is not proof it works.
+how_it_works:
+  - title: Fix the scope
+    text: It confirms what the change should do and what you want checked. Anything missing is asked once, then marked MISSING.
+  - title: Read for correctness
+    text: It checks the code does what you said, handles errors and edge cases, and cannot lose or corrupt data.
+  - title: Check security
+    text: It looks for unchecked input, unsafe queries, leaks and missing sign-in checks in the code it was shown.
+  - title: Check upkeep and speed
+    text: It checks naming, structure, duplication and obvious slow spots, such as a query in a loop.
+  - title: Check the tests
+    text: It lists the paths that matter and says which have no test in what you pasted.
+  - title: Rank and write up
+    text: It sorts points into blocker, suggestion and nit, adds the reason and a fix to each, and ends with questions and next steps.
+output_shape: |-
+  SUMMARY
+    Overall <one or two lines> | Main concerns <list> | Done well <list>
+
+  BLOCKERS (fix before merging)
+    <where> | <problem> | <why it matters> | <fix to try> | <confidence: high, medium or low>
+
+  SUGGESTIONS (should fix)
+    <where> | <problem> | <why> | <fix to try>
+
+  NITS (optional)
+    <where> | <note>
+
+  MISSING TESTS
+    <behavior that matters> | <what to test>
+
+  QUESTIONS
+    <where> | <what is unclear about the intent>
+
+  NOT REVIEWED
+    <what you were not shown> | <why it limits the review>
+
+  NEXT STEPS
+    <step in order>
+output_sample:
+  input:
+    - The code change, pasted as a diff or changed files
+    - What the change is meant to do
+    - The language and framework
+    - What to focus on (optional)
+  prerequisites:
+    - An AI that can read pasted text or files
+    - A way to run your own tests afterwards
+  output:
+    - name: Summary
+      contains: The overall impression, the main concerns and what is done well.
+    - name: Blockers
+      contains: Points to fix before merging, each with where, why it matters, a fix and a confidence level.
+    - name: Suggestions
+      contains: Points that should be fixed, with the reason and a fix to try.
+    - name: Nits
+      contains: Optional notes on naming, style and small clean-ups.
+    - name: Missing tests
+      contains: The behavior that matters and has no test in what you pasted.
+    - name: Questions
+      contains: Places where the intent is unclear, asked instead of assumed.
+    - name: Not reviewed
+      contains: The code and settings you were not shown, and how that limits the review.
+    - name: Next steps
+      contains: The order to fix things in, and what to check after.
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini with file upload
+      why: It can read a saved diff or several changed files together, and keep the link between them.
+  inputs:
+    - The pull request description or ticket, so it knows the goal.
+    - Your project's coding rules or lint settings, so it skips what a tool already checks.
+    - The related code the change calls, if the change is small.
+terms:
+  - term: Diff
+    meaning: A list of what changed in the code, showing lines removed and lines added.
+  - term: Blocker
+    meaning: A problem that should stop the change from going in until it is fixed.
+  - term: Nit
+    meaning: A small, optional note, such as a better name for a variable.
+  - term: Edge case
+    meaning: An unusual input or situation, such as an empty list or a missing value, that the code may not handle.
+  - term: Pull request
+    meaning: A request to add your code change to a shared project, so others can review it first.
+tweaks:
+  - what: Focus
+    how: Name one or two things, such as "security and tests". A narrow focus gives a deeper review.
+  - what: Size
+    how: Review one change at a time. Split a large diff by file or feature.
+  - what: Tone
+    how: Say if you are reviewing a beginner's code, and ask for more teaching in each point.
+improve:
+  - Keep the review next to the change. After you fix things, paste the new version and ask what is still open.
+  - Add your team's coding rules to the pack so the review follows them.
+  - Pair it with the Diff security skimmer for a second, security-only pass on changes that touch sign-in or payments.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified
+    results.
+  - Claims of tests, memory, tool access or completed actions match what
+    actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

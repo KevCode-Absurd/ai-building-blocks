@@ -1,6 +1,6 @@
 new_slug: usp-claim-checker
 name: "USP claim checker"
-summary: "Paste an ad and your product facts. Get a pass or fail on whether its one claim is real, unique and strong."
+summary: "Check your ad claim before you spend on it. Paste your ad and product facts. You get a pass or fail on offer, rivals and pull, plus a score."
 job: check-ads
 thinking: medium
 thinking_why: "It applies three fixed tests, but it must judge the claim against rivals and facts."
@@ -17,6 +17,10 @@ when:
   - "Your ad says three or four things and you are not sure which one sells."
   - "You have a slogan that sounds good but promises nothing you can name."
   - "Your rivals all seem to say the same thing."
+not_for:
+  - "You run a brand-awareness ad or a price-only ad with no single claim: use a plain headline writer instead."
+  - "Your product has no test results or proof yet: gather some first, or ask the person who made it what it really does."
+  - "You want the ad copy written for you: use the Reply-getting fix writer once your claim is chosen."
 
 you_give:
   - "Your ad, headline or slogan"
@@ -35,6 +39,32 @@ how_to_use:
   - "Paste two or three rival ads or pages if you can, so it checks them for the same claim."
   - "Fix any failed test in the order it lists."
   - "Run the check again on the new line."
+output_sample:
+  input:
+    - Your ad, headline or slogan
+    - "Your product facts: what it does, how it is made, what has been tested"
+    - Two or three rival ads or pages (optional)
+  output:
+    - name: CLAIM
+      contains: "Your claim in one sentence: buy this, get this specific benefit."
+    - name: SCORE
+      contains: A score out of 100 and how the points were added up.
+    - name: OFFER
+      contains: Pass or fail on whether the claim is a real offer, with a reason.
+    - name: RIVAL CHECK
+      contains: Pass, fail or unknown on whether rivals make the same claim, and what was checked.
+    - name: PULL
+      contains: Pass or fail on whether the claim would move many people, and who it moves.
+    - name: PROOF
+      contains: Whether the product delivers the claim, and one demonstration that would show it.
+    - name: FIXES
+      contains: A numbered list of changes to make, in order.
+    - name: CLAIM TO KEEP AND REPEAT
+      contains: One sentence to use across your ads.
+    - name: MISSING
+      contains: Any facts the check needed but did not get.
+    - name: CHECKS MISSED
+      contains: One line for each check the result still fails, or none.
 
 how_it_works:
   - title: "States the claim"

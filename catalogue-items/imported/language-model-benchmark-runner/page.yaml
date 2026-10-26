@@ -2,14 +2,10 @@ thinking: low
 thinking_why: It runs set tests and reports the numbers.
 new_slug: language-model-benchmark-runner
 name: Language model benchmark runner
-summary: Give it a model. Get scores on 60 or more standard tests, so you can
-  compare it with others.
+summary: Run your language model through 60 or more standard benchmarks like MMLU and GSM8K. Get a score table you can compare with other models.
 job: build-software
 headline: Language model benchmark runner
-subhead: Scores for your model on the same tests everyone else uses, so you can
-  compare it with other models fairly. Point the skill at a model, such as one
-  from Hugging Face, and pick tasks from the 60 or more in EleutherAI's open
-  test suite.
+subhead: Scores for your model on the same tests everyone else uses, so you can compare it with other models fairly. Point the skill at a model, such as one from Hugging Face, and pick tasks from the 60 or more in EleutherAI's open test suite.
 explain: |
   Scores for your model on the same tests everyone else uses, so you can compare it with other models fairly. Point the skill at a model, such as one from Hugging Face, and pick tasks from the 60 or more in EleutherAI's open test suite. These include MMLU for knowledge, GSM8K for maths and HumanEval for code.
 
@@ -19,6 +15,10 @@ when:
   - You are choosing between two open models for a project.
   - You want to compare your model with published leaderboard numbers.
   - You need a repeatable evaluation to run after every training change.
+not_for:
+  - You want to judge fairness, cost or how well a model holds a chat. Use HELM, a broader open test suite, or a person who reads sample answers.
+  - You have no GPU or Python setup. Test an API model instead, or ask someone on your team to run it.
+  - You need a test built on your own business tasks. Write a small custom test set from real examples, or ask an engineer to add a custom task.
 you_give:
   - The model name or path
   - Which benchmarks to run
@@ -30,8 +30,31 @@ you_get:
   - A results table
   - Notes on how to compare across models
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run Python code on a computer with a GPU.
+  - "Gather what you need first: your model name or path, a computer with a GPU, Python, and the list of benchmarks to run."
+  - Install the test tool by running pip install lm-eval on that computer.
+  - Paste the skill into your AI and tell it your model and benchmarks. Ask for the run command first.
+  - "Run the command. Your AI must run code, or you run it yourself and paste the results back. Plan for time: MMLU takes about 2 hours for a 7B model on one A100 GPU."
+  - For HumanEval, turn on code execution, or the test will not run.
+  - Ask your AI to build the results table and flag any score that looks far from published numbers.
+output_sample:
+  input:
+    - Your model name or the path to your model files
+    - The benchmarks you want to run, such as MMLU or GSM8K
+    - A computer with a GPU and Python
+    - Scores from an earlier run to compare with (optional)
+  prerequisites:
+    - An AI that can run code, or a computer where you can run commands yourself
+    - Python with the lm-eval package installed
+    - A GPU for larger models
+    - Code execution turned on for HumanEval
+  output:
+    - name: Run command
+      contains: The exact lm_eval command with your model, tasks, device, batch size and number of examples per question.
+    - name: Results file
+      contains: A JSON file with the score and error margin for each benchmark, plus the settings used.
+    - name: Comparison table
+      contains: One row per model and one column per benchmark, so you can read scores side by side.
+    - name: Training progress chart
+      contains: A line chart of scores across saved checkpoints, if you track a model as it trains.
+    - name: Comparison notes
+      contains: Tips to match published scores, such as using the same example count and task names.

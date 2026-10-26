@@ -1,28 +1,37 @@
 new_slug: value-proposition-builder
 name: "Value proposition builder"
-summary: "Paste your offer and customer facts. Get a value pitch in five and a half parts that ends with proof of profit."
+summary: "Write a value proposition from your offer and customer facts: what they gain, one incentive and proof from a similar customer."
 job: make-offer
 thinking: medium
 thinking_why: "It chooses which facts become value and proof, and refuses claims without evidence, but the structure is fixed."
 
 headline: "Value proposition builder"
-subhead: Give it your offer, what you know about a customer and any proof. It writes your company, product and personal value, one incentive, the customer's profit, what you keep giving after the sale and proof from a similar customer. You get a value pitch draft and its checks.
+subhead: Give it your offer, what you know about the customer and any proof you can use. It writes your value pitch in five and a half parts. You get what the customer gains, one incentive, what you keep giving after the sale and proof from a similar customer.
 
 explain: |
-  A buyer hears the same claims from every seller: quality, service, experience. A pitch that lists what you are gives them nothing to weigh. What they weigh is what they will gain: money earned, money saved, time freed or risk avoided, and whether you will still be there after they pay.
+  Every seller says quality, service and experience. A pitch that lists what you are gives the buyer nothing to weigh. They weigh what they will gain: money earned, money saved, time freed or a risk avoided. They also ask if you will still be there after they pay.
 
-  This skill builds the pitch in five and a half parts. It lists your company value, your product value and your own value as the seller. It adds one incentive marked one time only, then states how the customer produces, benefits or profits, with numbers where you have them. The half step is the value you keep giving after the sale. It closes with proof from a similar customer, and checks the draft against the buyer's own after-purchase doubts.
+  A value proposition builds the pitch around that gain. This skill writes it in five and a half parts. First your company value, product value and your own value as the seller. Then one incentive, marked one time only. Then how the customer earns, benefits or profits, with numbers where you have them. The half step is what you keep giving after the sale. Last comes proof from a similar customer.
+
+  It then checks the draft against the doubts buyers have after they pay. It never fills a gap with a guess. A missing figure or case is marked, not made up.
 
 when:
-  - Your pitch lists features and the buyer asks what is in it for them.
+  - Your pitch lists features, and the buyer asks what is in it for them.
   - You are about to meet a buyer and want your value on one page.
   - You offer a deal and cannot say what it is worth to the customer.
+  - A buyer says "why should I pay that?" and you need a better answer.
+
+not_for:
+  - You have no offer yet, only an idea. Use the Hidden offer finder first.
+  - You want the one sentence your ad rests on. Use the Selling proposition finder.
+  - You want a first message to a stranger. Use the Stranger first-message writer.
+  - You have no facts, no results and no customer to describe. It marks every part MISSING and gives you a blank outline.
 
 you_give:
-  - Your offer or what you sell, with price
-  - What you know about the customer and what they want to gain
-  - Your facts, such as results, case notes, reviews and numbers (optional)
-  - Your brand file (optional)
+  - What you sell, with price and terms, from your price list or sales page
+  - Who the customer is and what they want to gain, from your notes or past calls
+  - Results, case notes, reviews and numbers you can prove (optional)
+  - The doubts buyers voice after they buy (optional)
 you_get:
   - Your company, product and seller value, each stated plainly
   - One incentive, marked one time only
@@ -30,11 +39,11 @@ you_get:
   - What you keep giving after the sale, and a proof line from a similar customer
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste your offer, the customer facts and any proof you may use.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it in. It needs no tools or files.
+  - Paste your offer, the customer facts and any proof you may use. If you paste nothing, it asks for the offer and customer first.
   - Add the doubts buyers say they have after they buy, if you know them.
-  - Edit the draft into your own voice and cut anything you cannot prove.
-  - Keep it ready to show in a meeting or on a page.
+  - Check each figure and each proof line against your own records. Cut anything you cannot prove.
+  - Edit THE PITCH into your own voice. Then run it through the Sales copy editor before it goes on a page or into a meeting.
 
 how_it_works:
   - title: Lists your three values
@@ -81,6 +90,32 @@ output_shape: |
 
   CHECKS MISSED
   <one line per check still missed, or none>
+
+output_sample:
+  input:
+    - "What you sell, with price and terms"
+    - "Who the customer is and what they want to gain"
+    - "Results, case notes or reviews you can prove (optional)"
+    - "The doubts buyers voice after they buy (optional)"
+  prerequisites:
+    - "Your brand brain from the Website brand brain builder (optional)"
+  output:
+    - name: "YOUR VALUE"
+      contains: "Your company value, product value and your value as the seller, from facts you gave."
+    - name: "INCENTIVE (one time only)"
+      contains: "One reason to act soon, with what it is and when it ends."
+    - name: "WHAT THE CUSTOMER GAINS"
+      contains: "How the customer earns, benefits or profits, with figures where you gave them."
+    - name: "AFTER THE SALE (the half step)"
+      contains: "What you keep giving after they pay, such as support or a review."
+    - name: "PROOF FROM A SIMILAR CUSTOMER"
+      contains: "The customer type, the result and where the proof comes from."
+    - name: "THE PITCH"
+      contains: "A short draft in the buyer's words, built from the parts above."
+    - name: "BUYER DOUBTS AFTER PURCHASE"
+      contains: "Each doubt with the pitch line that answers it, or a flag if none does."
+    - name: "MISSING and CHECKS MISSED"
+      contains: "Facts you did not give, and any check the draft still fails."
 
 tweaks:
   - what: Figures

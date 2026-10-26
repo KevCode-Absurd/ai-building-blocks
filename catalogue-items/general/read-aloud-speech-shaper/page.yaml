@@ -1,6 +1,6 @@
 new_slug: read-aloud-speech-shaper
 name: "Read-aloud speech shaper"
-summary: "Paste your notes and the room. Get a speech or poem shaped to be heard, with a refrain."
+summary: "Turn your notes into a speech or poem made to be heard, with breath marks and a refrain. Use it to write a speech for a funeral or event."
 job: speak-and-persuade
 thinking: medium
 thinking_why: "It shapes sound, rhythm and structure by judgement, within a fixed set of steps."
@@ -17,6 +17,10 @@ when:
   - You must speak at a funeral, graduation, memorial or community event.
   - You have pages of notes and need three minutes the room will remember.
   - You want to write a poem or short piece for an occasion.
+not_for:
+  - "You want a funny speech: use the Funny speech planner."
+  - "Your speech is built on stories that teach a lesson: use the Lesson talk writer."
+  - "You are writing a report or a page that nobody will say aloud: write it plainly yourself or ask your AI for a simple edit."
 
 you_give:
   - Your notes, in any order, or a first draft (optional)
@@ -34,6 +38,28 @@ how_to_use:
   - Say who you most want to reach, and what you fear saying badly.
   - Read the result aloud twice. Mark any place that is hard to say and tell the skill.
   - Practise with the breath marks, and keep the last line plain.
+output_sample:
+  input:
+    - Your notes, in any order, or a first draft (optional)
+    - Who will be in the room and the moment, such as a funeral or a launch
+    - The line you hope people take home (optional)
+  output:
+    - name: The fear, the listener and the line to carry home
+      contains: The fear the speech must face, who needs to hear it, and the one line to take home.
+    - name: Register
+      contains: The tone the moment needs, such as plain, warm or grave, with a line on why.
+    - name: Speech
+      contains: The full script with breath marks, shaped so each sentence can be said in one breath.
+    - name: The refrain
+      contains: A short line that returns three or four times, with each version and where it lands.
+    - name: Who is spoken to
+      contains: Each group in the room and where the speech addresses them, with any group left out.
+    - name: Cut
+      contains: The lines removed and why, so you can put them back.
+    - name: Missing
+      contains: Facts that would sharpen the speech, marked MISSING.
+    - name: Checks missed
+      contains: One line for each check still missed, or none.
 
 how_it_works:
   - title: Names the fear and the person

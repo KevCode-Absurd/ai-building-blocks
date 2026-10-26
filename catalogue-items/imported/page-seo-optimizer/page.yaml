@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It checks a set list of factors on the page.
 new_slug: page-seo-optimizer
 name: Page SEO optimizer
-summary: Give it a web page. Get on-page, speed and structured data fixes to
-  rank better.
+summary: Check one web page for SEO problems. Get ranked fixes, a rewritten title and description, and structured data code to help it rank in search.
 job: get-found-in-search
 headline: Page SEO optimizer
-subhead: A page-by-page search report with exact code changes, sorted from most
-  to least important. Give it a web address and a target keyword and it tells
-  you what is holding the page back.
+subhead: A page-by-page search report with exact code changes, sorted from most to least important. Give it a web address and a target keyword and it tells you what is holding the page back.
 explain: |
   A page-by-page search report with exact code changes, sorted from most to least important. Give it a web address and a target keyword and it tells you what is holding the page back.
 
@@ -18,18 +15,44 @@ when:
   - You want a to-do list for a page, ranked by impact.
   - You need structured data written for a product or article page.
   - You are checking old pages for weak titles and thin links.
+not_for:
+  - "You need to find which keywords to target: use a keyword research tool first, then come back with your chosen keyword."
+  - "Your page is not live or your AI cannot open it: paste the page text into a chat and ask for edits, or ask a person who builds your site."
+  - "You want a full audit of every page on your site: this checks one page at a time, so run it once per page."
 you_give:
-  - Page address
-  - Target keyword (optional)
-  - Access to the page or its code
+  - Your page address
+  - Your target keyword (optional)
+  - Speed test results from a tool like PageSpeed Insights (optional)
 you_get:
   - Prioritised issue list
   - Rewritten title and description
   - Structured data code
   - Speed and internal-link advice
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and open a browser.
+  - Open Claude, ChatGPT or Gemini. Pick one that can open web pages.
+  - Paste the skill text into the chat.
+  - Add your page address and your target keyword.
+  - Say which page type it is, such as a blog post or a product page.
+  - Read the report from the top. Fix the critical items first.
+  - Paste the new title, description and structured data into your page. Then check the code in Google's Rich Results Test.
+output_sample:
+  input:
+    - Your page address
+    - Your target keyword (optional)
+  prerequisites:
+    - An AI that can open web pages
+    - A speed test such as PageSpeed Insights, if your AI cannot measure speed
+    - Search Console access, if you want to track results after the fixes (optional)
+  output:
+    - name: Page inventory
+      contains: The title, description, canonical link, headings, image alt text and links found on your page.
+    - name: On-page findings
+      contains: Checks of title and description length, keyword placement, heading order, missing alt text and broken links.
+    - name: Technical findings
+      contains: Load speed, layout shift, mobile fit, robots.txt, sitemap and canonical tag checks.
+    - name: Structured data
+      contains: Ready-to-paste JSON-LD code for your page type, such as an article, product or FAQ.
+    - name: Internal link advice
+      contains: Link ideas and better link wording to connect this page with related pages.
+    - name: Prioritised SEO report
+      contains: Fixes ranked from critical to low, with before and after code snippets, effort and a checklist.

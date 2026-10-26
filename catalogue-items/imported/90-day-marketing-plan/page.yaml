@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It follows set steps but picks channels to fit your business.
 new_slug: 90-day-marketing-plan
 name: Ninety day marketing plan builder
-summary: Describe your store and budget. Get a buyer profile, ranked channels, a
-  budget split and a 90 day plan.
+summary: Build a 90 day marketing plan for your online store. Give it your product, price and budget. You get a buyer profile, ranked channels and weekly actions.
 job: run-your-store
 headline: Ninety day marketing plan builder
-subhead: Describe your product, price, store platform, budget and main rivals.
-  It writes a buyer profile, maps how competitors price and position, and ranks
-  the channels worth starting with. You get the profile, a channel list with
-  budget split, an email and text flow outline and a 90 day action plan.
+subhead: Describe your product, price, store platform, budget and main rivals. It writes a buyer profile, maps how competitors price and position, and ranks the channels worth starting with. You get the profile, a channel list with budget split, an email and text flow outline and a 90 day action plan.
 explain: |
   Your online store gets a full marketing plan: who your buyer is, which channels to start with, how to split your budget, and what to do in each of the first 90 days.
 
@@ -19,6 +15,10 @@ when:
   - You have a small budget and need to know where to spend it first.
   - You want to know who your best buyer is and where to find them.
   - You are planning the next quarter and want weekly actions.
+not_for:
+  - "You need detailed ad campaign setup: use a pay-per-click planner or the ad platform's own setup guide, because this plan only gives a short ad brief."
+  - "You want Amazon keyword research: use a tool built for Amazon search terms, because this plan only gives keyword themes."
+  - "You want a plan with no questions asked: it needs your price, margin, budget and stage, and it marks guesses clearly."
 you_give:
   - Your product and price
   - Your store platform
@@ -32,7 +32,32 @@ you_get:
   - A content and social direction
   - A 90 day action plan
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat.
+  - Tell it about your product, price, margin, monthly budget and where you sell.
+  - Answer its one round of multiple-choice questions. Short replies like 1b 2c 3a are enough.
+  - Add competitor names or links if you have them. Your AI needs web access to look them up.
+  - Check the guesses marked with a warning sign. Give better numbers and ask it to update the plan.
+  - Start with the week one actions in the 90-day plan.
+output_sample:
+  input:
+    - Your product type and price
+    - Your profit margin and monthly marketing budget
+    - Your business stage and main goal
+    - Where you sell, such as Shopify, Amazon or Etsy
+    - Your competitors, as names or links (optional)
+  prerequisites:
+    - An AI chat tool such as Claude, ChatGPT or Gemini
+    - Web access in your AI, if you want it to look up competitors (optional)
+  output:
+    - name: Business Snapshot
+      contains: Your product, price, margin, budget, stage and goal in one short summary, with guesses marked.
+    - name: Target Audience Persona
+      contains: Who your buyer is, their pains, why they buy and where they spend time online.
+    - name: Competitive Landscape
+      contains: How rivals price, position and market, and where the gaps are.
+    - name: Channel Strategy (Prioritized)
+      contains: Channels ranked for your stage, each with a budget share and content direction.
+    - name: 90-Day Action Plan
+      contains: A week-by-week list of actions and milestones for your first three months.
+    - name: KPIs & Measurement
+      contains: The numbers to track to know if each channel is working.

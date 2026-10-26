@@ -2,12 +2,10 @@ thinking: low
 thinking_why: It is a short rule set, not a method.
 new_slug: full-answer-enforcer
 name: Full answer enforcer
-summary: Ask for a full file or list. Get every line, with no placeholders,
-  skipped parts or half answers.
+summary: Get a full file or long list with every line written. This full answer enforcer stops placeholders, skipped parts and half answers.
 job: set-up-ai
 headline: Full answer enforcer
-subhead: When you ask for a full file or list, you get every line. No "rest of
-  code here", no stubs and no "let me know if you want more".
+subhead: When you ask for a full file or list, you get every line. No "rest of code here", no stubs and no "let me know if you want more".
 explain: |
   When you ask for a full file or list, you get every line. No "rest of code here", no stubs and no "let me know if you want more".
 
@@ -17,6 +15,10 @@ when:
   - You need a whole file, not a snippet.
   - You asked for a long list and keep getting half of it.
   - You need long output split cleanly into parts.
+not_for:
+  - "You only need a short answer or a small snippet: ask your AI in a normal message instead."
+  - "Your AI has not seen the files you want rewritten: share them first, because it will not invent missing code."
+  - "You want a quick outline or skeleton: ask for that directly, and say a skeleton is fine."
 you_give:
   - Your request for the full output
   - Source files or context
@@ -27,7 +29,23 @@ you_get:
   - Clean continuation chunks for long answers
   - Final check against what you asked for
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a new chat in Claude, ChatGPT or Gemini. No code running, web access or paid tool is needed.
+  - Paste the full text of the skill into the chat, then send it.
+  - In your next message, ask for the full file or list. Paste your source files or notes. Say how many items you expect, if you know.
+  - If the answer is long, your AI will split it at a clean break. Reply "continue" to get the next part.
+  - Count the items in the result and compare them to your request. Look for any "rest of code" or TODO lines before you use it.
+  - If something is missing, say which item and ask your AI to write it in full.
+output_sample:
+  input:
+    - Your request for a full file, list or set of items
+    - Your source files or notes (optional)
+    - How many items you expect (optional)
+  output:
+    - name: Complete deliverables
+      contains: Every file, function, section or list item you asked for, written out in full with no placeholders.
+    - name: Continuation chunks
+      contains: When a reply is too long, clearly labeled parts that stop at a clean break and pick up from there.
+    - name: Final check
+      contains: A last pass that compares what you asked for against what was written, and adds anything missing.
+    - name: Missing input note
+      contains: A plain note about any file or detail your AI could not see, instead of made-up code.

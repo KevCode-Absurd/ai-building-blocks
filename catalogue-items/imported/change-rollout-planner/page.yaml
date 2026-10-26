@@ -2,14 +2,10 @@ thinking: medium
 thinking_why: It adapts a set change model to your situation.
 new_slug: change-rollout-planner
 name: Change rollout planner
-summary: Describe a re-org or tool switch. Get a rollout plan, message templates
-  and a plan for pushback.
+summary: Plan a change rollout for a re-org, tool switch or pivot. Get stage steps, messages for each group and answers to pushback.
 job: lead-people
 headline: Change rollout planner
-subhead: A re-org or tool switch gets a rollout plan, message templates and a
-  plan for pushback, so people actually adopt it. Most changes fail in the
-  rollout, not the design, and this plan is built around the stages people go
-  through.
+subhead: A re-org or tool switch gets a rollout plan, message templates and a plan for pushback, so people actually adopt it. Most changes fail in the rollout, not the design, and this plan is built around the stages people go through.
 explain: |
   A re-org or tool switch gets a rollout plan, message templates and a plan for pushback, so people actually adopt it. Most changes fail in the rollout, not the design, and this plan is built around the stages people go through.
 
@@ -19,6 +15,10 @@ when:
   - A strategy pivot is coming and people may not trust it.
   - Your last change faded after two weeks.
   - You need to tell different groups different things about the same change.
+not_for:
+  - "You only need to tell people about a small task change with no people impact: send a short announcement or use a simple project plan."
+  - "You need a task list with owners and deadlines for building the new system: use a project plan, not this."
+  - "You want to decide whether to make the change at all: talk it through with your team or an advisor first."
 you_give:
   - What is changing and why
   - Who is affected and how they feel
@@ -30,7 +30,26 @@ you_get:
   - Answers to likely pushback
   - Ways to keep the change in place
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Download the skill folder. Follow the setup steps for your AI tool, or paste the instructions into a chat.
+  - Ask your AI to follow this skill. Include the files and details listed on this page.
+output_sample:
+  input:
+    - What is changing and why
+    - Who is affected and how they feel
+    - Your timeline
+    - Past changes that went badly (optional)
+  output:
+    - name: Change type and timeline
+      contains: Which kind of change this is (process, org, pivot or culture) and how long full adoption usually takes.
+    - name: Stage plan
+      contains: Steps for awareness, desire, knowledge, ability and reinforcement, with what to say and do at each one.
+    - name: Communication sequence
+      contains: A dated order of announcements and check-ins that fits your type of change.
+    - name: Message templates
+      contains: Wording for each group affected, covering the why and what is in it for them.
+    - name: Pushback answers
+      contains: Common objections, what each one signals, and a suggested reply.
+    - name: Change fatigue check
+      contains: Warning signs of tired teams, and what to pause or say is not changing.
+    - name: Red flags
+      contains: Mistakes to avoid, such as a Friday announcement or leaders skipping the change.

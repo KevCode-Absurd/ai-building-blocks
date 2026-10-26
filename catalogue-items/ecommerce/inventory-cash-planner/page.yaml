@@ -1,6 +1,6 @@
 new_slug: inventory-cash-planner
 name: "Inventory cash planner"
-summary: "Give it orders, lead time and unit cost. Get order timing, cash needed, a downside case and the raise."
+summary: "Plan your inventory cash: give it orders, lead time and unit cost. You get order dates, cash needed, the lowest cash point and a downside case."
 job: plan-supply-chain
 thinking: high
 thinking_why: "Timing, cash and several funding options have to line up, and a slip hides a cash hole. A stronger model catches more."
@@ -17,6 +17,10 @@ when:
   - You are about to place a large or growing stock order and want to know if you can pay for it.
   - Sales are growing and you keep running out of stock because cash is tight.
   - You are choosing between supplier terms, a credit line or other funding for stock.
+not_for:
+  - "Your store is paid at checkout and buys little stock: a simple monthly budget in a spreadsheet is enough."
+  - "You only want better supplier terms: use the Supplier payment terms planner."
+  - "You want a lender picked or advice on a loan: talk to your accountant or a financial adviser."
 
 you_give:
   - Your monthly order forecast in units
@@ -36,6 +40,30 @@ how_to_use:
   - Say how many SKUs you have. With more than one, ask for one table per SKU.
   - Read the lowest cash point and the downside case before you place the order.
   - Take the terms to ask for to the Supplier payment terms planner, and slow stock to the SKU ad money planner.
+output_sample:
+  input:
+    - Your monthly order forecast in units
+    - Supplier lead time and how many months each order must last
+    - Unit cost, starting stock and starting cash
+    - Monthly profit before stock purchases
+    - Supplier terms and any credit line (optional)
+  output:
+    - name: Stock table
+      contains: Opening stock, arrivals, units sold, closing stock and the order placed for each month.
+    - name: Cash table
+      contains: Profit, stock bought, the cost of stock sold added back, and cash at the end of each month.
+    - name: Lowest cash and raise needed
+      contains: The month cash is lowest and the amount you must raise to stay above zero, with a cushion.
+    - name: Growth cap
+      contains: How many units your next order can be, based on the cash you have.
+    - name: Supplier terms test
+      contains: Out-of-stock days under full prepay and under a deposit with the balance on shipping.
+    - name: Funding comparison
+      contains: Each way to fund the gap shown as repayments, with its effect on lowest cash.
+    - name: Downside case
+      contains: Lowest cash with sales 30 and 50 percent short, and what to tell suppliers.
+    - name: 13-week view
+      contains: Week-by-week cash in, cash out and balance for the next quarter.
 
 how_it_works:
   - title: Sets the timing

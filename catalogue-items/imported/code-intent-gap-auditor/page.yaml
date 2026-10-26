@@ -2,13 +2,10 @@ thinking: high
 thinking_why: It must trace rules through the code and prove each gap is real.
 new_slug: code-intent-gap-auditor
 name: Code intent gap auditor
-summary: Give it your docs and code. Get each place the code breaks its own
-  rules, with a fix.
+summary: Check your code against your own docs. Find where it breaks its stated rules, like a permission never enforced, with a fix for each.
 job: secure-code
 headline: Code intent gap auditor
-subhead: Find the places where your code does something different from what your
-  own docs say it should. These are the bugs a normal scanner misses, like a
-  permission that is written down but never enforced.
+subhead: Find the places where your code does something different from what your own docs say it should. These are the bugs a normal scanner misses, like a permission that is written down but never enforced.
 explain: |
   Find the places where your code does something different from what your own docs say it should. These are the bugs a normal scanner misses, like a permission that is written down but never enforced.
 
@@ -18,6 +15,10 @@ when:
   - You documented a permission but never confirmed the code checks it.
   - You want a security review that goes beyond a basic linter.
   - You are about to ship and want docs and code to agree.
+not_for:
+  - "You want a general scan for known bug patterns: run a linter or a security scanner first, then use this for doc versus code checks."
+  - "You want a live attack test of a running app: hire a penetration tester, because this only reads files."
+  - "You have no written docs on who may access what: write short permission notes first, then run this."
 you_give:
   - Your design and permission docs
   - The code to check
@@ -28,8 +29,29 @@ you_get:
   - A fix for every gap
   - A note if the docs are too thin to audit
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your code files.
+  - Collect your docs that say who may do what, such as permissions or architecture notes.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Add your docs, then your code. Use an AI that can read files, or paste the key files.
+  - Name the areas that worry you most, such as admin routes or billing (optional).
+  - Read each finding and check the cited file and line yourself before you fix it.
+  - Run your linter and any pen test separately. This does not replace them.
+output_sample:
+  input:
+    - Your design and permission docs
+    - The code to check
+    - Which areas worry you most (optional)
+  prerequisites:
+    - An AI that can read your code files, or code pasted into the chat
+  output:
+    - name: Documented rules
+      contains: The access, trust and public or private rules pulled from your docs, quoted as written.
+    - name: Findings
+      contains: Each gap with the quoted doc rule, the code file and line, who could attack, who is harmed, and the fix.
+    - name: Ranking
+      contains: Gaps ordered by what crossing them exposes, such as data, money, systems or another customer.
+    - name: Questions to check
+      contains: Possible gaps where only one side could be shown, listed as questions and not as findings.
+    - name: Stale docs note
+      contains: Places where code enforces a rule your docs never mention, so the docs need updating.
+    - name: Docs too thin note
+      contains: A warning when your docs are missing or too old to audit against.

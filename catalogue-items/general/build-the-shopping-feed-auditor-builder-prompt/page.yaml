@@ -1,33 +1,108 @@
 new_slug: build-the-shopping-feed-auditor-builder-prompt
 name: Shopping feed audit coding prompt
-summary: Get a coding brief to check a Shopping feed for missing fields, product issues and gaps in the evidence.
+summary: "Build a read-only Google Shopping product audit in your code. Get a prompt that sorts products into five tiers with fix, bid and pause lists."
 job: build-software
 headline: Shopping feed audit coding prompt
-subhead: Get a coding brief to check a Shopping feed for missing fields, product issues and gaps in the evidence.
+subhead: "Paste one prompt into a coding AI such as Claude Code. It builds a read-only module that sorts every product in your Google Shopping campaigns into five tiers by results. You get three lists, feed fixes, bid tests and pause candidates, each with the cost behind it."
 explain: |-
-  Share your project and the required feature. Get a coding brief for the shopping feed auditor, with setup and test steps.
+  A Google Shopping campaign can hold thousands of products. A few earn most of the sales, and some spend money for months without a sale. Looking at them one by one does not scale, so owners and developers build a Shopping feed audit into code.
 
-  The complete method and its supporting files are in the download. It marks missing inputs and separates proposed actions from actions that were actually completed.
+  This prompt briefs your coding AI to build that audit. Each product lands in one tier: hero, steady, potential, underperformer or zombie. The tests run in a set order, so a product only lands in one place. A product with too little data is counted as not enough data, never forced into a tier.
+
+  Every cost and ROAS cut-off is a setting you choose, and a pause idea always shows its cost to date and its click count. The module only reads and recommends. It never changes a bid, a product group or an account.
 when:
-  - You need a coding brief for the shopping feed auditor.
-  - You need build the shopping feed auditor prompt for a specific task.
-  - You want the method's decisions and assumptions written down before acting.
+  - You are building your own Google Ads tool and want a Shopping product review in it.
+  - Your Shopping spend is high and you suspect many products earn nothing.
+  - A developer needs a clear brief for a product tiering module, with the tier tests set out in order.
+  - You want fix, bid and pause lists you can hand to a person to approve.
+not_for:
+  - "You only want a feed review from your Merchant Center reports, with no software: use the Merchant Center feed health checker."
+  - "You have no Shopping campaigns or no product-level results: nothing here can run, so start with the Google Ads campaign structure planner."
+  - "You only need better product titles: use the Shopping feed title writer."
+  - "You are looking for wasted spend on Display placements: use the Display placement review coding prompt."
 you_give:
-  - The repository or relevant code and schema
-  - The feature requirements and available services
+  - A code project and a coding AI, such as Claude Code, that can edit it
+  - Product rows with cost, impressions, clicks, conversions, conversion value and campaign type, from the Google Ads API or sample rows
+  - Your target ROAS, worked out from your margin
+  - Your date range, account currency and cost cut-offs (the prompt gives example values)
+  - Category benchmarks for click rate (optional)
 you_get:
-  - A coding brief for the shopping feed auditor
-  - Required files, setup gaps and test cases
+  - A prompt that builds one read-only audit function with typed input and output
+  - Five tiers with tests in a set order, plus a not enough data group
+  - Three lists, feed fixes, bid tests and pause candidates, each sorted by cost
+  - A list of every setting and assumption for you to review
+  - Tests on sample rows, with no real account used
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Work out your target ROAS from your margin. The audit cannot run without it.
+  - Decide where product data comes from. If you have code that fetches it, tell the AI where it is. If not, the prompt builds the function to take typed rows.
+  - Copy the prompt from the skill and fill in the angle brackets, including your cost cut-offs. Paste it into your coding AI with your project open.
+  - Read the settings list the AI gives back, and change any cut-off that does not suit your account.
+  - Run the tests on sample rows. Run it on a live account only when you decide to, read-only.
+  - Hand the three lists to a person to approve. Nothing is changed for you.
 how_it_works:
-  - title: Inspect the target project
-    text: Check its file structure, interfaces and service setup before choosing paths.
-  - title: Write the feature brief
-    text: Follow the full method below. Preserve its named modules, decision rules and required output.
-  - title: Check the handoff
-    text: List missing dependencies, acceptance cases and the failure paths the implementation must cover.
+  - title: Looks at your project
+    text: "Finds your language, test setup and any existing fetch code or result type, and reports what is missing."
+  - title: Sorts products into tiers
+    text: "Tests in this order: zombie, hero, steady, underperformer, potential. Products below the impression floor go to not enough data."
+  - title: Sets benchmarks from your data
+    text: "Uses the median click rate for each product type, only if the type has enough products. Otherwise the test is marked not evaluated."
+  - title: Writes findings
+    text: "Gives each tier a finding or a count, names the campaign type, and shows the cost behind each one."
+  - title: Builds three lists
+    text: "Feed fixes, bid tests and pause candidates, each sorted by cost with a cap on length."
+  - title: Tests the edge cases
+    text: "Checks each tier, the order of tests, the 50-click rule for pauses and the missing benchmark case."
+output_shape: |-
+  Function: auditShoppingProducts(input) -> DiagnosticOutput
+  Tiers: <count per tier, plus not enough data>
+  Findings: <checkId | severity | campaign type | products | cost | recommendation>
+  Action lists (sorted by cost, capped):
+    feedFixes: <offerId, title, issues>
+    bidChanges: <offerId, direction, reason>
+    pauses: <offerId, reason, cost to date, clicks>
+  Settings and assumptions to review: <list>
+  Tests: <results, or "not run">
+output_sample:
+  input:
+    - Your code project, open in a coding AI
+    - Product rows with cost, impressions, clicks, conversions, conversion value and campaign type
+    - Your target ROAS, date range and account currency
+    - Your cost cut-offs and category benchmarks (optional)
+  prerequisites:
+    - Google Ads API read access, or typed sample rows to start with
+    - A coding AI that can read and edit your project
+  output:
+    - name: auditShoppingProducts function
+      contains: One read-only function with typed input and output, in your project's language and style.
+    - name: Tier rules
+      contains: Zombie, hero, steady, underperformer and potential tests in a fixed order, plus a not enough data group.
+    - name: Findings
+      contains: Per tier, with the campaign type, the products, the cost and a starting recommendation.
+    - name: Action lists
+      contains: Feed fixes, bid tests and pause candidates, each sorted by cost and capped in length.
+    - name: Not enough data count
+      contains: Products without enough impressions or benchmark data, so none are guessed into a tier.
+    - name: Tests and settings
+      contains: Tests for every tier and the cut-offs you need to review.
+tweaks:
+  - what: Your target ROAS
+    how: Work it out from your margin before you start. Hero and steady tiers depend on it.
+  - what: Your cost cut-offs
+    how: Set the zombie and underperformer costs for your account. The example values suit only a small account.
+  - what: Your date range
+    how: Use a range long enough for products to get clicks, such as 30 days or more.
+  - what: Campaign type
+    how: Include it for each product. Standard Shopping and Performance Max show different product data.
+terms:
+  - term: ROAS
+    meaning: Sales from ads divided by what you spent on them.
+  - term: Zombie product
+    meaning: A product that gets many clicks and no sales.
+  - term: Feed
+    meaning: The list of your products, with titles, prices and images, that you send to Google.
+  - term: Product type
+    meaning: The category label on a product in your feed, such as shoes or kitchen.
+  - term: Read-only
+    meaning: The code can look at data but cannot change bids, products or accounts.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

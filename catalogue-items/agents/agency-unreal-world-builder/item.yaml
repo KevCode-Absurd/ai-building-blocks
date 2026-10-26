@@ -1,0 +1,43 @@
+slug: agency-unreal-world-builder
+name: Unreal World Builder agent
+summary: Get an Unreal world plan with streaming and environment checks. Bring
+  your brief.
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: brief
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: game-development/unreal-engine/unreal-world-builder.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-world-builder.md
+  licence: MIT
+  original_name: Unreal World Builder
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 7d2bf21ac77089b99f1fa36f6102fa938c9014c3107e9dcb9069b896e2b4001e
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Unreal World Builder
+  - Agency Agents
+  - Game Development
+credits:
+  - title: Unreal World Builder
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/unreal-engine/unreal-world-builder.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

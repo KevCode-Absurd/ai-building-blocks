@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It follows a proven method but must pick fresh angles.
 new_slug: meta-ad-copywriter
 name: Meta ad copywriter
-summary: Describe your offer and buyer. Get Facebook and Instagram ad text,
-  hooks and UGC scripts ready to test.
+summary: Write Meta ad copy for Facebook and Instagram. Give it your offer and buyer, and get hooks, primary text, headlines and UGC scripts to test.
 job: write-ad-copy
 headline: Meta ad copywriter
-subhead: Facebook and Instagram ad text written for the one job an ad has, which
-  is to get the click. Describe your offer and buyer and you get hooks, primary
-  text, headlines and UGC video scripts to test.
+subhead: Facebook and Instagram ad text written for the one job an ad has, which is to get the click. Describe your offer and buyer and you get hooks, primary text, headlines and UGC video scripts to test.
 explain: |
   Facebook and Instagram ad text written for the one job an ad has, which is to get the click. Describe your offer and buyer and you get hooks, primary text, headlines and UGC video scripts to test.
 
@@ -18,6 +15,10 @@ when:
   - You need a UGC video script for Reels.
   - Your retargeting ads get views but few clicks.
   - You are unsure whether the ad or the landing page should do the selling.
+not_for:
+  - "You need a landing page, email or full sales video: write those with your AI in a separate chat, as this skill only writes ads."
+  - "You want to check an ad against Meta's rules before launch: ask a person who knows Meta's ad policy to review it."
+  - "You want one ad only with no testing: this skill gives 3 to 5 versions, so pick the best one yourself."
 you_give:
   - Your offer and product
   - Your buyer and what they know
@@ -30,7 +31,25 @@ you_get:
   - UGC or video ad scripts
   - A note on the ad strategy used
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tools are needed.
+  - Describe your offer and your buyer. Say what they already know and where the ad sends people.
+  - "Add past ads that worked (optional) and say which format you want: static ad, short UGC, long video or story."
+  - Read the variations. Replace every placeholder, such as [X customers], with your own real numbers, names and results.
+  - Check any health, weight-loss or before and after claims against Meta's ad policies before you launch.
+output_sample:
+  input:
+    - Your offer and product
+    - Your buyer and what they already know
+    - Where the ad sends people
+    - Past ads that worked (optional)
+  output:
+    - name: Ad brief
+      contains: Your funnel position, how aware your buyer is, and whether the ad sells the click or the solution.
+    - name: Primary text
+      contains: Caption copy for the feed, built in a why, what and how order.
+    - name: Headlines and descriptions
+      contains: Short lines that sit under the ad image or video.
+    - name: Hook variations
+      contains: 3 to 5 openers, each with its own angle, such as curiosity, contrarian or social proof.
+    - name: UGC and video scripts
+      contains: Scripts for a short talking head, a long hook-led video or a story video, with visual notes.

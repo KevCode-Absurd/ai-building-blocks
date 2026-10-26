@@ -38,3 +38,27 @@ how_it_works:
     text: Reset stale claims safely and avoid creating extra user-visible threads.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.
+not_for:
+  - You need one agent run loop that does a single task per run. Use the Single-task agent heartbeat builder.
+  - You need a job queue that survives crashes and caps retries. Use the Recoverable agent job queue builder.
+  - You need a task table where an agent claims one task at a time. Use the Agent issue and checkout builder.
+output_sample:
+  input:
+    - Your list of events that should wake an agent (for example, a proposal approved or a task assigned)
+    - The key that marks two events as the same one
+    - How long an agent may hold a claim before it counts as stale
+    - How your agents store their state and pause or budget limits
+  prerequisites:
+    - A codebase with an agent system already running a regular heartbeat
+    - Someone who can review and test the code before it goes live
+  output:
+    - name: Wakeup dispatcher
+      contains: Draft code that saves one wakeup per event, claims it once, and hands it to the right agent.
+    - name: Duplicate check
+      contains: How the dedup key stops the same event from waking an agent twice.
+    - name: Stale-claim recovery
+      contains: A rule that puts claims back in the queue when a worker crashes before finishing.
+    - name: Failure checklist
+      contains: The ways this can break, such as lost wakeups, event storms and loops, with what to check.
+    - name: Synthetic test cases
+      contains: Test cases built from made-up events that cover duplicates, crashes and paused agents.

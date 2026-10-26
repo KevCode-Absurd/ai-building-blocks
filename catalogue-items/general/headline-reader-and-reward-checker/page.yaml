@@ -1,6 +1,6 @@
 new_slug: headline-reader-and-reward-checker
 name: Headline reader and reward checker
-summary: Paste your headline. Get a score out of 100 for who it picks out and what it promises, plus stronger versions.
+summary: Check a headline for who it speaks to and what it promises. Get a score out of 100 and stronger versions, backed by your own facts.
 job: check-ads
 thinking: low
 thinking_why: It scores a short line against set questions.
@@ -14,6 +14,10 @@ when:
   - You have a headline you are not sure about.
   - You have several headlines and need to rank them.
   - You want a loss version next to a gain version to test.
+not_for:
+  - "You need the full set of checks on a headline: use the Headline promise checker."
+  - "Your page or email has no headline to check: write the headline first, or ask a person to read the opening line."
+  - "You want a batch of new opening lines for an ad: use the Ad opening line batch writer."
 you_give:
   - The headline
   - Offer facts such as price, speed and terms (optional)
@@ -28,6 +32,24 @@ how_to_use:
   - Paste one headline under the prompt, or several, one per line.
   - Add your offer facts.
   - Test the gain version and the loss version side by side.
+output_sample:
+  input:
+    - Your headline, or several headlines, one per line
+    - Facts about your offer, such as price, speed and terms (optional)
+    - Who the headline is for (optional)
+  output:
+    - name: SCORE
+      contains: The total out of 100, with the points for reader, reward, specifics, tease and facts added up.
+    - name: READER
+      contains: "Who the headline should pick out, and whether it does: yes, partly or no."
+    - name: REWARD
+      contains: The promise in one sentence, marked as a gain or a loss avoided.
+    - name: SO-WHAT TEST
+      contains: A pass or fail on what a stranger gains by reading on, with the reason.
+    - name: STRONGER VERSIONS
+      contains: Two to four rewrites, one gain and one loss, each with what changed and the fact behind it.
+    - name: MISSING
+      contains: Facts you did not give that would have allowed a better rewrite.
 how_it_works:
   - title: Names the reader
     text: Their situation, not a label.

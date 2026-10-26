@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It does the math but judges seasonality and risk.
 new_slug: purchase-order-reorder
 name: Purchase order and reorder drafter
-summary: Give it sales and stock numbers. Get what to reorder and when, draft
-  orders and slow movers to clear.
+summary: Give it your sales and stock counts. Get a purchase order and reorder list with what to buy, how much, and which slow stock to clear.
 job: run-your-store
 headline: Purchase order and reorder drafter
-subhead: A reorder list that tells you what to buy, how much and when, based on
-  what is actually selling. It also shows the cash stuck in stock you should not
-  buy more of.
+subhead: A reorder list that tells you what to buy, how much and when, based on what is actually selling. It also shows the cash stuck in stock you should not buy more of.
 explain: |
   A reorder list that tells you what to buy, how much and when, based on what is actually selling. It also shows the cash stuck in stock you should not buy more of.
 
@@ -18,6 +15,10 @@ when:
   - Cash feels tied up in boxes that are not moving.
   - You need to send your supplier a purchase order this week.
   - You count stock on a clipboard and want a plan from it.
+not_for:
+  - "You make to order or sell services with no stock: this skill has nothing to count, so use a simple job list or your quoting tool."
+  - "You are launching a seasonal product with under a year of sales history: the skill will not guess a season, so ask your supplier or use a demand forecasting tool."
+  - "You want to place the order for you: it only drafts, so send the purchase order yourself after you approve it."
 you_give:
   - Sales history by item and date
   - Stock on hand
@@ -30,10 +31,34 @@ you_get:
   - Vendor email drafts
   - Slow movers to clear
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read your accounts and files.
-  - Where the skill points to ../../shared/, use the shared folder inside it. We
-    copied it in so the skill works on its own.
+  - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
+  - Upload your sales history and stock count, or paste them in. Say the date you counted the stock.
+  - Add unit cost, price, vendor and lead time for each item. Lead time is optional, but it makes the dates more exact.
+  - Read the buy list. Check the sales rate and days of cover on the lines that matter most.
+  - Reply yes to the purchase orders and vendor emails you want. Nothing is ordered or sent until you do.
+  - Send the approved orders to your suppliers yourself. Connecting Shopify, Square or NetSuite is optional and may need a paid plan.
+output_sample:
+  input:
+    - Your sales history by item and date (a file, or Shopify, Square or NetSuite)
+    - Your stock on hand, and the date you counted it
+    - Unit cost, price and vendor for each item
+    - Lead times from your suppliers (optional)
+    - Seasons you know about, if you have under a year of history (optional)
+  prerequisites:
+    - An AI that can read your files, or your sales and stock pasted into the chat
+    - A Shopify, Square or NetSuite link only if you want it to pull data itself (those may need a paid plan)
+  output:
+    - name: Buy list
+      contains: Total cost of the buy and the count of items about to run out, with the numbers behind each line.
+    - name: Stockout table
+      contains: Each item with 7-day and 28-day sales rate, days of cover, lead time, and a status such as order now or order soon.
+    - name: Reorder quantities
+      contains: A 60-day order per item, after pack size and stock already on order, with the dollar cost.
+    - name: Slow movers to clear
+      contains: Zero-sales, overstocked and dead items, with the cash tied up in each and ideas to clear them.
+    - name: Not enough history list
+      contains: Items with too little or interrupted sales history, named so you can judge them yourself.
+    - name: Draft purchase orders
+      contains: One draft per vendor with line items and total, held until you say yes.
+    - name: Vendor email drafts
+      contains: A short email per vendor, in your voice if you share samples, otherwise plain and neutral.

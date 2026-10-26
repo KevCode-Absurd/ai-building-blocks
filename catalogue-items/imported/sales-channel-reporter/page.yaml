@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It adds up orders by channel.
 new_slug: sales-channel-reporter
 name: Sales channel reporter
-summary: Pick a date range. Get revenue, units and average order value for each
-  sales channel.
+summary: Get revenue, units and average order value for each Shopify sales channel over the dates you pick, so you can see where your sales come from.
 job: run-your-store
 headline: Sales channel reporter
-subhead: "See which channels bring in your money: online store, point of sale,
-  draft orders and more. Pick a date range and get revenue, units sold and
-  average order value for each channel."
+subhead: "See which channels bring in your money: online store, point of sale, draft orders and more. Pick a date range and get revenue, units sold and average order value for each channel."
 explain: |
   See which channels bring in your money: online store, point of sale, draft orders and more. Pick a date range and get revenue, units sold and average order value for each channel.
 
@@ -18,6 +15,10 @@ when:
   - You wonder if B2B draft orders are worth the work.
   - You want proof of where revenue comes from before moving ad spend.
   - You need a quick monthly channel summary.
+not_for:
+  - "You want returns or net revenue after refunds: check refunds in your Shopify admin reports, as this only adds up order totals."
+  - "You want totals across more than one store: run it once per store and add the results yourself."
+  - "You can't run code or sign in to Shopify from your AI: export orders from Shopify admin and ask your AI to total them by channel."
 you_give:
   - Your store domain
   - Number of days to look back
@@ -29,8 +30,29 @@ you_get:
   - Average order value per channel
   - Order counts for context
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin.
+  - Install the Shopify CLI on your computer. This skill needs an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI.
+  - "Sign in with read access to orders. Run: shopify store auth --store your-store.myshopify.com --scopes read_orders"
+  - Open the skill in your AI tool. Give it your store domain and how many days to look back. The default is 30.
+  - Ask for the report. Your AI reads your orders in batches and groups them by channel.
+  - Check the table on screen. Orders with no known channel show as Unknown.
+  - Open the CSV file. It is saved in your working folder as sales_by_channel_ with the date in the name.
+output_sample:
+  input:
+    - Your store domain
+    - How many days to look back (30 if you skip it)
+    - "Output format: readable table or JSON (optional)"
+  prerequisites:
+    - An AI that can run code and files, such as Claude Code, Cursor, Codex or Gemini CLI
+    - Shopify CLI installed on your computer
+    - A Shopify sign-in with read access to orders
+  output:
+    - name: Start banner
+      contains: Your store domain and the time the report began.
+    - name: Step log
+      contains: One line per step showing what was asked and how many orders came back.
+    - name: Channel summary
+      contains: Total revenue and orders, then a table of orders, revenue, average order value, units and share for each channel.
+    - name: sales_by_channel_<date>.csv
+      contains: One row per channel with name, orders, revenue, average order value, units, revenue share and currency.
+    - name: JSON summary (if you ask for JSON)
+      contains: The same totals and channel list in a format other tools can read.

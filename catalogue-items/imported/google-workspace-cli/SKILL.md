@@ -9,6 +9,19 @@ Expert guidance and automation for Google Workspace administration using the ope
 
 > **Verify before scripting:** `gws` generates commands at runtime from Google's API discovery documents, and the CLI is pre-v1.0. Always confirm a command's exact surface with `gws --help`, `gws <service> --help`, or `gws schema <service>.<resource>.<method>` before putting it in automation. Commands in this skill marked *(verify)* are illustrative of the `gws <service> <resource> <method>` pattern and must be checked against your installed version.
 
+
+## Rules for running commands (read first)
+
+This skill acts on real Gmail, Drive, Calendar and admin data. Follow these rules every time.
+
+1. **Ask what the job is, once.** If the person has not said which service, which files, people or sheets, or what outcome, ask. Do not guess.
+2. **Read first, change later.** Start with a read-only command (a list or a search) and show the result. Only then move to a change.
+3. **Confirm before any change.** Before anything that sends an email, shares or unshares a file, moves, archives or deletes items, edits a Sheet or calendar, or changes an admin setting: show the exact command, say how many items it will touch, run it with `--dry-run` if the command supports it, and wait for a clear yes. A yes to one command is not a yes to the next.
+4. **Never run a command that still has `...` in it.** Where this skill shows `...`, run `<command> --help` first, then write the full command from what the help says. Commands marked *(verify)* get the same treatment: run `gws schema <service>.<resource>.<method>` or `--help` first.
+5. **Smallest permissions.** Sign in with only the services the job needs (for example `-s drive`), not everything.
+6. **Admin work needs admin rights.** If a command fails for lack of rights, say so and stop. Do not try to work around it.
+7. **No tools, no run.** If you cannot run commands in this chat, write the commands for the person to run and ask them to paste the result back. Do not invent results.
+
 ---
 
 ## Quick Start
@@ -86,6 +99,8 @@ gws auth login -s drive,gmail,sheets
 ```
 
 ### Headless/CI
+
+> **Caution:** `gws auth export --unmasked` writes your secrets to a plain file. Use it only for a headless machine that cannot sign in itself. Keep the file private, keep it out of any shared folder or git, and delete it when the job is done. On your own computer, sign in with `gws auth login` so no secrets sit in a file you made.
 
 ```bash
 # Generate setup instructions
@@ -374,3 +389,24 @@ python3 scripts/auth_setup_guide.py --scopes gmail,drive,calendar,sheets
 | Calendar | `calendar`, `calendar.events` |
 | Admin | `admin.directory.user.readonly`, `admin.directory.group` |
 | Tasks | `tasks` |
+
+## Output format
+
+Present every job like this. Leave out a block that does not apply.
+
+```
+Job: <what was asked>
+Checks done: <gws installed, signed in, command options checked>
+
+| <name> | <type> | <modified> | <link> |
+(one row per result; the columns depend on the job)
+
+Changes made: <none, or each change with the count of items>
+Next step: <one suggestion>
+```
+
+For the security audit, list each check as PASS, FAIL or NOT CHECKED, with the fix for each FAIL. Run the fixes only under rule 3.
+
+## Next steps
+
+Finish with one suggestion that fits the job, such as: save the commands as a script for a repeat job, export a list to a Google Sheet, or run the security audit. Use `scripts/gws_recipe_runner.py --list` to find a ready-made recipe.

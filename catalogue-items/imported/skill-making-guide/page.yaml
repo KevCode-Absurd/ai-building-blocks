@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It guides set steps and checks your skill idea as you go.
 new_slug: skill-making-guide
 name: Skill-making guide
-summary: Describe a task you repeat. Get a step-by-step guide to turning it into
-  your own skill that triggers reliably.
+summary: Turn a task you repeat into your own skill. Get a SKILL.md draft, a description that triggers, and a test plan. A skill-making guide for Claude.
 job: make-skills
 headline: Skill-making guide
-subhead: A step-by-step guide to turn a task you repeat into your own skill that
-  triggers when it should. You stop pasting the same instructions every time.
+subhead: Describe a task you repeat. This guide first checks that a skill is the right tool. Then it helps you write the skill file, a description that makes it load, and tests to run.
 explain: |
   A step-by-step guide to turn a task you repeat into your own skill that triggers when it should. You stop pasting the same instructions every time.
 
@@ -17,18 +15,43 @@ when:
   - You want your team to share one way of doing a task.
   - Your skill exists but never activates.
   - You need a quality bar to review someone else's skill.
+not_for:
+  - "You need a one-off answer: write a plain prompt in your chat instead."
+  - "You want to change how your AI acts in every chat: use your AI's settings or a system prompt, not a skill."
+  - "You need your AI to run a tool or call an app: a skill is only instructions, so use a tool or plug-in."
 you_give:
   - The task or workflow to encode
   - Who will trigger it and in what situation
   - Past prompts or examples of good output
 you_get:
-  - A decision on whether a skill fits
-  - A written SKILL.md draft
-  - A trigger-ready description
-  - Advice on reference files
-  - A test and maintenance plan
+  - A decision on whether a skill fits your task
+  - A SKILL.md draft you can install
+  - A description written so the skill loads when it should
+  - A reference plan and one reference file
+  - A test plan with prompts that should and should not trigger it
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat in Claude, ChatGPT or Gemini and paste this skill. No code or paid tool is needed.
+  - Describe the task you repeat, who will use it, and any past prompts or good examples.
+  - "Read the first answer: does a skill fit? If not, use a plain prompt."
+  - Review the description draft and the SKILL.md body. Fix anything that does not match how you work.
+  - Install the skill folder in your AI tool. Run the trigger tests in a fresh chat, then improve the description. This guide is general, so it does not know your tool or setup.
+output_sample:
+  input:
+    - The task or workflow you want to turn into a skill
+    - Who will trigger it, and in what kind of chat
+    - Past prompts, docs or examples of good output (optional)
+  prerequisites:
+    - An AI that supports skills, such as Claude, if you want to install the result
+  output:
+    - name: Trigger analysis
+      contains: A short list of phrases and situations that should make the skill load.
+    - name: Description draft
+      contains: The two to four sentence description for the top of your skill file.
+    - name: SKILL.md body
+      contains: The full skill file with sections for when to use it, inputs, steps, failure patterns and output.
+    - name: Reference plan
+      contains: A list of extra files to create, with one line on what each holds.
+    - name: First reference file
+      contains: One reference file written in full as a starting point.
+    - name: Test plan
+      contains: Three to five prompts that should trigger the skill and two or three that should not.

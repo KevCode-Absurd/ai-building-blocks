@@ -1,6 +1,6 @@
 slug: make-a-research-report-easier-to-share
 name: Make a research report easier to share
-summary: Share the source files. Get an executive summary, slide brief and fact-check list.
+summary: Turn a finished research report into an executive summary, a slide brief and a fact-check list, with every caveat and source kept.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,32 +8,24 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
-  - type: brief
-    required: true
-  - type: copy_draft
-    required: false
-  - type: brand_brain
-    required: false
   - type: document
-    required: false
+    required: true
   - type: source_text
     required: false
 outputs:
-  - type: copy_draft
-  - type: feedback_notes
-  - type: slide_deck
   - type: document
+  - type: audit_report
 uses:
   - plain-english-editor
   - presentation-builder
   - proofreader
 steps:
   - uses: plain-english-editor
-    note: Edit the report for the intended reader while retaining uncertainty and material caveats.
+    note: Edits the findings for your reader. Keeps the uncertainty and caveats that matter. Hands the plain version to the slide step.
   - uses: presentation-builder
-    note: Turn the supported findings into a decision-focused slide outline.
+    note: Turns the supported findings into a slide outline around the decision, one idea per slide. This workflow uses the outline, not a finished deck.
   - uses: proofreader
-    note: Check that figures, source references and conclusions agree across the report and slides.
+    note: Fixes typos and wording in the summary and the slide text. The workflow then compares each figure, date and source across the report, summary and slides.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

@@ -1,55 +1,113 @@
 new_slug: credit-exposure-limit-checker
 name: Credit exposure limit checker
 headline: Credit exposure limit checker
-summary: A connected credit exposure bridge and limit gap
+summary: "Check a borrower group's total credit exposure against your limit: loans, weighted undrawn lines and other group debt. Get headroom or excess."
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A connected credit exposure bridge and limit gap. Share funded exposure, undrawn commitments, approved monitoring conversion factor, other connected-party exposure and actual portfolio limit.
+subhead: Give it what a borrower group has drawn, what it can still draw, the weight you apply to undrawn lines, other debt of connected borrowers and your limit. It adds them up and compares the total with the limit. You get the headroom or the excess, and a list of missing facts.
 explain: |-
-  A connected credit exposure bridge and limit gap.
+  A lender or a finance team often sets a limit on how much it will lend to one borrower group. The exposure is not only the money already lent. It includes lines the borrower can still draw, and loans to connected companies. This credit exposure limit checker adds all of that up and compares it with the limit.
 
-  Credit portfolio limits. Illustrative figures only in USD unless labelled otherwise. A focused schedule using explicit period, rate and timing conventions; not a full financing model or an approval decision.
+  Undrawn lines do not count in full. You apply a monitoring factor, such as 50%, that your own policy sets. The skill uses your factor and says it is yours. It is not a regulatory capital factor. Total exposure is drawn loans, plus the weighted undrawn lines, plus exposure to other connected borrowers. The skill asks you to confirm who counts as connected and to avoid counting one facility twice.
+
+  Headroom is the limit minus total exposure. A negative figure is an excess over the limit. Practice numbers, not a real borrower: 200 drawn, 100 undrawn at a 50% factor, 100 to a connected borrower and a limit of 400. Exposure is 350 and headroom is 50. If drawn rises to 300, exposure is 450 and the excess is 50.
 when:
-  - You need a connected credit exposure bridge and limit gap.
-  - You work on credit portfolio limits and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - A new loan request would raise your exposure to a borrower group, and you want to know if it fits the limit.
+  - A monthly report shows a group near its limit, and you want the figures behind it.
+  - A borrower's credit line is increased, and you want to see how the weighted undrawn amount changes exposure.
+  - A reviewer asks how total group exposure was built.
+not_for:
+  - You need a bank's regulatory large-exposure test or a credit approval. This checks arithmetic against a limit you supply, so use your credit or risk team.
+  - You want to know whether a borrower's cash covers its debt coming due. Use the Debt maturity funding ladder.
+  - You want a verdict on whether a loan is safe. Use the Lender safety verdict writer.
 you_give:
-  - Funded exposure, undrawn commitments, approved monitoring conversion factor, other connected-party exposure and actual portfolio limit.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The amount the borrower group has drawn (from the loan ledger or facility report)
+  - The undrawn amount the group can still draw (from the facility terms)
+  - The monitoring factor you apply to undrawn amounts, such as 50% (from your credit policy)
+  - Exposure to other connected borrowers in the same group (from your loan ledger)
+  - The dated exposure limit (from your credit policy or approval)
+  - The currency and units, such as USD thousands, and the reporting date
+  - Your own exposure spreadsheet (optional)
 you_get:
-  - A connected credit exposure bridge and limit gap.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - The undrawn amount after your monitoring factor
+  - Total group exposure
+  - Headroom under the limit, or the excess over it
+  - A check that the parts add up to the total
+  - A list of missing facts, scope gaps and checks it could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the drawn amount, the undrawn amount, your factor, the other connected exposure and the limit. Say the currency, units and date. Say which companies count as connected.
+  - Ask in plain words, such as is this group within its limit, and what is the headroom?
+  - Check one line yourself. Total exposure is drawn plus undrawn times the factor plus other group exposure. Headroom is the limit minus that total.
+  - Read MISSING and CHECKS MISSED before you use any figure. Check that no facility is counted twice.
+  - Ask for a workbook only if your AI can make files.
 how_it_works:
-  - title: 1. Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating
-    text: Map dated sources, contractual definitions, period boundaries, currency, scale and source gaps before calculating.
-  - title: 2. Confirm legal connected-party grouping and avoid duplicated exposure across facility records
-    text: Confirm legal connected-party grouping and avoid duplicated exposure across facility records.
-  - title: 3. Apply the owner-approved monitoring conversion factor to undrawn commitments and add funded and other group exposures
-    text: Apply the owner-approved monitoring conversion factor to undrawn commitments and add funded and other group exposures.
-  - title: 4. Compare aggregate exposure with the dated limit, preserve signed headroom and list scope or counterparty mapping gaps
-    text: Compare aggregate exposure with the dated limit, preserve signed headroom and list scope or counterparty mapping gaps.
+  - title: Maps the sources
+    text: Lists each figure with its source, date, currency and unit, and notes any gap in the counterparty list.
+  - title: Checks the group
+    text: Confirms which borrowers count as connected, and that no facility appears twice across your records.
+  - title: Weights the undrawn lines
+    text: Multiplies the undrawn amount by your monitoring factor. It is a disclosed assumption, not a regulatory factor.
+  - title: Adds up the exposure
+    text: Adds drawn loans, weighted undrawn lines and other connected exposure.
+  - title: Compares with the limit
+    text: Subtracts total exposure from the limit. Positive is headroom and negative is an excess. Missing figures are marked, never set to zero.
 output_shape: |-
-  A connected credit exposure bridge and limit gap.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Weighted undrawn <amount> | Total exposure <amount> | Limit <amount> | Headroom <amount> | Excess <amount>
+
+  SCOPE AND SOURCES
+  <reporting date, currency and units; source and date for each input; who counts as connected>
+
+  INPUTS AND ASSUMPTIONS
+  <drawn, undrawn, monitoring factor, other connected exposure, limit>
+
+  CALCULATIONS AND TIES
+  <each sum with its figures, then the tie of total exposure to drawn plus weighted undrawn plus other exposure>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The amount the borrower group has drawn
+    - The undrawn amount and the monitoring factor you apply to it
+    - Exposure to other connected borrowers
+    - The dated exposure limit
+    - Your own exposure spreadsheet (optional)
+  prerequisites:
+    - The facility report or loan ledger that shows drawn and undrawn amounts
+    - Your credit policy page that sets the factor and the limit
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The weighted undrawn amount, total exposure, the limit, and the headroom or excess.
+    - name: SCOPE AND SOURCES
+      contains: The reporting date, currency and units, with the source and date of each input and who counts as connected.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Each number you gave it and each assumption, kept apart from facts.
+    - name: CALCULATIONS AND TIES
+      contains: Each sum shown with its figures, and the check that the parts add up to total exposure.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every number it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Actual records, contractual terms and scenarios remain distinguishable.
+  - what: A larger loan
+    how: Raise the drawn amount and run it again. Total exposure rises one for one.
+  - what: A different factor
+    how: Change the monitoring factor. Only the weighted undrawn amount moves.
+  - what: A new connected borrower
+    how: Add its exposure to the other connected exposure, after you confirm it belongs to the group.
 judge:
   - Actual records, contractual terms and scenarios remain distinguishable.
   - Missing evidence blocks the affected line; no default zero or unexplained balancing plug.
@@ -64,15 +122,26 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The facility report that shows drawn and undrawn amounts for each borrower
+    - The list of borrowers your policy treats as one group
+    - A named reviewer and the question you want answered
 terms:
+  - term: Credit exposure
+    meaning: The total amount you could lose if a borrower does not pay.
+  - term: Undrawn commitment
+    meaning: A credit line the borrower can still draw but has not.
+  - term: Monitoring factor
+    meaning: The share of an undrawn line your policy counts as exposure.
+  - term: Connected borrowers
+    meaning: Borrowers treated as one risk because they are linked, such as companies in one group.
+  - term: Headroom
+    meaning: The limit minus total exposure. A negative figure is an excess.
   - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
-  - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: Practice numbers that show how the sums work. They are not a real borrower.

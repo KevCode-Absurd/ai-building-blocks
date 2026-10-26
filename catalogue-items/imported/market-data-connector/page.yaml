@@ -2,35 +2,104 @@ thinking: low
 thinking_why: Each provider follows a set connection pattern.
 new_slug: market-data-connector
 name: Market data connector
-summary: Name the data source and series. Get MATLAB code that pulls Bloomberg,
-  FRED, Haver or Datastream data.
+summary: Get MATLAB code that pulls Bloomberg, FRED, Haver or Datastream data into a table, using the right connection for your setup.
 job: connect-tools
 headline: Market data connector
-subhead: Name the data source and series. Get MATLAB code that pulls Bloomberg,
-  FRED, Haver or Datastream data. Bring the provider. Use the result to plan
-  your next step.
+subhead: "Name the data provider, the series or securities you want and the dates. You get a MATLAB script that connects, pulls the data into a table and lists the limits of that provider. It needs MATLAB with the Datafeed Toolbox and your own provider access."
 explain: |
-  MATLAB code that pulls financial and economic data from Bloomberg, FRED, Haver Analytics or LSEG Datastream, using the right interface for each. It saves you from guessing which connection method fits.
+  Each data provider connects to MATLAB in a different way. Bloomberg alone has four interfaces, and picking the wrong one means code that will not run on your computer. This MATLAB market data connector chooses the right interface first, then writes the code.
 
-  Name the provider and the series you need. For Bloomberg it chooses among four interfaces and covers prices, history, live data and reference data. For FRED it fetches economic series from the St. Louis Fed. For Haver and Datastream it pulls history, and Datastream is history only, with no live stream. It works only inside MATLAB with the Datafeed Toolbox, plus your own access to each provider, which may be paid. Other sources like Yahoo Finance and Excel add-ins are out of scope.
+  It covers four providers. Bloomberg gives prices, history, live data and reference data. FRED gives U.S. economic series from the St. Louis Fed. Haver gives global economic and financial history. Datastream gives history only, with no live feed.
+
+  It keeps passwords and API keys out of your code and reads them from MATLAB's secret store. It does not cover Yahoo Finance, Excel add-ins or the Bloomberg Terminal itself.
 when:
-  - You need Bloomberg prices in MATLAB and are unsure which interface to use.
-  - You want a FRED economic series pulled into a table.
-  - You use Haver or Datastream and need historical data.
-  - You are writing code that depends on a data provider.
+  - You need Bloomberg prices in MATLAB and do not know which interface fits your computer.
+  - You want a FRED series, such as GDP or unemployment, pulled into a MATLAB table.
+  - You use Haver or Datastream and need a long history of a series.
+  - You are on Mac or Linux and need to know which Bloomberg or Haver interface still works.
+not_for:
+  - "You want a chart of the data: pull it here first, then use the MATLAB chart maker."
+  - "You want prices in Excel or Yahoo Finance data: this covers four MATLAB providers only, so use the tool that provider offers."
+  - "You have no Bloomberg, Haver or Datastream access: FRED needs only an API key and no data subscription, so start there."
+  - "You want live streaming from Datastream: it gives history only, so ask LSEG for a live feed."
 you_give:
-  - The provider
-  - The securities or series IDs
-  - The date range
-  - Your access details set up in MATLAB
+  - "The provider: Bloomberg, FRED, Haver or Datastream"
+  - The securities or series IDs, such as a ticker or GDP
+  - The date range and how often (daily, monthly)
+  - Your computer type and MATLAB release
+  - Whether your login is already saved in MATLAB's secret store (optional)
 you_get:
-  - MATLAB connection code
-  - The right interface for your case
-  - Example data pull code
-  - Notes on provider limits
+  - A MATLAB script with a connection section and a data pull section
+  - The interface it chose, and why it fits your computer
+  - The result as a table or timetable, with the column names
+  - A short list of limits for that provider
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB with a data provider account.
+  - "Check three things first: you have MATLAB with the Datafeed Toolbox, your own access to the provider, and a MATLAB release that suits the provider (FRED needs R2026a or later)."
+  - Tell your AI the provider, the series or tickers, the dates and whether you use Windows, Mac or Linux.
+  - Save your login in MATLAB with setSecret before you run anything. Never paste a password or key into the chat or the code.
+  - Run the script in MATLAB. Check the table has the series and dates you asked for.
+  - If it fails, paste the MATLAB error back and ask your AI to fix it. Provider access problems come from your account, not the code.
+  - Use the table in your own analysis, or send it to the MATLAB chart maker or MATLAB report builder.
+how_it_works:
+  - title: Choose the provider
+    text: It matches your request to Bloomberg, FRED, Haver or Datastream.
+  - title: Choose the interface
+    text: It picks the interface that fits your computer and licence, such as bloomberg, bloombergHypermedia, haverview or fredrs.
+  - title: Read the guide
+    text: It reads that provider's reference file for the exact function patterns and known gotchas.
+  - title: Write the script
+    text: It writes the connection and pull code, with credentials read through getSecret.
+  - title: State the limits
+    text: It lists what the provider does not do, such as no live feed from Datastream.
+output_shape: |
+  % 1. Connect (<provider>, <interface>)
+  <connection code, credentials from getSecret>
+
+  % 2. Pull data (<series or securities>, <dates>)
+  <fetch code, result as table or timetable>
+
+  % 3. Close the connection
+  <close code>
+
+  Notes
+  - Interface chosen: <name> because <reason>
+  - Limits: <provider limits>
+  - Next: <load into a timetable, chart or save>
+output_sample:
+  input:
+    - "The provider: Bloomberg, FRED, Haver or Datastream"
+    - The securities or series IDs and the date range
+    - Your computer type and MATLAB release
+  prerequisites:
+    - MATLAB with the Datafeed Toolbox
+    - Your own access to the provider, which may be paid
+    - Your login saved in MATLAB with setSecret
+  output:
+    - name: Connection section
+      contains: Code that connects with the interface that fits your computer, reading login details from the secret store.
+    - name: Data pull section
+      contains: Code that fetches your series or securities for your dates and returns a table or timetable.
+    - name: Interface choice
+      contains: Which interface it picked and why, such as Windows with a Terminal versus a cloud setup.
+    - name: Provider limits
+      contains: What that provider cannot do, such as live data from Datastream, and any release or platform needs.
+    - name: Next step
+      contains: A line on what to do with the table, such as chart it or save it.
+works_best_with:
+  tools:
+    - name: MATLAB with an AI that can run MATLAB code
+      why: It can run the script, read the error and fix it in one pass.
+    - name: Chat AI without MATLAB
+      why: It can write the script for you to run, but cannot test your provider login.
+  inputs:
+    - A list of the exact ticker or series IDs, so the pull does not guess names.
+    - Your MATLAB release number, since some interfaces need a recent one.
+terms:
+  - term: Datafeed Toolbox
+    meaning: A MATLAB add-on that connects MATLAB to financial data providers.
+  - term: Series ID
+    meaning: The short code that names one data series, such as GDP.
+  - term: BPIPE
+    meaning: A Bloomberg server data licence that works without a Terminal on the same computer.
+  - term: Secret store
+    meaning: A safe place in MATLAB for passwords and keys, read with getSecret.

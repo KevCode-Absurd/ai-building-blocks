@@ -78,3 +78,26 @@ improve:
   - Keep the spec as the source of truth and re-run steps 3 and 4 after each change.
   - Add the cases it lists as not covered.
   - Not worth running if you already have a mature service. Use the bug or review workflows instead.
+not_for:
+  - "You already have a service and want its bugs found: use Bug and security code reviewer."
+  - "Your routes exist and you only need documents: use API spec writer."
+  - "Your spec is already an OpenAPI file and you want an app from it: use Build an app from an OpenAPI spec."
+output_sample:
+  input:
+    - A written spec of what the service does, who uses it and what data it keeps
+    - Your preferred language and database, or let it choose (optional)
+    - How sign-in should work (optional)
+    - How many users or requests you expect (optional)
+  prerequisites:
+    - An AI that can write files and run code, such as Claude Code
+  output:
+    - name: Step 1, Project
+      contains: Your spec in plain words, the stack, a file list and setup steps.
+    - name: Step 2, Service
+      contains: Routes, database design, sign-in checks, undoable migrations and a load test result.
+    - name: Step 3, Route tests
+      contains: A route map, tests for sign-in, bad input and error codes, with results and gaps.
+    - name: Step 4, API spec
+      contains: Endpoints, data shapes, the sign-in scheme and an example for each response.
+    - name: Hand-back summary
+      contains: Each step's file and one list of everything marked MISSING.

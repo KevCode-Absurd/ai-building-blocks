@@ -1,6 +1,6 @@
 new_slug: success-failure-analysis
 name: Work out why something worked or failed
-summary: Describe a surprising result. Get ranked causes, a check through many fields and rewards, and what to copy or skip.
+summary: Find why a result was far better or worse than normal. Get ranked causes, checks through many fields and rewards, and what to copy or skip.
 job: think-and-decide
 thinking: high
 thinking_why: It reasons by elimination and by pattern, and has to keep guesses apart from facts. Give it your strongest model.
@@ -14,6 +14,10 @@ when:
   - A store, product or person is doing far better than the rest and you want to know why.
   - Something failed and the stories you hear do not add up.
   - You want to copy a success and need to know which part actually drives it.
+not_for:
+  - "You have no fair comparison or no numbers for the result: do a plain review of the data first, then come back."
+  - "You want to know why ad sales fell: use the Ad sales drop analyst."
+  - "You only want to check whether advice can be trusted: use the Advice credibility checker."
 you_give:
   - The surprising result, with the numbers you have
   - What is normal for comparison
@@ -29,6 +33,25 @@ how_to_use:
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the result with numbers and a fair comparison. Say what you already believe about the cause.
   - Run the first test it suggests before you copy anything.
+output_sample:
+  input:
+    - The surprising result, with the numbers you have
+    - What is normal, for a fair comparison
+    - What you already believe about the cause (optional)
+    - "Your own situation: size, price, market and what you can spend"
+  prerequisites:
+    - An AI that can read the skill files in the handoff pack, such as Claude Code or a Claude Project
+  output:
+    - name: "Step 1: Ranked causes"
+      contains: Causes the facts rule out, four to six likely causes ranked, a cheap check for each and what stays unexplained.
+    - name: "Step 2: Many fields"
+      contains: What maths, engineering, biology, psychology and economics say about the causes, and where they agree or clash.
+    - name: "Step 3: Rewards"
+      contains: Who was paid for what, what that encouraged, and whether it explains the result.
+    - name: "Step 4: Copy or skip"
+      contains: Each cause sorted as copy, adapt, skip or luck, with a small test and a pass mark for each idea you keep.
+    - name: Hand-back summary
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 how_it_works:
   - title: Ranks the causes
     text: Rules out causes by fact, tests four patterns of extreme results, ranks four to six causes and picks the cheapest test between the top two.

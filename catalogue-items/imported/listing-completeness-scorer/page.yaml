@@ -2,13 +2,10 @@ thinking: low
 thinking_why: It scores against a fixed checklist.
 new_slug: listing-completeness-scorer
 name: Listing completeness scorer
-summary: Get every product scored on missing descriptions, images, SEO, weight,
-  barcode and cost, worst first.
+summary: Score every Shopify product on missing descriptions, images, SEO, weight, barcode and cost. Get a product data completeness report, worst first.
 job: run-your-store
 headline: Listing completeness scorer
-subhead: Every product in your store scored on how complete its data is, worst
-  first, so you know exactly what to fix. It only reads, and changes nothing in
-  your shop.
+subhead: Every product in your store scored on how complete its data is, worst first, so you know exactly what to fix. It only reads, and changes nothing in your shop.
 explain: |
   Every product in your store scored on how complete its data is, worst first, so you know exactly what to fix. It only reads, and changes nothing in your shop.
 
@@ -18,6 +15,10 @@ when:
   - You want to fix search settings before a sale.
   - Shipping quotes break because product weights are missing.
   - You are cleaning up after importing hundreds of products.
+not_for:
+  - "You have fewer than about 20 products: check them by hand in a spreadsheet instead."
+  - "You want to fix the gaps for you: this only reads your store, so edit products in Shopify admin or by hand."
+  - "You do not use Shopify: this reads the Shopify admin, so use a spreadsheet check of your own product list."
 you_give:
   - Access to your Shopify store
   - Which products to check, if not all (optional)
@@ -28,8 +29,29 @@ you_get:
   - A list ordered worst first
   - Totals for each type of gap
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can access your Shopify admin (read only).
+  - Open an AI that can run code and use the Shopify CLI, such as Claude Code. A plain chat window cannot reach your store.
+  - Sign in to your store with read-only product access. Cost data may also need permission to read inventory.
+  - Paste the skill into your AI. Give it your store address.
+  - Add the status to check and any required metafields, if you want them (optional).
+  - Open the report and the CSV. Fix the lowest scores first, starting with missing descriptions and images.
+  - Run it again after a clean-up to see if your average score went up.
+output_sample:
+  input:
+    - Your Shopify store address
+    - "Which products to check: active, draft or all (optional)"
+    - Metafields you require on every product (optional)
+  prerequisites:
+    - An AI that can run code and use the Shopify CLI
+    - Read access to your store's products
+    - Permission to read product cost, which may need the inventory read scope
+  output:
+    - name: Start banner
+      contains: The skill name, your store address and the start time.
+    - name: Step progress lines
+      contains: One line per step showing what was asked and how many products came back.
+    - name: Completeness report
+      contains: Products scored, average score, and counts of products below 50, from 50 to 79, and 80 or more.
+    - name: Lowest scoring products
+      contains: The worst products with their score out of 100 and the fields each one is missing.
+    - name: completeness CSV file
+      contains: One row per product with its score, image count and yes or no for each checked field.

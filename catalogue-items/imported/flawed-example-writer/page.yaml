@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It builds realistic errors and checks they teach the right point.
 new_slug: flawed-example-writer
 name: Flawed example writer
-summary: Name a common student mistake. Get examples with that mistake built in,
-  so students practise spotting it.
+summary: Name the mistakes your students make. Get worked examples with one planted error each, so students practise spotting and fixing it.
 job: teach-and-train
 headline: Flawed example writer
-subhead: Worked examples that contain a planted mistake, so students learn by
-  finding and fixing it. Seeing a common error in someone else's work sticks
-  better than being told to avoid it.
+subhead: Worked examples that contain a planted mistake, so students learn by finding and fixing it. Seeing a common error in someone else's work sticks better than being told to avoid it.
 explain: |
   Worked examples that contain a planted mistake, so students learn by finding and fixing it. Seeing a common error in someone else's work sticks better than being told to avoid it.
 
@@ -18,6 +15,10 @@ when:
   - You want a starter activity where students critique a worked answer.
   - Students can follow steps but cannot spot when something is wrong.
   - You need a set of examples for a given topic and year group.
+not_for:
+  - "Students are meeting a topic for the first time: show correct worked examples first, then use this once they know the right method."
+  - "You need a quiz or test with marks: write the questions yourself or ask your AI for a plain question set."
+  - "You want to find out which mistakes your students make: look at their recent work first, then come back with the list."
 you_give:
   - Topic or type of problem
   - The specific mistakes students make
@@ -30,7 +31,26 @@ you_get:
   - Teacher answer key
   - Notes on how to run the activity
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open a chat with Claude, ChatGPT or Gemini. Paste in the full skill text. It needs no code, files or paid tools.
+  - Fill in the problem domain and the target errors. Add year group, level and number of examples if you want.
+  - Say whether students have already seen correct worked examples. Use this skill only if they have.
+  - Read the teacher reference for each example. Check that the planted error is the one you asked for and that the maths or facts are right.
+  - Give the examples to students with the prompts. Ask them to find the error, explain it and fix it.
+output_sample:
+  input:
+    - The topic or type of problem
+    - The specific mistakes students make
+    - Year group and level (optional)
+    - Whether students have seen correct examples (optional)
+    - How many examples you want (optional)
+  output:
+    - name: Erroneous examples
+      contains: Worked solutions that look right but go wrong at one planned step, each built around one mistake you named.
+    - name: Error analysis prompts
+      contains: Questions that ask students to find the error, explain why it is wrong and correct it.
+    - name: Correct version (teacher reference)
+      contains: The right worked solution for each problem, so you can check the answer key.
+    - name: Learning mechanism
+      contains: A short note on why each flawed example helps students learn.
+    - name: Sequencing guidance
+      contains: Advice on the order to give the examples and how to run the activity.

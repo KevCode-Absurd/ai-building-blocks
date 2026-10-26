@@ -54,12 +54,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Plan a fair split-run test.** Use the skill `split-run-test-planner`. One difference, same time, same audience, a key on each, a rule set before launch.
-2. **Set a reply offer that brings enough replies.** Use the skill `test-reply-offer-planner`. Give it the plan from the steps before. A reply offer that is identical in both versions and big enough to count.
+1. **Plan a fair split-run test.** Use the skill `split-run-test-planner`. One difference, same time, same audience, a key on each, a rule set before launch. Hands steps 2 and 3 the plan.
+2. **Set a reply offer that brings enough replies.** Use the skill `test-reply-offer-planner`. Give it the plan from the steps before. A reply offer that is identical in both versions and big enough to count. Hands step 3 the offer, so the result can tell buyers from people after a free item.
 
 Pause here: Run both versions at the same time and count the replies by key.
 
-3. **Read the result.** Use the skill `split-run-result-reader`. Give it the plan from the steps before. A plain call on the winner and a record of what it taught.
+3. **Read the result.** Use the skill `split-run-result-reader`. Give it the plan and the offer from the steps before. A plain call on the winner and a record of what it taught. Uses the counts you bring after the test, step 1's plan and step 2's offer.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

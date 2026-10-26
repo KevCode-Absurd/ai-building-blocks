@@ -2,17 +2,67 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-pester-migration
 name: Pester test upgrade helper
-summary: Share your PowerShell tests. Get changes for the next Pester version
-  and checks for lost test behavior.
+summary: Upgrade your PowerShell Pester tests one version at a time. Get the changes needed, plus checks that no test lost its meaning.
 job: test-and-fix-code
 headline: Pester test upgrade helper
-subhead: Share your PowerShell tests. Get changes for the next Pester version
-  and checks for lost test behavior. Share your goal and the files you already
-  have. The skill file sets out the steps and the tools needed for this job.
+subhead: "Share your Pester test files, your run scripts, the Pester version you use now and the one you want. It changes your tests one version jump at a time and checks that no test lost its meaning. You compare pass and fail counts before and after."
+explain: |
+  Pester changed how tests are found and run between major versions. Old tests can still pass after an upgrade while checking nothing. This Pester upgrade helper works one jump at a time, such as v4 to v5, so a failure is easy to trace.
+
+  It starts with a baseline: the pass and fail counts on your current version. Then it rewrites each test file, such as moving setup into BeforeAll and changing mock checks to the new syntax. It also turns old Invoke-Pester settings into the new configuration.
+
+  For every change, it checks that the test still asserts the same thing. You install the new version, run the tests yourself and paste back any failures.
+when:
+  - "Your PowerShell tests were written for Pester v3 or v4."
+  - "You upgraded Pester and tests started to fail."
+  - "You want to be sure the upgrade did not weaken your tests."
+  - "A build pipeline breaks on the new Pester version."
+not_for:
+  - "You want to jump two versions at once, such as v4 straight to v6: do one jump at a time, v4 to v5 and then v5 to v6."
+  - "Your tests use another framework, such as xUnit or NUnit: use that framework's own upgrade guide."
+  - "You only need to check one small change by hand: read the Pester website migration guides at pester.dev/docs/migrations."
+you_give:
+  - "Your *.Tests.ps1 files"
+  - "Your build or test scripts that call Invoke-Pester"
+  - "The Pester version your tests were written for"
+  - "The Pester version you want to move to"
+  - "The result of a test run on your current version"
+you_get:
+  - "A version check that names the one jump to make"
+  - "Each test file with the edits needed"
+  - "Your old run settings turned into the new version's settings"
+  - "A check for every change that the test still asserts the same thing"
+  - "Pass and fail counts after the upgrade, set against your baseline"
+  - "Any test still failing, with the likely cause and a fix to try"
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can read the files you provide and use the named
-    tools when the job requires them.
+  - Run your tests on your current Pester version first. Save the pass and fail counts.
+  - Gather your *.Tests.ps1 files, your build or test scripts, the version your tests were written for, and the version you want.
+  - Paste the skill into your AI, or upload its folder. Then add your files and the baseline result.
+  - Ask for one version jump only. For example, v4 to v5, then later v5 to v6.
+  - Check the changes file by file. Install the new version and run the tests on your own machine, then paste any failures back in.
+  - Compare the new result with your baseline. Commit each file or fix on its own so problems are easy to trace.
+output_sample:
+  input:
+    - Your *.Tests.ps1 files
+    - Your build or test scripts that call Invoke-Pester
+    - The Pester version your tests were written for
+    - The Pester version you want to move to
+    - The result of a test run on your current version
+  prerequisites:
+    - PowerShell with Pester installed on your machine, to run the tests before and after
+    - An AI that can read your files, or one where you paste them in
+  output:
+    - name: Version check
+      contains: The Pester version your tests were written for, the version installed, and the one jump to make.
+    - name: Baseline result
+      contains: Pass and fail counts from your current version, so old failures are not blamed on the upgrade.
+    - name: Changed test files
+      contains: Each test file with the edits needed, such as new assertion syntax, BeforeAll setup and mock changes.
+    - name: Invoke-Pester changes
+      contains: Your old run settings turned into the new version's settings.
+    - name: Lost-behavior checks
+      contains: For each change, a check that the test still asserts the same thing, with its status.
+    - name: After-upgrade result
+      contains: Pass and fail counts on the new version, set against the baseline.
+    - name: Failures left to fix
+      contains: Any test still failing, with the likely cause and the fix to try.

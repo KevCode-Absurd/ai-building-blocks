@@ -53,3 +53,22 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+not_for:
+  - "You only need today's plan and meeting briefs: use Prepare your executive day."
+  - "You want a plan for the week built around your goals: use Plan a week that puts what matters first."
+  - "You need a weekly review you run on a schedule: use the Weekly review keeper."
+output_sample:
+  input:
+    - This week's meeting notes and email threads
+    - Your task list or last week's action register
+    - Your calendar for next week
+    - The projects or decisions you care most about (optional)
+  output:
+    - name: Weekly action register
+      contains: One action list with owner, due date, status and source link for each item.
+    - name: Progress and unresolved commitments
+      contains: What moved this week, what is overdue or blocked, and what others owe you.
+    - name: Next-week priorities
+      contains: Up to three priorities, decisions due, clashes and a first next action.
+    - name: Source coverage and missing facts
+      contains: What was checked, what is unknown, and which changes are only proposals.

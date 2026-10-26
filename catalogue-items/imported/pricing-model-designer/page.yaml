@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: It runs set price methods and writes up the tiers.
 new_slug: pricing-model-designer
 name: Pricing model designer
-summary: Give it your product and price survey data. Get a pricing model, price
-  points and good, better, best tiers.
+summary: Pick a pricing model and price range for your SaaS. Give it your product and survey answers to get tiers that fit.
 job: set-prices
 headline: Pricing model designer
-subhead: Choose how to charge, what to charge and how to package it. Give it
-  your product and price survey answers and get a pricing model, a price range
-  and good, better, best tiers.
+subhead: Choose how to charge, what to charge and how to package it. Give it your product and price survey answers and get a pricing model, a price range and good, better, best tiers.
 explain: |
   Choose how to charge, what to charge and how to package it. Give it your product and price survey answers and get a pricing model, a price range and good, better, best tiers.
 
@@ -18,6 +15,10 @@ when:
   - Your pricing is 18 months old and feels wrong.
   - You ran a price survey and need to read it.
   - Your tiers confuse buyers.
+not_for:
+  - "You need to approve a discount on one deal: use your sales lead or a deal approval step, not this skill."
+  - "You want brand positioning or a new category story: use a marketing lead or a positioning workshop first."
+  - "You want one final price to type in: this gives a model and a range, so you pick the number."
 you_give:
   - Product and customer description
   - Price survey responses (optional)
@@ -29,8 +30,28 @@ you_get:
   - Good, better, best tier layout
   - List of packaging problems found
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code.
+  - Open your AI tool. Use one that can run code and read files, such as Claude or ChatGPT with code tools on.
+  - Upload the skill folder, or paste the SKILL.md text into the chat.
+  - "Fill in the pricing brief first: your industry, deal size, customer count, value drivers and competitor models."
+  - Ask your AI to pick the pricing model from your brief. Read the trade-offs before you move on.
+  - If you have survey answers, add them next. You need at least 30 people, and 100 is better. Ask for the acceptable price range.
+  - Add your feature list and ask for good, better, best tiers. Fix any packaging flags, then choose your own price.
+output_sample:
+  input:
+    - Your product and customer description
+    - Your price survey answers (optional)
+    - Competitor prices
+    - Your current plans (optional)
+    - Your feature list
+  prerequisites:
+    - An AI that can run code, to use the three scripts
+    - A short pricing brief filled in first, about 20 minutes
+  output:
+    - name: Pricing model ranking
+      contains: Five models scored from 0 to 100 for fit, each with trade-offs.
+    - name: Price range
+      contains: Four price points from the survey and the range buyers accept, plus a warning if the sample is too small.
+    - name: Good, better, best tiers
+      contains: Your features sorted into three tiers.
+    - name: Packaging flags
+      contains: Problems found, such as a decoy tier, a feature dump or no reason to upgrade.

@@ -2,35 +2,117 @@ thinking: medium
 thinking_why: It balances pushing upgrades against annoying users.
 new_slug: free-to-paid-flow-designer
 name: Free-to-paid flow designer
-summary: Describe your SaaS plans. Get upgrade moments, paywall design, win-back
-  flows and churn prevention steps.
+summary: "Turn free SaaS users into paying ones. Get a free-to-paid conversion plan with upgrade moments, paywall design and win-back emails."
 job: set-prices
 headline: Free-to-paid flow designer
-subhead: Describe your SaaS plans. Get upgrade moments, paywall design, win-back
-  flows and churn prevention steps. Bring your plans and prices. Use the result
-  to plan your next step.
+subhead: "Tell it your plans, prices and what free users can do. It picks your free model, finds the moments to ask for the upgrade, designs the paywall, adds a cheaper fallback plan and plans the win-back and anti-cancel steps."
 explain: |
-  A plan for turning free SaaS users into paying ones at the right moment, including paywalls, upgrade messages, win-back emails and steps to reduce cancellations.
+  Many SaaS products get plenty of free users and few payers. The usual cause is the timing of the ask. Ask too early and people leave. Never ask, and free users never pay. This free-to-paid flow designer finds the moment when a user has just got real value, and puts the upgrade there.
 
-  First it checks your free model: free forever, trial or none. It then finds the points where a user has clearly got value, such as hitting a limit after real use, and puts the upgrade offer there instead of blocking everything. It designs paywall screens, plan differences, and when to offer a cheaper plan instead of letting someone leave. It also adds win-back and churn prevention flows. It avoids both an aggressive paywall and a free plan that never asks.
+  First it checks your free model: free forever, a time-limited trial, a reverse trial or no free plan. It then picks trigger moments, such as hitting a limit after real use. It matches the paywall style to how strong the trigger is, writes copy tied to what the user just did, and adds a cheaper plan for people who say no. It ends with win-back steps for lapsed users and early signs of churn.
+
+  It covers the whole path from free user to paying user to returning user. For paywall screens alone, use the Paywall designer. The conversion figures in the skill are rules of thumb, not your results.
 when:
   - Free users use your product for months and never upgrade.
-  - Your paywall appears too early and people leave.
+  - Your paywall appears early and people leave.
   - You want to bring back users who cancelled.
-  - You are deciding between freemium and a free trial.
+  - You are choosing between freemium and a free trial.
+not_for:
+  - "You only need paywall screens and copy for one upgrade moment: use the Paywall designer."
+  - "You need to set the prices or pick a pricing model first: use the SaaS pricing designer, then come back."
+  - "You want to stop paying customers from cancelling right now: use the Churn reducer."
+  - "You sell one-off products, not subscriptions: this plan does not apply."
 you_give:
   - Your plans and prices
-  - What free users can do
-  - Usage data on when people upgrade (optional)
-  - Current paywall screens (optional)
+  - What free users can do, and what is paid only
+  - How users move through your product (optional)
+  - Usage data on when people upgrade or leave (optional)
+  - Your current paywall screens or upgrade emails (optional)
 you_get:
-  - Upgrade trigger moments
-  - Paywall and message designs
-  - Plan structure with downsell option
-  - Win-back flow
-  - Churn prevention steps
+  - Your free model, with the reason for the choice
+  - Four to six upgrade trigger moments, each tied to a user action
+  - Paywall style and copy for each moment
+  - A cheaper fallback plan for people who decline
+  - Win-back emails and early churn signs to watch
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or paid tools are needed.
+  - Paste the skill text into the chat.
+  - "Under it, paste your plans, prices and what free users can do. Add your usage notes if you have them."
+  - Read the free-model choice and the trigger moments first. Ask for changes if a moment does not fit your product.
+  - Check the figures it quotes. Any conversion rate in the skill is a rule of thumb, so compare it with your own numbers.
+  - Build the top two triggers first and measure the upgrade rate. Then add the rest.
+output_sample:
+  input:
+    - Your plans and prices
+    - What free users can do, and what needs a paid plan
+    - How users move through your product (optional)
+    - Usage data on upgrades and cancellations (optional)
+    - Current paywall screens or emails (optional)
+  output:
+    - name: Free-tier decision
+      contains: Whether you should use freemium, a trial, a reverse trial or no free plan, and why.
+    - name: Trigger moments
+      contains: The user actions after which an upgrade ask makes sense, such as hitting a limit after real use.
+    - name: Paywall designs
+      contains: For each trigger, the paywall style (full screen, banner, inline or toast) and its copy.
+    - name: Plan structure
+      contains: How many plans, what each gate is based on, and who each plan is for.
+    - name: Downsell offer
+      contains: A cheaper or shorter plan to offer people who decline the first upgrade.
+    - name: Win-back plan
+      contains: Emails and in-product steps for users who lapsed, downgraded or cancelled.
+    - name: Churn signals
+      contains: Early signs a user may leave, and what to do when each shows up.
+how_it_works:
+  - title: Choose the free model
+    text: It compares freemium, trial, reverse trial and no free plan against your product and audience.
+  - title: Find the trigger moments
+    text: It looks for points where the user has just got value, such as a limit hit after steady use. It avoids first-login and every-page banners.
+  - title: Match the paywall to the trigger
+    text: Strong triggers get a full screen paywall. Soft triggers get an inline note or toast. Copy refers to what the user just did.
+  - title: Plan the plans
+    text: It sets the number of plans, the gate for each, and who each plan suits.
+  - title: Add the fallback
+    text: It adds a cheaper option for people who say no, framed as a better fit and not as pressure.
+  - title: Plan win-back and churn steps
+    text: It plans how to bring back lapsed users, with discounts as a last step, and which early signs to watch.
+output_shape: |
+  FREE MODEL
+  <freemium | trial | reverse trial | no free> because <reason>
+
+  TRIGGER MOMENTS
+  1. <user action>: <paywall style>, copy <line>
+
+  PLAN STRUCTURE
+  <plan>: for <who>, gated by <limit or feature>
+
+  DOWNSELL
+  <offer> shown when <decline moment>
+
+  WIN-BACK
+  <step>: <when>, <message>
+
+  CHURN SIGNALS
+  <sign>: <action>
+
+  START WITH
+  <the two triggers to build first, and how to measure them>
+
+  MISSING
+  - <anything you did not give>
+works_best_with:
+  tools:
+    - name: Claude, ChatGPT or Gemini
+      why: It works from a written description of your plans. An AI that reads files can also use a usage export.
+  inputs:
+    - A usage export showing what people did before they upgraded
+    - Screenshots or text of your current paywalls
+terms:
+  - term: Freemium
+    meaning: A free plan with no end date and a paid plan with more.
+  - term: Reverse trial
+    meaning: New users start on the paid plan, then drop to free after a set time.
+  - term: Paywall
+    meaning: A screen or note that asks a user to pay to carry on or unlock more.
+  - term: Downsell
+    meaning: Offering a smaller or cheaper plan to someone who turned down the main upgrade.

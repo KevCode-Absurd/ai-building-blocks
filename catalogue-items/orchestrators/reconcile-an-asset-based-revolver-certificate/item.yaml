@@ -7,19 +7,12 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: brief
-    required: true
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
-outputs:
-  - type: spreadsheet
-    required: true
-  - type: audit_report
     required: true
   - type: document
     required: true
+outputs: []
+needs_mode: manual
 uses:
   - receivables-borrowing-base-builder
   - inventory-borrowing-base-builder
@@ -39,6 +32,7 @@ generated_from: tools/finance-expansion
 example_pending: true
 warnings:
   - Source dates, financial assumptions, currency and accounting basis must be reviewed. This pack contains no live market-data feed.
+  - This checks arithmetic and tracing. It is not a lender-certified certificate and it submits nothing. A person who knows the credit agreement must review and sign the real one.
 credits:
   - title: Original finance methods and model fixtures
     by: AI Blocks contributors

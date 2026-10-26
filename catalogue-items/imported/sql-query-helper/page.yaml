@@ -2,12 +2,10 @@ thinking: medium
 thinking_why: It writes and checks SQL against your schema.
 new_slug: sql-query-helper
 name: SQL query helper
-summary: Describe the data you need. Get a tested SQL query, a faster version,
-  or a migration.
+summary: Describe the data you need in plain words. Get a SQL query checked for common mistakes, index tips, or a migration with a rollback plan.
 job: build-software
 headline: SQL query helper
-subhead: A SQL query that has been written, tested or sped up, or a database
-  migration ready to run. Describe the data you need in plain words.
+subhead: Describe the data you need in plain words. Your AI writes a SQL query and checks it for common mistakes. It can also suggest faster versions and write database migrations. It does not run anything against your database.
 explain: |
   A SQL query that has been written, tested or sped up, or a database migration ready to run. Describe the data you need in plain words. The skill turns nouns into tables, verbs into joins, conditions into filters, and words like total or latest into grouping and ordering.
 
@@ -15,22 +13,49 @@ explain: |
 when:
   - You know what data you want but not how to ask for it in SQL.
   - A query is slow and you need to know why.
-  - You must change a table without taking the site down.
-  - Your app code and database are out of step.
+  - You must change a table and want a plan that avoids downtime.
+  - Your app code and your database no longer match.
+not_for:
+  - "You need to design tables or draw a schema from scratch: use a database designer or a person who knows your data."
+  - "You want to run changes on a live production database: test on a staging copy first and take a backup."
+  - "You need proof the query runs on your data: this skill does not run it against your database, so run it yourself first."
 you_give:
   - A plain description of the data you need
-  - Your database type
-  - Table layout or schema
-  - The slow query or plan (optional)
+  - Your database type, such as Postgres or MySQL
+  - Your table layout or schema
+  - The slow query or its execution plan (optional)
 you_get:
-  - A working SQL query
-  - Index and rewrite suggestions
+  - A SQL query in a code block, checked for common mistakes
+  - A short note on indexes and rewrites, about three lines
   - Up and down migration scripts
-  - Schema documentation
-  - ORM-friendly equivalents
+  - The rollback script in its own code block
+  - A written map of your schema
+  - The same change for your ORM, if you use one
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run code and read your project files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text, or upload the skill folder.
+  - Say what data you want in plain words and name your database type.
+  - Paste your table layout. If the query is slow, paste it and its plan too.
+  - Read the query and the notes. Ask for changes until it fits.
+  - Run the query on a test copy of your data first. The skill does not run it for you.
+  - For a migration, test it on a staging copy and take a backup before you touch live data.
+output_sample:
+  input:
+    - A plain description of the data you need
+    - Your database type, such as Postgres, MySQL, SQLite or SQL Server
+    - Your table layout or schema
+    - A slow query or its execution plan (optional)
+  prerequisites:
+    - An AI that can run code and read your files, if you want the helper scripts to run (optional)
+  output:
+    - name: SQL query
+      contains: The query for your database type, written from your plain words and shown in a code block.
+    - name: Index and rewrite notes
+      contains: Short tips on indexes and ways to rewrite a slow query, based on the execution plan.
+    - name: Migration scripts
+      contains: Up and down scripts for a table change, with safer steps to avoid downtime.
+    - name: Rollback plan
+      contains: How to undo the change if something goes wrong, in a separate code block.
+    - name: Schema documentation
+      contains: A written map of your tables and columns, built from introspection queries.
+    - name: ORM version
+      contains: The same change written for Prisma, Drizzle, TypeORM or SQLAlchemy, when you use one.

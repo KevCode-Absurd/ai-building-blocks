@@ -1,6 +1,6 @@
 new_slug: product-and-variant-setup-planner
 name: "Product and variant setup planner"
-summary: "List what you sell. Get each product type, a variant table and a fill-in checklist."
+summary: "Plan your product variants before you enter them. List what you sell and get a product type, a variant table and a fill-in sheet for each."
 job: set-up-store
 thinking: low
 thinking_why: "It lays out facts you give it in a fixed format, so a fast, cheap model is enough."
@@ -17,6 +17,10 @@ when:
   - You are about to add your first products and want a plan so nothing is missed.
   - You have a product with sizes and colours and do not know how to set up the variations.
   - You sell a service, an ebook or an affiliate item and are not sure which product type to pick.
+not_for:
+  - "You have hundreds of products: use your store's bulk import, then check each product is complete afterwards."
+  - "You need product titles and descriptions written: use a product copy writer, since this plan leaves the wording out."
+  - "You sell affiliate items only: this plan covers products you hold, so use your affiliate network's link tools."
 
 you_give:
   - Your products with their options (size, colour, weight, with or without an extra)
@@ -36,6 +40,26 @@ how_to_use:
   - Attach or list your photos by option.
   - Work through the sheet for one product at a time in your admin, then check it in the storefront.
   - Send back what is still missing and ask for an updated table.
+output_sample:
+  input:
+    - Your products and their options, such as size or colour
+    - Prices, sale prices and stock for each product
+    - Whether each item ships, downloads or is a service
+    - Photos for each option (optional)
+    - Your platform, Shopify or WooCommerce (optional)
+  output:
+    - name: PRODUCT sheet
+      contains: Product type, options, category, tags, price, sale price, stock rule, weight and the photos to use.
+    - name: VARIANT TABLE
+      contains: One row per option combination with its SKU, price, stock, weight and image.
+    - name: LINKS
+      contains: Upsells to show on the product page and cross-sells to show in the cart.
+    - name: ENTRY CHECKLIST
+      contains: Tick-off steps to follow in your store admin for each product.
+    - name: STILL MISSING
+      contains: Each gap, such as a price or photo, and who has it.
+    - name: CHECKS MISSED
+      contains: Any checks that could not be run, or none.
 
 how_it_works:
   - title: Picks the type

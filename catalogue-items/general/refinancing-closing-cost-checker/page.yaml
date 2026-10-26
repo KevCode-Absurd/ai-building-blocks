@@ -1,53 +1,111 @@
 new_slug: refinancing-closing-cost-checker
 name: Refinancing closing cost checker
 headline: Refinancing closing cost checker
-summary: Reconcile a documented debt payoff, premium and refinancing fees against usable new funding.
+summary: Check if new loan money covers your old debt payoff, premium and refinancing fees. Get the closing cash need and any funding gap.
 job: money-and-investing
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: Total closing cash need, financing gap and transaction cost. Share old principal payoff, approved prepayment premium, separately confirmed refinancing fees and net new proceeds excluding those same fees.
+subhead: Give it the old loan payoff, the prepayment premium rate, the refinancing fees and the new loan money you can use. It adds up the costs, compares them with the new money and shows the gap. Each fee is counted once.
 explain: |-
-  Total closing cash need, financing gap and transaction cost.
+  A refinancing replaces an old loan with a new one. On closing day the old lender must be paid in full. That payoff often comes with a prepayment premium, and the new loan comes with fees. This refinancing closing cost checker adds it all up and compares it with the new loan money you can actually use.
 
-  Private credit refinancing. Illustrative figures only. 100 payoff plus2 premium and3 fees needs105; new cash100 leaves5 unfunded.
+  It starts from the payoff amount in the lender's payoff letter. It applies the premium rate to the base the letter names, then adds the fees you pay in cash. The total is the closing cash need. It takes off the new loan money, and what is left is the funding gap, or a surplus.
+
+  The common trap is counting a fee twice. If the new lender already took a fee out of the loan, do not list that fee again as a cost. The skill asks you which it is. It shows the closing gap only. It does not say whether the refinancing saves you money.
 when:
-  - You need total closing cash need, financing gap and transaction cost.
-  - You work on private credit refinancing and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - The old lender sends a payoff letter and you want to know how much cash you need on closing day.
+  - A new loan term sheet shows net proceeds and you want to know if they cover the payoff.
+  - A lender or adviser quotes fees and a prepayment premium and you want one total.
+  - A reviewer asks you to show how the closing cash need ties back to the payoff letter and fee letter.
+not_for:
+  - You want to know if refinancing saves interest over time. This only checks the cash needed at closing, not future savings.
+  - Your loan has a make-whole premium or a swap to break out of. This handles a simple percentage premium only. Ask your lender or adviser.
+  - You want to check what you receive from a new debt issue after discounts and fees. Use the Debt issue proceeds checker.
+  - You want the funding gap for a whole company sale or deal. Use the Deal funding gap checker.
 you_give:
-  - Old principal payoff, approved prepayment premium, separately confirmed refinancing fees and net new proceeds excluding those same fees.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - The old loan payoff amount (from the payoff letter)
+  - The prepayment premium rate and what it applies to (from the loan agreement or payoff letter)
+  - Refinancing fees you pay in cash, such as legal and arrangement fees (from the fee letter or closing statement)
+  - The new loan money you can use, before the fees you list above (from the term sheet or funds flow)
+  - Whether the payoff includes accrued interest
+  - The currency and units, such as USD in millions
+  - Your own spreadsheet (optional)
 you_get:
-  - Total closing cash need, financing gap and transaction cost.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - "The premium in money: payoff times the premium rate"
+  - "The transaction cost: premium plus refinancing fees"
+  - "The closing cash need: payoff plus transaction cost"
+  - The funding gap, or a surplus, after the new loan money
+  - A list of missing facts and checks that could not run
+  - A small workbook with the same sums, if your AI can make files
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - Open the skill in Claude, ChatGPT or Gemini, or paste it into a new chat. A chat is enough. You do not need to run code.
+  - Paste the payoff figure, the premium rate, the fee list and the new loan money. Say where each came from, and give the currency and units.
+  - Say whether the payoff includes accrued interest, and whether the new loan money already has any of the listed fees taken out.
+  - "Check one line yourself: closing need is payoff plus premium plus fees. For 100, 2 and 3, that is 105."
+  - Read MISSING and CHECKS MISSED before you share the result. Ask the lender to confirm the payoff for your closing date.
 how_it_works:
-  - title: 1. Confirm whether payoff includes accrued interest and whether new net proceeds already deduct any listed fee
-    text: Confirm whether payoff includes accrued interest and whether new net proceeds already deduct any listed fee.
-  - title: 2. Apply premium to the correct payoff base and add distinct refinancing cash fees
-    text: Apply premium to the correct payoff base and add distinct refinancing cash fees.
-  - title: 3. Compare total payoff need to usable new proceeds; list funding surplus or gap without claiming economic savings
-    text: Compare total payoff need to usable new proceeds; list funding surplus or gap without claiming economic savings.
+  - title: Lists the sources
+    text: Writes each figure with its date, source, currency and units. Facts you reported stay apart from assumptions.
+  - title: Checks the payoff
+    text: Asks if the payoff already includes accrued interest and which amount the premium applies to.
+  - title: Adds the premium and fees
+    text: Multiplies the payoff base by the premium rate, then adds the refinancing fees you pay in cash.
+  - title: Checks for double counting
+    text: Confirms the new loan money is not already net of the same fees. If it is, it takes the fee out once.
+  - title: Compares with the new money
+    text: Takes the usable new loan money off the closing need and shows a gap or a surplus.
 output_shape: |-
-  Total closing cash need, financing gap and transaction cost.
-  Scope and dated sources
-  Inputs and assumptions
-  Model calculations and reconciliations
-  Actual file verification
-  MISSING: and CHECKS MISSED
+  RESULT
+  Premium <amount> | Transaction cost <amount> | Closing cash need <amount> | Funding gap or surplus <amount>
+
+  SCOPE AND SOURCES
+  <currency, units, closing date; source and date for each input>
+
+  INPUTS AND ASSUMPTIONS
+  <payoff, premium rate and its base, fees, usable new loan money; whether accrued interest is in the payoff>
+
+  CALCULATIONS AND RECONCILIATIONS
+  <premium; transaction cost; closing need; gap; the check that no fee is counted twice>
+
+  FILE CHECK
+  <what was recalculated in the workbook, or "no workbook made">
+
+  MISSING
+  <each fact needed and not given>
+
+  CHECKS MISSED
+  <one line per check not done, or none>
+output_sample:
+  input:
+    - The old loan payoff amount
+    - The prepayment premium rate and what it applies to
+    - Your refinancing fees
+    - The new loan money you can use
+  prerequisites:
+    - The lender's payoff letter and your fee letter
+    - An AI that can make spreadsheet files, if you want a workbook (optional)
+  output:
+    - name: RESULT
+      contains: The premium, the transaction cost, the closing cash need and the funding gap or surplus.
+    - name: SCOPE AND SOURCES
+      contains: The currency, units and closing date, with the source and date of each input.
+    - name: INPUTS AND ASSUMPTIONS
+      contains: Your payoff, premium rate, fees and new loan money, kept apart from assumptions.
+    - name: CALCULATIONS AND RECONCILIATIONS
+      contains: Each sum in order, and the check that no fee is counted twice.
+    - name: FILE CHECK
+      contains: What was recalculated in the workbook, or a note that none was made.
+    - name: MISSING
+      contains: Every fact it needed and did not get. It never fills one with zero.
+    - name: CHECKS MISSED
+      contains: Checks that failed or could not run, or the word none.
 tweaks:
-  - what: Period and currency
-    how: Use the same calendar, currency and scale throughout matching inputs and outputs.
-  - what: Assumptions
-    how: Change supported inputs and recalculate the actual model; preserve the supplied actuals.
-  - what: Acceptance
-    how: Do not double count fees already netted from new debt proceeds.
+  - what: Premium base
+    how: Say if the premium applies to principal only or to principal plus accrued interest. Use the wording in the payoff letter.
+  - what: Fees
+    how: Say if the new lender already took a fee out of the loan, so the same fee is not counted twice.
+  - what: Closing date
+    how: Ask for a second run if the closing date moves. Accrued interest and the payoff figure change with the date.
 judge:
   - Do not double count fees already netted from new debt proceeds.
   - Premium base and date match the actual payoff letter and call-protection terms.
@@ -62,15 +120,28 @@ improve:
   - Record corrections with the affected source and model version.
 works_best_with:
   tools:
-    - name: A spreadsheet engine and file-capable AI
-      why: Create, recalculate, render and reopen the requested native workbook.
-    - name: Node.js 20 or later
-      why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
+    - name: Claude, ChatGPT or Gemini
+      why: Any of them can do these sums in a chat and show each step.
+    - name: An AI that can make spreadsheet files
+      why: It can build the workbook, recalculate it and check that it reopens.
+    - name: Node.js 20 or later (optional)
+      why: Runs the small script that comes with the skill, for a second check of the numbers.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The lender's payoff letter for your closing date
+    - The fee letter or closing statement
+    - The new loan term sheet or funds flow
+    - A named reviewer and the question you want answered
 terms:
-  - term: Illustrative figures
-    meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
+  - term: Payoff letter
+    meaning: A letter from the lender that states the exact amount to repay the loan on a given date.
+  - term: Prepayment premium
+    meaning: A fee for repaying a loan early, often a percentage of the amount repaid.
+  - term: Net proceeds
+    meaning: The money you can use from a new loan after the lender's own deductions.
+  - term: Funding gap
+    meaning: How much more cash you need than the new loan gives you.
   - term: Reconciliation
-    meaning: An independent comparison that explains a difference between matching records or financial schedules.
+    meaning: A check that explains any gap between two sets of figures that should match.
+next:
+  - debt-issue-proceeds-checker
+  - debt-maturity-funding-ladder

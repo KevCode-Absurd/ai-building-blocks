@@ -2,13 +2,10 @@ thinking: high
 thinking_why: Design choices cascade, so it weighs them.
 new_slug: ai-agent-workflow-designer
 name: AI agent workflow designer
-summary: Describe the job. Get a multi-agent design with handoffs, failure
-  handling and cost limits.
+summary: Plan an AI agent workflow for a big job. Get the right pattern, handoffs, retry rules and cost limits for each step, or learn one prompt is enough.
 job: set-up-ai
 headline: AI agent workflow designer
-subhead: A plan for splitting a big job across several AI agents, with clear
-  handoffs, failure handling and a cost cap for each step. Many jobs do not need
-  this.
+subhead: A plan for splitting a big job across several AI agents, with clear handoffs, failure handling and a cost cap for each step. Many jobs do not need this.
 explain: |
   A plan for splitting a big job across several AI agents, with clear handoffs, failure handling and a cost cap for each step. Many jobs do not need this. The skill tells you when one good prompt is enough.
 
@@ -18,6 +15,10 @@ when:
   - You want to see the workflow on paper before building it.
   - Your multi-agent set-up costs too much or fails with no clear cause.
   - You need a quality gate between a writer agent and a checker agent.
+not_for:
+  - "Your job fits in one well-written prompt: write that single prompt yourself and skip the multi-agent plan."
+  - "You want a finished, running system: hand the plan to a developer or build it in an automation tool."
+  - "You need advice on picking an AI tool or model: compare the tools on their own sites first."
 you_give:
   - The job to be done
   - The steps or specialists you imagine (optional)
@@ -30,7 +31,27 @@ you_get:
   - Timeout, retry and cost rules
   - Checks between steps
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
+  - Open Claude, ChatGPT or Gemini. No code or special tools are needed.
+  - Paste the skill text into the chat, then describe the job you want done.
+  - Add your cost and time limits, and any quality checks you need.
+  - Read the plan. Check that the pattern is the smallest one that works. If it says one prompt is enough, stop there.
+  - Hand the plan to a developer, or use it to build the workflow in an automation tool.
+output_sample:
+  input:
+    - The job you want done, in plain words
+    - The steps or specialists you imagine (optional)
+    - Your cost and time limits
+    - Quality or safety checks you need (optional)
+  output:
+    - name: Pattern
+      contains: The smallest workflow pattern that fits (sequential, parallel, router, orchestrator or evaluator), with the reasons you should use it.
+    - name: Agents
+      contains: Each agent's role and boundaries, so no two agents do the same work.
+    - name: Handoffs
+      contains: The fields passed between agents, kept to what the next agent needs.
+    - name: Failure rules
+      contains: A timeout and a retry rule for each step.
+    - name: Cost limits
+      contains: A budget for each step so costs do not pile up.
+    - name: Checks
+      contains: Quality checks on each result before it moves on or is merged.

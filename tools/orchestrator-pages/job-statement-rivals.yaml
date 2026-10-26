@@ -1,6 +1,6 @@
 new_slug: job-statement-rivals
 name: "Write your customers' job and name its real rivals"
-summary: "Give it what you sell and who buys. Get places to look, the job as a situation and your real rivals."
+summary: "Find the job your customers hire you for and your real rivals. Give it what you sell and who buys. You get leads, one job and a rival list."
 job: understand-customers
 thinking: high
 thinking_why: "It runs four skills and has to tell a real job from a need or a feature. Give it your strongest model."
@@ -17,6 +17,10 @@ when:
   - You can describe your buyers well but cannot say what progress they are trying to make.
   - You compare yourself with the usual competitors and sales still surprise you.
   - You feel growth is stuck and want to find who you are not serving.
+not_for:
+  - "You have no buyers to watch or talk to yet: run a plain customer survey first, then come back."
+  - "You want to know who your best buyers are: use the Best customer finder."
+  - "You want to know what puts buyers off: use the Customer objection coverage checker."
 
 you_give:
   - What you sell and who buys it
@@ -36,6 +40,26 @@ how_to_use:
   - Describe what you sell and who buys it. It runs the first step and stops.
   - Go and watch the top leads. Write what you see in people's own words, with where and when.
   - Bring the notes back and say "carry on from step 2".
+output_sample:
+  input:
+    - What you sell and who buys it
+    - Your question, such as where growth could come from
+    - Product facts, reviews or support emails (optional)
+    - Your notes from watching and talking to people, for the second half
+  prerequisites:
+    - An AI that can read the files in the handoff pack, such as Claude Code or a Claude Project
+    - Time to go and watch real customers between step 1 and step 2
+  output:
+    - name: step-01-job-hunting-spot-finder.md
+      contains: Ranked leads for unmet jobs, a list of hunches with no proof yet, and a visit plan for the top three.
+    - name: step-02-job-spec-writer.md
+      contains: One job written as a situation, with practical, social and emotional sides, trade-offs and who it is not for.
+    - name: step-03-job-rival-mapper.md
+      contains: Every rival for that job, including doing nothing, each with a short resume and what a customer must give up.
+    - name: step-04-competitor-white-space-mapper.md
+      contains: A rating of every rival and you on what the job cares about, showing where nobody is strong.
+    - name: HAND-BACK SUMMARY
+      contains: Each step's file, any step not run and why, and every MISSING line in one list.
 
 how_it_works:
   - title: Searches five places

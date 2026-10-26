@@ -1,6 +1,6 @@
 new_slug: channel-budget-mix-planner
 name: "Channel budget mix planner"
-summary: "Give it spend by channel and margin. Get a target split, small-channel caps and holdout tests."
+summary: "Plan your ad budget split across channels. Give it spend by channel and margin. Get a target split, test caps and holdout questions."
 job: plan-strategy
 thinking: medium
 thinking_why: "It weighs a few numbers against two big-store examples and needs care about what does not carry over to a small store."
@@ -17,6 +17,10 @@ when:
   - You spend on two or more ad channels and want to know if the split makes sense.
   - You are thinking about adding TikTok, YouTube, Pinterest or a creator budget and want a cap, not a leap.
   - Your branded search or shopping spend looks high and you want to test whether it earns its keep.
+not_for:
+  - "You spend under about $10K a day in total: pick one main channel and run one small capped test instead of a split."
+  - "You want to share one channel's budget across campaigns: use the next dollar budget allocator, not this planner."
+  - "You need to design a holdout test in detail: use the holdout test planner, then bring the results back here."
 
 you_give:
   - Monthly ad spend by channel for the last 3 to 6 months
@@ -35,6 +39,30 @@ how_to_use:
   - Add your gross margin after shipping, fees and returns. The skill needs it to judge what spend your margin can carry.
   - Read the split, then run the holdout tests it lists before you cut any channel.
   - Come back after a month with new spend and the test results.
+output_sample:
+  input:
+    - Your monthly ad spend by channel for the last 3 to 6 months
+    - Your total revenue for the same months
+    - Your gross margin after shipping, fees and returns
+    - Brand search against category search (optional)
+    - Your split of new and returning customers (optional)
+  prerequisites:
+    - A chat AI that can read a pasted table or a file
+  output:
+    - name: MIX CHECK
+      contains: Daily spend, channels in use, your blended result and the break-even result at your margin.
+    - name: TARGET SPLIT
+      contains: Each channel's current share, a target range and what to change first, with upper-funnel spend on its own line.
+    - name: CAPS FOR CHANNELS TO TEST
+      contains: A daily dollar cap, a pass mark, an end date and an owner for each small channel.
+    - name: BRANDED SEARCH
+      contains: Your branded search share of spend against a 1% reference, with a verdict to test, not cut.
+    - name: HOLDOUT QUESTIONS
+      contains: Claims to confirm, what to hold out, and how many days to wait before reading the result.
+    - name: REFERENCE STORES
+      contains: Two large-store examples with their size, their split and what does not carry over to you.
+    - name: MISSING
+      contains: Any input you did not give, such as spend, revenue, margin or months of data.
 
 how_it_works:
   - title: Checks your size

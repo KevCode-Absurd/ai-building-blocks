@@ -22,11 +22,11 @@ uses:
   - copilot-gtm-product-led-growth
 steps:
   - uses: copilot-gtm-positioning-strategy
-    note: Run only when the saved state and decision rules require it.
+    note: Run when the buyer or problem is unclear. Hands a positioning plan to the launch step.
   - uses: copilot-gtm-0-to-1-launch
-    note: Run only when the saved state and decision rules require it.
+    note: Run when positioning holds but there are no launch results. Takes the positioning plan and hands a first-customer plan to the growth step.
   - uses: copilot-gtm-product-led-growth
-    note: Run only when the saved state and decision rules require it.
+    note: Run only when a self-serve funnel has mature results. Takes your brief, plus the earlier plan if there is one, and hands back the activation and expansion plan.
 origin: rebuilt
 version: 1.0.0
 credits:

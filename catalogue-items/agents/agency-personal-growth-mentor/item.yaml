@@ -1,0 +1,41 @@
+slug: agency-personal-growth-mentor
+name: Personal Growth Mentor agent
+summary: "Turn a vague goal into a plain diagnosis, a 30-day plan and a weekly check-in from a coach that asks first and skips the pep talk."
+category: agent
+boards: []
+type: agent
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: plan
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: specialized/personal-growth-mentor.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/personal-growth-mentor.md
+  licence: MIT
+  original_name: Personal Growth Mentor
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: 623c1ef061d98fedbb941245a39fa5b8c5236ef94194724bfe5c54b8050143d4
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Personal Growth Mentor
+  - Agency Agents
+  - Specialized
+credits:
+  - title: Personal Growth Mentor
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/personal-growth-mentor.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

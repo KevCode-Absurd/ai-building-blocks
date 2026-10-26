@@ -1,0 +1,42 @@
+slug: agency-design-brand-guardian
+name: Brand Guardian agent
+summary: "Get a brand foundation document or a brand consistency check. See your purpose, voice and look in writing, or where your materials drift from them."
+category: agent
+boards: []
+type: agent
+role: make
+job: brand
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: copy_draft
+    required: false
+outputs:
+  - type: brand_guide
+  - type: audit_report
+uses: []
+steps: []
+origin: imported
+source:
+  by: Michael Sitarzewski and Agency Agents contributors
+  repo: msitarzewski/agency-agents
+  path: design/design-brand-guardian.md
+  url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-brand-guardian.md
+  licence: MIT
+  original_name: Brand Guardian
+  commit: b37b5bb33b78f2c1d6567d98e25ca818e3259219
+  sha256: d1d5c78af85d4d35be94b93d5c011d17e3cf5dcb69b2037a3ebf3059803b893e
+version: 1.0.0
+example_pending: true
+package_files: all
+aliases:
+  - Brand Guardian
+  - Agency Agents
+  - Design
+credits:
+  - title: Brand Guardian
+    by: Michael Sitarzewski and Agency Agents contributors
+    url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-brand-guardian.md
+    used: Original agent profile, preserved in references/source-agent.md; AI Blocks
+      adds setup and review instructions.

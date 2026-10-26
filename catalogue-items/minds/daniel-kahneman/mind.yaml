@@ -16,6 +16,29 @@ use_cases:
   - "Review a team's recommendation before you sign off, looking for the story they fell in love with"
   - "Settle a disagreement with a fair test both sides agree to before the results come in"
   - "Plan a trip, event or product around how people will remember it, not just how it feels minute by minute"
+not_for:
+  - "You need medical, legal or personal money advice: ask a doctor, lawyer or licensed adviser, as this mind does not give it."
+  - "You want to judge a bet by decision quality, not outcome: use the Annie Duke mind instead, named here as the Annie Duke page."
+  - "You face a fast, routine choice where trained instinct already works: trust your own judgement or ask a specialist in that field."
+output_sample:
+  input:
+    - The decision, forecast or plan you are about to make
+    - Your own estimate and how sure you are
+    - How similar past projects turned out (optional)
+    - Who will judge or vote on it (optional)
+  output:
+    - name: Confidence check
+      contains: What your confidence is based on, and what the story leaves out.
+    - name: Outside view
+      contains: How similar cases turned out, as a starting point before you adjust for your own.
+    - name: Framing test
+      contains: How the same choice reads as a gain and as a loss, and whether your answer flips.
+    - name: Process fix
+      contains: Scoring each part on its own, with private numbers written before the group talks.
+    - name: Check to run
+      contains: One concrete test, and the result that would change your mind.
+    - name: Sure, guessing, to test
+      contains: A short split of what is known, what is a guess and what to test.
 seats:
   - {seat: "Bias check", asks: "What would we see if we were wrong, and what are we not looking at?"}
   - {seat: "The outside view", asks: "How did projects like this one turn out for other people?"}

@@ -1,6 +1,6 @@
 slug: write-helpful-error-and-empty-states
 name: Write helpful error and empty states
-summary: Share the source files. Get a state inventory, revised messages and a handoff for implementation.
+summary: "Write clear error messages and empty states for your app. Share your screens and current text. Get every state listed, new wording and dev notes."
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -17,7 +17,6 @@ inputs:
   - type: design_file
     required: false
 outputs:
-  - type: code_change
   - type: copy_draft
   - type: design_direction
   - type: document
@@ -27,11 +26,11 @@ uses:
   - small-interface-details-designer
 steps:
   - uses: screen-states-designer
-    note: List the states and user actions for each supplied screen, including retry and interrupted work.
+    note: List the states and user actions for each supplied screen, including retry and interrupted work. Hands step 2 every failure and empty state with its cause and recovery options.
   - uses: plain-error-message-writer
-    note: Write a plain message for every failure state using only recovery actions the product supports.
+    note: Write a plain message for every failure state using only recovery actions the product supports. Reads step 1's failure states and hands step 3 the final text of each message.
   - uses: small-interface-details-designer
-    note: Specify focus, buttons and transitions so each message can be implemented and checked.
+    note: Specify focus, buttons and transitions so each message can be implemented and checked. Reads step 2's message text and your brief, and hands back the build notes.
 origin: rebuilt
 version: 1.0.0
 added: 2026-10-22

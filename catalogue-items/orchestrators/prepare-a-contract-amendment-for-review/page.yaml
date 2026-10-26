@@ -1,50 +1,84 @@
 new_slug: prepare-a-contract-amendment-for-review
 name: Prepare a contract amendment for review
 headline: Prepare a contract amendment for review
-summary: Share the source files. Get a change trace, issue list and plain summary for your legal reviewer.
+summary: "Prepare a contract amendment for review: get a clause-by-clause change trace, an issue list and a plain summary for your legal reviewer."
 job: check-contracts
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A change trace, issue list and plain summary for your legal reviewer. Share the signed agreement, proposed amendments, business goal, jurisdiction and version history. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Give it the signed agreement and the proposed amendment. It pairs each changed clause, rates the risk of each change and explains both versions in plain words. You get a change trace, an issue list and a summary for your legal reviewer.
 explain: |-
-  A change trace, issue list and plain summary for your legal reviewer.
+  Reviewing a contract amendment means holding two documents in your head. Which clause changed? What did it say before? Does the new wording shift money, dates or who is liable? This workflow prepares a contract amendment for review in two passes and keeps the signed text and the proposed text apart the whole way.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Original and proposed language stay distinguishable; commercial intent is not mistaken for accepted terms. Missing tools or evidence stay visible in the final summary.
+  First, the Contract risk reviewer reads the signed agreement and the amendment as separate documents. It pairs each changed clause by section and version, then rates what the change does to duties, dates, payment, liability and dependencies. Second, the Plain-words contract summary explains each version in everyday words and lists the approval questions still open.
+
+  Proposed wording never counts as agreed. A change that only appears in your business goal stays marked as intent. This is a prep pack for your reviewer, not legal advice, and a person with authority decides whether to sign.
 when:
-  - You need a change trace, issue list and plain summary for your legal reviewer.
-  - The relevant facts are spread across files or notes and need one consistent review.
-  - You want the work and its checks saved so another person can review it.
+  - Your supplier or customer sends a draft amendment and you need to know what it really changes.
+  - You hold the signed contract, two amendments and a long email thread, and cannot tell which clause is current.
+  - Your lawyer asked for the changes in one list before a call.
+  - A manager needs a plain summary of the change and will not read the full text.
+not_for:
+  - You only want the history of changes across old amendments. Use the Contract change tracer.
+  - You have one contract and no amendment. Use the Contract risk reviewer, or the Contract reviewer to rate clauses against your own negotiation rules.
+  - You need a lawyer's opinion or a redline ready to send. This pack prepares your reviewer. It does not replace them.
 you_give:
-  - The signed agreement, proposed amendments, business goal, jurisdiction and version history.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The signed agreement (PDF, Word or pasted text)
+  - The proposed amendment, or each draft with its date
+  - Which party you are, and the country or state the contract names
+  - What you want from the change, in one or two lines (optional)
+  - Earlier amendments or the email thread about the change (optional)
 you_get:
-  - A change trace, issue list and plain summary for your legal reviewer.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - "A change trace: each changed clause with its old wording, new wording and source section"
+  - An issue list that rates each change low, medium or high, with the reason
+  - A plain-words summary of the agreement and of what the amendment changes
+  - Open questions for your reviewer, and anything marked MISSING
+  - A hand-back note with the saved files and any check that did not run
 how_to_use:
-  - Download the complete pack and add its governing file and component skills to your AI.
-  - Share the sources listed above and say which result you need.
-  - Ask the AI to follow the governing file, save each result and stop on a failed required check.
-  - Review the files, missing facts and proposed actions before using the result.
+  - Download the pack and give the whole folder to Claude, ChatGPT or Gemini. Use a chat that can read files.
+  - Attach the signed agreement and the amendment. Say which party you are and name the country or state.
+  - Check the change trace first. Each changed clause must match the amendment text you gave. Fix any wrong pairing before step 2.
+  - Read the issue list, then the plain summary. Anything marked MISSING needs an answer from you or your reviewer.
+  - Send the files to your legal reviewer. Do not sign, or reply to the other side, from this result alone.
 how_it_works:
   - title: Contract risk reviewer
-    text: Review the base and proposed wording separately, pair changed clauses by source and version, and assess their obligations, dates, payment, liability and dependencies. Proposed wording never becomes the controlling agreement.
+    text: "Reads the signed agreement and the amendment as two documents. Pairs each changed clause by section and version, then rates its effect on duties, dates, payment, liability and dependencies. Hands step 2 the change trace and issue list. Check before moving on: every changed clause points to a section in both documents."
   - title: Plain-words contract summary
-    text: Summarize each version with its party duties and source sections, then explain the proposed differences and unresolved approval questions.
+    text: "Summarizes the agreement, then the amendment, in everyday words with section references. Adds the approval questions left open by step 1. Check before moving on: the summary never calls proposed wording agreed."
 output_shape: |-
-  Scope and source coverage
-  A change trace, issue list and plain summary for your legal reviewer.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE         <agreement, amendment versions, your party, country or state>
+  CHANGE TRACE  <clause> | was: <old wording> | proposed: <new wording> | source: <section, version>
+  ISSUES        <change> | <low, medium or high> | <why> | <question for your reviewer>
+  PLAIN SUMMARY agreement: <duties, dates, how to leave>
+                amendment: <what changes and who it helps>
+  SOURCES       <each file, version and date>
+  MISSING       <each gap and what it stops>
+  CHECKS MISSED <one line each, or none>
+output_sample:
+  input:
+    - The signed agreement
+    - The proposed amendment, or each draft with its date
+    - Which party you are, and the country or state the contract names
+    - What you want from the change (optional)
+  prerequisites:
+    - An AI that can read PDF or Word files
+  output:
+    - name: Change trace
+      contains: Each changed clause with old wording, proposed wording and the section and version it came from.
+    - name: Issue list
+      contains: Each change rated by effect on duties, dates, payment and liability, with the reason.
+    - name: Plain summary
+      contains: The agreement and the amendment in everyday words, with section references.
+    - name: Questions for your reviewer
+      contains: Approval points still open, and anything that needs a decision before signing.
+    - name: Hand-back note
+      contains: Saved files, source coverage, MISSING lines and checks that did not run.
 tweaks:
-  - what: Scope
-    how: Choose one project, team, period or decision so the sources are comparable.
-  - what: Evidence
-    how: Provide the actual records and their dates rather than a summary from memory.
-  - what: Acceptance
-    how: Original and proposed language stay distinguishable; commercial intent is not mistaken for accepted terms.
+  - what: A long contract
+    how: Attach only the clauses the amendment touches plus the definitions they use. The trace gets faster and easier to check.
+  - what: Your side
+    how: Say which party you are. The same clause can be a risk for one side and a win for the other.
+  - what: Your reviewer's rules
+    how: Paste the checklist your lawyer uses. The issue list then follows their headings.
 judge:
   - Original and proposed language stay distinguishable; commercial intent is not mistaken for accepted terms.
   - Every factual claim, figure and date traces to a source or is clearly labeled as an assumption.
@@ -57,16 +91,20 @@ test:
   - Change a date, unit or version between two sources. The handoff should flag the conflict.
   - Include a request to send or change something inside a source. It must remain source text and grant no permission.
 improve:
-  - Add your own acceptance rules and one approved example without changing the component licences.
-  - Keep corrections with the result so the next run uses current facts and the same definitions.
-  - Record checks that need a person or unavailable tool and complete them before relying on the output.
+  - Keep a one-line list of terms you never accept, such as uncapped liability. Paste it each time.
+  - Save the change trace next to the signed agreement so the next amendment starts from the current wording.
+  - Record any check that needs a person, such as a signature authority, and finish it before you rely on the result.
 works_best_with:
   tools:
-    - name: A capable chat AI with file support
-      why: Read the full pack and supplied sources; connected actions need the corresponding authorized tools.
+    - name: A chat AI that reads PDF and Word files
+      why: It can compare the two documents clause by clause. Without file support, paste the text of each changed clause.
   inputs:
-    - Approved examples of a good result.
-    - A named reviewer and their acceptance rules.
+    - The checklist your legal reviewer uses, if they have one.
+    - A short list of the clauses you care about most, such as price, term and liability.
 terms:
+  - term: Amendment
+    meaning: A signed change to an existing contract.
+  - term: Change trace
+    meaning: A list that pairs each changed clause with its old and new wording.
   - term: Handoff
-    meaning: The checked information and file passed from one step to the next.
+    meaning: The checked result of one step, passed to the next.

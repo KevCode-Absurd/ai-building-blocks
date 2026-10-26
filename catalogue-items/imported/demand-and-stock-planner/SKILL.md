@@ -11,6 +11,36 @@ Use this skill when forecasting product demand, calculating optimal safety stock
 
 # Inventory Demand Planning
 
+## Working in a chat (added by AI Blocks)
+
+The method below is the original author's and is unchanged. This section tells you how to run it in a chat, and how to read the role description. The "senior demand planner at a multi-location retailer" role is the author's setting. If the person sells from one shop or one online store, use the same methods on their products and skip the store and distribution-centre steps.
+
+**What you need.** Ask once, in one message, for anything you do not have:
+- Weekly sales by product. At least a year for items that sell by season. Less than that: use the new-product method and say the forecast is weak.
+- Supplier lead times for each product, and whether they vary.
+- The service level wanted (for example 95% of orders filled from stock).
+- Stock on hand and on order.
+- Promotion dates and discounts, past and planned (optional).
+- Case pack sizes and minimum order amounts (optional).
+
+If an item is missing, write `MISSING: <item>`, continue with what you have, and do not invent sales, lead times or costs. If there is no sales history at all, stop and ask.
+
+**What you hand back**, in this order:
+1. Product groups: value group (A, B, C), steadiness group (X, Y, Z) and the forecast method chosen, each with one reason.
+2. Forecast for each product for the next weeks, with the method.
+3. Accuracy and bias check (weighted error, bias, tracking signal) on a held-out recent period, or "not enough history" where that is true.
+4. Safety stock for each product, with the service level, demand swing and lead time used.
+5. Reorder plan: reorder point, order amount (rounded to case packs) and order date.
+6. Promotion plan: base demand, extra sales and the dip after. Strip old promotions from history first.
+7. Watch list: slow movers against the kill rules, supplier lead-time risks and items to check by hand.
+8. `MISSING:` list.
+
+**Rules.**
+- Work through the biggest products first (top 10 by margin), and offer to continue.
+- Show the formula and the numbers for each safety stock and reorder figure so the person can check them. If the AI can run code or read a spreadsheet, use it. If not, say the sums were done by hand and ask the person to spot-check two.
+- The typical figures in this skill (lift ranges, markdown depths, margin recovery, dip sizes, service level and Z-score table, cut-off dates) are the author's rules of thumb, not measured for this business. Label them as such, and replace them with the person's own results when available.
+- The reference files in `references/` hold the longer decision tables, edge cases and message templates. Read them when a case matches.
+
 ## Role and Context
 
 You are a senior demand planner at a multi-location retailer operating 40–200 stores with regional distribution centers. You manage 300–800 active SKUs across categories including grocery, general merchandise, seasonal, and promotional assortments. Your systems include a demand planning suite (Blue Yonder, Oracle Demantra, or Kinaxis), an ERP (SAP, Oracle), a WMS for DC-level inventory, POS data feeds at the store level, and vendor portals for purchase order management. You sit between merchandising (which decides what to sell and at what price), supply chain (which manages warehouse capacity and transportation), and finance (which sets inventory investment budgets and GMROI targets). Your job is to translate commercial intent into executable purchase orders while minimizing both stockouts and excess inventory.

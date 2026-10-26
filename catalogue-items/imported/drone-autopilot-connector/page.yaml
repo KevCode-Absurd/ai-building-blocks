@@ -2,13 +2,10 @@ thinking: medium
 thinking_why: Setup needs matching dialects and ports.
 new_slug: drone-autopilot-connector
 name: Drone autopilot connector
-summary: Say which drone or flight controller. Get MATLAB connected over MAVLink
-  and reading its data.
+summary: Connect MATLAB to a PX4 or ArduPilot drone over MAVLink. Get working code, a heartbeat timer and a check that your drone is found.
 job: build-software
 headline: Drone autopilot connector
-subhead: MATLAB talking to your drone in a few minutes. You name the flight
-  controller, such as PX4 or ArduPilot, and get a working MAVLink link over UDP,
-  with MATLAB acting as the ground station.
+subhead: MATLAB talking to your drone in a few minutes. You name the flight controller, such as PX4 or ArduPilot, and get a working MAVLink link over UDP, with MATLAB acting as the ground station.
 explain: |
   MATLAB talking to your drone in a few minutes. You name the flight controller, such as PX4 or ArduPilot, and get a working MAVLink link over UDP, with MATLAB acting as the ground station.
 
@@ -18,6 +15,10 @@ when:
   - Your ground station code never gets a reply from the autopilot.
   - You need a heartbeat that keeps the link alive.
   - You are testing against ArduPilot on a network.
+not_for:
+  - "You only want to read a flight log file offline: use MATLAB's ulogreader directly."
+  - "You work with Simulink MAVLink blocks: this is a different setup, so use the MathWorks Simulink docs."
+  - "You only want to read or set parameters, or upload missions, on a link that already works: ask your AI directly."
 you_give:
   - Which autopilot you use, PX4 or ArduPilot
   - IP address and UDP port
@@ -29,9 +30,31 @@ you_get:
   - Confirmation that the client is found
   - A link ready for reading flight data
 how_to_use:
-  - Download the skill folder. Follow the setup steps for your AI tool, or paste
-    the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on
-    this page.
-  - It works best when your AI can run MATLAB and reach a PX4 or ArduPilot
-    autopilot.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - Tell your AI which autopilot you use, PX4 or ArduPilot, and give the IP address and UDP port.
+  - Say if your drone already sends heartbeats. If you are not sure, say so and your AI can pick the right path.
+  - Run the code in MATLAB. Your AI cannot run it unless it has MATLAB access, so paste any errors back to it.
+  - Check that the client list shows more than one row. The extra row is your drone.
+  - Test arm commands only in a simulator, or with propellers removed and people clear of the vehicle.
+output_sample:
+  input:
+    - Which autopilot you use, PX4 or ArduPilot
+    - Your simulator or drone IP address and UDP port
+    - Whether your drone already sends heartbeats (optional)
+  prerequisites:
+    - MATLAB with MAVLink support
+    - An AI that can run MATLAB code, or you paste the code in yourself
+    - A PX4 or ArduPilot simulator or drone on your network
+  output:
+    - name: Dialect and MAVLink link
+      contains: Code that loads the message set and opens a ground station link with the standard ground station ID.
+    - name: UDP connection
+      contains: Code that opens the UDP port so your drone can reach MATLAB.
+    - name: Heartbeat message
+      contains: A ground station heartbeat message built with the right field types, so packets are not corrupted.
+    - name: Heartbeat timer
+      contains: A timer that sends one heartbeat each second, either to a found drone or to a set address and port.
+    - name: Client discovery check
+      contains: A wait loop that lists connected clients and stops with an error if your drone does not appear in time.
+    - name: Message reading and clean up
+      contains: Optional code to read the latest messages, plus steps that stop the timer and close the link.

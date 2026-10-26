@@ -1,6 +1,6 @@
 new_slug: video-hook-scorer
 name: "Video hook scorer"
-summary: "Paste your video hooks and who sees them. Get each scored out of 100, with rewrites."
+summary: "Score your video ad hooks out of 100, see who each one attracts, and get rewrites for the weak ones before you film."
 job: check-ads
 thinking: medium
 thinking_why: "It scores short lines against a fixed scale, so a mid-size model is enough, and a stronger one gives sharper rewrites."
@@ -17,6 +17,10 @@ when:
   - You have a batch of hook ideas and need to pick the few worth filming.
   - A video has weak early retention and you want to know whether the hook is the cause.
   - You are about to test hooks and want to cut a list of 20 down to 5.
+not_for:
+  - "You have no hook drafts yet and no script: write one first with the Video ad script writer from customer quotes."
+  - "You want to check a finished ad for Meta policy risks: use the Meta ads compliance checker."
+  - "You want to judge organic posts, not paid video ads: ask a person who knows your audience, or compare your own past results."
 
 you_give:
   - The hooks, each with the spoken line, the words on screen and what is seen in the first 3 seconds
@@ -35,6 +39,30 @@ how_to_use:
   - Say who is meant to see the ad and how much they already know about the problem and about you.
   - Paste the body script if you have it, so the skill can check the hook matches.
   - Film the top three, then use trial reels or a small test to see which really holds viewers.
+output_sample:
+  input:
+    - Your hooks, each with the spoken line, the words on screen and what is seen in the first 3 seconds
+    - The buyer each hook is for and the problem it speaks to
+    - How much the buyer already knows (cold or ready to buy)
+    - Your body script (optional)
+    - The claims you may make (optional)
+  prerequisites:
+    - Your brand brain from the Website brand brain builder (optional, makes the result better)
+  output:
+    - name: SCALE
+      contains: A one-line reminder that five ratings from 1 to 5 are added and multiplied by 4 for a score out of 100.
+    - name: HOOK score line
+      contains: The total out of 100 with a verdict to film, fix or cut, and the five ratings behind it.
+    - name: Layers
+      contains: What is said, what shows as text and what is seen, for each hook.
+    - name: Who it attracts
+      contains: Who the hook pulls in, who it turns away, and whether it qualifies the right viewer.
+    - name: Flags and rewrites
+      contains: Product-first, body mismatch, claim and AI-tell flags, plus 3 to 6 rewrites that each change one layer.
+    - name: Film first and claims to check
+      contains: The top three hooks to film, the ones to cut, and any claim to check before running.
+    - name: Missing
+      contains: Anything you did not give, such as the awareness stage or body script, and which checks were not run.
 
 how_it_works:
   - title: Reads each layer

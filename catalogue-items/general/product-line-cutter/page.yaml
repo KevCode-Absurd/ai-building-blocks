@@ -1,6 +1,6 @@
 new_slug: product-line-cutter
 name: "Product line cutter"
-summary: "List everything you sell. Get what to keep and what to cut, and a simple grid of the plan."
+summary: "Cut your product line down to the items worth keeping. List what you sell with sales and margin. Get a keep list, a cut list and a simple grid."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sorts a list against fixed tests and needs sound judgment about overlaps, but not deep research."
@@ -17,6 +17,10 @@ when:
   - You sell more items than your team or buyers can keep straight.
   - Two or three products seem to do the same job.
   - You need to free up cash and focus before a new season or year.
+not_for:
+  - You sell only one product or service. Talk to a few buyers about what to improve instead.
+  - A contract or season must run out before you can cut. Use a spreadsheet to plan the wind-down dates first.
+  - You want to pick which new feature to build. Use the Feature request screener.
 
 you_give:
   - "A list of every product or service, with sales and margin for each"
@@ -36,6 +40,29 @@ how_to_use:
   - "Say who buys each one, and what is on your road map."
   - "Read the grid and check each box has one clear product."
   - "Share the cut list with the team, with the reasons."
+output_sample:
+  input:
+    - Your list of products or services, with sales and margin for each
+    - Who buys each one, and in what size, tier or format
+    - Cash tied up in stock or work in progress (optional)
+    - Your planned products and any promises you must keep (optional)
+  output:
+    - name: Product table
+      contains: Every product with its sales, margin and the cash it brings in, plus planned products in a separate block.
+    - name: Overlaps
+      contains: Each close pair marked distinct, close or same job, with the evidence behind the call.
+    - name: The stars
+      contains: Products that lead their group and are both timeless and fresh, each with a one-sentence reason.
+    - name: The grid
+      contains: The two splits that matter most, with every product placed in one box and one great product per box.
+    - name: Keep list
+      contains: Each product you keep, its box and why.
+    - name: Cut list
+      contains: Each cut with a plain reason the team can repeat and what happens to current buyers.
+    - name: Road map decisions
+      contains: Each planned product marked keep or drop, with a reason.
+    - name: Missing and checks missed
+      contains: Anything you did not give, and any check the AI could not pass.
 
 how_it_works:
   - title: Lists every product

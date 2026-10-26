@@ -13,10 +13,10 @@ outputs:
   - {type: shot_list}
 uses: [dead-air-and-retake-cutter, youtube-transcript-reader, youtube-chapter-writer, shorts-clip-finder]
 steps:
-  - {uses: dead-air-and-retake-cutter, note: "Starts from the transcript of your raw recording and gives a timed list of cuts."}
-  - {uses: youtube-transcript-reader, note: "Fresh start after the edit: reads the link to the cut version, so chapters and clips match the final timing. You can paste the captions yourself instead."}
-  - {uses: youtube-chapter-writer, note: "Reads the transcript from the step before and writes the chapter block for the description."}
-  - {uses: shorts-clip-finder, note: "Reads the same transcript and picks five moments that stand alone, with a new first line for each."}
+  - {uses: dead-air-and-retake-cutter, note: "Starts from the transcript of your raw recording and gives a timed list of cuts. You make the cuts in your editor and upload the result."}
+  - {uses: youtube-transcript-reader, note: "Uses the link to your cut video, not step 1's cut list (you cut and upload between the steps). Reads its captions so chapters and clips match the final timing, and hands that transcript to steps 3 and 4. You can paste the captions yourself instead."}
+  - {uses: youtube-chapter-writer, note: "Reads the transcript from step 2 and writes the chapter block for the description. The chapters go to you; step 4 does not need them."}
+  - {uses: shorts-clip-finder, note: "Uses the step 2 transcript again, not the chapters, and picks five moments that stand alone, with a new first line for each."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/cut-chapter-and-clip-a-long-video-into-five-shorts/skeleton.yaml

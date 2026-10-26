@@ -1,6 +1,6 @@
 new_slug: google-ads-campaign-structure-planner
 name: "Google Ads campaign structure planner"
-summary: "Give it your catalogue and markets. Get the fewest campaigns, each with a reason, and a rollout."
+summary: "Plan Google Ads campaign structure for your store: get the fewest campaigns, a reason for each, what to merge, and a 90-day rollout."
 job: run-google-ads
 thinking: medium
 thinking_why: "It weighs each campaign against a short list of valid reasons and has to know when to leave things alone."
@@ -17,6 +17,10 @@ when:
   - Your account has many campaigns and each gets only a few sales.
   - You are adding a new country, collection or clearance range and need to know where it goes.
   - You want one clear map of campaigns before an audit or a hire.
+not_for:
+  - You run lead generation or a B2B-only store with no product feed. Ask a Google Ads specialist to plan search campaigns instead.
+  - You only want to win back past visitors. Use the Google remarketing campaign builder instead.
+  - Your store has fewer than about 30 sales a month in total. Keep one or two campaigns and skip a big restructure.
 
 you_give:
   - Your current campaigns, with 30 days of spend and conversions
@@ -35,6 +39,34 @@ how_to_use:
   - Paste your categories with margins, stock grades and countries.
   - Read the merge list first. Merge before you add anything.
   - Follow the rollout in slow steps, and check results after each one.
+output_sample:
+  input:
+    - Your current campaigns, with 30 days of spend and conversions
+    - Your product categories, with margin and stock grade for each
+    - The countries and currencies you sell in
+    - Your SKU count and clearance stock list (optional)
+  prerequisites:
+    - A Google Ads campaign export for the last 30 days
+    - Your margin for each product category
+  output:
+    - name: CONVERSIONS and MINIMUM STRUCTURE
+      contains: Your total conversions for a month, and whether you should keep the structure to the minimum.
+    - name: TARGET MAP
+      contains: Each campaign to keep, with its reason and share of budget.
+    - name: MERGE OR DELETE
+      contains: Which campaigns merge into which, and why.
+    - name: SEARCH AD GROUPS
+      contains: Themed ad groups, each with 10 to 20 keywords.
+    - name: PERFORMANCE MAX ASSET GROUPS
+      contains: One group per product type, with the products in each.
+    - name: FEEDER PAIR and PORTFOLIO BIDDING
+      contains: Whether to pair Shopping with Performance Max, and whether campaigns should share one bid strategy.
+    - name: NAMING
+      contains: A naming pattern so every campaign reads at a glance.
+    - name: 90-DAY ROLLOUT
+      contains: A week-by-week list of slow changes, starting with tracking.
+    - name: WHERE SOURCES DIFFER and CHECKS MISSED
+      contains: Where the skill's sources disagree and which choice it made, plus any check it could not do.
 
 how_it_works:
   - title: Counts conversions

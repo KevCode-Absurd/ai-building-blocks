@@ -1,32 +1,65 @@
 new_slug: lifo-reserve-earnings-bridge
 name: LIFO reserve earnings bridge
 headline: LIFO reserve earnings bridge
-summary: Translate disclosed LIFO reserves into a comparable FIFO inventory and earnings bridge.
+summary: Turn the LIFO reserve in a company's filing into a FIFO inventory and earnings bridge. See how COGS, inventory and after-tax profit change.
 job: track-numbers
 thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
-subhead: A FIFO analytical restatement with inventory, COGS and after-tax earnings differences. Share lIFO inventory, opening/closing LIFO reserves, reported COGS, revenue, tax effect and evidence about acquisitions or reserve changes.
+subhead: Give it a company's LIFO inventory, its LIFO reserves, COGS, revenue and tax rate. It restates inventory, COGS and after-tax earnings as if the company used FIFO. You get a bridge from reported to FIFO figures, with checks and gaps listed.
 explain: |-
   A FIFO analytical restatement with inventory, COGS and after-tax earnings differences.
 
   Issuer accounting and earnings. Illustrative figures. Reserve increase60-40=20 lowers FIFO COGS from350 to330; gross margin is170/500=34%. Inventory200+60=260 and after-tax earnings rise20×75%=15. Reserve30 reverses these directions.
 when:
-  - You need a FIFO analytical restatement with inventory, COGS and after-tax earnings differences.
-  - You work on issuer accounting and earnings and need traceable calculations.
-  - A reviewer needs to trace the result back to inputs and assumptions.
+  - You compare a LIFO company with a FIFO company and need the numbers on the same basis.
+  - You want to know how much a rising LIFO reserve lowered reported profit.
+  - You need to flag a reserve drop, where old low-cost layers boosted profit.
+  - A reviewer wants to trace each FIFO figure back to a filing.
+not_for:
+  - "Your company reports under IFRS or has no LIFO disclosure: IAS 2 does not allow LIFO, so compare the reported FIFO or average-cost figures directly."
+  - "You need a tax return, a filing or advice on a tax refund: ask your accountant, because this bridge is an analysis only."
+  - "You need a full forecast model with several years of statements: build it in your own spreadsheet with an accountant or analyst."
 you_give:
-  - LIFO inventory, opening/closing LIFO reserves, reported COGS, revenue, tax effect and evidence about acquisitions or reserve changes.
-  - Reporting date, currency and scale, fiscal calendar, accounting basis and authorized scope.
-  - Available spreadsheet tools and required native output format.
+  - Reported LIFO inventory at the end of the period.
+  - LIFO reserve at the start and end of the period.
+  - Reported cost of goods sold (COGS) and revenue.
+  - The tax rate to apply to the change.
+  - Notes on acquisitions, currency effects or method changes in the reserve (optional).
 you_get:
-  - A FIFO analytical restatement with inventory, COGS and after-tax earnings differences.
-  - An illustrative editable workbook, input schema, executable calculation reference and golden test cases.
-  - Reconciliation results, unresolved inputs and actual checks completed.
+  - FIFO inventory, which is LIFO inventory plus the closing reserve.
+  - FIFO COGS, which is LIFO COGS less the rise in the reserve.
+  - The gross margin and after-tax earnings difference, tied to reported figures.
+  - A flag when the reserve fell, so the gain is not shown as growth.
+  - An editable workbook, if you ask for one, plus a list of missing inputs and unrun checks.
 how_to_use:
-  - Download the complete pack and read its governing SKILL.md.
-  - Share the actual sources and the financial question you need answered.
-  - Ask your AI to follow the methods, preserve original files and stop affected work on missing evidence.
-  - Review assumptions, reconciliations and CHECKS MISSED before relying on the result.
+  - "Collect the numbers from the company's annual report: inventory, both reserve balances, COGS, revenue and the tax rate you want to use."
+  - Open your AI and add this skill. Use an AI that can make spreadsheet files if you want a workbook.
+  - Paste your numbers and say the reporting date, currency and scale. Say if any reserve change came from an acquisition or currency move.
+  - Ask for the bridge. If you want to run the included script, your AI needs Node.js 20 or later.
+  - "Check the direction first: a rising reserve should lower FIFO COGS. Then read the MISSING lines and CHECKS MISSED before you use the result."
+output_sample:
+  input:
+    - Reported LIFO inventory
+    - Opening and closing LIFO reserve
+    - Reported cost of goods sold (COGS) and revenue
+    - Tax rate to apply
+    - Notes on acquisitions, currency or method changes (optional)
+  prerequisites:
+    - An AI that can create and recalculate spreadsheet files
+    - Node.js 20 or later, only if you want to run the included calculation script
+  output:
+    - name: Scope and dated sources
+      contains: The reporting date, currency, scale and the filings or notes each number came from.
+    - name: Inputs and assumptions
+      contains: Every number used, the tax effect assumption, and any reserve change you asked to exclude.
+    - name: Model calculations and reconciliations
+      contains: FIFO inventory, FIFO COGS, gross margin difference and after-tax earnings difference, tied back to reported figures.
+    - name: Editable workbook
+      contains: A spreadsheet with inputs, formulas and checks, when you ask for a workbook.
+    - name: Actual file verification
+      contains: Which recalculation and file checks ran on the workbook.
+    - name: MISSING and CHECKS MISSED
+      contains: Inputs that were not supplied and any checks that failed or could not run.
 how_it_works:
   - title: 1. Confirm US-GAAP LIFO usage and read the reserve definition; exclude acquisitions, currency and method changes from the operating reserve movement when necessary
     text: Confirm US-GAAP LIFO usage and read the reserve definition; exclude acquisitions, currency and method changes from the operating reserve movement when necessary.

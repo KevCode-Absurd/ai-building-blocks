@@ -1,6 +1,6 @@
 new_slug: raw-cost-breakdown-finder
 name: "Raw cost breakdown finder"
-summary: "Name something you buy or sell. Get its price broken into raw parts and costs, and the biggest gaps to go after."
+summary: "Find the raw cost behind any price. Give it a product or service and get a cost breakdown, the gap to your price, and two moves to close it."
 job: plan-strategy
 thinking: high
 thinking_why: "It builds a cost model from scratch, judges which gaps are real and ranks moves with uncertain numbers."
@@ -17,6 +17,10 @@ when:
   - A supplier quote or a monthly bill keeps rising and you do not know if it is fair.
   - You are pricing a new product and want to know how much of your price is real cost.
   - You are choosing between buying, making or redesigning something you use a lot.
+not_for:
+  - "You only want to compare quotes from two suppliers: ask each for a line-by-line quote and put them side by side in a spreadsheet."
+  - "The price is fixed by a contract that cannot change: check the contract terms first, or ask your supplier about renewal."
+  - "It is a one-off buy of small value: the time spent costs more than any saving, so just buy it."
 
 you_give:
   - The thing you buy or sell, and the price you pay or charge (required)
@@ -35,6 +39,25 @@ how_to_use:
   - If your AI can search, ask it to use open sources for raw prices. If not, add prices you know.
   - Check every line marked as an estimate with a real quote before you act.
   - Pick one move and test it on a small order.
+output_sample:
+  input:
+    - The thing you buy or sell, and the price you pay or charge
+    - Product facts such as size or materials (optional)
+    - How many you buy or sell each month or year (optional)
+    - A supplier quote or invoice (optional)
+  output:
+    - name: Raw breakdown table
+      contains: Each raw input or step with its quantity, cost and source, or an ESTIMATE label where there is no source.
+    - name: Totals
+      contains: The raw cost added up, the price, and the gap shown as an amount and a percent.
+    - name: Where the gap is
+      contains: "The biggest parts of the gap, each with a reason: scale, habit, margin or a real limit."
+    - name: Two moves
+      contains: Two ranked ways to close the biggest gap, with saving, effort, risk and a first small test.
+    - name: MISSING lines
+      contains: What you could add, such as a quote or a price source, to make the numbers firmer.
+    - name: Checks missed
+      contains: One line for each of its own checks it could not pass, or none.
 
 how_it_works:
   - title: Name the price

@@ -1,6 +1,6 @@
 new_slug: brand-and-sales-budget-splitter
 name: "Brand and sales budget splitter"
-summary: "Paste your ad spend by channel and market numbers. Get a brand versus sales split, a share-of-voice check and what to shift."
+summary: "Split your ad budget between brand building and sales activation. Paste spend by channel and get a split, a share-of-voice check and one shift to test."
 job: plan-strategy
 thinking: high
 thinking_why: "It sorts channels by what they really do and compares market figures, where a wrong sort changes the advice."
@@ -17,10 +17,14 @@ when:
   - Most of your ad spend goes to people who are already looking to buy.
   - Sales from ads are flat and you suspect you are fishing in the same small pond.
   - You are setting next year's budget and want a reason for the split.
+not_for:
+  - "You run a single channel with no spend history: run a small test in that channel, or ask a marketing adviser."
+  - "You want to measure results for each channel: use the Marketing scorecard builder first, then come back."
+  - "You need a full media plan with dates and audiences: ask a media planner or your ad agency."
 
 you_give:
   - Your spend by channel for a recent period
-  - Your scorecard or audit report of what each channel delivers
+  - Your scorecard or audit report of what each channel delivers (optional)
   - Your market share and rivals' spend, if you know them (optional)
   - Your brand file (optional)
 you_get:
@@ -34,6 +38,29 @@ how_to_use:
   - Paste your spend by channel and, if you have it, the scorecard from "Marketing scorecard builder".
   - Add your market share and rivals' spend if you know them. If not, say so.
   - Pick the shift it proposes and test it for the time it names before judging.
+output_sample:
+  input:
+    - Your spend by channel for a recent period
+    - Your scorecard or audit report of what each channel delivers (optional)
+    - Your market share and rivals' spend (optional)
+    - Your brand file (optional)
+  output:
+    - name: Channel sort
+      contains: Each channel marked as brand building or sales activation, with its spend and the reason for the label.
+    - name: Current split
+      contains: Your brand and activation percentages beside a starting guide of about 60 and 40.
+    - name: Share of voice vs share of market
+      contains: Your share of voice against your share of market, read as set to grow, hold, shrink or unknown.
+    - name: Messages and reach
+      contains: Whether messages are rational or emotional, and whether reach is broad or narrow.
+    - name: The shift to test
+      contains: One small change, its expected effect, how long it takes to show and how to measure it.
+    - name: What the split depends on
+      contains: Brand size, category, buying cycle and other things that move the right split for you.
+    - name: Measures
+      contains: Short-term measures for activation and long-term measures for brand building.
+    - name: Missing and checks missed
+      contains: Inputs you did not give and any checks the skill could not pass.
 
 how_it_works:
   - title: Sorts the channels

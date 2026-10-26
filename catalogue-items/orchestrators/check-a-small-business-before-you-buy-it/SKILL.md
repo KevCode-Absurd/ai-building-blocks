@@ -50,7 +50,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Meet the seller and collect the documents on the checklist. Paste the answers and any new files.
 
-3. **Read the statements.** Use the skill `financial-statement-analyst`. Give it the statements and the seller's answers. Trends, margins, what is unusual and what is missing in the statements, with each finding tied to a line.
+3. **Read the statements.** Use the skill `financial-statement-analyst`. Give it your books and the seller's answers, not the step 2 questions. Trends, margins, what is unusual and what is missing in the statements, with each finding tied to a line.
 4. **Work out owner earnings.** Use the skill `owner-earnings-calculator`. Give it the statement analysis. Owner earnings in Warren Buffett's definition: reported earnings plus non-cash charges, minus what the business must spend to stay as it is, including the owner's unpaid work at a fair wage.
 5. **Set the value range.** Use the skill `business-value-range-calculator`. Give it the owner earnings and the analysis. A value range with the method shown, the price at which the deal stops making sense, and what you must still verify before an offer.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.

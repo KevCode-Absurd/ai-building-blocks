@@ -1,6 +1,6 @@
 new_slug: open-buyer-group-finder
 name: Open buyer group finder
-summary: Paste your product and rival ads. Get buyer groups nobody targets, ranked, with a hook for each.
+summary: Find buyer groups your rivals ignore. Paste your product and rival ad notes to get a ranked list of open groups, each with a hook.
 job: find-products
 thinking: medium
 thinking_why: It compares what rivals show against groups you could serve.
@@ -14,6 +14,10 @@ when:
   - Many stores sell your product and your ads look the same as theirs.
   - You want a new buyer group to aim at.
   - You are planning your first ad tests.
+not_for:
+  - You have fewer than ten rival ads to study. The map will be a guess, so gather more ads first.
+  - "You want the full version with every check: use the Untapped buyer finder."
+  - "You only want to know who already buys from you: ask a person on your team to pull your sales data."
 you_give:
   - Your product
   - "Notes on rival ads: who they show and the problem they name"
@@ -28,6 +32,22 @@ how_to_use:
   - Look at ten or more rival ads first.
   - Paste what each shows, not your guesses.
   - Test three groups at most on a small budget.
+output_sample:
+  input:
+    - Your product, with what it is and does
+    - "Notes on rival ads: who each one shows and the problem it names"
+    - Your test budget per group (optional)
+  output:
+    - name: WHO RIVALS SHOW
+      contains: Each buyer group the rival ads show, how many ads show it, and the problem each one names.
+    - name: WHO THEY MISS
+      contains: Ranked groups no rival aims at, with their problem and a sign of how big the group is.
+    - name: TEST PLAN
+      contains: "For each group: a hook, a creative idea, a page line and a stop rule."
+    - name: START WITH
+      contains: Up to three groups to test first, and why.
+    - name: MISSING
+      contains: Any rival ads, product facts or budget you did not give.
 how_it_works:
   - title: Read the rival ads
     text: Who each one shows and the problem it names.

@@ -1,0 +1,128 @@
+name: Codebase Onboarding Engineer agent
+summary: Get a codebase onboarding map for any repo, with entry points, key files and how requests flow, built only from the code. Facts, no advice.
+headline: Codebase Onboarding Engineer agent
+subhead: Point your AI at a repository and ask where to start. It reads the code and traces how a request or command moves through it. You get a three-level map with file paths, built only from files it opened.
+job: document-work
+thinking: high
+thinking_why: The role compares choices and checks evidence. Use a model that can reason through the task and verify its work.
+explain: |-
+  Joining a codebase you have never seen is slow. The README is often out of date, and the person who knew the code has left. This agent builds a codebase map from the code itself: manifests, entry points, routes and imports.
+
+  It is strict about evidence. Every claim names the file behind it. If the agent did not open a file, it says so. It does not review the code, suggest changes or guess what the authors meant.
+
+  Each answer comes in three levels: one line, a five-minute read, and a deep dive with step-by-step code paths. Stop at the level you need. Ask for one more path when you want to go deeper.
+when:
+  - You start a new job or contract and must work in a repo you have never seen.
+  - A client hands you code and asks you to take it over.
+  - You need to know where a feature lives before you change it, such as where checkout is handled.
+  - A new hire joins and you want a first map of the repo without writing the guide by hand.
+not_for:
+  - You want to know if the code is good or safe to ship. Use the Code Reviewer agent or the Codebase architecture reviewer.
+  - You want to know why the code is inconsistent after many AI-assisted edits. Use the Codebase Archaeologist agent.
+  - You want a README or setup guide written for other people. Use the Technical Writer agent.
+you_give:
+  - The repo, as files your AI can open, such as a folder, a zip, or a project open in Claude Code or Codex
+  - The question or goal, for example where to start or how a login request flows
+  - The part of the repo to focus on, such as one service in a monorepo (optional)
+  - What you already know, such as your main language, so terms are explained at your level (optional)
+you_get:
+  - A one-line statement of what the codebase is
+  - A five-minute explanation with the main tasks, inputs, outputs, key files and code paths
+  - A deep dive with the repo type, runtimes and entry points, and why each matters
+  - A table of top-level folders and what each one is for
+  - Step-by-step code paths with a file named at every step
+  - A list of files it opened, and the parts of the repo it did not read
+how_to_use:
+  - Give your AI the code. A tool that opens folders works best, such as Claude Code or Codex, or a chat that accepts a zip. In a plain chat, paste the file tree and the main entry files.
+  - Add the pack as a skill, or paste SKILL.md and then references/source-agent.md into a new chat.
+  - Say what you want. For example, "Map this repo for a new developer. I want to understand how a signup request flows." Name a folder if the repo is large.
+  - Read the one-line summary and the five-minute section first. Then check the list of files inspected. Anything not on that list is not covered.
+  - Open the three or four files it names as the place to start. Check one code path against the real code.
+  - To go deeper, ask for one more path, such as the payment webhook, instead of asking it to explain everything.
+how_it_works:
+  - title: Inventory the repo
+    text: It reads manifests, lockfiles, build and deploy config and top-level folders. It decides if this is an app, library, monorepo, service or mix.
+  - title: Find the entry points
+    text: It looks for startup files, routers, handlers, CLI commands, workers and package exports. It picks the smallest set of files that show how the system starts.
+  - title: Trace real paths
+    text: It follows a request, event or command from input to output. It notes queues, cron jobs and background workers that change the flow.
+  - title: Mark the boundaries
+    text: It names where the screen, logic and storage code live. It notes public interfaces, shared code, dead code and misleading names it can see.
+  - title: Write three levels
+    text: It writes the one-line summary, the five-minute explanation and the deep dive, and lists every file it opened.
+output_shape: |-
+  # Codebase Orientation Map
+
+  ## 1-Line Summary
+  <one sentence: what this codebase is>
+
+  ## 5-Minute Explanation
+  - Primary tasks in code: <what the code does>
+  - Primary inputs: <requests, CLI arguments, messages, files>
+  - Primary outputs: <responses, database writes, files, events, screens>
+  - Key files: <path and its job>
+  - Main code paths: <entry -> orchestration -> core logic -> outputs>
+
+  ## Deep Dive
+  - Type: <web app, API, monorepo, CLI, library or mix>
+  - Runtimes: <Node.js, Python, Go, browser and so on>
+  - Entry points: <path and why it matters>
+  - Top-level structure: <table of path, purpose, notes>
+  - Key boundaries: <screen, logic, storage, shared code, with files>
+  - Detailed code flows: <numbered steps, each with a file path>
+  - How the pieces map together: <imports, calls, handlers, storage>
+  - Files inspected: <full list>
+  - Not inspected: <parts of the repo not read>
+output_sample:
+  input:
+    - Your repository, as a folder, zip or open project
+    - The question or area to focus on
+    - Your main language or experience (optional)
+  prerequisites:
+    - An AI that can open files, such as Claude Code, Codex or a chat that takes a zip
+  output:
+    - name: 1-Line Summary
+      contains: One sentence that says what the codebase is.
+    - name: 5-Minute Explanation
+      contains: The main tasks, inputs, outputs, key files and the main code paths.
+    - name: Deep Dive
+      contains: The repo type, runtimes and entry points, with why each one matters.
+    - name: Top-Level Structure
+      contains: A table of folders with the purpose of each and a short note.
+    - name: Key Boundaries and Code Flows
+      contains: Where screen, logic and storage code live, and numbered steps for each traced path.
+    - name: Files inspected
+      contains: Every file it opened, and the parts of the repo it did not read.
+works_best_with:
+  tools:
+    - name: Claude Code or Codex
+      why: They can open folders, search files and follow imports, so the map rests on real reads.
+    - name: Claude, ChatGPT or Gemini with a zip upload
+      why: They work for small and medium repos if you upload the folder instead of pasting snippets.
+  inputs:
+    - One specific question beats "explain the repo". Ask for the path you will work on first.
+    - A list of folders to skip, such as generated code or vendored packages.
+terms:
+  - term: Entry point
+    meaning: The file where a program starts or where a request first lands.
+  - term: Code path
+    meaning: The route one request or command takes through the files.
+  - term: Monorepo
+    meaning: One repository that holds several apps or packages.
+  - term: Manifest
+    meaning: A file such as package.json that lists a project's dependencies and scripts.
+tweaks:
+  - what: Focus
+    how: Name one folder or one feature, such as billing. The map then goes deeper on it and stays short elsewhere.
+  - what: Reader level
+    how: Say who will read the map, such as a designer or a junior developer, and ask for terms to be explained.
+improve:
+  - Tell the AI which file you started with and where it was wrong or thin. Ask it to redo that code path.
+  - Keep the map next to the repo and rerun it when the entry points or folder layout change.
+judge:
+  - The result addresses your actual task and cites the evidence used.
+  - Examples, role-play experience and targets are kept separate from verified results.
+  - Claims of tests, memory, tool access or completed actions match what actually happened.
+test:
+  - Try a small task whose result you can check yourself.
+  - Omit one important fact and check whether the agent names the gap.

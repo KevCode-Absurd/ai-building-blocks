@@ -70,13 +70,15 @@ function sectionOf(to: string): keyof typeof PAGES | null {
 // The readiness marker lives inside the resolved lazy component: Preact can
 // commit a sibling effect while a Suspense fallback is still on screen.
 const StartupContext = createContext(false);
-function startupPage<P extends object>(load: () => Promise<{ default: ComponentType<P> }>) {
+// ownReady: the page lifts the cover itself once its content is in (a block page waits for its text, so the header
+// does not grow under the reader after the cover lifts).
+function startupPage<P extends object>(load: () => Promise<{ default: ComponentType<P> }>, ownReady = false) {
   return lazy(async () => {
     const { default: Page } = await load();
-    return { default: (props: P) => <><Page {...props} /><StartupReady /></> };
+    return { default: (props: P) => <><Page {...props} />{!ownReady && <StartupReady />}</> };
   });
 }
-const BlockPage = startupPage(PAGES.block);
+const BlockPage = startupPage(PAGES.block, true);
 const CommunityPage = startupPage(PAGES.community);
 const HowItWorks = startupPage(PAGES.guide);
 const ApiMcpPage = startupPage(PAGES.docs);

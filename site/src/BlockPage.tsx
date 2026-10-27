@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import Comments from "./Comments";
 import { StarButton } from "./CommunityStars";
 import { Look, MakeIt, MakeNote, makeTitle } from "./MakeIt";
@@ -251,6 +251,8 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     markViewed(slug); trackUxEvent("task_started");
     return () => { active = false; };
   }, [slug, reload]);
+  // Lift the startup cover once the page text is in (or failed), not before: the header grows when it arrives.
+  useLayoutEffect(() => { if (page !== undefined) document.dispatchEvent(new Event("abb:ready")); }, [page]);
   useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Blocks`; return () => { document.title = "Free AI Skills & Custom Workflow Builder | AI Blocks"; }; }, [b]);
 
   if (!b) {
